@@ -1,0 +1,169 @@
+<Type Name="FrameDimension" FullName="System.Drawing.Imaging.FrameDimension">
+  <TypeSignature Language="C#" Value="public sealed class FrameDimension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FrameDimension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.FrameDimension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Eigenschaften, die die Frame-Dimensionen eines Bilds zu erhalten. Nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameDimension (Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.FrameDimension.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Ein <see langword="Guid" /> -Struktur, die eine GUID für diesen enthält <see cref="T:System.Drawing.Imaging.FrameDimension" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.FrameDimension" /> -Klasse mit dem angegebenen <see langword="Guid" /> Struktur.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.FrameDimension.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das zu überprüfende Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Objekt eine <see cref="T:System.Drawing.Imaging.FrameDimension" /> entspricht dies <see cref="T:System.Drawing.Imaging.FrameDimension" /> Objekt.</summary>
+        <returns>Gibt <see langword="true" /> Wenn <paramref name="o" /> ist ein <see cref="T:System.Drawing.Imaging.FrameDimension" /> entspricht dies <see cref="T:System.Drawing.Imaging.FrameDimension" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.FrameDimension.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode für diese <see cref="T:System.Drawing.Imaging.FrameDimension" /> Objekt.</summary>
+        <returns>Gibt eine <see langword="int" /> Wert, der den Hashcode dieses <see cref="T:System.Drawing.Imaging.FrameDimension" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Guid Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Guid" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.FrameDimension.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine GUID (globally unique Identifier), die dies stellt <see cref="T:System.Drawing.Imaging.FrameDimension" /> Objekt.</summary>
+        <value>Ein <see langword="Guid" /> -Struktur, die eine GUID enthält, die dies stellt <see cref="T:System.Drawing.Imaging.FrameDimension" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.FrameDimension Page { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.FrameDimension Page" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.FrameDimension.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.FrameDimension</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Seite-Dimension ab.</summary>
+        <value>Die Seite-Dimension.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolution">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.FrameDimension Resolution { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.FrameDimension Resolution" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.FrameDimension.Resolution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.FrameDimension</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflösung Dimension ab.</summary>
+        <value>Die Auflösung-Dimension.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Time">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.FrameDimension Time { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.FrameDimension Time" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.FrameDimension.Time" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.FrameDimension</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Time-Dimension ab.</summary>
+        <value>Der Time-Dimension.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.FrameDimension.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert dieses <see cref="T:System.Drawing.Imaging.FrameDimension" />-Objekt in eine Klartextzeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die dieses <see cref="T:System.Drawing.Imaging.FrameDimension" />-Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

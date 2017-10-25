@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Tracking">
+  <Docs>
+    <summary>Die System.ServiceModel.Activities.Tracking-Namespace enthält Klassen, die mit dem Nachverfolgungsdatensätze für eine Workflowdienstinstanz erstellt. Nachverfolgungsdatensätze werden während der Ausführung einer Workflowinstanz durch die Workflowlaufzeit erstellt und an registrierte Nachverfolgungsteilnehmer gesendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

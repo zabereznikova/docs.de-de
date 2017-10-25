@@ -1,0 +1,133 @@
+<Type Name="VisualStyleElement+ExplorerBar+SpecialGroupCollapse" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+ExplorerBar+SpecialGroupCollapse">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.ExplorerBar.SpecialGroupCollapse" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/ExplorerBar/SpecialGroupCollapse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für jeden Status der Schaltfläche zum Reduzieren der eine spezielle Gruppe von Elementen in der Explorer-Leiste. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Eigenschaft der der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse> -Klasse ruft eine <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für einen anderen Zustand der Schaltfläche zum Reduzieren der eine spezielle Gruppe von Elementen in der Explorer-Adressleiste, wie z. B. der **Musikaufgaben** Gruppe im Windows-Explorer.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementExplorerBarSpecialGroupCollapse1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#159](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#159)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#159](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#159)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Hot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Hot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Hot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das eine Schaltfläche im laufenden Systembetrieb reduzieren eine spezielle Gruppe von Elementen in der Explorer-Leiste darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , eine Schaltfläche zum Reduzieren von hot darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Hot%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Hot%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementExplorerBarSpecialGroupCollapse2` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#160)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#160)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das eine Schaltfläche zum normalen reduzieren eine spezielle Gruppe von Elementen in der Explorer-Leiste darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , eine Schaltfläche zum Reduzieren der normalen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Normal%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementExplorerBarSpecialGroupCollapse1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#159](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#159)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#159](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#159)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Pressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Pressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Pressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das eine Schaltfläche gedrückt reduzieren eine spezielle Gruppe von Elementen in der Explorer-Leiste darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , eine Schaltfläche zum Reduzieren der gedrückten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Pressed%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.SpecialGroupCollapse.Pressed%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementExplorerBarSpecialGroupCollapse3` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#161](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#161)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#161](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#161)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

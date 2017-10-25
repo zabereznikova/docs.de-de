@@ -1,0 +1,221 @@
+<Type Name="TemplateBuilder" FullName="System.Web.UI.TemplateBuilder">
+  <TypeSignature Language="C#" Value="public class TemplateBuilder : System.Web.UI.ControlBuilder, System.Web.UI.ITemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateBuilder extends System.Web.UI.ControlBuilder implements class System.Web.UI.ITemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITemplate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Unterstützt den Parser bei der Erstellung einer Vorlage und die untergeordneten Steuerelemente, die es enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Verwenden einer benutzerdefinierten <xref:System.Web.UI.TemplateBuilder> Klasse für ein Steuerelement, das Erstellen eines benutzerdefinierten <xref:System.Web.UI.ControlBuilder> für das Steuerelement, und klicken Sie dann zurück, die benutzerdefinierte <xref:System.Web.UI.TemplateBuilder> -Steuerelement aus der <xref:System.Web.UI.ControlBuilder.GetChildControlType%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.TemplateBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildObject">
+      <MemberSignature Language="C#" Value="public override object BuildObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object BuildObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateBuilder.BuildObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Während der Entwurfszeit verwendet, um die Vorlage und seine untergeordneten Steuerelemente zu erstellen.</summary>
+        <returns>Ein Verweis auf die Instanz von der <see cref="T:System.Web.UI.TemplateBuilder" /> Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseControl">
+      <MemberSignature Language="C#" Value="public override void CloseControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CloseControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateBuilder.CloseControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, durch den Parser, dem Generator zu informieren, dass die Analyse von Start- und Endtag des Steuerelements abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public override void Init (System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string ID, System.Collections.IDictionary attribs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Init(class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string ID, class System.Collections.IDictionary attribs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateBuilder.Init(System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="ID" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parser">Die <see cref="T:System.Web.UI.TemplateParser" /> verantwortlich für die Analyse des Steuerelements.</param>
+        <param name="parentBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> verantwortlich für das Steuerelement zu erstellen.</param>
+        <param name="type">Die <see cref="T:System.Type" /> zugewiesen werden, um das Steuerelement, das vom Generator erstellt wird.</param>
+        <param name="tagName">Der Name des Tags zu erstellen. Dadurch wird den Generator, der mehrere Transpondertypen unterstützen.</param>
+        <param name="ID">Das dem Steuerelement zugewiesene <see cref="P:System.Web.UI.ControlBuilder.ID" />.</param>
+        <param name="attribs">Die <see cref="T:System.Collections.IDictionary" /> , die alle angegebenen-Tagattribute enthält.</param>
+        <summary>Den Generator Vorlage initialisiert, wird eine webanforderung gestellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantiateIn">
+      <MemberSignature Language="C#" Value="public virtual void InstantiateIn (System.Web.UI.Control container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InstantiateIn(class System.Web.UI.Control container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateBuilder.InstantiateIn(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="container">Die <see cref="T:System.Web.UI.Control" /> , die Instanzen von Steuerelementen aus der Inlinevorlage enthalten.</param>
+        <summary>Definiert die <see cref="T:System.Web.UI.Control" /> -Objekt, dass untergeordnete Steuerelemente und Vorlagen zur Entwurfszeit gehören.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateBuilder.InstantiateIn%2A> Methode ist erforderlich, bei der Implementierung der <xref:System.Web.UI.ITemplate> Schnittstelle. Die <xref:System.Web.UI.TemplateBuilder.InstantiateIn%2A> Methode wird nur in der Entwurfszeit verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsTagInnerText">
+      <MemberSignature Language="C#" Value="public override bool NeedsTagInnerText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool NeedsTagInnerText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateBuilder.NeedsTagInnerText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der Steuerelementgenerator den inneren Text abrufen muss.</summary>
+        <returns>
+          <see langword="true" />Wenn der Steuerelement-Generator den inneren Text abrufen muss. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateBuilder.SetTagInnerText%2A> Methode muss aufgerufen werden, wenn wir zur Entwurfszeit sind. Die <xref:System.Web.UI.TemplateBuilder.NeedsTagInnerText%2A> -Methode gibt den Wert von der <xref:System.Web.UI.ControlBuilder.InDesigner%2A> Eigenschaft des basistexts <xref:System.Web.UI.ControlBuilder> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTagInnerText">
+      <MemberSignature Language="C#" Value="public override void SetTagInnerText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetTagInnerText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateBuilder.SetTagInnerText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der innere Text der Vorlage.</param>
+        <summary>Speichert den inneren Text des Vorlagentags an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateBuilder.SetTagInnerText%2A> Methode überschreibt der Basisklasse <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A?displayProperty=nameWithType> Methode und legt den Wert für die <xref:System.Web.UI.TemplateBuilder.Text%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplateBuilder.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text zwischen den Start- und Endtag der Vorlage.</summary>
+        <value>Der Text, der zwischen dem Start- und Endtag der Vorlage angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateBuilder.Text%2A> Eigenschaft wird vom Designer verwendet, um anzugeben, oder ermitteln den Text, der zwischen dem Start- und Endtag der Vorlage angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

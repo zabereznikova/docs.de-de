@@ -1,0 +1,423 @@
+<Type Name="CompilerInfo" FullName="System.CodeDom.Compiler.CompilerInfo">
+  <TypeSignature Language="C#" Value="public sealed class CompilerInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompilerInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CompilerInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Konfigurationseinstellungen eines Sprachanbieters dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.CodeDom.Compiler.CompilerInfo> Klasse, um zu bestimmen, ob eine <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung konfiguriert ist, auf dem Computer oder die Konfiguration und Compiler-Einstellungen für eine bestimmte Sprache-Anbieter zu untersuchen.  
+  
+ Die [ &lt;system.codedom&gt; Element](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) in der Computerkonfiguration Datei enthält Konfigurationseinstellungen für die Sprache Sprachanbieter- und. Jeder konfigurierte Sprachanbieter verfügt über einen entsprechenden Compiler-Konfigurationselement. Jedes Element definiert den <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierungstyp, unterstützten Sprachnamen unterstützten Dateierweiterungen und Compilerparameter.  
+  
+ .NET Framework definiert die anfänglichen compilereinstellungen in der Computerkonfigurationsdatei. Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen.  
+  
+ Die <xref:System.CodeDom.Compiler.CompilerInfo> -Klasse bietet schreibgeschützten Zugriff auf diese Einstellungen in der Computerkonfigurationsdatei. Verwenden der <xref:System.CodeDom.Compiler.CompilerInfo.GetLanguages%2A>, <xref:System.CodeDom.Compiler.CompilerInfo.GetExtensions%2A>, und <xref:System.CodeDom.Compiler.CompilerInfo.CodeDomProviderType%2A> Member, um die entsprechenden Konfigurationsattribute für einen Sprachanbieter zu untersuchen. Verwenden der <xref:System.CodeDom.Compiler.CompilerInfo.CreateDefaultCompilerParameters%2A> Methode, um den Compiler Optionen und Warnung Ebenenattribut Werte für einen Sprachanbieter abzurufen.  
+  
+ Weitere Informationen zu Language Anbieter-Einstellungen in der Konfigurationsdatei finden Sie unter [Compiler und Sprache Anbieter-Einstellungsschema](http://msdn.microsoft.com/library/c020b139-8699-4f0d-9ac9-70d0c5b2a8c8).  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn Sie der unmittelbaren Aufrufer nicht über die volle Vertrauenswürdigkeit verfügt. Ausführliche Informationen über Linkaufrufe finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt Konfigurationseinstellungen Sprache. Befehlszeilenargumente werden zum Angeben einer Sprache, Dateinamenerweiterung oder Anbietertyp verwendet. Für die angegebene Eingabe wird im Beispiel bestimmt der entsprechenden Sprachanbieter und zeigt die konfigurierten spracheinstellungen des Compilers.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#1)]
+ [!code-csharp[CodeDom_CompilerInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#1)]
+ [!code-vb[CodeDom_CompilerInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="CodeDomProviderType">
+      <MemberSignature Language="C#" Value="public Type CodeDomProviderType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CodeDomProviderType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerInfo.CodeDomProviderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der konfigurierten <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> Implementierung.</summary>
+        <value>Ein schreibgeschützter <see cref="T:System.Type" /> Instanz, die den konfigurierten Spracheinstellung Anbietertyp darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Computerkonfigurationsdatei enthält den vollqualifizierten Typnamen für jede <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung auf dem Computer. Die <xref:System.CodeDom.Compiler.CompilerInfo.CodeDomProviderType%2A> Eigenschaftswert ist eine <xref:System.Type> Instanz, die eine Implementierung eines Anbieters konfigurierte Sprache darstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Eingabesprache einer konfigurierten verfügt <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung auf dem Computer. Ist ein Anbieter für die angegebene Sprache konfiguriert, zeigt das Beispiel die Language-Anbieter-Konfigurationseinstellungen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerInfo> Klasse.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#7](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#7)]
+ [!code-csharp[CodeDom_CompilerInfo#7](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#7)]
+ [!code-vb[CodeDom_CompilerInfo#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Der Language-Anbieter ist auf diesem Computer nicht konfiguriert.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Den Typ kann nicht gefunden werden, weil es ist ein <see langword="null" /> oder eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ Den Typ kann nicht gefunden werden, weil der Name für die <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> kann nicht in der Konfigurationsdatei gefunden werden.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultCompilerParameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerParameters CreateDefaultCompilerParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.Compiler.CompilerParameters CreateDefaultCompilerParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerInfo.CreateDefaultCompilerParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die konfigurierten compilereinstellungen für die Implementierung eines Anbieters Sprache ab.</summary>
+        <returns>Ein schreibgeschützter <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> -Instanz, die Compileroptionen und die Einstellungen für den Sprachanbieter konfiguriert enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.CodeDom.Compiler.CompilerInfo.CreateDefaultCompilerParameters%2A> Methode, um die compilereinstellungen der Untersuchen der <xref:System.CodeDom.Compiler.CompilerInfo> zurückgegebenes Instanzen der <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> und <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A?displayProperty=nameWithType> Methoden.  
+  
+ Die [ &lt;system.codedom&gt; Element](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) in der Computerkonfiguration Datei enthält die Sprache Sprachanbieter- und compilerkonfigurationstellungen für jede <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung auf dem Computer. Jede Sprache Anbieter-Konfigurationselement kann optional enthalten `compilerOptions` und `warningLevel` Attribute. Diese Attribute definieren die Standardwerte für die <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A?displayProperty=nameWithType> und <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Wenn das Konfigurationselement der Language-Anbieter nicht definiert die `compilerOptions` -Attribut, das <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A?displayProperty=nameWithType> Eigenschaftswert ist eine leere Zeichenfolge (""). Wenn das Konfigurationselement der Language-Anbieter nicht definiert die `warningLevel` -Attribut, das <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A?displayProperty=nameWithType> Eigenschaftswert lautet – 1.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Eingabesprache einer konfigurierten verfügt <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung auf dem Computer. Ist ein Anbieter für die angegebene Sprache konfiguriert, zeigt das Beispiel die Language-Anbieter-Konfigurationseinstellungen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerInfo> Klasse.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#7](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#7)]
+ [!code-csharp[CodeDom_CompilerInfo#7](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#7)]
+ [!code-vb[CodeDom_CompilerInfo#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProvider">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CodeDomProvider CreateProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.Compiler.CodeDomProvider CreateProvider() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerInfo.CreateProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> -Instanz für den aktuellen Anbieter spracheinstellungen.</summary>
+        <returns>Ein CodeDOM-Anbieter die Sprachanbieterkonfiguration zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.Compiler.CompilerInfo.CreateProvider%2A> Methode gibt ein <xref:System.CodeDom.Compiler.CodeDomProvider> -Instanz für den aktuellen Anbieter spracheinstellungen.  
+  
+ Verwenden der <xref:System.CodeDom.Compiler.CompilerInfo.CreateProvider%2A> Methode zum Abrufen einer <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung für einen <xref:System.CodeDom.Compiler.CompilerInfo> zurückgegebene Instanz der <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> oder <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel listet die Language-Anbieter auf dem Computer und zeigt die Einstellungen für Konfiguration und Compiler für jede Sprachanbieter. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerInfo> Klasse.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#8)]
+ [!code-csharp[CodeDom_CompilerInfo#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#8)]
+ [!code-vb[CodeDom_CompilerInfo#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProvider">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CodeDomProvider CreateProvider (System.Collections.Generic.IDictionary&lt;string,string&gt; providerOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.Compiler.CodeDomProvider CreateProvider(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; providerOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerInfo.CreateProvider(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerOptions" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="providerOptions">Eine Auflistung von Anbieteroptionen aus der Konfigurationsdatei.</param>
+        <summary>Gibt eine <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> Instanz für die aktuellen spracheinstellungen Anbieter und den angegebenen Optionen.</summary>
+        <returns>Ein CodeDOM-Anbieter die Language-Anbieterkonfiguration zugeordnet und den angegebenen Optionen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.Compiler.CompilerInfo.CreateProvider%28System.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D%29> Methode gibt ein <xref:System.CodeDom.Compiler.CodeDomProvider> -Instanz für die aktuelle Sprache Anbieter-Einstellungen und den angegebenen Anbieteroptionen. Finden Sie Informationen zu unterstützten Anbieteroptionen der bestimmten CodeDOM-Anbieter-Dokumentation.  
+  
+ Verwenden der <xref:System.CodeDom.Compiler.CompilerInfo.CreateProvider%28System.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D%29> Methode zum Abrufen einer <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung für einen <xref:System.CodeDom.Compiler.CompilerInfo> zurückgegebene Instanz der <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> oder <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="providerOptions" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Anbieter unterstützt keine Optionen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt, das mit der aktuellen <see cref="T:System.CodeDom.Compiler.CompilerInfo" /> verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt der gleichen Sprache Sprachanbieter- und Einstellungen wie die aktuelle darstellt <see cref="T:System.CodeDom.Compiler.CompilerInfo" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein <see cref="T:System.CodeDom.Compiler.CompilerInfo" /> Objekt und seinen Wert entspricht dem diese Instanz hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode.  
+  
+ Die beiden Instanzen als gleich betrachtet, wenn die Werte der folgenden Eigenschaften gleich sind:  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerInfo.CodeDomProviderType%2A>-Eigenschaft  
+  
+-   Die <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A>, <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A>, und <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> Eigenschaften der <xref:System.CodeDom.Compiler.CompilerParameters> zurückgegebene Instanz der <xref:System.CodeDom.Compiler.CompilerInfo.CreateDefaultCompilerParameters%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensions">
+      <MemberSignature Language="C#" Value="public string[] GetExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerInfo.GetExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Datei Dateinamenerweiterungen, die von der Language-Anbieter unterstützt.</summary>
+        <returns>Ein Array von Dateinamenerweiterungen, die von der Language-Anbieter unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [ &lt;system.codedom&gt; Element](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) in der Computerkonfiguration Datei enthält die Sprache Sprachanbieter- und compilerkonfigurationstellungen für jede <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung auf dem Computer. Jeder konfigurierte Sprachanbieter unterstützt eine oder mehrere Dateinamenerweiterungen. Z. B. eine <xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType> unterstützen möglicherweise die Datei namens Extensions ". cs" und "c#".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel listet die Language-Anbieter auf dem Computer und zeigt die Einstellungen für Konfiguration und Compiler für jede Sprachanbieter. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerInfo> Klasse.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#8)]
+ [!code-csharp[CodeDom_CompilerInfo#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#8)]
+ [!code-vb[CodeDom_CompilerInfo#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für die aktuelle Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Ganzzahl-Hashcode für die aktuelle <see cref="T:System.CodeDom.Compiler.CompilerInfo" /> Instanz, für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle geeignet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode.  
+  
+ Diese Methode generiert für zwei Objekte, die gemäß der <xref:System.CodeDom.Compiler.CompilerInfo.Equals%2A>-Methode gleich sind, denselben Hashcode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:Microsoft.VisualBasic.VBCodeProvider?displayProperty=nameWithType> Klasse. Das Beispiel zeigt den Anbieternamen, Hashcode und standardmäßige Dateinamenerweiterung für die neue Instanz. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerInfo> Klasse.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#3)]
+ [!code-csharp[CodeDom_CompilerInfo#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#3)]
+ [!code-vb[CodeDom_CompilerInfo#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLanguages">
+      <MemberSignature Language="C#" Value="public string[] GetLanguages ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetLanguages() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerInfo.GetLanguages" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Sprachennamen, die von der Language-Anbieter unterstützt.</summary>
+        <returns>Ein Array von Sprachnamen, die von der Language-Anbieter unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [ &lt;system.codedom&gt; Element](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) in der Computerkonfiguration Datei enthält die Sprache Sprachanbieter- und compilerkonfigurationstellungen für jede <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung auf dem Computer. Jeder konfigurierte Sprachanbieter unterstützt einen oder mehrere Sprachnamen. Z. B. die <xref:System.CodeDom.Compiler.CompilerInfo> -Objekt für eine <xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType> kann ein Array mit der Sprache Namen "c#", "Cs" und "Csharp" zurückgeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel listet die Language-Anbieter auf dem Computer und zeigt die Einstellungen für Konfiguration und Compiler für jede Sprachanbieter. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerInfo> Klasse.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#8)]
+ [!code-csharp[CodeDom_CompilerInfo#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#8)]
+ [!code-vb[CodeDom_CompilerInfo#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCodeDomProviderTypeValid">
+      <MemberSignature Language="C#" Value="public bool IsCodeDomProviderTypeValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCodeDomProviderTypeValid" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerInfo.IsCodeDomProviderTypeValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die Implementierung der Sprache-Anbieter auf dem Computer konfiguriert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Sie der Implementierungstyp der Language-Anbieter auf dem Computer konfiguriert ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.CodeDom.Compiler.CompilerInfo.IsCodeDomProviderTypeValid%2A> zu überprüfende Eigenschaft der <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung vor dem Zugriff auf die Eigenschaften oder Methoden. Z. B. nach dem erhalten Sie die Language-Anbieter-Einstellungen aus der <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A> -Methode ist, die <xref:System.CodeDom.Compiler.CompilerInfo.IsCodeDomProviderTypeValid%2A> Eigenschaft, um zu überprüfen, ob die Implementierung eines Anbieters Typ vor dem Aufruf der <xref:System.CodeDom.Compiler.CompilerInfo.CreateProvider%2A> -Methode oder mit der <xref:System.CodeDom.Compiler.CompilerInfo.CodeDomProviderType%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Eingabesprache einer konfigurierten verfügt <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung auf dem Computer. Ist ein Anbieter für die angegebene Sprache konfiguriert, zeigt das Beispiel die Language-Anbieter-Konfigurationseinstellungen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CompilerInfo> Klasse.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#7](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#7)]
+ [!code-csharp[CodeDom_CompilerInfo#7](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#7)]
+ [!code-vb[CodeDom_CompilerInfo#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.CodeDom.Compiler.CompilerInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete <see cref="T:System.Security.Permissions.PermissionState" /> Enumerationswert: <see langword="Unrestricted" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

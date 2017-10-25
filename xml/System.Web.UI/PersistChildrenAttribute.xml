@@ -1,0 +1,312 @@
+<Type Name="PersistChildrenAttribute" FullName="System.Web.UI.PersistChildrenAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PersistChildrenAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PersistChildrenAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PersistChildrenAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert ein Attribut, das von ASP.NET-Serversteuerelementen verwendet wird, um zur Entwurfszeit anzugeben, ob geschachtelte Inhalte, die in einem Steuerelement enthalten ist, Steuerelemente oder Eigenschaften des Serversteuerelements entspricht. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PersistChildrenAttribute> dient in Verbindung mit der <xref:System.Web.UI.ParseChildrenAttribute> wie geschachtelte Inhalt eines Steuerelements bestimmt wird interpretiert werden. Wenn <xref:System.Web.UI.PersistChildrenAttribute> ist `true` und <xref:System.Web.UI.ParseChildrenAttribute> ist `false`, geschachtelte ein ASP.NET-Serversteuerelement enthaltene Inhalte als Steuerelemente beibehalten. Wenn <xref:System.Web.UI.PersistChildrenAttribute> ist `false` und <xref:System.Web.UI.ParseChildrenAttribute> ist `true`, geschachtelte Inhalte als Eigenschaften des Serversteuerelements beibehalten wird. Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das Codebeispiel in diesem Abschnitt besteht aus zwei Teilen. Im ersten Codebeispiel wird veranschaulicht, wie die Metadaten eines benutzerdefinierten Steuerelements festgelegt, sodass zur Entwurfszeit die geschachtelte Inhalte als Eigenschaften des Steuerelements beibehalten wird. Im zweiten Codebeispiel wird veranschaulicht, wie Klassen in einer ASP.NET-Seite verwendet wird.  
+  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Web.UI.PersistChildrenAttribute> Attribut, damit keine geschachtelte Steuerelemente eines benutzerdefinierten Steuerelements als geschachtelte Steuerelemente beibehalten werden. Das benutzerdefinierte Steuerelement mit dem Namen `CollectionPropertyControl` hat die <xref:System.Web.UI.PersistChildrenAttribute> -Attributsatz zur `false` , damit die `Employee` Objekte, die hinzugefügt werden, werden als geschachtelte Elemente beibehalten.  
+  
+ [!code-csharp[PersistChildrenAttribute_Sample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren_1.cs#1)]
+ [!code-vb[PersistChildrenAttribute_Sample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren_1.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die `CollectionPropertyControl` und `Employee` Klassen auf einer ASP.NET-Seite.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersistChildrenAttribute (bool persist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool persist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="persist" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="persist">
+          <see langword="true" />geschachtelte Inhalte als geschachtelte Steuerelemente beibehalten werden; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PersistChildrenAttribute" /> -Klasse mit einem booleschen Wert, der angibt, ob geschachtelte Inhalte als geschachtelte Steuerelemente beibehalten werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Web.UI.PersistChildrenAttribute> -Attribut für ein benutzerdefiniertes Steuerelement mit dem Namen `CollectionPropertyControl`.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PersistChildrenAttribute> Klasse.  
+  
+ [!code-csharp[PersistChildrenAttribute_Sample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren_1.cs#2)]
+ [!code-vb[PersistChildrenAttribute_Sample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren_1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersistChildrenAttribute (bool persist, bool usesCustomPersistence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool persist, bool usesCustomPersistence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="persist" Type="System.Boolean" />
+        <Parameter Name="usesCustomPersistence" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="persist">
+          <see langword="true" />geschachtelte Inhalte als geschachtelte Steuerelemente beibehalten werden; andernfalls <see langword="false" />.</param>
+        <param name="usesCustomPersistence">
+          <see langword="true" />um benutzerdefinierte Persistenz verwenden. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PersistChildrenAttribute" /> -Klasse unter Verwendung von zwei booleschen Werten. Ein, der angibt, ob geschachtelte Inhalte als geschachtelte Steuerelemente und die andere gibt an, ob eine Methode für die benutzerdefinierte Persistenz verwenden beibehalten werden sollen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistChildrenAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistChildrenAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistChildrenAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistChildrenAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardstatus für das Attribut an. Die <see cref="F:System.Web.UI.PersistChildrenAttribute.Default" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für die <xref:System.Web.UI.PersistChildrenAttribute.Default> Feld ist `Yes`, gibt an, dass geschachtelte Inhalte zur Entwurfszeit beibehalten wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> gleich dem aktuellen Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für die <see cref="T:System.Web.UI.PersistChildrenAttribute" /> Klasse.</summary>
+        <returns>Ein Hashcode für die <see cref="T:System.Web.UI.PersistChildrenAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob der Wert der aktuellen Instanz von der <see cref="T:System.Web.UI.PersistChildrenAttribute" /> Klasse ist der Standardwert der abgeleiteten Klasse.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert der aktuellen Instanz der <see cref="T:System.Web.UI.PersistChildrenAttribute" /> ist die Standardinstanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.PersistChildrenAttribute.IsDefaultAttribute%2A> Methode zum bestimmen, ob die aktuelle Instanz von der <xref:System.Web.UI.PersistChildrenAttribute> Klasse ist identisch mit der Standardinstanz.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PersistChildrenAttribute> Klasse.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistChildrenAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistChildrenAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistChildrenAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistChildrenAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass geschachtelte Inhalte nicht als geschachtelte Steuerelemente zur Entwurfszeit beibehalten werden sollen. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.PersistChildrenAttribute.No> Feld aufgerufen wird, wird der innere Inhalt des Steuerelements als Eigenschaften, die nicht als Server beibehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="public bool Persist { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Persist" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PersistChildrenAttribute.Persist" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die geschachtelte Inhalte zur Entwurfszeit als geschachtelte Steuerelemente beibehalten wird.</summary>
+        <value>
+          <see langword="true" />geschachtelte Inhalte als geschachtelte Steuerelemente beibehalten werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Abrufen des Werts der <xref:System.Web.UI.PersistChildrenAttribute.Persist%2A> Eigenschaft.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PersistChildrenAttribute> Klasse.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesCustomPersistence">
+      <MemberSignature Language="C#" Value="public bool UsesCustomPersistence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesCustomPersistence" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PersistChildrenAttribute.UsesCustomPersistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Serversteuerelement benutzerdefinierten Persistenz von verschachtelten Steuerelementen zur Entwurfszeit bereitstellt.</summary>
+        <value>
+          <see langword="true" />um benutzerdefinierte Persistenz von geschachtelten Inhalten angeben; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um geschachtelte Inhalte für eine benutzerdefinierte Persistenz zu konfigurieren, verwenden die <xref:System.Web.UI.PersistChildrenAttribute> Überladung mit einem `usesCustomPersistence` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Abrufen des Werts der <xref:System.Web.UI.PersistChildrenAttribute.UsesCustomPersistence%2A> Eigenschaft.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PersistChildrenAttribute> Klasse.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistChildrenAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistChildrenAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistChildrenAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistChildrenAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass geschachtelte Inhalte zur Entwurfszeit als Steuerelemente beibehalten werden sollen. Die <see cref="F:System.Web.UI.PersistChildrenAttribute.Yes" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.PersistChildrenAttribute.Yes> Feld aufgerufen wird, geschachtelte Inhalte als Steuerelemente beibehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

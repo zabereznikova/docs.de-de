@@ -1,0 +1,77 @@
+<Type Name="DecoratedNameAttribute" FullName="Microsoft.VisualC.DecoratedNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DecoratedNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DecoratedNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.DecoratedNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualC.dll is an obsolete assembly and exists only for backwards compatibility.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Attribut vom Compiler verwendet werden, um den ergänzten Namen einer Methode an den Linker übergeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der ergänzte Name einer Methode enthält Informationen zu Parametertypen der Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecoratedNameAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.DecoratedNameAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualC.DecoratedNameAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecoratedNameAttribute (string decoratedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string decoratedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.DecoratedNameAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="decoratedName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="decoratedName">Der ergänzte Name einer Methode.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualC.DecoratedNameAttribute" /> -Klasse unter Verwendung der angegebenen ergänzte Name.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,94 @@
+<Type Name="SerializationContents" FullName="System.Windows.Forms.DataVisualization.Charting.SerializationContents">
+  <TypeSignature Language="C#" Value="public enum SerializationContents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SerializationContents extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.SerializationContents" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ des Diagramminhalt, serialisiert werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.SerializationContents> -Enumeration stellt dar, den Inhalt Diagrammtyp serialisiert werden soll. Diese Enumeration wird von der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>-Eigenschaft verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.SerializationContents All = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.SerializationContents.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialisiert alle Diagramminformationen an. Dies schließt alle Punktwerten für die Eigenschaften und Daten von Darstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Appearance">
+      <MemberSignature Language="C#" Value="Appearance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.SerializationContents Appearance = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.SerializationContents.Appearance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialisieren Sie alle Darstellungseigenschaften, z. B. Farbe oder Linienart, wenn sie nicht standardmäßige Werte aufweisen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="Data" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.SerializationContents Data = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.SerializationContents.Data" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datenwerte aus allen Diagrammreihen zu serialisieren. Schließt die Darstellungseigenschaften nicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.SerializationContents Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.SerializationContents.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle nicht standardmäßigen Diagramminhalt zu serialisieren. Dies schließt Darstellungseigenschaften, Reihen und deren Datenpunkte Achse Mindest-/Maximalwerte und usw. ein.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

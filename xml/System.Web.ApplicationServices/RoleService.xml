@@ -1,0 +1,170 @@
+<Type Name="RoleService" FullName="System.Web.ApplicationServices.RoleService">
+  <TypeSignature Language="C#" Value="public class RoleService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RoleService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ApplicationServices.RoleService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.Activation.AspNetCompatibilityRequirements(RequirementsMode=System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceBehavior(ConcurrencyMode=System.ServiceModel.ConcurrencyMode.Multiple, InstanceContextMode=System.ServiceModel.InstanceContextMode.Single, Namespace="http://asp.net/ApplicationServices/v200")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceContract(Namespace="http://asp.net/ApplicationServices/v200")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf den ASP.NET-Rollenanbieter als WCF-Webdienst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ApplicationServices.RoleService> Objekt ermöglicht es Ihnen, die Rollen eines Benutzers über einen Windows Communication Foundation (WCF)-Dienst zu lesen. Für die Verwendung den Rollendienst "" müssen Sie den Rollendienst auf einem Webserver aktivieren und verbinden Sie dann eine WCF-kompatible Clientanwendung mit dem Webdienst. Informationen zum Konfigurieren des Rollendiensts finden Sie unter [Vorgehensweise: Aktivieren der WCF-Rollendienst](http://msdn.microsoft.com/library/d021aa39-4cbf-4450-a3c1-d5573ca7ce8c).  
+  
+ Der Benutzer muss authentifiziert werden, um die Rollen des Benutzers zu lesen. Der Rollendienst "" funktioniert mit jeder Art von Authentifizierung in ASP.NET. Informationen zum Anmelden von Benutzern über einen WCF-Dienst finden Sie unter [Übersicht über den Windows Communication Foundation-Authentifizierung](http://msdn.microsoft.com/library/6e121a28-89e8-4974-88a8-70aaa6a7d52b).  
+  
+ Die <xref:System.Web.ApplicationServices.RoleService> Klasse macht zwei Methoden, die nur über einen WCF-Dienst zugegriffen werden soll: den <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> Methode und die <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A> Methode. Die <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> -Methode gibt alle Rollen für den angemeldeten Benutzer zurück. Die <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A> Methode bestimmt, ob der Benutzer eine angegebene Rolle innehat.  
+  
+ Die <xref:System.Web.ApplicationServices.RoleService> -Objekt löst die <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> Ereignis. Sie erstellen einen Ereignishandler für das <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> -Ereignis, welche Rollenanbieter für die Verwendung zur Laufzeit auszuwählen.  
+  
+ Ein Beispiel zum Verwenden des WCF-Rollendienstes über eine Konsolenanwendung, finden Sie unter [Exemplarische Vorgehensweise: Verwenden von ASP.NET-Anwendungsdiensten](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.RoleService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ApplicationServices.RoleService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRolesForCurrentUser">
+      <MemberSignature Language="C#" Value="public string[] GetRolesForCurrentUser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetRolesForCurrentUser() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle Rollen für den angemeldeten Benutzer zurück.</summary>
+        <returns>Ein Array der Namen der Rollen, denen der Benutzer angehört.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> -Methode gibt alle Rollen für den Benutzer zurück. Verwenden Sie die <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> Methode, wenn Sie überprüfen, oder behalten die Rollen des Benutzers, um zu bestimmen, welche Ressourcen der Benutzer zur Verfügung stehen müssen. Verwenden Sie diese Methode zur Vermeidung von mehreren Aufrufen an die <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A> Methode.  
+  
+ Aufrufen der <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> -Methode löst das <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> Ereignis.  
+  
+> [!NOTE]
+>  Rufen Sie nicht die <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> -Methode aus dem Code, der auf dem Webserver ausgeführt wird. Rufen Sie die <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> Methode nur als Teil eines WCF-Diensts. Weitere Informationen dazu, wie Sie die Rollen eines Benutzers im Code zu lesen, die auf dem Webserver ausgeführt wird, finden Sie unter der <xref:System.Web.Security.Roles.GetRolesForUser%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Rollenverwaltung ist nicht aktiviert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentUserInRole">
+      <MemberSignature Language="C#" Value="public bool IsCurrentUserInRole (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsCurrentUserInRole(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">Der Name der Rolle zu überprüfen.</param>
+        <summary>Bestimmt, ob der angemeldete Benutzer zur angegebenen Rolle gehört.</summary>
+        <returns>
+          <see langword="true" />Wenn der Benutzer in der angegebenen Rolle ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A> Methode überprüft, ob der angemeldete Benutzer zur angegebenen Rolle gehört. Die <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A>-Methode löst das <xref:System.Web.ApplicationServices.RoleService.SelectingProvider>-Ereignis aus.  
+  
+> [!NOTE]
+>  Rufen Sie nicht die <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A> -Methode aus dem Code, der auf dem Webserver ausgeführt wird. Rufen Sie die <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A> Methode nur als Teil eines WCF-Diensts. Weitere Informationen zu überprüfen, ob ein Benutzer zur angegebenen Gruppe gehört, Code auf dem Webserver ausgeführt wird, finden Sie unter der <xref:System.Web.Security.Roles.IsUserInRole%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="role" />ist <see langword="null" /> oder der Benutzer nicht angemeldet ist.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Rollenverwaltung ist nicht aktiviert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectingProvider">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Web.ApplicationServices.SelectingProviderEventArgs&gt; SelectingProvider;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.ApplicationServices.SelectingProviderEventArgs&gt; SelectingProvider" />
+      <MemberSignature Language="DocId" Value="E:System.Web.ApplicationServices.RoleService.SelectingProvider" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.ApplicationServices.SelectingProviderEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine <see cref="T:System.Web.ApplicationServices.RoleService" /> Instanz bestimmt, welche Rollenanbieter zum Überprüfen der Rollen des Benutzers verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ApplicationServices.RoleService> löst die <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> Ereignis aus, wenn sie den Rollenanbieter verwenden, um die Rollen des Benutzers abrufen bestimmt. Können, erstellen Sie einen Ereignishandler für das <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> Ereignis, um zur Laufzeit den Rollenanbieter mit auszuwählen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie einen Ereignishandler zum Binden der <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> Ereignis in der Datei "Global.asax". Der Ereignishandler bestimmt zur Laufzeit zu verwenden, Rollenanbieter basierend auf den Benutzernamen ein.  
+  
+ [!code-csharp[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/cs/Global.asax#1)]
+ [!code-vb[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

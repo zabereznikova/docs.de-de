@@ -1,0 +1,291 @@
+<Type Name="AdornedElementPlaceholder" FullName="System.Windows.Controls.AdornedElementPlaceholder">
+  <TypeSignature Language="C#" Value="public class AdornedElementPlaceholder : System.Windows.FrameworkElement, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdornedElementPlaceholder extends System.Windows.FrameworkElement implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.AdornedElementPlaceholder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Child")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt das Element in verwendet eine <see cref="T:System.Windows.Controls.ControlTemplate" /> angegeben, in dem ein ergänzten Steuerelement platziert wird, relativ zu anderen Elementen in der <see cref="T:System.Windows.Controls.ControlTemplate" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse nur, wenn Sie erstellen eine <xref:System.Windows.Controls.ControlTemplate> , dient als einen benutzerdefinierten Validierungstyp <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> visuelles Feedback bereitstellen, wenn die Eingabe ist ungültig.  
+  
+ Beispielsweise empfiehlt ein rotes Ausrufezeichen neben einem Textfeld angezeigt werden, wenn die Eingabe nicht gültig ist, wie in der folgenden Abbildung ist.  
+  
+ ![Datenbindungs-Validierungsfehler](~/add/media/databindingdemo-validation.PNG "Datenbindungs-Validierungsfehler")  
+  
+<a name="xamlObjectElementUsage_AdornedElementPlaceholder"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<AdornedElementPlaceholder/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Controls.ControlTemplate> mit <xref:System.Windows.Controls.AdornedElementPlaceholder> Erstellung der erweiterten <xref:System.Windows.Controls.TextBox> in der vorherigen Abbildung.  
+  
+ [!code-xaml[DataBindingLab#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#1)]  
+  
+ Die <xref:System.Windows.Controls.AdornedElementPlaceholder> Element gibt an, wo das Steuerelement, das gestaltet wird (die <xref:System.Windows.Controls.TextBox> in diesem Fall) platziert werden soll.  
+  
+ Anschließend können Sie angeben, die Vorlage als der <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> für Ihre <xref:System.Windows.Controls.TextBox>, wie im folgenden Beispiel.  
+  
+ [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
+  
+ Das vollständige Beispiel finden Sie unter [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703) oder Abschnitt Data Validation in [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdornedElementPlaceholder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.AdornedElementPlaceholder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdornedElement">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement AdornedElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement AdornedElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.AdornedElementPlaceholder.AdornedElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.UIElement" /> , die von diesem <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt ist das Reservieren von Speicherplatz für.</summary>
+        <value>Die <see cref="T:System.Windows.UIElement" /> , die von diesem <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt ist das Reservieren von Speicherplatz für. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.AdornedElementPlaceholder.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeBounds" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeBounds">Die Größe, die von diesem <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt zum Anordnen des untergeordneten Elements verwenden sollte.</param>
+        <summary>Das erste Objekt der untergeordneten visuellen positioniert und gibt die Größe im Layout benötigte von diesem <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt.</summary>
+        <returns>Die tatsächlich vom Element benötigte Größe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.UIElement Child { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement Child" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.AdornedElementPlaceholder.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das untergeordnete Objekt dieses <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt.</summary>
+        <value>Das untergeordnete Objekt dieses <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.AdornedElementPlaceholder.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, der angibt, das untergeordnete Objekt abgerufen.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Visual" /> untergeordnetes Objekt am angegebenen Index.</summary>
+        <returns>Das visuelle untergeordnete Objekt am angegebenen Index.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.AdornedElementPlaceholder.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator für die logischen untergeordneten Elemente dieses <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt.</summary>
+        <value>Ein Enumerator für die logischen untergeordneten Elemente dieses <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.AdornedElementPlaceholder.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Eine Obergrenze-Wert, den der Rückgabewert nicht überschritten werden soll.</param>
+        <summary>Bestimmt die Größe des der <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt.</summary>
+        <returns>Die gewünschte Größe dieses <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode misst nur die ersten sichtbaren untergeordneten Objekt. Der zurückgegebene Wert ist auch basierend auf der Größe des Elements für die diese <xref:System.Windows.Controls.AdornedElementPlaceholder> ist ein Platzhalter für.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt gehört nicht zu einer Vorlage.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialized">
+      <MemberSignature Language="C#" Value="protected override void OnInitialized (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitialized(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.AdornedElementPlaceholder.OnInitialized(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente des Ereignisses.</param>
+        <summary>Löst das <see cref="P:System.Windows.FrameworkElement.IsInitialized" />-Ereignis aus. Diese Methode wird aufgerufen, wenn <see cref="P:System.Windows.FrameworkElement.IsInitialized" /> festgelegt ist, um <see langword="true" /> intern.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Controls.AdornedElementPlaceholder" /> Objekt gehört nicht zu einer Vorlage.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.AdornedElementPlaceholder.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das als untergeordnetes Element hinzufügen.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.AdornedElementPlaceholder.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die das Objekt hinzugefügt werden soll.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.AdornedElementPlaceholder.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der sichtbaren untergeordneten Objekte ab.</summary>
+        <value>0 oder 1. Der Standard ist 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

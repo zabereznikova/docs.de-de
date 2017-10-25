@@ -1,0 +1,193 @@
+<Type Name="SqlClientPermission" FullName="System.Data.SqlClient.SqlClientPermission">
+  <TypeSignature Language="C#" Value="public sealed class SqlClientPermission : System.Data.Common.DBDataPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SqlClientPermission extends System.Data.Common.DBDataPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlClientPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DBDataPermission</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die .NET Framework-Datenanbieter für SQL Server, um sicherzustellen, dass ein Benutzer eine Sicherheitsstufe ausreichend, um eine Datenquelle zugegriffen hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DBDataPermission.IsUnrestricted%2A> Eigenschaft hat Vorrang vor den <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> Eigenschaft. Deshalb, wenn Sie festlegen, <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> auf `false`, müssen Sie auch festlegen <xref:System.Data.Common.DBDataPermission.IsUnrestricted%2A> zu `false` um zu verhindern, dass einen Benutzer eine Verbindung mit einem leeren Kennwort vornehmen.  
+  
+> [!NOTE]
+>  Bei Verwendung der Codezugriffsberechtigungen für ADO.NET ist die korrekte Vorgehensweise mit vom restriktivsten Fall (gar keine Berechtigungen) beginnen, und fügen Sie dann auf die spezifischen Berechtigungen, die für die Aufgabe erforderlich sind, die der Code durchführen muss. Die entgegengesetzten, alle Berechtigungen zu gewähren und dann nur eine bestimmte Berechtigung ist dagegen unsicher, da es viele Möglichkeiten gibt auszudrücken, die gleiche Verbindungszeichenfolge. Wenn Sie z. B. alle Berechtigungen zulassen und dann die Verwendung der Verbindungszeichenfolge "server=someserver" zu verweigern versuchen, wäre die Zeichenfolge "server=someserver.mycompany.com" nach wie vor zulässig. Wenn Sie hingegen immer ohne jede Berechtigung beginnen, sinkt die Gefahr, dass der Berechtigungssatz Lücken enthält.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlClientPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlClientPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("SqlClientPermission() has been deprecated.  Use the SqlClientPermission(PermissionState.None) constructor.  http://go.microsoft.com/fwlink/?linkid=14202", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlClientPermission" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlClientPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlClientPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlClientPermission" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlClientPermission (System.Security.Permissions.PermissionState state, bool allowBlankPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state, bool allowBlankPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlClientPermission.#ctor(System.Security.Permissions.PermissionState,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("SqlClientPermission(PermissionState state, Boolean allowBlankPassword) has been deprecated.  Use the SqlClientPermission(PermissionState.None) constructor.  http://go.microsoft.com/fwlink/?linkid=14202", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+        <Parameter Name="allowBlankPassword" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <param name="allowBlankPassword">Gibt an, ob ein leeres Kennwort zulässig ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlClientPermission" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.PermissionState> Enumeration hat Vorrang vor den <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> Eigenschaft. Deshalb, wenn Sie festlegen, <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> auf `false`, müssen Sie auch festlegen <xref:System.Security.Permissions.PermissionState> zu `None` um zu verhindern, dass einen Benutzer eine Verbindung mit einem leeren Kennwort vornehmen. Das Beispiel mithilfe von sicherheitsforderungen, finden Sie unter [Codezugriffssicherheit und ADO.NET](~/docs/framework/data/adonet/code-access-security.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (string connectionString, string restrictions, System.Data.KeyRestrictionBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(string connectionString, string restrictions, valuetype System.Data.KeyRestrictionBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlClientPermission.Add(System.String,System.String,System.Data.KeyRestrictionBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="restrictions" Type="System.String" />
+        <Parameter Name="behavior" Type="System.Data.KeyRestrictionBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Verbindungszeichenfolge.</param>
+        <param name="restrictions">Die Key-Einschränkungen.</param>
+        <param name="behavior">Eines der <see cref="T:System.Data.KeyRestrictionBehavior" /> Enumerationen.</param>
+        <summary>Fügt eine neue Verbindungszeichenfolge und einen Satz von eingeschränkte Schlüsselwörter, die <see cref="T:System.Data.SqlClient.SqlClientPermission" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode so konfigurieren Sie die Verbindungszeichenfolgen durch einen bestimmten Berechtigungsobjekt zulässig sind. Verwenden Sie z. B. das folgende Codefragment auf, wenn Sie nur eine bestimmte Verbindungszeichenfolge und nichts anderes gestatten möchten:  
+  
+ `permission.Add("server=MyServer; database=MyDatabase; Integrated Security=true", "", KeyRestrictionBehavior.AllowOnly)`  
+  
+ Im folgende Beispiel kann Verbindungszeichenfolgen, die eine beliebige Datenbank verwenden, aber nur auf dem Server mit dem Namen "EigenerServer", und eine beliebige Kombination von Benutzer und Kennwort und keine anderen Schlüsselwörter für Verbindungszeichenfolgen mit:  
+  
+ `permission.Add("server=MyServer;", "database=; user id=; password=;", KeyRestrictionBehavior.AllowOnly)`  
+  
+ Im folgenden Beispiel wird ein Failoverpartner, die verwendet werden kann, bei der Verbindung von Servern, die für die datenbankspiegelung konfiguriert erlaubt aber verwendet dasselbe Szenario wie oben beschrieben:  
+  
+ `permission.Add("server=MyServer; failover partner=MyMirrorServer", "database=; user id=; password=;", KeyRestrictionBehavior.AllowOnly)`  
+  
+> [!NOTE]
+>  Bei Verwendung der Codezugriffsberechtigungen für ADO.NET ist die korrekte Vorgehensweise mit vom restriktivsten Fall (gar keine Berechtigungen) beginnen, und fügen Sie dann auf die spezifischen Berechtigungen, die für die Aufgabe erforderlich sind, die der Code durchführen muss. Die entgegengesetzten, alle Berechtigungen zu gewähren und dann versucht wird, eine bestimmte Berechtigung zu verweigern ist dagegen unsicher, da es viele Möglichkeiten gibt auszudrücken, die gleiche Verbindungszeichenfolge. Wenn Sie z. B. alle Berechtigungen zulassen und dann die Verwendung der Verbindungszeichenfolge "server=someserver" zu verweigern versuchen, wäre die Zeichenfolge "server=someserver.mycompany.com" nach wie vor zulässig. Wenn Sie hingegen immer ohne jede Berechtigung beginnen, sinkt die Gefahr, dass der Berechtigungssatz Lücken enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlClientPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Data.SqlClient.SqlClientPermission" /> als ein <see cref="T:System.Security.IPermission" />.</summary>
+        <returns>Eine Kopie des aktuellen Berechtigungsobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,219 @@
+<Type Name="Trustee" FullName="System.Messaging.Trustee">
+  <TypeSignature Language="C#" Value="public class Trustee" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Trustee extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Trustee" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt ein Benutzerkonto, Gruppenkonto oder anmeldesitzung als Access Control Entry gilt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vertrauensnehmer ist die Entität, die Sie gewähren oder verweigern Zugriffsrechte, bei der Erstellung eines Zugriffssteuerungseintrags. Festlegen der <xref:System.Messaging.Trustee.TrusteeType%2A> Member (entweder direkt oder über die <xref:System.Messaging.Trustee.%23ctor%2A> Konstruktor) angeben, ob der Vertrauensnehmer ein Benutzer, Computer oder andere Typ ist. Wenn Sie nicht den Vertrauensnehmertyp vor dem Festlegen von Berechtigungen für den Vertrauensnehmer angeben, wird der Typ standardmäßig `Unknown`.  
+  
+ Geben Sie einen Wert für die <xref:System.Messaging.Trustee.Name%2A> Eigenschaft vor der Verwendung der <xref:System.Messaging.Trustee> zum Festlegen von Berechtigungen. Die <xref:System.Messaging.Trustee.Name%2A> enthält den Namen des Kontos Benutzer, Gruppe oder Computer, dem die neue Zugriffsrechte zugewiesen werden. Optional können Sie festlegen der <xref:System.Messaging.Trustee.SystemName%2A> Eigenschaft, um den Namen des Systems zu identifizieren, auf dem das Konto des Vertrauensnehmers gesucht wird der Name-Sicherheits-ID aufgelöst. Wenn Sie einen Wert für nicht angeben <xref:System.Messaging.Trustee.SystemName%2A>, der lokale Computer sucht den Kontonamen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.Trustee" /> ohne die Lese-/Schreibeigenschaften Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie einen Wert für die <xref:System.Messaging.Trustee.Name%2A> Eigenschaft vor der Verwendung der <xref:System.Messaging.Trustee> Instanz zum Festlegen von Berechtigungen. Optional können Sie festlegen der <xref:System.Messaging.Trustee.SystemName%2A> Eigenschaft, um den Namen des Systems zu identifizieren, auf dem das Konto des Vertrauensnehmers gesucht wird der Name-Sicherheits-ID aufgelöst. Wenn Sie einen Wert für nicht angeben <xref:System.Messaging.Trustee.SystemName%2A>, der lokale Computer sucht den Kontonamen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zuzuweisende Wert der <see cref="P:System.Messaging.Trustee.Name" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Messaging.Trustee" /> Klasse vom Typ <see langword="Unknown" />wird durch das Festlegen der <see cref="P:System.Messaging.Trustee.Name" /> -Eigenschaft auf den angegebenen Wert und die <see cref="P:System.Messaging.Trustee.SystemName" /> auf <see langword="null" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung zum Festlegen des Vertrauensnehmers-Kontos und angeben, dass der lokale Computer verwendet werden, um das Konto zu suchen. Die <xref:System.Messaging.Trustee.TrusteeType%2A> -Eigenschaftensatz auf `Unknown`, aber Sie können diesen Wert ändern, bevor Sie mithilfe einer Instanz des <xref:System.Messaging.Trustee> zum Festlegen von Berechtigungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee (string name, string systemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string systemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="systemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zuzuweisende Wert der <see cref="P:System.Messaging.Trustee.Name" /> Eigenschaft.</param>
+        <param name="systemName">Der zuzuweisende Wert der <see cref="P:System.Messaging.Trustee.SystemName" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.Trustee" /> Klasse vom Typ <see langword="Unknown" />wird durch das Festlegen der <see cref="P:System.Messaging.Trustee.Name" /> und die <see langword="SystemName" /> Eigenschaften auf die angegebenen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, Festlegen des Vertrauensnehmers-Kontos und angeben, dass es sich bei ein Computer im Netzwerk verwendet werden, um das Konto zu suchen. Die <xref:System.Messaging.Trustee.TrusteeType%2A> -Eigenschaftensatz auf `Unknown`, aber Sie können diesen Wert ändern, bevor Sie mithilfe einer Instanz des <xref:System.Messaging.Trustee> zum Festlegen von Berechtigungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee (string name, string systemName, System.Messaging.TrusteeType trusteeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string systemName, valuetype System.Messaging.TrusteeType trusteeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor(System.String,System.String,System.Messaging.TrusteeType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="systemName" Type="System.String" />
+        <Parameter Name="trusteeType" Type="System.Messaging.TrusteeType" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zuzuweisende Wert der <see cref="P:System.Messaging.Trustee.Name" /> Eigenschaft.</param>
+        <param name="systemName">Der zuzuweisende Wert der <see cref="P:System.Messaging.Trustee.SystemName" /> Eigenschaft.</param>
+        <param name="trusteeType">Ein <see cref="T:System.Messaging.TrusteeType" /> , der den Kontotyp des Vertrauensnehmers angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.Trustee" /> Klasse des angegebenen Typs, Festlegen der <see cref="P:System.Messaging.Trustee.Name" /> und die <see cref="P:System.Messaging.Trustee.SystemName" /> Eigenschaften auf die angegebenen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, wenn der Vertrauensnehmertyp, zum Festlegen des Vertrauensnehmers-Kontos ein, und geben Sie einen Computer im Netzwerk bekannt ist verwendet werden, um das Konto zu suchen.  
+  
+ Diese Überladung wird der <xref:System.Messaging.Trustee.TrusteeType%2A> -Eigenschaft zur Erstellung, aber Sie können diesen Wert ändern, bevor Sie mithilfe einer Instanz des <xref:System.Messaging.Trustee> zum Festlegen von Berechtigungen. Die `Unknown` Vertrauensnehmertyp (der anderen Überladungen des Konstruktors standardmäßig festgelegt) sollte verwendet werden, nur, wenn Sie die Art der Vertrauensstellung nicht kennen, die verwendet wird, aber wissen, dass er gültig ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Trustee.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Vertrauensnehmers fest.</summary>
+        <value>Der Name des Kontos, dem die neue Rechte zugewiesen werden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie einen Wert für die <xref:System.Messaging.Trustee.Name%2A> Eigenschaft vor der Verwendung der <xref:System.Messaging.Trustee> zum Festlegen von Berechtigungen. Die <xref:System.Messaging.Trustee.Name%2A> enthält den Namen des Kontos Benutzer, Gruppe oder Computer, dem die neue Zugriffsrechte zugewiesen werden.  
+  
+ Wenn Sie einen Wert für nicht angeben der <xref:System.Messaging.Trustee.SystemName%2A> -Eigenschaft, das Konto, das Sie zu, in Identifizieren der <xref:System.Messaging.Trustee.Name%2A> Eigenschaft ist auf dem lokalen Computer gesucht. Wenn Sie angeben einer <xref:System.Messaging.Trustee.SystemName%2A>, das Konto gesucht wird, auf dem Computer, die Sie angeben.  
+  
+ Wenn Sie nicht mit dem Netzwerk verbunden sind (beispielsweise, wenn Sie im Arbeitsgruppenmodus ausgeführt werden), wird die <xref:System.Messaging.Trustee.Name%2A> -Eigenschaft kann alle lokalen Benutzer oder eine Gruppe sein. In diesem Fall sollten Sie keiner Wert für angeben <xref:System.Messaging.Trustee.SystemName%2A>, da Arbeitsgruppenmodus per Definition lokal ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Messaging.Trustee.Name" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemName">
+      <MemberSignature Language="C#" Value="public string SystemName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SystemName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Trustee.SystemName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Computer, auf dem sich das Konto des Vertrauensnehmers gesucht werden soll.</summary>
+        <value>Der lokale oder remote-Computer, auf dem das Konto vorhanden ist. Die Standardeinstellung ist <see langword="null" />, was bedeutet, dass der Name auf dem lokalen Computer gesucht werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie einen Wert für <xref:System.Messaging.Trustee.Name%2A> vor der Verwendung dieser Instanz von <xref:System.Messaging.Trustee> zum Festlegen von Berechtigungen, aber <xref:System.Messaging.Trustee.SystemName%2A> ist optional. Wenn Sie lassen <xref:System.Messaging.Trustee.SystemName%2A> `null`, der lokale Computer wird verwendet, um das Konto nachzuschlagen, Sie in geben, der <xref:System.Messaging.Trustee.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrusteeType">
+      <MemberSignature Language="C#" Value="public System.Messaging.TrusteeType TrusteeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.TrusteeType TrusteeType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Trustee.TrusteeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Vertrauensnehmers, der angibt, ob der Vertrauensnehmer Benutzer, Gruppen, Computer, Domänen oder Alias ist.</summary>
+        <value>Ein <see cref="T:System.Messaging.TrusteeType" /> , der angibt, welchen Typ eines Kontos des Vertrauensnehmers für das System verfügt. Die Standardeinstellung ist <see langword="Unknown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Trustee.TrusteeType%2A> gibt an, welche Art von Konto der Vertrauensnehmer auf dem Domänencontroller oder auf dem lokalen Computer zugeordnet ist. Dies kann z. B. ein Benutzerkonto, ein Gruppenkonto oder ein Computerkonto sein.  
+  
+ Wenn Sie einen vordefinierten Gruppennamen für angeben der <xref:System.Messaging.Trustee.Name%2A> Eigenschaft, z. B. "Jeder", die <xref:System.Messaging.Trustee.TrusteeType%2A> ist `Group`, anstatt `Alias`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Vertrauensnehmertyp ist keines der <see cref="T:System.Messaging.TrusteeType" /> Enumerationsmember.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

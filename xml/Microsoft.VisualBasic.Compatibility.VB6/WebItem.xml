@@ -1,0 +1,182 @@
+<Type Name="WebItem" FullName="Microsoft.VisualBasic.Compatibility.VB6.WebItem">
+  <TypeSignature Language="C#" Value="public class WebItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht das Visual Basic 6.0 aktualisierten <see langword="WebClass" /> Projekte in ASP.NET ausgeführt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Visual Basic 6.0 `WebClass` Projekt wird aktualisiert, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], Konvertierung in eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ Deklarationen werden dem Projekt hinzugefügt: eine für die `WebClass` und einer für jede der `WebItems` und `Templates` in die `WebClass` Projekt. Ein `Page_Load` Ereignisprozedur wird hinzugefügt, um das Projekt zuerst erstellen eine <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Objekt und dann `WebItem` Objekte für die einzelnen der `WebItems` und `Templates` Visual Basic 6.0 zugeordnete `WebClass` Projekt. Schließlich wird in der `Page_Load` Ereignisprozedur, sehen Sie einen Aufruf der `WebClass` Compatibility Runtime: <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass.ProcessEvents%2A>. Daher kann die Laufzeit zum Rendern der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebItem> in der Anforderungs-URL angegeben. Dieser Code ist der nur neue Code, der dem aktualisierten Projekt hinzugefügt und dient nur zum Emulieren des zugrunde liegenden Verhaltens der Visual Basic 6.0 `WebClass` Common Language Runtime.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebItem (string Name, Microsoft.VisualBasic.Compatibility.VB6.WebClass AssociatedWebClass, string HtmlTemplateFilename = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string Name, class Microsoft.VisualBasic.Compatibility.VB6.WebClass AssociatedWebClass, string HtmlTemplateFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebItem.#ctor(System.String,Microsoft.VisualBasic.Compatibility.VB6.WebClass,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Name" Type="System.String" />
+        <Parameter Name="AssociatedWebClass" Type="Microsoft.VisualBasic.Compatibility.VB6.WebClass" />
+        <Parameter Name="HtmlTemplateFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Name">Ein <see cref="T:System.String" /> , enthält die <see langword="Name" /> -Eigenschaft für das Visual Basic 6.0 <see langword="WebClass" /> Objekt.</param>
+        <param name="AssociatedWebClass">Die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebClass" /> Objekt, das dies enthält <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" />.</param>
+        <param name="HtmlTemplateFilename">Dies ist optional. Der Dateiname der Visual Basic 6.0 <see langword="Template" /> , die Visual Basic 6.0 zugeordnet wurde <see langword="WebItem" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebItem> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.WebItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen ab, die im Code, zum Identifizieren verwendet wird einer <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den Namen für die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schreibgeschützt.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebItem> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReScanReplacements">
+      <MemberSignature Language="C#" Value="public bool ReScanReplacements { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReScanReplacements" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.WebItem.ReScanReplacements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob für Token neu einlesen, die im Ersetzungstext enthalten sind.</summary>
+        <value>
+          <see langword="true" />Wenn Sie der Text erneut durchsucht werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebItem> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagPrefix">
+      <MemberSignature Language="C#" Value="public string TagPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.WebItem.TagPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die Austausch-Tagnamen in einer HTML-Vorlage als Präfix verwendet wird.</summary>
+        <value>Ein <see cref="T:System.String" /> , identifiziert die <see langword="TagPrefix" /> Sequenz für das Ersatz-Tags in einer HTML-Vorlage zu erkennen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebItem> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTemplate">
+      <MemberSignature Language="C#" Value="public void WriteTemplate (System.Web.HttpResponse Response, string HtmlTemplateFilename = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void WriteTemplate(class System.Web.HttpResponse Response, string HtmlTemplateFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebItem.WriteTemplate(System.Web.HttpResponse,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Response" Type="System.Web.HttpResponse" />
+        <Parameter Name="HtmlTemplateFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Response">Ein <see cref="T:System.Web.HttpResponse" />-Objekt.</param>
+        <param name="HtmlTemplateFilename">Dies ist optional. Der Dateiname der Visual Basic 6.0 <see langword="Template" /> , die Visual Basic 6.0 zugeordnet wurde <see langword="WebItem" />.</param>
+        <summary>Verarbeitet eine HTML-Vorlage angefügt werden, um eine <see langword="WebItem" /> Objekt und gibt ihn an den Browser zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebItem> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

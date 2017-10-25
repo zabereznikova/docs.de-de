@@ -1,0 +1,43 @@
+<Type Name="ActivityAction" FullName="System.Activities.ActivityAction">
+  <TypeSignature Language="C#" Value="public sealed class ActivityAction : System.Activities.ActivityDelegate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityAction extends System.Activities.ActivityDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.ActivityDelegate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Aktivitätsdelegaten, der keine in-Argumente aufweist und keinen Wert zurückgibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Aktivitätsdelegat führt eine Aktivität aus, die über eine erforderliche Signatur verfügt, z. B. die <xref:System.Activities.Statements.ForEach%601>-Aktivität, die eine Iterationsvariable oder die <xref:System.Activities.Statements.Catch%601>-Aktivität erfordert, die eine <xref:System.Exception> erfordert.  
+  
+ Es gibt mehrere generische Versionen dieses Typs, die 1 bis 16 Argumente für die Aktivität annehmen, die aufgerufen wird.  Es gibt auch <xref:System.Activities.ActivityFunc%601>-Typen für Delegaten, die Werte zurückgeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.ActivityAction" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

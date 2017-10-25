@@ -1,0 +1,334 @@
+<Type Name="DataObject" FullName="System.Security.Cryptography.Xml.DataObject">
+  <TypeSignature Language="C#" Value="public class DataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.DataObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Objektelement einer XML-Signatur, die zu signierenden Daten enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.DataObject> Klasse zum Speichern von Informationen oder Metadaten direkt in eine XML-Signatur.  Sie können z. B. die Signatur speichern Generation Datum oder die Identität der Signatur.  Die <xref:System.Security.Cryptography.Xml.DataObject> -Klasse kann oder möglicherweise durch die XML-Signatur nicht abgedeckt werden.  
+  
+ Die Klasse entspricht dem `<Object>` Element in der World Wide Web Consortium (W3C)-Spezifikation für XML-Signaturen. Weitere Informationen zur W3C-Spezifikation finden Sie unter [http://www.w3.org/TR/xmldsig-core/](http://www.w3.org/TR/xmldsig-core/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur-Envelope generiert.  
+  
+ [!code-cpp[XMLDSIG Signing#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Signing/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Signing#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Signing/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Signing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Signing/VB/source.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur überprüft wird.  
+  
+ [!code-cpp[XMLDSIG Verification#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Verification/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Verification#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Verification/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Verification#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Verification/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DataObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.DataObject" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.DataObject> Klasse mit XML-Signaturen verwendet wird. Nachdem Sie initialisiert haben, die <xref:System.Security.Cryptography.Xml.DataObject>, können Sie zuweisen der <xref:System.Security.Cryptography.Xml.DataObject.Data%2A> und <xref:System.Security.Cryptography.Xml.DataObject.Id%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur-Envelope generiert.  
+  
+ [!code-cpp[XMLDSIG Signing#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Signing/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Signing#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Signing/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Signing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Signing/VB/source.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur überprüft wird.  
+  
+ [!code-cpp[XMLDSIG Verification#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Verification/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Verification#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Verification/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Verification#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Verification/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject (string id, string mimeType, string encoding, System.Xml.XmlElement data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string mimeType, string encoding, class System.Xml.XmlElement data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DataObject.#ctor(System.String,System.String,System.String,System.Xml.XmlElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="mimeType" Type="System.String" />
+        <Parameter Name="encoding" Type="System.String" />
+        <Parameter Name="data" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die Kennung zum Initialisieren der neuen Instanz <see cref="T:System.Security.Cryptography.Xml.DataObject" /> mit.</param>
+        <param name="mimeType">Der MIME-Typ der Daten zum Initialisieren der neuen Instanz verwendet <see cref="T:System.Security.Cryptography.Xml.DataObject" />.</param>
+        <param name="encoding">Die Codierung der Daten zum Initialisieren der neuen Instanz verwendet <see cref="T:System.Security.Cryptography.Xml.DataObject" />.</param>
+        <param name="data">Die Daten zum Initialisieren der neuen Instanz <see cref="T:System.Security.Cryptography.Xml.DataObject" /> mit.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Klasse mit dem angegebenen ID, dem MIME-Typ, der Codierung und den Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.DataObject> Klasse mit XML-Signaturen verwendet wird. Die `id` Parameter verweist auf den Namen des Elements, das die zu verwendenden Daten enthält. Die `data` Parameter bezieht sich auf der Liste der XML-Knoten, enthält die `id` Parameter-Element.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="data" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNodeList Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNodeList Data" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.DataObject.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des aktuellen <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt.</summary>
+        <value>Die Daten des aktuellen <see cref="T:System.Security.Cryptography.Xml.DataObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist die Liste der XML-Knoten, die in beschriebenen Elements enthält die <xref:System.Security.Cryptography.Xml.DataObject.Id%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur-Envelope generiert.  
+  
+ [!code-cpp[XMLDSIG Signing#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Signing/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Signing#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Signing/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Signing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Signing/VB/source.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur überprüft wird.  
+  
+ [!code-cpp[XMLDSIG Verification#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Verification/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Verification#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Verification/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Verification#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Verification/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert verwendet, um die Eigenschaft festgelegt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public string Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.DataObject.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die Codierung des aktuellen <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt.</summary>
+        <value>Die Art der Codierung des aktuellen <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist `null`, was bedeutet, dass keine Codierung vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DataObject.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt.</summary>
+        <returns>Die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie die Ausgabe der XML-Code für eine <xref:System.Security.Cryptography.Xml.DataObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.DataObject.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des aktuellen <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt.</summary>
+        <value>Der Name des Elements, das zu verwendende Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dient der Identifizierung zu verweisen die <xref:System.Security.Cryptography.Xml.DataObject> von einem anderen Speicherort. Der Standardwert dieser Eigenschaft ist `null`, was bedeutet, dass keine ID vorhanden ist. Diese Eigenschaft ist im Allgemeinen verweist das <xref:System.Security.Cryptography.Xml.Signature.SignedInfo%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur-Envelope generiert.  
+  
+ [!code-cpp[XMLDSIG Signing#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Signing/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Signing#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Signing/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Signing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Signing/VB/source.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine XML-Signatur überprüft wird.  
+  
+ [!code-cpp[XMLDSIG Verification#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG Verification/CPP/source.cpp#1)]
+ [!code-csharp[XMLDSIG Verification#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG Verification/CS/source.cs#1)]
+ [!code-vb[XMLDSIG Verification#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG Verification/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.DataObject.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das XML-Element beim Laden der <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Zustand.</param>
+        <summary>Lädt eine <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Zustand aus einer XML-Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um zusätzliche XML-Elemente hinzuzufügen ein <xref:System.Security.Cryptography.Xml.DataObject> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des XML-Elements ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MimeType">
+      <MemberSignature Language="C#" Value="public string MimeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MimeType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.DataObject.MimeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den MIME-Typ des aktuellen <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt.</summary>
+        <value>Der MIME-Typ des aktuellen <see cref="T:System.Security.Cryptography.Xml.DataObject" /> Objekt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der MIME-Typ beschreibt die Daten innerhalb der <xref:System.Security.Cryptography.Xml.DataObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

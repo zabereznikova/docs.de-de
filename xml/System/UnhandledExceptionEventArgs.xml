@@ -1,0 +1,167 @@
+<Type Name="UnhandledExceptionEventArgs" FullName="System.UnhandledExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class UnhandledExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit UnhandledExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.UnhandledExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das Ereignis bereit, das ausgelöst wird, wenn eine Ausnahme von keiner Anwendungsdomäne behandelt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.UnhandledExceptionEventArgs>bietet Zugriff auf das Ausnahmeobjekt und ein Flag, der angibt, ob die common Language Runtime beendet wird. Die <xref:System.UnhandledExceptionEventArgs> ist einer der Parameter übergebenen <xref:System.UnhandledExceptionEventHandler> für die <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> Ereignis.  
+  
+ Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnhandledExceptionEventArgs (object exception, bool isTerminating);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object exception, bool isTerminating) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UnhandledExceptionEventArgs.#ctor(System.Object,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Object" />
+        <Parameter Name="isTerminating" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die Ausnahme, die nicht behandelt wird.</param>
+        <param name="isTerminating">
+          <see langword="true" />Wenn die Laufzeit beendet wird; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.UnhandledExceptionEventArgs" /> Klasse mit dem Ausnahmeobjekt und terminierungsflag eine common Language Runtime.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionObject">
+      <MemberSignature Language="C#" Value="public object ExceptionObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ExceptionObject" />
+      <MemberSignature Language="DocId" Value="P:System.UnhandledExceptionEventArgs.ExceptionObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das nicht behandelte Ausnahmeobjekt ab.</summary>
+        <value>Das nicht behandelte Ausnahmeobjekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt ein Objekt vom Typ <xref:System.Object> anstelle von abgeleiteten <xref:System.Exception>. Obwohl die Common Language Specification erfordert, dass alle Ausnahmetypen abgeleitet <xref:System.Exception>, es ist möglich, dass Methoden zum Auslösen von Ausnahmen mit Objekten, die nicht von abgeleiteten <xref:System.Exception>. Arbeiten mit dieser Ausnahme wird Folgendes möglich:  
+  
+-   Anwenden der <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> -Attribut mit einer <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute.WrapNonExceptionThrows%2A?displayProperty=nameWithType> Wert `true` auf die Assembly, die den Ereignishandler enthält. Dies dient als Wrapper für alle Ausnahmen, die nicht von abgeleiteten der <xref:System.Exception> -Klasse in einem <xref:System.Runtime.CompilerServices.RuntimeWrappedException> Objekt. Sie können anschließend sicher umgewandelt (in c#) oder konvertieren (in Visual Basic), das von dieser Eigenschaft zurückgegebene Objekt eine <xref:System.Exception> Objekt, und rufen Sie das ursprüngliche Ausnahmeobjekt aus der <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> Eigenschaft. Beachten Sie, dass einige Compiler, z. B. c# und Visual Basic-Compiler automatisch dieses Attribut anwenden.  
+  
+-   Wandeln Sie das von dieser Eigenschaft zurückgegebene Objekt eine <xref:System.Exception> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.AppDomain.UnhandledException> Ereignis. Definiert einen Ereignishandler `MyHandler`, die aufgerufen wird, wenn eine nicht behandelte Ausnahme, in der Standardanwendungsdomäne ausgelöst wird. Es wird dann zwei Ausnahmen ausgelöst. Die erste erfolgt durch eine **Try/Catch-** Block. Der zweite nicht behandelt wird, und ruft die `MyHandle` Routine, bevor die Anwendung beendet wird.  
+  
+ [!code-cpp[AppDomain_UnhandledException#1](~/samples/snippets/cpp/VS_Snippets_CLR/AppDomain_UnhandledException/CPP/unhandledexception.cpp#1)]
+ [!code-csharp[AppDomain_UnhandledException#1](~/samples/snippets/csharp/VS_Snippets_CLR/AppDomain_UnhandledException/CS/unhandledexception.cs#1)]
+ [!code-vb[AppDomain_UnhandledException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_UnhandledException/VB/unhandledexception.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTerminating">
+      <MemberSignature Language="C#" Value="public bool IsTerminating { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTerminating" />
+      <MemberSignature Language="DocId" Value="P:System.UnhandledExceptionEventArgs.IsTerminating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob Common Language Runtime beendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Laufzeit beendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ab .NET Framework, Version 2.0, gibt diese Eigenschaft zurück `true` für die meisten nicht behandelte Ausnahmen, es sei denn, eine Anwendung Kompatibilität-Flag verwendet wird, um zu dem Verhalten der Versionen 1.0 und 1.1 zurückzukehren. Der Grund ist, dass die meisten nicht behandelte Ausnahmen in Threads, einschließlich Threads im Threadpool, zulässig sind, zu fortfahren natürlich führt normalerweise zu einer Beendigung der Anwendung. Weitere Informationen, einschließlich einer Liste von Fällen, in denen die Common Language Runtime nicht beendet wird, finden Sie unter [Ausnahmen in verwalteten Threads](~/docs/standard/threading/exceptions-in-managed-threads.md).  
+  
+## <a name="version-information"></a>Versionsinformationen  
+ Die folgenden Ausführungen gelten für die .NET Framework-Versionen 1.0 und 1.1: Diese Eigenschaft gibt `true` Wenn eine Ausnahme empfangen, aber nicht von einer Anwendung-Hauptthread verarbeitet werden. Diese Eigenschaft gibt auch zurück `true` , wenn ein nicht verwalteter Thread verwalteten Code ausführt und eine nicht behandelte Ausnahme empfängt. Diese Eigenschaft schließlich gibt `false` für Threads im Threadpool und verwaltete Threads von einer Anwendung erstellt werden, da Versionen 1.0 und 1.1 nicht behandelte in solchen Threads Ausnahmen und werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

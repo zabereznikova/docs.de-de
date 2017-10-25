@@ -1,0 +1,161 @@
+<Type Name="DataBoundControlAdapter" FullName="System.Web.UI.WebControls.Adapters.DataBoundControlAdapter">
+  <TypeSignature Language="C#" Value="public class DataBoundControlAdapter : System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataBoundControlAdapter extends System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Adapters.WebControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Passt das Verhalten von einem <see cref="T:System.Web.UI.WebControls.DataBoundControl" /> Objekt, dem der Adapter für bestimmte Browseranforderungen zugeordnet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement abgeleitet wurde. die <xref:System.Web.UI.WebControls.DataBoundControl> Klasse an eine Datenquelle gebunden ist, und generiert die Schnittstelle oder ein untergeordnetes Steuerelement Benutzerhierarchie durch Auflisten der Elemente in der Datenquelle, an die es gebunden ist. <xref:System.Web.UI.WebControls.DataBoundControl>ist eine abstrakte Basisklasse, die die gemeinsame Merkmale aller Steuerelemente definiert, die z. B. an eine Datenquelle gebunden werden kann die <xref:System.Web.UI.WebControls.DataGrid> und <xref:System.Web.UI.WebControls.ListBox> Steuerelemente. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.DataBoundControl>.  
+  
+ Ein <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> verändert das Sitzungsverhalten, sodass eine <xref:System.Web.UI.WebControls.DataBoundControl> für einen bestimmten Browser oder eine Klasse von Browsern oder fungiert als Filter für einige Funktionen. Ein Großteil der Renderingverhaltens kann gekapselt werden, in die speziellen Klassen, die Ableitung der <xref:System.Web.UI.HtmlTextWriter> Klasse. Daher ist es wahrscheinlich, dass ein einzelner Adapter für eine Reihe von Browserklassenverhalten oder, einschließen von der Anpassungsfähigkeit beim verwendet werden kann die <xref:System.Web.UI.HtmlTextWriter> Klassen können nutzen, die eine Steuerelementadapter nicht erforderlich.  
+  
+ Jedes Steuerelement explizite Zuordnungen zu Adapter über die Browser-Definitionsdateien hat, treten `<controlAdapter>` Einträge in diesen Dateien. Daher wird bei jedem Zugriff auf die <xref:System.Web.UI.Control.Adapter%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataBoundControl> verwendet die <xref:System.Web.HttpBrowserCapabilities> Objekt aus der Browser-Definitionsdateien zum Ausführen der Suche nach der Zuordnung des Adapters zum Steuerelement extrahiert.  
+  
+ Während der Verarbeitung fängt .NET Framework Aufrufe der Methoden eines Steuerelements, die bestimmten Browser sein könnten. Wenn ein Steuerelementadapter angefügt wird, ruft der .NET Framework die zugeordnete Adapter-Methoden. Weitere Informationen finden Sie unter <xref:System.Web.UI.Adapters.ControlAdapter>.  
+  
+ Die m:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding(System.Collections.IEnumerable)-Methode bindet eine zählbare Auflistung an die zugeordnete <xref:System.Web.UI.WebControls.DataBoundControl>. Die <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.Control%2A> Eigenschaft gibt einen stark typisierten Verweis auf die <xref:System.Web.UI.WebControls.DataBoundControl>.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele erstellen und Verwenden von zwei abgeleitete Steuerelemente:  
+  
+-   Die `MyDataBound` von abgeleitete Klasse <xref:System.Web.UI.WebControls.DataBoundControl>, wird eine einfache schreibgeschützten Datenraster-Steuerelement.  
+  
+-   Die `MyDataBoundAdapter` von abgeleitete Klasse <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter>, rendert die Rasterdaten als einer eindimensionalen Liste mit Zeilentrennzeichen, für die kleinen Bildschirm Browsern geeignet ist.  
+  
+ Im erste Codebeispiel verwendet eine Webseite Deklarieren einer `MyDataBound` Steuerelement und einer Instanz von <xref:System.Web.UI.WebControls.ObjectDataSource> , die Daten in Form von bereitstellt ein <xref:System.Data.DataView> Objekt.  
+  
+  
+  
+ Das zweite Codebeispiel enthält die abgeleitete `MyDataBound` und `MyDataBoundAdapter` Klassen:  
+  
+-   Die `MyDataBound` -Klasse überschreibt die <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding%2A> Methode zum Speichern einer <xref:System.Collections.IEnumerator> Auflistung für die Datenquelle und überschreibt die <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A> Methode, um die Datenquelle als HTML zu rendern `<table>`.  
+  
+-   Die `MyDataBoundAdapter` -Klasse überschreibt <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding%2A> zum Speichern der Datenquelle in ein eindimensionales <xref:System.Collections.ArrayList> und Zeilentrennzeichen hinzuzufügen. Es überschreibt <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> zum Rendern der <xref:System.Collections.ArrayList> als eine Liste von Feldern, getrennt durch `<br />` Tags.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.DataBoundControlAdapter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.DataBoundControlAdapter/CS/mydatabound.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.DataBoundControlAdapter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.DataBoundControlAdapter/VB/mydatabound.vb#1)]  
+  
+ Im dritten Codebeispiel wird mithilfe einer Konfigurationsdatei, um anzugeben, dass keine Steuerelementadapter mit verwendet werden soll `MyDataBound` Steuerelemente für Microsoft Internet Explorer-Browser, und dass eine `MyDataBoundAdapter` wird verwendet, mit `MyDataBound` Steuerelemente für Openwave UP-Browser.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBoundControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> Klasse bei der Erstellung der entsprechenden <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.DataBoundControl Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataBoundControl Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataBoundControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen stark typisierten Verweis auf die <see cref="T:System.Web.UI.WebControls.DataBoundControl" /> Objekt, das mit dieser Steuerelementadapter zugeordnet.</summary>
+        <value>Das <see cref="T:System.Web.UI.WebControls.DataBoundControl" />, an das <see cref="T:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter" /> angefügt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> Objekt angefügt ist, um eine <xref:System.Web.UI.WebControls.DataBoundControl> Steuerelement, das .NET Framework ruft bestimmte Adaptermember anstelle der Elemente des Steuerelements.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.Control%2A> abgeleitet Eigenschaft in ein Adapter die <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> Klasse. Gibt einen stark typisierten Verweis auf die `MyDataBound` Steuerelement.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.DataBoundControlAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.DataBoundControlAdapter/CS/mydatabound.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.DataBoundControlAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.DataBoundControlAdapter/VB/mydatabound.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter" /> implementieren-Klasse Sie sollten mindestens, eine <see langword="Control" /> Eigenschaft, um eine stark typisierte Instanz des Steuerelements zurückzugeben, wie im Beispielabschnitt dargestellt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected virtual void PerformDataBinding (System.Collections.IEnumerable data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void PerformDataBinding(class System.Collections.IEnumerable data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein <see cref="T:System.Collections.IEnumerable" /> von <see cref="T:System.Object" /> gebunden werden, die abgeleitete <see cref="T:System.Web.UI.WebControls.DataBoundControl" />.</param>
+        <summary>Bindet die Daten in der Datenquelle der zugeordneten <see cref="T:System.Web.UI.WebControls.DataBoundControl" /> Objekt, das der Steuerelementadapter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding%2A> Methode wird aufgerufen, anstelle von der <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A?displayProperty=nameWithType> Methode beim eine <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> Steuerelementadapter angefügt ist, an ein Steuerelement abgeleitet wurde. die <xref:System.Web.UI.WebControls.DataBoundControl> Klasse.  
+  
+ In der Regel eine Überschreibung der <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A?displayProperty=nameWithType> Daten durchlaufen, unterschiedliche Namen und Werte bei Bedarf erstellt und speichert ihn in eine interne Auflistung. In der Regel <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A> oder eine ähnliche Methode von der <xref:System.Web.UI.WebControls.DataBoundControl> die Benutzersteuerelemente Schnittstelle oder ein untergeordnetes aus der internen Auflistung aufgefüllt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding%2A> Auflistung zum Speichern der Datenquelle in ein eindimensionales <xref:System.Collections.ArrayList> -Objekt und Zeilentrennzeichen hinzuzufügen. Es veranschaulicht auch das Überschreiben der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> Methode zum Rendern der <xref:System.Collections.ArrayList> als eine Liste von Feldern, getrennt durch `<br />` Tags.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.DataBoundControlAdapter#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.DataBoundControlAdapter/CS/mydatabound.cs#3)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.DataBoundControlAdapter#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.DataBoundControlAdapter/VB/mydatabound.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben der <see cref="M:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding(System.Collections.IEnumerable)" /> Methode, wenn spezielle Bindungslogik ist erforderlich für den Zielbrowser – z. B. wenn Elementnamen auf andere Weise als für die allgemeine Verwendung des Steuerelements erstellt werden müssen.  
+  
+ Die <see cref="M:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding(System.Collections.IEnumerable)" /> -Basismethode ruft <see cref="M:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding(System.Collections.IEnumerable)" />. Rufen Sie die <see cref="M:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter.PerformDataBinding(System.Collections.IEnumerable)" /> -Basismethode nur, wenn Sie die Datenbindungsfunktionen des erfordern die <see cref="T:System.Web.UI.WebControls.DataBoundControl" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

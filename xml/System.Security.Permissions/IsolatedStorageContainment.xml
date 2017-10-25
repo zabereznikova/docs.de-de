@@ -1,0 +1,316 @@
+<Type Name="IsolatedStorageContainment" FullName="System.Security.Permissions.IsolatedStorageContainment">
+  <TypeSignature Language="C#" Value="public enum IsolatedStorageContainment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed IsolatedStorageContainment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.IsolatedStorageContainment" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die zulässige Verwendung des isolierten Speichers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isolierte Speicherung verwendet Beweise, um einen eindeutigen Speicherbereich für die Verwendung durch eine Anwendung oder Komponente zu bestimmen. Die Identität einer Assembly bestimmt eindeutig den Stamm eines virtuellen Dateisystems für die Verwendung in dieser Assembly. Daher verfügt jeder anstatt viele Anwendungen und Komponenten, die gemeinsame Nutzung einer allgemeinen Ressource, z. B. das Dateisystem oder die Registrierung, einen eigenen Bereich grundsätzlich zugewiesen.  
+  
+ Zuweisen der isolierten Speicherung werden vier grundlegende Isolation Bereiche verwendet:  
+  
+-   `User`-Code ist immer entsprechend den aktuellen Benutzer beschränkt. Die gleiche Assembly erhalten unterschiedliche Speicher aus, wenn von verschiedenen Benutzern ausgeführt wird.  
+  
+-   `Machine`-Code ist immer gemäß den Computer beschränkt. Die gleiche Assembly erhalten den gleichen Speicher aus, wenn von verschiedenen Benutzern auf dem gleichen Computer ausgeführt wird.  
+  
+-   `Assembly`-Code wird durch einen starken Namen (z. B. Microsoft.Office. * oder Microsoft.Office.Word), nach Herausgeber (auf der Grundlage des öffentlichen Schlüssels), durch die URL (z. B. http://www.fourthcoffee.com/process/grind.htm), nach der Site oder Zone kryptografisch identifiziert.  
+  
+-   `Domain`-Code wird basierend auf der Anwendungsdomäne zugeordnete Beweis identifiziert. Identität der Web-Anwendung wird von der Website-URL oder URL der Webseite, Website oder Zone abgeleitet. Lokale Identität basiert auf den Verzeichnispfad für die Anwendung.  
+  
+ Definitionen der URL, Site und Zone, finden Sie unter <xref:System.Security.Permissions.UrlIdentityPermission>, <xref:System.Security.Permissions.SiteIdentityPermission>, und <xref:System.Security.Permissions.ZoneIdentityPermission>.  
+  
+ Diese Identitäten werden gruppiert, in diesem Fall werden die Identitäten nacheinander angewendet, bis der gewünschte isolierte Speicher erstellt wird. Die gültigen Gruppierungen sind Benutzerassembly + und + Assembly + Benutzerdomäne. Diese Gruppierung von Identitäten eignet sich in viele verschiedene Anwendungen.  
+  
+ Wenn Daten nach Domäne, Benutzer und Assembly gespeichert ist, sind die Daten privat in, dass nur Code, insofern, dass die Assembly auf die Daten zugreifen kann. Der Datenspeicher wird auch von der Anwendung, in der er ausgeführt wird, isoliert, damit die Assembly durch Verfügbarmachen von Daten für andere Anwendungen keinen potenziellen Speicherverlust dar.  
+  
+ Isolation nach Assembly- und der Benutzer konnte für Benutzerdaten verwendet werden, die für mehrere Anwendungen angewendet wird; beispielsweise Lizenz, oder ein Benutzer persönliche Informationen (Name, Anmeldeinformationen für die Authentifizierung usw.), die einer Anwendung unabhängig ist.  
+  
+ <xref:System.Security.Permissions.IsolatedStorageContainment>macht die Flags, die bestimmen, ob eine Anwendung für die Verwendung von isolierter Speicherung zulässig ist und wenn also die Identitätskombinationen zulässig sind, verwenden. Es bestimmt außerdem, ob eine Anwendung zum Speichern von Informationen an einem Ort mit einem Benutzer Roaming möglich (Windows Roaming User Profiles oder Umleitung des Ordners muss konfiguriert werden) zulässig ist.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird gezeigt, wie der CLR mitgeteilt, dass Code in dieser Assembly erfordert, dass die <xref:System.Security.Permissions.IsolatedStoragePermission> und veranschaulicht, wie aus dem isolierten Speicher gelesen und geschrieben.  
+  
+ [!code-cpp[IsolatedStoragePermissionAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/IsolatedStoragePermissionAttribute/cpp/IsolatedStoragePermissionAttribute.cpp#1)]
+ [!code-csharp[IsolatedStoragePermissionAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/IsolatedStoragePermissionAttribute/CS/IsolatedStoragePermissionAttribute.cs#1)]
+ [!code-vb[IsolatedStoragePermissionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsolatedStoragePermissionAttribute/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdministerIsolatedStorageByUser">
+      <MemberSignature Language="C#" Value="AdministerIsolatedStorageByUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment AdministerIsolatedStorageByUser = int32(112)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unbegrenzte Verwaltung Möglichkeit für den Speicher des Benutzers. Ermöglicht das Durchsuchen und Löschen der gesamten Benutzerspeicher, aber nicht als die des Benutzers Domäne/Assemblyidentität Lesezugriff.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationIsolationByMachine">
+      <MemberSignature Language="C#" Value="ApplicationIsolationByMachine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment ApplicationIsolationByMachine = int32(69)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.ApplicationIsolationByMachine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Computer und dann nach der Anwendung isoliert. Dies stellt einen Datenspeicher für die Anwendung, die im Kontext einer beliebigen Domäne zugegriffen werden kann. Das Datendepot pro Anwendung erfordert zusätzliche Vertrauenswürdigkeit aus, da potenziell bietet einen "Tunnel" zwischen Anwendungen, die die Datenisolation von Anwendungen auf bestimmte Websites gefährden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationIsolationByRoamingUser">
+      <MemberSignature Language="C#" Value="ApplicationIsolationByRoamingUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment ApplicationIsolationByRoamingUser = int32(101)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.ApplicationIsolationByRoamingUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Benutzer und dann durch Anwendungsbeweis isoliert. Speicher wird übertragen, wenn Windows benutzerdatenroaming aktiviert ist. Dies stellt einen Datenspeicher für die Anwendung, die im Kontext einer beliebigen Domäne zugegriffen werden kann. Das Datendepot pro Anwendung erfordert zusätzliche Vertrauenswürdigkeit aus, da potenziell bietet einen "Tunnel" zwischen Anwendungen, die die Datenisolation von Anwendungen auf bestimmte Websites gefährden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationIsolationByUser">
+      <MemberSignature Language="C#" Value="ApplicationIsolationByUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment ApplicationIsolationByUser = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.ApplicationIsolationByUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Benutzer und dann nach der Anwendung isoliert. Speicher wird auch nach Computer isoliert. Dies stellt einen Datenspeicher für die Anwendung, die im Kontext einer beliebigen Domäne zugegriffen werden kann. Das Datendepot pro Anwendung erfordert zusätzliche Vertrauenswürdigkeit aus, da potenziell bietet einen "Tunnel" zwischen Anwendungen, die die Datenisolation von Anwendungen auf bestimmte Websites gefährden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyIsolationByMachine">
+      <MemberSignature Language="C#" Value="AssemblyIsolationByMachine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment AssemblyIsolationByMachine = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByMachine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Computer, und klicken Sie dann nach Codeassembly isoliert. Dies stellt einen Datenspeicher für die Assembly, die im Kontext einer beliebigen Domäne zugegriffen werden kann. Das Datendepot pro Assembly erfordert zusätzliche Vertrauenswürdigkeit aus, da potenziell bietet einen "Tunnel" zwischen Anwendungen, die die Datenisolation von Anwendungen auf bestimmte Websites gefährden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyIsolationByRoamingUser">
+      <MemberSignature Language="C#" Value="AssemblyIsolationByRoamingUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment AssemblyIsolationByRoamingUser = int32(96)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Benutzer und dann durch Assemblybeweis isoliert. Speicher wird übertragen, wenn Windows benutzerdatenroaming aktiviert ist. Dies stellt einen Datenspeicher für die Assembly, die im Kontext einer beliebigen Domäne zugegriffen werden kann. Das Datendepot pro Assembly erfordert zusätzliche Vertrauenswürdigkeit aus, da potenziell bietet einen "Tunnel" zwischen Anwendungen, die die Datenisolation von Anwendungen auf bestimmte Websites gefährden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyIsolationByUser">
+      <MemberSignature Language="C#" Value="AssemblyIsolationByUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment AssemblyIsolationByUser = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Benutzer und anschließend nach Codeassembly isoliert. Speicher wird auch nach Computer isoliert. Dies stellt einen Datenspeicher für die Assembly, die im Kontext einer beliebigen Domäne zugegriffen werden kann. Das Datendepot pro Assembly erfordert zusätzliche Vertrauenswürdigkeit aus, da potenziell bietet einen "Tunnel" zwischen Anwendungen, die die Datenisolation von Anwendungen auf bestimmte Websites gefährden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainIsolationByMachine">
+      <MemberSignature Language="C#" Value="DomainIsolationByMachine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment DomainIsolationByMachine = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByMachine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Computer und dann nach Domäne und Assembly isoliert. Daten können nur im Kontext der gleichen Anwendung und nur, wenn auf demselben Computer ausführen zugegriffen werden. Dies ist hilfreich, wenn eine Drittanbieter-Assembly einen privaten Datenspeicher beibehalten möchte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainIsolationByRoamingUser">
+      <MemberSignature Language="C#" Value="DomainIsolationByRoamingUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment DomainIsolationByRoamingUser = int32(80)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Benutzer und dann nach Domäne und Assembly isoliert. Speicher wird übertragen, wenn Windows benutzerdatenroaming aktiviert ist. Daten können nur im Kontext der gleichen Anwendung und nur beim Ausführen von demselben Benutzer zugegriffen werden. Dies ist hilfreich, wenn eine Drittanbieter-Assembly einen privaten Datenspeicher beibehalten möchte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainIsolationByUser">
+      <MemberSignature Language="C#" Value="DomainIsolationByUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment DomainIsolationByUser = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicher wird zuerst nach Benutzer und dann nach Domäne und Assembly isoliert. Speicher wird auch nach Computer isoliert. Daten können nur im Kontext der gleichen Anwendung und nur beim Ausführen von demselben Benutzer zugegriffen werden. Dies ist hilfreich, wenn eine Drittanbieter-Assembly einen privaten Datenspeicher beibehalten möchte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendung der isolierten Speicherung ist nicht zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnrestrictedIsolatedStorage">
+      <MemberSignature Language="C#" Value="UnrestrictedIsolatedStorage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.IsolatedStorageContainment UnrestrictedIsolatedStorage = int32(240)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStorageContainment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden des isolierten Speichers ist ohne Einschränkung zulässig. Code muss Vollzugriff auf alle Teile des Benutzerspeichers, unabhängig von der Identität der Domäne oder der Assembly. Diese Verwendung des isolierten Speichers enthält die Fähigkeit zum Enumerieren der Inhalt des Datenspeichers isolierten Speicher.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

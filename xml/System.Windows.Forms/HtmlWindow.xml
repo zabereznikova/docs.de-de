@@ -1,0 +1,1493 @@
+<Type Name="HtmlWindow" FullName="System.Windows.Forms.HtmlWindow">
+  <TypeSignature Language="C#" Value="public sealed class HtmlWindow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlWindow extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlWindow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das logische Fenster dar, das eine oder mehrere Instanzen von <see cref="T:System.Windows.Forms.HtmlDocument" /> enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindow>sollte nicht mit dem Konzept eines Fensters in Windows Forms- oder die Win32-API verwechselt werden. Es ist keine `HWND` oder eine ähnliche Windows-Ressource, die direkt mit einer Instanz von entspricht <xref:System.Windows.Forms.HtmlWindow>. Stattdessen <xref:System.Windows.Forms.HtmlWindow> eines Benutzers Bildschirm sowie Methoden für die Interaktion mit Benutzern über aufforderungen und Dialogfelder auf hoher Ebene Beschreibungen der Speicherort des Dokuments enthält. <xref:System.Windows.Forms.HtmlWindow>fungiert als logischer Container für eine Webseite Dokumente und seine Metadaten, z. B. der Speicherort des Dokuments und die Funktionen des Webbrowsers ein.  
+  
+ Eine Webseite besteht aus einem einzelnen Dokument oder ein `FRAMESET` mit einer oder mehreren `FRAME` Elemente, von denen jede ein eigene Dokument hostet. Webentwickler verwenden Framesets, um logisch verwandte Seiten nebeneinander angezeigt werden (z. B. eine Inhaltsseite neben einer Navigationsseite) anzuzeigen. Wenn eine Seite aus einem einzelnen Dokument besteht, erreichen Sie dies über die <xref:System.Windows.Forms.HtmlWindow.Document%2A> Eigenschaft <xref:System.Windows.Forms.HtmlWindow>Rahmen; Wenn die Seite verwendet, Sie über Zugriff auf ihre Dokumente über die <xref:System.Windows.Forms.HtmlWindow.Frames%2A> -Auflistung, die aus einem oder mehreren besteht aus <xref:System.Windows.Forms.HtmlWindow> Objekte.  
+  
+ Wenn Ihr Host die <xref:System.Windows.Forms.WebBrowser> Steuerelement in einer Windows Forms-Anwendung können Sie für die Interaktion mit dem Benutzer mithilfe von Windows Forms-Standardklassen, wie z. B. wählen, <xref:System.Windows.Forms.Form> oder <xref:System.Windows.Forms.MessageBox>, oder Sie mithilfe von Methoden <xref:System.Windows.Forms.HtmlWindow> für diesen Zweck definiert. Die <xref:System.Windows.Forms.HtmlWindow.Alert%2A> Methode zeigt ein einfaches Dialogfeld mit benutzerdefinierten Text und ein **OK** Schaltfläche; <xref:System.Windows.Forms.HtmlWindow.Prompt%2A> stellt dem Benutzer; eine Zeile mit benutzerdefinierten Text und ein Texteingabefeld und <xref:System.Windows.Forms.HtmlWindow.Confirm%2A> zeigt ein Dialogfeld mit einer benutzerdefinierten Textzeile und **OK** und **"Abbrechen"** Schaltflächen.  
+  
+ Sie können <xref:System.Windows.Forms.HtmlWindow> , neue Fenster, enthält neue Dokumente zu öffnen. <xref:System.Windows.Forms.HtmlWindow.Open%2A>Lädt die angegebene URL im benannten Fenster an, erstellen es aus, wenn sie nicht bereits vorhanden ist, während er sich <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> immer die URL in einem neu erstellten Fenster öffnet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält zwei Methoden. Die erste wird eine URL in einem Fenster mit dem Namen `displayWindow`, die sie mit dem eine Statusleiste angezeigt erstellt. Die zweite wird eine andere URL in das gleiche Fenster geöffnet, aber es gibt an, dass die Speicherort-Leiste angezeigt werden soll. Beachten Sie, dass die Dimensionen des Fensters und die Steuerelemente, die angezeigt werden abhängig ist, auf dem URL erstmalig geöffnet wird. Im Codebeispiel wird vorausgesetzt, dass das Formular enthält ein <xref:System.Windows.Forms.WebBrowser> Steuerelement namens `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#13)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alert">
+      <MemberSignature Language="C#" Value="public void Alert (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Alert(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Alert(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der im Meldungsfeld anzuzeigende <see cref="T:System.String" />.</param>
+        <summary>Zeigt ein Meldungsfenster an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.MessageBox> Klasse bietet eine leistungsstärkere Version der <xref:System.Windows.Forms.HtmlWindow.Alert%2A> Methode.  
+  
+ Obwohl <xref:System.Windows.Forms.HtmlWindow.Alert%2A> UnicodeText akzeptiert als Eingabe, die Internet Explorer-Skript-Aufforderung zeigt keine lateinische Sprachtext entsprechend unter Windows 95, Windows 98, Windows ME oder Windows NT aufgrund von Beschränkungen im Betriebssystem. Weitere Informationen finden Sie unter [INFO: Internet Explorer Script Prompts und MBCS/Unicode-](http://support.microsoft.com/default.aspx?scid=kb;en-us;211147).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachEventHandler">
+      <MemberSignature Language="C#" Value="public void AttachEventHandler (string eventName, EventHandler eventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachEventHandler(string eventName, class System.EventHandler eventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.AttachEventHandler(System.String,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="eventHandler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventName">Der Name des zu behandelnden Ereignisses.</param>
+        <param name="eventHandler">Ein Verweis auf den verwalteten Code, der das Ereignis behandelt.</param>
+        <summary>Fügt einen Ereignishandler für das benannte HTML-DOM-Ereignis hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ereignis darf nicht auf ein HTML-Dokument oder eines seiner Objekte angehängt werden, bis das Dokument Laden abgeschlossen ist. Der früheste Zeitpunkt sollten Sie diese Methode aufrufen befindet sich in der <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> -Ereignis für die <xref:System.Windows.Forms.WebBrowser> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das Fenster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.HtmlWindow.IsClosed%2A> Eigenschaft, um zu bestimmen, ob das Fenster bereits geschlossen ist. Wenn das Fenster bereits geschlossen ist, wird diese Methode keine Auswirkungen haben.  
+  
+ Beim Erstellen neuer Windows mit <xref:System.Windows.Forms.HtmlWindow.Open%2A> oder <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, <xref:System.Windows.Forms.HtmlWindow.Close%2A> bewirkt, dass das HTML Document Object Model, um eine neue Instanz von Internet Explorer zu öffnen. Wenn Sie nicht aufrufen <xref:System.Windows.Forms.HtmlWindow.Close%2A> auf allen Fenstern, die Sie erstellt haben, diese Instanz von Internet Explorer wird mit der Ausführung fortfahren auch nach dem Schließen der Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein Fenster geöffnet und geschlossen wird, wenn der Benutzer sie nicht in den letzten fünf Minuten verwendet wurde. Das Codebeispiel wurde geschrieben, unter der Annahme, die das Formular verfügt über eine <xref:System.Windows.Forms.WebBrowser> -Steuerelement namens `WebBrowser1`, eine <xref:System.Windows.Forms.Button> mit dem Namen `Button1`, und ein <xref:System.Windows.Forms.Timer> Klasse mit dem Namen `Timer1`. In diesem Beispiel wird erfolgreich ausgeführt wird, ändern Sie das erste Argument für <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> in eine gültige URL.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#9)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Confirm">
+      <MemberSignature Language="C#" Value="public bool Confirm (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Confirm(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Confirm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Text, der für den Benutzer angezeigt wird.</param>
+        <summary>Zeigt ein Dialogfeld mit einer Meldung und Schaltflächen für die Angabe einer Ja/Nein-Antwort an.</summary>
+        <returns>
+          <see langword="true" />Wenn der Benutzer geklickt hat **Ja**; <see langword="false" /> , wenn der Benutzer geklickt hat **keine** oder das Dialogfeld geschlossen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindow.Confirm%2A>Zeigt ein modales Dialogfeld an. der Benutzer wird nicht auf die zugrunde liegenden HTML-Seite zugreifen, ohne zuerst schließen dieses Dialogfelds sein.  
+  
+ Obwohl <xref:System.Windows.Forms.HtmlWindow.Confirm%2A> UnicodeText akzeptiert als Eingabe, die Internet Explorer-Skript-Aufforderung zeigt keine lateinische Sprachtext entsprechend unter Windows 95, Windows 98, Windows ME oder Windows NT aufgrund von Beschränkungen im Betriebssystem. Weitere Informationen finden Sie unter [INFO: Internet Explorer Script Prompts und MBCS/Unicode-](http://support.microsoft.com/default.aspx?scid=kb;en-us;211147).  
+  
+   
+  
+## Examples  
+ Kopieren Sie den folgenden HTML-Code, und speichern Sie es in ein Formular mit dem Namen orderForm.htm:  
+  
+ `<HTML>`  
+  
+ `<BODY>`  
+  
+ `<FORM name="NewOrderForm">`  
+  
+ `Select Part Type:`  
+  
+ `<SELECT name="PartType">`  
+  
+ `<OPTION>AZ-3700`  
+  
+ `<OPTION>AZ-3701`  
+  
+ `<OPTION>AZ-3702`  
+  
+ `<SELECT><br>`  
+  
+ `Quantity: <INPUT type="text" name="PartQty" size="2" maxsize="2"><br>`  
+  
+ `Building/Desk:`  
+  
+ `<INPUT type="text" name="PartBuilding" size="2" maxsize="2"> /`  
+  
+ `<INPUT type="text" name="PartDesk" size="2" maxsize="2"><p>`  
+  
+ `<INPUT type="submit" value="Transmit Order">`  
+  
+ `</FORM>`  
+  
+ `</BODY>`  
+  
+ `</HTML>`  
+  
+ Im folgenden Codebeispiel wird eine <xref:System.Windows.Forms.HtmlWindow.Confirm%2A> (Dialogfeld), wenn der Benutzer sendet `NewOrderForm`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachEventHandler">
+      <MemberSignature Language="C#" Value="public void DetachEventHandler (string eventName, EventHandler eventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetachEventHandler(string eventName, class System.EventHandler eventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.DetachEventHandler(System.String,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="eventHandler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventName">Der Name des zu behandelnden Ereignisses.</param>
+        <param name="eventHandler">Ein Verweis auf den verwalteten Code, der das Ereignis behandelt.</param>
+        <summary>Entfernt den benannten Ereignishandler.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlDocument Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das im Fenster enthaltene HTML-Dokument ab.</summary>
+        <value>Eine gültige Instanz von <see cref="T:System.Windows.Forms.HtmlDocument" />, wenn ein Dokument geladen ist. Wenn Sie dieses Fenster enthält ein <c>FRAMESET</c>, oder derzeit kein Dokument geladen ist, wird zurückgegeben, die <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel greifen Sie auf die <xref:System.Windows.Forms.HtmlWindow.Document%2A> über die <xref:System.Windows.Forms.WebBrowser.Document%2A> Eigenschaft von der <xref:System.Windows.Forms.WebBrowser> Steuerelement. Wenn Sie ein Dokument in zugreifen müssen, verwenden Sie diese Eigenschaft eine `FRAME` mithilfe der <xref:System.Windows.Forms.HtmlWindow.Frames%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird überprüft jedes Dokument innerhalb einer Seite, die Frames enthält und eine Tabelle aller ausgehenden Links aus jeder Seite für die zukünftige Überprüfung erstellt.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomWindow">
+      <MemberSignature Language="C#" Value="public object DomWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DomWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.DomWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die nicht verwaltete Schnittstelle ab, die von dieser Klasse umschlossen wird.</summary>
+        <value>Ein Objekt, das in umgewandelt werden kann ein <see langword="IHTMLWindow2" />, <see langword="IHTMLWindow3" />, oder <see langword="IHTMLWindow4" /> Zeiger.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die zugrunde liegenden nicht verwalteten Schnittstellenzeiger auf die (DOKUMENTOBJEKTMODELL) zum Ausführen von Methoden, die nicht durch verfügbar gemacht <xref:System.Windows.Forms.HtmlWindow>.  
+  
+ Sie müssen einen Verweis hinzufügen der nicht verwalteten MSHTML.dll um verwenden <xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>. Weitere Informationen finden Sie unter [Importieren einer Typbibliothek als Assembly](~/docs/framework/interop/importing-a-type-library-as-an-assembly.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft ein `IHTMLWindow2` Zeiger aus einem Dokument des Fensters und zeigt ein neues Dokument in einem modalen Fenster.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#3)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu überprüfende Objekt.</param>
+        <summary>Überprüft das Objekt und das aktuelle Objekt auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementErrorEventHandler Error;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementErrorEventHandler Error" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlWindow.Error" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementErrorEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn bei der Ausführung eines Skripts innerhalb des Fensters ein Laufzeitfehler auftritt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ HTML-Seiten darf Skriptcode, geschrieben in der Regel in JScript oder VBScript, der ausgeführt wird, wenn eine Seite geladen wird. <xref:System.Windows.Forms.HtmlWindow.Error>Tritt auf, wenn ein Skript ein Laufzeitfehler auftritt. Da Skriptcode spät gebunden ist, d. h. aufrufen und das Objekt nicht aufgelöst erst zur Laufzeit Fehler alles von Verweisen auf ein null-Objekt aufrufen, eine nicht definierte Eigenschaft oder Methode enthalten können.  
+  
+ Sie können festlegen, die <xref:System.Windows.Forms.HtmlElementErrorEventArgs.Handled%2A> Eigenschaft <xref:System.Windows.Forms.HtmlElementErrorEventArgs> auf true festlegen, um zu verhindern, dass das systemeigene Fehlerdialogfeld in Internet Explorer anzeigen.  
+  
+ Weitere Informationen zum Unterschied zwischen dem Abbrechen des Ereignisses, und die Standardaktion eines Ereignisses abbrechen können, finden Sie unter [über das DHTML-Objektmodell](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Fehler abgefangen, die Ergebnisse angezeigt, wenn ein Skript auf einer HTML-Seite versucht, Zugriff auf ein Objekt, das nicht im Dokument definiert ist. Die Seite muss vollständig geladen ist, bevor die <xref:System.Windows.Forms.HtmlWindow.Error> Ereignishandler angefügt ist, andernfalls das Beispiel nicht funktioniert.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#16)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public void Focus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Focus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Focus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Fokus auf das aktuelle Fenster fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein anderes Fenster den Fokus vor dem reservierten <xref:System.Windows.Forms.HtmlWindow.Focus%2A> wurde aufgerufen, wird dieses Fenster den Fokus verlieren.  
+  
+ Rufen Sie nicht den Fokus auf ein Element innerhalb eines Fensters bis des Fensters <xref:System.Windows.Forms.HtmlWindow.Load> Ereignis ausgelöst wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frames">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindowCollection Frames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlWindowCollection Frames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Frames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindowCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf jede der <c>FRAME</c> Elemente, die in der Webseite definiert.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.HtmlWindowCollection" /> eines Dokuments <c>FRAME</c> und <c>IFRAME</c> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `FRAME` ist eine Reihe von Fenstern, die definiert, die innerhalb einer `FRAMESET`. `FRAME`s ermöglichen das Hosten mehrerer Dokumente in einem einzelnen Dokument. Jede `FRAME` als mit einer bestimmten Zeilen- und Breite definiert ist, und wird als Position auf der Seite in Bezug auf die andere `FRAME`s definiert, die innerhalb der `FRAMESET`; die Position des eine `FRAME` behoben wird, auch wenn ein Benutzer die Maus manchmal verwenden kann Cursor vergrößert oder verkleinert die `FRAME`. Ein `IFRAME` ist vergleichbar mit einem Frame, jedoch müssen nicht in einer bestimmten Position verankert werden.  
+  
+ Enthält eine Instanz des Frames <xref:System.Windows.Forms.HtmlWindow> für jede `FRAME` oder `IFRAME` innerhalb einer Webseite definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird überprüft jedes Dokument innerhalb einer Seite, die Frames enthält und eine Tabelle aller ausgehenden Links aus jeder Seite für die zukünftige Überprüfung erstellt.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fungiert als Hashfunktion für einen besonderen Typ.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Windows.Forms.HtmlWindow" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler GotFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler GotFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlWindow.GotFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das aktuelle Fenster den Benutzereingabefokus erhält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindow.GotFocus>Tritt auf:  
+  
+-   Das erste Fenster in einem `FRAMESET` bei der `FRAMESET` zum ersten Mal geladen.  
+  
+-   Die `FRAME` , die zuletzt hatte den Fokus, wenn das Fenster mit den <xref:System.Windows.Forms.WebBrowser> Steuerelement ist in den Vordergrund gebracht.  
+  
+-   Ein `FRAME` geklickt wurde vom Benutzer jedoch nur, wenn der Benutzer auf nicht Fokus auf ein Element innerhalb des Fensters ist.  
+  
+ Die Standardaktion für kann nicht abgebrochen der <xref:System.Windows.Forms.HtmlWindow.GotFocus> Ereignis, oder verhindern, dass Sie übergeben. Weitere Informationen zum Unterschied zwischen dem Abbrechen des Ereignisses, und die Standardaktion eines Ereignisses abbrechen können, finden Sie unter [über das DHTML-Objektmodell](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlWindow.GotFocus> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlWindow> mit dem Namen `HtmlWindow1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlWindow.GotFocus> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#452](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#452)]
+ [!code-vb[System.Windows.Forms.EventExamples#452](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#452)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="History">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlHistory History { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlHistory History" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.History" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlHistory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, das die zuletzt besuchten URLs des Benutzers enthält.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.HtmlHistory" /> für das aktuelle Fenster.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindow.History%2A>enthält alle URLs innerhalb des aktuellen Fensters, das so genannte navigiert der *Navigationsstapel*, und bietet Methoden zum Navigieren in diesen Dokumenten an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieses Fenster geöffnet oder geschlossen ist.</summary>
+        <value>
+          <see langword="true" />, wenn das Fenster immer noch auf dem Bildschirm geöffnet ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.HtmlWindow> geschlossen wurde vom Benutzer oder durch einen Aufruf der <xref:System.Windows.Forms.HtmlWindow.Close%2A> -Methode, zu einer neuen URL navigieren, oder das Dokument des Fensters zuzugreifen versuchen, führt zu einem Fehler. Verwenden Sie diese Eigenschaft, um festzustellen, ob sie Eigenschaften und Methoden für das aktuelle Fensterobjekt aufgerufen werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein Fenster geöffnet und geschlossen wird, wenn der Benutzer sie nicht in den letzten fünf Minuten verwendet wurde. Im Codebeispiel wird vorausgesetzt, dass das Formular verfügt über eine <xref:System.Windows.Forms.WebBrowser> -Steuerelement namens `WebBrowser1`, <xref:System.Windows.Forms.Button> mit dem Namen `Button1`, und ein <xref:System.Windows.Forms.Timer> Klasse mit dem Namen `Timer1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler Load;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler Load" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlWindow.Load" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die Initialisierung für das Dokument des Fensters und alle seine Elemente abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.HtmlWindow.Load> Ereignis funktioniert ähnlich wie die <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Ereignis auf der <xref:System.Windows.Forms.WebBrowser> Steuerelement: wird signalisiert, dass der Zugriff auf HTML-Elemente in das Dokument sicher ist.  
+  
+ Sie können die Standardaktion für nicht Abbrechen der <xref:System.Windows.Forms.HtmlWindow.Load> Ereignis.  
+  
+ Weitere Informationen zum Unterschied zwischen dem Abbrechen des Ereignisses, und die Standardaktion eines Ereignisses abbrechen können, finden Sie unter [über das DHTML-Objektmodell](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlWindow.Load> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlWindow> mit dem Namen `HtmlWindow1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlWindow.Load> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#453](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#453)]
+ [!code-vb[System.Windows.Forms.EventExamples#453](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#453)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler LostFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler LostFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlWindow.LostFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzereingabefokus das Fenster verlassen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlWindow.LostFocus> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlWindow> mit dem Namen `HtmlWindow1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlWindow.LostFocus> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#454](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#454)]
+ [!code-vb[System.Windows.Forms.EventExamples#454](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#454)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveTo">
+      <MemberSignature Language="C#" Value="public void MoveTo (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveTo(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.MoveTo(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Die x-Koordinate und die y-Koordinate der linken oberen Ecke des Fensters.</param>
+        <summary>Verschiebt das Fenster an die angegebenen Koordinaten auf dem Bildschirm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können keine <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> zum Verschieben eines Fensters über den sichtbaren Rand des Bildschirms; diese Methode ist auch verfügbar durch Skripts auf einer Webseite und Zulassen von nicht vertrauenswürdigen Skript zum Rendern von Windows nicht sichtbar ist nicht als sicher betrachtet.  
+  
+ <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A>Löst ein <xref:System.UnauthorizedAccessException> Wenn das Fenster, das Sie verschieben möchten und das übergeordnete Fenster andere Domänen auf oberster Ebene aufweisen. Angenommen, Sie hosten die <xref:System.Windows.Forms.WebBrowser> Steuern auf a.adatum.com zeigt, erstellen Sie ein neues Fenster mit <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> b.adatum.com angezeigt. In diesem Fall gelten sowohl für Windows-als Teil der gleichen Domäne der obersten Ebene sein, und die Ausnahme wird nicht ausgelöst. Allerdings beim Aufrufen <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> um www.Microsoft.com anzuzeigen, haben zwei Windows jetzt andere Domänen auf oberster Ebene, und die <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> Vorgang führt dazu, dass die Ausnahme ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Der Code, der versucht, die zum Ausführen dieses Vorgangs keine Berechtigung zum Bearbeiten dieses Fensters.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveTo">
+      <MemberSignature Language="C#" Value="public void MoveTo (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveTo(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.MoveTo(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die x-Koordinate der linken oberen Ecke des Fensters.</param>
+        <param name="y">Die y-Koordinate der linken oberen Ecke des Fensters.</param>
+        <summary>Verschiebt das Fenster an die angegebenen Koordinaten auf dem Bildschirm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können keine <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> zum Verschieben eines Fensters über den sichtbaren Rand des Bildschirms; diese Methode ist auch verfügbar durch Skripts auf einer Webseite und Zulassen von nicht vertrauenswürdigen Skript zum Rendern von Windows nicht sichtbar ist nicht als sicher betrachtet.  
+  
+ <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A>Löst ein <xref:System.UnauthorizedAccessException> Wenn das Fenster, das Sie verschieben möchten und das übergeordnete Fenster andere Domänen auf oberster Ebene aufweisen. Angenommen, Sie hosten die <xref:System.Windows.Forms.WebBrowser> -Steuerelement, und es zeigt auf a.adatum.com, erstellen Sie ein neues Fenster mit <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> b.adatum.com angezeigt. In diesem Fall gelten sowohl für Windows-als Teil der gleichen Domäne der obersten Ebene sein, und die Ausnahme wird nicht ausgelöst. Allerdings beim Aufrufen <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> um www.Microsoft.com anzuzeigen, haben zwei Windows jetzt andere Domänen auf oberster Ebene, und die <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> Vorgang führt dazu, dass die Ausnahme ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Der Code, der versucht, die zum Ausführen dieses Vorgangs keine Berechtigung zum Bearbeiten dieses Fensters.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Fensters ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" />, der den Namen darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public void Navigate (string urlString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Navigate(string urlString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Navigate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="urlString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="urlString">Die anzuzeigende Ressource, beschrieben durch eine URL (Uniform Resource Locator).</param>
+        <summary>Zeigt den neuen Inhalt unter der angegebenen URL an oder lädt diesen herunter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `url` Parameter verweist auf eine HTML-Seite, die derzeit im Fenster angezeigte Seite zerstört und durch die neue Seite ersetzt; alle Verweise, die Ihre Anwendung beinhalten, die auf verwaltete DOM-Objekte in der alten Seite nicht mehr gültig. Wenn `url` zeigt auf eine Ressource, die von Internet Explorer angezeigt werden kann, wird der Benutzer mit einem Dialogfeld gefragt, ob die Ressource außerhalb der Anwendung, speichern Sie sie auf den Datenträger, oder brechen den Downloadvorgang öffnen angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public void Navigate (Uri url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Navigate(class System.Uri url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Navigate(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="url">Der Speicherort des Dokuments oder Objekts, das im aktuellen Fenster angezeigt werden soll. Dieser wird als <see cref="T:System.Uri" /> angegeben.</param>
+        <summary>Zeigt ein neues Dokument im aktuellen Fenster an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.HtmlWindow left, System.Windows.Forms.HtmlWindow right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Windows.Forms.HtmlWindow left, class System.Windows.Forms.HtmlWindow right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.op_Equality(System.Windows.Forms.HtmlWindow,System.Windows.Forms.HtmlWindow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Forms.HtmlWindow" />
+        <Parameter Name="right" Type="System.Windows.Forms.HtmlWindow" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste <see cref="T:System.Windows.Forms.HtmlWindow" />-Objekt.</param>
+        <param name="right">Das zweite <see cref="T:System.Windows.Forms.HtmlWindow" />-Objekt.</param>
+        <summary>Überprüft die beiden <see cref="T:System.Windows.Forms.HtmlWindow" />-Objekte auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn beide Parameter <see langword="null" /> sind oder wenn beide Elemente über die gleiche zugrunde liegende COM-Schnittstelle verfügen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Gleichheitsoperator überprüft die `IUnknown` Zeiger des zugrunde liegenden COM-Objekte, die nach dem angegebenen umschlossen <xref:System.Windows.Forms.HtmlWindow> Klassen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Forms.HtmlWindow.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.HtmlWindow left, System.Windows.Forms.HtmlWindow right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Windows.Forms.HtmlWindow left, class System.Windows.Forms.HtmlWindow right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.op_Inequality(System.Windows.Forms.HtmlWindow,System.Windows.Forms.HtmlWindow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Forms.HtmlWindow" />
+        <Parameter Name="right" Type="System.Windows.Forms.HtmlWindow" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste <see cref="T:System.Windows.Forms.HtmlWindow" />-Objekt.</param>
+        <param name="right">Das zweite <see cref="T:System.Windows.Forms.HtmlWindow" />-Objekt.</param>
+        <summary>Überprüft zwei <see langword="HtmlWindow" />-Objekte auf Ungleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn nur eines der Objekte <see langword="null" /> ist oder die zugrunde liegenden COM-Zeiger nicht übereinstimmen, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow Open (string urlString, string target, string windowOptions, bool replaceEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.HtmlWindow Open(string urlString, string target, string windowOptions, bool replaceEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Open(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="urlString" Type="System.String" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="windowOptions" Type="System.String" />
+        <Parameter Name="replaceEntry" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="urlString">Die URL (Uniform Resource Locator), die den Speicherort der zu ladenden Datei beschreibt.</param>
+        <param name="target">Der Name des Fensters, in dem die Ressource geöffnet werden soll. Hierbei kann es sich um einen vom Entwickler angegebenen Namen oder um einen der folgenden speziellen Werte handeln:  
+  
+ <c>_blank</c>: Öffnet <c>Url</c> in einem neuen Fenster. Funktioniert wie ein Aufruf von <see cref="M:System.Windows.Forms.HtmlWindow.OpenNew(System.String,System.String)" />.  
+  
+ <c>_media</c>: Öffnet <c>Url</c> in der Medienleiste.  
+  
+ <c>_parent</c>: Öffnet <c>Url</c> in das Fenster, das das aktuelle Fenster erstellt wurde.  
+  
+ <c>_suchen</c>: Öffnet <c>Url</c> in der Suchleiste.  
+  
+ <c>_self</c>: Öffnet <c>Url</c> im aktuellen Fenster.  
+  
+ <c>_top</c>: bei einem Aufruf für ein Fenster, gehört zu einer <c>FRAME</c> Element öffnet <c>Url</c> in das Fenster hosting seine <c>FRAMESET</c>. Andernfalls entspricht das Verhalten dem <c>_self</c>.</param>
+        <param name="windowOptions">Eine durch Trennzeichen getrennte Zeichenfolge besteht aus 0 (null) oder mehrere der folgenden Optionen im Formular <c>Name = Value</c>. Mit Ausnahme der <c>linken</c>, <c>oben</c>, <c>Höhe</c>, und <c>Breite</c> Optionen, die beliebige ganze Zahlen akzeptieren, akzeptiert jede Option <c>Ja</c> oder <see langword="1" />, und <c>keine</c> oder <see langword="0" />, als gültige Werte.  
+  
+ <c>Channelmode</c>: mit der veralteten Channeltechnologie von Internet Explorer 4.0 verwendet. Standardmäßig wird <c>keine</c>.  
+  
+ <c>Verzeichnisse</c>: Gibt an, ob das Fenster Verzeichnisnavigation angezeigt werden soll. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Höhe</c>: die Höhe des Clientbereichs des Fensters in Pixel. Der Mindestwert ist 100. Beim Versuch, ein kleineres Fenster zu öffnen, wird das Fenster entsprechend der Standardeinstellungen von Internet Explorer geöffnet.  
+  
+ <c>Linke</c>: die linke Position (X-Koordinate) des Fensters relativ zur linken oberen Ecke des Benutzerbildschirms, in Pixel. Muss eine positive ganze Zahl sein.  
+  
+ <c>Speicherort</c>: angibt, ob die Adressleiste angezeigt werden, die Benutzer das Fenster zu einer neuen URL navigieren können. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>MenuBar</c>:, ob im neuen Fenster Menüs angezeigt. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>in der Größe veränderbaren</c>: Gibt an, ob die Fenstergröße vom Benutzer geändert werden kann. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Bildlaufleisten</c>: Gibt an, ob das Fenster horizontale und vertikale Schiebeleisten besitzt. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Status</c>: Gibt an, ob das Fenster eine Statusleiste am unteren hat. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>"TitleBar"</c>: Gibt an, ob der Titel der aktuellen Seite angezeigt wird. Wenn diese Option auf <c>keine</c> wirkt sich nicht innerhalb einer verwalteten Anwendung; die Titelleiste wird immer angezeigt.  
+  
+ <c>Symbolleiste</c>: Gibt an, ob Symbolleisten-Schaltflächen wie z. B. **wieder**, **Vorwärts**, und **beenden** sichtbar sind. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Top</c>: die Position nach oben (y-Koordinate) des Fensters relativ zur linken oberen Ecke des Benutzerbildschirms, in Pixel. Muss eine positive ganze Zahl sein.  
+  
+ <c>Breite</c>: die Breite des Clientbereichs des Fensters in Pixel. Der Mindestwert ist 100. Beim Versuch, ein kleineres Fenster zu öffnen, wird das Fenster entsprechend der Standardeinstellungen von Internet Explorer geöffnet.</param>
+        <param name="replaceEntry">Ob <c>Url</c> URL des aktuellen Fensters im Navigationsverlauf ersetzt. Dies wirkt sich auf die Ausführung von Methoden für die <see cref="T:System.Windows.Forms.HtmlHistory" />-Klasse aus.</param>
+        <summary>Zeigt eine Datei im benannten Fenster an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.HtmlWindow" />, das das neue Fenster darstellt, oder das zuvor erstellte Fenster, das durch den <paramref name="target" />-Parameter benannte wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `target` Parameternamen ein Fenster, das als Ergebnis eines vorherigen Aufrufs von <xref:System.Windows.Forms.HtmlWindow.Open%2A>. Der Parameter kann auch in einem Fenster geöffnet, indem Sie auf einen Link auf zeigen (`A` Element) oder ein `FORM` Element, das verwendet die `TARGET` Attribut zu seiner URL in einem neuen Fenster zu öffnen. Der folgende HTML-Code wird ein neues Fenster mit dem Namen geöffnet `orderWindow` klickt der Benutzer es:  
+  
+ `<A HREF="/startOrder.aspx" TARGET="orderWindow">Click to Start Order</a>`  
+  
+ Wenn Sie Optionen zum Angeben der `windowOptions` Parameter, eine beliebige Option nicht enthalten, wird automatisch deaktiviert. Das heißt, wenn Sie nur über angeben `windowOptions` , dass eine Statusleiste angezeigt werden sollen, und klicken Sie dann die Menüleiste, Symbolleiste, Titel, Bildlaufleisten und So weiter nicht angezeigt werden, es sei denn, Sie explizit mithilfe von aktivieren `windowOptions`.  
+  
+ Wenn die Datei verweist `url` ist eine HTML-Datei, Textdatei oder anderen Dateityp, die in Internet Explorer gehostet werden, kann im benannten Fenster angezeigt. Wenn die Datei kann nicht angezeigt werden, in Internet Explorer, und das Fenster mit dem Namen vom Ziel noch nicht vorhanden, das Fenster wird geöffnet. nur so lange für Internet Explorer auf die Ressource herunterladen wird sofort geschlossen, danach.  
+  
+ Beim Erstellen neuer Windows mit <xref:System.Windows.Forms.HtmlWindow.Open%2A> oder <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, er bewirkt, dass das HTML Document Object Model, um eine neue Instanz von Internet Explorer zu öffnen. Wenn Sie nicht aufrufen <xref:System.Windows.Forms.HtmlWindow.Close%2A> auf allen Fenstern, die Sie erstellt haben, diese Instanz von Internet Explorer wird mit der Ausführung fortfahren auch nach dem Beenden der Anwendung.  
+  
+ Bei Verwendung von <xref:System.Windows.Forms.HtmlWindow.Open%2A> Laden Sie eine URL in ein vorhandenes Fenster `windowOptions` ignoriert werden; das Fenster wird beibehalten, die Dimensionen, die Darstellung und die Bildschirmposition, erhält er zuerst nach dem ersten Aufruf <xref:System.Windows.Forms.HtmlWindow.Open%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow Open (Uri url, string target, string windowOptions, bool replaceEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.HtmlWindow Open(class System.Uri url, string target, string windowOptions, bool replaceEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Open(System.Uri,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.Uri" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="windowOptions" Type="System.String" />
+        <Parameter Name="replaceEntry" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL (Uniform Resource Locator), die den Speicherort der zu ladenden Datei beschreibt.</param>
+        <param name="target">Der Name des Fensters, in dem die Ressource geöffnet werden soll. Hierbei kann es sich um einen vom Entwickler angegebenen Namen oder um einen der folgenden speziellen Werte handeln:  
+  
+ <c>_blank</c>: Öffnet <c>Url</c> in einem neuen Fenster. Funktioniert wie ein Aufruf von <see cref="M:System.Windows.Forms.HtmlWindow.OpenNew(System.String,System.String)" />.  
+  
+ <c>_media</c>: Öffnet <c>Url</c> in der Medienleiste.  
+  
+ <c>_parent</c>: Öffnet <c>Url</c> in das Fenster, das das aktuelle Fenster erstellt wurde.  
+  
+ <c>_suchen</c>: Öffnet <c>Url</c> in der Suchleiste.  
+  
+ <c>_self</c>: Öffnet <c>Url</c> im aktuellen Fenster.  
+  
+ <c>_top</c>: bei einem Aufruf für ein Fenster, gehört zu einer <c>FRAME</c> Element öffnet <c>Url</c> in das Fenster hosting seine <c>FRAMESET</c>. Andernfalls entspricht das Verhalten dem <c>_self</c>.</param>
+        <param name="windowOptions">Eine durch Trennzeichen getrennte Zeichenfolge besteht aus 0 (null) oder mehrere der folgenden Optionen im Formular <c>Name = Value</c>. Mit Ausnahme der <c>linken</c>, <c>oben</c>, <c>Höhe</c>, und <c>Breite</c> Optionen, die beliebige ganze Zahlen akzeptieren, akzeptiert jede Option <c>Ja</c> oder <see langword="1" />, und <c>keine</c> oder <see langword="0" />, als gültige Werte.  
+  
+ <c>Channelmode</c>: mit der veralteten Channeltechnologie von Internet Explorer 4.0 verwendet. Standardmäßig wird <c>keine</c>.  
+  
+ <c>Verzeichnisse</c>: Gibt an, ob das Fenster Verzeichnisnavigation angezeigt werden soll. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Höhe</c>: die Höhe des Clientbereichs des Fensters in Pixel. Der Mindestwert ist 100. Beim Versuch, ein kleineres Fenster zu öffnen, wird das Fenster entsprechend der Standardeinstellungen von Internet Explorer geöffnet.  
+  
+ <c>Linke</c>: die linke Position (X-Koordinate) des Fensters relativ zur linken oberen Ecke des Benutzerbildschirms, in Pixel. Muss eine positive ganze Zahl sein.  
+  
+ <c>Speicherort</c>: angibt, ob die Adressleiste angezeigt werden, die Benutzer das Fenster zu einer neuen URL navigieren können. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>MenuBar</c>:, ob im neuen Fenster Menüs angezeigt. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>in der Größe veränderbaren</c>: Gibt an, ob die Fenstergröße vom Benutzer geändert werden kann. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Bildlaufleisten</c>: Gibt an, ob das Fenster horizontale und vertikale Schiebeleisten besitzt. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Status</c>: Gibt an, ob das Fenster eine Statusleiste am unteren hat. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>"TitleBar"</c>: Gibt an, ob der Titel der aktuellen Seite angezeigt wird. Wenn diese Option auf <c>keine</c> wirkt sich nicht innerhalb einer verwalteten Anwendung; die Titelleiste wird immer angezeigt.  
+  
+ <c>Symbolleiste</c>: Gibt an, ob Symbolleisten-Schaltflächen wie z. B. **wieder**, **Vorwärts**, und **beenden** sichtbar sind. Standardmäßig wird <c>Ja</c>.  
+  
+ <c>Top</c>: die Position nach oben (y-Koordinate) des Fensters relativ zur linken oberen Ecke des Benutzerbildschirms, in Pixel. Muss eine positive ganze Zahl sein.  
+  
+ <c>Breite</c>: die Breite des Clientbereichs des Fensters in Pixel. Der Mindestwert ist 100. Beim Versuch, ein kleineres Fenster zu öffnen, wird das Fenster entsprechend der Standardeinstellungen von Internet Explorer geöffnet.</param>
+        <param name="replaceEntry">Ob <c>Url</c> URL des aktuellen Fensters im Navigationsverlauf ersetzt. Dies wirkt sich auf die Ausführung von Methoden für die <see cref="T:System.Windows.Forms.HtmlHistory" />-Klasse aus.</param>
+        <summary>Zeigt eine Datei im benannten Fenster an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.HtmlWindow" />, das das neue Fenster darstellt, oder das zuvor erstellte Fenster, das durch den <paramref name="target" />-Parameter benannte wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `target` Parameternamen ein Fenster, das als Ergebnis eines vorherigen Aufrufs von <xref:System.Windows.Forms.HtmlWindow.Open%2A>. Der Parameter kann auch in einem Fenster geöffnet, indem Sie auf einen Link auf zeigen (`A` Element) oder ein `FORM` Element, das verwendet die `TARGET` Attribut zu seiner URL in einem neuen Fenster zu öffnen. Der folgende HTML-Code wird ein neues Fenster mit dem Namen geöffnet `orderWindow` klickt der Benutzer es:  
+  
+ `<A HREF="/startOrder.aspx" TARGET="orderWindow">Click to Start Order</a>`  
+  
+ Wenn Sie Optionen zum Angeben der `windowOptions` Parameter, eine beliebige Option nicht enthalten, wird automatisch deaktiviert. Das heißt, wenn Sie nur über angeben `windowOptions` , dass eine Statusleiste angezeigt werden sollen, und klicken Sie dann die Menüleiste, Symbolleiste, Titel, Bildlaufleisten und So weiter nicht angezeigt werden, es sei denn, Sie explizit mithilfe von aktivieren `windowOptions`.  
+  
+ Wenn die Datei verweist `url` ist eine HTML-Datei, Textdatei oder anderen Dateityp, die in Internet Explorer gehostet werden, kann im benannten Fenster angezeigt. Wenn die Datei kann nicht angezeigt werden, in Internet Explorer, und das Fenster mit dem Namen vom Ziel noch nicht vorhanden, das Fenster wird geöffnet. nur so lange für Internet Explorer auf die Ressource herunterladen wird sofort geschlossen, danach.  
+  
+ Beim Erstellen neuer Windows mit <xref:System.Windows.Forms.HtmlWindow.Open%2A> oder <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, er bewirkt, dass das HTML Document Object Model, um eine neue Instanz von Internet Explorer zu öffnen. Wenn Sie nicht aufrufen <xref:System.Windows.Forms.HtmlWindow.Close%2A> auf allen Fenstern, die Sie erstellt haben, diese Instanz von Internet Explorer wird mit der Ausführung fortfahren auch nach dem Beenden der Anwendung.  
+  
+ Bei Verwendung von <xref:System.Windows.Forms.HtmlWindow.Open%2A> Laden Sie eine URL in ein vorhandenes Fenster `windowOptions` ignoriert werden; das Fenster wird beibehalten, die Dimensionen, die Darstellung und die Bildschirmposition, erhält er zuerst nach dem ersten Aufruf <xref:System.Windows.Forms.HtmlWindow.Open%2A> .  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält zwei Methoden:  
+  
+-   Die erste wird eine URL in einem Fenster mit dem Namen `displayWindow`, die sie mit dem eine Statusleiste angezeigt erstellt.  
+  
+-   Die zweite wird eine andere URL in das gleiche Fenster geöffnet, aber es gibt an, dass die Speicherort-Leiste angezeigt werden soll.  
+  
+ Beachten Sie, dass die Dimensionen des Fensters und die Steuerelemente, die angezeigt werden abhängig ist, auf dem URL erstmalig geöffnet wird. Im Codebeispiel wird vorausgesetzt, dass das Formular enthält ein <xref:System.Windows.Forms.WebBrowser> Steuerelement namens `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#13)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opener">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow Opener { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlWindow Opener" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Opener" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das Fenster ab, aus dem das aktuelle Fenster geöffnet wurde.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.HtmlWindow" />, das durch einen Aufruf der <see cref="M:System.Windows.Forms.HtmlWindow.Open(System.String,System.String,System.String,System.Boolean)" />-Methode oder der <see cref="M:System.Windows.Forms.HtmlWindow.OpenNew(System.String,System.String)" />-Methode erstellt wurde. Wenn das Fenster nicht mit einer dieser Methoden erstellt wurde, gibt diese Eigenschaft <see langword="null" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenNew">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow OpenNew (string urlString, string windowOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.HtmlWindow OpenNew(string urlString, string windowOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.OpenNew(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="urlString" Type="System.String" />
+        <Parameter Name="windowOptions" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="urlString">Die URL (Uniform Resource Locator), die den Speicherort der zu ladenden Datei beschreibt.</param>
+        <param name="windowOptions">Eine durch Trennzeichen getrennte Zeichenfolge besteht aus 0 (null) oder mehrere der folgenden Optionen im Formular <c>Name = Value</c>. Eine vollständige Beschreibung der gültigen Optionen finden Sie unter <see cref="M:System.Windows.Forms.HtmlWindow.Open(System.String,System.String,System.String,System.Boolean)" />.</param>
+        <summary>Zeigt eine Datei in einem neuen Fenster an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.HtmlWindow" /> für die Darstellung des neuen Fensters.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Datei verweist `url` ist eine HTML-Datei, Textdatei oder anderen Dateityp, die in Internet Explorer gehostet werden, können sie wird in einem neuen Fenster angezeigt werden. Wenn die Datei kann nicht in Internet Explorer angezeigt werden, und klicken Sie dann das Fenster geöffnet wird. nur so lange für Internet Explorer auf die Ressource herunterladen wird sofort geschlossen, danach.  
+  
+ Beim Erstellen neuer Windows mit <xref:System.Windows.Forms.HtmlWindow.Open%2A> oder <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, er bewirkt, dass das HTML Document Object Model, um eine neue Instanz von Internet Explorer zu öffnen. Wenn Sie nicht aufrufen <xref:System.Windows.Forms.HtmlWindow.Close%2A> auf allen Fenstern, die Sie erstellt haben, diese Instanz von Internet Explorer wird mit der Ausführung fortfahren auch nach dem Beenden der Anwendung.  
+  
+ Wenn Sie ein Dokument in einem bereits geöffneten Fenster laden möchten, finden Sie unter der <xref:System.Windows.Forms.HtmlWindow.Open%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenNew">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow OpenNew (Uri url, string windowOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.HtmlWindow OpenNew(class System.Uri url, string windowOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.OpenNew(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.Uri" />
+        <Parameter Name="windowOptions" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL (Uniform Resource Locator), die den Speicherort der zu ladenden Datei beschreibt.</param>
+        <param name="windowOptions">Eine durch Trennzeichen getrennte Zeichenfolge besteht aus 0 (null) oder mehrere der folgenden Optionen im Formular <c>Name = Value</c>. Eine vollständige Beschreibung der gültigen Optionen finden Sie unter <see cref="M:System.Windows.Forms.HtmlWindow.Open(System.String,System.String,System.String,System.Boolean)" />.</param>
+        <summary>Zeigt eine Datei in einem neuen Fenster an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.HtmlWindow" /> für die Darstellung des neuen Fensters.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Datei verweist `url` ist eine HTML-Datei, Textdatei oder anderen Dateityp, die in Internet Explorer gehostet werden, können sie wird in einem neuen Fenster angezeigt werden. Wenn die Datei kann nicht in Internet Explorer angezeigt werden, und klicken Sie dann das Fenster geöffnet wird. nur so lange für Internet Explorer auf die Ressource herunterladen wird sofort geschlossen, danach.  
+  
+ Beim Erstellen neuer Windows mit <xref:System.Windows.Forms.HtmlWindow.Open%2A> oder <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, er bewirkt, dass das HTML Document Object Model, um eine neue Instanz von Internet Explorer zu öffnen. Wenn Sie nicht aufrufen <xref:System.Windows.Forms.HtmlWindow.Close%2A> auf allen Fenstern, die Sie erstellt haben, diese Instanz von Internet Explorer wird mit der Ausführung fortfahren auch nach dem Beenden der Anwendung.  
+  
+ Wenn Sie ein Dokument in einem bereits geöffneten Fenster laden möchten, finden Sie unter der <xref:System.Windows.Forms.HtmlWindow.Open%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlWindow Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Fenster ab, das sich über dem aktuellen Fenster auf einer Seite befindet, die Frames enthält.</summary>
+        <value>Das dem aktuellen Fenster übergeordnete <see cref="T:System.Windows.Forms.HtmlWindow" />. Das aktuelle Fenster ist keine <c>FRAME</c>, oder wird nicht innerhalb eines eingebettet eine <c>FRAME</c>, gibt <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem Dokument mit Frames jede `FRAME` innerhalb einer `FRAMESET` fungiert als separates untergeordnetes Fenster auf der Seite. Das übergeordnete Element der einzelnen `FRAME` ist die `FRAMESET` enthält die `FRAME`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft für das Fenster die Position des Clientbereichs auf dem Bildschirm ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" />, der die x- und y-Koordinaten der linken oberen Ecke des Bildschirms beschreibt (in Pixel).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft von der <xref:System.Windows.Forms.WebBrowser> Steuerung die Position des Steuerelements relativ zur linken oberen Ecke des Formulars. Im Gegensatz dazu <xref:System.Windows.Forms.HtmlWindow.Position%2A> den Ort des Anzeigebereichs für das Dokument relativ zur linken oberen Ecke des Bildschirms des Benutzers zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein neues Fenster geöffnet, direkt über die <xref:System.Windows.Forms.WebBrowser> Steuerelement im Formular. Im Codebeispiel wird vorausgesetzt, dass das Formular eine Instanz enthält die <xref:System.Windows.Forms.WebBrowser> Steuerelement namens `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#5)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompt">
+      <MemberSignature Language="C#" Value="public string Prompt (string message, string defaultInputValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string Prompt(string message, string defaultInputValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.Prompt(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="defaultInputValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, die dem Benutzer angezeigt wird.</param>
+        <param name="defaultInputValue">Der im Textfeld angezeigte Standardwert.</param>
+        <summary>Zeigt ein Dialogfeld an, in dem für den Benutzer eine Meldung und ein Textfeld angezeigt werden.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den vom Benutzer eingegebenen Text darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindow.Prompt%2A>bietet eine schnelle und einfache Möglichkeit, um einfachen Text-Eingabe vom Benutzer erhalten.  
+  
+ Obwohl <xref:System.Windows.Forms.HtmlWindow.Prompt%2A> UnicodeText akzeptiert als Eingabe, die Internet Explorer-Skript-Aufforderung zeigt keine lateinische Sprachtext entsprechend unter Windows 95, Windows 98, Windows ME oder Windows NT aufgrund von Beschränkungen im Betriebssystem. Weitere Informationen finden Sie unter [INFO: Internet Explorer Script Prompts und MBCS/Unicode-](http://support.microsoft.com/default.aspx?scid=kb;en-us;211147).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFocus">
+      <MemberSignature Language="C#" Value="public void RemoveFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.RemoveFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt den Fokus vom aktuellen Fenster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem Aufruf in einem `FRAME` Fenster in einem `FRAMESET`, <xref:System.Windows.Forms.HtmlWindow.RemoveFocus%2A> führt dazu, dass das Fenster den Fokus verliert, aber es werden nicht automatisch den Fokus auf ein anderes Fenster festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler Resize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler Resize" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlWindow.Resize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer mithilfe der Maus die Dimensionen des Fensters ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlWindow.Resize> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlWindow> mit dem Namen `HtmlWindow1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlWindow.Resize> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#455](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#455)]
+ [!code-vb[System.Windows.Forms.EventExamples#455](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#455)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeTo">
+      <MemberSignature Language="C#" Value="public void ResizeTo (System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResizeTo(valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.ResizeTo(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">Eine <see cref="T:System.Drawing.Size" />, die die gewünschte Breite und Höhe des Fensters in Pixel beschreibt. Muss in beiden Dimensionen 100 Pixel oder mehr sein.</param>
+        <summary>Ändert die Größe des Fensters auf die angegebenen Dimensionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein neues Fenster geöffnet, und passt seine Größe, um die verfügbaren Bildschirmbereich auszufüllen.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#15)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Das Fenster, die, das Sie ändern möchten, ist in einer anderen Domäne als das übergeordnete Fenster. Diese Einschränkung ist Teil des frameübergreifenden scripting-Sicherheit. Weitere Informationen finden Sie unter [zum Frameübergreifenden Scripting und zur Sicherheit](http://msdn.microsoft.com/library/ms533028.aspx).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeTo">
+      <MemberSignature Language="C#" Value="public void ResizeTo (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResizeTo(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.ResizeTo(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">Beschreibt die gewünschte Breite des Fensters (in Pixel). Der Wert muss mindestens 100 Pixel betragen.</param>
+        <param name="height">Beschreibt die gewünschte Höhe des Fensters (in Pixel). Der Wert muss mindestens 100 Pixel betragen.</param>
+        <summary>Ändert die Größe des Fensters auf die angegebenen Dimensionen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Das Fenster, die, das Sie ändern möchten, ist in einer anderen Domäne als das übergeordnete Fenster. Diese Einschränkung ist Teil des frameübergreifenden scripting-Sicherheit. Weitere Informationen finden Sie unter [zum Frameübergreifenden Scripting und zur Sicherheit](http://msdn.microsoft.com/library/ms533028.aspx).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler Scroll;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler Scroll" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlWindow.Scroll" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer einen Bildlauf durch das Fenster durchführt, um Text anzuzeigen, der sich außerhalb des Bildschirms befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlWindow.Scroll> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlWindow> mit dem Namen `HtmlWindow1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlWindow.Scroll> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#456](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#456)]
+ [!code-vb[System.Windows.Forms.EventExamples#456](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#456)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollTo">
+      <MemberSignature Language="C#" Value="public void ScrollTo (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollTo(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.ScrollTo(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Die x-Koordinate und die y-Koordinate, in Bezug auf die linke obere Ecke des aktuellen Fensters, bis zu der Bildlaufvorgänge für die Seite durchgeführt werden sollen.</param>
+        <summary>Verschiebt das Fenster an die angegebenen Koordinaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A>führt dazu, dass das Dokument einen Bildlauf durchführen, damit die angegebene Koordinate für das Dokument in der oberen linken Ecke des Fensters für das Dokument befindet. Wenn das Dokument nicht lang oder breit genug ist dies der Fall ist <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A> führt einen Bildlauf durch das Dokument so weit wie möglich in der angegebenen Richtung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel führt einen Bildlauf durch das Dokument an die Koordinatenposition, die der Benutzer geklickt hat.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#15)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollTo">
+      <MemberSignature Language="C#" Value="public void ScrollTo (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollTo(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindow.ScrollTo(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die x-Koordinate, in Bezug auf die linke obere Ecke des aktuellen Fensters, bis zu der Scrollvorgänge für die Seite durchgeführt werden sollen.</param>
+        <param name="y">Die y-Koordinate, in Bezug auf die linke obere Ecke des aktuellen Fensters, bis zu der Scrollvorgänge für die Seite durchgeführt werden sollen.</param>
+        <summary>Ermöglicht das Scrollen des Fensters zur festgelegten Position.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A>führt dazu, dass das Dokument einen Bildlauf durchführen, damit die angegebene Koordinate für das Dokument in der oberen linken Ecke des Fensters für das Dokument befindet. Wenn das Dokument nicht lang oder breit genug ist dies der Fall ist <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A> führt einen Bildlauf durch das Dokument so weit wie möglich in der angegebenen Richtung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des aktuellen Fensters ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />, die die Breite des Fensters in Pixel beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusBarText">
+      <MemberSignature Language="C#" Value="public string StatusBarText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StatusBarText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.StatusBarText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den auf der Statusleiste eines Fensters angezeigten Text ab oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.String" />, die den aktuellen Statustext enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.WebBrowser> Steuerelement eine Statusleiste nicht angezeigt. Ein neues Fenster, das Sie öffnen, mit der <xref:System.Windows.Forms.HtmlWindow.Open%2A> oder <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> Methoden, allerdings werden eine Statusleiste standardmäßig anzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unload">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler Unload;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler Unload" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlWindow.Unload" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die aktuelle Seite entladen und eine neue Seite angezeigt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlWindow.Unload> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlWindow> mit dem Namen `HtmlWindow1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlWindow.Unload> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#457](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#457)]
+ [!code-vb[System.Windows.Forms.EventExamples#457](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#457)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public Uri Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL ab, die dem gegenwärtig im Fenster angezeigten Element entspricht.</summary>
+        <value>Ein <see cref="T:System.Uri" />, der die URL beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist schreibgeschützt. Um das Fenster, um ein neues Dokument zu navigieren, verwenden Sie die <xref:System.Windows.Forms.HtmlWindow.Navigate%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowFrameElement">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement WindowFrameElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElement WindowFrameElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindow.WindowFrameElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Frameelement ab, das diesem Fenster entspricht.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.HtmlElement" /> dieses Fensters entspricht <c>FRAME</c> Element. Wenn es sich bei diesem Fenster um keinen Frame handelt, wird <see langword="null" /> zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen einer `FRAME` Element aus der <xref:System.Windows.Forms.HtmlWindow.Frames%2A> Auflistung, es gibt eine <xref:System.Windows.Forms.HtmlWindow>. Rufen Sie <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> für dieses Objekt aus, wenn Sie die Attribute der zugrunde liegenden zugreifen müssen `FRAME` Element, z. B. die `SRC` Attribut.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird verglichen die `SRC` Attribut der Rahmen in einem `FRAMESET` bis zur aktuellen Position. Wenn sie unterschiedlich sind, werden die Frames auf ihre ursprünglichen URLs zurückgesetzt.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.UnauthorizedAccessException">Kann nicht auf eine <c>FRAME</c> Elemente oder die <c>FRAME</c>des dokumentieren, wenn die <c>FRAME</c> befindet sich in einer anderen Zone als der <c>FRAMESET</c> enthält Es ist. Eine vollständige Erläuterung finden Sie unter [zum Frameübergreifenden Scripting und zur Sicherheit](http://msdn.microsoft.com/library/ms533028.aspx).</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

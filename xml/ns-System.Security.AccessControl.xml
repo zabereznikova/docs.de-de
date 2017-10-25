@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.AccessControl">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.AccessControl" /> -Namespace stellt Programmierelemente, die Steuern des Zugriffs auf und Überwachungsaktionen sicherheitsbezogene auf sicherungsfähige Objekte bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,99 @@
+<Type Name="TypeLibImportClassAttribute" FullName="System.Runtime.InteropServices.TypeLibImportClassAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TypeLibImportClassAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeLibImportClassAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TypeLibImportClassAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, welche <see cref="T:System.Type" /> eine Schnittstelle exklusiv verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.InteropServices.TypeLibImportClassAttribute> -Attribut auf eine verwaltete Schnittstelle angeben, welche <xref:System.Type> Objekt ausschließlich die Schnittstelle verwendet.  Dieses Attribut ermöglicht es COM-Interop die Schnittstelle wieder in den ursprünglichen Typ zuordnen, wenn die Schnittstelle aus den Metadaten in eine Typbibliothek zu konvertieren und wieder zurück.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibImportClassAttribute (Type importClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type importClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibImportClassAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="importClass" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="importClass">Die <see cref="T:System.Type" /> -Objekt, das eine Schnittstelle exklusiv verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.TypeLibImportClassAttribute" /> Klasse angeben der <see cref="T:System.Type" /> , die eine Schnittstelle exklusiv verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.InteropServices.TypeLibImportClassAttribute> -Attribut auf eine verwaltete Schnittstelle zum Angeben der <xref:System.Type> -Objekt, das die Schnittstelle exklusiv verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.TypeLibImportClassAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des ein <see cref="T:System.Type" /> -Objekt, das eine Schnittstelle exklusiv verwendet.</summary>
+        <value>Der Name des ein <see cref="T:System.Type" /> -Objekt, das eine Schnittstelle exklusiv verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.InteropServices.TypeLibImportClassAttribute> -Attribut auf eine verwaltete Schnittstelle für den Typ angeben, die eine Schnittstelle exklusiv verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

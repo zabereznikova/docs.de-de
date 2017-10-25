@@ -1,0 +1,1668 @@
+<Type Name="BinaryWriter" FullName="System.IO.BinaryWriter">
+  <TypeSignature Language="C#" Value="public class BinaryWriter : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit BinaryWriter extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.BinaryWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Schreibt primitive Typen binär in einen Datenstrom und unterstützt das Schreiben von Zeichenfolgen in einer bestimmten Codierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.BinaryWriter> Klasse enthält Methoden, die primitiven Datentypen in einen Stream schreiben zu vereinfachen. Beispielsweise können Sie die <xref:System.IO.BinaryWriter.Write%2A> Methode, um einen booleschen Wert in den Stream als 1-Byte-Wert zu schreiben. Die Klasse enthält Schreibmethoden, die unterschiedliche Datentypen unterstützen.  
+  
+ Eine neue Instanz der beim Erstellen der <xref:System.IO.BinaryWriter> -Klasse, Sie geben Sie den Stream zum Schreiben in, und geben Sie optional den Typ der Codierung und angibt, ob der Datenstrom zu lassen, öffnen Sie nach dem Freigeben der <xref:System.IO.BinaryWriter> Objekt. Wenn Sie einen Typ der Codieren nicht angeben, wird UTF-8 verwendet.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ Eine abgeleitete Klasse kann die Methoden dieser Klasse, geben Sie eindeutige zeichencodierungen überschreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Speichern und Abrufen von Anwendungseinstellungen in einer Datei.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BinaryWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.BinaryWriter" /> Klasse, die in einen Stream schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryWriter (System.IO.Stream output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="output">Der Ausgabestream.</param>
+        <summary>Initialisiert eine neue Instanz der auf dem bereitgestellten Stream basierenden <see cref="T:System.IO.BinaryWriter" />-Klasse mit einer spezifischen Stream- und Zeichencodierung unter Verwendung von UTF-8.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Speichern und Abrufen von Anwendungseinstellungen in einer Datei.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Stream Schreibvorgänge nicht unterstützt oder ist bereits geschlossen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryWriter (System.IO.Stream output, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream output, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.#ctor(System.IO.Stream,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="output">Der Ausgabestream.</param>
+        <param name="encoding">Die zu verwendende Zeichencodierung.</param>
+        <summary>Initialisiert eine neue Instanz der auf dem bereitgestellten Stream basierenden <see cref="T:System.IO.BinaryWriter" />-Klasse mit einer spezifischen Stream- und Zeichencodierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Stream Schreibvorgänge nicht unterstützt oder ist bereits geschlossen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> oder <paramref name="encoding" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryWriter (System.IO.Stream output, System.Text.Encoding encoding, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream output, class System.Text.Encoding encoding, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="output">Der Ausgabestream.</param>
+        <param name="encoding">Die zu verwendende Zeichencodierung.</param>
+        <param name="leaveOpen">
+          <see langword="true" />, um den Datenstrom geöffnet zu lassen, nach dem das <see cref="T:System.IO.BinaryWriter" />-Objekt freigegeben wurde; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.BinaryWriter" />-Klasse auf Grundlage des angegebenen Streams und der Zeichencodierung und lässt den Stream optional geöffnet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der Stream Schreibvorgänge nicht unterstützt oder ist bereits geschlossen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> oder <paramref name="encoding" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream BaseStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BaseStream" />
+      <MemberSignature Language="DocId" Value="P:System.IO.BinaryWriter.BaseStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zugrunde liegenden Stream, der die <see cref="T:System.IO.BinaryWriter" />.</summary>
+        <value>Der <see langword="BinaryWriter" /> zugeordnete, zugrunde liegende Stream.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und schreiben `Double` Daten in den Arbeitsspeicher mithilfe der <xref:System.IO.BinaryReader> und `BinaryWriter` auf der Basis von Klassen die <xref:System.IO.MemoryStream> Klasse. `MemoryStream`Nur Lese- und Schreibvorgänge `Byte` Daten.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CPP/rwdouble.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CS/rwdouble.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/VB/rwdouble.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den aktuellen <see cref="T:System.IO.BinaryWriter" /> und den zugrunde liegenden Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung der `Close` Aufrufe der <xref:System.IO.BinaryWriter.Dispose%2A> -Methode übergibt eine `true` Wert.  
+  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen <xref:System.IO.BinaryWriter.Flush%2A> oder `Close`. Festlegen von <xref:System.IO.StreamWriter.AutoFlush%2A> zu `true` ist, werden Daten aus dem Puffer geleert werden, in den Stream, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.IO.BinaryWriter" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.IO.BinaryWriter" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public virtual void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht sämtliche Puffer für den aktuellen Writer und veranlasst die Ausgabe aller gepufferten Daten an das zugrunde liegende Gerät.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle abgeleitete Klassen überschreiben soll `Flush` , stellen Sie sicher, dass alle gepufferte Daten in den Stream gesendet wird.  
+  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen `Flush` oder <xref:System.IO.BinaryWriter.Close%2A>. Festlegen von <xref:System.IO.StreamWriter.AutoFlush%2A> zu `true` ist, werden Daten aus dem Puffer geleert werden, in den Stream, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.IO.BinaryWriter Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.IO.BinaryWriter Null" />
+      <MemberSignature Language="DocId" Value="F:System.IO.BinaryWriter.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.BinaryWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.IO.BinaryWriter" /> ohne Sicherungsspeicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutStream">
+      <MemberSignature Language="C#" Value="protected System.IO.Stream OutStream;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.IO.Stream OutStream" />
+      <MemberSignature Language="DocId" Value="F:System.IO.BinaryWriter.OutStream" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den zugrunde liegenden Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public virtual long Seek (int offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 Seek(int32 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Seek(System.Int32,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein Byteoffset relativ zum <c>Ursprung</c>.</param>
+        <param name="origin">Ein Feld des <see cref="T:System.IO.SeekOrigin" /> , der angibt, der des Bezugspunkt aus dem die neue Position abgerufen werden soll.</param>
+        <summary>Legt die Position im aktuellen Stream fest.</summary>
+        <returns>Die Position im aktuellen Stream.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel werden eine Reihe von Bytewerten in eine Datei schreibt. Im Beispiel wird <xref:System.IO.BinaryWriter.Seek%2A> so an unterschiedlichen Orten in der Datei, und klicken Sie dann Schreibvorgänge Marker Bytes verschieben Sie die <xref:System.IO.BinaryWriter.Write%2A> Methode.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CPP/source3.cpp#5)]
+ [!code-csharp[System.IO.BinaryReaderWriter#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source3.cs#5)]
+ [!code-vb[System.IO.BinaryReaderWriter#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source3.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Dateizeiger wurde auf einen ungültigen Speicherort verschoben.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.IO.SeekOrigin" /> Wert ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see langword="Boolean" /> Wert (0 oder 1) zu schreiben.</param>
+        <summary>Schreibt einen aus einem Byte <see langword="Boolean" /> Wert in den aktuellen Stream, mit 0, darstellt, <see langword="false" /> und 1 <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Speichern und Abrufen von Anwendungseinstellungen in einer Datei.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende Byte ohne Vorzeichen.</param>
+        <summary>Schreibt ein Byte ohne Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um ein Byte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufgrund von Formatierung Datenkonflikte wird die Verwendung der Methode mit den folgenden Codierungen nicht empfohlen:  
+  
+-   UTF-7  
+  
+-   ISO-2022-JP  
+  
+-   ISCII  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Binärdaten mit Arbeitsspeicher als Sicherungsspeicher schreiben und dann überprüfen, ob die Daten richtig geschrieben wurde.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWByte#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/CPP/rwbyte.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWByte#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/CS/rwbyte.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWByte#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/VB/rwbyte.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Bytearray, das die zu schreibenden Daten enthält.</param>
+        <summary>Schreibt ein Byte-Array in den zugrunde liegenden Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Binärdaten mit Arbeitsspeicher als Sicherungsspeicher schreiben und dann überprüfen, ob die Daten richtig geschrieben wurde.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWBytes1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/CPP/rwbytes.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWBytes1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/CS/rwbytes.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWBytes1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/VB/rwbytes.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Nicht-Ersatzzeichen, Unicode-Zeichen geschrieben werden soll.</param>
+        <summary>Schreibt ein Unicode-Zeichen in den aktuellen Stream und erhöht die aktuelle Position im Stream in Abhängigkeit von der <see langword="Encoding" /> verwendet und der Zeichen in den Stream geschrieben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufgrund von Formatierung Datenkonflikte wird die Verwendung der Methode mit den folgenden Codierungen nicht empfohlen:  
+  
+-   UTF-7  
+  
+-   ISO-2022-JP  
+  
+-   ISCII  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ Unicode-Ersatzzeichen müssen nicht einzeln als Paare zusammen im selben Aufruf geschrieben werden. Wenn Sie Unterstützung für Ersatzzeichenpaare in Ihrer Anwendung benötigen, erwägen Sie ein Array von Zeichen und die <xref:System.IO.BinaryWriter.Write%2A> -methodenüberladung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben von Daten mithilfe von Arbeitsspeicher als Sicherungsspeicher.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWChar1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/CPP/rwchar.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWChar1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/CS/rwchar.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWChar1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/VB/rwchar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ch" />ist ein einzelnes Ersatzzeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (char[] chars);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char[] chars) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Ein Zeichenarray mit den zu schreibenden Daten.</param>
+        <summary>Schreibt ein Zeichenarray in den aktuellen Stream und erhöht die aktuelle Position im Stream in Abhängigkeit von der <see langword="Encoding" /> verwendet und der Zeichen in den Stream geschrieben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält Beispiele für andere typische oder zugehörigen e/a-Aufgaben.  
+  
+|Aufgabe|Siehe das Beispiel in diesem Thema:|  
+|-------------------|--------------------------------------|  
+|Erstellen einer Textdatei|[Gewusst wie: Schreiben von Text in eine Datei](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Schreiben Sie in eine Textdatei ein.|[Gewusst wie: Schreiben von Text in eine Datei](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Lesen Sie aus einer Textdatei.|[Gewusst wie: Lesen von Text aus einer Datei](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anfügen von Text in eine Datei.|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Die Größe einer Datei abrufen.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Die Attribute einer Datei abrufen.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Legen Sie die Attribute einer Datei.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Bestimmt, ob eine Datei vorhanden ist.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Lesen Sie aus einer Binärdatei.|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Schreiben Sie in eine Binärdatei.|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben von Daten mithilfe von Arbeitsspeicher als Sicherungsspeicher.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWChars1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/CPP/rwchars.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWChars1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/CS/rwchars.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWChars1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/VB/rwchars.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu schreibende Dezimalwert.</param>
+        <summary>Schreibt einen Dezimalwert in den aktuellen Stream und erhöht die Position im Stream um 16 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält Beispiele für andere typische oder zugehörigen e/a-Aufgaben.  
+  
+|Aufgabe|Siehe das Beispiel in diesem Thema:|  
+|-------------------|--------------------------------------|  
+|Erstellen einer Textdatei|[Gewusst wie: Schreiben von Text in eine Datei](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Schreiben Sie in eine Textdatei ein.|[Gewusst wie: Schreiben von Text in eine Datei](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Lesen Sie aus einer Textdatei.|[Gewusst wie: Lesen von Text aus einer Datei](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anfügen von Text in eine Datei.|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Die Größe einer Datei abrufen.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Die Attribute einer Datei abrufen.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Legen Sie die Attribute einer Datei.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Bestimmt, ob eine Datei vorhanden ist.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Lesen Sie aus einer Binärdatei.|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Schreiben Sie in eine Binärdatei.|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zum Schreiben von 8-Byte-Gleitkommawert.</param>
+        <summary>Schreibt eine 8-Byte-Gleitkommawerts in den aktuellen Stream und erhöht die Position im Stream um 8 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und schreiben `Double` Daten in den Arbeitsspeicher mithilfe der <xref:System.IO.BinaryReader> und `BinaryWriter` auf der Basis von Klassen die <xref:System.IO.MemoryStream> Klasse. `MemoryStream`Nur Lese- und Schreibvorgänge `Byte` Daten.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CPP/rwdouble.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CS/rwdouble.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWDouble#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/VB/rwdouble.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zum Schreiben von 2-Byte-Ganzzahl mit Vorzeichen.</param>
+        <summary>Schreibt eine 2-Byte-Ganzzahl mit Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um 2 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `BinaryWriter`Dieser Datentyp wird in little-endian-Format gespeichert.  
+  
+ Die folgende Tabelle enthält Beispiele für andere typische oder zugehörigen e/a-Aufgaben.  
+  
+|Aufgabe|Siehe das Beispiel in diesem Thema:|  
+|-------------------|--------------------------------------|  
+|Erstellen einer Textdatei|[Gewusst wie: Schreiben von Text in eine Datei](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Schreiben Sie in eine Textdatei ein.|[Gewusst wie: Schreiben von Text in eine Datei](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Lesen Sie aus einer Textdatei.|[Gewusst wie: Lesen von Text aus einer Datei](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anfügen von Text in eine Datei.|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](~/docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
+|Die Größe einer Datei abrufen.|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Die Attribute einer Datei abrufen.|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
+|Legen Sie die Attribute einer Datei.|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
+|Bestimmt, ob eine Datei vorhanden ist.|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
+|Lesen Sie aus einer Binärdatei.|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Schreiben Sie in eine Binärdatei.|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zum Schreiben von vier-Byte-Ganzzahl mit Vorzeichen.</param>
+        <summary>Schreibt eine vier-Byte-Ganzzahl mit Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um 4 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `BinaryWriter`Dieser Datentyp wird in little-endian-Format gespeichert.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Speichern und Abrufen von Anwendungseinstellungen in einer Datei.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zum Schreiben von 8-Byte-Ganzzahl mit Vorzeichen.</param>
+        <summary>Schreibt eine 8-Byte-Ganzzahl mit Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um 8 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `BinaryWriter`Dieser Datentyp wird in little-endian-Format gespeichert.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.SByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende Byte mit Vorzeichen.</param>
+        <summary>Schreibt einen Bytewert mit Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um ein Byte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zum Schreiben von vier-Byte-Gleitkommawert.</param>
+        <summary>Schreibt eine vier-Byte-Gleitkommawerts in den aktuellen Stream und erhöht die Position im Stream um 4 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `BinaryWriter`Dieser Datentyp wird in little-endian-Format gespeichert.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Speichern und Abrufen von Anwendungseinstellungen in einer Datei.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu schreibende Wert.</param>
+        <summary>Schreibt eine Zeichenfolge mit Längenpräfix in diesem Datenstrom in die aktuelle Codierung von der <see cref="T:System.IO.BinaryWriter" />, und erhöht die aktuelle Position des Streams in Übereinstimmung mit der verwendeten Codierung und der Zeichen in den Stream geschrieben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Längenpräfix bedeutet, dass diese Methode zunächst die Länge der Zeichenfolge in Bytes schreibt, wenn mit codiert den <xref:System.IO.BinaryWriter> Instanz des aktuellen Codierung in den Stream. Dieser Wert wird als ganze Zahl ohne Vorzeichen geschrieben. Diese Methode schreibt dann diese Anzahl an Bytes in den Stream.  
+  
+ Die Zeichenfolge "A" hat beispielsweise eine Länge von 1, aber wenn mit UTF-16 codiert; die Länge beträgt 2 Bytes, also der Wert in das Präfix geschriebene 2 und 3 Bytes werden in den Stream, einschließlich Präfix geschrieben.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Speichern und Abrufen von Anwendungseinstellungen in einer Datei.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zum Schreiben 2-Byte-Ganzzahl ohne Vorzeichen.</param>
+        <summary>Schreibt eine 2-Byte-Ganzzahl ohne Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um 2 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `BinaryWriter`Dieser Datentyp wird in little-endian-Format gespeichert.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zum Schreiben von vier-Byte-Ganzzahl ohne Vorzeichen.</param>
+        <summary>Schreibt eine vier-Byte-Ganzzahl ohne Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um 4 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `BinaryWriter`Dieser Datentyp wird in little-endian-Format gespeichert.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zum Schreiben von 8-Byte-Ganzzahl ohne Vorzeichen.</param>
+        <summary>Schreibt eine 8-Byte-Ganzzahl ohne Vorzeichen in den aktuellen Stream und erhöht die Position im Stream um 8 Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `BinaryWriter`Dieser Datentyp wird in little-endian-Format gespeichert.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Bytearray, das die zu schreibenden Daten enthält.</param>
+        <param name="index">Der Startpunkt im <c>Puffer</c> ab dem geschrieben werden soll.</param>
+        <param name="count">Die Anzahl der zu schreibenden Bytes.</param>
+        <summary>Schreibt einen Bereich eines Bytearrays in den aktuellen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Binärdaten mit Arbeitsspeicher als Sicherungsspeicher schreiben und dann überprüfen, ob die Daten richtig geschrieben wurde.  
+  
+ [!code-csharp[System.IO.BinaryReaderWriter.RWBytes2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes2/CS/rwreadbytes.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWBytes2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes2/VB/rwreadbytes.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Pufferlänge minus <paramref name="index" /> ist kleiner als <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (char[] chars, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char[] chars, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Ein Zeichenarray mit den zu schreibenden Daten.</param>
+        <param name="index">Der Startpunkt im <c>chars</c> aus der Schreibvorgang beginnen soll.</param>
+        <param name="count">Die Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt einen Abschnitt eines Arrays von Zeichen in den aktuellen Stream und erhöht die aktuelle Position im Stream in Abhängigkeit von der <see langword="Encoding" /> verwendet und vielleicht der Zeichen in den Stream geschrieben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben von Daten mithilfe von Arbeitsspeicher als Sicherungsspeicher.  
+  
+ [!code-cpp[System.IO.BinaryReaderWriter.RWChars2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/CPP/rwreadchars.cpp#1)]
+ [!code-csharp[System.IO.BinaryReaderWriter.RWChars2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/CS/rwreadchars.cs#1)]
+ [!code-vb[System.IO.BinaryReaderWriter.RWChars2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/VB/rwreadchars.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Pufferlänge minus <paramref name="index" /> ist kleiner als <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write7BitEncodedInt">
+      <MemberSignature Language="C#" Value="protected void Write7BitEncodedInt (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Write7BitEncodedInt(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryWriter.Write7BitEncodedInt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die 32-Bit-Ganzzahl, die geschrieben werden.</param>
+        <summary>Schreibt eine 32-Bit-Ganzzahl in komprimiertem Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ganze Zahl von der `value` Parameter geschrieben sieben Bits zu einem Zeitpunkt, der sieben niedrigstwertigen Bits ab. Das high-Bit eines Bytes angibt, ob es sind weitere Bytes, die nach diesem geschrieben werden.  
+  
+ Wenn `value` passt in sieben Bits, die es dauert nur ein Byte an Speicherplatz. Wenn `value` passt nicht in sieben Bits die high-Bit-auf das erste Byte festgelegt und geschrieben wird. `value` wird dann verlagert von sieben Bits und das nächste Byte wird geschrieben. Dieser Prozess wird wiederholt, bis die gesamte Ganzzahl geschrieben wurde.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.EndOfStreamException">Das Ende des Streams erreicht ist.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.IO.IOException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

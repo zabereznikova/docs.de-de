@@ -1,0 +1,312 @@
+<Type Name="TextBoxRenderer" FullName="System.Windows.Forms.TextBoxRenderer">
+  <TypeSignature Language="C#" Value="public sealed class TextBoxRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextBoxRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TextBoxRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden verwendet, um ein Textfeld-Steuerelement mit visuellen Stilen rendern. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBoxRenderer> Klasse bietet eine Reihe von `static` Methoden, die verwendet werden können, um ein Textfeld-Steuerelement mit dem aktuellen visuellen Stil des Betriebssystems zu rendern. Unter dem Rendern eine Steuerelements versteht man das Zeichnen der Benutzeroberfläche eines Steuerelements. Dies ist hilfreich, wenn Sie ein benutzerdefiniertes Steuerelement zeichnen, das die Darstellung des aktuellen visuellen Stil aufweisen sollte. Um ein Textfeld zu zeichnen, verwenden Sie eines der <xref:System.Windows.Forms.TextBoxRenderer.DrawTextBox%2A> Methoden. Diese Methoden bieten eine Vielzahl von Optionen, z. B. anwenden textformatierung oder Textgrenzen angeben.  
+  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind und visuelle Stile, das den Clientbereich des Anwendungsfenster angewendet werden, <xref:System.Windows.Forms.TextBoxRenderer.DrawTextBox%2A> wird das Textfeld mit dem aktuellen visuellen Stil gezeichnet. Andernfalls <xref:System.Windows.Forms.TextBoxRenderer.DrawTextBox%2A> löst eine <xref:System.InvalidOperationException>. Um zu bestimmen, ob die Member dieser Klasse verwendet werden können, überprüfen Sie den Wert der die <xref:System.Windows.Forms.TextBoxRenderer.IsSupported%2A> Eigenschaft.  
+  
+ Diese Klasse dient als Wrapper für die Funktionalität von einem <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> , die auf einen der Elemente des festgelegt die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox.TextEdit?displayProperty=nameWithType> Klasse. Weitere Informationen finden Sie unter [Rendern von Steuerelementen mit visuellen Stilen](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein benutzerdefiniertes Steuerelement zu erstellen, verwendet die <xref:System.Windows.Forms.TextBoxRenderer.DrawTextBox%2A> Methode, um ein Textfeld zu zeichnen. Das Steuerelement kann auch den Benutzer zum Auswählen eines der <xref:System.Windows.Forms.TextFormatFlags> Werte auf den Text anzuwendende Feld, Text.  
+  
+ [!code-cpp[System.Windows.Forms.TextBoxRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.TextBoxRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.TextBoxRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawTextBox">
+      <MemberSignature Language="C#" Value="public static void DrawTextBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TextBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTextBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TextBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxRenderer.DrawTextBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TextBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TextBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um das Textfeld zu zeichnen.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des Textfelds angibt.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TextBoxState" /> Werten, die den visuellen Status des Textfelds angibt.</param>
+        <summary>Zeichnet ein Textfeld-Steuerelement in den angegebenen Zustand und die Grenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TextBoxRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTextBox">
+      <MemberSignature Language="C#" Value="public static void DrawTextBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string textBoxText, System.Drawing.Font font, System.Windows.Forms.VisualStyles.TextBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTextBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string textBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.VisualStyles.TextBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxRenderer.DrawTextBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.VisualStyles.TextBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TextBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um das Textfeld zu zeichnen.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des Textfelds angibt.</param>
+        <param name="textBoxText">Die <see cref="T:System.String" /> in das Textfeld gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TextBoxText</c>.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TextBoxState" /> Werten, die den visuellen Status des Textfelds angibt.</param>
+        <summary>Zeichnet ein Textfeld-Steuerelement im angegebenen Zustand und Grenzen, und klicken Sie mit dem angegebenen Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TextBoxRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTextBox">
+      <MemberSignature Language="C#" Value="public static void DrawTextBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string textBoxText, System.Drawing.Font font, System.Drawing.Rectangle textBounds, System.Windows.Forms.VisualStyles.TextBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTextBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string textBoxText, class System.Drawing.Font font, valuetype System.Drawing.Rectangle textBounds, valuetype System.Windows.Forms.VisualStyles.TextBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxRenderer.DrawTextBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TextBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TextBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um das Textfeld zu zeichnen.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des Textfelds angibt.</param>
+        <param name="textBoxText">Die <see cref="T:System.String" /> in das Textfeld gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TextBoxText</c>.</param>
+        <param name="textBounds">Die <see cref="T:System.Drawing.Rectangle" /> , angibt, dass die Grenzen des <c>TextBoxText</c>.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TextBoxState" /> Werten, die den visuellen Status des Textfelds angibt.</param>
+        <summary>Zeichnet ein Textfeld-Steuerelement im angegebenen Zustand und Grenzen, und klicken Sie mit dem angegebenen Text und Textgrenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TextBoxRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTextBox">
+      <MemberSignature Language="C#" Value="public static void DrawTextBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string textBoxText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Windows.Forms.VisualStyles.TextBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTextBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string textBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, valuetype System.Windows.Forms.VisualStyles.TextBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxRenderer.DrawTextBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Windows.Forms.VisualStyles.TextBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TextBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um das Textfeld zu zeichnen.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des Textfelds angibt.</param>
+        <param name="textBoxText">Die <see cref="T:System.String" /> in das Textfeld gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TextBoxText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TextBoxState" /> Werten, die den visuellen Status des Textfelds angibt.</param>
+        <summary>Zeichnet ein Textfeld-Steuerelement im angegebenen Zustand und Grenzen, und klicken Sie mit dem angegebenen Text und textformatierung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TextBoxRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTextBox">
+      <MemberSignature Language="C#" Value="public static void DrawTextBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string textBoxText, System.Drawing.Font font, System.Drawing.Rectangle textBounds, System.Windows.Forms.TextFormatFlags flags, System.Windows.Forms.VisualStyles.TextBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTextBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string textBoxText, class System.Drawing.Font font, valuetype System.Drawing.Rectangle textBounds, valuetype System.Windows.Forms.TextFormatFlags flags, valuetype System.Windows.Forms.VisualStyles.TextBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxRenderer.DrawTextBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Rectangle,System.Windows.Forms.TextFormatFlags,System.Windows.Forms.VisualStyles.TextBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TextBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um das Textfeld zu zeichnen.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des Textfelds angibt.</param>
+        <param name="textBoxText">Die <see cref="T:System.String" /> in das Textfeld gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TextBoxText</c>.</param>
+        <param name="textBounds">Die <see cref="T:System.Drawing.Rectangle" /> , angibt, dass die Grenzen des <c>TextBoxText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TextBoxState" /> Werten, die den visuellen Status des Textfelds angibt.</param>
+        <summary>Zeichnet ein Textfeld-Steuerelement im angegebenen Zustand und Grenzen, und klicken Sie mit dem angegebenen Text, Textgrenzen, und Formatieren von Text an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TextBoxRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TextBoxRenderer.DrawTextBox%28System.Drawing.Graphics%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Drawing.Rectangle%2CSystem.Windows.Forms.TextFormatFlags%2CSystem.Windows.Forms.VisualStyles.TextBoxState%29> -Methode in eines benutzerdefinierten Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um ein Textfeld zu zeichnen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.TextBoxRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.TextBoxRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TextBoxRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TextBoxRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxRenderer.IsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.TextBoxRenderer" /> Klasse kann verwendet werden, um ein Textfeld mit visuellen Stilen gezeichnet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer visuelle Stile im Betriebssystem aktiviert hat, und visuelle Stile werden auf den Clientbereich des Anwendungsfenster angewendet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft ist `false`, <xref:System.Windows.Forms.TextBoxRenderer.DrawTextBox%2A> Methode löst eine <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.TextBoxRenderer.IsSupported%2A> Eigenschaft, um festzustellen, ob verwendet die <xref:System.Windows.Forms.TextBoxRenderer.DrawTextBox%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.TextBoxRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.TextBoxRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TextBoxRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TextBoxRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextBoxRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

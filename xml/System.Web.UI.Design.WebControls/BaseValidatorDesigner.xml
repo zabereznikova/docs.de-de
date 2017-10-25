@@ -1,0 +1,146 @@
+<Type Name="BaseValidatorDesigner" FullName="System.Web.UI.Design.WebControls.BaseValidatorDesigner">
+  <TypeSignature Language="C#" Value="public class BaseValidatorDesigner : System.Web.UI.Design.WebControls.PreviewControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BaseValidatorDesigner extends System.Web.UI.Design.WebControls.PreviewControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.BaseValidatorDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.PreviewControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt entwurfszeitunterstützung in einem visuellen Designer für Webserversteuerelemente, die abgeleitet sind die <see cref="T:System.Web.UI.WebControls.BaseValidator" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt ein Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.BaseValidator> abstrakte Klasse wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet. Die <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner> Objekte bieten entwurfszeitunterstützung für Steuerelemente, die abgeleitet sind die <xref:System.Web.UI.WebControls.BaseValidator> Klasse in einem visuellen Designer.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner.GetDesignTimeHtml%2A> Methode ruft das Markup, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel leitet der `SimpleCompareValidator` -Steuerelement aus der <xref:System.Web.UI.WebControls.CompareValidator> Klasse. `SimpleCompareValidator`ist eine Kopie der <xref:System.Web.UI.WebControls.CompareValidator>. Im Beispiel wird auch den Designer abgeleitet `SimpleCompareValidatorDesigner` aus der <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner> Klasse und verwendet die <xref:System.ComponentModel.DesignerAttribute> Attribut zum Zuordnen der `SimpleCompareValidatorDesigner` -Klasse mit der `SimpleCompareValidator` Steuerelement.  
+  
+ `SimpleCompareValidatorDesigner`überschreibt die <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner.GetDesignTimeHtml%2A> Methode, um eine Volltonfarbe Rahmen gezeichnet der `SimpleCompareValidator` zur Entwurfszeit zu steuern, wenn der Wert des der <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> -Eigenschaft des Steuerelements ist der <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Feld.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.BaseValidatorDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.BaseValidatorDesigner/CS/CustomCompareValidatorDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.BaseValidatorDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.BaseValidatorDesigner/VB/customcomparevalidatordesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BaseValidatorDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseValidatorDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.BaseValidatorDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner> Klasse bei der Erstellung des zugeordneten Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.BaseValidator> Klasse oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewControl">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.Control CreateViewControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.Control CreateViewControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseValidatorDesigner.CreateViewControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des zugeordneten Steuerelements auf der Entwurfsoberfläche gerendert werden soll.</summary>
+        <returns>Ein Webserver-Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseValidatorDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup ab, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Eine Zeichenfolge, enthält das Markup zum Rendern verwendet die <see cref="T:System.Web.UI.WebControls.BaseValidator" /> zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> oder <xref:System.Web.UI.WebControls.BaseValidator.Text%2A> Eigenschaft des zugeordneten Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.BaseValidator> Klasse ist eine leere Zeichenfolge (""), oder, wenn die <xref:System.Web.UI.WebControls.BaseValidator.Display%2A> -Eigenschaftensatz auf die <xref:System.Web.UI.WebControls.ValidatorDisplay.None> Feld der <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner.GetDesignTimeHtml%2A> Methode legt die <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft, um die Steuerelement-ID, die in Klammern ([]) und legt eingeschlossen ist der <xref:System.Web.UI.WebControls.BaseValidator.Display%2A> Eigenschaft, um die <xref:System.Web.UI.WebControls.ValidatorDisplay.Static> Feld. Die <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner.GetDesignTimeHtml%2A> ruft dann die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode zum Generieren von Markup und stellt die Eigenschaften des Steuerelements auf ihre ursprünglichen Werte basieren, falls erforderlich.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.BaseValidatorDesigner.GetDesignTimeHtml%2A> -Methode, die einen durchgezogenen Rahmen um das zugeordnete Steuerelement zur Entwurfszeit zeichnet, wenn der Wert des der <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft des Steuerelements auf festgelegt ist die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Feld.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.BaseValidatorDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.BaseValidatorDesigner/CS/CustomCompareValidatorDesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.BaseValidatorDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.BaseValidatorDesigner/VB/customcomparevalidatordesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseValidatorDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine Auflistung, implementiert die <see cref="T:System.Collections.IDictionary" /> hinzugefügt und Shadowing-Eigenschaften.</param>
+        <summary>Vom Designer verwendet zum Entfernen oder Hinzufügen von Eigenschaften im Eigenschaftenraster oder Shadowing von Eigenschaften des zugeordneten Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelement-Designer-Objekte verwenden von abgeleiteten Methoden, die <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A?displayProperty=nameWithType> Methode Shadowing von Eigenschaften mit den entsprechenden während der Entwurfszeit-Eigenschaften, die der Designer implementiert, um Eigenschaften hinzufügen oder Entfernen von Eigenschaften aus dem Eigenschaftenraster-Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,249 @@
+<Type Name="OffsetType" FullName="System.Windows.Forms.VisualStyles.OffsetType">
+  <TypeSignature Language="C#" Value="public enum OffsetType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OffsetType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.OffsetType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, in dem ein Offset auf ein Fensterelement im angewendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.OffsetType> Werte darstellen, die Rückgabewerte der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A?displayProperty=nameWithType> Methode, wenn sie mit einem Argumentwert, der aufgerufen wird <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveLastButton">
+      <MemberSignature Language="C#" Value="AboveLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType AboveLastButton = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.AboveLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird von oberhalb der letzten Schaltfläche angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowLastButton">
+      <MemberSignature Language="C#" Value="BelowLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BelowLastButton = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BelowLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird unterhalb der letzten Schaltfläche angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="BottomLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BottomLeft = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BottomLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird vom linken Ende des Elements angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomMiddle">
+      <MemberSignature Language="C#" Value="BottomMiddle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BottomMiddle = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BottomMiddle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird aus der unteren Mitte des Elements angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BottomRight = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird von unten rechts auf der das Element angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftOfCaption">
+      <MemberSignature Language="C#" Value="LeftOfCaption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType LeftOfCaption = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.LeftOfCaption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird vom linken Rand der Beschriftung angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftOfLastButton">
+      <MemberSignature Language="C#" Value="LeftOfLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType LeftOfLastButton = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.LeftOfLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird vom linken Rand der letzten Schaltfläche angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleLeft">
+      <MemberSignature Language="C#" Value="MiddleLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType MiddleLeft = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.MiddleLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird angewendet, aus der Mitte des Elements nach links.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleRight">
+      <MemberSignature Language="C#" Value="MiddleRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType MiddleRight = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.MiddleRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird aus der Mitte rechts des Elements angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightOfCaption">
+      <MemberSignature Language="C#" Value="RightOfCaption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType RightOfCaption = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.RightOfCaption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird von rechts neben der Beschriftung angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightOfLastButton">
+      <MemberSignature Language="C#" Value="RightOfLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType RightOfLastButton = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.RightOfLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird vom rechten Rand der letzten Schaltfläche angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType TopLeft = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird angewendet, von der obersten Position des Elements nach links.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopMiddle">
+      <MemberSignature Language="C#" Value="TopMiddle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType TopMiddle = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.TopMiddle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird aus der oberen Mitte des Elements angewendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="TopRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType TopRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.TopRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset wird angewendet, von der obersten Position des Elements nach rechts.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

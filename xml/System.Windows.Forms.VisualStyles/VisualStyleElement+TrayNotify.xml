@@ -1,0 +1,31 @@
+<Type Name="VisualStyleElement+TrayNotify" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+TrayNotify">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.TrayNotify" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/TrayNotify extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Klassen, ermöglichen <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für den Hintergrund des im Infobereich ganz rechts in der Taskleiste befindet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify> Klasse bietet eine Grundlage, die in der folgenden Klassen definiert werden:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify.AnimateBackground>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify.Background>  
+  
+ Jede dieser Klassen stellt eine Eigenschaft, die gibt eine <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für den Hintergrund des Infobereichs dem Klassennamen angegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

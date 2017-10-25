@@ -1,0 +1,1230 @@
+<Type Name="IcmpV4Statistics" FullName="System.Net.NetworkInformation.IcmpV4Statistics">
+  <TypeSignature Language="C#" Value="public abstract class IcmpV4Statistics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IcmpV4Statistics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IcmpV4Statistics" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Internet Control Message Protocol für IPv4 (ICMPv4) statistische Daten für den lokalen Computer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMPv4 ist ein Satz von Fehler- und informationsmeldungen für die Verwendung mit Internetprotokoll Version 4. ICMP-Version 4 wird in der IETF RFC 792 definiert.  
+  
+ Diese Klasse wird verwendet, durch die <xref:System.Net.NetworkInformation.IPGlobalProperties.GetIcmpV4Statistics%2A> Methode, um Informationen zum Anwendungsdatenverkehr ICMPv4 zurückzugeben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die aktuelle ICMPv4-Statistik.  
+  
+ [!code-cpp[NCLNetInfoReport#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#6)]
+ [!code-csharp[NCLNetInfoReport#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IcmpV4Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IcmpV4Statistics.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.NetworkInformation.IcmpV4Statistics" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann nur durch abgeleitete Klassen aufgerufen werden <xref:System.Net.NetworkInformation.IcmpV4Statistics>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressMaskRepliesReceived">
+      <MemberSignature Language="C#" Value="public abstract long AddressMaskRepliesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AddressMaskRepliesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRepliesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Adresse Maske-Antwort-Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Adresse Maske-Antwort-Nachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adresse Maske Anforderung und Antwort-Nachrichten werden verwendet, um die Anzahl von Bits in die Subnetzmaske im lokalen Subnetz zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#29](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#29)]
+ [!code-csharp[NCLNetInfo2#29](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#29)]
+ [!code-vb[NCLNetInfo2#29](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressMaskRepliesSent">
+      <MemberSignature Language="C#" Value="public abstract long AddressMaskRepliesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AddressMaskRepliesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRepliesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Adresse Maske-Antwort-Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Adresse Maske-Antwort-Nachrichten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adresse Maske Anforderung und Antwort-Nachrichten werden verwendet, um die Anzahl von Bits in die Subnetzmaske im lokalen Subnetz zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#29](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#29)]
+ [!code-csharp[NCLNetInfo2#29](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#29)]
+ [!code-vb[NCLNetInfo2#29](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressMaskRequestsReceived">
+      <MemberSignature Language="C#" Value="public abstract long AddressMaskRequestsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AddressMaskRequestsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRequestsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Address Mask Request-Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Nachrichten anfordern Adresse Mask angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adresse Maske Anforderung und Antwort-Nachrichten werden verwendet, um die Anzahl von Bits in die Subnetzmaske im lokalen Subnetz zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#29](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#29)]
+ [!code-csharp[NCLNetInfo2#29](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#29)]
+ [!code-vb[NCLNetInfo2#29](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressMaskRequestsSent">
+      <MemberSignature Language="C#" Value="public abstract long AddressMaskRequestsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AddressMaskRequestsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRequestsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Address Mask Request-Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Nachrichten anfordern Adresse Mask angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adresse Maske Anforderung und Antwort-Nachrichten werden verwendet, um die Anzahl von Bits in die Subnetzmaske im lokalen Subnetz zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#29](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#29)]
+ [!code-csharp[NCLNetInfo2#29](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#29)]
+ [!code-vb[NCLNetInfo2#29](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUnreachableMessagesReceived">
+      <MemberSignature Language="C#" Value="public abstract long DestinationUnreachableMessagesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DestinationUnreachableMessagesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.DestinationUnreachableMessagesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Nachrichten, die aufgrund eines Pakets müssen eine nicht erreichbare Adresse in das Ziel empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Nachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Meldung Ziel nicht erreichbar, kann auf den Computer gesendet werden, der die Quelle eines Pakets für eine beliebige der folgenden Gründe:  
+  
+-   Eine Route zum Ziel-Adresse kann nicht der Computer gefunden werden.  
+  
+-   Kommunikation mit der Zieladresse ist für die Verwaltung nicht zulässig. Eine Firewall verhindert beispielsweise die Übermittlung von Paketen an das Ziel.  
+  
+-   Die Zieladresse ist nicht erreichbar.  
+  
+-   Der Zielport ist nicht erreichbar. Beispielsweise ist kein Listener für das Protokoll des Pakets verfügbar.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#23](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#23)]
+ [!code-csharp[NCLNetInfo2#23](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#23)]
+ [!code-vb[NCLNetInfo2#23](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUnreachableMessagesSent">
+      <MemberSignature Language="C#" Value="public abstract long DestinationUnreachableMessagesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DestinationUnreachableMessagesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.DestinationUnreachableMessagesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Nachrichten, die aufgrund eines Pakets müssen eine nicht erreichbare Adresse in das Ziel gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> -Wert, der angibt, die Gesamtanzahl der Nachrichten gesendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Meldung Ziel nicht erreichbar, kann auf den Computer gesendet werden, der die Quelle eines Pakets für eine beliebige der folgenden Gründe:  
+  
+-   Eine Route zum Ziel-Adresse kann nicht der Computer gefunden werden.  
+  
+-   Kommunikation mit der Zieladresse ist für die Verwaltung nicht zulässig. Eine Firewall verhindert beispielsweise die Übermittlung von Paketen an das Ziel.  
+  
+-   Die Zieladresse ist nicht erreichbar.  
+  
+-   Der Zielport ist nicht erreichbar. Beispielsweise ist kein Listener für das Protokoll des Pakets verfügbar.  
+  
+-  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#23](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#23)]
+ [!code-csharp[NCLNetInfo2#23](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#23)]
+ [!code-vb[NCLNetInfo2#23](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRepliesReceived">
+      <MemberSignature Language="C#" Value="public abstract long EchoRepliesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRepliesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.EchoRepliesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Echo-Antwort-Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtzahl der Anzahl der ICMP-Echoantworten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMP-Echoanforderung und Echoantwortnachrichten können ein Computer eine ICMP-Antwort von einem Remotecomputer im Netzwerk anfordern. Diese Funktionalität wird häufig verwendet, um die Gültigkeit des remote-Adressen zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#21](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#21)]
+ [!code-csharp[NCLNetInfo2#21](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#21)]
+ [!code-vb[NCLNetInfo2#21](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRepliesSent">
+      <MemberSignature Language="C#" Value="public abstract long EchoRepliesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRepliesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.EchoRepliesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Echo-Antwort-Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtzahl der Anzahl der ICMP-Echoantworten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMP-Echoanforderung und Echoantwortnachrichten können ein Computer eine ICMP-Antwort von einem Remotecomputer im Netzwerk anfordern. Diese Funktionalität wird häufig verwendet, um die Gültigkeit des remote-Adressen zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#21](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#21)]
+ [!code-csharp[NCLNetInfo2#21](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#21)]
+ [!code-vb[NCLNetInfo2#21](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRequestsReceived">
+      <MemberSignature Language="C#" Value="public abstract long EchoRequestsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRequestsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.EchoRequestsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Echoanforderung Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtzahl der Anzahl von ICMP-echoanforderungen angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMP-Echoanforderung und Echoantwortnachrichten können ein Computer eine ICMP-Antwort von einem Remotecomputer im Netzwerk anfordern. Diese Funktionalität wird häufig verwendet, um die Gültigkeit des remote-Adressen zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#21](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#21)]
+ [!code-csharp[NCLNetInfo2#21](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#21)]
+ [!code-vb[NCLNetInfo2#21](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRequestsSent">
+      <MemberSignature Language="C#" Value="public abstract long EchoRequestsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRequestsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.EchoRequestsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Echoanforderung Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtzahl der Anzahl von ICMP-echoanforderungen angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMP-Echoanforderung und Echoantwortnachrichten können ein Computer eine ICMP-Antwort von einem Remotecomputer im Netzwerk anfordern. Diese Funktionalität wird häufig verwendet, um die Gültigkeit des remote-Adressen zu ermitteln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#21](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#21)]
+ [!code-csharp[NCLNetInfo2#21](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#21)]
+ [!code-vb[NCLNetInfo2#21](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorsReceived">
+      <MemberSignature Language="C#" Value="public abstract long ErrorsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ErrorsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.ErrorsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4)-Fehlermeldungen, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der ICMP-Fehlermeldungen angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#22](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#22)]
+ [!code-csharp[NCLNetInfo2#22](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#22)]
+ [!code-vb[NCLNetInfo2#22](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorsSent">
+      <MemberSignature Language="C#" Value="public abstract long ErrorsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ErrorsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.ErrorsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4)-Fehlermeldungen, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtzahl der Anzahl der ICMP-Fehlermeldungen angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#22](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#22)]
+ [!code-csharp[NCLNetInfo2#22](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#22)]
+ [!code-vb[NCLNetInfo2#22](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagesReceived">
+      <MemberSignature Language="C#" Value="public abstract long MessagesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MessagesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.MessagesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol-Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der ICMPv4-Nachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMPv4-Nachrichten werden gesendet, für die Kommunkation Fehler und Informationen zu Paketen, die mit dem Internet Protocol Version 4 (IPv4) gesendet wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#20](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#20)]
+ [!code-csharp[NCLNetInfo2#20](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#20)]
+ [!code-vb[NCLNetInfo2#20](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagesSent">
+      <MemberSignature Language="C#" Value="public abstract long MessagesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MessagesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.MessagesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der ICMPv4-Nachrichten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMPV4-Nachrichten werden gesendet, für die Kommunkation Fehler und Informationen zu Paketen, die mit Internetprotokoll Version 4 (IPv4) gesendet wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#20](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#20)]
+ [!code-csharp[NCLNetInfo2#20](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#20)]
+ [!code-vb[NCLNetInfo2#20](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterProblemsReceived">
+      <MemberSignature Language="C#" Value="public abstract long ParameterProblemsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ParameterProblemsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.ParameterProblemsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Parameterproblem-Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der ICMP-Parameterproblem Nachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameter problembehafteten Nachrichten werden gesendet, wenn einem Hostcomputer oder Router findet Probleme bei der Verarbeitung den Inhalt von einem Paket-Header, z. B. festgestellt wurde eine ungültige IPv4-Option oder ein ungültiger Typ für den Next Header.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#27](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#27)]
+ [!code-csharp[NCLNetInfo2#27](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#27)]
+ [!code-vb[NCLNetInfo2#27](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterProblemsSent">
+      <MemberSignature Language="C#" Value="public abstract long ParameterProblemsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ParameterProblemsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.ParameterProblemsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Parameterproblem-Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der ICMP-Parameterproblem Nachrichten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameter problembehafteten Nachrichten werden gesendet, wenn einem Hostcomputer oder Router findet Probleme bei der Verarbeitung den Inhalt von einem Paket-Header, z. B. festgestellt wurde eine ungültige IPv4-Option oder ein ungültiger Typ für den Next Header.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#27](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#27)]
+ [!code-csharp[NCLNetInfo2#27](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#27)]
+ [!code-vb[NCLNetInfo2#27](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectsReceived">
+      <MemberSignature Language="C#" Value="public abstract long RedirectsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RedirectsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.RedirectsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4)-Redirect-Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl von ICMP-Redirect-Nachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umleitungsnachrichten werden vom Router gesendet, um einem Hostcomputer, der eine bessere Route für eine Zieladresse zu informieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#25](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#25)]
+ [!code-csharp[NCLNetInfo2#25](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#25)]
+ [!code-vb[NCLNetInfo2#25](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectsSent">
+      <MemberSignature Language="C#" Value="public abstract long RedirectsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RedirectsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.RedirectsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4)-Redirect-Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl von ICMP-Redirect-Nachrichten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umleitungsnachrichten werden vom Router gesendet, um einem Hostcomputer, der eine bessere Route für eine Zieladresse zu informieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#25](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#25)]
+ [!code-csharp[NCLNetInfo2#25](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#25)]
+ [!code-vb[NCLNetInfo2#25](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceQuenchesReceived">
+      <MemberSignature Language="C#" Value="public abstract long SourceQuenchesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SourceQuenchesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.SourceQuenchesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Quelldrosselungsnachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Quelldrosselungsnachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löschvorgang Quellnachrichten werden gesendet, wenn ein Paket aufgrund unzureichenden Speicherplatzes in der Ausgabewarteschlange verworfen wurde. Ein Zielcomputer kann auch eine Quelle Quench Nachricht senden, bei Eintreffen von Paketen zu schnell verarbeitet werden soll. Die Löschvorgang Quellnachricht ist eine Anforderung an den Host die Rate zurückstellen an der Datenverkehr an das Internet-Ziel gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#24](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#24)]
+ [!code-csharp[NCLNetInfo2#24](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#24)]
+ [!code-vb[NCLNetInfo2#24](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceQuenchesSent">
+      <MemberSignature Language="C#" Value="public abstract long SourceQuenchesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SourceQuenchesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.SourceQuenchesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Quelldrosselungsnachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Quelldrosselungsnachrichten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löschvorgang Quellnachrichten werden gesendet, wenn ein Paket aufgrund unzureichenden Speicherplatzes in der Ausgabewarteschlange verworfen wurde. Ein Zielcomputer kann auch eine Quelle Quench Nachricht senden, bei Eintreffen von Paketen zu schnell verarbeitet werden soll. Die Löschvorgang Quellnachricht ist eine Anforderung an den Host die Rate zurückstellen an der Datenverkehr an das Internet-Ziel gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#24](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#24)]
+ [!code-csharp[NCLNetInfo2#24](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#24)]
+ [!code-vb[NCLNetInfo2#24](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeExceededMessagesReceived">
+      <MemberSignature Language="C#" Value="public abstract long TimeExceededMessagesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimeExceededMessagesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.TimeExceededMessagesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Zeitlimits Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der ICMP-Zeitlimits Nachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Paket Hop Limit bestimmt, wie oft sie weitergeleitet werden kann, bevor sie verworfen wird. Jedes Mal, wenn ein Paket weitergeleitet wird, wird dessen Hop Limit-Wert um eins verringert. Wenn der Wert 0 (null) erreicht oder ein Router ein Paket mit einer Gruppe Hop Limit auf 0 (null) empfängt, wird das Paket verworfen und die Quelle des Pakets empfängt Zeitlimits die Meldung an, dass die ursprüngliche Hop Beschränkung zu klein ist oder dass das Paket in einem Rou abgefangen wurde Ting-Schleife.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#26](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#26)]
+ [!code-csharp[NCLNetInfo2#26](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#26)]
+ [!code-vb[NCLNetInfo2#26](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeExceededMessagesSent">
+      <MemberSignature Language="C#" Value="public abstract long TimeExceededMessagesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimeExceededMessagesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.TimeExceededMessagesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Zeitlimits Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der ICMP-Zeitlimits Nachrichten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Paket Hop Limit bestimmt, wie oft sie weitergeleitet werden kann, bevor sie verworfen wird. Jedes Mal, wenn ein Paket weitergeleitet wird, wird dessen Hop Limit-Wert um eins verringert. Wenn der Wert 0 (null) erreicht oder ein Router ein Paket mit einer Gruppe Hop Limit auf 0 (null) empfängt, wird das Paket verworfen und die Quelle des Pakets empfängt Zeitlimits die Meldung an, dass die ursprüngliche Hop Beschränkung zu klein ist oder dass das Paket in einem Rou abgefangen wurde Ting-Schleife.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#26](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#26)]
+ [!code-csharp[NCLNetInfo2#26](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#26)]
+ [!code-vb[NCLNetInfo2#26](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimestampRepliesReceived">
+      <MemberSignature Language="C#" Value="public abstract long TimestampRepliesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimestampRepliesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.TimestampRepliesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Zeitstempel-Antwort-Nachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Timestamp-Antwort-Nachrichten angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Timestamp-Anforderungsnachricht bewirkt, dass den empfangenden Computer eine Timestamp-Antwort zurück an den Computer gesendet. Diese Nachrichten werden verwendet, um die Übertragungsrate in einem Netzwerk zu messen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#28](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#28)]
+ [!code-csharp[NCLNetInfo2#28](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#28)]
+ [!code-vb[NCLNetInfo2#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimestampRepliesSent">
+      <MemberSignature Language="C#" Value="public abstract long TimestampRepliesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimestampRepliesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.TimestampRepliesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Zeitstempel-Antwort-Nachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Timestamp-Antwort-Nachrichten angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Timestamp-Anforderungsnachricht bewirkt, dass den empfangenden Computer eine Timestamp-Antwort zurück an den Computer gesendet. Diese Nachrichten werden verwendet, um die Übertragungsrate in einem Netzwerk zu messen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#28](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#28)]
+ [!code-csharp[NCLNetInfo2#28](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#28)]
+ [!code-vb[NCLNetInfo2#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimestampRequestsReceived">
+      <MemberSignature Language="C#" Value="public abstract long TimestampRequestsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimestampRequestsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.TimestampRequestsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Zeitstempel Anforderungsnachrichten, die empfangen wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Anforderungsnachrichten Zeitstempel angibt, die empfangen wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Timestamp-Anforderungsnachricht bewirkt, dass den empfangenden Computer eine Timestamp-Antwort zurück an den Computer gesendet. Diese Nachrichten werden verwendet, um die Übertragungsrate in einem Netzwerk zu messen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#28](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#28)]
+ [!code-csharp[NCLNetInfo2#28](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#28)]
+ [!code-vb[NCLNetInfo2#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimestampRequestsSent">
+      <MemberSignature Language="C#" Value="public abstract long TimestampRequestsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimestampRequestsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV4Statistics.TimestampRequestsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Internet Control Message Protocol Version 4 (ICMPv4) Zeitstempel Anforderungsnachrichten, die gesendet wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Gesamtanzahl der Anforderungsnachrichten Zeitstempel angibt, die gesendet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Timestamp-Anforderungsnachricht bewirkt, dass den empfangenden Computer eine Timestamp-Antwort zurück an den Computer gesendet. Diese Nachrichten werden verwendet, um die Übertragungsrate in einem Netzwerk zu messen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLNetInfo2#28](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#28)]
+ [!code-csharp[NCLNetInfo2#28](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#28)]
+ [!code-vb[NCLNetInfo2#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

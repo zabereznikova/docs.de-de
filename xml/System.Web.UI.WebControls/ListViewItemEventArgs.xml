@@ -1,0 +1,107 @@
+<Type Name="ListViewItemEventArgs" FullName="System.Web.UI.WebControls.ListViewItemEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewItemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewItemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.ListView.ItemCreated" />-Ereignis und das <see cref="E:System.Web.UI.WebControls.ListView.ItemDataBound" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor der <xref:System.Web.UI.WebControls.ListView> Steuerelement gerendert werden kann, eine <xref:System.Web.UI.WebControls.ListViewItem> Objekt muss für jedes Element im Steuerelement erstellt werden. Die <xref:System.Web.UI.WebControls.ListView.ItemCreated> Ereignis wird jedes Mal ausgelöst, ein Element in der <xref:System.Web.UI.WebControls.ListView> Steuerelement erstellt wird. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn ein Element erstellt wird, z. B. das Hinzufügen von benutzerdefinierten Inhalten zu einem Element.  
+  
+ Auf ähnliche Weise, bevor die <xref:System.Web.UI.WebControls.ListView> Steuerelement gerendert werden kann, muss jedes Element im Steuerelement zu einem Datensatz in der Datenquelle gebunden werden. Die <xref:System.Web.UI.WebControls.ListView.ItemDataBound> Ereignis wird ausgelöst, wenn ein Element (dargestellt durch eine <xref:System.Web.UI.WebControls.ListViewItem> Objekt) an Daten gebunden ist die <xref:System.Web.UI.WebControls.ListView> Steuerelement. Dadurch können Sie eine benutzerdefinierte Routine durchführen, wenn ein Element gebunden ist, um Daten, z. B. die Werte der Daten ändern, bevor sie angezeigt werden.  
+  
+ Ein <xref:System.Web.UI.WebControls.ListViewItemEventArgs> Ereignisbehandlungsmethode, können Sie die Eigenschaften des Elements, das das Ereignis ausgelöst hat, den Zugriff auf die-Objekt übergeben wird. Um zu bestimmen, welche Elementtyp (Datenelement, leeres Element oder ein Insert-Element) erstellt wird, verwenden die <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ListViewItem> Objekt.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.ListViewItemEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.ListViewItemEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewItemEventArgs> Objekt, das die Eigenschaften des Elements zuzugreifen, das an Daten gebunden wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemDataBound#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/CS/ListViewItemDataBoundCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemDataBound#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/VB/ListViewItemDataBoundVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewItemEventArgs (System.Web.UI.WebControls.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewItemEventArgs.#ctor(System.Web.UI.WebControls.ListViewItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element erstellt wird oder an Daten gebunden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListViewItemEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ListViewItemEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.WebControls.ListViewItemEventArgs> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewItemEventArgs.Item%2A>|Die <xref:System.Web.UI.WebControls.ListViewItem> in enthaltene Objekt die `item` Parameter.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListViewItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListViewItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewItemEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das erstellt oder an Daten gebunden wird.</summary>
+        <value>Das Element, das erstellt oder an Daten gebunden wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewItemEventArgs.Item%2A> Eigenschaft, um die Eigenschaften des Elements zuzugreifen, das erstellt oder an Daten gebunden ist. Um zu bestimmen, welche Elementtyp (Datenelement, leeres Element oder ein Insert-Element) erstellt wird, verwenden die <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ListViewItem> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewItemEventArgs.Item%2A> -Eigenschaft auf die Eigenschaften des Elements, das an Daten gebunden wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewItemEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemDataBound#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/CS/ListViewItemDataBoundCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemDataBound#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/VB/ListViewItemDataBoundVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

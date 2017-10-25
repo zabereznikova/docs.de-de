@@ -1,0 +1,89 @@
+<Type Name="IDataBindingSchemaProvider" FullName="System.Web.UI.Design.IDataBindingSchemaProvider">
+  <TypeSignature Language="C#" Value="public interface IDataBindingSchemaProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataBindingSchemaProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IDataBindingSchemaProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle zu einem Schemaanbieter in einem Entwurfshost für den Zugriff zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IDataBindingSchemaProvider> -Klasse wird implementiert von Design-Hosts, z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], im Dialogfeld Datenbindungsfunktionen Schema zeigt hosten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanRefreshSchema">
+      <MemberSignature Language="C#" Value="public bool CanRefreshSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRefreshSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Anbieter das Schema aktualisieren kann.</summary>
+        <value>
+          <see langword="true" />, wenn das Schema aktualisiert werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshSchema">
+      <MemberSignature Language="C#" Value="public void RefreshSchema (bool preferSilent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RefreshSchema(bool preferSilent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferSilent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferSilent">
+          <see langword="true" />um die Datenbindung Ereignisse erst nach dem Schema deaktivieren wurde aktualisiert; <see langword="false" /> um die Ereignisse zu aktivieren.</param>
+        <summary>Aktualisiert das Schema für die Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema%2A> Methode wird aufgerufen, indem Sie den Entwurf Host nur, wenn die <xref:System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceViewSchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IDataBindingSchemaProvider.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Schemaobjekt für den Designer ab.</summary>
+        <value>Das aktuelle Schemaobjekt, das für den Designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

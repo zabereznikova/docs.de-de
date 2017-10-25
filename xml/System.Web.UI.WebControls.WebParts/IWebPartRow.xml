@@ -1,0 +1,121 @@
+<Type Name="IWebPartRow" FullName="System.Web.UI.WebControls.WebParts.IWebPartRow">
+  <TypeSignature Language="C#" Value="public interface IWebPartRow" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebPartRow" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IWebPartRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Anbieterschnittstelle zum Herstellen einer Verbindung zwei Serversteuerelemente, die mit einem einzelnen Datenfeld.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wurde entwickelt, mit der Webparts-Verbindungen verwendet werden soll. In einer Webparts-Verbindung, zwei Serversteuerelemente, die sich in einem <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone Herstellen einer Verbindung und die Freigabe Daten mit einem Steuerelement, als Consumer fungiert und die Steuerelemente als Anbieter fungiert. Der Mechanismus zur Freigabe von Daten in einer Webparts-Verbindung ist eine Schnittstelleninstanz, die der Anbieter an den Consumer mithilfe einer Rückrufmethode dient. Um eine Verbindung herzustellen, müssen der Consumer- und sowohl mit dem gleichen Schnittstellentyp arbeiten für die Freigabe von Daten. Wenn der Consumer den Schnittstellentyp, der vom Anbieter gesendeten nicht erkannt wird, ist weiterhin möglich, die Steuerelemente mittels einer Transformer zu verbinden (eine <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt), die in einen Typ vom Anbieter gesendeten Schnittstelleninstanz übersetzt, die der Consumer erkennt. Ausführliche Informationen zu Verbindungen, finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> -Schnittstelle ist eine enthaltene Webparts-Steuerelementsatz als standard-Schnittstelle zum Erstellen von Verbindungen, die basierend auf einer Datenzeile Provider-Schnittstelle. Sie können auch benutzerdefinierte Schnittstellen für die Verwendung mit den Webparts-Verbindungen erstellen, aber in vielen Webanwendungen von datengesteuerten ist nützlich zum Erstellen von Verbindungen, die basierend auf ein gemeinsames Feld (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle), Tabelle (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> -Schnittstelle), oder die Zeile aus der Datenquelle. Eine typische Verbindung eine <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern und fungiert als ein Anbieter implementiert würde die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle, und geben Sie eine Instanz der Schnittstelle für Consumer in eine spezielle Rückrufmethode. Beispielsweise kann der Anbieter implementieren eine <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle für eine Zeile, die ein Benutzer in der Tabelle mit den Benutzerinformationen entspricht. Eine andere <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement fungiert, wie ein Consumer eine spezielle Methode zum Empfangen der Schnittstelleninstanz konnte klicken Sie dann die Benutzerdaten zu extrahieren definieren, verwenden, um zusätzliche Informationen zu Konten für diesen Benutzer zu suchen und zeigt alle Informationen im Zusammenhang mit Dieser Benutzer auf der Seite.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle verfügt über zwei verfügbar gemachte Member. Die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.Schema%2A> Eigenschaft gibt die Schemainformationen über die Datenzeile, die in den gekapselt ist ein <xref:System.ComponentModel.PropertyDescriptorCollection> Objekt. Die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> Methode deklariert eine Methode, die Implementierung (z. B. ein Anbietersteuerelement) verwendet wird, um die Schnittstelleninstanz Zeilendaten abzurufen, wenn die Rückrufmethode aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer statischen Verbindungs zwischen zwei Steuerelementen mithilfe der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle. Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Quellcode für zwei benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die eine Verbindung unter Verwendung bilden können die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle, mit einem Steuerelement fungiert als Anbieter und der andere als Consumer fungiert.  
+  
+-   Eine Webseite, die die Steuerelemente hostet und die statische Verbindung im Format die Persistenz von deklariert.  
+  
+-   Eine Beschreibung dessen, was geschieht, wenn der Beispielcode ausgeführt wird.  
+  
+ Der erste Teil des Codebeispiels wird der Quellcode für die beiden benutzerdefinierten Steuerelemente. Zunächst wird der Code für den Anbieter implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle. Im Beispiel wird der Einfachheit halber erstellt der Anbieter eine Tabelle mit Daten, statt eine Verbindung mit einer Datenbank. Die `GetConnectionInterface` Methode dient als den Anbieterverbindungspunkt an, die Rückrufmethode, die die Schnittstelleninstanz an den Consumer zurückgibt. Der Consumer ruft es die Schnittstelleninstanz vom Anbieter in der Methode mit dem Namen `SetConnectionInterface`, die mit markiert ist ein `ConnectionConsumer` Attribut. Nach dem Abrufen der Instanz von der Schnittstelle, die der Consumer in seiner `OnPreRender` Methodenaufrufe, die Implementierung der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> Methode im Anbieter auf, um die tatsächlichen Daten abzurufen und sie auf der Seite ausgeben.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_IWebPartRow_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/CS/IRowSamples.cs#2)]
+ [!code-vb[WebParts_IWebPartRow_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/VB/IRowSamples.vb#2)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite, die die statische Verbindung und die Hosts die Steuerelemente deklariert. Am oberen Rand der Seite ist eine `Register` -Direktive, die den Namespace des Quellcodes enthalten, die im Verzeichnis App_Code deklariert. Die Verbindung wird mit deklariert ein `<asp:webpartconnection>` Element. In der benutzerdefinierten Steuerelemente auf Consumer- und deklariert eine `<zonetemplate>` Element innerhalb einer `<asp:webpartzone>` -Element, das erforderlich sind, um eine Verbindung herstellen können (müssen sie in einer Zone, die von erben befinden der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Klasse).  
+  
+ [!code-aspx-csharp[WebParts_IWebPartRow_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPartRow_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/VB/defaultvb.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Der Consumer-Steuerelement zeigt die Daten aus der angegebenen Zeile, die über eine Instanz des Anbieters zur Verfügung der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRowData">
+      <MemberSignature Language="C#" Value="public void GetRowData (System.Web.UI.WebControls.WebParts.RowCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetRowData(class System.Web.UI.WebControls.WebParts.RowCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData(System.Web.UI.WebControls.WebParts.RowCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.UI.WebControls.WebParts.RowCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see cref="T:System.Web.UI.WebControls.WebParts.RowCallback" /> Delegat, der die Adresse einer Methode enthält, die die Daten empfängt.</param>
+        <summary>Gibt die Daten für die Zeile, die verwendet wird, wird von der Schnittstelle als Grundlage für eine Verbindung zwischen zwei <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Abrufen der Daten Zeilenwerte, die durch die Schnittstelle übergeben. Der Anbieter implementiert diese Methode, und der Consumer ruft sie an dem Punkt ein, wenn der Consumer Verarbeitung oder Rendering von Daten bereit ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Implementierung und Verwendung der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> Methode. Das vollständige Beispiel wird gezeigt, in der Übersicht zur Klasse der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle. Der Anbieter implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> Methode, die den Wert für eine bestimmte Zeile in der Datentabelle zurückgeben. Ruft der Consumer-Steuerelement die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> Methode in seiner `OnPreRender` -Methode, damit der Wert der Daten auf der Seite geschrieben werden kann.  
+  
+ [!code-csharp[WebParts_IWebPartRow_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/CS/IRowSamples.cs#2)]
+ [!code-vb[WebParts_IWebPartRow_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/VB/IRowSamples.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptorCollection Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPartRow.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schemainformationen für eine Datenzeile ab, das Freigeben von Daten zwischen zwei <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Daten beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt Informationen für die Daten bereit. Mithilfe der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle erhalten Sie eine Verbindung eine <xref:System.ComponentModel.PropertyDescriptorCollection> -Objekt, das verweist die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.Schema%2A> Eigenschaft. Der Vertrag gibt an, dass der Aufruf `Schema[n].GetValue(RowData)` gibt den Wert der * n *th-Spalte in der Zeile. Sie benötigen die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.Schema%2A> Eigenschaft, um die Werte in der Zeile abzurufen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Implementierung und Verwendung der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.Schema%2A> Eigenschaft. Das vollständige Beispiel wird gezeigt, in der Übersicht zur Klasse der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle. Der Anbieter implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.Schema%2A> Eigenschaft. Klicken Sie dann der Consumer zu steuern, in dessen `RenderContents` -Methode, die Abfragen die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.Schema%2A> Eigenschaft zum Abrufen von Informationen zur Zeile, wie sie Daten aus der Zeile auf der Seite schreibt.  
+  
+ [!code-csharp[WebParts_IWebPartRow_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/CS/IRowSamples.cs#2)]
+ [!code-vb[WebParts_IWebPartRow_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartRow_Overview/VB/IRowSamples.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

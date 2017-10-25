@@ -1,0 +1,138 @@
+<Type Name="CmsRecipient" FullName="System.Security.Cryptography.Pkcs.CmsRecipient">
+  <TypeSignature Language="C#" Value="public sealed class CmsRecipient" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CmsRecipient extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.CmsRecipient" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.CmsRecipient" /> Klasse definiert den Empfänger einer CMS/PKCS #7-Meldung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmsRecipient (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.CmsRecipient.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Objekt, das das Empfängerzertifikat darstellt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.CmsRecipient.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" /> Konstruktor erstellt eine Instanz von der <see cref="T:System.Security.Cryptography.Pkcs.CmsRecipient" /> Klasse mit dem angegebenen Empfänger Zertifikat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Pkcs.CmsRecipient> -Klasse verfügt über die folgenden Standardwerte für die Eigenschaft.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Security.Cryptography.Pkcs.CmsRecipient.RecipientIdentifierType%2A>|<xref:System.Security.Cryptography.Pkcs.SubjectIdentifierType.IssuerAndSerialNumber>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmsRecipient (System.Security.Cryptography.Pkcs.SubjectIdentifierType recipientIdentifierType, System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType recipientIdentifierType, class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.CmsRecipient.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="recipientIdentifierType" Type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="recipientIdentifierType">Ein Mitglied der <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> -Enumeration, der den Typ des Bezeichners des Empfängers angibt.</param>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Objekt, das das Empfängerzertifikat darstellt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.CmsRecipient.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.X509Certificates.X509Certificate2)" /> Konstruktor erstellt eine Instanz von der <see cref="T:System.Security.Cryptography.Pkcs.CmsRecipient" /> Klasse mit dem angegebenen Empfänger Bezeichner Typ und Empfänger-Zertifikat.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsRecipient.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.CmsRecipient.Certificate" /> Eigenschaft ruft den Empfänger zugeordnete Zertifikat ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Objekt, das das Zertifikat mit dem Empfänger zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecipientIdentifierType">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SubjectIdentifierType RecipientIdentifierType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType RecipientIdentifierType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsRecipient.RecipientIdentifierType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifierType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.CmsRecipient.RecipientIdentifierType" /> Eigenschaft ruft den Typ des Bezeichners des Empfängers ab.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> -Enumeration, der den Typ des Bezeichners des Empfängers angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

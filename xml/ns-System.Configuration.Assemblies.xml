@@ -1,0 +1,6 @@
+<Namespace Name="System.Configuration.Assemblies">
+  <Docs>
+    <summary>Die <see cref="N:System.Configuration.Assemblies" /> -Namespace enthält Klassen, mit denen eine Assembly zu konfigurieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

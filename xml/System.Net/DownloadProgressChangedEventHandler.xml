@@ -1,0 +1,53 @@
+<Type Name="DownloadProgressChangedEventHandler" FullName="System.Net.DownloadProgressChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DownloadProgressChangedEventHandler(object sender, DownloadProgressChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DownloadProgressChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.DownloadProgressChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Net.DownloadProgressChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Net.DownloadProgressChangedEventArgs" /> , die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Net.WebClient.DownloadProgressChanged" />-Ereignisses eines <see cref="T:System.Net.WebClient" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Net.DownloadProgressChangedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115). [NIB: Ereignissen und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115)  
+  
+> [!NOTE]
+>  Wenn der Server nicht die Größe der heruntergeladenen Datei (z. B. wie im Fall einer passiven FTP-Verbindung), sendet <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> kann immer 0 (null) sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen von eines ereignishandlers für das <xref:System.Net.WebClient.DownloadProgressChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-cpp[NCLWebClientAsync#19](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#19)]
+ [!code-csharp[NCLWebClientAsync#19](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#19)]
+ [!code-vb[NCLWebClientAsync#19](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#19)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

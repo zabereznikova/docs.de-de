@@ -1,0 +1,206 @@
+<Type Name="TextDecorations" FullName="System.Windows.TextDecorations">
+  <TypeSignature Language="C#" Value="public static class TextDecorations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed TextDecorations extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TextDecorations" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Satz von statischen vordefinierten Textdekorationen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt vier Arten von Textdekorationen: Baseline, überstrichen, durchgestrichen und "Unterstreichen". Das folgende Beispiel zeigt die Speicherorte der Textdekorationen relativ zu dem Text.  
+  
+ ![Diagramm der Textergänzungsstellen](~/add/media/textdecoration01.gif "Diagramm der Textergänzungsstellen")  
+Beispiel für die Text-Decoration-Typen  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object textDecorationsProperty="textDecorationType[,textDecorationType]"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ `textDecorationType`  
+ Der Typ des Text-Decoration: <xref:System.Windows.TextDecorations.Baseline%2A>, <xref:System.Windows.TextDecorations.OverLine%2A>, <xref:System.Windows.TextDecorations.Strikethrough%2A>, oder <xref:System.Windows.TextDecorations.Underline%2A>. Mehr als eine Ergänzung ist mit durch Kommas getrennte Werte zulässig. Sie können auch auf "None", um anzugeben, kein Typ der Textdekoration angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine durchgestrichenem Text-Decoration den Schriftart Standardwert verwendet.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+  
+ Sie können auch mehrere Textdekorationen für den gleichen Text angeben. Im folgenden Beispiel, einen Unterstrich und überlagernde Linie Textdekoration werden für den gleichen Text verwendet.  
+  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets4)]  
+  
+ Können Sie die Zeichenfolge "None", um anzugeben, dass es keine Textdekorationen gibt Wert den <xref:System.Windows.TextDecorations> Auflistung. Im folgenden Beispiel die <xref:System.Windows.TextDecorations> Auflistung auf "None" festgelegt ist.  
+  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets5](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets5)]  
+  
+ Sie können alle textverzierungen aus Text entfernen, indem Sie mit der <xref:System.Windows.TextDecorationCollection.Clear%2A> Methode. Im folgenden Beispiel die <xref:System.Windows.TextDecorations> Auflistung gelöscht wird.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets5a](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets5a)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets5a](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets5a)]  
+  
+ Standardmäßig <xref:System.Windows.Documents.Hyperlink> verwendet ein <xref:System.Windows.TextDecoration> Objekt, das eine Unterstreichung anzuzeigen. Das folgende Markup-Beispiel zeigt eine <xref:System.Windows.Documents.Hyperlink> mit und ohne Unterstreichung definiert:  
+  
+ [!code-xaml[Performance#PerformanceSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+  
+ <xref:System.Windows.TextDecoration>Objekte können ressourcenintensiv sein zu instanziieren, insbesondere, wenn Sie viele haben <xref:System.Windows.Documents.Hyperlink> Objekte. Weitere Informationen finden Sie unter [Vorgehensweise: angeben, ob ein Hyperlink wird unterstrichen](~/docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection Baseline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection Baseline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.Baseline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Basislinie <see cref="T:System.Windows.TextDecoration" />.</summary>
+        <value>Ein Wert, der eine Baseline darstellt <see cref="T:System.Windows.TextDecoration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel zeigt den Speicherort der Baseline-Textdekoration relativ zu dem Text.  
+  
+ ![Diagramm der Textergänzungsstellen](~/add/media/textdecoration01.gif "Diagramm der Textergänzungsstellen")  
+Beispiel für eine Baseline-Textdekoration  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection OverLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection OverLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.OverLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, für eine Überstreichung <see cref="T:System.Windows.TextDecoration" />.</summary>
+        <value>Ein Wert, der für eine Überstreichung <see cref="T:System.Windows.TextDecoration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel zeigt den Speicherort der Textdekoration für eine Überstreichung relativ zu dem Text.  
+  
+ ![Diagramm der Textergänzungsstellen](~/add/media/textdecoration01.gif "Diagramm der Textergänzungsstellen")  
+Beispiel für eine Überstreichung Textdekoration  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Strikethrough">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection Strikethrough { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection Strikethrough" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.Strikethrough" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, durchgestrichen <see cref="T:System.Windows.TextDecoration" />.</summary>
+        <value>Ein Wert, der eine Durchstreichung darstellt <see cref="T:System.Windows.TextDecoration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel zeigt den Speicherort der Text durchgestrichen Dekoration relativ zu dem Text.  
+  
+ ![Diagramm der Textergänzungsstellen](~/add/media/textdecoration01.gif "Diagramm der Textergänzungsstellen")  
+Beispiel für eine durchgestrichene Textdekoration  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine durchgestrichenem Text-Decoration mit Pinsel mit Volltonfarbe für den Stift erstellt. Die <xref:System.Windows.TextDecoration.Location%2A>-Eigenschaft ist auf <xref:System.Windows.TextDecorationLocation.Strikethrough> festgelegt.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Underline">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection Underline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection Underline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.Underline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ein Unterstrich <see cref="T:System.Windows.TextDecoration" />.</summary>
+        <value>Ein Wert, der eine Unterstreichung <see cref="T:System.Windows.TextDecoration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel zeigt den Speicherort der ein "Unterstreichen" Text-Decoration relativ zu den Text an.  
+  
+ ![Diagramm der Textergänzungsstellen](~/add/media/textdecoration01.gif "Diagramm der Textergänzungsstellen")  
+Beispiel für eine "Unterstreichen" Text-decoration  
+  
+ Standardmäßig <xref:System.Windows.Documents.Hyperlink> verwendet ein <xref:System.Windows.TextDecoration> Objekt, das eine Unterstreichung anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: angeben, ob ein Hyperlink wird unterstrichen](~/docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+  
+   
+  
+## Examples  
+ Die folgende Abbildung zeigt einen Text-Decoration, die mit einem linearen Farbverlaufspinsel und einem gestrichelten Stift formatiert wurde.  
+  
+ ![Textergänzung mit linearer farbverlaufsunterstreichung](~/add/media/textdecoration02.png "textergänzung mit linearer farbverlaufsunterstreichung")  
+Beispiel einer Unterstreichung formatiert mit einem linearen Farbverlauf Pinsel und gestrichelt  
+  
+ Im folgenden Codebeispiel wird ein "Unterstreichen" Text-Decoration mit einem linearen Farbverlaufspinsel für die gestrichelt erstellt.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

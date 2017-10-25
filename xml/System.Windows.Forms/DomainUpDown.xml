@@ -1,0 +1,644 @@
+<Type Name="DomainUpDown" FullName="System.Windows.Forms.DomainUpDown">
+  <TypeSignature Language="C#" Value="public class DomainUpDown : System.Windows.Forms.UpDownBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DomainUpDown extends System.Windows.Forms.UpDownBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DomainUpDown" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.UpDownBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("SelectedItem")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SelectedItemChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Items")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Windows-Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) dar, in dem Zeichenfolgenwerte angezeigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.DomainUpDown> -Steuerelement zeigt einen einzelnen Zeichenfolgenwert, der aus ausgewählt ist eine <xref:System.Object> Auflistung durch Klicken auf die auf- oder ab-Schaltflächen des Steuerelements. Der Benutzer kann auch Geben Sie Text im Steuerelement, es sei denn, die <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> -Eigenschaftensatz auf `true` (die Zeichenfolge typisierte muss ein Element in der Auflistung zu akzeptierende übereinstimmen). Wenn ein Element ausgewählt ist, wird das Objekt in einen Zeichenfolgenwert konvertiert, damit dieser im Drehfeld angezeigt werden kann.  
+  
+ So erstellen eine Auflistung von Objekten für die Anzeige der <xref:System.Windows.Forms.DomainUpDown> -Steuerelement, können Sie hinzufügen oder entfernen Sie die Elemente einzeln mithilfe der <xref:System.Collections.ArrayList.Add%2A> und <xref:System.Collections.ArrayList.Remove%2A> Methoden. Dies kann aufgerufen werden, in einem Ereignishandler, wie z. B. die <xref:System.Windows.Forms.Control.Click> Ereignis einer Schaltfläche. Die Objektsammlung kann alphabetisch sortiert werden, durch Festlegen der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft `true`. Wenn die <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> -Eigenschaftensatz auf `true`, wenn Sie einen Bildlauf durch den letzten oder ersten Objekt in der Auflistung die Liste bzw. mit dem ersten oder letzten Objekt beginnen und einen in einer fortlaufenden Liste angezeigt wird.  
+  
+ Wenn die <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> oder <xref:System.Windows.Forms.DomainUpDown.DownButton%2A> Methoden aufgerufen werden, entweder im Code oder mithilfe der auf die auf- oder ab-Schaltflächen <xref:System.Windows.Forms.DomainUpDown.UpdateEditText%2A> wird aufgerufen, um das Steuerelement mit der neuen Zeichenfolge zu aktualisieren. Wenn <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> festgelegt ist, um `true`, die Zeichenfolge an einen der Werte in der Auflistung vor dem Aktualisieren des Steuerelements Textanzeige abgeglichen wird.  
+  
+ Beginnend mit der [!INCLUDE[net_2015](~/includes/net-2015-md.md)]die <xref:System.Windows.Forms.DomainUpDown> Steuerelement geändert, die basierend auf der-DPI-Systemeinstellung, wenn die Datei "App.config" den folgenden Eintrag enthält:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld. Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DomainUpDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DomainUpDown" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld (auch bekannt als auf-ab-Steuerelement). Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt für die Barrierefreiheit für das <see cref="T:System.Windows.Forms.DomainUpDown" />-Steuerelement.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject" /> für das Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die <xref:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance%2A>-Methode nicht explizit aufrufen, wird sie beim Verweis auf die <xref:System.Windows.Forms.Control.AccessibilityObject%2A>-Eigenschaft aufgerufen.  
+  
+> [!NOTE]
+>  Zum Abrufen oder Festlegen der <xref:System.Windows.Forms.Control.AccessibilityObject%2A>-Eigenschaft müssen Sie einen Verweis auf die mit .NET Framework installierte Eingabenhilfenassembly hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance" /> in einer abgeleiteten Klasse aufrufen, sollten Sie nicht der Basisklasse <see cref="M:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DownButton">
+      <MemberSignature Language="C#" Value="public override void DownButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DownButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DownButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt das nächste Element in der Objektauflistung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Navigieren durch die Auflistung von Elementen in der <xref:System.Windows.Forms.DomainUpDown> steuern Sie mithilfe der nach-unten-Taste, erreichen Sie schließlich das letzte Element in der Auflistung. Wenn Sie fortfahren, und <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> festgelegt ist, um `true`, die Liste mit dem ersten Element in der Auflistung beginnen und fortlaufend angezeigt wird. Dieses Verhalten tritt auch beim Durchlaufen der Auflistung mit den oben-Taste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DomainUpDown/DomainUpDownItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.StringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DomainUpDown+DomainUpDownItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Auflistung von Objekten, die dem Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) zugeordnet ist.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection" />, das eine <see cref="T:System.Object" />-Auflistung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Object> Auflistung erstellt und zur Verfügung gestellt werden kann, die <xref:System.Windows.Forms.DomainUpDown> Steuerelement auf zwei Arten. Sie können Elemente zur Auflistung hinzufügen, mit der <xref:System.Collections.ArrayList.Add%2A> oder <xref:System.Collections.ArrayList.Insert%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld. Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected override void OnChanged (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnChanged(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.OnChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Eine <see cref="T:System.EventArgs" />-Klasse, die die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.DomainUpDown.SelectedItemChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedItemChanged">
+      <MemberSignature Language="C#" Value="protected void OnSelectedItemChanged (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnSelectedItemChanged(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Eine <see cref="T:System.EventArgs" />-Klasse, die die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.DomainUpDown.SelectedItemChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld (auch bekannt als auf-ab-Steuerelement). Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged(System.Object,System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged(System.Object,System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxKeyPress">
+      <MemberSignature Language="C#" Value="protected override void OnTextBoxKeyPress (object source, System.Windows.Forms.KeyPressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextBoxKeyPress(object source, class System.Windows.Forms.KeyPressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.Windows.Forms.KeyPressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyPressEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.KeyPress" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> -Eigenschaftensatz auf `true`die <xref:System.Windows.Forms.DomainUpDown> Steuerelement wählt das Element in der Liste, die mit dem Zeichen beginnt. Wenn mehr als ein Element in der Auflistung mit dem gleichen Zeichen beginnt die <xref:System.Windows.Forms.DomainUpDown> Steuerelement wählt das nächste Element, das mit dem eingegebenen Zeichen, beginnend mit der aktuell ausgewählten Position beginnt.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen dem Inhalt des <see cref="T:System.Windows.Forms.DomainUpDown" />-Steuerelements und seinen Rändern ab oder legt diesen fest.</summary>
+        <value>
+          <see cref="F:System.Windows.Forms.Padding.Empty" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Selbst wenn Sie die <xref:System.Windows.Forms.DomainUpDown.Padding%2A> -Eigenschaft muss einen Wert von <xref:System.Windows.Forms.Padding.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DomainUpDown.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.DomainUpDown.Padding" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Indexwert des ausgewählten Elements ab oder legt diesen fest.</summary>
+        <value>Der nullbasierte Indexwert des ausgewählten Elements. Der Standardwert ist -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> Eigenschaft enthält den Indexwert des Elements in der Auflistung, die derzeit im Drehfeld (auch bekannt als auf-ab-Steuerelement) ausgewählt ist. Sammelelemente können Auflistungselementen neue Indexwerte sein, wenn die <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft wurde geändert `false` auf `true`. Wie die Auflistung neu alphabetisch sortiert ist, werden die Elemente einen neuen Indexwert zugewiesen werden.  
+  
+> [!NOTE]
+>  Wenn der Benutzer ein Element im Drehfeld eingegeben hat oder kein Element ausgewählt wurde, die <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> Wert wird der Standardwert-1 sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld. Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der zugewiesene Wert ist kleiner als der Standardwert-1.  
+  
+ - oder -   
+  
+ Der zugewiesene Wert ist größer als die <see cref="P:System.Windows.Forms.DomainUpDown.Items" /> Count.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItem">
+      <MemberSignature Language="C#" Value="public object SelectedItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectedItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.SelectedItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das ausgewählte Element entsprechend dem Indexwert des in der Auflistung ausgewählten Elements ab oder legt dieses fest.</summary>
+        <value>Das ausgewählte Element entsprechend des <see cref="P:System.Windows.Forms.DomainUpDown.SelectedIndex" />-Werts. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt ist, wird der Wert eines der Elemente in der Auflistung werden überprüft und die <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> Eigenschaft auf den entsprechenden Indexwert festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld (auch bekannt als auf-ab-Steuerelement). Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItemChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectedItemChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectedItemChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DomainUpDown.SelectedItemChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="P:System.Windows.Forms.DomainUpDown.SelectedItem" />-Eigenschaft geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Windows.Forms.DomainUpDown.SelectedItemChanged> -Ereignis auftritt, die <xref:System.Windows.Forms.DomainUpDown.SelectedItem%2A> Eigenschaft kann im Code geändert werden, durch den Benutzer in einen neuen Wert eingeben oder indem Sie auf das Steuerelement-nach-oben oder nach-unten-Schaltflächen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DomainUpDown.SelectedItemChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DomainUpDown> mit dem Namen `DomainUpDown1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DomainUpDown.SelectedItemChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#381](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#381)]
+ [!code-vb[System.Windows.Forms.EventExamples#381](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#381)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sorted">
+      <MemberSignature Language="C#" Value="public bool Sorted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sorted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Sorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Elementauflistung sortiert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Elementauflistung sortiert ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> festgelegt ist, um `true`, die Auflistung in alphabetischer Reihenfolge sortiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld (auch bekannt als auf-ab-Steuerelement). Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das <see cref="T:System.Windows.Forms.DomainUpDown" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Windows.Forms.DomainUpDown" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge enthält den Typ und die Werte für die <xref:System.Collections.ArrayList.Count%2A> und <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpButton">
+      <MemberSignature Language="C#" Value="public override void UpButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.UpButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt das vorherige Element in der Auflistung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Navigieren durch die Auflistung von Elementen in der <xref:System.Windows.Forms.DomainUpDown> steuern, verwenden die Schaltfläche "oben", erreichen Sie schließlich das erste Element in der Auflistung. Wenn Sie den Vorgang fortzusetzen, und <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> festgelegt ist, um `true`, die Liste mit dem letzten Element in der Auflistung beginnen und fortlaufend angezeigt wird. Dieses Verhalten tritt auch beim Durchlaufen der Auflistung mit den nach-unten-Taste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateEditText">
+      <MemberSignature Language="C#" Value="protected override void UpdateEditText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateEditText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.UpdateEditText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert den Text im Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet), der im ausgewählten Element angezeigt werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung von Elementen mit dem ersten bzw. dem letzten Element fortgesetzt wird, wenn der Benutzer das Listenende überschreitet, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Liste wiederholt wird, wenn der Benutzer den Anfang oder das Ende der Auflistung erreicht, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> -Eigenschaftensatz auf `true`, wenn das letzte Element in der Auflistung zu erreichen und den Vorgang fortzusetzen, die Liste mit dem ersten Element beginnen und fortlaufend angezeigt wird. Dieses Verhalten gilt auch umgekehrt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im Drehfeld (auch bekannt als auf-ab-Steuerelement). Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, und <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im Drehfeld.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

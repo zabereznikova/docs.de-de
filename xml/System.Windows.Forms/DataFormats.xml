@@ -1,0 +1,832 @@
+<Type Name="DataFormats" FullName="System.Windows.Forms.DataFormats">
+  <TypeSignature Language="C#" Value="public class DataFormats" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataFormats extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataFormats" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet <see langword="static" />, vordefinierte <see cref="T:System.Windows.Forms.Clipboard" /> Formatnamen. Verwenden sie das Format der Daten zu identifizieren, die Sie, in speichern eine <see cref="T:System.Windows.Forms.IDataObject" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.IDataObject> und <xref:System.Windows.Forms.DataObject> auch Klassen verwenden die `static` Formatliste aus, um den Typ der Daten zu bestimmen, die vom System abgerufen werden <xref:System.Windows.Forms.Clipboard>, oder in einem Drag & Drop-Vorgang übertragen.  
+  
+ Die <xref:System.Windows.Forms.DataFormats.GetFormat%2A> Methode können Sie:  
+  
+-   Abrufen eines vordefinierten <xref:System.Windows.Forms.DataFormats.Format> Objekt für einen Formatnamen oder ID-Nummer.  
+  
+-   Hinzufügen einer neuen Format Name/ID-Paar, das `static` sind in dieser Klasse, und registrieren Sie das Format mit der Windows-Registrierung als ein <xref:System.Windows.Forms.Clipboard> formatieren, wenn Sie den Formatnamen übergeben.  
+  
+ Sie erhalten die <xref:System.Windows.Forms.DataFormats.Format.Id%2A> Anzahl oder Format <xref:System.Windows.Forms.DataFormats.Format.Name%2A> aus der entsprechenden Eigenschaft in der <xref:System.Windows.Forms.DataFormats.Format> Instanz.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues Format mit dem Namen `myFormat`. Anschließend erstellt der Code eine `MyNewObject` die gespeichert in einer <xref:System.Windows.Forms.DataObject>. Die <xref:System.Windows.Forms.DataObject> in kopiert die <xref:System.Windows.Forms.Clipboard>.  
+  
+ Als Nächstes wird die <xref:System.Windows.Forms.DataObject> aus abgerufen wird die <xref:System.Windows.Forms.Clipboard> und die `MyNewObject` wird wiederhergestellt. Der Wert, der die `MyNewObject` wird in einem Textfeld ausgegeben. Dieser Code erfordert, dass `textBox1` erstellt und in einem Formular platziert wurde.  
+  
+ [!code-cpp[Classic DataFormats Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataFormats Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataFormats Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataFormats Example/CS/source.cs#1)]
+ [!code-vb[Classic DataFormats Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataFormats Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bitmap">
+      <MemberSignature Language="C#" Value="public static readonly string Bitmap;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Bitmap" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Bitmap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Windows-Bitmap-Format an. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bitmap eine Computergrafik als ein Array von Bits im Arbeitsspeicher darstellt, und diese Bits die Attribute der einzelnen Pixel Bestandteil eines Abbilds dar.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommaSeparatedValue">
+      <MemberSignature Language="C#" Value="public static readonly string CommaSeparatedValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string CommaSeparatedValue" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.CommaSeparatedValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine durch Trennzeichen getrennte Werten (CSV)-Format, also eine allgemeine Austauschformat für Arbeitsblätter verwendet wird. Dieses Format wird nicht direkt von Windows Forms verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dib">
+      <MemberSignature Language="C#" Value="public static readonly string Dib;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Dib" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Dib" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Format der Windows-geräteunabhängige Bitmap (DIB). Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DIB ist ein Dateiformat entwickelt, um sicherzustellen, Bitmap-Grafiken mithilfe einer Anwendung erstellt geladen und in einer anderen Anwendung angezeigt, genau die Weise, die sie in der ursprünglichen Anwendung angezeigt werden können.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dif">
+      <MemberSignature Language="C#" Value="public static readonly string Dif;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Dif" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Dif" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die Windows Data Interchange Format (DIF) an, das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DIF ist ein Format, bestehend aus ASCII-Codes in denen Datenbank, Kalkulationstabellen und ähnliche Dokumente strukturiert sein können Erleichterung von ihrer Verwendung von und an andere Programmen zu übertragen.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[DataFormats_CommaSeparatedValue#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataFormats_CommaSeparatedValue/CPP/dataformats_dif.cpp#1)]
+ [!code-csharp[DataFormats_CommaSeparatedValue#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataFormats_CommaSeparatedValue/CS/dataformats_dif.cs#1)]
+ [!code-vb[DataFormats_CommaSeparatedValue#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataFormats_CommaSeparatedValue/VB/dataformats_dif.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnhancedMetafile">
+      <MemberSignature Language="C#" Value="public static readonly string EnhancedMetafile;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string EnhancedMetafile" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.EnhancedMetafile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Windows-EMF-Format. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Metafile-Format ist ein Windows-Datei, die ein Bild im Hinblick auf Grafikobjekte statt Pixel gespeichert. Beim Ändern der Größe, behält eine Metadatei ein Bild besser als eine Bitmap.  
+  
+> [!NOTE]
+>  Besonderheiten können notwendig sein, wenn die Zwischenablage Metafile-Format mit. Aufgrund einer Einschränkung in der aktuellen Implementierung der <xref:System.Windows.Forms.DataObject> -Klasse, die Metafile-Format, die von .NET Framework verwendet, kann von Anwendungen, die ein älteren Metafile-Format verwenden nicht erkannt werden. In diesem Fall müssen Sie mit der Win32-Zwischenablage-Anwendungsprogrammierschnittstellen (APIs) zusammenarbeiten. Weitere Informationen finden Sie im Artikel 323530, "Metadateien auf Zwischenablage sind nicht sichtbar für alle Anwendungen", in der Microsoft Knowledge Base unter http://support.microsoft.com.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileDrop">
+      <MemberSignature Language="C#" Value="public static readonly string FileDrop;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FileDrop" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.FileDrop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Windows Drop Dateiformat, das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Format Shell Datei zieht interagieren, während der Drag-and-Drop-Vorgänge verwenden.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormat">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DataFormats.Format GetFormat (int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Forms.DataFormats/Format GetFormat(int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataFormats.GetFormat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataFormats+Format</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die Format-ID.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Forms.DataFormats.Format" /> mit den Windows-Zwischenablage numerische ID und den Namen der angegebenen ID.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.DataFormats.Format" /> , besitzt die Windows-Zwischenablage numerische ID und den Namen des Formats.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member wird normalerweise verwendet, um systemeigene Zwischenablageformate registrieren.  
+  
+ Rufen Sie <xref:System.Windows.Forms.DataFormats.GetFormat%2A> mit einer ID-Nummer, wenn Sie abrufen möchten eine <xref:System.Windows.Forms.DataFormats.Format> Instanz, die die ID-Format Name-Paar enthält. Die ID-Namen und die Anzahl wird in der Regel vom Ersteller der Anwendung, mit dem Sie, veröffentlicht die <xref:System.Windows.Forms.Clipboard> für die Kommunikation mit. Die ID-Nummer (DDE, Dynamic Data Exchange) Konversation Informationen in Visual Basic ist z. B. `&HBF00`, und der Formatnamen ist `vbCFLink`.  
+  
+ Rufen Sie diese Methode, mit der eine eindeutige ID-Nummer auf das ID-Format Name-Paar, das Hinzufügen der `static` Werteliste Format Name/ID-Paaren in der <xref:System.Windows.Forms.DataFormats> Klasse. Der neue Name wird durch Verkettung von "Format" und die ID-Nummer erstellt werden. Dieses Paar ist nicht registriert, als neue <xref:System.Windows.Forms.Clipboard> formatiert werden, da Sie keinen Namen angegeben haben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[DataFormats_GetFormat#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataFormats_GetFormat/CPP/dataformats_getformat.cpp#1)]
+ [!code-csharp[DataFormats_GetFormat#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataFormats_GetFormat/CS/dataformats_getformat.cs#1)]
+ [!code-vb[DataFormats_GetFormat#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataFormats_GetFormat/VB/dataformats_getformat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormat">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DataFormats.Format GetFormat (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Forms.DataFormats/Format GetFormat(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataFormats.GetFormat(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataFormats+Format</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Der Formatname.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Forms.DataFormats.Format" /> mit dem Windows-Zwischenablage numerische ID und den Namen für das angegebene Format.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.DataFormats.Format" /> , besitzt die Windows-Zwischenablage numerische ID und den Namen des Formats.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.Forms.DataFormats.GetFormat%2A> mit den Formatnamen, wenn Sie eine Windows-Zwischenablage numerische ID für ein vorhandenes Format benötigen.  
+  
+ Rufen Sie diese Methode mit dem Formatnamen Ihres eigenen zum Erstellen eines neuen <xref:System.Windows.Forms.Clipboard> Typ zu formatieren. Wenn das angegebene Format nicht vorhanden ist, wird diese Methode den Namen als ein Zwischenablageformat mit der Windows-Registrierung registrieren und eine eindeutige Format-ID abrufen. Dieses neue Name-ID-Paar werden hinzugefügt werden, um die `static` Werteliste Format Name/ID-Paaren in der <xref:System.Windows.Forms.DataFormats> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Windows.Forms.DataFormats.Format> ein Format Name-ID-Paar darstellt. Die <xref:System.Windows.Forms.DataFormats.UnicodeText> Format angefordert wird, und der Inhalt der abgerufenen <xref:System.Windows.Forms.DataFormats.Format> werden in einem Textfeld angezeigt.  
+  
+ Dieser Code erfordert `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic DataFormats.GetFormat Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataFormats.GetFormat Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/CS/source.cs#1)]
+ [!code-vb[Classic DataFormats.GetFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Registrieren ein neues <see cref="T:System.Windows.Forms.Clipboard" /> Format fehlgeschlagen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Html">
+      <MemberSignature Language="C#" Value="public static readonly string Html;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Html" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Html" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Text in die Zwischenablage HTML-Format. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse an, dass der Datentyp der CF_HTML-Zwischenablage. Weitere Informationen über dieses Format finden Sie unter [HTML-Zwischenablageformat](http://go.microsoft.com/fwlink/?LinkId=198813).  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locale">
+      <MemberSignature Language="C#" Value="public static readonly string Locale;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Locale" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Locale" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Format der Windows-Kultur, das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetafilePict">
+      <MemberSignature Language="C#" Value="public static readonly string MetafilePict;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string MetafilePict" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.MetafilePict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Format der Windows-Metadatei, das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Metafile-Format ist ein Windows-Datei, die ein Bild im Hinblick auf Grafikobjekte statt Pixel gespeichert. Beim Ändern der Größe, behält eine Metadatei ein Bild besser als eine Bitmap.  
+  
+> [!NOTE]
+>  Besonderheiten können notwendig sein, wenn die Zwischenablage Metafile-Format mit. Aufgrund einer Einschränkung in der aktuellen Implementierung der <xref:System.Windows.Forms.DataObject> -Klasse, die Metafile-Format, die von .NET Framework verwendet, kann von Anwendungen, die ein älteren Metafile-Format verwenden nicht erkannt werden. In diesem Fall müssen Sie mit der Win32-Zwischenablage-Anwendungsprogrammierschnittstellen (APIs) zusammenarbeiten. Weitere Informationen finden Sie im Artikel 323530, "Metadateien auf Zwischenablage sind nicht sichtbar für alle Anwendungen", in der Microsoft Knowledge Base unter http://support.microsoft.com.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OemText">
+      <MemberSignature Language="C#" Value="public static readonly string OemText;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string OemText" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.OemText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das standardmäßige Windows Originalgerätehersteller (OEM)-Text-Format. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public static readonly string Palette;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Palette" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Palette" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Format der Windows-Farbpalette. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Feld, um die Abfrage eine <xref:System.Windows.Forms.DataObject> für das Format der Daten, die es enthält.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PenData">
+      <MemberSignature Language="C#" Value="public static readonly string PenData;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PenData" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.PenData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die Windows Pen-Datenformat, das Stift Striche für Handschrift-Software besteht aus. Windows Forms verwendet dieses Format nicht. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Riff">
+      <MemberSignature Language="C#" Value="public static readonly string Riff;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Riff" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Riff" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das audio Ressource Interchange File Format (RIFF)-Format, das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ RIFF ist eine umfassende Spezifikation, Definition von Standardformaten für verschiedene Typen von Multimediadateien verwendet werden soll.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rtf">
+      <MemberSignature Language="C#" Value="public static readonly string Rtf;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Rtf" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Rtf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Text aus Rich-Text-Format (RTF) Daten besteht. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ RTF-Datei ist eine Dokument-Content-Architektur, die für die Übertragung verwendet wird formatiert Textdokumente zwischen Anwendungen.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Weitere Informationen über die RTF-Format finden Sie unter der Spezifikation Rich-Text-Format in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serializable">
+      <MemberSignature Language="C#" Value="public static readonly string Serializable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Serializable" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Serializable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Format, die jeden Typ von Windows Forms-Objekts kapselt. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+> [!NOTE]
+>  Das Format der serialisierbare ist nur speziell für Windows Forms und nicht von außerhalb von Windows Forms erstellte Anwendungen erkannt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StringFormat">
+      <MemberSignature Language="C#" Value="public static readonly string StringFormat;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string StringFormat" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.StringFormat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das Windows Forms-Klasse Zeichenfolgenformat, das Windows Forms zum Speichern von Zeichenfolgenobjekten verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+> [!NOTE]
+>  Das Format der Zeichenfolge ist nur für Windows Forms und nicht von außerhalb von Windows Forms erstellte Anwendungen erkannt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[DataFormats_StringFormat#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataFormats_StringFormat/CPP/dataformats_stringformat.cpp#1)]
+ [!code-csharp[DataFormats_StringFormat#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataFormats_StringFormat/CS/dataformats_stringformat.cs#1)]
+ [!code-vb[DataFormats_StringFormat#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataFormats_StringFormat/VB/dataformats_stringformat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SymbolicLink">
+      <MemberSignature Language="C#" Value="public static readonly string SymbolicLink;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SymbolicLink" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.SymbolicLink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Format der Windows-symbolische Verknüpfung, das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine symbolische Verknüpfung wird ein Datenträger Verzeichniseintrag, der einem Verzeichniseintrag für eine Datei ersetzt, aber ist tatsächlich ein Verweis auf eine Datei in einem anderen Verzeichnis. Eine symbolische Verknüpfung wird auch ein Alias, Verknüpfung, weichen Link oder "Symlink" bezeichnet.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public static readonly string Text;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Text" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den standardmäßigen ANSI-Text-Format an. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[DataFormats_UnicodeText1#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataFormats_UnicodeText1/CPP/dataformats_unicodetext.cpp#2)]
+ [!code-csharp[DataFormats_UnicodeText1#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataFormats_UnicodeText1/CS/dataformats_unicodetext.cs#2)]
+ [!code-vb[DataFormats_UnicodeText1#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataFormats_UnicodeText1/VB/dataformats_unicodetext.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tiff">
+      <MemberSignature Language="C#" Value="public static readonly string Tiff;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Tiff" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.Tiff" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tagged Image File Format (TIFF), das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TIFF ist ein standard-Dateiformat im Allgemeinen zum Scannen, Speicher und Austauschvorgänge von Graustufen Grafiken.  
+  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnicodeText">
+      <MemberSignature Language="C#" Value="public static readonly string UnicodeText;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string UnicodeText" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.UnicodeText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die standard-Windows-Unicode-Text-Format an. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[DataFormats_UnicodeText1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataFormats_UnicodeText1/CPP/dataformats_unicodetext.cpp#1)]
+ [!code-csharp[DataFormats_UnicodeText1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataFormats_UnicodeText1/CS/dataformats_unicodetext.cs#1)]
+ [!code-vb[DataFormats_UnicodeText1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataFormats_UnicodeText1/VB/dataformats_unicodetext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaveAudio">
+      <MemberSignature Language="C#" Value="public static readonly string WaveAudio;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string WaveAudio" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataFormats.WaveAudio" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das audio Wave-Format, das Windows Forms nicht direkt verwendet. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, durch die <xref:System.Windows.Forms.IDataObject> Schnittstelle und die <xref:System.Windows.Forms.DataObject> Klasse, um den Datentyp anzugeben.  
+  
+ Beim Hinzufügen zu einer <xref:System.Windows.Forms.IDataObject> oder eine Implementierung von <xref:System.Windows.Forms.DataObject>, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.SetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um festzustellen, ob ein Objekt dieses Typs vorhanden ist, verwenden Sie dieses Feld als Format für die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType> Methoden.  
+  
+ Um ein Objekt dieses Typs zu erhalten, verwenden Sie diese als das Format für die <xref:System.Windows.Forms.IDataObject.GetData%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,123 @@
+<Type Name="QueueAccessMode" FullName="System.Messaging.QueueAccessMode">
+  <TypeSignature Language="C#" Value="public enum QueueAccessMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QueueAccessMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.QueueAccessMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Zugriffsmodus für eine <see cref="T:System.Messaging.MessageQueue" /> zum Zeitpunkt der Erstellung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Messaging.MessageQueue>, wenn keine Zugriffsmodus angegeben wird, der Zugriffsmodus standardmäßig `QueueAccessMode.SendAndReceive`.  
+  
+ Sobald die <xref:System.Messaging.MessageQueue> erstellt wird, wird den Zugriff Modus kann nicht geändert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Peek">
+      <MemberSignature Language="C#" Value="Peek" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.QueueAccessMode Peek = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.QueueAccessMode.Peek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.QueueAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nachrichten kann nur die Warteschlange eingesehen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PeekAndAdmin">
+      <MemberSignature Language="C#" Value="PeekAndAdmin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.QueueAccessMode PeekAndAdmin = int32(160)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.QueueAccessMode.PeekAndAdmin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.QueueAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Warteschlange kann Nachrichten einsehen. Es kann auch gelöscht werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive">
+      <MemberSignature Language="C#" Value="Receive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.QueueAccessMode Receive = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.QueueAccessMode.Receive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.QueueAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Warteschlange kann eingesehen oder Empfangen von Nachrichten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAndAdmin">
+      <MemberSignature Language="C#" Value="ReceiveAndAdmin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.QueueAccessMode ReceiveAndAdmin = int32(129)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.QueueAccessMode.ReceiveAndAdmin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.QueueAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Warteschlange kann Nachrichten empfangen. Es kann auch gelöscht werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="Send" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.QueueAccessMode Send = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.QueueAccessMode.Send" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.QueueAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Warteschlange kann nur Nachrichten senden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAndReceive">
+      <MemberSignature Language="C#" Value="SendAndReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.QueueAccessMode SendAndReceive = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.QueueAccessMode.SendAndReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.QueueAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Warteschlange kann einsehen, empfangen oder Senden von Nachrichten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,101 @@
+<Type Name="Base64FormattingOptions" FullName="System.Base64FormattingOptions">
+  <TypeSignature Language="C#" Value="public enum Base64FormattingOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Base64FormattingOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Base64FormattingOptions" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob relevante <see cref="Overload:System.Convert.ToBase64CharArray" /> und <see cref="Overload:System.Convert.ToBase64String" /> Methoden Zeilenumbrüche in die Ausgabe einfügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Convert.ToBase64CharArray%2A?displayProperty=nameWithType> und <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> Methoden konvertieren Sie den Wert eines Arrays von 8-Bit-Ganzzahlen ohne Vorzeichen in eine entsprechende Zeichenfolgendarstellung, die aus base-64-Ziffern besteht. Zeichenfolgendarstellung ein enthalten kann, oder weitere Zeilenumbrüche, wobei ein Zeilenumbruch als ein Wagenrücklaufzeichen definiert wird zurückgeben Zeichen (U + 000D) gefolgt von einem Zeilenvorschubzeichen (U + 000A). Da Zeilenumbrüche Leerzeichen in einer Base64-Codierung betrachtet werden, werden sie ignoriert, wenn konvertieren eine Base64-Zeichenfolge zurück in ein Bytearray codiert. Die Zeilenumbrüche sind einfach praktisch, wenn die codierte Zeichenfolge an ein Steuerelement oder ein Gerät, z. B. einem Konsolenfenster angezeigt.  
+  
+ Die None und InsertLineBreaks Werte schließen sich gegenseitig. Aus diesem Grund zwar die <xref:System.Base64FormattingOptions.None?displayProperty=nameWithType> Enumeration wird gekennzeichnet, mit der <xref:System.FlagsAttribute> Attribut macht es keinen Sinn, an die eine bitweise Kombination dieser beiden Werte ausführen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Convert.ToBase64String%28System.Byte%5B%5D%2CSystem.Base64FormattingOptions%29?displayProperty=nameWithType> mit einem InsertLineBreaks unterbricht Argument einzufügende Zeile in der Zeichenfolge, die beim Codieren einer 100 Elementen bestehendes Bytearray erzeugt wird.  
+  
+ [!code-csharp[System.Convert.ToBase64String#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Convert.ToBase64String/cs/ToBase64String3.cs#3)]
+ [!code-vb[System.Convert.ToBase64String#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Convert.ToBase64String/vb/ToBase64String3.vb#3)]  
+  
+ Wie die Ausgabe im Beispiel gezeigt die <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> erfolgreich ausgeführt wird, bei der Wiederherstellung der ursprünglichen Bytearray; die Zeilenumbruchzeichen werden bei der Konvertierung ignoriert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InsertLineBreaks">
+      <MemberSignature Language="C#" Value="InsertLineBreaks" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Base64FormattingOptions InsertLineBreaks = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Base64FormattingOptions.InsertLineBreaks" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Base64FormattingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fügt nach je 76 Zeichen in der Zeichenfolgendarstellung Zeilenumbrüche ein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Base64FormattingOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Base64FormattingOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Base64FormattingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fügt nach je 76 Zeichen in der Zeichenfolgendarstellung keine Zeilenumbrüche ein.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,348 @@
+<Type Name="ProfileGroupBase" FullName="System.Web.Profile.ProfileGroupBase">
+  <TypeSignature Language="C#" Value="public class ProfileGroupBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProfileGroupBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileGroupBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht nicht typisierten Zugriff auf gruppierte Profileigenschaftswerte für ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileGroupBase> Klasse ist, der von ASP.NET zum Erstellen von gruppierter Eigenschaften in der <xref:System.Web.HttpContext.Profile%2A> Eigenschaft für den aktuellen <xref:System.Web.HttpContext>. Wenn Eigenschaften als eine Gruppe von Eigenschaften mit angegeben sind die [group-Element für die Eigenschaften für das Profil ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b4e3672f-9653-4034-a178-fb358b02730e), erstellt ASP.NET eine neue Klasse mit stark typisierten Accessoren für jede Eigenschaft in der Gruppe. Die neue Klasse erbt die <xref:System.Web.Profile.ProfileGroupBase> Basisklasse. Die stark typisierten Accessoren der neuen Klasse rufen die <xref:System.Web.Profile.ProfileGroupBase.GetPropertyValue%2A> und <xref:System.Web.Profile.ProfileGroupBase.SetPropertyValue%2A> Methoden die <xref:System.Web.Profile.ProfileGroupBase> Basisklasse zum Abrufen und festlegen Profil Eigenschaftswerte bzw..  
+  
+ Die <xref:System.Web.Profile.ProfileGroupBase> erbt übergibt Aufrufe zum Abrufen und Festlegen von Eigenschaftswerten für die Klasse, die die <xref:System.Web.Profile.ProfileBase> Klasse, die an die <xref:System.Web.Profile.ProfileGroupBase.Init%2A> Methode der <xref:System.Web.Profile.ProfileGroupBase> Klasse. Finden Sie unter der <xref:System.Web.Profile.ProfileBase> Klasse für Weitere Informationen zum Verhalten, Ausnahmen und So weiter.  
+  
+ Diese Klasse kann nicht aus Ihrem Code erstellt werden.  
+  
+   
+  
+## Examples  
+ Die folgende Datei "Web.config" gibt ein Benutzerprofil an, die eine Gruppe von Eigenschaften mit dem Gruppennamen enthält `Address`. Die Gruppeneigenschaften für generiert die <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> wird vorangestellt werden den Gruppennamen, z. B. `Profile.Address.Street`. Das zweite Beispiel zeigt eine ASP.NET-Seite auf, die die konfigurierten Profileigenschaften abruft und speichert.  
+  
+```xml
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString=  
+      "Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx"  
+        name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <authorization>  
+      <deny users="?" />  
+    </authorization>  
+  
+    <membership defaultProvider="SqlProvider"   
+      userIsOnlineTimeWindow="15">  
+      <providers>  
+        <clear />  
+        <add   
+          name="SqlProvider"   
+          type="System.Web.Security.SqlMembershipProvider"   
+          connectionStringName="SqlServices"  
+          enablePasswordRetrieval="false"  
+          enablePasswordReset="true"  
+          requiresQuestionAndAnswer="true"   
+          requiresUniqueEmail="false"  
+          passwordFormat="Hashed"  
+          applicationName="MyApplication" />  
+      </providers>  
+    </membership>  
+  
+    <profile enabled="true" defaultProvider="SqlProvider">  
+      <providers>  
+        <add  
+          name="SqlProvider"  
+          connectionStringName="SqlServices"  
+          applicationName="MyApplication"  
+          type="System.Web.Profile.SqlProfileProvider" />  
+      </providers>  
+  
+      <properties>  
+        <add name="ZipCode" />  
+        <group name="Address">  
+          <add name="Street" />  
+          <add name="City" />  
+          <add name="State" />  
+          <add name="CountryOrRegion" />  
+        </group>  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite auf, die gelesen und legt für das Benutzerprofil angegebenen gruppierten Eigenschaften.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileGroupBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileGroupBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.Profile.ProfileGroupBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet die <xref:System.Web.Profile.ProfileGroupBase> Klasse zum Erstellen von gruppierter Eigenschaften in der <xref:System.Web.HttpContext.Profile%2A> Eigenschaft für den aktuellen <xref:System.Web.HttpContext>. Wenn Eigenschaften als eine Gruppe von Eigenschaften mit angegeben sind die [group-Element für die Eigenschaften für das Profil ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b4e3672f-9653-4034-a178-fb358b02730e) Element, erstellt ASP.NET eine neue Klasse mit stark typisierten Accessoren für jede Eigenschaft in der Gruppe. Die neue Klasse erbt die <xref:System.Web.Profile.ProfileGroupBase> Basisklasse.  
+  
+ Diese Klasse kann nicht aus Ihrem Code erstellt werden.  
+  
+   
+  
+## Examples  
+ Die folgende Datei "Web.config" gibt ein Benutzerprofil an, die eine Gruppe von Eigenschaften mit dem Gruppennamen enthält `Address`. Die Gruppeneigenschaften für generiert die <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> wird vorangestellt werden den Gruppennamen, z. B. `Profile.Address.Street`.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx"  
+             name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <authorization>  
+      <deny users="?" />  
+    </authorization>  
+  
+    <membership defaultProvider="SqlProvider"  
+                userIsOnlineTimeWindow="15">  
+      <providers>  
+        <clear />  
+        <add   
+          name="SqlProvider"   
+          type="System.Web.Security.SqlMembershipProvider"   
+          connectionStringName="SqlServices"  
+          enablePasswordRetrieval="false"  
+          enablePasswordReset="true"  
+          requiresQuestionAndAnswer="true"   
+          requiresUniqueEmail="false"  
+          passwordFormat="Hashed"  
+          applicationName="MyApplication" />  
+      </providers>  
+    </membership>  
+  
+    <profile enabled="true" defaultProvider="SqlProvider">  
+      <providers>  
+        <add  
+          name="SqlProvider"  
+          connectionStringName="SqlServices"  
+          applicationName="MyApplication"  
+          type="System.Web.Profile.SqlProfileProvider" />  
+      </providers>  
+  
+      <properties>  
+        <add name="ZipCode" />  
+        <group name="Address">  
+          <add name="Street" />  
+          <add name="City" />  
+          <add name="State" />  
+          <add name="CountryOrRegion" />  
+        </group>  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Die folgende ASP.NET-Seite liest und legt für das Benutzerprofil angegebenen gruppierten Eigenschaften.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public object GetPropertyValue (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetPropertyValue(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileGroupBase.GetPropertyValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der gruppierten Profileigenschaft.</param>
+        <summary>Ruft den Wert einer gruppierten Profileigenschaft ab.</summary>
+        <returns>Der Wert der gruppierten Profileigenschaft typisiert als <see langword="object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet die <xref:System.Web.Profile.ProfileBase> Klasse, um die Klasse für das Benutzerprofil zu erstellen. Wenn eine Anwendung mit aktiviertem Benutzerprofil gestartet wird, erstellt ASP.NET eine neue Klasse des Typs `ProfileCommon`, erbt von der <xref:System.Web.Profile.ProfileBase> Klasse. Stark typisierte Accessoren hinzugefügt der `ProfileCommon` Klasse für jede Gruppe und die Eigenschaft, die definiert, der [Element ((ASP.NET Settings Schema) ein Profil erstellen](http://msdn.microsoft.com/en-us/ccb9bf3a-a044-464d-b89b-5cb5a3d389dd) Konfigurationsabschnitt. Die stark typisierten Accessoren der `ProfileCommon` -Klasse rufen die <xref:System.Web.Profile.ProfileGroupBase.GetPropertyValue%2A> Methode zum Abrufen von nicht typisierter Werten aus der <xref:System.Web.Profile.ProfileProvider> , die der generierte Accessor dann wandelt den angegebenen Typ und gibt als gruppierten Eigenschaftswert zurück.  
+  
+ Sie können die <xref:System.Web.Profile.ProfileGroupBase.GetPropertyValue%2A> Methode, um gruppierte Eigenschaftswerte des Benutzerprofils für die Anwendung nach Namen abzurufen. Zurückgegebenen Werte werden als typisierte `object` und als beim Abrufen der bestimmten Objekttyp umgewandelt werden muss. Für den stark typisierten Zugriff auf Profileigenschaftswerte, können Sie die gruppierte Eigenschaft anhand des Namens zuzugreifen, als Mitglied einer Gruppe von der <xref:System.Web.HttpContext.Profile%2A> -Eigenschaft, z. B. `Profile.Address.City`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite auf, die gelesen und legt für das Benutzerprofil angegebenen gruppierten Eigenschaften. Ein Beispiel für eine Datei "Web.config", der angibt, die Eigenschaften für das Benutzerprofil gruppiert werden, finden Sie im Beispiel für die <xref:System.Web.Profile.ProfileGroupBase> Klasse.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.Profile.ProfileBase parent, string myName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Init(class System.Web.Profile.ProfileBase parent, string myName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileGroupBase.Init(System.Web.Profile.ProfileBase,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.Profile.ProfileBase" />
+        <Parameter Name="myName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Die Klasse, erbt <see cref="T:System.Web.Profile.ProfileBase" /> zugewiesen ist, die <see cref="P:System.Web.HttpContext.Profile" /> Eigenschaft.</param>
+        <param name="myName">Der Name der Eigenschaft Profilgruppe.</param>
+        <summary>Wird von ASP.NET verwendet, um die gruppierten Profileigenschaftswerte und Informationen zu initialisieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht für die Verwendung aus dem Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string propertyName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileGroupBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der gruppierten Profileigenschaft.</param>
+        <summary>Ruft ab, oder legt ihn fest einen gruppierten Profil-Eigenschaftswert, der durch den Namen der Eigenschaft indiziert.</summary>
+        <value>Der Wert der angegebenen gruppierten Profileigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Abrufen oder Festlegen von gruppierten Eigenschaftswerte des Benutzerprofils für Ihre Anwendung verwenden. Zurückgegebenen Werte werden als typisierte <xref:System.Object> und als beim Abrufen der bestimmten Objekttyp umgewandelt werden muss. Für den stark typisierten Zugriff auf Profileigenschaftswerte, können Sie die Eigenschaft anhand des Namens zuzugreifen, als Mitglied einer Gruppe von der <xref:System.Web.HttpContext.Profile%2A?displayProperty=nameWithType> -Eigenschaft, z. B. `Profile.Address.City`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite auf, die gelesen und legt für das Benutzerprofil angegebenen gruppierten Eigenschaften. Ein Beispiel der Datei "Web.config", die eine Gruppe von Eigenschaften im Profil angegeben wird, finden Sie im Beispiel für die <xref:System.Web.Profile.ProfileGroupBase> Klasse.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValue">
+      <MemberSignature Language="C#" Value="public void SetPropertyValue (string propertyName, object propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPropertyValue(string propertyName, object propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileGroupBase.SetPropertyValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der festzulegenden Eigenschaft gruppiert.</param>
+        <param name="propertyValue">Der Wert der gruppierten Eigenschaft zugewiesen werden soll.</param>
+        <summary>Legt den Wert einer gruppierten Profileigenschaft fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet die <xref:System.Web.Profile.ProfileBase> Klasse, die für das Benutzerprofil verwendete Klasse zu erstellen. Wenn eine Anwendung mit aktiviertem Benutzerprofil gestartet wird, erstellt ASP.NET eine neue Klasse des Typs `ProfileCommon`, erbt von der <xref:System.Web.Profile.ProfileBase> Klasse. Stark typisierte Accessoren hinzugefügt der `ProfileCommon` Klasse für jede Gruppe und die Eigenschaft, die definiert, der [Element ((ASP.NET Settings Schema) ein Profil erstellen](http://msdn.microsoft.com/en-us/ccb9bf3a-a044-464d-b89b-5cb5a3d389dd) Konfigurationsabschnitt. Stark typisierte Accessor die `ProfileCommon` -Klasse rufen die <xref:System.Web.Profile.ProfileGroupBase.SetPropertyValue%2A> Methode, um gruppierte Eigenschaft übergeben-Werte in der <xref:System.Web.Profile.ProfileProvider> in der Datenquelle gespeichert werden soll.  
+  
+ Sie können die <xref:System.Web.Profile.ProfileGroupBase.SetPropertyValue%2A> Methode zum Zuweisen von Werten zu Eigenschaften für das Benutzerprofil für Ihre Anwendung nach Namen gruppiert. Werte werden als eingegeben `object,` und typüberprüfung zur Laufzeit erfolgt, nicht die Kompilierzeit. Für den stark typisierten Zugriff auf Profileigenschaftswerte, können Sie die gruppierte Eigenschaft anhand des Namens zuzugreifen, als Mitglied einer Gruppe von der <xref:System.Web.HttpContext.Profile%2A> -Eigenschaft, z. B. `Profile.Address.City`.  
+  
+   
+  
+## Examples  
+ Die folgende ASP.NET-Seite liest und legt für das Benutzerprofil angegebenen gruppierten Eigenschaften. Ein Beispiel für eine Datei "Web.config", der angibt, die Eigenschaften für das Benutzerprofil gruppiert werden, finden Sie im Beispiel für die <xref:System.Web.Profile.ProfileGroupBase> Klasse.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

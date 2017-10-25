@@ -1,0 +1,126 @@
+<Type Name="RuleSetDialog" FullName="System.Workflow.Activities.Rules.Design.RuleSetDialog">
+  <TypeSignature Language="C#" Value="public class RuleSetDialog : System.Windows.Forms.Form" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuleSetDialog extends System.Windows.Forms.Form" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.Design.RuleSetDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Form</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dieses Dialogfeld wird normalerweise von <see cref="T:System.Workflow.Activities.PolicyActivity" /> zur Bearbeitung von Regelsätzen verwendet. Wenn Sie jedoch außerhalb dieser Aktivität einen Regelsatz verwenden möchten (z.&amp;#160;B., um einen Regelsatz zur Verwendung außerhalb eines Workflows zu bearbeiten), können Sie in diesem Dialogfeld die Bearbeitung des Regelsatzes ausführen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleSetDialog (System.Workflow.ComponentModel.Activity activity, System.Workflow.Activities.Rules.RuleSet ruleSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Activity activity, class System.Workflow.Activities.Rules.RuleSet ruleSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Design.RuleSetDialog.#ctor(System.Workflow.ComponentModel.Activity,System.Workflow.Activities.Rules.RuleSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="ruleSet" Type="System.Workflow.Activities.Rules.RuleSet" />
+      </Parameters>
+      <Docs>
+        <param name="activity"><see cref="T:System.Workflow.ComponentModel.Activity" /> für die dieser <see cref="T:System.Workflow.Activies.Rules.RuleSet" /> ausgeführt wird. Normalerweise ist das der Workflow (wie von <see cref="T:System.Workflow.Activities.PolicyActivity" /> verwendet), es kann sich jedoch um jede gültige Aktivität handeln.</param>
+        <param name="ruleSet">Der ursprüngliche <see cref="T:System.Workflow.Activies.Rules.RuleSet" />, der angezeigt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.Design.RuleSetDialog" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleSetDialog (Type activityType, System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, System.Workflow.Activities.Rules.RuleSet ruleSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type activityType, class System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, class System.Workflow.Activities.Rules.RuleSet ruleSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Design.RuleSetDialog.#ctor(System.Type,System.Workflow.ComponentModel.Compiler.ITypeProvider,System.Workflow.Activities.Rules.RuleSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+        <Parameter Name="typeProvider" Type="System.Workflow.ComponentModel.Compiler.ITypeProvider" />
+        <Parameter Name="ruleSet" Type="System.Workflow.Activities.Rules.RuleSet" />
+      </Parameters>
+      <Docs>
+        <param name="activityType">Der Typ des Objekts, zu dem diese Bedingung ausgeführt wird. Normalerweise ist das der Workflow, es kann sich jedoch um jeden gültigen Typ handeln.</param>
+        <param name="typeProvider">Eine optionale <see cref="T:System.Workflow.ComponentModel.Compiler.ITypeProvider" />-Implementierung, mit der bestimmt wird, welche <see langword="Types" /> in der Bedingung verfügbar sind. Wenn keine Protokolldatei angegeben wird, nur Typen in der Assembly gemäß <c>ActivityType</c> und alle Assemblys, die darauf verweist, die verfügbar sind.</param>
+        <param name="ruleSet">Der ursprüngliche <see cref="T:System.Workflow.Activies.Rules.RuleSet" />, der angezeigt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.Design.RuleSetDialog" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Design.RuleSetDialog.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt alle vom <see cref="T:System.Workflow.Activities.Rules.Design.RuleSetDialog" /> verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Design.RuleSetDialog.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine als Verweis übergebene <see cref="T:System.Windows.Forms.Message" />, die die zu verarbeitende Win32-Meldung darstellt.</param>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte, die die zu verarbeitende Taste darstellen.</param>
+        <summary>Verarbeitet eine Befehlstaste.</summary>
+        <returns>
+          <see langword="true" />Wenn die Tastatureingabe, verarbeitet und vom Steuerelement zugegriffen; <see langword="false" /> , damit die weitere Verarbeitung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuleSet">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleSet RuleSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.Rules.RuleSet RuleSet" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Design.RuleSetDialog.RuleSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.Workflow.Activies.Rules.RuleSet" /> nach einer Bestätigung durch den Dialogfeldbenutzer ab.</summary>
+        <value>Der vom Dialogfeldbenutzer bestätigte <see cref="T:System.Workflow.Activies.Rules.RuleSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

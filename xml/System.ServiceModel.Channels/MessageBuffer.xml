@@ -1,0 +1,460 @@
+<Type Name="MessageBuffer" FullName="System.ServiceModel.Channels.MessageBuffer">
+  <TypeSignature Language="C#" Value="public abstract class MessageBuffer : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageBuffer extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageBuffer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Arbeitsspeicherpuffer dar, der eine gesamte Nachricht zur zukünftigen Verwendung speichert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text einer <xref:System.ServiceModel.Channels.Message>-Instanz kann nur einmal verwendet oder geschrieben werden. Wenn eine <xref:System.ServiceModel.Channels.Message>-Instanz mehr als einmal verwendet werden soll, sollten Sie die <xref:System.ServiceModel.Channels.MessageBuffer>-Klasse verwenden, um eine gesamte <xref:System.ServiceModel.Channels.Message>-Instanz vollständig im Arbeitsspeicher zu speichern.  
+  
+ Eine <xref:System.ServiceModel.Channels.MessageBuffer>-Instanz wird durch Aufrufen von <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A> einer <xref:System.ServiceModel.Channels.Message>-Instanz konstruiert. Es wird dann ein neuer <xref:System.ServiceModel.Channels.MessageBuffer> erstellt und zurückgegeben, der zum Besitzer der <xref:System.ServiceModel.Channels.Message> wird und den gesamten Inhalt in den Arbeitsspeicher einliest.  
+  
+ Um eine Kopie einer <xref:System.ServiceModel.Channels.Message> aus dem <xref:System.ServiceModel.Channels.MessageBuffer> abzurufen, müssen Sie die <xref:System.ServiceModel.Channels.MessageBuffer.CreateMessage%2A>-Methode von<xref:System.ServiceModel.Channels.MessageBuffer> aufrufen. Hierdurch wird eine identische Kopie der ursprünglich von Ihnen bereitgestellten <xref:System.ServiceModel.Channels.Message>-Instanz zurückgegeben.  
+  
+ Sie können die maximale Größe des Puffers steuern, indem Sie <xref:System.ServiceModel.Channels.MessageBuffer.BufferSize%2A> auf die maximal gewünschte Anzahl von Byte festlegen. Diese Zahl deckt nicht unbedingt alle flüchtigen Zuweisungen, die sich auf die Erstellung des Puffers beziehen, oder die mit der Nachricht verknüpften Eigenschaften ab.  
+  
+ Sie sollten eine <xref:System.ServiceModel.Channels.MessageBuffer>-Instanz immer schließen, indem Sie <xref:System.ServiceModel.Channels.MessageBuffer.Close%2A> aufrufen, wenn sie nicht weiter benötigt wird. Dadurch können Systemressourcen möglicherweise früher freigegeben werden.  
+  
+ Spezieller Hinweis für Benutzer von Managed C++, die von dieser Klasse ableiten:  
+  
+-   Fügen Sie den Bereinigungscode in (On)(Begin)Close (and/or OnAbort) ein, nicht in einen Destruktor.  
+  
+-   Vermeiden Sie Destruktoren: Sie bewirken, dass der Compiler <xref:System.IDisposable> automatisch generiert.  
+  
+-   Vermeiden Sie Member ohne Verweis: Sie können bewirken, dass der Compiler <xref:System.IDisposable> automatisch generiert.  
+  
+-   Vermeiden Sie Finalizer. Wenn Sie dennoch einen Finalizer verwenden, sollten Sie die Buildwarnung unterdrücken und <xref:System.GC.SuppressFinalize%28System.Object%29> sowie den Finalizer über (On)(Begin)Close (and/or OnAbort) aufrufen, um das ansonsten automatisch generierte <xref:System.IDisposable>-Verhalten zu emulieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.MessageBuffer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferSize">
+      <MemberSignature Language="C#" Value="public abstract int BufferSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageBuffer.BufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ungefähre Anzahl von Byte ab, die von diesem <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> verwendet werden.</summary>
+        <value>Die ungefähre Anzahl von Byte, die von diesem <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die maximale Größe des Puffers steuern, indem Sie <xref:System.ServiceModel.Channels.MessageBuffer.BufferSize%2A> auf die maximal gewünschte Anzahl von Byte festlegen. Diese Zahl deckt nicht unbedingt alle flüchtigen Zuweisungen, die sich auf die Erstellung des Puffers beziehen, oder die mit der Nachricht verknüpften Eigenschaften ab. Sie bezieht sich nicht auf die tatsächliche Größe der Nachricht bei Serialisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Arbeit mit dem Puffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten eine <xref:System.ServiceModel.Channels.MessageBuffer>-Instanz immer schließen, indem Sie <xref:System.ServiceModel.Channels.MessageBuffer.Close%2A> aufrufen, wenn sie nicht weiter benötigt wird. Dadurch können Systemressourcen möglicherweise früher freigegeben werden.  
+  
+ Wenn Sie <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A> aufgerufen haben, um einen Nachrichtenpuffer einer Nachricht zu erstellen, und die Nachricht mit <xref:System.ServiceModel.Channels.MessageBuffer.CreateMessage%2A> überprüft haben, wird beim Versuch, den Puffer mit dieser Methode zu schließen, eine <xref:System.InvalidOperationException> ausgelöst. Um dieses Problem zu vermeiden, müssen Sie vor Schließung die Nachricht vom Puffer neu erstellen. Im Abschnitt mit den Beispielen finden Sie eine Demonstration des zuvor genannten Szenarios sowie eine Möglichkeit, dieses Problem zu lösen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Nachrichtenpuffer ordnungsgemäß geschlossen wird.  
+  
+```  
+public void AfterReceiveReply(ref Message reply, object correlationState)  
+{  
+    // Create the buffer  
+    MessageBuffer buffer = reply.CreateBufferedCopy(13000);  
+    // Inspect the response (for example, extract the body contents)  
+    Message thisReply = buffer.CreateMessage();  
+    XmlDictionaryReader reader = thisReply.GetReaderAtBodyContents();  
+    StringBuilder info = new StringBuilder();  
+    XmlWriter writer = XmlWriter.Create(info);  
+    writer.WriteNode(reader, true);  
+    writer.Close();  
+    // Resolution:  Re-create the message from the buffer before  
+    // closing.  
+    reply = buffer.CreateMessage();  
+    // You can close the buffer after the message has been recreated.  
+    buffer.Close();  
+```  
+  
+ }  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.Message CreateMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message CreateMessage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.CreateMessage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie der ursprünglichen Nachrichten zurück.</summary>
+        <returns>Eine identische Kopie der ursprünglichen <see cref="T:System.ServiceModel.Channels.Message" />-Instanz, die Sie zuvor der <see cref="M:System.ServiceModel.Channels.Message.CreateBufferedCopy(System.Int32)" />-Methode einer <see cref="T:System.ServiceModel.Channels.Message" />-Instanz bereitgestellt haben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Aufrufen dieser Methode wird eine identische Kopie der ursprünglichen <xref:System.ServiceModel.Channels.Message>-Instanz erstellt, die Sie zuvor der <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A>-Methode einer <xref:System.ServiceModel.Channels.Message>-Instanz bereitgestellt haben. Sie können die Nachricht dann in einem permanenten Speicher speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateNavigator">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie nur einen Teil der Nachrichtenkopie bearbeiten möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator CreateNavigator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNavigator CreateNavigator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.CreateNavigator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>Ein <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie nur einen Teil der Nachrichtenkopie bearbeiten möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator CreateNavigator (int nodeQuota);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XPath.XPathNavigator CreateNavigator(int32 nodeQuota) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.CreateNavigator(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeQuota" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="nodeQuota">Die Position, an der der Navigator ursprünglich positioniert sein soll.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt, wenn der Navigator auf dem angegebenen Knoten positioniert ist.</summary>
+        <returns>Ein <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie nur einen Teil der Nachrichtenkopie bearbeiten möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator CreateNavigator (System.Xml.XmlSpace space);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XPath.XPathNavigator CreateNavigator(valuetype System.Xml.XmlSpace space) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.CreateNavigator(System.Xml.XmlSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="space" Type="System.Xml.XmlSpace" />
+      </Parameters>
+      <Docs>
+        <param name="space">Ein gültiger <see cref="T:System.Xml.XmlSpace" />-Raum.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt, mit dem angegebenen <see langword="xml:space" />-Bereich.</summary>
+        <returns>Ein <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie nur einen Teil der Nachrichtenkopie bearbeiten möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator CreateNavigator (int nodeQuota, System.Xml.XmlSpace space);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XPath.XPathNavigator CreateNavigator(int32 nodeQuota, valuetype System.Xml.XmlSpace space) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.CreateNavigator(System.Int32,System.Xml.XmlSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeQuota" Type="System.Int32" />
+        <Parameter Name="space" Type="System.Xml.XmlSpace" />
+      </Parameters>
+      <Docs>
+        <param name="nodeQuota">Die Position, an der der Navigator ursprünglich positioniert sein soll.</param>
+        <param name="space">Ein gültiger <see cref="T:System.Xml.XmlSpace" />-Raum.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt, wenn der Navigator auf dem angegebenen Knoten positioniert und im <see langword="xml:space" />-Bereich ist.</summary>
+        <returns>Ein <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt zum Navigieren in diesem Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie nur einen Teil der Nachrichtenkopie bearbeiten möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageContentType">
+      <MemberSignature Language="C#" Value="public virtual string MessageContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageContentType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageBuffer.MessageContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des in diesem Puffer gespeicherten Meldungsinhalts ab.</summary>
+        <value>Der Typ des in diesem Puffer gespeicherten Meldungsinhalts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei. Diese Methode kann nicht vererbt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode auf, wenn Sie das <xref:System.ServiceModel.Channels.MessageBuffer>-Objekt nicht mehr benötigen. Diese Methode bewirkt, dass das <xref:System.ServiceModel.Channels.MessageBuffer>-Objekt nicht mehr verwendet werden kann. Nach dem Aufrufen dieser Methode müssen Sie alle Verweise auf <xref:System.ServiceModel.Channels.MessageBuffer> freigeben, sodass der von <xref:System.ServiceModel.Channels.MessageBuffer> belegte Speicher bei der Garbage Collection wieder zugänglich gemacht werden kann.  
+  
+> [!NOTE]
+>  Rufen Sie diese Methode immer auf, bevor Sie den letzten Verweis auf <xref:System.ServiceModel.Channels.MessageBuffer> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ServiceModel.Channels.MessageBuffer>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMessage">
+      <MemberSignature Language="C#" Value="public virtual void WriteMessage (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteMessage(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageBuffer.WriteMessage(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein E/A-Stream, in den der gesamte Inhalt dieses Puffers geschrieben wird.</param>
+        <summary>Schreibt den gesamten Inhalt dieses Puffers in den angegebenen E/A-Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion verwendet einen binären Encoder statt eines UTF-8-Encoders. Daher ist die direkte Konvertierung von einem <xref:System.ServiceModel.Channels.MessageBuffer> in einen <xref:System.ServiceModel.Channels.Message> möglich. Der Code im Beispiel veranschaulicht, wie dieses Problem umgangen werden kann.  
+  
+   
+  
+## Examples  
+  
+```  
+private byte[] ConvertMessageToByteArray(ref Message message)   
+{  
+....//Memory stream that contains the message  
+....MemoryStream stream = new MemoryStream();  
+....//Create an XmlWriter to serialize the message into a byte array  
+....XmlWriterSettings settings = new XmlWriterSettings();  
+....settings.Encoding = System.Text.Encoding.UTF8;  
+....XmlWriter writer = XmlWriter.Create(stream, settings);  
+....//Copy the message into a buffer   
+....//Note: This call changes the original message's state  
+....MessageBuffer buffer = message.CreateBufferedCopy(int.MaxValue);  
+....//Create a copy of the message  
+....message = buffer.CreateMessage();  
+....//Serialize the message to the XmlWriter   
+....message.WriteMessage(writer);  
+....//Recreate the message   
+....message = buffer.CreateMessage();  
+....//Flush the contents of the writer so that the stream gets updated  
+....writer.Flush();  
+....stream.Flush();  
+....//Convert the stream to an array  
+....byte[] retval = stream.ToArray();  
+    return retval;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

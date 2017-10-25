@@ -1,0 +1,2156 @@
+<Type Name="Debug" FullName="System.Diagnostics.Debug">
+  <TypeSignature Language="C#" Value="public static class Debug" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Debug extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Debug" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Methoden und Eigenschaften zum Debuggen von Code bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung von Methoden in der <xref:System.Diagnostics.Debug> Klasse, um Debuginformationen zu drucken und überprüfen Sie die Logik mit Assertionen, Sie können Ihren Code stabiler vornehmen, ohne Auswirkungen auf die Leistung und Größe des Endprodukts.  
+  
+ Diese Klasse stellt Methoden zum Anzeigen einer <xref:System.Diagnostics.Debug.Assert%2A> (Dialogfeld), und die Ausgabe eine Assertion, die immer fehlschlägt. Diese Klasse bietet Write-Methoden in den folgenden Variationen: <xref:System.Diagnostics.Debug.Write%2A>, <xref:System.Diagnostics.Debug.WriteLine%2A>, <xref:System.Diagnostics.Debug.WriteIf%2A> und <xref:System.Diagnostics.Debug.WriteLineIf%2A>.  
+  
+ Die <xref:System.Diagnostics.BooleanSwitch> und <xref:System.Diagnostics.TraceSwitch> Klassen bieten bedeutet, dass die Ablaufverfolgungsausgabe dynamisch zu steuern. Sie können die Werte dieser Optionen ändern, ohne Ihre Anwendung neu zu kompilieren. Informationen zum Verwenden der Konfigurationsdatei zum Festlegen eines Schalters finden Sie unter der <xref:System.Diagnostics.Switch> Klasse und die [Ablaufverfolgungsschalter](~/docs/framework/debug-trace-profile/trace-switches.md) Thema.  
+  
+ Sie können die Ablaufverfolgungsausgabe Ziel anpassen, indem hinzufügen <xref:System.Diagnostics.TraceListener> -Instanzen hinzu oder Entfernen von Instanzen aus der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung. Die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung von beiden gemeinsam genutzt der <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> Klassen; ein Ablaufverfolgungslistener zur Klasse fügt den Listener für beide hinzufügen. Wird standardmäßig die <xref:System.Diagnostics.DefaultTraceListener> Klasse gibt die Ablaufverfolgungsausgabe aus.  
+  
+> [!NOTE]
+>  Einen Ablaufverfolgungslistener Hinzufügen der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung kann dazu führen, dass eine Ausnahme ausgelöst wird, während der Ablaufverfolgung, wenn eine Ressource, die vom Ablaufverfolgungslistener verwendet nicht verfügbar ist. Die Bedingungen und die Ausnahme wird ausgelöst, richten sich nach der Ablaufverfolgungslistener und können nicht aufgezählt werden, in diesem Thema. Möglicherweise empfiehlt es sich, Aufrufe der <xref:System.Diagnostics.Debug> Methoden in `try` / `catch` zu erkennen und Behandeln von Ausnahmen vom Ablaufverfolgungslistener Blöcke.  
+  
+ Sie können die Ebene der Verwendung von Einzug ändern die <xref:System.Diagnostics.Debug.Indent%2A> Methode oder die <xref:System.Diagnostics.Debug.IndentLevel%2A> Eigenschaft. Um den Einzugsabstand zu ändern, verwenden Sie die <xref:System.Diagnostics.Debug.IndentSize%2A> Eigenschaft. Sie können angeben, ob automatisch den Ausgabepuffer nach jedem Schreibvorgang geleert werden durch Festlegen der <xref:System.Diagnostics.Debug.AutoFlush%2A> Eigenschaft `true`.  
+  
+ Festlegen der <xref:System.Diagnostics.Debug.AutoFlush%2A> und <xref:System.Diagnostics.Debug.IndentSize%2A> für <xref:System.Diagnostics.Debug>, können Sie die Konfigurationsdatei mit dem Namen der Anwendung bearbeiten. Die Konfigurationsdatei sollen wie im folgenden Beispiel gezeigt formatiert werden.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="true" indentsize="7" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Die <xref:System.Diagnostics.ConditionalAttribute> -Attribut angewendet wird, um die Methoden der <xref:System.Diagnostics.Debug>. Compiler, unterstützen <xref:System.Diagnostics.ConditionalAttribute> Aufrufe dieser Methoden ignoriert, es sei denn, "DEBUG" als ein bedingtes Kompilierungssymbol definiert ist. Finden Sie in der Dokumentation des Compilers, um zu bestimmen, ob <xref:System.Diagnostics.ConditionalAttribute> wird unterstützt und die Syntax zum Definieren eines Symbols für die bedingte Kompilierung.  
+  
+> [!NOTE]
+>  In Visual Studio c# und Visual Basic-Projekten standardmäßig die bedingtes Kompilierungssymbol "DEBUG" für Debug-Builds definiert ist und für Debug- und Releasebuilds, ist das Symbol "TRACE" definiert. Informationen zum Deaktivieren dieses Verhaltens finden Sie in der Visual Studio-Dokumentation. Informationen zum bedingten Debuggen in Visual C++ finden Sie unter [Debug-Klasse (C + c++ / CLI)](http://msdn.microsoft.com/library/076bd528-1b6f-4e8a-a372-eb5849cf969a).  
+  
+ Hinzufügen der bedingtes Kompilierungssymbol "DEBUG" in c# definieren, die `/d:DEBUG` -Option in der Befehlszeile des Compilers, beim Kompilieren von Code mithilfe einer Befehlszeile aus, oder fügen `#define DEBUG` an den Anfang der Datei. Fügen Sie in Visual Basic die `/d:DEBUG=True` -Option in der Befehlszeile des Compilers, oder fügen `#Const DEBUG=True` in die Datei.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.Debug> um Anfang und Ende der Ausführung des Programms anzugeben. Das Beispiel verwendet außerdem <xref:System.Diagnostics.Debug.Indent%2A> und <xref:System.Diagnostics.Debug.Unindent%2A> um die Ablaufverfolgungsausgabe zu unterscheiden.  
+  
+ [!code-cpp[Classic Debug Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Assert(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" /> ist, wird weder eine Fehlermeldung gesendet noch das Meldungsfeld angezeigt.</param>
+        <summary>Überprüft eine Bedingung. Wenn die Bedingung <see langword="false" /> ist, wird ein Meldungsfeld mit der Aufrufliste angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Methode funktioniert nur in Debug-Builds. Verwenden der <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> builds Methode, wenn Sie Assertionen in Version ausführen möchten. Weitere Informationen finden Sie unter [Assertionen in verwaltetem Code](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+> [!IMPORTANT]
+>  Die `Assert` Methoden sind nicht verfügbar für [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)] apps.  
+  
+ In der Regel die <xref:System.Diagnostics.Debug.Assert%28System.Boolean%29> Methode wird verwendet, um Logikfehler während der Programmentwicklung zu identifizieren. <xref:System.Diagnostics.Debug.Assert%2A>wertet die Bedingung an. Wenn das Ergebnis `false`, sendet er eine Fehlermeldung an die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung. Sie können dieses Verhalten anpassen, indem Hinzufügen einer <xref:System.Diagnostics.TraceListener> zu, oder Entfernen aus, die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+ Wenn die Anwendung im Benutzeroberflächenmodus ausgeführt wird, wird ein Meldungsfeld mit der Aufrufliste mit der Datei und die Zeilennummern an angezeigt. Das Meldungsfeld enthält drei Schaltflächen: **Abort**, **wiederholen**, und **ignorieren**. Klicken auf die **Abort** Schaltfläche wird die Anwendung beendet. Auf **wiederholen** sendet Sie an den Code im Debugger, wenn Ihre Anwendung in einem Debugger ausgeführt wird, oder um einen Debugger zu öffnen, ist er nicht bietet. Auf **ignorieren** weiterhin mit der nächsten Anweisung im Code.  
+  
+> [!NOTE]
+>  [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]Apps unterstützen keine modalen Dialogfelder, damit sie im Benutzermodus-Schnittstelle und nicht-Benutzeroberflächen-Modus gleich Verhalten. Die Meldung geschrieben wird, um die aktiven Ablaufverfolgungslistener im Debugmodus oder im Releasemodus keine Meldung geschrieben wird.  
+  
+> [!NOTE]
+>  Die Anzeige des Meldungsfelds hängt das Vorhandensein der <xref:System.Diagnostics.DefaultTraceListener>. Wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der <xref:System.Diagnostics.Trace.Listeners%2A> -Auflistung, das Meldungsfeld wird nicht angezeigt. Die <xref:System.Diagnostics.DefaultTraceListener> kann entfernt werden, indem die [ &lt;deaktivieren&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), die [ &lt;entfernen&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), oder durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Sie können das Verhalten des ändern die <xref:System.Diagnostics.DefaultTraceListener> in der Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie aktivieren und deaktivieren Sie im Meldungsfeld Assert oder Festlegen der <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A?displayProperty=nameWithType> Eigenschaft. Die Konfigurationsdatei sollte wie folgt formatiert werden:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <assert assertuienabled="true" logfilename="c:\\myFile.log" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein Index für ein Array erstellt, führt eine Aktion aus, um den Wert des Indexes festzulegen und ruft dann <xref:System.Diagnostics.Debug.Assert%2A> zu bestätigen, dass der Indexwert ungültig ist. Wenn er nicht gültig ist, ist <xref:System.Diagnostics.Debug.Assert%2A> gibt die Aufrufliste.  
+  
+ [!code-cpp[Classic Debug.Assert Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Assert Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Assert Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Assert Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Assert Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Assert Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Assert(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" /> ist, wird die angegebene Meldung nicht gesendet, und das Meldungsfeld wird nicht angezeigt.</param>
+        <param name="message">Die an die <see cref="P:System.Diagnostics.Trace.Listeners" />-Auflistung zu sendende Meldung.</param>
+        <summary>Überprüft eine Bedingung. Wenn die Bedingung <see langword="false" /> ist, wird eine angegebene Meldung ausgegeben, und es wird ein Meldungsfeld mit der Aufrufliste angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Methode funktioniert nur in Debug-Builds. Verwenden der <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> builds Methode, wenn Sie Assertionen in Version ausführen möchten. Weitere Informationen finden Sie unter [Assertionen in verwaltetem Code](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+ In der Regel die <xref:System.Diagnostics.Debug.Assert%2A> Methode wird verwendet, um Logikfehler während der Programmentwicklung zu identifizieren. <xref:System.Diagnostics.Debug.Assert%2A>wertet die Bedingung an. Wenn das Ergebnis `false`, sendet er die angegebene diagnosemeldung, um die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung. Sie können dieses Verhalten anpassen, indem Hinzufügen einer <xref:System.Diagnostics.TraceListener> zu, oder Entfernen aus, die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+ Wenn die Anwendung im Benutzeroberflächenmodus ausgeführt wird, wird ein Meldungsfeld mit der Aufrufliste mit der Datei und die Zeilennummern an angezeigt. Das Meldungsfeld enthält drei Schaltflächen: **Abort**, **wiederholen**, und **ignorieren**. Klicken auf die **Abort** Schaltfläche wird die Anwendung beendet. Auf **wiederholen** sendet Sie an den Code im Debugger, wenn Ihre Anwendung in einem Debugger ausgeführt wird, oder um einen Debugger zu öffnen, ist er nicht bietet. Auf **ignorieren** weiterhin mit der nächsten Anweisung im Code.  
+  
+> [!NOTE]
+>  Die Anzeige des Meldungsfelds hängt das Vorhandensein der <xref:System.Diagnostics.DefaultTraceListener>. Wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der <xref:System.Diagnostics.Trace.Listeners%2A> -Auflistung, das Meldungsfeld wird nicht angezeigt. Die <xref:System.Diagnostics.DefaultTraceListener> kann entfernt werden, indem die [ &lt;deaktivieren&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), die [ &lt;entfernen&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), oder durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Sie können das Verhalten des ändern die <xref:System.Diagnostics.DefaultTraceListener> in der Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie aktivieren und deaktivieren Sie im Meldungsfeld Assert oder Festlegen der <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A?displayProperty=nameWithType> Eigenschaft. Die Konfigurationsdatei sollte wie folgt formatiert werden:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <assert assertuienabled="true" logfilename="c:\\myFile.log" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob die `type` Parameter ist ungültig. Wenn `type` ist `null`, <xref:System.Diagnostics.Trace.Assert%2A> wird eine Meldung ausgegeben.  
+  
+ [!code-cpp[Classic Debug.Assert1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Assert1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Assert1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Assert1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Assert1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Assert1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition, string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition, string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" /> ist, werden die angegebenen Meldungen nicht gesendet, und das Meldungsfeld wird nicht angezeigt.</param>
+        <param name="message">Die an die <see cref="P:System.Diagnostics.Trace.Listeners" />-Auflistung zu sendende Meldung.</param>
+        <param name="detailMessage">Die an die <see cref="P:System.Diagnostics.Trace.Listeners" />-Auflistung zu sendende ausführliche Meldung.</param>
+        <summary>Überprüft eine Bedingung. Wenn die Bedingung <see langword="false" /> ist, werden zwei angegebene Meldungen ausgegeben, und es wird ein Meldungsfeld mit der Aufrufliste angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Methode funktioniert nur in Debug-Builds. Verwenden der <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> builds Methode, wenn Sie Assertionen in Version ausführen möchten. Weitere Informationen finden Sie unter [Assertionen in verwaltetem Code](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+ In der Regel die <xref:System.Diagnostics.Debug.Assert%28System.Boolean%2CSystem.String%2CSystem.String%29> Methode wird verwendet, um Logikfehler während der Programmentwicklung zu identifizieren. <xref:System.Diagnostics.Debug.Assert%2A>wertet die Bedingung an. Wenn das Ergebnis `false`, sendet er den angegebenen diagnosemeldung aus und detaillierte Meldung, die die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung. Sie können dieses Verhalten anpassen, indem Hinzufügen einer <xref:System.Diagnostics.TraceListener> zu, oder Entfernen aus, die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+ Wenn die Anwendung im Benutzeroberflächenmodus ausgeführt wird, wird ein Meldungsfeld mit der Aufrufliste mit der Datei und die Zeilennummern an angezeigt. Das Meldungsfeld enthält drei Schaltflächen: **Abort**, **wiederholen**, und **ignorieren**. Klicken auf die **Abort** Schaltfläche wird die Anwendung beendet. Auf **wiederholen** sendet Sie an den Code im Debugger, wenn Ihre Anwendung in einem Debugger ausgeführt wird, oder um einen Debugger zu öffnen, ist er nicht bietet. Auf **ignorieren** weiterhin mit der nächsten Anweisung im Code.  
+  
+> [!NOTE]
+>  Die Anzeige des Meldungsfelds hängt das Vorhandensein der <xref:System.Diagnostics.DefaultTraceListener>. Wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der <xref:System.Diagnostics.Trace.Listeners%2A> -Auflistung, das Meldungsfeld wird nicht angezeigt. Die <xref:System.Diagnostics.DefaultTraceListener> kann entfernt werden, indem die [ &lt;deaktivieren&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), die [ &lt;entfernen&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), oder durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Sie können das Verhalten des ändern die <xref:System.Diagnostics.DefaultTraceListener> in der Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie aktivieren und deaktivieren Sie im Meldungsfeld Assert oder Festlegen der <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A?displayProperty=nameWithType> Eigenschaft. Die Konfigurationsdatei sollte wie folgt formatiert werden:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <assert assertuienabled="true" logfilename="c:\\myFile.log" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob die `type` Parameter ist ungültig. Wenn `type` ist `null`, <xref:System.Diagnostics.Trace.Assert%2A> zwei Meldungen ausgegeben.  
+  
+ [!code-cpp[Classic Debug.Assert2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Assert2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Assert2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Assert2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Assert2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Assert2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition, string message, string detailMessageFormat, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition, string message, string detailMessageFormat, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessageFormat" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" /> ist, werden die angegebenen Meldungen nicht gesendet, und das Meldungsfeld wird nicht angezeigt.</param>
+        <param name="message">Die an die <see cref="P:System.Diagnostics.Trace.Listeners" />-Auflistung zu sendende Meldung.</param>
+        <param name="detailMessageFormat">Die kombinierte Formatzeichenfolge an die <see cref="P:System.Diagnostics.Trace.Listeners" /> Auflistung. Diese Meldung enthält Text NULL oder mehr Formatelemente, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein Objektarray mit 0 (null) oder mehr zu formatierenden Objekten.</param>
+        <summary>Überprüft eine Bedingung; Wenn die Bedingung <see langword="false" />, gibt zwei Nachrichten (simple und formatierte) und zeigt ein Meldungsfeld mit die Aufrufliste angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die von .NET Framework, um den Wert eines Objekts in die Textdarstellung zu konvertieren und diese Darstellung in eine Zeichenfolge einzubetten. Die resultierende Zeichenfolge wird gesendet, um die <xref:System.Diagnostics.Trace.Listeners%2A> Auflistung.  
+  
+ Wird standardmäßig die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Methode funktioniert nur in Debug-Builds. Verwenden der <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> builds Methode, wenn Sie Assertionen in Version ausführen möchten. Weitere Informationen finden Sie unter [Assertionen in verwaltetem Code](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+ In der Regel die <xref:System.Diagnostics.Debug.Assert%28System.Boolean%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29> Methode wird verwendet, um Logikfehler während der Programmentwicklung zu identifizieren. <xref:System.Diagnostics.Debug.Assert%2A>wertet die Bedingung an. Wenn das Ergebnis `false`, <xref:System.String.Format%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> Methode wird aufgerufen, und die `detailMessageFormat` Zeichenfolge und `args` Arrays als Parameter übergeben werden. <xref:System.Diagnostics.Debug.Assert%28System.Boolean%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29>sendet den angegebenen Text und der Nachricht formatierter Text auf der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung. Sie können dieses Verhalten anpassen, indem Hinzufügen einer <xref:System.Diagnostics.TraceListener> zu, oder Entfernen aus, die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+ Wenn die Anwendung im Benutzeroberflächenmodus ausgeführt wird, wird ein Meldungsfeld mit der Aufrufliste mit der Datei und die Zeilennummern an angezeigt. Das Meldungsfeld enthält drei Schaltflächen: **Abort**, **wiederholen**, und **ignorieren**. Klicken auf die **Abort** Schaltfläche wird die Anwendung beendet. Auf **wiederholen** sendet Sie an den Code im Debugger, wenn Ihre Anwendung in einem Debugger ausgeführt wird, oder um einen Debugger zu öffnen, ist er nicht bietet. Auf **ignorieren** weiterhin mit der nächsten Anweisung im Code.  
+  
+> [!NOTE]
+>  Die Anzeige des Meldungsfelds hängt das Vorhandensein der <xref:System.Diagnostics.DefaultTraceListener>. Wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der <xref:System.Diagnostics.Trace.Listeners%2A> -Auflistung, das Meldungsfeld wird nicht angezeigt. Die <xref:System.Diagnostics.DefaultTraceListener> kann entfernt werden, indem die [ &lt;deaktivieren&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), die [ &lt;entfernen&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), oder durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Sie können das Verhalten des ändern die <xref:System.Diagnostics.DefaultTraceListener> in der Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie aktivieren und deaktivieren Sie im Meldungsfeld Assert oder Festlegen der <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A?displayProperty=nameWithType> Eigenschaft. Die Konfigurationsdatei sollte wie folgt formatiert werden:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <assert assertuienabled="true" logfilename="c:\\myFile.log" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="public static bool AutoFlush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AutoFlush" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Debug.AutoFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob <see cref="M:System.Diagnostics.Debug.Flush" /> sollte aufgerufen werden, auf die <see cref="P:System.Diagnostics.Debug.Listeners" /> nach jedem Schreibvorgang.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="M:System.Diagnostics.Debug.Flush" /> nach jedem Schreibvorgang für <see cref="P:System.Diagnostics.Debug.Listeners" /> aufgerufen wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung ist `false`.  
+  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen <xref:System.Diagnostics.Debug.Flush%2A> oder <xref:System.Diagnostics.Debug.Close%2A>. Festlegen von <xref:System.Diagnostics.Debug.AutoFlush%2A> zu `true` ist, werden Daten aus dem Puffer geleert werden, in den Stream, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+ Festlegen der <xref:System.Diagnostics.Debug.AutoFlush%2A> und <xref:System.Diagnostics.Debug.IndentSize%2A> für <xref:System.Diagnostics.Debug>, Sie können auch die Konfigurationsdatei mit dem Namen der Anwendung bearbeiten. Die Konfigurationsdatei sollen wie im folgenden Beispiel gezeigt formatiert werden.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="true" indentsize="7" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand" Wert <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public static void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Leert den Ausgabepuffer und ruft dann die <see langword="Close" /> -Methode für die <see cref="P:System.Diagnostics.Debug.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn die Ausgabe in eine Datei, z. B. auf geht die <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen <xref:System.Diagnostics.Debug.Flush%2A> oder <xref:System.Diagnostics.Debug.Close%2A>. Festlegen von <xref:System.Diagnostics.Debug.AutoFlush%2A> zu `true` ist, werden Daten aus dem Puffer geleert werden, in den Stream, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TextWriterTraceListener> mit dem Namen `myTextListener`. `myTextListener`verwendet eine <xref:System.IO.StreamWriter> aufgerufen `myOutputWriter` zum Schreiben in eine Datei namens `TestFile.txt`. Das Beispiel erstellt die Datei, Streams und ein TextWriter, schreibt eine Textzeile in der Datei, und klicken Sie dann leert und schließt die Ausgabe.  
+  
+ [!code-cpp[Classic Debug.Close Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Close Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Close Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Close Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Close Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Close Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand" Wert <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public static void Fail (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Fail(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Fail(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine auszugebende Meldung.</param>
+        <summary>Gibt die angegebene Fehlermeldung aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardverhalten besteht, die die <xref:System.Diagnostics.DefaultTraceListener> gibt die Nachricht in einem Meldungsfeld aus, wenn die Anwendung ausgeführt wird, im Benutzermodus-Schnittstelle und zu den <xref:System.Diagnostics.TraceListener> -Instanzen lautet in der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+> [!NOTE]
+>  Die Anzeige des Meldungsfelds hängt das Vorhandensein der <xref:System.Diagnostics.DefaultTraceListener>. Wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der <xref:System.Diagnostics.Trace.Listeners%2A> -Auflistung, das Meldungsfeld wird nicht angezeigt. Die <xref:System.Diagnostics.DefaultTraceListener> kann entfernt werden, indem die [ &lt;deaktivieren&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), die [ &lt;entfernen&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), oder durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Sie können dieses Verhalten anpassen, indem Hinzufügen einer <xref:System.Diagnostics.TraceListener> zu, oder Entfernen aus, die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Diagnostics.Debug.Fail%2A> Methode, um eine Meldung auszugeben, während der Ausnahmebehandlung.  
+  
+ [!code-cpp[Classic Debug.Fail Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Fail Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Fail Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Fail Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Fail Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Fail Example/VB/source.vb#1)]  
+  
+ Sie können auch die <xref:System.Diagnostics.Debug.Fail%2A> Methode in einer Switch-Anweisung.  
+  
+ [!code-cpp[Classic Debug.Fail Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Fail Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic Debug.Fail Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Fail Example/CS/source.cs#2)]
+ [!code-vb[Classic Debug.Fail Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Fail Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public static void Fail (string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Fail(string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Fail(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine auszugebende Meldung.</param>
+        <param name="detailMessage">Eine detaillierte Meldung, die ausgegeben werden soll.</param>
+        <summary>Gibt eine Fehlermeldung sowie eine detaillierte Fehlermeldung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardverhalten besteht, die die <xref:System.Diagnostics.DefaultTraceListener> gibt die Nachricht in einem Meldungsfeld aus, wenn die Anwendung ausgeführt wird, im Benutzermodus-Schnittstelle und zu den <xref:System.Diagnostics.TraceListener> -Instanzen lautet in der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+> [!NOTE]
+>  Die Anzeige des Meldungsfelds hängt das Vorhandensein der <xref:System.Diagnostics.DefaultTraceListener>. Wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der <xref:System.Diagnostics.Trace.Listeners%2A> -Auflistung, das Meldungsfeld wird nicht angezeigt. Die <xref:System.Diagnostics.DefaultTraceListener> kann entfernt werden, indem die [ &lt;deaktivieren&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), die [ &lt;entfernen&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), oder durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Sie können dieses Verhalten anpassen, indem Hinzufügen einer <xref:System.Diagnostics.TraceListener> zu, oder Entfernen aus, die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Diagnostics.Debug.Fail%2A> Methode, um eine Meldung auszugeben, während der Ausnahmebehandlung.  
+  
+ [!code-cpp[Classic Debug.Fail1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Fail1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Fail1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Fail1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Fail1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Fail1 Example/VB/source.vb#1)]  
+  
+ Sie können auch die <xref:System.Diagnostics.Debug.Fail%2A> Methode in einer Switch-Anweisung.  
+  
+ [!code-cpp[Classic Debug.Fail1 Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Fail1 Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic Debug.Fail1 Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Fail1 Example/CS/source.cs#2)]
+ [!code-vb[Classic Debug.Fail1 Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Fail1 Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public static void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Leert den Ausgabepuffer und bewirkt, dass gepufferte Daten zum Schreiben in die <see cref="P:System.Diagnostics.Debug.Listeners" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Leeren des Streams wird die zugrunde liegende Encoder nicht entleert, es sei denn, Sie explizit aufrufen <xref:System.Diagnostics.Debug.Flush%2A> oder <xref:System.Diagnostics.Debug.Close%2A>. Festlegen von <xref:System.Diagnostics.Debug.AutoFlush%2A> zu `true` ist, werden Daten aus dem Puffer geleert werden, in den Stream, aber die Encoder-Status wird nicht geleert werden. Dadurch wird den Encoder seinen Zustand (teilweise Zeichen) beibehalten, sodass er den nächsten Block von Zeichen richtig zu codieren. Dieses Szenario betrifft UTF8 und UTF7, in denen bestimmte Zeichen nur verschlüsselt werden können, nachdem der Encoder die angrenzenden Zeichen oder Zeichen empfängt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TextWriterTraceListener> mit dem Namen `myTextListener`. `myTextListener`verwendet eine <xref:System.IO.FileStream> aufgerufen `myFileStream` zum Schreiben in eine Datei namens `TestFile.txt`. Im Beispiel wird den Stream erstellt, wird die Datei geöffnet, wenn er vorhanden ist oder eine neue erstellt, eine Textzeile in der Datei schreibt und dann leert und die Ausgabe schließt.  
+  
+ [!code-cpp[Classic Debug.Close Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Close Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Close Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Close Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Close Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Close Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indent">
+      <MemberSignature Language="C#" Value="public static void Indent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Indent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Indent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erhöht die aktuelle <see cref="P:System.Diagnostics.Debug.IndentLevel" /> um 1.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel legt die Einzugsebene und Debugmeldungen ausgibt.  
+  
+ [!code-cpp[Classic Debug.IndentLevel Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.IndentLevel Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.IndentLevel Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/VB/source.vb#1)]  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+List of errors:  
+     Error 1: File not found  
+     Error 2: Directory not found  
+End of list of errors  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentLevel">
+      <MemberSignature Language="C#" Value="public static int IndentLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 IndentLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Debug.IndentLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einzugsebene ab oder legt diese fest.</summary>
+        <value>Die Einzugebene. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.Debug.IndentLevel%2A> Eigenschaft stellt die Anzahl der Vorkommen den Einzug der Größe <xref:System.Diagnostics.Debug.IndentSize%2A> angewendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel legt die Einzugsebene und Debugmeldungen ausgibt.  
+  
+ [!code-cpp[Classic Debug.IndentLevel Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.IndentLevel Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.IndentLevel Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/VB/source.vb#1)]  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+List of errors:  
+     Error 1: File not found  
+     Error 2: Directory not found  
+End of list of errors  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentSize">
+      <MemberSignature Language="C#" Value="public static int IndentSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 IndentSize" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Debug.IndentSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Leerzeichen in einem Einzug ab oder legt diese fest.</summary>
+        <value>Die Anzahl der Leerzeichen in einem Einzug. Der Standardwert ist 4.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Diagnostics.TextWriterTraceListener> interpretiert diese Zahl als Leerzeichen. Ein <xref:System.Diagnostics.EventLogTraceListener> dieser Wert ignoriert.  
+  
+ Festlegen der <xref:System.Diagnostics.Debug.AutoFlush%2A> und <xref:System.Diagnostics.Debug.IndentSize%2A> für <xref:System.Diagnostics.Debug>, Sie können auch die Konfigurationsdatei mit dem Namen der Anwendung bearbeiten. Die Konfigurationsdatei sollen wie im folgenden Beispiel gezeigt formatiert werden.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="true" indentsize="7" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Listeners">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.TraceListenerCollection Listeners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Diagnostics.TraceListenerCollection Listeners" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Debug.Listeners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceListenerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Listener, die die Debugausgabe überwacht wird.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.TraceListenerCollection" /> stellt eine Auflistung vom Typ <see cref="T:System.Diagnostics.TraceListener" /> , die die Debugausgabe überwacht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Listener erzeugen formatierten Ausgabe in der Debugausgabe. Standardmäßig enthält die Auflistung eine Instanz von der <xref:System.Diagnostics.DefaultTraceListener> Klasse. Um den Standardlistener zu entfernen, rufen die <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> -Methode, und übergeben sie die Instanz von der <xref:System.Diagnostics.DefaultTraceListener>. Um die Ausgabe an das Konsolenfenster umzuleiten, fügen Sie eine Instanz des der <xref:System.Diagnostics.ConsoleTraceListener>. Um die Ausgabe in eine Datei oder einen Stream umzuleiten, fügen Sie eine Instanz des der <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung von beiden gemeinsam genutzt der <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> Klassen; ein Ablaufverfolgungslistener zur Klasse fügt den Listener für beide hinzufügen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TextWriterTraceListener> im Konsolenfenster ausgibt. Der Code fügt dann den neue Listener die <xref:System.Diagnostics.Debug.Listeners%2A>.  
+  
+ [!code-cpp[Classic Debug.Listeners Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Listeners Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Listeners Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Listeners Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Listeners Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Listeners Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand" Wert <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public static void Print (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Print(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Print(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung gefolgt von einem Zeilenabschluss in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardzeilenabschlusszeichen ist ein Wagenrücklaufzeichen gefolgt von einem Zeilenvorschub. Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public static void Print (string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Print(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Print(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Eine kombinierte Formatzeichenfolge, die Text enthält festgelegtem mit 0 (null) oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein Objektarray mit 0 (null) oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt eine formatierte Zeichenfolge, gefolgt von einem Zeilenabschluss in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die von .NET Framework, um den Wert eines Objekts in die Textdarstellung zu konvertieren und diese Darstellung in eine Zeichenfolge einzubetten. Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> ist ungültig.  
+  
+ - oder -   
+  
+ Die Zahl, die angibt, ein zu formatierendes Argument ist kleiner als 0 oder größer als oder gleich der Anzahl der angegebenen zu formatierenden Objekten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unindent">
+      <MemberSignature Language="C#" Value="public static void Unindent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Unindent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Unindent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verringert die aktuelle <see cref="P:System.Diagnostics.Debug.IndentLevel" /> um 1.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel legt die Einzugsebene und Debugmeldungen ausgibt.  
+  
+ [!code-cpp[Classic Debug.IndentLevel Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.IndentLevel Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.IndentLevel Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.IndentLevel Example/VB/source.vb#1)]  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+List of errors:  
+     Error 1: File not found  
+     Error 2: Directory not found  
+End of list of errors  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Write(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <summary>Schreibt den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.Write Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Write Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Write Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Write Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.Write Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Write Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Write Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Write Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Write(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in den Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Verwenden der `category` Ausgabeparameter Gruppe Nachrichten.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.Write Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Write Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Write Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Write Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.Write(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und eine Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Verwenden der `category` Ausgabeparameter Gruppe Nachrichten.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.Write Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.Write Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.Write Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.Write Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.Write Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" />, ist der Wert in die Ablaufverfolgungslistener in der Auflistung geschrieben.</param>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <summary>Schreibt den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt den Vornamen der Value-Parameter der <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel wird eine Meldung in derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteIf1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteIf1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteIf1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteIf1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteIf1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteIf1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.Write(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" />, wird die Meldung in die Ablaufverfolgungslistener in der Auflistung geschrieben.</param>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteIf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteIf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteIf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteIf Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteIf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteIf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.Write(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" />, den Kategorienamen und den Wert in die Ablaufverfolgungslistener in der Auflistung geschrieben werden.</param>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Die `category` Parameter kann verwendet werden, um die Ausgabenachrichten gruppieren.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Verbose`, im Beispiel gibt den Namen des der `myObject` und die `category` auf die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Error` oder höher wird im Beispiel wird die zweite Fehlermeldung in derselben Zeile wie die erste Meldung ausgegeben. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteIf3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteIf3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteIf3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteIf3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteIf3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteIf3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.Write(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" />, den Kategorienamen und eine Meldung in die Ablaufverfolgungslistener in der Auflistung geschrieben werden.</param>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und eine Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Die `category` Parameter kann verwendet werden, um die Ausgabenachrichten gruppieren.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.Write%2A?displayProperty=nameWithType> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Verbose`, im Beispiel gibt die erste Fehlermeldung an die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Error` oder höher wird im Beispiel wird die zweite Fehlermeldung in derselben Zeile wie die erste Meldung ausgegeben. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteIf2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteIf2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteIf2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteIf2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteIf2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteIf2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.Write(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLine(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <summary>Schreibt den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel wird der Name des Objekts in der gleichen Zeile wie die erste Meldung ausgegeben. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteLine1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLine1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLine1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLine1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLine1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLine1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung gefolgt von einem Zeilenabschluss in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteLine Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLine Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLine Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLine Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLine Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLine Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLine(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in den Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Die `category` Parameter kann verwendet werden, um die Ausgabenachrichten gruppieren.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Die zweite Nachricht von einem Zeilenabschluss folgt.  
+  
+ [!code-cpp[Classic Debug.WriteLine3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLine3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLine3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLine3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLine3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLine3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLine(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Eine kombinierte Formatzeichenfolge, die Text enthält festgelegtem mit 0 (null) oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein Objektarray mit 0 (null) oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt eine formatierte Meldung gefolgt von einem Zeilenabschluss in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die von .NET Framework, um den Wert eines Objekts in die Textdarstellung zu konvertieren und diese Darstellung in eine Zeichenfolge einzubetten.  
+  
+ Das Schlüsselwort in der Syntax für diese Methode bedeutet, dass das Objektarray einen Einzelwert kann. Die Ausnahme bildet die <xref:System.String> Objekt. Explizite Überladungen haben Vorrang vor, sodass ein `arg` Wert einer einzelnen Zeichenfolge verwendet standardmäßig die <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.String%29?displayProperty=nameWithType> überladen.  
+  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A?displayProperty=nameWithType> Methode des Ablaufverfolgungslisteners.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und eine Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Die `category` Parameter kann verwendet werden, um die Ausgabenachrichten gruppieren.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel wird die zweite Fehlermeldung ausgegeben und die `category` auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteLine2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLine2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLine2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLine2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLine2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLine2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" />, ist der Wert in die Ablaufverfolgungslistener in der Auflistung geschrieben.</param>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <summary>Schreibt den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel wird der Name des Objekts in der gleichen Zeile wie die erste Meldung ausgegeben. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteLineIf1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLineIf1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLineIf1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.WriteLine(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" />, wird die Meldung in die Ablaufverfolgungslistener in der Auflistung geschrieben.</param>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A?displayProperty=nameWithType> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteLineIf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLineIf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLineIf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.WriteLine(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der auszuwertende bedingte Ausdruck. Wenn die Bedingung <see langword="true" />, den Kategorienamen und den Wert in die Ablaufverfolgungslistener in der Auflistung geschrieben werden.</param>
+        <param name="value">Ein Objekt, dessen Name an, die <see cref="P:System.Diagnostics.Debug.Listeners" />.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und den Wert der <see cref="M:System.Object.ToString" />-Methode des Objekts in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Die `category` Parameter kann verwendet werden, um die Ausgabenachrichten gruppieren.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel gibt die zweite Fehlermeldung auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteLineIf3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLineIf3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLineIf3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.WriteLine(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />, um das Schreiben einer Meldung zu bewirken, andernfalls <see langword="false" />.</param>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und eine Meldung in die Ablaufverfolgungslistener in der <see cref="P:System.Diagnostics.Debug.Listeners" />-Auflistung, wenn eine Bedingung <see langword="true" /> ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Ausgabe geschrieben, mit einer Instanz von <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Die `category` Parameter kann verwendet werden, um die Ausgabenachrichten gruppieren.  
+  
+ Diese Methode ruft die <xref:System.Diagnostics.TraceListener.WriteLine%2A?displayProperty=nameWithType> Methode des Ablaufverfolgungslisteners.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.TraceSwitch> mit dem Namen `generalSwitch`. Dieser Schalter wird außerhalb der Codebeispiel festgelegt.  
+  
+ Wenn der Schalter, um festgelegt ist die <xref:System.Diagnostics.TraceLevel> `Error` oder höher wird im Beispiel gibt die erste Fehlermeldung, die <xref:System.Diagnostics.Debug.Listeners%2A>. Weitere Informationen zum Hinzufügen eines Listeners zum der <xref:System.Diagnostics.Debug.Listeners%2A> Auflistung finden Sie unter der <xref:System.Diagnostics.TraceListenerCollection> Klasse.  
+  
+ Wenn danach die <xref:System.Diagnostics.TraceLevel> festgelegt ist, um `Verbose`, im Beispiel wird die zweite Fehlermeldung ausgegeben und die `category` auf derselben Zeile wie die erste Nachricht. Ein Zeilenabschlusszeichen folgt die zweite Meldung.  
+  
+ [!code-cpp[Classic Debug.WriteLineIf2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Debug.WriteLineIf2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Debug.WriteLineIf2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Debug.WriteLineIf2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können die Leistungseinbußen durch Instrumentieren der Anwendung mithilfe von Minimieren <see langword="If...Then" /> Anweisungen anstatt <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" /> Anweisungen. Die folgenden zwei Codebeispiele senden dieselbe Debugmeldung. Im erste Beispiel ist jedoch wesentlich schneller, wenn die Ablaufverfolgung deaktiviert ist, wird da Wenn <c>mySwitch.TraceError</c> ergibt <see langword="false" />, rufen Sie nicht <see cref="M:System.Diagnostics.Debug.WriteLine(System.String)" />. Im zweite Beispiel ruft immer <see cref="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.String)" />, selbst wenn <c>mySwitch.TraceError</c> ist <see langword="false" /> und keine Ablaufverfolgungsausgabe erstellt wird. Dies kann zu unnötig beliebig komplexe codeausführung führen.  
+  
+ Erste Beispiel:  
+  
+```  
+if(mySwitch.TraceError)   
+    Debug.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ Zweites Beispiel:  
+  
+```  
+Debug.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

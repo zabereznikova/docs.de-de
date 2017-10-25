@@ -1,0 +1,69 @@
+<Type Name="MiscellaneousBitsAttribute" FullName="Microsoft.VisualC.MiscellaneousBitsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MiscellaneousBitsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MiscellaneousBitsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.MiscellaneousBitsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualC.dll is an obsolete assembly and exists only for backwards compatibility.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Attribut, das verschiedene Informationen über einen Typ in den Metadaten gespeichert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut wird verwendet, um festzustellen, ob ein Typ ist eine systemeigene Klasse und gibt an, ob es definiert wurde, mit der `struct` oder `class` Schlüsselwort.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MiscellaneousBitsAttribute (int miscellaneousBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 miscellaneousBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.MiscellaneousBitsAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="miscellaneousBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="miscellaneousBits">Eine Bitmaske, die Informationen über einen Typ enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualC.MiscellaneousBitsAttribute" /> -Klasse unter Verwendung der angegebenen Bitmaske.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="m_dwAttrs">
+      <MemberSignature Language="C#" Value="public int m_dwAttrs;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 m_dwAttrs" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualC.MiscellaneousBitsAttribute.m_dwAttrs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Bitmaske, die Informationen über einen Typ enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,594 @@
+<Type Name="XamlObjectWriter" FullName="System.Xaml.XamlObjectWriter">
+  <TypeSignature Language="C#" Value="public class XamlObjectWriter : System.Xaml.XamlWriter, System.Xaml.IXamlLineInfoConsumer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlObjectWriter extends System.Xaml.XamlWriter implements class System.Xaml.IXamlLineInfoConsumer" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlObjectWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlWriter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xaml.IXamlLineInfoConsumer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Erstellt ein Objektdiagramm aus einer Quelle XAML-Knotenstream.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Write` Methoden der <xref:System.Xaml.XamlObjectWriter> ein Muster implementiert wird, damit die <xref:System.Xaml.XamlObjectWriter> verwendet die <xref:System.Xaml.XamlWriter> von definiert die <xref:System.Xaml.XamlWriter.WriteNode%2A> Methode. <xref:System.Xaml.XamlWriter.WriteNode%2A>Logik wechselt zwischen den `Write` Methoden, abhängig von der Knoten an der aktuellen Position im Reader ist.  
+  
+## <a name="scope"></a>Bereich  
+ Ein <xref:System.Xaml.XamlObjectWriter> verfügt über ein Konzept von Bereich; ist die <xref:System.Xaml.XamlObjectWriter> einen konzeptionellen des Verweises in seinem Ausgabeobjektdiagramm beibehält. Für einen bestimmten Bereich möglicherweise bestimmte Vorgänge gültig oder ungültig sein oder Erzeugen eines Resultsets nicht-Vorgangs. Angenommen, Sie rufen <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A> zum Schreiben von Richtlinien für die Initialisierung eines Objekts, die bereits als eine Instanz vorhanden ist die Standardimplementierung löst eine Ausnahme aus.  
+  
+ Eine mögliche Methode zum Nachverfolgen von Bereich in einem benutzerdefinierten <xref:System.Xaml.XamlObjectWriter> wird zum Ausrichten der Knotenaktionen mit einem Stapel oder den Frame-Klasse. Der Stapel oder den Frame des nachvollziehen Push und Pop für jede Ebene des Objektmodells Tiefe, die eingegeben oder beendet wird während der <xref:System.Xaml.XamlObjectWriter> schreibt Objektdiagramm enthalten sind.  
+  
+## <a name="callbacks"></a>Rückrufe  
+ Zwischen- und erweiterte Unterstützung <xref:System.Xaml.XamlObjectWriter> Szenarien der Mechanismus zum Schreiben von Objektdiagramm bieten Rückruf Einstiegspunkte, die auftreten, wenn eine <xref:System.Xaml.XamlObjectWriter> ein Commit oder ein Begriff, bestimmte Aktionen commit ist. Einige Rückrufe, die in den Einstellungen aktiviert sind und sind nicht spezifisch für den Objekttyp oder das Element geschrieben wird; Allerdings Rückrufinformationen ist häufig im Kontext oder in der ereignismeldung Daten, die durch den Rückruf gesendet wird. Im folgenden finden eine Liste der entsprechenden Rückrufe:  
+  
+-   Der Rückruf, der deklariert wird <xref:System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler%2A> wird aufgerufen, wenn der Bereich, um ein neues Objekt sowie in wechselt den <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> Phase der Objektlebensdauer für jedes erstellte Objekt.  
+  
+-   Der Rückruf, der deklariert wird <xref:System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler%2A> wird aufgerufen, wenn der Bereich, um ein neues Objekt sowie in wechselt den <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> Phase der Objektlebensdauer für jedes erstellte Objekt.  
+  
+-   Der Rückruf, der deklariert wird <xref:System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler%2A> wird aufgerufen, wenn der Bereich in einem Objekt startet, und tritt auf, wenn die erste <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A> -Aufruf für den betreffenden Objektbereich ist, aber noch nicht gespeichert.  
+  
+-   Der Rückruf, der deklariert wird <xref:System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler%2A> wird aufgerufen, wenn der Bereich in einem Objekt startet, und geschieht, wenn die <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> -Aufruf für den betreffenden Objektbereich ist, aber noch nicht gespeichert.  
+  
+-   Der Rückruf, der deklariert wird <xref:System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler%2A> wird aufgerufen, wenn <xref:System.Xaml.XamlObjectWriter.OnSetValue%2A> aufgerufen wird.  
+  
+## <a name="writing-dictionary-keys"></a>Schreiben von Wörterbuchschlüssel  
+ Die standardmäßige Implementierung des <xref:System.Xaml.XamlObjectWriter> unterstützt die typkonvertierung auf die Einschränkungen der einem <xref:System.Collections.Generic.Dictionary%602> Inhalt wird vor dem Wörterbuch zur Objektdiagramm hinzugefügt. Auf diese Weise ein generisches Wörterbuch von Objekten zur Laufzeit sortiert werden können, und kann mit den relevanten generischen übereinstimmen `Add` und Indexerverhalten. Allerdings als für die Basis implementierten <xref:System.Xaml.XamlObjectWriter>, diese Funktion ist nur für die Graph-objekterstellung, von der Basisklasse vorhanden <xref:System.Collections.Generic.Dictionary%602> Klasse und nicht für die abgeleiteten Klassen von <xref:System.Collections.Generic.Dictionary%602>.  
+  
+## <a name="checks-for-disposed"></a>Sucht nach verworfen.  
+ XAML-Writern dienen potenziell für verzögerte Vorgänge oder, in einen Aufruf für eine Verwendung von XAML-Writer-Instanz ausgeführt wird, die in der Zwischenzeit verworfen wurde. Verschiedene APIs von <xref:System.Xaml.XamlObjectWriter> lösen möglicherweise <xref:System.ObjectDisposedException> in diesen Fällen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlObjectWriter (System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.#ctor(System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">Ein XAML-Schemakontext, der für die Verwendung von XAML-Reader freigegeben ist, der Knoten für das Schreiben von bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlObjectWriter" /> -Klasse unter Verwendung des XAML-Schemakontexts, die von verwendet wird, eine <see cref="T:System.Xaml.XamlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaContext" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlObjectWriter (System.Xaml.XamlSchemaContext schemaContext, System.Xaml.XamlObjectWriterSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.XamlObjectWriterSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.#ctor(System.Xaml.XamlSchemaContext,System.Xaml.XamlObjectWriterSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="settings" Type="System.Xaml.XamlObjectWriterSettings" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">Ein XAML-Schemakontext, der für die Verwendung von XAML-Reader freigegeben ist, der Knoten für das Schreiben von bereitstellt.</param>
+        <param name="settings">Ein Einstellungsobjekt, der angibt, für bestimmte Optionen <see cref="T:System.Xaml.XamlObjectWriter" /> Verhalten und die Ausgabe.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlObjectWriter" /> -Klasse unter Verwendung des Kontexts, der von verwendet wird, eine <see cref="T:System.Xaml.XamlReader" /> und die Einstellungen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaContext" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt alle möglichen Frames zurück und löscht Objektdiagramm enthalten sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um die verwalteten Ressourcen freizugeben, andernfalls <see langword="false" />.</param>
+        <summary>Gibt die vom verwendeten nicht verwalteten Ressourcen frei der <see cref="T:System.Xaml.XamlObjectWriter" />, und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterBeginInit">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterBeginInit (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterBeginInit(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnAfterBeginInit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, um zu melden. Das Objekt wird in verpackt <see cref="T:System.Xaml.XamlObjectEventArgs" /> Wenn der Handler aufgerufen wird.</param>
+        <summary>Ruft eine beliebige <see cref="P:System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler" /> -Methode, die mit zugeordnetem <see cref="T:System.Xaml.XamlObjectWriterSettings" /> dafür <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterEndInit">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterEndInit (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterEndInit(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnAfterEndInit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, um zu melden. Der Wert wird in verpackt <see cref="T:System.Xaml.XamlObjectEventArgs" /> Wenn der Handler aufgerufen wird.</param>
+        <summary>Ruft eine beliebige <see cref="P:System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler" /> -Methode, die mit zugeordnetem <see cref="T:System.Xaml.XamlObjectWriterSettings" /> dafür <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterProperties">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterProperties (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterProperties(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnAfterProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, um zu melden. Dies wird in verpackt <see cref="T:System.Xaml.XamlObjectEventArgs" /> Wenn der Handler aufgerufen wird.</param>
+        <summary>Ruft eine beliebige <see cref="P:System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler" /> auf das-Methode, die mit zugeordnetem <see cref="T:System.Xaml.XamlObjectWriterSettings" /> dafür <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeProperties">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeforeProperties (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeforeProperties(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnBeforeProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der pass-through <see cref="T:System.Xaml.XamlObjectEventArgs" /> Wenn der Handler aufgerufen wird.</param>
+        <summary>Ruft eine beliebige <see cref="P:System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler" /> auf das-Methode, die mit zugeordnetem <see cref="T:System.Xaml.XamlObjectWriterSettings" /> dafür <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetValue">
+      <MemberSignature Language="C#" Value="protected virtual bool OnSetValue (object eventSender, System.Xaml.XamlMember member, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnSetValue(object eventSender, class System.Xaml.XamlMember member, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnSetValue(System.Object,System.Xaml.XamlMember,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSender" Type="System.Object" />
+        <Parameter Name="member" Type="System.Xaml.XamlMember" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventSender">Das Objekt zum Bericht als Quelle an den Handler.</param>
+        <param name="member">Der Name der Eigenschaft festgelegt wird, die an den Ereignishandler, im Rahmen des übergeben wird <see cref="T:System.Windows.Markup.XamlSetValueEventArgs" />.</param>
+        <param name="value">Der Wert der Eigenschaft bereit, mit dem Namen von <c>Eigenschaft</c>. Der Wert wird an den Handler übergeben, als Teil des <see cref="T:System.Windows.Markup.XamlSetValueEventArgs" />.</param>
+        <summary>Ruft eine beliebige <see cref="P:System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler" /> auf das-Methode, die mit zugeordnetem <see cref="T:System.Xaml.XamlObjectWriterSettings" /> für diesen Writer, solange <paramref name="handled" /> in <see cref="T:System.Windows.Markup.XamlSetValueEventArgs" /> Ereignisdaten ist nicht <see langword="true" />.</summary>
+        <returns>Ein boolescher Wert, der durch einen zugeordneten Handler festgelegt ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `SetValue` Vorgang für diese XAML-Writer verfügt über einen zugeordneten Handler (eine <xref:System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler%2A> in deklariert <xref:System.Xaml.XamlObjectWriterSettings>), erstellt diese Methode neuen <xref:System.Windows.Markup.XamlSetValueEventArgs> und übergibt sie an den Handler. Der Rückgabewert wird festgelegt, durch Lesen der <xref:System.Windows.Markup.XamlSetValueEventArgs.Handled%2A> -Wert, der über die Ereignisdaten übergeben wird. Wenn kein Handler vorhanden ist, und diese Methode wird aufgerufen, gibt der Aufruf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public virtual object Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Result" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das letzte Objekt, das geschrieben wurde. In der Regel nur aufgerufen, wenn der Knotenstream, an deren Ende ist und Objektdiagramm abgeschlossen ist.</summary>
+        <value>Das letzte Objekt geschrieben, oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die häufigste Verwendung von <xref:System.Xaml.XamlObjectWriter.Result%2A> besteht im Aufrufen es nur, wenn der Knotenstream bekannt ist, dass am Ende und das Objektdiagramm abgeschlossen ist. Andernfalls Objektdiagramm ist es wahrscheinlich, dass möglicherweise unvollständig und ist nicht für die meisten Plattformszenarien nützlich.  
+  
+ <xref:System.Xaml.XamlObjectWriter.Result%2A>einen Wert ungleich Null in der Regel nur enthält, wenn er, sofort nach einem Aufruf von aufgerufen wird <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A>, und wenn der aktuelle Bereich im Element ist, an dem das Objekt einen Wert bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNameScope">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.INameScope RootNameScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.INameScope RootNameScope" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.RootNameScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.INameScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.INameScope" /> Dienst, der XAML-Namensbereich für den Knotenstamm absolute der XAML-Objektwriter verwaltet.</summary>
+        <value>Die <see cref="T:System.Windows.Markup.INameScope" /> -Dienst, der den XAML-Namensbereich für den aktuellen Stamm des Objekt-Writer verwaltet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft stammen möglicherweise aus dem Objekt-Writer-Kontext.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktiven XAML-Schemakontext ab.</summary>
+        <value>Der XAML-Schemakontext.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XAML-Schemakontext ist die notwendigen Informationen, die Quelle für die zweckmäßigste Objekt-schreiben-Szenarien. Der XAML-Schemakontext beeinflusst die Typsuche für Unterstützungstypen und enthält Informationen zu den Assemblys, auf dem Unterstützungstypen vorhanden sind. Die Verwendung von XAML-Standardschemakontext basiert auf Regeln der CLR-Typzuordnung. Frameworks stellen in der Regel ihre eigenen XAML-Schemakontext, um sicherzustellen, dass die Mechanismen für das Laden von Assemblys die Framework Programmierung Amd-Anwendungsmodelle übereinstimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLineInfo">
+      <MemberSignature Language="C#" Value="public void SetLineInfo (int lineNumber, int linePosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetLineInfo(int32 lineNumber, int32 linePosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.SetLineInfo(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="linePosition" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lineNumber">Die Nummer der Zeile aus dem Reader.</param>
+        <param name="linePosition">Die Position der Zeile aus dem Reader.</param>
+        <summary>Implementiert <see cref="M:System.Xaml.IXamlLineInfoConsumer.SetLineInfo(System.Int32,System.Int32)" /> und bietet die Zeileninformationen für Ausnahmen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nicht direkt aus Ihrem Code aufgerufen werden. Jedoch, wenn Sie eine abgeleitete Klasse von erstellen <xref:System.Xaml.XamlObjectWriter> und erwarten einen Kontext zu melden, in dem Zeilennummern nicht verfügbar sind oder nicht sinnvoll, diese Methode kann aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProvideLineInfo">
+      <MemberSignature Language="C#" Value="public bool ShouldProvideLineInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldProvideLineInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.ShouldProvideLineInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wert, der meldet, ob eine Zeile Informationsdienste bereitstellen, sollten Werte und sollte daher auch Aufrufen der <see cref="M:System.Xaml.IXamlLineInfoConsumer.SetLineInfo(System.Int32,System.Int32)" /> -Methode auf, wenn sie relevant ist.</summary>
+        <value>
+          <see langword="true" />Wenn Zeileninformationen vom Writer verwendet wird. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung gibt immer `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndMember">
+      <MemberSignature Language="C#" Value="public override void WriteEndMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndMember() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteEndMember" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den aktuellen Gültigkeitsbereich des Elements und der Wert des Members kann geschrieben werden, während es schließt. Der neue Bereich wird dem Objekt übergeordneten Bereich des Elements.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">Fehler beim Erstellen der Elementwert aus einem Wertknoten, die zwischen diesen Aufruf und einem vorherigen gefunden <see langword="StartMember" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndObject">
+      <MemberSignature Language="C#" Value="public override void WriteEndObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteEndObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den aktuellen Objektbereich im Writer. Der neue Objektbereich wird dem übergeordneten Element Bereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese `EndObject` das Stammobjekt schließt, wird der neue Objektbereich als Stammbereich.  
+  
+ Der Aufruf von <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> möglicherweise noch nicht erstellt das Objekt möglicherweise ein Objektelement einen erforderliche Initialisierung Weg, z. B. Initialisierungstext oder Initialisierungsparameter. In diesen Fällen, den Aufruf von <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> tatsächlich schreibt das Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteGetObject">
+      <MemberSignature Language="C#" Value="public override void WriteGetObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteGetObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteGetObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt das konzeptionelle <see langword="StartObject" /> in das Objektdiagramm, wenn das angegebene Objekt eine Standardinstanz oder eine implizite-Wert, der die übergeordnete Eigenschaft ist. Die implizite Wert stammt aus Informationen, die aus der XAML-Schemakontext abgerufen und dahinter liegende Typinformationen statt als Objektwert im XAML-Knoten Eingabeset angegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Unterschied zwischen dem Schreiben mit <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> und das Schreiben von mit <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> in der sich ergebende Objektdiagramm angezeigt werden können. <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A>Erstellen eine Instanz eines Typs nicht, da die <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> -API verfügt über keine Daten, die das Objektdiagramm, was erstellt zu informieren. Stattdessen wurde das Objekt erstellt, wenn die übergeordnete Eigenschaft initialisiert wurde; Damit eine <xref:System.Xaml.XamlObjectWriter> muss nicht zur Erstellung. Im Gegensatz dazu <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> gibt an, dass eine Instanz dieses Typs erstellt und in dem Objektdiagramm eingefügt werden soll.  
+  
+ Wenn Sie die Verwendung von XAML-Knotenstream als eine Reihe von Frames vorstellen eine <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> ist ausgeglichen. um eine <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> aufrufen. Aus diesem Grund wird die Anzahl der <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> plus <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> Aufrufe müssen gleich der Anzahl der <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> als Teil einer Bewertung Objekt zum Schreiben von XAML-Knotenstream aufruft.  
+  
+ Konzeptionelle `StartObject` für ein implizites Objekt im Objektdiagramm erforderlich, ist da Sie zwar der Objektwert selbst ein impliziter Standard ist, dieses Objekt noch Mitglieder verfügen kann, geschrieben werden basierend auf der XAML-Knotenstream müssen, zu positionieren. Ein typisches Szenario, in diesem Fall, ist, wenn <xref:System.Xaml.XamlObjectWriter> Schreibvorgänge Memberknoten für eine Auflistungseigenschaft und die Initialisierung der Auflistung wird implizit für die beim Erstellen des Objekts, das die Auflistungseigenschaft besitzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNamespace">
+      <MemberSignature Language="C#" Value="public override void WriteNamespace (System.Xaml.NamespaceDeclaration namespaceDeclaration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteNamespace(class System.Xaml.NamespaceDeclaration namespaceDeclaration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteNamespace(System.Xaml.NamespaceDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceDeclaration" Type="System.Xaml.NamespaceDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceDeclaration">Die Namespacedeklaration zu schreiben.</param>
+        <summary>Definiert eine Namespacedeklaration, die für das nächste Objekt oder Element Gültigkeitsbereich gilt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Namespacedeklaration kann geschrieben werden, wenn im aktuelle Bereich einen Stammgültigkeitsbereich, Objektbereich oder Memberbereich ist. Allerdings <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A> kann nur unmittelbar vor dem Aufrufen einer der folgenden aufgerufen werden: <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A>, <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A>, oder <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A>. Die aufeinander folgenden <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A> wird zum Schreiben von mehreren Namespacedeklarationen zum selben Knoten. Schließlich <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> oder <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A> muss aufgerufen werden.  
+  
+ <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A>verwendet keine `Start` / `End` Metapher. Obwohl ein XAML-Namespace in den CLR-Darstellungssinn als Member enthält, die Elemente bezeichnet werden und müssen nicht als eine besondere Art von dargestellt werden <xref:System.Xaml.XamlMember> für Erweiterbarkeit. Die Werte der Zugriff auf eine <xref:System.Xaml.NamespaceDeclaration>, Sie Zugriff auf seine <xref:System.Xaml.NamespaceDeclaration.Namespace%2A> und <xref:System.Xaml.NamespaceDeclaration.Prefix%2A> Eigenschaften.  
+  
+ Eine Namespacedeklaration möglicherweise eine <xref:System.String.Empty?displayProperty=nameWithType> Wert für das Präfix. Ein <xref:System.String.Empty?displayProperty=nameWithType> Präfix stellt eine Deklaration des XAML-Standardnamespace. Versuchen Sie nicht mit null, wenn das Standardpräfix darstellen;  Sie löst eine Ausnahme in dieser API. Weitere Informationen finden Sie unter <xref:System.Xaml.NamespaceDeclaration>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="namespaceDeclaration" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Eine Komponente von <paramref name="namespaceDeclaration" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xaml.XamlObjectReaderException">Es wurde versucht, einen XAML-Namespace-Knoten in einen ungültigen Bereich zu schreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartMember">
+      <MemberSignature Language="C#" Value="public override void WriteStartMember (System.Xaml.XamlMember property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartMember(class System.Xaml.XamlMember property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteStartMember(System.Xaml.XamlMember)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Xaml.XamlMember" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die zu schreibende XAML-Eigenschaft. In der Regel wird dieser Wert von einem XAML-Reader über die Verwendung von XAML-Knotenstream intermediate abgerufen.</param>
+        <summary>Schreibt einen neuen Memberknoten in den aktuellen Objektbereich, und der Bereich wird ein neuer Memberbereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!TIP]
+>  Achten Sie bei einem <xref:System.Xaml.XamlDuplicateMemberException>, der auftritt, wenn die gleiche XAML-Eigenschaft zweimal in der XAML-Eingabe festgelegt ist. In einfachen Fällen, z. B. wenn die gleiche Eigenschaft, in der Attributsyntax und Eigenschaftenelementsyntax festgelegt ist, können Sie diese Ausnahme in der Eingabe Markup leicht erkennen. Allerdings können feinere Fälle auftreten, die schwieriger zu erkennen sind. Diese Ausnahme kann beispielsweise auftreten, wenn Sie eine XAML-Inhaltseigenschaft festlegen, wenn Sie XAML-Umgebungseigenschaften umfassen, und wenn eine Eigenschaft sowohl für eine anfügbare Verwendung als auch für die Instanzverwendung einer ermöglicht. In den debugging Phasen der Entwicklung können Sie häufig diese Ausnahme suchen, indem Sie die Darstellung von intermediate XAML-Knoten, die das Markup, das Lesen und Schreiben der Objekt-Diagramm verbindet anzeigen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">
+          <paramref name="property" />hat <see cref="P:System.Xaml.XamlMember.IsUnknown" /> festgelegt <see langword="true" />.  
+  
+ - oder -   
+  
+ <see cref="P:System.Xaml.XamlLanguage.UnknownContent" />übergeben, der angibt, dass der XAML-Knotenstream Inhalt für ein Objekt enthalten, der Inhalt nicht unterstützt.  
+  
+ - oder -   
+  
+ Versucht, ein StartMember in einen ungültigen Bereich zu schreiben.</exception>
+        <exception cref="T:System.Xaml.XamlDuplicateMemberException">
+          <paramref name="property" />Gibt eine Eigenschaft, die in den Bereich der übergeordneten Objekt bereits explizit festgelegt ist.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="property" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartObject">
+      <MemberSignature Language="C#" Value="public override void WriteStartObject (System.Xaml.XamlType xamlType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartObject(class System.Xaml.XamlType xamlType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteStartObject(System.Xaml.XamlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlType" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <param name="xamlType">Der Typ zum Schreiben. Normalerweise erhalten Sie diesen Wert von einem XAML-Reader.</param>
+        <summary>Schreibt einen Objektknoten in den aktuellen Bereich, und legt den Bereich zu einem neuen Objektbereich.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">Verarbeiten einer <see cref="P:System.Xaml.XamlType.IsUnknown" /> geben, und ein Objekt kann nicht erstellt werden.  
+  
+ - oder -   
+  
+ Versucht, ein Startobjekt in einen ungültigen Bereich zu schreiben.</exception>
+        <exception cref="T:System.Xaml.XamlParseException">Versucht, ein Stammobjekt schreiben, wenn das Stammobjekt bereits in den Einstellungen angegeben wurde.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlType" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn der aktuelle Bereich in einer Auflistung, einem Wörterbuch oder einem Array ist, sollte die neue Instanz der Auflistung, Wörterbuch oder Array hinzugefügt werden, mithilfe der <see langword="Add" /> -Methode des entsprechenden Typs. Andernfalls sollten das Element mit der neuen Instanz zugewiesen werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteValue">
+      <MemberSignature Language="C#" Value="public override void WriteValue (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteValue(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu schreibende Wert.</param>
+        <summary>Schreibt einen Wert im aktuellen Bereich des Elements an. Wenn der aktuelle Bereich in einer Auflistung, einem Wörterbuch oder einem Array-Objekt ist, sollten der Wert an die Auflistung, einem Wörterbuch oder einem Array hinzugefügt werden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">Versucht, einen Wert in einen ungültigen Bereich zu schreiben.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

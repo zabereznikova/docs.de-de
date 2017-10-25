@@ -1,0 +1,325 @@
+<Type Name="CngKeyCreationParameters" FullName="System.Security.Cryptography.CngKeyCreationParameters">
+  <TypeSignature Language="C#" Value="public sealed class CngKeyCreationParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CngKeyCreationParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngKeyCreationParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält erweiterte Eigenschaften für die Schlüsselerstellung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CngKey>Objekte enthalten Eigenschaften. Einige Eigenschaften müssen auf einen Schlüssel hinzugefügt werden, während der Erstellung. Andere Eigenschaften können hinzugefügt werden, nachdem der Schlüssel erstellt wird.  
+  
+ Die <xref:System.Security.Cryptography.CngKeyCreationParameters> -Klasse ermöglicht es Ihnen, Eigenschaften zu einem Schlüssel hinzufügen, wie es erstellt wird. Hierzu können Sie durch Übergeben einer <xref:System.Security.Cryptography.CngKeyCreationParameters> -Objekt, das standardmäßige wichtige Eigenschaften, z. B. Schlüsselspeicheranbieter (KSP), Exportieren einer Richtlinie Schlüsselverwendung, Benutzerrichtlinie-Benutzeroberfläche (UI) und das Handle des übergeordneten Fensters, enthält die <xref:System.Security.Cryptography.CngKey.Create%2A> Methode. Die <xref:System.Security.Cryptography.CngKey> -Objekts erstellt wird mit diesen Werten initialisiert werden, bevor er abgeschlossen ist.  
+  
+ Sie können auch nicht standardmäßige Eigenschaften zu einem Schlüssel hinzufügen, mit der <xref:System.Security.Cryptography.CngKeyCreationParameters.Parameters%2A> Eigenschaft.  
+  
+ Ein Schlüssel wird erstellt, wenn Sie Eigenschaften nach dem hinzufügen müssen, verwenden Sie die <xref:System.Security.Cryptography.CngKey.SetProperty%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngKeyCreationParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyCreationParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.CngKeyCreationParameters" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportPolicy">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Security.Cryptography.CngExportPolicies&gt; ExportPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Security.Cryptography.CngExportPolicies&gt; ExportPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyCreationParameters.ExportPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Security.Cryptography.CngExportPolicies&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüssel exportieren einer Richtlinie.</summary>
+        <value>Ein Objekt, das eine Schlüssel exportieren einer Richtlinie angibt. Der Standardwert ist <see langword="null" />, was bedeutet, dass der Schlüsselspeicheranbieter Export Standardrichtlinie festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zu Schlüsselexportrichtlinien finden Sie unter der <xref:System.Security.Cryptography.CngExportPolicies> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyCreationOptions">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngKeyCreationOptions KeyCreationOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CngKeyCreationOptions KeyCreationOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyCreationParameters.KeyCreationOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyCreationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Optionen Schlüssel erstellen.</summary>
+        <value>Ein Objekt, das Optionen zum Erstellen von Schlüsseln angibt. Der Standardwert ist <see langword="null" />, was bedeutet, dass der Schlüsselspeicheranbieter schlüsselerstellung Standardoptionen festgelegt sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Security.Cryptography.CngKeyCreationOptions> Objekt definiert Optionen, die verwendet werden, wenn Sie ein neues erstellen <xref:System.Security.Cryptography.CngKey> Objekt. Diese Optionen bestimmen, ob der Schlüssel im Schlüsselspeicher für Benutzer oder Computer erstellt wird und gibt an, ob ein neuer Schlüssel einen vorhandenen Schlüssel überschrieben werden soll. In der Standardeinstellung Wenn <xref:System.Security.Cryptography.CngKeyCreationOptions?displayProperty=nameWithType> nicht angegeben ist, wird der Schlüssel wird in den Speicher des Benutzers erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUsage">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Security.Cryptography.CngKeyUsages&gt; KeyUsage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Security.Cryptography.CngKeyUsages&gt; KeyUsage" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyCreationParameters.KeyUsage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Security.Cryptography.CngKeyUsages&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die kryptografischen Vorgänge, die für den aktuellen Schlüssel gelten.</summary>
+        <value>Eine bitweise Kombination von mindestens Enumerationswerten, die Schlüsselverwendung angeben. Der Standardwert ist <see langword="null" />, was bedeutet, dass der Schlüsselspeicheranbieter Standard Schlüsselverwendung festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, wenn Sie ein neues erstellen <xref:System.Security.Cryptography.CngKey> Objekt. Es gibt die Einsätze (z. B. Verschlüsselung/Entschlüsselung, Signieren/überprüfen und Geheimvertrag Generation), die konfiguriert werden, für den neuen Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngPropertyCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngPropertyCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyCreationParameters.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht es einem <see cref="T:System.Security.Cryptography.CngKey" /> Objekt mit zusätzlichen Eigenschaften erstellt werden, die festgelegt werden, bevor der Schlüssel abgeschlossen ist.</summary>
+        <value>Ein Auflistungsobjekt, das alle weiteren Parameter enthält, die Sie auf festlegen müssen eine <see cref="T:System.Security.Cryptography.CngKey" /> Objekts während der Schlüssel erstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.CngKeyCreationParameters> Klasse können Sie zum Erstellen eines neuen <xref:System.Security.Cryptography.CngKey> Objekt, und mit allgemeinen Eigenschaften zu initialisieren. Wenn Sie zusätzliche Eigenschaften für den Schlüssel bei seiner Erstellung festlegen müssen, gehen Sie folgendermaßen vor:  
+  
+1.  Erstellen Sie ein neues <xref:System.Security.Cryptography.CngProperty> Objekt für jede zusätzliche Eigenschaft, die Sie festlegen müssen.  
+  
+2.  Rufen Sie die <xref:System.Security.Cryptography.CngKeyCreationParameters.Parameters%2A> Eigenschaft, um eine leere erhalten <xref:System.Security.Cryptography.CngPropertyCollection> Objekt.  
+  
+3.  Hinzufügen der <xref:System.Security.Cryptography.CngProperty> -Objekte und die <xref:System.Security.Cryptography.CngPropertyCollection> Objekt.  
+  
+4.  Rufen Sie die <xref:System.Security.Cryptography.CngKey.Create%28System.Security.Cryptography.CngAlgorithm%2CSystem.String%2CSystem.Security.Cryptography.CngKeyCreationParameters%29> -methodenüberladung, und übergeben Sie das initialisierte <xref:System.Security.Cryptography.CngKeyCreationParameters> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentWindowHandle">
+      <MemberSignature Language="C#" Value="public IntPtr ParentWindowHandle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ParentWindowHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyCreationParameters.ParentWindowHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Fensterhandle, das als das übergeordnete Fenster für Dialogfelder verwendet werden soll, die von Cryptography Next Generation (CNG) Klassen erstellt werden.</summary>
+        <value>Das HWND des übergeordneten Fensters, das für Dialogfelder "CNG" verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss festgelegt werden, wenn schlüsselerstellung CNG ein Dialogfeld angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngProvider Provider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyCreationParameters.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüsselspeicheranbieter (KSP) zum Erstellen eines Schlüssels.</summary>
+        <value>Ein Objekt, das den KSP gibt an, die in ein neuer Schlüssel erstellt werden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Security.Cryptography.CngKeyCreationParameters.Provider" /> -Eigenschaftensatz auf eine <see langword="null" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UIPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngUIPolicy UIPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngUIPolicy UIPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyCreationParameters.UIPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngUIPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, die über die Benutzeroberfläche angezeigt wird, wenn ein Schlüssel erstellt oder zugegriffen wird.</summary>
+        <value>Ein Objekt, das enthält Details über die Benutzeroberfläche von Cryptography Next Generation (CNG) Klassen angezeigt, wenn ein Schlüssel erstellt oder zugegriffen wird. Ein <see langword="null" /> Wert gibt an, dass der Schlüsselspeicheranbieter Standardrichtlinie Benutzer Schnittstelle festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Betrieb mit nicht verwaltetem Code. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

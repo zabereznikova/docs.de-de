@@ -1,0 +1,49 @@
+<Type Name="InternalApplicationIdentityHelper" FullName="System.Deployment.Internal.InternalApplicationIdentityHelper">
+  <TypeSignature Language="C#" Value="public static class InternalApplicationIdentityHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit InternalApplicationIdentityHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Internal.InternalApplicationIdentityHelper" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf interne Eigenschaften eines ein <see cref="T:System.ApplicationIdentity" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetInternalAppId">
+      <MemberSignature Language="C#" Value="public static object GetInternalAppId (ApplicationIdentity id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetInternalAppId(class System.ApplicationIdentity id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Deployment.Internal.InternalApplicationIdentityHelper.GetInternalAppId(System.ApplicationIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.ApplicationIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="id">Das Objekt aus dem den Bezeichner extrahiert werden sollen.</param>
+        <summary>Ruft eine [IDefinitionAppId-Schnittstelle](~/docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md) den eindeutigen Bezeichner der darstellt, ein <see cref="T:System.ApplicationIdentity" /> Objekt.</summary>
+        <returns>Der eindeutige Bezeichner, die im Besitz der <see cref="T:System.ApplicationIdentity" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

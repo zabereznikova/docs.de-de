@@ -1,0 +1,1221 @@
+<Type Name="Keyboard" FullName="System.Windows.Input.Keyboard">
+  <TypeSignature Language="C#" Value="public static class Keyboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Keyboard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Keyboard" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Tastaturgerät dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Keyboard> -Klasse bietet die Tastatur-bezogene Ereignisse, Methoden und Eigenschaften, die Informationen über den Zustand der Tastatur bereitstellen.  
+  
+ Jedes der Ereignisse, die <xref:System.Windows.Input.Keyboard> definiert ein angefügtes Ereignis auch von den Klassen Basiselement erneut zur Verfügung gestellt wird <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> als ein neues Routingereignis. Im Allgemeinen ist es einfacher, behandeln Tastaturereignisse für eine Anwendung auf <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement>, anstatt die <xref:System.Windows.Input.Keyboard> Ereignisse. Weitere Informationen finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ In der Reihenfolge nach einem Element, um Tastatureingaben zu empfangen muss das Element den Fokus erhalten kann. Die meisten <xref:System.Windows.UIElement> abgeleiteten Objekte werden standardmäßig den Fokus erhalten. Andernfalls, um ein Element den Fokus erhalten kann festzulegen, setzen die <xref:System.Windows.UIElement.Focusable%2A> -Eigenschaft für das Basiselement um `true`.  Weitere Informationen über die Basiselemente finden Sie unter [Übersicht über die grundlegenden Elemente](~/docs/framework/wpf/advanced/base-elements-overview.md).  
+  
+ <xref:System.Windows.Controls.Panel>Klassen, z. B. <xref:System.Windows.Controls.StackPanel> und <xref:System.Windows.Controls.Canvas>, legen Sie den Standardwert <xref:System.Windows.UIElement.Focusable%2A> auf `false`. Aus diesem Grund für diese Objekte den Tastaturfokus erhalten können <xref:System.Windows.UIElement.Focusable%2A> muss festgelegt werden, um `true`.  
+  
+ Über den Tastaturfokus bezieht sich auf das Objekt, das Tastatureingaben empfängt. Das Element mit den Tastaturfokus hat <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> festgelegt `true`.  Es kann nur ein Element mit dem Tastaturfokus auf der gesamte Clientdesktop vorhanden sein.  Der logische Fokus bezieht sich auf das Objekt innerhalb eines Fokusbereichs, das Fokus besitzt.  Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md) und [Focus Overview](~/docs/framework/wpf/advanced/focus-overview.md).  
+  
+ Statische Member von der <xref:System.Windows.Input.Keyboard> Klasse Delegaten mit dem primären Replikat <xref:System.Windows.Input.KeyboardDevice> des aufrufenden Threads, sodass sie nicht unbedingt threadsicher sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> Methode, um zu bestimmen, ob ein Schlüssel in den umgeschalteten Zustand ist. Wenn die <xref:System.Windows.Input.Key> übergeben <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> ist umgeschaltet, der der Hintergrund einer Schaltfläche geändert wird.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardIsToggled](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardistoggled)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardIsToggled](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardistoggled)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddGotKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddGotKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddGotKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddGotKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.GotKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.GotKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddKeyboardInputProviderAcquireFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddKeyboardInputProviderAcquireFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddKeyboardInputProviderAcquireFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddKeyboardInputProviderAcquireFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddKeyDownHandler">
+      <MemberSignature Language="C#" Value="public static void AddKeyDownHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddKeyDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddKeyDownHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.KeyDown" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.KeyDown?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddKeyUpHandler">
+      <MemberSignature Language="C#" Value="public static void AddKeyUpHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddKeyUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddKeyUpHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.KeyUp" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.KeyUp?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLostKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddLostKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddLostKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddLostKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.LostKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.LostKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewGotKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewGotKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewGotKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddPreviewGotKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewKeyboardInputProviderAcquireFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewKeyboardInputProviderAcquireFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewKeyboardInputProviderAcquireFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddPreviewKeyboardInputProviderAcquireFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewKeyDownHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewKeyDownHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewKeyDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddPreviewKeyDownHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewKeyDown" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.PreviewKeyDown?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewKeyUpHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewKeyUpHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewKeyUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddPreviewKeyUpHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewKeyUp" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.PreviewKeyUp?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewLostKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewLostKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewLostKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.AddPreviewLostKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt eine angefügte eigenschaftenzugriffsmethoden für den Codezugriff und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Verarbeitung von Attributen von der <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearFocus">
+      <MemberSignature Language="C#" Value="public static void ClearFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.ClearFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Fokus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Fokus innerhalb eines Win32-Fensters ist, ruft WPF die <xref:System.Windows.Input.Keyboard.ClearFocus%2A> Methode für die Wiederherstellung des Fokus, wenn ein Menü geschlossen wird.  
+  
+ Beim Menümodus zu verlassen, wird der Win32-Fokus an das gehostete untergeordnete HWND zurückgegeben, und kein Element WPF den Fokus hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRestoreFocusMode">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RestoreFocusMode DefaultRestoreFocusMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Input.RestoreFocusMode DefaultRestoreFocusMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Keyboard.DefaultRestoreFocusMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RestoreFocusMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verhalten des [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] beim Wiederherstellen des Fokus.</summary>
+        <value>Ein Enumerationswert, der angibt, das Verhalten des [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] beim Wiederherstellen des Fokus. Die Standardeinstellung in <see cref="F:System.Windows.Input.RestoreFocusMode.Auto" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public static System.Windows.IInputElement Focus (System.Windows.IInputElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.IInputElement Focus(class System.Windows.IInputElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.Focus(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das über den Tastaturfokus festgelegt werden soll.</param>
+        <summary>Legt den Tastaturfokus auf das angegebene Element fest.</summary>
+        <returns>Das Element mit dem Tastaturfokus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach einem Element um Tastatureingaben zu empfangen muss das Element den Fokus erhalten kann. Damit ein Element den Fokus erhalten kann, legen die <xref:System.Windows.UIElement.Focusable%2A> -Eigenschaft für das Basiselement um `true`.  Weitere Informationen über die Basiselemente finden Sie unter [Übersicht über die grundlegenden Elemente](~/docs/framework/wpf/advanced/base-elements-overview.md).  <xref:System.Windows.Controls.Panel>Klassen, z. B. <xref:System.Windows.Controls.StackPanel> und <xref:System.Windows.Controls.Canvas>, legen Sie den Standardwert <xref:System.Windows.UIElement.Focusable%2A> auf `false`; aus diesem Grund für diese Objekte den Tastaturfokus erhalten können <xref:System.Windows.UIElement.Focusable%2A> muss festgelegt werden, um `true`.  
+  
+ Über den Tastaturfokus bezieht sich auf das Objekt, das Tastatureingaben empfängt. Das Element mit den Tastaturfokus hat <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> festgelegt `true`.  Es kann nur ein Element mit dem Tastaturfokus auf der gesamte Clientdesktop vorhanden sein.  Der logische Fokus bezieht sich auf das Objekt innerhalb eines Fokusbereichs, das Fokus besitzt.  Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md) und [Focus Overview](~/docs/framework/wpf/advanced/focus-overview.md).  
+  
+ Ein Element mit den Tastaturfokus hat auch der logische Fokus für den Fokusbereich, dem das Element angehört.  Ein Element mit dem logischen Fokus kann oder möglicherweise nicht über den Tastaturfokus.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Windows.FrameworkElement.Loaded> Ereignishandler, der über den Tastaturfokus auf legt eine <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
+ [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.IInputElement FocusedElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.IInputElement FocusedElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Keyboard.FocusedElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das über den Tastaturfokus verfügt.</summary>
+        <value>Elements mit Fokus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Über den Tastaturfokus bezieht sich auf das Objekt, das Tastatureingaben empfängt. Das Element mit den Tastaturfokus hat <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> festgelegt `true`.  Es kann nur ein Element mit dem Tastaturfokus auf der gesamte Clientdesktop vorhanden sein.  Der logische Fokus bezieht sich auf das Objekt innerhalb eines Fokusbereichs, das Fokus besitzt.  Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md) und [Focus Overview](~/docs/framework/wpf/advanced/focus-overview.md).  
+  
+ Ein Element mit den Tastaturfokus hat auch der logische Fokus für den Fokusbereich, dem das Element angehört.  Ein Element mit dem logischen Fokus kann oder möglicherweise nicht über den Tastaturfokus.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft das Element mit dem Tastaturfokus ab und wandelt es zu einem <xref:System.Windows.Controls.Control>.  Wenn das Element mit dem Tastaturfokus ist eine <xref:System.Windows.Controls.Control>, der Hintergrund des Elements geändert wird.  
+  
+ [!code-csharp[focussample#GetKeyboardFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#getkeyboardfocusedelement)]
+ [!code-vb[focussample#GetKeyboardFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#getkeyboardfocusedelement)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyStates">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.KeyStates GetKeyStates (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Input.KeyStates GetKeyStates(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.GetKeyStates(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der angegebene Schlüssel.</param>
+        <summary>Ruft den Satz für wichtige Zustände für den angegebenen Schlüssel ab.</summary>
+        <returns>Eine bitweise Kombination der <see cref="T:System.Windows.Input.KeyStates" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Input.KeyStates>ist ein wenig Feld-Enumeration. aus diesem Grund ist es möglich, dass ein Schlüssel werden in mehreren Zuständen befinden.  Beispielsweise könnte ein Schlüssel in den Zustand "gedrückt" ebenso wie in den umgeschalteten Zustand sein.  Verwenden Sie Bitvergleichsoperationen, um zu bestimmen, der exakt den Zustand oder die Zustände an, denen die Schlüssel im ist.  
+  
+ Die <xref:System.Windows.Input.Keyboard> Klasse bietet eine Reihe von statischen Methoden, die auch zum Abrufen von Informationen des Status verwendet werden kann.  Die Methoden sind: <xref:System.Windows.Input.Keyboard.IsKeyDown%2A>, <xref:System.Windows.Input.Keyboard.IsKeyUp%2A>, und <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> Methode, um festzustellen, wo die <xref:System.Windows.Input.Key.Return> Schlüssel befindet sich in der <xref:System.Windows.Input.KeyStates.Down> Zustand.  Ein bit AND-Operation wird verwendet, um das Vergleichen der <xref:System.Windows.Input.KeyStates> Merry <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> und die <xref:System.Windows.Input.Key.Down> Zustand. Wenn der Schlüssel ab, der den Hintergrund einer <xref:System.Windows.Controls.Button> geändert wird.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotKeyboardFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent GotKeyboardFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent GotKeyboardFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.GotKeyboardFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.GotKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyDown">
+      <MemberSignature Language="C#" Value="public static bool IsKeyDown (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsKeyDown(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.IsKeyDown(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der angegebene Schlüssel.</param>
+        <summary>Bestimmt, ob die angegebene Taste gedrückt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="key" /> ist Sie in der Zustand befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> Methode kann verwendet werden, um den Satz der Status eines bestimmten Schlüssels zu bestimmen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> Methode zum Ermitteln des Status eines bestimmten Schlüssels.  Die <xref:System.Windows.Input.Key.Return> Schlüssel wird zum Übergeben der <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> Methode.  Wenn die-Methode zurückgibt `true`, den Hintergrund einer <xref:System.Windows.Controls.Button> geändert wird.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardIsKeyDown](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardiskeydown)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardIsKeyDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardiskeydown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyToggled">
+      <MemberSignature Language="C#" Value="public static bool IsKeyToggled (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsKeyToggled(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.IsKeyToggled(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der angegebene Schlüssel.</param>
+        <summary>Bestimmt, ob der angegebene Schlüssel ein-oder ausgeschaltet wird.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="key" /> befindet sich in den umgeschalteten Zustand befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> Methode kann verwendet werden, um den Satz der Status eines bestimmten Schlüssels zu bestimmen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> Methode zum Ermitteln des Status eines bestimmten Schlüssels. Die <xref:System.Windows.Input.Key.Return> Schlüssel wird zum Übergeben der <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> Methode.  Wenn die-Methode zurückgibt `true`, klicken Sie dann den Hintergrund einer <xref:System.Windows.Controls.Button> geändert wird.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardIsToggled](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardistoggled)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardIsToggled](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardistoggled)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyUp">
+      <MemberSignature Language="C#" Value="public static bool IsKeyUp (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsKeyUp(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.IsKeyUp(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der zu überprüfende Schlüssel.</param>
+        <summary>Bestimmt, ob die angegebene Taste losgelassen wird.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="key" /> befindet sich in der nach-oben Zustand befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> Methode kann verwendet werden, um den Satz der Status eines bestimmten Schlüssels zu bestimmen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Input.Keyboard.IsKeyUp%2A> Methode zum Ermitteln des Status eines bestimmten Schlüssels.  Die <xref:System.Windows.Input.Key.Return> Schlüssel wird zum Übergeben der <xref:System.Windows.Input.Keyboard.IsKeyUp%2A> Methode.  Wenn die-Methode zurückgibt `true`, klicken Sie dann den Hintergrund einer <xref:System.Windows.Controls.Button> geändert wird.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardIsKeyUp](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardiskeyup)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardIsKeyUp](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardiskeyup)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyboardInputProviderAcquireFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent KeyboardInputProviderAcquireFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent KeyboardInputProviderAcquireFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDownEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent KeyDownEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent KeyDownEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.KeyDownEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.KeyDown" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUpEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent KeyUpEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent KeyUpEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.KeyUpEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.KeyUp" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostKeyboardFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent LostKeyboardFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent LostKeyboardFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.LostKeyboardFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.LostKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiers">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.ModifierKeys Modifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Input.ModifierKeys Modifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Keyboard.Modifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von <see cref="T:System.Windows.Input.ModifierKeys" /> , die derzeit gedrückt werden.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Windows.Input.ModifierKeys" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Input.ModifierKeys>ist ein wenig, daher ist es möglich, dass mehrere Zusatztasten gleichzeitig gedrückt werden.  Verwendung Bit Operations um zu bestimmen, den exakten Satz an Zusatztasten gedrückt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein bit AND Vergleich zum bestimmen, ob die <xref:System.Windows.Input.ModifierKeys.Control> gedrückten Modifizierertaste.  
+  
+ [!code-csharp[keyargssnippetsample#KeyboardModifiersBitOperation](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyboardmodifiersbitoperation)]
+ [!code-vb[keyargssnippetsample#KeyboardModifiersBitOperation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyboardmodifiersbitoperation)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewGotKeyboardFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewGotKeyboardFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewGotKeyboardFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.PreviewGotKeyboardFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewKeyboardInputProviderAcquireFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewKeyboardInputProviderAcquireFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewKeyboardInputProviderAcquireFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewKeyDownEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewKeyDownEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewKeyDownEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.PreviewKeyDownEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.PreviewKeyDown" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewKeyUpEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewKeyUpEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewKeyUpEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.PreviewKeyUpEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.PreviewKeyUp" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewLostKeyboardFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewLostKeyboardFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewLostKeyboardFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichner für Routingereignisse werden erstellt, wenn Routingereignisse registriert sind, und das Ergebnis wird als Feld in der Klasse, die das Routingereignis registriert gespeichert. Diese Bezeichner enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis. Sie verwenden häufig diese Bezeichner als Parameter für das System Ereignismethoden, um ein bestimmtes Routingereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryDevice">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.KeyboardDevice PrimaryDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.KeyboardDevice PrimaryDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Keyboard.PrimaryDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyboardDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Eingabegerät, das primäre Tastatur ab.</summary>
+        <value>Das Gerät.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft unterstützt die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGotKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveGotKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveGotKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemoveGotKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.GotKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.GotKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveKeyboardInputProviderAcquireFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveKeyboardInputProviderAcquireFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveKeyboardInputProviderAcquireFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemoveKeyboardInputProviderAcquireFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveKeyDownHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveKeyDownHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveKeyDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemoveKeyDownHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.KeyDown" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.KeyDown?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveKeyUpHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveKeyUpHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveKeyUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemoveKeyUpHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.KeyUp" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.KeyUp?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLostKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveLostKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveLostKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemoveLostKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.LostKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.LostKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewGotKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewGotKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewGotKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemovePreviewGotKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewKeyboardInputProviderAcquireFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewKeyboardInputProviderAcquireFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewKeyboardInputProviderAcquireFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemovePreviewKeyboardInputProviderAcquireFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewKeyDownHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewKeyDownHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewKeyDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemovePreviewKeyDownHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewKeyDown" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.PreviewKeyDown?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewKeyUpHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewKeyUpHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewKeyUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemovePreviewKeyUpHandler(System.Windows.DependencyObject,System.Windows.Input.KeyEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewKeyUp" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.PreviewKeyUp?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewLostKeyboardFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewLostKeyboardFocusHandler (System.Windows.DependencyObject element, System.Windows.Input.KeyboardFocusChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewLostKeyboardFocusHandler(class System.Windows.DependencyObject element, class System.Windows.Input.KeyboardFocusChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Keyboard.RemovePreviewLostKeyboardFocusHandler(System.Windows.DependencyObject,System.Windows.Input.KeyboardFocusChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardFocusChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet angefügte eigenschaftenzugriffsmethoden für Codezugriff auf die <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus?displayProperty=nameWithType> angefügtes Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

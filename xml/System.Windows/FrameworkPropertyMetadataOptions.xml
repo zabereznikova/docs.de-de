@@ -1,0 +1,236 @@
+<Type Name="FrameworkPropertyMetadataOptions" FullName="System.Windows.FrameworkPropertyMetadataOptions">
+  <TypeSignature Language="C#" Value="public enum FrameworkPropertyMetadataOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FrameworkPropertyMetadataOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FrameworkPropertyMetadataOptions" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Typen des Eigenschaftenverhaltens auf Frameworkebene an, die eine bestimmte Abhängigkeitseigenschaft im Eigenschaftensystem Windows Presentation Foundation (WPF) betreffen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration verwenden, beim Erstellen einer <xref:System.Windows.FrameworkPropertyMetadata> her, in der Sie eine oder mehrere der Metadaten-Frameworkebene optionseinstellungen angeben möchten.  
+  
+ Sie verwenden nicht mehr diese Enumeration nach dem Konstruktoraufruf. Stattdessen Abfrage, die bestimmte Metadaten option, indem überprüft wird während der Registrierung festgelegt wurde die `true` oder `false` Wert einer bestimmten Eigenschaft einer vorhandenen <xref:System.Windows.FrameworkPropertyMetadata>. Diese Eigenschaft entsprechen der <xref:System.Windows.FrameworkPropertyMetadataOptions> Enumerationswerte außer NotDataBindable, also <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A> auf der fertigen <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>.  
+  
+ Die Erfassung-Option gibt nur die Absicht an, in Journalen sein. Die tatsächliche Journaling möglicherweise oder kann nicht durch Journaling-Diensten, z. B., die in vorhandenen adressiert werden die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] -Viewer-Anwendung. Insbesondere Journaling einige bekannten Einschränkungen verfügt, wenn die Elementstruktur, durch Code erstellt wurde statt [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Navigation Overview](~/docs/framework/wpf/app-development/navigation-overview.md).  
+  
+> [!NOTE]
+>  Obwohl Vererbung von Eigenschaftenwerten Laufzeitstruktur Abhängigkeitseigenschaften funktionieren scheint, ist das Verhalten der Vererbung für eine nicht angefügte Eigenschaft über bestimmte Elementgrenzen in der Common Language Runtime-Struktur nicht definiert. Verwenden Sie immer <xref:System.Windows.DependencyProperty.RegisterAttached%2A> zum Registrieren von Eigenschaften in dem Sie angeben <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> in den Metadaten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.FrameworkPropertyMetadata> Konstruktor, und stellt mehrere Optionen mithilfe von Werten aus dem die <xref:System.Windows.FrameworkPropertyMetadataOptions> Enumeration.  
+  
+ [!code-csharp[PropertyMetadataAPIs#FPMCtor_DV_FPMO_PCC_CVC](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor_dv_fpmo_pcc_cvc)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AffectsArrange">
+      <MemberSignature Language="C#" Value="AffectsArrange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions AffectsArrange = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anordnungsphase der Layoutkomposition wird durch geänderte Werte dieser Abhängigkeitseigenschaft beeinflusst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsMeasure">
+      <MemberSignature Language="C#" Value="AffectsMeasure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions AffectsMeasure = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Messphase der Layoutkomposition wird durch geänderte Werte dieser Abhängigkeitseigenschaft beeinflusst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsParentArrange">
+      <MemberSignature Language="C#" Value="AffectsParentArrange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions AffectsParentArrange = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anordnungsphase des übergeordneten Elements wird durch geänderte Werte dieser Abhängigkeitseigenschaft beeinflusst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsParentMeasure">
+      <MemberSignature Language="C#" Value="AffectsParentMeasure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions AffectsParentMeasure = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Messphase des übergeordneten Elements wird durch geänderte Werte dieser Abhängigkeitseigenschaft beeinflusst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsRender">
+      <MemberSignature Language="C#" Value="AffectsRender" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions AffectsRender = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ändern von Werten dieser Abhängigkeitseigenschaft wirkt sich auf einen Aspekt der Rendering- oder Layoutkomposition aus (nicht auf das Maß oder die Anordnung).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindsTwoWayByDefault">
+      <MemberSignature Language="C#" Value="BindsTwoWayByDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions BindsTwoWayByDefault = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Data.BindingMode" /> für datenbindungen dieser Abhängigkeitseigenschaft ist standardmäßig auf <see cref="F:System.Windows.Data.BindingMode.TwoWay" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherits">
+      <MemberSignature Language="C#" Value="Inherits" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions Inherits = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.Inherits" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Werte dieser Abhängigkeitseigenschaft werden von untergeordneten Elementen geerbt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Journal">
+      <MemberSignature Language="C#" Value="Journal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions Journal = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.Journal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Werte dieser Abhängigkeitseigenschaft gespeichert oder wiederhergestellt durch Journalvorgänge oder beim Navigieren werden [!INCLUDE[TLA#tla_uri#initcap#plural](~/includes/tlasharptla-urisharpinitcapsharpplural-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurden keine Optionen angegeben; die Abhängigkeitseigenschaft verwendet das Standardverhalten der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Eigenschaftensystem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotDataBindable">
+      <MemberSignature Language="C#" Value="NotDataBindable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions NotDataBindable = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datenbindung an diese Abhängigkeitseigenschaft ist nicht zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverridesInheritanceBehavior">
+      <MemberSignature Language="C#" Value="OverridesInheritanceBehavior" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions OverridesInheritanceBehavior = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.OverridesInheritanceBehavior" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Werte dieser Abhängigkeitseigenschaft erstrecken sich zum Zweck der Vererbung von Eigenschaftswerten über separate Strukturen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SubPropertiesDoNotAffectRender">
+      <MemberSignature Language="C#" Value="SubPropertiesDoNotAffectRender" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FrameworkPropertyMetadataOptions SubPropertiesDoNotAffectRender = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkPropertyMetadataOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die untergeordneten Eigenschaften für den Wert dieser Abhängigkeitseigenschaft wirken sich auf keinen Aspekt des Renderings aus.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

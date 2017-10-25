@@ -1,0 +1,419 @@
+<Type Name="AttachmentBase" FullName="System.Net.Mail.AttachmentBase">
+  <TypeSignature Language="C#" Value="public abstract class AttachmentBase : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AttachmentBase extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.AttachmentBase" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine Basisklasse, die e-Mail-Anlage darstellt. Klassen <see cref="T:System.Net.Mail.Attachment" />, <see cref="T:System.Net.Mail.AlternateView" />, und <see cref="T:System.Net.Mail.LinkedResource" /> von dieser Klasse abgeleitet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AttachmentBase (System.IO.Stream contentStream);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese Anlage enthält.</param>
+        <summary>Instanziiert eine <see cref="T:System.Net.Mail.AttachmentBase" /> mit dem angegebenen <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AttachmentBase (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname, der den Inhalt für diese Anlage.</param>
+        <summary>Instanziiert eine <see cref="T:System.Net.Mail.AttachmentBase" /> mit dem angegebenen Dateinamen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AttachmentBase (System.IO.Stream contentStream, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.#ctor(System.IO.Stream,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese Anlage enthält.</param>
+        <param name="contentType">Der Typ des Inhalts.</param>
+        <summary>Instanziiert eine <see cref="T:System.Net.Mail.AttachmentBase" /> mit dem angegebenen <see cref="T:System.IO.Stream" /> und <see cref="T:System.Net.Mime.ContentType" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="contentType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AttachmentBase (System.IO.Stream contentStream, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese Anlage enthält.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Instanziiert eine <see cref="T:System.Net.Mail.AttachmentBase" /> mit dem angegebenen <see cref="T:System.IO.Stream" /> und dem Medientyp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AttachmentBase (string fileName, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.#ctor(System.String,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname, der den Inhalt für diese Anlage.</param>
+        <param name="contentType">Der Typ des Inhalts.</param>
+        <summary>Instanziiert eine <see cref="T:System.Net.Mail.AttachmentBase" /> mit dem angegebenen Dateinamen und den Inhaltstyp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="contentType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AttachmentBase (string fileName, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string fileName, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname, der den Inhalt für diese Anlage.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Instanziiert eine <see cref="T:System.Net.Mail.AttachmentBase" /> mit dem angegebenen Namen und Medien Dateityp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentId">
+      <MemberSignature Language="C#" Value="public string ContentId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentId" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.AttachmentBase.ContentId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die MIME-Inhalts-ID für diese Anlage ab oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.String" />, die die Inhalts-ID enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Es wurde versucht, <see cref="P:System.Net.Mail.AttachmentBase.ContentId" /> auf <see langword="null" /> festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream ContentStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream ContentStream" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.AttachmentBase.ContentStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Inhalt dieser Anlage-Datenstrom ab.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" />.  
+  
+ Der Inhalt dieser Anlage-Datenstrom.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Net.Mime.ContentType ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mime.ContentType ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.AttachmentBase.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.ContentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Inhaltstyp der Anlage ab.</summary>
+        <value>Ein <see cref="T:System.Net.Mime.ContentType" />.  
+  
+ Der Inhaltstyp für diese Anlage.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von der <see cref="T:System.Net.Mail.AttachmentBase" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Net.Mail.AttachmentBase.Dispose%2A> auf, wenn Sie <xref:System.Net.Mail.AttachmentBase> nicht mehr benötigen. Die <xref:System.Net.Mail.AttachmentBase.Dispose%2A>-Methode bewirkt, dass <xref:System.Net.Mail.AttachmentBase> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Net.Mail.AttachmentBase.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Net.Mail.AttachmentBase> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Net.Mail.AttachmentBase> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ **Hinweis** immer Aufruf <xref:System.Net.Mail.AttachmentBase.Dispose%2A> , bevor Sie den letzten Verweis auf Freigeben der <xref:System.Net.Mail.AttachmentBase>. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Net.Mail.AttachmentBase>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AttachmentBase.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Net.Mail.AttachmentBase" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Net.Mail.AttachmentBase> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferEncoding">
+      <MemberSignature Language="C#" Value="public System.Net.Mime.TransferEncoding TransferEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Mime.TransferEncoding TransferEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.AttachmentBase.TransferEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.TransferEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die Codierung der Anlage.</summary>
+        <value>Ein <see cref="T:System.Net.Mime.TransferEncoding" />.  
+  
+ Die Codierung für diese Anlage.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

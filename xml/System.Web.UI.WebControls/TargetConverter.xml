@@ -1,0 +1,130 @@
+<Type Name="TargetConverter" FullName="System.Web.UI.WebControls.TargetConverter">
+  <TypeSignature Language="C#" Value="public class TargetConverter : System.ComponentModel.StringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TargetConverter extends System.ComponentModel.StringConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TargetConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.StringConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert einen Wert, der den Speicherort (Ziel) in dem den Inhalt in eine Zeichenfolge aus einer Webnavigation resultierende angezeigt. Diese Klasse konvertiert eine Zeichenfolge auch einen Zielwert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TargetConverter> -Klasse erstellt eine Auflistung von Werten, die verwendet werden kann, um den Speicherort anzugeben, in denen angezeigt, wenn resultierende Inhalt aus einer Webnavigation, wie z. B. die Seite navigiert, ein <xref:System.Web.UI.WebControls.HyperLink> Steuerelement geklickt wird. Diese Auflistung wird häufig in einem Designer verwendet, um eine Liste mit Werten anzuzeigen, die für verwendet werden kann die `Target` Eigenschaft einer Navigation zu steuern, wie z. B. die <xref:System.Web.UI.WebControls.HyperLink> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TargetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TargetConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TargetConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TargetConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <summary>Gibt eine Auflistung von Standardwerten aus dem Standardkontext für den Datentyp, den, dem dieser Typkonverter vorgesehen ist.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> , die einen Standardsatz gültiger Werte enthält oder <see langword="null" /> , wenn der Datentyp einen Standardsatz von Werten nicht unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein internes-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TargetConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob die zurückgegebene Auflistung von Standardwerten aus der <see cref="M:System.Web.UI.WebControls.TargetConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> Methode ist eine exklusive Liste darstellt.</summary>
+        <returns>
+          <see langword="true" />, wenn die von der <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" />-Methode zurückgegebene <see cref="M:System.Web.UI.WebControls.TargetConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> eine vollständige Liste möglicher Werte darstellt, oder <see langword="false" />, wenn andere Werte möglich sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein internes-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TargetConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob dieses Objekt einen Standardsatz von Werten unterstützt, die aus einer Liste, die mit dem angegebenen Kontext ausgewählt werden können.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="M:System.Web.UI.WebControls.TargetConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> aufgerufen werden muss, um eine vom Objekt unterstützte Standardmenge von Werten zu ermitteln, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein internes-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

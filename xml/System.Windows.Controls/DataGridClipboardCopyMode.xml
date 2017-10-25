@@ -1,0 +1,73 @@
+<Type Name="DataGridClipboardCopyMode" FullName="System.Windows.Controls.DataGridClipboardCopyMode">
+  <TypeSignature Language="C#" Value="public enum DataGridClipboardCopyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridClipboardCopyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridClipboardCopyMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Konstanten, die angeben, ob Benutzer Daten kopieren können ein <see cref="T:System.Windows.Controls.DataGrid" /> Steuerelement in die Zwischenablage, und gibt an, ob der Header Spaltenwerte enthalten sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Controls.DataGrid.ClipboardCopyMode%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExcludeHeader">
+      <MemberSignature Language="C#" Value="ExcludeHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.DataGridClipboardCopyMode ExcludeHeader = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridClipboardCopyMode.ExcludeHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridClipboardCopyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzer können die Textwerten der ausgewählten Zellen in die Zwischenablage kopieren und Header-Spaltenwerte sind nicht enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeHeader">
+      <MemberSignature Language="C#" Value="IncludeHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.DataGridClipboardCopyMode IncludeHeader = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridClipboardCopyMode.IncludeHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridClipboardCopyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzer können die Textwerten der ausgewählten Zellen in die Zwischenablage kopieren und Spaltenwerte-Header enthalten sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.DataGridClipboardCopyMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridClipboardCopyMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridClipboardCopyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unterstützung der Zwischenablage ist deaktiviert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

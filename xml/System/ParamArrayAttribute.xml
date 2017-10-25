@@ -1,0 +1,101 @@
+<Type Name="ParamArrayAttribute" FullName="System.ParamArrayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ParamArrayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ParamArrayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ParamArrayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Methode mit einer variablen Anzahl von Argumenten aufgerufen werden kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ParamArrayAttribute> gibt an, dass ein Methodenparameter ein Parameterarray ist. Ein Parameterarray ermöglicht die Angabe einer unbekannten Anzahl von Argumenten. Ein Parameterarray muss der letzte Parameter in einer formellen Parameterliste sein, und es muss ein eindimensionales Array sein. Wenn die Methode aufgerufen wird, ermöglicht ein Parameterarray Argumente an eine Methode in eine von zwei Arten angegeben werden:  
+  
+-   Als ein einziger Ausdruck eines Typs, der implizit in den Parametertyp für das Array ist. Das Parameterarray fungiert als ein Value-Parameter.  
+  
+-   Als 0 (null) oder mehrere Argumente, wobei jedes Argument ein Ausdruck eines Datentyps ist, die in den Typ des Arrayelements Parameter Parameterarrayelements konvertierbar ist.  
+  
+ Im Beispiel im nächsten Abschnitt werden beide Aufrufkonventionen veranschaulicht.  
+  
+> [!NOTE]
+>  In der Regel die <xref:System.ParamArrayAttribute> nicht direkt im Code verwendet wird. Stattdessen Schlüsselwörter, wie z. B. `ParamArray` in Visual Basic und `params` in c#, dienen als Wrapper für die <xref:System.ParamArrayAttribute> Klasse. Einige Sprachen wie c#, möglicherweise sogar erfordern die Verwendung des Schlüsselworts und verhindern die Verwendung von <xref:System.ParamArrayAttribute>.  
+  
+ Während der Auflösung von funktionsüberladungen, wenn Compiler, Parameterarrays unterstützen, eine methodenüberladung auftreten, die nicht vorhanden, aber verfügt über einen weniger Parameter als eine Überladung, die ein Parameterarray enthält sie ersetzt die Methode durch die Überladung, die enthält die Parameterarray. Z. B. einen Aufruf der `String.Split()` Instanzmethode (nicht vorhandenen der <xref:System.String> Klasse) aufgelöst wird, wie ein Aufruf der <xref:System.String.Split%28System.Char%5B%5D%29?displayProperty=nameWithType> Methode. Der Compiler wird ein leeres Array des erforderlichen Typs auch an die Methode übergeben. Dies bedeutet, dass die Methode immer darauf vorbereitet sein muss, ein Array, dessen Länge 0 (null) ist, bei der Verarbeitung der Elemente im Parameterarray, zu behandeln. Dies wird im Beispiel veranschaulicht.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine `Temperature` -Klasse, enthält eine `Display` -Methode, die vorgesehen ist, um eine oder mehrere formatierte Temperaturwerte anzuzeigen. Die Methode verfügt über einen einzelnen Parameter `formats`, die als ein Parameterarray definiert ist.  
+  
+ [!code-csharp[System.ParamArrayAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ParamArrayAttribute/cs/Example.cs#1)]
+ [!code-vb[System.ParamArrayAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ParamArrayAttribute/vb/Example.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht die drei verschiedenen Aufrufe an die `Temperature.Display` Methode. In der ersten wird die Methode ein Array von Formatzeichenfolgen übergeben. Im zweiten Fall wird die Methode vier einzelne Formatzeichenfolgen als Argumente übergeben. Im dritten wird die-Methode ohne Argumente aufgerufen. Wie die Ausgabe des Beispiels veranschaulicht wird, übersetzen die Visual Basic- und C#-Compiler dies in einen Aufruf an die `Display` Methode ein leeres Zeichenfolgenarray.  
+  
+ [!code-csharp[System.ParamArrayAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ParamArrayAttribute/cs/Example.cs#2)]
+ [!code-vb[System.ParamArrayAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ParamArrayAttribute/vb/Example.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParamArrayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ParamArrayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ParamArrayAttribute" />-Klasse mit Standardeigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

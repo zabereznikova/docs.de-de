@@ -1,0 +1,13 @@
+<Namespace Name="System.Security.Authentication.ExtendedProtection">
+  <Docs>
+    <summary>Der Namespace <see cref="N:System.Security.Authentication.ExtendedProtection" /> stellt Unterstützung für die Authentifizierung mit erweitertem Schutz für Anwendungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Entwurf der integrierten Windows-Authentifizierung (IWA) ermöglicht, dass einige Anmeldeinformationen Challenge-Antworten universell, d. h., sie wieder verwendet oder weitergeleitet werden können. Wenn diese bestimmten Design-Funktion nicht benötigt wird dann die Herausforderung, die Antworten sollten erstellt mit mindestens Ziel spezifische Informationen und, bestenfalls auch einige channel-spezifische Informationen. Dienstleistungen können dann erweiterten Schutz, um sicherzustellen, dass Anmeldeinformationen Herausforderung Antworten spezifischen Informationen (Name Service-Anbieters oder SPN) enthalten, und bei Bedarf channelspezifische Informationen (ein Kanalbindungstoken oder CBT). Mit diesen Informationen in den Austausch von Anmeldeinformationen werden die Dienste besser vor böswilligen Verwendung von Anmeldeinformationen Challenge-Antworten zu schützen, die möglicherweise nicht ordnungsgemäß abgerufen wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

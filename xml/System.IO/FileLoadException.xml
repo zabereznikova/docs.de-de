@@ -1,0 +1,492 @@
+<Type Name="FileLoadException" FullName="System.IO.FileLoadException">
+  <TypeSignature Language="C#" Value="public class FileLoadException : System.IO.IOException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FileLoadException extends System.IO.IOException" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileLoadException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.IOException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme wird ausgelöst, wenn eine verwaltete Assembly gefunden wurde, die nicht geladen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Fehler dar, das auftritt, wenn eine <xref:System.Reflection.Assembly> Datei gefunden wird, aber nicht geladen werden.  
+  
+ Die <xref:System.IO.FileNotFoundException> Ausnahme wird ausgelöst, wenn die Datei kann nicht geladen werden, weil es nicht gefunden werden kann. Wenn die Datei befindet, aber nicht geladen aufgrund unzureichender Berechtigungen einen <xref:System.Security.SecurityException> ausgelöst.  
+  
+ `FileLoadException`verfügt über den Standardwert HRESULT COR_E_FILELOAD mit, die den Wert 0 x 80131621 auf, jedoch ist dies nicht der einzig mögliche HRESULT.  
+  
+ Wenn der Code nicht <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> Berechtigung, die Fehlermeldung für diese Ausnahme nur Datei oder das Verzeichnis Namen anstelle von voll qualifizierten Pfade enthalten kann.  
+  
+> [!NOTE]
+>  Diese Ausnahme nicht in enthalten ist die [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder, aber sie durch einige Member, die ausgelöst wird. Um in diesem Fall die Ausnahme abfangen möchten, Schreiben einer `catch` -Anweisung für <xref:System.IO.IOException> stattdessen.  
+  
+ **Tipps**  
+  
+ **Stellen Sie sicher, dass die Datei eine gültige .NET Framework-Assembly ist.**  
+ Diese Ausnahme wird ausgelöst, wenn die Datei keine gültige .NET Framework-Assembly ist. Weitere Informationen finden Sie unter <xref:System.Reflection.Assembly>.  
+  
+ **Überprüfen Sie außerdem sicherstellen, dass eine Assembly oder ein Modul nicht zweimal mit zwei unterschiedlichen Beweisen geladen wurde.**  
+ Den Beweis bilden die Informationen, die der Sicherheitsrichtlinie als Eingaben für Entscheidungen dienen, z. B., welche Berechtigungen einem Code erteilt werden können. Weitere Informationen finden Sie unter <xref:System.EnterpriseServices.Internal.Publish.GacRemove%2A> und unter <xref:System.Reflection.Assembly.Evidence%2A>.  
+  
+ **Wenn Sie die RegisterAssembly-Methode oder die UnregisterAssembly-Methode verwenden, überprüfen Sie außerdem sicherstellen, dass der Assemblyname nicht länger als MAX_PATH Zeichen ist.**  
+ Der Assemblyname darf nicht länger als MAX_PATH Zeichen sein. Weitere Informationen finden Sie unter <xref:System.EnterpriseServices.Internal.IComSoapPublisher.RegisterAssembly%2A> und <xref:System.EnterpriseServices.Internal.IComSoapPublisher.UnRegisterAssembly%2A>.  
+  
+ **Wenn das Laden einer Satellitenassembly, stellen Sie sicher, dass die angegebene CultureInfo zur CultureInfo der Datei entspricht.**  
+ Satellitenassemblys enthalten lokalisierte Ressourcen, die nicht lokalisierbaren ausführbaren Code sowie Ressourcen für eine bestimmte Kultur enthalten, die als Standardkultur bzw. neutrale Kultur dienen. Weitere Informationen finden Sie unter <xref:System.Reflection.Assembly.GetSatelliteAssembly%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLoadException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.FileLoadException" /> Klasse, indem die <see cref="P:System.Exception.Message" /> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, wie z. B. "konnte nicht geladen werden die angegebene Datei." Diese Meldung berücksichtigt die aktuelle Systemkultur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Exception.InnerException%2A> Eigenschaft und <xref:System.IO.FileLoadException.FileName%2A> -Eigenschaft der neuen Instanz mit initialisiert werden `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLoadException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt. Der Inhalt des <c>Nachricht</c> richtet sich an in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.FileLoadException" />-Klasse mit der angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IO.FileLoadException.Message%2A> -Eigenschaft der neuen Instanz unter Verwendung `message`. Die <xref:System.Exception.InnerException%2A> Eigenschaft und <xref:System.IO.FileLoadException.FileName%2A> -Eigenschaft der neuen Instanz mit initialisiert werden `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileLoadException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.FileLoadException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLoadException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt. Der Inhalt des <c>Nachricht</c> richtet sich an in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.FileLoadException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die `InnerException`-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die `InnerException`-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.IO.FileLoadException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.IO.FileLoadException.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ Weitere Informationen zu inneren Ausnahmen finden Sie unter <xref:System.Exception.InnerException%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLoadException (string message, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt. Der Inhalt des <c>Nachricht</c> richtet sich an in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.</param>
+        <param name="fileName">Ein <see cref="T:System.String" /> mit dem Namen der Datei, die nicht geladen wurde.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.FileLoadException" /> Klasse mit einer angegebenen Fehlermeldung und dem Namen der Datei, die nicht geladen werden konnte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IO.FileLoadException.Message%2A> -Eigenschaft der neuen Instanz unter Verwendung `message` und <xref:System.IO.FileLoadException.FileName%2A> Eigenschaft mit `fileName`. Die <xref:System.Exception.InnerException%2A> -Eigenschaft der neuen Instanz wird initialisiert, um `null`.  
+  
+ <xref:System.IO.FileLoadException.FileName%2A>ist nicht erforderlich, um eine Datei auf dem Datenträger gespeichert werden. Sie können einen beliebigen Teil eines Systems werden, die Zugriff auf Streams unterstützt. Je nach System kann diese Klasse z. B. auf ein physisches Gerät zugreifen sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLoadException (string message, string fileName, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string fileName, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.#ctor(System.String,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt. Der Inhalt des <c>Nachricht</c> richtet sich an in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.</param>
+        <param name="fileName">Ein <see cref="T:System.String" /> mit dem Namen der Datei, die nicht geladen wurde.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.FileLoadException" /> Klasse mit einer angegebenen Fehlermeldung und den Namen der Datei, die nicht geladen werden konnte, einen Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die `InnerException`-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die `InnerException`-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ <xref:System.IO.FileLoadException.FileName%2A>ist nicht erforderlich, um eine Datei auf dem Datenträger gespeichert werden. Sie können einen beliebigen Teil eines Systems werden, die Zugriff auf Streams unterstützt. Je nach System kann diese Klasse z. B. auf ein physisches Gerät zugreifen sein.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.IO.FileLoadException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.IO.FileLoadException.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ Weitere Informationen zu inneren Ausnahmen finden Sie unter <xref:System.Exception.InnerException%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileLoadException.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datei ab, die diese Ausnahme verursacht hat.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den Namen der Datei mit dem ungültigen Abbild oder ein null-Verweis, wenn kein Dateiname an den Konstruktor für die aktuelle Instanz übergeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namen der Datei an den Konstruktor für die aktuelle Instanz angegeben, sofern vorhanden. Wenn der Dateiname nicht angegeben wurde oder ein null-Verweis ist, gibt diese Eigenschaft einen null-Verweis zurück.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FusionLog">
+      <MemberSignature Language="C#" Value="public string FusionLog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FusionLog" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileLoadException.FusionLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Protokolldatei ab, in der beschrieben wird, warum das Laden einer Assembly fehlschlug.</summary>
+        <value>Eine Zeichenfolge, die von dem Assemblycache gemeldeten Fehler enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Legt die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit dem Dateinamen und zusätzlichen Informationen zur Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileLoadException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Fehlermeldung und den Namen der Datei ab, die diese Ausnahme verursacht hat.</summary>
+        <value>Eine Zeichenfolge mit der Fehlermeldung und dem Namen der Datei, die diese Ausnahme verursacht hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft überschreibt <xref:System.Exception.Message%2A>.  
+  
+ Wenn keine Meldung an den Konstruktor für die aktuelle Ausnahme bereitgestellt wurde, gibt diese Eigenschaft eine vom System bereitgestellten Fehlermeldung. Wenn die <xref:System.IO.FileLoadException.FileName%2A> Eigenschaft ist kein null-Verweis, der die Meldung enthält den Dateinamen ein, z. B. "kann nicht beim Laden der Datei eine `FileName`." (eine `FileName` stellt den Rückgabewert von <xref:System.IO.FileLoadException.FileName%2A>.) Wenn <xref:System.IO.FileLoadException.FileName%2A> ist `null`, dies ist in der vom System generierten Meldung als "(Null)" angezeigt. Die vom System generierten Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileLoadException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den vollqualifizierten Namen der aktuellen Ausnahme und ggf. die Fehlermeldung, die den Namen der inneren Ausnahme und die stapelüberwachung zurück.</summary>
+        <returns>Eine Zeichenfolge, die den vollqualifizierten Namen dieser Ausnahme und ggf. die Fehlermeldung enthält der Namen der inneren Ausnahme und dem Stapel zu verfolgen, je nachdem, welche <see cref="T:System.IO.FileLoadException" /> Konstruktor verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.ToString%2A>.  
+  
+ Die Zeichenfolgendarstellung von dieser Methode zurückgegebene enthält den Namen der Ausnahme, den Wert des der <xref:System.IO.FileLoadException.Message%2A> den Wert des der <xref:System.IO.FileLoadException.FileName%2A> -Eigenschaft, und das Ergebnis des Aufrufs <xref:System.Environment.StackTrace%2A>. Wenn keines dieser Member ist ein null-Verweis, ist der Wert nicht in der zurückgegebenen Zeichenfolge enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

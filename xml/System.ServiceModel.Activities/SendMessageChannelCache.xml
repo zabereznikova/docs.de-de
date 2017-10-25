@@ -1,0 +1,211 @@
+<Type Name="SendMessageChannelCache" FullName="System.ServiceModel.Activities.SendMessageChannelCache">
+  <TypeSignature Language="C#" Value="public sealed class SendMessageChannelCache : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SendMessageChannelCache extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.SendMessageChannelCache" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Erweiterung dar, die die Anpassung der Cachefreigabeebenen, der Einstellungen des Channelfactorycaches und der Einstellungen des Channelcaches für Workflows ermöglicht, die Meldungen mit <see cref="T:System.ServiceModel.Activities.Send" />- Messagingaktivitäten an Dienstendpunkte senden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist bestimmt für Workflows, die Meldungen an Dienstendpunkte senden. Diese Workflows sind in der Regel Clientworkflows, könnten jedoch auch Workflowdienste sein, die in einem <xref:System.ServiceModel.WorkflowServiceHost> gehostet werden.  
+  
+ Standardmäßig wird in einem von einem <xref:System.ServiceModel.WorkflowServiceHost> gehosteten Workflow der von <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten verwendete Cache von allen Workflowinstanzen im <xref:System.ServiceModel.WorkflowServiceHost> (Zwischenspeichern auf Hostebene) gemeinsam verwendet. Bei einen Clientworkflow, der nicht von einem <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, steht der Cache nur der Workflowinstanz zur Verfügung (Zwischenspeichern auf Instanzebene). In einem Workflow, der in der Konfiguration definierte Endpunkte besitzt, ist das Zwischenspeichern für jede Sendeaktivität standardmäßig deaktiviert.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]zum Ändern der standardcachefreigabeebenen und Einstellungen für die Kanalfactory und den channelcache Zwischenspeichern finden Sie unter [ändern die Cachefreigabeebenen für Aktivitäten senden](~/docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse verwendet wird, um einen Channelcache zwischen zwei Workflowanwendungen in einer einzelnen Anwendungsdomäne freizugeben.  
+  
+ [!code-csharp[ChannelCache#0](~/samples/snippets/csharp/VS_Snippets_CFX/channelcache/cs/client.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMessageChannelCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageChannelCache.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendMessageChannelCache" />-Klasse mit Standardeinstellungen für den Factorycache und den Channelcache.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMessageChannelCache (System.ServiceModel.Activities.ChannelCacheSettings factorySettings, System.ServiceModel.Activities.ChannelCacheSettings channelSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Activities.ChannelCacheSettings factorySettings, class System.ServiceModel.Activities.ChannelCacheSettings channelSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageChannelCache.#ctor(System.ServiceModel.Activities.ChannelCacheSettings,System.ServiceModel.Activities.ChannelCacheSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="factorySettings" Type="System.ServiceModel.Activities.ChannelCacheSettings" />
+        <Parameter Name="channelSettings" Type="System.ServiceModel.Activities.ChannelCacheSettings" />
+      </Parameters>
+      <Docs>
+        <param name="factorySettings">Die Cacheeinstellungen für zwischengespeicherte Channelfactorys.</param>
+        <param name="channelSettings">Die Cacheeinstellungen für zwischengespeicherte Channels.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendMessageChannelCache" />-Klasse mit benutzerdefinierten Einstellungen für den Cache und den Channelcache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] Channelfactorys finden Sie unter <xref:System.ServiceModel.ChannelFactory> und <xref:System.ServiceModel.ChannelFactory%601>.  
+  
+ Sie können festlegen, nur den Channelfactorycache zu verwenden und den Channelcache zu deaktivieren, indem Sie den `channelSettings`-Parameter an diesen Konstruktor übergeben, der auf eine  <xref:System.ServiceModel.Activities.ChannelCacheSettings>-Instanz mit dem <xref:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache%2A>-Wert 0 initialisiert wurde. Um den Cache sowohl für den Channelfactorycache als auch den Channelcache vollständig zu deaktivieren, übergeben Sie den `factorySettings`-Parameter an diesen Konstruktor, der mit einer <xref:System.ServiceModel.Activities.ChannelCacheSettings>-Instanz mit dem <xref:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache%2A>-Wert 0 initialisiert wurde. Beachten Sie, dass Sie den Channelcache nicht aktivieren können, wenn der Channelfactorycache deaktiviert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse verwendet wird, um einen Channelcache zwischen zwei Workflowanwendungen in einer einzelnen Anwendungsdomäne freizugeben.  
+  
+ [!code-csharp[ChannelCache#0](~/samples/snippets/csharp/VS_Snippets_CFX/channelcache/cs/client.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMessageChannelCache (System.ServiceModel.Activities.ChannelCacheSettings factorySettings, System.ServiceModel.Activities.ChannelCacheSettings channelSettings, bool allowUnsafeCaching);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Activities.ChannelCacheSettings factorySettings, class System.ServiceModel.Activities.ChannelCacheSettings channelSettings, bool allowUnsafeCaching) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageChannelCache.#ctor(System.ServiceModel.Activities.ChannelCacheSettings,System.ServiceModel.Activities.ChannelCacheSettings,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="factorySettings" Type="System.ServiceModel.Activities.ChannelCacheSettings" />
+        <Parameter Name="channelSettings" Type="System.ServiceModel.Activities.ChannelCacheSettings" />
+        <Parameter Name="allowUnsafeCaching" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="factorySettings">Die Cacheeinstellungen für zwischengespeicherte Channelfactorys.</param>
+        <param name="channelSettings">Die Cacheeinstellungen für zwischengespeicherte Channels.</param>
+        <param name="allowUnsafeCaching">
+          <see langword="true" />So aktivieren Sie das Zwischenspeichern auf; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendMessageChannelCache" />-Klasse mit benutzerdefinierten Factorycacheeinstellungen, benutzerdefinierten Channelcacheeinstellungen und einem Wert, der angibt, ob das Zwischenspeichern aktiviert werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist der Cache nur verfügbar für <xref:System.ServiceModel.Activities.Send>-Aktivitäten, die keine in der Konfiguration definierten Endpunkte verwenden. Jedoch wenn Sie aktivieren möchten auf Zwischenspeichern in diesem Fall Aufrufen dieses Konstruktors mit den `allowUnsafeCaching` Parametersatz auf `true`. Fügen Sie danach die neue Instanz dieser Klasse als Erweiterung einem Workflowdiensthost oder einer Workflowinstanz hinzu.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] Channelfactorys finden Sie unter <xref:System.ServiceModel.ChannelFactory> und <xref:System.ServiceModel.ChannelFactory%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowUnsafeCaching">
+      <MemberSignature Language="C#" Value="public bool AllowUnsafeCaching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowUnsafeCaching" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendMessageChannelCache.AllowUnsafeCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Zwischenspeichern aktiviert werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />So aktivieren Sie das Zwischenspeichern auf; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ServiceModel.Activities.Send>-Aktivität im Workflow über Endpunkte verfügt, die in der Konfiguration definiert sind, könnte die Zwischenspeicherung unsicher sein und wird daher standardmäßig deaktiviert. Jedoch, wenn Sie aktivieren möchten Zwischenspeichern auf legen Sie diese Eigenschaft auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.ChannelCacheSettings ChannelSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.ChannelCacheSettings ChannelSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendMessageChannelCache.ChannelSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.ChannelCacheSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellungen des Channelcaches ab oder legt sie fest.</summary>
+        <value>Die Einstellungen des Channelcaches.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendMessageChannelCache.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.ServiceModel.Activities.SendMessageChannelCache" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FactorySettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.ChannelCacheSettings FactorySettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.ChannelCacheSettings FactorySettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendMessageChannelCache.FactorySettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.ChannelCacheSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellungen des Channelfactorycaches ab oder legt sie fest.</summary>
+        <value>Die Einstellungen des Channelfactorycaches.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Kanalfactorycache stellt zwischengespeicherte Kanalfactories dar. [!INCLUDE[crabout](~/includes/crabout-md.md)] Channelfactorys finden Sie unter <xref:System.ServiceModel.ChannelFactory> und <xref:System.ServiceModel.ChannelFactory%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

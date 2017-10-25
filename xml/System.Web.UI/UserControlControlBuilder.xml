@@ -1,0 +1,108 @@
+<Type Name="UserControlControlBuilder" FullName="System.Web.UI.UserControlControlBuilder">
+  <TypeSignature Language="C#" Value="public class UserControlControlBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserControlControlBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UserControlControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellen eine Instanz eines Benutzersteuerelements unterstützt ASP.NET der Parser.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Steuerelement auf einer Seite bezieht sich auf den Standardwert standardmäßig <xref:System.Web.UI.UserControlControlBuilder> Klasse. Entwickler von Seiten verwenden Sie nicht die <xref:System.Web.UI.UserControlControlBuilder> -Klasse direkt verwendet. Autoren von Steuerelementen können benutzerdefinierte Steuerelement-Generator-Funktionalität durch Erweitern dieser Klasse erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserControlControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControlControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.UserControlControlBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildObject">
+      <MemberSignature Language="C#" Value="public override object BuildObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object BuildObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControlControlBuilder.BuildObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz des Steuerelements durch identifiziert die <see cref="P:System.Web.UI.ControlBuilder.ControlType" /> Eigenschaft.</summary>
+        <returns>Eine Instanz eines Benutzersteuerelements identifizierten <see cref="P:System.Web.UI.ControlBuilder.ControlType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsTagInnerText">
+      <MemberSignature Language="C#" Value="public override bool NeedsTagInnerText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool NeedsTagInnerText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControlControlBuilder.NeedsTagInnerText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der Steuerelementgenerator inneren Text des Steuerelements abrufen muss.</summary>
+        <returns>
+          <see langword="true" />Wenn der Steuerelementgenerator inneren Text des Steuerelements erforderlich ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.UserControlControlBuilder.NeedsTagInnerText%2A> -Methode zurückkehrt `true`, die <xref:System.Web.UI.UserControlControlBuilder.SetTagInnerText%2A> -Methode aufgerufen wird. Wenn das Steuerelement im Designer-Umgebung basiert die <xref:System.Web.UI.UserControlControlBuilder.NeedsTagInnerText%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTagInnerText">
+      <MemberSignature Language="C#" Value="public override void SetTagInnerText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetTagInnerText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UserControlControlBuilder.SetTagInnerText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text zur Verfügung gestellt werden.</param>
+        <summary>Stellt die <see cref="T:System.Web.UI.UserControlControlBuilder" /> Objekt mit dem inneren Text des Steuerelementtags.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

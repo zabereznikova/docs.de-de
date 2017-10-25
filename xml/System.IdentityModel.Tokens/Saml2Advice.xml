@@ -1,0 +1,125 @@
+<Type Name="Saml2Advice" FullName="System.IdentityModel.Tokens.Saml2Advice">
+  <TypeSignature Language="C#" Value="public class Saml2Advice" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2Advice extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2Advice" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ratschläge-Element, das in [Saml2Core 2.6.1] angegeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Informationen kann von Anwendungen ohne Auswirkung auf die Semantik oder die Gültigkeit der Assertion ignoriert werden. [Saml2Core 2.6.1]  
+  
+ Weitere Informationen über das Element, das diese Klasse darstellt, finden Sie unter der SAML v2. 0-kernspezifikation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2Advice ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2Advice.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.Saml2Advice" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2Advice.AssertionIdReferences%2A>, <xref:System.IdentityModel.Tokens.Saml2Advice.Assertions%2A>, und <xref:System.IdentityModel.Tokens.Saml2Advice.AssertionUriReferences%2A> Eigenschaften werden leere Sammlungen initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssertionIdReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2Id&gt; AssertionIdReferences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Tokens.Saml2Id&gt; AssertionIdReferences" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Advice.AssertionIdReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2Id&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Assertionen verwiesen wird, nach ID auf.</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.IdentityModel.Tokens.Saml2Id" /> , enthält die IDs, die die Assertionen zu verweisen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der AssertionIDRef Elemente in diesem Rat-Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assertions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2Assertion&gt; Assertions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Tokens.Saml2Assertion&gt; Assertions" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Advice.Assertions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2Assertion&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Assertionen, die als Wert angegeben.</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.IdentityModel.Tokens.Saml2Assertion" /> , enthält die Assertionen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der Assertion Elemente in diesem Rat-Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssertionUriReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Uri&gt; AssertionUriReferences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Uri&gt; AssertionUriReferences" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Advice.AssertionUriReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Assertionen, die mit einem URI verwiesen.</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.Uri" /> , die URIs enthält, die die Assertionen zu verweisen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der AssertionURIRef Elemente in diesem Rat-Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

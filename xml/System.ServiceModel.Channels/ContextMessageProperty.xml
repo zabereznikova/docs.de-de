@@ -1,0 +1,259 @@
+<Type Name="ContextMessageProperty" FullName="System.ServiceModel.Channels.ContextMessageProperty">
+  <TypeSignature Language="C#" Value="public class ContextMessageProperty : System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ContextMessageProperty extends System.Object implements class System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ContextMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IMessageProperty</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Eigenschaft, die zur Übermittlung von Kontext zwischen der Anwendungs- und Kanalschicht entweder auf dem Client oder dem Dienst verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Auflistung von einer <xref:System.ServiceModel.Channels.Message> hinzugefügten Eigenschaften, die Nachrichten korreliert, die Teil einer Konversation zwischen Client und Dienst sind.  
+  
+ Wenn <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> `true` ist, wird Kontext in der Kanalschicht erstellt, und allen eingehenden Nachrichten auf dem Client und dem Dienst wird diese Kontexteigenschaft vom Kontextkanal angefügt. Wenn <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> `false` ist, wird mithilfe von <xref:System.ServiceModel.Channels.ContextMessageProperty> einer ausgehenden Nachricht auf dem Client oder Dienst Kontext auf der Anwendungsebene angefügt.  
+  
+ Die <xref:System.ServiceModel.Channels.ContextMessageProperty> kann entweder auf dem Client oder dem Dienst verwendet werden. Alternativ kann nur auf dem Client mithilfe der <xref:System.ServiceModel.Channels.IContextManager.GetContext%2A>-Eigenschaft und der <xref:System.ServiceModel.Channels.IContextManager.SetContext%2A>-Eigenschaft der aktuelle Kontext abgerufen oder ein neuer Kontext für die Kanalinstanz festgelegt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextMessageProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextMessageProperty (System.Collections.Generic.IDictionary&lt;string,string&gt; context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das <see cref="T:System.Collections.Generic.IDictionary`2" />, das die zum Korrelieren von Nachrichten mit einer bestimmten Konversation zwischen einem Client und einem Dienst verwendeten Kontextinformationen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" />-Klasse mit einem angegebenen Kontext.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrReplaceInMessage">
+      <MemberSignature Language="C#" Value="public void AddOrReplaceInMessage (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOrReplaceInMessage(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.AddOrReplaceInMessage(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.ServiceModel.Channels.Message" />, deren Kontextnachrichteneigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert der <see langword="ContextMessageProperty" />-Eigenschaft in einer angegebenen <see cref="T:System.ServiceModel.Channels.Message" /> aus der aktuellen Instanz von <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.ContextMessageProperty.AddOrReplaceInMessage%28System.ServiceModel.Channels.Message%29?displayProperty=nameWithType>-Methode überschreibt den Wert der `ContextMessageProperty`-Eigenschaft, wenn ein Wert bereits festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrReplaceInMessageProperties">
+      <MemberSignature Language="C#" Value="public void AddOrReplaceInMessageProperties (System.ServiceModel.Channels.MessageProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOrReplaceInMessageProperties(class System.ServiceModel.Channels.MessageProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.AddOrReplaceInMessageProperties(System.ServiceModel.Channels.MessageProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.ServiceModel.Channels.MessageProperties" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Auflistung von <see cref="T:System.ServiceModel.Channels.MessageProperties" />, deren Kontextnachrichteneigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert der <see langword="ContextMessageProperty" />-Eigenschaft in einer angegebenen Auflistung von <see cref="T:System.ServiceModel.Channels.MessageProperties" /> aus der aktuellen Instanz von <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" /> fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="properties" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Context" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ContextMessageProperty.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kontext ab, der zum Korrelieren von Nachrichten in einer Konversation zwischen einem Client und einem Dienst verwendet wird.</summary>
+        <value>Das <see cref="T:System.Collections.Generic.IDictionary`2" />, das die zum Korrelieren von Nachrichten in einer bestimmten Konversation zwischen einem Client und einem Dienst verwendeten Kontextinformationen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.IMessageProperty CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IMessageProperty CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie der aktuellen Instanz von <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" />.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.IMessageProperty" />, die eine versiegelte Kopie der aktuellen Instanz von <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ContextMessageProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Kontextnachrichteneigenschaft ab.</summary>
+        <value>Die Zeichenfolge "ContextMessageProperty".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateFromHttpCookieHeader">
+      <MemberSignature Language="C#" Value="public static bool TryCreateFromHttpCookieHeader (string httpCookieHeader, out System.ServiceModel.Channels.ContextMessageProperty context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryCreateFromHttpCookieHeader(string httpCookieHeader, [out] class System.ServiceModel.Channels.ContextMessageProperty&amp; context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.TryCreateFromHttpCookieHeader(System.String,System.ServiceModel.Channels.ContextMessageProperty@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpCookieHeader" Type="System.String" />
+        <Parameter Name="context" Type="System.ServiceModel.Channels.ContextMessageProperty&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="httpCookieHeader">Der Name des HTTP-Cookieheaders, aus denen die <c>Kontext</c> Eigenschaftswerte werden initialisiert werden.</param>
+        <param name="context">Diese Methode gibt <see langword="true" />, <c>Kontext</c> enthält eine <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" /> , enthält die <see langword="ContextMessageProperty" /> zugeordneten der <c>HttpCookieHeader</c>. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, eine <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" /> aus den Schlüssel-/Wertpaaren eines angegebenen HTTP-Cookies zu instanziieren.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Wert für die <see langword="ContextMessageProperty" /> aus dem <paramref name="httpCookieHeader" /> abgerufen wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="httpCookieHeader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.Message message, out System.ServiceModel.Channels.ContextMessageProperty contextMessageProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.Message message, [out] class System.ServiceModel.Channels.ContextMessageProperty&amp; contextMessageProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.TryGet(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.ContextMessageProperty@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="contextMessageProperty" Type="System.ServiceModel.Channels.ContextMessageProperty&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.ServiceModel.Channels.Message" />, aus denen die Kontextnachrichteneigenschaften abgerufen werden sollen.</param>
+        <param name="contextMessageProperty">Diese Methode gibt <see langword="true" />, <c>ContextMessageProperty</c> enthält eine <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" /> , enthält die <see langword="ContextMessageProperty" /> zugeordneten der <c>Nachricht</c>. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, die <see langword="ContextMessageProperty" /> aus den Eigenschaften einer angegebenen Nachricht abzurufen.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Wert für die <see langword="ContextMessageProperty" /> aus dem <paramref name="message" /> abgerufen wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.MessageProperties properties, out System.ServiceModel.Channels.ContextMessageProperty contextMessageProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.MessageProperties properties, [out] class System.ServiceModel.Channels.ContextMessageProperty&amp; contextMessageProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ContextMessageProperty.TryGet(System.ServiceModel.Channels.MessageProperties,System.ServiceModel.Channels.ContextMessageProperty@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.ServiceModel.Channels.MessageProperties" />
+        <Parameter Name="contextMessageProperty" Type="System.ServiceModel.Channels.ContextMessageProperty&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die <see cref="T:System.ServiceModel.Channels.MessageProperties" />, aus denen die Kontextnachrichteneigenschaften abgerufen werden sollen.</param>
+        <param name="contextMessageProperty">Diese Methode gibt <see langword="true" />, <c>ContextMessageProperty</c> enthält eine <see cref="T:System.ServiceModel.Channels.ContextMessageProperty" /> , enthält die <see langword="ContextMessageProperty" /> zugeordneten der <c>Eigenschaften</c>. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, die <see langword="ContextMessageProperty" /> aus einer angegebenen Auflistung von Nachrichteneigenschaften abzurufen.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Wert für die <see langword="ContextMessageProperty" /> aus dem <paramref name="properties" /> abgerufen wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

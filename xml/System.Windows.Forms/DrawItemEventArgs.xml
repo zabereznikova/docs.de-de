@@ -1,0 +1,389 @@
+<Type Name="DrawItemEventArgs" FullName="System.Windows.Forms.DrawItemEventArgs">
+  <TypeSignature Language="C#" Value="public class DrawItemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawItemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see langword="DrawItem" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DrawItem` Ereignis wird durch Ownerdrawn-Steuerelemente, z. B. die <xref:System.Windows.Forms.ListBox> und <xref:System.Windows.Forms.ComboBox> Steuerelemente. Er enthält alle Informationen, die für den Benutzer zum Zeichnen des angegebenen Elements, einschließlich des Elementindexes erforderlich ist der <xref:System.Drawing.Rectangle>, und die <xref:System.Drawing.Graphics> auf dem gezeichnet werden soll.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die gezeichneten Elemente eine feste Größe und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass eine <xref:System.Windows.Forms.ListBox> Steuerelement mit dem Namen `listBox1` wurde hinzugefügt, ein Formular enthält und dass die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die im Beispielcode definierten Ereignishandler. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox> mit dem Text "Apple", "Orange" und "Plum" in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawItemEventArgs (System.Drawing.Graphics graphics, System.Drawing.Font font, System.Drawing.Rectangle rect, int index, System.Windows.Forms.DrawItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, class System.Drawing.Font font, valuetype System.Drawing.Rectangle rect, int32 index, valuetype System.Windows.Forms.DrawItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawItemEventArgs.#ctor(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DrawItemState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.DrawItemState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> Oberfläche, auf dem gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zu verwenden, in der Regel des übergeordnete Steuerelements <see cref="T:System.Drawing.Font" /> Eigenschaft.</param>
+        <param name="rect">Die <see cref="T:System.Drawing.Rectangle" /> Grenzen innerhalb gezeichnet werden soll.</param>
+        <param name="index">Die <see cref="T:System.Windows.Forms.Control.ControlCollection" /> Indexwert des Elements, das gerade gezeichnet wird.</param>
+        <param name="state">Des Steuerelements <see cref="T:System.Windows.Forms.DrawItemState" /> Informationen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DrawItemEventArgs" /> Klasse für das angegebene Steuerelement mit der angegebenen Schriftart, Zustand, Oberfläche gezeichnet werden soll, auf und die Grenzen innerhalb gezeichnet werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawItemEventArgs (System.Drawing.Graphics graphics, System.Drawing.Font font, System.Drawing.Rectangle rect, int index, System.Windows.Forms.DrawItemState state, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, class System.Drawing.Font font, valuetype System.Drawing.Rectangle rect, int32 index, valuetype System.Windows.Forms.DrawItemState state, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawItemEventArgs.#ctor(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DrawItemState,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.DrawItemState" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> Oberfläche, auf dem gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zu verwenden, in der Regel des übergeordnete Steuerelements <see cref="T:System.Drawing.Font" /> Eigenschaft.</param>
+        <param name="rect">Die <see cref="T:System.Drawing.Rectangle" /> Grenzen innerhalb gezeichnet werden soll.</param>
+        <param name="index">Die <see cref="T:System.Windows.Forms.Control.ControlCollection" /> Indexwert des Elements, das gerade gezeichnet wird.</param>
+        <param name="state">Des Steuerelements <see cref="T:System.Windows.Forms.DrawItemState" /> Informationen.</param>
+        <param name="foreColor">Vordergrund <see cref="T:System.Drawing.Color" /> zum Zeichnen des Steuerelement mit.</param>
+        <param name="backColor">Hintergrund <see cref="T:System.Drawing.Color" /> zum Zeichnen des Steuerelement mit.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DrawItemEventArgs" /> Klasse für das angegebene Steuerelement mit der angegebenen Schriftart, Status Vordergrundfarbe, Hintergrundfarbe, Oberfläche gezeichnet werden soll, auf und die Grenzen zu zeichnenden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawItemEventArgs.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hintergrundfarbe des Elements, das gerade gezeichnet wird.</summary>
+        <value>Hintergrund <see cref="T:System.Drawing.Color" /> des Elements, das gerade gezeichnet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Zustand des Elements ist <xref:System.Windows.Forms.DrawItemState?displayProperty=nameWithType>, <xref:System.Windows.Forms.DrawItemEventArgs.BackColor%2A> festgelegt ist, um <xref:System.Drawing.SystemColors.HighlightText%2A?displayProperty=nameWithType>. Wenn der Zustand des Elements nicht ist <xref:System.Windows.Forms.DrawItemState.Selected>, die <xref:System.Windows.Forms.DrawItemEventArgs.BackColor%2A> -Eigenschaftensatz auf <xref:System.Drawing.SystemColors.Window%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType> Ereignis. Mithilfe dieses Berichts können, erfahren Sie, wenn das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListBox> mit der Bezeichnung `ListBox1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#153](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#153)]
+ [!code-vb[System.Windows.Forms.EventExamples#153](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#153)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawItemEventArgs.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Rechteck, das die Grenzen des Elements darstellt, die gezeichnet wird.</summary>
+        <value>Die <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des Elements, das gerade gezeichnet wird darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die gezeichneten Elemente eine feste Größe und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass eine <xref:System.Windows.Forms.ListBox> Steuerelement mit dem Namen `listBox1` wurde hinzugefügt, ein Formular enthält und dass die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die im Beispielcode definierten Ereignishandler. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox> mit dem Text "Apple", "Orange" und "Plum" in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBackground">
+      <MemberSignature Language="C#" Value="public virtual void DrawBackground ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawBackground() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawItemEventArgs.DrawBackground" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet den Hintergrund innerhalb der Grenzen, angegeben der <see cref="Overload:System.Windows.Forms.DrawItemEventArgs.#ctor" /> Konstruktor und die entsprechende Farbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Element gezeichnet werden <xref:System.Windows.Forms.DrawItemState.Selected>, Hintergrund mit hervorgehobenem Text gezeichnet wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die Elemente, die eine feste Größe aufweisen und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Windows.Forms.ListBox> Steuerelement namens `listBox1` wurde hinzugefügt, um ein Formular, und dass die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die Ereignishandler, die im Beispielcode definiert ist. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox> mit dem Text "Apple", "Orange" und "Plum", in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DrawItemEventArgs.DrawBackground" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see cref="M:System.Windows.Forms.DrawItemEventArgs.DrawBackground" /> -Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawFocusRectangle">
+      <MemberSignature Language="C#" Value="public virtual void DrawFocusRectangle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawFocusRectangle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawItemEventArgs.DrawFocusRectangle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet ein Fokusrechteck innerhalb der Grenzen, angegeben der <see cref="Overload:System.Windows.Forms.DrawItemEventArgs.#ctor" /> Konstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Element gezeichnet werden hat <xref:System.Windows.Forms.DrawItemState.Focus>, Fokusrechtecks gezeichnet wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die Elemente, die eine feste Größe aufweisen und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Windows.Forms.ListBox> Steuerelement namens `listBox1` wurde hinzugefügt, um ein Formular, und dass die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die Ereignishandler, die im Beispielcode definiert ist. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox> mit dem Text "Apple", "Orange" und "Plum", in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DrawItemEventArgs.DrawFocusRectangle" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see cref="M:System.Windows.Forms.DrawItemEventArgs.DrawFocusRectangle" /> -Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawItemEventArgs.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schriftart ab, die das Element gezeichnet werden zugewiesen ist.</summary>
+        <value>Die <see cref="T:System.Drawing.Font" /> zugewiesen ist, das Element gezeichnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine empfohlene <xref:System.Drawing.Font>, in der Regel die <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft des übergeordneten Steuerelements.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die Elemente, die eine feste Größe aufweisen und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Windows.Forms.ListBox> Steuerelement namens `listBox1` wurde hinzugefügt, um ein Formular, und dass die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die Ereignishandler, die im Beispielcode definiert ist. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox> mit dem Text "Apple", "Orange" und "Plum", in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawItemEventArgs.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe der des Elements gezeichnet werden.</summary>
+        <value>Vordergrund <see cref="T:System.Drawing.Color" /> des Elements gezeichnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Zustand des Elements ist <xref:System.Windows.Forms.DrawItemState?displayProperty=nameWithType>, <xref:System.Windows.Forms.DrawItemEventArgs.ForeColor%2A> festgelegt ist, um <xref:System.Drawing.SystemColors.HighlightText%2A?displayProperty=nameWithType>. Wenn der Zustand des Elements nicht ist <xref:System.Windows.Forms.DrawItemState.Selected>, die <xref:System.Windows.Forms.DrawItemEventArgs.ForeColor%2A> -Eigenschaftensatz auf <xref:System.Drawing.SystemColors.WindowText%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType> Ereignis. Mithilfe dieses Berichts können, erfahren Sie, wenn das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListBox> mit der Bezeichnung `ListBox1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#153](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#153)]
+ [!code-vb[System.Windows.Forms.EventExamples#153](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#153)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawItemEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Grafikoberfläche zum Zeichnen des Elements auf.</summary>
+        <value>Die <see cref="T:System.Drawing.Graphics" /> Oberfläche zum Zeichnen des Elements auf.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die Elemente, die eine feste Größe aufweisen und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Windows.Forms.ListBox> Steuerelement namens `listBox1` wurde hinzugefügt, um ein Formular, und dass die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die Ereignishandler, die im Beispielcode definiert ist. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox> mit dem Text "Apple", "Orange" und "Plum", in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawItemEventArgs.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Indexwert des Elements, das gerade gezeichnet wird.</summary>
+        <value>Der numerische Wert, der stellt die <see cref="P:System.Windows.Forms.Control.ControlCollection.Item(System.Int32)" /> Wert des Elements gezeichnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die <xref:System.Windows.Forms.Control.ControlCollection.Item%2A> Wert des Elements gezeichnet werden, der <xref:System.Windows.Forms.Control.ControlCollection?displayProperty=nameWithType>. Diese Eigenschaft kann-1 zurück, wenn Itemswere aus der Liste entfernt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Erstellen von Ownerdrawn- <xref:System.Windows.Forms.ListBox> Elemente. Der Code verwendet die <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um anzugeben, dass die Elemente, die eine feste Größe aufweisen und die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis zeichnet jedes Elements in der <xref:System.Windows.Forms.ListBox>. Der Beispielcode verwendet, die Eigenschaften und Methoden von der <xref:System.Windows.Forms.DrawItemEventArgs> Klasse als Parameter übergeben werden, an den Ereignishandler, um die Elemente zu zeichnen. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Windows.Forms.ListBox> Steuerelement namens `listBox1` wurde hinzugefügt, um ein Formular, und dass die <xref:System.Windows.Forms.ListBox.DrawItem> Ereignis erfolgt durch die Ereignishandler, die im Beispielcode definiert ist. Im Beispiel wird außerdem vorausgesetzt, dass Elemente hinzugefügt wurden die <xref:System.Windows.Forms.ListBox> mit dem Text "Apple", "Orange" und "Plum", in dieser Reihenfolge.  
+  
+ [!code-csharp[ListBox.DrawMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.DrawMode/CS/form1.cs#1)]
+ [!code-vb[ListBox.DrawMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.DrawMode/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DrawItemState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DrawItemState State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawItemEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawItemState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand des Elements gezeichnet werden.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.DrawItemState" /> , die den Status des gezeichneten Element darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Eigenschaftswert kann eine Kombination der <xref:System.Windows.Forms.DrawItemState> Enumerationsmember. Die Mitglieder können durch Verwendung von bitweisen Operatoren kombiniert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType> Ereignis. Mithilfe dieses Berichts können, erfahren Sie, wenn das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListBox> mit der Bezeichnung `ListBox1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#153](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#153)]
+ [!code-vb[System.Windows.Forms.EventExamples#153](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#153)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

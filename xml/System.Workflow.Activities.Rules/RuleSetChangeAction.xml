@@ -1,0 +1,86 @@
+<Type Name="RuleSetChangeAction" FullName="System.Workflow.Activities.Rules.RuleSetChangeAction">
+  <TypeSignature Language="C#" Value="public abstract class RuleSetChangeAction : System.Workflow.ComponentModel.WorkflowChangeAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RuleSetChangeAction extends System.Workflow.ComponentModel.WorkflowChangeAction" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleSetChangeAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.WorkflowChangeAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer), typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse dar, von der alle Benachrichtigungen der dynamischen Aktualisierung über Änderungen an <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> abgeleitet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Klasse kann ein Überwachungsdienst ermitteln, ob ein <xref:System.Workflow.Activities.Rules.RuleSet> dynamisch aktualisiert worden ist. Die abgeleiteten Klassen geben an, welcher <xref:System.Workflow.Activities.Rules.RuleSet> dynamisch aktualisiert und welcher Vorgang ausgeführt wird (Hinzufügen zum Workflow, Entfernen aus dem Workflow oder Änderung).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RuleSetChangeAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSetChangeAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Implementieren in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleSetChangeAction" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuleSetName">
+      <MemberSignature Language="C#" Value="public abstract string RuleSetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RuleSetName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleSetChangeAction.RuleSetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den Namen des zu ändernden <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> ab.</summary>
+        <value>Der Name des zu ändernden <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateChanges">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Compiler.ValidationErrorCollection ValidateChanges (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection ValidateChanges(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSetChangeAction.ValidateChanges(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Die <see cref="T:System.Workflow.ComponentModel.Activity" />, in der die <see cref="T:System.Workflow.Activities.Rules.RuleSet" />-Änderungen auftreten.</param>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird überprüft, ob <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> ordnungsgemäß konfiguriert und fehlerfrei ist.</summary>
+        <returns>Die Auflistung Validierungsfehler.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

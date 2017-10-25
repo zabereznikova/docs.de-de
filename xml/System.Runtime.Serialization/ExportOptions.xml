@@ -1,0 +1,138 @@
+<Type Name="ExportOptions" FullName="System.Runtime.Serialization.ExportOptions">
+  <TypeSignature Language="C#" Value="public class ExportOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExportOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ExportOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Optionen dar, die für ein <see cref="T:System.Runtime.Serialization.XsdDataContractExporter" /> festgelegt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Runtime.Serialization.XsdDataContractExporter> wird verwendet, um XSD-Schemas aus einem Typ oder einer Assembly zu generieren. Sie können auch den <xref:System.Runtime.Serialization.XsdDataContractImporter> verwenden, um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Code aus einem Schemadokument zu generieren.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Importieren und Exportieren von Schemas finden Sie unter [Schema-Import / Export](~/docs/framework/wcf/feature-details/schema-import-and-export.md) und [Exportieren von Schemas aus Klassen](~/docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+  
+ Die <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>-Eigenschaft wird vom <xref:System.Runtime.Serialization.DataContractSerializer> verwendet, um Typen einzuschließen, die in einem Objektdiagramm gelesen werden können. [!INCLUDE[crabout](~/includes/crabout-md.md)]der Datenvertrag und zu bekannten Typen finden Sie unter [Datenvertragstypen bezeichnet](~/docs/framework/wcf/feature-details/data-contract-known-types.md).  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Datenverträge, finden Sie unter [mithilfe von Datenverträgen](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+   
+  
+## Examples  
+ In dem folgenden Beispiel wird eine Instanz der <xref:System.Runtime.Serialization.ExportOptions>-Klasse erstellt, und es wird ein Typ (`Possessions`) zu der Auflistung hinzugefügt, die von der <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>-Eigenschaft zurückgegeben wird.  
+  
+ Das <xref:System.Runtime.Serialization.XsdDataContractExporter> exportiert dann die Schemas der Typen, einschließlich des der Auflistung hinzugefügten `Possessions`-Typs.  
+  
+ [!code-csharp[XsdDataContractExporter#0](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractexporter/cs/overview.cs#0)]
+ [!code-vb[XsdDataContractExporter#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractexporter/vb/overview.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ExportOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.ExportOptions" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContractSurrogate">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.IDataContractSurrogate DataContractSurrogate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.IDataContractSurrogate DataContractSurrogate" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.ExportOptions.DataContractSurrogate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.IDataContractSurrogate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Serialisierungsersatzzeichen ab oder legt ein solches fest.</summary>
+        <value>Eine Implementierung der <see cref="T:System.Runtime.Serialization.IDataContractSurrogate" />-Schnittstelle, mit der Sie anpassen können, wie eine XML-Schemadarstellung für einen bestimmten Typ exportiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Type&gt; KnownTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Type&gt; KnownTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.ExportOptions.KnownTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Typen ab, die während der Serialisierung oder Deserialisierung gefunden werden können.</summary>
+        <value>Eine <see langword="KnownTypes" />-Auflistung, die während der Serialisierung oder Deserialisierung gefunden werden können. Es werden XML-Schemadarstellungen für alle in dieser Auflistung vom <see cref="T:System.Runtime.Serialization.XsdDataContractExporter" /> angegebenen Typen exportiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>-Eigenschaft wird vom <xref:System.Runtime.Serialization.DataContractSerializer> verwendet, um Typen einzuschließen, die in einem Objektdiagramm gelesen werden können (durch die <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A?displayProperty=nameWithType>-Eigenschaft festgelegt).  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]der Datenvertrag und zu bekannten Typen finden Sie unter [Datenvertragstypen bezeichnet](~/docs/framework/wcf/feature-details/data-contract-known-types.md).  
+  
+   
+  
+## Examples  
+ In dem folgenden Beispiel wird eine Instanz der <xref:System.Runtime.Serialization.ExportOptions>-Klasse erstellt, und es wird ein Typ zu der Auflistung hinzugefügt, die von der <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>-Eigenschaft zurückgegeben wurde.  
+  
+ [!code-csharp[XsdDataContractExporter#1](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractexporter/cs/overview.cs#1)]
+ [!code-vb[XsdDataContractExporter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractexporter/vb/overview.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

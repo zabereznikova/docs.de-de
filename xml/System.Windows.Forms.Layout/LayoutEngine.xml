@@ -1,0 +1,138 @@
+<Type Name="LayoutEngine" FullName="System.Windows.Forms.Layout.LayoutEngine">
+  <TypeSignature Language="C#" Value="public abstract class LayoutEngine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LayoutEngine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Layout.LayoutEngine" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für die Implementierung Layoutmodule bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Layout.LayoutEngine> Klasse, wenn Sie benutzerdefinierte Layoutverhalten zur Laufzeit erstellen möchten. Leiten Sie eine eigene Klasse von der <xref:System.Windows.Forms.Layout.LayoutEngine> Klasse, und überschreiben die <xref:System.Windows.Forms.Layout.LayoutEngine.Layout%2A> Methode, um das benutzerdefinierte Layoutverhalten zu definieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.Layout.LayoutEngine> Klasse, um benutzerdefinierte Layoutverhalten zu implementieren.  
+  
+ [!code-cpp[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/cpp/DemoFlowLayout.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/CS/DemoFlowLayout.cs#1)]
+ [!code-vb[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/VB/DemoFlowLayout.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LayoutEngine ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Layout.LayoutEngine.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Layout.LayoutEngine" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Layoutverhalten sollte für jede Instanz des Layoutmoduls zugehörigen Container-Klasse identisch sein. Aus diesem Grund sollten Sie deklarieren des Layoutmoduls Konstruktor <see langword="protected" /> oder <see langword="private" />, und implementieren das Layoutmodul als eine Singleton-Klasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InitLayout">
+      <MemberSignature Language="C#" Value="public virtual void InitLayout (object child, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitLayout(object child, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Layout.LayoutEngine.InitLayout(System.Object,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="child">Der Container, auf der die Layoutmodul ausgeführt wird.</param>
+        <param name="specified">Die Grenzen, Größe und Position des Containers definieren.</param>
+        <summary>Initialisiert das Layoutmodul.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie optional die Initialisierungslogik in die <xref:System.Windows.Forms.Layout.LayoutEngine.InitLayout%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="child" />ist kein Typ auf dem <see cref="T:System.Windows.Forms.Layout.LayoutEngine" /> Layout ausführen können.</exception>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Windows.Forms.Layout.LayoutEngine.InitLayout(System.Object,System.Windows.Forms.BoundsSpecified)" /> Methode, um die angepasste Initialisierung von Verhalten bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public virtual bool Layout (object container, System.Windows.Forms.LayoutEventArgs layoutEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Layout(object container, class System.Windows.Forms.LayoutEventArgs layoutEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Layout.LayoutEngine.Layout(System.Object,System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="layoutEventArgs" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="container">Der Container, auf der die Layoutmodul ausgeführt wird.</param>
+        <param name="layoutEventArgs">Ein Ereignisargument aus einem <see cref="E:System.Windows.Forms.Control.Layout" /> Ereignis.</param>
+        <summary>Fordert an, dass das Layoutmodul einen Layoutvorgang ausführen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Layout erneut ausgeführt werden soll, können Sie durch das übergeordnete Element des <paramref name="container" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn das Layoutmodul für eine Layoutvorgang ausgeführt wird die `container` Parameter. Sehen Sie sich den Wert, der die <xref:System.Windows.Forms.LayoutEventArgs.AffectedProperty%2A>, <xref:System.Windows.Forms.LayoutEventArgs.AffectedComponent%2A>, und <xref:System.Windows.Forms.LayoutEventArgs.AffectedControl%2A> Eigenschaften auf `layoutEventArgs` entscheiden, ob ein Layoutvorgang erforderlich ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.Layout.LayoutEngine.Layout%2A> Methode, um benutzerdefinierte Layoutverhalten zu implementieren. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.Layout.LayoutEngine> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.Layout.LayoutEngine#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/cpp/DemoFlowLayout.cpp#4)]
+ [!code-csharp[System.Windows.Forms.Layout.LayoutEngine#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/CS/DemoFlowLayout.cs#4)]
+ [!code-vb[System.Windows.Forms.Layout.LayoutEngine#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/VB/DemoFlowLayout.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="container" />ist kein Typ auf dem <see cref="T:System.Windows.Forms.Layout.LayoutEngine" /> Layout ausführen können.</exception>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Windows.Forms.Layout.LayoutEngine.Layout(System.Object,System.Windows.Forms.LayoutEventArgs)" /> Methode, um ein benutzerdefiniertes Layoutverhalten bereitzustellen.  
+  
+ Wenn Sie den Inhalt zur Festlegung der <paramref name="container" /> Parameter, sollten Sie unbedingt die <see cref="P:System.Windows.Forms.Control.Visible" /> -Eigenschaft jedes untergeordneten Steuerelements.  
+  
+ Zurückgeben <see langword="true" /> , wenn die Logik des Layoutmoduls bestimmt das Layout erneut vom übergeordneten Element des Containers ausgeführt werden sollte. Dies kann z. B. auftreten, wenn die Layoutmodul Größe von untergeordneten Steuerelementen und feststellt, dass der Container in Größe, die das neue Layout erhöht werden muss.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

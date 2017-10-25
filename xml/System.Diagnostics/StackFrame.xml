@@ -1,0 +1,613 @@
+<Type Name="StackFrame" FullName="System.Diagnostics.StackFrame">
+  <TypeSignature Language="C#" Value="public class StackFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable beforefieldinit StackFrame extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.StackFrame" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Informationen zu einem <see cref="T:System.Diagnostics.StackFrame" /> bereit, der einen Funktionsaufruf in der Aufrufliste für den aktuellen Thread darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Diagnostics.StackFrame> erstellt und in der Aufrufliste für jeden Funktionsaufruf während der Ausführung eines Threads wird per Push übertragen wird. Enthält der Stapelrahmen immer <xref:System.Reflection.MethodBase> Informationen, und schließt optional Dateiname, Zeilennummer und die Spaltenanzahl.  
+  
+ <xref:System.Diagnostics.StackFrame>Informationen werden umfangreichste mit Debug-Buildkonfigurationen. Debug-Builds enthalten während Releasebuilds keine Debugsymbole. Die Debugsymbole enthalten einen Großteil der Datei, Methodenname, Zeilennummer und die Informationen in der Spalte beim Erstellen von <xref:System.Diagnostics.StackFrame> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.StackFrame> -Klasse, die Informationen über Stapelrahmen für eine stapelüberwachung bereitzustellen.  
+  
+ [!code-csharp[StackFrameSample2#1](~/samples/snippets/csharp/VS_Snippets_CLR/stackframesample2/cs/program.cs#1)]
+ [!code-vb[StackFrameSample2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/stackframesample2/vb/program.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung der Mitglieder der <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#1](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#1)]
+ [!code-csharp[StackFrameSample1#1](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#1)]
+ [!code-vb[StackFrameSample1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für die Fähigkeit des erben den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.StackFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackFrame (bool fNeedFileInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool fNeedFileInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fNeedFileInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fNeedFileInfo">
+          <see langword="true" />, wenn Dateiname, Zeilennummer und Spaltennummer des Stapelrahmens aufgezeichnet werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.StackFrame" />-Klasse und zeichnet optional Quellinformationen auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.StackFrame.%23ctor%28System.Boolean%29> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#2](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#2)]
+ [!code-csharp[StackFrameSample1#2](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#2)]
+ [!code-vb[StackFrameSample1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackFrame (int skipFrames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 skipFrames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="skipFrames" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="skipFrames">Die Anzahl der zu überspringenden Stapelrahmen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.StackFrame" />-Klasse, die einem Rahmen über dem aktuellen Stapelrahmen entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.StackFrame.%23ctor%28System.Int32%29> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#3](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#3)]
+ [!code-csharp[StackFrameSample1#3](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#3)]
+ [!code-vb[StackFrameSample1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackFrame (int skipFrames, bool fNeedFileInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 skipFrames, bool fNeedFileInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.#ctor(System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="skipFrames" Type="System.Int32" />
+        <Parameter Name="fNeedFileInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="skipFrames">Die Anzahl der zu überspringenden Stapelrahmen.</param>
+        <param name="fNeedFileInfo">
+          <see langword="true" />, wenn Dateiname, Zeilennummer und Spaltennummer des Stapelrahmens aufgezeichnet werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.StackFrame" />-Klasse, die einem Rahmen über dem aktuellen Stapelrahmen entspricht, und zeichnet optional Quellinformationen auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.StackFrame.%23ctor%28System.Int32%2CSystem.Boolean%29> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#4](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#4)]
+ [!code-csharp[StackFrameSample1#4](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#4)]
+ [!code-vb[StackFrameSample1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackFrame (string fileName, int lineNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname.</param>
+        <param name="lineNumber">Die Zeilennummer in der angegebenen Datei.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.StackFrame" />-Klasse, die nur den angegebenen Dateinamen und die angegebene Zeilennummer enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie nicht den Debugger Zeilenzuordnungslogik verwenden möchten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.StackFrame.%23ctor%28System.String%2CSystem.Int32%29> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#5](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#5)]
+ [!code-csharp[StackFrameSample1#5](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#5)]
+ [!code-vb[StackFrameSample1#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StackFrame (string fileName, int lineNumber, int colNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, int32 lineNumber, int32 colNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="colNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname.</param>
+        <param name="lineNumber">Die Zeilennummer in der angegebenen Datei.</param>
+        <param name="colNumber">Die Spaltennummer in der angegebenen Datei.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.StackFrame" />-Klasse, die nur den angegebenen Dateinamen, die angegebene Zeilennummer und die angegebene Spaltennummer enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie nicht den Debugger Zeilenzuordnungslogik verwenden möchten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.StackFrame.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#6](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#6)]
+ [!code-csharp[StackFrameSample1#6](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#6)]
+ [!code-vb[StackFrameSample1#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileColumnNumber">
+      <MemberSignature Language="C#" Value="public virtual int GetFileColumnNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetFileColumnNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.GetFileColumnNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Spaltennummer in der Datei mit dem ausgeführten Code ab. Diese Informationen werden i. d. R. aus den Debugsymbolen für das ausführbare Programm extrahiert.</summary>
+        <returns>Die Dateispaltennummer oder 0 (null), wenn die Dateispaltennummer nicht bestimmt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Diagnostics.StackFrame.GetFileColumnNumber%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#7](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#7)]
+ [!code-csharp[StackFrameSample1#7](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#7)]
+ [!code-vb[StackFrameSample1#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileLineNumber">
+      <MemberSignature Language="C#" Value="public virtual int GetFileLineNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetFileLineNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.GetFileLineNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zeilennummer in der Datei mit dem ausgeführten Code ab. Diese Informationen werden i. d. R. aus den Debugsymbolen für das ausführbare Programm extrahiert.</summary>
+        <returns>Die Dateizeilennummer oder 0 (null), wenn die Dateizeilennummer nicht bestimmt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Diagnostics.StackFrame.GetFileLineNumber%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#7](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#7)]
+ [!code-csharp[StackFrameSample1#7](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#7)]
+ [!code-vb[StackFrameSample1#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileName">
+      <MemberSignature Language="C#" Value="public virtual string GetFileName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetFileName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.GetFileName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Dateinamen mit dem ausgeführten Code ab. Diese Informationen werden i. d. R. aus den Debugsymbolen für das ausführbare Programm extrahiert.</summary>
+        <returns>Der Dateiname oder <see langword="null" />, wenn der Dateiname nicht bestimmt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Diagnostics.StackFrame.GetFileName%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#7](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#7)]
+ [!code-csharp[StackFrameSample1#7](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#7)]
+ [!code-vb[StackFrameSample1#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für den Zugriff auf die Pfadinformationen. Zugeordnete Enumeration:<see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetILOffset">
+      <MemberSignature Language="C#" Value="public virtual int GetILOffset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetILOffset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.GetILOffset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Offset vom Beginn des MSIL-Codes (Microsoft Intermediate Language) für die ausgeführte Methode ab. Dabei kann es sich um einen Näherungswert handeln. Das hängt davon ab, ob der JIT-Compiler (Just-In-Time) den Debuggingcode erzeugt. Die Generierung dieser Debuginformation wird vom <see cref="T:System.Diagnostics.DebuggableAttribute" /> kontrolliert.</summary>
+        <returns>Der Offset vom Beginn des MSIL-Codes für die ausgeführte Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Diagnostics.StackFrame.GetILOffset%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#7](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#7)]
+ [!code-csharp[StackFrameSample1#7](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#7)]
+ [!code-vb[StackFrameSample1#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodBase GetMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodBase GetMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.GetMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Methode ab, in der der Rahmen ausgeführt wird.</summary>
+        <returns>Die Methode, in der der Rahmen ausgeführt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die derzeit ausgeführte Methode darf von einer Basisklasse geerbt werden, obwohl sie in einer abgeleiteten Klasse aufgerufen wird. In diesem Fall die <xref:System.Reflection.MemberInfo.ReflectedType%2A> Eigenschaft von der <xref:System.Reflection.MethodBase> von zurückgegebene Objekt <xref:System.Diagnostics.StackFrame.GetMethod%2A> identifiziert die Basisklasse, die nicht in der abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Diagnostics.StackFrame.GetMethod%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackTraceSample3#6](~/samples/snippets/cpp/VS_Snippets_CLR/StackTraceSample3/CPP/stacktracesample3.cpp#6)]
+ [!code-csharp[StackTraceSample3#6](~/samples/snippets/csharp/VS_Snippets_CLR/StackTraceSample3/CS/stacktracesample3.cs#6)]
+ [!code-vb[StackTraceSample3#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackTraceSample3/VB/stacktracesample3.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNativeOffset">
+      <MemberSignature Language="C#" Value="public virtual int GetNativeOffset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetNativeOffset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.GetNativeOffset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Offset vom Beginn des programmeigenen JIT (Just-In-Time)-kompilierten Codes für die ausgeführte Methode ab. Die Generierung dieser Debuginformation wird von der <see cref="T:System.Diagnostics.DebuggableAttribute" />-Klasse gesteuert.</summary>
+        <returns>Der Offset vom Beginn des JIT-kompilierten Codes für die ausgeführte Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Diagnostics.StackFrame.GetNativeOffset%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#7](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#7)]
+ [!code-csharp[StackFrameSample1#7](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#7)]
+ [!code-vb[StackFrameSample1#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OFFSET_UNKNOWN">
+      <MemberSignature Language="C#" Value="public const int OFFSET_UNKNOWN = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 OFFSET_UNKNOWN = (-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.StackFrame.OFFSET_UNKNOWN" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Definiert den Wert, der von der <see cref="M:System.Diagnostics.StackFrame.GetNativeOffset" />-Methode oder der <see cref="M:System.Diagnostics.StackFrame.GetILOffset" />-Methode zurückgegeben wird, wenn der Offset in MSIL (Microsoft Intermediate Language) oder der systemeigenen Sprache nicht bekannt ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Konstanten ist-1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.StackFrame.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine lesbare Darstellung der Stapelüberwachung.</summary>
+        <returns>Eine lesbare Darstellung der Stapelüberwachung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Diagnostics.StackFrame.ToString%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.StackFrame> Klasse.  
+  
+ [!code-cpp[StackFrameSample1#3](~/samples/snippets/cpp/VS_Snippets_CLR/StackFrameSample1/CPP/source.cpp#3)]
+ [!code-csharp[StackFrameSample1#3](~/samples/snippets/csharp/VS_Snippets_CLR/StackFrameSample1/CS/source.cs#3)]
+ [!code-vb[StackFrameSample1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/StackFrameSample1/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für den Zugriff auf die Pfadinformationen. Zugeordnete Enumeration:<see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

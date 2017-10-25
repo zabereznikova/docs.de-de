@@ -1,0 +1,166 @@
+<Type Name="TaskFinishedEventArgs" FullName="Microsoft.Build.Framework.TaskFinishedEventArgs">
+  <TypeSignature Language="C#" Value="public class TaskFinishedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TaskFinishedEventArgs extends Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.TaskFinishedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildStatusEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:Microsoft.Build.Framework.IEventSource.TaskFinished" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TaskFinishedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskFinishedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskFinishedEventArgs (string message, string helpKeyword, string projectFile, string taskFile, string taskName, bool succeeded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string taskFile, string taskName, bool succeeded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="taskFile" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="succeeded" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Text der Nachricht.</param>
+        <param name="helpKeyword">Das Hilfeschlüsselwort, die dem Ereignis zugeordnet wird.</param>
+        <param name="projectFile">Der Projektdateiname.</param>
+        <param name="taskFile">Die Datei, in der die Aufgabe definiert ist.</param>
+        <param name="taskName">Der Name des Tasks.</param>
+        <param name="succeeded">
+          <see langword="true" />um anzugeben, die Aufgabe erfolgreich ausgeführt wurde andernfalls<see langword="false." /></param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" />-Klasse mit den angegebenen Werten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskFinishedEventArgs (string message, string helpKeyword, string projectFile, string taskFile, string taskName, bool succeeded, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string taskFile, string taskName, bool succeeded, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="taskFile" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="succeeded" Type="System.Boolean" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Text der Nachricht.</param>
+        <param name="helpKeyword">Das Hilfeschlüsselwort, die dem Ereignis zugeordnet wird.</param>
+        <param name="projectFile">Der Projektdateiname.</param>
+        <param name="taskFile">Die Datei, in der die Aufgabe definiert ist.</param>
+        <param name="taskName">Der Name des Tasks.</param>
+        <param name="succeeded">
+          <see langword="true" />um anzugeben, die Aufgabe erfolgreich ausgeführt wurde andernfalls<see langword="false." /></param>
+        <param name="eventTimestamp">Wenn das Ereignis beendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" />-Klasse mit den angegebenen Werten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFile">
+      <MemberSignature Language="C#" Value="public string ProjectFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskFinishedEventArgs.ProjectFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Projektdatei, die dem Ereignis zugeordnet.</summary>
+        <value>Der Name der Projektdatei, die dem Ereignis zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="public bool Succeeded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Succeeded" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskFinishedEventArgs.Succeeded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Ausführung des Tasks erfolgreich war.</summary>
+        <value>Der Wert, der angibt, ob die Ausführung des Tasks erfolgreich war.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskFile">
+      <MemberSignature Language="C#" Value="public string TaskFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskFinishedEventArgs.TaskFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Datei, in die Aufgabe definiert ist.</summary>
+        <value>Die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Datei, in die Aufgabe definiert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskName">
+      <MemberSignature Language="C#" Value="public string TaskName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskFinishedEventArgs.TaskName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Aufgabe, die dem Ereignis zugeordnet.</summary>
+        <value>Der Name der Aufgabe, die dem Ereignis zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

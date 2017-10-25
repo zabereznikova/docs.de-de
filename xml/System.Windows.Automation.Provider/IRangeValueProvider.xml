@@ -1,0 +1,240 @@
+<Type Name="IRangeValueProvider" FullName="System.Windows.Automation.Provider.IRangeValueProvider">
+  <TypeSignature Language="C#" Value="public interface IRangeValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRangeValueProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRangeValueProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("36dc7aef-33e6-4691-afe1-2be7274b3d33")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften verfügbar, um dem Benutzeroberflächenautomatisierungs-Client den Zugriff auf Steuerelemente zu ermöglichen, die auf einen Wert innerhalb eines Bereichs festgelegt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.RangeValuePattern> -Steuerelementmuster.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Wert eines Steuerelements schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert schreibgeschützt ist. <see langword="false" /> wenn er geändert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, das nicht schreibgeschützt ist.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#IsReadOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#isreadonly)]
+ [!code-vb[UIAIRangeValueProvider_snip#IsReadOnly](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#isreadonly)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChange">
+      <MemberSignature Language="C#" Value="public double LargeChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LargeChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.LargeChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der hinzugefügt wird, oder subtrahiert die <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" /> Eigenschaft, wenn eine große Änderung vorgenommen wird, wie z. B. mit der Bild-ab-Taste.</summary>
+        <value>Der LargeChange-Wert unterstützt, die vom Steuerelement oder Null (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn das Steuerelement nicht unterstützt <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.LargeChange" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, das einen LargeChange-Wert von 5.0 aufweist.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#LargeChange](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#largechange)]
+ [!code-vb[UIAIRangeValueProvider_snip#LargeChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#largechange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public double Maximum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des höchstbereichs vom Steuerelement unterstützt wird.</summary>
+        <value>Der maximale Wert, der vom Steuerelement oder Null unterstützt (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn das Steuerelement nicht unterstützt <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Maximum" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, das einen maximalen Wert 255,0 verfügt.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#Maximum](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#maximum)]
+ [!code-vb[UIAIRangeValueProvider_snip#Maximum](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#maximum)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public double Minimum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des mindestbereichs vom Steuerelement unterstützt wird.</summary>
+        <value>Der minimale Wert, der vom Steuerelement oder Null unterstützt (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn das Steuerelement nicht unterstützt <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Minimum" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, das einen minimalen Wert von 0,0 verfügt.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#Minimum](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#minimum)]
+ [!code-vb[UIAIRangeValueProvider_snip#Minimum](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#minimum)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRangeValueProvider.SetValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert des Steuerelements fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der tatsächliche Wertsatz hängt von der Implementierung des Steuerelements ab. Das Steuerelement kann den angeforderten runden `value` nach oben oder unten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine mögliche Implementierung dieser Methode für ein benutzerdefiniertes Steuerelement. Das benutzerdefinierte Steuerelement wird der Bereichswert durch den Alphawert die Basisfarbe angezeigt.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#SetValue](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#setvalue)]
+ [!code-vb[UIAIRangeValueProvider_snip#SetValue](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#setvalue)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn <paramref name="value" /> kleiner ist als der Mindestwert oder größer als der maximale Wert des Steuerelements.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChange">
+      <MemberSignature Language="C#" Value="public double SmallChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SmallChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der hinzugefügt wird, oder subtrahiert die <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" /> Eigenschaft, wenn Sie eine kleine Änderung wird vorgenommen, z. B. mit einer Pfeiltaste.</summary>
+        <value>Der niedrige Änderungswert oder Null (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn das Steuerelement nicht unterstützt <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, das einen kleine Änderungswert 1,0 aufweist.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#SmallChange](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#smallchange)]
+ [!code-vb[UIAIRangeValueProvider_snip#SmallChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#smallchange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Steuerelements ab.</summary>
+        <value>Der Wert des Steuerelements oder Null (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn das Steuerelement nicht unterstützt <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein benutzerdefiniertes Steuerelement an. Für die Zwecke dieses Beispiels zeigt das benutzerdefinierte Steuerelement den Wert durch die alpha seine Basisfarbe-Einstellung.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#Value](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#value)]
+ [!code-vb[UIAIRangeValueProvider_snip#Value](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#value)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

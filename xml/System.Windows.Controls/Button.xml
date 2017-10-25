@@ -1,0 +1,286 @@
+<Type Name="Button" FullName="System.Windows.Controls.Button">
+  <TypeSignature Language="C#" Value="public class Button : System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Button extends System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Button" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Windows-Schaltflächensteuerelement dar, das auf das <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" />-Ereignis reagiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Button> Klasse erbt direkt von der <xref:System.Windows.Controls.Primitives.ButtonBase?displayProperty=nameWithType> Klasse.  
+  
+ **Inhaltsmodell:** <xref:System.Windows.Controls.Button> ist eine <xref:System.Windows.Controls.ContentControl>. Die Inhaltseigenschaft ist <xref:System.Windows.Controls.ContentControl.Content%2A>.  
+  
+ Behandeln der <xref:System.Windows.Controls.Primitives.ButtonBase.Click?displayProperty=nameWithType> Ereignis reagiert, wenn der Benutzer klickt auf eine <xref:System.Windows.Controls.Button>.  
+  
+ Die <xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonDown%2A> -Methode kennzeichnet die <xref:System.Windows.UIElement.MouseLeftButtonDown> Ereignis als behandelt. So reagieren Sie auf die <xref:System.Windows.UIElement.MouseLeftButtonDown> Ereignis, fügen Sie einen Ereignishandler an das <xref:System.Windows.ContentElement.PreviewMouseLeftButtonDown> Ereignis an, oder rufen <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> mit `handledEventsToo` festgelegt `true`.  
+  
+## <a name="customizing-the-button-control"></a>Anpassen von das Schaltflächen-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.Button> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.Button>, finden Sie unter [Schaltflächenstile und Vorlagen](~/docs/framework/wpf/controls/button-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.Button> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt drei Schaltflächen, die auf Klicks auf drei verschiedene Arten reagieren.  
+  
+-   Wenn darauf gezeigt wird: die erste Schaltfläche ändert Farben, wenn der Benutzer mit der Maus auf die Schaltfläche bewegt wird.  
+  
+-   Drücken Sie: die zweite Schaltfläche ist erforderlich, mit der Maus geklickt werden, während der Mauszeiger über der Schaltfläche befindet.  
+  
+-   Version: das dritte ist erst zurückgesetzt, die Hintergrundfarbe der Schaltflächen die Maustaste gedrückt und losgelassen wird, auf die Schaltfläche.  
+  
+ [!code-xaml[ClickModes_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ClickModes_snip/CSharp/Pane1.xaml#1)]  
+  
+ [!code-csharp[ClickModes_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ClickModes_snip/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ClickModes_snip#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClickModes_snip/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Button ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Button.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Button" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCancel">
+      <MemberSignature Language="C#" Value="public bool IsCancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCancel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Button.IsCancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine <see cref="T:System.Windows.Controls.Button" /> ist eine Schaltfläche "Abbrechen". Ein Benutzer kann auf die Schaltfläche "Abbrechen" aktivieren, durch Drücken der ESC-Taste.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.Button" /> ist eine Schaltfläche "Abbrechen", andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Windows.Controls.Button.IsCancel%2A> Eigenschaft einer Schaltfläche `true`, Sie erstellen eine <xref:System.Windows.Controls.Button> , die registriert wird die <xref:System.Windows.Input.AccessKeyManager>. Die Schaltfläche wird dann aktiviert, wenn ein Benutzer die ESC-Taste drückt.  
+  
+<a name="dependencyPropertyInfo_IsCancel"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Button.IsCancelProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet, um eine Schaltfläche "Abbrechen" zu erstellen.  
+  
+ [!code-xaml[ButtonProps_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ButtonProps_snip/CSharp/Page1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCancelProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsCancelProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsCancelProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Button.IsCancelProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Button.IsCancel" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public bool IsDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Button.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine <see cref="T:System.Windows.Controls.Button" /> ist die Standardschaltfläche. Ein Benutzer wird durch Drücken der EINGABETASTE die Standardschaltfläche aufgerufen.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.Button" /> ist die Standardschaltfläche ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Windows.Controls.Button.IsDefault%2A> Eigenschaft einer Schaltfläche `true`, registrieren Sie die Schaltfläche mit den <xref:System.Windows.Input.AccessKeyManager> , damit ein Benutzer die Schaltfläche aufrufen kann, indem Sie die EINGABETASTE drücken.  
+  
+<a name="dependencyPropertyInfo_IsDefault"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Button.IsDefaultProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Schaltfläche als Standardschaltfläche angegeben.  
+  
+ [!code-xaml[ButtonProps_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ButtonProps_snip/CSharp/Page1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaulted">
+      <MemberSignature Language="C#" Value="public bool IsDefaulted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefaulted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Button.IsDefaulted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine <see cref="T:System.Windows.Controls.Button" /> ist die Schaltfläche, die aktiviert wird, wenn ein Benutzer die EINGABETASTE drückt.</summary>
+        <value>
+          <see langword="true" />Wenn die Schaltfläche aktiviert ist, wenn der Benutzer die EINGABETASTE drückt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Button.IsDefaulted%2A> Eigenschaft ist `true` bei der <xref:System.Windows.Controls.Button.IsDefault%2A> -Eigenschaftensatz auf `true` das Steuerelement, das Fokus besitzt keinen Geben Sie als Eingabe akzeptiert.  Beispielsweise ist in der **ausführen** (Dialogfeld), die **OK** Schaltfläche ist die Standardschaltfläche. Wenn der Fokus auf das Textfeld ist <xref:System.Windows.Controls.Button.IsDefaulted%2A> auf die **OK** Schaltfläche ist `true` , da ein Benutzer die Schaltfläche aktivieren kann, durch Drücken der EINGABETASTE.  
+  
+> [!NOTE]
+>  Wenn die Standardschaltfläche den Fokus besitzt, <xref:System.Windows.Controls.Button.IsDefaulted%2A> ist `false`. Grund hierfür ist die <xref:System.Windows.Controls.Primitives.ButtonBase.OnKeyDown%2A> Methode verarbeitet die EINGABETASTE, und es ist nicht erforderlich für <xref:System.Windows.Controls.Button.IsDefaulted%2A> festzulegende `true`.  
+  
+<a name="dependencyPropertyInfo_IsDefaulted"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Button.IsDefaultedProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie feststellen, ob die <xref:System.Windows.Controls.Button.IsDefaulted%2A> Eigenschaft `true` für eine Standardschaltfläche.  
+  
+ [!code-csharp[ButtonProps_snip#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ButtonProps_snip/CSharp/Page1.xaml.cs#3)]
+ [!code-vb[ButtonProps_snip#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonProps_snip/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDefaultedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDefaultedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Button.IsDefaultedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Button.IsDefaulted" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDefaultProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDefaultProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Button.IsDefaultProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Button.IsDefault" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Button.OnClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn eine <see cref="T:System.Windows.Controls.Button" /> geklickt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Button.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine entsprechende <see cref="T:System.Windows.Automation.Peers.ButtonAutomationPeer" /> für dieses Steuerelement als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Infrastruktur.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.ButtonAutomationPeer" /> für dieses Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

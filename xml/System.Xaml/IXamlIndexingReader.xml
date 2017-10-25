@@ -1,0 +1,66 @@
+<Type Name="IXamlIndexingReader" FullName="System.Xaml.IXamlIndexingReader">
+  <TypeSignature Language="C#" Value="public interface IXamlIndexingReader" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXamlIndexingReader" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IXamlIndexingReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet ein Dienst, der darstellt, knotensteuerungs für eine einfache Implementierung der Knoten-basierten XAML-Readers indiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.IXamlIndexingReader>verwaltet einen eigenen Index in einer extern bereitgestellten Liste von Knoten. Die Liste kann mithilfe ein Delegaten Index zugegriffen werden. Dieser Entwurf ermöglicht mehrere XAML-Reader auf den gleichen Satz von-Indexknoten zugreifen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IXamlIndexingReader.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Knoten in der aktuellen externen Knotengruppe ab.</summary>
+        <value>Die Anzahl von Knoten in der aktuellen externen Knoten festlegen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentIndex">
+      <MemberSignature Language="C#" Value="public int CurrentIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IXamlIndexingReader.CurrentIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Indexnummer der aktuellen Position des Readers für die indizierte Listenansicht von XAML-Knoten.</summary>
+        <value>Die Indexnummer des die aktuelle Position des Readers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der <xref:System.Xaml.IXamlIndexingReader.CurrentIndex%2A> -Eigenschaft, verwenden Sie einen XAML-Knoten-Reader-Modus, die nicht mit `Read` oder `Skip` alle Zwischenknoten zu durchlaufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

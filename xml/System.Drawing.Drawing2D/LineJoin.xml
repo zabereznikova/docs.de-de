@@ -1,0 +1,82 @@
+<Type Name="LineJoin" FullName="System.Drawing.Drawing2D.LineJoin">
+  <TypeSignature Language="C#" Value="public enum LineJoin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LineJoin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.LineJoin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie Sie aufeinander folgende Segmente für Linien- oder in einer Abbildung (untergeordneten), die in enthaltenen Verknüpfen einer <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bevel">
+      <MemberSignature Language="C#" Value="Bevel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin Bevel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.Bevel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine abgeschrägte Verbindung an. Dies erzeugt eine diagonale Ecke.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Miter">
+      <MemberSignature Language="C#" Value="Miter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin Miter = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.Miter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine angeschrägten an. Dies erzeugt eine spitze Ecke oder eine abgeschnittene Ecke, je nachdem, ob die Länge des die Gehrung die Gehrung Grenzwert überschreitet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiterClipped">
+      <MemberSignature Language="C#" Value="MiterClipped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin MiterClipped = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.MiterClipped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine angeschrägten an. Dies erzeugt eine spitze Ecke oder eine abgeschrägte Ecke, je nachdem, ob die Länge des die Gehrung die Gehrung Grenzwert überschreitet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="Round" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin Round = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.Round" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen kreisförmigen Join an. Dies erzeugt einen smooth, kreisförmigen Bogen zwischen den Zeilen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

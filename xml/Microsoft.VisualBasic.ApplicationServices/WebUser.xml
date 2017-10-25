@@ -1,0 +1,92 @@
+<Type Name="WebUser" FullName="Microsoft.VisualBasic.ApplicationServices.WebUser">
+  <TypeSignature Language="C#" Value="public class WebUser : Microsoft.VisualBasic.ApplicationServices.User" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebUser extends Microsoft.VisualBasic.ApplicationServices.User" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.WebUser" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.ApplicationServices.User</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf die Informationen zu den aktuellen Benutzer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften und Methoden verfügbar gemacht werden, indem die `My.User` Objekt ermöglichen den Zugriff auf die Informationen zu den aktuellen Benutzer. Die Bedeutung von "Aktueller Benutzer" unterscheidet sich geringfügig zwischen Windows-und Webanwendungen. In einer Windows-Anwendung ist der aktuelle Benutzer der Benutzer, der die Anwendung ausgeführt wird. In einer Web-Anwendung ist der aktuelle Benutzer der Benutzer, der die Anwendung zugreift.  
+  
+ Die `My.User` Eigenschaft bietet außerdem Zugriff auf die <xref:System.Security.Principal.IPrincipal> für den aktuellen Benutzer. Ein Prinzipalobjekt stellt Sicherheitskontext des Benutzers, einschließlich der Identität des Benutzers und keine Rollen, die der Benutzer angehört.  
+  
+ Für Windows-Anwendungen diese Eigenschaft ermöglicht die gleiche Funktionalität wie die <xref:System.Threading.Thread.CurrentPrincipal%2A> Eigenschaft. Für Webanwendungen, diese Eigenschaft ermöglicht die gleiche Funktionalität wie die <xref:System.Web.HttpContext.User%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Web.HttpContext.Current%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Für Windows-Anwendungen nur Projekte erstellt, auf die **Windows-Anwendung** Vorlage Initialisieren der `My.User` Objekt standardmäßig. Sie müssen in allen anderen Windows-Projekttypen Initialisieren der `My.User` Objekt durch Aufrufen der <xref:Microsoft.VisualBasic.ApplicationServices.User.InitializeWithWindowsUser%2A> Methode explizit oder durch Zuweisen eines Werts zur <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
+  
+> [!NOTE]
+>  Die `My.User` Objekt kann nicht Berichten Informationen zu den aktuellen Windows-Benutzer, die Ausführung unter Windows 95 und Windows 98, da diese Betriebssysteme nicht das Konzept eines angemeldeten Benutzers unterstützt wird. Müssen Sie benutzerdefinierten Authentifizierung verwenden, implementieren die `My.User` Objekt unter diesen Betriebssystemen...  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird überprüft, ob die Anwendung von Windows oder die benutzerdefinierte Authentifizierung mithilfe wird, und diese Informationen beim Analysieren verwendet der `My.User.Name` Eigenschaft.  
+  
+ [!code-vb[VbVbalrMyUser#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebUser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.WebUser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.ApplicationServices.WebUser" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften und Methoden verfügbar gemacht werden, indem die `My.User` Objekt ermöglichen den Zugriff auf die Informationen zu den aktuellen Benutzer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalPrincipal">
+      <MemberSignature Language="C#" Value="protected override System.Security.Principal.IPrincipal InternalPrincipal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal InternalPrincipal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.WebUser.InternalPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den principal-Objekt, das den aktuellen Benutzer darstellt.</summary>
+        <value>Ein <see cref="T:System.Security.Principal.IPrincipal" /> Objekt, das den aktuellen Benutzer darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der <xref:Microsoft.VisualBasic.ApplicationServices.WebUser> -Objekt, diese Eigenschaft dient als Wrapper für die <xref:System.Web.HttpContext.User%2A> Eigenschaft von der <xref:System.Web.HttpContext.Current%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Ausführlichere Informationen finden Sie unter der <xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

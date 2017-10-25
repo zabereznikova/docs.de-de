@@ -1,0 +1,204 @@
+<Type Name="TemplateBindingExtension" FullName="System.Windows.TemplateBindingExtension">
+  <TypeSignature Language="C#" Value="public class TemplateBindingExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateBindingExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateBindingExtension" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.TemplateBindingExtensionConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Object))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert eine Markuperweiterung, die die Bindung zwischen dem Wert einer Eigenschaft in einer Vorlage und der Wert einer anderen verfügbar gemachten Eigenschaft für das Steuerelement mit Vorlagen unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie `TemplateBinding` in der Vorlage auf einen Wert für das Steuerelement binden, die Vorlage angewendet wird. Ein `TemplateBinding` ist effizienter als eine <xref:System.Windows.Data.Binding> aber weniger Funktionen. Mithilfe einer `TemplateBinding` entspricht einer <xref:System.Windows.Data.Binding> mit der <xref:System.Windows.Data.Binding.RelativeSource%2A> -Eigenschaftensatz auf <xref:System.Windows.Data.RelativeSource.TemplatedParent%2A?displayProperty=nameWithType>.  
+  
+<a name="xamlTextUsage_TemplateBindingExtension"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [TemplateBinding Markuperweiterung](~/docs/framework/wpf/advanced/templatebinding-markup-extension.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.ControlTemplate> , definiert einen <xref:System.Windows.Controls.ListBox> , die horizontal und abgerundete Ecken aufweist. Die `TemplateBinding` gibt an, dass die <xref:System.Windows.Controls.Border.Background%2A> von der <xref:System.Windows.Controls.Border> synchronisiert werden sollen, mit der <xref:System.Windows.Controls.Border.Background%2A> -Wert, der auf festgelegt ist die <xref:System.Windows.Controls.ListBox>. Verwenden Sie `TemplateBinding` in Ihrer <xref:System.Windows.Controls.ControlTemplate> Wenn Sie dem Benutzer des Steuerelements die Kontrolle über die Werte mancher Eigenschaften erhalten möchten. Eine Erläuterung dieses Beispiels, finden Sie unter [Erstellen von Formaten und Vorlagen](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+ [!code-xaml[StylingIntroSnippet#ListBoxCT](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#listboxct)]    
+  
+ Das folgende Beispiel zeigt die <xref:System.Windows.Controls.ControlTemplate> von der <xref:System.Windows.Controls.Label> Steuerelement. Die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Eigenschaften mit den Werten der gebunden sind die <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> und <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> Eigenschaften der <xref:System.Windows.Controls.Label> steuern, die von diesem <xref:System.Windows.Controls.ControlTemplate> auf angewendet wird.  
+  
+ [!code-xaml[ControlTemplateExamples#Label](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/label.xaml#label)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateBindingExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateBindingExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.TemplateBindingExtension" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateBindingExtension (System.Windows.DependencyProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.DependencyProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateBindingExtension.#ctor(System.Windows.DependencyProperty)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Der Bezeichner der zu bindenden Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.TemplateBindingExtension" /> -Klasse mit der angegebenen Abhängigkeitseigenschaft, der die Quelle der Bindung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Converter">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.IValueConverter Converter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.IValueConverter Converter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateBindingExtension.Converter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.IValueConverter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Konverter, der zwischen Quelle und Ziel einer Bindung interpretiert.</summary>
+        <value>Der Typkonverter-Implementierung. Dieser Wert liegt standardmäßig <see langword="null" /> und in der Regel als optionalen Parameter der Bindung bereitgestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist nicht der <xref:System.Windows.TemplateBindingExtensionConverter>. Es ist ein bestimmtes Konverter Muster von unterstützten [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Datenbindung.  
+  
+<a name="xamlTextUsage_Converter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [TemplateBinding Markuperweiterung](~/docs/framework/wpf/advanced/templatebinding-markup-extension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterParameter">
+      <MemberSignature Language="C#" Value="public object ConverterParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ConverterParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateBindingExtension.ConverterParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Parameter an den Wertkonverter übergeben.</summary>
+        <value>Der Parameter gebunden wird als durch die Implementierung des Konverters verwiesen wird. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ConverterParameter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [TemplateBinding Markuperweiterung](~/docs/framework/wpf/advanced/templatebinding-markup-extension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty Property { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateBindingExtension.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("property")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Eigenschaft an.</summary>
+        <value>Der Bezeichner der Abhängigkeitseigenschaft gebunden wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Property"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [TemplateBinding Markuperweiterung](~/docs/framework/wpf/advanced/templatebinding-markup-extension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateBindingExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Objekt, das Dienste für die Markuperweiterung bereitstellen kann. Möglicherweise <see langword="null" /> in dieser Implementierung.</param>
+        <summary>Gibt ein Objekt, das als Wert auf das Zielobjekt-Eigenschaft für diese Markuperweiterung festgelegt werden soll. Für <see cref="T:System.Windows.TemplateBindingExtension" />, dies ist ein Ausdruck (<see cref="T:System.Windows.TemplateBindingExpression" />), das die Datenbindung unterstützt.</summary>
+        <returns>Der Ausdruck, der von der Bindung unterstützt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

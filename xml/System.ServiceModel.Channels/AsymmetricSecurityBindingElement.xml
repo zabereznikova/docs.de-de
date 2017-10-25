@@ -1,0 +1,530 @@
+<Type Name="AsymmetricSecurityBindingElement" FullName="System.ServiceModel.Channels.AsymmetricSecurityBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class AsymmetricSecurityBindingElement : System.ServiceModel.Channels.SecurityBindingElement, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AsymmetricSecurityBindingElement extends System.ServiceModel.Channels.SecurityBindingElement implements class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.SecurityBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein benutzerdefiniertes Bindungselement dar, das die Kanalsicherheit mit asymmetrischer Verschlüsselung unterstützt. Dieses Bindungselement signiert die Nachricht mit dem Authentifizierungstoken des Absenders und verschlüsselt die Nachricht mit dem Token des Empfängers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine benutzerdefinierte Bindung enthält eine Auflistung von Bindungselementen, die in einer bestimmten Reihenfolge angeordnet sind: Das Element, das das erste Element des Bindungsstapels darstellt, wird zuerst hinzugefügt, das darauf folgende Element wird als zweites hinzugefügt usw.  
+  
+### <a name="to-add-this-class-to-a-binding"></a>So fügen Sie diese Klasse einer Bindung hinzu  
+  
+1.  Erstellen Sie eine <xref:System.ServiceModel.Channels.BindingElementCollection>.  
+  
+2.  Erstellen Sie benutzerdefinierte Bindungselemente, die sich im Bindungsstapel über diesem Bindungselement befinden, wie zum Beispiel das optionale <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> und <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
+  
+3.  Fügen Sie die erstellten Elemente in der oben angegebenen Reihenfolge zur <xref:System.ServiceModel.Channels.BindingElementCollection> hinzu, indem Sie die <xref:System.ServiceModel.Channels.BindingElementCollection.InsertItem%28System.Int32%2CSystem.ServiceModel.Channels.BindingElement%29>-Methode verwenden.  
+  
+4.  Erstellen Sie eine Instanz von <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>, und fügen Sie sie zur Auflistung hinzu.  
+  
+5.  Fügen Sie weitere benutzerdefinierte Bindungselemente zur Auflistung hinzu, wie zum Beispiel <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.  
+  
+ Vor dem Verwenden dieser Klasse sollten Sie feststellen, ob eine Standardbindung die Sicherheitsanforderungen erfüllt.  
+  
+> [!NOTE]
+>  Nachdem eine Instanz dieses Objekts erstellt wurde, sollten die Eigenschaften ihres Basisklasse-<xref:System.ServiceModel.Channels.SecurityBindingElement> als unveränderlich behandelt werden. Das Aufrufen von set für einige Eigenschaften kann unvorhergesehene Auswirkungen nach sich ziehen: Die Bindung verhält sich möglicherweise so, als ob die Eigenschaft den alten Wert beibehalten hätte, wobei nur ein Laufzeitfehler auf ein Problem hinweist. Zwei Eigenschaften, die für diese Verhaltensweise bekannt sind, sind <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> und <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A>. Es gibt möglicherweise weitere Eigenschaften, auf die dieses zutrifft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Klasse verwenden können, um eine benutzerdefinierte Bindung zu erstellen, die diese Klasse als ein Sicherheitsbindungselement enthält. [!INCLUDE[crabout](~/includes/crabout-md.md)]der Code in diesem Beispiel finden Sie unter [Vorgehensweise: konsistent Verweis x. 509-Zertifikate](~/docs/framework/wcf/feature-details/how-to-consistently-reference-x-509-certificates.md).  
+  
+ [!code-csharp[S_UEAssymetricSecurityBindingElement#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/cs/source.cs#1)]
+ [!code-vb[S_UEAssymetricSecurityBindingElement#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsymmetricSecurityBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz dieser Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Member werden von diesem Konstruktor festgelegt:  
+  
+|Member|Wert|  
+|------------|-----------|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A>|<xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>|`false`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.InitiatorTokenParameters%2A>|`null`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RecipientTokenParameters%2A>|`null`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.AllowSerializedSigningTokenOnReply%2A>|`false`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsymmetricSecurityBindingElement (System.ServiceModel.Security.Tokens.SecurityTokenParameters recipientTokenParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.Tokens.SecurityTokenParameters recipientTokenParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.#ctor(System.ServiceModel.Security.Tokens.SecurityTokenParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="recipientTokenParameters" Type="System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="recipientTokenParameters">Definiert das Token für den Empfänger (z.&amp;#160;B. das X.509-Zertifikat des Servers).</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" /> mit den angegebenen Empfängertokenparametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Member werden von diesem Konstruktor festgelegt:  
+  
+|Member|Wert|  
+|------------|-----------|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A>|<xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>|`false`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.InitiatorTokenParameters%2A>|`null`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RecipientTokenParameters%2A>|`recipientTokenParameters`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.AllowSerializedSigningTokenOnReply%2A>|`false`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsymmetricSecurityBindingElement (System.ServiceModel.Security.Tokens.SecurityTokenParameters recipientTokenParameters, System.ServiceModel.Security.Tokens.SecurityTokenParameters initiatorTokenParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.Tokens.SecurityTokenParameters recipientTokenParameters, class System.ServiceModel.Security.Tokens.SecurityTokenParameters initiatorTokenParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.#ctor(System.ServiceModel.Security.Tokens.SecurityTokenParameters,System.ServiceModel.Security.Tokens.SecurityTokenParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="recipientTokenParameters" Type="System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+        <Parameter Name="initiatorTokenParameters" Type="System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="recipientTokenParameters">Definiert das Token für den Empfänger (z.&amp;#160;B. das X.509-Zertifikat des Servers).</param>
+        <param name="initiatorTokenParameters">Definiert das Token für den Initiator (z.&amp;#160;B. das X.509-Zertifikat des Clients).</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" /> mit den angegebenen Empfänger- und Initiatortokenparametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Member werden von diesem Konstruktor festgelegt:  
+  
+|Member|Wert|  
+|------------|-----------|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A>|<xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>|`false`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.InitiatorTokenParameters%2A>|`initiatorTokenParameters`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RecipientTokenParameters%2A>|`recipientTokenParameters`|  
+|<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.AllowSerializedSigningTokenOnReply%2A>|`false`|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt einen Weg, wie dieser Konstruktor aufgerufen wird.  
+  
+ [!code-csharp[S_UEAssymetricSecurityBindingElement#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/cs/source.cs#2)]
+ [!code-vb[S_UEAssymetricSecurityBindingElement#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSerializedSigningTokenOnReply">
+      <MemberSignature Language="C#" Value="public bool AllowSerializedSigningTokenOnReply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowSerializedSigningTokenOnReply" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.AllowSerializedSigningTokenOnReply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Serialisierung eines Signiertokens für eine Antwort zulässig ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Serialisierung eines Signiertokens für eine Antwort zulässig ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Flag ist dazu gedacht, die Interoperabilität mit einigen älteren Implementierungen von WS-Security (z.&#160;B. WSE&#160;2.0) zu ermöglichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactoryCore&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactoryCore&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactoryCore&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.BuildChannelFactoryCore``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">To be added.</typeparam>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListenerCore&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListenerCore&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListenerCore&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.BuildChannelListenerCore``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">To be added.</typeparam>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Klasse, die aus der aktuellen initialisiert wurde.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.BindingElement" />-Objekt mit Eigenschaftswerten, die denen der aktuellen Instanz entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dadurch wird eine vollständige Kopie der aktuellen Bindungselementobjektstruktur erstellt, die auch als tiefer Klon bezeichnet wird. Mit einem tiefen Klon eines Objekts wird neben der Kopie des Objekts eine Kopie aller Elemente erstellt, auf die das betreffende Objekt direkt oder indirekt verweist. (Dies kann auch als Kopieren des gesamten Objektdiagramms bezeichnet werden.) Durch das Zurückgeben eines tiefen Klons kann zur Laufzeit der Fall unterstützt werden, in dem mehrere benutzerdefinierte Bindungen ein benutzerdefiniertes Bindungselement gemeinsam nutzen. Wenn ein tiefer Klon nicht zurückgegeben wird, ist das Laufzeitverhalten nicht definiert.  
+  
+ Ein flacher Klon eines Objekts stellt im Gegensatz dazu nur eine Kopie des Objekts dar. Wenn das Objekt Verweise auf andere Objekte enthält, werden von der flachen Kopie keine Kopien der Objekte erstellt, auf die verwiesen wird. Stattdessen werden nur die Verweise auf die ursprünglichen Objekte kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des abzurufenden Objekts.</typeparam>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Ruft ein angegebenes Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> ab.</summary>
+        <returns>Das angegebene Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> oder <see langword="null" />, wenn das Objekt nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft das angegebene Objekt aus der Basisklasse oder einem der Vorgänger dieser Klasse ab. Das zurückgegebene Objekt stellt normalerweise eine Auflistung von Eigenschaften dar, z.&#160;B. ein Objekt, das <xref:System.ServiceModel.Channels.ISecurityCapabilities> implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitiatorTokenParameters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.SecurityTokenParameters InitiatorTokenParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.Tokens.SecurityTokenParameters InitiatorTokenParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.InitiatorTokenParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tokendefinition für den Initiator an.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" /> mit der Tokendefinition.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft eine Klasse ab oder legt sie fest, die die Eigenschaften für das Token des Teilnehmers, der die Unterhaltung initiiert, enthält.  
+  
+   
+  
+## Examples  
+ Der folgende Code ist ein Beispiel für den Verweis auf diese Eigenschaft.  
+  
+ [!code-csharp[S_UEAssymetricSecurityBindingElement#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/cs/source.cs#4)]
+ [!code-vb[S_UEAssymetricSecurityBindingElement#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageProtectionOrder">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.MessageProtectionOrder MessageProtectionOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.MessageProtectionOrder MessageProtectionOrder" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.MessageProtectionOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Reihenfolge der Nachrichtenverschlüsselung und der Signierung für diese Bindung ab, oder legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.ServiceModel.Security.MessageProtectionOrder" />-Werte, die angeben, wie die Nachricht geschützt wird. Die Standardeinstellung ist <see cref="F:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Enthält die Nachricht keinerlei verschlüsselte Inhalte, wird das Signaturelement nicht verschlüsselt. Dies gilt auch, wenn die <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A>-Eigenschaft auf <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> festgelegt wurde. Dieses Verhalten tritt sogar mit vom System bereitgestellten Bindungen auf. Jedoch die WSDL-Datei generiert, von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] enthält immer noch das <`sp:EncryptSignature`> Assertion.  
+  
+ Eine Liste dieser Member und ihrer Beschreibungen finden Sie unter <xref:System.ServiceModel.Security.MessageProtectionOrder>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kein gültiger Member der Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecipientTokenParameters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.SecurityTokenParameters RecipientTokenParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.Tokens.SecurityTokenParameters RecipientTokenParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RecipientTokenParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tokendefinition für den Empfänger an.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" /> mit der Tokendefinition.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft eine Klasse ab oder legt sie fest, die die Eigenschaften für das Token des Teilnehmers, der die Unterhaltung empfängt, enthält.  
+  
+   
+  
+## Examples  
+ Der folgende Code ist ein Beispiel für den Verweis auf diese Eigenschaft.  
+  
+ [!code-csharp[S_UEAssymetricSecurityBindingElement#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/cs/source.cs#5)]
+ [!code-vb[S_UEAssymetricSecurityBindingElement#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/vb/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSignatureConfirmation">
+      <MemberSignature Language="C#" Value="public bool RequireSignatureConfirmation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSignatureConfirmation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RequireSignatureConfirmation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Nachrichtensignaturen bestätigt werden müssen, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn Nachrichtensignaturen bestätigt werden müssen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob die Anforderungssignaturen als Teil der Antwort bestätigt werden müssen. Wenn `true` festgelegt ist, signiert der Server in der Antwort alle Signaturen, die in der Anforderung enthalten waren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKeyDerivation">
+      <MemberSignature Language="C#" Value="public override void SetKeyDerivation (bool requireDerivedKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetKeyDerivation(bool requireDerivedKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.SetKeyDerivation(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireDerivedKeys" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireDerivedKeys">
+          <see langword="true" />, wenn abgeleitete Schlüssel erforderlich sind, andernfalls <see langword="false" />.</param>
+        <summary>Legt einen Wert fest, der angibt, ob abgeleitete Schlüssel erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aus einem vorhandenen Schlüssel wird ein abgeleiteter Schlüssel erstellt, sodass der im Verlauf einer Unterhaltung verwendete Schlüssel unterschiedlich sein kann. Dies macht es für Hacker schwieriger, die Unterhaltung zu entschlüsseln.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie diese Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[S_UEAssymetricSecurityBindingElement#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/cs/source.cs#3)]
+ [!code-vb[S_UEAssymetricSecurityBindingElement#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.MetadataExporter" />, den Sie zum Ändern des Exportvorgangs verwenden können.</param>
+        <param name="context">Der <see cref="T:System.ServiceModel.Description.PolicyConversionContext" />, den Sie zum Einfügen einer benutzerdefinierten Richtlinienassertion verwenden können.</param>
+        <summary>Exportiert eine benutzerdefinierte Bindungsrichtlinienassertion, die in die Web Services Description Language (WSDL)-Informationen eingefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt bindungsbezogene Anweisungen in die WSDL-Informationen, die von einem bestimmten Vertrag ausgegeben werden, und sie wird von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] verwendet, um Clients mitzuteilen, dass dieses benutzerdefinierte Bindungselement im Bindungsstapel vorhanden ist.  
+  
+ Diese Methode verwendet zwei Parameter: Das <xref:System.ServiceModel.Description.MetadataExporter>-Objekt und das <xref:System.ServiceModel.Description.PolicyConversionContext>-Objekt. Verwenden Sie die Methoden <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> und <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A>, um Auflistungen von Richtlinienassertionen aufzurufen, die bereits für verschiedene Bereiche exportiert wurden. Verwenden Sie anschließend diese Methode, um eigene Richtlinienassertionen zur entsprechenden Auflistung hinzuzufügen.  
+  
+ Die <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A>-Eigenschaft gibt die <xref:System.ServiceModel.Description.ContractDescription> für den Endpunkt aus, der exportiert wird. Dies ermöglicht dieser Methode, den richtigen Bereich für die exportierten Richtlinienassertionen festzulegen. Sicherheitsattribute im Code können beispielsweise der <xref:System.ServiceModel.Description.ContractDescription> Verhalten hinzufügen, die angeben, wo Richtlinienassertionen hinzugefügt werden sollen.  
+  
+ Nachdem benutzerdefinierte Richtlinienassertionen an die WSDL-Informationen angehängt werden, können Clients die benutzerdefinierten Bindungsassertionen mithilfe der <xref:System.ServiceModel.Description.IPolicyImportExtension>-Schnittstelle erkennen und importieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die diese <see cref="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" />-Instanz darstellt.</summary>
+        <returns>Die aktuelle <see cref="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.ToString%2A> zurückgegebene Informationen umfassen die folgenden Werte der aktuellen Instanz: <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RecipientTokenParameters%2A> und <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.InitiatorTokenParameters%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

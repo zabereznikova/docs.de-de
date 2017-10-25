@@ -1,0 +1,392 @@
+<Type Name="KeyEventArgs" FullName="System.Windows.Input.KeyEventArgs">
+  <TypeSignature Language="C#" Value="public class KeyEventArgs : System.Windows.Input.KeyboardEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyEventArgs extends System.Windows.Input.KeyboardEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.KeyboardEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.UIElement.KeyUp" /> und <see cref="E:System.Windows.UIElement.KeyDown" /> weitergeleiteten Ereignissen sowie dazugehörige angefügte und Vorschauereignisse bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ereignisdatenklasse wird mit den folgenden angefügten Ereignissen verwendet:  
+  
+-   <xref:System.Windows.Input.Keyboard.KeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Keyboard.KeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Keyboard.PreviewKeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Keyboard.PreviewKeyDown?displayProperty=nameWithType>  
+  
+ Diese Ereignisdatenklasse wird auch mit den folgenden Routingereignissen für Basiselemente verwendet. Diese weitergeleitete Ereignisse weiterleiten, die zuvor aufgelisteten angefügte Ereignisse damit diese mehr zugegriffen werden kann, das Modell der allgemeinen Element im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.KeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.KeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewKeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewKeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.KeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.KeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewKeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewKeyDown?displayProperty=nameWithType>  
+  
+ Angefügte Ereignisse und die Ereignisse weitergeleitet Basiselement nutzen ihre Ereignisdaten und die bubbling und tunneling-Versionen Routingereignisse Ereignisdaten auch freigeben. Dies kann die behandelten Eigenschaften des Ereignisses beeinträchtigen, während der Übertragung der Ereignisroute. Weitere Informationen finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Ein Schlüssel kann in der oben und umgeschalteten Zustand oder die ab und umgeschalteten Zustand befinden. Aus diesem Grund bestimmen, ob ein Schlüssel oben ist oder unten nicht so einfach wie das Überprüfen ist der <xref:System.Windows.Input.KeyEventArgs.KeyStates%2A> Wert als numerischen Wert. Stattdessen sollten Sie den Wert überprüfen, Konzept, indem er als eine Flags-Enumeration. Verwenden einer `AND` Vergleich des ersten Bits. Verwenden Sie alternativ die Hilfsprogramm-Eigenschaften <xref:System.Windows.Input.KeyEventArgs.IsUp%2A>, <xref:System.Windows.Input.KeyEventArgs.IsDown%2A>, und <xref:System.Windows.Input.KeyEventArgs.IsToggled%2A> um zu bestimmen, ob ein bestimmten Schlüssel wird nach oben, unten oder umgeschalteten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyEventArgs (System.Windows.Input.KeyboardDevice keyboard, System.Windows.PresentationSource inputSource, int timestamp, System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.KeyboardDevice keyboard, class System.Windows.PresentationSource inputSource, int32 timestamp, valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyEventArgs.#ctor(System.Windows.Input.KeyboardDevice,System.Windows.PresentationSource,System.Int32,System.Windows.Input.Key)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="keyboard" Type="System.Windows.Input.KeyboardDevice" />
+        <Parameter Name="inputSource" Type="System.Windows.PresentationSource" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="keyboard">Das logische Tastaturgerät mit diesem Ereignis verknüpft sind.</param>
+        <param name="inputSource">Die Eingabequelle.</param>
+        <param name="timestamp">Der Zeitpunkt des Auftretens die Eingabe.</param>
+        <param name="key">Der Schlüssel, der das Ereignis verweist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.KeyEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeadCharProcessedKey">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Key DeadCharProcessedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.Key DeadCharProcessedKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel, die Teil der Warteschlange für unzustellbare Nachrichten Schlüssel Komposition um ein einzelnes kombiniertes Zeichen zu erstellen.</summary>
+        <value>Der Schlüssel, die Teil der Warteschlange für unzustellbare Nachrichten Schlüssel Komposition um ein einzelnes kombiniertes Zeichen zu erstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein inaktiven Schlüssel, wenn gedrückt, kein sichtbares Zeichen erzeugt, aber gibt an, dass der Schlüssel mit dem Zeichen, die von der gedrückten Buchstabentaste für nächsten erzeugten kombiniert werden.  Wenn <xref:System.Windows.Input.KeyEventArgs.Key%2A> gibt <xref:System.Windows.Input.Key?displayProperty=nameWithType>, Sie können diese Eigenschaft verwenden, um die tatsächlichen Schlüssel zu erhalten, der eingegeben wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeProcessedKey">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Key ImeProcessedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.Key ImeProcessedKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.ImeProcessedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Taste, die verwiesen wird, von dem Ereignis ab, wenn der Schlüssel von zu verarbeitenden wird ein [!INCLUDE[TLA#tla_ime](~/includes/tlasharptla-ime-md.md)].</summary>
+        <value>Die <see cref="T:System.Windows.Input.Key" /> auf das Ereignis verweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputSource">
+      <MemberSignature Language="C#" Value="public System.Windows.PresentationSource InputSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PresentationSource InputSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.InputSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.PresentationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eingabequelle, die diese Eingabe bereitgestellt.</summary>
+        <value>Die Eingabequelle.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Abrufen der Eingabequelle. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">Der generische Handler auf eine Weise typspezifische aufrufen.</param>
+        <param name="genericTarget">Das Ziel den Handler aufgerufen werden.</param>
+        <summary>-Ereignishandler aufgerufen werden typspezifische versehen, Ereignis-System-Effizienz steigern können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung wandelt den generischen Handler als eine <xref:System.Windows.Input.KeyEventHandler> und ruft ihn dann auf. Ausführliche Informationen zu diesem Implementierungsmuster und die Gründe dafür, finden Sie unter <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> und [Ereignisübersicht weitergeleitet](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDown">
+      <MemberSignature Language="C#" Value="public bool IsDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.IsDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Schlüssel, der auf das Ereignis verweist im gedrückten Zustand befindet.</summary>
+        <value>
+          <see langword="true" />Wenn der Schlüssel nicht ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Keyboard> Klasse enthält auch Informationen über den Zustand der Tasten auf der Tastatur. Für die Instanz, die <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> -Methode zurück, ob ein angegebener Schlüssel ausgefallen ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob der Schlüssel mit einer Instanz von verknüpften <xref:System.Windows.Input.KeyEventArgs> gedrückt wird, indem der Zustand der der <xref:System.Windows.Input.KeyEventArgs.IsDown%2A> Eigenschaft.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsIsDown](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargsisdown)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsIsDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargsisdown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRepeat">
+      <MemberSignature Language="C#" Value="public bool IsRepeat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRepeat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.IsRepeat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Ereignis verweist die Taste auf der Tastatur eine wiederholte Schlüssel ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Schlüssel wiederholt wird. andernfalls <see langword="false" />.  Es ist kein Standardwert vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob der Schlüssel mit einer Instanz von verknüpften <xref:System.Windows.Input.KeyEventArgs> ist ein wiederholter Schlüssel von der Zustand der der <xref:System.Windows.Input.KeyEventArgs.IsRepeat%2A> Eigenschaft.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsIsRepeat](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargsisrepeat)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsIsRepeat](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargsisrepeat)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToggled">
+      <MemberSignature Language="C#" Value="public bool IsToggled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsToggled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.IsToggled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Schlüssel, der auf das Ereignis verweist im umgeschalteten Zustand befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Taste umgeschaltet wird; andernfalls <see langword="false" />.  Es ist kein Standardwert vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Keyboard> Klasse enthält auch Informationen über den Zustand der Tasten auf der Tastatur. Für die Instanz, die <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> -Methode zurück, ob ein angegebener Schlüssel ein-oder ausgeschaltet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob der Schlüssel mit einer Instanz von verknüpften <xref:System.Windows.Input.KeyEventArgs> wird von der Zustand der ein-/ausgeschaltet der <xref:System.Windows.Input.KeyEventArgs.IsToggled%2A> Eigenschaft.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsIsToggled](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargsistoggled)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsIsToggled](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargsistoggled)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUp">
+      <MemberSignature Language="C#" Value="public bool IsUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.IsUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Schlüssel, der auf das Ereignis verweist im gedrückten Zustand befindet.</summary>
+        <value>
+          <see langword="true" />Wenn der Schlüssel aktiviert ist; andernfalls <see langword="false" />.  Es ist kein Standardwert vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Keyboard> Klasse enthält auch Informationen über den Zustand der Tasten auf der Tastatur.  Für die Instanz, die <xref:System.Windows.Input.Keyboard.IsKeyUp%2A> Methodenrückgabe an, ob ein angegebenes betriebsbereit ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob der Schlüssel mit einer Instanz von verknüpften <xref:System.Windows.Input.KeyEventArgs> ist, indem der Zustand der der <xref:System.Windows.Input.KeyEventArgs.IsUp%2A> Eigenschaft.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsIsUp](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargsisup)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsIsUp](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargsisup)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Key Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.Key Key" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Ereignis zugeordneten Taste auf der Tastatur ab.</summary>
+        <value>Die <see cref="T:System.Windows.Input.Key" /> auf das Ereignis verweist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.KeyEventHandler> und überprüft, ob der Schlüssel zugeordnet der <xref:System.Windows.Input.KeyEventArgs> ist die <xref:System.Windows.Input.Key.Return> Schlüssel.  
+  
+ [!code-csharp[keydown#KeyDownSample](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
+ [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyStates">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.KeyStates KeyStates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.KeyStates KeyStates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.KeyStates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand der diesem Ereignis zugeordnete Taste auf der Tastatur ab.</summary>
+        <value>Der Status des Schlüssels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Schlüssel kann in der oben und umgeschalteten Zustand oder die ab und umgeschalteten Zustand befinden. Aus diesem Grund bestimmen, ob ein Schlüssel oben ist oder unten nicht so einfach wie das Überprüfen ist der <xref:System.Windows.Input.KeyEventArgs.KeyStates%2A> Wert als numerischen Wert. Stattdessen sollten Sie den Wert überprüfen, Konzept, indem er als eine Flags-Enumeration. Verwenden einer `AND` Vergleich des ersten Bits. Verwenden Sie alternativ die Hilfsprogramm-Eigenschaften <xref:System.Windows.Input.KeyEventArgs.IsUp%2A>, <xref:System.Windows.Input.KeyEventArgs.IsDown%2A>, und <xref:System.Windows.Input.KeyEventArgs.IsToggled%2A> um zu bestimmen, ob ein bestimmten Schlüssel wird nach oben, unten oder umgeschalteten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob eine Instanz von ein Schlüssel zugeordnet <xref:System.Windows.Input.KeyEventArgs> gedrückt wird, indem eine bitweise `AND` Vergleich auf die <xref:System.Windows.Input.KeyEventArgs.KeyStates%2A> des Schlüssels und der <xref:System.Windows.Input.KeyStates.Down> -Enumerationswert.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyStatesDown](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeystatesdown)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyStatesDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeystatesdown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemKey">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Key SystemKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.Key SystemKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyEventArgs.SystemKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab-Taste auf das Ereignis verweist, wenn die Taste vom System verarbeitet werden.</summary>
+        <value>Die <see cref="T:System.Windows.Input.Key" /> auf das Ereignis verweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

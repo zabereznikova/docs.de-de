@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media.Animation">
+  <Docs>
+    <summary>Enthält Typen, die Eigenschaft Animationsfunktionen unterstützen, einschließlich Zeitachsen, Storyboards und Keyframes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

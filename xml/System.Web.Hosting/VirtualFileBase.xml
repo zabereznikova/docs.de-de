@@ -1,0 +1,149 @@
+<Type Name="VirtualFileBase" FullName="System.Web.Hosting.VirtualFileBase">
+  <TypeSignature Language="C#" Value="public abstract class VirtualFileBase : MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VirtualFileBase extends System.MarshalByRefObject" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.VirtualFileBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die basisimplementierung für die <see cref="T:System.Web.Hosting.VirtualFile" /> und <see cref="T:System.Web.Hosting.VirtualDirectory" /> Objekte. Eine abstrakte Klasse kann nicht instanziiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Hosting.VirtualFileBase> abstrakte Klasse stellt die allgemeinen Methoden und Eigenschaften gemeinsam die <xref:System.Web.Hosting.VirtualFile> und <xref:System.Web.Hosting.VirtualDirectory> Objekte. Implementierungen dieser Klassen bereitstellen, die ASP.NET-Laufzeit mit Zugriff auf Dateien und Pfade für die Kompilierung verwendet wird. Weitere Informationen zur Verwendung von virtuellen Dateien und Pfade finden Sie unter der <xref:System.Web.Hosting.VirtualPathProvider> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.Hosting.VirtualFileBase" /> -Klasse, die Sie überschreiben müssen die <see cref="P:System.Web.Hosting.VirtualFileBase.IsDirectory" /> Eigenschaft, um anzugeben, ob das abgeleitete Objekt ein virtuelles Verzeichnis oder eine virtuelle Datei ist. Wenn beim Ableiten der <see cref="T:System.Web.Hosting.VirtualFile" /> oder die <see cref="T:System.Web.Hosting.VirtualDirectory" /> -Klasse, die <see cref="P:System.Web.Hosting.VirtualFileBase.IsDirectory" /> Eigenschaft bereits festgelegt ist.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VirtualFileBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.VirtualFileBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl Sie direkt auf eine Instanz von konstruieren können nicht die <xref:System.Web.Hosting.VirtualFileBase> -Klasse, Sie können dieses Konstruktors vom Konstruktor einer erbenden Klasse aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.VirtualFileBase.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet eine <see cref="T:System.Web.Hosting.VirtualFileBase" /> Instanz eine unbegrenzte Lebensdauer eines Lease verhindert wird erstellt.</summary>
+        <returns>Immer <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.MarshalByRefObject.InitializeLifetimeService%2A> Methode ihrer Basisklasse. Wird immer zurückgegeben `null` und verhindert dadurch, dass eine Lease erstellt werden, die die Lebensdauer der virtuellen Datei oder des Verzeichnisses einschränkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectory">
+      <MemberSignature Language="C#" Value="public abstract bool IsDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualFileBase.IsDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen Wert, der angibt, ob die <see cref="T:System.Web.Hosting.VirtualFileBase" /> Instanz darstellt, eine virtuelle Datei oder ein virtuelles Verzeichnis.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.Hosting.VirtualFileBase" /> Instanz ist ein virtuelles Verzeichnis ist, andernfalls <see langword="false" /> Wenn die <see cref="T:System.Web.Hosting.VirtualFileBase" /> Instanz ist eine virtuelle Datei.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualFileBase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen der virtuellen Ressource ab.</summary>
+        <value>Der Anzeigename der virtuellen Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Hosting.VirtualFileBase.Name%2A> Eigenschaft ist in der Regel der Dateiname und Erweiterung der Ressource zugeordnet auch virtuelle Ressourcen beliebige Namen verwenden können.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="P:System.Web.Hosting.VirtualFileBase.Name" /> Eigenschaft sollte die richtige Groß-/Kleinschreibung der virtuellen Ressource für den Anbieter des virtuellen Pfads zurück. Die richtige Groß-/Kleinschreibung kann von der Groß-/Kleinschreibung in den ursprünglichen Pfad unterscheiden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualFileBase.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den virtuellen Pfad ab.</summary>
+        <value>Der Pfad zur virtuellen Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Hosting.VirtualFileBase.VirtualPath%2A> -Eigenschaft gibt den Pfad zur Datei oder zum Verzeichnis, die von diesem-Objekt dargestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

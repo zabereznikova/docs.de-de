@@ -1,0 +1,548 @@
+<Type Name="AesManaged" FullName="System.Security.Cryptography.AesManaged">
+  <TypeSignature Language="C#" Value="public sealed class AesManaged : System.Security.Cryptography.Aes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AesManaged extends System.Security.Cryptography.Aes" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AesManaged" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Aes</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine verwaltete Implementierung des symmetrischen Algorithmus erweiterte Verschlüsselung (Advanced Encryption Standard, AES).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der AES-Algorithmus ist im Wesentlichen dem symmetrischen Rijndael-Algorithmus, mit der Größe und Iteration Anzahl fixed-Block. Diese Klasse funktioniert genauso wie die <xref:System.Security.Cryptography.RijndaelManaged> Klasse ist jedoch begrenzt Blöcke auf 128 Bits und lässt sich nicht auf die Feedback-Modi.  
+  
+> [!NOTE]
+>  Wenn die Windows-Sicherheitsrichtlinie für Federal Information Processing Standards (FIPS)-konformen Algorithmus aktiviert ist, löst mithilfe dieses Algorithmus ein <xref:System.Security.Cryptography.CryptographicException>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln von Beispieldaten mit der <xref:System.Security.Cryptography.AesManaged> Klasse.  
+  
+ [!code-csharp[AesManaged#1](~/samples/snippets/csharp/VS_Snippets_CLR/aesmanaged/cs/program.cs#1)]
+ [!code-vb[AesManaged#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/aesmanaged/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AesManaged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.AesManaged" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Windows-Sicherheitsrichtlinie für FIPS aktiviert ist.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Implementierung ist nicht Teil der Windows-Plattform-FIPS-validierten kryptografischen Algorithmen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSize">
+      <MemberSignature Language="C#" Value="public override int BlockSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.BlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.CreateDecryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein symmetrisches Entschlüsselungsobjekt mit der aktuellen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches Entschlüsselungsobjekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor (byte[] key, byte[] iv);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor(unsigned int8[] key, unsigned int8[] iv) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.CreateDecryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" />
+        <Parameter Name="iv" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der geheime Schlüssel, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <param name="iv">Der Initialisierungsvektor, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <summary>Erstellt ein symmetrisches Entschlüsselungsobjekt mit dem angegebenen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches Entschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.AesManaged.CreateDecryptor%2A?displayProperty=nameWithType> Methode, um eine verschlüsselte Nachricht zu entschlüsseln. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.AesManaged> Klasse.  
+  
+ [!code-csharp[AesManaged#3](~/samples/snippets/csharp/VS_Snippets_CLR/aesmanaged/cs/program.cs#3)]
+ [!code-vb[AesManaged#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/aesmanaged/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> oder <paramref name="iv" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.CreateEncryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein symmetrisches Verschlüsselungsobjekt mit der aktuellen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches Verschlüsselungsobjekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor (byte[] key, byte[] iv);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor(unsigned int8[] key, unsigned int8[] iv) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.CreateEncryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" />
+        <Parameter Name="iv" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der geheime Schlüssel, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <param name="iv">Der Initialisierungsvektor, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <summary>Erstellt ein symmetrisches Verschlüsselungsobjekt mit dem angegebenen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches Verschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.AesManaged.CreateEncryptor%2A> Methode zum Verschlüsseln einer Nachricht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.AesManaged> Klasse.  
+  
+ [!code-csharp[AesManaged#2](~/samples/snippets/csharp/VS_Snippets_CLR/aesmanaged/cs/program.cs#2)]
+ [!code-vb[AesManaged#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/aesmanaged/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> oder <paramref name="iv" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FeedbackSize">
+      <MemberSignature Language="C#" Value="public override int FeedbackSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FeedbackSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.FeedbackSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Bits, die als Feedback verwendet.</summary>
+        <value>Die Feedbackgröße in Bits.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Feedbackgröße beträgt 128 Bits.  
+  
+> [!NOTE]
+>  Da dieser Algorithmus Feedback-Modus nicht unterstützt, wird die Verwendung dieser Eigenschaft abgeraten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIV">
+      <MemberSignature Language="C#" Value="public override void GenerateIV ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateIV() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.GenerateIV" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen zufälligen Initialisierungsvektor (IV) für den symmetrischen Algorithmus verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public override void GenerateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesManaged.GenerateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen zufälligen Schlüssel für den symmetrischen Algorithmus verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IV">
+      <MemberSignature Language="C#" Value="public override byte[] IV { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] IV" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.IV" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Initialisierungsvektor (IV) für den symmetrischen Algorithmus verwendet.</summary>
+        <value>Der Initialisierungsvektor, der für den symmetrischen Algorithmus verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public override byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den geheimen Schlüssel für den symmetrischen Algorithmus verwendet.</summary>
+        <value>Der Schlüssel für den symmetrischen Algorithmus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des für den symmetrischen Algorithmus verwendeten geheimen Schlüssels in Bits.</summary>
+        <value>Die Größe des vom symmetrischen Algorithmus verwendeten Schlüssels in Bits.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Größe des Schlüssels ist 256 Bits.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalBlockSizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalBlockSizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalBlockSizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.LegalBlockSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalKeySizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalKeySizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.LegalKeySizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.CipherMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CipherMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Modus für die Ausführung des symmetrischen Algorithmus ab oder legt diesen fest.</summary>
+        <value>Einer der Enumerationswerte, der den blockchiffremodus für Verschlüsselung angibt. Die Standardeinstellung ist <see cref="F:System.Security.Cryptography.CipherMode.CBC" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.CipherMode.CFB> und <xref:System.Security.Cryptography.CipherMode.OFB> Modi werden nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <see cref="P:System.Security.Cryptography.AesManaged.Mode" />wird festgelegt, um <see cref="F:System.Security.Cryptography.CipherMode.CFB" /> oder <see cref="F:System.Security.Cryptography.CipherMode.OFB" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.PaddingMode Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.PaddingMode Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesManaged.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den im symmetrischen Algorithmus verwendeten Füllzeichenmodus ab oder legt diesen fest.</summary>
+        <value>Einer der Enumerationswerte, der den Typ des anzuwendenden Abstand angibt. Die Standardeinstellung ist <see cref="F:System.Security.Cryptography.PaddingMode.PKCS7" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

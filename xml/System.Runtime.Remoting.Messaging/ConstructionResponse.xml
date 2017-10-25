@@ -1,0 +1,98 @@
+<Type Name="ConstructionResponse" FullName="System.Runtime.Remoting.Messaging.ConstructionResponse">
+  <TypeSignature Language="C#" Value="public class ConstructionResponse : System.Runtime.Remoting.Messaging.MethodResponse, System.Runtime.Remoting.Activation.IConstructionReturnMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ConstructionResponse extends System.Runtime.Remoting.Messaging.MethodResponse implements class System.Runtime.Remoting.Activation.IConstructionReturnMessage, class System.Runtime.Remoting.Messaging.IMessage, class System.Runtime.Remoting.Messaging.IMethodMessage, class System.Runtime.Remoting.Messaging.IMethodReturnMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.ConstructionResponse" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Messaging.MethodResponse</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Activation.IConstructionReturnMessage</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die <see cref="T:System.Runtime.Remoting.Activation.IConstructionReturnMessage" /> Schnittstelle, um eine Nachricht zu erstellen, der auf einen Aufruf zum Instanziieren eines Remoteobjekts reagiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.Messaging.ConstructionResponse> Objekt zurückgibt, das Ergebnis einer Konstruktion-Anforderung gesendet wird, mit der <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage> Schnittstelle.  
+  
+ Die <xref:System.Runtime.Remoting.Messaging.ConstructionResponse> Klasse wird von .NET Framework-Remotinginfrastruktur verwendet. Sie müssen nicht zum Erstellen einer Instanz von der <xref:System.Runtime.Remoting.Messaging.ConstructionResponse> -Klasse direkt; verwenden Sie stattdessen die <xref:System.Runtime.Remoting.Activation.IConstructionReturnMessage> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstructionResponse (System.Runtime.Remoting.Messaging.Header[] h, System.Runtime.Remoting.Messaging.IMethodCallMessage mcm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Remoting.Messaging.Header[] h, class System.Runtime.Remoting.Messaging.IMethodCallMessage mcm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.ConstructionResponse.#ctor(System.Runtime.Remoting.Messaging.Header[],System.Runtime.Remoting.Messaging.IMethodCallMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="h" Type="System.Runtime.Remoting.Messaging.Header[]" />
+        <Parameter Name="mcm" Type="System.Runtime.Remoting.Messaging.IMethodCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="h">Ein Array von Remoting-Header, die Schlüssel-Wert-Paare enthalten. Dieses Array wird verwendet, um initialisieren <see cref="T:System.Runtime.Remoting.Messaging.ConstructionResponse" /> Felder für diesen Header, die auf den Namespace "http://schemas.microsoft.com/clr/soap/messageProperties" gehören.</param>
+        <param name="mcm">Eine Anforderungsnachricht, die einen Konstruktoraufruf auf einem Remoteobjekt bilden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Messaging.ConstructionResponse" /> -Klasse aus einem Array von Remoting-Headern und eine Anforderungsnachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Messaging.ConstructionResponse> Klasse wird von .NET Framework-Remotinginfrastruktur verwendet. Sie müssen nicht zum Erstellen einer Instanz von der <xref:System.Runtime.Remoting.Messaging.ConstructionResponse> -Klasse direkt; verwenden Sie stattdessen die <xref:System.Runtime.Remoting.Activation.IConstructionReturnMessage> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public override System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.ConstructionResponse.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.IDictionary" /> Schnittstelle, die eine Auflistung von Eigenschaften der Remotemeldung darstellt.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> Schnittstelle, die eine Auflistung von Eigenschaften der Remotemeldung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Messaging.ConstructionResponse.Properties%2A> Eigenschaft gibt den Wert des geerbten <xref:System.Runtime.Remoting.Messaging.MethodResponse.ExternalProperties> Feld.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

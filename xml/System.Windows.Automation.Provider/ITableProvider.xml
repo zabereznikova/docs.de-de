@@ -1,0 +1,98 @@
+<Type Name="ITableProvider" FullName="System.Windows.Automation.Provider.ITableProvider">
+  <TypeSignature Language="C#" Value="public interface ITableProvider : System.Windows.Automation.Provider.IGridProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITableProvider implements class System.Windows.Automation.Provider.IGridProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.ITableProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IGridProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("9c860395-97b3-490a-b52a-858cc22af166")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften verfügbar, die den Benutzeroberflächenautomatisierungs-Client beim Zugriff auf Steuerelemente unterstützen, die als Container für eine Auflistung von untergeordneten Elementen dienen. Die untergeordneten Elemente dieses Elements müssen implementieren <see cref="T:System.Windows.Automation.Provider.ITableItemProvider" /> und organisiert werden, in einem zweidimensionalen logischen Koordinatensystem, die durchlaufen werden kann (d. h. ein Benutzeroberflächenautomatisierungs-Client kann zu benachbarten Steuerelementen wechseln) mithilfe der Tastatur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Steuerelementmuster ist analog zu <xref:System.Windows.Automation.Provider.IGridProvider> mit dem Unterschied, dass jedes, das Steuerelement implementiert <xref:System.Windows.Automation.Provider.ITableProvider> Spalten- und/oder Header, um eine Beziehung für jedes untergeordnete Element muss auch verfügbar machen.  
+  
+ Steuerelemente implementieren <xref:System.Windows.Automation.Provider.ITableProvider> müssen auch implementieren <xref:System.Windows.Automation.Provider.IGridProvider> um die Funktionalität inhärenten Raster ein Table-Steuerelement bereitstellen.  
+  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.TablePattern> und <xref:System.Windows.Automation.GridPattern> Steuerelementmuster.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetColumnHeaders">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple[] GetColumnHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] GetColumnHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Benutzeroberflächenautomatisierungs-Anbietern ab, die allen Spaltenüberschriften einer Tabelle entspricht.</summary>
+        <returns>Eine Auflistung von Benutzeroberflächenautomatisierungs-Anbietern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowHeaders">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple[] GetRowHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] GetRowHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Benutzeroberflächenautomatisierungs-Anbietern ab, die alle Zeilenheader einer Tabelle darstellt.</summary>
+        <returns>Eine Auflistung von Benutzeroberflächenautomatisierungs-Anbietern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowOrColumnMajor">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.RowOrColumnMajor RowOrColumnMajor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.RowOrColumnMajor RowOrColumnMajor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.RowOrColumnMajor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die primäre Richtung des Durchlaufs für die Tabelle ab.</summary>
+        <value>Die primäre Richtung des Durchlaufs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

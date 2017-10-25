@@ -1,0 +1,137 @@
+<Type Name="ColorAdjustType" FullName="System.Drawing.Imaging.ColorAdjustType">
+  <TypeSignature Language="C#" Value="public enum ColorAdjustType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ColorAdjustType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ColorAdjustType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, welche Objekte GDI + Farbe Anpassung Informationen verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Bitmap>, <xref:System.Drawing.Brush>, und <xref:System.Drawing.Pen> Objekte verwenden alle Anpassungen, die Farbe, die in der Standardeinstellung festgelegt wurden <xref:System.Drawing.Imaging.ImageAttributes> Objekt, bis ihre eigenen Farbe Anpassung festgelegt wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorAdjustType Any = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorAdjustType.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorAdjustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anzahl der angegebenen Typen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bitmap">
+      <MemberSignature Language="C#" Value="Bitmap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorAdjustType Bitmap = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorAdjustType.Bitmap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorAdjustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Farbe Anpassung zu <see cref="T:System.Drawing.Bitmap" /> Objekte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Brush">
+      <MemberSignature Language="C#" Value="Brush" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorAdjustType Brush = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorAdjustType.Brush" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorAdjustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Farbe Anpassung zu <see cref="T:System.Drawing.Brush" /> Objekte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="Count" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorAdjustType Count = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorAdjustType.Count" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorAdjustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anzahl der angegebenen Typen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorAdjustType Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorAdjustType.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorAdjustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Farbe Anpassung-Informationen, die von allen GDI +-Objekten verwendet wird, die keine eigene Farbe Anpassung Informationen verfügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pen">
+      <MemberSignature Language="C#" Value="Pen" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorAdjustType Pen = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorAdjustType.Pen" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorAdjustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Farbe Anpassung zu <see cref="T:System.Drawing.Pen" /> Objekte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ColorAdjustType Text = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ColorAdjustType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ColorAdjustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Farbe Anpassung Informationen für Text.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

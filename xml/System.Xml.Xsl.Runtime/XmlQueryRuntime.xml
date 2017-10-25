@@ -1,0 +1,1134 @@
+<Type Name="XmlQueryRuntime" FullName="System.Xml.Xsl.Runtime.XmlQueryRuntime">
+  <TypeSignature Language="C#" Value="public sealed class XmlQueryRuntime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlQueryRuntime extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden und Eigenschaften bereit, um den XSLT-Prozessor zu unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddNewIndex">
+      <MemberSignature Language="C#" Value="public void AddNewIndex (System.Xml.XPath.XPathNavigator context, int indexId, System.Xml.Xsl.Runtime.XmlILIndex index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddNewIndex(class System.Xml.XPath.XPathNavigator context, int32 indexId, class System.Xml.Xsl.Runtime.XmlILIndex index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.AddNewIndex(System.Xml.XPath.XPathNavigator,System.Int32,System.Xml.Xsl.Runtime.XmlILIndex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="indexId" Type="System.Int32" />
+        <Parameter Name="index" Type="System.Xml.Xsl.Runtime.XmlILIndex" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <param name="indexId">Ein Wert vom Typ <see langword="int" />.</param>
+        <param name="index">Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlILIndex" />-Klasse.</param>
+        <summary>Fügt der vorhandenen Auflistung von Indizes über dem angegebenen Kontextdokument einen neu erstellten Index hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeTypeXsltArgument">
+      <MemberSignature Language="C#" Value="public object ChangeTypeXsltArgument (int indexType, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ChangeTypeXsltArgument(int32 indexType, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ChangeTypeXsltArgument(System.Int32,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="indexType" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="indexType">Ein Wert vom Typ <see langword="Int32" />.</param>
+        <param name="value">Ein Wert vom Typ <see langword="object" />.</param>
+        <param name="destinationType">Ein Wert vom Typ <see langword="Type" />.</param>
+        <summary>Konvertiert einen Wert aus dem CLR-Typ, der die <paramref name="value" /> Parameter CLR <paramref name="destinationType" /> mithilfe V1-XSLT-Regeln. Konvertiert alle Ergebnisstrukturfragmentwerte in Knoten.</summary>
+        <returns>Ein Wert vom Typ <see langword="object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeTypeXsltResult">
+      <MemberSignature Language="C#" Value="public object ChangeTypeXsltResult (int indexType, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ChangeTypeXsltResult(int32 indexType, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ChangeTypeXsltResult(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="indexType" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="indexType">Ein Wert vom Typ <see langword="int" />.</param>
+        <param name="value">Ein Wert vom Typ <see langword="object" />.</param>
+        <summary>Konvertiert von CLR-Typs der <paramref name="value" /> Parameter für den Standard-CLR-Typ, indem Sie die intermediate Language-Generierung den XML-Datentyp darstellt auf Grundlage der Konvertierungsregeln für den XML-Typ.</summary>
+        <returns>Ein Wert vom Typ <see langword="object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparePosition">
+      <MemberSignature Language="C#" Value="public int ComparePosition (System.Xml.XPath.XPathNavigator navigatorThis, System.Xml.XPath.XPathNavigator navigatorThat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ComparePosition(class System.Xml.XPath.XPathNavigator navigatorThis, class System.Xml.XPath.XPathNavigator navigatorThat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ComparePosition(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigatorThis" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="navigatorThat" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigatorThis">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <param name="navigatorThat">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Vergleicht die relativen Positionen von zwei Navigatoren.</summary>
+        <returns>-1, wenn <paramref name="navigatorThis" /> ist, bevor Sie <paramref name="navigatorThat" />; 1, wenn <paramref name="navigatorThis" /> ist nach <paramref name="navigatorThat" />; 0 Wenn beide Navigatoren auf demselben Knoten positioniert ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollation">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.XmlCollation CreateCollation (string collation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Xsl.Runtime.XmlCollation CreateCollation(string collation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.CreateCollation(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlCollation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="collation">Ein Wert vom Typ <see langword="string" />.</param>
+        <summary>Erstellt eine Sortierung aus einer Zeichenfolge.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlCollation" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugGetGlobalNames">
+      <MemberSignature Language="C#" Value="public string[] DebugGetGlobalNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] DebugGetGlobalNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetGlobalNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array mit den Namen aller globalen Variablen und Parameter zurück, die in dieser Abfrage verwendet wurden.</summary>
+        <returns>Ein Array von <see langword="string" /> Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Format des zurückgegebenen Arrays ist `{namespace}prefix:local-name`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugGetGlobalValue">
+      <MemberSignature Language="C#" Value="public System.Collections.IList DebugGetGlobalValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IList DebugGetGlobalValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetGlobalValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein Wert vom Typ <see langword="string" />.</param>
+        <summary>Ruft den Wert eines globalen Werts ab, der über den angegebenen Namen verfügt.</summary>
+        <returns>Eine Sequenz von <see cref="T:System.Xml.XPath.XPathItem" /> Instanzen oder <see langword="null" /> , wenn kein globaler Wert, der dem angegebenen Namen ab.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugGetXsltValue">
+      <MemberSignature Language="C#" Value="public object DebugGetXsltValue (System.Collections.IList seq);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object DebugGetXsltValue(class System.Collections.IList seq) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetXsltValue(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seq" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="seq">Eine Instanz der <see cref="T:System.Collections.IList" />-Klasse.</param>
+        <summary>Konvertiert eine Sequenz in den entsprechenden XSLT-Typ.</summary>
+        <returns>Ein Wert vom Typ <see langword="object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugSetGlobalValue">
+      <MemberSignature Language="C#" Value="public void DebugSetGlobalValue (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DebugSetGlobalValue(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugSetGlobalValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein Wert vom Typ <see langword="string" />.</param>
+        <param name="value">Ein Wert vom Typ <see langword="object" />.</param>
+        <summary>Legt den Wert eines globalen Werts fest, der den angegebenen Namen aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocOrderDistinct">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt; DocOrderDistinct (System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt; seq);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathNavigator&gt; DocOrderDistinct(class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathNavigator&gt; seq) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.DocOrderDistinct(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seq" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="seq">Eine Sequenz von <see cref="T:System.Xml.XPath.XPathNavigator" /> Instanzen.</param>
+        <summary>Ruft unterschiedliche sortierte Knoten aus der angegebenen Sequenz ab.</summary>
+        <returns>Eine <see cref="T:System.Collections.IList" /> von <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EarlyBoundFunctionExists">
+      <MemberSignature Language="C#" Value="public bool EarlyBoundFunctionExists (string name, string namespaceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EarlyBoundFunctionExists(string name, string namespaceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.EarlyBoundFunctionExists(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu suchende Methodenname.</param>
+        <param name="namespaceUri">Identifiziert das früh gebundene Objekt.</param>
+        <summary>Bestimmt, ob das angegebene früh gebundene Objekt eine Methode mit dem angegebenen Namen enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das früh gebundene Objekt von identifiziert <paramref name="namespaceUri" /> enthält eine Methode, die entspricht <paramref name="name" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRtfConstruction">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator EndRtfConstruction (out System.Xml.Xsl.Runtime.XmlQueryOutput output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XPath.XPathNavigator EndRtfConstruction([out] class System.Xml.Xsl.Runtime.XmlQueryOutput&amp; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.EndRtfConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Xml.Xsl.Runtime.XmlQueryOutput&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="output">Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQueryOutput" />-Klasse.</param>
+        <summary>Beendet die RTF-Erstellung.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSequenceConstruction">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; EndSequenceConstruction (out System.Xml.Xsl.Runtime.XmlQueryOutput output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; EndSequenceConstruction([out] class System.Xml.Xsl.Runtime.XmlQueryOutput&amp; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.EndSequenceConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Xml.Xsl.Runtime.XmlQueryOutput&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="output">Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQueryOutput" />-Klasse.</param>
+        <summary>Beendet das Erstellen einer geschachtelten Sequenz von Elementen.</summary>
+        <returns>Eine Sequenz von Instanzen der <see cref="T:System.Xml.XPath.XPathItem" /> Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalContext">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.XmlQueryContext ExternalContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Xsl.Runtime.XmlQueryContext ExternalContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.ExternalContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlQueryContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Objekt zurück, das externe Benutzerkontextinformationen verwaltet, z. B. Datenquellen, Parameter, Erweiterungsobjekte usw.</summary>
+        <value>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQueryContext" />-Klasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindIndex">
+      <MemberSignature Language="C#" Value="public bool FindIndex (System.Xml.XPath.XPathNavigator context, int indexId, out System.Xml.Xsl.Runtime.XmlILIndex index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FindIndex(class System.Xml.XPath.XPathNavigator context, int32 indexId, [out] class System.Xml.Xsl.Runtime.XmlILIndex&amp; index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.FindIndex(System.Xml.XPath.XPathNavigator,System.Int32,System.Xml.Xsl.Runtime.XmlILIndex@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="indexId" Type="System.Int32" />
+        <Parameter Name="index" Type="System.Xml.Xsl.Runtime.XmlILIndex&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das Kontextdokument.</param>
+        <param name="indexId">Die zu suchende Index-ID.</param>
+        <param name="index">Der zurückgegebene Index.</param>
+        <summary>Gibt den Index mit der angegebenen ID zurück, wenn sie bereits über das angegebene Dokument erstellt wurde, und gibt <see langword="true" />. Andernfalls wird ein neuen, leeren Index erstellt und gibt <see langword="false" />.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlILIndex" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateId">
+      <MemberSignature Language="C#" Value="public string GenerateId (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateId(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GenerateId(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Generieren Sie einen eindeutigen Zeichenfolgenbezeichner für den angegebenen Knoten.</summary>
+        <returns>Ein Wert vom Typ <see langword="string" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAtomizedName">
+      <MemberSignature Language="C#" Value="public string GetAtomizedName (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAtomizedName(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetAtomizedName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Ruft den atomisierten Namen am angegebenen Index im angegebenen Array mit Namen ab.</summary>
+        <returns>Ein Wert vom Typ <see langword="string" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCollation">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.XmlCollation GetCollation (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Xsl.Runtime.XmlCollation GetCollation(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetCollation(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlCollation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Ruft eine Sortierung ab, die statisch erstellt wurde.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlCollation" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEarlyBoundObject">
+      <MemberSignature Language="C#" Value="public object GetEarlyBoundObject (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetEarlyBoundObject(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetEarlyBoundObject(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Ruft das angegebene früh gebundene Erweiterungsobjekt ab. Wenn dieses Objekt noch nicht vorhanden ist, erstellt eine Instanz, die mithilfe der entsprechenden <see cref="T:System.Reflection.ConstructorInfo" />.</summary>
+        <returns>Ein Wert vom Typ <see langword="object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlobalValue">
+      <MemberSignature Language="C#" Value="public object GetGlobalValue (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetGlobalValue(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetGlobalValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Gibt den Wert zurück, der an die angegebene globale Variable gebunden ist. Wenn der Wert noch nicht berechnet wurde, wird er berechnet und in der globalen Variablen gespeichert.</summary>
+        <returns>Der Wert, der an die angegebene globale Variable gebunden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameFilter">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.XmlNavigatorFilter GetNameFilter (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Xsl.Runtime.XmlNavigatorFilter GetNameFilter(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetNameFilter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlNavigatorFilter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Ruft den Namensfilter am angegebenen Index im angegebenen Array mit Filtern ab.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeFilter">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.XmlNavigatorFilter GetTypeFilter (System.Xml.XPath.XPathNodeType nodeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Xsl.Runtime.XmlNavigatorFilter GetTypeFilter(valuetype System.Xml.XPath.XPathNodeType nodeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetTypeFilter(System.Xml.XPath.XPathNodeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlNavigatorFilter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeType" Type="System.Xml.XPath.XPathNodeType" />
+      </Parameters>
+      <Docs>
+        <param name="nodeType">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNodeType" />-Klasse.</param>
+        <summary>Ruft einen Filter ab, der Knoten des angegebenen Typs filtert.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGlobalComputed">
+      <MemberSignature Language="C#" Value="public bool IsGlobalComputed (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsGlobalComputed(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsGlobalComputed(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Gibt true zurück, wenn der angegebene globale Wert bereits berechnet wurde.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert berechnet wurden; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsQNameEqual">
+      <MemberSignature Language="C#" Value="public bool IsQNameEqual (System.Xml.XPath.XPathNavigator n1, System.Xml.XPath.XPathNavigator n2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsQNameEqual(class System.Xml.XPath.XPathNavigator n1, class System.Xml.XPath.XPathNavigator n2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n1" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="n2" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="n1">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <param name="n2">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Vergleicht die <see cref="P:System.Xml.XPath.XPathNavigator.LocalName" /> und <see cref="P:System.Xml.XPath.XPathNavigator.NamespaceURI" /> Eigenschaften von zwei <see cref="T:System.Xml.XPath.XPathNavigator" /> -Instanzen daraufhin zu überprüfen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Namen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsQNameEqual">
+      <MemberSignature Language="C#" Value="public bool IsQNameEqual (System.Xml.XPath.XPathNavigator navigator, int indexLocalName, int indexNamespaceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsQNameEqual(class System.Xml.XPath.XPathNavigator navigator, int32 indexLocalName, int32 indexNamespaceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual(System.Xml.XPath.XPathNavigator,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="indexLocalName" Type="System.Int32" />
+        <Parameter Name="indexNamespaceUri" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <param name="indexLocalName">Ein Wert vom Typ <see langword="int" />.</param>
+        <param name="indexNamespaceUri">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Bestimmt, ob die <see cref="P:System.Xml.XPath.XPathNavigator.LocalName" /> und <see cref="P:System.Xml.XPath.XPathNavigator.NamespaceURI" /> Eigenschaften des angegebenen <see cref="T:System.Xml.XPath.XPathNavigator" /> mit den in den Parametern angegebenen Namen identisch sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Namen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual%2A> Methodenaufrufe der <xref:System.Xml.Xsl.Runtime.XmlQueryRuntime.GetAtomizedName%2A> Methode, um den lokalen Namen und Namespace-URI abzurufen, die auf Grundlage der `indexLocalName` und `indexNamespaceUri`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesXmlType">
+      <MemberSignature Language="C#" Value="public bool MatchesXmlType (System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; seq, int indexType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MatchesXmlType(class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; seq, int32 indexType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seq" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+        <Parameter Name="indexType" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="seq">Eine <see cref="T:System.Collections.Generic.IList`1" /> von <see cref="T:System.Xml.XPath.XPathItem" />-Objekten.</param>
+        <param name="indexType">Der Index.</param>
+        <summary>Gibt <see langword="true" /> , wenn der Typ jedes Elements in der angegebenen Sequenz den XML-Typ übereinstimmt, der der angegebene Index identifiziert.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ des <paramref name="seq" /> ist ein Untertyp des der <paramref name="indexType" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesXmlType">
+      <MemberSignature Language="C#" Value="public bool MatchesXmlType (System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; seq, System.Xml.Schema.XmlTypeCode code);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MatchesXmlType(class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; seq, valuetype System.Xml.Schema.XmlTypeCode code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Xml.Schema.XmlTypeCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seq" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+        <Parameter Name="code" Type="System.Xml.Schema.XmlTypeCode" />
+      </Parameters>
+      <Docs>
+        <param name="seq">Eine Sequenz von <see cref="T:System.Xml.XPath.XPathItem" /> Instanzen.</param>
+        <param name="code">Ein Singletontyp.</param>
+        <summary>Bestimmt, ob der Typ der angegebenen Sequenz ein Untertyp des angegebenen Singletontyps ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ des <paramref name="seq" /> ist ein Untertyp von angegebenen Typs <paramref name="code" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesXmlType">
+      <MemberSignature Language="C#" Value="public bool MatchesXmlType (System.Xml.XPath.XPathItem item, int indexType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MatchesXmlType(class System.Xml.XPath.XPathItem item, int32 indexType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Xml.XPath.XPathItem,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Xml.XPath.XPathItem" />
+        <Parameter Name="indexType" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">Eine Instanz der <see cref="T:System.Xml.XPath.XPathItem" />-Klasse.</param>
+        <param name="indexType">Der Index im Array von XML-Typen.</param>
+        <summary>Gibt <see langword="true" /> Wenn der Typ des angegebenen <see cref="T:System.Xml.XPath.XPathItem" /> Objekt mit dem angegebenen XML-Typ übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ des angegebenen <see cref="T:System.Xml.XPath.XPathItem" /> mit dem angegebenen XML-Typ übereinstimmt, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesXmlType">
+      <MemberSignature Language="C#" Value="public bool MatchesXmlType (System.Xml.XPath.XPathItem item, System.Xml.Schema.XmlTypeCode code);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MatchesXmlType(class System.Xml.XPath.XPathItem item, valuetype System.Xml.Schema.XmlTypeCode code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Xml.XPath.XPathItem,System.Xml.Schema.XmlTypeCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Xml.XPath.XPathItem" />
+        <Parameter Name="code" Type="System.Xml.Schema.XmlTypeCode" />
+      </Parameters>
+      <Docs>
+        <param name="item">Eine Instanz der <see cref="T:System.Xml.XPath.XPathItem" />-Klasse.</param>
+        <param name="code">Eine Instanz der <see cref="T:System.Xml.Schema.XmlTypeCode" />-Klasse.</param>
+        <summary>Gibt <see langword="true" /> Wenn der Typ des der <see cref="T:System.Xml.XPath.XPathItem" /> Objekt ist ein Untertyp des Typs durch das angegebene <see cref="T:System.Xml.Schema.XmlTypeCode" />.</summary>
+        <returns>Gibt <see langword="true" /> Wenn der Typ des der <see cref="T:System.Xml.XPath.XPathItem" /> Objekt ist ein Untertyp des Typs durch das angegebene <see cref="T:System.Xml.Schema.XmlTypeCode" />, und andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTable">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNameTable NameTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNameTable NameTable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.NameTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNameTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Namenstabelle zurück, mit der alle von der Abfrage verwendeten Namen atomisiert werden.</summary>
+        <value>Eine Instanz der <see cref="T:System.Xml.XmlNameTable" />-Klasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCurrentNodeChanged">
+      <MemberSignature Language="C#" Value="public static int OnCurrentNodeChanged (System.Xml.XPath.XPathNavigator currentNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 OnCurrentNodeChanged(class System.Xml.XPath.XPathNavigator currentNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.OnCurrentNodeChanged(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="currentNode">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />Objekt, das den Knoten identifiziert.</param>
+        <summary>Für das Debuggen in Visual Studio verwendet. Wird aufgerufen, nachdem der aktuelle Knoten geändert wurde.</summary>
+        <returns>Eine ganze Zahl, die den Status der Änderung angibt. Wird nur für interne Tests verwendet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.XmlQueryOutput Output { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Xsl.Runtime.XmlQueryOutput Output" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlQueryOutput</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ausgabewriterobjekt ab.</summary>
+        <value>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQueryOutput" />-Klasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTagName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName ParseTagName (string tagName, int indexPrefixMappings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlQualifiedName ParseTagName(string tagName, int32 indexPrefixMappings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ParseTagName(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="indexPrefixMappings" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Der Tagname.</param>
+        <param name="indexPrefixMappings">Der Index.</param>
+        <summary>Analysiert den angegebenen Tagnamen und löst das resultierende Präfix auf. Wenn das Präfix nicht aufgelöst werden kann, wird ein Fehler ausgelöst.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.XmlQualifiedName" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTagName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName ParseTagName (string tagName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlQualifiedName ParseTagName(string tagName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ParseTagName(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Der Tagname.</param>
+        <param name="ns">Der Namespace.</param>
+        <summary>Analysiert den angegebenen Tagnamen. Gibt eine <see cref="T:System.Xml.XmlQualifiedName" /> , die den analysierten lokalen Namen und dem angegebenen Namespace besteht.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.XmlQualifiedName" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public void SendMessage (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendMessage(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.SendMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein Wert vom Typ <see langword="string" />.</param>
+        <summary>Meldet dem Ereignishandler Abfrageausführungsinformationen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGlobalValue">
+      <MemberSignature Language="C#" Value="public void SetGlobalValue (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGlobalValue(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.SetGlobalValue(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <param name="value">Ein Wert vom Typ <see langword="object" />.</param>
+        <summary>Gibt den Wert zurück, der an die angegebene globale Variable oder den Parameter gebunden ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRtfConstruction">
+      <MemberSignature Language="C#" Value="public void StartRtfConstruction (string baseUri, out System.Xml.Xsl.Runtime.XmlQueryOutput output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartRtfConstruction(string baseUri, [out] class System.Xml.Xsl.Runtime.XmlQueryOutput&amp; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.StartRtfConstruction(System.String,System.Xml.Xsl.Runtime.XmlQueryOutput@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.String" />
+        <Parameter Name="output" Type="System.Xml.Xsl.Runtime.XmlQueryOutput&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Ein Wert vom Typ <see langword="string" />.</param>
+        <param name="output">Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQueryOutput" />-Klasse.</param>
+        <summary>Beginnt das Erstellen einer RTF-Datei, und gibt eine neue <see cref="T:System.Xml.Xsl.Runtime.XmlQueryOutput" /> -Objekt, das verwendet wird, um die RTF-Erstellung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSequenceConstruction">
+      <MemberSignature Language="C#" Value="public void StartSequenceConstruction (out System.Xml.Xsl.Runtime.XmlQueryOutput output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartSequenceConstruction([out] class System.Xml.Xsl.Runtime.XmlQueryOutput&amp; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.StartSequenceConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Xml.Xsl.Runtime.XmlQueryOutput&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="output">Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQueryOutput" />-Klasse.</param>
+        <summary>Beginnt das Erstellen einer geschachtelten Sequenz von Elementen. Gibt eine neue <see cref="T:System.Xml.Xsl.Runtime.XmlQueryOutput" /> , die zum Erstellen dieser neuen Sequenz verwendet werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextRtfConstruction">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator TextRtfConstruction (string text, string baseUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XPath.XPathNavigator TextRtfConstruction(string text, string baseUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.TextRtfConstruction(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="baseUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein Wert vom Typ <see langword="string" />.</param>
+        <param name="baseUri">Ein Wert vom Typ <see langword="string" />.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Xml.XPath.XPathNavigator" /> aus dem angegebenen Text.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowException">
+      <MemberSignature Language="C#" Value="public void ThrowException (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ThrowException(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.ThrowException(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein Wert vom Typ <see langword="string" />.</param>
+        <summary>Löst eine XML-Ausnahme mit dem angegebenen Meldungstext aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsltFunctions">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.XsltLibrary XsltFunctions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Xsl.Runtime.XsltLibrary XsltFunctions" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.XsltFunctions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XsltLibrary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Objekt zurück, das den Zustand verwaltet. Das Zustandsobjekt ist erforderlich, um verschiedene XSLT-Funktionen zu implementieren.</summary>
+        <value>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XsltLibrary" />-Klasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

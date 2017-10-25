@@ -1,0 +1,130 @@
+<Type Name="CodeStatement" FullName="System.CodeDom.CodeStatement">
+  <TypeSignature Language="C#" Value="public class CodeStatement : System.CodeDom.CodeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeStatement extends System.CodeDom.CodeObject" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die <see langword="abstract" /> Basisklasse, von welcher Code alle Anweisungen abgeleitet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeStatement>Stellt eine abstrakte Basisklasse für codeanweisungen innerhalb der <xref:System.CodeDom> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDirectives">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeDirectiveCollection EndDirectives { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeDirectiveCollection EndDirectives" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeStatement.EndDirectives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeDirectiveCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.CodeDom.CodeDirectiveCollection" /> Objekt, das End-Anweisungen enthält.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeDirectiveCollection" /> Objekt, das End-Anweisungen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePragma">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeLinePragma LinePragma { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeLinePragma LinePragma" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeStatement.LinePragma" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeLinePragma</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen die Zeile, die auf der die codeanweisung auftritt.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeLinePragma" /> Objekt, das den Kontext der codeanweisung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Speicherort der codeanweisung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartDirectives">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeDirectiveCollection StartDirectives { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeDirectiveCollection StartDirectives" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeStatement.StartDirectives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeDirectiveCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.CodeDom.CodeDirectiveCollection" /> Objekt, das Start-Anweisungen enthält.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeDirectiveCollection" /> mit Direktiven starten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

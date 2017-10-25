@@ -1,0 +1,306 @@
+<Type Name="CustomErrorsSection" FullName="System.Web.Configuration.CustomErrorsSection">
+  <TypeSignature Language="C#" Value="public sealed class CustomErrorsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CustomErrorsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.CustomErrorsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert die benutzerdefinierten Fehler von ASP.NET. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CustomErrorsSection> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und Ändern der `customErrors` Abschnitt einer Konfigurationsdatei. Dieser Typ ist Teil einer Gruppe, umfasst die <xref:System.Web.Configuration.CustomErrorCollection>, <xref:System.Web.Configuration.CustomErrorsMode>, und <xref:System.Web.Configuration.CustomError> Typen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Configuration.CustomErrorsSection> können Informationen lesen und Schreiben von und zu dem jeweiligen Abschnitt der Konfigurationsdatei gemäß der Abschnittseigenschaft <xref:System.Configuration.SectionInformation.AllowDefinition%2A> , dessen Wert <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute des Abschnitts, deklarativ angeben, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.CustomErrorsSection> Klasse.  
+  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie Sie Werte für deklarativ angeben, die `customErrors` Abschnitt.  
+  
+```  
+<customErrors mode="RemoteOnly"  
+  defaultRedirect="customerror.htm">  
+    <error statusCode="404" redirect="customerror404.htm"/>  
+</customErrors>  
+```  
+  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Web.Configuration.CustomErrorsSection>-Klasse veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#1)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomErrorsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.CustomErrorsSection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CustomErrorsSection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.CustomErrorsSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowNestedErrors">
+      <MemberSignature Language="C#" Value="public bool AllowNestedErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowNestedErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorsSection.AllowNestedErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("allowNestedErrors", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ASP.NET eine allgemeine Fehlermeldung angezeigt werden soll, wenn die benutzerdefinierte Fehlerseite angezeigt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn eine generische Fehlermeldung angezeigt werden soll, wenn die benutzerdefinierte Fehlerseite angezeigt werden kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRedirect">
+      <MemberSignature Language="C#" Value="public string DefaultRedirect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultRedirect" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorsSection.DefaultRedirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultRedirect")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Standard-URL für Umleitung.</summary>
+        <value>Die Standard-URL, zu der die Anwendung umgeleitet wird, wenn ein Fehler auftritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Configuration.CustomErrorsSection.DefaultRedirect%2A> nicht angegeben ist, wird stattdessen ein Standardfehler angezeigt. Die <xref:System.Web.Configuration.CustomErrorsSection.DefaultRedirect%2A> gibt an, die generische Fehlerseite So aktivieren Sie für den Fall, dass Sie keine benutzerdefinierte Fehlerseite vorhanden ist.  
+  
+> [!NOTE]
+>  Die URL kann ein absoluter oder ein relativer Wert sein. Eine relative URL ist relativ zu der angegebenen Datei "Web.config" der <xref:System.Web.Configuration.CustomErrorsSection.DefaultRedirect%2A>und nicht auf der Webseite, in dem der Fehler aufgetreten ist. Eine Monatsintervall ist mit einer Tilde (~) beginnt URL relativ zum Stammpfad der Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.CustomErrorsSection.DefaultRedirect%2A>-Eigenschaft veranschaulicht.  
+  
+ Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.CustomErrorsSection> klassenthema Informationen zum Abrufen des Abschnitts.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#3)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">Die <see cref="P:System.Web.Configuration.CustomErrorsSection.DefaultRedirect" />-Eigenschaft ist <see langword="null" />. Dies ist die Standardeinstellung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeSection">
+      <MemberSignature Language="C#" Value="protected override void DeserializeSection (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DeserializeSection(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorsSection.DeserializeSection(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CustomErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.CustomErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorsSection.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CustomErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der dem <see cref="T:System.Web.Configuration.CustomError" /> Objekte.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.CustomErrorCollection" /> , die die benutzerdefinierten Fehler enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Fehler bezieht sich auf eine benutzerdefinierte Fehlermeldung Bedingung und gibt eine benutzerdefinierte Fehlerseite.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CustomErrorsSection.Errors%2A> Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#1)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CustomErrorsMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.CustomErrorsMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorsSection.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CustomErrorsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Fehleranzeige.</summary>
+        <value>Einer der <see cref="T:System.Web.Configuration.CustomErrorsMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.Configuration.CustomErrorsMode.RemoteOnly" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt an, ob benutzerdefinierte Fehler aktiviert, deaktiviert oder nur für Remoteclients angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.CustomErrorsSection.Mode%2A>-Eigenschaft veranschaulicht.  
+  
+ Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.CustomErrorsSection> klassenthema Informationen zum Abrufen des Abschnitts.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#9)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectMode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CustomErrorsRedirectMode RedirectMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.CustomErrorsRedirectMode RedirectMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorsSection.RedirectMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("redirectMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CustomErrorsRedirectMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die URL der Anforderung geändert werden soll, wenn der Benutzer auf eine benutzerdefinierte Fehlerseite umgeleitet werden.</summary>
+        <value>Ein Wert, der angibt, ob die URL geändert wird, wenn der Benutzer auf die benutzerdefinierte Fehlerseite umgeleitet werden. Der Standardwert ist <see cref="F:System.Web.Configuration.CustomErrorsRedirectMode.ResponseRedirect" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Configuration.CustomErrorsSection.RedirectMode%2A> -Eigenschaftensatz auf <xref:System.Web.Configuration.CustomErrorsRedirectMode.ResponseRedirect>, wird der Benutzer auf die Fehlerseite umgeleitet, und die ursprüngliche URL an die URL der Fehlerseite geändert wird. Wenn die <xref:System.Web.Configuration.CustomErrorsSection.RedirectMode%2A> -Eigenschaftensatz auf <xref:System.Web.Configuration.CustomErrorsRedirectMode.ResponseRewrite>, der Benutzer wird gesendet, um Fehler (Seite), und die ursprüngliche URL im Browser wird nicht geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorsSection.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,505 @@
+<Type Name="GridViewColumnHeader" FullName="System.Windows.Controls.GridViewColumnHeader">
+  <TypeSignature Language="C#" Value="public class GridViewColumnHeader : System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi GridViewColumnHeader extends System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GridViewColumnHeader" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_HeaderGripper", Type=typeof(System.Windows.Controls.Primitives.Thumb))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_FloatingHeaderCanvas", Type=typeof(System.Windows.Controls.Canvas))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Spaltenheader für eine <see cref="T:System.Windows.Controls.GridViewColumn" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.GridViewColumnHeader> Objekt ist ein Schaltflächen-Steuerelement, das von abgeleitet ist <xref:System.Windows.Controls.Primitives.ButtonBase>. <xref:System.Windows.Controls.GridViewColumnHeader>Eigenschaften Nachverfolgen von Mausereignissen und der Größe von Spalten ändern.  
+  
+ Spaltenüberschriften in einer <xref:System.Windows.Controls.GridView> Ansichtsmodus sind <xref:System.Windows.Controls.GridViewColumnHeader> Objekte.  
+  
+ Sie können anpassen, <xref:System.Windows.Controls.GridViewColumnHeader> Objekte mithilfe einer Vielzahl von Eigenschaften, die in dieser Klasse und verwandten Klassen gefunden werden. Weitere Informationen zu diesen Eigenschaften und die Rangfolge, finden Sie unter [GridView Header Spaltenformate und Übersicht über Vorlagen](~/docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
+  
+ Ein <xref:System.Windows.Controls.GridViewColumnHeader> ist eine <xref:System.Windows.Controls.ContentControl>, was bedeutet, dass es ein einzelnes Objekt eines beliebigen Typs (z. B. eine Zeichenfolge, ein Bild oder ein Bereich) enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ContentControl>-Klasse.  
+  
+   
+  
+## Examples  
+ Jede <xref:System.Windows.Controls.GridViewColumnHeader> kann ein Kontextmenü (Rechtsklick) enthalten. Im folgende Beispiel wird gezeigt, wie ein Kontextmenü für die Erstellung einer <xref:System.Windows.Controls.GridViewColumnHeader> in XAML.  
+  
+ [!code-xaml[ListViewCode#HeaderContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#headercontextmenu)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewColumnHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.GridViewColumnHeader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.GridViewColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.GridViewColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridViewColumnHeader.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridViewColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Controls.GridViewColumn" /> ab, die dem <see cref="T:System.Windows.Controls.GridViewColumnHeader" /> zugewiesen ist.</summary>
+        <value>Der <see cref="T:System.Windows.Controls.GridViewColumn" />, der diesem <see cref="T:System.Windows.Controls.GridViewColumnHeader" /> zugeordnet ist. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Column"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.GridViewColumnHeader.ColumnProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridViewColumnHeader.ColumnProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.GridViewColumnHeader.Column" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für die <xref:System.Windows.Controls.GridViewColumnHeader.Column%2A>-Abhängigkeitseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAccessKey">
+      <MemberSignature Language="C#" Value="protected override void OnAccessKey (System.Windows.Input.AccessKeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAccessKey(class System.Windows.Input.AccessKeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.AccessKeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisargumente.</param>
+        <summary>Reagiert, wenn die <see cref="P:System.Windows.Controls.AccessText.AccessKey" /> für die <see cref="T:System.Windows.Controls.GridViewColumnHeader" /> gedrückt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf die Erstellung der visuellen Struktur für die <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird die <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> von der <xref:System.Windows.Controls.GridViewColumnHeader> und aktualisiert die floating-Version des Headers bei der <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> -Ereignis für ein <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung löst die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis beim Ändern der Position einer Spalteninhalts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> Implementierung für einen <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.GridViewColumnHeaderAutomationPeer" /> dafür <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostKeyboardFocus (System.Windows.Input.KeyboardFocusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostKeyboardFocus(class System.Windows.Input.KeyboardFocusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.LostKeyboardFocus" /> -Ereignis für ein <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.GridViewColumnHeader> Implementierung von <xref:System.Windows.UIElement.OnLostKeyboardFocus%2A> löscht Mauseingaben.  
+  
+ Diese Implementierung ändert nicht die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft von der <xref:System.Windows.Input.KeyboardFocusChangedEventArgs>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnMouseEnter(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.MouseEnter" /> Ereignis aus, wenn der Benutzer den Mauszeiger auf hält die <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung behandelt die <xref:System.Windows.UIElement.MouseEnter> Ereignis aus, wenn der Benutzer zieht eine <xref:System.Windows.Controls.GridViewColumnHeader> und die zugehörige Spalte an eine neue Position in einer <xref:System.Windows.Controls.GridView> mit der Maus. Behandlung des Ereignisses die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft von der <xref:System.Windows.Input.MouseEventArgs> auf festgelegt ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnMouseLeave(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.MouseLeave" /> Ereignis aus, wenn die Maus bewegt wird, deaktiviert die <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung behandelt die <xref:System.Windows.UIElement.MouseLeave> Ereignis aus, wenn der Benutzer zieht eine <xref:System.Windows.Controls.GridViewColumnHeader> mit der Maus am alten Speicherort, um die Header und die zugehörige Spalte zu verschieben. Behandlung des Ereignisses die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft von der <xref:System.Windows.Input.MouseEventArgs> auf festgelegt ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.MouseLeftButtonDown" /> Ereignis aus, wenn der Benutzer die linke Maustaste drückt, während des Anhaltens des Mauszeigers auf die <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung behandelt die <xref:System.Windows.UIElement.MouseLeftButtonUp> Ereignis, damit die <xref:System.Windows.Controls.GridViewHeaderRowPresenter.OnMouseLeftButtonUp%2A?displayProperty=nameWithType> unterstützen den Drag-and-Drop-Vorgang, der eine Spalte verschoben wird. Diese Methode erfasst die Maus und stellt die <xref:System.Windows.RoutedEventArgs.Handled%2A> Ereignisargument, das `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.MouseLeftButtonUp" /> Ereignis aus, wenn der Benutzer die linke Maustaste loslässt, während des Anhaltens des Mauszeigers auf die <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung behandelt die <xref:System.Windows.UIElement.MouseLeftButtonUp> Ereignis (Dies tritt ein, wenn die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft in der <xref:System.Windows.Input.MouseEventArgs> auf festgelegt ist `true`). Diese auch endet, und des Erfassen von Mauseingaben, die festgelegt wurde, indem Sie die <xref:System.Windows.Controls.GridViewColumnHeader.OnMouseLeftButtonDown%2A> Methode. Dies bietet eine Möglichkeit für die <xref:System.Windows.Controls.GridViewHeaderRowPresenter.OnMouseLeftButtonUp%2A?displayProperty=nameWithType> zur Unterstützung des Drag-and-Drop-Vorgangs, der eine Spalte verschoben wird.  
+  
+ Diese Methode legt die <xref:System.Windows.RoutedEventArgs.Handled%2A> Ereignisargument, das `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnMouseMove(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.MouseMove" /> das Ereignis tritt bei der Benutzer die Maus innerhalb verschiebt eine <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In dieser Implementierung bleibt die linke Maustaste in einen Zustand "gedrückt", während eine <xref:System.Windows.Controls.GridViewColumn> eines Drag & Drop-Vorgangs verschoben wird. Führt dies ebenfalls die <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> Eigenschaft von der <xref:System.Windows.Controls.GridViewColumnHeader> , bleiben `true` Wenn die Maus mit der linken Maustaste gedrückt wird der Header verschoben.  
+  
+ In dieser Implementierung bleibt die <xref:System.Windows.RoutedEventArgs.Handled%2A> Ereignisargument festgelegt `false` für die <xref:System.Windows.UIElement.MouseMove> Ereignis, damit die <xref:System.Windows.Controls.GridViewHeaderRowPresenter.OnMouseMove%2A?displayProperty=nameWithType> Methode unterstützen den Drag-and-Drop-Vorgang, der eine Spalte verschoben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderSizeChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRenderSizeChanged (System.Windows.SizeChangedInfo sizeInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnRenderSizeChanged(class System.Windows.SizeChangedInfo sizeInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.OnRenderSizeChanged(System.Windows.SizeChangedInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sizeInfo" Type="System.Windows.SizeChangedInfo" />
+      </Parameters>
+      <Docs>
+        <param name="sizeInfo">Informationen zum Ändern der Größe von der <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</param>
+        <summary>Reagiert auf eine Änderung in <see cref="T:System.Windows.Controls.GridViewColumnHeader" /> Dimensionen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.GridViewColumnHeaderRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.GridViewColumnHeaderRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridViewColumnHeader.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridViewColumnHeaderRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rolle von einem <see cref="T:System.Windows.Controls.GridViewColumnHeader" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.GridViewColumnHeaderRole" /> -Enumerationswert, der die aktuelle Rolle der Spalte angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.GridViewHeaderRowPresenter> Klasse führt Layout für die Spaltenüberschriften in einer <xref:System.Windows.Controls.GridView> und platziert einen zusätzliche Spaltenheader am Ende Platz hinzufügen. Ein <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> Wert <xref:System.Windows.Controls.GridViewColumnHeaderRole.Padding> identifiziert diese Spaltenüberschrift in der <xref:System.Windows.Controls.GridView>. Ein <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> Wert <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating> identifiziert eine Spalte, die derzeit das Objekt eines Drag-and-Drop-Vorgangs darstellt.  
+  
+<a name="dependencyPropertyInfo_Role"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.GridViewColumnHeader.RoleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RoleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RoleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridViewColumnHeader.RoleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.GridViewColumnHeader.Role" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für die <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>-Abhängigkeitseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeProperty">
+      <MemberSignature Language="C#" Value="protected override bool ShouldSerializeProperty (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ShouldSerializeProperty(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnHeader.ShouldSerializeProperty(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die Abhängigkeitseigenschaft.</param>
+        <summary>Bestimmt, ob das Serialisieren einer <see cref="T:System.Windows.DependencyProperty" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.DependencyProperty" /> müssen serialisiert werden, andernfalls, <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gilt für die folgenden Abhängigkeitseigenschaften:  
+  
+-   <xref:System.Windows.Controls.ContentControl.ContentTemplateProperty>  
+  
+-   <xref:System.Windows.Controls.ContentControl.ContentTemplateSelectorProperty>  
+  
+-   <xref:System.Windows.FrameworkElement.ContextMenuProperty>  
+  
+-   <xref:System.Windows.FrameworkElement.StyleProperty>  
+  
+-   <xref:System.Windows.FrameworkElement.ToolTipProperty>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

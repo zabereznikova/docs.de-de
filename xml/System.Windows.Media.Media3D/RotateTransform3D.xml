@@ -1,0 +1,429 @@
+<Type Name="RotateTransform3D" FullName="System.Windows.Media.Media3D.RotateTransform3D">
+  <TypeSignature Language="C#" Value="public sealed class RotateTransform3D : System.Windows.Media.Media3D.AffineTransform3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RotateTransform3D extends System.Windows.Media.Media3D.AffineTransform3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.RotateTransform3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.AffineTransform3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt eine Drehtransformation an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drehungen in [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] in der Regel bestehen aus zwei Argumente: ein Punkt, die ein Objekt oder einen Satz von Objekten zu drehen und einen Wert in Grad oder Bogenmaß (Radiant), die das Ausmaß der Rotation bestimmt. In [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)], es ist erforderlich, geben Sie einen <xref:System.Windows.Media.Media3D.Vector3D> anstelle eines Punkts, um den die Drehung.  
+  
+ Drehungen in [!INCLUDE[TLA2#tla_3d](~/includes/tla2sharptla-3d-md.md)] komplizierter, wenn sie animiert werden.  Zu animierende eine [!INCLUDE[TLA2#tla_3d](~/includes/tla2sharptla-3d-md.md)] Drehung mit <xref:System.Windows.Media.Media3D.RotateTransform3D>, können Animieren der <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> oder <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> Eigenschaften des ein <xref:System.Windows.Media.Media3D.AxisAngleRotation3D>, oder geben Sie eine <xref:System.Windows.Media.Media3D.QuaternionRotation3D> für die Transformation...  
+  
+ Achse/Winkel Drehungen in [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](~/includes/tla2sharptla-3d-md.md)] in Grad, nicht Bogenmaß (Radiant) angegeben werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[3doverview#3DOverview3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn1)]
+ [!code-vb[3doverview#3DOverview3DN1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn1)]  
+  
+ [!code-xaml[animate3drotation#Animate3DRotation3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RotateTransform3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RotateTransform3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.RotateTransform3D" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RotateTransform3D (System.Windows.Media.Media3D.Rotation3D rotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D rotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RotateTransform3D.#ctor(System.Windows.Media.Media3D.Rotation3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rotation" Type="System.Windows.Media.Media3D.Rotation3D" />
+      </Parameters>
+      <Docs>
+        <param name="rotation">Rotation3D, der die Drehung angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Media3D.RotateTransform3D" /> Klasse mit der angegebenen Drehung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[animate3drotationcode#Animate3DRotationCode3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotationCode/CSharp/Window1.xaml.cs#animate3drotationcode3dn1)]
+ [!code-vb[animate3drotationcode#Animate3DRotationCode3DN1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Animate3DRotationCode/visualbasic/window1.xaml.vb#animate3drotationcode3dn1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RotateTransform3D (System.Windows.Media.Media3D.Rotation3D rotation, System.Windows.Media.Media3D.Point3D center);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D rotation, valuetype System.Windows.Media.Media3D.Point3D center) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RotateTransform3D.#ctor(System.Windows.Media.Media3D.Rotation3D,System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rotation" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="center" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="rotation">Rotation3D, der die Drehung angibt.</param>
+        <param name="center">Mittelpunkt der Drehung der Transformation.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Media3D.RotateTransform3D" /> Klasse mit dem angegebenen Mittelpunkt und Drehung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RotateTransform3D (System.Windows.Media.Media3D.Rotation3D rotation, double centerX, double centerY, double centerZ);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Rotation3D rotation, float64 centerX, float64 centerY, float64 centerZ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RotateTransform3D.#ctor(System.Windows.Media.Media3D.Rotation3D,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rotation" Type="System.Windows.Media.Media3D.Rotation3D" />
+        <Parameter Name="centerX" Type="System.Double" />
+        <Parameter Name="centerY" Type="System.Double" />
+        <Parameter Name="centerZ" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="rotation">Rotation3D, der die Drehung angibt.</param>
+        <param name="centerX">Double-Wert, der angibt, den X-Wert, um die gedreht.</param>
+        <param name="centerY">Double-Wert, der den Y-Wert, um die gedreht angibt.</param>
+        <param name="centerZ">Double-Wert, der die Z-Wert, um die gedreht angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Media3D.RotateTransform3D" /> -Klasse Mittelpunktkoordinaten die angegebene Drehung und den Mittelpunkt Koordinaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterX">
+      <MemberSignature Language="C#" Value="public double CenterX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CenterX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RotateTransform3D.CenterX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate des der <see cref="T:System.Windows.Media.Media3D.Point3D" /> , um die gedreht.</summary>
+        <value>Double, der die X-Koordinate darstellt, der <see cref="T:System.Windows.Media.Media3D.Point3D" /> , um die gedreht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CenterX"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.RotateTransform3D.CenterXProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Der folgende Code verwendet diese Eigenschaft, um den Punkt zu ändern, die eine RotateTransform3D des Modells transformiert.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn13)]
+ [!code-vb[hittest3d#HitTest3D3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.RotateTransform3D.CenterXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.RotateTransform3D.CenterX" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterY">
+      <MemberSignature Language="C#" Value="public double CenterY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CenterY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RotateTransform3D.CenterY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Y-Koordinate des der <see cref="T:System.Windows.Media.Media3D.Point3D" /> , um die gedreht.</summary>
+        <value>Double, der die Y-Koordinate darstellt, der <see cref="T:System.Windows.Media.Media3D.Point3D" /> , um die gedreht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CenterY"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.RotateTransform3D.CenterYProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Der folgende Code verwendet diese Eigenschaft, um den Punkt zu ändern, die eine RotateTransform3D des Modells transformiert.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn13)]
+ [!code-vb[hittest3d#HitTest3D3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.RotateTransform3D.CenterYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.RotateTransform3D.CenterY" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterZ">
+      <MemberSignature Language="C#" Value="public double CenterZ { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CenterZ" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RotateTransform3D.CenterZ" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Z-Koordinate des der <see cref="T:System.Windows.Media.Media3D.Point3D" /> , um die gedreht.</summary>
+        <value>Double, der die Z-Koordinate des darstellt der <see cref="T:System.Windows.Media.Media3D.Point3D" /> , um die gedreht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code verwendet diese Eigenschaft, um den Punkt zu ändern, die eine RotateTransform3D des Modells transformiert.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn13)]
+ [!code-vb[hittest3d#HitTest3D3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterZProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterZProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterZProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.RotateTransform3D.CenterZProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.RotateTransform3D.CenterZ" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.RotateTransform3D Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.RotateTransform3D Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RotateTransform3D.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.RotateTransform3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.RotateTransform3D" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.RotateTransform3D CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.RotateTransform3D CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RotateTransform3D.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.RotateTransform3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.RotateTransform3D" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RotateTransform3D.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotation">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Rotation3D Rotation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Rotation3D Rotation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RotateTransform3D.Rotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rotation3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.Media3D.Rotation3D" /> , der die Drehung angibt.</summary>
+        <value>Rotation3D, die einen Drehwinkel um eine Achse angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Rotation"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.RotateTransform3D.RotationProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[hittest3d#HitTest3D3DN2](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml#hittest3d3dn2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RotationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RotationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.RotateTransform3D.RotationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.RotateTransform3D.Rotation" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Media3D.Matrix3D Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Matrix3D Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RotateTransform3D.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Matrix3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.Media3D.Matrix3D" /> , die Drehung darstellt.</summary>
+        <value>Matrix3D, das die Drehung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.Common">
+  <Docs>
+    <summary>Der <see cref="N:System.Data.Common" />-Namespace enthält Klassen, die von den .NET Framework-Datenanbietern gemeinsam verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein .NET Framework-Datenanbieter beschreibt eine Auflistung von Klassen, mit deren Hilfe im verwalteten Bereich auf eine Datenquelle, z. B. eine Datenbank, zugegriffen werden kann. Die folgenden Anbieter werden unterstützt: der .NET Framework-Datenanbieter für ODBC, der .NET Framework-Datenanbieter für OLEDB, der .NET Framework-Datenanbieter für Oracle und der .NET Framework-Datenanbieter für SQL Server. Die Klassen in <xref:System.Data.Common> sollen Entwicklern ermöglichen, ADO.NET-Code zu schreiben, der von allen .NET Framework-Datenanbietern verwendet werden kann.  
+  
+ Konzeptionelle Informationen zum Verwenden dieses Namespaces beim Programmieren mit.NET Framework, finden Sie unter [Schreiben von anbieterunabhängigem Code mit ADO.NET](http://msdn.microsoft.com/en-us/6db08c56-eafe-4d2f-986b-6e4d8522cb9e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,921 @@
+<Type Name="DirListBox" FullName="Microsoft.VisualBasic.Compatibility.VB6.DirListBox">
+  <TypeSignature Language="C#" Value="public class DirListBox : System.Windows.Forms.ListBox" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DirListBox extends System.Windows.Forms.ListBox" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ListBox</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(Microsoft.VisualBasic.Compatibility.VB6.CompatibilityListBoxDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zeigt von Verzeichnissen und Pfaden zur Laufzeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Steuerelement, um eine hierarchische Liste von Verzeichnissen anzuzeigen. Sie können Dialogfelder erstellen, z. B., kann ein Benutzer eine Datei aus einer Liste von Dateien in allen verfügbaren Verzeichnissen zu öffnen.  
+  
+ Legen Sie die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirList%2A>, <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListCount%2A>, und <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListIndex%2A> Eigenschaften zu einen Benutzer Zugriff auf die Elemente in einer Liste zu ermöglichen. Wenn Sie auch anzeigen, die <xref:Microsoft.VisualBasic.Compatibility.VB6.DriveListBox> und <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelemente, Schreiben Sie Code zum Synchronisieren sie mit der <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement und miteinander.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirListBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `DirListBox` -Steuerelement zeigt Verzeichnissen und Pfaden zur Laufzeit.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Change">
+      <MemberSignature Language="C#" Value="public event EventHandler Change;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Change" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Change" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Inhalt des eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> -Steuerelements geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Change` Ereignis tritt auf, wenn die Auswahl in eine <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> ändert, zu steuern, wenn der Benutzer ein neues Verzeichnis doppelklickt oder beim Ändern der <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Path%2A> Einstellung der Eigenschaft durch Code.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnWidth">
+      <MemberSignature Language="C#" Value="public int ColumnWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnWidth" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.ColumnWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite der Spalten in einem mehrspaltigen <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Die Breite der einzelnen Spalten des Steuerelements in Pixel. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Datenquelle für eine <see cref="T:System.Windows.Forms.ListControl" />.</summary>
+        <value>Ein Objekt, implementiert die <see cref="T:System.Collections.IList" /> oder <see cref="T:System.ComponentModel.IListSource" /> Schnittstellen, wie z. B. eine <see cref="T:System.Data.DataSet" /> oder ein <see cref="T:System.Array" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirList">
+      <MemberSignature Language="C#" Value="public string DirList[int Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DirList(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirList(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Die Nummer eines bestimmten Elements in der Liste.</param>
+        <summary>Ruft die Elemente, die in enthaltenen eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> Listenbereich des Steuerelements.</summary>
+        <value>Ein <see langword="String" /> , die das Verzeichnis und den Pfad für das angegebene Element enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft auf die Listenelemente zugreifen. Die `DirList` Eigenschaft arbeitet zusammen mit der <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListCount%2A> und <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListIndex%2A> Eigenschaften.  
+  
+ Für eine <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> -Steuerelement, das `Index` Folge basiert auf den aktuellen Verzeichnissen und Unterverzeichnissen, wenn das Steuerelement zur Laufzeit erstellt wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirListCount">
+      <MemberSignature Language="C#" Value="public int DirListCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DirListCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Liste Teil einer <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> Steuerelement.</summary>
+        <value>Eine <see langword="Integer" /> , die die Anzahl der Elemente in der Liste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Anzahl der Unterverzeichnisse im derzeit ausgewählten Verzeichnis zurückzugeben. Die `DirListCount` Eigenschaft arbeitet zusammen mit der <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirList%2A> und <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListIndex%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirListIndex">
+      <MemberSignature Language="C#" Value="public int DirListIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DirListIndex" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index des derzeit ausgewählten Elements in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> Steuerelement.</summary>
+        <value>Eine <see langword="Integer" /> , die den Index des derzeit ausgewählten Elements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Index des derzeit ausgewählten Verzeichnis zurückzugeben. Die `DirListIndex` Eigenschaft arbeitet zusammen mit der <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirList%2A> und <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DirListCount%2A> Eigenschaften.  
+  
+ Der Ausdruck `instance.DirList(instance.DirListIndex)` gibt die Zeichenfolge für das aktuell ausgewählte Verzeichnis zurück.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool Disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool Disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> steuern und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit der disposing-Parameter auf festgelegt `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit der disposing-Parameter auf festgelegt `false`.  
+  
+ Wenn der disposing-Parameter ist `true`, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die auf dieses Steuerelement verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Wenn Sie außer Kraft setzen <see langword="Dispose(Boolean)" />, stellen Sie sicher, dass nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md). Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMode">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DrawMode DrawMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DrawMode DrawMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DrawMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zeichnungsmodus für eine <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Eines der <see cref="P:System.Windows.Forms.ListBox.DrawMode" /> Werte, die den Modus zum Zeichnen der Elemente des Steuerelements darstellen. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DrawMode.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemHeight">
+      <MemberSignature Language="C#" Value="public int ItemHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemHeight" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.ItemHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe eines Elements in der <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Die Höhe eines Elements im Steuerelement in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nicht erforderlich, damit die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> unterstützt keine Elemente mit variabler Höhe. Es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListBox.ObjectCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListBox/ObjectCollection Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListBox+ObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elemente, die in enthaltenen eine <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> zur Darstellung der Elemente in der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte nicht verwendet werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; hinzufügen oder Entfernen von Verzeichnissen aus der Auflistung eine Ausnahme auftreten. Es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiColumn">
+      <MemberSignature Language="C#" Value="public bool MultiColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MultiColumn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.MultiColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Forms.ListBox" /> mehrere Spalten unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.ListBox" /> mehrere Spalten unterstützt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBackColorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.OnBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.BackColorChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnBackColorChanged` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="OnBackColorChanged" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="OnBackColorChanged" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChange">
+      <MemberSignature Language="C#" Value="protected virtual void OnChange (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familynewslot virtual instance void OnChange(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.OnChange(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Change" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnChanged` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="OnChanged" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="OnChanged" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDoubleClick">
+      <MemberSignature Language="C#" Value="protected override void OnDoubleClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDoubleClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.OnDoubleClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.DoubleClick" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnDoubleClick` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="OnDoubleClick" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="OnDoubleClick" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDrawItem">
+      <MemberSignature Language="C#" Value="protected override void OnDrawItem (System.Windows.Forms.DrawItemEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDrawItem(class System.Windows.Forms.DrawItemEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.OnDrawItem(System.Windows.Forms.DrawItemEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DrawItemEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Auslösen der <see cref="E:System.Windows.Forms.ListBox.DrawItem" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnDrawItem` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="OnDrawItem" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="OnDrawItem" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.FontChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnFontChanged` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="OnFontChanged" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="OnFontChanged" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleCreated" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnHandleCreated` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="OnHandleCreated" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="OnHandleCreated" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedIndexChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSelectedIndexChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSelectedIndexChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.OnSelectedIndexChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ListBox.SelectedIndexChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnSelectedIndexChanged` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="OnSelectedIndexChanged" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="OnSelectedIndexChanged" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Pfad einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> Steuerelement.</summary>
+        <value>Ein <see langword="String" /> , die den Pfad des derzeit ausgewählten Verzeichnisses darstellt. Der Standardwert ist der aktuelle Pfad aus, wenn das Steuerelement zur Laufzeit erstellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, wenn Sie Funktionen zur Datei durchsuchen und Bearbeiten von einer Anwendung erstellen. Beim Festlegen der `Path` -Eigenschaft, die Auswirkungen sind ähnlich wie die Auswirkungen des MS-DOS `chdir` Befehl; relative Pfade sind aktiviert, mit oder ohne ein Laufwerksangabe. Wenn Sie nur ein Laufwerk mit einem Doppelpunkt (:)) angeben, wird das aktuelle Verzeichnis auf diesem Laufwerk ausgewählt.  
+  
+ Die `Path` Eigenschaft kann auch zu einem qualifizierten Netzwerkpfad festgelegt werden, ohne eine Laufwerk-Verbindung mit der folgenden Syntax:  
+  
+```  
+\\servername\sharename\path  
+```  
+  
+ Ändern des Werts der `Path` für eine <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement generiert eine <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Change> Ereignis.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public override void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erzwingt, dass das Steuerelement seinen Clientbereich für ungültig erklärt und sich sofort selbst neu zeichnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see langword="Refresh" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="Refresh" /> Methode, sodass das Steuerelement und seine untergeordneten Steuerelemente für ungültig erklärt und neu gezeichnet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SelectionMode SelectionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.SelectionMode SelectionMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.SelectionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Methode, die die Auswahl von Elementen in einem <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Einer der <see cref="P:System.Windows.Forms.ListBox.SelectionMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.SelectionMode.One" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sorted">
+      <MemberSignature Language="C#" Value="public bool Sorted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sorted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.Sorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Elemente in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> alphabetisch sortiert.</summary>
+        <value>
+          <see langword="true" />Wenn Elemente im Steuerelement sortiert werden. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement `Sorted` immer "false" zurückgegeben.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueMember">
+      <MemberSignature Language="C#" Value="public string ValueMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueMember" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.ValueMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Eigenschaft zu verwenden, als der tatsächliche Wert für die Elemente in einem <see cref="T:System.Windows.Forms.ListControl" />.</summary>
+        <value>Ein <see langword="String" /> , die den Namen des eine Objekteigenschaft, die in der Auflistung, die vom angegebenen befindet darstellt der <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.DirListBox.DataSource" /> Eigenschaft. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

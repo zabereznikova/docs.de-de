@@ -1,0 +1,762 @@
+<Type Name="PrintCapabilities" FullName="System.Printing.PrintCapabilities">
+  <TypeSignature Language="C#" Value="public sealed class PrintCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PrintCapabilities extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Funktionen eines Druckers an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Printing.PrintCapabilities> Objekt ist eine einfach-zu-Darstellung eines bestimmten Typs von XML-Dokument mit dem Namen einer *PrintCapabilities Dokument*. Der zweite Wert ist eine Momentaufnahme aller Funktionen des Druckers und ihren aktuellen Einstellungen. Beispielsweise, wenn der Drucker Farbdruck unterstützt, das Dokument müsste dann eine `<PageOutputColor … >` Element, das festlegt, wie der Farbe Ausgabe verarbeitet wird. Das Element, wiederum, dargestellt durch die <xref:System.Printing.PrintCapabilities.OutputColorCapability%2A> Eigenschaft der <xref:System.Printing.PrintCapabilities> Objekt. Wenn der Drucker Farbe nicht unterstützt, besteht keine `<PageOutputColor … >` Element im Dokument und der Wert von der <xref:System.Printing.PrintCapabilities.OutputColorCapability%2A> Eigenschaft ist `null`. Das PrintCapabilities-Dokument entsprechen den [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).  
+  
+ Die <xref:System.Printing.PrintCapabilities> Klasse ermöglicht der Anwendung, die Leistungsmerkmale des Druckers abrufen, ohne dass alle direkten Lesen von XML in Verbindung setzen <xref:System.IO.Stream> Objekte.  
+  
+ Alle am häufigsten verwendeten Funktionen der Datei sowie das Foto Drucker für Home and Business, gekapselt sind, durch die <xref:System.Printing.PrintCapabilities> Klasse. Aber die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) definiert viele weitere, weniger übliche, Funktionen und können erweitert werden, um Features von Specialty-drucken-Geräten zu behandeln. Daher zwar die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket> oder <xref:System.Printing.PrintCapabilities> Klassen.  
+  
+ **Hinweis** bei der <xref:System.Printing.PrintCapabilities> Objekt wird erstellt, mit dem Konstruktor, der ein Dokument PrintCapabilities akzeptiert (als eine <xref:System.IO.Stream>) Parameter, das gesamte Dokument befindet sich in einem nicht öffentlichen Feld im-Objekt, einschließlich der XML-Elemente die weniger häufige Funktionen, die nicht von einer öffentlichen Eigenschaften dargestellt werden express die <xref:System.Printing.PrintCapabilities> Klasse. In der Tat, wenn der Treiber, die das Dokument PrintCapabilities erzeugt eine private Erweiterung verwendet das [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397), das privat definiertes Markup wird auch als Teil des nicht öffentlichen PrintCapabilities-Dokuments gespeichert.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Funktionen eines bestimmten Druckers zu ermitteln und konfigurieren ein Druckauftrags, um diese nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintCapabilities (System.IO.Stream xmlStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream xmlStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintCapabilities.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="xmlStream">Eine XML-Datei <see cref="T:System.IO.Stream" /> , die beschreibt Druckerfunktionen und die Print-Schema entspricht.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintCapabilities" /> Klasse, indem Sie eine XML-Stream (der ein PrintCapabilities-Dokument enthält) Druckerfunktionen angibt und die Anforderungen mit dem XML- [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das gesamte PrintCapabilities-Dokument befindet sich in einem nicht öffentlichen Feld im-Objekt, einschließlich der XML-Elemente, die weniger häufige Funktionen, die nicht von einer öffentlichen Eigenschaften dargestellt werden die <xref:System.Printing.PrintCapabilities> Klasse. In der Tat, wenn der Treiber, die das Dokument PrintCapabilities erzeugt eine private Erweiterung verwendet das [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397), das privat definiertes Markup wird auch als Teil des nicht öffentlichen PrintCapabilities-Dokuments gespeichert.  
+  
+ Private Abschnitte des Dokuments, sofern vorhanden, werden durch den Konstruktor, aber alle nicht überprüft **Druckschema**-definierten Segmente werden überprüft, einschließlich der Teile, die nicht von einer öffentlichen Eigenschaften dargestellt werden die <xref:System.Printing.PrintCapabilities> -Klasse. Entsprechend der <xref:System.FormatException> konnte ausgelöst werden, auch wenn alle XML-Markup, das die öffentlichen Eigenschaften entspricht, gültig ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="xmlStream" />ist kein gültiges XML.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CollationCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Collation&gt; CollationCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.Collation&gt; CollationCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.CollationCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Collation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die die Sortierung Funktionen eines Druckers zu identifizieren.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.Collation" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einem Standarddrucker sortiert die Ausgabe in der Regel durch druckspezifische jeder Seite der ersten Kopie, und klicken Sie dann auf jeder Seite der zweiten Kopie und So weiter. Wenn ein Drucker nicht sortiert ist, gibt sie an jede Kopie der ersten Seite, und klicken Sie dann auf jede Kopie des zweiten Seite, und So weiter.  
+  
+ Einige Drucker, die speziell mit Klassen sortieren ausgestattet sind. Die Drucken Sequenz für diesen speziellen Druckern möglicherweise von den standardmäßigen Drucker unterschiedlich sein. Das Ergebnis identisch ist jedoch: jede Kopie eines mehrseitigen Druckauftrags enthält alle seine Seiten in der richtigen Reihenfolge ohne manuelle sortieren.  
+  
+ Wenn der Drucker keine Sortierung unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `DocumentCollate` -Schlüsselwort, nicht die `JobCollateAllDocuments` Schlüsselwort.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet, um zu bestimmen, das die Funktionen eines bestimmten Druckers und konfigurieren ein Druckauftrags, um diese nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceFontSubstitutionCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.DeviceFontSubstitution&gt; DeviceFontSubstitutionCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.DeviceFontSubstitution&gt; DeviceFontSubstitutionCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.DeviceFontSubstitutionCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.DeviceFontSubstitution&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die identifizieren, ob und wie ein Drucker gerätebasierte Schriftarten für computerbasierte Schriftarten ersetzen kann.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.DeviceFontSubstitution" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker schriftartersetzung Gerät nicht unterstützt, ist die Auflistung leer. Falls Schriftarten unterstützt wird, sollte der Treiber enthalten sowohl die <xref:System.Printing.DeviceFontSubstitution.On> und <xref:System.Printing.DeviceFontSubstitution.Off> Werte in der Auflistung.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageDeviceFontSubstitution` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplexingCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Duplexing&gt; DuplexingCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.Duplexing&gt; DuplexingCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.DuplexingCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Duplexing&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die aufzeigen, ob und wie ein Drucker drucken zweiseitigen ausführen kann.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.Duplexing" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker Duplexdruck nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `JobDuplexAllDocumentsContiguously` -Schlüsselwort, nicht die `DocumentDuplex` Schlüsselwort.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet, um zu bestimmen, das die Funktionen eines bestimmten Druckers und konfigurieren ein Druckauftrags, um diese nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputBinCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.InputBin&gt; InputBinCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.InputBin&gt; InputBinCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.InputBinCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.InputBin&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die angeben, welche Eingabe "bin" (Papierfach) verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.InputBin" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)feature des `JobInputBin`, sofern, dass die Funktion wird vom Gerät unterstützt; andernfalls entspricht es `DocumentInputBin`, wenn, dass die Funktion unterstützt wird; andernfalls entspricht es `PageInputBin`.  
+  
+ Wenn der Drucker diese Funktionen nicht unterstützt wird, ist die Auflistung leer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCopyCount">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MaxCopyCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaxCopyCount" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.MaxCopyCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der maximalen Anzahl der Kopien, die das Gerät in ein einzelner Druckauftrag drucken kann.</summary>
+        <value>Ein auf NULL festlegbares <see cref="T:System.Int32" /> Wert, der die maximale Anzahl von Kopien angibt, die ein Drucker drucken kann. Gibt <see langword="null" /> , wenn der Gerätetreiber keinen Maximalwert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `JobCopiesAllDocuments` -Schlüsselwort, nicht die `DocumentCopiesAllPages` -Schlüsselwort, oder die `PageCopies` Schlüsselwort. Wenn der Drucker unbegrenzte Kopien drucken kann, geht der Eigenschaftswert 9999.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrientedPageMediaHeight">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; OrientedPageMediaHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; OrientedPageMediaHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.OrientedPageMediaHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der der Höhe des Druckbereichs auf einer Seite, wobei die Höhe die vertikale Dimension im Verhältnis zur Ausrichtung der Seite bedeutet.</summary>
+        <value>Ein auf NULL festlegbares <see cref="T:System.Double" /> Wert, der angibt, der die Höhe in Pixel, 1/96 Zoll erhöht werden, der den Bereich auf einer Seite, dass der Drucker drucken kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Drucker müssen einen äußeren Bereich entlang der Ränder einer Seite, um zu verhindern, dass Toner auf die Teile des Druckers, mit dessen Hilfe die Blätter abrufen lassen.  
+  
+ Diese Eigenschaft entspricht der **ImageableSizeHeight** Eigenschaft von der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageImageableSize` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrientedPageMediaWidth">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; OrientedPageMediaWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; OrientedPageMediaWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.OrientedPageMediaWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der Breite des Druckbereichs auf einer Seite, wobei die Breite die horizontalen Dimension im Verhältnis zur Ausrichtung der Seite bedeutet.</summary>
+        <value>Ein auf NULL festlegbares <see cref="T:System.Double" /> Wert, der angibt, der Breite in Pixeln, was in Schritten von 1/96 Zoll des Bereichs auf einer Seite sind, dass der Drucker drucken kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Drucker müssen einen äußeren Bereich entlang der Ränder einer Seite, um zu verhindern, dass Toner auf die Teile des Druckers, mit dessen Hilfe die Blätter abrufen lassen.  
+  
+ Diese Eigenschaft entspricht der `ImageableSizeWidth` Eigenschaft von der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageImageableSize` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputColorCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.OutputColor&gt; OutputColorCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.OutputColor&gt; OutputColorCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.OutputColorCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.OutputColor&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die die Methoden angeben, in denen ein Drucker Inhalte mit Farbe drucken kann, und Graustufen ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.OutputColor" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker Ausgabeoptionen für Farbe nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageOutputColor` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputQualityCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.OutputQuality&gt; OutputQualityCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.OutputQuality&gt; OutputQualityCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.OutputQualityCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.OutputQuality&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft unterstützt eine Auflistung von Werten, die die Typen von Ausgabequalitäten des Druckers anzugeben.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.OutputQuality" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Z. B. die <xref:System.Printing.OutputQuality> -Enumeration hat die Werte für <xref:System.Printing.OutputQuality.Draft>, <xref:System.Printing.OutputQuality.Normal>, und <xref:System.Printing.OutputQuality.High> , u. a. zu qualifizieren.  
+  
+ Wenn der Drucker Qualität/Ausgabe-Auswahl nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageOutputQuality` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageBorderlessCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageBorderless&gt; PageBorderlessCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.PageBorderless&gt; PageBorderlessCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageBorderlessCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageBorderless&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die angeben, ob der Drucker, bis zu dem Rand des Mediums drucken kann an.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PageBorderless" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Laserdrucker und Tintenstrahldrucker unterstützt randlos Drucken nicht. Zulassen einen äußeren Rand, um zu verhindern, dass Toner nur noch die Teile des Druckers, die in diesem Dokument zu verschieben. Viele photographic Drucker, unterstützen jedoch randlos drucken.  
+  
+ Wenn der Drucker randlos Drucken nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageBorderless` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageImageableArea">
+      <MemberSignature Language="C#" Value="public System.Printing.PageImageableArea PageImageableArea { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PageImageableArea PageImageableArea" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageImageableArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageImageableArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das den Bereich einer Seite darstellt, die der Drucker verwenden können.</summary>
+        <value>Ein <see cref="T:System.Printing.PageImageableArea" /> Objekt, das den Abstand in Pixel (Einheiten von 1/96 Zoll), von der linken oberen Ecke des Druckbereichs angibt. Der vertikale Abstand vom oberen Rand des Papiers gemessen, und der horizontale Abstand vom linken Rand gemessen wird. Der Rückgabewert gibt auch an, das die Breite und Höhe des Druckbereichs. Wenn der Druckertreiber kein Druckbereichs meldet, ist diese Eigenschaft null.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Laserdrucker und Tintenstrahldrucker müssen einen äußeren Rand, um die Ränder einer Seite, um zu verhindern, dass Toner nur noch die Teile des Druckers, mit dessen Hilfe die Blätter zulassen. Viele photographic Drucker, können jedoch die gesamte Seite So drucken Sie ein Bild.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageMediaSizeCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageMediaSize&gt; PageMediaSizeCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Printing.PageMediaSize&gt; PageMediaSizeCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageMediaSizeCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageMediaSize&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Printing.PageMediaSize" /> -Objekten, die Papier und Medienformate identifizieren, die ein Drucker unterstützt.</summary>
+        <value>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PageMediaSize" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Eigenschaften von <xref:System.Printing.PrintCapabilities> deren "Funktion" am Ende des Namens, z. B. <xref:System.Printing.PrintCapabilities.CollationCapability%2A>, sind Sammlungen von Werten ein enumerierter Typ. Aber <xref:System.Printing.PrintCapabilities.PageMediaSizeCapability%2A> und <xref:System.Printing.PrintCapabilities.PageResolutionCapability%2A> sind Sammlungen von Objekten. Für die letzten zwei Eigenschaften, Sie können nicht testen das Vorhandensein eines bestimmten Werts mithilfe der **Contains** Methode <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>. Dies liegt daran, dass bei Verweistypen können der Methodenrückgabe `true` nur, wenn die Speicheradresse des Objekts übergeben es ist identisch mit der Adresse eines Objekts in der Auflistung, d. h., sie sind das gleiche Objekt. Da dies in der Regel nicht der Fall sein wird, wird die Methode fast immer zurück `false` auch wenn es ein Objekt in der Auflistung mit genau den gleichen Werten in allen ihren Eigenschaften wie das Objekt übergeben der **Contains** Methode  <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>. Um zu bestimmen, den Inhalt der <xref:System.Printing.PrintCapabilities.PageMediaSizeCapability%2A>, Sie müssen jedes seiner Member, vergleichen diese mit dem gewünschten Wert durchlaufen.  
+  
+ Wenn der Drucker Größe Medienauswahl nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageMediaSize` Schlüsselwort.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie für die Suche nach einem bestimmten Wert in der <xref:System.Printing.PrintCapabilities.PageMediaSizeCapability%2A>.  
+  
+```  
+foreach (PageMediaSize mediaSize in pc.PageMediaSizeCapability)  
+    {  
+        if (mediaSize.PageMediaSizeName == PageMediaSizeName.ISOA4)  
+        {  
+            Console.WriteLine("A4 size is supported");  
+            break;  
+        }  
+    }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageMediaTypeCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageMediaType&gt; PageMediaTypeCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.PageMediaType&gt; PageMediaTypeCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageMediaTypeCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageMediaType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die identifizieren, welche Papier und andere Medien, die ein Drucker unterstützt.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PageMediaType" /> bezeichnen, nur-Text oder photographic Werte, die das Drucken Medium, z. B. Karton, angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker Medienauswahl-Typ nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageMediaType` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageOrderCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageOrder&gt; PageOrderCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.PageOrder&gt; PageOrderCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageOrderCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageOrder&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die angeben, ob ein Drucker kann Drucken von mehrseitige Dokumente von vorne nach hinten Back-Front- oder beide Richtungen.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PageOrder" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker Auswahl der Reihenfolge nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `JobPageOrder` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageOrientationCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageOrientation&gt; PageOrientationCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.PageOrientation&gt; PageOrientationCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageOrientationCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageOrientation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die identifizieren, welche Arten von Einstellungen für die seitenausrichtung ein Drucker unterstützt.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PageOrientation" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker Auswahl der Ausrichtung nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageOrientation` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageResolutionCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageResolution&gt; PageResolutionCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Printing.PageResolution&gt; PageResolutionCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageResolutionCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageResolution&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Printing.PageResolution" /> Objekten, die identifizieren, Detailtiefe von Seite Auflösung der Drucker unterstützt.</summary>
+        <value>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PageResolution" />-Objekten. Jeder Wert repräsentiert eine Seite Auflösung als qualitativen Wert, der einen Wert für die Punkte pro Zoll oder beides.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Eigenschaften von <xref:System.Printing.PrintCapabilities> deren "Funktion" am Ende des Namens, z. B. <xref:System.Printing.PrintCapabilities.CollationCapability%2A>, sind Sammlungen von Werten ein enumerierter Typ. Aber <xref:System.Printing.PrintCapabilities.PageMediaSizeCapability%2A> und <xref:System.Printing.PrintCapabilities.PageResolutionCapability%2A> sind Sammlungen von Objekten. Für die letzten zwei Eigenschaften, Sie können nicht testen das Vorhandensein eines bestimmten Werts mithilfe der **Contains** Methode <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>. Dies liegt daran, dass bei Verweistypen können der Methodenrückgabe `true` nur, wenn die Speicheradresse des Objekts übergeben es ist identisch mit der Adresse eines Objekts in der Auflistung, d. h., sie sind das gleiche Objekt. Da dies in der Regel nicht der Fall sein wird, wird die Methode fast immer zurück `false` auch wenn es ein Objekt in der Auflistung mit genau den gleichen Werten in allen ihren Eigenschaften wie das Objekt übergeben der **Contains** Methode <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>. Um zu bestimmen, den Inhalt der <xref:System.Printing.PrintCapabilities.PageResolutionCapability%2A>, Sie müssen jedes seiner Member, vergleichen diese mit dem gewünschten Wert durchlaufen. Siehe das Beispiel.  
+  
+ Die <xref:System.Printing.PageResolution> -Klasse verfügt über Eigenschaften, die in dem Sie die Punkte pro Zoll für die X- und Y-Dimensionen angeben und eine Eigenschaft, in dem Sie einen qualitativen Ausdruck für die Auflösung erteilen.  
+  
+ Wenn der Drucker Auswahl zur Seite "nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageResolution` Schlüsselwort.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie für die Suche nach einem bestimmten Wert in der <xref:System.Printing.PrintCapabilities.PageResolutionCapability%2A>.  
+  
+```  
+foreach (PageResolution pageRes in pc.PageResolutionCapability)  
+    {  
+        if (pageRes.QualitativeResolution == PageQualitativeResolution.High)  
+        {  
+            Console.WriteLine("High quality is supported");  
+            break;  
+        }  
+    }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageScalingFactorRange">
+      <MemberSignature Language="C#" Value="public System.Printing.PageScalingFactorRange PageScalingFactorRange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PageScalingFactorRange PageScalingFactorRange" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PageScalingFactorRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageScalingFactorRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale und minimale Prozentsätze ein Drucker kann nach denen vergrößern oder verringern Sie das Drucken Bild auf einer Seite ab.</summary>
+        <value>Ein <see cref="T:System.Printing.PageScalingFactorRange" /> -Objekt mit <see cref="P:System.Printing.PageScalingFactorRange.MaximumScale" /> und <see cref="P:System.Printing.PageScalingFactorRange.MinimumScale" /> Eigenschaften enthalten <see cref="T:System.Int32" /> Werte, die Prozentsätze darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Printing.PrintCapabilities.PageScalingFactorRange%2A> Eigenschaft steht in der Regel die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageScaling` Schlüsselwort. Aber es einige Komplexitäten wie folgt gibt.  
+  
+-   Verfügt das PrintCapabilities-Dokument keine `PageScaling` -Element, oder er verfügt über einen, jedoch weder seine **Scale** noch **benutzerdefinierte** Optionen definiert werden; die <xref:System.Printing.PrintCapabilities.PageScalingFactorRange%2A> -Eigenschaft null ist.  
+  
+-   In allen anderen Fällen wird wie folgt das Verhalten der Eigenschaft.  
+  
+     Die <xref:System.Printing.PageScalingFactorRange.MinimumScale%2A> Eigenschaft von der <xref:System.Printing.PrintCapabilities.PageScalingFactorRange%2A?displayProperty=nameWithType> der Eigenschaft <xref:System.Printing.PageScalingFactorRange> Objekt ist die kleinste der folgenden Werte.  
+  
+    -   Die **"MinValue"** Eigenschaft von der `PageScalingScaleWidth` Datentyp auf, der den Wert des bereitstellt der **benutzerdefinierte** Option **ScaleWidth** `ScoredProperty`.  
+  
+    -   Die **"MinValue"** Eigenschaft von der `PageScalingScaleHeight` Datentyp auf, der den Wert des bereitstellt der **benutzerdefinierte** Option **ScaleHeight** `ScoredProperty`.  
+  
+    -   Die **"MinValue"** Eigenschaft von der `PageScalingScale` Datentyp auf, der den Wert des bereitstellt der **Scale** Option **Skalierung** `ScoredProperty`.  
+  
+     Die <xref:System.Printing.PageScalingFactorRange.MaximumScale%2A> Eigenschaft von der <xref:System.Printing.PrintCapabilities.PageScalingFactorRange%2A?displayProperty=nameWithType> der Eigenschaft <xref:System.Printing.PageScalingFactorRange> Objekt ist das größte der folgenden Werte.  
+  
+    -   Die **"MaxValue"** Eigenschaft von der `PageScalingScaleWidth` Datentyp auf, der den Wert des bereitstellt der **benutzerdefinierte** Option **ScaleWidth** `ScoredProperty`.  
+  
+    -   Die **"MaxValue"** Eigenschaft von der `PageScalingScaleHeight` Datentyp auf, der den Wert des bereitstellt der **benutzerdefinierte** Option **ScaleHeight** `ScoredProperty`.  
+  
+    -   Die **"MaxValue"** Eigenschaft von der `PageScalingScale` Datentyp auf, der den Wert des bereitstellt der **Scale** Option **Skalierung** `ScoredProperty`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagesPerSheetCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;int&gt; PagesPerSheetCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;int32&gt; PagesPerSheetCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PagesPerSheetCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von ganzen Zahlen, die jeweils angeben, die Anzahl der Seiten, die ein Benutzer auswählen können, um auf einer Seite des Papiers zu drucken.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Int32" /> Werte, die die Optionen, die ein Drucker zum Drucken von mehr als eine Seite pro Seite unterstützt darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Drucker unterstützen nur eine begrenzte Anzahl von Optionen, z. B. 1, 2, 4, 6, 9 und 16 Seiten pro Blattseite.  
+  
+ Wenn der Drucker mehrere Seiten pro Blatt nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der `PagesPerSheet ScoredProperty` von der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `JobNUpAllDocumentsContiguously` -Schlüsselwort, nicht die `DocumentNUp` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagesPerSheetDirectionCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PagesPerSheetDirection&gt; PagesPerSheetDirectionCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.PagesPerSheetDirection&gt; PagesPerSheetDirectionCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PagesPerSheetDirectionCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PagesPerSheetDirection&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die welche Bitmuster identifizieren ein Druckers zum Darstellen von mehreren Seiten auf einer Seite des Papiers unterstützt.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PagesPerSheetDirection" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispielsweise können einige Drucker Seiten in links-nach-rechts-Zeilen mit den Zeilen gestapelte oben-nach-unten darzustellen. Ein anderes Muster, die einige Drucker zu unterstützen, wird rechts-nach-links-Zeilen mit den Zeilen gestapelte unten nach oben.  
+  
+ Wenn der Drucker mehrere Seiten pro Blatt nicht unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der `PresentationDirection` -Unterfeature des der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `JobNUpAllDocumentsContiguously` -Schlüsselwort, nicht die `DocumentNUp` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotoPrintingIntentCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PhotoPrintingIntent&gt; PhotoPrintingIntentCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.PhotoPrintingIntent&gt; PhotoPrintingIntentCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.PhotoPrintingIntentCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PhotoPrintingIntent&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die die Qualitätsoptionen zu identifizieren, der Drucker Drucken von Fotos unterstützt.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.PhotoPrintingIntent" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker keine Optionen für Fotoqualität unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PagePhotoPrintingIntent`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaplingCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Stapling&gt; StaplingCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.Stapling&gt; StaplingCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.StaplingCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Stapling&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die identifizieren die Typen von automatischen Heften, die ein Drucker unterstützt.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.Stapling" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie der Drucker und Heften wird nicht unterstützt wird, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `JobStapleAllDocuments` -Schlüsselwort, nicht die `DocumentStaple` Schlüsselwort.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet, um zu bestimmen, das die Funktionen eines bestimmten Druckers und konfigurieren ein Druckauftrags, um diese nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueTypeFontModeCapability">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.TrueTypeFontMode&gt; TrueTypeFontModeCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Printing.TrueTypeFontMode&gt; TrueTypeFontModeCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintCapabilities.TrueTypeFontModeCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.TrueTypeFontMode&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Werten, die die Methoden zu, die ein Drucker unterstützt identifizieren, für die Behandlung von TrueType-Schriftarten.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Printing.TrueTypeFontMode" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Drucker nicht vor jeder Methode Sonderbehandlung TrueType-Schriftarten unterstützt, ist die Auflistung leer.  
+  
+ Diese Eigenschaft entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)des `PageTrueTypeFontMode` Schlüsselwort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

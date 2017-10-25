@@ -1,0 +1,127 @@
+<Type Name="PolicyLevelType" FullName="System.Security.PolicyLevelType">
+  <TypeSignature Language="C#" Value="public enum PolicyLevelType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PolicyLevelType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.PolicyLevelType" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ von einer Richtlinienebene für verwalteten Code.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die höchste Ebene der Sicherheitsrichtlinie ist unternehmensweite. Aufeinander folgende niedrigere Ebenen der Hierarchie weiter richtlinieneinschränkungen darstellen, jedoch erteilen können nie mehr Berechtigungen als höhere Ebenen zulässig. Die Richtlinienebenen in Reihenfolge sind die folgenden.  
+  
+ 1. Enterprise  
+  
+ 2. Computer  
+  
+ 3. Benutzer  
+  
+ 4. Anwendungsdomäne  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppDomain">
+      <MemberSignature Language="C#" Value="AppDomain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.PolicyLevelType AppDomain = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.PolicyLevelType.AppDomain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PolicyLevelType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sicherheitsrichtlinie für den gesamten verwalteten Code in einer Anwendung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enterprise">
+      <MemberSignature Language="C#" Value="Enterprise" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.PolicyLevelType Enterprise = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.PolicyLevelType.Enterprise" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PolicyLevelType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sicherheitsrichtlinie für den gesamten verwalteten Code in einem Unternehmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Machine">
+      <MemberSignature Language="C#" Value="Machine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.PolicyLevelType Machine = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.PolicyLevelType.Machine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PolicyLevelType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sicherheitsrichtlinie für den gesamten verwalteten Code, der auf dem Computer ausgeführt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.PolicyLevelType User = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.PolicyLevelType.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PolicyLevelType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sicherheitsrichtlinie für den gesamten verwalteten Code, der vom Benutzer ausgeführt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

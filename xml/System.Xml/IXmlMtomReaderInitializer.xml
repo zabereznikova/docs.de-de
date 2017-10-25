@@ -1,0 +1,85 @@
+<Type Name="IXmlMtomReaderInitializer" FullName="System.Xml.IXmlMtomReaderInitializer">
+  <TypeSignature Language="C#" Value="public interface IXmlMtomReaderInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlMtomReaderInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IXmlMtomReaderInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt Implementierungsanforderungen für XML-MTOM-Reader an, die sich von dieser Schnittstelle ableiten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetInput">
+      <MemberSignature Language="C#" Value="public void SetInput (System.IO.Stream stream, System.Text.Encoding[] encodings, string contentType, System.Xml.XmlDictionaryReaderQuotas quotas, int maxBufferSize, System.Xml.OnXmlDictionaryReaderClose onClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInput(class System.IO.Stream stream, class System.Text.Encoding[] encodings, string contentType, class System.Xml.XmlDictionaryReaderQuotas quotas, int32 maxBufferSize, class System.Xml.OnXmlDictionaryReaderClose onClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlMtomReaderInitializer.SetInput(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encodings" Type="System.Text.Encoding[]" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+        <Parameter Name="onClose" Type="System.Xml.OnXmlDictionaryReaderClose" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, aus dem gelesen wird.</param>
+        <param name="encodings">Die möglichen Zeichencodierungen des Streams.</param>
+        <param name="contentType">Der Content-Type der Nachricht. Kann <see langword="null" /> sein, wenn der MIME-Typ im gelesenen Dokument vorhanden ist.</param>
+        <param name="quotas">Die <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, die auf den Reader angewendet werden sollen.</param>
+        <param name="maxBufferSize">Die maximal zulässige Größe des Puffers.</param>
+        <param name="onClose">Der zu verwendende Delegat, wenn ein <see langword="onClose" />-Ereignis eintritt.</param>
+        <summary>Gibt Initialisierungsanforderungen für XML-MTOM-Reader an, die einen Stream lesen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInput">
+      <MemberSignature Language="C#" Value="public void SetInput (byte[] buffer, int offset, int count, System.Text.Encoding[] encodings, string contentType, System.Xml.XmlDictionaryReaderQuotas quotas, int maxBufferSize, System.Xml.OnXmlDictionaryReaderClose onClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInput(unsigned int8[] buffer, int32 offset, int32 count, class System.Text.Encoding[] encodings, string contentType, class System.Xml.XmlDictionaryReaderQuotas quotas, int32 maxBufferSize, class System.Xml.OnXmlDictionaryReaderClose onClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlMtomReaderInitializer.SetInput(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="encodings" Type="System.Text.Encoding[]" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+        <Parameter Name="onClose" Type="System.Xml.OnXmlDictionaryReaderClose" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, von dem gelesen wird.</param>
+        <param name="offset">Die Anfangsposition, von dem Einlesen <c>Puffer</c>.</param>
+        <param name="count">Die Anzahl der Bytes, die aus gelesen werden können <c>Puffer</c>.</param>
+        <param name="encodings">Die möglichen Zeichencodierungen der Eingabe.</param>
+        <param name="contentType">Der Content-Type der Nachricht. Kann <see langword="null" /> sein, wenn der MIME-Typ im gelesenen Dokument vorhanden ist.</param>
+        <param name="quotas">Die <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, die auf den Reader angewendet werden sollen.</param>
+        <param name="maxBufferSize">Die maximal zulässige Größe des Puffers.</param>
+        <param name="onClose">Der zu verwendende Delegat, wenn ein <see langword="onClose" />-Ereignis eintritt.</param>
+        <summary>Gibt Initialisierungsanforderungen für XML-MTOM-Reader an, die einen Puffer lesen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

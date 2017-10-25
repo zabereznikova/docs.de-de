@@ -1,0 +1,385 @@
+<Type Name="RadioButtonRenderer" FullName="System.Windows.Forms.RadioButtonRenderer">
+  <TypeSignature Language="C#" Value="public sealed class RadioButtonRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RadioButtonRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RadioButtonRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Rendern von einem Optionsfeld-Steuerelement (auch bekannt als ein Optionsfeld) mit oder ohne visuelle Stile verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.RadioButtonRenderer> Klasse bietet eine Reihe von `static` Schaltflächensteuerelement für Methoden, die verwendet werden können, um eine Option zu rendern. Unter dem Rendern eine Steuerelements versteht man das Zeichnen der Benutzeroberfläche eines Steuerelements. Um ein Optionsfeld zu zeichnen, verwenden Sie eines der <xref:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton%2A> Methoden. Diese Methoden bieten eine Vielzahl von Optionen, z. B. das Zeichnen von Text oder ein Bild mit der Schaltfläche "Option".  
+  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind und visuelle Stile für die aktuelle Anwendung angewendet werden <xref:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton%2A> wird die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls <xref:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton%2A> zeichnet das Optionsfeld in der klassischen Windows-Format. Dies ist hilfreich, wenn Sie ein benutzerdefiniertes Steuerelement gezeichnet werden, das automatisch die aktuelle Einstellung der visuellen Stil des Betriebssystems entsprechen soll.  
+  
+ Diese Klasse dient als Wrapper für die Funktionalität des eine <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> , festgelegt ist, um eines der Elemente, die verfügbar gemacht werden, indem die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton?displayProperty=nameWithType> Klasse. Weitere Informationen finden Sie unter [Rendern von Steuerelementen mit visuellen Stilen](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefiniertes Steuerelement zu schreiben, verwendet die <xref:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton%2A> Methode, um ein Optionsfeld zu zeichnen, die auf Mausklicks reagiert.  
+  
+ [!code-cpp[System.Windows.Forms.RadioButtonRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.RadioButtonRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.RadioButtonRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawParentBackground">
+      <MemberSignature Language="C#" Value="public static void DrawParentBackground (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.Control childControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawParentBackground(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.Control childControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.DrawParentBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="childControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen des Hintergrunds für das übergeordnete Element des <c>ChildControl</c>.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> in der Hintergrund des übergeordneten Steuerelements gezeichnet werden soll. Dieses Rechteck sollte innerhalb der Grenzen des untergeordneten Steuerelements.</param>
+        <param name="childControl">Das Steuerelement, dessen übergeordneten Hintergrund gezeichnet wird.</param>
+        <summary>Zeichnet den Hintergrund des übergeordneten Elements eines Steuerelements im angegebenen Bereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf das Optionsfeld (auch bekannt als ein Optionsfeld) mit den aktuellen visuellen Stil gezeichnet. Diese Methode wird, andernfalls das Optionsfeld im klassischen Windows-Stil gezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRadioButton">
+      <MemberSignature Language="C#" Value="public static void DrawRadioButton (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Windows.Forms.VisualStyles.RadioButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRadioButton(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Windows.Forms.VisualStyles.RadioButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton(System.Drawing.Graphics,System.Drawing.Point,System.Windows.Forms.VisualStyles.RadioButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.RadioButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="glyphLocation">Die <see cref="T:System.Drawing.Point" /> zum Zeichnen des Symbols für das Optionsfeld an.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.RadioButtonState" /> Werten, die den visuellen Status des Optionsfelds angibt.</param>
+        <summary>Zeichnet ein Optionsfeld-Steuerelement (auch bekannt als ein Optionsfeld) in den angegebenen Zustand und den Speicherort an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode das Optionsfeld mit dem aktuellen visuellen Stil gezeichnet. Diese Methode wird, andernfalls das Optionsfeld im klassischen Windows-Stil gezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRadioButton">
+      <MemberSignature Language="C#" Value="public static void DrawRadioButton (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string radioButtonText, System.Drawing.Font font, bool focused, System.Windows.Forms.VisualStyles.RadioButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRadioButton(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string radioButtonText, class System.Drawing.Font font, bool focused, valuetype System.Windows.Forms.VisualStyles.RadioButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Boolean,System.Windows.Forms.VisualStyles.RadioButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="radioButtonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.RadioButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="glyphLocation">Die <see cref="T:System.Drawing.Point" /> zum Zeichnen des Symbols für das Optionsfeld an.</param>
+        <param name="textBounds">Die <see cref="T:System.Drawing.Rectangle" /> zeichnen <c>RadioButtonText</c> in.</param>
+        <param name="radioButtonText">Die <see cref="T:System.String" /> mit der Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>RadioButtonText</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.RadioButtonState" /> Werten, die den visuellen Status des Optionsfelds angibt.</param>
+        <summary>Zeichnet ein Optionsfeld-Steuerelement (auch bekannt als ein Optionsfeld) in den angegebenen Zustand und den Speicherort, mit dem angegebenen Text und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode das Optionsfeld mit dem aktuellen visuellen Stil gezeichnet. Diese Methode wird, andernfalls das Optionsfeld im klassischen Windows-Stil gezeichnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton%28System.Drawing.Graphics%2CSystem.Drawing.Point%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Boolean%2CSystem.Windows.Forms.VisualStyles.RadioButtonState%29> -Methode in eines benutzerdefinierten Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um ein Optionsfeld in dem Zustand, der durch die Position des Mauszeigers bestimmt gezeichnet. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.RadioButtonRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.RadioButtonRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.RadioButtonRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.RadioButtonRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRadioButton">
+      <MemberSignature Language="C#" Value="public static void DrawRadioButton (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string radioButtonText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, bool focused, System.Windows.Forms.VisualStyles.RadioButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRadioButton(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string radioButtonText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, bool focused, valuetype System.Windows.Forms.VisualStyles.RadioButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Boolean,System.Windows.Forms.VisualStyles.RadioButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="radioButtonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.RadioButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="glyphLocation">Die <see cref="T:System.Drawing.Point" /> zum Zeichnen des Symbols für das Optionsfeld an.</param>
+        <param name="textBounds">Die <see cref="T:System.Drawing.Rectangle" /> zeichnen <c>RadioButtonText</c> in.</param>
+        <param name="radioButtonText">Die <see cref="T:System.String" /> mit der Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>RadioButtonText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.RadioButtonState" /> Werten, die den visuellen Status des Optionsfelds angibt.</param>
+        <summary>Zeichnet ein Optionsfeld-Steuerelement (auch bekannt als ein Optionsfeld) in den angegebenen Zustand und den Speicherort, mit dem angegebenen Text und textformatierung und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode das Optionsfeld mit dem aktuellen visuellen Stil gezeichnet. Diese Methode wird, andernfalls das Optionsfeld im klassischen Windows-Stil gezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRadioButton">
+      <MemberSignature Language="C#" Value="public static void DrawRadioButton (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string radioButtonText, System.Drawing.Font font, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.RadioButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRadioButton(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string radioButtonText, class System.Drawing.Font font, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.RadioButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.RadioButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="radioButtonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.RadioButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="glyphLocation">Die <see cref="T:System.Drawing.Point" /> zum Zeichnen des Symbols für das Optionsfeld an.</param>
+        <param name="textBounds">Die <see cref="T:System.Drawing.Rectangle" /> zeichnen <c>RadioButtonText</c> in.</param>
+        <param name="radioButtonText">Die <see cref="T:System.String" /> mit der Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>RadioButtonText</c>.</param>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> mit der Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="imageBounds">Die <see cref="T:System.Drawing.Rectangle" /> zeichnen <c>Image</c> in.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.RadioButtonState" /> Werten, die den visuellen Status des Optionsfelds angibt.</param>
+        <summary>Zeichnet ein Optionsfeld-Steuerelement (auch bekannt als ein Optionsfeld) in den angegebenen Zustand und den Speicherort, mit dem angegebenen Text und Bild und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode das Optionsfeld mit dem aktuellen visuellen Stil gezeichnet. Diese Methode wird, andernfalls das Optionsfeld im klassischen Windows-Stil gezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRadioButton">
+      <MemberSignature Language="C#" Value="public static void DrawRadioButton (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string radioButtonText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.RadioButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRadioButton(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string radioButtonText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.RadioButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.DrawRadioButton(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.RadioButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="radioButtonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.RadioButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="glyphLocation">Die <see cref="T:System.Drawing.Point" /> zum Zeichnen des Symbols für das Optionsfeld an.</param>
+        <param name="textBounds">Die <see cref="T:System.Drawing.Rectangle" /> zeichnen <c>RadioButtonText</c> in.</param>
+        <param name="radioButtonText">Die <see cref="T:System.String" /> mit der Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>RadioButtonText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> mit der Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="imageBounds">Die <see cref="T:System.Drawing.Rectangle" /> zeichnen <c>Image</c> in.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.RadioButtonState" /> Werten, die den visuellen Status des Optionsfelds angibt.</param>
+        <summary>Zeichnet ein Optionsfeld-Steuerelement (auch bekannt als ein Optionsfeld) in den angegebenen Zustand und den Speicherort an; mit dem angegebenen Text, Formatieren von Text und Bild; und mit einem optionalen Fokusrechteck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode das Optionsfeld mit dem aktuellen visuellen Stil gezeichnet. Diese Methode wird, andernfalls das Optionsfeld im klassischen Windows-Stil gezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlyphSize">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size GetGlyphSize (System.Drawing.Graphics g, System.Windows.Forms.VisualStyles.RadioButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size GetGlyphSize(class System.Drawing.Graphics g, valuetype System.Windows.Forms.VisualStyles.RadioButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.GetGlyphSize(System.Drawing.Graphics,System.Windows.Forms.VisualStyles.RadioButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.RadioButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Optionsschaltfläche gezeichnet werden soll.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.RadioButtonState" /> Werten, die den visuellen Status des Optionsfelds angibt.</param>
+        <summary>Gibt die Größe des Symbols die Optionsfeld (auch bekannt als ein Optionsfeld) in Pixel zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Size" /> , die die Größe des Symbols für das Optionsfeld in Pixel darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird durch den aktuellen visuellen Stil des Betriebssystems bestimmt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.RadioButtonRenderer.GetGlyphSize%2A> Methode, um die Grenzen des Schaltflächentexts Option festzulegen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.RadioButtonRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.RadioButtonRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.RadioButtonRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.RadioButtonRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundPartiallyTransparent">
+      <MemberSignature Language="C#" Value="public static bool IsBackgroundPartiallyTransparent (System.Windows.Forms.VisualStyles.RadioButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsBackgroundPartiallyTransparent(valuetype System.Windows.Forms.VisualStyles.RadioButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButtonRenderer.IsBackgroundPartiallyTransparent(System.Windows.Forms.VisualStyles.RadioButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.RadioButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.RadioButtonState" /> Werten, die den visuellen Status des Optionsfelds angibt.</param>
+        <summary>Gibt an, ob der Hintergrund des Optionsfelds (auch bekannt als ein Optionsfeld) halbtransparente Bereiche oder Alphablending aufweist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Hintergrund des Optionsfelds halbtransparente Bereiche oder Alphablending aufweist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMatchingApplicationState">
+      <MemberSignature Language="C#" Value="public static bool RenderMatchingApplicationState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool RenderMatchingApplicationState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButtonRenderer.RenderMatchingApplicationState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Renderer den Anwendungsstatus verwendet, um Rendering-Format zu bestimmen.</summary>
+        <value>
+          <see langword="true" />Wenn der Anwendungsstatus verwendet wird, um Rendering-Format zu bestimmen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.RadioButtonRenderer.RenderMatchingApplicationState%2A> Eigenschaft ist `true`, <xref:System.Windows.Forms.RadioButtonRenderer> verwendet die Einstellung aus der <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> -Eigenschaft können Sie das Rendering-Format zu bestimmen. Wenn <xref:System.Windows.Forms.RadioButtonRenderer.RenderMatchingApplicationState%2A> ist `false`, der Renderer wird immer mit visuellen Stilen rendern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.RadioButtonRenderer.RenderMatchingApplicationState%2A> -Eigenschaft den Stil anzuzeigende je nach Zustand der Anwendung geändert wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.RadioButtonRenderer> Klasse.  
+  
+ [!code-csharp[System.Windows.Forms.RadioButtonRenderer#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.RadioButtonRenderer#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.RadioButtonRenderer/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

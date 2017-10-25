@@ -1,0 +1,82 @@
+<Type Name="SYSKIND" FullName="System.Runtime.InteropServices.SYSKIND">
+  <TypeSignature Language="C#" Value="public enum SYSKIND" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed SYSKIND extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.SYSKIND" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.SYSKIND" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `SYSKIND` -Enumeration, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SYS_MAC">
+      <MemberSignature Language="C#" Value="SYS_MAC" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.SYSKIND SYS_MAC = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.SYSKIND.SYS_MAC" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.SYSKIND</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Zielbetriebssystem für die Typbibliothek ist Apple Macintosh. Standardmäßig werden alle Datenfelder auf sogar-Byte-Grenzen ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SYS_WIN16">
+      <MemberSignature Language="C#" Value="SYS_WIN16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.SYSKIND SYS_WIN16 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.SYSKIND.SYS_WIN16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.SYSKIND</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Zielbetriebssystem für die Typbibliothek ist 16-Bit-Windows-Systemen. Standardmäßig sind die Datenfelder gepackt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SYS_WIN32">
+      <MemberSignature Language="C#" Value="SYS_WIN32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.SYSKIND SYS_WIN32 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.SYSKIND.SYS_WIN32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.SYSKIND</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Zielbetriebssystem für die Typbibliothek ist 32-Bit-Windows-Systemen. Standardmäßig Datenfelder natürlich ausgerichtet werden (z. B. 2-Byte-Ganzzahlen werden auf sogar-Byte-Grenzen ausgerichtet; 4 Bytes langen ganzen Zahlen an Quad-Word-Grenzen ausgerichtet sind, und so weiter).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

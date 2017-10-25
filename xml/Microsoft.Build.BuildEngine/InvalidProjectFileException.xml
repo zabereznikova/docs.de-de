@@ -1,0 +1,349 @@
+<Type Name="InvalidProjectFileException" FullName="Microsoft.Build.BuildEngine.InvalidProjectFileException">
+  <TypeSignature Language="C#" Value="public sealed class InvalidProjectFileException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit InvalidProjectFileException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Ausnahme wird ausgelöst, wenn ein mit den XML-Projektdatei des Benutzers Problem. Dieses Problem kann semantischen oder syntaktischen sein. Wenn das Problem in der Syntax ist, können sie in der Regel von XSD-Validierung abgefangen werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> -Klasse unter Verwendung der angegebenen Meldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> Parameter ist kein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]), die aktuelle Ausnahme wird ausgelöst, einem <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> -Klasse unter Verwendung der angegebenen Fehlermeldung und der internen Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException (System.Xml.XmlNode xmlNode, string message, string errorSubcategory, string errorCode, string helpKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlNode xmlNode, string message, string errorSubcategory, string errorCode, string helpKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.Xml.XmlNode,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XmlNode" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorSubcategory" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">Der XML-Knoten, in dem der Fehler befindet. Kann NULL sein.</param>
+        <param name="message">Der Fehlermeldungstext für die Ausnahme.</param>
+        <param name="errorSubcategory">Eine Beschreibung des Fehlers. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).</param>
+        <param name="errorCode">Der Fehlercode. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" />).</param>
+        <param name="helpKeyword">Das F1-Hilfeschlüsselwort für die Host-IDE. Kann NULL sein.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> -Klasse unter Verwendung der ausführliche Fehlerinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird über die grundlegenden Konstruktoren bevorzugt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException (string projectFile, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string errorSubcategory, string errorCode, string helpKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string errorSubcategory, string errorCode, string helpKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorSubcategory" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die ungültige Projektdatei. Eine leere Zeichenfolge ist zulässig.</param>
+        <param name="lineNumber">Die Ungültige Zeilennummer im Projekt. Legen Sie auf 0 (null), wenn nicht verfügbar.</param>
+        <param name="columnNumber">Die Ungültige Spaltennummer in das Projekt. Legen Sie auf 0 (null), wenn nicht verfügbar.</param>
+        <param name="endLineNumber">Das Ende eines Bereichs ungültiger Zeilen im Projekt. Legen Sie auf 0 (null), wenn nicht verfügbar.</param>
+        <param name="endColumnNumber">Das Ende eines Bereichs von ungültigen Spalten im Projekt. Legen Sie auf 0 (null), wenn nicht verfügbar.</param>
+        <param name="message">Der Fehlermeldungstext für die Ausnahme.</param>
+        <param name="errorSubcategory">Die Beschreibung des Fehlers. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).</param>
+        <param name="errorCode">Der Fehlercode. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" />).</param>
+        <param name="helpKeyword">Das F1-Hilfeschlüsselwort für die Host-IDE. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" />).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException" /> -Klasse unter Verwendung der ausführliche Fehlerinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird über die grundlegenden Konstruktoren bevorzugt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseMessage">
+      <MemberSignature Language="C#" Value="public string BaseMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.BaseMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahmemeldung nicht einschließlich der Projektdatei an.</summary>
+        <value>Die Zeichenfolge der Fehlermeldung nur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnNumber">
+      <MemberSignature Language="C#" Value="public int ColumnNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ColumnNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ungültige Spaltennummer ab, sofern vorhanden, in das Projekt.</summary>
+        <value>Die Nummer der Spalte ungültig, oder 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumnNumber">
+      <MemberSignature Language="C#" Value="public int EndColumnNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndColumnNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.EndColumnNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Spaltennummer der letzten ab, wenn vorhanden, eines Bereichs von ungültigen Spalten im Projekt.</summary>
+        <value>Die Nummer der letzten ungültigen Spalte, oder 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLineNumber">
+      <MemberSignature Language="C#" Value="public int EndLineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndLineNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.EndLineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nummer der letzten Zeile ab, sofern vorhanden, von einem Bereich von ungültigen Zeilen im Projekt.</summary>
+        <value>Die Zeilennummer des letzten ungültig, oder 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public string ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehlercode ab, soweit vorhanden, die Ausnahmemeldung zugeordnet.</summary>
+        <value>Zeichenfolge oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorSubcategory">
+      <MemberSignature Language="C#" Value="public string ErrorSubcategory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorSubcategory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorSubcategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Fehlerunterkategorie ab (sofern vorhanden), die den Typ dieses Fehlers beschreibt.</summary>
+        <value>Die Unterkategoriezeichenfolge oder null.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.InvalidProjectFileException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Legt <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit Informationen zur Ausnahme fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeyword">
+      <MemberSignature Language="C#" Value="public string HelpKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeyword" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.HelpKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die F1-Hilfe-Schlüsselwort, sofern vorhanden, diesem Fehler zugeordnet, für die Host-IDE.</summary>
+        <value>Die Schlüsselwortzeichenfolge oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ungültige Zeilennummer ab, sofern vorhanden, in das Projekt.</summary>
+        <value>Die Ungültige Zeilennummer, oder 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahmemeldung und die betroffenen Projektdatei aus, falls vorhanden.</summary>
+        <value>Die vollständigen Meldungszeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFile">
+      <MemberSignature Language="C#" Value="public string ProjectFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.InvalidProjectFileException.ProjectFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Projektdatei ab, falls vorhanden, die dieser Ausnahme zugeordnet.</summary>
+        <value>Die Datei "Projekt" die Zeichenfolge für Name und Pfad oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

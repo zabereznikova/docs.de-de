@@ -1,0 +1,369 @@
+<Type Name="SelectionItemPattern" FullName="System.Windows.Automation.SelectionItemPattern">
+  <TypeSignature Language="C#" Value="public class SelectionItemPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SelectionItemPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.SelectionItemPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt auswählbare untergeordnete Elemente von Containersteuerelementen, die unterstützen <see cref="T:System.Windows.Automation.SelectionPattern" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](~/docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md) Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddToSelection">
+      <MemberSignature Language="C#" Value="public void AddToSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddToSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.SelectionItemPattern.AddToSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt das aktuelle Element zur Sammlung ausgewählter Elemente hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Hinzufügen eines Elements zur Auflistung der momentan ausgewählten Elemente.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#103)]
+ [!code-vb[UIASelectionItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#103)]  
+[!code-csharp[UIASelectionItemPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#104)]
+[!code-vb[UIASelectionItemPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wird versucht, eine Auswahl eine einfachauswahlcontainer hinzufügen, in denen <see cref="F:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty" />  =  <see langword="false" /> und ein anderes Element bereits ausgewählt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.SelectionItemPattern.SelectionItemPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.SelectionItemPattern/SelectionItemPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.SelectionItemPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.SelectionItemPattern+SelectionItemPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zwischengespeicherten Eigenschaftswerte für <see cref="T:System.Windows.Automation.SelectionItemPattern" />.</summary>
+        <value>Die zwischengespeicherten Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischengespeicherte Eigenschaftswerte müssen zuvor angefordert wurden mit einer <xref:System.Windows.Automation.CacheRequest>. Um den aktuellen Wert einer Eigenschaft abzurufen, rufen die Eigenschaft mit <xref:System.Windows.Automation.SelectionItemPattern.Current%2A>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.SelectionItemPattern.SelectionItemPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angeforderte Eigenschaft befindet sich nicht im Cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.SelectionItemPattern.SelectionItemPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.SelectionItemPattern/SelectionItemPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.SelectionItemPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.SelectionItemPattern+SelectionItemPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen Eigenschaftswerte für <see cref="T:System.Windows.Automation.SelectionItemPattern" />.</summary>
+        <value>Die aktuellen Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Muster muss aus einer <xref:System.Windows.Automation.AutomationElement> mit einer <xref:System.Windows.Automation.AutomationElementMode.Full> Verweis, um die aktuellen Werte zu erhalten. Wenn die <xref:System.Windows.Automation.AutomationElement> abgerufen wurde, mithilfe von <xref:System.Windows.Automation.AutomationElementMode.None>, enthält es nur zwischengespeicherte Daten, und beim Versuch, den aktuellen Wert einer beliebigen Eigenschaft abzurufen, wird eine Ausnahme ausgelöst. Verwendung <xref:System.Windows.Automation.SelectionItemPattern.Cached%2A> um den zwischengespeicherten Wert einer Eigenschaft abzurufen, die zuvor angegeben wurde mit einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.SelectionItemPattern.SelectionItemPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementAddedToSelectionEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent ElementAddedToSelectionEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent ElementAddedToSelectionEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionItemPattern.ElementAddedToSelectionEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das Ereignis,das ausgelöst wird, wenn ein Element zu einer Auflistung ausgewählter Elemente hinzugefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Ergebnis einer <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A> Aufruf ist ein einzelnes ausgewähltes Element ein <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent> stattdessen ausgelöst werden soll.  
+  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.SelectionItemPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die Ereignislistener für deklariert die <xref:System.Windows.Automation.SelectionItemPattern> Ereignisse.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#101)]
+ [!code-vb[UIASelectionItemPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementRemovedFromSelectionEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent ElementRemovedFromSelectionEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent ElementRemovedFromSelectionEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionItemPattern.ElementRemovedFromSelectionEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das Ereignis, das ausgelöst wird, wenn ein Element aus einer Auflistung ausgewählter Elemente entfernt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Ergebnis einer <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> Aufruf ist ein einzelnes ausgewähltes Element ein <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent> stattdessen ausgelöst werden soll.  
+  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.SelectionItemPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die Ereignislistener für deklariert die <xref:System.Windows.Automation.SelectionItemPattern> Ereignisse.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#101)]
+ [!code-vb[UIASelectionItemPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementSelectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent ElementSelectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent ElementSelectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kennzeichnet das Ereignis, das ausgelöst wird, wenn ein Aufruf von <see cref="M:System.Windows.Automation.SelectionItemPattern.Select" />, <see cref="M:System.Windows.Automation.SelectionItemPattern.AddToSelection" /> oder <see cref="M:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection" /> zur Auswahl eines einzelnen Elements führt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.SelectionItemPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die Ereignislistener für deklariert die <xref:System.Windows.Automation.SelectionItemPattern> Ereignisse.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#101)]
+ [!code-vb[UIASelectionItemPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty IsSelectedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty IsSelectedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.SelectionItemPattern.SelectionItemPatternInformation.IsSelected" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.SelectionItemPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion, die eine Auflistung von zurückgibt übergeben [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elementen, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#100)]
+ [!code-vb[UIASelectionItemPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionItemPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.SelectionItemPattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.SelectionItemPatternIdentifiers>.  
+  
+ Der Musterbezeichner wird an Methoden übergeben, z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.SelectionItemPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#102)]
+ [!code-vb[UIASelectionItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFromSelection">
+      <MemberSignature Language="C#" Value="public void RemoveFromSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveFromSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt das aktuelle Element aus der Sammlung ausgewählter Elemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein Element aus der Auflistung der momentan ausgewählten Elemente zu entfernen.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#103)]
+ [!code-vb[UIASelectionItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#103)]  
+[!code-csharp[UIASelectionItemPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#105)]
+[!code-vb[UIASelectionItemPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wird versucht, eine Auswahl aus einem Auswahlcontainer entfernen, in dem ein Element ausgewählt ist, und <see cref="F:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty" />  =  <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.SelectionItemPattern.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hebt die Auswahl aller ausgewählten Elemente auf und wählt dann das aktuelle Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie ein Element in einem Container auswählen, indem Sie den Text des Elements angeben.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#106)]
+ [!code-vb[UIASelectionItemPattern_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionContainerProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty SelectionContainerProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty SelectionContainerProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionItemPattern.SelectionContainerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.SelectionItemPattern.SelectionItemPatternInformation.SelectionContainer" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.SelectionItemPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Windows.Automation.AutomationElement> , die den Auswahlcontainer ein Auswahlelement darstellt.  
+  
+ [!code-csharp[UIASelectionItemPattern_snip#1035](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionItemPattern_snip/CSharp/UIASelectionItemPattern_snippets.cs#1035)]
+ [!code-vb[UIASelectionItemPattern_snip#1035](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionItemPattern_snip/VisualBasic/UIASelectionItemPattern_snippets.vb#1035)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

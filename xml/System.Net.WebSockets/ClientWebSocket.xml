@@ -1,0 +1,529 @@
+<Type Name="ClientWebSocket" FullName="System.Net.WebSockets.ClientWebSocket">
+  <TypeSignature Language="C#" Value="public class ClientWebSocket : System.Net.WebSockets.WebSocket, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientWebSocket extends System.Net.WebSockets.WebSocket implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebSockets.ClientWebSocket" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.WebSockets.WebSocket</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Client zum Verbinden mit WebSocket-Diensten bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige der Klassen und Klassenelemente in der <xref:System.Net.WebSockets> Namespace werden unter Windows 7, Windows Vista SP2 und Windows Server 2008 unterstützt. Allerdings werden nur öffentlichen Implementierungen der Client- und WebSockets für Windows 8 und Windows Server 2012 unterstützt. Die Klassenelemente in der <xref:System.Net.WebSockets> Namespace, die auf Windows 7, Windows Vista SP2 und Windows Server 2008 unterstützt werden, sind abstrakte Klasse Elemente. Dadurch wird ein Anwendungsentwickler erben, und erweitern diese abstrakte Klasse-Klassen und Klassenelemente mit einer wirklichen Implementierung des Clients WebSockets.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientWebSocket ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public override void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Unterbricht die Verbindung und bricht alle ausstehenden E/A-Vorgänge ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task CloseAsync (System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task CloseAsync(valuetype System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.CloseAsync(System.Net.WebSockets.WebSocketCloseStatus,System.String,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.WebSockets.ClientWebSocket/&lt;CloseAsync&gt;c__async1))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="closeStatus" Type="System.Net.WebSockets.WebSocketCloseStatus" />
+        <Parameter Name="statusDescription" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="closeStatus">Der WebSocket-Schließstatus.</param>
+        <param name="statusDescription">Eine Beschreibung des Schließstatus.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, mit dem die Benachrichtigung verteilt wird, dass dieser Vorgang abgebrochen werden muss.</param>
+        <summary>Schließt die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz als asynchronen Vorgang.</summary>
+        <returns>Gibt <see cref="T:System.Threading.Tasks.Task" />zurück.  
+  
+ Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task> Objekt wird abgeschlossen, nachdem die <xref:System.Net.WebSockets.ClientWebSocket> -Instanz geschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseOutputAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task CloseOutputAsync (System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task CloseOutputAsync(valuetype System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.CloseOutputAsync(System.Net.WebSockets.WebSocketCloseStatus,System.String,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.WebSockets.ClientWebSocket/&lt;CloseOutputAsync&gt;c__async2))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="closeStatus" Type="System.Net.WebSockets.WebSocketCloseStatus" />
+        <Parameter Name="statusDescription" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="closeStatus">Der WebSocket-Schließstatus.</param>
+        <param name="statusDescription">Eine Beschreibung des Schließstatus.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, mit dem die Benachrichtigung verteilt wird, dass dieser Vorgang abgebrochen werden muss.</param>
+        <summary>Schließt die Ausgabe für die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz in einem asynchronen Vorgang.</summary>
+        <returns>Gibt <see cref="T:System.Threading.Tasks.Task" />zurück.  
+  
+ Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task> Objekt wird abgeschlossen, nachdem Sie die Ausgabe auf die <xref:System.Net.WebSockets.ClientWebSocket> -Instanz geschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseStatus">
+      <MemberSignature Language="C#" Value="public override Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt; CloseStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Net.WebSockets.WebSocketCloseStatus&gt; CloseStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.ClientWebSocket.CloseStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Grund ab, warum der Schließen-Handshake für die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz ausgelöst wurde.</summary>
+        <value>Gibt <see cref="T:System.Net.WebSockets.WebSocketCloseStatus" /> zurück.  
+  
+ Der Grund, warum der Schließen-Handshake ausgelöst wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseStatusDescription">
+      <MemberSignature Language="C#" Value="public override string CloseStatusDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CloseStatusDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.ClientWebSocket.CloseStatusDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab eine Beschreibung des Grunds ab, warum die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz geschlossen wurde.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.  
+  
+ Die Beschreibung des Grunds, warum die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz geschlossen wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ConnectAsync (Uri uri, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ConnectAsync(class System.Uri uri, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.ConnectAsync(System.Uri,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.WebSockets.ClientWebSocket/&lt;ConnectAsync&gt;c__async0))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der URI des WebSocket-Servers, mit dem eine Verbindung hergestellt werden soll.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, mit dem die Benachrichtigung verteilt wird, dass der Vorgang abgebrochen werden muss.</param>
+        <summary>Wird verwendet, um eine Verbindung mit einem WebSocket-Server als asynchronen Vorgang herzustellen.</summary>
+        <returns>Gibt <see cref="T:System.Threading.Tasks.Task" />zurück.  
+  
+ Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebSockets.ClientWebSocket.ConnectAsync%2A> Methode den WebSocket-Handshake mit einem Remotenetzwerk-Ziel initiiert, und klicken Sie dann das Unterprotokoll verhandelt.  
+  
+ Verwenden Sie für einfache WebSocket-Verbindungen, die `ws://` Schema im Uri. Verwenden Sie sichere WebSocket-Verbindungen über TLS/SSL, die `wss://` Schema.  
+  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task> Objekt wird abgeschlossen, nachdem Sie die Connect-Anforderung auf die <xref:System.Net.WebSockets.ClientWebSocket> Instanz abgeschlossen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von der <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz verwendeten nicht verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Net.WebSockets.ClientWebSocketOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebSockets.ClientWebSocketOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.ClientWebSocket.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebSockets.ClientWebSocketOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die „WebSocket“-Optionen für die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz ab.</summary>
+        <value>Gibt <see cref="T:System.Net.WebSockets.ClientWebSocketOptions" />zurück.  
+  
+ Die „WebSocket“-Optionen für die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;System.Net.WebSockets.WebSocketReceiveResult&gt; ReceiveAsync (ArraySegment&lt;byte&gt; buffer, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.WebSockets.WebSocketReceiveResult&gt; ReceiveAsync(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.ReceiveAsync(System.ArraySegment{System.Byte},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.WebSockets.WebSocketReceiveResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer zum Empfangen der Antwort.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, mit dem die Benachrichtigung verteilt wird, dass dieser Vorgang abgebrochen werden muss.</param>
+        <summary>Sendet Daten auf <see cref="T:System.Net.WebSockets.ClientWebSocket" /> in einem asynchronen Vorgang.</summary>
+        <returns>Gibt <see cref="T:System.Threading.Tasks.Task`1" />zurück.  
+  
+ Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem Sie die Receive-Anforderung auf die <xref:System.Net.WebSockets.ClientWebSocket> Instanz abgeschlossen wurde.  
+  
+ Genau ein senden und einen empfangen wird auf jedem unterstützt <xref:System.Net.WebSockets.ClientWebSocket> -Objekt parallel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task SendAsync (ArraySegment&lt;byte&gt; buffer, System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task SendAsync(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer, valuetype System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.ClientWebSocket.SendAsync(System.ArraySegment{System.Byte},System.Net.WebSockets.WebSocketMessageType,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="messageType" Type="System.Net.WebSockets.WebSocketMessageType" />
+        <Parameter Name="endOfMessage" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer mit der zu sendenden Nachricht.</param>
+        <param name="messageType">Gibt an, ob der Puffer Klartext enthält oder ein binäres Format aufweist.</param>
+        <param name="endOfMessage">Gibt an, ob dies der letzte asynchrone Sendevorgang ist. <see langword="true" />, wenn dies der letzte Sendevorgang ist, andernfalls <see langword="false" />.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, mit dem die Benachrichtigung verteilt wird, dass dieser Vorgang abgebrochen werden muss.</param>
+        <summary>Sendet Daten auf <see cref="T:System.Net.WebSockets.ClientWebSocket" /> in einem asynchronen Vorgang.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task> Objekt wird abgeschlossen, nachdem Sie die sendeanforderung auf die <xref:System.Net.WebSockets.ClientWebSocket> Instanz abgeschlossen wurde.  
+  
+ Genau ein senden und einen empfangen wird auf jedem unterstützt <xref:System.Net.WebSockets.ClientWebSocket> -Objekt parallel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Net.WebSockets.WebSocketState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.WebSockets.WebSocketState State" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.ClientWebSocket.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebSockets.WebSocketState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den WebSocket-Zustand der <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz ab.</summary>
+        <value>Gibt <see cref="T:System.Net.WebSockets.WebSocketState" />zurück.  
+  
+ Der WebSocket-Zustand der <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubProtocol">
+      <MemberSignature Language="C#" Value="public override string SubProtocol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.ClientWebSocket.SubProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets.Client</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das unterstützte WebSocket-Unterprotokoll für die <see cref="T:System.Net.WebSockets.ClientWebSocket" />-Instanz ab.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.  
+  
+ Das unterstützte WebSocket-Unterprotokoll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

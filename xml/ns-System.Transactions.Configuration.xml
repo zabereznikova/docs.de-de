@@ -1,0 +1,27 @@
+<Namespace Name="System.Transactions.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.Transactions.Configuration" /> -Namespace enthält Klassen, die von verwendete Konfigurationsoptionen beschreiben <see cref="N:System.Transactions" /> Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Wie folgt kann eine Beispielkonfigurationsdatei, die von Ihrer Anwendung für die Transaktion verwendet werden,  
+  
+ `<configuration>`  
+  
+ `<system.transactions>`  
+  
+ `<defaultSettings distributedTransactionManagerName="F04M25" timeout="02:00:00"/>`  
+  
+ `<machineSettings maxTimeout="02:00:00"/>`  
+  
+ `</system.transactions>`  
+  
+ `</configuration>`  
+  
+ In diesem Beispiel gibt die Standardwerte einer Transaktion an. Insbesondere wird die den Computernamen des Distributed Transaction Coordinator (MSDTC), die für alle verteilten Transaktionen zu koordinieren lokal Schritte verantwortlich ist und die Standardzeit, die nach dem Timeout einer Transaktion. Darüber hinaus gibt es eine Einstellung, die nur auf der Computerebene geändert werden kann, die die maximale Zeitdauer ist zulässig, bis zum Timeout einer Transaktions.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

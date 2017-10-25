@@ -1,0 +1,249 @@
+<Type Name="ApplicationCatalog" FullName="System.ComponentModel.Composition.Hosting.ApplicationCatalog">
+  <TypeSignature Language="C#" Value="public class ApplicationCatalog : System.ComponentModel.Composition.Primitives.ComposablePartCatalog, System.ComponentModel.Composition.Primitives.ICompositionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationCatalog extends System.ComponentModel.Composition.Primitives.ComposablePartCatalog implements class System.ComponentModel.Composition.Primitives.ICompositionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.ApplicationCatalog" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Composition.Primitives.ComposablePartCatalog</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Composition.Primitives.ICompositionElement</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ermittelt attributierte Teile in DLL (Dynamic Link Library)- und EXE-Dateien, die sich in einem Anwendungsverzeichnis oder -pfad befinden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationCatalog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Hosting.ApplicationCatalog" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationCatalog (System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.#ctor(System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="definitionOrigin" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="definitionOrigin">Das Element, das von der Diagnose verwendet werden, um die Quelle für die Teile zu identifizieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.ApplicationCatalog" /> Klasse unter Verwendung der angegebenen Quelle für Teile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationCatalog (System.Reflection.ReflectionContext reflectionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ReflectionContext reflectionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.#ctor(System.Reflection.ReflectionContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reflectionContext" Type="System.Reflection.ReflectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="reflectionContext">Die Reflektionskontext.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.ApplicationCatalog" /> -Klasse unter Verwendung der angegebenen Reflektionskontext.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationCatalog (System.Reflection.ReflectionContext reflectionContext, System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ReflectionContext reflectionContext, class System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.#ctor(System.Reflection.ReflectionContext,System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reflectionContext" Type="System.Reflection.ReflectionContext" />
+        <Parameter Name="definitionOrigin" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="reflectionContext">Die Reflektionskontext.</param>
+        <param name="definitionOrigin">Das Element, das von der Diagnose verwendet werden, um die Quelle für die Teile zu identifizieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.ApplicationCatalog" /> Klasse unter Verwendung der angegebenen Reflektionskontext und die Quelle für Teile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports (System.ComponentModel.Composition.Primitives.ImportDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Tuple`2&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition, class System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports(class System.ComponentModel.Composition.Primitives.ImportDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">Die Bedingungen für die <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> Objekte zurückgegeben werden.</param>
+        <summary>Ruft die Exportdefinition ein, die die Einschränkung durch die angegebenen Importdefinition ausgedrückt entsprechen.</summary>
+        <returns>Eine Auflistung von Objekten, enthalten die <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> Objekte und ihre zugeordneten <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte, die die angegebene Einschränkung entsprechen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Objekt wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Composition.Primitives.ICompositionElement.DisplayName">
+      <MemberSignature Language="C#" Value="string System.ComponentModel.Composition.Primitives.ICompositionElement.DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.ComponentModel.Composition.Primitives.ICompositionElement.DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.ApplicationCatalog.System#ComponentModel#Composition#Primitives#ICompositionElement#DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen des anwendungskatalogs ab.</summary>
+        <value>Eine Zeichenfolge, eine lesbare Anzeigename, der enthält, die <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Composition.Hosting.ApplicationCatalog>-Instanz in eine <xref:System.ComponentModel.Composition.Primitives.ICompositionElement>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Composition.Primitives.ICompositionElement.Origin">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Composition.Primitives.ICompositionElement System.ComponentModel.Composition.Primitives.ICompositionElement.Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ICompositionElement System.ComponentModel.Composition.Primitives.ICompositionElement.Origin" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.ApplicationCatalog.System#ComponentModel#Composition#Primitives#ICompositionElement#Origin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ICompositionElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kompositionselement, aus dem Anwendungskatalog stammt.</summary>
+        <value>Immer <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Composition.Hosting.ApplicationCatalog>-Instanz in eine <xref:System.ComponentModel.Composition.Primitives.ICompositionElement>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ApplicationCatalog.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung des anwendungskatalogs ab.</summary>
+        <returns>Eine Zeichenfolgendarstellung des Katalogs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

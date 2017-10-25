@@ -1,0 +1,105 @@
+<Type Name="DynamicValidatorEventArgs" FullName="System.Web.DynamicData.DynamicValidatorEventArgs">
+  <TypeSignature Language="C#" Value="public class DynamicValidatorEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicValidatorEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicValidatorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Basisklasse für <see cref="T:System.Web.DynamicData.DynamicValidator" /> Klassen, die Ereignisdaten enthalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.DynamicValidator> Klasse fängt Ausnahmen, die von LINQ to SQL-Klassen oder Entity Framework-Methoden in einem Datenmodell ausgelöst. Diese Klasse enthält keine Ereignisdaten. Es wird von Ereignissen, die nicht bestehen, Zustandsinformationen an einen Ereignishandler, wenn ein Ereignis ausgelöst wird. Wenn der Ereignishandler Zustandsinformationen erforderlich ist, müssen Sie eine abgeleitete Klasse von dieser Klasse zum Speichern der Daten erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicValidatorEventArgs (Exception exception, System.Web.DynamicData.DynamicDataSourceOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception exception, valuetype System.Web.DynamicData.DynamicDataSourceOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicValidatorEventArgs.#ctor(System.Exception,System.Web.DynamicData.DynamicDataSourceOperation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="operation" Type="System.Web.DynamicData.DynamicDataSourceOperation" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die aufgetretene Ausnahme.</param>
+        <param name="operation">Der Datenquellenvorgang, der die Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.DynamicData.DynamicValidatorEventArgs" /> -Klasse unter Verwendung der aufgetretenen Ausnahme und dem Datenquellenvorgang, der die Ausnahme verursacht hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET Dynamic Data stellt Data Source-Vorgänge, die von einem Datenquellenobjekt ausgeführt werden können. Zu diesen Vorgängen gehören `Delete`, `Insert`, `Select` und `Update` und `ContextCreate`. Wenn eine Ausnahme während einer Datenquellenvorgang auftritt, werden der Datenquellenvorgang, der die Ausnahme und die aufgetretene Ausnahme verursacht durch dargestellt <xref:System.Web.DynamicData.DynamicValidatorEventArgs.Operation%2A> und <xref:System.Web.DynamicData.DynamicValidatorEventArgs.Exception%2A> bzw..  
+  
+ Dieser Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.DynamicData.DynamicValidatorEventArgs> -Klasse unter Verwendung dieser Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicValidatorEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme ab, die der ein Ereignis für das Data Source-Vorgang auftritt.</summary>
+        <value>Die Ausnahme, die während der Ereignisquelle Vorgang Daten aufgetreten sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET Dynamic Data stellt Data Source-Vorgänge, die von einem Datenquellenobjekt ausgeführt werden können. Zu diesen Vorgängen gehören `Delete`, `Insert`, `Select` und `Update` und `ContextCreate`. Wenn eine Ausnahme auftritt, die <xref:System.Web.DynamicData.DynamicValidator> Klasse verwendet diese Eigenschaft, um den Typ der Ausnahme abzurufen, die während eines Data Source-Vorgangs ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.DynamicDataSourceOperation Operation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.DynamicData.DynamicDataSourceOperation Operation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicValidatorEventArgs.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.DynamicDataSourceOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datenquellenvorgang, die eine Ausnahme verursacht hat die <see cref="T:System.Web.DynamicData.DynamicValidator" /> Klasse.</summary>
+        <value>Der Datenquellenvorgang, der die Ausnahme verursacht hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET Dynamic Data stellt Datenquellenvorgang, die durch das Datenquellenobjekt ausgeführt werden können. Zu diesen Vorgängen gehören `Delete`, `Insert`, `Select` und `Update` und `ContextCreate`. Wenn eine Ausnahme auftritt, die <xref:System.Web.DynamicData.DynamicValidator> Klasse verwendet diese Eigenschaft, um den Vorgang abzurufen, die diese Ausnahme ausgelöst hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

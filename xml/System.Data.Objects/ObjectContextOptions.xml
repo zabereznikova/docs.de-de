@@ -1,0 +1,128 @@
+<Type Name="ObjectContextOptions" FullName="System.Data.Objects.ObjectContextOptions">
+  <TypeSignature Language="C#" Value="public sealed class ObjectContextOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectContextOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectContextOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Optionen, die das Verhalten von beeinflussen die <see cref="T:System.Data.Objects.ObjectContext" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hier wird kein Inhalt aktualisiert; fügen Sie hier kein Material hinzu.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LazyLoadingEnabled">
+      <MemberSignature Language="C#" Value="public bool LazyLoadingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LazyLoadingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der bestimmt, ob verwandte Objekte automatisch geladen werden, wenn eine Navigationseigenschaft zugegriffen wird.</summary>
+        <value>
+          <see langword="true" />Wenn das verzögertes Laden aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyCreationEnabled">
+      <MemberSignature Language="C#" Value="public bool ProxyCreationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProxyCreationEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContextOptions.ProxyCreationEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der bestimmt, ob Proxyinstanzen für benutzerdefinierte Datenklassen erstellt werden, die keine Persistenz sind.</summary>
+        <value>
+          <see langword="true" />Wenn Proxys erstellt werden. andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseConsistentNullReferenceBehavior">
+      <MemberSignature Language="C#" Value="public bool UseConsistentNullReferenceBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseConsistentNullReferenceBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContextOptions.UseConsistentNullReferenceBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der bestimmt, ob das konsistente NullReference Verhalten verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die konsistente NullReference Verhalten verwendet werden soll andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Flag, um festgelegt ist `false`, und klicken Sie dann die Value-Eigenschaft festlegen der <xref:System.Data.Objects.DataClasses.EntityReference%601> für eine Beziehung FK auf null bereits null wird er hat keine Auswirkungen. Wenn dieses Flag festgelegt ist, um `true`, und klicken Sie dann den Wert auf null setzen immer bewirkt die FK, gelöscht werden und die Beziehung gelöscht werden soll, selbst wenn der Wert derzeit null ist. Der Standardwert ist `false` bei Verwendung von ObjectContext und `true` bei Verwendung von ' DbContext '.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCSharpNullComparisonBehavior">
+      <MemberSignature Language="C#" Value="public bool UseCSharpNullComparisonBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCSharpNullComparisonBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContextOptions.UseCSharpNullComparisonBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der bestimmt, ob das C#-NullComparison-Verhalten verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn das C#-NullComparison Verhalten verwendet werden soll andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseLegacyPreserveChangesBehavior">
+      <MemberSignature Language="C#" Value="public bool UseLegacyPreserveChangesBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseLegacyPreserveChangesBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContextOptions.UseLegacyPreserveChangesBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der bestimmt, ob die PreserveChanges Legacyverhalten verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die PreserveChanges Legacyverhalten verwendet werden soll andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

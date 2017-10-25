@@ -1,0 +1,104 @@
+<Type Name="ImportAttribute" FullName="System.Composition.ImportAttribute">
+  <TypeSignature Language="C#" Value="public class ImportAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImportAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.ImportAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter | System.AttributeTargets.Property, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Eigenschaft, ein Feld oder Parameter vom Hostcontainer bereitgestellt werden soll.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.ImportAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Composition.ImportAttribute" /> Klasse, wobei der Export mit dem Standardnamen für den Vertrag.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportAttribute (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.ImportAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der Vertragsname des Exports für den import oder <see langword="null" /> oder eine leere Zeichenfolge ("") der Name des Vertrags zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Composition.ImportAttribute" /> Klasse, wobei der Export mit dem angegebenen Vertragsnamen.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDefault">
+      <MemberSignature Language="C#" Value="public bool AllowDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.ImportAttribute.AllowDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaft, ein Feld oder Parameter auf den Standardwert des entsprechenden Typs festgelegt werden, wenn ein Export mit dem Vertragsnamen nicht im Container vorhanden ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft, ein Feld oder Parameter auf den Standardwert des entsprechenden Typs festgelegt werden, wenn kein Export mit dem Vertragsnamen im Hostcontainer vorhanden ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.ImportAttribute.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vertragsnamen der zu importierenden Exports ab.</summary>
+        <value>Der Vertragsname des Exports zu importieren. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

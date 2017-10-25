@@ -1,0 +1,291 @@
+<Type Name="DecoderFallbackBuffer" FullName="System.Text.DecoderFallbackBuffer">
+  <TypeSignature Language="C#" Value="public abstract class DecoderFallbackBuffer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DecoderFallbackBuffer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.DecoderFallbackBuffer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Puffer bereit, der einen Fallback-Handler zulässt, der eine alternative Zeichenfolge an einen Decoder zurückzugibt, wenn eine Eingabebytefolge nicht decodiert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Codierung definiert eine Zuordnung zwischen einem Unicode-Zeichen und eine codierte Bytefolge. Ein Decodierungsvorgang, der eine Eingabebytefolge in ein Ausgabezeichen konvertiert, schlägt fehl, wenn keine Zuordnung für eine bestimmte Bytesequenz definiert ist.  
+  
+ .NET Framework bietet einen Mechanismus, der als Fallback bezeichneten, wenn eine Konvertierung nicht durchgeführt werden kann. Alle Decoder fallback-Handler müssen Folgendes implementieren:  
+  
+-   Ein Decoderfallback, der durch eine Klasse dargestellt wird abgeleitet aus dem <xref:System.Text.DecoderFallback> Klasse.  
+  
+-   Ein Decoderfallbackpuffer, der dargestellt wird, von einem Typ abgeleitet wurde. die <xref:System.Text.DecoderFallbackBuffer> -Klasse, die eine Zeichenfolge an den Konvertierungsvorgang zurückgeben kann.  
+  
+ Drei Strategien können Zugriffe Konvertierungsfehler behandelt:  
+  
+-   Zuordnung mit ähnlichen Zeichen. Der Decoderfallbackpuffer kann es sich um eine Zeichenfolge zurückgeben, die eine Annäherung an die Eingabebytefolge darstellt. .NET Framework bietet einen ähnlichen öffentlichen <xref:System.Text.DecoderFallbackBuffer> Implementierung.  
+  
+-   Ersatz. Der Decoderfallbackpuffer kann eine Zeichenfolge zurückgeben, z. B. ein Fragezeichen ("?"), das angibt, dass eine Bytefolge nicht decodiert werden kann. In .NET Framework die <xref:System.Text.DecoderReplacementFallback> und <xref:System.Text.DecoderReplacementFallbackBuffer> Klassen bieten eine öffentliche Ersatz Fallbackpuffer-Implementierung. Der Konstruktor, der die <xref:System.Text.DecoderReplacementFallback> -Klasse können Sie die Ersetzungszeichenfolge definieren.  
+  
+-   Ausnahme. Die <xref:System.Text.DecoderFallbackBuffer> Implementierung löst eine Ausnahme, die angibt, dass eine Bytefolge nicht decodiert werden kann, und den Decodierungsvorgang beendet aus. In diesem Fall muss die fallback-Handler Bereitstellen einer <xref:System.Text.DecoderFallbackBuffer> Implementierung, obwohl er keine Zeichenfolge an den Decoder zurückgegeben wird. In .NET Framework die <xref:System.Text.DecoderExceptionFallback> und <xref:System.Text.DecoderExceptionFallbackBuffer> Klassen bieten eine fallbackimplementierung öffentliche Ausnahme, die auslöst, eine <xref:System.Text.DecoderFallbackException> Wenn eine Bytefolge nicht decodiert werden kann.  
+  
+ Der Puffer in einem <xref:System.Text.DecoderFallbackBuffer> Implementierung stellt die gesamte Zeichenfolge, die an den Decoder als Antwort auf einen Decoder fallback zurückgegeben werden. Im Allgemeinen umfassen Implementierungen auch Zustandsinformationen, z. B. der Index der nächsten zurückzugebenden Zeichens an der Decoder und die Anzahl der verbleibenden Zeichen zurückgegeben werden. Da <xref:System.Text.DecoderFallbackBuffer> ist eine abstrakte Klasse dafür, dass abgeleitete Klassen, die mindestens die folgenden Member implementieren:  
+  
+-   Die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A> -Methode, die vom Decoder aufgerufen wird, wenn eine Bytefolge nicht decodiert werden können. Der Decoder übergibt zwei Angaben für die Implementierung Fallbackpuffer: ein Array mit der Bytes, die nicht decodiert werden können und der Index des ersten Bytes im Eingabebytearray. Ein Decoder fallback-Ausnahmehandler wird die Ausnahme bei dieser Methode ausgelöst. Andernfalls der Methodenrückgabe `true` Wenn als Fallback vorhanden sind oder `false` Wenn dies nicht der Fall.  
+  
+-   Die <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A> -Methode, die wiederholt vom Decoder aufgerufen wird die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A> -Methode zurückkehrt `true`. In aufeinander folgenden Aufrufen sollte der Handler jedes Zeichen in seinem Puffer zurückgeben. Wenn alle Zeichen zurückgegeben wurde, sollte es U + 0000 zurückgeben. Ein Ausnahme-fallback-Handler wird immer U + 0000 zurückgegeben.  
+  
+-   Die <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A> Methode, die versucht, verschieben Sie den Zeiger der vorherigen Position im Puffer und gibt an, ob die Verschiebung erfolgreich war. Ein Ausnahmehandler immer gibt `false`.  
+  
+-   Die <xref:System.Text.DecoderFallbackBuffer.Remaining%2A> -Eigenschaft, womit die Anzahl der verbleibenden Zeichen, die an den Decoder zurückgegeben werden. Ein Ausnahme-fallback-Handler gibt immer 0 (null) zurück.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DecoderFallbackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderFallbackBuffer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.DecoderFallbackBuffer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fallback">
+      <MemberSignature Language="C#" Value="public abstract bool Fallback (byte[] bytesUnknown, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Fallback(unsigned int8[] bytesUnknown, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytesUnknown" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytesUnknown">Ein Eingabearray von Bytes.</param>
+        <param name="index">Die Indexposition eines Bytes in <c>BytesUnknown</c>.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird dem Fallbackpuffer behandelt die angegebene Eingabebytefolge vorbereitet.</summary>
+        <returns>
+          <see langword="true" />Wenn der Fallbackpuffer verarbeiten kann <paramref name="bytesUnknown" />; <see langword="false" /> , wenn der Fallbackpuffer ignoriert <paramref name="bytesUnknown" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType>, <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType>, und <xref:System.Text.Decoder.Convert%2A?displayProperty=nameWithType> -Methode <xref:System.Text.DecoderFallbackBuffer.Fallback%2A> , wenn sie eine unbekannte Eingabebytefolge treffen, das nicht decodiert werden kann. Ein Rückgabewert von `true` gibt an, dass der Fallbackpuffer die Eingabebytefolge die aufrufende Methode verarbeiten kann aufrufen, wodurch die <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A> Methode, um jedes Zeichen dem Fallbackpuffer abzurufen. Da es keine einzelnen Bytes verarbeitet die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A> Methode in einem Ausnahmehandler fallback löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextChar">
+      <MemberSignature Language="C#" Value="public abstract char GetNextChar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char GetNextChar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderFallbackBuffer.GetNextChar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft das nächste Zeichen im Fallbackpuffer ab.</summary>
+        <returns>Das nächste Zeichen im Fallbackpuffer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Decodierungsvorgang ruft die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A> Methode, wenn der Vorgang eine unbekannte Bytefolge in der Eingabe gefunden wird. Wenn die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A> -Methode zurückkehrt `true`, besteht eine Ersatzzeichenfolge, die in der Ausgabe anstelle die unbekannte Eingabe Decodierung eingefügt werden kann. Der Decodierungsvorgang ruft die <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A> Methode wiederholt und ruft den Ersatz ein Zeichen zu einem Zeitpunkt. Wenn alle Zeichen im Fallbackpuffer an den Decoder zurückgegeben wurden, sollte die Methode U + 0000 zurückgeben.  
+  
+ Für eine Ausnahme-fallback-Handler die <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A> Methode sollte U + 0000 zurückgeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovePrevious">
+      <MemberSignature Language="C#" Value="public abstract bool MovePrevious ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MovePrevious() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderFallbackBuffer.MovePrevious" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse bewirkt, dass beim nächsten Aufruf von der <see cref="M:System.Text.DecoderFallbackBuffer.GetNextChar" /> Methode, um den Puffer vor der aktuellen Position des Zeichens zugreifen.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="M:System.Text.DecoderFallbackBuffer.MovePrevious" /> Vorgang war erfolgreich, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein fallback Ausnahmehandler zurückgeben sollte `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remaining">
+      <MemberSignature Language="C#" Value="public abstract int Remaining { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Remaining" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderFallbackBuffer.Remaining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Anzahl der Zeichen in der aktuellen <see cref="T:System.Text.DecoderFallbackBuffer" /> -Objekt, das noch verarbeitet werden soll.</summary>
+        <value>Die Anzahl der Zeichen im aktuellen Fallbackpuffer, die noch nicht verarbeitet wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A> -Methode zurückkehrt `true` Wenn <xref:System.Text.DecoderFallbackBuffer.Remaining%2A> ein Wert ungleich NULL ist.  
+  
+ Für eine Ausnahme-fallback-Handler die <xref:System.Text.DecoderFallbackBuffer.Remaining%2A> Methode sollte 0 (null) zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public virtual void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderFallbackBuffer.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Alle Daten und Status der Informationen zu diesem Fallbackpuffer wird initialisiert.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Nach dem Aufruf der <see cref="M:System.Text.DecoderFallbackBuffer.Reset" /> -Methode, die <see cref="P:System.Text.DecoderFallbackBuffer.Remaining" /> Eigenschaft sollte "0" zurückgegeben der <see cref="M:System.Text.DecoderFallbackBuffer.GetNextChar" /> Methode sollte U + 0000 zurückgeben und die <see cref="M:System.Text.DecoderFallbackBuffer.MovePrevious" /> -Methode zurückgeben sollte <see langword="false" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,43 @@
+<Type Name="ResumeStoryboard" FullName="System.Windows.Media.Animation.ResumeStoryboard">
+  <TypeSignature Language="C#" Value="public sealed class ResumeStoryboard : System.Windows.Media.Animation.ControllableStoryboardAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResumeStoryboard extends System.Windows.Media.Animation.ControllableStoryboardAction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ResumeStoryboard" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.ControllableStoryboardAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt eine Triggeraktion, die eine angehaltene nimmt <see cref="T:System.Windows.Media.Animation.Storyboard" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse mit einer <xref:System.Windows.EventTrigger> oder ein <xref:System.Windows.Trigger> Fortsetzen einer angehaltenen <xref:System.Windows.Media.Animation.Storyboard>. Ein <xref:System.Windows.Media.Animation.ResumeStoryboard> Objekt kann nur fortgesetzt werden. eine <xref:System.Windows.Media.Animation.Storyboard> ist angehalten, und wirkt sich nicht auf eine <xref:System.Windows.Media.Animation.Storyboard> in einen anderen Zustand.  
+  
+ Zum Anhalten der Lage, fortsetzen oder steuern eine <xref:System.Windows.Media.Animation.Storyboard> interaktiv verwenden, legen Sie die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> Eigenschaft seine <xref:System.Windows.Media.Animation.BeginStoryboard> und verwenden eine <xref:System.Windows.Media.Animation.ControllableStoryboardAction> Objekt (z. B. <xref:System.Windows.Media.Animation.PauseStoryboard>, <xref:System.Windows.Media.Animation.ResumeStoryboard>, oder <xref:System.Windows.Media.Animation.StopStoryboard>) steuern, indem sie Verweisen auf die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>. Wenn die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> von <xref:System.Windows.Media.Animation.BeginStoryboard> ist nicht vorgegeben, die <xref:System.Windows.Media.Animation.Storyboard> nicht interaktiv gesteuert werden, nachdem dieser gestartet. Weitere Informationen finden Sie unter [wie: Verwenden von Ereignistriggern zur Steuerung einer Storyboard nach Beginn](~/docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResumeStoryboard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ResumeStoryboard.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.ResumeStoryboard" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="BYOT" FullName="System.EnterpriseServices.BYOT">
+  <TypeSignature Language="C#" Value="public sealed class BYOT" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BYOT extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.BYOT" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dient als Wrapper für die COM+- <see langword="ByotServerEx" /> Klasse und der COM+-DTC-Schnittstellen <see langword="ICreateWithTransactionEx" /> und <see langword="ICreateWithTipTransactionEx" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.BYOT>(Bring Your Own Transaction) kann eine Komponente erstellt werden, oder eine externe Transaktion erben. Eine Transaktion kann, also eine Komponente, die verbundene Transaktion noch nicht abgerufen werden. COM+-ermöglicht das Festlegen einer beliebigen vorhandenen Distributed Transaction Coordinator (DTC) oder (Transaction Internet Protocol, TIP) der angegebenen Transaktions als Transaktionseigenschaft des Kontexts eine neue Komponente. Dadurch wird die COM+-Komponenten Transaktionen zugeordnet werden, deren Lebensdauer durch eine Transaktion verarbeitet (TP)-Monitor, Objekt/Task Selektor (OTS) oder Datenbank-Managementsystem (DBMS) gesteuert werden, soll.  
+  
+ <xref:System.EnterpriseServices.BYOT>Transaktionen müssen mit Vorsicht verwendet werden. In bestimmten Situationen können sie in einer Transaktion, die mehrere Domänen der Synchronisierung führen – d. h. sie Parallelität mit einer anderen Transaktion, wodurch eine Deadlock ermöglichen.  
+  
+ Automatische Transaktionen statt <xref:System.EnterpriseServices.BYOT> , es handelt sich um das bevorzugte Programmiermodell für Writer von Geschäftskomponenten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateWithTipTransaction">
+      <MemberSignature Language="C#" Value="public static object CreateWithTipTransaction (string url, Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateWithTipTransaction(string url, class System.Type t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.BYOT.CreateWithTipTransaction(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="url">Ein Tipp URL, die eine Transaktion angibt.</param>
+        <param name="t">Der Typ.</param>
+        <summary>Erstellt ein Objekt, das in einer manuellen Transaktion (Transaction Internet Protocol, TIP) mit eingetragen ist.</summary>
+        <returns>Die angeforderte Transaktion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.BYOT.CreateWithTipTransaction%2A>führt das verwaltete Äquivalent der COM+-DTC-Methode `ICreateWithTIPTransaction::CreateInstance`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWithTransaction">
+      <MemberSignature Language="C#" Value="public static object CreateWithTransaction (object transaction, Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateWithTransaction(object transaction, class System.Type t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.BYOT.CreateWithTransaction(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Object" />
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Die <see cref="T:System.EnterpriseServices.ITransaction" /> oder <see cref="T:System.Transactions.Transaction" /> Objekt, das eine Transaktion angibt.</param>
+        <param name="t">Der angegebene Typ.</param>
+        <summary>Erstellt ein Objekt, das in einer manuellen Transaktion eingetragen ist.</summary>
+        <returns>Die angeforderte Transaktion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.BYOT.CreateWithTransaction%2A>führt das verwaltete Äquivalent der COM+-Distributed Transaction Coordinator (DTC) Methode `ICreateWithTransaction::CreateInstance`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

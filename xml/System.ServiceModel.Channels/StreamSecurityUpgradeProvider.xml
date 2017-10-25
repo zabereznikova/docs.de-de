@@ -1,0 +1,103 @@
+<Type Name="StreamSecurityUpgradeProvider" FullName="System.ServiceModel.Channels.StreamSecurityUpgradeProvider">
+  <TypeSignature Language="C#" Value="public abstract class StreamSecurityUpgradeProvider : System.ServiceModel.Channels.StreamUpgradeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StreamSecurityUpgradeProvider extends System.ServiceModel.Channels.StreamUpgradeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.StreamSecurityUpgradeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.StreamUpgradeProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert einen benutzerdefinierten Anbieter für Sicherheitsupgrades, der von dieser <see langword="abstract" />-Basisklasse geerbt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie eine Klasse, die von <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> abgeleitet ist, um ein Sicherheitsupgrade hinzuzufügen.  
+  
+ Der Aktualisierungsvorgang besteht aus folgenden Schritten:  
+  
+1.  Implementieren Sie eine Klasse, die von <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> abgeleitet ist.  
+  
+2.  Nehmen Sie eine Registrierung vor. Erstellen Sie dazu ein entsprechendes Bindungselement, und registrieren Sie den Anbieter in einer benutzerdefinierten Bindung.  
+  
+3.  Mit der abgeleiteten Klasse, die Sie implementieren, wird eine Instanz von <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> erstellt. Damit wird zur Laufzeit eine Anforderung an das andere Ende der Verbindung zur Aktualisierung der Kanaltransportebene initialisiert.  
+  
+4.  Mit der abgeleiteten Klasse, die Sie implementieren, wird eine Instanz von <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> erstellt, die zur Laufzeit die Aktualisierungsanforderung aus dem vorhergehenden Schritt empfängt sowie ggf. die Aktualisierung akzeptiert und den aktualisierten Stream an das andere Ende der Verbindung zurückgibt.  
+  
+ Die Anforderung für die Sicherheitsaktualisierung kann eine Anforderung wie viele andere sein. In diesem Fall werden die Anforderungen in einer bestimmten Reihenfolge verarbeitet. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamSecurityUpgradeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamSecurityUpgradeProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StreamSecurityUpgradeProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamSecurityUpgradeProvider (System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamSecurityUpgradeProvider.#ctor(System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="timeouts">Die Standardtimeoutwerte für die Kommunikation.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StreamSecurityUpgradeProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesen Timeouts werden die Timeouts für das Öffnen und Schließen für den benutzerdefinierten Anbieter für Sicherheitsaktualisierungen gesteuert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.EndpointIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.StreamSecurityUpgradeProvider.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Identität ab, die für die Sicherheitsaktualisierung verwendet wird.</summary>
+        <value>Gibt die <see cref="T:System.ServiceModel.EndpointIdentity" /> des Clients zurück, von dem die Sicherheitsaktualisierung angefordert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Identität können Sie durch Vererbung von der Upgradeanbieterklasse benutzerdefinierte Authentifizierungsschemas auf Streamebene entwickeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

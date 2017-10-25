@@ -1,0 +1,233 @@
+<Type Name="OrthographicCamera" FullName="System.Windows.Media.Media3D.OrthographicCamera">
+  <TypeSignature Language="C#" Value="public sealed class OrthographicCamera : System.Windows.Media.Media3D.ProjectionCamera" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OrthographicCamera extends System.Windows.Media.Media3D.ProjectionCamera" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.OrthographicCamera" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.ProjectionCamera</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine orthografische Projektionskamera dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse gibt eine orthogonale Projektion eine [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)] Modell eine [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] visuelle Oberfläche. Wie <xref:System.Windows.Media.Media3D.PerspectiveCamera>, es gibt eine Position, Anzeigen von Richtung und "aufwärtsrichtung". Im Gegensatz zu <xref:System.Windows.Media.Media3D.PerspectiveCamera>, allerdings <xref:System.Windows.Media.Media3D.OrthographicCamera> beschreibt eine Projektion aus, die Verkürzung der Perspektive nicht enthalten ist. Das heißt, <xref:System.Windows.Media.Media3D.OrthographicCamera> beschreibt ein Sichtfeld, dessen Seiten parallel statt in einem werden, dessen Seiten in ein Punkt, an der Szene Horizont erfüllen.  
+  
+ Das folgende Diagramm zeigt den Unterschied zwischen orthografische und perspektivische foreshortened Kameraprojektionen.  
+  
+ ![Orthografische und perspektivische Projektion](~/add/media/camera-projections4.png "orthografische und perspektivische Projektion")  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.Media3D.OrthographicCamera> und Kameraprojektionen umzuschalten.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn12)]
+ [!code-vb[hittest3d#HitTest3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OrthographicCamera ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.OrthographicCamera.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.OrthographicCamera" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Windows.Media.Media3D.OrthographicCamera>.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn12)]
+ [!code-vb[hittest3d#HitTest3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OrthographicCamera (System.Windows.Media.Media3D.Point3D position, System.Windows.Media.Media3D.Vector3D lookDirection, System.Windows.Media.Media3D.Vector3D upDirection, double width);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Point3D position, valuetype System.Windows.Media.Media3D.Vector3D lookDirection, valuetype System.Windows.Media.Media3D.Vector3D upDirection, float64 width) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.OrthographicCamera.#ctor(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="lookDirection" Type="System.Windows.Media.Media3D.Vector3D" />
+        <Parameter Name="upDirection" Type="System.Windows.Media.Media3D.Vector3D" />
+        <Parameter Name="width" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="position">Ein <see cref="T:System.Windows.Media.Media3D.Point3D" /> , die die Kameraposition angibt.</param>
+        <param name="lookDirection">Ein <see cref="T:System.Windows.Media.Media3D.Vector3D" /> , der die Richtung der Projektion von der Kamera angibt.</param>
+        <param name="upDirection">Ein <see cref="T:System.Windows.Media.Media3D.Vector3D" /> , die die aufwärtsrichtung entsprechend der Perspektive des Betrachters verändert angibt.</param>
+        <param name="width">Die Breite des Sichtfelds der Kamera in globalen Einheiten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Media3D.OrthographicCamera" /> -Klasse mit der angegebenen Position, Projektion Richtung aufwärtsrichtung und Breite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Instanziiert der folgende Code eine <xref:System.Windows.Media.Media3D.OrthographicCamera>.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn12)]
+ [!code-vb[hittest3d#HitTest3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.OrthographicCamera Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.OrthographicCamera Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.OrthographicCamera.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.OrthographicCamera</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.OrthographicCamera" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.OrthographicCamera CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.OrthographicCamera CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.OrthographicCamera.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.OrthographicCamera</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.OrthographicCamera" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.OrthographicCamera.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.OrthographicCamera.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des Sichtfelds der Kamera in globalen Einheiten.</summary>
+        <value>Breite des Sichtfelds der Kamera in globalen Einheiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Windows.Media.Media3D.OrthographicCamera> beschreibt eine Projektion aus, die keine Perspektive enthält Verkürzung hat seine Sichtfelds parallele Seiten. Die Breite der Anzeige kann daher mit einem einzigen Wert angegeben werden.  
+  
+ Das folgende Diagramm zeigt den Unterschied zwischen orthografische und perspektivische foreshortened Kameraprojektionen.  
+  
+ ![Orthografische und perspektivische Projektion](~/add/media/camera-projections4.png "orthografische und perspektivische Projektion")  
+  
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.OrthographicCamera.WidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.Media3D.OrthographicCamera> und legt diese Eigenschaft fest.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn12)]
+ [!code-vb[hittest3d#HitTest3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.OrthographicCamera.WidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.OrthographicCamera.Width" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,241 @@
+<Type Name="HitTestResult" FullName="System.Web.UI.DataVisualization.Charting.HitTestResult">
+  <TypeSignature Language="C#" Value="public class HitTestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HitTestResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.HitTestResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ergebnisse eines Treffertests dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.HitTestResult> Klasse stellt die Ergebnisse eines Treffertests dar und wird verfügbar gemacht, als das Rückgabeobjekt aus einer <xref:System.Web.UI.DataVisualization.Charting.Chart.HitTest%2A> Methodenaufruf.  
+  
+ Ein Treffertest überprüft einen angegebenen Punkt im Diagramm, um zu bestimmen, ob ein Diagrammelement an diesem Punkt befindet. Wenn ein Diagrammelement erkannt wird, die <xref:System.Web.UI.DataVisualization.Charting.HitTestResult> Klasse dient zum Abrufen von Informationen zu diesem Diagrammelement.  
+  
+ Wenn ein Diagrammelement gefunden wird, die <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.Object%2A> -Eigenschaft gibt einen Verweis auf das Diagrammelement; die einzige Ausnahme zu dieser <xref:System.Web.UI.DataVisualization.Charting.DataPoint> Objekte, die in diesem Fall, dass den Rückgabewert dieser Eigenschaft ist `null`.  
+  
+ Wenn ein Datenpunkt gefunden wurde, können Sie die <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.PointIndex%2A> Eigenschaft, um den Index dieses Datenpunkts abzurufen, d. h. den nullbasierten Index des Punkts in der <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection>. Verwenden der <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.Series%2A> Eigenschaft, um die zugeordnete <xref:System.Web.UI.DataVisualization.Charting.Series> Objekt für diesen Datenpunkt.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.ChartArea%2A> und <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.Axis%2A> Eigenschaften werden verwendet, um die zugehörigen Diagrammfläche und die Achse das Diagrammelement zu erhalten – sofern vorhanden – vom Treffertest zurückgegeben. Beachten Sie, dass diese Eigenschaften möglicherweise `null` verfügt das zurückgegebene Diagrammelement keine zugeordnete Diagrammfläche oder eine Achse.  
+  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.ChartElementType> Eigenschaft zum Bestimmen des Typs das Diagrammelement von einem Treffertest zurückgegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HitTestResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.HitTestResult.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.HitTestResult" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Axis">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Axis Axis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis Axis" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.HitTestResult.Axis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das ein von einem Treffertest zurückgegeben Diagrammelement zugeordnet werden kann. Das Vorhandensein eines zugeordneten <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> Objekt, hängt davon ab, ob ein Diagrammelement am angegebenen Speicherort gefunden wurde, und der Typ des Diagrammelements zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> Objekt ist, andernfalls <see langword="null" />. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist das Chart-Objekt, das den Treffertest zurückgegebenes ein Objekt, das mit einer Achse verknüpft ist – z. B. eine Bildlaufleistenelement, das Teilstrich, die Rasterlinie oder den Bereichsstreifen – die <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.Axis%2A> Eigenschaftenverweis, wird die <xref:System.Web.UI.DataVisualization.Charting.Axis> -Objekt mit der das Diagrammobjekt zurückgegebenen ist zugeordnet ist. Andernfalls wird diese Eigenschaft nicht `null`.  
+  
+ Beachten Sie, dass die <xref:System.Web.UI.DataVisualization.Charting.Chart.HitTest%2A> Methode kann explizit aufgerufen werden, in diesem Fall ein Diagrammelement, vielleicht aber möglicherweise nicht am angegebenen Speicherort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartArea">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartArea ChartArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.ChartArea ChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.HitTestResult.ChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> -Objekt, das ein von einem Treffertest zurückgegeben Diagrammelement zugeordnet werden kann. Das Vorhandensein einer <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt, hängt davon ab, ob ein Diagrammelement am angegebenen Speicherort gefunden wurde, und der Typ des Diagrammelements zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt ist, andernfalls <see langword="null" />. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Diagrammobjekt durch der Treffertest zurückgegeben wird das <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.ChartArea%2A> Eigenschaftenverweis, wird die <xref:System.Web.UI.DataVisualization.Charting.ChartArea> -Objekt, das das zurückgegebene Diagrammelement zugeordnet ist.  
+  
+ Wenn kein Diagrammelement vom Treffertest zurückgegeben wird, wird der Wert dieser Eigenschaft werden `null`.  
+  
+ **Hinweis** die <xref:System.Web.UI.DataVisualization.Charting.Chart.HitTest%2A> Methode kann explizit aufgerufen werden, in diesem Fall ein Diagrammelement, vielleicht aber möglicherweise nicht am angegebenen Speicherort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartElementType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartElementType ChartElementType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartElementType ChartElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.HitTestResult.ChartElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartElementType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Diagrammelements, ggf. von einem Treffertest zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartElementType" /> -Enumerationswert ab, der den Typ des von einem Treffertest zurückgegeben Diagrammelement angibt. Wird standardmäßig auf <see cref="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Nothing" /> festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Bestimmen des Typs Diagrammelements, ggf. von einem Treffertest zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="public object Object { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Object" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.HitTestResult.Object" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt ggf. von einem Treffertest zurückgegeben.</summary>
+        <value>Ein Objekt des Typs <see cref="T:System.Object" />, da andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Diagrammelement an dem Punkt, der von den Treffertest geprüft wird diese Eigenschaft wird auf diesem Diagrammelement verweisen befindet, andernfalls der Wert dieser Eigenschaft werden `null`.  
+  
+> [!NOTE]
+>  Wenn ein Datenpunkt vom Treffertest zurückgegeben wird, wird diese Eigenschaft immer noch Zurückgeben einer `null`. Verwenden Sie zum Abrufen von Informationen zu den Datenpunkt der <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.PointIndex%2A> und <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.Series%2A> Eigenschaften stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointIndex">
+      <MemberSignature Language="C#" Value="public int PointIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PointIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.HitTestResult.PointIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index eines Datenpunkts, ggf. von einem Treffertest zurückgegeben.</summary>
+        <value>Ein <see langword="integer" /> Wert, der den Index eines Datenpunkts von einem Treffertest zurückgegeben darstellt. Der Standardwert ist ein negativer Wert eins (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein Datenpunkt an der Position befindet, der von einem Treffertest geprüft wird die <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.PointIndex%2A> Eigenschaft gibt den nullbasierten Index dieses Datenpunkts zurück, andernfalls wird zurückgegeben, eine Negative Eins (1).  
+  
+ Alle Datenpunkte werden gespeichert, eine <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection>, die als verfügbar gemacht wird die <xref:System.Web.UI.DataVisualization.Charting.Series.Points%2A> Auflistungseigenschaft eine <xref:System.Web.UI.DataVisualization.Charting.Series> Objekt, und der Index des der <xref:System.Web.UI.DataVisualization.Charting.DataPointCollection> ist nullbasiert.  
+  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.Series%2A> Methode, um die Reihe festzulegen, der der Datenpunkt angehört.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Series">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Series Series { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Series Series" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.HitTestResult.Series" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Series</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die zugeordnete Reihe eines Datenpunkts, ggf. von einem Treffertest zurückgegeben.</summary>
+        <value>Die <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> , zu der ein Datenpunkt von einem Treffertest zurückgegeben gehört. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Datenpunkt an der Position, die von einem Treffertest aktiviert ist, wird diese Eigenschaft verweisen die <xref:System.Web.UI.DataVisualization.Charting.Series> Objekt, das der Datenpunkt angehört. Wenn keine Datenpunkt vom Treffertest zurückgegeben wird, wird der Wert dieser Eigenschaft werden `null`.  
+  
+ Den Index des zurückgegebenen Datenpunkts ermitteln Sie mithilfe der <xref:System.Web.UI.DataVisualization.Charting.HitTestResult.PointIndex%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubObject">
+      <MemberSignature Language="C#" Value="public object SubObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SubObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.HitTestResult.SubObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das untergeordnete Objekt an, ggf. von einem Treffertest zurückgegeben.</summary>
+        <value>Ein Unterobjekt vom Typ <see cref="T:System.Object" />, da andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel eines untergeordneten Objekts ist ein <xref:System.Web.UI.DataVisualization.Charting.Axis> -Objekt, das angezeigt wird ein <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

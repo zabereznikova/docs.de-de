@@ -1,0 +1,134 @@
+<Type Name="MissingSchemaAction" FullName="System.Data.MissingSchemaAction">
+  <TypeSignature Language="C#" Value="public enum MissingSchemaAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MissingSchemaAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.MissingSchemaAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die zu ergreifende Maßnahme beim Hinzufügen von Daten an die <see cref="T:System.Data.DataSet" /> und das erforderliche <see cref="T:System.Data.DataTable" /> oder <see cref="T:System.Data.DataColumn" /> ist nicht vorhanden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.MissingSchemaAction> Werte werden verwendet, wenn eine Aktion ausgeführt wird das Schema ändern konnte die <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.MissingSchemaAction Add = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.MissingSchemaAction.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingSchemaAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fügt die erforderlichen Spalten, um das Schema hinzu.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWithKey">
+      <MemberSignature Language="C#" Value="AddWithKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.MissingSchemaAction AddWithKey = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.MissingSchemaAction.AddWithKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingSchemaAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fügt die benötigten Spalten und Primärschlüsselinformationen zum Vervollständigen des Schemas. Für Weitere Informationen wie Primärschlüsselinformationen hinzugefügt wird eine <see cref="T:System.Data.DataTable" />, finden Sie unter <see cref="M:System.Data.IDataAdapter.FillSchema(System.Data.DataSet,System.Data.SchemaType)" />. Mit dem .NET Framework-Datenanbieter für OLE DB ordnungsgemäß <see langword="AddWithKey" /> erfordert, dass der systemeigene OLE DB-Anbieter erforderlichen Primärschlüsselinformationen durch Festlegen der DBPROP_UNIQUEROWS-Eigenschaft abruft und dann bestimmt, welche Spalten Primärschlüssel sind die Spalten durch eine untersuchen. Als Alternative kann der Benutzer die primary Key-Einschränkungen auf jedem explizit festgelegt <see cref="T:System.Data.DataTable" />. Dadurch wird sichergestellt, dass eingehende Datensätze, die vorhandene Daten überein, sondern aktualisiert werden angefügt. Bei Verwendung <see langword="AddWithKey" />, die .NET Framework-Datenanbieter für SQL Server fügt eine FOR BROWSE-Klausel an die ausgeführte Anweisung. Der Benutzer sollte möglichen Nebeneffekte, wie mit der Verwendung von SET FMTONLY ON Anweisungen Störungen bewusst sein. Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.MissingSchemaAction Error = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.MissingSchemaAction.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingSchemaAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.InvalidOperationException" /> wird generiert, wenn die angegebene Spalte-Zuordnung nicht vorhanden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ignore">
+      <MemberSignature Language="C#" Value="Ignore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.MissingSchemaAction Ignore = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.MissingSchemaAction.Ignore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingSchemaAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignoriert die zusätzlichen Spalten an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="ApplicationScopedSettingAttribute" FullName="System.Configuration.ApplicationScopedSettingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationScopedSettingAttribute : System.Configuration.SettingAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationScopedSettingAttribute extends System.Configuration.SettingAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ApplicationScopedSettingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Anwendungseinstellungseigenschaft einen allgemeinen Wert für alle Benutzer einer Anwendung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften der Anwendung haben einen Bereich, der entweder auf die Anwendung oder der Benutzerebene basiert. Wie die Kategorien vermuten lassen, präsentieren Anwendungsbereich Einstellungseigenschaften einheitliche Werte für alle Benutzer der Anwendung, während benutzerspezifische Eigenschaften verfügen über eine Werte für jeden Benutzer der Anwendung dedizierte.  
+  
+ Die <xref:System.Configuration.ApplicationScopedSettingAttribute> gibt an, dass eine Eigenschaft für eine Einstellung auf Anwendungsebene berücksichtigt werden sollten und geeigneten Speicher Entscheidungen entsprechend vorgenommen werden sollten vom Einstellungsanbieter.  
+  
+ Ein Bereichsattribut ist für jede Einstellungseigenschaft erforderlich. Wenn eine Eigenschaft nicht mit einer angewendet wird eine <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>, die Eigenschaft wird von der Einstellungsanbieter nicht erkannt – nicht serialisiert. Es ist jedoch ungültig, beide Attribute auf die gleiche Eigenschaft anwenden. Ein solcher Versuch führt dazu, dass eine <xref:System.Configuration.ConfigurationErrorsException> ausgelöst wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationScopedSettingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationScopedSettingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ApplicationScopedSettingAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit einem einzelnen Bereich-Attribut in der Reihenfolge, damit es erkannt und durch den Einstellungsanbieter serialisiert werden, muss jede Anwendungseinstellungseigenschaft angewendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

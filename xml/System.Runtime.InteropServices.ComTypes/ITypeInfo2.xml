@@ -1,0 +1,1531 @@
+<Type Name="ITypeInfo2" FullName="System.Runtime.InteropServices.ComTypes.ITypeInfo2">
+  <TypeSignature Language="C#" Value="public interface ITypeInfo2 : System.Runtime.InteropServices.ComTypes.ITypeInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeInfo2 implements class System.Runtime.InteropServices.ComTypes.ITypeInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.ITypeInfo2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices.ComTypes.ITypeInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00020412-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die verwaltete Definition der der <see langword="ITypeInfo2" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die common Language Runtime löst eine Ausnahme aus, wenn eine COM-Methode in systemeigenem Code ein HRESULT zurückgibt. Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von HRESULTs und Ausnahmen](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddressOfMember">
+      <MemberSignature Language="C#" Value="public void AddressOfMember (int memid, System.Runtime.InteropServices.ComTypes.INVOKEKIND invKind, out IntPtr ppv);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddressOfMember(int32 memid, valuetype System.Runtime.InteropServices.ComTypes.INVOKEKIND invKind, [out] native int&amp; ppv) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.AddressOfMember(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="invKind" Type="System.Runtime.InteropServices.ComTypes.INVOKEKIND" />
+        <Parameter Name="ppv" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="memid">Element-ID des dem <see langword="static" /> Adresse zum Abrufen des Mitglieds.</param>
+        <param name="invKind">Eines der <see cref="T:System.Runtime.InteropServices.ComTypes.INVOKEKIND" /> Werte, der angibt, ob das Element eine Eigenschaft, und wenn Ja, welche Art.</param>
+        <param name="ppv">Wenn diese Methode zurückgibt, enthält einen Verweis auf die <see langword="static" /> Member. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Adressen der statische Funktionen oder Variablen, z. B. diejenigen, die in einer DLL definiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::AddressOfMember`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public void CreateInstance (object pUnkOuter, ref Guid riid, out object ppvObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateInstance(object pUnkOuter, [in]valuetype System.Guid&amp; riid, [out] object&amp; ppvObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.CreateInstance(System.Object,System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pUnkOuter" Type="System.Object" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="ppvObj" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pUnkOuter">Ein Objekt, das als steuernde fungiert <see langword="IUnknown" />.</param>
+        <param name="riid">Die IID der Schnittstelle, die der Aufrufer für die Kommunikation mit dem resultierenden Objekt verwendet werden soll.</param>
+        <param name="ppvObj">Wenn diese Methode zurückgibt, enthält einen Verweis auf das erstellte Objekt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Erstellt eine neue Instanz eines Typs, der eine Komponentenklasse (Co-Klasse) beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::CreateInstance`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllCustData">
+      <MemberSignature Language="C#" Value="public void GetAllCustData (IntPtr pCustData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAllCustData(native int pCustData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetAllCustData(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pCustData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pCustData">Ein Zeiger auf <see langword="CUSTDATA" />, der alle benutzerdefinierten Datenelemente enthält.</param>
+        <summary>Ruft alle benutzerdefinierten Datenelemente für die Bibliothek ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllFuncCustData">
+      <MemberSignature Language="C#" Value="public void GetAllFuncCustData (int index, IntPtr pCustData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAllFuncCustData(int32 index, native int pCustData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetAllFuncCustData(System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="pCustData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Funktion, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="pCustData">Ein Zeiger auf <see langword="CUSTDATA" />, der alle benutzerdefinierten Datenelemente enthält.</param>
+        <summary>Ruft alle benutzerdefinierten Daten aus der angegebenen Funktion ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo2::GetAllFuncCustData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllImplTypeCustData">
+      <MemberSignature Language="C#" Value="public void GetAllImplTypeCustData (int index, IntPtr pCustData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAllImplTypeCustData(int32 index, native int pCustData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetAllImplTypeCustData(System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="pCustData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Implementierungstyps für die benutzerdefinierten Daten.</param>
+        <param name="pCustData">Ein Zeiger auf <see langword="CUSTDATA" />, der alle benutzerdefinierten Datenelemente enthält.</param>
+        <summary>Ruft alle benutzerdefinierten Daten für den angegebenen Implementierungstyp ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo2::GetAllImplTypeCustData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllParamCustData">
+      <MemberSignature Language="C#" Value="public void GetAllParamCustData (int indexFunc, int indexParam, IntPtr pCustData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAllParamCustData(int32 indexFunc, int32 indexParam, native int pCustData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetAllParamCustData(System.Int32,System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="indexFunc" Type="System.Int32" />
+        <Parameter Name="indexParam" Type="System.Int32" />
+        <Parameter Name="pCustData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="indexFunc">Der Index der Funktion, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="indexParam">Der Index des Parameters dieser Funktion, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="pCustData">Ein Zeiger auf <see langword="CUSTDATA" />, der alle benutzerdefinierten Datenelemente enthält.</param>
+        <summary>Ruft alle benutzerdefinierten Daten für den angegebenen Funktionsparameter ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllVarCustData">
+      <MemberSignature Language="C#" Value="public void GetAllVarCustData (int index, IntPtr pCustData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAllVarCustData(int32 index, native int pCustData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetAllVarCustData(System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="pCustData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Variablen, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="pCustData">Ein Zeiger auf <see langword="CUSTDATA" />, der alle benutzerdefinierten Datenelemente enthält.</param>
+        <summary>Ruft die Variable für die benutzerdefinierten Daten ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainingTypeLib">
+      <MemberSignature Language="C#" Value="public void GetContainingTypeLib (out System.Runtime.InteropServices.ComTypes.ITypeLib ppTLB, out int pIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetContainingTypeLib([out] class System.Runtime.InteropServices.ComTypes.ITypeLib&amp; ppTLB, [out] int32&amp; pIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetContainingTypeLib(System.Runtime.InteropServices.ComTypes.ITypeLib@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppTLB" Type="System.Runtime.InteropServices.ComTypes.ITypeLib&amp;" RefType="out" />
+        <Parameter Name="pIndex" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppTLB">Bei der Rückgabe dieser Methode enthält einen Verweis auf die enthaltende Typbibliothek auf. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="pIndex">Wenn diese Methode zurückgibt, enthält einen Verweis auf den Index des Beschreibung des in der enthaltenden Typbibliothek. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Typbibliothek, die dieser Beschreibung und der zugehörige Index in diese Typbibliothek enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetContainingTypeLib`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustData">
+      <MemberSignature Language="C#" Value="public void GetCustData (ref Guid guid, out object pVarVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetCustData(valuetype System.Guid&amp; guid, [out] object&amp; pVarVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData(System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="pVarVal" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Die zur Identifizierung der Daten verwendete GUID.</param>
+        <param name="pVarVal">Enthält nach Rückgabe dieser Methode ein <see langword="Object" />, das angibt, wo die abgerufenen Daten abgelegt werden sollen. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die benutzerdefinierten Daten ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo2::GetCustData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDllEntry">
+      <MemberSignature Language="C#" Value="public void GetDllEntry (int memid, System.Runtime.InteropServices.ComTypes.INVOKEKIND invKind, IntPtr pBstrDllName, IntPtr pBstrName, IntPtr pwOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDllEntry(int32 memid, valuetype System.Runtime.InteropServices.ComTypes.INVOKEKIND invKind, native int pBstrDllName, native int pBstrName, native int pwOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDllEntry(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="invKind" Type="System.Runtime.InteropServices.ComTypes.INVOKEKIND" />
+        <Parameter Name="pBstrDllName" Type="System.IntPtr" />
+        <Parameter Name="pBstrName" Type="System.IntPtr" />
+        <Parameter Name="pwOrdinal" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="memid">Die ID der Memberfunktion, deren Beschreibung des Zugriffssteuerungseintrags DLL zurückgegeben werden.</param>
+        <param name="invKind">Eines der <see cref="T:System.Runtime.InteropServices.ComTypes.INVOKEKIND" /> Werte, der angibt, die Art des Elements identifizierte <c>Memid</c>.</param>
+        <param name="pBstrDllName">Wenn dies nicht der <see langword="null" />, die Funktion legt <c>pBstrDllName</c> auf eine <see langword="BSTR" /> , die den Namen der DLL enthält.</param>
+        <param name="pBstrName">Wenn dies nicht der <see langword="null" />, die Funktion legt <c>LpbstrName</c> auf eine <see langword="BSTR" /> , enthält den Namen des Einstiegspunkts.</param>
+        <param name="pwOrdinal">Wenn dies nicht der <see langword="null" />, und klicken Sie dann die Funktion wird durch eine Ordnungszahl definiert <c>LpwOrdinal</c> , zeigen Sie auf die Ordnungszahl festgelegt ist.</param>
+        <summary>Ruft eine Beschreibung oder die Angabe der Einstiegspunkt für eine Funktion in einer DLL ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetDllEntry`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocumentation">
+      <MemberSignature Language="C#" Value="public void GetDocumentation (int index, out string strName, out string strDocString, out int dwHelpContext, out string strHelpFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDocumentation(int32 index, [out] string&amp; strName, [out] string&amp; strDocString, [out] int32&amp; dwHelpContext, [out] string&amp; strHelpFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation(System.Int32,System.String@,System.String@,System.Int32@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="strName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="strDocString" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="dwHelpContext" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="strHelpFile" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die ID des Elements, dessen Dokumentation ist, zurückgegeben werden.</param>
+        <param name="strName">Wenn diese Methode zurückgibt, enthält den Namen des Item-Methode. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="strDocString">Bei der Rückgabe dieser Methode enthält die Dokumentationszeichenfolge für das angegebene Element. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="dwHelpContext">Bei der Rückgabe dieser Methode enthält einen Verweis auf den Hilfekontext, die dem angegebenen Element zugeordnet sind. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="strHelpFile">Wenn diese Methode zurückgibt, enthält der vollqualifizierte Name der Hilfedatei. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Dokumentationszeichenfolge, den vollständigen Namen der Hilfedatei und Pfad und die Kontext-ID für das Hilfethema für eine Beschreibung des angegebenen Typs ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetDocumentation`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocumentation2">
+      <MemberSignature Language="C#" Value="public void GetDocumentation2 (int memid, out string pbstrHelpString, out int pdwHelpStringContext, out string pbstrHelpStringDll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDocumentation2(int32 memid, [out] string&amp; pbstrHelpString, [out] int32&amp; pdwHelpStringContext, [out] string&amp; pbstrHelpStringDll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2(System.Int32,System.String@,System.Int32@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.LCIDConversion(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="pbstrHelpString" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="pdwHelpStringContext" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="pbstrHelpStringDll" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="memid">Der Memberbezeichner für die Typbeschreibung.</param>
+        <param name="pbstrHelpString">Enthält nach Rückgabe dieser Methode einen <see langword="BSTR" />-Typ mit dem Namen des angegebenen Elements. Wenn der Aufrufer nicht der Name des Elements <c>PbstrHelpString</c> kann <see langword="null" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="pdwHelpStringContext">Enthält nach Rückgabe dieser Methode den Lokalisierungskontext der Hilfe. Wenn der Aufrufer nicht den Hilfekontext <c>PdwHelpStringContext</c> kann <see langword="null" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="pbstrHelpStringDll">Enthält nach Rückgabe dieser Methode einen <see langword="BSTR" />-Typ, der den vollqualifizierten Namen der Datei enthält, die die für die Hilfedatei verwendete DLL enthält. Wenn der Aufrufer nicht der Name der Datei <c>PbstrHelpStringDll</c> kann <see langword="null" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Dokumentationszeichenfolge, den vollständigen Dateinamen und Pfad der Hilfe, den zu verwendenden Lokalisierungskontext und die Kontext-ID des Hilfethemas der Bibliothek in der Hilfedatei ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFuncCustData">
+      <MemberSignature Language="C#" Value="public void GetFuncCustData (int index, ref Guid guid, out object pVarVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetFuncCustData(int32 index, valuetype System.Guid&amp; guid, [out] object&amp; pVarVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncCustData(System.Int32,System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="guid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="pVarVal" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Funktion, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="guid">Die zur Identifizierung der Daten verwendete GUID.</param>
+        <param name="pVarVal">Enthält nach Rückgabe dieser Methode ein <see langword="Object" />, das angibt, wo die Daten abgelegt werden sollen. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die benutzerdefinierten Daten aus der angegebenen Funktion ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFuncDesc">
+      <MemberSignature Language="C#" Value="public void GetFuncDesc (int index, out IntPtr ppFuncDesc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetFuncDesc(int32 index, [out] native int&amp; ppFuncDesc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncDesc(System.Int32,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="ppFuncDesc" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, der die Beschreibung der Funktion zurückgegeben werden soll.</param>
+        <param name="ppFuncDesc">Wenn diese Methode zurückgibt, enthält einen Verweis auf eine <see langword="FUNCDESC" /> Struktur, die die angegebene Funktion beschreibt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die <see cref="T:System.Runtime.InteropServices.FUNCDESC" /> -Struktur, die Informationen zu einer angegebenen Funktion enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `ppFuncDesc` Parameter durch zugegriffen werden kann die <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> Methode.  
+  
+ Weitere Informationen zu `ITypeInfo::GetFuncDesc`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFuncIndexOfMemId">
+      <MemberSignature Language="C#" Value="public void GetFuncIndexOfMemId (int memid, System.Runtime.InteropServices.ComTypes.INVOKEKIND invKind, out int pFuncIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetFuncIndexOfMemId(int32 memid, valuetype System.Runtime.InteropServices.ComTypes.INVOKEKIND invKind, [out] int32&amp; pFuncIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncIndexOfMemId(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="invKind" Type="System.Runtime.InteropServices.ComTypes.INVOKEKIND" />
+        <Parameter Name="pFuncIndex" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="memid">Der Memberbezeichner.</param>
+        <param name="invKind">Einer der <see cref="T:System.Runtime.InteropServices.ComTypes.INVOKEKIND" />-Werte, der die Art des durch Memid identifizierten Members angibt.</param>
+        <param name="pFuncIndex">Diese Methode gibt einen Index an die Funktion zurück. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Bindet – wo der Membername nicht bekannt ist – auf Basis einer bekannten DISPID an einen bestimmten Member (z.B. beim Binden an einen Standardmember).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIDsOfNames">
+      <MemberSignature Language="C#" Value="public void GetIDsOfNames (string[] rgszNames, int cNames, int[] pMemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetIDsOfNames([in]string[] rgszNames, int32 cNames, [out] int32[] pMemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetIDsOfNames(System.String[],System.Int32,System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgszNames" Type="System.String[]" />
+        <Parameter Name="cNames" Type="System.Int32" />
+        <Parameter Name="pMemId" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgszNames">Ein Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="pMemId">Wenn diese Methode zurückgibt, enthält einen Verweis auf ein Array, das in der namenszuordnungen eingefügt werden. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Führt eine Zuordnung zwischen Elementnamen und Element-IDs und Parameternamen und Parameter-IDs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImplTypeCustData">
+      <MemberSignature Language="C#" Value="public void GetImplTypeCustData (int index, ref Guid guid, out object pVarVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetImplTypeCustData(int32 index, valuetype System.Guid&amp; guid, [out] object&amp; pVarVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetImplTypeCustData(System.Int32,System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="guid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="pVarVal" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Implementierungstyps für die benutzerdefinierten Daten.</param>
+        <param name="guid">Die zur Identifizierung der Daten verwendete GUID.</param>
+        <param name="pVarVal">Enthält nach Rückgabe dieser Methode ein <see langword="Object" />, das angibt, wo die abgerufenen Daten abgelegt werden sollen. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft den Implementierungstyp der benutzerdefinierten Daten ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo2::GetImplTypeCustData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImplTypeFlags">
+      <MemberSignature Language="C#" Value="public void GetImplTypeFlags (int index, out System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS pImplTypeFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetImplTypeFlags(int32 index, [out] valuetype System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS&amp; pImplTypeFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetImplTypeFlags(System.Int32,System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="pImplTypeFlags" Type="System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der ebenfalls implementierten Schnittstelle oder Basisschnittstelle.</param>
+        <param name="pImplTypeFlags">Wenn diese Methode zurückgibt, enthält einen Verweis auf die <see langword="IMPLTYPEFLAGS" /> Enumeration. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die <see cref="T:System.Runtime.InteropServices.IMPLTYPEFLAGS" /> Wert für eine implementierte Schnittstelle oder die Basisschnittstelle in einer typbeschreibung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetImplTypeFlags`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMops">
+      <MemberSignature Language="C#" Value="public void GetMops (int memid, out string pBstrMops);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetMops(int32 memid, [out] string&amp; pBstrMops) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetMops(System.Int32,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="pBstrMops" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="memid">Die Element-ID, der angibt, welche Marshallinginformationen benötigt wird.</param>
+        <param name="pBstrMops">Bei der Rückgabe dieser Methode enthält einen Verweis auf die <see langword="opcode" /> Zeichenfolge ab, in die Felder der Struktur Marshalling beschrieben durch die Beschreibung des verwiesen wird, oder gibt <see langword="null" /> Wenn es keine Informationen sind zurückgegeben. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Marshallinginformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetMops`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNames">
+      <MemberSignature Language="C#" Value="public void GetNames (int memid, string[] rgBstrNames, int cMaxNames, out int pcNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetNames(int32 memid, [out] string[] rgBstrNames, int32 cMaxNames, [out] int32&amp; pcNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetNames(System.Int32,System.String[],System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="rgBstrNames" Type="System.String[]" />
+        <Parameter Name="cMaxNames" Type="System.Int32" />
+        <Parameter Name="pcNames" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="memid">Die ID des Elements, dessen Name (oder den Namen) ist, zurückgegeben werden.</param>
+        <param name="rgBstrNames">Enthält nach Rückkehr dieser Methode den (oder die Namen) dem Element zugeordnet. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="cMaxNames">Die Länge der <c>RgBstrNames</c> Array.</param>
+        <param name="pcNames">Wenn diese Methode zurückgibt, enthält die Anzahl von Namen in der <c>RgBstrNames</c> Array. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Variable mit dem angegebenen Element-ID (oder den Namen der Eigenschaft oder Methode und ihre Parameter), die der angegebenen Funktions-ID entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParamCustData">
+      <MemberSignature Language="C#" Value="public void GetParamCustData (int indexFunc, int indexParam, ref Guid guid, out object pVarVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetParamCustData(int32 indexFunc, int32 indexParam, valuetype System.Guid&amp; guid, [out] object&amp; pVarVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetParamCustData(System.Int32,System.Int32,System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="indexFunc" Type="System.Int32" />
+        <Parameter Name="indexParam" Type="System.Int32" />
+        <Parameter Name="guid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="pVarVal" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="indexFunc">Der Index der Funktion, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="indexParam">Der Index des Parameters dieser Funktion, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="guid">Die zur Identifizierung der Daten verwendete GUID.</param>
+        <param name="pVarVal">Enthält nach Rückgabe dieser Methode ein <see langword="Object" />, das angibt, wo die abgerufenen Daten abgelegt werden sollen. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft den angegebenen Parameter für benutzerdefinierte Daten ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRefTypeInfo">
+      <MemberSignature Language="C#" Value="public void GetRefTypeInfo (int hRef, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetRefTypeInfo(int32 hRef, [out] class System.Runtime.InteropServices.ComTypes.ITypeInfo&amp; ppTI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetRefTypeInfo(System.Int32,System.Runtime.InteropServices.ComTypes.ITypeInfo@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hRef" Type="System.Int32" />
+        <Parameter Name="ppTI" Type="System.Runtime.InteropServices.ComTypes.ITypeInfo&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="hRef">Ein Handle für die Beschreibung der referenzierten Typ zurückgegeben.</param>
+        <param name="ppTI">Bei der Rückgabe dieser Methode enthält die Beschreibung des verwiesen wird. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Beschreibungen referenzierten Typ ab, wenn eine typbeschreibung für die anderen Beschreibungen Typ verweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetRefTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRefTypeOfImplType">
+      <MemberSignature Language="C#" Value="public void GetRefTypeOfImplType (int index, out int href);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetRefTypeOfImplType(int32 index, [out] int32&amp; href) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetRefTypeOfImplType(System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="href" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des implementierten Typs, dessen Handle zurückgegeben wird.</param>
+        <param name="href">Enthält nach Rückkehr dieser Methode einen Verweis auf ein Handle für die implementierte Schnittstelle. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Beschreibung der ebenfalls implementierten Schnittstelle-Typen ab, wenn eine typbeschreibung für die eine COM-Klasse beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetRefTypeOfImplType`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeAttr">
+      <MemberSignature Language="C#" Value="public void GetTypeAttr (out IntPtr ppTypeAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeAttr([out] native int&amp; ppTypeAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetTypeAttr(System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppTypeAttr" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppTypeAttr">Bei der Rückgabe dieser Methode enthält einen Verweis auf die Struktur, die die Attribute dieses typbeschreibung enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft eine <see cref="T:System.Runtime.InteropServices.TYPEATTR" /> -Struktur, die die Attribute von der die Beschreibung enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `ppTypeAttr` Parameter durch zugegriffen werden kann die <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> Methode.  
+  
+ Weitere Informationen zu `ITypeInfo::GetTypeAttr`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeComp">
+      <MemberSignature Language="C#" Value="public void GetTypeComp (out System.Runtime.InteropServices.ComTypes.ITypeComp ppTComp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeComp([out] class System.Runtime.InteropServices.ComTypes.ITypeComp&amp; ppTComp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetTypeComp(System.Runtime.InteropServices.ComTypes.ITypeComp@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppTComp" Type="System.Runtime.InteropServices.ComTypes.ITypeComp&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppTComp">Wenn diese Methode zurückgibt, enthält einen Verweis auf die <see langword="ITypeComp" /> der enthaltenden Typbibliothek. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die <see langword="ITypeComp" /> Schnittstelle für die typbeschreibung, dadurch kann einen Client-Compiler zum Binden an die typbeschreibung Elemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::GetTypeComp`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeFlags">
+      <MemberSignature Language="C#" Value="public void GetTypeFlags (out int pTypeFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeFlags([out] int32&amp; pTypeFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetTypeFlags(System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pTypeFlags" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pTypeFlags">Enthält nach dem Beenden der Methode einen <see langword="DWORD" />-Verweis auf ein <see langword="TYPEFLAG" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt die Typflags ohne Zuordnungen zurück. Diese Methode gibt ein <see langword="DWORD" />-Typflag zurück, das die Typflags ohne <see langword="TYPEATTR" />-Wachstum (Typattribut) erweitert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeKind">
+      <MemberSignature Language="C#" Value="public void GetTypeKind (out System.Runtime.InteropServices.ComTypes.TYPEKIND pTypeKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeKind([out] valuetype System.Runtime.InteropServices.ComTypes.TYPEKIND&amp; pTypeKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetTypeKind(System.Runtime.InteropServices.ComTypes.TYPEKIND@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pTypeKind" Type="System.Runtime.InteropServices.ComTypes.TYPEKIND&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pTypeKind">Enthält nach dem Beenden der Methode einen Verweis auf eine <see langword="TYPEKIND" />-Enumeration. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt die <see langword="TYPEKIND" />-Enumeration schnell und ohne Zuordnungen zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVarCustData">
+      <MemberSignature Language="C#" Value="public void GetVarCustData (int index, ref Guid guid, out object pVarVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetVarCustData(int32 index, valuetype System.Guid&amp; guid, [out] object&amp; pVarVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetVarCustData(System.Int32,System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="guid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="pVarVal" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Variablen, für die die benutzerdefinierten Daten abgerufen werden sollen.</param>
+        <param name="guid">Die zur Identifizierung der Daten verwendete GUID.</param>
+        <param name="pVarVal">Enthält nach Rückgabe dieser Methode ein <see langword="Object" />, das angibt, wo die abgerufenen Daten abgelegt werden sollen. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Variable für die benutzerdefinierten Daten ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo2::GetVarCustData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVarDesc">
+      <MemberSignature Language="C#" Value="public void GetVarDesc (int index, out IntPtr ppVarDesc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetVarDesc(int32 index, [out] native int&amp; ppVarDesc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetVarDesc(System.Int32,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="ppVarDesc" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zurückzugebenden der variablenbeschreibung.</param>
+        <param name="ppVarDesc">Wenn diese Methode zurückgibt, enthält einen Verweis auf die <see langword="VARDESC" /> -Struktur, die die angegebene Variable beschreibt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft eine <see langword="VARDESC" /> Struktur, die die angegebene Variable beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `ppVarDesc` Parameter durch zugegriffen werden kann die <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> Methode.  
+  
+ Weitere Informationen zu `ITypeInfo::GetVarDesc`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVarIndexOfMemId">
+      <MemberSignature Language="C#" Value="public void GetVarIndexOfMemId (int memid, out int pVarIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetVarIndexOfMemId(int32 memid, [out] int32&amp; pVarIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetVarIndexOfMemId(System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="pVarIndex" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="memid">Der Memberbezeichner.</param>
+        <param name="pVarIndex">Bei der Rückgabe dieser Methode enthält einen Index der <c>Memid</c>. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Bindet – wo der Membername nicht bekannt ist – auf Basis einer bekannten <see langword="DISPID" /> an einen bestimmten Member (z.B. beim Binden an einen Standardmember).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (object pvInstance, int memid, short wFlags, ref System.Runtime.InteropServices.ComTypes.DISPPARAMS pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, out int puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invoke(object pvInstance, int32 memid, int16 wFlags, valuetype System.Runtime.InteropServices.ComTypes.DISPPARAMS&amp; pDispParams, native int pVarResult, native int pExcepInfo, [out] int32&amp; puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.Invoke(System.Object,System.Int32,System.Int16,System.Runtime.InteropServices.ComTypes.DISPPARAMS@,System.IntPtr,System.IntPtr,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pvInstance" Type="System.Object" />
+        <Parameter Name="memid" Type="System.Int32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.Runtime.InteropServices.ComTypes.DISPPARAMS&amp;" RefType="ref" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pvInstance">Ein Verweis auf die Schnittstelle, die von diesem typbeschreibung beschrieben.</param>
+        <param name="memid">Der Bezeichner des Schnittstellenmembers.</param>
+        <param name="wFlags">Flags, die den Kontext des Invoke-Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Verweis auf eine Struktur, die ein Array von Argumenten und ein Array von DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden. Wenn <c>wFlags</c> gibt <see langword="DISPATCH_PROPERTYPUT" /> oder <see langword="DISPATCH_PROPERTYPUTREF" />, <c>pVarResult</c> wird ignoriert. Legen Sie auf <see langword="null" /> ggf. kein Ergebnis.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur für Informationen, die nur bei aufgefüllt <see langword="DISP_E_EXCEPTION" /> zurückgegeben wird.</param>
+        <param name="puArgErr">Wenn <see langword="Invoke" /> gibt <see langword="DISP_E_TYPEMISMATCH" />, <c>PuArgErr</c> gibt den Index des Arguments mit dem falschen Typ. Wenn mehr als ein Argument einen Fehler zurückgibt, <c>PuArgErr</c> gibt nur das erste Argument mit einem Fehler an.</param>
+        <summary>Ruft eine Methode oder greift auf eine Eigenschaft des Objekts, das die Schnittstelle, die durch die Beschreibung des beschrieben implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `pDispParams` Parameter durch zugegriffen werden kann die <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> Methode.  
+  
+ Gültige Werte für `wFlags` sind:  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|DISPATCH_METHOD|Das Element wird als eine Methode zugegriffen. Bei einer Mehrdeutigkeit, beide dieses Flag und das `DISPATCH_PROPERTYGET` Flag festgelegt werden.|  
+|DISPATCH_PROPERTYGET|Das Element wird als eine Eigenschaft oder einen Datenmember abgerufen.|  
+|DISPATCH_PROPERTYPUT|Das Element wird als eine Eigenschaft oder einen Datenmember geändert.|  
+|DISPATCH_PROPERTYPUTREF|Das Element wird geändert, indem Sie einen Wert zuweisen, anstatt eine Zuweisung eines Verweises. Dieser Wert gilt nur, wenn die Eigenschaft einen Verweis auf ein Objekt akzeptiert.|  
+  
+ Weitere Informationen zu `ITypeInfo::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseFuncDesc">
+      <MemberSignature Language="C#" Value="public void ReleaseFuncDesc (IntPtr pFuncDesc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseFuncDesc(native int pFuncDesc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.ReleaseFuncDesc(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pFuncDesc" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pFuncDesc">Ein Verweis auf die <see langword="FUNCDESC" /> -Struktur.</param>
+        <summary>Versionen einer <see cref="T:System.Runtime.InteropServices.FUNCDESC" /> zuvor zurückgegebene Struktur der <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::ReleaseFuncDesc`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseTypeAttr">
+      <MemberSignature Language="C#" Value="public void ReleaseTypeAttr (IntPtr pTypeAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseTypeAttr(native int pTypeAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.ReleaseTypeAttr(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pTypeAttr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pTypeAttr">Ein Verweis auf die <see langword="TYPEATTR" /> -Struktur.</param>
+        <summary>Versionen einer <see cref="T:System.Runtime.InteropServices.TYPEATTR" /> zuvor zurückgegebene Struktur der <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::ReleaseTypeAttr`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseVarDesc">
+      <MemberSignature Language="C#" Value="public void ReleaseVarDesc (IntPtr pVarDesc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseVarDesc(native int pVarDesc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.ITypeInfo2.ReleaseVarDesc(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pVarDesc" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pVarDesc">Ein Verweis auf die <see langword="VARDESC" /> -Struktur.</param>
+        <summary>Versionen einer <see langword="VARDESC" /> zuvor zurückgegebene Struktur der <see cref="M:System.Runtime.InteropServices.ComTypes.ITypeInfo.GetVarDesc(System.Int32,System.IntPtr@)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeInfo::ReleaseVarDesc`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

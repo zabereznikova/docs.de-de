@@ -1,0 +1,82 @@
+<Type Name="IInvokeProvider" FullName="System.Windows.Automation.Provider.IInvokeProvider">
+  <TypeSignature Language="C#" Value="public interface IInvokeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInvokeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IInvokeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("54fcb24b-e18e-47a2-b4d3-eccbe77599a2")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften zur Unterstützung des Benutzeroberflächenautomatisierungs-Clientzugriffs auf Steuerelemente verfügbar, die eine einzelne, nicht mehrdeutige Aktion einleiten oder ausführen und den Zustand bei der Aktivierung nicht beibehalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.InvokePattern> -Steuerelementmuster.  
+  
+ Steuerelemente implementieren <xref:System.Windows.Automation.Provider.IInvokeProvider> , wenn das gleiche Verhalten nicht durch einen anderen Steuerelementmuster-Anbieter verfügbar gemacht wird. Wenn die <xref:System.Windows.Automation.InvokePattern.Invoke%2A> -Methode eines Steuerelements beispielsweise dieselbe Aktion wie die <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> - oder die <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> -Methode ausführt, darf <xref:System.Windows.Automation.Provider.IInvokeProvider>nicht für das Steuerelement implementiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IInvokeProvider.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet eine Anforderung zum Aktivieren eines Steuerelements und Initiieren seiner einzelnen eindeutigen Aktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> ist ein asynchroner Aufruf und muss die Kontrolle sofort zurückgeben, ohne zu blockieren.  
+  
+> [!NOTE]
+>  Dieses Verhalten ist insbesondere für Steuerelemente wichtig, die direkt oder indirekt ein modales Dialogfeld starten, wenn sie aufgerufen werden. Jeder Benutzeroberflächenautomatisierungs-Client, der das Ereignis ausgelöst hat, bleibt blockiert, bis das modale Dialogfeld geschlossen wird.  
+  
+ Durch <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> wird das <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>-Ereignis ausgelöst. Wenn möglich, sollte das Ereignis ausgelöst werden, nachdem das Steuerelement seine zugehörige Aktion abgeschlossen wurde.  
+  
+ <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>ausgelöst werden soll, bevor Sie die Wartung der <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> Anforderung in den folgenden Szenarien:  
+  
+-   Es ist nicht möglich oder zweckmäßig, bis zum Abschluss der Aktion zu warten.  
+  
+-   Die Aktion erfordert eine Benutzeraktion.  
+  
+-   Die Aktion ist zeitaufwändig und führt dazu, dass den aufrufenden Client für eine längere Zeit blockiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert die <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> Methode für das MouseDown-Ereignishandler eines Steuerelements. Angenommen, `providerControl` wird eine Membervariable, die bei der Erstellung der Klasse initialisiert wurde.  
+  
+ [!code-csharp[UIAProvider_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/Invoker.cs#106)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Wenn das Steuerelement nicht aktiviert ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,367 @@
+<Type Name="NamespaceCollection" FullName="System.Web.Configuration.NamespaceCollection">
+  <TypeSignature Language="C#" Value="public sealed class NamespaceCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NamespaceCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.NamespaceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.NamespaceInfo))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Auflistung von Namespaceobjekten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.NamespaceCollection> enthält <xref:System.Web.Configuration.NamespaceInfo> Objekte. Jede <xref:System.Web.Configuration.NamespaceInfo> Objekt entspricht einem `Import` (`<%@ Import %>`) Richtlinie, die gilt für alle Seiten und Steuerelemente im Bereich der Konfigurationsdatei. Die `Import` Richtlinie können Sie einen Namespace in die ASP.NET-Seite alle Klassen auf der Seite für die Verwendung verfügbar gemacht zu importieren.  
+  
+   
+  
+## Examples  
+ Der folgende Auszug aus der Datei wird gezeigt, wie Werte für mehrere Eigenschaften der deklarativ angeben, die <xref:System.Web.Configuration.NamespaceCollection> Klasse.  
+  
+```  
+<system.web>  
+  <pages>  
+    <namespaces>  
+      <add namespace="System" />  
+      <add namespace="System.Collections" />  
+      <add namespace="System.Collections.Specialized" />  
+      <add namespace="System.ComponentModel" />  
+      <add namespace="System.Configuration" />  
+      <add namespace="System.Web" />  
+    </namespaces>  
+  </pages>  
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.NamespaceCollection> Typ. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#2)]
+ [!code-vb[System.Web.Configuration.PagesSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamespaceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.NamespaceCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.NamespaceInfo namespaceInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.NamespaceInfo namespaceInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceCollection.Add(System.Web.Configuration.NamespaceInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceInformation" Type="System.Web.Configuration.NamespaceInfo" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceInformation">Ein <see cref="T:System.Web.Configuration.NamespaceInfo" /> Objekt, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.NamespaceInfo" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung darf nicht bereits ein <xref:System.Web.Configuration.NamespaceInfo> Objekt mit derselben <xref:System.Web.Configuration.NamespaceInfo.Namespace%2A> Eigenschaftswert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.NamespaceCollection.Add%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#23](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#23)]
+ [!code-vb[System.Web.Configuration.PagesSection#23](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.NamespaceInfo" /> Objekt bereits in der Auflistung vorhanden ist oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoImportVBNamespace">
+      <MemberSignature Language="C#" Value="public bool AutoImportVBNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoImportVBNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.NamespaceCollection.AutoImportVBNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("autoImportVBNamespace", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob der Visual Basic-Namespace importiert wird, ohne es angeben zu müssen.</summary>
+        <value>
+          <see langword="true" />Wenn das Visual Basic-Namespace automatisch importiert wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die ASP.NET-Seiten mit Visual Basic geschriebene der <xref:Microsoft.VisualBasic> Namespace wird automatisch importiert, es sei denn, die <xref:System.Web.Configuration.NamespaceCollection.AutoImportVBNamespace%2A> Eigenschaft ist `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.NamespaceCollection.AutoImportVBNamespace%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#20](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#20)]
+ [!code-vb[System.Web.Configuration.PagesSection#20](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.Configuration.NamespaceInfo" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode leert die Sammlung und fügt eine `clear` Element in den entsprechenden Abschnitt der Konfigurationsdatei So entfernen Sie alle Verweise auf Elemente, die in Konfigurationsdateien auf höherer Ebene und in der aktuellen Konfigurationsdatei definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.NamespaceCollection.Clear%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#24](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#24)]
+ [!code-vb[System.Web.Configuration.PagesSection#24](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.NamespaceInfo this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.NamespaceInfo Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.NamespaceCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.NamespaceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.NamespaceInfo" /> Objekt in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Configuration.NamespaceInfo" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>
+          <see cref="T:System.Web.Configuration.NamespaceInfo" />-Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft überschreibt die <xref:System.Web.Configuration.NamespaceInfo> -Objekt am angegebenen Index bereits vorhanden ist; andernfalls ein neues Objekt erstellt und der Teamprojektsammlung hinzugefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.NamespaceCollection.Item%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#21)]
+ [!code-vb[System.Web.Configuration.PagesSection#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.NamespaceCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der Namespace des eine <see cref="T:System.Web.Configuration.NamespaceInfo" /> aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt die <see cref="T:System.Web.Configuration.NamespaceInfo" /> Objekt mit dem angegebenen Schlüssel aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene Element in einer Konfigurationsdatei definiert ist, fügt diese Methode eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei auf der Ebene der aktuellen Anwendung. Wenn das Element in der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden sein; Wenn sie nicht der Fall ist eine <xref:System.Configuration.ConfigurationException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.NamespaceCollection.Remove%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#26](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#26)]
+ [!code-vb[System.Web.Configuration.PagesSection#26](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.NamespaceInfo" /> Objekt mit dem angegebenen Schlüssel in der Auflistung.  
+  
+ \- oder –  
+  
+ Das Element wurde bereits entfernt wurde.  
+  
+ \- oder –  
+  
+ Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.NamespaceCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index von einem <see cref="T:System.Web.Configuration.NamespaceInfo" /> aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt vom angegebenen Index in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene Element in einer Konfigurationsdatei definiert ist, fügt diese Methode eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei auf der Ebene der aktuellen Anwendung. Wenn das Element in der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden sein; Wenn sie nicht der Fall ist eine <xref:System.Configuration.ConfigurationException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.NamespaceCollection.RemoveAt%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#25](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#25)]
+ [!code-vb[System.Web.Configuration.PagesSection#25](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.NamespaceInfo" /> Objekt am angegebenen Index in der Auflistung.  
+  
+ \- oder –  
+  
+ Das Element wurde bereits entfernt wurde.  
+  
+ \- oder –  
+  
+ Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

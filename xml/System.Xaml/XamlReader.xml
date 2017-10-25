@@ -1,0 +1,409 @@
+<Type Name="XamlReader" FullName="System.Xaml.XamlReader">
+  <TypeSignature Language="C#" Value="public abstract class XamlReader : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XamlReader extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält die grundlegende Definitionen für Klassen, die XAML-Eingabe nutzen und XAML-Knotenstreams erzeugen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlReader>ist eine abstrakte Klasse, und bietet Implementierungen oder Definitionen, die ein Ergebnis arbeiten für alle Elemente aufweisen. Elemente, die eine Implementierung in verfügen <xref:System.Xaml.XamlReader> in den Hinweisen für dieses Element notiert haben. Insbesondere <xref:System.Xaml.XamlReader> verfügt über mehrere abstrakte Member, die implementiert werden müssen, und mehrere virtuelle Member.  
+  
+ Der virtuelle Member <xref:System.Xaml.XamlReader.ReadSubtree%2A> und <xref:System.Xaml.XamlReader.Skip%2A> jedes bieten eine Standardimplementierung, die in den meisten Fällen geeignet ist. Allerdings die <xref:System.Xaml.XamlReader.ReadSubtree%2A> und <xref:System.Xaml.XamlReader.Skip%2A> standardimplementierungen andere erwarteten Verhalten der implementierende XAML-Reader verwenden; insbesondere abhängig der <xref:System.Xaml.XamlReader.Read%2A> außer Kraft setzen. <xref:System.Xaml.XamlReader.Dispose%2A>ist auch ein virtuelles Member, das über eine funktionierende Standardimplementierung verfügt.  
+  
+ Die folgenden zwei Klassen sind die relevantesten und praktischen abgeleiteten Klassen in .NET Framework-XAML-Dienste und der System.Xaml-Assembly:  
+  
+-   <xref:System.Xaml.XamlObjectReader>, das Objektdiagramm, z. B. das aktive Objektdiagramm einer Anwendung zur Laufzeit liest.  
+  
+-   <xref:System.Xaml.XamlXmlReader>, liest XAML in Form einer XML-Textdatei mit einer allgemeinen <xref:System.Xml.XmlReader> , lädt die Datei als einen zwischengeschalteten Hilfsklasse.  
+  
+ Andere XAML-Reader von anderen Frameworks enthalten <xref:System.Windows.Baml2006.Baml2006Reader> und <xref:System.Activities.Debugger.XamlDebuggerXmlReader>.  
+  
+ <xref:System.Xaml.XamlReader>unterscheidet sich von [!INCLUDE[TLA#tla_xmldom](~/includes/tlasharptla-xmldom-md.md)] und <xref:System.Xml.XmlReader> Entwurfsprinzipien, da <xref:System.Xaml.XamlReader> verfügt nicht über eine `Create` Methode, um die zugrunde liegenden standardmäßigen Implementierungen von XAML-Reader zurückzugeben. Sie müssen stattdessen bestimmte abgeleitete Klassen für XAML-Reader instanziieren, indem Sie ihre Konstruktoren oder andere klassenspezifische Hilfs-APIs aufrufen.  
+  
+## <a name="subtree-readers"></a>Teilstruktur Leser  
+ Meistens, rufen Sie <xref:System.Xaml.XamlReader> API im Kontext der bestimmten XAML-Reader-Klassen, die davon Herleiten <xref:System.Xaml.XamlReader>. Sie können jedoch in einem bestimmten Fall zugreifen <xref:System.Xaml.XamlReader> -API auf eine praktische Verwendung von XAML-Reader-Instanz, die nicht öffentlichen und nicht abgeleitet ist <xref:System.Xaml.XamlObjectReader> oder <xref:System.Xaml.XamlXmlReader>. Dies der Fall ist, beim Aufrufen von <xref:System.Xaml.XamlReader.ReadSubtree%2A>, welche gibt eine <xref:System.Xaml.XamlReader> Instanz. In der Standardimplementierung der <xref:System.Xaml.XamlReader> also zurückgegeben, die für diese API ist eine interne Klasse.  
+  
+ Die <xref:System.Xaml.XamlReader> abgerufen, für die RPO Teilstruktur lesen gültige Aktivitäten für APIs wie z. B. <xref:System.Xaml.XamlReader.Read%2A> und <xref:System.Xaml.XamlReader.NodeType%2A>, und diese Aktionen auf die übergeordnete Klasse von Ressourcenreadern basieren. Dieser Entwurf ermöglicht es die interne Klasse, die die Frame-Ebene verfolgen, wo die Teilstruktur eingegeben wurde. Die Teilstruktur fungiert <xref:System.Xaml.XamlReader> wird sichergestellt, dass wenn die aktuellen Knotenposition außerhalb des zulässigen Bereichs der Unterstruktur verschoben wird, der bestimmte Teilstrukturreader EOF-Berichte oder `null` auf dem aktuellen Knoten.  
+  
+ Hinweise zur Teilstruktur Reader Nutzung auf bestimmte enthalten sind <xref:System.Xaml.XamlReader> APIs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die <see cref="T:System.Xaml.XamlReader" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Verwendung von XAML-Knotenstream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der basisimplementierung Aufrufen <xref:System.Xaml.XamlReader.Close%2A> Aufrufe <xref:System.Xaml.XamlReader.Dispose%2A> mit der `isDisposing` Parameter als `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um die verwalteten Ressourcen freizugeben, andernfalls <see langword="false" />.</param>
+        <summary>Gibt die vom verwendeten nicht verwalteten Ressourcen frei der <see cref="T:System.Xaml.XamlReader" />, und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen zum Abrufen der Basisklasse aufrufen <xref:System.Xaml.XamlReader.IsDisposed%2A>  =  `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="protected bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="M:System.Xaml.XamlReader.Dispose(System.Boolean)" /> aufgerufen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="M:System.Xaml.XamlReader.Dispose(System.Boolean)" /> aufgerufen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEof">
+      <MemberSignature Language="C#" Value="public abstract bool IsEof { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEof" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.IsEof" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse ruft einen Wert, der meldet, ob die Position des Readers am Ende der Datei ab.</summary>
+        <value>
+          <see langword="true" />Wenn die Position der konzeptionellen End of File von XAML-Knotenstream ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teilstruktur Leser können Aufrufen <xref:System.Xaml.XamlReader.IsEof%2A>, mit dem Verhalten, das die Grenzen der eingegebenen Teilstruktur korrekt widerspiegelt. Weitere Informationen finden Sie im Abschnitt "Teilstrukturreader" <xref:System.Xaml.XamlReader>, oder finden Sie unter <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlMember Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlMember Member" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlMember</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse ruft das aktuelle Element an der Position des Readers ist die Position des Readers auf eine <see cref="F:System.Xaml.XamlNodeType.StartMember" />.</summary>
+        <value>Das aktuelle Element; oder <see langword="null" />, wenn die Position des Readers nicht auf ein Element befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teilstruktur Leser können Aufrufen <xref:System.Xaml.XamlReader.Member%2A>, mit Einschränkungen Verhalten. Weitere Informationen finden Sie im Abschnitt "Teilstrukturreader" <xref:System.Xaml.XamlReader>, oder finden Sie unter <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.NamespaceDeclaration Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.NamespaceDeclaration Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.NamespaceDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse ruft die XAML-Namespaceinformationen aus dem aktuellen Knoten ab.</summary>
+        <value>Die XAML-Namespaceinformationen, sofern verfügbar; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der beabsichtigte Entwurf dieser API wird nur ein Ergebnis ungleich Null, wenn zurückzugebende der <xref:System.Xaml.XamlReader.NodeType%2A> des aktuellen Knotens ist <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>. Die Eigenschaft meldet den XAML-Namespace, der für Objekte oder Member in einem allgemeinen Umfang gilt nicht, wie ein XAML-Schemakontext interpretiert. Die Anwendung muss eine Möglichkeit zum Cacheinformationen für das fungiert bereitstellen XAML-Namespace durchsucht XAML-Knoten, wenn Sie diese Informationen in einer Weise benötigen als wie der XAML-Schemakontext an einen Writer gemeldet wird. Finden Sie unter <xref:System.Xaml.XamlXmlReader.Namespace%2A> Hinweise auf die bezugsimplementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xaml.XamlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse ruft den Typ des aktuellen Knotens ab.</summary>
+        <value>Der Wert der <see cref="T:System.Xaml.XamlNodeType" /> Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teilstruktur Leser können Aufrufen <xref:System.Xaml.XamlReader.NodeType%2A>, mit Einschränkungen Verhalten. Weitere Informationen finden Sie im Abschnitt "Teilstrukturreader" <xref:System.Xaml.XamlReader>, oder finden Sie unter <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public abstract bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse enthält den nächsten XAML-Knoten aus der Quelle auf, wenn ein Knoten verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Knoten verfügbar ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teilstruktur Leser können Aufrufen <xref:System.Xaml.XamlReader.Read%2A>, mit Einschränkungen Verhalten. Weitere Informationen finden Sie im Abschnitt "Teilstrukturreader" <xref:System.Xaml.XamlReader>, oder finden Sie unter <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSubtree">
+      <MemberSignature Language="C#" Value="public virtual System.Xaml.XamlReader ReadSubtree ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xaml.XamlReader ReadSubtree() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.ReadSubtree" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Xaml.XamlReader" /> auf Grundlage der aktuellen <see cref="T:System.Xaml.XamlReader" />, wobei das zurückgegebene <see cref="T:System.Xaml.XamlReader" /> wird verwendet, um das Durchlaufen einer Teilstruktur von der Verwendung von XAML-Knotenstruktur an.</summary>
+        <returns>Eine neue XAML-Reader-Instanz für die Teilstruktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verfügt über eine Standardimplementierung und gibt eine gültige <xref:System.Xaml.XamlReader>. Das zurückgegebene <xref:System.Xaml.XamlReader> ist eine interne Klasse, die bestimmte einschränkt <xref:System.Xaml.XamlReader> Aktionen. Die Einschränkungen Zweck lesen nur eine dimensionierte Unterstruktur einer größeren Quelle für eine Verwendung von XAML-Knoten, und der Rückgabe von End-of-File konsistent sind oder `null` auf dem aktuellen Knoten, wenn die Teilstruktur beendet wird.  
+  
+ Im Allgemeinen sollten Sie überprüfen, den aktuellen Knoten aus dem ersten <xref:System.Xaml.XamlReader.Read%2A> zu bestimmen, ob Sie einen Teilstrukturreader benötigen. Wie Sie diese Option aktivieren, möglicherweise implementierungsspezifische; Vermeiden Sie jedoch mehrere Teilstrukturreader für jede Teilstruktur erstellt. Vermeiden Sie außerdem das Aufrufen eines Unterstruktur Readers für bestimmte Knotenfällen (z. B. für <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>), kann keine Teilstruktur von Knoten enthalten.  
+  
+ Nachdem Sie einen Teilstrukturreader erhalten haben, rufen Sie <xref:System.Xaml.XamlReader.Read%2A> wird, um einen aktuellen Knoten zu erhalten (oder rufen Sie <xref:System.Xaml.XamlReader.Skip%2A> zum Abrufen eines nächsten Knotens). Sie rufen nicht automatisch eine ursprüngliche Knotenposition aus dem Teilstrukturreader bei ihrer Erstellung.  
+  
+ Der Leser, die Sie, indem aufrufen abrufen <xref:System.Xaml.XamlReader.ReadSubtree%2A> aus dieser Standard-Implementierung ist eine interne Klasse. Die interne Klasse basiert auf der <xref:System.Xaml.XamlReader> Implementierung, die verwendet wird, wenn <xref:System.Xaml.XamlReader.ReadSubtree%2A> aufgerufen wird. Der Zweck der internen Klasse umschlossen wird die <xref:System.Xaml.XamlReader.Read%2A> und allgemeine Durchlaufverhalten. Der Durchlauf bleibt innerhalb der vorgesehenen Teilstruktur durch das Nachverfolgen <xref:System.Xaml.XamlNodeType.StartMember> / <xref:System.Xaml.XamlNodeType.EndMember> Paare oder <xref:System.Xaml.XamlNodeType.StartObject> / <xref:System.Xaml.XamlNodeType.EndObject> Paare. Es gibt auch ordnungsgemäß zurück `false` für <xref:System.Xaml.XamlReader.Read%2A> und `true` für <xref:System.Xaml.XamlReader.IsEof%2A> Wenn der Reader befindet sich am Ende der Unterstruktur, wie von seinem Einstiegspunkt definiert. Im Allgemeinen, dass Sie davon ausgehen, dass alle <xref:System.Xaml.XamlReader> API, die Sie aus einem Teilstrukturreader aufrufen hat dieselbe Implementierung wie für die gesamte <xref:System.Xaml.XamlReader> mit Ausnahme der Durchlauf des Begrenzungsrahmens Verhalten.  
+  
+ Allerdings <xref:System.Xaml.XamlReader.ReadSubtree%2A> ist virtuell. Daher einen bestimmten <xref:System.Xaml.XamlReader> Implementierung bieten, das von abweicht der <xref:System.Xaml.XamlReader> interne Wrapperverhalten; und ein <xref:System.Xaml.XamlReader> Implementierung kann auch die Teilstruktur Reader Funktionen deaktivieren, indem zurückgeben <xref:System.NotImplementedException> oder andere Ausnahmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse ruft ein Objekt, das XAML-Schema-Kontextinformationen für die Informationen bereitstellt.</summary>
+        <value>Legen Sie ein Objekt, das von XAML-Schema-Kontextinformationen für die Informationen bereitstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public virtual void Skip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Skip() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.Skip" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überspringt die den aktuellen Knoten, und verschiebt die Position des Readers auf den nächsten Knoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einmal übersprungen, <xref:System.Xaml.XamlReader.Read%2A> wird aufgerufen, durch die standardmäßige <xref:System.Xaml.XamlReader.Skip%2A> Implementierung. In der Regel rufen Sie nicht <xref:System.Xaml.XamlReader.Skip%2A> und <xref:System.Xaml.XamlReader.Read%2A> nacheinander.  
+  
+ In der standardmäßigen <xref:System.Xaml.XamlReader.Skip%2A> Implementierung unterschiedliche Aktionen werden ausgeführt, je nachdem, welche <xref:System.Xaml.XamlReader.NodeType%2A> die Position des Readers ist zurzeit aktiviert. Wenn sich die Position des Readers derzeit auf einem <xref:System.Xaml.XamlNodeType.StartMember> oder <xref:System.Xaml.XamlNodeType.StartObject>, Member oder ein Objekt übersprungen wird. Für andere <xref:System.Xaml.XamlReader.NodeType%2A> Werte, wird keine Aktion ausgeführt als Aufruf <xref:System.Xaml.XamlReader.Read%2A> von der aktuellen Position.  
+  
+ Teilstruktur Leser können Aufrufen <xref:System.Xaml.XamlReader.Skip%2A>, mit Einschränkungen Verhalten. Weitere Informationen finden Sie im Abschnitt "Teilstrukturreader" <xref:System.Xaml.XamlReader>, oder finden Sie unter <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ Der Knoten Struktur Verhalten <xref:System.Xaml.XamlReader.Skip%2A?displayProperty=nameWithType> basiert auf den entsprechenden XML- <xref:System.Xml.XmlReader.Skip%2A?displayProperty=nameWithType>. Auf der Grundlage der <xref:System.Xml.XmlReader.Skip%2A?displayProperty=nameWithType> Verhalten Äquivalenz, <xref:System.Xaml.XamlReader.Skip%2A?displayProperty=nameWithType> überspringt Knotens und seiner Unterstruktur, nicht nur den einzelnen Eintrag-Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReader.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Xaml.XamlReader" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public abstract System.Xaml.XamlType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft bei Implementierung in einer abgeleiteten Klasse die <see cref="T:System.Xaml.XamlType" /> des aktuellen Knotens.</summary>
+        <value>Die <see cref="T:System.Xaml.XamlType" /> des aktuellen Knotens; oder <see langword="null" />, wenn die aktuelle Position des Readers nicht auf ein Objekt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teilstruktur Leser können Aufrufen <xref:System.Xaml.XamlReader.Type%2A>, mit Einschränkungen Verhalten. Weitere Informationen finden Sie im Abschnitt "Teilstrukturreader" <xref:System.Xaml.XamlReader>, oder finden Sie unter <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReader.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse ruft den Wert des aktuellen Knotens ab.</summary>
+        <value>Der Wert des aktuellen Knotens; oder <see langword="null" />, wenn die aktuelle Position des Readers nicht auf eine <see cref="F:System.Xaml.XamlNodeType.Value" /> Knotentyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

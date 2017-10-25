@@ -1,0 +1,168 @@
+<Type Name="DeploymentProgressChangedEventArgs" FullName="System.Deployment.Application.DeploymentProgressChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DeploymentProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeploymentProgressChangedEventArgs extends System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.DeploymentProgressChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.ProgressChangedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Fortschrittsdaten derjenigen, die in einem asynchronen Vorgang dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält Eigenschaften, die beschreiben, den Fortschritt der <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged>, <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged>, und <xref:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged> Ereignisse. Nicht jede Eigenschaft in dieser Klasse gilt für jedes Ereignis.  
+  
+ <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesCompleted%2A>und <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesTotal%2A> repräsentieren die Gesamtanzahl der Bytes heruntergeladen, Datum und die Gesamtanzahl der Bytes in den Downloadvorgang; sie gelten für alle drei Ereignisse. <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs.Group%2A>Benennt die Dateigruppe entsprechend dem aktuellen <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged> -Ereignis und <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs.State%2A> die aktuelle Phase des Downloadvorgangs widerspiegelt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel lädt eine Dateigruppe mit dem Namen `HelpFiles`, und zeigt den Downloadstatus in einer Statusleiste angezeigt. Dieses Beispiel benötigen Sie, dass Sie eine Windows Forms-Anwendung bereitstellen und Ihre Hauptformular hat eine <xref:System.Windows.Forms.StatusStrip> -Steuerelement, und ein <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelement namens `downloadStatus`.  
+  
+ [!code-cpp[ClickOnceAPI#8](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#8)]
+ [!code-csharp[ClickOnceAPI#8](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#8)]
+ [!code-vb[ClickOnceAPI#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BytesCompleted">
+      <MemberSignature Language="C#" Value="public long BytesCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Bytes, die von diesem Vorgang bereits heruntergeladen.</summary>
+        <value>Ein <see cref="T:System.Int64" /> übertragen, das die Daten bereits darstellt, in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged>die <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesCompleted%2A> Eigenschaft bezieht sich auf das Herunterladen des Bereitstellungsmanifests. Für <xref:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged>, die Eigenschaft verweist auf den Downloadstatus des gesamten Updates enthalten die Manifeste, Assemblys und Dateien. Für <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged>, die Eigenschaft bezieht sich auf den Downloadstatus der gesamte Satz von Dateien, die Teil der benannten Gruppe sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel lädt eine Dateigruppe mit dem Namen `HelpFiles`, und zeigt den Downloadstatus in einer Statusleiste angezeigt. Dieses Beispiel benötigen Sie, dass Sie eine Windows Forms-Anwendung bereitstellen und Ihre Hauptformular hat eine <xref:System.Windows.Forms.StatusStrip> -Steuerelement, und ein <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelement namens `downloadStatus`.  
+  
+ [!code-cpp[ClickOnceAPI#8](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#8)]
+ [!code-csharp[ClickOnceAPI#8](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#8)]
+ [!code-vb[ClickOnceAPI#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BytesTotal">
+      <MemberSignature Language="C#" Value="public long BytesTotal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesTotal" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesTotal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Bytes in den Downloadvorgang ab.</summary>
+        <value>Ein <see cref="T:System.Int64" /> , beträgt die Gesamtgröße des Downloads in Bytes darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged>die <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesTotal%2A> Eigenschaft bezieht sich auf das Herunterladen des Bereitstellungsmanifests. Für <xref:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged>, die Eigenschaft verweist auf den Downloadstatus des gesamten Updates enthalten die Manifeste, Assemblys und Dateien. Für <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupProgressChanged>, die Eigenschaft bezieht sich auf den Downloadstatus der gesamte Satz von Dateien, die Teil der benannten Gruppe sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel lädt eine Dateigruppe mit dem Namen `HelpFiles`, und zeigt den Downloadstatus in einer Statusleiste angezeigt. Dieses Beispiel benötigen Sie, dass Sie eine Windows Forms-Anwendung bereitstellen und Ihre Hauptformular hat eine <xref:System.Windows.Forms.StatusStrip> -Steuerelement, und ein <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelement namens `downloadStatus`.  
+  
+ [!code-cpp[ClickOnceAPI#8](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#8)]
+ [!code-csharp[ClickOnceAPI#8](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#8)]
+ [!code-vb[ClickOnceAPI#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public string Group { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Group" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Dateigruppe, die heruntergeladen werden.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen der Dateigruppe, wenn das Ereignis aufgetreten, als Ergebnis eines Aufrufs von ist <see cref="Overload:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" />ist, andernfalls eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können mehrere Aufrufe von initiieren <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A> und mehrere Dateigruppen gleichzeitig heruntergeladen werden. Verwendung <xref:System.Deployment.Application.DeploymentProgressChangedEventArgs.Group%2A> um zu bestimmen, welches Ereignis Rückrufe welcher Gruppe entsprechen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel lädt eine Dateigruppe mit dem Namen `HelpFiles`, und zeigt den Downloadstatus in einer Statusleiste angezeigt. Dieses Beispiel benötigen Sie, dass Sie eine Windows Forms-Anwendung bereitstellen und Ihre Hauptformular hat eine <xref:System.Windows.Forms.StatusStrip> -Steuerelement, und ein <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelement namens `downloadStatus`.  
+  
+ [!code-cpp[ClickOnceAPI#8](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#8)]
+ [!code-csharp[ClickOnceAPI#8](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#8)]
+ [!code-vb[ClickOnceAPI#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Deployment.Application.DeploymentProgressState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Deployment.Application.DeploymentProgressState State" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DeploymentProgressChangedEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Deployment.Application.DeploymentProgressState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktion, die der Prozess derzeit ausgeführt wird.</summary>
+        <value>Ein <see cref="T:System.Deployment.Application.DeploymentProgressState" /> Wert, der angibt, welches Element oder welche Elemente der Vorgang gerade herunterlädt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel lädt eine Dateigruppe mit dem Namen `HelpFiles`, und zeigt den Downloadstatus in einer Statusleiste angezeigt. Dieses Beispiel benötigen Sie, dass Sie eine Windows Forms-Anwendung bereitstellen und Ihre Hauptformular hat eine <xref:System.Windows.Forms.StatusStrip> -Steuerelement, und ein <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelement namens `downloadStatus`.  
+  
+ [!code-cpp[ClickOnceAPI#8](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#8)]
+ [!code-csharp[ClickOnceAPI#8](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#8)]
+ [!code-vb[ClickOnceAPI#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

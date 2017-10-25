@@ -1,0 +1,90 @@
+<Type Name="SqlDataSourceSelectingEventArgs" FullName="System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs">
+  <TypeSignature Language="C#" Value="public class SqlDataSourceSelectingEventArgs : System.Web.UI.WebControls.SqlDataSourceCommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataSourceSelectingEventArgs extends System.Web.UI.WebControls.SqlDataSourceCommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.SqlDataSourceCommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.SqlDataSource.Selecting" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Hinzufügen von einem eventhandlerdelegaten, behandeln die <xref:System.Web.UI.WebControls.SqlDataSource.Selecting> Ereignis können weitere vorverarbeitung erforderlich ausführen oder "Abbrechen" von der Datenbankabfrage vollständig. Da die <xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs> abgeleitete Klasse wird von der <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs> -Klasse, die Sie Abbrechen eine ausstehende <xref:System.Web.UI.WebControls.SqlDataSource> Datenbankabfrage durch Festlegen der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft, um `true`. Untersuchen und bearbeiten können die <xref:System.Data.Common.DbCommand.CommandText%2A>, <xref:System.Data.Common.DbCommand.Parameters%2A> Sammlung und andere Eigenschaften des Datenbank-Abfrage vor dem Ausführen der Abfrage durch den Zugriff auf die <xref:System.Data.Common.DbCommand> Objekt verfügbar gemacht werden, indem Sie die <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs.Command%2A> Eigenschaft. Sie können auch Überprüfen der <xref:System.Web.UI.DataSourceSelectArguments> -Objekt, das übergeben wird die <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> Methode durch den Zugriff auf die <xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.Arguments%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs> Klasse wird verwendet, der <xref:System.Web.UI.WebControls.SqlDataSourceView.OnSelecting%2A> Methode für den Zugriff auf eine <xref:System.Web.UI.WebControls.SqlDataSource> Datenbankabfrage, bevor es ausgeführt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement viele Ereignisse, die Sie behandeln können, um mit den zugrunde liegenden Datenobjekten arbeiten, im Rahmen eines Datenvorgangs verfügbar gemacht werden. In der folgenden Tabelle werden die Ereignisse aufgelistet und die zugehörigen <xref:System.EventArgs> Klassen und Ereignishandlerdelegaten.  
+  
+|Ereignis|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selecting>.<br /><br /> Tritt auf, bevor die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Inserting>, <xref:System.Web.UI.WebControls.SqlDataSource.Updating> und <xref:System.Web.UI.WebControls.SqlDataSource.Deleting>.<br /><br /> Erfolgen Sie, bevor eine INSERT-, Update- oder Delete-Vorgang ausgeführt wird.|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selected>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserted>, <xref:System.Web.UI.WebControls.SqlDataSource.Updated> und <xref:System.Web.UI.WebControls.SqlDataSource.Deleted>.<br /><br /> Nach dem Abrufen von Daten auftreten, INSERT-, Update- oder Delete-Vorgang abgeschlossen ist.|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventHandler>|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDataSourceSelectingEventArgs (System.Data.Common.DbCommand command, System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DbCommand command, class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.#ctor(System.Data.Common.DbCommand,System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.Common.DbCommand" />
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="command">Ein <see cref="T:System.Data.Common.DbCommand" /> -Objekt, das abgebrochen werden darstellt <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> Abfrage.</param>
+        <param name="arguments">Die <see cref="T:System.Web.UI.DataSourceSelectArguments" /> -Objekt übergeben, um die <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> Methode.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs" /> -Klasse mit dem angegebenen <see cref="T:System.Data.Common.DbCommand" /> Objekt und alle <see cref="T:System.Web.UI.DataSourceSelectArguments" /> übergeben, um die <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `inputParameters` Parameter ist ein <xref:System.Collections.IDictionary> Auflistung von Name/Wert-Paare, die in der Methodensignatur übereinstimmen und als Verweis übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceSelectArguments Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataSourceSelectArguments Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.DataSourceSelectArguments" /> -Objekt übergeben, um die <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> Methode.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> -Objekt, oder <see langword="null" /> kein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> Objekt angegeben ist, während der <see cref="T:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs" /> erstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können untersuchen, die <xref:System.Web.UI.DataSourceSelectArguments> Objekt, um zu bestimmen, ob sortieren, paging oder eine Zeilenanzahl als Teil der Vorgang zum Abrufen von Daten angefordert werden.  
+  
+ Datengebundene Steuerelemente verwenden die <xref:System.Web.UI.DataSourceSelectArguments> Klasse, die beim Anfordern der <xref:System.Web.UI.WebControls.SqlDataSource> Zusätzliche datenbezogener Vorgänge für ein Resultset, z. B. Sortieren der Daten oder bei der Rückgabe einer bestimmten Teilmenge der Daten ausführen. Diese datenbezogener Vorgänge aufgelistet werden die <xref:System.Web.UI.DataSourceCapabilities> Enumeration. Weitere Informationen finden Sie unter <xref:System.Web.UI.DataSourceSelectArguments>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

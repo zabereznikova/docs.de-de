@@ -1,0 +1,291 @@
+<Type Name="WebResourceAttribute" FullName="System.Web.UI.WebResourceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WebResourceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebResourceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebResourceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Metadatenattribut, das eine eingebettete Ressource in einer Assembly ermöglicht. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebResourceAttribute> Klasse ist nur gültig, wenn auf die Assemblydeklarationen verwendet. Es wird verwendet, um eine angegebene eingebettete Ressource in einer Assembly für die Verwendung als eine Webressource zu aktivieren.  
+  
+ Weitere Informationen zu Ressourcen finden Sie unter [Übersicht über ASP.NET Webseite-Ressourcen](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie zum Anwenden der <xref:System.Web.UI.WebResourceAttribute> -Attribut auf einen Namespace, der ein benutzerdefiniertes Steuerelement definiert `MyCustomControl`. Im zweiten Codebeispiel wird veranschaulicht, wie die `MyCustomControl` Klasse in einer Webseite.  
+  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Web.UI.WebResourceAttribute> Attribut in einer benutzerdefinierten Assembly auf eine Bildressource von Web und eine HTML-Webressource zu definieren. Der `MyCustomControl` Klasse definiert ein zusammengesetztes Steuerelement, das die Ressourcen verwendet wird, zum Festlegen des Werts von der <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.Image> enthaltene innerhalb der zusammengesetzten Steuerelements und Festlegen der <xref:System.Web.UI.HtmlControls.HtmlAnchor.HRef%2A> Eigenschaft ein <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement für die HTML-Ressource verknüpfen.  
+  
+ [!code-csharp[System.Web.UI.WebResourceAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/cs/WebResourceAttribute.cs#2)]
+ [!code-vb[System.Web.UI.WebResourceAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/vb/WebResourceAttribute.vb#2)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die `MyCustomControl` Klasse in einer Webseite.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/cs/WebResourceAttribute.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/vb/WebResourceAttribute.aspx#1)]  
+  
+ Dieses Beispiel benötigen Sie, dass die Ressourcen Image1.jpg und Help.htm mit der Assembly kompilieren, enthält `MyCustomControl`. Weitere Informationen finden Sie unter [/Resource (C#-Compileroptionen)](~/docs/csharp/language-reference/compiler-options/resource-compiler-option.md) oder [/Resource (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/resource.md).  
+  
+ Ein Beispiel für eine HTML-Web-Ressource, die in diesem Beispiel verwendet werden kann, wird weiter angezeigt. Beachten Sie die Verwendung der `WebResource` Syntax, die verwendet wird, wenn Sie festlegen, die <xref:System.Web.UI.WebResourceAttribute.PerformSubstitution%2A> Eigenschaft, um `true` für eine Webressource.  
+  
+ `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">`  
+  
+ `<html >`  
+  
+ `<head>`  
+  
+ `<title>Included Help Page</title>`  
+  
+ `</head>`  
+  
+ `<body>`  
+  
+ `<div>`  
+  
+ `<img alt="help image" src=<% = WebResource("image1.jpg") %> />`  
+  
+ `Included help file.`  
+  
+ `</div>`  
+  
+ `</body>`  
+  
+ `</html>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebResourceAttribute (string webResource, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string webResource, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebResourceAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webResource" Type="System.String" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="webResource">Der Name des der Webressource.</param>
+        <param name="contentType">Der Typ der Ressource, z. B. <c>"Image/Gif"</c> oder <c>"Text/Javascript"</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebResourceAttribute" /> -Klasse mit der angegebenen Webressource und Ressourcentyp "Content".</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="webResource" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ <paramref name="contentType" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CdnPath">
+      <MemberSignature Language="C#" Value="public string CdnPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CdnPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebResourceAttribute.CdnPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad von einem Content Delivery Network (CDN), die Web-Ressourcen enthält.</summary>
+        <value>Der Pfad des Content Delivery Network (CDN).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CdnSupportsSecureConnection">
+      <MemberSignature Language="C#" Value="public bool CdnSupportsSecureConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CdnSupportsSecureConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebResourceAttribute.CdnSupportsSecureConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, dass die <see cref="T:System.Web.UI.ScriptManager" /> gibt an, ob eine Ressource "Script" eine sichere Verbindung mit dem Content Delivery Network (CDN) Pfad verwenden, wenn die Seite erfolgt über HTTPS zugegriffen werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das CDN mithilfe von HTTPS zugegriffen werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebResourceAttribute.CdnSupportsSecureConnection%2A> Eigenschaft zu überprüfen, ob die Ressource zugeordnete Skript zugreifen können sollen die <xref:System.Web.UI.ScriptManager> über eine sichere Verbindung (mit SSL) zu einem CDN. Mithilfe der <xref:System.Web.UI.WebResourceAttribute.CdnSupportsSecureConnection%2A> -Eigenschaft, können Sie eine Warnmeldung über den Browser vermeiden, wenn Ihre Web-Anwendung versucht, die sicheren Inhalte von einem CDN anfordern, die SSL-Unterstützung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebResourceAttribute.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, enthält den MIME-Typ der Ressource, die verweist die <see cref="T:System.Web.UI.WebResourceAttribute" /> Klasse.</summary>
+        <value>Der Inhaltstyp der Ressource.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispiele für Inhaltstypen sind `"image/jpeg"` und `"text/xml"`. Weitere Informationen zu MIME-Typen finden Sie unter der [Internet Assigned Numbers Authority](http://go.microsoft.com/fwlink/?LinkId=43988) -Website und im Abschnitt zu den Medientypen finden Sie unter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der Abfrage die <xref:System.Web.UI.WebResourceAttribute.ContentType%2A> Eigenschaft.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebResourceAttribute> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/cs/WebResourceAttribute.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/vb/WebResourceAttribute.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadSuccessExpression">
+      <MemberSignature Language="C#" Value="public string LoadSuccessExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoadSuccessExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebResourceAttribute.LoadSuccessExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Ausdruck, der verwendet wird, wenn eine Webressource erfolgreich geladen wurde.</summary>
+        <value>Ein Ausdruck, der verwendet wird, wenn eine Webressource erfolgreich geladen wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformSubstitution">
+      <MemberSignature Language="C#" Value="public bool PerformSubstitution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PerformSubstitution" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebResourceAttribute.PerformSubstitution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der bestimmt, ob während der Verarbeitung der eingebetteten Ressource verweist die <see cref="T:System.Web.UI.WebResourceAttribute" /> -Klasse, andere Webressource URLs analysiert und durch den vollständigen Pfad zur Ressource ersetzt werden.</summary>
+        <value>
+          <see langword="true" />Wenn der eingebettete Ressourcen während der Verarbeitung der Ressource aufgelöst sind. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ressource aus der Assembly in die Antwort gestreamt wird, Verweise auf andere Webressourcen in den eingebetteten Ressourcen können behoben werden, zu diesem Zeitpunkt, wenn die <xref:System.Web.UI.WebResourceAttribute.PerformSubstitution%2A> -Eigenschaftensatz auf `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der Abfrage die <xref:System.Web.UI.WebResourceAttribute.PerformSubstitution%2A> Eigenschaft. In diesem Beispiel wird die <xref:System.Web.UI.WebResourceAttribute> -Attribut von HTML-Datei Help.htm wird definiert, mit der <xref:System.Web.UI.WebResourceAttribute.PerformSubstitution%2A> -Eigenschaftensatz auf `true`.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebResourceAttribute> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/cs/WebResourceAttribute.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/vb/WebResourceAttribute.aspx#1)]  
+  
+ Ein Beispiel für eine HTML-Web-Ressource, die in diesem Beispiel verwendet werden kann, wird weiter angezeigt. Beachten Sie, dass die `WebResource` Syntax wird verwendet, wenn Sie festlegen, die <xref:System.Web.UI.WebResourceAttribute.PerformSubstitution%2A> Eigenschaft `true` für die Ressource.  
+  
+ `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">`  
+  
+ `<html >`  
+  
+ `<head>`  
+  
+ `<title>Included Help Page</title>`  
+  
+ `</head>`  
+  
+ `<body>`  
+  
+ `<div>`  
+  
+ `<img alt="help image" src=<% = WebResource("image1.jpg") %> />`  
+  
+ `Included help file.`  
+  
+ `</div>`  
+  
+ `</body>`  
+  
+ `</html>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebResource">
+      <MemberSignature Language="C#" Value="public string WebResource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WebResource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebResourceAttribute.WebResource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die mit dem Namen der Ressource, die verweist die <see cref="T:System.Web.UI.WebResourceAttribute" /> Klasse.</summary>
+        <value>Der Name der Ressource.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der Abfrage die <xref:System.Web.UI.WebResourceAttribute.WebResource%2A> Eigenschaft.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebResourceAttribute> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/cs/WebResourceAttribute.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebResourceAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebResourceAttribute/vb/WebResourceAttribute.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

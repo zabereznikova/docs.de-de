@@ -1,0 +1,181 @@
+<Type Name="CacheEntryUpdateArguments" FullName="System.Runtime.Caching.CacheEntryUpdateArguments">
+  <TypeSignature Language="C#" Value="public class CacheEntryUpdateArguments" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheEntryUpdateArguments extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.CacheEntryUpdateArguments" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über einen Eintrag im Cache, der aus dem Cache entfernt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Argumente in der <xref:System.Runtime.Caching.CacheEntryUpdateArguments> Klasse enthalten Details über einen Eintrag, der der Cacheimplementierung entfernen. Die Argumente enthalten einen Schlüssel für den Cacheeintrag, der einen Verweis auf die <xref:System.Runtime.Caching.ObjectCache> -Instanz, die aus der Eintrag entfernt wird, einen Grund für das Entfernen, und der Name der Region im Cache, der den Eintrag enthält. Der Konstruktor, der die <xref:System.Runtime.Caching.CacheEntryUpdateArguments> Klasse verwendet diese Argumente zum Erstellen einer neuen Instanz der Klasse.  
+  
+ Ein <xref:System.Runtime.Caching.CacheEntryUpdateArguments> -Objekt übergeben wird eine <xref:System.Runtime.Caching.CacheEntryUpdateCallback> Handler, der den Cache über den zu entfernenden Eintrags benachrichtigt.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Eine Rückrufhandler muss der Cacheimplementierung benachrichtigen, ob einen Ersatzeintrag im Cache anstelle der Cacheeintrag eingefügt, die entfernt werden. Wenn Sie Cacheeinträge austauschen möchten, müssen Sie einen Wert außer zuweisen <see langword="null" /> auf die <see cref="P:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItem" /> Eigenschaft. Cache-Implementierungen interpretiert eine <see langword="null" /> Wert für die <see cref="P:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItem" /> -Eigenschaft, wie eine Benachrichtigung, dass der aktuelle Cacheeintrag entfernt, aber nicht ersetzt werden soll.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheEntryUpdateArguments (System.Runtime.Caching.ObjectCache source, System.Runtime.Caching.CacheEntryRemovedReason reason, string key, string regionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Caching.ObjectCache source, valuetype System.Runtime.Caching.CacheEntryRemovedReason reason, string key, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.CacheEntryUpdateArguments.#ctor(System.Runtime.Caching.ObjectCache,System.Runtime.Caching.CacheEntryRemovedReason,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Runtime.Caching.ObjectCache" />
+        <Parameter Name="reason" Type="System.Runtime.Caching.CacheEntryRemovedReason" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see cref="T:System.Runtime.Caching.ObjectCache" /> Instanz aus der der Cacheeintrag verweist <c>Schlüssel</c> entfernt werden.</param>
+        <param name="reason">Einer der Enumerationswerte, die angeben, warum der Cacheeintrag entfernt wird.</param>
+        <param name="key">Der Schlüssel des Cacheeintrags, die entfernt werden.</param>
+        <param name="regionName">Der Name der Region in den Cache auf den Cacheeintrag entfernt werden soll. Dieser Parameter ist optional. Wenn keine Cachebereiche definiert, <c>Regionsname</c> muss <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Caching.CacheEntryUpdateArguments" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryUpdateArguments.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner für ein Cacheeintrag, der entfernt werden soll.</summary>
+        <value>Der eindeutige Bezeichner für den Cacheeintrag.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionName">
+      <MemberSignature Language="C#" Value="public string RegionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryUpdateArguments.RegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen eines Bereichs im Cache, der einen Cacheeintrag enthält.</summary>
+        <value>Der Name eines Bereichs im Cache. Wenn keine Bereiche verwendet werden, ist dieser Wert <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedReason">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheEntryRemovedReason RemovedReason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Caching.CacheEntryRemovedReason RemovedReason" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryUpdateArguments.RemovedReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheEntryRemovedReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Grund für ein Cacheeintrag aus dem Cache entfernt wird.</summary>
+        <value>Einer der Enumerationswerte, der beschreibt, warum ein Cacheeintrag entfernt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.ObjectCache Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.ObjectCache Source" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryUpdateArguments.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.ObjectCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Runtime.Caching.ObjectCache" /> -Instanz, die einen Cacheeintrag enthält, die entfernt werden.</summary>
+        <value>Ein Verweis auf die Cacheinstanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedCacheItem">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheItem UpdatedCacheItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.CacheItem UpdatedCacheItem" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag, der zum Aktualisieren des Cache-Objekts verwendet wird.</summary>
+        <value>Der Cacheeintrag, der in das Cacheobjekt aktualisiert. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einen Cacheeintrag austauschen, die für einen aktualisierten Cache-Eintrag entfernt werden sollen, müssen Sie zuweisen eine <xref:System.Runtime.Caching.CacheItem> -Objekt an die <xref:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItem%2A> Eigenschaft und weisen eine <xref:System.Runtime.Caching.CacheItemPolicy> -Objekt an die <xref:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItemPolicy%2A> Eigenschaft. Die <xref:System.Runtime.Caching.CacheItem> Wert muss ein Wert sein, außer `null`. Cache-Implementierungen interpretiert eine `null` Wert für die <xref:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItem%2A> -Eigenschaft, wie eine Benachrichtigung, dass der aktuelle Cacheeintrag entfernt, aber nicht ersetzt werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedCacheItemPolicy">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.CacheItemPolicy UpdatedCacheItemPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.CacheItemPolicy UpdatedCacheItemPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItemPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheItemPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Entfernung oder den Ablauf von Cacherichtlinie der <see cref="T:System.Runtime.Caching.CacheItem" /> Eintrag, der aktualisiert wird.</summary>
+        <value>Die Entfernung oder den Ablauf von Cacherichtlinie des Cacheelements, das aktualisiert wurde. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn einen Cacheeintrag ersetzen, die mit einem aktualisierten Cache-Eintrag entfernt werden sollen, können Sie optional Zuweisen einer <xref:System.Runtime.Caching.CacheItemPolicy> -Objekt an die <xref:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItemPolicy%2A> Eigenschaft. Die <xref:System.Runtime.Caching.CacheItemPolicy> Objekt ermöglicht es Ihnen anzugeben (z. B. Ablaufdetails) Cacherichtlinie für den aktualisierten Cacheeintrag.  
+  
+ Weitere Informationen über das entfernte Cacheeintrag zu ersetzen, indem Sie eine aktualisierte finden Sie unter der <xref:System.Runtime.Caching.CacheEntryUpdateArguments> Übersicht über die Klasse und die <xref:System.Runtime.Caching.CacheEntryUpdateArguments.UpdatedCacheItem%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

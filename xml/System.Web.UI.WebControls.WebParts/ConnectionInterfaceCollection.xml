@@ -1,0 +1,188 @@
+<Type Name="ConnectionInterfaceCollection" FullName="System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection">
+  <TypeSignature Language="C#" Value="public sealed class ConnectionInterfaceCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConnectionInterfaceCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Schnittstellen zur Verwendung bei Webparts-Verbindungen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kommunikation zwischen einem Anbieter und Consumer erfordert einen Vertrag in einer Schnittstelle definiert. Diese Auflistung enthält alle Kommunikationsschnittstellen, die vom Consumer unterstützt. Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetSecondaryInterfaces%2A?displayProperty=nameWithType>-Methode gibt ein <xref:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection>-Objekt zurück.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionInterfaceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionInterfaceCollection (System.Collections.ICollection connectionInterfaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection connectionInterfaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionInterfaces" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInterfaces">Eine Auflistung von Objekten zum Konvertieren in eine <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> Klasse mit der angegebenen Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Ein Objekt im <paramref name="connectionInterfaces" /> kann nicht hinzugefügt werden, um eine <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionInterfaceCollection (System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection existingConnectionInterfaces, System.Collections.ICollection connectionInterfaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection existingConnectionInterfaces, class System.Collections.ICollection connectionInterfaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.#ctor(System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection,System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="existingConnectionInterfaces" Type="System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" />
+        <Parameter Name="connectionInterfaces" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="existingConnectionInterfaces">Ein <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> , die mit der <c>ConnectionInterfaces</c> Objekt.</param>
+        <param name="connectionInterfaces">Eine Auflistung, die mit der <c>ExistingConnectionInterfaces</c> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> Klasse durch die Kombination der beiden angegebenen Auflistungen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Ein Objekt im <paramref name="connectionInterfaces" /> kann nicht hinzugefügt werden, um eine <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (Type value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Type value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.Contains(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Typ, suchen Sie in der <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" />.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> Objekt einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das <paramref name="value" /> in der <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Type[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Type[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.CopyTo(System.Type[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Type[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.ReadOnlyCollectionBase" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte <see cref="T:System.Collections.ReadOnlyCollectionBase" /> Objekt in ein kompatibles eindimensionales <see cref="T:System.Array" />, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweist auf eine statische, schreibgeschützte Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (Type value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Type value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.IndexOf(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Typ, in der Auflistung gesucht werden soll.</param>
+        <summary>Sucht nach dem angegebenen Objekt und gibt den nullbasierten Index des ersten Vorkommens innerhalb der gesamten <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> Auflistung.</summary>
+        <returns>Der nullbasierte Index des ggf. ersten Vorkommens von <paramref name="value" /> in der gesamten <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" />, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Type this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Elements.</param>
+        <summary>Ruft das Element am angegebenen Index ab.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

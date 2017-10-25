@@ -1,0 +1,168 @@
+<Type Name="TargetFrameworkAttribute" FullName="System.Runtime.Versioning.TargetFrameworkAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TargetFrameworkAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TargetFrameworkAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.TargetFrameworkAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die .NET Framework-Version an, mit der eine bestimmte Assembly kompiliert wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.TargetFrameworkAttribute> -Klasse stellt ein Attribut, das Sie anwenden können, um eine Assembly an, dass die Version von .NET Framework-Laufzeit für die die Assembly erstellt wurde. Z. B. das folgende Beispiel wendet die `TargetFrameworkAttribute` auf eine Assembly aus, um anzugeben, dass sie erstellt wurde, mithilfe von [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)].  
+  
+ [!code-csharp[System.Runtime.Versioning.TargetFrameworkAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.versioning.targetframeworkattribute/cs/declare1.cs#1)]
+ [!code-vb[System.Runtime.Versioning.TargetFrameworkAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.versioning.targetframeworkattribute/vb/declare1.vb#1)]  
+  
+ Die <xref:System.Runtime.Versioning.TargetFrameworkAttribute> Klassenkonstruktor verfügt über einen einzelnen Parameter `frameworkName`, angibt, dass die .NET Framework-Version, die für die Assembly erstellt wurde. Dieser Parameter entspricht der <xref:System.Runtime.Versioning.TargetFrameworkAttribute.FrameworkName%2A> Eigenschaft. Darüber hinaus die <xref:System.Runtime.Versioning.TargetFrameworkAttribute> -Attribut angeben kann eine <xref:System.Runtime.Versioning.TargetFrameworkAttribute.FrameworkDisplayName%2A> Eigenschaft, um einen aussagekräftigeren .NET Framework-Versionszeichenfolge bereitzustellen, die für die Anzeige von den Clients der Assembly geeignet ist. Das folgende Beispiel wendet die `TargetFrameworkAttribute` auf eine Assembly und weist der beiden Eigenschaftenwerte, um anzugeben, dass die Assembly erstellt wurde, mithilfe von [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)].  
+  
+ [!code-csharp[System.Runtime.Versioning.TargetFrameworkAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.versioning.targetframeworkattribute/cs/declare2.cs#2)]
+ [!code-vb[System.Runtime.Versioning.TargetFrameworkAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.versioning.targetframeworkattribute/vb/declare2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TargetFrameworkAttribute (string frameworkName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string frameworkName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.TargetFrameworkAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="frameworkName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="frameworkName">Die Version von .NET Framework für die Assembly erstellt wurde.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Runtime.Versioning.TargetFrameworkAttribute" /> Klasse durch Angeben der .NET Framework-Version, die für die eine Assembly erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge, die zugewiesen ist die `frameworkName` Parameter im Allgemeinen wird das gleiche Format wie die Zeichenfolge, die von zurückgegeben wird die <xref:System.Runtime.Versioning.FrameworkName.ToString%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="frameworkName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkDisplayName">
+      <MemberSignature Language="C#" Value="public string FrameworkDisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkDisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.TargetFrameworkAttribute.FrameworkDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen der .NET Framework-Version, die für die eine Assembly erstellt wurde.</summary>
+        <value>Der Anzeigename der .NET Framework-Version.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.TargetFrameworkAttribute.FrameworkDisplayName%2A> Eigenschaft in der Regel gibt eine relativ lange beschreibende Zeichenfolge, die für die Anzeige für einen Benutzer geeignet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkName">
+      <MemberSignature Language="C#" Value="public string FrameworkName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.TargetFrameworkAttribute.FrameworkName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der .NET Framework-Version, mit der eine bestimmte Assembly kompiliert wurde.</summary>
+        <value>Der Name des .NET Framework-Version, mit der die Assembly kompiliert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Versioning.TargetFrameworkAttribute.FrameworkName%2A> Eigenschaft ordnet der `frameworkName` Parameter von der <xref:System.Runtime.Versioning.TargetFrameworkAttribute.%23ctor%2A> Konstruktor. Es stellt das .NET Framework-Version in einem kompakten Format und in der Regel entspricht der Zeichenfolge, die von zurückgegeben wird die <xref:System.Runtime.Versioning.FrameworkName.ToString%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

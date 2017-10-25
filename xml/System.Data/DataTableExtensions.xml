@@ -1,0 +1,354 @@
+<Type Name="DataTableExtensions" FullName="System.Data.DataTableExtensions">
+  <TypeSignature Language="C#" Value="public static class DataTableExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DataTableExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataTableExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Erweiterungsmethoden für die <see cref="T:System.Data.DataTable" /> Klasse. <see cref="T:System.Data.DataTableExtensions" /> ist eine statische Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsDataView">
+      <MemberSignature Language="C#" Value="public static System.Data.DataView AsDataView (this System.Data.DataTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataView AsDataView(class System.Data.DataTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableExtensions.AsDataView(System.Data.DataTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Quelle <see cref="T:System.Data.DataTable" /> aus der LINQ-aktivierte <see cref="T:System.Data.DataView" /> wird erstellt.</param>
+        <summary>Erstellt und gibt eine LINQ-aktivierte <see cref="T:System.Data.DataView" /> Objekt.</summary>
+        <returns>Eine LINQ-aktivierte <see cref="T:System.Data.DataView" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.DataView>ermöglicht Datenbindungsszenarien für [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] können erstellt werden, aus einer typisierten oder nicht typisierten <xref:System.Data.DataTable>, bietet eine Standardansicht dieser Tabelle. Nachdem die <xref:System.Data.DataView> auf der Grundlage einer <xref:System.Data.DataTable> erstellt wurde, können Filter- und Sortiereigenschaften für sie festgelegt werden. Die <xref:System.Data.DataView> wird dann gebunden an ein Benutzeroberflächensteuerelement, wie z. B. eine <xref:System.Windows.Forms.DataGrid> oder ein <xref:System.Windows.Forms.DataGridView>, stellt ein einfaches Datenbindungsmodell bereit.  
+  
+ Weitere Informationen und Beispiele finden Sie unter [Erstellen eines DataView-Objekts](~/docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataView> von der SalesOrderDetail-Tabelle und wird als Datenquelle für einem <xref:System.Windows.Forms.BindingSource> -Objekt, das fungiert als Proxy für eine <xref:System.Windows.Forms.DataGridView> Steuerelement:  
+  
+ [!code-csharp[DP DataView Samples#CreateLDVFromTable](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromtable)]
+ [!code-vb[DP DataView Samples#CreateLDVFromTable](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromtable)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsDataView&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.DataView AsDataView&lt;T&gt; (this System.Data.EnumerableRowCollection&lt;T&gt; source) where T : System.Data.DataRow;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataView AsDataView&lt;(class System.Data.DataRow) T&gt;(class System.Data.EnumerableRowCollection`1&lt;!!T&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableExtensions.AsDataView``1(System.Data.EnumerableRowCollection{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataView</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.DataRow</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection&lt;T&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Objekte in der Quellsequenz, meist <see cref="T:System.Data.DataRow" />.</typeparam>
+        <param name="source">Die Quelle [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] Abfrage aus der LINQ-aktivierte <see cref="T:System.Data.DataView" /> wird erstellt.</param>
+        <summary>Erstellt und gibt eine LINQ-aktivierte <see cref="T:System.Data.DataView" /> Objekt darstellt der [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] Abfrage.</summary>
+        <returns>Eine LINQ-aktivierte <see cref="T:System.Data.DataView" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.DataView>ermöglicht Datenbindungsszenarien für [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] und können erstellt werden, eine [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] Abfrage. Die <xref:System.Data.DataView> stellt die Abfrage selbst dar und ist keine Ansicht zusätzlich zu der Abfrage. Das neu erstellte <xref:System.Data.DataView> leitet die Filter- und Sortierinformationen von der Abfrage, die sie wurde erstellt. Die <xref:System.Data.DataView> wird dann gebunden an ein Benutzeroberflächensteuerelement, wie z. B. eine <xref:System.Windows.Forms.DataGrid> oder ein <xref:System.Windows.Forms.DataGridView>, ein einfaches Datenbindungsmodell bereitstellen.  
+  
+ Der Parameter `T` des Eingabeparameters `source` kann nur vom Typ <xref:System.Data.DataRow> oder ein abgeleiteter Typ von <xref:System.Data.DataRow>.  
+  
+ Die folgenden Abfrageoperatoren werden nur in einer Abfrage verwendet, um erstellen unterstützt <xref:System.Data.DataView>:  
+  
+-   <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
+  
+-   <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
+  
+-   <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
+  
+-   <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
+  
+-   <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
+  
+-   <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
+  
+-   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
+  
+ Weitere Informationen und Beispiele finden Sie unter [Erstellen eines DataView-Objekts](~/docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataView> von onlinebestellungen nach Gesamtbetrag sortiert:  
+  
+ [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
+ [!code-vb[DP DataView Samples#CreateLDVFromQuery1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsEnumerable">
+      <MemberSignature Language="C#" Value="public static System.Data.EnumerableRowCollection&lt;System.Data.DataRow&gt; AsEnumerable (this System.Data.DataTable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.EnumerableRowCollection`1&lt;class System.Data.DataRow&gt; AsEnumerable(class System.Data.DataTable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableExtensions.AsEnumerable(System.Data.DataTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EnumerableRowCollection&lt;System.Data.DataRow&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.DataTable" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle <see cref="T:System.Data.DataTable" /> aufzählbare vornehmen.</param>
+        <summary>Gibt ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> Objekt, in dem der generische Parameter <paramref name="T" /> ist <see cref="T:System.Data.DataRow" />. Dieses Objekt kann verwendet werden, einem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Ausdruck oder Abfrage.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> Objekt, in dem der generische Parameter <paramref name="T" /> ist <see cref="T:System.Data.DataRow" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]-Abfragen arbeiten mit Datenquellen, implementieren die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die <xref:System.Linq.IQueryable> Schnittstelle.  Die <xref:System.Data.DataTable> Klasse nicht beiden Schnittstellen implementieren, damit Sie aufrufen müssen die <xref:System.Data.DataTableExtensions.AsEnumerable%2A> zu verwendende Methode der <xref:System.Data.DataTable> als Quelle für die `From` -Klausel eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage. Sie können auch benutzerdefinierte, domänenspezifische Operatoren abrufen, wie z. B. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>, wird durch Zurückgeben einer <xref:System.Collections.Generic.IEnumerable%601> Objekt.  
+  
+ Das durch zurückgegebene aufzählbare Objekt die <xref:System.Data.DataTableExtensions.AsEnumerable%2A> dauerhaft gebundene Methode auf die <xref:System.Data.DataTable> , die es erstellt wurde. Mehrere Aufrufe der <xref:System.Data.DataTableExtensions.AsEnumerable%2A> Methode werden mehrere, unabhängige abfragbare Objekte zurück werden an die Quelle gebunden <xref:System.Data.DataTable>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `DisplayProducts` Methode empfängt eine "DataTable", die mit dem Namen DataColumn enthält `ProductName`, extrahiert die `ProductName` Werte und gibt dann die Werte.  
+  
+ [!code-csharp[system.data.DataTableExtensions.AsEnumerable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.data.datatableextensions.asenumerable/cs/source.cs#1)]
+ [!code-vb[system.data.DataTableExtensions.AsEnumerable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.data.datatableextensions.asenumerable/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Quelle <see cref="T:System.Data.DataTable" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToDataTable&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.DataTable CopyToDataTable&lt;T&gt; (this System.Collections.Generic.IEnumerable&lt;T&gt; source) where T : System.Data.DataRow;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataTable CopyToDataTable&lt;(class System.Data.DataRow) T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableExtensions.CopyToDataTable``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.DataRow</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Objekte in der Quellsequenz, meist <see cref="T:System.Data.DataRow" />.</typeparam>
+        <param name="source">Die Quelle <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz.</param>
+        <summary>Gibt eine <see cref="T:System.Data.DataTable" /> Kopien enthält die <see cref="T:System.Data.DataRow" /> Objekte, die eine Eingabe zugewiesen <see cref="T:System.Collections.Generic.IEnumerable`1" /> Objekt, in dem der generische Parameter <paramref name="T" /> ist <see cref="T:System.Data.DataRow" />.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , enthält die Eingabesequenz als Typ des <see cref="T:System.Data.DataRow" /> Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Parameter `T` des Eingabeparameters `source` kann nur vom Typ <xref:System.Data.DataRow> oder ein abgeleiteter Typ von <xref:System.Data.DataRow>.  
+  
+ Die Eingabesequenz kann eine <xref:System.Collections.Generic.IEnumerable%601> source, nicht nur eine Abfrage oder eine Abfrage über eine <xref:System.Data.DataTable>. Beachten Sie, wenn die Quellsequenz eine Abfrage, durch Aufrufen dieser Operator unmittelbare Ausführung erzwungen wird. Beim Aufzählen der Quellsequenz kann auch Ausnahmen ausgelöst werden.  
+  
+ Das Schema der Zieltabelle basiert auf dem Schema des ersten <xref:System.Data.DataRow> Zeile in der Quellsequenz. Die Tabellenmetadaten von extrahiert die <xref:System.Data.DataRow> Metadaten und die Tabelle aus den Spaltenwerten der Werte der <xref:System.Data.DataRow>. Für eine typisierte <xref:System.Data.DataTable>, Typen werden nicht beibehalten. Die Daten und Schema werden übertragen, aber die resultierenden Zeilen der Ausgabetabelle werden die typisierten <xref:System.Data.DataRow> Typ. Die <xref:System.Data.DataRow.RowState%2A> und <xref:System.Data.DataRow.RowError%2A> Eigenschaften werden nicht beibehalten, während des Kopiervorgangs aus der Quelldatenbank <xref:System.Data.DataRow> auf das zurückgegebene <xref:System.Data.DataTable>.  
+  
+ Wenn eine **null** Verweis "oder" nullable-Typ mit einem Wert von **null** befindet sich in einer Datenquelle <xref:System.Data.DataRow>, ersetzt diese Methode den Wert im Ziel- <xref:System.Data.DataTable> mit einem Wert von <xref:System.DBNull.Value>.  
+  
+ Die generierten Tabelle, die von der Methode zurückgegebenen hat den Standardnamen für die Tabelle. Gegebenenfalls zum Benennen der <xref:System.Data.DataTable>, fügen Sie es auf eine <xref:System.Data.DataSet>, oder führen Sie alle anderen <xref:System.Data.DataTable> bestimmten Vorgang müssen Sie dazu nach die Tabelle erstellt und zurückgegeben wird.  
+  
+ Weitere Informationen finden Sie unter [Erstellen einer DataTable aus einer Abfrage](~/docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fragt die SalesOrderHeader-Tabelle für die Aufträge nach dem 8. August 2001 und verwendet die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Methode zum Erstellen einer <xref:System.Data.DataTable> aus dieser Abfrage. Die <xref:System.Data.DataTable> wird dann an eine <xref:System.Windows.Forms.BindingSource> gebunden, die als Proxy für eine <xref:System.Windows.Forms.DataGridView> fungiert.  
+  
+ [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
+ [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Quelle <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz ist <see langword="null" /> und eine neue Tabelle kann nicht erstellt werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein <see cref="T:System.Data.DataRow" /> in der Quelle dem Sequenz Status <see cref="F:System.Data.DataRowState.Deleted" />.  
+  
+ Die Quellsequenz enthält keine <see cref="T:System.Data.DataRow" /> Objekte.  
+  
+ Ein <see cref="T:System.Data.DataRow" /> im Quell-Sequenz ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToDataTable&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void CopyToDataTable&lt;T&gt; (this System.Collections.Generic.IEnumerable&lt;T&gt; source, System.Data.DataTable table, System.Data.LoadOption options) where T : System.Data.DataRow;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CopyToDataTable&lt;(class System.Data.DataRow) T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; source, class System.Data.DataTable table, valuetype System.Data.LoadOption options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableExtensions.CopyToDataTable``1(System.Collections.Generic.IEnumerable{``0},System.Data.DataTable,System.Data.LoadOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.DataRow</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" RefType="this" />
+        <Parameter Name="table" Type="System.Data.DataTable" />
+        <Parameter Name="options" Type="System.Data.LoadOption" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Objekte in der Quellsequenz, meist <see cref="T:System.Data.DataRow" />.</typeparam>
+        <param name="source">Die Quelle <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz.</param>
+        <param name="table">Der Ziel-<see cref="T:System.Data.DataTable" />.</param>
+        <param name="options">Ein <see cref="T:System.Data.LoadOption" /> Enumeration, der angibt, die <see cref="T:System.Data.DataTable" /> Ladeoptionen.</param>
+        <summary>Kopien <see cref="T:System.Data.DataRow" /> Objekte in den angegebenen <see cref="T:System.Data.DataTable" />, erhält eine Eingabe <see cref="T:System.Collections.Generic.IEnumerable`1" /> Objekt, in dem der generische Parameter <paramref name="T" /> ist <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Parameter `T` des Eingabeparameters `source` kann nur vom Typ <xref:System.Data.DataRow>, oder ein abgeleiteter Typ von <xref:System.Data.DataRow>.  
+  
+ Die Eingabesequenz kann eine <xref:System.Collections.Generic.IEnumerable%601> Datenquelle nicht nur eine Abfrage über eine <xref:System.Data.DataTable>. Beachten Sie, wenn die Quellsequenz eine Abfrage, durch Aufrufen dieser Operator unmittelbare Ausführung erzwungen wird. Beim Aufzählen der Quellsequenz kann auch Ausnahmen ausgelöst werden.  
+  
+ Das Schema der Zieltabelle basiert auf dem Schema des ersten <xref:System.Data.DataRow> Zeile in der Quellsequenz. Die Tabellenmetadaten von extrahiert die <xref:System.Data.DataRow> Metadaten und die Tabelle aus den Spaltenwerten der Werte der <xref:System.Data.DataRow>. Für eine typisierte <xref:System.Data.DataTable>, Typen werden nicht beibehalten. Die Daten und Schema werden übertragen, aber die resultierenden Zeilen der Ausgabetabelle werden die typisierten <xref:System.Data.DataRow> Typ. Die <xref:System.Data.DataRow.RowState%2A> und <xref:System.Data.DataRow.RowError%2A> Eigenschaften werden nicht beibehalten, während des Kopiervorgangs aus der Quelldatenbank <xref:System.Data.DataRow> auf das zurückgegebene <xref:System.Data.DataTable>.  
+  
+ Wenn eine **null** Verweis "oder" nullable-Typ mit einem Wert von **null** befindet sich in einer Datenquelle <xref:System.Data.DataRow>, ersetzt diese Methode den Wert im Ziel- <xref:System.Data.DataTable> mit einem Wert von <xref:System.DBNull.Value>.  
+  
+ Die generierten Tabelle, die von der Methode zurückgegebenen hat den Standardnamen für die Tabelle. Gegebenenfalls zum Benennen der <xref:System.Data.DataTable>, fügen Sie es auf eine <xref:System.Data.DataSet>, oder führen Sie alle anderen <xref:System.Data.DataTable> bestimmten Vorgang müssen Sie dazu nach die Tabelle erstellt und zurückgegeben wird.  
+  
+ Weitere Informationen finden Sie unter [Erstellen einer DataTable aus einer Abfrage](~/docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die kopierten <see cref="T:System.Data.DataRow" /> Objekte passen sich nicht auf das Schema des Ziels <see cref="T:System.Data.DataTable" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Quelle <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz ist <see langword="null" /> oder das Ziel <see cref="T:System.Data.DataTable" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein <see cref="T:System.Data.DataRow" /> in der Quelle dem Sequenz Status <see cref="F:System.Data.DataRowState.Deleted" />.  
+  
+ Die Quellsequenz enthält keine <see cref="T:System.Data.DataRow" /> Objekte.  
+  
+ Ein <see cref="T:System.Data.DataRow" /> im Quell-Sequenz ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToDataTable&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void CopyToDataTable&lt;T&gt; (this System.Collections.Generic.IEnumerable&lt;T&gt; source, System.Data.DataTable table, System.Data.LoadOption options, System.Data.FillErrorEventHandler errorHandler) where T : System.Data.DataRow;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CopyToDataTable&lt;(class System.Data.DataRow) T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; source, class System.Data.DataTable table, valuetype System.Data.LoadOption options, class System.Data.FillErrorEventHandler errorHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableExtensions.CopyToDataTable``1(System.Collections.Generic.IEnumerable{``0},System.Data.DataTable,System.Data.LoadOption,System.Data.FillErrorEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.DataRow</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" RefType="this" />
+        <Parameter Name="table" Type="System.Data.DataTable" />
+        <Parameter Name="options" Type="System.Data.LoadOption" />
+        <Parameter Name="errorHandler" Type="System.Data.FillErrorEventHandler" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Objekte in der Quellsequenz, meist <see cref="T:System.Data.DataRow" />.</typeparam>
+        <param name="source">Die Quelle <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz.</param>
+        <param name="table">Der Ziel-<see cref="T:System.Data.DataTable" />.</param>
+        <param name="options">Ein <see cref="T:System.Data.LoadOption" /> Enumeration, der angibt, die <see cref="T:System.Data.DataTable" /> Ladeoptionen.</param>
+        <param name="errorHandler">Ein <see cref="T:System.Data.FillErrorEventHandler" /> Delegat, der die Methode darstellt, die einen Fehler zu behandeln.</param>
+        <summary>Kopien <see cref="T:System.Data.DataRow" /> Objekte in den angegebenen <see cref="T:System.Data.DataTable" />, erhält eine Eingabe <see cref="T:System.Collections.Generic.IEnumerable`1" /> Objekt, in dem der generische Parameter <paramref name="T" /> ist <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Parameter `T` des Eingabeparameters `source` kann nur vom Typ <xref:System.Data.DataRow>, oder ein abgeleiteter Typ von <xref:System.Data.DataRow>.  
+  
+ Die Eingabesequenz kann eine <xref:System.Collections.Generic.IEnumerable%601> Datenquelle nicht nur eine Abfrage über eine <xref:System.Data.DataTable>. Beachten Sie, wenn die Quellsequenz eine Abfrage, durch Aufrufen dieser Operator unmittelbare Ausführung erzwungen wird. Beim Aufzählen der Quellsequenz kann auch Ausnahmen ausgelöst werden.  
+  
+ Das Schema der Zieltabelle basiert auf dem Schema des ersten <xref:System.Data.DataRow> Zeile in der Quellsequenz. Die Tabellenmetadaten von extrahiert die <xref:System.Data.DataRow> Metadaten und die Tabelle aus den Spaltenwerten der Werte der <xref:System.Data.DataRow>. Für eine typisierte <xref:System.Data.DataTable>, Typen werden nicht beibehalten. Die Daten und Schema werden übertragen, aber die resultierenden Zeilen der Ausgabetabelle werden die typisierten <xref:System.Data.DataRow> Typ. Die <xref:System.Data.DataRow.RowState%2A> und <xref:System.Data.DataRow.RowError%2A> Eigenschaften werden nicht beibehalten, während des Kopiervorgangs aus der Quelldatenbank <xref:System.Data.DataRow> auf das zurückgegebene <xref:System.Data.DataTable>.  
+  
+ Wenn eine **null** Verweis "oder" nullable-Typ mit einem Wert von **null** befindet sich in einer Datenquelle <xref:System.Data.DataRow>, ersetzt diese Methode den Wert im Ziel- <xref:System.Data.DataTable> mit einem Wert von <xref:System.DBNull.Value>.  
+  
+ Die generierten Tabelle, die von der Methode zurückgegebenen hat den Standardnamen für die Tabelle. Gegebenenfalls zum Benennen der <xref:System.Data.DataTable>, fügen Sie es auf eine <xref:System.Data.DataSet>, oder führen Sie alle anderen <xref:System.Data.DataTable> bestimmten Vorgang müssen Sie dazu nach die Tabelle erstellt und zurückgegeben wird.  
+  
+ Wenn eine Ausnahme während des Kopiervorgangs eine Datenzeile in die Zieltabelle, z. B. eine Einschränkung-Ausnahme ausgelöst wird die `errorHandler` Delegat wird aufgerufen. Ein <xref:System.Data.FillErrorEventArgs> wird zum Übergeben der `errorHandler` delegieren, die mit den folgenden Werten:  
+  
+-   Die <xref:System.Data.FillErrorEventArgs.Values%2A> Eigenschaft auf eine Kopie der Quelldaten festgelegt ist.  
+  
+-   Die <xref:System.Data.FillErrorEventArgs.DataTable%2A> Eigenschaftensatz an das Ziel <xref:System.Data.DataTable>.  
+  
+-   Die <xref:System.Data.FillErrorEventArgs.Errors%2A> Eigenschaft auf die abgefangene Ausnahme festgelegt ist.  
+  
+ Die <xref:System.Data.FillErrorEventArgs.Continue%2A> -Eigenschaft schreibgeschützt ist, nachdem der Delegataufruf zurückgegeben. Wenn die <xref:System.Data.FillErrorEventArgs.Continue%2A> Eigenschaft `true`, weiterhin die Quellsequenz aufgelistet und in der Datentabelle geladen werden. Wenn die <xref:System.Data.FillErrorEventArgs.Continue%2A> Eigenschaft `false`, die ursprüngliche Ausnahme wird ausgelöst, aus der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter [Erstellen einer DataTable aus einer Abfrage](~/docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die kopierten <see cref="T:System.Data.DataRow" /> Objekte passen sich nicht auf das Schema des Ziels <see cref="T:System.Data.DataTable" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Quelle <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz ist <see langword="null" /> oder das Ziel <see cref="T:System.Data.DataTable" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein <see cref="T:System.Data.DataRow" /> in der Quelle dem Sequenz Status <see cref="F:System.Data.DataRowState.Deleted" />.  
+  
+ - oder -   
+  
+ Die Quellsequenz enthält keine <see cref="T:System.Data.DataRow" /> Objekte.  
+  
+ - oder -   
+  
+ Ein <see cref="T:System.Data.DataRow" /> im Quell-Sequenz ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

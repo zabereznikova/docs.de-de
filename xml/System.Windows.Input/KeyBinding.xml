@@ -1,0 +1,265 @@
+<Type Name="KeyBinding" FullName="System.Windows.Input.KeyBinding">
+  <TypeSignature Language="C#" Value="public class KeyBinding : System.Windows.Input.InputBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyBinding extends System.Windows.Input.InputBinding" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyBinding" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputBinding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bindet eine <see cref="T:System.Windows.Input.KeyGesture" /> zu einem <see cref="T:System.Windows.Input.RoutedCommand" /> (oder ein anderes <see cref="T:System.Windows.Input.ICommand" /> Implementierung).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Input.KeyBinding> ordnet eine <xref:System.Windows.Input.KeyGesture> mit einem <xref:System.Windows.Input.ICommand>, z. B. eine <xref:System.Windows.Input.RoutedCommand>. <xref:System.Windows.Input.RoutedCommand>ist die primäre Implementierung der <xref:System.Windows.Input.ICommand> eine Schnittstelle für die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Befehlssystem.  Allgemein, wenn die <xref:System.Windows.Input.KeyGesture> wird ausgeführt, der Befehl aufgerufen wird, obwohl das Verhalten des Befehls, wie z. B. Weitere durch befehlsspezifische Faktoren beeinflusst wird der <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> Wert.  Weitere Informationen über Befehle finden Sie unter der [Befehle (Übersicht)](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ Mit Ausnahme der Funktionstasten und Zehnertastatur-Schlüssel, ein gültiger <xref:System.Windows.Input.KeyGesture> muss genau einen enthalten <xref:System.Windows.Input.Key> und eine oder mehrere <xref:System.Windows.Input.ModifierKeys>.  Funktionstasten und Zehnertastatur erfordern keine Modifizierertaste um eine gültige <xref:System.Windows.Input.KeyGesture>. Es ist möglich, geben Sie einen ungültigen <xref:System.Windows.Input.KeyGesture> und ein <xref:System.Windows.Input.KeyBinding> verknüpft sind mit einem ungültigen Geste, entweder durch [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] oder Code. Für die Instanz, es erfolgt keine Überprüfung, die verhindert wird, erstellen und binden einen <xref:System.Windows.Input.KeyGesture> , die nur eine Funktionstaste oder nur Modifizierer jedoch keine Schlüssel enthält. Solche eine <xref:System.Windows.Input.KeyBinding> versucht nie, den verknüpften Befehl aufzurufen.  
+  
+ Beim Definieren einer <xref:System.Windows.Input.KeyBinding> in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] stehen zwei Möglichkeiten zum Angeben der <xref:System.Windows.Input.KeyGesture>. Die erste Möglichkeit zum Herstellen einer <xref:System.Windows.Input.KeyBinding> in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] besteht darin zu definieren die <xref:System.Windows.Input.KeyBinding.Gesture%2A> Attribut des der <xref:System.Windows.Input.KeyBinding> -Element, das eine Syntax zum Angeben von Schlüsseln und -Modifizierern als einzelne Zeichenfolge, z. B. "STRG + P" aktiviert. Die zweite Möglichkeit besteht, definieren die <xref:System.Windows.Input.KeyBinding.Key%2A> Attribut und die <xref:System.Windows.Input.KeyBinding.Modifiers%2A> Attribute der <xref:System.Windows.Input.KeyBinding> Element. Beide Methoden zum Festlegen der <xref:System.Windows.Input.KeyGesture> sind gleichwertig und die gleiche zugrunde liegende Objekt ändern, jedoch ein Konflikt, wenn beide verwendet werden.  In die Groß-/Kleinschreibung bei der <xref:System.Windows.Input.KeyBinding.Key%2A>, <xref:System.Windows.Input.KeyBinding.Modifiers%2A>, und die <xref:System.Windows.Input.KeyBinding.Gesture%2A> Attribute festgelegt sind, wird das Attribut definiert zuletzt verwendet für die <xref:System.Windows.Input.KeyGesture>. Möglicherweise lassen Situationen, z. B. eine <xref:System.Windows.Input.KeyBinding.Key%2A> Satz zuletzt wird jedoch nur die Schlüssel-Komponente von einer vorangehenden Eingabeaktion überschreiben lassen die Bewegung Modifizierer identisch. Im Allgemeinen wird empfohlen, dass Sie nur verwenden, die <xref:System.Windows.Input.KeyBinding.Gesture%2A> -Attribut vom [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]; dies werden Mehrdeutigkeiten zu vermeiden, stellt die effizienteste Syntax bereit und bietet die einfachste Darstellung für die Serialisierung.  
+  
+ Ein <xref:System.Windows.Input.KeyBinding> kann auf ein bestimmtes Objekt oder auf Klassenebene definiert werden, indem Sie registrieren einen <xref:System.Windows.Input.CommandManager.RegisterClassInputBinding%2A> auf die <xref:System.Windows.Input.CommandManager> Klasse. Die häufigste Art, definieren eine <xref:System.Windows.Input.KeyBinding> liegt innerhalb der Steuerelementvorlage, indem die <xref:System.Windows.UIElement.InputBindings%2A> Eigenschaft im [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] durch deklarieren eine oder mehrere <xref:System.Windows.Input.MouseBinding> oder <xref:System.Windows.Input.KeyBinding> Elemente.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.KeyBinding> und fügt es der <xref:System.Windows.Input.InputBindingCollection> des Stammfensters.  
+  
+ [!code-xaml[commandWithHandler#CommandHandlerKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlerkeybinding)]  
+  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerKeyBindingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerkeybindingcodebehind)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerKeyBindingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerkeybindingcodebehind)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.KeyBinding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyBinding (System.Windows.Input.ICommand command, System.Windows.Input.KeyGesture gesture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.ICommand command, class System.Windows.Input.KeyGesture gesture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyBinding.#ctor(System.Windows.Input.ICommand,System.Windows.Input.KeyGesture)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Windows.Input.ICommand" />
+        <Parameter Name="gesture" Type="System.Windows.Input.KeyGesture" />
+      </Parameters>
+      <Docs>
+        <param name="command">Der Befehl zum Zuordnen <c>Geste</c>.</param>
+        <param name="gesture">Die Tastenkombination zuzuordnende <c>Befehl</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Input.KeyBinding" /> -Klasse mit dem angegebenen <see cref="T:System.Windows.Input.ICommand" /> und <see cref="T:System.Windows.Input.KeyGesture" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="command" /> oder <paramref name="gesture" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyBinding (System.Windows.Input.ICommand command, System.Windows.Input.Key key, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.ICommand command, valuetype System.Windows.Input.Key key, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyBinding.#ctor(System.Windows.Input.ICommand,System.Windows.Input.Key,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Windows.Input.ICommand" />
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="command">Der Befehl zum Aufrufen.</param>
+        <param name="key">Der Schlüssel zugeordnet werden <c>Befehl</c>.</param>
+        <param name="modifiers">Die Modifizierer zugeordnet werden <c>Befehl</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Input.KeyBinding" /> -Klasse mit dem angegebenen <see cref="T:System.Windows.Input.ICommand" /> und dem angegebenen <see cref="T:System.Windows.Input.Key" /> und <see cref="T:System.Windows.Input.ModifierKeys" /> in konvertiert wird eine <see cref="T:System.Windows.Input.KeyGesture" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyBinding.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz einer <see cref="T:System.Windows.Input.KeyBinding" />.</summary>
+        <returns>Das neue Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gesture">
+      <MemberSignature Language="C#" Value="public override System.Windows.Input.InputGesture Gesture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.InputGesture Gesture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyBinding.Gesture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Input.KeyGestureConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Input.KeyGestureValueSerializer))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest zugeordnete Bewegung <see cref="T:System.Windows.Input.KeyBinding" />.</summary>
+        <value>Die Tastenkombination. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Ausnahme der Funktionstasten und Zehnertastatur eine <xref:System.Windows.Input.KeyGesture> darf eine <xref:System.Windows.Input.Key> und eine oder mehrere <xref:System.Windows.Input.ModifierKeys>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie binden ein <xref:System.Windows.Input.KeyGesture> auf eine <xref:System.Windows.Input.RoutedCommand> mithilfe einer <xref:System.Windows.Input.KeyBinding> (das Markup und die Codebeispiele angeben unterschiedliche Schlüsseln sind jedoch andernfalls entspricht).  
+  
+ [!code-xaml[commandWithHandler#CommandHandlerKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlerkeybinding)]  
+  
+ [!code-csharp[commandlibrarysnippets#KeyBindingWithKeyAndModifiers](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#keybindingwithkeyandmodifiers)]
+ [!code-vb[commandlibrarysnippets#KeyBindingWithKeyAndModifiers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#keybindingwithkeyandmodifiers)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">der Wert <paramref name="gesture" /> ist auf festgelegt ist, keine <see cref="T:System.Windows.Input.KeyGesture" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Key Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.Key Key" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyBinding.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Input.Key" /> von der <see cref="T:System.Windows.Input.KeyGesture" /> zugeordnete <see cref="T:System.Windows.Input.KeyBinding" />.</summary>
+        <value>Der wesentliche Teil der <see cref="T:System.Windows.Input.KeyGesture" />. Der Standardwert ist <see cref="F:System.Windows.Input.Key.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Ausnahme der Funktionstasten und Zehnertastatur eine <xref:System.Windows.Input.KeyGesture> darf eine <xref:System.Windows.Input.Key> und eine oder mehrere <xref:System.Windows.Input.ModifierKeys>.  
+  
+ Beim Definieren einer <xref:System.Windows.Input.KeyBinding> in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] stehen zwei Möglichkeiten zum Angeben der <xref:System.Windows.Input.KeyGesture>. Die erste Möglichkeit zum Herstellen einer <xref:System.Windows.Input.KeyBinding> in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] besteht darin zu definieren die <xref:System.Windows.Input.KeyBinding.Gesture%2A> Attribut des der <xref:System.Windows.Input.KeyBinding> -Element, das eine Syntax zum Angeben von Schlüsseln und -Modifizierern als einzelne Zeichenfolge, z. B. "STRG + P" aktiviert. Die zweite Möglichkeit besteht, definieren die <xref:System.Windows.Input.KeyBinding.Key%2A> Attribut und die <xref:System.Windows.Input.KeyBinding.Modifiers%2A> Attribute der <xref:System.Windows.Input.KeyBinding> Element. Beide Methoden zum Festlegen der <xref:System.Windows.Input.KeyGesture> sind gleichwertig und die gleiche zugrunde liegende Objekt ändern, jedoch ein Konflikt, wenn beide verwendet werden.  In die Groß-/Kleinschreibung bei der <xref:System.Windows.Input.KeyBinding.Key%2A>, <xref:System.Windows.Input.KeyBinding.Modifiers%2A>, und die <xref:System.Windows.Input.KeyBinding.Gesture%2A> Attribute festgelegt sind, wird das Attribut definiert zuletzt verwendet für die <xref:System.Windows.Input.KeyGesture>. Möglicherweise lassen Situationen, z. B. eine <xref:System.Windows.Input.KeyBinding.Key%2A> Satz zuletzt wird jedoch nur die Schlüssel-Komponente von einer vorangehenden Eingabeaktion überschreiben lassen die Bewegung Modifizierer identisch. Im Allgemeinen wird empfohlen, dass Sie nur verwenden, die <xref:System.Windows.Input.KeyBinding.Gesture%2A> -Attribut vom [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]; dies werden Mehrdeutigkeiten zu vermeiden, stellt die effizienteste Syntax bereit und bietet die einfachste Darstellung für die Serialisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyBinding.KeyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Input.KeyBinding.Key" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiers">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ModifierKeys Modifiers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.ModifierKeys Modifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyBinding.Modifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Input.ModifierKeys" /> von der <see cref="T:System.Windows.Input.KeyGesture" /> zugeordnete <see cref="T:System.Windows.Input.KeyBinding" />.</summary>
+        <value>Der Zusatztasten der <see cref="T:System.Windows.Input.KeyGesture" />.  Der Standardwert ist <see cref="F:System.Windows.Input.ModifierKeys.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Ausnahme der Funktionstasten und Zehnertastatur eine <xref:System.Windows.Input.KeyGesture> darf eine <xref:System.Windows.Input.Key> und eine oder mehrere <xref:System.Windows.Input.ModifierKeys>.  
+  
+ Beim Definieren einer <xref:System.Windows.Input.KeyBinding> in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] stehen zwei Möglichkeiten zum Angeben der <xref:System.Windows.Input.KeyGesture>. Die erste Möglichkeit zum Herstellen einer <xref:System.Windows.Input.KeyBinding> in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] besteht darin zu definieren die <xref:System.Windows.Input.KeyBinding.Gesture%2A> Attribut des der <xref:System.Windows.Input.KeyBinding> -Element, das eine Syntax zum Angeben von Schlüsseln und -Modifizierern als einzelne Zeichenfolge, z. B. "STRG + P" aktiviert. Die zweite Möglichkeit besteht, definieren die <xref:System.Windows.Input.KeyBinding.Key%2A> Attribut und die <xref:System.Windows.Input.KeyBinding.Modifiers%2A> Attribute der <xref:System.Windows.Input.KeyBinding> Element. Beide Methoden zum Festlegen der <xref:System.Windows.Input.KeyGesture> sind gleichwertig und die gleiche zugrunde liegende Objekt ändern, jedoch ein Konflikt, wenn beide verwendet werden.  In die Groß-/Kleinschreibung bei der <xref:System.Windows.Input.KeyBinding.Key%2A>, <xref:System.Windows.Input.KeyBinding.Modifiers%2A>, und die <xref:System.Windows.Input.KeyBinding.Gesture%2A> Attribute festgelegt sind, wird das Attribut definiert zuletzt verwendet für die <xref:System.Windows.Input.KeyGesture>. Möglicherweise lassen Situationen, z. B. eine <xref:System.Windows.Input.KeyBinding.Key%2A> Satz zuletzt wird jedoch nur die Schlüssel-Komponente von einer vorangehenden Eingabeaktion überschreiben lassen die Bewegung Modifizierer identisch. Im Allgemeinen wird empfohlen, dass Sie nur verwenden, die <xref:System.Windows.Input.KeyBinding.Gesture%2A> -Attribut vom [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]; dies werden Mehrdeutigkeiten zu vermeiden, stellt die effizienteste Syntax bereit und bietet die einfachste Darstellung für die Serialisierung.  
+  
+<a name="xamlAttributeUsage_Modifiers"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Modifiers="oneOrMoreModifierKeys"/>  
+  
+```  
+  
+<a name="xamlValues_Modifiers"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *oneOrMoreModifierKeys*  
+ Eine oder mehrere Zusatztasten, definiert durch die <xref:System.Windows.Input.ModifierKeys> -Enumeration, mit der ein "+"-Zeichen als Trennzeichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiersProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ModifiersProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ModifiersProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyBinding.ModifiersProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Input.KeyBinding.Modifiers" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

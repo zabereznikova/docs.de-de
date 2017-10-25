@@ -1,0 +1,1816 @@
+<Type Name="Membership" FullName="System.Web.Security.Membership">
+  <TypeSignature Language="C#" Value="public static class Membership" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Membership extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.Membership" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Überprüft die Benutzeranmeldeinformationen und verwaltet die benutzereinstellungen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership> Klasse wird in ASP.NET-Anwendungen verwendet, um die Anmeldeinformationen des Benutzers zu überprüfen und Verwalten von benutzereinstellungen wie Kennwörter und e-Mail-Adressen. Die <xref:System.Web.Security.Membership> -Klasse kann verwendet werden, alleine oder zusammen mit der <xref:System.Web.Security.FormsAuthentication> zum Erstellen eines vollständigen Systems zum Authentifizieren von Benutzern, eine Web-Anwendung oder Website. Die <xref:System.Web.UI.WebControls.Login> kapselt die <xref:System.Web.Security.Membership> -Klasse, eine bequeme Überprüfen von Benutzern bereitzustellen.  
+  
+> [!NOTE]
+>  Wenn Sie nicht mit den Mitgliedschaftsfunktionen von ASP.NET vertraut sind, finden Sie unter [Einführung in die Mitgliedschaft](http://msdn.microsoft.com/library/79184d17-f4c7-4c9f-a073-cec4f5543980) bevor Sie fortfahren. Eine Liste mit anderen Themen im Zusammenhang mit der Mitgliedschaft, finden Sie unter [Verwalten von Benutzern durch Mitgliedschaft](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+ Die <xref:System.Web.Security.Membership> Klasse bietet Funktionen für die:  
+  
+-   Erstellen neue Benutzer.  
+  
+-   Das Speichern von Informationen zur Mitgliedschaft (Benutzernamen, Kennwörter, e-Mail-Adressen und unterstützende Daten) in Microsoft SQL Server oder in einem alternativen Datenspeicher.  
+  
+-   Authentifizieren von Benutzern, die Ihre Website besuchen. Können Sie die Benutzer programmgesteuert authentifizieren, oder Sie können die <xref:System.Web.UI.WebControls.Login> Steuerelement ein vollständige Authentifizierungssystem zu erstellen, nur wenig oder gar kein Code erforderlich sind.  
+  
+-   Verwalten von Kennwörtern, die enthält erstellen, ändern, abrufen und sie zurückzusetzen und so weiter. Sie können optional konfigurieren ASP.NET-Mitgliedschaft dahingehend einer Kennwortfrage und-Antwort Kennwort zurücksetzen und Abrufen von Anforderungen für Benutzer zu authentifizieren, die ihr Kennwort vergessen haben.  
+  
+ Obwohl ASP.NET-Mitgliedschaft ein eigenständiges Feature zur Authentifizierung in ASP.NET ist, können sie mit ASP.NET-Rollenverwaltung zur Autorisierung Dienstleistungen für Ihre Website integriert werden. Mitgliedschaft kann auch mit dem ASP.NET-Benutzer integriert werden <xref:System.Web.Profile> So ermöglichen Sie anwendungsspezifische Anpassung, die angepasst werden, kann auf einzelne Benutzer. Weitere Informationen finden Sie unter [Grundlegendes zur Rollenverwaltung](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6) und [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+ Die <xref:System.Web.Security.Membership> -Klasse basiert auf der Mitgliedschaftsanbieter für die Kommunikation mit einer Datenquelle. .NET Framework enthält eine <xref:System.Web.Security.SqlMembershipProvider>, der Benutzerinformationen in einer Microsoft SQL Server-Datenbank gespeichert und ein <xref:System.Web.Security.ActiveDirectoryMembershipProvider>, wodurch Sie zum Speichern von Benutzerinformationen auf einem Server Active Directory oder Active Directory Application Mode (ADAM). Sie können auch einen benutzerdefinierter Mitgliedschaftsanbieter für die Kommunikation mit einer anderen Datenquelle, die von verwendet werden können implementieren die <xref:System.Web.Security.Membership> Klasse. Benutzerdefinierte Mitgliedschaftsanbieter erben die <xref:System.Web.Security.MembershipProvider> abstrakte Klasse. Weitere Informationen finden Sie unter [Implementieren eines Mitgliedschaftsanbieters](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582).  
+  
+ Standardmäßig ist die ASP.NET-Mitgliedschaft für alle ASP.NET-Anwendungen aktiviert. Der Standardmitgliedschaftsanbieter ist die <xref:System.Web.Security.SqlMembershipProvider> und wird in der Computerkonfiguration mit dem Namen angegeben `AspNetSqlProvider`. Die Standardinstanz von die <xref:System.Web.Security.SqlMembershipProvider> zur Verbindung mit einer lokalen Instanz von Microsoft SQL Server konfiguriert ist.  
+  
+ Sie können die Standardeinstellungen, geben Sie einen <xref:System.Web.Security.SqlMembershipProvider> außer der `AspNetSqlProvider` als Standardanbieter Instanz, oder geben Sie eine Instanz eines benutzerdefinierten Anbieters als Standardanbieter für Ihre ASP.NET-Anwendung mithilfe der Datei "Web.config". Sie können die ASP.NET-Konfiguration Mitgliedschaft für Ihre Web-Anwendung mithilfe des Konfigurationsabschnitts in der Datei "Web.config" angeben. Sie können die `providers` Unterabschnitt des Abschnitts Mitgliedschaftsanbieter als die standardmäßigen Anbieter angeben. Z. B. im folgenden Abschnitt der Standardmitgliedschaftsanbieter aus der aktuellen Anwendungskonfiguration entfernt, und fügt einen neuen Anbieter mit dem Namen `SqlProvider` , die eine Verbindung mit einer SQL Server-Instanz, die mit dem Namen her `AspSqlServer`.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString="Data Source=AspSqlServer;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  <system.web>  
+    <membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="20">  
+      <providers>  
+        <remove name="AspNetSqlProvider" />  
+        <add name="SqlProvider"  
+          type="System.Web.Security.SqlMembershipProvider"  
+          connectionStringName="SqlServices"  
+          enablePasswordRetrieval="false"  
+          enablePasswordReset="true"  
+          requiresQuestionAndAnswer="true"  
+          passwordFormat="Hashed"  
+          applicationName="/" />  
+      </providers>  
+    </membership>  
+  </system.web>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Anmeldeseite für eine ASP.NET-Anwendung für die Verwendung der Formularauthentifizierung und ASP.NET-Mitgliedschaft konfiguriert. Wenn die angegebenen Anmeldeinformationen ungültig sind, wird eine Meldung an den Benutzer angezeigt. Andernfalls wird der Benutzer an die ursprünglich angeforderte URL umgeleitet mithilfe der <xref:System.Web.Security.FormsAuthentication.RedirectFromLoginPage%2A> Methode.  
+  
+> [!NOTE]
+>  Die ASP.NET Anmeldesteuerelementen (<xref:System.Web.UI.WebControls.Login>, <xref:System.Web.UI.WebControls.LoginView>, <xref:System.Web.UI.WebControls.LoginStatus>, <xref:System.Web.UI.WebControls.LoginName>, und <xref:System.Web.UI.WebControls.PasswordRecovery>) kapseln nahezu die gesamte Logik, die der Benutzer zum Eingeben von Anmeldeinformationen aufgefordert werden, und überprüfen die Anmeldeinformationen in das Mitgliedschaftssystem erforderlich und kann verwendet anstelle von programmgesteuerte Überprüfung mithilfe der <xref:System.Web.Security.Membership> Klasse.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/logincs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/loginvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public static string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Anwendung ab oder legt diesen fest.</summary>
+        <value>Der Name der Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.ApplicationName%2A> dient zur Identifizierung von Benutzern für eine Anwendung spezifisch sind. D. h. der gleichen Benutzernamen in der Datenbank für mehrere ASP.NET-Anwendungen, die angeben, ein anderes vorhanden kann <xref:System.Web.Security.Membership.ApplicationName%2A>. Hierdurch können mehrere Anwendungen auf die gleiche Datenbank verwendet, um Benutzerinformationen ohne Namenskonflikte doppelten Benutzers zu speichern. Alternativ können mehrere ASP.NET-Anwendungen dieselbe Benutzerdatenbank verwenden, indem der gleiche <xref:System.Web.Security.Membership.ApplicationName%2A>. Die <xref:System.Web.Security.Membership.ApplicationName%2A> kann programmgesteuert oder deklarativ festgelegt werden, in der Konfiguration für die Web-Anwendung.  
+  
+> [!CAUTION]
+>  Da eine einzelne Standard mitgliedsschaftsanbieterinstanz für alle der vom übermittelten Anforderungen verwendet wird ein <xref:System.Web.HttpApplication> -Objekt können mehrere Anforderungen gleichzeitig ausgeführt und versucht, legen Sie die <xref:System.Web.Security.Membership.ApplicationName%2A> Eigenschaftswert. Die <xref:System.Web.Security.Membership.ApplicationName%2A> Eigenschaft ist nicht für mehrere Schreibvorgänge threadsicher sind, und ändern die <xref:System.Web.Security.Membership.ApplicationName%2A> Eigenschaftswert kann zu unerwartetem Verhalten für mehrere Benutzer einer Anwendung führen. Es wird empfohlen, dass Sie keinen Code schreiben, der Benutzern ermöglicht, legen Sie die <xref:System.Web.Security.Membership.ApplicationName%2A> -Eigenschaft, es sei denn, Sie müssen. Ein Beispiel für eine Anwendung in dem das Festlegen der <xref:System.Web.Security.Membership.ApplicationName%2A> Eigenschaft kann erforderlich sein, sollte eine verwaltende Anwendung, die Daten der Benutzergruppenmitgliedschaft für mehrere Anwendungen verwaltet wird. Eine solche Anwendung sollte einen Einzelbenutzer-Anwendung und nicht um eine Webanwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Es gibt an, dass die Anwendung eine <xref:System.Web.Security.SqlMembershipProvider> Instanz und legt die <xref:System.Web.Security.Membership.ApplicationName%2A> auf `MyApplication`.  
+  
+```  
+<membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="20">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      enablePasswordRetrieval="true"  
+      enablePasswordReset="false"  
+      requiresQuestionAndAnswer="true"  
+      passwordFormat="Encrypted"  
+      applicationName="MyApplication" />  
+  </providers>  
+</membership>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser CreateUser (string username, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser CreateUser(string username, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.CreateUser(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Benutzername für den neuen Benutzer.</param>
+        <param name="password">Das Kennwort für den neuen Benutzer.</param>
+        <summary>Fügt einen neuen Benutzer mit dem Datenspeicher.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt für den neu erstellten Benutzer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.CreateUser%2A>Fügt einen neuen Benutzer mit dem Datenspeicher und gibt eine <xref:System.Web.Security.MembershipUser> Objekt für den neu erstellten Benutzer. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, eine <xref:System.Web.Security.MembershipCreateUserException> ausgelöst wird. Abgerufen werden können eine <xref:System.Web.Security.MembershipCreateStatus> Wert aus der <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> Eigenschaft von der <xref:System.Web.Security.MembershipCreateUserException> , der angibt, warum die Erstellung des Benutzers nicht.  
+  
+ Um, sobald ein Mitgliedschaftsbenutzer erstellt wurde und Sie haben einen Verweis auf eine <xref:System.Web.Security.MembershipUser> Objekt für diesen Benutzer können Sie die Einstellungen für diesen Benutzer ändern mit der <xref:System.Web.Security.MembershipUser> öffentliche Methoden wie z. B. <xref:System.Web.Security.MembershipUser.ChangePasswordQuestionAndAnswer%2A> für Anwendungen, in dem <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A> ist `true`, oder indem Sie die Eigenschaftswerte der <xref:System.Web.Security.MembershipUser> -Objekt, und übergeben sie die <xref:System.Web.Security.Membership.UpdateUser%2A> Methode.  
+  
+ Wenn ein Benutzer bereits in der Datenquelle für die Anwendung vorhanden ist, erhalten Sie eine <xref:System.Web.Security.MembershipUser> Objekt für den vorhandenen Benutzer mit der <xref:System.Web.Security.Membership.GetUser%2A> Methode.  
+  
+ Die <xref:System.Web.Security.SqlMembershipProvider> bietet eine Option aus, um eine eindeutige e-Mail-Adresse für jeden Benutzer erforderlich ist. Wenn die <xref:System.Web.Security.SqlMembershipProvider.RequiresUniqueEmail%2A> Eigenschaft `true`, müssen Sie eine der verwenden die <xref:System.Web.Security.Membership.CreateUser%2A> Überladungen, die Ihnen ermöglicht, geben Sie eine e-Mail-Adresse für den Benutzer erstellt wird. Andernfalls ein <xref:System.Web.Security.MembershipCreateUserException> ausgelöst.  
+  
+ Führende und nachfolgende Leerzeichen werden in alle Parameterwerte gekürzt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen neuen Benutzer für eine ASP.NET-Anwendung für die Verwendung der Formularauthentifizierung und ASP.NET-Mitgliedschaft konfiguriert. Wenn der Benutzer nicht erfolgreich erstellt wurde, wird eine Meldung an den Benutzer angezeigt. Andernfalls wird der Benutzer zur Anmeldeseite für die Anwendung umgeleitet.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/createuser2cs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.Membership#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/createuser2vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Security.MembershipCreateUserException">Der Benutzer wurde nicht erstellt. Überprüfen Sie die <see cref="P:System.Web.Security.MembershipCreateUserException.StatusCode" /> -Eigenschaft für eine <see cref="T:System.Web.Security.MembershipCreateStatus" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser CreateUser (string username, string password, string email);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser CreateUser(string username, string password, string email) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.CreateUser(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="email" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Benutzername für den neuen Benutzer.</param>
+        <param name="password">Das Kennwort für den neuen Benutzer.</param>
+        <param name="email">Die E-Mail-Adresse für den neuen Benutzer.</param>
+        <summary>Fügt einen neuen Benutzer mit einer angegebenen e-Mail-Adresse im Datenspeicher.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt für den neu erstellten Benutzer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.CreateUser%2A>Fügt einen neuen Benutzer mit dem Datenspeicher und gibt eine <xref:System.Web.Security.MembershipUser> Objekt für den neu erstellten Benutzer. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, eine <xref:System.Web.Security.MembershipCreateUserException> ausgelöst wird. Abgerufen werden können eine <xref:System.Web.Security.MembershipCreateStatus> Wert aus der <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> Eigenschaft von der <xref:System.Web.Security.MembershipCreateUserException> , der angibt, warum die Erstellung des Benutzers nicht.  
+  
+ Um, sobald ein Mitgliedschaftsbenutzer erstellt wurde und Sie haben einen Verweis auf eine <xref:System.Web.Security.MembershipUser> Objekt für diesen Benutzer können Sie die Einstellungen für diesen Benutzer ändern mit der <xref:System.Web.Security.MembershipUser> öffentliche Methoden wie z. B. <xref:System.Web.Security.MembershipUser.ChangePasswordQuestionAndAnswer%2A> für Anwendungen, in dem <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A> ist `true`, oder indem Sie die Eigenschaftswerte der <xref:System.Web.Security.MembershipUser> -Objekt, und übergeben sie die <xref:System.Web.Security.Membership.UpdateUser%2A> Methode.  
+  
+ Wenn ein Benutzer bereits in der Datenquelle für die Anwendung vorhanden ist, erhalten Sie eine <xref:System.Web.Security.MembershipUser> Objekt für den vorhandenen Benutzer mit der <xref:System.Web.Security.Membership.GetUser%2A> Methode.  
+  
+ Führende und nachfolgende Leerzeichen werden in alle Parameterwerte gekürzt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen neuen Benutzer für eine ASP.NET-Anwendung für die Verwendung der Formularauthentifizierung und ASP.NET-Mitgliedschaft konfiguriert. Wenn der Benutzer nicht erfolgreich erstellt wurde, wird eine Meldung an den Benutzer angezeigt. Andernfalls wird der Benutzer zur Anmeldeseite für die Anwendung umgeleitet.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/createuser1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.Membership#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/createuser1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Security.MembershipCreateUserException">Der Benutzer wurde nicht erstellt. Überprüfen Sie die <see cref="P:System.Web.Security.MembershipCreateUserException.StatusCode" /> -Eigenschaft für eine <see cref="T:System.Web.Security.MembershipCreateStatus" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser CreateUser (string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, out System.Web.Security.MembershipCreateStatus status);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, [out] valuetype System.Web.Security.MembershipCreateStatus&amp; status) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Web.Security.MembershipCreateStatus@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="email" Type="System.String" />
+        <Parameter Name="passwordQuestion" Type="System.String" />
+        <Parameter Name="passwordAnswer" Type="System.String" />
+        <Parameter Name="isApproved" Type="System.Boolean" />
+        <Parameter Name="status" Type="System.Web.Security.MembershipCreateStatus&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Benutzername für den neuen Benutzer.</param>
+        <param name="password">Das Kennwort für den neuen Benutzer.</param>
+        <param name="email">Die E-Mail-Adresse für den neuen Benutzer.</param>
+        <param name="passwordQuestion">Der Wert der Kennwortfrage für den Mitgliedschaftsbenutzer.</param>
+        <param name="passwordAnswer">Der Wert der Kennwortantwort für den Mitgliedschaftsbenutzer.</param>
+        <param name="isApproved">Ein boolescher Wert, der angibt, ob der neue Benutzer zum Anmelden genehmigt wird.</param>
+        <param name="status">Ein <see cref="T:System.Web.Security.MembershipCreateStatus" /> gibt an, dass der Benutzer erfolgreich erstellt wurde oder der Grund für die Fehler bei der Erstellung.</param>
+        <summary>Fügt einen neuen Benutzer mit angegebenen Eigenschaftswerten im Datenspeicher und einen Statusparameter gibt an, dass der Benutzer erfolgreich erstellt wurde, oder der Ursache Fehler bei der Erstellung des Benutzers zurückgibt.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt für den neu erstellten Benutzer. Wenn kein Benutzer erstellt wurde, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.CreateUser%2A>Fügt einen neuen Benutzer mit dem Datenspeicher und gibt eine <xref:System.Web.Security.MembershipUser> Objekt für den neu erstellten Benutzer. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, können Sie abrufen eine <xref:System.Web.Security.MembershipCreateStatus> Wert aus der `status` Output-Parameter, der angibt, warum Fehler bei der benutzererstellung.  
+  
+ Die <xref:System.Web.Security.Membership.CreateUser%2A> Methode zurück `null` Wenn `password` ist eine leere Zeichenfolge oder `null`, `username` ist eine leere Zeichenfolge oder `null` oder ein Komma (,), enthält `passwordQuestion` nicht `null` und ist eine leere Zeichenfolge oder `passwordAnswer` nicht `null` und eine leere Zeichenfolge enthält.  
+  
+ Sobald ein Mitgliedschaftsbenutzer erstellt wurde und Sie haben einen Verweis auf eine <xref:System.Web.Security.MembershipUser> Objekt für diesen Benutzer können Sie die Einstellungen für diesen Benutzer ändern mit der <xref:System.Web.Security.MembershipUser> öffentliche Methoden und durch Festlegen der Eigenschaftswerte des der <xref:System.Web.Security.MembershipUser> Objekt und deren Übergabe die <xref:System.Web.Security.MembershipUser> -Objekt an die <xref:System.Web.Security.Membership.UpdateUser%2A> Methode.  
+  
+ Wenn ein Benutzer bereits in der Datenquelle für die Anwendung vorhanden ist, erhalten Sie eine <xref:System.Web.Security.MembershipUser> Objekt für den vorhandenen Benutzer mit der <xref:System.Web.Security.Membership.GetUser%2A> Methode.  
+  
+ Führende und nachfolgende Leerzeichen werden in alle Parameterwerte für die Zeichenfolge gekürzt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen neuen Benutzer für eine ASP.NET-Anwendung für die Verwendung der Formularauthentifizierung und ASP.NET-Mitgliedschaft konfiguriert. Wenn der Benutzer nicht erfolgreich erstellt wurde, wird eine Meldung an den Benutzer angezeigt. Andernfalls wird der Benutzer zur Anmeldeseite für die Anwendung umgeleitet.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/CreateUsercs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/CreateUservb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser CreateUser (string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, out System.Web.Security.MembershipCreateStatus status);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, [out] valuetype System.Web.Security.MembershipCreateStatus&amp; status) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="email" Type="System.String" />
+        <Parameter Name="passwordQuestion" Type="System.String" />
+        <Parameter Name="passwordAnswer" Type="System.String" />
+        <Parameter Name="isApproved" Type="System.Boolean" />
+        <Parameter Name="providerUserKey" Type="System.Object" />
+        <Parameter Name="status" Type="System.Web.Security.MembershipCreateStatus&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Benutzername für den neuen Benutzer.</param>
+        <param name="password">Das Kennwort für den neuen Benutzer.</param>
+        <param name="email">Die E-Mail-Adresse für den neuen Benutzer.</param>
+        <param name="passwordQuestion">Der Wert der Kennwortfrage für den Mitgliedschaftsbenutzer.</param>
+        <param name="passwordAnswer">Der Wert der Kennwortantwort für den Mitgliedschaftsbenutzer.</param>
+        <param name="isApproved">Ein boolescher Wert, der angibt, ob der neue Benutzer zum Anmelden genehmigt wird.</param>
+        <param name="providerUserKey">Die Benutzer-ID für den Benutzer, der im Mitgliedschaftsdatenspeicher gespeichert werden sollen.</param>
+        <param name="status">Ein <see cref="T:System.Web.Security.MembershipCreateStatus" /> , der angibt, die der Benutzer erfolgreich erstellt wurde, oder Fehler beim Erstellen des Grund.</param>
+        <summary>Fügt einen neuen Benutzer mit angegebenen Eigenschaftswerten und einem eindeutigen Bezeichner mit dem Datenspeicher und einen Statusparameter gibt an, dass der Benutzer erfolgreich erstellt wurde, oder der Ursache Fehler bei der Erstellung des Benutzers zurückgibt.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt für den neu erstellten Benutzer. Wenn kein Benutzer erstellt wurde, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.CreateUser%2A>Fügt einen neuen Benutzer mit dem Datenspeicher und gibt eine <xref:System.Web.Security.MembershipUser> Objekt für den neu erstellten Benutzer. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, können Sie abrufen eine <xref:System.Web.Security.MembershipCreateStatus> Wert aus der `status` Output-Parameter, der angibt, warum Fehler bei der benutzererstellung. Sie können einen eindeutigen Bezeichner für den Benutzer, z. B. ein Primärschlüsselwert für eine Datenbank angeben, mit der `providerUserKey` Parameter.  
+  
+ Die <xref:System.Web.Security.Membership.CreateUser%2A> Methode zurück `null` Wenn `password` ist eine leere Zeichenfolge oder `null`, `username` ist eine leere Zeichenfolge oder `null` oder ein Komma (,), enthält `passwordQuestion` nicht `null` und enthält eine leere Zeichenfolge oder `passwordAnswer` nicht `null` und eine leere Zeichenfolge enthält.  
+  
+ Sobald ein Mitgliedschaftsbenutzer erstellt wurde und Sie haben einen Verweis auf eine <xref:System.Web.Security.MembershipUser> Objekt für diesen Benutzer können Sie die Einstellungen für diesen Benutzer ändern mit der <xref:System.Web.Security.MembershipUser> öffentliche Methoden und durch Festlegen der Eigenschaftswerte des der <xref:System.Web.Security.MembershipUser> Objekt und deren Übergabe die <xref:System.Web.Security.MembershipUser> -Objekt an die <xref:System.Web.Security.Membership.UpdateUser%2A> Methode.  
+  
+ Wenn ein Benutzer bereits in der Datenquelle für die Anwendung vorhanden ist, erhalten Sie eine <xref:System.Web.Security.MembershipUser> Objekt für den vorhandenen Benutzer mit der <xref:System.Web.Security.Membership.GetUser%2A> Methode.  
+  
+ Führende und nachfolgende Leerzeichen werden in alle Parameterwerte für die Zeichenfolge gekürzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteUser">
+      <MemberSignature Language="C#" Value="public static bool DeleteUser (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeleteUser(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.DeleteUser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des zu löschenden Benutzers.</param>
+        <summary>Löscht einen Benutzer und alle zugehörigen Benutzerdaten aus der Datenbank an.</summary>
+        <returns>
+          <see langword="true" />Wenn der Benutzer gelöscht wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Datenbank gespeicherten Daten der <xref:System.Web.Security.Roles>, <xref:System.Web.HttpContext.Profile%2A>, oder <xref:System.Web.UI.WebControls.WebParts.WebPart> Personalisierung wird ebenfalls gelöscht werden, bei der Verwendung der <xref:System.Web.Security.SqlRoleProvider>, <xref:System.Web.Profile.SqlProfileProvider>, und <xref:System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider> Objekte für die Speicherung von Daten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird löscht den aktuell angemeldeten Benutzer und alle zugehörigen Daten.  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/DeleteUsercs.aspx#8)]
+ [!code-aspx-vb[System.Web.Security.Membership#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/DeleteUservb.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" />ist eine leere Zeichenfolge oder ein Komma (,) enthält.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> ist gleich <see langword="null." />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteUser">
+      <MemberSignature Language="C#" Value="public static bool DeleteUser (string username, bool deleteAllRelatedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeleteUser(string username, bool deleteAllRelatedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.DeleteUser(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="deleteAllRelatedData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des zu löschenden Benutzers.</param>
+        <param name="deleteAllRelatedData">
+          <see langword="true" />, um mit dem Benutzer zusammenhängende Daten aus der Datenbank zu löschen; <see langword="false" />, um die mit dem Benutzer zusammenhängenden Daten in der Datenbank zu belassen.</param>
+        <summary>Löscht einen Benutzer aus der Datenbank an.</summary>
+        <returns>
+          <see langword="true" />Wenn der Benutzer gelöscht wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzer, die aus der Datenbank gelöscht werden nur gelöscht werden. vom konfigurierten `applicationName`.  
+  
+ Wenn `deleteAllRelatedData` ist `true`, Benutzerdaten gespeichert, in der Datenbank für die <xref:System.Web.Security.Roles>, <xref:System.Web.HttpContext.Profile%2A>, oder <xref:System.Web.UI.WebControls.WebParts.WebPart> Personalisierung wird ebenfalls gelöscht werden, bei der Verwendung der <xref:System.Web.Security.SqlRoleProvider>, <xref:System.Web.Profile.SqlProfileProvider>, und <xref:System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider> für Objekte Speicherung von Daten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird löscht den aktuell angemeldeten Benutzer und alle zugehörigen Daten.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/DeleteUsercs.aspx#6)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/DeleteUservb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" />ist eine leere Zeichenfolge oder ein Komma (,) enthält.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePasswordReset">
+      <MemberSignature Language="C#" Value="public static bool EnablePasswordReset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool EnablePasswordReset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.EnablePasswordReset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der aktuelle Mitgliedschaftsanbieter so konfiguriert ist, damit Benutzer ihre Kennwörter zurücksetzen können.</summary>
+        <value>
+          <see langword="true" />, wenn der Mitgliedschaftsanbieter das Zurücksetzen von Kennwörtern unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kennwort zurücksetzen, wird die Möglichkeit für die ASP.NET-Mitgliedschaft ersetzen Sie das aktuelle Kennwort für einen Benutzernamen durch ein neues, zufällig generierte Kennwort ein, wenn ein Benutzer sein Kennwort vergessen hat, oder das aktuelle Kennwort nicht mehr gültig ist. Dies ist besonders nützlich, wenn Kennwortformat, um festgelegt ist <xref:System.Web.Security.MembershipPasswordFormat.Hashed>, wie Benutzer verschlüsselte Kennwort abrufen können.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> und ermöglicht das Zurücksetzen des Kennworts.  
+  
+```  
+<membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="20">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      enablePasswordRetrieval="false"  
+      enablePasswordReset="true"  
+      requiresQuestionAndAnswer="true"  
+      passwordFormat="Hashed"  
+      applicationName="MyApplication" />  
+  </providers>  
+</membership>  
+```  
+  
+ Im folgenden Codebeispiel wird zuerst überprüft, ob <xref:System.Web.Security.Membership.EnablePasswordReset%2A> ist `true`, setzt das Kennwort eines Benutzers und gibt den neue, automatisch generierte Kennwort zurück.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/ResetPasswordcs.aspx#8)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/ResetPasswordvb.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePasswordRetrieval">
+      <MemberSignature Language="C#" Value="public static bool EnablePasswordRetrieval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool EnablePasswordRetrieval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.EnablePasswordRetrieval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der aktuelle Mitgliedschaftsanbieter so konfiguriert ist, damit Benutzer ihre Kennwörter abrufen können.</summary>
+        <value>
+          <see langword="true" />Wenn der Mitgliedschaftsanbieter den Kennwortabruf unterstützt. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.Security.Membership.EnablePasswordRetrieval%2A> ist `false`, der zugrunde liegenden Mitgliedschaftsanbieter Auslösen einer <xref:System.Web.HttpException>.  
+  
+ Der Anbieter, die in .NET Framework enthaltenen unterstützen mehrere Kennwortformaten zur Erhöhung der kennwortsicherheit. Wenn das Kennwortformat, um festgelegt ist <xref:System.Web.Security.MembershipPasswordFormat.Hashed>, und klicken Sie dann nicht von Benutzern ihr vorhandene Kennwort aus der Datenbank abgerufen werden können. Die <xref:System.Web.Security.MembershipPasswordFormat.Hashed> Kennwortformat bietet unidirektionale Codierung des Kennwortwerte. Kennwörter sind "Hash" und im Vergleich zu Werten, die in der Datenbank für die Authentifizierung gespeichert. "Hashwerten" können nicht zum Abrufen des Werts der ursprünglichen Kennwort nicht codiert sein. Weitere Informationen finden Sie unter <xref:System.Web.Security.MembershipPasswordFormat>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> und ermöglicht das Abrufen des Kennworts.  
+  
+```  
+<membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="20">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      enablePasswordRetrieval="true"  
+      enablePasswordReset="false"  
+      requiresQuestionAndAnswer="false"  
+      passwordFormat="Encrypted"  
+      applicationName="MyApplication" />  
+  </providers>  
+</membership>  
+```  
+  
+ Im folgenden Codebeispiel wird zuerst überprüft, ob <xref:System.Web.Security.Membership.EnablePasswordRetrieval%2A> ist `true`, ruft das Kennwort für einen angegebenen Benutzernamen ab und sendet diese an die e-Mail-Adresse für den angegebenen Benutzer.  
+  
+> [!IMPORTANT]
+>  Zurückgeben eines Kennworts im Klartext mit e-Mail-Adresse wird für Websites, die eine hohe Sicherheitsstufe erfordern, nicht empfohlen. Für Websites mit hoher Sicherheit wird empfohlen, dass Sie Kennwörter mit Verschlüsselung, z. B. SSL zurückgeben.  
+>   
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/RetrievePasswordcs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/RetrievePasswordvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersByEmail">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUserCollection FindUsersByEmail (string emailToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUserCollection FindUsersByEmail(string emailToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.FindUsersByEmail(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUserCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emailToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="emailToMatch">Die E-Mail-Adresse, nach der gesucht werden soll.</param>
+        <summary>Ruft eine Auflistung von Mitgliedschaftsbenutzern ab, bei denen die E-Mail-Adresse die zu vergleichende angegebene E-Mail-Adresse enthält.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUserCollection" /> , enthält alle Benutzer, die entsprechen den <paramref name="emailToMatch" /> Parameter.  
+  
+ Führende und nachfolgende Leerzeichen abgeschnitten, aus der <paramref name="emailToMatch" /> Parameterwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.FindUsersByEmail%2A>Gibt eine Liste von Mitgliedschaftsbenutzern zurück, bei dem die e-Mail-Adresse, die das angegebene übereinstimmt `emailToMatch` für die konfigurierte `applicationName`.  
+  
+ Die <xref:System.Web.Security.SqlMembershipProvider> führt die Suche mit einer LIKE-Klausel für die `emailToMatch` Parameter. Platzhalter, die von SQL Server unterstützt werden, wie in Klauseln verwendet werden können die `emailToMatch` Parameterwert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Membership.FindUsersByEmail%2A> -Methode zum Abrufen von Mitgliedschaftsbenutzerinformationen aus der Mitgliedschaftsdatenbank basierend auf Benutzereingaben und zeigt die Ergebnisse in Datenseiten.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/FindUsersByEmailcs.aspx#9)]
+ [!code-aspx-vb[System.Web.Security.Membership#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/FindUsersByEmailvb.aspx#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersByEmail">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUserCollection FindUsersByEmail (string emailToMatch, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUserCollection FindUsersByEmail(string emailToMatch, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUserCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emailToMatch" Type="System.String" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="emailToMatch">Die E-Mail-Adresse, nach der gesucht werden soll.</param>
+        <param name="pageIndex">Der Index der zurückzugebenden Ergebnisseite. <c>PageIndex</c> ist nullbasiert.</param>
+        <param name="pageSize">Die Größe der zurückzugebenden Ergebnisseite.</param>
+        <param name="totalRecords">Die Gesamtanzahl übereinstimmender Benutzer.</param>
+        <summary>Ruft eine Auflistung von Mitgliedschaftsbenutzern, in eine Seite mit Daten, wobei die e-Mail-Adresse entsprechend der angegebenen e-Mail-Adresse enthält.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUserCollection" /> , enthält eine Seite mit <paramref name="pageSize" /> <see cref="T:System.Web.Security.MembershipUser" /> -Objekten beginnend mit der vom angegebenen Seite <paramref name="pageIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.FindUsersByEmail%2A>Gibt eine Liste von Mitgliedschaftsbenutzern zurück, bei dem die e-Mail-Adresse, die das angegebene übereinstimmt `emailToMatch` für die konfigurierte `applicationName`.  
+  
+ Die <xref:System.Web.Security.SqlMembershipProvider> führt die Suche mit einer LIKE-Klausel für die `emailToMatch` Parameter. Platzhalter, die von SQL Server unterstützt werden, wie in Klauseln verwendet werden können die `emailToMatch` Parameterwert.  
+  
+ Von der zurückgegebenen Ergebnisse <xref:System.Web.Security.Membership.FindUsersByEmail%2A> werden eingeschränkt, indem Sie die `pageIndex` und `pageSize` Parameter. Die `pageSize` Parameter gibt die maximale Anzahl von <xref:System.Web.Security.MembershipUser> Objekte zurückzugebenden in der <xref:System.Web.Security.MembershipUserCollection>. Die `pageIndex` Parameter identifiziert, welche Seite der Ergebnisse zurückgegeben, wobei 0 die erste Seite bezeichnet. Die `totalRecords` Parameter ist ein `out` Parameter, der die Gesamtzahl der Mitgliedschaftsbenutzer festgelegt wird, die die Übereinstimmung der `emailToMatch` Wert. Z. B. 13 Benutzer gefunden wurden `emailToMatch` Teil oder die gesamte e-Mail-Adresse übereinstimmt und die `pageIndex` Wert wurde 1 mit einem `pageSize` 5. Dies ist die <xref:System.Web.Security.MembershipUserCollection> zurückgegeben würde den sechsten bis zehnten zurückgegebenen Benutzer enthalten. `totalRecords`wird auf 13 festgelegt werden.  
+  
+ Führende und nachfolgende Leerzeichen abgeschnitten, aus der `emailToMatch` Parameterwert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Membership.FindUsersByEmail%2A> -Methode zum Abrufen von Mitgliedschaftsbenutzerinformationen aus der Mitgliedschaftsdatenbank basierend auf Benutzereingaben und zeigt die Ergebnisse in Datenseiten.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/FindUsersByEmailcs.aspx#13)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/FindUsersByEmailvb.aspx#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="pageSize" /> ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersByName">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUserCollection FindUsersByName (string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUserCollection FindUsersByName(string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.FindUsersByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUserCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="usernameToMatch">Der zu suchende Benutzername.</param>
+        <summary>Ruft eine Auflistung von Mitgliedschaftsbenutzern ab, bei der der Benutzername mit einem angegebenen Benutzernamen übereinstimmt.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUserCollection" /> , enthält alle Benutzer, die entsprechen den <paramref name="usernameToMatch" /> Parameter.  
+  
+ Führende und nachfolgende Leerzeichen abgeschnitten, aus der <paramref name="usernameToMatch" /> Parameterwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.SqlMembershipProvider.FindUsersByName%2A>Gibt eine Liste von Mitgliedschaftsbenutzern zurück, in denen entspricht dem Benutzernamen den angegebenen `usernameToMatch` für die konfigurierte `applicationName`.  
+  
+ Die <xref:System.Web.Security.SqlMembershipProvider> führt die Suche mit einer LIKE-Klausel für die `usernameToMatch` Parameter. Platzhalter, die von SQL Server unterstützt werden, wie in Klauseln verwendet werden können die `usernameToMatch` Parameterwert.  
+  
+ Führende und nachfolgende Leerzeichen werden in alle Parameterwerte gekürzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Membership.FindUsersByName%2A> -Methode zum Abrufen von Mitgliedschaftsbenutzerinformationen aus der Mitgliedschaftsdatenbank basierend auf Benutzereingaben und zeigt die Ergebnisse in Datenseiten.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/FindUsersByNamecs.aspx#10)]
+ [!code-aspx-vb[System.Web.Security.Membership#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/FindUsersByNamevb.aspx#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersByName">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUserCollection FindUsersByName (string usernameToMatch, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUserCollection FindUsersByName(string usernameToMatch, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.FindUsersByName(System.String,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUserCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="usernameToMatch">Der zu suchende Benutzername.</param>
+        <param name="pageIndex">Der Index der zurückzugebenden Ergebnisseite. <c>PageIndex</c> ist nullbasiert.</param>
+        <param name="pageSize">Die Größe der zurückzugebenden Ergebnisseite.</param>
+        <param name="totalRecords">Die Gesamtanzahl übereinstimmender Benutzer.</param>
+        <summary>Ruft eine Auflistung von Mitgliedschaftsbenutzern, in eine Seite mit Daten, in dem der Benutzername für den angegebenen Benutzernamen übereinstimmt enthält.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUserCollection" /> , enthält eine Seite mit <paramref name="pageSize" /> <see cref="T:System.Web.Security.MembershipUser" /> -Objekten beginnend mit der vom angegebenen Seite <paramref name="pageIndex" />.  
+  
+ Führende und nachfolgende Leerzeichen abgeschnitten, aus der <paramref name="usernameToMatch" /> Parameterwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.SqlMembershipProvider.FindUsersByName%2A>Gibt eine Liste von Mitgliedschaftsbenutzern zurück, in denen entspricht dem Benutzernamen den angegebenen `usernameToMatch` für die konfigurierte `applicationName`.  
+  
+ Die <xref:System.Web.Security.SqlMembershipProvider> führt die Suche mit einer LIKE-Klausel für die `usernameToMatch` Parameter. Platzhalter, die von SQL Server unterstützt werden, wie in Klauseln verwendet werden können die `usernameToMatch` Parameterwert.  
+  
+ Von der zurückgegebenen Ergebnisse <xref:System.Web.Security.Membership.FindUsersByName%2A> werden eingeschränkt, indem Sie die `pageIndex` und `pageSize` Parameter. Die `pageSize` Parameter gibt die maximale Anzahl von <xref:System.Web.Security.MembershipUser> Objekte zurückzugebenden in der <xref:System.Web.Security.MembershipUserCollection>. Die `pageIndex` Parameter identifiziert, welche Seite der Ergebnisse zurückgegeben, wobei 0 die erste Seite bezeichnet. Die `totalRecords` Parameter ist ein `out` Parameter, der die Gesamtzahl der Mitgliedschaftsbenutzer festgelegt wird, die die Übereinstimmung der `usernameToMatch` Wert. Z. B. 13 Benutzer gefunden wurden `usernameToMatch` Teil oder den ganzen Benutzernamen übereinstimmt und die `pageIndex` Wert wurde 1 mit einem `pageSize` 5. Dies ist die <xref:System.Web.Security.MembershipUserCollection> zurückgegeben würde den sechsten bis zehnten zurückgegebenen Benutzer enthalten. `totalRecords`wird auf 13 festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Membership.FindUsersByName%2A> -Methode zum Abrufen von Mitgliedschaftsbenutzerinformationen aus der Mitgliedschaftsdatenbank basierend auf Benutzereingaben und zeigt die Ergebnisse in Datenseiten.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/FindUsersByNamecs.aspx#12)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/FindUsersByNamevb.aspx#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="pageSize" /> ist kleiner als 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratePassword">
+      <MemberSignature Language="C#" Value="public static string GeneratePassword (int length, int numberOfNonAlphanumericCharacters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GeneratePassword(int32 length, int32 numberOfNonAlphanumericCharacters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GeneratePassword(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="numberOfNonAlphanumericCharacters" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="length">Die Anzahl der Zeichen im erstellten Kennwort. Die Länge muss zwischen 1 und 128 Zeichen lang sein.</param>
+        <param name="numberOfNonAlphanumericCharacters">Die minimale Anzahl von nicht-alphanumerische Zeichen (z. B. @, #,!, %, &amp;usw.) im erstellten Kennwort.</param>
+        <summary>Generiert ein zufälliges Kennwort der angegebenen Länge.</summary>
+        <returns>Ein zufälliges Kennwort der angegebenen Länge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.GeneratePassword%2A> Methode wird verwendet, um ein zufälliges Kennwort generiert und wird am häufigsten verwendet werden, durch die <xref:System.Web.Security.MembershipProvider.ResetPassword%2A> Methode implementiert, die von einem Mitgliedschaftsanbieter, das Kennwort für einen Benutzer auf ein neues, temporäres Kennwort zurückzusetzen.  
+  
+ Das generierte Kennwort enthält nur alphanumerische Zeichen und die folgenden Satzzeichen: `!@#$%^&*()_-+=[{]};:<>|./?`. Keine ausgeblendet oder nicht druckbare Zeichen sind in das generierte Kennwort enthalten.  
+  
+> [!NOTE]
+>  Die zufälliges Kennwort erstellt, indem die <xref:System.Web.Security.Membership.GeneratePassword%2A> Methode nicht notwendigerweise dem regulären Ausdruck in der <xref:System.Web.Security.Membership.PasswordStrengthRegularExpression%2A> Eigenschaft. Zufällige Kennwort wird jedoch vom festgelegten Kriterien entsprechen den <xref:System.Web.Security.Membership.MinRequiredPasswordLength%2A> Eigenschaft und die `numberOfNonAlphanumericCharacters` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen neuen Mitgliedschaftsbenutzer vorgenommen und verwendet die <xref:System.Web.Security.Membership.GeneratePassword%2A> Methode, um das Kennwort für den neuen Benutzer zu einem zufälligen Wert initialisiert werden, die dem Benutzer angezeigt wird.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/GeneratePasswordcs.aspx#5)]
+ [!code-aspx-vb[System.Web.Security.Membership#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/GeneratePasswordvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="length" />ist kleiner als 1 oder größer als 128 – oder –  
+  
+ <paramref name="numberOfNonAlphanumericCharacters" /> ist kleiner als 0 oder größer als <paramref name="length" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllUsers">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUserCollection GetAllUsers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUserCollection GetAllUsers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetAllUsers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUserCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung aller Benutzer in der Datenbank ab.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUserCollection" /> der <see cref="T:System.Web.Security.MembershipUser" /> Objekte, die alle Benutzer in der Datenbank darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.GetAllUsers%2A>Gibt die Informationen für alle Mitgliedschaftsbenutzer für eine Anwendung als eine Auflistung von <xref:System.Web.Security.MembershipUser> Objekte. Achten Sie bei Verwendung der <xref:System.Web.Security.Membership.GetAllUsers%2A> Methode mit sehr große Benutzerdatenbanken, als das resultierende <xref:System.Web.Security.MembershipUserCollection> in ASP.NET Seite kann die Leistung Ihrer Anwendung beeinträchtigen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt eine Liste der Benutzer mit der Anzahl der Benutzer derzeit online.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/ShowUserscs.aspx#5)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/ShowUsersvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllUsers">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUserCollection GetAllUsers (int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUserCollection GetAllUsers(int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetAllUsers(System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUserCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pageIndex">Der Index der zurückzugebenden Ergebnisseite. Verwenden Sie 0 an, dass die erste Seite.</param>
+        <param name="pageSize">Die Größe der zurückzugebenden Ergebnisseite. <c>PageIndex</c> ist nullbasiert.</param>
+        <param name="totalRecords">Die Gesamtanzahl von Benutzern.</param>
+        <summary>Ruft eine Auflistung aller Benutzer in der Datenbank in Datenseiten ab.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUserCollection" /> von <see cref="T:System.Web.Security.MembershipUser" /> Objekten, die alle Benutzer in der Datenbank für die konfigurierte darstellen <see langword="applicationName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von der zurückgegebenen Ergebnisse <xref:System.Web.Security.Membership.GetAllUsers%2A> werden eingeschränkt, indem Sie die `pageIndex` und `pageSize` Parameter. Die `pageSize` Parameter gibt die maximale Anzahl von <xref:System.Web.Security.MembershipUser> Objekte zurückzugebenden in der <xref:System.Web.Security.MembershipUserCollection>. Die `pageIndex` Parameter identifiziert, welche Seite der Ergebnisse zurückgegeben, wobei 0 die erste Seite bezeichnet. Die `totalRecords` Parameter ist ein `out` Parameter, der die Gesamtzahl der Mitgliedschaftsbenutzer für die konfigurierte festgelegt ist `applicationName`. Z. B. 13 Benutzer für die konfigurierte vorhanden sind `applicationName`, und die `pageIndex` Wert wurde 1 mit einem `pageSize` 5. Dies ist die <xref:System.Web.Security.MembershipUserCollection> zurückgegeben würde den sechsten bis zehnten zurückgegebenen Benutzer enthalten. `totalRecords`wird auf 13 festgelegt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt eine Liste von Benutzern in Datenseiten mit der Anzahl der Benutzer derzeit online.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/ShowUserscs.aspx#5)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/ShowUsersvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="pageSize" /> ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberOfUsersOnline">
+      <MemberSignature Language="C#" Value="public static int GetNumberOfUsersOnline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetNumberOfUsersOnline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetNumberOfUsersOnline" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Anzahl der Benutzer, die derzeit auf eine Anwendung zugreifen.</summary>
+        <returns>Die Anzahl der Benutzer, die derzeit auf eine Anwendung zugreifen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.SqlMembershipProvider.GetNumberOfUsersOnline%2A>Gibt die Anzahl der Benutzer für den aktuellen <xref:System.Web.Security.Membership.ApplicationName%2A> , in dem das Datum das letzten Aktivität ist größer als die aktuelle Uhrzeit kleiner der <xref:System.Web.Security.Membership.UserIsOnlineTimeWindow%2A>. Der letzten Aktivität Datums-/Zeitstempel wird aktualisiert, um das aktuelle Datum und die Uhrzeit aus, bei der Überprüfung von Anmeldeinformationen mithilfe von, der <xref:System.Web.Security.Membership.ValidateUser%2A> oder <xref:System.Web.Security.Membership.UpdateUser%2A> Methode oder wenn bei einem Aufruf einer <xref:System.Web.Security.Membership.GetUser%2A> Überladung, die akzeptiert werden, ohne Parameter oder mit denen eine die `userIsOnline`Parameter, um anzugeben, dass der Datums-/Uhrzeitstempel aktualisiert werden sollen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt eine Liste der Benutzer mit der Anzahl der Benutzer derzeit online.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/ShowUserscs.aspx#5)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/ShowUsersvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser GetUser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser GetUser() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetUser" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Informationen aus der Datenquelle und die letzten Aktivität aktualisiert Datum/Uhrzeit-Zeitstempel für den derzeit angemeldeten Mitgliedschaftsbenutzer.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt, das den aktuellen angemeldeten Benutzer darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.GetUser>Ruft die Benutzerinformationen aus der Datenquelle ab und erstellt eine <xref:System.Web.Security.MembershipUser> Objekt, das mit den zurückgegebenen Daten aufgefüllt. Wenn Sie einen der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keine `username` Parameter, <xref:System.Web.Security.Membership.GetUser%2A> gibt die Informationen für den derzeit angemeldeten Mitgliedschaftsbenutzer zurück. Der derzeit angemeldete Mitgliedschaftsbenutzer wird anhand der <xref:System.Security.Principal.IIdentity.Name%2A> des Benutzers in der aktuellen <xref:System.Web.HttpContext>.  
+  
+ Sie können auch festlegen, ob Sie <xref:System.Web.Security.Membership.GetUser%2A> zum Aktualisieren der letzten Aktivität Datums-/Zeitstempel für den Benutzer abgerufen werden, mithilfe der `userIsOnline` Parameter. Von der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keinen akzeptieren ein `userIsOnline` Parameter `GetUser()` implizit Updates der letzten Aktivität Datums-/Zeitstempel für den Benutzer. `GetUser(System.String)`und `GetUser(System.Object)` nicht der Fall ist.  
+  
+   
+  
+## Examples  
+ Der folgende Code-Beispiel aktualisiert der letzten Aktivität Datum/Uhrzeit-Zeitstempel für den derzeit angemeldeten Mitgliedschaftsbenutzer und zeigt den Benutzernamen an, auf der ASP.NET-Seite.  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/default1cs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.Membership#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/default1vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Keine Mitgliedschaftsbenutzer wird derzeit angemeldet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser GetUser (bool userIsOnline);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser GetUser(bool userIsOnline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetUser(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userIsOnline" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="userIsOnline">Wenn <see langword="true" />, Updates der letzten Aktivität Datums-/Zeitstempel für den angegebenen Benutzer.</param>
+        <summary>Ruft die Informationen aus der Datenquelle für den derzeit angemeldeten Mitgliedschaftsbenutzer ab. Updates den Datums-/Zeitstempel der letzten Aktivität für den derzeit angemeldeten Mitgliedschaftsbenutzer, angegeben ist.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt, das den aktuellen angemeldeten Benutzer darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.GetUser%2A> Methode ruft die Benutzerinformationen aus der Datenquelle ab und erstellt eine <xref:System.Web.Security.MembershipUser> Objekt, das mit den zurückgegebenen Daten aufgefüllt. Wenn Sie einen der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keine `username` Parameter, <xref:System.Web.Security.Membership.GetUser%2A> gibt die Informationen für den derzeit angemeldeten Mitgliedschaftsbenutzer zurück. Der derzeit angemeldete Mitgliedschaftsbenutzer wird anhand der <xref:System.Security.Principal.IIdentity.Name%2A> des Benutzers in der aktuellen <xref:System.Web.HttpContext>.  
+  
+ Sie können auch festlegen, ob Sie <xref:System.Web.Security.Membership.GetUser%2A> zum Aktualisieren der letzten Aktivität Datums-/Zeitstempel für den Benutzer abgerufen werden, mithilfe der `userIsOnline` Parameter. Von der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keinen akzeptieren ein `userIsOnline` Parameter `GetUser()` implizit Updates der letzten Aktivität Datums-/Zeitstempel für den Benutzer. `GetUser(System.String)`und `GetUser(System.Object)` nicht der Fall ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Benutzernamen für den derzeit angemeldeten Mitgliedschaftsbenutzer auf der ASP.NET-Seite an, ohne dass ein Update der letzten Aktivität Datum/Uhrzeit für den Benutzer.  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/default2cs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.Membership#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/default2vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Keine Mitgliedschaftsbenutzer wird derzeit angemeldet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser GetUser (object providerUserKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser GetUser(object providerUserKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetUser(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerUserKey" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="providerUserKey">Der Bezeichner der eindeutigen Benutzer aus der Mitgliedschaftsdatenquelle für den Benutzer.</param>
+        <summary>Ruft die Informationen aus der Datenquelle für den Mitgliedschaftsbenutzer verknüpft sind, mit dem angegebenen eindeutigen Bezeichner ab.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt, das den Benutzer mit dem angegebenen eindeutigen Bezeichner darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.GetUser%2A> Methode ruft die Benutzerinformationen aus der Datenquelle ab und erstellt eine <xref:System.Web.Security.MembershipUser> Objekt, das mit den zurückgegebenen Daten aufgefüllt. Der Benutzer identifiziert wird, mit dem eindeutigen Bezeichner aus der Datenquelle angegeben, mit der `providerUserKey` Parameter.  
+  
+ Sie können auch festlegen, ob Sie <xref:System.Web.Security.Membership.GetUser%2A> zum Aktualisieren der letzten Aktivität Datums/Zeitstempels für den Benutzer abgerufen wird, mit der `userIsOnline` Parameter. Von der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keinen akzeptieren ein `userIsOnline` Parameter `GetUser()` implizit Updates der letzten Aktivität Datums-/Zeitstempel für den Benutzer. `GetUser(System.String)`und `GetUser(System.Object)` nicht  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="providerUserKey" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser GetUser (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser GetUser(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetUser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des abzurufenden Benutzers.</param>
+        <summary>Ruft die Informationen aus der Datenquelle für den angegebenen Mitgliedschaftsbenutzer ab.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt, das den angegebenen Benutzer darstellt. Wenn die <paramref name="username" /> Parameter entspricht keiner vorhandenen Benutzern, diese Methode gibt <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.GetUser%2A> Methode ruft die Benutzerinformationen aus der Datenquelle ab und erstellt eine <xref:System.Web.Security.MembershipUser> Objekt, das mit den zurückgegebenen Daten aufgefüllt. Wenn Sie einen der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keine `username` Parameter, <xref:System.Web.Security.Membership.GetUser%2A> gibt die Informationen für den derzeit angemeldeten Mitgliedschaftsbenutzer zurück. Der derzeit angemeldete Mitgliedschaftsbenutzer wird anhand der <xref:System.Security.Principal.IIdentity.Name%2A> des Benutzers in der aktuellen <xref:System.Web.HttpContext>.  
+  
+ Sie können auch festlegen, ob Sie <xref:System.Web.Security.Membership.GetUser%2A> zum Aktualisieren der letzten Aktivität Datums/Zeitstempels für den Benutzer abgerufen wird, mit der `userIsOnline` Parameter. Von der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keinen akzeptieren ein `userIsOnline` Parameter <xref:System.Web.Security.Membership.GetUser%2A?displayProperty=nameWithType> implizit Updates der letzten Aktivität Datums-/Zeitstempel für den Benutzer. <xref:System.Web.Security.Membership.GetUser%2A?displayProperty=nameWithType>und <xref:System.Web.Security.Membership.GetUser%2A> nicht der Fall ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.Membership.GetUser%2A> -Methode zur Rückgabe einer <xref:System.Web.Security.MembershipUser> Objekt für die aktuelle angemeldeten Benutzers und die Updates, die die e-Mail-Adresse für den Benutzer.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/UpdateEmailcs.aspx#11)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/UpdateEmailvb.aspx#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" />enthält ein Komma (,).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser GetUser (object providerUserKey, bool userIsOnline);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser GetUser(object providerUserKey, bool userIsOnline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetUser(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerUserKey" Type="System.Object" />
+        <Parameter Name="userIsOnline" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="providerUserKey">Der Bezeichner der eindeutigen Benutzer aus der Mitgliedschaftsdatenquelle für den Benutzer.</param>
+        <param name="userIsOnline">Wenn <see langword="true" />, Updates der letzten Aktivität Datums-/Zeitstempel für den angegebenen Benutzer.</param>
+        <summary>Ruft die Informationen aus der Datenquelle für den Mitgliedschaftsbenutzer verknüpft sind, mit dem angegebenen eindeutigen Bezeichner ab. Updates den Datums-/Zeitstempel der letzten Aktivität für den Benutzer angegeben ist.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt, das den Benutzer mit dem angegebenen eindeutigen Bezeichner darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.GetUser%2A> Methode ruft die Benutzerinformationen aus der Datenquelle ab und erstellt eine <xref:System.Web.Security.MembershipUser> Objekt, das mit den zurückgegebenen Daten aufgefüllt. Der Benutzer wird mit dem eindeutigen Bezeichner aus der Datenquelle, die im angegebenen identifiziert die `providerUserKey` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="providerUserKey" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUser">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipUser GetUser (string username, bool userIsOnline);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Security.MembershipUser GetUser(string username, bool userIsOnline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetUser(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="userIsOnline" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des abzurufenden Benutzers.</param>
+        <param name="userIsOnline">Wenn <see langword="true" />, Updates der letzten Aktivität Datums-/Zeitstempel für den angegebenen Benutzer.</param>
+        <summary>Ruft die Informationen aus der Datenquelle für den angegebenen Mitgliedschaftsbenutzer ab. Updates den Datums-/Zeitstempel der letzten Aktivität für den Benutzer angegeben ist.</summary>
+        <returns>Ein <see cref="T:System.Web.Security.MembershipUser" /> Objekt, das den angegebenen Benutzer darstellt. Wenn die <paramref name="username" /> Parameter entspricht keiner vorhandenen Benutzern, diese Methode gibt <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.GetUser%2A> Methode ruft die Benutzerinformationen aus der Datenquelle ab und erstellt eine <xref:System.Web.Security.MembershipUser> Objekt, das mit den zurückgegebenen Daten aufgefüllt.  
+  
+ Wenn Sie einen der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keine `username` Parameter, <xref:System.Web.Security.Membership.GetUser%2A> gibt die Informationen für den derzeit angemeldeten Mitgliedschaftsbenutzer zurück. Der derzeit angemeldete Mitgliedschaftsbenutzer wird anhand der <xref:System.Security.Principal.IIdentity.Name%2A> des Benutzers in der aktuellen <xref:System.Web.HttpContext>.  
+  
+ Sie können auch festlegen, ob Sie <xref:System.Web.Security.Membership.GetUser%2A> zum Aktualisieren der letzten Aktivität Datums/Zeitstempels für den Benutzer abgerufen wird, mit der `userIsOnline` Parameter. Von der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen, die keinen akzeptieren ein `userIsOnline` Parameter <xref:System.Web.Security.Membership.GetUser%2A?displayProperty=nameWithType> implizit Updates der letzten Aktivität Datums-/Zeitstempel für den Benutzer. <xref:System.Web.Security.Membership.GetUser%2A?displayProperty=nameWithType>und <xref:System.Web.Security.Membership.GetUser%2A> nicht der Fall ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Kennwort für einen bestimmten Benutzernamen abgerufen und sendet diese an die e-Mail-Adresse für den angegebenen Benutzer. Der Aufruf von <xref:System.Web.Security.Membership.GetUser%2A> gibt an, dass der Datums-/Zeitstempel der letzten Aktivität für den Benutzer nicht aktualisiert werden.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/RetrievePasswordcs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/RetrievePasswordvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" />enthält ein Komma (,).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUserNameByEmail">
+      <MemberSignature Language="C#" Value="public static string GetUserNameByEmail (string emailToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetUserNameByEmail(string emailToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.GetUserNameByEmail(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emailToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="emailToMatch">Die E-Mail-Adresse, nach der gesucht werden soll.</param>
+        <summary>Ruft einen Benutzernamen ein, wobei die e-Mail-Adresse für den Benutzer die angegebene e-Mail-Adresse entspricht.</summary>
+        <returns>Der Benutzername, bei denen die e-Mail-Adresse für den Benutzer die angegebene e-Mail-Adresse übereinstimmt. Wenn keine Übereinstimmung gefunden wird, <see langword="null" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.GetUserNameByEmail%2A>kann verwendet werden, um den Benutzernamen für einen Mitgliedschaftsbenutzer in die Groß-/Kleinschreibung abzurufen, in denen ein Benutzer Eingabe des Benutzernamens ist nicht bekannt, jedoch weiß, dass ihre e-Mail-Adresse. Wenn mehr als ein Benutzer im Datenspeicher dieselbe e-Mail-Adresse verfügt, wird die erste gefundene Benutzername zurückgegeben.  
+  
+ Führende und nachfolgende Leerzeichen werden in alle Parameterwerte gekürzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft den Benutzernamen für eine angegebene e-Mail-Adresse ab.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/GetUserByEmailcs.aspx#7)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/GetUserByEmailvb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithmType">
+      <MemberSignature Language="C#" Value="public static string HashAlgorithmType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string HashAlgorithmType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.HashAlgorithmType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Bezeichner des-Algorithmus verwendet, um Hashkennwörter.</summary>
+        <value>Der Bezeichner des-Algorithmus verwendet, um die Hashkennwörter oder leere den Standardhashalgorithmus verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.HashAlgorithmType%2A> Eigenschaft identifiziert, den benutzerdefinierten Hashalgorithmus durch die <xref:System.Web.Security.Membership> Klasse. Festlegen der <xref:System.Web.Security.Membership.HashAlgorithmType%2A> Eigenschaft mit dem `hashAlgorithmType` -Attribut des Elements.  
+  
+ .NET Framework können Sie benutzerdefinierte Kryptografieklassen mithilfe des Konfigurationsabschnitts Element zu konfigurieren. Die <xref:System.Web.Security.Membership.HashAlgorithmType%2A> Eigenschaft muss übereinstimmen. die `name` Attribut des Elements in einem Element. Weitere Informationen finden Sie unter [Zuordnen von Algorithmusnamen zu kryptografischen Klassen](~/docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md).  
+  
+ Wenn die <xref:System.Web.Security.Membership.HashAlgorithmType%2A> Eigenschaft nicht festgelegt ist, die <xref:System.Web.Security.Membership> Klasse verwendet den Hashalgorithmus, legen Sie in der `validation` -Attribut des Elements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxInvalidPasswordAttempts">
+      <MemberSignature Language="C#" Value="public static int MaxInvalidPasswordAttempts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxInvalidPasswordAttempts" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.MaxInvalidPasswordAttempts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der zulässigen ungültigen Kennwort- oder Kennwortantwortversuche ab, bevor der Mitgliedschaftsbenutzer ausgesperrt wird.</summary>
+        <value>Die Anzahl der zulässigen ungültigen Kennwort- oder Kennwortantwortversuche, bevor der Mitgliedschaftsbenutzer ausgesperrt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> Eigenschaft funktioniert in Verbindung mit der <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> Eigenschaft, um eine unerwünschte Quelle mit erraten wiederholt versucht, zu erraten, das Kennwort oder die Kennwortantwort für einen Mitgliedschaftsbenutzer.  
+  
+ Wenn die Anzahl der ungültigen Kennwörter oder Kennwortantworten eingegeben haben, für ein Mitgliedschaftsbenutzer größer als oder gleich dem Wert des ist die <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> Eigenschaft innerhalb der Anzahl von Minuten, die gemäß der <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> -Eigenschaft, und klicken Sie dann auf die Benutzer der Website von gesperrt ist Festlegen der <xref:System.Web.Security.MembershipUser.IsLockedOut%2A> Eigenschaft `true` bis der Benutzer durch einen Aufruf von entsperrt ist die <xref:System.Web.Security.MembershipUser.UnlockUser%2A> Methode.  
+  
+ Wenn ein gültiges Kennwort oder eine Kennwortantwort, bevor der Wert angegeben wird der <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> Eigenschaft erreicht ist, der Zähler, der die Anzahl der ungültigen Versuche protokolliert wird auf 0 (null) festgelegt.  
+  
+ Ungültigen Kennwort- und Kennwortantwortversuche werden separat nachverfolgt. Beispielsweise, wenn die <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> Eigenschaft auf 5 festgelegt ist, hat der Benutzer bis zu fünf Versuche unternimmt, geben ein korrektes Kennwort und bis zu fünf Versuche unternimmt, geben Sie eine richtige Kennwortantwort ohne gesperrt werden.  
+  
+ Die <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> -Eigenschaftswert festgelegt ist, in der Anwendungskonfigurationsdatei mithilfe der `maxInvalidPasswordAttempts` Attribut des Konfigurationselements.  
+  
+ Wenn die <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A> Eigenschaft `false`, ungültige Kennwortantwortversuche nicht nachverfolgt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt eine Anwendungsdatei "Web.config". Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> Klasse, um Mitgliedschaftsdienste und Sätze Bereitstellen der `maxInvalidPasswordAttempts` -Attribut auf fünf ungültige Versuche und `passwordAttemptWindow` bis 30 Minuten.  
+  
+```  
+<membership defaultProvider="SqlProvider"  
+  userIsOnlineTimeWindow = "20>  
+  <providers>  
+    <add  
+      name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      requiresQuestionAndAnswer="true"  
+      maxInvalidPasswordAttempts="5"  
+      passwordAttemptWindow="30"  
+      applicationName="MyApplication" />  
+  </providers>  
+</membership>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinRequiredNonAlphanumericCharacters">
+      <MemberSignature Language="C#" Value="public static int MinRequiredNonAlphanumericCharacters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MinRequiredNonAlphanumericCharacters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.MinRequiredNonAlphanumericCharacters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Anzahl von Sonderzeichen ab, die ein gültiges Kennwort enthalten muss.</summary>
+        <value>Die minimale Anzahl von Sonderzeichen, die ein gültiges Kennwort enthalten muss.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.MinRequiredNonAlphanumericCharacters%2A> Eigenschaft gibt die minimale Anzahl von nicht-alphanumerische Zeichen, die eingegeben werden muss, um ein gültiges Kennwort für den im angegebenen Mitgliedschaftsanbieter erstellen die <xref:System.Web.Security.Membership.Provider%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.Security.Membership.MinRequiredNonAlphanumericCharacters%2A> -Eigenschaftswert festgelegt ist, in der Anwendungskonfigurationsdatei mithilfe der `minRequiredNonAlphanumericCharacters` Attribut des Konfigurationselements.  
+  
+ Ein nicht alphanumerisches Zeichen ist ein Zeichen für die die <xref:System.Char.IsLetterOrDigit%2A> -Methode zurückkehrt `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Konfigurationselement in der `system.web` Abschnitt der Datei Web.config der Anwendung. Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> Klasse, um Mitgliedschaftsdienste und Sätze Bereitstellen der `minRequiredNonAlphanumericCharacters` Attribut auf 1 Zeichen.  
+  
+```  
+<membership defaultProvider="SqlProvider"  
+  userIsOnlineTimeWindow = "20>  
+  <providers>  
+    <add  
+      name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      requiresQuestionAndAnswer="true"  
+      minRequiredNonAlphanumericCharacters="1"  
+      />  
+  </providers>  
+</membership>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinRequiredPasswordLength">
+      <MemberSignature Language="C#" Value="public static int MinRequiredPasswordLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MinRequiredPasswordLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.MinRequiredPasswordLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale erforderliche Länge für ein Kennwort ab.</summary>
+        <value>Die minimale erforderliche Länge für ein Kennwort.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.MinRequiredPasswordLength%2A> -Eigenschaft ruft die Mindestanzahl von Zeichen, die eingegeben werden muss, um ein gültiges Kennwort für den im angegebenen Mitgliedschaftsanbieter erstellen die <xref:System.Web.Security.Membership.Provider%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.Security.Membership.MinRequiredPasswordLength%2A> -Eigenschaftswert festgelegt ist, in der Anwendungskonfigurationsdatei mithilfe der `minRequiredPasswordLength` Attribut des Konfigurationselements.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Konfigurationselement in der `system.web` Abschnitt der Datei Web.config der Anwendung. Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> Klasse, um Mitgliedschaftsdienste und Sätze Bereitstellen der `minRequiredPasswordLength` -Attribut auf sieben Zeichen.  
+  
+```  
+<membership defaultProvider="SqlProvider"  
+  userIsOnlineTimeWindow = "20>  
+  <providers>  
+    <add  
+      name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      requiresQuestionAndAnswer="true"  
+      minRequiredPasswordLength="7"  
+      />  
+  </providers>  
+</membership>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordAttemptWindow">
+      <MemberSignature Language="C#" Value="public static int PasswordAttemptWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 PasswordAttemptWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.PasswordAttemptWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitfenster zwischen dem aufeinander folgende Versuche, geben Sie ein gültiges Kennwort oder eine Kennwortantwort Fehler werden nachverfolgt.</summary>
+        <value>Das Zeitfenster in Minuten an, in denen aufeinander folgende fehlerhafte versucht, ein gültiges Kennwort angeben oder Kennwortantwort werden nachverfolgt. Der Standardwert beträgt 10 Minuten. Wenn das Intervall zwischen der aktuellen gescheiterte Versuch und dem letzten fehlerhaften Versuch größer ist die <see cref="P:System.Web.Security.Membership.PasswordAttemptWindow" /> Eigenschaft festlegen, jedem fehlgeschlagenen Versuch wird behandelt, als wäre es der ersten gescheiterte Versuch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> Eigenschaft funktioniert in Verbindung mit der <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> -Eigenschaft zum Schutz gegen eine unerwünschte Quelle das Kennwort oder die Kennwortantwort für einen Mitgliedschaftsbenutzer über wiederholte Versuche. Wenn ein Benutzer versucht, melden Sie sich mit, ändern oder sein eigenes Kennwort zurücksetzen, dürfen nur eine bestimmte Anzahl aufeinander folgender Versuche innerhalb eines angegebenen Zeitfensters. Die Länge von diesem Zeitfenster wird angegeben, der <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> Eigenschaft, die die Anzahl der Minuten zwischen den ungültige Versuche angibt.  
+  
+ Wenn die Anzahl der aufeinander folgenden Fehlversuchen, die ein Benutzer ändert Zurücksetzen des Kennworts entspricht dem Wert, der in gespeicherten der <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> -Eigenschaft und die Zeit verstrichen seit der letzte ungültige Versuch kleiner als die Anzahl der Minuten ist der <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> Eigenschaft, und klicken Sie dann auf den Mitgliedschaftsbenutzer ist gesperrt. Durch Festlegen der Benutzer gesperrt wird die <xref:System.Web.Security.MembershipUser.IsLockedOut%2A> Eigenschaft `true` bis der Benutzer durch einen Aufruf von entsperrt ist die <xref:System.Web.Security.MembershipUser.UnlockUser%2A> Methode.  
+  
+ Wenn das Intervall zwischen der aktuellen gescheiterte Versuch und dem letzten fehlerhaften Versuch größer ist die <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> Eigenschaft festlegen, die aktuelle Ungültiger Versuch wird als erstes gezählt. Wenn eine gültige Kennwortantwort angegeben wird, bevor die maximale Anzahl der zulässigen ungültigen erreicht wird, wird die Anzahl der ungültige Kennwortantwortversuche auf 0 (null) festgelegt. Wenn ein gültiges Kennwort angegeben wird, bevor die maximal Anzahl von ungültigen zulässige Versuche erreicht ist, wird die Anzahl der ungültige Kennwortversuche und die Anzahl der ungültige Kennwortantwortversuche werden auf 0 (null) festgelegt.  
+  
+ Ungültiger Kennwort- und Kennwortantwortversuche Versuche kumuliert werden unabhängig voneinander. Beispielsweise, wenn die <xref:System.Web.Security.Membership.MaxInvalidPasswordAttempts%2A> auf 5 festgelegt ist und drei ungültige Kennwortversuche gefolgt von zwei ungültige Kennwortantwortversuche vorgenommen werden, zwei weitere ungültige Kennwortversuche (oder drei weitere ungültige Kennwortantwortversuche) müssen vorgenommen werden, in <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> für den Mitgliedschaftsbenutzer ausgesperrt werden.  
+  
+ Die <xref:System.Web.Security.Membership.PasswordAttemptWindow%2A> Eigenschaftswert in der Anwendungskonfiguration festgelegt ist, mithilfe der `passwordAttemptWindow` -Attribut des Konfigurationselements.  
+  
+ Wenn die <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A> -Eigenschaftensatz auf `false`, ungültige Kennwortantwortversuche nicht nachverfolgt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Er gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> und legt die `maxInvalidPasswordAttempts` -Attribut auf fünf ungültige Versuche und die `passwordAttemptWindow` bis 30 Minuten.  
+  
+```  
+<membership defaultProvider="SqlProvider"   
+  userIsOnlineTimeWindow="20">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      requiresQuestionAndAnswer="true"  
+      maxInvalidPasswordAttempts="5"  
+      passwordAttemptWindow="30"  
+      applicationName="MyApplication" />  
+  </providers>  
+</membership>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordStrengthRegularExpression">
+      <MemberSignature Language="C#" Value="public static string PasswordStrengthRegularExpression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PasswordStrengthRegularExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.PasswordStrengthRegularExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den regulären Ausdruck ab, der zum Auswerten eines Kennworts verwendet wird.</summary>
+        <value>Ein regulärer Ausdruck, der zum Auswerten eines Kennworts verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.PasswordStrengthRegularExpression%2A> Eigenschaft ruft den regulären Ausdruck, der zum Auswerten der Kennwortkomplexität aus den in angegebenen Anbieter die <xref:System.Web.Security.Membership.Provider%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.Security.Membership.PasswordStrengthRegularExpression%2A> Eigenschaft wird festgelegt, in der Anwendungskonfigurationsdatei mithilfe der `passwordStrengthRegularExpression` Attribut des Konfigurationselements.  
+  
+ Weitere Informationen zu regulären Ausdrücken finden Sie unter [reguläre Ausdrücke von .NET Framework](~/docs/standard/base-types/regular-expressions.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Konfigurationselement in der `system.web` Abschnitt der Datei Web.config der Anwendung. Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> Klasse, um Mitgliedschaftsdienste und Sätze Bereitstellen der `passwordStrengthRegularExpression` Attribut auf einen regulären Ausdruck, der das Kennwort überprüft die folgenden Kriterien erfüllt:  
+  
+-   Ist größer als sieben Zeichen.  
+  
+-   Enthält mindestens eine Ziffer an.  
+  
+-   Enthält mindestens ein Sonderzeichen (nicht alphanumerischen) Zeichen.  
+  
+ Wenn das Kennwort diese Kriterien nicht erfüllt, wird das Kennwort von der Mitgliedschaftsanbieter nicht akzeptiert.  
+  
+```  
+<membership defaultProvider="SqlProvider"  
+  userIsOnlineTimeWindow = "20>  
+  <providers>  
+    <add  
+      name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      requiresQuestionAndAnswer="true"  
+      passwordStrengthRegularExpression=" @\"(?=.{6,})(?=(.*\d){1,})(?=(.*\W){1,})"  
+      />  
+   </providers>  
+</membership>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Security.MembershipProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf den Standardmitgliedschaftsanbieter für die Anwendung ab.</summary>
+        <value>Der Standardmitgliedschaftsanbieter für die Anwendung verfügbar gemacht, mit der <see cref="T:System.Web.Security.MembershipProvider" /> abstrakte Basisklasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.Provider%2A> Eigenschaft können Sie direkt auf den Standardmitgliedschaftsanbieter für eine Anwendung verweisen. Dies wird häufig verwendet, um benutzerdefinierte Member des Mitgliedschaftsanbieters zuzugreifen, die nicht Teil der <xref:System.Web.Security.MembershipProvider> abstrakte Basisklasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird greift auf die Standardeinstellung <xref:System.Web.Security.SqlMembershipProvider> aktiviert, die für die Anwendung mithilfe der <xref:System.Web.Security.Membership.Provider%2A> Eigenschaft, um zu bestimmen, den Wert des benutzerdefinierten <xref:System.Web.Security.SqlMembershipProvider.RequiresUniqueEmail%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/Providercs.aspx#6)]
+ [!code-aspx-vb[System.Web.Security.Membership#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/Providervb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Web.Security.MembershipProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Security.MembershipProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Mitgliedschaftsanbieter für die ASP.NET-Anwendung ab.</summary>
+        <value>Ein <see cref="T:System.Web.Security.MembershipProviderCollection" /> der Mitgliedschaftsanbieter für die ASP.NET-Anwendung konfiguriert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.Providers%2A> -Eigenschaft verweist auf alle der Mitgliedschaftsanbieter für eine Anwendung aktiviert werden soll, in der Datei "Web.config" für die Anwendung und die Datei "Machine.config" für alle Anwendungen hinzugefügt u. a.-Anbieter. Sie können steuern, welche Anbieter für eine Anwendung mit verfügbar sind die `providers` Element des Abschnitts in der Konfiguration für Ihre Anwendung. Z. B. das folgende Beispiel zeigt den Abschnitt in der Datei "Web.config" für eine Anwendung, die entfernt die <xref:System.Web.Security.SqlMembershipProvider> Instanz (`AspNetSqlProvider`) in der Computerkonfigurationsdatei angegeben und fügt eine <xref:System.Web.Security.SqlMembershipProvider> Instanz mit dem Namen `SqlProvider` wie die Standard-Mitgliedschaftsanbieter für die Anwendung.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString="Data Source=MySqlServer;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  <system.web>  
+    <membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="20">  
+      <providers>  
+        <remove name="AspNetSqlProvider" />  
+          <add name="SqlProvider"  
+            type="System.Web.Security.SqlMembershipProvider"  
+            connectionStringName="SqlServices"  
+            enablePasswordRetrieval="false"  
+            enablePasswordReset="true"  
+            requiresQuestionAndAnswer="true"  
+            passwordFormat="Hashed"  
+            applicationName="/" />  
+      </providers>  
+    </membership>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Beim Angeben der [Mitgliedschaft-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b9c1ee8f-33ca-4361-8666-b42a0fe86049) Abschnitt müssen Sie angeben der `defaultProvider` Attribut. Wenn Sie nicht angeben einer [Mitgliedschaft-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b9c1ee8f-33ca-4361-8666-b42a0fe86049) Abschnitt in der Datei "Web.config", die Werte aus der Computerkonfiguration verwendet werden und die <xref:System.Web.Security.SqlMembershipProvider> Instanz mit dem Namen `AspNetSqlProvider` ist als die hergestellt`defaultProvider`.  
+  
+ Sie erhalten einen stark typisierten Verweis auf einen Anbieter aus der <xref:System.Web.Security.Membership.Providers%2A> Auflistung nach Name des Mitgliedschaftsanbieters Indizierung und ihn in den gewünschten Typ umwandeln.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel listet Anbieter, die für eine Anwendung und ihren entsprechenden Typen aktiviert.  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/Providerscs.aspx#7)]
+ [!code-aspx-vb[System.Web.Security.Membership#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/Providersvb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresQuestionAndAnswer">
+      <MemberSignature Language="C#" Value="public static bool RequiresQuestionAndAnswer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool RequiresQuestionAndAnswer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.RequiresQuestionAndAnswer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Standardmitgliedschaftsanbieter den Benutzer beim Zurücksetzen von Kennwörtern und das Abrufen eine Kennwortfrage beantworten muss.</summary>
+        <value>
+          <see langword="true" />Wenn eine Kennwortantwort für das Zurücksetzen von Kennwörtern und das Abrufen erforderlich ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anfordern einer Kennwortfrage und-Antwort bietet eine zusätzliche Sicherheitsebene beim Abrufen oder das Kennwort eines Benutzers zurücksetzen. Benutzer können eine Frage und Antwort beim angeben Eingabe des Benutzernamens erstellt wird, dass sie später zum Abrufen oder zurücksetzen ein vergessenes Kennwort verwenden können.  
+  
+ <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A>überprüft, wenn <xref:System.Web.Security.MembershipUser.ResetPassword%2A> oder <xref:System.Web.Security.MembershipUser.GetPassword%2A> aufgerufen wird. Der Lieferumfang von .NET Framework-Anbieter löst ein <xref:System.NotSupportedException> Wenn <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A> ist `true` und die angegebene Kennwortantwort ist `null`.  
+  
+ Wenn <xref:System.Web.Security.Membership.EnablePasswordReset%2A> und <xref:System.Web.Security.Membership.EnablePasswordRetrieval%2A> sind beide `false`, <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A> können weiterhin verwendet werden, um die Erstellung von Fragen und Antworten zu erzwingen, wenn neue Benutzer erstellt werden; allerdings die Frage und die Antwort werden nicht verwendet werden. Sie werden möglicherweise die Frage mit Abrufen der <xref:System.Web.Security.MembershipUser> Klasse.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Web.Security.MembershipUser.ResetPassword%2A> und <xref:System.Web.Security.MembershipUser.GetPassword%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider>, ermöglicht das Zurücksetzen von Kennwörtern und ein Zurücksetzen eine Kennwortantwort erforderlich ist.  
+  
+```  
+<membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="20">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      enablePasswordRetrieval="false"  
+      enablePasswordReset="true"  
+      requiresQuestionAndAnswer="true"  
+      passwordFormat="Hashed"  
+      applicationName="MyApplication" />  
+  </providers>  
+</membership>  
+```  
+  
+ Im folgenden Codebeispiel wird überprüft, ob den Wert des <xref:System.Web.Security.Membership.RequiresQuestionAndAnswer%2A> und fügt die erforderlichen Steuerelemente für einen Kennwortfrage und-Antwort werden beim Erstellen eines Benutzers.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/CreateUsercs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/CreateUservb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateUser">
+      <MemberSignature Language="C#" Value="public static void UpdateUser (System.Web.Security.MembershipUser user);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UpdateUser(class System.Web.Security.MembershipUser user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.UpdateUser(System.Web.Security.MembershipUser)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.Web.Security.MembershipUser" />
+      </Parameters>
+      <Docs>
+        <param name="user">Ein <see cref="T:System.Web.Security.MembershipUser" /> -Objekt, das den Benutzer zu aktualisierenden darstellt und die aktualisierten Informationen für den Benutzer.</param>
+        <summary>Aktualisiert die Datenbank mit den Informationen für den angegebenen Benutzer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.UpdateUser%2A>akzeptiert als Eingabe, eine <xref:System.Web.Security.MembershipUser> -Objekt mit den aktuellen Informationen für den Mitgliedschaftsbenutzer aufgefüllt und aktualisiert die Datenquelle mit den Eigenschaftswerten von der <xref:System.Web.Security.MembershipUser> Objekt. Konstruieren Sie ein neues <xref:System.Web.Security.MembershipUser>, oder Abrufen einer <xref:System.Web.Security.MembershipUser> -Objekt mit aktuellen Werten an die Datenquelle mit der <xref:System.Web.Security.Membership.GetUser%2A>, <xref:System.Web.Security.Membership.GetAllUsers%2A>, <xref:System.Web.Security.Membership.FindUsersByName%2A>, oder <xref:System.Web.Security.Membership.FindUsersByEmail%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird aktualisiert, die e-Mail-Adresse für den aktuellen Benutzer angemeldet.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/UpdateEmailcs.aspx#11)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/UpdateEmailvb.aspx#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="user" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserIsOnlineTimeWindow">
+      <MemberSignature Language="C#" Value="public static int UserIsOnlineTimeWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 UserIsOnlineTimeWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.Membership.UserIsOnlineTimeWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl von Minuten nach der letzten Aktivität Datums-/Zeitstempel für einen Benutzer, denen der Benutzer online ist.</summary>
+        <value>Die Anzahl von Minuten seit der letzten Aktivität Datums-/Zeitstempel für einen Benutzer, denen der Benutzer online ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership.UserIsOnlineTimeWindow%2A> Eigenschaftswert aktiviert ist, während des Aufrufs <xref:System.Web.Security.Membership.GetNumberOfUsersOnline%2A>. Wenn die <xref:System.Web.Security.MembershipUser.LastActivityDate%2A> für ein Benutzer größer als das aktuelle Datum und Uhrzeit abzüglich ist die <xref:System.Web.Security.Membership.UserIsOnlineTimeWindow%2A> Wert in Minuten, und klicken Sie dann der Benutzer als online angesehen wird. Sie können bestimmen, ob ein Mitgliedschaftsbenutzer online mit betrachtet wird die <xref:System.Web.Security.MembershipUser.IsOnline%2A> Eigenschaft von der <xref:System.Web.Security.MembershipUser> Klasse.  
+  
+ Die <xref:System.Web.Security.MembershipUser.LastActivityDate%2A> für ein Benutzer wird aktualisiert, wenn die Anmeldeinformationen eines Benutzers vom erfolgreich überprüft werden die <xref:System.Web.Security.Membership.ValidateUser%2A> Methode. Sie können auch aktualisieren, die <xref:System.Web.Security.MembershipUser.LastActivityDate%2A> für einen Mitgliedschaftsbenutzer beim Aufrufen eines der <xref:System.Web.Security.Membership.GetUser%2A> Überladungen. Beim Aufrufen einer <xref:System.Web.Security.Membership.GetUser%2A> Überladung mit einer `userIsOnline` Parameter, geben Sie den Wert `true` zum Aktualisieren der <xref:System.Web.Security.MembershipUser.LastActivityDate%2A> für den Benutzer.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Element in der `system.web` Abschnitt der Datei "Web.config" für eine ASP.NET-Anwendung. Es gibt an, dass die Anwendung eine Instanz von der <xref:System.Web.Security.SqlMembershipProvider> und legt die `userIsOnlineTimeWindow` -Attribut auf 20 Minuten.  
+  
+```  
+<membership defaultProvider="SqlProvider"  
+  userIsOnlineTimeWindow="20">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Security.SqlMembershipProvider"  
+      connectionStringName="SqlServices"  
+      enablePasswordRetrieval="true"  
+      enablePasswordReset="false"  
+      requiresQuestionAndAnswer="true"  
+      passwordFormat="Encrypted"  
+      applicationName="MyApplication" />  
+  </providers>  
+</membership>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateUser">
+      <MemberSignature Language="C#" Value="public static bool ValidateUser (string username, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ValidateUser(string username, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.Membership.ValidateUser(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des zu überprüfenden Benutzers.</param>
+        <param name="password">Das Kennwort für den angegebenen Benutzer.</param>
+        <summary>Überprüft, ob der angegebene Benutzername und das angegebene Kennwort gültig sind.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Benutzername und Kennwort gültig sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.Membership.ValidateUser%2A>bietet eine einfache Möglichkeit, einen Benutzernamen und Kennwort aus der Datenquelle zu überprüfen. Beachten Sie, dass die `username` Parameter ist leer oder `null`, wird eine <xref:System.Web.HttpException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Anmeldeseite für eine ASP.NET-Anwendung für die Verwendung der Formularauthentifizierung konfiguriert und die <xref:System.Web.Security.Membership> Klasse. Wenn die angegebenen Anmeldeinformationen ungültig sind, wird eine Meldung an den Benutzer angezeigt. Andernfalls wird der Benutzer umgeleitet, auf die ursprünglich angeforderte URL durch die <xref:System.Web.Security.FormsAuthentication.RedirectFromLoginPage%2A> Methode.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/logincs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/loginvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatingPassword">
+      <MemberSignature Language="C#" Value="public static event System.Web.Security.MembershipValidatePasswordEventHandler ValidatingPassword;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Security.MembershipValidatePasswordEventHandler ValidatingPassword" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Security.Membership.ValidatingPassword" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipValidatePasswordEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Benutzer erstellt, ein Kennwort geändert oder ein Kennwort zurückgesetzt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.MembershipProvider.ValidatingPassword> Ereignis wird ausgelöst, wenn die <xref:System.Web.Security.MembershipProvider.CreateUser%2A> -Methode, die <xref:System.Web.Security.MembershipProvider.ChangePassword%2A> -Methode, oder die <xref:System.Web.Security.MembershipProvider.ResetPassword%2A> Methode von einem Mitgliedschaftsanbieter wird aufgerufen.  
+  
+ Sie können die <xref:System.Web.Security.MembershipProvider.ValidatingPassword> Ereignis Kennwortformaten und Werte für Mitgliedschaftsbenutzer überprüfen.  
+  
+ Können Sie die aktuelle Abbrechen <xref:System.Web.Security.MembershipProvider.CreateUser%2A>, <xref:System.Web.Security.MembershipProvider.ChangePassword%2A>, oder <xref:System.Web.Security.MembershipProvider.ResetPassword%2A> Aktionen durch Festlegen der <xref:System.Web.Security.ValidatePasswordEventArgs.Cancel%2A> -Eigenschaft des angegebenen <xref:System.Web.Security.ValidatePasswordEventArgs> auf `true` während der <xref:System.Web.Security.MembershipProvider.ValidatingPassword> Ereignis.  
+  
+ Wenn Sie die aktuelle Aktion, durch Festlegen Abbrechen der <xref:System.Web.Security.ValidatePasswordEventArgs.Cancel%2A> Eigenschaft, um `true`, können Sie festlegen der <xref:System.Web.Security.ValidatePasswordEventArgs.FailureInformation%2A> -Eigenschaft des angegebenen <xref:System.Web.Security.ValidatePasswordEventArgs> auf eine Ausnahme, die den Grund für den kennwortvalidierungsfehler beschreibt. Die aufrufende Methode löst der Ausnahme, die die <xref:System.Web.Security.ValidatePasswordEventArgs.FailureInformation%2A> Eigenschaft auf festgelegt ist. Wenn die <xref:System.Web.Security.ValidatePasswordEventArgs.FailureInformation%2A> Eigenschaft `null`, löst der Aufrufer eine generische Ausnahme von Kennwort-Überprüfungsfehler.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine <xref:System.Web.Security.MembershipProvider.ValidatingPassword> Ereignis, das das Format des Kennworts für einen Benutzer überprüft und bricht die Aktion ab, wenn das Kennwort nicht das erforderliche Format übereinstimmt.  
+  
+ [!code-csharp[System.Web.Security.Membership#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/CreateUser3cs.aspx#11)]
+ [!code-vb[System.Web.Security.Membership#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/CreateUser3vb.aspx#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

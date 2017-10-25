@@ -1,0 +1,398 @@
+<Type Name="ISymbolMethod" FullName="System.Diagnostics.SymbolStore.ISymbolMethod">
+  <TypeSignature Language="C#" Value="public interface ISymbolMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISymbolMethod" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.ISymbolMethod" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Methode in einem Symbolspeicher dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.SymbolStore.ISymbolMethod> Schnittstelle bietet ausschließlich Zugriff auf die symbolbezogenen Attribute einer Methode, wie z. B. Sequenzpunkte lexikalischen Gültigkeitsbereiche und Parameterinformationen. Verwenden Sie es mit der <xref:System.Reflection> Klassen, die Typ-bezogene Attribute einer Methode zu lesen.  
+  
+> [!NOTE]
+>  Diese Schnittstelle ist, der die verwaltete Entsprechung der `ISymUnmanagedMethod` Schnittstelle, eine der nicht verwalteten Diagnosesymbolspeicher-Schnittstellen, die bieten eine alternative Möglichkeit zum Lesen und Schreiben von Debugsymbolinformationen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetNamespace">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolNamespace GetNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolNamespace GetNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolMethod.GetNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolNamespace</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namespace ab, in dem die aktuelle Methode definiert ist.</summary>
+        <returns>Der Namespace, in dem die aktuelle Methode definiert ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOffset">
+      <MemberSignature Language="C#" Value="public int GetOffset (System.Diagnostics.SymbolStore.ISymbolDocument document, int line, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetOffset(class System.Diagnostics.SymbolStore.ISymbolDocument document, int32 line, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolMethod.GetOffset(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Diagnostics.SymbolStore.ISymbolDocument" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="document">Das Dokument, für das der Offset angefordert wird.</param>
+        <param name="line">Die Dokumentzeile, die dem Offset entspricht.</param>
+        <param name="column">Die Dokumentspalte, die dem Offset entspricht.</param>
+        <summary>Ruft den MSIL-Offset (Microsoft Intermediate Language) innerhalb der Methode ab, der der angegebenen Position entspricht.</summary>
+        <returns>Der Offset im angegebenen Dokument.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter werden in der Reihenfolge zurückgegeben, dass sie in der Signatur der Methode definiert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolVariable[] GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolVariable[] GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolMethod.GetParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolVariable[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Parameter für die aktuelle Methode ab.</summary>
+        <returns>Das Array von Parametern für die aktuelle Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter werden in der Reihenfolge zurückgegeben, dass sie in der Signatur der Methode definiert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRanges">
+      <MemberSignature Language="C#" Value="public int[] GetRanges (System.Diagnostics.SymbolStore.ISymbolDocument document, int line, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32[] GetRanges(class System.Diagnostics.SymbolStore.ISymbolDocument document, int32 line, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolMethod.GetRanges(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Diagnostics.SymbolStore.ISymbolDocument" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="document">Das Dokument, für das der Offset angefordert wird.</param>
+        <param name="line">Die Dokumentzeile, die den Bereichen entspricht.</param>
+        <param name="column">Die Dokumentspalte, die den Bereichen entspricht.</param>
+        <summary>Ruft ein Array von Start-/Endoffsetpaaren ab, die den Bereichen der MSIL (Microsoft Intermediate Language) entsprechen, die von einer angegebenen Position innerhalb dieser Methode abgedeckt werden.</summary>
+        <returns>Ein Array von Start-/Endoffsetpaaren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Array ist ein Array von ganzen Zahlen im Format {{start1, end1}, {start2, end2}...}. Die Anzahl der Bereichspaare ist die Länge des Arrays geteilt durch 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScope">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolScope GetScope (int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolScope GetScope(int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolMethod.GetScope(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Byteoffset innerhalb der Methode des lexikalischen Gültigkeitsbereichs.</param>
+        <summary>Gibt den umfassendsten lexikalischen Gültigkeitsbereich zurück, wenn ein Offset innerhalb einer Methode angegeben ist.</summary>
+        <returns>Der umfassendste lexikalische Gültigkeitsbereich, wenn ein Offset innerhalb einer Methode angegeben ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Diagnostics.SymbolStore.ISymbolMethod.GetScope%2A> Methode, um die lokalen Variablen starten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSequencePoints">
+      <MemberSignature Language="C#" Value="public void GetSequencePoints (int[] offsets, System.Diagnostics.SymbolStore.ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSequencePoints(int32[] offsets, class System.Diagnostics.SymbolStore.ISymbolDocument[] documents, int32[] lines, int32[] columns, int32[] endLines, int32[] endColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolMethod.GetSequencePoints(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsets" Type="System.Int32[]" />
+        <Parameter Name="documents" Type="System.Diagnostics.SymbolStore.ISymbolDocument[]" />
+        <Parameter Name="lines" Type="System.Int32[]" />
+        <Parameter Name="columns" Type="System.Int32[]" />
+        <Parameter Name="endLines" Type="System.Int32[]" />
+        <Parameter Name="endColumns" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="offsets">Das Array von Byteoffsets ab dem Anfang der Methode für die Sequenzpunkte.</param>
+        <param name="documents">Das Array von Dokumenten, in denen sich die Sequenzpunkte befinden.</param>
+        <param name="lines">Das Array von Zeilen in den Dokumenten, in denen sich die Sequenzpunkte befinden.</param>
+        <param name="columns">Das Array von Spalten in den Dokumenten, in denen sich die Sequenzpunkte befinden.</param>
+        <param name="endLines">Das Array von Zeilen in den Dokumenten, in denen die Sequenzpunkte enden.</param>
+        <param name="endColumns">Das Array von Spalten in den Dokumenten, in denen die Sequenzpunkte enden.</param>
+        <summary>Ruft die Sequenzpunkte für die aktuelle Methode ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Sequenzpunkte per Offset sortiert werden und gelten für alle Dokumente in der Methode. Verwendung <xref:System.Diagnostics.SymbolStore.ISymbolMethod.SequencePointCount%2A> zum Abrufen der Anzahl aller Sequenzpunkte und Arrays der richtigen Größe zu erstellen.  
+  
+ <xref:System.Diagnostics.SymbolStore.ISymbolMethod.GetSequencePoints%2A>überprüft die Größe der einzelnen Arrays und platziert die Informationen in jeder Sequenz. Wenn Array `null`, die Daten für das Array werden nicht zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceStartEnd">
+      <MemberSignature Language="C#" Value="public bool GetSourceStartEnd (System.Diagnostics.SymbolStore.ISymbolDocument[] docs, int[] lines, int[] columns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetSourceStartEnd(class System.Diagnostics.SymbolStore.ISymbolDocument[] docs, int32[] lines, int32[] columns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolMethod.GetSourceStartEnd(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="docs" Type="System.Diagnostics.SymbolStore.ISymbolDocument[]" />
+        <Parameter Name="lines" Type="System.Int32[]" />
+        <Parameter Name="columns" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="docs">Die Anfangs- und Endquelldokumente.</param>
+        <param name="lines">Die Anfangs- und Endzeilen in den entsprechenden Quelldokumenten.</param>
+        <param name="columns">Die Anfangs- und Endspalten in den entsprechenden Quelldokumenten.</param>
+        <summary>Ruft die Anfangs- und Endpositionen für die Quelle der aktuellen Methode ab.</summary>
+        <returns>
+          <see langword="true" />, wenn die Positionen definiert wurden, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Arrayposition des erste ist der Anfang und das zweite ist das Ende.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootScope">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolScope RootScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SymbolStore.ISymbolScope RootScope" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.ISymbolMethod.RootScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lexikalischen Stammgültigkeitsbereich für die aktuelle Methode ab. Dieser Gültigkeitsbereich umfasst die gesamte Methode.</summary>
+        <value>Der lexikalische Stammgültigkeitsbereich, der die gesamte Methode einschließt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SequencePointCount">
+      <MemberSignature Language="C#" Value="public int SequencePointCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SequencePointCount" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.ISymbolMethod.SequencePointCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Sequenzpunkte in der Methode ab.</summary>
+        <value>Die Anzahl der Sequenzpunkte in der Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.SymbolToken Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.SymbolStore.SymbolToken Token" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.ISymbolMethod.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.SymbolToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> mit den Metadaten für die aktuelle Methode ab.</summary>
+        <value>Das Metadatentoken für die aktuelle Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

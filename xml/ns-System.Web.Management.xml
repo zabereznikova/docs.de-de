@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Management">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Management" /> -Namespace enthält Klassen und Schnittstellen für die Verwaltung und Überwachung der Integrität von Webanwendungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

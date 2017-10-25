@@ -1,0 +1,64 @@
+<Type Name="ChildChangedEventArgs" FullName="System.Windows.Forms.Integration.ChildChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ChildChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChildChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Integration.ChildChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsFormsIntegration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Integration.WindowsFormsHost.ChildChanged" />-Ereignis und das <see cref="E:System.Windows.Forms.Integration.ElementHost.ChildChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Integration.ChildChangedEventArgs> Klasse wird verwendet, indem Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost> und <xref:System.Windows.Forms.Integration.ElementHost> Klassen, wenn die Werte der <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Integration.ElementHost.Child%2A?displayProperty=nameWithType> Eigenschaften ändern.  
+  
+ Verwenden der <xref:System.Windows.Forms.Integration.ChildChangedEventArgs.PreviousChild%2A> Eigenschaft, um das zuvor zugewiesene untergeordnete Steuerelement oder Element abzurufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChildChangedEventArgs (object previousChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object previousChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.ChildChangedEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="previousChild" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="previousChild">Der Wert, der die <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Child" /> Eigenschaft vor der neue Wert zugewiesen wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Integration.ChildChangedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousChild">
+      <MemberSignature Language="C#" Value="public object PreviousChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PreviousChild" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.ChildChangedEventArgs.PreviousChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Child" /> Eigenschaft vor der neue Wert zugewiesen wurde.</summary>
+        <value>Der Wert, der die <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Child" /> Eigenschaft vor der neue Wert zugewiesen wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

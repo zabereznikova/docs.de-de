@@ -1,0 +1,95 @@
+<Type Name="Closure" FullName="Microsoft.JScript.Closure">
+  <TypeSignature Language="C#" Value="public sealed class Closure : Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Closure extends Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Closure" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ScriptFunction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Closure-Funktion dar. Diese Klasse gehört zur Kategorie Objekte und Funktionen.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Closure (Microsoft.JScript.FunctionObject func);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.JScript.FunctionObject func) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Closure.#ctor(Microsoft.JScript.FunctionObject)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="func" Type="Microsoft.JScript.FunctionObject" />
+      </Parameters>
+      <Docs>
+        <param name="func">Die Funktion, die diese Closure darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.Closure" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="arguments">
+      <MemberSignature Language="C#" Value="public object arguments;" />
+      <MemberSignature Language="ILAsm" Value=".field public object arguments" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Closure.arguments" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Argumente für die Funktion verwendet werden soll.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="caller">
+      <MemberSignature Language="C#" Value="public object caller;" />
+      <MemberSignature Language="ILAsm" Value=".field public object caller" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Closure.caller" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die aufrufende Bereichsinformationen über den Stapelrahmen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Closure.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung der Funktion, z. B. den Namen der Funktion oder den Kontext an.</summary>
+        <returns>Eine Zeichenfolgendarstellung der Funktion.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

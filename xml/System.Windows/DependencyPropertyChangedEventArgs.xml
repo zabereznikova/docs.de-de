@@ -1,0 +1,299 @@
+<Type Name="DependencyPropertyChangedEventArgs" FullName="System.Windows.DependencyPropertyChangedEventArgs">
+  <TypeSignature Language="C#" Value="public struct DependencyPropertyChangedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DependencyPropertyChangedEventArgs extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyPropertyChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für verschiedene durch geänderte Eigenschaften ausgelöste Ereignisse bereit. Diese Ereignisse melden normalerweise effektive Änderungen beim Wert einer schreibgeschützten Abhängigkeitseigenschaft. Eine weitere Verwendungsmöglichkeit ist als Teil einer <see cref="T:System.Windows.PropertyChangedCallback" />-Implementierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ereignisse, mit denen die <xref:System.Windows.DependencyPropertyChangedEventArgs> Klasse für Ereignisdaten, und die <xref:System.Windows.DependencyPropertyChangedEventHandler> Implementierungen der Dienstmethode für Handler, in der Regel dem Benennungsschema folgen `Is*Changed`, und werden im Allgemeinen als implementiert [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Ereignisse ohne <xref:System.Windows.RoutedEvent> (sie sind nicht Routingereignisse) sichern. Einige Methoden, die "andernfalls behandeln" für die Klassenbehandlung nicht verfügbar gemachte Ereignissen, die eine Zustandsänderung durch Änderung einer Eigenschaft, z. B. melden <xref:System.Windows.Controls.Primitives.ButtonBase.OnIsPressedChanged%2A?displayProperty=nameWithType>, auch die <xref:System.Windows.DependencyPropertyChangedEventArgs> Klasse für Ereignisdaten.  
+  
+ Das Szenario für <xref:System.Windows.PropertyChangedCallback> besteht darin, die Argumente für den Bericht alten und neuen Werte zu verwenden, die die Auswertung der Eigenschaft System stammen. Ein Rückruf, der alten und neuen Werte verarbeitet empfiehlt sich eine besondere Behandlung je nach dieser Werte, beispielsweise kann er nicht auf wertänderungen reagiert, die als nicht signifikante eingestuft werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.DependencyPropertyChangedEventArgs> Klasse im Rahmen einer <xref:System.Windows.PropertyChangedCallback> für eine bestimmte Eigenschaft einer benutzerdefinierten Klasse, die ebenfalls Ereignisse definiert. Der Rückruf dauert die Ergebnisse der alten und neuen Werte aus dem Eigenschaftensystem, wie das Übermitteln von <xref:System.Windows.DependencyPropertyChangedEventArgs>, und packt diese neu in eine Klasse mit anderen Argumente <xref:System.Windows.RoutedPropertyChangedEventArgs%601>. Die neue Argumente werden dann wie die Daten für ein Ereignis "ValueChanged" definiert und ausgelöst werden, von der benutzerdefinierten Klasse verwendet.  
+  
+ [!code-csharp[CustomControlNumericUpDownOneProject#DependencyPropertyChangedEventArgs](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#dependencypropertychangedeventargs)]
+ [!code-vb[CustomControlNumericUpDownOneProject#DependencyPropertyChangedEventArgs](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#dependencypropertychangedeventargs)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DependencyPropertyChangedEventArgs (System.Windows.DependencyProperty property, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.DependencyProperty property, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyChangedEventArgs.#ctor(System.Windows.DependencyProperty,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="property">Der Bezeichner für die Abhängigkeitseigenschaft, die geändert werden soll.</param>
+        <param name="oldValue">Der Wert der Eigenschaft vor der Änderung, die von der betreffenden Ereignis oder eine statusänderung gemeldet.</param>
+        <param name="newValue">Der Wert der Eigenschaft nach der Änderung, die von der betreffenden Ereignis oder eine statusänderung gemeldet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierer von benutzerdefinierten Ereignissen, die-Abhängigkeitseigenschaft melden soll verwenden Sie diesen Konstruktor für das Auffüllen von Daten für das Ereignis mit den Besonderheiten der Änderung, wenn das Ereignis ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyChangedEventArgs.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende mit dem aktuellen Objekt <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</param>
+        <summary>Bestimmt, ob das angegebene Objekt gleich der aktuellen <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt dem aktuellen entspricht <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung basiert auf Äquivalenz aller Eigenschaften, einschließlich der interne Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.DependencyPropertyChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.DependencyPropertyChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyChangedEventArgs.Equals(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Die <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" /> , mit dem aktuellen verglichen werden soll.<see cref="T:System.Windows.DependencyPropertyChangedEventArgs" /></param>
+        <summary>Bestimmt, ob der bereitgestellte <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" /> ist gleichbedeutend mit dem aktuellen <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der bereitgestellte <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" /> ist gleichbedeutend mit dem aktuellen <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung basiert auf Äquivalenz aller Eigenschaften, einschließlich der interne Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyChangedEventArgs.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für diese <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</summary>
+        <returns>Ein 32-Bit-Ganzzahl-Hashcode mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public object NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyPropertyChangedEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Eigenschaft nach der Änderung ab.</summary>
+        <value>Der Eigenschaftswert nach der Änderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des angegebenen Werts sollte immer in den Typ der Abhängigkeitseigenschaft gemeldet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.DependencyPropertyChangedEventArgs> Klasse im Rahmen einer <xref:System.Windows.PropertyChangedCallback> für eine bestimmte Eigenschaft einer benutzerdefinierten Klasse, die ebenfalls Ereignisse definiert. Der Rückruf dauert die Ergebnisse der alten und neuen Werte aus dem Eigenschaftensystem, wie das Übermitteln von <xref:System.Windows.DependencyPropertyChangedEventArgs>, und packt diese neu in eine Klasse mit anderen Argumente <xref:System.Windows.RoutedPropertyChangedEventArgs%601>. Die neue Argumente werden dann wie die Daten für ein Ereignis "ValueChanged" definiert und ausgelöst werden, von der benutzerdefinierten Klasse verwendet.  
+  
+ [!code-csharp[CustomControlNumericUpDownOneProject#DependencyPropertyChangedEventArgs](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#dependencypropertychangedeventargs)]
+ [!code-vb[CustomControlNumericUpDownOneProject#DependencyPropertyChangedEventArgs](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#dependencypropertychangedeventargs)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public object OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyPropertyChangedEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Eigenschaft vor der Änderung ab.</summary>
+        <value>Der Wert der Eigenschaft vor der Änderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des angegebenen Werts sollte immer in den Typ der Abhängigkeitseigenschaft gemeldet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.DependencyPropertyChangedEventArgs> Klasse im Rahmen einer <xref:System.Windows.PropertyChangedCallback> für eine bestimmte Eigenschaft einer benutzerdefinierten Klasse, die ebenfalls Ereignisse definiert. Der Rückruf dauert die Ergebnisse der alten und neuen Werte aus dem Eigenschaftensystem, wie das Übermitteln von <xref:System.Windows.DependencyPropertyChangedEventArgs>, und packt diese neu in eine Klasse mit anderen Argumente <xref:System.Windows.RoutedPropertyChangedEventArgs%601>. Die neue Argumente werden dann wie die Daten für ein Ereignis "ValueChanged" definiert und ausgelöst werden, von der benutzerdefinierten Klasse verwendet.  
+  
+ [!code-csharp[CustomControlNumericUpDownOneProject#DependencyPropertyChangedEventArgs](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#dependencypropertychangedeventargs)]
+ [!code-vb[CustomControlNumericUpDownOneProject#DependencyPropertyChangedEventArgs](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#dependencypropertychangedeventargs)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.DependencyPropertyChangedEventArgs left, System.Windows.DependencyPropertyChangedEventArgs right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.DependencyPropertyChangedEventArgs left, valuetype System.Windows.DependencyPropertyChangedEventArgs right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyChangedEventArgs.op_Equality(System.Windows.DependencyPropertyChangedEventArgs,System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+        <Parameter Name="right" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu vergleichende <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</param>
+        <param name="right">Der zweite zu vergleichende <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />-Objekte denselben Wert haben.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" /> Instanzen sind entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung verwendet die gleiche Logik wie <xref:System.Windows.DependencyPropertyChangedEventArgs.Equals%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.DependencyPropertyChangedEventArgs left, System.Windows.DependencyPropertyChangedEventArgs right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.DependencyPropertyChangedEventArgs left, valuetype System.Windows.DependencyPropertyChangedEventArgs right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyChangedEventArgs.op_Inequality(System.Windows.DependencyPropertyChangedEventArgs,System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+        <Parameter Name="right" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu vergleichende <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</param>
+        <param name="right">Der zweite zu vergleichende <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" />.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" /> -Objekte unterschiedlich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden <see cref="T:System.Windows.DependencyPropertyChangedEventArgs" /> Instanzen sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung gibt die Negation des dieselbe Logik wie <xref:System.Windows.DependencyPropertyChangedEventArgs.Equals%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyPropertyChangedEventArgs.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner für die Abhängigkeitseigenschaft aufgetreten ist, in dem die Änderung des Werts ab.</summary>
+        <value>Bezeichnerfeld für die Abhängigkeitseigenschaft, in den Wert ändern, aufgetreten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist relevant, wenn innerhalb eines gemeinsamen verwendet <xref:System.Windows.PropertyChangedCallback> , die für mehrere Eigenschaften registriert ist, und es ist erforderlich, um die Mehrdeutigkeit aufzulösen, welche Änderung der Rückruf aufgerufen. <xref:System.Windows.DependencyPropertyChangedEventArgs.Property%2A>Dieser ist ist nicht in der Regel zum Auslösen von Ereignissen, relevant, weil in der Regel eine 1:1-Entsprechung zwischen Eigenschaften und Ereignisse dieser Bericht die Änderung der Eigenschaft. Das Ereignis, das ausgelöst wurde wird selbst die Angabe der Eigenschaft geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

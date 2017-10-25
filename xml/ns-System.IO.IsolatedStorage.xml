@@ -1,0 +1,15 @@
+<Namespace Name="System.IO.IsolatedStorage">
+  <Docs>
+    <summary>Der <see cref="N:System.IO.IsolatedStorage" />-Namespace enthält Typen, mit denen isolierte Speicher erstellt und verwendet werden können. Mithilfe dieser Speicher können Sie Daten lesen und schreiben, auf die weniger vertrauenswürdiger Code nicht zugreifen kann, und Sie können verhindern, dass vertrauliche Informationen verfügbar gemacht werden, die an anderer Stelle im Dateisystem gespeichert sind. Die Daten werden in Depots gespeichert, die vom aktuellen Benutzer und der Assembly mit dem Code isoliert sind. Zusätzlich können Daten auch von der Domäne isoliert werden. Sie können zusammen mit der isolierten Speicherung servergespeicherte Benutzerprofile verwenden, sodass die isolierten Speicher vom Benutzer an jedem Ort verwendet werden können. Die <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" />-Enumeration gibt verschiedene Arten der Isolation an. Weitere Informationen über die Verwendung von isolierter Speicherung finden Sie unter [isolierten Speicher](~/docs/standard/io/isolated-storage.md).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse bietet die meisten erforderlichen Funktionen für die isolierte Speicherung. Verwenden Sie diese Klasse zum Abrufen, löschen und Verwalten von isolierten Speicher. Die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Klasse behandelt wird, lesen und Schreiben von Dateien in einem Speicher. Dieser Vorgang ähnelt lesen und Schreiben in Datei-e/a-Standardklassen. Weitere Informationen zu e/a, finden Sie unter der <xref:System.IO> Namespace.  
+  
+ Beispiele, die mit dem isolierten Speicher, finden Sie unter [isolierten Speicher](~/docs/standard/io/isolated-storage.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,124 @@
+<Type Name="AuthenticationLevel" FullName="System.Net.Security.AuthenticationLevel">
+  <TypeSignature Language="C#" Value="public enum AuthenticationLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthenticationLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Security.AuthenticationLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Clientanforderungen für Authentifizierung und Identitätswechsel bei Verwendung der <see cref="T:System.Net.WebRequest" /> Klasse und abgeleitete Klassen zum Anfordern einer Ressource.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte dieser Enumeration werden zum Festlegen der <xref:System.Net.WebRequest.AuthenticationLevel%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die Werte MutualAuthRequired und MutualAuthRequested sind für die Kerberos-Authentifizierung relevant. Kerberos-Authentifizierung kann direkt unterstützt oder verwendet werden, wenn das tatsächliche Sicherheitsprotokoll mithilfe des Negotiate-Sicherheitsprotokolls ausgewählt wird. Weitere Informationen über Authentifizierungsprotokolle finden Sie unter [Internetauthentifizierung](~/docs/framework/network-programming/internet-authentication.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der authentifizierungskennzeichen für eine Anforderung.  
+  
+ [!code-cpp[NCLCredPolicy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLCredPolicy/CPP/NCLCredPolicy.cpp#1)]
+ [!code-csharp[NCLCredPolicy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLCredPolicy/CS/websample.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MutualAuthRequested">
+      <MemberSignature Language="C#" Value="MutualAuthRequested" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Security.AuthenticationLevel MutualAuthRequested = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Security.AuthenticationLevel.MutualAuthRequested" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.AuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Client und Server authentifiziert werden soll. Die Anforderung schlägt nicht fehl, wenn der Server nicht authentifiziert ist. Um zu bestimmen, ob die gegenseitige Authentifizierung erfolgt ist, überprüfen Sie den Wert von der <see cref="P:System.Net.WebResponse.IsMutuallyAuthenticated" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MutualAuthRequired">
+      <MemberSignature Language="C#" Value="MutualAuthRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Security.AuthenticationLevel MutualAuthRequired = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Security.AuthenticationLevel.MutualAuthRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.AuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Client und Server authentifiziert werden soll. Wenn der Server nicht authentifiziert ist, empfängt die Anwendung eine <see cref="T:System.IO.IOException" /> mit einem <see cref="T:System.Net.ProtocolViolationException" /> innere Ausnahme, die angibt, dass die gegenseitige Authentifizierung fehlgeschlagen</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Security.AuthenticationLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Security.AuthenticationLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.AuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist keine Authentifizierung für den Client und Server erforderlich.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

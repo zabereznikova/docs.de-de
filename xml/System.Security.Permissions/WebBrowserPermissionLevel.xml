@@ -1,0 +1,89 @@
+<Type Name="WebBrowserPermissionLevel" FullName="System.Security.Permissions.WebBrowserPermissionLevel">
+  <TypeSignature Language="C#" Value="public enum WebBrowserPermissionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebBrowserPermissionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.WebBrowserPermissionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Berechtigungsstufe für einen Webbrowser an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Enumeration zum Festlegen der <xref:System.Security.Permissions.WebBrowserPermission.Level%2A> Eigenschaft von der <xref:System.Security.Permissions.WebBrowserPermission> Klasse.  
+  
+ Der Stufe Safe-Berechtigungssatz beschränkt die folgenden Web-Browser-Vorgänge.  
+  
+-   Ein Popupfenster kann über das Webbrowser-Steuerelement erstellt werden.  
+  
+-   Das Webbrowser-Steuerelement kann nur auf die Ursprungssite navigiert werden.  
+  
+-   Die Sicherheitseinstellungen für das Webbrowser-Steuerelement werden reduziert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie gefordert wird, dass der aufrufende Code eine Berechtigung zum Erstellen eines WebBrowser-Steuerelements uneingeschränkte verfügt.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute3](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermissionattribute3)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermissionattribute3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.WebBrowserPermissionLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.WebBrowserPermissionLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.WebBrowserPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Webbrowser, der Frames HTML navigieren kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Safe">
+      <MemberSignature Language="C#" Value="Safe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.WebBrowserPermissionLevel Safe = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.WebBrowserPermissionLevel.Safe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.WebBrowserPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Webbrowser, der sicher Frames HTML jedoch einige Einschränkungen navigieren kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unrestricted">
+      <MemberSignature Language="C#" Value="Unrestricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.WebBrowserPermissionLevel Unrestricted = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.WebBrowserPermissionLevel.Unrestricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.WebBrowserPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Webbrowser, der ohne Einschränkungen navigieren kann.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

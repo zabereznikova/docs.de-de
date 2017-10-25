@@ -1,0 +1,185 @@
+<Type Name="QueryContinueDragEventArgs" FullName="System.Windows.Forms.QueryContinueDragEventArgs">
+  <TypeSignature Language="C#" Value="public class QueryContinueDragEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryContinueDragEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.QueryContinueDragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Control.QueryContinueDrag" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Control.QueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll. Ein <xref:System.Windows.Forms.QueryContinueDragEventArgs> gibt an, ob und wie der Drag-and-Drop-Vorgang fortgesetzt werden soll, ob Modifizierertasten werden und gibt an, ob der Benutzer die ESC-Taste gedrückt wurde.  
+  
+ Standardmäßig legt das <xref:System.Windows.Forms.Control.QueryContinueDrag>-Ereignis <xref:System.Windows.Forms.QueryContinueDragEventArgs.Action%2A> auf <xref:System.Windows.Forms.DragAction?displayProperty=nameWithType> fest, wenn die ESC-Taste gedrückt wurde, und legt `Action` auf <xref:System.Windows.Forms.DragAction?displayProperty=nameWithType> fest, wenn die linke, mittlere oder rechte Maustaste gedrückt wurde.  
+  
+ Informationen über das Ereignismodell finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Dieser Code veranschaulicht die Verwendung der <xref:System.Windows.Forms.QueryContinueDragEventArgs> -Klasse mit der <xref:System.Windows.Forms.Control.QueryContinueDrag> Ereignis. Finden Sie unter der <xref:System.Windows.Forms.Control.DoDragDrop%2A> Methode für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#6)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#6)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryContinueDragEventArgs (int keyState, bool escapePressed, System.Windows.Forms.DragAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keyState, bool escapePressed, valuetype System.Windows.Forms.DragAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.QueryContinueDragEventArgs.#ctor(System.Int32,System.Boolean,System.Windows.Forms.DragAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyState" Type="System.Int32" />
+        <Parameter Name="escapePressed" Type="System.Boolean" />
+        <Parameter Name="action" Type="System.Windows.Forms.DragAction" />
+      </Parameters>
+      <Docs>
+        <param name="keyState">Der aktuelle Zustand von UMSCHALTTASTE, STRG und ALT.</param>
+        <param name="escapePressed">
+          <see langword="true" />Wenn die ESC-Taste gedrückt wurde; andernfalls <see langword="false" />.</param>
+        <param name="action">Ein <see cref="T:System.Windows.Forms.DragAction" />-Wert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.QueryContinueDragEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DragAction Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DragAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.QueryContinueDragEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Status eines Drag &amp; Drop-Vorgangs ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DragAction" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig legt das <xref:System.Windows.Forms.Control.QueryContinueDrag>-Ereignis <xref:System.Windows.Forms.QueryContinueDragEventArgs.Action%2A> auf <xref:System.Windows.Forms.DragAction?displayProperty=nameWithType> fest, wenn die ESC-Taste gedrückt wurde, und legt `Action` auf <xref:System.Windows.Forms.DragAction?displayProperty=nameWithType> fest, wenn die linke, mittlere oder rechte Maustaste gedrückt wurde.  
+  
+   
+  
+## Examples  
+ Dieser Code veranschaulicht die Verwendung der <xref:System.Windows.Forms.QueryContinueDragEventArgs> -Klasse mit der <xref:System.Windows.Forms.Control.QueryContinueDrag> Ereignis. Finden Sie unter der <xref:System.Windows.Forms.Control.DoDragDrop%2A> Methode für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#6)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#6)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapePressed">
+      <MemberSignature Language="C#" Value="public bool EscapePressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EscapePressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.QueryContinueDragEventArgs.EscapePressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob der Benutzer ESC gedrückt hat.</summary>
+        <value>
+          <see langword="true" />Wenn die ESC-Taste gedrückt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.Control.QueryContinueDrag> Ereignis legt <xref:System.Windows.Forms.QueryContinueDragEventArgs.Action%2A> auf <xref:System.Windows.Forms.DragAction?displayProperty=nameWithType> Wenn <xref:System.Windows.Forms.QueryContinueDragEventArgs.EscapePressed%2A> ist "true".  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.QueryContinueDragEventArgs.EscapePressed%2A> . Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.Control>, z. B. eine <xref:System.Windows.Forms.Button> oder <xref:System.Windows.Forms.ComboBox>. Geben Sie den Namen der Instanz `Control1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#43)]
+ [!code-vb[System.Windows.Forms.EventExamples#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyState">
+      <MemberSignature Language="C#" Value="public int KeyState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeyState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.QueryContinueDragEventArgs.KeyState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand von UMSCHALTTASTE, STRG und ALT ab.</summary>
+        <value>Der aktuelle Zustand von UMSCHALTTASTE, STRG und ALT.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bits, die festgelegt werden, in der <xref:System.Windows.Forms.QueryContinueDragEventArgs.KeyState%2A> Eigenschaft identifiziert den Schlüsseln oder Maustasten, die während des Vorgangs gedrückt wurden. Z. B. wenn die linke Maustaste gedrückt wird, das erste bit in der <xref:System.Windows.Forms.QueryContinueDragEventArgs.KeyState%2A> festgelegt wird. Sie können die bitweise `AND` Operator für einen bestimmten Schlüssel Status überprüft.  
+  
+ Die folgende Tabelle enthält die Bits, die für ein angegebenes Ereignis festgelegt sind.  
+  
+|Bit|Key|  
+|---------|---------|  
+|1|Die linke Maustaste gedrückt.|  
+|2|Die rechte Maustaste gedrückt.|  
+|4|Die UMSCHALTTASTE gedrückt.|  
+|8|Die STRG-Taste.|  
+|16|Die mittlere Maustaste los.|  
+|32|Die ALT-Taste.|  
+  
+ Wird standardmäßig die <xref:System.Windows.Forms.Control.QueryContinueDrag> Ereignis legt <xref:System.Windows.Forms.QueryContinueDragEventArgs.Action%2A> auf <xref:System.Windows.Forms.DragAction?displayProperty=nameWithType> Wenn <xref:System.Windows.Forms.QueryContinueDragEventArgs.KeyState%2A> gibt an, dass die linke, mittlere oder rechte Maustaste gedrückt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.Control>, z. B. eine <xref:System.Windows.Forms.Button> oder <xref:System.Windows.Forms.ComboBox>. Geben Sie den Namen der Instanz `Control1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#43)]
+ [!code-vb[System.Windows.Forms.EventExamples#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

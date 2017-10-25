@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Contexts">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Contexts" /> -Namespace enthält Objekte, die die Kontexte definieren, befinden sich alle Objekte in. Ein Kontext ist eine geordnete Sequenz von Eigenschaften, die eine Umgebung für die darin enthaltenen Objekte definiert. Kontexte werden während des Aktivierungsprozesses für Objekte erstellt, die erfordern, dass bestimmte automatische solche Synchronisierung, Transaktionen, Just-in-Time (JIT)-Aktivierung, Sicherheit usw. Dienste konfiguriert sind. Mehrere Objekte können in einem Kontext befinden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein neues Objekt erstellt wird,.NET Framework sucht nach einem kompatiblen Kontext zu oder erstellt einen neuen Kontext für das Objekt. Nachdem ein Objekt in einem Kontext platziert ist, bleibt es dort Lebensdauer. Klassen, die an einen Kontext gebunden werden können, werden als kontextgebundene Klassen bezeichnet. Wenn von einem anderen Kontext zugegriffen wird, werden diese kontextgebundenen Klassen direkt mit einem Proxy verwiesen. Ein Aufruf von einem Objekt in einem Kontext auf ein Objekt in einem anderen Kontext geht über einen Kontextproxy und, die von der Richtlinie, die von den kombinierten Kontexteigenschaften implementiert beeinflusst werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

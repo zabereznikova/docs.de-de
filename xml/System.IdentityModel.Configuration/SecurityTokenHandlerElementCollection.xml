@@ -1,0 +1,194 @@
+<Type Name="SecurityTokenHandlerElementCollection" FullName="System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection">
+  <TypeSignature Language="C#" Value="public sealed class SecurityTokenHandlerElementCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityTokenHandlerElementCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.IdentityModel.Configuration.CustomTypeElement), CollectionType=System.Configuration.ConfigurationElementCollectionType.BasicMap)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see langword="&lt;securityTokenHandlers&gt;" /> Element in einer Konfigurationsdatei. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<securityTokenHandlers>` Element enthält den Satz von sicherheitstokenhandlern (<xref:System.IdentityModel.Tokens.SecurityTokenHandler>) mit dem Endpunkt registriert sind. Standardmäßig wird die Auflistung mit aufgefüllt <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>, und <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>.  
+  
+ In der Konfigurationsdatei kann jede Tokenhandler benutzerdefinierte Konfiguration haben, als ein untergeordnetes Element der `<add>` Element. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> und <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> ein vordefinierten benutzerdefinierten Konfigurationsabschnitts haben.  
+  
+ Sicherheit-Tokenhandler Sammlungen können auch mit dem Namen werden; unter bestimmten Umständen verwendet werden. Die einzigen Namen, die das Framework verarbeitet werden "ActAs" und "OnBehalfOf". Wenn der Handler in diesen Sammlungen vorhanden sind, werden sie anstelle der Standardhandler verwendet werden, für die Verarbeitung von Actas- und OnBehalfOf-Token; z. B. `<securityTokenHandlers name="ActAs">`. Die `name` Attribut wird dargestellt, indem Sie die <xref:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.Name%2A> Eigenschaft.  
+  
+ Die `<securityTokenHandlerConfiguration>` untergeordneten Element definiert die Einstellungen der Standardrichtlinie für die Handler in der Auflistung (das kann durch den vom einzelner Handler in definierten Einstellungen überschrieben werden die \<hinzufügen > Element). Die `<securityTokenHandlerElement>` wird dargestellt, indem Sie die <xref:System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement> Klasse und erfolgt über die <xref:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.SecurityTokenHandlerConfiguration> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenHandlerElementCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="protected override void Init ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Init() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.Init" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", Options=System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Auflistung fest.</summary>
+        <value>Der Name der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt die `name` Attribut von der `<securityTokenHandlers>` Element.  
+  
+ Die einzigen Namen, die das Framework verarbeitet werden "ActAs" und "OnBehalfOf". Wenn Handler in diesen Sammlungen vorhanden sind, werden sie anstelle der Standardhandler verwendet werden, für die Verarbeitung von Actas- und OnBehalfOf-Token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenHandlerConfiguration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement SecurityTokenHandlerConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement SecurityTokenHandlerConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenHandlerElementCollection.SecurityTokenHandlerConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("securityTokenHandlerConfiguration", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Standardeinstellungen für die Handler in der Auflistung.</summary>
+        <value>Die Standardeinstellungen für die Handler in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt die `<securityTokenHandlerConfiguration>` untergeordnetes Element von der `<securityTokenHandlers>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

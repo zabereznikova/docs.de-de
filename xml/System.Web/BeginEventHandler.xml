@@ -1,0 +1,48 @@
+<Type Name="BeginEventHandler" FullName="System.Web.BeginEventHandler">
+  <TypeSignature Language="C#" Value="public delegate IAsyncResult BeginEventHandler(object sender, EventArgs e, AsyncCallback cb, object extraData);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeginEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.BeginEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.EventArgs" />
+    <Parameter Name="cb" Type="System.AsyncCallback" />
+    <Parameter Name="extraData" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.IAsyncResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+    <param name="cb">Der Delegat, der beim Abschluss des asynchronen Methodenaufrufs aufgerufen werden soll. Wenn <c>Cb</c> ist <see langword="null" />, der Delegat wird nicht aufgerufen.</param>
+    <param name="extraData">Alle zusätzlichen Daten, die zum Verarbeiten der Anforderung erforderlich sind.</param>
+    <summary>Stellt die Methode, die asynchrone Ereignisse, z. B. Anwendungsereignisse behandelt. Dieser Delegat wird zu Beginn eines asynchronen Vorgangs aufgerufen.</summary>
+    <returns>Die <see cref="T:System.IAsyncResult" /> , die das Ergebnis stellt die <see cref="T:System.Web.BeginEventHandler" /> Vorgang.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Web.BeginEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.BeginEventHandler> Delegat, der einen Handler einer asynchronen Seite registrieren.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[PageAddOnPreRenderCompleteAsync#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PageAddOnPreRenderCompleteAsync/CS/pageaddonprerendercompleteasynccs.aspx#1)]
+ [!code-aspx-vb[PageAddOnPreRenderCompleteAsync#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PageAddOnPreRenderCompleteAsync/VB/pageaddonprerendercompleteasyncvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

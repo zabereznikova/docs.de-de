@@ -1,0 +1,93 @@
+<Type Name="ContextConfiguration" FullName="System.Web.DynamicData.ContextConfiguration">
+  <TypeSignature Language="C#" Value="public class ContextConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContextConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.ContextConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Informationen für eine Datenkontext Instanz um Anpassungen zu ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.ContextConfiguration> -Klasse ermöglicht es Ihnen Zugriff auf Daten anpassen. Beispielsweise können Sie diese Klasse ein Gerüst für eine Webanwendung zu aktivieren oder um einen benutzerdefinierten Metadatenanbieter zu definieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.DynamicData.ContextConfiguration> -Klasse beim Aufrufen der <xref:System.Web.DynamicData.MetaModel.RegisterContext%2A> Methode, um ein Datenkontext mit aktiviertem Gerüstbau zu registrieren.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#99](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/global.asax.cs#99)]
+ [!code-vb[System.Web.DynamicData.MetaModel#99](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/global.asax.vb#99)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ContextConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.ContextConfiguration" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataProviderFactory">
+      <MemberSignature Language="C#" Value="public Func&lt;Type,System.ComponentModel.TypeDescriptionProvider&gt; MetadataProviderFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Type, class System.ComponentModel.TypeDescriptionProvider&gt; MetadataProviderFactory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ContextConfiguration.MetadataProviderFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Type,System.ComponentModel.TypeDescriptionProvider&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Metadatenanbieter.</summary>
+        <value>Der Typ des Metadatenanbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht Ihnen, einen benutzerdefinierten Metadatenanbieter für einen angegebenen Datenkontext zu definieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaffoldAllTables">
+      <MemberSignature Language="C#" Value="public bool ScaffoldAllTables { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScaffoldAllTables" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ContextConfiguration.ScaffoldAllTables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Gerüstbau aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Gerüstbau aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,301 @@
+<Type Name="IDataContractSurrogate" FullName="System.Runtime.Serialization.IDataContractSurrogate">
+  <TypeSignature Language="C#" Value="public interface IDataContractSurrogate" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataContractSurrogate" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.IDataContractSurrogate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die erforderlichen Methoden bereit, um mithilfe des <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> bei der Serialisierung, der Deserialisierung und beim Export und Import von XSD (XML Schema Documents) einen Typen durch einen anderen zu ersetzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.Runtime.Serialization.IDataContractSurrogate>, wenn Sie den <xref:System.Runtime.Serialization.DataContractSerializer> verwenden, falls Sie einen der folgenden Schritte ausführen möchten: einen Typ oder ein Objekt durch ein anderes ersetzen oder Schemavarianten dynamisch generieren. Eine beispielanwendung finden Sie unter [DataContract-Ersatzzeichen](~/docs/framework/wcf/samples/datacontract-surrogate.md). Weitere Informationen zu Datenverträgen finden Sie unter [mithilfe von Datenverträgen](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ Zur Laufzeit finden Sie den jeweiligen <xref:System.Runtime.Serialization.DataContractSerializer> für jeden Vorgang in einem Dienst, indem Sie den <xref:System.ServiceModel.Description.OperationDescription> verwenden, um die <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>-Instanz aufzufinden. Weitere Informationen zum Implementieren der Schnittstelle zur Erstellung eines Ersatzzeichens finden Sie unter [Datenvertrag-Ersatzzeichen](~/docs/framework/wcf/extending/data-contract-surrogates.md).  
+  
+ Sie können auch den <xref:System.Runtime.Serialization.IDataContractSurrogate> verwenden, um den Import und Export von XML-Schemas zu beeinflussen, wenn Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter> -Klasse und die <xref:System.Runtime.Serialization.XsdDataContractImporter> -Klasse verwenden. Dazu müssen Sie den <xref:System.Runtime.Serialization.IDataContractSurrogate> der <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>-Eigenschaft der <xref:System.Runtime.Serialization.ExportOptions> -Klasse oder der <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft der <xref:System.Runtime.Serialization.ImportOptions>-Klasse zuweisen.  Weitere Informationen finden Sie unter [Schema-Import / Export](~/docs/framework/wcf/feature-details/schema-import-and-export.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate>-Schnittstelle veranschaulicht. Der Code ersetzt die Serialisierung des `Person` Typs durch eine `PersonSurrogated`-Klasse.  
+  
+ [!code-csharp[IDataContractSurrogate#0](~/samples/snippets/csharp/VS_Snippets_CFX/idatacontractsurrogate/cs/source.cs#0)]
+ [!code-vb[IDataContractSurrogate#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/idatacontractsurrogate/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCustomDataToExport">
+      <MemberSignature Language="C#" Value="public object GetCustomDataToExport (System.Reflection.MemberInfo memberInfo, Type dataContractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetCustomDataToExport(class System.Reflection.MemberInfo memberInfo, class System.Type dataContractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport(System.Reflection.MemberInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memberInfo" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="dataContractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="memberInfo">Ein <see cref="T:System.Reflection.MemberInfo" />, der den Member beschreibt.</param>
+        <param name="dataContractType">Ein <see cref="T:System.Type" />.</param>
+        <summary>Fügt bei Schemaexportvorgängen für Rückgabewerte, die nicht NULL sind, Anmerkungen in das Schema ein.</summary>
+        <returns>Ein Objekt, das die in die XML-Schemadefinition einzufügende Anmerkung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomDataToExport">
+      <MemberSignature Language="C#" Value="public object GetCustomDataToExport (Type clrType, Type dataContractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetCustomDataToExport(class System.Type clrType, class System.Type dataContractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clrType" Type="System.Type" />
+        <Parameter Name="dataContractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="clrType">Der zu ersetzende CLR-Typ.</param>
+        <param name="dataContractType">Der Datenvertragstyp, dem Anmerkungen hinzugefügt werden sollen.</param>
+        <summary>Fügt bei Schemaexportvorgängen für Rückgabewerte, die nicht NULL sind, Anmerkungen in das Schema ein.</summary>
+        <returns>Ein Objekt, das die in die XML-Schemadefinition einzufügende Anmerkung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataContractType">
+      <MemberSignature Language="C#" Value="public Type GetDataContractType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetDataContractType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der zu ersetzende CLR-Typ <see cref="T:System.Type" />.</param>
+        <summary>Gibt bei der Serialisierung, der Deserialisierung und beim Schemaimport- und -export einen Datenvertragstyp zurück, der den angegebenen Typ ersetzt.</summary>
+        <returns>Der <see cref="T:System.Type" />, durch den der <paramref name="type" />-Wert ersetzt werden soll. Dieser Typ muss über den <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> serialisierbar sein. Er muss z. B. mit dem <see cref="T:System.Runtime.Serialization.DataContractAttribute" />-Attribut oder anderen Mechanismen markiert sein, die das Serialisierungsprogramm erkennt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[IDataContractSurrogate#1](~/samples/snippets/csharp/VS_Snippets_CFX/idatacontractsurrogate/cs/source.cs#1)]
+ [!code-vb[IDataContractSurrogate#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/idatacontractsurrogate/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeserializedObject">
+      <MemberSignature Language="C#" Value="public object GetDeserializedObject (object obj, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetDeserializedObject(object obj, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu ersetzende deserialisierte Objekt.</param>
+        <param name="targetType">Der <see cref="T:System.Type" />, dem das ersetzte Objekt zugewiesen werden soll.</param>
+        <summary>Gibt bei der Deserialisierung ein Objekt zurück, das ein Ersatz für das angegebene Objekt ist.</summary>
+        <returns>Das ersetzte deserialisierte Objekt. Dieses Objekt muss ein Typ sein, der über den <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> serialisierbar ist. Er muss z. B. mit dem <see cref="T:System.Runtime.Serialization.DataContractAttribute" />-Attribut oder anderen Mechanismen markiert sein, die das Serialisierungsprogramm erkennt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie bei einer einfachen Implementierung eine If…Then…Else-Programmverzweigung, um zu testen, ob der `obj`-Wert vom ersetzten Typ ist. Wenn dies der Fall ist, transformieren Sie ihn nach Bedarf, und geben Sie das ersetzte Objekt zurück. Das ersetzte Objekt kann eine neue Instanz oder die gleiche `obj`-Instanz sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[IDataContractSurrogate#3](~/samples/snippets/csharp/VS_Snippets_CFX/idatacontractsurrogate/cs/source.cs#3)]
+ [!code-vb[IDataContractSurrogate#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/idatacontractsurrogate/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownCustomDataTypes">
+      <MemberSignature Language="C#" Value="public void GetKnownCustomDataTypes (System.Collections.ObjectModel.Collection&lt;Type&gt; customDataTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetKnownCustomDataTypes(class System.Collections.ObjectModel.Collection`1&lt;class System.Type&gt; customDataTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.GetKnownCustomDataTypes(System.Collections.ObjectModel.Collection{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customDataTypes" Type="System.Collections.ObjectModel.Collection&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="customDataTypes">Ein <see cref="T:System.Collections.ObjectModel.Collection`1" /> von <see cref="T:System.Type" /> um bekannte Typen hinzuzufügen.</param>
+        <summary>Legt die Auflistung bekannter Typen fest, die für Serialisierung und Deserialisierung der benutzerdefinierten Datenobjekte verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist beim Schemaexport oder -import nur erforderlich, wenn Anmerkungen mit der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A>-Methode in das Schema eingefügt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectToSerialize">
+      <MemberSignature Language="C#" Value="public object GetObjectToSerialize (object obj, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObjectToSerialize(object obj, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu ersetzende Objekt.</param>
+        <param name="targetType">Der <see cref="T:System.Type" />, dem das ersetzte Objekt zugewiesen werden soll.</param>
+        <summary>Gibt bei der Serialisierung ein Objekt zurück, das das angegebene Objekt ersetzt.</summary>
+        <returns>Das zu serialisierende ersetzte Objekt. Das Objekt muss über den <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> serialisierbar sein. Er muss z. B. mit dem <see cref="T:System.Runtime.Serialization.DataContractAttribute" />-Attribut oder anderen Mechanismen markiert sein, die das Serialisierungsprogramm erkennt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss nicht zurückgeben `null` da bei der Deserialisierung der Daten Typ umgewandelt werden <xref:System.Object> und ein <xref:System.InvalidCastException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[IDataContractSurrogate#2](~/samples/snippets/csharp/VS_Snippets_CFX/idatacontractsurrogate/cs/source.cs#2)]
+ [!code-vb[IDataContractSurrogate#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/idatacontractsurrogate/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReferencedTypeOnImport">
+      <MemberSignature Language="C#" Value="public Type GetReferencedTypeOnImport (string typeName, string typeNamespace, object customData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetReferencedTypeOnImport(string typeName, string typeNamespace, object customData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="typeNamespace" Type="System.String" />
+        <Parameter Name="customData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der Typname in Schema.</param>
+        <param name="typeNamespace">Der Typnamespace in Schema.</param>
+        <param name="customData">Das Objekt, das die in die XML-Schemadefinition eingefügte Anmerkung darstellt, d. h. diese Daten können zum Suchen des Typs, auf den verwiesen wird, verwendet werden.</param>
+        <summary>Gibt während des Schemaimports den Typ zurück, auf den das Schema verweist.</summary>
+        <returns>Der <see cref="T:System.Type" />, der für den Typ, auf den verwiesen wird, verwendet werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null` soll zurückgegeben werden, wenn kein CLR-Typ zur Darstellung des Schematyps vorhanden ist. Dadurch wird beim Schemaimport ein neuer Typ generiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[IDataContractSurrogate#4](~/samples/snippets/csharp/VS_Snippets_CFX/idatacontractsurrogate/cs/source.cs#4)]
+ [!code-vb[IDataContractSurrogate#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/idatacontractsurrogate/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessImportedType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeDeclaration ProcessImportedType (System.CodeDom.CodeTypeDeclaration typeDeclaration, System.CodeDom.CodeCompileUnit compileUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.CodeTypeDeclaration ProcessImportedType(class System.CodeDom.CodeTypeDeclaration typeDeclaration, class System.CodeDom.CodeCompileUnit compileUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType(System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDeclaration" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="typeDeclaration">Ein zu verarbeitender <see cref="T:System.CodeDom.CodeTypeDeclaration" />, der die beim Schemaimport generierte Typdeklaration darstellt.</param>
+        <param name="compileUnit">Der <see cref="T:System.CodeDom.CodeCompileUnit" />, der den anderen beim Schemaimport generierten Code enthält.</param>
+        <summary>Verarbeitet den Typ, der aus dem importierten Schema generiert wurde.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeTypeDeclaration" />, der den verarbeiteten Typ enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eingabe-<xref:System.CodeDom.CodeTypeDeclaration> oder andere Informationen im <xref:System.CodeDom.CodeCompileUnit> können vom Benutzer mit dieser Methode geändert werden. Wenn `null` zurückgegeben wird, kann der Typ nicht generiert werden. Wenn ein neuer <xref:System.CodeDom.CodeTypeDeclaration> zurückgegeben wird, ersetzt er den ursprünglich generierten Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

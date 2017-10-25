@@ -1,0 +1,230 @@
+<Type Name="ControlParser" FullName="System.Web.UI.Design.ControlParser">
+  <TypeSignature Language="C#" Value="public sealed class ControlParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlParser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ControlParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Erstellen eines Webservers <see cref="T:System.Web.UI.Control" /> Steuerelement oder <see cref="T:System.Web.UI.ITemplate" /> Schnittstelle aus einer Zeichenfolge von Markup, das eine persistente Steuerelement oder eine Vorlage darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die System.Web.UI.Design.ControlParser-Klasse enthält Methoden, die ein t: System.Web.UI.Control-Steuerelement oder: System.Web.UI.ITemplate Schnittstelle erstellen können, durch Analysieren einer Zeichenfolge von Markup, das ein Steuerelement oder eine Steuerelementvorlage darstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beim Abrufen von HTML-Markup für ein Steuerelement auf einer Seite mit den <xref:System.Web.UI.Design.ControlPersister> Klasse und Gewusst wie: instanziieren ein Steuerelements mithilfe der <xref:System.Web.UI.Design.ControlParser> Klasse. Außerdem wird veranschaulicht, wie Microsoft Windows-Dialogfelder in einem Designer angezeigt werden.  
+  
+ [!code-cpp[ControlParserPersisterExample#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#1)]
+ [!code-csharp[ControlParserPersisterExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#1)]
+ [!code-vb[ControlParserPersisterExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ParseControl">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Control ParseControl (System.ComponentModel.Design.IDesignerHost designerHost, string controlText);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Control ParseControl(class System.ComponentModel.Design.IDesignerHost designerHost, string controlText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlParser.ParseControl(System.ComponentModel.Design.IDesignerHost,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="controlText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Eine <see cref="T:System.ComponentModel.Design.IDesignerHost" /> -Instanz, die dem Designerhost für die Seite ist.</param>
+        <param name="controlText">Das HTML-Markup für das Steuerelement.</param>
+        <summary>Erstellt ein Steuerelement aus dem angegebenen Markup mithilfe des angegebenen Designerhosts.</summary>
+        <returns>Die <see cref="T:System.Web.UI.Control" /> , *ControlText* darstellt; andernfalls <see langword="null" />, wenn der Parser das Steuerelement erstellt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseControl%2A> Methode greift auf die Zeichenfolge, die die Registrierungsdirektive für die Verwendung der Dienste des Designerhosts ASP.NET-Webseite darstellt. Designerhostdienste über das erworben werden die <xref:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager%2A> Eigenschaft von der <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> -Objekt, oder wenn diese nicht verfügbar ist, ist die <xref:System.Web.UI.Design.IWebFormReferenceManager> Dienst.  
+  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseControl%2A> Methode löst eine Ausnahme aus, wenn der Parser das Steuerelement erstellt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Steuerelement aus HTML-Markuptext erstellen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.ControlParser> Klasse.  
+  
+ [!code-cpp[ControlParserPersisterExample#2](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#2)]
+ [!code-csharp[ControlParserPersisterExample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#2)]
+ [!code-vb[ControlParserPersisterExample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseControl">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Control ParseControl (System.ComponentModel.Design.IDesignerHost designerHost, string controlText, string directives);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Control ParseControl(class System.ComponentModel.Design.IDesignerHost designerHost, string controlText, string directives) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlParser.ParseControl(System.ComponentModel.Design.IDesignerHost,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="controlText" Type="System.String" />
+        <Parameter Name="directives" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Eine <see cref="T:System.ComponentModel.Design.IDesignerHost" /> -Instanz, die dem Designerhost für die Seite ist.</param>
+        <param name="controlText">Der Text des HTML-Markup für das Steuerelement.</param>
+        <param name="directives">Die Seitendirektiven in den Code für das Steuerelement eingeschlossen werden sollen.</param>
+        <summary>Erstellt ein Steuerelement aus dem angegebenen Markup unter Verwendung des angegebenen Designerhosts und Richtlinien.</summary>
+        <returns>Die <see cref="T:System.Web.UI.Control" /> , <paramref name="controlText" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseControl%2A> Methode greift auf die Zeichenfolge, die die Registrierungsdirektive für die Verwendung der Dienste des Designerhosts ASP.NET-Webseite darstellt. Designerhostdienste über das erworben werden die <xref:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager%2A> Eigenschaft von der <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> -Objekt, oder wenn diese nicht verfügbar ist, ist die <xref:System.Web.UI.Design.IWebFormReferenceManager> Dienst.  
+  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseControl%2A> Methode löst eine Ausnahme aus, wenn der Parser das Steuerelement erstellt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Steuerelement aus HTML-Markuptext erstellen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.ControlParser> Klasse.  
+  
+ [!code-cpp[ControlParserPersisterExample#2](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#2)]
+ [!code-csharp[ControlParserPersisterExample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#2)]
+ [!code-vb[ControlParserPersisterExample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseControls">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Control[] ParseControls (System.ComponentModel.Design.IDesignerHost designerHost, string controlText);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Control[] ParseControls(class System.ComponentModel.Design.IDesignerHost designerHost, string controlText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlParser.ParseControls(System.ComponentModel.Design.IDesignerHost,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="controlText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Eine <see cref="T:System.ComponentModel.Design.IDesignerHost" /> -Instanz, die dem Designerhost für die Seite ist.</param>
+        <param name="controlText">Eine Zeichenfolge, die eine Auflistung von Markup für Steuerelemente darstellt.</param>
+        <summary>Erstellt ein Array von Steuerelementen aus dem angegebenen Markup mithilfe des angegebenen Designerhosts.</summary>
+        <returns>Ein Array von <see cref="T:System.Web.UI.Control" /> Elemente, die aus analysiert <paramref name="controlText" />ist, andernfalls <see langword="null" />, wenn der Parser die Steuerelemente erstellt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseControls%2A> Methode greift auf die Zeichenfolge, die die Registrierungsdirektive für die Verwendung der Dienste des Designerhosts ASP.NET-Webseite darstellt. Designerhostdienste über das erworben werden die <xref:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager%2A> Eigenschaft von der <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> -Objekt, oder wenn diese nicht verfügbar ist, ist die <xref:System.Web.UI.Design.IWebFormReferenceManager> Dienst.  
+  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseControls%2A> Methode löst eine Ausnahme aus, wenn der Parser die Steuerelemente aus erstellt werden kann die `controlText` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designerHost" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="controlText" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTemplate">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.ITemplate ParseTemplate (System.ComponentModel.Design.IDesignerHost designerHost, string templateText);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.ITemplate ParseTemplate(class System.ComponentModel.Design.IDesignerHost designerHost, string templateText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlParser.ParseTemplate(System.ComponentModel.Design.IDesignerHost,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="templateText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Eine <see cref="T:System.ComponentModel.Design.IDesignerHost" /> -Instanz, die dem Designerhost für die Seite ist.</param>
+        <param name="templateText">Eine Zeichenfolge, die das Vorlagenmarkup enthält.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.ITemplate" /> Schnittstelle aus dem Markup für die angegebene Vorlage.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ITemplate" /> von Analyse erstellte Instanz <paramref name="templateText" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseTemplate%2A> Methode greift auf die Zeichenfolge, die die Registrierungsdirektive für die Verwendung der Dienste des Designerhosts ASP.NET-Webseite darstellt. Designerhostdienste über das erworben werden die <xref:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager%2A> Eigenschaft von der <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> -Objekt, oder wenn diese nicht verfügbar ist, ist die <xref:System.Web.UI.Design.IWebFormReferenceManager> Dienst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designerHost" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTemplate">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.ITemplate ParseTemplate (System.ComponentModel.Design.IDesignerHost designerHost, string templateText, string directives);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.ITemplate ParseTemplate(class System.ComponentModel.Design.IDesignerHost designerHost, string templateText, string directives) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlParser.ParseTemplate(System.ComponentModel.Design.IDesignerHost,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="templateText" Type="System.String" />
+        <Parameter Name="directives" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Eine <see cref="T:System.ComponentModel.Design.IDesignerHost" /> -Instanz, die dem Designerhost für die Seite ist.</param>
+        <param name="templateText">Eine Zeichenfolge, die das Vorlagenmarkup enthält.</param>
+        <param name="directives">Alle Richtlinien, die am Anfang des Codes für die Vorlage hinzugefügt.</param>
+        <summary>Analysiert das Markup für die angegebene Vorlage und erstellt eine <see cref="T:System.Web.UI.ITemplate" /> Schnittstelle.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ITemplate" /> von Analyse erstellte Instanz <paramref name="templateText" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlParser.ParseTemplate%2A> Methode greift auf die Zeichenfolge, die die Registrierungsdirektive für die Verwendung der Dienste des Designerhosts ASP.NET-Webseite darstellt. Designerhostdienste über das erworben werden die <xref:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager%2A> Eigenschaft von der <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> -Objekt, oder wenn diese nicht verfügbar ist, ist die <xref:System.Web.UI.Design.IWebFormReferenceManager> Dienst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designerHost" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

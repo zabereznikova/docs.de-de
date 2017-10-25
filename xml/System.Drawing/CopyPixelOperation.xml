@@ -1,0 +1,302 @@
+<Type Name="CopyPixelOperation" FullName="System.Drawing.CopyPixelOperation">
+  <TypeSignature Language="C#" Value="public enum CopyPixelOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CopyPixelOperation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.CopyPixelOperation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bestimmt, wie die Quellfarbe in Pixel Kopiervorgang mit der Zielfarbe zu einer endgültigen Farbe führt kombiniert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.CopyPixelOperation> Enumeration wird verwendet, durch die <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode der <xref:System.Drawing.Graphics> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Blackness">
+      <MemberSignature Language="C#" Value="Blackness" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation Blackness = int32(66)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.Blackness" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zielbereich wird mithilfe von Index 0 in der physischen Palette zugeordnete Farbe gefüllt. (Diese Farbe wird für die physische Standardpalette Schwarz).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptureBlt">
+      <MemberSignature Language="C#" Value="CaptureBlt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation CaptureBlt = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.CaptureBlt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fenster, die über die Fenster im Protokollstapel zugeordnet werden, sind in das resultierende Image enthalten. Standardmäßig enthält das Image nur das Fenster. Beachten Sie, dass dies in der Regel zum Drucken von Gerätekontexten verwendet werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationInvert">
+      <MemberSignature Language="C#" Value="DestinationInvert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation DestinationInvert = int32(5570569)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.DestinationInvert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zielbereich wird umgekehrt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeCopy">
+      <MemberSignature Language="C#" Value="MergeCopy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation MergeCopy = int32(12583114)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.MergeCopy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben des Quellbereichs werden mit den Hintergrundfarben des Zielgerätekontexts mithilfe des booleschen der ausgewählte Pinsel zusammengeführt <see langword="AND" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MergePaint">
+      <MemberSignature Language="C#" Value="MergePaint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation MergePaint = int32(12255782)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.MergePaint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben des invertierten Quellbereichs werden mit den Hintergrundfarben des Zielbereichs zusammengeführt, mithilfe des booleschen <see langword="OR" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoMirrorBitmap">
+      <MemberSignature Language="C#" Value="NoMirrorBitmap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation NoMirrorBitmap = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.NoMirrorBitmap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bitmap wird nicht gespiegelt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSourceCopy">
+      <MemberSignature Language="C#" Value="NotSourceCopy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation NotSourceCopy = int32(3342344)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.NotSourceCopy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Invertierten Quellbereichs ist in die Zieltabelle kopiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSourceErase">
+      <MemberSignature Language="C#" Value="NotSourceErase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation NotSourceErase = int32(1114278)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.NotSourceErase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben für Quelle und Ziel werden mithilfe des booleschen kombiniert <see langword="OR" /> Operator, und klicken Sie dann die resultierende Farbe wird anschließend invertiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PatCopy">
+      <MemberSignature Language="C#" Value="PatCopy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation PatCopy = int32(15728673)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.PatCopy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pinsel im Zielgerätekontext aktuell ausgewählten wird in das Zielbitmap kopiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PatInvert">
+      <MemberSignature Language="C#" Value="PatInvert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation PatInvert = int32(5898313)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.PatInvert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben der Pinsel im Zielgerätekontext aktuell ausgewählten werden mit kombiniert die Farben des Ziels werden mithilfe des booleschen <see langword="XOR" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PatPaint">
+      <MemberSignature Language="C#" Value="PatPaint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation PatPaint = int32(16452105)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.PatPaint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben der Pinsel im Zielgerätekontext aktuell ausgewählten werden mit den Hintergrundfarben invertierten Quellbereichs mithilfe des booleschen kombiniert <see langword="OR" /> Operator. Das Ergebnis dieses Vorgangs wird mit den Hintergrundfarben des Zielbereichs mithilfe des booleschen kombiniert <see langword="OR" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceAnd">
+      <MemberSignature Language="C#" Value="SourceAnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation SourceAnd = int32(8913094)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.SourceAnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben der Bereiche Quelle und Ziel werden mithilfe des booleschen kombiniert <see langword="AND" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceCopy">
+      <MemberSignature Language="C#" Value="SourceCopy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation SourceCopy = int32(13369376)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.SourceCopy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Quellbereich wird direkt in den Zielbereich kopiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceErase">
+      <MemberSignature Language="C#" Value="SourceErase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation SourceErase = int32(4457256)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.SourceErase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die invertierten Farben des Zielbereichs werden mit den Hintergrundfarben des Quellbereichs mithilfe des booleschen kombiniert <see langword="AND" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceInvert">
+      <MemberSignature Language="C#" Value="SourceInvert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation SourceInvert = int32(6684742)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.SourceInvert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben der Bereiche Quelle und Ziel werden mithilfe des booleschen kombiniert <see langword="XOR" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourcePaint">
+      <MemberSignature Language="C#" Value="SourcePaint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation SourcePaint = int32(15597702)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.SourcePaint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Farben der Bereiche Quelle und Ziel werden mithilfe des booleschen kombiniert <see langword="OR" /> Operator.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Whiteness">
+      <MemberSignature Language="C#" Value="Whiteness" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.CopyPixelOperation Whiteness = int32(16711778)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.CopyPixelOperation.Whiteness" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.CopyPixelOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zielbereich ist mit Farbe gefüllt, den Index 1 in der physischen Palette zugeordnet. (Diese Farbe wird für die physische Standardpalette weißen.)</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

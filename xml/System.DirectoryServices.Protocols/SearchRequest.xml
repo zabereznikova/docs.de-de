@@ -1,0 +1,277 @@
+<Type Name="SearchRequest" FullName="System.DirectoryServices.Protocols.SearchRequest">
+  <TypeSignature Language="C#" Value="public class SearchRequest : System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchRequest extends System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.SearchRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryRequest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.SearchRequest" /> Klasse initiiert einen Suchvorgang.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SearchRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SearchRequest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.SearchRequest.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.SearchRequest" />-Klasse. Dieser Konstruktor erstellt eine leere Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SearchRequest (string distinguishedName, string ldapFilter, System.DirectoryServices.Protocols.SearchScope searchScope, params string[] attributeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName, string ldapFilter, valuetype System.DirectoryServices.Protocols.SearchScope searchScope, string[] attributeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SearchRequest.#ctor(System.String,System.String,System.DirectoryServices.Protocols.SearchScope,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="ldapFilter" Type="System.String" />
+        <Parameter Name="searchScope" Type="System.DirectoryServices.Protocols.SearchScope" />
+        <Parameter Name="attributeList" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">Der distinguished Name des Objekts auf dem mit der Suche begonnen werden soll.</param>
+        <param name="ldapFilter">Einen LDAP-Suchfilter.</param>
+        <param name="searchScope">Einer der Werte von <see cref="T:System.DirectoryServices.Protocols.SearchScope" /> , die den Suchbereich angibt.</param>
+        <param name="attributeList">Ein Array, das die angeforderten Attribute im Resultset enthält.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.SearchRequest.#ctor(System.String,System.String,System.DirectoryServices.Protocols.SearchScope,System.String[])" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.SearchRequest" /> -Klasse mit dem angegebenen Namen, Suchfilter, Bereich und Attribute.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SearchRequest (string distinguishedName, System.Xml.XmlDocument filter, System.DirectoryServices.Protocols.SearchScope searchScope, params string[] attributeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName, class System.Xml.XmlDocument filter, valuetype System.DirectoryServices.Protocols.SearchScope searchScope, string[] attributeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SearchRequest.#ctor(System.String,System.Xml.XmlDocument,System.DirectoryServices.Protocols.SearchScope,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="filter" Type="System.Xml.XmlDocument" />
+        <Parameter Name="searchScope" Type="System.DirectoryServices.Protocols.SearchScope" />
+        <Parameter Name="attributeList" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">Der distinguished Name des Objekts, für die Suche.</param>
+        <param name="filter">Ein DSML v2-Suchfilter.</param>
+        <param name="searchScope">Ein <see cref="T:System.DirectoryServices.Protocols.SearchScope" /> Wert, der den Suchbereich angibt. Der Standardwert ist <see cref="T:System.DirectoryServices.Protocols.SearchScope" />.</param>
+        <param name="attributeList">Ein Array, das die angeforderten Attribute im Resultset enthält.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.SearchRequest.#ctor(System.String,System.Xml.XmlDocument,System.DirectoryServices.Protocols.SearchScope,System.String[])" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.SearchRequest" /> -Klasse mit dem angegebenen Namen, Suchfilter, Bereich und Attribute.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Aliases">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DereferenceAlias Aliases { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.Protocols.DereferenceAlias Aliases" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.Aliases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DereferenceAlias</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.Aliases" /> Eigenschaft enthält einen der Werte von <see cref="T:System.DirectoryServices.Protocols.DereferenceAlias" /> , die die Dereferenzierung alias Verhalten angibt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.Protocols.DereferenceAlias" /> Wert, der die Dereferenzierung alias Verhalten angibt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert ist kein Mitglied der <see cref="T:System.DirectoryServices.Protocols.DereferenceAlias" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.Attributes" /> Eigenschaft enthält die Attribute des angeforderten Objekts.</summary>
+        <value>Die Attribute des angeforderten Objekts. Legen Sie diese Eigenschaft auf <see langword="null" /> um alle Attribute abzurufen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Eine der Zeichenfolgen in <see cref="T:System.Collections.Specialized.StringCollection" /> Objekt ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinguishedName">
+      <MemberSignature Language="C#" Value="public string DistinguishedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistinguishedName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.DistinguishedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.DistinguishedName" /> Eigenschaft enthält den distinguished Name des angeforderten Objekts.</summary>
+        <value>Der distinguished Name des angeforderten Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public object Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Filter" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.Filter" /> Eigenschaft enthält die Suchfilter.</summary>
+        <value>Suchfilter. Wenn der Wert eine Zeichenfolge ist, ist diese Eigenschaft einen LDAP-Suchfilter. Wenn der Wert eines XML-Dokuments ist, ist die Eigenschaft ein DSML-v2-Suchfilter. Ein anderen Typ löst eine Ausnahme aus.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der Wert ist eine Zeichenfolge oder ein XML-Dokument.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.SearchScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.Protocols.SearchScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SearchScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.Scope" /> Eigenschaft enthält einen der Werte der <see cref="T:System.DirectoryServices.SearchScope" /> den Bereich der Suche angibt.</summary>
+        <value>Einer der Werte der <see cref="T:System.DirectoryServices.SearchScope" /> den Bereich der Suche angibt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert ist kein Mitglied der <see cref="T:System.DirectoryServices.SearchScope" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeLimit">
+      <MemberSignature Language="C#" Value="public int SizeLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SizeLimit" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.SizeLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.SizeLimit" /> Eigenschaft enthält die maximale Anzahl von Objekten, die in der suchanforderung zurückgegeben.</summary>
+        <value>Die maximale Anzahl von Objekten, die in der suchanforderung zurückgegeben.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeLimit">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeLimit" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.TimeLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.TimeLimit" /> Eigenschaft enthält eine <see cref="T:System.TimeSpan" /> -Objekt, das die Zeitspanne, die zulässig ist, gibt an, wenn der Server die suchanforderung verarbeitet.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> -Objekt, das die Zeitspanne, die zulässig ist, gibt an, wenn der Server die suchanforderung verarbeitet.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der Wert ist kleiner als <see cref="F:System.TimeSpan.Zero" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlNode">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlElement ToXmlNode (System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlElement ToXmlNode(class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SearchRequest.ToXmlNode(System.Xml.XmlDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="doc">Ein <see cref="T:System.Xml.XmlDocument" />-Objekt.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.SearchRequest.ToXmlNode(System.Xml.XmlDocument)" /> Methode erstellt einen XML-Knoten aus dem angegebenen <see cref="T:System.Xml.XmlDocument" /> Objekt.</summary>
+        <returns>Das resultierende <see cref="T:System.Xml.XmlElement" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypesOnly">
+      <MemberSignature Language="C#" Value="public bool TypesOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TypesOnly" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchRequest.TypesOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SearchRequest.TypesOnly" /> Eigenschaft gibt an, ob die Suche nur den Attributnamen und nicht die Attributwerte zurückgibt.</summary>
+        <value>Wenn diese Eigenschaft ist <see langword="true" />, die Suche gibt nur den Attributnamen ab. Wenn diese Eigenschaft ist <see langword="false" />, die Suche gibt sowohl die Attributnamen und Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,27 @@
+<Namespace Name="System.Drawing.Printing">
+  <Docs>
+    <summary>Die <see cref="N:System.Drawing.Printing" /> -Namespace stellt die Print-bezogene Dienste für Windows Forms-Anwendungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel beim Drucken aus einer Windows Forms-Anwendung erstellen Sie eine neue Instanz der der <xref:System.Drawing.Printing.PrintDocument> Klasse, legen Sie die Eigenschaften, z. B. <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> und <xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A>, die beschrieben, wie Sie und rufen die <xref:System.Drawing.Printing.PrintDocument.Print%2A> Methode so drucken Sie tatsächlich die Dokument. Aufrufen der <xref:System.Drawing.Printing.PrintDocument.Print%2A?displayProperty=nameWithType> -Methode löst das <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> -Ereignis, das zum Ausführen des Dokumentlayouts für den Druck behandelt werden soll.  
+  
+ Verwenden der <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> Eigenschaft von der <xref:System.Drawing.Printing.PrintPageEventArgs> Objekt abgerufen, von der <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> Ereignis an, die zu druckende Ausgabe. Wenn Sie eine Textdatei drucken möchten, verwenden Sie <xref:System.IO.StreamReader> zum Lesen einer Zeile zu einem Zeitpunkt aus dem Stream und den Aufruf der <xref:System.Drawing.Graphics.DrawString%2A> Methode, um die Zeile im Grafikobjekt zu zeichnen. Weitere Informationen zu diesem Vorgang finden Sie unter der <xref:System.Drawing.Graphics> und <xref:System.IO.StreamReader> Klassen. Sehen Sie ein Beispiel für das Drucken eines Textdokuments in die <xref:System.Drawing.Printing.PrintDocument> Übersichtsthema.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden die <xref:System.Windows.Forms.TextRenderer> -Klasse sind zum Drucken nicht unterstützt. Verwenden Sie stattdessen die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
+  
+ Beim Implementieren in einer abgeleiteten Klasse die <xref:System.Drawing.Printing.PrintController> Steuerelemente wie ein <xref:System.Drawing.Printing.PrintDocument> gedruckt wird. Die <xref:System.Drawing.Printing.PrintDocument.Print%2A?displayProperty=nameWithType> Methode ruft des Druckercontrollers <xref:System.Drawing.Printing.PrintController.OnStartPrint%2A>, <xref:System.Drawing.Printing.PrintController.OnEndPrint%2A>, <xref:System.Drawing.Printing.PrintController.OnStartPage%2A>, und <xref:System.Drawing.Printing.PrintController.OnEndPage%2A> -Methoden, die wiederum dem Drucker anweisen, wie das Dokument zu drucken. Weitere Informationen zu drucken Dialogfelder, finden Sie unter <xref:System.Windows.Forms.PrintDialog> und <xref:System.Windows.Forms.PageSetupDialog>.  
+  
+ Der Prozess für die Seitenansicht verwendet eine spezielle Druckercontroller, im Dialogfeld und Steuerelement. Ein Beispiel eines solchen Druckercontroller und das Dialogfeld finden Sie unter <xref:System.Drawing.Printing.PreviewPrintController>, <xref:System.Windows.Forms.PrintPreviewDialog>, und <xref:System.Windows.Forms.PrintPreviewControl>.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Drawing.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie über eine Windows Presentation Foundation (WPF)-Anwendung drucken möchten, finden Sie unter der <xref:System.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

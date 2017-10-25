@@ -1,0 +1,297 @@
+<Type Name="SessionSecurityTokenCacheKey" FullName="System.IdentityModel.Tokens.SessionSecurityTokenCacheKey">
+  <TypeSignature Language="C#" Value="public class SessionSecurityTokenCacheKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionSecurityTokenCacheKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Schlüssel für einen Eintrag in einer <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenCache" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Zwischenspeichern einer <xref:System.IdentityModel.Tokens.SessionSecurityToken> stehen zwei Indizes erforderlich. Eine ist die Kontext-ID, dargestellt durch die <xref:System.IdentityModel.Tokens.SessionSecurityToken.ContextId%2A?displayProperty=nameWithType> Eigenschaft, die in alle Sitzungstoken, die eindeutig ist. Das andere ist die Generierung von Zertifizierungsstellenschlüsseln, dargestellt durch die <xref:System.IdentityModel.Tokens.SessionSecurityToken.KeyGeneration%2A?displayProperty=nameWithType> -Eigenschaft, die ein Sitzungstoken einzigartig ist. Bei dessen Ausstellung eines Sitzungstokens verfügt über nur einen Kontext-ID Wenn das Sitzungstoken erneuert wird, wird die schlüsselgenerierung hinzugefügt. Nach der Erneuerung ist das erneuerte Sitzungstoken über die Kontext-ID und Generierung von Zertifizierungsstellenschlüsseln eindeutig identifizierbar.  
+  
+ Objekte des Typs <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey> dienen als die Indizes für die Sitzung Tokencache. Ein Index besitzen immer eine gültige <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.ContextId%2A> -Eigenschaft angegeben, aber die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration%2A> Eigenschaft möglicherweise `null`, je nachdem, ob das Token erneuert wurde. Es gibt auch eine optionale <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.EndpointId%2A> dadurch, dass den Endpunkt, der das Token beschränkt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionSecurityTokenCacheKey (string endpointId, System.Xml.UniqueId contextId, System.Xml.UniqueId keyGeneration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string endpointId, class System.Xml.UniqueId contextId, class System.Xml.UniqueId keyGeneration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.#ctor(System.String,System.Xml.UniqueId,System.Xml.UniqueId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpointId" Type="System.String" />
+        <Parameter Name="contextId" Type="System.Xml.UniqueId" />
+        <Parameter Name="keyGeneration" Type="System.Xml.UniqueId" />
+      </Parameters>
+      <Docs>
+        <param name="endpointId">Die Endpunkt-ID, zu der der Cacheeintrag beschränkt ist. Dies ist der Wert muss der <see cref="P:System.IdentityModel.Tokens.SessionSecurityToken.EndpointId" /> Eigenschaft des zwischengespeicherten Tokens.</param>
+        <param name="contextId">Die Kontext-ID des Cacheeintrags. Dies ist der Wert muss der <see cref="P:System.IdentityModel.Tokens.SessionSecurityToken.ContextId" /> Eigenschaft des zwischengespeicherten Tokens.</param>
+        <param name="keyGeneration">Die schlüsselgenerierung des Cacheeintrags. Dies ist der Wert muss der <see cref="P:System.IdentityModel.Tokens.SessionSecurityToken.KeyGeneration" /> Eigenschaft des zwischengespeicherten Tokens. Dieser Wert ist verfügbar, wenn das Token erneuert wird. Sie werden <see langword="null" /> beim Zwischenspeichern von eines neuen Tokens.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextId">
+      <MemberSignature Language="C#" Value="public System.Xml.UniqueId ContextId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.UniqueId ContextId" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.ContextId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.UniqueId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kontext-ID für den Cacheschlüssel an.</summary>
+        <value>Die Kontext-ID des Cacheschlüssels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies entspricht der <xref:System.IdentityModel.Tokens.SessionSecurityToken.ContextId%2A> Eigenschaft des zwischengespeicherten Tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointId">
+      <MemberSignature Language="C#" Value="public string EndpointId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointId" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.EndpointId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endpunkt-ID, die auf dem dieser Cacheeintrag begrenzt ist.</summary>
+        <value>Die Endpunkt-ID auf der dieser Cacheeintrag begrenzt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies entspricht der <xref:System.IdentityModel.Tokens.SessionSecurityToken.EndpointId%2A> Eigenschaft des zwischengespeicherten Tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, mit der aktuellen Cacheschlüssel verglichen werden soll. Muss von <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" />.</param>
+        <summary>Bestimmt, ob das angegebene Objekt dem aktuellen Cacheschlüssel identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt mit dem aktuellen Cacheschlüssel identisch ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.IgnoreKeyGeneration%2A> ist `true`die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration%2A> Eigenschaft wird nicht in den Vergleich verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode für den aktuellen Cacheschlüssel zurück.</summary>
+        <returns>Der Hashcode für die aktuelle Cacheschlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.IgnoreKeyGeneration%2A> ist `true`die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration%2A> Eigenschaft wird beim Generieren des Hashcodes nicht verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreKeyGeneration">
+      <MemberSignature Language="C#" Value="public bool IgnoreKeyGeneration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreKeyGeneration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.IgnoreKeyGeneration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Generierung von Zertifizierungsstellenschlüsseln bei Index Vergleich ignoriert werden kann.</summary>
+        <value>
+          <see langword="true" />Generierung von Zertifizierungsstellenschlüsseln zu ignorieren; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wirkt sich auf die Art und Weise, in dem die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration%2A> Eigenschaft behandelt wird, indem Sie die folgenden Methoden und Operatoren: <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.Equals%2A>, <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.GetHashCode%2A>, <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.op_Equality%2A>, <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.op_Inequality%2A>, und <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.ToString%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyGeneration">
+      <MemberSignature Language="C#" Value="public System.Xml.UniqueId KeyGeneration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.UniqueId KeyGeneration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.UniqueId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die schlüsselgenerierung für des Cacheschlüssels ab</summary>
+        <value>Die schlüsselgenerierung für den Cacheschlüssel</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies entspricht der <xref:System.IdentityModel.Tokens.SessionSecurityToken.KeyGeneration%2A> Eigenschaft des zwischengespeicherten Tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.IdentityModel.Tokens.SessionSecurityTokenCacheKey first, System.IdentityModel.Tokens.SessionSecurityTokenCacheKey second);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.IdentityModel.Tokens.SessionSecurityTokenCacheKey first, class System.IdentityModel.Tokens.SessionSecurityTokenCacheKey second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.op_Equality(System.IdentityModel.Tokens.SessionSecurityTokenCacheKey,System.IdentityModel.Tokens.SessionSecurityTokenCacheKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" />
+        <Parameter Name="second" Type="System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" />
+      </Parameters>
+      <Docs>
+        <param name="first">Die erste zu vergleichende Cacheschlüssel.</param>
+        <param name="second">Die zweite zu vergleichende Cacheschlüssel.</param>
+        <summary>Implementiert den Gleichheitsoperator für die <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" /> Klasse.</summary>
+        <returns>
+          <see langword="true" />Wenn die Cacheschlüssel gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.IgnoreKeyGeneration%2A> ist `true`die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration%2A> Eigenschaft wird nicht in den Vergleich verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.IdentityModel.Tokens.SessionSecurityTokenCacheKey first, System.IdentityModel.Tokens.SessionSecurityTokenCacheKey second);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.IdentityModel.Tokens.SessionSecurityTokenCacheKey first, class System.IdentityModel.Tokens.SessionSecurityTokenCacheKey second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.op_Inequality(System.IdentityModel.Tokens.SessionSecurityTokenCacheKey,System.IdentityModel.Tokens.SessionSecurityTokenCacheKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" />
+        <Parameter Name="second" Type="System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" />
+      </Parameters>
+      <Docs>
+        <param name="first">Die erste zu vergleichende Cacheschlüssel.</param>
+        <param name="second">Die zweite zu vergleichende Cacheschlüssel.</param>
+        <summary>Implementiert den Gleichheitsoperator für die <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" /> Klasse.</summary>
+        <returns>
+          <see langword="true" />Wenn die Cacheschlüssel nicht gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.IgnoreKeyGeneration%2A> ist `true`die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration%2A> Eigenschaft wird nicht in den Vergleich verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt <see cref="M:System.Object.ToString" /> , geben Sie einen eindeutigen Bezeichner.</summary>
+        <returns>Der Schlüssel in Form einer Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.IgnoreKeyGeneration%2A> ist `true`die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey.KeyGeneration%2A> Eigenschaft wird nicht verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

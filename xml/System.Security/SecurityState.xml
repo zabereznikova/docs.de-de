@@ -1,0 +1,205 @@
+<Type Name="SecurityState" FullName="System.Security.SecurityState">
+  <TypeSignature Language="C#" Value="public abstract class SecurityState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SecurityState" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse zum Anfordern der Sicherheitsstatus einer Aktion aus der <see cref="T:System.AppDomainManager" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen von dieser Klasse, die eine Klasse bereitstellen, die eine Eigenschaft, die angibt, die enthält auszuführende Aktion sicherheitsrelevante erben. Die <xref:System.Security.SecurityState> -Objekt, das von der abgeleiteten Klasse instanziiert ist übergeben wird die <xref:System.AppDomainManager.CheckSecuritySettings%2A?displayProperty=nameWithType> Methode, um zu bestimmen, ob der Host diese Aktion ausgeführt werden kann. Die standardmäßige Implementierung des der <xref:System.AppDomainManager.CheckSecuritySettings%2A> immer Methodenrückgabe `false`.  Die Methode muss überschrieben werden, um die Aktionen zu ermitteln, die zulässig sind.  
+  
+ Beispielsweise, wenn Sie eine Webkamera in Ihrem Bibliothekscode zugreifen möchten, erstellen Sie eine `WebcamSecurityState` Objekt, und rufen die <xref:System.Security.SecurityState.EnsureState%2A> Methode, um zu bestimmen, ob der Host die Kamera-Webzugriff, zulässt, wie im folgenden Beispiel gezeigt.  (Sie finden den Code für `WebcamSecurityState` im Abschnitt "Beispiel".)  
+  
+```  
+WebcamSecurityState securityState = new WebcamSecurityState("Safe access to Webcam", WebcamSecurityOptions.SafeAccess);  
+try  
+{  
+   securityState.EnsureState();  
+   // Allocate memory.  
+   }  
+catch (ApplicationException e)  
+{  
+    // Handle any exception that is thrown.  
+    System.Diagnostics.Debug.WriteLine(e.Message);  
+}  
+```  
+  
+ Das Aufrufen von der <xref:System.AppDomainManager> aufmerksam gemacht werden müssen `WebcamSecurityState` über eine Überschreibung der <xref:System.AppDomainManager.CheckSecuritySettings%2A?displayProperty=nameWithType> Methode, wie im folgenden Beispiel gezeigt.  
+  
+```  
+[SecurityCritical]  
+public override bool CheckSecuritySettings(System.Security.SecurityState securityState)  
+{  
+   switch (securityState.ToString())  
+   {  
+      case "WebcamSecurityState":  
+      {  
+          if ((securityState as WebcamSecurityState).Options == WebcamSecurityOptions.SafeAccess)  
+              return PromptUser((securityState as WebcamSecurityState).Description);  
+           return false;  
+      }  
+   }  
+      return false;  
+}  
+private bool PromptUser(string text)  
+{  
+   // Replace the OpenFileDialog with a custom user prompt.  
+   OpenFileDialog o = new OpenFileDialog();  
+   o.Title = text;  
+   if (o.ShowDialog() == DialogResult.OK)  
+      return true;  
+   else  
+      return false;  
+}  
+  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Überschreiben der <xref:System.Security.SecurityState> Klasse.  
+  
+```  
+[SecurityCritical]  
+public enum WebcamSecurityOptions  
+    {  
+        SafeAccess,  
+        FullAccess  
+    }  
+[SecurityCritical]  
+public class WebcamSecurityState : SecurityState  
+{  
+    public WebcamSecurityState(string description, WebcamSecurityOptions options)  
+    {  
+        Options = options;  
+        Description = description;  
+    }  
+    public WebcamSecurityOptions Options { get; set; }  
+    public string Description { get; set; }  
+    public override void EnsureState()  
+    {  
+       if (!IsStateAvailable())  
+           throw new ApplicationException("WebcamSecurityState not available");  
+    }  
+ }  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityState.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SecurityState" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureState">
+      <MemberSignature Language="C#" Value="public abstract void EnsureState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnsureState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityState.EnsureState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird sichergestellt, dass den Zustand, der durch dargestellt wird <see cref="T:System.Security.SecurityState" /> auf dem Host verfügbar ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung dieser Methode sollte ähnlich wie im folgenden Beispiel werden.  
+  
+```  
+public override void EnsureState()  
+{  
+    if (!IsStateAvailable())  
+          throw new ApplicationException("WebcamSecurityState not available");  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStateAvailable">
+      <MemberSignature Language="C#" Value="public bool IsStateAvailable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsStateAvailable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityState.IsStateAvailable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Status für diese Implementierung der <see cref="T:System.Security.SecurityState" /> Klasse auf dem aktuellen Host verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Status verfügbar ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.SecurityState.IsStateAvailable%2A>Ruft die <xref:System.AppDomainManager.CheckSecuritySettings%2A?displayProperty=nameWithType> Methode, um zu bestimmen, ob der Status, die von dieser Klasse dargestellt wird auf dem Host verfügbar ist.  
+  
+ Finden Sie unter der <xref:System.Security.SecurityState> Klasse für eine beispielimplementierung der <xref:System.AppDomainManager.CheckSecuritySettings%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,702 @@
+<Type Name="WebHttpBinding" FullName="System.ServiceModel.WebHttpBinding">
+  <TypeSignature Language="C#" Value="public class WebHttpBinding : System.ServiceModel.Channels.Binding, System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebHttpBinding extends System.ServiceModel.Channels.Binding implements class System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WebHttpBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.Binding</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IBindingRuntimePreferences</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine Bindung, die zum Konfigurieren von Endpunkten für Windows Communication Foundation (WCF)-Webdienste, die durch HTTP-Anforderungen und nicht durch SOAP-Nachrichten bereitgestellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Webprogrammiermodell ermöglicht es Entwicklern, [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Webdienste über HTTP-Anforderungen verfügbar zu machen, die POX-Messaging anstatt von SOAP-basiertem Messaging verwenden. Damit Clients mit einem Dienst über HTTP-Anforderungen kommunizieren können, muss ein Endpunkt des Diensts mit der <xref:System.ServiceModel.WebHttpBinding> konfiguriert sein, an die <xref:System.ServiceModel.Description.WebHttpBehavior> angefügt ist. Das WCF-Webprogrammiermodell erfordert außerdem, dass die einzelnen Dienstvorgänge mit dem <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut oder <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut kommentiert werden. Hierdurch wird eine Zuordnung einer URI- und HTTP-Methode zum Dienstvorgang definiert sowie das Format der Nachrichten, die zum Aufrufen des Vorgangs und zum Zurückgeben der Ergebnisse verwendet werden. Die Unterstützung für Syndication und ASP.AJAX-Integration in [!INCLUDE[indigo2](~/includes/indigo2-md.md)] ist über dem WCF-Webprogrammiermodell implementiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WebHttpBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardsicherheitsmodus ist <xref:System.ServiceModel.WebHttpSecurityMode.None>, wodurch angegeben wird, dass keine Sicherheit verwendet wird.  
+  
+ Um Sicherheit auf Transportebene für mit dieser Bindung konfigurierte Endpunkte zu verwenden, muss der <xref:System.ServiceModel.WebHttpSecurityMode.Transport>-Wert als Parameter im <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29>-Konstruktor angegeben sein.  
+  
+ Um HTTP-Authentifizierung ohne HTTPS zu verwenden, muss der <xref:System.ServiceModel.WebHttpSecurityMode.TransportCredentialOnly>-Wert als Parameter im <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29>-Konstruktor angegeben sein.  
+  
+ Der Wert für <xref:System.ServiceModel.WebHttpSecurityMode> kann nicht erneut festgelegt werden, nachdem die Bindungsinstanz erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpBinding (System.ServiceModel.WebHttpSecurityMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.WebHttpSecurityMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.#ctor(System.ServiceModel.WebHttpSecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.WebHttpSecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WebHttpBinding" />-Klasse mit dem explizit angegebenen Sicherheitstyp, der von der Bindung verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Sicherheit auf Transportebene für mit dieser Bindung konfigurierte Endpunkte zu verwenden, muss der <xref:System.ServiceModel.WebHttpSecurityMode.Transport>-Wert als Parameter im <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29>-Konstruktor angegeben sein.  
+  
+ Um HTTP-Authentifizierung ohne HTTPS zu verwenden, muss der <xref:System.ServiceModel.WebHttpSecurityMode.TransportCredentialOnly>-Wert als Parameter im <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29>-Konstruktor angegeben sein.  
+  
+ Der Wert für <xref:System.ServiceModel.WebHttpSecurityMode> kann nicht erneut festgelegt werden, nachdem die Bindungsinstanz erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene <paramref name="mode" /> ist kein gültiger<see cref="T:System.ServiceModel.WebHttpSecurityMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpBinding (string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configurationName">Der Bindungskonfigurationsname für das <see cref="T:System.ServiceModel.Configuration.WebHttpBindingElement" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WebHttpBinding" />-Klasse mit einer durch ihren Konfigurationsnamen angegebenen Bindung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Das Bindungselement mit dem Namen <paramref name="configurationName" /> wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCookies">
+      <MemberSignature Language="C#" Value="public bool AllowCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCookies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.AllowCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Client Cookies akzeptiert und bei zukünftigen Anfragen weiterleitet.</summary>
+        <value>
+          <see langword="true" />, wenn Cookies zulässig sind, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird als Annehmlichkeit zum Verwenden von in HTTP-Headern enthaltenen Cookies bereitgestellt. Wenn Cookies vom Client akzeptiert werden, indem die Eigenschaft auf `true` festgelegt wird, werden Cookies, die vom Server zurückgegeben werden, automatisch in alle zukünftigen Clientanforderungen für diesen Dienst kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.BuildChannelFactory``1(System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird.</typeparam>
+        <param name="parameters"><see cref="T:System.ServiceModel.Channels.BindingParameterCollection" />, der Anforderungen für die erstellte Kanalfactory festlegt.</param>
+        <summary>Erstellt den Kanalfactorystapel auf dem Client, der einen festgelegten Kanaltyp erstellt und der die Funktionen erfüllt, die von einer Auflistung von Bindungsparametern festgelegt werden.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> vom Typ TChannel-Eigenschaft, die die von der Auflistung festgelegten Funktionen erfüllt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BypassProxyOnLocal">
+      <MemberSignature Language="C#" Value="public bool BypassProxyOnLocal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BypassProxyOnLocal" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.BypassProxyOnLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll.</summary>
+        <value>
+          <see langword="true" />, um den Proxyserver bei lokalen Adressen zu umgehen, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Internetressource gilt als lokal, wenn sie über eine lokale Adresse verfügt. Eine lokale Adresse befindet sich auf dem gleichen Computer, im LAN oder Intranet und kann anhand des fehlenden Punkts (.) erkannt werden, wie bei den URIs "http://webserver/" und "http://localhost/".  
+  
+ Das Festlegen der <xref:System.ServiceModel.WebHttpBinding.BypassProxyOnLocal%2A>-Eigenschaft bestimmt, ob mit <xref:System.ServiceModel.WebHttpBinding> konfigurierte Endpunkte beim Zugriff auf lokale Ressourcen den Proxyserver verwenden.  
+  
+ Wenn <xref:System.ServiceModel.WebHttpBinding.BypassProxyOnLocal%2A> `true` ist, wird bei Anforderungen an lokale Internetressourcen der Proxyserver nicht verwendet. Wenn <xref:System.ServiceModel.WebHttpBinding.BypassProxyOnLocal%2A> `false` ist, werden alle Internetanforderungen über den Proxyserver ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTypeMapper">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.WebContentTypeMapper ContentTypeMapper { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.WebContentTypeMapper ContentTypeMapper" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.ContentTypeMapper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.WebContentTypeMapper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Inhaltstypzuordnung ab bzw. legt sie fest.</summary>
+        <value>Die Inhaltstypzuordnung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine geordnete Auflistung von Bindungselementen zurück, die in der aktuellen Bindung enthalten sind.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Channels.BindingElementCollection" />-Einstellung, die die <see cref="T:System.ServiceModel.Channels.BindingElement" />-Objekte für die Bindung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wichtig ist die Reihenfolge der Bindungselemente. Sie spiegelt die Reihenfolge wider, in der die Protokollkanäle und Transportkanäle erstellt und gestapelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossDomainScriptAccessEnabled">
+      <MemberSignature Language="C#" Value="public bool CrossDomainScriptAccessEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CrossDomainScriptAccessEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.CrossDomainScriptAccessEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der bestimmt, ob der domänenübergreifende Skriptzugriff aktiviert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die domänenübergreifende Skripterstellung aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvelopeVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EnvelopeVersion EnvelopeVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EnvelopeVersion EnvelopeVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.EnvelopeVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EnvelopeVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Umschlagversion ab, die von Endpunkten verwendet werden, die von dieser Bindung zum Empfangen von HTTP-Anforderungen festgelegt sind.</summary>
+        <value>Die <see cref="T:System.ServiceModel.EnvelopeVersion" /> mit der <see cref="P:System.ServiceModel.EnvelopeVersion.None" />-Eigenschaft, die für Endpunkte verwendet wird, die mit dieser Bindung zum Empfangen von HTTP-Anforderungen konfiguriert sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameComparisonMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.HostNameComparisonMode HostNameComparisonMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.HostNameComparisonMode HostNameComparisonMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.HostNameComparisonMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Hostname zum Erreichen des Diensts bei übereinstimmendem URI verwendet werden soll.</summary>
+        <value>Der <see cref="P:System.ServiceModel.Configuration.WSDualHttpBindingElement.HostNameComparisonMode" />-Wert, der angibt, ob der Hostname zum Erreichen des Diensts bei übereinstimmendem URI verwendet wird. Der Standardwert lautet <see cref="F:System.ServiceModel.HostNameComparisonMode.StrongWildcard" />, wodurch der Hostname beim Abgleich ignoriert wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der festgelegte Wert ist kein gültiger <see cref="P:System.ServiceModel.Configuration.WSDualHttpBindingElement.HostNameComparisonMode" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(524288)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Arbeitsspeichermenge in Bytes, der für den Puffer-Manager, der die Puffer verwaltet, von dieser Bindung verwendeten Endpunkte erforderlich zugeordnet.</summary>
+        <value>Die maximale Größe des Pufferpools, die von einem Endpunkt verwendet werden kann, der mit dieser Bindung konfiguriert wurde. Der Standardwert ist 65.536 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.BufferManager> versucht, den Pufferaufwand durch Verwendung eines Pufferpools zu minimieren. Puffer sind zur Verarbeitung von Nachrichten durch den Dienst erforderlich, wenn sie aus dem Kanal eintreffen. Wenn die Speicherkapazität des Pufferpools zur Verarbeitung der Nachrichten nicht ausreicht, muss der <xref:System.ServiceModel.Channels.BufferManager> zusätzliche Speicherkapazität aus dem CLR-Heap zuweisen. Dadurch wird die Auslastung der Garbage Collection erhöht. Eine umfangreiche Zuweisung aus dem CLR-Heap der Garbage Collection weist darauf hin, dass die Größe des Pufferpools nicht ausreichend ist und dass die Leistung durch eine größere Zuweisung infolge einer Erhöhung der maximalen <xref:System.ServiceModel.WebHttpBinding.MaxBufferPoolSize%2A> verbessert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferSize">
+      <MemberSignature Language="C#" Value="public int MaxBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.MaxBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(524288)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Arbeitsspeichermenge in Bytes, der für die Verwendung durch den Manager der Nachrichtenpuffer zugewiesen ist, die Nachrichten vom Kanal empfangen.</summary>
+        <value>Die maximale Speicherkapazität in Byte, die vom Puffer-Manager für Nachrichten verwendet werden kann. Der Standardwert ist 524.288 (0x80000) Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Channels.BufferManager> reduziert den Pufferaufwand durch Verwendung eines Pufferpools. Puffer sind zur Verarbeitung von Nachrichten durch den Dienst erforderlich, wenn sie aus dem Kanal eintreffen. Wenn die Speicherkapazität des Pufferpools zur Verarbeitung der Nachrichten nicht ausreicht, muss der <xref:System.ServiceModel.Channels.BufferManager> zusätzliche Speicherkapazität aus dem CLR-Heap zuweisen. Dadurch wird die Auslastung der Garbage Collection erhöht. Eine umfangreiche Zuweisung aus dem CLR-Heap der Garbage Collection weist darauf hin, dass die Größe des Pufferpools nicht ausreichend ist und dass die Leistung durch eine größere Zuweisung infolge einer Erhöhung der maximalen <xref:System.ServiceModel.BasicHttpBinding.MaxBufferPoolSize%2A> verbessert werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist kleiner oder gleich 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe in Byte für eine Nachricht, die von der Bindung verarbeitet werden können.</summary>
+        <value>Die maximale Größe (in Byte) für eine Meldung, die von der Bindung verarbeitet wird. Der Standardwert ist 65.536 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe der Nachrichten, die von Diensten mit <xref:System.ServiceModel.WebHttpBinding> empfangen werden kann, wird durch die Speicherkapazität begrenzt, die den einzelnen Nachrichten zugewiesen wurde. Auf diese Weise sollen Denial-of-Service-Angriffe (DoS) reduziert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ServiceModel.QuotaExceededException">Eine Nachricht hat die zugeordnete maximale Größe überschritten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAddress">
+      <MemberSignature Language="C#" Value="public Uri ProxyAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ProxyAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.ProxyAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URI-Adresse des HTTP-Proxys ab oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.Uri" />, die als Adresse für den HTTP-Proxy dient. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.WebHttpBinding.UseDefaultWebProxy%2A> auf `true` festgelegt ist, wird der Wert von <xref:System.ServiceModel.WebHttpBinding.ProxyAddress%2A> ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotas ReaderQuotas { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryReaderQuotas ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Beschränkungen der Komplexität von SOAP-Meldungen ab oder legt Beschränkungen fest, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert werden.</summary>
+        <value>Der <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, der die Komplexitätseinschränkungen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Komplexitätseinschränkungen schützen vor einer Klasse von DOS-Angriffen (Denial Of Service), die versuchen, die Nachrichtenkomplexität zum Binden von Endpunkt-Verarbeitungsressourcen zu verwenden. Die Eigenschaften, die diese Einschränkungen ausdrücken, und ihre Standardwerte (in Byte) lauten wie folgt:  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> = 32  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> = 8192  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> = 16384  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> = 4096  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A> = 16384  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der festgelegte Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Kontingentwerte von <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> sind schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentException">Die festgelegten Kontingente müssen positiv sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das URI-Transportschema für die Kanäle und die Listener ab, die mit dieser Bindung konfiguriert werden.</summary>
+        <value>"https", wenn <see cref="P:System.ServiceModel.WebHttpBinding.Security" /> auf <see cref="F:System.ServiceModel.WebHttpSecurityMode.Transport" /> festgelegt ist; "http", wenn sie auf <see cref="F:System.ServiceModel.WebHttpSecurityMode.None" /> festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.WebHttpSecurity Security { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.WebHttpSecurity Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WebHttpSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sicherheitseinstellungen ab, die mit dieser Bindung verwendet werden.</summary>
+        <value>Die mit dieser Bindung verwendete <see cref="T:System.ServiceModel.WebHttpSecurity" />. Der Standardwert ist <see cref="F:System.ServiceModel.WebHttpSecurityMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen anderen als den standardmäßigen Sicherheitstyp verwenden möchten, verwenden Sie den <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29>-Konstruktor.  
+  
+> [!NOTE]
+>  Wenn Sie diese Eigenschaft auf <xref:System.ServiceModel.WebHttpSecurityMode.TransportCredentialOnly> festlegen und HTTP verwenden, seien Sie sich bewusst, dass Anmeldeinformationen als Klartext über das Netz gesendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeReaderQuotas">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeReaderQuotas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.ShouldSerializeReaderQuotas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt fest, ob Readerkontingente serialisiert werden sollen.</summary>
+        <returns>
+          <see langword="true" />ob readerkontingente serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSecurity">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSecurity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.ShouldSerializeSecurity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt fest, ob Sicherheitseinstellungen serialisiert werden sollen.</summary>
+        <returns>
+          <see langword="true" />ob Sicherheitseinstellungen serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeWriteEncoding">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeWriteEncoding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeWriteEncoding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpBinding.ShouldSerializeWriteEncoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt fest, ob die für die Serialisierung verwendete Codierung serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die Codierung serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously">
+      <MemberSignature Language="C#" Value="bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.System#ServiceModel#Channels#IBindingRuntimePreferences#ReceiveSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eingehende Anforderungen synchron oder asynchron gehandhabt werden.</summary>
+        <value>
+          <see langword="true" />, wenn eingehende Anforderungen synchron verarbeitet werden; <see langword="false" />, wenn eingehende Anforderungen asynchron verarbeitet werden. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Laufzeitverhalten für eingehende Nachrichten in einem Dienst oder Client-Anwendung kann geändert werden, mithilfe der [ &lt;SynchronousReceive&gt;](~/docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TransferMode TransferMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.TransferMode TransferMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.TransferMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der mit der Bindung konfigurierte Dienst den Streaming- oder Puffermodus (oder beides) für die Nachrichtenübertragung einsetzt oder legt diesen Wert fest.</summary>
+        <value>Der <see cref="T:System.ServiceModel.TransferMode" />-Wert, der angibt, ob der mit der Bindung konfigurierte Dienst den Streaming- oder Puffermodus (oder beides) für die Nachrichtenübertragung einsetzt. Der Standardwert ist <see cref="F:System.ServiceModel.TransferMode.Buffered" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der festgelegte Wert ist kein gültiger <see cref="T:System.ServiceModel.TransferMode" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultWebProxy">
+      <MemberSignature Language="C#" Value="public bool UseDefaultWebProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultWebProxy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.UseDefaultWebProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der automatisch konfigurierte HTTP-Proxy des Systems bei Verfügbarkeit verwendet werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn der automatisch konfigurierte HTTP-Proxy des Systems bei Verfügbarkeit verwendet werden soll, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert hierfür darf nicht `true` lauten, und der Wert für <xref:System.ServiceModel.WebHttpBinding.ProxyAddress%2A> muss `null` lauten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding WriteEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding WriteEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpBinding.WriteEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichencodierung ab oder legt die Zeichencodierung fest, die für den Meldungstext verwendet wird.</summary>
+        <value>Die <see cref="T:System.Text.Encoding" />-Einstellung, die die verwendete Zeichencodierung angibt. Die Standardeinstellung ist <see cref="T:System.Text.UTF8Encoding" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der festgelegte Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

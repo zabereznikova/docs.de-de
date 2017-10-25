@@ -1,0 +1,153 @@
+<Type Name="DesignerDataStoredProcedure" FullName="System.ComponentModel.Design.Data.DesignerDataStoredProcedure">
+  <TypeSignature Language="C#" Value="public abstract class DesignerDataStoredProcedure" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerDataStoredProcedure extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.DesignerDataStoredProcedure" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine gespeicherte Prozedur im Datenspeicher dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure> Klasse ist eine von mehreren Typen, die das Schema eines Datenspeichers zur Entwurfszeit darstellen. Diese Schemaelemente werden Steuerelemente zur Verfügung gestellt, mit dem Entwickler, die Implementierung der <xref:System.ComponentModel.Design.Data.IDataEnvironment> Schnittstelle. Steuert den Zugriff für welche Schemaobjekte durch Aufrufen der <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetConnectionSchema%2A> -Methode der Schnittstelle.  
+  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure> -Klasse stellt eine einzelne Tabelle im Datenspeicher dar. Eine Auflistung von <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure> zurückgegebenen Objekte beim Aufrufen der <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> Methode mit der `schemaClass` Parametersatz auf <xref:System.ComponentModel.Design.Data.DesignerDataSchemaClass.StoredProcedures?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerDataStoredProcedure (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der gespeicherten Prozedur.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Data.DesignerDataStoredProcedure" />-Klasse mit dem angegebenen Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerDataStoredProcedure (string name, string owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name, string owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="owner" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der gespeicherten Prozedur.</param>
+        <param name="owner">Der Data Store Besitzer der gespeicherten Prozedur.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.Data.DesignerDataStoredProcedure" /> Klasse mit dem angegebenen Namen und Besitzer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParameters">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.ICollection CreateParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ICollection CreateParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.CreateParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt eine Auflistung von Parametern für die gespeicherte Prozedur zurück.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.ComponentModel.Design.Data.DesignerDataParameter" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.CreateParameters%2A> Methodenaufrufs erstmalig der <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.Parameters%2A> -Eigenschaft zugegriffen, um die Auflistung der Parameter der gespeicherten Prozedur zu füllen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der gespeicherten Prozedur ab.</summary>
+        <value>Der Name der gespeicherten Prozedur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public string Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Owner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Besitzer der gespeicherten Prozedur ab.</summary>
+        <value>Der Besitzer der gespeicherten Prozedur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Parametern, die für eine gespeicherte Prozedur erforderlich sind.</summary>
+        <value>Eine Auflistung von Parametern für die gespeicherte Prozedur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.Parameters%2A> Eigenschaft wird angegeben, indem die <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.CreateParameters%2A> -Methode die ersten der <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.Parameters%2A> Eigenschaft zugegriffen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

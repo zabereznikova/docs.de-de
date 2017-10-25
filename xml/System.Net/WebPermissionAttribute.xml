@@ -1,0 +1,288 @@
+<Type Name="WebPermissionAttribute" FullName="System.Net.WebPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WebPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit WebPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, über die Berechtigung zum Internetressourcen zugreifen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebPermissionAttribute>können Sie deklarativ angeben, welche URI-Zeichenfolgen und reguläre Zeichenfolgen Ihre Klasse verwenden kann.  
+  
+ Die Sicherheitsinformationen im angegebenen der <xref:System.Net.WebPermissionAttribute> befindet sich in den Metadaten des Attributziels, also der Klasse, auf die <xref:System.Net.WebPermissionAttribute> angewendet wird. Das System greift auf diese Informationen zur Laufzeit. Die <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> zum Übergeben des Konstruktors bestimmt die zulässigen <xref:System.Net.WebPermissionAttribute> Ziele. Das System verwendet die <xref:System.Net.WebPermission> zurückgegebenes der <xref:System.Net.WebPermissionAttribute.CreatePermission%2A> -Methode zum Konvertieren der Sicherheitsinformationen des Attributziels in eine serialisierbare Form, die in den Metadaten gespeichert.  
+  
+> [!NOTE]
+>  <xref:System.Net.WebPermissionAttribute>wird verwendet, nur für [Deklarationssicherheit](http://msdn.microsoft.com/en-us/97e21efd-6e89-4115-90d5-ad239513dad8). Für [Imperative Sicherheit](http://msdn.microsoft.com/en-us/15aab1e1-6b7d-41ad-b102-c1ed7bedea27), verwenden Sie das entsprechende <xref:System.Net.WebPermission>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie anzuwendende <xref:System.Net.WebPermissionAttribute> an eine Methode.  
+  
+ [!code-cpp[WebPermissionAttribute_AcceptConnect#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermissionAttribute_AcceptConnect/CPP/webpermissionattribute_acceptconnect.cpp#1)]
+ [!code-csharp[WebPermissionAttribute_AcceptConnect#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermissionAttribute_AcceptConnect/CS/webpermissionattribute_acceptconnect.cs#1)]
+ [!code-vb[WebPermissionAttribute_AcceptConnect#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermissionAttribute_AcceptConnect/VB/webpermissionattribute_acceptconnect.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebPermissionAttribute" /> -Klasse mit einem Wert, der die Sicherheitsaktionen angibt, die von dieser Klasse ausgeführt werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.SecurityAction> an diesen Konstruktor übergebene Wert gibt die zulässige Sicherheitsaktionen an, die von dieser Klasse ausgeführt werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie anzuwendende <xref:System.Net.WebPermissionAttribute> an eine Methode.  
+  
+ [!code-cpp[WebPermissionAttribute_Constructor#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermissionAttribute_Constructor/CPP/source.cpp#1)]
+ [!code-csharp[WebPermissionAttribute_Constructor#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermissionAttribute_Constructor/CS/source.cs#1)]
+ [!code-vb[WebPermissionAttribute_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermissionAttribute_Constructor/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="action" /> ist kein gültiger <see cref="T:System.Security.Permissions.SecurityAction" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public string Accept { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Accept" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebPermissionAttribute.Accept" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URI-Zeichenfolge, die vom aktuellen akzeptiert <see cref="T:System.Net.WebPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge mit dem URI akzeptiert, vom aktuellen <see cref="T:System.Net.WebPermissionAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Anwenden von <xref:System.Net.WebPermissionAttribute> auf die Klasse diese Eigenschaft gibt an, für die Verwendung in dieser Klasse akzeptierte URI-Zeichenfolge. Durch diese Berechtigung wird angewendet, wenn das Sicherheitssystem ruft <xref:System.Net.WebPermissionAttribute.CreatePermission%2A>. Diese Eigenschaft ist für Write-sobald.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Net.WebPermissionAttribute> zum Angeben einer zulässigen <xref:System.Net.WebPermissionAttribute.Accept%2A> Zeichenfolge.  
+  
+ [!code-cpp[WebPermissionAttribute_Accept#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermissionAttribute_Accept/CPP/source.cpp#1)]
+ [!code-csharp[WebPermissionAttribute_Accept#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermissionAttribute_Accept/CS/source.cs#1)]
+ [!code-vb[WebPermissionAttribute_Accept#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermissionAttribute_Accept/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Net.WebPermissionAttribute.Accept" />ist kein <see langword="null" /> beim Versuch, den Wert festzulegen. Wenn Sie mehrere akzeptieren URI angeben möchten, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptPattern">
+      <MemberSignature Language="C#" Value="public string AcceptPattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AcceptPattern" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebPermissionAttribute.AcceptPattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Muster eines regulären Ausdrucks, der beschreibt, die vom aktuellen akzeptierten URI <see cref="T:System.Net.WebPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge mit dem Muster eines regulären Ausdrucks, der den URI beschreibt akzeptiert, vom aktuellen <see cref="T:System.Net.WebPermissionAttribute" />. Muss diese Zeichenfolge gemäß den Regeln für die Codierung mit Escapezeichen versehen werden eine <see cref="T:System.Text.RegularExpressions.Regex" /> Konstruktorzeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Anwenden von <xref:System.Net.WebPermissionAttribute> auf Ihre Klasse diese Eigenschaft gibt die Zeichenfolge regulärer Ausdrücke für die Verwendung in Ihrer Klasse akzeptiert werden. Diese Eigenschaft ist für Write-sobald.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Net.WebPermissionAttribute> zum Angeben einer zulässigen <xref:System.Net.WebPermissionAttribute.AcceptPattern%2A>.  
+  
+ [!code-cpp[WebPermissionAttribute_AcceptPattern#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermissionAttribute_AcceptPattern/CPP/source.cpp#1)]
+ [!code-csharp[WebPermissionAttribute_AcceptPattern#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermissionAttribute_AcceptPattern/CS/source.cs#1)]
+ [!code-vb[WebPermissionAttribute_AcceptPattern#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermissionAttribute_AcceptPattern/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Net.WebPermissionAttribute.AcceptPattern" />ist kein <see langword="null" /> beim Versuch, den Wert festzulegen. Wenn Sie mehrere akzeptieren URI angeben möchten, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public string Connect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Connect" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebPermissionAttribute.Connect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URI-Verbindungszeichenfolge, die vom aktuellen gesteuert <see cref="T:System.Net.WebPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge, enthält die URI-Verbindung vom aktuellen gesteuert <see cref="T:System.Net.WebPermissionAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Anwenden von <xref:System.Net.WebPermissionAttribute> auf Ihre Klasse diese Eigenschaft gibt die URI-Verbindungszeichenfolgen für die Verwendung in Ihrer Klasse akzeptiert wird. Diese Eigenschaft ist für Write-sobald.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie WebPermissionAttribute zum Angeben einer zulässigen <xref:System.Net.WebPermissionAttribute.Connect%2A> Zeichenfolge.  
+  
+ [!code-cpp[WebPermissionAttribute_Connect#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermissionAttribute_Connect/CPP/source.cpp#1)]
+ [!code-csharp[WebPermissionAttribute_Connect#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermissionAttribute_Connect/CS/source.cs#1)]
+ [!code-vb[WebPermissionAttribute_Connect#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermissionAttribute_Connect/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Net.WebPermissionAttribute.Connect" />ist kein <see langword="null" /> beim Versuch, den Wert festzulegen. Wenn Sie mehr als eine Verbindung URI angeben möchten, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectPattern">
+      <MemberSignature Language="C#" Value="public string ConnectPattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectPattern" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebPermissionAttribute.ConnectPattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Muster eines regulären Ausdrucks, der die URI-Verbindung vom aktuellen gesteuert beschreibt <see cref="T:System.Net.WebPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge mit dem Muster eines regulären Ausdrucks, der die URI-Verbindung, die von diesem gesteuert beschreibt <see cref="T:System.Net.WebPermissionAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Anwenden von <xref:System.Net.WebPermissionAttribute> auf Ihre Klasse diese Eigenschaft gibt regulärer Ausdrücke für die Verbindungszeichenfolge für die Verwendung in Ihrer Klasse akzeptiert wird. Diese Eigenschaft ist für Write-sobald.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Net.WebPermissionAttribute> zum Angeben einer zulässigen <xref:System.Net.WebPermissionAttribute.ConnectPattern%2A>.  
+  
+ [!code-cpp[WebPermissionAttribute_ConnectPattern#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermissionAttribute_ConnectPattern/CPP/source.cpp#1)]
+ [!code-csharp[WebPermissionAttribute_ConnectPattern#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermissionAttribute_ConnectPattern/CS/source.cs#1)]
+ [!code-vb[WebPermissionAttribute_ConnectPattern#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermissionAttribute_ConnectPattern/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Net.WebPermissionAttribute.ConnectPattern" />ist kein <see langword="null" /> beim Versuch, den Wert festzulegen. Wenn Sie angeben, dass mehr als eine URI herstellen möchten, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine neue Instanz der <see cref="T:System.Net.WebPermission" />-Klasse zurück.</summary>
+        <returns>Eine <see cref="T:System.Net.WebPermission" />, die der Sicherheitsdeklaration entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.SocketPermissionAttribute.CreatePermission%2A> Methode wird durch das Sicherheitssystem von Anwendungscode nicht aufgerufen.  
+  
+ Die Sicherheitsinformationen vom beschrieben <xref:System.Net.WebPermissionAttribute> befindet sich in den Metadaten des Attributziels, also der Klasse, auf die <xref:System.Net.WebPermissionAttribute> angewendet wird. Das System greift auf die Informationen zur Laufzeit. Das System verwendet die <xref:System.Net.WebPermission> zurückgegebenes <xref:System.Net.SocketPermissionAttribute.CreatePermission%2A> konvertieren die Sicherheitsinformationen des Attributziels in eine serialisierbare Form, die in den Metadaten gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

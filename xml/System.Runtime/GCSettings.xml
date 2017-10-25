@@ -1,0 +1,211 @@
+<Type Name="GCSettings" FullName="System.Runtime.GCSettings">
+  <TypeSignature Language="C#" Value="public static class GCSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit GCSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.GCSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Garbage Collection-Einstellungen für den aktuellen Prozess an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Runtime.GCSettings.IsServerGC%2A> Eigenschaft, um zu bestimmen, ob die Garbagecollection auf dem Server für den aktuellen Prozess aktiviert ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsServerGC">
+      <MemberSignature Language="C#" Value="public static bool IsServerGC { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsServerGC" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.GCSettings.IsServerGC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Garbage Collection für Server aktiviert ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Garbage Collection für Server aktiviert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zur Garbagecollection auf dem Server finden Sie im Abschnitt "Arbeitsstation und Garbage Collection auf dem Server" im [Grundlagen der Garbage Collection](~/docs/standard/garbage-collection/fundamentals.md).  
+  
+ Wenn der Garbagecollection auf dem Server nicht aktiviert ist, ist die Garbagecollection auf Arbeitsstationen wirksam (mit oder ohne gleichzeitige Sammlung). Garbagecollection auf dem Server ist nur auf Computern mit mehreren Prozessoren verfügbar.  
+  
+ Ein nicht verwalteter Host kann Garbagecollection auf dem Server anfordern, und die Host-Anforderung überschreibt Dienstkonfigurations-dateieinstellungen. Wenn der Host den Typ der Garbagecollection nicht angegeben ist, können Sie eine Konfigurationseinstellung für die Datei, Garbagecollection auf dem Server angeben. Diese Einstellung gilt nur in der Anwendungskonfigurationsdatei nicht in der Computerkonfigurationsdatei (finden Sie unter [Konfigurieren von Apps](http://msdn.microsoft.com/library/86bd26d3-737e-4484-9782-19b17f34cd1f)). Das folgende Beispiel zeigt den Inhalt einer Beispiel-Anwendungskonfigurationsdatei, die Garbagecollection auf dem Server ermöglicht.  
+  
+```  
+<configuration>  
+  <runtime>  
+    <gcServer enabled="true" />  
+  </runtime>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel gibt an, ob der Hostcomputer Server oder Garbagecollection auf Arbeitsstationen verwendet wird.  
+  
+ [!code-csharp[Environment.IsServerGC#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.IsServerGC/CS/isg.cs#1)]
+ [!code-vb[Environment.IsServerGC#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.IsServerGC/VB/isg.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeObjectHeapCompactionMode">
+      <MemberSignature Language="C#" Value="public static System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.GCSettings.LargeObjectHeapCompactionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLargeObjectHeapCompactionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Wird nur in .NET Framework 4.5.1 und neueren Versionen unterstützt]  
+  
+ Ruft einen Wert ab oder legt ihn fest, der angibt, ob eine vollständige blockierende Garbage Collection den großen Objektheap (LOH) komprimiert.</summary>
+        <value>Einer der Enumerationswerte, der angibt, ob eine vollständige blockierende Garbage Collection den großen Objektheap komprimiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der große Objektheap dient zum Belegen von Speicher für große Objekte (z. B. Arrays), die mehr als 85.000 Bytes benötigen. Aufgrund der Leistungseinbußen durch Kopieren von großen Speicherblöcke fasst der Garbage Collector in der Regel den großen Objektheap, der umfasst, erstellen eine Liste der Speicherorte, wurden von inaktiven Objekten belegt wird und für zukünftige Anforderungen nicht erfüllen wiederverwendet werden kann Zuordnung von Speicherplatz für große Objekte. Allerdings in apps, die eine umfangreiche stellen Verwenden des großen Objektheaps zum Speichern von flüchtigen Objekten Arbeitsspeicher an, dass die Fragmentierung auch negativ auf die Leistung auswirken kann. In diesem Fall ist es möglich, verwenden Sie die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> Eigenschaft anstatt einfach Sweep den großen Objektheap zu komprimieren während einer Garbagecollection.  
+  
+ Der Standardwert der <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> Eigenschaft ist <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>, was bedeutet, dass der große Objektheap nicht, während der Ausführung von Garbage Collections komprimiert wird. Wenn Sie der Eigenschaft einen Wert zuweisen <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>, während der nächsten vollständigen blockierenden Garbagecollection der großen Objektheap komprimiert wird und der Eigenschaftswert wird auf zurückgesetzt <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Die Garbage Collection im Hintergrund werden nicht blockiert. Dies bedeutet, dass, wenn Sie festlegen, die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> Eigenschaft <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>alle Hintergrund- Generation 2 Sammlungen, die anschließend auftreten, führen Sie den großen Objektheap nicht komprimiert. Nur der erste blockierende Generation 2 Sammlung den großen Objektheap komprimiert.  
+  
+ Nach der <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> -Eigenschaftensatz auf <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>, der nächsten vollständigen blockierenden Garbagecollection (und die Komprimierung von den großen Objektheap) zu einem unbestimmten zukünftigen Zeitpunkt auftritt. Sie können sofort den großen Objektheap komprimieren, mithilfe von Code wie folgt:  
+  
+ [!code-csharp[System.Runtime.GCSettings#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.gcsettings/cs/lohcompactionmode1.cs#1)]
+ [!code-vb[System.Runtime.GCSettings#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.gcsettings/vb/lohcompactionmode1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatencyMode">
+      <MemberSignature Language="C#" Value="public static System.Runtime.GCLatencyMode LatencyMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Runtime.GCLatencyMode LatencyMode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.GCSettings.LatencyMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab den aktuellen Wartezeitmodus für die Garbage Collection ab oder legt diesen fest.</summary>
+        <value>Einer der Enumerationswerte, der den Latenzmodus angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Ebene der Ausmaß der Garbagecollection in der Anwendung verringern, indem die <xref:System.Runtime.GCLatencyMode> auf <xref:System.Runtime.GCLatencyMode.LowLatency> während der wichtigen Vorgänge. Wenn solche Vorgänge abgeschlossen wurden, zum höheren Latenzmodus zurück, damit weitere Objekte freigegeben werden können, um Speicher freizugeben.  
+  
+ Normalerweise legen Sie den Wert von der <xref:System.Runtime.GCSettings.LatencyMode%2A> Eigenschaft des Garbage Collectors Wartezeitmodus definieren. Sie können nicht den Latenzmodus ohne GC Region jedoch festgelegt, durch Zuweisen der <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> Enumerationswert, auf die <xref:System.Runtime.GCSettings.LatencyMode%2A> Eigenschaft. Rufen Sie stattdessen die <xref:System.GC.TryStartNoGCRegion%2A?displayProperty=nameWithType> Aufrufen der Methode, um den Latenzmodus ohne GC Region, und Sie beginnen die <xref:System.GC.EndNoGCRegion%2A?displayProperty=nameWithType> um ihn zu beenden.  
+  
+ Finden Sie unter [Latenzmodi](~/docs/standard/garbage-collection/latency.md) Nähere Informationen dazu, wie die Common Language Runtime-Konfigurationseinstellungen für die Garbagecollection den Standardwert von beeinflussen die <xref:System.Runtime.GCLatencyMode> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Runtime.GCSettings.LatencyMode" /> Eigenschaft wird auf einen ungültigen Wert festgelegt.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Runtime.GCSettings.LatencyMode" /> Eigenschaft kann nicht festgelegt werden, um <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

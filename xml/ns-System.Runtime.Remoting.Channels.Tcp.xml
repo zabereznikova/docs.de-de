@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Channels.Tcp">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Channels.Tcp" /> -Namespace enthält die Kanäle, die das TCP-Protokoll-transportmeldungen und Objekte in und von Remotestandorten aus zu verwenden. Standardmäßig die TCP-Kanälen codieren Objekte und Methodenaufrufe im Binärformat für die Übertragung, aber andere Formatierungssenken Codierung und Decodierung können in den Konfigurationseigenschaften eines Kanals angegeben werden. Eine der wichtigsten Klassen von der <see cref="N:System.Runtime.Remoting.Channels.Tcp" /> Namespace ist die <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> -Klasse kombiniert die <xref:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel> Klasse und die <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel> -Klasse und zu empfangen und Senden von Nachrichten über das TCP-Protokoll verwendet werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

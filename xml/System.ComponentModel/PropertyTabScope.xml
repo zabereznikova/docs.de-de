@@ -1,0 +1,155 @@
+<Type Name="PropertyTabScope" FullName="System.ComponentModel.PropertyTabScope">
+  <TypeSignature Language="C#" Value="public enum PropertyTabScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyTabScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.PropertyTabScope" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Bezeichner, die den Gültigkeitsbereich einer Registerkarte im Fenster Eigenschaften angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.PropertyTabScope>Gibt den Gültigkeitsbereich einer Registerkarte, die im Eigenschaftenfenster angezeigt wird, wenn eine Komponente von einem Entwurfsdokument eine zugeordnete hat <xref:System.ComponentModel.PropertyTabAttribute>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.PropertyTabScope> um den Bereich der Eigenschaftenregisterkarte für eine anzugeben.  
+  
+ [!code-cpp[PropertyTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[PropertyTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyTabExample/CS/class1.cs#1)]
+ [!code-vb[PropertyTabExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyTabExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="Component" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyTabScope Component = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyTabScope.Component" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyTabScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Registerkarte ist für die aktuelle Komponente spezifisch. Diese Registerkarte wird das Fenster Eigenschaften für die aktuelle Komponente nur hinzugefügt und wird entfernt, wenn die Komponente nicht mehr ausgewählt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="Document" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyTabScope Document = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyTabScope.Document" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyTabScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Registerkarte ist spezifisch für das aktuelle Dokument. Diese Registerkarte wird das Eigenschaftenfenster hinzugefügt und wird entfernt, wenn das aktuell ausgewählte Dokument geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.PropertyTabScope> um den Bereich der Eigenschaftenregisterkarte für eine anzugeben.  
+  
+ [!code-cpp[PropertyTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[PropertyTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyTabExample/CS/class1.cs#1)]
+ [!code-vb[PropertyTabExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyTabExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Global">
+      <MemberSignature Language="C#" Value="Global" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyTabScope Global = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyTabScope.Global" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyTabScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Registerkarte wird das Eigenschaftenfenster hinzugefügt und kann nur entfernt werden explizit von einer übergeordneten Komponente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="Static" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyTabScope Static = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyTabScope.Static" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyTabScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Registerkarte wird das Eigenschaftenfenster hinzugefügt und kann nicht entfernt werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

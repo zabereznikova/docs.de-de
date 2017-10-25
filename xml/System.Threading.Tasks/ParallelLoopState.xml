@@ -1,0 +1,352 @@
+<Type Name="ParallelLoopState" FullName="System.Threading.Tasks.ParallelLoopState">
+  <TypeSignature Language="C#" Value="public class ParallelLoopState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParallelLoopState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.ParallelLoopState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("ShouldExitCurrentIteration = {ShouldExitCurrentIteration}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht Iterationen von parallelen Schleifen die Interaktion mit anderen Iterationen. Eine Instanz dieser Klasse wird von der <see cref="T:System.Threading.Tasks.Parallel" />-Klasse für jede Schleife bereitgestellt. Sie können keine Instanzen im Code erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass Sie eine Instanz dieser Klasse nicht instanziieren können. Er wird automatisch vom Compiler generiert, als Argument in einem Aufruf der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode. Dies wird im Beispiel veranschaulicht.  
+  
+ Erstellt z. B. `for` und `foreach` (in c#) und `For` und `For Each` (in Visual Basic) führen Sie nacheinander aus dem niedrigsten Index bis zur höchsten Ebene oder das erste Objekt in einem Satz bis zum letzten. Im Gegensatz dazu die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methoden nicht. Da der einzelnen Iterationen der Schleife parallel ausgeführt werden, können sie beginnen und enden in beliebiger Reihenfolge. Die <xref:System.Threading.Tasks.ParallelLoopState> -Klasse ermöglicht es einzelnen Iterationen von parallelen Schleifen miteinander interagieren. Die <xref:System.Threading.Tasks.ParallelLoopState> -Klasse können Sie:  
+  
+-   Die aktuelle Iteration zu beenden und zu verhindern, dass jeder zusätzlichen Iterationen gestartet werden, durch Aufrufen der <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode. Dies beeinflusst nicht Iterationen, die bereits mit der Ausführung begonnen haben.  
+  
+-   Verhindern, dass alle Iterationen mit einem Index größer als der aktuelle Index ausgeführt werden, durch Aufrufen der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode. Dies beeinflusst nicht Iterationen, die bereits mit der Ausführung begonnen haben.  
+  
+-   Bestimmen, ob eine Ausnahme in jeder Schleifeniteration aufgetreten ist, durch das Abrufen des Werts der <xref:System.Threading.Tasks.ParallelLoopState.IsExceptional%2A> Eigenschaft.  
+  
+-   Bestimmen, ob eine Iteration der Schleife aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode durch das Abrufen des Werts der <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> Eigenschaft. Sie können diese Eigenschaft von Iterationen der Schleife zurückgeben, die vor dem Aufruf gestartet die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode jedoch weiterhin ausgeführt werden.  
+  
+-   Bestimmen, ob eine Iteration der Schleife aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> oder <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode oder eine Ausnahme ausgelöst wurde, durch das Abrufen des Werts der <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> Eigenschaft.  
+  
+-   Beenden einer lang andauernden Iteration, dessen Index größer als der Index einer Iteration in der Break aufgerufen wurde ist, durch das Abrufen des Werts, der <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden bis zu 100 Iterationen einer Schleife parallel ausgeführt. Jede Iteration hält für einem zufällig gewählten Zeitpunkt zwischen 1 und 1.000 Millisekunden steht. Ein zufällig generierter Wert wird bestimmt, auf welche Iteration der Schleife die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode aufgerufen wird. Wie die Ausgabe des Beispiels zeigt, keine Iterationen, deren Index größer als ist, die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Start des Eigenschaft-Wert nach dem Aufruf der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ Da Iterationen der Schleife, die wahrscheinlich weiterhin ausgeführt wird, wenn sind die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode aufgerufen wird, werden Aufrufe von jeder Iteration der <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> Eigenschaft zu überprüfen, ob eine andere Iteration aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode. Wenn der Eigenschaftswert ist `true`, Iteration überprüft den Wert der die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaft und, wenn sie größer als die aktuelle Iteration Indexwert ist, kehrt sofort zurück.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Ein <see cref="T:System.Threading.Tasks.ParallelLoopState" /> Instanz sollte nur im Text der Schleife verwendet werden, zu dem eine Instanz bereitgestellt wurde.  Es ist nicht sicher ist, verwenden Sie eine bereitgestellte <see cref="T:System.Threading.Tasks.ParallelLoopState" /> Instanz nach der zugehörigen Schleife beendet, noch ist es sicher ist, übergeben sie explizit, für andere Threads und diese Threads zu einem beliebigen Zeitpunkt die Zugriffsberechtigung haben.  Ein anderes <see cref="T:System.Threading.Tasks.ParallelLoopState" /> Instanz wird für jeden Thread in einer Schleife beteiligten bereitgestellt.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Break">
+      <MemberSignature Language="C#" Value="public void Break ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Break() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.ParallelLoopState.Break" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Threading.Tasks.Parallel" />-Schleife die Ausführung von Iterationen nach der aktuellen Iteration beenden soll, sobald dies dem System möglich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>Gibt an, dass keine Iterationen nach der aktuellen Iteration ausgeführt werden soll. Es wird effektiv zusätzlichen Iterationen der Schleife abgebrochen. Es wird jedoch keine Iterationen beendet, die bereits mit der Ausführung begonnen haben. Z. B. wenn <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> aufgerufen wird, von der 100. Iteration einer parallelen Schleife durchlaufen von 0 auf 1.000, alle Iterationen kleiner als 100 sollten weiterhin ausgeführt, aber die Iterationen von 101 bis 1000, die noch nicht gestartet werden, nicht ausgeführt werden.  
+  
+ Für lang andauernde Iterationen, die möglicherweise bereits ausgeführt werden, <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> legt die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaft, um die aktuelle Iteration Index, wenn der aktuelle Index kleiner als der aktuelle Wert der ist <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A>. Um die Iterationen zu beenden, dessen Index größer als die niedrigste Iteration der Unterbrechung von konkurrierenden Ausführung ist, sollten Sie Folgendes tun:  
+  
+1.  Überprüfen Sie, ob die <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> Eigenschaft ist `true`.  
+  
+2.  Der Iteration zu beenden, ist dessen Index größer als die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaftswert.  
+  
+ Dies wird im Beispiel veranschaulicht.  
+  
+ <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>in der Regel in der Suche basierende Algorithmen eingesetzt, in denen eine Sortierung, die in der Datenquelle vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden bis zu 100 Iterationen einer Schleife parallel ausgeführt. Jede Iteration hält für einem zufällig gewählten Zeitpunkt zwischen 1 und 1.000 Millisekunden steht. Ein zufällig generierter Wert wird bestimmt, auf welche Iteration der Schleife die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode aufgerufen wird. Wie die Ausgabe des Beispiels zeigt, keine Iterationen, deren Index größer als ist, die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Start des Eigenschaft-Wert nach dem Aufruf der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ Da Iterationen der Schleife, die wahrscheinlich weiterhin ausgeführt wird, wenn sind die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode aufgerufen wird, werden Aufrufe von jeder Iteration der <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> Eigenschaft zu überprüfen, ob eine andere Iteration aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode. Wenn der Eigenschaftswert ist `true`, Iteration überprüft den Wert der die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaft und, wenn sie größer als die aktuelle Iteration Indexwert ist, kehrt sofort zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> -Methode zuvor aufgerufen wurde. <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" />und <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> dürfen nicht in Kombination von Iterationen der Schleife, dieselbe verwendet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExceptional">
+      <MemberSignature Language="C#" Value="public bool IsExceptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExceptional" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.IsExceptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine Iteration der Schleife eine Ausnahme ausgelöst hat, die nicht durch diese Iteration behandelt wurde.</summary>
+        <value>
+          <see langword="true" />, wenn eine nicht behandelte Ausnahme ausgelöst wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStopped">
+      <MemberSignature Language="C#" Value="public bool IsStopped { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStopped" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.IsStopped" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine Iteration der Schleife die <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" />-Methode aufgerufen hat.</summary>
+        <value>
+          <see langword="true" />, wenn die Schleife beendet wurde, indem in einer Iteration die <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" />-Methode aufgerufen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für lang andauernde Iterationen der Schleife, rufen Sie den Wert von der <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> -Eigenschaft können Sie bestimmen, ob alle Iterationen der Schleife, die die Ausführung vor dem Aufruf gestartet hat die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode weiterhin ausgeführt werden. Anschließend können Sie den Wert des der <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> -Eigenschaft können Sie bestimmen, ob sie sollten sofort zurückgegeben oder normal ausgeführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden bis zu 10.000 Iteration einer Schleife parallel ausgeführt. Jede Iteration hält für einem zufällig gewählten Zeitpunkt zwischen 1 und 1.000 Millisekunden steht. Ein zufällig generierter Wert wird bestimmt, auf welche Iteration der Schleife die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> -Methode aufgerufen wird. Da Iterationen der Schleife, die wahrscheinlich weiterhin ausgeführt wird, wenn sind die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> -Methode aufgerufen wird, ruft die Lambda-Ausdruck die <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> -Methode überprüft, ob eine andere Iteration aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode. Wenn zurückgegeben `true`, die Iteration wird sofort zurückgegeben.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/stop1.cs#1)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/stop1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowestBreakIteration">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; LowestBreakIteration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; LowestBreakIteration" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die niedrigste Iteration der Schleife ab, aus der <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> aufgerufen wurde.</summary>
+        <value>Die niedrigste Iteration, aus der <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> aufgerufen wurde. Bei einer <see cref="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})" />-Schleife basiert der Wert auf einem intern generierten Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist möglich, dass mehrere Iterationen einer parallelen Schleife zum Aufrufen der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode. Wenn dies der Fall ist, wird dieser Wert ist der kleinste Index einer Iteration, die aufgerufen <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>. Wenn keine Iteration der Schleife aufgerufen <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>, gibt diese Eigenschaft `null`. Beachten Sie, dass der Eigenschaftswert nicht betroffen von Aufrufen an die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode.  
+  
+ Langer Iterationen in der alle Iterationen nach Iteration, die Aufrufe der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode muss nicht ausgeführt wird, die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaft wird verwendet, um die Iterationen zu terminieren, der die Ausführung vor dem Aufruf gestartet hat die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode. Um die Iterationen zu beenden, dessen Index größer als die niedrigste Iteration der Unterbrechung von konkurrierenden Ausführung ist, sollten Sie Folgendes tun:  
+  
+1.  Überprüfen Sie, ob die <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> Eigenschaft ist `true`.  
+  
+2.  Der Iteration zu beenden, ist dessen Index größer als die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaftswert.  
+  
+ Dies wird im Beispiel veranschaulicht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden bis zu 100 Iterationen einer Schleife parallel ausgeführt. Jede Iteration hält für einem zufällig gewählten Zeitpunkt zwischen 1 und 1.000 Millisekunden steht. Ein zufällig generierter Wert wird bestimmt, auf welche Iteration der Schleife die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode aufgerufen wird. Dies verhindert, dass Iterationen, deren Index größer als ist, die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaftswert gestartet werden, nach dem Aufruf der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode, aber sie wirkt sich keine Iterationen, deren Ausführung bereits gestartet wurde. Um zu verhindern, dass diese vom abschließen, ruft jede Iteration der <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> -Methode überprüft, ob eine andere Iteration aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode. Deshalb den Wert der in die Iteration überprüft wird die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaft und, wenn sie größer als die aktuelle Iteration Indexwert ist, kehrt sofort zurück.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ Beachten Sie Folgendes: Da die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Wert liegt außerhalb des Bereichs außerhalb der parallelen Schleife, müssen Sie sie einer Variablen, die außerhalb der Schleife sichtbar ist, wenn Sie den Wert beibehalten möchten zuweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldExitCurrentIteration">
+      <MemberSignature Language="C#" Value="public bool ShouldExitCurrentIteration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldExitCurrentIteration" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die aktuelle Iteration der Schleife basierend auf Anforderungen dieser oder anderer Iterationen beendet werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn die aktuelle Iteration beendet werden soll, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> -Eigenschaftensatz auf `true` unter einer der folgenden Bedingungen:  
+  
+-   Eine Iteration der Schleife Aufrufe <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> oder <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A>.  
+  
+-   Eine Iteration der Schleife eine Ausnahme ausgelöst.  
+  
+-   Die Schleife abgebrochen wird.  
+  
+ Wenn diese Eigenschaft den Wert `true`die <xref:System.Threading.Tasks.Parallel> Klasse versucht proaktiv zu verhindern, dass zusätzliche Iterationen der Schleife Ausführung wird gestartet. Möglicherweise gibt es jedoch Fälle, in denen sie zusätzliche Iterationen gestartet werden, verhindern kann.  
+  
+ Auch die Groß-/Kleinschreibung möglicherweise, dass eine lang andauernde Iteration Ausführung bereits begonnen wurde. In solchen Fällen Iterationen können explizit Überprüfen der <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> -Eigenschaft und die Ausführung beenden, wenn die Eigenschaft zurückgibt `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden bis zu 100 Iterationen einer Schleife parallel ausgeführt. Jede Iteration hält für einem zufällig gewählten Zeitpunkt zwischen 1 und 1.000 Millisekunden steht. Ein zufällig generierter Wert wird bestimmt, auf welche Iteration der Schleife die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode aufgerufen wird. Dies verhindert, dass Iterationen, deren Index größer als ist, die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaftswert gestartet werden, nach dem Aufruf der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode, aber sie wirkt sich keine Iterationen, deren Ausführung bereits gestartet wurde. Um zu verhindern, dass diese vom abschließen, ruft jede Iteration der <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> -Methode überprüft, ob eine andere Iteration aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> Methode. Deshalb den Wert der in die Iteration überprüft wird die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> Eigenschaft und, wenn sie größer als die aktuelle Iteration Indexwert ist, kehrt sofort zurück.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.ParallelLoopState.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Threading.Tasks.Parallel" />-Schleife die Ausführung beenden soll, sobald dies dem System möglich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> -Methode gibt an, dass alle Iterationen der Schleife, die noch nicht gestartet wurden, nicht ausgeführt werden müssen. Es wird effektiv zusätzlichen Iterationen der Schleife abgebrochen. Es wird jedoch keine Iterationen beendet, die bereits mit der Ausführung begonnen haben.  
+  
+ Aufrufen der <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> -Methode nimmt die <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> -Eigenschaft zum Zurückgeben von `true` für jede Iteration der Schleife, die noch ausgeführt wird. Dies ist besonders nützlich für lang andauernde Iterationen, die prüfen können, ob die <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> -Eigenschaft, und beenden Sie frühzeitig, wenn der Wert ist `true`.  
+  
+ <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A>in der Regel in der Suche basierende Algorithmen eingesetzt, in dem nach der ein Ergebnis gefunden wurde, sind keine anderen Iterationen ausgeführt werden müssen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden bis zu 10.000 Iteration einer Schleife parallel ausgeführt. Jede Iteration hält für einem zufällig gewählten Zeitpunkt zwischen 1 und 1.000 Millisekunden steht. Ein zufällig generierter Wert wird bestimmt, auf welche Iteration der Schleife die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> -Methode aufgerufen wird. Wie die Ausgabe des Beispiels zeigt, keine Iterationen ausgeführt wird, nachdem der Aufruf der <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/stop1.cs#1)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/stop1.vb#1)]  
+  
+ Da Iterationen der Schleife, die wahrscheinlich weiterhin ausgeführt wird, wenn sind die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> -Methode aufgerufen wird, werden Aufrufe von jeder Iteration der <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> -Methode überprüft, ob eine andere Iteration aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode. Wenn zurückgegeben `true`, die Iteration wird sofort zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> -Methode zuvor aufgerufen wurde. <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" />und <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> dürfen nicht in Kombination von Iterationen der Schleife, dieselbe verwendet werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

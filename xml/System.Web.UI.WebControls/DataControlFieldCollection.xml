@@ -1,0 +1,514 @@
+<Type Name="DataControlFieldCollection" FullName="System.Web.UI.WebControls.DataControlFieldCollection">
+  <TypeSignature Language="C#" Value="public sealed class DataControlFieldCollection : System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataControlFieldCollection extends System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlFieldCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.StateManagedCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.DataControlField" />-Objekten dar, die von datengebundenen Steuerelementen wie <see cref="T:System.Web.UI.WebControls.GridView" /> und <see cref="T:System.Web.UI.WebControls.DetailsView" /> verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlFieldCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.WebControls.DataControlField> -Objekten, die von datengebundenen Steuerelementen verwendet werden, um anzugeben, wie ihre untergeordneten Steuerelemente angezeigt werden. Die <xref:System.Web.UI.WebControls.DataControlFieldCollection> Klasse abgeleitet <xref:System.Web.UI.StateManagedCollection>, eine abstrakte Basisklasse-Auflistungsklasse, die speziell zum Speichern verwendet <xref:System.Web.UI.IStateManager> Objekte.  
+  
+ Ein <xref:System.Web.UI.StateManagedCollection> Objekt beeinflusst das Verhalten einer <xref:System.Web.UI.WebControls.DataControlFieldCollection> Objekt. <xref:System.Web.UI.WebControls.DataControlField>Objekte, die dynamisch auf die Auflistung hinzugefügt werden werden erneut an das Steuerelement hinzugefügt sein, wenn der Status wiederhergestellt wurde. Dies bedeutet, dass ein Feld hinzugefügt, entfernt oder nur einmal statt für jedes Postback geändert werden muss, wie die meisten Sammlungstypen in ASP.NET benötigen.  
+  
+ (Die <xref:System.Web.UI.WebControls.DataControlField> -Klasse implementiert die <xref:System.Web.UI.IStateManager> -Schnittstelle, die zum Speichern von Zuständen in ASP.NET-Ansichtszustand ermöglicht. )  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.DataControlFieldCollection> Klasse, um einen Satz von programmgesteuert verwalten <xref:System.Web.UI.WebControls.DataControlField> Objekte. Beachten Sie, dass es eher üblich, dass diese Felder deklarativ definiert ist.  
+  
+ Können Sie hinzufügen, einfügen und entfernen <xref:System.Web.UI.WebControls.DataControlField> mit den entsprechenden Methoden der Objekte die <xref:System.Web.UI.WebControls.DataControlFieldCollection> Klasse. Um programmgesteuert abrufen <xref:System.Web.UI.WebControls.DataControlField> Objekte aus einer Auflistung verwenden Sie eine der folgenden Methoden:  
+  
+-   Verwenden Sie einen Indexer zum Abrufen einer einzelnes <xref:System.Web.UI.WebControls.DataControlField> Objekt mithilfe der Arraynotation aus der Auflistung.  
+  
+-   Verwenden der <xref:System.Web.UI.StateManagedCollection.GetEnumerator%2A> Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-implementierten-Objekt, das abzurufenden Elemente aus der Auflistung verwendet werden kann.  
+  
+ Die <xref:System.Web.UI.StateManagedCollection.Count%2A> Eigenschaft gibt die Gesamtanzahl der Elemente in der Auflistung und wird häufig verwendet werden, um die Obergrenze der Auflistung zu bestimmen. Sie können Elemente hinzufügen und Entfernen von Elementen aus der Auflistung über den <xref:System.Web.UI.WebControls.DataControlFieldCollection.Add%2A>, <xref:System.Web.UI.WebControls.DataControlFieldCollection.Insert%2A>, <xref:System.Web.UI.WebControls.DataControlFieldCollection.Remove%2A>, und <xref:System.Web.UI.WebControls.DataControlFieldCollection.RemoveAt%2A> Methoden.  
+  
+ Bei Verwendung der <xref:System.Web.UI.WebControls.GridView> oder <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, die <xref:System.Web.UI.WebControls.DataControlField> Objekte, die automatisch erstellt werden (z. B. wenn die <xref:System.Web.UI.WebControls.GridView.AutoGenerateColumns%2A> Eigenschaft ist `true`) werden nicht in der öffentlich zugängliche Fields-Auflistung gespeichert. Sie können nur zugreifen und diese bearbeiten <xref:System.Web.UI.WebControls.DataControlField> Objekte, die nicht automatisch generiert werden.  
+  
+ Die folgende Tabelle enthält die unterschiedliche Daten-Feld-Steuerelementklassen und wie sie verwendet werden.  
+  
+|-Parameterklasse|Beschreibung|  
+|---------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField>|Die abstrakte Basisklasse für alle Felder.|  
+|<xref:System.Web.UI.WebControls.BoundField>|Ein datengebundenes Steuerelement-Feld, das zum Binden von Text- oder von einer ASP.NET-Datenquellensteuerelement abgerufenen Daten verwendet wird.|  
+|<xref:System.Web.UI.WebControls.ButtonFieldBase>|Ein datengebundenes Steuerelement-Feld, das allgemeine Schaltflächenfunktionalität kapselt. <xref:System.Web.UI.WebControls.ButtonField>und <xref:System.Web.UI.WebControls.CheckBoxField> abgeleitet sind.|  
+|<xref:System.Web.UI.WebControls.ButtonField>|Ein datengebundenes Steuerelement-Feld, das mindestens eine Schaltfläche anzeigt.|  
+|<xref:System.Web.UI.WebControls.CheckBoxField>|Ein datengebundenes Steuerelement-Feld an, eine <xref:System.Web.UI.WebControls.CheckBox> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CommandField>|Ein datengebundenes Steuerelement-Feld, das Aktionen anzeigt, die für die angezeigten Daten durch die Zeile (oder Spalte), wie z. B. ausgeführt werden können, bearbeiten, aktualisieren oder löschen.|  
+|<xref:System.Web.UI.WebControls.HyperLinkField>|Ein datengebundenes Steuerelement-Feld an, eine <xref:System.Web.UI.WebControls.HyperLink> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ImageField>|Ein datengebundenes Steuerelement-Feld an, ein <xref:System.Web.UI.WebControls.Image> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.TemplateField>|Ein datengebundenes Steuerelement-Feld, das benutzerdefinierten Inhalt in einem datengebundenen Steuerelement anzeigt.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataControlFieldCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.DataControlFieldCollection> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.DataControlField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.DataControlField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.Add(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> , auf die Auflistung angefügt werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataControlFieldCollection.Add%2A> -Methode, um eine <xref:System.Web.UI.WebControls.DataControlField> Objekt an das Ende der Auflistung. Diese Implementierung der Methode verwendet die <xref:System.Web.UI.WebControls.DataControlField> angegebene Objekt der `field` Parameter durch und fügt es der Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataControlFieldCollection.Add%2A> Methode dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.CheckBoxField> -Objekt an eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CheckBoxFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxFieldCtor/CS/checkboxfieldctorcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxFieldCtor/VB/checkboxfieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneFields">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataControlFieldCollection CloneFields ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.DataControlFieldCollection CloneFields() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.CloneFields" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlFieldCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie der aktuellen Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> , die eine Kopie jedes Steuerelement Datenfeld in der aktuellen Auflistung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataControlFieldCollection.CloneFields%2A> Methode, um eine Kopie der aktuellen Sammlung zu erstellen. Diese Methode wird hauptsächlich von Dialogfeldern zur Entwurfszeit verwendet, um Rollback Verhalten zu implementieren, wenn eine Operation abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.DataControlField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.DataControlField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.Contains(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Das <see cref="T:System.Web.UI.WebControls.DataControlField" />, das in der <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> gesucht werden soll.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> Auflistung enthält einen bestimmten <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> enthält das angegebene Feld ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt eine lineare Suche. Er bestimmt die Gleichheit durch Aufrufen <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.DataControlField[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.DataControlField[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.CopyTo(System.Web.UI.WebControls.DataControlField[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.DataControlField[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> Auflistung in ein kompatibles eindimensionales <see cref="T:System.Array" />, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Felder in der Quelle <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> Auflistung ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Zielarrays.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected override object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FieldsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FieldsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.DataControlFieldCollection.FieldsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Felder in der Auflistung, in der Regel als Ergebnis ändern, eine <see cref="M:System.Web.UI.StateManagedCollection.Clear" />, <see cref="M:System.Web.UI.WebControls.DataControlFieldCollection.Insert(System.Int32,System.Web.UI.WebControls.DataControlField)" />, <see cref="M:System.Web.UI.WebControls.DataControlFieldCollection.Remove(System.Web.UI.WebControls.DataControlField)" /> oder <see cref="M:System.Web.UI.WebControls.DataControlFieldCollection.Add(System.Web.UI.WebControls.DataControlField)" /> -Methodenaufruf. Dieses Ereignis wird auch jederzeit ausgelöst, eine <see cref="T:System.Web.UI.WebControls.DataControlField" /> löst in der Auflistung der <see langword="FieldChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlFieldCollection.FieldsChanged> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.StateManagedCollection.Clear%2A>, <xref:System.Web.UI.WebControls.DataControlFieldCollection.Insert%2A>, oder <xref:System.Web.UI.WebControls.DataControlFieldCollection.Remove%2A> -Methode aufgerufen wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.DataControlField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.DataControlField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.IndexOf(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Die <see cref="T:System.Web.UI.WebControls.DataControlField" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt den Index eines bestimmten <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt in der Auflistung.</summary>
+        <returns>Der Index des der <paramref name="field" /> Parameter, wird jedoch in der Auflistung gefunden wurde, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.DataControlField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.DataControlField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.Insert(System.Int32,System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="field" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem die <see cref="T:System.Web.UI.WebControls.DataControlField" /> eingefügt wird.</param>
+        <param name="field">Der einzufügende <see cref="T:System.Web.UI.WebControls.DataControlField" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.DataControlField" /> -Objekt in der <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> Auflistung am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als 0.  
+  
+ \- oder –  
+  
+ <paramref name="index" /> ist größer als <see cref="P:System.Web.UI.StateManagedCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataControlField this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataControlField Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlFieldCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der aus der Auflistung abzurufende nullbasierte Index des <see cref="T:System.Web.UI.WebControls.DataControlField" />.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.DataControlField> -Objekt aus der <xref:System.Web.UI.WebControls.DataControlFieldCollection> Auflistung am angegebenen Index mithilfe der Arraynotation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataControlFieldCollection.Item%2A> Indexer den Zugriff auf die Felder der einen <xref:System.Web.UI.WebControls.GridView> steuern, wenn der Benutzer eine Schaltfläche im Steuerelement klickt.  
+  
+ [!code-aspx-csharp[ButtonFieldBaseCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonFieldBaseCausesValidation/CS/buttonfieldbasecausesvalidationcs.aspx#1)]
+ [!code-aspx-vb[ButtonFieldBaseCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonFieldBaseCausesValidation/VB/buttonfieldbasecausesvalidationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearComplete">
+      <MemberSignature Language="C#" Value="protected override void OnClearComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClearComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.OnClearComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected override void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected override void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.DataControlField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.DataControlField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.Remove(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Der <see cref="T:System.Web.UI.WebControls.DataControlField" />, der aus der <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> entfernt werden soll.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.WebControls.DataControlField" /> -Objekt aus der <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.UI.WebControls.DataControlField" /> zu entfernen.</param>
+        <summary>Entfernt die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt am angegebenen Index aus der <see cref="T:System.Web.UI.WebControls.DataControlFieldCollection" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected override void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

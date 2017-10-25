@@ -1,0 +1,462 @@
+<Type Name="XamlReader" FullName="System.Windows.Markup.XamlReader">
+  <TypeSignature Language="C#" Value="public class XamlReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlReader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XamlReader" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>XAML-Eingabe gelesen und mithilfe der WPF-Standard-XAML-Reader und einen zugeordneten XAML-Objektwriter ein Objektdiagramm erstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die synchrone <xref:System.Windows.Markup.XamlReader.Load%2A> Methoden sind statisch, aber die asynchronen <xref:System.Windows.Markup.XamlReader.LoadAsync%2A> Methoden sind nicht statisch und erfordern eine Instanz von der <xref:System.Windows.Markup.XamlReader> -Klasse.  
+  
+ Die Ausgabe der `Load` Methoden wird ein einzelnes Objekt, das das Stammobjekt einer erstellte Objekt oder Objektdiagramm darstellt. Objektdiagramme durch die erstellte <xref:System.Windows.Markup.XamlReader> werden in der Regel der vorhandenen Objektstruktur einer WPF-Anwendung zur Laufzeit hinzugefügt. Andernfalls neue Objektdiagramm als Rahmen des WPF-Anwendungsmodells getrennt. Dies bedeutet, dass es nicht gerendert und nicht verwendete mithilfe eine der Methoden Struktur Objekt als main Objektstruktur für die WPF-Anwendung übernommen werden (z. B. die APIs <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.LogicalTreeHelper>, <xref:System.Windows.Media.VisualTreeHelper>). Weitere Informationen zu Konzepten der Objekt-Struktur finden Sie unter [Strukturen in WPF](~/docs/framework/wpf/advanced/trees-in-wpf.md).  
+  
+ <xref:System.Windows.Markup.XamlReader>unterstützt die folgenden primären Szenarios:  
+  
+-   **Das Klonen/Objektfactory**: ohne zusätzliche Mechanismen ein Verweistyp in der Regel kann nicht einbezogen werden in mehr als eine Position in der Struktur eines WPF-Objekts. (Zusätzliche Mechanismen, bieten Unterstützung für die Freigabe oder in WPF wiederverwenden können, zählen Objekte auf der Grundlage von <xref:System.Windows.Freezable>, oder für gewöhnlich freigegebene Objekte unterstützen, wie z. B. <xref:System.Windows.Media.Brush> verwiesen wird, werden als ein Element aus einem <xref:System.Windows.ResourceDictionary>.) Eine Möglichkeit, ein Objekt zu klonen, der bereits in die Objektstruktur wird serialisiert das Objekt mit <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>. Sie verwenden dann die serialisierte Zeichenfolge als Eingabe für einen Aufruf <xref:System.Windows.Markup.XamlReader.Load%2A>, mit einem Datenstrom oder <xref:System.Xml.XmlReader> als Vermittler.  
+  
+-   **Erstellen von Objekten auf Basis der Just-in-Time Informationen**: treten häufig Möglichkeiten für die späte Bindung oder vom Benutzer bereitgestellte Eingabe, die den Status von vorhandenen Objekten ändern. Beispielsweise können mit den gleichen Wert der mehr als eine Eigenschaft festgelegt oder mithilfe der Datenbindung. Aber wenn Sie ein Szenario, in dem auch der Typ des zu erstellenden Objekts nur bestimmbaren zur Laufzeit oder Interaktion des Benutzers ist, haben, erstellen Sie ein solches Objekt durch eine Zeichenfolge für aufbauen <xref:System.Windows.Markup.XamlReader.Load%2A> Eingabe ist häufig ein nützliches Verfahren.  
+  
+-   **Verwenden die vorhandene Ressource Techniken**: die <xref:System.IO.Stream> Typ wird häufig in anderen Frameworks oder Technologien verwendet, für die Übertragung von Daten oder Objekte über die Grenzen hinweg oder ähnlichen Situationen. Anschließend können Sie die <xref:System.IO.Stream> Techniken speichern oder Abrufen von XAML-formatierte Daten, mit denen Sie schließlich ein Objekt als Teil Ihrer Anwendung zu erstellen.  
+  
+-   **Feste Dokumente:** Ihre Anwendung möglicherweise lokale oder heruntergeladene XPS-Dokumente für die Aufnahme in eine Struktur des WPF-Objekts und die Benutzeroberfläche geladen.  
+  
+> [!NOTE]
+>  Manchmal dieser Dokumentation wird beschrieben, einem Objektdiagramm, im Gegensatz zu einer Objektstruktur. Eine strikte über-/ unterordnungsbeziehung existiert immer nicht in die objektbeziehungen zur Laufzeit eine WPF-Anwendung zur Laufzeit Objektdiagramm also eine breitere zutreffend Terminologie. Aber da WPF auch zwei andere Struktur Konzeptualisierung APIs umfasst (<xref:System.Windows.LogicalTreeHelper>, <xref:System.Windows.Media.VisualTreeHelper>) der Strukturmetapher-gilt weiterhin angemessen auf den meisten realen Fälle in WPF. Im Hinblick auf XAML-Sprache Objektdiagramm ist jedoch häufig die beste Möglichkeit, vorstellen zur Erstellung von Objekten aus XAML, da die Verwendung von XAML-Sprache selbst nicht notwendigerweise angibt Helper-Klasse Methoden, die den Beziehungen zu, mehrere bringen in einem Baumstruktur erneut aus.  
+  
+## <a name="code-access-security-loose-xaml-and-xamlreader"></a>Codezugriffssicherheit und Loose XAML XamlReader  
+ XAML ist eine Markupsprache, die Objektinstanziierung und -ausführung direkt darstellt. Daher verfügen in XAML erstellte Elemente über dieselbe Fähigkeit zur Interaktion mit Systemressourcen (z.B. Netzwerkzugriff, Dateisystem E/A), wie der gleichwertig generierte Code.  
+  
+ [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]unterstützt die [!INCLUDE[TLA2#tla_net](~/includes/tla2sharptla-net-md.md)] -Sicherheitsframework [!INCLUDE[TLA#tla_cas](~/includes/tlasharptla-cas-md.md)]. Dies bedeutet, dass in der Internetzone ausgeführter [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]-Inhalt eingeschränkte Ausführungsberechtigungen hat. "Loose XAML" (Seiten nicht kompilierten XAML-Codes, die beim Laden von einem XAML-Viewer interpretiert werden) und [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)] werden normalerweise in dieser Internetzone ausgeführt und verwenden die gleiche Berechtigungsmenge.  Wenn XAML allerdings in eine voll vertrauenswürdige Anwendung geladen wird, hat es den gleichen Zugriff auf Systemressourcen wie die Hostanwendung. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](~/docs/framework/wpf/wpf-partial-trust-security.md).  
+  
+ Die Auswirkungen dieser Anweisungen für <xref:System.Windows.Markup.XamlReader> darin, dass Ihren Anwendungsentwurf Entscheidungen zur Vertrauenswürdigkeit über die XAML-möchten, laden Sie durchführen muss. Wenn Sie XAML, die nicht vertrauenswürdig ist laden, sollten Sie implementieren eine eigene Sandkasten Verfahren für die wie das resultierende Objektdiagramm laden.  
+  
+ <xref:System.Windows.Markup.XamlReader>kann auch von teilweise vertrauenswürdigem Code aufgerufen werden. In diesem Fall wird die Internet-Sicherheitszone für Codezugriffssicherheit angewendet. Wenn nichts in die geladene XAML unter Internet-Sicherheitszone ungültig ist, wird eine Verwendung von XAML-Analyse-Ausnahme ausgelöst. Unter XBAP und in anderen Fällen mit teilweiser Vertrauenswürdigkeit auf Plattformebene, wobei <xref:System.Windows.Markup.XamlReader> ist Teil der Ausführung, erhalten Sie die gleiche Ausnahmeverhalten wie bei expliziten teilweiser Vertrauenswürdigkeit Aufrufe.  
+  
+## <a name="wpf-xaml-xaml-readerswriters-and-xaml-language-versioning"></a>WPF-XAML-Verwendung von XAML-Reader/Writer und Verwendung von XAML-Sprache Versionsverwaltung  
+ [!INCLUDE[xaml2009](~/includes/xaml2009-md.md)]enthält Funktionen der Programmiersprache, z. B. und. Sie können die Signaturen der `Load` oder `Parse` XAML geladen, die diese Funktionen verwendet. Diese Sprachfunktionen werden jedoch nicht unterstützt, für XAML, die Markupkompilierung werden muss (z. B. XAML für die **Seite** Buildvorgang in einer WPF-Anwendung oder eine beliebige XAML, der die Aufgabe in die Buildvorgänge Markup beinhaltet).  
+  
+ WPF-Typen und die WPF-Technologie unterstützen im allgemeinen Konzepte, die für den Zugriff auf interne WPF-Informationen abhängig sind. Für die Instanz, basiert wie WPF-Abhängigkeitseigenschaften implementiert auf internen Techniken für die effiziente Typmember Suche. Zugriff auf diese Mechanismen wird aktiviert, indem der XAML-Code lesen und Schreiben bereitgestellten APIs <xref:System.Windows.Markup.XamlWriter> und <xref:System.Windows.Markup.XamlReader> aus der <xref:System.Windows.Markup> Namespace und in der PresentationFramework-Assembly. Allerdings die untergeordneten XAML-Readern und XAML-Writern aus System.Xaml-Assembly (Klassen basierend auf <xref:System.Xaml.XamlReader?displayProperty=nameWithType>, <xref:System.Xaml.XamlWriter?displayProperty=nameWithType>) haben keinen Zugriff auf die WPF-Mechanismen. Es gibt keine Abhängigkeit von "System.xaml" für jede WPF-spezifischen Assembly ein. Ohne Zugriff auf die WPF-Interna "System.xaml" Reader und Writer können nicht ordnungsgemäß geladen oder speichern Sie alle WPF Typen bzw. basierend auf WPF-Typen. Insbesondere verstehen der System.Xaml-Readern und Writern keine Konzepten wie die WPF Abhängigkeitseigenschaft sichern Eigenschaftenspeicher oder alle Einzelheiten wie WPF Stile, Ressourcenverzeichnis und Vorlagen verwendet. Aus diesem Grund müssen Sie eine Auswahl treffen:  
+  
+-   Wenn Sie WPF-Typen geladen werden, und/oder Sie XAML in BAML-Form, in keiner Weise verwenden, verwenden Sie die PresentationFramework XAML-Readern und XAML-Writern.  
+  
+-   Wenn Sie nicht für alle WPF-Typen oder die BAML-Form von XAML der vertrauenden Seite und nicht verwenden eine andere bestimmte Technologie XAML-Reader oder XAML-Writer Implementierung aus Gründen, die für das Zielframework spezifisch sind, verwenden Sie die "System.xaml" XAML-Readern und XAML-Writern.  
+  
+## <a name="systemxaml-backing-implementation-in-net-4"></a>Sichern die Implementierung in .NET 4 "System.xaml"  
+ <xref:System.Windows.Markup.XamlReader>ist die aufrufbare API-Oberfläche für WPF-Frameworkebene XAML-Parser. Die gleiche zugrunde liegenden XAML-Parser führt außerdem die XAML zur Laufzeit laden und Analysieren für WPF-Anwendungen, die auf [!INCLUDE[net_v30_short](~/includes/net-v30-short-md.md)] und [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)].  
+  
+ Wenn die anvisierten [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], die externe API ist identisch, aber Teile der Implementierung basieren auf den [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] allgemeinen XAML-Implementierung in der System.Xaml-Assembly, die viele der technischen und Aspekte der XAML-Analyse verbessert. Zielgruppenadressierung [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] unbedingt umfasst, einschließlich "System.xaml" als einen Verweis und Einzelheiten der Implementierung, z. B. die Ausnahmen gemeldet in "System.xaml" protokollprüfungen Typen definiert.  
+  
+<a name="xamlTextUsage_XamlReader"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.Button> in eine Zeichenfolge mit der <xref:System.Windows.Markup.XamlWriter> Klasse.  Die Zeichenfolge dann wieder in geladen ist ein <xref:System.Windows.Controls.Button> mithilfe der statischen <xref:System.Windows.Markup.XamlReader.Load%2A> Methode für die <xref:System.Windows.Markup.XamlReader> Klasse.  
+  
+ [!code-csharp[xamlreaderwritersnippets#XamlReaderLoadXmlReader](~/samples/snippets/csharp/VS_Snippets_Wpf/XamlReaderWriterSnippets/CSharp/Window1.xaml.cs#xamlreaderloadxmlreader)]
+ [!code-vb[xamlreaderwritersnippets#XamlReaderLoadXmlReader](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XamlReaderWriterSnippets/visualbasic/window1.xaml.vb#xamlreaderloadxmlreader)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XamlReader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public void CancelAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.CancelAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht den aktuellen asynchronen Ladevorgang ab, es ist ein asynchroner Ladevorgang ausstehende.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.XamlReader.CancelAsync%2A>ist ein asynchroner Vorgang. aus diesem Grund kann einige Laden auftreten, bevor der Vorgang abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWpfSchemaContext">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlSchemaContext GetWpfSchemaContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.XamlSchemaContext GetWpfSchemaContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.GetWpfSchemaContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Xaml.XamlSchemaContext" /> -Objekt, das die WPF-Schema-Kontext-Einstellungen für eine <see cref="T:System.Windows.Markup.XamlReader" />.</summary>
+        <returns>Ein <see cref="T:System.Xaml.XamlSchemaContext" /> -Objekt, das die WPF-Schema-Kontext-Einstellungen für eine <see cref="T:System.Windows.Markup.XamlReader" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.Load(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der XAML-Code im Stream-Format geladen werden soll.</param>
+        <summary>Liest die XAML-Eingabe in der angegebenen <see cref="T:System.IO.Stream" /> und gibt eine <see cref="T:System.Object" /> also den Stamm der entsprechenden Objektstruktur.</summary>
+        <returns>Das Objekt am Stamm der Struktur erstellte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.Button> in einem <xref:System.IO.MemoryStream> mithilfe der <xref:System.Windows.Markup.XamlWriter> Klasse. Laden des Streams dann wieder in einen <xref:System.Windows.Controls.Button> mithilfe der statischen <xref:System.Windows.Markup.XamlReader.Load%2A> Methode für die <xref:System.Windows.Markup.XamlReader> Klasse.  
+  
+ [!code-csharp[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/csharp/VS_Snippets_Wpf/XamlReaderWriterSnippets/CSharp/Window1.xaml.cs#xamlreaderloadxmlreader)]
+ [!code-vb[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XamlReaderWriterSnippets/visualbasic/window1.xaml.vb#xamlreaderloadxmlreader)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.Xaml.XamlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.Xaml.XamlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.Load(System.Xaml.XamlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xaml.XamlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xaml.XamlReader" />-Objekt. Dies wird erwartet, mit der Eingabe-XAML initialisiert werden.</param>
+        <summary>Liest die Verwendung von XAML-Eingabe über ein bereitgestelltes <see cref="T:System.Xaml.XamlReader" /> und gibt ein Objekt, das der Stamm der entsprechenden Objektstruktur zurück.</summary>
+        <returns>Das Objekt, das den Stamm der Struktur des erstellten Objekts ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eingabe <xref:System.Xaml.XamlReader> kann <xref:System.Windows.Baml2006.Baml2006Reader>. Dies ist wie BAML zur Laufzeit oder Lokalisierung Tool zu laden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.Load(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> die XAML-Eingabe im XML-Format zu laden, die bereits geladen.</param>
+        <summary>Liest die XAML-Eingabe in der angegebenen <see cref="T:System.Xml.XmlReader" /> und gibt ein Objekt, das der Stamm der entsprechenden Objektstruktur zurück.</summary>
+        <returns>Das Objekt, das den Stamm der Struktur des erstellten Objekts ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.Button> in eine Zeichenfolge mit der <xref:System.Windows.Markup.XamlWriter> Klasse.  Die Zeichenfolge dann wieder in geladen ist ein <xref:System.Windows.Controls.Button> mithilfe der statischen <xref:System.Windows.Markup.XamlReader.Load%2A> Methode für die <xref:System.Windows.Markup.XamlReader> Klasse.  
+  
+ [!code-csharp[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/csharp/VS_Snippets_Wpf/XamlReaderWriterSnippets/CSharp/Window1.xaml.cs#xamlreaderloadxmlreader)]
+ [!code-vb[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XamlReaderWriterSnippets/visualbasic/window1.xaml.vb#xamlreaderloadxmlreader)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static object Load (System.IO.Stream stream, System.Windows.Markup.ParserContext parserContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Load(class System.IO.Stream stream, class System.Windows.Markup.ParserContext parserContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.Load(System.IO.Stream,System.Windows.Markup.ParserContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="parserContext" Type="System.Windows.Markup.ParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, der die XAML-Eingabe zum Laden enthält.</param>
+        <param name="parserContext">Vom Parser verwendeten Kontextinformationen.</param>
+        <summary>Liest die XAML-Eingabe in der angegebenen <see cref="T:System.IO.Stream" /> und gibt ein Objekt, das der Stamm der entsprechenden Objektstruktur zurück.</summary>
+        <returns>Das Objekt, das den Stamm der Struktur des erstellten Objekts ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="parserContext" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAsync">
+      <MemberSignature Language="C#" Value="public object LoadAsync (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object LoadAsync(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.LoadAsync(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, enthält die XAML-Eingabe um zu laden.</param>
+        <summary>Liest die XAML-Eingabe in der angegebenen <see cref="T:System.IO.Stream" /> und gibt den Stamm der entsprechenden Objektstruktur zurück.</summary>
+        <returns>Das Objekt, das den Stamm der Struktur des erstellten Objekts ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein asynchrone Ladevorgang für die Verwendung von XAML-wird zunächst ein Objekt zurück, das nur das Stammobjekt ist. Asynchron, XAML-Analyse dann fortgesetzt und alle untergeordneten Objekte werden unter dem Stamm gefüllt. Dies ist im Gegensatz zu typischen WPF XAML Verarbeiten von Verhalten und dessen Interaktion mit WPF Konzepte der Lebensdauer eines Objekts. Bei der Interaktion mit normalen (nicht-Async) werden alle Eigenschaften eines Objekts, einschließlich aller untergeordneten Sammlungen vor dem Zurückgeben eines Elements, und Laden gemeldet gefüllt. Dieses Verhalten entspricht Bottom-up-Methoden zum Erstellen der Struktur, in dem das Stammobjekt das letzte Objekt verfügbar ist.  
+  
+ Sie in der Regel einer Position in der WPF-Anwendung Objektstruktur würde das zurückgegebene Objekt zuweisen, Kenntnisse, die Inhalte möglicherweise dennoch werden ausfüllen und möglicherweise inkrementelles Layout Updates aus, wenn der gesamte Inhalt als Teil der Benutzeroberfläche verfügbar gemacht wird. Aus diesem Grund zum Isolieren oder virtualisieren von asynchron geladene Objekte aus XAML und anwendungsspezifische Logik oder Anwendungszustand verwenden, um Sie darüber informieren, dass im Normalfall wird <xref:System.Windows.Markup.XamlReader.LoadCompleted> behandelt wird.  
+  
+ In der Reihenfolge für <xref:System.Windows.Markup.XamlReader.LoadAsync%2A> um XAML-Eingaben asynchron laden zu können, muss das Stammelement in der XAML-Eingabe enthalten, das Attribut und Wert `x:SynchronousMode="Async"`. Der Wert wird als Groß-/ Kleinschreibung beachtet. Wenn die Verwendung von XAML-Eingabe Stamm keine `x:SynchronousMode="Async"`, wird keine Ausnahme ausgelöst, und der Aufruf als synchrone Last verarbeitet wird (finden Sie unter <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29>).  
+  
+ Nur eine asynchrone Ladevorgang pro Instanz von der <xref:System.Windows.Markup.XamlReader> Klasse zu einem Zeitpunkt ausgeführt werden kann.  Wenn mehrere asynchrone Vorgänge, in der gleichen Instanz von versucht wird der <xref:System.Windows.Markup.XamlReader> Klasse eine <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es stehen mehrere Ladevorgänge gleichzeitig mit dem <see cref="T:System.Windows.Markup.XamlReader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAsync">
+      <MemberSignature Language="C#" Value="public object LoadAsync (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object LoadAsync(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.LoadAsync(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Eine vorhandene <see cref="T:System.Xml.XmlReader" /> , die wurde bereits geladen/Lesen der XAML-Eingabe.</param>
+        <summary>Liest die XAML-Eingabe in der angegebenen <see cref="T:System.Xml.XmlReader" /> und gibt den Stamm der entsprechenden Objektstruktur zurück.</summary>
+        <returns>Der Stamm der Struktur erstellte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein asynchrone Ladevorgang für die Verwendung von XAML-wird zunächst ein Objekt zurück, das nur das Stammobjekt ist. Asynchron, XAML-Analyse dann fortgesetzt und alle untergeordneten Objekte werden unter dem Stamm gefüllt. Dies ist im Gegensatz zu typischen WPF XAML Verarbeiten von Verhalten und dessen Interaktion mit WPF Konzepte der Lebensdauer eines Objekts. Bei der Interaktion mit normalen (nicht-Async) werden alle Eigenschaften eines Objekts, einschließlich aller untergeordneten Sammlungen vor dem Zurückgeben eines Elements, und Laden gemeldet gefüllt. Dieses Verhalten entspricht Bottom-up-Methoden zum Erstellen der Struktur, in dem das Stammobjekt das letzte Objekt verfügbar ist.  
+  
+ In der Regel Enhanced das zurückgegebene Objekt aus <xref:System.Windows.Markup.XamlReader.LoadAsync%2A> an einem Speicherort in Ihrer Anwendung Objektstruktur, mit dem wissen, dass Inhalt möglicherweise immer noch werden ausfüllen und möglicherweise inkrementelles Layout Updates aus, wenn der gesamte Inhalt verfügbar, als Teil gemacht wird der UI. Aus diesem Grund zum Isolieren oder virtualisieren von asynchron geladene Objekte aus XAML und anwendungsspezifische Logik oder Anwendungszustand verwenden, um Sie darüber informieren, dass im Normalfall wird <xref:System.Windows.Markup.XamlReader.LoadCompleted> behandelt wird.  
+  
+ In der Reihenfolge für <xref:System.Windows.Markup.XamlReader.LoadAsync%2A> um XAML-Eingaben asynchron laden zu können, muss das Stammelement in der XAML-Markup enthalten, das Attribut und Wert `x:SynchronousMode="Async"`. Der Wert wird als Groß-/ Kleinschreibung beachtet. Wenn der Stamm der XAML-Markup keine `x:SynchronousMode="Async"`, wird keine Ausnahme ausgelöst, und der Aufruf wird stattdessen als synchrone Last verarbeitet (finden Sie unter <xref:System.Windows.Markup.XamlReader.Load%28System.Xml.XmlReader%29>).  
+  
+ Nur eine asynchrone Ladevorgang pro Instanz von der <xref:System.Windows.Markup.XamlReader> Klasse zu einem Zeitpunkt ausgeführt werden kann.  Wenn mehrere asynchrone Vorgänge, in der gleichen Instanz von versucht wird der <xref:System.Windows.Markup.XamlReader> Klasse eine <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Mehrere Ladevorgänge erfolgen gleichzeitig mit dem <see cref="T:System.Windows.Markup.XamlReader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAsync">
+      <MemberSignature Language="C#" Value="public object LoadAsync (System.IO.Stream stream, System.Windows.Markup.ParserContext parserContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object LoadAsync(class System.IO.Stream stream, class System.Windows.Markup.ParserContext parserContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.LoadAsync(System.IO.Stream,System.Windows.Markup.ParserContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="parserContext" Type="System.Windows.Markup.ParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein Datenstrom, enthält die XAML-Eingabe um zu laden.</param>
+        <param name="parserContext">Vom Parser verwendeten Kontextinformationen.</param>
+        <summary>Liest die XAML-Eingabe in der angegebenen <see cref="T:System.IO.Stream" /> und gibt den Stamm der entsprechenden Objektstruktur zurück.</summary>
+        <returns>Der Stamm der Struktur erstellte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein asynchrone Ladevorgang für die Verwendung von XAML-wird zunächst ein Objekt zurück, das nur das Stammobjekt ist. Asynchron, XAML-Analyse dann fortgesetzt und alle untergeordneten Objekte werden unter dem Stamm gefüllt. Dies ist im Gegensatz zu typischen WPF XAML Verarbeiten von Verhalten und dessen Interaktion mit WPF Konzepte der Lebensdauer eines Objekts. Bei der Interaktion mit normalen (nicht-Async) werden alle Eigenschaften eines Objekts, einschließlich aller untergeordneten Sammlungen vor dem Zurückgeben eines Elements, und Laden gemeldet gefüllt. Dieses Verhalten entspricht Bottom-up-Methoden zum Erstellen der Struktur, in dem das Stammobjekt das letzte Objekt verfügbar ist.  
+  
+ Sie in der Regel Enhanced an einer Position in der Objektstruktur für die Anwendung das zurückgegebene Objekt, mit dem wissen, die Inhalte möglicherweise noch werden ausfüllen und möglicherweise inkrementelles Layout Updates aus, wenn der gesamte Inhalt als Teil der Benutzeroberfläche verfügbar gemacht wird. Aus diesem Grund zum Isolieren oder virtualisieren von asynchron geladene Objekte aus XAML und anwendungsspezifische Logik oder Anwendungszustand verwenden, um Sie darüber informieren, dass im Normalfall wird <xref:System.Windows.Markup.XamlReader.LoadCompleted> behandelt wird.  
+  
+ In der Reihenfolge für <xref:System.Windows.Markup.XamlReader.LoadAsync%2A> Markup asynchron laden zu können, muss das Stammelement in der XAML-Markup enthalten, das Attribut und Wert `x:SynchronousMode="Async"`. Der Wert wird als Groß-/ Kleinschreibung beachtet. Wenn der Stamm der XAML-Markup keine `x:SynchronousMode="Async"`, wird keine Ausnahme ausgelöst, und der Aufruf als synchrone Last verarbeitet wird (finden Sie unter <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%2CSystem.Windows.Markup.ParserContext%29>).  
+  
+ Nur eine asynchrone Ladevorgang pro Instanz von der <xref:System.Windows.Markup.XamlReader> Klasse zu einem Zeitpunkt ausgeführt werden kann.  Wenn mehrere asynchrone Vorgänge, in der gleichen Instanz von versucht wird der <xref:System.Windows.Markup.XamlReader> Klasse eine <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Mehrere Ladevorgänge erfolgen gleichzeitig mit dem <see cref="T:System.Windows.Markup.XamlReader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCompleted">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.AsyncCompletedEventHandler LoadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.AsyncCompletedEventHandler LoadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Markup.XamlReader.LoadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AsyncCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein asynchroner Ladevorgang abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.XamlReader.LoadCompleted>wird auch ausgelöst, wenn ein asynchroner Ladevorgang abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static object Parse (string xamlText);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Parse(string xamlText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xamlText">Die Eingabe-XAML als eine einzelne Zeichenfolge.</param>
+        <summary>Liest die XAML-Eingabe in die angegebene Textzeichenfolge und gibt ein Objekt, das entspricht, in das Stammverzeichnis des angegebenen Markups.</summary>
+        <returns>Der Stamm der Struktur erstellte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung ruft <xref:System.Windows.Markup.XamlReader.Load%2A> intern, nachdem Sie erstellt einen Stream aus der Zeichenfolge. Finden Sie unter <xref:System.Windows.Markup.XamlReader.Load%2A> zusätzliche Informationen, z. B. möglicher Ausnahmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static object Parse (string xamlText, System.Windows.Markup.ParserContext parserContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Parse(string xamlText, class System.Windows.Markup.ParserContext parserContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlReader.Parse(System.String,System.Windows.Markup.ParserContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlText" Type="System.String" />
+        <Parameter Name="parserContext" Type="System.Windows.Markup.ParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="xamlText">Die Eingabe-XAML als eine einzelne Zeichenfolge.</param>
+        <param name="parserContext">Vom Parser verwendeten Kontextinformationen.</param>
+        <summary>Liest das XAML-Markup in der angegebenen Textzeichenfolge (mit einem angegebenen <see cref="T:System.Windows.Markup.ParserContext" />) und gibt ein Objekt, das entspricht in das Stammverzeichnis des angegebenen Markup zurück.</summary>
+        <returns>Der Stamm der Struktur erstellte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung ruft <xref:System.Windows.Markup.XamlReader.Load%2A> intern, nachdem Sie erstellt einen Stream aus der Zeichenfolge. Finden Sie unter <xref:System.Windows.Markup.XamlReader.Load%2A> zusätzliche Informationen, z. B. möglicher Ausnahmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

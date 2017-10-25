@@ -1,0 +1,82 @@
+<Type Name="PrintJobSettings" FullName="System.Printing.PrintJobSettings">
+  <TypeSignature Language="C#" Value="public class PrintJobSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintJobSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintJobSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt einen Druckauftrag an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Printing.PrintTicket> -Objekt, das den Wert von der <xref:System.Printing.PrintJobSettings.CurrentPrintTicket%2A> -Eigenschaft, enthält die detaillierte Einstellungen für einen Druckauftrag. Das übergeordnete Element <xref:System.Printing.PrintJobSettings>, fügt nur eine Beschreibung hinzu.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentPrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket CurrentPrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket CurrentPrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintJobSettings.CurrentPrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Printing.PrintTicket" /> Objekt, das die detaillierte Einstellungen für den Druckauftrag enthält.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintTicket" /> -Objekt, das alle Details zu dem Druckauftrag, wie z. B. die Anzahl der zu druckenden Kopien enthält und ob Heften oder Duplexdruck verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser <xref:System.Printing.PrintJobSettings.CurrentPrintTicket%2A> Eigenschaft nicht überprüfen oder ändern Sie den angegebenen <xref:System.Printing.PrintTicket> für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintJobSettings.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Beschreibung eines Druckauftrags.</summary>
+        <value>Ein <see cref="T:System.String" /> , beschreibt den Druckauftrag, z. B. "vierteljährlicher Bericht."</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

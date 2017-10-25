@@ -1,0 +1,23 @@
+<Namespace Name="System.Printing.IndexedProperties">
+  <Docs>
+    <summary>Enthält Klassen, die es ermöglichen, schnell die eigenschafteneinstellungen des ein Drucksystem-Objekt in ein anderes Objekt des gleichen Typs kopieren. Darüber hinaus können Iteration durch die Eigenschaften von Drucksystemobjekten und die Ermittlung von Typen zur Laufzeit ohne Verwendung von Reflektion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Namespace enthält die folgenden Hauptklassen:  
+  
+-   Die <xref:System.Printing.IndexedProperties.PrintProperty> Klasse, die die Basisklasse für die meisten anderen Klassen ist.  
+  
+-   Die <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>, also eine <xref:System.Collections.Hashtable> , deren Einträge werden alle Instanzen von Klassen abgeleitet <xref:System.Printing.IndexedProperties.PrintProperty>.  
+  
+ Dieser Namespace ermöglicht, die zur Laufzeit zu ermitteln, ohne Verwendung der Reflektion, die Typen der Eigenschaften von Drucksystemobjekten, z. B. <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, oder <xref:System.Printing.PrintSystemJobInfo>.  
+  
+ Beispiele, die die Verwendung der Klassen in diesem Namespace zu veranschaulichen, finden Sie unter <xref:System.Printing.IndexedProperties.PrintBooleanProperty>, <xref:System.Printing.IndexedProperties.PrintProperty>, und <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+  
+ Dieser Namespace ist Teil der verbesserten Druckdienste Lieferumfang [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]. Entwickler von verwaltetem Code mit [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] verwenden, muss die [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] in die <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

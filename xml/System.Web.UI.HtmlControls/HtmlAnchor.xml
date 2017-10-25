@@ -1,0 +1,563 @@
+<Type Name="HtmlAnchor" FullName="System.Web.UI.HtmlControls.HtmlAnchor">
+  <TypeSignature Language="C#" Value="public class HtmlAnchor : System.Web.UI.HtmlControls.HtmlContainerControl, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlAnchor extends System.Web.UI.HtmlControls.HtmlContainerControl implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlAnchor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ServerClick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Element <see langword="&lt;a&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt zwei Möglichkeiten zur Verwendung der <xref:System.Web.UI.HtmlControls.HtmlAnchor> Klasse. Die erste Methode ist für die Navigation: Verwenden der <xref:System.Web.UI.HtmlControls.HtmlAnchor.HRef%2A> Eigenschaft, um den Speicherort der Seite für die Verbindung zu definieren. Die zweite bezieht sich auf postback Ereignisse: Verwenden der <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis, um den Benutzer programmgesteuert zu behandeln, die auf einen Link klickt.  
+  
+> [!CAUTION]
+>  Dieses Steuerelement kann verwendet werden, Benutzereingaben angezeigt werden, die möglicherweise böswillige Clientskripts umfassen. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Validation Server Control Syntax](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlAnchor>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlAnchor.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis, um eine Meldung anzuzeigen, bei der <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird.  
+  
+ [!code-aspx-csharp[HtmlAnchor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlAnchor/CS/htmlanchorcs.aspx#1)]
+ [!code-aspx-vb[HtmlAnchor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlAnchor/VB/htmlanchorvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlAnchor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlAnchor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlAnchor>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Das "a" Zeichenfolgenliteral.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dynamisch hinzufügen ein <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement Web Forms-Seite.  
+  
+ [!code-aspx-csharp[HtmlAnchorConstructor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlAnchorConstructor/CS/htmlanchorconstructorcs.aspx#1)]
+ [!code-aspx-vb[HtmlAnchorConstructor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlAnchorConstructor/VB/htmlanchorconstructorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlAnchor.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Überprüfung erfolgt bei der <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> Steuerelement geklickt wird.</summary>
+        <value>
+          <see langword="true" />Validierung durchgeführt wird bei der <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> geklickt wurde, andernfalls wird <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig erfolgt die Validierung bei der ein <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird. Seitenüberprüfung bestimmt, ob Steuerelemente, die ein Validierungssteuerelement auf der Seite zugeordnet, die alle die Validierungsregeln übergeben, die durch das Validierungssteuerelement angegeben werden sind.  
+  
+ Sie können angeben, oder zu bestimmen, ob die Überprüfung auf dem Client und dem Server ausgeführt wird beim ein <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird, mithilfe der <xref:System.Web.UI.HtmlControls.HtmlAnchor.CausesValidation%2A> Eigenschaft. Validierung durchgeführt werden soll, legen Sie die <xref:System.Web.UI.HtmlControls.HtmlAnchor.CausesValidation%2A> Eigenschaft auf "false".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HRef">
+      <MemberSignature Language="C#" Value="public string HRef { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HRef" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlAnchor.HRef" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL-Ziel des Links im angegebenen der <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> Serversteuerelement.</summary>
+        <value>Das URL-Ziel des Links.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Angeben der URL verknüpft, wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlAnchor.HRef%2A> -Eigenschaft an eine Webseite navigieren, wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird.  
+  
+ [!code-aspx-csharp[Classic HtmlAnchor.HRef Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlAnchor.HRef Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlAnchor.HRef Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlAnchor.HRef Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlAnchor.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der Name des Lesezeichens, definiert der <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> Serversteuerelement.</summary>
+        <value>Der Name des Lesezeichens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um einen Abschnitt auf einer Webseite mit einem Namen zu markieren. Dadurch können Sie von überall aus eine Verbindung zu diesem Abschnitt auf derselben Seite. Beispielsweise können Sie eine Tabelle der Inhalte am Anfang einer Seite bereitstellen, die direkt mit Themen auf der Seite verknüpft wird.  
+  
+ Verwenden Sie einen Link zu einem markierten Abschnitt zu erstellen, ein <xref:System.Web.UI.HtmlControls.HtmlAnchor> steuern, mit der <xref:System.Web.UI.HtmlControls.HtmlAnchor.HRef%2A> -Eigenschaft auf den Namen des Abschnitts, mit einem #-Symbol vorangestellt (\<a HRef = "#Topic1" / >).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlAnchor.Name%2A> Eigenschaft, um die verschiedenen Abschnitte auf der Webseite zu markieren, und verknüpfen Sie sie aus einer Tabelle mit Inhalt.  
+  
+ [!code-aspx-csharp[Classic HtmlAnchor.Name Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlAnchor.Name Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlAnchor.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlAnchor.Name Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlAnchor.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" /> Ereignis und Register Clientskripts zum Generieren eines Postbacks.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlAnchor.OnPreRender%2A> Methode, sodass die It immer zeigt eine <xref:System.Web.UI.HtmlControls.HtmlAnchor.Title%2A> Tag in einem benutzerdefinierten <xref:System.Web.UI.HtmlControls.HtmlAnchor> Webserversteuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlAnchorOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlAnchorOnPreRender/CS/custom_htmlanchor_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlAnchorOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlAnchorOnPreRender/VB/custom_htmlanchor_onprerendervb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlAnchorOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlAnchorOnPreRender/CS/custom_htmlanchor_onprerender.cs#2)]
+ [!code-vb[CustomHtmlAnchorOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlAnchorOnPreRender/VB/custom_htmlanchor_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnServerClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnServerClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnServerClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlAnchor.OnServerClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick" />-Ereignis aus. Dadurch können Sie einen benutzerdefinierten Handler für das Ereignis bereitstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird. Dieses Serverereignis bewirkt, dass einen Roundtrip zum auftreten, vom Client zum Server und zurück.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.HtmlControls.HtmlAnchor.OnServerClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis. Wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird, wird eine Meldung angezeigt.  
+  
+ [!code-aspx-csharp[HtmlAnchorServerClickDeclarative#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlAnchorServerClickDeclarative/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[HtmlAnchorServerClickDeclarative#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlAnchorServerClickDeclarative/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird ändert programmgesteuert angeben und einen Ereignishandler für code anhand des vorhergehenden Beispiels die <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis.  
+  
+ [!code-aspx-csharp[HtmlAnchorServerClick#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlAnchorServerClick/CS/htmlanchorserverclickcs.aspx#1)]
+ [!code-aspx-vb[HtmlAnchorServerClick#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlAnchorServerClick/VB/htmlanchorserverclickvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.HtmlControls.HtmlAnchor.OnServerClick(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.HtmlControls.HtmlAnchor.OnServerClick(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlAnchor.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Das Argument für das Ereignis.</param>
+        <summary>Löst Ereignisse für das <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" />-Steuerelement aus, wenn es ein Postback an den Server ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlAnchor.RaisePostBackEvent%2A> Methode wird verwendet, indem Sie die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement, wenn darauf geklickt wird, ausgelöst werden soll, eine <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis.  
+  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlAnchor.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , der den Ausgabestream zum Rendern auf dem Client enthält.</param>
+        <summary>Rendert die Attribute des <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" />-Steuerelements in das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert des der <xref:System.Web.UI.HtmlControls.HtmlAnchor.HRef%2A> Eigenschaft ist eine fehlerhafte URL der <xref:System.Web.UI.HtmlControls.HtmlAnchor.RenderAttributes%2A> -Methode löst eine <xref:System.Web.HttpException> Ausnahme.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlAnchor.RenderAttributes%2A> Methode in einem benutzerdefinierten steuern, sodass bestimmte Titeltext, zugegriffen werden kann, als QuickInfo angezeigt, für immer angezeigt wird der <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlAnchorRenderAttributes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlAnchorRenderAttributes/CS/custom_htmlanchor_renderattributescs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlAnchorRenderAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlAnchorRenderAttributes/VB/custom_htmlanchor_renderattributesvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlAnchorRenderAttributes#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlAnchorRenderAttributes/CS/custom_htmlanchor_renderattributes.cs#2)]
+ [!code-vb[CustomHtmlAnchorRenderAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlAnchorRenderAttributes/VB/custom_htmlanchor_renderattributes.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlAnchor.HRef" /> enthält eine falsch formatierte URL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerClick">
+      <MemberSignature Language="C#" Value="public event EventHandler ServerClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ServerClick" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn auf das Steuerelement <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird. Dieses Serverereignis bewirkt, dass einen Roundtrip zum auftreten, vom Client zum Server und zurück.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis. Wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird, wird eine Meldung angezeigt.  
+  
+ [!code-aspx-csharp[HtmlAnchorServerClickDeclarative#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlAnchorServerClickDeclarative/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[HtmlAnchorServerClickDeclarative#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlAnchorServerClickDeclarative/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird ändert des vorherigen Beispiels programmgesteuert angeben und code einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlAnchor.ServerClick> Ereignis.  
+  
+ [!code-aspx-csharp[HtmlAnchorServerClick#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlAnchorServerClick/CS/htmlanchorserverclickcs.aspx#1)]
+ [!code-aspx-vb[HtmlAnchorServerClick#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlAnchorServerClick/VB/htmlanchorserverclickvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlAnchor.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Die Ereignisargumente.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.Page.RaisePostBackEvent(System.Web.UI.IPostBackEventHandler,System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlAnchor.System%23Web%23UI%23IPostBackEventHandler%23RaisePostBackEvent%2A>-Methode ruft die <xref:System.Web.UI.HtmlControls.HtmlAnchor.RaisePostBackEvent%2A>-Methode auf.  
+  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor>-Instanz in eine <xref:System.Web.UI.IPostBackEventHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlAnchor.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der das Browserfenster oder der Zielframe, in dem der Inhalt der Webseite angezeigt, die, wenn verknüpft ist, die <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> Steuerelement geklickt wird.</summary>
+        <value>Das Browserfenster oder der Zielframe, in dem der Inhalt der Webseite angezeigt, wenn verknüpft die <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> geklickt wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlAnchor.Target%2A> Eigenschaft, um das Zielfenster oder Rahmen, die zeigt den Inhalt der Webseite, die, wenn verknüpft ist, die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement geklickt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.HtmlControls.HtmlAnchor.Target%2A> Eigenschaft als rendert eine `target` Attribut. Die `target` -Attribut `a` Elemente ist in der Dokumenttypdefinition XHTML 1.1 nicht zulässig. Legen Sie nicht die <xref:System.Web.UI.HtmlControls.HtmlAnchor.Target%2A> Eigenschaft Wenn der gerenderten Ausgabe für die <xref:System.Web.UI.HtmlControls.HtmlAnchor> mit XHTML 1.1 kompatibel sein muss. Weitere Informationen finden Sie unter [XHTML-Standards in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Verwenden Sie beim Erstellen von accessible Web Pages die <xref:System.Web.UI.HtmlControls.HtmlAnchor.Target%2A> Eigenschaft, um ein weiteres Fenster als Ziel. Weitere Informationen finden Sie unter [NIB: ASP.NET Accessibility](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae).  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlAnchor.Target%2A> Wert muss mit einem Buchstaben im Bereich von A bis Z (Groß-/Kleinschreibung), mit Ausnahme der folgenden speziellen Werte, die beginnen mit einem Unterstrich beginnen.  
+  
+|Zielwert|Beschreibung|  
+|------------------|-----------------|  
+|`_blank`|Rendert den Inhalt in einem neuen Fenster ohne Frames.|  
+|`_parent`|Rendert den Inhalt im unmittelbar übergeordneten Frameset.|  
+|`_search`|Rendert den Inhalt im Suchbereich.|  
+|`_self`|Rendert den Inhalt im Rahmen mit Fokus.|  
+|`_top`|Rendert den Inhalt in der gesamten Fenster ohne Frames.|  
+  
+> [!NOTE]
+>  Überprüfen Sie Ihre Browserdokumentation zum bestimmen, ob die `_search` Wert wird unterstützt.  Beispielsweise Microsoft Internet Explorer 5.0 und höher, unterstützt die `_search` Zielwert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlAnchor.Target%2A> Eigenschaft zum Anzeigen der Seite ", zu dem navigiert wird, wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> in einem neuen Fenster ohne Frames Steuerelement geklickt wird.  
+  
+ [!code-aspx-csharp[Classic HtmlAnchor.Target Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlAnchor.Target Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlAnchor.Target Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlAnchor.Target Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlAnchor.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text angezeigt, wenn der Mauszeiger sich über befindet die <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> Steuerelement.</summary>
+        <value>Der Text angezeigt, wenn der Mauszeiger sich über befindet die <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Bereitstellen eines benutzerdefinierten QuickInfo für die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Steuerelement verbleibt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlAnchor.Title%2A> Eigenschaft, um benutzerdefinierten Text für die QuickInfo bereitstellen.  
+  
+ [!code-aspx-csharp[Classic HtmlAnchor.Title Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlAnchor.Title Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlAnchor.Title Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlAnchor.Title Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlAnchor.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe von Steuerelementen für die die <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe von Steuerelementen, für die die <see cref="T:System.Web.UI.HtmlControls.HtmlAnchor" /> eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.HtmlControls.HtmlAnchor.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.HtmlControls.HtmlAnchor> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlAnchor.ValidationGroup%2A> Eigenschaft wirkt sich nur, wenn der Wert der <xref:System.Web.UI.HtmlControls.HtmlAnchor.CausesValidation%2A> -Eigenschaftensatz auf `true`. Wenn geben Sie einen Wert für die <xref:System.Web.UI.HtmlControls.HtmlAnchor.ValidationGroup%2A> -Eigenschaft, um nur die Validierungssteuerelemente, die Teil der angegebenen Gruppe sind sind validiert, wenn die <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelement an den Server sendet. Wenn Sie einen Wert für diese Eigenschaft nicht angeben und die <xref:System.Web.UI.HtmlControls.HtmlAnchor.CausesValidation%2A> -Eigenschaftensatz auf `true`, alle Validierungssteuerelemente auf der Seite, die Validierungsgruppe zugeordnet sind werden überprüft, wenn das Steuerelement an den Server zurückgesendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

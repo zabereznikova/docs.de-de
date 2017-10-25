@@ -1,0 +1,710 @@
+<Type Name="HwndSourceParameters" FullName="System.Windows.Interop.HwndSourceParameters">
+  <TypeSignature Language="C#" Value="public struct HwndSourceParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit HwndSourceParameters extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.HwndSourceParameters" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Parameter für das Erstellen eines <see cref="T:System.Windows.Interop.HwndSource" />-Objekts mit dem <see cref="M:System.Windows.Interop.HwndSource.#ctor(System.Windows.Interop.HwndSourceParameters)" />-Konstruktor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Struktur wird nur in verwendet das <xref:System.Windows.Interop.HwndSource> Objekt-Konstruktoraufruf enthalten.  
+  
+ Die Eigenschaften, deren Werte werden durch diese Struktur festgelegt, werden auf nicht direkt bereitgestellt <xref:System.Windows.Interop.HwndSource> Instanzen, wenn ein <xref:System.Windows.Interop.HwndSource> erstellt wird. Allerdings die Werte von der <xref:System.Windows.Interop.HwndSourceParameters> Struktur betreffen normalerweise allgemeine [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Eigenschaften wie "Height" und "Width", die möglicherweise in bestimmten gehosteten Objekte vorhanden und ihre [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)].  
+  
+> [!IMPORTANT]
+>  Erstellen Sie keine Instanzen dieser Struktur mit dem (der parameterlose) Standardkonstruktor. Ein <xref:System.Windows.Interop.HwndSourceParameters> -Instanz, die vom Standardkonstruktor erstellt wird, führt zu <xref:System.Windows.Interop.HwndSourceParameters> nicht zugewiesen werden eine <xref:System.Windows.Interop.HwndSourceParameters.WindowName%2A> (, obwohl die <xref:System.Windows.Interop.HwndSourceParameters.WindowName%2A> Eigenschaft zu sein scheint). Wenn eine solche Instanz als Parameter für angewendet wird ein <xref:System.Windows.Interop.HwndSource> -Konstruktor, der resultierende <xref:System.Windows.Interop.HwndSource> ein Fenster kann nicht angezeigt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Klasse. Verwenden Sie für <see cref="T:System.Windows.Interop.HwndSourceParameters" /> nicht den Standardkonstruktor (siehe Hinweise).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Erstellen Sie keine Instanzen dieser Struktur mit dem (der parameterlose) Standardkonstruktor. Ein <xref:System.Windows.Interop.HwndSourceParameters> -Instanz, die vom Standardkonstruktor erstellt wird, führt zu <xref:System.Windows.Interop.HwndSourceParameters> nicht zugewiesen werden eine <xref:System.Windows.Interop.HwndSourceParameters.WindowName%2A> (, obwohl die <xref:System.Windows.Interop.HwndSourceParameters.WindowName%2A> Eigenschaft zu sein scheint). Wenn eine solche Instanz als Parameter für angewendet wird ein <xref:System.Windows.Interop.HwndSource> -Konstruktor, der resultierende <xref:System.Windows.Interop.HwndSource> ein Fenster kann nicht angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HwndSourceParameters (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Fenstername.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Klasse mit einem angegebenen Fensternamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HwndSourceParameters (string name, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Fenstername.</param>
+        <param name="width">Die Breite des Fensters in Pixel.</param>
+        <param name="height">Die Höhe des Fensters in Pixel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Klasse mit einem angegebenen Namen und einer Ausgangsgröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben Sie 0 (null) für entweder die `width` oder `height` Parameter. Obwohl die Methode schließlich erfolgreich ist, auch wenn Sie 0 übergeben, tritt auf, eine erhebliche Leistungseinbußen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireHwndFocusInMenuMode">
+      <MemberSignature Language="C#" Value="public bool AcquireHwndFocusInMenuMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcquireHwndFocusInMenuMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.AcquireHwndFocusInMenuMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der bestimmt, ob der Win32-Fokus für das Fenster mit WPF erhalten werden soll, wenn eine <see cref="T:System.Windows.Interop.HwndSource" /> erstellt wird, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />, um den Win32-Fokus für das Fenster zu erhalten, das WPF enthält, wenn der Benutzer mit Menüs interagiert; andernfalls <see langword="false" />. <see langword="null" />, um den Wert von <see cref="P:System.Windows.Interop.HwndSource.DefaultAcquireHwndFocusInMenuMode" /> zu verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustSizingForNonClientArea">
+      <MemberSignature Language="C#" Value="public bool AdjustSizingForNonClientArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AdjustSizingForNonClientArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.AdjustSizingForNonClientArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Nicht-Client-Bereich bei der Größenanpassung berücksichtigt werden soll.</summary>
+        <value>
+          <see langword="true" /> wenn die Größenanpassungslogik des Layout-Managers den Nicht-Client-Bereich berücksichtigen soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Window> Klasse legt diesen Parameter fest, um `true` Verwendung dieser Struktur intern als Teil seiner [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] fenstererstellung Prozess.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Objekte, die auf Gleichheit getestet werden sollen.</param>
+        <summary>Bestimmt, ob diese Struktur einem angegebenen Objekt entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vergleich erfolgreich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung überprüft alle Mitglieder (öffentlich und privat) der beiden Strukturen genaue Wertgleichheit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Interop.HwndSourceParameters obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Interop.HwndSourceParameters obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.Equals(System.Windows.Interop.HwndSourceParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.Interop.HwndSourceParameters" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Struktur, die auf Gleichheit getestet werden sollt.</param>
+        <summary>Bestimmt, ob diese Struktur einer angegebenen <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn die Strukturen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung überprüft alle Mitglieder (öffentlich und privat) der beiden Strukturen genaue Wertgleichheit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedWindowStyle">
+      <MemberSignature Language="C#" Value="public int ExtendedWindowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExtendedWindowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die erweiterten [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)]-Stile für das Fenster ab oder legt diese fest.</summary>
+        <value>Die erweiterten Fensterstile. Finden Sie unter [CreateWindowEx](http://go.microsoft.com/fwlink/?LinkId=98462) eine Liste dieser Stile. Der Standard ist 0 (keine erweiterten Fensterstile).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung verwendet die Objekt-Implementierung von GetHashCode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAssignedSize">
+      <MemberSignature Language="C#" Value="public bool HasAssignedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAssignedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.HasAssignedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine Größe zugewiesen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die Fenstergröße zugewiesen wurde, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />, es sei denn, beim Erstellen der Struktur wurden Breite und Höhe angegeben. (In diesem Fall wäre der Wert <see langword="true" />.)</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Größe zugewiesen wurde, hat das Fenster die Standardgröße an.  
+  
+ Aufrufe von <xref:System.Windows.Interop.HwndSourceParameters.SetSize%2A> oder Einstellung <xref:System.Windows.Interop.HwndSourceParameters.Width%2A> oder <xref:System.Windows.Interop.HwndSourceParameters.Height%2A> führen dazu, dass diese Eigenschaft wird `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Höhe des Fensters angibt, oder legt diesen Wert fest.</summary>
+        <value>Die Höhe des Fensters in Gerätepixeln. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den meisten Methoden, die Rechteck-Bildschirmbereich in Maßnahmen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], Sie die Größe des Fensters in Pixeln, nicht die typische geräteunabhängigen Einheiten angeben. Wenn Sie Größe des Fensters zum jeweiligen Inhalt anpassen müssen, legen Sie <xref:System.Windows.Interop.HwndSource.SizeToContent%2A> auf `true`.  
+  
+ Stellen Sie keine <xref:System.Windows.Interop.HwndSourceParameters.Height%2A> auf 0 (null). Auf diese Weise entstehen erhebliche Leistungseinbußen beim Rendering.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HwndSourceHook">
+      <MemberSignature Language="C#" Value="public System.Windows.Interop.HwndSourceHook HwndSourceHook { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Interop.HwndSourceHook HwndSourceHook" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.HwndSourceHook" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.HwndSourceHook</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Meldungshook des Fensters ab oder legt diesen fest.</summary>
+        <value>Der Meldungshook für das Fenster.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Meldungshook aktiviert ist, bevor `CreateWindow` aufgerufen wird, sodass er alle Fenster Erstellung Nachrichten empfängt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Interop.HwndSourceParameters a, System.Windows.Interop.HwndSourceParameters b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Interop.HwndSourceParameters a, valuetype System.Windows.Interop.HwndSourceParameters b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.op_Equality(System.Windows.Interop.HwndSourceParameters,System.Windows.Interop.HwndSourceParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Windows.Interop.HwndSourceParameters" />
+        <Parameter Name="b" Type="System.Windows.Interop.HwndSourceParameters" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die erste zu vergleichende <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur.</param>
+        <param name="b">Die zweite zu vergleichende <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur.</param>
+        <summary>Bestimmt, ob eine <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur einer anderen <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn die Strukturen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung ruft die <xref:System.Windows.Interop.HwndSourceParameters.Equals%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Interop.HwndSourceParameters a, System.Windows.Interop.HwndSourceParameters b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Interop.HwndSourceParameters a, valuetype System.Windows.Interop.HwndSourceParameters b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.op_Inequality(System.Windows.Interop.HwndSourceParameters,System.Windows.Interop.HwndSourceParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Windows.Interop.HwndSourceParameters" />
+        <Parameter Name="b" Type="System.Windows.Interop.HwndSourceParameters" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die erste zu vergleichende <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur.</param>
+        <param name="b">Die zweite zu vergleichende <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur.</param>
+        <summary>Bestimmt, ob eine <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur einer anderen <see cref="T:System.Windows.Interop.HwndSourceParameters" />-Struktur nicht entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn die Strukturen ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung ruft die <xref:System.Windows.Interop.HwndSourceParameters.Equals%2A> Methode und kehrt das Ergebnis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentWindow">
+      <MemberSignature Language="C#" Value="public IntPtr ParentWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ParentWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.ParentWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Fensterhandle (HWND) des übergeordneten Elements für das erstellte Fenster ab, oder legt dieses fest.</summary>
+        <value>Das HWND des übergeordneten Fensters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionX">
+      <MemberSignature Language="C#" Value="public int PositionX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PositionX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.PositionX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position des linken Fensterrands ab oder legt diese fest.</summary>
+        <value>Die Position des linken Fensterrands. Die Standardeinstellung ist CW_USEDEFAULT von verarbeitet <c>CreateWindow</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionY">
+      <MemberSignature Language="C#" Value="public int PositionY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PositionY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.PositionY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position des oberen Fensterrands ab oder legt diese fest.</summary>
+        <value>Die Position des oberen Fensterrands. Die Standardeinstellung ist CW_USEDEFAULT von verarbeitet <c>CreateWindow</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestoreFocusMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.RestoreFocusMode RestoreFocusMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.RestoreFocusMode RestoreFocusMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.RestoreFocusMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RestoreFocusMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie das Wiederherstellen des Fokus für das Fenster von WPF gehandhabt wird.</summary>
+        <value>Einer der Enumerationswerte, die angeben, wie das Wiederherstellen des Fokus für das Fenster von WPF gehandhabt wird. Die Standardeinstellung ist <see cref="F:System.Windows.Input.RestoreFocusMode.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WPF wird automatisch versucht, den Fokus an das Fenster wieder her, es sei denn, <xref:System.Windows.Interop.HwndSourceParameters.RestoreFocusMode%2A> festgelegt ist, um <xref:System.Windows.Input.RestoreFocusMode.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPosition">
+      <MemberSignature Language="C#" Value="public void SetPosition (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPosition(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.SetPosition(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Position des linken Fensterrands.</param>
+        <param name="y">Die Position des oberen Fensterrands.</param>
+        <summary>Legt die für Bildschirmposition verwendeten Werte des Fensters für <see cref="T:System.Windows.Interop.HwndSource" /> fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSize">
+      <MemberSignature Language="C#" Value="public void SetSize (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSize(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndSourceParameters.SetSize(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite des Fensters in Gerätepixeln.</param>
+        <param name="height">Die Höhe des Fensters in Gerätepixeln.</param>
+        <summary>Legt die für die Fenstergröße der <see cref="T:System.Windows.Interop.HwndSource" /> verwendeten Werte fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den meisten Methoden, die Rechteck-Bildschirmbereich in Maßnahmen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], Sie die Größe des Fensters in Gerätepixeln, nicht in den typischen geräteunabhängigen Einheiten angeben. Wenn Sie Größe des Fensters zum jeweiligen Inhalt anpassen müssen, legen Sie <xref:System.Windows.Interop.HwndSource.SizeToContent%2A> auf `true`.  
+  
+ Übergeben Sie 0 (null) für entweder die `width` oder `height` Parameter. Obwohl die Methode auch, wenn Sie 0 übergeben schließlich erfolgreich ist, tritt auf, eine erhebliche Leistungseinbußen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreatAncestorsAsNonClientArea">
+      <MemberSignature Language="C#" Value="public bool TreatAncestorsAsNonClientArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TreatAncestorsAsNonClientArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.TreatAncestorsAsNonClientArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob die übergeordnete Fenster von <see cref="T:System.Windows.Interop.HwndSource" /> während der Layoutdurchläufe als Nichtclientbereich des Fensters angesehen werden sollen.</summary>
+        <value>
+          <see langword="true" />, wenn die übergeordneten Fenster der <see cref="T:System.Windows.Interop.HwndSource" /> als Nicht-Clientbereich eines Fensters während der Layoutdurchläufe betrachtet werden sollen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreatAsInputRoot">
+      <MemberSignature Language="C#" Value="public bool TreatAsInputRoot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TreatAsInputRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.TreatAsInputRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob <see cref="T:System.Windows.Interop.HwndSource" /> eine Fenstermeldung empfangen sollte, die von der Meldungsverteilschleife über <see cref="T:System.Windows.Interop.ComponentDispatcher" /> ausgelöst wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="T:System.Windows.Interop.HwndSource" /> Fenstermeldungen empfangen soll, die von der Meldungsverteilschleife über den <see cref="T:System.Windows.Interop.ComponentDispatcher" /> ausgelöst werden; andernfalls <see langword="false" />.  Der Standardwert ist <see langword="true" />, wenn <see cref="T:System.Windows.Interop.HwndSource" /> einem Fenster der obersten Ebene entspricht; andernfalls ist der Standardwert <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesPerPixelOpacity">
+      <MemberSignature Language="C#" Value="public bool UsesPerPixelOpacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesPerPixelOpacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.UsesPerPixelOpacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der deklariert, ob der Durchlässigkeitswert pro Pixel des Quellfensterinhalts berücksichtigt wird.</summary>
+        <value>
+          <see langword="true" />, wenn die Durchlässigkeit pro Pixel verwendet wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktivieren Sie die Durchlässigkeit pro Pixel, zeichnet das System nicht mehr nicht-Clientbereichs.  
+  
+ Die Deckkraft wird verwendet, wenn das Fenster auf dem Desktop gezeichnet wird (es repräsentiert einen Schritt endgültigen Rendern und scheint kein als Beitragender zum Eigenschaftswerte wie z. B. <xref:System.Windows.UIElement.Opacity%2A>).  
+  
+ <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelOpacity%2A>gilt nur für Fenster auf oberster Ebene.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesPerPixelTransparency">
+      <MemberSignature Language="C#" Value="public bool UsesPerPixelTransparency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesPerPixelTransparency" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der deklariert, ob der Durchlässigkeitswert pro Pixel des Quellfensterinhalts berücksichtigt wird.</summary>
+        <value>
+          <see langword="true" />, wenn pixelbasierte Transparenz; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, mit dem die Breite des Fensters angegeben wird, oder legt diesen Wert fest.</summary>
+        <value>Die Fensterbreite in Gerätepixeln. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den meisten Methoden, die im Rechteck Bildschirm Region Measures übernehmen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], Sie die Größe des Fensters in Gerätepixeln, nicht in den üblichen geräteunabhängigen Einheiten angeben. Wenn Sie Größe des Fensters zum jeweiligen Inhalt anpassen müssen, legen Sie <xref:System.Windows.Interop.HwndSource.SizeToContent%2A> auf `true`.  
+  
+ Stellen Sie keine <xref:System.Windows.Interop.HwndSourceParameters.Width%2A> auf 0 (null). Auf diese Weise entstehen erhebliche Leistungseinbußen beim Rendering.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowClassStyle">
+      <MemberSignature Language="C#" Value="public int WindowClassStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WindowClassStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.WindowClassStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)]-Klassenstil für das Fenster ab oder legt diesen fest.</summary>
+        <value>Der Fensterklassenstil. Finden Sie unter [Klasse Fensterstile](http://go.microsoft.com/fwlink/?LinkId=178417) ausführliche Informationen. Der Standard beträgt 0 (kein Fensterklassenstil).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowName">
+      <MemberSignature Language="C#" Value="public string WindowName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WindowName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.WindowName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Fensters ab oder legt diesen fest.</summary>
+        <value>Der Fenstername.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Erstellen Sie keine Instanzen dieser Struktur mit dem (der parameterlose) Standardkonstruktor. Ein <xref:System.Windows.Interop.HwndSourceParameters> -Instanz, die vom Standardkonstruktor erstellt wird, führt zu <xref:System.Windows.Interop.HwndSourceParameters> nicht zugewiesen werden eine <xref:System.Windows.Interop.HwndSourceParameters.WindowName%2A> (, obwohl die <xref:System.Windows.Interop.HwndSourceParameters.WindowName%2A> Eigenschaft zu sein scheint). Wenn eine solche Instanz als Parameter für angewendet wird ein <xref:System.Windows.Interop.HwndSource> -Konstruktor, der resultierende <xref:System.Windows.Interop.HwndSource> ein Fenster kann nicht angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStyle">
+      <MemberSignature Language="C#" Value="public int WindowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WindowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndSourceParameters.WindowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stil für das Fenster ab oder legt diesen fest.</summary>
+        <value>Der Fensterstil. Finden Sie unter der [CreateWindowEx](http://go.microsoft.com/fwlink/?LinkId=98462) -Funktion für eine vollständige Liste der Stilbits. Standardwerte: WS_VISIBLE, WS_CAPTION, WS_SYSMENU, WS_THICKFRAME, WS_MINIMIZEBOX, WS_MAXIMIZEBOX, WS_CLIPCHILDREN</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden die folgenden Bits festgelegt, wenn die Struktur erstellt wird: WS_VISIBLE; WS_CAPTION; WS_SYSMENU; WS_THICKFRAME; WS_MINIMIZEBOX; WS_MAXIMIZEBOX; WS_CLIPCHILDREN.  
+  
+ Für ein Standardfenster müssen Sie das Bit WS_CLIPCHILDREN festlegen. Diese Formatbit wird im Code selbst erzwungen; Wenn Sie weglassen, ist dieses Kennzeichen festgelegt, hinzugefügt WPF den Wert, den Sie bereitstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

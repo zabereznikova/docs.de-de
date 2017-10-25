@@ -1,0 +1,126 @@
+<Type Name="HiddenFieldDesigner" FullName="System.Web.UI.Design.WebControls.HiddenFieldDesigner">
+  <TypeSignature Language="C#" Value="public class HiddenFieldDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HiddenFieldDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.HiddenFieldDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.HiddenField" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer, wenn der Benutzer aus der Quelle in die Entwurfsansicht, wechselt die Markup-Quellcode, beschreibt eine <xref:System.Web.UI.WebControls.HiddenField> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Benutzer zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet. Die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für die <xref:System.Web.UI.WebControls.HiddenField> in einem visuellen Designer.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.GetDesignTimeHtml%2A> -Methode gibt das Markup ab, das Rendering des zugeordneten <xref:System.Web.UI.WebControls.HiddenField> zur Entwurfszeit. Die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.Initialize%2A> Methode bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des zugeordneten <xref:System.Web.UI.WebControls.HiddenField>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner> auf die Darstellung von Steuerelementen zu ändern, die von der abgeleiteten Klasse die <xref:System.Web.UI.WebControls.HiddenField> -Steuerelements zur Entwurfszeit.  
+  
+ Im Beispiel leitet der `MyHiddenField` -Steuerelement aus der <xref:System.Web.UI.WebControls.HiddenField>. Die `MyHiddenField` ist eine Kopie der <xref:System.Web.UI.WebControls.HiddenField>. Im Beispiel wird außerdem abgeleitet der `MyHiddenFieldDesigner` -Klasse aus der <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner> Klasse und wendet eine <xref:System.ComponentModel.DesignerAttribute> -Attribut für die `MyHiddenFieldDesigner` auf die `MyHiddenField` Steuerelement.  
+  
+ Die `MyHiddenFieldDesigner` überschreibt die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.GetDesignTimeHtml%2A> Methode, um einen Platzhalter zu generieren, enthält die <xref:System.Web.UI.WebControls.HiddenField.Value%2A> Eigenschaft im Platzhalter, zusammen mit dem Namen der Steuerelementklasse und die <xref:System.Web.UI.Control.ID%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.HiddenFieldDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HiddenFieldDesigner/CS/HiddenFieldDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.HiddenFieldDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HiddenFieldDesigner/VB/HiddenFieldDesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HiddenFieldDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HiddenFieldDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.HiddenFieldDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der der <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.HiddenField> Steuerelement oder eine Kopie der <xref:System.Web.UI.WebControls.HiddenField> Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HiddenFieldDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup ab, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Eine Zeichenfolge, enthält das Markup zum Rendern verwendet die <see cref="T:System.Web.UI.WebControls.HiddenField" /> zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.GetDesignTimeHtml%2A> Methode generiert das Markup für einen Platzhalter, der den Namen der Steuerelementklasse enthält und die <xref:System.Web.UI.Control.ID%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.GetDesignTimeHtml%2A> Methode in einer Klasse, die vom geerbt wird der <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner> Klasse so ändern Sie die Darstellung der <xref:System.Web.UI.WebControls.HiddenField> -Steuerelements zur Entwurfszeit. Die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.GetDesignTimeHtml%2A> Außerkraftsetzung generiert einen Platzhalter, der umfasst die <xref:System.Web.UI.WebControls.HiddenField.Value%2A> Eigenschaft im Platzhalter, zusammen mit dem Namen der Steuerelementklasse und die <xref:System.Web.UI.Control.ID%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.HiddenFieldDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HiddenFieldDesigner/CS/HiddenFieldDesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.HiddenFieldDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.HiddenFieldDesigner/VB/HiddenFieldDesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HiddenFieldDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.Web.UI.WebControls.HiddenField" />, das eine <see cref="T:System.ComponentModel.IComponent" /> implementiert.</param>
+        <summary>Bereitet den Designer zum Anzeigen, Bearbeiten und Entwerfen des zugeordneten Steuerelements vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designer Ruft die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.Initialize%2A> Methode, wenn es der Designer zum Rendern verwenden kann die <xref:System.Web.UI.WebControls.HiddenField> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.HiddenFieldDesigner.Initialize%2A> und ihre Basismethoden Eigenschaften konfigurieren und Verbinden mit Ereignissen, die für die Ausführung des Designers erforderlich sind.  
+  
+ Die `component` Parameter ist der <xref:System.Web.UI.WebControls.HiddenField> Steuerelement, das diesem Designer zugeordnet oder eine Kopie des der <xref:System.Web.UI.WebControls.HiddenField> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

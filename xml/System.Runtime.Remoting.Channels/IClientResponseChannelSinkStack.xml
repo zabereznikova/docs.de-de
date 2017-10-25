@@ -1,0 +1,118 @@
+<Type Name="IClientResponseChannelSinkStack" FullName="System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack">
+  <TypeSignature Language="C#" Value="public interface IClientResponseChannelSinkStack" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IClientResponseChannelSinkStack" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Funktionalität der Stapel für einen Stapel von Clientantwort-Kanal senken, die während einer asynchronen Antwort nachrichtenentschlüsselung aufgerufen werden müssen bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncProcessResponse">
+      <MemberSignature Language="C#" Value="public void AsyncProcessResponse (System.Runtime.Remoting.Channels.ITransportHeaders headers, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AsyncProcessResponse(class System.Runtime.Remoting.Channels.ITransportHeaders headers, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack.AsyncProcessResponse(System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="headers">Die Header, die aus den Antwortstream Server abgerufen werden.</param>
+        <param name="stream">Der Stream, stammt die Transportsenke zurück.</param>
+        <summary>Fordert die asynchrone Verarbeitung einer Methode aufrufen, auf die Senken in der aktuellen Senkenstapel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack.AsyncProcessResponse%2A> Methode initialisiert die asynchrone Verarbeitung für die oberste Senke im aktuellen Senkenstapel. Weitere Informationen finden Sie unter <xref:System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessResponse%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Der aktuelle Stapel ist leer.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchException">
+      <MemberSignature Language="C#" Value="public void DispatchException (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DispatchException(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack.DispatchException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ausnahme, die an den Server zu verteilen.</param>
+        <summary>Sendet die angegebene Ausnahme auf die Antwortsenke.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack.DispatchException%2A> -Methode sendet die angegebene Ausnahme an den Server über die im Konstruktor des aktuellen Senkenstapels angegebene Antwort. Wenn der aktuelle Stapel ohne Antwortempfänger erstellt wurde, die Ausnahme wird nicht übertragen und keine neue Ausnahme ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchReplyMessage">
+      <MemberSignature Language="C#" Value="public void DispatchReplyMessage (System.Runtime.Remoting.Messaging.IMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DispatchReplyMessage(class System.Runtime.Remoting.Messaging.IMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack.DispatchReplyMessage(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> Dispatch.</param>
+        <summary>Sendet die angegebene Antwortnachricht für die Antwortsenke.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack.DispatchReplyMessage%2A> -Methode sendet die angegebene Meldung an den Server über die im Konstruktor des aktuellen Senkenstapels angegebene Antwort. Wenn der aktuelle Stapel ohne Antwortempfänger erstellt wurde, die Nachricht nicht übermittelt und wird keine neue Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

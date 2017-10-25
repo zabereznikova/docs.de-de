@@ -1,0 +1,209 @@
+<Type Name="DataGridViewCellBorderStyle" FullName="System.Windows.Forms.DataGridViewCellBorderStyle">
+  <TypeSignature Language="C#" Value="public enum DataGridViewCellBorderStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewCellBorderStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellBorderStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Rahmenarten, die auf die Zellen angewendet werden, können ein <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridView> steuern verwendet der <xref:System.Windows.Forms.DataGridViewCellBorderStyle> Enumeration. Geben Sie zum Zeichnen des Rahmens nur zwischen den Zeilen, SingleHorizontal, SunkenHorizontal oder RaisedHorizontal aus. Geben Sie zum Zeichnen des Rahmens nur zwischen den Spalten, SingleVertical, SunkenVertical oder RaisedVertical aus. Geben Sie zum Zeichnen des Rahmens zwischen den Zeilen und Spalten, SingleSunken oder erhöht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#030](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#030)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#030](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#030)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle Custom = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Rahmen, der angepasst wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle None = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kein Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Raised">
+      <MemberSignature Language="C#" Value="Raised" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle Raised = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.Raised" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein dreidimensionaler angehobener Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisedHorizontal">
+      <MemberSignature Language="C#" Value="RaisedHorizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle RaisedHorizontal = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein horizontaler dreidimensionaler angehobener Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisedVertical">
+      <MemberSignature Language="C#" Value="RaisedVertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle RaisedVertical = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine vertikale dreidimensionalen ausgelöste Rahmenlinie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle Single = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine einzelne Rahmenlinie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleHorizontal">
+      <MemberSignature Language="C#" Value="SingleHorizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle SingleHorizontal = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine horizontale Rahmenlinie für einzeilige.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleVertical">
+      <MemberSignature Language="C#" Value="SingleVertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle SingleVertical = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine vertikale Rahmenlinie für einzeilige.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sunken">
+      <MemberSignature Language="C#" Value="Sunken" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle Sunken = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.Sunken" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein dreidimensionaler abgesenkten Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SunkenHorizontal">
+      <MemberSignature Language="C#" Value="SunkenHorizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle SunkenHorizontal = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein horizontaler dreidimensionalen abgesenkten Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SunkenVertical">
+      <MemberSignature Language="C#" Value="SunkenVertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewCellBorderStyle SunkenVertical = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine vertikale dreidimensionalen abgesenkten Rahmen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

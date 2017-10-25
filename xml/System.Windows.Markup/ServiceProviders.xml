@@ -1,0 +1,105 @@
+<Type Name="ServiceProviders" FullName="System.Windows.Markup.ServiceProviders">
+  <TypeSignature Language="C#" Value="public class ServiceProviders : IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceProviders extends System.Object implements class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ServiceProviders" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Implementierung für die <see cref="T:System.IServiceProvider" /> Schnittstelle mit Methoden, Hinzufügen von Diensten zu ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine Hilfsprogrammklasse, die für die Verwendung beim Serialisieren des Inhalts. Die Klasse ist im Grunde genommen ein reiner Wörterbuch zum Speichern von Diensten, die nach Argumentnamen geordnet ihre Diensttyp implementiert <xref:System.IServiceProvider> für den späteren Abruf aus dem Wörterbuch. Mit dem Wörterbuch wird vermieden, Abfragen für denselben Dienst wiederholt. Diese Klasse ist die Basisklasse der <xref:System.Windows.Markup.XamlDesignerSerializationManager>, der Dienst dient für `ShouldSerialize` Implementierungen der Dienstmethode in anderen Teilen von WPF.  
+  
+ Mit dieser Klasse ist erforderlich, die auf WPF-Assemblys verweisen, ist nicht für allgemeine Szenarien mit .NET Framework XAML Services vorgesehen. Das Szenario hier ist z. B. für die WPF-interne Implementierung des Dienst-Intensive Funktionen während der Serialisierung bei der Verarbeitung der `ShouldSerialize` Implementierungen eines bestimmten Typs. Die praktische Klasse, die in diesem Szenario wird die abgeleitete Klasse <xref:System.Windows.Markup.XamlDesignerSerializationManager>.  
+  
+<a name="xamlTextUsage_ServiceProviders"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceProviders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ServiceProviders.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.ServiceProviders" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public void AddService (Type serviceType, object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddService(class System.Type serviceType, object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ServiceProviders.AddService(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Diensttyp des neuen Diensts.</param>
+        <param name="service">Die Dienstimplementierungsklasse.</param>
+        <summary>Die Liste wird ein Dienst hinzugefügt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> oder <paramref name="service" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Es wurde versucht, einen Dienst, der bereits im Wörterbuch hinzufügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ServiceProviders.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des abzurufenden Dienstobjekts.</param>
+        <summary>Ruft das Dienstobjekt des angegebenen Typs ab.</summary>
+        <returns>Für den Typ einer dienstimplementierung <paramref name="serviceType" />. Möglicherweise <see langword="null" /> Wenn es kein Dienst gespeichert werden, für den Typ ist <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

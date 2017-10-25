@@ -1,0 +1,612 @@
+<Type Name="RegistryPermission" FullName="System.Security.Permissions.RegistryPermission">
+  <TypeSignature Language="C#" Value="public sealed class RegistryPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RegistryPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.RegistryPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert die Fähigkeit, auf Registrierungsvariablen zugreifen zu können. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Permissions.RegistryPermission>Beschreibt die geschützte Operationen auf Registrierungsvariablen. Registrierungsvariablen sollten nicht an Speicherorten gespeichert werden, in denen Code ohne <xref:System.Security.Permissions.RegistryPermission> darauf zugreifen kann. Wenn die Registry-Objekt an eine nicht vertrauenswürdige Aufrufer übergeben wird kann es missbraucht werden.  
+  
+ Die zulässigen Zugriffstypen werden definiert, indem <xref:System.Security.Permissions.RegistryPermissionAccess>. Wenn mehr als eine Art des Zugriffs gewünscht ist, können sie die bitweise OR-Operation verwenden, wie im Codebeispiel gezeigt kombiniert werden.  
+  
+ Registrierungsberechtigung ist hinsichtlich kanonische absolute Pfade definiert; Überprüfungen sollte immer mit kanonischen Pfadnamen ausgeführt werden. Schlüsselzugriff Zugriff auf alle darin enthaltenen Werte und Variablen.  
+  
+> [!NOTE]
+>  In Versionen von .NET Framework vor der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], können Sie die <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=nameWithType> Methode, um das unbeabsichtigten Zugriff auf Systemressourcen von vertrauenswürdigem Code zu verhindern. <xref:System.Security.CodeAccessPermission.Deny%2A>ist mittlerweile veraltet, und den Zugriff auf Ressourcen wird jetzt ausschließlich durch den gewährten Berechtigungssatz für eine Assembly bestimmt. Um den Zugriff auf Dateien zu beschränken, müssen Sie teilweise vertrauenswürdigen Code in einem Sandkasten ausgeführt und weisen sie Berechtigungen nur für Ressourcen, die der Code zugreifen darf. Informationen zum Ausführen einer Anwendung in einem Sandkasten finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigen Code in einem Sandkasten](~/docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.RegistryPermission" /> -Klasse mit vollständig eingeschränkter oder uneingeschränkter Berechtigung, wie angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt entweder einen vollständig eingeschränkten (`None`) oder `Unrestricted` Zugriff auf Registrierungsvariablen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.RegistryPermission.%23ctor%28System.Security.Permissions.PermissionState%29> Konstruktor.  
+  
+ [!code-csharp[System.Security.Permissions.RegistryPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/CS/registrypermission.cs#7)]
+ [!code-vb[System.Security.Permissions.RegistryPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/VB/registrypermission.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="state" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryPermission (System.Security.Permissions.RegistryPermissionAccess access, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.RegistryPermissionAccess access, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.#ctor(System.Security.Permissions.RegistryPermissionAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.RegistryPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Einer der <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />-Werte.</param>
+        <param name="pathList">Eine Liste von Registrierungsvariablen (durch Semikolon getrennt), auf die Zugriff gewährt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.RegistryPermission" /> Klasse mit dem angegebenen Zugriff auf die angegebenen Registrierungsvariablen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann nur eines der der <xref:System.Security.Permissions.RegistryPermissionAccess> Werte angegeben werden. Dieser Zugriff gilt für alle aufgelisteten Registrierungsvariablen. Verwendung <xref:System.Security.Permissions.RegistryPermission.AddPathList%2A> etwas kompliziertere Berechtigungen zu definieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.RegistryPermission.%23ctor%28System.Security.Permissions.RegistryPermissionAccess%2CSystem.String%29> Konstruktor.  
+  
+ [!code-csharp[System.Security.Permissions.RegistryPermission#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/CS/registrypermission.cs#10)]
+ [!code-vb[System.Security.Permissions.RegistryPermission#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/VB/registrypermission.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="access" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.  
+  
+ - oder -   
+  
+ Der <paramref name="pathList" />-Parameter ist keine gültige Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryPermission (System.Security.Permissions.RegistryPermissionAccess access, System.Security.AccessControl.AccessControlActions control, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.RegistryPermissionAccess access, valuetype System.Security.AccessControl.AccessControlActions control, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.#ctor(System.Security.Permissions.RegistryPermissionAccess,System.Security.AccessControl.AccessControlActions,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.RegistryPermissionAccess" />
+        <Parameter Name="control" Type="System.Security.AccessControl.AccessControlActions" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Einer der <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />-Werte.</param>
+        <param name="control">Eine bitweise Kombination der <see cref="T:System.Security.AccessControl.AccessControlActions" />-Werte.</param>
+        <param name="pathList">Eine Liste von Registrierungsvariablen (durch Semikolon getrennt), auf die Zugriff gewährt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.RegistryPermission" /> Klasse mit dem angegebenen Zugriff auf die angegebenen Registrierungsvariablen und den angegebenen Zugriffsrechten auf Registrierungssteuerungsinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann nur eines der der <xref:System.Security.Permissions.RegistryPermissionAccess> Werte angegeben werden. Dieser Zugriff gilt für alle aufgelisteten Registrierungsvariablen. Verwendung <xref:System.Security.Permissions.RegistryPermission.AddPathList%2A> etwas kompliziertere Berechtigungen zu definieren.  
+  
+ Die `control` Parameter gibt an, ob die Zugriffssteuerung (List, ACL) für den angegebenen von Registrierungsschlüsseln `pathList` können geändert oder angezeigt werden, oder kann nicht zugegriffen werden.  
+  
+> [!IMPORTANT]
+>  Eine Zugriffssteuerungsliste (ACL) beschreibt die Einzelpersonen oder Gruppen besitzen oder verfügen nicht über, Rechte für bestimmte Aktionen für den angegebenen Registrierungsschlüssel.  Die Fähigkeit zum Ändern oder Anzeigen einer ACL ist eine wichtige Berechtigung und sollte mit Vorsicht gewährt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="access" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.  
+  
+ - oder -   
+  
+ Der <paramref name="pathList" />-Parameter ist keine gültige Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddPathList">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt dem vorhandenen Zustand der Berechtigung den Zugriff für die angegebenen Registrierungsvariablen hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um den Zugriff auf Registrierungsvariablen zu ändern, indem Sie die Anzahl der Pfade in den Zustand des aktuellen Berechtigungsobjekts hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddPathList">
+      <MemberSignature Language="C#" Value="public void AddPathList (System.Security.Permissions.RegistryPermissionAccess access, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPathList(valuetype System.Security.Permissions.RegistryPermissionAccess access, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.AddPathList(System.Security.Permissions.RegistryPermissionAccess,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.RegistryPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Einer der <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />-Werte.</param>
+        <param name="pathList">Eine Liste von Registrierungsvariablen (durch Semikolon getrennt).</param>
+        <summary>Fügt dem vorhandenen Zustand der Berechtigung den Zugriff für die angegebenen Registrierungsvariablen hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um Zugriff auf Registrierungsvariablen zu ändern, indem Sie in den Zustand des aktuellen Berechtigungsobjekts hinzufügen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.RegistryPermission.AddPathList%28System.Security.Permissions.RegistryPermissionAccess%2CSystem.String%29> Methode.  
+  
+ [!code-csharp[System.Security.Permissions.RegistryPermission#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/CS/registrypermission.cs#9)]
+ [!code-vb[System.Security.Permissions.RegistryPermission#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/VB/registrypermission.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="access" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.  
+  
+ - oder -   
+  
+ Der <paramref name="pathList" />-Parameter ist keine gültige Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPathList">
+      <MemberSignature Language="C#" Value="public void AddPathList (System.Security.Permissions.RegistryPermissionAccess access, System.Security.AccessControl.AccessControlActions control, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPathList(valuetype System.Security.Permissions.RegistryPermissionAccess access, valuetype System.Security.AccessControl.AccessControlActions control, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.AddPathList(System.Security.Permissions.RegistryPermissionAccess,System.Security.AccessControl.AccessControlActions,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.RegistryPermissionAccess" />
+        <Parameter Name="control" Type="System.Security.AccessControl.AccessControlActions" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Einer der <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />-Werte.</param>
+        <param name="control">Einer der <see cref="T:System.Security.AccessControl.AccessControlActions" />-Werte.</param>
+        <param name="pathList">Eine Liste von Registrierungsvariablen (durch Semikolon getrennt).</param>
+        <summary>Fügt dem vorhandenen Zustand der Berechtigung Zugriff auf die angegebenen Registrierungsvariablen hinzu. Dabei werden die Berechtigung für den Registrierungszugriff und Zugriffssteuerungsaktionen angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um den Zugriff auf Registrierungsvariablen zu ändern, indem Sie die Anzahl der Pfade in den Zustand des aktuellen Berechtigungsobjekts hinzufügen. Diese Überladung ermöglicht Ihnen das Festlegen der Zugriff der Controlleraktion wie als die Berechtigung Zugriff auf die Registrierung wird.  
+  
+ Die `control` Parameter gibt an, ob die Zugriffssteuerung (List, ACL) für den angegebenen von Registrierungsschlüsseln `pathList` können geändert oder angezeigt werden, oder kann nicht zugegriffen werden.  
+  
+> [!IMPORTANT]
+>  Eine Zugriffssteuerungsliste (ACL) beschreibt die Einzelpersonen oder Gruppen besitzen oder verfügen nicht über, Rechte für bestimmte Aktionen für den angegebenen Registrierungsschlüssel.  Die Fähigkeit zum Ändern oder Anzeigen einer ACL ist eine wichtige Berechtigung und sollte mit Vorsicht gewährt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="access" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.  
+  
+ - oder -   
+  
+ Der <paramref name="pathList" />-Parameter ist keine gültige Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie der aktuellen Berechtigung und gibt sie zurück.</summary>
+        <returns>Eine Kopie der aktuellen Berechtigung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie einer Berechtigung stellt den gleichen Zugriff auf Ressourcen wie die ursprüngliche Berechtigung dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement esd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement esd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="esd" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="esd">Die XML-Codierung zur Wiederherstellung der Berechtigung.</param>
+        <summary>Stellt eine Berechtigung mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="esd" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="esd" /> -Parameter ist kein gültiges Berechtigungselement.  
+  
+ - oder -   
+  
+ Die <paramref name="esd" /> Versionsnummer des Parameters ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathList">
+      <MemberSignature Language="C#" Value="public string GetPathList (System.Security.Permissions.RegistryPermissionAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetPathList(valuetype System.Security.Permissions.RegistryPermissionAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.GetPathList(System.Security.Permissions.RegistryPermissionAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.RegistryPermissionAccess" />
+      </Parameters>
+      <Docs>
+        <param name="access">Eines der <see cref="T:System.Security.Permissions.RegistryPermissionAccess" /> Werte, die einen einzelnen Zugriffstyp für Registrierungsvariablen darstellt.</param>
+        <summary>Ruft Pfade für alle Registrierungsvariablen mit dem angegebenen <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.</summary>
+        <returns>Eine Liste von Registrierungsvariablen (durch Semikolon getrennt), mit dem angegebenen <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um den Zustand der aktuellen Berechtigung abzurufen. Sie müssen diese Methode separat für jede Art von Zugriff aufrufen.  
+  
+> [!NOTE]
+>  Die `access` Parameter ist beschränkt auf die Werte der <xref:System.Security.Permissions.RegistryPermissionAccess>, einzelne Zugriffstypen für Registrierungsvariablen darstellt. Diese Werte sind <xref:System.Security.Permissions.RegistryPermissionAccess.Read>, <xref:System.Security.Permissions.RegistryPermissionAccess.Write>, und <xref:System.Security.Permissions.RegistryPermissionAccess.Create>. Die Werte für akzeptabel `access` beinhalten keine <xref:System.Security.Permissions.RegistryPermissionAccess.NoAccess> und <xref:System.Security.Permissions.RegistryPermissionAccess.AllAccess>, der einzelne Zugriffstypen für Registrierungsvariablen darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.RegistryPermission.GetPathList%2A> Methode.  
+  
+ [!code-csharp[System.Security.Permissions.RegistryPermission#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/CS/registrypermission.cs#9)]
+ [!code-vb[System.Security.Permissions.RegistryPermission#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/VB/registrypermission.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="access" />ist kein gültiger Wert von <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.  
+  
+ - oder -   
+  
+ <paramref name="access" />ist <see cref="F:System.Security.Permissions.RegistryPermissionAccess.AllAccess" />, die mehrere Typen von Registrierungsvariablen, darstellt oder <see cref="F:System.Security.Permissions.RegistryPermissionAccess.NoAccess" />, der keinen Typs für Registrierungsvariablen darstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung für die Überschneidung mit der aktuellen Berechtigung. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Schnittmenge der aktuellen und der angegebenen Berechtigung und gibt diese zurück.</summary>
+        <returns>Eine neue Berechtigung, die die Schnittmenge der aktuellen und der angegebenen Berechtigung darstellt. Diese neue Berechtigung ist <see langword="null" /> , wenn die Schnittmenge leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittmenge zweier Berechtigungen ist eine Berechtigung, die den Satz von Vorgänge zu beschreiben, den beide gemeinsam beschreiben. Nur eine Anforderung, die beide ursprünglichen Berechtigungen erfolgreich durchläuft, wird die Schnittmenge übergeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die auf die Teilmengenbeziehung geprüft werden soll. Diese Berechtigung muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Bestimmt, ob die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Berechtigung ist eine Teilmenge der angegebenen Berechtigung, wenn die aktuelle Berechtigung eine Reihe von Vorgängen angibt, die vollständig in die angegebene Berechtigung enthalten ist. Eine Berechtigung, die Zugriff auf C:\example.txt darstellt wird z. B. eine Teilmenge einer Berechtigung, die Zugriff auf "c:" darstellt\\. Wenn diese Methode gibt `true`, die aktuelle Berechtigung stellt keine umfassenderen Zugriff auf die geschützte Ressource als die angegebene Berechtigung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Berechtigung uneingeschränkt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung uneingeschränkt ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine uneingeschränkte Berechtigung darstellt Zugriff auf allen Ressourcen, die durch die Berechtigung geschützten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPathList">
+      <MemberSignature Language="C#" Value="public void SetPathList (System.Security.Permissions.RegistryPermissionAccess access, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPathList(valuetype System.Security.Permissions.RegistryPermissionAccess access, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.SetPathList(System.Security.Permissions.RegistryPermissionAccess,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.RegistryPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Einer der <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />-Werte.</param>
+        <param name="pathList">Eine Liste von Registrierungsvariablen (durch Semikolon getrennt).</param>
+        <summary>Legt den neuen Zugriff für die angegebenen Registrierungsvariablennamen auf den vorhandenen Zustand der Berechtigung fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der vorherige Status des die aktuelle Berechtigung wird überschrieben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.RegistryPermission.SetPathList%2A> Methode.  
+  
+ [!code-csharp[System.Security.Permissions.RegistryPermission#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/CS/registrypermission.cs#9)]
+ [!code-vb[System.Security.Permissions.RegistryPermission#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.RegistryPermission/VB/registrypermission.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="access" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.RegistryPermissionAccess" />.  
+  
+ - oder -   
+  
+ Der <paramref name="pathList" />-Parameter ist keine gültige Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung der Berechtigung und ihres aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung der Berechtigung, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="other">Eine Berechtigung, die mit der aktuellen Berechtigung kombiniert werden soll. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Kombination der aktuellen und der angegebenen Berechtigung.</summary>
+        <returns>Eine neue Berechtigung, die die Kombination der aktuellen und der angegebenen Berechtigung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis eines Aufrufs von <xref:System.Security.Permissions.RegistryPermission.Union%2A> eine Berechtigung, alle Vorgänge, die dargestellt darstellt, wird von der aktuellen Berechtigung und der angegebenen Berechtigung ist. Jede Anforderung, entweder Berechtigung durchläuft, übergibt die Union.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="other" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Data.Metadata.Edm">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Metadata.Edm" /> -Namespace enthält einen Satz von Typen, die während des gesamten die Modelle, die von Entity Framework und eine Reihe von Klassen, mit denen Anwendungen, die zum Verarbeiten von Metadaten verwendeten Konzepte darstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden dieses Namespace finden Sie unter [ADO.NET-Metadaten](http://msdn.microsoft.com/en-us/196097a5-a791-4ac4-9e6a-805685d481d5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

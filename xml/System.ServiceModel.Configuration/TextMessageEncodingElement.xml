@@ -1,0 +1,322 @@
+<Type Name="TextMessageEncodingElement" FullName="System.ServiceModel.Configuration.TextMessageEncodingElement">
+  <TypeSignature Language="C#" Value="public sealed class TextMessageEncodingElement : System.ServiceModel.Configuration.BindingElementExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextMessageEncodingElement extends System.ServiceModel.Configuration.BindingElementExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.TextMessageEncodingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BindingElementExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Konfigurationselement dar, das die Zeichencodierung und die für textbasierte XML-Meldungen verwendete Meldungsversionierung angibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Textencoder erstellt textbasierte Nachrichten. Von diesem Encoder erzeugte Meldungen sind für WS-*-basierte Interoperabilität geeignet.  
+  
+ Beim Kodieren werden Unicode-Zeichen in eine Bytefolge transformiert.  
+  
+ Der von diesem Konfigurationsabschnitt angegebene Textencoder erstellt textbasierte Meldungen. Von diesem Encoder erzeugte Meldungen sind für WS-*-basierte Interoperabilität geeignet. Der Webdienst oder Webdienstclient kann im Allgemeinen Text-XML verstehen. Das Übertragen großer Binärdatenblöcke als Text ist allerdings die am wenigsten effiziente Methode zum Verschlüsseln von XML-Meldungen.  
+  
+ Die <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>-Klasse stellt das Konfigurationselement dar, das die Zeichencodierung und die für binäre XML-Meldungen verwendete Meldungsversionierung angibt. Dies ist bezüglich der Codierungsoptionen am effizientesten, aber am wenigsten interoperabel.  
+  
+ Die <xref:System.ServiceModel.Configuration.MtomMessageEncodingElement>-Klasse stellt das Konfigurationselement dar, das die Zeichencodierung und die für eine Meldung mit MTOM-Verschlüsselung (Message Transmission Optimization Mechanism) verwendete Meldungsversionierung angibt. MTOM ist eine effiziente Technologie zum Senden von Binärdaten in [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Meldungen. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu erreichen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextMessageEncodingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TextMessageEncodingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.TextMessageEncodingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public override void ApplyConfiguration (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyConfiguration(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TextMessageEncodingElement.ApplyConfiguration(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">Ein Bindungselement.</param>
+        <summary>Übernimmt den Inhalt eines angegebenen Bindungselements in diesen Bindungskonfigurationsabschnitt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="public override Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TextMessageEncodingElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Type" /> dieses Konfigurationselements ab.</summary>
+        <value>Der <see cref="T:System.Type" /> dieses Konfigurationselements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TextMessageEncodingElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Der zu kopierende Konfigurationsabschnitt.</param>
+        <summary>Kopiert den Inhalt des angegebenen Konfigurationselementsabschnitts in dieses Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElement">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.BindingElement CreateBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Channels.BindingElement CreateBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TextMessageEncodingElement.CreateBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.TextMessageEncodingElement.InitializeFrom(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReadPoolSize">
+      <MemberSignature Language="C#" Value="public int MaxReadPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxReadPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TextMessageEncodingElement.MaxReadPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxReadPoolSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der die maximale Anzahl von Meldungen angibt, die gleichzeitig gelesen werden können, ohne neue Reader zuzuordnen.</summary>
+        <value>Die maximale Anzahl von Meldungen, die gleichzeitig gelesen werden können, ohne neue Reader zuzuordnen. Der Standard ist 64.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch größere Poolgrößen wird das System toleranter gegenüber Aktivitätsspitzen auf Kosten eines umfangreicheren Workingsets.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWritePoolSize">
+      <MemberSignature Language="C#" Value="public int MaxWritePoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxWritePoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TextMessageEncodingElement.MaxWritePoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxWritePoolSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der die maximale Anzahl von Nachrichten angibt, die gleichzeitig gesendet werden können, ohne neue Writer zuzuordnen.</summary>
+        <value>Die maximale Anzahl von Nachrichten, die gleichzeitig gesendet werden können, ohne neue Writer zuzuordnen. Der Standard ist 16.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch größere Poolgrößen wird das System toleranter gegenüber Aktivitätsspitzen auf Kosten eines umfangreicheren Workingsets.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageVersion MessageVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TextMessageEncodingElement.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.MessageVersionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("messageVersion", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SOAP- und WS-Adressierungsversionen zum Formatieren der Textmeldung, die mithilfe dieser Bindung gesendet wird, ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Channels.MessageVersion" />-Wert, der die SOAP-Version der Meldungen angibt, die mit dieser Bindung gesendet werden. Die Standardeinstellung ist <see cref="P:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressing10" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TextMessageEncodingElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement ReaderQuotas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TextMessageEncodingElement.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("readerQuotas")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Beschränkungen der Komplexität von SOAP-Meldungen ab oder legt Beschränkungen fest, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert werden.</summary>
+        <value>Der <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, der die Komplexitätseinschränkungen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zu den Komplexitätseinschränkungen gehören Elemente, wie z.&#160;B. die maximale Elementtiefe oder die maximale Länge des Zeichenfolgeninhalts der Nachricht. Die Beschränkungen schützen vor einem Typ von DOS-Angriffen (Denial Of Service), die versuchen, die Meldungskomplexität zum Binden von Endpunkt-Verarbeitungsressourcen zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding WriteEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding WriteEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.TextMessageEncodingElement.WriteEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.EncodingConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("writeEncoding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichensatzcodierung ab, die zum Ausgeben von Meldungen über die Bindung verwendet werden soll, oder legt sie fest.</summary>
+        <value>Ein gültiger <see cref="T:System.Text.Encoding" />-Wert, der die Zeichensatzcodierung angibt, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Die Standardeinstellung ist <see cref="T:System.Text.UTF8Encoding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Inhaltstyp angeben, wie z. B. "Utf-16" eine XML-Deklaration in der Nachricht erforderlich ist. Alternativ können Sie entweder "Utf-16LE" oder "Utf-16BE" angeben und eine XML-Deklaration ist nicht erforderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

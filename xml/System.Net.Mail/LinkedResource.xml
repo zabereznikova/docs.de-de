@@ -1,0 +1,347 @@
+<Type Name="LinkedResource" FullName="System.Net.Mail.LinkedResource">
+  <TypeSignature Language="C#" Value="public class LinkedResource : System.Net.Mail.AttachmentBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinkedResource extends System.Net.Mail.AttachmentBase" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.LinkedResource" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Mail.AttachmentBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine externe eingebettete Ressource in einer e-Mail-Anlage, z. B. ein Bild in einer HTML-Anlage dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedResource (System.IO.Stream contentStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese eingebettete Ressource enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.LinkedResource" /> mit dem angegebenen <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedResource (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname, der den Inhalt für diese eingebettete Ressource aufrechterhält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.LinkedResource" /> mithilfe des angegebenen Dateinamens.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedResource (System.IO.Stream contentStream, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.#ctor(System.IO.Stream,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese eingebettete Ressource enthält.</param>
+        <param name="contentType">Der Typ des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.LinkedResource" /> mit den Werten, die vom <see cref="T:System.IO.Stream" /> und <see cref="T:System.Net.Mime.ContentType" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="contentType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedResource (System.IO.Stream contentStream, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese eingebettete Ressource enthält.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.LinkedResource" /> mit dem angegebenen <see cref="T:System.IO.Stream" /> und dem Medientyp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedResource (string fileName, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.#ctor(System.String,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die den Inhalt für diese eingebettete Ressource enthält.</param>
+        <param name="contentType">Der Typ des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.LinkedResource" /> mit dem angegebenen Dateinamen und den Inhaltstyp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="contentType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedResource (string fileName, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die den Inhalt für diese eingebettete Ressource enthält.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.LinkedResource" /> mit dem angegebenen Namen und Medien Dateityp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLink">
+      <MemberSignature Language="C#" Value="public Uri ContentLink { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ContentLink" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.LinkedResource.ContentLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen URI fest, der die Ressource übereinstimmen muss.</summary>
+        <value>Wenn <see cref="P:System.Net.Mail.LinkedResource.ContentLink" /> ist ein relativer URI, der Empfänger der Nachricht gelöst werden muss.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLinkedResourceFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.LinkedResource CreateLinkedResourceFromString (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.LinkedResource CreateLinkedResourceFromString(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.CreateLinkedResourceFromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.LinkedResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">Eine Zeichenfolge mit der eingebetteten Ressource, die in die e-Mail-Anlage eingeschlossen werden.</param>
+        <summary>Erstellt eine <see cref="T:System.Net.Mail.LinkedResource" /> Objekt aus einer Zeichenfolge, die in einer e-Mail-Anlage als eingebettete Ressource eingeschlossen werden. Der Standardmedientyp um Klartext handelt und der Standardinhaltstyp ist ASCII.</summary>
+        <returns>Ein <see cref="T:System.Net.Mail.LinkedResource" /> Objekt mit der eingebetteten Ressource, die in die e-Mail-Anlage eingeschlossen werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die angegebene Inhaltszeichenfolge ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLinkedResourceFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.LinkedResource CreateLinkedResourceFromString (string content, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.LinkedResource CreateLinkedResourceFromString(string content, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.CreateLinkedResourceFromString(System.String,System.Net.Mime.ContentType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.LinkedResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="content">Eine Zeichenfolge mit der eingebetteten Ressource, die in die e-Mail-Anlage eingeschlossen werden.</param>
+        <param name="contentType">Der Typ des Inhalts.</param>
+        <summary>Erstellt eine <see cref="T:System.Net.Mail.LinkedResource" /> Objekt aus einer Zeichenfolge in eine e-Mail-Anlage als eingebettete Ressource mit dem angegebenen Inhaltstyp und den Medientyp als nur-Text aufgenommen werden.</summary>
+        <returns>Ein <see cref="T:System.Net.Mail.LinkedResource" /> Objekt mit der eingebetteten Ressource, die in die e-Mail-Anlage eingeschlossen werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die angegebene Inhaltszeichenfolge ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLinkedResourceFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.LinkedResource CreateLinkedResourceFromString (string content, System.Text.Encoding contentEncoding, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.LinkedResource CreateLinkedResourceFromString(string content, class System.Text.Encoding contentEncoding, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.LinkedResource.CreateLinkedResourceFromString(System.String,System.Text.Encoding,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.LinkedResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="contentEncoding" Type="System.Text.Encoding" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">Eine Zeichenfolge mit der eingebetteten Ressource, die in die e-Mail-Anlage eingeschlossen werden.</param>
+        <param name="contentEncoding">Der Typ des Inhalts.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Erstellt eine <see cref="T:System.Net.Mail.LinkedResource" /> Objekt aus einer Zeichenfolge in eine e-Mail-Anlage als eingebettete Ressource mit dem angegebenen Inhaltstyp und den Medientyp aufgenommen werden.</summary>
+        <returns>Ein <see cref="T:System.Net.Mail.LinkedResource" /> Objekt mit der eingebetteten Ressource, die in die e-Mail-Anlage eingeschlossen werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die angegebene Inhaltszeichenfolge ist null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

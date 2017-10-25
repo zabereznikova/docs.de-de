@@ -1,0 +1,127 @@
+<Type Name="IPendingWork" FullName="System.Workflow.Runtime.IPendingWork">
+  <TypeSignature Language="C#" Value="public interface IPendingWork" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPendingWork" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.IPendingWork" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden für die Teilnahme an einem Arbeitsbatch bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die <xref:System.Workflow.Runtime.IPendingWork>-Schnittstelle wird für Dienste bereitgestellt, die am Batchverarbeitungsmechanismus des Workflowlaufzeitmoduls teilnehmen möchten. Der Batchverarbeitungsmechanismus ist besonders für Dienste nützlich, die einen permanenten Speicher verwenden. In diesen Fällen ist es häufig wichtig, dass der vom Dienst verwendete permanente Speicher und der interne Zustand des Workflowlaufzeitmoduls konsistent bleiben.  
+  
+ Wenn Sie möchten, dass der Dienst an der Batchverarbeitung für Workflowtransaktionen teilnimmt, die vom <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> bereitgestellt wird, müssen Sie die von der <xref:System.Workflow.Runtime.IPendingWork>-Schnittstelle definierten Methoden implementieren. Das Workflowlaufzeitmodul ruft die <xref:System.Workflow.Runtime.IPendingWork.Commit%2A>-Methode für Ihren Dienst auf, um einen Commit für den Batch auszuführen.  
+  
+ Die <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>-Klasse implementiert die <xref:System.Workflow.Runtime.IPendingWork>-Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit (System.Transactions.Transaction transaction, System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit(class System.Transactions.Transaction transaction, class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IPendingWork.Commit(System.Transactions.Transaction,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Die <see cref="T:System.Transactions.Transaction" />, die den anstehenden Arbeiten zugeordnet ist.</param>
+        <param name="items">Die Arbeitsaufgaben, für die ein Commit ausgeführt werden soll.</param>
+        <summary>Führt für die Liste der Arbeitsaufgaben einen Commit aus, indem das angegebene <see cref="T:System.Transactions.Transaction" />-Objekt verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Workflowlaufzeitmodul ruft die <xref:System.Workflow.Runtime.IPendingWork.Commit%2A>-Methode auf, wenn seine Semantik vorgibt, dass für die anstehende Arbeit im Arbeitsbatch ein Commit ausgeführt werden soll. Wenn ein Commitpunkt erreicht wird, ruft das Workflowlaufzeitmodul die <xref:System.Workflow.Runtime.IPendingWork.Commit%2A>-Methode für jedes <xref:System.Workflow.Runtime.IPendingWork>-Objekt im Arbeitsbatch auf. Das Workflowlaufzeitmodul übergibt die Auflistung der Aufgaben, die dem <xref:System.Workflow.Runtime.IPendingWork.Commit%2A>-Objekt zugeordnet sind, der <xref:System.Workflow.Runtime.IPendingWork>-Methode. Entweder wird die gesamte Arbeit in einem Batch erfolgreich ausgeführt, oder es wird keine Arbeitsaufgabe ausgeführt. Sie sollten eine Ausnahme auslösen, wenn für eine der Arbeitsaufgaben, die an die <xref:System.Workflow.Runtime.IPendingWork.Commit%2A>-Methode in Ihre Implementierung übergeben werden, kein Commit ausgeführt werden kann. Je nach Implementierung müssen Sie für die <xref:System.Workflow.Runtime.IPendingWork.Commit%2A>-Methode einen Rollback durchführen, falls für die Arbeitsaufgaben kein Commit möglich ist. Wenn das Workflowlaufzeitmodul für alle Arbeitsaufgaben in einem Arbeitsbatch erfolgreich Commits ausgeführt hat, ruft es die <xref:System.Workflow.Runtime.IPendingWork.Complete%2A> auf, wobei der `succeeded`-Parameter auf `true` gesetzt ist. Andernfalls ruft das Modul <xref:System.Workflow.Runtime.IPendingWork.Complete%2A> auf, wobei `succeeded` auf `false` gesetzt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete (bool succeeded, System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Complete(bool succeeded, class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IPendingWork.Complete(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="succeeded" Type="System.Boolean" />
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="succeeded">
+          <see langword="true" />, wenn die Transaktion erfolgreich war, andernfalls <see langword="false" />.</param>
+        <param name="items">Eine <see cref="T:System.Collections.ICollection" /> mit Arbeitsaufgaben.</param>
+        <summary>Wird aufgerufen, nachdem die Transaktion abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `succeeded` den Wert `true` hat, war die Transaktion erfolgreich, und alle vom Arbeitsbatch verwendeten Ressourcen können freigegeben werden. Wenn `succeeded` den Wert `false` hat, ist die Transaktion fehlgeschlagen. Je nach Implementierung können Sie für die Arbeit im Arbeitsbatch einen geeigneten Rollback ausführen, wenn die Transaktion fehlschlägt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustCommit">
+      <MemberSignature Language="C#" Value="public bool MustCommit (System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MustCommit(class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IPendingWork.MustCommit(System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="items">Eine <see cref="T:System.Collections.ICollection" /> mit Arbeitsaufgaben.</param>
+        <summary>Ermöglicht es den Elementen im Arbeitsbatch zu bestätigen, ob sie sofort einen Commit ausführen müssen.</summary>
+        <returns>
+          <see langword="true" />, wenn für ein Element der Auflistung sofort ein Commit ausgeführt werden muss, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.Runtime.IPendingWork.MustCommit%2A> den Wert `false` zurückgibt, wird die Arbeit ggf. auf einen späteren Commitpunkt verschoben. Wenn für ein Element ein Commit ausgeführt werden muss, geben Sie `true` zurück, um für alle Elemente am aktuellen Commitpunkt einen Commit auszuführen. Eine Beschreibung der möglichen Commitpunkte finden Sie in der <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

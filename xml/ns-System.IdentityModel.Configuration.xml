@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Configuration" /> -Namespace enthält Klassen, die Konfiguration für Anwendungen und Dienste erstellt, mit der Windows Identity Foundation (WIF) bereitstellen. Die Klassen in diesem Namespace darstellen Einstellungen unter dem [ &lt;IdentityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element. Klassen, die Konfigurieren des Verbunds mit dem WS-Verbund-Protokoll sind in erster Linie in enthalten die <see cref="N:System.IdentityModel.Services.Configuration" /> Namespace. Diese Einstellungen werden unter der [ &lt;system.identityModel.services&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Element in einer Konfigurationsdatei.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

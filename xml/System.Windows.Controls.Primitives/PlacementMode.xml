@@ -1,0 +1,229 @@
+<Type Name="PlacementMode" FullName="System.Windows.Controls.Primitives.PlacementMode">
+  <TypeSignature Language="C#" Value="public enum PlacementMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PlacementMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.PlacementMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt die Platzierung, wo ein <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement auf dem Bildschirm angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Elemente dieser Klasse Enumeration zum Festlegen des Werts, der die <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaft ein <xref:System.Windows.Controls.Primitives.Popup> Steuerelement. Die <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaftswert zusammen mit den Werten von der <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> Eigenschaften bestimmt, wo und wie ein <xref:System.Windows.Controls.Primitives.Popup> auf dem Bildschirm angezeigt wird. Weitere Informationen finden Sie unter [Verhalten beim Platzieren von Popups](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt vier <xref:System.Windows.Controls.Primitives.Popup> Steuerelemente relativ zu einem Bild. Jede <xref:System.Windows.Controls.Primitives.Popup> verfügt über einen anderen Wert für die Platzierungseigenschaft.  
+  
+ [!code-xaml[PopupPositionSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Absolute">
+      <MemberSignature Language="C#" Value="Absolute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Absolute = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Absolute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelements relativ zur linken oberen Ecke des Bildschirms und mit einem Offset, die von definiert ist die <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> und <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> Eigenschaftswerte. Wenn der Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement positioniert dann am Rand ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsolutePoint">
+      <MemberSignature Language="C#" Value="AbsolutePoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode AbsolutePoint = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelements relativ zur linken oberen Ecke des Bildschirms und mit einem Offset, die von definiert ist die <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> und <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> Eigenschaftswerte. Wenn der Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement erweitert werden, in die entgegengesetzte Richtung von der Achse definiert, indem Sie die <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> oder <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />=.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position des der <see cref="T:System.Windows.Controls.Primitives.Popup" /> steuern, in dem das Steuerelement den oberen Rand am unteren Rand des richtet die <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> und am linken Rand am linken Rand der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn die unteren Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement positioniert selbst, damit der untere Rand am oberen Rand ausgerichtet der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn die oberen Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement anschließend automatisch neu positioniert und so, dass der obere Rand am oberen Bildschirmrand ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Center = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement, bei der zentriert über, der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn ein Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement neu positioniert das Bildschirmkante ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Custom = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position und Neuanordnen Verhalten für die <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement, das von definiert wird die <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" /> vom angegebenen Delegaten der <see cref="P:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Left = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement, das dessen rechter Rand am linken Rand ausgerichtet der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> und der obere Rand am oberen Rand der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn der linke Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, <see cref="T:System.Windows.Controls.Primitives.Popup" /> selbst neu positioniert werden, damit dessen linke Rand am rechten Rand ausgerichtet der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn die rechten Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, dem rechten Rand des Steuerelements ausgerichtet wird, mit der rechten Bildschirmrand. Wenn die oberen oder unteren Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement neu positioniert verdeckenden Bildschirmkante ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mouse">
+      <MemberSignature Language="C#" Value="Mouse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Mouse = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Mouse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position des der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement, das am oberen Randes am unteren Rand des umgebenden Felds der Maus und der linke Rand am linken Rand des umgebenden Felds der Maus. Wenn die unteren Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, es positioniert am oberen Rand des umgebenden Felds der Maus ausgerichtet. Wenn die oberen Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement positioniert werden am oberen Bildschirmrand ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePoint">
+      <MemberSignature Language="C#" Value="MousePoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode MousePoint = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.MousePoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelements relativ zur Spitze des Mauszeigers und mit einem Offset, der durch definiert ist die <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> und <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> Eigenschaftswerte. Wenn eine horizontale oder vertikale Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, es in die entgegengesetzte Richtung vom verdeckenden Rand wird geöffnet. Wenn der gegenüberliegende auch verdeckt Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, es anschließend mit den verdeckenden Bildschirmrand ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Relative">
+      <MemberSignature Language="C#" Value="Relative" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Relative = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Relative" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelements relativ zur linken oberen Ecke von der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> und mit einem Offset, die von definiert ist die <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> und <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> Eigenschaftswerte. Wenn der Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement neu positioniert das Bildschirmkante ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePoint">
+      <MemberSignature Language="C#" Value="RelativePoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode RelativePoint = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.RelativePoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelements relativ zur linken oberen Ecke von der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> und mit einem Offset, die von definiert ist die <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> und <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> Eigenschaftswerte. Wenn ein Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, die <see cref="T:System.Windows.Controls.Primitives.Popup" /> in die entgegengesetzte Richtung aus der Richtung von der Achse durch definierten erweitert die <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> oder <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. Wenn der gegenüberliegende auch verdeckt Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement anschließend an diesem Bildschirmrand ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement, das der linke Rand am rechten Rand ausgerichtet der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> und der obere Rand am oberen Rand der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn die rechten Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement positioniert selbst, damit dessen linke Rand am linken Rand ausgerichtet der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn der linke Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement positioniert selbst, damit dessen linke Rand am linken Bildschirmrand ausgerichtet. Wenn die oberen oder unteren Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement positioniert klicken Sie dann den verdeckenden Bildschirmrand ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Top = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Position von der <see cref="T:System.Windows.Controls.Primitives.Popup" /> Steuerelement, das der untere Rand am oberen Rand der ausrichtet der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> und am linken Rand am linken Rand der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn die oberen Bildschirmrand das <see cref="T:System.Windows.Controls.Primitives.Popup" />, das Steuerelement positioniert selbst so, dass der obere Rand am unteren Rand ausgerichtet der <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Wenn die unteren Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, am untere Rand des Steuerelements ausgerichtet am unteren Bildschirmrand. Wenn der linken oder rechten Bildschirmrand der <see cref="T:System.Windows.Controls.Primitives.Popup" />, klicken Sie dann positioniert verdeckenden Bildschirm ausgerichtet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

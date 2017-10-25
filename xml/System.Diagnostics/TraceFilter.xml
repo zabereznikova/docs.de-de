@@ -1,0 +1,136 @@
+<Type Name="TraceFilter" FullName="System.Diagnostics.TraceFilter">
+  <TypeSignature Language="C#" Value="public abstract class TraceFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TraceFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für Implementierungen der Trace-Filter bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ablaufverfolgungsfilter können von Ablaufverfolgungslistenern verwendet werden, um eine zusätzliche Ebene der Filterung bereitzustellen von Ablaufverfolgungsschaltern bereitgestellten Rahmen hinaus. Der Ablaufverfolgungsfilter für einen Ablaufverfolgungslistener finden Sie in des Listeners <xref:System.Diagnostics.TraceListener.Filter%2A> Eigenschaft. Ablaufverfolgungsschalter bestimmen, ob eine Ablaufverfolgung wird in die Ablaufverfolgungslistener gesendet werden. Ablaufverfolgungsfilter können die einzelnen Ablaufverfolgungslistener, um zu bestimmen, und zwar unabhängig davon, ob die Ablaufverfolgung wird in die entsprechende Ausgabemedium geschrieben werden sollen. Z. B. durch jede Ablaufverfolgungsfilter bestimmt wird, eine Ablaufverfolgung kann geschrieben werden an die Konsole, indem Sie eine <xref:System.Diagnostics.ConsoleTraceListener>, aber nicht in das Ereignisprotokoll durch eine <xref:System.Diagnostics.EventLogTraceListener>.  
+  
+ Filter, die von erben die <xref:System.Diagnostics.TraceFilter> Klasse kann verwendet werden, durch den Ablaufverfolgungslistener, die von erben die <xref:System.Diagnostics.TraceListener> Klasse zum Filtern von Ereignissen, die Ablaufverfolgung ausführen. <xref:System.Diagnostics.TraceFilter>enthält eine einzelne Methode <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A>, die Ereignisdaten nimmt und gibt ein Flag zurück, der angibt, ob das Ereignis nachverfolgt werden sollen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TraceFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceFilter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.TraceFilter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrace">
+      <MemberSignature Language="C#" Value="public abstract bool ShouldTrace (System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldTrace(class System.Diagnostics.TraceEventCache cache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string formatOrMessage, object[] args, object data1, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="formatOrMessage" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="data1" Type="System.Object" />
+        <Parameter Name="data" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="cache">Die <see cref="T:System.Diagnostics.TraceEventCache" /> , die Informationen für das Ablaufverfolgungsereignis enthält.</param>
+        <param name="source">Der Name der Quelle.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte, der den Typ des Ereignisses angibt, das die Ablaufverfolgung verursacht hat.</param>
+        <param name="id">Eine Ablaufverfolgung-ID-Nummer.</param>
+        <param name="formatOrMessage">Entweder das Format, verwenden Sie zum Schreiben von ein Array von Argumenten, die gemäß der <c>Args</c> Parameter oder eine zu schreibende Meldung.</param>
+        <param name="args">Ein Array von Argumentobjekten.</param>
+        <param name="data1">Ein Trace-Datenobjekt.</param>
+        <param name="data">Ein Array von Datenobjekten Ablaufverfolgung.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse bestimmt, ob der Ablaufverfolgungslistener das Ereignis verfolgen soll.</summary>
+        <returns>
+          <see langword="true" />für die Ablaufverfolgung das angegebene Ereignis; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> Methode an, dass die Ablaufverfolgung ausgeführt werden sollen, um die Ablaufverfolgungs-Ereignistyp des Ereignisses gleich <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType>.  
+  
+ [!code-cpp[System.Diagnostics.TraceFilter#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.diagnostics.tracefilter/cpp/source.cpp#2)]
+ [!code-csharp[System.Diagnostics.TraceFilter#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.tracefilter/cs/source.cs#2)]
+ [!code-vb[System.Diagnostics.TraceFilter#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.tracefilter/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implementierungen dieser Methode sollte zurückgeben <see langword="true" /> , wenn das Ereignis, das von den übergebenen Parametern angegebenen nachverfolgt werden sollen. Andernfalls sollte die Methode zurückgeben <see langword="false" />. Z. B. ein Filter, können nur Fehlerereignisse, die an den Listener weitergegeben, überprüfen sollten die <paramref name="eventType" /> Parameter- und Rückgabetypen <see langword="true" /> , wenn die Ereignis-Typ Ablaufverfolgungsebene, um festgelegt ist <see cref="F:System.Diagnostics.TraceEventType.Error" /> oder größer ist; andernfalls, sollte es zurückgeben <see langword="false" />.  
+  
+ Implementierungen der Methode sollten darauf vorbereitet sein, behandeln <see langword="null" /> in den folgenden Parametern: <paramref name="args" />, <paramref name="data1" />, <paramref name="data" />, <paramref name="formatOrMessage" />, und <paramref name="cache" />. Wenn der Parameterwert ist <see langword="null" />, der Parameter ist nicht Teil des Ereignisses. Beispielsweise, wenn die <paramref name="args" /> Parameter ist <see langword="null" />, dies bedeutet, dass das Ereignis nicht über Argumente verfügt. Wenn die <paramref name="data" /> Parameter ist <see langword="null" />, und klicken Sie dann ein oder kein Datenobjekte vorhanden sind. Wenn ein Datenobjekt vorhanden ist, wird es gefunden der <paramref name="data1" /> Parameter. Der Grund für die Unterscheidung zwischen einem einzelnen Datenobjekt und ein Array von Datenobjekten ist für die Leistung. Es besteht kein Grund zu einem Objektarray erstellen, wenn nur ein Objekt verfolgt wird, wie normalerweise der Fall ist. Wenn die <paramref name="data" /> -Parameter ist kein <see langword="null" />, <paramref name="data1" /> Parameter muss auch nicht <see langword="null" />.  
+  
+ Es ist sichergestellt, dass die <paramref name="source" /> -Parameter ist kein <see langword="null" /> und nicht auf eine leere Zeichenfolge ("").  
+  
+ Implementierungen der Methode können optional die folgenden Ausnahmen auslösen:  
+  
+-   <see cref="T:System.ArgumentNullException" />Wenn <paramref name="source" /> ist <see langword="null" />.  
+  
+-   <see cref="T:System.ArgumentException" />Wenn <paramref name="eventType" /> ist keines der <see cref="T:System.Diagnostics.TraceEventType" /> Werte.  
+  
+-   Ausnahmen, die unabhängig von der Implementierung der Methode. Z. B. eine <see cref="T:System.Threading.ThreadAbortException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,938 @@
+<Type Name="DataGridRow" FullName="System.Windows.Controls.DataGridRow">
+  <TypeSignature Language="C#" Value="public class DataGridRow : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DataGridRow extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridRow" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Windows.Controls.DataGrid" /> Zeile.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.DataGrid> Zeile stellt ein einzelnes Datenelement in einer gebundenen Datenquelle dar. Jede Zeile enthält eine Zelle pro Spalte in der <xref:System.Windows.Controls.DataGrid>, und jede Zelle zeigt einen einzelnen Wert im Datenelement gebunden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridRow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataGridRow" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternationIndex">
+      <MemberSignature Language="C#" Value="public int AlternationIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AlternationIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.AlternationIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der Zeile in einer Gruppe von abwechselnden Zeilen ab.</summary>
+        <value>Der Index der Zeile in einer Gruppe von abwechselnden Zeilen. Der registrierte Standardwert ist 0. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abwechselnde Zeilen sind Zeilen, die Sie andere Eigenschaften, z. B. abwechselnde Hintergrundfarben zuweisen können. Sie können festlegen, die <xref:System.Windows.Controls.ItemsControl.AlternationCount%2A> Eigenschaft der <xref:System.Windows.Controls.DataGrid> an, dass die Anzahl der Zeilen in einer Gruppe von abwechselnden Zeilen. Weitere Informationen über abwechselnde Zeilen finden Sie unter <xref:System.Windows.Controls.ItemsControl.AlternationCount%2A?displayProperty=nameWithType>.  
+  
+ Überschreiben Sie die <xref:System.Windows.Controls.DataGridRow.OnPropertyChanged%2A> Methode Reaktion auf Änderungen an der <xref:System.Windows.Controls.DataGridRow.AlternationIndex%2A> Eigenschaft. Die <xref:System.Windows.Controls.DataGridRow.AlternationIndex%2A> Eigenschaft hat keine eigenen-Eigenschaftenmethode geändert, da die <xref:System.Windows.Controls.DataGridRow.AlternationIndexProperty> -Feld verwendet, die nur-Lese- <xref:System.Windows.Controls.ItemsControl.AlternationIndexProperty?displayProperty=nameWithType> Feld.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternationIndexProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AlternationIndexProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AlternationIndexProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.AlternationIndexProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.AlternationIndex" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridRow.AlternationIndexProperty> -Feld verwendet, die nur-Lese- <xref:System.Windows.Controls.ItemsControl.AlternationIndexProperty?displayProperty=nameWithType> Feld.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeBounds" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeBounds">Der Bereich, der für die Zeile verfügbar ist.</param>
+        <summary>Ordnet den Inhalt der Zeile.</summary>
+        <returns>Der aktuelle Bereich verwendet, die für die Zeile.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailsTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate DetailsTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate DetailsTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.DetailsTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die verwendet wird, um im Detailbereich der Zeile angezeigt.</summary>
+        <value>Abschnitt erläutert, die Vorlage, die verwendet wird, um die Zeile anzuzeigen oder <see langword="null" /> verwenden die <see cref="P:System.Windows.Controls.DataGrid.RowDetailsTemplate" /> Einstellung. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailsTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DetailsTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DetailsTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.DetailsTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.DetailsTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailsTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector DetailsTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector DetailsTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.DetailsTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Selektor für die Vorlage, der benutzerdefinierten Logik für die Auswahl einer Zeile Details-Vorlage bereitstellt.</summary>
+        <value>Selektor für eine Vorlage für die Auswahl der Zeilenvorlage Details. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailsTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DetailsTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DetailsTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.DetailsTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.DetailsTemplateSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailsVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility DetailsVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility DetailsVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.DetailsVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wenn im Detailbereich der Zeile angezeigt wird.</summary>
+        <value>Ein Wert, der die Sichtbarkeit der Zeilendetails angibt. Der registrierte Standardwert ist <see cref="F:System.Windows.Visibility.Collapsed" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailsVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DetailsVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DetailsVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.DetailsVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.DetailsVisibility" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIndex">
+      <MemberSignature Language="C#" Value="public int GetIndex ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetIndex() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.GetIndex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Index des Datenelements für die Zeile innerhalb der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> Auflistung von der <see cref="T:System.Windows.Controls.DataGrid" />.</summary>
+        <returns>Der Index der Zeile Datenelement oder-1 zurück, wenn das Element nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowContainingElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.DataGridRow GetRowContainingElement (System.Windows.FrameworkElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Controls.DataGridRow GetRowContainingElement(class System.Windows.FrameworkElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.GetRowContainingElement(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein Element in einer Zeile zu findenden enthalten.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Controls.DataGridRow" /> , die das angegebene Element enthält.</summary>
+        <returns>Die <see cref="T:System.Windows.Controls.DataGridRow" /> , die das angegebene Element enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public object Header { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das den Headerinhalt Zeile darstellt.</summary>
+        <value>Der Inhalt des Zeilenheaders. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.HeaderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.Header" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style HeaderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style HeaderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.HeaderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format, das verwendet wird, wenn die Zeilenüberschrift zu rendern.</summary>
+        <value>Das Format, das verwendet wird, wenn die Zeilenüberschrift zu rendern. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definieren einer <xref:System.Windows.Style> Geben Sie für einen Zeilenkopf ein <xref:System.Windows.Style.TargetType%2A> von <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+  
+ Ein <xref:System.Windows.Style> kann angewendet werden, um alle Zeilenheader oder eine einzelne Zeile mit einer Überschrift. Anwenden einer <xref:System.Windows.Style> auf einem einzelnen Header festgelegt die <xref:System.Windows.Controls.DataGridRow.HeaderStyle%2A?displayProperty=nameWithType> -Eigenschaft, die Vorrang vor der <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.HeaderStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.HeaderStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate HeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate HeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.HeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die verwendet wird, um die Zeilenüberschrift anzuzeigen.</summary>
+        <value>Die Vorlage, die verwendet wird, um die Zeilenüberschrift anzuzeigen oder <see langword="null" /> verwenden die <see cref="P:System.Windows.Controls.DataGrid.RowHeaderTemplate" /> Einstellung. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.HeaderTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.HeaderTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.HeaderTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Selektor für eine Vorlage, der benutzerdefinierten Logik für die Auswahl einer Zeile Header-Vorlage bereitstellt.</summary>
+        <value>Selektor für eine Vorlage für die Auswahl der Zeilenvorlage Header. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.HeaderTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.HeaderTemplateSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditing">
+      <MemberSignature Language="C#" Value="public bool IsEditing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEditing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.IsEditing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Zeile befindet sich im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile im Bearbeitungsmodus befindet; andernfalls <see langword="false" />. Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsEditingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsEditingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.IsEditingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.IsEditing" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewItem">
+      <MemberSignature Language="C#" Value="public bool IsNewItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNewItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.IsNewItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.DataGridRow" /> ist ein Platzhalter für ein neues Element oder ein Element, das kein Commit ausgeführt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.DataGridRow" /> ist ein Platzhalter für ein neues Element oder ein Element, das ein Commit ausgeführt wurde, andernfalls nicht wurde <see langword="false" />.  
+  
+ Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsNewItem"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DataGridRow.IsNewItemProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewItemProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsNewItemProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsNewItemProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.IsNewItemProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.IsNewItem" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public bool IsSelected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zeile ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Zeile ausgewählt ist, andernfalls <see langword="false" />. Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.IsSelectedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.IsSelected" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object Item { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Datenelement, das die Zeile darstellt.</summary>
+        <value>Das Datenelement, das die Zeile darstellt. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.ItemProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.Item" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemsPanelTemplate ItemsPanel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ItemsPanelTemplate ItemsPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.ItemsPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemsPanelTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die der Bereich definiert wird, der das Layout der Zellen in der Zeile steuert.</summary>
+        <value>Die Vorlage, die der Bereich für das Layout der Zellen in der Zeile verwendet definiert wird. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsPanelProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemsPanelProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemsPanelProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.ItemsPanelProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.ItemsPanel" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnColumnsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnColumnsChanged (System.Collections.ObjectModel.ObservableCollection&lt;System.Windows.Controls.DataGridColumn&gt; columns, System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnColumnsChanged(class System.Collections.ObjectModel.ObservableCollection`1&lt;class System.Windows.Controls.DataGridColumn&gt; columns, class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnColumnsChanged(System.Collections.ObjectModel.ObservableCollection{System.Windows.Controls.DataGridColumn},System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columns" Type="System.Collections.ObjectModel.ObservableCollection&lt;System.Windows.Controls.DataGridColumn&gt;" />
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="columns">Die <see cref="P:System.Windows.Controls.DataGrid.Columns" />-Auflistung.</param>
+        <param name="e">Die Ereignisdaten aus der <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged" /> -Ereignis für die <see cref="P:System.Windows.Controls.DataGrid.Columns" /> Auflistung.</param>
+        <summary>Wird aufgerufen, zum Aktualisieren der angezeigten Zellen, wenn die <see cref="P:System.Windows.Controls.DataGrid.Columns" /> Auflistung wurde geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine neue <see cref="T:System.Windows.Automation.Peers.DataGridRowAutomationPeer" /> für diese Zeile.</summary>
+        <returns>Ein neuer Automatisierungspeer für diese Zeile.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderChanged (object oldHeader, object newHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderChanged(object oldHeader, object newHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnHeaderChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldHeader" Type="System.Object" />
+        <Parameter Name="newHeader" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldHeader">Der vorherige Wert der die <see cref="P:System.Windows.Controls.DataGridRow.Header" /> Eigenschaft.</param>
+        <param name="newHeader">Der neue Wert der <see cref="P:System.Windows.Controls.DataGridRow.Header" />-Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn der Wert der <see cref="P:System.Windows.Controls.DataGridRow.Header" /> -Eigenschaft geändert hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemChanged (object oldItem, object newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemChanged(object oldItem, object newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnItemChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItem" Type="System.Object" />
+        <Parameter Name="newItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldItem">Der vorherige Wert der die <see cref="P:System.Windows.Controls.DataGridRow.Item" /> Eigenschaft.</param>
+        <param name="newItem">Der neue Wert der <see cref="P:System.Windows.Controls.DataGridRow.Item" />-Eigenschaft.</param>
+        <summary>Aktualisiert die angezeigten Zellen, wenn die <see cref="P:System.Windows.Controls.DataGridRow.Item" /> -Eigenschaftswert geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten, die die geänderte Eigenschaft beschreibt, sowie die alten und neuen Werte.</param>
+        <summary>Wird aufgerufen, wenn der effektive Wert einer Abhängigkeitseigenschaft für dieses <see cref="T:System.Windows.Controls.DataGridRow" /> aktualisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A?displayProperty=nameWithType>. Welche spezifische Abhängigkeitseigenschaft geändert wird, wird im Argumentparameter gemeldet.  
+  
+ Überschreiben Sie diese Methode zum Reagieren auf Änderungen an der <xref:System.Windows.Controls.DataGridRow.AlternationIndex%2A> Eigenschaft. Die <xref:System.Windows.Controls.DataGridRow.AlternationIndex%2A> Eigenschaft hat keine eigenen-Eigenschaftenmethode geändert, da die <xref:System.Windows.Controls.DataGridRow.AlternationIndexProperty> -Feld verwendet, die nur-Lese- <xref:System.Windows.Controls.ItemsControl.AlternationIndexProperty?displayProperty=nameWithType> Feld.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Rufen Sie immer die grundlegende Implementierung als erster Vorgang in Ihrer Implementierung. Dies versäumt wird die gesamte erheblich deaktiviert [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem, wodurch falsche Werte gemeldet werden. Die spezifische <see cref="T:System.Windows.Controls.DataGridRow" /> Implementierung dient auch zum Verwalten von des richtigen Zustands für die <see cref="P:System.Windows.Controls.DataGridRow.AlternationIndex" /> -Eigenschaft, die wirkt sich auf der Benutzeroberfläche sichtbar und erklärt die visuelle Struktur, die basierend auf eigenschaftswertänderungen zu geeigneten Zeitpunkten.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelected">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnSelected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten, die leer ist, wenn diese Methode, durch aufgerufen wird die <see cref="T:System.Windows.Controls.DataGridRow" />.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.DataGridRow.Selected" /> Ereignis bei der <see cref="P:System.Windows.Controls.DataGridRow.IsSelected" /> Eigenschaftswert geändert wird, um <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Controls.DataGridRow.OnSelected%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridRow.OnSelected(System.Windows.RoutedEventArgs)" /> in einer abgeleiteten Klasse, stellen Sie sicher, dass der Basisklasse aufgerufen <see cref="M:System.Windows.Controls.DataGridRow.OnSelected(System.Windows.RoutedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTemplateChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTemplateChanged (System.Windows.Controls.ControlTemplate oldTemplate, System.Windows.Controls.ControlTemplate newTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTemplateChanged(class System.Windows.Controls.ControlTemplate oldTemplate, class System.Windows.Controls.ControlTemplate newTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnTemplateChanged(System.Windows.Controls.ControlTemplate,System.Windows.Controls.ControlTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldTemplate" Type="System.Windows.Controls.ControlTemplate" />
+        <Parameter Name="newTemplate" Type="System.Windows.Controls.ControlTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="oldTemplate">Die alte Vorlage.</param>
+        <param name="newTemplate">Die neue Vorlage.</param>
+        <summary>Wird aufgerufen, sobald die Vorlage des Steuerelements geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnselected">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnselected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnselected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRow.OnUnselected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten, die leer ist, wenn diese Methode, durch aufgerufen wird die <see cref="T:System.Windows.Controls.DataGridRow" />.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.DataGridRow.Unselected" /> Ereignis bei der <see cref="P:System.Windows.Controls.DataGridRow.IsSelected" /> Eigenschaftswert geändert wird, um <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Controls.DataGridRow.OnUnselected%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridRow.OnUnselected(System.Windows.RoutedEventArgs)" /> in einer abgeleiteten Klasse, stellen Sie sicher, dass der Basisklasse aufgerufen <see cref="M:System.Windows.Controls.DataGridRow.OnUnselected(System.Windows.RoutedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.DataGridRow.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Zeile ausgewählt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, wenn die <xref:System.Windows.Controls.DataGridRow.IsSelected%2A> Eigenschaftswert geändert wird, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.SelectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.DataGridRow.Selected" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unselected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Unselected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Unselected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.DataGridRow.Unselected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Auswahl der Zeile deaktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, wenn die <xref:System.Windows.Controls.DataGridRow.IsSelected%2A> Eigenschaftswert geändert wird, um `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnselectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UnselectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UnselectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.UnselectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.DataGridRow.Unselected" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationErrorTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ControlTemplate ValidationErrorTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ControlTemplate ValidationErrorTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRow.ValidationErrorTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ControlTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die verwendet wird, um Fehler in Zeile Überprüfung anzugeben visuell anzuzeigen.</summary>
+        <value>Die Vorlage, die verwendet wird, um Fehler in Zeile Überprüfung anzugeben visuell anzuzeigen oder <see langword="null" /> verwenden die <see cref="P:System.Windows.Controls.DataGrid.RowValidationErrorTemplate" /> Einstellung. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationErrorTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ValidationErrorTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ValidationErrorTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridRow.ValidationErrorTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridRow.ValidationErrorTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

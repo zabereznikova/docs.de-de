@@ -1,0 +1,366 @@
+<Type Name="FaultException&lt;TDetail&gt;" FullName="System.ServiceModel.FaultException&lt;TDetail&gt;">
+  <TypeSignature Language="C#" Value="public class FaultException&lt;TDetail&gt; : System.ServiceModel.FaultException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FaultException`1&lt;TDetail&gt; extends System.ServiceModel.FaultException" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.FaultException`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TDetail" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.FaultException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TDetail">Der serialisierbare Fehlerdetailtyp.</typeparam>
+    <summary>Wird in einer Clientanwendung verwendet, um vertraglich angegebene SOAP-Fehler abzufangen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fangen Sie das <xref:System.ServiceModel.FaultException%601>-Objekt in einer [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Clientanwendung ab, um einen SOAP-Fehler zu verarbeiten, der vertraglich in einem Vorgangsvertrag angegeben wurde.  
+  
+ Normal bereitgestellte Dienste verwenden <xref:System.ServiceModel.FaultContractAttribute>, um alle SOAP-Fehler formal anzugeben, die bei einem Client während des normalen Betriebs eingehen können. Fehlerinformationen in einer <xref:System.ServiceModel.FaultContractAttribute> wird als eine <xref:System.ServiceModel.FaultException%601> (, wobei der Typparameter der im des Vorgangs angegebene Fehlerobjekt ist <xref:System.ServiceModel.FaultContractAttribute>) beim Eingang in einer Clientanwendung. Das <xref:System.ServiceModel.FaultContractAttribute> kann zur Angabe der SOAP-Fehler für bidirektionale Dienstmethoden und für asynchrone Methodenpaare verwendet werden.  
+  
+ Da es sich bei <xref:System.ServiceModel.FaultException%601> sowohl um eine <xref:System.ServiceModel.FaultException> und somit auch um eine <xref:System.ServiceModel.CommunicationException> handelt, müssen Sie, um bestimmte SOAP-Fehler abzufangen, sicherstellen, dass Sie die <xref:System.ServiceModel.FaultException%601>-Typen vor dem <xref:System.ServiceModel.FaultException>-Typ und dem <xref:System.ServiceModel.CommunicationException>-Typ abfangen oder dass Sie die angegebenen Ausnahmen mit einem der Ausnahmehandler verarbeiten.  
+  
+> [!NOTE]
+>  Wenn Sie ein <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> verwenden, um eine <xref:System.ServiceModel.FaultException%601> festzulegen, bei der der Typparameter ein <xref:System.String?displayProperty=nameWithType> ist, wird der Zeichenfolgewert der <xref:System.ServiceModel.FaultException%601.Detail%2A>-Eigenschaft in der Clientanwendung zugeordnet; Clients können diese Zeichenfolge nicht durch Abrufen der <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>-Methode abrufen. Damit der Zeichenfolgewert zurückgegeben wird, wenn die Clientanwendung <xref:System.Exception.ToString%2A?displayProperty=nameWithType> aufruft, lösen Sie im Vorgang eine <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Ausnahme aus, und übergeben Sie die Zeichenfolge dem Konstruktor.   
+> Im Allgemeinen wird empfohlen, dass als Detailtypen benutzerdefinierte serialisierbare und für den Fehler geeignete Typen verwendet werden und keine <xref:System.String?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie ein Dienst den <xref:System.ServiceModel.FaultException%601>-Typ verwendet, um eine verwaltete Ausnahme auszulösen, die in den vom <xref:System.ServiceModel.FaultContractAttribute> angegebenen SOAP-Fehler konvertiert wird.  
+  
+ [!code-csharp[FaultContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
+ [!code-vb[FaultContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Clientcode aussieht, wenn vom Client über importiert die [ServiceModel Metadata Utility Tool (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+  
+  
+  
+ Das folgende Codebeispiel zeigt, wie ein Client den <xref:System.ServiceModel.FaultException%601>-Typ abfangen kann, der den im Vorgangsvertrag angegebenen benutzerdefinierten SOAP-Fehler darstellt.  
+  
+ [!code-csharp[FaultContractAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
+ [!code-vb[FaultContractAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultException (TDetail detail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TDetail detail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="TDetail" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Das als SOAP-Fehlerdetail verwendete Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse, die das angegebene Detailobjekt verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Detailobjekt muss serialisierbar sein oder eine Ausnahme wird ausgelöst, wenn <xref:System.ServiceModel.FaultException%601> serialisiert wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie ein Dienst den <xref:System.ServiceModel.FaultException%601>-Typ verwendet, um eine verwaltete Ausnahme auszulösen, die in den vom <xref:System.ServiceModel.FaultContractAttribute> angegebenen SOAP-Fehler konvertiert wird.  
+  
+ [!code-csharp[FaultContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
+ [!code-vb[FaultContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FaultException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Serialisierungsinformationen, die zum Rekonstruieren der <see cref="T:System.ServiceModel.FaultException" /> -Objekt aus der <c>Kontext</c>.</param>
+        <param name="context">Der Stream, aus dem das <see cref="T:System.ServiceModel.FaultException" />-Objekt wiederhergestellt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse mit den angegebenen Serialisierungsinformationen und dem angegebenen Kontext, wenn ein Stream in ein <see cref="T:System.ServiceModel.FaultException" />-Objekt deserialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultException (TDetail detail, System.ServiceModel.FaultReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TDetail detail, class System.ServiceModel.FaultReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(`0,System.ServiceModel.FaultReason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="TDetail" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Das als SOAP-Fehlerdetail verwendete Objekt.</param>
+        <param name="reason">Die Ursache für den SOAP-Fehler.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse, die das angegebene Detailobjekt und die angegebene Fehlerursache verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultException (TDetail detail, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TDetail detail, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(`0,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="TDetail" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Das als SOAP-Fehlerdetail verwendete Objekt.</param>
+        <param name="reason">Die Ursache für den SOAP-Fehler.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse, die das angegebene Detail und die angegebene Fehlerursache verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultException (TDetail detail, System.ServiceModel.FaultReason reason, System.ServiceModel.FaultCode code);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TDetail detail, class System.ServiceModel.FaultReason reason, class System.ServiceModel.FaultCode code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(`0,System.ServiceModel.FaultReason,System.ServiceModel.FaultCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="TDetail" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Das als SOAP-Fehlerdetail verwendete Objekt.</param>
+        <param name="reason">Die Ursache für den SOAP-Fehler.</param>
+        <param name="code">Der Fehlercode für den SOAP-Fehler.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse, die das angegebene Detailobjekt, die angegebene Fehlerursache und den Fehlercode verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultException (TDetail detail, string reason, System.ServiceModel.FaultCode code);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TDetail detail, string reason, class System.ServiceModel.FaultCode code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(`0,System.String,System.ServiceModel.FaultCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="TDetail" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Das als SOAP-Fehlerdetail verwendete Objekt.</param>
+        <param name="reason">Die Ursache für den SOAP-Fehler.</param>
+        <param name="code">Der Fehlercode für den SOAP-Fehler.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse, die das angegebene Detailobjekt, die angegebene Fehlerursache und den Fehlercode verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultException (TDetail detail, System.ServiceModel.FaultReason reason, System.ServiceModel.FaultCode code, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TDetail detail, class System.ServiceModel.FaultReason reason, class System.ServiceModel.FaultCode code, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(`0,System.ServiceModel.FaultReason,System.ServiceModel.FaultCode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="TDetail" />
+        <Parameter Name="reason" Type="System.ServiceModel.FaultReason" />
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Das als SOAP-Fehlerdetail verwendete Objekt.</param>
+        <param name="reason">Die Ursache für den SOAP-Fehler.</param>
+        <param name="code">Der Fehlercode für den SOAP-Fehler.</param>
+        <param name="action">Die Aktion des SOAP-Fehlers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse, die das angegebene Detailobjekt, die SOAP-Fehlerursache, den Code und die Aktionswerte verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultException (TDetail detail, string reason, System.ServiceModel.FaultCode code, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TDetail detail, string reason, class System.ServiceModel.FaultCode code, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.#ctor(`0,System.String,System.ServiceModel.FaultCode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="TDetail" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="code" Type="System.ServiceModel.FaultCode" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Das als SOAP-Fehlerdetail verwendete Objekt.</param>
+        <param name="reason">Die Ursache für den SOAP-Fehler.</param>
+        <param name="code">Der Fehlercode für den SOAP-Fehler.</param>
+        <param name="action">Die Aktion des SOAP-Fehlers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultException`1" />-Klasse, die das angegebene Detailobjekt, die SOAP-Fehlerursache, den Code und die Aktionswerte verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageFault">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.MessageFault CreateMessageFault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.MessageFault CreateMessageFault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.CreateMessageFault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageFault</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.ServiceModel.Channels.MessageFault" />-Objekt, das verwendet werden kann, um eine <see cref="T:System.ServiceModel.Channels.Message" /> zu erstellen, die den SOAP-Fehler darstellt.</summary>
+        <returns>Der erstellte Nachrichtenfehler.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detail">
+      <MemberSignature Language="C#" Value="public TDetail Detail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TDetail Detail" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultException`1.Detail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TDetail</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das die Detailinformationen zur Fehlerbedingung enthält.</summary>
+        <value>Das Detailobjekt, das der Typparameter des <see cref="T:System.ServiceModel.FaultException`1" />-Objekts ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Serialisierungsinformationen, denen die Objektdaten bei Serialisierung hinzugefügt werden.</param>
+        <param name="context">Das Ziel für das serialisierte Objekt.</param>
+        <summary>Implementierung der <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />-Methode, die aufgerufen wird, wenn das Objekt in einen Stream serialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultException`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge für das <see cref="T:System.ServiceModel.FaultException`1" />-Objekt zurück.</summary>
+        <returns>Die Zeichenfolge für den SOAP-Fehler.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

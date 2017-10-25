@@ -1,0 +1,307 @@
+<Type Name="LazyInitializer" FullName="System.Threading.LazyInitializer">
+  <TypeSignature Language="C#" Value="public static class LazyInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit LazyInitializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.LazyInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt verzögerte Initialisierungsroutinen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Routinen umgehen, reservieren eine dedizierte, verzögerte Initialisierung Instanz, die stattdessen Verweise verwenden, um sicherzustellen, dass Ziele initialisiert wurden, wie darauf zugegriffen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Sie EnsureInitialized verzögert initialisiert werden, einen Wert mit einem booleschen Wert zum Nachverfolgen, ob die Initialisierung bereits geschehen ist und ein Objekt, das als die gegenseitigen Ausschlusssperre verwendet wird.  
+  
+```vb  
+Dim _data As ExpensiveData = Nothing  
+Dim _dataInitialized As Boolean = False  
+Dim _dataLock As Object = Nothing  
+'    ...  
+Dim name = LazyInitializer.EnsureInitialized(_data, _dataInitialized, _dataLock)  
+```  
+  
+```csharp  
+ExpensiveData _data = null;  
+                     bool _dataInitialized = false;  
+                     object _dataLock = new object();  
+                  //  ...  
+  
+                    ExpensiveData dataToUse = LazyInitializer.EnsureInitialized(ref _data, ref _dataInitialized, ref _dataLock);  
+```  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Die Methoden der <see cref="T:System.Threading.LazyInitializer" /> sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="EnsureInitialized&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T EnsureInitialized&lt;T&gt; (ref T target) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T EnsureInitialized&lt;class T&gt;(!!T&amp; target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LazyInitializer.EnsureInitialized``1(``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="T&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Verweises initialisiert werden.</typeparam>
+        <param name="target">Ein Verweis vom Typ <c>T</c> initialisiert werden, wenn er nicht bereits initialisiert wurde.</param>
+        <summary>Initialisiert ein Zielverweistyp mit dem Standardkonstruktor des Typs an, wenn diese nicht bereits initialisiert wurde.</summary>
+        <returns>Der initialisierte Verweis vom Typ <paramref name="T" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nur für Verweistypen verwendet werden. Um sicherzustellen, dass die Initialisierung von Werttypen, finden Sie unter anderen Überladungen der EnsureInitialized.  
+  
+ Diese Methode kann verwendet werden gleichzeitig durch mehrere Threads initialisieren `target`.  
+  
+ Wenn mehrere Threads gleichzeitig auf diese Methode, mehrere Instanzen von Zugriff auf `T` erstellt werden kann, aber nur eine wird in gespeichert werden `target`. In solch einem Vorkommen wird diese Methode nicht die Objekte freizugeben, die nicht gespeichert wurden. Wenn solche Objekte freigegeben werden müssen, ist es Aufgabe des Aufrufers, um zu bestimmen, ob ein Objekt nicht verwendet wurde und dann Verwerfen des Objekts entsprechend.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Zugriffsberechtigungen für den Konstruktor eines Typs <paramref name="T" /> fehlte.</exception>
+        <exception cref="T:System.MissingMemberException">Typ <paramref name="T" /> nicht über einen Standardkonstruktor verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInitialized&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T EnsureInitialized&lt;T&gt; (ref T target, Func&lt;T&gt; valueFactory) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T EnsureInitialized&lt;class T&gt;(!!T&amp; target, class System.Func`1&lt;!!T&gt; valueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Func{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="T&amp;" RefType="ref" />
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Verweistyp des Verweises initialisiert werden.</typeparam>
+        <param name="target">Der Verweis vom Typ <c>T</c> initialisiert werden, wenn diese nicht bereits initialisiert wurde.</param>
+        <param name="valueFactory">Die Funktion, die aufgerufen wird, um die Initialisierung des Verweises.</param>
+        <summary>Initialisiert einen Zielverweistyp mithilfe einer angegebenen Funktion, wenn diese nicht bereits initialisiert wurde.</summary>
+        <returns>Der initialisierte Wert vom Typ <paramref name="T" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nur verwendet werden, bei Verweistypen, und `valueFactory` kann einen null-Verweis (Nothing in Visual Basic) zurückgibt. Um sicherzustellen, dass die Initialisierung von Werttypen oder null-Verweis-Typen zu ermöglichen, finden Sie unter "andere Überladungen der EnsureInitialized".  
+  
+ Diese Methode kann verwendet werden gleichzeitig durch mehrere Threads initialisieren `target`.  
+  
+ Wenn mehrere Threads gleichzeitig auf diese Methode, mehrere Instanzen von Zugriff auf `T` erstellt werden kann, aber nur eine wird in gespeichert werden `target`. In solch einem Vorkommen wird diese Methode nicht die Objekte freizugeben, die nicht gespeichert wurden. Wenn solche Objekte freigegeben werden müssen, ist es Aufgabe des Aufrufers, um zu bestimmen, ob ein Objekt nicht verwendet wurde und dann Verwerfen des Objekts entsprechend.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MissingMemberException">Typ <paramref name="T" /> nicht über einen Standardkonstruktor verfügen.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="valueFactory" />Gibt null (Nothing in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInitialized&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T EnsureInitialized&lt;T&gt; (ref T target, ref bool initialized, ref object syncLock);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T EnsureInitialized&lt;T&gt;(!!T&amp; target, bool&amp; initialized, object&amp; syncLock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Boolean@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="T&amp;" RefType="ref" />
+        <Parameter Name="initialized" Type="System.Boolean&amp;" RefType="ref" />
+        <Parameter Name="syncLock" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Verweises initialisiert werden.</typeparam>
+        <param name="target">Ein Verweis oder Wert des Typs <c>T</c> initialisiert werden, wenn diese nicht bereits initialisiert wurde.</param>
+        <param name="initialized">Ein Verweis auf ein boolescher Wert, der bestimmt, ob das Ziel bereits initialisiert wurde.</param>
+        <param name="syncLock">Ein Verweis auf ein Objekt, das als die gegenseitig exklusive Sperre für die Initialisierung verwendet <c>Ziel</c>. Wenn <c>SyncLock</c> ist <see langword="null" />, ein neues Objekt instanziiert werden.</param>
+        <summary>Initialisiert einen Zieltyp Verweis- oder Werttyp mit seinem Standardkonstruktor, wenn diese nicht bereits initialisiert wurde.</summary>
+        <returns>Der initialisierte Wert vom Typ <paramref name="T" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `intialized` als "true", angegeben ist, dann keine weiteren Initialisierung erfolgt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Zugriffsberechtigungen für den Konstruktor eines Typs <paramref name="T" /> fehlte.</exception>
+        <exception cref="T:System.MissingMemberException">Typ <paramref name="T" /> nicht über einen Standardkonstruktor verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInitialized&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T EnsureInitialized&lt;T&gt; (ref T target, ref object syncLock, Func&lt;T&gt; valueFactory) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T EnsureInitialized&lt;class T&gt;(!!T&amp; target, object&amp; syncLock, class System.Func`1&lt;!!T&gt; valueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Object@,System.Func{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="T&amp;" RefType="ref" />
+        <Parameter Name="syncLock" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="target">To be added.</param>
+        <param name="syncLock">To be added.</param>
+        <param name="valueFactory">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInitialized&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T EnsureInitialized&lt;T&gt; (ref T target, ref bool initialized, ref object syncLock, Func&lt;T&gt; valueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T EnsureInitialized&lt;T&gt;(!!T&amp; target, bool&amp; initialized, object&amp; syncLock, class System.Func`1&lt;!!T&gt; valueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Boolean@,System.Object@,System.Func{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="T&amp;" RefType="ref" />
+        <Parameter Name="initialized" Type="System.Boolean&amp;" RefType="ref" />
+        <Parameter Name="syncLock" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Verweises initialisiert werden.</typeparam>
+        <param name="target">Ein Verweis oder Wert des Typs <c>T</c> initialisiert werden, wenn diese nicht bereits initialisiert wurde.</param>
+        <param name="initialized">Ein Verweis auf ein boolescher Wert, der bestimmt, ob das Ziel bereits initialisiert wurde.</param>
+        <param name="syncLock">Ein Verweis auf ein Objekt, das als die gegenseitig exklusive Sperre für die Initialisierung verwendet <c>Ziel</c>. Wenn <c>SyncLock</c> ist <see langword="null" />, ein neues Objekt instanziiert werden.</param>
+        <param name="valueFactory">Die Funktion, die aufgerufen wird, um die Verweis- oder Werttyp zu initialisieren.</param>
+        <summary>Initialisiert einen Zieltyp Verweis- oder Werttyp mit einer angegebenen Funktion, wenn diese nicht bereits initialisiert wurde.</summary>
+        <returns>Der initialisierte Wert vom Typ <paramref name="T" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `intialized` als "true", angegeben ist, dann keine weiteren Initialisierung erfolgt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Zugriffsberechtigungen für den Konstruktor eines Typs <paramref name="T" /> fehlte.</exception>
+        <exception cref="T:System.MissingMemberException">Typ <paramref name="T" /> nicht über einen Standardkonstruktor verfügen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

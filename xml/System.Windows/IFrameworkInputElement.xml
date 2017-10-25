@@ -1,0 +1,45 @@
+<Type Name="IFrameworkInputElement" FullName="System.Windows.IFrameworkInputElement">
+  <TypeSignature Language="C#" Value="public interface IFrameworkInputElement : System.Windows.IInputElement" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFrameworkInputElement implements class System.Windows.IInputElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.IFrameworkInputElement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.IInputElement</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Deklariert einen Namensbereichsvertrag für Frameworkelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die Implementierung vorgesehen. Dieses dient zur Unterstützung der WPF-Frameworkebene-Infrastruktur. Um einen Namensbereich zu implementieren, finden Sie unter <xref:System.Windows.Markup.INameScope>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IFrameworkInputElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen eines Elements fest.</summary>
+        <value>Der Elementname, die in den Namensbereich eindeutig und kann für bestimmte Vorgänge als Bezeichner verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

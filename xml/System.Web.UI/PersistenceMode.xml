@@ -1,0 +1,92 @@
+<Type Name="PersistenceMode" FullName="System.Web.UI.PersistenceMode">
+  <TypeSignature Language="C#" Value="public enum PersistenceMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PersistenceMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PersistenceMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie eine ASP.NET eine Eigenschaft oder ein Ereignis deklarativ in einer ASPX oder ASCX-Datei beibehalten wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht eine <xref:System.Web.UI.ITemplate> Eigenschaft, die als eine interne Eigenschaft gemäß der Definition durch Anwendung des Ttribute-Attributs auf die Metadaten der Eigenschaft beibehalten werden.  
+  
+ [!code-csharp[System.Web.UI.PersistenceMode#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PersistenceMode/CS/persistencemodeattributesamples.cs#2)]
+ [!code-vb[System.Web.UI.PersistenceMode#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PersistenceMode/VB/persistencemodeattributesamples.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="Attribute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.PersistenceMode Attribute = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceMode.Attribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft oder das Ereignis als ein Attribut erhalten bleibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedInnerDefaultProperty">
+      <MemberSignature Language="C#" Value="EncodedInnerDefaultProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.PersistenceMode EncodedInnerDefaultProperty = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceMode.EncodedInnerDefaultProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft als nur inneren Text des Serversteuerelements ASP.NET erhalten bleibt. Der Eigenschaftswert ist HTML-codiert. Nur eine Zeichenfolge kann diese Festlegung erteilt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerDefaultProperty">
+      <MemberSignature Language="C#" Value="InnerDefaultProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.PersistenceMode InnerDefaultProperty = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceMode.InnerDefaultProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft in der ASP.NET-Serversteuerelement als innerer Text beibehalten wird. Gibt auch an, dass diese Eigenschaft als Standardeigenschaft für das Element definiert ist. Nur eine Eigenschaft kann die Standardeigenschaft festgelegt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerProperty">
+      <MemberSignature Language="C#" Value="InnerProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.PersistenceMode InnerProperty = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceMode.InnerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft in der ASP.NET-Serversteuerelement als geschachtelte Tag erhalten bleibt. Dies wird häufig für die komplexe Objekte verwendet, die ihre eigenen dauerhafte Eigenschaften aufweisen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

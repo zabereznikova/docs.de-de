@@ -1,0 +1,138 @@
+<Type Name="DateTimePicker+DateTimePickerAccessibleObject" FullName="System.Windows.Forms.DateTimePicker+DateTimePickerAccessibleObject">
+  <TypeSignature Language="C#" Value="public class DateTimePicker.DateTimePickerAccessibleObject : System.Windows.Forms.Control.ControlAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit DateTimePicker/DateTimePickerAccessibleObject extends System.Windows.Forms.Control/ControlAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Clientprogrammen für Barrierefreiheit Informationen über das <see cref="T:System.Windows.Forms.DateTimePicker" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms verfügt über integrierte Accessibility-Unterstützung und stellt Informationen zu Ihrer Anwendung, die Arbeit mit Clientanwendungen für Barrierefreiheit ermöglicht. Beispiele für die Clientanwendungen für Barrierefreiheit sind Bildschirm Dienstprogramme Enlarger "und" Prüfer, voice-Hilfsprogramme, auf dem Bildschirm Tastaturen, alternative Eingabegeräte und Tastatur Erweiterung Hilfsprogramme. Die <xref:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject> Klasse erbt von der <xref:System.Windows.Forms.AccessibleObject> Klasse von Informationen über die <xref:System.Windows.Forms.DateTimePicker> Steuerelement Clientanwendungen für Barrierefreiheit.  
+  
+ Instanzen sind vorhanden, wenn Sie, geben Sie benutzerdefinierte Informationen wie Name oder Beschreibung Clientanwendungen für Barrierefreiheit des Steuerelements möchten. Es gibt zwei Möglichkeiten, diese Informationen bereitstellen. Festlegen, um begrenzte Informationen zu Eingabehilfen für vorhandene Steuerelemente zu ermöglichen, welches Steuerelement <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, und <xref:System.Windows.Forms.Control.AccessibleRole%2A> Eigenschaftswerte, die Clientanwendungen für Barrierefreiheit gemeldet werden.  
+  
+ Wenn Sie weitere Informationen zur Barrierefreiheit in das Steuerelement enthalten benötigen, können Sie eine eigene Klasse, die abgeleitet ist Schreiben der <xref:System.Windows.Forms.AccessibleObject> oder <xref:System.Windows.Forms.Control.ControlAccessibleObject> Klassen. Angenommen, Sie schreiben ein eigene Steuerelement, das die Standardsteuerelemente nicht abgeleitet ist oder Sie Vorgänge wie das Treffertests innerhalb Ihrer Kontrolle benötigen, erstellen Sie eine <xref:System.Windows.Forms.Control.ControlAccessibleObject> für das Steuerelement durch Aufrufen der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DateTimePickerAccessibleObject (System.Windows.Forms.DateTimePicker owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DateTimePicker owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject.#ctor(System.Windows.Forms.DateTimePicker)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.DateTimePicker" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Forms.DateTimePicker" />, der die <see cref="T:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject" /> besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyboardShortcut">
+      <MemberSignature Language="C#" Value="public override string KeyboardShortcut { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyboardShortcut" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject.KeyboardShortcut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tastenkombination oder Zugriffstaste des zugreifbaren Objekts.</summary>
+        <value>Die Tastenkombination oder Zugriffstaste des zugreifbaren Objekts.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rolle dieses zugreifbaren Objekts ab.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.AccessibleRole" /> Werte, der angibt, der Rolle der <see cref="T:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand des zugreifbaren Objekts ab.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.AccessibleStates" /> , die den Status der Werte der <see cref="T:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject.State%2A>Gibt zurück, <xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType> Wenn die <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> und <xref:System.Windows.Forms.DateTimePicker.Checked%2A> Eigenschaften sind`true.`  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert eines Objekts ab, auf das zugegriffen werden kann.</summary>
+        <value>Der Wert eines Objekts ab, auf das zugegriffen werden kann, oder <see langword="null" />, wenn für das Objekt kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

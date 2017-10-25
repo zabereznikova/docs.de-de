@@ -1,0 +1,238 @@
+<Type Name="RsaSignatureCookieTransform" FullName="System.IdentityModel.RsaSignatureCookieTransform">
+  <TypeSignature Language="C#" Value="public class RsaSignatureCookieTransform : System.IdentityModel.CookieTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RsaSignatureCookieTransform extends System.IdentityModel.CookieTransform" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.RsaSignatureCookieTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.CookieTransform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet die Verwendung von Cookies Integrität einer <see cref="T:System.Security.Cryptography.RSA" /> Signatur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.RsaSignatureCookieTransform>die Cookiedaten hinzugefügt ein RSA-MAC. Dies bietet Integrität aber nicht Vertraulichkeit. Standardmäßig MAC SHA-256 verwendet, aber SHA-1 angefordert werden.  
+  
+ Cookies, die mit dieser Transformation geschützt können von jedem Computer, die den gleichen privaten RSA-Schlüssel gemeinsam gelesen werden (in der Regel eine X509 zugeordnete Zertifikat).  
+  
+> [!IMPORTANT]
+>  Bei Verwendung der <xref:System.IdentityModel.RsaSignatureCookieTransform> mit einem Dienst, wenn ein Schlüssel, die von einem zertifikatänderungen bereitgestellten der Dienst muss neu gestartet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaSignatureCookieTransform (System.Security.Cryptography.RSA key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.RSA key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaSignatureCookieTransform.#ctor(System.Security.Cryptography.RSA)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die RSA-Schlüssel, die als die standardmäßige Signierung verwendet und Verifizierungsschlüssel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.RsaSignatureCookieTransform" /> Klasse mit dem angegebenen RSA-Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.RsaSignatureCookieTransform.SigningKey%2A>-Eigenschaft wird mit `key` initialisiert. Die <xref:System.IdentityModel.RsaSignatureCookieTransform.VerificationKeys%2A> -Eigenschaft wird mit einer Sammlung mit initialisiert `key` dessen einziges Element.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaSignatureCookieTransform (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaSignatureCookieTransform.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Das Zertifikat, dessen privater Schlüssel wird zum Signieren und Überprüfen von verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.RsaSignatureCookieTransform" /> Klasse, indem Sie den privaten Schlüssel des angegebenen Zertifikats.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.RsaSignatureCookieTransform.SigningKey%2A> -Eigenschaft wird mit dem privaten Schlüssel des Zertifikats initialisiert. Die <xref:System.IdentityModel.RsaSignatureCookieTransform.VerificationKeys%2A> -Eigenschaft wird initialisiert, um eine Auflistung, die den privaten Schlüssel des Zertifikats, dessen einziges Element enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="certificate" />ist kein privater Schlüssel  
+  
+ - oder -   
+  
+ Der private Schlüssel der <paramref name="certificate" /> ist kein RSA-Schlüssel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public override byte[] Decode (byte[] encoded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Decode(unsigned int8[] encoded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaSignatureCookieTransform.Decode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoded" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoded">Daten, die zuvor zurückgegeben, aus der <see cref="M:System.IdentityModel.RsaSignatureCookieTransform.Encode(System.Byte[])" /> Methode.</param>
+        <summary>Überprüft die angegebene Signatur, und die ursprünglichen, nicht signierten Daten zurückgegeben.</summary>
+        <returns>Die ursprünglichen Daten (ohne Vorzeichen).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Schlüssel in der Auflistung angegeben werden, der <xref:System.IdentityModel.RsaSignatureCookieTransform.VerificationKeys%2A> Eigenschaft versucht werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="encoded" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="encoded" />enthält 0 (null) Bytes.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Signatur ist ungültig.</exception>
+        <exception cref="T:System.FormatException">Die Daten enthalten das falsche Format auf.</exception>
+        <exception cref="T:System.InvalidOperationException">Es gibt keine Überprüfungsschlüssel aus.</exception>
+        <exception cref="T:System.NotSupportedException">Den angegebenen Algorithmus wird von die Plattform nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public override byte[] Encode (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Encode(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaSignatureCookieTransform.Encode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu signierenden Daten.</param>
+        <summary>Signiert die angegebenen Daten.</summary>
+        <returns>Die signierten Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schlüssel, die gemäß der <xref:System.IdentityModel.RsaSignatureCookieTransform.SigningKey%2A> Eigenschaft muss den privaten Schlüssel enthalten, damit die Daten signieren.  
+  
+ Die signierten Daten überprüft werden können, durch Aufrufen der <xref:System.IdentityModel.RsaSignatureCookieTransform.Decode%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />enthält 0 (null) Bytes.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IdentityModel.RsaSignatureCookieTransform.SigningKey" />-Eigenschaft ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Schlüssel, die gemäß der <see cref="P:System.IdentityModel.RsaSignatureCookieTransform.SigningKey" /> Eigenschaft abfragesichtausdrucks kann nicht als <see cref="T:System.Security.Cryptography.RSACryptoServiceProvider" />.  
+  
+ - oder -   
+  
+ Der Schlüssel, die gemäß der <see cref="P:System.IdentityModel.RsaSignatureCookieTransform.SigningKey" /> Eigenschaft enthält keinen privaten Schlüssel.</exception>
+        <exception cref="T:System.NotSupportedException">Das Betriebssystem unterstützt nicht den angegebenen Algorithmus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashName">
+      <MemberSignature Language="C#" Value="public string HashName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.RsaSignatureCookieTransform.HashName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der die zu verwendende Hashalgorithmus.</summary>
+        <value>Der Name des Hashalgorithmus. Der Standardwert ist "SHA256".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SHA256 ist der Standardalgorithmus. Dies erfordert möglicherweise eine Mindestversion des Betriebssystems des [!INCLUDE[winxpsvr](~/includes/winxpsvr-md.md)] und .NET 3.5 SP1.  
+  
+ Wenn SHA256 nicht unterstützt wird, legen Sie die <xref:System.IdentityModel.RsaSignatureCookieTransform.HashName%2A> Eigenschaft auf "SHA1".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningKey">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.RSA SigningKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.RSA SigningKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.RsaSignatureCookieTransform.SigningKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den RSA-Schlüssel, der zum Signieren verwendet wird.</summary>
+        <value>Der RSA-Schlüssel, der zum Signieren verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationKeys">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Cryptography.RSA&gt; VerificationKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Cryptography.RSA&gt; VerificationKeys" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.RsaSignatureCookieTransform.VerificationKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Cryptography.RSA&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Schlüsseln, die für die Überprüfung der Signatur verwendet.  
+  
+ Standardmäßig gibt diese Eigenschaft eine Liste, die nur den Signaturschlüssel enthält.</summary>
+        <value>Die Auflistung von Schlüsseln, die für die Überprüfung der Signatur verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

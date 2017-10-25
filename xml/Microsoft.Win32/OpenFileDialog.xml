@@ -1,0 +1,256 @@
+<Type Name="OpenFileDialog" FullName="Microsoft.Win32.OpenFileDialog">
+  <TypeSignature Language="C#" Value="public sealed class OpenFileDialog : Microsoft.Win32.FileDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OpenFileDialog extends Microsoft.Win32.FileDialog" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.OpenFileDialog" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Win32.FileDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein häufig verwendetes Dialogfeld, das einem Benutzer ermöglicht, geben Sie einen Dateinamen für eine oder mehrere Dateien zu öffnen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt ein <xref:Microsoft.Win32.OpenFileDialog> für [!INCLUDE[TLA#tla_winvista](~/includes/tlasharptla-winvista-md.md)].  
+  
+ ![Klicken Sie im Dialogfeld "Öffnen"](~/add/media/dialogboxesoverviewfigure2.png "öffnen (Dialogfeld)")  
+  
+ Ab [!INCLUDE[TLA2#tla_winvista](~/includes/tla2sharptla-winvista-md.md)], öffnen und speichern Sie Dateidialogfelder eine **Linkfavoriten** Bereich auf der linken Seite des Dialogfelds, das dem Benutzer ermöglicht, schnell zu einem anderen Speicherort zu navigieren. Diese Links werden benutzerdefinierte Speicherorte bezeichnet. Verwenden der <xref:Microsoft.Win32.FileDialog.CustomPlaces%2A> Eigenschaft, um diese Liste mit Links festzulegen.  
+  
+<a name="xamlTextUsage_OpenFileDialog"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Sie können nicht in diese verwaltete Klasse deklarieren [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:Microsoft.Win32.OpenFileDialog> , die einen Standard-Dateityp an Namen und die Erweiterung enthält.  
+  
+ [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
+ [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenFileDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.OpenFileDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Win32.OpenFileDialog" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckPermissionsToShowDialog">
+      <MemberSignature Language="C#" Value="protected override void CheckPermissionsToShowDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CheckPermissionsToShowDialog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.OpenFileDialog.CheckPermissionsToShowDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiselect">
+      <MemberSignature Language="C#" Value="public bool Multiselect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Multiselect" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.OpenFileDialog.Multiselect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Option, der angibt, ob <see cref="T:Microsoft.Win32.OpenFileDialog" /> ermöglicht es Benutzern, mehrere Dateien auswählen.</summary>
+        <value>
+          <see langword="true" />Wenn die Mehrfachauswahl zulässig sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">um das Dialogfeld Benutzer Schnittstelle-Verhalten zu ändern. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFile">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream OpenFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.OpenFileDialog.OpenFile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet einen Datenstrom für die Datei, die vom Benutzer mit ausgewählt ist, nur-Lese <see cref="T:Microsoft.Win32.OpenFileDialog" />.</summary>
+        <returns>Ein neues <see cref="T:System.IO.Stream" /> , die die ausgewählte Datei enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Datei wird mit Leseberechtigung geöffnet (<xref:System.IO.FileMode.Open>, <xref:System.IO.FileAccess.Read>, und <xref:System.IO.FileShare.Read>), unabhängig davon, ob im Dialogfeld das Kontrollkästchen für den Schreibschutz aktiviert ist. Die Datei ohne die Fähigkeit, überschrieben werden soll, oder Schreiben in die Datei geöffnet wird, kann eine Anwendung sicher eine Datei geladen werden, weil beim teilweiser Vertrauenswürdigkeit ausführen.  
+  
+ Wenn mehr als eine Datei aktiviert ist, wird die erste ausgewählte Datei geöffnet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Im Dialogfeld "" waren keine Dateien ausgewählt.</exception>
+        <permission cref="T:System.Security.Permissions.FileDialogPermission">So erstellen einen Dateistream. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileDialogPermissionAccess.Open" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFiles">
+      <MemberSignature Language="C#" Value="public System.IO.Stream[] OpenFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream[] OpenFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.OpenFileDialog.OpenFiles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Array, das einen schreibgeschützten Datenstrom für jede Datei, die vom Benutzer mit ausgewählten enthält <see cref="T:Microsoft.Win32.OpenFileDialog" />.</summary>
+        <returns>Ein Array von mehreren neuen <see cref="T:System.IO.Stream" /> Objekte, die die ausgewählten Dateien enthalten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Datei wird mit Leseberechtigung geöffnet (<xref:System.IO.FileMode.Open>, <xref:System.IO.FileAccess.Read>, und <xref:System.IO.FileShare.Read>), unabhängig davon, ob im Dialogfeld das Kontrollkästchen für den Schreibschutz aktiviert ist. Jede Datei ohne die Fähigkeit, überschrieben werden soll, oder Schreiben in die Datei geöffnet wird, kann eine Anwendung problemlos eine oder mehrere Dateien geladen werden, weil beim teilweiser Vertrauenswürdigkeit ausführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Im Dialogfeld "" waren keine Dateien ausgewählt.</exception>
+        <permission cref="T:System.Security.Permissions.FileDialogPermission">Um eine Datei Stream Array zu erstellen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileDialogPermissionAccess.Open" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnlyChecked">
+      <MemberSignature Language="C#" Value="public bool ReadOnlyChecked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnlyChecked" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.OpenFileDialog.ReadOnlyChecked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Kontrollkästchen "schreibgeschützt" dargestellte <see cref="T:Microsoft.Win32.OpenFileDialog" /> ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Kontrollkästchen ausgewählt ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.OpenFileDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt alle <see cref="T:Microsoft.Win32.OpenFileDialog" /> Eigenschaften mit ihren Standardwerten.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">So setzen Sie das Dialogfeld "zurück. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse ist versiegelt, damit Sie diese Methode nicht überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowReadOnly">
+      <MemberSignature Language="C#" Value="public bool ShowReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.OpenFileDialog.ShowReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob <see cref="T:Microsoft.Win32.OpenFileDialog" /> enthält ein Kontrollkästchen schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn das Kontrollkästchen angezeigt wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

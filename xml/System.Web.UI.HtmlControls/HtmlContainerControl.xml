@@ -1,0 +1,354 @@
+<Type Name="HtmlContainerControl" FullName="System.Web.UI.HtmlControls.HtmlContainerControl">
+  <TypeSignature Language="C#" Value="public abstract class HtmlContainerControl : System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HtmlContainerControl extends System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlContainerControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fungiert als die abstrakte Basisklasse für HTML-Serversteuerelemente, die HTML-Elementen zugeordnet werden, die ein öffnendes und ein schließendes Tag aufweisen müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die am häufigsten verwendeten Steuerelemente mit einem Endtag sind die `<form>`, `<table>`, `<tr>`, `<td>`, `<a>`, und `<span>` Elemente.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> und <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaften ermöglichen es Ihnen das Bearbeiten des Inhalts zwischen dem Start- und Endtag des <xref:System.Web.UI.HtmlControls.HtmlContainerControl>-abgeleitete Steuerelemente.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlContainerControl>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlContainerControl.%23ctor%2A> Konstruktor.  
+  
+ Eine neue Instanz dieser Klasse wird nicht direkt erstellt.  
+  
+> [!CAUTION]
+>  Bei Verwendung der <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaft an, dass der Text zwischen dem Start- und Endtag des ein HTML-Steuerelement den Text ist nicht HTML-codiert. Dadurch können Skripts in HTML-Tags im Text eingebettet. Bei Verwendung der <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> -Eigenschaft, achten Sie darauf, dass Sie zur Überprüfung des Werts um Sicherheitsrisiken zu reduzieren. Andernfalls sollten Sie mithilfe der <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> Eigenschaft stattdessen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaft dieser Klasse eine Nachricht auf einer Webseite dynamisch zu generieren.  
+  
+ [!code-aspx-csharp[Classic HtmlContainerControl Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlContainerControl Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlContainerControl Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlContainerControl Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HtmlContainerControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlContainerControl> -Klasse mit Standardwerten.  
+  
+> [!NOTE]
+>  Eine Instanz dieser Klasse wird nicht direkt erstellt. Dieser Konstruktor wird vom Konstruktor andere HTML-Steuerelementklassen in dieser Klasse definierten Eigenschaften zu initialisieren, aufgerufen.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlContainerControl>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Das Zeichenfolgenliteral "span".|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlContainerControl (string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Eine Zeichenfolge, die den Tagnamen des Steuerelements angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> -Klasse mit den angegebenen Tagnamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlContainerControl> -Klasse unter Verwendung des angegebenen Tags.  
+  
+> [!NOTE]
+>  Eine Instanz dieser Klasse wird nicht direkt erstellt. Dieser Konstruktor wird vom Konstruktor andere HTML-Steuerelementklassen in dieser Klasse definierten Eigenschaften zu initialisieren, aufgerufen.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlContainerControl>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Der Wert von der `tag` Parameter.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Web.UI.ControlCollection" />-Objekt, das die untergeordneten Steuerelemente (sowohl literale als auch Serversteuerelemente) des Serversteuerelements enthält.</summary>
+        <returns>Eine <see cref="T:System.Web.UI.ControlCollection" />, die die untergeordneten <see cref="T:System.Web.UI.HtmlControls.HtmlControl" />-Steuerelemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerHtml">
+      <MemberSignature Language="C#" Value="public virtual string InnerHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Inhalt zwischen die Start- und Endtag des angegebenen HTML-Steuerelements.</summary>
+        <value>Der HTML-Inhalt zwischen öffnenden und schließenden Tags des HTML-Serversteuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaft, um den Inhalt zwischen dem Start- und Endtag des ein HTML-Steuerelement programmgesteuert ändern.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaft codiert Sonderzeichen in und aus HTML-Entitäten nicht automatisch. HTML-Entitäten ermöglichen es Ihnen, die Sonderzeichen, wie z. B. Anzeigen der `<` Zeichen, ein Browser normalerweise interpretieren würde eine besonderen Bedeutung haben. Die `<` Zeichen als Anfang eines Tags interpretiert werden und wird nicht auf der Seite angezeigt. Zum Anzeigen der `<` Zeichen ist, müssen Sie die Entität verwenden `&lt;`.  
+  
+ Z. B. wenn die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> -Eigenschaftensatz auf `"<b> Hello </b>"`, `<` und `>` Zeichen werden nicht konvertiert, um `&lt;` und `&gt;`bzw.. Die gerenderte Ausgabe wäre weiterhin: \<b > Hallo  \< /b >. Erkennt, ob der Browser die `<b>` tags und den Text Hello, in fett formatierter Schrift angezeigt.  
+  
+> [!CAUTION]
+>  Da der Text nicht HTML-codiert ist, und es können Skripts in HTML eingebettet im Text tags ein. Wenn diese Eigenschaft dynamisch mit Benutzereingaben festgelegt ist, achten Sie darauf, dass Sie zur Überprüfung des Werts um Sicherheitsrisiken zu reduzieren. Weitere Informationen finden Sie unter [Sicherheit und Benutzereingaben](~/docs/standard/security/security-and-user-input.md).  
+  
+ Um automatische HTML-Codierung und Decodierung bereitzustellen, verwenden Sie die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn es keine untergeordneten Steuerelemente, die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> -Eigenschaft enthält den Wert <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaft, um eine Textnachricht dynamisch festzulegen.  
+  
+ [!code-aspx-csharp[Classic HtmlContainerControl Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlContainerControl Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlContainerControl Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlContainerControl Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Es gibt mehr als eine HTML-Webserversteuerelement.  
+  
+ \- oder –  
+  
+ Das HTML-Steuerelement ist ein <see cref="T:System.Web.UI.LiteralControl" /> oder ein <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public virtual string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text zwischen den öffnenden und schließenden Tags des angegebenen HTML-Steuerelements fest.</summary>
+        <value>Der Text zwischen den öffnenden und schließenden Tags des HTML-Serversteuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> Eigenschaft, um den Text zwischen dem Start- und Endtag des ein HTML-Steuerelement programmgesteuert zu ändern.  
+  
+ Im Gegensatz zu den <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> -Eigenschaft, die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> Eigenschaft automatisch codiert Sonderzeichen in und aus HTML-Entitäten. HTML-Entitäten ermöglichen es Ihnen, die Sonderzeichen, wie z. B. Anzeigen der `<` Zeichen, ein Browser normalerweise interpretieren würde eine besonderen Bedeutung haben. Die `<` Zeichen als Anfang eines Tags interpretiert werden und wird nicht auf der Seite angezeigt. Zum Anzeigen der `<` Zeichen ist, müssen Sie die Entität verwenden `&lt;`.  
+  
+ Z. B. wenn die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> -Eigenschaftensatz auf `"<b> Hello </b>"`, `<` und `>` Symbole werden in konvertiert `&lt;` und `&gt;`bzw.. Die gerenderte Ausgabe wäre: &lt; b &gt; Hello &lt; /b &gt;. Die `&lt;` und `&gt;` würde Entitäten an den Browser, die diese Zeichen befinden sich auf der Seite angezeigt werden. Der Browser wird nicht erkannt. die `<b>` tags und den Text in fett formatierter Schrift angezeigt. Der Text auf der Seite angezeigt wird: \<b > Hallo  \< /b >.  
+  
+ Um automatische HTML-Codierung und Decodierung zu vermeiden, verwenden die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn es keine untergeordneten Steuerelemente, die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> -Eigenschaft enthält den Wert <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die HTML-Codierung Dienst über die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[Classic HtmlContainerControl.InnerText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlContainerControl.InnerText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlContainerControl.InnerText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlContainerControl.InnerText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Es gibt mehr als eine HTML-Webserversteuerelement.  
+  
+ \- oder –  
+  
+ Das HTML-Steuerelement ist ein <see cref="T:System.Web.UI.LiteralControl" /> oder ein <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" />, das den wiederherzustellenden Steuerelementzustand darstellt.</param>
+        <summary>Stellt die <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> des Steuerelements anzeigen, die Zustand aus einer vorherigen Seite anfordern, die durch gespeichert wurde der <see cref="M:System.Web.UI.Control.SaveViewState" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.LoadViewState%2A> Methode ruft der Basisklasse <xref:System.Web.UI.Control.LoadViewState%2A> Methode. Darüber hinaus die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.LoadViewState%2A> Methode legt die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , empfängt die <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> Inhalt.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> Steuerelement mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.Render%2A> methodenüberschreibungen der <xref:System.Web.UI.HtmlControls.HtmlControl.Render%2A?displayProperty=nameWithType> Methode, um das Starttag, untergeordnete Steuerelemente und Endtag des Rendern der <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Steuerelement.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.Render%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlContainerControl.Render(System.Web.UI.HtmlTextWriter)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.HtmlControls.HtmlControl.Render(System.Web.UI.HtmlTextWriter)" /> Methode, damit die <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> -Steuerelement ordnungsgemäß gerendert wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" />-Instanz, die den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die Attribute des <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" />-Steuerelements in das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert das schließende Tag für die <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> Steuerelement mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.RenderEndTag%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.Render%2A> -Methode rendert das schließende Tag der <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Steuerelement.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlContainerControl.RenderEndTag%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

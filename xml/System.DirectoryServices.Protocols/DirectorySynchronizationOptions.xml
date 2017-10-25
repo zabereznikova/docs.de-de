@@ -1,0 +1,109 @@
+<Type Name="DirectorySynchronizationOptions" FullName="System.DirectoryServices.Protocols.DirectorySynchronizationOptions">
+  <TypeSignature Language="C#" Value="public enum DirectorySynchronizationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DirectorySynchronizationOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DirectorySynchronizationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.DirectorySynchronizationOptions" /> Enumeration gibt das Verhalten der Suche in einem <see cref="T:System.DirectoryServices.Protocols.DirSyncRequestControl" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IncrementalValues">
+      <MemberSignature Language="C#" Value="IncrementalValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.DirectorySynchronizationOptions IncrementalValues = int64(2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.IncrementalValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn diese Option verwendet wird, werden nur die geänderten Werte zurückgegeben. Wenn diese Option nicht verwendet wird, werden alle Werte bis zu einer Server angegebenen Frist ab, in einem mehrwertigen Attribut zurückgegeben, wenn ein Wert geändert wird. Der Wert ist gleich 2147483648 oder 0 x 80000000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.DirectorySynchronizationOptions None = int64(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Optionen verwendet. Der Wert gleich 0 oder 0 x 0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectSecurity">
+      <MemberSignature Language="C#" Value="ObjectSecurity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.DirectorySynchronizationOptions ObjectSecurity = int64(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.ObjectSecurity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn diese Option verwendet wird, wird der Aufrufer benötigt keine Rechte, jedoch kann nur angezeigt, Objekte und Attribute, die an den Aufrufer zugegriffen werden kann. Wenn diese Option nicht verwendet wird, muss der Aufrufer die Änderungen replizieren Rechte verfügen. Der Wert gleich 1 oder 0 x 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentsFirst">
+      <MemberSignature Language="C#" Value="ParentsFirst" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.DirectorySynchronizationOptions ParentsFirst = int64(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.ParentsFirst" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurückgeben Sie Eltern vor untergeordneten, wenn Eltern andernfalls später in der replikationsdatenstrom angezeigt werden würden. Der Wert ist gleich 2048 oder 0 x 800.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicDataOnly">
+      <MemberSignature Language="C#" Value="PublicDataOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.DirectorySynchronizationOptions PublicDataOnly = int64(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.PublicDataOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Geben Sie in den Suchergebnissen keine private Daten zurück. Der Wert ist gleich 8192 oder 0 x 2000.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

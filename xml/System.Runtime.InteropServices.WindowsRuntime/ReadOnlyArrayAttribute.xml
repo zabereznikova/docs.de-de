@@ -1,0 +1,71 @@
+<Type Name="ReadOnlyArrayAttribute" FullName="System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ReadOnlyArrayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReadOnlyArrayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bei Anwendung auf einen Arrayparameter in einer Windows-Runtime-Komponente gibt an, dass der Inhalt des Arrays, das an diesen Parameter übergeben wird nur für die Eingabe verwendet wird. Der Aufrufer erwartet, dass das Array durch den Aufruf unverändert bleibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf einen Arrayparameter in Ihre [!INCLUDE[wrt](~/includes/wrt-md.md)] Komponente als Wert übergeben wird (`ByVal` in Visual Basic), müssen Sie eines der folgenden Attribute darauf anwenden:  
+  
+-   Anwenden der <xref:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute> Attribut, wenn Sie beabsichtigen, den Inhalt des Arrays, das für die Eingabe nur verwendet werden.  
+  
+-   Anwenden der <xref:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute> Attribut, wenn Sie beabsichtigen, den Inhalt des Arrays, die nur für die Ausgabe verwendet werden (d. h. die Methode wird der Inhalt des Arrays jedoch nicht gelesen).  
+  
+ Beide Attribute auf einen Parameter angewendet, verursacht einen Fehler. Weitere Informationen, einschließlich das Standardmuster für Änderung in ein Array, finden Sie unter [übergeben von Arrays an eine Windows-Runtime-Komponente](http://go.microsoft.com/fwlink/?LinkId=251026) im Windows Developer Center.  
+  
+> [!IMPORTANT]
+>  Parameter, die <xref:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute> Attribut Verhalten sich unterschiedlich, je nachdem, ob der Aufrufer in systemeigenem Code oder verwaltetem Code geschrieben wird. Wenn der Aufrufer systemeigenem Code ist (JavaScript oder [!INCLUDE[cppwrt](~/includes/cppwrt-md.md)]), das Array wird kopiert, wenn der Aufruf der Grenze der anwendungsbinärschnittstelle (ABI) hinaus überschreitet. Elemente werden bei Bedarf konvertiert. Von der Methode fälschlicherweise an einem nur zur Eingabe bestimmten Array vorgenommene Änderungen sind daher für den Aufrufer nicht sichtbar.  
+>   
+>  Wenn der Aufrufer in verwaltetem Code, der das Array wird nicht kopiert. Das ursprüngliche Array steht für die aufgerufene Methode wie bei jedem Methodenaufruf in .NET Framework. Die Arrayinhalte sind in .NET Framework-Code veränderlich, daher sind alle Änderungen, die die Methode am Array vornimmt, für den Aufrufer sichtbar. Dies ist wichtig, da sie Komponententests für geschrieben wirkt sich auf eine [!INCLUDE[wrt](~/includes/wrt-md.md)] Komponente. Wenn die Tests in verwaltetem Code geschrieben werden, scheint der Inhalt eines Arrays während des Testens veränderlich zu sein.  
+  
+ Dieses Attribut anwenden, um einen Parameter mit dem <xref:System.Runtime.InteropServices.InAttribute> oder <xref:System.Runtime.InteropServices.OutAttribute> Attribut verursacht einen Fehler aus, wenn das Modul exportiert wird. Anwenden des Attributs auf eine `out` Parameter führt ebenfalls zu einen Fehler.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReadOnlyArrayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,241 @@
+<Type Name="HostingEnvironmentSection" FullName="System.Web.Configuration.HostingEnvironmentSection">
+  <TypeSignature Language="C#" Value="public sealed class HostingEnvironmentSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HostingEnvironmentSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HostingEnvironmentSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Konfigurationseinstellungen, die das Verhalten der Anwendung Hostingumgebung steuern. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.HostingEnvironmentSection> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und ändern Sie die Werte von der <xref:System.Web.Configuration.HostingEnvironmentSection> Abschnitt in der Konfigurationsdatei. Wenn eine ASP.NET-Anwendung für einen angegebenen Zeitraum nicht verwendet wird, können aus dem Arbeitsspeicher auf Grundlage entladen werden die <xref:System.Web.Configuration.HostingEnvironmentSection.IdleTimeout%2A> und <xref:System.Web.Configuration.HostingEnvironmentSection.ShutdownTimeout%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute der deklarativ angeben, die ["HostingEnvironment"-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/043a75c8-231a-4f8d-9633-501530bd7d40) Abschnitt, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.HostingEnvironmentSection> Klasse.  
+  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie Sie Werte für deklarativ angeben, die ["HostingEnvironment"-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/043a75c8-231a-4f8d-9633-501530bd7d40) Abschnitt.  
+  
+```  
+<system.web>  
+  <hostingEnvironment  
+    idleTimeout="20"  
+    shutdownTimeout="30"  
+  />  
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.HostingEnvironmentSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HostingEnvironmentSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HostingEnvironmentSection/CS/hostingenvironmentsection.cs#1)]
+ [!code-vb[System.Web.Configuration.HostingEnvironmentSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HostingEnvironmentSection/VB/hostingenvironmentsection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostingEnvironmentSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HostingEnvironmentSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.HostingEnvironmentSection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.HostingEnvironmentSection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.HostingEnvironmentSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HostingEnvironmentSection.IdleTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanMinutesOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("idleTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne in Minuten vor dem Entladen einer inaktiven Anwendungs.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> d. h. die angegebene Anzahl von Minuten vor dem Entladen einer inaktiven Anwendungs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für die <xref:System.Web.Configuration.HostingEnvironmentSection.IdleTimeout%2A> Eigenschaft ist "Infinite". Diese Einstellung kann auf den Computer- oder Anwendungsebene festgelegt werden. Wenn diese Einstellung auf einer anderen Ebene definiert ist, wird es ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.HostingEnvironmentSection.IdleTimeout%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HostingEnvironmentSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HostingEnvironmentSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HostingEnvironmentSection/CS/hostingenvironmentsection.cs#2)]
+ [!code-vb[System.Web.Configuration.HostingEnvironmentSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HostingEnvironmentSection/VB/hostingenvironmentsection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HostingEnvironmentSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowCopyBinAssemblies">
+      <MemberSignature Language="C#" Value="public bool ShadowCopyBinAssemblies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShadowCopyBinAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HostingEnvironmentSection.ShadowCopyBinAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("shadowCopyBinAssemblies", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Assemblys einer Anwendung in "bin" Schattenkopien temporäre ASP.NET-Dateien-Verzeichnis der Anwendung sind.</summary>
+        <value>
+          <see langword="true" />Wenn die Assemblys einer Anwendung in "bin" Schattenkopien temporäre ASP.NET-Dateien-Verzeichnis der Anwendung sind. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ShutdownTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ShutdownTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HostingEnvironmentSection.ShutdownTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("shutdownTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne in Sekunden, um die Anwendung ordnungsgemäß herunterzufahren.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> d. h. die angegebene Anzahl von Sekunden, um die Anwendung ordnungsgemäß herunterzufahren. Der Standardwert ist 30 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für die <xref:System.Web.Configuration.HostingEnvironmentSection.ShutdownTimeout%2A> Eigenschaft beträgt 30 Sekunden. Diese Einstellung kann auf den Computer- oder Anwendungsebene festgelegt werden. Wenn diese Einstellung auf einer anderen Konfigurationsebene definiert ist, wird es ignoriert. Wenn ein Debugger an die Anwendung angefügt ist, wird die Anwendung nicht heruntergefahren werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.HostingEnvironmentSection.ShutdownTimeout%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HostingEnvironmentSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HostingEnvironmentSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HostingEnvironmentSection/CS/hostingenvironmentsection.cs#3)]
+ [!code-vb[System.Web.Configuration.HostingEnvironmentSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HostingEnvironmentSection/VB/hostingenvironmentsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlMetadataSlidingExpiration">
+      <MemberSignature Language="C#" Value="public TimeSpan UrlMetadataSlidingExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan UrlMetadataSlidingExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HostingEnvironmentSection.UrlMetadataSlidingExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("urlMetadataSlidingExpiration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, wie ASP.NET URL-Metadaten zwischenspeichert.</summary>
+        <value>Ein Wert, der bestimmt, wie ASP.NET URL-Metadaten zwischenspeichert. Der Standardwert beträgt 1 Minute.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für URL-Metadaten ist die Informationen in der Datei "Web.config" zu sicherheitseinschränkungen, die für eine bestimmte URL gelten.  
+  
+ Die folgenden Werte haben eine besondere Bedeutung:  
+  
+-   "Unendlich". URL-Metadaten werden ohne eine gleitende Ablaufzeit zwischengespeichert. Dies bedeutet, dass es sich bei Zwischenspeichern fort, bis der Server den maximalen zugewiesenen Arbeitsspeicher verwendet. Dies ist das Standardverhalten in ASP.NET 3.5 und frühere Versionen.  
+  
+-   "00:00:00". URL-Metadaten werden nicht zwischengespeichert. Die Metadaten mit jeder Anforderung erneut generiert. Dies ist jedoch effizienter für Szenarien, in denen die gleiche URL selten angefordert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

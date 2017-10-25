@@ -1,0 +1,2400 @@
+<Type Name="TabControlArray" FullName="Microsoft.VisualBasic.Compatibility.VB6.TabControlArray">
+  <TypeSignature Language="C#" Value="public class TabControlArray : Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TabControlArray extends Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("Index", typeof(System.Windows.Forms.TabControl))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelementarray von <see cref="T:System.Windows.Forms.TabControl" /> Steuerelemente</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `TabControlArray` Klasse verfügt über eine Entsprechung für die Laufzeitfunktionen von einer Visual Basic 6.0 `TabControl` Steuerelementarray. Es bietet keine Funktionen zur Entwurfszeit von einer Visual Basic 6.0-Steuerelementarray.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabControlArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Instanziieren einer <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray>, müssen Sie auch Aufrufen der <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.SetIndex%2A> Methode, um das erste Element im Array zu erstellen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabControlArray (System.ComponentModel.IContainer Container);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer Container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="Container">Die <see cref="T:System.ComponentModel.IContainer" /> , in dem das Steuerelementarray gehostet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" /> -Klasse unter Angabe des Containers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Instanziieren einer <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray>, müssen Sie auch Aufrufen der <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.SetIndex%2A> Methode, um das erste Element im Array zu erstellen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BindingContextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BindingContextChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.BindingContextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.BindingContext" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.BindingContext%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance bool CanExtend(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein <see cref="T:System.Windows.Forms.TabControl" />-Steuerelement.</param>
+        <summary>Ruft einen Wert, der bestimmt, ob ein Steuerelement ein Mitglied einer <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="target" /> ist ein Mitglied der Steuerelementarray ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `CanExtend` Methode kann verwendet werden, um zu bestimmen, ob ein bestimmtes <xref:System.Windows.Forms.TabControl> -Steuerelement ist das Basiselement des Steuerelementarrays aus dem die anderen Elemente geklont wurden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CausesValidationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CausesValidationChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.CausesValidationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.CausesValidation" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.CausesValidation%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeUICues">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.UICuesEventHandler ChangeUICues;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.UICuesEventHandler ChangeUICues" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ChangeUICues" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.UICuesEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die Hinweise auf den Fokus oder die Tastatur-Benutzeroberfläche ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine <see cref="T:System.Windows.Forms.TabControl" /> in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" /> geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Click` Ereignis übergibt es ein <xref:System.EventArgs> an den Ereignishandler. Aus diesem Grund gibt es nur an, dass mit einem Klick aufgetreten ist. Wenn Sie spezifischere Mausinformationen (Schaltfläche, Anzahl der Klicks, Drehen des Mausrades oder Speicherort), verwenden die <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseClick> Ereignis. Allerdings die <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseClick> Ereignis wird nicht ausgelöst werden, wenn die von der Aktion als dem der Maus, z. B. durch Drücken der EINGABETASTE verursacht wurde.  
+  
+ Ein Doppelklick wird durch die mauseinstellungen des Betriebssystems des Benutzers bestimmt. Der Benutzer kann die Zeit zwischen den Klicks einer Maustaste festlegen, die einen Doppelklick anstelle von zwei aufeinander folgende Mausklicks berücksichtigt werden sollten. Die `Click` Ereignis wird jedes Mal, die ein Steuerelement doppelgeklickt wird. Angenommen, Sie haben die Ereignishandler für die `Click` und <xref:System.Windows.Forms.Control.DoubleClick> Ereignisse eines Steuerelements, das `Click` und <xref:System.Windows.Forms.Control.DoubleClick> Ereignisse werden ausgelöst, wenn das Steuerelement doppelgeklickt wird und beide Methoden aufgerufen werden. Wenn ein Steuerelement doppelgeklickt wird und dass Steuerelement nicht unterstützt die <xref:System.Windows.Forms.Control.DoubleClick> -Ereignis der `Click` Ereignis möglicherweise zweimal ausgelöst.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ClientSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ClientSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ClientSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ClientSize" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ClientSize%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ContextMenuChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ContextMenu" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ContextMenu%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStripChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuStripChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuStripChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ContextMenuStripChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ContextMenuStrip" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAdded">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlAdded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ControlAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="T:System.Windows.Forms.Control.ControlCollection" /> ein neues Steuerelement hinzugefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlRemoved">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlRemoved" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ControlRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Entfernen des Steuerelements aus der <see cref="T:System.Windows.Forms.Control.ControlCollection" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CursorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CursorChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.CursorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Cursor" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Cursor%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deselected">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.TabControlEventHandler Deselected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.TabControlEventHandler Deselected" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn es sich bei eine Registerkarte aufgehoben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn als aktuelle Registerkarte ändert sich einem <xref:System.Windows.Forms.TabControl>, die folgenden Ereignisse treten in der folgenden Reihenfolge.  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselecting>  
+  
+ `Deselected`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selecting>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selected>  
+  
+ Diese Ereignisse können Sie die Aufgaben, z. B. eine Änderung der Registerkarte abbrechen, wenn eine <xref:System.Windows.Forms.TabPage> befindet sich in einem ungültigen Zustand befindet oder Aktualisieren des Status des neu angezeigten <xref:System.Windows.Forms.TabPage>.  
+  
+ Als aktuelle Registerkarte ändert, wenn der Benutzer eine Registerkarte, beim Aufrufen klickt der <xref:System.Windows.Forms.TabControl.DeselectTab%2A> oder <xref:System.Windows.Forms.TabControl.SelectTab%2A> -Methode, oder wenn Sie den Wert der Ändern der <xref:System.Windows.Forms.TabControl.SelectedIndex%2A> oder <xref:System.Windows.Forms.TabControl.SelectedTab%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deselecting">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.TabControlCancelEventHandler Deselecting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.TabControlCancelEventHandler Deselecting" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselecting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabControlCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, bevor die Auswahl einer Registerkarte aufgehoben wird. Dies ermöglicht es einem Handler, die Änderung der Registerkarte abzubrechen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn als aktuelle Registerkarte ändert sich einem <xref:System.Windows.Forms.TabControl>, die folgenden Ereignisse treten in der folgenden Reihenfolge.  
+  
+ `Deselecting`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselected>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selecting>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selected>  
+  
+ Diese Ereignisse können Sie die Aufgaben, z. B. eine Änderung der Registerkarte abbrechen, wenn eine <xref:System.Windows.Forms.TabPage> befindet sich in einem ungültigen Zustand befindet oder Aktualisieren des Status des neu angezeigten <xref:System.Windows.Forms.TabPage>.  
+  
+ Als aktuelle Registerkarte ändert, wenn der Benutzer eine Registerkarte, beim Aufrufen klickt der <xref:System.Windows.Forms.TabControl.DeselectTab%2A> oder <xref:System.Windows.Forms.TabControl.SelectTab%2A> -Methode, oder wenn Sie den Wert der Ändern der <xref:System.Windows.Forms.TabControl.SelectedIndex%2A> oder <xref:System.Windows.Forms.TabControl.SelectedTab%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DockChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.DockChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Dock" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine <see cref="T:System.Windows.Forms.TabControl" /> -Steuerelement in einer <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" /> doppelgeklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragDrop">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragDrop;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragDrop" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.DragDrop" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Drag &amp; Drop-Vorgang abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragEnter">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragEnter" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.DragEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Objekt in die Begrenzungen des Steuerelements gezogen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DragEnter` Ereignis wird ausgelöst, wenn während eines Drag & Drop-Vorgangs der Mauszeiger über dem Steuerelement bewegt wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragLeave">
+      <MemberSignature Language="C#" Value="public event EventHandler DragLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DragLeave" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.DragLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Objekt aus den Grenzen des Steuerelements gezogen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DragLeave` Ereignis wird ausgelöst, wenn den Cursor aus dem Steuerelement bewegt oder der aktuellen Drag & Drop-Vorgang abgebrochen.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragOver">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragOver;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragOver" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.DragOver" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Objekt über die Begrenzungen des Steuerelements gezogen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DragOver` Ereignis wird ausgelöst, wenn der Mauszeiger während eines Drag & Drop-Vorgangs innerhalb der Grenzen des Steuerelements bewegt wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawItem">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DrawItemEventHandler DrawItem;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DrawItemEventHandler DrawItem" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.DrawItem" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawItemEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Forms.TabControl" /> alle Registerkarten Wenn gezeichnet werden muss die <see cref="P:System.Windows.Forms.TabControl.DrawMode" /> -Eigenschaftensatz auf <see cref="F:System.Windows.Forms.TabDrawMode.OwnerDrawFixed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Windows.Forms.TabControl.DrawMode%2A> Eigenschaft <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed>, <xref:System.Windows.Forms.TabControl> löst die `DrawItem` Ereignis aus, wenn eine der Registerkarten gezeichnet werden muss. Geben Sie zum Anpassen der Darstellung der Registerkarten, Ihren eigenen Code zum Zeichnen in einem Ereignishandler für das `DrawItem` Ereignis.  
+  
+ Die <xref:System.Windows.Forms.TabControl> Registerkarte Variable Größen mit Ownerdrawing nicht unterstützt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler EnabledChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EnabledChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.EnabledChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Enabled" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Enabled%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public event EventHandler Enter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Enter" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Enter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Eintreten in den Bereich des Steuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Font" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Font%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlInstanceType">
+      <MemberSignature Language="C#" Value="protected override Type GetControlInstanceType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type GetControlInstanceType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.GetControlInstanceType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
+        <returns>Der Typ eines Steuerelements in einem Steuerelementarray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht aus den Code Ihrer Anwendung aufgerufen werden. Verwenden Sie stattdessen die <xref:System.Object.GetType%2A>-Methode.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIndex">
+      <MemberSignature Language="C#" Value="public short GetIndex (System.Windows.Forms.TabControl o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance int16 GetIndex(class System.Windows.Forms.TabControl o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.GetIndex(System.Windows.Forms.TabControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.TabControl" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.TabControl" /> im Steuerelementarray.</param>
+        <summary>Ruft den Index des eine <see cref="T:System.Windows.Forms.TabControl" /> in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />.</summary>
+        <returns>Ein <see langword="Short" /> , die den Index des angegebenen darstellt <see cref="T:System.Windows.Forms.TabControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, zum Abrufen des Indexes für die angegebene <xref:System.Windows.Forms.TabControl>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GiveFeedback">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.GiveFeedbackEventHandler GiveFeedback;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.GiveFeedbackEventHandler GiveFeedback" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.GiveFeedback" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GiveFeedbackEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während eines Ziehvorgangs ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `GiveFeedback` Ereignis wird ausgelöst, wenn ein Drag & Drop-Vorgang gestartet wird. Mit dem `GiveFeedback` -Ereignis, die Quelle des Drag-Ereignis kann ändern, die Darstellung des Mauszeigers um dem Benutzer während eines Drag & Drop-Vorgangs ein visuelles Feedback.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpRequested">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HelpEventHandler HelpRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HelpEventHandler HelpRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.HelpRequested" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer die Hilfe für ein Steuerelement anfordert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `HelpRequested` Ereignis ist in der Regel ausgelöst, wenn der Benutzer drückt die Taste F1 drücken oder eine zugeordnete kontextbezogene Schaltfläche geklickt wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookUpControlEvents">
+      <MemberSignature Language="C#" Value="protected override void HookUpControlEvents (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HookUpControlEvents(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.HookUpControlEvents(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Eine <see cref="T:System.Object" />.</param>
+        <summary>Überschreibt <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.HookUpControlEvents(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht aus den Code Ihrer Anwendung aufgerufen werden. Verwendung `AddHandler` verknüpft, die hinzugefügt werden Ereignisse für alle Steuerelemente die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A> Methode.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ImeMode" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ImeMode%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TabControl this[short Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TabControl Item(int16)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Item(System.Int16)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Ein <see langword="Short" /> , der die Position eines Elements des Steuerelementarrays angibt.</param>
+        <summary>Ruft ein bestimmtes Element von einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" /> über einen Index. Schreibgeschützt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TabControl" /> an der angegebenen <paramref name="Index" /> im Steuerelementarray.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Item` Eigenschaft ist die Standardeigenschaft für ein Steuerelementarray. Aus diesem Grund sind die folgenden Codezeilen gleichwertig.  
+  
+```vb  
+MsgBox(CStr(TabControlArray.Item(1).Text))  
+MsgBox(CStr(TabControlArray(1).Text))  
+```  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine Taste gedrückt wird und das Steuerelement den Fokus hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tastaturereignisse treten in der folgenden Reihenfolge auf:  
+  
+ `KeyDown`  
+  
+ <xref:System.Windows.Forms.Control.KeyPress>  
+  
+ <xref:System.Windows.Forms.Control.KeyUp>  
+  
+ Um Tastaturereignisse nur auf Formularebene zu behandeln und Steuerelemente zum Empfangen von Tastaturereignissen nicht aktivieren, legen Sie die <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> Eigenschaft in der Form <xref:System.Windows.Forms.Control.KeyPress> Ereignisbehandlungsmethode zu `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyPressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine Taste gedrückt wird und das Steuerelement den Fokus hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tastaturereignisse treten in der folgenden Reihenfolge auf:  
+  
+ <xref:System.Windows.Forms.Control.KeyDown>  
+  
+ `KeyPress`  
+  
+ <xref:System.Windows.Forms.Control.KeyUp>  
+  
+ Die `KeyPress` Ereignis wird nicht von Tasten; allerdings sind die Tasten lösen die <xref:System.Windows.Forms.Control.KeyDown> und <xref:System.Windows.Forms.Control.KeyUp> Ereignisse.  
+  
+ Verwenden der <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> Eigenschaft, um Tastatureingaben zur Laufzeit und zu verwenden oder eine Teilmenge von allgemeinen Tastatureingaben zu ändern.  
+  
+ Um Tastaturereignisse nur auf Formularebene zu behandeln und Steuerelemente zum Empfangen von Tastaturereignissen nicht aktivieren, legen Sie die <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> Eigenschaft in der Form <xref:System.Windows.Forms.Control.KeyPress> Ereignisbehandlungsmethode zu `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine Taste losgelassen wird und das Steuerelement den Fokus hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tastaturereignisse treten in der folgenden Reihenfolge auf:  
+  
+ <xref:System.Windows.Forms.Control.KeyDown>  
+  
+ <xref:System.Windows.Forms.Control.KeyPress>  
+  
+ `KeyUp`  
+  
+ Um Tastaturereignisse nur auf Formularebene zu behandeln und Steuerelemente zum Empfangen von Tastaturereignissen nicht aktivieren, legen Sie die <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> Eigenschaft in der Form <xref:System.Windows.Forms.Control.KeyPress> Ereignisbehandlungsmethode zu `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.LayoutEventHandler Layout;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.LayoutEventHandler Layout" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Layout" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LayoutEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein Steuerelement seine untergeordneten Steuerelemente neu positionieren muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Layout` Ereignis tritt auf, wenn untergeordnete Steuerelemente hinzugefügt oder entfernt werden, wenn die Begrenzungen des Steuerelements ändert, und wenn andere Veränderungen stattfinden, die das Layout des Steuerelements beeinflussen können. Das Layout-Ereignis kann unterdrückt werden, mithilfe der <xref:System.Windows.Forms.Control.SuspendLayout%2A> und <xref:System.Windows.Forms.Control.ResumeLayout%2A> Methoden. Zum Anhalten geführt Layout können Sie mehrere Aktionen für ein Steuerelement ausführen, ohne ein Layout für jede Änderung auszuführen. Beispielsweise, wenn Sie die Größe und Position ein Steuerelements, jede Operation ausgelöst werden soll, eine `Layout` Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="public event EventHandler Leave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Leave" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Leave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Eingabefokus das Steuerelement verlässt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Fokus ändern, unter Verwendung der Tastatur (Registerkarte, UMSCHALT + TAB usw.) oder durch Aufrufen der <xref:System.Windows.Forms.Control.Select%2A> oder <xref:System.Windows.Forms.Control.SelectNextControl%2A> -Methode, den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ `Leave`  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Wenn Sie den Fokus ändern, mit der Maus oder durch Aufrufen der <xref:System.Windows.Forms.Control.Focus%2A> -Methode, den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ `Leave`  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.LocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Location" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Location%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MarginChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MarginChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MarginChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Margin" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseCaptureChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseCaptureChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseCaptureChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseCaptureChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement beginnt oder aufhört, Mauseingaben aufzufangen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Maustaste klicken, wenn der Mauszeiger über eine Form in der Regel ist, löst die folgende Reihe von Ereignissen für das Steuerelement aus:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Click>  
+  
+ `MouseClick`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ Zwei aufeinander folgende Mausklicks, die auftreten, schließen ausreichend Zeit, durch die mauseinstellungen des Betriebssystems des Benutzers, generiert eine <xref:System.Windows.Forms.Control.MouseDoubleClick> Ereignisses statt auf die zweite `MouseClick` Ereignis.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.Control.Click>-Ereignisse sind logisch auf höherer Ebene eines Steuerelements. Sie werden häufig ausgelöst von anderen Aktionen, z. B. durch Drücken der EINGABETASTE, wenn das Steuerelement den Fokus besitzt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn mit der Maus auf das Steuerelement geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Maustaste klicken, wenn der Mauszeiger über eine Form in der Regel ist, löst die folgende Reihe von Ereignissen für das Steuerelement aus:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Click>  
+  
+ `MouseClick`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ Zwei aufeinander folgende Mausklicks, die auftreten, schließen ausreichend Zeit, durch die mauseinstellungen des Betriebssystems des Benutzers, generiert eine <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDoubleClick> Ereignisses statt auf die zweite `MouseClick` Ereignis.  
+  
+> [!NOTE]
+>  <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Click>-Ereignisse sind logisch auf höherer Ebene einer Form. Sie werden häufig ausgelöst von anderen Aktionen, z. B. durch Drücken der EINGABETASTE, wenn die Form den Fokus besitzt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn auf das Steuerelement mit der Maus doppelgeklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Maustaste klicken, wenn der Mauszeiger über eine Form in der Regel ist, löst die folgende Reihe von Ereignissen für das Steuerelement aus:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Click>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseClick>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ Zwei aufeinander folgende Mausklicks, die auftreten, schließen ausreichend Zeit, durch die mauseinstellungen des Betriebssystems des Benutzers, generiert eine `DoubleClick` Ereignisses statt auf die zweite <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseClick> Ereignis.  
+  
+> [!NOTE]
+>  <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Click>-Ereignisse sind logisch auf höherer Ebene einer Form. Sie werden häufig ausgelöst von anderen Aktionen, z. B. durch Drücken der EINGABETASTE, wenn die Form den Fokus besitzt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDown" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Mauszeiger über dem Steuerelement befindet und eine Maustaste gedrückt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mausereignisse treten in der folgenden Reihenfolge auf:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseEnter>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseMove>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseHover> / `MouseDown` / <xref:System.Windows.Forms.Control.MouseWheel>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseLeave>  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseEnter">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseEnter" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger in den Bereich des Steuerelements eintritt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mausereignisse treten in der folgenden Reihenfolge auf:  
+  
+ `MouseEnter`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseMove>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseHover> / <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown> / <xref:System.Windows.Forms.Control.MouseWheel>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseLeave>  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseHover">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseHover;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseHover" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseHover" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger auf dem Steuerelement verbleibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein typisches Einsatzgebiet von `MouseHover` besteht darin, eine QuickInfo angezeigt wird, wenn die Maus auf ein Steuerelement in einem angegebenen Bereich um das Steuerelement ("Hoverrechteck") befindet. Die erforderliche Pause für dieses Ereignis ausgelöst werden soll, angegeben in Millisekunden von der <xref:System.Windows.Forms.SystemInformation.MouseHoverTime%2A> Eigenschaft.  
+  
+ Die `MouseHover` Ereignis definiert und ermittelt, die in Verbindung mit der <xref:System.Windows.Forms.SystemInformation.MouseHoverSize%2A> und <xref:System.Windows.Forms.SystemInformation.MouseHoverTime%2A> Eigenschaften.  
+  
+ Mausereignisse treten in der folgenden Reihenfolge auf:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseEnter>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseMove>  
+  
+ `MouseHover` / <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown> / <xref:System.Windows.Forms.Control.MouseWheel>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseLeave>  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeave">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseLeave" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger den Bereich des Steuerelements verlässt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mausereignisse treten in der folgenden Reihenfolge auf:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseEnter>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseMove>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseHover> / <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown> / <xref:System.Windows.Forms.Control.MouseWheel>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ `MouseLeave`  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseMove" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Mauszeiger über dem Steuerelement bewegt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mausereignisse treten in der folgenden Reihenfolge auf:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseEnter>  
+  
+ `MouseMove`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseHover> / <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown> / <xref:System.Windows.Forms.Control.MouseWheel>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseLeave>  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseUp" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Mauszeiger über dem Steuerelement befindet und eine Maustaste losgelassen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mausereignisse treten in der folgenden Reihenfolge auf:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseEnter>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseMove>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseHover> / <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseDown> / <xref:System.Windows.Forms.Control.MouseWheel>  
+  
+ `MouseUp`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.MouseLeave>  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public event EventHandler Move;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Move" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Move" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Verschieben des Steuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn des Steuerelements <see cref="P:System.Windows.Forms.Control.Padding" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ParentChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ParentChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ParentChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn des Steuerelements <see cref="P:System.Windows.Forms.Control.Parent" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Parent%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryAccessibilityHelp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.QueryAccessibilityHelpEventHandler QueryAccessibilityHelp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.QueryAccessibilityHelpEventHandler QueryAccessibilityHelp" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.QueryAccessibilityHelp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.QueryAccessibilityHelpEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein <see cref="T:System.Windows.Forms.AccessibleObject" /> Bereitstellen von Hilfe für barrierefreie Anwendungen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Forms.HelpProvider> Klasse, um Benutzer durch Drücken der Taste F1 die Hilfe zu Ihrem zugreifbaren Objekt aufrufen können. Die <xref:System.Windows.Forms.HelpProvider> bietet Ihnen ausführliche Informationen den <xref:System.Windows.Forms.QueryAccessibilityHelpEventArgs>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryContinueDrag">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.QueryContinueDragEventHandler QueryContinueDrag;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.QueryContinueDragEventHandler QueryContinueDrag" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.QueryContinueDrag" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.QueryContinueDragEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während eines Drag &amp; Drop-Vorgangs ein. Dadurch kann die Quelle des Ziehvorgangs bestimmen, ob der Drag &amp; Drop-Vorgang abgebrochen werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `QueryContinueDrag` Ereignis wird ausgelöst, wenn eine Änderung in der Tastatur- oder Maustastenzustands während eines Drag & Drop-Vorgangs. Die `QueryContinueDrag` Ereignis ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RegionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RegionChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.RegionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Region" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Region%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetIndex">
+      <MemberSignature Language="C#" Value="public void ResetIndex (System.Windows.Forms.TabControl o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void ResetIndex(class System.Windows.Forms.TabControl o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ResetIndex(System.Windows.Forms.TabControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.TabControl" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Die <see langword="ResetIndex" /> Methode wird nicht unterstützt, der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht unterstützt und Aufrufen dieser löst keine Ausnahme aus.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public event EventHandler Resize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Resize" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Resize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Ändern der Größe des Steuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, der <xref:System.Windows.Forms.Control.Size%2A> des Steuerelements dessen Größe geändert wurde, können Sie eine Umwandlung der `sender` Parameter von der <xref:System.EventArgs> Daten an eine <xref:System.Windows.Forms.Control> und Abrufen seiner <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft (oder <xref:System.Windows.Forms.Control.Height%2A> und <xref:System.Windows.Forms.Control.Width%2A> Eigenschaften einzeln).  
+  
+ Um benutzerdefinierte Layouts zu behandeln, verwenden die <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Layout> Ereignis anstelle von der `Resize` Ereignis. Die <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Layout> Ereignis wird ausgelöst, als Antwort auf eine `Resize` Ereignis, sondern auch als Reaktion auf andere Änderungen, die das Layout des Steuerelements beeinflussen.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.RightToLeftChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.RightToLeftChanged" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.RightToLeft%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.RightToLeftLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.TabControl.RightToLeftLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.TabControl.RightToLeftLayout%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.TabControlEventHandler Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.TabControlEventHandler Selected" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn eine Registerkarte ausgewählt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn als aktuelle Registerkarte ändert sich einem <xref:System.Windows.Forms.TabControl>, die folgenden Ereignisse treten in der folgenden Reihenfolge.  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselecting>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselected>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selecting>  
+  
+ `Selected`  
+  
+ Diese Ereignisse können Sie die Aufgaben, z. B. eine Änderung der Registerkarte abbrechen, wenn eine <xref:System.Windows.Forms.TabPage> befindet sich in einem ungültigen Zustand befindet oder Aktualisieren des Status des neu angezeigten <xref:System.Windows.Forms.TabPage>.  
+  
+ Als aktuelle Registerkarte ändert, wenn der Benutzer eine Registerkarte, beim Aufrufen klickt der <xref:System.Windows.Forms.TabControl.DeselectTab%2A> oder <xref:System.Windows.Forms.TabControl.SelectTab%2A> -Methode, oder wenn Sie den Wert der Ändern der <xref:System.Windows.Forms.TabControl.SelectedIndex%2A> oder <xref:System.Windows.Forms.TabControl.SelectedTab%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndexChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectedIndexChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectedIndexChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.SelectedIndexChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="P:System.Windows.Forms.TabControl.SelectedIndex" />-Eigenschaft geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.TabControl.SelectedIndex%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selecting">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.TabControlCancelEventHandler Selecting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.TabControlCancelEventHandler Selecting" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selecting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabControlCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, bevor eine Registerkarte ausgewählt wird. Dies ermöglicht es einem Handler, die Änderung der Registerkarte abzubrechen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn als aktuelle Registerkarte ändert sich einem <xref:System.Windows.Forms.TabControl>, die folgenden Ereignisse treten in der folgenden Reihenfolge.  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselecting>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Deselected>  
+  
+ `Selecting`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Selected>  
+  
+ Diese Ereignisse können Sie die Aufgaben, z. B. eine Änderung der Registerkarte abbrechen, wenn eine <xref:System.Windows.Forms.TabPage> befindet sich in einem ungültigen Zustand befindet oder Aktualisieren des Status des neu angezeigten <xref:System.Windows.Forms.TabPage>.  
+  
+ Als aktuelle Registerkarte ändert, wenn der Benutzer eine Registerkarte, beim Aufrufen klickt der <xref:System.Windows.Forms.TabControl.DeselectTab%2A> oder <xref:System.Windows.Forms.TabControl.SelectTab%2A> -Methode, oder wenn Sie den Wert der Ändern der <xref:System.Windows.Forms.TabControl.SelectedIndex%2A> oder <xref:System.Windows.Forms.TabControl.SelectedTab%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIndex">
+      <MemberSignature Language="C#" Value="public void SetIndex (System.Windows.Forms.TabControl o, short Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetIndex(class System.Windows.Forms.TabControl o, int16 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.SetIndex(System.Windows.Forms.TabControl,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.TabControl" />
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.TabControl" /> im Steuerelementarray.</param>
+        <param name="Index">Ein <see langword="Short" /> , die den Index des angegebenen darstellt <see cref="T:System.Windows.Forms.TabControl" />.</param>
+        <summary>Legt den Index des ersten <see cref="T:System.Windows.Forms.TabControl" /> in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `SetIndex` Methode sollte nur aufgerufen werden, wenn Sie das erste Element im Steuerelementarray erstellen. Um nachfolgende Elemente hinzuzufügen, rufen Sie die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A> Methode, und geben Sie die `Index`.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeIndex">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeIndex (System.Windows.Forms.TabControl o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ShouldSerializeIndex(class System.Windows.Forms.TabControl o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.ShouldSerializeIndex(System.Windows.Forms.TabControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.TabControl" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.TabControl" /> im Steuerelementarray.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Forms.TabControl" /> ist ein Mitglied dieser <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein Mitglied dieser Steuerelementarray ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Windows.Forms.TabControl> ein Member eines anderen <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray> ist, gibt `ShouldSerializeIndex` `false` zurück.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SizeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.SizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.Size" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Size%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler StyleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler StyleChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.StyleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich das Format des Steuerelements ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `StyleChanged` Ereignis tritt auf, wenn <xref:System.Windows.Forms.ControlStyles> Flags hinzugefügt oder geändert wurden.  
+  
+ Dieses Ereignis wird ausgelöst, wenn das Format des Steuerelements durch eine programmgesteuerte Änderung oder die Interaktion des Benutzers geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemColorsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SystemColorsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SystemColorsChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.SystemColorsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die Systemfarben ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Drawing.SystemColors> durch eine programmgesteuerte Änderung oder die Interaktion des Benutzers geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndexChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabIndexChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabIndexChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.TabIndexChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.TabIndex" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.TabIndex%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStopChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.TabStopChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.TabStop" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validated">
+      <MemberSignature Language="C#" Value="public event EventHandler Validated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Validated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement die Überprüfung abgeschlossen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Fokus ändern, indem Sie mithilfe der Tastatur (Registerkarte, UMSCHALT + TAB usw.), durch Aufrufen der <xref:System.Windows.Forms.Control.Select%2A> oder <xref:System.Windows.Forms.Control.SelectNextControl%2A> Methoden, oder durch Festlegen der <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> Eigenschaft auf das aktuelle Formular den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Leave>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating>  
+  
+ `Validated`  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Wenn Sie den Fokus ändern, mit der Maus oder durch Aufrufen der <xref:System.Windows.Forms.Control.Focus%2A> -Methode, den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Leave>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating>  
+  
+ `Validated`  
+  
+ Wenn die <xref:System.Windows.Forms.Control.CausesValidation%2A> -Eigenschaftensatz auf `false`, <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating> und `Validated` Ereignisse werden unterdrückt.  
+  
+ Wenn der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.ComponentModel.CancelEventArgs> auf festgelegt ist `true` in der <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating> Ereignisdelegaten, der alle Ereignisse, die in der Regel nach dem auftreten würden die <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating> Ereignis werden unterdrückt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validating">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler Validating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler Validating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement eine Validierung ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Fokus ändern, indem Sie mithilfe der Tastatur (Registerkarte, UMSCHALT + TAB usw.), durch Aufrufen der <xref:System.Windows.Forms.Control.Select%2A> oder <xref:System.Windows.Forms.Control.SelectNextControl%2A> Methoden, oder durch Festlegen der <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> Eigenschaft auf das aktuelle Formular den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Leave>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validated>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Wenn Sie den Fokus ändern, mit der Maus oder durch Aufrufen der <xref:System.Windows.Forms.Control.Focus%2A> -Methode, den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Leave>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating>  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validated>  
+  
+ Wenn die <xref:System.Windows.Forms.Control.CausesValidation%2A> -Eigenschaftensatz auf `false`, <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating> und <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validated> Ereignisse werden unterdrückt.  
+  
+ Wenn der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.ComponentModel.CancelEventArgs> auf festgelegt ist `true` in der <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating> Ereignisdelegaten, der alle Ereignisse, die in der Regel nach dem auftreten würden die <xref:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.Validating> Ereignis werden unterdrückt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.VisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.Visible" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

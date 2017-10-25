@@ -1,0 +1,43 @@
+<Type Name="Void" FullName="System.Void">
+  <TypeSignature Language="C#" Value="public struct Void" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit void extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Void" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt einen Rückgabewerttyp für eine Methode an, die keinen Wert zurückgibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Void> Struktur werden in der <xref:System.Reflection?displayProperty=nameWithType> Namespace, jedoch selten in einer typischen Anwendung nützlich ist. Die <xref:System.Void> Struktur verfügt über keine Member als diejenigen, alle Typen erben die <xref:System.Object> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

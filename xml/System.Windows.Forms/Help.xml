@@ -1,0 +1,312 @@
+<Type Name="Help" FullName="System.Windows.Forms.Help">
+  <TypeSignature Language="C#" Value="public class Help" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Help extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Help" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt das HTML Help 1.0-Modul.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine neue Instanz der können nicht erstellt die <xref:System.Windows.Forms.Help> Klasse. Um Hilfe für eine Anwendung bereitzustellen, rufen Sie die statische <xref:System.Windows.Forms.Help.ShowHelp%2A> und <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Methoden.  
+  
+ Sie können <xref:System.Windows.Forms.Help> anzuzeigende kompilierte Hilfedateien (chm) oder HTML-Dateien im Format HTML-Hilfe. Kompilierte Hilfedateien Dateien geben Sie eine Tabelle mit Inhalt, ein Index, Suchfunktionen und-Schlüsselwort Links in Seiten. Tastenkombinationen funktionieren nur in kompilierte Hilfedateien.  
+  
+ Sie können HTML Help 1.x-Dateien mit HTML Help Workshop erstellte generieren. Weitere Informationen über die HTML-Hilfe finden Sie unter "HTML Help Workshop" und andere HTML-Hilfethemen zur [Microsoft HTML Help](http://go.microsoft.com/fwlink/?LinkId=178661).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit drei Schaltflächen, die für die Interaktion mit der Hilfedatei Mspaint.chm verwendet werden kann. Die **Hilfe anzeigen** Schaltfläche zeigt den **Index** Registerkarte für die Hilfedatei. Die **Hilfe anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei auf Grundlage des Werts, der im ausgewählt ist die **Help Navigator** Liste. Die **Schlüsselwort anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei basierend auf dem Schlüsselwort, das im angegebenen der **Schlüsselwort** Textfeld.  
+  
+ Um die Hilfeseite zu Ellipsen durch den Indexwert anzuzeigen, wählen Sie z. B. die <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> Wert in der **Help Navigator** Dropdown-Liste, geben **Ovale** in der **Parameter** das Textfeld, und klicken Sie dann auf die **Hilfe anzeigen** Schaltfläche. Geben Sie zum Anzeigen im Hilfethema "So zeichnen mit einem Pinsel" durch das Schlüsselwort **mspaint.chm::/paint_brush.htm** in der **Schlüsselwort** Textfeld, und klicken Sie dann auf die **Schlüsselwort anzeigen** Schaltfläche.  
+  
+ Im Beispiel wird die <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode, um die verschiedenen Registerkarten für Hilfe und -Hilfethemen anzuzeigen und die <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Methode, um den Index für die Hilfe anzuzeigen.  
+  
+ [!code-cpp[System.Windows.Forms.Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#1)]
+ [!code-vb[System.Windows.Forms.Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Ein <see cref="T:System.Windows.Forms.Control" /> , identifiziert das übergeordnete Element im Dialogfeld "Hilfe".</param>
+        <param name="url">Der Pfad und Name der Hilfedatei.</param>
+        <summary>Zeigt den Inhalt der Hilfedatei an der angegebenen URL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `url` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, das eine Schaltfläche mit dem Namen enthält `Button1`.  
+  
+ [!code-cpp[System.Windows.Forms.HelpExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.HelpExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">für den Zugriff auf eine HTML-Hilfedatei über eine HTTP-Anforderung ein. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff nicht auf eine HTML-Hilfedatei, die von einem HTTP-Server bedient werden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url, string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url, string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Ein <see cref="T:System.Windows.Forms.Control" /> , identifiziert das übergeordnete Element im Dialogfeld "Hilfe".</param>
+        <param name="url">Der Pfad und Name der Hilfedatei.</param>
+        <param name="keyword">Das Schlüsselwort zu dem Hilfe angezeigt.</param>
+        <summary>Zeigt den Inhalt der Hilfedatei für ein bestimmtes Schlüsselwort an der angegebenen URL nicht gefunden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `url` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+ Wenn Sie angeben, dass das Schlüsselwort `null`, des Inhaltsverzeichnisses für die Hilfedatei wird angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit drei Schaltflächen, die für die Interaktion mit der Hilfedatei mspaint.chm verwendet werden kann. Die **Hilfe anzeigen** Schaltfläche zeigt den **Index** Registerkarte für die Hilfedatei. Die **Hilfe anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei auf Grundlage des Werts, der im ausgewählt ist die **Help Navigator** Liste. Die **Schlüsselwort anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei basierend auf dem Schlüsselwort, das im angegebenen der **Schlüsselwort** Textfeld.  
+  
+ Um die Hilfeseite zu Ellipsen durch den Indexwert anzuzeigen, wählen Sie z. B. die <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> Wert in der **Help Navigator** Dropdown-Liste, geben **Ovale** in der **Parameter** das Textfeld, und klicken Sie dann auf die **Hilfe anzeigen** Schaltfläche. Geben Sie zum Anzeigen im Hilfethema "So zeichnen mit einem Pinsel" durch das Schlüsselwort **mspaint.chm::/paint_brush.htm** in der **Schlüsselwort** Textfeld, und klicken Sie dann auf die **Schlüsselwort anzeigen** Schaltfläche.  
+  
+ In diesem Beispiel wird nur der Aufruf der <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode. Finden Sie unter der <xref:System.Windows.Forms.Help> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.Help#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#4)]
+ [!code-csharp[System.Windows.Forms.Help#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#4)]
+ [!code-vb[System.Windows.Forms.Help#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">für den Zugriff auf eine HTML-Hilfedatei über eine HTTP-Anforderung ein. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff nicht auf eine HTML-Hilfedatei, die von einem HTTP-Server bedient werden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url, System.Windows.Forms.HelpNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url, valuetype System.Windows.Forms.HelpNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String,System.Windows.Forms.HelpNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Ein <see cref="T:System.Windows.Forms.Control" /> , identifiziert das übergeordnete Element im Dialogfeld "Hilfe".</param>
+        <param name="url">Der Pfad und Name der Hilfedatei.</param>
+        <param name="navigator">Einer der <see cref="T:System.Windows.Forms.HelpNavigator" />-Werte.</param>
+        <summary>Zeigt den Inhalt der Hilfedatei an der angegebenen URL für ein bestimmtes Thema gefunden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `url` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+ Kompilierte Hilfedateien Dateien bieten Inhaltsverzeichnis, Indexes, Suche und-Schlüsselwort Links in Seiten. Sie können die folgenden Werte für die `navigator` Parameter: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode, um eine Hilfedatei, die die Seite "Index" zu öffnen. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, das eine Schaltfläche mit dem Namen enthält `Button2`.  
+  
+ [!code-cpp[System.Windows.Forms.HelpExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.HelpExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HelpExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">für den Zugriff auf eine HTML-Hilfedatei über eine HTTP-Anforderung ein. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff nicht auf eine HTML-Hilfedatei, die von einem HTTP-Server bedient werden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url, System.Windows.Forms.HelpNavigator command, object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url, valuetype System.Windows.Forms.HelpNavigator command, object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String,System.Windows.Forms.HelpNavigator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="command" Type="System.Windows.Forms.HelpNavigator" />
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Ein <see cref="T:System.Windows.Forms.Control" /> , identifiziert das übergeordnete Element im Dialogfeld "Hilfe".</param>
+        <param name="url">Der Pfad und Name der Hilfedatei.</param>
+        <param name="command">Einer der <see cref="T:System.Windows.Forms.HelpNavigator" />-Werte.</param>
+        <param name="parameter">Eine Zeichenfolge, die den Themenbezeichner enthält.</param>
+        <summary>Zeigt den Inhalt der Hilfedatei finden Sie unter der URL, die vom Benutzer bereitgestellt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kompilierte Hilfedateien Dateien enthalten, des Inhaltsverzeichnisses, Index, Suche und-Schlüsselwort Links in Seiten. Sie können die `param` Parameter, um weitere Verfeinerung der bereitzustellen der <xref:System.Windows.Forms.HelpNavigator.Topic>, <xref:System.Windows.Forms.HelpNavigator.TopicId>, <xref:System.Windows.Forms.HelpNavigator.KeywordIndex>, oder <xref:System.Windows.Forms.HelpNavigator.AssociateIndex> Befehl. Wenn der angegebene Wert in der `command` Parameter ist <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Find>, dieser Wert muss eine `empty string`. Wenn die `command` Parameterverweise <xref:System.Windows.Forms.HelpNavigator.Topic>, <xref:System.Windows.Forms.HelpNavigator.TopicId>, <xref:System.Windows.Forms.HelpNavigator.KeywordIndex>, oder <xref:System.Windows.Forms.HelpNavigator.AssociateIndex>, dieser Wert sollte eine Zeichenfolge, enthält den Namen des Themas oder das Schlüsselwort oder einen numerischen Bezeichner des Themas angezeigt, werden.  
+  
+ Die `url` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit drei Schaltflächen, die für die Interaktion mit der Hilfedatei mspaint.chm verwendet werden kann. Die **Hilfe anzeigen** Schaltfläche zeigt den **Index** Registerkarte für die Hilfedatei. Die **Hilfe anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei auf Grundlage des Werts, der im ausgewählt ist die **Help Navigator** Liste. Die **Schlüsselwort anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei basierend auf dem Schlüsselwort, das im angegebenen der **Schlüsselwort** Textfeld.  
+  
+ Um die Hilfeseite zu Ellipsen durch den Indexwert anzuzeigen, wählen Sie z. B. die <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> Wert in der **Help Navigator** Dropdown-Liste, geben **Ovale** in der **Parameter** das Textfeld, und klicken Sie dann auf die **Hilfe anzeigen** Schaltfläche. Geben Sie zum Anzeigen im Hilfethema "So zeichnen mit einem Pinsel" durch das Schlüsselwort **mspaint.chm::/paint_brush.htm** in der **Schlüsselwort** Textfeld, und klicken Sie dann auf die **Schlüsselwort anzeigen** Schaltfläche.  
+  
+ In diesem Beispiel wird nur der Aufruf der <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode. Finden Sie unter der <xref:System.Windows.Forms.Help> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.Help#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#3)]
+ [!code-csharp[System.Windows.Forms.Help#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#3)]
+ [!code-vb[System.Windows.Forms.Help#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="parameter" />ist eine ganze Zahl.</exception>
+        <permission cref="T:System.Net.WebPermission">für den Zugriff auf eine HTML-Hilfedatei über eine HTTP-Anforderung ein. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff nicht auf eine HTML-Hilfedatei, die von einem HTTP-Server bedient werden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelpIndex">
+      <MemberSignature Language="C#" Value="public static void ShowHelpIndex (System.Windows.Forms.Control parent, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelpIndex(class System.Windows.Forms.Control parent, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelpIndex(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Ein <see cref="T:System.Windows.Forms.Control" /> , identifiziert das übergeordnete Element im Dialogfeld "Hilfe".</param>
+        <param name="url">Der Pfad und Name der Hilfedatei.</param>
+        <summary>Zeigt den Index der angegebenen Hilfedatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `url` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit drei Schaltflächen, die für die Interaktion mit der Hilfedatei mspaint.chm verwendet werden kann. Die **Hilfe anzeigen** Schaltfläche zeigt den **Index** Registerkarte für die Hilfedatei. Die **Hilfe anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei auf Grundlage des Werts, der im ausgewählt ist die **Help Navigator** Liste. Die **Schlüsselwort anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei basierend auf dem Schlüsselwort, das im angegebenen der **Schlüsselwort** Textfeld.  
+  
+ Um die Hilfeseite zu Ellipsen durch den Indexwert anzuzeigen, wählen Sie z. B. die <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> Wert in der **Help Navigator** Dropdown-Liste, geben **Ovale** in der **Parameter** das Textfeld, und klicken Sie dann auf die **Hilfe anzeigen** Schaltfläche. Geben Sie zum Anzeigen im Hilfethema "So zeichnen mit einem Pinsel" durch das Schlüsselwort **mspaint.chm::/paint_brush.htm** in der **Schlüsselwort** Textfeld, und klicken Sie dann auf die **Schlüsselwort anzeigen** Schaltfläche.  
+  
+ In diesem Beispiel wird nur der Aufruf der <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Methode. Finden Sie unter der <xref:System.Windows.Forms.Help> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.Help#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#2)]
+ [!code-csharp[System.Windows.Forms.Help#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#2)]
+ [!code-vb[System.Windows.Forms.Help#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">für den Zugriff auf eine HTML-Hilfedatei über eine HTTP-Anforderung ein. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff nicht auf eine HTML-Hilfedatei, die von einem HTTP-Server bedient werden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowPopup">
+      <MemberSignature Language="C#" Value="public static void ShowPopup (System.Windows.Forms.Control parent, string caption, System.Drawing.Point location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowPopup(class System.Windows.Forms.Control parent, string caption, valuetype System.Drawing.Point location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowPopup(System.Windows.Forms.Control,System.String,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="location" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Ein <see cref="T:System.Windows.Forms.Control" /> , identifiziert das übergeordnete Element im Dialogfeld "Hilfe".</param>
+        <param name="caption">Die Meldung, in der Popup-Fenster angezeigt werden soll.</param>
+        <param name="location">Ein Wert, der angibt, die horizontalen und vertikalen Koordinaten, an der das Popup-Fenster relativ zu der oberen linken Ecke des Bildschirms angezeigt.</param>
+        <summary>Zeigt ein Popup Hilfefenster an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.Control.KeyUp> Ereignis mit der <xref:System.Windows.Forms.Help> Klasse, um dem Benutzer die Hilfe als Popup anzuzeigen.  
+  
+ [!code-cpp[Control.KeyUp#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.KeyUp/CPP/form1.cpp#1)]
+ [!code-csharp[Control.KeyUp#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.KeyUp/CS/form1.cs#1)]
+ [!code-vb[Control.KeyUp#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.KeyUp/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

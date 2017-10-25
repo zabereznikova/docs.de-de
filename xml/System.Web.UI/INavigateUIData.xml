@@ -1,0 +1,125 @@
+<Type Name="INavigateUIData" FullName="System.Web.UI.INavigateUIData">
+  <TypeSignature Language="C#" Value="public interface INavigateUIData" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INavigateUIData" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.INavigateUIData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die Klassen implementieren, um Benutzeroberflächendaten Navigation und Werte für Steuerelemente zur Navigation zu ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.INavigateUIData> Schnittstelle ermöglicht es Steuerelemente zur Seitennavigation, z. B. die <xref:System.Web.UI.WebControls.TreeView> und <xref:System.Web.UI.WebControls.Menu> -Steuerelemente, um Daten aus einer Datenquelle automatisch zu rendern, die hierarchische Navigation Standortdaten darstellt. Die <xref:System.Web.UI.INavigateUIData> Schnittstelle wird implementiert, indem Sie die <xref:System.Web.SiteMapNode> aus zurückgegebene Typ der <xref:System.Web.UI.WebControls.SiteMapDataSource> steuern, sodass Steuerelemente zur Seitennavigation Daten automatisch ohne ein Entwickler explizit definiert die Zuordnungen der Daten Bindung zum Rendern können die Eigenschaften des <xref:System.Web.SiteMapNode>. Z. B. die <xref:System.Web.UI.WebControls.SiteMapDataSource> Steuerelement ermöglicht deklarativen Datenbindung, sodass ein Entwickler keinen zum Auffüllen der <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A?displayProperty=nameWithType> oder <xref:System.Web.UI.WebControls.Menu.DataBindings%2A?displayProperty=nameWithType> Eigenschaften explizit für die <xref:System.Web.UI.WebControls.TreeView> und <xref:System.Web.UI.WebControls.Menu> Steuerelemente, die jeweils.  
+  
+ Die <xref:System.Web.UI.INavigateUIData> -Schnittstelle kann auch für Objekte, die von zurückgegeben werden, implementiert werden ein <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement, um automatische Rendering Navigationssteuerelement ohne explizite Datenbindung zu ermöglichen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.INavigateUIData.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Text, der die Beschreibung eines Navigationsknotens für ein Navigationssteuerelement darstellt.</summary>
+        <value>Text, der die Beschreibung eines Knotens von einem Navigationssteuerelement ist; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.INavigateUIData.Description%2A> Eigenschaft wird als QuickInfo-Text des gerendert der <xref:System.Web.UI.WebControls.TreeNode> und <xref:System.Web.UI.WebControls.MenuItem> Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.INavigateUIData.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text ab, der den Namen eines Navigationsknotens für ein Navigationssteuerelement darstellt.</summary>
+        <value>Text, der den Namen eines Knotens von einem Navigationssteuerelement darstellt; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.INavigateUIData.Name%2A> Eigenschaft als gerendert wird die <xref:System.Web.UI.WebControls.TreeNode.Text%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Steuerelement und die <xref:System.Web.UI.WebControls.MenuItem.Text%2A?displayProperty=nameWithType> Eigenschaft ein <xref:System.Web.UI.WebControls.MenuItem> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrl">
+      <MemberSignature Language="C#" Value="public string NavigateUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.INavigateUIData.NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL, zu der navigiert werden soll, wenn auf der Navigationsknoten geklickt wird.</summary>
+        <value>Die URL zu navigieren, wenn auf der Knoten geklickt wird. andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.INavigateUIData.NavigateUrl%2A> Eigenschaft darstellt, die URL, die bei einem Navigationsknoten, z. B. <xref:System.Web.UI.WebControls.TreeNode> oder <xref:System.Web.UI.WebControls.MenuItem> steuern, auf die geklickt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.INavigateUIData.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen nicht angezeigten Wert ab, das zusätzliche Daten über den Knoten "Navigation" gespeichert.</summary>
+        <value>Ein Wert, der nicht angezeigt und wird verwendet, um zusätzliche Daten über den Knoten "Navigation" gespeichert werden; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.INavigateUIData.Value%2A> Eigenschaft darstellt, alle zusätzlichen Daten, die von einem Navigationsknoten, wie z. B. verwendet werden eine <xref:System.Web.UI.WebControls.TreeNode> oder <xref:System.Web.UI.WebControls.MenuItem> Steuerelement, das als HTML gerendert wird `value` Attributs für den Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,129 @@
+<Type Name="BitmapScalingMode" FullName="System.Windows.Media.BitmapScalingMode">
+  <TypeSignature Language="C#" Value="public enum BitmapScalingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BitmapScalingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.BitmapScalingMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, welcher Algorithmus zum Skalieren von Bitmapbildern verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Animieren der Skalierung von Bitmaps kann der Standardalgorithmus qualitativ hochwertige Standardbild in einigen Fällen um Framerate dazu führen, dass genügend Systemressourcen belegen. Diese Framerate kann dazu führen, dass Animationen auf Frames überspringen oder die DVD springt. Durch Festlegen der <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> Eigenschaft von der <xref:System.Windows.Media.RenderOptions> -Objekt LowQuality Animationen erstellen, wenn eine Bitmap zu skalieren.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Media.BitmapScalingMode.LowQuality> für ein Image-Objekt.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Fant">
+      <MemberSignature Language="C#" Value="Fant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.BitmapScalingMode Fant = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BitmapScalingMode.Fant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BitmapScalingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie sehr hohe Qualität Fant Skalierung von Bitmaps, die langsamer als alle anderen Modi die Skalierung von Bitmaps, aber höhere Qualität für die Ausgabe an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HighQuality">
+      <MemberSignature Language="C#" Value="HighQuality" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.BitmapScalingMode HighQuality = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BitmapScalingMode.HighQuality" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BitmapScalingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden qualitativ hochwertigen Bitmapskalierung, die langsamer als <see cref="F:System.Windows.Media.BitmapScalingMode.LowQuality" /> Modus, jedoch eine höhere Qualität Ausgabe erzeugt. Die <see cref="F:System.Windows.Media.BitmapScalingMode.HighQuality" /> Modus entspricht die <see cref="F:System.Windows.Media.BitmapScalingMode.Fant" /> Modus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Linear">
+      <MemberSignature Language="C#" Value="Linear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.BitmapScalingMode Linear = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BitmapScalingMode.Linear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BitmapScalingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden lineare Bitmapskalierung, die schneller als <see cref="F:System.Windows.Media.BitmapScalingMode.HighQuality" /> Modus, jedoch eine Ausgabe mit geringerer Qualität erzeugt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LowQuality">
+      <MemberSignature Language="C#" Value="LowQuality" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.BitmapScalingMode LowQuality = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BitmapScalingMode.LowQuality" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BitmapScalingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden bilineare Bitmapskalierung, die schneller als <see cref="F:System.Windows.Media.BitmapScalingMode.HighQuality" /> Modus, jedoch eine Ausgabe mit geringerer Qualität erzeugt. Die <see cref="F:System.Windows.Media.BitmapScalingMode.LowQuality" /> Modus entspricht die <see cref="F:System.Windows.Media.BitmapScalingMode.Linear" /> Modus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NearestNeighbor">
+      <MemberSignature Language="C#" Value="NearestNeighbor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.BitmapScalingMode NearestNeighbor = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BitmapScalingMode.NearestNeighbor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BitmapScalingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die bietet Leistungsvorteile gegenüber Nächster Nachbar-Bitmap zu skalieren, <see cref="F:System.Windows.Media.BitmapScalingMode.LowQuality" /> Modus aus, wenn die Softwarerasterisierungsfunktion verwendet wird. In diesem Modus wird häufig verwendet, um eine Bitmap zu vergrößern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.BitmapScalingMode Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.BitmapScalingMode.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BitmapScalingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden der Standardbitmap für ein Modus ist der Skalierung <see cref="F:System.Windows.Media.BitmapScalingMode.Linear" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

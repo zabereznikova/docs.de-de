@@ -1,0 +1,485 @@
+<Type Name="BindableAttribute" FullName="System.ComponentModel.BindableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class BindableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BindableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.BindableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob ein Element in der Regel für die Bindung verwendet wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut für mehrere Elemente, die in der Regel Eigenschaften eines Steuerelements angeben.  
+  
+ Wenn eine Eigenschaft mit markiert wurde die <xref:System.ComponentModel.BindableAttribute> festgelegt `true`, und klicken Sie dann eine änderungsbenachrichtigung für die Eigenschaft für diese Eigenschaft ausgelöst werden soll. Dies bedeutet, dass bei der <xref:System.ComponentModel.BindableAttribute.Bindable%2A> Eigenschaft ist <xref:System.ComponentModel.BindableAttribute.Yes>, und klicken Sie dann die bidirektionale Datenbindung unterstützt wird. Wenn <xref:System.ComponentModel.BindableAttribute.Bindable%2A> ist <xref:System.ComponentModel.BindableAttribute.No>, Sie können weiterhin auf die Eigenschaft binden, aber es sollte nicht in den Standardsatz von Eigenschaften angezeigt werden, an, zu binden, da es möglicherweise oder eine änderungsbenachrichtigung für die Eigenschaft kann nicht ausgelöst.  
+  
+> [!NOTE]
+>  Wenn Sie eine Eigenschaft mit markieren <xref:System.ComponentModel.BindableAttribute.%23ctor%2A> festgelegt `true`, der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.BindableAttribute.Yes>. Für eine Eigenschaft mit markiert die <xref:System.ComponentModel.BindableAttribute.%23ctor%2A> festgelegt `false`, der Wert ist <xref:System.ComponentModel.BindableAttribute.No>. Aus diesem Grund zum Überprüfen des Wert dieses Attributs im Code müssen, legen Sie das Attribut als <xref:System.ComponentModel.BindableAttribute.Yes?displayProperty=nameWithType> oder <xref:System.ComponentModel.BindableAttribute.No?displayProperty=nameWithType>.  
+  
+> [!CAUTION]
+>  Sie können dieses Attribut nur zur Entwurfszeit. Nichts daran hindert Sie Bindung an eine beliebige Eigenschaft während der Laufzeit.  
+  
+ Weitere Informationen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Eigenschaft zum Binden von Daten entsprechend markiert.  
+  
+ [!code-cpp[Classic BindableAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindableAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindableAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic BindableAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindableAttribute Example/VB/source.vb#1)]  
+  
+ Das nächste Codebeispiel veranschaulicht die Überprüfung des Werts der <xref:System.ComponentModel.BindableAttribute> für `MyProperty`. Zuerst wird der Code Ruft ab einen <xref:System.ComponentModel.PropertyDescriptorCollection> mit allen Eigenschaften für das Objekt. Als Nächstes der Code indiziert, in der <xref:System.ComponentModel.PropertyDescriptorCollection> abzurufenden `MyProperty`. Schließlich wird der Code gibt die Attribute für diese Eigenschaft zurück und speichert sie in der Variablen Attribute. Das Codebeispiel zeigt zwei Möglichkeiten zur Überprüfung des Werts der <xref:System.ComponentModel.BindableAttribute>. Im zweiten Codefragment im Beispiel wird die <xref:System.Object.Equals%2A> Methode. Im letzten Codefragment im Beispiel wird die <xref:System.ComponentModel.BindableAttribute.Bindable%2A> Eigenschaft, um den Wert überprüfen.  
+  
+ [!code-cpp[Classic BindableAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindableAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic BindableAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindableAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic BindableAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindableAttribute Example/VB/source.vb#2)]  
+  
+ Wenn Sie eine Klasse mit markiert die <xref:System.ComponentModel.BindableAttribute>, verwenden Sie im folgenden Codebeispiel wird den Wert überprüft.  
+  
+ [!code-cpp[Classic BindableAttribute Example#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindableAttribute Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic BindableAttribute Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindableAttribute Example/CS/source.cs#3)]
+ [!code-vb[Classic BindableAttribute Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindableAttribute Example/VB/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindableAttribute (bool bindable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool bindable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bindable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="bindable">
+          <see langword="true" />um die Eigenschaft für die Bindung zu verwenden; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.BindableAttribute" /> Klasse mit einem booleschen Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Eigenschaft mit dem Kennzeichnen der <xref:System.ComponentModel.BindableAttribute> festgelegt `true`, der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.BindableAttribute.Yes>. Für eine Eigenschaft mit markiert die <xref:System.ComponentModel.BindableAttribute> festgelegt `false`, der Wert ist <xref:System.ComponentModel.BindableAttribute.No>. Aus diesem Grund zum Überprüfen des Wert dieses Attributs im Code müssen, legen Sie das Attribut als <xref:System.ComponentModel.BindableAttribute.Yes?displayProperty=nameWithType> oder <xref:System.ComponentModel.BindableAttribute.No?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Eigenschaft zum Binden von Daten entsprechend markiert. Dieses Codebeispiel erstellt ein neues <xref:System.ComponentModel.BindableAttribute>, wird dessen Wert auf <xref:System.ComponentModel.BindableAttribute.Yes?displayProperty=nameWithType>, und bindet sie an die Eigenschaft.  
+  
+ [!code-cpp[Classic BindableAttribute.BindableAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindableAttribute.BindableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindableAttribute.BindableAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindableAttribute.BindableAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic BindableAttribute.BindableAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindableAttribute.BindableAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindableAttribute (System.ComponentModel.BindableSupport flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.BindableSupport flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindableAttribute.#ctor(System.ComponentModel.BindableSupport)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.ComponentModel.BindableSupport" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Einer der <see cref="T:System.ComponentModel.BindableSupport" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.BindableAttribute" />-Klasse mit einem der <see cref="T:System.ComponentModel.BindableSupport" />-Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Eigenschaft mit dem Kennzeichnen der <xref:System.ComponentModel.BindableAttribute> festgelegt `true`, der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.BindableAttribute.Yes>. Für eine Eigenschaft mit markiert die <xref:System.ComponentModel.BindableAttribute> festgelegt `false`, der Wert ist <xref:System.ComponentModel.BindableAttribute.No>. Aus diesem Grund zum Überprüfen des Wert dieses Attributs im Code müssen, legen Sie das Attribut als <xref:System.ComponentModel.BindableAttribute.Yes?displayProperty=nameWithType> oder <xref:System.ComponentModel.BindableAttribute.No?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Eigenschaft zum Binden von Daten entsprechend markiert. Dieses Codebeispiel erstellt ein neues <xref:System.ComponentModel.BindableAttribute>, wird dessen Wert auf <xref:System.ComponentModel.BindableAttribute.Yes?displayProperty=nameWithType>, und bindet sie an die Eigenschaft.  
+  
+ [!code-cpp[Classic BindableAttribute.BindableAttribute1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindableAttribute.BindableAttribute1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindableAttribute.BindableAttribute1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindableAttribute.BindableAttribute1 Example/CS/source.cs#1)]
+ [!code-vb[Classic BindableAttribute.BindableAttribute1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindableAttribute.BindableAttribute1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindableAttribute (bool bindable, System.ComponentModel.BindingDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool bindable, valuetype System.ComponentModel.BindingDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindableAttribute.#ctor(System.Boolean,System.ComponentModel.BindingDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bindable" Type="System.Boolean" />
+        <Parameter Name="direction" Type="System.ComponentModel.BindingDirection" />
+      </Parameters>
+      <Docs>
+        <param name="bindable">
+          <see langword="true" />um die Eigenschaft für die Bindung zu verwenden; andernfalls <see langword="false" />.</param>
+        <param name="direction">Einer der <see cref="T:System.ComponentModel.BindingDirection" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.BindableAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindableAttribute (System.ComponentModel.BindableSupport flags, System.ComponentModel.BindingDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.BindableSupport flags, valuetype System.ComponentModel.BindingDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindableAttribute.#ctor(System.ComponentModel.BindableSupport,System.ComponentModel.BindingDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.ComponentModel.BindableSupport" />
+        <Parameter Name="direction" Type="System.ComponentModel.BindingDirection" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Einer der <see cref="T:System.ComponentModel.BindableSupport" />-Werte.</param>
+        <param name="direction">Einer der <see cref="T:System.ComponentModel.BindingDirection" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.BindableAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bindable">
+      <MemberSignature Language="C#" Value="public bool Bindable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Bindable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindableAttribute.Bindable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, dass eine Eigenschaft in der Regel für die Bindung verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft in der Regel für die Bindung verwendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird überprüft, ob `MyProperty` gebunden werden kann. Der Code ruft zuerst die Attribute für `MyProperty` folgendermaßen aus:  
+  
+-   Abrufen einer <xref:System.ComponentModel.PropertyDescriptorCollection> mit allen Eigenschaften für das Objekt.  
+  
+-   Indizieren der <xref:System.ComponentModel.PropertyDescriptorCollection> abzurufenden `MyProperty`.  
+  
+-   Speichern die Attribute für diese Eigenschaft in der Attribute-Variablen.  
+  
+ Klicken Sie dann mit dem Code wird `myAttribute` auf den Wert von der <xref:System.ComponentModel.BindableAttribute> in die <xref:System.ComponentModel.AttributeCollection> und überprüft, ob die Eigenschaft gebunden werden kann.  
+  
+ Für dieses Codebeispiel ausführen müssen Sie den vollqualifizierten Assemblynamen bereitstellen. Informationen zur Vorgehensweise zum Abrufen der vollqualifizierte Assemblyname finden Sie unter  
+  
+ [Assemblynamen](~/docs/framework/app-domains/assembly-names.md).  
+  
+ [!code-cpp[Classic BindableAttribute.Bindable Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindableAttribute.Bindable Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindableAttribute.Bindable Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindableAttribute.Bindable Example/CS/source.cs#1)]
+ [!code-vb[Classic BindableAttribute.Bindable Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindableAttribute.Bindable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.BindableAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.BindableAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BindableAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardwert für die <see cref="T:System.ComponentModel.BindableAttribute" />, also <see cref="F:System.ComponentModel.BindableAttribute.No" />. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Eigenschaft mit diesem Wert markieren der <xref:System.ComponentModel.BindableAttribute> festgelegt ist, auf den Konstanten Member <xref:System.ComponentModel.BindableAttribute.No>. Deshalb, wenn Sie möchten überprüfen, ob das Attribut im Code auf diesen Wert festgelegt ist, geben Sie das Attribut als <xref:System.ComponentModel.BindableAttribute?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.BindingDirection Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.BindingDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindableAttribute.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindingDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, die Richtung oder erfahren Sie, wie diese Eigenschaft die Datenbindung.</summary>
+        <value>Die Richtung für diese Eigenschaft die Datenbindung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.ComponentModel.BindableAttribute" />-Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.ComponentModel.BindableAttribute" /> ist gleich dem aktuellen <see cref="T:System.ComponentModel.BindableAttribute" />; <see langword="false" /> nicht gleich ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für die <see cref="T:System.ComponentModel.BindableAttribute" /> Klasse.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.ComponentModel.BindableAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindableAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dieses Attribut die Standardeinstellung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut der Standardwert für diese Attributklasse ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.BindableAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.BindableAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BindableAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Eigenschaft in der Regel nicht für die Bindung verwendet wird. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.BindableAttribute.No> Feld ist die Standardeinstellung für die <xref:System.ComponentModel.BindableAttribute>.  
+  
+ Wenn Sie eine Eigenschaft mit dem Kennzeichnen der <xref:System.ComponentModel.BindableAttribute.%23ctor%2A> Konstruktor mit dem Wert `false,` der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.BindableAttribute.No>. Aus diesem Grund, um zu überprüfen, ob das Attribut im Code auf diesen Wert festgelegt ist, muss, geben Sie das Attribut als <xref:System.ComponentModel.BindableAttribute.No?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.BindableAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.BindableAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BindableAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Eigenschaft in der Regel für die Bindung verwendet wird. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie kennzeichnen, wenn eine Eigenschaft mit der <xref:System.ComponentModel.BindableAttribute.%23ctor%2A> Konstruktor mit dem Wert `true`, den Wert von der <xref:System.ComponentModel.BindableAttribute> festgelegt ist, auf den Konstanten Member <xref:System.ComponentModel.BindableAttribute.Yes>. Aus diesem Grund, um zu überprüfen, ob das Attribut im Code auf diesen Wert festgelegt ist, muss, geben Sie das Attribut als <xref:System.ComponentModel.BindableAttribute.Yes?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

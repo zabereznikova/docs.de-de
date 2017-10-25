@@ -1,0 +1,350 @@
+<Type Name="X509Extension" FullName="System.Security.Cryptography.X509Certificates.X509Extension">
+  <TypeSignature Language="C#" Value="public class X509Extension : System.Security.Cryptography.AsnEncodedData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509Extension extends System.Security.Cryptography.AsnEncodedData" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509Extension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsnEncodedData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine X509-Erweiterung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ X509 Erweiterungen sind dynamisch und erweiterte Eigenschaften, die eine X509 hinzugefügt werden können, Zertifikat und geändert. Die <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse kann verwendet werden, um Erweiterungen erstellen, die mit einem Zertifikat zugeordnet sind, jedoch sind nicht Teil eines Zertifikats von einer Zertifizierungsstelle (CA) ausgestellt wurde.  
+  
+ In seiner einfachsten Form eine X509 Erweiterung ist ein Objektbezeichner (OID), ein boolescher Wert, der beschreibt, ob die Erweiterung als kritisch betrachtet wird und ASN-codierten Daten. Benutzerdefinierte Erweiterungen registriert werden können, einer <xref:System.Security.Cryptography.CryptoConfig> Datei.  
+  
+ .NET Framework enthält Implementierungen mehrere allgemeine X509 Erweiterungen:  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509KeyUsageExtension>. Beschreibt die Schlüsselverwendungen eines Zertifikats an.  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension>. Beschreibt die Einschränkungen für ein Zertifikat.  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509EnhancedKeyUsageExtension>. Beschreibt die erweiterten Schlüsselverwendungen eines Zertifikats an.  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension>. Beschreibt den Schlüsselbezeichner an. Beispielsweise verwendet mit XMLDSIG.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected X509Extension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Extension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Extension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein leeres <xref:System.Security.Cryptography.X509Certificates.X509Extension> -Objekt, im Gegensatz zu den anderen Konstruktoren für diese Klasse, die Zertifikatinformationen aus einem Bytearray, einen Zeiger oder eine Zertifikatdatei zu verwenden, um das Objekt zu erstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Extension (System.Security.Cryptography.AsnEncodedData encodedExtension, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsnEncodedData encodedExtension, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Extension.#ctor(System.Security.Cryptography.AsnEncodedData,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedExtension" Type="System.Security.Cryptography.AsnEncodedData" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="encodedExtension">Die codierten Daten verwendet werden, um die Erweiterung zu erstellen.</param>
+        <param name="critical">
+          <see langword="true" />Wenn die Erweiterung wichtig ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Extension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn die Informationen zum Erstellen der Erweiterung bereits in einem <xref:System.Security.Cryptography.AsnEncodedData> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Extension (System.Security.Cryptography.Oid oid, byte[] rawData, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid, unsigned int8[] rawData, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Extension.#ctor(System.Security.Cryptography.Oid,System.Byte[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.Security.Cryptography.Oid" />
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Die Objekt-ID verwendet, um die Erweiterung zu identifizieren.</param>
+        <param name="rawData">Die codierten Daten verwendet, um die Erweiterung zu erstellen.</param>
+        <param name="critical">
+          <see langword="true" />Wenn die Erweiterung wichtig ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Extension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet Informationen aus der `oid` Parameter, um einen Objektbezeichner für die Erweiterung bereitzustellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="oid" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="oid" /> ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Extension (string oid, byte[] rawData, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string oid, unsigned int8[] rawData, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Extension.#ctor(System.String,System.Byte[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.String" />
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Eine Zeichenfolge, die die Objekt-ID darstellt.</param>
+        <param name="rawData">Die codierten Daten verwendet, um die Erweiterung zu erstellen.</param>
+        <param name="critical">
+          <see langword="true" />Wenn die Erweiterung wichtig ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Extension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet Informationen aus der `oid` Parameter, um einen Objektbezeichner für die Erweiterung bereitzustellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Extension.CopyFrom(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Das zu kopierende <see cref="T:System.Security.Cryptography.AsnEncodedData" />.</param>
+        <summary>Kopiert die Erweiterungseigenschaften des angegebenen <see cref="T:System.Security.Cryptography.AsnEncodedData" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode kopiert die Erweiterungseigenschaften des angegebenen <xref:System.Security.Cryptography.X509Certificates.X509Extension> und fügen Sie sie mit der Instanz von der <xref:System.Security.Cryptography.X509Certificates.X509Extension> -Klasse aus dem diese Methode aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asnEncodedData" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asnEncodedData" />besitzt keine gültige x. 509-Erweiterung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Critical">
+      <MemberSignature Language="C#" Value="public bool Critical { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Critical" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Extension.Critical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob die Erweiterung wichtig ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Erweiterung wichtig ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um festzulegen, ob eine Erweiterung wichtig ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Security.Cryptography.X509Certificates.X509Extension> Klasse.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

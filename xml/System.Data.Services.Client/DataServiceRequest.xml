@@ -1,0 +1,92 @@
+<Type Name="DataServiceRequest" FullName="System.Data.Services.Client.DataServiceRequest">
+  <TypeSignature Language="C#" Value="public abstract class DataServiceRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataServiceRequest extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.DataServiceRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt anfordern, Objekte, die als Batch an WCF Data Services gesendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einer Gruppe von Abfragen als Batch an den Datendienst gesendet wird, werden die Abfragen als angegeben <xref:System.Data.Services.Client.DataServiceRequest> Instanzen. Ein <xref:System.Data.Services.Client.DataServiceResponse> mit dfer Antwort auf die Batchanforderung als Ganzes zurückgegeben wird. Einzelne Abfrageantworten werden als dargestellt <xref:System.Data.Services.Client.QueryOperationResponse> von abgeleitete Objekte <xref:System.Data.Services.Client.OperationResponse>, die verfügbar sind, indem beim Aufzählen der <xref:System.Data.Services.Client.DataServiceResponse> Instanz.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public abstract Type ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceRequest.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Objekts, die als Batch an den Datendienst gesendet.</summary>
+        <value>Type-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public abstract Uri RequestUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri RequestUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceRequest.RequestUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI des Anforderungsobjekts an einen Datendienst gesendet.</summary>
+        <value>Der URI der Request-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceRequest.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt den URI der Abfrage an den Datendienst dar.</summary>
+        <returns>Der angeforderte URI als eine <see cref="T:System.String" /> Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Setzt die <xref:System.Object.ToString>-Methode außer Kraft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

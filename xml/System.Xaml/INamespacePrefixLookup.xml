@@ -1,0 +1,47 @@
+<Type Name="INamespacePrefixLookup" FullName="System.Xaml.INamespacePrefixLookup">
+  <TypeSignature Language="C#" Value="public interface INamespacePrefixLookup" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INamespacePrefixLookup" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.INamespacePrefixLookup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Dienst, der die empfohlene Präfix für eine XAML-Namespacezuordnung für Consumer zurückgeben kann. Consumer können entwurfsumgebungen oder Serialisierungsprogramme enthalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle stellt den Dienst, der das Präfix für einen bestimmten XAML-Namespace zurückgibt. Eine Technologie meldet ein bevorzugtes Präfix für die Verwendung von XAML-Namespacezuordnung als Teil der Informationen auf Assemblyebene. Dieser Dienst ruft diese Informationen ab.  
+  
+ Die .NET Framework-XAML-Dienste-Implementierung umfasst <xref:System.Windows.Markup.XmlnsPrefixAttribute> als Mechanismus für die bevorzugte Präfixinformationen auf Assemblyebene anwenden. Vorhandenen Service-Anbieter, die Bereitstellen der <xref:System.Xaml.INamespacePrefixLookup> Dienst kann Informationen von diesem Attribut lesen, wenn Informationen verfügbar sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LookupPrefix">
+      <MemberSignature Language="C#" Value="public string LookupPrefix (string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LookupPrefix(string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.INamespacePrefixLookup.LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Die Verwendung von XAML-Namespace-Bezeichnerzeichenfolge folgt für das Präfix abgerufen.</param>
+        <summary>Gibt die empfohlene Präfix für einen angegebenen XAML-Namespacebezeichner zurück.</summary>
+        <returns>Das empfohlene Präfix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

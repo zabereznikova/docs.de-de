@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Markup.Localizer">
+  <Docs>
+    <summary>Enthält Typen, die die Lokalisierung von binäre XAML (BAML) Datenquellen unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

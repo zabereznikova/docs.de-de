@@ -1,0 +1,87 @@
+<Type Name="BookmarkOptions" FullName="System.Activities.BookmarkOptions">
+  <TypeSignature Language="C#" Value="public enum BookmarkOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BookmarkOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.BookmarkOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Optionen für <see cref="T:System.Activities.Bookmark" /> an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MultipleResume">
+      <MemberSignature Language="C#" Value="MultipleResume" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.BookmarkOptions MultipleResume = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.BookmarkOptions.MultipleResume" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Activities.Bookmark" />, das mehrmals wieder aufgenommen werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig entfernt die Workflowlaufzeit ein ausstehendes Lesezeichen aus der Lesezeichentabelle, wenn das Lesezeichen wieder aufgenommen wird. Jedoch wenn das Lesezeichen als MultipleResume angegeben wird, klicken Sie dann das Lesezeichen nicht aus der Tabelle entfernt und das gleiche Lesezeichen kann mehrmals wieder aufgenommen werden. Ein Verwendungsbeispiel von MultipleResume wird als Schleife ausgeführte Aktivitäten z. B. <xref:System.Activities.While>, <xref:System.Activities.ForEach%601>, und <xref:System.Activities.Flowchart>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonBlocking">
+      <MemberSignature Language="C#" Value="NonBlocking" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.BookmarkOptions NonBlocking = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.BookmarkOptions.NonBlocking" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Activities.Bookmark" />, das den Workflow nicht blockiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig gilt die Ausführung einer Aktivität für die Workflowlaufzeit nicht als abgeschlossen, wenn sie ausstehende Lesezeichen aufweist. Jedoch wenn zum Zeitpunkt der Erstellung ein Lesezeichens als nicht blockierende angegeben wird, ermöglicht es die Workflowlaufzeit die Aktivität abgeschlossen wurde, auch wenn sie ausstehende Lesezeichen nicht blockierende, aufweist, sofern sie keine anderen arbeiten ausstehen hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.BookmarkOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.BookmarkOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary><see cref="T:System.Activities.Bookmark" />-Standardoptionen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

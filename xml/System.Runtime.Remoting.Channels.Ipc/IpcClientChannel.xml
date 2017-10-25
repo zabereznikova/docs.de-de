@@ -1,0 +1,325 @@
+<Type Name="IpcClientChannel" FullName="System.Runtime.Remoting.Channels.Ipc.IpcClientChannel">
+  <TypeSignature Language="C#" Value="public class IpcClientChannel : System.Runtime.Remoting.Channels.IChannelSender, System.Runtime.Remoting.Channels.ISecurableChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IpcClientChannel extends System.Object implements class System.Runtime.Remoting.Channels.IChannel, class System.Runtime.Remoting.Channels.IChannelSender, class System.Runtime.Remoting.Channels.ISecurableChannel" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelSender</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.ISecurableChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementiert ein Client channel für Remoteaufrufe, das IPC-Protokoll verwendet, um Nachrichten zu übertragen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanäle werden durch die Infrastruktur von.NET Framework Remoting Remoteaufrufe Transport verwendet. Wenn ein Client ein Remoteobjekt aufruft, wird der Aufruf in einer Nachricht serialisiert, die vom Clientkanal gesendet und von einem Server-Kanal empfangen wurde. Nachdem die Nachricht empfangen wird, wird sie deserialisiert und verarbeitet. Alle zurückgegebenen Werte werden vom Serverchannel übertragen und von der Clientkanal empfangen wurde.  
+  
+ Die <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel> Klasse verwendet die Windows-prozessübergreifende Kommunikation (IPC)-System zum Übertragen von Nachrichten zwischen Anwendungsdomänen auf demselben Computer. Bei der Kommunikation zwischen Anwendungsdomänen auf demselben Computer verwendet wird, ist der IPC-Kanal viel schneller als die TCP- oder HTTP-Kanäle.  
+  
+ Auszuführenden zusätzliche Verarbeitung von Nachrichten auf dem Client, können Sie angeben eine Implementierung von der <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider> Schnittstelle, durch die alle Nachrichten verarbeitet, indem Sie die <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel> Objekt weitergegeben werden.  
+  
+ Wird standardmäßig die <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel> Klasse ein binäres Formatierungsprogramm verwendet, um alle Meldungen zu serialisieren.  
+  
+ Ein <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel> -Objekt verfügt über zugeordnete Konfigurationseigenschaften, die zur festgelegt werden können zur Laufzeit entweder in einer Konfigurationsdatei (durch Aufrufen der statischen <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> Methode) oder programmgesteuert (durch Übergeben einer <xref:System.Collections.IDictionary> -Auflistung, um die <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.%23ctor%2A> Konstruktor). Eine Liste dieser Konfigurationseigenschaften, finden Sie in der Dokumentation für die <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Remoting_Ipc#20](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Ipc/CPP/client.cpp#20)]
+ [!code-csharp[Remoting_Ipc#20](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Ipc/CS/client.cs#20)]  
+  
+ Der obige Code verwendet die folgenden Remoteobjekt.  
+  
+ [!code-cpp[Remoting_Ipc#0](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Ipc/CPP/counter.cpp#0)]
+ [!code-csharp[Remoting_Ipc#0](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Ipc/CS/counter.cs#0)]  
+  
+ Ein Beispiel für einen Server, der dieses Objekt remote verfügbar macht, finden Sie unter <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IpcClientChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konfigurationseigenschaften der <xref:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel> Instanz, die von diesem Konstruktor zurückgegeben werden auf ihre Standardwerte festgelegt. In der folgenden Tabelle wird gezeigt, der Standardwert für jede Konfigurationseigenschaft.  
+  
+|Configuration-Eigenschaft|Beschreibung|  
+|----------------------------|-----------------|  
+|`name`|Der Standardname lautet "Ipc Client". Jeder Channel muss einen eindeutigen Namen haben.|  
+|`priority`|Die Standardpriorität ist 1.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[Remoting_Ipc#21](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Ipc/CPP/client.cpp#21)]
+ [!code-csharp[Remoting_Ipc#21](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Ipc/CS/client.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IpcClientChannel (System.Collections.IDictionary properties, System.Runtime.Remoting.Channels.IClientChannelSinkProvider sinkProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IDictionary properties, class System.Runtime.Remoting.Channels.IClientChannelSinkProvider sinkProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+        <Parameter Name="sinkProvider" Type="System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Ein <see cref="T:System.Collections.IDictionary" /> -Auflistung, die Werte für Konfigurationseigenschaften von des Kanals zu verwendende angibt.</param>
+        <param name="sinkProvider">Die <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> Implementierung, die vom Kanal verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel" /> -Klasse mit den angegebenen Konfigurationseigenschaften und die Senke.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den Konfigurationseigenschaften für Channel, finden Sie unter [Kanal- und Formatierer Konfigurationseigenschaften](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).  
+  
+ Wenn Sie nicht über die Senke Funktionalität benötigen, legen Sie die `sinkProvider` Parameter `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#41](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CPP/client2.cpp#41)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#41](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CS/client2.cs#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IpcClientChannel (string name, System.Runtime.Remoting.Channels.IClientChannelSinkProvider sinkProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Runtime.Remoting.Channels.IClientChannelSinkProvider sinkProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor(System.String,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="sinkProvider" Type="System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Kanals.</param>
+        <param name="sinkProvider">Die <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> Implementierung, die vom Kanal verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel" /> Klasse mit dem angegebenen Namen und die Senke.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelName%2A> Eigenschaft mithilfe der `name` Parameter. Wenn Sie mehr als einen Kanal registrieren möchten, muss jeder Kanal einen eindeutigen Namen haben.  
+  
+ Wenn Sie nicht über die Senke Funktionalität benötigen, legen Sie die `sinkProvider` Parameter `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#42](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CPP/client2.cpp#42)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#42](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CS/client2.cs#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelName">
+      <MemberSignature Language="C#" Value="public string ChannelName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChannelName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des aktuellen Kanals ab.</summary>
+        <value>Ein <see cref="T:System.String" /> -Instanz, die den Namen des Kanals enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder registrierte Channel hat einen eindeutigen Namen an. Der Name wird verwendet, um einen bestimmten Kanal abzurufen, beim Aufrufen der <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel%2A?displayProperty=nameWithType> Methode. Der Standardname lautet "Ipc Client".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelName%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#21](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CPP/client.cpp#21)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#21](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CS/client.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelPriority">
+      <MemberSignature Language="C#" Value="public int ChannelPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChannelPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Priorität des aktuellen Kanals ab.</summary>
+        <value>Eine ganze Zahl, die die Priorität an den Kanal angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Priorität steuert die Reihenfolge, in der konkurrierende Clients eine Verbindung zu einem bestimmten Endpunkt herstellen; Channel mit höherer Priorität verbinden, bevor Sie Channeln mit niedrigerer Priorität. Die Standardpriorität ist 1. Negative Prioritäten sind zulässig.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelPriority%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#23](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CPP/client.cpp#23)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#23](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CS/client.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageSink">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink (string url, object remoteChannelData, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink(string url, object remoteChannelData, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.CreateMessageSink(System.String,System.Object,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="remoteChannelData" Type="System.Object" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, zu dem der neue Empfänger Nachrichten übermittelt. Dieser Parameter kann <see langword="null" /> sein.</param>
+        <param name="remoteChannelData">Das Kanal-Datenobjekt des Remotehosts, zu dem der neue Empfänger Nachrichten übermittelt werden. Dieser Parameter kann <see langword="null" /> sein.</param>
+        <param name="objectURI">Bei der Rückgabe dieser Methode enthält den URI der neuen Kanal Nachricht besteht, die Nachrichten an die angegebene URL oder den Kanal-Datenobjekt übermittelt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine Kanal Nachricht Senke, die Nachrichten an die angegebene URL oder den Kanal Datenobjekt übermittelt zurück.</summary>
+        <returns>Ein Kanal Nachrichten Senke, die Nachrichten an die angegebene URL oder den Kanal Datenobjekt übermittelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.CreateMessageSink%2A> Methodenrückgabe Kanal Nachricht Senke, die Nachrichten an die angegebene URL oder den Kanal-Datenobjekt übermittelt. Wenn die `uri` Parameter ist `null`, `remoteChannelData` , die als Ziel für die Senke verwendet wird. Entweder die `url` oder `remoteChannelData` Parameter möglich `null`, aber nicht beides.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.CreateMessageSink%2A>-Methode veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#22](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CPP/client.cpp#22)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#22](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CS/client.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Die bereitgestellte Senke implementiert keine <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecured">
+      <MemberSignature Language="C#" Value="public bool IsSecured { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecured" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.IsSecured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob der aktuelle Kanal sicher ist.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die aktuelle Instanz sicher ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public string Parse (string url, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Parse(string url, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.Parse(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL aus der das URI-Objekt extrahiert.</param>
+        <param name="objectURI">Bei dieser Methode wird eine <see cref="T:System.String" /> -Instanz, die den URI des bekannten Remoteobjekts enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Extrahiert die Kanal-URI und den URI des bekannten Remoteobjekts aus der angegebenen URL an.</summary>
+        <returns>Ein <see cref="T:System.String" /> , Kanal-URI enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.Parse%2A>-Methode veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#24](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CPP/client.cpp#24)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcClientChannel#24](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcClientChannel/CS/client.cs#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

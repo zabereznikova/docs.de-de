@@ -1,0 +1,280 @@
+<Type Name="DataKeyCollection" FullName="System.Web.UI.WebControls.DataKeyCollection">
+  <TypeSignature Language="C#" Value="public sealed class DataKeyCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataKeyCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataKeyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung, die das Schlüsselfeld jedes Datensatzes in einer Datenquelle enthält. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataKeyCollection> -Klasse stellt eine Auflistung der wichtigsten Felder in der Datenquelle. Das Schlüsselfeld jedes Datensatzes in der Datenquelle wird in dieser Auflistung gespeichert. Dadurch können Sie zum Speichern von des Schlüsselfelds mit einem Steuerelement auflisten, ohne dass diese im Steuerelement angezeigt. Diese Auflistung wird automatisch ausgefüllt, mit den Werten aus dem Feld gemäß den <xref:System.Web.UI.WebControls.BaseDataList.DataKeyField%2A?displayProperty=nameWithType> Eigenschaft. Diese Sammlung lässt es nicht zu, manuell hinzufügen oder Entfernen von Elementen aus der Auflistung.  
+  
+ Das Schlüsselfeld ist häufig verwendete in einem Ereignishandler für ein Ereignis, wie `ItemCommand` oder `DeleteCommand`, im Rahmen einer Update-Abfragezeichenfolge auf einen bestimmten Datensatz in der Datenquelle bearbeiten. Das Schlüsselfeld kann die Zeichenfolge der Update-Abfrage so ändern Sie den entsprechenden Datensatz zu identifizieren.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.DataKeyCollection.Count%2A> -Eigenschaft können Sie die Anzahl der Elemente in der Auflistung bestimmen. Um ein Schlüsselfeld aus programmgesteuert Abrufen einer <xref:System.Web.UI.WebControls.DataKeyCollection>, verwenden Sie eine der folgenden Methoden:  
+  
+-   Verwenden Sie einen Indexer, um ein einzelnes Schlüsselfeld aus der Auflistung mithilfe der Arraynotation abzurufen.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataKeyCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der Auflistung in ein <xref:System.Array?displayProperty=nameWithType> -Objekt, das abzurufenden Elemente aus der Auflistung verwendet werden kann.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataKeyCollection.GetEnumerator%2A> Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> implementierten-Objekt, das abzurufenden Elemente aus der Auflistung verwendet werden kann.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[BaseDataListDataKeys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BaseDataListDataKeys/CS/basedatalistdatakeyscs.aspx#1)]
+ [!code-aspx-vb[BaseDataListDataKeys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BaseDataListDataKeys/VB/basedatalistdatakeysvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataKeyCollection (System.Collections.ArrayList keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyCollection.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein <see cref="T:System.Collections.ArrayList" /> Schlüsselfelder aus der Datenquelle enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataKeyCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DataKeyCollection> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Eine nullbasierte <see cref="T:System.Array" /> Objekt, das die kopierten Elemente aus empfängt die <see cref="T:System.Web.UI.WebControls.DataKeyCollection" />.</param>
+        <param name="index">Die erste Position in der angegebenen <see cref="T:System.Array" /> Objekt, das den Inhalt kopiert wird.</param>
+        <summary>Kopiert alle Elemente aus der <see cref="T:System.Web.UI.WebControls.DataKeyCollection" /> in den angegebenen <see cref="T:System.Array" /> -Objekt, beginnend am angegebenen Index in die <see cref="T:System.Array" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.DataKeyCollection> in die angegebene <xref:System.Array?displayProperty=nameWithType> -Objekt, beginnend am angegebenen Index.  
+  
+> [!NOTE]
+>  Die `array` Parameter muss eine nullbasierte <xref:System.Array?displayProperty=nameWithType> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataKeyCollection.Count%2A> -Eigenschaft können Sie die Anzahl der Elemente in der Auflistung bestimmen. Diese Eigenschaft beim Durchlaufen der Auflistung verwendet, um die Obergrenze zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Collections.IEnumerator" /> implementiert-Objekt, das alle Schlüsselfelder in enthält die <see cref="T:System.Web.UI.WebControls.DataKeyCollection" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> implementiert-Objekt, das alle Schlüsselfelder in enthält die <see cref="T:System.Web.UI.WebControls.DataKeyCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> implementiert-Objekt, das durchlaufen werden kann, um jedes Element abzurufen, der <xref:System.Web.UI.WebControls.DataKeyCollection>.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft, um das Element derzeit in der Auflistung verweist.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf seine anfängliche Position zu verschieben.  
+  
+> [!NOTE]
+>  Nach der Erstellung einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> implementiert-Objekt, oder verwenden die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Elemente in der <see cref="T:System.Web.UI.WebControls.DataKeyCollection" /> kann geändert werden.</summary>
+        <value>
+          <see langword="false" />in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` gibt an, dass die <xref:System.Web.UI.WebControls.DataKeyCollection> in geschrieben werden können, um in allen Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.DataKeyCollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="false" />in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stammt aus der <xref:System.Collections.ICollection?displayProperty=nameWithType> -Schnittstelle und wird überschrieben, um stets `false` gibt an, dass die <xref:System.Web.UI.WebControls.DataKeyCollection> ist nicht threadsicher.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataKeyCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Schlüsselfelds aus der Auflistung abgerufen werden soll.</param>
+        <summary>Ruft das Schlüsselfeld am angegebenen Index in der Auflistung ab.</summary>
+        <value>Das Schlüsselfeld am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen des Schlüsselfelds aus dem <xref:System.Web.UI.WebControls.DataKeyCollection> am angegebenen Index mithilfe der Arraynotation.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[BaseDataListDataKeys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BaseDataListDataKeys/CS/basedatalistdatakeyscs.aspx#1)]
+ [!code-aspx-vb[BaseDataListDataKeys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BaseDataListDataKeys/VB/basedatalistdatakeysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt zum Synchronisieren des Zugriffs auf die <see cref="T:System.Web.UI.WebControls.DataKeyCollection" />.</summary>
+        <value>Ein <see cref="T:System.Object" /> , die zum Synchronisieren des Zugriffs auf die Auflistung verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.DataKeyCollection> Objekt selbst.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataKeyCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

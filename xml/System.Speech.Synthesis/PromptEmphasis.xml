@@ -1,0 +1,108 @@
+<Type Name="PromptEmphasis" FullName="System.Speech.Synthesis.PromptEmphasis">
+  <TypeSignature Language="C#" Value="public enum PromptEmphasis" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PromptEmphasis extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.PromptEmphasis" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Listet Werte für die Ebenen der Schwerpunkt in eingabeaufforderungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mitglieder der der <xref:System.Speech.Synthesis.PromptEmphasis> Enumeration werden verwendet, indem Sie die <xref:System.Speech.Synthesis.PromptStyle.%23ctor%2A> Konstruktor, von der <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> -Methode, und die <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> Methode, um die Ebene des Schwerpunkts nach gesprochenen Text anzugeben. Die <xref:System.Speech.Synthesis.PromptStyle.Emphasis%2A> Eigenschaft ruft die Betonung für eine <xref:System.Speech.Synthesis.PromptStyle> -Objekt mithilfe einer <xref:System.Speech.Synthesis.PromptEmphasis> Instanz.  
+  
+> [!NOTE]
+>  Die Spracherkennung Sprachsynthesemodule in Windows unterstützen keine Variationen in die Betonung des Sprechpause zu diesem Zeitpunkt. Festlegen von Werten zur Hervorhebung, die mithilfe eines Members der <xref:System.Speech.Synthesis.PromptEmphasis> Enumeration akustische unverändert in die Sprachsynthese Ausgabe erzeugt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Moderate">
+      <MemberSignature Language="C#" Value="Moderate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis Moderate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.Moderate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine mittlere Ebene des Schwerpunkts an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis None = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine hervor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass kein Schwerpunkt-Wert angegeben wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reduced">
+      <MemberSignature Language="C#" Value="Reduced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis Reduced = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.Reduced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine reduzierte Ebene des Schwerpunkts an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strong">
+      <MemberSignature Language="C#" Value="Strong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis Strong = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.Strong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine starke Schutzebene Hervorhebung an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

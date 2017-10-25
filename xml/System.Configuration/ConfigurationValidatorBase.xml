@@ -1,0 +1,108 @@
+<Type Name="ConfigurationValidatorBase" FullName="System.Configuration.ConfigurationValidatorBase">
+  <TypeSignature Language="C#" Value="public abstract class ConfigurationValidatorBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConfigurationValidatorBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationValidatorBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fungiert als Basisklasse für eine Validierungsklasse ableiten, sodass ein Wert eines Objekts überprüft werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationValidatorBase> Klasse wird verwendet, um ein benutzerdefiniertes Validierungssteuerelement zu erstellen. Ein benutzerdefiniertes Validierungssteuerelement kann verwendet werden, um Objektwerte zu überprüfen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationValidatorBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationValidatorBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Configuration.ConfigurationValidatorBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidate">
+      <MemberSignature Language="C#" Value="public virtual bool CanValidate (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanValidate(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationValidatorBase.CanValidate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Objekttyp.</param>
+        <summary>Bestimmt, ob ein Objekt basierend auf Typ überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="type" /> Parameterwert entspricht dem erwarteten <see langword="type" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public abstract void Validate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationValidatorBase.Validate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Objektwert.</param>
+        <summary>Bestimmt, ob der Wert eines Objekts gültig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein abgeleitetes Objekt aus der <xref:System.Configuration.ConfigurationValidatorBase> Klasse enthält die Kriterien, die erforderlich sind, um ein Objekt zu überprüfen. Die Kriterien werden festgelegt, wenn die abgeleitete Klasse instanziiert wird. Das zu überprüfende Objekt als Parameter übergeben wird die <xref:System.Configuration.ConfigurationValidatorBase.Validate%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

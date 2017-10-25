@@ -1,0 +1,766 @@
+<Type Name="XDocumentType" FullName="System.Xml.Linq.XDocumentType">
+  <TypeSignature Language="C#" Value="public class XDocumentType : System.Xml.Linq.XNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XDocumentType extends System.Xml.Linq.XNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XDocumentType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Linq.XNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine XML-Dokumenttypdefinition (DTD) dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Data Type Definitionen (DTD) im XML-Format sind eine Möglichkeit, wie folgt vorgehen:  
+  
+-   Validieren von XML-Strukturen in beschränktem Umfang.  
+  
+-   Erweitern Sie Entitäten, dies ist eine Art von Text ersetzen.  
+  
+-   Angeben von Standardattributen.  
+  
+ Diese Klasse stellt das XML-Konzept einer DTD.  
+  
+ DTD-Unterstützung in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist beschränkt.  
+  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]interne Entitäten standardmäßig erweitert, aber es werden nicht aufgelöst, externe Entität verweist, es sei denn, ein <xref:System.Xml.XmlReader> mit einem zugeordneten <xref:System.Xml.XmlResolver> wird verwendet, um die XML-Struktur geladen.  
+  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]ein Dokument anhand einer DTD kann nicht überprüft werden, jedoch können Sie ein validierendes <xref:System.Xml.XmlReader> DTD-Überprüfung bei Bedarf ausführen.  
+  
+ So überprüfen Sie eine [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Struktur anhand eines XML-Schemas, verwenden die <xref:System.Xml.Schema.Extensions.Validate%2A> Methode.  
+  
+ Wenn ein Dokument Entitätsverweise, die in einer DTD definiert sind enthält, werden die Verweise bei der Erstellung der XML-Struktur erweitert. Beim Serialisieren oder die XML-Struktur speichern, wird der Inhalt der erweiterten Entitäten beibehalten. Die Entitätsverweise werden nicht aus.  
+  
+ Als reguläre Attribute in der XML-Struktur werden aus der DTD Standardattribute materialisiert werden. Nachdem ein Standardattribut aus der DTD materialisiert wird, besteht keine Möglichkeit zu bestimmen, dass das Attribut ein Standardattribut aus der DTD war.  
+  
+ Sie können eine XML-Struktur mit einem XML-Dokument auffüllen, die eine interne DTD enthält. Klicken Sie dann die XML-Struktur enthält eine <xref:System.Xml.Linq.XDocument.DocumentType%2A> Knoten. Beim Serialisieren oder die Struktur speichern, wird die interne DTD auch als Teil des Dokuments gespeichert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XDocumentType (System.Xml.Linq.XDocumentType other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XDocumentType other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XDocumentType.#ctor(System.Xml.Linq.XDocumentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Xml.Linq.XDocumentType" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein <see cref="T:System.Xml.Linq.XDocumentType" />-Objekt, aus dem kopiert werden soll.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Xml.Linq.XDocumentType" /> aus einer anderen Klasse <see cref="T:System.Xml.Linq.XDocumentType" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird hauptsächlich intern verwendet, wenn Sie eine tiefe Kopie einer XML-Struktur vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XDocumentType (string name, string publicId, string systemId, string internalSubset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string publicId, string systemId, string internalSubset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XDocumentType.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="publicId" Type="System.String" />
+        <Parameter Name="systemId" Type="System.String" />
+        <Parameter Name="internalSubset" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.String" /> , die den qualifizierten Namen der DTD enthält, also den qualifizierten Namen des Stammelements des XML-Dokuments identisch.</param>
+        <param name="publicId">Ein <see cref="T:System.String" /> , die den öffentlichen Bezeichner eine externe öffentliche DTD enthält.</param>
+        <param name="systemId">Ein <see cref="T:System.String" /> der Systembezeichner des eine externe private DTD enthält.</param>
+        <param name="internalSubset">Ein <see cref="T:System.String" /> , die die interne Teilmenge für eine interne DTD enthält.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Xml.Linq.XDocumentType" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Dokument mit einer internen DTD. Beim Erstellen der <xref:System.Xml.Linq.XDocumentType> -Objekt, gibt den qualifizierten Namen der DTD (Pubs) und eine Zeichenfolge, enthält die interne Teilmenge, an. Da das Dokument keine öffentliche oder private externe DTD verwendet die `publicId` und `systemId` festgelegt `null`.  
+  
+```csharp  
+  
+                string internalSubset = @"<!ELEMENT Pubs (Book+)>  
+<!ELEMENT Book (Title, Author)>  
+<!ELEMENT Title (#PCDATA)>  
+<!ELEMENT Author (#PCDATA)>";  
+  
+string target = "xml-stylesheet";  
+string data = "href=\"mystyle.css\" title=\"Compact\" type=\"text/css\"";  
+  
+XDocument doc = new XDocument(  
+    new XComment("This is a comment."),  
+    new XProcessingInstruction(target, data),  
+    new XDocumentType("Pubs", null, null, internalSubset),  
+    new XElement("Pubs",   
+        new XElement("Book",  
+            new XElement("Title", "Artifacts of Roman Civilization"),  
+            new XElement("Author", "Moreno, Jordao")  
+        ),  
+        new XElement("Book",  
+            new XElement("Title", "Midieval Tools and Implements"),  
+            new XElement("Author", "Gazit, Inbar")  
+        )  
+    ),  
+    new XComment("This is another comment.")  
+);  
+doc.Declaration = new XDeclaration("1.0", "utf-8", "true");  
+  
+Console.WriteLine(doc);  
+```  
+  
+```vb  
+  
+                Dim internalSubset = _  
+    "<!ELEMENT Pubs (Book+)>" & Environment.NewLine & _  
+    "<!ELEMENT Book (Title, Author)>" & Environment.NewLine & _  
+    "<!ELEMENT Title (#PCDATA)>" & Environment.NewLine & _  
+    "<!ELEMENT Author (#PCDATA)>"  
+  
+Dim doc As XDocument = _  
+    <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+    <!--This is a comment.-->  
+    <?xml-stylesheet href="mystyle.css" title="Compact" type="text/css"?>  
+    <Pubs>  
+        <Book>  
+            <Title>Artifacts of Roman Civilization</Title>  
+            <Author>Moreno, Jordao</Author>  
+        </Book>  
+        <Book>  
+            <Title>Midieval Tools and Implements</Title>  
+            <Author>Gazit, Inbar</Author>  
+        </Book>  
+    </Pubs>  
+    <!--This is another comment.-->  
+  
+doc.FirstNode.NextNode.AddAfterSelf(new XDocumentType("Pubs", Nothing, Nothing, internalSubset))  
+  
+Console.WriteLine(doc)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```xml  
+  
+                <!--This is a comment.-->  
+<?xml-stylesheet href="mystyle.css" title="Compact" type="text/css"?>  
+<!DOCTYPE Pubs [<!ELEMENT Pubs (Book+)>  
+<!ELEMENT Book (Title, Author)>  
+<!ELEMENT Title (#PCDATA)>  
+<!ELEMENT Author (#PCDATA)>]>  
+<Pubs>  
+  <Book>  
+    <Title>Artifacts of Roman Civilization</Title>  
+    <Author>Moreno, Jordao</Author>  
+  </Book>  
+  <Book>  
+    <Title>Midieval Tools and Implements</Title>  
+    <Author>Gazit, Inbar</Author>  
+  </Book>  
+</Pubs>  
+<!--This is another comment.-->  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalSubset">
+      <MemberSignature Language="C#" Value="public string InternalSubset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InternalSubset" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDocumentType.InternalSubset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die interne Teilmenge für diese Dokumenttypdefinition (DTD).</summary>
+        <value>Ein <see cref="T:System.String" /> , die die interne Teilmenge für diese Dokumenttypdefinition (DTD) enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Dokument mit einer DTD, die interne Teilmenge enthält.  
+  
+```csharp  
+  
+                string internalSubset = @"<!ELEMENT Pubs (Book+)>  
+<!ELEMENT Book (Title, Author)>  
+<!ELEMENT Title (#PCDATA)>  
+<!ELEMENT Author (#PCDATA)>";  
+  
+string target = "xml-stylesheet";  
+string data = "href=\"mystyle.css\" title=\"Compact\" type=\"text/css\"";  
+  
+XDocument doc = new XDocument(  
+    new XComment("This is a comment."),  
+    new XProcessingInstruction(target, data),  
+    new XDocumentType("Pubs", null, null, internalSubset),  
+    new XElement("Pubs",   
+        new XElement("Book",  
+            new XElement("Title", "Artifacts of Roman Civilization"),  
+            new XElement("Author", "Moreno, Jordao")  
+        ),  
+        new XElement("Book",  
+            new XElement("Title", "Midieval Tools and Implements"),  
+            new XElement("Author", "Gazit, Inbar")  
+        )  
+    ),  
+    new XComment("This is another comment.")  
+);  
+doc.Declaration = new XDeclaration("1.0", "utf-8", "true");  
+  
+Console.WriteLine(doc.DocumentType.InternalSubset);  
+```  
+  
+```vb  
+  
+                Dim internalSubset = _  
+    "<!ELEMENT Pubs (Book+)>" & Environment.NewLine & _  
+    "<!ELEMENT Book (Title, Author)>" & Environment.NewLine & _  
+    "<!ELEMENT Title (#PCDATA)>" & Environment.NewLine & _  
+    "<!ELEMENT Author (#PCDATA)>"  
+  
+Dim doc As XDocument = _  
+    <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+    <!--This is a comment.-->  
+    <?xml-stylesheet href='mystyle.css' title='Compact' type='text/css'?>  
+    <Pubs>  
+        <Book>  
+            <Title>Artifacts of Roman Civilization</Title>  
+            <Author>Moreno, Jordao</Author>  
+        </Book>  
+        <Book>  
+            <Title>Midieval Tools and Implements</Title>  
+            <Author>Gazit, Inbar</Author>  
+        </Book>  
+    </Pubs>  
+    <!--This is another comment.-->  
+  
+doc.FirstNode.AddAfterSelf(new XDocumentType("Pubs", Nothing, Nothing, internalSubset))  
+  
+Console.WriteLine(doc.DocumentType.InternalSubset)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+<!ELEMENT Pubs (Book+)>  
+<!ELEMENT Book (Title, Author)>  
+<!ELEMENT Title (#PCDATA)>  
+<!ELEMENT Author (#PCDATA)>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDocumentType.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen für diese Dokumenttypdefinition (DTD).</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Namen für diese Dokumenttypdefinition (DTD) enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine XML-Dokument, das eine DTD enthält. Nach dem Erstellen des Dokuments, den qualifizierten Namen der DTD Verwenden dieser Eigenschaft abgerufen.  
+  
+```csharp  
+  
+                string internalSubset = @"<!ELEMENT Pubs (Book+)>  
+<!ELEMENT Book (Title, Author)>  
+<!ELEMENT Title (#PCDATA)>  
+<!ELEMENT Author (#PCDATA)>";  
+  
+string target = "xml-stylesheet";  
+string data = "href=\"mystyle.css\" title=\"Compact\" type=\"text/css\"";  
+  
+XDocument doc = new XDocument(  
+    new XComment("This is a comment."),  
+    new XProcessingInstruction(target, data),  
+    new XDocumentType("Pubs", null, null, internalSubset),  
+    new XElement("Pubs",   
+        new XElement("Book",  
+            new XElement("Title", "Artifacts of Roman Civilization"),  
+            new XElement("Author", "Moreno, Jordao")  
+        ),  
+        new XElement("Book",  
+            new XElement("Title", "Midieval Tools and Implements"),  
+            new XElement("Author", "Gazit, Inbar")  
+        )  
+    ),  
+    new XComment("This is another comment.")  
+);  
+doc.Declaration = new XDeclaration("1.0", "utf-8", "true");  
+  
+Console.WriteLine(doc.DocumentType.Name);  
+```  
+  
+```vb  
+  
+                Dim internalSubset = _  
+    "<!ELEMENT Pubs (Book+)>" & Environment.NewLine & _  
+    "<!ELEMENT Book (Title, Author)>" & Environment.NewLine & _  
+    "<!ELEMENT Title (#PCDATA)>" & Environment.NewLine & _  
+    "<!ELEMENT Author (#PCDATA)>"  
+  
+Dim doc As XDocument = _  
+    <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+    <!--This is a comment.-->  
+    <?xml-stylesheet href='mystyle.css' title='Compact' type='text/css'?>  
+    <Pubs>  
+        <Book>  
+            <Title>Artifacts of Roman Civilization</Title>  
+            <Author>Moreno, Jordao</Author>  
+            </Book>  
+        <Book>  
+            <Title>Midieval Tools and Implements</Title>  
+            <Author>Gazit, Inbar</Author>  
+        </Book>  
+    </Pubs>  
+    <!--This is another comment.-->  
+  
+doc.FirstNode.AddAfterSelf(new XDocumentType("Pubs", Nothing, Nothing, internalSubset))  
+  
+Console.WriteLine(doc.DocumentType.Name)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Pubs  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDocumentType.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Knotentyp für diesen Knoten ab.</summary>
+        <value>Der Knotentyp. Für <see cref="T:System.Xml.Linq.XDocumentType" />-Objekte ist dieser Wert <see cref="F:System.Xml.XmlNodeType.DocumentType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da alle, die von Klassen abgeleitet werden <xref:System.Xml.Linq.XObject> enthalten eine <xref:System.Xml.Linq.XObject.NodeType%2A> -Eigenschaft, können Sie Code schreiben, der ausgeführt wird auf Sammlungen von konkrete Unterklasse von <xref:System.Xml.Linq.XObject>. Code kann dann für jeden Knoten in der Auflistung den Knotentyp testen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung dieser Eigenschaft zum Abrufen des Knotentyps für ein <xref:System.Xml.Linq.XDocumentType> Objekt.  
+  
+```csharp  
+  
+                string internalSubset = @"<!ELEMENT Pubs (Book+)>  
+<!ELEMENT Book (Title, Author)>  
+<!ELEMENT Title (#PCDATA)>  
+<!ELEMENT Author (#PCDATA)>";  
+  
+string target = "xml-stylesheet";  
+string data = "href=\"mystyle.css\" title=\"Compact\" type=\"text/css\"";  
+  
+XDocument doc = new XDocument(  
+    new XComment("This is a comment."),  
+    new XProcessingInstruction(target, data),  
+    new XDocumentType("Pubs", null, null, internalSubset),  
+    new XElement("Pubs",   
+        new XElement("Book",  
+            new XElement("Title", "Artifacts of Roman Civilization"),  
+            new XElement("Author", "Moreno, Jordao")  
+        ),  
+        new XElement("Book",  
+            new XElement("Title", "Midieval Tools and Implements"),  
+            new XElement("Author", "Gazit, Inbar")  
+        )  
+    ),  
+    new XComment("This is another comment.")  
+);  
+doc.Declaration = new XDeclaration("1.0", "utf-8", "true");  
+  
+Console.WriteLine(doc.DocumentType.NodeType);  
+```  
+  
+```vb  
+  
+                Dim internalSubset = _  
+    "<!ELEMENT Pubs (Book+)>" & Environment.NewLine & _  
+    "<!ELEMENT Book (Title, Author)>" & Environment.NewLine & _  
+    "<!ELEMENT Title (#PCDATA)>" & Environment.NewLine & _  
+    "<!ELEMENT Author (#PCDATA)>"  
+  
+Dim doc As XDocument = _   
+    <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+    <!--This is a comment.-->  
+    <?xml-stylesheet href='mystyle.css' title='Compact' type='text/css'?>  
+    <Pubs>  
+        <Book>  
+            <Title>Artifacts of Roman Civilization</Title>  
+            <Author>Moreno, Jordao</Author>  
+        </Book>  
+        <Book>  
+            <Title>Midieval Tools and Implements</Title>  
+            <Author>Gazit, Inbar</Author>  
+        </Book>  
+    </Pubs>  
+    <!--This is another comment.-->  
+  
+doc.FirstNode.AddAfterSelf(new XDocumentType("Pubs", Nothing, Nothing, internalSubset))  
+  
+Console.WriteLine(doc.DocumentType.NodeType.ToString())  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+DocumentType  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicId">
+      <MemberSignature Language="C#" Value="public string PublicId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublicId" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDocumentType.PublicId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den öffentlichen Bezeichner für diese Dokumenttypdefinition (DTD).</summary>
+        <value>Ein <see cref="T:System.String" /> , die den öffentlichen Bezeichner für diese Dokumenttypdefinition (DTD) enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein XML-Dokument eine externe öffentliche DTD verwendet wird, enthält diese Eigenschaft den öffentlichen Bezeichner der externen DTD.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemId">
+      <MemberSignature Language="C#" Value="public string SystemId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SystemId" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDocumentType.SystemId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Systembezeichner für diese Dokumenttypdefinition (DTD).</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den Systembezeichner für diese Dokumenttypdefinition (DTD).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein XML-Dokument eine externe private DTD verwendet wird, enthält diese Eigenschaft den privaten Bezeichner der externen DTD.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine XML-Dokument, das auf eine externe private DTD verweist. Die DTD muss sich nicht auf eine interne Teilmenge aus. Der Aufruf der <xref:System.Xml.Linq.XDocumentType> Konstruktors wird die Verwendung der externen private DTD. Es übergibt `null` für die interne Teilmenge.  
+  
+```csharp  
+  
+                string pubsDtd =  
+@"<!ELEMENT Pubs (Book+)>  
+<!ELEMENT Book (Title, Author)>  
+<!ELEMENT Title (#PCDATA)>  
+<!ELEMENT Author (#PCDATA)>";  
+File.WriteAllText("Pubs.dtd", pubsDtd);  
+  
+string target = "xml-stylesheet";  
+string data = "href=\"mystyle.css\" title=\"Compact\" type=\"text/css\"";  
+  
+XDocument doc = new XDocument(  
+    new XDocumentType("Pubs", null, "Pubs.dtd", null),  
+    new XElement("Pubs",   
+        new XElement("Book",  
+            new XElement("Title", "Artifacts of Roman Civilization"),  
+            new XElement("Author", "Moreno, Jordao")  
+        ),  
+        new XElement("Book",  
+            new XElement("Title", "Midieval Tools and Implements"),  
+            new XElement("Author", "Gazit, Inbar")  
+        )  
+    ),  
+    new XComment("This is another comment.")  
+);  
+doc.Declaration = new XDeclaration("1.0", "utf-8", "true");  
+doc.Save("Pubs.xml");  
+  
+// Validate Pubs.xml against Pubs.dtd.  
+XmlReaderSettings xrs = new XmlReaderSettings();  
+xrs.ProhibitDtd = false;  
+xrs.ValidationType = ValidationType.DTD;  
+xrs.ConformanceLevel = ConformanceLevel.Auto;  
+XmlReader xr = XmlReader.Create("Pubs.xml", xrs);  
+XDocument doc2 = XDocument.Load(xr);  
+  
+XDocumentType dt = doc2.Document.DocumentType;  
+Console.WriteLine("SystemId:{0}", dt.SystemId);  
+```  
+  
+```vb  
+  
+                Dim pubsDtd As String = _   
+    "<!ELEMENT Pubs (Book+)>" & Environment.NewLine & _  
+    "<!ELEMENT Book (Title, Author)>" & Environment.NewLine & _  
+    "<!ELEMENT Title (#PCDATA)>" & Environment.NewLine & _  
+    "<!ELEMENT Author (#PCDATA)>"  
+File.WriteAllText("Pubs.dtd", pubsDtd)  
+  
+Dim target As String = "xml-stylesheet"  
+Dim data As String = "href='mystyle.css' title='Compact' type='text/css'"  
+  
+Dim doc As XDocument = _  
+    <?xml version='1.0'?>  
+    <Pubs>  
+        <Book>  
+            <Title>Artifacts of Roman Civilization</Title>  
+            <Author>Moreno, Jordao</Author>  
+        </Book>  
+        <Book>  
+            <Title>Midieval Tools and Implements</Title>  
+            <Author>Gazit, Inbar</Author>  
+        </Book>  
+    </Pubs>  
+    <!--This is another comment.-->  
+  
+doc _  
+.FirstNode _  
+.AddBeforeSelf(New XDocumentType("Pubs", Nothing, "Pubs.dtd", Nothing))  
+  
+doc.Declaration = New XDeclaration("1.0", "utf-8", "true")  
+doc.Save("Pubs.xml")  
+  
+' Validate Pubs.xml against Pubs.dtd.  
+Dim xrs As XmlReaderSettings = New XmlReaderSettings()  
+xrs.ProhibitDtd = False  
+xrs.ValidationType = ValidationType.DTD  
+xrs.ConformanceLevel = ConformanceLevel.Auto  
+Dim xr As XmlReader = XmlReader.Create("Pubs.xml", xrs)  
+Dim doc2 As XDocument = XDocument.Load(xr)  
+  
+Dim dt As XDocumentType = doc2.Document.DocumentType  
+Console.WriteLine("SystemId:{0}", dt.SystemId)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+SystemId:Pubs.dtd  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XDocumentType.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlWriter" />, in den diese Methode schreibt.</param>
+        <summary>Schreiben Sie dies <see cref="T:System.Xml.Linq.XDocumentType" /> auf eine <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern verwendet, durch die Methoden, die eine XML-Struktur zum Schreiben einer <xref:System.Xml.XmlWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteToAsync (System.Xml.XmlWriter writer, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteToAsync(class System.Xml.XmlWriter writer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XDocumentType.WriteToAsync(System.Xml.XmlWriter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

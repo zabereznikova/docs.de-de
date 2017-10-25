@@ -1,0 +1,369 @@
+<Type Name="TypeBrowserDialog" FullName="System.Workflow.ComponentModel.Design.TypeBrowserDialog">
+  <TypeSignature Language="C#" Value="public sealed class TypeBrowserDialog : System.Windows.Forms.Form, IServiceProvider, System.ComponentModel.ISite" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TypeBrowserDialog extends System.Windows.Forms.Form implements class System.ComponentModel.ISite, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.TypeBrowserDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Form</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISite</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Dialogfeld für die Auswahl eines Typs durch den Benutzer dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Der Benutzer wird durch diese Klasse zum Durchsuchen einer Liste von Windows Workflow Foundation- und .NET Framework-Namespaces sowie der darin enthaltenen Typen und zur Auswahl eines Typs aufgefordert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeBrowserDialog (IServiceProvider serviceProvider, System.Workflow.ComponentModel.Design.ITypeFilterProvider filterProvider, string selectedTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider, class System.Workflow.ComponentModel.Design.ITypeFilterProvider filterProvider, string selectedTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.#ctor(System.IServiceProvider,System.Workflow.ComponentModel.Design.ITypeFilterProvider,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="filterProvider" Type="System.Workflow.ComponentModel.Design.ITypeFilterProvider" />
+        <Parameter Name="selectedTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Der <see cref="T:System.IServiceProvider" />, von dem das Dialogfeld Dienste abruft.</param>
+        <param name="filterProvider">Der <see cref="T:System.Workflow.ComponentModel.Design.ITypeFilterProvider" />, von dem Dienste zum Filtern von Typen abgerufen werden.</param>
+        <param name="selectedTypeName">Der Name des ausgewählten Typs.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.TypeBrowserDialog" />-Klasse mit einem <see cref="T:System.IServiceProvider" />, einem <see cref="T:System.Workflow.ComponentModel.Design.ITypeFilterProvider" /> und einer Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeBrowserDialog (IServiceProvider serviceProvider, System.Workflow.ComponentModel.Design.ITypeFilterProvider filterProvider, string selectedTypeName, System.Workflow.ComponentModel.Compiler.TypeProvider typeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider, class System.Workflow.ComponentModel.Design.ITypeFilterProvider filterProvider, string selectedTypeName, class System.Workflow.ComponentModel.Compiler.TypeProvider typeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.#ctor(System.IServiceProvider,System.Workflow.ComponentModel.Design.ITypeFilterProvider,System.String,System.Workflow.ComponentModel.Compiler.TypeProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="filterProvider" Type="System.Workflow.ComponentModel.Design.ITypeFilterProvider" />
+        <Parameter Name="selectedTypeName" Type="System.String" />
+        <Parameter Name="typeProvider" Type="System.Workflow.ComponentModel.Compiler.TypeProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Der <see cref="T:System.IServiceProvider" />, von dem Dienste abgerufen werden.</param>
+        <param name="filterProvider">Der <see cref="T:System.Workflow.ComponentModel.Design.ITypeFilterProvider" />, von dem Dienste zum Filtern von Typen abgerufen werden.</param>
+        <param name="selectedTypeName">Der Name des ausgewählten Typs.</param>
+        <param name="typeProvider">Der <see cref="T:System.Workflow.ComponentModel.Compiler.TypeProvider" />, der es ermöglicht, dass lokale Assemblys im Typbrowserdialogfeld geladen werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.TypeBrowserDialog" />-Klasse unter Verwendung von <see cref="T:System.IServiceProvider" />, <see cref="T:System.Workflow.ComponentModel.Design.ITypeFilterProvider" />, einer Zeichenfolge und von <see cref="T:System.Workflow.ComponentModel.Compiler.TypeProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosing">
+      <MemberSignature Language="C#" Value="protected override void OnClosing (System.ComponentModel.CancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosing(class System.ComponentModel.CancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.OnClosing(System.ComponentModel.CancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.CancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHelpRequested">
+      <MemberSignature Language="C#" Value="protected override void OnHelpRequested (System.Windows.Forms.HelpEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHelpRequested(class System.Windows.Forms.HelpEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.OnHelpRequested(System.Windows.Forms.HelpEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.HelpEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs paintArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs paintArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paintArgs" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="paintArgs">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">To be added.</param>
+        <param name="keyData">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedType">
+      <MemberSignature Language="C#" Value="public Type SelectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SelectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.TypeBrowserDialog.SelectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vom Benutzer ausgewählten Typ im Typbrowser-Dialogfeld ab.</summary>
+        <value>Der vom Benutzer ausgewählte <see cref="T:System.Type" /> im Typbrowser-Dialogfeld.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISite.Component">
+      <MemberSignature Language="C#" Value="System.ComponentModel.IComponent System.ComponentModel.ISite.Component { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent System.ComponentModel.ISite.Component" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System#ComponentModel#ISite#Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Komponente ab, die dem Typbrowserdialogfeld zugeordnet werden soll.</summary>
+        <value>Die <see cref="T:System.ComponentModel.IComponent" />, die an <see cref="T:System.Workflow.ComponentModel.Design.TypeBrowserDialog" /> gebunden werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls für die Eigenschaft ein gültiger Wert &#8211; alle Werte mit Ausnahme eines NULL-Verweises (`Nothing` in Visual Basic) &#8211; zurückgegeben wird, wurde die Komponente dem <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> hinzugefügt.  
+  
+ Diese Eigenschaft ist erforderlich, da <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> von <xref:System.ComponentModel.ISite> implementiert wird. Für <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> gibt <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System%23ComponentModel%23ISite%23Component?displayProperty=nameWithType> immer einen NULL-Verweis (`Nothing` in Visual Basic) zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISite.Container">
+      <MemberSignature Language="C#" Value="System.ComponentModel.IContainer System.ComponentModel.ISite.Container { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer System.ComponentModel.ISite.Container" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System#ComponentModel#ISite#Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Container ab, der dem Typbrowserdialogfeld zugeordnet werden soll.</summary>
+        <value>Das <see cref="T:System.ComponentModel.IContainer" />, das <see cref="T:System.Workflow.ComponentModel.Design.TypeBrowserDialog" /> zugewiesen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System%23ComponentModel%23ISite%23Container> einen NULL-Verweis zurückgibt (`Nothing` in Visual Basic), wurde von <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System%23ComponentModel%23ISite%23Component> keine <xref:System.ComponentModel.IComponent> an <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> gebunden  
+  
+ Diese Methode ist erforderlich, da <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> von <xref:System.ComponentModel.ISite> implementiert wird. Für <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> gibt <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System%23ComponentModel%23ISite%23Container?displayProperty=nameWithType> immer einen NULL-Verweis (`Nothing` in Visual Basic) zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISite.DesignMode">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.ISite.DesignMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.ISite.DesignMode" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System#ComponentModel#ISite#DesignMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich das Typbrowserdialogfeld im Entwurfsmodus befindet.</summary>
+        <value>
+          <see langword="true" />, wenn sich <see cref="T:System.Workflow.ComponentModel.Design.TypeBrowserDialog" /> im Entwurfsmodus befindet, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist erforderlich, da <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> von <xref:System.ComponentModel.ISite> implementiert wird. Für <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> gibt <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System%23ComponentModel%23ISite%23DesignMode%2A?displayProperty=nameWithType> immer `true` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISite.Name">
+      <MemberSignature Language="C#" Value="string System.ComponentModel.ISite.Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.ComponentModel.ISite.Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System#ComponentModel#ISite#Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Komponente ab, die dem Typbrowserdialogfeld zugeordnet ist, oder legt ihn fest.</summary>
+        <value>Der Name der Komponente, die dem Typbrowserdialogfeld zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist erforderlich, da <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog> von <xref:System.ComponentModel.ISite> implementiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IServiceProvider.GetService">
+      <MemberSignature Language="C#" Value="object IServiceProvider.GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IServiceProvider.GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System#IServiceProvider#GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der <see cref="T:System.Type" /> des abzurufenden Dienstobjekts.</param>
+        <summary>Ruft das Dienstobjekt für den angegebenen Typ ab.</summary>
+        <returns>Ein Dienstobjekt vom Typ <paramref name="serviceType" /> oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), falls kein Dienstobjekt vom Typ <paramref name="serviceType" /> vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls `serviceType` vom Typ <xref:System.Workflow.ComponentModel.Compiler.ITypeProvider> ist, wird von <xref:System.Workflow.ComponentModel.Design.TypeBrowserDialog.System%23IServiceProvider%23GetService%2A> ein Dienstobjekt zurückgegeben. Andernfalls wird ein NULL-Verweis (`Nothing` in Visual Basic) zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,458 @@
+<Type Name="Panel" FullName="System.Windows.Forms.Panel">
+  <TypeSignature Language="C#" Value="public class Panel : System.Windows.Forms.ScrollableControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Panel extends System.Windows.Forms.ScrollableControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Panel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ScrollableControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Paint")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("BorderStyle")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.PanelDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Docking(System.Windows.Forms.DockingBehavior.Ask)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Wird zum Gruppieren von Auflistungen von Steuerelementen verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.Panel> ist ein Steuerelement, das andere Steuerelemente enthält. Sie können eine <xref:System.Windows.Forms.Panel> zum Gruppieren von Auflistungen von Steuerelementen, z. B. eine Gruppe von <xref:System.Windows.Forms.RadioButton> Steuerelemente. Wie bei anderen Containersteuerelementen wie z. B. die <xref:System.Windows.Forms.GroupBox> zu steuern, wenn die <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Control.Enabled%2A> -Eigenschaftensatz auf `false`, enthaltenen Steuerelemente den <xref:System.Windows.Forms.Panel> ebenfalls deaktiviert.  
+  
+ Die <xref:System.Windows.Forms.Panel> Steuerelement wird in der Standardeinstellung ohne Rahmen angezeigt. Geben Sie eine Standard- oder dreidimensionalen Rahmen mithilfe der <xref:System.Windows.Forms.Panel.BorderStyle%2A> Eigenschaft, um den Bereich des Bereichs aus anderen Bereichen im Formular zu unterscheiden. Da die <xref:System.Windows.Forms.Panel> Steuerelement leitet sich von der <xref:System.Windows.Forms.ScrollableControl> -Klasse, die Sie verwenden die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> Eigenschaft zum Aktivieren von Bildlaufleisten in der <xref:System.Windows.Forms.Panel> Steuerelement. Wenn die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`, alle Steuerelemente befindet sich innerhalb der <xref:System.Windows.Forms.Panel> (Dies ist jedoch außerhalb der sichtbaren Bereich), um mit der bereitgestellten Schiebeleisten Bildlauf möglich.  
+  
+ Die <xref:System.Windows.Forms.Panel> Steuerelement zeigt keine Beschriftung. Wenn Sie ein Steuerelement ähnelt benötigen einer <xref:System.Windows.Forms.Panel> können, die eine Beschriftung anzeigen, finden Sie unter der <xref:System.Windows.Forms.GroupBox> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Panel> steuern und fügt eine <xref:System.Windows.Forms.Label> und ein <xref:System.Windows.Forms.TextBox> auf die <xref:System.Windows.Forms.Panel>. Die <xref:System.Windows.Forms.Panel> Steuerelement wird angezeigt, mit einem dreidimensionalen Rahmen Where unterscheiden der <xref:System.Windows.Forms.Panel> Steuerelement befindet sich in Bezug auf andere Objekte auf dem Formular. Dieses Beispiel benötigen Sie, dass die Methode, die in diesem Beispiel definierte aus, in ein vorhandenes Formular, und dass aufgerufen wird die <xref:System.Drawing?displayProperty=nameWithType> Namespace auf den Quellcode für das Formular hinzugefügt wurde.  
+  
+ [!code-cpp[Classic Panel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Panel Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Panel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Panel Example/CS/source.cs#1)]
+ [!code-vb[Classic Panel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Panel Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Panel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Panel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Panel" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Panel.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Größe des Steuerelements automatisch an dessen Inhalt angepasst wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement seine Größe automatisch ändert, die an dessen Inhalt angepasst werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Panel.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.Panel.AutoSize" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Panel.AutoSizeChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Panel> mit dem Namen `Panel1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Panel.AutoSizeChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#384](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#384)]
+ [!code-vb[System.Windows.Forms.EventExamples#384](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#384)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeMode">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.AutoSizeMode AutoSizeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoSizeMode AutoSizeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Panel.AutoSizeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das automatische Größenanpassungsverhalten des Steuerelements an.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.AutoSizeMode" />-Werte.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert beim Festlegen dieser Eigenschaft kein gültiger ist <see cref="T:System.Windows.Forms.AutoSizeMode" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Panel.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Rahmenart des Steuerelements an.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.BorderStyle" />-Werte. Die Standardeinstellung ist <see langword="BorderStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.Panel> Steuerelement wird ohne Rahmen angezeigt. Sie können diese Eigenschaft verwenden, um die Grenzen eines zu unterscheiden der <xref:System.Windows.Forms.Panel> aus anderen Bereichen Formular auf das Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Panel> Steuerelement mit einem dreidimensionalen Rahmen.  
+  
+ [!code-cpp[Classic Panel.BorderStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Panel.BorderStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Panel.BorderStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Panel.BorderStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic Panel.BorderStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Panel.BorderStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der beim Festlegen dieser Eigenschaft angegebene Wert ist kein gültiger <see cref="T:System.Windows.Forms.BorderStyle" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Panel.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benötigten Erstellungsparameter ab, wenn das Steuerelementhandle erstellt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Panel.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Die Standard-<see cref="T:System.Drawing.Size" /> des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Panel.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Panel.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyPressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Panel.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResize">
+      <MemberSignature Language="C#" Value="protected override void OnResize (EventArgs eventargs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnResize(class System.EventArgs eventargs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Panel.OnResize(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventargs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventargs">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das Ereignis aus, das angibt, dass die Größe des Bereichs geändert wurde. Erbende Steuerelemente sollten diese zugunsten tatsächlich das Ereignis überwacht verwenden, jedoch sollten dennoch aufrufen <see langword="base.onResize" /> um sicherzustellen, dass das Ereignis für externe Listener ausgelöst wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Panel.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Benutzer den Fokus mit der TAB-TASTE auf dieses Steuerelement setzen können, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Fokus mit der TAB-TASTE auf dieses Steuerelement gesetzt werden kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer die TAB-Taste drückt, wird der Eingabefokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt. Steuert die <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaftswert `false` sind nicht in die Auflistung der Steuerelemente in der Aktivierreihenfolge enthalten. Die Reihenfolge der Registerkarten kann bearbeitet werden, indem Sie des Steuerelements festlegen <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaftswert.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Panel.TabStop%2A> Eigenschaft hat keine Auswirkungen auf die <xref:System.Windows.Forms.Panel> steuern, da es sich um ein Containerobjekt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Panel.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <value>Der diesem Steuerelement zugeordnete Text.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Panel.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Panel.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung für dieses Steuerelement zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> Darstellung des Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

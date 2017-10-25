@@ -1,0 +1,76 @@
+<Type Name="SubscriptionListChangedEventArgs" FullName="System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class SubscriptionListChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SubscriptionListChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die qualifizierenden Informationen an eine Rückrufmethode bei einer <see cref="E:System.Net.PeerToPeer.Collaboration.ContactManager.SubscriptionListChanged" /> Ereignis signalisiert wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PeerChangeType">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerChangeType PeerChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.PeerChangeType PeerChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs.PeerChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ der Änderung, die aufgetreten ist.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerChangeType" />Enumeration, die den Typ der Änderung angibt, die für die Abonnementliste ausgeführt werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerContact">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContact PeerContact { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerContact PeerContact" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs.PeerContact" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> für die die Abonnementliste geändert wurde.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />das Objekt für die die Abonnementliste geändert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs.PeerEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> für die Subscription-Benachrichtigung empfangen wurde.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />das Objekt für die die Abonnementliste geändert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

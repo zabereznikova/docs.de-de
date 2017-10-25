@@ -1,0 +1,320 @@
+<Type Name="Acknowledgment" FullName="System.Messaging.Acknowledgment">
+  <TypeSignature Language="C#" Value="public enum Acknowledgment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed Acknowledgment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Acknowledgment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Ergebnis einer versuchten Nachrichtenübermittlung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Acknowledgment> Klasse definiert die Typen von Bestätigungsnachrichten, die Message Queuing sendet die Verwaltungswarteschlange und die Bedingungen, die dazu führen, dass eine Bestätigungsnachricht gesendet werden. Bestätigung-Typen können grob in vier Gruppen aufgeteilt werden: positive Ankunft Bestätigungen, positive read Bestätigungen Ankunft negative Bestätigungen und unbestätigte lesen.  
+  
+ Die Meldung zugeordnete Verwaltungswarteschlange wird angegeben, der <xref:System.Messaging.Message.AdministrationQueue%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Message Queuing-legt die <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> -Eigenschaft auf einen der der <xref:System.Messaging.Acknowledgment> -Enumerationswerte, wenn es sich um eine Bestätigungsnachricht erstellt. Die <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> Eigenschaftswert ist in der Regel sinnvoll nur wenn die Instanz auf eine System gesendeten Bestätigungsnachricht verweist. Lesen der <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> -Eigenschaft für eine Nachricht als eine Bestätigungsnachricht löst eine Ausnahme aus.  
+  
+ Message Queuing sendet keine Bestätigungsnachricht, es sei denn, die sendende Anwendung anfordert, dass sie dies tun. Die Anwendung macht diese Anforderung durch Festlegen des entsprechenden Werts für die <xref:System.Messaging.Message.AcknowledgeType%2A?displayProperty=nameWithType> Eigenschaft. Message Queuing sendet alle Bestätigungsnachrichten an die Verwaltungswarteschlange angegeben, der <xref:System.Messaging.Message.AdministrationQueue%2A> Eigenschaft des ursprünglichen <xref:System.Messaging.Message>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessDenied">
+      <MemberSignature Language="C#" Value="AccessDenied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment AccessDenied = int32(32772)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.AccessDenied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass die sendende Anwendung nicht die erforderlichen Rechte zum Senden einer Nachricht an eine Zielwarteschlange verfügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadDestinationQueue">
+      <MemberSignature Language="C#" Value="BadDestinationQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment BadDestinationQueue = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.BadDestinationQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass die Zielwarteschlange nicht an die sendende Anwendung verfügbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadEncryption">
+      <MemberSignature Language="C#" Value="BadEncryption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment BadEncryption = int32(32775)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.BadEncryption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass der Zielwarteschlangen-Manager eine private Nachricht nicht entschlüsseln kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadSignature">
+      <MemberSignature Language="C#" Value="BadSignature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment BadSignature = int32(32774)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.BadSignature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass die ursprüngliche Nachricht digitale Signatur ungültig ist und nicht von Message Queuing authentifiziert werden konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CouldNotEncrypt">
+      <MemberSignature Language="C#" Value="CouldNotEncrypt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment CouldNotEncrypt = int32(32776)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.CouldNotEncrypt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass der Quellwarteschlangen-Manager nicht auf eine private Nachricht verschlüsselt konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HopCountExceeded">
+      <MemberSignature Language="C#" Value="HopCountExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment HopCountExceeded = int32(32773)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.HopCountExceeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung, der angibt, dass die ursprüngliche Nachricht Hopanzahl (die die Anzahl von zwischengeschalteten Servern angibt) überschritten wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Anzahl von Hops, 15, wird vom Message Queuing festgelegt und ist unveränderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Nachricht ist keine Bestätigungsnachricht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotTransactionalMessage">
+      <MemberSignature Language="C#" Value="NotTransactionalMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment NotTransactionalMessage = int32(32778)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.NotTransactionalMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass eine nicht transaktionale Meldung an eine transaktionale Warteschlange gesendet wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotTransactionalQueue">
+      <MemberSignature Language="C#" Value="NotTransactionalQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment NotTransactionalQueue = int32(32777)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.NotTransactionalQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass eine Transaktionsnachricht an eine nicht transaktionale Warteschlange gesendet wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Purged">
+      <MemberSignature Language="C#" Value="Purged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment Purged = int32(32769)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.Purged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass die Nachricht vor dem Erreichen der Zielwarteschlange gelöscht wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueDeleted">
+      <MemberSignature Language="C#" Value="QueueDeleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment QueueDeleted = int32(49152)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.QueueDeleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lesen Sie eine Negative Bestätigung gibt an, dass die Warteschlange wurde gelöscht, bevor die Nachricht gelesen werden konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueExceedMaximumSize">
+      <MemberSignature Language="C#" Value="QueueExceedMaximumSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment QueueExceedMaximumSize = int32(32771)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.QueueExceedMaximumSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass die ursprüngliche Nachricht nicht zugestellt wurde, da die Zielwarteschlange voll ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuePurged">
+      <MemberSignature Language="C#" Value="QueuePurged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment QueuePurged = int32(49153)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.QueuePurged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lesen Sie eine Negative Bestätigung gibt an, dass die Warteschlange wurde geleert, bevor die Nachricht gelesen werden konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachQueue">
+      <MemberSignature Language="C#" Value="ReachQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment ReachQueue = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.ReachQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine positive Eingangsbestätigung gibt an, dass die ursprüngliche Nachricht ihre Zielwarteschlange erreicht hat.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachQueueTimeout">
+      <MemberSignature Language="C#" Value="ReachQueueTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment ReachQueueTimeout = int32(32770)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.ReachQueueTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine negative Eingangsbestätigung gibt an, dass die Zeit für den Reach in der Warteschlange oder das Zeitlimit auf den Empfang der Zeitgeber ist abgelaufen, bevor die ursprüngliche Nachricht die Zielwarteschlange erreicht werden könnten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive">
+      <MemberSignature Language="C#" Value="Receive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment Receive = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.Receive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Positive Bestätigung, dass die ursprüngliche Nachricht von der empfangenden Anwendung empfangen wurde gelesen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTimeout">
+      <MemberSignature Language="C#" Value="ReceiveTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment ReceiveTimeout = int32(49154)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.ReceiveTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Negative Bestätigung, dass die ursprüngliche Nachricht nicht aus der Warteschlange empfangen wurde, bevor der Zeit auf den empfangen-Zeitgeber abgelaufen ist zu lesen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

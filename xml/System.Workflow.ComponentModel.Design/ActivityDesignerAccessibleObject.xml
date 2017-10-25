@@ -1,0 +1,342 @@
+<Type Name="ActivityDesignerAccessibleObject" FullName="System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject">
+  <TypeSignature Language="C#" Value="public class ActivityDesignerAccessibleObject : System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityDesignerAccessibleObject extends System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.AccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert ein verfügbares Objekt, mit dem <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />-Klassen die Benutzeroberfläche des Designers für Benutzer mit Behinderungen anpassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesignerAccessibleObject (System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.#ctor(System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="activityDesigner">Der auf das verfügbare Objekt anzuwendende <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" />-Klasse, indem der angegebene <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> verwendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityDesigner">
+      <MemberSignature Language="C#" Value="protected System.Workflow.ComponentModel.Design.ActivityDesigner ActivityDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesigner ActivityDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.ActivityDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> ab, für den das Objekt angewendet werden soll.</summary>
+        <value>Der <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, für den das Eingabehilfenobjekt übernommen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position und Größe des Eingabehilfenobjekts ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" />, das die Begrenzungen des zugreifbaren Objekts darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAction">
+      <MemberSignature Language="C#" Value="public override string DefaultAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAction" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.DefaultAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die die Standardaktion des Aktivitätsdesigners beschreibt.</summary>
+        <value>Eine Beschreibung der dem Aktivitätsdesigner zugeordneten Standardaktion oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), falls das Objekt über keine Standardaktion verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird auf der Designeroberfläche für Benutzer mit Behinderungen angezeigt. Nicht alle Aktivitätsdesigner besitzen eine Standardaktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public override string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die die visuelle Darstellung des Aktivitätsdesigners beschreibt.</summary>
+        <value>Eine Beschreibung der visuellen Darstellung des Aktivitätsdesigners oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), falls das Objekt über keine Beschreibung verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird auf der Designeroberfläche für Benutzer mit Behinderungen angezeigt. Nicht alle Aktivitätsdesigner besitzen eine Beschreibung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Standardaktion aus, die <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" /> zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clients können die Standardaktion des Designers abrufen, indem sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.DefaultAction%2A> verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der anzufordernde Dienst-<see cref="T:System.Type" />.</param>
+        <summary>Gibt den Dienst zurück, der vom angegebenen Typ definiert wird, der <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> zugeordnet ist.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das den angeforderten Dienst darstellt, oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn der Dienst nicht aufgelöst werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="public override string Help { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Help" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Help" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung der Funktion oder der Verwendungsart der Aktivität ab, die dem Aktivitätsdesigner zugeordnet ist.</summary>
+        <value>Eine Zeichenfolge, die eine Beschreibung der Funktion oder der Verwendungsart der Aktivität enthält, die dem Aktivitätsdesigner zugeordnet ist, oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn keine Hilfe definiert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der dem <see cref="T:System.Workflow.ComponentModel.Activity" /> des verfügbaren Objekts zugeordneten <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> ab oder legt diesen fest.</summary>
+        <value>Der Name von <see cref="T:System.Workflow.ComponentModel.Activity" /> oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn die Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Name%2A>-Eigenschaft ist eine Zeichenfolge, die von Clients zum Kennzeichnen, Suchen oder Ankündigen einer Aktivität für den Benutzer verwendet werden. Für den Zugriff auf den Namen einer untergeordneten Aktivität müssen Sie zunächst <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> mit dem Index des Namens der untergeordneten Aktivität aufrufen, die Sie abrufen möchten.  
+  
+ Sie können einen festgelegten Vorgang auf <xref:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Name%2A> nicht ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject Navigate (System.Windows.Forms.AccessibleNavigation navdir);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject Navigate(valuetype System.Windows.Forms.AccessibleNavigation navdir) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Navigate(System.Windows.Forms.AccessibleNavigation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navdir" Type="System.Windows.Forms.AccessibleNavigation" />
+      </Parameters>
+      <Docs>
+        <param name="navdir">Einer der <see cref="T:System.Windows.Forms.AccessibleNavigation" />-Werte.</param>
+        <summary>Gibt das <see cref="T:System.Windows.Forms.AccessibleObject" /> zurück, das dem durch die angegebene <see cref="T:System.Windows.Forms.AccessibleNavigation" /> definierten Ort zugeordnet ist.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.AccessibleObject" /> an der angegebenen Position.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" /> ab.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.AccessibleObject" /> für das übergeordnete Element des aktuellen <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" /> oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), falls kein übergeordnetes verfügbares Objekt vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rolle des aktuellen <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" /> ab.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.AccessibleRole" />-Werte oder <see cref="F:System.Windows.Forms.AccessibleRole.None" />, wenn keine Rolle angegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine zur Darstellung von Daten als Diagramm verwendete Grafik kann mit dem <xref:System.Windows.Forms.AccessibleRole.Diagram>-Member von <xref:System.Windows.Forms.AccessibleRole> abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public override void Select (System.Windows.Forms.AccessibleSelection flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Select(valuetype System.Windows.Forms.AccessibleSelection flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.Select(System.Windows.Forms.AccessibleSelection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Windows.Forms.AccessibleSelection" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Einer der <see cref="T:System.Windows.Forms.AccessibleSelection" />-Werte.</param>
+        <summary>Ändert die Auswahl oder verschiebt den Tastaturfokus von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den verfügbaren Zustand des aktuellen <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject" /> ab.</summary>
+        <value>Eine Kombination von <see cref="T:System.Windows.Forms.AccessibleStates" />-Werten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für <xref:System.Workflow.ComponentModel.Design.ActivityDesignerAccessibleObject.State%2A> sind folgende Werte möglich:  
+  
+ <xref:System.Windows.Forms.AccessibleStates.Selected>, <xref:System.Windows.Forms.AccessibleStates.Selectable>, <xref:System.Windows.Forms.AccessibleStates.MultiSelectable>, <xref:System.Windows.Forms.AccessibleStates.Focused>, <xref:System.Windows.Forms.AccessibleStates.Focusable>, <xref:System.Windows.Forms.AccessibleStates.ReadOnly>, <xref:System.Windows.Forms.AccessibleStates.Moveable> und <xref:System.Windows.Forms.AccessibleStates.Invisible>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

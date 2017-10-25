@@ -1,0 +1,162 @@
+<Type Name="CompositeScriptReference" FullName="System.Web.UI.CompositeScriptReference">
+  <TypeSignature Language="C#" Value="public class CompositeScriptReference : System.Web.UI.ScriptReferenceBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositeScriptReference extends System.Web.UI.ScriptReferenceBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.CompositeScriptReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ScriptReferenceBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von Skriptverweisen in einem einzigen zusammengesetzten Skript kombiniert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl der Skript verweist, die eine <xref:System.Web.UI.CompositeScriptReference> Instanz darf durch die Größe der resultierenden URL beschränkt. Die URL darf nicht länger als 1.024 Zeichen sein.  
+  
+ Wenn Sie diese Einschränkung umgehen müssen, müssen Sie zwei Optionen zur Verfügung. Die erste Möglichkeit besteht in der Reduzierung der <xref:System.Web.UI.ScriptReference> Objekten, das zusammengesetzte Skript enthält. Die zweite Möglichkeit besteht, die Skripts manuell in eine einzelne statische Datei kombinieren. In diesem Fall können Sie festlegen der <xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft, um den Speicherort der Datei.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositeScriptReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompositeScriptReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.CompositeScriptReference" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUrl">
+      <MemberSignature Language="C#" Value="protected override string GetUrl (System.Web.UI.ScriptManager scriptManager, bool zip);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string GetUrl(class System.Web.UI.ScriptManager scriptManager, bool zip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompositeScriptReference.GetUrl(System.Web.UI.ScriptManager,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="zip" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Die <see langword="ScriptManager" /> Steuerelement auf der Ziel-Webseite.</param>
+        <param name="zip">
+          <see langword="true" />um das Skript zu komprimieren; andernfalls <see langword="false" />.</param>
+        <summary>Gibt die URL, die als Wert des gerendert wird die <see langword="src" /> Attribut von der <see langword="script" /> Element.</summary>
+        <returns>Eine Zeichenfolge, die eine URL enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAjaxFrameworkScript">
+      <MemberSignature Language="C#" Value="protected override bool IsAjaxFrameworkScript (System.Web.UI.ScriptManager scriptManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsAjaxFrameworkScript(class System.Web.UI.ScriptManager scriptManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript(System.Web.UI.ScriptManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Die <see cref="T:System.Web.UI.ScriptManager" /> -Objekt, das auf der Seite enthalten ist.</param>
+        <summary>Bestimmt, ob das zusammengesetzte Skript einen Verweis auf ein ASP.NET AJAX-Framework-Skript.</summary>
+        <returns>
+          <see langword="true" />Wenn das zusammengesetzte Skript einen Verweis auf ein ASP.NET AJAX-Framework-Skript ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFromSystemWebExtensions">
+      <MemberSignature Language="C#" Value="protected override bool IsFromSystemWebExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsFromSystemWebExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use IsAjaxFrameworkScript(ScriptManager)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob das zusammengesetzte Skript einen Verweis auf ein ASP.NET AJAX-Framework-Skript enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das zusammengesetzte Skript einen Verweis auf ein ASP.NET AJAX-Framework-Skript enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scripts">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ScriptReferenceCollection Scripts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ScriptReferenceCollection Scripts" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CompositeScriptReference.Scripts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.CollectionEditorBase, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ScriptReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Skriptverweisen, die in das zusammengesetzte Skript-Objekt enthalten sind.</summary>
+        <value>Eine Auflistung von Skriptverweisen, die in das zusammengesetzte Skript-Objekt enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,36 @@
+<Type Name="ThreadStartException" FullName="System.Threading.ThreadStartException">
+  <TypeSignature Language="C#" Value="public sealed class ThreadStartException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ThreadStartException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadStartException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn ein Fehler in einem verwalteten Thread auftritt, nachdem der Thread des zugrunde liegenden Betriebssystems gestartet wurde, jedoch bevor der Thread bereit ist, Benutzercode auszuführen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Ausnahme die <xref:System.Exception.InnerException%2A> Eigenschaft enthält Informationen über die Ursache des Fehlers.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

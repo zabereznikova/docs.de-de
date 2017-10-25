@@ -1,0 +1,57 @@
+<Type Name="LogicalDirection" FullName="System.Windows.Documents.LogicalDirection">
+  <TypeSignature Language="C#" Value="public enum LogicalDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogicalDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.LogicalDirection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, in denen bestimmte Text Vorgänge, wie das Einfügen, abrufen, oder Navigieren in Text relativ zu einer angegebenen Position eine logische Richtung (ein <see cref="T:System.Windows.Documents.TextPointer" />).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Einer der Methoden in der-diese Enumeration verwendet wird, um zu bestimmen, platzieren einer <xref:System.Windows.Documents.TextPointer> wenn neuer Inhalt eingefügt wird.  Wert **rückwärts** Position des Texts an direkt vor dem neuen Inhalt platziert, während ein Wert von **Vorwärts** platziert die <xref:System.Windows.Documents.TextPointer> direkt nach dem neuen Inhalt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Backward">
+      <MemberSignature Language="C#" Value="Backward" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Documents.LogicalDirection Backward = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.LogicalDirection.Backward" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.LogicalDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rückwärts oder von rechts nach links.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Forward">
+      <MemberSignature Language="C#" Value="Forward" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Documents.LogicalDirection Forward = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.LogicalDirection.Forward" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.LogicalDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorwärts oder von links nach rechts.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

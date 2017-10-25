@@ -1,0 +1,688 @@
+<Type Name="DataGridColumnCollection" FullName="System.Web.UI.WebControls.DataGridColumnCollection">
+  <TypeSignature Language="C#" Value="public sealed class DataGridColumnCollection : System.Collections.ICollection, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataGridColumnCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataGridColumnCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine Auflistung mit von <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> abgeleiteten Spaltenobjekte, die die Spalten in einem <see cref="T:System.Web.UI.WebControls.DataGrid" />-Steuerelement darstellen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung für die programmgesteuerte einer Auflistung von <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleiteten Spaltenobjekte. Diese Objekte darstellen, die Spalten in einem <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Hinzufügen, entfernen oder Einfügen von Spalten in der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.DataGrid.AutoGenerateColumns%2A> -Eigenschaftensatz auf `true,` Spalten erstellt, indem die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement nicht hinzugefügt werden die <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement speichert den Inhalt nicht seine <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung im Ansichtszustand. Zum Hinzufügen oder Entfernen einer Spalte dynamisch, müssen Sie programmgesteuert hinzufügen oder entfernen Sie die Spalte, jedes Mal, wenn die Seite aktualisiert wird. Geben Sie einen `Page_Init` -Funktion, die hinzugefügt oder entfernt die Spalte vor der <xref:System.Web.UI.WebControls.DataGrid> Zustand des Steuerelements wird erneut geladen, und das Steuerelement wird neu erstellt. Andernfalls, die Änderungen an der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung werden nicht berücksichtigt, der <xref:System.Web.UI.WebControls.DataGrid> steuern, wenn es angezeigt wird.  
+  
+> [!NOTE]
+>  Zwar können Sie programmgesteuert Spalten hinzufügen oder entfernen Sie Spalten aus der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement, es ist einfacher, die Spalten statisch aufzulisten und dann mithilfe der <xref:System.Web.UI.WebControls.DataGridColumn.Visible%2A> Eigenschaft zum Anzeigen oder Ausblenden der einzelnen Spalten.  
+  
+ Die Reihenfolge der Spalten in der Auflistung bestimmt die Reihenfolge, die die Spalten, in angezeigt werden der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ Die folgende Tabelle enthält die andere Spalte-Klassen, die Ableitung der <xref:System.Web.UI.WebControls.DataGridColumn> Klasse.  
+  
+|Spaltenklasse|Beschreibung|  
+|------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.BoundColumn>|Eine Spalte, die auf ein Feld in einer Datenquelle gebunden ist. Jedes Element in das Feld als Text angezeigt. Dies ist der Standardtyp für die Spalte für die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ButtonColumn>|Eine Spalte, in dem eine Befehlsschaltfläche für jedes Element in der Spalte angezeigt. Dies ermöglicht Ihnen die Erstellung eine Spalte mit benutzerdefinierten Schaltflächen-Steuerelemente, z. B. Schaltflächen hinzufügen oder entfernen.|  
+|<xref:System.Web.UI.WebControls.EditCommandColumn>|Eine Spalte, die Befehle zum Bearbeiten für jedes Element in der Spalte enthält.|  
+|<xref:System.Web.UI.WebControls.HyperLinkColumn>|Eine Spalte, in dem jedes Element in der Spalte als Hyperlink angezeigt. Der Inhalt der Spalte können auf ein Feld in einer Datenquelle oder an statischen Text gebunden werden.|  
+|<xref:System.Web.UI.WebControls.TemplateColumn>|Eine Spalte, die jedes Element in der Spalte einen angegebenen Vorlage entsprechend anzeigt. Dadurch können Sie den Inhalt der Spalte, z. B. zum Anzeigen von Bildern zu steuern.|  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse ist die Basisklasse für die Spaltenklassen aufgeführt. Sie dient nicht direkt in die <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection> Sammlung dynamisch auf eine Spalte hinzufügen die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Beachten Sie, dass die <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Klasse.  
+  
+ [!code-aspx-csharp[DataGridCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridCtor/CS/datagridctorcs.aspx#1)]
+ [!code-aspx-vb[DataGridCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridCtor/VB/datagridctorvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridColumnCollection (System.Web.UI.WebControls.DataGrid owner, System.Collections.ArrayList columns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataGrid owner, class System.Collections.ArrayList columns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.#ctor(System.Web.UI.WebControls.DataGrid,System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.DataGrid" />
+        <Parameter Name="columns" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Web.UI.WebControls.DataGrid" /> -Steuerelement, das dieser Auflistung entspricht.</param>
+        <param name="columns">Ein <see cref="T:System.Collections.ArrayList" /> , speichert die Auflistung von Spalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DataGridColumnCollection> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.DataGridColumnCollection> Klasse.  
+  
+ [!code-csharp[Classic DataGridColumnCollection.DataGridColumnCollection Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.DataGridColumnCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnCollection.DataGridColumnCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.DataGridColumnCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.DataGridColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.DataGridColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.Add(System.Web.UI.WebControls.DataGridColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.UI.WebControls.DataGridColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spaltenobjekt zum Anfügen an die <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Column-Objekt an das Ende der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Hinzufügen einer <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitete Column-Objekt an das Ende einer <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement speichert den Inhalt nicht seine <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung im Ansichtszustand. Zum Hinzufügen oder Entfernen einer Spalte dynamisch, müssen Sie programmgesteuert hinzufügen oder entfernen Sie die Spalte jedes Mal, wenn die Seite aktualisiert wird. Geben Sie eine `Page_Init` -Funktion, die hinzugefügt oder entfernt die Spalte vor der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement seinen Zustand zu laden und neu erstellen, selbst. Andernfalls, die Änderungen an der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung werden nicht berücksichtigt, der <xref:System.Web.UI.WebControls.DataGrid> steuern, wenn es angezeigt wird.  
+  
+> [!NOTE]
+>  Zwar können Sie programmgesteuert Spalten hinzufügen oder entfernen Sie Spalten aus der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement, es ist einfacher, die Spalten statisch aufzulisten und dann mithilfe der <xref:System.Web.UI.WebControls.DataGridColumn.Visible%2A> Eigenschaft zum Anzeigen oder Ausblenden der einzelnen Spalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.Add%2A> Methode, um eine Spalte dynamisch hinzufügen der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Beachten Sie, dass die <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Klasse.  
+  
+ [!code-aspx-csharp[DataGridCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridCtor/CS/datagridctorcs.aspx#1)]
+ [!code-aspx-vb[DataGridCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridCtor/VB/datagridctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public void AddAt (int index, System.Web.UI.WebControls.DataGridColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAt(int32 index, class System.Web.UI.WebControls.DataGridColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.AddAt(System.Int32,System.Web.UI.WebControls.DataGridColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Web.UI.WebControls.DataGridColumn" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> an dem Einfügen der <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte.</param>
+        <param name="column">Die <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte zum Einfügen in die <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spaltenobjekt in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Einfügen einer <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitete Spaltenobjekt an der angegebenen Indexposition in der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement speichert den Inhalt nicht seine <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung im Ansichtszustand. Zum Hinzufügen oder Entfernen einer Spalte dynamisch, müssen Sie programmgesteuert hinzufügen oder entfernen Sie die Spalte jedes Mal, wenn die Seite aktualisiert wird. Geben Sie eine `Page_Init` -Funktion, die hinzugefügt oder entfernt die Spalte vor der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement seinen Zustand zu laden und neu erstellen, selbst. Andernfalls, die Änderungen an der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung werden nicht berücksichtigt, der <xref:System.Web.UI.WebControls.DataGrid> steuern, wenn es angezeigt wird.  
+  
+> [!NOTE]
+>  Zwar können Sie programmgesteuert Spalten hinzufügen oder entfernen Sie Spalten aus der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement, es ist einfacher, die Spalten statisch aufzulisten und dann mithilfe der <xref:System.Web.UI.WebControls.DataGridColumn.Visible%2A> Eigenschaft zum Anzeigen oder Ausblenden der einzelnen Spalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.AddAt%2A> Methode, um eine Spalte dynamisch hinzufügen der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Beachten Sie, dass die <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ [!code-aspx-csharp[Classic DataGridColumnCollection.AddAt Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.AddAt Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridColumnCollection.AddAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.AddAt Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="column" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleiteten Spaltenobjekte aus der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können alle entfernen <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleiteten Spaltenobjekte aus der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TableRowCollection.Count%2A> -Eigenschaftensatz wird automatisch auf `0` nachdem diese Methode verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.Clear%2A> Methode einen leeren der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung vor der Auflistung neue Spalten hinzugefügt.  
+  
+ [!code-aspx-csharp[Classic DataGridColumnCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.Clear Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridColumnCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.Clear Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes <see cref="T:System.Array" />, das die kopierten Elemente aus der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> empfängt.</param>
+        <param name="index">Die erste Position in der angegebenen <see cref="T:System.Array" /> den kopierten Inhalt empfängt.</param>
+        <summary>Kopiert die Elemente aus der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung mit dem angegebenen <see cref="T:System.Array" />, beginnend am angegebenen Index in die <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.DataGridColumnCollection> in die angegebene Auflistung <xref:System.Array?displayProperty=nameWithType>, beginnend am angegebenen Index.  
+  
+> [!NOTE]
+>  Die `array` Parameter muss eine nullbasierte <xref:System.Array?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.DataGridColumnCollection> -Auflistung in ein Array von <xref:System.Web.UI.WebControls.DataGridColumn> Objekte.  
+  
+ [!code-aspx-csharp[Classic DataGridColumnCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.CopyTo Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridColumnCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.CopyTo Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumnCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung.</summary>
+        <value>Die Anzahl der Spalten in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu bestimmen, die Anzahl der Spalten in der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung. Die <xref:System.Web.UI.WebControls.DataGridColumnCollection.Count%2A> Eigenschaft wird üblicherweise beim Durchlaufen der Auflistung zum Bestimmen der oberen Grenze der Auflistung verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.Count%2A> -Eigenschaft können Sie bestimmen die Obergrenze für die <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung. Dieser Wert wird dann zum Durchlaufen der Auflistung verwendet.  
+  
+ [!code-aspx-csharp[classic datagridcolumncollection.this example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[classic datagridcolumncollection.this example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" /> Schnittstelle, die alle enthält die <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleiteten Spaltenobjekte in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> Schnittstelle, die alle enthält <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleiteten Spaltenobjekte in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> -Schnittstelle, die zum Abrufen jedes einzelnen Elements im durchlaufen werden kann die <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft, um das Element derzeit in der Auflistung verweist.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf die erste Position zu verschieben.  
+  
+> [!NOTE]
+>  Die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode muss aufgerufen werden, nach dem Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> -Objekts oder nach dem Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung zu bewegen. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.GetEnumerator%2A> Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> -Schnittstelle, die durchlaufen werden kann, um den Inhalt anzeigen der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ [!code-aspx-csharp[Classic DataGridColumnCollection.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.GetEnumerator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridColumnCollection.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.GetEnumerator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.DataGridColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.DataGridColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.IndexOf(System.Web.UI.WebControls.DataGridColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.UI.WebControls.DataGridColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte zum Suchen der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />.</param>
+        <summary>Gibt den Index des angegebenen <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spaltenobjekt aus der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung.</summary>
+        <returns>Die Indexposition des angegebenen <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />. Der Standardwert ist <see langword="-1" />, gibt an, dass das angegebene <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Objekt wurde nicht gefunden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestimmen, der die Indexnummer des angegebenen <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitete Spaltenobjekt in der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung. Wenn das angegebene <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleiteten Spalte mit dem Objekt nicht gefunden wird, wird einen Index der `-1` zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.IndexOf%2A> Methode, um zu bestimmen, den Index des eine <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitetes Objekt in eine <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ [!code-aspx-csharp[Classic DataGridColumnCollection.IndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.IndexOf Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridColumnCollection.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.IndexOf Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumnCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Spalten in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung kann geändert werden kann.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` gibt an, dass die <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung in allen Fällen geschrieben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumnCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> -Auflistung synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stammt aus dem <xref:System.Collections.ICollection?displayProperty=nameWithType> -Klasse und wird überschrieben, um stets `false`.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataGridColumnCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataGridColumn this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataGridColumn Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumnCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataGridColumn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> abgerufen.</param>
+        <summary>Ruft eine <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spaltenobjekt aus der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung am angegebenen Index.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitete Spaltenobjekt aus der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung am angegebenen Index mithilfe der Arraynotation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit dem Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitete Spaltenobjekt aus der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung. Die Überschriftentext aus dem <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleiteten Column-Objekt wird auf der Webseite für jedes Element in der Auflistung angezeigt.  
+  
+ [!code-aspx-csharp[classic datagridcolumncollection.this example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[classic datagridcolumncollection.this example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.DataGridColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.DataGridColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.Remove(System.Web.UI.WebControls.DataGridColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.UI.WebControls.DataGridColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte aufheben der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" />.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spaltenobjekt aus der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Entfernen des angegebenen <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitete Spaltenobjekt aus einem <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement speichert den Inhalt nicht seine <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung im Ansichtszustand. Zum Hinzufügen oder Entfernen einer Spalte dynamisch, müssen Sie programmgesteuert hinzufügen oder entfernen Sie die Spalte, jedes Mal, wenn die Seite aktualisiert wird. Geben Sie eine `Page_Init` -Funktion, die hinzugefügt oder entfernt die Spalte vor der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement seinen Zustand zu laden und neu erstellen, selbst. Andernfalls, die Änderungen an der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung werden nicht berücksichtigt, der <xref:System.Web.UI.WebControls.DataGrid> steuern, wenn es angezeigt wird.  
+  
+> [!NOTE]
+>  Zwar können Sie programmgesteuert Spalten hinzufügen oder entfernen Sie Spalten aus der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement, es ist einfacher, die Spalten statisch aufzulisten und dann mithilfe der <xref:System.Web.UI.WebControls.DataGridColumn.Visible%2A> Eigenschaft zum Anzeigen oder Ausblenden der einzelnen Spalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.Remove%2A> -Methode zum Entfernen einer Spalteninhalts aus der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung. Beachten Sie, dass die <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement ist die <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ [!code-aspx-csharp[Classic DataGridColumnCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.Remove Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridColumnCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.Remove Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spalte in der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> zu entfernen.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-abgeleitete Spaltenobjekt aus der <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Entfernen einer <xref:System.Web.UI.WebControls.DataGridColumn>-abgeleitete Spaltenobjekt aus einer <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung am angegebenen Index.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement speichert den Inhalt nicht seine <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung im Ansichtszustand. Zum Hinzufügen oder Entfernen einer Spalte dynamisch, müssen Sie programmgesteuert hinzufügen oder entfernen Sie die Spalte jedes Mal, wenn die Seite aktualisiert wird. Geben Sie eine `Page_Init` -Funktion, die hinzugefügt oder entfernt die Spalte vor der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement seinen Zustand zu laden und neu erstellen, selbst. Andernfalls, die Änderungen an der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung werden nicht berücksichtigt, der <xref:System.Web.UI.WebControls.DataGrid> steuern, wenn es angezeigt wird.  
+  
+> [!NOTE]
+>  Zwar können Sie programmgesteuert Spalten hinzufügen oder entfernen Sie Spalten aus der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement, es ist einfacher, die Spalten statisch aufzulisten und dann mithilfe der <xref:System.Web.UI.WebControls.DataGridColumn.Visible%2A> Eigenschaft zum Anzeigen oder Ausblenden der einzelnen Spalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumnCollection.RemoveAt%2A> -Methode zum Entfernen einer Spalteninhalts aus der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung. Beachten Sie, dass die <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement ist die <xref:System.Web.UI.WebControls.DataGridColumnCollection> Auflistung.  
+  
+ [!code-aspx-csharp[Classic DataGridColumnCollection.RemoveAt Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridColumnCollection.RemoveAt Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridColumnCollection.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridColumnCollection.RemoveAt Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als <see langword="0" /> oder größer als <see cref="P:System.Web.UI.WebControls.DataGridColumnCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumnCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das verwendet werden kann, zum Synchronisieren des Zugriffs auf die <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Auflistung.</summary>
+        <value>Ein <see cref="T:System.Object" /> , die zum Synchronisieren des Zugriffs auf die Auflistung verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.DataGridColumnCollection> Objekt.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataGridColumnCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumnCollection.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung der Änderungen am Ansichtszustand nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Wenn eine <see cref="T:System.Web.UI.WebControls.DataGridColumnCollection" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGridColumnCollection.System%23Web%23UI%23IStateManager%23IsTrackingViewState%2A> Member ist eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn eine <xref:System.Web.UI.WebControls.DataGridColumnCollection> Instanz umgewandelt wird eine <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" />, das die gespeicherten Ansichtszustandswerte für das Steuerelement enthält.</param>
+        <summary>Lädt den zuvor gespeicherten Zustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objekt, das Zustandsänderungen enthält.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die gespeicherten Ansichtszustandswerte für das Steuerelement enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumnCollection.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet das Verfolgen von Zustandsänderungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

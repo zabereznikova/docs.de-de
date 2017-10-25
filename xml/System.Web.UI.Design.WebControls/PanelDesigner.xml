@@ -1,0 +1,119 @@
+<Type Name="PanelDesigner" FullName="System.Web.UI.Design.WebControls.PanelDesigner">
+  <TypeSignature Language="C#" Value="public class PanelDesigner : System.Web.UI.Design.ReadWriteControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PanelDesigner extends System.Web.UI.Design.ReadWriteControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.PanelDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ReadWriteControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is PanelContainerDesigner because it uses an EditableDesignerRegion for editing the content. Designer regions allow for better control of the content being edited. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.Panel" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Panel> Steuerelement wird als Container für andere Steuerelemente verwendet, insbesondere, wenn Sie Steuerelemente programmgesteuert generiert werden.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.PanelDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für <xref:System.Web.UI.WebControls.Panel> Steuerelemente in einem visuellen Designer. Verwenden Sie jedoch für alle neuen Implementierungen von Panel-Steuerelement, das <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> anstelle von der <xref:System.Web.UI.Design.WebControls.PanelDesigner>.  
+  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode an, die die zugeordnete beschreibt <xref:System.Web.UI.WebControls.Panel> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.PanelDesigner.MapPropertyToStyle%2A> Methode ordnet eine angegebene Eigenschaft und einen Wert zu einem angegebenen Markup-Stil. Die <xref:System.Web.UI.Design.WebControls.PanelDesigner.OnBehaviorAttached%2A> Methode stellt die Benachrichtigung bereit, wenn ein Verhalten in den Designer zugeordnet ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PanelDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.PanelDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.PanelDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.Panel> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPropertyToStyle">
+      <MemberSignature Language="C#" Value="protected override void MapPropertyToStyle (string propName, object varPropValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void MapPropertyToStyle(string propName, object varPropValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelDesigner.MapPropertyToStyle(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+        <Parameter Name="varPropValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propName">Eine Zeichenfolge, die den Namen der Eigenschaft enthält.</param>
+        <param name="varPropValue">Ein Objekt, das den Wert der Eigenschaft ist.</param>
+        <summary>Ordnet eine angegebene Eigenschaft und einen Wert zu einem angegebenen Markup-Stil.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.PanelDesigner.MapPropertyToStyle%2A> Methode bietet spezielle Behandlung für die <xref:System.Web.UI.WebControls.Panel.BackImageUrl%2A> und <xref:System.Web.UI.WebControls.Panel.HorizontalAlign%2A> Eigenschaften, aber die Aufrufe der <xref:System.Web.UI.Design.ReadWriteControlDesigner.MapPropertyToStyle%2A> -Basismethode für alle anderen Werte, die von der `propName` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehaviorAttached">
+      <MemberSignature Language="C#" Value="protected override void OnBehaviorAttached ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBehaviorAttached() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelDesigner.OnBehaviorAttached" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is ControlDesigner.Tag. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Benachrichtigung bereit, wenn ein Verhalten in den Designer zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.PanelDesigner.OnBehaviorAttached%2A> Methodenaufrufe der <xref:System.Web.UI.Design.ReadWriteControlDesigner.OnBehaviorAttached%2A> -Basismethode. Die <xref:System.Web.UI.Design.WebControls.PanelDesigner.OnBehaviorAttached%2A> ordnet die <xref:System.Web.UI.WebControls.Panel.BackImageUrl%2A> und <xref:System.Web.UI.WebControls.Panel.HorizontalAlign%2A> Eigenschaften den entsprechenden Stil mithilfe der <xref:System.Web.UI.Design.WebControls.PanelDesigner.MapPropertyToStyle%2A> -Methode, sofern diese Eigenschaften definiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,182 @@
+<Type Name="NodeLabelEditEventArgs" FullName="System.Windows.Forms.NodeLabelEditEventArgs">
+  <TypeSignature Language="C#" Value="public class NodeLabelEditEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NodeLabelEditEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.NodeLabelEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.TreeView.BeforeLabelEdit" />-Ereignis und das <see cref="E:System.Windows.Forms.TreeView.AfterLabelEdit" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeView.AfterLabelEdit> Ereignis tritt auf, wenn der Benutzer hat die Textbearbeitung für einen Strukturknoten. Die <xref:System.Windows.Forms.TreeView.BeforeLabelEdit> Ereignis tritt auf, wenn der Benutzer beginnt, bearbeiten den Text für einen Strukturknoten. Ein <xref:System.Windows.Forms.NodeLabelEditEventArgs> -Objekt gibt den neuen Text zuordnen zu den Strukturknoten, der mit der Bezeichnung in den Bearbeitungsmodus, und gibt an, ob die Bearbeitungsoperation wurde abgebrochen.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ermöglicht dem Benutzer so bearbeiten Sie die Strukturknoten mit einem <xref:System.Windows.Forms.ContextMenu>. Wenn der Benutzer mit der rechten Maustaste auf die Maus klickt der <xref:System.Windows.Forms.TreeNode> Position bestimmt ist, und die an, die in einer benannten Variablen gespeichert `mySelectedNode`. Wenn ein Strukturknoten ausgewählt wurde, wird es in einem bearbeitbaren Zustand versetzt ermöglicht die Benutzer, der die knotenbezeichnung bearbeiten. Nachdem der Benutzer das Bearbeiten der Bezeichnung des Strukturknotens beendet, ist der neue Bezeichnungstext ausgewertet und gespeichert. In diesem Beispiel werden mehrere Zeichen nicht in den Bezeichnungstext gültig angesehen. Wenn eine ungültiges Zeichen gemäß der in der Bezeichnungszeichenfolge ist, oder die Zeichenfolge leer ist, wird der Benutzer des Fehlers benachrichtigt, und die Bezeichnung wird an seinen vorherigen Text zurückgegeben.  
+  
+ [!code-cpp[classic treenode.beginedit example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[classic treenode.beginedit example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[classic treenode.beginedit example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NodeLabelEditEventArgs (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NodeLabelEditEventArgs.#ctor(System.Windows.Forms.TreeNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Der Strukturknoten, der zu bearbeitenden Text enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.NodeLabelEditEventArgs" />-Klasse für den angegebenen <see cref="T:System.Windows.Forms.TreeNode" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.NodeLabelEditEventArgs.Node%2A> Eigenschaft zugewiesen ist die `node` Parameterwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NodeLabelEditEventArgs (System.Windows.Forms.TreeNode node, string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TreeNode node, string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NodeLabelEditEventArgs.#ctor(System.Windows.Forms.TreeNode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">Der Strukturknoten, der zu bearbeitenden Text enthält.</param>
+        <param name="label">Der neue Text, dem Strukturknoten zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.NodeLabelEditEventArgs" /> -Klasse für den angegebenen <see cref="T:System.Windows.Forms.TreeNode" /> und dem angegebenen Text für die Bezeichnung des Strukturknotens Aktualisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.NodeLabelEditEventArgs.Node%2A> Eigenschaft zugewiesen ist die `node` Parameterwert, und die <xref:System.Windows.Forms.NodeLabelEditEventArgs.Label%2A> Eigenschaft zugewiesen ist die `label` Parameterwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public bool CancelEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CancelEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NodeLabelEditEventArgs.CancelEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Bearbeitung abgebrochen wurde, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Bearbeitung abgebrochen wurde andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel ermöglicht dem Benutzer so bearbeiten Sie die Strukturknoten mit einem <xref:System.Windows.Forms.ContextMenu>. Wenn der Benutzer mit der rechten Maustaste auf die Maus klickt der <xref:System.Windows.Forms.TreeNode> Position bestimmt ist, und die an, die in einer benannten Variablen gespeichert `mySelectedNode`. Wenn ein Strukturknoten ausgewählt wurde, wird es in einem bearbeitbaren Zustand versetzt ermöglicht die Benutzer, der die knotenbezeichnung bearbeiten. Nachdem der Benutzer das Bearbeiten der Bezeichnung des Strukturknotens beendet, ist der neue Bezeichnungstext ausgewertet und gespeichert. In diesem Beispiel werden mehrere Zeichen nicht in den Bezeichnungstext gültig angesehen. Wenn eine ungültiges Zeichen gemäß der in der Bezeichnungszeichenfolge ist, oder die Zeichenfolge leer ist, wird der Benutzer des Fehlers benachrichtigt, und die Bezeichnung wird an seinen vorherigen Text zurückgegeben.  
+  
+ [!code-cpp[classic treenode.beginedit example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[classic treenode.beginedit example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[classic treenode.beginedit example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NodeLabelEditEventArgs.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den neuen Text ab, der dem Strukturknoten zugeordnet werden soll.</summary>
+        <value>Der Zeichenfolgenwert, der den neuen <see cref="T:System.Windows.Forms.TreeNode" /> Bezeichnung oder <see langword="null" /> , wenn der Benutzer die Bearbeitung abbricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft ist `null` , wenn der Benutzer drückt die ESC-Taste, um die Bearbeitung abgebrochen oder die EINGABETASTE drückt, ohne den Bezeichnungstext zu ändern. Wenn der Benutzer den Text der strukturknotenbezeichnung bearbeitet wird, ist der Wert dieser Eigenschaft den neuen Bezeichnungstext an. Dies gilt auch, wenn der endgültige Wert des bearbeiteten Bezeichnungstext, den ursprünglichen Wert entspricht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ermöglicht dem Benutzer so bearbeiten Sie die Strukturknoten mit einem <xref:System.Windows.Forms.ContextMenu>. Wenn der Benutzer mit der rechten Maustaste auf die Maus klickt der <xref:System.Windows.Forms.TreeNode> Position bestimmt ist, und die an, die in einer benannten Variablen gespeichert `mySelectedNode`. Wenn ein Strukturknoten ausgewählt wurde, wird es in einem bearbeitbaren Zustand versetzt ermöglicht die Benutzer, der die knotenbezeichnung bearbeiten. Nachdem der Benutzer das Bearbeiten der Bezeichnung des Strukturknotens beendet, ist der neue Bezeichnungstext ausgewertet und gespeichert. In diesem Beispiel werden mehrere Zeichen nicht in den Bezeichnungstext gültig angesehen. Wenn eine ungültiges Zeichen gemäß der in der Bezeichnungszeichenfolge ist, oder die Zeichenfolge leer ist, wird der Benutzer des Fehlers benachrichtigt, und die Bezeichnung wird an seinen vorherigen Text zurückgegeben.  
+  
+ [!code-cpp[classic treenode.beginedit example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[classic treenode.beginedit example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[classic treenode.beginedit example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NodeLabelEditEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Strukturknoten ab, der den zu bearbeitenden Text enthält.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , die den Strukturknoten mit dem zu bearbeitenden Text darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel ermöglicht dem Benutzer so bearbeiten Sie die Strukturknoten mit einem <xref:System.Windows.Forms.ContextMenu>. Wenn der Benutzer mit der rechten Maustaste auf die Maus klickt der <xref:System.Windows.Forms.TreeNode> Position bestimmt ist, und die an, die in einer benannten Variablen gespeichert `mySelectedNode`. Wenn ein Strukturknoten ausgewählt wurde, wird es in einem bearbeitbaren Zustand versetzt ermöglicht die Benutzer, der die knotenbezeichnung bearbeiten. Nachdem der Benutzer das Bearbeiten der Bezeichnung des Strukturknotens beendet, ist der neue Bezeichnungstext ausgewertet und gespeichert. In diesem Beispiel werden mehrere Zeichen nicht in den Bezeichnungstext gültig angesehen. Wenn eine ungültiges Zeichen gemäß der in der Bezeichnungszeichenfolge ist, oder die Zeichenfolge leer ist, wird der Benutzer des Fehlers benachrichtigt, und die Bezeichnung wird an seinen vorherigen Text zurückgegeben.  
+  
+ [!code-cpp[classic treenode.beginedit example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[classic treenode.beginedit example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[classic treenode.beginedit example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

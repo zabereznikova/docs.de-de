@@ -1,0 +1,317 @@
+<Type Name="SoapTypeAttribute" FullName="System.Xml.Serialization.SoapTypeAttribute">
+  <TypeSignature Language="C#" Value="public class SoapTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Interface)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert das Schema generiert werden, indem Sie die <see cref="T:System.Xml.Serialization.XmlSerializer" /> Wenn auf eine Klasseninstanz als SOAP-XML codiertes serialisiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapTypeAttribute> Klasse gehört zu einer Familie von Attributen, die steuert, wie die <xref:System.Xml.Serialization.XmlSerializer> Serialisieren oder Deserialisieren eines Objekts als codiertes SOAP-XML. Das resultierende XML entspricht Abschnitt 5 des World Wide Web Consortium (www.w3.org) Dokuments "Simple Object Access Protocol (SOAP) 1.1". Eine vollständige Liste ähnlicher Attribute finden Sie unter [Attribute, Steuerelement codierte SOAP-Serialisierung](~/docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+  
+ Um ein Objekt als codierte SOAP-Nachricht zu serialisieren, erstellen die <xref:System.Xml.Serialization.XmlSerializer> verwenden ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, mit der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse.  
+  
+ Die <xref:System.Xml.Serialization.SoapTypeAttribute> kann nur auf Klassendeklarationen angewendet werden.  
+  
+ Die <xref:System.Xml.Serialization.SoapTypeAttribute.IncludeInSchema%2A> -Eigenschaft bestimmt, ob der Typ des resultierenden XML-Elements im XML-Schemadokument (.xsd) für den generierten XML-Stream enthalten ist. Kompilieren Sie die Klasse in eine DLL-Datei, um das Schema anzuzeigen. Übergeben Sie die resultierende Datei als ein Argument an die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md). Das Tool generiert das XML-Schema für den XML-Stream generiert, wenn die Klasse von einer Instanz von serialisiert wird die <xref:System.Xml.Serialization.XmlSerializer> Klasse.  
+  
+ Festlegen von einem anderen Namespace bewirkt, dass Xsd.exe, schreiben eine andere Schemadatei (.xsd) für den XML-Stream generiert, wenn die Klasse serialisiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die <xref:System.Xml.Serialization.SoapTypeAttribute> auf die Klasse angewendet wird, mit der <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> auf "SoapGroupType" festgelegt ist. Die <xref:System.Xml.Serialization.SoapTypeAttribute> ebenfalls überschrieben wird, ändern die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> "Team". Beide Versionen werden serialisiert, was zu zwei Dateien: SoapType.xml und SoapType2.xml.  
+  
+ [!code-cpp[SoapTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapTypeAttribute Example/CPP/soaptype.cpp#1)]
+ [!code-csharp[SoapTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapTypeAttribute Example/CS/soaptype.cs#1)]
+ [!code-vb[SoapTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapTypeAttribute Example/VB/soaptype.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapTypeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapTypeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.SoapTypeAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellen einer <xref:System.Xml.Serialization.SoapTypeAttribute> zum Überschreiben der Serialisierungs eines Typs. Weisen Sie das Objekt die <xref:System.Xml.Serialization.SoapAttributes.SoapType%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes> und Hinzufügen der <xref:System.Xml.Serialization.SoapAttributes> auf eine <xref:System.Xml.Serialization.SoapAttributeOverrides>. Finden Sie unter der <xref:System.Xml.Serialization.SoapAttributeOverrides> Klassenübersicht für ausführliche Informationen zu SOAP-Serialisierung zu überschreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die <xref:System.Xml.Serialization.SoapTypeAttribute> angewendet wird, auf die Klasse mit dem <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> auf "SoapGroupType" festgelegt ist. Die <xref:System.Xml.Serialization.SoapTypeAttribute> ebenfalls überschrieben wird, ändern die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> "Team". Beide Versionen werden serialisiert, was zu zwei Dateien: SoapType.xml und SoapType2.xml.  
+  
+ [!code-cpp[SoapTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapTypeAttribute Example/CPP/soaptype.cpp#1)]
+ [!code-csharp[SoapTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapTypeAttribute Example/CS/soaptype.cs#1)]
+ [!code-vb[SoapTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapTypeAttribute Example/VB/soaptype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapTypeAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapTypeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Geben Sie der Namen der XML, die die <see cref="T:System.Xml.Serialization.XmlSerializer" /> generiert, wenn sie die Klasseninstanz serialisiert (und erkennt, wenn es beim Deserialisieren der Klasseninstanz).</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.SoapTypeAttribute" /> -Klasse und gibt den Namen des XML-Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellen einer <xref:System.Xml.Serialization.SoapTypeAttribute> zum Überschreiben der Serialisierungs eines Typs. Weisen Sie das Objekt die <xref:System.Xml.Serialization.SoapAttributes.SoapType%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes> und Hinzufügen der <xref:System.Xml.Serialization.SoapAttributes> auf eine <xref:System.Xml.Serialization.SoapAttributeOverrides>. Finden Sie unter der <xref:System.Xml.Serialization.SoapAttributeOverrides> Klassenübersicht für ausführliche Informationen zu SOAP-Serialisierung zu überschreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die <xref:System.Xml.Serialization.SoapTypeAttribute> angewendet wird, auf die Klasse mit dem <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> auf "SoapGroupType" festgelegt ist. Die <xref:System.Xml.Serialization.SoapTypeAttribute> ebenfalls überschrieben wird, ändern die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> "Team". Beide Versionen werden serialisiert, was zu zwei Dateien: SoapType.xml und SoapType2.xml.  
+  
+ [!code-cpp[SoapTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapTypeAttribute Example/CPP/soaptype.cpp#1)]
+ [!code-csharp[SoapTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapTypeAttribute Example/CS/soaptype.cs#1)]
+ [!code-vb[SoapTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapTypeAttribute Example/VB/soaptype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapTypeAttribute (string typeName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapTypeAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Geben Sie der Namen der XML, die die <see cref="T:System.Xml.Serialization.XmlSerializer" /> generiert, wenn sie die Klasseninstanz serialisiert (und erkennt, wenn es beim Deserialisieren der Klasseninstanz).</param>
+        <param name="ns">Der XML-Namespace des Typs.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.SoapTypeAttribute" /> -Klasse und gibt den Namen und die XML-Namespace des Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellen einer <xref:System.Xml.Serialization.SoapTypeAttribute> zum Überschreiben der Serialisierungs eines Typs. Weisen Sie das Objekt die <xref:System.Xml.Serialization.SoapAttributes.SoapType%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes> und Hinzufügen der <xref:System.Xml.Serialization.SoapAttributes> auf eine <xref:System.Xml.Serialization.SoapAttributeOverrides>. Finden Sie unter der <xref:System.Xml.Serialization.SoapAttributeOverrides> klassenüberblick Einzelheiten zum Überschreiben einer SOAP-Serialisierung.  
+  
+ Wenn Sie festlegen, eine <xref:System.Xml.Serialization.SoapTypeAttribute.Namespace%2A> Wert für mehrere Typen (d. h., wenn Sie das Attribut auf mehr als eine Klasse mit einem anderen anwenden <xref:System.Xml.Serialization.SoapTypeAttribute.Namespace%2A> Wert für jede), die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) generiert einen separaten Schemadatei (.xsd) für jeden Typ. Dies liegt daran Festlegen von einem anderen Namespace für jeden Typ jeder Typ von den anderen distinct rendert, wodurch erforderlich für jeden Typ als unabhängige Entität geschrieben werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die <xref:System.Xml.Serialization.SoapTypeAttribute> angewendet wird, auf die Klasse mit dem <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> auf "SoapGroupType" festgelegt ist. Die <xref:System.Xml.Serialization.SoapTypeAttribute> ebenfalls überschrieben wird, ändern die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> "Team". Beide Versionen werden serialisiert, was zu zwei Dateien: SoapType.xml und SoapType2.xml.  
+  
+ [!code-cpp[SoapTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapTypeAttribute Example/CPP/soaptype.cpp#1)]
+ [!code-csharp[SoapTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapTypeAttribute Example/CS/soaptype.cs#1)]
+ [!code-vb[SoapTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapTypeAttribute Example/VB/soaptype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeInSchema">
+      <MemberSignature Language="C#" Value="public bool IncludeInSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeInSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapTypeAttribute.IncludeInSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Typ in SOAP-codierte XML-Schemadokumente enthalten.</summary>
+        <value>
+          <see langword="true" />den Typ in SOAP-codierte XML-Schemadokumente aufgenommen werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Xml.Serialization.SoapTypeAttribute> für eine Klassendeklaration, um anzugeben, ob der Typ in der XML-Schema-Dokument enthalten. Um die Ergebnisse der Festlegen der Eigenschaften finden Sie unter der <xref:System.Xml.Serialization.SoapTypeAttribute> Klasse, die Anwendung als eine ausführbare Datei oder DLL kompilieren und übergeben Sie die resultierende Datei an die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md). Das Tool schreibt das Schema, einschließlich der Typdefinition des XML-Streams generiert, wenn die Klasse serialisiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die <xref:System.Xml.Serialization.SoapTypeAttribute> angewendet wird, auf die Klasse mit dem <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> auf "SoapGroupType" festgelegt ist. Die <xref:System.Xml.Serialization.SoapTypeAttribute> ebenfalls überschrieben wird, ändern die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> "Team". Beide Versionen werden serialisiert, was zu zwei Dateien: SoapType.xml und SoapType2.xml.  
+  
+ [!code-cpp[SoapTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapTypeAttribute Example/CPP/soaptype.cpp#1)]
+ [!code-csharp[SoapTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapTypeAttribute Example/CS/soaptype.cs#1)]
+ [!code-vb[SoapTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapTypeAttribute Example/VB/soaptype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapTypeAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namespace des XML-Typs.</summary>
+        <value>Der Namespace des XML-Typs. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie festlegen, eine <xref:System.Xml.Serialization.SoapTypeAttribute.Namespace%2A> Wert für mehrere Typen (d. h., wenn Sie das Attribut auf mehr als eine Klasse mit einem anderen anwenden <xref:System.Xml.Serialization.SoapTypeAttribute.Namespace%2A> Wert für jede), die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) generiert einen separaten Schemadatei (.xsd) für jeden Typ. Dies liegt daran Festlegen von einem anderen Namespace für jeden Typ jeder Typ von den anderen distinct rendert, wodurch erforderlich für jeden Typ als unabhängige Entität geschrieben werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die <xref:System.Xml.Serialization.SoapTypeAttribute> angewendet wird, auf die Klasse mit dem <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> auf "SoapGroupType" festgelegt ist. Die <xref:System.Xml.Serialization.SoapTypeAttribute> ebenfalls überschrieben wird, ändern die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> "Team". Beide Versionen werden serialisiert, was zu zwei Dateien: SoapType.xml und SoapType2.xml.  
+  
+ [!code-cpp[SoapTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapTypeAttribute Example/CPP/soaptype.cpp#1)]
+ [!code-csharp[SoapTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapTypeAttribute Example/CS/soaptype.cs#1)]
+ [!code-vb[SoapTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapTypeAttribute Example/VB/soaptype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapTypeAttribute.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des XML-Typs.</summary>
+        <value>Der Name des XML-Typs. Der Standardwert ist der Name der Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Xml.Serialization.SoapTypeAttribute> auf eine Klasse an, der XML-Datentyp-Namespace, den Namen der XML-Typ und angibt, ob den Typ der XML-Schema-Dokument einschließt. Um die Ergebnisse der Einstellung finden Sie unter der <xref:System.Xml.Serialization.SoapTypeAttribute> Objekteigenschaften, kompilieren Sie die Anwendung als eine ausführbare Datei oder DLL, und übergeben Sie die resultierende Datei an die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md). Das Tool schreibt das Schema, einschließlich der Typdefinition.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die <xref:System.Xml.Serialization.SoapTypeAttribute> angewendet wird, auf die Klasse mit dem <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> auf "SoapGroupType" festgelegt ist. Die <xref:System.Xml.Serialization.SoapTypeAttribute> ebenfalls überschrieben wird, ändern die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> "Team". Beide Versionen werden serialisiert, was zu zwei Dateien: SoapType.xml und SoapType2.xml.  
+  
+ [!code-cpp[SoapTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapTypeAttribute Example/CPP/soaptype.cpp#1)]
+ [!code-csharp[SoapTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapTypeAttribute Example/CS/soaptype.cs#1)]
+ [!code-vb[SoapTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapTypeAttribute Example/VB/soaptype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

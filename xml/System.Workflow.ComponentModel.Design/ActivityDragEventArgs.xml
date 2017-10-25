@@ -1,0 +1,96 @@
+<Type Name="ActivityDragEventArgs" FullName="System.Workflow.ComponentModel.Design.ActivityDragEventArgs">
+  <TypeSignature Language="C#" Value="public class ActivityDragEventArgs : System.Windows.Forms.DragEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityDragEventArgs extends System.Windows.Forms.DragEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityDragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DragEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Klasse dar, von der Daten für das <see cref="M:System.Workflow.ComponentModel.Design.ActivityDesigner.OnDragDrop(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" />, <see cref="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnDragEnter(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" />-Ereignis sowie für das <see cref="M:System.Workflow.ComponentModel.Design.ActivityDesigner.OnDragOver(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" />-Ereignis des Workflow-Designers bereitgestellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Diese Ereignisargumente werden an <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>-Klassen übergeben, wenn auf der Workflowentwurfsoberfläche ein Drag & Drop-Vorgang stattfindet. Mit <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>-Klassen kann auf die in der <xref:System.Workflow.ComponentModel.Design.ActivityDragEventArgs>-Klasse enthaltenen Informationen zugegriffen werden, um das Verhalten des Vorgangs zu beeinflussen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Activities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Activity&gt; Activities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.ComponentModel.Activity&gt; Activities" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.Activities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Aktivitäten ab, für die ein Drag &amp; Drop-Vorgang ausgeführt wird.</summary>
+        <value>Eine schreibgeschützte Auflistung, die alle <see cref="T:System.Workflow.ComponentModel.Activity" />-Objekte enthält, für die der Drag &amp; Drop-Vorgang ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragImageSnapPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point DragImageSnapPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point DragImageSnapPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.DragImageSnapPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position ab, an der die Aktivitäten auf der Workflowentwurfsoberfläche abgelegt werden sollen, oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" />, der die Position auf der Workflowentwurfsoberfläche definiert, an der die Aktivitäten abgelegt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Workflow.ComponentModel.Design.WorkflowView>-Klasse wird für gezogene Aktivitäten eine Bilddarstellung für Ziehvorgänge erstellt. Mit der -Klasse wird für gezogene Aktivitäten eine Bilddarstellung für Ziehvorgänge erstellt. <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>-Objekte können die <xref:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.DragImageSnapPoint%2A>-Eigenschaft zum Andocken des Bilds an ein Ziel und zum Ablegen der Aktivitäten am angegebenen Speicherort verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragInitiationPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point DragInitiationPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point DragInitiationPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.DragInitiationPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Drawing.Point" /> auf der Workflowentwurfsoberfläche ab, an dem ein Ziehvorgang begonnen wurde.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" /> zum Definieren der Position auf der Workflowentwurfsoberfläche, an der der Ziehvorgang begonnen wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

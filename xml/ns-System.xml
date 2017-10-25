@@ -1,0 +1,17 @@
+<Namespace Name="System">
+  <Docs>
+    <summary>Der <see cref="N:System" />-Namespace enthält fundamentale Klassen und Basis-Klassen, die häufig verwendete Wert- und Referenzdatentypen, Ereignisse und Ereignishandler, Schnittstellen, Attribute und Verarbeitungsausnahmen definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Andere Klassen bieten Dienste für unterstützende datentypkonvertierung, Methode Parametermanipulation, Mathematik, Remote- und lokale Programmaufruf, anwendungsverwaltung-Umgebung und Überwachung von verwalteten und nicht verwalteten Anwendungen.  
+  
+ Um den von Zugriffstypen in der <xref:System> Namespace von C#-Code ohne Angeben vollständig gekennzeichneter Typnamen enthalten die `using System;` -Anweisung am Anfang der Quellcodedatei.  
+  
+ Zugriff von Typen in der <xref:System> Namespace von C + c++ / CLI-Code ohne Angeben vollständig gekennzeichneter Typnamen enthalten die `using namespace System;` -Anweisung am Anfang der Quellcodedatei. Darüber hinaus muss der Kompilierung mit der ["/ CLR"](http://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c) wechseln.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,57 @@
+<Type Name="GroupBoxState" FullName="System.Windows.Forms.VisualStyles.GroupBoxState">
+  <TypeSignature Language="C#" Value="public enum GroupBoxState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GroupBoxState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.GroupBoxState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den visuellen Status des ein Gruppenfeld, die gezeichnet wird mit visuellen Stilen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.GroupBoxState> Werte entsprechen den Statuswerten eines der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> von verfügbar gemachten Objekten der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.GroupBox> Klasse. Die <xref:System.Windows.Forms.VisualStyles.GroupBoxState> Werte werden auch verwendet, als Argument in der <xref:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.GroupBoxState Disabled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.GroupBoxState.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.GroupBoxState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Gruppenfeld ist deaktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.GroupBoxState Normal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.GroupBoxState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.GroupBoxState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Gruppenfeld hat die standarddarstellung.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2468 @@
+<Type Name="TaskFactory&lt;TResult&gt;" FullName="System.Threading.Tasks.TaskFactory&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public class TaskFactory&lt;TResult&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TaskFactory`1&lt;TResult&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskFactory`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TResult">Der Rückgabewert der <see cref="T:System.Threading.Tasks.Task`1" />-Objekte, die von den Methoden dieser Klasse erstellt werden.</typeparam>
+    <summary>Bietet Unterstützung für das Erstellen und Planen von <see cref="T:System.Threading.Tasks.Task`1" />-Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework stellt zwei Factorys zum Erstellen und Planen von Aufgaben bereit:  
+  
+-   Die <xref:System.Threading.Tasks.TaskFactory> -Klasse, die erstellt <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> Objekte.  
+  
+-   Die <xref:System.Threading.Tasks.TaskFactory%601> -Klasse, die erstellt <xref:System.Threading.Tasks.Task%601> Objekte.  
+  
+ Die <xref:System.Threading.Tasks.TaskFactory%601> -Klasse können Sie die folgenden Schritte ausführen:  
+  
+-   Eine Aufgabe erstellt, und starten Sie ihn sofort durch Aufrufen der <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> Methode. Sie können die Überladungen dieser Methode zum Erstellen und Ausführen eines Tasks, das nicht standardmäßigen Argumente erfordert aufrufen.  
+  
+    > [!WARNING]
+    >  Beginnend mit der [!INCLUDE[net_v45](~/includes/net-v45-md.md)]die <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> Methode bietet die einfachste Möglichkeit zum Erstellen einer Aufgabe mit Konfigurationswerte, und starten Sie ihn sofort.  
+  
+-   Erstellen Sie eine Aufgabe, die beginnt, wenn eine der Aufgaben in einem Array, durch Aufrufen abgeschlossen wurde der <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> oder <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> Methode.  
+  
+-   Erstellen Sie eine Aufgabe, die beginnt, wenn alle Aufgaben in einem Array, durch Aufrufen abgeschlossen wurden der <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> oder <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> Methode.  
+  
+ Die statische <xref:System.Threading.Tasks.Task%601.Factory%2A?displayProperty=nameWithType> Eigenschaft gibt den Standardwert <xref:System.Threading.Tasks.TaskFactory%601> Objekt. Sie können auch rufen Sie eine der der <xref:System.Threading.Tasks.TaskFactory%601> Klassenkonstruktoren so konfigurieren Sie die <xref:System.Threading.Tasks.Task%601> Objekte, die <xref:System.Threading.Tasks.TaskFactory%601> Klasse erstellt. Das folgende Beispiel konfiguriert eine neue <xref:System.Threading.Tasks.TaskFactory%601> Objekt, das Aufgaben zu erstellen, die einem angegebenen Abbruchtoken, Aufgabenerstellungsoptionen Fortsetzungsoptionen und eines benutzerdefinierten Taskplaners verfügen.  
+  
+ [!code-csharp[TPL_Factories#2](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_factories/cs/factoriestresult.cs#2)]
+ [!code-vb[TPL_Factories#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_factories/vb/factoriestresult.vb#2)]  
+  
+ In den meisten Fällen, Sie müssen keine zum Instanziieren einer neuen <xref:System.Threading.Tasks.TaskFactory%601> Instanz. Stattdessen können Sie die statische <xref:System.Threading.Tasks.Task%601.Factory%2A?displayProperty=nameWithType> Eigenschaft, die ein Factoryobjekt zurückgibt, die Standardwerte verwendet. Sie können dann Aufrufen ihrer Methoden zu den neue Aufgaben gestartet oder aufgabenfortsetzungen definieren. Eine Veranschaulichung finden Sie im Beispiel.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die statische <xref:System.Threading.Tasks.Task%601.Factory%2A> Eigenschaft zwei Aufrufe an die <xref:System.Threading.Tasks.TaskFactory%601.StartNew%2A?displayProperty=nameWithType> Methode. Die erste Aufgabe gibt ein Array von Zeichenfolgen, die mit den Namen der Dateien im Verzeichnis Eigene Dateien des Benutzers, aufgefüllt wird, während das zweite ein Array von Zeichenfolgen zurückgibt, das die Namen von Unterverzeichnissen des Verzeichnisses für die Benutzer eigene Dateien enthält. Er ruft dann die <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%28System.Threading.Tasks.Task%5B%5D%2CSystem.Action%7BSystem.Threading.Tasks.Task%5B%5D%7D%29?displayProperty=nameWithType> -Methode, die zeigt Informationen über die Anzahl von Dateien und Verzeichnissen in den Arrays, die von den beiden Tasks zurückgegeben wird, nachdem sie die Ausführung abgeschlossen ist.  
+  
+ [!code-csharp[System.Threading.Tasks.Task.Factory#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task.factory/cs/factory2.cs#2)]
+ [!code-vb[System.Threading.Tasks.Task.Factory#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task.factory/vb/factory2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen und geschützten Member der <see cref="T:System.Threading.Tasks.TaskFactory`1" /> sind threadsicher und können von mehreren Threads gleichzeitig verwendet werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine <see cref="T:System.Threading.Tasks.TaskFactory`1" />-Instanz mit der Standardkonfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Threading.Tasks.TaskFactory%601> Instanz mit einer Standardkonfiguration. Die <xref:System.Threading.Tasks.TaskCreationOptions> -Eigenschaft wird mit initialisiert <xref:System.Threading.Tasks.TaskCreationOptions.None>, <xref:System.Threading.Tasks.TaskContinuationOptions> -Eigenschaft wird mit initialisiert <xref:System.Threading.Tasks.TaskContinuationOptions.None>, und die <xref:System.Threading.Tasks.TaskScheduler> -Eigenschaft wird auf den aktuellen Planer initialisiert (finden Sie unter <xref:System.Threading.Tasks.TaskScheduler.Current%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskFactory (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.#ctor(System.Threading.CancellationToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das Standardabbruchtoken, das von dieser <see cref="T:System.Threading.Tasks.TaskFactory" /> erstellten Aufgaben zugewiesen wird, sofern beim Aufrufen der Factorymethoden kein anderes Abbruchtoken explizit angegeben wird.</param>
+        <summary>Initialisiert eine <see cref="T:System.Threading.Tasks.TaskFactory`1" />-Instanz mit der Standardkonfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Threading.Tasks.TaskFactory%601> Instanz mit einer Standardkonfiguration. Die <xref:System.Threading.Tasks.TaskCreationOptions> -Eigenschaft wird mit initialisiert <xref:System.Threading.Tasks.TaskCreationOptions.None>, <xref:System.Threading.Tasks.TaskContinuationOptions> -Eigenschaft wird mit initialisiert <xref:System.Threading.Tasks.TaskContinuationOptions.None>, und die <xref:System.Threading.Tasks.TaskScheduler> -Eigenschaft wird auf den aktuellen Planer initialisiert (finden Sie unter <xref:System.Threading.Tasks.TaskScheduler.Current%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskFactory (System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.#ctor(System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <param name="scheduler">Der zum Planen von Aufgaben, die mit dieser <see cref="T:System.Threading.Tasks.TaskFactory`1" /> erstellt wurden, zu verwendende Planer. Ein NULL-Wert gibt an, dass der aktuelle <see cref="T:System.Threading.Tasks.TaskScheduler" /> verwendet werden soll.</param>
+        <summary>Initialisiert eine <see cref="T:System.Threading.Tasks.TaskFactory`1" />-Instanz mit der angegebenen Konfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor die <xref:System.Threading.Tasks.TaskCreationOptions> -Eigenschaft wird mit initialisiert <xref:System.Threading.Tasks.TaskCreationOptions.None>, die <xref:System.Threading.Tasks.TaskContinuationOptions> -Eigenschaft wird mit initialisiert <xref:System.Threading.Tasks.TaskContinuationOptions.None>, und die <xref:System.Threading.Tasks.TaskScheduler> -Eigenschaft wird mit initialisiert `scheduler`, es sei denn, es `null`in wobei die Eigenschaft auf den aktuellen Planer initialisiert werden (siehe <xref:System.Threading.Tasks.TaskScheduler.Current%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskFactory (System.Threading.Tasks.TaskCreationOptions creationOptions, System.Threading.Tasks.TaskContinuationOptions continuationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Threading.Tasks.TaskCreationOptions creationOptions, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.#ctor(System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskContinuationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="creationOptions">Die zum Erstellen von Aufgaben mit dieser <see cref="T:System.Threading.Tasks.TaskFactory`1" /> zu verwendenden Standardoptionen.</param>
+        <param name="continuationOptions">Die zum Erstellen von Fortsetzungsaufgaben mit dieser <see cref="T:System.Threading.Tasks.TaskFactory`1" /> zu verwendenden Standardoptionen.</param>
+        <summary>Initialisiert eine <see cref="T:System.Threading.Tasks.TaskFactory`1" />-Instanz mit der angegebenen Konfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor die <xref:System.Threading.Tasks.TaskCreationOptions> -Eigenschaft wird mit initialisiert `creationOptions`, <xref:System.Threading.Tasks.TaskContinuationOptions> -Eigenschaft wird mit initialisiert `continuationOptions`, und die <xref:System.Threading.Tasks.TaskScheduler> -Eigenschaft wird auf den aktuellen Planer initialisiert (finden Sie unter <xref:System.Threading.Tasks.TaskScheduler.Current%2A>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="creationOptions" />oder <paramref name="continuationOptions" /> gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskFactory (System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskCreationOptions creationOptions, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.#ctor(System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das Standardabbruchtoken, das von dieser <see cref="T:System.Threading.Tasks.TaskFactory" /> erstellten Aufgaben zugewiesen wird, sofern beim Aufrufen der Factorymethoden kein anderes Abbruchtoken explizit angegeben wird.</param>
+        <param name="creationOptions">Die zum Erstellen von Aufgaben mit dieser <see cref="T:System.Threading.Tasks.TaskFactory`1" /> zu verwendenden Standardoptionen.</param>
+        <param name="continuationOptions">Die zum Erstellen von Fortsetzungsaufgaben mit dieser <see cref="T:System.Threading.Tasks.TaskFactory`1" /> zu verwendenden Standardoptionen.</param>
+        <param name="scheduler">Der beim Planen von Aufgaben, die mit dieser <see cref="T:System.Threading.Tasks.TaskFactory`1" /> erstellt wurden, zu verwendende Standardplaner. Ein NULL-Wert gibt an, dass <see cref="P:System.Threading.Tasks.TaskScheduler.Current" /> verwendet werden soll.</param>
+        <summary>Initialisiert eine <see cref="T:System.Threading.Tasks.TaskFactory`1" />-Instanz mit der angegebenen Konfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor die <xref:System.Threading.Tasks.TaskCreationOptions> -Eigenschaft wird mit initialisiert `creationOptions`, die <xref:System.Threading.Tasks.TaskContinuationOptions> -Eigenschaft wird mit initialisiert `continuationOptions`, und die <xref:System.Threading.Tasks.TaskScheduler> -Eigenschaft wird mit initialisiert `scheduler`, es sei denn, es `null`in wobei die Eigenschaft auf den aktuellen Planer initialisiert werden (siehe <xref:System.Threading.Tasks.TaskScheduler.Current%2A>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="creationOptions" />oder <paramref name="continuationOptions" /> gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskFactory`1.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardabbruchtoken für diese Aufgabenfactory ab.</summary>
+        <value>Das Standardabbruchtoken für diese Aufgabenfactory.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt das Standardabbruchtoken, das zugewiesen werden soll, für alle Aufgaben, die von dieser Factory erstellt werden, es sei denn, eine andere Abbruch Tokenwert beim Aufrufen der Factorymethoden Vorgang explizit angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinuationOptions">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.TaskContinuationOptions ContinuationOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.Tasks.TaskContinuationOptions ContinuationOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskFactory`1.ContinuationOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Threading.Tasks.TaskContinuationOptions" />-Enumerationswert für diese Aufgabenfactory ab.</summary>
+        <value>Einer der Enumerationswerte, die die Standardfortsetzungsoptionen für diese Aufgabenfactory angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Standardfortsetzungsoptionen für diese Factory zurück. Sie werden verwendet werden, um alle Fortsetzungsaufgaben zu erstellen, es sei denn, andere Optionen während Aufrufen der Methoden dieser Factory explizit angegeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task[],TResult&gt; continuationFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task[], !TResult&gt; continuationFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task[],`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task[],TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tasks" />Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="continuationFunction" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task[],TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task[], !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task[],`0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task[],TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="continuationFunction" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task[],TResult&gt; continuationFunction, System.Threading.Tasks.TaskContinuationOptions continuationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task[], !TResult&gt; continuationFunction, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task[],`0},System.Threading.Tasks.TaskContinuationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task[],TResult&gt;" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte NotOn* oder OnlyOn* sind nicht gültig.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="continuationOptions" /> -Argument gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task[],TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task[], !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task[],`0},System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task[],TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte NotOn* oder OnlyOn* sind nicht gültig.</param>
+        <param name="scheduler">Der Planer, der verwendet wird, um die erstellte Fortsetzungsaufgabe zu planen.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="scheduler" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="continuationOptions" />Gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt; continuationFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[], !TResult&gt; continuationFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0}[],`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[], !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0}[],`0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt; continuationFunction, System.Threading.Tasks.TaskContinuationOptions continuationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[], !TResult&gt; continuationFunction, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0}[],`0},System.Threading.Tasks.TaskContinuationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt;" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte NotOn* oder OnlyOn* sind nicht gültig.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="continuationOptions" /> -Argument gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAll&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAll&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[], !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAll``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0}[],`0},System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[],TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn alle Aufgaben der <c>Aufgaben</c> Array abgeschlossen wurden.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte NotOn* oder OnlyOn* sind nicht gültig.</param>
+        <param name="scheduler">Der Planer, der verwendet wird, um die erstellte Fortsetzungsaufgabe zu planen.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss eines Satzes angegebener Aufgaben gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="scheduler" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="continuationOptions" /> -Argument gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task,TResult&gt; continuationFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task, !TResult&gt; continuationFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert oder ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task,TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task, !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task,`0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task,TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="tasks" /> Parameterarray ist null.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument ist null.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert.  
+  
+ - oder -   
+  
+ Das <paramref name="tasks" />-Array ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task,TResult&gt; continuationFunction, System.Threading.Tasks.TaskContinuationOptions continuationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task, !TResult&gt; continuationFunction, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task,`0},System.Threading.Tasks.TaskContinuationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task,TResult&gt;" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte <see langword="NotOn*" /> oder <see langword="OnlyOn*" /> sind nicht gültig.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="continuationOptions" /> Argument gibt an, ein Ungültiger Enumerationswert.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert.  
+  
+ - oder -   
+  
+ Das <paramref name="tasks" />-Array ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny (System.Threading.Tasks.Task[] tasks, Func&lt;System.Threading.Tasks.Task,TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny(class System.Threading.Tasks.Task[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task, !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny(System.Threading.Tasks.Task[],System.Func{System.Threading.Tasks.Task,`0},System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task,TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte <see langword="NotOn*" /> oder <see langword="OnlyOn*" /> sind nicht gültig.</param>
+        <param name="scheduler">Der Aufgabenplaner, der verwendet wird, um die erstellte Fortsetzungsaufgabe zu planen.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="scheduler" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert.  
+  
+ - oder -   
+  
+ Das <paramref name="tasks" />-Array ist leer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="continuationOptions" /> Argument gibt einen ungültigen <see cref="T:System.Threading.Tasks.TaskContinuationOptions" /> Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt; continuationFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;, !TResult&gt; continuationFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0},`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Der neue Fortsetzungs-<see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert.  
+  
+ - oder -   
+  
+ Das <paramref name="tasks" />-Array ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;, !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0},`0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Die neue Fortsetzungsaufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert.  
+  
+ - oder -   
+  
+ Das <paramref name="tasks" />-Array ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt; continuationFunction, System.Threading.Tasks.TaskContinuationOptions continuationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;, !TResult&gt; continuationFunction, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0},`0},System.Threading.Tasks.TaskContinuationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt;" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte <see langword="NotOn*" /> oder <see langword="OnlyOn*" /> sind nicht gültig.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Der neue Fortsetzungs-<see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="continuationOptions" /> Argument gibt an, ein Ungültiger Enumerationswert.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert.  
+  
+ - oder -   
+  
+ Das <paramref name="tasks" />-Array ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueWhenAny&lt;TAntecedentResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt; (System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[] tasks, Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; ContinueWhenAny&lt;TAntecedentResult&gt;(class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;[] tasks, class System.Func`2&lt;class System.Threading.Tasks.Task`1&lt;!!TAntecedentResult&gt;, !TResult&gt; continuationFunction, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Threading.Tasks.TaskContinuationOptions continuationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.ContinueWhenAny``1(System.Threading.Tasks.Task{``0}[],System.Func{System.Threading.Tasks.Task{``0},`0},System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAntecedentResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="tasks" Type="System.Threading.Tasks.Task&lt;TAntecedentResult&gt;[]" />
+        <Parameter Name="continuationFunction" Type="System.Func&lt;System.Threading.Tasks.Task&lt;TAntecedentResult&gt;,TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="continuationOptions" Type="System.Threading.Tasks.TaskContinuationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAntecedentResult">Der Typ des Ergebnisses des Vorgängers <c>Aufgaben</c>.</typeparam>
+        <param name="tasks">Das Array von Aufgaben, mit denen fortgefahren wird, wenn eine Aufgabe abgeschlossen ist.</param>
+        <param name="continuationFunction">Der Funktionsdelegat, der asynchron ausgeführt wird, wenn eine Aufgabe der <c>Aufgaben</c> Array abgeschlossen wird.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Fortsetzungsaufgabe zugewiesen wird.</param>
+        <param name="continuationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Fortsetzungsaufgabe steuert. Die Werte <see langword="NotOn*" /> oder <see langword="OnlyOn*" /> sind nicht gültig.</param>
+        <param name="scheduler">Das <see cref="T:System.Threading.Tasks.TaskScheduler" />, das verwendet wird, um das erstellte Fortsetzungs-<see cref="T:System.Threading.Tasks.Task`1" /> zu planen.</param>
+        <summary>Erstellt eine Fortsetzungsaufgabe, die nach dem Abschluss einer Aufgabe im bereitgestellten Satz gestartet wird.</summary>
+        <returns>Der neue Fortsetzungs-<see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach Abschluss des Vorgangs ist eine Aufgabe in einem dieser Zustände: <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>, <xref:System.Threading.Tasks.TaskStatus.Faulted>, oder <xref:System.Threading.Tasks.TaskStatus.Canceled> Status.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="tasks" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="continuationFunction" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="scheduler" />-Argument ist null.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="tasks" /> Array enthält einen null-Wert.  
+  
+ - oder -   
+  
+ Das <paramref name="tasks" />-Array ist leer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="continuationOptions" /> -Argument gibt einen ungültigen TaskContinuationOptions-Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Eines der Elemente im <paramref name="tasks" />-Array wurde verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationOptions">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.TaskCreationOptions CreationOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.Tasks.TaskCreationOptions CreationOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskFactory`1.CreationOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskCreationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Threading.Tasks.TaskCreationOptions" />-Enumerationswert für diese Aufgabenfactory ab.</summary>
+        <value>Einer der Enumerationswerte, die die Standarderstellungsoptionen für diese Aufgabenfactory angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die schemaerstellungsoptionen für diese Factory zurück. Sie werden verwendet werden, um alle Aufgaben zu erstellen, es sei denn, andere Optionen während Aufrufen der Methoden dieser Factory explizit angegeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync (IAsyncResult asyncResult, Func&lt;IAsyncResult,TResult&gt; endMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync(class System.IAsyncResult asyncResult, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync(System.IAsyncResult,System.Func{System.IAsyncResult,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Die <see cref="T:System.IAsyncResult" /> , dessen Abschluss die Verarbeitung auslösen sollte die <c>EndMethod</c>.</param>
+        <param name="endMethod">Der Funktionsdelegat, der das abgeschlossene verarbeitet <c>AsyncResult</c>.</param>
+        <summary>Erstellt eine Aufgabe, die eine EndMethod-Funktion ausführt, wenn ein angegebenes <see cref="T:System.IAsyncResult" /> abgeschlossen wird.</summary>
+        <returns>Ein <see cref="T:System.Threading.Tasks.Task`1" />-Element, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="asyncResult" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync (Func&lt;AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync(class System.Func`3&lt;class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync(System.Func{System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync (IAsyncResult asyncResult, Func&lt;IAsyncResult,TResult&gt; endMethod, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync(class System.IAsyncResult asyncResult, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync(System.IAsyncResult,System.Func{System.IAsyncResult,`0},System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Die <see cref="T:System.IAsyncResult" /> , dessen Abschluss die Verarbeitung auslösen sollte die <c>EndMethod</c>.</param>
+        <param name="endMethod">Der Funktionsdelegat, der das abgeschlossene verarbeitet <c>AsyncResult</c>.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <summary>Erstellt eine Aufgabe, die eine EndMethod-Funktion ausführt, wenn ein angegebenes <see cref="T:System.IAsyncResult" /> abgeschlossen wird.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="asyncResult" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> -Argument gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync (Func&lt;AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, object state, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync(class System.Func`3&lt;class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, object state, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync(System.Func{System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},System.Object,System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Der erstellte <see cref="T:System.Threading.Tasks.Task`1" />, der den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> -Argument gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync (IAsyncResult asyncResult, Func&lt;IAsyncResult,TResult&gt; endMethod, System.Threading.Tasks.TaskCreationOptions creationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync(class System.IAsyncResult asyncResult, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync(System.IAsyncResult,System.Func{System.IAsyncResult,`0},System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Die <see cref="T:System.IAsyncResult" /> , dessen Abschluss die Verarbeitung auslösen sollte die <c>EndMethod</c>.</param>
+        <param name="endMethod">Der Funktionsdelegat, der das abgeschlossene verarbeitet <c>AsyncResult</c>.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <param name="scheduler">Der Aufgabenplaner, der verwendet wird, um die Aufgabe zu planen, die EndMethod ausführt.</param>
+        <summary>Erstellt eine Aufgabe, die eine EndMethod-Funktion ausführt, wenn ein angegebenes <see cref="T:System.IAsyncResult" /> abgeschlossen wird.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="asyncResult" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="scheduler" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync&lt;TArg1&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync&lt;TArg1&gt; (Func&lt;TArg1,AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, TArg1 arg1, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync&lt;TArg1&gt;(class System.Func`4&lt;!!TArg1, class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, !!TArg1 arg1, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync``1(System.Func{``0,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},``0,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg1" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;TArg1,System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="arg1" Type="TArg1" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg1">Der Typ des ersten Arguments übergeben wird, um die <c>BeginMethod</c> delegieren.</typeparam>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="arg1">Das erste Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync&lt;TArg1&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync&lt;TArg1&gt; (Func&lt;TArg1,AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, TArg1 arg1, object state, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync&lt;TArg1&gt;(class System.Func`4&lt;!!TArg1, class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, !!TArg1 arg1, object state, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync``1(System.Func{``0,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},``0,System.Object,System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg1" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;TArg1,System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="arg1" Type="TArg1" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg1">Der Typ des ersten Arguments übergeben wird, um die <c>BeginMethod</c> delegieren.</typeparam>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="arg1">Das erste Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync&lt;TArg1,TArg2&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync&lt;TArg1,TArg2&gt; (Func&lt;TArg1,TArg2,AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, TArg1 arg1, TArg2 arg2, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync&lt;TArg1, TArg2&gt;(class System.Func`5&lt;!!TArg1, !!TArg2, class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, !!TArg1 arg1, !!TArg2 arg2, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync``2(System.Func{``0,``1,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},``0,``1,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;TArg1,TArg2,System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="arg1" Type="TArg1" />
+        <Parameter Name="arg2" Type="TArg2" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg1">Der Typ des zweiten Arguments an den <c>BeginMethod</c> delegieren.</typeparam>
+        <typeparam name="TArg2">Der Typ des ersten Arguments übergeben wird, um die <c>BeginMethod</c> delegieren.</typeparam>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="arg1">Das erste Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="arg2">Das zweite Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync&lt;TArg1,TArg2&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync&lt;TArg1,TArg2&gt; (Func&lt;TArg1,TArg2,AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, TArg1 arg1, TArg2 arg2, object state, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync&lt;TArg1, TArg2&gt;(class System.Func`5&lt;!!TArg1, !!TArg2, class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, !!TArg1 arg1, !!TArg2 arg2, object state, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync``2(System.Func{``0,``1,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},``0,``1,System.Object,System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;TArg1,TArg2,System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="arg1" Type="TArg1" />
+        <Parameter Name="arg2" Type="TArg2" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg1">Der Typ des zweiten Arguments an den <c>BeginMethod</c> delegieren.</typeparam>
+        <typeparam name="TArg2">Der Typ des ersten Arguments übergeben wird, um die <c>BeginMethod</c> delegieren.</typeparam>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="arg1">Das erste Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="arg2">Das zweite Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <param name="creationOptions">Ein Objekt, das das Verhalten der erstellten <see cref="T:System.Threading.Tasks.Task`1" /> steuert.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync&lt;TArg1,TArg2,TArg3&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync&lt;TArg1,TArg2,TArg3&gt; (Func&lt;TArg1,TArg2,TArg3,AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync&lt;TArg1, TArg2, TArg3&gt;(class System.Func`6&lt;!!TArg1, !!TArg2, !!TArg3, class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, !!TArg1 arg1, !!TArg2 arg2, !!TArg3 arg3, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync``3(System.Func{``0,``1,``2,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},``0,``1,``2,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;TArg1,TArg2,TArg3,System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="arg1" Type="TArg1" />
+        <Parameter Name="arg2" Type="TArg2" />
+        <Parameter Name="arg3" Type="TArg3" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg1">Der Typ des zweiten Arguments an den <c>BeginMethod</c> delegieren.</typeparam>
+        <typeparam name="TArg2">Der Typ des dritten Arguments an den <c>BeginMethod</c> delegieren.</typeparam>
+        <typeparam name="TArg3">Der Typ des ersten Arguments übergeben wird, um die <c>BeginMethod</c> delegieren.</typeparam>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="arg1">Das erste Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="arg2">Das zweite Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="arg3">Das dritte Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAsync&lt;TArg1,TArg2,TArg3&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; FromAsync&lt;TArg1,TArg2,TArg3&gt; (Func&lt;TArg1,TArg2,TArg3,AsyncCallback,object,IAsyncResult&gt; beginMethod, Func&lt;IAsyncResult,TResult&gt; endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, object state, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; FromAsync&lt;TArg1, TArg2, TArg3&gt;(class System.Func`6&lt;!!TArg1, !!TArg2, !!TArg3, class System.AsyncCallback, object, class System.IAsyncResult&gt; beginMethod, class System.Func`2&lt;class System.IAsyncResult, !TResult&gt; endMethod, !!TArg1 arg1, !!TArg2 arg2, !!TArg3 arg3, object state, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.FromAsync``3(System.Func{``0,``1,``2,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,`0},``0,``1,``2,System.Object,System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="beginMethod" Type="System.Func&lt;TArg1,TArg2,TArg3,System.AsyncCallback,System.Object,System.IAsyncResult&gt;" />
+        <Parameter Name="endMethod" Type="System.Func&lt;System.IAsyncResult,TResult&gt;" />
+        <Parameter Name="arg1" Type="TArg1" />
+        <Parameter Name="arg2" Type="TArg2" />
+        <Parameter Name="arg3" Type="TArg3" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg1">Der Typ des zweiten Arguments an den <c>BeginMethod</c> delegieren.</typeparam>
+        <typeparam name="TArg2">Der Typ des dritten Arguments an den <c>BeginMethod</c> delegieren.</typeparam>
+        <typeparam name="TArg3">Der Typ des ersten Arguments übergeben wird, um die <c>BeginMethod</c> delegieren.</typeparam>
+        <param name="beginMethod">Der Delegat, der den asynchronen Vorgang startet.</param>
+        <param name="endMethod">Der Delegat, der den asynchronen Vorgang beendet.</param>
+        <param name="arg1">Das erste Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="arg2">Das zweite Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="arg3">Das dritte Argument zu übergeben, um die <c>BeginMethod</c> delegieren.</param>
+        <param name="state">Ein Objekt mit Daten von verwendet die <c>BeginMethod</c> delegieren.</param>
+        <param name="creationOptions">Ein Objekt, das das Verhalten der erstellten Aufgabe steuert.</param>
+        <summary>Erstellt eine Aufgabe, die ein dem asynchronen Programmiermodellmuster entsprechendes Paar von Begin- und End-Methoden darstellt.</summary>
+        <returns>Die erstellte Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst keine Ausnahmen auslöst der `beginMethod`. Ausnahmen für `endmethod` ausgelöst werden, wenn für die zurückgegebene Aufgabe gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="beginMethod" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="endMethod" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheduler">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.TaskScheduler Scheduler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Tasks.TaskScheduler Scheduler" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskFactory`1.Scheduler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Aufgabenplaner für diese Aufgabenfactory ab.</summary>
+        <value>Der Aufgabenplaner für diese Aufgabenfactory.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardplaner für diese Factory gibt diese Eigenschaft zurück. Es wird verwendet, die alle Aufgaben zu planen, es sei denn, ein anderes Zeitplanungsmodul während Aufrufen der Methoden dieser Factory explizit angegeben wird.  
+  
+ Wenn diese Eigenschaft gibt `null`, <xref:System.Threading.Tasks.TaskScheduler.Current%2A> verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;TResult&gt; function);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`1&lt;!TResult&gt; function) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Die begonnene Aufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;object,TResult&gt; function, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`2&lt;object, !TResult&gt; function, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{System.Object,`0},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;System.Object,TResult&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <param name="state">Ein Objekt, das Daten enthält, die von verwendet werden sollen die <c>Funktion</c> delegieren.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Die begonnene Aufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;TResult&gt; function, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`1&lt;!TResult&gt; function, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{`0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Aufgabe zugewiesen wird.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Die begonnene Aufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Abbruchtoken, das Datenquelle erstellte <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;TResult&gt; function, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`1&lt;!TResult&gt; function, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{`0},System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Der gestartete <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;object,TResult&gt; function, object state, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`2&lt;object, !TResult&gt; function, object state, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{System.Object,`0},System.Object,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;System.Object,TResult&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <param name="state">Ein Objekt, das Daten enthält, die von verwendet werden sollen die <c>Funktion</c> delegieren.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Aufgabe zugewiesen wird.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Die begonnene Aufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Abbruchtoken, das Datenquelle erstellte <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;object,TResult&gt; function, object state, System.Threading.Tasks.TaskCreationOptions creationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`2&lt;object, !TResult&gt; function, object state, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{System.Object,`0},System.Object,System.Threading.Tasks.TaskCreationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;System.Object,TResult&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <param name="state">Ein Objekt, das Daten enthält, die von verwendet werden sollen die <c>Funktion</c> delegieren.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Die begonnene Aufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;TResult&gt; function, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskCreationOptions creationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`1&lt;!TResult&gt; function, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{`0},System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;TResult&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Aufgabe zugewiesen wird.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <param name="scheduler">Der Aufgabenplaner, der verwendet wird, um die erstellte Fortsetzungsaufgabe zu planen.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Die begonnene Aufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Abbruchtoken, das Datenquelle erstellte <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="scheduler" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TResult&gt; StartNew (Func&lt;object,TResult&gt; function, object state, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskCreationOptions creationOptions, System.Threading.Tasks.TaskScheduler scheduler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!TResult&gt; StartNew(class System.Func`2&lt;object, !TResult&gt; function, object state, valuetype System.Threading.CancellationToken cancellationToken, valuetype System.Threading.Tasks.TaskCreationOptions creationOptions, class System.Threading.Tasks.TaskScheduler scheduler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskFactory`1.StartNew(System.Func{System.Object,`0},System.Object,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions,System.Threading.Tasks.TaskScheduler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Func&lt;System.Object,TResult&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="creationOptions" Type="System.Threading.Tasks.TaskCreationOptions" />
+        <Parameter Name="scheduler" Type="System.Threading.Tasks.TaskScheduler" />
+      </Parameters>
+      <Docs>
+        <param name="function">Ein Funktionsdelegat, der das zukünftige Ergebnis zurückgibt, das mithilfe der Aufgabe verfügbar sein wird.</param>
+        <param name="state">Ein Objekt, das Daten enthält, die von verwendet werden sollen die <c>Funktion</c> delegieren.</param>
+        <param name="cancellationToken">Das Abbruchtoken, das der neuen Aufgabe zugewiesen wird.</param>
+        <param name="creationOptions">Einer der Enumerationswerte, der das Verhalten der erstellten Aufgabe steuert.</param>
+        <param name="scheduler">Der Aufgabenplaner, der verwendet wird, um die erstellte Fortsetzungsaufgabe zu planen.</param>
+        <summary>Erstellt und startet eine Aufgabe.</summary>
+        <returns>Die begonnene Aufgabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von `StartNew` entspricht funktional dem Erstellen einer Aufgabe mithilfe eines der der <xref:System.Threading.Tasks.Task%601> Konstruktoren aufrufen und anschließend die <xref:System.Threading.Tasks.Task.Start%2A> Methode, um ihn für die Ausführung planen.  
+  
+ Jedoch, es sei denn, die Erstellung und Planung getrennt werden müssen, `StartNew` ist die empfohlene Vorgehensweise für Einfachheit und Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Abbruchtoken, das Datenquelle erstellte <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="function" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="scheduler" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="creationOptions" /> Parameter gibt einen ungültigen Wert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

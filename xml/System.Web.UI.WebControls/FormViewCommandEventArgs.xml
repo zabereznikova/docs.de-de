@@ -1,0 +1,157 @@
+<Type Name="FormViewCommandEventArgs" FullName="System.Web.UI.WebControls.FormViewCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.FormView.ItemCommand" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView.ItemCommand> Ereignis wird ausgelöst, wenn auf eine Schaltfläche in der <xref:System.Web.UI.WebControls.FormView> Steuerelement geklickt wird. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf.  
+  
+ Schaltflächen innerhalb einer <xref:System.Web.UI.WebControls.FormView> Steuerelement kann auch einige der integrierten Funktionen des Steuerelements aufrufen. Um einen dieser Vorgänge auszuführen, legen die `CommandName` Eigenschaft einer Schaltfläche auf einen der Werte in der folgenden Tabelle.  
+  
+|CommandName-Wert|Beschreibung|  
+|-----------------------|-----------------|  
+|"Cancel"|Bricht einen bearbeiten oder Insert-Vorgang ab und gibt die <xref:System.Web.UI.WebControls.FormView> Steuerelement in den Modus gemäß der <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft. Löst das <xref:System.Web.UI.WebControls.FormView.ModeChanged> und <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignisse.|  
+|"Löschen"|Löscht den aktuellen Datensatz. Löst das <xref:System.Web.UI.WebControls.FormView.ItemDeleted> und <xref:System.Web.UI.WebControls.FormView.ItemDeleting> Ereignisse.|  
+|"Bearbeiten"|Setzt die <xref:System.Web.UI.WebControls.FormView> Steuerelement im Bearbeitungsmodus befindet. Löst das <xref:System.Web.UI.WebControls.FormView.ModeChanged> und <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignisse.|  
+|"Einfügen"|Fügt den aktuellen Datensatz in der Datenquelle an. Löst das <xref:System.Web.UI.WebControls.FormView.ItemInserted> und <xref:System.Web.UI.WebControls.FormView.ItemInserting> Ereignisse.|  
+|"New"|Setzt die <xref:System.Web.UI.WebControls.FormView> Steuerelement im Einfügemodus. Löst das <xref:System.Web.UI.WebControls.FormView.ModeChanged> und <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignisse.|  
+|Seite """|Eine Auslagerung durchgeführt. Legen Sie die `CommandArgument` -Eigenschaft der Schaltfläche auf "First", "Last", "Weiter", "Prev" oder eine Seitenzahl zur Angabe der Pagingvorgang ausführen. Löst das <xref:System.Web.UI.WebControls.FormView.PageIndexChanged> und <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> Ereignisse.|  
+|"Update"|Aktualisiert den aktuellen Datensatz in der Datenquelle. Löst das <xref:System.Web.UI.WebControls.FormView.ItemUpdated> und <xref:System.Web.UI.WebControls.FormView.ItemUpdating> Ereignisse.|  
+  
+ Obwohl die <xref:System.Web.UI.WebControls.FormView.ItemCommand> Ereignis wird ausgelöst, wenn auf eine Schaltfläche in der vorherigen Tabelle aufgeführten geklickt wird, wird empfohlen, dass Sie für den Vorgang in der Tabelle aufgeführten Ereignisse zu verwenden.  
+  
+ Ein <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> Ereignisbehandlungsmethode, dadurch können Sie zum Bestimmen der Befehlsname und Befehlsargument der Schaltfläche geklickt-Objekt übergeben wird. Name des Befehls und Befehlsargument ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> und <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaften bzw.. Sie können auch zugreifen, das Schaltflächen-Steuerelement, das das Ereignis ausgelöst, mithilfe hat der <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.FormViewCommandEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.FormViewCommandEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> Ereignis, um zu bestimmen, welche innerhalb Schaltfläche eine <xref:System.Web.UI.WebControls.FormView> Steuerelement wurde der Benutzer geklickt hat.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewItemCommandEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewItemCommandEventArgs/CS/formviewcommandeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewItemCommandEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewItemCommandEventArgs/VB/formviewcommandeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewCommandEventArgs (object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewCommandEventArgs.#ctor(System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="commandSource">Die Quelle des Befehls.</param>
+        <param name="originalArgs">Ein <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> , das Ereignisdaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewCommandEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.FormViewCommandEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenen der `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenen der `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource%2A>|Das Objekt in der `commandSource` Parameter.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement, das das Ereignis ausgelöst hat.</summary>
+        <value>Ein <see cref="T:System.Object" />, das das Steuerelement darstellt, durch das das Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource%2A> Eigenschaft, um die Eigenschaften des Steuerelements zuzugreifen, die das Ereignis ausgelöst hat. Im Fall von einem <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> -Objekt, das Steuerelement ist die Schaltfläche, die vom Benutzer auf die geklickt wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource%2A> Eigenschaft, um die Eigenschaften des Steuerelements zuzugreifen, ausgelöst hat, die <xref:System.Web.UI.WebControls.FormView.ItemCommand> Ereignis.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewItemCommandEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewItemCommandEventArgs/CS/formviewcommandeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewItemCommandEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewItemCommandEventArgs/VB/formviewcommandeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewCommandEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement das Ereignis behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn von datengebundenen Ereigniscode übersprungen wurde oder wurde beendet. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` im Ereignishandler an, dass die <xref:System.Web.UI.WebControls.FormView> Steuerelement sollte das Ereignis nicht behandeln, da Sie es im Code behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

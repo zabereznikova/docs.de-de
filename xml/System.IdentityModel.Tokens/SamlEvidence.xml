@@ -1,0 +1,333 @@
+<Type Name="SamlEvidence" FullName="System.IdentityModel.Tokens.SamlEvidence">
+  <TypeSignature Language="C#" Value="public class SamlEvidence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlEvidence extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlEvidence" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Beweis dar, der verwendet wird, um eine Autorisierungsentscheidung für ein <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken zu rendern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken geben ihre Ansprüche mithilfe von SAML-Assertionen an, die angeben können, wann das Subjekt auf eine bestimmte Ressource zugreifen darf. Die Ansprüche in einer SAML-Assertion werden durch SAML-Anweisungen dargestellt. Die SAML-Spezifikation definiert einen Satz von SAML-Anweisungstypen, und einer dieser Anweisungstypen ist eine <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement>. Eine <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> bestätigt, dass eine Autorisierungsentscheidung für den Zugriff des Subjekts auf die angegebene Ressource vorliegt. Die <xref:System.IdentityModel.Tokens.SamlEvidence>-Klasse stellt den Beweis dar, der von einer SAML-Behörde verwendet wird, um eine Autorisierungsentscheidung für eine <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> zu rendern Der Beweis wird als SAML-Assertionen oder als Verweis auf SAML-Assertionen angegeben, die sich auf die <xref:System.IdentityModel.Tokens.SamlEvidence.Assertions%2A>-Eigenschaften bzw. auf die <xref:System.IdentityModel.Tokens.SamlEvidence.AssertionIdReferences%2A>-Eigenschaften beziehen.  
+  
+   
+  
+## Examples  
+ <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement>  
+  
+ <xref:System.IdentityModel.Tokens.SamlAssertion>  
+  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlEvidence ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlEvidence.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlEvidence" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IdentityModel.Tokens.SamlEvidence.IsReadOnly%2A>-Eigenschaft mit `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlEvidence (System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SamlAssertion&gt; assertions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.SamlAssertion&gt; assertions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlEvidence.#ctor(System.Collections.Generic.IEnumerable{System.IdentityModel.Tokens.SamlAssertion})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assertions" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SamlAssertion&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="assertions">Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> des Typs <see cref="T:System.IdentityModel.Tokens.SamlAssertion" />, der den Beweis enthält, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern. Legt die <see cref="P:System.IdentityModel.Tokens.SamlEvidence.Assertions" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlEvidence" />-Klasse mithilfe des angegebenen Satzes an SAML-Assertionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie über eine Auflistung von <xref:System.IdentityModel.Tokens.SamlAssertion>-Objekten, aber nicht über Verweise auf SAML-Assertionen verfügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assertions" /> enthält einen Member, der <see langword="null" /> ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlEvidence (System.Collections.Generic.IEnumerable&lt;string&gt; assertionIdReferences);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; assertionIdReferences) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlEvidence.#ctor(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assertionIdReferences" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="assertionIdReferences">Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> des Typs <see cref="T:System.String" />, der einen Bezeichner für eine SAML-Assertion enthält, die den Beweis darstellen, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern. Legt die <see cref="P:System.IdentityModel.Tokens.SamlEvidence.AssertionIdReferences" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlEvidence" />-Klasse mithilfe des angegebenen Satzes an SAML-Assertionsverweisen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie über eine Auflistung von SAML-Assertionsverweisen, jedoch nicht über <xref:System.IdentityModel.Tokens.SamlAssertion>-Objekte verfügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assertionIdReferences" /> enthält einen Member, der <see langword="null" /> oder leer ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlEvidence (System.Collections.Generic.IEnumerable&lt;string&gt; assertionIdReferences, System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SamlAssertion&gt; assertions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; assertionIdReferences, class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.SamlAssertion&gt; assertions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlEvidence.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.IdentityModel.Tokens.SamlAssertion})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assertionIdReferences" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="assertions" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SamlAssertion&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="assertionIdReferences">Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> des Typs <see cref="T:System.String" />, der einen Bezeichner für eine SAML-Assertion enthält, die den Beweis darstellen, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern. Legt die <see cref="P:System.IdentityModel.Tokens.SamlEvidence.AssertionIdReferences" />-Eigenschaft fest.</param>
+        <param name="assertions">Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> des Typs <see cref="T:System.IdentityModel.Tokens.SamlAssertion" />, der den Beweis enthält, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern. Legt die <see cref="P:System.IdentityModel.Tokens.SamlEvidence.Assertions" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlEvidence" />-Klasse mithilfe des angegebenen Satzes an SAML-Assertionsverweisen und SAML-Assertionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie über eine Auflistung von SAML-Assertionsverweisen und eine Auflistung von <xref:System.IdentityModel.Tokens.SamlAssertion>-Objekten verfügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assertionIdReferences" /> enthält einen Member, der <see langword="null" /> oder leer ist.  
+  
+ - oder -   
+  
+ <paramref name="assertions" /> enthält einen Member, der <see langword="null" /> ist.  
+  
+ - oder -   
+  
+ <paramref name="assertionIdReferences" /> und <paramref name="assertions" /> sind jeweils <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssertionIdReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; AssertionIdReferences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; AssertionIdReferences" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlEvidence.AssertionIdReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung an Bezeichnern für SAML-Assertionen ab, die den Beweis darstellen, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.IList`1" /> des Typs <see cref="T:System.String" />, der Bezeichner für SAML-Assertionen enthält, die den Beweis darstellen, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlEvidence.AssertionIdReferences%2A>-Eigenschaft entspricht dem `<saml:AssertionIDReference>`-Element, das in den Assertionen und dem Protokoll für die Spezifikation der OASIS Security Assertion Markup Language (SAML) definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assertions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.IdentityModel.Tokens.SamlAssertion&gt; Assertions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.IdentityModel.Tokens.SamlAssertion&gt; Assertions" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlEvidence.Assertions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.IdentityModel.Tokens.SamlAssertion&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung an SAML-Assertionen ab, die den Beweis darstellen, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.IList`1" /> des Typs <see cref="T:System.IdentityModel.Tokens.SamlAssertion" />, der den Beweis enthält, auf den sich die SAML-Behörde verlassen hat, um die Autorisierungsentscheidung zu rendern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlEvidence.AssertionIdReferences%2A>-Eigenschaft entspricht dem `<saml:Assertion>`-Element, das in den Assertionen und dem Protokoll für die Spezifikation der OASIS Security Assertion Markup Language (SAML) definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlEvidence.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Eigenschaften dieser Instanz schreibgeschützt sind.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften dieser Instanz schreibgeschützt sind, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Instanz der <xref:System.IdentityModel.Tokens.SamlEvidence>-Klasse schreibgeschützt machen möchten, rufen Sie die <xref:System.IdentityModel.Tokens.SamlEvidence.MakeReadOnly%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlEvidence.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass diese Instanz schreibgeschützt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SamlEvidence.MakeReadOnly%2A>-Methode abgerufen wird, wird die <xref:System.IdentityModel.Tokens.SamlEvidence.IsReadOnly%2A>-Eigenschaft als `true` festgelegt, und die Eigenschaften dieser Instanz können nicht mehr festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public virtual void ReadXml (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer, System.IdentityModel.Selectors.SecurityTokenResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadXml(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlEvidence.ReadXml(System.Xml.XmlDictionaryReader,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen des Beweises.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in der SAML-Autorisierungsanweisung lesen kann, die in der SAML-Spezifikation festgelegt wurde.</param>
+        <param name="keyInfoSerializer">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />, der die <see langword="KeyInfo" />-Klausel der digitalen Signatur liest.</param>
+        <param name="resolver">To be added.</param>
+        <summary>Liest den Beweis vom angegebenen XML-Reader.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlEvidence.ReadXml%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Tokens.SamlSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode legt die folgenden Eigenschaften fest:  
+  
+-   <xref:System.IdentityModel.Tokens.SamlEvidence.AssertionIdReferences%2A>  
+  
+-   <xref:System.IdentityModel.Tokens.SamlEvidence.Assertions%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">
+          <paramref name="reader" /> verweist auf ein XML-Element, das nicht über mindestens eine <see langword="&lt;saml:AssertionIDReference&gt;" /> oder über mindestens ein untergeordnetes <see langword="&lt;saml:Assertion&gt;" />-Element verfügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public virtual void WriteXml (System.Xml.XmlDictionaryWriter writer, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteXml(class System.Xml.XmlDictionaryWriter writer, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlEvidence.WriteXml(System.Xml.XmlDictionaryWriter,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Eine <see cref="T:System.Xml.XmlDictionaryWriter" /> zum Schreiben des Beweises.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in eine SAML-Assertion schreiben kann.</param>
+        <param name="keyInfoSerializer">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />, der <see langword="KeyInfo" />-Klauseln schreiben kann.</param>
+        <summary>Schreibt den Beweis in das angegebene XML-Serialisierungsprogramm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlEvidence.WriteXml%28System.Xml.XmlDictionaryWriter%2CSystem.IdentityModel.Tokens.SamlSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%29>-Methode, um die aktuelle <xref:System.IdentityModel.Tokens.SamlEvidence>-Instanz in ein `<saml:Evidence>`-Element zu schreiben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

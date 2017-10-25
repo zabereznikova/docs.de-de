@@ -1,0 +1,140 @@
+<Type Name="FormViewInsertEventArgs" FullName="System.Web.UI.WebControls.FormViewInsertEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewInsertEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewInsertEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewInsertEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.FormView.ItemInserting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView> -Steuerelement löst die <xref:System.Web.UI.WebControls.FormView.ItemInserting> Ereignis aus, wenn eine Schaltfläche zum Einfügen (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Einfügen") innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.FormView> Steuerelement einfügen des Datensatzes. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine, wie z. B. HTML-Codierung, oder überprüfen die Werte eines Datensatzes in der Datenquelle einfügt, wenn dieses Ereignis tritt auf, bevor ausführt.  
+  
+ Ein <xref:System.Web.UI.WebControls.FormViewInsertEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, dadurch können Sie den Wert eines Arguments optionaler Befehl gesendet, um zu bestimmen die <xref:System.Web.UI.WebControls.FormView> Steuerelement und anzugeben, dass der Insert-Vorgang abgebrochen werden soll. Den Wert des Befehlsarguments ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.CommandArgument%2A> Eigenschaft. Legen Sie zum Abbrechen des Insert-Vorgangs der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Sie können auch lesen oder ändern Sie die Feldwerte für den neuen Eintrag mit dem <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.Values%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.FormViewInsertEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewInsertEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.FormView.ItemInserting> Ereignis, um eine Insert-Vorgang "Abbrechen", wenn der Benutzer ein Feld leer bleibt.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewInsertEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertEventArgs/CS/formviewinserteventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertEventArgs/VB/formviewinserteventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewInsertEventArgs (object commandArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewInsertEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandArgument" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="commandArgument">Ein optionales Befehlsargument übergeben wird, um die <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewInsertEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FormViewInsertEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.WebControls.FormViewInsertEventArgs> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewInsertEventArgs.CommandArgument%2A>|Der Wert des `commandArgument`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public object CommandArgument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewInsertEventArgs.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Befehlsargument für der Insert-Vorgang zum Übergeben der <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</summary>
+        <value>Das Befehlsargument für den Einfügevorgang zu übergeben, um die <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Insert-Schaltfläche für eine der Vorlagen in einem <xref:System.Web.UI.WebControls.FormView> -Steuerelement, Sie können optional Befehlsargument für die Schaltfläche angeben, mit der <xref:System.Web.UI.WebControls.IButtonControl.CommandArgument%2A> Eigenschaft. Das Befehlsargument enthält in der Regel zusätzliche Informationen, dass den Insert-Befehl, z. B. den Wert für das Schlüsselfeld begleitet werden sollen. Die <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.CommandArgument%2A> Eigenschaft wird bereitgestellt, wie eine einfache Möglichkeit, den Wert für die Insert-Schaltfläche Befehlsargument bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewInsertEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das Feld Name/Wert-Paare für den Datensatz einfügen enthält.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , enthält ein Wörterbuch von Schlüsselfeld-Wert-Paare für den Datensatz eingefügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte der Felder für den Datensatz eingefügt. Sie können z. B. HTML zu codieren, oder die Werte des Datensatzes vor dem Einfügen in die Datenquelle zu überprüfen.  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.Values%2A> -Eigenschaft gibt ein <xref:System.Collections.Specialized.OrderedDictionary> Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Collections.Specialized.OrderedDictionary> Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Felder des Datensatzes darstellen. Verwenden Sie für den Zugriff auf den Feldnamen, die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> Eigenschaft von der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Auf ähnliche Weise können Sie die Feldwerte zugreifen, mithilfe der <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.OrderedDictionary> Objekt Zugriff auf das Feld Werte direkt. Der Vorteil der Verwendung des Indexers ist, dass es Feldwerte direkt zurückgibt. Datenquellen-Steuerelementen, die abhängig von der Reihenfolge der Felder (z. B. <xref:System.Web.UI.WebControls.AccessDataSource>) können nur über einen Index auf Feldwerte zugreifen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Durchlaufen der <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.Values%2A> Auflistung.  
+  
+ [!code-aspx-csharp[FormViewInsertEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertEventArgs/CS/formviewinserteventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertEventArgs/VB/formviewinserteventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

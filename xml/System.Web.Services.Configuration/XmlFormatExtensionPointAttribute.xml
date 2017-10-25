@@ -1,0 +1,108 @@
+<Type Name="XmlFormatExtensionPointAttribute" FullName="System.Web.Services.Configuration.XmlFormatExtensionPointAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlFormatExtensionPointAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlFormatExtensionPointAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den XML-Namespace und den XML-Namespacepräfix für eine Beschreibung Format Erweiterung innerhalb einer dienstbeschreibung verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Erweiterung der Beschreibung Format erweitert, wie eine dienstbeschreibung für einen XML-Webdienst erstellt mithilfe von ASP.NET generiert wird. Insbesondere Fügt eine Erweiterung der Beschreibung Format XML-Elemente, die Beschreibung des Diensts. Dies ist hilfreich, wenn eine SOAP-Erweiterung zum Ausführen auf Client und Server-Seite von einem XML-Webdienst erstellt wird, wie Informationen zu SOAP-Erweiterungen nicht automatisch in der dienstbeschreibung platziert wird. Wenn Sie die Beschreibung des Diensts Informationen über die SOAP-Erweiterung hinzufügen, kann ein Client daher interpretiert werden, dass die spezifischen SOAP-Erweiterung ausgeführt werden muss. Ein Beispiel für eine SOAP-Erweiterung, die sowohl auf dem Client als auch auf dem Server ausgeführt werden muss, ist eine SOAP-Verschlüsselungserweiterung. Wenn eine SOAP-verschlüsselungserweiterung auf nur auf dem Server ausgeführt wird, und es Rückgabewerte vor dem Senden an den Client verschlüsselt, muss der Client die SOAP-Erweiterung, die zum Entschlüsseln der SOAP-Nachricht ausgeführt haben. Andernfalls kann der Client den Rückgabewert nicht verarbeiten.  
+  
+ Verwenden Sie die folgenden Schritte aus, um eine Erweiterung Format der Beschreibung zu erstellen:  
+  
+1.  Erstellen Sie eine Klasse, die abgeleitet <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>.  
+  
+2.  Anwenden einer <xref:System.Web.Services.Configuration.XmlFormatExtensionAttribute> auf die Klasse, und geben Sie die Erweiterungspunkte, an dem die Webdiensterweiterung für Beschreibung Format ausführen sollten.  
+  
+3.  Wenden Sie optional eine <xref:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute> auf die Klasse, und geben Sie ein Element innerhalb der Klasse als Erweiterungspunkt fungieren.  
+  
+4.  Wenden Sie optional eine <xref:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute> auf die Klasse, und geben Sie das XML-Namespacepräfix, um XML-Elemente, die von der Beschreibung-Format diensterweiterung generierten zugeordnet werden.  
+  
+5.  Konfigurieren Sie die Beschreibung Format-Webdiensterweiterung für die Ausführung innerhalb der `serviceDescriptionFormatExtensionTypes` Abschnitt der Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#1)]
+ [!code-vb[ServiceDescriptionFormatExtension#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionPointAttribute (string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">Der Member der Klasse, die die Erweiterung Beschreibung Dienst implementiert, die eine Beschreibung Format diensterweiterung zugeordnet haben, können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowElements">
+      <MemberSignature Language="C#" Value="public bool AllowElements { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowElements" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.AllowElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Member der Klasse, die die Webdiensterweiterung für Beschreibung Format implementiert in angegeben die <see cref="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.MemberName" /> Eigenschaft lässt die unformatierten XML-Elemente.</summary>
+        <value>
+          <see langword="true" />Wenn der Member der Klasse, die die Beschreibung des Diensts implementiert Erweiterung im angegebenen format der <see cref="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.MemberName" /> Eigenschaft unformatierten XML-Elemente akzeptieren kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Member der Klasse, die die Webdiensterweiterung für Beschreibung Format implementiert eine Beschreibung Format diensterweiterung zugeordnet haben kann.</summary>
+        <value>Der Member der Klasse, die die Erweiterung Beschreibung Dienst implementiert, die eine Beschreibung Format diensterweiterung zugeordnet haben, können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

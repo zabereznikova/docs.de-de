@@ -1,0 +1,75 @@
+<Type Name="WorkflowEventArgs" FullName="System.Workflow.Runtime.WorkflowEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für Workflowereignisse bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Workflowereignisse sind einer Workflowinstanz zugeordnet. <xref:System.Workflow.Runtime.WorkflowEventArgs> enthält die <xref:System.Workflow.Runtime.WorkflowInstance>, die dem Workflowereignis zugeordnet ist. <xref:System.Workflow.Runtime.WorkflowEventArgs> oder ein Objekt, das von der <xref:System.Workflow.Runtime.WorkflowEventArgs>-Klasse abgeleitet ist, stellt die Daten für alle Workflowereignisse in der <xref:System.Workflow.Runtime.WorkflowRuntime>-Klasse bereit. <xref:System.Workflow.Runtime.WorkflowEventArgs> ist die Basisklasse für <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs>, <xref:System.Workflow.Runtime.WorkflowSuspendedEventArgs> und <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie ein <xref:System.Workflow.Runtime.WorkflowInstance>-Objekt mithilfe der <xref:System.Workflow.Runtime.WorkflowEventArgs.WorkflowInstance%2A>-Eigenschaft abrufen, wenn eine Ereignishandlermethode aufgerufen wird. Wenn das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled>-Ereignis eintritt, wird die in diesem Beispiel definierte `OnWorkflowIdled`-Methode aufgerufen. Sie bestimmt, welcher Workflow mithilfe der <xref:System.Workflow.Runtime.WorkflowEventArgs.WorkflowInstance%2A>-Eigenschaft in den Leerlauf versetzt wird, und ruft anschließend eine Auflistung mit in der Warteschlange befindlichen Elementen für den Workflow ab, indem die <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A>-Methode aufgerufen wird. Der Code durchläuft die Auflistung, um zu ermitteln, welche Aktivität auf das Ereignis wartet, das den Workflow in den Leerlauf versetzt hat. Anschließend sendet er eine Ausnahme an die Workflowwarteschlange, indem er die <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A>-Methode zusammen mit dem Namen des Ereigniswarteschlangenelements verwendet.  
+  
+ Dieses Codebeispiel ist Teil des Canceling a Workflow SDK-Beispiels in der Datei Program.cs. Weitere Informationen finden Sie unter [Abbrechen eines Workflows](http://msdn.microsoft.com/en-us/d5077f56-a78b-48e7-825c-f6c77c8e54fb).  
+  
+ [!code-csharp[WF_Samples#261](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#261)]
+ [!code-vb[WF_Samples#261](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#261)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WorkflowInstance">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance WorkflowInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.WorkflowInstance WorkflowInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowEventArgs.WorkflowInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Workflowereignis zugeordnete Workflowinstanz ab.</summary>
+        <value>Die <see cref="T:System.Workflow.Runtime.WorkflowInstance" />, die dem Workflowereignis zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie ein <xref:System.Workflow.Runtime.WorkflowInstance>-Objekt mithilfe der <xref:System.Workflow.Runtime.WorkflowEventArgs.WorkflowInstance%2A>-Eigenschaft abrufen, wenn eine Ereignishandlermethode aufgerufen wird. Wenn das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled>-Ereignis eintritt, wird die in diesem Beispiel definierte `OnWorkflowIdled`-Methode aufgerufen. Sie bestimmt, welcher Workflow mithilfe der <xref:System.Workflow.Runtime.WorkflowEventArgs.WorkflowInstance%2A>-Eigenschaft in den Leerlauf versetzt wird, und ruft anschließend eine Auflistung mit in der Warteschlange befindlichen Elementen für den Workflow ab, indem die <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A>-Methode aufgerufen wird. Der Code durchläuft die Auflistung, um zu ermitteln, welche Aktivität auf das Ereignis wartet, das den Workflow in den Leerlauf versetzt hat. Anschließend sendet er eine Ausnahme an die Workflowwarteschlange, indem er die <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A>-Methode zusammen mit dem Namen des Ereigniswarteschlangenelements verwendet.  
+  
+ Dieses Codebeispiel ist Teil des Canceling a Workflow SDK-Beispiels in der Datei Program.cs. Weitere Informationen finden Sie unter [Abbrechen eines Workflows](http://msdn.microsoft.com/en-us/d5077f56-a78b-48e7-825c-f6c77c8e54fb).  
+  
+ [!code-csharp[WF_Samples#261](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#261)]
+ [!code-vb[WF_Samples#261](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#261)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

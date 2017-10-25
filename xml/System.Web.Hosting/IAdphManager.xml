@@ -1,0 +1,125 @@
+<Type Name="IAdphManager" FullName="System.Web.Hosting.IAdphManager">
+  <TypeSignature Language="C#" Value="public interface IAdphManager" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAdphManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IAdphManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet einen Anwendungsdomänen-Protokollhandler</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IAdphManager>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="StartAppDomainProtocolListenerChannel">
+      <MemberSignature Language="C#" Value="public void StartAppDomainProtocolListenerChannel (string appId, string protocolId, System.Web.Hosting.IListenerChannelCallback listenerChannelCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartAppDomainProtocolListenerChannel([in]string appId, [in]string protocolId, class System.Web.Hosting.IListenerChannelCallback listenerChannelCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IAdphManager.StartAppDomainProtocolListenerChannel(System.String,System.String,System.Web.Hosting.IListenerChannelCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="listenerChannelCallback" Type="System.Web.Hosting.IListenerChannelCallback" />
+      </Parameters>
+      <Docs>
+        <param name="appId">die Anwendungs-ID</param>
+        <param name="protocolId">Die Protokoll-ID.</param>
+        <param name="listenerChannelCallback">Der Rückruf der Protokoll-Listener-Kanal.</param>
+        <summary>Startet eine Anwendung Domäne protokollkanal Listener.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IAdphManager.StartAppDomainProtocolListenerChannel%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StopAppDomainProtocol">
+      <MemberSignature Language="C#" Value="public void StopAppDomainProtocol (string appId, string protocolId, bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopAppDomainProtocol([in]string appId, [in]string protocolId, bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IAdphManager.StopAppDomainProtocol(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="appId">die Anwendungs-ID</param>
+        <param name="protocolId">Die Protokoll-ID.</param>
+        <param name="immediate">Der Rückruf der Protokoll-Listener-Kanal.</param>
+        <summary>Beendet eine Anwendung Domäne protokollkanal Listener.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IAdphManager.StopAppDomainProtocol%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StopAppDomainProtocolListenerChannel">
+      <MemberSignature Language="C#" Value="public void StopAppDomainProtocolListenerChannel (string appId, string protocolId, int listenerChannelId, bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopAppDomainProtocolListenerChannel([in]string appId, [in]string protocolId, int32 listenerChannelId, bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IAdphManager.StopAppDomainProtocolListenerChannel(System.String,System.String,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="listenerChannelId" Type="System.Int32" />
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="appId">die Anwendungs-ID</param>
+        <param name="protocolId">Die Protokoll-ID.</param>
+        <param name="listenerChannelId">Der Rückruf der Protokoll-Listener-Kanal.</param>
+        <param name="immediate">Ob die Listenerkanal für Protokoll sofort beendet.</param>
+        <summary>Beendet eine Anwendung Domäne protokollkanal Listener.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IAdphManager.StopAppDomainProtocolListenerChannel%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+<Type Name="DbArithmeticExpression" FullName="System.Data.Common.CommandTrees.DbArithmeticExpression">
+  <TypeSignature Language="C#" Value="public sealed class DbArithmeticExpression : System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DbArithmeticExpression extends System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbArithmeticExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.CommandTrees.DbExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine auf numerische Argumente angewendete arithmetische Operation dar. Addition, Subtraktion, Multiplikation, Division, Modulo und Negation sind arithmetische Operationen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.CommandTrees.DbArithmeticExpression>-Klasse benötigt Argumente mit dem gleichen numerischen Ergebnistyp.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public override void Accept (System.Data.Common.CommandTrees.DbExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class System.Data.Common.CommandTrees.DbExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbArithmeticExpression.Accept(System.Data.Common.CommandTrees.DbExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">Eine Instanz von <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />.</param>
+        <summary>Implementiert das Besuchermuster für Ausdrücke, die keinen Ergebniswert erstellen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResultType&gt;">
+      <MemberSignature Language="C#" Value="public override TResultType Accept&lt;TResultType&gt; (System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResultType Accept&lt;TResultType&gt;(class System.Data.Common.CommandTrees.DbExpressionVisitor`1&lt;!!TResultType&gt; visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbArithmeticExpression.Accept``1(System.Data.Common.CommandTrees.DbExpressionVisitor{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResultType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResultType">Der Typ des Ergebnisses von erzeugten <c>Besucher</c>.</typeparam>
+        <param name="visitor">Eine Instanz eines typisierten <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />, der einen Ergebniswert eines bestimmten Typs erstellt.</param>
+        <summary>Implementiert das Besuchermuster für Ausdrücke, die einen Ergebniswert eines bestimmten Typs erstellen.</summary>
+        <returns>Ein Ergebniswert eines bestimmten Typs, der von <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" /> erstellt wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpression&gt; Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Data.Common.CommandTrees.DbExpression&gt; Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbArithmeticExpression.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpression&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> Elemente, die die aktuellen Argumente zu definieren.</summary>
+        <value>Eine Liste mit fester Größe von <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.CommandTrees.DbArithmeticExpression> erfordert, dass alle Elemente in der Argumentliste mit den gleichen numerischen Ergebnistyp haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

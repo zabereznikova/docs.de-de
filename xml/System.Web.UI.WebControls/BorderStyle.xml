@@ -1,0 +1,190 @@
+<Type Name="BorderStyle" FullName="System.Web.UI.WebControls.BorderStyle">
+  <TypeSignature Language="C#" Value="public enum BorderStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BorderStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BorderStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Rahmenart eines Steuerelements an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BorderStyle> -Enumeration stellt verschiedene Stil Rahmenoptionen für ein Steuerelement dar.  
+  
+ Die Breite des Rahmens wird gesteuert, mithilfe der <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.WebControl> Klasse.  
+  
+> [!NOTE]
+>  Wenn Sie den doppelten Stil verwenden zu können, muss die Breite des Rahmens, die Sie angeben mindestens 3 Pixel breit ist, um Linien und Abstand in der Zwischenzeit aufzunehmen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dashed">
+      <MemberSignature Language="C#" Value="Dashed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Dashed = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Dashed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine gestrichelte Linienrahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dotted">
+      <MemberSignature Language="C#" Value="Dotted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Dotted = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Dotted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine gepunktete Linienrahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Double">
+      <MemberSignature Language="C#" Value="Double" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Double = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Double" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine doppelte durchgezogene Linienrahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Groove">
+      <MemberSignature Language="C#" Value="Groove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Groove = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Groove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein vertiefter Rahmen für die Darstellung eines Gesenktes Rahmendesign.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inset">
+      <MemberSignature Language="C#" Value="Inset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Inset = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Inset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Versatz Rahmen für die Darstellung eines Steuerelements vertieft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kein Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine festgelegte Rahmenart.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Outset">
+      <MemberSignature Language="C#" Value="Outset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Outset = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Outset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein erhöhter Rahmen für die Darstellung eines Steuerelements ausgelöst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ridge">
+      <MemberSignature Language="C#" Value="Ridge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Ridge = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Ridge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein gezahnte Rahmen für die Darstellung eines Rahmens ausgelöst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Solid">
+      <MemberSignature Language="C#" Value="Solid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BorderStyle Solid = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BorderStyle.Solid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine durchgezogene Linienrahmen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

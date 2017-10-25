@@ -1,0 +1,34 @@
+<Type Name="InstanceStoreQueryResult" FullName="System.Runtime.DurableInstancing.InstanceStoreQueryResult">
+  <TypeSignature Language="C#" Value="public abstract class InstanceStoreQueryResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InstanceStoreQueryResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceStoreQueryResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt einen erweiterbaren Mechanismus zur Bereitstellung von Daten aus einem Instanzspeicher. Hierzu zählen Daten zu Instanzen, Instanzbesitzern und Instanzschlüsseln (nicht die, die an den verwendeten Instanzhandle gebunden sind).  Beispielsweise ein Persistenz eigentümermetadaten Besitzer Metadaten für alle instanzbesitzern im Speicher durch Übergabe einer Instanz einer Klasse abgeleitet <see cref="T:System.Runtime.DurableInstancing.InstanceStoreQueryResult" /> auf die <see cref="M:System.Runtime.DurableInstancing.InstancePersistenceContext.QueriedInstanceStore(System.Runtime.DurableInstancing.InstanceStoreQueryResult)" /> Methode.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstanceStoreQueryResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceStoreQueryResult.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceStoreQueryResult" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

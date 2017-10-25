@@ -1,0 +1,207 @@
+<Type Name="ReflectionPermissionFlag" FullName="System.Security.Permissions.ReflectionPermissionFlag">
+  <TypeSignature Language="C#" Value="public enum ReflectionPermissionFlag" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ReflectionPermissionFlag extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.ReflectionPermissionFlag" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die zulässige Verwendung von der <see cref="N:System.Reflection" /> und <see cref="N:System.Reflection.Emit" /> Namespaces.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, durch die <xref:System.Security.Permissions.ReflectionPermission> und <xref:System.Security.Permissions.ReflectionPermissionAttribute> Klassen. Wenn kein <xref:System.Security.Permissions.ReflectionPermission> , Reflektion für alle Typen und Member zulässig ist, aber Aufrufvorgänge dürfen nur auf sichtbare Typen und Member gewährt. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für die Reflektion](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+  
+> [!CAUTION]
+>  Da <xref:System.Security.Permissions.ReflectionPermission> bieten Zugriff auf private Klassenmember, es wird empfohlen, Sie gewähren <xref:System.Security.Permissions.ReflectionPermission> Internet Code nur mit dem Flag Sandboxdomänen und nicht mit anderen Flags.  
+  
+ Das Sandboxdomänen-Flag wird in eingeführt der [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)]. Um dieses Flag verwenden, sollte die Anwendung erforderliche der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher.  
+  
+> [!IMPORTANT]
+>  AllFlags umfasst nicht das Sandboxdomänen-Flag. Um eine Maske abzurufen, die alle Flags in dieser Enumeration enthält, müssen Sie die Kombination von AllFlags mit Sandboxdomänen verwenden.  
+  
+ Beginnend mit der [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)], ReflectionEmit-Flag ist nicht mehr zum Ausgeben von Code erforderlich, es sei denn, Debugsymbole ausgegeben werden. Um dieses Feature verwenden zu können, sollte die Anwendung erforderliche der [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] oder höher.  
+  
+ Beginnend mit der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], TypeInformation-Flag ist nicht mehr erforderlich, um auf nicht öffentliche Typen und Member widerzuspiegeln; das Flag ist als veraltet markiert wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> Enumeration zum Initialisieren einer neuen Instanz von der <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> Klasse, die das Recht, eingeschränkten Memberzugriff darstellt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels, die aus Gründen der <xref:System.Security.Permissions.ReflectionPermissionFlag.AllFlags> Klasse.  
+  
+ Ein Beispiel, das zeigt, wie das Flag Sandboxdomänen mit Internetcodes verwendet, finden Sie unter [Exemplarische Vorgehensweise: Ausgeben von Code in teilweise Vertrauenswürdigkeit Szenarien](~/docs/framework/reflection-and-codedom/walkthrough-emitting-code-in-partial-trust-scenarios.md).  
+  
+ [!code-csharp[System.Security.Permissions.ReflectionPermission#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.ReflectionPermission/CS/reflectionpermission.cs#8)]
+ [!code-vb[System.Security.Permissions.ReflectionPermission#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.ReflectionPermission/VB/reflectionpermission.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllFlags">
+      <MemberSignature Language="C#" Value="AllFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.ReflectionPermissionFlag AllFlags = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.ReflectionPermissionFlag.AllFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.ReflectionPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="TypeInformation" />, <see langword="MemberAccess" />, und <see langword="ReflectionEmit" /> festgelegt sind. <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.AllFlags" />enthält keine <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberAccess">
+      <MemberSignature Language="C#" Value="MemberAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.ReflectionPermissionFlag MemberAccess = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.ReflectionPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aufrufvorgänge auf alle Elemente sind zulässig, unabhängig vom Berechtigungssatz. Wenn dieses Flag nicht festgelegt ist, sind Aufrufvorgänge nur auf sichtbare Elemente zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFlags">
+      <MemberSignature Language="C#" Value="NoFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.ReflectionPermissionFlag NoFlags = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.ReflectionPermissionFlag.NoFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.ReflectionPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enumeration von Typen und Membern ist zulässig. Aufrufvorgänge werden für sichtbare Typen und Member zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectionEmit">
+      <MemberSignature Language="C#" Value="ReflectionEmit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.ReflectionPermissionFlag ReflectionEmit = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.ReflectionPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgeben von Debugsymbolen ist zulässig. Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], dieses Flag ist nicht mehr zum Ausgeben von Code erforderlich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RestrictedMemberAccess">
+      <MemberSignature Language="C#" Value="RestrictedMemberAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.ReflectionPermissionFlag RestrictedMemberAccess = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.ReflectionPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für teilweise vertrauenswürdigen Code wird eingeschränkten Memberzugriff bereitgestellt. Teilweise vertrauenswürdiger Code kann auf nicht öffentliche Typen und Member zugreifen, jedoch nur, wenn der Berechtigungssatz der umfasst des teilweise vertrauenswürdigen Codes alle Berechtigungen im Berechtigungssatz der Assembly, die nicht öffentliche Typen und Member, die auf den zugegriffen wird. Dieses Flag ist neu in der [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeInformation">
+      <MemberSignature Language="C#" Value="TypeInformation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.ReflectionPermissionFlag TypeInformation = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("not used anymore")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.ReflectionPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Flag ist veraltet. Es sind keine Flags erforderlich, Typen und Member auflisten und ihre Metadaten zu überprüfen. Verwenden Sie stattdessen <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.NoFlags" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

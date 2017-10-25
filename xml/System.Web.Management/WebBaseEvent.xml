@@ -1,0 +1,632 @@
+<Type Name="WebBaseEvent" FullName="System.Web.Management.WebBaseEvent">
+  <TypeSignature Language="C#" Value="public class WebBaseEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebBaseEvent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebBaseEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Basisklasse für die Systemüberwachung ASP.NET-Ereignissen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Systemüberwachung kann Produktions- und Vorgänge Mitarbeiter bereitgestellte Webanwendungen verwalten. Die <xref:System.Web.Management> Namespace enthält die integritätsereignis Typen, die verantwortlich für das Verpacken Integritätsstatus Anwendungsdaten und die Anbietertypen, die für die Verarbeitung dieser Daten verantwortlich. Darüber hinaus wird die unterstützende Typen, mit denen bei der Verwaltung von integritätsereignisse enthält.  
+  
+ Die <xref:System.Web.Management.WebBaseEvent> Klasse ist der Stamm der Vererbungsstruktur für alle ASP.NET Systemüberwachung Ereignistypen. Er verwendet die <xref:System.Web.Management.WebApplicationInformation> Klasse, um die Anwendungsinformationen zu erhalten, die für die abgeleitete Klasse verfügbar ist.  
+  
+> [!NOTE]
+>  In den meisten Fällen werden Sie die ASP.NET Systemüberwachung Typen verwenden, wie implementiert, und Sie werden das System Systemüberwachung steuern, durch Angeben von Werten in der `<healthMonitoring>` Konfigurationsabschnitt. Sie können auch aus den Typen Systemüberwachung, erstellen Sie eine eigene benutzerdefinierte Ereignisse und Anbieter ableiten. Ein Beispiel für das Ableiten von der <xref:System.Web.Management.WebBaseEvent> Klasse, finden Sie im Beispiel in diesem Thema.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Ableitung der <xref:System.Web.Management.WebBaseEvent> Klasse, um ein benutzerdefiniertes Ereignis zur Systemüberwachung zu erstellen.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#1)]
+ [!code-vb[System.Web.Management.WebBaseEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#1)]  
+  
+ Das folgende Beispiel ist ein Auszug aus der Konfigurationsdatei, die ASP.NET verwenden Sie das benutzerdefinierte Ereignis ermöglicht.  
+  
+```  
+<healthMonitoring enabled="true" heartBeatInterval="0">  
+  <eventMappings>  
+    <add  name="SampleWebBaseEvent"   
+      type="SamplesAspNet.SampleWebBaseEvent,   
+      webbaseevent, Version=1.0.1573.24438, Culture=neutral,   
+      PublicKeyToken=2f5f337ae5c9bdaa,   
+      processorArchitecture=MSIL" />  
+  </eventMappings>  
+  
+  <rules>  
+    <add   
+      name="CustomWebBaseEvent"  
+      eventName="SampleWebBaseEvent"   
+      provider="EventLogProvider"   
+      profile="Critical"/>      
+  </rules>  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie Ihre benutzerdefinierte Ereignisinformationen für die Anzeige zu formatieren, überschreiben die <see cref="M:System.Web.Management.WebBaseEvent.FormatCustomEventDetails(System.Web.Management.WebEventFormatter)" /> Methode statt über das <see cref="Overload:System.Web.Management.WebBaseEvent.ToString" /> Methode. Dadurch wird vermieden, überschreiben oder Manipulation von vertraulichen Informationen.  
+  
+ Der Ereigniscode Geben Sie für das benutzerdefinierte Ereignis muss größer als sein <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebBaseEvent (string message, object eventSource, int eventCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.#ctor(System.String,System.Object,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">die Beschreibung des Ereignisses.</param>
+        <param name="eventSource">Das Objekt, das das Ereignis ausgelöst hat.</param>
+        <param name="eventCode">Der Code, der dem Ereignis zugeordnet wird. Wenn Sie ein benutzerdefiniertes Ereignis implementieren, der Ereigniscode muss größer sein als <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Management.WebBaseEvent" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird intern vom ASP.NET Systemüberwachung System verwendet. Sie werden nie verwendet, um eine Instanz erstellen die <xref:System.Web.Management.WebBaseEvent> Klasse, aber Sie können diesen Konstruktor aufrufen, wenn Sie Ihren eigenen Ereignistyp implementieren, die von dieser Klasse erbt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#2)]
+ [!code-vb[System.Web.Management.WebBaseEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebBaseEvent (string message, object eventSource, int eventCode, int eventDetailCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.#ctor(System.String,System.Object,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Beschreibung des ausgelösten Ereignisses.</param>
+        <param name="eventSource">Das Objekt, das das Ereignis ausgelöst hat.</param>
+        <param name="eventCode">Der Code, der dem Ereignis zugeordnet wird. Wenn Sie ein benutzerdefiniertes Ereignis implementieren, der Ereigniscode muss größer sein als <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">Die <see cref="T:System.Web.Management.WebEventCodes" /> Wert, der den ausführlichen Bezeichner für das Ereignis angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Management.WebBaseEvent" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird intern vom ASP.NET Systemüberwachung System verwendet. Sie werden nie verwendet, um eine Instanz erstellen die <xref:System.Web.Management.WebBaseEvent> Klasse, aber Sie können diesen Konstruktor aufrufen, wenn Sie Ihren eigenen Ereignistyp implementieren, die von dieser Klasse erbt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#3)]
+ [!code-vb[System.Web.Management.WebBaseEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationInformation">
+      <MemberSignature Language="C#" Value="public static System.Web.Management.WebApplicationInformation ApplicationInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Management.WebApplicationInformation ApplicationInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.ApplicationInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.WebApplicationInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Management.WebApplicationInformation" /> -Objekt mit Informationen über die aktuelle Anwendung überwacht wird.</summary>
+        <value>Ein <see cref="T:System.Web.Management.WebApplicationInformation" /> -Objekt, das Informationen über die überwachten Anwendung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf die Anwendungsinformationen zu erhalten.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#13)]
+ [!code-vb[System.Web.Management.WebBaseEvent#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventCode">
+      <MemberSignature Language="C#" Value="public int EventCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Codewert, der dem Ereignis zugeordnet.</summary>
+        <value>Einer der <see cref="T:System.Web.Management.WebEventCodes" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Ereignis enthalten ist in den zugehörigen <xref:System.Web.Management.WebBaseEvent.Message%2A> Wert.  
+  
+> [!NOTE]
+>  Erben von der <xref:System.Web.Management.WebBaseEvent> Klasse, den Ereigniscode, die Sie angeben, für das benutzerdefinierte Ereignis muss größer sein <xref:System.Web.Management.WebEventCodes.WebExtendedBase>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Ereigniscode abrufen.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#6)]
+ [!code-vb[System.Web.Management.WebBaseEvent#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventDetailCode">
+      <MemberSignature Language="C#" Value="public int EventDetailCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventDetailCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventDetailCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Details der Ereigniscode ab.</summary>
+        <value>Die <see cref="T:System.Web.Management.WebEventCodes" /> Wert, der den ausführlichen Bezeichner für das Ereignis angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Ereigniscode Details abrufen.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#7)]
+ [!code-vb[System.Web.Management.WebBaseEvent#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventID">
+      <MemberSignature Language="C#" Value="public Guid EventID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid EventID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den dem Ereignis zugeordneten Bezeichner ab.</summary>
+        <value>Der dem Ereignis zugeordnete Bezeichner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventOccurrence">
+      <MemberSignature Language="C#" Value="public long EventOccurrence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EventOccurrence" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventOccurrence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Zähler, der die Anzahl der Male darstellt, die das Ereignis aufgetreten ist.</summary>
+        <value>Ein Leistungsindikator darstellt, die Anzahl der Häufigkeit, mit die das Ereignis aufgetreten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist schreibgeschützt und wird als Ergebnis der Aufrufe an eine interne Methode erhöht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSequence">
+      <MemberSignature Language="C#" Value="public long EventSequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EventSequence" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventSequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Häufigkeit, mit die das Ereignis von der Anwendung ausgelöst wurde.</summary>
+        <value>Die Anzahl der Häufigkeit, mit die das Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Leistungsindikator, der angibt, wie viele Instanzen des Ereignisses von der Anwendung ausgelöst wurden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Management.WebBaseEvent.EventSequence%2A> Wert.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#8)]
+ [!code-vb[System.Web.Management.WebBaseEvent#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSource">
+      <MemberSignature Language="C#" Value="public object EventSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object EventSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das das Ereignis auslöst.</summary>
+        <value>Das Objekt, das das Ereignis ausgelöst hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Management.WebBaseEvent.EventSource%2A> Wert.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#9)]
+ [!code-vb[System.Web.Management.WebBaseEvent#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventTime">
+      <MemberSignature Language="C#" Value="public DateTime EventTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime EventTime" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt, wann das Ereignis ausgegeben wurde.</summary>
+        <value>Die Zeit, die das Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Management.WebBaseEvent.EventTime%2A> Wert.  
+  
+ System.Web.Management.WebBaseEvent#10  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventTimeUtc">
+      <MemberSignature Language="C#" Value="public DateTime EventTimeUtc { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime EventTimeUtc" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.EventTimeUtc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt, wann das Ereignis ausgegeben wurde.</summary>
+        <value>Der Zeitpunkt des Ereignisses im Format der koordinierten Weltzeit (Coordinated Universal Time, UTC).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Management.WebBaseEvent.EventTimeUtc%2A> Wert.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#11)]
+ [!code-vb[System.Web.Management.WebBaseEvent#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatCustomEventDetails">
+      <MemberSignature Language="C#" Value="public virtual void FormatCustomEventDetails (System.Web.Management.WebEventFormatter formatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FormatCustomEventDetails(class System.Web.Management.WebEventFormatter formatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.FormatCustomEventDetails(System.Web.Management.WebEventFormatter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatter" Type="System.Web.Management.WebEventFormatter" />
+      </Parameters>
+      <Docs>
+        <param name="formatter">Ein <see cref="T:System.Web.Management.WebEventFormatter" /> Objekt, das die formatierte Ereignisinformationen enthält.</param>
+        <summary>Stellt standard Formatierung von Informationen für das Ereignis bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebBaseEvent.FormatCustomEventDetails%2A> -Methode stellt ein einheitliches Format für Ereignisinformationen, die die Ereignisdaten an dem Benutzer hilfreich ist. Sie wird intern aufgerufen, wenn der Anbieter einen der Ruft die <xref:System.Web.Management.WebBaseEvent.ToString%2A> Methoden.  
+  
+> [!NOTE]
+>  Wenn Sie Ihre benutzerdefinierte Ereignisinformationen für die Anzeige zu formatieren, überschreiben die <xref:System.Web.Management.WebBaseEvent.FormatCustomEventDetails%2A> Methode statt über das <xref:System.Web.Management.WebBaseEvent.ToString%2A> Methode. Dadurch wird vermieden, überschreiben oder Manipulation von vertraulichen Informationen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anpassen der <xref:System.Web.Management.WebBaseEvent.FormatCustomEventDetails%2A> Methode.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#17](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#17)]
+ [!code-vb[System.Web.Management.WebBaseEvent#17](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementPerfCounters">
+      <MemberSignature Language="C#" Value="protected virtual void IncrementPerfCounters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void IncrementPerfCounters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.IncrementPerfCounters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird intern verwendet, um Leistungsindikatoren zu erhöhen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebBaseEvent.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldung, die Beschreibung des Ereignisses ab.</summary>
+        <value>die Beschreibung des Ereignisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft beschreibt die Bedeutung der <xref:System.Web.Management.WebEventCodes> code das ausgelöste Ereignis zugeordnete Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Management.WebBaseEvent.Message%2A> Wert.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#8)]
+ [!code-vb[System.Web.Management.WebBaseEvent#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Raise">
+      <MemberSignature Language="C#" Value="public virtual void Raise ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Raise() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.Raise" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst ein Ereignis benachrichtigt alle konfigurierten Anbieter, den das Ereignis aufgetreten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Methode überschreiben, wird durch das ausgelöste Ereignis das benutzerdefinierte Ereignis.  
+  
+> [!NOTE]
+>  Mittlere Vertrauenswürdigkeit oder höher ist erforderlich, um ein Ereignis auszulösen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Management.WebBaseEvent.Raise%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#4)]
+ [!code-vb[System.Web.Management.WebBaseEvent#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Raise">
+      <MemberSignature Language="C#" Value="public static void Raise (System.Web.Management.WebBaseEvent eventRaised);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Raise(class System.Web.Management.WebBaseEvent eventRaised) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.Raise(System.Web.Management.WebBaseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventRaised" Type="System.Web.Management.WebBaseEvent" />
+      </Parameters>
+      <Docs>
+        <param name="eventRaised">Ein <see cref="T:System.Web.Management.WebBaseEvent" />-Objekt.</param>
+        <summary>Löst das angegebene Ereignis durch benachrichtigen alle konfigurierten Anbieter, den das Ereignis aufgetreten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst das angegebene Ereignis aus, indem benachrichtigt alle konfigurierten Anbieter, den das Ereignis aufgetreten ist.  
+  
+> [!NOTE]
+>  Mittlere Vertrauenswürdigkeit oder höher ist erforderlich, um ein Ereignis auszulösen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Management.WebBaseEvent.Raise%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#5)]
+ [!code-vb[System.Web.Management.WebBaseEvent#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="P:System.Web.Management.WebBaseEvent.EventCode" /> Eigenschaft <paramref name="eventRaised" /> wurde einen Wert, der für ASP.NET reserviert ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Formatiert die Ereignisinformationen zu Anzeigezwecken.</summary>
+        <returns>Die Ereignisinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebBaseEvent.ToString%2A> Methode wird in der Regel aufgerufen, indem der Anbieter, der das Ereignis verarbeitet. Die Methode wird sichergestellt, dass den Standard <xref:System.Web.Management.WebApplicationInformation> Objekt mit den ereignisspezifische Daten bereitgestellt wird. Durch Aufrufen der ereignisspezifische Ereignisinformationen formatiert <xref:System.Web.Management.WebBaseEvent.FormatCustomEventDetails%2A> Methode.  
+  
+> [!NOTE]
+>  Wenn Sie Ihre benutzerdefinierte Ereignisinformationen für die Anzeige zu formatieren, überschreiben die <xref:System.Web.Management.WebBaseEvent.FormatCustomEventDetails%2A> Methode statt über das <xref:System.Web.Management.WebBaseEvent.ToString%2A> Methode. Dadurch wird vermieden, überschreiben oder Manipulation von vertraulichen Informationen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Management.WebBaseEvent.ToString%2A> Methode  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#14](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#14)]
+ [!code-vb[System.Web.Management.WebBaseEvent#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public virtual string ToString (bool includeAppInfo, bool includeCustomEventDetails);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(bool includeAppInfo, bool includeCustomEventDetails) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebBaseEvent.ToString(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeAppInfo" Type="System.Boolean" />
+        <Parameter Name="includeCustomEventDetails" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeAppInfo">
+          <see langword="true" />Wenn standard Anwendungsinformationen als Teil der Ereignisinformationen angezeigt werden muss; andernfalls <see langword="false" />.</param>
+        <param name="includeCustomEventDetails">
+          <see langword="true" />Wenn Sie benutzerdefinierte Informationen als Teil der Ereignisinformationen angezeigt werden müssen; andernfalls <see langword="false" />.</param>
+        <summary>Formatiert die Ereignisinformationen zu Anzeigezwecken.</summary>
+        <returns>Die Ereignisinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebBaseEvent.ToString%2A> Methode wird in der Regel aufgerufen, indem der Anbieter, der das Ereignis verarbeitet. Durch Aufrufen der ereignisspezifische Ereignisinformationen formatiert <xref:System.Web.Management.WebBaseEvent.FormatCustomEventDetails%2A> Methode. Wenn `includeAppInfo` ist `true`, dem Standard <xref:System.Web.Management.WebApplicationInformation> Objekt mit den ereignisspezifische Daten bereitgestellt wird.  
+  
+> [!NOTE]
+>  Wenn Sie Ihre benutzerdefinierte Ereignisinformationen für die Anzeige zu formatieren, überschreiben die <xref:System.Web.Management.WebBaseEvent.FormatCustomEventDetails%2A> Methode statt über das <xref:System.Web.Management.WebBaseEvent.ToString%2A> Methode. Dadurch wird vermieden, überschreiben oder Manipulation von vertraulichen Informationen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

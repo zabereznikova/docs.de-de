@@ -1,0 +1,198 @@
+<Type Name="FormViewDeleteEventArgs" FullName="System.Web.UI.WebControls.FormViewDeleteEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewDeleteEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewDeleteEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewDeleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.FormView.ItemDeleting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView> -Steuerelement löst die <xref:System.Web.UI.WebControls.FormView.ItemDeleting> Ereignis aus, wenn eine Schaltfläche "löschen" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Löschen") innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.FormView> Steuerelement löscht den Datensatz. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. das Überprüfen eines Datensatzes, bevor Sie Sie löschen, wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, wodurch Sie den Index des gelöschten Datensatzes ermitteln und um anzugeben, dass der Delete-Vorgang abgebrochen werden soll. Um den Index eines Datensatzes zu bestimmen, verwenden die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.RowIndex%2A> Eigenschaft. Um den Löschvorgang abzubrechen, legen die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Sie können auch die Schlüsselfelder und nichtschlüsselfelder zugreifen, mithilfe der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Eigenschaften bzw.. Diese Werte sind hilfreich, wenn Sie den Datensatz zu überprüfen, bevor Sie Sie löschen möchten.  
+  
+> [!NOTE]
+>  Es ist möglich, das Schlüsselfeldwerte und nicht schlüsselbezogene Feldwerte im Ändern der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Eigenschaften bzw.. Wenn Sie diese Werte ändern, wird der Datensatz, der den neuen Werten entspricht, gelöscht werden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.FormView.ItemDeleting> Ereignis, um einen Löschvorgang abzubrechen.  
+  
+ [!code-aspx-csharp[FormViewDeleteEventArgs2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeleteEventArgs2/CS/formviewdeleteeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeleteEventArgs2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeleteEventArgs2/VB/formviewdeleteeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewDeleteEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewDeleteEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index des zu löschenden Zeile.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewDeleteEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.RowIndex%2A>|Der Wert des `rowIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein sortiertes Wörterbuch mit Schlüsselfeld-Wert-Paare für den Datensatz zu löschen.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.OrderedDictionary" /> , enthält das Schlüsselfeld-Wert-Paare für den Datensatz zu löschen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> Eigenschaft enthält die Werte der Schlüsselfelder aufgeführt, die der <xref:System.Web.UI.WebControls.FormView.DataKeyNames%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.FormView> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> Eigenschaft, um den Zugriff auf die Werte des Schlüsselfelds oder der Felder für den Datensatz gelöscht werden soll. Beispielsweise können Sie diese Werte, um den Datensatz zu überprüfen, bevor Sie Sie löschen, um den Datensatz zu löschen oder gelöschte Datensätze protokollieren zu ändern.  
+  
+> [!NOTE]
+>  Diese Eigenschaft enthält nur die wichtigsten Felder. Verwenden Sie die Name-Wert-Paare für die Schlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> -Eigenschaft gibt ein <xref:System.Collections.Specialized.OrderedDictionary> Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Collections.Specialized.OrderedDictionary> Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Schlüsselfelder darstellen. Verwenden Sie die wichtigsten Feldnamen den Zugriff auf die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> Eigenschaft von der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Auf ähnliche Weise können Sie die wichtigsten Feldwerte zugreifen, mithilfe der <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.OrderedDictionary> Objekt, das Zugriff auf das Schlüsselfeld-Werte. Der Vorteil der Verwendung des Indexers ist, dass sie wichtige Feldwerte direkt zurückgibt. Datenquellen-Steuerelementen, die abhängig von der Reihenfolge der Felder (z. B. <xref:System.Web.UI.WebControls.AccessDataSource>) können nur über einen Index auf Schlüsselfeldwerte zugreifen.  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Eigenschaften sind schreibgeschützt; allerdings können Sie die Feldwerte von Ändern der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Wenn Sie den Schlüssel und nicht schlüsselbezogene Feldwerte ändern, wird der entsprechende Datensatz aus der Datenquelle gelöscht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> Eigenschaft Zugriff auf den Wert des Schlüsselfelds für den Datensatz gelöscht wird.  
+  
+ [!code-aspx-csharp[FormViewDeleteEventArgs2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeleteEventArgs2/CS/formviewdeleteeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeleteEventArgs2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeleteEventArgs2/VB/formviewdeleteeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeleteEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Eintrags aus der Datenquelle gelöscht wird.</summary>
+        <value>Der Index des Eintrags aus der Datenquelle gelöscht wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.RowIndex%2A> -Eigenschaft bestimmt den Index des Eintrags aus der Datenquelle gelöscht wird. Der Index der Zeile entspricht der Seitenindex des Datensatzes, der gelöscht wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.RowIndex%2A> -Eigenschaft bestimmt den Index des Eintrags, der gelöscht werden.  
+  
+ [!code-aspx-csharp[FormViewDeleteEventArgs2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeleteEventArgs2/CS/formviewdeleteeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeleteEventArgs2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeleteEventArgs2/VB/formviewdeleteeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch der Schlüsselfelder Name/Wert-Paare für das Element gelöscht.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.OrderedDictionary" /> , enthält die Schlüsselfelder Name/Wert-Paare für das Element löschen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte der nichtschlüsselfelder für den Datensatz gelöscht werden soll. Sie können z. B. diese Werte können Sie den Datensatz zu überprüfen, bevor Sie Sie löschen und gelöschte Datensätze protokollieren verwenden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist nicht das oder Primärschlüsselfelder enthalten. Verwenden Sie die Name-Wert-Paar für das oder Primärschlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> -Eigenschaft gibt ein <xref:System.Collections.Specialized.OrderedDictionary> Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Collections.Specialized.OrderedDictionary> Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Schlüsselfelder darstellen. Verwenden Sie für den Zugriff auf den Feldnamen, die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> Eigenschaft von der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Auf ähnliche Weise können Sie die Feldwerte zugreifen, mithilfe der <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.OrderedDictionary> Objekt, das die Feldwerte zugreifen. Der Vorteil der Verwendung des Indexers ist, dass es Feldwerte direkt zurückgibt. Datenquellen-Steuerelementen, die abhängig von der Reihenfolge der Felder (z. B. <xref:System.Web.UI.WebControls.AccessDataSource>) können nur über einen Index auf Feldwerte zugreifen.  
+  
+ Die Werte in der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Auflistung werden nicht auf die Datenquellen-Steuerelements übergeben abrufen. Wenn die Datenquelle dieser Werte erforderlich sind, sollten Sie diese Werte hinzufügen der <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> Auflistung.  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Eigenschaften sind schreibgeschützt; allerdings können Sie die Feldwerte von Ändern der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Wenn Sie den Schlüssel und nicht schlüsselbezogene Feldwerte ändern, wird der entsprechende Datensatz aus der Datenquelle gelöscht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeleteEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte nicht schlüsselbezogene Felder des Datensatzes wird gelöscht.  
+  
+ [!code-aspx-csharp[FormViewDeleteEventArgs2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeleteEventArgs2/CS/formviewdeleteeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeleteEventArgs2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeleteEventArgs2/VB/formviewdeleteeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

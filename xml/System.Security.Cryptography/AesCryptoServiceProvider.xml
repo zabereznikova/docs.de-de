@@ -1,0 +1,513 @@
+<Type Name="AesCryptoServiceProvider" FullName="System.Security.Cryptography.AesCryptoServiceProvider">
+  <TypeSignature Language="C#" Value="public sealed class AesCryptoServiceProvider : System.Security.Cryptography.Aes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AesCryptoServiceProvider extends System.Security.Cryptography.Aes" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AesCryptoServiceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Aes</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Führt symmetrische Ver- und Entschlüsselung mithilfe der kryptografischen Anwendung Programming Interfaces (CAPI)-Implementierung des Algorithmus erweiterte Verschlüsselung (Advanced Encryption Standard, AES).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln von Beispieldaten mit der <xref:System.Security.Cryptography.AesCryptoServiceProvider> Klasse.  
+  
+ [!code-csharp[AesCryptoServProvider#1](~/samples/snippets/csharp/VS_Snippets_CLR/aescryptoservprovider/cs/program.cs#1)]
+ [!code-vb[AesCryptoServProvider#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/aescryptoservprovider/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AesCryptoServiceProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.AesCryptoServiceProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Es ist keine unterstützte Schlüsselgröße für die aktuelle Plattform.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSize">
+      <MemberSignature Language="C#" Value="public override int BlockSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.BlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein symmetrisches Entschlüsselungsobjekt für AES mit dem aktuellen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches AES-Entschlüsselungsobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der aktuelle Schlüssel ist ungültig oder fehlt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" />
+        <Parameter Name="iv" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">To be added.</param>
+        <param name="rgbIV">To be added.</param>
+        <summary>Erstellt ein symmetrisches Entschlüsselungsobjekt für AES mit dem angegebenen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches AES-Entschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor%2A?displayProperty=nameWithType> Methode, um eine verschlüsselte Nachricht zu entschlüsseln. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.AesCryptoServiceProvider> Klasse.  
+  
+ [!code-csharp[AesCryptoServProvider#3](~/samples/snippets/csharp/VS_Snippets_CLR/aescryptoservprovider/cs/program.cs#3)]
+ [!code-vb[AesCryptoServProvider#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/aescryptoservprovider/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> oder <paramref name="iv" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.CreateEncryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein symmetrisches Verschlüsselungsobjekt für AES mit dem aktuellen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches AES-Verschlüsselungsobjekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.CreateEncryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" />
+        <Parameter Name="iv" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">To be added.</param>
+        <param name="rgbIV">To be added.</param>
+        <summary>Erstellt ein symmetrisches Verschlüsselungsobjekt mit dem angegebenen Schlüssel und Initialisierungsvektor (IV).</summary>
+        <returns>Ein symmetrisches AES-Verschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie in den Codebeispielen in der <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes%2A> und <xref:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizes%2A> Eigenschaften zur Bestimmung der Größe von der `key` und `iv` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateEncryptor%2A?displayProperty=nameWithType> Methode zum Verschlüsseln einer Nachricht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.AesCryptoServiceProvider> Klasse.  
+  
+ [!code-csharp[AesCryptoServProvider#2](~/samples/snippets/csharp/VS_Snippets_CLR/aescryptoservprovider/cs/program.cs#2)]
+ [!code-vb[AesCryptoServProvider#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/aescryptoservprovider/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter oder der <paramref name="iv" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FeedbackSize">
+      <MemberSignature Language="C#" Value="public override int FeedbackSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FeedbackSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.FeedbackSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIV">
+      <MemberSignature Language="C#" Value="public override void GenerateIV ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateIV() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.GenerateIV" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen zufälligen Initialisierungsvektor (IV) für den Algorithmus verwendet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Initialisierungsvektor (IV) konnte nicht generiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public override void GenerateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AesCryptoServiceProvider.GenerateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen zufälligen Schlüssel für den Algorithmus verwendet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Schlüssel konnte nicht generiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IV">
+      <MemberSignature Language="C#" Value="public override byte[] IV { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] IV" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.IV" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public override byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den symmetrischen Schlüssel, der für die Ver- und Entschlüsselung verwendet wird.</summary>
+        <value>Der symmetrische Schlüssel, der für die Ver- und Entschlüsselung verwendet wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert für den Schlüssel ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Größe des Schlüssels ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des geheimen Schlüssels in Bits.</summary>
+        <value>Die Größe des Schlüssels in Bits.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die minimale Größe des Schlüssels beträgt 128 Bits und die maximale Größe beträgt 256 Bits.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalBlockSizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalBlockSizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalBlockSizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.LegalBlockSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalKeySizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalKeySizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.LegalKeySizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.CipherMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CipherMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.PaddingMode Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.PaddingMode Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AesCryptoServiceProvider.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

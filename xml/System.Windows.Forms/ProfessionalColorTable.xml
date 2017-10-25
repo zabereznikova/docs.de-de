@@ -1,0 +1,1117 @@
+<Type Name="ProfessionalColorTable" FullName="System.Windows.Forms.ProfessionalColorTable">
+  <TypeSignature Language="C#" Value="public class ProfessionalColorTable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProfessionalColorTable extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ProfessionalColorTable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet für Microsoft Office verwendete Farben Elemente anzuzeigen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse wird aufgerufen, indem Sie <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfessionalColorTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProfessionalColorTable.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ProfessionalColorTable" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonCheckedGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonCheckedGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonCheckedGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonCheckedGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonCheckedGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonCheckedGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonCheckedGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonCheckedGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonCheckedGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonCheckedGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonCheckedGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonCheckedGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs ist, verwendet, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs ist, verwendet, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonCheckedHighlight">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonCheckedHighlight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonCheckedHighlight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonCheckedHighlight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volltonfarbe verwendet werden, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Volltonfarbe verwendet werden, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonCheckedHighlightBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonCheckedHighlightBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonCheckedHighlightBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonCheckedHighlightBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe für die Verwendung mit <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonCheckedHighlight" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für die Verwendung mit <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonCheckedHighlight" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressedBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonPressedBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonPressedBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe für die Verwendung mit der <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientBegin" />, <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientMiddle" />, und <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientEnd" /> Farben.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für die Verwendung mit der <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientBegin" />, <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientMiddle" />, und <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientEnd" /> Farben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressedGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonPressedGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonPressedGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aufgerufen werden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aufgerufen werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressedGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonPressedGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonPressedGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aufgerufen werden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aufgerufen werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressedGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonPressedGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonPressedGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aufgerufen werden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aufgerufen werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressedHighlight">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonPressedHighlight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonPressedHighlight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedHighlight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volltonfarbe verwendet, wenn die Schaltfläche aufgerufen werden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Volltonfarbe verwendet, wenn die Schaltfläche aufgerufen werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressedHighlightBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonPressedHighlightBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonPressedHighlightBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedHighlightBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe für die Verwendung mit <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedHighlight" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für die Verwendung mit <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonPressedHighlight" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSelectedBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonSelectedBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonSelectedBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe für die Verwendung mit der <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientBegin" />, <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientMiddle" />, und <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientEnd" /> Farben.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für die Verwendung mit der <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientBegin" />, <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientMiddle" />, und <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientEnd" /> Farben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSelectedGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonSelectedGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonSelectedGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSelectedGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonSelectedGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonSelectedGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSelectedGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonSelectedGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonSelectedGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs verwendet, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSelectedHighlight">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonSelectedHighlight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonSelectedHighlight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedHighlight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volltonfarbe verwendet, wenn die Schaltfläche aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Volltonfarbe verwendet, wenn die Schaltfläche aktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSelectedHighlightBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ButtonSelectedHighlightBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ButtonSelectedHighlightBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedHighlightBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe für die Verwendung mit <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedHighlight" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für die Verwendung mit <see cref="P:System.Windows.Forms.ProfessionalColorTable.ButtonSelectedHighlight" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckBackground">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color CheckBackground { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CheckBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.CheckBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volltonfarbe verwenden, wenn die Schaltfläche aktiviert wird und Farbverläufe verwendet werden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Volltonfarbe verwenden, wenn die Schaltfläche aktiviert wird und Farbverläufe verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckPressedBackground">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color CheckPressedBackground { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CheckPressedBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.CheckPressedBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volltonfarbe verwenden, wenn die Schaltfläche aktiviert und ausgewählt wird und Farbverläufe verwendet werden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Volltonfarbe verwenden, wenn die Schaltfläche aktiviert und ausgewählt wird und Farbverläufe verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckSelectedBackground">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color CheckSelectedBackground { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CheckSelectedBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.CheckSelectedBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volltonfarbe verwenden, wenn die Schaltfläche aktiviert und ausgewählt wird und Farbverläufe verwendet werden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Volltonfarbe verwenden, wenn die Schaltfläche aktiviert und ausgewählt wird und Farbverläufe verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GripDark">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color GripDark { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color GripDark" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.GripDark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe für Schattenkopien Auswirkungen auf den Ziehpunkt (Ziehpunkt) verwenden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> d. h. die Farbe für Schattenkopien Auswirkungen auf den Ziehpunkt (Ziehpunkt) verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GripLight">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color GripLight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color GripLight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.GripLight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe für die Hervorhebung Auswirkungen auf den Ziehpunkt (Ziehpunkt) verwenden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> d. h. die Farbe an, für die Hervorhebung Auswirkungen auf den Ziehpunkt (Ziehpunkt) verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageMarginGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ImageMarginGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ImageMarginGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ImageMarginGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A>muss festgelegt werden, um `true` für diese Farbe angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageMarginGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ImageMarginGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ImageMarginGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ImageMarginGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A>muss festgelegt werden, um `true` für diese Farbe angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageMarginGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ImageMarginGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ImageMarginGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ImageMarginGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A>muss festgelegt werden, um `true` für diese Farbe angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageMarginRevealedGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ImageMarginRevealedGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ImageMarginRevealedGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ImageMarginRevealedGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> Wenn ein Element angezeigt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> Wenn ein Element angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A>muss festgelegt werden, um `true` für diese Farbe angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageMarginRevealedGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ImageMarginRevealedGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ImageMarginRevealedGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ImageMarginRevealedGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> Wenn ein Element angezeigt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> Wenn ein Element angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A>muss festgelegt werden, um `true` für diese Farbe angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageMarginRevealedGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ImageMarginRevealedGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ImageMarginRevealedGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ImageMarginRevealedGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> Wenn ein Element angezeigt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs ist, die am Rand des Image verwendet eine <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> Wenn ein Element angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A>muss festgelegt werden, um `true` für diese Farbe angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe, die die Rahmenfarbe für die Verwendung auf einem <see cref="T:System.Windows.Forms.MenuStrip" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für die Verwendung auf einem <see cref="T:System.Windows.Forms.MenuStrip" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItemBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuItemBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuItemBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuItemBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe für die Verwendung mit einem <see cref="T:System.Windows.Forms.ToolStripMenuItem" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für die Verwendung mit einem <see cref="T:System.Windows.Forms.ToolStripMenuItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItemPressedGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuItemPressedGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuItemPressedGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuItemPressedGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet, wenn eine der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> gedrückt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet, wenn eine der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> gedrückt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItemPressedGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuItemPressedGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuItemPressedGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuItemPressedGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet, wenn eine der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> gedrückt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet, wenn eine der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> gedrückt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItemPressedGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuItemPressedGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuItemPressedGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuItemPressedGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs ist, verwendet, wenn eine der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> gedrückt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs ist, verwendet, wenn eine der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> gedrückt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItemSelected">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuItemSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuItemSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuItemSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Volltonfarbe verwendet wird, wenn eine <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> als der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> ausgewählt ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Volltonfarbe verwendet wird, wenn eine <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> als der obersten Ebene <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> ausgewählt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItemSelectedGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuItemSelectedGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuItemSelectedGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuItemSelectedGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs, der verwendet wird, wenn die <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> ausgewählt ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs, der verwendet wird, wenn die <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> ausgewählt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItemSelectedGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuItemSelectedGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuItemSelectedGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuItemSelectedGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs, der verwendet wird, wenn die <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> ausgewählt ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs, der verwendet wird, wenn die <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> ausgewählt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuStripGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuStripGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuStripGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuStripGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.MenuStrip" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.MenuStrip" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuStripGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color MenuStripGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MenuStripGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.MenuStripGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.MenuStrip" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.MenuStrip" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverflowButtonGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color OverflowButtonGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color OverflowButtonGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.OverflowButtonGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverflowButtonGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color OverflowButtonGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color OverflowButtonGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.OverflowButtonGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverflowButtonGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color OverflowButtonGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color OverflowButtonGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.OverflowButtonGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripOverflowButton" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaftingContainerGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color RaftingContainerGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color RaftingContainerGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.RaftingContainerGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaftingContainerGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color RaftingContainerGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color RaftingContainerGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.RaftingContainerGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorDark">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color SeparatorDark { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SeparatorDark" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.SeparatorDark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe zum mit Schattenkopien Auswirkungen auf die <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> d. h. die Farbe zum mit Schattenkopien Auswirkungen auf die <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorLight">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color SeparatorLight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SeparatorLight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.SeparatorLight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe zum mit Hervorhebung Auswirkungen auf die <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> d. h. die Farbe zum mit Hervorhebung Auswirkungen auf die <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusStripGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color StatusStripGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color StatusStripGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.StatusStripGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet, auf die <see cref="T:System.Windows.Forms.StatusStrip" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet, auf die <see cref="T:System.Windows.Forms.StatusStrip" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusStripGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color StatusStripGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color StatusStripGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.StatusStripGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet, auf die <see cref="T:System.Windows.Forms.StatusStrip" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet, auf die <see cref="T:System.Windows.Forms.StatusStrip" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripBorder">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe für den unteren Rand des verwendet die <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Rahmenfarbe für den unteren Rand des verwendet die <see cref="T:System.Windows.Forms.ToolStrip" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripContentPanelGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripContentPanelGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripContentPanelGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripContentPanelGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripContentPanelGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripContentPanelGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripContentPanelGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripContentPanelGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripDropDownBackground">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripDropDownBackground { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripDropDownBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripDropDownBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hintergrundfarbe von der <see cref="T:System.Windows.Forms.ToolStripDropDown" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> d. h. solid Farbe des Hintergrunds der <see cref="T:System.Windows.Forms.ToolStripDropDown" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStrip" /> im Hintergrund.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStrip" /> im Hintergrund.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStrip" /> im Hintergrund.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStrip" /> im Hintergrund.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripGradientMiddle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripGradientMiddle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripGradientMiddle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripGradientMiddle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mittelfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStrip" /> im Hintergrund.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Mittelfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStrip" /> im Hintergrund.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripPanelGradientBegin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripPanelGradientBegin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripPanelGradientBegin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripPanelGradientBegin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripPanel" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Startfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripPanel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStripPanelGradientEnd">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ToolStripPanelGradientEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ToolStripPanelGradientEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.ToolStripPanelGradientEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripPanel" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> also die Endfarbe des Farbverlaufs ist, verwendet der <see cref="T:System.Windows.Forms.ToolStripPanel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSystemColors">
+      <MemberSignature Language="C#" Value="public bool UseSystemColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSystemColors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProfessionalColorTable.UseSystemColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob verwenden <see cref="T:System.Drawing.SystemColors" /> anstatt Farben, die den aktuellen visuellen Stil entsprechen.</summary>
+        <value>
+          <see langword="true" />mit <see cref="T:System.Drawing.SystemColors" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn visuelle Stile oder Designs deaktiviert, werden die <xref:System.Windows.Forms.ToolStripProfessionalRenderer> verwendet die Farben in <xref:System.Drawing.SystemColors>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

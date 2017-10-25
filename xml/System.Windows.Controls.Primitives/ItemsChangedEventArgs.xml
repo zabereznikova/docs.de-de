@@ -1,0 +1,116 @@
+<Type Name="ItemsChangedEventArgs" FullName="System.Windows.Controls.Primitives.ItemsChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ItemsChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ItemsChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ItemsChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.ItemContainerGenerator.ItemsChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ItemContainerGenerator.ItemsChanged> Ereignis wird durch eine <xref:System.Windows.Controls.Primitives.IItemContainerGenerator> um Layouts zu informieren, die die Items-Auflistung geändert wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NotifyCollectionChangedAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Specialized.NotifyCollectionChangedAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ItemsChangedEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NotifyCollectionChangedAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktion ab, die in der Items-Auflistung aufgetreten.</summary>
+        <value>Gibt die Aktion, die aufgetreten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCount">
+      <MemberSignature Language="C#" Value="public int ItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ItemsChangedEventArgs.ItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente, die beteiligt waren in der Änderung ab.</summary>
+        <value>Ganze Zahl, die die Anzahl der Elemente, die der Änderung betroffen sind darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemUICount">
+      <MemberSignature Language="C#" Value="public int ItemUICount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemUICount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ItemsChangedEventArgs.ItemUICount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente der Änderung betroffen waren.</summary>
+        <value>Ganze Zahl, die die Anzahl der Elemente der Benutzeroberfläche der Änderung betroffen sind darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.GeneratorPosition OldPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.GeneratorPosition OldPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ItemsChangedEventArgs.OldPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.GeneratorPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in der Auflistung ab, bevor die Änderung aufgetreten ist.</summary>
+        <value>Gibt einen Wert vom Typ <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.GeneratorPosition Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.GeneratorPosition Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ItemsChangedEventArgs.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.GeneratorPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position in der Auflistung, in dem die Änderung aufgetreten ist.</summary>
+        <value>Gibt einen Wert vom Typ <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

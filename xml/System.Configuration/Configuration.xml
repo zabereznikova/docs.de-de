@@ -1,0 +1,862 @@
+<Type Name="Configuration" FullName="System.Configuration.Configuration">
+  <TypeSignature Language="C#" Value="public sealed class Configuration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Configuration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Configuration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Konfigurationsdatei, die auf einem bestimmten Computer, eine Anwendung oder eine Ressource angewendet wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konfigurationseinstellungen werden in einer Hierarchie von Konfigurationsdateien gespeichert. Die <xref:System.Configuration.Configuration> -Klasseninstanz stellt dar, die Ansicht der zusammengeführte Konfigurationseinstellungen aus allen Konfigurationsdateien, die für eine bestimmte physische Einheit, z. B. ein Computer oder für eine logische Entität, wie eine Anwendung oder eine Website gelten. Die logische Einheit kann auf dem lokalen Computer oder auf einem Remoteserver vorhanden sein. Informationen zu Konfigurationsdateien finden Sie unter [Konfigurieren von Apps](http://msdn.microsoft.com/library/86bd26d3-737e-4484-9782-19b17f34cd1f) und [ASP.NET-Konfigurationsdateien](http://msdn.microsoft.com/library/01505090-9114-41a7-93ca-068e2283ed3d).  
+  
+ Wenn keine Konfigurationsdatei für eine angegebene Entität vorhanden ist die <xref:System.Configuration.Configuration> Objekt die Standardeinstellungen für die Konfiguration dar, der von der Datei "Machine.config" definiert.  
+  
+ Sie erhalten eine <xref:System.Configuration.Configuration> Objekt mithilfe der folgenden Klassen:  
+  
+-   Die <xref:System.Configuration.ConfigurationManager> Klasse, wenn die Entität eine Clientanwendung ist.  
+  
+-   Die <xref:System.Web.Configuration.WebConfigurationManager> Klasse, wenn die Entität eine Webanwendung ist.  
+  
+ Die Namen der Methoden, die Zurückgeben einer <xref:System.Configuration.Configuration> Objekt beginnen mit "Open".  
+  
+ Sie können auch eine Konfigurationsdatei, die die Konfigurationseinstellungen in darstellt generieren eine <xref:System.Configuration.Configuration> Objekt. Hierzu können Sie eine der folgenden Methoden verwenden:  
+  
+-   Rufen Sie die <xref:System.Configuration.Configuration.Save%2A> Methode, um eine neue Konfigurationsdatei zu erstellen.  
+  
+-   Rufen Sie die <xref:System.Configuration.Configuration.SaveAs%2A> Methode, um eine neue Konfigurationsdatei an einem anderen Speicherort zu generieren.  
+  
+ Der Name der Methoden, die Konfigurationsdateien erstellt haben, beginnt mit "Speichern".  
+  
+> [!NOTE]
+>  Um den Zugriff auf Konfigurationseinstellungen auf einem Remotecomputer zu aktivieren, verwenden Sie das Befehlszeilentool "Aspnet_regiis". Weitere Informationen zu diesem Tool finden Sie unter [ASP.NET IIS-Registrierungstool (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b). Informationen zum Erstellen von und Zugreifen auf benutzerdefinierte Konfigurationseinstellungen als die systeminternen Abschnitte, die in .NET Framework enthalten ist, finden Sie unter <xref:System.Configuration.ConfigurationSection>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration> Klasse, um den Zugriff von konfigurationsdateielementen.  
+  
+ [!code-csharp[System.Configuration.Configuration#31](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#31)]
+ [!code-vb[System.Configuration.Configuration#31](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#31)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die <see cref="T:System.Configuration.Configuration" /> Klasse ermöglicht den programmgesteuerten Zugriff für das Bearbeiten von Konfigurationsdateien. Verwenden Sie eine der "Offen" bereitgestellten Methoden die <see cref="T:System.Web.Configuration.WebConfigurationManager" /> Klasse für Webanwendungen oder durch die <see cref="T:System.Configuration.ConfigurationManager" /> Klasse für Clientanwendungen. Diese Methoden geben ein <see cref="T:System.Configuration.Configuration" /> -Objekt, das wiederum stellt die Methoden und Eigenschaften, die die zugrunde liegenden Konfigurationsdateien zu behandeln. Sie können diese Dateien zum Lesen oder Schreiben von Konfigurationsinformationen zugreifen.  
+  
+ Verwenden Sie die <see cref="M:System.Configuration.Configuration.GetSection(System.String)" /> Methode oder die <see cref="M:System.Configuration.Configuration.GetSectionGroup(System.String)" /> Methode, um Konfigurationsinformationen zu lesen. Beachten Sie, dass der Benutzer oder Prozess, der liest die folgenden Berechtigungen verfügen muss:  
+  
+-   Read-Berechtigung für die Konfigurationsdatei an der aktuellen Ebene der Hierarchie.  
+  
+-   Read-Berechtigungen für das übergeordnete Element von Konfigurationsdateien.  
+  
+ Wenn Ihre Anwendung nur-Lese Zugriff auf seine eigene Konfiguration benötigt, wird empfohlen, Sie verwenden die <see cref="Overload:System.Web.Configuration.WebConfigurationManager.GetSection" /> methodenüberladungen für Webanwendungen. Verwenden Sie für die Clientanwendung, die <see cref="M:System.Configuration.ConfigurationManager.GetSection(System.String)" /> Methode.  
+  
+ Diese Methoden ermöglichen den Zugriff auf die zwischengespeicherten Konfigurationswerte für die aktuelle Anwendung, die eine bessere Leistung als hat die <see cref="T:System.Configuration.Configuration" /> Klasse.  
+  
+ <block subset="none" type="note"><para>  
+ Wenn Sie eine statische <see langword="GetSection" /> -Methode, die einen Path-Parameter akzeptiert, muss die Path-Parameter an die Anwendung verweisen in der der Code ausgeführt wird, andernfalls der Parameter wird ignoriert und Konfigurationsinformationen für den aktuell ausgeführten Anwendung wird zurückgegeben.  
+  
+</para></block>  
+  
+ Verwenden Sie eine von der <see cref="Overload:System.Configuration.Configuration.Save" /> Methoden zum Schreiben von Konfigurationsinformationen. Beachten Sie, dass der Benutzer oder Prozess, der schreibt die folgenden Berechtigungen verfügen muss:  
+  
+-   Schreibberechtigung für die Konfigurationsdatei und das Verzeichnis auf der aktuellen Konfiguration Hierarchieebene.  
+  
+-   Leseberechtigungen Sie für alle Konfigurationsdateien.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="AppSettings">
+      <MemberSignature Language="C#" Value="public System.Configuration.AppSettingsSection AppSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.AppSettingsSection AppSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.AppSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.AppSettingsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Configuration.AppSettingsSection" /> Objekt Konfigurationsabschnitt, der für diese gilt <see cref="T:System.Configuration.Configuration" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Configuration.AppSettingsSection" /> Objekt darstellt der <see langword="appSettings" /> Konfigurationsabschnitt, der dies gilt <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.Configuration.AppSettings%2A> Eigenschaft zum zugreifen und Ändern der `appSettings` Konfigurationsabschnitt standardmäßig in der geöffneten Konfigurationsdatei definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration.AppSettings%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Configuration.Configuration#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#5)]
+ [!code-vb[System.Configuration.Configuration#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyStringTransformer">
+      <MemberSignature Language="C#" Value="public Func&lt;string,string&gt; AssemblyStringTransformer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;string, string&gt; AssemblyStringTransformer" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.AssemblyStringTransformer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Funktionsdelegat, der verwendet wird, um Assemblyzeichenfolgen in Konfigurationsdateien zu transformieren.</summary>
+        <value>Ein Delegat, Transformationen Zeichenfolgen eingeben. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht einem Consumer des .NET Framework-Konfigurationssystem einen Funktionsdelegaten festzulegen, der verwendet wird, um das Transformieren der Assemblyzeichenfolgen, die in den Konfigurationsdateien gefunden. [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)]Diese Eigenschaft wird verwendet, wenn ein Projekt für eine frühere Version von .NET Framework ausgerichtet ist. Die Funktion wird sichergestellt, dass die Assemblyzeichenfolgen ordnungsgemäß für die Zielversion von .NET Framework formatiert werden, wenn Konfigurationsdateien aktualisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionStrings">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConnectionStringsSection ConnectionStrings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConnectionStringsSection ConnectionStrings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.ConnectionStrings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConnectionStringsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConnectionStringsSection" /> Konfigurationsabschnitt Objekt, das dies gilt <see cref="T:System.Configuration.Configuration" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Configuration.ConnectionStringsSection" /> Konfigurationsabschnitt Objekt darstellt. die <see langword="connectionStrings" /> Konfigurationsabschnitt, der dies gilt <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.Configuration.ConnectionStrings%2A> Eigenschaft zum zugreifen und Ändern der `connectionStrings` Konfigurationsabschnitt definiert, die in der Konfigurationsdatei geöffnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration.ConnectionStrings%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Configuration.Configuration#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#6)]
+ [!code-vb[System.Configuration.Configuration#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluationContext">
+      <MemberSignature Language="C#" Value="public System.Configuration.ContextInformation EvaluationContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ContextInformation EvaluationContext" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.EvaluationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ContextInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Configuration.ContextInformation" />-Objekt für das <see cref="T:System.Configuration.Configuration" />-Objekt ab.</summary>
+        <value>Die <see cref="T:System.Configuration.ContextInformation" /> -Objekt für die <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Configuration.ContextInformation> Objekt stellt den Kontext für eine <xref:System.Configuration.Configuration> -Objekt reagieren auf Grundlage, auf dem er ausgewertet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration.EvaluationContext%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Configuration.Configuration#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#7)]
+ [!code-vb[System.Configuration.Configuration#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den physischen Pfad der Konfigurationsdatei dargestellt, die von diesem <see cref="T:System.Configuration.Configuration" /> Objekt.</summary>
+        <value>Der physische Pfad der Konfigurationsdatei dargestellt, die von diesem <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert für diesen <xref:System.Configuration.Configuration.FilePath%2A> Eigenschaft eine zusammengeführte Ansicht darstellt, und keine tatsächliche Datei, die für die Anwendung vorhanden ist, wird der Pfad zu der übergeordneten Konfigurationsdatei zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration.FilePath%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Configuration.Configuration#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#8)]
+ [!code-vb[System.Configuration.Configuration#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSection">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationSection GetSection (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Configuration.ConfigurationSection GetSection(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.GetSection(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">To be added.</param>
+        <summary>Gibt das angegebene <see cref="T:System.Configuration.ConfigurationSection" />-Objekt zurück.</summary>
+        <returns>Das angegebene <see cref="T:System.Configuration.ConfigurationSection" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konfigurationseinstellungen sind in den Abschnitten enthalten, die zur leichteren ähnliche Einstellungsgruppe aus. Die <xref:System.Configuration.Configuration.GetSection%2A> Methode ruft einen Konfigurationsabschnitt ab, mit dem Namen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Configuration.Configuration.GetSection%2A> Methode, um einen benutzerdefinierten Abschnitt zuzugreifen. Für den vollständigen Beispielcode, der eine Klasse definiert, die Informationen speichert die `CustomSection` finden Sie im Abschnitt der <xref:System.Configuration.Configuration> -Klassenübersicht.  
+  
+ [!code-csharp[System.Configuration.Configuration#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#3)]
+ [!code-vb[System.Configuration.Configuration#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSectionGroup">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationSectionGroup GetSectionGroup (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Configuration.ConfigurationSectionGroup GetSectionGroup(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.GetSectionGroup(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSectionGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionGroupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">To be added.</param>
+        <summary>Ruft den angegebenen <see cref="T:System.Configuration.ConfigurationSectionGroup" /> Objekt.</summary>
+        <returns>Die <see cref="T:System.Configuration.ConfigurationSectionGroup" /> angegebenen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.Configuration.GetSectionGroup%2A> Methode zum Abrufen eines bestimmtes <xref:System.Configuration.ConfigurationSectionGroup> aus einem <xref:System.Configuration.Configuration> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFile">
+      <MemberSignature Language="C#" Value="public bool HasFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFile" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.HasFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine Datei vorhanden, für die Ressource, die von diesem dargestellt ist <see cref="T:System.Configuration.Configuration" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn eine Konfigurationsdatei vorhanden ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.HasFile%2A> Eigenschaft auch gibt `true` Wenn die Ressource dargestellt wird von diesem <xref:System.Configuration.Configuration> Objekt erbt die Einstellungen aus einer Datei "Web.config".  
+  
+ Die <xref:System.Configuration.Configuration.HasFile%2A> -Eigenschaft gibt `false` Wenn dies <xref:System.Configuration.Configuration> -Objekt stellt eine standortspezifische-Konfiguration dar.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration.HasFile%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Configuration.Configuration#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#9)]
+ [!code-vb[System.Configuration.Configuration#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locations">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationLocationCollection Locations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationLocationCollection Locations" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.Locations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationLocationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die definierten innerhalb dieser Speicherorte <see cref="T:System.Configuration.Configuration" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Configuration.ConfigurationLocationCollection" /> , enthält die definierten innerhalb dieser Speicherorte <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.Locations%2A> Eigenschaft gilt nur, wenn die <xref:System.Configuration.Configuration.HasFile%2A> -Eigenschaft gibt `true`. Wenn diese Konfiguration alle zugehörigen Einstellungen erbt oder keine Standorte definiert sind, wird eine leere Auflistung zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceDeclared">
+      <MemberSignature Language="C#" Value="public bool NamespaceDeclared { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NamespaceDeclared" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.NamespaceDeclared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Konfigurationsdatei einen XML-Namespace enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die Konfigurationsdatei einen XML-Namespace hat. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konfigurationsdateien werden als XML-Dateien formatiert, aber ein XML-Namespace ist nicht erforderlich. Wenn dieser Wert ist `true` nach der <xref:System.Configuration.Configuration> -Objekt geöffnet ist, und klicken Sie dann die Datei enthält einen Namespaceverweis. Wenn sie, um festgelegt ist `true` vor der <xref:System.Configuration.Configuration> Objekt gespeichert wird, dann wird ein Verweis auf die Datei hinzugefügt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootSectionGroup">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationSectionGroup RootSectionGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationSectionGroup RootSectionGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.RootSectionGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSectionGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stamm ab <see cref="T:System.Configuration.ConfigurationSectionGroup" /> dafür <see cref="T:System.Configuration.Configuration" /> Objekt.</summary>
+        <value>Der Stamm-Abschnittsgruppe dafür <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt die Konfigurationseinstellungen in dieser enthaltenen <see cref="T:System.Configuration.Configuration" /> Objekt, das den aktuellen XML-Konfigurationsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.Save%2A> Methode speichert Konfigurationseinstellungen, die seit dieser geändert worden sein <xref:System.Configuration.Configuration> Objekt erstellt wurde. Wenn eine Konfigurationsdatei auf den physischen Speicherort dargestellte nicht vorhanden ist die <xref:System.Configuration.Configuration.FilePath%2A> -Eigenschaft, eine neue Konfigurationsdatei erstellt werden, die alle Einstellungen enthalten, die von der geerbten Konfiguration unterscheiden.  
+  
+ Wenn die Konfigurationsdatei, seit diese geändert wurde <xref:System.Configuration.Configuration> Objekt erstellt wurde, tritt ein Laufzeitfehler auf.  
+  
+> [!NOTE]
+>  Wenn "Ersteller-Besitzer" des Verzeichnisses mit der Konfigurationsdatei des aktuellen Benutzers in der ACL (Access Control List) aufgeführt ist <xref:System.Configuration.Configuration.Save%2A> zum neuen Besitzer der Datei und erbt die Berechtigungen "Ersteller-Besitzer" gewährt. Dies führt zu einer Erhöhung der Berechtigungen für den aktuellen Benutzer und zum Entfernen von Berechtigungen für den vorherigen Besitzer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht in geschrieben werden.  
+  
+ \- oder –  
+  
+ Die Konfigurationsdatei wurde geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Configuration.ConfigurationSaveMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(valuetype System.Configuration.ConfigurationSaveMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.Save(System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">To be added.</param>
+        <summary>Schreibt die Konfigurationseinstellungen in dieser enthaltenen <see cref="T:System.Configuration.Configuration" /> Objekt, das den aktuellen XML-Konfigurationsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.Save%2A> Methode speichert Konfigurationseinstellungen in die <xref:System.Configuration.Configuration> -Objekt auf Grundlage der `saveMode` Parameter.  
+  
+ Wenn eine Konfigurationsdatei auf den physischen Speicherort dargestellte nicht vorhanden ist die <xref:System.Configuration.Configuration.FilePath%2A> -Eigenschaft, eine neue Konfigurationsdatei erstellt werden, die alle Einstellungen enthalten, die von der geerbten Konfiguration unterscheiden.  
+  
+ Wenn die Konfigurationsdatei, seit diese geändert wurde <xref:System.Configuration.Configuration> Objekt erstellt wurde, tritt ein Laufzeitfehler auf.  
+  
+> [!NOTE]
+>  Wenn "Ersteller-Besitzer" des Verzeichnisses mit der Konfigurationsdatei des aktuellen Benutzers in der ACL (Access Control List) aufgeführt ist <xref:System.Configuration.Configuration.Save%2A> zum neuen Besitzer der Datei und erbt die Berechtigungen "Ersteller-Besitzer" gewährt. Dies führt zu einer Erhöhung der Berechtigungen für den aktuellen Benutzer und zum Entfernen von Berechtigungen für den vorherigen Besitzer.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration.Save%2A> Methode, um einen benutzerdefinierten Abschnitt zu speichern.  
+  
+ [!code-csharp[System.Configuration.Configuration#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#2)]
+ [!code-vb[System.Configuration.Configuration#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht in geschrieben werden.  
+  
+ \- oder –  
+  
+ Die Konfigurationsdatei wurde geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Configuration.ConfigurationSaveMode mode, bool forceUpdateAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(valuetype System.Configuration.ConfigurationSaveMode mode, bool forceUpdateAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.Save(System.Configuration.ConfigurationSaveMode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+        <Parameter Name="forceSaveAll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">To be added.</param>
+        <param name="forceUpdateAll">To be added.</param>
+        <summary>Schreibt die Konfigurationseinstellungen in dieser enthaltenen <see cref="T:System.Configuration.Configuration" /> Objekt, das den aktuellen XML-Konfigurationsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.Save%2A> Methode speichert Konfigurationseinstellungen in die <xref:System.Configuration.Configuration> -Objekt auf Grundlage der `saveMode` und `forceSaveAll` Parameter.  
+  
+ Wenn eine Konfigurationsdatei auf den physischen Speicherort dargestellte nicht vorhanden ist die <xref:System.Configuration.Configuration.FilePath%2A> -Eigenschaft, eine neue Konfigurationsdatei erstellt werden, die alle Einstellungen enthalten, die von der geerbten Konfiguration unterscheiden...  
+  
+ Wenn die Konfigurationsdatei, seit diese geändert wurde <xref:System.Configuration.Configuration> Objekt erstellt wurde, tritt ein Laufzeitfehler auf.  
+  
+> [!NOTE]
+>  Wenn "Ersteller-Besitzer" des Verzeichnisses mit der Konfigurationsdatei des aktuellen Benutzers in der ACL (Access Control List) aufgeführt ist <xref:System.Configuration.Configuration.Save%2A> zum neuen Besitzer der Datei und erbt die Berechtigungen "Ersteller-Besitzer" gewährt. Dies führt zu einer Erhöhung der Berechtigungen für den aktuellen Benutzer und zum Entfernen von Berechtigungen für den vorherigen Besitzer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht in geschrieben werden.  
+  
+ \- oder –  
+  
+ Die Konfigurationsdatei wurde geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public void SaveAs (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAs(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.SaveAs(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Pfad und Name die Konfigurationsdatei zu speichern.</param>
+        <summary>Schreibt die Konfigurationseinstellungen in dieser enthaltenen <see cref="T:System.Configuration.Configuration" /> Objekt, das die angegebene XML-Konfigurationsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.SaveAs%2A> Methode speichert Konfigurationseinstellungen, die seit dieser geändert worden sein <xref:System.Configuration.Configuration> Objekt in eine neue Datei erstellt wurde.  
+  
+ Wenn eine Konfigurationsdatei auf den physischen Speicherort dargestellte nicht vorhanden ist die  
+  
+ <xref:System.Configuration.Configuration.FilePath%2A>Eigenschaft, wird eine neue Konfigurationsdatei erstellt werden, um alle Einstellungen enthalten, die von der geerbten Konfiguration unterscheiden...  
+  
+ Wenn die Konfigurationsdatei, seit diese geändert wurde <xref:System.Configuration.Configuration> Objekt erstellt wurde, tritt ein Laufzeitfehler auf.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht in geschrieben werden.  
+  
+ \- oder –  
+  
+ Die Konfigurationsdatei wurde geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public void SaveAs (string filename, System.Configuration.ConfigurationSaveMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAs(string filename, valuetype System.Configuration.ConfigurationSaveMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.SaveAs(System.String,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Pfad und Name die Konfigurationsdatei zu speichern.</param>
+        <param name="mode">To be added.</param>
+        <summary>Schreibt die Konfigurationseinstellungen in dieser enthaltenen <see cref="T:System.Configuration.Configuration" /> Objekt, das die angegebene XML-Konfigurationsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.SaveAs%2A> Methode speichert Konfigurationseinstellungen in die <xref:System.Configuration.Configuration> -Objekt in eine neue Datei auf Grundlage der `saveMode` Parameter.  
+  
+ Wenn eine Konfigurationsdatei auf den physischen Speicherort dargestellte nicht vorhanden ist die <xref:System.Configuration.Configuration.FilePath%2A> -Eigenschaft, eine neue Konfigurationsdatei erstellt werden, die alle Einstellungen enthalten, die von der geerbten Konfiguration unterscheiden...  
+  
+ Wenn die Konfigurationsdatei, seit diese geändert wurde <xref:System.Configuration.Configuration> Objekt erstellt wurde, tritt ein Laufzeitfehler auf.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht in geschrieben werden.  
+  
+ \- oder –  
+  
+ Die Konfigurationsdatei wurde geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public void SaveAs (string filename, System.Configuration.ConfigurationSaveMode mode, bool forceUpdateAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAs(string filename, valuetype System.Configuration.ConfigurationSaveMode mode, bool forceUpdateAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Configuration.SaveAs(System.String,System.Configuration.ConfigurationSaveMode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+        <Parameter Name="forceSaveAll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Pfad und Name die Konfigurationsdatei zu speichern.</param>
+        <param name="mode">To be added.</param>
+        <param name="forceUpdateAll">To be added.</param>
+        <summary>Schreibt die Konfigurationseinstellungen in dieser enthaltenen <see cref="T:System.Configuration.Configuration" /> Objekt, das die angegebene XML-Konfigurationsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.Configuration.SaveAs%2A> Methode speichert Konfigurationseinstellungen in die <xref:System.Configuration.Configuration> -Objekt in eine neue Datei auf Grundlage der `saveMode` und `forceSaveAll` Parameter.  
+  
+ Wenn eine Konfigurationsdatei auf den physischen Speicherort dargestellte nicht vorhanden ist die <xref:System.Configuration.Configuration.FilePath%2A> -Eigenschaft, eine neue Konfigurationsdatei erstellt werden, die alle Einstellungen enthalten, die von der geerbten Konfiguration unterscheiden.  
+  
+ Wenn die Konfigurationsdatei, seit diese geändert wurde <xref:System.Configuration.Configuration> Objekt erstellt wurde, tritt ein Laufzeitfehler auf.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Configuration.Configuration.SaveAs%2A>-Methode verwenden.  
+  
+ [!code-csharp[System.Configuration.Configuration#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#4)]
+ [!code-vb[System.Configuration.Configuration#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filename" />ist Null oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SectionGroups">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationSectionGroupCollection SectionGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationSectionGroupCollection SectionGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.SectionGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSectionGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der von dieser Konfiguration definierten Abschnittsgruppen ab.</summary>
+        <value>Ein <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> Auflistung, die die Auflistung von Abschnittsgruppen dafür darstellt <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konfigurationsabschnitte können kombiniert werden, gruppiert der Einfachheit halber und Funktionen hinzugefügt. Zugriff der <xref:System.Configuration.Configuration.SectionGroups%2A> Eigenschaft zum Abrufen der <xref:System.Configuration.ConfigurationSectionGroupCollection> Objekt, das die Auflistung von Abschnittsgruppen dafür darstellt <xref:System.Configuration.Configuration> Objekt. Wenn diese <xref:System.Configuration.Configuration> Objekt eine geerbte Ansicht darstellt, wird die zusammengeführte Liste von Abschnittsgruppen zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.Configuration.SectionGroups%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Configuration.Configuration#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#10)]
+ [!code-vb[System.Configuration.Configuration#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sections">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationSectionCollection Sections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationSectionCollection Sections" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.Sections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der von diesem definierten Abschnitte <see cref="T:System.Configuration.Configuration" /> Objekt.</summary>
+        <value>Eine Auflistung der von diesem definierten Abschnitte <see cref="T:System.Configuration.Configuration" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriff der <xref:System.Configuration.Configuration.Sections%2A> Eigenschaft zum Abrufen einer <xref:System.Configuration.ConfigurationSectionCollection> Objekt, das die Auflistung von Abschnitten für diesen darstellt <xref:System.Configuration.Configuration> Objekt. Wenn diese <xref:System.Configuration.Configuration> Objekt eine zusammengeführte Konfiguration darstellt, wird die zusammengeführte Liste von Abschnitten zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Configuration.Configuration.Sections%2A> Eigenschaftswert und die Anzahl der Abschnitte in der Auflistung angezeigt.  
+  
+ [!code-csharp[System.Configuration.Configuration#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.Configuration/CS/Configuration.cs#11)]
+ [!code-vb[System.Configuration.Configuration#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.Configuration/VB/Configuration.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFramework">
+      <MemberSignature Language="C#" Value="public System.Runtime.Versioning.FrameworkName TargetFramework { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Versioning.FrameworkName TargetFramework" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.TargetFramework" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.FrameworkName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Zielversion von .NET Framework an, wenn eine Version früher als der aktuelle ausgerichtet ist.</summary>
+        <value>Der Name der Zielversion von .NET Framework. Der Standardwert ist <see langword="null" />, was bedeutet, dass die aktuelle Version als Ziel verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Konfigurationssystem eine Hierarchie von Objekten in XML serialisiert, überprüft es den Wert dieser Eigenschaft. Wenn die Eigenschaft nicht `null`, das Konfigurationssystem überprüft die Version für jede-Konfigurationsabschnittsgruppe und Konfigurationsabschnitt. Das Konfigurationssystem führt Version überprüft auch für einzelne Konfigurationseigenschaften, die markiert sind, zwischen Versionen geändert hat. (Weitere Informationen finden Sie unter <xref:System.Configuration.ConfigurationPropertyOptions>.) Das Konfigurationssystem überprüft auch Version für Konfigurationselemente in Konfigurationsabschnitte.  
+  
+ Wenn der Wert dieser Eigenschaft ist `null`, das Konfigurationssystem führt keine Überprüfungen Version während der Serialisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeStringTransformer">
+      <MemberSignature Language="C#" Value="public Func&lt;string,string&gt; TypeStringTransformer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;string, string&gt; TypeStringTransformer" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Configuration.TypeStringTransformer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine zu delegierende Funktion, mit dem von Typzeichenfolgen in Konfigurationsdateien zu transformieren.</summary>
+        <value>Ein Delegat, Transformationen Zeichenfolgen eingeben. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht einem Consumer des .NET Framework-Konfigurationssystem einen Funktionsdelegaten festzulegen, der verwendet wird, um das Transformieren des Typzeichenfolgen, die in den Konfigurationsdateien gefunden. [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)]Diese Eigenschaft wird verwendet, wenn ein Projekt für eine frühere Version von .NET Framework ausgerichtet ist. Die Funktion wird sichergestellt, dass Typzeichenfolgen ordnungsgemäß für die Zielversion von .NET Framework formatiert werden, wenn Konfigurationsdateien aktualisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

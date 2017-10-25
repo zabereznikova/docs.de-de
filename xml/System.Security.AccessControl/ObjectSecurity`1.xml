@@ -1,0 +1,705 @@
+<Type Name="ObjectSecurity&lt;T&gt;" FullName="System.Security.AccessControl.ObjectSecurity&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ObjectSecurity&lt;T&gt; : System.Security.AccessControl.NativeObjectSecurity where T : struct" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ObjectSecurity`1&lt;struct .ctor (class System.ValueType) T&gt; extends System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.ObjectSecurity`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+        <BaseTypeName>System.ValueType</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.NativeObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Die Zugriffsrechte für das Objekt.</typeparam>
+    <summary>Bietet die Möglichkeit zum Steuern des Zugriffs auf Objekte ohne direkte Bearbeitung von Zugriffssteuerungslisten (ACLs); Außerdem bietet die Möglichkeit zum Typumwandlung Zugriffsrechte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriffsrechte (Berechtigungen) sind Typ T, die Sie Typumwandlung in oder aus einem "int". Sie können z. B. eine Typumwandlung ein <xref:System.Security.AccessControl.FileSystemRights> , normalerweise als den Zugriff rights Typ, und verwenden Sie die Instanz. Im Gegensatz dazu <xref:System.Security.AccessControl.ObjectSecurity> immer nimmt-Zugriffsrechten des Typs "int".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.#ctor(System.Boolean,System.Security.AccessControl.ResourceType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />, wenn das neue <see cref="T:System.Security.AccessControl.ObjectSecurity`1" />-Objekt ein Containerobjekt ist.</param>
+        <param name="resourceType">Der Typ der Ressource.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse ObjectSecurity'1.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, System.Runtime.InteropServices.SafeHandle safeHandle, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, class System.Runtime.InteropServices.SafeHandle safeHandle, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.Runtime.InteropServices.SafeHandle,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="safeHandle" Type="System.Runtime.InteropServices.SafeHandle" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />, wenn das neue <see cref="T:System.Security.AccessControl.ObjectSecurity`1" />-Objekt ein Containerobjekt ist.</param>
+        <param name="resourceType">Der Typ der Ressource.</param>
+        <param name="safeHandle">Ein Handle.</param>
+        <param name="includeSections">Die Abschnitte enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse ObjectSecurity'1.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, string name, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, string name, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />, wenn das neue <see cref="T:System.Security.AccessControl.ObjectSecurity`1" />-Objekt ein Containerobjekt ist.</param>
+        <param name="resourceType">Der Typ der Ressource.</param>
+        <param name="name">Der Name des sicherungsfähigen Objekts, dem das neue <see cref="T:System.Security.AccessControl.ObjectSecurity`1" />-Objekt zugeordnet ist.</param>
+        <param name="includeSections">Die Abschnitte enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse ObjectSecurity'1.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, System.Runtime.InteropServices.SafeHandle safeHandle, System.Security.AccessControl.AccessControlSections includeSections, System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, class System.Runtime.InteropServices.SafeHandle safeHandle, valuetype System.Security.AccessControl.AccessControlSections includeSections, class System.Security.AccessControl.NativeObjectSecurity/ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.Runtime.InteropServices.SafeHandle,System.Security.AccessControl.AccessControlSections,System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="safeHandle" Type="System.Runtime.InteropServices.SafeHandle" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+        <Parameter Name="exceptionFromErrorCode" Type="System.Security.AccessControl.NativeObjectSecurity+ExceptionFromErrorCode" />
+        <Parameter Name="exceptionContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />, wenn das neue <see cref="T:System.Security.AccessControl.ObjectSecurity`1" />-Objekt ein Containerobjekt ist.</param>
+        <param name="resourceType">Der Typ der Ressource.</param>
+        <param name="safeHandle">Ein Handle.</param>
+        <param name="includeSections">Die Abschnitte enthalten.</param>
+        <param name="exceptionFromErrorCode">Ein von Integratoren implementierter Delegat, der benutzerdefinierte Ausnahmen bereitstellt.</param>
+        <param name="exceptionContext">Ein Objekt, das Kontextinformationen zur Quelle oder zum Ziel der Ausnahme enthält.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse ObjectSecurity'1.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, string name, System.Security.AccessControl.AccessControlSections includeSections, System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, string name, valuetype System.Security.AccessControl.AccessControlSections includeSections, class System.Security.AccessControl.NativeObjectSecurity/ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.String,System.Security.AccessControl.AccessControlSections,System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+        <Parameter Name="exceptionFromErrorCode" Type="System.Security.AccessControl.NativeObjectSecurity+ExceptionFromErrorCode" />
+        <Parameter Name="exceptionContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />, wenn das neue <see cref="T:System.Security.AccessControl.ObjectSecurity`1" />-Objekt ein Containerobjekt ist.</param>
+        <param name="resourceType">Der Typ der Ressource.</param>
+        <param name="name">Der Name des sicherungsfähigen Objekts, dem das neue <see cref="T:System.Security.AccessControl.ObjectSecurity`1" />-Objekt zugeordnet ist.</param>
+        <param name="includeSections">Die Abschnitte enthalten.</param>
+        <param name="exceptionFromErrorCode">Ein von Integratoren implementierter Delegat, der benutzerdefinierte Ausnahmen bereitstellt.</param>
+        <param name="exceptionContext">Ein Objekt, das Kontextinformationen zur Quelle oder zum Ziel der Ausnahme enthält.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse ObjectSecurity'1.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRightType">
+      <MemberSignature Language="C#" Value="public override Type AccessRightType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRightType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.ObjectSecurity`1.AccessRightType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des sicherungsfähigen Objekts, das diesem ObjectSecurity "1-Objekt zugeordnet.</summary>
+        <value>Der Typ des sicherungsfähigen Objekts, das der aktuellen Instanz zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleFactory">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.AccessRule AccessRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AccessRule AccessRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AccessRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Stellt ein Benutzerkonto dar.</param>
+        <param name="accessMask">Der Access-Typ.</param>
+        <param name="isInherited">
+          <see langword="" />
+          <see langword="true" />Wenn die Zugriffsregel geerbt wird. andernfalls <see langword="false" />.</param>
+        <param name="inheritanceFlags">Gibt an, wie Zugriffsmasken an untergeordnete Objekte weitergegeben.</param>
+        <param name="propagationFlags">Gibt an, wie die Zugriffssteuerungseinträge (ACEs) untergeordneten Objekte verbreiten.</param>
+        <param name="type">Gibt an, ob der Zugriff zugelassen oder verweigert wird.</param>
+        <summary>Initialisiert eine neue Instanz der ObjectAccessRule-Klasse, die eine neue Zugriffsregel für den zugeordneten Sicherheits-Objekt darstellt.</summary>
+        <returns>Stellt eine neue Zugriffsregel für den angegebenen Benutzer mit den angegebenen Zugriffsrechten, Zugriffssteuerung und Flags.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleType">
+      <MemberSignature Language="C#" Value="public override Type AccessRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.ObjectSecurity`1.AccessRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Objekts, das den Zugriffsregeln dieses ObjectSecurity "1-Objekt zugeordnet.</summary>
+        <value>Der Typ des Objekts, das den Zugriffsregeln der aktuellen Instanz zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccessRule">
+      <MemberSignature Language="C#" Value="public virtual void AddAccessRule (System.Security.AccessControl.AccessRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAccessRule(class System.Security.AccessControl.AccessRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.AddAccessRule(System.Security.AccessControl.AccessRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die Regel hinzufügen.</param>
+        <summary>Fügt hinzu, die angegebene Zugriffsregel der freigegebenen Zugriffssteuerungsliste (DACL Discretionary Access Control List) mit diesem ObjectSecurity "1-Objekt zugeordnet sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuditRule">
+      <MemberSignature Language="C#" Value="public virtual void AddAuditRule (System.Security.AccessControl.AuditRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAuditRule(class System.Security.AccessControl.AuditRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.AddAuditRule(System.Security.AccessControl.AuditRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die hinzuzufügende Überwachungsregel.</param>
+        <summary>Fügt dieser ObjectSecurity "1-Objekt angegebenen Überwachungsregel an das System Liste SACL (Access Control) zugeordnet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleFactory">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.AuditRule AuditRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AuditRule AuditRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuditRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Stellt ein Benutzerkonto dar.</param>
+        <param name="accessMask">Eine ganze Zahl, die einen Access-Typ angibt.</param>
+        <param name="isInherited">
+          <see langword="true" />Wenn die Zugriffsregel geerbt wird. andernfalls <see langword="false" />.</param>
+        <param name="inheritanceFlags">Gibt an, wie Zugriffsmasken an untergeordnete Objekte weitergegeben.</param>
+        <param name="propagationFlags">Gibt an, wie die Zugriffssteuerungseinträge (ACEs) untergeordneten Objekte verbreiten.</param>
+        <param name="flags">Beschreibt den Typ der auszuführenden Überwachung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.AuditRule" /> Klasse, die die angegebene Überwachungsregel für den angegebenen Benutzer darstellt.</summary>
+        <returns>Gibt die angegebene Überwachungsregel für den angegebenen Benutzer zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleType">
+      <MemberSignature Language="C#" Value="public override Type AuditRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AuditRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.ObjectSecurity`1.AuditRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ-Objekt, das den Überwachungsregeln dieses ObjectSecurity "1-Objekt zugeordnet.</summary>
+        <value>Die Typ-Objekt, das den Überwachungsregeln der aktuellen Instanz zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected void Persist (System.Runtime.InteropServices.SafeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Persist(class System.Runtime.InteropServices.SafeHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.Persist(System.Runtime.InteropServices.SafeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.InteropServices.SafeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Das Handle des sicherungsfähigen Objekts, dem dieses ObjectSecurity "1-Objekt zugeordnet ist.</param>
+        <summary>Speichert dieses ObjectSecurity "1-Objekt in einen permanenten Speicher, mit dem angegebenen Handle zugeordnete Sicherheitsbeschreibung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected void Persist (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Persist(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.Persist(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des sicherungsfähigen Objekts, dem dieses ObjectSecurity "1-Objekt zugeordnet ist.</param>
+        <summary>Speichert die Sicherheitsbeschreibung, die diesem ObjectSecurity "1-Objekt in einen permanenten Speicher, mit dem angegebenen Namen zugeordnet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRule">
+      <MemberSignature Language="C#" Value="public virtual bool RemoveAccessRule (System.Security.AccessControl.AccessRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RemoveAccessRule(class System.Security.AccessControl.AccessRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.RemoveAccessRule(System.Security.AccessControl.AccessRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die Regel zu entfernen.</param>
+        <summary>Entfernt die Zugriffsregeln, die dieselbe Sicherheits-ID und die Zugriffsmaske als die angegebene Zugriffsregel aus der freigegebenen Zugriffssteuerungsliste (DACL Discretionary Access Control Liste), die diesem ObjectSecurity "1-Objekt zugeordneten enthalten.</summary>
+        <returns>Gibt <see langword="true" /> , wenn die Regel erfolgreich entfernt wurde, andernfalls wurde <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleAll">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAccessRuleAll (System.Security.AccessControl.AccessRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAccessRuleAll(class System.Security.AccessControl.AccessRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.RemoveAccessRuleAll(System.Security.AccessControl.AccessRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die Regel zu entfernen.</param>
+        <summary>Entfernt alle Zugriffsregeln, die dieselbe Sicherheits-ID aufweisen wie die angegebene Zugriffsregel aus der freigegebenen Zugriffssteuerungsliste (DACL Discretionary Access Control List) dieses ObjectSecurity "1-Objekt zugeordnet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleSpecific">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAccessRuleSpecific (System.Security.AccessControl.AccessRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAccessRuleSpecific(class System.Security.AccessControl.AccessRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.RemoveAccessRuleSpecific(System.Security.AccessControl.AccessRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die Regel zu entfernen.</param>
+        <summary>Entfernt alle Zugriffsregeln, die die angegebenen Zugriffsregel aus der freigegebenen Zugriffssteuerungsliste (DACL Discretionary Access Control Liste), die diesem ObjectSecurity "1-Objekt zugeordneten genau übereinstimmen</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRule">
+      <MemberSignature Language="C#" Value="public virtual bool RemoveAuditRule (System.Security.AccessControl.AuditRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RemoveAuditRule(class System.Security.AccessControl.AuditRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.RemoveAuditRule(System.Security.AccessControl.AuditRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">So entfernen Sie die Überwachungsregel</param>
+        <summary>Entfernt die Überwachungsregeln, die dieselbe Sicherheits-ID und Zugriffsmaske, als die angegebene Überwachungsregel aus dem System Liste SACL (Access Control enthalten) dieses ObjectSecurity "1-Objekt zugeordnet.</summary>
+        <returns>Gibt <see langword="true" /> , wenn das Objekt entfernt; andernfalls wurde, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleAll">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAuditRuleAll (System.Security.AccessControl.AuditRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAuditRuleAll(class System.Security.AccessControl.AuditRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.RemoveAuditRuleAll(System.Security.AccessControl.AuditRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">So entfernen Sie Überwachungsregel.</param>
+        <summary>Entfernt alle Überwachungsregeln, die dieselbe Sicherheits-ID aufweisen wie die angegebene Überwachungsregel aus dem System Liste SACL (Access Control) dieses ObjectSecurity "1-Objekt zugeordnet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleSpecific">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAuditRuleSpecific (System.Security.AccessControl.AuditRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAuditRuleSpecific(class System.Security.AccessControl.AuditRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.RemoveAuditRuleSpecific(System.Security.AccessControl.AuditRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">So entfernen Sie Überwachungsregel.</param>
+        <summary>Entfernt alle Überwachungsregeln, die genau den angegebenen Überwachungsregel aus dem System Liste SACL (Access Control) dieses ObjectSecurity "1-Objekt zugeordnet</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAccessRule">
+      <MemberSignature Language="C#" Value="public virtual void ResetAccessRule (System.Security.AccessControl.AccessRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetAccessRule(class System.Security.AccessControl.AccessRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.ResetAccessRule(System.Security.AccessControl.AccessRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die Zugriffsregel zurücksetzen.</param>
+        <summary>Entfernt alle Zugriffsregeln in der freigegebenen Zugriffssteuerungsliste (DACL Discretionary Access Control Liste), die diesem Objekt ObjectSecurity "1 zugeordnet, und fügt dann die angegebene Regel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessRule">
+      <MemberSignature Language="C#" Value="public virtual void SetAccessRule (System.Security.AccessControl.AccessRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetAccessRule(class System.Security.AccessControl.AccessRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.SetAccessRule(System.Security.AccessControl.AccessRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die Zugriffsregel festgelegt.</param>
+        <summary>Entfernt alle Zugriffsregeln, die dieselbe Sicherheits-ID und die Qualifizierer als die angegebene Regel in der freigegebenen Zugriffssteuerungsliste (DACL Discretionary Access Control Liste), die diesem ObjectSecurity "1-Objekt zugeordneten enthalten, und fügt dann die angegebene Regel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuditRule">
+      <MemberSignature Language="C#" Value="public virtual void SetAuditRule (System.Security.AccessControl.AuditRule&lt;T&gt; rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetAuditRule(class System.Security.AccessControl.AuditRule`1&lt;!T&gt; rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.ObjectSecurity`1.SetAuditRule(System.Security.AccessControl.AuditRule{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die festzulegende Überwachungsregel.</param>
+        <summary>Entfernt alle Überwachungsregeln, die die gleiche Sicherheits-ID und Qualifizierer, als die angegebene Überwachungsregel in das System Liste SACL (Access Control enthalten) dieses ObjectSecurity "1-Objekt zugeordnet, und fügt dann die angegebenen Überwachungsregel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

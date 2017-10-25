@@ -1,0 +1,272 @@
+<Type Name="RectangleHotSpot" FullName="System.Web.UI.WebControls.RectangleHotSpot">
+  <TypeSignature Language="C#" Value="public sealed class RectangleHotSpot : System.Web.UI.WebControls.HotSpot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RectangleHotSpot extends System.Web.UI.WebControls.HotSpot" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RectangleHotSpot" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.HotSpot</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen rechteckigen Hotspotbereich in einem <see cref="T:System.Web.UI.WebControls.ImageMap" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse definiert einen rechteckigen Hotspotbereich in einem <xref:System.Web.UI.WebControls.ImageMap> Steuerelement. Definieren Sie den Bereich des der <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt, das Festlegen der <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A> Eigenschaft, um den Wert, der die X-Koordinate des rechteckigen Bereichs oben linken Ecke. Legen Sie die <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A> Eigenschaft auf den Wert, der die y-Koordinate des rechteckigen Bereichs oben darstellt linken Ecke. Legen Sie die <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A> Eigenschaft auf den Wert, der die X-Koordinate des rechteckigen Bereichs unten rechts darstellt. Eine Gruppe von der <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> -Eigenschaft auf den Wert, der die y-Koordinate des rechteckigen Bereichs unten rechts darstellt.  
+  
+ Wenn ein <xref:System.Web.UI.WebControls.RectangleHotSpot> Steuerelement geklickt wird, wird die Seite navigiert zu einer URL, generiert ein Postback an den Server oder führt keine Aktion. Die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft gibt an, dieses Verhalten. Um zu einer URL zu navigieren, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft, um `HotSpotMode.Navigate` und verwenden die <xref:System.Web.UI.WebControls.HotSpot.NavigateUrl%2A> Eigenschaft zum Angeben der URL zu navigieren. Um an den Server zu senden, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft `HotSpotMode.PostBack` und Verwenden der <xref:System.Web.UI.WebControls.HotSpot.PostBackValue%2A> -Eigenschaft geben Sie einen Namen für die <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt. Dieser Name wird übergeben werden, der <xref:System.Web.UI.WebControls.ImageMapEventArgs> Ereignisdaten bei der <xref:System.Web.UI.WebControls.RectangleHotSpot> geklickt wird. . Wenn Sie möchten die <xref:System.Web.UI.WebControls.HotSpot> Objekt weisen kein Verhalten, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft, um `HotSpotMode.Inactive`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ erstellt ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das zwei enthält <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte. Die <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `HotSpotMode.PostBack`, die bewirkt, dass der Seite an den Server jedes Mal einen Benutzer klickt auf eine der Hotspot-Regionen. Jedes Mal klickt der Benutzer auf eine der der <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte, die <xref:System.Web.UI.WebControls.RectangleHotSpot.GetCoordinates%2A> Methode wird aufgerufen, und die Koordinaten der ausgewählten Hotspot werden dem Benutzer angezeigt. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie angeben, Ihr eigenes Image für die <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft und den Pfad entsprechend aktualisieren, sodass die Anwendung danach suchen kann.  
+  
+ [!code-aspx-csharp[ImageMapClass2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMapClass2/CS/imagemapclass2cs.aspx#1)]
+ [!code-aspx-vb[ImageMapClass2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMapClass2/VB/imagemapclass2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleHotSpot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RectangleHotSpot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.RectangleHotSpot> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuerte Erstellung von zwei <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte, deren Eigenschaften festlegen und Hinzufügen der <xref:System.Web.UI.WebControls.ImageMap> des Steuerelements <xref:System.Web.UI.WebControls.HotSpotCollection> Auflistung. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie angeben, Ihr eigenes Image für die <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft und den Pfad entsprechend aktualisieren, sodass die Anwendung danach suchen kann.  
+  
+ [!code-aspx-csharp[RectangleHotSpot.Cstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RectangleHotSpot.Cstr/CS/rectanglehotspot.cstrcs.aspx#1)]
+ [!code-aspx-vb[RectangleHotSpot.Cstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RectangleHotSpot.Cstr/VB/rectanglehotspot.cstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public int Bottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RectangleHotSpot.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die y-Koordinate der unteren Randes des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt.</summary>
+        <value>Die y-Koordinate der unteren Randes des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> -Eigenschaft können Sie zum Abrufen oder Festlegen eines Werts, der die y-Koordinate der unteren Randes des rechteckigen Bereichs, der von diesem darstellt <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt. Um vollständig zu definieren eine <xref:System.Web.UI.WebControls.RectangleHotSpot> -Objekt, geben Sie einen Wert für diese Eigenschaft und für die <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A>, <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A>, und <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ erstellt ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das zwei enthält <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte. Eine <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt wird deklarativ erstellt und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> Eigenschaft deklarativ festgelegt werden. Die andere <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekts programmgesteuert erstellt wird und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> Eigenschaft programmgesteuert festgelegt werden. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie angeben, Ihr eigenes Image für die <xref:System.Web.UI.MobileControls.Image.ImageUrl%2A> Eigenschaft und den Pfad entsprechend aktualisieren, sodass die Anwendung danach suchen kann.  
+  
+ [!code-aspx-csharp[RectangleHotSpot.Top#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RectangleHotSpot.Top/CS/rectanglehotspot.topcs.aspx#1)]
+ [!code-aspx-vb[RectangleHotSpot.Top#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RectangleHotSpot.Top/VB/rectanglehotspot.topvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCoordinates">
+      <MemberSignature Language="C#" Value="public override string GetCoordinates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCoordinates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RectangleHotSpot.GetCoordinates" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die das "X" stellt- und y-Koordinaten für ein <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> objektspezifischen linken oberen Ecke und die x- und y-Koordinaten der unteren rechten Ecke.</summary>
+        <returns>Eine Zeichenfolge, die die x- und y-Koordinaten der stellt eine <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> objektspezifischen linken oberen Ecke und die x- und y-Koordinaten der unteren rechten Ecke.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Zeichenfolge, die Koordinaten des darstellt, eine <xref:System.Web.UI.WebControls.RectangleHotSpot> objektspezifischen linken oberen Ecke und die Koordinaten der unteren rechten Ecke. Diese Methode verwendet die Werte für die <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A> und <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A> Eigenschaften zurückgeben die Koordinaten für die oberen linken Ecke. Er verwendet die Werte zugewiesen werden, um die <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A> und <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> zurückzugebenden Eigenschaften die Koordinaten für den unteren rechten Ecke.  
+  
+ Die <xref:System.Web.UI.WebControls.RectangleHotSpot.GetCoordinates%2A> Methode wird von ASP.NET intern verwendet, um den Text für die Koordinaten der verwendet eine <xref:System.Web.UI.WebControls.RectangleHotSpot> beim Rendern. Die Zeichenfolge, die zurückgegeben wird, bezieht sich auf den Browser und Markup Language.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ erstellt ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das zwei enthält <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte. Die <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `HotSpotMode.PostBack`, die bewirkt, dass der Seite an den Server jedes Mal einen Benutzer klickt auf eine der Hotspot-Regionen. Jedes Mal klickt der Benutzer auf eine der der <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte, die <xref:System.Web.UI.WebControls.RectangleHotSpot.GetCoordinates%2A> Methode wird aufgerufen, und die Koordinaten der ausgewählten Hotspot werden dem Benutzer angezeigt. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie angeben, Ihr eigenes Image für die <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft und den Pfad entsprechend aktualisieren, sodass die Anwendung danach suchen kann.  
+  
+ [!code-aspx-csharp[RectangleHotSpot.GetCoordinates#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RectangleHotSpot.GetCoordinates/CS/rectanglehotspot.getcoordinatescs.aspx#1)]
+ [!code-aspx-vb[RectangleHotSpot.GetCoordinates#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RectangleHotSpot.GetCoordinates/VB/rectanglehotspot.getcoordinatesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public int Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RectangleHotSpot.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate der linken Seite des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt.</summary>
+        <value>Die X-Koordinate der linken Seite des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A> -Eigenschaft können Sie zum Abrufen oder Festlegen eines Werts, der die X-Koordinate der linken Seite des rechteckigen Bereichs, der von diesem darstellt <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt. Um vollständig zu definieren eine <xref:System.Web.UI.WebControls.RectangleHotSpot> -Objekt, geben Sie einen Wert für diese Eigenschaft und für die <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A>, <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A>, und <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ erstellt ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das zwei enthält <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte. Eine <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt wird deklarativ erstellt und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A> Eigenschaft deklarativ festgelegt werden. Die andere <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekts programmgesteuert erstellt wird und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A> Eigenschaft programmgesteuert festgelegt werden. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie angeben, Ihr eigenes Image für die <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft und den Pfad entsprechend aktualisieren, sodass die Anwendung danach suchen kann.  
+  
+ [!code-aspx-csharp[RectangleHotSpot.Top#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RectangleHotSpot.Top/CS/rectanglehotspot.topcs.aspx#1)]
+ [!code-aspx-vb[RectangleHotSpot.Top#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RectangleHotSpot.Top/VB/rectanglehotspot.topvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkupName">
+      <MemberSignature Language="C#" Value="protected override string MarkupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MarkupName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RectangleHotSpot.MarkupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public int Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RectangleHotSpot.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate der rechten Seite des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt.</summary>
+        <value>Die X-Koordinate der rechten Seite des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A> -Eigenschaft können Sie zum Abrufen oder Festlegen eines Werts, der die X-Koordinate der rechten Seite des rechteckigen Bereichs, der von diesem darstellt <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt. Um vollständig zu definieren eine <xref:System.Web.UI.WebControls.RectangleHotSpot> -Objekt, müssen Sie einen Wert für diese Eigenschaft und Angeben der <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A>, <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A>, und <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ erstellt ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das zwei enthält <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte. Eine <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt wird deklarativ erstellt und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A> Eigenschaft deklarativ festgelegt werden. Die andere <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekts programmgesteuert erstellt wird und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A> Eigenschaft programmgesteuert festgelegt werden. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie angeben, Ihr eigenes Image für die <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft und den Pfad entsprechend aktualisieren, sodass die Anwendung danach suchen kann.  
+  
+ [!code-aspx-csharp[RectangleHotSpot.Top#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RectangleHotSpot.Top/CS/rectanglehotspot.topcs.aspx#1)]
+ [!code-aspx-vb[RectangleHotSpot.Top#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RectangleHotSpot.Top/VB/rectanglehotspot.topvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public int Top { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RectangleHotSpot.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die y-Koordinate des oberen Randes des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt.</summary>
+        <value>Die y-Koordinate des oberen Randes des rechteckigen Bereichs, der von diesem <see cref="T:System.Web.UI.WebControls.RectangleHotSpot" /> Objekt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A> -Eigenschaft können Sie zum Abrufen oder Festlegen eines Werts, der die y-Koordinate des oberen Randes des rechteckigen Bereichs, der von diesem darstellt <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt. Um vollständig zu definieren eine <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt. Geben Sie einen Wert für diese Eigenschaft und die <xref:System.Web.UI.WebControls.RectangleHotSpot.Left%2A>, <xref:System.Web.UI.WebControls.RectangleHotSpot.Right%2A>, und <xref:System.Web.UI.WebControls.RectangleHotSpot.Bottom%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ erstellt ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das zwei enthält <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekte. Eine <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekt wird deklarativ erstellt und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A> Eigenschaft deklarativ festgelegt werden. Die andere <xref:System.Web.UI.WebControls.RectangleHotSpot> Objekts programmgesteuert erstellt wird und seine Eigenschaften, einschließlich der <xref:System.Web.UI.WebControls.RectangleHotSpot.Top%2A> Eigenschaft programmgesteuert festgelegt werden. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie angeben, Ihr eigenes Image für die <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft und den Pfad entsprechend aktualisieren, sodass die Anwendung danach suchen kann.  
+  
+ [!code-aspx-csharp[RectangleHotSpot.Top#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RectangleHotSpot.Top/CS/rectanglehotspot.topcs.aspx#1)]
+ [!code-aspx-vb[RectangleHotSpot.Top#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RectangleHotSpot.Top/VB/rectanglehotspot.topvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

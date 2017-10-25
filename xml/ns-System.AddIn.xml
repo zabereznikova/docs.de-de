@@ -1,0 +1,6 @@
+<Namespace Name="System.AddIn">
+  <Docs>
+    <summary>Die <see cref="N:System.AddIn" /> -Namespace enthält die <see cref="T:System.AddIn.AddInAttribute" /> Attribut zum Identifizieren von-add-ins.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

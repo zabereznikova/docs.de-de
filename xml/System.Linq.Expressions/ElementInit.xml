@@ -1,0 +1,232 @@
+<Type Name="ElementInit" FullName="System.Linq.Expressions.ElementInit">
+  <TypeSignature Language="C#" Value="public sealed class ElementInit : System.Linq.Expressions.IArgumentProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ElementInit extends System.Object implements class System.Linq.Expressions.IArgumentProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.ElementInit" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Linq.Expressions.IArgumentProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Initialisierer für ein einzelnes Element einer <see cref="T:System.Collections.IEnumerable" />-Auflistung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Linq.Expressions.ElementInit> , die die Initialisierung eines Elements ein Dictionary-Auflistung darstellt.  
+  
+ [!code-csharp[System.Linq.Expressions.Expression#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/CS/Expression.cs#4)]
+ [!code-vb[System.Linq.Expressions.Expression#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/VB/Expression.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo AddMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo AddMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ElementInit.AddMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanzmethode ab, mit der ein Element zu einer <see cref="T:System.Collections.IEnumerable" />-Auflistung hinzugefügt wird.</summary>
+        <value>Eine <see cref="T:System.Reflection.MethodInfo" />, die eine Instanzmethode darstellt, mit der ein Element zu einer Auflistung hinzufügt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.Expression&gt; Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Linq.Expressions.Expression&gt; Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ElementInit.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.Expression&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Argumenten ab, die an eine Methode übergeben werden, die einer <see cref="T:System.Collections.IEnumerable" />-Auflistung ein Element hinzufügt.</summary>
+        <value>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von <see cref="T:System.Linq.Expressions.Expression" />-Objekten, die die Argumente für eine Methode darstellen, die einer Auflistung ein Element hinzufügt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.Expressions.IArgumentProvider.ArgumentCount">
+      <MemberSignature Language="C#" Value="int System.Linq.Expressions.IArgumentProvider.ArgumentCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Linq.Expressions.IArgumentProvider.ArgumentCount" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ElementInit.System#Linq#Expressions#IArgumentProvider#ArgumentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl der Argumente für den Ausdrucksbaumstrukturknoten zurück.  Sie sollten diesen Member nicht verwenden.  Er ist nur aufgrund der Assemblyumgestaltung öffentlich und wird intern zur Leistungsoptimierung verwendet.</summary>
+        <value>Gibt <see cref="T:System.Int32" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.Expressions.IArgumentProvider.GetArgument">
+      <MemberSignature Language="C#" Value="System.Linq.Expressions.Expression IArgumentProvider.GetArgument (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Linq.Expressions.Expression System.Linq.Expressions.IArgumentProvider.GetArgument(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.ElementInit.System#Linq#Expressions#IArgumentProvider#GetArgument(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Arguments.</param>
+        <summary>Gibt das Argument bei Index zurück, das ausgelöst wird, wenn der Index außerhalb des gültigen Bereichs liegt.  Sie sollten diesen Member nicht verwenden.  Er ist nur aufgrund der Assemblyumgestaltung öffentlich und wird intern zur Leistungsoptimierung verwendet.</summary>
+        <returns>Gibt <see cref="T:System.Linq.Expressions.Expression" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.ElementInit.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Textdarstellung einer <see cref="T:System.Linq.Expressions.ElementInit" /> Objekt.</summary>
+        <returns>Eine Textdarstellung der <see cref="T:System.Linq.Expressions.ElementInit" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.ElementInit Update (System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.Expression&gt; arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.ElementInit Update(class System.Collections.Generic.IEnumerable`1&lt;class System.Linq.Expressions.Expression&gt; arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.ElementInit.Update(System.Collections.Generic.IEnumerable{System.Linq.Expressions.Expression})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.ElementInit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.Expression&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Die <see cref="P:System.Linq.Expressions.ElementInit.Arguments" /> -Eigenschaft des Ergebnisses.</param>
+        <summary>Erstellt einen neuen Ausdruck, der diesem ähnelt, verwendet jedoch die angegebenen untergeordneten Elemente. Wenn alle untergeordneten Elemente identisch sind, wird dieser Ausdruck zurückgegeben.</summary>
+        <returns>Dieser Ausdruck, wenn keine untergeordneten Elemente geändert werden, oder ein Ausdruck mit den aktualisierten untergeordneten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

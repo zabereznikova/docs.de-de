@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Configuration">
+  <Docs>
+    <summary>Der System.ServiceModel.Activities.Configuration-Namespace enthält Klassen, mit denen Workflowdienste konfigurieren. Diese Klassen ermöglichen es Ihnen, Dienst- und Endpunktverhalten zu übernehmen und die Nachverfolgung zu konfigurieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

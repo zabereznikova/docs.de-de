@@ -1,0 +1,143 @@
+<Type Name="DragDropEffects" FullName="System.Windows.Forms.DragDropEffects">
+  <TypeSignature Language="C#" Value="public enum DragDropEffects" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DragDropEffects extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DragDropEffects" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die möglichen Auswirkungen eines Drag-and-Drop-Vorgangs an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem Sie die folgenden Klassen: <xref:System.Windows.Forms.DragEventArgs>, <xref:System.Windows.Forms.GiveFeedbackEventArgs>, und <xref:System.Windows.Forms.Control>.  
+  
+ Sie können <xref:System.Windows.Forms.DragDropEffects> auf andere Mauszeiger für Drag & Drop-Vorgänge anzuzeigen. Beispielsweise können Sie ein Pluszeichen für einen Drag & Drop-Kopiervorgang ein Pfeilsymbol für einen Verschiebevorgang Drag-and-Drop-Vorgang anzeigen oder ein roter Kreis mit durchgezogener Linie symbol für eine nicht Drag-and-Drop-Vorgang.  
+  
+ Wenn Sie möchten Daten an einer Position im Ziel gelöscht werden, die zurzeit nicht sichtbar ist, konnte Sie das Ziel beim Ziehen einen Bildlauf durchführen. Wenn ein Ziel keine Durchführen eines Bildlaufs unterstützt, müssen Sie sicherstellen, dass die Drop-Position im Ziel sichtbar ist, bevor Sie die Drag-and-Drop-Vorgang zu starten. Es folgen einige Szenarien möglicherweise ein Ziel Bildlauf durchgeführt werden soll:  
+  
+-   Ziehen Sie Text in ein Dokument, und möchten Sie den Text an einer Position, die im Dokumentfenster unsichtbar zu löschen.  
+  
+-   Ziehen Sie eine Datei in eine Dateistruktur, und Sie möchten, löschen die Datei auf einem Knoten in der Dateistruktur nicht sichtbar.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.DragDropEffects.Copy> -Enumeration fest, wenn der Benutzer die Maus über das Ablageziel während eines Drag & Drop-Vorgangs bewegt wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.Control.DoDragDrop%2A> Methode der <xref:System.Windows.Forms.Control> Klasse. Finden Sie unter der <xref:System.Windows.Forms.Control.DoDragDrop%2A> Methode für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects All = int32(-2147483645)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Kombination der <see cref="F:System.Windows.DragDropEffects.Copy" />, <see cref="F:System.Windows.Forms.DragDropEffects.Move" />, und <see cref="F:System.Windows.Forms.DragDropEffects.Scroll" /> Auswirkungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="Copy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Copy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Copy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Daten aus der Quelle des Ziehvorgangs werden für das Dropziel kopiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Link">
+      <MemberSignature Language="C#" Value="Link" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Link = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Link" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Daten aus der Quelle des Ziehvorgangs werden mit der Drop-Ziel verknüpft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="Move" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Move = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Move" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Daten aus der Quelle des Ziehvorgangs werden für das Dropziel verschoben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ablageziel akzeptiert keine Daten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="Scroll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Scroll = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Scroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ziel kann ein Bildlauf durchgeführt werden beim Ziehen, um eine Position Drop zu suchen, die nicht in das Ziel aktuell angezeigt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

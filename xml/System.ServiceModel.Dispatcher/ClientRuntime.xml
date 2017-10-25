@@ -1,0 +1,606 @@
+<Type Name="ClientRuntime" FullName="System.ServiceModel.Dispatcher.ClientRuntime">
+  <TypeSignature Language="C#" Value="public sealed class ClientRuntime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClientRuntime extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.ClientRuntime" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.ClientRuntimeCompatBase</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="xamarinandroid-7.1">System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Einfügemarke für Klassen, die die Funktionalität von Windows Communication Foundation (WCF)-Clientobjekten für alle von einer Clientanwendung verarbeitete Nachrichten erweitern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Clientobjekte, unabhängig davon, ob sie eine Erweiterung von <xref:System.ServiceModel.ClientBase%601> oder von <xref:System.ServiceModel.IClientChannel> sind, werden von [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Clientanwendungen verwendet, um Methodenaufrufe in ausgehende Nachrichten und eingehende Nachrichten in Objekte umzuwandeln, die dann an die Ergebnisse der Clientmethoden weitergeleitet werden.  
+  
+ Die <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse ist ein Erweiterungspunkt, an den Sie Erweiterungsobjekte anhängen können, die Nachrichten abfangen und das Clientverhalten auf alle Vorgänge ausdehnen. Abfangobjekte können alle Nachrichten in einem bestimmten Vertrag verarbeiten, nur Nachrichten für bestimmte Vorgänge verarbeiten, eine benutzerdefinierte Kanalinitialisierung durchführen und sonstiges benutzerdefiniertes Verhalten von Clientanwendungen implementieren. Einen Überblick über Clientarchitektur finden Sie unter [WCF-Clientarchitektur](~/docs/framework/wcf/feature-details/client-architecture.md). Weitere Informationen zur Clientprogrammierung finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](~/docs/framework/wcf/feature-details/accessing-services-using-a-client.md). Einzelheiten zur benutzerdefinierten Anpassung und zu deren Ausführung finden Sie unter [Erweitern von Clients](~/docs/framework/wcf/extending/extending-clients.md).  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>-Eigenschaft gibt das DispatchRuntime-Objekt für durch Dienste initiierte Rückrufvorgänge zurück.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A>-Eigenschaft akzeptiert ein benutzerdefiniertes Vorgangsauswahlobjekt, um das Routing von Clientnachrichten zu steuern.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A>-Eigenschaft ermöglicht das Hinzufügen eines Kanalinitialisierers, der den Clientkanal prüfen oder abändern kann.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.InteractiveChannelInitializers%2A>-Eigenschaft kann zum Anzeigen einer visuellen Eingabeaufforderung verwendet werden, die es einem Benutzer ermöglicht, vor dem Öffnen eines Kanals Anmeldeinformationen auszuwählen.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>-Eigenschaft ruft eine Auflistung von <xref:System.ServiceModel.Dispatcher.ClientOperation>-Objekten ab, denen Sie benutzerdefinierte Nachrichteninterceptoren hinzufügen können, die spezielle Funktionen für die Nachrichten dieses Vorgangs bereitstellen.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A>-Eigenschaft ermöglicht einer Anwendung, bestimmte automatische Adressierungsheader zu deaktivieren, um die Adressierung direkt zu steuern.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.MaxFaultSize%2A>-Eigenschaft ermöglicht es dem Client, die Größe der Fehlermeldungen einzuschränken, die der Client entgegennimmt.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>-Eigenschaft ruft eine Auflistung von <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>-Objekten ab, denen Sie benutzerdefinierte Nachrichteninterceptoren für alle Nachrichten hinzufügen können, die einen Client durchlaufen.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.UnhandledClientOperation%2A>-Eigenschaft gibt den Vorgang zurück, an den unerwartete Nachrichten übergeben werden.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ValidateMustUnderstand%2A>-Eigenschaft informiert das System, ob es prüfen sollte, dass als `MustUnderstand` markierte SOAP-Header in der Tat verstanden wurden.  
+  
+-   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A>-Eigenschaft legt den Wert des Ziels der Nachricht auf der Transportebene fest, um Vermittler und andere Szenarien zu unterstützen.  
+  
+ Außerdem gibt es eine Reihe weiterer Eigenschaften, die die Clientvertragsinformationen abrufen:  
+  
+-   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
+  
+-   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace%2A>  
+  
+-   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
+  
+ Wenn es sich bei dem Client um einen Duplexclient handelt, rufen die folgenden Eigenschaften auch Rückruftyp und Laufzeit des Clients ab.  
+  
+-   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
+  
+-   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel fügt ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> einen <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> in die Clientlaufzeit ein, indem dieser der <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>-Eigenschaft hinzugefügt wird.  
+  
+ [!code-csharp[Interceptors#2](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#2)]
+ [!code-vb[Interceptors#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#2)]  
+  
+ Das folgende Codebeispiel zeigt eine Konfigurationsdatei, die das Endpunktverhalten in den Clientendpunkt lädt.  
+  
+ [!code-xml[Interceptors#3](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CallbackClientType">
+      <MemberSignature Language="C#" Value="public Type CallbackClientType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CallbackClientType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Rückrufvertrags ab, der einem Duplexclient zugeordnet ist, bzw. legt diesen Typ fest.</summary>
+        <value>Ein <see cref="T:System.Type" />-Objekt, das den einem Duplexclient zugeordneten Rückrufvertrag darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallbackDispatchRuntime">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.DispatchRuntime CallbackDispatchRuntime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.DispatchRuntime CallbackDispatchRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.DispatchRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die DispatchRuntime ab, die durch den Dienst initiierte Vorgänge weiterleitet.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Dispatcher.DispatchRuntime" />-Objekt. Wenn der Vertrag ein Duplexvertrag ist, enthält das Verteilungsverhalten durch den Dienst initiierte Vorgänge; andernfalls enthält das Verteilungsverhalten keine Vorgänge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelInitializers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IChannelInitializer&gt; ChannelInitializers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.IChannelInitializer&gt; ChannelInitializers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IChannelInitializer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Kanalinitialisiererobjekten ab, die verwendet werden, um den einem Client zugeordneten Kanal anzupassen.</summary>
+        <value>Eine Auflistung der <see cref="T:System.ServiceModel.Dispatcher.IChannelInitializer" />-Implementierungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A>-Eigenschaft, um ein benutzerdefiniertes <xref:System.ServiceModel.Dispatcher.IChannelInitializer>-Objekt hinzuzufügen, das den einem Client zugeordneten Kanal beim Erstellen prüfen kann, Ereignisse im Kanal registrieren kann und dem Kanal einen Zustand durch Verwendung von <xref:System.ServiceModel.IExtension%601> zuordnen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientMessageInspectors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.IClientMessageInspector&gt; ClientMessageInspectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.IClientMessageInspector&gt; ClientMessageInspectors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ClientMessageInspectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.IClientMessageInspector&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Inspektor-Nachrichtenobjekte anzeigen oder ändern Nachrichten eines bestimmten Dienstvorgangs verwendet.</summary>
+        <value>Eine Auflistung von Inspektor-Nachrichtenobjekte anzeigen oder ändern Nachrichten eines bestimmten Dienstvorgangs verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ClientMessateInspectors ist eine Thread-sichere-Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientOperations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.ClientOperation&gt; ClientOperations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.ClientOperation&gt; ClientOperations" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ClientOperations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.ClientOperation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Clientobjekten-Vorgang zum Anhängen von Erweiterungsobjekten, die zu überprüfen oder Ändern von Nachrichten und das Verhalten eines bestimmten Dienstvorgangs verwendet.</summary>
+        <value>Eine Auflistung von Clientobjekten-Vorgang zum Anhängen von Erweiterungsobjekten, die zu überprüfen oder Ändern von Nachrichten und das Verhalten eines bestimmten Dienstvorgangs verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ClientOperations ist eine Thread-sichere-Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractClientType">
+      <MemberSignature Language="C#" Value="public Type ContractClientType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContractClientType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Vertrags, der einem Client zugeordnet.</summary>
+        <value>Das <see cref="T:System.Type" />-Objekt, das den diesem Client zugeordneten Vertrag darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Vertrags ab, der einem Client zugeordnet ist.</summary>
+        <value>Der Vertragsname für einen Client.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractNamespace">
+      <MemberSignature Language="C#" Value="public string ContractNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace des Vertrags ab, der einem Client zugeordnet ist.</summary>
+        <value>Der Namespace des Vertrags, der einem Client zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InteractiveChannelInitializers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IInteractiveChannelInitializer&gt; InteractiveChannelInitializers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.IInteractiveChannelInitializer&gt; InteractiveChannelInitializers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.InteractiveChannelInitializers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IInteractiveChannelInitializer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von einer interaktiven kanalinitialisierer ab.</summary>
+        <value>Eine synchronisierte Auflistung des Typs <see cref="T:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausführliche Informationen zum Verwenden von interaktiven kanalinitialisierer finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](~/docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Verwendung eines Endpunktverhaltens, um einen interaktiven kanalinitialisierer einzufügen.  
+  
+ [!code-csharp[IInteractiveChannelInitializer#10](~/samples/snippets/csharp/VS_Snippets_CFX/iinteractivechannelinitializer/cs/insertingbehaviors.cs#10)]
+ [!code-vb[IInteractiveChannelInitializer#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/iinteractivechannelinitializer/vb/insertingbehaviors.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManualAddressing">
+      <MemberSignature Language="C#" Value="public bool ManualAddressing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ManualAddressing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der angibt, ob der Client Adressierungsheader zu Anforderung-Antwort-Nachrichten hinzufügt.</summary>
+        <value>
+          <see langword="true" />, wenn der Client keine Adressierungsheader hinzufügt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie für die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A>-Eigenschaft den Wert `true` fest, wenn Sie verhindern möchten, dass der Client Nachrichten-ID und Antwortadressierungsheader zu Anforderung-Antwort-Nachrichten hinzufügt, damit Ihre Anwendung diese Header steuern kann.  
+  
+> [!NOTE]
+>  Wenn <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> `true` ist, unterstützt der Client keine Anforderung-Antwort-Vorgänge über einen Duplexkanal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxFaultSize">
+      <MemberSignature Language="C#" Value="public int MaxFaultSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxFaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.MaxFaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Fehlergröße ab oder legt diese fest.</summary>
+        <value>Eine ganze Zahl, die die maximale Fehlergröße darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.MaxFaultSize%2A>-Eigenschaft, um die Größe von Fehlermeldungen einzuschränken, die die Clientlaufzeit akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageInspectors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IClientMessageInspector&gt; MessageInspectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.IClientMessageInspector&gt; MessageInspectors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IClientMessageInspector&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft für einen Client eine Auflistung von Nachrichteninspektorimplementierungen ab.</summary>
+        <value>Eine Auflistung der <see cref="T:System.ServiceModel.Dispatcher.IClientMessageInspector" />-Implementierungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>-Eigenschaft, um benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>-Implementierungen anzuhängen, mit denen alle Nachrichten geprüft oder abgeändert werden können, die den Client durchlaufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel fügt ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> einen <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> in die Clientlaufzeit ein, indem dieser der <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>-Eigenschaft hinzugefügt wird.  
+  
+ [!code-csharp[Interceptors#2](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#2)]
+ [!code-vb[Interceptors#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#2)]  
+  
+ Das folgende Codebeispiel zeigt eine Konfigurationsdatei, die das Endpunktverhalten in den Clientendpunkt lädt.  
+  
+ [!code-xml[Interceptors#3](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersionNoneFaultsEnabled">
+      <MemberSignature Language="C#" Value="public bool MessageVersionNoneFaultsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MessageVersionNoneFaultsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.MessageVersionNoneFaultsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die MessageVersionNoneFaultsEnabled-Eigenschaft festgelegt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die MessageVersionNoneFaultsEnabled-Eigenschaft festgelegt ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedKeyedCollection&lt;string,System.ServiceModel.Dispatcher.ClientOperation&gt; Operations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedKeyedCollection`2&lt;string, class System.ServiceModel.Dispatcher.ClientOperation&gt; Operations" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.Operations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedKeyedCollection&lt;System.String,System.ServiceModel.Dispatcher.ClientOperation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Clientvorgänge für einen Client ab.</summary>
+        <value>Eine synchronisierte Auflistung von <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>-Eigenschaft, um eine Auflistung aller Clientvorgänge für diesen Client abzurufen, die Sie zum Anhängen von Erweiterungsobjekten verwenden können, die Nachrichten und das auf einen bestimmten Vorgang abgezielte Verhalten prüfen oder abändern. Ausführliche Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.ClientOperation>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel fügt ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> einen <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> in die Clientlaufzeit ein, indem dieser jeder <xref:System.ServiceModel.Dispatcher.ClientOperation> in der <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>-Eigenschaft hinzugefügt wird.  
+  
+ [!code-csharp[Interceptors#2](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#2)]
+ [!code-vb[Interceptors#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationSelector">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.IClientOperationSelector OperationSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.IClientOperationSelector OperationSelector" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IClientOperationSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.ServiceModel.Dispatcher.IClientOperationSelector" /> Implementierung, die verwendet werden kann, Auswählen einer <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" />.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Dispatcher.IClientOperationSelector" />-Objekt, das einen <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" /> auswählt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A>-Eigenschaft, um die Auswahl eines Vorgangs abzuändern, wenn ein Client eine bestimmte Methode aufruft. Der Standardalgorithmus ist die Verwendung des Namens <xref:System.ServiceModel.OperationContractAttribute.Name%2A> der Vorgangsmethode, um die <xref:System.ServiceModel.Dispatcher.ClientOperation> in der <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>-Auflistung zu finden. Wenn ein übereinstimmendes <xref:System.ServiceModel.Dispatcher.ClientOperation>-Objekt gefunden wird, wird der Aufruf an das <xref:System.ServiceModel.Dispatcher.ClientOperation>-Objekt gesendet, das von der <xref:System.ServiceModel.Dispatcher.ClientRuntime.UnhandledClientOperation%2A>-Eigenschaft zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhandledClientOperation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.ClientOperation UnhandledClientOperation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.ClientOperation UnhandledClientOperation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.UnhandledClientOperation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.ClientOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Clientvorgang für Methoden, die eine entsprechende keine <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" /> in der <see cref="P:System.ServiceModel.Dispatcher.ClientRuntime.Operations" /> Auflistung.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" />, die die Methode darstellt, an die der aktuelle Nachrichteninhalt weitergeleitet wird, wenn die Vorgangsauswahl keinen zu der Nachricht passenden Vorgang finden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateMustUnderstand">
+      <MemberSignature Language="C#" Value="public bool ValidateMustUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateMustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.ValidateMustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der angibt, ob das System oder die Anwendung die Verarbeitung von <see langword="MustUnderstand" />-SOAP-Headern erzwingt.</summary>
+        <value>
+          <see langword="true" />, wenn das System die <see langword="MustUnderstand" />-SOAP-Header verarbeiten soll; andernfalls <see langword="false" />, was bedeutet, dass die Anwendung diese Header verarbeitet. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ValidateMustUnderstand%2A>-Eigenschaft, um die erzwungene Validierung ankommender Nachrichtenheader zu deaktivieren. Bei normaler Ausführung werden die Nachrichtenheader mit der <xref:System.ServiceModel.Channels.MessageHeaders.UnderstoodHeaders%2A>-Eigenschaft verglichen, um zu bestätigen, dass eingehende Nachrichten explizit durch den Dienst verarbeitet werden. Legen Sie `false` fest, um diese Prüfung zu deaktivieren. Wenn der Wert `false` festgelegt ist, muss die Anwendung auf Header prüfen, die mit MustUnderstand="true" markiert sind, und gibt einen Fehler zurück, wenn eine oder mehrere dieser Header nicht verstanden wurden. Dies ist nützlich, wenn die Anwendung alle zurückgegebenen SOAP-Nachrichten akzeptieren (z.&#160;B. bei Verwendung typisierter oder nicht typisierter Nachrichten) und eine benutzerdefinierte Headerverarbeitung durchführen soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Via">
+      <MemberSignature Language="C#" Value="public Uri Via { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Via" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientRuntime.Via" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Transportadresse ab, die verwendet wird, um Nachrichten durch den Client zu senden, oder legt diese Transportadresse fest.</summary>
+        <value>Eine <see cref="T:System.Uri" />, der die Zieladresse für den Transport ist. Der Standardwert ist der <see cref="P:System.ServiceModel.EndpointAddress.Uri" />-Wert des Clients.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A>-Eigenschaft fest, um eine Transportadresse für Nachrichten anzugeben, wenn das unmittelbare Ziel der Nachrichten nicht die <xref:System.ServiceModel.EndpointAddress.Uri%2A> des Clients ist. Auf diese Weise können Sie SOAP-Vermittler angeben und Szenarios verarbeiten, in denen der Wert der <xref:System.ServiceModel.EndpointAddress.Uri%2A>-Eigenschaft des Clients ein logischer Name ist.  
+  
+ Diesen Wert legt das <xref:System.ServiceModel.Description.ClientViaBehavior?displayProperty=nameWithType> von einer Konfigurationsdatei aus fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

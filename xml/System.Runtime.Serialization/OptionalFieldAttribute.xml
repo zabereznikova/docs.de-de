@@ -1,0 +1,94 @@
+<Type Name="OptionalFieldAttribute" FullName="System.Runtime.Serialization.OptionalFieldAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OptionalFieldAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OptionalFieldAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.OptionalFieldAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass ein Feld aus einem Serialisierungsstream daher, die fehlen kann die <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" /> und <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> wird keine Ausnahme ausgelöst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut ermöglicht es Ihnen, anzugeben, dass neue Felder in einem serialisierbaren Typ (ein Typ, der die <xref:System.SerializableAttribute> auf angewendet wird) ignoriert die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> oder die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Dies ermöglicht die versionstolerante Serialisierung von Typen erstellt, die für ältere Versionen einer Anwendung, die Daten serialisiert wurden. Z. B. wenn die Formatierungsprogramme eines Datenstroms erzeugt, die von einer Version, die keine neuen Felder enthalten, wird keine Ausnahme ausgelöst und die vorhandenen Daten auf dem älteren Typ werden normal verarbeitet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OptionalFieldAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.OptionalFieldAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.OptionalFieldAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionAdded">
+      <MemberSignature Language="C#" Value="public int VersionAdded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VersionAdded" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird nicht verwendet und ist reserviert.</summary>
+        <value>Diese Eigenschaft ist reserviert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

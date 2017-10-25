@@ -1,0 +1,162 @@
+<Type Name="CodeAttributeArgument" FullName="System.CodeDom.CodeAttributeArgument">
+  <TypeSignature Language="C#" Value="public class CodeAttributeArgument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeAttributeArgument extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeAttributeArgument" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Argument in einer Attributdeklaration Metadaten verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeAttributeArgument>kann verwendet werden, um den Wert für ein einzelnes Argument eines Attributkonstruktors oder einen Wert für eine Eigenschaft des Attributs initialisiert die darzustellen.  
+  
+ Die <xref:System.CodeDom.CodeAttributeArgument.Value%2A> Eigenschaft gibt den Wert des Arguments. Die <xref:System.CodeDom.CodeAttributeArgument.Name%2A> -Eigenschaft, wenn verwendet, gibt den Namen einer Eigenschaft des Attributs, um den Wert zuzuweisen.  
+  
+ Attributdeklarationen werden häufig mit einer Anzahl von Argumenten initialisiert, die an den Konstruktor des Attributs zur Laufzeit übergeben werden. Um Argumente des Konstruktors für ein Attribut zu gewährleisten, fügen Sie eine <xref:System.CodeDom.CodeAttributeArgument> für jedes Argument, um die <xref:System.CodeDom.CodeAttributeDeclaration.Arguments%2A> Auflistung von einer <xref:System.CodeDom.CodeAttributeDeclaration>. Nur die <xref:System.CodeDom.CodeAttributeArgument.Value%2A> -Eigenschaft jedes <xref:System.CodeDom.CodeAttributeArgument> muss initialisiert werden. Die Reihenfolge der Argumente in der Auflistung muss der Reihenfolge der Argumente in der Methodensignatur des Konstruktors für das Attribut entsprechen.  
+  
+ Sie können auch festlegen, die durch die Bereitstellung nicht über den Konstruktor verfügbar sind Eigenschaften des Attributs ein <xref:System.CodeDom.CodeAttributeArgument> , der den Namen der Eigenschaft, die festgelegt werden, zusammen mit den festzulegenden Wert angibt.  
+  
+   
+  
+## Examples  
+ Der folgende Code erstellt eine Klasse und fügt der CodeAttribute, um zu deklarieren, dass die Klasse serialisierbar und veraltet ist.  
+  
+ [!code-cpp[System.CodeDom.CodeAttributeArgument#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.codedom.codeattributeargument/cpp/source.cpp#1)]
+ [!code-csharp[System.CodeDom.CodeAttributeArgument#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.codedom.codeattributeargument/cs/source.cs#1)]
+ [!code-vb[System.CodeDom.CodeAttributeArgument#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.codedom.codeattributeargument/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeAttributeArgument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeAttributeArgument.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeAttributeArgument" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeAttributeArgument (System.CodeDom.CodeExpression value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeAttributeArgument.#ctor(System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.CodeExpression" /> , das den Wert des Arguments darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeAttributeArgument" />-Klasse unter Verwendung des angegebenen Werts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeAttributeArgument (string name, System.CodeDom.CodeExpression value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.CodeDom.CodeExpression value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeAttributeArgument.#ctor(System.String,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Attributeigenschaft das Argument gilt.</param>
+        <param name="value">Ein <see cref="T:System.CodeDom.CodeExpression" /> , das den Wert des Arguments darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeAttributeArgument" /> -Klasse mit dem angegebenen Namen und Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeAttributeArgument.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Attributs ab oder legt diesen fest.</summary>
+        <value>Der Name der Attributeigenschaft für das Argument ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Value" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeAttributeArgument.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für das Attributargument.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , der den Wert für das Attributargument angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,355 @@
+<Type Name="LogExtentCollection" FullName="System.IO.Log.LogExtentCollection">
+  <TypeSignature Language="C#" Value="public sealed class LogExtentCollection : System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogExtent&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogExtentCollection extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Log.LogExtent&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogExtentCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogExtent&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Auflistung von <see cref="T:System.IO.Log.LogExtent" />-Objekten dar, die einem <see cref="T:System.IO.Log.LogStore" /> zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält eine Auflistung von <xref:System.IO.Log.LogExtent>-Objekten, die einem <xref:System.IO.Log.LogStore> zugeordnet sind. Eine <xref:System.IO.Log.LogStore>-Instanz speichert ihre Daten in einer Auflistung von Datenträgerwertebereichen, die durch <xref:System.IO.Log.LogExtent>-Instanzen dargestellt wird. Ein bestimmter <xref:System.IO.Log.LogExtent> ist einem <xref:System.IO.Log.LogStore> zugeordnet, und <xref:System.IO.Log.LogExtent>-Objekte im selben <xref:System.IO.Log.LogStore> weisen dieselbe Größe auf. Speicherplatz wird in Wertebereichsschritten einer <xref:System.IO.Log.LogStore>-Instanz hinzugefügt und daraus entfernt.  
+  
+ Obwohl <xref:System.IO.Log.LogExtent>-Objekte als Dateien auf dem Datenträger dargestellt werden, dürfen sie nicht wie normale Dateien verschoben oder gelöscht werden. Stattdessen sollten Sie die von dieser Klasse zum direkten Hinzufügen und Löschen von <xref:System.IO.Log.LogExtent>-Instanzen bereitgestellten Methoden verwenden. Wertebereiche werden normalerweise entfernt, wenn sie keine aktiven Daten mehr enthalten. Wenn der `force`-Parameter in der <xref:System.IO.Log.LogExtentCollection.Remove%2A>-Methode jedoch `true` lautet, wird eine Ausnahme ausgelöst, wenn die Wertebereiche nicht sofort entfernt werden können.  
+  
+ Sie können den letzten Wertebereich in der <xref:System.IO.Log.LogExtentCollection> nicht entfernen. Das bedeutet, dass die <xref:System.IO.Log.LogExtentCollection.Count%2A>-Eigenschaft nicht 0 (null) sein kann, wenn ein Wertebereich hinzugefügt wurde.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse und die <xref:System.IO.Log.LogExtentCollection>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum hinzuzufügenden Protokollwertebereich.</param>
+        <summary>Fügt der Auflistung eine <see cref="T:System.IO.Log.LogExtent" />-Instanz hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe der neu hinzugefügten <xref:System.IO.Log.LogExtent>-Instanz entspricht der Größe vorhandener <xref:System.IO.Log.LogExtent>-Instanzen in der Auflistung.  
+  
+> [!NOTE]
+>  Verwenden Sie diese Methode nicht, um den ersten <xref:System.IO.Log.LogExtent> zur Auflistung hinzuzufügen.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse und die <xref:System.IO.Log.LogExtentCollection>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Dateiname des Protokollspeichers, der von <paramref name="path" /> angegeben wird, ist ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Für den ersten Wertebereich muss eine Größe angegeben werden.</exception>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.  
+  
+ - oder -   
+  
+ Die von <paramref name="path" /> angegebene Datei kann nicht erstellt werden, da die Datei oder das Verzeichnis bereits vorhanden ist.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.  
+  
+ - oder -   
+  
+ Der Speicherdatenträger oder das Medium ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string path, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string path, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Add(System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Protokollwertebereich.</param>
+        <param name="size">Die Größe des Protokollwertebereichs.</param>
+        <summary>Erstellt einen neuen <see cref="T:System.IO.Log.LogExtent" /> mit der angegebenen Größe und dem angegebenen Text und fügt diesen der Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung nicht leer ist, muss die angegebene Größe mindestens so groß sein wie die Größe der anderen Wertebereich in der Auflistung. In diesem Fall wird der `size`-Parameter ignoriert, und der Wertebereich wird mit derselben Größe erstellt wie die anderen Wertebereich in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="size" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="archiveTail" /> liegt nicht innerhalb eines gültigen Bereichs.</exception>
+        <exception cref="T:System.ArgumentException">Der Dateiname des Protokollspeichers, der von <paramref name="path" /> angegeben wird, ist ungültig.  
+  
+ <paramref name="size" /> ist kleiner als die Größe der anderen Wertebereiche im Speicher.</exception>
+        <exception cref="T:System.InvalidOperationException">Für den ersten Wertebereich muss eine Größe angegeben werden.  
+  
+ - oder -   
+  
+ Es darf kein doppelter Wertebereichsname verwendet werden.</exception>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.  
+  
+ - oder -   
+  
+ Die von <paramref name="path" /> angegebene Datei kann nicht erstellt werden, da die Datei oder das Verzeichnis bereits vorhanden ist.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.  
+  
+ - oder -   
+  
+ Der Speicherdatenträger oder das Medium ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtentCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Protokollwertebereich in der Auflistung ab.</summary>
+        <value>Die Anzahl der Protokollwertebereiche in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse und die <xref:System.IO.Log.LogExtentCollection>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Protokollspeicher wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeCount">
+      <MemberSignature Language="C#" Value="public int FreeCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FreeCount" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtentCollection.FreeCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl freier <see cref="T:System.IO.Log.LogExtent" />-Instanzen in der Auflistung ab, d.&amp;#160;h. die Anzahl der <see cref="T:System.IO.Log.LogExtent" />-Instanzen, die keine Daten enthalten.</summary>
+        <value>Die Anzahl freier <see cref="T:System.IO.Log.LogExtent" />-Instanzen in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse und die <xref:System.IO.Log.LogExtentCollection>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Protokollspeicher wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.IO.Log.LogExtent&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.IO.Log.LogExtent&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.IO.Log.LogExtent&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator für die <see cref="T:System.IO.Log.LogExtent" />-Instanzen in dieser Auflistung ab. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>Ein Enumerator für die <see cref="T:System.IO.Log.LogExtent" />-Instanzen in dieser Auflistung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist aus einem der folgenden Gründe ungültig:  
+  
+-   Die Enumeration wurde beendet.  
+  
+-   Die Auflistung wurde geändert.  
+  
+-   Die Enumeration wurde nicht gestartet. Ein Aufruf von <see cref="M:System.Collections.IEnumerator.MoveNext" /> muss erfolgen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.IO.Log.LogExtent extent, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.IO.Log.LogExtent extent, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Remove(System.IO.Log.LogExtent,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extent" Type="System.IO.Log.LogExtent" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extent">Die zu entfernende <see cref="T:System.IO.Log.LogExtent" />-Instanz.</param>
+        <param name="force">
+          <see langword="true" />, wenn der Wertebereich sofort entfernt werden sollte; andernfalls <see langword="false" />.</param>
+        <summary>Entfernt die angegebene <see cref="T:System.IO.Log.LogExtent" />-Instanz aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.IO.Log.LogExtent>-Instanz kann nur aus der Auflistung entfernt werden, wenn sie nicht Bestandteil des aktiven Bereichs des <xref:System.IO.Log.LogStore> ist. Wenn der `force`-Parameter `true` lautet und der Wertebereich nicht sofort entfernt werden kann, wird eine Ausnahme ausgelöst. Wenn der `force`-Parameter `false` lautet und der Wertebereich nicht sofort entfernt werden kann, wird das Entfernen verzögert, bis der Wertebereich kein Bestandteil des aktiven Bereichs mehr ist.  
+  
+ Sie können den letzten Wertebereich in der <xref:System.IO.Log.LogExtentCollection> nicht entfernen. Das bedeutet, dass die <xref:System.IO.Log.LogExtentCollection.Count%2A>-Eigenschaft nicht 0 (null) sein kann, wenn ein Wertebereich hinzugefügt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="extent" /> oder <paramref name="force" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="extent" /> kann in der Auflistung nicht gefunden werden.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="extent" /> kann nicht entfernt werden. Er ist entweder noch Bestandteil des aktiven Bereichs, oder der Zugriff wird verweigert.</exception>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.  
+  
+ - oder -   
+  
+ <paramref name="extent" /> kann nicht gelöscht werden.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string path, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string path, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Remove(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der zu entfernenden <see cref="T:System.IO.Log.LogExtent" />-Instanz.</param>
+        <param name="force">
+          <see langword="true" />, wenn der Wertebereich sofort entfernt werden sollte; andernfalls <see langword="false" />.</param>
+        <summary>Entfernt die <see cref="T:System.IO.Log.LogExtent" />-Instanz mit dem angegebenen Pfad aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.IO.Log.LogExtent>-Instanz kann nur aus der Auflistung entfernt werden, wenn sie nicht Bestandteil des aktiven Bereichs des <xref:System.IO.Log.LogStore> ist. Wenn der `force`-Parameter `true` lautet und der Wertebereich nicht sofort entfernt werden kann, wird eine Ausnahme ausgelöst. Wenn der `force`-Parameter `false` lautet und der Wertebereich nicht sofort entfernt werden kann, wird das Entfernen verzögert, bis der Wertebereich kein Bestandteil des aktiven Bereichs mehr ist.  
+  
+ Sie können den letzten Wertebereich in der <xref:System.IO.Log.LogExtentCollection> nicht entfernen. Das bedeutet, dass die <xref:System.IO.Log.LogExtentCollection.Count%2A>-Eigenschaft nicht 0 (null) sein kann, wenn ein Wertebereich hinzugefügt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="force" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der durch <paramref name="path" /> angegebene Wertebereich kann nicht in der Auflistung gefunden werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Der durch <paramref name="path" /> angegebene Wertebereich kann nicht entfernt werden. Er ist entweder noch Bestandteil des aktiven Bereichs, oder der Zugriff wird verweigert.</exception>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.  
+  
+ - oder -   
+  
+ Der durch <paramref name="path" /> angegebene Wertebereich kann nicht gelöscht werden.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator für die <see cref="T:System.IO.Log.LogExtent" />-Instanzen in dieser Auflistung ab. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>Ein Enumerator für die <see cref="T:System.IO.Log.LogExtent" />-Instanzen in dieser Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

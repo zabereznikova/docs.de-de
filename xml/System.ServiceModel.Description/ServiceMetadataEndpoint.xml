@@ -1,0 +1,80 @@
+<Type Name="ServiceMetadataEndpoint" FullName="System.ServiceModel.Description.ServiceMetadataEndpoint">
+  <TypeSignature Language="C#" Value="public class ServiceMetadataEndpoint : System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceMetadataEndpoint extends System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceMetadataEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Description.ServiceEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Address={address}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={name}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Standardendpunkt mit einem festen Vertrag (<see cref="T:System.ServiceModel.Description.IMetadataExchange" />) und eine Standard-HTTP-Bindung, die zum Verfügbarmachen von Metadaten verwendet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceMetadataEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceMetadataEndpoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceMetadataEndpoint" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceMetadataEndpoint (System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceMetadataEndpoint.#ctor(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die Endpunktadresse.</param>
+        <summary>Erstellt und initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceMetadataEndpoint" />-Klasse unter Verwendung der angegebenen Endpunktadresse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceMetadataEndpoint (System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceMetadataEndpoint.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die für den Dienstmetadatenendpunkt zu verwendende Bindung.</param>
+        <param name="address">Die Endpunktadresse.</param>
+        <summary>Erstellt und initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceMetadataEndpoint" />-Klasse unter Verwendung der angegebenen Bindung und Endpunktadresse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

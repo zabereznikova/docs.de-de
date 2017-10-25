@@ -1,0 +1,372 @@
+<Type Name="SoapQName" FullName="System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName">
+  <TypeSignature Language="C#" Value="public sealed class SoapQName : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SoapQName extends System.Object implements class System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Wrapper für XSD-Code <see langword="QName" /> Typ.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über XSD-Datentypen finden Sie unter der "XML Data Types Reference" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Member in der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> -Klasse zum Konvertieren zwischen einem <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> -Objekt und ein XSD- `QName` Zeichenfolge.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#10](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#10)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapQName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#21](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo2.cpp#21)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#21](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo2.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapQName (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.String" /> , der den lokalen Teil einen qualifizierten Namen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" /> -Klasse mit den lokalen Anteil des ein qualifizierter Name.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#22](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo2.cpp#22)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#22](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo2.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapQName (string key, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> , das den Namespacealias von einem qualifizierten Namen enthält.</param>
+        <param name="name">Ein <see cref="T:System.String" /> , der den lokalen Teil einen qualifizierten Namen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" /> Klasse mit dem Namespacealias und den lokalen Anteil des ein qualifizierter Name.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#23](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo2.cpp#23)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#23](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo2.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapQName (string key, string name, string namespaceValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key, string name, string namespaceValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> , das den Namespacealias von einem qualifizierten Namen enthält.</param>
+        <param name="name">Ein <see cref="T:System.String" /> , der den lokalen Teil einen qualifizierten Namen enthält.</param>
+        <param name="namespaceValue">Ein <see cref="T:System.String" /> , enthält den Namespace, der verweist <c>Schlüssel</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" /> Klasse mit dem Namespace-alias, den lokalen Anteil des ein qualifizierter Name und der Namespace, der durch den Alias verwiesen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#24](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo2.cpp#24)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#24](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo2.cs#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXsdType">
+      <MemberSignature Language="C#" Value="public string GetXsdType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetXsdType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.GetXsdType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Schemadefinitionssprache (XSD) des aktuellen SOAP-Typs zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> , der angibt, der XSD des aktuellen SOAP-Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.GetXsdType%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#13](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#13)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#13](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Namespacealias eines qualifizierten Namens.</summary>
+        <value>Ein <see cref="T:System.String" /> , das den Namespacealias von einem qualifizierten Namen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#17](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#17)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#17](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namensteil eines qualifizierten Namens.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den Namensteil eines qualifizierten Namens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Name%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#18](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#18)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#18](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namespace, der verweist <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key" />.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den Namespace, der verweist <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Namespace%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#19](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#19)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#19](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName Parse (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName Parse(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende <see cref="T:System.String" />.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.String" /> in einem <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" /> -Objekt, das von der abgerufen wird <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Parse%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#11](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#11)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den qualifizierten Namen wie eine <see cref="T:System.String" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> im Format " <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key" /> : <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Name" /> ". Wenn <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key" /> nicht angegeben ist, gibt diese Methode <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.ToString%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#12](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#12)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#12](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsdType">
+      <MemberSignature Language="C#" Value="public static string XsdType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XsdType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.XsdType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XML-Schemadefinitionssprache (XSD) des aktuellen SOAP-Typs ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , der die XSD des aktuellen SOAP-Typs angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.XsdType%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#16](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CPP/demo.cpp#16)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName#16](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName/CS/demo.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

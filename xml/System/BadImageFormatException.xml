@@ -1,0 +1,539 @@
+<Type Name="BadImageFormatException" FullName="System.BadImageFormatException">
+  <TypeSignature Language="C#" Value="public class BadImageFormatException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit BadImageFormatException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.BadImageFormatException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn das Dateiimage einer Dynamic Link Library (DLL) oder eines ausführbaren Programms ungültig ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ausnahme wird ausgelöst, wenn das Dateiformat einer dynamic Link Library (DLL-Datei) oder einer ausführbaren Datei (.exe-Datei) in das Format entsprechen nicht, die die common Language Runtime erwartet. Die Ausnahme ist insbesondere in den folgenden Situationen ausgelöst:  
+  
+-   Eine frühere Version von .NET Framework-Hilfsprogramms, z. B. ILDasm.exe oder installutil.exe, wird mit einer Assembly verwendet, die mit einer höheren Version von .NET Framework entwickelt wurde.  
+  
+     Um diese Ausnahme zu behandeln, verwenden Sie die Version des Tools, die die Version von .NET Framework entspricht, die zum Entwickeln der Assembly verwendet wurde. Dies erfordert möglicherweise, ändern die `Path` -Umgebungsvariablen oder einen vollqualifizierten Pfad zur ausführbaren Datei richtigen bereitstellen.  
+  
+-   Sie versuchen, eine nicht verwaltete dynamic Link Library oder eine ausführbare Datei (z. B. einer WindowsSystem-DLL) zu laden, als handele es sich um eine .NET Framework-Assembly. Das folgende Beispiel veranschaulicht dies mithilfe der <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> -Methode zum Laden von Kernel32.dll.  
+  
+     [!code-csharp[System.BadImageFormatException.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.badimageformatexception.class/cs/condition1.cs#1)]
+     [!code-vb[System.BadImageFormatException.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.badimageformatexception.class/vb/condition1.vb#1)]  
+  
+     Zugriff auf die Methoden, die in der DLL definiert wird, mithilfe der Funktionen, wie z. B. von der Entwicklungssprache bereitgestellt, um diese Ausnahme zu behandeln, die `Declare` -Anweisung in Visual Basic oder <xref:System.Runtime.InteropServices.DllImportAttribute> -Attribut mit dem `extern` -Schlüsselwort in c#.  
+  
+-   Eine DLL oder ausführbare Datei wird als 64-Bit-Assembly geladen, aber es enthält 32-Bit-Funktionen oder Ressourcen. Beispielsweise verwendet COM-Interop oder ruft Methoden in einer 32-Bit-dynamic Link Library.  
+  
+     Um diese Ausnahme zu behandeln, legen Sie die **Zielplattform** Eigenschaft X86 (anstelle von X64 oder "anycpu") und kompilieren Sie erneut.  
+  
+-   Komponenten der Anwendung wurden mit verschiedenen Versionen von .NET Framework erstellt. In der Regel wird diese Ausnahme tritt auf, wenn eine Anwendung oder Komponente, die entwickelt wurde, mit der [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] oder die [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)] versucht, eine Assembly zu laden, die mit entwickelt wurde die [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)] oder höher verwenden oder eine Anwendung, die entwickelt wurde, mit der [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)] oder [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] versucht, eine Assembly zu laden, das entwickelt wurde, mithilfe der [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] oder höher. Die <xref:System.BadImageFormatException> möglicherweise als ein Kompilierzeitfehler gemeldet, oder die Ausnahme wird möglicherweise zur Laufzeit ausgelöst. Das folgende Beispiel definiert eine `StringLib` Klasse, die ein einzelnes Element verfügt `ToProperCase`, und, die sich in einer Assembly mit dem Namen StringLib.dll befindet.  
+  
+     [!code-csharp[System.BadImageFormatException.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.badimageformatexception.class/cs/stringlib.cs#2)]
+     [!code-vb[System.BadImageFormatException.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.badimageformatexception.class/vb/stringlib.vb#2)]  
+  
+     Im folgenden Beispiel wird Reflektion zum Laden einer Assembly mit dem Namen StringLib.dll. Wenn Quellcode kompiliert wird, mit einer [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)] -Compiler eine <xref:System.BadImageFormatException> von ausgelöst wird die <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> Methode.  
+  
+     [!code-csharp[System.BadImageFormatException.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.badimageformatexception.class/cs/loadstringlib.cs#3)]
+     [!code-vb[System.BadImageFormatException.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.badimageformatexception.class/vb/loadstringlib.vb#3)]  
+  
+     Um diese Ausnahme zu behandeln, stellen Sie sicher, dass die Assembly, deren Code ausgeführt wird und dass ausgelöst wird, die Ausnahme und die Assembly geladen werden, kompatible Versionen von .NET Framework abzielen.  
+  
+-   Die Komponenten der Anwendung auf verschiedenen Plattformen ausgerichtet. Sie möchten z. B. Laden von ARM-Assemblys in x X86 Anwendung. Die folgenden Befehlszeile-Hilfsprogramm können Sie um die Zielplattformen eines einzelnen .NET Framework-Assemblys zu bestimmen. Die Liste der Dateien sollten als eine durch Leerzeichen getrennte Liste in der Befehlszeile angegeben werden.  
+  
+     [!code-csharp[System.BadImageFormatException.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.badimageformatexception.class/cs/targetplatform1.cs#4)]
+     [!code-vb[System.BadImageFormatException.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.badimageformatexception.class/vb/targetplatform1.vb#4)]  
+  
+-   Diese Ausnahme kann durch Reflektion auf ausführbare Dateien in C++ ausgelöst werden. Meistens hat dabei der C++-Compiler die Umsetzungsadressen oder den .Reloc-Abschnitt der ausführbaren Datei entfernt. Damit die Umsetzungsadresse in einer ausführbaren Datei von C++ erhalten bleibt, geben Sie / fixed: No beim verknüpfen.  
+  
+ <xref:System.BadImageFormatException>verwendet HRESULT COR_E_BADIMAGEFORMAT mit den Wert 0x8007000B.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.BadImageFormatException>, finden Sie unter der <xref:System.BadImageFormatException> Konstruktoren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BadImageFormatException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.BadImageFormatException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, wie z. B. "Das Format der ausführbaren Datei oder Bibliothek ist ungültig". Diese Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.BadImageFormatException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BadImageFormatException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.BadImageFormatException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.BadImageFormatException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BadImageFormatException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.BadImageFormatException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BadImageFormatException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter kein null-Verweis, die aktuelle Ausnahme wird ausgelöst, einem <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.BadImageFormatException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.BadImageFormatException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BadImageFormatException (string message, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung mit einer Beschreibung des Fehlers.</param>
+        <param name="fileName">Der vollständige Name der Datei mit dem ungültigen Abbild.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.BadImageFormatException" /> Klasse mit einer angegebenen Fehlermeldung Nachricht und der Dateiname.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.BadImageFormatException.FileName%2A>|Der vollständige Name der Datei mit dem ungültigen Abbild.|  
+|<xref:System.BadImageFormatException.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BadImageFormatException (string message, string fileName, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string fileName, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.#ctor(System.String,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="fileName">Der vollständige Name der Datei mit dem ungültigen Abbild.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.BadImageFormatException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.BadImageFormatException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.BadImageFormatException.FileName%2A>|Der vollständige Name der Datei mit dem ungültigen Abbild.|  
+|<xref:System.BadImageFormatException.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.BadImageFormatException.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datei ab, die diese Ausnahme verursacht hat.</summary>
+        <value>Der Name der Datei mit dem ungültigen Abbild oder ein NULL-Verweis, wenn kein Dateiname an den Konstruktor für die aktuelle Instanz übergeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namen der Datei an den Konstruktor für die aktuelle Instanz angegeben, sofern vorhanden. Wenn der Dateiname nicht angegeben wurde oder null-Verweis (`Nothing` in Visual Basic), gibt diese Eigenschaft einen null-Verweis zurück.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FusionLog">
+      <MemberSignature Language="C#" Value="public string FusionLog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FusionLog" />
+      <MemberSignature Language="DocId" Value="P:System.BadImageFormatException.FusionLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Protokolldatei ab, in der beschrieben wird, warum das Laden einer Assembly fehlschlug.</summary>
+        <value>Ein <see langword="String" /> , von dem Assemblycache gemeldeten Fehler enthält.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Bereitstellen von Beweisen und anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" /> <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Legt die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt mit dem Dateinamen, Assemblycache-Protokoll und zusätzlichen Informationen zur Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.BadImageFormatException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Fehlermeldung und den Namen der Datei ab, die diese Ausnahme verursacht hat.</summary>
+        <value>Eine Zeichenfolge mit der Fehlermeldung und dem Namen der Datei, die diese Ausnahme verursacht hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Meldung an den Konstruktor für die aktuelle Ausnahme bereitgestellt wurde, gibt diese Eigenschaft eine vom System bereitgestellten Fehlermeldung. Wenn die <xref:System.BadImageFormatException.FileName%2A> Eigenschaft ist kein null-Verweis (`Nothing` in Visual Basic), die Meldung enthält den Dateinamen.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BadImageFormatException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den vollqualifizierten Namen dieser Ausnahme und ggf. die Fehlermeldung sowie den Namen der inneren Ausnahme und die Stapelüberwachung zurück.</summary>
+        <returns>Eine Zeichenfolge, die den voll gekennzeichneten Namen dieser Ausnahme und ggf. der Fehlermeldung sowie den Namen der inneren Ausnahme und die Stapelüberwachung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolgendarstellung von dieser Methode zurückgegebene enthält den Namen der Ausnahme, den Wert des der <xref:System.BadImageFormatException.Message%2A> -Eigenschaft, die das Ergebnis des Aufrufs `ToString` auf die innere Ausnahme, den Wert des der <xref:System.BadImageFormatException.FileName%2A> -Eigenschaft, und das Ergebnis des Aufrufs <xref:System.Environment.StackTrace%2A>. Wenn keines dieser Member ist ein null-Verweis (`Nothing` in Visual Basic), dessen Wert nicht in der zurückgegebenen Zeichenfolge enthalten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

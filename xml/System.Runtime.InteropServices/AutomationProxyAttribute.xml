@@ -1,0 +1,89 @@
+<Type Name="AutomationProxyAttribute" FullName="System.Runtime.InteropServices.AutomationProxyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AutomationProxyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AutomationProxyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.AutomationProxyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob der Typ mithilfe des Automation-Marshallers oder eines benutzerdefinierten Proxys und Stubs gemarshallt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Assemblys, Klassen oder Schnittstellen anwenden.  
+  
+ Bei Anwendung auf eine Klasse erweitert es auf die Klassenschnittstelle für diese Klasse, falls vorhanden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AutomationProxyAttribute (bool val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.AutomationProxyAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="val">
+          <see langword="true" />Wenn die Klasse mithilfe der Automation-Marshaller gemarshallt werden sollen; <see langword="false" /> , wenn ein Proxy-Stub-Marshaller verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.AutomationProxyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public bool Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.AutomationProxyAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der des Typs der Marshaller verwenden.</summary>
+        <value>
+          <see langword="true" />Wenn die Klasse mithilfe der Automation-Marshaller gemarshallt werden sollen; <see langword="false" /> , wenn ein Proxy-Stub-Marshaller verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

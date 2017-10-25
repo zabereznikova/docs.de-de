@@ -1,0 +1,322 @@
+<Type Name="RowDefinition" FullName="System.Windows.Controls.RowDefinition">
+  <TypeSignature Language="C#" Value="public class RowDefinition : System.Windows.Controls.DefinitionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RowDefinition extends System.Windows.Controls.DefinitionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.RowDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.DefinitionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert zeilenspezifische Eigenschaften, die für gelten <see cref="T:System.Windows.Controls.Grid" /> Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen festlegen, eine <xref:System.Windows.Controls.RowDefinition> für jede Zeile in einer <xref:System.Windows.Controls.Grid>. Beim Festlegen einer zeilenspezifische <xref:System.Windows.Controls.RowDefinition>, jede Zeile eindeutig Größeneigenschaften zuweisen.  
+  
+ Eine Gruppe von festzulegende <xref:System.Windows.Controls.RowDefinition> Hinzufügen von Elementen mithilfe von Code, der <xref:System.Windows.Controls.RowDefinition> auf eine <xref:System.Windows.Controls.RowDefinitionCollection>.  
+  
+ Die <xref:System.Windows.Controls.RowDefinition> Klasse macht nur Eigenschaften für Höhe. Zum Festlegen der Breiteneigenschaften einem <xref:System.Windows.Controls.Grid>, erstellen Sie eine Instanz des <xref:System.Windows.Controls.ColumnDefinition>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RowDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.RowDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.RowDefinition" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActualHeight">
+      <MemberSignature Language="C#" Value="public double ActualHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ActualHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.RowDefinition.ActualHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die berechnete Höhe der <see cref="T:System.Windows.Controls.RowDefinition" /> darstellt.</summary>
+        <value>Ein <see cref="T:System.Double" />-Wert, der die berechnete Höhe in geräteunabhängigen Pixeln angibt. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Werte in das gleiche Codebeispiel verwenden die <xref:System.Windows.Controls.RowDefinition.MinHeight%2A> Wert hat Vorrang vor der <xref:System.Windows.Controls.RowDefinition.MaxHeight%2A> -Wert, der wiederum Vorrang vor den <xref:System.Windows.Controls.RowDefinition.Height%2A> Wert.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public System.Windows.GridLength Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.GridLength Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.RowDefinition.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.GridLength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die berechnete Höhe eines <see cref="T:System.Windows.Controls.RowDefinition" />-Elements ab oder legt den <see cref="T:System.Windows.GridLength" />-Wert einer Zeile fest, die durch die <see cref="T:System.Windows.Controls.RowDefinition" /> definiert ist.</summary>
+        <value>Die <see cref="T:System.Windows.GridLength" />, die die Höhe der Zeile darstellt. Der Standardwert ist 1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung für <xref:System.Windows.GridUnitType> ist <xref:System.Windows.GridUnitType.Star>.  
+  
+ Wenn Sie diese Werte in das gleiche Codebeispiel verwenden die <xref:System.Windows.Controls.RowDefinition.MinHeight%2A> Wert hat Vorrang vor der <xref:System.Windows.Controls.RowDefinition.MaxHeight%2A> -Wert, der wiederum Vorrang vor den <xref:System.Windows.Controls.RowDefinition.Height%2A> Wert.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+<a name="dependencyPropertyInfo_Height"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.RowDefinition.HeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.RowDefinition.HeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.RowDefinition.Height" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHeight">
+      <MemberSignature Language="C#" Value="public double MaxHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.RowDefinition.MaxHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die maximale Höhe darstellt eine <see cref="T:System.Windows.Controls.RowDefinition" />.</summary>
+        <value>Ein <see cref="T:System.Double" /> , die die maximale Höhe darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Werte in das gleiche Codebeispiel verwenden die <xref:System.Windows.Controls.RowDefinition.MinHeight%2A> Wert hat Vorrang vor der <xref:System.Windows.Controls.RowDefinition.MaxHeight%2A> -Wert, der wiederum Vorrang vor den <xref:System.Windows.Controls.RowDefinition.Height%2A> Wert.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+<a name="xamlAttributeUsage_MaxHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MaxHeight="double"/>  
+- or -  
+<object MaxHeight="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MaxHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als oder gleich `0.0034` jedoch gleich oder kleiner als `160000`. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MaxHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.RowDefinition.MaxHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.RowDefinition.MaxHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.RowDefinition.MaxHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinHeight">
+      <MemberSignature Language="C#" Value="public double MinHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.RowDefinition.MinHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die zulässige Mindesthöhe darstellt eine <see cref="T:System.Windows.Controls.RowDefinition" />.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die zulässige Mindesthöhe darstellt. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Werte in das gleiche Codebeispiel verwenden die <xref:System.Windows.Controls.RowDefinition.MinHeight%2A> Wert hat Vorrang vor der <xref:System.Windows.Controls.RowDefinition.MaxHeight%2A> -Wert, der wiederum Vorrang vor den <xref:System.Windows.Controls.RowDefinition.Height%2A> Wert.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+<a name="xamlAttributeUsage_MinHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MinHeight="double"/>  
+- or -  
+<object MinHeight="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MinHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als oder gleich `0.0034` jedoch gleich oder kleiner als `160000`. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MinHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.RowDefinition.MinHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.RowDefinition.MinHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.RowDefinition.MinHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public double Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.RowDefinition.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Offsetwert dieser <see cref="T:System.Windows.Controls.RowDefinition" />.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der den Offset der Zeile darstellt. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

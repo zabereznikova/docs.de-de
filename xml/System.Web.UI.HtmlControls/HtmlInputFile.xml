@@ -1,0 +1,460 @@
+<Type Name="HtmlInputFile" FullName="System.Web.UI.HtmlControls.HtmlInputFile">
+  <TypeSignature Language="C#" Value="public class HtmlInputFile : System.Web.UI.HtmlControls.HtmlInputControl, System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlInputFile extends System.Web.UI.HtmlControls.HtmlInputControl implements class System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlInputFile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlInputControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackDataHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ValidationProperty("Value")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Element <see langword="&lt;input type= file&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlInputFile> Webserversteuerelement aus einem Browser-Clients an den Server hochgeladen Binär oder Text Dateien behandelt werden. Hochladen der Dateien kann mit Microsoft Internet Explorer Version 3.02 oder höher.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.HtmlControls.HtmlInputFile> Steuerelement während des Teilrenderings von Seiten nur in postback-Szenarien und nicht in asynchronen postback-Szenarien verwendet werden soll. Bei Verwendung von ein <xref:System.Web.UI.HtmlControls.HtmlInputFile> -Steuerelement innerhalb einer <xref:System.Web.UI.UpdatePanel> -Steuerelement, muss die Datei hochgeladen werden, mit einem Steuerelement, ein <xref:System.Web.UI.PostBackTrigger> -Objekt für den Bereich. <xref:System.Web.UI.UpdatePanel>Steuerelemente werden verwendet, um die ausgewählten Bereiche einer Seite statt zu aktualisieren die gesamte Seite mit einem Postback zu aktualisieren. Weitere Informationen finden Sie unter [Übersicht über das Steuerelement UpdatePanel](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) und [Teilrendering von Seiten Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Um die hochzuladende Datei anzugeben, geben Sie den vollständigen Pfad zur Datei (z. B. "C:\MyFiles\Test.txt") im Textfeld des Steuerelements. Sie können auch die Datei auswählen, indem Sie auf die **Durchsuchen** Schaltfläche, und Suchen in der **Choose File** (Dialogfeld).  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.HtmlControls.HtmlForm.Enctype%2A> Eigenschaft ein <xref:System.Web.UI.HtmlControls.HtmlForm> Steuerelement muss auf "Multipart/Form-Data" für das genannte Steuerelement ordnungsgemäß festgelegt werden.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputFile> Steuerelement verfügt nicht über eine integrierte Option zum Zurücksenden an den Server. Verwenden Sie zum Hochladen der das mit dem Server die <xref:System.Web.HttpPostedFile.SaveAs%2A> Methode der <xref:System.Web.HttpPostedFile?displayProperty=nameWithType> Objekt in der <xref:System.Web.UI.HtmlControls.HtmlInputFile.PostedFile%2A> Eigenschaft. Dieser Vorgang erfolgt normalerweise in einer Methode für die Ereignisbehandlung, z. B. für eine Schaltfläche klicken.  
+  
+> [!NOTE]
+>  Bei Verwendung der <xref:System.Web.HttpPostedFile.SaveAs%2A> Methode der <xref:System.Web.HttpPostedFile> Klasse, achten Sie darauf, einen vollständigen Pfad (z. B. "C:\MyFiles\Test.txt") angeben. Das Verhalten der <xref:System.Web.HttpPostedFile.SaveAs%2A> Methode kann angegeben werden, der [HttpRuntime-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) Konfigurationsabschnitt, mit der `requireRootedSaveAsPath` Attribut. Der Standardwert dieses Attributs ist `true`. Wenn Sie dieses Attribut auf `false`, klicken Sie dann mit der <xref:System.Web.HttpPostedFile.SaveAs%2A> Methode ohne Pfadangabe versucht, die Datei in die `systemroot` Verzeichnis \system32\inetsrv. Standardmäßig ist dies das Verzeichnis schreibgeschützt; aus diesem Grund kann die Datei nicht vorhanden gespeichert werden. Stellen Sie sicher über Schreibberechtigung für das Konto, der von ASP.NET für das Verzeichnis, in dem Sie die Datei speichern möchten.  
+  
+ Verwenden Sie beim Hochladen großer Dateien der `maxRequestLength` Attribut von der [HttpRuntime-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) Elements, um die maximal zulässige Dateigröße zu erhöhen. Ein DNS-Fehler wird im Browser generiert, wenn die Datei auf die angegebene Größe überschreitet. Sie können auch die folgende Fehlermeldung angezeigt, wenn Hochladen großer Dateien:  
+  
+ aspnet_wp.exe (PID: 1520) wurde wieder verwendet, da Speicherverbrauch 460 MB (60 Prozent des verfügbaren Arbeitsspeichers) überschritten hat.  
+  
+ Wenn Sie diese Fehlermeldung auftritt, erhöhen Sie den Wert von der `memoryLimit` Attribut in der [ProcessModel-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) -Element der Datei "Machine.config".  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputFile>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlInputFile.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputFile> Steuerelement um eine einfache Datei hochladen-Szenario zu erstellen. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie ein Verzeichnis namens erstellen `Temp` auf Ihrem Computer Laufwerk c  
+  
+ [!code-aspx-csharp[Classic HtmlInputFile Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlInputFile Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlInputFile Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlInputFile Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlInputFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputFile.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlInputFile" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlInputFile> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputFile>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlInputControl.Type%2A>|Das Zeichenfolgenliteral "File".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie eine neue Instanz der <xref:System.Web.UI.HtmlControls.HtmlInputFile>-Klasse erstellt wird. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie ein Verzeichnis namens erstellen `Temp` auf Ihrem Computer Laufwerk c  
+  
+ [!code-aspx-csharp[HtmlInputFileCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputFileCtor/CS/htmlinputfilectorcs.aspx#1)]
+ [!code-aspx-vb[HtmlInputFileCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputFileCtor/VB/htmlinputfilectorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public string Accept { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Accept" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputFile.Accept" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine durch Trennzeichen getrennte Liste von MIME-Codierung verwendet, um die Dateitypen zu beschränken, die der Benutzer auswählen kann.</summary>
+        <value>Die durch Trennzeichen getrennte Liste von MIME-Codierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Dateityp angeben, der an den Server hochgeladen werden können. Um die Auswahl auf Bilder zu beschränken, legen Sie beispielsweise diese Eigenschaft auf "Image / *".  
+  
+> [!NOTE]
+>  Unterstützung für diese Eigenschaft ist Browser abhängig. Überprüfen Sie Ihren Browser, um zu bestimmen, ob diese Eigenschaft unterstützt. Es wird empfohlen, dass Sie serverseitigen Code verwenden, um sicherzustellen, dass die Datei von der erwartete Typ ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputFile.Accept%2A> Eigenschaft, um zu verhindern, dass der Benutzer eine beliebige Datei als Bilddatei auswählen. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie ein Verzeichnis namens erstellen `Temp` auf Ihrem Computer Laufwerk c Da Unterstützung für die <xref:System.Web.UI.HtmlControls.HtmlInputFile.Accept%2A> Eigenschaft hängt vom Browser, eine serverseitige Überprüfung wird ausgeführt, um sicherzustellen, dass nur Bilder hochgeladen werden. Eine Ausnahme wird ausgelöst, wenn die hochgeladene Datei nicht kann, können Sie als gelesen werden ein <xref:System.Drawing.Image> Typ.  
+  
+ [!code-aspx-csharp[Classic HtmlInputFile.Accept Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlInputFile.Accept Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlInputFile.Accept Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlInputFile.Accept Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="protected virtual bool LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputFile.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Die Schlüsselkennung für das Steuerelement.</param>
+        <param name="postCollection">Die Sammlung aller eingehenden Namenswerte.</param>
+        <summary>Verarbeitet die Postbackdaten für das <see cref="T:System.Web.UI.HtmlControls.HtmlInputFile" />-Steuerelement.</summary>
+        <returns>Diese Methode gibt immer <see langword="false" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputFile> -Steuerelement implementiert die <xref:System.Web.UI.IPostBackDataHandler> -Schnittstelle, die über zwei Methoden: <xref:System.Web.UI.IPostBackDataHandler.LoadPostData%2A?displayProperty=nameWithType> und <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A?displayProperty=nameWithType>. Die <xref:System.Web.UI.HtmlControls.HtmlInputFile.LoadPostData%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.UI.HtmlControls.HtmlInputFile.System%23Web%23UI%23IPostBackDataHandler%23RaisePostDataChangedEvent%2A> -Methode und gibt immer `false`gibt an, die die <xref:System.Web.UI.HtmlControls.HtmlInputFile> Zustand des Steuerelements wird nicht durch das ASP.NET-Seitenframework verwaltet.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputFile.LoadPostData%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlInputFile> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public int MaxLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputFile.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Länge des Dateipfads für die Datei auf dem Clientcomputer hochladen.</summary>
+        <value>Die maximale Länge des Dateipfads. Der Standardwert ist-1 und bedeutet, dass die Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um eine Grenze für die Anzahl von Zeichen anzugeben, die für den Pfad zu der Datei zum Hochladen eingegeben werden können.  
+  
+> [!NOTE]
+>  Unterstützung für diese Eigenschaft ist Browser abhängig. Überprüfen Sie Ihren Browser, um zu bestimmen, ob diese Eigenschaft unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputFile.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis für das <see cref="T:System.Web.UI.HtmlControls.HtmlInputFile" />-Steuerelement aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Codierung für die Webseite angegeben ist <xref:System.Web.UI.HtmlControls.HtmlForm> -Steuerelement, das <xref:System.Web.UI.HtmlControls.HtmlForm.Enctype%2A> Eigenschaft auf "Multipart/Form-Data" festgelegt ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlInputFile.OnPreRender%2A> Methode, damit ein `Title` Attribut wird immer für jede benutzerdefinierte hinzugefügt <xref:System.Web.UI.HtmlControls.HtmlInputFile> Steuerelement. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie ein Verzeichnis namens erstellen `Temp` auf Ihrem Computer Laufwerk c  
+  
+ [!code-aspx-csharp[CustomHtmlInputFileOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputFileOnPreRender/CS/custom_htmlinputfile_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlInputFileOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputFileOnPreRender/VB/custom_htmlinputfile_onprerendervb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlInputFileOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputFileOnPreRender/CS/custom_htmlinputfile_onprerender.cs#2)]
+ [!code-vb[CustomHtmlInputFileOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputFileOnPreRender/VB/custom_htmlinputfile_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostedFile">
+      <MemberSignature Language="C#" Value="public System.Web.HttpPostedFile PostedFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpPostedFile PostedFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputFile.PostedFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zugriff auf die hochgeladene Datei von einem Client angegeben.</summary>
+        <value>Ein <see cref="T:System.Web.HttpPostedFile" /> , die greift auf die Datei hochgeladen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Browser-sicherheitseinschränkungen verhindern, dass dieser Wert in mehreren Anforderungen verwaltet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputFile.PostedFile%2A> Eigenschaft, um das Hilfsprogramm zu initiieren, die die Datei an den Server übertragen. Beachten Sie, dass die Größe der hochgeladenen Datei in Byte überschreitet den Wert von der <xref:System.Web.HttpPostedFile.ContentLength%2A> -Eigenschaft, die Datei wurde nicht geladen. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie ein Verzeichnis namens erstellen `Temp` auf Ihrem Computer Laufwerk c  
+  
+ [!code-aspx-csharp[Classic HtmlInputFile.PostedFile Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlInputFile.PostedFile Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlInputFile.PostedFile Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlInputFile.PostedFile Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputFile.RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt das <see cref="T:System.Web.UI.HtmlControls.HtmlInputFile" />-Steuerelement, dass sich der Zustand des Steuerelements geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputFile> -Steuerelement implementiert die <xref:System.Web.UI.IPostBackDataHandler> -Schnittstelle, die über zwei Methoden: <xref:System.Web.UI.IPostBackDataHandler.LoadPostData%2A?displayProperty=nameWithType> und <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A?displayProperty=nameWithType>. Die <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A?displayProperty=nameWithType> Methode nicht Teil der Verarbeitung der <xref:System.Web.UI.HtmlControls.HtmlInputFile> steuern und enthalten die Implementierung abgeschlossen ist.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputFile.RaisePostDataChangedEvent%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.HtmlControls.HtmlInputFile> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public int Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputFile.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des Textfelds in der der Pfad eingegeben wird.</summary>
+        <value>Die Breite des Textfelds Dateipfad. Der Standardwert ist-1 und bedeutet, dass die Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Breite des Textfelds, geben Sie den Dateipfad angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputFile.Size%2A> Eigenschaft, um die Breite des Textfelds anzugeben, in dem der Benutzer den Dateipfad gibt. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie ein Verzeichnis namens erstellen `Temp` auf Ihrem Computer Laufwerk c  
+  
+ [!code-aspx-csharp[Classic HtmlInputFile.Size Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlInputFile.Size Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlInputFile.Size Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlInputFile.Size Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.LoadPostData">
+      <MemberSignature Language="C#" Value="bool IPostBackDataHandler.LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Web.UI.IPostBackDataHandler.LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputFile.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Die Schlüsselkennung für das Steuerelement.</param>
+        <param name="postCollection">Die Sammlung aller eingehenden Namenswerte.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn sich der Zustand des <see cref="T:System.Web.UI.HtmlControls.HtmlInputFile" />-Steuerelements aufgrund des Postbacks geändert hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.HtmlControls.HtmlInputFile>-Instanz in eine <xref:System.Web.UI.IPostBackDataHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="void IPostBackDataHandler.RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputFile.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.HtmlControls.HtmlInputFile>-Instanz in eine <xref:System.Web.UI.IPostBackDataHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputFile.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Pfad der Datei auf dem Computer des Clients ab.</summary>
+        <value>Der vollständige Pfad der Datei des Clients.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputFile.Value%2A> Eigenschaft ruft den vollständigen Pfad der Datei auf dem Clientcomputer (z. B. "C:\MyFiles\Test.txt") ab. Dies ist hilfreich, wenn Sie müssen wissen, wo die Datei auf dem Computer, senden die Datei gespeichert ist. Diese Eigenschaft wird auch häufig verwendet, um den ursprünglichen Dateinamen zu bestimmen. Um den ursprünglichen Dateinamen zu erhalten, analysieren Sie den Wert dieser Eigenschaft.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.HtmlControls.HtmlInputFile.Value%2A> Eigenschaft ist schreibgeschützt. Wenn Sie versuchen, diese Eigenschaft einen Wert zuweisen einer <xref:System.NotSupportedException?displayProperty=nameWithType> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputFile.Value%2A> Eigenschaft, um den vollständigen Pfad der Datei auf dem Computer des Clients anzuzeigen. Für dieses Beispiel ordnungsgemäß funktioniert, müssen Sie ein Verzeichnis namens erstellen `Temp` auf Ihrem Computer Laufwerk c  
+  
+ [!code-aspx-csharp[HtmlInputFileValue#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputFileValue/CS/htmlinputfilevaluecs.aspx#1)]
+ [!code-aspx-vb[HtmlInputFileValue#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputFileValue/VB/htmlinputfilevaluevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, diese Eigenschaft einen Wert zuweisen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

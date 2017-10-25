@@ -1,0 +1,91 @@
+<Type Name="IPlaybackControl" FullName="System.EnterpriseServices.IPlaybackControl">
+  <TypeSignature Language="C#" Value="public interface IPlaybackControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPlaybackControl" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IPlaybackControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("51372AFD-CAE7-11CF-BE81-00AA00A2FA25")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Funktionen in den Komponenten in der Warteschlange in die nicht ordnungsgemäße serverseitige Wiedergabe Fehlerbehandlung und die clientseitige Fehlern von Message Queuing Übermittlungsmechanismus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exception-Klasse, die für die Komponente im COM+-Katalog implementiert definiert <xref:System.EnterpriseServices.IPlaybackControl> und die Schnittstelle für die ursprüngliche Klasse. Die methodenimplementierungen der ursprünglichen Klassenschnittstelle werden verwendet, um die Ausnahmebehandlung für den fehlerhaften Methoden in der Klasse selbst ausführen. Sie werden aufgerufen, nachdem <xref:System.EnterpriseServices.IPlaybackControl.FinalClientRetry%2A> oder <xref:System.EnterpriseServices.IPlaybackControl.FinalServerRetry%2A> zum Verarbeiten von Ausnahmen für die ursprünglich aufgerufene Methode.  
+  
+ Der Queued Components Player ruft die Methoden der <xref:System.EnterpriseServices.IPlaybackControl> an den Ausnahmehandler Objekt zu benachrichtigen, dass eine Nachricht in der endgültigen Arbeitsfläche oder Dead Letter-Warteschlange platziert werden sollen. Der Queued Components Player ruft dann die gleiche Methode im Ausnahmehandler Objekt, das im Aufruf ursprünglichen Methode Fehler aufgetreten ist. Der Ausnahmehandler Objekt kann Alternative, z. B. implementieren, indem Sammeln von Informationen zur Problemdiagnose oder generieren ein Objekt oder eine Meldung, die den Client über das Problem informiert. Wenn die Anwendung keine implementiert <xref:System.EnterpriseServices.IPlaybackControl>, die nicht verarbeitbare Nachricht ist beim Player-Komponenten in der Warteschlange aller Wiederholungsversuche schöpft in der endgültigen Arbeitsfläche oder Dead Letter-Warteschlange platziert.  
+  
+ Eine nicht verarbeitbare Nachricht ist eine Nachricht, die aus irgendeinem Grund, möglicherweise wegen eines Problems mit dem Server oder die queuing-System verarbeitet werden kann. Die Transaktion ein Rollback aus, und die nicht verarbeitbare Nachricht wird an den Anfang der Warteschlange. Wenn die Nachricht wieder aus der Warteschlange entfernt wird, tritt ein, die gleiche Bedingung. Diese Meldung kann weiterhin Schleifen unbegrenzt, bis eine Aktion ausgeführt wird, um das Problem zu beheben. Der Dienst Komponenten in der Warteschlange verarbeitet die nicht verarbeitbare Nachricht mithilfe einer Reihe von Wiederholungen. Nach mehreren erfolglosen Versuchen wird die Nachricht an eine endgültige Verbleib Warteschlange verschoben. Nicht verarbeitbare Nachrichten verbleiben in der Verbleib Warteschlange, bis Sie manuell mithilfe des Tools in der Warteschlange Komponenten Nachricht Mover verschoben.  
+  
+ Die nicht verarbeitbare Nachricht kann auch programmgesteuert behoben werden, mithilfe der <xref:System.EnterpriseServices.IPlaybackControl.FinalServerRetry%2A> Methode, die den Autor serverseitige Komponente informiert, die die verzögerte Aktivierung wiedergeben alle Versuche fehlgeschlagen sind.  
+  
+ Wenn Sie eine nicht verarbeitbare Nachricht erkennen, können Sie schnell die Ursache des Problems zu beheben sein. Wenn der Server aus irgendeinem Grund offline geschaltet wurde, können Sie z. B. den Server wieder online bringen. Wenn Sie das Problem schnell lösen können, können Sie automatisch eine andere Transaktion generieren, die den anfordernden benachrichtigt, den nicht von die Transaktion aufgetreten ist. Der anforderer kann dann eine kompensierende Transaktion stellen, die den Effekt einer Transaktion kehrt die bereits ein Commit ausgeführt wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FinalClientRetry">
+      <MemberSignature Language="C#" Value="public void FinalClientRetry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FinalClientRetry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IPlaybackControl.FinalClientRetry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Der clientseitige Ausnahmebehandlung Komponente informiert werden, dass alle Message Queuing Versuche zum Zustellen der Nachricht an den Server abgelehnt wurden, die Nachricht in der clientseitigen Xact Dead Letter-Warteschlange geliefert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Eintreffen von Nachrichten in Warteschlange für unzustellbare Xact versucht COM+, rufen einen clientseitigen Ausnahmehandler im Zusammenhang mit dem Serverklasse, um diese Benachrichtigung zu übermitteln. Dies erfolgt durch den ersten Aufruf <xref:System.EnterpriseServices.IPlaybackControl.FinalClientRetry%2A>, und klicken Sie dann die Ausnahmebehandlung Version der fehlgeschlagenen Methode im Ausnahmehandler Objekt aufrufen. Diese Ausnahmemethode kann dann eine Ausnahmeaktion, z. B. den Fehler aufzeichnen, senden eine e-Mail-Nachricht an den Administrator oder clientseitige kompensierende Aktion (die Auswirkung einer früheren Transaktion umkehren) vornehmen. Die Exception-Methode nicht erfolgreich ist, wird die Nachricht in der Xact Dead Letter-Warteschlange belassen.  
+  
+ Die Xact Dead Letter-Warteschlange kann im Microsoft Message Queue (MSMQ)-Explorer angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalServerRetry">
+      <MemberSignature Language="C#" Value="public void FinalServerRetry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FinalServerRetry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IPlaybackControl.FinalServerRetry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Informiert die Implementierung der serverseitigen Ausnahme, dass alle Versuche, die verzögerte Aktivierung mit dem Server wiederzugeben fehlgeschlagen sind und die Nachricht an ihre endgültigen Verbleib Warteschlange verschoben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Nachrichten in der Xact Dead Letter-Warteschlange eintreffen, versucht COM+-aufzurufenden einen serverseitigen Ausnahmehandler im Zusammenhang mit dem Serverklasse, um diese Benachrichtigung zu übermitteln. Dies erfolgt durch den ersten Aufruf <xref:System.EnterpriseServices.IPlaybackControl.FinalServerRetry%2A>, und klicken Sie dann die Version der fehlerhaften Methode in dem Ausnahmeobjekt-Handler für die Ausnahmebehandlung aufgerufen. Diese Ausnahmemethode kann dann eine Ausnahmeaktion, z. B. den Fehler aufzeichnen, senden eine e-Mail-Nachricht an den Administrator oder clientseitige kompensierende Aktion (die Auswirkung einer früheren Transaktion umkehren) vornehmen. Das Serverobjekt nehmen bestrebt, die diese Transaktion erfolgreich abgeschlossen. Andernfalls muss Eingriff durch den die Nachricht erneut verarbeiten. Wenn der Exception-Methode nicht erfolgreich ist, wird die Nachricht an den endgültigen Verbleib Warteschlange verschoben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

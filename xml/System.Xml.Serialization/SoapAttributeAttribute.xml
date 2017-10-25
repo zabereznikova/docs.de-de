@@ -1,0 +1,327 @@
+<Type Name="SoapAttributeAttribute" FullName="System.Xml.Serialization.SoapAttributeAttribute">
+  <TypeSignature Language="C#" Value="public class SoapAttributeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapAttributeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapAttributeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass die <see cref="T:System.Xml.Serialization.XmlSerializer" /> den Klassenmember als codiertes SOAP-Attribut serialisieren muss.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapAttributeAttribute> Klasse gehört zu einer Familie von Attributen, die steuert, wie die <xref:System.Xml.Serialization.XmlSerializer> Serialisieren oder Deserialisieren eines Objekts als codiertes SOAP-XML. Das resultierende XML entspricht Abschnitt 5 des World Wide Web Consortium (www.w3.org) Dokuments "Simple Object Access Protocol (SOAP) 1.1". Eine vollständige Liste ähnlicher Attribute finden Sie unter [Attribute, Steuerelement codierte SOAP-Serialisierung](~/docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+  
+ Um ein Objekt als codierte SOAP-Nachricht zu serialisieren, erstellen Sie die <xref:System.Xml.Serialization.XmlSerializer> verwenden ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, mit der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse.  
+  
+ Anwenden der <xref:System.Xml.Serialization.SoapAttributeAttribute> auf ein öffentliches Feld an, dass die <xref:System.Xml.Serialization.XmlSerializer> das Feld als ein XML-Attribut serialisiert. Geben Sie einen alternativen Namen des Attributs durch Festlegen der <xref:System.Xml.Serialization.SoapAttributeAttribute.AttributeName%2A> Eigenschaft. Legen Sie die <xref:System.Xml.Serialization.SoapAttributeAttribute.DataType%2A> , wenn das Attribut für einen bestimmten XML-Schema Definition Language (XSD)-Datentyp zugeordnet werden muss. Wenn das Attribut zu einem bestimmten XML-Namespace gehört, legen Sie die <xref:System.Xml.Serialization.SoapAttributeAttribute.Namespace%2A> Eigenschaft.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md)  
+  
+> [!NOTE]
+>  Sie können das Wort `SoapAttribute` im Code anstelle des längeren <xref:System.Xml.Serialization.SoapAttributeAttribute>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Klasse, die mehrere Felder, die enthält serialisiert eine <xref:System.Xml.Serialization.SoapAttributeAttribute> angewendet wird.  
+  
+ [!code-cpp[SoapAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttribute/CPP/soapattribute.cpp#1)]
+ [!code-csharp[SoapAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttribute/CS/soapattribute.cs#1)]
+ [!code-vb[SoapAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttribute/VB/soapattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapAttributeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapAttributeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.SoapAttributeAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer <xref:System.Xml.Serialization.SoapAttributeAttribute> beim Überschreiben der Serialisierungs eines Klassenmembers. Erstellen der <xref:System.Xml.Serialization.SoapAttributeAttribute>, legen Sie die Eigenschaften, und legen Sie das Objekt, auf die <xref:System.Xml.Serialization.SoapAttributes.SoapAttribute%2A> Eigenschaft ein <xref:System.Xml.Serialization.SoapAttributes> Objekt. Weitere Informationen finden Sie unter der <xref:System.Xml.Serialization.SoapAttributeOverrides> -Klassenübersicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine neue <xref:System.Xml.Serialization.SoapAttributeAttribute> , die zum Überschreiben der Serialisierung eines Felds verwendet wird. Nach dem Erstellen einer <xref:System.Xml.Serialization.SoapAttributeAttribute> und ihre Eigenschaften festlegen, auf das Objekt festgelegt ist die <xref:System.Xml.Serialization.SoapAttributes.SoapAttribute%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes>. Die <xref:System.Xml.Serialization.SoapAttributes> wird dann hinzugefügt, um eine <xref:System.Xml.Serialization.SoapAttributeOverrides> , dient zum Erstellen einer <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ [!code-cpp[SoapAttributeAttributeEx2#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributeAttributeEx2/CPP/soapattributeex2.cpp#1)]
+ [!code-csharp[SoapAttributeAttributeEx2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributeAttributeEx2/CS/soapattributeex2.cs#1)]
+ [!code-vb[SoapAttributeAttributeEx2#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributeAttributeEx2/VB/soapattributeex2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapAttributeAttribute (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapAttributeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">Der Name des XML-Attributs.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.SoapAttributeAttribute" /> -Klasse mit dem angegebenen Wert als den Namen des XML-Attributs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird eine Klasse, die mehrere Felder, die enthält serialisiert eine <xref:System.Xml.Serialization.SoapAttributeAttribute> angewendet wird.  
+  
+ [!code-cpp[SoapAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttribute/CPP/soapattribute.cpp#1)]
+ [!code-csharp[SoapAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttribute/CS/soapattribute.cs#1)]
+ [!code-vb[SoapAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttribute/VB/soapattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeName">
+      <MemberSignature Language="C#" Value="public string AttributeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapAttributeAttribute.AttributeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des XML-Attributs durch generiert die <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+        <value>Der Name des XML-Attributs. Der Standardwert ist der Elementbezeichner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Xml.Serialization.SoapAttributeAttribute.AttributeName%2A> Eigenschaft, um einen XML-Attributnamen anzugeben, wenn der Standardwert verwendet werden kann. Z. B. wenn der Name der XML-Attribut als einen Elementbezeichner ungültig ist, verwenden Sie einen gültigen Namen für den Bezeichner beim Festlegen der <xref:System.Xml.Serialization.SoapAttributeAttribute.AttributeName%2A> auf einen ungültigen Namen auf.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Klasse, die mehrere Felder, die enthält serialisiert die <xref:System.Xml.Serialization.SoapAttributeAttribute> angewendet wird. Die <xref:System.Xml.Serialization.SoapAttributeAttribute.AttributeName%2A> Eigenschaft wird festgelegt, für die `Today` Feld.  
+  
+ [!code-cpp[SoapAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttribute/CPP/soapattribute.cpp#1)]
+ [!code-csharp[SoapAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttribute/CS/soapattribute.cs#1)]
+ [!code-vb[SoapAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttribute/VB/soapattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public string DataType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapAttributeAttribute.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des SOAP-Attributs von generierten XML Schema Definition Language (XSD) Daten den <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+        <value>Ein XML-Schema-Datentyp, wie vom World Wide Web Consortium (www.w3.org) Dokument definiert, mit dem Namen "XML Schema Teil 2: Datatypes".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält die einfachen XML-Schema-Datentypen mit den entsprechenden ein.  
+  
+ Für das XML-Schema `base64Binary` und `hexBinary` Datentypen verwenden, ein Array von <xref:System.Byte> Strukturen, und weisen eine <xref:System.Xml.Serialization.SoapAttributeAttribute> mit der <xref:System.Xml.Serialization.SoapAttributeAttribute.DataType%2A> auf "base64Binary" oder "HexBinary" entsprechend festgelegt. Für das XML-Schema `time` und `date` Datentypen verwenden die <xref:System.DateTime> und wenden Sie die <xref:System.Xml.Serialization.SoapAttributeAttribute> mit der <xref:System.Xml.Serialization.SoapAttributeAttribute.DataType%2A> auf "Date" oder "Time" festgelegt.  
+  
+ Für jede XML-Schema-Datentyp, der in eine Zeichenfolge zugeordnet ist, gelten die <xref:System.Xml.Serialization.SoapAttributeAttribute> mit seiner <xref:System.Xml.Serialization.SoapAttributeAttribute.DataType%2A> -Eigenschaft auf den XML-Schema-Datentyp festgelegt. Beachten Sie, dass dies das Serialisierungsformat nur das Schema für das Element nicht ändert.  
+  
+> [!NOTE]
+>  Die Eigenschaft wird Groß-/Kleinschreibung beachtet, damit Sie genau auf einem XML-Schema-Datentypen festgelegt werden müssen.  
+  
+> [!NOTE]
+>  Übergeben von Binärdaten als XML-ist Element effizienter, und übergeben sie als XML-Attribut.  
+  
+ Weitere Informationen zu XML-Schema-Datentypen finden Sie unter der World Wide Web Consortium (www.w3.org)-Dokument mit dem Namen "XML Schema Teil 2: Datatypes".  
+  
+|XSD-Datentyp|.NET-Datentyp|  
+|-------------------|--------------------|  
+|anyURI|<xref:System.String>|  
+|base64Binary|Array von <xref:System.Byte> Objekte|  
+|boolean|<xref:System.Boolean>|  
+|byte|<xref:System.SByte>|  
+|date|<xref:System.DateTime>|  
+|dateTime|<xref:System.DateTime>|  
+|decimal|<xref:System.Decimal>|  
+|double|<xref:System.Double>|  
+|ENTITY|<xref:System.String>|  
+|ENTITÄTEN|<xref:System.String>|  
+|frei verschieben|<xref:System.Single>|  
+|gDay|<xref:System.String>|  
+|gMonth|<xref:System.String>|  
+|gMonthDay|<xref:System.String>|  
+|gYear|<xref:System.String>|  
+|gYearMonth|<xref:System.String>|  
+|hexBinary|Array von <xref:System.Byte> Objekte|  
+|ID|<xref:System.String>|  
+|IDREF|<xref:System.String>|  
+|IDREFS|<xref:System.String>|  
+|int|<xref:System.Int32>|  
+|Ganze Zahl|<xref:System.String>|  
+|language|<xref:System.String>|  
+|long|<xref:System.Int64>|  
+|Name|<xref:System.String>|  
+|NCName|<xref:System.String>|  
+|negativeInteger|<xref:System.String>|  
+|NMTOKEN|<xref:System.String>|  
+|NMTOKENS|<xref:System.String>|  
+|normalizedString|<xref:System.String>|  
+|nonNegativeInteger|<xref:System.String>|  
+|nonPositiveInteger|<xref:System.String>|  
+|NOTATION|<xref:System.String>|  
+|positiveInteger|<xref:System.String>|  
+|QName|<xref:System.Xml.XmlQualifiedName>|  
+|duration|<xref:System.String>|  
+|string|<xref:System.String>|  
+|short|<xref:System.Int16>|  
+|Uhrzeit|<xref:System.DateTime>|  
+|token|<xref:System.String>|  
+|unsignedByte|<xref:System.Byte>|  
+|unsignedInt|<xref:System.UInt32>|  
+|unsignedLong|<xref:System.UInt64>|  
+|unsignedShort|<xref:System.UInt16>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Klasse, die mehrere Felder, die enthält serialisiert eine <xref:System.Xml.Serialization.SoapAttributeAttribute> angewendet wird. Die <xref:System.Xml.Serialization.SoapAttributeAttribute.DataType%2A> Eigenschaft wird festgelegt, für die `GroupNumber` und die `Today` Felder.  
+  
+ [!code-cpp[SoapAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttribute/CPP/soapattribute.cpp#1)]
+ [!code-csharp[SoapAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttribute/CS/soapattribute.cs#1)]
+ [!code-vb[SoapAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttribute/VB/soapattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Der XML-Schema-Datentyp, den Sie angegeben haben, kann nicht in den Datentyp der .NET zugeordnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapAttributeAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Namespace des XML-Attributs.</summary>
+        <value>Der XML-Namespace des XML-Attributs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlAttributeAttribute.Namespace%2A> Eigenschaft entspricht der World Wide Web Consortium (www.w3.org)-Spezifikation "Namespaces in XML".  
+  
+ Zum Erstellen von Namespaces, die Präfixe zugeordnet sind, müssen Sie erstellen eine <xref:System.Xml.Serialization.XmlSerializerNamespaces> , enthält die Namespaces und Präfixen, die in das XML-Dokument verwendet. Der Namespace, die Sie für jede festlegen <xref:System.Xml.Serialization.XmlAttributeAttribute> muss mit einem der Namespaces in der <xref:System.Xml.Serialization.XmlSerializerNamespaces>. Wenn die <xref:System.Xml.Serialization.XmlSerializer> generiert das XML-Code jedem Attributnamen das richtige Präfix.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Klasse, die mehrere Felder, die enthält serialisiert eine <xref:System.Xml.Serialization.SoapAttributeAttribute> angewendet wird. Die <xref:System.Xml.Serialization.SoapAttributeAttribute.Namespace%2A> Eigenschaft wird festgelegt, für die `GroupName` Feld.  
+  
+ [!code-cpp[SoapAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttribute/CPP/soapattribute.cpp#1)]
+ [!code-csharp[SoapAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttribute/CS/soapattribute.cs#1)]
+ [!code-vb[SoapAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttribute/VB/soapattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

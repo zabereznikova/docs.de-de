@@ -1,0 +1,556 @@
+<Type Name="FontFamily" FullName="System.Windows.Media.FontFamily">
+  <TypeSignature Language="C#" Value="public class FontFamily" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontFamily extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FontFamily" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.FontFamilyConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Font)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.FontFamilyValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Familie verwandter Schriftarten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Schriftfamilie ist eine Reihe von Schriftarten, die gemeinsam die gleichen Familiennamen, z. B. "Times New Roman", jedoch unterschiedliche Funktionen. Features zählen <xref:System.Windows.Media.Typeface.Style%2A>, z. B. kursiv und <xref:System.Windows.Media.Typeface.Weight%2A>, wie z. B. fett dargestellt.  
+  
+ ![Schriftarten](~/add/media/fonts.PNG "Schriftarten")  
+Beispiel für Schriftarten, die Mitglieder der Schriftfamilie "Times New Roman"  
+  
+ Die meisten [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente, wie z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.TextBlock>, geben Sie eine <xref:System.Windows.Controls.Control.FontFamily%2A> -Eigenschaft, die zum Angeben einer Schriftart für den Textinhalt eines Steuerelements verwendet werden kann. Definieren Sie die Schriftart, durch Festlegen dieser Eigenschaft mit einem <xref:System.Windows.Media.FontFamily> Wert. Die folgenden Beispiele zeigen, wie auf eine Schriftart in verweisen [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und im Code.  
+  
+ [!code-csharp[FontSnippets#FontFallbackSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontfallbacksnippet3)]
+ [!code-vb[FontSnippets#FontFallbackSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontfallbacksnippet3)]
+ [!code-xaml[FontSnippets#FontFallbackSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml#fontfallbacksnippet3)]  
+  
+ Im vorherigen Beispiel die Schriftart "Comic Sans MS" verweist auf die *Anzeigenamen*. Darüber hinaus wird in diesem Beispiel wird die Schriftart als angenommen werden in der Auflistung von Schriftart.  
+  
+## <a name="specifying-fonts-in-alternate-directories"></a>Angeben von Schriftarten in anderen Verzeichnissen  
+ Ein [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Anwendung ein Verzeichnis ist, als das Verzeichnis mit der Sammlung Systeme Schriftart zum Auflösen von Schriftartverweisen angegeben werden. Der Anzeigename der Schriftart kann ein absoluter angeben [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] Wert, der zur Auflösung des Schriftartverweises wie das folgende Beispiel zeigt [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Codebeispiele.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet6)]
+ [!code-vb[FontSnippets#FontPackageSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet6)]
+ [!code-xaml[FontSnippets#FontPackageSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet6)]  
+  
+ Der Anzeigename der Schriftart kann auch angeben, eine Monatsintervall [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] -Wert, der eine Basis erfordert [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] den Schriftartverweis aufgelöst. Die <xref:System.Windows.Media.FontFamily.BaseUri%2A> Eigenschaft von der <xref:System.Windows.Media.FontFamily> Objekt entspricht, an den Basistext [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert. Im folgenden Codebeispiel wird veranschaulicht, wie einen Schriftartverweis zu erstellen, der eine Basis besteht [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert und eine Monatsintervall [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet7)]
+ [!code-vb[FontSnippets#FontPackageSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet7)]  
+  
+ Sie können eine Basis [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert, wenn Sie eine Schriftart verweisen, die als Teil der Anwendung verpackt wird. Beispielsweise die Basis [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Werte sind möglich "Pack://application" [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], und Sie können Sie Schriftarten verweisen, die als Anwendungsressourcen verpackt werden. Das folgende Codebeispiel zeigt ein Schriftartverweis, der eine Basis besteht [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert und eine Monatsintervall [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
+ [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
+  
+ Wenn eine <xref:System.Windows.Media.FontFamily> als ein Attribut im Markup der Base angegeben ist [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert ist immer implizit vorhanden – ihr Wert ist die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] von der [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] Seite. Die implizite Basis [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert wird verwendet, mit dem relativen [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert in der Zeichenfolge Anzeigenamen ein, um den Speicherort der Schriftart zu erhalten. Im folgenden [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] beispielsweise Beachten Sie, dass die Relative [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert verwendet die ". /"-Notation, d. "im aktuellen Ordner h." des basistexts [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert.  
+  
+ [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
+  
+ Ein [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Anwendung kann Schriftarten als ein Inhaltselement an, ein Ressourcenelement oder Bibliotheksressourcenelement verpacken. Weitere Informationen finden Sie unter [Schriftarten mit Anwendungen verpacken](~/docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
+  
+## <a name="font-fallback"></a>Schriftart-Fallback  
+ Schriftart-fallback bezieht sich auf die automatische Ersetzung einer Schriftart als die Schriftart, die von der Clientanwendung ausgewählt ist. Es gibt zwei Hauptgründe, warum Schriftartauswahl aufgerufen wird:  
+  
+-   Die Schriftart, die von der Clientanwendung angegeben wird, ist nicht auf dem System vorhanden.  
+  
+-   Die Schriftart, die von der Clientanwendung angegeben wird enthält keine Symbole, die zum Rendern von Text erforderlich sind.  
+  
+ In[!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], Schriftart-fallback-Mechanismus der fallback Standardschriftfamilie "Global User Interface" als Ersatzschriftart verwendet. Diese Schriftart wird als eine zusammengesetzte Schriftart definiert, deren Dateiname "GlobalUserInterface.CompositeFont" ist. Weitere Informationen zu zusammengesetzten Schriftarten finden Sie unter den zusammengesetzten Schriftarten-Abschnitt in diesem Thema.  
+  
+ Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Schriftart-fallback-Mechanismus ersetzt vorherige [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] Schriftart Ersetzung Technologien.  
+  
+## <a name="defining-a-font-fallback-sequence-in-code"></a>Definieren eine Schriftart-Fallback-Sequenz in Code  
+ Sie können eine Schriftart-fallback-Sequenz in Ihrem Code definieren, die Sie eine alternative Schriftart definieren können. Beim Erstellen einer <xref:System.Windows.Media.FontFamily> Objekt, das Bereitstellen mehrerer Schriftart Familie Namen getrennt durch Kommas, für die <xref:System.String> Parameter, z. B. "Comic Sans MS, Verdana". Wenn die Symbole in der Schriftart "Comic Sans MS" nicht verfügbar sind, werden in diesem Fall Glyphen aus der Schriftart "Verdana" verwendet. Wenn weder "Comic Sans MS" noch "Verdana" die erforderlichen Symbole enthalten, wird die fallback Schriftfamilie der Schriftart "Globale Benutzeroberfläche" ist standardmäßig verwendet.  
+  
+ Die folgenden Beispiele zeigen, wie so definieren Sie eine Schriftart-fallback-Sequenz in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und im Code.  
+  
+ [!code-csharp[FontSnippets#FontFallbackSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontfallbacksnippet1)]
+ [!code-vb[FontSnippets#FontFallbackSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontfallbacksnippet1)]
+ [!code-xaml[FontSnippets#FontFallbackSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml#fontfallbacksnippet1)]  
+  
+ Jedes beliebige die Schriftarten in der Sequenz fallback können Schriftart Speicherorte angeben. Klicken Sie in den folgenden Beispielen "Pericles Light" als eine Ressource verwiesen wird, und "Verdana" als ein Element der Auflistung des System-Schriftart verwiesen wird.  
+  
+ [!code-csharp[FontSnippets#FontFallbackSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontfallbacksnippet2)]
+ [!code-vb[FontSnippets#FontFallbackSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontfallbacksnippet2)]
+ [!code-xaml[FontSnippets#FontFallbackSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml#fontfallbacksnippet2)]  
+  
+## <a name="composite-fonts"></a>Zusammengesetzte Schriftarten  
+ Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] -Plattform bietet eine zusammengesetzte Schriftart-Funktion, die zur Erstellung der vollen Umfang mehrsprachige Schriftarten können und zu vermeiden, fehlende Symbole anzeigen. Zusammengesetzte Schriftarten ersetzen die [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Verknüpfung von Schriftarten, Schriftartauswahl Schriftart-Bindung, Schriftart-Zuordnung und Mechanismen end vom Benutzer definierten Zeichen (EUDC).  
+  
+ Eine zusammengesetzte Schriftfamilie steht für Anwendungen über die <xref:System.Windows.Media.FontFamily> und <xref:System.Windows.Media.Typeface> Konstruktoren werden wie alle anderen Schriftfamilie. Jedes zusammengesetzte Schriftfamilie lautet und wie andere Schriftarten auch lokalisierte Varianten des Namens in mehreren Sprachen bereitstellen.  
+  
+ Das folgende Markupbeispiel zeigt, wie eine zusammengesetzte Schriftfamilie als eine Datenträgerdatei definiert werden kann. Kann diese Datei gespeichert werden, in der Standard- [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)] Schriftart Directory wie jede andere Schriftart installierte oder an einem beliebigen Speicherort kann, indem einschließlich verwiesen werden seiner [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] bei die Familie anhand des Namens verwiesen.  
+  
+ Das folgende Beispiel zeigt das Markup für Schriftfamilien in einer ". CompositeFont "veranschaulicht.  
+  
+ [!code-xaml[CompositeFontMarkup#CF](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositeFontMarkup/CS/comp.xaml#cf)]  
+  
+ Die folgenden vier zusammengesetzten Schriftarten angezeigt, in der standardmäßigen [!INCLUDE[TLA2#tla_win](~/includes/tla2sharptla-win-md.md)] Schriftart Verzeichnis als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Installation.  
+  
+|Schriftart|Notizen|  
+|----------|-----------|  
+|GlobalMonospace.CompositeFont|Rendert Text mithilfe einer Festbreitenschriftart, z. B. "Courier New" für lateinische Zeichen ein.|  
+|GlobalSanSerif.CompositeFont|Rendert Text mithilfe einer serifenlose Schriftart, z. B. "Arial" für lateinische Zeichen ein.|  
+|GlobalSerif.CompositeFont|Rendert Text mithilfe von Serifenschriftart, z. B. "Times New Roman" für lateinische Zeichen ein.|  
+|GlobalUserInterface.CompositeFont|Rendert Text mithilfe einer Standardschriftart, z. B. "Times New Roman" für lateinische Zeichen ein.|  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object FontFamily="fontFamilyName"/>  
+- or -  
+<object FontFamily="fontFamilyNamesList"/>  
+- or -  
+<object FontFamily="fontFamilyFolderReference"/>  
+- or -  
+<object FontFamily="fontFamilyUriReference"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *fontFamilyName*  
+ Eine Zeichenfolge, die einen Namen der Schriftfamilie angibt.  Beispielsweise `"Arial"` oder `"Century Gothic"`.  
+  
+ *fontFamilyNamesList*  
+ Eine Zeichenfolge, die mehrere Namen angeben, getrennt durch ein Komma (Leerräume nach einem Komma wird ignoriert).  Das erste angegebene Schriftfamilie dient als die primäre Schriftfamilie; Nachfolgende Schriftartfamilien dienen als Alternative Produktreihen in Fällen verwendet werden, in dem die primäre Schriftfamilie nicht verfügbar oder nicht anwendbar ist.  Beispielsweise `"Arial, Century Gothic"` Arial als die primäre Schriftfamilie, mit dem Gotischen mit Jahrhundert als fallback-Schriftfamilie angegeben.  
+  
+ *fontFamilyFolderReference*  
+ Eine Zeichenfolge, die einen Ordner mit der Schriftart, zusammen mit einem Namen der Schriftfamilie angibt.  Die Ordner und den Namen der Schriftfamilie werden durch das Zeichen # getrennt.  Der Ordnerverweis kann absolut oder relativ sein.  Beispielsweise `"Custom Fonts\#My Custom Font"`.  
+  
+ *fontFamilyUriReference*  
+ Eine Zeichenfolge, eine [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für die Schriftart, zusammen mit einem Namen der Schriftfamilie.  Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] und Namen der Schriftfamilie, die durch ein Nummernzeichen (#) getrennt sind.  Beispielsweise `"http://MyFontServer/Fonts/#My Custom Font"`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz eines anonymen <see cref="T:System.Windows.Media.FontFamily" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Standardkonstruktor, wenn eine zusammengesetzte Schriftart programmgesteuert erstellt werden soll. Dies bedeutet, dass Sie keine Geben Sie einen Namen der Schriftfamilie des Konstruktors, aber Sie müssen die Auflistungen im Auffüllen der <xref:System.Windows.Media.FontFamily.FamilyMaps%2A> und <xref:System.Windows.Media.FontFamily.FamilyNames%2A> Auflistungen vor der Verwendung erstellten Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily (string familyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string familyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="familyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="familyName">Der Produktfamilie oder die Namen, die die neue bilden <see cref="T:System.Windows.Media.FontFamily" />. Mehrere Familiennamen sollten durch Kommas getrennt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.FontFamily" /> Klasse von den Namen der angegebenen Schriftfamilie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Familie angegebenen Namen, in der `familyName` Parameter kann einen Verweis auf den Speicherort in entweder ein Verzeichnis vorangestellt sein oder ein [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)]. Der Verweis auf den Speicherort von den Familiennamen getrennt ist, von einem Nummernzeichen (`#`) Zeichen. Mehrere Schriftartfamilien-Namen, die im angegebenen der `familyName` Parameter muss durch Kommas getrennt werden.  
+  
+ Jede Familie kann kann eine echte Schriftart, die direkt auf einen Satz von Schriftartdateien darstellt, die die gleichen Familiennamen gemeinsam nutzen, oder ein Verweis auf einen Familiennamen, der in einer zusammengesetzten Schriftartdatei definiert ist.  
+  
+ Wenn mehrere Familien angegeben werden, dienen die zweite und alle nachfolgenden Schriftartfamilien als fallback Familien, Behandlung von Codepunkte, die von der ersten Schriftfamilie nicht unterstützt werden. Für jeden Code, der von der ersten Schriftfamilie nicht unterstützt wird, wird jede nachfolgende Familie wiederum überprüft.  
+  
+   
+  
+## Examples  
+ [!code-csharp[FontSnippets#103](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#103)]
+ [!code-vb[FontSnippets#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="familyName" /> darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamily (Uri baseUri, string familyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUri, string familyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="familyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Gibt an, der Base [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] dient außerdem zur beheben <c>FamilyName</c>.</param>
+        <param name="familyName">Der Produktfamilie oder die Namen, die die neue bilden <see cref="T:System.Windows.Media.FontFamily" />. Mehrere Familiennamen sollten durch Kommas getrennt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.FontFamily" /> Klasse von den Namen der angegebenen Schriftfamilie und einem optionalen Basis- [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `familyName` Wert festlegbaren eine Monatsintervall [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] -Wert, der eine Basis erfordert [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] den Schriftartverweis aufgelöst. Die `baseUri` Werte sind möglich `null`.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt einen Schriftartverweis, der eine Basis besteht [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert und eine Monatsintervall [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
+ [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="public double Baseline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Baseline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.Baseline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand zwischen dem Basis- und dem oberen Rand.</summary>
+        <value>Ein <see cref="T:System.Double" /> den Abstand zwischen dem Basis- und dem oberen Rand der aufzeigenden als Bruch des Schriftgrads Em.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basis ab [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] , die mit einen Namen der Schriftfamilie aufgelöst werden.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Uri" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert ist `null` Wenn nicht den Namen der Schriftfamilie auf einer Basis beruht [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] zum Auflösen von Verweis der Schriftart. Um den Namen der Schriftfamilie abzurufen, mit dem Erstellen, der <xref:System.Windows.Media.FontFamily> -Objekts die <xref:System.Windows.Media.FontFamily.Source%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Ergebnisse Abrufen der <xref:System.Windows.Media.FontFamily.BaseUri%2A> Eigenschaft aus einem <xref:System.Windows.Media.FontFamily> Objekt.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet9](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet9)]
+ [!code-vb[FontSnippets#FontPackageSnippet9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.Windows.Media.FontFamily" /> zu vergleichende Objekt.</param>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Schriftart übergeordnete Objekt und das übergeordnete Objekt des angegebenen Schriftart identisch sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="o" /> gleich dem aktuellen <see cref="T:System.Windows.Media.FontFamily" />-Objekt ist; andernfalls <see langword="false" />. Wenn <paramref name="o" /> keine <see cref="T:System.Windows.Media.FontFamily" /> Objekt <see langword="false" /> wird zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyMaps">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontFamilyMapCollection FamilyMaps { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FontFamilyMapCollection FamilyMaps" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.FamilyMaps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamilyMapCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Windows.Media.FontFamilyMap" /> Objekte.</summary>
+        <value>Eine <see cref="T:System.Windows.Media.FontFamilyMapCollection" />, die <see cref="T:System.Windows.Media.FontFamilyMap" />-Objekte enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für <xref:System.Windows.Media.FontFamily> Objekte, die erstellt werden, mit einem Namen der Schriftfamilie, die <xref:System.Windows.Media.FontFamily.FamilyMaps%2A> -Eigenschaft eine leere, schreibgeschützte Auflistung zurück.  
+  
+ Die <xref:System.Windows.Media.FontFamilyMap> Objekt definiert, welche Schriftart zum Anzeigen eines angegebenen Satzes von Unicode-Zeichen einer angegebenen Kultur verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyNames">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.LanguageSpecificStringDictionary FamilyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.LanguageSpecificStringDictionary FamilyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.FamilyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.LanguageSpecificStringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen und <see cref="T:System.Globalization.CultureInfo" /> Werte, die den Schriftartnamen für die Familie der darstellen der <see cref="T:System.Windows.Media.FontFamily" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.LanguageSpecificStringDictionary" /> , das die Namen der Schriftfamilien darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[FontSnippets#106](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#106)]
+ [!code-vb[FontSnippets#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyTypefaces">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FamilyTypefaceCollection FamilyTypefaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FamilyTypefaceCollection FamilyTypefaces" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.FamilyTypefaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FamilyTypefaceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Schriftarten für die <see cref="T:System.Windows.Media.FontFamily" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.FamilyTypefaceCollection" /> , die eine Auflistung von Schriftarten für stellt die <see cref="T:System.Windows.Media.FontFamily" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_FamilyTypefaces"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.FamilyTypefaces>  
+    <OneOrMoreFontFamilyTypefaces/>  
+  </object.FamilyTypefaces>  
+</object>  
+```  
+  
+<a name="xamlValues_FamilyTypefaces"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreFontFamilyTypefaces*  
+ Eine oder mehrere Schriftarten für die <xref:System.Windows.Media.FontFamily> Objekt.  
+  
+   
+  
+## Examples  
+ [!code-csharp[FontSnippets#107](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#107)]
+ [!code-vb[FontSnippets#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für <see cref="T:System.Windows.Media.FontFamily" />. Sie eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> Wert, der den Hashcode für das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypefaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt; GetTypefaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.Typeface&gt; GetTypefaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.GetTypefaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung von <see cref="T:System.Windows.Media.Typeface" /> Objekte, die die Typ Flächen in den Speicherort der Systemstandardschriftart darstellen.</summary>
+        <returns>Eine <see cref="T:System.Collections.Generic.ICollection`1" /> von <see cref="T:System.Windows.Media.Typeface" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[FontSnippets#104](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#104)]
+ [!code-vb[FontSnippets#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineSpacing">
+      <MemberSignature Language="C#" Value="public double LineSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.LineSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für den Zeilenabstand für das <see cref="T:System.Windows.Media.FontFamily" /> Objekt. Der Zeilenabstand entspricht der empfohlene Grundlinie zu Grundlinie Abstand nach dem Text in dieser Schriftart relativ zur Größe Em.</summary>
+        <value>Ein <see cref="T:System.Double" /> , die den Zeilenabstand für stellt die <see cref="T:System.Windows.Media.FontFamily" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamily.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Schriftfamilie, mit dem Erstellen, der <see cref="T:System.Windows.Media.FontFamily" /> Objekt.</summary>
+        <value>Den Namen der Schriftfamilie der der <see cref="T:System.Windows.Media.FontFamily" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Base zurückzugebenden [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] Wert eine <xref:System.Windows.Media.FontFamily> -Objekts der <xref:System.Windows.Media.FontFamily.BaseUri%2A>.  
+  
+ Wenn die <xref:System.Windows.Media.FontFamily> Objekt ohne einen Namen der Schriftfamilie erstellt wurde, ist des Rückgabewerts <xref:System.String.Empty>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Ergebnisse Abrufen der <xref:System.Windows.Media.FontFamily.BaseUri%2A> und <xref:System.Windows.Media.FontFamily.Source%2A> Eigenschaftswerte aus einem <xref:System.Windows.Media.FontFamily> Objekt.  
+  
+ [!code-csharp[FontSnippets#FontPackageSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet10)]
+ [!code-vb[FontSnippets#FontPackageSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamily.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Wert der <see cref="P:System.Windows.Media.FontFamily.Source" /> Eigenschaft.</summary>
+        <returns>Der Quellpfad der <see cref="T:System.Windows.Media.FontFamily" /> Objekts, z. B. das Verzeichnis oder [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] Speicherortverweis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Media.FontFamily> Objekt ohne einen Namen der Schriftfamilie erstellt wurde, ist des Rückgabewerts <xref:System.String.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

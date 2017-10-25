@@ -1,0 +1,630 @@
+<Type Name="DelimitedListTraceListener" FullName="System.Diagnostics.DelimitedListTraceListener">
+  <TypeSignature Language="C#" Value="public class DelimitedListTraceListener : System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DelimitedListTraceListener extends System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DelimitedListTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TextWriterTraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Leitet Ablaufverfolgungs- oder debuggingausgabe an einen TextWriter, z. B. einen StreamWriter, oder in einen Stream, z. B. einen Dateistream.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ablaufverfolgungsausgabe liegt in einem Textformat mit Trennzeichen vor, das das durch die <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>-Eigenschaft angegebene Trennzeichen verwendet. Das Trennzeichen wird verwendet, um jedes Feld in einer Zeile der Ausgabe zu beenden. Z. B. zum Anzeigen der Ablaufverfolgungsausgabe in Microsoft Excel-Arbeitsblatt kann, geben Sie ein Komma (",") als Trennzeichen und erstellen Sie eine durch Trennzeichen getrennte Werten (CSV)-Datei.  
+  
+> [!IMPORTANT]
+>  <xref:System.IDisposable>-Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer`try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ Sie aktivieren oder Deaktivieren einer <xref:System.Diagnostics.DelimitedListTraceListener> über die Anwendungskonfigurationsdatei und dann mit den konfigurierten <xref:System.Diagnostics.DelimitedListTraceListener> in Ihrer Anwendung. Alternativ können Sie erstellen eine <xref:System.Diagnostics.DelimitedListTraceListener> im Code.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.DelimitedListTraceListener> begrenzt nur Text, der ausgegeben wird, mithilfe der Methoden, deren Namen mit dem Wort beginnen `Trace`, wie z. B. <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent%2A?displayProperty=nameWithType> oder <xref:System.Diagnostics.Trace.TraceWarning%2A?displayProperty=nameWithType>. Ablaufverfolgungsdaten, die ausgegeben wird, mithilfe der <xref:System.Diagnostics.Debug.Write%2A?displayProperty=nameWithType> und <xref:System.Diagnostics.TextWriterTraceListener.WriteLine%2A?displayProperty=nameWithType> Methoden ist nicht begrenzt.  
+  
+ So konfigurieren Sie eine <xref:System.Diagnostics.DelimitedListTraceListener>, bearbeiten Sie die Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie einen Listener hinzufügen, legen Sie die Eigenschaften für einen Listener oder einen Listener zu entfernen. Die Konfigurationsdatei sollen wie im folgenden Beispiel gezeigt formatiert werden:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="delimitedListener"   
+          type="System.Diagnostics.DelimitedListTraceListener"   
+          delimiter=","   
+          initializeData="delimitedOutput.csv"   
+          traceOutputOptions="ProcessId, DateTime" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+> [!NOTE]
+>  Wenn Sie versuchen, in eine Datei schreiben, die verwendet oder nicht verfügbar ist, wird der Dateiname automatisch eine GUID vorangestellt.  
+  
+> [!NOTE]
+>  Listener durch die Methoden der verwendet werden sollen die <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen, die Ablaufverfolgungsinformationen zu schreiben. Listener-Methoden, mit Ausnahme von Konstruktoren, sollte nicht direkt von Anwendungscode aufgerufen werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Die <see cref="T:System.IO.Stream" /> an die Ausgabe empfangen wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> Klasse, die in den angegebenen Ausgabestream schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft auf eine leere Zeichenfolge ("").  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.IO.TextWriter" /> an die Ausgabe empfangen wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> Klasse, die in den angegebenen Textwriter schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft auf eine leere Zeichenfolge ("").  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die die Ausgabe empfangen wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> -Klasse, die in die angegebene Datei schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft auf eine leere Zeichenfolge ("").  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.Stream stream, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Die <see cref="T:System.IO.Stream" /> an die Ausgabe empfangen wird.</param>
+        <param name="name">Der Name der neuen Instanz des Ablaufverfolgungslisteners.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> -Klasse, die in den angegebenen Ausgabestream schreibt und den angegebenen Namen aufweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Diagnostics.TraceListener.Name%2A> auf den Wert der Eigenschaft der `name` Parameter, oder auf eine leere Zeichenfolge ("") Wenn die `name` Parameter ist `null`.  Die <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft kann als Index für verwendet werden die `Listeners` -Auflistung, um die Eigenschaften für den Listener programmgesteuert zu ändern. Im folgenden code beispielsweise wird die <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Eigenschaft für die Instanz von <xref:System.Diagnostics.DelimitedListTraceListener> , hat den Namen "delimListener"fest:  
+  
+```  
+((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.TextWriter writer, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.IO.TextWriter,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.IO.TextWriter" /> an die Ausgabe empfangen wird.</param>
+        <param name="name">Der Name der neuen Instanz des Ablaufverfolgungslisteners.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> -Klasse, die in den angegebenen Textwriter schreibt und den angegebenen Namen aufweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Diagnostics.TraceListener.Name%2A> auf den Wert der Eigenschaft der `name` Parameter, oder auf eine leere Zeichenfolge ("") Wenn die `name` Parameter ist `null`. Die <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft kann als Index für verwendet werden die `Listeners` -Auflistung, um die Eigenschaften für den Listener programmgesteuert zu ändern. Das folgende Codebeispiel legt die <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Eigenschaft für die Instanz von <xref:System.Diagnostics.DelimitedListTraceListener> , hat den Namen "delimListener"fest:  
+  
+```  
+((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (string fileName, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die die Ausgabe empfangen wird.</param>
+        <param name="name">Der Name der neuen Instanz des Ablaufverfolgungslisteners.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> -Klasse, die in die angegebene Datei schreibt und den angegebenen Namen aufweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert eine neue Instanz der dem <xref:System.IO.StreamWriter> Klasse für die angegebene Datei im angegebenen Pfad mit <xref:System.Text.Encoding.UTF8%2A> Codierung. Wenn die Datei vorhanden ist, wird er an angefügt. Wenn die Datei nicht vorhanden ist, wird eine neue Datei erstellt.  
+  
+> [!NOTE]
+>  Um das Risiko einer Ausnahme zu reduzieren, wird jedes Zeichen, das die Ausgabe für ungültig erklären kann mit ersetzt ein "?" Zeichen.  
+  
+ Die <xref:System.Diagnostics.TraceListener.Name%2A> auf den Wert der Eigenschaft festgelegt ist die `name` Parameter, oder auf eine leere Zeichenfolge ("") Wenn die `name` Parameter ist `null`. Die <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft kann als Index für verwendet werden die `Listeners` -Auflistung, um die Eigenschaften für den Listener programmgesteuert zu ändern. Im folgenden code beispielsweise wird die <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Eigenschaft für die Instanz von <xref:System.Diagnostics.DelimitedListTraceListener> , hat den Namen "delimListener"fest:  
+  
+```  
+((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delimiter">
+      <MemberSignature Language="C#" Value="public string Delimiter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Delimiter" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DelimitedListTraceListener.Delimiter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen des Trennzeichens für die durch Trennzeichen getrennten Liste.</summary>
+        <value>Das Trennzeichen für die durch Trennzeichen getrennten Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardtrennzeichen ist ";" Semikolon (;). Im folgenden Konfigurationsbeispiel-Datei zeigt die Einstellung von der <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Eigenschaft mit dem `delimiter` Attribut in einer Konfigurationsdatei:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="delimitedListener"   
+          type="System.Diagnostics.DelimitedListTraceListener"   
+          delimiter=":"   
+          initializeData="delimitedOutput.txt"   
+          traceOutputOptions="ProcessId, DateTime" />  
+        <remove name="Default" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Für <see cref="P:System.Diagnostics.DelimitedListTraceListener.Delimiter" /> ist <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Diagnostics.DelimitedListTraceListener.Delimiter" />Klicken Sie auf eine leere Zeichenfolge festgelegt ist ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected override string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Dateiattribut "benutzerdefinierte Konfiguration" von der durch Trennzeichen getrennten-Ablaufverfolgungslistener unterstützt.</summary>
+        <returns>Ein Array von Zeichenfolgen, die den einzelnen Wert "Trennzeichen" enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein benutzerdefiniertes Attribut ist ein Attribut, das nicht von der Basisklasse geerbt wird, die zum Festlegen einer Eigenschaft für die Klasse verwendet werden kann. Das benutzerdefinierte Attribut für <xref:System.Diagnostics.DelimitedListTraceListener> dient zum Festlegen der <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Eigenschaft. Im folgenden Konfigurationsbeispiel-Datei zeigt die Verwendung der `delimiter` Attribut festzulegende der <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> Eigenschaft:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="delimitedListener"   
+          type="System.Diagnostics.DelimitedListTraceListener"   
+          delimiter=":"   
+          initializeData="delimitedOutput.txt"   
+          traceOutputOptions="ProcessId, DateTime" />  
+        <remove name="Default" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name, der verwendet wird, um die Ausgabe zu bezeichnen, i. d. R. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte, der den Typ des Ereignisses angibt, das die Ablaufverfolgung verursacht hat.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Ein Datenobjekt, das zum Schreiben in die Ausgabedatei oder den Stream.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein Datenobjekt und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `source`, `eventType`, und `id` Parameter werden als Header geschrieben. Das Datenobjekt wird konvertiert in eine Zeichenfolge mit der `ToString` -Methode des Objekts. Die `eventCache` Daten werden geschrieben, als eine Fußzeile, deren Inhalt hängt vom Wert von, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.DelimitedListTraceListener.TraceData%2A> Methode sollte nicht von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name, der verwendet wird, um die Ausgabe zu bezeichnen, i. d. R. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte, der den Typ des Ereignisses angibt, das die Ablaufverfolgung verursacht hat.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Ein Array von Datenobjekten in die Ausgabedatei oder den Stream geschrieben werden soll.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein Array von Datenobjekten und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `source`, `eventType`, und `id` Parameter werden als Header geschrieben. Die Datenobjekte in Zeichenfolgen konvertiert, mit der `ToString` -Methode aller Objekte. Die `eventCache` Daten werden geschrieben, als eine Fußzeile, deren Inhalt hängt vom Wert von, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.DelimitedListTraceListener.TraceData%2A> Methode sollte nicht von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name, der verwendet wird, um die Ausgabe zu bezeichnen, i. d. R. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte, der den Typ des Ereignisses angibt, das die Ablaufverfolgung verursacht hat.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="message">Die Ablaufverfolgungsmeldung zum Schreiben in die Ausgabedatei oder den Stream.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, eine Meldung und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `source`, `eventType`, und `id` Parameter werden geschrieben, als einen Header, gefolgt von der `message` Daten. Die `eventCache` Daten werden geschrieben, als eine Fußzeile, deren Inhalt hängt vom Wert von, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent%2A> Methode sollte nicht von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name, der verwendet wird, um die Ausgabe zu bezeichnen, i. d. R. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte, der den Typ des Ereignisses angibt, das die Ablaufverfolgung verursacht hat.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="format">Eine Formatzeichenfolge mit 0 (null) oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein Array mit 0 oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein formatiertes Array von Objekten und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der `source`, `eventType`, und `id` Parameter werden als Header geschrieben. Die `args` Objektarray wird konvertiert in eine Zeichenfolge mit der <xref:System.String.Format%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> -Methode auf und übergibt die `format` Zeichenfolge und `args` Array zur Formatierung der Zeichenfolge der Nachricht Anteil der Ablaufverfolgung. Die `eventCache` Daten werden geschrieben, als eine Fußzeile, deren Inhalt hängt vom Wert von, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent%2A> Methode sollte nicht von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,160 @@
+<Type Name="StreamUpgradeInitiator" FullName="System.ServiceModel.Channels.StreamUpgradeInitiator">
+  <TypeSignature Language="C#" Value="public abstract class StreamUpgradeInitiator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StreamUpgradeInitiator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.StreamUpgradeInitiator" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um einen benutzerdefinierten Upgradeinitiator zu implementieren, wird von dieser <see langword="abstract" />-Basisklasse geerbt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für ein Streamupgrade ist das Erstellen eines Komprimierungsstreams direkt über dem Transportstream. Diese Klasse wird mit <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> und <xref:System.ServiceModel.Channels.StreamUpgradeProvider> verwendet, um ein benutzerdefiniertes Streamupgrade zu implementieren.  
+  
+ Eine ausführliche Beschreibung der Aktualisierung finden Sie unter dem <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamUpgradeInitiator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StreamUpgradeInitiator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInitiateUpgrade">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginInitiateUpgrade (System.IO.Stream stream, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginInitiateUpgrade(class System.IO.Stream stream, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.BeginInitiateUpgrade(System.IO.Stream,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der zu aktualisierende Stream.</param>
+        <param name="callback">Die Methode, die aufgerufen wird, wenn <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade(System.IO.Stream)" /> abgeschlossen ist.</param>
+        <param name="state">Statusinformationen über den Status des asynchronen Aufrufs.</param>
+        <summary>Diese <see langword="abstract" />-Methode kann implementiert werden, um eine asynchrone Verarbeitung vorzunehmen, die ein Upgrade initiiert.</summary>
+        <returns>Gibt ein <see cref="T:System.IAsyncResult" /> zurück, das an die <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.EndInitiateUpgrade(System.IAsyncResult)" />-Methode weitergegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> auf und gibt zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInitiateUpgrade">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream EndInitiateUpgrade (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream EndInitiateUpgrade(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.EndInitiateUpgrade(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das von der <see langword="IAsyncResult" />-Methode zurückgegebene <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.BeginInitiateUpgrade(System.IO.Stream,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Diese Methode ist die asynchrone Rückrufmethode, die aufgerufen wird, nachdem <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.BeginInitiateUpgrade(System.IO.Stream,System.AsyncCallback,System.Object)" /> abgeschlossen wurde.</summary>
+        <returns>Gibt den aktualisierten Stream zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über die Verwendung dieser Methoden finden Sie in den Hinweisen unter <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextUpgrade">
+      <MemberSignature Language="C#" Value="public abstract string GetNextUpgrade ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetNextUpgrade() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Inhaltstyp der nächsten Aktualisierung zurück, die ausgeführt werden soll.</summary>
+        <returns>Gibt den Inhaltstyp der nächsten Aktualisierung zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt in der erwarteten Reihenfolge einen Satz an Aktualisierungsinhaltstypen zurück, die vom Aktualisierungsanbieter unterstützt werden. Aktualisierungsanbieter, die nur eine Aktualisierung unterstützen, geben nur einen Wert zurück. Aktualisierungsanbieter, die mehrere Aktualisierungen unterstützen, geben die Werte in der entsprechenden Reihenfolge aus (Beispiel: Komprimierungsinhaltstyp gefolgt vom Sicherheitsinhaltstyp).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitiateUpgrade">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream InitiateUpgrade (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream InitiateUpgrade(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der zu aktualisierende Stream.</param>
+        <summary>Initiiert die Aktualisierung des Streams durch eine Anforderung an das andere Ende der Verbindung zur Aktualisierung der Kanaltransportebene.</summary>
+        <returns>Gibt den aktualisierten Stream zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann für jede vom Aktualisierungsanbieter unterstützte Aktualisierung mehrmals aufgerufen werden. Beispielsweise würde ein Aktualisierungsanbieter, der Komprimierung und Sicherheit unterstützt, diese Methode zweimal aufrufen: zunächst zur Aktualisierung des Standardtransportstreamings für die Komprimierung und dann ein zweites Mal für die Aktualisierung der Sicherheit. Nachfolgende Aufrufe dieser Methode sollten vom vorherigen Aufruf in den Aktualisierungsstream übergehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

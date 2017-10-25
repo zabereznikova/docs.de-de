@@ -1,0 +1,222 @@
+<Type Name="EventWaitHandleAccessRule" FullName="System.Security.AccessControl.EventWaitHandleAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class EventWaitHandleAccessRule : System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventWaitHandleAccessRule extends System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.EventWaitHandleAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Zugriffsrechten zugelassen oder verweigert, die für einen Benutzer oder Gruppe. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.EventWaitHandleAccessRule> Klasse wird zu einem Satz von Klassen, die die .NET Framework bietet für die Verwaltung von Windows-zugriffssteuerungssicherheit benanntes Systemereignisse. Einen Überblick über diese Klassen und deren Beziehungen zu den zugrunde liegenden Windows Zugriffssteuerungsstrukturen finden Sie unter <xref:System.Security.AccessControl.EventWaitHandleSecurity>.  
+  
+> [!NOTE]
+>  Windows-zugriffssteuerungssicherheit ist nur sinnvoll bei benanntes Systemereignisse. Wenn ein <xref:System.Threading.EventWaitHandle> -Objekt stellt ein lokales Ereignis dar, die Zugriffssteuerung ist irrelevant.  
+  
+ Verwenden Sie zum Abrufen einer Liste der derzeit auf ein benanntes Ereignis angewendeten Regeln die <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Security.AccessControl.EventWaitHandleSecurity> -Objekts und anschließendes Verwenden seiner <xref:System.Security.AccessControl.CommonObjectSecurity.GetAccessRules%2A> Methode zum Abrufen einer Auflistung von <xref:System.Security.AccessControl.EventWaitHandleAccessRule> Objekte.  
+  
+ <xref:System.Security.AccessControl.EventWaitHandleAccessRule>Objekte zuordnen nicht eins zu eins Zugriffssteuerungseinträge in der zugrunde liegenden besitzverwalteten Zugriffssteuerungsliste (DACL). Wenn Sie den Satz von alle Zugriffsregeln für ein Ereignis erhalten, enthält der Satz die minimale Anzahl von Regeln, die derzeit erforderlich, um alle Zugriffssteuerungseinträge.  
+  
+> [!NOTE]
+>  Die zugrunde liegenden Zugriffssteuerungseinträge ändern, da Sie Regeln anwenden oder entfernen. Die in Regeln nach Möglichkeit zusammengeführt, um die kleinste Anzahl von Zugriffssteuerungseinträgen zu gewährleisten. Daher, wenn Sie die aktuelle Liste der Regeln abrufen, es sieht möglicherweise nicht genau wie die Liste aller Regeln, die Sie hinzugefügt haben.  
+  
+ Verwendung <xref:System.Security.AccessControl.EventWaitHandleAccessRule> -Objekten, die Zugriffsrechte gewähren oder verweigern einem Benutzer oder Gruppe angeben. Ein <xref:System.Security.AccessControl.EventWaitHandleAccessRule> -Objekt immer stellt der Zugriff erlaubt oder verweigert den Zugriff auf niemals beide.  
+  
+ Verwenden Sie zum Anwenden einer Regelsatzes auf ein benanntes Systemereignis der <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> Methode zum Abrufen der <xref:System.Security.AccessControl.EventWaitHandleSecurity> Objekt. Ändern der <xref:System.Security.AccessControl.EventWaitHandleSecurity> -Objekt mithilfe seiner Methoden zum Hinzufügen der Regelnamens, und klicken Sie dann die <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType> Methode, um das Sicherheitsobjekt erneut anzufügen.  
+  
+> [!IMPORTANT]
+>  Änderungen an einer <xref:System.Security.AccessControl.EventWaitHandleSecurity> Objekt wirken sich nicht auf die Zugriffsebenen der das benannte Ereignis erst nach dem Aufruf der <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType> Methode, um das benannte Ereignis das geänderte Sicherheitsobjekt zuweisen.  
+  
+ <xref:System.Security.AccessControl.EventWaitHandleAccessRule>-Objekte sind unveränderlich. Sicherheit für ein Ereignis mit den Methoden der geändert wird die <xref:System.Security.AccessControl.EventWaitHandleSecurity> Klasse zum Hinzufügen oder Entfernen von Regeln, wie in diesem Fall werden die zugrunde liegenden Zugriffssteuerungseinträge geändert.  
+  
+> [!NOTE]
+>  Sicherheit auf Synchronisierungsobjekte ist Windows 98 oder Windows Millennium Edition nicht unterstützt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Erstellung und Verwendung von <xref:System.Security.AccessControl.EventWaitHandleAccessRule> Objekte. Das Beispiel erstellt eine <xref:System.Security.AccessControl.EventWaitHandleSecurity> -Objekt, fügt die Regeln, die zulassen und verweigern verschiedene Rechte für den aktuellen Benutzer hinzu und zeigt das resultierende Paar von Regeln. Anschließend können Sie neue Rechte für den aktuellen Benutzer und das Ergebnis wird angezeigt, dass der neuen Rechte mit dem vorhandenen zusammengeführt werden <xref:System.Security.AccessControl.AccessControlType.Allow> Regel.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:System.Threading.EventWaitHandle> Objekt. Beispiele, die Sicherheitsobjekte angefügt werden, finden Sie <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> und <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWaitHandleAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.EventWaitHandleRights eventRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.EventWaitHandleRights eventRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.EventWaitHandleRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="eventRights" Type="System.Security.AccessControl.EventWaitHandleRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der Benutzer oder Gruppe, die die Regel gilt. Muss vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" /> oder ein Typ sein wie z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="eventRights">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.EventWaitHandleRights" /> Werte, die Angabe der Rechte gewährt oder verweigert.</param>
+        <param name="type">Eines der <see cref="T:System.Security.AccessControl.AccessControlType" /> Werte, die angibt, ob die Rechte gewährt oder verweigert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> Klasse, die angibt, die Benutzer oder eine Gruppe, die die Regel, die Zugriffsrechte gilt und gibt an, ob die angegebenen Zugriffsrechte gewährt oder verweigert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Warten auf ein <xref:System.Threading.EventWaitHandle> (durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> oder <xref:System.Threading.WaitHandle.WaitAll%2A> Methode), Benutzer benötigen <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Zugriff. Signalisieren ein Ereignisses durch Aufrufen der <xref:System.Threading.EventWaitHandle.Set%2A> -Methode, oder es in den nicht signalisierten Zustand zurückzusetzen, durch den Aufruf der <xref:System.Threading.EventWaitHandle.Reset%2A> -Methode, die ein Benutzer besitzen muss <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Zugriff. Signalisiert ein <xref:System.Threading.EventWaitHandle> Objekt, und klicken Sie dann darauf warten, durch Aufrufen der <xref:System.Threading.WaitHandle.SignalAndWait%2A> -Methode, ein Benutzer benötigt die <xref:System.Security.AccessControl.EventWaitHandleRights.Synchronize> und <xref:System.Security.AccessControl.EventWaitHandleRights.Modify> Zugriff.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="eventRights" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="type" />Gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="eventRights" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identity" />ist nicht vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" /> noch von einem Typ, z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWaitHandleAccessRule (string identity, System.Security.AccessControl.EventWaitHandleRights eventRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.EventWaitHandleRights eventRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleAccessRule.#ctor(System.String,System.Security.AccessControl.EventWaitHandleRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="eventRights" Type="System.Security.AccessControl.EventWaitHandleRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der Name des Benutzers oder der Gruppe gilt die Regel.</param>
+        <param name="eventRights">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.EventWaitHandleRights" /> Werte, die Angabe der Rechte gewährt oder verweigert.</param>
+        <param name="type">Eines der <see cref="T:System.Security.AccessControl.AccessControlType" /> Werte, die angibt, ob die Rechte gewährt oder verweigert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> -Klasse und gibt den Namen des Benutzers oder der Gruppe, die die Regel, die Zugriffsrechte gilt und gibt an, ob die angegebenen Zugriffsrechte gewährt oder verweigert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Warten auf ein <xref:System.Threading.EventWaitHandle> (durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> oder <xref:System.Threading.WaitHandle.WaitAll%2A> Methode), Benutzer benötigen <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Zugriff. Signalisieren ein Ereignisses durch Aufrufen der <xref:System.Threading.EventWaitHandle.Set%2A> -Methode, oder es in den nicht signalisierten Zustand zurückzusetzen, durch den Aufruf der <xref:System.Threading.EventWaitHandle.Reset%2A> -Methode, die ein Benutzer besitzen muss <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Zugriff. Signalisiert ein <xref:System.Threading.EventWaitHandle> Objekt, und klicken Sie dann darauf warten, durch Aufrufen der <xref:System.Threading.WaitHandle.SignalAndWait%2A> -Methode, ein Benutzer benötigt die <xref:System.Security.AccessControl.EventWaitHandleRights.Synchronize> und <xref:System.Security.AccessControl.EventWaitHandleRights.Modify> Zugriff.  
+  
+ Dieser Konstruktor entspricht dem Erstellen eine <xref:System.Security.Principal.NTAccount> -Objekts und durch übergeben `identity` auf die <xref:System.Security.Principal.NTAccount.%23ctor%28System.String%29?displayProperty=nameWithType> -Konstruktor übergeben und die neu erstellte <xref:System.Security.Principal.NTAccount> -Objekt an die <xref:System.Security.AccessControl.EventWaitHandleAccessRule.%23ctor%28System.Security.Principal.IdentityReference%2CSystem.Security.AccessControl.EventWaitHandleRights%2CSystem.Security.AccessControl.AccessControlType%29> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Konstruktors zum Erstellen <xref:System.Security.AccessControl.EventWaitHandleAccessRule> Objekte. Das Beispiel erstellt eine <xref:System.Security.AccessControl.EventWaitHandleSecurity> -Objekt, fügt die Regeln, die zulassen und verweigern verschiedene Rechte für den aktuellen Benutzer hinzu und zeigt das resultierende Paar von Regeln. Anschließend können Sie neue Rechte für den aktuellen Benutzer und das Ergebnis wird angezeigt, dass der neuen Rechte mit dem vorhandenen zusammengeführt werden <xref:System.Security.AccessControl.AccessControlType.Allow> Regel.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:System.Threading.EventWaitHandle> Objekt. Beispiele, die Sicherheitsobjekte angefügt werden, finden Sie <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> und <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="eventRights" />Gibt einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="type" />Gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="eventRights" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="identity" /> ist eine Zeichenfolge mit der Länge 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="identity" />ist länger als 512 Zeichen lang sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EventWaitHandleRights">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.EventWaitHandleRights EventWaitHandleRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.EventWaitHandleRights EventWaitHandleRights" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.EventWaitHandleAccessRule.EventWaitHandleRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.EventWaitHandleRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rechte durch die Regel zugelassen oder verweigert.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.EventWaitHandleRights" /> Werte, der angibt, die Rechte durch zugelassen oder verweigert die Zugriffsregel aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.AccessControl.EventWaitHandleAccessRule>-Objekte sind unveränderlich. Sie können eine neue Zugriffsregel darstellt, ein anderer Benutzer, unterschiedliche Rechte oder ein anderes erstellen <xref:System.Security.AccessControl.AccessControlType>, aber eine vorhandene Access-Regel kann nicht geändert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.AccessControl.EventWaitHandleAccessRule.EventWaitHandleRights%2A> Eigenschaft, um die Berechtigungen angezeigt werden, in den Satz von Regeln einer <xref:System.Security.AccessControl.EventWaitHandleSecurity> Objekt. Das Beispiel erstellt eine <xref:System.Security.AccessControl.EventWaitHandleSecurity> -Objekt, fügt die Regeln, die zulassen und verweigern verschiedene Rechte für den aktuellen Benutzer hinzu und zeigt das resultierende Paar von Regeln. Anschließend können Sie neue Rechte für den aktuellen Benutzer und das Ergebnis wird angezeigt, dass der neuen Rechte mit dem vorhandenen zusammengeführt werden <xref:System.Security.AccessControl.AccessControlType.Allow> Regel.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:System.Threading.EventWaitHandle> Objekt. Beispiele, die Sicherheitsobjekte angefügt werden, finden Sie <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> und <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

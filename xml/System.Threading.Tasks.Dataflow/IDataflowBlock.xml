@@ -1,0 +1,112 @@
+<Type Name="IDataflowBlock" FullName="System.Threading.Tasks.Dataflow.IDataflowBlock">
+  <TypeSignature Language="C#" Value="public interface IDataflowBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataflowBlock" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.IDataflowBlock" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Datenflussblock dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow>-Namespace) ist nicht in [!INCLUDE[net_v45](~/includes/net-v45-md.md)] enthalten. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace öffnen Sie das Projekt in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], wählen Sie **NuGet-Pakete verwalten** aus der Menüs "Projekt", und suchen Sie online nach der `Microsoft.Tpl.Dataflow` Paket.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert dem <see cref="T:System.Threading.Tasks.Dataflow.IDataflowBlock" /> , es sollte nicht akzeptieren, noch keine weiteren Nachrichten erzeugen, noch weitere zurückgestellten Nachrichten verarbeiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> wurde für einen Datenflussblock aufgerufen wird, diesen Block wird abgeschlossen, und die zugehörige <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> Aufgabe geben einen Endzustand aus, nachdem sie alle zuvor verfügbare Daten verarbeitet hat. <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A>blockiert nicht warten auf Abschluss des Vorgangs ausgeführt werden, sondern vielmehr initiiert die Anforderung; Warten auf den Abschluss ausgeführt werden, die <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> Aufgabe verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completion">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task Completion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Tasks.Task Completion" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Threading.Tasks.Task" /> , die den asynchronen Vorgang und den Abschluss der Datenflussblock darstellt.</summary>
+        <value>Die Aufgabe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Datenflussblock wird als abgeschlossen betrachtet, wenn nicht gerade verarbeitet wird eine neue Meldung und wenn diese garantiert, dass keine weiteren Nachrichten verarbeitet werden. Das zurückgegebene <xref:System.Threading.Tasks.Task> Übergang zum Status "abgeschlossen" werden, nach Abschluss der zugeordneten Block. Es erfolgt ein Wechsel in den <xref:System.Threading.Tasks.TaskStatus> <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> Zustand, wenn der Block nach der Verarbeitung erfolgreich gemäß des Datenflussblock Abschluss definierte Semantik. Es erfolgt ein Wechsel in den <xref:System.Threading.Tasks.TaskStatus> <xref:System.Threading.Tasks.TaskStatus.Faulted> Zustand, wenn der Datenflussblock Verarbeitung vorzeitig aufgrund einer nicht behandelten Ausnahme abgeschlossen wurde, und es ein in Wechsel erfolgt den <xref:System.Threading.Tasks.TaskStatus> <xref:System.Threading.Tasks.TaskStatus.Canceled> Status nach Abschluss der Datenflussblock die Verarbeitung vorzeitig aufgrund eine abbruchanforderung empfängt. Wenn die Aufgabe abgeschlossen, in ist der <xref:System.Threading.Tasks.TaskStatus.Faulted> Zustand, seine `Exception` Eigenschaft zurückgegeben wird ein <xref:System.AggregateException> mit der eine oder mehrere Ausnahmen, die Fehlschlagen des Blockes verursacht hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="public void Fault (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Fault(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.IDataflowBlock.Fault(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die <see cref="T:System.Exception" /> , die die fehlgeschlagene verursacht hat.</param>
+        <summary>Bewirkt, dass die <see cref="T:System.Threading.Tasks.Dataflow.IDataflowBlock" /> in Anspruch nehmen eine <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Fault%2A> wurde für einen Datenflussblock aufgerufen wird, diesen Block wird abgeschlossen, und die zugehörige <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> Aufgabe wird einen abschließenden Zustand versetzt. Fehlgeschlagene einen Block, bewirkt, dass als mit Abbrechen einen Block von gepufferten Nachrichten (unverarbeiteten Eingabenachrichten sowie unoffered Ausgabenachrichten) verloren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="exception" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

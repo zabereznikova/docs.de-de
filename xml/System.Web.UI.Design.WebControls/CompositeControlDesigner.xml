@@ -1,0 +1,124 @@
+<Type Name="CompositeControlDesigner" FullName="System.Web.UI.Design.WebControls.CompositeControlDesigner">
+  <TypeSignature Language="C#" Value="public class CompositeControlDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositeControlDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.CompositeControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erweitert das Entwurfszeitverhalten für Steuerelemente, die die Methoden der abstrakten <see cref="T:System.Web.UI.WebControls.CompositeControl" />-Klasse implementieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner> können verwendet werden, mit anderen Steuerelementtypen, die implementieren die <xref:System.Web.UI.INamingContainer> Schnittstelle. Andernfalls <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner> funktioniert ähnlich wie seine Basisklasse <xref:System.Web.UI.Design.ControlDesigner>. Ein Beispiel finden Sie unter <xref:System.Web.UI.Design.ControlDesigner>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositeControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CompositeControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.CompositeControlDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected virtual void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CompositeControlDesigner.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die untergeordneten Steuerelemente dieses <see cref="T:System.Web.UI.WebControls.CompositeControl" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner.CreateChildControls%2A> Methode wird verwendet, um die untergeordneten Steuerelemente des zugeordneten Steuerelements neu zu erstellen. Dadurch wird sichergestellt, dass die Auflistung der Steuerelemente vor dem Erstellen von Markup zur Entwurfszeit erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CompositeControlDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den HTML-Code ab, der für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Der HTML-Code, der für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über die Überladungen dieser Methode zur finden Sie unter <xref:System.Web.UI.Design.ControlDesigner>.  
+  
+ In dieser überschriebenen Methode erstellt die basisimplementierung immer die untergeordneten Steuerelemente des zugeordneten Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CompositeControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.ComponentModel.IComponent" />, also das diesem Designer zugeordnete Steuerelement.</param>
+        <summary>Initialisiert den Designer mit dem angegebenen <see cref="T:System.ComponentModel.IComponent" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner.Initialize%2A> zum Initialisieren der Komponente für den Entwurf.  
+  
+ Die grundlegende Implementierung löst eine Ausnahme aus, wenn das zugeordnete Steuerelement keine implementiert die <xref:System.Web.UI.INamingContainer> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

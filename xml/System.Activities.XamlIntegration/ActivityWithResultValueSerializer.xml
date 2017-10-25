@@ -1,0 +1,83 @@
+<Type Name="ActivityWithResultValueSerializer" FullName="System.Activities.XamlIntegration.ActivityWithResultValueSerializer">
+  <TypeSignature Language="C#" Value="public sealed class ActivityWithResultValueSerializer : System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityWithResultValueSerializer extends System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.XamlIntegration.ActivityWithResultValueSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.ValueSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt sicher, dass das Ergebnis einer Aktivität ordnungsgemäß in eine Zeichenfolge konvertiert wird, die für die serielle Übertragung verwendet werden kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityWithResultValueSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityWithResultValueSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.XamlIntegration.ActivityWithResultValueSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertToString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityWithResultValueSerializer.CanConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Activities.XamlIntegration.IValueSerializableExpression" />-Objekt, das daraufhin überprüft wird, ob es in eine Zeichenfolge für die serielle Übertragung konvertiert werden kann.</param>
+        <param name="context">Definiert einen Kontext für die Serialisierung von <see cref="T:System.Activities.XamlIntegration.IValueSerializableExpression" />.</param>
+        <summary>Gibt einen Hinweis darauf zurück, ob es sich bei einem Eingabeobjekt um einen <see cref="T:System.Activities.XamlIntegration.IValueSerializableExpression" /> handelt, der in eine Zeichenfolge serialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der Ausdruck serialisiert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public override string ConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityWithResultValueSerializer.ConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in eine Zeichenfolge für die serielle Übertragung konvertiert wird.</param>
+        <param name="context">Definiert einen Kontext für die Serialisierung des Objekts, das in eine Zeichenfolge konvertiert wird.</param>
+        <summary>Serialisiert das angegebene Objekt in eine Zeichenfolge.</summary>
+        <returns>Eine Zeichenfolgenversion des serialisierbaren Ausdrucks.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,535 @@
+<Type Name="GenerateDeploymentManifest" FullName="Microsoft.Build.Tasks.GenerateDeploymentManifest">
+  <TypeSignature Language="C#" Value="public sealed class GenerateDeploymentManifest : Microsoft.Build.Tasks.GenerateManifestBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateDeploymentManifest extends Microsoft.Build.Tasks.GenerateManifestBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GenerateDeploymentManifest" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.GenerateManifestBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>GenerateDeploymentManifest</c> Aufgabe. Verwenden der <c>GenerateDeploymentManifest</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [GenerateDeploymentManifest-Aufgabe](http://msdn.microsoft.com/library/0734ebda-734d-49c4-9642-8d9d919d45fd).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenerateDeploymentManifest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.GenerateDeploymentManifest" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDesktopShortcut">
+      <MemberSignature Language="C#" Value="public bool CreateDesktopShortcut { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreateDesktopShortcut" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.CreateDesktopShortcut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob ein Symbol auf dem Desktop während der Installation der ClickOnce-Anwendung erstellt wird.</summary>
+        <value>
+          <see langword="true" />Wenn ein Symbol auf dem Desktop während der Installation erstellt wird. <see langword="false" /> andernfalls.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentUrl">
+      <MemberSignature Language="C#" Value="public string DeploymentUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeploymentUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.DeploymentUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Updatepfad der Anwendung ab oder legt diesen fest.</summary>
+        <value>Der Updatepfad der Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht angegeben ist, wird kein Updatepfad für die Anwendung definiert. Jedoch, wenn die <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled%2A> Eigenschaft ist `true`, ein Updatespeicherort muss angegeben werden. Der angegebene Wert muss eine vollqualifizierte URL oder ein UNC-Pfad sein.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DisallowUrlActivation">
+      <MemberSignature Language="C#" Value="public bool DisallowUrlActivation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisallowUrlActivation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.DisallowUrlActivation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Anwendung automatisch ausgeführt werden soll, wenn sie über eine URL geöffnet wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Anwendung nur gestartet werden kann, können Sie aus der **starten** Menü ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`. Diese Eigenschaft gilt nur, wenn die <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install%2A> Eigenschaftswert ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorReportUrl">
+      <MemberSignature Language="C#" Value="public string ErrorReportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorReportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.ErrorReportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL der Webseite, die während der ClickOnce-Installationen in Dialogfeldern angezeigt wird.</summary>
+        <value>Eine Zeichenfolge, die URL einer Webseite darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt eine Webseite, die in Dialogfeldern angezeigt werden, die während der ClickOnce-Installationen angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectType">
+      <MemberSignature Language="C#" Value="protected override Type GetObjectType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type GetObjectType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.GetObjectType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public bool Install { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Install" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Anwendung eine installierte Anwendung oder eine reine Onlineanwendung ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Anwendung auf dem lokalen Computer installiert werden soll, und werden, mithilfe entfernt können der **Software** Dialogfeld; <see langword="false" /> , wenn die Anwendung zur Onlineverwendung von einer Webseite ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MapFileExtensions">
+      <MemberSignature Language="C#" Value="public bool MapFileExtensions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MapFileExtensions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.MapFileExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt diesen fest, der angibt, ob die Zuordnung für die Dateierweiterung „.deploy“ verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn jede Programmdatei mit einer Dateinamenerweiterung ".deploy"; veröffentlicht wird andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Option für die webserversicherheit, um die Anzahl der Dateinamenerweiterungen zu begrenzen, die so aktivieren Sie entsperrt werden muss [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] anwendungsbereitstellung. Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumRequiredVersion">
+      <MemberSignature Language="C#" Value="public string MinimumRequiredVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MinimumRequiredVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.MinimumRequiredVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob der Benutzer das Update überspringen kann, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer das Update überspringen kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Benutzer eine Version, die älter als die Mindestanforderung ist verfügt, kann nicht er das Update überspringen. Diese Eingabe ist nur gültig, wenn der Wert der <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnManifestLoaded">
+      <MemberSignature Language="C#" Value="protected override bool OnManifestLoaded (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnManifestLoaded(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.OnManifestLoaded(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifest" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />
+      </Parameters>
+      <Docs>
+        <param name="manifest">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnManifestResolved">
+      <MemberSignature Language="C#" Value="protected override bool OnManifestResolved (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnManifestResolved(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.OnManifestResolved(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifest" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />
+      </Parameters>
+      <Docs>
+        <param name="manifest">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Product">
+      <MemberSignature Language="C#" Value="public string Product { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Product" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Product" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Anwendung ab oder legt diesen fest.</summary>
+        <value>Der Name der Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht angegeben ist, wird der Name von der Identität des generierten Manifests abgeleitet. Dieser Name wird für die Verknüpfung verwendet, auf die **starten** im Menü und ist Teil des Namens, der in der **Software** (Dialogfeld).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Publisher">
+      <MemberSignature Language="C#" Value="public string Publisher { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Publisher" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Publisher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Herausgebers der Anwendung.</summary>
+        <value>Der Herausgeber der Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht angegeben ist, wird der Name vom registrierten Benutzer oder die Identität des generierten Manifests abgeleitet. Dieser Name wird verwendet, für den Ordnernamen auf der **starten** Menü und ist Teil des Namens, der in der **deinstallieren oder Ändern eines Programms** (Dialogfeld).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SuiteName">
+      <MemberSignature Language="C#" Value="public string SuiteName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuiteName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.SuiteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Ordners auf dem **starten** Menü, in dem die Anwendung befindet sich nach der ClickOnce-Bereitstellung.</summary>
+        <value>Eine Zeichenfolge, die den Namen des darstellt eine **starten** im Ordner.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SupportUrl">
+      <MemberSignature Language="C#" Value="public string SupportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SupportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.SupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie den Link in der **deinstallieren oder Ändern eines Programms** Dialogfeld für die Anwendung. Der angegebene Wert muss eine vollqualifizierte URL oder ein UNC-Pfad sein.</summary>
+        <value>Der Link, der in der **deinstallieren oder Ändern eines Programms** Dialogfeld für die Anwendung.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrustUrlParameters">
+      <MemberSignature Language="C#" Value="public bool TrustUrlParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrustUrlParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.TrustUrlParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt ihn fest, der anzeigt, ob URL-Abfragezeichenfolgen-Parameter für die Anwendung verfügbar gemacht werden sollen.</summary>
+        <value>
+          <see langword="true" />Wenn Sie URL-Abfragezeichenfolgen-Parameter für die Anwendung verfügbar gemacht werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`, was bedeutet, dass der Parameter nicht an die Anwendung zur Verfügung stehen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateEnabled">
+      <MemberSignature Language="C#" Value="public bool UpdateEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UpdateEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Anwendung für Updates aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Anwendung für Updates aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`. Diese Eigenschaft ist nur gültig, wenn der Wert der <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateInterval">
+      <MemberSignature Language="C#" Value="public int UpdateInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UpdateInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Updateintervalls für die Anwendung.</summary>
+        <value>Das Updateintervall für die Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 0 (null). Diese Eigenschaft ist nur gültig, wenn die Werte der <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install%2A> und <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled%2A> Eigenschaften sind beide `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMode">
+      <MemberSignature Language="C#" Value="public string UpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob Updates überprüft werden sollen, oder legt ihn fest. Eine Überprüfung auf Updates kann vor dem Start der Anwendung (im Vordergrund) oder während der Ausführung der Anwendung (im Hintergrund) durchgeführt werden.</summary>
+        <value>
+          <see langword="true" />Wenn Updates überprüft werden soll. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann die folgenden Werte aufweisen:  
+  
+-   `Foreground`(vor dem Start der Anwendung)  
+  
+-   `Background`(wenn die Anwendung ausgeführt wird)  
+  
+ Der Standardwert ist `Background`. Diese Eigenschaft ist nur gültig, wenn die Werte der <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install%2A> und <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled%2A> Eigenschaften sind beide `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateUnit">
+      <MemberSignature Language="C#" Value="public string UpdateUnit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateUnit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateUnit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeiteinheit für die <see cref="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval" /> Eigenschaft.</summary>
+        <value>Die Zeiteinheit für die <see cref="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Parameter kann die folgenden Werte aufweisen:  
+  
+-   `Hours`  
+  
+-   `Days`  
+  
+-   `Weeks`  
+  
+ Diese Eigenschaft ist nur gültig, wenn die Werte der <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install%2A> und <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled%2A> Eigenschaften sind beide `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInputs">
+      <MemberSignature Language="C#" Value="protected override bool ValidateInputs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ValidateInputs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.ValidateInputs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

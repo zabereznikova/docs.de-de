@@ -1,0 +1,106 @@
+<Type Name="WeakEventManager+ListenerList&lt;TEventArgs&gt;" FullName="System.Windows.WeakEventManager+ListenerList&lt;TEventArgs&gt;">
+  <TypeSignature Language="C#" Value="protected class WeakEventManager.ListenerList&lt;TEventArgs&gt; : System.Windows.WeakEventManager.ListenerList where TEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit WeakEventManager/ListenerList`1&lt;(class System.EventArgs) TEventArgs&gt; extends System.Windows.WeakEventManager/ListenerList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.WeakEventManager.ListenerList`1" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TEventArgs">
+      <Constraints>
+        <BaseTypeName>System.EventArgs</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Windows.WeakEventManager+ListenerList</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TEventArgs">Der Typ, der die Ereignisdaten enthält.</typeparam>
+    <summary>Bietet eine typsichere Auflistung Liste zum Speichern von Listener für eine <see cref="T:System.Windows.WeakEventManager" />. Diese Klasse definiert einen Typparameter für die Ereignisdaten, die verwendet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListenerList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager.ListenerList`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.WeakEventManager.ListenerList`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListenerList (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager.ListenerList`1.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die Anzahl der Elemente, die in die ursprüngliche Liste zugewiesen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.WeakEventManager.ListenerList`1" /> -Klasse mit der angegebenen Anfangskapazität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Windows.WeakEventManager.ListenerList Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.WeakEventManager/ListenerList Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager.ListenerList`1.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WeakEventManager+ListenerList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.WeakEventManager.ListenerList" />, indem tiefe Kopien der Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliverEvent">
+      <MemberSignature Language="C#" Value="public override bool DeliverEvent (object sender, EventArgs e, Type managerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool DeliverEvent(object sender, class System.EventArgs e, class System.Type managerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager.ListenerList`1.DeliverEvent(System.Object,System.EventArgs,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+        <Parameter Name="managerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das das Ereignis ausgelöst hat.</param>
+        <param name="e">Ein Objekt, das die Ereignisdaten enthält.</param>
+        <param name="managerType">Der Typ des der <see cref="T:System.Windows.WeakEventManager" /> , die diese Methode wird aufgerufen.</param>
+        <summary>Übermittelt das Ereignis auf jeden Listener im verwaltet die <see cref="T:System.Windows.WeakEventManager.ListenerList`1" />.</summary>
+        <returns>
+          <see langword="true" />Wenn eine der Listener in der <see cref="T:System.Windows.WeakEventManager.ListenerList`1" /> verweisen auf ein Objekt, das eine Garbage Collection wurde gesammelt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

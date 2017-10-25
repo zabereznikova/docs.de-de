@@ -1,0 +1,563 @@
+<Type Name="UIPermission" FullName="System.Security.Permissions.UIPermission">
+  <TypeSignature Language="C#" Value="public sealed class UIPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit UIPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.UIPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert die Berechtigungen, die sich auf Benutzeroberflächen und die Zwischenablage beziehen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichnen und Benutzereingabeereignisse in Windows sind Benutzeroberflächen.  
+  
+ Die Berechtigung zum Verwenden von Windows kann eine der folgenden: uneingeschränkt, eingeschränkt auf <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>, nur <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows>, oder geben Sie keine Fenster zeichnen oder Benutzer Ereigniszugriff zulässig. <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>und <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Titel und Größe, um zu verhindern, mögliches spoofing durch potenziell bösartigen Code eingeschränkt werden.  
+  
+ Die Berechtigung zum Verwenden der Zwischenablage kann eines der folgenden sein: uneingeschränkten, lesegeschützte oder kein Zugriff auf die Zwischenablage zulässig. Die einfügen-Einschränkung wird verhindert, dass potenziell schädliche Anwendungen von Verwenden von Daten aus der Zwischenablage ohne Zustimmung des Benutzers während nach wie vor die Ausschneiden, kopieren und Einfügevorgänge, wenn vom Benutzer über die Tastaturbefehle initiiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.UIPermission" /> -Klasse mit vollständig eingeschränktem oder uneingeschränktem Zugriff, wie angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt entweder vollständig eingeschränkt (`None`) oder die `Unrestricted` Form von Berechtigung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.UIPermission.%23ctor%2A> Konstruktor. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#7)]
+ [!code-csharp[System.Security.Permissions.UIPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#7)]
+ [!code-vb[System.Security.Permissions.UIPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="state" /> Parameter ist kein gültiger <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPermission (System.Security.Permissions.UIPermissionClipboard clipboardFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.UIPermissionClipboard clipboardFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.#ctor(System.Security.Permissions.UIPermissionClipboard)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clipboardFlag" Type="System.Security.Permissions.UIPermissionClipboard" />
+      </Parameters>
+      <Docs>
+        <param name="clipboardFlag">Einer der Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.UIPermission" /> -Klasse mit den Berechtigungen für die Zwischenablage und ohne Zugriff auf Fenster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Festlegen von Berechtigungen für die Zwischenablage und die Fenster des Konstruktors, der für beide Parameter akzeptiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.UIPermission.%23ctor%28System.Security.Permissions.UIPermissionClipboard%29?displayProperty=nameWithType> Konstruktor. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#9)]
+ [!code-csharp[System.Security.Permissions.UIPermission#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#9)]
+ [!code-vb[System.Security.Permissions.UIPermission#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="clipboardFlag" /> Parameter ist kein gültiger <see cref="T:System.Security.Permissions.UIPermissionClipboard" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPermission (System.Security.Permissions.UIPermissionWindow windowFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.UIPermissionWindow windowFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.#ctor(System.Security.Permissions.UIPermissionWindow)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="windowFlag" Type="System.Security.Permissions.UIPermissionWindow" />
+      </Parameters>
+      <Docs>
+        <param name="windowFlag">Einer der Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.UIPermission" /> -Klasse mit den Berechtigungen für Windows und keinen Zugriff auf die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Festlegen von Berechtigungen für die Zwischenablage und die Fenster des Konstruktors, der für beide Parameter akzeptiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.UIPermission.%23ctor%28System.Security.Permissions.UIPermissionWindow%29?displayProperty=nameWithType> Konstruktor. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#8)]
+ [!code-csharp[System.Security.Permissions.UIPermission#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#8)]
+ [!code-vb[System.Security.Permissions.UIPermission#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="windowFlag" /> Parameter ist kein gültiger <see cref="T:System.Security.Permissions.UIPermissionWindow" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIPermission (System.Security.Permissions.UIPermissionWindow windowFlag, System.Security.Permissions.UIPermissionClipboard clipboardFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.UIPermissionWindow windowFlag, valuetype System.Security.Permissions.UIPermissionClipboard clipboardFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.#ctor(System.Security.Permissions.UIPermissionWindow,System.Security.Permissions.UIPermissionClipboard)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="windowFlag" Type="System.Security.Permissions.UIPermissionWindow" />
+        <Parameter Name="clipboardFlag" Type="System.Security.Permissions.UIPermissionClipboard" />
+      </Parameters>
+      <Docs>
+        <param name="windowFlag">Einer der Enumerationswerte.</param>
+        <param name="clipboardFlag">Einer der Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.UIPermission" /> -Klasse mit den angegebenen Berechtigungen für Fenster und die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.UIPermission.%23ctor%28System.Security.Permissions.UIPermissionWindow%2CSystem.Security.Permissions.UIPermissionClipboard%29?displayProperty=nameWithType> Konstruktor. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#10)]
+ [!code-csharp[System.Security.Permissions.UIPermission#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#10)]
+ [!code-vb[System.Security.Permissions.UIPermission#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="windowFlag" /> Parameter ist kein gültiger <see cref="T:System.Security.Permissions.UIPermissionWindow" /> Wert.  
+  
+ - oder -   
+  
+ Die <paramref name="clipboardFlag" /> Parameter ist kein gültiger <see cref="T:System.Security.Permissions.UIPermissionClipboard" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clipboard">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.UIPermissionClipboard Clipboard { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.UIPermissionClipboard Clipboard" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.UIPermission.Clipboard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionClipboard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch die Berechtigung dargestellten Zwischenablagezugriff ab oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Security.Permissions.UIPermissionClipboard" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie der aktuellen Berechtigung und gibt sie zurück.</summary>
+        <returns>Eine Kopie der aktuellen Berechtigung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie der Berechtigung stellt den gleichen Zugriff auf Ressourcen wie die ursprüngliche Berechtigung dar.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.UIPermission.Copy%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#5)]
+ [!code-csharp[System.Security.Permissions.UIPermission#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#5)]
+ [!code-vb[System.Security.Permissions.UIPermission#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement esd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement esd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="esd" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="esd">Die zum Wiederherstellen der Berechtigung verwendete XML-Codierung.</param>
+        <summary>Stellt eine Berechtigung mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.UIPermission.FromXml%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#6)]
+ [!code-csharp[System.Security.Permissions.UIPermission#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#6)]
+ [!code-vb[System.Security.Permissions.UIPermission#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="esd" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="esd" /> -Parameter ist kein gültiges Berechtigungselement.  
+  
+ - oder -   
+  
+ Die <paramref name="esd" /> Versionsnummer des Parameters ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung für die Überschneidung mit der aktuellen Berechtigung. Sie muss vom selben Typ wie die aktuelle Berechtigung sein.</param>
+        <summary>Erstellt eine Berechtigung als Schnittmenge der aktuellen und der angegebenen Berechtigung und gibt diese zurück.</summary>
+        <returns>Eine neue Berechtigung, die die Schnittmenge der aktuellen und der angegebenen Berechtigung darstellt. Diese neue Berechtigung ist <see langword="null" /> , wenn die Schnittmenge leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittmenge zweier Berechtigungen ist eine Berechtigung, die den Satz von Vorgänge zu beschreiben, den beide gemeinsam beschreiben. Insbesondere stellt es die restriktivsten Werte von <xref:System.Security.Permissions.UIPermissionWindow> und <xref:System.Security.Permissions.UIPermissionClipboard> von den in der aktuellen Berechtigung und der angegebenen Berechtigung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.UIPermission.Intersect%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#4)]
+ [!code-csharp[System.Security.Permissions.UIPermission#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#4)]
+ [!code-vb[System.Security.Permissions.UIPermission#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine für die Teilmengenbeziehung zu testende Berechtigung. Diese Berechtigung muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Bestimmt, ob die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Berechtigung ist eine Teilmenge der angegebenen Berechtigung, wenn alle Anforderungen, die für die aktuelle Berechtigung erfolgreich, auch für die angegebene Berechtigung erfolgreich. D. h., enthält die angegebene Berechtigung mindestens die Berechtigungen, die in der Teilmenge enthalten sind. Für <xref:System.Security.Permissions.UIPermission.IsSubsetOf%2A> zurückzugebenden `true`, die beide die <xref:System.Security.Permissions.UIPermissionWindow> und <xref:System.Security.Permissions.UIPermissionClipboard> Werte der aktuellen Berechtigung muss gleich oder kleiner als die Werte der angegebenen Berechtigung einschränkend sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.UIPermission.IsSubsetOf%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#2)]
+ [!code-csharp[System.Security.Permissions.UIPermission#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#2)]
+ [!code-vb[System.Security.Permissions.UIPermission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Berechtigung uneingeschränkt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung uneingeschränkt ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine uneingeschränkte Berechtigung darstellt Zugriff auf allen Ressourcen, die durch die Berechtigung geschützten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung der Berechtigung und ihres aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung der Berechtigung, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.UIPermission.ToXml%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#6)]
+ [!code-csharp[System.Security.Permissions.UIPermission#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#6)]
+ [!code-vb[System.Security.Permissions.UIPermission#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UIPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die mit der aktuellen Berechtigung kombiniert werden soll. Sie muss vom selben Typ wie die aktuelle Berechtigung sein.</param>
+        <summary>Erstellt eine Berechtigung als Kombination der Berechtigung und der angegebenen Berechtigung.</summary>
+        <returns>Eine neue Berechtigung, die die Kombination der aktuellen und der angegebenen Berechtigung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis eines Aufrufs von <xref:System.Security.Permissions.UIPermission.Union%2A> ist eine Berechtigung, alle Vorgänge, die durch die aktuelle Berechtigung dargestellten als auch für alle Vorgänge, die durch die angegebene Berechtigung dargestellten darstellt. Insbesondere stellt es die am wenigsten restriktiven Werte der <xref:System.Security.Permissions.UIPermissionWindow> und <xref:System.Security.Permissions.UIPermissionClipboard> von den in der aktuellen Berechtigung und der angegebenen Berechtigung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Verhalten der <xref:System.Security.Permissions.UIPermission.Union%2A> Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+> [!NOTE]
+>  Im Codebeispiel wird das Verhalten der Methode, die nicht zur Veranschaulichung der Verwendung vorgesehen. Im Allgemeinen werden die Methoden der Klassen von Codezugriffsberechtigungen von der Sicherheitsinfrastruktur verwendet; Sie werden in der Regel nicht in Anwendungen verwendet.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#3)]
+ [!code-csharp[System.Security.Permissions.UIPermission#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#3)]
+ [!code-vb[System.Security.Permissions.UIPermission#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.UIPermissionWindow Window { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.UIPermissionWindow Window" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.UIPermission.Window" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch die Berechtigung dargestellten Fensterzugriff ab oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Security.Permissions.UIPermissionWindow" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.UIPermission.Window%2A> Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.UIPermission> Klasse.  
+  
+ [!code-cpp[System.Security.Permissions.UIPermission#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CPP/uipermission.cpp#2)]
+ [!code-csharp[System.Security.Permissions.UIPermission#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/CS/uipermission.cs#2)]
+ [!code-vb[System.Security.Permissions.UIPermission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.UIPermission/VB/uipermission.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

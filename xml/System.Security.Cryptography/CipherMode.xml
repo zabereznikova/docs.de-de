@@ -1,0 +1,170 @@
+<Type Name="CipherMode" FullName="System.Security.Cryptography.CipherMode">
+  <TypeSignature Language="C#" Value="public enum CipherMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CipherMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CipherMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Blockchiffremodus an, der für die Verschlüsselung verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blockverschlüsselungsalgorithmen Verschlüsseln von Daten im Blockeinheiten, anstatt ein einzelnes Byte an einem Zeitpunkt. Die am häufigsten verwendete Blockgröße umfasst 8 Bytes. Da jeder Block stark verarbeitet wird, bieten Blockverschlüsselungsverfahren ein höheres Maß an Sicherheit als datenstromchiffren. Blockverschlüsselungsalgorithmen tendenziell jedoch langsamer als datenstromchiffren ausführen.  
+  
+ Blockchiffren verwenden denselben Verschlüsselungsalgorithmus für jeden Block. Aus diesem Grund wird ein nur-Text-Block immer den gleichen Verschlüsselungstext, wenn mit dem gleichen Schlüssel und dem angegebenen Algorithmus verschlüsselt zurückgegeben. Da dieses Verhalten verwendet werden kann, um ein Verschlüsselungsverfahren geknackt werden Cipher Modi eingeführt, die den Verschlüsselungsvorgang basierend auf Feedback aus früheren Block Verschlüsselungen ändern. Die resultierende Verschlüsselung bietet ein höheres Maß an Sicherheit als eine Verschlüsselung mit einem einfachen Block.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CBC">
+      <MemberSignature Language="C#" Value="CBC" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode CBC = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.CBC" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cipher Block Chaining (<see langword="CBC" />) führt die Feedback-Modus ein. Vor jeder Block Klartext verschlüsselt wird, wird er durch eine bitweise exklusive OR-Operation mit verschlüsseltem Text des vorherigen Blocks kombiniert. Dadurch wird sichergestellt, dass sie auch, wenn der Klartext viele identische Blöcke enthält, jeweils auf einem anderen Text blockchiffreverkettungs verschlüsselt werden. Der Initialisierungsvektor ist mit dem ersten nur-Text-Block durch eine bitweise exklusive OR-Operation kombiniert, bevor der Block verschlüsselt ist. Wenn ein einzelnes Bit des Textblocks Cipher geändert wird, wird auch der entsprechende Klartextblock. Darüber hinaus wird ein bit im nachfolgenden-Block in der gleichen Position wie das ursprüngliche geänderte Bit geändert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CFB">
+      <MemberSignature Language="C#" Value="CFB" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode CFB = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.CFB" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cipher Feedback (<see langword="CFB" />) Modus verarbeitet kleine Schritten des nur-Text in Verschlüsselungstext, statt einen gesamten Block gleichzeitig verarbeiten. Dieser Modus verwendet einen Schieberegister verwendet, die Länge von einem Block und unterteilt ist in Abschnitte. Blockgröße von 8 Bytes, die eine zu einem Zeitpunkt verarbeitet ist ist z. B. das Schieberegister in acht Abschnitte unterteilt. Wenn etwas in das Verschlüsselungsverfahren geändert wird, wird ein nur-Text-Bit geändert und das Schieberegister ist beschädigt. Dadurch wird die nächste mehrere nur-Text-Inkremente geändert werden, bis das fehlerhafte Bit aus dem Schieberegister verschoben wird. Die Standardgröße von Feedback kann vom Algorithmus variieren, aber ist in der Regel 8 Bits oder die Anzahl der Bits, der die Blockgröße. Sie können die Anzahl der Bits ändern, indem die <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize" /> Eigenschaft. Algorithmen, die CFB unterstützen verwenden diese Eigenschaft, um das Feedback festzulegen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CTS">
+      <MemberSignature Language="C#" Value="CTS" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode CTS = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.CTS" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Diebstahl von verschlüsseltem Text (<see langword="CTS" />) Modus behandelt eine beliebige Zeichenlänge nur-Text und erzeugt Verschlüsselungstext-Text, dessen Länge, die nur-Text-Länge übereinstimmt. In diesem Modus verhält sich wie die <see langword="CBC" /> im Modus für alle jedoch die letzten zwei Blöcke des nur-Text.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ECB">
+      <MemberSignature Language="C#" Value="ECB" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode ECB = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.ECB" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Electronic Codebook (<see langword="ECB" />) Modus wird jeder Block einzeln verschlüsselt. Alle Blöcke von nur-Text, die identisch sind und in der gleichen Nachricht sind oder die in eine andere Meldung, die mit dem gleichen Schlüssel verschlüsselt, werden in identischen Cipher Textblöcke transformiert werden. **Wichtige**: Dieser Modus wird nicht empfohlen, da er mehrere Sicherheitslücken eröffnet. Wenn der zu verschlüsselnde Klartext erhebliche Wiederholung enthält, ist es möglich, dass der Verschlüsselungstext, jeweils blockweise unterteilt werden. Es ist auch möglich, Blockierungsanalyse zu verwenden, um den Verschlüsselungsschlüssel zu bestimmen. Darüber hinaus kann Angreifer active ersetzen und exchange einzelne Blöcke ohne Erkennung, wodurch Blöcken gespeichert und in den Stream an anderen Punkten ohne Erkennung eingefügt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OFB">
+      <MemberSignature Language="C#" Value="OFB" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode OFB = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.OFB" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausgabe-Feedback (<see langword="OFB" />) Modus kleine Schritten des nur-Text zu verschlüsseltem Text statt Verarbeitung einen gesamten Block zu einem Zeitpunkt verarbeitet. Dieser Modus ähnelt dem <see langword="CFB" />; der nur Unterschied zwischen den beiden Modi ist die Möglichkeit, die die Schicht registriert gefüllt wird. Wenn ein bit in das Verschlüsselungsverfahren geändert wird, wird das entsprechende Bit des nur-Text geändert werden. Jedoch wenn zusätzliche oder fehlende Bits aus dem Verschlüsselungstext sind, wird der nur-Text ab diesem Punkt auf geändert werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

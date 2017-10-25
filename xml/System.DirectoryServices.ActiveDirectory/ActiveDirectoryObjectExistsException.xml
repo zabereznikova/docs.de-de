@@ -1,0 +1,97 @@
+<Type Name="ActiveDirectoryObjectExistsException" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">
+  <TypeSignature Language="C#" Value="public class ActiveDirectoryObjectExistsException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ActiveDirectoryObjectExistsException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException" /> Klassenausnahme wird ausgelöst, wenn ein Active Directory-Domänendienste-Objekt erstellt wird und dieses Objekt bereits im zugrunde liegenden Verzeichnisspeicher vorhanden ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryObjectExistsException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryObjectExistsException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung mit einer Beschreibung des Fehlers.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException" /> -Klasse unter Verwendung einer angegebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ActiveDirectoryObjectExistsException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> -Objekt für die Ausnahme.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> -Objekt für die Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException" /> -Klasse, mithilfe der angegebenen Serialisierungsinformationen und Streamingkontext.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryObjectExistsException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung mit einer Beschreibung des Fehlers.</param>
+        <param name="inner">Ein <see cref="T:System.Exception" /> Objekt, das Informationen über die zugrunde liegende Ausnahme enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException" /> -Klasse unter Verwendung einer angegebenen Fehlermeldung und einem zugrunde liegenden Ausnahmeobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

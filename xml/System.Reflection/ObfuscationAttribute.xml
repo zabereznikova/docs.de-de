@@ -1,0 +1,293 @@
+<Type Name="ObfuscationAttribute" FullName="System.Reflection.ObfuscationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ObfuscationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObfuscationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ObfuscationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Event | System.AttributeTargets.Interface | System.AttributeTargets.Parameter | System.AttributeTargets.Delegate, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Weist Verbergungstools, die die angegebenen Aktionen für eine Assembly, Typ oder Member an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.ObfuscationAttribute> und <xref:System.Reflection.ObfuscateAssemblyAttribute> Attribute ermöglichen, die Assembly Autoren ihre Binärdateien mit Anmerkungen versehen, damit Verbergungstools mit externen Minimalkonfiguration ordnungsgemäß verarbeitet werden können.  
+  
+> [!IMPORTANT]
+>  Anwenden dieses Attributs wird nicht automatisch die Codeentität verbergen, für die Sie gelten. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+ Die <xref:System.Reflection.ObfuscationAttribute> Attribut hat eine Zeichenfolge <xref:System.Reflection.ObfuscationAttribute.Feature%2A> Eigenschaft. Verbergungstools können die Werte dieser Eigenschaft Funktionen zuordnen, die sie implementieren, die vorzugsweise mit einer XML-Konfigurationsdatei, die Benutzer zugreifen können. Die <xref:System.Reflection.ObfuscationAttribute> definiert zwei Funktion Zeichenfolgen, "Default" und "all". Die Zeichenfolge "Default" sollte zuordnen zu den Standardfeatures Verbergung eines Tools sollte, und "all" auf den vollständigen Satz von Verbergung-Funktionen, die von einem Tool unterstützt. Der Standardwert der <xref:System.Reflection.ObfuscationAttribute.Feature%2A> Eigenschaft ist "alle", aktivieren den vollständigen Satz von Funktionen verbergen.  
+  
+ Bei Anwendung auf eine Assembly <xref:System.Reflection.ObfuscationAttribute> gilt auch für alle Typen innerhalb der Assembly. Wenn die <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> Eigenschaft nicht angegeben wird, oder auf festgelegt ist `true`, das Attribut gilt für alle Elemente als auch. <xref:System.Reflection.ObfuscationAttribute>Gibt nicht an, ob eine Assembly öffentlich oder privat ist. Um anzugeben, ob eine Assembly öffentlich oder privat ist, verwenden die <xref:System.Reflection.ObfuscateAssemblyAttribute> Attribut.  
+  
+ Bei Anwendung auf Klassen und Strukturen, <xref:System.Reflection.ObfuscationAttribute> gilt auch für alle Member des Typs, wenn die <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> Eigenschaft nicht angegeben wird, oder auf festgelegt ist `true`.  
+  
+ Bei Anwendung auf Methoden, Parameter, Felder und Eigenschaften beeinflusst das Attribut nur auf die Entität, auf der es angewendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, eine öffentliche Assemblyzugriff mit zwei Typen: `Type1` und `Type2`. Der Assembly ist mit gekennzeichnet der <xref:System.Reflection.ObfuscateAssemblyAttribute>, dem kennzeichnet der Assembly als öffentlich behandelt werden soll (d. h. die <xref:System.Reflection.ObfuscateAssemblyAttribute.AssemblyIsPrivate%2A> Eigenschaft ist `false`).  
+  
+ `Type1`wird zum Verbergen markiert werden, da die Assembly zum Verbergen markiert ist. Ein Mitglied des `Type1` verbergen, ausgeschlossen wird mithilfe der <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft.  
+  
+ `Type2`verbergen, ausgeschlossen wird, aber Member werden zum Verbergen markiert, da die <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> Eigenschaft ist `false`.  
+  
+ Die `MethodA` Methode `Type2` ist mit dem Wert gekennzeichnet `"default"` für die <xref:System.Reflection.ObfuscationAttribute.Feature%2A> Eigenschaft. Es ist erforderlich, geben Sie `false` für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft, um die Ausnahme zu vermeiden `MethodA` vom verbergen, da der Standardwert für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft ist `true`. Das Verbergungstool sollte das Attribut nicht nach dem Verbergen entfernt werden, da die <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> Eigenschaft ist `false`. Alle anderen Attribute in diesem Codebeispiel werden nach dem Verbergen entfernt, da die <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> Eigenschaft nicht angegeben ist, und wird daher standardmäßig auf `true`.  
+  
+ Das Codebeispiel enthält Code, um die Attribute und ihre Eigenschaften anzuzeigen. Sie können die Attribute auch überprüfen, öffnen Sie die DLL-Datei mit den [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md).  
+  
+ [!code-csharp[ObfuscationAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#1)]
+ [!code-vb[ObfuscationAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObfuscationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ObfuscationAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.ObfuscationAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.ObfuscationAttribute>Gibt nicht an, ob eine Assembly öffentlich oder privat ist. Um anzugeben, ob eine Assembly öffentlich oder privat ist, verwenden <xref:System.Reflection.ObfuscateAssemblyAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyToMembers">
+      <MemberSignature Language="C#" Value="public bool ApplyToMembers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyToMembers" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.ApplyToMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Boolean" /> Wert, der angibt, ob das Attribut eines Typs wird auf die Member des Typs angewendet.</summary>
+        <value>
+          <see langword="true" />Wenn das Attribut auf die Member des Typs angewendet wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird ignoriert, wenn das Attribut auf einen Member angewendet wird.  
+  
+> [!IMPORTANT]
+>  Anwenden dieses Attributs wird nicht automatisch die Codeentität verbergen, für die Sie gelten. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt einen Typ, der vom Verbergen ausgeschlossen wird, aber der Ausschluss ist zu Membern nicht gültig, da die <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> Eigenschaft ist `false`.  
+  
+ Dieser Code ist Teil eines größeren Beispiels, das kompiliert und ausgeführt werden kann. Weitere Informationen finden Sie unter der <xref:System.Reflection.ObfuscationAttribute>-Klasse.  
+  
+ [!code-csharp[ObfuscationAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#2)]
+ [!code-vb[ObfuscationAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public bool Exclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Exclude" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Boolean" /> Wert, der angibt, ob das Verbergungstool den Typ oder Member vom Verbergen ausschließen soll.</summary>
+        <value>
+          <see langword="true" />Wenn der Typ oder Member, die auf die dieses Attribut angewendet wird vom Verbergen ausgeschlossen werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Anwenden dieses Attributs wird nicht automatisch die Codeentität verbergen, für die Sie gelten. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt einen Typ, der gekennzeichnet wurde, dass vom Verbergen ausgeschlossen werden. Es ist nicht erforderlich, um anzugeben der <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> -Eigenschaft, da sie standardmäßig `true`, aber die beabsichtigte Clear macht es explizit anzugeben. Die <xref:System.Reflection.ObfuscationAttribute.ApplyToMembers%2A> festgelegt ist, um `false`, sodass der Ausschluss vom Verbergen nicht auf die Member der Klasse angewendet wird. D. h. der Klassenname ist sichtbar, aber Elemente verborgen sind.  
+  
+ Die `MethodA` Methode ist mit dem Wert gekennzeichnet `"default"` für die <xref:System.Reflection.ObfuscationAttribute.Feature%2A> Eigenschaft. Es ist erforderlich, geben Sie `false` für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft, um eine Ausnahme zu vermeiden `MethodA` vom verbergen, da der Standardwert für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft ist `true`. Die <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> Eigenschaft `false` , damit die obfuskation-Tool nicht das Attribut nach dem Verbergen entfernt wird.  
+  
+ Dieser Code ist Teil eines größeren Beispiels, das kompiliert und ausgeführt werden kann. Weitere Informationen finden Sie unter der <xref:System.Reflection.ObfuscationAttribute>-Klasse.  
+  
+ [!code-csharp[ObfuscationAttribute#4](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#4)]
+ [!code-vb[ObfuscationAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Feature">
+      <MemberSignature Language="C#" Value="public string Feature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Feature" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.Feature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Zeichenfolgenwert, der vom Verbergungstool erkannt wird und Verarbeitungsoptionen angibt.</summary>
+        <value>Ein Zeichenfolgenwert, der vom Verbergungstool erkannt wird und Verarbeitungsoptionen angibt. Der Standardwert ist "all".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An diese Eigenschaft übergebene Wert hängt von der Verbergungstool verwendet. Es wird empfohlen, diese Anbieter Verschleierung Tools mindestens unterstützt "default" und "all". Anbieter können diese Einstellungen in Verbindung mit der XML-Konfigurationsdatei.  
+  
+> [!IMPORTANT]
+>  Anwenden dieses Attributs wird nicht automatisch die Codeentität verbergen, für die Sie gelten. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Methode, die mit dem Wert gekennzeichnet ist `"default"` für die <xref:System.Reflection.ObfuscationAttribute.Feature%2A> Eigenschaft. Es ist erforderlich, geben Sie `false` für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft, um die Ausnahme zu vermeiden `MethodA` vom verbergen, da der Standardwert für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft ist `true`. Die <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> Eigenschaft `false` , damit die obfuskation-Tool nicht das Attribut nach dem Verbergen entfernt wird.  
+  
+ Dieser Code ist Teil eines größeren Beispiels, das kompiliert und ausgeführt werden kann. Weitere Informationen finden Sie unter der <xref:System.Reflection.ObfuscationAttribute>-Klasse.  
+  
+ [!code-csharp[ObfuscationAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#3)]
+ [!code-vb[ObfuscationAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripAfterObfuscation">
+      <MemberSignature Language="C#" Value="public bool StripAfterObfuscation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StripAfterObfuscation" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscationAttribute.StripAfterObfuscation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Boolean" /> Wert, der angibt, ob das Verbergungstool nach der Verarbeitung dieses Attribut entfernt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn ein Verbergungstool das Attribut nach der Verarbeitung entfernen soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Attribute sollten nicht entfernt werden, wenn Ihre Bibliothek Bestandteil einer anderen Anwendung als, und als Teil der Anwendung verborgen.  
+  
+> [!IMPORTANT]
+>  Anwenden dieses Attributs wird nicht automatisch die Codeentität verbergen, für die Sie gelten. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine <xref:System.Reflection.ObfuscationAttribute> , deren <xref:System.Reflection.ObfuscationAttribute.StripAfterObfuscation%2A> Eigenschaft `false` , damit die obfuskation-Tool nicht das Attribut nach dem Verbergen entfernt wird. Es ist erforderlich, geben Sie `false` für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft, um die Ausnahme zu vermeiden `MethodA` vom verbergen, da der Standardwert für die <xref:System.Reflection.ObfuscationAttribute.Exclude%2A> Eigenschaft ist `true`.  
+  
+ Dieser Code ist Teil eines größeren Beispiels, das kompiliert und ausgeführt werden kann. Weitere Informationen finden Sie unter der <xref:System.Reflection.ObfuscationAttribute>-Klasse.  
+  
+ [!code-csharp[ObfuscationAttribute#4](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscationAttribute/cs/source.cs#4)]
+ [!code-vb[ObfuscationAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscationAttribute/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

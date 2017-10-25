@@ -1,0 +1,6 @@
+<Namespace Name="System.Activities.Statements.Tracking">
+  <Docs>
+    <summary>Stellt Klassen für die Überwachung von State Machine Zustand Ausführungen und Statusübergängen bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,509 @@
+<Type Name="OdbcType" FullName="System.Data.Odbc.OdbcType">
+  <TypeSignature Language="C#" Value="public enum OdbcType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OdbcType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Datentyp eines Felds, einer Eigenschaft, für die Verwendung in einer <see cref="T:System.Data.Odbc.OdbcParameter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Zuordnungen zwischen <xref:System.Data.Odbc.OdbcType> -Datentypen, ODBC-Datentypen (in Klammern angezeigt) und .NET Framework-Typen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BigInt">
+      <MemberSignature Language="C#" Value="BigInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType BigInt = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.BigInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Genauen numerischen Wert mit einer Genauigkeit von 19 (sofern signiert) oder 20 (falls ohne Vorzeichen) und Skalierung von 0 (signiert: – 2 [63] &lt;= n &lt;= 2 [63] – 1, unsigniert: 0 &lt;= n &lt;= 2 [64] – 1) (SQL_BIGINT). Entspricht dem <see cref="T:System.Int64" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Binary">
+      <MemberSignature Language="C#" Value="Binary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Binary = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Binary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Datenstrom von Binärdaten (SQL_BINARY). Dies ordnet eine <see cref="T:System.Array" /> vom Typ <see cref="T:System.Byte" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bit">
+      <MemberSignature Language="C#" Value="Bit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Bit = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Bit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einzelnes Bit Binärdaten (SQL_BIT). Entspricht dem <see cref="T:System.Boolean" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Char">
+      <MemberSignature Language="C#" Value="Char" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Char = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Char" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge mit Zeichen fester Länge (SQL_CHAR). Entspricht dem <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Date = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Datum, Daten in das Format Yyyymmdd (SQL_TYPE_DATE). Entspricht dem <see cref="T:System.DateTime" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime">
+      <MemberSignature Language="C#" Value="DateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType DateTime = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.DateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Datum im Format Yyyymmddhhmmss (SQL_TYPE_TIMESTAMP). Entspricht dem <see cref="T:System.DateTime" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Decimal">
+      <MemberSignature Language="C#" Value="Decimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Decimal = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Decimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Signiert, genau, numerischen Wert mit einer Genauigkeit von mindestens p und Dezimalstellen s, wobei 1 &lt;= p &lt;= 15 und s &lt;= p. Die maximale Genauigkeit ist treiberspezifische (SQL_DECIMAL). Entspricht dem <see cref="T:System.Decimal" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Double">
+      <MemberSignature Language="C#" Value="Double" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Double = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Double" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Signiert, ungefähren numerischen Wert mit einer binären Genauigkeit von 53 (0 (null) oder absoluten Wert 10 [–308] 10[308]) (SQL_DOUBLE). Entspricht dem <see cref="T:System.Double" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="Image" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Image = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Binärdaten variabler Länge. Maximale Länge ist datenquellenabhängig (SQL_LONGVARBINARY). Dies ordnet eine <see cref="T:System.Array" /> vom Typ <see cref="T:System.Byte" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="Int" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Int = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Int" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Genauen numerischen Wert mit einer Genauigkeit von 10 und Skalierung von 0 (signiert: – 2 [31] &lt;= n &lt;= 2 [31] – 1, unsigniert: 0 &lt;= n &lt;= 2 [32] – 1) (SQL_INTEGER). Entspricht dem <see cref="T:System.Int32" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NChar">
+      <MemberSignature Language="C#" Value="NChar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType NChar = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.NChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unicode-Zeichenfolge der Zeichenfolge fester Länge (SQL_WCHAR). Entspricht dem <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NText">
+      <MemberSignature Language="C#" Value="NText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType NText = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.NText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Unicode-Zeichen von variabler Länge, die Daten. Maximale Länge ist datenquellenabhängig. (SQL_WLONGVARCHAR). Entspricht dem <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numeric">
+      <MemberSignature Language="C#" Value="Numeric" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Numeric = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Numeric" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Signiert, genau, numerischen Wert mit einer Genauigkeit p und festen Dezimalstellen s, wobei 1 &lt;= p &lt;= 15 und "s" &lt;= p (SQL_NUMERIC). Entspricht dem <see cref="T:System.Decimal" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NVarChar">
+      <MemberSignature Language="C#" Value="NVarChar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType NVarChar = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.NVarChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein variabler Länge Stream von Unicode-Zeichen (SQL_WVARCHAR). Entspricht dem <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Real">
+      <MemberSignature Language="C#" Value="Real" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Real = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Real" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Signiert, ungefähren numerischen Wert mit einer Genauigkeit 24 (0 (null) oder absoluten Wert 10 [–38] 10[38]). (SQL_REAL). Entspricht dem <see cref="T:System.Single" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDateTime">
+      <MemberSignature Language="C#" Value="SmallDateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType SmallDateTime = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.SmallDateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datums- und Uhrzeitdaten in Format Yyyymmddhhmmss (SQL_TYPE_TIMESTAMP). Entspricht dem <see cref="T:System.DateTime" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallInt">
+      <MemberSignature Language="C#" Value="SmallInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType SmallInt = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.SmallInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Genauen numerischen Wert mit einer Genauigkeit von 5 und Skalierung von 0 (signiert: – 32.768 &lt;= n &lt;= 32.767, unsigniert: 0 &lt;= n &lt;65.535 =) (SQL_SMALLINT). Entspricht dem <see cref="T:System.Int16" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Text = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeichendaten variabler Länge. Maximale Länge ist datenquellenabhängig (SQL_LONGVARCHAR). Entspricht dem <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Time">
+      <MemberSignature Language="C#" Value="Time" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Time = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Time" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Datum, Daten im Format Hhmmss (SQL_TYPE_TIMES). Entspricht dem <see cref="T:System.DateTime" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="Timestamp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType Timestamp = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.Timestamp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Datenstrom von Binärdaten (SQL_BINARY). Dies ordnet eine <see cref="T:System.Array" /> vom Typ <see cref="T:System.Byte" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TinyInt">
+      <MemberSignature Language="C#" Value="TinyInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType TinyInt = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.TinyInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Genauen numerischen Wert mit einer Genauigkeit von 3 und Skalierung von 0 (signiert: – 128 &lt;= n &lt;= 127, unsigniert: 0 &lt;= n &lt;= 255)(SQL_TINYINT). Entspricht dem <see cref="T:System.Byte" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueIdentifier">
+      <MemberSignature Language="C#" Value="UniqueIdentifier" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType UniqueIdentifier = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.UniqueIdentifier" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein fester Länge, die GUID (SQL_GUID). Entspricht dem <see cref="T:System.Guid" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VarBinary">
+      <MemberSignature Language="C#" Value="VarBinary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType VarBinary = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.VarBinary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Variabler Länge, die binäre. Die maximale wird durch den Benutzer (SQL_VARBINARY) festgelegt. Dies ordnet eine <see cref="T:System.Array" /> vom Typ <see cref="T:System.Byte" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VarChar">
+      <MemberSignature Language="C#" Value="VarChar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Odbc.OdbcType VarChar = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcType.VarChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Stream variabler Länge-Zeichenfolge (SQL_CHAR). Entspricht dem <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

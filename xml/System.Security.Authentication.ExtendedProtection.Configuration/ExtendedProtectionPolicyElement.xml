@@ -1,0 +1,175 @@
+<Type Name="ExtendedProtectionPolicyElement" FullName="System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement">
+  <TypeSignature Language="C#" Value="public sealed class ExtendedProtectionPolicyElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExtendedProtectionPolicyElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.MonoTODO</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement" /> Klasse stellt ein Konfigurationselement für ein <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> für serveranwendungen mit standard-Konfigurationsdateien konfiguriert werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedProtectionPolicyElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verendung dieser Konstruktor initialisiert eine neue Instanz der der <xref:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement> -Klasse, die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.PolicyEnforcement%2A> -Eigenschaftensatz auf <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Never>, die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.ProtectionScenario%2A> -Eigenschaftensatz auf <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>, und die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection> -Eigenschaftensatz auf `null`.  
+  
+ Die Eigenschaften auf der <xref:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement> Klasseninstanz sollte festgelegt werden, auf die entsprechenden Werte für die Anwendung vor dem Aufruf der <xref:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.BuildPolicy%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy BuildPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy BuildPolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.BuildPolicy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.BuildPolicy" /> Methode erstellt ein neues <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" /> -Instanz auf Grundlage der Eigenschaften für die <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement" /> Klasse.</summary>
+        <returns>Ein neues <see cref="T:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" /> -Instanz, die erweiterte Schutzrichtlinie erstellt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften auf der <xref:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement> Klasseninstanz muss festgelegt werden, bevor die <xref:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.BuildPolicy%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomServiceNames">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection CustomServiceNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection CustomServiceNames" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.CustomServiceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customServiceNames")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den benutzerdefinierten Namen (SPN) Liste verwendet, um eine Client-SPN für dieses Konfigurationselement der Richtlinie verglichen.</summary>
+        <value>Gibt eine <see cref="T:System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection" /> , die die benutzerdefinierte Liste von Dienstanbieternamen verwendet, um die Überprüfung eines Clients SPN Übereinstimmungen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyEnforcement">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.PolicyEnforcement PolicyEnforcement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Authentication.ExtendedProtection.PolicyEnforcement PolicyEnforcement" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.PolicyEnforcement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("policyEnforcement")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.PolicyEnforcement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Erzwingung der Richtlinienwert für dieses Konfigurationselement für die Richtlinie.</summary>
+        <value>Gibt eine <see cref="T:System.Security.Authentication.ExtendedProtection.PolicyEnforcement" /> Wert, der angibt, wann die erweiterte Schutzrichtlinie erzwungen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist ein <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionScenario">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.ProtectionScenario ProtectionScenario { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Authentication.ExtendedProtection.ProtectionScenario ProtectionScenario" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.ProtectionScenario" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("protectionScenario", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ProtectionScenario</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Art des Schutzes durch die erweiterte Schutzrichtlinie für dieses Konfigurationselement für die Richtlinie erzwungen.</summary>
+        <value>Ein <see cref="T:System.Security.Authentication.ExtendedProtection.ProtectionScenario" />-Wert, der die Art des von der Richtlinie erzwungenen Schutzes angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

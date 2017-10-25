@@ -1,0 +1,99 @@
+<Type Name="IDesignerVerbProviderService" FullName="System.Workflow.ComponentModel.Design.IDesignerVerbProviderService">
+  <TypeSignature Language="C#" Value="public interface IDesignerVerbProviderService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerVerbProviderService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.IDesignerVerbProviderService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht es Aktivitätsdesignerentwicklern, einem Aktivitätsdesigner benutzerdefinierte Designerverbanbieter hinzuzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Klassen, die diese Schnittstelle implementieren, können benutzerdefinierte Verbanbieter zu <xref:System.Workflow.ComponentModel.Design.IDesignerVerbProvider>-Klassen hinzufügen und aus diesen Klassen entfernen. Dazu zählen alle Klassen, die die <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>-Schnittstelle implementieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddVerbProvider">
+      <MemberSignature Language="C#" Value="public void AddVerbProvider (System.Workflow.ComponentModel.Design.IDesignerVerbProvider verbProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddVerbProvider(class System.Workflow.ComponentModel.Design.IDesignerVerbProvider verbProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IDesignerVerbProviderService.AddVerbProvider(System.Workflow.ComponentModel.Design.IDesignerVerbProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbProvider" Type="System.Workflow.ComponentModel.Design.IDesignerVerbProvider" />
+      </Parameters>
+      <Docs>
+        <param name="verbProvider">Das hinzuzufügende <see cref="T:System.Workflow.ComponentModel.Design.IDesignerVerbProvider" />.</param>
+        <summary>Fügt der von einem <see cref="T:System.Workflow.ComponentModel.Design.IDesignerVerbProvider" /> verwendeten Liste von Verbanbietern eine Klasse hinzu, die die <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />-Schnittstelle implementiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveVerbProvider">
+      <MemberSignature Language="C#" Value="public void RemoveVerbProvider (System.Workflow.ComponentModel.Design.IDesignerVerbProvider verbProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveVerbProvider(class System.Workflow.ComponentModel.Design.IDesignerVerbProvider verbProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IDesignerVerbProviderService.RemoveVerbProvider(System.Workflow.ComponentModel.Design.IDesignerVerbProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbProvider" Type="System.Workflow.ComponentModel.Design.IDesignerVerbProvider" />
+      </Parameters>
+      <Docs>
+        <param name="verbProvider">Das zu entfernende <see cref="T:System.Workflow.ComponentModel.Design.IDesignerVerbProvider" />-Element.</param>
+        <summary>Entfernt eine Klasse, die die <see cref="T:System.Workflow.ComponentModel.Design.IDesignerVerbProvider" />-Schnittstelle implementiert, aus der von einem <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> verwendeten Liste von Verbanbietern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbProviders">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.IDesignerVerbProvider&gt; VerbProviders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.ComponentModel.Design.IDesignerVerbProvider&gt; VerbProviders" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.IDesignerVerbProviderService.VerbProviders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.IDesignerVerbProvider&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine schreibgeschützte <see cref="T:System.Workflow.ComponentModel.Design.IDesignerVerbProvider" />-Auflistung ab.</summary>
+        <value>Eine schreibgeschützte <see cref="T:System.Workflow.ComponentModel.Design.IDesignerVerbProvider" />-Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.IDesignerVerbProviderService.VerbProviders%2A> gibt eine <xref:System.Workflow.ComponentModel.Design.IDesignerVerbProvider>-Auflistung zurück, die alle Verbanbieter enthält, die einem bestimmten <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> zugeordnet sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

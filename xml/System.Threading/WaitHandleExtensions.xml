@@ -1,0 +1,138 @@
+<Type Name="WaitHandleExtensions" FullName="System.Threading.WaitHandleExtensions">
+  <TypeSignature Language="C#" Value="public static class WaitHandleExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WaitHandleExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.WaitHandleExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Handles</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Hilfsmethoden für die Arbeit mit einem sicheren Handle für ein Wait-Handle bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.WaitHandleExtensions> Klasse enthält zwei Erweiterungsmethoden, mit denen Sie ein sicheres Handle für ein Wait-Handle zu erstellen und das systemeigene Betriebssystemhandle aus ein sicheres Handle abrufen können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSafeWaitHandle">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.SafeHandles.SafeWaitHandle GetSafeWaitHandle (this System.Threading.WaitHandle waitHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Win32.SafeHandles.SafeWaitHandle GetSafeWaitHandle(class System.Threading.WaitHandle waitHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandleExtensions.GetSafeWaitHandle(System.Threading.WaitHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandle" Type="System.Threading.WaitHandle" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandle">Ein systemeigenes Betriebssystemhandle.</param>
+        <summary>Ruft das sichere Handle für ein systemeigenes Betriebssystem-Wait-Handle ab.</summary>
+        <returns>Das sichere Wait-Handle, welches das systemeigene Betriebssystem-Wait-Handle umschließt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitHandleExtensions.GetSafeWaitHandle%2A>ist eine Erweiterungsmethode, die Abrufen des Werts entspricht der <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="waitHandle" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSafeWaitHandle">
+      <MemberSignature Language="C#" Value="public static void SetSafeWaitHandle (this System.Threading.WaitHandle waitHandle, Microsoft.Win32.SafeHandles.SafeWaitHandle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSafeWaitHandle(class System.Threading.WaitHandle waitHandle, class Microsoft.Win32.SafeHandles.SafeWaitHandle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandleExtensions.SetSafeWaitHandle(System.Threading.WaitHandle,Microsoft.Win32.SafeHandles.SafeWaitHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandle" Type="System.Threading.WaitHandle" RefType="this" />
+        <Parameter Name="value" Type="Microsoft.Win32.SafeHandles.SafeWaitHandle" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandle">Dieses Wait-Handle kapselt ein betriebssystemspezifisches Objekt, das auf exklusiven Zugriff auf gemeinsam genutzte Ressourcen wartet.</param>
+        <param name="value">Das sichere Handle, welches das Betriebssystem-Handle umschließt.</param>
+        <summary>Stellt ein sicheres Handle für ein systemeigenes Betriebssystem-Wait-Handle ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitHandleExtensions.SetSafeWaitHandle%2A>ist eine Erweiterungsmethode, die zum Zuweisen eines Werts zur entspricht der <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="waitHandle" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

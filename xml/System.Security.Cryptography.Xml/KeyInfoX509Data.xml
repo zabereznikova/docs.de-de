@@ -1,0 +1,546 @@
+<Type Name="KeyInfoX509Data" FullName="System.Security.Cryptography.Xml.KeyInfoX509Data">
+  <TypeSignature Language="C#" Value="public class KeyInfoX509Data : System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyInfoX509Data extends System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.KeyInfoX509Data" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.KeyInfoClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see langword="&lt;X509Data&gt;" /> Unterelement des XMLDSIG oder XML-Verschlüsselung <see langword="&lt;KeyInfo&gt;" /> Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> -Klasse stellt die `<X509Data>` Element, das Informationen für x. 509v3-Zertifikat enthält im Zusammenhang mit der Überprüfung oder Verschlüsselung Schlüssel. Angenommen, ein `<X509Data>` Element enthalten ein x. 509-Zertifikat, dessen öffentlicher Schlüssel des Antragstellers wird den Validierungsschlüssel, oder eine Kette von x. 509-Zertifikaten, die ein Zertifikat für den Validierungsschlüssel oder andere Bezeichner für verknüpfte x. 509-Zertifikate zu beenden.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> -Klasse auf, wenn x. 509-Zertifikatsdaten in einem verschlüsselten oder signierten XML-Dokument eingeschlossen werden müssen.  
+  
+ Weitere Informationen zu den `<X509Data>` Element, finden Sie im Abschnitt 4.4.4 der XMLDSIG-Spezifikation, die über das World Wide Web Consortium (W3C) unter www.w3.org/TR/xmldsig-core/ verfügbar ist, oder finden Sie in der XML-Verschlüsselung-Spezifikation, die verfügbar ist das W3C am www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im erste Beispiel wird veranschaulicht, wie eine XML-Datei mit einer getrennten Signatur signiert. Im zweite Beispiel wird veranschaulicht, wie eine XML-Datei mit einer eingeschlossenen Signatur signiert.  
+  
+ **Beispiel #1**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.KeyInfoX509Data_Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Detached/CPP/examplecreatedetached.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.KeyInfoX509Data_Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Detached/CS/examplecreatedetached.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.KeyInfoX509Data_Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Detached/VB/examplecreatedetached.vb#1)]  
+  
+ **Beispiel #2**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.KeyInfoX509Data_Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Envelope/CPP/examplecreateenvelope.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.KeyInfoX509Data_Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Envelope/CS/examplecreateenvelope.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.KeyInfoX509Data_Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Envelope/VB/examplecreateenvelope.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoX509Data ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoX509Data (byte[] rgbCert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rgbCert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rgbCert" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbCert">Die ASN. 1 DER Codierung des ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> Objekt zum Initialisieren der neuen Instanz <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> aus.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Klasse aus der angegebenen ASN. 1 DER Codierung eines x. 509v3-Zertifikats.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoX509Data (System.Security.Cryptography.X509Certificates.X509Certificate cert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate cert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cert" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="cert">Die <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> Objekt zum Initialisieren der neuen Instanz <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> aus.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Klasse aus dem angegebenen x. 509v3-Zertifikat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im erste Beispiel wird veranschaulicht, wie eine XML-Datei mit einer getrennten Signatur signiert. Im zweite Beispiel wird veranschaulicht, wie eine XML-Datei mit einer eingeschlossenen Signatur signiert.  
+  
+ **Beispiel #1**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.KeyInfoX509Data_Detached#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Detached/CPP/examplecreatedetached.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.XML.KeyInfoX509Data_Detached#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Detached/CS/examplecreatedetached.cs#2)]
+ [!code-vb[System.Security.Cryptography.XML.KeyInfoX509Data_Detached#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Detached/VB/examplecreatedetached.vb#2)]  
+  
+ **Beispiel #2**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.KeyInfoX509Data_Envelope#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Envelope/CPP/examplecreateenvelope.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.XML.KeyInfoX509Data_Envelope#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Envelope/CS/examplecreateenvelope.cs#2)]
+ [!code-vb[System.Security.Cryptography.XML.KeyInfoX509Data_Envelope#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.KeyInfoX509Data_Envelope/VB/examplecreateenvelope.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="cert" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoX509Data (System.Security.Cryptography.X509Certificates.X509Certificate cert, System.Security.Cryptography.X509Certificates.X509IncludeOption includeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate cert, valuetype System.Security.Cryptography.X509Certificates.X509IncludeOption includeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509IncludeOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cert" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+        <Parameter Name="includeOption" Type="System.Security.Cryptography.X509Certificates.X509IncludeOption" />
+      </Parameters>
+      <Docs>
+        <param name="cert">Die <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> Objekt zum Initialisieren der neuen Instanz <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> aus.</param>
+        <param name="includeOption">Eines der <see cref="T:System.Security.Cryptography.X509Certificates.X509IncludeOption" /> Werte, der angibt, welcher Anteil der Zertifikatskette eingeschlossen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Klasse aus dem angegebenen x. 509v3-Zertifikat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> Objekt beim Signieren und Überprüfen von XML-Dokument.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.KeyInfoX509Data#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.KeyInfoX509Data/cs/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.Xml.KeyInfoX509Data#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.KeyInfoX509Data/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="cert" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat besitzt nur eine partielle Zertifikatskette.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCertificate">
+      <MemberSignature Language="C#" Value="public void AddCertificate (System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCertificate(class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.AddCertificate(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Die <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> hinzuzufügendes Objekt die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</param>
+        <summary>Fügt das angegebene x. 509v3-Zertifikat auf dem <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="certificate" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddIssuerSerial">
+      <MemberSignature Language="C#" Value="public void AddIssuerSerial (string issuerName, string serialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddIssuerSerial(string issuerName, string serialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.AddIssuerSerial(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+        <Parameter Name="serialNumber" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">Der Namensteil der Aussteller des Paares, das Hinzufügen der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</param>
+        <param name="serialNumber">Die Seriennummer Teil das Paar, das Hinzufügen der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</param>
+        <summary>Fügt das angegebene Issuer Name und der Seriennummer-Paar, das die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Identifikation führt jedes x. 509v3-Zertifikat den Namen der Zertifizierungsstelle, die das Zertifikat gekoppelt mit einer eindeutigen Seriennummer zugewiesen, die von der Zertifizierungsstelle ausgestellt.  
+  
+ Die <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.AddIssuerSerial%2A> Methode fügt Informationen über ein Paar aus Ausstellername und Seriennummer auf eine Liste von <xref:System.Security.Cryptography.Xml.X509IssuerSerial> Objekte, die über zugegriffen werden kann die <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.IssuerSerials%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddSubjectKeyId">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt einen Subjektschlüsselbezeichner (SKI), um die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Betreff Schlüsselbezeichner (kaufende) sind eine schnelle Möglichkeit zum Identifizieren von Zertifikaten, die einen bestimmten öffentlichen Schlüssel enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddSubjectKeyId">
+      <MemberSignature Language="C#" Value="public void AddSubjectKeyId (byte[] subjectKeyId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSubjectKeyId(unsigned int8[] subjectKeyId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.AddSubjectKeyId(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subjectKeyId" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="subjectKeyId">Ein Bytearray, das den Subjektschlüsselbezeichner (SKI) ein hinzuzufügende darstellt der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</param>
+        <summary>Fügt den angegebenen Betreff Schlüsselbezeichner (SKI)-Byte-Array für die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Betreff Schlüsselbezeichner (kaufende) sind eine Möglichkeit zum Identifizieren von Zertifikaten, die einen bestimmten öffentlichen Schlüssel enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSubjectKeyId">
+      <MemberSignature Language="C#" Value="public void AddSubjectKeyId (string subjectKeyId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSubjectKeyId(string subjectKeyId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.AddSubjectKeyId(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subjectKeyId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subjectKeyId">Eine Zeichenfolge, die den Subjektschlüsselbezeichner (SKI) ein hinzuzufügende stellt die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</param>
+        <summary>Fügt die angegebenen Betreff Schlüsselbezeichner (SKI) Zeichenfolge, die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Betreff Schlüsselbezeichner (kaufende) sind eine schnelle Möglichkeit zum Identifizieren von Zertifikaten, die einen bestimmten öffentlichen Schlüssel enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSubjectName">
+      <MemberSignature Language="C#" Value="public void AddSubjectName (string subjectName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSubjectName(string subjectName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.AddSubjectName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subjectName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subjectName">Der Name der Entität, die ein hinzuzufügende x. 509-Zertifikat ausgestellt hat, wurde die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</param>
+        <summary>Fügt den Antragstellernamen der Entität, die ein x. 509v3-Zertifikat ausgestellt hat, wurde die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificates">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList Certificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList Certificates" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoX509Data.Certificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der x. 509v3-Zertifikate, die in der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <value>Eine Liste von x. 509-Zertifikate, die in der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CRL">
+      <MemberSignature Language="C#" Value="public byte[] CRL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] CRL" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoX509Data.CRL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den (Certificate Revocation Liste CRL) als Bestandteil der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <value>Der (Certificate Revocation Liste CRL) als Bestandteil der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <returns>Eine XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlElement> von dieser Methode zurückgegebene Objekt ist für die Verwendung als Unterelement des ein XMLDSIG oder XML-Verschlüsselung geeignet `<KeyInfo>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerSerials">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList IssuerSerials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList IssuerSerials" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoX509Data.IssuerSerials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der <see cref="T:System.Security.Cryptography.Xml.X509IssuerSerial" /> Strukturen, die ein Paar aus Ausstellername und Seriennummer darstellen.</summary>
+        <value>Eine Liste der <see cref="T:System.Security.Cryptography.Xml.X509IssuerSerial" /> Strukturen, die ein Paar aus Ausstellername und Seriennummer darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.IssuerSerials%2A> Eigenschaft stellt die `<X509IssuerSerial`> Element eine digitale Signatur mit einer Liste von <xref:System.Security.Cryptography.Xml.X509IssuerSerial> enthaltenen Strukturen.  Die `<X509IssuerSerial`> Element darstellt, einen Aussteller und Seriennummer paarweise angegeben, die ein bestimmtes x. 509v3-Zertifikat identifizieren.  
+  
+ Der Aussteller eines x. 509-Zertifikats ist der Name der Zertifizierungsstelle, die das Zertifikat ausgestellt hat. Zertifizierungsstellen weisen Sie jedes Zertifikat, dass sie eine eindeutige fortlaufende Nummer ausgeben.  
+  
+ Sie können einen Namen und eine Seriennummer Paar mit Hinzufügen der <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.AddIssuerSerial%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoX509Data.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Xml.XmlElement" /> -Objekt, das den Status der gibt an, die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</param>
+        <summary>Die Eingabe analysiert <see cref="T:System.Xml.XmlElement" /> -Objekt und konfiguriert den internen Zustand des der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> -Objekts auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird normalerweise verwendet, den Prozess ein `<X509Data>` Unterelement des ein `<KeyInfo>` Element.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="element" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <paramref name="element" /> Parameter enthält kein &lt; <see langword="X509IssuerName" /> &gt; Knoten.  
+  
+ - oder -   
+  
+ Die <paramref name="element" /> Parameter enthält kein &lt; <see langword="X509SerialNumber" /> &gt; Knoten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectKeyIds">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList SubjectKeyIds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList SubjectKeyIds" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoX509Data.SubjectKeyIds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Subject Key Identifier (kaufende) enthalten sind, der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <value>Eine Liste von Subject Key Identifier (kaufende) enthalten sind, der <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Betreff Schlüsselbezeichner (kaufende) bieten eine Möglichkeit zum Identifizieren von Zertifikaten, die einen bestimmten öffentlichen Schlüssel enthalten. Eine SKI kann verwendet werden, um eine oder mehrere Zertifikate mit einem bestimmten Schlüsselpaar zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList SubjectNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList SubjectNames" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoX509Data.SubjectNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Antragstellernamen der in enthaltenen Entitäten die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</summary>
+        <value>Eine Liste der Antragstellernamen der in enthaltenen Entitäten die <see cref="T:System.Security.Cryptography.Xml.KeyInfoX509Data" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes x. 509v3-Zertifikat enthält einen Antragstellernamen an. Dieser Name kann verwendet werden, um eine oder mehrere Zertifikate zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

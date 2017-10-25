@@ -1,0 +1,275 @@
+<Type Name="GlyphRunDrawing" FullName="System.Windows.Media.GlyphRunDrawing">
+  <TypeSignature Language="C#" Value="public sealed class GlyphRunDrawing : System.Windows.Media.Drawing" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GlyphRunDrawing extends System.Windows.Media.Drawing" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GlyphRunDrawing" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Drawing</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Windows.Media.Drawing" /> -Objekt, rendert eine <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GlyphRun> -Objekt stellt eine Sequenz von Symbolen aus einer einzelnen Schriftart einer einzelnen Schriftfamilie mit einer einzelnen Größe und mit einem einzelnen Rendering-Format dar.  
+  
+ <xref:System.Windows.Media.GlyphRun>enthält die Schriftartdetails wie z. B. Glyphe Indizes und Positionen der einzelnen Glyphe. Darüber hinaus <xref:System.Windows.Media.GlyphRun> die ursprünglichen Unicode-Codepunkten die Ausführung generiert wurde, enthält Zeichen, das Symbol Puffer offset Zuordnungsflags Informationen und pro Zeichen und pro Symbol.  
+  
+ Jedes Symbol in einer <xref:System.Windows.Media.GlyphRun> definiert Metriken, die angeben, wie sie mit anderen entspricht <xref:System.Windows.Documents.Glyphs>. Die folgende Abbildung definiert die verschiedenen typografischen Eigenschaften von zwei unterschiedlichen Symbolen.  
+  
+ ![Diagramm der Symbol-Maßangaben](~/add/media/glyph-example.png "Diagramm der Symbol-Maßangaben")  
+Verschiedene typografischen Eigenschaften von zwei unterschiedlichen Symbolen  
+  
+ **Features von Freezable:** ein <xref:System.Windows.Media.GlyphRunDrawing> ist eine Art von <xref:System.Windows.Freezable> Objekt und kann daher fixiert werden, um die Leistung zu verbessern. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ **Vorsicht:** <xref:System.Windows.Media.GlyphRunDrawing> Objekte Ausführung unter teilweiser Vertrauenswürdigkeit nicht unterstützt. Eine Anwendung benötigen volle Vertrauenswürdigkeit verwenden <xref:System.Windows.Media.GlyphRunDrawing> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.GlyphRunDrawing> zum Zeichnen des Texts "Hello World".  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GlyphRunDrawingExample.cs#glyphrundrawingexampleinline)]
+ [!code-xaml[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GlyphRunExample.xaml#glyphrundrawingexampleinline)]  
+  
+ Ein <xref:System.Windows.Media.GlyphRun> ist ein Low-Level-Objekt für die Verwendung mit festem Format Dokumentpräsentation und Drucken Szenarien vorgesehen. Eine einfachere Möglichkeit zum Zeichnen von Text auf dem Bildschirm ist die Verwendung einer <xref:System.Windows.Controls.Label> oder ein <xref:System.Windows.Controls.TextBlock>. Weitere Informationen zu <xref:System.Windows.Media.GlyphRun>, finden Sie unter der [Einführung in die GlyphRun-Objekt und die Symbolelement](~/docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) (Übersicht).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlyphRunDrawing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphRunDrawing.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.GlyphRunDrawing" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlyphRunDrawing (System.Windows.Media.Brush foregroundBrush, System.Windows.Media.GlyphRun glyphRun);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Brush foregroundBrush, class System.Windows.Media.GlyphRun glyphRun) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphRunDrawing.#ctor(System.Windows.Media.Brush,System.Windows.Media.GlyphRun)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="foregroundBrush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="glyphRun" Type="System.Windows.Media.GlyphRun" />
+      </Parameters>
+      <Docs>
+        <param name="foregroundBrush">Vordergrundpinsel verwenden Sie für die <see cref="T:System.Windows.Media.GlyphRunDrawing" />.</param>
+        <param name="glyphRun">Die <see cref="T:System.Windows.Media.GlyphRun" /> für die Verwendung in dieser <see cref="T:System.Windows.Media.GlyphRunDrawing" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.GlyphRunDrawing" /> -Klasse durch Angabe der Vordergrundpinsel und <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GlyphRunDrawing Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GlyphRunDrawing Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphRunDrawing.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GlyphRunDrawing</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.GlyphRunDrawing" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GlyphRunDrawing CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GlyphRunDrawing CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphRunDrawing.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GlyphRunDrawing</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.GlyphRunDrawing" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphRunDrawing.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush ForegroundBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush ForegroundBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphRunDrawing.ForegroundBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Vordergrundpinsel für die <see cref="T:System.Windows.Media.GlyphRunDrawing" />.</summary>
+        <value>Der Pinsel, zeichnet die <see cref="T:System.Windows.Media.GlyphRun" />. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ForegroundBrush"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GlyphRunDrawing.ForegroundBrushProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.GlyphRunDrawing> zum Zeichnen des Texts "Hello World".  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GlyphRunDrawingExample.cs#glyphrundrawingexampleinline)]
+ [!code-xaml[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GlyphRunExample.xaml#glyphrundrawingexampleinline)]  
+  
+ Ein <xref:System.Windows.Media.GlyphRun> ist ein Low-Level-Objekt für die Verwendung mit festem Format Dokumentpräsentation und Drucken Szenarien vorgesehen. Eine einfachere Möglichkeit zum Zeichnen von Text auf dem Bildschirm ist die Verwendung einer <xref:System.Windows.Controls.Label> oder ein <xref:System.Windows.Controls.TextBlock>. Weitere Informationen zu <xref:System.Windows.Media.GlyphRun>, finden Sie unter der [Einführung in die GlyphRun-Objekt und die Symbolelement](~/docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) (Übersicht).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForegroundBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForegroundBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GlyphRunDrawing.ForegroundBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GlyphRunDrawing.ForegroundBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphRun">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GlyphRun GlyphRun { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GlyphRun GlyphRun" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphRunDrawing.GlyphRun" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GlyphRun</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.GlyphRun" /> , beschreibt den zu zeichnende Text.</summary>
+        <value>Die <see cref="T:System.Windows.Media.GlyphRun" /> , beschreibt den zu zeichnende Text. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_GlyphRun"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GlyphRunDrawing.GlyphRunProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.GlyphRunDrawing> zum Zeichnen des Texts "Hello World".  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GlyphRunDrawingExample.cs#glyphrundrawingexampleinline)]
+ [!code-xaml[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GlyphRunExample.xaml#glyphrundrawingexampleinline)]  
+  
+ Ein <xref:System.Windows.Media.GlyphRun> ist ein Low-Level-Objekt für die Verwendung mit festem Format Dokumentpräsentation und Drucken Szenarien vorgesehen. Eine einfachere Möglichkeit zum Zeichnen von Text auf dem Bildschirm ist die Verwendung einer <xref:System.Windows.Controls.Label> oder ein <xref:System.Windows.Controls.TextBlock>. Weitere Informationen zu <xref:System.Windows.Media.GlyphRun>, finden Sie unter der [Einführung in die GlyphRun-Objekt und die Symbolelement](~/docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) (Übersicht).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphRunProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GlyphRunProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GlyphRunProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GlyphRunDrawing.GlyphRunProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GlyphRunDrawing.GlyphRun" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

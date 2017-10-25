@@ -1,0 +1,131 @@
+<Type Name="HtmlEncoder" FullName="System.Text.Encodings.Web.HtmlEncoder">
+  <TypeSignature Language="C#" Value="public abstract class HtmlEncoder : System.Text.Encodings.Web.TextEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HtmlEncoder extends System.Text.Encodings.Web.TextEncoder" />
+  <TypeSignature Language="DocId" Value="T:System.Text.Encodings.Web.HtmlEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.Encodings.Web.TextEncoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine HTML-zeichencodierung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[ 
+
+## Remarks  
+ Der Quellcode für diesen Typ finden Sie in der [System.Text.Encodings.Web Projekt](https://github.com/dotnet/corefx/tree/master/src/System.Text.Encodings.Web) auf GitHub. Komponententests, die auch dienen können, wie Codebeispiele, in gefunden werden der [System.Text.Encodings.Web/tests](https://github.com/dotnet/corefx/tree/master/src/System.Text.Encodings.Web/tests) Ordner auf GitHub.  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HtmlEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.HtmlEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.Encodings.Web.HtmlEncoder" />-Klasse.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Text.Encodings.Web.HtmlEncoder Create (System.Text.Encodings.Web.TextEncoderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Text.Encodings.Web.HtmlEncoder Create(class System.Text.Encodings.Web.TextEncoderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.HtmlEncoder.Create(System.Text.Encodings.Web.TextEncoderSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encodings.Web.HtmlEncoder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Text.Encodings.Web.TextEncoderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">Einstellungen, die steuern, wie die <see cref="T:System.Text.Encodings.Web.HtmlEncoder" /> Instanz codiert, in erster Linie die zu codierenden Zeichen.</param>
+        <summary>Erstellt eine neue Instanz der Klasse HtmlEncoder mit den angegebenen Einstellungen.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Text.Encodings.Web.HtmlEncoder" />-Klasse.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="settings" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Text.Encodings.Web.HtmlEncoder Create (params System.Text.Unicode.UnicodeRange[] allowedRanges);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Text.Encodings.Web.HtmlEncoder Create(class System.Text.Unicode.UnicodeRange[] allowedRanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.HtmlEncoder.Create(System.Text.Unicode.UnicodeRange[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encodings.Web.HtmlEncoder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="allowedRanges" Type="System.Text.Unicode.UnicodeRange[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="allowedRanges">Der Satz von Zeichen, die der Encoder nicht codieren zugelassen wird.</param>
+        <summary>Erstellt eine neue Instanz der Klasse HtmlEncoder, die Zeichen angibt, die der Encoder nicht codieren darf.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Text.Encodings.Web.HtmlEncoder" />-Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[ 
+
+## Remarks  
+ Einige Zeichen in `allowedRanges` möglicherweise immer noch codiert werden; d. h. dieser Parameter gibt an welche Bereiche der Encoder kann nicht codiert werden, nicht welche Zeichen nicht nicht codiert werden müssen.  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="allowedRanges" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Text.Encodings.Web.HtmlEncoder Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Encodings.Web.HtmlEncoder Default" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Encodings.Web.HtmlEncoder.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encodings.Web.HtmlEncoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine integrierte Instanz, der die <see cref="T:System.Text.Encodings.Web.HtmlEncoder" /> Klasse.</summary>
+        <value>Eine integrierte Instanz, der die <see cref="T:System.Text.Encodings.Web.HtmlEncoder" /> Klasse.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

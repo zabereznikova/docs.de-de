@@ -1,0 +1,675 @@
+<Type Name="PersonalizationProvider" FullName="System.Web.UI.WebControls.WebParts.PersonalizationProvider">
+  <TypeSignature Language="C#" Value="public abstract class PersonalizationProvider : System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PersonalizationProvider extends System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die Grundfunktionen für einen Personalisierungsanbieter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die abstrakte Basisklasse, die die erforderliche Funktionalität eines Personalisierungsanbieters definiert. Personalisierungsanbieter lädt und speichert Personalisierungsdaten im Auftrag von einem <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> Instanz.  
+  
+ Die Basisklasse definiert das Standardverhalten für eine Reihe von Methoden. nur die Methoden, die speziell mit den zugrunde liegenden Datenspeicher werden als abstrakt markiert. Dies ermöglicht es Entwicklern, Schreiben Sie einen benutzerdefinierten Anbieter für die Interaktion mit einem speziellen Datenspeicher, ohne Standardfunktionalität von verwendeten erneut implementieren die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Sie können aus ableiten <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationProvider" /> , und geben Sie die Implementierungen für nur die abstrakten Methoden, die in dieser Klasse definiert. Die abstrakten Methoden beziehen sich speziell auf das Speichern und Laden von Daten in einem physischen Datenspeicher sowie auf die Verwaltung von Datenspeichern. Ein benutzerdefinierter Anbieter muss für die Bearbeitung von Personalisierungsinformationen in einer Weise, mit dem Unterschieden in der Lage sein <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared" /> Daten aus <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" /> Daten. Darüber hinaus muss ein Anbieter Personalisierungsdaten nach Seite sowie nach Anwendung segmentieren.  
+  
+ Implementierungen von <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationProvider" /> sind eng gekoppelt Implementierungen von <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" /> da einigen Methoden zur Personalisierung Anbieter Instanzen zurückzugeben <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" />-abgeleitete Klassen. Um die Entwicklung von benutzerdefinierten Anbietern zu vereinfachen die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationProvider" /> Basisklasse enthält eine Standardimplementierung der Personalisierung Logik und die Serialisierung/Deserialisierung-Logik, die direkt verwendet werden die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartPersonalization" /> Klasse. Daher muss beim Erstellen eines benutzerdefinierten Anbieters ausschließlich zum Zweck der Arbeit mit einem anderen Datenspeicher nur Implementierung der folgenden abstrakten Methoden:  
+  
+-   <see cref="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.GetCountOfState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Web.UI.WebControls.WebParts.PersonalizationStateQuery)" />-Diese Methode muss die Anzahl der Datenzeilen Personalisierung in der Datenbank für die angegebenen Abfrageparameter ermitteln können.  
+  
+-   <see cref="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.LoadPersonalizationBlobs(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[]@,System.Byte[]@)" />-Angegebenen Pfad und der Benutzer, diese Methode lädt zwei binary large Objects (BLOBs) aus der Datenbank: ein BLOB für gemeinsam genutzte Daten und eins für Benutzerdaten. Wenn Sie den Benutzernamen und einen Pfad angeben, müssen Sie nicht die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement auf der Seiteninformationen zuzugreifen, die die Benutzernamen-/Pfadinformationen.  
+  
+-   <see cref="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ResetPersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String)" />-Pfad und der Benutzer erhält, werden diese Methode die entsprechende Zeile in der Datenbank gelöscht. Wenn Sie den Benutzernamen und einen Pfad angeben, müssen Sie nicht die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement auf der Seiteninformationen zuzugreifen, die die Benutzernamen-/Pfadinformationen.  
+  
+-   <see cref="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.SavePersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[])" />-Angegebenen Pfad und der Benutzer, speichert diese Methode das angegebene BLOB in der Datenbank an. Wenn Sie den Benutzernamen und einen Pfad angeben, müssen Sie nicht die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement auf der Seiteninformationen zuzugreifen, die die Benutzernamen-/Pfadinformationen.  
+  
+ In allen der folgenden Methoden Wenn nur ein Pfad angegeben wird, bedeutet dies, dass die freigegebenen Personalisierungsdaten für die Seite nach bearbeiteten. Wenn Sie einen Pfad und einen Benutzernamen an eine Methode übergeben werden, sollten dann die Benutzerdaten für die Personalisierung für die Seite bearbeitet werden. Im Fall von <see cref="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.LoadPersonalizationBlobs(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[]@,System.Byte[]@)" />, die freigegebenen Daten für den angegebenen Pfad sollte immer geladen werden und optional die Personalisierung Benutzerdaten für den Pfad sollte auch geladen werden, wenn der Benutzername nicht ist <see langword="null" />.  
+  
+ Alle abstrakten Methoden sind nur in administrative Anwendungen vorgesehen und nicht von der Webparts-Infrastruktur zur Laufzeit verwendet werden. Ein Beispiel für die Implementierung eines Personalisierungsanbieters, finden Sie unter der <see cref="T:System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider" /> Klasse.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PersonalizationProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da dies einen Konstruktor für eine abstrakte Klasse ist, müssen Sie überschreiben diese Methode, um eine Instanz einer Klasse erstellen, die von dieser Klasse erbt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public abstract string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt den Namen der Anwendung für den Anbieter konfiguriert.</summary>
+        <value>Die Anwendung für die Personalisierung Provider konfiguriert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Anwendungsnamen in der Konfigurationsdatei mit nicht angegeben ist der [Providers-Element für die Personalisierung für WebParts ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/51363b49-eafa-4b9c-b9d0-80086b385195) -Attributwert, die der <xref:System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath%2A> Eigenschaft wird verwendet.  
+  
+> [!CAUTION]
+>  Da eine einzelne Standardinstanz Personalisierung-Anbieter für alle vom übermittelten Anforderungen verwendet wird ein <xref:System.Web.HttpApplication> -Objekt können mehrere Anforderungen gleichzeitig ausgeführt, jede beim Festlegen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ApplicationName%2A> Eigenschaftswert. Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ApplicationName%2A> Eigenschaft ist für mehrere Schreibvorgänge nicht threadsicher und Ändern der <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ApplicationName%2A> Eigenschaftswert kann zu unerwartetem Verhalten für mehrere Benutzer einer Anwendung führen. Es wird empfohlen, dass Sie vermeiden, dass Code ermöglicht Benutzern das Festlegen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ApplicationName%2A> Eigenschaft, sofern nicht erforderlich. Festlegen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ApplicationName%2A> Eigenschaft möglicherweise erforderlich ist, z. B. in einer administrativen Anwendung, die Personalisierungsdaten für mehrere Anwendungen verwaltet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSupportedUserCapabilities">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IList CreateSupportedUserCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IList CreateSupportedUserCapabilities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.CreateSupportedUserCapabilities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" /> Objekte, die den Satz von bekannten Funktionen verwendet, die für die Webparts-Steuerelementsatzes darstellen.</summary>
+        <returns>Ein <see cref="T:System.Collections.IList" /> , das den Satz von bekannten Funktionen verwendet, die für die Webparts-Steuerelementsatzes darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit gibt diese Methode eine Liste mit zwei Funktionen: <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.EnterSharedScopeUserCapability> und <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.ModifyStateUserCapability>. Hierbei handelt es sich um die Standardfunktionen, die in definiert werden, können die [Autorisierung Element für die Personalisierung für WebParts ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/d190d4ff-1445-4ee1-88eb-9737c7aa1434) Element innerhalb der [Personalisierung Element für WebParts (ASP.NET -Einstellungsschema)](http://msdn.microsoft.com/en-us/3d77da55-73ce-46ce-97cf-7d2abcaada09) Element von der[WebParts-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/90af5acc-5a80-4b39-bba7-74afd06b167c) Konfigurationsabschnitt. Falls gewünscht, um eine benutzerdefinierte Personalisierungsinfrastruktur zu implementieren, können Sie diese Methode überschreiben und definieren Ihre eigene Gruppe von Autorisierung bezogene Benutzeroptionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetermineInitialScope">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.PersonalizationScope DetermineInitialScope (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, System.Web.UI.WebControls.WebParts.PersonalizationState loadedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope DetermineInitialScope(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, class System.Web.UI.WebControls.WebParts.PersonalizationState loadedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.DetermineInitialScope(System.Web.UI.WebControls.WebParts.WebPartManager,System.Web.UI.WebControls.WebParts.PersonalizationState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationScope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+        <Parameter Name="loadedState" Type="System.Web.UI.WebControls.WebParts.PersonalizationState" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> , die die Personalisierungsinformationen verwaltet.</param>
+        <param name="loadedState">Die Statusinformationen für die Personalisierung.</param>
+        <summary>Bestimmt, ob der Personalisierungsbereich erste <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared" /> oder <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" /> Bereich.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> , der angibt, ob der aktuelle Personalisierungsbereich ist <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" /> oder <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt, ob der aktuelle Bereich <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> oder <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>, wenn ein Verweis auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement und Personalisierung Zustandsinformationen, die vom bereits weiter oben in den Lebenszyklus der Personalisierung geladen wurde. Diese Informationen werden verwendet, indem eine <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> Instanz für nachfolgende Personalisierung-bezogene Aufgaben.  
+  
+ Die folgenden Regeln werden verwendet, um Personalisierung Umfang zu bestimmen:  
+  
+-   Bereich wird davon ausgegangen, dass zunächst werden <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>.  
+  
+-   Die aktuell ausgeführte Benutzerkonto nicht authentifiziert ist, wird der Gültigkeitsbereich auf festgelegt <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>.  
+  
+-   Wenn der aktuell ausgeführten Benutzerkonto authentifiziert ist, wird eine zusätzliche Verarbeitung in Rangfolge aufgelistet:  
+  
+    -   Wenn die Seite im postback-Modus befindet, enthält die Seitenanforderung Bereichsinformationen aus einer vorherigen gerenderte Seite. Wenn diese Bereichsinformationen angibt, dass <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Geltungsbereich verwendet wurde, und klicken Sie dann der Bereich ergibt <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>.  
+  
+    -   Wäre die aktuell ausgeführte Seite Steuerelement von einer anderen Seite zu übertragen (z. B., wenn die Übertragung der Steuerung Ursache aufrufen ist die <xref:System.Web.HttpServerUtility.Transfer%2A> Methode, beachten Sie, dass diese spezifische Überprüfung nicht für die übergreifende Einzelseiten Buchung auftritt), und, wenn die zuvor Ausführen von Seite hatte eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Instanz, den Gültigkeitsbereich auf den Wert der festgelegt wird der `Personalization.Scope` Eigenschaft aus dem vorherigen <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Instanz.  
+  
+    -   Wenn es sich bei die oben aufgeführten Kriterien nicht erfüllt, und klicken Sie dann der Bereich ergibt den Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.InitialScope%2A> Eigenschaft für den aktuellen <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement.  
+  
+ Nachdem Sie die vorherigen auswertungen vorgenommen wurden, und wenn der Bereich ergibt <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich die folgende Verarbeitung auftritt:  
+  
+-   Wenn der aktuell ausgeführten Benutzerkonto ist die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.EnterSharedScopeUserCapability> Möglichkeit, der Bereich bleibt festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>.  
+  
+-   Wenn der aktuell ausgeführten Benutzerkonto keinen der <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.EnterSharedScopeUserCapability> Funktion, und klicken Sie dann auf den Bereich auf zurückgesetzt <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>.  
+  
+-   Wenn das Ergebnis der auswertungen für alle vorherigen Bereich <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>, dieses Ergebnis wird als ausgeblendetes Feld auf der derzeit ausgeführten Seite gespeichert. Dies ist der Mechanismus, bei dem eine Seite die Auswertung Bereich bei nachfolgenden Postbacks wiedergeben können.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPartManager" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die zugeordnete Seite <paramref name="webPartManager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DetermineUserCapabilities">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary DetermineUserCapabilities (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionary DetermineUserCapabilities(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.DetermineUserCapabilities(System.Web.UI.WebControls.WebParts.WebPartManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> die Personalisierungsinformationen verwaltet.</param>
+        <summary>Gibt ein Wörterbuch mit <see cref="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" /> Instanzen, die die Personalisierung-bezogenen Funktionen des aktuell ausgeführten Benutzerkontos darstellen.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionary" /> mit 0 (null) oder mehr <see cref="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" /> Instanzen, wenn das Benutzerkonto nicht authentifiziert ist, oder <see langword="null" /> Wenn ausgeführte Benutzerkonto nicht authentifiziert ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung dieser Methode verwendet die Informationen in den [Autorisierung Element für die Personalisierung für WebParts ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/d190d4ff-1445-4ee1-88eb-9737c7aa1434) Element innerhalb der [Personalisierung Element für WebParts ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/3d77da55-73ce-46ce-97cf-7d2abcaada09) Element von der[WebParts-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/90af5acc-5a80-4b39-bba7-74afd06b167c) Konfigurationsabschnitt in der Datei "Machine.config" oder "Web.config", um einen Benutzer zu bestimmen, die Funktionen autorisiert.  
+  
+ Die neuen Funktionen in das Wörterbuch werden Mitglieder der der <xref:System.Collections.IList> zurückgegebenes Objekt die <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.CreateSupportedUserCapabilities%2A> -Methode, die derzeit enthalten die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.EnterSharedScopeUserCapability> Funktion und die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.ModifyStateUserCapability> Funktion.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die zugeordnete Seite <paramref name="webPartManager" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Die Anforderung der Seite zugeordnet ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPartManager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindState">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope, System.Web.UI.WebControls.WebParts.PersonalizationStateQuery query, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope, class System.Web.UI.WebControls.WebParts.PersonalizationStateQuery query, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.FindState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Web.UI.WebControls.WebParts.PersonalizationStateQuery,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+        <Parameter Name="query" Type="System.Web.UI.WebControls.WebParts.PersonalizationStateQuery" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> mit Personalisierungsinformationen, die abgefragt werden. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="query">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery" /> mit einer Abfrage. Dieser Wert kann <see langword="null" /> sein.</param>
+        <param name="pageIndex">Der Speicherort, in dem die Abfrage gestartet wird.</param>
+        <param name="pageSize">Die Anzahl der zurückzugebenden Datensätze.</param>
+        <param name="totalRecords">Die Gesamtanzahl von Datensätzen verfügbar.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt eine Auflistung mit 0 (null) oder mehr <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />-abgeleitete Objekte, die basierend auf den Bereich und bestimmte Abfrageparameter.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> mit 0 (null) oder mehr <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />--abgeleitete Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die abstrakte Definition einer Verwaltungsmethode zum Abfragen von Personalisierungsdaten. Abgeleitete Implementierungen sollten die unten beschriebene Logik folgen.  
+  
+ Der Satz der zurückgegebenen Elemente durch eingeschränkt ist die `pageIndex` und `pageSize` Parameter, in dem `pageSize` legt die Anzahl der zurückzugebenden Datensätze und `pageIndex` legt der zurückzugebenden Datensätze. Z. B. eine `pageIndex` 0 und eine `pageSize` von 25 die ersten 25 Vorkommen zurück, während eine `pageIndex` 1 und einer `pageSize` von 25 Vorkommen 26 bis 50 zurück. Wenn Sie alle verfügbaren Datensätze abrufen möchten, legen Sie `pageIndex` auf 0 und `pageSize` auf <xref:System.Int32.MaxValue>.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleiteten Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von sortiert ihre <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Path%2A> und <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.Username%2A> Eigenschaftswerte, sowohl in aufsteigender Reihenfolge.  
+  
+ Diese Methode übergibt Platzhalterzeichen für Abfragen an den zugrunde liegenden Datenspeicher. Unterstützung für Platzhalterzeichen ist zurzeit an der Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) in jeder Anbieter abhängig.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Ebenso konnte eine Platzhaltersuche auf einen partiellen Benutzernamen das Platzhalterzeichen an einem beliebigen Punkt in der Textzeichenfolge angezeigt haben die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft. Um beispielsweise alle Benutzernamen, die beginnen mit "John", suchen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Parameter wie "John %" aussehen würde.  
+  
+ Die folgende Abfrage Einschränkungen gelten:  
+  
+-   Wenn nur `scope` angegeben ist, und `query` ist `null` oder die Eigenschaften für `query` zurückgeben `null` oder Standardwerte, und klicken Sie dann alle Datensätze, die mit dem angegebenen `scope` Parameter zurückgegeben werden.  
+  
+-   Wenn die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft ist nicht `null`, die zurückgegebenen Datensätze werden auch basierend auf der Pfade gefiltert, die mit übereinstimmen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Wert.  
+  
+-   Wenn die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft ist nicht `null`, die zurückgegebenen Datensätze werden auch basierend auf der Benutzernamen gefiltert, die mit übereinstimmen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaftswert.  
+  
+-   Wenn die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaft stimmt nicht mit <xref:System.DateTime.MaxValue>, und klicken Sie dann die zurückgegebenen Datensätze auch gefiltert werden, um nur inaktive Benutzer zugeordnete Datensätze zurückzugeben. Der Vergleich enthält Datensätze, in denen die <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> -Eigenschaft ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaft.  
+  
+ Beachten Sie, dass diese Methode nicht Kombinationen von Abfrageparametern überprüft werden. Code kann beispielsweise eine Gruppe von Personalisierung Status-Datensätzen, die einen bestimmten Benutzernamen im freigegebenen Bereich zugeordneten anfordern. Da Benutzernamen nicht mit Informationen zu gemeinsamen verknüpft sind, wäre die zurückgegebene Auflistung leer.  
+  
+ Folgende Parameterkombinationen, von denen können zum Zurückgeben einer Auflistung nicht leer:  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>Gültigkeitsbereich in Kombination mit der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft.  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>in Kombination mit den Werten für einige oder alle der Bereich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A>, <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A>, und <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCountOfState">
+      <MemberSignature Language="C#" Value="public abstract int GetCountOfState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope, System.Web.UI.WebControls.WebParts.PersonalizationStateQuery query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetCountOfState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope, class System.Web.UI.WebControls.WebParts.PersonalizationStateQuery query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.GetCountOfState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Web.UI.WebControls.WebParts.PersonalizationStateQuery)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+        <Parameter Name="query" Type="System.Web.UI.WebControls.WebParts.PersonalizationStateQuery" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> der Personalisierungsinformationen, die abgefragt werden. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="query">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery" /> mit einer Abfrage. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Anzahl der Zeilen in den zugrunde liegenden Datenspeicher, die innerhalb des angegebenen Bereichs vorhanden sind.</summary>
+        <returns>Die Anzahl der Zeilen in den zugrunde liegenden Datenspeicher, die für den angegebenen vorhanden <paramref name="scope" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die abstrakte Definition einer Verwaltungsmethode zum Abrufen der Anzahl der Personalisierungsdaten. Abgeleitete Implementierungen sollten die unten beschriebene Logik folgen.  
+  
+ Diese Methode übergibt Platzhalterzeichen für Abfragen an den zugrunde liegenden Datenspeicher. Unterstützung für Platzhalterzeichen ist zurzeit an der Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) in jeder Anbieter abhängig.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Ebenso konnte eine Platzhaltersuche auf einen partiellen Benutzernamen das Platzhalterzeichen an einem beliebigen Punkt in der Textzeichenfolge angezeigt haben die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft. Um beispielsweise alle Benutzernamen, die beginnen mit "John", suchen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Parameter wie "John %" aussehen würde.  
+  
+ Die folgende Abfrage Einschränkungen gelten:  
+  
+-   Wenn nur `scope` angegeben ist, und `query` ist `null` oder die Eigenschaften für `query` zurückgeben `null` oder Standardwerte, und klicken Sie dann alle Datensätze, die mit dem angegebenen `scope` Parameter werden gezählt.  
+  
+-   Wenn die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft ist nicht `null`, die gezählten Datensätze sind auch gefilterte basierend auf Pfade, die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Wert.  
+  
+-   Wenn die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft ist nicht `null`, die gezählten Datensätze sind auch gefilterte basierend auf Benutzernamen an, die entsprechen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaftswert.  
+  
+-   Wenn die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaft stimmt nicht mit <xref:System.DateTime.MaxValue>, und klicken Sie dann die gezählten Datensätze auch gefiltert werden, um nur inaktive Benutzer zugeordnete Datensätze zurückzugeben. Der Vergleich enthält Datensätze, in denen die <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> -Eigenschaft ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaft.  
+  
+ Beachten Sie, dass diese Methode nicht Kombinationen von Abfrageparametern überprüft werden. Code kann z. B. Anzahl der Datensätze zum clientbereitstellungsstatus Personalisierung einen bestimmten Benutzernamen im freigegebenen Bereich zugeordneten anfordern. Da Benutzernamen nicht mit Informationen zu gemeinsamen verknüpft sind, wäre der zurückgegebene Zähler 0 (null).  
+  
+ Folgende Parameterkombinationen, die Anzahl nicht 0 (null) zurückgegeben werden können:  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>Gültigkeitsbereich in Kombination mit der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft.  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>in Kombination mit den Werten für einige oder alle der Bereich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A>, <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A>, und <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPersonalizationBlobs">
+      <MemberSignature Language="C#" Value="protected abstract void LoadPersonalizationBlobs (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, string path, string userName, ref byte[] sharedDataBlob, ref byte[] userDataBlob);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadPersonalizationBlobs(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, string path, string userName, unsigned int8[]&amp; sharedDataBlob, unsigned int8[]&amp; userDataBlob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.LoadPersonalizationBlobs(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[]@,System.Byte[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="sharedDataBlob" Type="System.Byte[]&amp;" RefType="ref" />
+        <Parameter Name="userDataBlob" Type="System.Byte[]&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> die Personalisierungsdaten verwaltet.</param>
+        <param name="path">Der Pfad für die Personalisierungsinformationen als Abrufschlüssel verwendet werden soll.</param>
+        <param name="userName">Der Benutzername für die Personalisierungsinformationen als Abrufschlüssel verwendet werden soll.</param>
+        <param name="sharedDataBlob">Die zurückgegebenen Daten für die <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared" /> Bereich.</param>
+        <param name="userDataBlob">Die zurückgegebenen Daten für die <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" /> Bereich.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse lädt unformatierte Personalisierungsdaten aus dem zugrunde liegenden Datenspeicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider> und diese Methode implementieren, sollten die `webPartManager`, `path`, und `username` Parameter als Abrufschlüssel. Unabhängig davon, wie die Daten im Datenspeicher (einigen Datenspeichern möglicherweise einige intelligente Speichertyp ausführen), Personalisierung Daten zurückgegeben werden müssen als gespeichert gepackte Gruppe von Bytes in zwei Arrays. Die zurückgegebenen Daten müssen die folgenden Regeln entsprechen:  
+  
+-   Die Daten für die <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich muss immer zurückgegeben werden, der `sharedDataBlob` Parameter.  
+  
+-   Abhängig von den Schlüsselwerten <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Daten werden zurückgegeben, der `userDataBlob` Parameter. Nicht`null` Wert für die `userName` Parameter gibt an, dass <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Daten auch abgerufen werden sollen.  
+  
+ Ein Personalisierungsanbieter, der von ableitet <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider> und implementiert diese Methode kann die optimieren Interaktionen mit dem Datenspeicher Abrufen aller Personalisierungsdaten in einer Schleife, im Gegensatz zum Abrufen von <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Daten in zwei Trennen Sie die Anzahl der Roundtrips.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPersonalizationState">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.PersonalizationState LoadPersonalizationState (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, bool ignoreCurrentUser);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.PersonalizationState LoadPersonalizationState(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, bool ignoreCurrentUser) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.LoadPersonalizationState(System.Web.UI.WebControls.WebParts.WebPartManager,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+        <Parameter Name="ignoreCurrentUser" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> die Personalisierungsdaten verwaltet.</param>
+        <param name="ignoreCurrentUser">Ein <see cref="T:System.Boolean" /> , der angibt, ob der Benutzername für die Personalisierungsanbieter übergeben werden soll.</param>
+        <summary>Lädt die Rohdaten aus dem zugrunde liegenden Datenspeicher und konvertiert die Daten in einem <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" /> , Personalisierungsdaten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist der Haupteinstiegspunkt, die verwendet werden, indem die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> Klasse Personalisierungsdaten geladen. Die standardmäßige Implementierung lädt die Rohdaten aus dem zugrunde liegenden Datenspeicher (Funktionen sind in abgeleiteten Anbietern implementiert) und konvertiert die Rohdaten in eine <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> Instanz.  
+  
+ Wenn die `ignoreCurrentUser` Parameter ist `true`, kein Benutzername wird zum Übergeben der <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.LoadPersonalizationBlobs%2A> Methode. Ein Personalisierungsanbieter können dies ggf. so auslegen, Personalisierungszustand mit einer <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich aus dem zugrunde liegenden Datenspeicher abgerufen werden sollen.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.Load%2A> Methode ausgeführt wird, ruft es die <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.LoadPersonalizationState%2A> -Methode, und es gibt drei Arten von Deserialisierung-Fehlern, die auftreten können, wie der Zustand geladen wird. Wenn diese bestimmte Fehler auftreten, keine Ausnahme ausgelöst wird und die Fehlerereignisse werden stattdessen durch die Systemüberwachung Funktion protokolliert (Informationen über die Integrität überwachen und den Zugriff auf die Protokolle erstellt, indem er finden Sie unter [ASP.NET Health Überwachung (Übersicht) ](http://msdn.microsoft.com/library/e003f224-70fe-4cd8-a71a-2dc81e2d7e4c)). Die folgenden drei Szenarien Ursache Deserialisierung Fehlerereignisse in das Protokoll geschrieben werden:  
+  
+-   Einem fehlerhaftem Versuch, einen Eigenschaftentyp zu deserialisieren, eine Zeichenfolge verwendet <xref:System.ComponentModel.TypeConverter>.  
+  
+-   Einem fehlerhaftem Versuch, einen Eigenschaftentyp zu deserialisieren, der binären Serialisierung verwendet werden soll.  
+  
+-   Versuch, einen Eigenschaftentyp zu deserialisieren, da eine Instanz des Typs erstellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="webPartManager" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die zugeordnete Seite <paramref name="webPartManager" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Die Anforderung der Seite zugeordnet ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetPersonalizationBlob">
+      <MemberSignature Language="C#" Value="protected abstract void ResetPersonalizationBlob (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, string path, string userName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ResetPersonalizationBlob(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, string path, string userName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ResetPersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> die Personalisierungsdaten verwaltet.</param>
+        <param name="path">Der Pfad für die Personalisierungsinformationen als der Schlüssel des Anmeldeinformationsspeichers Daten verwendet werden soll.</param>
+        <param name="userName">Der Benutzername für die Personalisierungsinformationen als der Schlüssel des Anmeldeinformationsspeichers Daten verwendet werden soll.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse werden unformatierte Personalisierungsdaten aus dem zugrunde liegenden Datenspeicher gelöscht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider> und diese Methode implementieren, sollten die `webPartManager`, `path`, und `userName` Parameter als Speicherschlüssel. Abgeleitete Implementierungen müssen Datenspeicher ändern, sodass Personalisierungsdaten für bereitgestellte Speicherschlüssel effektiv gelöscht werden. Es liegt im Ermessen der abgeleiteten Implementierungen, wie sie physisch dies zu erreichen.  
+  
+ Der Personalisierungsanbieter abgeleiteten muss Personalisierungsdaten regelmäßig pro Seite zu unterscheiden können. Darüber hinaus für eine angegebene Seite Status der Personalisierungsanbieter muss unterscheiden zwischen <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich Daten. Wenn eine nicht-`null` Benutzername angegeben wird, und klicken Sie dann der Reset-Vorgang gilt für die <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich festzulegen; andernfalls der Reset-Vorgang gilt für die <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetPersonalizationState">
+      <MemberSignature Language="C#" Value="public virtual void ResetPersonalizationState (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetPersonalizationState(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ResetPersonalizationState(System.Web.UI.WebControls.WebParts.WebPartManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> die Personalisierungsdaten verwaltet.</param>
+        <summary>Setzt Personalisierungsdaten auf den zugrunde liegenden Datenspeicher zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist der Haupteinstiegspunkt, die verwendet werden, indem die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> Klasse Personalisierungsdaten zurücksetzen. Die Standardimplementierung verwendet die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement bestimmt den Pfad und Namen für die Daten zurückgesetzt werden sollen. Klicken Sie dann die Standardimplementierung Ruft die <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ResetPersonalizationBlob%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPartManager" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="webPartManager" />nicht ist einer Seite zugeordnet.  
+  
+ \- oder –  
+  
+ Die Seite ist nicht in Bearbeitung zugeordnet <see cref="T:System.Web.HttpRequest" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetState">
+      <MemberSignature Language="C#" Value="public abstract int ResetState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope, string[] paths, string[] usernames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ResetState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope, string[] paths, string[] usernames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ResetState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+        <Parameter Name="paths" Type="System.String[]" />
+        <Parameter Name="usernames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> der Personalisierungsinformationen zurückgesetzt werden sollen. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="paths">Die Pfade für Personalisierungsinformationen, die gelöscht werden.</param>
+        <param name="usernames">Die Benutzernamen für die Personalisierungsinformationen, die gelöscht werden.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse löscht Personalisierungszustand aus dem zugrunde liegenden Datenspeicher basierend auf den angegebenen Parametern.</summary>
+        <returns>Die Anzahl der gelöschten Zeilen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die abstrakte Definition einer Verwaltungsmethode um Personalisierungsdaten zu löschen. Abgeleitete Implementierungen sollten die unten beschriebene Logik folgen.  
+  
+ Von dieser Methode werden keine Zeichen Platzhaltersuchen unterstützt. Wenn der Personalisierungsanbieter Daten aus einem Datenspeicher Transaktionen unterstützende verfügbar macht, sollten diese Methode seine Vorgänge als einzelne atomarische Transaktion ausführen.  
+  
+ Nur die folgenden Kombinationen von Parameter sind zulässig:  
+  
+-   Die `scope` Parameter festgelegt ist, und alle anderen Parameter festgelegt `null`. Diese Kombination löscht alle Webparts Personalisierungsdaten im Zusammenhang mit der Personalisierungsbereich erkennbar `scope`.  
+  
+-   Die `scope` -Parameter festgelegt ist, und die `paths` Parameter enthält mindestens einen Wert. Diese Kombination löscht alle Webparts-Personalisierungsdaten für den angegebenen Pfad oder die Pfade im Personalisierungsbereich erkennbar `scope`.  
+  
+-   Die `scope` Parameter auf festgelegt ist <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>, `paths` Parameter festgelegt ist, und enthält nur einen Wert und die `usernames` Parameter enthält mindestens einen Wert. Diese Kombination löscht alle benutzerpersonalisierung Webparts-Daten für den angegebenen Pfad, der den oder die Benutzer, die in enthaltenen zugeordnet ist `usernames`.  
+  
+-   Die `scope` Parameter auf festgelegt ist <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>, `paths` Parameter auf festgelegt ist `null`, und die `usernames` Parameter enthält mindestens einen Wert. Diese Kombination löscht alle benutzerspezifische Personalisierung Webparts-Daten für alle Pfade, die der Benutzer oder die Benutzer in zugeordneten `usernames`.  
+  
+ Eine beliebige andere Kombination von Parameterwerten ist ungültig und löst eine <xref:System.ArgumentException> Ausnahme. Insbesondere sind die folgenden zwei Kombinationen nicht zulässig:  
+  
+-   Die `usernames` Parameter kann nicht bereitgestellt werden, wenn `scope` festgelegt ist, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared>.  
+  
+-   Die `paths` Parameter darf nicht mehr als einen Eintrag enthalten bei der `usernames` -Parameter ist kein `null`.  
+  
+ Alle `paths` und `usernames` Parameterwerte, die in den entsprechenden Arrays enthalten sind, müssen die folgenden Validierungsregeln erfüllen. Wenn alle Validierungsregeln für jedes Mitglied der Parameterarrays Fehlschlagen einer <xref:System.ArgumentException> Ausnahme wird ausgelöst. Die Gültigkeitsprüfungsregeln verwendet werden:  
+  
+-   `null`Werte sind nicht zulässig.  
+  
+-   Eine leere Zeichenfolge ("") ist nicht zulässig. Parameter werden vor der Überprüfung eine leere Zeichenfolge gekürzt.  
+  
+-   Die `usernames` Parameter darf keine Kommas (,) enthalten.  
+  
+-   Die Länge der `paths` Parameter darf nicht länger als 256 Zeichen für eine SQL­Datenbank sein.  
+  
+-   Die Länge der `usernames` Parameter darf nicht länger als 256 Zeichen für eine SQL­Datenbank sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetUserState">
+      <MemberSignature Language="C#" Value="public abstract int ResetUserState (string path, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ResetUserState(string path, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ResetUserState(System.String,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der Personalisierungsdaten gelöscht werden soll. Mögliche Werte sind <see langword="null" /> jedoch möglich ist eine leere Zeichenfolge ("").</param>
+        <param name="userInactiveSinceDate">Das Datum der letzten Änderung der Benutzer der Website geändert Personalisierungsdaten.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse löscht Webparts Personalisierungsdaten aus dem zugrunde liegenden Datenspeicher basierend auf den angegebenen Parametern.</summary>
+        <returns>Die Anzahl der Zeilen, die aus dem zugrunde liegenden Datenspeicher gelöscht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die abstrakte Definition einer Verwaltungsmethode um Personalisierungsdaten zu löschen. Beachten Sie, dass diese Methode nur Personalisierung Benutzerdaten und nicht auf freigegebene Daten auswirkt.  
+  
+ Abgeleitete Implementierungen sollte die Logik, die unten beschriebenen folgen:  
+  
+-   Die `path` Parameter darf keine Platzhalterzeichen enthalten.  
+  
+-   Wenn der Anbieter Daten aus einem Datenspeicher Transaktionen unterstützende verfügbar macht, sollten diese Methode die Operationen in einer einzelnen unteilbaren Transaktion ausführen.  
+  
+-   Wenn die `path` Parameter ist nicht`null`, und klicken Sie dann nur benutzerspezifische Personalisierung Datensätze zugeordnet `path` gelöscht werden.  
+  
+-   Benutzerspezifische Personalisierung Datensätzen zugeordneten Benutzer, die seit dem angegebenen Datum als inaktiv betrachtet werden die `userInactiveSinceDate` Parameter gelöscht werden. Insbesondere zeichnet Where <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> ist kleiner als oder gleich <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> werden gelöscht.  
+  
+-   Wenn beide Parameter angegeben sind, werden die Datensätze, die beide Einschränkungen entsprechen gelöscht.  
+  
+-   Die `path` Parameter möglich `null`.  
+  
+-   Die `path` Parameter darf keine leere Zeichenfolge sein. Sie sollten vor dem Ausführen dieser Überprüfung gekürzt werden.  
+  
+-   Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaft darf nicht sein `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePersonalizationBlob">
+      <MemberSignature Language="C#" Value="protected abstract void SavePersonalizationBlob (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, string path, string userName, byte[] dataBlob);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SavePersonalizationBlob(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager, string path, string userName, unsigned int8[] dataBlob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.SavePersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="dataBlob" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> die Personalisierungsdaten verwaltet.</param>
+        <param name="path">Der Pfad für die Personalisierungsinformationen als der Schlüssel des Anmeldeinformationsspeichers Daten verwendet werden soll.</param>
+        <param name="userName">Der Benutzername für die Personalisierungsinformationen, die als Schlüssel verwendet werden.</param>
+        <param name="dataBlob">Das Bytearray der Daten gespeichert werden.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse speichert unformatierte Personalisierungsdaten im zugrunde liegenden Datenspeicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die abstrakte Definition der Methode zum Speichern von unformatierten Personalisierungsdaten in den zugrunde liegenden Datenspeicher verwendet.  
+  
+ Zu verwendende abgeleitete Implementierungen der `webPartManager`, `path`, und `userName` Parameter als Speicherschlüssel. Der Personalisierungsanbieter abgeleiteten muss Personalisierungsdaten regelmäßig pro Seite zu unterscheiden können. Darüber hinaus für eine angegebene Seite Status des Anbieters muss unterscheiden zwischen <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich. Eine nicht-`null` Benutzername angegeben ist, und dann die `dataBlob` -Parameter wird <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> Bereich; andernfalls die `dataBlob` wird davon ausgegangen, dass Parameter in <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePersonalizationState">
+      <MemberSignature Language="C#" Value="public virtual void SavePersonalizationState (System.Web.UI.WebControls.WebParts.PersonalizationState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SavePersonalizationState(class System.Web.UI.WebControls.WebParts.PersonalizationState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.SavePersonalizationState(System.Web.UI.WebControls.WebParts.PersonalizationState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Web.UI.WebControls.WebParts.PersonalizationState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" /> mit Personalisierungsdaten gespeichert werden sollen.</param>
+        <summary>Speichert Personalisierungsdaten in einem Datenspeicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist der Haupteinstiegspunkt, die verwendet werden, indem die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> Klasse Personalisierungsdaten speichern.  
+  
+ Die standardmäßige Implementierung dieser Methode verwendet die Methoden der internen Implementierung <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> Personalisierungsdaten in ein Bytearray zu packen. Wenn die Ergebnisse dieser Verpackung erstellen Sie ein leeres Byte array (da keine Personalisierungsdaten Extrahieren von Eigenschaften geführt hat), die Standardimplementierung Ruft die <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.ResetPersonalizationBlob%2A> Methode. Die Standardimplementierung ruft andernfalls die <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider.SavePersonalizationBlob%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="state" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="state" /> zu speichernde Objekt verfügt über einen anderen Typ als den <paramref name="state" /> -Objekt, das vom zurückgegeben wurde die <see cref="M:System.Web.UI.WebControls.WebParts.PersonalizationProvider.LoadPersonalizationState(System.Web.UI.WebControls.WebParts.WebPartManager,System.Boolean)" /> Methode.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,299 @@
+<Type Name="SoapAttributeOverrides" FullName="System.Xml.Serialization.SoapAttributeOverrides">
+  <TypeSignature Language="C#" Value="public class SoapAttributeOverrides" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapAttributeOverrides extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapAttributeOverrides" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Können Sie zum Überschreiben der Attribute, Eigenschaften, Felder und Klassen, bei der Verwendung einer <see cref="T:System.Xml.Serialization.XmlSerializer" /> zum Serialisieren oder Deserialisieren eines Objekts als codiertes SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapAttributeOverrides> -Klasse ermöglicht es einem <xref:System.Xml.Serialization.XmlSerializer> die Standardmethode für die Serialisierung von eines Satzes von Objekten zu überschreiben. Serialisierung auf diese Weise zu überschreiben dient zwei Zwecken: Erstens können Sie steuern und die Serialisierung von Objekten in einer DLL zu erweitern, auch wenn Sie keinen Zugriff auf die Quelle; haben Zweitens können Sie einen Satz von serialisierbare Klassen erstellen, jedoch serialisieren die Objekte auf verschiedene Weise. Beispielsweise können anstelle der Elemente der Instanz einer Klasse als XML-Elementen serialisieren Sie sie als XML-Attribute, serialisieren führt zu einem Dokument eine effizientere für Transport.  
+  
+ Nach der Erstellung einer <xref:System.Xml.Serialization.SoapAttributeOverrides>, erstellen Sie ein <xref:System.Xml.Serialization.XmlTypeMapping> mithilfe der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse. Übergeben Sie das resultierende Objekt als Argument an die <xref:System.Xml.Serialization.XmlSerializer.%23ctor%2A> Konstruktor. Das resultierende <xref:System.Xml.Serialization.XmlSerializer> verwendet die Daten von der <xref:System.Xml.Serialization.SoapAttributeOverrides> zum Überschreiben der Attribute, die steuern, wie die Objekte serialisiert werden. Um dies zu erreichen der <xref:System.Xml.Serialization.SoapAttributeOverrides> enthält eine Auflistung von Objekttypen, die überschrieben werden, sowie ein <xref:System.Xml.Serialization.SoapAttributes> jeden überschriebenen Objekttyp zugeordnet. Jede <xref:System.Xml.Serialization.SoapAttributes> enthält einen entsprechenden Satz von dar, die steuern, wie jedes Feld, Eigenschaft oder Klasse serialisiert wird.  
+  
+ Der Prozess zum Erstellen und Verwenden einer <xref:System.Xml.Serialization.SoapAttributeOverrides> lautet wie folgt:  
+  
+1.  Erstellen Sie eine <xref:System.Xml.Serialization.SoapAttributes>.  
+  
+2.  Erstellen Sie ein Attributobjekt, das mit dem Objekt überschrieben wird, geeignet ist. Um ein Feld oder eine Eigenschaft zu überschreiben, z. B. Erstellen einer <xref:System.Xml.Serialization.SoapElementAttribute>, mit dem neuen abgeleiteten Typ. Sie können optional ein neues zuweisen <xref:System.Xml.Serialization.SoapElementAttribute.ElementName%2A> , Attributnamen oder Namespace der Basisklasse überschreibt.  
+  
+3.  Fügen Sie das Attributobjekt in das entsprechende <xref:System.Xml.Serialization.SoapAttributes> Eigenschaft oder einer Auflistung. Legen Sie z. B. die <xref:System.Xml.Serialization.SoapAttributes.SoapElement%2A> Eigenschaft von der <xref:System.Xml.Serialization.SoapAttributes> -Objekt an die <xref:System.Xml.Serialization.SoapElementAttribute> , und geben Sie den Namen des Members, die außer Kraft gesetzt werden.  
+  
+4.  Erstellen Sie eine <xref:System.Xml.Serialization.SoapAttributeOverrides>.  
+  
+5.  Hinzufügen der <xref:System.Xml.Serialization.SoapAttributes> auf die <xref:System.Xml.Serialization.SoapAttributeOverrides> mithilfe der <xref:System.Xml.Serialization.XmlAttributeOverrides.Add%2A> Methode. Wenn das Objekt überschrieben wird eine <xref:System.Xml.Serialization.SoapTypeAttribute>, müssen Sie nur den Typ des Objekts außer Kraft gesetzte angeben. Aber wenn Sie ein Feld oder eine Eigenschaft überschreiben, müssen Sie auch angeben, auf den Namen des dem überschriebenen Member.  
+  
+6.  Erstellen einer <xref:System.Xml.Serialization.XmlTypeMapping> mithilfe der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse.  
+  
+7.  Beim Erstellen der <xref:System.Xml.Serialization.XmlSerializer>, übergeben die <xref:System.Xml.Serialization.XmlTypeMapping> auf die <xref:System.Xml.Serialization.XmlSerializer.%23ctor%2A> Konstruktor.  
+  
+8.  Verwenden Sie die resultierende <xref:System.Xml.Serialization.XmlSerializer> zum Serialisieren oder Deserialisieren die Objekte der Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die Serialisierung von der `GroupName` und `IgnoreThis` Felder und die Mitglieder der `GroupType` -Enumeration werden überschrieben. In der `CreateOverrideSerializer` -Methode, eine <xref:System.Xml.Serialization.SoapAttributeOverrides> erstellt, und für jeden überschriebenen Member oder eine Enumeration, ein <xref:System.Xml.Serialization.SoapAttributes> wird erstellt, mit der entsprechenden Eigenschaft festgelegt und hinzugefügt der <xref:System.Xml.Serialization.SoapAttributeOverrides>. Ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, wobei die <xref:System.Xml.Serialization.SoapAttributeOverrides>, und dass <xref:System.Xml.Serialization.XmlTypeMapping> dient zum Erstellen der <xref:System.Xml.Serialization.XmlSerializer> die Standardserialisierung überschreibt.  
+  
+ [!code-cpp[SoapAttributesOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributesOverrides/CPP/soapover.cpp#1)]
+ [!code-csharp[SoapAttributesOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributesOverrides/CS/soapover.cs#1)]
+ [!code-vb[SoapAttributesOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributesOverrides/VB/SoapOver.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapAttributeOverrides ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapAttributeOverrides.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.SoapAttributeOverrides" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die Serialisierung von der `GroupName` und `IgnoreThis` Felder und die Mitglieder der `GroupType` -Enumeration werden überschrieben. In der `CreateOverrideSerializer` -Methode, eine <xref:System.Xml.Serialization.SoapAttributeOverrides> erstellt, und für jeden überschriebenen Member oder eine Enumeration, ein <xref:System.Xml.Serialization.SoapAttributes> wird erstellt, mit der entsprechenden Eigenschaft festgelegt und hinzugefügt der <xref:System.Xml.Serialization.SoapAttributeOverrides>. Ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, wobei die <xref:System.Xml.Serialization.SoapAttributeOverrides>, und dass <xref:System.Xml.Serialization.XmlTypeMapping> dient zum Erstellen der <xref:System.Xml.Serialization.XmlSerializer> die Standardserialisierung überschreibt.  
+  
+ [!code-cpp[SoapAttributesOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributesOverrides/CPP/soapover.cpp#1)]
+ [!code-csharp[SoapAttributesOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributesOverrides/CS/soapover.cs#1)]
+ [!code-vb[SoapAttributesOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributesOverrides/VB/SoapOver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Type type, System.Xml.Serialization.SoapAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Type type, class System.Xml.Serialization.SoapAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapAttributeOverrides.Add(System.Type,System.Xml.Serialization.SoapAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="attributes" Type="System.Xml.Serialization.SoapAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des Objekts, das außer Kraft gesetzt wird.</param>
+        <param name="attributes">Ein <see cref="T:System.Xml.Serialization.SoapAttributes" /> , das die überschreibenden Attribute darstellt.</param>
+        <summary>Fügt eine <see cref="T:System.Xml.Serialization.SoapAttributes" /> auf eine Auflistung von <see cref="T:System.Xml.Serialization.SoapAttributes" /> Objekte. Die <paramref name="type" /> Parameter gibt ein Objekt, das überschrieben werden, indem Sie die <see cref="T:System.Xml.Serialization.SoapAttributes" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapAttributes> enthält eine Union von dar, die dazu führen, dass die <xref:System.Xml.Serialization.XmlSerializer> sein Standardverhalten für die Serialisierung für einen Satz von Objekten zu überschreiben. Die Attributobjekte, platzieren Sie in der <xref:System.Xml.Serialization.SoapAttributes>, je nachdem, auf das bestimmten Verhaltensweisen, die Sie überschreiben möchten. Z. B. die <xref:System.Xml.Serialization.XmlSerializer> einen Klassenmember als XML-Element standardmäßig serialisiert. Wenn Sie das Element stattdessen als XML-Attribut serialisiert werden soll, erstellen Sie eine <xref:System.Xml.Serialization.SoapAttributeAttribute>, weisen sie Sie der <xref:System.Xml.Serialization.SoapAttributes.SoapAttribute%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes>, und fügen die <xref:System.Xml.Serialization.XmlAttributes> auf der <xref:System.Xml.Serialization.SoapAttributeOverrides>. Verwenden der <xref:System.Xml.Serialization.SoapAttributeOverrides.Add%2A> -Methode zum Hinzufügen der <xref:System.Xml.Serialization.SoapAttributes> auf die <xref:System.Xml.Serialization.SoapAttributeOverrides>.  
+  
+ Verwenden Sie diese Überladung zum Hinzufügen einer <xref:System.Xml.Serialization.SoapAttributes> , enthält eine <xref:System.Xml.Serialization.SoapTypeAttribute>. Da die <xref:System.Xml.Serialization.SoapTypeAttribute> überschreibt die Serialisierung einer Klasse müssen Sie kein Member der Klasse zu überschreiben, nur den Typ der Klasse angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die Serialisierung von der `GroupName` und `IgnoreThis` Felder und die Mitglieder der `GroupType` -Enumeration werden überschrieben. In der `CreateOverrideSerializer` -Methode, eine <xref:System.Xml.Serialization.SoapAttributeOverrides> erstellt, und für jeden überschriebenen Member oder eine Enumeration, ein <xref:System.Xml.Serialization.SoapAttributes> wird erstellt, mit der entsprechenden Eigenschaft festgelegt und hinzugefügt der <xref:System.Xml.Serialization.SoapAttributeOverrides>. Ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, wobei die <xref:System.Xml.Serialization.SoapAttributeOverrides>, und dass <xref:System.Xml.Serialization.XmlTypeMapping> dient zum Erstellen der <xref:System.Xml.Serialization.XmlSerializer> die Standardserialisierung überschreibt.  
+  
+ [!code-cpp[SoapAttributesOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributesOverrides/CPP/soapover.cpp#1)]
+ [!code-csharp[SoapAttributesOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributesOverrides/CS/soapover.cs#1)]
+ [!code-vb[SoapAttributesOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributesOverrides/VB/SoapOver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Type type, string member, System.Xml.Serialization.SoapAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Type type, string member, class System.Xml.Serialization.SoapAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapAttributeOverrides.Add(System.Type,System.String,System.Xml.Serialization.SoapAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="member" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Xml.Serialization.SoapAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des Objekts, das außer Kraft setzen.</param>
+        <param name="member">Der Name des Mitglieds, außer Kraft setzen.</param>
+        <param name="attributes">Ein <see cref="T:System.Xml.Serialization.SoapAttributes" /> , das die überschreibenden Attribute darstellt.</param>
+        <summary>Fügt eine <see cref="T:System.Xml.Serialization.SoapAttributes" /> auf die Auflistung von <see cref="T:System.Xml.Serialization.SoapAttributes" /> enthaltenen Objekte durch die <see cref="T:System.Xml.Serialization.SoapAttributeOverrides" />. Die <paramref name="type" /> Parameter gibt das Objekt, das überschrieben werden, indem Sie die <see cref="T:System.Xml.Serialization.SoapAttributes" />. Die <paramref name="member" /> Parameter gibt den Namen eines Elements, das außer Kraft gesetzt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapAttributes> enthält eine Union von dar, die dazu führen, dass die <xref:System.Xml.Serialization.XmlSerializer> sein Standardverhalten für die Serialisierung für einen Satz von Objekten zu überschreiben. Die Attributobjekte, platzieren Sie in der <xref:System.Xml.Serialization.SoapAttributes>, je nachdem, auf das bestimmten Verhaltensweisen, die Sie überschreiben möchten. Z. B. die <xref:System.Xml.Serialization.XmlSerializer> einen Klassenmember als XML-Element standardmäßig serialisiert. Wenn Sie das Element stattdessen als SOAP-Attribut serialisiert werden soll, erstellen Sie eine <xref:System.Xml.Serialization.SoapAttributeAttribute>, weisen sie Sie der <xref:System.Xml.Serialization.SoapAttributes.SoapAttribute%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes>, und fügen die <xref:System.Xml.Serialization.XmlAttributes> auf der <xref:System.Xml.Serialization.SoapAttributeOverrides>. Verwenden der <xref:System.Xml.Serialization.SoapAttributeOverrides.Add%2A> -Methode zum Hinzufügen der <xref:System.Xml.Serialization.SoapAttributes> auf die <xref:System.Xml.Serialization.SoapAttributeOverrides>.  
+  
+ Verwenden Sie diese Methode, wenn die <xref:System.Xml.Serialization.SoapAttributes> enthält entweder ein <xref:System.Xml.Serialization.SoapAttributeAttribute>, <xref:System.ComponentModel.DefaultValueAttribute> <xref:System.Xml.Serialization.SoapElementAttribute>, <xref:System.Xml.Serialization.SoapEnumAttribute>, oder <xref:System.Xml.Serialization.SoapIgnoreAttribute>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Group`. Die Serialisierung von der `GroupName` und `IgnoreThis` Felder und die Mitglieder der `GroupType` -Enumeration werden überschrieben. In der `CreateOverrideSerializer` -Methode, eine <xref:System.Xml.Serialization.SoapAttributeOverrides> erstellt, und für jeden überschriebenen Member oder eine Enumeration, ein <xref:System.Xml.Serialization.SoapAttributes> wird erstellt, mit der entsprechenden Eigenschaft festgelegt und hinzugefügt der <xref:System.Xml.Serialization.SoapAttributeOverrides>. Ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, wobei die <xref:System.Xml.Serialization.SoapAttributeOverrides>, und dass <xref:System.Xml.Serialization.XmlTypeMapping> dient zum Erstellen der <xref:System.Xml.Serialization.XmlSerializer> die Standardserialisierung überschreibt.  
+  
+ [!code-cpp[SoapAttributesOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributesOverrides/CPP/soapover.cpp#1)]
+ [!code-csharp[SoapAttributesOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributesOverrides/CS/soapover.cs#1)]
+ [!code-vb[SoapAttributesOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributesOverrides/VB/SoapOver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.SoapAttributes this[Type type] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.SoapAttributes Item(class System.Type)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapAttributeOverrides.Item(System.Type)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.SoapAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die Basisklasse <see cref="T:System.Type" /> , die bezieht sich auf die Auflistung von Attributen, die Sie abrufen möchten.</param>
+        <summary>Ruft das Objekt mit der angegebenen (Basisklasse) verknüpft sind.</summary>
+        <value>Ein <see cref="T:System.Xml.Serialization.SoapAttributes" /> , die die Auflistung der überschreibenden Attribute darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung zum Zurückgeben einer <xref:System.Xml.Serialization.SoapAttributes> , enthält die Attribute für eine <xref:System.Xml.Serialization.SoapTypeAttribute>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Xml.Serialization.SoapAttributeOverrides> , wird verwendet, um die Serialisierung einer Instanz von überschreiben die `Group` Klasse. Das Beispiel verwendet außerdem die <xref:System.Xml.Serialization.SoapAttributeOverrides.Item%2A> Eigenschaft zum Abrufen der <xref:System.Xml.Serialization.SoapAttributes> , verwendet, um anzugeben, wie die Serialisierung überschrieben wird.  
+  
+ [!code-cpp[SoapAttributeOverrides.Item property 2#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributeOverrides.Item property 2/CPP/attadd2.cpp#1)]
+ [!code-csharp[SoapAttributeOverrides.Item property 2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributeOverrides.Item property 2/CS/attadd2.cs#1)]
+ [!code-vb[SoapAttributeOverrides.Item property 2#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributeOverrides.Item property 2/VB/attadd2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.SoapAttributes this[Type type, string member] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.SoapAttributes Item(class System.Type, string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapAttributeOverrides.Item(System.Type,System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.SoapAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="member" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die Basisklasse <see cref="T:System.Type" /> , die bezieht sich auf die Auflistung von Attributen, die Sie überschreiben möchten.</param>
+        <param name="member">Der Name des dem überschriebenen Member, der angibt, die <see cref="T:System.Xml.Serialization.SoapAttributes" /> zurückgegeben.</param>
+        <summary>Ruft das Objekt mit der angegebenen (Basisklasse) verknüpft sind. Die <paramref name="member" /> Parameter gibt an, die Member der Basisklasse, die überschrieben wird.</summary>
+        <value>Ein <see cref="T:System.Xml.Serialization.SoapAttributes" /> , die die Auflistung der überschreibenden Attribute darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung zurückzugebenden eine <xref:System.Xml.Serialization.SoapAttributes> enthält Attribute, die das Überschreiben einer <xref:System.Xml.Serialization.SoapAttributeAttribute>, <xref:System.Xml.Serialization.SoapElementAttribute>, <xref:System.Xml.Serialization.SoapIgnoreAttribute>, oder <xref:System.Xml.Serialization.SoapEnumAttribute>. Sie können auch Zurückgeben einer <xref:System.Xml.Serialization.SoapAttributes> , enthält die Außerkraftsetzung der einen Standardwert, der verwendet eine <xref:System.ComponentModel.DefaultValueAttribute>.  
+  
+ Wenn die <xref:System.Xml.Serialization.SoapAttributes> enthält eine <xref:System.Xml.Serialization.SoapTypeAttribute>, müssen Sie die Überladung, die nur die überschriebene Typ angegeben verwenden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Xml.Serialization.SoapAttributeOverrides> verwendet, um die Serialisierung einer Instanz von überschreiben die `Group` Klasse. Das Beispiel verwendet außerdem die <xref:System.Xml.Serialization.SoapAttributeOverrides.Item%2A> Eigenschaft zum Abrufen der <xref:System.Xml.Serialization.SoapAttributes> , verwendet, um anzugeben, wie die Serialisierung überschrieben wird.  
+  
+ [!code-cpp[SoapAttributeOverrides.Item property 1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributeOverrides.Item property 1/CPP/attadd.cpp#1)]
+ [!code-csharp[SoapAttributeOverrides.Item property 1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributeOverrides.Item property 1/CS/attadd.cs#1)]
+ [!code-vb[SoapAttributeOverrides.Item property 1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributeOverrides.Item property 1/VB/attadd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

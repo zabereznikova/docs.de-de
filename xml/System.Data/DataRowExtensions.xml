@@ -1,0 +1,414 @@
+<Type Name="DataRowExtensions" FullName="System.Data.DataRowExtensions">
+  <TypeSignature Language="C#" Value="public static class DataRowExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DataRowExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRowExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Erweiterungsmethoden für die <see cref="T:System.Data.DataRow" /> Klasse. Dies ist eine statische Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataSet> API wurde erweitert, mit zwei neue Methoden für die <xref:System.Data.DataRow> -Klasse, <xref:System.Data.DataRowExtensions.Field%2A> und <xref:System.Data.DataRowExtensions.SetField%2A>. Sie können diese Form [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdrücke und Methodenabfragen <xref:System.Data.DataTable> Objekte. Dies sind die empfohlenen Methoden zum Zugriff auf Spaltenwerte in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdrücke und-Methode Abfragen. Weitere Informationen finden Sie unter [generische Field- und SetField-Methoden](~/docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Field&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Generische Parameter, der den Rückgabetyp der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="column">Die Eingabe <see cref="T:System.Data.DataColumn" /> Objekt, das die Spalte, um den Wert des zurückgeben angibt.</param>
+        <summary>Stellt stark typisierten Zugriff auf jeden der Werte in der angegebenen Zeile an. Die <see cref="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <returns>Der Wert des Typs <paramref name="T" />, der die <see cref="T:System.Data.DataColumn" /> gemäß <paramref name="column" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataSet> -Klasse stellt **null** Werte mit den <xref:System.DBNull.Value> -Instanz die <xref:System.DBNull> Klasse.  Ein [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdruck, der eine Spalte mit Zugriff auf eine **null** Wert erzeugt eine <xref:System.InvalidCastException> zur Laufzeit. Darüber hinaus <xref:System.Data.DataSet> auf NULL festlegbare Typen nicht unterstützt. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode bietet Unterstützung für den Zugriff auf Spalten als auf NULL festlegbare Typen.  Wenn des zugrunde liegenden in Wert der <xref:System.Data.DataSet> ist <xref:System.DBNull.Value>, der Typ des zurückgegebene NULL-Werte zulassen müssen einen Wert von **null**.  
+  
+ Wenn der Wert des angegebenen <xref:System.Data.DataColumn> ist <xref:System.DBNull.Value> und `T` ist ein Verweistyp oder nullable-Typ, der Rückgabetyp **null**. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode nicht zurück <xref:System.DBNull.Value>.  
+  
+ Die <xref:System.Data.DataRowExtensions.Field%2A> Methode führt keine typkonvertierungen. Wenn typkonvertierung erforderlich ist, sollten Sie zuerst den Spaltenwert rufen Sie mithilfe der <xref:System.Data.DataRowExtensions.Field%2A> Methode. Der Wert der Spalte sollte dann in einen anderen Typ konvertiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die durch angegebene Spalte <paramref name="column" /> erfolgt nicht der <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Data.DataRow" /> ist ein Teil.</exception>
+        <exception cref="T:System.NullReferenceException">Ein **null** ein NULL-Wert zugewiesen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Field&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, int32 columnIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Generische Parameter, der den Rückgabetyp der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="columnIndex">Der Spaltenindex.</param>
+        <summary>Stellt stark typisierten Zugriff auf jeden der Werte in der angegebenen Zeile an. Die <see cref="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <returns>Der Wert des Typs <paramref name="T" />, der die <see cref="T:System.Data.DataColumn" /> gemäß <paramref name="columnIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataSet> -Klasse stellt **null** Werte mit den <xref:System.DBNull.Value> -Instanz die <xref:System.DBNull> Klasse.  Ein [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdruck, der eine Spalte mit Zugriff auf eine **null** Wert erzeugt eine <xref:System.InvalidCastException> zur Laufzeit. Darüber hinaus <xref:System.Data.DataSet> auf NULL festlegbare Typen nicht unterstützt. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode bietet Unterstützung für den Zugriff auf Spalten als auf NULL festlegbare Typen.  Wenn des zugrunde liegenden in Wert der <xref:System.Data.DataSet> ist <xref:System.DBNull.Value>, der Typ des zurückgegebene NULL-Werte zulassen müssen einen Wert von **null**.  
+  
+ Wenn der Wert des angegebenen <xref:System.Data.DataColumn> ist **null** und `T` ein Referenztyp oder Nullable-Typ ist, wird der Rückgabetyp **null**.  Die <xref:System.Data.DataRowExtensions.Field%2A> Methode nicht zurück <xref:System.DBNull.Value>.  
+  
+ Die <xref:System.Data.DataRowExtensions.Field%2A> Methode führt keine typkonvertierungen. Wenn typkonvertierung erforderlich ist, sollten Sie zuerst den Spaltenwert rufen Sie mithilfe der <xref:System.Data.DataRowExtensions.Field%2A> Methode. Der Wert der Spalte sollte dann in einen anderen Typ konvertiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die durch angegebene Spalte <paramref name="ordinal" /> ist nicht in der <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Data.DataRow" /> ist ein Teil.</exception>
+        <exception cref="T:System.NullReferenceException">Ein **null** ein NULL-Wert zugewiesen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Field&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Generische Parameter, der den Rückgabetyp der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="columnName">Der Name der Spalte, die den Wert zurückzugeben.</param>
+        <summary>Stellt stark typisierten Zugriff auf jeden der Werte in der angegebenen Zeile an. Die <see cref="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <returns>Der Wert des Typs <paramref name="T" />, der die <see cref="T:System.Data.DataColumn" /> gemäß <paramref name="columnName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataSet> -Klasse stellt **null** Werte mit den <xref:System.DBNull.Value> -Instanz die <xref:System.DBNull> Klasse. Ein [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdruck, der eine Spalte mit Zugriff auf eine **null** Wert erzeugt eine <xref:System.InvalidCastException> zur Laufzeit. Darüber hinaus <xref:System.Data.DataSet> auf NULL festlegbare Typen nicht unterstützt. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode bietet Unterstützung für den Zugriff auf Spalten als auf NULL festlegbare Typen. Wenn des zugrunde liegenden in Wert der <xref:System.Data.DataSet> ist <xref:System.DBNull.Value>, der Typ des zurückgegebene NULL-Werte zulassen müssen einen Wert von **null**.  
+  
+ Wenn der Wert des angegebenen <xref:System.Data.DataColumn> ist **null** und `T` ist ein Verweistyp oder nullable-Typ, der Rückgabetyp **null**. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode nicht zurück <xref:System.DBNull.Value>.  
+  
+ Die <xref:System.Data.DataRowExtensions.Field%2A> Methode führt keine typkonvertierungen. Wenn typkonvertierung erforderlich ist, sollten Sie zuerst den Spaltenwert rufen Sie mithilfe der <xref:System.Data.DataRowExtensions.Field%2A> Methode. Der Wert der Spalte sollte dann in einen anderen Typ konvertiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die durch angegebene Spalte <paramref name="columnName" /> erfolgt nicht der <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Data.DataRow" /> ist ein Teil.</exception>
+        <exception cref="T:System.NullReferenceException">Ein <see langword="null" /> ein NULL-Wert zugewiesen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Field&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, class System.Data.DataColumn column, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Generische Parameter, der den Rückgabetyp der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="column">Die Eingabe <see cref="T:System.Data.DataColumn" /> Objekt, das die Spalte, um den Wert des zurückgeben angibt.</param>
+        <param name="version">Ein <see cref="T:System.Data.DataRowVersion" /> Enumeration, der angibt, die Version des Spaltenwerts, zurückgeben, z. B. <see langword="Current" /> oder <see langword="Original" /> Version.</param>
+        <summary>Stellt stark typisierten Zugriff auf jeden der Werte in der angegebenen Zeile an. Die <see cref="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <returns>Der Wert des Typs <paramref name="T" />, der die <see cref="T:System.Data.DataColumn" /> gemäß <paramref name="column" /> und <paramref name="version" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataSet> -Klasse stellt **null** Werte mit den <xref:System.DBNull.Value> -Instanz die <xref:System.DBNull> Klasse.  Ein [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdruck, der eine Spalte mit Zugriff auf eine **null** Wert erzeugt eine <xref:System.InvalidCastException> zur Laufzeit. Darüber hinaus <xref:System.Data.DataSet> auf NULL festlegbare Typen nicht unterstützt. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode bietet Unterstützung für den Zugriff auf Spalten als auf NULL festlegbare Typen.  Wenn des zugrunde liegenden in Wert der <xref:System.Data.DataSet> ist <xref:System.DBNull.Value>, der Typ des zurückgegebene NULL-Werte zulassen müssen einen Wert von **null**.  
+  
+ Wenn der Wert des angegebenen <xref:System.Data.DataColumn> ist null und `T` ein Referenztyp oder Nullable-Typ ist, wird der Rückgabetyp **null**. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode nicht zurück <xref:System.DBNull.Value>.  
+  
+ Die <xref:System.Data.DataRowExtensions.Field%2A> Methode führt keine typkonvertierungen. Wenn typkonvertierung erforderlich ist, sollten Sie zuerst den Spaltenwert rufen Sie mithilfe der <xref:System.Data.DataRowExtensions.Field%2A> Methode. Der Wert der Spalte sollte dann in einen anderen Typ konvertiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die durch angegebene Spalte <paramref name="column" /> ist nicht in der <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Data.DataRow" /> ist ein Teil.</exception>
+        <exception cref="T:System.NullReferenceException">Ein **null** ein NULL-Wert zugewiesen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Field&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, int32 columnIndex, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Generische Parameter, der den Rückgabetyp der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="columnIndex">Die nullbasierte Ordnungszahl der Spalte, die den Wert zurückzugeben.</param>
+        <param name="version">Ein <see cref="T:System.Data.DataRowVersion" /> Enumeration, der angibt, die Version des Spaltenwerts, zurückgeben, z. B. <see langword="Current" /> oder <see langword="Original" /> Version.</param>
+        <summary>Stellt stark typisierten Zugriff auf jeden der Werte in der angegebenen Zeile an. Die <see cref="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <returns>Der Wert des Typs <paramref name="T" />, der die <see cref="T:System.Data.DataColumn" /> gemäß <paramref name="ordinal" /> und <paramref name="version" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataSet> -Klasse stellt **null** Werte mit den <xref:System.DBNull.Value> -Instanz die <xref:System.DBNull> Klasse.  Ein [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdruck, der eine Spalte mit Zugriff auf eine **null** Wert erzeugt eine <xref:System.InvalidCastException> zur Laufzeit. Darüber hinaus <xref:System.Data.DataSet> auf NULL festlegbare Typen nicht unterstützt. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode bietet Unterstützung für den Zugriff auf Spalten als auf NULL festlegbare Typen.  Wenn des zugrunde liegenden in Wert der <xref:System.Data.DataSet> ist <xref:System.DBNull.Value>, der Typ des zurückgegebene NULL-Werte zulassen müssen einen Wert von **null**.  
+  
+ Wenn der Wert des angegebenen <xref:System.Data.DataColumn> ist null und `T` ein Referenztyp oder Nullable-Typ ist, wird der Rückgabetyp **null**. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode nicht zurück <xref:System.DBNull.Value>.  
+  
+ Die <xref:System.Data.DataRowExtensions.Field%2A> Methode führt keine typkonvertierungen. Wenn typkonvertierung erforderlich ist, sollten Sie zuerst den Spaltenwert rufen Sie mithilfe der <xref:System.Data.DataRowExtensions.Field%2A> Methode. Der Wert der Spalte sollte dann in einen anderen Typ konvertiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die durch angegebene Spalte <paramref name="ordinal" /> ist nicht in der <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Data.DataRow" /> ist ein Teil.</exception>
+        <exception cref="T:System.NullReferenceException">Ein **null** ein NULL-Wert zugewiesen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Field&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, string columnName, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, string columnName, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Generische Parameter, der den Rückgabetyp der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="columnName">Der Name der Spalte, die den Wert zurückzugeben.</param>
+        <param name="version">Ein <see cref="T:System.Data.DataRowVersion" /> Enumeration, der angibt, die Version des Spaltenwerts, zurückgeben, z. B. <see langword="Current" /> oder <see langword="Original" /> Version.</param>
+        <summary>Stellt stark typisierten Zugriff auf jeden der Werte in der angegebenen Zeile an. Die <see cref="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String,System.Data.DataRowVersion)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <returns>Der Wert des Typs <paramref name="T" />, der die <see cref="T:System.Data.DataColumn" /> gemäß <paramref name="columnName" /> und <paramref name="version" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataSet> -Klasse stellt **null** Werte mit den <xref:System.DBNull.Value> -Instanz die <xref:System.DBNull> Klasse.  Ein [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdruck, der eine Spalte mit Zugriff auf eine **null** Wert erzeugt eine <xref:System.InvalidCastException> zur Laufzeit. Darüber hinaus <xref:System.Data.DataSet> auf NULL festlegbare Typen nicht unterstützt. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode bietet Unterstützung für den Zugriff auf Spalten als auf NULL festlegbare Typen.  Wenn des zugrunde liegenden in Wert der <xref:System.Data.DataSet> ist <xref:System.DBNull.Value>, der Typ des zurückgegebene NULL-Werte zulassen müssen einen Wert von **null**.  
+  
+ Wenn der Wert des angegebenen <xref:System.Data.DataColumn> ist null und `T` ein Referenztyp oder Nullable-Typ ist, wird der Rückgabetyp **null**. Die <xref:System.Data.DataRowExtensions.Field%2A> Methode nicht zurück <xref:System.DBNull.Value>.  
+  
+ Die <xref:System.Data.DataRowExtensions.Field%2A> Methode führt keine typkonvertierungen. Wenn typkonvertierung erforderlich ist, sollten Sie zuerst den Spaltenwert rufen Sie mithilfe der <xref:System.Data.DataRowExtensions.Field%2A> Methode. Der Wert der Spalte sollte dann in einen anderen Typ konvertiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die durch angegebene Spalte <paramref name="columnName" /> ist nicht in der <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Data.DataRow" /> ist ein Teil.</exception>
+        <exception cref="T:System.NullReferenceException">Ein **null** ein NULL-Wert zugewiesen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetField&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetField&lt;T&gt;(class System.Data.DataRow row, class System.Data.DataColumn column, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Data.DataColumn,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Ein generischer Parameter, der den Wert der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="column">Die Eingabe <see cref="T:System.Data.DataColumn" /> gibt an, welcher Zeilenwert abgerufen.</param>
+        <param name="value">Der neue Zeilenwert für die angegebene Spalte des Typs <c>T</c>.</param>
+        <summary>Setzt einen neuen Wert für die angegebene Spalte in der <see cref="T:System.Data.DataRow" />. Die <see cref="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Data.DataColumn,``0)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` ist **null**, <xref:System.Data.DataRowExtensions.SetField%2A> -Methode konvertiert die **null** Wert <xref:System.DBNull.Value> in der zugrunde liegenden <xref:System.Data.DataColumn>.  
+  
+ Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode führt keine typkonvertierungen. Dies bedeutet jedoch nicht, dass keinerlei Typkonvertierung auftritt. Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode macht die [!INCLUDE[ado_whidbey_long](~/includes/ado-whidbey-long-md.md)] Verhalten der <xref:System.Data.DataRow> Klasse. Eine Konvertierung vom Typ ausgeführt werden konnte die <xref:System.Data.DataRow> -Objekt und der konvertierte Wert würde dann mit der Zeile gespeichert werden.  
+  
+ Ausnahmen können nach oben weitergegeben werden, über die <xref:System.Data.DataRowExtensions.SetField%2A> Methode aus der zugrunde liegenden <xref:System.Data.DataRow> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die durch angegebene Spalte <paramref name="column" /> kann nicht gefunden werden.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="column" /> ist **null**.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Tritt auf, wenn Sie versuchen, einen Wert für eine gelöschte Zeile festzulegen.</exception>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetField&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, int columnIndex, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetField&lt;T&gt;(class System.Data.DataRow row, int32 columnIndex, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Int32,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Ein generischer Parameter, der den Wert der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="columnIndex">Die nullbasierte Ordnungszahl der Spalte, die den Wert festlegen.</param>
+        <param name="value">Der neue Zeilenwert für die angegebene Spalte des Typs <c>T</c>.</param>
+        <summary>Setzt einen neuen Wert für die angegebene Spalte in der <see cref="T:System.Data.DataRow" /> für die Methode aufgerufen wird. Die <see cref="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Int32,``0)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` ist **null**, <xref:System.Data.DataRowExtensions.SetField%2A> -Methode konvertiert die **null** Wert <xref:System.DBNull.Value> in der zugrunde liegenden <xref:System.Data.DataColumn>.  
+  
+ Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode führt keine typkonvertierungen. Dies bedeutet jedoch nicht, dass keinerlei Typkonvertierung auftritt. Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode macht die [!INCLUDE[ado_whidbey_long](~/includes/ado-whidbey-long-md.md)] Verhalten der <xref:System.Data.DataRow> Klasse. Eine Konvertierung vom Typ ausgeführt werden konnte die <xref:System.Data.DataRow> -Objekt und der konvertierte Wert würde dann mit der Zeile gespeichert werden.  
+  
+ Ausnahmen können nach oben weitergegeben werden, über die <xref:System.Data.DataRowExtensions.SetField%2A> Methode aus der zugrunde liegenden <xref:System.Data.DataRow> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Tritt auf, wenn Sie versuchen, einen Wert für eine gelöschte Zeile festzulegen.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die <paramref name="ordinal" /> Argument liegt außerhalb des Bereichs.</exception>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetField&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, string columnName, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetField&lt;T&gt;(class System.Data.DataRow row, string columnName, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.String,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" RefType="this" />
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Ein generischer Parameter, der den Wert der Spalte angibt.</typeparam>
+        <param name="row">Die Eingabe <see cref="T:System.Data.DataRow" />, der als fungiert der <see langword="this" /> Instanz für die Erweiterungsmethode.</param>
+        <param name="columnName">Der Name der Spalte, die den Wert festlegen.</param>
+        <param name="value">Der neue Zeilenwert für die angegebene Spalte des Typs <c>T</c>.</param>
+        <summary>Setzt einen neuen Wert für die angegebene Spalte in der <see cref="T:System.Data.DataRow" />. Die <see cref="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.String,``0)" /> Methode unterstützt auch auf NULL festlegbare Typen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` ist **null**, <xref:System.Data.DataRowExtensions.SetField%2A> -Methode konvertiert die **null** Wert <xref:System.DBNull.Value> in der zugrunde liegenden <xref:System.Data.DataColumn>.  
+  
+ Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode führt keine typkonvertierungen. Dies bedeutet jedoch nicht, dass keinerlei Typkonvertierung auftritt. Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode macht die [!INCLUDE[ado_whidbey_long](~/includes/ado-whidbey-long-md.md)] Verhalten der <xref:System.Data.DataRow> Klasse. Eine Konvertierung vom Typ ausgeführt werden konnte die <xref:System.Data.DataRow> -Objekt und der konvertierte Wert würde dann mit der Zeile gespeichert werden.  
+  
+ Ausnahmen können nach oben weitergegeben werden, über die <xref:System.Data.DataRowExtensions.SetField%2A> Methode aus der zugrunde liegenden <xref:System.Data.DataRow> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die durch angegebene Spalte <paramref name="columnName" /> kann nicht gefunden werden.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Tritt auf, wenn Sie versuchen, einen Wert für eine gelöschte Zeile festzulegen.</exception>
+        <exception cref="T:System.InvalidCastException">Der Werttyp der zugrunde liegenden Spalte konnte nicht in den durch den generischen Parameter angegebenen Typ umgewandelt werden <paramref name="T" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

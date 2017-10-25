@@ -1,0 +1,239 @@
+<Type Name="SqlCacheDependencySection" FullName="System.Web.Configuration.SqlCacheDependencySection">
+  <TypeSignature Language="C#" Value="public sealed class SqlCacheDependencySection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlCacheDependencySection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.SqlCacheDependencySection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert die SQL-Cache-Abhängigkeiten für eine ASP.NET-Anwendung an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.SqlCacheDependencySection> ermöglicht programmgesteuerten Zugriff auf und Ändern der `sqlCacheDependency` Element von der `cache` Konfigurationsabschnitt.  
+  
+ Die SQL-Cacheabhängigkeit kann die zwischengespeicherten Daten mit der ursprünglichen Quelle synchronisiert werden. Nachdem Sie die Beziehung zwischen einem Element in einer ASP.NET-Anwendung Cache und einer bestimmten SQL Server-Datenbanktabelle, einer Instanz von gespeichert konfiguriert die <xref:System.Web.Caching.SqlCacheDependency> Klasse überwacht die Tabelle aus, sodass bei der ein Element in der Tabelle geändert wurde, das Element automatisch wird aus dem Cache entfernt.  
+  
+ Die Einstellungen in dieses Element wirken sich nur auf die Tabelle-basierten Version von den <xref:System.Web.Caching.SqlCacheDependency> Objekt. Zeilenebene <xref:System.Web.Caching.SqlCacheDependency> mit verwendeten Objekte [!INCLUDE[sqprsqlong](~/includes/sqprsqlong-md.md)] und höher sind von diesen Einstellungen nicht betroffen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Configuration.SqlCacheDependencySection> kann Informationen in den zugehörigen Abschnitt der Konfigurationsdatei entsprechend den Einschränkungen, die von der Abschnittseigenschaft im definiert schreiben <xref:System.Configuration.SectionInformation.AllowDefinition%2A> , dessen Wert <xref:System.Configuration.ConfigurationAllowDefinition.MachineToApplication>. Jeder Versuch, die in einer Konfigurationsdatei auf einer Ebene nicht zulässig, in der Hierarchie zu schreiben, führt in einer Fehlermeldung, die vom Parser erzeugt. Allerdings können Sie diese Klasse zum Lesen von Konfigurationsinformationen auf jeder Ebene in der Hierarchie aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Configuration.SqlCacheDependencySection> Objekt aus der Konfigurationsdatei von einer vorhandenen Webanwendung.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencySection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/CS/SqlCacheDependencySection.cs#1)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencySection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/VB/SqlCacheDependencySection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlCacheDependencySection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencySection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.SqlCacheDependencySection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.SqlCacheDependencySection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.SqlCacheDependencySection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Databases">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.SqlCacheDependencyDatabaseCollection Databases { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.SqlCacheDependencyDatabaseCollection Databases" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencySection.Databases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("databases")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.SqlCacheDependencyDatabaseCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> Objekte innerhalb der <see cref="T:System.Web.Configuration.SqlCacheDependencySection" />.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabaseCollection" /> von <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> Objekte</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.SqlCacheDependencySection.Databases%2A> -Eigenschaft ermöglicht den programmgesteuerten Zugriff auf die `databases` Element von der [SqlCacheDependency-Element für das caching ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/3ffabd95-87b6-4a52-b753-9d298d43841d) von der `cache` Abschnitt eine Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.SqlCacheDependencySection.Databases%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencySection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/CS/SqlCacheDependencySection.cs#2)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencySection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/VB/SqlCacheDependencySection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencySection.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencySection.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datenbanktabelle auf Änderungen überwacht werden sollen.</summary>
+        <value>
+          <see langword="true" />Wenn die Überwachung der SQL-Cache aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem Sie die Beziehung zwischen einem Element in einer ASP.NET-Anwendung Cache und einer bestimmten SQL Server-Datenbanktabelle, einer Instanz von gespeichert konfiguriert die <xref:System.Web.Caching.SqlCacheDependency> Klasse überwacht die Tabelle aus, sodass bei der ein Element in der Tabelle geändert das Element automatisch wird aus dem Cache entfernt.  
+  
+ Für diese Klasse ordnungsgemäß funktioniert müssen die Datenbank und alle Tabellen, auf denen Sie Abhängigkeiten festlegen möchten, die Benachrichtigungen aktiviert haben. Weitere Informationen finden Sie unter den Hinweisen für die <xref:System.Web.Caching.SqlCacheDependency> Klasse.  
+  
+> [!NOTE]
+>  Ruft ab oder legt einen Wert, der angibt, gibt an, ob die Datenbank, die Tabellen haben active <xref:System.Web.Caching.SqlCacheDependency> Objekte auf Änderungen überwacht werden soll.  Diese Einstellung wirkt sich nicht auf Zeilenebene <xref:System.Web.Caching.SqlCacheDependency> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.SqlCacheDependencySection.Enabled%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencySection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/CS/SqlCacheDependencySection.cs#4)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencySection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/VB/SqlCacheDependencySection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PollTime">
+      <MemberSignature Language="C#" Value="public int PollTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PollTime" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencySection.PollTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("pollTime", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Häufigkeit, mit denen die <see cref="T:System.Web.Caching.SqlCacheDependency" /> die Datenbanktabelle Änderungen abfragt.</summary>
+        <value>Die SQL-Cache Abhängigkeit Abruf Zeit in Millisekunden. Der Standard ist 500.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.SqlCacheDependencySection.PollTime%2A> Eigenschaft definiert die zeithäufigkeit mit dem ASP.NET die Datenbank auf Änderungen in der Tabelle mit den zwischengespeicherten Element verknüpft ist fragt.  
+  
+ **Hinweis** die Häufigkeit kann überschrieben werden, auf Datenbankebene in der `databases` Element von der `sqlCacheDependency` in die `cache` Konfigurationsabschnitt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.SqlCacheDependencySection.PollTime%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencySection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/CS/SqlCacheDependencySection.cs#3)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencySection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencySection/VB/SqlCacheDependencySection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencySection.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencySection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

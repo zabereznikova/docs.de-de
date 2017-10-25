@@ -1,0 +1,213 @@
+<Type Name="DataFieldConverter" FullName="System.Web.UI.Design.DataFieldConverter">
+  <TypeSignature Language="C#" Value="public class DataFieldConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataFieldConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DataFieldConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter, der eine Liste der Datenfelder aus der aktuellen Komponente ausgewählten Datenquelle abrufen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.DataFieldConverter>eine Liste der Datenfelder können aus der aktuellen Datenquelle einer Komponente zur Entwurfszeit abgerufen werden.  
+  
+ Dieser Typkonverter dient der [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] die Werte angeben, die in die Liste der Felder im Eigenschaftenfenster angezeigt werden.  
+  
+> [!CAUTION]
+>  Sie sollten einen Typkonverter nie direkt zugreifen. Rufen Sie stattdessen mit den entsprechenden Konverter <xref:System.ComponentModel.TypeDescriptor>. Weitere Informationen finden Sie in den Beispielen in der <xref:System.ComponentModel.TypeConverter> Basisklasse.  
+  
+ Weitere Informationen zu den Einsatz von Typkonvertern, finden Sie unter der <xref:System.ComponentModel.TypeConverter> Basisklasse und [Vorgehensweise: Implementieren eines Typkonverters](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+   
+  
+## Examples  
+ [!code-cpp[DataSourceTypeConverterExamples#3](~/samples/snippets/cpp/VS_Snippets_WebNet/DataSourceTypeConverterExamples/CPP/datasourcetypeconverterexamples.cpp#3)]
+ [!code-csharp[DataSourceTypeConverterExamples#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DataSourceTypeConverterExamples/CS/datasourcetypeconverterexamples.cs#3)]
+ [!code-vb[DataSourceTypeConverterExamples#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataSourceTypeConverterExamples/VB/datasourcetypeconverterexamples.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataFieldConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataFieldConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.DataFieldConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataFieldConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das verwendet werden kann, um die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <param name="sourceType">Ein <see cref="T:System.Type" /> , den Sie konvertieren möchten Typ darstellt.</param>
+        <summary>Ruft einen Wert, der angibt, ob der Konverter ein Objekt vom angegebenen Quelltyp in den systemeigenen Typ des Konverters konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der Konverter die Konvertierung durchführen kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `true` , wenn der Quelltyp eine Zeichenfolge ist. Andernfalls, diese Methode gibt immer `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eigene konvertierungsanforderungen erfüllen.  
+  
+ Die <paramref name="context" /> Parameter kann verwendet werden, um zusätzliche Informationen über die Umgebung extrahiert werden aus der der Konverter aufgerufen. Ist es möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des der <paramref name="context" /> Objekt möglicherweise auch zurückgeben <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataFieldConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das verwendet werden kann, um die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , die zum unterstützen der Lokalisierungsfunktionen verwendet werden kann.</param>
+        <param name="value">Die zu konvertierende <see cref="T:System.Object" />.</param>
+        <summary>Konvertiert das angegebene Objekt in den systemeigenen Typ des Konverters.</summary>
+        <returns>Eine <see cref="T:System.Object" /> , die das angegebene Objekt nach der Konvertierung darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht ausgeführt werden.</exception>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eigene konvertierungsanforderungen erfüllen.  
+  
+ Die <paramref name="context" /> Parameter kann verwendet werden, um zusätzliche Informationen über die Umgebung extrahiert werden aus der der Konverter aufgerufen. Ist es möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des der <paramref name="context" /> Objekt möglicherweise auch zurückgeben <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataFieldConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt, das die Komponente oder die Werte für die abzurufenden Steuerelements angibt.</param>
+        <summary>Ruft die Datenfelder vorhanden innerhalb der ausgewählten Datenquelle ab, wenn Informationen zu diesen verfügbar ist.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> der Standarddatenquellen auflisten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die <xref:System.Web.UI.Design.IDataSourceProvider> Implementierung auf der Komponenten-Designer, um die ausgewählte Datenquelle abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataFieldConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das verwendet werden kann, um die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <summary>Ruft einen Wert ab, ob die Auflistung von Standardwerten von zurückgegebene <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> ist eine Liste aller möglichen Werte.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> Merry <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> eine exklusive Liste aller möglichen Werte, die gültig sind. <see langword="false" /> Wenn andere Werte möglich sind.  
+  
+ Wie in dieser Klasse implementiert wird, gibt diese Methode immer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es sich um eine exklusive Liste handelt, zum Beispiel bei einem Enumerationsdatentyp, sind keine anderen Werte gültig. Wenn die Liste nicht exklusiv ist, sind neben der Liste der standardmäßigen, die Werte den weiteren gültigen Werten <xref:System.ComponentModel.TypeConverter.GetStandardValues%2A> bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, wenn der Typ, den Sie konvertieren möchten Standardwerten unterstützt.  
+  
+ Die <paramref name="context" /> Parameter kann verwendet werden, um zusätzliche Informationen über die Umgebung extrahiert werden aus der der Konverter aufgerufen. Ist es möglicherweise <see langword="null" />, daher immer überprüft werden soll. Auch Eigenschaften des der <paramref name="context" /> Objekt möglicherweise auch zurückgeben <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataFieldConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, über die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <summary>Ruft einen Wert, der angibt, ob der Konverter einen Standardsatz von Werten unterstützt, die aus einer Liste ausgewählt werden können.</summary>
+        <returns>
+          <see langword="true" />Wenn <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> kann aufgerufen werden, die vom Objekt unterstützte einen gemeinsamen Satz von Werten ermitteln, andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

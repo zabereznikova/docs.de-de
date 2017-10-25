@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.SessionState">
+  <Docs>
+    <summary>Der <see cref="N:System.Web.SessionState" />-Namespace stellt Klassen und Schnittstellen bereit, die das Speichern von Daten ermöglichen, die für einen einzelnen Client in einer Webanwendung auf dem Server spezifisch sind. Die Sitzungszustandsdaten werden verwendet, um dem Client das Erscheinungsbild einer ständigen Verbindung mit der Anwendung zu geben. Zustandsinformationen können innerhalb des lokalen Prozessspeichers gespeichert werden, bzw. bei Webfarmkonfigurationen mithilfe des ASP.NET-Statusdiensts oder der Microsoft SQL Server-Datenbank prozessextern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Status der Sitzung kann mit Clients verwendet werden, die keine Cookies unterstützen. ASP.NET kann konfiguriert werden, um eine Sitzungs-ID in der URL-Zeichenfolge zu codieren, die zwischen dem Client und Server übertragenen Daten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,89 @@
+<Type Name="DirectoryPropertyAttribute" FullName="System.DirectoryServices.AccountManagement.DirectoryPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DirectoryPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DirectoryPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.DirectoryPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die Daten, die vom Speicher zuordnen eine principal Eigenschaft ein Attribut des Verzeichnisses erforderlich. Dieses Attribut ist für Dienstprinzipalname Erweiterungen erforderlich und kann nur auf eine Eigenschaft festgelegt werden. Es muss für jede Eigenschaft angegeben werden, die Directory-Attribut in der erweiterten Klasse darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere Verzeichnisattribute bei den Erweiterungsmethoden verwendet werden, sollte die Eigenschaft (eine pro Attribut) mehrere Attribute hinzugefügt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryPropertyAttribute (string schemaAttributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string schemaAttributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.DirectoryPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaAttributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="schemaAttributeName">Der Name des Attributs ein, das in das Verzeichnis festgelegt wird. Die <see cref="P:System.DirectoryServices.AccountManagement.DirectoryPropertyAttribute.SchemaAttributeName" />-Eigenschaft wird mit diesem Wert initialisiert. Diese Eigenschaft stellt den "ldapDisplayName" für das Anwendungsverzeichnis und Domänenverzeichnisse dar.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.AccountManagement.DirectoryPropertyAttribute" /> Klasse mit dem Schemanamen-Attribut.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.DirectoryServices.AccountManagement.ContextType&gt; Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DirectoryServices.AccountManagement.ContextType&gt; Context" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.DirectoryPropertyAttribute.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DirectoryServices.AccountManagement.ContextType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist nicht implementiert, und gibt immer null zurück.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.AccountManagement.ContextType" /> -Enumerationswert, der den Typ der Speicher für die dieses Attribut gilt, oder Null angibt, wenn kein Kontext festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaAttributeName">
+      <MemberSignature Language="C#" Value="public string SchemaAttributeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SchemaAttributeName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.DirectoryPropertyAttribute.SchemaAttributeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Zeichenfolge, die den Attributnamen im Verzeichnis darstellt.</summary>
+        <value>Die Zeichenfolge, die den Attributnamen im Verzeichnis darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

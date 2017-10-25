@@ -1,0 +1,190 @@
+<Type Name="KeyValueConfigurationElement" FullName="System.Configuration.KeyValueConfigurationElement">
+  <TypeSignature Language="C#" Value="public class KeyValueConfigurationElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi KeyValueConfigurationElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.KeyValueConfigurationElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Konfigurationselement, das Schlüssel/Wert-Paar enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.KeyValueConfigurationElement> Objekt erbt die <xref:System.Configuration.ConfigurationElement> Basisklasse. Die <xref:System.Configuration.ConfigurationElement> Objekt stellt ein Element innerhalb einer Konfigurationsdatei dar. Die <xref:System.Configuration.KeyValueConfigurationElement> Objekt kann gehören eine <xref:System.Configuration.KeyValueConfigurationCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie Mitglieder der der <xref:System.Configuration.KeyValueConfigurationElement> Klasse.  
+  
+ [!code-csharp[System.Configuration.KeyValueConfigurationCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/CS/KeyValueConfigurationCollection.cs#1)]
+ [!code-vb[System.Configuration.KeyValueConfigurationCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/VB/KeyValueConfigurationCollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyValueConfigurationElement (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationElement.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des der <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</param>
+        <param name="value">Der Wert von <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Configuration.KeyValueConfigurationElement" /> -Klasse auf Grundlage der angegebenen Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.KeyValueConfigurationElement.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Configuration.KeyValueConfigurationCollection> -Klassenübersicht.  
+  
+ [!code-csharp[System.Configuration.KeyValueConfigurationCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/CS/KeyValueConfigurationCollection.cs#2)]
+ [!code-vb[System.Configuration.KeyValueConfigurationCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/VB/KeyValueConfigurationCollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="protected override void Init ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Init() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationElement.Init" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see cref="T:System.Configuration.KeyValueConfigurationElement" /> Objekt auf ihren ursprünglichen Zustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.KeyValueConfigurationElement.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("key", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel ab der <see cref="T:System.Configuration.KeyValueConfigurationElement" /> Objekt.</summary>
+        <value>Der Schlüssel des der <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.KeyValueConfigurationElement.Key%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Configuration.KeyValueConfigurationCollection> -Klassenübersicht.  
+  
+ [!code-csharp[System.Configuration.KeyValueConfigurationCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/CS/KeyValueConfigurationCollection.cs#5)]
+ [!code-vb[System.Configuration.KeyValueConfigurationCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/VB/KeyValueConfigurationCollection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.KeyValueConfigurationElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Eigenschaften ab.</summary>
+        <value>Die <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> von Eigenschaften für das Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.KeyValueConfigurationElement.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("value", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des <see cref="T:System.Configuration.KeyValueConfigurationElement" />-Objekts ab oder legt diesen fest.</summary>
+        <value>Der Wert von <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.KeyValueConfigurationElement.Value%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Configuration.KeyValueConfigurationCollection> -Klassenübersicht.  
+  
+ [!code-csharp[System.Configuration.KeyValueConfigurationCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/CS/KeyValueConfigurationCollection.cs#5)]
+ [!code-vb[System.Configuration.KeyValueConfigurationCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/VB/KeyValueConfigurationCollection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

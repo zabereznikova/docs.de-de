@@ -1,0 +1,30 @@
+<Type Name="TemplateContent" FullName="System.Windows.TemplateContent">
+  <TypeSignature Language="C#" Value="public class TemplateContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateContent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateContent" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.XamlDeferLoad(typeof(System.Windows.TemplateContentLoader), typeof(System.Windows.FrameworkElement))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die Aufzeichnung und Wiedergabe Logik, die Vorlagen für das Verschieben von Inhalt bei der Interaktion mit XAML-Readern und Writern zu verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse verfügt über keine öffentliche API in der Betaversion von .NET Framework 4.5. Er bietet einen Eigenschaftswert für <xref:System.Windows.FrameworkTemplate.Template%2A>. Der Konstruktor ist intern. Es ist eine Instanziierung Weg ist komplex. Instanziierung einer Vorlage basiert auf <xref:System.Windows.TemplateContentLoader>, wofür ein <xref:System.Xaml.XamlReader> , der eine verzögerte Readerinstanz darstellt und ein <xref:System.Xaml.IXamlObjectWriterFactory> Dienst. Diese beiden Aspekte sind in der Regel nur relevant, die nicht die Standardeinstellung XAML für WPF-Verarbeitungsverhalten verwenden das einschließlich Inhalt verzögerte Verarbeitung von Vorlagen als Teil der Infrastruktur und erfordert keine typischen WPF-Anwendung der Autor auf die zuvor erwähnten APIs zuzugreifen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

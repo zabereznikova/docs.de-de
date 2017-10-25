@@ -1,0 +1,85 @@
+<Type Name="CryptoKeyAccessRule" FullName="System.Security.AccessControl.CryptoKeyAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class CryptoKeyAccessRule : System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CryptoKeyAccessRule extends System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CryptoKeyAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Zugriffsregel für einen kryptografischen Schlüssel dar. Eine Zugriffsregel stellt eine Kombination aus der Identität eines Benutzers, einer Zugriffsmaske und einem Zugriffssteuerungstyp (zulassen oder verweigern). Eine Access-Rule-Objekt enthält auch Informationen darüber, wie die Regel von untergeordneten Objekten geerbt wird und wie die Vererbung weitergegeben wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptoKeyAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.CryptoKeyRights cryptoKeyRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.CryptoKeyRights cryptoKeyRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeyAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.CryptoKeyRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="cryptoKeyRights" Type="System.Security.AccessControl.CryptoKeyRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die Identität, für die die Zugriffsregel gilt. Dieser Parameter muss ein Objekt sein, das in ein <see cref="T:System.Security.Principal.SecurityIdentifier" /> umgewandelt werden kann.</param>
+        <param name="cryptoKeyRights">Die kryptografischen Schlüsselvorgang, die diese Zugriffsregel Zugriff gesteuert.</param>
+        <param name="type">Die gültigen Zugriffssteuerungstyp.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.CryptoKeyAccessRule" />-Klasse unter Verwendung der angegebenen Werte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptoKeyAccessRule (string identity, System.Security.AccessControl.CryptoKeyRights cryptoKeyRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.CryptoKeyRights cryptoKeyRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeyAccessRule.#ctor(System.String,System.Security.AccessControl.CryptoKeyRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="cryptoKeyRights" Type="System.Security.AccessControl.CryptoKeyRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die Identität, für die die Zugriffsregel gilt.</param>
+        <param name="cryptoKeyRights">Die kryptografischen Schlüsselvorgang, die diese Zugriffsregel Zugriff gesteuert.</param>
+        <param name="type">Die gültigen Zugriffssteuerungstyp.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.CryptoKeyAccessRule" />-Klasse unter Verwendung der angegebenen Werte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CryptoKeyRights">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.CryptoKeyRights CryptoKeyRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.CryptoKeyRights CryptoKeyRights" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CryptoKeyAccessRule.CryptoKeyRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.CryptoKeyRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den kryptografischen Schlüsselvorgang, zu dem diese Zugriffsregel zugriffssteuerungen, ab.</summary>
+        <value>Die kryptografischen Schlüsselvorgang, die diese Zugriffsregel Zugriff gesteuert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

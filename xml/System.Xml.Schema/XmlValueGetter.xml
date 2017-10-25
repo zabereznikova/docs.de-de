@@ -1,0 +1,55 @@
+<Type Name="XmlValueGetter" FullName="System.Xml.Schema.XmlValueGetter">
+  <TypeSignature Language="C#" Value="public delegate object XmlValueGetter();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlValueGetter extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlValueGetter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Ein <see langword="delegate" /> verwendet werden, indem die <see cref="T:System.Xml.Schema.XmlSchemaValidator" /> Klasse, um Werte für Attribute, Text und Leerzeichen als Common Language Runtime (CLR)-Typ übergeben wird, der kompatibel mit dem XML Schema Definition Language (XSD)-Typ, der die Attribut-, Text- oder Leerzeichen.</summary>
+    <returns>Ein Objekt, mit dem Wert von Attribut-, Text- oder Leerzeichen. Das Objekt ist ein CLR-Typ, der, dem XSD-Typ des Attribut-, Text- oder Leerzeichen Werts entspricht.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Xml.Schema.XmlValueGetter> `delegate` ist hilfreich, wenn der CLR-Wert eines Attribut-, Text- oder Leerzeichen Knotens bereits verfügbar ist, und die Kosten vermeidet der Konvertierung in einen `string` , und klicken Sie dann anschließenden erneuten Analyse zur Validierung.  
+  
+ Weitere Informationen zu den <xref:System.Xml.Schema.XmlSchemaValidator> Klasse, finden Sie unter der [XmlSchemaValidator pushbasierte Validierung](~/docs/standard/data/xml/xmlschemavalidator-push-based-validation.md) Thema oder der <xref:System.Xml.Schema.XmlSchemaValidator> -Klasse Referenzdokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft die `contosoBooks.xml` -Datei anhand der `contosoBooks.xsd` Schema. Im Beispiel wird mit der <xref:System.Xml.Serialization.XmlSerializer>-Klasse die `contosoBooks.xml`-Datei deserialisiert, und der Wert der Knoten wird an die Methoden der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse übergeben.  
+  
+ [!code-csharp[XmlSchemaValidatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
+ [!code-vb[XmlSchemaValidatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
+  
+ In diesem Beispiel wird die Datei `contosoBooks.xml` als Eingabe verwendet.  
+  
+ [!code-xml[XPathXMLExamples#2](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
+  
+ In diesem Beispiel wird auch `contosoBooks.xsd` als Eingabe verwendet.  
+  
+ [!code-xml[XPathXMLExamples#3](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

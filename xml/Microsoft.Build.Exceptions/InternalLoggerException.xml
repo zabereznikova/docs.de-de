@@ -1,0 +1,198 @@
+<Type Name="InternalLoggerException" FullName="Microsoft.Build.Exceptions.InternalLoggerException">
+  <TypeSignature Language="C#" Value="public sealed class InternalLoggerException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit InternalLoggerException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Exceptions.InternalLoggerException" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Ausnahme wird verwendet, um eine nicht behandelte Ausnahme aus einer Protokollierung zu umschließen. Diese Ausnahme bricht den Build, und kann nur durch das MSBuild-Modul ausgelöst werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Warnung: das Markieren eines Typs [Serializable], ohne einen Vertrag für die Serialisierung ISerializable implementieren erzwingt, denn es handelt sich, dass eine Zusicherung für den Typ niemals zu ändern, d. h. den Typ Felder ist unveränderlich. Hinzufügen neuer Felder in der nächsten Version des Typs ohne speziellen FX-Richtlinien befolgen, können sowohl die Vorwärts-und Rückwärtskompatibilität unterbrechen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalLoggerException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InternalLoggerException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Standardkonstruktor</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nur vorhanden, um .NET Codierungsrichtlinien gerecht zu werden. Verwenden Sie stattdessen die rich-Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Vorgang ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalLoggerException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InternalLoggerException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung.</param>
+        <summary>Erstellt eine Instanz dieser Ausnahme mithilfe der angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nur vorhanden, um .NET Codierungsrichtlinien gerecht zu werden. Verwenden Sie stattdessen die rich-Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Vorgang ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalLoggerException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InternalLoggerException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung.</param>
+        <param name="innerException">Die innere Ausnahme.</param>
+        <summary>Erstellt eine Instanz dieser Ausnahme mithilfe der angegebenen Fehlermeldung und inneren Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nur vorhanden, um .NET Codierungsrichtlinien gerecht zu werden. Verwenden Sie stattdessen die rich-Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Vorgang ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEventArgs">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventArgs BuildEventArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.BuildEventArgs BuildEventArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InternalLoggerException.BuildEventArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.BuildEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Details des Buildereignisses (sofern vorhanden) wurde, protokolliert wird.</summary>
+        <value>Der Build-Ereignis-Args oder Null.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public string ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InternalLoggerException.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldung zu dieser Ausnahme (nicht auf die innere Ausnahme) zugeordneten Fehlercode ab.</summary>
+        <value>Die Zeichenfolge des Fehlercodes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InternalLoggerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Fehlerinformationen.</param>
+        <param name="context">Der Fehlerkontext.</param>
+        <summary>ISerializable-Methode die wir, da die Ausnahme überschreiben müssen implementiert diese Schnittstelle auf, wenn wir jemals neue Member dieser Klasse hinzufügen, benötigen wir diese aktualisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeyword">
+      <MemberSignature Language="C#" Value="public string HelpKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeyword" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InternalLoggerException.HelpKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das F1-Hilfeschlüsselwort zu diesem Fehler verknüpft sind, für die Host-IDE ab.</summary>
+        <value>Die Schlüsselwortzeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializationException">
+      <MemberSignature Language="C#" Value="public bool InitializationException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InitializationException" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InternalLoggerException.InitializationException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>True, wenn die Ausnahme aufgetreten, während der Initialisierung der Protokollierung ist</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

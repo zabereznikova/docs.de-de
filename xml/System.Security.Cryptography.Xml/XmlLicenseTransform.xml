@@ -1,0 +1,301 @@
+<Type Name="XmlLicenseTransform" FullName="System.Security.Cryptography.Xml.XmlLicenseTransform">
+  <TypeSignature Language="C#" Value="public class XmlLicenseTransform : System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlLicenseTransform extends System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.XmlLicenseTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Lizenztransformationsalgorithmus zum Normalisieren XrML-Lizenzen für Signaturen verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse der Lizenztransformationsalgorithmus dar, der in der MPEG Rights (MPEG REL Extension Language) definiert.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse XrML-Lizenzen für Signaturen zu transformieren.  
+  
+ Der Uniform Resource Identifier (URI), die beschreibt die <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse wird definiert, indem die <xref:System.Security.Cryptography.Xml.SignedXml.XmlLicenseTransformUrl> Feld.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Validieren eines XML-Signatur mithilfe der <xref:System.Security.Cryptography.Xml.IRelDecryptor> Schnittstelle und die <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse.  
+  
+ [!code-cpp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/cpp/sample.cpp#2)]
+ [!code-csharp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/CS/sample.cs#2)]
+ [!code-vb[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/VB/sample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlLicenseTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlLicenseTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decryptor">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.IRelDecryptor Decryptor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.IRelDecryptor Decryptor" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlLicenseTransform.Decryptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.IRelDecryptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Entschlüsselungsmechanismus des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</summary>
+        <value>Der Entschlüsselungsmechanismus des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> object verwendet ein <xref:System.Security.Cryptography.Xml.IRelDecryptor> Schnittstelle zum Entschlüsseln `<encryptedGrant>` Elemente aus der aktuellen `<license>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Validieren eines XML-Signatur mithilfe der <xref:System.Security.Cryptography.Xml.IRelDecryptor> Schnittstelle und die <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse.  
+  
+ [!code-cpp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/cpp/sample.cpp#2)]
+ [!code-csharp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/CS/sample.cs#2)]
+ [!code-vb[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/VB/sample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerXml">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlNodeList GetInnerXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlNodeList GetInnerXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlLicenseTransform.GetInnerXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine XML-Darstellung der Parameter ein <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> -Objekt, das als Unterelemente des XMLDSIG einzuschließenden geeignet sind <see langword="&lt;Transform&gt;" /> Element.</summary>
+        <returns>Eine Liste der XML-Knoten, die den transformationsspezifischen Inhalt erforderlich, um die aktuelle beschreiben darstellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt in ein XMLDSIG <see langword="&lt;Transform&gt;" /> Element.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlLicenseTransform.GetOutput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ausgabe des einen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</summary>
+        <returns>Die Ausgabe der <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des zurückgegebenen Objekts muss <xref:System.Xml.XmlDocument>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlLicenseTransform.GetOutput(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der Ausgabe zurückgegeben. <see cref="T:System.Xml.XmlDocument" />ist der einzige gültige Typ für diesen Parameter.</param>
+        <summary>Gibt die Ausgabe des einen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</summary>
+        <returns>Die Ausgabe der <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="type" /> -Parameter ist ein <see cref="T:System.Xml.XmlDocument" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] InputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] InputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlLicenseTransform.InputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Typen, die gültige Eingaben sind die <see cref="P:System.Security.Cryptography.Xml.XmlLicenseTransform.OutputTypes" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</summary>
+        <value>Ein Array von Typen, die gültige Eingaben sind die <see cref="P:System.Security.Cryptography.Xml.XmlLicenseTransform.OutputTypes" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt; Sie können nur Objekte von einem dieser Typen zum Übergeben der <see cref="P:System.Security.Cryptography.Xml.XmlLicenseTransform.OutputTypes" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der einzige gültige Eingabetyp für die <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse ist <xref:System.Xml.XmlDocument>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInnerXml">
+      <MemberSignature Language="C#" Value="public override void LoadInnerXml (System.Xml.XmlNodeList nodeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInnerXml(class System.Xml.XmlNodeList nodeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlLicenseTransform.LoadInnerXml(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeList" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodeList">Ein <see cref="T:System.Xml.XmlNodeList" /> Objekt, das die Transformation zum Laden in das aktuelle kapselt <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</param>
+        <summary>Analysiert die angegebene <see cref="T:System.Xml.XmlNodeList" /> Objekt als Inhalt transformationsspezifischen eine <see langword="&lt;Transform&gt;" /> Element; diese Methode wird nicht unterstützt, da die <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt hat keine inneren XML-Elemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInput">
+      <MemberSignature Language="C#" Value="public override void LoadInput (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInput(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlLicenseTransform.LoadInput(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Eingabe für das Laden in das aktuelle <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt. Der Typ des Eingabeobjekts muss <see cref="T:System.Xml.XmlDocument" />.</param>
+        <summary>Lädt die angegebene Eingabe in das aktuelle <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Kontext wurde nicht festgelegt werden, bevor diese Transformation aufgerufen wurde.  
+  
+ - oder -   
+  
+ Die <see langword="&lt;issuer&gt;" /> Element wurde nicht festgelegt werden, bevor diese Transformation aufgerufen wurde.  
+  
+ - oder -   
+  
+ Die <see langword="&lt;license&gt;" /> Element wurde nicht festgelegt werden, bevor diese Transformation aufgerufen wurde.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Security.Cryptography.Xml.XmlLicenseTransform.Decryptor" /> -Eigenschaft wurde nicht festgelegt werden, bevor diese Transformation aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] OutputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] OutputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlLicenseTransform.OutputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Typen, die gültige Ausgaben sind der <see cref="P:System.Security.Cryptography.Xml.XmlLicenseTransform.OutputTypes" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</summary>
+        <value>Ein Array von gültigen Ausgabetypen für die aktuelle <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt, und nur Objekte von einem der folgenden Typen werden zurückgegeben, aus der <see cref="M:System.Security.Cryptography.Xml.XmlLicenseTransform.GetOutput" /> Methoden des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlLicenseTransform" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der einzige gültige Ausgabetyp der <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> Klasse ist <xref:System.Xml.XmlDocument>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

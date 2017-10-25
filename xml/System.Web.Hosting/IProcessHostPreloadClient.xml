@@ -1,0 +1,57 @@
+<Type Name="IProcessHostPreloadClient" FullName="System.Web.Hosting.IProcessHostPreloadClient">
+  <TypeSignature Language="C#" Value="public interface IProcessHostPreloadClient" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProcessHostPreloadClient" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IProcessHostPreloadClient" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Schnittstelle, die in einem Typ implementiert werden kann, um den Typ in einer ASP.NET-Anwendung vorab zu laden, die auf IIS 7.0 ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist in erster Linie für die Verwendung von WCF-Anwendungen vorgesehen, die nicht-HTTP-Anwendungen sind. ASP.NET-Entwickler von ASP.NET-Webanwendungen vorab laden sollten simulierten HTTP-Anforderungen in verwenden [!INCLUDE[iisver](~/includes/iisver-md.md)] zusammen mit der `Application_Start` Methode in der Datei "Global.asax".  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Hosting.IProcessHostPreloadClient> Typ und seine Methoden gelten nur für Anwendungen, ausgeführt auf [!INCLUDE[iisver](~/includes/iisver-md.md)] und [!INCLUDE[win7](~/includes/win7-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Preload">
+      <MemberSignature Language="C#" Value="public void Preload (string[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Preload(string[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IProcessHostPreloadClient.Preload(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Daten, die die Anwendung zu initialisieren. Dieser Parameter kann <see langword="null" /> oder ein leeres Array.</param>
+        <summary>Stellt die Initialisierungsdaten, die erforderlich sind, um die Anwendung vorab zu laden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der `parameters` kann `null`, ein Array der Länge 0 (null) oder ein aufgefülltes Array.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Hosting.IProcessHostPreloadClient> Typ und seine Methoden gelten nur für Anwendungen, ausgeführt auf [!INCLUDE[iisver](~/includes/iisver-md.md)] und [!INCLUDE[win7](~/includes/win7-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

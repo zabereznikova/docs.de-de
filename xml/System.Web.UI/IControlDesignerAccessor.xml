@@ -1,0 +1,132 @@
+<Type Name="IControlDesignerAccessor" FullName="System.Web.UI.IControlDesignerAccessor">
+  <TypeSignature Language="C#" Value="public interface IControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IControlDesignerAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf ein Steuerelement-Designer zum Speichern von temporären Entwurfszeitdaten, die mit einem Steuerelement verknüpft ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft und Methoden, die definiert, der <xref:System.Web.UI.IControlDesignerAccessor> Schnittstelle bieten eine einfache Möglichkeit für den Steuerelement-Designer ein Steuerelement zum übergeben und Abrufen von temporären Entwurfszeitdaten zuzugreifen. Die Schnittstelle wird implementiert, indem die <xref:System.Web.UI.Control> Klasse. Steuerelement-Designer verwenden die Implementierung dieser Schnittstelle, um das Steuerelement zugreifen.  
+  
+ Temporäre Entwurfszeitdaten ist nicht mit dem Steuerelement selbst beibehalten. Um Entwurfszeitdaten für ein Steuerelement beizubehalten, sollten Sie den Inhalt der Abrufen der <xref:System.Web.UI.IControlDesignerAccessor.UserData%2A> Eigenschaft und an einen Designer bestimmten Speicherort speichern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDesignModeState">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary GetDesignModeState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionary GetDesignModeState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IControlDesignerAccessor.GetDesignModeState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft bei Implementierung, den Zustand des Steuerelements während der Verwendung auf der Entwurfsoberfläche angezeigt.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionary" /> der Zustand des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur von Steuerelement-Designer verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="public void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IControlDesignerAccessor.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">Das <see cref="T:System.Collections.IDictionary" />, das das Steuerelement enthält.</param>
+        <summary>Bei der Implementierung wird der Steuerelementzustand vor dem Rendern auf der Entwurfsoberfläche angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In überschriebenen Steuerelementen wird diese Methode verwendet, zu behalten und Status für das Steuerelement während der Entwurfszeit Modus festgelegt. Diese Methode wird nur von Steuerelement-Designer verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOwnerControl">
+      <MemberSignature Language="C#" Value="public void SetOwnerControl (System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOwnerControl(class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IControlDesignerAccessor.SetOwnerControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das Steuerelement, das als Besitzer fungieren.</param>
+        <summary>Bei der Implementierung gibt das Steuerelement, das als Besitzer an das Steuerelement implementieren dieser Methode fungiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem zusammengesetzten Containerszenario, in dem ein Steuerelement ein anderes Steuerelement enthält, ist der Container Besitzer des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IControlDesignerAccessor.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft bei Implementierung eine Auflistung von Informationen, die von einem Steuerelement-Designer zugegriffen werden kann.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> , das Informationen über das Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften und den Inhalt des Steuerelements können beibehalten werden, damit das Steuerelement Statusinformationen in der entwurfszeitumgebung verwaltet. Diese Eigenschaft wird nur von Steuerelement-Designer verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

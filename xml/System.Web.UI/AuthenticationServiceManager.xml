@@ -1,0 +1,117 @@
+<Type Name="AuthenticationServiceManager" FullName="System.Web.UI.AuthenticationServiceManager">
+  <TypeSignature Language="C#" Value="public class AuthenticationServiceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticationServiceManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.AuthenticationServiceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Konfiguriert den Speicherort einer benutzerdefinierten Implementierung des Authentifizierungsdiensts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.AuthenticationServiceManager> Klasse entspricht der <xref:System.Web.UI.ScriptManager.AuthenticationService%2A> Eigenschaft von der <xref:System.Web.UI.ScriptManager> oder <xref:System.Web.UI.ScriptManagerProxy> Steuerelement.  
+  
+ Der Webdienst für die Authentifizierung wird von AJAX-fähigen Anwendungen anmelden und Abmelden von Clientskripts verwendet. Sie können <xref:System.Web.UI.AuthenticationServiceManager> , geben Sie den Pfad einer alternativen Implementierung der Authentifizierung Webdienst anstelle des integrierten Webdiensts, die von den AJAX-Features von ASP.NET bereitgestellt wird.  
+  
+ Um die Authentication-Dienst in Ihrer Anwendung verwenden zu können, müssen Sie es in der Konfigurationsdatei aktivieren. Wenn Sie die integrierte Authentifizierung Webdienst verwenden, müssen Sie nicht explizit die Authentication-Dienst-Manager auf der Seite deklarieren.  
+  
+ Um eine eigene Authentication-Dienst zu erstellen, müssen Sie einen Webdienst, der über zwei Methoden implementieren: `Login` und `Logout`. Diese Methoden erfordern außerdem die gleiche Signatur der integrierten Authentifizierung Webdienst.  
+  
+ Das folgende Beispiel zeigt die grundlegende Klassenstruktur, die in einer benutzerdefinierten Authentifizierung Webdienstklasse implementiert werden muss.  
+  
+  
+  
+ Um einen Webdienst für benutzerdefinierte Authentifizierung verwenden, können Sie den Dienst deklarativ im Markup hinzufügen, indem einschließlich einer `<AuthenticationService>` Element innerhalb der `<asp:ScriptManager>` Element auf der Seite, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<asp:ScriptManager ID="SM1" runat="server">  
+  <AuthenticationService Path="MyAuthenticationService.asmx" />  
+</asp:ScriptManager>  
+```  
+  
+ Sie können auch programmgesteuert konfigurieren <xref:System.Web.UI.AuthenticationServiceManager.Path%2A> -Webdienst einen benutzerdefinierte Authentifizierung verwenden.  
+  
+ Unabhängig von ist, ob der deklarative Abschnitt für den Authentifizierungsdienst auf der Seite, wenn der Authentifizierungsdienst in der Konfigurationsdatei aktiviert ist, und klicken Sie dann die AJAX-aktivierte Anwendungen eine ECMAScript (JavaScript)-Variable in der gerenderten Seite hinzugefügt wird . Dadurch können Clientskripts bestimmen, ob der aktuelle Benutzer authentifiziert ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticationServiceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.AuthenticationServiceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.AuthenticationServiceManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.AuthenticationServiceManager.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad des Authentifizierungsdiensts fest.</summary>
+        <value>Der Pfad der benutzerdefinierten Authentifizierung Webdienst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.AuthenticationServiceManager.Path%2A> Eigenschaft nicht festgelegt ist, wird der Rückgabewert ist <xref:System.String?displayProperty=nameWithType>. In diesem Fall verwenden die AJAX-Funktionen in ASP.NET klicken Sie dann die integrierte Authentifizierung Webdienst, der auf den folgenden internen Standardpfad entspricht: ~ / ScriptServices_AuthenticationService.asmx. Das gleiche Verhalten tritt auf, wenn Sie festlegen, <xref:System.Web.UI.AuthenticationServiceManager.Path%2A> auf einen leeren Wert oder `null`.  
+  
+ <xref:System.Web.UI.AuthenticationServiceManager.Path%2A>kann angegeben werden, der <xref:System.Web.UI.ScriptManager> Steuerelement oder einem zugeordneten <xref:System.Web.UI.ScriptManagerProxy> Steuerelement. Wenn <xref:System.Web.UI.AuthenticationServiceManager.Path%2A> festgelegt ist, an die <xref:System.Web.UI.ScriptManagerProxy> Ebene, die folgenden Einschränkungen gelten:  
+  
+-   Wenn es mehrere Proxys in der Steuerelementhierarchie sind <xref:System.Web.UI.AuthenticationServiceManager.Path%2A> muss nicht für jede Proxyinstanz festgelegt werden.  
+  
+-   Wenn <xref:System.Web.UI.AuthenticationServiceManager.Path%2A> wird explizit auf eine Proxyinstanz festgelegt, der Wert muss identisch sein für alle Proxys, die auf dem diese Eigenschaft wird explizit festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mehr als ein eindeutiger Pfad wurde in der Steuerelementhierarchie festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

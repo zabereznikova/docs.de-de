@@ -1,0 +1,168 @@
+<Type Name="UnobservedTaskExceptionEventArgs" FullName="System.Threading.Tasks.UnobservedTaskExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class UnobservedTaskExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnobservedTaskExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.UnobservedTaskExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das Ereignis, das ausgelöst wird, wenn eine fehlgeschlagene <see cref="T:System.Threading.Tasks.Task" />Ausnahme nicht beachtet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Exception-Eigenschaft wird verwendet, um die Ausnahme zu untersuchen, ohne dass kennzeichnen Sie es als beobachtet, während die <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs.SetObserved%2A> Methode wird verwendet, um die Ausnahme als beachtet zu markieren. Markieren die Ausnahme als beachtet verhindert das Auslösen der Ausnahme ausweitungsrichtlinien, die standardmäßig der Prozess beendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnobservedTaskExceptionEventArgs (AggregateException exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.AggregateException exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.UnobservedTaskExceptionEventArgs.#ctor(System.AggregateException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.AggregateException" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die Ausnahme, die nicht überwachte verlassen hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.Tasks.UnobservedTaskExceptionEventArgs" /> -Klasse mit der nicht überwachte Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public AggregateException Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AggregateException Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AggregateException</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausnahme, die nicht überwachte ist ein Fehler aufgetreten.</summary>
+        <value>Die Ausnahme, die nicht überwachte ist ein Fehler aufgetreten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Observed">
+      <MemberSignature Language="C#" Value="public bool Observed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Observed" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Observed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob diese Ausnahme markiert wurde, als "überwacht."</summary>
+        <value>True, wenn diese Ausnahme wurde als "beachtet;" gekennzeichnet. andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetObserved">
+      <MemberSignature Language="C#" Value="public void SetObserved ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetObserved() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.UnobservedTaskExceptionEventArgs.SetObserved" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert die <see cref="P:System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Exception" /> als "überwacht" somit verhindert deren Auslösen der Ausnahme ausweitungsrichtlinien, die standardmäßig der Prozess beendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

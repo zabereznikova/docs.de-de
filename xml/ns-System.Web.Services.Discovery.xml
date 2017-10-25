@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Discovery">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Services.Discovery" /> Namespace besteht aus den Klassen, die XML-Webdienstclients der verfügbaren XML-Webdienste auf einem Webserver mithilfe des so genannten XML-Webdienste Ermittlung suchen können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

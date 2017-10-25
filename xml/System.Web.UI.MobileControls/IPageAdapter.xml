@@ -1,0 +1,267 @@
+<Type Name="IPageAdapter" FullName="System.Web.UI.MobileControls.IPageAdapter">
+  <TypeSignature Language="C#" Value="public interface IPageAdapter : System.Web.UI.MobileControls.IControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPageAdapter implements class System.Web.UI.MobileControls.IControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.IPageAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.IControlAdapter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Schnittstelle zu einem Seitenadapter. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Seitenadapter müssen diese Schnittstelle implementieren. Diese Schnittstelle erbt von der <xref:System.Web.UI.MobileControls.IControlAdapter> Schnittstelle, damit alle diese Schnittstelle implementierenden Klasse, auch implementieren muss die <xref:System.Web.UI.MobileControls.IControlAdapter> Schnittstelle. Die einfachste Lösung besteht darin, leiten Sie eine Klasse von der <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter> Basis-Klasse, die eine standardmäßige Implementierung des bildet die <xref:System.Web.UI.MobileControls.IControlAdapter> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="CacheVaryByHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.IList CacheVaryByHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList CacheVaryByHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.IPageAdapter.CacheVaryByHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Liste der zusätzlichen HTTP-Header mit denen Zwischenspeichern variiert wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Liste der zusätzlichen HTTP-Header mit denen Zwischenspeichern variiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter Ausgabezwischenspeicherung in [Mobile Text Writer Rendering Best Practices](http://msdn.microsoft.com/en-us/28893297-2c45-4c57-a2b3-9cdd5898f988).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookielessDataDictionary">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary CookielessDataDictionary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary CookielessDataDictionary" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.IPageAdapter.CookielessDataDictionary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie diese Eigenschaft, um Daten zwischen den Anforderungen durch die Verwendung der URL-Abfragezeichenfolge beizubehalten. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein Wörterbuch mit Daten, die durch die Verwendung der URL-Abfragezeichenfolge beibehalten wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird aufgefüllt, wenn ein gültiger <xref:System.Collections.IDictionary> wird als ein Attribut des konfiguriert die < `mobileControls` > Konfigurationselement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTextWriter">
+      <MemberSignature Language="C#" Value="public System.Web.UI.HtmlTextWriter CreateTextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.HtmlTextWriter CreateTextWriter(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.IPageAdapter.CreateTextWriter(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter.</param>
+        <summary>Erstellt einen für die angegebenen Adapter geeigneten Textwriter und gibt ihn zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein für die angegebenen Adapter geeigneter Textwriter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeterminePostBackMode">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection DeterminePostBackMode (System.Web.HttpRequest request, string postEventSourceID, string postEventArgumentID, System.Collections.Specialized.NameValueCollection baseCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.NameValueCollection DeterminePostBackMode(class System.Web.HttpRequest request, string postEventSourceID, string postEventArgumentID, class System.Collections.Specialized.NameValueCollection baseCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.IPageAdapter.DeterminePostBackMode(System.Web.HttpRequest,System.String,System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequest" />
+        <Parameter Name="postEventSourceID" Type="System.String" />
+        <Parameter Name="postEventArgumentID" Type="System.String" />
+        <Parameter Name="baseCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="request">
+          <see cref="T:System.Web.HttpRequest" />Objekt, das Anforderungsinformationen wie z. B. HTTP-Header enthält.</param>
+        <param name="postEventSourceID">Quellenbezeichner für das Ereignis.</param>
+        <param name="postEventArgumentID">Der Argumentbezeichner für das Ereignis.</param>
+        <param name="baseCollection">Auflistung von Postbackdaten aus dem Anforderungsobjekt.</param>
+        <summary>Wird aufgerufen, um die Postbackdatensammlung zu bestimmen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine Auflistung von geänderten Name-Wert bereitgestellte Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da einige Geräte Postback anders als andere behandeln, kann diese Methode den Adapter zum Ändern der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleError">
+      <MemberSignature Language="C#" Value="public bool HandleError (Exception e, System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HandleError(class System.Exception e, class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.IPageAdapter.HandleError(System.Exception,System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="e">Systemereignis-Ausnahme.</param>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</param>
+        <summary>Gibt <see langword="true" /> , wenn es sich um den Fehler behandelt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn die Seitenadapter den Fehler behandelt. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn während des Lebenszyklus der Seite eine nicht behandelte Ausnahme auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePagePostBackEvent">
+      <MemberSignature Language="C#" Value="public bool HandlePagePostBackEvent (string eventSource, string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HandlePagePostBackEvent(string eventSource, string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.IPageAdapter.HandlePagePostBackEvent(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.String" />
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">Quellenbezeichner für das Ereignis.</param>
+        <param name="eventArgument">Der Name des Ereignisses.</param>
+        <summary>Gibt <see langword="true" /> , wenn sie die Ausnahme behandelt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn die Seitenadapter behandelt die Ausnahme. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während des Postbacks aufgerufen. Kann einen Seitenadapter ein Postbackereignis selbst zu behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptimumPageWeight">
+      <MemberSignature Language="C#" Value="public int OptimumPageWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OptimumPageWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.IPageAdapter.OptimumPageWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Seite Gewichtung für das Zielgerät zurück. Paginierung von Formularen verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Gewichtung Seite für das Zielgerät geeignet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.MobilePage Page { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobilePage Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.IPageAdapter.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobilePage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Seite ab oder legt diese fest, der Adapter angefügt ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Seite, auf die der Seite "-Adapter angefügt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistCookielessData">
+      <MemberSignature Language="C#" Value="public bool PersistCookielessData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PersistCookielessData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.IPageAdapter.PersistCookielessData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob Elemente aus der <see cref="P:System.Web.UI.MobileControls.IPageAdapter.CookielessDataDictionary" /> -Eigenschaft in der Abfragezeichenfolge beibehalten werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die Elemente aus der <see cref="P:System.Web.UI.MobileControls.IPageAdapter.CookielessDataDictionary" /> Eigenschaft werden dauerhaft in der Abfragezeichenfolge ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist `true` standardmäßig, wenn die `CookielessDataDictionaryType` Eintrag in der `MobileControls` Konfigurationsabschnitt der Datei "Web.config" auf einen gültigen Wörterbuchtyp festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,961 @@
+<Type Name="OracleDateTime" FullName="System.Data.OracleClient.OracleDateTime">
+  <TypeSignature Language="C#" Value="public struct OracleDateTime : IComparable, System.Data.SqlTypes.INullable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit OracleDateTime extends System.ValueType implements class System.Data.SqlTypes.INullable, class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleDateTime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Datum und Zeit Daten im Bereich von Januar 1 4712 v. Chr. bis Dezember 31, 4712 n. Chr. darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen einer <xref:System.Data.OracleClient.OracleDateTime> -Objekt, rufen Sie die <xref:System.Data.OracleClient.OracleDataReader.GetOracleDateTime%2A> Methode.  
+  
+ Der kleinste gültige Datum für ein <xref:System.Data.OracleClient.OracleDateTime> Struktur ist 1/1/0001 00:00:00. Oracle unterstützt jedoch so früh wie Januar 1 4712 v. Chr. Datumsangaben. Um Datumsangaben zu binden, verwenden Sie eine `String` Parameter und den Oracle TO_DATE oder TO_CHAR Konvertierungsfunktionen für Eingabe-bzw. Ausgabeparameter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (System.Data.OracleClient.OracleDateTime from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Data.OracleClient.OracleDateTime from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="from">Eine vorhandene <see cref="T:System.Data.OracleClient.OracleDateTime" /> Objekt aus dem kopiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> aus einer vorhandenen Struktur <see cref="T:System.Data.OracleClient.OracleDateTime" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (DateTime dt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime dt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dt" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="dt">Das angegebene <see cref="T:System.DateTime" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur mit dem angegebenen <see cref="T:System.DateTime" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (long ticks);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 ticks) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ticks" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="ticks">Eine in der Einheit 100 Nanosekunden ausgedrückte Zeitspanne.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur unter Verwendung der angegebenen Anzahl von Ticks.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (int year, int month, int day);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 year, int32 month, int32 day) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Ganzzahlwert, der für das Jahr des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="month">Ein Ganzzahlwert, der für den Monat des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="day">Ein Ganzzahlwert, der für den Tag des Monats des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur mit den angegebenen Parametern um das Jahr, Monat und Tag des der neuen Struktur zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (int year, int month, int day, System.Globalization.Calendar calendar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 year, int32 month, int32 day, class System.Globalization.Calendar calendar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Globalization.Calendar)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="calendar" Type="System.Globalization.Calendar" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Ganzzahlwert, der für das Jahr des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="month">Ein Ganzzahlwert, der für den Monat des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="day">Ein Ganzzahlwert, der für den Tag des Monats des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="calendar">Die <see cref="T:System.Globalization.Calendar" /> für diese Instanz von <see cref="T:System.Data.OracleClient.OracleDateTime" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur mit den angegebenen Parametern um das Jahr, Monat, Tag und Kalender der neuen Struktur zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (int year, int month, int day, int hour, int minute, int second);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Ganzzahlwert, der für das Jahr des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="month">Ein Ganzzahlwert, der für den Monat des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="day">Ein Ganzzahlwert, der für den Tag des Monats des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="hour">Ein Ganzzahlwert, der die Stunde der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="minute">Ein Ganzzahlwert, der für die Minute der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="second">Ein Ganzzahlwert, der für die Sekunde in der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur mit den angegebenen Parametern um Jahr, Monat, Tag, Stunde, Minute und Sekunde der neuen Struktur zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (int year, int month, int day, int hour, int minute, int second, System.Globalization.Calendar calendar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, class System.Globalization.Calendar calendar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Globalization.Calendar)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="calendar" Type="System.Globalization.Calendar" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Ganzzahlwert, der für das Jahr des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="month">Ein Ganzzahlwert, der für den Monat des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="day">Ein Ganzzahlwert, der für den Tag des Monats des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="hour">Ein Ganzzahlwert, der die Stunde der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="minute">Ein Ganzzahlwert, der für die Minute der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="second">Ein Ganzzahlwert, der für die Sekunde in der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="calendar">Die <see cref="T:System.Globalization.Calendar" /> für diese Instanz von <see cref="T:System.Data.OracleClient.OracleDateTime" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur mit den angegebenen Parametern um Jahr, Monat, Tag, Stunde, Minute und Sekunde für den angegebenen Kalender der neuen Struktur zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (int year, int month, int day, int hour, int minute, int second, int millisecond);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="millisecond" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Ganzzahlwert, der für das Jahr des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="month">Ein Ganzzahlwert, der für den Monat des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="day">Ein Ganzzahlwert, der für den Tag des Monats des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="hour">Ein Ganzzahlwert, der die Stunde der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="minute">Ein Ganzzahlwert, der für die Minute der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="second">Ein Ganzzahlwert, der für die Sekunde in der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="millisecond">Ein Ganzzahlwert, der die Millisekunde der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur mit den angegebenen Parametern um Year, Month, Tag, Stunde, Minute, Sekunde und Millisekunde der neuen Struktur zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDateTime (int year, int month, int day, int hour, int minute, int second, int millisecond, System.Globalization.Calendar calendar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond, class System.Globalization.Calendar calendar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Globalization.Calendar)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="millisecond" Type="System.Int32" />
+        <Parameter Name="calendar" Type="System.Globalization.Calendar" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Ganzzahlwert, der für das Jahr des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="month">Ein Ganzzahlwert, der für den Monat des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="day">Ein Ganzzahlwert, der für den Tag des Monats des neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="hour">Ein Ganzzahlwert, der die Stunde der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="minute">Ein Ganzzahlwert, der für die Minute der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="second">Ein Ganzzahlwert, der für die Sekunde in der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="millisecond">Ein Ganzzahlwert, der die Millisekunde der neuen <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</param>
+        <param name="calendar">Die <see cref="T:System.Globalization.Calendar" /> für diese Instanz von <see cref="T:System.Data.OracleClient.OracleDateTime" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur mit den angegebenen Parametern um Jahr, Monat, Tag, Stunde, Minute, Sekunde und Millisekunde für den angegebenen Kalender der neuen Struktur zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur mit dem angegebenen Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Zahl mit Vorzeichen, die die relativen Werte dieser Instanz und das Objekt angibt.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Diese Struktur ist kleiner als das Objekt.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Diese Struktur ist mit dem Objekt identisch.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Diese Struktur ist größer als das Objekt,  
+  
+ Objekt ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic)  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Day">
+      <MemberSignature Language="C#" Value="public int Day { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Day" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Day" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur als einen Tag.</summary>
+        <value>Ein Tageswert zwischen 1 und 31.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht den-Parameter angegebene Objekt mit dem <see cref="P:System.Data.OracleClient.OracleDateTime.Value" /> Eigenschaft von der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt eine Instanz des ist <see cref="T:System.Data.OracleClient.OracleDateTime" /> und die beiden gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Equals (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Equals(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.Equals(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Führt einen logischen Vergleich zweier <see cref="T:System.Data.OracleClient.OracleDateTime" /> auszugeben, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Werte gleich, andernfalls sind <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz ab.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThan (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThan(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.GreaterThan(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz größer als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThanOrEqual (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.GreaterThanOrEqual(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hour">
+      <MemberSignature Language="C#" Value="public int Hour { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Hour" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Hour" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur als eine Stunde.</summary>
+        <value>Eine Stunde zwischen 0 und 23.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Data.OracleClient.OracleDateTime.Value" /> Eigenschaft der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur ist null.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="P:System.Data.OracleClient.OracleDateTime.Value" /> null ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThan (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThan(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.LessThan(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn der erste kleiner als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThanOrEqual (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThanOrEqual(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.LessThanOrEqual(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz kleiner oder gleich der zweiten Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxValue">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleDateTime MaxValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleDateTime MaxValue" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleDateTime.MaxValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den größten gültigen Datumswert für eine <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das größte gültige Datum für ein <xref:System.Data.OracleClient.OracleDateTime> Struktur ist Dezember, 31. Dezember 4712.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Millisecond">
+      <MemberSignature Language="C#" Value="public int Millisecond { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Millisecond" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Millisecond" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Komponente für die Millisekunden des Datums ab, das durch diese Instanz dargestellt wird.</summary>
+        <value>Die Millisekunde zwischen 0 und 999 liegen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minute">
+      <MemberSignature Language="C#" Value="public int Minute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minute" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Minute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur als eine Minute.</summary>
+        <value>Die Minute zwischen 0 und 59.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinValue">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleDateTime MinValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleDateTime MinValue" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleDateTime.MinValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den kleinsten gültigen Datumswert für eine <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der kleinste gültige Datum für ein <xref:System.Data.OracleClient.OracleDateTime> Struktur ist 1/1/0001 00:00:00. Oracle unterstützt jedoch so früh wie Januar 1 4712 v. Chr. Datumsangaben. Um Datumsangaben zu binden, verwenden Sie einen Zeichenfolgenparameter und die Konvertierungsfunktionen Oracle TO_DATE oder TO_CHAR für die Eingabe- und Ausgabeparameter bzw..  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Month">
+      <MemberSignature Language="C#" Value="public int Month { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Month" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Month" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur als einen Monat.</summary>
+        <value>Der Monat zwischen 1 und 12.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEquals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean NotEquals (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean NotEquals(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.NotEquals(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Führt einen logischen Vergleich von zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob diese ungleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleDateTime Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleDateTime Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleDateTime.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen null-Wert, der zugewiesen werden kann die <see cref="P:System.Data.OracleClient.OracleDateTime.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`fungiert als eine Konstante für die <xref:System.Data.OracleClient.OracleDateTime> Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator == (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Equality(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_Equality(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Führt einen logischen Vergleich zweier <see cref="T:System.Data.OracleClient.OracleDateTime" /> auszugeben, um zu bestimmen, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Werte gleich, andernfalls sind <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleDateTime.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator DateTime (System.Data.OracleClient.OracleDateTime x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTime op_Explicit(valuetype System.Data.OracleClient.OracleDateTime x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_Explicit(System.Data.OracleClient.OracleDateTime)~System.DateTime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.OracleClient.OracleDateTime (string x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleDateTime op_Explicit(string x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_Explicit(System.String)~System.Data.OracleClient.OracleDateTime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleDateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt; (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThan(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_GreaterThan(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz größer als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleDateTime.GreaterThan%28System.Data.OracleClient.OracleDateTime%2CSystem.Data.OracleClient.OracleDateTime%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt;= (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_GreaterThanOrEqual(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleDateTime.GreaterThanOrEqual%28System.Data.OracleClient.OracleDateTime%2CSystem.Data.OracleClient.OracleDateTime%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator != (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Inequality(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_Inequality(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Führt einen logischen Vergleich von zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleDateTime.NotEquals%28System.Data.OracleClient.OracleDateTime%2CSystem.Data.OracleClient.OracleDateTime%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt; (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThan(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_LessThan(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn der erste kleiner als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleDateTime.LessThan%28System.Data.OracleClient.OracleDateTime%2CSystem.Data.OracleClient.OracleDateTime%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt;= (System.Data.OracleClient.OracleDateTime x, System.Data.OracleClient.OracleDateTime y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThanOrEqual(valuetype System.Data.OracleClient.OracleDateTime x, valuetype System.Data.OracleClient.OracleDateTime y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.op_LessThanOrEqual(System.Data.OracleClient.OracleDateTime,System.Data.OracleClient.OracleDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleDateTime" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleDateTime" />-Struktur.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> zu bestimmen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz kleiner oder gleich der zweiten Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleDateTime" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> ist <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleDateTime.LessThanOrEqual%28System.Data.OracleClient.OracleDateTime%2CSystem.Data.OracleClient.OracleDateTime%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleDateTime Parse (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleDateTime Parse(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleDateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see langword="String" /> analysiert werden.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.String" /> Zeichenfolgendarstellung einer Datums- und Uhrzeitangabe in die <see cref="T:System.Data.OracleClient.OracleDateTime" /> entspricht.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur gleich der dargestellten Datums- und Uhrzeitangabe nach den angegebenen <see langword="String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Second">
+      <MemberSignature Language="C#" Value="public int Second { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Second" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Second" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur als eine Sekunde.</summary>
+        <value>Ein zweites zwischen 0 und 59.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDateTime.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert dieses <see cref="T:System.Data.OracleClient.OracleDateTime" /> -Struktur in eine <see cref="T:System.String" />.</summary>
+        <returns>Ein <see langword="String" /> darstellt der <see cref="P:System.Data.OracleClient.OracleDateTime.Value" /> -Eigenschaft dieser <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public DateTime Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</summary>
+        <value>Der Wert dieses <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Year">
+      <MemberSignature Language="C#" Value="public int Year { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Year" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDateTime.Year" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Data.OracleClient.OracleDateTime" /> Struktur als ein Jahr.</summary>
+        <value>Ein Jahr zwischen 1 und 4712.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

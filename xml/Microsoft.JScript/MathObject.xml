@@ -1,0 +1,697 @@
+<Type Name="MathObject" FullName="Microsoft.JScript.MathObject">
+  <TypeSignature Language="C#" Value="public class MathObject : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MathObject extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.MathObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Konstanten und statische Methoden für trigonometrische Funktionen, logarithmischen Funktionen und andere gebräuchliche mathematischen Funktionen bereit. Diese Klasse gehört zu "Modell" integrierten Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="abs">
+      <MemberSignature Language="C#" Value="public static double abs (double d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 abs(float64 d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.abs(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_abs)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="d">Die Zahl, die den absoluten Wert zu berechnen.</param>
+        <summary>Berechnet den absoluten Wert der angegebenen Zahl.</summary>
+        <returns>Der Absolutbetrag von <paramref name="d" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="acos">
+      <MemberSignature Language="C#" Value="public static double acos (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 acos(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.acos(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_acos)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Anzahl der Arkuskosinus von berechnen.</param>
+        <summary>Berechnet den Arkuskosinus der angegebenen Zahl.</summary>
+        <returns>Der Arkuskosinus von <paramref name="x" />, gemessen im Bogenmaß.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="asin">
+      <MemberSignature Language="C#" Value="public static double asin (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 asin(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.asin(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_asin)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Anzahl der Arkussinus von berechnen.</param>
+        <summary>Berechnet den Arkussinus der angegebenen Zahl.</summary>
+        <returns>Der Arkussinus von <paramref name="x" />, gemessen im Bogenmaß.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="atan">
+      <MemberSignature Language="C#" Value="public static double atan (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 atan(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.atan(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_atan)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Anzahl der Arkustangens von berechnen.</param>
+        <summary>Berechnet den Arkustangens der angegebenen Zahl.</summary>
+        <returns>Der Arkustangens von <paramref name="x" />, gemessen im Bogenmaß.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="atan2">
+      <MemberSignature Language="C#" Value="public static double atan2 (double dy, double dx);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 atan2(float64 dy, float64 dx) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.atan2(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_atan2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dy" Type="System.Double" />
+        <Parameter Name="dx" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="dy">Der Zähler des Quotienten berechnet den Arkustangens von.</param>
+        <param name="dx">Der Nenner des Quotienten berechnet den Arkustangens von.</param>
+        <summary>Berechnet den umgekehrten Tangens der Quotient der angegebenen Zahlen.</summary>
+        <returns>Der Arkustangens von <paramref name="dy" /> / <paramref name="dx" />, gemessen im Bogenmaß.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ceil">
+      <MemberSignature Language="C#" Value="public static double ceil (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 ceil(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.ceil(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_ceil)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Zahl, die die Obergrenze zu berechnen.</param>
+        <summary>Berechnet die Höchstwert des angegebenen Zahl, die die kleinste ganze Zahl ist, die größer als oder gleich der angegebenen Zahl ist.</summary>
+        <returns>Der Höchstwert des <paramref name="x" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="cos">
+      <MemberSignature Language="C#" Value="public static double cos (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 cos(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.cos(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_cos)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein im Bogenmaß angegebener Winkel.</param>
+        <summary>Berechnet den Kosinus des angegebenen Winkels.</summary>
+        <returns>Der Kosinus von <paramref name="x" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="E">
+      <MemberSignature Language="C#" Value="public const double E = 2.71828182845905;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 E = (2.71828182845905)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.E" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>2.71828182845905</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der die Basis des natürlichen Logarithmus, angegeben durch die Konstante e ist Eulersche-Konstante darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="exp">
+      <MemberSignature Language="C#" Value="public static double exp (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 exp(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.exp(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_exp)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Leistungsfähigkeit zum Auslösen von <c>e</c> an.</param>
+        <summary>Berechnet die Anzahl von e auf die angegebene Potenz, wobei e Eulersche-Konstante, die Basis der natürlichen Logarithmen ist.</summary>
+        <returns>Die Zahl e potenziert mit der <paramref name="x" /> Power.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="floor">
+      <MemberSignature Language="C#" Value="public static double floor (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 floor(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.floor(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_floor)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Anzahl berechnet den Tiefstwert des.</param>
+        <summary>Berechnet den Tiefstwert der angegebenen Zahl, die die größte ganze Zahl ist, die kleiner als oder gleich der angegebenen Zahl ist.</summary>
+        <returns>Den Tiefstwert des <paramref name="x" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LN10">
+      <MemberSignature Language="C#" Value="public const double LN10 = 2.30258509299405;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 LN10 = (2.30258509299405)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.LN10" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>2.30258509299405</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der den Logarithmus zur Basis e von 10 und der natürliche Logarithmus von 10 darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LN2">
+      <MemberSignature Language="C#" Value="public const double LN2 = 0.693147180559945;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 LN2 = (0.693147180559945)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.LN2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>0.693147180559945</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der den Logarithmus zur Basis e von 2 und der natürliche Logarithmus von 2 darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="log">
+      <MemberSignature Language="C#" Value="public static double log (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 log(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.log(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_log)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Zahl, die den natürlichen Logarithmus berechnen.</param>
+        <summary>Berechnet den Logarithmus zur Basis e der angegebenen Zahl, die den natürlichen Logarithmus der angegebenen Zahl ist.</summary>
+        <returns>Der natürliche Logarithmus von <paramref name="x" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LOG10E">
+      <MemberSignature Language="C#" Value="public const double LOG10E = 0.434294481903252;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 LOG10E = (0.434294481903252)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.LOG10E" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>0.434294481903252</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der den Logarithmus zur Basis 10 von e, den Logarithmus von e.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LOG2E">
+      <MemberSignature Language="C#" Value="public const double LOG2E = 1.44269504088896;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 LOG2E = (1.44269504088896)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.LOG2E" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>1.44269504088896</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der den Logarithmus Basis 2 von e, den binären Logarithmus von e.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="max">
+      <MemberSignature Language="C#" Value="public static double max (object x, object y, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 max(object x, object y, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.max(System.Object,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs, Microsoft.JScript.JSBuiltin.Math_max)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="x">Die erste zu vergleichende Zahl.</param>
+        <param name="y">Die zweite zu vergleichende Zahl.</param>
+        <param name="args">Zusätzliche Zahlen, verglichen werden soll.</param>
+        <summary>Gibt die größte von zwei oder mehr angegebenen Zahlen zurück.</summary>
+        <returns>Das größte <paramref name="x" />, <paramref name="y" />, und die Zahlen, die in enthaltenen <paramref name="args" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="min">
+      <MemberSignature Language="C#" Value="public static double min (object x, object y, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 min(object x, object y, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.min(System.Object,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs, Microsoft.JScript.JSBuiltin.Math_min)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="x">Die erste zu vergleichende Zahl.</param>
+        <param name="y">Die zweite zu vergleichende Zahl.</param>
+        <param name="args">Zusätzliche Zahlen, verglichen werden soll.</param>
+        <summary>Gibt die kleinste von zwei oder mehr angegebenen Zahlen zurück.</summary>
+        <returns>Um den kleinsten der <paramref name="x" />, <paramref name="y" />, und die Zahlen, die in enthaltenen <paramref name="args" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PI">
+      <MemberSignature Language="C#" Value="public const double PI = 3.14159265358979;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 PI = (3.14159265358979)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.PI" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>3.14159265358979</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der das Verhältnis vom Umfang eines Kreises zu dessen Durchmesser, angegeben durch die Konstante π darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="pow">
+      <MemberSignature Language="C#" Value="public static double pow (double dx, double dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 pow(float64 dx, float64 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.pow(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_pow)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Double" />
+        <Parameter Name="dy" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Die Anzahl an die <c>dy</c> Power.</param>
+        <param name="dy">Die Leistungsfähigkeit zum Auslösen von <c>Dx</c> an.</param>
+        <summary>Berechnet die angegebene Anzahl potenziert mit dem angegebenen Exponenten.</summary>
+        <returns>Die Anzahl <paramref name="dx" /> potenziert mit der <paramref name="dy" /> Power.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="random">
+      <MemberSignature Language="C#" Value="public static double random ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 random() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.random" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_random)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert eine Zufallszahl zwischen 0 und 1 an. Diese Methode generiert eine kryptografisch sichere Zufallszahl keine.</summary>
+        <returns>Eine Zahl, die größer als oder gleich 0 und kleiner als 1 ist.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="round">
+      <MemberSignature Language="C#" Value="public static double round (double d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 round(float64 d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.round(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_round)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="d">Die Zahl, die gerundet werden soll.</param>
+        <summary>Rundet die angegebene Anzahl an, nach unten oder auf die nächste ganze Zahl.</summary>
+        <returns>Wenn der Bruchteil des <paramref name="d" /> kleiner als genau auf die nächste ganze Zahl <paramref name="d" /> abgerundet. Wenn der Bruchteil des <paramref name="d" /> ist in der Mitte oder mehr auf die nächste ganze Zahl <paramref name="d" /> aufgerundet.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="sin">
+      <MemberSignature Language="C#" Value="public static double sin (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 sin(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.sin(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_sin)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein im Bogenmaß angegebener Winkel.</param>
+        <summary>Berechnet den Sinus des angegebenen Winkels.</summary>
+        <returns>Der Sinus von <paramref name="x" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="sqrt">
+      <MemberSignature Language="C#" Value="public static double sqrt (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 sqrt(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.sqrt(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_sqrt)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die Zahl, die die Quadratwurzel berechnet.</param>
+        <summary>Berechnet die Quadratwurzel der angegebenen Zahl.</summary>
+        <returns>Die Quadratwurzel von <paramref name="x" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SQRT1_2">
+      <MemberSignature Language="C#" Value="public const double SQRT1_2 = 0.707106781186548;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 SQRT1_2 = (0.707106781186548)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.SQRT1_2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>0.707106781186548</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der die folgenden Werte für die entsprechende darstellt: (√2) / 2, √(½) und 1/(√2).</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SQRT2">
+      <MemberSignature Language="C#" Value="public const double SQRT2 = 1.4142135623731;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 SQRT2 = (1.4142135623731)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.MathObject.SQRT2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>1.4142135623731</MemberValue>
+      <Docs>
+        <summary>Speichert einen Wert, der √2 darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="tan">
+      <MemberSignature Language="C#" Value="public static double tan (double x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 tan(float64 x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.MathObject.tan(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.None, Microsoft.JScript.JSBuiltin.Math_tan)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Ein im Bogenmaß angegebener Winkel.</param>
+        <summary>Berechnet den Tangens des angegebenen Winkels.</summary>
+        <returns>Der Tangens von <paramref name="x" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

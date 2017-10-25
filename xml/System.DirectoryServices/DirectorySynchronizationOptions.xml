@@ -1,0 +1,109 @@
+<Type Name="DirectorySynchronizationOptions" FullName="System.DirectoryServices.DirectorySynchronizationOptions">
+  <TypeSignature Language="C#" Value="public enum DirectorySynchronizationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DirectorySynchronizationOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DirectorySynchronizationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Flags, die bestimmen, wie die Verzeichnisse innerhalb einer Domäne synchronisiert werden.  Diese Optionen können festgelegt werden, für die <see cref="P:System.DirectoryServices.DirectorySynchronization.Option" /> Eigenschaft.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IncrementalValues">
+      <MemberSignature Language="C#" Value="IncrementalValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions IncrementalValues = int64(2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.IncrementalValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dieses Flag nicht vorhanden ist, werden alle Werte, bis zu einer Server angegebenen Frist ab, in einem mehrwertigen Attribut zurückgegeben, wenn Sie einen beliebigen Wert ändert. Wenn dieses Flag vorhanden ist, werden nur die geänderten Werte zurückgegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions None = int64(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es sind keine Flags festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectSecurity">
+      <MemberSignature Language="C#" Value="ObjectSecurity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions ObjectSecurity = int64(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.ObjectSecurity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dieses Flag nicht vorhanden ist, muss der Aufrufer über das Recht zum Replizieren von Änderungen verfügen. Wenn dieses Flag vorhanden ist, wird der Aufrufer benötigt keine Rechte, aber ist zulässig, sehen Sie nur die Objekte und Attribute, die an den Aufrufer zugegriffen werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentsFirst">
+      <MemberSignature Language="C#" Value="ParentsFirst" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions ParentsFirst = int64(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.ParentsFirst" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurückgeben Sie Eltern vor untergeordneten, wenn Eltern andernfalls später in der replikationsdatenstrom angezeigt werden würden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicDataOnly">
+      <MemberSignature Language="C#" Value="PublicDataOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions PublicDataOnly = int64(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.PublicDataOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Geben Sie in den Suchergebnissen keine private Daten zurück.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

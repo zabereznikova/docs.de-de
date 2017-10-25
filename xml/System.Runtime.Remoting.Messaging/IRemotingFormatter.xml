@@ -1,0 +1,104 @@
+<Type Name="IRemotingFormatter" FullName="System.Runtime.Remoting.Messaging.IRemotingFormatter">
+  <TypeSignature Language="C#" Value="public interface IRemotingFormatter : System.Runtime.Serialization.IFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemotingFormatter implements class System.Runtime.Serialization.IFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.IRemotingFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IFormatter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Schnittstelle der Remoteprozeduraufruf-Remoteprozeduraufruf (RPC) für alle Formatierungsprogramm.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> Schnittstelle ermöglicht es das implementierende Formatierungsprogramm zum Senden und Empfangen von Remoteprozeduraufrufen (RPCs). Weitere Informationen finden Sie unter <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Diese Schnittstelle wird von abgeleiteten <xref:System.Runtime.Serialization.IFormatter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.IO.Stream serializationStream, class System.Runtime.Remoting.Messaging.HeaderHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IRemotingFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Messaging.HeaderHandler" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Die <see cref="T:System.IO.Stream" /> aus dem die Daten deserialisiert werden.</param>
+        <param name="handler">Der Delegat für ausgelegt <see cref="T:System.Runtime.Remoting.Messaging.Header" /> Objekte. Kann <see langword="null" />.</param>
+        <summary>Beginnt die Deserialisierung ein Remoteprozeduraufruf (RPC).</summary>
+        <returns>Der Stamm des deserialisierten Objektdiagramms.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Remoting.Messaging.Header>-Objekte enthalten Informationen über einen Remotefunktionsaufruf (z. B. Transaktions-ID oder Signatur einer Methode).  
+  
+> [!NOTE]
+>  Die SOAP-Spezifikation für Weitere Informationen finden Sie Header.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream serializationStream, object graph, System.Runtime.Remoting.Messaging.Header[] headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.Stream serializationStream, object graph, class System.Runtime.Remoting.Messaging.Header[] headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IRemotingFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="graph" Type="System.Object" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Messaging.Header[]" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Die <see cref="T:System.IO.Stream" /> auf den das angegebene Diagramm serialisiert wird.</param>
+        <param name="graph">Der Stamm des Objektdiagramms, das serialisiert werden.</param>
+        <param name="headers">Das Array von <see cref="T:System.Runtime.Remoting.Messaging.Header" /> Objekte, die mit dem Diagramm, angegeben durch Übertragen der <c>Graph</c> Parameter. Kann <see langword="null" />.</param>
+        <summary>Startet die Serialisierung ein Remoteprozeduraufruf (RPC).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Remoting.Messaging.Header>-Objekte enthalten Informationen über einen Remotefunktionsaufruf (z. B. Transaktions-ID oder Signatur einer Methode).  
+  
+> [!NOTE]
+>  Die SOAP-Spezifikation für Weitere Informationen finden Sie Header.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

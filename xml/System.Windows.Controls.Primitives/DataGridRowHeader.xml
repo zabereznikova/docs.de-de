@@ -1,0 +1,247 @@
+<Type Name="DataGridRowHeader" FullName="System.Windows.Controls.Primitives.DataGridRowHeader">
+  <TypeSignature Language="C#" Value="public class DataGridRowHeader : System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DataGridRowHeader extends System.Windows.Controls.Primitives.ButtonBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.DataGridRowHeader" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_TopHeaderGripper", Type=typeof(System.Windows.Controls.Primitives.Thumb))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_BottomHeaderGripper", Type=typeof(System.Windows.Controls.Primitives.Thumb))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine einzelne <see cref="T:System.Windows.Controls.DataGrid" /> Zeilenüberschrift.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridRowHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DataGridRowHeader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.DataGridRowHeader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRowSelected">
+      <MemberSignature Language="C#" Value="public bool IsRowSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRowSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DataGridRowHeader.IsRowSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Zeile ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Zeile ausgewählt ist, andernfalls <see langword="false" />. Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRowSelectedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsRowSelectedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsRowSelectedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DataGridRowHeader.IsRowSelectedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.DataGridRowHeader.IsRowSelected" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DataGridRowHeader.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">Die verfügbare Größe, die dieses Element untergeordneten Elementen bereitstellen kann. Gibt eine Obergrenze festgelegt, die untergeordneten Elemente nicht überschreiten darf.</param>
+        <summary>Misst die untergeordneten Elemente ein <see cref="T:System.Windows.Controls.Primitives.DataGridRowHeader" /> zur Vorbereitung der Anordnung während der <see cref="M:System.Windows.Controls.Control.ArrangeOverride(System.Windows.Size)" /> übergeben.</summary>
+        <returns>Die Größe, die die <see cref="T:System.Windows.Controls.Primitives.DataGridRowHeader" /> muss während des Layouts, basierend auf der Berechnung der untergeordneten Objekt zugeordneten Größen bestimmt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DataGridRowHeader.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für den Zeilenheader fest, wenn eine neue Vorlage angewendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird immer dann aufgerufen, wenn Anwendungscode oder ein interner Prozess, z. B. eine Layout-Wiederaufbau-Übergabe, die <xref:System.Windows.FrameworkElement.ApplyTemplate%2A>-Methode aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DataGridRowHeader.OnClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> Ereignis und initiiert die Zeile der Auswahl oder Ziehvorgänge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die Zeilenüberschrift geklickt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DataGridRowHeader.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine neue <see cref="T:System.Windows.Automation.Peers.DataGridRowHeaderAutomationPeer" /> für diesen Zeilenheader.</summary>
+        <returns>Ein neuer Automatisierungspeer für diesen Zeilenheader.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush SeparatorBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush SeparatorBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DataGridRowHeader.SeparatorBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Brush" /> verwendet, um die Zeile Header Trennlinien zeichnen.</summary>
+        <value>Der Pinsel, der zum Zeichnen von Zeilenüberschrift Trennlinien verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SeparatorBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SeparatorBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DataGridRowHeader.SeparatorBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.DataGridRowHeader.SeparatorBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility SeparatorVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility SeparatorVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DataGridRowHeader.SeparatorVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Sichtbarkeit der Zeile in der Benutzeroberfläche (UI) Trennlinien Header.</summary>
+        <value>Die Sichtbarkeit der Benutzeroberfläche von der Zeilenheader-Trennlinien. Die Standardeinstellung ist <see cref="F:System.Windows.Visibility.Visible" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SeparatorVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SeparatorVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DataGridRowHeader.SeparatorVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.DataGridRowHeader.SeparatorVisibility" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

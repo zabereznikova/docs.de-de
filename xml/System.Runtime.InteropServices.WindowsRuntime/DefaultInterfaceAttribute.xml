@@ -1,0 +1,93 @@
+<Type Name="DefaultInterfaceAttribute" FullName="System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultInterfaceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DefaultInterfaceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Standardschnittstelle einer verwalteten Windows-Runtime-Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Entwicklung [!INCLUDE[wrt](~/includes/wrt-md.md)] Komponenten, dieses Attribut verwenden, wenn Sie möchten die Standardschnittstelle an, die zum Marshallen der Klasse, um das Attribut angewendet wird. Dies ist nicht erforderlich, wenn Sie zulassen, dass Klassenschnittstellen automatisch generiert werden sollen.  
+  
+ Ein [!INCLUDE[wrt](~/includes/wrt-md.md)] Klasse muss über eine Standardschnittstelle verfügen. Wenn das Hilfsprogramm WinMdExp.exe eine Standardschnittstelle für eine Klasse nicht erkennen, wenn er erstellt die [!INCLUDE[wrt](~/includes/wrt-md.md)]Komponente, wählt er eine Schnittstelle wie folgt:  
+  
+-   Wenn die Klasse automatisch Schnittstellen generiert hat, wird die erste Vorlage als Standard verwendet.  
+  
+-   Wenn die Klasse mit automatisch generierten Schnittstellen besitzt, wird die erste Schnittstelle in der die Klasse Implementierung Schnittstellenliste verwendet.  
+  
+ Können Sie anwenden der <xref:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute> -Attribut auf die Klasse oder das Anwenden der `Windows.Foundations.Metadata.DefaultAttribute` -Attribut einer Schnittstelle. Der zweite Wert hat Vorrang vor, wenn beide Attribute angegeben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultInterfaceAttribute (Type defaultInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type defaultInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultInterface" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="defaultInterface">Der Schnittstellentyp, der als Standard-Schnittstelle für die Klasse das Attribut angegeben ist, wird auf angewendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultInterface">
+      <MemberSignature Language="C#" Value="public Type DefaultInterface { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DefaultInterface" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute.DefaultInterface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Benutzeroberfläche ab.</summary>
+        <value>Der Typ des Standard-Schnittstelle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

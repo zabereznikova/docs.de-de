@@ -1,0 +1,385 @@
+<Type Name="CngProperty" FullName="System.Security.Cryptography.CngProperty">
+  <TypeSignature Language="C#" Value="public struct CngProperty : IEquatable&lt;System.Security.Cryptography.CngProperty&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CngProperty extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Security.Cryptography.CngProperty&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Security.Cryptography.CngProperty&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt eine Eigenschaft eines CNG-Schlüssels oder -Anbieters (Cryptography Next Generation).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kapselt einen Eigenschaftsnamen (eine Zeichenfolge), einen Wert (Bytearray), ein <xref:System.Security.Cryptography.CngPropertyOptions> Flag, Accessoreigenschaften, und der Vergleich und Hashfunktionen.  
+  
+ Diese Klasse wird verwendet, mit der <xref:System.Security.Cryptography.CngKey.SetProperty%2A> und <xref:System.Security.Cryptography.CngKey.GetProperty%2A> Methoden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngProperty (string name, byte[] value, System.Security.Cryptography.CngPropertyOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, unsigned int8[] value, valuetype System.Security.Cryptography.CngPropertyOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.#ctor(System.String,System.Byte[],System.Security.Cryptography.CngPropertyOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="options" Type="System.Security.Cryptography.CngPropertyOptions" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Eigenschaftenname initialisiert werden.</param>
+        <param name="value">Der Eigenschaftswert initialisiert werden.</param>
+        <param name="options">Eine bitweise Kombination der Enumerationswerte, die angeben, wie die Eigenschaft gespeichert ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.CngProperty" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften, die mit einem bestimmten Satz von gespeichert sind <xref:System.Security.Cryptography.CngPropertyOptions> Flags erfordern den gleichen Satz von Flags an, wenn sie abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Equals">
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Vergleicht zwei <see cref="T:System.Security.Cryptography.CngProperty" />-Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CngProperty>Objekte als gleich betrachtet, wenn ihre Namen, Werte und Optionen äquivalent sind. Beim Vergleich wird die Groß-und Kleinschreibung ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dem aktuellen <see cref="T:System.Security.Cryptography.CngProperty" />-Objekt verglichen werden soll.</param>
+        <summary>Vergleicht das angegebene Objekt mit dem aktuellen <see cref="T:System.Security.Cryptography.CngProperty" />-Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="obj" /> Parameter ist ein <see cref="T:System.Security.Cryptography.CngProperty" /> -Objekt, das die gleiche Eigenschaft gibt an, wie das aktuelle Objekt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CngProperty>Objekte als gleich betrachtet, wenn ihre Namen, Werte und Optionen äquivalent sind. Beim Vergleich wird die Groß-und Kleinschreibung ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Security.Cryptography.CngProperty other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Security.Cryptography.CngProperty other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.Equals(System.Security.Cryptography.CngProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.Cryptography.CngProperty" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein Objekt, das mit dem aktuellen <see cref="T:System.Security.Cryptography.CngProperty" />-Objekt verglichen werden soll.</param>
+        <summary>Vergleicht das angegebene <see cref="T:System.Security.Cryptography.CngProperty" />-Objekt mit dem aktuellen <see cref="T:System.Security.Cryptography.CngProperty" />-Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="other" /> Parameter dieselbe Eigenschaft wie das aktuelle Objekt darstellt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CngProperty>Objekte als gleich betrachtet, wenn ihre Namen, Werte und Optionen äquivalent sind. Beim Vergleich wird die Groß-und Kleinschreibung ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Hashwert für den aktuellen <see cref="T:System.Security.Cryptography.CngProperty" /> Objekt.</summary>
+        <returns>Der Hashwert des aktuellen <see cref="T:System.Security.Cryptography.CngProperty" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public byte[] GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.GetValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Eigenschaftswert ab, die das aktuelle <see cref="T:System.Security.Cryptography.CngProperty" /> Objekt angibt.</summary>
+        <returns>Ein Array, das in der Eigenschaft gespeicherten Wert darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaft ab, die den aktuellen Namen <see cref="T:System.Security.Cryptography.CngProperty" /> Objekt angibt.</summary>
+        <value>Der Eigenschaftenname, der in der aktuellen festgelegt ist <see cref="T:System.Security.Cryptography.CngProperty" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Security.Cryptography.CngProperty left, System.Security.Cryptography.CngProperty right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Security.Cryptography.CngProperty left, valuetype System.Security.Cryptography.CngProperty right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.op_Equality(System.Security.Cryptography.CngProperty,System.Security.Cryptography.CngProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.CngProperty" />
+        <Parameter Name="right" Type="System.Security.Cryptography.CngProperty" />
+      </Parameters>
+      <Docs>
+        <param name="left">Ein Objekt, das eine Eigenschaft eines Key Cryptography Next Generation (CNG) oder Anbieter angibt.</param>
+        <param name="right">Ein zweites Objekt, das mit dem Objekt verglichen werden soll, die durch identifiziert wird die <c>linken</c> Parameter.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.Security.Cryptography.CngProperty" /> Objekte angeben, der gleichnamigen Eigenschaft, Wert und Optionen.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Objekte die gleiche Eigenschaft angeben. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CngProperty>Objekte als gleich betrachtet, wenn ihre Namen, Werte und Optionen äquivalent sind. Beim Vergleich wird die Groß-und Kleinschreibung ausgeführt.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.Security.Cryptography.CngProperty.Equals%28System.Security.Cryptography.CngProperty%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Security.Cryptography.CngProperty left, System.Security.Cryptography.CngProperty right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Security.Cryptography.CngProperty left, valuetype System.Security.Cryptography.CngProperty right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.op_Inequality(System.Security.Cryptography.CngProperty,System.Security.Cryptography.CngProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.CngProperty" />
+        <Parameter Name="right" Type="System.Security.Cryptography.CngProperty" />
+      </Parameters>
+      <Docs>
+        <param name="left">Ein Objekt, das eine Eigenschaft eines Key Cryptography Next Generation (CNG) oder Anbieter angibt.</param>
+        <param name="right">Ein zweites Objekt, das mit dem Objekt verglichen werden soll, die durch identifiziert wird die <c>linken</c> Parameter.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.Security.Cryptography.CngProperty" /> Objekte nicht angeben, der gleichnamigen Eigenschaft, Wert und Optionen.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Objekte nicht die gleiche Eigenschaft angeben; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CngProperty>Objekte als gleich betrachtet, wenn ihre Namen, Werte und Optionen äquivalent sind. Beim Vergleich wird die Groß-und Kleinschreibung ausgeführt.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.Security.Cryptography.CngProperty.Equals%28System.Security.Cryptography.CngProperty%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngPropertyOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CngPropertyOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngProperty.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eigenschaftenoptionen ab, die das aktuelle <see cref="T:System.Security.Cryptography.CngProperty" /> Objekt angibt.</summary>
+        <value>Ein Objekt, das die Optionen angibt, die in der aktuellen festgelegt sind <see cref="T:System.Security.Cryptography.CngProperty" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CngKey>Objekte enthalten <xref:System.Security.Cryptography.CngProperty> Objekte, die enthalten die <xref:System.Security.Cryptography.CngPropertyOptions> , die die Eigenschaft gespeichert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

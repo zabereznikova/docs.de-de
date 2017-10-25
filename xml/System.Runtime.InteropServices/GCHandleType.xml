@@ -1,0 +1,157 @@
+<Type Name="GCHandleType" FullName="System.Runtime.InteropServices.GCHandleType">
+  <TypeSignature Language="C#" Value="public enum GCHandleType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed GCHandleType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.GCHandleType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Arten von Handles dar, die <see cref="T:System.Runtime.InteropServices.GCHandle" /> -Klasse zuordnen kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType Normal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Handletyp stellt ein nicht transparentes Handle, was bedeutet, dass Sie die Adresse des angehefteten Objekts durch das Handle nicht beheben können. Sie können dieses Typs auf ein Objekt nachverfolgen und verhindern, dass durch den Garbage Collector verwenden. Dieses Enumerationsmembers ist nützlich, wenn ein nicht verwalteter Client den einzigen Verweis enthält, der nicht zu erkennender durch den Garbage Collector zu einem verwalteten Objekt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pinned">
+      <MemberSignature Language="C#" Value="Pinned" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType Pinned = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.Pinned" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Handletyp ähnelt <see cref="F:System.Runtime.InteropServices.GCHandleType.Normal" />, aber die Adresse des angehefteten Objekts an, die ausgeführt werden können. Dies verhindert, dass der Garbage Collector das Objekt verschieben und verwendungsdatensammlungssystem daher die Effizienz des Garbage Collectors. Verwenden der <see cref="M:System.Runtime.InteropServices.GCHandle.Free" /> Methode, um das zugeordnete Handle so bald wie möglich freizugeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Weak">
+      <MemberSignature Language="C#" Value="Weak" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType Weak = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.Weak" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Handletyp wird verwendet, um ein Objekt nachverfolgen, aber lassen sie gesammelt werden. Wenn ein Objekt gesammelt werden, den Inhalt der <see cref="T:System.Runtime.InteropServices.GCHandle" /> NULL gesetzt werden. <see langword="Weak" />-Verweise werden vor der Finalizer ausgeführt wird, dies selbst wenn die des, Finalizers der <see langword="Weak" /> Verweis ist immer noch NULL gesetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WeakTrackResurrection">
+      <MemberSignature Language="C#" Value="WeakTrackResurrection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType WeakTrackResurrection = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.WeakTrackResurrection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Handletyp ähnelt <see cref="F:System.Runtime.InteropServices.GCHandleType.Weak" />, aber das Handle wird nicht gelöscht werden, wenn das Objekt während des Abschlusses wieder zugänglich gemacht wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

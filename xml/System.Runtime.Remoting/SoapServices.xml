@@ -1,0 +1,1007 @@
+<Type Name="SoapServices" FullName="System.Runtime.Remoting.SoapServices">
+  <TypeSignature Language="C#" Value="public class SoapServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.SoapServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet mehrere Methoden zum verwenden und Veröffentlichung von Remoteobjekten im SOAP-Format.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt einen Linkaufruf. Eine Sicherheitsausnahme wird ausgelöst, wenn Sie der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur. Finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) für Weitere Informationen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Member in der <xref:System.Runtime.Remoting.SoapServices> -Klasse zum Konvertieren zwischen einer <xref:System.Type> Objekt und ein XML-Typ.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#100](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#100)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#100](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#100)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="CodeXmlNamespaceForClrTypeNamespace">
+      <MemberSignature Language="C#" Value="public static string CodeXmlNamespaceForClrTypeNamespace (string typeNamespace, string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CodeXmlNamespaceForClrTypeNamespace(string typeNamespace, string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.CodeXmlNamespaceForClrTypeNamespace(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeNamespace" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeNamespace">Der Namespace, die codiert werden.</param>
+        <param name="assemblyName">Der Name der Assembly, die codiert werden.</param>
+        <summary>Gibt den Namespace der common Language Runtime Typname aus den bereitgestellten Namespace und Assembly zurück.</summary>
+        <returns>Der Typname common Language Runtime-Namespace aus den bereitgestellten Namespace und Assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode wird von .NET Framework und dem SoapSuds-Tool zum Erstellen eines XML-Namespacenamens für einen Typ zu common Language Runtime-Objekt.  
+  
+ Weitere Informationen über SoapSuds finden Sie unter [Soapsuds-Tool (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#101](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#101)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#101](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#101)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="assemblyName" /> und <paramref name="typeNamespace" /> Parameter sind beide <see langword="null" /> oder leer sein.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeXmlNamespaceForClrTypeNamespace">
+      <MemberSignature Language="C#" Value="public static bool DecodeXmlNamespaceForClrTypeNamespace (string inNamespace, out string typeNamespace, out string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DecodeXmlNamespaceForClrTypeNamespace(string inNamespace, [out] string&amp; typeNamespace, [out] string&amp; assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.DecodeXmlNamespaceForClrTypeNamespace(System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inNamespace" Type="System.String" />
+        <Parameter Name="typeNamespace" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="assemblyName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inNamespace">Die common Language Runtime-Namespace.</param>
+        <param name="typeNamespace">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , der die decodierte Namespacenamen enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="assemblyName">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , das den decodierten Assemblynamen enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Decodiert die Namen der XML-Namespace und Assembly aus dem angegebenen common Language Runtime-Namespace an.</summary>
+        <returns>
+          <see langword="true" />Wenn die Namen, Namespace und Assembly erfolgreich decodiert wurden; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Analysieren von XML-Stream ist .NET Framework muss wissen, wie die in der common Language Runtime-Typen aus dem Stream gelesene XML konvertiert werden. Die Informationen, der angibt, wie .NET Framework generiert werden sollen und die Analyse wird ein XML-Stream in benutzerdefinierten Attributen, die in befinden gespeichert die <xref:System.Runtime.Remoting.Metadata> Namespace. Es gibt zwei Möglichkeiten, diese Informationen in einer Konfigurationsdatei angeben: durch die Zuordnungen explizit angeben oder indem Sie angeben, welche Objekttypen zum Vorabladen. Die aktuelle Methode unterstützt das Abrufen von solche Zuordnungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#102](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#102)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#102](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#102)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="inNamespace" />-Parameter ist <see langword="null" /> oder leer.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInteropFieldTypeAndNameFromXmlAttribute">
+      <MemberSignature Language="C#" Value="public static void GetInteropFieldTypeAndNameFromXmlAttribute (Type containingType, string xmlAttribute, string xmlNamespace, out Type type, out string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetInteropFieldTypeAndNameFromXmlAttribute(class System.Type containingType, string xmlAttribute, string xmlNamespace, [out] class System.Type&amp; type, [out] string&amp; name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetInteropFieldTypeAndNameFromXmlAttribute(System.Type,System.String,System.String,System.Type@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containingType" Type="System.Type" />
+        <Parameter Name="xmlAttribute" Type="System.String" />
+        <Parameter Name="xmlNamespace" Type="System.String" />
+        <Parameter Name="type" Type="System.Type&amp;" RefType="out" />
+        <Parameter Name="name" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="containingType">Die <see cref="T:System.Type" /> des Objekts, das das Feld enthält.</param>
+        <param name="xmlAttribute">Die XML-Attributnamen der der Typ des Felds.</param>
+        <param name="xmlNamespace">Der XML-Namespace, der den Feldtyp werden soll.</param>
+        <param name="type">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Type" /> des Felds. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="name">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , die den Namen des Felds enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Typ des Felds aus XML-Attributnamen, Namespace, abgerufen und die <see cref="T:System.Type" /> Rand des enthaltenden Objekts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angesichts des Seitentyps des enthaltenden Objekts und die XML-Attribut und XML-Namespace, die von .NET Framework eingelesen wird, wird die aktuelle Methode die tatsächliche common Language Runtime-Feldnamen und den Typ des Felds. .NET Framework verwendet diese Informationen dann das Feld mit den Daten aus dem XML-Stream eingelesenen aufgefüllt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#150](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#150)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#150](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#150)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInteropFieldTypeAndNameFromXmlElement">
+      <MemberSignature Language="C#" Value="public static void GetInteropFieldTypeAndNameFromXmlElement (Type containingType, string xmlElement, string xmlNamespace, out Type type, out string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetInteropFieldTypeAndNameFromXmlElement(class System.Type containingType, string xmlElement, string xmlNamespace, [out] class System.Type&amp; type, [out] string&amp; name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetInteropFieldTypeAndNameFromXmlElement(System.Type,System.String,System.String,System.Type@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containingType" Type="System.Type" />
+        <Parameter Name="xmlElement" Type="System.String" />
+        <Parameter Name="xmlNamespace" Type="System.String" />
+        <Parameter Name="type" Type="System.Type&amp;" RefType="out" />
+        <Parameter Name="name" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="containingType">Die <see cref="T:System.Type" /> des Objekts, das das Feld enthält.</param>
+        <param name="xmlElement">Der Name der XML-Elements des Felds.</param>
+        <param name="xmlNamespace">Der XML-Namespace, der den Feldtyp werden soll.</param>
+        <param name="type">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Type" /> des Felds. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="name">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , die den Namen des Felds enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die <see cref="T:System.Type" /> und den Namen eines Felds aus dem bereitgestellten XML-Elementnamen, Namespace und die mit geben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angesichts des Seitentyps des enthaltenden Objekts und die XML-Element und XML-Namespace, die von .NET Framework eingelesen wird, gibt diese Methode die tatsächliche common Language Runtime-Feldnamen und den Typ des Felds. .NET Framework verwendet diese Informationen dann das Feld mit den Daten aus dem XML-Stream eingelesenen aufgefüllt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#150](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#150)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#150](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#150)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInteropTypeFromXmlElement">
+      <MemberSignature Language="C#" Value="public static Type GetInteropTypeFromXmlElement (string xmlElement, string xmlNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetInteropTypeFromXmlElement(string xmlElement, string xmlNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetInteropTypeFromXmlElement(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlElement" Type="System.String" />
+        <Parameter Name="xmlNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlElement">Der Name der XML-Elements des unbekannten Objekttyps.</param>
+        <param name="xmlNamespace">Der XML-Namespace des unbekannten Objekttyps.</param>
+        <summary>Ruft die <see cref="T:System.Type" /> während der Deserialisierung eines unbekannten Objekttyps mit dem angegebenen XML-Elementnamen und den Namespace verwendet werden soll.</summary>
+        <returns>Die <see cref="T:System.Type" /> des Objekttyps mit dem angegebenen XML-Element-Namen und Namespace zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode gibt Werte über eingerichtet <xref:System.Runtime.Remoting.SoapServices.RegisterInteropXmlElement%2A> und <xref:System.Runtime.Remoting.SoapServices.PreLoad%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#160](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#160)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#160](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#160)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInteropTypeFromXmlType">
+      <MemberSignature Language="C#" Value="public static Type GetInteropTypeFromXmlType (string xmlType, string xmlTypeNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetInteropTypeFromXmlType(string xmlType, string xmlTypeNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetInteropTypeFromXmlType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlType" Type="System.String" />
+        <Parameter Name="xmlTypeNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlType">Der XML-Typ des unbekannten Objekttyps.</param>
+        <param name="xmlTypeNamespace">Der Namespace der XML-Typ des unbekannten Objekttyps.</param>
+        <summary>Ruft das Objekt <see cref="T:System.Type" /> während der Deserialisierung eines unbekannten Objekttyps mit dem angegebenen XML-Typname und Namespace verwendet werden soll.</summary>
+        <returns>Die <see cref="T:System.Type" /> Typ des Objekts, die den angegebenen XML-Datei zugeordnet, Namen und Namespace.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode gibt Werte über eingerichtet <xref:System.Runtime.Remoting.SoapServices.RegisterInteropXmlType%2A> und <xref:System.Runtime.Remoting.SoapServices.PreLoad%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#160](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#160)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#160](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#160)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSoapActionFromMethodBase">
+      <MemberSignature Language="C#" Value="public static string GetSoapActionFromMethodBase (System.Reflection.MethodBase mb);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetSoapActionFromMethodBase(class System.Reflection.MethodBase mb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetSoapActionFromMethodBase(System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mb" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="mb">Die <see cref="T:System.Reflection.MethodBase" /> , enthält die Methode für die eine SOAPAction angefordert wird.</param>
+        <summary>Den SOAPAction-Wert, der mit der Methode im angegebenen verknüpften gibt die angegebene <see cref="T:System.Reflection.MethodBase" />.</summary>
+        <returns>Der SOAPAction-Wert, der mit der Methode im angegebenen verknüpften der angegebenen <see cref="T:System.Reflection.MethodBase" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene <xref:System.Reflection.MethodBase> wurde nicht registriert SOAPAction-Wert, der <xref:System.Runtime.Remoting.SoapServices.GetSoapActionFromMethodBase%2A> Methodenrückgabe SOAPAction automatisch zwischengespeichert, mit der <xref:System.Reflection.MethodBase>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#140](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#140)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#140](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#140)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeAndMethodNameFromSoapAction">
+      <MemberSignature Language="C#" Value="public static bool GetTypeAndMethodNameFromSoapAction (string soapAction, out string typeName, out string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetTypeAndMethodNameFromSoapAction(string soapAction, [out] string&amp; typeName, [out] string&amp; methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetTypeAndMethodNameFromSoapAction(System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="soapAction" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="methodName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="soapAction">Der SOAPAction der Methode für die die Namen von Typen und Methoden angefordert wurden.</param>
+        <param name="typeName">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , enthält der Typname der Methode fraglichen. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="methodName">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , die den Methodennamen der Methode fraglichen enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Bestimmt den Typ- und den Namen der Methode, die dem angegebenen SOAPAction-Wert zugeordnet.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ und Methodenname angegeben erfolgreich wiederhergestellt wurden; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `true`Wenn die Suchvorgänge nach Typ und die Methode erfolgreich ausgeführt wurden; andernfalls `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#140](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#140)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#140](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#140)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Der SOAPAction-Wert nicht beginnen und enden mit Anführungszeichen.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlElementForInteropType">
+      <MemberSignature Language="C#" Value="public static bool GetXmlElementForInteropType (Type type, out string xmlElement, out string xmlNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetXmlElementForInteropType(class System.Type type, [out] string&amp; xmlElement, [out] string&amp; xmlNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetXmlElementForInteropType(System.Type,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="xmlElement" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="xmlNamespace" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">Das Objekt <see cref="T:System.Type" /> für den die XML-Element und den Namespace-Namen angefordert wurden.</param>
+        <param name="xmlElement">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , enthält die Namen der XML-Elements des angegebenen Objekttyps. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="xmlNamespace">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , enthält der XML-Namespace-Name des angegebenen Objekttyps. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt Informationen zum XML-Element, das beim Serialisieren des angegebenen Typs verwendet werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die angeforderten Werte mit gekennzeichneten festgelegt wurden <see cref="T:System.Runtime.Remoting.Metadata.SoapTypeAttribute" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#103](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#103)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#103](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlNamespaceForMethodCall">
+      <MemberSignature Language="C#" Value="public static string GetXmlNamespaceForMethodCall (System.Reflection.MethodBase mb);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetXmlNamespaceForMethodCall(class System.Reflection.MethodBase mb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetXmlNamespaceForMethodCall(System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mb" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="mb">Die <see cref="T:System.Reflection.MethodBase" /> der Methode für die XML-Namespace angefordert wurde.</param>
+        <summary>Ruft den XML-Namespace verwendet werden, während remote Aufrufen der Methode im angegebenen ab der angegebenen <see cref="T:System.Reflection.MethodBase" />.</summary>
+        <returns>Der XML-Namespace verwendet werden, während Remoteaufrufen der angegebenen Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#105](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#105)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#105](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#105)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlNamespaceForMethodResponse">
+      <MemberSignature Language="C#" Value="public static string GetXmlNamespaceForMethodResponse (System.Reflection.MethodBase mb);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetXmlNamespaceForMethodResponse(class System.Reflection.MethodBase mb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetXmlNamespaceForMethodResponse(System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mb" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="mb">Die <see cref="T:System.Reflection.MethodBase" /> der Methode für die XML-Namespace angefordert wurde.</param>
+        <summary>Ruft den XML-Namespace verwendet werden, während der Generierung von Antworten an den Remoteaufruf an die Methode im angegebenen ab der angegebenen <see cref="T:System.Reflection.MethodBase" />.</summary>
+        <returns>Der XML-Namespace, die während der Generierung von Antworten auf ein remote-Methodenaufruf verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#105](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#105)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#105](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#105)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlTypeForInteropType">
+      <MemberSignature Language="C#" Value="public static bool GetXmlTypeForInteropType (Type type, out string xmlType, out string xmlTypeNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetXmlTypeForInteropType(class System.Type type, [out] string&amp; xmlType, [out] string&amp; xmlTypeNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.GetXmlTypeForInteropType(System.Type,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="xmlType" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="xmlTypeNamespace" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">Das Objekt <see cref="T:System.Type" /> für den die XML-Element und den Namespace-Namen angefordert wurden.</param>
+        <param name="xmlType">Der XML-Datentyp des angegebenen Objekts <see cref="T:System.Type" />.</param>
+        <param name="xmlTypeNamespace">Der XML-Typ-Namespace des angegebenen Objekts <see cref="T:System.Type" />.</param>
+        <summary>Gibt XML-Typinformationen, die verwendet werden soll, bei der Serialisierung der angegebenen <see cref="T:System.Type" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die angeforderten Werte mit gekennzeichneten festgelegt wurden <see cref="T:System.Runtime.Remoting.Metadata.SoapTypeAttribute" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#104](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#104)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#104](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#104)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClrTypeNamespace">
+      <MemberSignature Language="C#" Value="public static bool IsClrTypeNamespace (string namespaceString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsClrTypeNamespace(string namespaceString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.IsClrTypeNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceString">Der Namespace, in der common Language Runtime zu überprüfen.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob der angegebene Namespace für die common Language Runtime systemeigene ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Namespace für die common Language Runtime systemeigene ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode wird vom Tool SoapSuds verwendet, um zu bestimmen, ob ein XML-Namespace einen common Language Runtime-Typ oder ein Typ von einem nicht-Common Language Runtime-System darstellt.  
+  
+ Weitere Informationen über SoapSuds finden Sie unter [Soapsuds-Tool (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#106](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#106)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#106](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#106)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSoapActionValidForMethodBase">
+      <MemberSignature Language="C#" Value="public static bool IsSoapActionValidForMethodBase (string soapAction, System.Reflection.MethodBase mb);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsSoapActionValidForMethodBase(string soapAction, class System.Reflection.MethodBase mb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.IsSoapActionValidForMethodBase(System.String,System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="soapAction" Type="System.String" />
+        <Parameter Name="mb" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="soapAction">Die zu überprüfende SOAPAction der angegebenen <see cref="T:System.Reflection.MethodBase" />.</param>
+        <param name="mb">Die <see cref="T:System.Reflection.MethodBase" /> für die angegebene SOAPAction aktiviert ist.</param>
+        <summary>Bestimmt, ob die angegebene SOAPAction hinsichtlich einer bestimmten <see cref="T:System.Reflection.MethodBase" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene SOAPAction akzeptabel ist einer bestimmten <see cref="T:System.Reflection.MethodBase" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#140](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#140)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#140](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#140)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PreLoad">
+      <MemberSignature Language="C#" Value="public static void PreLoad (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PreLoad(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.PreLoad(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die <see cref="T:System.Reflection.Assembly" /> für jeden Typ, den aufzurufenden <see cref="M:System.Runtime.Remoting.SoapServices.PreLoad(System.Type)" />.</param>
+        <summary>Lädt alle <see cref="T:System.Type" /> finden in der angegebenen <see cref="T:System.Reflection.Assembly" /> aus den Informationen in den <see cref="T:System.Runtime.Remoting.Metadata.SoapTypeAttribute" /> jeder Typ zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Analysieren von XML-Stream ist .NET Framework muss wissen, wie die in der common Language Runtime-Typen aus dem Stream gelesene XML konvertiert werden. Die Informationen, der angibt, wie .NET Framework generiert werden sollen und die Analyse wird ein XML-Stream in benutzerdefinierten Attributen, die in befinden gespeichert die <xref:System.Runtime.Remoting.Metadata> Namespace. Es gibt zwei Möglichkeiten, diese Informationen in einer Konfigurationsdatei angeben: durch die Zuordnungen explizit angeben oder indem Sie angeben, welche Objekttypen zum Vorabladen. Die benutzerdefinierten Attribute werden während des Prozesses Vorabladen gelesen, und die darin enthaltenen Informationen für dem SOAP-Parser zur Verfügung gestellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#120](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#120)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#120](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#120)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PreLoad">
+      <MemberSignature Language="C#" Value="public static void PreLoad (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PreLoad(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.PreLoad(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> , vorab zu laden.</param>
+        <summary>Lädt die angegebene <see cref="T:System.Type" /> basierend auf Werten in Festlegen einer <see cref="T:System.Runtime.Remoting.Metadata.SoapTypeAttribute" /> für den Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Analysieren von XML-Stream ist .NET Framework muss wissen, wie die in der common Language Runtime-Typen aus dem Stream gelesene XML konvertiert werden. Die Informationen, der angibt, wie .NET Framework generiert werden sollen und die Analyse wird ein XML-Stream in benutzerdefinierten Attributen, die in befinden gespeichert die <xref:System.Runtime.Remoting.Metadata> Namespace. Es gibt zwei Möglichkeiten, diese Informationen in einer Konfigurationsdatei angeben: durch die Zuordnungen explizit angeben oder indem Sie angeben, welche Objekttypen zum Vorabladen. Die benutzerdefinierten Attribute werden während des Prozesses Vorabladen gelesen, und die darin enthaltenen Informationen für dem SOAP-Parser zur Verfügung gestellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#121](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#121)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#121](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#121)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterInteropXmlElement">
+      <MemberSignature Language="C#" Value="public static void RegisterInteropXmlElement (string xmlElement, string xmlNamespace, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterInteropXmlElement(string xmlElement, string xmlNamespace, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.RegisterInteropXmlElement(System.String,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlElement" Type="System.String" />
+        <Parameter Name="xmlNamespace" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="xmlElement">Der Name der XML-Elements bei der Deserialisierung verwendet.</param>
+        <param name="xmlNamespace">Der XML-Namespace bei der Deserialisierung verwendet werden soll.</param>
+        <param name="type">Zur Laufzeit <see cref="T:System.Type" /> bei der Deserialisierung verwendet.</param>
+        <summary>Ordnet dem angegebenen XML-Element-Namen und Namespace einen Laufzeittyp, der für die Deserialisierung verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#180](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#180)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#180](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#180)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterInteropXmlType">
+      <MemberSignature Language="C#" Value="public static void RegisterInteropXmlType (string xmlType, string xmlTypeNamespace, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterInteropXmlType(string xmlType, string xmlTypeNamespace, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.RegisterInteropXmlType(System.String,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlType" Type="System.String" />
+        <Parameter Name="xmlTypeNamespace" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="xmlType">Der XML-Datentyp, der bei der Deserialisierung verwendet werden soll.</param>
+        <param name="xmlTypeNamespace">Der XML-Namespace bei der Deserialisierung verwendet werden soll.</param>
+        <param name="type">Zur Laufzeit <see cref="T:System.Type" /> bei der Deserialisierung verwendet.</param>
+        <summary>Ordnet dem angegebenen XML-Typ-Namen und Namespace der Run-Time-Typ, der für die Deserialisierung verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#190](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#190)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#190](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#190)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSoapActionForMethodBase">
+      <MemberSignature Language="C#" Value="public static void RegisterSoapActionForMethodBase (System.Reflection.MethodBase mb);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterSoapActionForMethodBase(class System.Reflection.MethodBase mb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.RegisterSoapActionForMethodBase(System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mb" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="mb">Die <see cref="T:System.Reflection.MethodBase" /> der Methode, die zwischengespeicherten SOAPAction zugeordnet werden soll.</param>
+        <summary>Ordnet die angegebene <see cref="T:System.Reflection.MethodBase" /> mit den zwischengespeicherten SOAPAction.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der SOAPAction der angegebenen Methode ist Bestandteil der <xref:System.Runtime.Remoting.Metadata.SoapMethodAttribute.SoapAction%2A?displayProperty=nameWithType> -Eigenschaft, oder aus dem Netzwerk gelesen wird. Die aktuelle Methode ordnet die SOAPAction der <xref:System.Reflection.MethodBase> für die Verwendung in Kanal senken.  
+  
+ Der SOAPAction-HTTP-Anforderungsheaderfeld gibt die Absicht der HTTP-SOAP-Anforderung an. Der Wert ist ein URI, der die Absicht identifiziert. SOAP keine Einschränkungen in das Format oder die Genauigkeit des URIS oder aufgelöst wird. Ein HTTP-Client muss dieses Feld verwenden, beim Ausstellen von einer SOAP-HTTP-Anforderung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#170](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#170)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#170](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#170)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSoapActionForMethodBase">
+      <MemberSignature Language="C#" Value="public static void RegisterSoapActionForMethodBase (System.Reflection.MethodBase mb, string soapAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterSoapActionForMethodBase(class System.Reflection.MethodBase mb, string soapAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.SoapServices.RegisterSoapActionForMethodBase(System.Reflection.MethodBase,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mb" Type="System.Reflection.MethodBase" />
+        <Parameter Name="soapAction" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mb">Die <see cref="T:System.Reflection.MethodBase" /> bereitgestellten SOAPAction zugeordnet werden soll.</param>
+        <param name="soapAction">Der SOAPAction-Wert zugeordnet werden soll der angegebenen <see cref="T:System.Reflection.MethodBase" />.</param>
+        <summary>Ordnet den bereitgestellten SOAPAction-Wert mit dem angegebenen <see cref="T:System.Reflection.MethodBase" /> für die Verwendung in Kanal senken.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der SOAPAction-HTTP-Anforderungsheaderfeld gibt die Absicht der HTTP-SOAP-Anforderung an. Der Wert ist ein URI, der die Absicht identifiziert. SOAP keine Einschränkungen in das Format oder die Genauigkeit des URIS oder aufgelöst wird. Ein HTTP-Client muss dieses Feld verwenden, beim Ausstellen von einer SOAP-HTTP-Anforderung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#170](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#170)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#170](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#170)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNsForClrType">
+      <MemberSignature Language="C#" Value="public static string XmlNsForClrType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XmlNsForClrType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.SoapServices.XmlNsForClrType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das XML-Namespacepräfix für common Language Runtime-Typen ab.</summary>
+        <value>Das XML-Namespacepräfix für common Language Runtime-Typen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WSDL und SOAP-Protokolle codieren common Language Runtime-Klassen in XML-Namespaces. Die current-Eigenschaft gibt das Format für die XML-Namespaces. Alle XML-Namespaces für eine common Language Runtime-Klasse beginnen Sie mit der <xref:System.String> , die die aktuelle Eigenschaft zurückgibt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#130](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#130)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#130](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#130)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNsForClrTypeWithAssembly">
+      <MemberSignature Language="C#" Value="public static string XmlNsForClrTypeWithAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XmlNsForClrTypeWithAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.SoapServices.XmlNsForClrTypeWithAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das standardmäßige XML-Namespacepräfix, das für XML verwendet werden soll, Codierung einer common Language Runtime-Klasse, die eine Assembly besitzt, aber nicht einheitlichen Namespace.</summary>
+        <value>Das standardmäßige XML-Namespacepräfix, das für XML verwendet werden soll-Codierung von einer common Language Runtime-Klasse, die eine Assembly, aber keinen einheitlichen Namespace verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WSDL und SOAP-Protokolle codieren common Language Runtime-Klassen in XML-Namespaces. Die current-Eigenschaft gibt das Format für die XML-Namespaces. Wenn eine common Language Runtime-Klasse einer Assembly, aber keinen Namespace verfügt, gibt die aktuelle Eigenschaft vom XML-Standardnamespace, der verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#131](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#131)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#131](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#131)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNsForClrTypeWithNs">
+      <MemberSignature Language="C#" Value="public static string XmlNsForClrTypeWithNs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XmlNsForClrTypeWithNs" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.SoapServices.XmlNsForClrTypeWithNs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das XML-Namespacepräfix, das für XML verwendet werden soll-Codierung von einer common Language Runtime-Klasse, die Teil der Datei "mscorlib.dll" ist.</summary>
+        <value>Das XML-Namespacepräfix, das für XML verwendet werden soll-Codierung von einer common Language Runtime-Klasse, die Teil der Datei "mscorlib.dll" ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WSDL und SOAP-Protokolle codieren common Language Runtime-Klassen in XML-Namespaces. Die current-Eigenschaft gibt das Format für die XML-Namespaces. Wenn eine common Language Runtime-Klasse, Teil der Assembly "mscorlib" ist, wird von der aktuellen Eigenschaft zurückgegebene XML-Namespace verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#132](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#132)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#132](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#132)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNsForClrTypeWithNsAndAssembly">
+      <MemberSignature Language="C#" Value="public static string XmlNsForClrTypeWithNsAndAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XmlNsForClrTypeWithNsAndAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.SoapServices.XmlNsForClrTypeWithNsAndAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das standardmäßige XML-Namespacepräfix, das für XML verwendet werden soll-Codierung von einer common Language Runtime-Klasse, die eine common Language Runtime-Namespace und eine Assembly verfügt.</summary>
+        <value>Das standardmäßige XML-Namespacepräfix, das für XML verwendet werden soll-Codierung von einer common Language Runtime-Klasse, die eine common Language Runtime-Namespace und eine Assembly verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WSDL und SOAP-Protokolle codieren common Language Runtime-Klassen in XML-Namespaces. Die current-Eigenschaft gibt das Format für die XML-Namespaces. Wenn eine common Language Runtime-Klasse einer Assembly und eine common Language Runtime-Namespace enthält, gibt die aktuelle Eigenschaft vom XML-Standardnamespace, der verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Runtime.Remoting.SoapServices> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.SoapServices#133](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CPP/demo.cpp#133)]
+ [!code-csharp[System.Runtime.Remoting.SoapServices#133](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.SoapServices/CS/demo.cs#133)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

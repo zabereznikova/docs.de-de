@@ -1,0 +1,86 @@
+<Type Name="MouseButtonConstants" FullName="Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants">
+  <TypeSignature Language="C#" Value="public enum MouseButtonConstants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseButtonConstants extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Konstanten für die Kompatibilität mit der UMSCHALTTASTE Parameter Maskenkonstanten in Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, Maus Schaltfläche Parameter Maskenkonstanten verwendet wurden, um den Zustand der Maustasten in darstellen der `Button` Parameter der verschiedenen Maus-Ereignishandler. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die Parameter für Mausereignisse geändert haben und diese Konstanten sind nicht mehr erforderlich. Diese Konstanten unterstützen Code, der von Visual Basic 6.0 auf weiterhin ausgeführt, ohne weitere Änderung aktualisiert wurde.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind nur notwendig, wenn das Visual Basic 6.0-Codemodell sich maßgeblich von der .NET Framework-Implementierung unterscheidet.  
+  
+   
+  
+## Examples  
+ <xref:System.Windows.Forms.MouseEventArgs>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LeftButton">
+      <MemberSignature Language="C#" Value="LeftButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants LeftButton = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants.LeftButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbLeftButton" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleButton">
+      <MemberSignature Language="C#" Value="MiddleButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants MiddleButton = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants.MiddleButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbMiddleButton" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightButton">
+      <MemberSignature Language="C#" Value="RightButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants RightButton = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants.RightButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbRightButton" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

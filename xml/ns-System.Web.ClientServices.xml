@@ -1,0 +1,20 @@
+<Namespace Name="System.Web.ClientServices">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.ClientServices" /> Namespace enthält Klassen, die Datenzugriff in Windows-basierten Anwendungen der Microsoft Ajax-Authentifizierung, Rollen und Profile-Dienste zu unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in der <xref:System.Web.ClientServices> Namespace unterstützt die Clientanwendungsdienst-Anbieter in der <xref:System.Web.ClientServices.Providers> Namespace. Diese Dienstanbieter können Windows-basierten Anwendungen verwenden die [!INCLUDE[ajax_current_short](~/includes/ajax-current-short-md.md)] Authentifizierung, Rollen und Profile-Dienste über vorhandene [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] Mitgliedschaft, Identitäts- und Application Settings-Infrastrukturen. Die Client-Anbieter unterstützt auch gelegentliche Konnektivität durch das Speichern und Abrufen von Benutzerinformationen in einen lokalen Datencache, wenn die Anwendung offline ist. Weitere Informationen finden Sie unter [Clientanwendungsdienste](~/docs/framework/common-client-technologies/client-application-services.md).  
+  
+ Die <xref:System.Web.ClientServices.ClientFormsIdentity> und <xref:System.Web.ClientServices.ClientRolePrincipal> Klassen bereitstellen, Eigenschaften und Methoden, die im Zusammenhang mit der Identität, Rolle und Authentifizierung eines Benutzers-Zustand.  
+  
+ Die <xref:System.Web.ClientServices.ConnectivityStatus> -Klasse ermöglicht es Ihnen, den Status der Verbindung des Benutzers im lokalen Datencache zu speichern. Der Status der Internetkonnektivität gibt an, ob die Clientdienstanbieter im Offlinecache verwenden oder versuchen, auf die Anwendungsdienste zuzugreifen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.ClientServices.ConnectivityStatus> Klasse enthält keine Logik, um den tatsächlichen Status der Verbindung zu bestimmen. Sie sind verantwortlich für das Ermitteln des Konnektivitätsstatus Ihrer Anwendung entsprechend Ihren eigenen Kriterien und der Einstellung der <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> Eigenschaft entsprechend. Windows-basierten Anwendungen bieten z. B. häufig eine Option in der Benutzeroberfläche, sodass Benutzer versuchen, die in den Onlinemodus wechseln oder im Offlinemodus arbeiten können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

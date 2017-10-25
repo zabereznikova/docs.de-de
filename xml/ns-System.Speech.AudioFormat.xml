@@ -1,0 +1,15 @@
+<Namespace Name="System.Speech.AudioFormat">
+  <Docs>
+    <summary>Die <see cref="N:System.Speech.AudioFormat" /> Namespace besteht aus einer einzelnen Klasse <see cref="T:System.Speech.AudioFormat.SpeechAudioFormatInfo" />, enthält Informationen zum Format der Audiodaten, die in der Spracherkennungsmoduls oder wird von der Spracherkennung sprachsynthesemodul ausgeben eingegeben wird, ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Eigenschaften des <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo> zum Abrufen von Informationen zu bestimmten Merkmalen eines Audioformats. Diese Eigenschaften sind schreibgeschützt, mit Ausnahme von <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo.BlockAlign%2A>, die Sie verwenden können, die Block-Ausrichtung des eingehenden Audio festlegen. Um alle Eigenschaften der eingehenden Audioformat abzurufen, verwenden die <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo.FormatSpecificData%2A> Methode.  
+  
+ Verwenden die Konstruktoren für die <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo> -Klasse, können Sie die Eigenschaften für das Audioformat beim angeben das Objekt zu initialisieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

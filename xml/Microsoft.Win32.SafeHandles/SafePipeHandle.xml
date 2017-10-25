@@ -1,0 +1,120 @@
+<Type Name="SafePipeHandle" FullName="Microsoft.Win32.SafeHandles.SafePipeHandle">
+  <TypeSignature Language="C#" Value="public sealed class SafePipeHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SafePipeHandle extends Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SafeHandles.SafePipeHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.InteropServices.SafeHandle</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Wrapperklasse für ein Pipehandle dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird von <xref:Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid> abgeleitet. Ein Wert von 0 oder-1 ist ein ungültiges Pipehandle.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SafePipeHandle (IntPtr preexistingHandle, bool ownsHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int preexistingHandle, bool ownsHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SafeHandles.SafePipeHandle.#ctor(System.IntPtr,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="preexistingHandle" Type="System.IntPtr" />
+        <Parameter Name="ownsHandle" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preexistingHandle">Ein <see cref="T:System.IntPtr" />-Objekt, das das zu verwendende, bereits vorhandene Handle darstellt.</param>
+        <param name="ownsHandle">
+          <see langword="true" />, um das Handle während der Abschlussphase zuverlässig freizugeben. <see langword="false" />, um eine zuverlässige Freigabe zu verhindern (dies wird nicht empfohlen).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Win32.SafeHandles.SafePipeHandle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvalid">
+      <MemberSignature Language="C#" Value="public override bool IsInvalid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInvalid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SafeHandles.SafePipeHandle.IsInvalid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHandle">
+      <MemberSignature Language="C#" Value="protected override bool ReleaseHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ReleaseHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SafeHandles.SafePipeHandle.ReleaseHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

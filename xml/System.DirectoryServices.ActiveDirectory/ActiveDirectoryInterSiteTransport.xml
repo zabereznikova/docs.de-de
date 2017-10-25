@@ -1,0 +1,279 @@
+<Type Name="ActiveDirectoryInterSiteTransport" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport">
+  <TypeSignature Language="C#" Value="public class ActiveDirectoryInterSiteTransport : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectoryInterSiteTransport extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> -Klasse stellt ein standortübergreifendes Transportobjekt dar.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="BridgeAllSiteLinks">
+      <MemberSignature Language="C#" Value="public bool BridgeAllSiteLinks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BridgeAllSiteLinks" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.BridgeAllSiteLinks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob alle standortverknüpfungen überbrückt werden.</summary>
+        <value>Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob alle standortverknüpfungen überbrückt. <see langword="true" />Wenn alle standortverknüpfungen überbrückt werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, wenn die verwalteten Ressourcen freigegeben werden sollen, <see langword="false" />, wenn nur die nicht verwalteten Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die vom Objekt verwendeten nicht verwalteten Ressourcen frei, und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByTransportType">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport FindByTransportType (System.DirectoryServices.ActiveDirectory.DirectoryContext context, System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType transport);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport FindByTransportType(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, valuetype System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType transport) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.FindByTransportType(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="transport" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" />-Objekt, das den Kontext für die Suche angibt.</param>
+        <param name="transport">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" /> Objekt, das für die Suche nach den Transporttyp angibt.</param>
+        <summary>Ruft ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt für einen angegebenen Kontext und Transport.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt für das gefundene Element. Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" /> Ausnahme wird ausgelöst, wenn ein Objekt nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Das Objekt wurde nicht gefunden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">Das Ziel in der <paramref name="context" /> Parameter ist nicht an einer Gesamtstruktur, Konfigurationssatz, Domänencontroller oder AD LDS-Server.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="context" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Authentication.AuthenticationException">Die angegebenen Anmeldeinformationen sind ungültig.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="transport" /> Parameter ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das <see cref="T:System.DirectoryServices.DirectoryEntry" />-Objekt für das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" />-Objekt ab.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.DirectoryEntry" /> -Objekt, das den Verzeichniseintrag für die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreReplicationSchedule">
+      <MemberSignature Language="C#" Value="public bool IgnoreReplicationSchedule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreReplicationSchedule" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.IgnoreReplicationSchedule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Replikationszeitplan ignoriert werden.</summary>
+        <value>Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob der Replikationszeitplan ignoriert. <see langword="true" />Wenn der Replikationszeitplan ignoriert. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.IgnoreReplicationSchedule%2A?displayProperty=nameWithType> ist `true`, alle standortverknüpfungs Verfügbarkeit-Zeitpläne, die konfiguriert wurden, werden ignoriert, und alle Website-Links werden immer verfügbare für die Replikation. Bei Festlegung auf `false`, alle zuvor konfigurierten Standort Link Verfügbarkeit Zeitpläne wechseln Sie zurück in Kraft. Wenn keine Verfügbarkeit standortverknüpfungs-Zeitpläne konfiguriert wurden, hat das Festlegen dieser Eigenschaft keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Übernimmt alle Änderungen am aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" />-Objekt per Commit in den zugrunde liegenden Verzeichnisspeicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das angegebene Konto verfügt nicht über die erforderliche Berechtigung zum Ausführen dieses Vorgangs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteLinkBridges">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkBridgeCollection SiteLinkBridges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkBridgeCollection SiteLinkBridges" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.SiteLinkBridges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkBridgeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkBridgeCollection" /> Objekt, das alle Standortverknüpfungsbrücken dafür enthält <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkBridgeCollection" /> Objekt, das enthält <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge" /> Objekte, die Standortverknüpfungsbrücken darstellen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteLinks">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection SiteLinks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection SiteLinks" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.SiteLinks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection" /> Objekt, das alle standortverknüpfungen dafür enthält <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection" /> Objekt, das enthält <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekte, die standortverknüpfungen darstellen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zeichenfolgendarstellung der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" /> von der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.String" /> darstellt, die die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" /> Transporttyp, der die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport.TransportType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" /> Objekt, das den Transporttyp für diesen darstellt <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport" /> Objekt.</summary>
+        <value>Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" /> Werte, die den Transporttyp für dieses Objekt darstellt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das aktuelle Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

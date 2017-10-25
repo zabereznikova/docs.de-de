@@ -1,0 +1,36 @@
+<Type Name="SettingsLoadedEventHandler" FullName="System.Configuration.SettingsLoadedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SettingsLoadedEventHandler(object sender, SettingsLoadedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SettingsLoadedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsLoadedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Configuration.SettingsLoadedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses, in der Regel die Settings-Klasse.</param>
+    <param name="e">Ein <see cref="T:System.Configuration.SettingsLoadedEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Configuration.ApplicationSettingsBase.SettingsLoaded" />-Ereignisses dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded> Ereignis tritt auf, wenn Sie Einstellungen von einem Anbieter abgerufen werden. Dieses Ereignis wird einmal für jeden Anbieter ausgelöst.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

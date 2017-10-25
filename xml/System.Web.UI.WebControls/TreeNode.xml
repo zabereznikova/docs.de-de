@@ -1,0 +1,1967 @@
+<Type Name="TreeNode" FullName="System.Web.UI.WebControls.TreeNode">
+  <TypeSignature Language="C#" Value="public class TreeNode : ICloneable, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeNode extends System.Object implements class System.ICloneable, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "ChildNodes")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Knoten in der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeView> Steuerelement besteht aus Knoten. Jeder Eintrag in der Struktur wird als Knoten bezeichnet und wird durch dargestellt eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Wird aufgerufen, ein Knoten, der andere Knoten enthält eine *übergeordneten Knoten*. Wird aufgerufen, ein Knoten, der von einem anderen Knoten enthalten ist ein *untergeordneter Knoten*. Ein Knoten, der keine untergeordneten Knoten verfügt heißt ein *Endknoten*. Ein Knoten, die nicht in einem anderen Knoten enthalten, aber alle anderen Knoten übergeordnet ist die *Stammknoten*. Ein Knoten kann einem übergeordneten und untergeordneten jedoch Stamm, übergeordnetes Element sein, und Blattknoten schließen sich gegenseitig aus. Mehrere visual und Verhaltenseigenschaften Eigenschaften von Knoten anhand gibt an, ob ein Knoten ist ein *Root*, *übergeordneten*, oder *Endknoten* Knoten.  
+  
+ Obwohl eine typische Struktur nur einen Stammknoten, hat die <xref:System.Web.UI.WebControls.TreeView> Steuerelement ermöglicht es Ihnen, mehrere Stammknoten der Struktur hinzufügen. Dies ist hilfreich, wenn angeboten ohne Anzeige von einem einzelnen main Stammknoten, wie eine Liste der Produktkategorien angezeigt werden soll.  
+  
+ Ein Knoten speichert Daten in erster Linie in zwei Eigenschaften, die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft. Der Wert des der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft wird angezeigt, der <xref:System.Web.UI.WebControls.TreeView> -Steuerelement, und die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft wird verwendet, um zusätzliche Daten über den Knoten, z. B. für die Behandlung von Ereignissen postback verwendeten Daten gespeichert werden. Ein Knoten speichert auch den Pfad vom Knoten zu seinem Stammknoten in der <xref:System.Web.UI.WebControls.TreeNode.ValuePath%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.TreeNode.ValuePath%2A> Eigenschaft gibt die Position des Knotens relativ zum Stammknoten.  
+  
+> [!NOTE]
+>  Knoten auf derselben Ebene müssen einen eindeutigen Wert für die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft; das <xref:System.Web.UI.WebControls.TreeView> Steuerelement kann nicht zu unterscheiden, zwischen verschiedenen Knoten auf derselben Ebene, die den gleichen Wert aufweisen. In diesem Szenario klickt der Benutzer einen Knoten, der einen doppelten Wert hat der Knoten, die angezeigt wird zuerst in die <xref:System.Web.UI.WebControls.TreeView> Steuerelement ausgewählt ist.  
+  
+ Ein <xref:System.Web.UI.WebControls.TreeNode> Objekt besteht aus den folgenden vier Benutzer Benutzeroberfläche (UI), die Elemente angepasst oder ausgeblendet werden können:  
+  
+-   Erweiterung Knoten Indikatorsymbol verwendet, um anzuzeigen, ob der Knoten erweitert, reduziert oder nicht erweiterbar ist.  
+  
+-   Dies ist optional das Kontrollkästchen für eine dem Knoten zugeordnet.  
+  
+-   Ein Bild optionalen Knoten.  
+  
+-   Der Knotentext.  
+  
+ Geben Sie ein benutzerdefiniertes Bild für die erweiterbare reduzierbare und nicht erweiterbare Knoten Indikatoren durch Festlegen der <xref:System.Web.UI.WebControls.TreeView.ExpandImageUrl%2A>, <xref:System.Web.UI.WebControls.TreeView.CollapseImageUrl%2A>, und <xref:System.Web.UI.WebControls.TreeView.NoExpandImageUrl%2A> Eigenschaften der <xref:System.Web.UI.WebControls.TreeView> Klasse. Erweiterung Knoten Indikatorsymbole können sogar ausgeblendet werden, vollständig durch Festlegen der <xref:System.Web.UI.WebControls.TreeView.ShowExpandCollapse%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeView> Klasse `false`.  
+  
+ Wenn Sie das Kontrollkästchen neben einem Knoten anzeigen zu können, legen Sie die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeView> Klasse. Wenn die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A> Eigenschaft wird auf einen Wert festgelegt, außer `TreeNodeType.Node`, Kontrollkästchen neben dem angegebenen Knotentyp angezeigt werden. Sie können das Kontrollkästchen für einen einzelnen Knoten selektiv überschreiben, indem Sie des Knotens festlegen <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> Eigenschaft. Wenn ein Kontrollkästchen angezeigt wird, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNode.Checked%2A> Eigenschaft, um zu bestimmen, ob das Kontrollkästchen aktiviert ist.  
+  
+ Sie können ein Bild in einem Knoten anzeigen, indem Sie die Einstellung der <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft. Dieses Bild wird neben den Knotentext angezeigt.  
+  
+ Der Text eines Knotens in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement kann in einem von zwei Modi: den Mehrfachauswahlmodus aufweist oder Navigationsmodus. Standardmäßig ist ein Knoten in den Mehrfachauswahlmodus aufweist. Um einen Knoten in den Navigationsmodus zu versetzen, legen Sie des Knotens <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> -Eigenschaft auf einen anderen Wert als eine leere Zeichenfolge (""). Um einen Knoten in den Auswahlmodus zu versetzen, legen Sie des Knotens <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft auf eine leere Zeichenfolge.  
+  
+> [!NOTE]
+>  Einige Internetbrowser haben eine Einschränkung, die die Leistung beeinträchtigen kann die <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Microsoft Internet Explorer 6.0 hat beispielsweise eine URL-Zeichen-Grenze der 2067 Zeichen, die es zurückgesendet. Wenn die Anzahl der Zeichen in einer URL eines Knotens größer als diese Zahl ist, Erweitern des Knotens fehl, und keine Ausnahme ausgelöst wird.  
+  
+ Wird standardmäßig auf einen Knoten, der im Auswahlmodus befindet, wird die Seite an den Server und löst die <xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged> Ereignis. Optional können Sie angeben, ein anderes Ereignis ausgelöst werden soll, indem Sie des Knotens festlegen `SelectAction` Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A>. Um zu bestimmen, welcher Knoten im Auswahlmodus geklickt wurde, verwenden die <xref:System.Web.UI.WebControls.TreeView.SelectedNode%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ Wenn ein Knoten im Navigationsbereich-Modus befindet, werden alle Auswahlereignisse für diesen Knoten deaktiviert. Klicken Sie auf den Knoten im Navigationsbereich Modus leitet den Benutzer zur angegebenen URL. Sie können optional Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Target%2A> -Eigenschaft an das Fenster oder der Zielframe, in dem den verknüpften Inhalt angezeigt.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeNode> Klasse enthält mehrere Eigenschaften, die verwendet werden, um den Zustand des Knotens zu speichern. Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Selected%2A> Eigenschaft, um zu bestimmen, ob ein Knoten ausgewählt wird. Um zu bestimmen, ob der Knoten erweitert ist, verwenden die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.TreeNode.DataBound%2A> Eigenschaft wird verwendet, um zu bestimmen, ob ein Knoten an Daten gebunden ist. Wenn ein Knoten an Daten gebunden ist, können Sie das zugrunde liegende Datenelement zugreifen, mithilfe der <xref:System.Web.UI.WebControls.TreeNode.DataItem%2A> Eigenschaft.  
+  
+ Die Klasse bietet verschiedene Eigenschaften, mit denen Sie bestimmen die Position von einem Knoten relativ zu anderen Knoten in der Struktur. Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Depth%2A> -Eigenschaft können Sie bestimmen die Tiefe des Knotens. Sie erhalten die durch Trennzeichen getrennte Liste von Knoten aus dem aktuellen Knoten bis zu seinem Stammknoten mithilfe der <xref:System.Web.UI.WebControls.TreeNode.ValuePath%2A> Eigenschaft. Verwenden Sie zum übergeordneten Knoten des Knotens zu ermitteln, die <xref:System.Web.UI.WebControls.TreeNode.Parent%2A> Eigenschaft. Untergeordnete Knoten erfolgt mithilfe der <xref:System.Web.UI.WebControls.TreeNode.ChildNodes%2A> Auflistung.  
+  
+ Manchmal ist es nicht praktikabel ist, die statisch vorzudefinieren die Baumstruktur aufgrund der Größe der Daten oder benutzerdefinierten Inhalt, der auf eine Benutzereingabe abhängig ist. Aus diesem Grund die <xref:System.Web.UI.WebControls.TreeView> Steuerelement unterstützt dynamische Knoten Auffüllung. Ein Knoten kann zur Laufzeit aufgefüllt werden, wenn es erweitert wird. Beachten Sie, dass Sie unerwartetes Verhalten abrufen können, wenn Sie asynchron erstellte Knoten beibehalten. Die Knotenstruktur z. B. Wenn Sie ein Hintergrundarbeitsthread verwenden, um Knoten asynchron aufzufüllen, u. u. nicht sofort aufgefüllt werden, wenn das Steuerelement mit dem Rest des Lebenszyklus der Seite fortgesetzt wird. Beim Postback kann die verzögerte Erstellung der Knoten Probleme verursachen, wenn der Ansichtszustand des Steuerelements wird geladen, aber die Knotenstruktur ist nicht vollständig aufgefüllt.  Weitere Informationen zu dynamischen Knoten Auffüllung, finden Sie unter der <xref:System.Web.UI.WebControls.TreeNode.PopulateOnDemand%2A> Eigenschaft.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.TreeNode>, finden Sie unter der <xref:System.Web.UI.WebControls.TreeNode.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Frames für das nächste Codebeispiel eingerichtet wird.  
+  
+ [!code-aspx-csharp[TreeViewFrameSet#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFrameSet/CS/framecs.aspx#1)]
+ [!code-aspx-vb[TreeViewFrameSet#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFrameSet/VB/framevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie verwenden Sie deklarativen Syntax zum Erstellen <xref:System.Web.UI.WebControls.TreeNode> Objekte in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. In diesem Beispiel wird im Frameset des vorherigen Beispiels verwendet, um eine Tabelle der Inhalte anzuzeigen.  
+  
+ [!code-aspx-csharp[TreeViewFrameExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFrameExample/CS/treeviewframecs.aspx#1)]
+ [!code-aspx-vb[TreeViewFrameExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFrameExample/VB/treeviewframevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Klasse ohne Text oder einen Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TreeNode> -Klasse mit den Standardwerten.  
+  
+> [!NOTE]
+>  Wenn dieser Konstruktor verwendet wird, werden alle Eigenschaften in der <xref:System.Web.UI.WebControls.TreeNode> Objekt werden auf ihre Standardwerte festgelegt. Achten Sie darauf, dass Sie die Eigenschaften nach Bedarf festlegen, nach dem Erstellen des Objekts.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe dieses Konstruktors dynamisch Hinzufügen eines Knotens zu den <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeCtor/CS/treenodectorcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeCtor/VB/treenodectorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, der angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement für den Knoten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNode" /> -Klasse mit dem angegebenen Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TreeNode> -Klasse mit dem Text, der gemäß der `text` Parameter.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.TreeNode>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.TreeNode.Text%2A>|Der Wert des `text`-Parameters.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe dieses Konstruktors dynamisch Hinzufügen eines Knotens zu den <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeCtor/CS/treenodectorcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeCtor/VB/treenodectorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, der angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement für den Knoten.</param>
+        <param name="value">Die ergänzenden Daten, die dem Knoten, z. B. Daten, die zur Behandlung von postback Ereignisse zugeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNode" /> -Klasse mit dem angegebenen Text und Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TreeNode> -Klasse mit dem Text und der angegebene Wert der `text` und `value` Parameter bzw..  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.TreeNode>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.TreeNode.Text%2A>|Der Wert des `text`-Parameters.|  
+|<xref:System.Web.UI.WebControls.TreeNode.Value%2A>|Der Wert des `value`-Parameters.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe dieses Konstruktors dynamisch Hinzufügen eines Knotens zu den <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeCtor/CS/treenodectorcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeCtor/VB/treenodectorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TreeNode (System.Web.UI.WebControls.TreeView owner, bool isRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.TreeView owner, bool isRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.#ctor(System.Web.UI.WebControls.TreeView,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.TreeView" />
+        <Parameter Name="isRoot" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Web.UI.WebControls.TreeView" /> , enthält das neue <see cref="T:System.Web.UI.WebControls.TreeNode" />.</param>
+        <param name="isRoot">
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.TreeNode" /> ein Stammknoten ist, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNode" /> -Klasse mit dem angegebenen Besitzer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text, string value, string imageUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value, string imageUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="imageUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, der angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement für den Knoten.</param>
+        <param name="value">Die ergänzenden Daten, die dem Knoten, z. B. Daten, die zur Behandlung von postback Ereignisse zugeordnet.</param>
+        <param name="imageUrl">Die URL zu einem Bild, das neben dem Knoten angezeigt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNode" /> -Klasse mit dem angegebenen Text, Wert und Bild-URL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TreeNode> -Klasse mit dem Text, Wert und Bild-URL, die gemäß der `text`, `value`, und `imageUrl` Parameter bzw..  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.TreeNode>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.TreeNode.Text%2A>|Der Wert des `text`-Parameters.|  
+|<xref:System.Web.UI.WebControls.TreeNode.Value%2A>|Der Wert des `value`-Parameters.|  
+|<xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A>|Der Wert des `imageUrl`-Parameters.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe dieses Konstruktors dynamisch Hinzufügen eines Knotens zu den <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeCtor/CS/treenodectorcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeCtor/VB/treenodectorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text, string value, string imageUrl, string navigateUrl, string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value, string imageUrl, string navigateUrl, string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.#ctor(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="imageUrl" Type="System.String" />
+        <Parameter Name="navigateUrl" Type="System.String" />
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, der angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement für den Knoten.</param>
+        <param name="value">Die ergänzenden Daten, die dem Knoten, z. B. Daten, die zur Behandlung von postback Ereignisse zugeordnet.</param>
+        <param name="imageUrl">Die URL zu einem Bild, das neben dem Knoten angezeigt wird.</param>
+        <param name="navigateUrl">Die URL zu verknüpfen, wenn auf der Knoten geklickt wird.</param>
+        <param name="target">Das Zielfenster oder der Zielframe, in dem der Webseiteninhalt angezeigt verknüpft Wenn auf der Knoten geklickt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNode" /> -Klasse mit dem angegebenen Text, Wert, Bild-URL, Navigations-URL und Ziel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TreeNode> -Klasse mit dem Text "," Wert "," Image "und" Navigation URLs und Anzeigen von angegebenen Ziel die `text`, `value`, `imageUrl`, `navigateUrl`, und `target` Parameter, jeweils.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.TreeNode>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.TreeNode.Text%2A>|Der Wert des `text`-Parameters.|  
+|<xref:System.Web.UI.WebControls.TreeNode.Value%2A>|Der Wert des `value`-Parameters.|  
+|<xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A>|Der Wert des `imageUrl`-Parameters.|  
+|<xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A>|Der Wert des `navigateUrl`-Parameters.|  
+|<xref:System.Web.UI.WebControls.TreeNode.Target%2A>|Der Wert des `target`-Parameters.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe dieses Konstruktors dynamisch Hinzufügen eines Knotens zu den <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeCtor/CS/treenodectorcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeCtor/VB/treenodectorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Knoten Kontrollkästchen aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Sie das Kontrollkästchen des Knotens ausgewählt ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Knoten ein Kontrollkästchen angezeigt wird die <xref:System.Web.UI.WebControls.TreeNode.Checked%2A> Eigenschaft wird häufig verwendet, um anzugeben, ob das Kontrollkästchen aktiviert ist. Wenn das Kontrollkästchen des entsprechenden mit einem Knoten aktiviert ist, wird der Knoten automatisch zu hinzugefügt der <xref:System.Web.UI.WebControls.TreeView.CheckedNodes%2A> Auflistung von der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Die <xref:System.Web.UI.WebControls.TreeNode.Checked%2A> Eigenschaft kann auch verwendet werden, um zu bestimmen, ob das Kontrollkästchen aktiviert ist.  
+  
+> [!NOTE]
+>  Es ist eher üblich, um zu bestimmen, welche Knoten in der <xref:System.Web.UI.WebControls.TreeView> Kontrolle haben die entsprechenden Kontrollkästchen sind ausgewählt, durch das Durchlaufen der <xref:System.Web.UI.WebControls.TreeView.CheckedNodes%2A> Auflistung.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Checked%2A> Eigenschaft, um anzugeben, ob ein Knoten Kontrollkästchen aktiviert ist. Die Kontrollkästchen der Knoten mit einer Tiefe von einer in einen ausgewählten Status initialisiert. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Newsgroup.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeChecked#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeChecked/CS/treenodecheckedcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeChecked#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeChecked/VB/treenodecheckedvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<category name="news.microsoft.com">  
+    <group name="microsoft.public.dotnet.framework.aspnet"/>  
+    <group name="microsoft.public.dotnet.framework.aspnet.mobile"/>  
+    <group name="microsoft.public.dotnet.framework.aspnet.webservices"/>  
+</category>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodes">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TreeNodeCollection ChildNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TreeNodeCollection ChildNodes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.ChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.WebControls.TreeNodeCollection" /> -Auflistung, die auf der obersten Ebene untergeordneten Knoten des aktuellen Knotens enthält.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TreeNodeCollection" /> , die auf der obersten Ebene untergeordneten Knoten des aktuellen Knotens enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.ChildNodes%2A> Eigenschaft, um eine <xref:System.Web.UI.WebControls.TreeNodeCollection> -Auflistung, die auf der obersten Ebene untergeordneten Knoten des aktuellen Knotens enthält. Diese Auflistung wird häufig zum iterieren durch alle Knoten auf oberster Ebene untergeordneten oder Zugriff auf einen bestimmten auf oberster Ebene untergeordneten Knoten des aktuellen Knotens verwendet.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeNode.ChildNodes%2A> Eigenschaft kann auch verwendet werden, um auf oberster Ebene untergeordneten Knoten des aktuellen Knotens programmgesteuert zu verwalten. Sie können hinzufügen, einfügen, entfernen und abrufen <xref:System.Web.UI.WebControls.TreeNode> Objekte aus der Auflistung. Alle Updates auf die Auflistung werden automatisch wiedergegeben werden, der <xref:System.Web.UI.WebControls.TreeView> steuern Sie das nächste Mal die Seite wird aktualisiert.  
+  
+ Um untergeordnete Knoten weiter unten in der Struktur zuzugreifen, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNode.ChildNodes%2A> Eigenschaft von der nächsten Ebene untergeordneter Knoten die Knotenebenen navigieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.ChildNodes%2A> Eigenschaft, um die Struktur durchlaufen.  
+  
+ [!code-aspx-csharp[TreeNodeCollectionCount#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeCollectionCount/CS/treenodecollectioncountcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeCollectionCount#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeCollectionCount/VB/treenodecollectioncountvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNode" /> -Klasse mit den Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.TreeNode" /> Instanz.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TreeNode" /> mit den Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.TreeNode" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine Hilfsmethode, die unterstützt die <xref:System.ICloneable> Schnittstelle implementiert, indem <xref:System.Web.UI.WebControls.TreeNode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public void Collapse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Collapse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.Collapse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reduziert den aktuellen Strukturknoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Collapse%2A> Methode, um den aktuellen Knoten bequem reduzieren.  
+  
+> [!NOTE]
+>  Sie können auch festlegen, als Alternative die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft `false`.  
+  
+ Wenn der aktuelle Knoten und alle ihm untergeordneten Knoten reduzieren möchten, erwägen Sie die <xref:System.Web.UI.WebControls.TreeNode.CollapseAll%2A> Methode.  
+  
+ <xref:System.Web.UI.WebControls.TreeView.CollapseAll%2A>alle Knoten in der gesamten Struktur wird reduziert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Collapse%2A> Methode, um programmgesteuert reduzieren Sie einen Knoten in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeExpand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeExpand/CS/treenodeexpandcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeExpand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeExpand/VB/treenodeexpandvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollapseAll">
+      <MemberSignature Language="C#" Value="public void CollapseAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CollapseAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.CollapseAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reduziert den aktuellen Knoten und alle ihm untergeordneten Knoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.CollapseAll%2A> Methode, um den aktuellen Knoten und alle ihm untergeordneten Knoten bequem zu reduzieren.  
+  
+> [!NOTE]
+>  Sie können auch festlegen, als Alternative die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft des aktuellen Knotens und aller seiner untergeordneten Knoten auf `false`.  
+  
+ Wenn nur den aktuellen Knoten reduzieren möchten, erwägen Sie die <xref:System.Web.UI.WebControls.TreeNode.Collapse%2A> Methode.  
+  
+ <xref:System.Web.UI.WebControls.TreeView.CollapseAll%2A>alle Knoten in der gesamten Struktur wird reduziert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.CollapseAll%2A> Methode, um programmgesteuert reduzieren Sie einen Knoten und alle ihm untergeordneten Knoten in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeExpandAll#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeExpandAll/CS/treenodeexpandallcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeExpandAll#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeExpandAll/VB/treenodeexpandallvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBound">
+      <MemberSignature Language="C#" Value="public bool DataBound { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DataBound" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.DataBound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Knoten über die Datenbindung erstellt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Knoten über die Datenbindung erstellt wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNode.DataBound%2A> Eigenschaft wird verwendet, um programmgesteuert zu ermitteln, ob der Knoten über die Datenbindung erstellt wurde. Da dynamischen und statischen Inhalten kann nicht im selben Knoten kombiniert werden, diese Eigenschaft wird häufig verwendet beim Auffüllen einer <xref:System.Web.UI.WebControls.TreeView> Steuerelement dynamisch, um festzustellen, ob der Knoten statischen Inhalt enthält.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public object DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datenelement, das an das Steuerelement gebunden ist.</summary>
+        <value>Ein <see cref="T:System.Object" /> , die das Datenelement, das an das Steuerelement gebunden ist darstellt. Der Standardwert ist <see langword="null" />, was bedeutet, dass der Knoten nicht für alle Datenelement gebunden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement wird an eine Datenquelle gebunden, wie z. B. ein <xref:System.Web.UI.WebControls.XmlDataSource> Objekt, diese Eigenschaft wird festgelegt, um das Datenelement, das an diesen bestimmten Knoten gebunden ist. Diese Eigenschaft wird häufig verwendet, um die Werte des Datenelements zugreifen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft steht nur nach dem Datenbindung aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataPath">
+      <MemberSignature Language="C#" Value="public string DataPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.DataPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad zu den Daten auf den Knoten gebunden.</summary>
+        <value>Der Pfad zu den Daten, die an den Knoten gebunden werden. Dieser Wert stammt aus der quellcodeverwaltung für hierarchische Daten, die <see cref="T:System.Web.UI.WebControls.TreeView" /> gebunden ist. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNode.DataPath%2A> Eigenschaftswert wird häufig verwendet, beim Aufrufen der <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A?displayProperty=nameWithType> Methode, um den Pfad zu den Daten bereitzustellen, die den aktuellen Knoten gebunden. Klicken Sie dann diese Methode gibt ein <xref:System.Web.UI.HierarchicalDataSourceView?displayProperty=nameWithType> Objekt, das die Daten im angegebenen Pfad enthält.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tiefe des Knotens ab.</summary>
+        <value>Die Tiefe des Knotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Depth%2A> -Eigenschaft können Sie bestimmen die Tiefe des Knotens. Die Tiefe stellt die Anzahl der Ebenen der Hierarchie zwischen einem Knoten und dem Stammknoten dar. Beispielsweise hat ein Stammknoten eine Tiefe von 0 (null). Ein untergeordnetes Element des Stammknotens hat die Tiefe einer und So weiter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Depth%2A> -Eigenschaft können Sie die Tiefe eines Knotens zu bestimmen. Alle Knoten mit einer Tiefe von einer in einen ausgewählten Status initialisiert. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Newsgroup.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeChecked#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeChecked/CS/treenodecheckedcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeChecked#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeChecked/VB/treenodecheckedvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<category name="news.microsoft.com">  
+    <group name="microsoft.public.dotnet.framework.aspnet"/>  
+    <group name="microsoft.public.dotnet.framework.aspnet.mobile"/>  
+    <group name="microsoft.public.dotnet.framework.aspnet.webservices"/>  
+</category>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expand">
+      <MemberSignature Language="C#" Value="public void Expand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Expand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.Expand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird erweitert, die aktuellen Strukturknotens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Expand%2A> Methode, um den aktuellen Knoten bequem erweitern.  
+  
+> [!NOTE]
+>  Sie können auch festlegen, als Alternative die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft `true`.  
+  
+ Um den aktuellen Knoten und alle ihm untergeordneten Knoten zu erweitern, erwägen Sie die <xref:System.Web.UI.WebControls.TreeNode.ExpandAll%2A> Methode.  
+  
+ <xref:System.Web.UI.WebControls.TreeView.ExpandAll%2A>alle Knoten in der gesamten Struktur wird erweitert werden.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Expand%2A> Methode, um programmgesteuert Erweitern eines Knotens in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeExpand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeExpand/CS/treenodeexpandcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeExpand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeExpand/VB/treenodeexpandvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandAll">
+      <MemberSignature Language="C#" Value="public void ExpandAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExpandAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.ExpandAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Der aktuelle Knoten und alle ihm untergeordneten Knoten erweitert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.ExpandAll%2A> Methode, um den aktuellen Knoten und alle ihm untergeordneten Knoten bequem zu erweitern.  
+  
+> [!NOTE]
+>  Sie können auch festlegen, als Alternative die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft des aktuellen Knotens und aller seiner untergeordneten Knoten auf `true`.  
+  
+ Um nur den aktuellen Knoten zu erweitern, erwägen Sie die <xref:System.Web.UI.WebControls.TreeNode.Expand%2A> Methode.  
+  
+ <xref:System.Web.UI.WebControls.TreeView.ExpandAll%2A>alle Knoten in der gesamten Struktur wird erweitert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.ExpandAll%2A> Methode, um programmgesteuert zu erweitern, eines Knotens und aller diesem untergeordneten Knoten in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeExpandAll#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeExpandAll/CS/treenodeexpandallcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeExpandAll#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeExpandAll/VB/treenodeexpandallvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; Expanded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; Expanded" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Expanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Nullable`1&lt;System.Boolean&gt;), "")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Knoten erweitert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Knoten erweitert ist, <see langword="false" /> der Knoten nicht erweitert ist, oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft festzulegen oder zu bestimmen, ob der Knoten erweitert ist.  
+  
+ Sie können das Erweitern und Reduzieren eines Knotens durch Aufrufen der <xref:System.Web.UI.WebControls.TreeNode.Expand%2A> und <xref:System.Web.UI.WebControls.TreeNode.Collapse%2A> Methoden bzw.. Sie können auch erweitern und Reduzieren eines Knotens und aller diesem untergeordneten Knoten durch Aufrufen der <xref:System.Web.UI.WebControls.TreeNode.ExpandAll%2A> und <xref:System.Web.UI.WebControls.TreeNode.CollapseAll%2A> Methoden bzw..  
+  
+ Da die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft ist eine drei-Status-Eigenschaft, der folgende C#-Codeausschnitt verursacht einen Compilerfehler:  
+  
+```  
+protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)  
+{  
+if (TreeView1.Nodes[0].Expanded)  
+{  
+// some work here   
+}  
+}  
+```  
+  
+ Während VB.Net implizit umgewandelt der `Boolean` -Wert in einen `NullableBoolean`, c# nicht. Daher ist es eine bewährte Methode, die den Zustand der Eigenschaft explizit zu überprüfen. Beispielsweise die folgenden Codebeispielen in Visual Basic und c# explizit den Wert der Testen der <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft.  
+  
+ Im folgenden Codebeispiel wird von Visual Basic explizit testet den Wert von der <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft. In diesem Beispiel testet, ob die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> -Eigenschaftensatz auf `True`daher `Nothing` und `False` liegen über der `If` Anweisung.  
+  
+```  
+If TreeView1.Nodes(0).Expanded = True Then 'some work hereEnd IF  
+```  
+  
+ Dieses C#-Codebeispiel explizit testet den Wert von der <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft. In diesem Beispiel testet, ob die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> -Eigenschaftensatz auf `True`daher `Null` und `False` liegen über der `If` Anweisung.  
+  
+```  
+if( TreeView1.Nodes[0].Expanded == true ) { //some work here}  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft, um einen Knoten zu erweitern. Alle Knoten mit einer Tiefe von einer in einem erweiterten Zustand initialisiert. Beachten Sie, dass bei der Stammknoten erweitert wird, dessen untergeordnete Knoten bereits erweitert werden. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeExpanded#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeExpanded/CS/treenodeexpandedcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeExpanded#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeExpanded/VB/treenodeexpandedvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageToolTip">
+      <MemberSignature Language="C#" Value="public string ImageToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.ImageToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text für das Bild, das neben einem Knoten angezeigt.</summary>
+        <value>Der QuickInfo-Text für das Bild, das neben einem Knoten angezeigt werden soll. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Bild neben einem Knoten angezeigt wird (wenn die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> festgelegt wird), verwenden die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft, um die QuickInfo angezeigt, wenn der Benutzer den Mauszeiger über dem Bild positioniert anzugeben. Der Text, den Sie angeben, enthält Geräte mit hilfstechnologie mit einer Beschreibung des Abbilds, das verwendet werden kann, um das Steuerelement leichter zugänglich machen.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft, um den QuickInfo-Text für ein Bild angezeigt, die neben einem Knoten anzugeben. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie Ihre eigenen Images bereitstellen.  
+  
+ [!code-aspx-csharp[TreeNodeImageToolTip#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeImageToolTip/CS/treenodeimagetooltipcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeImageToolTip#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeImageToolTip/VB/treenodeimagetooltipvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das neben dem Knoten angezeigt wird.</summary>
+        <value>Die URL zu einem benutzerdefinierten Bild, das neben dem Knoten angezeigt wird. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für den aktuellen Knoten in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Dieses Bild wird neben dem Knoten angezeigt und kann in einem beliebigen Dateiformat (JPG, GIF, BMP usw.) sein, solange im Browser des Clients dieses Format unterstützt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft, um ein benutzerdefiniertes Bild für einen Knoten bereitzustellen. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeViewTreeNodeDataBound#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewTreeNodeDataBound/CS/treeviewtreenodedataboundcs.aspx#1)]
+ [!code-aspx-vb[TreeViewTreeNodeDataBound#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewTreeNodeDataBound/VB/treeviewtreenodedataboundvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Knoten Änderungen an seinem Ansichtszustand speichert.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement zum Speichern ihres Zustands markiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> , das den Zustand des Knotens darstellt.</param>
+        <summary>Lädt den zuvor gespeicherten Ansichtszustand des Knotens an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.TreeNode.LoadViewState%2A>wird eine Hilfsmethode, die zum Laden von des zuvor gespeicherten Ansichtszustand des Knotens verwendet wird  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrl">
+      <MemberSignature Language="C#" Value="public string NavigateUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL, zu der navigiert werden soll, wenn der Knoten geklickt wird.</summary>
+        <value>Die URL zu navigieren, wenn der Knoten geklickt wird. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text eines Knotens kann in zwei Modi: den Mehrfachauswahlmodus aufweist oder Navigationsmodus. Standardmäßig ist ein Knoten in den Mehrfachauswahlmodus aufweist. Um einen Knoten in den Navigationsmodus zu versetzen, legen Sie des Knotens <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> -Eigenschaft auf einen anderen Wert als eine leere Zeichenfolge.  
+  
+ Wenn ein Knoten im Navigationsbereich-Modus befindet, werden alle Auswahlereignisse für diesen Knoten deaktiviert. Klicken Sie auf den Knoten im Navigationsbereich Modus verknüpft den Benutzer zur angegebenen URL. Sie können optional Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Target%2A> -Eigenschaft an das Fenster oder der Zielframe, in dem den verknüpften Inhalt angezeigt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Frames für das nächste Codebeispiel eingerichtet wird.  
+  
+ [!code-aspx-csharp[TreeViewFrameSet#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFrameSet/CS/framecs.aspx#1)]
+ [!code-aspx-vb[TreeViewFrameSet#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFrameSet/VB/framevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft zum Angeben der URL zu verknüpfen, wenn auf der Knoten geklickt wird. In diesem Beispiel wird im Frameset des vorherigen Beispiels verwendet, um eine Tabelle der Inhalte anzuzeigen.  
+  
+ [!code-aspx-csharp[TreeViewFrameExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFrameExample/CS/treeviewframecs.aspx#1)]
+ [!code-aspx-vb[TreeViewFrameExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFrameExample/VB/treeviewframevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TreeNode Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TreeNode Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den übergeordneten Knoten des aktuellen Knotens ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TreeNode" /> , die den übergeordneten Knoten des aktuellen Knotens darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNode.Parent%2A> -Eigenschaft gibt ein <xref:System.Web.UI.WebControls.TreeNode> -Objekt, das den übergeordneten Knoten des aktuellen Knotens darstellt. Sie wird häufig zum Bestimmen des übergeordnete Knotens oder den Zugriff auf die Eigenschaften des übergeordneten Knotens verwendet.  
+  
+> [!NOTE]
+>  Einen übergeordneten Knoten keinen Stammknoten.  
+  
+ Verwenden Sie für den Zugriff auf die untergeordneten Knoten des aktuellen Knotens, der <xref:System.Web.UI.WebControls.TreeNode.ChildNodes%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Parent%2A> aufzurufende Eigenschaft der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft des übergeordneten Knoten des aktuellen Knotens.  
+  
+ [!code-aspx-csharp[TreeNodeParent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeParent/CS/treenodeparentcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeParent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeParent/VB/treenodeparentvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateOnDemand">
+      <MemberSignature Language="C#" Value="public bool PopulateOnDemand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PopulateOnDemand" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.PopulateOnDemand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Knoten dynamisch aufgefüllt wird.</summary>
+        <value>
+          <see langword="true" />den Knoten dynamisch aufgefüllt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manchmal ist es nicht praktikabel ist, die statisch vorzudefinieren die Baumstruktur aufgrund der Größe der Daten oder benutzerdefinierten Inhalt, der auf eine Benutzereingabe abhängig ist. Aus diesem Grund die <xref:System.Web.UI.WebControls.TreeView> Steuerelement unterstützt dynamische Knoten Auffüllung. Wenn eines Knotens <xref:System.Web.UI.WebControls.TreeNode.PopulateOnDemand%2A> -Eigenschaftensatz auf `true`, dieser Knoten wird aufgefüllt, zur Laufzeit über ein Postbackereignis, wenn der Knoten erweitert ist. Um einen Knoten dynamisch aufzufüllen, muss eine Ereignisbehandlungsmethode, die den Knoten füllt für definiert die <xref:System.Web.UI.WebControls.TreeView.TreeNodePopulate> Ereignis.  
+  
+ Unterstützte Browser können auch clientseitige Knoten Auffüllung nutzen. Wenn aktiviert, wird dadurch die <xref:System.Web.UI.WebControls.TreeView> Steuerelement einen Knoten auf dem Client dynamisch aufgefüllt, wenn der Knoten erweitert ist, wird verhindert, dass die Notwendigkeit zum Zurücksenden an den Server. Weitere Informationen zum Auffüllen von Client-Side-Knoten, finden Sie unter <xref:System.Web.UI.WebControls.TreeView.PopulateNodesFromClient%2A>.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.PopulateOnDemand%2A> Eigenschaft, um anzugeben, dass ein Knoten dynamisch aufgefüllt wird.  
+  
+ [!code-aspx-csharp[TreeViewPopulateNodesFromClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/CS/treeviewpopulatenodesfromclientcs.aspx#1)]
+ [!code-aspx-vb[TreeViewPopulateNodesFromClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/VB/treeviewpopulatenodesfromclientvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPostText">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPostText (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPostText(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.RenderPostText(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Ausgabestream darstellt, der zum Schreiben des Inhalts auf eine Webseite verwendet wird.</param>
+        <summary>Können Entwickler von Steuerelementen Rendern zusätzliche auf den Knoten hinzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann überschrieben werden, von Entwicklern zum Hinzufügen zusätzlicher rendern, nachdem der Knoten gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPreText">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPreText (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPreText(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.RenderPreText(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Ausgabestream darstellt, der zum Schreiben des Inhalts auf eine Webseite verwendet wird.</param>
+        <summary>Können Entwickler von Steuerelementen Rendern zusätzliche auf den Knoten hinzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann überschrieben werden, von Entwicklern zum Hinzufügen zusätzlicher rendern, bevor der Knoten gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Ansichtszustand des Knotens an.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das den gespeicherten Zustand des Knotens enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNode.SaveViewState%2A> Methode ist eine Hilfsmethode, die vom Knoten zum Speichern ihres Zustands aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wählt den aktuellen Knoten in der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Select%2A> Methode zum Auswählen des aktuellen Knotens in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ **Hinweis** als Alternative können Sie auch den aktuellen Knoten auswählen, durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Selected%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Select%2A> Methode zum Auswählen eines Knotens in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeSelected2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeSelected2/CS/treenodeselected2cs.aspx#1)]
+ [!code-aspx-vb[TreeNodeSelected2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeSelected2/VB/treenodeselected2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAction">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TreeNodeSelectAction SelectAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TreeNodeSelectAction SelectAction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.SelectAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeSelectAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, das Ereignis oder Ereignisse ausgelöst, wenn ein Knoten ausgewählt ist.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.TreeNodeSelectAction" />-Werte. Die Standardeinstellung ist <see langword="TreeNodeSelectAction.Select" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text eines Knotens in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement kann in einem von zwei Modi: den Mehrfachauswahlmodus aufweist oder Navigationsmodus. Standardmäßig ist ein Knoten in den Mehrfachauswahlmodus aufweist. Um einen Knoten in den Navigationsmodus zu versetzen, legen Sie des Knotens <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> -Eigenschaft auf einen anderen Wert als eine leere Zeichenfolge (""). Um einen Knoten in den Auswahlmodus zu versetzen, legen Sie des Knotens <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft auf eine leere Zeichenfolge.  
+  
+> [!NOTE]
+>  Wenn ein Knoten im Navigationsbereich-Modus befindet, sind die Auswahlereignisse für diesen Knoten deaktiviert. Auf einen Knoten klicken, wird den Benutzer an der angegebenen URL, statt das Senden der Seite an den Server und durch das Auslösen eines Ereignisses weitergeleitet.  
+  
+ Wenn ein Knoten im Auswahlmodus befindet, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> Eigenschaft, um anzugeben, welches Ereignis oder Ereignisse ausgelöst werden, wenn ein Knoten ausgewählt ist. In der folgenden Tabelle sind die verfügbaren Optionen aufgelistet.  
+  
+|Auswahlaktion|Beschreibung|  
+|----------------------|-----------------|  
+|`TreeNodeSelectAction.Expand`|Schaltet den Knoten zwischen erweiterten und reduzierten an. Löst das <xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded> Ereignis oder den <xref:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed> Ereignis nach Bedarf.|  
+|`TreeNodeSelectAction.None`|Löst keine Ereignisse aus, wenn ein Knoten ausgewählt wird.|  
+|`TreeNodeSelectAction.Select`|Löst das <xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged> Ereignis aus, wenn ein Knoten ausgewählt wird.|  
+|`TreeNodeSelectAction.SelectExpand`|Löst das <xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged> und <xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded> Ereignisse aus, wenn ein Knoten ausgewählt wird. Knoten werden nur erweitert, nie reduziert wird.|  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A> Eigenschaft wird für einen Knoten mit nicht gerendert, dessen <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> -Eigenschaftensatz auf `TreeNodeSelectAction.None`.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> Eigenschaft, um anzugeben, welches Ereignis ausgelöst wird, wenn ein Knoten geklickt wird.  
+  
+ [!code-aspx-csharp[TreeViewPopulateNodesFromClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/CS/treeviewpopulatenodesfromclientcs.aspx#1)]
+ [!code-aspx-vb[TreeViewPopulateNodesFromClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/VB/treeviewpopulatenodesfromclientvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public bool Selected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Selected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Knoten ausgewählt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Knoten ausgewählt ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Selected%2A> Eigenschaft festzulegen oder zu bestimmen, ob der Knoten ausgewählt wurde.  
+  
+> [!NOTE]
+>  Obwohl die Eigenschaft verwendet werden kann, um zu bestimmen, ob der Knoten ausgewählt wird, ist eher üblich, verwenden Sie die <xref:System.Web.UI.WebControls.TreeView.SelectedNode%2A> Eigenschaft.  
+  
+ Nur ein Knoten ausgewählt werden kann, zu einem Zeitpunkt in der <xref:System.Web.UI.WebControls.TreeView> steuern, wenn diese Eigenschaft verwendet.  
+  
+> [!NOTE]
+>  Als Alternative können Sie auch den Knoten auswählen, mit der <xref:System.Web.UI.WebControls.TreeNode.Select%2A> Methode.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Selected%2A> Eigenschaft zum Auswählen eines Knotens in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeSelected2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeSelected2/CS/treenodeselected2cs.aspx#1)]
+ [!code-aspx-vb[TreeNodeSelected2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeSelected2/VB/treenodeselected2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCheckBox">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; ShowCheckBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; ShowCheckBox" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.ShowCheckBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Nullable`1&lt;System.Boolean&gt;), "")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Kontrollkästchen neben dem Knoten angezeigt wird.</summary>
+        <value>
+          <see langword="true" />um das Kontrollkästchen anzuzeigen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeView> Steuerelement können Sie das Kontrollkästchen neben dem Bild eines Knotens anzuzeigen. Verwenden der <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> Eigenschaft anzeigen oder Ausblenden von das Kontrollkästchen für den aktuellen Knoten.  
+  
+ Obwohl die <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> Eigenschaft kann verwendet werden, um die Kontrollkästchen angezeigt, es ist eher üblich, verwenden Sie die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A?displayProperty=nameWithType> Eigenschaft wirkt sich allerdings auf jeder Knotentyp, angegeben durch die Eigenschaft; aus diesem Grund die <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A?displayProperty=nameWithType> Eigenschaft wird häufig verwendet, um diese Einstellung für einen einzelnen Knoten zu überschreiben.  
+  
+ Da die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A?displayProperty=nameWithType> Eigenschaft ist eine drei-Status-Eigenschaft, der folgende C#-Codeausschnitt verursacht einen Compilerfehler:  
+  
+```  
+protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)  
+{  
+if (TreeView1.Nodes[0].Expanded)  
+{  
+// some work here   
+}  
+}  
+```  
+  
+ Während VB.Net implizit umgewandelt der `Boolean` -Wert in einen `NullableBoolean`, c# nicht. Daher ist es eine bewährte Methode, die den Zustand der Eigenschaft explizit zu überprüfen. Beispielsweise die folgenden Codebeispielen in Visual Basic und c# explizit den Wert der Testen der <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft.  
+  
+ Im folgenden Codebeispiel wird von Visual Basic explizit testet den Wert von der <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft. In diesem Beispiel testet, ob die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> -Eigenschaftensatz auf `True`daher `Nothing` und `False` liegen über der `If` Anweisung.  
+  
+```  
+If TreeView1.Nodes(0).Expanded = True Then 'some work hereEnd IF  
+```  
+  
+ Dieses C#-Codebeispiel explizit testet den Wert von der <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> Eigenschaft. In diesem Beispiel testet, ob die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> -Eigenschaftensatz auf `True`daher `Null` und `False` liegen über der `If` Anweisung.  
+  
+```  
+if( TreeView1.Nodes[0].Expanded == true ) { //some work here}  
+```  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> Eigenschaft programmgesteuert anzeigen und Ausblenden von das Kontrollkästchen für einen Knoten in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die nachfolgenden Beispiel XML-Daten in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeShowCheckBox#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeShowCheckBox/CS/treenodeshowcheckboxcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeShowCheckBox#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeShowCheckBox/VB/treenodeshowcheckboxvb.aspx#1)]  
+  
+ Der folgende Code ist die Beispiel-XML-Daten für das vorherige Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des <see cref="T:System.Web.UI.WebControls.TreeNode" />-Objekts.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das eine Kopie des <see cref="T:System.Web.UI.WebControls.TreeNode" />-Objekts darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNode.System%23ICloneable%23Clone%2A> Methode wird verwendet, durch die <xref:System.Web.UI.WebControls.TreeNode> Klasse, um eine Kopie von sich selbst zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Web.UI.IStateManager.IsTrackingViewState" />.</summary>
+        <value>Ein Wert, der angibt, ob der Knoten Änderungen an seinem Ansichtszustand speichert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn die <xref:System.Web.UI.WebControls.TreeNode> Instanz umgewandelt wird die <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> , das die gespeicherten Ansichtszustandswerte enthält.</param>
+        <summary>Lädt des Knotens den vorher gespeicherten Ansichtszustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Ansicht wechselt zu einer <see cref="T:System.Object" />.</summary>
+        <returns>Das <see cref="T:System.Object" />, das die Ansichtszustandsänderungen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Weist das <see cref="T:System.Web.UI.WebControls.TreeNode" />-Objekt an, Änderungen am Ansichtszustand nachzuverfolgen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf dieser Methode für ein Serversteuerelement die <xref:System.Web.UI.Control.IsTrackingViewState%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, das Zielfenster oder der Zielframe, in dem die einem Knoten zugeordneten Webseiteninhalt angezeigt.</summary>
+        <value>Das Zielfenster oder der Zielframe, in dem der verknüpfte Webseiteninhalt angezeigt werden soll. Werte müssen mit einem Buchstaben im Bereich von A bis Z (Groß-/Kleinschreibung), mit Ausnahme von speziellen Werte beginnen, die mit einem Unterstrich beginnen, wie in der folgenden Tabelle gezeigt.  
+  
+ <list type="table"><listheader><term>Zielwert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term><see langword="_blank" /></term><description>Rendert den Inhalt in einem neuen Fenster ohne Frames.  
+  
+ </description></item><item><term><see langword="_parent" /></term><description>Rendert den Inhalt im unmittelbar übergeordneten Frameset.  
+  
+ </description></item><item><term><see langword="_search" /></term><description>Rendert den Inhalt im Suchbereich.  
+  
+ </description></item><item><term><see langword="_self" /></term><description>Rendert den Inhalt im Rahmen mit Fokus.  
+  
+ </description></item><item><term><see langword="_top" /></term><description>Rendert den Inhalt in der gesamten Fenster ohne Frames.  
+  
+ </description></item></list><block subset="none" type="note"><para>  
+ Überprüfen Sie Ihre Browserdokumentation, um zu bestimmen, ob die <see langword="_search" /> Wert wird unterstützt. Beispielsweise Microsoft Internet Explorer 5.0 und höher, unterstützt die <see langword="_search" /> Zielwert.  
+  
+</para></block>  
+  
+ Der Standardwert ist eine leere Zeichenfolge (""), die das Fenster oder den Frame mit dem Fokus aktualisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft, um das Fenster oder der Zielframe, in dem den Webinhalt angezeigt anzugeben verknüpfte auf einen Knoten, wenn auf diesen Knoten geklickt wird.  
+  
+> [!NOTE]
+>  Diese Eigenschaft überschreibt die Einstellung der <xref:System.Web.UI.WebControls.TreeView.Target%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft als rendert eine `target` Attribut. Die `target` -Attribut `anchor` Elemente ist in der Dokumenttypdefinition XHTML 1.1 nicht zulässig. Legen Sie nicht die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft Wenn der gerenderten Ausgabe für die <xref:System.Web.UI.WebControls.TreeNode> Objekt XHTML 1.1 kompatibel sein muss. Weitere Informationen finden Sie unter [XHTML-Standards in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Wenn accessible Web Pages zu erstellen, es wird dringend empfohlen Sie vermeiden Sie die Verwendung der <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft, um ein weiteres Fenster als Ziel. Weitere Informationen finden Sie unter [NIB: ASP.NET Accessibility](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae).  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Frames für das nächste Beispiel eingerichtet wird.  
+  
+ [!code-aspx-csharp[TreeViewFrameSet#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFrameSet/CS/framecs.aspx#1)]
+ [!code-aspx-vb[TreeViewFrameSet#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFrameSet/VB/framevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft, um Frames, in den zum Anzeigen des verknüpften Inhalts anzugeben. In diesem Beispiel wird im Frameset des vorherigen Beispiels verwendet, um eine Tabelle der Inhalte anzuzeigen.  
+  
+ [!code-aspx-csharp[TreeViewFrameExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFrameExample/CS/treeviewframecs.aspx#1)]
+ [!code-aspx-vb[TreeViewFrameExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFrameExample/VB/treeviewframevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für den Knoten in der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement.</summary>
+        <value>Der angezeigte Text für den Knoten in der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft angeben oder ermitteln den Text, der für den Knoten in angezeigt wird der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft enthält `null`, die `get` Accessor gibt den Wert der <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft enthält wiederum `null`, <xref:System.String.Empty> wird zurückgegeben.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft, um den Text für einen Knoten anzugeben.  
+  
+ [!code-aspx-csharp[TreeViewFrameExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFrameExample/CS/treeviewframecs.aspx#1)]
+ [!code-aspx-vb[TreeViewFrameExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFrameExample/VB/treeviewframevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleExpandState">
+      <MemberSignature Language="C#" Value="public void ToggleExpandState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ToggleExpandState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.ToggleExpandState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wechselt zwischen den erweiterten und reduzierten Zustand des Knotens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.ToggleExpandState%2A> Methode, um zwischen einer erweiterten und einem reduzierten Zustand für den Knoten. Wenn der Knoten reduziert ist, z. B. beim Aufrufen der <xref:System.Web.UI.WebControls.TreeNode.ToggleExpandState%2A> -Methode erweitert, und umgekehrt.  
+  
+> [!NOTE]
+>  Als Alternative können Sie festlegen können die <xref:System.Web.UI.WebControls.TreeNode.Expanded%2A> -Eigenschaft direkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.ToggleExpandState%2A> Methode, um zwischen einer erweiterten und einem reduzierten Zustand für den Stammknoten des ein <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeToggleExpandState#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeToggleExpandState/CS/treenodetoggleexpandstatecs.aspx#1)]
+ [!code-aspx-vb[TreeNodeToggleExpandState#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeToggleExpandState/VB/treenodetoggleexpandstatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text für den Knoten.</summary>
+        <value>Der QuickInfo-Text für den Knoten. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft, um den QuickInfo-Text für den Knoten anzugeben. Der QuickInfo-Text wird angezeigt, wenn der Mauszeiger über dem Knoten positioniert ist.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> -Eigenschaft QuickInfos für die Knoten in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeNodeToolTip#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeToolTip/CS/treenodetooltipcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeToolTip#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeToolTip/VB/treenodetooltipvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNode.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert den Anfangspunkt, ab dem Nachverfolgen und Speichern von Ansichtszustand auf den Knoten ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest einen nicht angezeigten Wert verwendet, um zusätzlichen Daten über den Knoten, z. B. für die Behandlung von Ereignissen postback verwendeten Daten zu speichern.</summary>
+        <value>Zusätzliche Daten über den Knoten, der nicht angezeigt wird. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft dient als Ergänzung zu den <xref:System.Web.UI.WebControls.TreeNode.Text%2A> synchronisierungsleistung, da zusätzlichen Daten, die dem Knoten zugeordnete Eigenschaft. Dieser Wert wird nicht im Steuerelement angezeigt und wird häufig zum Speichern von Daten für die Behandlung von Ereignissen postback verwendet.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft enthält `null`, die `get` Accessor gibt den Wert der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft enthält wiederum `null`, <xref:System.String.Empty> wird zurückgegeben.  
+  
+> [!NOTE]
+>  Knoten auf derselben Ebene müssen einen eindeutigen Wert für die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft; das <xref:System.Web.UI.WebControls.TreeView> Steuerelement kann nicht zu unterscheiden, zwischen verschiedenen Knoten auf derselben Ebene, die den gleichen Wert aufweisen. In diesem Szenario klickt der Benutzer einen Knoten, der einen doppelten Wert hat der Knoten, die angezeigt wird zuerst in die <xref:System.Web.UI.WebControls.TreeView> Steuerelement ausgewählt ist.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft, um das Schlüsselfeld zu speichern.  
+  
+ [!code-aspx-csharp[TreeViewPopulateNodesFromClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/CS/treeviewpopulatenodesfromclientcs.aspx#1)]
+ [!code-aspx-vb[TreeViewPopulateNodesFromClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/VB/treeviewpopulatenodesfromclientvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValuePath">
+      <MemberSignature Language="C#" Value="public string ValuePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValuePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNode.ValuePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad aus dem Stammknoten auf den aktuellen Knoten ab.</summary>
+        <value>Eine durch Trennzeichen getrennte Liste von Knotenwerten, die einen Pfad aus dem Stammknoten, auf den aktuellen Knoten bilden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNode.ValuePath%2A> Eigenschaft enthält eine durch Trennzeichen getrennte Liste von Knotenwerten, die einen Pfad aus dem Stammknoten, auf den aktuellen Knoten bilden. Verwenden der <xref:System.Web.UI.WebControls.TreeView.PathSeparator%2A> Eigenschaft, um das Trennzeichen zur Trennung der Knotenwerte anzugeben. Dieser Wert wird häufig verwendet, bei der Analyse der Liste für die einzelnen Werte oder als Argument zu übergeben, die <xref:System.Web.UI.WebControls.TreeView.FindNode%2A> Methode der <xref:System.Web.UI.WebControls.TreeView> Klasse.  
+  
+ Je nach Wert angezeigt, der <xref:System.Web.UI.WebControls.TreeView> -Steuerelement, das Trennzeichen müssen möglicherweise geändert werden, um Konflikte zu vermeiden. Z. B. Wenn Sie ein Komma als Trennzeichen festlegen, sollte der angezeigte Wert keine Kommas enthalten. andernfalls, Sie können nicht ordnungsgemäß analysiert die <xref:System.Web.UI.WebControls.TreeNode.ValuePath%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Knoten auf derselben Ebene müssen einen eindeutigen Wert für die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft; das <xref:System.Web.UI.WebControls.TreeView> Steuerelement kann nicht zu unterscheiden, zwischen verschiedenen Knoten auf derselben Ebene, die den gleichen Wert aufweisen. In diesem Szenario klickt der Benutzer einen Knoten, der einen doppelten Wert hat der Knoten, die angezeigt wird zuerst in die <xref:System.Web.UI.WebControls.TreeView> Steuerelement ausgewählt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beim Analysieren der <xref:System.Web.UI.WebControls.TreeNode.ValuePath%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[TreeViewPathSeparator2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewPathSeparator2/CS/treeviewpathseparatorcs.aspx#1)]
+ [!code-aspx-vb[TreeViewPathSeparator2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewPathSeparator2/VB/treeviewpathseparatorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

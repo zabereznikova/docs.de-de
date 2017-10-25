@@ -1,0 +1,208 @@
+<Type Name="NetTcpContextBinding" FullName="System.ServiceModel.NetTcpContextBinding">
+  <TypeSignature Language="C#" Value="public class NetTcpContextBinding : System.ServiceModel.NetTcpBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NetTcpContextBinding extends System.ServiceModel.NetTcpBinding" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.NetTcpContextBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.NetTcpBinding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine kontextaktivierte Bindung für die <see cref="T:System.ServiceModel.NetTcpContextBinding" />-Bindung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Beim Aufrufen eines mit .Net Framework 4.0 erstellten [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Diensts aus einer [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Clientanwendung, die mit [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)] oder früher erstellt wurde, enthält die von svcutil.exe generierte Konfigurationsdatei oder ein hinzugefügter Dienstverweis aus [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] das contextManagementEnabled-Attribut in der Bindungskonfiguration. Dieses Attribut wird von der [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)]-Laufzeit nicht erkannt, und die Anwendung löst eine <xref:System.Configuration.ConfigurationErrorsException> aus mit der Meldung, dass ein nicht erkanntes Attribut (contextManagementEnabled) vorliegt. Zur Umgehung dieses Problems entfernen Sie das contextManagementEnabled-Attribut aus der Bindungskonfiguration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetTcpContextBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetTcpContextBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetTcpContextBinding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetTcpContextBinding (System.ServiceModel.SecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.SecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetTcpContextBinding.#ctor(System.ServiceModel.SecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.SecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der Sicherheitsmodus.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetTcpContextBinding" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.SecurityMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetTcpContextBinding (string configName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetTcpContextBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configName">Der Name der Bindungskonfiguration.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetTcpContextBinding" />-Klasse mit der angegebenen Bindungskonfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `configName` Parameter sollte festgelegt werden, auf den Namen des der `<binding>` Element in der Konfigurationsdatei, die von dieser Bindung konfiguriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetTcpContextBinding (System.ServiceModel.SecurityMode securityMode, bool reliableSessionEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.SecurityMode securityMode, bool reliableSessionEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetTcpContextBinding.#ctor(System.ServiceModel.SecurityMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.SecurityMode" />
+        <Parameter Name="reliableSessionEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der Sicherheitsmodus.</param>
+        <param name="reliableSessionEnabled">
+          <see langword="true" />um zuverlässige Sitzungen zu aktivieren; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetTcpContextBinding" />-Klasse mit dem angegebenen <see cref="T:System.ServiceModel.SecurityMode" /> und der entsprechenden Einstellung für zuverlässige Sitzungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCallbackAddress">
+      <MemberSignature Language="C#" Value="public Uri ClientCallbackAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ClientCallbackAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetTcpContextBinding.ClientCallbackAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Clientrückrufadresse ab oder legt sie fest.</summary>
+        <value>Die Rückrufadresse des Clients.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextManagementEnabled">
+      <MemberSignature Language="C#" Value="public bool ContextManagementEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextManagementEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetTcpContextBinding.ContextManagementEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Kontextverwaltung aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn kontextverwaltung aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ContextProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ContextProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetTcpContextBinding.ContextProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kontextschutzgrad für dieses Bindung ab bzw. legt ihn fest.</summary>
+        <value>Der Schutzgrad für die Bindung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetTcpContextBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine geordnete Auflistung von Bindungselementen, die in der aktuellen Bindung enthalten sind.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Channels.BindingElementCollection" /> mit dem geordneten Stapel von Bindungselementen, die von der <see cref="T:System.ServiceModel.NetTcpContextBinding" /> beschrieben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung enthält ein <xref:System.ServiceModel.Channels.ContextBindingElement>, mit dem SOAP-Header zum Austauschen von Kontextinformationen aktiviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

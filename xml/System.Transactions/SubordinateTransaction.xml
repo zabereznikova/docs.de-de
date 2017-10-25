@@ -1,0 +1,74 @@
+<Type Name="SubordinateTransaction" FullName="System.Transactions.SubordinateTransaction">
+  <TypeSignature Language="C#" Value="public sealed class SubordinateTransaction : System.Transactions.Transaction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SubordinateTransaction extends System.Transactions.Transaction" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.SubordinateTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Transactions.Transaction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine nicht-Stamm-Transaktion, die delegiert werden kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse leitet sich von <xref:System.Transactions.Transaction> und bietet einen Konstruktor, der eine Implementierung der akzeptiert die <xref:System.Transactions.ISimpleTransactionSuperior> Schnittstelle. Instanzen dieses Typs sind nicht die Stammtransaktion aber können delegiert werden.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubordinateTransaction (System.Transactions.IsolationLevel level, System.Transactions.ISimpleTransactionSuperior superior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Transactions.IsolationLevel level, class System.Transactions.ISimpleTransactionSuperior superior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SubordinateTransaction.#ctor(System.Transactions.IsolationLevel,System.Transactions.ISimpleTransactionSuperior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isoLevel" Type="System.Transactions.IsolationLevel" />
+        <Parameter Name="superior" Type="System.Transactions.ISimpleTransactionSuperior" />
+      </Parameters>
+      <Docs>
+        <param name="level">To be added.</param>
+        <param name="superior">Eine <see cref="T:System.Transactions.ISimpleTransactionSuperior" /></param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Transactions.SubordinateTransaction" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nur ein <xref:System.Transactions.SubordinateTransaction> können erstellt werden, für einen bestimmten <xref:System.Transactions.ISimpleTransactionSuperior>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

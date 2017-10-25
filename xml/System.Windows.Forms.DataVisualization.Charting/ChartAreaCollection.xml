@@ -1,0 +1,64 @@
+<Type Name="ChartAreaCollection" FullName="System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection">
+  <TypeSignature Language="C#" Value="public class ChartAreaCollection : System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.ChartArea&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartAreaCollection extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.ChartArea&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.ChartArea&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.ChartArea</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection> Klasse stellt eine Auflistung von <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekte, die wiederum die Diagrammflächen darstellen, die innerhalb des Diagrammbilds angezeigt werden.  
+  
+ Diese Klasse wird verfügbar gemacht, als die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.ChartAreas%2A> Eigenschaft des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ Die <xref:System.Collections.ObjectModel.Collection%601.Count> -Eigenschaft gibt die Gesamtzahl der Elemente in der Auflistung und wird häufig verwendet werden, um die Obergrenze für die Sammlung zu suchen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartArea Add (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.ChartArea Add(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartArea</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Objekts, das der Auflistung hinzugefügt werden.</param>
+        <summary>Fügt eine <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> Objekt mit dem angegebenen Namen auf die Auflistung.</summary>
+        <returns>Ein <see langword="string" /> Wert, der einen Verweis auf die neu hinzugefügten Objekts darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekte werden immer als das letzte Element in der Auflistung hinzugefügt.  
+  
+ Die `name` -Argument gibt die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.Name%2A> -Eigenschaft des Objekts hinzugefügt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

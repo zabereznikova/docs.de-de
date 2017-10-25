@@ -1,0 +1,275 @@
+<Type Name="GeneralTransform" FullName="System.Windows.Media.GeneralTransform">
+  <TypeSignature Language="C#" Value="public abstract class GeneralTransform : System.Windows.Media.Animation.Animatable, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit GeneralTransform extends System.Windows.Media.Animation.Animatable implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GeneralTransform" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet allgemeine Transformation-Unterstützung für Objekte, z. B. Rechtecke und. Dies ist eine abstrakte Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Transformation definiert, wie Punkt aus einem Koordinatenbereich in einen anderen Koordinatenbereich zuordnen. Sie können verwendet werden, um beispielsweise einen Effekte wie Drehung, Skalierung und Neigung zu erzeugen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GeneralTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.GeneralTransform" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GeneralTransform Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GeneralTransform Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeneralTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.GeneralTransform" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GeneralTransform CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GeneralTransform CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeneralTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.GeneralTransform" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inverse">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.GeneralTransform Inverse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GeneralTransform Inverse" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeneralTransform.Inverse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeneralTransform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die inverse Transformation für dieses <see cref="T:System.Windows.Media.GeneralTransform" />, sofern dies möglich.</summary>
+        <value>Eine Umkehrung dieser Instanz, wenn möglich; andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das zu verwendende Format.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic), verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Der zum Formatieren des Werts zu verwendende Anbieter.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic) um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</summary>
+        <returns>Der Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung dieses <see cref="T:System.Windows.Media.GeneralTransform" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">
+          <see cref="T:System.IFormatProvider" />die Instanz verwendet, um diese Instanz zu verarbeiten.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung für diese Instanz basierend auf dem übergebenen <see cref="T:System.IFormatProvider" /> Parameter.</summary>
+        <returns>Eine Zeichenfolgendarstellung dieser Instanz basierend auf <paramref name="provider" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Transform (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point Transform(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.Transform(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der zu transformierende Punkt.</param>
+        <summary>Transformiert den angegebenen Punkt und gibt das Ergebnis zurück.</summary>
+        <returns>Das Ergebnis der Transformation <paramref name="point" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Transformation war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformBounds">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Rect TransformBounds (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Rect TransformBounds(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.TransformBounds(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das umgebende Feld zu transformieren.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse transformiert das angegebene umgebende Feld aus, und gibt eine Achse ausgerichtete umgebende Feld, die genau groß genug ist, in dem es enthalten ist.</summary>
+        <returns>Die kleinste Zahl an einer Achse ausgerichtete umgebende Feld, das die transformierten enthält <paramref name="rect" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryTransform">
+      <MemberSignature Language="C#" Value="public abstract bool TryTransform (System.Windows.Point inPoint, out System.Windows.Point result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryTransform(valuetype System.Windows.Point inPoint, [out] valuetype System.Windows.Point&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeneralTransform.TryTransform(System.Windows.Point,System.Windows.Point@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inPoint" Type="System.Windows.Point" />
+        <Parameter Name="result" Type="System.Windows.Point&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inPoint">Der zu transformierende Punkt.</param>
+        <param name="result">Das Ergebnis der Transformation <c>InPoint</c>.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse versucht, den angegebenen Punkt zu transformieren, und gibt einen Wert, der angibt, ob die Transformation erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="inPoint" /> wurde transformierten; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Windows.Media.GeneralTransform.Transform%2A> -Methode, diese Methode ist keine Ausnahme ausgelöst, wenn die Transformation fehlgeschlagen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,297 @@
+<Type Name="SocketAsyncOperation" FullName="System.Net.Sockets.SocketAsyncOperation">
+  <TypeSignature Language="C#" Value="public enum SocketAsyncOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SocketAsyncOperation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.SocketAsyncOperation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Der Typ des asynchronen Socketvorgangs, der zuletzt mit diesem Kontextobjekt ausgeführt wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ beschreibt des asynchronen Socketvorgangs, der zuletzt abgeschlossen wurde mit einem <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> Objekt. Der Wert des der <xref:System.Net.Sockets.SocketAsyncEventArgs.LastOperation%2A?displayProperty=nameWithType> Eigenschaftensatz auf None, bis die <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> Instanz wird verwendet, um einen asynchronen Socketvorgang beginnen. Die Eigenschaft wird, legen Sie dann auf den Typ des asynchronen Vorgangs ausgeführt wird. Dieser Typ erleichtert leichter einen Rückrufdelegaten einzelne Abschluss für mehrere Arten von asynchronen Socketvorgängen verwenden. Dieser Typ dient zur Verwendung in der SocketAsyncCallback-Abschlussroutine beendet hat.  
+  
+ Die <xref:System.Net.Sockets.SocketAsyncOperation> Typ wird verwendet, durch die <xref:System.Net.Sockets.SocketAsyncEventArgs.LastOperation%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="Accept" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation Accept = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.Accept" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket Accept-Vorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="Connect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation Connect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.Connect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket Verbindungsvorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="Disconnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation Disconnect = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.Disconnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket trennungsvorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keiner der Socketvorgänge.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive">
+      <MemberSignature Language="C#" Value="Receive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation Receive = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.Receive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket Receive-Vorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveFrom">
+      <MemberSignature Language="C#" Value="ReceiveFrom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation ReceiveFrom = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.ReceiveFrom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket ReceiveFrom-Vorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveMessageFrom">
+      <MemberSignature Language="C#" Value="ReceiveMessageFrom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation ReceiveMessageFrom = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.ReceiveMessageFrom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket ReceiveMessageFrom-Vorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="Send" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation Send = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.Send" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket Sendevorgangs.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPackets">
+      <MemberSignature Language="C#" Value="SendPackets" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation SendPackets = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.SendPackets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket SendPackets-Vorgang.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendTo">
+      <MemberSignature Language="C#" Value="SendTo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketAsyncOperation SendTo = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketAsyncOperation.SendTo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketAsyncOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Socket SendTo-Vorgang.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

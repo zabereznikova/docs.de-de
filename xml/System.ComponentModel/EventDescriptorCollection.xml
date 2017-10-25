@@ -1,0 +1,1609 @@
+<Type Name="EventDescriptorCollection" FullName="System.ComponentModel.EventDescriptorCollection">
+  <TypeSignature Language="C#" Value="public class EventDescriptorCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventDescriptorCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EventDescriptorCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.ComponentModel.EventDescriptor" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.EventDescriptorCollection>ist schreibgeschützt. Methoden wird, die hinzufügen oder Entfernen von Ereignissen nicht implementiert. Sie müssen von dieser Klasse zur Implementierung dieser Methoden erben.  
+  
+ Indem Sie die Eigenschaften in der <xref:System.ComponentModel.EventDescriptorCollection> -Klasse, Sie können den Inhalt der Auflistung Abfragen. Mit der <xref:System.ComponentModel.EventDescriptorCollection.Count%2A>-Eigenschaft können Sie die Anzahl der Elemente in der Auflistung bestimmen. Verwenden der <xref:System.ComponentModel.EventDescriptorCollection.Item%2A> Eigenschaft, um eine bestimmte Eigenschaft nach Indexnummer oder Namen abrufen.  
+  
+ Sie können auch die <xref:System.ComponentModel.EventDescriptorCollection.Find%2A> Methode, um eine Beschreibung des Ereignisses mit dem angegebenen Namen aus der Auflistung abzurufen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel gibt alle Ereignisse auf eine Schaltfläche in einem Textfeld. Es erfordert, dass `button1` und `textBox1` in einem Formular instanziiert wurden.  
+  
+ [!code-cpp[Classic EventDescriptorCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventDescriptorCollection (System.ComponentModel.EventDescriptor[] events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.EventDescriptor[] events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.#ctor(System.ComponentModel.EventDescriptor[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="events" Type="System.ComponentModel.EventDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="events">Ein Array vom Typ <see cref="T:System.ComponentModel.EventDescriptor" /> , der die Ereignisse für diese Sammlung bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EventDescriptorCollection" /> Klasse mit dem angegebenen Array von <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `events` Parameter leer ist, diesen Konstruktor erstellt ein leeres <xref:System.ComponentModel.EventDescriptorCollection> Klasse.  
+  
+ Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diesen Member angewendeten-Attribut besitzt den folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.ComponentModel.EventDescriptorCollection> -Klasse unter Verwendung der Ereignisse auf `button1`. Es erfordert, dass `button1` in einem Formular instanziiert wurde.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.EventDescriptorCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.EventDescriptorCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.EventDescriptorCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.EventDescriptorCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.EventDescriptorCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.EventDescriptorCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventDescriptorCollection (System.ComponentModel.EventDescriptor[] events, bool readOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.EventDescriptor[] events, bool readOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.#ctor(System.ComponentModel.EventDescriptor[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="events" Type="System.ComponentModel.EventDescriptor[]" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="events">Ein Array vom Typ <see cref="T:System.ComponentModel.EventDescriptor" /> , der die Ereignisse für diese Sammlung bereitstellt.</param>
+        <param name="readOnly">
+          <see langword="true" />Um eine schreibgeschützte Auflistung anzugeben; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EventDescriptorCollection" /> Klasse mit dem angegebenen Array von <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte. Die Auflistung ist schreibgeschützt optional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `events` Parameter leer ist, diesen Konstruktor erstellt ein leeres <xref:System.ComponentModel.EventDescriptorCollection> Klasse.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.ComponentModel.EventDescriptorCollection> -Klasse unter Verwendung der Ereignisse auf `button1`. Es erfordert, dass `button1` in einem Formular instanziiert wurde.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.EventDescriptorCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.EventDescriptorCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.EventDescriptorCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.EventDescriptorCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.EventDescriptorCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.EventDescriptorCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.ComponentModel.EventDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.ComponentModel.EventDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Add(System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.ComponentModel.EventDescriptor" /> in der Auflistung hinzu.</param>
+        <summary>Fügt eine <see cref="T:System.ComponentModel.EventDescriptor" /> an das Ende der Auflistung.</summary>
+        <returns>Die Position der <see cref="T:System.ComponentModel.EventDescriptor" /> innerhalb der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.ComponentModel.EventDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.ComponentModel.EventDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Contains(System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.ComponentModel.EventDescriptor" /> innerhalb der Auflistung gefunden.</param>
+        <summary>Gibt zurück, ob die Auflistung das angegebene <see cref="T:System.ComponentModel.EventDescriptor" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung enthält die <paramref name="value" /> Parameter angegeben ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Ereignisdeskriptoren in der Auflistung ab.</summary>
+        <value>Die Anzahl von Ereignisdeskriptoren in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.EventDescriptorCollection.Count%2A> Eigenschaft kann verwendet werden, um die Grenzwerte einer Schleife festzulegen, die eine Auflistung von Objekten durchläuft. Wenn die Auflistung nullbasiert ist, achten Sie darauf, verwenden `Count - 1` als die Obergrenze der Schleife.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.ComponentModel.EventDescriptorCollection.Count%2A> So drucken Sie die Anzahl der Ereignisse angefügt. `button1`. Es erfordert, dass `button1` und `textBox1` in einem Formular instanziiert wurden.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.Count Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Count Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.Count Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.EventDescriptorCollection Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.EventDescriptorCollection Empty" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.EventDescriptorCollection.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine leere Auflistung anstatt zu verwenden, erstellen einen neuen Eintrag mit keine Elemente. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptor Find (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor Find(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Find(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Ereignisses, das aus der Auflistung abgerufen werden soll.</param>
+        <param name="ignoreCase">
+          <see langword="true" />Wenn Sie die Groß-und Kleinschreibung des Ereignisses ignorieren möchten; andernfalls <see langword="false" />.</param>
+        <summary>Ruft die Beschreibung des Ereignisses mit dem angegebenen Namen in der Auflistung ab.</summary>
+        <returns>Die <see cref="T:System.ComponentModel.EventDescriptor" /> mit dem angegebenen Namen oder <see langword="null" /> ist das Ereignis nicht vorhanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird sucht nach einem bestimmten <xref:System.ComponentModel.EventDescriptor>. Gibt den Typ der Komponente für diese <xref:System.ComponentModel.EventDescriptor> in einem Textfeld. Es erfordert, dass `button1` und `textBox1` in einem Formular instanziiert wurden.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.Find Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Find Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.Find Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Find Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.Find Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.Find Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator für diese <see cref="T:System.ComponentModel.EventDescriptorCollection" />.</summary>
+        <returns>Ein Enumerator, der implementiert <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft einen Enumerator für die Ereignisse auf `button1`. Den Enumerator verwendet, um die Namen der Ereignisse in der Auflistung zu drucken. Es erfordert, dass `button1` und `textBox1` in einem Formular instanziiert wurden.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.GetEnumerator Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.GetEnumerator Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.GetEnumerator Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.GetEnumerator Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.ComponentModel.EventDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.ComponentModel.EventDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.IndexOf(System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.ComponentModel.EventDescriptor" /> innerhalb der Auflistung gefunden.</param>
+        <summary>Gibt den Index des dem angegebenen <see cref="T:System.ComponentModel.EventDescriptor" />.</summary>
+        <returns>Der Index, der den angegebenen <see cref="T:System.ComponentModel.EventDescriptor" /> innerhalb der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.ComponentModel.EventDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.ComponentModel.EventDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Insert(System.Int32,System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index innerhalb der Auflistung, die zum Einfügen der <c>Wert</c> Parameter.</param>
+        <param name="value">Ein <see cref="T:System.ComponentModel.EventDescriptor" /> zum Einfügen in die Auflistung.</param>
+        <summary>Fügt eine <see cref="T:System.ComponentModel.EventDescriptor" /> auf die Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalSort">
+      <MemberSignature Language="C#" Value="protected void InternalSort (System.Collections.IComparer sorter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InternalSort(class System.Collections.IComparer sorter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.InternalSort(System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sorter" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="sorter">Eine zu verwendende Vergleich zum Sortieren der <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte in dieser Auflistung.</param>
+        <summary>Sortiert die Elemente dieses <see cref="T:System.ComponentModel.EventDescriptorCollection" />, unter Verwendung des angegebenen <see cref="T:System.Collections.IComparer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `sorter` Parameter ist `null`, wird die Standardsortierreihenfolge verwendet.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalSort">
+      <MemberSignature Language="C#" Value="protected void InternalSort (string[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InternalSort(string[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.InternalSort(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="names">Ein Array von Zeichenfolgen, beschreibt der Reihenfolge, in der zum Sortieren der <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte in dieser Auflistung.</param>
+        <summary>Sortiert die Elemente dieses <see cref="T:System.ComponentModel.EventDescriptorCollection" />. Die angegebene Reihenfolge wird zuerst angewendet, gefolgt von der standardsortierung für diese Sammlung, die in der Regel alphabetisch sortiert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert die Sortierreihenfolge für die <xref:System.ComponentModel.EventDescriptorCollection.InternalSort%2A> Methode. Wenn die <xref:System.ComponentModel.EventDescriptorCollection> enthält vier <xref:System.ComponentModel.EventDescriptor> Objekte mit den Namen `A`, `B`, `C`, und `D`, die Eigenschaften dieses <xref:System.ComponentModel.EventDescriptorCollection> würde in der Reihenfolge sortiert werden `D`, `B`, `A`, und `C`.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.InternalSort Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.InternalSort Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.InternalSort Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.InternalSort Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.InternalSort Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.InternalSort Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptor this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.EventDescriptor Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexnummer der <see cref="T:System.ComponentModel.EventDescriptor" /> zum Abrufen oder festlegen.</param>
+        <summary>Ruft ab oder legt das Ereignis mit der angegebenen Indexnummer.</summary>
+        <value>Die <see cref="T:System.ComponentModel.EventDescriptor" /> mit dem angegebenen Index zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl der Index ist nullbasiert. Daher müssen Sie 1 aus der numerischen Position eines bestimmten subtrahieren <xref:System.ComponentModel.EventDescriptor> , die Zugriff auf <xref:System.ComponentModel.EventDescriptor>. Beispielsweise, um das dritte abrufen <xref:System.ComponentModel.EventDescriptor>, müssen Sie angeben `myColl[2]`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.ComponentModel.EventDescriptorCollection.Item%2A> So drucken Sie den Namen der Eigenschaft der <xref:System.ComponentModel.EventDescriptor> Indexnummer in einem Textfeld angegeben. Da die Indexnummer nullbasiert ist, wird in diesem Beispiel wird der Name des zweiten <xref:System.ComponentModel.EventDescriptor>. Es erfordert, dass `button1` und `textBox1` in einem Formular instanziiert wurden.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.this Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.this Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" />ist kein gültiger Index für <see cref="P:System.ComponentModel.EventDescriptorCollection.Item(System.Int32)" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptor this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.EventDescriptor Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.ComponentModel.EventDescriptor" /> zum Abrufen oder festlegen.</param>
+        <summary>Ruft ab oder legt das Ereignis mit dem angegebenen Namen.</summary>
+        <value>Die <see cref="T:System.ComponentModel.EventDescriptor" /> mit dem angegebenen Namen oder <see langword="null" /> ist das Ereignis nicht vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.EventDescriptorCollection.Item%2A> Eigenschaft Groß-/Kleinschreibung beachtet wird, bei der Suche nach Namen. Die Namen "Ename" und "Ename" gelten, also werden zwei unterschiedliche Ereignisse.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.ComponentModel.EventDescriptorCollection.Item%2A> Eigenschaft so drucken Sie den Typ der Komponente für die <xref:System.ComponentModel.EventDescriptor> vom Index angegebenen. Es erfordert, dass `button1` und `textBox1` in einem Formular instanziiert wurden.  
+  
+ [!code-cpp[Classic EventDescriptorCollection.this1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.this1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventDescriptorCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic EventDescriptorCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ComponentModel.EventDescriptor value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ComponentModel.EventDescriptor value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Remove(System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die aus der Auflistung zu entfernende <see cref="T:System.ComponentModel.EventDescriptor" />.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.ComponentModel.EventDescriptor" /> aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.ComponentModel.EventDescriptor" /> zu entfernen.</param>
+        <summary>Entfernt die <see cref="T:System.ComponentModel.EventDescriptor" /> am angegebenen Index aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptorCollection Sort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection Sort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Sort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sortiert die Elemente dieses <see cref="T:System.ComponentModel.EventDescriptorCollection" />, verwenden die standardsortierung für diese Sammlung ein, die in der Regel alphabetische ist.</summary>
+        <returns>Die neue <see cref="T:System.ComponentModel.EventDescriptorCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert die Sortierreihenfolge für die <xref:System.ComponentModel.EventDescriptorCollection.Sort%2A> Methode. Wenn die <xref:System.ComponentModel.EventDescriptorCollection> enthält vier <xref:System.ComponentModel.EventDescriptor> Objekte mit den Namen `A`, `B`, `C`, und `D`, die Eigenschaften des `myNewColl` würde in der Reihenfolge sortiert werden `D`, `B`, `A`, und `C`.  
+  
+ [!code-cpp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CPP/source.cpp#1)]
+ [!code-csharp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CS/source.cs#1)]
+ [!code-vb[classic eventdescriptorcollection.sort example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptorCollection Sort (System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection Sort(class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Sort(System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Ein <see cref="T:System.Collections.IComparer" /> beim Sortieren der <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte in dieser Auflistung.</param>
+        <summary>Sortiert die Elemente dieses <see cref="T:System.ComponentModel.EventDescriptorCollection" />, unter Verwendung des angegebenen <see cref="T:System.Collections.IComparer" />.</summary>
+        <returns>Die neue <see cref="T:System.ComponentModel.EventDescriptorCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das angegebene <xref:System.Collections.IComparer> wird zuerst angewendet, gefolgt von der standardsortierung für diese Sammlung, die in der Regel alphabetisch sortiert ist.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert die Sortierreihenfolge für die <xref:System.ComponentModel.EventDescriptorCollection.Sort%2A> Methode. Wenn die <xref:System.ComponentModel.EventDescriptorCollection> enthält vier <xref:System.ComponentModel.EventDescriptor> Objekte mit den Namen `A`, `B`, `C`, und `D`, die Eigenschaften des `myNewColl` würde in der Reihenfolge sortiert werden `D`, `B`, `A`, und `C`.  
+  
+ [!code-cpp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CPP/source.cpp#1)]
+ [!code-csharp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CS/source.cs#1)]
+ [!code-vb[classic eventdescriptorcollection.sort example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptorCollection Sort (string[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection Sort(string[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Sort(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="names">Ein Array von Zeichenfolgen, beschreibt der Reihenfolge, in der zum Sortieren der <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte in der Auflistung.</param>
+        <summary>Sortiert die Elemente dieses <see cref="T:System.ComponentModel.EventDescriptorCollection" />, wenn eine Sortierreihenfolge angegeben.</summary>
+        <returns>Die neue <see cref="T:System.ComponentModel.EventDescriptorCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebene Reihenfolge wird zuerst angewendet, gefolgt von der standardsortierung für diese Sammlung, die in der Regel alphabetisch sortiert ist.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert die Sortierreihenfolge für die <xref:System.ComponentModel.EventDescriptorCollection.Sort%2A> Methode. Wenn die <xref:System.ComponentModel.EventDescriptorCollection> enthält vier <xref:System.ComponentModel.EventDescriptor> Objekte mit den Namen `A`, `B`, `C`, und `D`, die Eigenschaften des `myNewColl` würde in der Reihenfolge sortiert werden `D`, `B`, `A`, und `C`.  
+  
+ [!code-cpp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CPP/source.cpp#1)]
+ [!code-csharp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CS/source.cs#1)]
+ [!code-vb[classic eventdescriptorcollection.sort example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptorCollection Sort (string[] names, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection Sort(string[] names, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.Sort(System.String[],System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.String[]" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="names">Ein Array von Zeichenfolgen, beschreibt der Reihenfolge, in der zum Sortieren der <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte in der Auflistung.</param>
+        <param name="comparer">Ein <see cref="T:System.Collections.IComparer" /> beim Sortieren der <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte in dieser Auflistung.</param>
+        <summary>Sortiert die Elemente dieses <see cref="T:System.ComponentModel.EventDescriptorCollection" />, wenn eine Sortierreihenfolge angegeben und ein <see cref="T:System.Collections.IComparer" />.</summary>
+        <returns>Die neue <see cref="T:System.ComponentModel.EventDescriptorCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebene Sortierreihenfolge wird zuerst angewendet, gefolgt von der Sortierung mit der angegebenen <xref:System.Collections.IComparer>.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert die Sortierreihenfolge für die <xref:System.ComponentModel.EventDescriptorCollection.Sort%2A> Methode. Wenn die <xref:System.ComponentModel.EventDescriptorCollection> enthält vier <xref:System.ComponentModel.EventDescriptor> Objekte mit den Namen `A`, `B`, `C`, und `D`, die Eigenschaften des `myNewColl` würde in der Reihenfolge sortiert werden `D`, `B`, `A`, und `C`.  
+  
+ [!code-cpp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CPP/source.cpp#1)]
+ [!code-csharp[classic eventdescriptorcollection.sort example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/CS/source.cs#1)]
+ [!code-vb[classic eventdescriptorcollection.sort example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EventDescriptorCollection.Sort Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , die das Ziel der aus der Auflistung kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Auflistung in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Zugriff auf die Auflistung synchronisiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der der Auflistung hinzuzufügende <see cref="T:System.Object" />.</param>
+        <summary>Fügt der Auflistung ein Element hinzu.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Ermittelt, ob die Auflistung einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Object" /> ist in der Auflistung gefunden wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der Auflistung.</summary>
+        <returns>Der Index von <paramref name="value" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Die <see cref="T:System.Object" /> zum Einfügen in die Auflistung.</param>
+        <summary>Fügt ein Element der Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung eine feste Größe hat. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+        <summary>Ruft das Element am angegebenen Index ab oder legt dieses fest.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer oder gleich <see cref="P:System.ComponentModel.EventDescriptorCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die aus der Auflistung zu entfernende <see cref="T:System.Object" />.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptorCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

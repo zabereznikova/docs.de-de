@@ -1,0 +1,82 @@
+<Type Name="CookieProtection" FullName="System.Web.Security.CookieProtection">
+  <TypeSignature Language="C#" Value="public enum CookieProtection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CookieProtection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.CookieProtection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt, wie Informationen in einem Cookie geschützt ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Security.CookieProtection All = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Security.CookieProtection.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.CookieProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie beide <see cref="F:System.Web.Security.CookieProtection.Validation" /> und <see cref="F:System.Web.Security.CookieProtection.Encryption" /> zum Schutz der Informationen im Cookie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Encryption">
+      <MemberSignature Language="C#" Value="Encryption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Security.CookieProtection Encryption = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Security.CookieProtection.Encryption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.CookieProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschlüsseln Sie die Informationen in das Cookie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Security.CookieProtection None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Security.CookieProtection.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.CookieProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schützen Sie die Informationen in das Cookie nicht. Informationen in das Cookie wird in Klartext gespeichert und nicht überprüft werden, wenn an den Server gesendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Validation">
+      <MemberSignature Language="C#" Value="Validation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Security.CookieProtection Validation = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Security.CookieProtection.Validation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.CookieProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellen Sie sicher, dass die Informationen in das Cookie nicht vor dem Senden an den Server geändert wurden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Windows.Themes">
+  <Docs>
+    <summary>Stellt den Satz von Designs bereit, die von Windows Presentation Foundation definiert. In WPF ist ein Design für eine Reihe von Ressourcen, die auf der Systemebene definiert die die standarddarstellung für Steuerelemente und andere visuelle Elemente einer Anwendung bereitstellen. WPF-Designs werden mit Stilen erstellt und Luna, Aero, Royale und klassischen enthalten. Nur der Clientbereich für eine WPF-Anwendung verwendet diese Designs. die Darstellung des Fensterrahmens und Schaltflächen, die das Fenster Chrome bilden wird durch die Win32-Design-Dienst gesteuert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

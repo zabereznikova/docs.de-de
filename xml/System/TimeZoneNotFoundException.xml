@@ -1,0 +1,202 @@
+<Type Name="TimeZoneNotFoundException" FullName="System.TimeZoneNotFoundException">
+  <TypeSignature Language="C#" Value="public class TimeZoneNotFoundException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TimeZoneNotFoundException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.TimeZoneNotFoundException" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn eine Zeitzone nicht gefunden werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ausnahme wird ausgelöst, durch die <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> und <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> Methoden bei Verwendung eines Zeitzonenbezeichners können nicht gefunden werden auf dem lokalen System, oder wenn keine Daten, die einer bestimmten Zeitzone-ID zugeordnet.  
+  
+ Da es sich bei die Registrierung als Repository von Zeitzoneninformationen in Windows XP und Windows Vista dient, gibt diese Ausnahme an, dass die Registrierung keine Informationen zu einer bestimmten Zeitzone enthält. Informationen zur Zeitzone wird in den Unterschlüssel HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Time Zonen gespeichert.  
+  
+ Wenn eine Anwendung abhängig, auf dem Vorhandensein einer bestimmten Zeitzone und der Versuch zum Abrufen von löst ist eine <xref:System.TimeZoneNotFoundException>, die Ausnahme in eine von zwei Arten von der Anwendung verarbeitet werden kann:  
+  
+-   Durch Aufrufen der <xref:System.TimeZoneInfo.FromSerializedString%2A> Methode, um eine gespeicherte Deserialisieren <xref:System.TimeZoneInfo> Objekt.  
+  
+-   Durch Aufrufen einer der Überladungen der der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode zum Erstellen einer Zeitzone.  
+  
+ Siehe Beispiele für die <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%2CSystem.Boolean%29?displayProperty=nameWithType> und <xref:System.TimeZoneInfo.FromSerializedString%2A> Methoden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimeZoneNotFoundException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneNotFoundException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.TimeZoneNotFoundException" /> -Klasse mit einer vom System generierten Meldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist der Standardkonstruktor, der die <xref:System.TimeZoneNotFoundException> Klasse. Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler, wie z. B. beschreibt "die Zeitzone"*TimeZoneName*"auf dem lokalen Computer nicht gefunden." Diese Meldung wird für die aktuelle Systemkultur lokalisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimeZoneNotFoundException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneNotFoundException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Zeichenfolge, die die Ausnahme beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.TimeZoneNotFoundException" /> -Klasse mit der angegebenen Meldungszeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `message` Zeichenfolge zugewiesen ist die <xref:System.Exception.Message%2A> Eigenschaft. Die Zeichenfolge sollte für die aktuelle Kultur lokalisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimeZoneNotFoundException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die serialisierten Daten enthält.</param>
+        <param name="context">Der Datenstrom, der die serialisierten Daten enthält.</param>
+        <summary>Initialisiert anhand von serialisierten Daten eine neue Instanz der <see cref="T:System.TimeZoneNotFoundException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird nicht aufgerufen, direkt vom Code zum Instanziieren der <xref:System.TimeZoneNotFoundException> Objekt. Stattdessen wird er durch aufgerufen der <xref:System.Runtime.Serialization.IFormatter> des Objekts <xref:System.Runtime.Serialization.IFormatter.Deserialize%2A> Methode beim Deserialisieren der <xref:System.TimeZoneNotFoundException> Objekt aus einem Stream.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="info" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="context" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimeZoneNotFoundException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneNotFoundException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Zeichenfolge, die die Ausnahme beschreibt.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.TimeZoneNotFoundException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel verwenden Sie diese <xref:System.TimeZoneNotFoundException> Überladung behandeln eine Ausnahme in einem `try`...`catch` Block. Die `innerException` Parameter muss ein Verweis auf das Ausnahmeobjekt behandelt die `catch` blockieren, oder es kann sein `null`. Dieser Wert wird dann zugewiesen, um die <xref:System.TimeZoneNotFoundException> des Objekts <xref:System.Exception.InnerException%2A> Eigenschaft.  
+  
+ Die `message` Zeichenfolge zugewiesen ist die <xref:System.Exception.Message%2A> Eigenschaft. Die Zeichenfolge sollte für die aktuelle Kultur lokalisiert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird versucht, eine nicht vorhandene Zeitzone abzurufen, wodurch die löst eine <xref:System.TimeZoneNotFoundException>. Der Ausnahmehandler umschließt die Ausnahme in einem neuen <xref:System.TimeZoneNotFoundException> Objekt, das der Ausnahmehandler an den Aufrufer zurückgegeben. Ausnahmehandler des Aufrufers zeigt dann Informationen zu den äußeren und inneren Ausnahme.  
+  
+ [!code-csharp[System.TimeZoneNotFoundException.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZoneNotFoundException.Class/cs/TimeZoneNotFoundException.cs#1)]
+ [!code-vb[System.TimeZoneNotFoundException.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZoneNotFoundException.Class/vb/TimeZoneNotFoundException.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

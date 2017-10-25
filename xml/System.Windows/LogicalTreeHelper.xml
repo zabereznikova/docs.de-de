@@ -1,0 +1,199 @@
+<Type Name="LogicalTreeHelper" FullName="System.Windows.LogicalTreeHelper">
+  <TypeSignature Language="C#" Value="public static class LogicalTreeHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit LogicalTreeHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.LogicalTreeHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Hilfsmethoden zum Abfragen von Objekten in der logischen Struktur bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.LogicalTreeHelper> Klasse enthält Methoden, können Sie die untergeordneten Auflistungen von Objekten zurückgeben oder spezifische Objekte aus innerhalb der untergeordneten Knoten der logischen Struktur. Ein Großteil der Operationen für das Struktursteuerelement, die Sie normalerweise ausführen, werden jedoch auch bereitgestellt von ähnlichen Methoden oder Eigenschaften auf <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Versuchen Sie z. B. Folgendes ein:  
+  
+-   Statt einen Aufruf der statischen <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> Methode, die einen Enumerator für die logischen untergeordneten Objekte zurückgibt, verwenden Sie die dedizierte Sammlung, die in das Inhaltsmodell für dieses Objekt verfügbar gemacht. Fast alle Objekte, die einem Inhaltsmodell unterstützen verfügbar machen, die enthält die Auflistung der untergeordneten Objekte und Unterstützung der Schnittstelle direkt auf diese Sammlung eine bestimmte Eigenschaft.  
+  
+-   Statt einen Aufruf der statischen <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> Methode, um ein untergeordnetes Objekt abzurufen, durch Angabe ihres Namens, der Aufruf der <xref:System.Windows.FrameworkElement.FindName%2A?displayProperty=nameWithType> oder <xref:System.Windows.FrameworkContentElement.FindName%2A?displayProperty=nameWithType> Methode für bestimmte Objekte.  
+  
+ <xref:System.Windows.LogicalTreeHelper>eignet sich am besten für Analysis-Szenarien, in denen Sie Reisen nach oben oder unten die logische Struktur rekursiv über mehrere Ebenen, und verwenden einen einheitlichen Ansatz für die verschiedenen über- oder untergeordneten Objekte untersuchen möchten. In diesem Fall werden Sie möglicherweise eine Mischung von Inhaltsmodelle auf zugreifen, und weitere Inhaltsmodell mithilfe bestimmter APIs wäre zu komplex.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BringIntoView">
+      <MemberSignature Language="C#" Value="public static void BringIntoView (System.Windows.DependencyObject current);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BringIntoView(class System.Windows.DependencyObject current) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LogicalTreeHelper.BringIntoView(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="current" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="current">Das Benutzeroberflächenelement um sichtbar zu machen.</param>
+        <summary>Versucht, das angeforderte Element der Benutzeroberfläche sichtbar zu machen und löst die <see cref="E:System.Windows.FrameworkElement.RequestBringIntoView" /> Ereignis auf dem Ziel, um die Ergebnisse zu melden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist normalerweise sinnvoller, rufen Sie die Instanzmethoden <xref:System.Windows.FrameworkElement.BringIntoView%2A?displayProperty=nameWithType> oder <xref:System.Windows.FrameworkContentElement.BringIntoView%2A?displayProperty=nameWithType> anstelle dieser statischen Hilfsmethode. Das Verhalten der Instanzmethoden entspricht das Verhalten der statischen Methode.  
+  
+ Auch wenn die `current` Benutzeroberflächenelement bereitgestellt wurde eine <xref:System.Windows.FrameworkContentElement>, das resultierende Ereignis wird immer noch die gleiche <xref:System.Windows.FrameworkElement.RequestBringIntoView?displayProperty=nameWithType> Ereignis, mit der ursprünglichen <xref:System.Windows.FrameworkContentElement> durch Überprüfung des Ereignisses die Daten für das Ereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindLogicalNode">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject FindLogicalNode (System.Windows.DependencyObject logicalTreeNode, string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject FindLogicalNode(class System.Windows.DependencyObject logicalTreeNode, string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LogicalTreeHelper.FindLogicalNode(System.Windows.DependencyObject,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logicalTreeNode" Type="System.Windows.DependencyObject" />
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="logicalTreeNode">Das Objekt, das dem mit der Suche aus. Dieses Objekt muss entweder eine <see cref="T:System.Windows.FrameworkElement" /> oder ein <see cref="T:System.Windows.FrameworkContentElement" />.</param>
+        <param name="elementName">Der Name des gesuchten Objekts.</param>
+        <summary>Versucht, Ermittlung und Rückgabe ein Objekt, das dem angegebenen Namen ab. Die Suche beginnt mit dem angegebenen Objekt und weiterhin in den untergeordneten Knoten der logischen Struktur.</summary>
+        <returns>Das Objekt mit übereinstimmendem Namen, sofern gefunden; Gibt <see langword="null" /> , wenn kein übereinstimmender Name, in der logischen Struktur gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methoden <xref:System.Windows.FrameworkContentElement.FindName%2A?displayProperty=nameWithType> und <xref:System.Windows.FrameworkElement.FindName%2A?displayProperty=nameWithType> ähneln oberflächlich <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A>, aber eine unterschiedliche Logik ausgeführt:  
+  
+-   Die suchrichtung für <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> wird in Richtung der untergeordneten Objekte (weiter unten in der Struktur); die suchrichtung für die `FindName` Methoden wird in Richtung übergeordneter Objekte (oben in der Struktur).  
+  
+-   Die `FindName` Methoden sind, unterliegt das Konzept von einem XAML-Namensbereich. Mit `FindName` wird sichergestellt, dass nur ein Objekt mit diesem Namen vorhanden ist, da die Verwendung von XAML-Namescopes Eindeutigkeit zu erzwingen. Im Gegensatz dazu <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> XAML-Namensbereich und kann über die Verwendung von XAML-Namensbereich Grenzen bei der Suche ignoriert. Daher besteht keine Garantie der Eindeutigkeit der `elementName` nennen, sobald Grenzen überschritten werden. Weitere Informationen zur Verwendung von XAML-Namescopes finden Sie unter [WPF-XAML-Namescopes](~/docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable GetChildren (System.Windows.DependencyObject current);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable GetChildren(class System.Windows.DependencyObject current) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LogicalTreeHelper.GetChildren(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="current" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="current">Das Objekt, ab dem die Verarbeitung der logischen Struktur beginnen soll. Dies muss entweder eine <see cref="T:System.Windows.FrameworkElement" /> oder <see cref="T:System.Windows.FrameworkContentElement" />.</param>
+        <summary>Gibt die Auflistung der unmittelbaren untergeordneten Objekte des angegebenen Objekts zurück, indem die logische Struktur verarbeitet wird.</summary>
+        <returns>Die aufzählbare Auflistung der unmittelbaren untergeordneten Objekte aus der logischen Struktur des angegebenen Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Signatur und Hilfsprogramm-Methode, vor allem, wenn Sie nicht sicher sind, ob `current` ist ein <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> und auch nicht sicher sind, ob die Klasse des Objekts eine eigene Sammlung Inhaltsmodell unterstützt. Wenn Sie den Typ des Objekts bestimmen können, die Sie abfragen möchten, überprüfen Sie, dass die bestimmte Content-Eigenschaft, die Sie kennen für diesen Typ vorhanden ist. Z. B. Wenn Sie wissen, dass das Objekt, die Sie Abfragen ist ein <xref:System.Windows.Controls.ItemsControl>, überprüfen Sie die <xref:System.Windows.Controls.ItemsControl.Items%2A> Eigenschaft, um eine stark typisierte Auflistung abzurufen, bei denen wurde Unterstützung für Sammlung und eignet sich wahrscheinlich mehr als ein Enumerator.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable GetChildren (System.Windows.FrameworkContentElement current);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable GetChildren(class System.Windows.FrameworkContentElement current) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LogicalTreeHelper.GetChildren(System.Windows.FrameworkContentElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="current" Type="System.Windows.FrameworkContentElement" />
+      </Parameters>
+      <Docs>
+        <param name="current">Das Objekt, ab dem die Verarbeitung der logischen Struktur beginnen soll.</param>
+        <summary>Gibt die Auflistung der unmittelbaren untergeordneten Objekte des angegebenen <see cref="T:System.Windows.FrameworkContentElement" /> durch die logische Struktur verarbeitet.</summary>
+        <returns>Die aufzählbare Auflistung der unmittelbaren untergeordneten Objekte beginnend mit <paramref name="current" /> in der logischen Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable GetChildren (System.Windows.FrameworkElement current);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable GetChildren(class System.Windows.FrameworkElement current) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LogicalTreeHelper.GetChildren(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="current" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="current">Das Objekt, ab dem die Verarbeitung der logischen Struktur beginnen soll.</param>
+        <summary>Gibt die Auflistung der unmittelbaren untergeordneten Objekte des angegebenen <see cref="T:System.Windows.FrameworkElement" /> durch die logische Struktur verarbeitet.</summary>
+        <returns>Die aufzählbare Auflistung der unmittelbaren untergeordneten Objekte beginnend mit <paramref name="current" /> in der logischen Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject GetParent (System.Windows.DependencyObject current);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject GetParent(class System.Windows.DependencyObject current) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LogicalTreeHelper.GetParent(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="current" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="current">Das Objekt, das das übergeordnete Objekt gesucht. Dies muss entweder eine <see cref="T:System.Windows.FrameworkElement" /> oder ein <see cref="T:System.Windows.FrameworkContentElement" />.</param>
+        <summary>Gibt das übergeordnete Objekt des angegebenen Objekts durch die logische Struktur verarbeitet.</summary>
+        <returns>Das angeforderte übergeordnete Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist lediglich ein Wrapper, der die Version des entsprechenden Typs ruft (<xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>) von der <xref:System.Windows.FrameworkElement.Parent%2A?displayProperty=nameWithType> oder <xref:System.Windows.FrameworkContentElement.Parent%2A?displayProperty=nameWithType> Eigenschaft; dies es sei denn, Sie kann nicht bestimmt werden die `current` Typ, möglicherweise möchten die jeweilige überprüfen Stattdessen Instanzeigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

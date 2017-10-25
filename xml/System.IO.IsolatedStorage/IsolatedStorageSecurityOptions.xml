@@ -1,0 +1,45 @@
+<Type Name="IsolatedStorageSecurityOptions" FullName="System.IO.IsolatedStorage.IsolatedStorageSecurityOptions">
+  <TypeSignature Language="C#" Value="public enum IsolatedStorageSecurityOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IsolatedStorageSecurityOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.IsolatedStorage.IsolatedStorageSecurityOptions" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Optionen an, die Sicherheit bei der isolierten Speicherung auswirken.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageSecurityState.Options%2A?displayProperty=nameWithType> Eigenschaft ruft diese Enumeration, um zu bestimmen, welche Vorgänge im isolierten Speicher ausgeführt werden können.  
+  
+ Eine hostanwendung kann außer Kraft setzen die <xref:System.AppDomainManager.CheckSecuritySettings%2A?displayProperty=nameWithType> Methode zum Ausführen von richtlinienentscheidungen basierend auf einer <xref:System.IO.IsolatedStorage.IsolatedStorageSecurityState> -Objekt, und klicken Sie dann zu erlauben oder Verhindern der maßgeblich zum gestiegenen die Kontingentgröße für isolierten Speicher.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IncreaseQuotaForApplication">
+      <MemberSignature Language="C#" Value="IncreaseQuotaForApplication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.IsolatedStorage.IsolatedStorageSecurityOptions IncreaseQuotaForApplication = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.IsolatedStorage.IsolatedStorageSecurityOptions.IncreaseQuotaForApplication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.IsolatedStorage.IsolatedStorageSecurityOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Kontingent kann für den isolierten Speicher erhöht werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

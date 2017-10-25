@@ -1,0 +1,101 @@
+<Type Name="SqlChangeMonitor" FullName="System.Runtime.Caching.SqlChangeMonitor">
+  <TypeSignature Language="C#" Value="public sealed class SqlChangeMonitor : System.Runtime.Caching.ChangeMonitor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlChangeMonitor extends System.Runtime.Caching.ChangeMonitor" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.SqlChangeMonitor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Caching.ChangeMonitor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Änderung Überwachung für SQL Server-Datenbanken. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.SqlChangeMonitor> Klasse dient als Wrapper für den ADO.NET-Anbieter <xref:System.Data.SqlClient.SqlDependency> -Klasse und fügt die Änderung Überwachung für SQL Server-basierten Abhängigkeiten hinzu. Aus diesem Grund die <xref:System.Runtime.Caching.SqlChangeMonitor> Klasse fungiert als Brücke zwischen ADO.NET <xref:System.Data.SqlClient.SqlDependency> Objekt und die <xref:System.Runtime.Caching> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlChangeMonitor (System.Data.SqlClient.SqlDependency dependency);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.SqlClient.SqlDependency dependency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.SqlChangeMonitor.#ctor(System.Data.SqlClient.SqlDependency)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dependency" Type="System.Data.SqlClient.SqlDependency" />
+      </Parameters>
+      <Docs>
+        <param name="dependency">Ein Objekt, das ein ADO.NET stellt <see cref="T:System.Data.SqlClient.SqlDependency" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Caching.SqlChangeMonitor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.SqlChangeMonitor.%23ctor%2A> Methode bindet die <xref:System.Data.SqlClient.SqlDependency.OnChange> -Ereignis für das Objekt im `dependency` auf die <xref:System.Runtime.Caching.ChangeMonitor.OnChanged%2A> Methodenhandler. Dadurch wird den Monitor ändern, um Benachrichtigungen zu Änderungen in SQL Server-Datenbanken.  
+  
+ Beim Aufruf der <xref:System.Runtime.Caching.SqlChangeMonitor.%23ctor%2A> -Konstruktor müssen Sie übergeben ein <xref:System.Data.SqlClient.SqlDependency> -Objekt als Parameter. Beim Erstellen einer <xref:System.Data.SqlClient.SqlDependency> -Objekts übergeben Sie eine <xref:System.Data.SqlClient.SqlCommand> Parameter an den Konstruktor übergibt. Der Konstruktor für <xref:System.Data.SqlClient.SqlDependency> Klasse ermöglicht die Angabe von optionalen Informationen zum Konfigurieren der <xref:System.Data.SqlClient.SqlDependency> Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependency" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.SqlChangeMonitor.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueId">
+      <MemberSignature Language="C#" Value="public override string UniqueId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UniqueId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.SqlChangeMonitor.UniqueId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner für eine <see cref="T:System.Runtime.Caching.SqlChangeMonitor" /> Instanz.</summary>
+        <value>Ein Bezeichner für den Monitor ändern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.SqlChangeMonitor> Klasse generiert eine GUID für diese Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

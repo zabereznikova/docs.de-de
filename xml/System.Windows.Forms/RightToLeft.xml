@@ -1,0 +1,78 @@
+<Type Name="RightToLeft" FullName="System.Windows.Forms.RightToLeft">
+  <TypeSignature Language="C#" Value="public enum RightToLeft" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RightToLeft extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RightToLeft" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt einen Wert, der angibt, ob der Text von rechts nach links, z. B. wird bei Verwendung von Schriftarten für Hebräisch und Arabisch.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem <xref:System.Windows.Forms.ContextMenu>, <xref:System.Windows.Forms.MainMenu>, <xref:System.Windows.Forms.ProgressBar>, <xref:System.Text.RegularExpressions.Regex> und <xref:System.Windows.Forms.Control>.  
+  
+ Beim Abrufen der Wert der `RightToLeft` Eigenschaft von <xref:System.Windows.Forms.ContextMenu>, <xref:System.Windows.Forms.MainMenu>, und <xref:System.Windows.Forms.ProgressBar> erhalten Sie den Wert der <xref:System.Windows.Forms.RightToLeft> zugewiesen wurde. Im Gegensatz dazu, wenn Sie eine eigene Klasse von ableiten <xref:System.Windows.Forms.Control>, und weisen Sie den Wert `Inherit` auf die <xref:System.Windows.Forms.Control.RightToLeft%2A> -Eigenschaft, wird der zurückgegebene Wert die Einstellung der werden die <xref:System.Windows.Forms.Control.RightToLeft%2A> Eigenschaft des übergeordneten Steuerelements. Wenn kein übergeordnetes Steuerelement vorhanden ist, gibt er den Wert des `No`. Hingegen gibt es den Wert der `Yes` oder `No`, abhängig vom Wert, der Sie zugewiesen die <xref:System.Windows.Forms.Control.RightToLeft%2A> Eigenschaft der abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Weitere Informationen dazu, wie Windows Forms-Steuerelemente Ausrichtung von rechts nach Links zu aktivieren auswirkt, finden Sie unter der <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RightToLeft Inherit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RightToLeft.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Richtung des Texts zu lesen, wird vom übergeordneten Steuerelement geerbt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="No" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RightToLeft No = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RightToLeft.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Text lautet von links nach rechts. Dies ist die Standardeinstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="Yes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RightToLeft Yes = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RightToLeft.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Text wird von rechts nach links gelesen werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,76 @@
+<Type Name="ToolStripItemImageScaling" FullName="System.Windows.Forms.ToolStripItemImageScaling">
+  <TypeSignature Language="C#" Value="public enum ToolStripItemImageScaling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripItemImageScaling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemImageScaling" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob die Größe des Bilds auf einem <see cref="T:System.Windows.Forms.ToolStripItem" /> automatisch so angepasst, dass passt auf eine <see cref="T:System.Windows.Forms.ToolStrip" /> Beibehaltung der ursprünglichen Proportionen des Bilds.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolStripItem.Image%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageIndex%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageKey%2A>, und <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> Eigenschaften beziehen sich auf verschiedene Aspekte der Bildbehandlung. Verwenden von Bildern in <xref:System.Windows.Forms.ToolStrip> Steuerelemente durch Festlegen dieser Eigenschaften direkt oder durch Festlegen der Ausführung nur zur Laufzeit <xref:System.Windows.Forms.ToolStrip.ImageList%2A> Eigenschaft.  
+  
+ Bildskalierung richtet sich nach der Interaktion von Eigenschaften in beiden <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripItem>wie folgt:  
+  
+-   <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A>die Dezimalstellen des dem endgültigen Image bestimmt durch die Kombination des Bilds <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> Einstellung und des Containers <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> Einstellung.  
+  
+    -   Wenn <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ist `true` (Standard) und <xref:System.Windows.Forms.ToolStripItemImageScaling> ist SizeToFit, keine Bildskalierung, und die <xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit> Größe ist, die das größte Element oder eine vorgegebene Mindestgröße.  
+  
+    -   Wenn <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ist `false` und <xref:System.Windows.Forms.ToolStripItemImageScaling> ist keine "," weder das Bild noch <xref:System.Windows.Forms.ToolStripItemImageScaling> Skalierung auftritt.  
+  
+ Um die Abbildgröße zu steuern, verwenden die <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird, gilt den SizeToFit Member einer <xref:System.Windows.Forms.ToolStripButton>.  
+  
+ [!code-cpp[System.Windows.Forms.ToolStrip1#20](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CPP/form1.cpp#20)]
+ [!code-csharp[System.Windows.Forms.ToolStrip1#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.ToolStrip1#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/VB/form1.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemImageScaling None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemImageScaling.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemImageScaling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Größe des Bilds auf einem <see cref="T:System.Windows.Forms.ToolStripItem" /> wird nicht automatisch angepasst, um auf passen ein <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeToFit">
+      <MemberSignature Language="C#" Value="SizeToFit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemImageScaling SizeToFit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemImageScaling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Größe des Bilds auf einem <see cref="T:System.Windows.Forms.ToolStripItem" /> automatisch so angepasst, dass passt auf eine <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

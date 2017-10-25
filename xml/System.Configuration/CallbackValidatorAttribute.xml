@@ -1,0 +1,122 @@
+<Type Name="CallbackValidatorAttribute" FullName="System.Configuration.CallbackValidatorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CallbackValidatorAttribute : System.Configuration.ConfigurationValidatorAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CallbackValidatorAttribute extends System.Configuration.ConfigurationValidatorAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.CallbackValidatorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationValidatorAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine <see cref="T:System.Configuration.CallbackValidator" /> Objekt, das für die codeüberprüfung verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.CallbackValidatorAttribute> Attributklasse stellt eine Zuordnung zwischen einem <xref:System.Configuration.CallbackValidator> Objekt und den Code zu überprüfen. Die <xref:System.Configuration.CallbackValidatorAttribute> abgeleitete Klasse wird von der <xref:System.Configuration.ConfigurationValidatorAttribute> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallbackValidatorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CallbackValidatorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.CallbackValidatorAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallbackMethodName">
+      <MemberSignature Language="C#" Value="public string CallbackMethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CallbackMethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.CallbackValidatorAttribute.CallbackMethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Rückrufmethode darstellt.</summary>
+        <value>Der Name der aufzurufenden Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.CallbackValidatorAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Bestätigung fest.</summary>
+        <value>Die <see cref="T:System.Type" /> von der aktuellen Instanz des Validierungssteuerelement-Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorInstance">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationValidatorBase ValidatorInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationValidatorBase ValidatorInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.CallbackValidatorAttribute.ValidatorInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationValidatorBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Validierungssteuerelementinstanz ab.</summary>
+        <value>Die aktuelle <see cref="T:System.Configuration.ConfigurationValidatorBase" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert der <see cref="P:System.Configuration.CallbackValidatorAttribute.Type" />-Eigenschaft ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Configuration.CallbackValidatorAttribute.CallbackMethodName" /> Eigenschaft nicht auf eine öffentliche statische "void" Methode mit einem Objektparameter festgelegt ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

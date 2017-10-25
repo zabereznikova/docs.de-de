@@ -1,0 +1,139 @@
+<Type Name="WorkflowRuntimeServiceElement" FullName="System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement">
+  <TypeSignature Language="C#" Value="public class WorkflowRuntimeServiceElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowRuntimeServiceElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Konfigurationselement für einen Dienst dar, der dem Workflowlaufzeitmodul hinzugefügt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Ein <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> gibt einen Hostdienst an, der vom Workflowlaufzeitmodul initialisiert und aktiviert werden soll. Ein Hostdienst, der im angegebenen Wert entspricht der <`Services`>-Element in einer Konfigurationsdatei. Da der in einem WorkflowRuntimeServiceElement angegebene Dienst vom Workflowlaufzeitmodul initialisiert wird, muss dieser über mindestens einen Konstruktor verfügen, der mit einer der folgenden vier Signaturen übereinstimmt (das Workflowlaufzeitmodul versucht, die Übereinstimmung mit den Signaturen in der angezeigten Reihenfolge zu erzielen):  
+  
+ Dienst(WorkflowRuntime-Laufzeit, NameValueCollection-Parameter)  
+  
+ Dienst(WorkflowRuntime-Laufzeit)  
+  
+ Dienst(NameValueCollection-Parameter)  
+  
+ Dienst()  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRuntimeServiceElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diesen Konstruktor verwenden, müssen Sie <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Type%2A> explizit festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedAttribute">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.OnDeserializeUnrecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des nicht erkannten Attributs.</param>
+        <param name="value">Der Wert des nicht erkannten Attributs.</param>
+        <summary>Wird aufgerufen, wenn ein unbekanntes Attribut erkannt wird, während das <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement" /> deserialisiert wird.</summary>
+        <returns>
+          <see cref="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.OnDeserializeUnrecognizedAttribute(System.String,System.String)" /> gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das anhand des Namens und des Werts angegebene Name/Wert-Paar wird der <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Parameters%2A>-Auflistung hinzugefügt. Alle Attribute außer `type` , angegeben werden, ein <`add`> Element auf der <`Services`> Element in der Konfigurationsdatei als ein Name-Wert-Paar hinzugefügt werden der <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Parameters%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameter für diesen Dienst ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Specialized.NameValueCollection" />, die die Parameter für den Dienst angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den per Assembly qualifizierten Typnamen des Dienstes ab bzw. legt ihn fest.</summary>
+        <value>Der per Assembly qualifizierte Typname des Dienstes.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Versuch, <see cref="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Type" /> auf einen NULL-Verweis zu setzen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

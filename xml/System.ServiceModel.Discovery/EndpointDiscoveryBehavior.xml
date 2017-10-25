@@ -1,0 +1,222 @@
+<Type Name="EndpointDiscoveryBehavior" FullName="System.ServiceModel.Discovery.EndpointDiscoveryBehavior">
+  <TypeSignature Language="C#" Value="public class EndpointDiscoveryBehavior : System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointDiscoveryBehavior extends System.Object implements class System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.EndpointDiscoveryBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IEndpointBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Steuert den Inhalt der <see cref="T:System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />, die von einem Ermittlungsendpunkt zurückgegeben wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Verhalten wird verwendet, um die verschiedenen Ermittlungseinstellungen für einen Endpunkt zu konfigurieren, z. B. seine Ermittelbarkeit, seine Bereiche und seine benutzerdefinierten Erweiterungen zu seinen Metadaten. Ein Benutzer erstellt eine neue Instanz dieses Typs und fügt sie zum bestimmten Endpunkt hinzu, dessen <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> konfiguriert werden müssen. Die Instanz kann auch verwendet werden, um die Ermittlung bestimmter Endpunkte zu deaktivieren, die die <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A>-Eigenschaft verwenden. Beachten Sie, dass das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> auf einem Endpunkt ignoriert wird, wenn das <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> nicht vorhanden ist. Sie können keinen Endpunkt durch <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> sichtbar machen, ohne zunächst ein <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> zum Dienst hinzuzufügen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointDiscoveryBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.EndpointDiscoveryBehavior" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractTypeNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.XmlQualifiedName&gt; ContractTypeNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.XmlQualifiedName&gt; ContractTypeNames" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.ContractTypeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlQualifiedName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vertragstypnamen ab, die dem Endpunkt zugeordnet sind.</summary>
+        <value>Die Vertragstypnamen, die dem Endpunkt zugeordnet sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab oder legt diesen fest, der die Ermittelbarkeit des zugeordneten Endpunkts steuert.</summary>
+        <value>
+          <see langword="true" />Wenn der Endpunkt, andernfalls aktiviert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.Linq.XElement&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.Linq.XElement&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.Linq.XElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Endpunkt zugeordneten Erweiterungen ab.</summary>
+        <value>Eine Auflistung der dem Endpunkt zugeordneten Erweiterungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Erweiterung besteht aus beliebigen benutzerdefinierten XML-Metadaten, die Sie zu einem Endpunkt hinzufügen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Uri&gt; Scopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Uri&gt; Scopes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Endpunkt zugeordneten Bereiche ab.</summary>
+        <value>Eine Auflistung der Bereiche.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Bereich ist ein als Element verwendeter URI zum Identifizieren eines Diensts oder einer Gruppe mit Diensten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.System#ServiceModel#Description#IEndpointBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Nicht implementiert.</param>
+        <param name="bindingParameters">Nicht implementiert.</param>
+        <summary>Nicht implementiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Nicht implementiert.</param>
+        <param name="clientRuntime">Nicht implementiert.</param>
+        <summary>Nicht implementiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Nicht implementiert.</param>
+        <param name="endpointDispatcher">Nicht implementiert.</param>
+        <summary>Nicht implementiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.Validate (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.Validate(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.System#ServiceModel#Description#IEndpointBehavior#Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Nicht implementiert.</param>
+        <summary>Nicht implementiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,274 @@
+<Type Name="DataGridItemCollection" FullName="System.Web.UI.WebControls.DataGridItemCollection">
+  <TypeSignature Language="C#" Value="public class DataGridItemCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataGridItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.DataGridItem" />-Objekten in einem <see cref="T:System.Web.UI.WebControls.DataGrid" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGridItemCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.WebControls.DataGridItem> Objekte, die wiederum die Datenelemente in darstellen einer <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Programmgesteuertes Abrufen <xref:System.Web.UI.WebControls.DataGridItem> Objekte aus einer <xref:System.Web.UI.WebControls.DataGrid> steuern, verwenden Sie eine der folgenden Methoden:  
+  
+-   Verwenden Sie einen Indexer zum Abrufen einer einzelnes <xref:System.Web.UI.WebControls.DataGridItem> Objekt aus der Auflistung mithilfe der Arraynotation.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataGridItemCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der Auflistung in ein <xref:System.Array?displayProperty=nameWithType>, dieser dann Elemente aus der Auflistung abzurufenden verwendet werden können.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.DataGridItemCollection.GetEnumerator%2A> Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> Schnittstelle, die abzurufenden Elemente aus der Auflistung verwendet werden kann.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGridItemCollection.Count%2A> Eigenschaft gibt die Gesamtanzahl der Elemente in der Auflistung und wird häufig verwendet werden, um die Obergrenze der Auflistung zu bestimmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie durchlaufen <xref:System.Web.UI.WebControls.DataGridItem> Objekte in einem <xref:System.Web.UI.WebControls.DataGridItemCollection> Auflistung.  
+  
+ [!code-aspx-csharp[DataGridColumnVisible#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnVisible/CS/datagridcolumnvisiblecs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnVisible#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnVisible/VB/datagridcolumnvisiblevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridItemCollection (System.Collections.ArrayList items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridItemCollection.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="items">Ein <see cref="T:System.Collections.ArrayList" /> , enthält die Elemente, mit denen die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DataGridItemCollection> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes <see cref="T:System.Array" />, das die kopierten Elemente aus der <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" /> empfängt.</param>
+        <param name="index">Die erste Position in der angegebenen <see cref="T:System.Array" /> den kopierten Inhalt empfängt.</param>
+        <summary>Kopiert alle Elemente aus dieser <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" /> Auflistung mit dem angegebenen <see cref="T:System.Array" />, beginnend am angegebenen Index in die <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.DataGridItemCollection> in die angegebene Auflistung <xref:System.Array?displayProperty=nameWithType>, beginnend am angegebenen Index.  
+  
+> [!NOTE]
+>  Die `array` Parameter muss eine nullbasierte <xref:System.Array?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Web.UI.WebControls.DataGridItem" /> Objekte in der Auflistung.</summary>
+        <value>Die Anzahl von <see cref="T:System.Web.UI.WebControls.DataGridItem" />-Objekten in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridItemCollection.Count%2A> -Eigenschaft können Sie bestimmen die Anzahl der <xref:System.Web.UI.WebControls.DataGridItem> Objekte in der <xref:System.Web.UI.WebControls.DataGridItemCollection> Auflistung. Die <xref:System.Web.UI.WebControls.DataGridItemCollection.Count%2A> Eigenschaft wird üblicherweise beim Durchlaufen der Auflistung zum Bestimmen der oberen Grenze der Auflistung verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert die <see cref="T:System.Web.UI.WebControls.DataGridItem" /> Objekte in der <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" /> Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert <see cref="T:System.Web.UI.WebControls.DataGridItem" /> Objekte in der <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-implementiert-Objekt, das durchlaufen werden kann, um jedes Element abzurufen, der <xref:System.Web.UI.WebControls.DataGridItemCollection> Auflistung.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft, um das Element derzeit in der Auflistung verweist.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf seine anfängliche Position zu verschieben.  
+  
+> [!NOTE]
+>  Nach der Erstellung eine <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-Objekt oder mit implementiert die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung verschoben rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridItemCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.DataGridItem" /> Objekte in der <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" /> Auflistung kann geändert werden kann.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` gibt an, dass die <xref:System.Web.UI.WebControls.DataGridItemCollection> Auflistung in allen Fällen geschrieben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridItemCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" /> -Auflistung synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stammt aus dem <xref:System.Collections.ICollection?displayProperty=nameWithType> -Schnittstelle und wird überschrieben, um stets `false`.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataGridColumnCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataGridItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataGridItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataGridItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der aus der Auflistung abzurufende nullbasierte Index des <see cref="T:System.Web.UI.WebControls.DataGridItem" />.</param>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.DataGridItem" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.DataGridItem" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.DataGridItem> -Objekt aus der <xref:System.Web.UI.WebControls.DataGridItemCollection> Auflistung am angegebenen Index mithilfe der Arraynotation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridItemCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das verwendet werden kann, zum Synchronisieren des Zugriffs auf die <see cref="T:System.Web.UI.WebControls.DataGridItemCollection" /> Auflistung.</summary>
+        <value>Ein <see cref="T:System.Object" /> , die zum Synchronisieren des Zugriffs auf die Auflistung verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.DataGridItemCollection> Objekt selbst.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataGridColumnCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

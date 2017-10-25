@@ -1,0 +1,129 @@
+<Type Name="TableLayoutControlCollection" FullName="System.Windows.Forms.TableLayoutControlCollection">
+  <TypeSignature Language="C#" Value="public class TableLayoutControlCollection : System.Windows.Forms.Control.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableLayoutControlCollection extends System.Windows.Forms.Control/ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer("System.Windows.Forms.Design.TableLayoutControlCollectionCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.CodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von untergeordneten Steuerelementen in einem Tabellenlayoutcontainer dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutControlCollection> -Klasse stellt die Auflistung aller untergeordneten Steuerelemente in einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Diese Auflistung wird verfügbar gemacht, indem die <xref:System.Windows.Forms.TableLayoutPanel.Controls%2A> Eigenschaft von der <xref:System.Windows.Forms.TableLayoutPanel> Klasse. Sie verwalten und diese einzeln bearbeiten Mitglied über der Tabelle LayoutPanel-Element können die <xref:System.Windows.Forms.TableLayoutControlCollection> verfügbar gemacht werden, indem <xref:System.Windows.Forms.TableLayoutPanel.Controls%2A>.  
+  
+ Die <xref:System.Windows.Forms.TableLayoutControlCollection> Klasse ist eine geringfügige Spezialisierung die <xref:System.Windows.Forms.Control.ControlCollection> Basisklasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableLayoutControlCollection (System.Windows.Forms.TableLayoutPanel container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TableLayoutPanel container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutControlCollection.#ctor(System.Windows.Forms.TableLayoutPanel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.Forms.TableLayoutPanel" />
+      </Parameters>
+      <Docs>
+        <param name="container">Die <see cref="T:System.Windows.Forms.TableLayoutPanel" /> Steuerelement, das die Auflistung der Steuerelemente enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.TableLayoutControlCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Allgemeinen der Anwendungsprogrammierer direkt erstellt keine Instanzen der <xref:System.Windows.Forms.TableLayoutControlCollection> Klasse. Stattdessen ein Verweis auf ein vorhandenes <xref:System.Windows.Forms.TableLayoutControlCollection> wird zurückgegeben, durch die <xref:System.Windows.Forms.TableLayoutPanel.Controls%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (System.Windows.Forms.Control control, int column, int row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Windows.Forms.Control control, int32 column, int32 row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutControlCollection.Add(System.Windows.Forms.Control,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="column" Type="System.Int32" />
+        <Parameter Name="row" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, hinzufügen.</param>
+        <param name="column">Die Spalte in der <c>Steuerelement</c> eingefügt wird.</param>
+        <param name="row">Die Zeile in der <c>Steuerelement</c> eingefügt wird.</param>
+        <summary>Der Auflistung das angegebene Steuerelement hinzugefügt, und es auf die angegebene Zelle positioniert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit <xref:System.Windows.Forms.TableLayoutControlCollection.Add%2A>, können Sie angeben, die die Zellposition von `control`. Sie zuweisen können `control` auf eine bestimmte Zelle durch die Bereitstellung der `column` und `row` Parameter, oder Sie können, geben Sie nur den Wert Spalte oder Zeile, und lassen die <xref:System.Windows.Forms.TableLayoutPanel.LayoutEngine%2A> platzieren `control` bei der nächsten freien Zelle. Dies bezeichnet man lassen das Steuerelement *Fluss* auf seine Position in der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
+  
+ Legen Sie `column` auf-1 festgelegt, wenn Sie möchten `control` belegen eine festen Zeilenposition.  
+  
+ Legen Sie `row` auf-1 festgelegt, wenn Sie möchten `control` eine feste Spaltenposition einnehmen.  
+  
+ Wenn weder `column` noch `row` ist-1 und `control` wird der absolute Position vom hinzugefügt werden (`column`, `row`).  
+  
+ Wenn Sie beide Optionen festlegen `column` und `row` -1, `control` fließt in die erste offene Position mit dem bestimmten Flow-Verhalten definiert, indem die <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A?displayProperty=nameWithType> Wert. Dies entspricht der Verwendung der <xref:System.Windows.Forms.Control.ControlCollection.Add%2A?displayProperty=nameWithType> Methode.  
+  
+ Verwenden Sie zum Abrufen der tatsächlichen aktuellen Position eines Steuerelements die <xref:System.Windows.Forms.TableLayoutPanel.GetPositionFromControl%2A?displayProperty=nameWithType> Methode. Diese Methode berücksichtigt die gesamte <xref:System.Windows.Forms.TableLayoutPanel> Steuerelementzustand, einschließlich der Spalte oder Zeile Aufteilung und wann die <xref:System.Windows.Forms.TableLayoutPanel.LayoutEngine%2A?displayProperty=nameWithType> ein Steuerelement mit platziert hat seine `Column` und `Row` -Eigenschaft auf-1 festgelegt sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Entweder <paramref name="column" /> oder <paramref name="row" /> ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Container">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutPanel Container { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TableLayoutPanel Container" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutControlCollection.Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element <see cref="T:System.Windows.Forms.TableLayoutPanel" /> , die die Steuerelemente in der Auflistung enthält.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.TableLayoutPanel" /> , die die Steuerelemente in der aktuellen Auflistung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird festgelegt, indem die <xref:System.Windows.Forms.TableLayoutControlCollection.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

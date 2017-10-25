@@ -1,0 +1,1308 @@
+<Type Name="DataGridViewColumn" FullName="System.Windows.Forms.DataGridViewColumn">
+  <TypeSignature Language="C#" Value="public class DataGridViewColumn : System.Windows.Forms.DataGridViewBand, IDisposable, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewColumn extends System.Windows.Forms.DataGridViewBand implements class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewBand</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.DataGridViewColumnDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataGridViewColumnConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Spalte in einem <see cref="T:System.Windows.Forms.DataGridView" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewColumn> Klasse stellt eine logische Spalte in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Sie können Spalten durch Abrufen der <xref:System.Windows.Forms.DataGridView.Columns%2A> -Auflistung des Steuerelements.  
+  
+ Im Gegensatz zu einer <xref:System.Windows.Forms.DataGridViewRow>, enthält die tatsächliche Auflistung von Zellen in einem <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn> dient in erster Linie zum Anpassen der Darstellung und Verhalten der-Spalte Benutzeroberfläche (UI), z. B. die Spaltenbreite und die Zelle. Weitere Informationen zu Zellenstile, finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+ Typen, die Ableitung <xref:System.Windows.Forms.DataGridViewColumn> initialisieren i. d. r. die <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> Eigenschaft, um eine neue Instanz der einen zugehörigen Typ abgeleitet wurde. die <xref:System.Windows.Forms.DataGridViewCell> Klasse. Spalteneigenschaften, die für die Darstellung oder Verhalten für einzelne Zellen sind davon sind Wrapper für die entsprechenden Eigenschaften der Vorlagenzelle. Ändern eine dieser Eigenschaften für die Spalte automatisch ändert den Wert in der Zellenvorlage und auf alle Zellen in der Spalte. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein Windows Form mit einem <xref:System.Windows.Forms.DataGridView> und eine Reihe von Schaltflächen. Jede Schaltfläche Bezeichnung beschreibt einen Vorgang im Zusammenhang mit einer <xref:System.Windows.Forms.DataGridViewColumn> Eigenschaft, z. B. die erste und letzte Spalte austauschen (mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> Eigenschaft) oder Ändern des Texts Rand eines Spaltenheaders (mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A> Eigenschaft). Klicken auf eine Schaltfläche ändert sich die zugeordnete Eigenschaft von der <xref:System.Windows.Forms.DataGridViewColumn>.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#100)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#100)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Ableiten von <see cref="T:System.Windows.Forms.DataGridViewColumn" /> und der abgeleiteten Klasse neue Eigenschaften hinzugefügt haben, achten Sie darauf, dass Sie überschreiben die <see cref="M:System.Windows.Forms.DataGridViewColumn.Clone" /> Methode, um die neuen Eigenschaften bei Klonvorgängen kopiert. Sie sollten auch der Basisklasse aufrufen, <see cref="M:System.Windows.Forms.DataGridViewColumn.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewColumn" />-Klasse im Standardzustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewColumn (System.Windows.Forms.DataGridViewCell cellTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewCell cellTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumn.#ctor(System.Windows.Forms.DataGridViewCell)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cellTemplate" Type="System.Windows.Forms.DataGridViewCell" />
+      </Parameters>
+      <Docs>
+        <param name="cellTemplate">Eine vorhandene <see cref="T:System.Windows.Forms.DataGridViewCell" />, die als Vorlage verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewColumn" />-Klasse mit einer vorhandenen <see cref="T:System.Windows.Forms.DataGridViewCell" /> als Vorlage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> auf den Wert der Eigenschaft der `cellTemplate` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewAutoSizeColumnMode AutoSizeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode AutoSizeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.AutoSizeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Modus ab, in dem die Spalte automatisch ihre Breite anpasst, oder legt diesen Modus fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" />-Wert, der bestimmt, ob die Spalte ihre Breite automatisch anpasst und wie sie ihre bevorzugte Breite bestimmt. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das automatische Größenanpassungsverhalten der Spalte wird bestimmt durch den Wert des der <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> -Eigenschaft, die den Wert entspricht der der <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> -Eigenschaft für alle Werte außer <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, gibt an, dass der Wert aus der geerbtwird<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>Eigenschaft stattdessen.  
+  
+ Wenn die <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, zusammen mit anderen Spalten in diesem Modus die Größe der Spalte geändert wird. Alle Spalten der Füllmodus im Steuerelement teilen den verfügbaren Platz im Proportionen, die gemäß ihren <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> Eigenschaftswerte. Die für den Füllmodus verfügbare Breite wird durch Subtrahieren der Breite aller Spalten von der Breite des Clientbereichs des Steuerelements bestimmt. Wenn diese Breite kleiner als die kombinierten <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> Werte aller Füllmodus Spalten, die horizontale Bildlaufleiste angezeigt wird, werden alle Füllmodusspalten mit ihre Mindestbreite angezeigt und Benutzer Spaltenbreite ist deaktiviert. Weitere Informationen zu Spaltenfüllmodus, finden Sie unter [Spaltenfüllmodus im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+  
+ Wenn die <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaftensatz wird auf einen anderen Wert außer <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None>, verwaltet die Spalte ihre Breite, damit die Zellenwerte ohne Clipping vollständig angezeigt werden. In inhaltsbasierten Größenanpassungsmodi Größe Anpassungen auftreten, wenn der Inhalt der Zelle ändern, oder wenn <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> aktiviert ist, wenn Zeilenhöhe ändern. Einige inhaltsbasierten Größenanpassungsmodi können Sie die Größe der aktuell angezeigten Zeilen beschränken, um die Leistung zu steigern.  
+  
+ Nur Spalten mit einem <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> Eigenschaftswert `true` Größe geändert werden, und ändern die Sichtbarkeit einer Spalte verursacht keine Größe. Darüber hinaus kann nicht Spalten festgelegt sind, automatisch angepasst wird, der Benutzer die jeweilige Spaltenbreite mit der Maus anpassen.  
+  
+ Verwenden Sie zum Anpassen der Spaltenbreite programmgesteuert die <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> oder <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> Methoden oder Festlegen der Spalte <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> Eigenschaft.  
+  
+ Weitere Informationen zu automatischen Größenänderung inhaltsbasierten, finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erzwingt, dass eine Spalte aus, um seine Breite dem Inhalt automatisch angepasst. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#109](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#109)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#109](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#109)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#109](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#109)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert beim Festlegen dieser Eigenschaft ist ein <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" /> , der ungültig ist.</exception>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft angegebene Wert führt zu einer <see cref="P:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode" /> Wert <see cref="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader" /> für eine sichtbare Spalte Spaltenüberschriften sind ausgeblendet.  
+  
+ - oder -   
+  
+ Beim Festlegen dieser Eigenschaft angegebene Wert führt zu einer <see cref="P:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode" /> Wert <see cref="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill" /> für eine sichtbare Spalte, die eingefroren ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewCell CellTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCell CellTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.CellTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zum Erstellen neuer Zellen verwendete Vorlage ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.DataGridViewCell" />, nach der alle anderen Zellen in der Spalte erstellt werden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konstruktoren für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse diese Eigenschaft zu initialisieren. Der Standardkonstruktor legt die Eigenschaft auf `null`; der anderen Konstruktor kopiert die Zellvorlage aus dem entsprechenden Parameter.  
+  
+> [!NOTE]
+>  Ändern der Eigenschaften der Zellvorlage wirkt sofort die Benutzeroberfläche (UI) von vorhandenen Zellen der Spalte sich nicht. Diese Änderungen sind nur offensichtlich, nachdem die Spalte erneut generiert wird (z. B. durch die Sortierung der Spalte oder durch einen Aufruf der <xref:System.Windows.Forms.DataGridView.InvalidateColumn%2A?displayProperty=nameWithType> Methode).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.DataGridViewCell> als Vorlage für eine <xref:System.Windows.Forms.DataGridViewColumn>. Stil-Änderungen an eine beliebige Zelle in der Spalte wirken sich auf alle Zellen der Spalte aus. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#120)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#120)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellType">
+      <MemberSignature Language="C#" Value="public Type CellType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CellType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.CellType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Laufzeittyp der Zellvorlage ab.</summary>
+        <value>Der <see cref="T:System.Type" /> der <see cref="T:System.Windows.Forms.DataGridViewCell" />, die als Vorlage für diese Spalte verwendet wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Basistyp der <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> ist <xref:System.Windows.Forms.DataGridViewCell>. Verwenden Sie diese Eigenschaft, um den tatsächlichen abgeleiteten Typ zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumn.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieser Zelle.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die geklonte <see cref="T:System.Windows.Forms.DataGridViewBand" /> darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kontextmenü für die Spalte ab oder legt dieses fest.</summary>
+        <value>Der der aktuellen <see cref="T:System.Windows.Forms.ContextMenuStrip" /> zugeordnete <see cref="T:System.Windows.Forms.DataGridViewColumn" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Benutzer mit die rechten Maustaste im Bereich die Spalte "anzeigen" klickt, wird das Kontextmenü angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewColumn.ContextMenuStrip%2A> Eigenschaft hinzufügen von Funktionen zum Ändern der Hintergrundfarbe einer Zelle.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#130)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#130)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#130)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataPropertyName">
+      <MemberSignature Language="C#" Value="public string DataPropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataPropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.DataPropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataGridViewColumnDataPropertyNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.Forms.Design.DataMemberFieldConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datenquelleneigenschaft oder Datenbankspalte ab, an die <see cref="T:System.Windows.Forms.DataGridViewColumn" /> gebunden ist, oder legt diesen Namen fest.</summary>
+        <value>Der Name der Eigenschaft oder Datenbankspalte, die der <see cref="T:System.Windows.Forms.DataGridViewColumn" /> zugeordnet ist, bei dem die Groß-/Kleinschreibung beachtet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> -Eigenschaftensatz auf `true`, automatisch jede Spalte wird seine <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> -Eigenschaft auf den Namen einer Eigenschaft oder Spalte in der Datenquelle angegeben die <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft. Diese Bindung kann auch manuell, erfolgen die ist nützlich, wenn Sie nur eine Teilmenge der Eigenschaften oder verfügbaren Datenbankspalten in der Datenquelle angezeigt werden soll. Legen Sie in solchen Fällen die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> Eigenschaft, um `false`, und fügen Sie jedes manuell <xref:System.Windows.Forms.DataGridViewColumn>, Festlegen des Werts der einzelnen <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> Eigenschaft, um die Eigenschaften oder Datenbankspalten in der Datenquelle, die Sie anzeigen möchten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, welche Eigenschaft wählen jede Spalte darstellt.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView._CollectionBound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/CS/collectionbound.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridView._CollectionBound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/VB/collectionbound.vb#20)]  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView._CollectionBound#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/CS/collectionbound.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView._CollectionBound#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/VB/collectionbound.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCellStyle">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzellenformat der Spalte ab oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />, der den Standardstil der Zellen in der Spalte darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement zeigt seine Zellen mithilfe der Stile an, die von der Zelle angegeben <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> -Eigenschaft, die Stile aus anderen Eigenschaften vom Typ erbt <xref:System.Windows.Forms.DataGridViewCellStyle>. Für Zellen in dieser Spalte, die Stile angegeben, über die <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft überschreiben die Stile, die über die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> -Eigenschaft, jedoch außer Kraft gesetzt werden, indem die Stile, die über die <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>, und <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Weitere Informationen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft, um die inhaltsausrichtung der verschiedenen Spalten festzulegen.  
+  
+ [!code-csharp[System.Windows.Forms.GridViewContentAlignment#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GridViewContentAlignment/CS/changecolumnalignment.cs#1)]
+ [!code-vb[System.Windows.Forms.GridViewContentAlignment#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GridViewContentAlignment/VB/changecolumnalignment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayIndex">
+      <MemberSignature Language="C#" Value="public int DisplayIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzeigereihenfolge der Spalte relativ zu den derzeit angezeigten Spalten ab oder legt sie fest.</summary>
+        <value>Die nullbasierte Position der Spalte, wie sie in der zugeordneten <see cref="T:System.Windows.Forms.DataGridView" /> angezeigt wird, oder -1, wenn das Band nicht in einem Steuerelement enthalten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Windows.Forms.DataGridViewBand.Index%2A> -Eigenschaft, die <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> Eigenschaft entspricht der aktuellen Position der Spalte, wie von der Benutzeroberfläche (UI) angezeigt. Standardmäßig jede Spalte des <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> in aufsteigender Reihenfolge, die die Reihenfolge angibt, in der sie hinzugefügt wurden, Zahlen festgelegt ist. Die <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> Eigenschaftswert wirkt sich nicht die <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> Wert. Um die Anzeigeposition der einer Spalte basierend auf seine Sichtbarkeit oder eines anderen Umstands zu ermitteln, verwenden die <xref:System.Windows.Forms.DataGridViewColumnCollection.GetFirstColumn%2A>, <xref:System.Windows.Forms.DataGridViewColumnCollection.GetLastColumn%2A>, oder <xref:System.Windows.Forms.DataGridViewColumnCollection.GetNextColumn%2A> Methode der <xref:System.Windows.Forms.DataGridViewColumnCollection> Klasse.  
+  
+ Jede Spalte im Steuerelement verfügt über einen eindeutigen <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> Wert. Die Werte mit 0 beginnen und gehen Sie in numerische Reihenfolge ohne Werte überspringen. Wenn Sie ändern die <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> Wert für eine Spalte, die <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> Werte für andere Spalten geändert werden, um die neue Reihenfolge widerzuspiegeln.  
+  
+ Wenn die Spalte eine zugeordnete hat <xref:System.Windows.Forms.DataGridView> -Steuerelement, das Festlegen dieser Eigenschaft führt dazu, dass das Steuerelement selbst neu zeichnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> Eigenschaft, um die visuelle Position der ersten und letzten Spalten ausgetauscht. Beachten Sie, dass die einfügungen vor dem Auftreten der <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#170](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#170)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#170)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#170)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Windows.Forms.DataGridViewElement.DataGridView" />ist kein <see langword="null" /> und der angegebene Wert beim Festlegen dieser Eigenschaft kleiner als 0 oder größer als oder gleich der Anzahl der Spalten im Steuerelement.  
+  
+ - oder -   
+  
+ <see cref="P:System.Windows.Forms.DataGridViewElement.DataGridView" />ist <see langword="null" /> und der angegebene Wert beim Festlegen dieser Eigenschaft kleiner als-1 ist.  
+  
+ - oder -   
+  
+ Der angegebene Wert beim Festlegen dieser Eigenschaft entspricht <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumn.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.DataGridViewBand" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridViewColumn.Disposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="T:System.Windows.Forms.DataGridViewColumn" /> freigegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridViewColumn.Disposed> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridViewColumn> mit dem Namen `DataGridViewColumn1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridViewColumn.Disposed> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#370](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#370)]
+ [!code-vb[System.Windows.Forms.EventExamples#370](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#370)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DividerWidth">
+      <MemberSignature Language="C#" Value="public int DividerWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DividerWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.DividerWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite des Spaltenunterteilers in Pixel ab oder legt sie fest.</summary>
+        <value>Die Breite des Unterteilers (des rechten Rands der Spalte) in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich zum Bereitstellen einer visual Begrenzung zwischen fixierten Spalten und Spalten, die gescrollt werden können. Der zusätzliche Rand ist Teil der aktuellen Spalte zwar die Vordergrundfarbe der zugeordneten dauert <xref:System.Windows.Forms.DataGridView>. Der zusätzliche Rand erstreckt sich nicht auf den Bereich, in dem Benutzer doppelklicken können, um automatisch die Größe eine Spalte ändern, aus. Zum Ändern der Größe einer Spalteninhalts muss der Benutzer auf die Grenze zwischen den Unterteiler und die angrenzende Spalte doppelklicken.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel fügt eine vertikale Kante nach der dritten Spalte. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#110)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#110)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#110)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillWeight">
+      <MemberSignature Language="C#" Value="public float FillWeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 FillWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.FillWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Breite der Spalte im Füllmodus relativ zur Breite anderer im Steuerelement vorhandener Spalten im Füllmodus darstellt, oder legt diesen Wert fest.</summary>
+        <value>Ein <see cref="T:System.Single" />, der die Breite der Spalte im Füllmodus relativ zur Breite anderer Spalten im Füllmodus darstellt. Der Standard ist 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, die Spalte wird zusammen mit anderen Spalten in diesem Modus so angepasst, dass alle sichtbaren Spalten im Steuerelement genau die horizontale Breite des verfügbaren Anzeigebereichs ausfüllen. Alle Spalten der Füllmodus im Steuerelement teilen den verfügbaren Platz im Proportionen, die gemäß ihren <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> Eigenschaftswerte. Weitere Informationen zu Spaltenfüllmodus, finden Sie unter [Spaltenfüllmodus im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+  
+ Die maximale Summe von <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> Werte für alle Spalten in einem <xref:System.Windows.Forms.DataGridView> Steuerelement ist "65535".  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Beim Festlegen dieser Eigenschaft angegebene Wert ist kleiner als oder gleich 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Frozen">
+      <MemberSignature Language="C#" Value="public override bool Frozen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Frozen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.Frozen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine Spalte verschoben wird, wenn ein Benutzer einen horizontalen Bildlauf durch das <see cref="T:System.Windows.Forms.DataGridView" />-Steuerelement durchführt, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" /> zum Fixieren der Spalte, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Spalte fixiert ist, werden auch alle Spalten auf der linken Seite (oder rechts daneben in von rechts-nach-links-Sprachen) fixiert. Die fixierten und nicht fixierten Spalten bilden zwei Gruppen an. Wenn neupositionierung Einstellung, indem aktiviert ist die <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A> Eigenschaft `true`, der Benutzer kann keine Spalte aus einer Gruppe in den anderen ziehen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewBand.Frozen%2A?displayProperty=nameWithType> Eigenschaft, die nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewColumn> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewBand> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#7)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#7)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredWidth">
+      <MemberSignature Language="C#" Value="public virtual int GetPreferredWidth (System.Windows.Forms.DataGridViewAutoSizeColumnMode autoSizeColumnMode, bool fixedHeight);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetPreferredWidth(valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode autoSizeColumnMode, bool fixedHeight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth(System.Windows.Forms.DataGridViewAutoSizeColumnMode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="autoSizeColumnMode" Type="System.Windows.Forms.DataGridViewAutoSizeColumnMode" />
+        <Parameter Name="fixedHeight" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="autoSizeColumnMode">Ein <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" />-Wert, der einen Modus der automatischen Größenänderung angibt.</param>
+        <param name="fixedHeight">
+          <see langword="true" />, um die Breite der Spalte auf der Grundlage der aktuellen Zeilenhöhen zu berechnen, <see langword="false" />, um die Breite unter der Annahme zu berechnen, dass die Zeilenhöhen angepasst werden.</param>
+        <summary>Berechnet die ideale Breite der Spalte auf der Grundlage der angegebenen Kriterien.</summary>
+        <returns>Die ideale Breite der Spalte in Pixel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, durch die automatische größenanpassung inhaltsbasierten-Funktion von der <xref:System.Windows.Forms.DataGridView> Steuerelement, um die ideale Breite einer Spalte zu bestimmen.  
+  
+ Ein `fixedHeight` -Parameterwert `false` berechnet die Spaltenbreite basierend auf berechnete Zeilenhöhe, die ideale Höhe und Breite Verhältnis Zelle erreicht werden. Für den Inhalt der Zelle in mehrere Zeilen umbrochen werden soll, müssen der Zellenstil für die Zelle ein <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewTriState.True>.  
+  
+ Weitere Informationen zur automatischen Größenänderung finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="autoSizeColumnMode" /> ist <see cref="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet" />, <see cref="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None" /> oder <see cref="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="autoSizeColumnMode" /> ist kein gültiger <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderCell">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewColumnHeaderCell HeaderCell { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewColumnHeaderCell HeaderCell" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.HeaderCell" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumnHeaderCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.DataGridViewColumnHeaderCell" /> ab, die den Spaltenheader darstellt, oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.DataGridViewColumnHeaderCell" />, die die Headerzelle für die Spalte darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Header einer Spalte wird normalerweise verwendet, um eine spaltenbezeichnung anzuzeigen. Abhängig von der aktuellen Werte von der <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> und <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> Eigenschaften, Benutzer können auch den Spaltenüberschrift zum Sortieren, oder wählen Sie die Spalte klicken.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewColumn.HeaderCell%2A> Eigenschaft Spaltenkopfstil und Inhalt zu ändern.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#150](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#150)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#150)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#150)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Beschriftungstext für die Headerzelle der Spalte ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem gewünschten Text. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, nur, wenn die Spalte zugeordnete Headerzelle hat. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.DataGridViewBand.HeaderCellCore%2A>-Eigenschaft.  
+  
+> [!NOTE]
+>  Es ist keine entsprechende Headereigenschaft für Zeilen. Um Bezeichnungen im Zeilenheader anzuzeigen, müssen Sie behandeln die <xref:System.Windows.Forms.DataGridView.CellPainting?displayProperty=nameWithType> Ereignis und Paint eigene Bezeichnungen Wenn <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ColumnIndex%2A?displayProperty=nameWithType> ist-1.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A> Eigenschaft zum Ändern des Texts in der Kopfzeile der Spalte. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#160](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#160)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#160)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#160)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritedAutoSizeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewAutoSizeColumnMode InheritedAutoSizeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode InheritedAutoSizeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den für die Spalte gültigen Modus zum Festlegen der Größe ab.</summary>
+        <value>Der für die Spalte gültige <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das automatische Größenanpassungsverhalten der Spalte wird bestimmt durch den Wert des der <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> -Eigenschaft, die den Wert entspricht der der <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> -Eigenschaft für alle Werte außer <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, gibt an, dass der Wert aus der geerbtwird<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>Eigenschaft stattdessen.  
+  
+ Wenn die <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, die Spalte wird zusammen mit anderen Spalten in diesem Modus so angepasst, dass alle sichtbaren Spalten im Steuerelement genau die horizontale Breite des verfügbaren Anzeigebereichs ausfüllen. Alle Spalten der Füllmodus im Steuerelement teilen den verfügbaren Platz im Proportionen, die gemäß ihren <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> Eigenschaftswerte. Weitere Informationen zu Spaltenfüllmodus, finden Sie unter [Spaltenfüllmodus im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+  
+ Wenn die <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaftensatz wird auf einen anderen Wert außer <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None>, verwaltet die Spalte ihre Breite, damit die Zellenwerte ohne Clipping vollständig angezeigt werden. In inhaltsbasierten Größenanpassungsmodi Größe Anpassungen auftreten, wenn der Inhalt der Zelle ändern, oder wenn <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> aktiviert ist, wenn Zeilenhöhe ändern. Einige inhaltsbasierten Größenanpassungsmodi können Sie die Größe der aktuell angezeigten Zeilen beschränken, um die Leistung zu steigern.  
+  
+ Nur Spalten mit einem <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> Eigenschaftswert `true` Größe geändert werden, und ändern die Sichtbarkeit einer Spalte verursacht keine Größe. Darüber hinaus kann nicht Spalten festgelegt sind, automatisch angepasst wird, der Benutzer die jeweilige Spaltenbreite mit der Maus anpassen.  
+  
+ Verwenden Sie zum Anpassen der Spaltenbreite programmgesteuert die <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> oder <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> Methoden oder Festlegen der Spalte <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> Eigenschaft.  
+  
+ Weitere Informationen zu automatischen Größenänderung inhaltsbasierten, finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritedStyle">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCellStyle InheritedStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle InheritedStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.InheritedStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zellstil ab, der gegenwärtig auf die Spalte angewendet wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />, der den zum Anzeigen der Spalte verwendeten Zellstil darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, um zu bestimmen, welche Zellstile auf alle Zellen in einer Spalte unabhängig von der alle Zeilenstilen angewendet werden, die auch auf die Zellen angewendet werden. Die Spalte <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> -Eigenschaft erbt seine Werte aus den <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> und <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Weitere Informationen zur Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataBound">
+      <MemberSignature Language="C#" Value="public bool IsDataBound { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataBound" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.IsDataBound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Spalte an eine Datenquelle gebunden ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Spalte mit einer Datenquelle verbunden ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Spalte wird an eine Datenquelle gebunden, ist er Teil einer datengebundenen <xref:System.Windows.Forms.DataGridView>. Eine Spalte kann Teil einer datengebundenen <xref:System.Windows.Forms.DataGridView> , wenn die Spalte automatisch erstellt wird die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> -Eigenschaftensatz auf `true`, oder wenn der Spaltenwerts <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> -Eigenschaft wird festgelegt, wenn die Spalte manuell hinzugefügt wird die <xref:System.Windows.Forms.DataGridView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumWidth">
+      <MemberSignature Language="C#" Value="public int MinimumWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.MinimumWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(5)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Breite der Spalte in Pixel ab oder legt sie fest.</summary>
+        <value>Die Anzahl der Pixel, zwischen 2 und <see cref="F:System.Int32.MaxValue" />, mit der die minimale Breite der Spalte angegeben wird. Der Standard ist 5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> Eigenschaft legt eine Grenze auf wie eng die Spalte in der Benutzeroberfläche (UI) geändert werden kann. Die <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> kann Eigenschaft außer Kraft setzen die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die minimale Breite einer Spalte fest. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#107](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#107)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#107](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#107)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#107](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 2 oder größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Spalte ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.String" />, der den Namen der Spalte enthält. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt einen formalen Namen zugeordnete Spalte, die verwendet werden kann, um die Spalte in einer Auflistung zu identifizieren. Z. B. die <xref:System.Windows.Forms.DataGridViewColumnCollection.Remove%2A> und <xref:System.Windows.Forms.DataGridViewColumnCollection.Contains%2A> Methoden die <xref:System.Windows.Forms.DataGridViewColumnCollection> -Klasse verwenden die <xref:System.Windows.Forms.DataGridViewColumn.Name%2A> Eigenschaft. Der Name ist Groß-/Kleinschreibung. Die <xref:System.Windows.Forms.DataGridView> behandelt `column1` und `COLUMN1` als die gleiche Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Spaltenname festgelegt.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView._CollectionBound#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/CS/collectionbound.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView._CollectionBound#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/VB/collectionbound.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public override bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Benutzer die Zellen der Spalte bearbeiten kann, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Benutzer die Zellen der Spalte nicht bearbeiten kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> Eigenschaft wirkt sich auf die <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A?displayProperty=nameWithType> -Eigenschaft jeder Zelle in der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewBand.ReadOnly%2A?displayProperty=nameWithType> Eigenschaft, die nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewColumn> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewBand> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#11)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#11)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Eigenschaft wird festgelegt, um <see langword="false" /> für eine Spalte, die an eine schreibgeschützte Datenquelle gebunden ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resizable">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewTriState Resizable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewTriState Resizable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.Resizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Größe der Spalte geändert werden kann, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DataGridViewTriState" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DataGridViewTriState.True" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> Eigenschaft ist <xref:System.Windows.Forms.DataGridViewTriState.False>, der Benutzer wird nicht in der Lage, die Spaltenbreite manuell zu ändern.  
+  
+ Wird standardmäßig die <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> Eigenschaftswert basiert auf der <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType> Eigenschaftswert. Wenn Sie explizit festlegen, <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> auf <xref:System.Windows.Forms.DataGridViewTriState.True> oder <xref:System.Windows.Forms.DataGridViewTriState.False>, die Control-Wert wird jedoch ignoriert. Legen Sie <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> zu <xref:System.Windows.Forms.DataGridViewTriState.NotSet> um das Verhalten der Vererbung von Eigenschaftenwerten wiederherzustellen.  
+  
+ Da <xref:System.Windows.Forms.DataGridViewTriState.NotSet> Vererbung wiederhergestellt wird der Wert, der <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> Eigenschaft wird nie zurückgegeben. ein <xref:System.Windows.Forms.DataGridViewTriState.NotSet> -Wert, wenn die Spalte nicht hinzugefügt wurde eine <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn Sie bestimmen müssen, ob die <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> -Eigenschaftswert einer Spalte geerbt wird, überprüfen Sie die <xref:System.Windows.Forms.DataGridViewElement.State%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.DataGridViewElement.State%2A> Eigenschaftswert enthält die <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> Flag, das <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> Eigenschaftswert nicht geerbt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel verwendet diese Eigenschaft, um die Größe der dritten Spalte zu beheben, damit der Benutzer die Spaltenbreite nicht ändern kann.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.MouseBasedResizing#12](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/CPP/mousesizing.cpp#12)]
+ [!code-csharp[System.Windows.Forms.DataGridView.MouseBasedResizing#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/CS/mousesizing.cs#12)]
+ [!code-vb[System.Windows.Forms.DataGridView.MouseBasedResizing#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/VB/mousesizing.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Site der Spalte ab oder legt sie fest.</summary>
+        <value>Die der Spalte zugeordnete <see cref="T:System.ComponentModel.ISite" />, soweit vorhanden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewColumnSortMode SortMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewColumnSortMode SortMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.SortMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumnSortMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Sortiermodus für die Spalte ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewColumnSortMode" />, der die Kriterien zum Sortieren der Zeilen basierend auf den Zellenwerten in einer Spalte angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Windows.Forms.DataGridView> Steuerelement sortiert wird, verwenden eine Spalte mit einer <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>, ein Sortiersymbol wird automatisch angezeigt, in der Kopfzeile der Spalte.  
+  
+ Ab der [!INCLUDE[net_2015](~/includes/net-2015-md.md)], das Sortiersymbol wird gemäß den-DPI-Systemeinstellungen angepasst, wenn die Datei "App.config" den folgenden Eintrag enthält:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+```  
+  
+ Wenn das Steuerelement sortiert wird mithilfe einer Spalte mit einer <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>, Sie müssen das Sortiersymbol selbst anzeigen über die <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A> Eigenschaft.  
+  
+ Der Standardmodus für die Sortierung von einem <xref:System.Windows.Forms.DataGridViewTextBoxColumn> ist <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Ist der Standardmodus für die Sortierung für andere Spaltentypen <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>.  
+  
+ Die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Wert verhindert nicht, dass Sie eine Spalte programmgesteuert zu sortieren, obwohl andere Einschränkungen gelten können. Weitere Informationen finden Sie unter der Methode <xref:System.Windows.Forms.DataGridView.Sort%2A>.  
+  
+ Ein <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable> wird nicht verhindert, dass die <xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick?displayProperty=nameWithType> Ereignis aus, die auftreten, aber es wird verhindert, dass den Header seine Darstellung ändern, wenn darauf geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#066)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#066)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der Eigenschaft im Widerspruch zugewiesen <see cref="P:System.Windows.Forms.DataGridView.SelectionMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipText">
+      <MemberSignature Language="C#" Value="public string ToolTipText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.ToolTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den für QuickInfos verwendeten Text ab oder legt diesen fest.</summary>
+        <value>Der Text, der für die Spalte als QuickInfo angezeigt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spalte QuickInfo wird angezeigt, wenn der Mauszeiger auf die Spaltenüberschrift verbleibt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie QuickInfos einer Spalte festgelegt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#145](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#145)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#145](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#145)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#145](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#145)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die die Spalte beschreibt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der die Spalte beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.Object.ToString%2A?displayProperty=nameWithType> Methode. Enthält die zurückgegebene Zeichenfolge den <xref:System.Windows.Forms.DataGridViewColumn.Name%2A> und <xref:System.Windows.Forms.DataGridViewBand.Index%2A> Eigenschaften der <xref:System.Windows.Forms.DataGridViewColumn>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public Type ValueType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp der Werte in den Zellen der Spalte ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.Type" />, der die Laufzeitklasse der in den Zellen der Spalte gespeicherten Werte beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, wenn filtern oder sortieren die Spalten in Bezug auf den Inhalt ihrer Zellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> Eigenschaft bei der Initialisierung des eine <xref:System.Windows.Forms.DataGridViewComboBoxColumn> enthält <xref:System.Drawing.Color> Werte.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc2#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/cs/misc2.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc2#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/vb/misc2.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Spalte sichtbar ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Spalte sichtbar ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe dieser Eigenschaft blenden eine Spalte aus der Ansicht der Spalte der <xref:System.Windows.Forms.DataGridView>. Um eine Spalte vollständig zu entfernen, verwenden Sie die <xref:System.Windows.Forms.DataGridViewColumnCollection.Remove%2A?displayProperty=nameWithType> Methode.  
+  
+ Um eine Spalte auszublenden, die automatisch generiert wird, wenn die Bindung an eine Datenquelle, legen Sie diese Eigenschaft einer <xref:System.Windows.Forms.DataGridView.DataBindingComplete> -Ereignishandler.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewBand.Visible%2A?displayProperty=nameWithType> Eigenschaft, die nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewColumn> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewBand> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#9)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#9)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumn.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Breite der Spalte ab oder legt sie fest.</summary>
+        <value>Die Breite der Spalte in Pixel. Der Standard ist 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn beim Festlegen dieser Eigenschaft angegebene Wert kleiner als der Wert, der ist die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> -Eigenschaft, die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> Eigenschaftswert wird stattdessen verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die Breite einer Spalte fest. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#108](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#108)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#108](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#108)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#108](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Beim Festlegen dieser Eigenschaft angegebene Wert ist größer als 65536.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

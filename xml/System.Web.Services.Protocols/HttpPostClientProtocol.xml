@@ -1,0 +1,99 @@
+<Type Name="HttpPostClientProtocol" FullName="System.Web.Services.Protocols.HttpPostClientProtocol">
+  <TypeSignature Language="C#" Value="public class HttpPostClientProtocol : System.Web.Services.Protocols.HttpSimpleClientProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpPostClientProtocol extends System.Web.Services.Protocols.HttpSimpleClientProtocol" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.HttpPostClientProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.HttpSimpleClientProtocol</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Basisklasse für XML-Webdienst-Clientproxys, die das HTTP-POST-Protokoll verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein XML-Webdienstclient verwendet das HTTP-POST-Protokoll von Standardparametern innerhalb des HTTP-Texts mithilfe von URL-Codierungsregeln codiert, und plain XML für die Antwort verwendet. Dieses Protokoll wird von abgeleiteten Klassen verwendet <xref:System.Web.Services.Protocols.MimeFormatter> zum Codieren von Parametern und Werten in standard-MIME-Formate zurückgeben. Der Encoder verwenden, werden in der dienstbeschreibung angegeben.  
+  
+ Wenn Sie einem XML-Webdienstclient mithilfe von ASP.NET, dann erstellen eine Proxyklasse indirekt oder direkt vom <xref:System.Web.Services.Protocols.WebClientProtocol> muss für den XML-Webdienst erstellt werden, aufgerufen werden soll. Wenn der XML-Webdienstclient mithilfe von HTTP aufruft, leiten Sie die Proxyklasse <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol>, der wiederum abgeleitet aus <xref:System.Web.Services.Protocols.WebClientProtocol>.  
+  
+ <xref:System.Web.Services.Protocols.HttpGetClientProtocol>und <xref:System.Web.Services.Protocols.HttpPostClientProtocol> abgeleitet <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol>, stellen die Unterstützung für eine XML-Webdienstmethode mithilfe von HTTP-GET und HTTP-POST aufrufen. Clients einen XML-Webdienst, der über SOAP aufgerufen abgeleitet sollten <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>.  
+  
+ Ausführliche Informationen zum Erstellen einer Proxyklasse finden Sie unter [&#91;\< Topic://cpconcreatingwebserviceproxy > &#93; ](http://msdn.microsoft.com/en-us/142d91f5-3249-4cfc-a431-1f3acb76d756).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Proxyklasse, die vom Dienstprogramm Wsdl.exe für generiert die `Math` XML-Webdienst, die weiter unten. Die Proxy-Klasse abgeleitet <xref:System.Web.Services.Protocols.HttpPostClientProtocol>, der von der abstrakten abgeleitet <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol> Klasse.  
+  
+ [!code-cpp[Classic HttpPostClientProtocol Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpPostClientProtocol Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpPostClientProtocol Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpPostClientProtocol Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpPostClientProtocol Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpPostClientProtocol Example/VB/source.vb#1)]  
+  
+ Im folgende Beispiel wird die `Math` XML-Webdienst, von dem die vorherige Proxy-Klasse erstellt wurde.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpPostClientProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpPostClientProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.HttpPostClientProtocol" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[HttpPostClientProtocol_Constructor#1](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpPostClientProtocol_Constructor/CPP/httppostclientprotocol_constructor.cpp#1)]
+ [!code-csharp[HttpPostClientProtocol_Constructor#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpPostClientProtocol_Constructor/CS/httppostclientprotocol_constructor.cs#1)]
+ [!code-vb[HttpPostClientProtocol_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpPostClientProtocol_Constructor/VB/httppostclientprotocol_constructor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebRequest">
+      <MemberSignature Language="C#" Value="protected override System.Net.WebRequest GetWebRequest (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Net.WebRequest GetWebRequest(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpPostClientProtocol.GetWebRequest(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die <see cref="T:System.Uri" /> beim Erstellen der <see cref="T:System.Net.WebRequest" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Net.WebRequest" /> Instanz für den angegebenen URI.</summary>
+        <returns>Die <see cref="T:System.Net.WebRequest" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die Basisversion der <xref:System.Web.Services.Protocols.WebClientProtocol.GetWebRequest%2A> um anzugeben, dass die HTTP-Anforderung an den XML-Webdienst erfolgt mithilfe von HTTP-POST. Durch diese Methode überschreiben, können Sie Anpassen der <xref:System.Net.WebRequest> Objekt, bevor die XML-Dienst webanforderung gemacht wird. Beispielsweise können Sie einen benutzerdefinierten Header der Anforderung hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="uri" /> Parameter ist null oder hat eine Länge von 0 (null).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

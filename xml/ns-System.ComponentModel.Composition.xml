@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition">
+  <Docs>
+    <summary>Dieser Namespace enthält Klassen, die den Kern des Managed Extensibility Framework oder MEF bilden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

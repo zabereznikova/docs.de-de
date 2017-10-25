@@ -1,0 +1,183 @@
+<Type Name="FolderLevelBuildProvider" FullName="System.Web.Configuration.FolderLevelBuildProvider">
+  <TypeSignature Language="C#" Value="public sealed class FolderLevelBuildProvider : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FolderLevelBuildProvider extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.FolderLevelBuildProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Konfigurationseinstellungen, die verwendet werden kann die <see cref="T:System.Web.Compilation.BuildProvider" /> Klasse für bestimmte Ordner.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird für die ASP.NET-Buildumgebung <xref:System.Web.Configuration.FolderLevelBuildProvider> Objekte zum Generieren von Quellcode für verschiedene Dateitypen und Unterordner in einer Anwendung. Die von der abgeleiteten Klassen der <xref:System.Web.Configuration.FolderLevelBuildProvider> Klasse generieren von Quellcode für Ordner z. B. "bin", App_GlobalResources, App_LocalResources, App_WebReferences, App_Browsers, Design und anderen benutzerdefinierten Ordnern. Normalerweise erstellen Sie keine Instanz von der <xref:System.Web.Configuration.FolderLevelBuildProvider> -Klasse direkt verwendet. Stattdessen implementieren Sie eine Klasse, die abgeleitet <xref:System.Web.Compilation.BuildProvider> und Anwenden der <xref:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute> , Klasse, und konfigurieren Sie die abgeleitete Klasse zur Verwendung in der ASP.NET-Buildumgebung. Die <xref:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute> Klasse abzielt, Ordnern, statt Dateien.  
+  
+ Verwenden Sie Instanzen der <xref:System.Web.Configuration.FolderLevelBuildProvider> -Klasse zusammen mit <xref:System.Web.Compilation.AssemblyBuilder> Objekte, um eine oder mehrere Dateien in einer kompilierten Assembly zu erstellen. Die <xref:System.Web.Configuration.FolderLevelBuildProvider> Instanz generiert Quellcode in der entsprechenden Sprache für einzelne Dateien und die <xref:System.Web.Compilation.AssemblyBuilder> Objekt erstellt, den Quellcode von jedem <xref:System.Web.Configuration.FolderLevelBuildProvider> Instanz in einer einzelnen Assembly.  
+  
+ Die <xref:System.Web.Configuration.FolderLevelBuildProvider> Klasse wird angegeben, der `configuration` Abschnitt der Datei "Web.config".  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie einen Buildanbieter mit dem Namen hinzugefügt `BuildProvider1` in die Datei "Web.config".  
+  
+```  
+<compilation>  
+  <folderLevelBuildProviders>  
+    <add type="BuildProvider1, Assembly1,Version=1.0.0.0,    
+        PublicKeyToken=xxxxx"/>  
+  </folderLevelBuildProviders>  
+</compilation>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FolderLevelBuildProvider (string name, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.FolderLevelBuildProvider.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Bezeichner für die <see cref="T:System.Web.Compilation.BuildProvider" /> verwenden.</param>
+        <param name="type">Der vollqualifizierte Name des der <see cref="T:System.Web.Compilation.BuildProvider" /> verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> -Klasse unter Verwendung eines Bezeichners und den vollqualifizierten Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.FolderLevelBuildProvider.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Das Build-Anbieter zu vergleichende Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein angegebenes Objekt gleich dem aktuellen ist <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Ordnerebene Anbieterobjekt erstellt ist mit dem aktuellen Objekt identisch. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.FolderLevelBuildProvider.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Hash für die <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> Objekt.</summary>
+        <returns>Der Hashcode für die <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert eine ganze Zahl, die verwendet werden kann, um das Objekt "Ordner" Ebene Build Anbieter zu identifizieren. Diese Methode erbt von der <xref:System.Object.GetHashCode%2A> Methode. Die <xref:System.Object.GetHashCode%2A> Methode eignet sich für Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FolderLevelBuildProvider.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" />-Objekts ab oder legt ihn fest.</summary>
+        <value>Der Name des Build-Anbieterobjekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FolderLevelBuildProvider.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FolderLevelBuildProvider.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vollqualifizierten Namen der Build-Klasse.</summary>
+        <value>Der vollqualifizierte Name der Build-Klasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

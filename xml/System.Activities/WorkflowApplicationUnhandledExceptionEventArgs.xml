@@ -1,0 +1,129 @@
+<Type Name="WorkflowApplicationUnhandledExceptionEventArgs" FullName="System.Activities.WorkflowApplicationUnhandledExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationUnhandledExceptionEventArgs : System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowApplicationUnhandledExceptionEventArgs extends System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.WorkflowApplicationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen zu einer nicht behandelten Ausnahme bereit, die in einer Workflowinstanz aufgetreten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme von einer Aktivität ausgelöst und nicht behandelt wird, ist das Beenden der Workflowinstanz das Standardverhalten. Wenn ein <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler vorhanden ist, kann dieser das Standardverhalten überschreiben. Mit diesem Handler kann der Autor des Workflowhosts die angemessene Behandlung bereitstellen, z. B. benutzerdefinierte Protokollierung, Abbruch des Workflows oder Beenden des Workflows.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird beendet.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExceptionSource">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity ExceptionSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity ExceptionSource" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktivität ab, bei der es sich um die Quelle der unbehandelten Ausnahme handelt.</summary>
+        <value>Eine Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme von einer Aktivität ausgelöst und nicht behandelt wird, ist das Beenden der Workflowinstanz das Standardverhalten. Wenn ein <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler vorhanden ist, kann dieser das Standardverhalten überschreiben. Mit diesem Handler kann der Autor des Workflowhosts die angemessene Behandlung bereitstellen, z. B. benutzerdefinierte Protokollierung, Abbruch des Workflows oder Beenden des Workflows.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird beendet.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionSourceInstanceId">
+      <MemberSignature Language="C#" Value="public string ExceptionSourceInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExceptionSourceInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSourceInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner der Aktivitätsinstanz ab, die die Quelle der nicht behandelten Ausnahme ist.</summary>
+        <value>Ein eindeutiger Bezeichner der Aktivitätsinstanz, die die Quelle der nicht behandelten Ausnahme ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme von einer Aktivität ausgelöst und nicht behandelt wird, ist das Beenden der Workflowinstanz das Standardverhalten. Wenn ein <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler vorhanden ist, kann dieser das Standardverhalten überschreiben. Mit diesem Handler kann der Autor des Workflowhosts die angemessene Behandlung bereitstellen, z. B. benutzerdefinierte Protokollierung, Abbruch des Workflows oder Beenden des Workflows.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird beendet.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhandledException">
+      <MemberSignature Language="C#" Value="public Exception UnhandledException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception UnhandledException" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.UnhandledException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Exception" /> ab, die von der Workflowinstanz nicht behandelt wurde.</summary>
+        <value>Die <see cref="T:System.Exception" />, die von der Workflowinstanz nicht behandelt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme von einer Aktivität ausgelöst und nicht behandelt wird, ist das Beenden der Workflowinstanz das Standardverhalten. Wenn ein <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler vorhanden ist, kann dieser das Standardverhalten überschreiben. Mit diesem Handler kann der Autor des Workflowhosts die angemessene Behandlung bereitstellen, z. B. benutzerdefinierte Protokollierung, Abbruch des Workflows oder Beenden des Workflows.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird beendet.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

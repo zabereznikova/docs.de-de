@@ -1,0 +1,92 @@
+<Type Name="ReferralChasingOptions" FullName="System.DirectoryServices.Protocols.ReferralChasingOptions">
+  <TypeSignature Language="C#" Value="public enum ReferralChasingOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReferralChasingOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.ReferralChasingOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.ReferralChasingOptions" /> Enumeration gibt an, ob und wie Referral nachjagen verfolgt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ReferralChasingOptions All = int32(96)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ReferralChasingOptions.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ReferralChasingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Referenzen Sie entweder den untergeordneten oder externen Typ. Der Wert ist gleich 96 oder 0 x 60.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="External" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ReferralChasingOptions External = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ReferralChasingOptions.External" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ReferralChasingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Externe Verweise nachverfolgen. Der Wert ist gleich 64 oder 0 x 40.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ReferralChasingOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ReferralChasingOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ReferralChasingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die genannten Server nie auswerten. Festlegen dieser Option wird verhindert, dass einen Client Kontakt zu anderen Servern in einem Prozess Verweis. Der Wert ist gleich 0 oder 0 x 0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Subordinate">
+      <MemberSignature Language="C#" Value="Subordinate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.ReferralChasingOptions Subordinate = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.ReferralChasingOptions.Subordinate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.ReferralChasingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Auswerten Sie nur untergeordnete Referenzen, die einen untergeordneten Namenskontext in einer Verzeichnisstruktur sind. Der ADSI-LDAP-Anbieter wird immer deaktiviert dieses Flag für die seitenweise Suche. Der Wert ist gleich 32 oder 0 x 20.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

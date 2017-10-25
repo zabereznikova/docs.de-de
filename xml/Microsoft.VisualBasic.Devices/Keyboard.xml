@@ -1,0 +1,530 @@
+<Type Name="Keyboard" FullName="Microsoft.VisualBasic.Devices.Keyboard">
+  <TypeSignature Language="C#" Value="public class Keyboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Keyboard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.Keyboard" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften für den Zugriff auf den aktuellen Zustand der Tastatur bereit, z.B. welche Tasten werden gerade gedrückt? Außerdem bietet es eine Methode, mit der Sie Tastatureingaben an ein aktives Fenster schicken können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Keyboard` Objekt stellt eine Schnittstelle auf der Tastatur des Computers bereit. Die Eigenschaften der `My.Computer.Keyboard` enthalten Informationen über den Zustand verschiedener Sondertasten. Die `My.Computer.Keyboard.SendKeys` -Methode können Sie die Schlüssel zum aktiven Fenster zu senden, als ob sie über die Tastatur eingegeben wurden.  
+  
+## <a name="tasks"></a>Aufgaben  
+ Die folgende Tabelle enthält ein Beispiel für eine Aufgabe mit der `My.Computer.Keyboard` Objekt.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Senden von Tastatureingaben zu einer Anwendung|[Vorgehensweise: Starten von Anwendungen und Senden von Tastatureingaben (Visual Basic)](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.CtrlKeyDown` Eigenschaft, um zu bestimmen, ob die STRG-Taste gedrückt wird.  
+  
+ [!code-vb[VbVbalrMyComputer#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#36)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Keyboard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Keyboard.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Devices.Keyboard" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AltKeyDown">
+      <MemberSignature Language="C#" Value="public bool AltKeyDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AltKeyDown" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="Boolean" /> , der angibt, ob die ALT-Taste gedrückt ist.</summary>
+        <value>Ein <see langword="Boolean" /> Wert: <see langword="True" /> , wenn die ALT-Taste, andernfalls unten ist <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Keyboard.AltKeyDown` Eigenschaft bietet ähnliche Funktionen der <xref:System.Windows.Forms.Control.ModifierKeys%2A> Eigenschaft.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.AltKeyDown` Eigenschaft, um zu bestimmen, ob die ALT-Taste des Computers nicht ausgeführt wird.  
+  
+ [!code-vb[VbVbalrMyComputer#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapsLock">
+      <MemberSignature Language="C#" Value="public bool CapsLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CapsLock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.CapsLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="Boolean" /> , der angibt, wenn die FESTSTELLTASTE aktiviert ist.</summary>
+        <value>Ein <see langword="Boolean" /> Wert: <see langword="True" /> Wenn die FESTSTELLTASTE aktiviert ist, und andernfalls <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur der Status der FESTSTELLTASTE wird zurückgegeben.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.CapsLock` Eigenschaft, um zu bestimmen, ob die FESTSTELLTASTE aktiviert ist.  
+  
+ [!code-vb[VbVbalrMyComputer#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CtrlKeyDown">
+      <MemberSignature Language="C#" Value="public bool CtrlKeyDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CtrlKeyDown" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="Boolean" /> , der angibt, ob STRG-Taste gedrückt ist.</summary>
+        <value>Ein <see langword="Boolean" />-Wert. <see langword="True" />Wenn eine STRG-Taste gedrückt ist; andernfalls <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Keyboard.CtrlKeyDown` Eigenschaft bietet ähnliche Funktionen der <xref:System.Windows.Forms.Control.ModifierKeys%2A> Eigenschaft.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.CtrlKeyDown` Eigenschaft, um zu bestimmen, ob die STRG-Taste gedrückt ist.  
+  
+ [!code-vb[VbVbalrMyComputer#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumLock">
+      <MemberSignature Language="C#" Value="public bool NumLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NumLock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.NumLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="Boolean" /> , der angibt, wenn die NUM-Taste auf befindet.</summary>
+        <value>Ein <see langword="Boolean" />-Wert. <see langword="True" />Wenn die NUM aktiviert ist; andernfalls <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur der Status der NUM-Taste wird zurückgegeben.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.NumLock` Eigenschaft, um zu bestimmen, ob die NUM-Taste auf befindet.  
+  
+ [!code-vb[VbVbalrMyComputer#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollLock">
+      <MemberSignature Language="C#" Value="public bool ScrollLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScrollLock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="Boolean" /> , der angibt, ob die FESTSTELLTASTE aktiviert ist.</summary>
+        <value>Ein <see langword="Boolean" />-Wert. <see langword="True" />Wenn Rollen aktiviert ist; andernfalls <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur der Status des Rollen-Taste wird zurückgegeben.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.ScrollLock` Eigenschaft, um zu bestimmen, ob das SCROLL-Taste aktiviert ist.  
+  
+ [!code-vb[VbVbalrMyComputer#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendKeys">
+      <MemberSignature Language="C#" Value="public void SendKeys (string keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SendKeys(string keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Keyboard.SendKeys(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein <see langword="String" /> , definiert die Schlüssel zu senden.</param>
+        <summary>Sendet eine oder mehrere Tastatureingaben an das aktive Fenster, wie auf der Tastatur eingegeben haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Keyboard.SendKeys` Methode bietet ähnliche Funktionen der <xref:System.Windows.Forms.SendKeys.Send%2A> und <xref:System.Windows.Forms.SendKeys.SendWait%2A> Methoden.  
+  
+ Die `wait` Argument ist hilfreich, wenn die andere Anwendung beendet werden muss, bevor Ihre Anwendung fortgesetzt werden kann.  
+  
+> [!NOTE]
+>  Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, Sie können mithilfe dieser Klasse innerhalb der aktuellen Anwendung, manuell wählen Sie das Fenster, um die Schlüssel zum Senden oder verwenden Sie die Windows-API-Methoden, wie z. B. `FindWindow` und `SetForegroundWindow`, um den Fokus auf erzwingen andere Anwendungen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+  
+ Die `keys` -Argument kann eine beliebige Taste, einzelne oder eine beliebige Taste, kombiniert mit ALT, STRG oder UMSCHALT (oder eine beliebige Kombination aus diesen Schlüsseln) angeben. Jeder Schlüssel wird durch eine oder mehrere Zeichen dargestellt, wie z. B. `a` für das Zeichen "a", oder `{ENTER}` für die EINGABETASTE.  
+  
+ Stellen Sie einen Schlüssel mit UMSCHALT zu kombinieren, die Tastencode voran `+` (Pluszeichen). Stellen Sie die Tastencode voran, um einen Schlüssel mit STRG zu kombinieren, `^` (Caretzeichen). Stellen Sie die Tastencode voran, um einen Schlüssel mit ALT zu kombinieren, `%` (Prozentzeichen). Um sich wiederholende anzugeben, verwenden Sie das Formular `{` *Taste Anzahl*`}`. Darf höchstens ein Leerzeichen zwischen *Schlüssel* und *Anzahl*. Beispielsweise `{LEFT 42}` bedeutet "klicken Sie auf die links-Taste 42 Mal"; `{h 10}` bedeutet, dass "klicken Sie auf 'h' 10-Mal."  
+  
+ Die folgende Tabelle enthält die Codes, die verwendet werden können, um Zeichen anzugeben, die nicht angezeigt werden, wenn Sie den entsprechenden Schlüssel (z. B. EINGABETASTE oder TAB) drücken.  
+  
+|Key|Code|  
+|-|-|  
+|RÜCKTASTE|{RÜCKTASTE} oder {BS}|  
+|UNTERBRECHEN|{UNTERBRECHEN}|  
+|FESTSTELLTASTE|{CAPSLOCK}|  
+|DEAKTIVIEREN|{LÖSCHEN}|  
+|DELETE|{Löschen} oder {DEL}|  
+|NACH-UNTEN-TASTE|{NACH UNTEN}|  
+|ENDE|{END}|  
+|Geben Sie (Zehnertastatur)|{EINGEBEN}|  
+|EINGABETASTE|~|  
+|ESC|{ESCAPE} oder {ESC}|  
+|HILFE|{HELP}|  
+|START|{HOME}|  
+|INS|{INSERT}|  
+|NACH-LINKS|{LEFT}|  
+|NUM-TASTE|{NUM-TASTE}|  
+|BILD-AB|{BILD}|  
+|BILD-AUF|{BILD-AUF}|  
+|EINGABETASTE|{RETURN}|  
+|NACH-RECHTS|{RIGHT}|  
+|ROLLEN|{SCROLLLOCK}|  
+|TAB|REGISTERKARTE "{"}|  
+|NACH-OBEN-TASTE|{NACH}|  
+|F1 bis F15|{F1} bis {F15}|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.SendKeys` Methode zum Senden von Tastatureingaben auf eine externe Anwendung, die Rechner-Anwendung gestartet, indem die `Shell` Funktion.  
+  
+ [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]  
+  
+ Eine <xref:System.ArgumentException>-Ausnahme wird ausgegeben, wenn eine Anwendung mit dem angeforderten Prozessbezeichner nicht gefunden werden kann.  
+  
+ Ein Aufruf der `Shell`-Funktion erfordert volles Vertrauen (<xref:System.Security.SecurityException>-Klasse).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Eine teilweise vertrauenswürdigen Kontext vorhanden ist, in denen dem Benutzer fehlen die erforderlichen Berechtigungen.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">Steuert die Berechtigungen in Bezug auf Benutzeroberflächen und die Zwischenablage. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendKeys">
+      <MemberSignature Language="C#" Value="public void SendKeys (string keys, bool wait);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SendKeys(string keys, bool wait) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Keyboard.SendKeys(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+        <Parameter Name="wait" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein <see langword="String" /> , definiert die Schlüssel zu senden.</param>
+        <param name="wait">Dies ist optional. Ein <see langword="Boolean" /> , der angibt, ob auf Tastatureingaben verarbeitet werden, bevor die Anwendung weiterhin gewartet werden soll. <see langword="True" /> standardmäßig.</param>
+        <summary>Sendet eine oder mehrere Tastatureingaben an das aktive Fenster, wie auf der Tastatur eingegeben haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Keyboard.SendKeys` Methode bietet ähnliche Funktionen der <xref:System.Windows.Forms.SendKeys.Send%2A> und <xref:System.Windows.Forms.SendKeys.SendWait%2A> Methoden.  
+  
+ Die `wait` Argument ist hilfreich, wenn die andere Anwendung beendet werden muss, bevor Ihre Anwendung fortgesetzt werden kann.  
+  
+> [!NOTE]
+>  Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, Sie können mithilfe dieser Klasse innerhalb der aktuellen Anwendung, manuell wählen Sie das Fenster, um die Schlüssel zum Senden oder verwenden Sie die Windows-API-Methoden, wie z. B. `FindWindow` und `SetForegroundWindow`, um den Fokus auf erzwingen andere Anwendungen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+  
+ Die `keys` -Argument kann eine beliebige Taste, einzelne oder eine beliebige Taste, kombiniert mit ALT, STRG oder UMSCHALT (oder eine beliebige Kombination aus diesen Schlüsseln) angeben. Jeder Schlüssel wird durch eine oder mehrere Zeichen dargestellt, wie z. B. `a` für das Zeichen "a", oder `{ENTER}` für die EINGABETASTE.  
+  
+ Stellen Sie einen Schlüssel mit UMSCHALT zu kombinieren, die Tastencode voran `+` (Pluszeichen). Stellen Sie die Tastencode voran, um einen Schlüssel mit STRG zu kombinieren, `^` (Caretzeichen). Stellen Sie die Tastencode voran, um einen Schlüssel mit ALT zu kombinieren, `%` (Prozentzeichen). Um sich wiederholende anzugeben, verwenden Sie das Formular `{` *Taste Anzahl*`}`. Darf höchstens ein Leerzeichen zwischen *Schlüssel* und *Anzahl*. Beispielsweise `{LEFT 42}` bedeutet "klicken Sie auf die links-Taste 42 Mal"; `{h 10}` bedeutet, dass "klicken Sie auf 'h' 10-Mal."  
+  
+ Die folgende Tabelle enthält die Codes, die verwendet werden können, um Zeichen anzugeben, die nicht angezeigt werden, wenn Sie den entsprechenden Schlüssel (z. B. EINGABETASTE oder TAB) drücken.  
+  
+|Key|Code|  
+|-|-|  
+|RÜCKTASTE|{RÜCKTASTE} oder {BS}|  
+|UNTERBRECHEN|{UNTERBRECHEN}|  
+|FESTSTELLTASTE|{CAPSLOCK}|  
+|DEAKTIVIEREN|{LÖSCHEN}|  
+|DELETE|{Löschen} oder {DEL}|  
+|NACH-UNTEN-TASTE|{NACH UNTEN}|  
+|ENDE|{END}|  
+|Geben Sie (Zehnertastatur)|{EINGEBEN}|  
+|EINGABETASTE|~|  
+|ESC|{ESCAPE} oder {ESC}|  
+|HILFE|{HELP}|  
+|START|{HOME}|  
+|INS|{INSERT}|  
+|NACH-LINKS|{LEFT}|  
+|NUM-TASTE|{NUM-TASTE}|  
+|BILD-AB|{BILD}|  
+|BILD-AUF|{BILD-AUF}|  
+|EINGABETASTE|{RETURN}|  
+|NACH-RECHTS|{RIGHT}|  
+|ROLLEN|{SCROLLLOCK}|  
+|TAB|REGISTERKARTE "{"}|  
+|NACH-OBEN-TASTE|{NACH}|  
+|F1 bis F15|{F1} bis {F15}|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.SendKeys` Methode zum Senden von Tastatureingaben auf eine externe Anwendung, die Rechner-Anwendung gestartet, indem die `Shell` Funktion.  
+  
+ [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]  
+  
+ Eine <xref:System.ArgumentException>-Ausnahme wird ausgegeben, wenn eine Anwendung mit dem angeforderten Prozessbezeichner nicht gefunden werden kann.  
+  
+ Ein Aufruf der `Shell`-Funktion erfordert volles Vertrauen (<xref:System.Security.SecurityException>-Klasse).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Eine teilweise vertrauenswürdigen Kontext vorhanden ist, in denen dem Benutzer fehlen die erforderlichen Berechtigungen.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">Steuert die Berechtigungen in Bezug auf Benutzeroberflächen und die Zwischenablage. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftKeyDown">
+      <MemberSignature Language="C#" Value="public bool ShiftKeyDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShiftKeyDown" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="Boolean" /> angibt, ob eine UMSCHALTTASTE gedrückt ist.</summary>
+        <value>Ein <see langword="Boolean" />-Wert. <see langword="True" />Wenn eine UMSCHALT-Taste gedrückt ist; andernfalls <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Keyboard.ShiftKeyDown` Eigenschaft bietet ähnliche Funktionen der <xref:System.Windows.Forms.Control.ModifierKeys%2A> Eigenschaft.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.ShiftKeyDown` Eigenschaft, um zu bestimmen, ob eine der UMSCHALT-Tasten des Computers gedrückt ist.  
+  
+ [!code-vb[VbVbalrMyComputer#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#47)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

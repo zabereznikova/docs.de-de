@@ -1,0 +1,64 @@
+<Type Name="IRawElementProviderHwndOverride" FullName="System.Windows.Automation.Provider.IRawElementProviderHwndOverride">
+  <TypeSignature Language="C#" Value="public interface IRawElementProviderHwndOverride : System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRawElementProviderHwndOverride implements class System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderHwndOverride" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IRawElementProviderSimple</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("1d5df27c-8947-4425-b8d9-79787bb460b8")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht eine Methode, die ermöglicht das Neupositionieren von fensterbasierten Elementen innerhalb der Benutzeroberflächenautomatisierungs-Struktur des Fragments.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetOverrideProviderForHwnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple GetOverrideProviderForHwnd (IntPtr hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple GetOverrideProviderForHwnd(native int hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Das Fensterhandle des Elements.</param>
+        <summary>Ruft einen Benutzeroberflächenautomatisierungs-Anbieter für das angegebene Element ab.</summary>
+        <returns>Der Anbieter für das angegebene Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn der Standardanbieter des Elements nicht überschrieben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von einer clientseitigen Benutzeroberflächenautomatisierungs-Anbietern für Fragment Stammverzeichnisse in Fragmente, die Windows-basierten untergeordnete Elemente enthalten, wenn die HWNDs dieser untergeordneten Elemente in logisch nicht positioniert werden implementiert die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur. Weitere Informationen finden Sie unter nicht-WPF-Anbieter erneutes und Neupositionieren von nicht-WPF-Anbieter in der [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter](~/docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md) Thema.  
+  
+ Der zurückgegebene Anbieter muss Teil der Fragmentstruktur. Sie können zusätzliche Eigenschaften angeben oder die Eigenschaften der angegebenen Komponente außer Kraft setzen.  
+  
+ Wenn der zurückgegebene Anbieter implementiert <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>, sollte der Anbieter das Fragment-Struktur verwendet werden und erreichbar durch Navigieren von den Fragmentstamm sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

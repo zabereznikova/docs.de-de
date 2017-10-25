@@ -1,0 +1,815 @@
+<Type Name="FileListBox" FullName="Microsoft.VisualBasic.Compatibility.VB6.FileListBox">
+  <TypeSignature Language="C#" Value="public class FileListBox : System.Windows.Forms.ListBox" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi FileListBox extends System.Windows.Forms.ListBox" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ListBox</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(Microsoft.VisualBasic.Compatibility.VB6.CompatibilityListBoxDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Sucht und listet die Dateien im Verzeichnis gemäß der <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Path" /> Eigenschaft zur Laufzeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Steuerelement, um eine Liste der Dateien nach Dateityp ausgewählt anzuzeigen. Erstellen von Dialogfeldern in der Anwendung, die z. B. und ermöglichen es dem Benutzer eine Datei oder eine Gruppe von Dateien auswählen können.  
+  
+ Wenn Sie auch anzeigen, die <xref:Microsoft.VisualBasic.Compatibility.VB6.DriveListBox> und <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelemente, Schreiben Sie Code zum Synchronisieren sie mit der `FileListBox` Steuerelement und miteinander.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileListBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `FileListBox` zeigt eine Liste der Dateien in einem bestimmten Verzeichnis zur Laufzeit.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Archive">
+      <MemberSignature Language="C#" Value="public bool Archive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Archive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Archive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> -Steuerelement zeigt die Dateien mit <see langword="Archive" /> Attribute.</summary>
+        <value>
+          <see langword="true" />Wenn Dateien mit der <see langword="Archive" /> Attribut Fall werden soll, andernfalls angezeigten <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie den Typ des anzuzeigenden in Dateien angeben einer <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerung, entsprechend dem Standard `Archive` Dateiattribut, die in der betriebsumgebung verwendet. Durch Festlegen dieser Eigenschaft im Code zur Laufzeit setzt die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> -Steuerelement zum Anzeigen von nur diejenigen Dateien, die das angegebene Attribut aufweisen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Datenquelle für eine <see cref="T:System.Windows.Forms.ListControl" />.</summary>
+        <value>Ein Objekt, implementiert die <see cref="T:System.Collections.IList" /> oder <see cref="T:System.ComponentModel.IListSource" /> Schnittstellen, wie z. B. eine <see cref="T:System.Data.DataSet" /> oder ein <see cref="T:System.Array" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMember">
+      <MemberSignature Language="C#" Value="public string DisplayMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayMember" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.DisplayMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Eigenschaft für die anzuzeigenden dafür <see cref="T:System.Windows.Forms.ListControl" />.</summary>
+        <value>Ein <see langword="String" /> , die den Namen des eine Objekteigenschaft, die in der Auflistung, die vom angegebenen befindet darstellt der <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.DataSource" /> Eigenschaft. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Dateinamen der ausgewählten Datei in eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" />.</summary>
+        <value>Ein <see langword="String" /> , die den Dateinamen der ausgewählten Datei enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der `FileName` Eigenschaft zur Laufzeit führt dazu, nur diese Datei, die angezeigt wird, der <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="public bool Hidden { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Hidden" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Hidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> -Steuerelement zeigt die Dateien mit <see langword="Hidden" /> Attribute.</summary>
+        <value>
+          <see langword="true" />Wenn Dateien mit der <see langword="Hidden" /> Attribut Fall werden soll, andernfalls angezeigten <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie den Typ des anzuzeigenden in Dateien angeben einer <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerung, entsprechend dem Standard `Hidden` Dateiattribut, die in der betriebsumgebung verwendet. Durch Festlegen dieser Eigenschaft im Code zur Laufzeit setzt die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> -Steuerelement zum Anzeigen von nur diejenigen Dateien, die das angegebene Attribut aufweisen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemHeight">
+      <MemberSignature Language="C#" Value="public int ItemHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemHeight" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.ItemHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe eines Elements in der <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Diese Eigenschaft ist nicht erforderlich, damit die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> steuern; die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> unterstützt keine Elemente mit variabler Höhe. Es wird nur bereitgestellt, weil die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> Steuerelement erbt von <see cref="T:System.Windows.Forms.ListBox" />.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListBox.ObjectCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListBox/ObjectCollection Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListBox+ObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elemente, die in enthaltenen eine <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" />, die die Elemente in der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte nicht verwendet werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; hinzufügen oder Entfernen von Verzeichnissen aus der Auflistung eine Ausnahme auftreten. Es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public string Items[int Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Items(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Items(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Eine <see langword="Integer" /> , die den Index des Elements darstellt.</param>
+        <summary>Ruft die Elemente, die in enthaltenen eine <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> zur Darstellung der Elemente in der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte nicht verwendet werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> steuern; hinzufügen oder Entfernen von Verzeichnissen aus der Auflistung eine Ausnahme auftreten. Es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.DirListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public bool Normal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Normal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> -Steuerelement zeigt die Dateien mit <see langword="Normal" /> Attribute.</summary>
+        <value>
+          <see langword="true" />Wenn Dateien mit der <see langword="Normal" /> Attribut Fall werden soll, andernfalls angezeigten <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie den Typ des anzuzeigenden in Dateien angeben einer <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerung, entsprechend dem Standard `Normal` Dateiattribut, die in der betriebsumgebung verwendet. Durch Festlegen dieser Eigenschaft zur Laufzeit setzt die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> -Steuerelement zum Anzeigen von nur diejenigen Dateien, die das angegebene Attribut aufweisen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDoubleClick">
+      <MemberSignature Language="C#" Value="protected override void OnDoubleClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDoubleClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.OnDoubleClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.DoubleClick" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnDoubleClick` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPathChange">
+      <MemberSignature Language="C#" Value="protected virtual void OnPathChange (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familynewslot virtual instance void OnPathChange(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.OnPathChange(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.PathChange" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnPathChange` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPatternChange">
+      <MemberSignature Language="C#" Value="protected virtual void OnPatternChange (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familynewslot virtual instance void OnPatternChange(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.OnPatternChange(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.PatternChange" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnPatternChange` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedIndexChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSelectedIndexChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSelectedIndexChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.OnSelectedIndexChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ListBox.SelectedIndexChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die `OnSelectedIndexChanged` -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Pfad für eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" />.</summary>
+        <value>Ein <see langword="String" /> , enthält den Pfad der aktuellen nicht einschließlich des Dateinamens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die `Path` Eigenschaft ist eine Zeichenfolge, die einen Pfad, z. B. C:\Ob oder C:\Windows\System angibt. Für eine <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> -Steuerelement, wenn das Steuerelement zur Laufzeit erstellt wird, ist dieser Standard den aktuellen Pfad.  
+  
+ Verwenden Sie diese Eigenschaft, wenn Sie Funktionen zur Datei durchsuchen und Bearbeiten von einer Anwendung erstellen. Festlegen der `Path` Eigenschaft wirkt sich ähnlich wie die MS-DOS- `chdir` Befehl; relative Pfade sind zulässig, mit oder ohne ein Laufwerksangabe. Angeben von nur einem Laufwerk mit einem Doppelpunkt (:)), wählt das aktuelle Verzeichnis auf diesem Laufwerk.  
+  
+ Die `Path` Eigenschaft kann auch zu einem qualifizierten Netzwerkpfad festgelegt werden, ohne eine Laufwerk-Verbindung mit der folgenden Syntax:  
+  
+```  
+\\servername\sharename\path  
+```  
+  
+ Ändern des Werts der `Path` für eine <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement generiert eine <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.PathChange> Ereignis.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathChange">
+      <MemberSignature Language="C#" Value="public event EventHandler PathChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PathChange" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.PathChange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Pfad, durch Festlegen geändert wird der <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.FileName" /> oder <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Path" /> -Eigenschaft im Code.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie eine `PathChange` Ereignisprozedur Reaktion auf Änderungen an den Dateipfaden in einem <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement. Beim Zuweisen einer Zeichenfolge, die einen neuen Pfad enthält den <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.FileName%2A> -Eigenschaft, die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement ruft die `PathChange` Ereignis.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public string Pattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Dateinamen angezeigt, die einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> Steuerelement zur Laufzeit.</summary>
+        <value>Ein Zeichenfolgenausdruck, der angibt, wie z. B. auf einer Dateispezifikation, die "*. \*"oder"\*. AUS ENTFERNT WIRD". Die Standardeinstellung ist "\*.\*", wobei eine Liste aller Dateien zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Pattern` Eigenschaft spielt eine wichtige Rolle beim Entwurf von Funktionen zur Datei durchsuchen und Bearbeiten von einer Anwendung. Verwendung `Pattern` in Kombination mit anderen Datei Steuerelementeigenschaften an den Benutzer zum Durchsuchen von Dateien oder Dateigruppen ähnlich zu ermöglichen. In einer Anwendung, die ausschließlich für andere Programme gestartet, konnte Sie beispielsweise festlegen, dass nur .exe-Dateien im Listenfeld Datei (*.exe) angezeigt werden.  
+  
+ Zusätzlich zur Verwendung von Platzhalterzeichen, können Sie auch mehrere Muster, die durch Semikolons (;) getrennt ein. Z. B. "*.exe * bat "eine Liste aller ausführbaren Dateien und alle MS-DOS-Batchdateien zurück.  
+  
+ Ändern des Werts der `Pattern` Eigenschaft generiert einen <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.PatternChange> Ereignis.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PatternChange">
+      <MemberSignature Language="C#" Value="public event EventHandler PatternChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PatternChange" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.PatternChange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Muster, z. B. "*. \*", geändert, indem die <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.FileName" /> oder <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Pattern" /> -Eigenschaft im Code.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie eine `PatternChange` Ereignisprozedur Reaktion auf Änderungen der Muster in ein <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement. Wenn Sie einer Zeichenfolge zuweisen enthält ein neues Muster für die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.FileName%2A> -Eigenschaft, ruft die FileListBox der <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.PathChange> Ereignis.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> Steuerelement enthält Dateien, die nur-Lese Attribute aufweisen.</summary>
+        <value>
+          <see langword="true" />Wenn Dateien mit der <see langword="ReadOnly" /> Attribut Fall werden soll, andernfalls angezeigten <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der `ReadOnly` -Eigenschaft für eine <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement, um anzugeben, ob die Dateien, die nur-Lese Attribute aufweisen, in der Liste angezeigt werden.  
+  
+> [!NOTE]
+>  Wenn die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Normal%2A> -Eigenschaftensatz auf `true` (Standard), Dateien mit nur-Lese Attribute werden angezeigt, unabhängig von der `ReadOnly` Einstellung der Eigenschaft.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public override void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erzwingt, dass das Steuerelement seinen Clientbereich für ungültig erklärt und sich sofort selbst neu zeichnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben <see langword="Refresh" /> stellen Sie in einer abgeleiteten Klasse Aufrufen der <see langword="Refresh" /> -Methode der Basisklasse, sodass das Steuerelement und seine untergeordneten Steuerelemente für ungültig erklärt und neu gezeichnet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Sorted">
+      <MemberSignature Language="C#" Value="public bool Sorted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sorted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.Sorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Elemente in einer <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> alphabetisch sortiert.</summary>
+        <value>
+          <see langword="true" />Wenn Elemente im Steuerelement sortiert werden. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement `Sorted` gibt immer `false`.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="public bool System { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.System" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> -Steuerelement zeigt die Dateien mit <see langword="System" /> Attribute.</summary>
+        <value>
+          <see langword="true" />Wenn Dateien mit der <see langword="System" /> Attribut Fall werden soll, andernfalls angezeigten <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie den Typ des anzuzeigenden in Dateien angeben einer <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerung, entsprechend dem Standard `System` Dateiattribut, die in der betriebsumgebung verwendet. Durch Festlegen dieser Eigenschaft zur Laufzeit setzt die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> -Steuerelement zum Anzeigen von nur diejenigen Dateien, die das angegebene Attribut aufweisen.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueMember">
+      <MemberSignature Language="C#" Value="public string ValueMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueMember" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.ValueMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Eigenschaft zu verwenden, als der tatsächliche Wert für die Elemente in einem <see cref="T:System.Windows.Forms.ListControl" />.</summary>
+        <value>Ein <see langword="String" /> , die den Namen des eine Objekteigenschaft, die in der Auflistung, die vom angegebenen enthalten sind die <see cref="P:Microsoft.VisualBasic.Compatibility.VB6.FileListBox.DataSource" /> Eigenschaft. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte diese Eigenschaft nicht festgelegt werden, für die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> steuern; es wird nur bereitgestellt, weil die <xref:Microsoft.VisualBasic.Compatibility.VB6.FileListBox> Steuerelement erbt von <xref:System.Windows.Forms.ListBox>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

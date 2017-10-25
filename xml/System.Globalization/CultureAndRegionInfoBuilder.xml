@@ -1,0 +1,1318 @@
+<Type Name="CultureAndRegionInfoBuilder" FullName="System.Globalization.CultureAndRegionInfoBuilder">
+  <TypeSignature Language="C#" Value="public sealed class CultureAndRegionInfoBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CultureAndRegionInfoBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CultureAndRegionInfoBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>sysglobl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine benutzerdefinierte Kultur, die neu ist oder auf einer anderen Kultur und einem anderen Land oder einer anderen Region basiert. Die benutzerdefinierte Kultur kann auf einem Computer installiert und anschließend von jeder Anwendung verwendet werden, die auf diesem Computer ausgeführt wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureInfo> -Klasse enthält kulturspezifische Informationen, z. B. die zugeordnete Sprache, untersprachen, Land/Region, Kalender und kulturelle Konventionen. Diese Klasse bietet auch kulturspezifische Instanzen der <xref:System.Globalization.DateTimeFormatInfo>, <xref:System.Globalization.NumberFormatInfo>, <xref:System.Globalization.CompareInfo>, und <xref:System.Globalization.TextInfo> Klassen, die für kulturabhängige Vorgänge, z. B. Groß-/Kleinschreibung, Formatierung und Analyse von Datumsangaben und Zahlen erforderlich sind, und Vergleichen von Zeichenfolgen.  
+  
+ Standardmäßig unterstützt die .NET Framework <xref:System.Globalization.CultureInfo> Objekte, die einen vordefinierten Satz von Kulturen darstellen. Eine Liste dieser Kulturen, finden Sie unter der [National Language Support (NLS) API Reference](http://go.microsoft.com/fwlink/?LinkId=200048) am Go Global Developer Center. Die <xref:System.Globalization.CultureAndRegionInfoBuilder> -Klasse ermöglicht es Ihnen so erstellen eine benutzerdefinierte Kultur, die vollständig neu sind oder eine vordefinierte Kultur überschreibt.  Wenn eine benutzerdefinierte Kultur installiert und auf einem bestimmten Computer registriert ist, wird es nicht von vordefinierten <xref:System.Globalization.CultureInfo> Objekte aufweist, können instanziiert und wie diese Objekte verwendet.  
+  
+> [!IMPORTANT]
+>  Beachten Sie, dass die <xref:System.Globalization.CultureAndRegionInfoBuilder> Klasse in einer Assembly mit dem Namen sysglobl.dll gefunden wird. Erfolgreich Kompilieren von Code, der diese Art verwendet, müssen Sie einen Verweis auf sysglobl.dll hinzufügen.  
+  
+ Eine benutzerdefinierte Kultur kann nur von einem Benutzer mit Administratorrechten auf dem Computer, auf einem Computer registriert werden. Folglich apps in der Regel nicht erstellen und Installieren von Kulturen. Stattdessen können Sie die <xref:System.Globalization.CultureAndRegionInfoBuilder> Klasse, um ein spezielles Tool erstellen, die ein Administrator erstellen, installieren und registrieren eine benutzerdefinierte Kultur verwenden kann. Nachdem die benutzerdefinierte Kultur auf einem Computer registriert ist, können Sie mithilfe der <xref:System.Globalization.CultureInfo> Klasse in Ihrer app in Instanzen der benutzerdefinierten Kultur zu erstellen, wie Sie für eine vordefinierte Kultur.  
+  
+ Wenn Sie Datum- und Uhrzeitzeichenfolgen generiert für eine benutzerdefinierte Kultur analysieren, verwenden Sie die <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> oder <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> -Methode anstelle der <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> oder <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType> Methode, um die Wahrscheinlichkeit zu erhöhen, die der Analysevorgang erfolgreich ist. Ein Datums- und Uhrzeitzeichenfolge für eine benutzerdefinierte Kultur kann kompliziert und daher schwierig zu analysieren. Die <xref:System.DateTime.Parse%2A> und <xref:System.DateTime.TryParse%2A> Methoden versuchen, eine Zeichenfolge mit mehreren impliziter Analysemuster analysiert alle möglicherweise fehlschlagen. Die <xref:System.DateTime.TryParseExact%2A> -Methode, im Gegensatz dazu erfordert die Anwendung explizit auf einen oder mehrere genaue Analysemuster angeben, die wahrscheinlich erfolgreich sind.  
+  
+## <a name="defining-and-creating-a-custom-culture"></a>Definieren und erstellen eine benutzerdefinierte Kultur  
+ Sie verwenden die <xref:System.Globalization.CultureAndRegionInfoBuilder> Klasse definieren und benennen eine benutzerdefinierte Kultur. Die benutzerdefinierte Kultur kann eine völlig neue, eine neue Kultur, die auf eine vorhandene Kultur (d. h. eine Ergänzungskultur) basiert, oder eine Kultur, die eine vorhandene .NET Framework-Kultur ersetzt. In jedem Fall werden die grundlegenden Schritte identisch:  
+  
+1.  Instanziieren einer <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt durch Aufrufen seiner <xref:System.Globalization.CultureAndRegionInfoBuilder.%23ctor%28System.String%2CSystem.Globalization.CultureAndRegionModifiers%29> Konstruktor. Um eine vorhandene Kultur zu ersetzen, übergeben Sie den Namen dieser Kultur und die <xref:System.Globalization.CultureAndRegionModifiers?displayProperty=nameWithType> Enumerationswert an den Konstruktor übergibt. Um eine neue oder eine ergänzende Kultur zu erstellen, übergeben Sie einen eindeutigen Kulturnamen und entweder die <xref:System.Globalization.CultureAndRegionModifiers?displayProperty=nameWithType> oder <xref:System.Globalization.CultureAndRegionModifiers?displayProperty=nameWithType> -Enumerationswert.  
+  
+    > [!NOTE]
+    >  Bei Verwendung der <xref:System.Globalization.CultureAndRegionModifiers?displayProperty=nameWithType> Enumerationswert instanziieren eine <xref:System.Globalization.CultureAndRegionInfoBuilder> -Objekt, der <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekteigenschaften werden automatisch aufgefüllt, mit Werten aus der <xref:System.Globalization.CultureInfo> Objekt ersetzt werden.  
+  
+2.  Wenn Sie eine neue oder zusätzliche Kultur erstellen:  
+  
+    -   Auffüllen der <xref:System.Globalization.CultureAndRegionInfoBuilder> Eigenschaften des Objekts durch Aufrufen der <xref:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromCultureInfo%2A> -Methode und übergeben ein <xref:System.Globalization.CultureInfo> Objekt, deren Eigenschaftswerte auf das neue Objekt ähneln.  
+  
+    -   Auffüllen der <xref:System.Globalization.CultureAndRegionInfoBuilder> regionalen Eigenschaften des Objekts durch Aufrufen der <xref:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromRegionInfo%2A> -Methode und übergeben ein <xref:System.Globalization.RegionInfo> -Objekt, das den Bereich für eine benutzerdefinierte Kultur darstellt.  
+  
+3.  Ändern der Eigenschaften der <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt nach Bedarf.  
+  
+4.  Wenn Sie beabsichtigen, die benutzerdefinierte Kultur in einer separaten Routine zu registrieren, rufen die <xref:System.Globalization.CultureAndRegionInfoBuilder.Save%2A> Methode. Dadurch wird eine XML-Datei, die Sie laden und registrieren in einer eigenen benutzerdefinierten Kultur Installationsroutine generiert.  
+  
+## <a name="registering-a-custom-culture"></a>Registrieren eine benutzerdefinierte Kultur  
+ Wenn Sie eine Registrierung-Anwendung für eine benutzerdefinierte Kultur entwickeln, die getrennt von der Anwendung wird die Kultur erstellt wird, rufen Sie die <xref:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml%2A> Methode zum Laden der XML-Datei, die die benutzerdefinierte Kultur-Definition enthält und instanziieren den <xref:System.Globalization.CultureAndRegionInfoBuilder>Objekt. Um die Registrierung zu behandeln, rufen Sie die <xref:System.Globalization.CultureAndRegionInfoBuilder.Register%2A> Methode. Für die Registrierung erfolgreich ist muss die Anwendung, die die benutzerdefinierte Kultur registriert mit Administratorrechten auf dem Zielsystem ausgeführt werden; andernfalls, den Aufruf von <xref:System.Globalization.CultureAndRegionInfoBuilder.Register%2A> löst eine <xref:System.UnauthorizedAccessException> Ausnahme.  
+  
+> [!WARNING]
+>  Culture-Daten können zwischen Systemen unterscheiden. Bei Verwendung der <xref:System.Globalization.CultureAndRegionInfoBuilder> Klasse, um eine benutzerdefinierte Kultur zu erstellen, die über mehrere Systeme und Sie einheitlich ist erstellen eine benutzerdefinierte Kultur durch Laden von Daten aus vorhandenen <xref:System.Globalization.CultureInfo> und <xref:System.Globalization.RegionInfo> Objekte und Anpassen des Diagramms, sollten Sie zwei entwickeln verschiedene Hilfsprogramme. Die erste benutzerdefinierte Kultur erstellt und speichert es in eine XML-Datei. Die zweite verwendet die <xref:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml%2A> Methode, um die benutzerdefinierte Kultur aus einer XML-Datei laden und registrieren Sie ihn auf dem Zielcomputer installiert.  
+  
+ Während der Registrierung führt die folgenden Aufgaben:  
+  
+-   Erstellt eine NLP-Datei, die Informationen, die in definiert ist, enthält, die <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt.  
+  
+-   Speichert die NLP-Datei im Systemverzeichnis %windir%\Globalization auf dem Zielcomputer installiert. Dadurch wird die benutzerdefinierte Kultur Einstellungen zwischen Sitzungen beibehalten werden. (Die <xref:System.Globalization.CultureAndRegionInfoBuilder> Methode sind Administratorrechte erforderlich, da die NLP-Datei in ein Verzeichnis "System" gespeichert ist.)  
+  
+-   Bereitet vor suchen das Systemverzeichnis %windir%\Globalization anstelle einer internen Cache das nächste Mal von .NET Framework ist eine Anforderung zum Erstellen einer neuen benutzerdefinierten Kultur.  
+  
+ Wenn eine benutzerdefinierte Kultur erfolgreich registriert wurde, ist es nicht von der Kulturen, die vom .NET Framework vordefiniert sind. Die benutzerdefinierte Kultur ist verfügbar, bis ein Aufruf der <xref:System.Globalization.CultureAndRegionInfoBuilder> Methode entfernt die NLP-Datei aus dem lokalen Computer.  
+  
+## <a name="instantiating-a-custom-culture"></a>Instanziieren eine benutzerdefinierte Kultur  
+ Sie können eine Instanz der benutzerdefinierten Kultur in eine der folgenden Arten erstellen:  
+  
+-   Durch Aufrufen der <xref:System.Globalization.CultureInfo.%23ctor%2A?displayProperty=nameWithType> Konstruktor mit den Namen der Kultur.  
+  
+-   Durch Aufrufen der <xref:System.Globalization.CultureInfo.CreateSpecificCulture%2A?displayProperty=nameWithType> Methode mit dem Kulturnamen.  
+  
+-   Durch Aufrufen der <xref:System.Globalization.CultureInfo.GetCultureInfo%2A?displayProperty=nameWithType> Methode mit dem Kulturnamen.  
+  
+ Darüber hinaus das Array von <xref:System.Globalization.CultureInfo> Objekte, die von zurückgegeben wird die <xref:System.Globalization.CultureInfo.GetCultures%2A?displayProperty=nameWithType> Methode enthält die benutzerdefinierte Kultur.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine benutzerdefinierte ru-US-Kultur, die in den Vereinigten Staaten russischen Sprache darstellt. Im Beispiel wird die benutzerdefinierte Kultur definiert, indem Sie Einstellungen von der Russisch (Russische Föderation) laden <xref:System.Globalization.CultureInfo> Objekt bzw. das amerikanische <xref:System.Globalization.RegionInfo> -Objekt und legt dann eine Anzahl von <xref:System.Globalization.CultureAndRegionInfoBuilder> Eigenschaften. Im Beispiel wird registriert die benutzerdefinierte Kultur ist, und klicken Sie dann instanziiert es und die aktuelle Threadkultur verwendet.  
+  
+ [!code-csharp[System.Globalization.CultureAndRegionInfoBuilder.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureandregioninfobuilder.class/cs/car.cs#1)]
+ [!code-vb[System.Globalization.CultureAndRegionInfoBuilder.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureandregioninfobuilder.class/vb/car.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CultureAndRegionInfoBuilder (string cultureName, System.Globalization.CultureAndRegionModifiers flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string cultureName, valuetype System.Globalization.CultureAndRegionModifiers flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CultureAndRegionInfoBuilder.#ctor(System.String,System.Globalization.CultureAndRegionModifiers)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cultureName" Type="System.String" />
+        <Parameter Name="flags" Type="System.Globalization.CultureAndRegionModifiers" />
+      </Parameters>
+      <Docs>
+        <param name="cultureName">Der Name einer Kultur.</param>
+        <param name="flags">Einer der <see cref="T:System.Globalization.CultureAndRegionModifiers" />-Werte, der angibt, ob das neue <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt eine neutrale Kultur ist, eine vorhandene Kultur und ein vorhandenes Land oder eine vorhandene Region ersetzt oder eine neue Kultur ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `cultureName` Parameter gibt den Namen des neuen <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt.  
+  
+ Die `flags` -Parameter wird verwendet, um eine <xref:System.Globalization.CultureAndRegionModifiers> Wert, der angibt, ob das neue <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt ist eine neue benutzerdefinierte Kultur, oder eine vorhandene neutrale Kultur, eine bestimmte Kultur oder ein Windows-Gebietsschema ersetzt.  
+  
+ Wenn die `cultureName` Parameter gibt an, eine vorhandene .NET Framework-Kultur, die registrierte benutzerdefinierte Kultur oder die Kultur, die von einem Windows-Gebietsschema generiert die <xref:System.Globalization.CultureAndRegionInfoBuilder.%23ctor%2A> Konstruktor füllt automatisch das neue <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt mit der Kultur und Land/Region-Informationen.  
+  
+ Füllen Sie das neue <xref:System.Globalization.CultureAndRegionInfoBuilder> -Objekt mit Informationen zur Kultur und Land/Region durch Aufrufen der <xref:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromCultureInfo%2A> und <xref:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromRegionInfo%2A> Methoden.  
+  
+## <a name="custom-culture-names"></a>Benutzerdefinierte Kulturnamen  
+ Das bevorzugte Format der `cultureName` Parameter für eine neue benutzerdefinierte Kultur ist "[`prefix`-]`language`[-`region`] [-`suffix`[`…`]]", wobei die `language` Komponente erforderlich ist und die `prefix`, `region`, und `suffix` -Komponenten sind optional. Die maximale Länge der einzelnen Komponenten ist 8 Zeichen und die maximale Länge des gesamten `cultureName` Parameter ist 84 Zeichen.  
+  
+ Die `prefix` Komponente ist die Kennung (IANA = Internet Assigned Numbers Authority). Geben Sie "i-" oder "ich-" für Kulturnamen registriert die IANA, oder "X" oder "X" für Kulturnamen für die private Verwendung reserviert. Andernfalls ist das Präfix nicht erforderlich. Weitere Informationen finden Sie unter RFC 4646, "Tags for the Identification of Languages".  
+  
+ Die `language` -Komponente von der `cultureName` Parameter gibt an, einen Kleinbuchstaben zwei Buchstaben bestehende Code nach ISO 639-1 abgeleitet und `region` gibt einen in Großbuchstaben zwei Buchstaben bestehende Code aus ISO 3166 abgeleitet. Steht z. B. En-US für Englisch, wie in den Vereinigten Staaten gesprochen. Das Fehlen der `region` Komponente, bedeutet dies eine neutrale Kultur.  
+  
+ Ein `cultureName` d. h. identisch mit der der Name einer Kultur, die mit .NET Framework enthalten, bedeutet dies eine Kultur ersetzen (überschreiben). Die Werte, die die Eigenschaften einer Kultur Ersatz zugewiesen werden können, sind begrenzt. Weitere Informationen zu solchen Einschränkungen finden Sie unter der Ausnahmen für jede Eigenschaft.  
+  
+ Die Anwendung verwendet die `suffix` Komponente, um ähnliche Kulturen zu unterscheiden. Beispielsweise zwei Unternehmen ABC und XYZ, erstellen und freigeben einen neuen ASP.NET Web-Dienst, um ihre Produkte in verschiedenen Märkten weltweit höher stufen. Die Webseiten für den Dienst werden Informationen wie z. B. das Land/Region-Logo und die lokale Telefonnummer des jedes Unternehmen je nach Kultur des Benutzers angezeigt. Die kulturspezifischen Inhalt für jede Webseite ist in separate Ressourcendateien Kultur namentlich identifiziert und nach Firmennamen gekennzeichnet.  Ressourcendateien für die Kulturen En-US und ja-JP werden z. B. En-US-ABC, En-US-XYZ, ja-JP-ABC und ja-JP-XYZ benannt. Die Suffixe "ABC" und "XYZ" aktivieren Sie den Webdienst für die gleiche Anwendungslogik zu verwenden, um unterschiedliche marktspezifische Informationen anzuzeigen.  
+  
+ Die `suffix` Komponente kann Unterkomponenten, wobei jede Unterkomponente wird durch einen Bindestrich getrennt und die maximale Länge der einzelnen Unterkomponente 8 Zeichen bestehen. Beispielsweise ist "En-US-Honda-Cars" die `cultureName` Parameter "- Honda - Cars" ist die `suffix` Komponente.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte Kultur mit einem Präfix private Verwendung erstellt und enthält eine Reihe von deren Eigenschaften. Die erste Eigenschaft listet den Namen der Kultur.  
+  
+ [!code-cpp[sys.glob.carib1#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.carib1/CPP/carib.cpp#1)]
+ [!code-csharp[sys.glob.carib1#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib1/CS/carib.cs#1)]
+ [!code-vb[sys.glob.carib1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib1/VB/carib.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cultureName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cultureName" /> ist die leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="cultureName" />enthält Zeichen als "0" bis "9", "a" bis "Z", "A" bis "Z", Bindestrich (-) oder einem Unterstrich (_).  
+  
+ - oder -   
+  
+ <paramref name="cultureName" />Bindestriche (-) zur Begrenzung von Komponenten, aber eine oder mehrere der enthält die <paramref name="prefix" />, <paramref name="language" />, <paramref name="region" />, oder <paramref name="suffix" /> Komponenten nicht vorhanden ist. D. h. sind mindestens zwei Bindestriche neben angeordnet.  
+  
+ - oder -   
+  
+ <paramref name="cultureName" />ist länger als 84 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="cultureName" />enthält Bindestriche, um Komponenten zu trennen, aber mindestens eine der Komponenten ist länger als 8 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="cultureName" />enthält einen führenden oder nachfolgenden Bindestrich (-) oder ein Unterstrich (_).  
+  
+ - oder -   
+  
+ <paramref name="cultureName" />Gibt einen alternativen Sortierreihenfolgen Ersatzkultur anstelle einer .NET Framework-Kultur an. Beispielsweise <paramref name="culturenName" /> ist "de-De_phoneb", eine Kultur, die Zeichenfolgen sortiert, wie sie in einem deutschen Telefonbuch anstelle von "de-DE", die Kultur für Deutsch (Deutschland) angezeigt werden.  
+  
+ - oder -   
+  
+ <paramref name="flags" />enthält eine ungültige Kombination von <see cref="T:System.Globalization.CultureAndRegionModifiers" /> Werte.  
+  
+ - oder -   
+  
+ <paramref name="flags" />enthält <see cref="F:System.Globalization.CultureAndRegionModifiers.Replacement" /> oder <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" /> und <paramref name="cultureName" /> gibt eine Kultur an, die nicht gefunden wird.  
+  
+ - oder -   
+  
+ <paramref name="flags" />enthält <see cref="F:System.Globalization.CultureAndRegionModifiers.Replacement" /> und <paramref name="cultureName" /> gibt eine vom Benutzer erstellte benutzerdefinierte Kultur an, die keine ausgelieferte Kultur mit .NET Framework ersetzt.  
+  
+ - oder -   
+  
+ <paramref name="flags" />enthält <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" /> und <paramref name="cultureName" /> gibt eine Kultur an, die keine neutrale Kultur ist.  
+  
+ - oder -   
+  
+ <paramref name="flags" />enthält <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" /> und <paramref name="cultureName" /> gibt eine vom Benutzer erstellte benutzerdefinierte Kultur an, eine bestimmte Kultur geliefert mit .NET Framework ersetzt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableCalendars">
+      <MemberSignature Language="C#" Value="public System.Globalization.Calendar[] AvailableCalendars { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.Calendar[] AvailableCalendars" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.Calendar[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Kalendern ab, die von diesem <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt unterstützt werden, oder legt dieses fest.</summary>
+        <value>Ein Array von Kalendern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">In einem Set-Vorgang ist das zugewiesene Array <see langword="null" />, oder ein Element des zugewiesenen Arrays ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Diese Eigenschaft ist für die neutralen Kulturen nicht unterstützt.  
+  
+ - oder -   
+  
+ In einem Set-Vorgang enthält das zugeordnete Array <see cref="T:System.Globalization.PersianCalendar" />, <see cref="T:System.Globalization.TaiwanLunisolarCalendar" />, <see cref="T:System.Globalization.KoreanLunisolarCalendar" />, <see cref="T:System.Globalization.JapaneseLunisolarCalendar" />, <see cref="T:System.Globalization.ChineseLunisolarCalendar" />, oder <see cref="T:System.Globalization.JulianCalendar" />.  
+  
+ - oder -   
+  
+ In einem Set-Vorgang enthält das zugewiesene Array ein benutzerdefiniertes Kalenders.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareInfo">
+      <MemberSignature Language="C#" Value="public System.Globalization.CompareInfo CompareInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CompareInfo CompareInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Globalization.CompareInfo" />-Objekt ab, in dem festgelegt wird, wie Zeichenfolgen für die Kultur verglichen werden, oder legt dieses fest.</summary>
+        <value>Das <see cref="T:System.Globalization.CompareInfo" />-Objekt, in dem festgelegt wird, wie Zeichenfolgen für die Kultur verglichen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo%2A?displayProperty=nameWithType> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Globalization.TextInfo> und <xref:System.Globalization.CompareInfo> Objekte, die zugewiesen werden, die <xref:System.Globalization.CultureAndRegionInfoBuilder.TextInfo%2A> und <xref:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo%2A> Eigenschaften beide unterstützen Zeichenfolgenvergleich kulturabhängigen und Groß-/Kleinschreibung beachtet. Die <xref:System.Globalization.CompareInfo> -Objekt verfügt außerdem über Methoden wie eine <xref:System.Globalization.CompareOptions> Parameter, der kulturabhängige, Groß-/Kleinschreibung Vergleich unterstützt. Diese beiden Eigenschaften sollten zugewiesen <xref:System.Globalization.TextInfo> und <xref:System.Globalization.CompareInfo> Objekte, die das gleiche Gebietsschema darstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">In einem Set-Vorgang ist der zugewiesene Wert <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Dieser benutzerdefinierten Kultur ist eine Überschreibung einer integrierten Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsoleFallbackUICulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo ConsoleFallbackUICulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo ConsoleFallbackUICulture" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bei einer ungeeigneten Standard-GUI-Kultur geeignete alternative GUI-Kultur für Konsolenanwendungen ab oder legt diese fest.</summary>
+        <value>Eine alternative Kultur, die zum Lesen und Anzeigen von Texten auf der Konsole verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem Get-Vorgang der <xref:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.GetConsoleFallbackUICulture%2A> Methode. Geben Sie `null` in einem Set-Vorgang, um anzugeben, dass von der aktuellen Kultur definiert <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt wird die alternative Kultur der Benutzeroberfläche. Wenn Sie versuchen, die Eigenschaft verfügt über eine andere Konsole Fallback UI-Kultur eine Kultur festgelegt, wird dann er die endgültige "Leaf" Kultur zugewiesen werden.  
+  
+ Sprachen wie Arabisch, Hebräisch, Persisch, Urdu und Syrisch basieren auf bidirektionalen Text. Windows-Anwendungen, die eine grafische Benutzeroberfläche verwenden, unterstützen bidirektionale Sprachen. Konsolenanwendungen, die die Benutzeroberfläche der Text der Betriebssystem-Konsole nutzen zu können, bieten jedoch keine bidirektionale Unterstützung. Daher, wenn eine Konsolenanwendung in Arabisch oder Hebräisch lokalisiert ist, nicht lesbar wird Text angezeigt auf dem Konsolenbildschirm.  
+  
+ Die Kultur der Benutzeroberfläche gibt die Ressourcen für eine Anwendung Benutzer ein- und Ausgaben unterstützen muss, und in der Standardeinstellung ist identisch mit dem Betriebssystem-Kultur an. Z. B. die <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> Eigenschaft eine arabische Kultur für einem arabischen Betriebssystem zurück. Die Anwendung sollte verwenden die <xref:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture%2A> abzurufende eine neutrale Kultur, die für eine Konsole Anwendungsbenutzeroberfläche geeignet ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">In einem Set-Vorgang, in dem die angegebene Kultur nicht wird <see langword="null" />die <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture" /> Eigenschaft der angegebenen Kultur ist nicht identisch mit der angegebenen Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromLdml">
+      <MemberSignature Language="C#" Value="public static System.Globalization.CultureAndRegionInfoBuilder CreateFromLdml (string xmlFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Globalization.CultureAndRegionInfoBuilder CreateFromLdml(string xmlFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureAndRegionInfoBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlFileName">Der Name einer Datei, die die XML-Darstellung eines <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekts enthält.</param>
+        <summary>Rekonstruiert ein <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt aus einer angegebenen XML-Datei, die eine Darstellung des Objekts enthält.</summary>
+        <returns>Ein neues Objekt, das den unter dem <paramref name="xmlFileName" />-Parameter gespeicherten Informationen entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `xmlFileName` Parameter gibt einen Dateinamen, die die XML-Darstellung der enthält einem <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt. Das Format der XML-Datei heißt Gebietsschema Data Markup Language (LDML) Version 1.1. Ein neues <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt erstellt und initialisiert Sie mit den Daten im `xmlFileName`. Die <xref:System.Globalization.CultureAndRegionInfoBuilder.Save%2A> -Methode führt die Umkehrung einer der <xref:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml%2A> Methode.  
+  
+ In der Datei LDML die Eigenschaften einer Kultur angegeben sind, als untergeordnete Elemente von der `<special>` Element in der `<identity>` Abschnitt. Ein Eigenschaftswert wird durch des Elements in der Regel angegeben `type` Attribut. Der folgende Auszug aus einer Datei LDML definiert z. B. eine Kultur übergeordneten als die neutrale Kultur Englisch.  
+  
+```  
+  
+<identity>  
+   <version number="1.1">ldml version 1.1</version>  
+   <generation date="2012-05-16" />  
+   <special xmlns:msLocale="http://schemas.microsoft.com/globalization/2004/08/carib/ldml">  
+      <!—content removed -->  
+      <msLocale:parentName type="en" />  
+      <!—content removed -->  
+   </special>  
+</identity>  
+  
+```  
+  
+ Weitere Informationen zu den LDML-Standard, finden Sie unter [Unicode Technical Standard #35, "Locale Data Markup Language (LDML)"](http://go.microsoft.com/fwlink/p/?LinkId=252840) auf der Website des Unicode Consortium.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Globalization.CultureAndRegionInfoBuilder.Save%2A> und <xref:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml%2A> Methoden.  
+  
+ [!code-csharp[sys.glob.carib.saveLdml#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib.saveLdml/cs/sl.cs#1)]
+ [!code-vb[sys.glob.carib.saveLdml#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib.saveLdml/vb/sl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlFileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="xmlFileName" />ist eine leere Zeichenfolge (""), oder ungültigen Datei oder Pfad an.</exception>
+        <exception cref="T:System.Xml.XmlException">Die Daten in <paramref name="xmlFileName" /> befindet sich nicht im gültigen XML-Format.  
+  
+ - oder -   
+  
+ E/a-Fehler beim Zugriff auf <paramref name="xmlFileName" />.</exception>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Die Daten in <paramref name="xmlFileName" /> befindet sich nicht im gültigen LDML-Format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureEnglishName">
+      <MemberSignature Language="C#" Value="public string CultureEnglishName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CultureEnglishName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den englischen Kulturnamen ab oder legt diesen fest.</summary>
+        <value>Der englische Kulturname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.EnglishName%2A> Eigenschaft.  
+  
+ Beispielsweise ist der Rückgabewert von der <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName%2A> Eigenschaft für die spezifische Kultur Englisch, wie in den Vereinigten Staaten gesprochen ist "Englisch (USA)".  
+  
+ Der Wert dieser Eigenschaft ist identisch, unabhängig von der jeweiligen Sprachversion von .NET Framework.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte Kultur mit einem Präfix private Verwendung erstellt und enthält eine Reihe von deren Eigenschaften. Die erste Eigenschaft listet den Namen der Kultur.  
+  
+ [!code-cpp[sys.glob.carib1#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.carib1/CPP/carib.cpp#1)]
+ [!code-csharp[sys.glob.carib1#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib1/CS/carib.cs#1)]
+ [!code-vb[sys.glob.carib1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib1/VB/carib.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 0 und darf höchstens 79 Zeichen liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureName">
+      <MemberSignature Language="C#" Value="public string CultureName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CultureName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.CultureName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Kultur ab, die erstellt wird.</summary>
+        <value>Der Name der Kultur des aktuellen <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert ist der Name der Kultur angegeben, der <xref:System.Globalization.CultureAndRegionInfoBuilder.%23ctor%2A> Konstruktor. Identisch mit einer vorhandenen Kultur, mit Ausnahme der Fall ist der angegebene Kulturname ist der Rückgabewert den Namen der vorhandenen Kultur, nicht auf den Namen angegebenen Kultur.  
+  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureName%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.Name%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte Kultur mit einem Präfix private Verwendung erstellt und enthält eine Reihe von deren Eigenschaften. Die erste Eigenschaft listet den Namen der Kultur.  
+  
+ [!code-cpp[sys.glob.carib1#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.carib1/CPP/carib.cpp#1)]
+ [!code-csharp[sys.glob.carib1#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib1/CS/carib.cs#1)]
+ [!code-vb[sys.glob.carib1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib1/VB/carib.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureNativeName">
+      <MemberSignature Language="C#" Value="public string CultureNativeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CultureNativeName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kulturnamen im Format und der Sprache ab, das bzw. die in der Kultur für die Anzeige festgelegt sind, oder legt diesen fest.</summary>
+        <value>Der Kulturname im Format und in der Sprache, das bzw. die in der Kultur für die Anzeige festgelegt sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.NativeName%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft ist identisch, unabhängig von der jeweiligen Sprachversion von .NET Framework.  
+  
+ Der vollständige Kulturname möglicherweise nicht ordnungsgemäß angezeigt werden, wenn das System nicht festgelegt ist, die Kultur Sprache ordnungsgemäß angezeigt. Z. B. wenn die <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureName%2A> Eigenschaft ist "ja-JP" für Japanisch (Japan), die <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName%2A> Eigenschaft wird nicht richtig angezeigt, auf einem System, die nur auf Englisch festgelegt ist. Mehrsprachige Betriebssystemen wie Windows 2000, jedoch Anzeigen der <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName%2A> Eigenschaft ordnungsgemäß.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte Kultur mit einem Präfix private Verwendung erstellt und enthält eine Reihe von deren Eigenschaften. Die erste Eigenschaft listet den Namen der Kultur.  
+  
+ [!code-cpp[sys.glob.carib1#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.carib1/CPP/carib.cpp#1)]
+ [!code-csharp[sys.glob.carib1#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib1/CS/carib.cs#1)]
+ [!code-vb[sys.glob.carib1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib1/VB/carib.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 0 und darf höchstens 79 Zeichen liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureTypes">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureTypes CultureTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Globalization.CultureTypes CultureTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.CultureTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Globalization.CultureTypes" />-Wert ab, mit dem die durch das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt dargestellte Kultur beschrieben wird.</summary>
+        <value>Einer der <see cref="T:System.Globalization.CultureTypes" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrencyEnglishName">
+      <MemberSignature Language="C#" Value="public string CurrencyEnglishName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrencyEnglishName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den englischen Namen der Währung ab, die in dem Land oder der Region verwendet wird, die durch das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt dargestellt wird, oder legt diesen Namen fest.</summary>
+        <value>Der englische Name der in dieser Region verwendeten Währung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName%2A> Eigenschaft ist identisch mit der <xref:System.Globalization.RegionInfo.CurrencyEnglishName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.NotSupportedException">Die aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> Objekt ist eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrencyNativeName">
+      <MemberSignature Language="C#" Value="public string CurrencyNativeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrencyNativeName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyNativeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den systemeigenen Namen der Währung ab, die in dem Land oder der Region verwendet wird, die durch das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt dargestellt wird, oder legt diesen Namen fest.</summary>
+        <value>Der Name der Währung, die in dem Land oder der Region verwendet wird, die durch das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt dargestellt wird und in der Sprache formatiert ist, die dem entsprechenden Landes-/Regionalcode nach ISO 3166 zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyNativeName%2A> Eigenschaft ist identisch mit der <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.NotSupportedException">Die aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> Objekt ist eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GeoId">
+      <MemberSignature Language="C#" Value="public int GeoId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GeoId" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.GeoId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine eindeutige Identifikationsnummer für eine geographische Region, ein Land, eine Stadt oder einen Ort ab oder legt diese fest.</summary>
+        <value>Eine 32-Bit-Zahl mit Vorzeichen, die einen geographischen Ort eindeutig identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.GeoId%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.GeoId%2A> Eigenschaft.  
+  
+ Verwenden Sie die Anwendung sollte die <xref:System.Globalization.CultureAndRegionInfoBuilder.GeoId%2A> Eigenschaft, um kulturspezifische Dienste für Kunden bereitzustellen. Z. B. die <xref:System.Globalization.CultureAndRegionInfoBuilder.GeoId%2A> Eigenschaft kann als Schlüssel verwendet werden, um ein Datenbankeintrag zugreifen, die bestimmte Informationen zu einem Bereich enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> -Objekt definiert eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GregorianDateTimeFormat">
+      <MemberSignature Language="C#" Value="public System.Globalization.DateTimeFormatInfo GregorianDateTimeFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.DateTimeFormatInfo GregorianDateTimeFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.GregorianDateTimeFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeFormatInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Globalization.DateTimeFormatInfo" />-Objekt ab, das das Format von Datumsangaben und Uhrzeiten nach dem gregorianischen Kalender definiert, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Globalization.DateTimeFormatInfo" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Kultur, einschließlich der definiert, die von der aktuellen Kultur <xref:System.Globalization.CultureAndRegionInfoBuilder> -Objekt ist, enthält einen lokalisierten gregorianischen Kalender, die mit zugeordnetem ein <xref:System.Globalization.DateTimeFormatInfo> Objekt. Die <xref:System.Globalization.DateTimeFormatInfo> Objekt definiert, wie Ihre Anwendung Datums- und Uhrzeitangaben angezeigt. Die <xref:System.Globalization.CultureAndRegionInfoBuilder.GregorianDateTimeFormat%2A> Eigenschaftswert ist die <xref:System.Globalization.DateTimeFormatInfo> verknüpft sind, mit dem ersten lokalisierten gregorianischen Kalender zurückgegebenes Objekt die <xref:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Eine Eigenschaft des Werts in einem Set-Vorgang zurückgegebenen einen Ungültiger Eigenschaftswert.</exception>
+        <exception cref="T:System.NotSupportedException">Die aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> Objekt ist eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IetfLanguageTag">
+      <MemberSignature Language="C#" Value="public string IetfLanguageTag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IetfLanguageTag" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.IetfLanguageTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen nach RFC 4646, „Tags for the Identification of Languages“, formatierten Kulturnamen ab oder legt diesen fest.</summary>
+        <value>Ein nach RFC 4646 formatierter Kulturname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.IetfLanguageTag%2A> Eigenschaft ruft ab oder legt einen nach RFC 4646, die von der Kulturname zurückgegebenes unterscheiden kann, formatierten Kulturnamen der <xref:System.Globalization.CultureInfo.Name%2A> Eigenschaft. In .NET Framework, Version 1.0 war der Name der neutralen Kultur für Chinesisch (traditionell) z. B. "Zh-CHT". Im Gegensatz dazu definiert RFC 4646 Kulturname als "Zh-HANT". (Beachten Sie, dass in .NET Framework, Version 4, der Anzeigename für "Zh-CHT" ist "Chinesisch (traditionell) Legacy-").  
+  
+ Ein Kulturname RFC 4646 besteht aus mehreren Komponenten. Eine typische Kulturname besteht aus einer obligatorischen Sprachen-ID, ein optionales Skriptbezeichner und eine optionale Land/Region-Bezeichner. Beispielsweise ist ein gültiger RFC 4646 Kulturname für Serbisch, das kyrillische Skript und die Region Serbien "sr-Cyrl-RS".  
+  
+ Beachten Sie, dass mindestens zwei Kulturen die gleiche IETF-Sprachtag aufweisen können.  
+  
+ Weitere Informationen finden Sie unter RFC 4646, "Tags für the Identification of Languages" am [Request For Comments](http://go.microsoft.com/fwlink/?linkid=45286).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">In einem Set-Vorgang ist der Wert <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">In einem Set-Vorgang ist die Länge des Werts nicht zwischen 1 und 84 Zeichen.</exception>
+        <exception cref="T:System.ArgumentException">In einem Set-Vorgang eine Komponente mit dem Namen im Wert angegeben ist, leer oder länger als 8 Zeichen, nicht aus einem alphanumerischen Zeichen oder Bindestriche (-) oder der Name enthält einen führenden oder nachfolgenden Bindestrich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMetric">
+      <MemberSignature Language="C#" Value="public bool IsMetric { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMetric" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.IsMetric" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob für Maßeinheiten in dem Land bzw. der Region das metrische System verwendet wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn in dem Land oder der Region für Maßeinheiten das metrische System verwendet wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Dieser Vorgang ist nicht gültig für eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ISOCurrencySymbol">
+      <MemberSignature Language="C#" Value="public string ISOCurrencySymbol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ISOCurrencySymbol" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.ISOCurrencySymbol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aus drei Zeichen bestehende, dem Land bzw. der Region nach ISO 4217 zugeordnete Währungssymbol ab.</summary>
+        <value>Das aus drei Zeichen bestehende, dem Land bzw. der Region nach ISO 4217 zugeordnete Währungssymbol.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.ISOCurrencySymbol%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> Eigenschaft.  
+  
+ Eine Liste der aus drei Zeichen nach ISO 4217 Währungssymbole finden Sie der <xref:System.Globalization.RegionInfo> klassenthema. Beispielsweise ist das Währungssymbol nach ISO 4217 für US-Dollar "USD".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dies ist eine neutrale Kultur.</exception>
+        <exception cref="T:System.ArgumentNullException">In einem Set-Vorgang ist der Wert <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">In einem Set-Vorgang ist der Wert nicht von 0 bis 8 Zeichen lang sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRightToLeft">
+      <MemberSignature Language="C#" Value="public bool IsRightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.IsRightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vorherrschende Schreibrichtung der Textzeilen im Schriftsystem ab, das dem aktuellen <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt zugeordnet ist, oder legt diese fest.</summary>
+        <value>
+          <see langword="true" />, wenn die vorherrschende Schreibrichtung der Textzeilen im aktuellen Schriftsystem von rechts nach links ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anwendung verwendet die <xref:System.Globalization.CultureAndRegionInfoBuilder.IsRightToLeft%2A> -Eigenschaft zum Bestimmen der relativen Position von Steuerelementen wie Schaltflächen und führen Sie einen Bildlauf in einer grafischen Benutzeroberfläche Steuerleisten.  
+  
+ Die vorherrschende Schreibrichtung der Text in eine benutzerdefinierte Kultur, die aus dem aktuellen erstellt den Zugriff auf <xref:System.Globalization.CultureAndRegionInfoBuilder> -Objekt sollte die Anwendung verwendet die <xref:System.Globalization.TextInfo.IsRightToLeft%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Globalization.CultureInfo.TextInfo%2A> Eigenschaft der benutzerdefinierten Kultur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyboardLayoutId">
+      <MemberSignature Language="C#" Value="public int KeyboardLayoutId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeyboardLayoutId" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.KeyboardLayoutId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner für das aktive Eingabegebietsschema ab oder legt diesen fest.</summary>
+        <value>Eine 32-Bit-Zahl mit Vorzeichen, die einen Bezeichner für das Eingabegebietsschema angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.KeyboardLayoutId%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.KeyboardLayoutId%2A> Eigenschaft.  
+  
+ Der Gebietsschemabezeichner für die Eingabe hieß früher das Tastaturlayout. Der Bezeichner kann für einen Konverter Sprache-zu-Text, einen Eingabemethoden-Editor (IME) oder eine andere Art der Eingabe verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">In einem Set-Vorgang ist der Wert 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LCID">
+      <MemberSignature Language="C#" Value="public int LCID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LCID" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.LCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kulturbezeichner für das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt ab.</summary>
+        <value>Der Kulturbezeichner für das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.LCID%2A?displayProperty=nameWithType> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Bei Ersatzkulturen wird der Kulturbezeichner dem entsprechenden National Language Support (NLS) Gebietsschemabezeichner zugeordnet. Für eine benutzerdefinierte Kulturen lautet der Wert dieser Eigenschaft immer hexadezimal 0 x 1000.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadDataFromCultureInfo">
+      <MemberSignature Language="C#" Value="public void LoadDataFromCultureInfo (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadDataFromCultureInfo(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromCultureInfo(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Das Objekt, dessen Eigenschaften verwendet werden.</param>
+        <summary>Legt die Eigenschaften des aktuellen <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekts mit den entsprechenden Eigenschaften des angegebenen <see cref="T:System.Globalization.CultureInfo" />-Objekts fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="culture" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadDataFromRegionInfo">
+      <MemberSignature Language="C#" Value="public void LoadDataFromRegionInfo (System.Globalization.RegionInfo region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadDataFromRegionInfo(class System.Globalization.RegionInfo region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromRegionInfo(System.Globalization.RegionInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Globalization.RegionInfo" />
+      </Parameters>
+      <Docs>
+        <param name="region">Das Objekt, dessen Eigenschaften verwendet werden.</param>
+        <summary>Legt die Eigenschaften des aktuellen <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekts mit den entsprechenden Eigenschaften des angegebenen <see cref="T:System.Globalization.RegionInfo" />-Objekts fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="region" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Land/Region-Informationen kann nicht festgelegt werden, da die aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> Objekt eine neutrale Kultur angibt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberFormat">
+      <MemberSignature Language="C#" Value="public System.Globalization.NumberFormatInfo NumberFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.NumberFormatInfo NumberFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.NumberFormatInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Globalization.NumberFormatInfo" />-Objekt ab, das das für die Kultur spezifische Format zum Anzeigen von Zahlen, Währungen und Prozentsätzen definiert, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Globalization.NumberFormatInfo" />-Objekt, das das für die Kultur spezifische Format zum Anzeigen von Zahlen, Währungen und Prozentsätzen definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.NumberFormat%2A> Eigenschaft.  
+  
+ Die Anwendung muss diese Eigenschaft nur für bestimmte Kulturen aufrufen.  
+  
+ Die <xref:System.Globalization.NumberFormatInfo.PercentDecimalSeparator%2A>, <xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>, <xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>, und <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> Eigenschaften des <xref:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat%2A> werden ignoriert. Die gespeicherten Form einer Kultur werden explizite Werte für diese Eigenschaften nicht gespeichert werden. Stattdessen beim Laden der Kultur als Standardwerte immer <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>, <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A>, <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A>, und <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Dieser Vorgang ist nicht gültig für eine neutrale Kultur.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Spezifikation für eine Zahl, Währung oder Percent-Eigenschaft für diese Kultur enthält zu viele Ziffern oder liegt außerhalb des gültigen Bereichs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Parent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Globalization.CultureInfo" />-Objekt ab, das die übergeordnete Kultur der aktuellen benutzerdefinierten Kultur darstellt, oder legt dieses fest.</summary>
+        <value>Das <see cref="T:System.Globalization.CultureInfo" />-Objekt, das die übergeordnete Kultur der aktuellen benutzerdefinierten Kultur darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kulturen über eine Hierarchie verfügen. Bei vordefinierten Kulturen ist das übergeordnete Element einer bestimmten Kultur eine neutrale Kultur und das übergeordnete Element eine neutrale Kultur ist die <xref:System.Globalization.CultureInfo.InvariantCulture%2A>. Die übergeordnete Kultur zur umfasst nur die Informationen, die die untergeordneten Elemente gemeinsam sind.  
+  
+ Im Allgemeinen empfohlen, dass diese Hierarchie Kulturen entsprechen. Allerdings standardmäßig der <xref:System.Globalization.CultureAndRegionInfoBuilder.Parent%2A> einer benutzerdefinierten Kultur wird die <xref:System.Globalization.CultureAndRegionInfoBuilder.Parent%2A> der Kultur auf dem es basiert. Wenn die Anwendung eine Kultur mit erstellt <xref:System.Globalization.CultureAndRegionInfoBuilder.CultureName%2A> "En-US-MyCulture" auf der Grundlage von "En-US", die das übergeordnete Element ist "En", da dies ist die <xref:System.Globalization.CultureAndRegionInfoBuilder.Parent%2A> "En-US". Wenn die Anwendung als "En-US" verwendet die <xref:System.Globalization.CultureAndRegionInfoBuilder.Parent%2A> der neuen benutzerdefinierten Kultur, muss er explizit dieser Wert festgelegt.  
+  
+ Wenn die Ressourcen für die spezifische Kultur nicht im System verfügbar sind, werden die Ressourcen für die neutrale Kultur verwendet. Wenn die Ressourcen für die neutrale Kultur nicht verfügbar sind, werden die in die Hauptassembly eingebetteten Ressourcen verwendet. Weitere Informationen zu den Ressourcenfallback-Prozess finden Sie unter [Verpacken und Bereitstellen von Ressourcen](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+  
+ Die Liste der Kulturen, in der Windows-API unterscheidet sich leicht aus der Liste der Kulturen in .NET Framework. Wenn Interoperabilität mit Windows erforderlich ist, z. B. über die Plattform aufrufen Mechanismus, die Anwendung die zu verwendende einer bestimmten Kultur, die in .NET Framework definiert ist. Dadurch wird sichergestellt, dass Konsistenz mit dem entsprechenden Windows-Gebietsschemas, das mit dem bestimmt wird <xref:System.Globalization.CultureInfo.LCID%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">In einem Set-Vorgang kann den Wert für die Kultur nicht gefunden werden. Der zugewiesene Wert ist möglicherweise, einen nicht registrierten benutzerdefinierten Kultur.</exception>
+        <exception cref="T:System.ArgumentNullException">In einem Set-Vorgang ist der Wert <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">In einem Set-Vorgang, dem der Vorgänger der aktuellen Kultur durchläuft, kann die invariante Kultur innerhalb von 10 Generationen Vorgänger gefunden werden.  
+  
+ - oder -   
+  
+ In einem Set-Vorgang wurde ein Zirkelverweis ermittelt: der zugewiesene Wert ist ein Vorgänger der aktuellen benutzerdefinierten Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionEnglishName">
+      <MemberSignature Language="C#" Value="public string RegionEnglishName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionEnglishName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen englischen Namen des Landes bzw. der Region ab oder legt diesen fest.</summary>
+        <value>Der vollständige Name des Landes bzw. der Region auf Englisch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.EnglishName%2A> Eigenschaft.  
+  
+ Beispielsweise ist der Rückgabewert der <xref:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName%2A> für den Vereinigten Staaten "USA" ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dieser Vorgang ist nicht gültig für eine neutrale Kultur.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 0 und darf höchstens 79 Zeichen liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionName">
+      <MemberSignature Language="C#" Value="public string RegionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.RegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Landes bzw. der Region für das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt ab.</summary>
+        <value>Der Name des Landes bzw. der Region für das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert ist der Name der Kultur angegeben, der <xref:System.Globalization.CultureAndRegionInfoBuilder.%23ctor%2A> Konstruktor. Identisch mit einer vorhandenen Kultur, mit Ausnahme der Fall ist der angegebene Kulturname ist der Rückgabewert den Namen der vorhandenen Kultur, nicht auf den Namen angegebenen Kultur.  
+  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.RegionName%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dieser Vorgang ist nicht gültig für eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionNativeName">
+      <MemberSignature Language="C#" Value="public string RegionNativeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionNativeName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.RegionNativeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Namen des Landes bzw. der Region ab, der örtlich in dieser benutzerdefinierten Kultur verwendet wird, oder legt diesen fest.</summary>
+        <value>Der örtlich verwendete Name des Landes bzw. der Region.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.RegionNativeName%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.NativeName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dieser Vorgang ist nicht gültig für eine neutrale Kultur.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 1 und 79 Zeichen liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public void Register ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Register() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CultureAndRegionInfoBuilder.Register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behält das aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt als benutzerdefinierte Kultur auf dem lokalen Computer bei und macht diese Kultur für Anwendungen verfügbar. Erfordert Administratorberechtigungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.Register%2A> Methode speichert eine benutzerdefinierte Kultur als Datei auf dem lokalen Computer, in der Globalisierung Unterverzeichnis des Verzeichnisses zurückgegeben, durch die Win32- [GetWindowsDirectory](http://go.microsoft.com/fwlink/?LinkId=191561) Funktion. Dieser Vorgang wird als benutzerdefinierte Kultur zu registrieren. Nachdem die benutzerdefinierte Kultur registriert wurde, kann eine neue benutzerdefinierte Kultur erstellt werden, indem der Kulturname im ein <xref:System.Globalization.CultureInfo.%23ctor%2A> Konstruktor oder beim Aufrufen der <xref:System.Globalization.CultureInfo.CreateSpecificCulture%2A?displayProperty=nameWithType> Methode.  
+  
+ Die benutzerdefinierte Kultur kann entfernt werden, durch Aufrufen der <xref:System.Globalization.CultureAndRegionInfoBuilder.Unregister%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Globalization.CultureAndRegionInfoBuilder.Register%2A> Methode.  
+  
+ [!code-csharp[sys.glob.carib.register#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib.register/CS/persist.cs#1)]
+ [!code-vb[sys.glob.carib.register#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib.register/VB/persist.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die benutzerdefinierte Kultur ist bereits registriert.  
+  
+ - oder -   
+  
+ Die aktuelle <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> Objekt verfügt über eine Eigenschaft, die festgelegt werden muss, bevor die Kultur registriert werden kann. Alle Kulturen, neutrale oder spezifische, benötigen <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TextInfo" /> und <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo" /> festgelegt. Bestimmte Kulturen benötigen auch <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat" />, <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.GregorianDateTimeFormat" />, und <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars" /> festgelegt.  
+  
+ Diese Methode löst auch <see cref="T:System.InvalidOperationException" /> keine definiert die folgenden Eigenschaften:  
+  
+ <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyNativeName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ISOCurrencySymbol" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.Parent" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.RegionNativeName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISOLanguageName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsLanguageName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsRegionName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISOLanguageName" /><see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName" /></exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ein <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> Objekteigenschaftenwert überschreitet die maximale Länge oder Wert.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Benutzer nicht über Administratorberechtigungen verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CultureAndRegionInfoBuilder.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Name einer Datei, die die XML-Darstellung dieser benutzerdefinierten Kultur enthalten soll.</param>
+        <summary>Schreibt eine XML-Darstellung des aktuellen <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekts in die angegebene Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.Save%2A> Methode schreibt den aktuellen <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt, das die Datei gemäß der `filename` Parameter in einem XML-Format namens Gebietsschema Data Markup Language (LDML) Version 1.1. Die <xref:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml%2A> -Methode führt die Umkehrung einer der <xref:System.Globalization.CultureAndRegionInfoBuilder.Save%2A> Methode.  
+  
+ Informationen zum Format einer LDML-Datei finden Sie unter der <xref:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml%2A> Methode. Informationen zum LDML-Standard finden Sie unter [Unicode Technical Standard #35, "Locale Data Markup Language (LDML)"](http://go.microsoft.com/fwlink/p/?LinkId=252840) auf der Website des Unicode Consortium.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Globalization.CultureAndRegionInfoBuilder.Save%2A> und <xref:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml%2A> Methoden.  
+  
+ [!code-csharp[sys.glob.carib.saveLdml#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib.saveLdml/cs/sl.cs#1)]
+ [!code-vb[sys.glob.carib.saveLdml#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib.saveLdml/vb/sl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filename" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filename" /> ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert einer Eigenschaft ein <see cref="T:System.Globalization.DateTimeFormatInfo" />, <see cref="T:System.Globalization.TextInfo" />, oder <see cref="T:System.Globalization.NumberFormatInfo" /> in der aktuellen enthaltenes Objekt <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> Objekt ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextInfo">
+      <MemberSignature Language="C#" Value="public System.Globalization.TextInfo TextInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.TextInfo TextInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.TextInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.TextInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Globalization.TextInfo" />-Objekt ab, das das dieser benutzerdefinierten Kultur zugeordnete Schriftsystem definiert, oder legt dieses fest.</summary>
+        <value>Das Objekt, das das dieser benutzerdefinierten Kultur zugeordnete Schriftsystem definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.TextInfo%2A?displayProperty=nameWithType> Eigenschaft enthält die Groß-/Kleinschreibung kulturspezifische Informationen für Zeichenfolgen. Entspricht der <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Globalization.TextInfo> und <xref:System.Globalization.CompareInfo> Objekte, die zugewiesen werden, die <xref:System.Globalization.CultureAndRegionInfoBuilder.TextInfo%2A> und <xref:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo%2A> Eigenschaften beide unterstützen Zeichenfolgenvergleich kulturabhängigen und Groß-/Kleinschreibung beachtet. Die <xref:System.Globalization.CompareInfo> -Objekt verfügt außerdem über Methoden wie eine <xref:System.Globalization.CompareOptions> Parameter, der kulturabhängige, Groß-/Kleinschreibung Vergleich unterstützt. Diese beiden Eigenschaften sollten zugewiesen <xref:System.Globalization.TextInfo> und <xref:System.Globalization.CompareInfo> Objekte, die das gleiche Gebietsschema darstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dieser Vorgang wird für Ersatzkulturen nicht unterstützt.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Anzahl der Zeichen in einem Listentrennzeichen wird nicht zwischen 0 und 3 liegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeLetterISOLanguageName">
+      <MemberSignature Language="C#" Value="public string ThreeLetterISOLanguageName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreeLetterISOLanguageName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISOLanguageName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aus drei Buchstaben bestehenden Code nach ISO 639-2 für die Sprache dieser benutzerdefinierten Kultur ab oder legt diesen fest.</summary>
+        <value>Der aus drei Buchstaben bestehende Code nach ISO 639-2 für die Sprache des aktuellen <see cref="T:System.Globalization.CultureInfo" />-Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISOLanguageName%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.ThreeLetterISOLanguageName%2A> Eigenschaft.  
+  
+ Beispielsweise ist die dreibuchstabige Abkürzung für Englisch "Eng".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 1 und 8 Zeichen liegen.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang enthält ein Zeichen, die nicht im Bereich "a" bis "Z", "A" bis "Z" oder "0" bis "9".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeLetterISORegionName">
+      <MemberSignature Language="C#" Value="public string ThreeLetterISORegionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreeLetterISORegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aus drei Buchstaben bestehenden Code nach ISO 3166 für das Land bzw. die Region ab oder legt diesen fest.</summary>
+        <value>Der in ISO 3166 definierte, aus drei Buchstaben bestehende Code für das Land bzw. die Region.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.ThreeLetterISORegionName%2A> Eigenschaft.  
+  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName%2A> Eigenschaft enthält einen der drei Buchstaben bestehenden Codes für Land/Region nach ISO 3166 definierten. Die drei Buchstaben bestehenden Code für die USA ist z. B. "USA".  
+  
+ Fall spielt keine Rolle. Allerdings die <xref:System.Globalization.CultureAndRegionInfoBuilder.RegionName%2A>, <xref:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName%2A>, und die <xref:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName%2A> Eigenschaften enthalten die entsprechenden Code in Großbuchstaben.  
+  
+ Die Namen der vordefinierten Land/Region sind aufgeführt, der <xref:System.Globalization.RegionInfo> klassenthema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 1 und 8 Zeichen liegen.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang enthält ein Zeichen, die nicht im Bereich "a" bis "Z", "A" bis "Z" oder "0" bis "9".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeLetterWindowsLanguageName">
+      <MemberSignature Language="C#" Value="public string ThreeLetterWindowsLanguageName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreeLetterWindowsLanguageName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsLanguageName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aus drei Buchstaben bestehenden Code für die Sprache ab, wie er in der Windows-API definiert ist, oder legt diesen fest.</summary>
+        <value>Der aus drei Buchstaben bestehenden Code für die Sprache, wie er in der Windows-API definiert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsLanguageName%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.ThreeLetterWindowsLanguageName%2A> Eigenschaft.  
+  
+ Diese Eigenschaft gibt den gleichen Wert wie die Windows-API-Methode `GetLocaleInfo` mit dem LOCALE_SABBREVLANGNAME-Wert. Die drei Buchstaben bestehenden Code für Englisch (Vereinigte Staaten), wie in der Windows-API definiert ist z. B. "Enu".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 1 und 8 Zeichen liegen.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang enthält ein Zeichen, die nicht im Bereich "a" bis "Z", "A" bis "Z" oder "0" bis "9".</exception>
+        <exception cref="T:System.NotSupportedException">In einem Set-Vorgang ist die aktuelle benutzerdefinierte Kultur eine Kultur ersetzen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeLetterWindowsRegionName">
+      <MemberSignature Language="C#" Value="public string ThreeLetterWindowsRegionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreeLetterWindowsRegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsRegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aus drei Buchstaben bestehenden Code ab, der von Windows dem Land bzw. der Region zugeordnet wird, das bzw. die durch die aktuelle benutzerdefinierte Kultur dargestellt wird, oder legt diesen fest.</summary>
+        <value>Der aus drei Buchstaben bestehende Code, der von Windows dem Land bzw. der Region zugeordnet wird, das bzw. die durch dieses <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt dargestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsRegionName%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.ThreeLetterWindowsRegionName%2A> Eigenschaft.  
+  
+ Die drei Buchstaben bestehenden Code für die USA ist z. B. "USA".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 1 und 8 Zeichen liegen.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang enthält ein Zeichen, die nicht im Bereich "a" bis "Z", "A" bis "Z" oder "0" bis "9".</exception>
+        <exception cref="T:System.NotSupportedException">In einem Set-Vorgang wird die aktuelle benutzerdefinierte Kultur einen Austausch oder eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoLetterISOLanguageName">
+      <MemberSignature Language="C#" Value="public string TwoLetterISOLanguageName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TwoLetterISOLanguageName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISOLanguageName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aus zwei Buchstaben bestehenden Code nach ISO 639-1 für die Sprache des aktuellen <see cref="T:System.Globalization.CultureInfo" />-Objekts ab oder legt diesen fest.</summary>
+        <value>Der aus zwei Buchstaben bestehende Code nach ISO 639-1 für die Sprache des aktuellen <see cref="T:System.Globalization.CultureInfo" />-Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISOLanguageName%2A> Eigenschaft entspricht der <xref:System.Globalization.CultureInfo.TwoLetterISOLanguageName%2A> Eigenschaft.  
+  
+ Beispielsweise ist die zweibuchstabige Abkürzung für Englisch "En".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 1 und 8 Zeichen liegen.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang enthält ein Zeichen, die nicht im Bereich "a" bis "Z", "A" bis "Z" oder "0" bis "9".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoLetterISORegionName">
+      <MemberSignature Language="C#" Value="public string TwoLetterISORegionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TwoLetterISORegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aus zwei Buchstaben bestehenden Code nach ISO 3166 für das Land bzw. die Region ab oder legt diesen fest.</summary>
+        <value>Der in ISO 3166 definierte, aus zwei Buchstaben bestehende Code für das Land oder die Region.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName%2A> Eigenschaft entspricht der <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A> Eigenschaft.  
+  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName%2A> Eigenschaftswert ist einer der zwei Buchstaben bestehenden Codes für Land/Region nach ISO 3166 definierten. Beispielsweise ist "US", der zwei Buchstaben bestehende Code für die USA. Die vordefinierten <xref:System.Globalization.RegionInfo> Namen werden aufgeführt, der <xref:System.Globalization.RegionInfo> klassenthema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert in einem Set-Vorgang ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des Werts in einem Set-Vorgang wird nicht zwischen 1 und 8 Zeichen liegen.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert in einem Set-Vorgang enthält ein Zeichen, die nicht im Bereich "a" bis "Z", "A" bis "Z" oder "0" bis "9".</exception>
+        <exception cref="T:System.NotSupportedException">In einem Set-Vorgang ist die aktuelle benutzerdefinierte Kultur eine neutrale Kultur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public static void Unregister (string cultureName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Unregister(string cultureName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CultureAndRegionInfoBuilder.Unregister(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cultureName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cultureName">Der Name der zu löschenden benutzerdefinierten Kultur.</param>
+        <summary>Löscht eine benutzerdefinierte Kultur vom lokalen Computer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.CultureAndRegionInfoBuilder.Unregister%2A> Methode ist die Umkehrung der der <xref:System.Globalization.CultureAndRegionInfoBuilder.Register%2A> Methode. Die <xref:System.Globalization.CultureAndRegionInfoBuilder.Register%2A> Methode speichert eine benutzerdefinierte Kultur als Datei auf dem lokalen Computer, in der Globalisierung Unterverzeichnis des Verzeichnisses, das von der Win32-API zurückgegebenen [GetWindowsDirectory](http://go.microsoft.com/fwlink/?LinkId=191561) Funktion. Die <xref:System.Globalization.CultureAndRegionInfoBuilder.Unregister%2A> Methode löscht die beibehaltenen benutzerdefinierten Kultur-Datei auf dem Computer. Nachdem die Datei gelöscht wurde, vorhandene Instanzen der benutzerdefinierten Kultur im Arbeitsspeicher des Computers weiterhin funktionsfähig, aber neue Instanzen der benutzerdefinierten Kultur können nicht erstellt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Globalization.CultureAndRegionInfoBuilder.Unregister%2A> Methode.  
+  
+ [!code-csharp[sys.glob.carib.unregister#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib.unregister/CS/unregister.cs#1)]
+ [!code-vb[sys.glob.carib.unregister#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib.unregister/VB/unregister.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="cultureName" />ist eine übergeordnete Kultur oder die Konsole GUI-Kultur einer abhängigen Kultur.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Benutzer nicht über Administratorberechtigungen verfügen.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cultureName" />Gibt eine Kultur, die nicht gefunden wird.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

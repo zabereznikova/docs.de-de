@@ -1,0 +1,17 @@
+<Namespace Name="System.Net.PeerToPeer.Collaboration">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.PeerToPeer.Collaboration" /> Namespace verbessert <see cref="N:System.Net.PeerToPeer" /> Netzwerkfunktionen und bietet Funktionen für serverlose verwalteten Zusammenarbeit Sitzungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Infrastruktur für die Zusammenarbeit der Peer-zu-Peer (P2P) bietet ein Peer-zu-Peer-netzwerkbasierte-Framework für gemeinsame Aktivitäten, z. B. Netzwerkspiele, Konferenzen und andere interaktiven Aktivitäten mit mehreren Teilnehmern. Diese serverlose Infrastruktur enthält APIs, die den Prozess zu vereinfachen, mit dem Anwendungen können Peer vorhanden ist, ohne einen Server überwachen, Einladungen an Teilnehmer gesendet Peers im gleichen Subnetz zu ermitteln und Verwalten von Kontakten.  
+  
+ Systemeigene Peer-Zusammenarbeit-APIs stehen unter Windows Vista-Clients in 32-Bit und 64-Bit-Editionen zur Verfügung. Peer-Zusammenarbeit-APIs sind nicht auf Windows Server 2008 verfügbar.  
+  
+ Hinweis: Die Zusammenarbeit-APIs sind von einem Dienst funktionsfähig, nur dann, wenn der Dienst ist die Identität eines Aufrufers annimmt, und der Aufrufer einem interaktiven Benutzer (im Gegensatz zu einer integrierten Benutzer ist). Mehrere Kontakt-Manager werden nicht unterstützt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

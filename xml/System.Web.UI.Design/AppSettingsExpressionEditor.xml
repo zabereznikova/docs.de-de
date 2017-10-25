@@ -1,0 +1,151 @@
+<Type Name="AppSettingsExpressionEditor" FullName="System.Web.UI.Design.AppSettingsExpressionEditor">
+  <TypeSignature Language="C#" Value="public class AppSettingsExpressionEditor : System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AppSettingsExpressionEditor extends System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.AppSettingsExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften und Methoden für die Auswertung und Bearbeitung eines Ausdrucks Einstellung Anwendung in einer Konfigurationsdatei zur Entwurfszeit an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.AppSettingsExpressionEditor> abgeleitete Klasse wird von der <xref:System.Web.UI.Design.ExpressionEditor> -Klasse und stellt eine Implementierung für das Auswerten und Zuordnen von einer Einstellung Anwendungsverweis zu einer Steuerelementeigenschaft zur Entwurfszeit bereit. Beispielsweise können Sie den Wert der Eigenschaft eines Steuerelements an die Anwendung Einstellungsausdruck binden `AppSettings:mySettingKeyName`, gibt an, dass der Steuerelement-Eigenschaftswert festgelegt ist, mit der `mySettingKeyName` Wert in der `appSettings` Abschnitt der Konfigurationsdatei.  
+  
+ Ein visuellen Designer hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], verwendet der <xref:System.Web.UI.Design.AppSettingsExpressionEditor> Klasse zur Auswahl einer anwendungseinstellung aus der `appSettings` Konfigurationsabschnitt und wertet dann den ausgewählten Ausdruck für das Rendering zur Entwurfszeit.  
+  
+ Wenn Sie zum Navigieren der <xref:System.Web.UI.Design.HtmlControlDesigner.Expressions%2A> Eigenschaft für ein Steuerelement im Eigenschaftenraster zur Entwurfszeit visuelle Designer zeigt ein Dialogfeld zum Festlegen von Ausdrücken, die den Laufzeitwert für eine Steuerelementeigenschaft bereitstellen. Sie können den Typ des Ausdrucks basierend auf eine Liste mit Ausdruckspräfixen auswählen. Bei Auswahl der **"appSettings"** Ausdruckspräfix aus der Liste der visuellen Designerhost verwendet die zugeordnete <xref:System.Web.UI.Design.ExpressionEditorSheet> zur Entwurfszeit Bearbeitungsfunktionen von zu verwendendes Objekt `appSettings` Ausdrücke und verwendet <xref:System.Web.UI.Design.AppSettingsExpressionEditor>Methoden zum Auswerten und Konvertieren der Zeichenfolge des Ausdrucks anhand der Syntax für eine Anwendung Einstellungsausdruck. Der visuelle Designerhost verwendet das Ergebnis des ausgewerteten Ausdrucks Steuerelement Eigenschaftswerte zugewiesen, die auf der Entwurfsoberfläche gerendert werden.  
+  
+ Die <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> -Eigenschaft für ein <xref:System.Web.UI.Design.AppSettingsExpressionEditor> Objekt zurückgibt, die Zeichenfolge `AppSettings`. Die <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Klasse bezieht sich auf das Ausdruckspräfix `AppSettings` und <xref:System.Web.UI.Design.AppSettingsExpressionEditor> Implementierung.  
+  
+ Die <xref:System.Web.UI.Design.AppSettingsExpressionEditor.EvaluateExpression%2A> Methode ergibt eine Ausdruckszeichenfolge des Eingabe-App-Einstellung. Die <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> Methode gibt die <xref:System.Web.UI.Design.ExpressionEditorSheet> Implementierung, die zum eingeben und bearbeiten die Einstellung anwendungsausdrücke verwendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Binden der <xref:System.Web.UI.WebControls.HyperLink.NavigateUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.HyperLink> Steuerelement an eine Anwendung Einstellung Ausdruck mithilfe der <xref:System.Web.UI.Design.AppSettingsExpressionEditor> Objekt.  
+  
+1.  In einer Web Forms-Projekt hinzufügen `MyHyperLinkSetting` auf die `<appSettings>` Abschnitt der Datei "Web.config".  
+  
+     [!code-xml[ControlsUsingExpressions#5](~/samples/snippets/common/VS_Snippets_WebNet/ControlsUsingExpressions/Common/controlsusingexpressions.xml#5)]  
+  
+2.  Fügen Sie auf Web Forms-Seite, ein <xref:System.Web.UI.WebControls.HyperLink> Steuerelement.  
+  
+3.  Für die `Hyperlink` Steuerelements in den Eigenschaften, klicken Sie auf **Ausdrücke**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**... **).  
+  
+     Die `<Hyperlinkname>` **Ausdruck** Dialogfeld wird angezeigt.  
+  
+4.  Unter **bindbare Eigenschaften**, klicken Sie auf **NavigateUrl**in der **Ausdruckstyp** auf **"appSettings"**, und klicken Sie dann unter ** Eigenschaften des Ausdrucks**in der **AppSetting** geben **MyHyperLinkSetting**.  
+  
+ Der visuelle Designer verwendet die <xref:System.Web.UI.Design.AppSettingsExpressionEditor> , weisen Sie den Ausdruck für die `NavigateUrl` Eigenschaft.  
+  
+ Die folgenden Aspx-Quelle zeigt ein Beispiel eines Eigenschaftswerts, legen Sie mithilfe eines Ausdrucks der Anwendung festlegen.  
+  
+ [!code-aspx-csharp[ControlsUsingExpressions#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlsUsingExpressions/CS/controlsusingexpressionscs.aspx#2)]
+ [!code-aspx-vb[ControlsUsingExpressions#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlsUsingExpressions/VB/controlsusingexpressionsvb.aspx#2)]
+ [!code-xml[ControlsUsingExpressions#2](~/samples/snippets/common/VS_Snippets_WebNet/ControlsUsingExpressions/Common/controlsusingexpressions.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppSettingsExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.AppSettingsExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.AppSettingsExpressionEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.UI.Design.AppSettingsExpressionEditor> Klasse ist so konfiguriert, von der Basisklasse zusammen mit den <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> -Eigenschaftensatz auf `AppSettings`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.AppSettingsExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Eine Anwendung Einstellung-Ausdruckszeichenfolge ausgewertet. <c>Ausdruck</c> schließt nicht die <see langword="AppSettings" /> Ausdruckspräfix.</param>
+        <param name="parseTimeData">Ein Objekt mit zusätzlichen Analyseinformationen für die Bewertung von <c>Ausdruck</c>.</param>
+        <param name="propertyType">Der Steuerelementtyp für die Eigenschaft.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Wertet eine Ausdruckszeichenfolge der Anwendung-Einstellung aus, und den Wert zur Entwurfszeit eine Steuerelementeigenschaft bereitstellt.</summary>
+        <returns>Das Objekt verweist <paramref name="expression" />, wenn die Auswertung von Ausdrücken erfolgreich ausgeführt wurde, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.AppSettingsExpressionEditor.EvaluateExpression%2A> Methode sucht die anwendungseinstellung, die von angegeben wird `expression`, und klicken Sie dann den Wert für die anwendungseinstellung zurückgibt.  
+  
+ Der visuelle Designer verwendet die <xref:System.Web.UI.Design.AppSettingsExpressionEditor.EvaluateExpression%2A> Methode, um die Anwendung Einstellung auswerten, und geben Sie den Wert zur Entwurfszeit für eine Eigenschaft des zugeordneten Steuerelements. Der visuelle Designer Ruft die <xref:System.Web.UI.Design.AppSettingsExpressionEditor.EvaluateExpression%2A> Methode mit der Ausdruckszeichenfolge und verwendet, die der ausgewertete Ausdruck tragen Steuerelementeigenschaften Werte zuzuweisen, die auf der Entwurfsoberfläche gerendert werden.  
+  
+ Zur Laufzeit verwendet der Parser den <xref:System.Web.Compilation.AppSettingsExpressionBuilder.EvaluateExpression%2A> und <xref:System.Web.Compilation.AppSettingsExpressionBuilder.GetCodeExpression%2A> Methoden des entsprechenden <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Implementierung zum Auswerten eines Ausdrucks, und geben Sie den Wert zur Laufzeit für eine Eigenschaft des zugeordneten Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.AppSettingsExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Die Ausdruckszeichenfolge, legen Sie bei einer Steuerelementeigenschaft verwendet, um das Blatt der Ausdrucks-Editor zu initialisieren. <c>Ausdruck</c> schließt nicht die <see langword="AppSettings" /> Ausdruckspräfix.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Gibt ein Ausdrucks-Editorblatt für eine Anwendung Einstellungsausdruck zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> Implementierung, die die Anwendung Ausdruck Einstellungseigenschaften definiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.AppSettingsExpressionEditor.GetExpressionEditorSheet%2A> Methodenrückgabe einem einfachen Editor Blatt-Implementierung, die eine einzelne Eingabezeichenfolge wird verwendet, um den Ausdruck zu bilden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

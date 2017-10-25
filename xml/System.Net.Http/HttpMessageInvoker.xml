@@ -1,0 +1,187 @@
+<Type Name="HttpMessageInvoker" FullName="System.Net.Http.HttpMessageInvoker">
+  <TypeSignature Language="C#" Value="public class HttpMessageInvoker : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpMessageInvoker extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.HttpMessageInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine Spezialisierung-Klasse, die Clientanwendungen ermöglicht, rufen Sie die <see cref="M:System.Net.Http.HttpMessageInvoker.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" /> Methode auf eine HTTP-Handler-Kette.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist der Basistyp für <xref:System.Net.Http.HttpClient> und andere nachrichtenersteller.  
+  
+ Die meisten Anwendungen, die mit einer Website verbinden mithilfe von der <xref:System.Net.Http.HttpClient.SendAsync%2A> Methoden für die <xref:System.Net.Http.HttpClient> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpMessageInvoker (System.Net.Http.HttpMessageHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpMessageHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMessageInvoker.#ctor(System.Net.Http.HttpMessageHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Net.Http.HttpMessageHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Der <see cref="T:System.Net.Http.HttpMessageHandler" />, der für die Verarbeitung der HTTP-Antwortnachrichten verantwortlich ist.</param>
+        <summary>Initialisiert eine Instanz von einem <see cref="T:System.Net.Http.HttpMessageInvoker" /> Klasse mit einem bestimmten <see cref="T:System.Net.Http.HttpMessageHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpMessageInvoker (System.Net.Http.HttpMessageHandler handler, bool disposeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpMessageHandler handler, bool disposeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMessageInvoker.#ctor(System.Net.Http.HttpMessageHandler,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Net.Http.HttpMessageHandler" />
+        <Parameter Name="disposeHandler" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Der <see cref="T:System.Net.Http.HttpMessageHandler" />, der für die Verarbeitung der HTTP-Antwortnachrichten verantwortlich ist.</param>
+        <param name="disposeHandler">
+          <see langword="true" />, wenn der innere Handler von Dispose() verworfen werden soll, <see langword="false" />, wenn Sie beabsichtigen, den inneren Handler wiederzuverwenden.</param>
+        <summary>Initialisiert eine Instanz von einem <see cref="T:System.Net.Http.HttpMessageInvoker" /> Klasse mit einem bestimmten <see cref="T:System.Net.Http.HttpMessageHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMessageInvoker.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versionen, die nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen verwendet werden, indem, die <see cref="T:System.Net.Http.HttpMessageInvoker" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMessageInvoker.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" />, wenn ausschließlich nicht verwaltete Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die vom <see cref="T:System.Net.Http.HttpMessageInvoker" /> verwendeten, nicht verwalteten Ressourcen frei und verwirft optional auch die verwalteten Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMessageInvoker.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die zu sendende HTTP-Anforderungsmeldung.</param>
+        <param name="cancellationToken">Das Abbruchtoken, um den Vorgang abzubrechen.</param>
+        <summary>Senden Sie eine HTTP-Anforderung als asynchronen Vorgang.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, sobald die ganze Antwort einschließlich Inhalt gelesen wird.  
+  
+ Die meisten Anwendungen, die mit einer Website verbinden mithilfe von der <xref:System.Net.Http.HttpClient.SendAsync%2A> Methoden für die <xref:System.Net.Http.HttpClient> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="request" /> war <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,216 @@
+<Type Name="SinglePhaseEnlistment" FullName="System.Transactions.SinglePhaseEnlistment">
+  <TypeSignature Language="C#" Value="public class SinglePhaseEnlistment : System.Transactions.Enlistment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SinglePhaseEnlistment extends System.Transactions.Enlistment" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.SinglePhaseEnlistment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Transactions.Enlistment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Reihe von Rückrufe, die Vereinfachung der Kommunikation zwischen einem Teilnehmer eingetragen, die für die einzelnen Phasen-Commit und der Transaktions-Manager bei der <see cref="M:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)" /> Benachrichtigung empfangen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Ressourcen-Manager-Implementierung von <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> aufgerufen wird, und eine Instanz dieses Typs übergegeben wird, benachrichtigt der Teilnehmer des Transaktions-Managers über die <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> Methode oder die <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> Methode, um anzugeben, ob die Transaktion muss ein Commit oder Rollback.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Aborted">
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt einen Rückruf, der verwendet wird, den Transaktions-Manager an, dass die Transaktion ein Rollback ausgeführt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Transaktionsteilnehmer mithilfe dieser Methode um den Transaktions-Manager zu informieren, den die Transaktion ein Rollback ausgeführt werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="public void Aborted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Aborted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.Aborted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt einen Rückruf, der verwendet wird, den Transaktions-Manager an, dass die Transaktion ein Rollback ausgeführt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Transaktion beteiligten implementieren die <xref:System.Transactions.ISinglePhaseNotification> Schnittstelle verwendet diese Methode zum Benachrichtigen des Transaktions-Managers, die kein Commit ausgeführt werden, und Rollback der Transaktions ausgeführt werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="public void Aborted (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Aborted(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.Aborted(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Eine Erläuterung, warum ein Rollback initiiert wird.</param>
+        <summary>Stellt einen Rückruf, der verwendet wird, den Transaktions-Manager an, dass die Transaktion rückgängig gemacht werden soll, und eine Erklärung bietet dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Committed">
+      <MemberSignature Language="C#" Value="public void Committed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Committed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.Committed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt einen Rückruf, der verwendet wird, den Transaktions-Manager an, dass der Einphasencommit erfolgreich war.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Transaktion beteiligten implementieren die <xref:System.Transactions.ISinglePhaseNotification> Schnittstelle mithilfe dieser Methode um dem Transaktions-Manager zu benachrichtigen, dass die Transaktion ein Commit ausgeführt werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDoubt">
+      <MemberSignature Language="C#" Value="public void InDoubt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InDoubt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.InDoubt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt einen Rückruf, der verwendet wird, den Transaktions-Manager an, dass der Status der Transaktion zweifelhaft ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Transaktion beteiligten implementieren die <xref:System.Transactions.ISinglePhaseNotification> Schnittstelle mithilfe dieser Methode um den Transaktions-Manager zu informieren, die die Transaktion zweifelhaft ist. Eine Transaktion ist zweifelhaft, wenn eine oder mehrere der eingetragenen Ressourcen-Manager kann nicht kontaktiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDoubt">
+      <MemberSignature Language="C#" Value="public void InDoubt (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InDoubt(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.InDoubt(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Eine Erläuterung, warum die Transaktion zweifelhaft ist.</param>
+        <summary>Stellt einen Rückruf, der verwendet wird, den Transaktions-Manager an, dass der Status der Transaktion zweifelhaft ist, und eine Erklärung bietet dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

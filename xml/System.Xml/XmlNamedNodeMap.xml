@@ -1,0 +1,393 @@
+<Type Name="XmlNamedNodeMap" FullName="System.Xml.XmlNamedNodeMap">
+  <TypeSignature Language="C#" Value="public class XmlNamedNodeMap : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlNamedNodeMap extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlNamedNodeMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von Knoten dar, auf die nach Name oder Index zugegriffen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `XmlNamedNodeMap`wird von den folgenden drei Eigenschaften zurückgegeben.  
+  
+-   <xref:System.Xml.XmlElement.Attributes%2A?displayProperty=nameWithType>-Gibt <xref:System.Xml.XmlAttributeCollection>, eine Klasse, die erbt `XmlNamedNodeMap`.  
+  
+-   <xref:System.Xml.XmlDocumentType.Entities%2A?displayProperty=nameWithType>-Gibt ein `XmlNamedNodeMap` mit <xref:System.Xml.XmlEntity> Objekte. `XmlNamedNodeMap` ist schreibgeschützt.  
+  
+-   <xref:System.Xml.XmlDocumentType.Notations%2A?displayProperty=nameWithType>-Gibt ein `XmlNamedNodeMap` mit <xref:System.Xml.XmlNotation> Objekte. `XmlNamedNodeMap` ist schreibgeschützt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNamedNodeMap.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Knoten in der <see langword="XmlNamedNodeMap" />.</summary>
+        <value>Die Anzahl der Knoten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XmlAttributeCollection> Klasse (geerbt von `XmlNamedNodeMap`) um alle Attribute eines Buchs anzuzeigen.  
+  
+ [!code-cpp[Classic WebData XmlNamedNodeMap.Count Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.Count Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamedNodeMap.Count Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamedNodeMap.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamedNodeMap.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet Unterstützung für "Foreach"-Iterationen in der Auflistung von Knoten in der <see langword="XmlNamedNodeMap" />.</summary>
+        <returns>Ein Enumeratorobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt alle Attribute in der Auflistung.  
+  
+ [!code-cpp[Classic WebData XmlNamedNodeMap.GetEnumerator Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.GetEnumerator Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamedNodeMap.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.GetEnumerator Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamedNodeMap.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.GetEnumerator Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamedItem">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode GetNamedItem (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode GetNamedItem(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der qualifizierte Name des abzurufenden Knotens. Er wird mit der <see cref="P:System.Xml.XmlNode.Name" />-Eigenschaft des übereinstimmenden Knotens verglichen.</param>
+        <summary>Ruft eine <see cref="T:System.Xml.XmlNode" /> namentlich angegebene.</summary>
+        <returns>Ein <see langword="XmlNode" /> mit dem angegebenen Namen oder <see langword="null" /> Wenn kein übereinstimmender Knoten nicht gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XmlAttributeCollection> Klasse (geerbt von `XmlNamedNodeMap`) um ein Attribut zu ändern.  
+  
+ [!code-cpp[Classic WebData XmlNamedNodeMap.GetNamedItem Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.GetNamedItem Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamedNodeMap.GetNamedItem Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.GetNamedItem Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamedNodeMap.GetNamedItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.GetNamedItem Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamedItem">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode GetNamedItem (string localName, string namespaceURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode GetNamedItem(string localName, string namespaceURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Der lokale Name des abzurufenden Knotens.</param>
+        <param name="namespaceURI">Der Namespace Uniform Resource Identifier (URI) des Knotens abgerufen.</param>
+        <summary>Ruft ab einen Knoten mit dem passenden <see cref="P:System.Xml.XmlNode.LocalName" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlNode" /> mit den entsprechenden lokalen Namen und Namespace-URI oder <see langword="null" /> Wenn kein übereinstimmender Knoten gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode Item (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode Item(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamedNodeMap.Item(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition des Knotens für die abzurufenden aus der <see langword="XmlNamedNodeMap" />. Der Index ist nullbasiert. aus diesem Grund der Index des ersten Knotens ist 0 und des Indexes des letzten Knotens <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> -1 zurück.</param>
+        <summary>Ruft den Knoten am angegebenen Index in die <see langword="XmlNamedNodeMap" />.</summary>
+        <returns>Der <see cref="T:System.Xml.XmlNode" /> am angegebenen Index. Wenn <paramref name="index" /> ist kleiner als 0 oder größer als oder gleich der <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> Eigenschaft <see langword="null" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XmlAttributeCollection> Klasse (geerbt von `XmlNamedNodeMap`) um alle Attribute eines Buchs anzuzeigen.  
+  
+ [!code-cpp[Classic WebData XmlNamedNodeMap.Count Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.Count Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamedNodeMap.Count Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamedNodeMap.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveNamedItem">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode RemoveNamedItem (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode RemoveNamedItem(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der qualifizierte Name des zu entfernenden Knotens. Der Name abgeglichen wird die <see cref="P:System.Xml.XmlNode.Name" /> -Eigenschaft des übereinstimmenden Knotens.</param>
+        <summary>Entfernt den Knoten aus der <see langword="XmlNamedNodeMap" />.</summary>
+        <returns>Die <see langword="XmlNode" /> aus dieser entfernt <see langword="XmlNamedNodeMap" /> oder <see langword="null" /> Wenn kein übereinstimmender Knoten gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XmlAttributeCollection> Klasse (geerbt von `XmlNamedNodeMap`) zum Entfernen eines Attributs.  
+  
+ [!code-cpp[Classic WebData XmlNamedNodeMap.RemoveNamedItem1 Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.RemoveNamedItem1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamedNodeMap.RemoveNamedItem1 Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.RemoveNamedItem1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamedNodeMap.RemoveNamedItem1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.RemoveNamedItem1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveNamedItem">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode RemoveNamedItem (string localName, string namespaceURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode RemoveNamedItem(string localName, string namespaceURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Der lokale Name des zu entfernenden Knotens.</param>
+        <param name="namespaceURI">Der Namespace-URI des Knotens entfernt werden soll.</param>
+        <summary>Entfernt einen Knoten mit dem passenden <see cref="P:System.Xml.XmlNode.LocalName" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlNode" /> entfernt oder <see langword="null" /> Wenn kein übereinstimmender Knoten gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNamedItem">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode SetNamedItem (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode SetNamedItem(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamedNodeMap.SetNamedItem(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Ein <see langword="XmlNode" /> zum Speichern in der <see langword="XmlNamedNodeMap" />. Wenn ein Knoten mit diesem Namen bereits in der Zuordnung vorhanden ist, wird es durch das neue Element ersetzt.</param>
+        <summary>Fügt eine <see cref="T:System.Xml.XmlNode" /> mithilfe seiner <see cref="P:System.Xml.XmlNode.Name" /> Eigenschaft.</summary>
+        <returns>Wenn die <paramref name="node" /> ersetzt ein vorhandener Knoten mit dem gleichen Namen, den alten Knoten wird zurückgegeben, andernfalls <see langword="null" /> zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XmlAttributeCollection> Klasse (geerbt von `XmlNamedNodeMap`) ein Attribut in der Auflistung hinzu.  
+  
+ [!code-cpp[Classic WebData XmlNamedNodeMap.SetNamedItem Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.SetNamedItem Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamedNodeMap.SetNamedItem Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.SetNamedItem Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamedNodeMap.SetNamedItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamedNodeMap.SetNamedItem Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="node" /> erstellt wurde, aus einer anderen <see cref="T:System.Xml.XmlDocument" /> als den erstellt die <see langword="XmlNamedNodeMap" />; oder die <see langword="XmlNamedNodeMap" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

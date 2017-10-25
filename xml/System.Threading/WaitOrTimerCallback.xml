@@ -1,0 +1,75 @@
+<Type Name="WaitOrTimerCallback" FullName="System.Threading.WaitOrTimerCallback">
+  <TypeSignature Language="C#" Value="public delegate void WaitOrTimerCallback(object state, bool timedOut);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WaitOrTimerCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.WaitOrTimerCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="state" Type="System.Object" />
+    <Parameter Name="timedOut" Type="System.Boolean" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="state">Ein Objekt mit Informationen zu jedem von der Rückrufmethode verwendet werden, wenn er ausgeführt wird.</param>
+    <param name="timedOut">
+      <see langword="true" />Wenn die <see cref="T:System.Threading.WaitHandle" /> Timeout; <see langword="false" /> Wenn es signalisiert wurde.</param>
+    <summary>Stellt eine aufzurufende Methode dar, eine <see cref="T:System.Threading.WaitHandle" /> signalisiert wird oder ein Timeout auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitOrTimerCallback>Stellt eine Rückrufmethode, die ausgeführt werden, wenn eine registrierte Wait-Handle ein Timeout oder signalisiert werden soll. Erstellen Sie den Delegaten übergeben die Rückrufmethode, die die <xref:System.Threading.WaitOrTimerCallback> Konstruktor. Die Methode muss die hier gezeigte Signatur verfügen.  
+  
+ Erstellen Sie das registrierte Wait-Handle durch Übergeben der <xref:System.Threading.WaitOrTimerCallback> delegieren und ein <xref:System.Threading.WaitHandle> auf <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>. Die Rückrufmethode wird jedes Mal ausgeführt. die <xref:System.Threading.WaitHandle> ein Timeout oder signalisiert wird.  
+  
+  
+> [!NOTE]
+>  Visual Basic-Benutzer können weglassen der <xref:System.Threading.WaitOrTimerCallback> Konstruktor, und verwenden Sie einfach die `AddressOf` Operator bei der Übergabe an der Rückrufmethode <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>. Visual Basic ruft automatisch den richtigen Delegatkonstruktor.  
+  
+ Wenn Sie die Informationen an die Rückrufmethode übergeben möchten, erstellen Sie ein Objekt, das die erforderlichen Informationen enthält, und übergeben sie an <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> beim Erstellen des registrierten Wait-Handles. Jedes Mal die Rückrufmethode wird ausgeführt, die `state` Parameter enthält dieses Objekt.  
+  
+ Weitere Informationen zur Verwendung von Rückrufmethoden zum Synchronisieren von Threads im Threadpool finden Sie unter [der verwaltete Threadpool](~/docs/standard/threading/the-managed-thread-pool.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.WaitOrTimerCallback> Delegat, der eine Rückrufmethode darstellt, die ausgeführt wird, wenn ein Wait-Handle signalisiert wird.  
+  
+ Außerdem wird gezeigt, wie Sie die <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode, um eine angegebene Rückrufmethode ausführen, wenn eine angegebene Wait-Handle signalisiert wird. In diesem Beispiel wird die Rückrufmethode `WaitProc` und das Wait-Handle ist ein <xref:System.Threading.AutoResetEvent>.  
+  
+ Im Beispiel definiert eine `TaskInfo` Klasse, die Informationen aufnimmt, die an den Rückruf übergeben wird, wenn er ausgeführt wird. Das Beispiel erstellt eine `TaskInfo` Objekt, und weist ihm einige Zeichenfolgendaten. Die <xref:System.Threading.RegisteredWaitHandle> zurückgegebene der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode zugewiesen ist die `Handle` Feld der `TaskInfo` Objekt, sodass die Rückrufmethode auf zugreifen der <xref:System.Threading.RegisteredWaitHandle>.  
+  
+ Zusätzlich zu der `TaskInfo` -Objekt, das den Aufruf von der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> Methode gibt die <xref:System.Threading.AutoResetEvent> die Aufgabe wartet, eine <xref:System.Threading.WaitOrTimerCallback> Delegat, der darstellt der `WaitProc` Rückrufmethode und ein Timeoutintervall von einer Sekunde mehrere Rückrufe .  
+  
+ Wenn der Hauptthread signalisiert der <xref:System.Threading.AutoResetEvent> durch Aufrufen seiner <xref:System.Threading.EventWaitHandle.Set%2A> -Methode, die <xref:System.Threading.WaitOrTimerCallback> Delegat aufgerufen wird. Die `WaitProc` Methode Tests <xref:System.Threading.RegisteredWaitHandle> um zu bestimmen, ob ein Timeout aufgetreten ist. Wenn der Rückruf aufgerufen wurde, weil das Wait-Handle signalisiert wurde, die `WaitProc` Methode hebt die Registrierung der <xref:System.Threading.RegisteredWaitHandle>, weitere Rückrufe beenden. Bei einem Timeout führt weiterhin die Aufgabe wartet. Die `WaitProc` Methode beendet eine Meldung an die Konsole ausgegeben.  
+  
+ [!code-cpp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

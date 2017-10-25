@@ -1,0 +1,34 @@
+<Type Name="WebPartEventHandler" FullName="System.Web.UI.WebControls.WebParts.WebPartEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebPartEventHandler(object sender, WebPartEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdded" /> -Ereignis <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartDeleted" /> -Ereignis <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartClosed" /> -Ereignis <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoved" /> -Ereignis oder <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPartChanged" /> -Ereignis ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode im angegebenen der <xref:System.Web.UI.WebControls.WebParts.WebPartEventHandler> Delegat wird aufgerufen, wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdded> -Ereignis <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartDeleted> -Ereignis <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartClosed> -Ereignis <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoved> -Ereignis oder <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPartChanged> Ereignis wird ausgelöst.  
+  
+ Seitenentwickler können benutzerdefinierte Handler für Webparts-Ereignisse bereitstellen, durch Hinzufügen einer `OnWebPartAdded` -Attribut, `OnWebPartDeleted` -Attribut, `OnWebPartClosed` -Attribut, `OnWebPartMoved` -Attribut, oder `OnSelectedWebPartChanged` -Attribut auf die `<asp:webpartmanager>` Element auf einer Seite und das Attribut einen benutzerdefinierten Methodennamen zuweisen. Ein benutzerdefinierter Handler kann auch programmgesteuert zugewiesen werden. Weitere Informationen zum Zuweisen von programmgesteuert einen Ereignishandler finden Sie unter [NIB: Vorgehensweise: Verbinden von Ereignishandlermethoden mit Ereignissen](http://msdn.microsoft.com/en-us/348e9600-22e3-49a2-8864-11c5bb3e98fc).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

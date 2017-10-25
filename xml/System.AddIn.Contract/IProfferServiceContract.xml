@@ -1,0 +1,87 @@
+<Type Name="IProfferServiceContract" FullName="System.AddIn.Contract.IProfferServiceContract">
+  <TypeSignature Language="C#" Value="public interface IProfferServiceContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProfferServiceContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.IProfferServiceContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ermöglicht Clients, die benutzerdefinierte Komponenten bereitstellen, auf dem der Vertrag implementiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Komponente implementiert <xref:System.AddIn.Contract.IProfferServiceContract> Clients Dienste der Komponente bieten können. Nachdem ein Dienst, einer Komponente bereitgestellt wurde, können andere Clients der Komponente den Dienst zugreifen. Komponenten in der Regel implementieren <xref:System.AddIn.Contract.IProfferServiceContract> für den gleichen Typ, der auf dem sie implementieren <xref:System.AddIn.Contract.IServiceProviderContract>.  
+  
+ Clients verwenden die <xref:System.AddIn.Contract.IProfferServiceContract.ProfferService%2A> -Methode zum Hinzufügen einer <xref:System.AddIn.Contract.IServiceProviderContract> auf den Satz der Dienstanbieter, die von einer Komponente angeboten. Clients verwenden die <xref:System.AddIn.Contract.IProfferServiceContract.RevokeService%2A> -Methode zum Entfernen einer <xref:System.AddIn.Contract.IServiceProviderContract> aus dem Satz von Dienstanbietern angeboten, die von einer Komponente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ProfferService">
+      <MemberSignature Language="C#" Value="public void ProfferService (string serviceIdentifier, System.AddIn.Contract.IServiceProviderContract service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProfferService(string serviceIdentifier, class System.AddIn.Contract.IServiceProviderContract service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IProfferServiceContract.ProfferService(System.String,System.AddIn.Contract.IServiceProviderContract)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceIdentifier" Type="System.String" />
+        <Parameter Name="service" Type="System.AddIn.Contract.IServiceProviderContract" />
+      </Parameters>
+      <Docs>
+        <param name="serviceIdentifier">Eine Zeichenfolge, die den Dienst angeboten wird identifiziert.</param>
+        <param name="service">Ein <see cref="T:System.AddIn.Contract.IServiceProviderContract" /> , implementiert den Dienst angeboten wird.</param>
+        <summary>Fügt einen Dienst auf den Satz von Diensten, die von Clients von einer Komponente zugegriffen werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Format der `serviceIdentifier` -Parameter ist definiert, indem die <xref:System.AddIn.Contract.IProfferServiceContract> Implementierung. Ein uniform Resource Identifier (URI) ist der empfohlene Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevokeService">
+      <MemberSignature Language="C#" Value="public void RevokeService (string serviceIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RevokeService(string serviceIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IProfferServiceContract.RevokeService(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceIdentifier">Eine Zeichenfolge, die den Dienst aufgehoben wird identifiziert.</param>
+        <summary>Entfernt einen Dienst aus dem Satz von Diensten, die von einer Komponente angeboten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Format der `serviceIdentifier` -Parameter ist definiert, indem die <xref:System.AddIn.Contract.IProfferServiceContract> Implementierung. Ein uniform Resource Identifier (URI) ist der empfohlene Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

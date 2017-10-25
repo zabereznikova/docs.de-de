@@ -1,0 +1,521 @@
+<Type Name="PersonalizableAttribute" FullName="System.Web.UI.WebControls.WebParts.PersonalizableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PersonalizableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PersonalizableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Personalisierungsattribut dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Personalisierungsattribut `Personalizable`, auf öffentlichen Eigenschaften, die Personalisierungsinformationen persistent zu speichernde angewendet wird. ASP.NET generiert automatisch den Code zum beibehalten oder diese Werte aus dem zugrunde liegenden Datenspeicher abrufen, wenn das Steuerelement in einer Webparts-Zone auf einer Webparts-Seite ist.  
+  
+ Für eine Eigenschaft als personalisierbar gekennzeichnet sein müssen die folgenden Anforderungen erfüllt sein:  
+  
+-   Die Eigenschaft muss öffentlich sein und muss über öffentliche Get- und set-Accessoren.  
+  
+-   Die Eigenschaft muss eine Eigenschaft Lese-/Schreibzugriff sein.  
+  
+-   Die Eigenschaft muss ohne Parameter sein.  
+  
+-   Die Eigenschaft kann nicht indiziert werden.  
+  
+ Zum Laden und Speichern von Personalisierungsdaten für Eigenschaften wird automatisch Code generiert. Eigenschaften, die Personalisierung unterstützen werden bestimmt abhängig vom Vorhandensein dieses Attributs auf die Eigenschaft und die Tatsache, dass die Eigenschaft, die oben aufgeführten Einschränkungen entspricht.  
+  
+ Beachten Sie, dass schreibgeschützte und lesegeschützte Eigenschaften für die Personalisierung nicht unterstützt werden. Dieses Attribut auf eine Eigenschaft schreibgeschützt oder lesegeschützt anwenden, führt zu einer <xref:System.Web.HttpException> ausgelöst wird. Parametrisierte Eigenschaften lösen ebenfalls eine <xref:System.Web.HttpException> Ausnahme.  
+  
+ Einzelne Eigenschaften ohne dieses Attribut werden von der Personalisierung ausgeschlossen, wenn keine spezielle Behandlung durch die <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> Schnittstelle wird verwendet.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> -Klasse im Code. Das Beispiel besteht aus einer ASPX-Seite, ein Webpart Benutzersteuerelement aufgerufen verweist `ColorSelector.ascx`. Der folgende Code ist die ASPX-Datei für das Beispiel.  
+  
+ [!code-aspx-csharp[WebParts_SimplePersonalization#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_SimplePersonalization/CS/Default.aspx#1)]  
+  
+ Der folgende Code ist für die `ColorSelector.ascx` Steuerelement.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[WebParts_SimplePersonalization#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_SimplePersonalization/CS/ColorSelector.ascx#2)]  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.Web.HttpException">Die Eigenschaft ist eine öffentliche Eigenschaft schreibgeschützt oder lesegeschützt.  
+  
+ \- oder –  
+  
+ Die Eigenschaft ist eine private oder geschützte Lese-Schreib-Eigenschaft.  
+  
+ \- oder –  
+  
+ Die Eigenschaft weist Indexparameter.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizableAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt intern die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A> Eigenschaft, um `true`, die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A> Eigenschaft <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>, und die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizableAttribute (bool isPersonalizable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isPersonalizable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isPersonalizable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isPersonalizable">Ein boolescher Wert, der angibt, ob die Eigenschaft personalisiert werden kann.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> -Klasse unter Verwendung des angegebenen Parameters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt intern die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A> -Eigenschaft auf den Wert des booleschen Parameters, der <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A> Eigenschaft, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User>, und die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> Eigenschaft `false`.  
+  
+ Dieser Konstruktor ist nützlich, wenn Sie möchten eine virtuelle Eigenschaft markieren, die für den Basistyp wie für den abgeleiteten Typ nicht personalisierbar personalisierbar ist einen abgeleiteten Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizableAttribute (System.Web.UI.WebControls.WebParts.PersonalizationScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.#ctor(System.Web.UI.WebControls.WebParts.PersonalizationScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> , der angibt, des Bereichs der Personalisierung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> -Klasse unter Verwendung des angegebenen Parameters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt intern die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A> Eigenschaft `true`, die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A> Eigenschaft an den Parameter angegeben wird, und die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizableAttribute (System.Web.UI.WebControls.WebParts.PersonalizationScope scope, bool isSensitive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope, bool isSensitive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.#ctor(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+        <Parameter Name="isSensitive" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> , der angibt, des Bereichs der Personalisierung.</param>
+        <param name="isSensitive">Ein boolescher Wert, der angibt, ob Informationen über die Eigenschaft als vertraulich angesehen wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt intern die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A> Eigenschaft `true`, die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A> Eigenschaft auf den ersten Parameter angegeben wird, und die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> Eigenschaft an den zweiten Parameter angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.PersonalizableAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.PersonalizableAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Attributinstanz, die keine Unterstützung für die Personalisierung angibt. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, in Verbindung mit der <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsDefaultAttribute%2A> Methode.  
+  
+ Dieses Feld und die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.NotPersonalizable> Feld den gleichen Wert aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> , mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt beim Überschreiben eine booleschen Evaluierung von der aktuellen Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> und eine andere <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> Instanz, die als Parameter angegeben.</summary>
+        <returns>
+          <see langword="true" />Wenn die Werte gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> Instanzen werden als äquivalent betrachtet, wenn ihre <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A>, <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A>, und <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> eigenschafteneinstellungen sind identisch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben einen Hashcode des Attributs.</summary>
+        <returns>Ein Hashcode in Form einer ganzen Zahl.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashcode basiert auf einem Attribut <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A>, <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A>, und <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> eigenschafteneinstellungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPersonalizableProperties">
+      <MemberSignature Language="C#" Value="public static System.Collections.ICollection GetPersonalizableProperties (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ICollection GetPersonalizableProperties(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.GetPersonalizableProperties(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ für die zu suchende <see langword="Personalizable" /> Eigenschaften.</param>
+        <summary>Gibt eine Auflistung von <see cref="T:System.Reflection.PropertyInfo" /> Objekte für die Eigenschaften, die mit dem Parametertyp überein und als personalisierbar gekennzeichnet sind.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> personalisierbar Eigenschaften.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Auflistung mit 0 (null) oder mehr <xref:System.Reflection.PropertyInfo> Objekte, wobei ein Objekt in der Auflistung für jede Eigenschaft des Typs, mit dem angegebenen als wird personalisierbar gekennzeichnet, wobei <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A> gleich `true`.  
+  
+ Die `type` Parameter weist den Typ für die zu suchende `Personalizable` Eigenschaften. Übergeben Sie z. B. `"typeof(MyWebPart)"` zum Abrufen der `Personalizable` Eigenschaften für die `MyWebPart` Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Eine öffentliche Eigenschaft für den Typ wird als personalisierbar gekennzeichnet, aber es ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben einen Wert, der angibt, ob der Attributinstanz der Wert der statischen entspricht <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Default" /> Feld.</summary>
+        <returns>
+          <see langword="true" />die Attributinstanz die statische gleich <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Default" /> Feld ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Default> Feld gibt keine Unterstützung für die Personalisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPersonalizable">
+      <MemberSignature Language="C#" Value="public bool IsPersonalizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPersonalizable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellung aus, die angibt, ob das Attribut personalisiert werden kann, wie von einem der Konstruktoren festgelegt.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft personalisiert werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> -Klasse erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSensitive">
+      <MemberSignature Language="C#" Value="public bool IsSensitive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSensitive" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellung aus, die angibt, ob das Attribut vertraulich ist, wie von einem der Konstruktoren festgelegt.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft vertraulich ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> -Klasse erstellt wird.  
+  
+ Diese Eigenschaft steuert, wie der Wert der Eigenschaft exportiert wird. Wenn die Eigenschaft, um festgelegt wird `true`, ist nicht möglich exportiert, wenn des Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Match(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> , mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob die aktuelle Instanz von <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> und dem angegebenen <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizableAttribute" /> verfügen über denselben <see cref="P:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable" /> Eigenschaftswert.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Attribute die gleiche haben <see cref="P:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable" /> Wert; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie Eigenschaften übereinstimmen, die dieselbe <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsPersonalizable%2A> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotPersonalizable">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.PersonalizableAttribute NotPersonalizable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.PersonalizableAttribute NotPersonalizable" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.NotPersonalizable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Attributinstanz, die keine Unterstützung für die Personalisierung angibt. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld und die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Default> Feld den gleichen Wert aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Personalizable">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.PersonalizableAttribute Personalizable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.PersonalizableAttribute Personalizable" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Personalizable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Attributinstanz, die Unterstützung für die Personalisierung angibt. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Attributinstanz hat seine <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> und seine <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.PersonalizationScope Scope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> Enumerationswert für die Instanz, wie durch die Konstruktoren festgelegt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" />-Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> -Klasse erstellt wird.  
+  
+ Diese Eigenschaft steuert, wenn der Eigenschaftswert gespeichert und geladen, je nach den <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.Scope%2A> -Eigenschaft der Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharedPersonalizable">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.PersonalizableAttribute SharedPersonalizable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.PersonalizableAttribute SharedPersonalizable" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.SharedPersonalizable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Attributinstanz, die Unterstützung für die Personalisierung mit einem gemeinsam genutzten Bereich angibt. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Attributinstanz hat seine <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und seine <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPersonalizable">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.PersonalizableAttribute UserPersonalizable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.PersonalizableAttribute UserPersonalizable" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.UserPersonalizable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Attributinstanz, die Unterstützung für die Personalisierung in angibt <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" /> Bereich. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Attributinstanz hat seine <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.Scope%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> und seine <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

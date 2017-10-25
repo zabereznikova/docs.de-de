@@ -1,0 +1,120 @@
+<Type Name="ResolveCriteria" FullName="System.ServiceModel.Discovery.ResolveCriteria">
+  <TypeSignature Language="C#" Value="public class ResolveCriteria" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveCriteria extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.ResolveCriteria" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die zu verwendenden Kriterien beim Auflösen eines Diensts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Auflösung wird durchgeführt, wenn ein Dienst seine Endpunktadresse ändert, für den bereits eine Endpunktreferenz vorliegt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveCriteria ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.ResolveCriteria.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.ResolveCriteria" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveCriteria (System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.ResolveCriteria.#ctor(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die Endpunktadresse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.ResolveCriteria" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.EndpointAddress" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.ResolveCriteria.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Endpunktadresse des aufzulösenden Diensts.</summary>
+        <value>Die Endpunktadresse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public TimeSpan Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Duration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.ResolveCriteria.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.TimeSpan" /> ab oder legt sie fest, die eine Zeitspanne angibt, in der der Auflösungsvorgang vor dem Ablaufen abgeschlossen werden muss.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />-Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für <xref:System.ServiceModel.Discovery.ResolveCriteria.Duration%2A> beträgt 20 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.Linq.XElement&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.Linq.XElement&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.ResolveCriteria.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.Linq.XElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Erweiterungen in der <see cref="T:System.ServiceModel.Discovery.ResolveCriteria" />-Instanz ab.</summary>
+        <value>Eine <see cref="T:System.Collections.ObjectModel.Collection`1" />-Instanz, die die XML-Erweiterungen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

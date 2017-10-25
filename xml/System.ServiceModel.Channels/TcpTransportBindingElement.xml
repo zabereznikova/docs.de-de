@@ -1,0 +1,559 @@
+<Type Name="TcpTransportBindingElement" FullName="System.ServiceModel.Channels.TcpTransportBindingElement">
+  <TypeSignature Language="C#" Value="public class TcpTransportBindingElement : System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TcpTransportBindingElement extends System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TcpTransportBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Bindungselement für den TCP-Transport dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Transport verwendet URIs im Format "`net.tcp`://`hostname`:`port`/`path`". Andere URI-Komponenten sind optional.  
+  
+ Die <xref:System.ServiceModel.Channels.TcpTransportBindingElement>-Klasse stellt den Startpunkt für das Erstellen einer benutzerdefinierten Bindung dar, die das TCP-Transportprotokoll implementiert. Dieser Transport ist für Kommunikation zwischen [!INCLUDE[indigo2](~/includes/indigo2-md.md)] und [!INCLUDE[indigo2](~/includes/indigo2-md.md)] optimiert.  
+  
+ Das Dienstmodell in [!INCLUDE[indigo2](~/includes/indigo2-md.md)] erstellt mit dieser Klasse Factoryobjekte, die die <xref:System.ServiceModel.Channels.IChannelFactory>-Schnittstelle und die <xref:System.ServiceModel.Channels.IChannelListener>-Schnittstelle implementieren. Diese Factoryobjekte erstellen und akzeptieren wiederum die Kanäle, mit denen SOAP-Nachrichten über das TCP-Protokoll übertragen werden.  
+  
+ Die von dieser Klasse erstellten Factorys können durch Festlegen der Eigenschaften konfiguriert werden, z.&#160;B. <xref:System.ServiceModel.Channels.TcpTransportBindingElement.PortSharingEnabled%2A> und <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings.LeaseTimeout%2A>.  
+  
+ Sie können auch Eigenschaften für die Basisklasse <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement> festlegen, z.&#160;B. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxBufferSize%2A>, <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.TransferMode%2A> und <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ConnectionBufferSize%2A>. Eine vollständige Liste der Eigenschaften finden Sie unter <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>.  
+  
+ Ferner können Sie auch die Eigenschaften der Basisklasse <xref:System.ServiceModel.Channels.TransportBindingElement> festlegen, z. B. <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> und <xref:System.ServiceModel.Channels.TransportBindingElement.MaxBufferPoolSize%2A>. Eine vollständige Liste der Eigenschaften finden Sie unter <xref:System.ServiceModel.Channels.TransportBindingElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieser Klasse veranschaulicht.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.TcpTransportBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine neue Instanz der <xref:System.ServiceModel.Channels.TcpTransportBindingElement>-Klasse erstellt wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TcpTransportBindingElement (System.ServiceModel.Channels.TcpTransportBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.TcpTransportBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.#ctor(System.ServiceModel.Channels.TcpTransportBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.TcpTransportBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">Eine Instanz der <see cref="T:System.ServiceModel.Channels.TcpTransportBindingElement" />-Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.TcpTransportBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt einen Kopierkonstruktor dar, mit dem das Bindungselement geklont wird. Sie wird verfügbar gemacht, damit <xref:System.ServiceModel.Channels.TcpTransportBindingElement.Clone%2A> von abgeleiteten Klassen implementiert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ der Kanalfactory.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />-Member mit Beschreibungen von Bindungen, Verhaltensweisen und Verträgen sowie weiteren Informationen, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt eine Kanalfactory, mit der ein Kanal erstellt werden kann.</summary>
+        <returns>Gibt eine Kanalfactory des angegebenen Typs zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann eine Kanalfactory zum Senden von Nachrichten auf Basis der Konfiguration des TCP-Bindungselements erstellt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Kanalfactory erstellt und zum Erstellen eines Kanals verwendet wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiges Argument wurde übergeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ des Kanallisteners.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />-Member mit Beschreibungen von Bindungen, Verhaltensweisen und Verträgen sowie weiteren Informationen, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt einen Kanallistener des angegebenen Typs.</summary>
+        <returns>Gibt einen Kanallistener des angegebenen Typs zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein Kanallistener zum Empfangen von Nachrichten auf Basis der Konfiguration des TCP-Bindungselements erstellt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Kanallistener des angegebenen Typs zurückgegeben wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiges Argument wurde übergeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des aktuellen Bindungselements.</summary>
+        <returns>Gibt eine Kopie des aktuellen Bindungselements zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Kopie des aktuellen Bindungselements erstellt wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPoolSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.TcpConnectionPoolSettings ConnectionPoolSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.TcpConnectionPoolSettings ConnectionPoolSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TcpConnectionPoolSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Verbindungspooleinstellungen ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Channels.TcpConnectionPoolSettings" />-Objekt, das verschiedene Eigenschaften für das Verbindungspooling enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Auflistung von Verbindungspooleinstellungen abgerufen wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy ExtendedProtectionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy ExtendedProtectionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpTransportBindingElement.ExtendedProtectionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle erweiterte Schutzrichtlinie ab oder legt diese fest.</summary>
+        <value>Die erweiterte Schutzrichtlinie.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine erweiterte Schutzrichtlinie ist ein Objekt, das vom Server zum Überprüfen eingehender Clientverbindungen verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das Objekt, das abgerufen werden soll.</typeparam>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Ruft ein angegebenes Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> ab.</summary>
+        <returns>Das angegebene Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> oder <see langword="null" />, wenn das Objekt nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft das angegebene Objekt aus der Basisklasse oder einem der Vorgänger der Klasse ab. Das zurückgegebene Objekt stellt normalerweise eine Auflistung von Eigenschaften dar, z.&#160;B. ein Objekt, das <xref:System.ServiceModel.Channels.ISecurityCapabilities> implementiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein angegebenes Objekt von <xref:System.ServiceModel.Channels.BindingContext> abgerufen wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenBacklog">
+      <MemberSignature Language="C#" Value="public int ListenBacklog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ListenBacklog" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpTransportBindingElement.ListenBacklog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximal mögliche Anzahl der ausstehenden Verbindungsanforderungen in der Warteschlange ab, oder legt diese fest.</summary>
+        <value>Gibt die maximal mögliche Anzahl der ausstehenden Verbindungsanforderungen in der Warteschlange zurück. Der Standard ist 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ListenBacklog%2A> ist eine Socketebenen-Eigenschaft, die die Anzahl der Anforderungen in der Warteschlange beschreibt, deren Annahme aussteht. Stellen Sie sicher, dass die Kapazität der zugrunde liegenden Socketwarteschlange nicht von der maximalen Anzahl gleichzeitiger Verbindungen überschritten wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie der ListenBacklog-Wert abgerufen wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert kann nicht kleiner als eins sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PortSharingEnabled">
+      <MemberSignature Language="C#" Value="public bool PortSharingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PortSharingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpTransportBindingElement.PortSharingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die TCP-Anschlussfreigabe für diese Verbindung aktiviert ist.</summary>
+        <value>
+          <see langword="true" />, wenn die TCP-Portfreigabe aktiviert ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um diese Einstellung verwenden zu können, muss der TCP-Portfreigabedienst von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] durch Festlegen des manuellen oder automatischen Starttyps aktiviert werden.  
+  
+ Weitere Informationen zu den TCP-Listener und zum Starten, finden Sie unter [Net.TCP Port Sharing](~/docs/framework/wcf/feature-details/net-tcp-port-sharing.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Wert abgerufen wird, der angibt, ob die TCP-Anschlussfreigabe aktiviert ist.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpTransportBindingElement.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das URI-Schema für die Übertragung zurück.</summary>
+        <value>Gibt das URI-Schema für den Transport ("net.tcp") zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft wird zum Validieren von Bindungen anhand von Basisadressen bereitgestellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie das URI-Schema für den Transport abgerufen wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeExtendedProtectionPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeExtendedProtectionPolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.ShouldSerializeExtendedProtectionPolicy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, dass es nicht möglich ist, die erweiterte Schutzrichtlinie in XAML zu serialisieren.</summary>
+        <returns>Gibt <see langword="false" />zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine erweiterte Schutzrichtlinie ist ein Objekt, das vom Server zum Überprüfen eingehender Clientverbindungen verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeListenBacklog">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeListenBacklog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeListenBacklog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TcpTransportBindingElement.ShouldSerializeListenBacklog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die TCP-Transport-Bindungselement Lauschen Backlog serialisieren sollen.</summary>
+        <returns>
+          <see langword="True" />Wenn die TCP-Transport-Bindungselement serialisieren sollen Lauschen Sie Backlog; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeredoEnabled">
+      <MemberSignature Language="C#" Value="public bool TeredoEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TeredoEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpTransportBindingElement.TeredoEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird.</summary>
+        <value>
+          <see langword="true" /> wenn das Teredo-Protokoll aktiviert ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft wird das Teredo-Protokoll für das zugrunde liegende TCP-Socket aktiviert. Weitere Informationen finden Sie unter [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=96649).  
+  
+ Diese Eigenschaft kann nur unter [!INCLUDE[wxpsp2](~/includes/wxpsp2-md.md)] und unter [!INCLUDE[ws2003](~/includes/ws2003-md.md)] verwendet werden. [!INCLUDE[wv](~/includes/wv-md.md)] verfügt über eine computerweite Konfigurationsoption für das Teredo-Protokoll, sodass diese Eigenschaft bei der Ausführung von [!INCLUDE[wv](~/includes/wv-md.md)] ignoriert wird. Um das Teredo-Protokoll verwenden zu können, müssen der Client und die Dienstcomputer über den IPv6-Stapel von Microsoft verfügen und ordnungsgemäß konfiguriert sein. Weitere Informationen zum Konfigurieren von Teredo finden Sie unter [Teredo – Übersicht](http://go.microsoft.com/fwlink/?LinkId=96649). Weitere Informationen zur Installation der Microsoft-IPv6-Stapel finden Sie unter [Windows Server 2003 Technology Centers](http://go.microsoft.com/fwlink/?LinkId=96650).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie das Teredo-Protokoll für das zugrunde liegende TCP-Socket aktiviert wird.  
+  
+ [!code-csharp[S_UETcpTransportBindingElement#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_uetcptransportbindingelement/cs/program.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

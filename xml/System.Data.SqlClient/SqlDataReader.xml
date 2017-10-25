@@ -1,0 +1,2940 @@
+<Type Name="SqlDataReader" FullName="System.Data.SqlClient.SqlDataReader">
+  <TypeSignature Language="C#" Value="public class SqlDataReader : System.Data.Common.DbDataReader, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataReader extends System.Data.Common.DbDataReader implements class System.Data.IDataReader, class System.Data.IDataRecord, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlDataReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbDataReader</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein Verfahren zum Lesen eines Vorwärtsstreams von Zeilen aus einer SQL Server-Datenbank bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Erstellen einer <xref:System.Data.SqlClient.SqlDataReader>, rufen Sie die <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> Methode der <xref:System.Data.SqlClient.SqlCommand> Objekts anstatt direkt mit einem Konstruktor.  
+  
+ Während der <xref:System.Data.SqlClient.SqlDataReader> verwendet wird, zugeordneten <xref:System.Data.SqlClient.SqlConnection> Informationsfluss der <xref:System.Data.SqlClient.SqlDataReader>, und keine anderen Vorgänge ausgeführt werden können, auf die <xref:System.Data.SqlClient.SqlConnection> außer schließen. Dies ist der Fall, bis die <xref:System.Data.SqlClient.SqlDataReader.Close%2A> Methode der <xref:System.Data.SqlClient.SqlDataReader> aufgerufen wird. Sie können nicht z. B. Ausgabeparameter erst abrufen, nach dem Aufruf <xref:System.Data.SqlClient.SqlDataReader.Close%2A>.  
+  
+ Änderungen an einem Resultset von einem anderen Prozess oder Thread während des Lesens von Daten ist möglicherweise für den Benutzer der sichtbare der `SqlDataReader`. Das genaue Verhalten ist jedoch zeitabhängig.  
+  
+ <xref:System.Data.SqlClient.SqlDataReader.IsClosed%2A>und <xref:System.Data.SqlClient.SqlDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.SqlClient.SqlDataReader> geschlossen wird. Obwohl die <xref:System.Data.SqlClient.SqlDataReader.RecordsAffected%2A> Eigenschaft zugegriffen werden kann während der <xref:System.Data.SqlClient.SqlDataReader> vorhanden ist, rufen Sie immer <xref:System.Data.SqlClient.SqlDataReader.Close%2A> vor der Rückgabe des Werts des <xref:System.Data.SqlClient.SqlDataReader.RecordsAffected%2A> Rückgabewert vom Typ genauen zu gewährleisten.  
+  
+ Bei Verwendung von sequenziellen Zugriff (<xref:System.Data.CommandBehavior?displayProperty=nameWithType>), wird ein <xref:System.InvalidOperationException> wird ausgelöst, wenn die <xref:System.Data.SqlClient.SqlDataReader> Position verschoben wird, und einen anderen Vorgang wird ausgeführt, auf die vorherige Spalte gelesen.  
+  
+> [!NOTE]
+>  Für eine optimale Leistung <xref:System.Data.SqlClient.SqlDataReader> vermeidet unnötige Objekte erstellen, oder dass unnötige Kopien der Daten. Daher mehrere Aufrufe von Methoden wie z. B. <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> einen Verweis auf das gleiche Objekt zurückgeben. Vorsicht verwenden, wenn Sie den zugrunde liegenden Wert wie vom Methoden zurückgegebenen Objekte ändern <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlConnection>, <xref:System.Data.SqlClient.SqlCommand>, und ein <xref:System.Data.SqlClient.SqlDataReader>. Das Beispiel liest durch die Daten, die an das Konsolenfenster schreiben. Der Code schließt dann die <xref:System.Data.SqlClient.SqlDataReader>. Die <xref:System.Data.SqlClient.SqlConnection> wird automatisch geschlossen, am Ende der `using` Codeblock.  
+  
+ [!code-csharp[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das <see cref="T:System.Data.SqlClient.SqlDataReader" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie explizit aufrufen der <xref:System.Data.SqlClient.SqlDataReader.Close%2A> Methode, wenn Sie in der Verwendung von sind die <xref:System.Data.SqlClient.SqlDataReader> an die zugeordnete <xref:System.Data.SqlClient.SqlConnection> für andere Zwecke.  
+  
+ Die `Close` Methode füllt die Werte für Ausgabeparameter und Rückgabewerte und `RecordsAffected`, erhöhen die Zeit, die für das Schließen einer `SqlDataReader` , die zum Verarbeiten einer großen oder komplexen Abfrage verwendet wurde. Wenn die Anzahl der Datensätze, die von einer Abfrage betroffen sind und die Rückgabewerte nicht relevant sind, die Zeit, um zu schließen die `SqlDataReader` kann reduziert werden, durch Aufrufen der <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> Methode des zugeordneten <xref:System.Data.SqlClient.SqlCommand> Objekt vor dem Aufrufen der `Close` Methode.  
+  
+> [!CAUTION]
+>  Rufen Sie nicht `Close` oder `Dispose` auf eine Verbindung, eines "DataReader" oder ein anderes verwaltetes Objekt in der `Finalize` -Methode der Klasse. In einer Finalize-Methode sollten Sie nur nicht verwaltete Ressourcen freizugeben, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlConnection>, `SqlCommand`, und ein <xref:System.Data.SqlClient.SqlDataReader>. Das Beispiel liest durch die Daten, die an das Konsolenfenster schreiben. Der Code schließt dann die <xref:System.Data.SqlClient.SqlDataReader>. Die <xref:System.Data.SqlClient.SqlConnection> wird automatisch geschlossen, am Ende der `using` Codeblock.  
+  
+ [!code-csharp[Classic WebData SqlDataReader.Close Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Close Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlDataReader.Close Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Close Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="protected System.Data.SqlClient.SqlConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlClient.SqlConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.SqlClient.SqlConnection" /> ab, der dem <see cref="T:System.Data.SqlClient.SqlDataReader" /> zugeordnet ist.</summary>
+        <value>Der mit dem <see cref="T:System.Data.SqlClient.SqlConnection" /> verknüpfte <see cref="T:System.Data.SqlClient.SqlDataReader" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public override int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Tiefe der Schachtelung für die aktuelle Zeile angibt.</summary>
+        <value>Die Tiefe der Schachtelung für die aktuelle Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die äußerste Tabelle hat die Tiefe 0. Die .NET Framework-Datenanbieter für SQL Server unterstützt keine Schachtelung und gibt immer 0 (null) zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldCount">
+      <MemberSignature Language="C#" Value="public override int FieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.FieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in der aktuellen Zeile ab.</summary>
+        <value>Wenn Sie nicht in 0 keinem gültigen Recordset positioniert; andernfalls die Anzahl der Spalten in der aktuellen Zeile. Der Standard ist -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausführen einer Abfrage, die naturgemäß keinen (z. B. eine DELETE-Abfrage) Zeilen zurückgibt legt <xref:System.Data.SqlClient.SqlDataReader.FieldCount%2A> auf 0. Jedoch. Dies sollte nicht mit einer Abfrage, die 0 Zeilen zurückgibt verwechselt werden (wie z. B. SELECT * FROM *Tabelle* WHERE 1 = 2), in diesem Fall <xref:System.Data.SqlClient.SqlDataReader.FieldCount%2A> gibt die Anzahl der Spalten in der Tabelle, einschließlich der ausgeblendete Felder zurück. Verwenden Sie <xref:System.Data.SqlClient.SqlDataReader.VisibleFieldCount%2A>, um ausgeblendete Felder auszuschließen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es ist keine Verbindung mit einer Instanz von SQL Server.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public override bool GetBoolean (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetBoolean(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als booleschen Wert ab.</summary>
+        <returns>Der Wert der Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits ein boolescher Wert sein, oder eine Ausnahme wird generiert.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public override byte GetByte (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8 GetByte(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein Byte ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein Byte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits ein Byte sein.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override long GetBytes (int i, long dataIndex, byte[] buffer, int bufferIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetBytes(int32 i, int64 dataIndex, unsigned int8[] buffer, int32 bufferIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="dataIndex" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="dataIndex">Der Index innerhalb des Felds aus der den Lesevorgang beginnen soll.</param>
+        <param name="buffer">Der Puffer, in den der Bytedatenstrom gelesen werden soll.</param>
+        <param name="bufferIndex">Der Index innerhalb der <c>Puffer</c> , in dem der Schreibvorgang wird gestartet.</param>
+        <param name="length">Die maximale Länge, die in den Puffer kopiert werden soll.</param>
+        <summary>Liest einen Datenstrom von Bytes aus dem angegebenen Spaltenoffset in den Puffer, die einem Array beginnend ab dem angegebenen Pufferoffset an.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>Gibt die Anzahl der verfügbaren Bytes in das Feld zurück. In den meisten Fällen ist dies die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die tatsächliche Länge des Felds Wenn `GetBytes` bereits zum Abrufen von Bytes aus dem Feld verwendet wurde. Dies kann der Fall, z. B. sein, wenn die <xref:System.Data.SqlClient.SqlDataReader> ist eine umfangreiche Datenstruktur in einen Puffer lesen. Weitere Informationen finden Sie unter der `SequentialAccess` festlegen für <xref:System.Data.CommandBehavior>.  
+  
+ Wenn Sie einen Puffer übergeben, ist `null`, <xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A> gibt die Länge des gesamten Felds in Bytes, der nicht die verbleibende Größe basierend auf dem Puffer Offset-Parameter.  
+  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund muss die abgerufenen Daten bereits ein Bytearray.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public override char GetChar (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance char GetChar(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetChar(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein einzelnes Zeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht unterstützt für <xref:System.Data.SqlClient>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public override long GetChars (int i, long dataIndex, char[] buffer, int bufferIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetChars(int32 i, int64 dataIndex, char[] buffer, int32 bufferIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="dataIndex" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="bufferIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="dataIndex">Der Index innerhalb des Felds aus der den Lesevorgang beginnen soll.</param>
+        <param name="buffer">Der Puffer, in den der Bytedatenstrom gelesen werden soll.</param>
+        <param name="bufferIndex">Der Index innerhalb der <c>Puffer</c> , in dem der Schreibvorgang wird gestartet.</param>
+        <param name="length">Die maximale Länge, die in den Puffer kopiert werden soll.</param>
+        <summary>Liest einen Datenstrom von Zeichen aus dem angegebenen Spaltenoffset in den Puffer als ein Array, beginnend ab dem angegebenen Pufferoffset an.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>Gibt die Anzahl der verfügbaren Zeichen im Feld zurück. Dies ist häufig die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die tatsächliche Länge des Felds Wenn `GetChars` bereits zum Abrufen von Zeichen aus dem Feld verwendet wurde. Dies kann der Fall, z. B. sein, wenn die <xref:System.Data.SqlClient.SqlDataReader> ist eine umfangreiche Datenstruktur in einen Puffer lesen. Weitere Informationen finden Sie unter der `SequentialAccess` festlegen für <xref:System.Data.CommandBehavior>.  
+  
+ Die tatsächliche Anzahl der gelesenen Zeichen kann kleiner als die angeforderte Länge beim Erreichen des Endes des Felds ist. Wenn Sie einen Puffer übergeben, ist `null`, <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A> gibt die Länge des gesamten Felds in Zeichen, nicht die verbleibende Größe basierend auf dem Puffer Offset-Parameter.  
+  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund. die abgerufenen Daten müssen bereits ein Zeichenarray sein.  
+  
+> [!NOTE]
+>  Die <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A> Methode gibt 0 zurück Wenn `dataIndex` ist ein negativer Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public override string GetDataTypeName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDataTypeName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetDataTypeName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungsposition der zu suchenden Spalte.</param>
+        <summary>Ruft eine Zeichenfolge, die den Datentyp der angegebenen Spalte darstellt.</summary>
+        <returns>Die Zeichenfolge, die den Datentyp der angegebenen Spalte darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt den Namen des Back-End-Datentyps zurück.  
+  
+ `numeric`ist ein Synonym in SQL Server für die `decimal` -Datentyp. `GetDataTypeName`Gibt "decimal" für eine Spalte als decimal oder numeric definiert zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime GetDateTime (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime GetDateTime(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.DateTime" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits sein ein <xref:System.DateTime> Objekt.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTimeOffset">
+      <MemberSignature Language="C#" Value="public virtual DateTimeOffset GetDateTimeOffset (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTimeOffset GetDateTimeOffset(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.DateTimeOffset" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits sein ein <xref:System.DateTimeOffset> Objekt.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public override decimal GetDecimal (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Decimal GetDecimal(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.Decimal" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits sein ein <xref:System.Decimal> Objekt.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public override double GetDouble (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 GetDouble(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Gleitkommazahl mit doppelter Genauigkeit ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt. Aus diesem Grund muss die abgerufenen Daten bereits eine Gleitkommazahl mit doppelter Genauigkeit.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, der <see cref="T:System.Data.SqlClient.SqlDataReader" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Data.SqlClient.SqlDataReader" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl Sie mit dieser Methode einen expliziten Enumerator abrufen können, in Sprachen, unterstützen einen `foreach` Konstrukt, es ist einfacher, das Schleifenkonstrukt direkt, um die Zeilen im Datenleser durchlaufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetFieldType (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetFieldType(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft die <see cref="T:System.Type" /> also der Datentyp des Objekts.</summary>
+        <returns>Der <see cref="T:System.Type" />, der der Datentyp des Objekts ist. Wenn der Typ nicht, auf dem Client im Fall einer benutzerdefinierten Typ (UDT vorhanden ist) aus der Datenbank zurückgegeben **GetFieldType** gibt null zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetFieldValue&lt;T&gt; (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetFieldValue&lt;T&gt;(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetFieldValue``1(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des zurückzugebenden Werts.</typeparam>
+        <param name="i">Die Spalte abgerufen werden sollen.</param>
+        <summary>Synchron Ruft den Wert der angegebenen Spalte als einen Typ ab. <see cref="M:System.Data.SqlClient.SqlDataReader.GetFieldValueAsync``1(System.Int32,System.Threading.CancellationToken)" />ist die asynchrone Version von dieser Methode.</summary>
+        <returns>Der zurückgegebene Typ-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `T`einer der folgenden Typen kann sein:  
+  
+|||||  
+|-|-|-|-|  
+|Boolesch|Byte|Char|DateTime|  
+|DateTimeOffset|Decimal|Double|Float|  
+|Guid|Int16|Int32|Int64|  
+|SqlBoolean|Value|SqlDateTime|SqlDecimal|  
+|SqlDouble|SqlGuid|SqlInt16|SqlInt32|  
+|SqlInt64|SqlMoney|SqlSingle|SqlString|  
+|Zeichenfolge|UDT, der alle CLR-Typen sein kann mit markierten <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute>.|||  
+  
+ Weitere Informationen finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung unterbrochen oder wird während der Datenabruf geschlossen.  
+  
+ Die <see cref="T:System.Data.SqlClient.SqlDataReader" /> während der Datenabruf geschlossen wird.  
+  
+ Es sind keine Daten gelesen werden (z. B. die erste <see cref="M:System.Data.SqlClient.SqlDataReader.Read" /> aufrufen oder "false" zurückgegeben wurde noch nicht).  
+  
+ Es wurde versucht, eine zuvor lesen-Spalte in den sequenziellen Modus zu lesen.  
+  
+ Es wurde ein asynchroner Vorgang ausgeführt. Dies gilt für alle Get * Methoden bei der Ausführung in den sequenziellen Modus, wie sie beim Lesen eines Streams aufgerufen werden könnte.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Beim Versuch, eine Spalte zu lesen, die nicht vorhanden ist.</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Der Wert der Spalte war null (<see cref="M:System.Data.SqlClient.SqlDataReader.IsDBNull(System.Int32)" /> == <see langword="true" />), das Abrufen eines nicht-SQL-Typs.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="T" />entspricht nicht der Rückgabetyp von [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] oder kann nicht umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldValueAsync&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;T&gt; GetFieldValueAsync&lt;T&gt; (int i, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;!!T&gt; GetFieldValueAsync&lt;T&gt;(int32 i, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetFieldValueAsync``1(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des zurückzugebenden Werts.</typeparam>
+        <param name="i">Die Spalte abgerufen werden sollen.</param>
+        <param name="cancellationToken">Die abbruchanweisung, die Benachrichtigung verteilt wird, dass Vorgänge abgebrochen werden sollen. Dies ist den Abbruch nicht sichergestellt. Wenn diese Einstellung <see langword="CancellationToken.None" /> bewirkt, dass diese Methode entspricht <see cref="M:System.Data.SqlClient.SqlDataReader.IsDBNull(System.Int32)" />. Die zurückgegebene Aufgabe muss als abgebrochen markiert.</param>
+        <summary>Asynchron Ruft den Wert der angegebenen Spalte als einen Typ ab. <see cref="M:System.Data.SqlClient.SqlDataReader.GetFieldValue``1(System.Int32)" />ist die synchrone Version dieser Methode.</summary>
+        <returns>Der zurückgegebene Typ-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `T`einer der folgenden Typen kann sein:  
+  
+|||||  
+|-|-|-|-|  
+|Boolesch|Byte|Char|DateTime|  
+|DateTimeOffset|Decimal|Double|Float|  
+|Guid|Int16|Int32|Int64|  
+|SqlBoolean|Value|SqlDateTime|SqlDecimal|  
+|SqlDouble|SqlGuid|SqlInt16|SqlInt32|  
+|SqlInt64|SqlMoney|SqlSingle|SqlString|  
+|Zeichenfolge|UDT, der alle CLR-Typen sein kann mit markierten <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute>.|||  
+  
+ Weitere Informationen finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung unterbrochen oder wird während der Datenabruf geschlossen.  
+  
+ Die <see cref="T:System.Data.SqlClient.SqlDataReader" /> während der Datenabruf geschlossen wird.  
+  
+ Es sind keine Daten gelesen werden (z. B. die erste <see cref="M:System.Data.SqlClient.SqlDataReader.Read" /> aufrufen oder "false" zurückgegeben wurde noch nicht).  
+  
+ Es wurde versucht, eine zuvor lesen-Spalte in den sequenziellen Modus zu lesen.  
+  
+ Es wurde ein asynchroner Vorgang ausgeführt. Dies gilt für alle Get * Methoden bei der Ausführung in den sequenziellen Modus, wie sie beim Lesen eines Streams aufgerufen werden könnte.  
+  
+ <see langword="Context Connection=true" /> ist in der Verbindungszeichenfolge angegeben.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Beim Versuch, eine Spalte zu lesen, die nicht vorhanden ist.</exception>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">Der Wert der Spalte war null (<see cref="M:System.Data.SqlClient.SqlDataReader.IsDBNull(System.Int32)" /> == <see langword="true" />), das Abrufen eines nicht-SQL-Typs.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="T" />entspricht nicht der Rückgabetyp von [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] oder kann nicht umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public override float GetFloat (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float32 GetFloat(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetFloat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Gleitkommazahl mit einfacher Genauigkeit ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt. Aus diesem Grund muss die abgerufenen Daten bereits eine Gleitkommazahl mit einfacher Genauigkeit.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGuid">
+      <MemberSignature Language="C#" Value="public override Guid GetGuid (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Guid GetGuid(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als global eindeutigen Bezeichner (GUID) ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits eine GUID sein.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public override short GetInt16 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int16 GetInt16(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine 16-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund muss die abgerufenen Daten bereits eine 16-Bit-Ganzzahl mit Vorzeichen.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public override int GetInt32 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetInt32(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine 32-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund muss die abgerufenen Daten bereits eine 32-Bit-Ganzzahl mit Vorzeichen.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public override long GetInt64 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetInt64(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als 64-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund muss die abgerufenen Daten bereits eine 64-Bit-Ganzzahl mit Vorzeichen.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public override string GetName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Namen der angegebenen Spalte ab.</summary>
+        <returns>Der Name der angegebenen Spalte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrdinal">
+      <MemberSignature Language="C#" Value="public override int GetOrdinal (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetOrdinal(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetOrdinal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <summary>Ruft den Namen der Spalte anhand der Spalte ordinal, ab.</summary>
+        <returns>Die nullbasierte Ordnungszahl der Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetOrdinal`führt zuerst eine Suche Groß-/Kleinschreibung beachtet. Suche Groß-und Kleinschreibung tritt auf, wenn sie eine zweite ein Fehler auftritt, (Groß-und Kleinschreibung unterschieden erfolgt die Sortierung der Datenbank verwenden). Beim Vergleichen von kulturspezifischen Groß-/Kleinschreibung-Regeln betroffen sind, können unerwartete Ergebnisse auftreten. Ergibt z. B. im türkischen im folgenden Beispiel wird die falsche Ergebnisse, da das Dateisystem in der Sortierung der türkischen Sprache nicht linguistische Schreibweise Regeln für den Buchstaben "i" verwendet in "File". Die Methode löst eine `IndexOutOfRange` -Ausnahme aus, wenn die nullbasierte Ordnungszahl der Spalte nicht gefunden wird.  
+  
+ `GetOrdinal`wird die Laufweite von Kana nicht beachtet.  
+  
+ Da Ordnungszahlen basierende Suchvorgänge effizienter als Nachschlagevorgänge nach Namen, ist es ineffizient, rufen Sie `GetOrdinal` innerhalb einer Schleife. Zeit sparen, indem Aufrufen `GetOrdinal` einmal und die Ergebnisse auf eine ganzzahlige Variable für die Verwendung innerhalb der Schleife zuweisen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Data.SqlClient.SqlDataReader.GetOrdinal%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[Classic WebData SqlDataReader.GetOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.GetOrdinal/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlDataReader.GetOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.GetOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Name ist kein gültiger Spaltenname.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetProviderSpecificFieldType (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetProviderSpecificFieldType(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Eine <see cref="T:System.Int32" /> , die die Ordnungszahl der Spalte darstellt.</param>
+        <summary>Ruft eine <see langword="Object" /> also eine Darstellung der zugrunde liegenden anbieterspezifischen Feldtyp.</summary>
+        <returns>Ruft eine <see cref="T:System.Object" /> also eine Darstellung der zugrunde liegenden anbieterspezifischen Feldtyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValue">
+      <MemberSignature Language="C#" Value="public override object GetProviderSpecificValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetProviderSpecificValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Eine <see cref="T:System.Int32" /> , die die Ordnungszahl der Spalte darstellt.</param>
+        <summary>Ruft eine <see langword="Object" /> also eine Darstellung der zugrunde liegenden Anbieter spezifischen Wert.</summary>
+        <returns>Ein <see cref="T:System.Object" /> also eine Darstellung der zugrunde liegenden Anbieter spezifischen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValues">
+      <MemberSignature Language="C#" Value="public override int GetProviderSpecificValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetProviderSpecificValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array von <see cref="T:System.Object" /> in das die Spaltenwerte kopiert.</param>
+        <summary>Ruft ein Array von Objekten, die eine Darstellung der zugrunde liegenden Anbieter bestimmte Werte sind.</summary>
+        <returns>Das Array von Objekten, die eine Darstellung der zugrunde liegenden Anbieter bestimmte Werte sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaTable">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchemaTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchemaTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSchemaTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Data.DataTable" /> zurück, die die Spaltenmetadaten des <see cref="T:System.Data.SqlClient.SqlDataReader" /> beschreibt.</summary>
+        <returns>Eine <see cref="T:System.Data.DataTable" />, die die Spaltenmetadaten beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> Methodenrückgabe Metadaten zu jeder Spalte in der folgenden Reihenfolge:  
+  
+|DataReader-Spalte|Beschreibung|  
+|-----------------------|-----------------|  
+|AllowDBNull|Festlegen Sie, wenn der Consumer die Spalte auf einen null-Wert festlegen kann oder wenn der Anbieter nicht bestimmen kann, ob der Consumer die Spalte auf einen null-Wert festlegen kann. Andernfalls nicht festgelegt. Eine Spalte kann null-Werte enthalten, selbst wenn sie auf den Wert null festgelegt werden kann.|  
+|BaseCatalogName|Der Name des Katalogs im Datenspeicher, der die Spalte enthält. NULL, wenn der Name des Basiskatalogs nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|BaseColumnName|Der Name der Spalte im Datenspeicher. Dies ist möglicherweise anders als den Namen der Spalte in der ColumnName-Spalte zurückgegeben, wenn ein Alias verwendet wurde. Ein null-Wert, wenn der Name der Basisspalte nicht bestimmt werden kann oder wenn die Spalte des Rowsets abgeleitet, jedoch nicht identisch mit ist, eine Spalte in den Daten speichern. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|BaseSchemaName|Der Name des Schemas im Datenspeicher, der die Spalte enthält. Ein null-Wert, wenn der Name des Basisschemas nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|BaseServerName|Der Name der Instanz von Microsoft SQL Server-System die <xref:System.Data.SqlClient.SqlDataReader>.|  
+|"BaseTableName"|Der Name der Tabelle oder Sicht im Datenspeicher, der die Spalte enthält. Ein null-Wert, wenn der Name der Basistabelle nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|Spaltenname|Der Name der Spalte; dies möglicherweise nicht eindeutig sein. Wenn dies nicht bestimmt werden kann, wird ein null-Wert zurückgegeben. Dieser Name gibt immer den Stand der Umbenennung der Spalte in der aktuellen Ansichts- oder Befehlstext wieder.|  
+|ColumnOrdinal|Die nullbasierte Ordnungszahl der Spalte. Diese Spalte kann nicht auf einen null-Wert enthalten.|  
+|ColumnSize|Die maximal mögliche Länge eines Werts in der Spalte. Für Spalten, die einen Datentyp mit fester Länge verwenden, ist dies die Größe des Datentyps. Für `nvarchar(MAX)`, `varchar(MAX)`, und `varbinary(MAX)` Spalten gespeichert, die in einer SQL Server-Datenbank, die maximale Größe beträgt 2 GB. Wenn diese Spalten werden gespeichert und als Dateien zugegriffen, wird die zulässige Maximalgröße vom Dateisystem auferlegt werden. Dieser Wert ändert sich, wenn die `Type System Version` Schlüsselwort in der Verbindungszeichenfolge angegeben.  Für neue Typen werden sie als ältere Typen dargestellt. Die MAX-Datentypen zurück, die normale 4k für `nvarchar` und 8000 für `varchar`. Weitere Informationen finden Sie in der Transact-SQL-Referenz in der SQL Server-Onlinedokumentation.|  
+|DataTypeName|Gibt eine Zeichenfolge, die den Datentyp der angegebenen Spalte darstellt.|  
+|IsAliased|`true`: Der Spaltenname ist ein Alias.<br /><br /> `false`: Der Spaltenname ist es sich nicht um einen Alias.|  
+|IsAutoIncrement|`true`: Die Spalte neuen Zeilen in festen Schritten Werte zugewiesen.<br /><br /> `false`: Die Spalte weist keine Werte auf die neuen Zeilen in festen Schritten. Der Standardwert für diese Spalte ist `false`.|  
+|IsColumnSet|`true`: Die Spalte ist eine Spalte mit geringer Dichte, die einen Spaltensatz angehört.|  
+|Istausdruck|`true`: Die Spalte ist ein Ausdruck.<br /><br /> `false`: Die Spalte stellt keinen Ausdruck.|  
+|"IsHidden"|`true`: Die Spalte wird ausgeblendet.<br /><br /> `false`: Die Spalte wird nicht ausgeblendet.|  
+|IsIdentity|`true`: Die Spalte ist eine Identitätsspalte.<br /><br /> `false`: Die Spalte ist eine Identitätsspalte.|  
+|IsKey|`true`: Die Spalte gehört zu einem Satz von Spalten im Rowset, die zusammen die Zeile eindeutig identifizieren. Die Anzahl der Spalten mit `IsKey` festgelegt `true` muss eine Zeile im Rowset eindeutig identifizieren. Es ist nicht erforderlich, dass dieser Satz von Spalten einen minimalen Satz von Spalten ist. Diese Gruppe von Spalten kann aus einem Primärschlüssel der Basistabelle, eine unique-Einschränkung oder einen eindeutigen Index generiert werden.<br /><br /> `false`: Die Spalte ist nicht erforderlich, um die Zeile eindeutig zu identifizieren.|  
+|IsLong|`true`: Die Spalte enthält eine lange BLOB (Binary Object), die sehr lange Daten enthält. Die Definition der sehr lange Daten ist anbieterspezifisch.<br /><br /> `false`: Die Spalte enthält keine lange BLOB (Binary Object), die sehr lange Daten enthält.|  
+|IsReadOnly|`true`: Die Spalte werden nicht geändert.<br /><br /> `false`: Die Spalte kann geändert werden.|  
+|IsRowVersion|`true`: Die Spalte enthält einen permanenten Zeilenbezeichner, der geschrieben werden kann, und weist keinen inhaltlichen Wert Identität der Zeile.<br /><br /> `false`: Die Spalte enthält keinen permanenten Zeilenbezeichner, der in die geschrieben werden kann, und hat keinen sinnvollen Wert außer Identifizierung der Zeile.|  
+|IsUnique|`true`: Spalte ist vom Typ `timestamp`.<br /><br /> `false`: Spalte ist nicht vom Typ `timestamp`.|  
+|NonVersionedProviderType|Der Typ der Spalte unabhängig von der aktuellen `Type System Version` in der Verbindungszeichenfolge angegeben. Der zurückgegebene Wert liegt zwischen dem <xref:System.Data.SqlDbType> Enumeration.|  
+|NumericPrecision|Wenn `ProviderType` ein numerischen Datentyp aufweisen, ist dies die maximale Genauigkeit der Spalte ist. Die Genauigkeit hängt von der Definition der Spalte ab. Wenn `ProviderType` ist es sich nicht um ein numerischen Datentyp aufweisen, dies ist 255.|  
+|NumericScale|Wenn `ProviderType` DBTYPE_DECIMAL oder DBTYPE_NUMERIC, ist die Anzahl der Ziffern rechts vom Dezimaltrennzeichen an. Andernfalls ist dies 255.|  
+|ProviderSpecificDataType|Gibt den anbieterspezifischen Datentyp der Spalte auf der Grundlage der `Type System Version` Schlüsselwort in der Verbindungszeichenfolge angegeben.|  
+|ProviderType|Der Indikator des Datentyps der Spalte. Wenn der Datentyp der Spalte von Zeile zu Zeile ändert, muss dies Objekt sein. Diese Spalte kann nicht auf einen null-Wert enthalten.|  
+|UdtAssemblyQualifiedName|Wenn die Spalte einen benutzerdefinierten Typ (UDT) ist, ist dies der qualifizierte Name der UDT-Assembly gemäß <xref:System.Type.AssemblyQualifiedName%2A>. Wenn die Spalte nicht um einen UDT ist, ist dies null.|  
+|XmlSchemaCollectionDatabase|Der Name der Datenbank, in dem die schemaauflistung für diese XML-Instanz befindet, ist, wenn die Zeile mit Informationen zu einer XML-Spalte enthält. Dieser Wert ist `null` (`Nothing` in Visual Basic), wenn die Auflistung innerhalb der aktuellen Datenbank definiert ist. Es ist ebenfalls null, wenn es in diesem Fall keine schemaauflistung ist, die `XmlSchemaCollectionName` und `XmlSchemaCollectionOwningSchema` Spalten sind ebenfalls null.|  
+|XmlSchemaCollectionName|Der Name der schemaauflistung für diese XML-Instanz, wenn die Zeile mit Informationen zu einer XML-Spalte enthält. Dieser Wert ist `null` (`Nothing` in Visual Basic), wenn es keine zugeordnete schemaauflistung ist. Wenn der Wert null ist, ist die `XmlSchemaCollectionDatabase` und `XmlSchemaCollectionOwningSchema` Spalten sind ebenfalls null.|  
+|XmlSchemaCollectionOwningSchema|Das besitzende relationale Schema, in dem die schemaauflistung für diese XML-Instanz befindet, ist, wenn die Zeile mit Informationen zu einer XML-Spalte enthält. Dieser Wert ist `null` (`Nothing` in Visual Basic), wenn die Auflistung innerhalb der aktuellen Datenbank definiert ist. Es ist ebenfalls null, wenn es in diesem Fall keine schemaauflistung ist, die `XmlSchemaCollectionDatabase` und `XmlSchemaCollectionName` Spalten sind ebenfalls null.|  
+  
+> [!NOTE]
+>  Um sicherzustellen, dass die Metadatenspalten die richtigen Informationen zurückgeben, rufen Sie <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> mit der `behavior` Parametersatz auf `KeyInfo`. Andernfalls möglicherweise einige der Spalten in der Schematabelle in der Standardeinstellung null oder falsche Daten zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der <see cref="T:System.Data.SqlClient.SqlDataReader" /> ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlBinary">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlBinary GetSqlBinary (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlBinary GetSqlBinary(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlBinary(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlBinary" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlBinary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits eine binäre Struktur oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlBoolean">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlBoolean GetSqlBoolean (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlBoolean GetSqlBoolean(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlBoolean" />.</summary>
+        <returns>Der Wert der Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits ein boolescher Wert sein, oder wird eine Ausnahme generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlByte">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlByte GetSqlByte (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlByte GetSqlByte(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlByte" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlByte" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits ein Byte sein, oder es wird eine Ausnahme generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlBytes">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlBytes GetSqlBytes (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.SqlTypes.SqlBytes GetSqlBytes(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlBytes(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBytes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.Data.SqlTypes.SqlBytes" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlBytes" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlChars">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlChars GetSqlChars (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.SqlTypes.SqlChars GetSqlChars(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlChars(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlChars</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.Data.SqlTypes.SqlChars" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlChars" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlDateTime">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlDateTime GetSqlDateTime (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlDateTime GetSqlDateTime(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits ein Datums-/Uhrzeitwert sein, oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlDecimal">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlDecimal GetSqlDecimal (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlDecimal GetSqlDecimal(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDecimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlDecimal" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlDecimal" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits ein decimal-Wert sein, oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlDouble">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlDouble GetSqlDouble (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlDouble GetSqlDouble(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlDouble" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlDouble" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; die abgerufenen Daten müssen daher bereits eine Gleitkommazahl mit doppelter Genauigkeit, oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlGuid">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlGuid GetSqlGuid (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlGuid GetSqlGuid(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlGuid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlGuid" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlGuid" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits eine GUID sein, oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlInt16">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlInt16 GetSqlInt16 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlInt16 GetSqlInt16(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlInt16" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlInt16" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits eine 16-Bit-Ganzzahl mit Vorzeichen sein, oder wird eine Ausnahme generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlInt32">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlInt32 GetSqlInt32 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlInt32 GetSqlInt32(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlInt32" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlInt32" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits eine 32-Bit-Ganzzahl mit Vorzeichen sein, oder es wird eine Ausnahme generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlInt64">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlInt64 GetSqlInt64 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlInt64 GetSqlInt64(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlInt64" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlInt64" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits eine 64-Bit-Ganzzahl mit Vorzeichen sein, oder wird eine Ausnahme generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlMoney">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlMoney GetSqlMoney (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlMoney GetSqlMoney(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlMoney(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlMoney</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlMoney" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlMoney" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits ein decimal-Wert sein, oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlSingle">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlSingle GetSqlSingle (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlSingle GetSqlSingle(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlSingle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlSingle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlSingle" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlSingle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits eine einfache Genauigkeit Gleitkommazahl sein, oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlString">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlString GetSqlString (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Data.SqlTypes.SqlString GetSqlString(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.Data.SqlTypes.SqlString" />.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlTypes.SqlString" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund die abgerufenen Daten müssen bereits eine Zeichenfolge sein, oder eine Ausnahme wird generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlValue">
+      <MemberSignature Language="C#" Value="public virtual object GetSqlValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetSqlValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt den Datenwert in der angegebenen Spalte als SQL Server-Typ zurück.</summary>
+        <returns>Der Wert der Spalte als eine <see cref="T:System.Data.SqlDbType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>Daten mithilfe der systemeigenen SQL Server-Typs zurückgegeben. Zum Abrufen von Daten mithilfe von .NET Framework-Typen finden Sie unter <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlValues">
+      <MemberSignature Language="C#" Value="public virtual int GetSqlValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetSqlValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array von <see cref="T:System.Object" /> in das die Werte kopiert. Die Spaltenwerte werden als SQL Server-Typen dargestellt.</param>
+        <summary>Füllt ein Array von <see cref="T:System.Object" /> , enthält die Werte für alle Spalten im Datensatz, ausgedrückt als SQL Server-Datentypen.</summary>
+        <returns>Eine ganze Zahl, die die Anzahl der kopierten Spalten angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die Werte für alle Spalten im Datensatz in einem einzigen Aufruf der CLR-Typsystem anstelle der SQL-Typsystem zurück. Die Länge der <xref:System.Object> Array muss nicht mit der Anzahl der Spalten im Datensatz übereinstimmen. Sie können übergeben ein <xref:System.Object> Array, das weniger als die Anzahl der Spalten im Datensatz enthält. Nur die Menge der Daten die <xref:System.Object> Array enthält, die in das Array, beginnend bei der Spalte mit der Ordnungszahl 0 kopiert wird. Sie können auch übergeben ein <xref:System.Object> Array, dessen Länge größer als die Anzahl der Spalten in der resultierenden Zeile enthalten ist. Alle übrigen Spalten werden unverändert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSqlXml">
+      <MemberSignature Language="C#" Value="public virtual System.Data.SqlTypes.SqlXml GetSqlXml (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.SqlTypes.SqlXml GetSqlXml(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetSqlXml(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlXml</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein XML-Wert ab.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlXml" /> -Wert, der innerhalb des entsprechenden Felds gespeicherten XML-Code enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits ein XML-Wert sein.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.DataTableReader.FieldCount" /> - 1</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zu lesen, oder greifen Sie auf Spalten in einem geschlossenen <see cref="T:System.Data.SqlClient.SqlDataReader" />.</exception>
+        <exception cref="T:System.InvalidCastException">Die abgerufenen Daten sind nicht kompatibel mit der <see cref="T:System.Data.SqlTypes.SqlXml" /> Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetStream (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetStream(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetStream(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft ab, Binary, Image, Varbinary, UDT und variant-Datentypen als eine <see cref="T:System.IO.Stream" />.</summary>
+        <returns>Ein Streamobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Stream.ReadTimeout%2A>Der Standardwert ist der Wert der <xref:System.Data.SqlClient.SqlCommand.CommandTimeout%2A>; Sie können jedoch ändern, <xref:System.IO.Stream.ReadTimeout%2A> über <xref:System.Data.SqlClient.SqlDataReader.GetStream%2A>.  
+  
+ NULL-Werte werden als eine leere (null Byte) zurückgegeben <xref:System.IO.Stream>.  
+  
+ <xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>Löst ein <xref:System.InvalidOperationException> Ausnahme bei Verwendung für ein zurückgegebenes Objekt <xref:System.Data.SqlClient.SqlDataReader.GetStream%2A> Wenn <xref:System.Data.CommandBehavior.SequentialAccess> wirksam wird.  
+  
+ <xref:System.Data.SqlClient.SqlException>Ausnahmen ausgelöst werden, von <xref:System.IO.Stream> ausgelöst werden, als <xref:System.IO.IOException> Ausnahmen; überprüfen Sie die innere Ausnahme für die <xref:System.Data.SqlClient.SqlException>.  
+  
+ Die folgenden <xref:System.IO.Stream> Member sind nicht verfügbar für die zurückgegebenen Objekte <xref:System.Data.SqlClient.SqlDataReader.GetStream%2A>:  
+  
+-   BeginWrite  
+  
+-   EndWrite  
+  
+-   Länge  
+  
+-   Position  
+  
+-   Seek  
+  
+-   SetLength  
+  
+-   Write  
+  
+-   WriteByte  
+  
+-   WriteTimeout  
+  
+ Wenn die Verbindungseigenschaft `ContextConnection=true`, <xref:System.Data.SqlClient.SqlDataReader.GetStream%2A> unterstützt nur die synchrone Datenabruf für beide sequenzielle (<xref:System.Data.CommandBehavior.SequentialAccess>) und nicht sequenzielle (<xref:System.Data.CommandBehavior.Default>) Zugriff.  
+  
+ Weitere Informationen finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung unterbrochen oder wird während der Datenabruf geschlossen.  
+  
+ Die <see cref="T:System.Data.SqlClient.SqlDataReader" /> während der Datenabruf geschlossen wird.  
+  
+ Es sind keine Daten gelesen werden (z. B. die erste <see cref="M:System.Data.SqlClient.SqlDataReader.Read" /> aufrufen oder "false" zurückgegeben wurde noch nicht).  
+  
+ Es wurde versucht, eine zuvor lesen-Spalte in den sequenziellen Modus zu lesen.  
+  
+ Es wurde ein asynchroner Vorgang ausgeführt. Dies gilt für alle Get * Methoden bei der Ausführung in den sequenziellen Modus, wie sie beim Lesen eines Streams aufgerufen werden könnte.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Beim Versuch, eine Spalte zu lesen, die nicht vorhanden ist.</exception>
+        <exception cref="T:System.InvalidCastException">Der zurückgegebene Typ wurde nicht mit einer der folgenden Typen:  
+  
+-   Binär  
+  
+-   Bild  
+  
+-   varbinary  
+  
+-   UDT</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public override string GetString (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetString(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Zeichenfolge ab.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits eine Zeichenfolge sein.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextReader">
+      <MemberSignature Language="C#" Value="public override System.IO.TextReader GetTextReader (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.TextReader GetTextReader(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetTextReader(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die Spalte abgerufen werden sollen.</param>
+        <summary>Ruft ab, Char, NChar, NText, NVarChar, Text, VarChar und Variant-Datentypen als eine <see cref="T:System.IO.TextReader" />.</summary>
+        <returns>Das zurückgegebene Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlException>Ausnahmen ausgelöst werden, von <xref:System.IO.TextReader> ausgelöst werden, als <xref:System.IO.IOException> Ausnahmen; überprüfen Sie die innere Ausnahme für die <xref:System.Data.SqlClient.SqlException>.  
+  
+ NULL-Werte werden als eine leere (null Byte) zurückgegeben <xref:System.IO.TextReader>.  
+  
+ <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>Löst ein <xref:System.InvalidOperationException> Ausnahme bei Verwendung für ein zurückgegebenes Objekt <xref:System.Data.SqlClient.SqlDataReader.GetTextReader%2A> Wenn <xref:System.Data.CommandBehavior.SequentialAccess> wirksam wird.  
+  
+ Wenn die Verbindungseigenschaft `ContextConnection=true`, <xref:System.Data.SqlClient.SqlDataReader.GetTextReader%2A> unterstützt nur die synchrone Datenabruf für beide sequenzielle (<xref:System.Data.CommandBehavior.SequentialAccess>) und nicht sequenzielle (<xref:System.Data.CommandBehavior.Default>) Zugriff.  
+  
+ Weitere Informationen finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung unterbrochen oder wird während der Datenabruf geschlossen.  
+  
+ Die <see cref="T:System.Data.SqlClient.SqlDataReader" /> während der Datenabruf geschlossen wird.  
+  
+ Es sind keine Daten gelesen werden (z. B. die erste <see cref="M:System.Data.SqlClient.SqlDataReader.Read" /> aufrufen oder "false" zurückgegeben wurde noch nicht).  
+  
+ Es wurde versucht, eine zuvor lesen-Spalte in den sequenziellen Modus zu lesen.  
+  
+ Es wurde ein asynchroner Vorgang ausgeführt. Dies gilt für alle Get * Methoden bei der Ausführung in den sequenziellen Modus, wie sie beim Lesen eines Streams aufgerufen werden könnte.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Beim Versuch, eine Spalte zu lesen, die nicht vorhanden ist.</exception>
+        <exception cref="T:System.InvalidCastException">Der zurückgegebene Typ wurde nicht mit einer der folgenden Typen:  
+  
+-   char  
+  
+-   nchar  
+  
+-   ntext  
+  
+-   nvarchar  
+  
+-   Text  
+  
+-   varchar</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTimeSpan">
+      <MemberSignature Language="C#" Value="public virtual TimeSpan GetTimeSpan (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TimeSpan GetTimeSpan(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetTimeSpan(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.TimeSpan" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits sein ein <xref:System.TimeSpan> Objekt.  
+  
+ Rufen Sie <xref:System.Data.SqlClient.SqlDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte im systemeigenen Format ab.</summary>
+        <returns>Diese Methode gibt <see cref="T:System.DBNull" /> für null-Datenbankspalten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>Gibt Daten mithilfe der .NET Framework-Typen zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override int GetValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array vom Typ <see cref="T:System.Object" />, in das die Attributspalten kopiert werden sollen.</param>
+        <summary>Füllt ein Objektarray mit den Spaltenwerten der aktuellen Zeile.</summary>
+        <returns>Die Anzahl der Instanzen von <see cref="T:System.Object" /> im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die meisten Anwendungen stellt diese Methode eine effiziente Möglichkeit zum Abrufen von alle Spalten, statt jede Spalte einzeln abzurufen.  
+  
+ Sie können übergeben ein <xref:System.Object> Array, das weniger als die Anzahl der Spalten in der resultierenden Zeile enthält. Nur die Menge der Daten die <xref:System.Object> Array enthält, wird in das Array kopiert. Sie können auch übergeben ein <xref:System.Object> Array, dessen Länge größer als die Anzahl der Spalten in der resultierenden Zeile enthalten ist.  
+  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von ein Array richtig Größe zum Lesen der Werte aus der aktuellen Zeile in der bereitgestellten <xref:System.Data.SqlClient.SqlDataReader>. Darüber hinaus wird im Beispiel veranschaulicht, die Verwendung eines Arrays mit fester Größe, das kleiner oder größer als die Anzahl der verfügbaren Spalten werden konnte.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetValueObject#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetValueObject/CS/source.cs#2)]
+ [!code-vb[DataWorks DataTableReader.GetValueObject#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetValueObject/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlReader">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlReader GetXmlReader (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlReader GetXmlReader(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.GetXmlReader(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Wert der angegebenen Spalte.</param>
+        <summary>Ruft Daten von Geben Sie XML-Daten als ein <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Das zurückgegebene Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlReader> zurückgegebenes Objekt <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A> unterstützt keine asynchronen Vorgänge. Wenn Sie auf die asynchrone Vorgänge benötigen eine <xref:System.Xml.XmlReader>, wandeln Sie die XML-Spalte in einer NVARCHAR(MAX) auf dem Server, und Verwenden von <xref:System.Data.SqlClient.SqlDataReader.GetTextReader%2A> mit <xref:System.Xml.XmlReader.Create%2A>.  
+  
+ <xref:System.Data.SqlClient.SqlException>Ausnahmen ausgelöst werden, von <xref:System.Xml.XmlReader> ausgelöst werden, als <xref:System.Xml.XmlException> Ausnahmen; überprüfen Sie die innere Ausnahme für die <xref:System.Data.SqlClient.SqlException>.  
+  
+ <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>Löst ein <xref:System.InvalidOperationException> Ausnahme bei Verwendung für ein zurückgegebenes Objekt <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A> Wenn <xref:System.Data.CommandBehavior.SequentialAccess> wirksam wird.  
+  
+ Weitere Informationen finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung unterbrochen oder wird während der Datenabruf geschlossen.  
+  
+ Die <see cref="T:System.Data.SqlClient.SqlDataReader" /> während der Datenabruf geschlossen wird.  
+  
+ Es sind keine Daten gelesen werden (z. B. die erste <see cref="M:System.Data.SqlClient.SqlDataReader.Read" /> aufrufen oder "false" zurückgegeben wurde noch nicht).  
+  
+ Beim Versuch, eine zuvor gelesenen Spalte in den sequenziellen Modus zu lesen.  
+  
+ Es wurde ein asynchroner Vorgang ausgeführt. Dies gilt für alle Get * Methoden bei der Ausführung in den sequenziellen Modus, wie sie beim Lesen eines Streams aufgerufen werden könnte.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Beim Versuch, eine Spalte zu lesen, die nicht vorhanden ist.</exception>
+        <exception cref="T:System.InvalidCastException">Der zurückgegebene Typ war nicht Xml.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasRows">
+      <MemberSignature Language="C#" Value="public override bool HasRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasRows" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.HasRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Data.SqlClient.SqlDataReader" /> eine oder mehrere Zeilen enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.SqlClient.SqlDataReader" /> enthält eine oder mehrere Zeilen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public override bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob das angegebene <see cref="T:System.Data.SqlClient.SqlDataReader" /> -Instanz geschlossen wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Data.SqlClient.SqlDataReader" /> Instanz geschlossen ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht möglich, zum Lesen aus einer <xref:System.Data.SqlClient.SqlDataReader> -Instanz, die geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCommandBehavior">
+      <MemberSignature Language="C#" Value="protected bool IsCommandBehavior (System.Data.CommandBehavior condition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsCommandBehavior(valuetype System.Data.CommandBehavior condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.IsCommandBehavior(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Eine <see cref="T:System.Data.CommandBehavior" />-Enumeration.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Data.CommandBehavior" /> übereinstimmt, die von der <see cref="T:System.Data.SqlClient.SqlDataReader" /> .</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Data.CommandBehavior" /> ist "true" <see langword="false" /> andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public override bool IsDBNull (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDBNull(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.IsDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Spalte nicht vorhandene oder fehlende Werte enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Spaltenwert gleich <see cref="T:System.DBNull" />andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, überprüfen Sie, ob null-Spaltenwerte vor dem Aufruf typisierter get-Methoden (z. B. <xref:System.Data.SqlClient.SqlDataReader.GetByte%2A>, <xref:System.Data.SqlClient.SqlDataReader.GetChar%2A>usw.) das Auslösen eines Fehlers zu vermeiden.  
+  
+ [!code-csharp[SqlDataReader_IsDbNull#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/sqldatareader_isdbnull/cs/source.cs#1)]
+ [!code-vb[SqlDataReader_IsDbNull#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/sqldatareader_isdbnull/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNullAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;bool&gt; IsDBNullAsync (int i, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; IsDBNullAsync(int32 i, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.IsDBNullAsync(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Spalte abgerufen werden sollen.</param>
+        <param name="cancellationToken">Die abbruchanweisung, die Benachrichtigung verteilt wird, dass Vorgänge abgebrochen werden sollen. Dies ist den Abbruch nicht sichergestellt. Wenn diese Einstellung <see langword="CancellationToken.None" /> bewirkt, dass diese Methode entspricht <see cref="M:System.Data.SqlClient.SqlDataReader.IsDBNull(System.Int32)" />. Die zurückgegebene Aufgabe muss als abgebrochen markiert.</param>
+        <summary>Eine asynchrone Version der <see cref="M:System.Data.SqlClient.SqlDataReader.IsDBNull(System.Int32)" />, die einem Wert abruft gibt an, ob die Spalte nicht vorhandene oder fehlende Werte enthält.  
+  
+ Das Abbruchtoken kann verwendet werden, um anzufordern, dass der Vorgang abgebrochen wird, bevor das Timeout des Befehls abläuft. Ausnahmen werden über das zurückgegebene Taskobjekt gemeldet.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Spaltenwert gleich <see langword="DBNull" /> andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung unterbrochen oder wird während der Datenabruf geschlossen.  
+  
+ Die <see cref="T:System.Data.SqlClient.SqlDataReader" /> während der Datenabruf geschlossen wird.  
+  
+ Es sind keine Daten gelesen werden (z. B. die erste <see cref="M:System.Data.SqlClient.SqlDataReader.Read" /> aufrufen oder "false" zurückgegeben wurde noch nicht).  
+  
+ Beim Versuch, eine zuvor gelesenen Spalte in den sequenziellen Modus zu lesen.  
+  
+ Es wurde ein asynchroner Vorgang ausgeführt. Dies gilt für alle Get * Methoden bei der Ausführung in den sequenziellen Modus, wie sie beim Lesen eines Streams aufgerufen werden könnte.  
+  
+ <see langword="Context Connection=true" /> ist in der Verbindungszeichenfolge angegeben.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Beim Versuch, eine Spalte zu lesen, die nicht vorhanden ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte im systemeigenen Format angegebener Spaltenordnungszahl ab.</summary>
+        <value>Der Wert der angegebenen Spalte im systemeigenen Format.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Spaltenname</param>
+        <summary>Ruft den Wert der angegebenen Spalte im systemeigenen Format Berücksichtigung des Spaltennamens.</summary>
+        <value>Der Wert der angegebenen Spalte im systemeigenen Format.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Suche Groß-/Kleinschreibung beachtet wird zuerst ausgeführt. Falls dies fehlschlägt, erfolgt eine zweite Groß-/Kleinschreibung Suche (Groß-und Kleinschreibung unterschieden erfolgt die Sortierung der Datenbank mit). Beim Vergleichen von kulturspezifischen Groß-/Kleinschreibung-Regeln betroffen sind, können unerwartete Ergebnisse auftreten. Ergibt z. B. im türkischen im folgenden Beispiel wird die falsche Ergebnisse, da das Dateisystem in der Sortierung der türkischen Sprache nicht linguistische Schreibweise Regeln für den Buchstaben "i" verwendet in "File".  
+  
+ Diese Methode ist die Laufweite von Kana nicht beachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Keine Spalte mit dem angegebenen Namen wurde gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextResult">
+      <MemberSignature Language="C#" Value="public override bool NextResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool NextResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.NextResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Datenleser auf das nächste Ergebnis, beim Lesen der Ergebnisse von Batchanweisungen Transact-SQL.</summary>
+        <returns>
+          <see langword="true" />Falls weitere Resultsets vorhanden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet, um mehrere Ergebnisse zu verarbeiten, die durch das Ausführen von Transact-SQL-Batchanweisungen generiert werden können.  
+  
+ Standardmäßig wird der Datenleser auf das erste Ergebnis positioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextResultAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;bool&gt; NextResultAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; NextResultAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.NextResultAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Die Abbruchanweisung.</param>
+        <summary>Eine asynchrone Version der <see cref="M:System.Data.SqlClient.SqlDataReader.NextResult" />, dem setzt den Datenleser auf das nächste Ergebnis beim Lesen der Ergebnisse des Batches [!INCLUDE[tsql](~/includes/tsql-md.md)] Anweisungen.  
+  
+ Das Abbruchtoken kann verwendet werden, um anzufordern, dass der Vorgang abgebrochen wird, bevor das Timeout des Befehls abläuft.  Ausnahmen werden über das zurückgegebene Taskobjekt gemeldet.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)], finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException"><see cref="M:System.Data.SqlClient.SqlDataReader.NextResultAsync(System.Threading.CancellationToken)" /> wird vor dem Abschluss der Aufgabe mehrmals für dieselbe Instanz aufgerufen.  
+  
+ <see langword="Context Connection=true" /> ist in der Verbindungszeichenfolge angegeben.</exception>
+        <exception cref="T:System.Data.SqlClient.SqlException">[!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] hat beim Ausführen des Befehlstexts einen Fehler zurückgegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den <see cref="T:System.Data.SqlClient.SqlDataReader" /> auf den nächsten Datensatz.</summary>
+        <returns>
+          <see langword="true" />, wenn weitere Zeilen vorhanden sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardposition des der <xref:System.Data.SqlClient.SqlDataReader> steht vor dem ersten Datensatz. Aus diesem Grund müssen Sie aufrufen <xref:System.Data.SqlClient.SqlDataReader.Read%2A> um den Zugriff auf alle Daten zu beginnen.  
+  
+ Nur ein `SqlDataReader` pro zugeordneter <xref:System.Data.SqlClient.SqlConnection> kann gleichzeitig geöffnet sein, und jeder Versuch, öffnen Sie eine andere schlägt fehl, bis die erste Vorlage geschlossen wird. Außerdem auf die `SqlDataReader` verwendet wird, zugeordneten `SqlConnection` Informationsfluss bis Aufruf <xref:System.Data.SqlClient.SqlDataReader.Close%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlConnection>, <xref:System.Data.SqlClient.SqlCommand>, und ein <xref:System.Data.SqlClient.SqlDataReader>. Das Beispiel liest durch die Daten, die an das Konsolenfenster schreiben. Der Code schließt dann die <xref:System.Data.SqlClient.SqlDataReader>. Die <xref:System.Data.SqlClient.SqlConnection> wird automatisch geschlossen, am Ende der `using` Codeblock.  
+  
+ [!code-csharp[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.SqlClient.SqlException">[!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] hat beim Ausführen des Befehlstexts einen Fehler zurückgegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;bool&gt; ReadAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; ReadAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.ReadAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Die Abbruchanweisung.</param>
+        <summary>Eine asynchrone Version der <see cref="M:System.Data.SqlClient.SqlDataReader.Read" />, welche Fortschritte das <see cref="T:System.Data.SqlClient.SqlDataReader" /> auf den nächsten Datensatz.  
+  
+ Das Abbruchtoken kann verwendet werden, um anzufordern, dass der Vorgang abgebrochen wird, bevor das Timeout des Befehls abläuft. Ausnahmen werden über das zurückgegebene Taskobjekt gemeldet.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `behavior` Parameter <xref:System.Data.SqlClient.SqlCommand.ExecuteReaderAsync%2A> festgelegt ist, um `Default`, <xref:System.Data.SqlClient.SqlDataReader.ReadAsync%2A> liest die gesamte Zeile, bevor die Aufgabe zurückgegeben.  
+  
+ Weitere Informationen, einschließlich Codebeispielen, zur asynchronen Programmierung in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)], finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException"><see cref="M:System.Data.SqlClient.SqlDataReader.ReadAsync(System.Threading.CancellationToken)" /> wird vor dem Abschluss der Aufgabe mehrmals für dieselbe Instanz aufgerufen.  
+  
+ <see langword="Context Connection=true" /> ist in der Verbindungszeichenfolge angegeben.</exception>
+        <exception cref="T:System.Data.SqlClient.SqlException">[!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] hat beim Ausführen des Befehlstexts einen Fehler zurückgegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordsAffected">
+      <MemberSignature Language="C#" Value="public override int RecordsAffected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecordsAffected" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.RecordsAffected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen geändert, eingefügt oder gelöscht werden, durch die Ausführung der Transact-SQL-Anweisung ab.</summary>
+        <value>Die Anzahl der geänderten, eingefügten oder gelöschten Zeilen; 0, wenn keine Zeilen betroffen sind, oder bei der Anweisung ein Fehler aufgetreten ist, und -1 für SELECT-Anweisungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlDataReader.RecordsAffected%2A> Eigenschaft ist nicht festgelegt, bis alle Zeilen gelesen wurden, und Sie schließen die <xref:System.Data.SqlClient.SqlDataReader>.  
+  
+ Der Wert dieser Eigenschaft ist kumulativ. Angenommen, zwei Datensätze eingefügt werden, im Batchmodus ausgeführt, den Wert des `RecordsAffected` werden zwei.  
+  
+ <xref:System.Data.SqlClient.SqlDataReader.IsClosed%2A>und <xref:System.Data.SqlClient.SqlDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.SqlClient.SqlDataReader> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDataRecord.GetData">
+      <MemberSignature Language="C#" Value="System.Data.IDataReader IDataRecord.GetData (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDataReader System.Data.IDataRecord.GetData(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDataReader.System#Data#IDataRecord#GetData(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Ordnungszahl der Spalte.</param>
+        <summary>Gibt einen <see cref="T:System.Data.IDataReader" /> für die angegebene Spaltenordnungszahl zurück.</summary>
+        <returns>Die <see cref="T:System.Data.IDataReader" /> -Instanz für die angegebene Ordnungszahl der Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.SqlClient.SqlDataReader>-Instanz in eine <xref:System.Data.IDataRecord>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleFieldCount">
+      <MemberSignature Language="C#" Value="public override int VisibleFieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleFieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDataReader.VisibleFieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der nicht ausgeblendeten Felder im <see cref="T:System.Data.SqlClient.SqlDataReader" /> ab.</summary>
+        <value>Die Anzahl der nicht ausgeblendeten Felder.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird verwendet, um zu bestimmen, wie viele Felder in der <xref:System.Data.SqlClient.SqlDataReader> sichtbar sind. Eine SELECT-Anweisung auf einen Teil eines Primärschlüssels gibt beispielsweise die restlichen Teile des Schlüssels als ausgeblendete Felder zurück. Die ausgeblendeten Felder werden immer hinter den sichtbaren Feldern angefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

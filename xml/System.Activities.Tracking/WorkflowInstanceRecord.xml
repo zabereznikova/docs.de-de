@@ -1,0 +1,230 @@
+<Type Name="WorkflowInstanceRecord" FullName="System.Activities.Tracking.WorkflowInstanceRecord">
+  <TypeSignature Language="C#" Value="public class WorkflowInstanceRecord : System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowInstanceRecord extends System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.WorkflowInstanceRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die Daten, die von der Laufzeitnachverfolgungsinfrastruktur an einen Nachverfolgungsdienst gesendet werden, wenn sich der Zustand einer Workflowinstanz ändert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowInstanceRecord (System.Activities.Tracking.WorkflowInstanceRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Activities.Tracking.WorkflowInstanceRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceRecord.#ctor(System.Activities.Tracking.WorkflowInstanceRecord)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="record" Type="System.Activities.Tracking.WorkflowInstanceRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">Die Instanz des Workflowinstanzdatensatzes, die verwendet werden soll.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />-Klasse, und zwar anhand einer vorhandenen <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceRecord (Guid instanceId, string activityDefinitionId, string state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, string activityDefinitionId, string state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceRecord.#ctor(System.Guid,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="activityDefinitionId" Type="System.String" />
+        <Parameter Name="state" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die Instanz-ID der generierenden Workflowinstanz.</param>
+        <param name="activityDefinitionId">Der Anzeigename der Stammaktivität des Workflows.</param>
+        <param name="state">Der aktuelle Zustand des Workflows bei der Generierung des Workflows.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceRecord (Guid instanceId, long recordNumber, string activityDefinitionId, string state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, int64 recordNumber, string activityDefinitionId, string state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceRecord.#ctor(System.Guid,System.Int64,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="recordNumber" Type="System.Int64" />
+        <Parameter Name="activityDefinitionId" Type="System.String" />
+        <Parameter Name="state" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die Instanz-ID der generierenden Workflowinstanz.</param>
+        <param name="recordNumber">Eine Sequenz, die die Reihenfolge definiert, in der Nachverfolgungsereignisse generiert werden.</param>
+        <param name="activityDefinitionId">Der Anzeigename der Stammaktivität des Workflows.</param>
+        <param name="state">Der aktuelle Zustand des Workflows bei der Generierung des Workflows.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceRecord (Guid instanceId, string activityDefinitionId, string state, System.Activities.WorkflowIdentity workflowDefinitionIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, string activityDefinitionId, string state, class System.Activities.WorkflowIdentity workflowDefinitionIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceRecord.#ctor(System.Guid,System.String,System.String,System.Activities.WorkflowIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="activityDefinitionId" Type="System.String" />
+        <Parameter Name="state" Type="System.String" />
+        <Parameter Name="workflowDefinitionIdentity" Type="System.Activities.WorkflowIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die Instanz-ID der generierenden Workflowinstanz.</param>
+        <param name="activityDefinitionId">Der Anzeigename der Stammaktivität des Workflows.</param>
+        <param name="state">Der aktuelle Zustand des Workflows bei der Generierung des Workflows.</param>
+        <param name="workflowDefinitionIdentity">Informationen über die workflowidentität.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceRecord (Guid instanceId, long recordNumber, string activityDefinitionId, string state, System.Activities.WorkflowIdentity workflowDefinitionIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, int64 recordNumber, string activityDefinitionId, string state, class System.Activities.WorkflowIdentity workflowDefinitionIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceRecord.#ctor(System.Guid,System.Int64,System.String,System.String,System.Activities.WorkflowIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="recordNumber" Type="System.Int64" />
+        <Parameter Name="activityDefinitionId" Type="System.String" />
+        <Parameter Name="state" Type="System.String" />
+        <Parameter Name="workflowDefinitionIdentity" Type="System.Activities.WorkflowIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die Instanz-ID der generierenden Workflowinstanz.</param>
+        <param name="recordNumber">Eine Sequenz, die die Reihenfolge definiert, in der Nachverfolgungsereignisse generiert werden.</param>
+        <param name="activityDefinitionId">Der Anzeigename der Stammaktivität des Workflows.</param>
+        <param name="state">Der aktuelle Zustand des Workflows bei der Generierung des Workflows.</param>
+        <param name="workflowDefinitionIdentity">Informationen über die workflowidentität.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityDefinitionId">
+      <MemberSignature Language="C#" Value="public string ActivityDefinitionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActivityDefinitionId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.WorkflowInstanceRecord.ActivityDefinitionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Anzeigenamen der Stammaktivität des Workflows zurück, der diesen Datensatz generiert hat.</summary>
+        <value>Die Aktivitätsdefinitions-ID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Tracking.TrackingRecord Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Activities.Tracking.TrackingRecord Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceRecord.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingRecord</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine tiefe Kopie von <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />.</summary>
+        <returns>Eine Tiefenkopie von <see cref="T:System.Activities.Tracking.WorkflowInstanceRecord" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public string State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string State" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.WorkflowInstanceRecord.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der aktuelle Zustand des Workflows bei der Generierung des Workflows.</summary>
+        <value>Der Workflowszustand.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceRecord.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die die Daten des Nachverfolgungsdatensatzes enthält.</summary>
+        <returns>Die Nachverfolgungsdaten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinitionIdentity">
+      <MemberSignature Language="C#" Value="public System.Activities.WorkflowIdentity WorkflowDefinitionIdentity { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.WorkflowIdentity WorkflowDefinitionIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.WorkflowInstanceRecord.WorkflowDefinitionIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Informationen über die workflowidentität fest.</summary>
+        <value>Informationen über die workflowidentität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,164 @@
+<Type Name="RuleExecution" FullName="System.Workflow.Activities.Rules.RuleExecution">
+  <TypeSignature Language="C#" Value="public class RuleExecution" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuleExecution extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleExecution" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Speichert Zustandsinformationen, während die <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />-Klasse oder die <see cref="T:System.Workflow.Activities.Rules.RuleAction" />-Klasse ausgeführt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleExecution (System.Workflow.Activities.Rules.RuleValidation validation, object thisObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.Activities.Rules.RuleValidation validation, object thisObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleExecution.#ctor(System.Workflow.Activities.Rules.RuleValidation,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1720:AvoidTypeNamesInParameters", MessageId="1#")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+        <Parameter Name="thisObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="validation">Die <see cref="T:System.Workflow.Activities.Rules.RuleValidation" />, die sicherstellt, dass der Ausdruck ordnungsgemäß konfiguriert ist.</param>
+        <param name="thisObject">Das aktuelle Objekt, das ausgeführt werden soll.</param>
+        <summary>Initialisiert mit <see cref="T:System.Workflow.Activities.Rules.RuleExecution" /> und dem auszuführenden Objekt eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleValidation" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="validation" /> oder <paramref name="thisObject" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleExecution (System.Workflow.Activities.Rules.RuleValidation validation, object thisObject, System.Workflow.ComponentModel.ActivityExecutionContext activityExecutionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.Activities.Rules.RuleValidation validation, object thisObject, class System.Workflow.ComponentModel.ActivityExecutionContext activityExecutionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleExecution.#ctor(System.Workflow.Activities.Rules.RuleValidation,System.Object,System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1720:AvoidTypeNamesInParameters", MessageId="1#")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+        <Parameter Name="thisObject" Type="System.Object" />
+        <Parameter Name="activityExecutionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="validation">Die <see cref="T:System.Workflow.Activities.Rules.RuleValidation" />, die sicherstellt, dass der Ausdruck ordnungsgemäß konfiguriert ist.</param>
+        <param name="thisObject">Das aktuelle Objekt, das ausgeführt werden soll.</param>
+        <param name="activityExecutionContext"><see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> für die aktuelle Aktivität.</param>
+        <summary>Initialisiert mit <see cref="T:System.Workflow.Activities.Rules.RuleExecution" />, dem auszuführenden Objekt und <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" />-Klasse für die aktuelle Aktivität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity Activity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Activity Activity" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleExecution.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Workflow.ComponentModel.Activity" /> ab, in der die Regel ausgeführt wird.</summary>
+        <value>Die <see cref="T:System.Workflow.ComponentModel.Activity" />, in der die Regel ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityExecutionContext">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityExecutionContext ActivityExecutionContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.ActivityExecutionContext ActivityExecutionContext" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleExecution.ActivityExecutionContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> für die aktuelle Aktivität ab.</summary>
+        <value><see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> für die aktuelle Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Halted">
+      <MemberSignature Language="C#" Value="public bool Halted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Halted" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleExecution.Halted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Regelausführung beendet wurde, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Regelausführung beendet wurde; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisObject">
+      <MemberSignature Language="C#" Value="public object ThisObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ThisObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleExecution.ThisObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Objekt ab, das ausgeführt werden soll.</summary>
+        <value>Das auszuführende Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validation">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleValidation Validation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.Rules.RuleValidation Validation" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleExecution.Validation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Validierungsinstanz ab, damit der Ausdruck ausgeführt wird, oder legt die Instanz fest.</summary>
+        <value><see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> für den auszuführenden Ausdruck.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,101 @@
+<Type Name="FrameworkCompatibilityPreferences" FullName="System.Windows.FrameworkCompatibilityPreferences">
+  <TypeSignature Language="C#" Value="public static class FrameworkCompatibilityPreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed FrameworkCompatibilityPreferences extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FrameworkCompatibilityPreferences" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Eigenschaften, die angeben, wie sich eine Anwendung in Bezug auf WPF-Funktionen verhalten soll, die sich in der PresentationFramework-Assembly befinden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AreInactiveSelectionHighlightBrushKeysSupported">
+      <MemberSignature Language="C#" Value="public static bool AreInactiveSelectionHighlightBrushKeysSupported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AreInactiveSelectionHighlightBrushKeysSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Anwendung verwendet werden sollen die <see cref="P:System.Windows.SystemColors.InactiveSelectionHighlightBrush" /> und <see cref="P:System.Windows.SystemColors.InactiveSelectionHighlightTextBrush" /> Eigenschaften für die Farben inaktiver ausgewählter Elemente.</summary>
+        <value>
+          <see langword="true" />Wenn die Anwendung verwendet werden sollen die <see cref="P:System.Windows.SystemColors.InactiveSelectionHighlightBrush" /> und <see cref="P:System.Windows.SystemColors.InactiveSelectionHighlightTextBrush" /> Eigenschaften für die Farben inaktiver ausgewählter Elemente; andernfalls<see langword="false" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft abhängig ist, welche Version von WPF, die Ihre app aufgerichtet ist.  Wenn die app WPF 4.0 abzielt oder früher: der Standardwert ist `false`.  Wenn die app auf WPF 4.5 abzielt, ist die Standardeinstellung `true`.  Wenn Sie diese Eigenschaft verwenden, um das Verhalten von WPF ändern, müssen Sie früh in der app-Lebensdauer, z. B. im Konstruktor der Klasse, die von der Anwendung erbt, die den Wert der Eigenschaft ändern.  Nachdem der Wert gelesen wurde, können nicht Sie ihn erneut ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepTextBoxDisplaySynchronizedWithTextProperty">
+      <MemberSignature Language="C#" Value="public static bool KeepTextBoxDisplaySynchronizedWithTextProperty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool KeepTextBoxDisplaySynchronizedWithTextProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkCompatibilityPreferences.KeepTextBoxDisplaySynchronizedWithTextProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein datengebundenes <see cref="T:System.Windows.Controls.TextBox" /> sollte eine Zeichenfolge, die mit dem Wert der Quelle identisch ist Anzeigen der <see cref="P:System.Windows.Controls.TextBox.Text" /> Eigenschaft</summary>
+        <value>
+          <see langword="true" />Wenn ein datengebundenes <see cref="T:System.Windows.Controls.TextBox" /> sollte eine Zeichenfolge, die mit dem Wert der Quelle identisch ist Anzeigen der <see cref="P:System.Windows.Controls.TextBox.Text" /> Eigenschaft ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft abhängig ist, welche Version von WPF, die Ihre app aufgerichtet ist.  Wenn die app WPF 4.0 abzielt oder früher: der Standardwert ist `false`.  Wenn die app auf WPF 4.5 abzielt, ist die Standardeinstellung `true`.  Wenn Sie diese Eigenschaft verwenden, um das Verhalten von WPF ändern, müssen Sie früh in der app-Lebensdauer, z. B. im Konstruktor der Klasse, die von der Anwendung erbt, die den Wert der Eigenschaft ändern.  Nachdem der Wert gelesen wurde, können nicht Sie ihn erneut ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldThrowOnCopyOrCutFailure">
+      <MemberSignature Language="C#" Value="public static bool ShouldThrowOnCopyOrCutFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool ShouldThrowOnCopyOrCutFailure" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkCompatibilityPreferences.ShouldThrowOnCopyOrCutFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein fehlerhafter Kopier- oder Ausschneidvorgang in einer <see cref="T:System.Windows.Controls.Primitives.TextBoxBase" />-Instanz zu einer <see cref="T:System.Runtime.InteropServices.ExternalException" /> führt, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn ein fehlerhafter Kopier- oder Ausschneidvorgang in einer <see cref="T:System.Windows.Controls.Primitives.TextBoxBase" />-Instanz zu einer <see cref="T:System.Runtime.InteropServices.ExternalException" /> führt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Zwischenablagevorgang wie z. B. ein Fehler auftritt, mit einer **HRESULT 0x800401D0 (CLIPBRD_E_CANT_OPEN)** Fehler, eine entsprechende <xref:System.Runtime.InteropServices.ExternalException> ausgelöst wird (dies einen Typ von ExternalException ist).  
+  
+ Da die Win32 `OpenClipboard` API Handlungen Global gut geschriebene Anwendungen sollten rufen Sie die entsprechende `CloseClipboard` API, sobald sie ihre Zwischenablagevorgänge abgeschlossen sind. Andere Anwendungen, die in der gleichen Sitzung ausgeführt werden, andernfalls nicht auf Zwischenablagefunktionen zugreifen werden.  
+  
+ Solche ein DOS-Zugriff auf die Zwischenablage wird in WPF normalerweise stillschweigend ignoriert. Allerdings Anwendungen können wahlweise empfangen ein `ExternalException` bei einem Fehler durch Festlegen der <xref:System.Windows.FrameworkCompatibilityPreferences.ShouldThrowOnCopyOrCutFailure%2A> flag `true`. Die Entscheidung zum Empfangen von Ausnahmen auch erfordert jedoch die zu behandelnde Anwendung <xref:System.Windows.Input.ApplicationCommands.Cut%2A> und <xref:System.Windows.Input.ApplicationCommands.Copy%2A> RoutedUICommands über eine <xref:System.Windows.Input.CommandBinding>, und wenden Sie dann, dass die Bindung für alle TextBoxBase-Steuerelemente (<xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox>) in der die Anwendung. Die Anwendung sollte sicherstellen, dass sie ExternalExceptions entstandene kopieren und Ausschneiden Vorgänge in der CommandBinding ausgeführt Handler behandelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

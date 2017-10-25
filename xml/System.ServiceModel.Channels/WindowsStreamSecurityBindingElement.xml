@@ -1,0 +1,584 @@
+<Type Name="WindowsStreamSecurityBindingElement" FullName="System.ServiceModel.Channels.WindowsStreamSecurityBindingElement">
+  <TypeSignature Language="C#" Value="public class WindowsStreamSecurityBindingElement : System.ServiceModel.Channels.BindingElement, System.ServiceModel.Channels.ISecurityCapabilities, System.ServiceModel.Channels.ITransportTokenAssertionProvider, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowsStreamSecurityBindingElement extends System.ServiceModel.Channels.BindingElement implements class System.ServiceModel.Channels.ISecurityCapabilities, class System.ServiceModel.Channels.ITransportTokenAssertionProvider, class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.StreamUpgradeBindingElement</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="xamarinandroid-7.1">System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.ISecurityCapabilities</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.ITransportTokenAssertionProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt das Bindungselement dar, das verwendet wird, um Einstellungen für Windows-Streamsicherheit anzugeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Transporte, die ein streamorientiertes Protokoll wie TCP und Named Pipes verwenden, unterstützen streambasierte Transportupgrades. Vor allem [!INCLUDE[indigo2](~/includes/indigo2-md.md)] bietet Sicherheitsupgrades. Die Konfiguration dieser Transportsichersicherheit wird durch diese Klasse sowie durch das <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> gekapselt, die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können. Außerdem kann ein Drittanbieter sein eigenes benutzerdefiniertes `StreamSecurityBindingElement` schreiben. Diese Bindungselemente erweitern die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>-Klasse, die zum Erstellen der Client- und Server-Streamupgradeanbieter aufgerufen wird.  
+  
+ Eine benutzerdefinierte Bindung enthält eine Auflistung von Bindungselementen, die in einer bestimmten Reihenfolge angeordnet sind: Das Element, das das erste Element des Bindungsstapels darstellt, wird zuerst hinzugefügt, das darauf folgende Element wird als zweites hinzugefügt usw.  
+  
+### <a name="to-add-this-class-to-a-binding"></a>So fügen Sie diese Klasse einer Bindung hinzu  
+  
+1.  Erstellen Sie eine <xref:System.ServiceModel.Channels.BindingElementCollection>.  
+  
+2.  Erstellen Sie erforderliche, benutzerdefinierte Bindungselemente, die sich über diesem Bindungselement im Bindungsstapel befinden, wie zum Beispiel das optionale <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> und <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
+  
+3.  Fügen Sie die erstellten Elemente in der zuvor beschriebenen Reihenfolge zu <xref:System.ServiceModel.Channels.BindingElementCollection> hinzu, indem Sie die <xref:System.ServiceModel.Channels.BindingElementCollection.InsertItem%2A>-Methode verwenden.  
+  
+4.  Erstellen Sie eine Instanz von <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>, und fügen Sie sie zur Auflistung hinzu.  
+  
+5.  Fügen Sie weitere benutzerdefinierte Bindungselemente zur Auflistung hinzu, wie zum Beispiel <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsStreamSecurityBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsStreamSecurityBindingElement (System.ServiceModel.Channels.WindowsStreamSecurityBindingElement other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.WindowsStreamSecurityBindingElement other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.#ctor(System.ServiceModel.Channels.WindowsStreamSecurityBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.WindowsStreamSecurityBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement" />-Klasse aus einer bestehenden Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ der Kanalfactory.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />-Member mit Beschreibungen von Bindungen, Verhaltensweisen und Verträgen sowie weiteren Informationen, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt eine Kanalfactory, mit der ein Kanal erstellt werden kann.</summary>
+        <returns>Gibt eine Kanalfactory des angegebenen Typs zurück. Diese Methode fügt diese Klasseninstanz den <see cref="P:System.ServiceModel.Channels.BindingContext.BindingParameters" /> hinzu und delegiert <see cref="M:System.ServiceModel.Channels.BindingContext.BuildInnerChannelFactory``1" /> zur Buildmethode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Kanalfactory, die zum Erstellen eines Kanals verwendet wird, der ausgehende Nachrichten für diese Bindung verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ des Kanallisteners.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />-Member mit Beschreibungen von Bindungen, Verhaltensweisen und Verträgen sowie weiteren Informationen, die zum Erstellen des Kanallisteners erforderlich sind.</param>
+        <summary>Erstellt einen Kanallistener des angegebenen Typs.</summary>
+        <returns>Gibt einen Kanallistener des angegebenen Typs zurück. Diese Methode fügt diese Klasseninstanz den <see cref="P:System.ServiceModel.Channels.BindingContext.BindingParameters" /> hinzu und delegiert <see cref="M:System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener``1" /> zur Buildmethode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt einen Kanallistener, der zum Erstellen eines Kanals verwendet wird, der eingehende Nachrichten für diese Bindung verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildClientStreamUpgradeProvider">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.StreamUpgradeProvider BuildClientStreamUpgradeProvider (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.StreamUpgradeProvider BuildClientStreamUpgradeProvider(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.BuildClientStreamUpgradeProvider(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.StreamUpgradeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den gesamten Kanalstapel.</param>
+        <summary>Erstellt basierend auf dem bereitgestellten Kanalkontext eine Instanz auf dem Client des <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />.</summary>
+        <returns>Eine Instanz des <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die Clientkanalfactory erstellt wird, und stellt eine benutzerdefinierte Implementierung der abstrakten <xref:System.ServiceModel.Channels.StreamUpgradeProvider> Klasse bereit.  
+  
+ Der <xref:System.ServiceModel.Channels.BindingContext>-Parameter aktiviert das Reagieren auf andere Elemente im Kanalstapel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildServerStreamUpgradeProvider">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.StreamUpgradeProvider BuildServerStreamUpgradeProvider (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.StreamUpgradeProvider BuildServerStreamUpgradeProvider(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.BuildServerStreamUpgradeProvider(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.StreamUpgradeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den gesamten Kanalstapel.</param>
+        <summary>Erstellt basierend auf dem bereitgestellten Kanalkontext eine Instanz auf dem Server des <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />.</summary>
+        <returns>Eine Instanz des <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn der Provider-Kanallistener erstellt wird, und stellt eine benutzerdefinierte Implementierung der abstrakten <xref:System.ServiceModel.Channels.StreamUpgradeProvider> Klasse bereit.  
+  
+ Der <xref:System.ServiceModel.Channels.BindingContext>-Parameter aktiviert das Reagieren auf andere Elemente im Kanalstapel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der überprüft werden soll.</typeparam>
+        <param name="context">Der Bindungskontext.</param>
+        <summary>Bestimmt, ob eine Kanalfactory des angegebenen Typs erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Kanalfactory erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kanalfactory wird zum Erstellen eines Kanals verwendet, der ausgehende Nachrichten für diese Bindung verarbeitet. Diese Methode delegiert an die <xref:System.ServiceModel.Channels.BindingContext.CanBuildInnerChannelFactory%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der überprüft werden soll.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Kanal.</param>
+        <summary>Bestimmt, ob ein Kanallistener des angegebenen Typs erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Kanallistener erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Kanallistener wird zum Erstellen eines Kanals verwendet, der eingehende Nachrichten für diese Bindung verarbeitet. Diese Methode delegiert an die <xref:System.ServiceModel.Channels.BindingContext.CanBuildInnerChannelListener%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Bindungselement aus dieser Instanz der Klasse.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.Channels.BindingElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das Objekt, das abgerufen werden soll.</typeparam>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Ruft ein angegebenes Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> ab.</summary>
+        <returns>Das angegebene Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> oder <see langword="null" />, wenn das Objekt nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode empfängt einen Bindungskontext als Eingabeparameter. Dieser stellt den Stapel von Bindungselementen dar. Mit dieser Methode werden die angegebenen Objekte direkt abgerufen, die Anfrage wird an das nächstniedrigere Bindungselement im Stapel delegiert, oder beide Vorgänge werden kombiniert. Beim Delegieren der Anfrage kann der Kontext geändert werden. Dieser Prozess kann im Rahmen einer Delegierung von allen Bindungselementen im Stapel wiederholt werden, bis das Ende des Stapels erreicht ist. Das zurückgegebene Objekt stellt normalerweise eine Auflistung von Eigenschaften dar.  
+  
+ Wenn der `T`-Typ <xref:System.ServiceModel.Channels.ISecurityCapabilities> ist, wird eine Instanz dieser Klasse mit <xref:System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientAuthentication%2A> zurückgegeben,  
+  
+ <xref:System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientWindowsIdentity%2A> und <xref:System.ServiceModel.Channels.ISecurityCapabilities.SupportsServerAuthentication%2A> alle auf `true` festgelegt, und <xref:System.ServiceModel.Channels.ISecurityCapabilities.SupportedRequestProtectionLevel%2A> und <xref:System.ServiceModel.Channels.ISecurityCapabilities.SupportedResponseProtectionLevel%2A> auf den aktuellen Wert in dieser Bindung eingestellt.  
+  
+ Wenn der Typ von `T` <xref:System.ServiceModel.Security.IdentityVerifier> lautet, wird eine Standardinstanz dieser Klasse zurückgegeben.  
+  
+ Diese Methode wird sowohl von Bindungselementen als auch von Laufzeitobjekten wie <xref:System.ServiceModel.Channels.IChannelFactory>, <xref:System.ServiceModel.Channels.IChannelListener> und <xref:System.ServiceModel.Channels.IChannel> implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransportTokenAssertion">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetTransportTokenAssertion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlElement GetTransportTokenAssertion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.GetTransportTokenAssertion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Xml.XmlElement" /> ab, das das Transporttoken darstellt, das in der Sicherheitsbindung verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlElement" />, das das Transporttoken darstellt, das in der von dieser Bindung erzeugten Richtlinie verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf diese Weise wird die WDSL für den zugeordneten Dienst generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schutzebene ab oder legt diese fest.</summary>
+        <value>Die <see cref="T:System.Net.Security.ProtectionLevel" />. Der Standardwert ist <see cref="F:System.Net.Security.ProtectionLevel.EncryptAndSign" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.ISecurityCapabilities.SupportedRequestProtectionLevel">
+      <MemberSignature Language="C#" Value="System.Net.Security.ProtectionLevel System.ServiceModel.Channels.ISecurityCapabilities.SupportedRequestProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel System.ServiceModel.Channels.ISecurityCapabilities.SupportedRequestProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.System#ServiceModel#Channels#ISecurityCapabilities#SupportedRequestProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.ISecurityCapabilities.SupportedResponseProtectionLevel">
+      <MemberSignature Language="C#" Value="System.Net.Security.ProtectionLevel System.ServiceModel.Channels.ISecurityCapabilities.SupportedResponseProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel System.ServiceModel.Channels.ISecurityCapabilities.SupportedResponseProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.System#ServiceModel#Channels#ISecurityCapabilities#SupportedResponseProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientAuthentication">
+      <MemberSignature Language="C#" Value="bool System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.System#ServiceModel#Channels#ISecurityCapabilities#SupportsClientAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientWindowsIdentity">
+      <MemberSignature Language="C#" Value="bool System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientWindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientWindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.System#ServiceModel#Channels#ISecurityCapabilities#SupportsClientWindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.ISecurityCapabilities.SupportsServerAuthentication">
+      <MemberSignature Language="C#" Value="bool System.ServiceModel.Channels.ISecurityCapabilities.SupportsServerAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ServiceModel.Channels.ISecurityCapabilities.SupportsServerAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.System#ServiceModel#Channels#ISecurityCapabilities#SupportsServerAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.MetadataExporter" />, den Sie zum Ändern des Exportvorgangs verwenden können.</param>
+        <param name="context">Der <see cref="T:System.ServiceModel.Description.PolicyConversionContext" />, den Sie zum Einfügen einer benutzerdefinierten Richtlinienassertion verwenden können.</param>
+        <summary>Exportiert eine benutzerdefinierte Richtlinienassertion über Windows-Streamsicherheit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt bindungsbezogene Anweisungen in die WSDL-Informationen, die von einem bestimmten Vertrag ausgegeben werden, und sie wird von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verwendet, um Clients mitzuteilen, dass dieses benutzerdefinierte Bindungselement im Bindungsstapel vorhanden ist.  
+  
+ Diese Methode verwendet zwei Parameter: Das <xref:System.ServiceModel.Description.MetadataExporter>-Objekt und das <xref:System.ServiceModel.Description.PolicyConversionContext>-Objekt. Verwenden Sie die Methoden <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> und <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A>, um Auflistungen von Richtlinienassertionen aufzurufen, die bereits für verschiedene Bereiche exportiert wurden. Verwenden Sie anschließend diese Methode, um eigene Richtlinienassertionen zur entsprechenden Auflistung hinzuzufügen.  
+  
+ Die <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A>-Eigenschaft gibt die <xref:System.ServiceModel.Description.ContractDescription> für den Endpunkt aus, der exportiert wird. Dies ermöglicht dieser Methode, den richtigen Bereich für die exportierten Richtlinienassertionen festzulegen. Sicherheitsattribute im Code können beispielsweise der <xref:System.ServiceModel.Description.ContractDescription> Verhalten hinzufügen, die angeben, wo Richtlinienassertionen hinzugefügt werden sollen.  
+  
+ Nachdem benutzerdefinierte Richtlinienassertionen an die WSDL-Informationen angehängt werden, können Clients die benutzerdefinierten Bindungsassertionen mithilfe der <xref:System.ServiceModel.Description.IPolicyImportExtension>-Schnittstelle erkennen und importieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,135 @@
+<Type Name="IWebProxyScript" FullName="System.Net.IWebProxyScript">
+  <TypeSignature Language="C#" Value="public interface IWebProxyScript" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebProxyScript" />
+  <TypeSignature Language="DocId" Value="T:System.Net.IWebProxyScript" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebProxy</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisschnittstelle zum Laden und Ausführen von Skripts für die automatische Proxyerkennung bereit.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IWebProxyScript.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt ein Skript.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public bool Load (Uri scriptLocation, string script, Type helperType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Load(class System.Uri scriptLocation, string script, class System.Type helperType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IWebProxyScript.Load(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptLocation" Type="System.Uri" />
+        <Parameter Name="script" Type="System.String" />
+        <Parameter Name="helperType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="scriptLocation">Nur intern.</param>
+        <param name="script">Nur intern.</param>
+        <param name="helperType">Nur intern.</param>
+        <summary>Lädt ein Skript.</summary>
+        <returns>Ein <see cref="T:System.Boolean" /> , der angibt, ob das Skript erfolgreich geladen wurde.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public string Run (string url, string host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Run(string url, string host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IWebProxyScript.Run(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="host" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Nur intern.</param>
+        <param name="host">Nur intern.</param>
+        <summary>Führt ein Skript.</summary>
+        <returns>Ein <see cref="T:System.String" />.  
+  
+ Ein internes Wert zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Net.HttpWebRequest> Objekt ausgeführt wird, müssen sie möglicherweise führen Sie das WPAD (Web Proxy Automatische Erkennung)-Protokoll, um festzustellen, ob ein Proxy für die Ziel-URL erreichen erforderlich ist. Während dieses Vorgangs im System downloads kompiliert das PAC (Proxy Auto-Configuration)-Skript im Arbeitsspeicher und versucht, die Funktion FindProxyURL gemäß der Spezifikation PAC auszuführen.  
+  
+ Dabei erstellt das System eine interne Anwendungsdomäne innerhalb der Anwendung, die dem ausgeführt wird, mit Mimimal Berechtigungen aus, und am wichtigsten ist, er gewährt die UI-Berechtigung für dieses neue Anwendungsdomäne nicht zu. Die Auswertung eines Proxys und deren Ausführung der FindProxyURL Javascript-Funktion erfolgt im Kontext dieser neuen Anwendungsdomäne und während dieses Vorgangs möglicherweise das System mehrere Hilfsfunktionen gemäß der Spezifikation PAC ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

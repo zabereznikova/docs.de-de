@@ -1,0 +1,99 @@
+<Type Name="ProxyWebPartManagerDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner">
+  <TypeSignature Language="C#" Value="public class ProxyWebPartManagerDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProxyWebPartManagerDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt minimale entwurfszeitunterstützung für <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPartManager" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner> Klasse ist identisch mit der <xref:System.Web.UI.Design.WebControls.WebParts.WebPartManagerDesigner> -Klasse und stellt zur Entwurfszeit Unterstützung für <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager> Steuerelemente. Offenbar auf der Entwurfsoberfläche als einfaches graues Feld zeigt den Namen der Klasse und die ID der spezifischen <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager> Steuerelement. Sie können die Darstellung eines benutzerdefinierten ändern <xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager> Steuerelement durch Überschreiben der <xref:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner.GetDesignTimeHtml%2A> Methode in die gleiche Weise wie mit jedem anderen Standard- <xref:System.Web.UI.Design.ControlDesigner>. Die <xref:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner.UsePreviewControl%2A> Eigenschaft wird überschrieben, um stets `true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProxyWebPartManagerDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine leere Zeichenfolge (""), was bedeutet, dass die visuelle entwurfsumgebung an Standardeinstellung gerendert zurückgesetzt werden soll.</summary>
+        <returns>Ein leerer <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPartManager" /> dem Designer zugeordnete Steuerelement.</param>
+        <summary>Bindet den Designer an die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPartManager" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WebParts.ProxyWebPartManagerDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Designer zum Generieren des Entwurfszeitmarkups anstelle des dem Designer tatsächlich zugeordneten Steuerelements eine temporäre Kopie verwenden soll.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

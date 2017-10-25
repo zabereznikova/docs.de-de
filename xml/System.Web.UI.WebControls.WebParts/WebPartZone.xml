@@ -1,0 +1,205 @@
+<Type Name="WebPartZone" FullName="System.Web.UI.WebControls.WebParts.WebPartZone">
+  <TypeSignature Language="C#" Value="public class WebPartZone : System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartZone extends System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPartZoneBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.WebPartZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als primäres Steuerelement im Webparts-Steuerelementsatz zum Hosten von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />-Steuerelementen auf einer Webseite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Webparts-Funktion ist eine Zone einen definierten Bereich auf einer Webseite, die Webparts-Steuerelemente enthält. Hauptfunktionen einer Zone sind, um das Layout der Steuerelemente darin enthaltenen und eine gemeinsame Benutzeroberfläche (UI) für diese Steuerelemente bereitstellen. Allgemeine Informationen zu Zonen und wie sie in einer Webparts-Anwendungen verwendet werden, finden Sie in der Referenzdokumentation für die Basis <xref:System.Web.UI.WebControls.WebParts.WebZone> und <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Klassen und im Thema [Web Parts Control Set Overview](http://msdn.microsoft.com/library/ff0149e4-695a-401a-8cda-53df6d7d2668).  
+  
+ Die Funktion der Inhalte der <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement enthalten ist, <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente, die die Benutzeroberfläche des Webparts hauptanwendungen bilden. Ein <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement kann im Format die Persistenz von deklariert werden, auf einer Webseite, da Entwickler, die für die Verwendung als Vorlage und zum Hinzufügen von anderen Serversteuerelementen innerhalb der `<asp:webpartzone>` Element. Jeder Typ von Serversteuerelement, wenn hinzugefügt eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zone, kann ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zur Laufzeit. Dies gilt unabhängig davon, ob das hinzugefügte Steuerelement ist ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, ein Benutzersteuerelement, ein benutzerdefiniertes Steuerelement oder ein ASP.NET-Steuerelement. Weitere Informationen finden Sie im Thema für die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Klasse.  
+  
+ Außer mit <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement bietet auch eine einheitliche Benutzeroberfläche für die Steuerelemente, die es enthält. Diese allgemeine Benutzeroberfläche, die zusammen als Chrome bezeichnet besteht aus peripheren Benutzeroberflächenelemente auf alle Steuerelemente, z. B. Rahmen, Titel, Header und Footer, Formateigenschaften und Verben (UI-Aktionen, die ein Benutzer für ein Steuerelement ausführen, z. B. Schließen oder minimieren kann).  
+  
+> [!NOTE]
+>  Internet Explorer kann die Höhe des Rendern einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> oder der darin enthaltenen Steuerelemente in der erwarteten Weise, abhängig von der Ausrichtung der Zone. Weitere Informationen finden Sie in der Dokumentation für die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.LayoutOrientation%2A> oder <xref:System.Web.UI.WebControls.WebParts.WebPart.Height%2A> Eigenschaften.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Klasse leitet die meisten des Verhaltens von der Basisklasse <xref:System.Web.UI.WebControls.WebParts.WebZone> und <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Klassen; es nur einen eindeutigen Elementnamen, fügt die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> Eigenschaft. Diese Eigenschaft verweist auf ein <xref:System.Web.UI.ITemplate> -Objekt, das eine Vorlage, die Seite "Entwickler die Steuerelemente in einer Zone mit statisch definieren können, ist eine `<zonetemplate>` Element im deklarativen Markup der ASPX-Seite.  
+  
+## <a name="accessibility"></a>Barrierefreiheit  
+ Das Markup gerendert wird, wird standardmäßig für dieses Steuerelement kann nicht Accessibility Standards wie die Web Content Accessibility Guidelines 1.0 (WCAG) Priorität 1-Richtlinien entsprechen. Ausführliche Informationen zu Accessibility-Unterstützung für das genannte Steuerelement finden Sie unter [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement im Webparts-Seite. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ Der erste Teil des Beispiels wird gezeigt, eine benutzerdefinierte Klasse, die von erben die <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Klasse, und dass zwei der grundlegenden Zoneneigenschaften im Konstruktor festlegt.  
+  
+ [!code-csharp[WebParts_WebPartZone_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/mywebpartzone.cs#3)]
+ [!code-vb[WebParts_WebPartZone_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/mywebpartzone.vb#3)]  
+  
+ Der zweite Teil des Beispiels zeigt eine Seite mit den benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement. Beachten Sie, dass die Seite eine spezielle erfordert `Register` -Direktive am oberen Rand der Seite auf die Assembly verweisen, die die benutzerdefinierte Zone enthält. Die Seite enthält außerdem ein `<asp:webpartmanager>` -Element, das auf alle Webparts-Seite erforderlich ist. Die `<cc1:MyWebPartZone>` -Element, das das benutzerdefinierte stellt <xref:System.Web.UI.WebControls.WebParts.WebPartZone> steuern, enthält einen standardmäßigen ASP.NET <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Da es enthalten ist ein <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone, die <xref:System.Web.UI.WebControls.Calendar> Steuerelement wird mit umschlossen werden eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement zur Laufzeit, wodurch es als fungieren kann eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_WebPartZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/webpartzonecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/webpartzonevb.aspx#1)]  
+  
+ Überprüfen Sie das deklarative Markup für das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement. Beachten Sie, dass Sie verschiedene Eigenschaften der Zonenebene im Markup festlegen können, wie im folgenden Codebeispiel gezeigt.  
+  
+> [!NOTE]
+>  Es ist sehr wichtig zu beachten die Verwendung der `<zonetemplate>` Element. Dieses Element, wie beschrieben im Abschnitt "Hinweise" ist erforderlich, in einem <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone aus, um die statische umschließen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die auf einer Seite deklariert werden.  
+  
+ [!code-aspx-csharp[WebParts_WebPartZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/webpartzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_WebPartZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/webpartzonevb.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.%23ctor%2A> Methode ist ein Standardkonstruktor und keine Werte fest. Abgeleitete Klassen können jedoch den Konstruktor verwenden, Basis Zoneneigenschaften, zum Erstellen von Standardverhaltensmustern und Darstellung für ein Steuerelement benutzerdefinierte Zone festgelegt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines Konstruktors in einer benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Klasse, um verschiedene Basiseigenschaften für die Zone festzulegen. Dieser Ansatz ist möglicherweise nützlich, wenn Sie, erstellen eine benutzerdefinierten möchten <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement, das bestimmte Verhaltensweisen und Darstellung hat. Der vollständige Code für das Beispiel, einschließlich der benutzerdefinierten Klasse und eine ASPX-Seite zum Hosten des Steuerelements befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_WebPartZone_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/mywebpartzone.cs#3)]
+ [!code-vb[WebParts_WebPartZone_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/mywebpartzone.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitialWebParts">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.WebParts.WebPartCollection GetInitialWebParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPartCollection GetInitialWebParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die abstrakte Basisklasse-Methode und ruft den anfänglichen Satz von statischen <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> in der Vorlage der Zone enthaltenen Steuerelemente.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartCollection" /> , die alle enthält die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder andere Serversteuerelemente, die in der Vorlage der Zone enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts%2A> Methode stellt eine Implementierung der abstrakten Basisklasse <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.GetInitialWebParts%2A> Methode. Die Basismethode stellt keine Implementierung bereit, aber die Methode deklariert, sodass abgeleitete Klassen anpassen können, wie Benutzer erhalten den anfänglichen Satz von Steuerelementen, die gehören in einer Zone ohne personalisierungsänderungen berücksichtigt.  
+  
+ Für jedes Steuerelement finden in der Zone der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateWebPart%2A> -Methode aufgerufen wird. Wenn ein Steuerelement aus direkt erbt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, einfach der Zone hinzugefügt <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebParts%2A> Auflistung (und zur Auflistung der ähnlich wie die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement). Wenn ein Steuerelement nicht direkt von erbt <xref:System.Web.UI.WebControls.WebParts.WebPart>, Webparts-Steuerelementsatzes dient als Wrapper für das Steuerelement mit einem <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Objekt, das das Steuerelement wie Verhalten aktiviert eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zur Laufzeit.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Klasse implementiert die Basismethode wird durch Zurückgeben von den Satz von Steuerelementen (sofern vorhanden), die in einer Gruppe von statisch deklariert werden `<zonetemplate>` Tags im Markup einer Webparts-Seite. Wenn ein <xref:System.Web.UI.WebControls.PlaceHolder> Steuerelement ist in einer Zone deklariert, die untergeordneten Steuerelemente des Steuerelements werden hinzugefügt, anstatt das Steuerelement selbst. Diese Implementierung ermöglicht Ihnen die Erstellung, z. B. eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> auf einer Masterseite zone, und deklarieren Sie einzelne <xref:System.Web.UI.WebControls.WebParts.WebPart> oder Serversteuerelemente in einer Inhaltsseite. Wenn Sie deklarieren <xref:System.Web.UI.WebControls.Literal> Steuerelemente in eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone, werden diese ignoriert.  
+  
+> [!NOTE]
+>  Die ursprüngliche Auflistung der Steuerelemente, die zurückgegeben werden, indem Sie die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts%2A> Methode ist möglicherweise andere, von der tatsächlichen Laufzeit-Auflistung der Steuerelemente in einer Zone, nachdem Personalisierung stattgefunden hat. Nehmen wir beispielsweise an, Sie haben eine Webseite mit zwei <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelemente und die erste Vorlage enthält Benutzersteuerelement mit dem Namen `User1` , statisch deklariert ist innerhalb der `<zonetemplate>` Tags. Wenn ein Benutzer auf der Seite und zieht lädt `User1` in die zweite Zone, klicken Sie dann `User1` ist immer noch Teil der Auflistung, die durch den Aufruf zurückgegeben wird die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts%2A> Methode für die erste Zone, da es in dieser Zone deklariert ist. Aber zur Laufzeit Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement lädt die Personalisierungsdaten `User1` tatsächlich in der zweiten Zone, in denen der Benutzer gezogen wird es, angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZone.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Überschreibt die Basismethode, um anzugeben, dass die Zone wurde erfolgreich registriert wurde die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ZoneTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ZoneTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateInstance(System.Web.UI.TemplateInstance.Single)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Verweis auf ein <see cref="T:System.Web.UI.ITemplate" /> Instanz, die die Steuerelemente enthält, die im Markup einer Webseite deklariert.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" /> , enthält die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in einer Zone.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> Eigenschaft bezieht sich auf eine <xref:System.Web.UI.ITemplate> -Instanzen innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement. Die Vorlage enthält statische Serversteuerelemente, die Sie Sie in deklarieren können einem <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zu steuern, einschließlich <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, Benutzersteuerelemente, benutzerdefinierte Steuerelemente und ASP.NET-Steuerelementen.  
+  
+ Beim Hinzufügen von statischen <xref:System.Web.UI.WebControls.WebParts.WebPart> oder andere Serversteuerelemente zu einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> im deklarativen Markup einer Webseite, müssen Sie die Tags für die Steuerelemente in ein paar platzieren `<zonetemplate>` Tags. Wenn Sie nicht die Steuerelemente in deklarieren `<zonetemplate>` Tags, eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> Eigenschaft im deklarativen Markup einer Webparts-Seite. Der vollständige Code für das Beispiel, z. B. eine benutzerdefinierte Klasse und eine ASPX-Seite zum Hosten des Steuerelements befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Übersichtsthema.  
+  
+ Beachten Sie, dass in das Markup für die <xref:System.Web.UI.WebControls.WebParts.WebPartZone> steuern, gibt es eine `<zonetemplate>` -Element, das einen Verweis auf das Kalender-Steuerelement enthält. Mussten Sie zum Hinzufügen zusätzlicher <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente oder andere Serversteuerelemente zu der Zone, Sie können auch hinzufügen in der `<zonetemplate>` Tags.  
+  
+ [!code-aspx-csharp[WebParts_WebPartZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/webpartzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_WebPartZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/webpartzonevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Registrierung der <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in der Zone ist bereits abgeschlossen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

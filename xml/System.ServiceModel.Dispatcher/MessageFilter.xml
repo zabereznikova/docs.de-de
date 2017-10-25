@@ -1,0 +1,200 @@
+<Type Name="MessageFilter" FullName="System.ServiceModel.Dispatcher.MessageFilter">
+  <TypeSignature Language="C#" Value="public abstract class MessageFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.MessageFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.KnownType(typeof(System.ServiceModel.Dispatcher.MatchNoneMessageFilter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.KnownType(typeof(System.ServiceModel.Dispatcher.ActionMessageFilter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.KnownType(typeof(System.ServiceModel.Dispatcher.MatchAllMessageFilter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.KnownType(typeof(System.ServiceModel.Dispatcher.XPathMessageFilter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <see langword="abstract" />-Basisklasse für verschiedene Klassen von Filtern, die verwendet werden, um Nachrichten abzufragen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Dispatcher.MessageFilter> ist eine `abstract`-Klasse, die Entwickler implementieren, um die Kriterien für das Prüfen von Nachrichten anzugeben. In der Regel werden Filter durch eine Endpunktanwendung verwendet, um festzulegen, was mit einer Nachricht auf der Basis einer Prüfung eines bestimmten Teils der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
+  
+ Filter werden in einer Filtertabelle gespeichert, die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> implementiert. Jeder Filter in der Tabelle wird angegebenen Filterdaten zugeordnet, die verwendet werden können, um die Aktionen festzulegen, die vorgenommen werden, wenn eine Nachricht mit dem Filter übereinstimmt. Mit den <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A>-Methoden wird ermittelt, ob eine Nachricht zu einem Filter passt.  
+  
+ Die von einem Filter verwendeten Kriterien können nach der Konstruktion des Filters nicht mehr geändert werden, da die Filtertabellen keine Möglichkeit haben, eine Änderung zu erkennen. Die einzige Möglichkeit, die Kriterien eines Filters zu ändern, besteht darin, einen neuen Filter zu konstruieren und den vorhandenen Filter zu löschen.  
+  
+ Die folgenden Klassen implementieren die `abstract`<xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse:  
+  
+-   <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> verwendet einen XPath 1.0-Ausdruck, um die Kriterien für eine Übereinstimmung anzugeben.  
+  
+-   <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> liefert eine Übereinstimmung mit allen Nachrichten.  
+  
+-   <xref:System.ServiceModel.Dispatcher.MatchNoneMessageFilter> stimmt mit keiner der Nachrichten überein.  
+  
+-   <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> testet, ob die Aktion einer Nachricht einem angegebenen Satz von Aktionen entspricht.  
+  
+-   <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> testet, ob eine Nachricht eine Übereinstimmung mit einer angegebenen Endpunktadresse aufweist.  
+  
+ <xref:System.ServiceModel.Channels.ChannelListenerBase%601> ist eine `abstract`-Basisklasse, die Sie verwenden können, um Listener ohne Warteschlagen zu schreiben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Aufruf in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor ist geschützt, sodass nur Filter, die von <xref:System.ServiceModel.Dispatcher.MessageFilter> abgeleitet werden, instanziiert werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterTable&lt;FilterData&gt;">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt; CreateFilterTable&lt;FilterData&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!!FilterData&gt; CreateFilterTable&lt;FilterData&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilter.CreateFilterTable``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="FilterData" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="FilterData">Den Filtern in der Tabelle zugeordnete Daten.</typeparam>
+        <summary>Erstellt eine Filtertabelle für einen Filter, der einen angegebenen Typ von ihm zugeordneten Daten hat.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" />-Objekt, dem <paramref name="FilterData" /> zugeordnete Filter hinzugefügt werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für das Aufrufen durch <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> vorgesehen. Benutzer sollten eine Filtertabelle erstellen, indem sie einen Konstruktor für die Filtertabelle aufrufen. Die Standardimplementierung für diese Methode gibt eine Filtertabelle zurück, die die <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A>-Methode für jeden Filter sequenziell aufruft. Überschreiben Sie diese Methode, um eine benutzerdefinierte Filtertabelle zuzuordnen, wenn Sie einen Filter implementieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Match">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Wenn dies in einer abgeleiteten Klasse überschrieben wird, wird getestet, ob eine Nachricht oder eine gepufferte Nachricht die Kriterien eines Filters erfüllt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Unterschied zwischen den zwei Überladungen besteht darin, dass eine Überladung einen <xref:System.ServiceModel.Channels.Message>-Parameter entgegennimmt und den Nachrichtentext nicht überprüfen darf. Die andere Überladung nimmt einen <xref:System.ServiceModel.Channels.MessageBuffer>-Parameter entgegen und kann jeden Teil der Nachricht überprüfen. Nachrichtenheader werden automatisch gepuffert und können durch einen Filter geprüft werden, ohne verwendet zu werden. Wenn jedoch der Nachrichtentext durch einen Filter überprüft werden soll, muss die gesamte Nachricht gepuffert werden, da eine nicht gepufferte Nachricht durch eine Abfrage verwendet werden kann, wodurch ihr Inhalt vernichtet wird.  
+  
+ Verwenden Sie <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A>, wenn die Prüfung des Nachrichtentexts nicht erforderlich ist. Verwenden Sie <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A>, wenn die Prüfung des Nachrichtentexts erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Null" />-Nachrichten sind ungültig und sollten bewirken, dass <see cref="T:System.ArgumentNullException" /> ausgelöst wird.</para>
+        </block>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public abstract bool Match (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Match(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilter.Match(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Das zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />-Objekt.</param>
+        <summary>Wenn dies in einer abgeleiteten Klasse überschrieben wird, wird getestet, ob eine Nachricht die Filterkriterien erfüllt. Der Text kann nicht überprüft werden.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.ServiceModel.Channels.Message" />-Objekt die Filterkriterien erfüllt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann den Inhalt des Nachrichtentexts nicht überprüfen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn der Filter versucht, den Text einer nicht gepufferten Nachricht zu überprüfen, muss der Filter <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" /> auslösen. Er sollte nicht <see langword="false" /> zurückgeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public abstract bool Match (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Match(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das zu überprüfende <see cref="T:System.ServiceModel.Channels.MessageBuffer" />-Objekt.</param>
+        <summary>Wenn dies in einer abgeleiteten Klasse überschrieben wird, wird getestet, ob eine gepufferte Nachricht die Kriterien eines Filters erfüllt.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.ServiceModel.Channels.MessageBuffer" />-Objekt die Filterkriterien erfüllt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Nachricht muss vollständig gepuffert werden, wenn der Text vom Filter überprüft werden soll. Der Text von <xref:System.ServiceModel.Channels.MessageBuffer> wird vollständig gepuffert und kann deshalb von einem Filter überprüft werden. Der Text einer <xref:System.ServiceModel.Channels.Message>, die nicht vollständig gepuffert wurde, kann durch die Filterprüfung verwendet werden. Das Headerelement einer <xref:System.ServiceModel.Channels.Message> wird automatisch gepuffert und kann deshalb überprüft werden, ohne verwendet zu werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,147 @@
+<Type Name="RegistryPermissionAccess" FullName="System.Security.Permissions.RegistryPermissionAccess">
+  <TypeSignature Language="C#" Value="public enum RegistryPermissionAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed RegistryPermissionAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.RegistryPermissionAccess" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den zugelassenen Zugriff auf den Registrierungsschlüssel und-Werte an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Permissions.RegistryPermissionAccess>-Werte sind unabhängig. Rechte für einen Typ des Zugriffs implizieren keine Rechte für eine andere. Z. B. `Write` Berechtigung impliziert nicht die Berechtigung zum `Read` oder `Create`.  
+  
+> [!NOTE]
+>  Obwohl NoAccess und AllAccess in angezeigt werden <xref:System.Security.Permissions.RegistryPermissionAccess.NoAccess>, sie gelten nicht für die Verwendung als Parameter für <xref:System.Security.Permissions.RegistryPermission.GetPathList%2A> , da sie entweder keine Registrierungsvariablen oder alle Registrierungsvariablen, beschreiben und <xref:System.Security.Permissions.RegistryPermission.GetPathList%2A> erwartet ein einzelnen Zugriffstyp für Registrierungsvariablen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllAccess">
+      <MemberSignature Language="C#" Value="AllAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess AllAccess = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.AllAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" />, und <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /> Zugriff auf Registrierungsvariablen. <see cref="F:System.Security.Permissions.RegistryPermissionAccess.AllAccess" />stellt mehrere <see cref="T:System.Security.Permissions.RegistryPermissionAccess" /> Werte und bewirkt, dass ein <see cref="T:System.ArgumentException" /> bei Verwendung als die <paramref name="access" /> -Parameter für die <see cref="M:System.Security.Permissions.RegistryPermission.GetPathList(System.Security.Permissions.RegistryPermissionAccess)" /> -Methode, die einen einzelnen Wert erwartet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="Create" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess Create = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.Create" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen Sie den Zugriff auf Registrierungsvariablen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAccess">
+      <MemberSignature Language="C#" Value="NoAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess NoAccess = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.NoAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kein Zugriff auf Registrierungsvariablen. <see cref="F:System.Security.Permissions.RegistryPermissionAccess.NoAccess" />stellt keine gültige <see cref="T:System.Security.Permissions.RegistryPermissionAccess" /> Werte und bewirkt, dass ein <see cref="T:System.ArgumentException" /> bei Verwendung als Parameter für <see cref="M:System.Security.Permissions.RegistryPermission.GetPathList(System.Security.Permissions.RegistryPermissionAccess)" />, die einen einzelnen Wert erwartet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess Read = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lesezugriff auf Registrierungsvariablen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess Write = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schreibzugriff auf Registrierungsvariablen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

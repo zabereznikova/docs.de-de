@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.Cache">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.Cache" /> -Namespace definiert die Typen und Enumerationen, mit denen Cacherichtlinien für Ressourcen mithilfe der <see cref="T:System.Net.WebRequest" /> und <see cref="T:System.Net.HttpWebRequest" /> Klassen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

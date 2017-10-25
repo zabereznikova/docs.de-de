@@ -1,0 +1,1176 @@
+<Type Name="DependencyProperty" FullName="System.Windows.DependencyProperty">
+  <TypeSignature Language="C#" Value="public sealed class DependencyProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DependencyProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyProperty" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter("System.Windows.Markup.DependencyPropertyConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.DependencyPropertyValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Eigenschaft dar, die durch Methoden festgelegt werden kann, z. B. Formatierung, Datenbindung, Animation und Vererbung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.DependencyProperty> unterstützt die folgenden neuen Funktionen in [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]:  
+  
+-   Die Eigenschaft kann in einem Format festgelegt werden. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+-   Die Eigenschaft kann über die Datenbindung festgelegt werden. Weitere Informationen zu Datenbindungseigenschaften Abhängigkeit, finden Sie unter [Vorgehensweise: Binden von Eigenschaften von zwei Steuerelementen](~/docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).  
+  
+-   Die Eigenschaft kann mit einem dynamischen Ressourcenverweis festgelegt werden. Weitere Informationen finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+-   Die Eigenschaft kann den Wert automatisch von einem übergeordneten Element in der Elementstruktur erben. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](~/docs/framework/wpf/advanced/property-value-inheritance.md).  
+  
+-   Die Eigenschaft kann animiert werden. Weitere Informationen finden Sie unter [Übersicht über Animation](~/docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+  
+-   Die Eigenschaft kann melden, wenn der vorherige Wert der Eigenschaft geändert wurde und die Eigenschaftswert umgewandelt werden kann. Weitere Informationen finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+-   Die Eigenschaft werden Informationen zu [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], z. B., ob das Layoutsystem die visuellen Elemente nach einem Element neu aufzubauen Ändern eines Eigenschaftswerts benötigen sollte.  
+  
+-   Die Eigenschaft empfängt Unterstützung in den [!INCLUDE[wpfdesigner_current_long](~/includes/wpfdesigner-current-long-md.md)].  Beispielsweise kann die Eigenschaft bearbeitet werden, der **Eigenschaften** Fenster.  
+  
+ Weitere Informationen zu Abhängigkeitseigenschaften finden Sie unter [Übersicht über Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-properties-overview.md). Wenn Sie Eigenschaften auf die benutzerdefinierten Typen zur Unterstützung von Funktionen in der vorangehenden Liste aufgeführt werden soll, sollten Sie eine Abhängigkeitseigenschaft erstellen.  Vorgehensweise: Erstellen von benutzerdefinierten Abhängigkeitseigenschaften finden Sie unter [benutzerdefinierte Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/custom-dependency-properties.md).  
+  
+ Eine angefügte Eigenschaft ist eine Eigenschaft, die jedes Objekt auf die Informationen in den Typ ermöglicht, das die angefügte Eigenschaft definiert. In [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], jeder Typ, der von erbt <xref:System.Windows.DependencyObject> können eine angefügte Eigenschaft unabhängig davon, ob der Typ vom Typ erbt, die die Eigenschaft definiert. Eine angefügte Eigenschaft ist ein Feature von der [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Sprache.  Eine angefügte Eigenschaft festgelegt wird, [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], verwenden Sie die *Besitzertyp*.* PropertyName* Syntax. Ein Beispiel für eine angefügte Eigenschaft ist die <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Eigenschaft. Wenn eine Eigenschaft zu erstellen, die auf allen verwendet werden können sollen <xref:System.Windows.DependencyObject> eingibt, dann sollten Sie eine angefügte Eigenschaft erstellen. Weitere Informationen zu angefügten Eigenschaften, einschließlich Informationen zum Erstellen, finden Sie unter [Eigenschaftenübersicht angefügt](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+<a name="xamlAttributeUsage_DependencyProperty"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="dependencyPropertyName"/>  
+- or -  
+<object property="ownerType.dependencyPropertyName"/>  
+- or -  
+<object property="attachedPropertyOwnerType.attachedPropertyName"/>  
+```  
+  
+<a name="xamlValues_DependencyProperty"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ `dependencyPropertyName`  
+ Eine Zeichenfolge, die angibt, die <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> der gewünschten Abhängigkeitseigenschaft. Dies kann vorangestellt werden ein XML-Namespacepräfix, wenn die Eigenschaft nicht in der XML-Standardnamespace ist (Weitere Informationen finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF-XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).)  
+  
+ `ownerType`.`dependencyPropertyName`  
+ Eine Zeichenfolge, die eine Besitzertyp der Abhängigkeitseigenschaft, einen Punkt (.) gibt an, und klicken Sie dann die <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>. `ownerType`kann auch ein XML-Namespacepräfix vorangestellt werden. Diese Verwendung ist speziell für spät gebundene Stile und Vorlagen, die, in denen der Besitzer der Abhängigkeitseigenschaft angegeben werden, muss für die Analyse von Kontext, da die `TargetType` noch nicht bekannt ist. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+ `attachedPropertyOwnerType` *.* `attachedPropertyName`  
+ Eine Zeichenfolge, die den Besitzer einer angefügten Eigenschaft, ein Punkt (.), und dann den Namen der angefügten Eigenschaft angibt. `attachedPropertyOwnerType`kann auch ein XML-Namespacepräfix vorangestellt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddOwner">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty AddOwner (Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.DependencyProperty AddOwner(class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.AddOwner(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">Der Typ, der als ein Besitzer dieser Abhängigkeitseigenschaft hinzugefügt werden soll.</param>
+        <summary>Fügt einen weiteren Typ als Besitzer einer Abhängigkeitseigenschaft hinzu, die bereits registriert wurde.</summary>
+        <returns>Ein Verweis auf den ursprünglichen <see cref="T:System.Windows.DependencyProperty" />-Bezeichner, der die Abhängigkeitseigenschaft angibt. Dieser Bezeichner sollte von der hinzufügenden Klasse als <see langword="public static readonly" />-Feld verfügbar gemacht werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht das Eigenschaftensystem eine Abhängigkeitseigenschaft für einen Typ zu erkennen, die diese Abhängigkeitseigenschaft zunächst nicht registriert.  
+  
+ In der Regel <xref:System.Windows.DependencyProperty.AddOwner%2A> wird verwendet, um die Abhängigkeitseigenschaften Klassen hinzufügen, die nicht bereits die Abhängigkeitseigenschaft über Vererbung der verwalteten Klasse verfügbar machen (klassenvererbung würde dazu führen, dass die Wrappereigenschaften, die von der abgeleiteten Klasse geerbt werden und somit würde allgemeine Membertabelle bietet Zugriff auf die Abhängigkeitseigenschaft bereits). <xref:System.Windows.DependencyProperty.AddOwner%2A>ermöglicht es das Eigenschaftensystem eine Abhängigkeitseigenschaft für einen Typ zu erkennen, die dieser Abhängigkeitseigenschaft zunächst nicht registriert.  
+  
+ Diese Signatur lässt keine Metadaten angeben.  Wenn Sie diese Methode verwenden, wird die Metadaten automatisch für die neue generiert <xref:System.Windows.DependencyProperty> und Besitzertyp. Die automatisch generierten Metadaten ist das Ergebnis der zusammengeführten Metadaten von allen Basistypen, die diese Eigenschaft definiert haben. Wenn keine zusammengeführten Metadaten verfügbar ist, wird das Standardmetadatum für die Eigenschaft verwendet. Wenn die Eigenschaft, mithilfe registriert ist der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> -Methode, und klicken Sie dann auf die Standardmetadaten ist identisch mit den Metadaten, die erstellt werden <xref:System.Windows.DependencyProperty.RegisterAttached%2A> aufgerufen wurde. Hingegen die <xref:System.Windows.PropertyMetadata> -Objekt wird erstellt, mit der <xref:System.Windows.PropertyMetadata.DefaultValue%2A> Eigenschaftensatz an Standardeinstellung für den Eigenschaftentyp und alle anderen Eigenschaften von der <xref:System.Windows.PropertyMetadata> auf festgelegt ist `null`. Verwenden der <xref:System.Windows.DependencyProperty.AddOwner%28System.Type%2CSystem.Windows.PropertyMetadata%29> Signatur, wenn Metadaten für die Version der Abhängigkeitseigenschaft bereitgestellt, wie in den bereitgestellten Typ hinzugefügt werden sollen.  
+  
+ Der Rückgabewert dieser Methode dient normalerweise zum Deklarieren und Verfügbarmachen von der Abhängigkeitseigenschaft durch Speichern der Bezeichner für eine Abhängigkeitseigenschaft. Der Bezeichner ermöglicht den Zugriff auf die Abhängigkeitseigenschaft, wenn Eigenschaftensystem aufgerufen werden soll [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)] auf der hinzufügenden Besitzerklasse für die Abhängigkeitseigenschaft, insbesondere, wenn er vorhanden. Der gleiche Name für den ursprünglichen Besitzer und hinzugefügten Benutzer sollte verwendet werden, um anzugeben, die ähnliche Funktionen. Verwenden Sie die <xref:System.Windows.DependencyProperty> Rückgabewert aus der <xref:System.Windows.DependencyProperty.AddOwner%2A> Methode zum Definieren des Bezeichners der Abhängigkeitseigenschaft sowie zum Deklarieren [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Eigenschaftenwrapper für Abhängigkeitseigenschaften, die mithilfe von Typen hinzugefügt werden <xref:System.Windows.DependencyProperty.AddOwner%2A>.  
+  
+ Die <xref:System.Windows.DependencyProperty.AddOwner%2A> Methodik oben empfohlen wird verwendet, wenn die Abhängigkeitseigenschaften erstellen, die innerhalb von deklariert werden [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Z. B. sowohl <xref:System.Windows.Controls.Border> und <xref:System.Windows.Controls.Control> definieren eine `BorderBrush` Abhängigkeitseigenschaft, die ähnliche Funktionen haben. <xref:System.Windows.Controls.Control>definiert die `BorderBrush` Eigenschaft, um dem Eigenschaftensystem durch Aufrufen von <xref:System.Windows.DependencyProperty.AddOwner%2A> basierend auf dem ursprünglichen Besitzer <xref:System.Windows.Controls.Border> und seines registrierten <xref:System.Windows.Controls.Border.BorderBrushProperty> Abhängigkeit Eigenschaft Bezeichner. Die <xref:System.Windows.DependencyProperty.AddOwner%2A> zurückgeben Wert wird dann verwendet, um ein neues statisches <xref:System.Windows.DependencyProperty> Feld (<xref:System.Windows.Controls.Control.BorderBrushProperty>) für diese Eigenschaft auf den hinzugefügten Besitzer und eine `BorderBrush` Eigenschaftenwrapper auch deklariert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOwner">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty AddOwner (Type ownerType, System.Windows.PropertyMetadata typeMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.DependencyProperty AddOwner(class System.Type ownerType, class System.Windows.PropertyMetadata typeMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.AddOwner(System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">Der Typ, der als Besitzer dieser Abhängigkeitseigenschaft hinzugefügt werden soll.</param>
+        <param name="typeMetadata">Die Metadaten, die die Abhängigkeitseigenschaft beschreiben, wie sie für den bereitgestellten Typ vorhanden sind.</param>
+        <summary>Fügt einen anderen Typ als Besitzer einer Abhängigkeitseigenschaft hinzu, die bereits registriert wurde. Dabei werden Abhängigkeitseigenschaft-Metadaten für die Abhängigkeitseigenschaft bereitgestellt, wie sie für den bereitgestellten Besitzertyp vorhanden sind.</summary>
+        <returns>Ein Verweis auf den ursprünglichen <see cref="T:System.Windows.DependencyProperty" />-Bezeichner, der die Abhängigkeitseigenschaft angibt. Dieser Bezeichner sollte von der hinzufügenden Klasse als <see langword="public static readonly" />-Feld verfügbar gemacht werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht das Eigenschaftensystem eine Abhängigkeitseigenschaft für einen Typ zu erkennen, die diese Abhängigkeitseigenschaft zunächst nicht registriert.  
+  
+ Der Rückgabewert dieser Methode wird zum Deklarieren und Verfügbarmachen von der Abhängigkeitseigenschaft verwendet, insbesondere, wie sie auf der hinzufügenden Besitzerklasse vorhanden ist. Im Allgemeinen sollte der gleiche Name für den ursprünglichen Besitzer und hinzugefügten Benutzer verwendet werden, um anzugeben, die ähnliche Funktionen. Es wird empfohlen, die Bezeichner, die als auch neue verfügbar zu machen [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Eigenschaftenwrapper für Abhängigkeitseigenschaften, die mithilfe von Typen hinzugefügt werden <xref:System.Windows.DependencyProperty.AddOwner%2A>.  
+  
+ Die <xref:System.Windows.DependencyProperty.AddOwner%2A> Methodik oben empfohlen wird verwendet, für die Erstellung [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)] deklariert innerhalb von [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Z. B. sowohl <xref:System.Windows.Controls.Border> und <xref:System.Windows.Controls.Control> definieren eine `BorderBrush` Abhängigkeitseigenschaft, die ähnliche Funktionen haben. <xref:System.Windows.Controls.Control>definiert die `BorderBrush` Eigenschaft, um dem Eigenschaftensystem durch Aufrufen von <xref:System.Windows.DependencyProperty.AddOwner%2A> für den ursprünglichen Besitzer <xref:System.Windows.Controls.Border> und seines registrierten <xref:System.Windows.Controls.Border.BorderBrushProperty> Abhängigkeit Eigenschaft Bezeichner. Die <xref:System.Windows.DependencyProperty.AddOwner%2A> zurückgeben Wert wird dann verwendet, um einen statischen herzustellen <xref:System.Windows.DependencyProperty> Feld (<xref:System.Windows.Controls.Control.BorderBrushProperty>) für diese Eigenschaft auf den hinzugefügten Besitzer und eine `BorderBrush` Eigenschaftenwrapper auch deklariert wird.  
+  
+ Bezeichner des Besitzers der hinzugefügten Abhängigkeitseigenschaft zu verwendende für Vorgänge wie z. B. <xref:System.Windows.DependencyObject.GetValue%2A>. Jedoch typspezifische Operationen mit Typen oder Instanzen der Klasse, die hinzugefügt wurde, als Besitzer über unterschiedliche Metadaten weiterhin zurück, der erwarteten Ergebnisse, selbst wenn die ursprüngliche (nicht die hinzugefügten Besitzers) in Abhängigkeitseigenschaftbezeichner angegeben ist Aufrufe von Methoden wie z. B. <xref:System.Windows.DependencyObject.GetValue%2A> oder <xref:System.Windows.DependencyProperty.GetMetadata%2A>. Die Metadaten für den hinzugefügten Besitzer wird aufrechterhalten, durch die <xref:System.Windows.DependencyProperty.AddOwner%2A> aufrufen selbst, nicht unbedingt ausschließlich durch das Hinzufügen von Besitzer Bezeichner Klassenfeld verwiesen wird. Dennoch wird empfohlen, den Bezeichner, der als auch neue verfügbar zu machen [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Eigenschaftenwrapper für Abhängigkeitseigenschaften, die mithilfe von Typen hinzugefügt werden <xref:System.Windows.DependencyProperty.AddOwner%2A>, da Unterschiede zwischen unterlassen erstellt werden. die [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Darstellungen Ihrer Eigenschaften.  
+  
+ Die angegebenen Metadaten werden mit die Eigenschaftenmetadaten für die Abhängigkeitseigenschaft zusammengeführt, wie sie auf der Basis Besitzer vorhanden ist. Alle Eigenschaften, die in der ursprünglichen Basismetadaten angegeben wurden, werden beibehalten. Nur die Merkmale, die insbesondere in den neuen Metadaten geändert wurden, werden die Merkmale des grundlegenden Metadaten überschrieben. Einige Eigenschaften, z. B. <xref:System.Windows.PropertyMetadata.DefaultValue%2A>, ersetzt werden, wenn sie die neuen Metadaten angegeben werden. Andere, z. B. <xref:System.Windows.PropertyChangedCallback>, kombiniert werden. Letztlich Typ der Metadaten für die Außerkraftsetzung verwendet werden, damit das hier beschriebene Verhalten für die vorhandene Eigenschaft Metadatenklassen von verwendet wird der Merge-Verhalten hängt [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Abhängigkeitseigenschaften. Weitere Informationen finden Sie unter [Metadaten für die Abhängigkeitseigenschaft](~/docs/framework/wpf/advanced/dependency-property-metadata.md) und [Framework Eigenschaftsmetadaten](~/docs/framework/wpf/advanced/framework-property-metadata.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMetadata">
+      <MemberSignature Language="C#" Value="public System.Windows.PropertyMetadata DefaultMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PropertyMetadata DefaultMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyProperty.DefaultMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardmetadaten der Abhängigkeitseigenschaft ab.</summary>
+        <value>Das Standardmetadatum der Abhängigkeitseigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardmetadaten, ist die Eigenschaftenmetadaten, die für dieses Objekt oder ein Objekt eines abgeleiteten Typs verfügbar ist, in denen keine alternative Metadaten angegeben wurden durch eine explizite <xref:System.Windows.DependencyProperty.Register%2A> oder <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> aufrufen.  
+  
+ Wenn der ursprüngliche Besitzer Metadaten mit dem ersten angewendet <xref:System.Windows.DependencyProperty.Register%2A> Aufruf, der die Abhängigkeitseigenschaft hergestellt wird, wird, die Metadaten als zurückgegeben <xref:System.Windows.DependencyProperty.DefaultMetadata%2A>.  
+  
+ Wenn keine Metadaten im ursprünglichen besaß <xref:System.Windows.DependencyProperty.Register%2A> aufrufen, wird das Standardmetadatum innerhalb generiert der <xref:System.Windows.DependencyProperty.Register%2A> Aufruf und dieser Wert wird zurückgegeben, als der <xref:System.Windows.DependencyProperty.DefaultMetadata%2A>.  
+  
+ Der Hauptzweck der Standardmetadaten an, die mit einem <xref:System.Windows.DependencyProperty> ist, geben Sie einen Standardwert für diese Eigenschaft für ein beliebiges <xref:System.Windows.DependencyObject> oder eines abgeleiteten Typs.  
+  
+ Für nicht angefügte Eigenschaften der von dieser Eigenschaft zurückgegebene Metadatentyp keine Typumwandlung in abgeleiteten Typen <xref:System.Windows.PropertyMetadata> eingeben, auch wenn die Eigenschaft ursprünglich mit einem abgeleiteten Metadatentyp registriert wurde. Wenn Sie die ursprünglich registrierte Metadaten einschließlich seiner ursprünglichen möglicherweise abgeleiteten Metadatentyp möchten, rufen <xref:System.Windows.DependencyProperty.GetMetadata%28System.Type%29> stattdessen als Parameter eingeben und übergeben die ursprünglichen registrieren.  
+  
+ Für angefügte Eigenschaften entspricht der Typ der Metadaten, die von dieser Eigenschaft zurückgegebene den Typ in der ursprünglichen <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Registrierungsmethode.  
+  
+   
+  
+## Examples  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#DPDefaultValue](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpdefaultvalue)]
+[!code-vb[PropertySystemEsoterics#DPDefaultValue](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpdefaultvalue)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode für diese <see cref="T:System.Windows.DependencyProperty" />.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.Windows.DependencyProperty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Eigenschaftensystem verwendet seinen eigenen eindeutigen Bezeichner <xref:System.Windows.DependencyProperty.GlobalIndex%2A>, und der Wert dieser Eigenschaft zurückgegebene <xref:System.Windows.DependencyProperty.GetHashCode%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public System.Windows.PropertyMetadata GetMetadata (Type forType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.PropertyMetadata GetMetadata(class System.Type forType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="forType">Der spezifische Typ, von dem die Metadaten für die Abhängigkeitseigenschaft abgerufen werden sollen.</param>
+        <summary>Gibt die Metadaten für diese Abhängigkeitseigenschaft zurück, wie sie für einen angegebenen vorhanden Typ vorhanden sind.</summary>
+        <returns>Ein Objekt für Eigenschaftenmetadaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben, den Typ oder einen Objektverweis verwenden, wie der Typ ist erforderlich, da die Metadaten von der ursprünglichen Registrierung aufgrund von variieren kann <xref:System.Windows.DependencyProperty.AddOwner%2A> oder <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> Aufrufe, die die Metadaten der Abhängigkeitseigenschaft geändert werden, weil sie für einen Typ vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft die Metadaten für eine Abhängigkeitseigenschaft, die auf Grundlage seines Typs ab. Der Typ wird abgerufen, mit einem `typeof` Operator.  
+  
+ [!code-csharp[PropertySystemEsoterics#GetMetadataType](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/default.xaml.cs#getmetadatatype)]
+ [!code-vb[PropertySystemEsoterics#GetMetadataType](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/default.xaml.vb#getmetadatatype)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public System.Windows.PropertyMetadata GetMetadata (System.Windows.DependencyObject dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.PropertyMetadata GetMetadata(class System.Windows.DependencyObject dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.GetMetadata(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">Ein Abhängigkeitsobjekt, dessen Typ überprüft wird, um zu ermitteln, von welcher typenspezifischen Version der Abhängigkeitseigenschaft die Metadaten stammen sollen.</param>
+        <summary>Gibt die Metadaten für diese Abhängigkeitseigenschaft zurück, da sie für die angegebene Objektinstanz vorhanden sind.</summary>
+        <returns>Ein Objekt für Eigenschaftenmetadaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben eines Typs oder ein Objektverweis ist notwendig, da die Metadaten einer angegebenen Abhängigkeitseigenschaft, von der ursprünglichen Registrierung aufgrund von variieren kann <xref:System.Windows.DependencyProperty.AddOwner%2A> oder <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> Aufrufe, die die Eigenschaftenmetadaten optimieren können, wie sie für vorhanden ein Geben Sie ein.  
+  
+ Beim Anfordern von Metadaten der Eigenschaft basierend auf einer Instanz werden Sie die Instanz tatsächlich nur erfolgreich ausgeführt, damit dessen Typ intern ausgewertet werden kann. Die Metadaten für Abhängigkeitseigenschaften variiert pro Instanz nicht; Es ist immer für eine beliebige Kombination von bestimmten Typeigenschaft konsistent.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft Metadaten für eine Abhängigkeitseigenschaft, die anhand einer bestimmten <xref:System.Windows.DependencyObject> Instanz.  
+  
+ [!code-csharp[PropertySystemEsoterics#GetMetadataDOInstance](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/default.xaml.cs#getmetadatadoinstance)]
+ [!code-vb[PropertySystemEsoterics#GetMetadataDOInstance](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/default.xaml.vb#getmetadatadoinstance)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public System.Windows.PropertyMetadata GetMetadata (System.Windows.DependencyObjectType dependencyObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.PropertyMetadata GetMetadata(class System.Windows.DependencyObjectType dependencyObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.GetMetadata(System.Windows.DependencyObjectType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObjectType" Type="System.Windows.DependencyObjectType" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObjectType">Ein bestimmtes Objekt, das den Abhängigkeitsobjekttyp aufzeichnet, von dem die Metadaten für die Abhängigkeitseigenschaft stammen sollen.</param>
+        <summary>Gibt die Metadaten für diese Abhängigkeitseigenschaft zurück, wie sie für einen angegebenen Typ vorhanden sind.</summary>
+        <returns>Ein Objekt für Eigenschaftenmetadaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben eines Typs oder ein Objektverweis ist notwendig, da die Metadaten einer angegebenen Abhängigkeitseigenschaft, von der ursprünglichen Registrierung aufgrund von variieren kann <xref:System.Windows.DependencyProperty.AddOwner%2A> oder <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> Aufrufe, die die Eigenschaftenmetadaten optimieren können, wie sie für vorhanden ein Geben Sie ein.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft Metadaten für eine Abhängigkeitseigenschaft, die basierend auf seiner <xref:System.Windows.DependencyObjectType>.  
+  
+ [!code-csharp[PropertySystemEsoterics#GetMetadataDOType](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/default.xaml.cs#getmetadatadotype)]
+ [!code-vb[PropertySystemEsoterics#GetMetadataDOType](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/default.xaml.vb#getmetadatadotype)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalIndex">
+      <MemberSignature Language="C#" Value="public int GlobalIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GlobalIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyProperty.GlobalIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen intern generierten Wert, der die Abhängigkeitseigenschaft eindeutig identifiziert.</summary>
+        <value>Eine eindeutige numerische ID.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist eine ganze Zahl ein [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)]. Im Allgemeinen die Verwendung dieses Werts Index ist nicht erforderlich, und es gibt keinen Indexzugriff auf Tabellen aller Abhängigkeitseigenschaften. Abhängigkeitseigenschaften sollte stattdessen über ihre Bezeichnerfelder verwiesen werden.  
+  
+ <xref:System.Windows.DependencyProperty.GlobalIndex%2A>wird intern verwendet, für einen schnelleren Zugriff auf Datenstrukturen, mit denen die <xref:System.Windows.DependencyProperty.GlobalIndex%2A> als Arrayindex nullbasierte. Eine ähnliche Verwendung verfügen möglicherweise über Anwendungen für den Designer oder -Tools.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidType">
+      <MemberSignature Language="C#" Value="public bool IsValidType (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsValidType(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.IsValidType(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu überprüfende Wert.</param>
+        <summary>Bestimmt, ob ein angegebener Wert für diese Abhängigkeitseigenschaft-Typ zulässig ist, als für den Eigenschaftentyp in der ursprünglichen Registrierung der Abhängigkeitseigenschaft bereitgestellt überprüft.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Wert der registrierte Eigenschaftentyp oder ein zulässiger abgeleiteter Typ ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert `null` ist ein gültiger Typ für Abhängigkeitseigenschaften vom Referenztyp oder für eine <xref:System.Nullable%601> Abhängigkeitseigenschaft und würde zurückgeben `true` in diesen Fällen. In Fällen, in dem die Abhängigkeitseigenschaft weder ein Verweis ist, noch eine <xref:System.Nullable%601> Typ <xref:System.Windows.DependencyProperty.IsValidType%2A> zurück `false` für einen null-Wert anstelle von lösen eine Ausnahme.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.DependencyProperty.IsValidType%2A> als eine Überprüfung vor dem Aufruf <xref:System.Windows.DependencyObject.SetValue%2A> auf die Abhängigkeitseigenschaft.  
+  
+ [!code-csharp[PropertySystemEsoterics#TrySetValue](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#trysetvalue)]
+ [!code-vb[PropertySystemEsoterics#TrySetValue](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#trysetvalue)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidValue">
+      <MemberSignature Language="C#" Value="public bool IsValidValue (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsValidValue(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.IsValidValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu überprüfende Wert.</param>
+        <summary>Bestimmt, ob der angegebene Wert für den Typ der Eigenschaft durch Überprüfung des einfachen Typs, akzeptiert wird, und möglicherweise auch wenn es innerhalb des zulässigen Bereichs von Werten für diesen Typ.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert zulässig ist und den richtigen Typ oder ein abgeleiteter Typ ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine Abhängigkeitseigenschaft kann über einen zulässigen Wertebereichs für diesen Typ angegeben werden eine <xref:System.Windows.ValidateValueCallback> , die in der Registrierung der Abhängigkeitseigenschaft bereitgestellt wird.  
+  
+ Diese Methode ruft <xref:System.Windows.DependencyProperty.IsValidType%2A> intern. Wenn die fragliche Abhängigkeitseigenschaft keine <xref:System.Windows.ValidateValueCallback>, dann ist beim Aufrufen dieser Methode entspricht dem Aufruf <xref:System.Windows.DependencyProperty.IsValidType%2A>. Wenn die Abhängigkeitseigenschaft besitzt eine <xref:System.Windows.ValidateValueCallback>, und, wenn <xref:System.Windows.DependencyProperty.IsValidType%2A> zurückgegeben hätte `true`, wird der Wert werden zurückgegeben, wie im Rückruf implementiert.  
+  
+ Ein null-Wert ist ein gültiger Wert für Abhängigkeitseigenschaften vom Referenztyp oder ein <xref:System.Nullable%601> Abhängigkeitseigenschaft und würde zurückgeben `true` für diese Fälle. In Fällen, in dem die Abhängigkeitseigenschaft weder ein Verweis ist, noch eine <xref:System.Nullable%601> Typ <xref:System.Windows.DependencyProperty.IsValidType%2A> zurück `false` für einen null-Wert anstelle von lösen eine Ausnahme.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.DependencyProperty.IsValidValue%2A> als eine Überprüfung vor dem Aufruf <xref:System.Windows.DependencyObject.SetValue%2A> auf die Abhängigkeitseigenschaft.  
+  
+ [!code-csharp[PropertySystemEsoterics#TrySetValueWithValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#trysetvaluewithvalidate)]
+ [!code-vb[PropertySystemEsoterics#TrySetValueWithValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#trysetvaluewithvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Abhängigkeitseigenschaft ab.</summary>
+        <value>Den Namen der Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den Namen als die `name` Parameter während der Registrierung der Abhängigkeitseigenschaft. Dieser Name ist unveränderlich und nicht mit `null` oder eine leere Zeichenfolge. Doppelter Name Registrierungen für den gleichen Besitzertyp sind nicht zulässig und löst eine Ausnahme aus, wenn Sie versuchen, das Duplikat zu registrieren.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Windows.DependencyProperty.Name%2A> einer Abhängigkeit muss Eigenschaft verwenden üblicherweise stimmen mit dem Namen des Bezeichners der Abhängigkeitseigenschaft ohne das Suffix "Property". Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/custom-dependency-properties.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fragt die verschiedenen Eigenschaften der Bezeichner für eine Abhängigkeitseigenschaft, einschließlich der <xref:System.Windows.DependencyProperty.Name%2A>.  
+  
+ [!code-csharp[PropertySystemEsoterics#DPProps](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpprops)]
+ [!code-vb[PropertySystemEsoterics#DPProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideMetadata">
+      <MemberSignature Language="C#" Value="public void OverrideMetadata (Type forType, System.Windows.PropertyMetadata typeMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OverrideMetadata(class System.Type forType, class System.Windows.PropertyMetadata typeMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.OverrideMetadata(System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="forType">Der Typ, bei dem diese Abhängigkeitseigenschaft geerbt wird und bei dem die bereitgestellten alternativen Metadaten angewendet werden.</param>
+        <param name="typeMetadata">Die Metadaten, die auf die Abhängigkeitseigenschaft im überschreibenden Typ angewendet werden sollen.</param>
+        <summary>Gibt alternative Metadaten für diese Abhängigkeitseigenschaft an, wenn sie in Instanzen eines angegebenen Typs vorhanden ist. Dabei werden die Metadaten überschrieben, die für die Abhängigkeitseigenschaft bei der Vererbung von Basistypen vorhanden waren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadaten für die Abhängigkeitseigenschaft sollte überschrieben werden, bevor Sie das Eigenschaftensystem die Abhängigkeitseigenschaft verwendet. Dies entspricht der Zeit, die bestimmte Instanzen erstellt werden, mithilfe der Klasse, die die Abhängigkeitseigenschaft registriert. Aufrufe von <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> sollte nur ausgeführt werden, in den statischen Konstruktoren des Typs, der sich selbst als der `forType` Parameter dieser Methode oder über eine ähnliche Instanziierung. Versuchen, die Metadaten ändern, nachdem die Instanzen des Besitzertyps vorhanden sind, werden keine Ausnahmen ausgelöst, es wird jedoch führt zu inkonsistentem Verhalten im Eigenschaftensystem.  
+  
+ Nachdem Metadaten für einen bestimmten abgeleiteten Klasse überschreiben, die mit dieser Methode hergestellt wurde, werden nachfolgende Versuche, die Metadaten in dieser abgeleiteten Klasse überschreiben, eine Ausnahme ausgelöst.  
+  
+ Die angegebenen Metadaten werden mit die Eigenschaftenmetadaten für die Abhängigkeitseigenschaft zusammengeführt, wie sie auf der Basis Besitzer vorhanden ist. Alle Eigenschaften, die in der ursprünglichen Basismetadaten angegeben wurden, werden beibehalten. nur die Merkmale, die insbesondere in den neuen Metadaten geändert wurden, werden die Merkmale des grundlegenden Metadaten überschrieben. Einige Eigenschaften wie z. B. <xref:System.Windows.PropertyMetadata.DefaultValue%2A> ersetzt werden, wenn in den neuen Metadaten angegeben. Andere, z. B. <xref:System.Windows.PropertyChangedCallback>, kombiniert werden. Letztlich Typ der Metadaten für die Außerkraftsetzung verwendet werden, damit das hier beschriebene Verhalten für die vorhandene Eigenschaft Metadatenklassen von verwendet wird der Merge-Verhalten hängt [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Abhängigkeitseigenschaften. Weitere Informationen finden Sie unter [Metadaten für die Abhängigkeitseigenschaft](~/docs/framework/wpf/advanced/dependency-property-metadata.md) und [Framework Eigenschaftsmetadaten](~/docs/framework/wpf/advanced/framework-property-metadata.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, die Metadaten für eine schreibgeschützte Abhängigkeitseigenschaft zu überschreiben (dieser Vorgang kann nicht mit dieser Signatur ausgeführt werden).</exception>
+        <exception cref="T:System.ArgumentException">Metadaten wurden für die Abhängigkeitseigenschaft bereits festgelegt, wie im bereitgestellten Typ vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideMetadata">
+      <MemberSignature Language="C#" Value="public void OverrideMetadata (Type forType, System.Windows.PropertyMetadata typeMetadata, System.Windows.DependencyPropertyKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OverrideMetadata(class System.Type forType, class System.Windows.PropertyMetadata typeMetadata, class System.Windows.DependencyPropertyKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.OverrideMetadata(System.Type,System.Windows.PropertyMetadata,System.Windows.DependencyPropertyKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+        <Parameter Name="key" Type="System.Windows.DependencyPropertyKey" />
+      </Parameters>
+      <Docs>
+        <param name="forType">Der Typ, bei dem diese Abhängigkeitseigenschaft geerbt wird und bei dem die bereitgestellten alternativen Metadaten angewendet werden.</param>
+        <param name="typeMetadata">Die Metadaten, die auf die Abhängigkeitseigenschaft im überschreibenden Typ angewendet werden sollen.</param>
+        <param name="key">Der Zugriffsschlüssel für eine schreibgeschützte Abhängigkeitseigenschaft.</param>
+        <summary>Stellt alternative Metadaten für eine schreibgeschützte Abhängigkeitseigenschaft bereit, wenn sie in Instanzen eines angegebenen Typs vorhanden ist, wodurch die Metadaten überschrieben werden, die bei der ersten Registrierung der Abhängigkeitseigenschaft bereitgestellt wurden. Sie übergeben müssen die <see cref="T:System.Windows.DependencyPropertyKey" /> für die schreibgeschützte Abhängigkeitseigenschaft zu vermeiden, durch das Auslösen einer Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Signatur stellt die zugrunde liegende Implementierung für Bezeichner für eine schreibgeschützte Abhängigkeitseigenschaft bereit (<xref:System.Windows.DependencyPropertyKey>) Methode. Wenn Metadaten für eine Abhängigkeitseigenschaft mit Lese-/ Schreibzugriff zu überschreiben, verwenden Sie <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29>.  
+  
+ Metadaten für die Abhängigkeitseigenschaft sollte überschrieben werden, bevor Sie das Eigenschaftensystem die Abhängigkeitseigenschaft verwendet. Dies entspricht der Zeit, die bestimmte Objekte erstellt werden, für die Klasse, die die Abhängigkeitseigenschaft registriert. Aufrufe von <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> sollte nur ausgeführt werden, in den statischen Konstruktoren des Typs, der sich selbst als der `forType` Parameter dieser Methode oder über eine ähnliche Instanziierung. Versuchen, die Metadaten ändern, nachdem die Instanzen des Besitzertyps vorhanden sind, werden keine Ausnahmen ausgelöst, es wird jedoch führt zu inkonsistentem Verhalten im Eigenschaftensystem.  
+  
+ Nachdem Metadaten für einen bestimmten abgeleiteten Klasse überschreiben, die mit dieser Methode hergestellt wurde, werden nachfolgende Versuche, die Metadaten in dieser abgeleiteten Klasse überschreiben, eine Ausnahme ausgelöst.  
+  
+ Die angegebenen Metadaten werden mit die Eigenschaftenmetadaten für die Abhängigkeitseigenschaft zusammengeführt, wie sie auf der Basis Besitzer vorhanden ist. Alle Eigenschaften, die in der ursprünglichen Basismetadaten angegeben wurden, werden beibehalten. nur die Merkmale, die insbesondere in den neuen Metadaten geändert wurden, werden die Merkmale des grundlegenden Metadaten überschrieben. Einige Eigenschaften wie z. B. <xref:System.Windows.PropertyMetadata.DefaultValue%2A> ersetzt werden, wenn in den neuen Metadaten angegeben. Andere, z. B. <xref:System.Windows.PropertyChangedCallback>, kombiniert werden. Der Merge-Verhalten hängt vom Typ der Metadaten für die Außerkraftsetzung verwendeten ab. Weitere Informationen finden Sie unter [Metadaten für die Abhängigkeitseigenschaft](~/docs/framework/wpf/advanced/dependency-property-metadata.md) und [Framework Eigenschaftsmetadaten](~/docs/framework/wpf/advanced/framework-property-metadata.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerType">
+      <MemberSignature Language="C#" Value="public Type OwnerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type OwnerType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyProperty.OwnerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Objekts ab, das die Abhängigkeitseigenschaft im Eigenschaftensystem registriert oder sich selbst als Besitzer der Eigenschaft hinzugefügt hat.</summary>
+        <value>Der Typ des Objekts, das die Eigenschaft registriert oder sich selbst als Besitzer der Eigenschaft hinzugefügt hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wurde während der Registrierung bereitgestellt. Die Besitzer werden entweder den ursprünglichen Registrierungstyp im Fall von einer <xref:System.Windows.DependencyProperty> Bezeichner generiert eine <xref:System.Windows.DependencyProperty.Register%2A> Aufruf oder der Typ, der sich selbst als Besitzer im Fall von hinzugefügt eine <xref:System.Windows.DependencyProperty> Bezeichner generiert eine <xref:System.Windows.DependencyProperty.AddOwner%2A> aufrufen.  
+  
+ Die <xref:System.Windows.DependencyProperty.OwnerType%2A> auf einem gegebenen <xref:System.Windows.DependencyProperty> ist unveränderlich und nicht mit `null` in eine gültige <xref:System.Windows.DependencyProperty>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ruft den Besitzertyp basierend auf den Bezeichner für eine Abhängigkeitseigenschaft `dp`, und klicken Sie dann Ruft Metadaten für den Besitzertyp ab, dem gleichen Bezeichner. Dieser Vorgang entspricht dem Abrufen von <xref:System.Windows.DependencyProperty.DefaultMetadata%2A> auf `dp`.  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyProperty.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ, den die Abhängigkeitseigenschaft als Wert verwendet.</summary>
+        <value>Die <see cref="T:System.Type" /> des Eigenschaftswerts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Typ der Wert der Eigenschaft, wie durch das von der Registrierung der ursprünglichen, deklariert den `propertyType` Parameter. Ähnlich wie die <xref:System.Windows.DependencyProperty.Name%2A>, der Eigenschaftentyp einer Abhängigkeitseigenschaft nach der Registrierung unveränderlich ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fragt die verschiedenen Eigenschaften der Bezeichner für eine Abhängigkeitseigenschaft, einschließlich der <xref:System.Windows.DependencyProperty.PropertyType%2A>. Die Zeichenfolge der Typ der <xref:System.Windows.DependencyProperty.PropertyType%2A> abgerufen wird von der zurückgegebenen <xref:System.Type>.  
+  
+ [!code-csharp[PropertySystemEsoterics#DPProps](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpprops)]
+ [!code-vb[PropertySystemEsoterics#DPProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyProperty.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies die Abhängigkeitseigenschaft identifizierte <see cref="T:System.Windows.DependencyProperty" /> Instanz ist eine schreibgeschützte Abhängigkeitseigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn die Abhängigkeitseigenschaft schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schreibgeschützte Abhängigkeitseigenschaften im Eigenschaftensystem registriert sind, durch Aufrufen der <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> Methode im Gegensatz zu den <xref:System.Windows.DependencyProperty.Register%2A> Methode. Angefügte Eigenschaften können auch als schreibgeschützt registriert werden; finden Sie unter <xref:System.Windows.DependencyProperty.RegisterAttachedReadOnly%2A>.  
+  
+ Von schreibgeschützten Abhängigkeitseigenschaften erfordern ein <xref:System.Windows.DependencyPropertyKey> Bezeichner anstelle eines <xref:System.Windows.DependencyProperty> Bezeichner auszuführenden Vorgänge mit Metadaten wie z. B. das Überschreiben der Metadaten oder Festlegen des Werts. Wenn Sie eine Auflistung von erworben haben <xref:System.Windows.DependencyProperty> Bezeichner durch einen Aufruf von <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> oder ein anderes [!INCLUDE[TLA2#tla_api](~/includes/tla2sharptla-api-md.md)] Bezeichner, Kontrollkästchen verfügbar macht die <xref:System.Windows.DependencyProperty.ReadOnly%2A> Wert vor dem Aufrufen <xref:System.Windows.DependencyObject.SetValue%2A> oder <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> verwenden, Bezeichner der Abhängigkeitseigenschaft als Eingabeparameter, um sicherzustellen, dass die Abhängigkeitseigenschaft, die den Bezeichner darstellt, nicht schreibgeschützt ist. Wenn der Wert der <xref:System.Windows.DependencyProperty.ReadOnly%2A> ist `true` auf eine Abhängigkeitseigenschaft, es ist keine programmgesteuerte Methode zum Abrufen eines Verweises auf die <xref:System.Windows.DependencyPropertyKey> Bezeichner der Abhängigkeitseigenschaft über die Metadaten oder aus der <xref:System.Windows.DependencyProperty> Bezeichner; der Bezeichner muss als statisches Feld verfügbar sein, um Aufrufen <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> für eine schreibgeschützte Abhängigkeitseigenschaft.  
+  
+ Wenn Sie eine benutzerdefinierte Abhängigkeitseigenschaft erstellen und registrieren Sie ihn als schreibgeschützt, sollten Sie nur einen Get-Accessor für definieren die [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Wrappereigenschaft. Andernfalls müssen die Klasse ein verwirrend Objektmodell für den Eigenschaftenwrapper im Vergleich zu den Zugriff auf die Sicherungsabhängigkeitseigenschaft. Weitere Informationen finden Sie unter [benutzerdefinierte Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/custom-dependency-properties.md) oder [schreibgeschützte Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/read-only-dependency-properties.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ermittelt das Standardmetadatum und den Bezeichner der Abhängigkeitseigenschaften-Eigenschaft aus verschiedenen Abhängigkeit Eigenschaftenfelder und verwendet die Informationen zum Auffüllen einer Tabelle, um eine "Metadatenbrowser" implementieren.  
+  
+ [!code-csharp[PropertySystemEsoterics#DPProps](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpprops)]
+ [!code-vb[PropertySystemEsoterics#DPProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyProperty Register (string name, Type propertyType, Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyProperty Register(string name, class System.Type propertyType, class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.Register(System.String,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft. Der Name muss innerhalb des Registrierungsnamespace des Besitzertyps eindeutig sein.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <summary>Registriert eine Abhängigkeitseigenschaft mit dem angegebenen Eigenschaftsnamen, Eigenschaftstyp und Besitzertyp.</summary>
+        <returns>Bezeichner für eine Abhängigkeitseigenschaft, die verwendet werden soll, zum Festlegen des Werts von einer <see langword="public static readonly" /> -Felds in der Klasse. Dieser Bezeichner wird dann später in Vorgängen (z. B. beim programmgesteuerten Festlegen des Werts oder beim Abrufen von Metadaten) zum Verweisen auf die Abhängigkeitseigenschaft verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[WPFAquariumSln#Register3Param](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#register3param)]
+ [!code-vb[WPFAquariumSln#Register3Param](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#register3param)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyProperty Register (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata typeMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyProperty Register(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata typeMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.Register(System.String,System.Type,System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="typeMetadata">Eigenschaftsmetadaten für die Abhängigkeitseigenschaft.</param>
+        <summary>Registriert eine Abhängigkeitseigenschaft mit dem angegebenen Eigenschaftsnamen, Eigenschaftstyp und Besitzertyp sowie den angegebenen Eigenschaftsmetadaten.</summary>
+        <returns>Bezeichner für eine Abhängigkeitseigenschaft, die verwendet werden soll, zum Festlegen des Werts von einer <see langword="public static readonly" /> -Felds in der Klasse. Dieser Bezeichner wird dann später in Vorgängen (z. B. beim programmgesteuerten Festlegen des Werts oder beim Abrufen von Metadaten) zum Verweisen auf die Abhängigkeitseigenschaft verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyProperty Register (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata typeMetadata, System.Windows.ValidateValueCallback validateValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyProperty Register(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata typeMetadata, class System.Windows.ValidateValueCallback validateValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.Register(System.String,System.Type,System.Type,System.Windows.PropertyMetadata,System.Windows.ValidateValueCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+        <Parameter Name="validateValueCallback" Type="System.Windows.ValidateValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="typeMetadata">Eigenschaftsmetadaten für die Abhängigkeitseigenschaft.</param>
+        <param name="validateValueCallback">Ein Verweis auf einen Rückruf, der eine beliebige benutzerdefinierte Validierung des Werts der Abhängigkeitseigenschaft über die normale Validierung hinaus durchführen soll.</param>
+        <summary>Registriert eine Abhängigkeitseigenschaft mit dem angegebenen Eigenschaftsnamen, Eigenschaftstyp, Besitzertyp, den angegebenen Eigenschaftsmetadaten und einem angegebenen Wertvalidierungsrückruf für die Eigenschaft.</summary>
+        <returns>Bezeichner für eine Abhängigkeitseigenschaft, die verwendet werden soll, zum Festlegen des Werts von einer <see langword="public static readonly" /> -Felds in der Klasse. Dieser Bezeichner wird dann später in Vorgängen (z. B. beim programmgesteuerten Festlegen des Werts oder beim Abrufen von Metadaten) zum Verweisen auf die Abhängigkeitseigenschaft verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel registriert eine Abhängigkeitseigenschaft, z. B. einen Validierungsrückruf (die Rückruf-Definition wird nicht angezeigt; Einzelheiten über die Rückruf-Definition finden Sie unter <xref:System.Windows.ValidateValueCallback>).  
+  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttached">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyProperty RegisterAttached (string name, Type propertyType, Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyProperty RegisterAttached(string name, class System.Type propertyType, class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.RegisterAttached(System.String,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <summary>Registriert eine angefügte Eigenschaft mit dem angegebenen Eigenschaftsnamen, Eigenschaftstyp und Besitzertyp.</summary>
+        <returns>Bezeichner für eine Abhängigkeitseigenschaft, die verwendet werden soll, zum Festlegen des Werts von einer <see langword="public static readonly" /> -Felds in der Klasse. Dieser Bezeichner wird dann später in Vorgängen (z. B. beim programmgesteuerten Festlegen des Werts oder beim Abrufen von Metadaten) zum Verweisen auf die Abhängigkeitseigenschaft verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine angefügte Eigenschaft ist eine Eigenschaftenkonzept von definierten [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]implementiert angefügte Eigenschaften als Abhängigkeitseigenschaften. Da die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] angefügte Eigenschaften Abhängigkeitseigenschaften, sie können Metadaten angewendet, die vom Eigenschaftensystem allgemeine für Vorgänge wie z. B. reporting Layouteigenschaften verwendet werden kann. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel registriert eine angefügte Eigenschaft für eine abstrakte Klasse, die mit diesem <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Signatur.  
+  
+ [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler2](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler2)]
+ [!code-vb[WPFAquariumSln#RegisterAttachedBubbler2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttached">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyProperty RegisterAttached (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata defaultMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyProperty RegisterAttached(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata defaultMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.RegisterAttached(System.String,System.Type,System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="defaultMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="defaultMetadata">Eigenschaftenmetadaten für die Abhängigkeitseigenschaft. Dies kann den Standardwert sowie andere Merkmale einschließen.</param>
+        <summary>Registriert eine angefügte Eigenschaft mit dem angegebenen Eigenschaftsnamen, Eigenschaftstyp und Besitzertyp sowie den angegebenen Eigenschaftenmetadaten.</summary>
+        <returns>Bezeichner für eine Abhängigkeitseigenschaft, die verwendet werden soll, zum Festlegen des Werts von einer <see langword="public static readonly" /> -Felds in der Klasse. Dieser Bezeichner wird dann später in Vorgängen (z. B. beim programmgesteuerten Festlegen des Werts oder beim Abrufen von Metadaten) zum Verweisen auf die Abhängigkeitseigenschaft verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine angefügte Eigenschaft ist eine Eigenschaftenkonzept von definierten [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]implementiert angefügte Eigenschaften als Abhängigkeitseigenschaften. Da die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] angefügte Eigenschaften Abhängigkeitseigenschaften, sie können Metadaten angewendet, die vom Eigenschaftensystem allgemeine für Vorgänge wie z. B. reporting Layouteigenschaften verwendet werden kann. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+## <a name="use-registerattached-for-value-inheriting-dependency-properties"></a>Verwendung von RegisterAttached für Abhängigkeitseigenschaften erben  
+ Ein bestimmtes Szenario für eine Abhängigkeitseigenschaft mit <xref:System.Windows.DependencyProperty.RegisterAttached%2A> anstelle von <xref:System.Windows.DependencyProperty.Register%2A> dient zur Unterstützung der Vererbung von Eigenschaftenwerten. Registrieren Sie erben von Abhängigkeitseigenschaften mit <xref:System.Windows.DependencyProperty.RegisterAttached%2A> , auch wenn die Klasse Wrapper Eigenschaftenaccessoren definiert, die die Abhängigkeitseigenschaft verfügbar machen, und auch wenn Sie nicht beabsichtigen, Get * und * Satz statische Methoden zur Bereitstellung verfügbar machen "true" angefügt Support-Eigenschaftenaccessoren.   Obwohl Vererbung von Eigenschaftenwerten Laufzeitstruktur Abhängigkeitseigenschaften funktionieren scheint, ist das Verhalten der Vererbung für eine nicht angefügte Eigenschaft über bestimmte Elementgrenzen in der Common Language Runtime-Struktur nicht definiert. Beim Registrieren der Eigenschaft, wie effektiv angeschlossenen macht der angefügten Eigenschaft eine globale Eigenschaft im Eigenschaftensystem und gewährleistet, dass die Vererbung von Eigenschaftenwerten über alle Grenzen in eine Elementstruktur funktioniert. Verwenden Sie immer <xref:System.Windows.DependencyProperty.RegisterAttached%2A> zum Registrieren von Eigenschaften in dem Sie angeben <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> in den Metadaten. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](~/docs/framework/wpf/advanced/property-value-inheritance.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttached">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyProperty RegisterAttached (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata defaultMetadata, System.Windows.ValidateValueCallback validateValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyProperty RegisterAttached(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata defaultMetadata, class System.Windows.ValidateValueCallback validateValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.RegisterAttached(System.String,System.Type,System.Type,System.Windows.PropertyMetadata,System.Windows.ValidateValueCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="defaultMetadata" Type="System.Windows.PropertyMetadata" />
+        <Parameter Name="validateValueCallback" Type="System.Windows.ValidateValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="defaultMetadata">Eigenschaftenmetadaten für die Abhängigkeitseigenschaft. Dies kann den Standardwert sowie andere Merkmale einschließen.</param>
+        <param name="validateValueCallback">Ein Verweis auf einen Rückruf, der eine beliebige benutzerdefinierte Validierung des Werts der Abhängigkeitseigenschaft über die normale Validierung hinaus durchführen soll.</param>
+        <summary>Registriert eine angefügte Eigenschaft mit dem angegebenen Eigenschaftstyp, Besitzertyp, den angegebenen Eigenschaftsmetadaten und dem angegebenen Wertvalidierungsrückruf für die Eigenschaft.</summary>
+        <returns>Bezeichner für eine Abhängigkeitseigenschaft, die verwendet werden soll, zum Festlegen des Werts von einer <see langword="public static readonly" /> -Felds in der Klasse. Dieser Bezeichner wird dann später in Vorgängen (z. B. beim programmgesteuerten Festlegen des Werts oder beim Abrufen von Metadaten) zum Verweisen auf die Abhängigkeitseigenschaft verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine angefügte Eigenschaft ist eine Eigenschaftenkonzept von definierten [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]implementiert angefügte Eigenschaften als Abhängigkeitseigenschaften. Da die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] angefügte Eigenschaften Abhängigkeitseigenschaften, sie können Metadaten angewendet, die vom Eigenschaftensystem allgemeine für Vorgänge wie z. B. reporting Layouteigenschaften verwendet werden kann. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+## <a name="use-registerattached-for-value-inheriting-dependency-properties"></a>Verwendung von RegisterAttached für Abhängigkeitseigenschaften erben  
+ Ein bestimmtes Szenario für eine Abhängigkeitseigenschaft mit <xref:System.Windows.DependencyProperty.RegisterAttached%2A> anstelle von <xref:System.Windows.DependencyProperty.Register%2A> dient zur Unterstützung der Vererbung von Eigenschaftenwerten. Registrieren Sie erben von Abhängigkeitseigenschaften mit <xref:System.Windows.DependencyProperty.RegisterAttached%2A> , auch wenn die Klasse Wrapper Eigenschaftenaccessoren definiert, die die Abhängigkeitseigenschaft verfügbar machen, und auch wenn Sie nicht beabsichtigen, Get * und * Satz statische Methoden zur Bereitstellung verfügbar machen "true" angefügt Support-Eigenschaftenaccessoren.   Obwohl Vererbung von Eigenschaftenwerten Laufzeitstruktur Abhängigkeitseigenschaften funktionieren scheint, ist das Verhalten der Vererbung für eine nicht angefügte Eigenschaft über bestimmte Elementgrenzen in der Common Language Runtime-Struktur nicht definiert. Beim Registrieren der Eigenschaft, wie effektiv angeschlossenen macht der angefügten Eigenschaft eine globale Eigenschaft im Eigenschaftensystem und gewährleistet, dass die Vererbung von Eigenschaftenwerten über alle Grenzen in eine Elementstruktur funktioniert. Verwenden Sie immer <xref:System.Windows.DependencyProperty.RegisterAttached%2A> zum Registrieren von Eigenschaften in dem Sie angeben <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> in den Metadaten. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](~/docs/framework/wpf/advanced/property-value-inheritance.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel registriert eine angefügte Eigenschaft für eine abstrakte Klasse, die mit diesem <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Signatur. Diese angefügte Eigenschaft ist eine Enumeration Type-Eigenschaft, und die Registrierung Fügt einen Validierungsrückruf, um sicherzustellen, dass der bereitgestellte Wert ein Wert aus der Enumeration ist.  
+  
+ [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler2](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler2)]
+ [!code-vb[WPFAquariumSln#RegisterAttachedBubbler2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttachedReadOnly">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyPropertyKey RegisterAttachedReadOnly (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata defaultMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyPropertyKey RegisterAttachedReadOnly(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata defaultMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.RegisterAttachedReadOnly(System.String,System.Type,System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="defaultMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="defaultMetadata">Eigenschaftsmetadaten für die Abhängigkeitseigenschaft.</param>
+        <summary>Registriert eine schreibgeschützte angefügte Eigenschaft mit dem angegebenen Eigenschaftstyp und Besitzertyp sowie den angegebenen Eigenschaftsmetadaten.</summary>
+        <returns>Ein Schlüssel für eine Abhängigkeitseigenschaft, der zum Festlegen des Werts für ein statisches schreibgeschütztes Feld in der Klasse verwendet werden sollte. Mit diesem wird dann später auf die Abhängigkeitseigenschaft verwiesen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Typ zurück <xref:System.Windows.DependencyPropertyKey>, wohingegen <xref:System.Windows.DependencyProperty.RegisterAttached%2A> gibt den Typ zurück <xref:System.Windows.DependencyProperty>. In der Regel die Schlüssel, die schreibgeschützten Eigenschaften darstellen sind nicht öffentlich gemacht, da der Schlüssel können, zum Festlegen des Werts der Abhängigkeitseigenschaft verwendet werden durch Aufrufen <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>. Entwurfs Klasse wirkt sich die Anforderungen, aber es wird im Allgemeinen empfohlen, die Zugriffsrechte und die Sichtbarkeit aller beschränken <xref:System.Windows.DependencyPropertyKey> nur die Teile des Codes, die zum Festlegen dieser Abhängigkeitseigenschaft als Teil der Klasse oder eine Anwendung Logik erforderlich sind. Es wird empfohlen, dass für die schreibgeschützte Abhängigkeitseigenschaft Bezeichner für eine Abhängigkeitseigenschaft verfügbar machen, indem der Wert der <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A?displayProperty=nameWithType> als eine `public static readonly` -Feld in der Klasse.  
+  
+ Schreibgeschützte angefügte Eigenschaften sind einem seltenen Fall, da das Hauptszenario für eine angefügte Eigenschaft die Verwendung in ist [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Ohne einen öffentlichen Setter kann keine angefügte Eigenschaft festgelegt werden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Syntax.  
+  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+## <a name="use-registerattached-for-value-inheriting-dependency-properties"></a>Verwendung von RegisterAttached für Abhängigkeitseigenschaften erben  
+ Ein bestimmtes Szenario für eine Abhängigkeitseigenschaft als zur Unterstützung der Vererbung von Eigenschaftenwerten ist angefügt. Registrieren Sie erben von Abhängigkeitseigenschaften mit <xref:System.Windows.DependencyProperty.RegisterAttached%2A> , auch wenn die Klasse Wrapper Eigenschaftenaccessoren definiert, die die Abhängigkeitseigenschaft verfügbar machen, und auch wenn Sie nicht beabsichtigen, Get * und * Satz statische Methoden zur Bereitstellung verfügbar machen "true" angefügt Support-Eigenschaftenaccessoren.   Obwohl Vererbung von Eigenschaftenwerten Laufzeitstruktur Abhängigkeitseigenschaften funktionieren scheint, ist das Verhalten der Vererbung für eine nicht angefügte Eigenschaft über bestimmte Elementgrenzen in der Common Language Runtime-Struktur nicht definiert. Beim Registrieren der Eigenschaft, wie effektiv angeschlossenen macht der angefügten Eigenschaft eine globale Eigenschaft im Eigenschaftensystem und gewährleistet, dass die Vererbung von Eigenschaftenwerten über alle Grenzen in eine Elementstruktur funktioniert. Verwenden Sie immer <xref:System.Windows.DependencyProperty.RegisterAttached%2A> zum Registrieren von Eigenschaften in dem Sie angeben <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> in den Metadaten. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](~/docs/framework/wpf/advanced/property-value-inheritance.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttachedReadOnly">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyPropertyKey RegisterAttachedReadOnly (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata defaultMetadata, System.Windows.ValidateValueCallback validateValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyPropertyKey RegisterAttachedReadOnly(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata defaultMetadata, class System.Windows.ValidateValueCallback validateValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.RegisterAttachedReadOnly(System.String,System.Type,System.Type,System.Windows.PropertyMetadata,System.Windows.ValidateValueCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="defaultMetadata" Type="System.Windows.PropertyMetadata" />
+        <Parameter Name="validateValueCallback" Type="System.Windows.ValidateValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="defaultMetadata">Eigenschaftsmetadaten für die Abhängigkeitseigenschaft.</param>
+        <param name="validateValueCallback">Ein Verweis auf einen benutzerdefinierten Rückruf, der eine beliebige benutzerdefinierte Validierung des Werts der Abhängigkeitseigenschaft über die normale Validierung hinaus durchführen soll.</param>
+        <summary>Registriert eine schreibgeschützte Eigenschaft mit dem angegebenen Eigenschaftstyp, Besitzertyp, den angegebenen Eigenschaftsmetadaten und einem Validierungsrückruf.</summary>
+        <returns>Ein Abhängigkeitseigenschaftsschlüssel, der dazu verwendet werden soll, den Wert eines statischen schreibgeschützten Felds in Ihrer Klasse festzulegen, die dann dazu verwendet wird, auf die Abhängigkeitseigenschaft zu verweisen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Typ zurück <xref:System.Windows.DependencyPropertyKey>, wohingegen <xref:System.Windows.DependencyProperty.RegisterAttached%2A> gibt den Typ zurück <xref:System.Windows.DependencyProperty>. In der Regel die Schlüssel, die den Typ darstellen <xref:System.Windows.DependencyProperty>. In der Regel die Schlüssel, die schreibgeschützten Eigenschaften darstellen sind nicht öffentlich gemacht, da der Schlüssel können, zum Festlegen des Werts der Abhängigkeitseigenschaft verwendet werden durch Aufrufen <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>. Entwurfs Klasse wirkt sich die Anforderungen, aber es wird im Allgemeinen empfohlen, die Zugriffsrechte und die Sichtbarkeit aller beschränken <xref:System.Windows.DependencyPropertyKey> nur die Teile des Codes, die zum Festlegen dieser Abhängigkeitseigenschaft als Teil der Klasse oder eine Anwendung Logik erforderlich sind. Es wird empfohlen, dass für die schreibgeschützte Abhängigkeitseigenschaft Bezeichner für eine Abhängigkeitseigenschaft verfügbar machen, indem der Wert der <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A?displayProperty=nameWithType> als eine `public static readonly` -Feld in der Klasse.  
+  
+ Schreibgeschützte angefügte Eigenschaften sind einem seltenen Fall, da das Hauptszenario für eine angefügte Eigenschaft die Verwendung in ist [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Ohne einen öffentlichen Setter kann keine angefügte Eigenschaft festgelegt werden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Syntax.  
+  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+## <a name="use-registerattached-for-value-inheriting-dependency-properties"></a>Verwendung von RegisterAttached für Abhängigkeitseigenschaften erben  
+ Ein bestimmtes Szenario für eine Abhängigkeitseigenschaft registrieren, wie anstelle von angeschlossenen <xref:System.Windows.DependencyProperty.Register%2A> dient zur Unterstützung der Vererbung von Eigenschaftenwerten. Registrieren Sie erben von Abhängigkeitseigenschaften mit <xref:System.Windows.DependencyProperty.RegisterAttached%2A> , auch wenn die Klasse Wrapper Eigenschaftenaccessoren definiert, die die Abhängigkeitseigenschaft verfügbar machen, und auch wenn Sie nicht beabsichtigen, Get * und * Satz statische Methoden zur Bereitstellung verfügbar machen "true" angefügt Support-Eigenschaftenaccessoren.   Obwohl Vererbung von Eigenschaftenwerten Laufzeitstruktur Abhängigkeitseigenschaften funktionieren scheint, ist das Verhalten der Vererbung für eine nicht angefügte Eigenschaft über bestimmte Elementgrenzen in der Common Language Runtime-Struktur nicht definiert. Beim Registrieren der Eigenschaft, wie effektiv angeschlossenen macht der angefügten Eigenschaft eine globale Eigenschaft im Eigenschaftensystem und gewährleistet, dass die Vererbung von Eigenschaftenwerten über alle Grenzen in eine Elementstruktur funktioniert. Verwenden Sie immer <xref:System.Windows.DependencyProperty.RegisterAttached%2A> zum Registrieren von Eigenschaften in dem Sie angeben <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> in den Metadaten. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](~/docs/framework/wpf/advanced/property-value-inheritance.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterReadOnly">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyPropertyKey RegisterReadOnly (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata typeMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyPropertyKey RegisterReadOnly(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata typeMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.RegisterReadOnly(System.String,System.Type,System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="typeMetadata">Eigenschaftsmetadaten für die Abhängigkeitseigenschaft.</param>
+        <summary>Registriert eine schreibgeschützte Abhängigkeitseigenschaft mit dem angegebenen Eigenschaftstyp und Besitzertyp sowie den angegebenen Eigenschaftsmetadaten.</summary>
+        <returns>Ein Abhängigkeitseigenschaftsschlüssel, der dazu verwendet werden soll, den Wert eines statischen schreibgeschützten Felds in Ihrer Klasse festzulegen, die dann dazu verwendet wird, auf die Abhängigkeitseigenschaft zu verweisen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Typ zurück <xref:System.Windows.DependencyPropertyKey>, wohingegen <xref:System.Windows.DependencyProperty.RegisterAttached%2A> gibt den Typ zurück <xref:System.Windows.DependencyProperty>. In der Regel die Schlüssel, die schreibgeschützten Eigenschaften darstellen sind nicht öffentlich gemacht, da der Schlüssel können, zum Festlegen des Werts der Abhängigkeitseigenschaft verwendet werden durch Aufrufen <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>. Entwurfs Klasse wirkt sich die Anforderungen, aber es wird im Allgemeinen empfohlen, die Zugriffsrechte und die Sichtbarkeit aller beschränken <xref:System.Windows.DependencyPropertyKey> nur die Teile des Codes, die zum Festlegen dieser Abhängigkeitseigenschaft als Teil der Klasse oder eine Anwendung Logik erforderlich sind. Es wird empfohlen, dass für die schreibgeschützte Abhängigkeitseigenschaft Bezeichner für eine Abhängigkeitseigenschaft verfügbar machen, indem der Wert der <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A?displayProperty=nameWithType> als eine `public static readonly` -Feld in der Klasse.  
+  
+ Schreibgeschützte Abhängigkeitseigenschaften sind eine Recht typische Szenario sowohl in der vorhandenen [!INCLUDE[TLA2#tla_api](~/includes/tla2sharptla-api-md.md)] und-Anpassungsszenarien, da andere [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Funktionen erfordern möglicherweise eine Abhängigkeitseigenschaft, auch wenn diese Eigenschaft nicht festgelegt werden, indem sein soll Aufrufer. Sie können den Wert einer schreibgeschützten Abhängigkeitseigenschaft als Grundlage für andere Systemoperationen, die eine Abhängigkeitseigenschaft, z. B. basieren eine <xref:System.Windows.Trigger> auf die Abhängigkeitseigenschaft in einem Format.  
+  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel registriert eine `AquariumSize` Abhängigkeitseigenschaft als schreibgeschützt. Im Beispiel definiert `AquariumSizeKey` als interner Schlüssel (also, dass andere Klassen in der Assembly konnte Metadaten überschreiben) und der Bezeichner der Abhängigkeitseigenschaft auf diesen Schlüssel als basierend macht `AquariumSizeProperty`. Darüber hinaus wird ein Wrapper für erstellt `AquariumSize`, mit nur einem Get-Accessor.  
+  
+ [!code-csharp[WPFAquariumSln#RODP](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodp)]
+ [!code-vb[WPFAquariumSln#RODP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterReadOnly">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyPropertyKey RegisterReadOnly (string name, Type propertyType, Type ownerType, System.Windows.PropertyMetadata typeMetadata, System.Windows.ValidateValueCallback validateValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyPropertyKey RegisterReadOnly(string name, class System.Type propertyType, class System.Type ownerType, class System.Windows.PropertyMetadata typeMetadata, class System.Windows.ValidateValueCallback validateValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.RegisterReadOnly(System.String,System.Type,System.Type,System.Windows.PropertyMetadata,System.Windows.ValidateValueCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+        <Parameter Name="validateValueCallback" Type="System.Windows.ValidateValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu registrierenden Abhängigkeitseigenschaft.</param>
+        <param name="propertyType">Der Typ der Eigenschaft.</param>
+        <param name="ownerType">Der Besitzertyp, von dem die Abhängigkeitseigenschaft registriert wird.</param>
+        <param name="typeMetadata">Eigenschaftsmetadaten für die Abhängigkeitseigenschaft.</param>
+        <param name="validateValueCallback">Ein Verweis auf einen benutzerdefinierten Rückruf, der eine beliebige benutzerdefinierte Validierung des Werts der Abhängigkeitseigenschaft über die normale Validierung hinaus durchführen soll.</param>
+        <summary>Registriert eine schreibgeschützte Abhängigkeitseigenschaft mit dem angegebenen Eigenschaftstyp, Besitzertyp, den angegebenen Eigenschaftsmetadaten und einem Validierungsrückruf.</summary>
+        <returns>Ein Schlüssel für eine Abhängigkeitseigenschaft, der zum Festlegen des Werts für ein statisches schreibgeschütztes Feld in der Klasse verwendet werden sollte. Mit diesem wird dann später auf die Abhängigkeitseigenschaft verwiesen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Typ zurück <xref:System.Windows.DependencyPropertyKey>, wohingegen <xref:System.Windows.DependencyProperty.RegisterAttached%2A> gibt den Typ zurück <xref:System.Windows.DependencyProperty>. In der Regel die Schlüssel, die schreibgeschützten Eigenschaften darstellen sind nicht öffentlich gemacht, da der Schlüssel können, zum Festlegen des Werts der Abhängigkeitseigenschaft verwendet werden durch Aufrufen <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>. Entwurfs Klasse wirkt sich die Anforderungen, aber es wird im Allgemeinen empfohlen, die Zugriffsrechte und die Sichtbarkeit aller beschränken <xref:System.Windows.DependencyPropertyKey> nur die Teile des Codes, die zum Festlegen dieser Abhängigkeitseigenschaft als Teil der Klasse oder eine Anwendung Logik erforderlich sind. Es wird empfohlen, dass für die schreibgeschützte Abhängigkeitseigenschaft Bezeichner für eine Abhängigkeitseigenschaft verfügbar machen, indem der Wert der <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A?displayProperty=nameWithType> als eine `public static readonly` -Feld in der Klasse.  
+  
+ Schreibgeschützte Abhängigkeitseigenschaften sind eine Recht typische Szenario. Sie können den Wert einer schreibgeschützten Abhängigkeitseigenschaft als Grundlage für andere Systemoperationen, die eine Abhängigkeitseigenschaft, z. B. basieren eine <xref:System.Windows.Trigger> auf die Abhängigkeitseigenschaft in einem Format.  
+  
+ Weitere Informationen zur Registrierung von Abhängigkeitseigenschaften finden Sie unter <xref:System.Windows.DependencyProperty>.  
+  
+ Überprüfung auf eine schreibgeschützte Abhängigkeitseigenschaft möglicherweise weniger wichtig. Die nicht öffentliche Zugriffsebene, die Sie für den Schlüssel angeben, verringert die Wahrscheinlichkeit für beliebige ungültige Eingaben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyProperty.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung der Abhängigkeitseigenschaft zurück.</summary>
+        <returns>Die Zeichenfolgendarstellung der Abhängigkeitseigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung gibt die <xref:System.Windows.DependencyProperty.Name%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsetValue">
+      <MemberSignature Language="C#" Value="public static readonly object UnsetValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object UnsetValue" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DependencyProperty.UnsetValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen statischen Wert an, mit der die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem statt <see langword="null" /> um anzugeben, dass die Eigenschaft vorhanden ist, nicht jedoch den Wert, der durch das Eigenschaftensystem festgelegt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyProperty.UnsetValue>ist ein Sentinelwert, die für Szenarios verwendet wird, in dem die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem kann einen angeforderten bestimmen <xref:System.Windows.DependencyProperty> Wert. <xref:System.Windows.DependencyProperty.UnsetValue>wird verwendet, anstatt `null`, da `null` konnte einen gültigen Eigenschaftswert als auch einen gültigen (und häufig verwendet werden) <xref:System.Windows.PropertyMetadata.DefaultValue%2A>.  
+  
+ <xref:System.Windows.DependencyProperty.UnsetValue>wird niemals zurückgegeben von <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType>. Beim Aufruf <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> auf eine Abhängigkeitseigenschaft für eine <xref:System.Windows.DependencyObject> Instanz, eines der folgenden gilt:  
+  
+-   Eine Abhängigkeitseigenschaft hat einen Standardwert, der in den Metadaten eingerichtet, und dieser Wert wird zurückgegeben. Dieser Wert stammt möglicherweise aus <xref:System.Windows.DependencyProperty.DefaultMetadata%2A>.  
+  
+-   Ein anderer Wert von dem Eigenschaftensystem hergestellt wurde, und der Standardwert ist nicht mehr relevant. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ Festlegen einer <xref:System.Windows.PropertyMetadata.DefaultValue%2A> von <xref:System.Windows.DependencyProperty.UnsetValue> ist ausdrücklich nicht zulässig.  
+  
+ <xref:System.Windows.DependencyObject.ReadLocalValue%2A?displayProperty=nameWithType>Gibt <xref:System.Windows.DependencyProperty.UnsetValue> Wenn die angeforderte Eigenschaft wurde nicht lokal festgelegt wurde.  
+  
+ <xref:System.Windows.DependencyProperty.UnsetValue>hat eine besondere Bedeutung, wenn als den Rückgabewert verwendet eine <xref:System.Windows.CoerceValueCallback>. Weitere Informationen finden Sie unter [Rückrufen von Abhängigkeitseigenschaften und Validierung](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+ Wenn Sie in einer Datenbank binden, beachten Sie, dass <xref:System.Windows.DependencyProperty.UnsetValue> entspricht nicht dem <xref:System.DBNull.Value>, auf ähnliche Weise, wie Sie <xref:System.DBNull.Value> entspricht keinem NULL-Wert "true".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateValueCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.ValidateValueCallback ValidateValueCallback { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.ValidateValueCallback ValidateValueCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyProperty.ValidateValueCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ValidateValueCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wertvalidierungsrückruf für die Abhängigkeitseigenschaft ab.</summary>
+        <value>Der Wertvalidierungsrückruf für diese Abhängigkeitseigenschaft an, wie in der <paramref name="validateValueCallback" /> Parameter in der ursprünglichen Registrierung der Abhängigkeitseigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält `null` für jede Abhängigkeitseigenschaft ohne registrierten Validierungsrückruf.  
+  
+ Rückrufe werden, wie statische verwendet müssen Wert von Validate: Überprüfung angewendet wird, über die <xref:System.Windows.ValidateValueCallback> kann bestimmen, ob der angegebene Wert für eine bestimmte Instanz gültig ist. Der Rückruf kann nur festgelegt, ob alle Objekte, die die Abhängigkeitseigenschaft besitzen soll oder sollte den angegebenen Wert als gültig akzeptiert. Wenn müssen Sie die Überprüfung ausführen, der verwendet wird, erkennbar sein muss, die Werte der anderen Abhängigkeitseigenschaften in einer bestimmten Instanz, verwenden eine <xref:System.Windows.CoerceValueCallback> stattdessen. Die <xref:System.Windows.CoerceValueCallback> als Teil der Metadaten für Abhängigkeitseigenschaften, anstatt direkt im Bezeichner für die Abhängigkeitseigenschaft registriert wird. Weitere Informationen finden Sie unter [Rückrufen von Abhängigkeitseigenschaften und Validierung](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

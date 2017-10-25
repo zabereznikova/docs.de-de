@@ -1,0 +1,240 @@
+<Type Name="CodeParameterDeclarationExpression" FullName="System.CodeDom.CodeParameterDeclarationExpression">
+  <TypeSignature Language="C#" Value="public class CodeParameterDeclarationExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeParameterDeclarationExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeParameterDeclarationExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Parameterdeklaration für eine Methode, eine Eigenschaft oder ein Konstruktor dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeParameterDeclarationExpression>kann verwendet werden, um Code darzustellen, die einen Parameter für eine Methode, eine Eigenschaft oder ein Konstruktor deklariert.  
+  
+ Die <xref:System.CodeDom.CodeParameterDeclarationExpression.Name%2A> Eigenschaft gibt den Namen des Parameters. Die <xref:System.CodeDom.CodeParameterDeclarationExpression.Type%2A> Eigenschaft gibt den Datentyp des Parameters. Die <xref:System.CodeDom.CodeParameterDeclarationExpression.Direction%2A> Eigenschaft gibt an, den Richtungsmodifizierer des Parameters. Die <xref:System.CodeDom.CodeParameterDeclarationExpression.CustomAttributes%2A> Eigenschaft gibt an, die den Parameter zugeordneten Attribute.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von <xref:System.CodeDom.CodeParameterDeclarationExpression> Parameter einer Methode mit verschiedenen deklarieren <xref:System.CodeDom.FieldDirection> Feld Verweis Typspezifizierer.  
+  
+ [!code-cpp[CodeParameterDeclarationExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeParameterDeclarationExample/CPP/codeparameterdeclarationexample.cpp#3)]
+ [!code-csharp[CodeParameterDeclarationExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeParameterDeclarationExample/CS/codeparameterdeclarationexample.cs#3)]
+ [!code-vb[CodeParameterDeclarationExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeParameterDeclarationExample/VB/codeparameterdeclarationexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression (System.CodeDom.CodeTypeReference type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor(System.CodeDom.CodeTypeReference,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Objekt, das den Typ der zu deklarierenden Parameters angibt.</param>
+        <param name="name">Der Name des Parameters zu deklarieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" /> -Klasse mit dem angegebenen Parametertyp und Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression (string type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Parameters zu deklarieren.</param>
+        <param name="name">Der Name des Parameters zu deklarieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" /> -Klasse mit dem angegebenen Parametertyp und Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `type` Parameter verweist auf einen generischen Typ, muss er die Syntaxkonventionen für generische Typen entsprechen. Generische Typen werden wie folgt formatiert: der Name des Typs, gefolgt von einem Gravis-Akzent ("" "), gefolgt von einer Anzahl von generischen Typargumenten, gefolgt von den Parametern, die durch Klammern getrennt.  
+  
+> [!NOTE]
+>  Zur Begrenzung von generischer Parameters müssen Sie eckige Klammern ([]) und nicht die C#-spitzen Klammern (<>) verwenden.  
+  
+ Um die Möglichkeit, einen syntaktischen Fehler zu vermeiden, sollten Sie mithilfe der <xref:System.CodeDom.CodeParameterDeclarationExpression.%23ctor%28System.Type%2CSystem.String%29> Konstruktor, der einen Typ anstelle einer Zeichenfolge als Parameter akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeParameterDeclarationExpression (Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeParameterDeclarationExpression.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Parameters zu deklarieren.</param>
+        <param name="name">Der Name des Parameters zu deklarieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeParameterDeclarationExpression" /> -Klasse mit dem angegebenen Parametertyp und Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomAttributes">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeAttributeDeclarationCollection CustomAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeAttributeDeclarationCollection CustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.CustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeAttributeDeclarationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die benutzerdefinierten Attribute für die Parameterdeklaration.</summary>
+        <value>Ein Objekt, das die benutzerdefinierten Attribute angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.CodeDom.FieldDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.FieldDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.FieldDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Richtung des Felds fest.</summary>
+        <value>Ein Objekt, der die Richtung des Felds angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Parameters ab oder legt diesen fest.</summary>
+        <value>Der Name des Parameters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference Type" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeParameterDeclarationExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Parameters fest.</summary>
+        <value>Der Typ des Parameters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

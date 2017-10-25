@@ -1,0 +1,238 @@
+<Type Name="EntityObject" FullName="System.Data.Objects.DataClasses.EntityObject">
+  <TypeSignature Language="C#" Value="public abstract class EntityObject : System.Data.Objects.DataClasses.StructuralObject, System.Data.Objects.DataClasses.IEntityWithChangeTracker, System.Data.Objects.DataClasses.IEntityWithKey, System.Data.Objects.DataClasses.IEntityWithRelationships" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit EntityObject extends System.Data.Objects.DataClasses.StructuralObject implements class System.Data.Objects.DataClasses.IEntityWithChangeTracker, class System.Data.Objects.DataClasses.IEntityWithKey, class System.Data.Objects.DataClasses.IEntityWithRelationships" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EntityObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.StructuralObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.Objects.DataClasses.IEntityWithChangeTracker</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Data.Objects.DataClasses.IEntityWithKey</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Data.Objects.DataClasses.IEntityWithRelationships</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract(IsReference=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Basisklasse für die mit den Entity Data Model-Tools generierten Entitätstypen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EntityObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.DataClasses.EntityObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityKey">
+      <MemberSignature Language="C#" Value="public System.Data.EntityKey EntityKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityKey EntityKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityObject.EntityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel für dieses Objekt ab oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.Data.EntityKey" /> für dieses Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.IEntityWithKey.EntityKey%2A>-Eigenschaft wird von Object Services verwendet, um Objekte im Objektkontext zu verwalten.  
+  
+ Kann nicht festgelegt werden die <xref:System.Data.Objects.DataClasses.EntityObject.EntityKey%2A> Eigenschaft nach einem Objekt zugeordnet ist ein <xref:System.Data.Objects.ObjectContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityState">
+      <MemberSignature Language="C#" Value="public System.Data.EntityState EntityState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.EntityState EntityState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityObject.EntityState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Entitätszustand des Objekts ab.</summary>
+        <value>Der <see cref="T:System.Data.EntityState" /> dieses Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Objekt als Ergebnis einer Abfrage oder durch Aufrufen von <xref:System.Data.Objects.ObjectContext.Attach%2A> mit dem Objektkontext verbunden ist, wird der <xref:System.Data.EntityState> auf <xref:System.Data.EntityState.Unchanged> gesetzt.  
+  
+ Wenn ein Objekt vom Objektkontext getrennt ist, wird es in den <xref:System.Data.EntityState.Detached>-Zustand zurückgesetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override sealed void ReportPropertyChanged (string property);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ReportPropertyChanged(string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityObject.ReportPropertyChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="property">Der Name der geänderten Eigenschaft.</param>
+        <summary>Benachrichtigt das System zur Änderungsnachverfolgung über die Änderung einer Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Entitätstyp von den Entity Data Model-Tools generiert wird die <xref:System.Data.Objects.DataClasses.EntityObject.ReportPropertyChanged%2A> Methode wird aufgerufen, nachdem die Änderung einer Eigenschaft auf den zwischengespeicherten Wert in einen commit der <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> als der ursprüngliche Wert der Eigenschaft.  
+  
+ Von dieser Methode wird die <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged%2A>-Methode im System zur Änderungsnachverfolgung aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="property" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportPropertyChanging">
+      <MemberSignature Language="C#" Value="protected override sealed void ReportPropertyChanging (string property);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ReportPropertyChanging(string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityObject.ReportPropertyChanging(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="property">Der Name der Eigenschaft, die geändert wird.</param>
+        <summary>Benachrichtigt das System zur Änderungsnachverfolgung über eine ausstehende Änderung einer Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Entitätstyp von den Entity Data Model-Tools generiert wird die <xref:System.Data.Objects.DataClasses.EntityObject.ReportPropertyChanging%2A> Methode wird aufgerufen, bevor die Änderung einer Eigenschaft zum Zwischenspeichern des aktuellen Wert der Eigenschaft in der <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> , damit dieser Wert als der ursprüngliche Wert für die Eigenschaft verwendet werden kann.  
+  
+ Von dieser Methode wird die <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging%2A>-Methode im System zur Änderungsnachverfolgung aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="property" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Objects.DataClasses.IEntityWithChangeTracker.SetChangeTracker">
+      <MemberSignature Language="C#" Value="void IEntityWithChangeTracker.SetChangeTracker (System.Data.Objects.DataClasses.IEntityChangeTracker changeTracker);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Objects.DataClasses.IEntityWithChangeTracker.SetChangeTracker(class System.Data.Objects.DataClasses.IEntityChangeTracker changeTracker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityObject.System#Data#Objects#DataClasses#IEntityWithChangeTracker#SetChangeTracker(System.Data.Objects.DataClasses.IEntityChangeTracker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changeTracker" Type="System.Data.Objects.DataClasses.IEntityChangeTracker" />
+      </Parameters>
+      <Docs>
+        <param name="changeTracker">Verweis auf das System zur Änderungsnachverfolgung, mit dem Änderungen an Eigenschaften gemeldet werden.</param>
+        <summary>Gibt die Instanz von <see cref="T:System.Data.Objects.DataClasses.IEntityChangeTracker" /> an, mit der Änderungen an Eigenschaften gemeldet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Object Services aufgerufen, um für das Objekt die Instanz von <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> anzugeben, mit der Änderungen nachverfolgt werden. Sie wird in der Regel aufgerufen, wenn die Entität einem <xref:System.Data.Objects.ObjectContext> hinzugefügt oder aus diesem entfernt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Objects.DataClasses.IEntityWithRelationships.RelationshipManager">
+      <MemberSignature Language="C#" Value="System.Data.Objects.DataClasses.RelationshipManager System.Data.Objects.DataClasses.IEntityWithRelationships.RelationshipManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Objects.DataClasses.RelationshipManager System.Data.Objects.DataClasses.IEntityWithRelationships.RelationshipManager" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityObject.System#Data#Objects#DataClasses#IEntityWithRelationships#RelationshipManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.DataClasses.RelationshipManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von diesem Objekt verwendeten Beziehungs-Manager ab.</summary>
+        <value>Der von diesem Objekt verwendete <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.EntityObject.System%23Data%23Objects%23DataClasses%23IEntityWithRelationships%23RelationshipManager%2A> gibt den von diesem Objekt verwendeten <xref:System.Data.Objects.DataClasses.RelationshipManager> zurück. Mit dem Beziehungs-Manager wird von Object Services der Zugriff auf verbundene Objekte bereitgestellt.  
+  
+ Klassen, die Beziehungen verfügbar machen, müssen diese Eigenschaft implementieren, indem sie den <xref:System.Data.Objects.DataClasses.RelationshipManager> in ihrem Konstruktor erstellen und festlegen. Bei der Implementierung dieser Eigenschaft sollte bei Bedarf mit der statischen Methode <xref:System.Data.Objects.DataClasses.RelationshipManager.Create%2A> ein neuer <xref:System.Data.Objects.DataClasses.RelationshipManager> erstellt werden. Dieses Objekt sollte nach dem Erstellen auf der Entität gespeichert und über diese Eigenschaft bereitgestellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,697 @@
+<Type Name="StylusPoint" FullName="System.Windows.Input.StylusPoint">
+  <TypeSignature Language="C#" Value="public struct StylusPoint : IEquatable&lt;System.Windows.Input.StylusPoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit StylusPoint extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.Input.StylusPoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPoint" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.Input.StylusPoint&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen einzelnen Datenpunkt vom Digitizer und Tablettstift erfasst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Input.StylusPoint> erfasst Daten, wenn ein Benutzer mit den Digitizer bewegt Freihand Eingaben. Da die von ein Digitizer gemeldeten Informationen je nach Hersteller, die Eigenschaften in unterscheidet sich eine <xref:System.Windows.Input.StylusPoint> kann unterschiedlich sein. Um zu bestimmen, ob eine Eigenschaft in der <xref:System.Windows.Input.StylusPoint>, rufen Sie die <xref:System.Windows.Input.StylusPoint.HasProperty%2A> Methode. Die <xref:System.Windows.Input.StylusPoint.Description%2A> Eigenschaft enthält eine <xref:System.Windows.Input.StylusPointDescription> , die angibt, welche Eigenschaften im sind die <xref:System.Windows.Input.StylusPoint>. Alle <xref:System.Windows.Input.StylusPoint> Objekte enthalten Eigenschaften, die angeben, die (X, y)-Koordinaten als auch die Auslastung des.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Eigenschaftsnamen und-Werte für die einzelnen <xref:System.Windows.Input.StylusPoint> in einem <xref:System.Windows.Input.StylusPointCollection>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBlock> aufgerufen `packetOutput`.  
+  
+ [!code-csharp[PacketSpy#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[PacketSpy#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StylusPoint (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="y">Die Y-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.StylusPoint" />-Klasse unter Verwendung der angegebenen (X, Y)-Koordinaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Input.StylusPoint>.  
+  
+ [!code-csharp[PacketSpy#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[PacketSpy#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StylusPoint (double x, double y, float pressureFactor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y, float32 pressureFactor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.#ctor(System.Double,System.Double,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="pressureFactor" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="y">Die Y-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="pressureFactor">Stärke des Drucks, der auf den <see cref="T:System.Windows.Input.StylusPoint" /> ausgeübt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Input.StylusPoint" /> -Klasse mit angegebenen (x, y)-Koordinaten und Druck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `pressureFactor`Sie benötigen einen Wert zwischen 0 und 1 liegen. Der Wert 0 gibt an, dass kein Druck angewendet wird, während der Wert 1 gibt an, dass die Höchstmenge des Drucks angewendet wird. Der Wert 0,5 gibt an, dass 50 % des maximal Druck angewendet wird, und so weiter.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Input.StylusPoint>.  
+  
+ [!code-csharp[PacketSpy#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[PacketSpy#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pressureFactor" /> ist kleiner als 0 (null) oder größer als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StylusPoint (double x, double y, float pressureFactor, System.Windows.Input.StylusPointDescription stylusPointDescription, int[] additionalValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y, float32 pressureFactor, class System.Windows.Input.StylusPointDescription stylusPointDescription, int32[] additionalValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.#ctor(System.Double,System.Double,System.Single,System.Windows.Input.StylusPointDescription,System.Int32[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="pressureFactor" Type="System.Single" />
+        <Parameter Name="stylusPointDescription" Type="System.Windows.Input.StylusPointDescription" />
+        <Parameter Name="additionalValues" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="y">Die Y-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="pressureFactor">Stärke des Drucks, der auf den <see cref="T:System.Windows.Input.StylusPoint" /> ausgeübt wird.</param>
+        <param name="stylusPointDescription">Eine <see cref="T:System.Windows.Input.StylusPointDescription" />, die die zusätzlichen Eigenschaften angibt, die im <see cref="T:System.Windows.Input.StylusPoint" /> gespeichert sind.</param>
+        <param name="additionalValues">Ein Array von 32-Bit-Ganzzahlen mit Vorzeichen, die Werte der Eigenschaften enthält, die in definierten <c>StylusPointDescription</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.StylusPoint" />-Klasse mit den angegebenen (X, Y)-Koordinaten, einem <paramref name="pressureFactor" /> und zusätzlichen, in der <see cref="T:System.Windows.Input.StylusPointDescription" /> angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Input.StylusPoint>.  
+  
+ [!code-csharp[PacketSpy#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[PacketSpy#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pressureFactor" /> ist kleiner als 0 (null) oder größer als 1.  
+  
+ - oder -   
+  
+ Die Werte in <paramref name="additionalValues" />, die Schaltflächeneigenschaften entsprechen, sind nicht 0 oder 1.</exception>
+        <exception cref="T:System.ArgumentException">Die Anzahl der Werte in <paramref name="additionalValues" /> stimmt nicht mit der Anzahl der Eigenschaften in <paramref name="stylusPointDescription" /> minus 3 überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointDescription Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StylusPointDescription Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPoint.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Input.StylusPointDescription" /> , die gespeicherten Eigenschaften angibt der <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+        <value>Die <see cref="T:System.Windows.Input.StylusPointDescription" /> gibt an, die gespeicherten Eigenschaften der <see cref="T:System.Windows.Input.StylusPoint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Input.StylusPoint.Description%2A> Standardwerte für die Eigenschaft zum Abrufen der Eigenschaft von <xref:System.Windows.Input.StylusPoint> in einem <xref:System.Windows.Input.StylusPointCollection>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBlock> aufgerufen `packetOutput`.  
+  
+ [!code-csharp[PacketSpy#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[PacketSpy#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.Windows.Input.StylusPoint" /> zum Vergleichen mit der aktuellen <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Objekt gleich dem <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel überprüft zwei <xref:System.Windows.Input.StylusPoint> -Objekte auf Gleichheit. Da die <xref:System.Windows.Input.StylusPoint.X%2A>, <xref:System.Windows.Input.StylusPoint.Y%2A>, und <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Eigenschaften auf `point1` und `point2` festgelegt sind, auf den gleichen Wert, der "die beiden StylusPoint Objekte gleich sind." Meldung wird angezeigt.  
+  
+ [!code-csharp[PacketSpy#6](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[PacketSpy#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#6)]  
+[!code-csharp[PacketSpy#7](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#7)]
+[!code-vb[PacketSpy#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Input.StylusPoint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.Input.StylusPoint value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.Equals(System.Windows.Input.StylusPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Input.StylusPoint" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Windows.Input.StylusPoint" /> zum Vergleichen mit der aktuellen <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.Input.StylusPoint" /> ist gleich dem aktuellen <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Input.StylusPoint" /> Objekte sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel überprüft zwei <xref:System.Windows.Input.StylusPoint> -Objekte auf Gleichheit. Da die <xref:System.Windows.Input.StylusPoint.X%2A>, <xref:System.Windows.Input.StylusPoint.Y%2A>, und <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Eigenschaften auf `point1` und `point2` festgelegt sind, auf den gleichen Wert, der "die beiden StylusPoint Objekte gleich sind." Meldung wird angezeigt.  
+  
+ [!code-csharp[PacketSpy#6](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[PacketSpy#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#6)]  
+[!code-csharp[PacketSpy#7](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#7)]
+[!code-vb[PacketSpy#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Input.StylusPoint stylusPoint1, System.Windows.Input.StylusPoint stylusPoint2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Input.StylusPoint stylusPoint1, valuetype System.Windows.Input.StylusPoint stylusPoint2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.Equals(System.Windows.Input.StylusPoint,System.Windows.Input.StylusPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoint1" Type="System.Windows.Input.StylusPoint" />
+        <Parameter Name="stylusPoint2" Type="System.Windows.Input.StylusPoint" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoint1">Der erste zu vergleichende <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="stylusPoint2">Der zweite zu vergleichende <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob die beiden angegebenen <see cref="T:System.Windows.Input.StylusPoint" /> -Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Input.StylusPoint" /> Objekte sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel überprüft zwei <xref:System.Windows.Input.StylusPoint> -Objekte auf Gleichheit. Da die <xref:System.Windows.Input.StylusPoint.X%2A>, <xref:System.Windows.Input.StylusPoint.Y%2A>, und <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Eigenschaften auf `point1` und `point2` festgelegt sind, auf den gleichen Wert, der "die beiden StylusPoint Objekte gleich sind." Meldung wird angezeigt.  
+  
+ [!code-csharp[PacketSpy#6](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[PacketSpy#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#6)]  
+[!code-csharp[PacketSpy#8](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#8)]
+[!code-vb[PacketSpy#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen. Diese ist der Hashcode für die Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public int GetPropertyValue (System.Windows.Input.StylusPointProperty stylusPointProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetPropertyValue(class System.Windows.Input.StylusPointProperty stylusPointProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.GetPropertyValue(System.Windows.Input.StylusPointProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointProperty" Type="System.Windows.Input.StylusPointProperty" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointProperty">Die <see cref="T:System.Windows.Input.StylusPointProperty" /> , die die abzurufenden Eigenschaftswert angibt.</param>
+        <summary>Gibt den Wert der angegebenen Eigenschaft zurück.</summary>
+        <returns>Der Wert des angegebenen <see cref="T:System.Windows.Input.StylusPointProperty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu überprüfen, ob die <xref:System.Windows.Input.StylusPoint> enthält die angegebene Eigenschaft mit dem Aufruf der <xref:System.Windows.Input.StylusPoint.HasProperty%2A> vor dem Aufrufen von entweder der <xref:System.Windows.Input.StylusPoint.GetPropertyValue%2A> Methode oder die <xref:System.Windows.Input.StylusPoint.SetPropertyValue%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob ein Stift vorhanden ist, bevor Sie den Wert der Eigenschaft abrufen. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Input.StylusPoint> aufgerufen `point`.  
+  
+ [!code-csharp[PacketSpy#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#11)]
+ [!code-vb[PacketSpy#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stylusPointProperty" />ist keine der Eigenschaften in <see cref="P:System.Windows.Input.StylusPoint.Description" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProperty">
+      <MemberSignature Language="C#" Value="public bool HasProperty (System.Windows.Input.StylusPointProperty stylusPointProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasProperty(class System.Windows.Input.StylusPointProperty stylusPointProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.HasProperty(System.Windows.Input.StylusPointProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointProperty" Type="System.Windows.Input.StylusPointProperty" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointProperty">Die <see cref="T:System.Windows.Input.StylusPointProperty" /> zu suchende der <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <summary>Gibt zurück, ob die aktuelle <see cref="T:System.Windows.Input.StylusPoint" /> die angegebene Eigenschaft enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.Input.StylusPointProperty" /> ist im aktuellen <see cref="T:System.Windows.Input.StylusPoint" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu überprüfen, ob die <xref:System.Windows.Input.StylusPoint> enthält die angegebene Eigenschaft mit dem Aufruf der <xref:System.Windows.Input.StylusPoint.HasProperty%2A> vor dem Aufrufen von entweder der <xref:System.Windows.Input.StylusPoint.GetPropertyValue%2A> Methode oder die <xref:System.Windows.Input.StylusPoint.SetPropertyValue%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob ein Stift vorhanden ist, bevor Sie den Wert der Eigenschaft abrufen. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Input.StylusPoint> aufgerufen `point`.  
+  
+ [!code-csharp[PacketSpy#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#11)]
+ [!code-vb[PacketSpy#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxXY">
+      <MemberSignature Language="C#" Value="public static readonly double MaxXY;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly float64 MaxXY" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPoint.MaxXY" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den größten gültigen Wert für ein Standortpaar (x, y) Koordinaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird sichergestellt, dass die <xref:System.Windows.Input.StylusPoint.X%2A> Eigenschaft von der <xref:System.Windows.Input.StylusPoint> auf einen gültigen Wert festgelegt ist.  
+  
+ [!code-csharp[PacketSpy#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#14)]
+ [!code-vb[PacketSpy#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinXY">
+      <MemberSignature Language="C#" Value="public static readonly double MinXY;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly float64 MinXY" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.StylusPoint.MinXY" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den kleinsten gültigen Wert für ein Standortpaar (x, y) Koordinaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird sichergestellt, dass die <xref:System.Windows.Input.StylusPoint.X%2A> Eigenschaft von der <xref:System.Windows.Input.StylusPoint> auf einen gültigen Wert festgelegt ist.  
+  
+ [!code-csharp[PacketSpy#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#14)]
+ [!code-vb[PacketSpy#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Input.StylusPoint stylusPoint1, System.Windows.Input.StylusPoint stylusPoint2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Input.StylusPoint stylusPoint1, valuetype System.Windows.Input.StylusPoint stylusPoint2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.op_Equality(System.Windows.Input.StylusPoint,System.Windows.Input.StylusPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoint1" Type="System.Windows.Input.StylusPoint" />
+        <Parameter Name="stylusPoint2" Type="System.Windows.Input.StylusPoint" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoint1">Der erste zu vergleichende <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="stylusPoint2">Der zweite zu vergleichende <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <summary>Vergleicht zwei angegebene <see cref="T:System.Windows.Input.StylusPoint" /> Objekten und bestimmt, ob sie gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Input.StylusPoint" /> Objekte sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Input.StylusPoint.Equals%28System.Windows.Input.StylusPoint%2CSystem.Windows.Input.StylusPoint%29?displayProperty=nameWithType>  
+  
+## Examples  
+ Das folgende Beispiel überprüft zwei <xref:System.Windows.Input.StylusPoint> -Objekte auf Gleichheit. Da die <xref:System.Windows.Input.StylusPoint.X%2A>, <xref:System.Windows.Input.StylusPoint.Y%2A>, und <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Eigenschaften auf `point1` und `point2` festgelegt sind, auf den gleichen Wert, der "die beiden StylusPoint Objekte gleich sind." Meldung wird angezeigt.  
+  
+ [!code-csharp[PacketSpy#6](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[PacketSpy#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#6)]  
+[!code-csharp[PacketSpy#9](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#9)]
+[!code-vb[PacketSpy#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Windows.Point (System.Windows.Input.StylusPoint stylusPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Point op_Explicit(valuetype System.Windows.Input.StylusPoint stylusPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.op_Explicit(System.Windows.Input.StylusPoint)~System.Windows.Point" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoint" Type="System.Windows.Input.StylusPoint" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoint">To be added.</param>
+        <summary>Wandelt den angegebenen <see cref="T:System.Windows.Input.StylusPoint" /> zu einem <see cref="T:System.Windows.Point" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Point" /> , mit den Koordinaten der dieselben (x, y) als <paramref name="stylusPoint" />. </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Im folgenden Beispiel wird veranschaulicht, wie Umwandeln einer <xref:System.Windows.Input.StylusPoint> auf eine <xref:System.Windows.Point> Objekt Zeichnen eines Kreises am Anfang jeder Strich. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.InkCanvas> bezeichnetes Objekt `inkcanvas1` und dass die <xref:System.Windows.UIElement.StylusDown> Ereignis an den Ereignishandler im Beispiel verbunden ist.
+
+           [!code-csharp[PacketSpy#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#13)]
+           [!code-vb[PacketSpy#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#13)]  
+
+           ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Input.StylusPoint stylusPoint1, System.Windows.Input.StylusPoint stylusPoint2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Input.StylusPoint stylusPoint1, valuetype System.Windows.Input.StylusPoint stylusPoint2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.op_Inequality(System.Windows.Input.StylusPoint,System.Windows.Input.StylusPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoint1" Type="System.Windows.Input.StylusPoint" />
+        <Parameter Name="stylusPoint2" Type="System.Windows.Input.StylusPoint" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoint1">Der erste zu vergleichende <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <param name="stylusPoint2">Der zweite zu vergleichende <see cref="T:System.Windows.Input.StylusPoint" />.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.Input.StylusPoint" /> Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.Input.StylusPoint" /> Objekte ungleich sind, und andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist die Negation des<xref:System.Windows.Input.StylusPoint.Equals%2A>  
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie zwei <xref:System.Windows.Input.StylusPoint> -Objekte auf Ungleichheit. Da die <xref:System.Windows.Input.StylusPoint.X%2A>, <xref:System.Windows.Input.StylusPoint.Y%2A>, und <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Eigenschaften auf `point1` und `point2` festgelegt sind, auf den gleichen Wert, der "die beiden StylusPoint Objekte gleich sind." Meldung wird angezeigt.  
+  
+ [!code-csharp[PacketSpy#6](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[PacketSpy#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#6)]  
+[!code-csharp[PacketSpy#10](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#10)]
+[!code-vb[PacketSpy#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PressureFactor">
+      <MemberSignature Language="C#" Value="public float PressureFactor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 PressureFactor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPoint.PressureFactor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Wert zwischen 0 und 1 an, der die Menge des Drucks der Tablettstift des Digitizers betrifft Oberfläche bei der <see cref="T:System.Windows.Input.StylusPoint" /> wird erstellt.</summary>
+        <value>Wert zwischen 0 und 1, der angibt, der Menge des Drucks der Stift den Digitizer Oberfläche als gilt die <see cref="T:System.Windows.Input.StylusPoint" /> wird erstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> Eigenschaft als Wert zwischen 0 und 1 ausgedrückt wird. Der Wert 0 gibt an, dass kein Druck angewendet wird, während der Wert 1 gibt an, dass die Höchstmenge des Drucks angewendet wird. Der Wert 0,5 gibt an, dass 50 % des maximal Druck angewendet wird, und so weiter.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> abrufen und Anzeigen des Druck-Werts für jede Eigenschaft <xref:System.Windows.Input.StylusPoint> in einem <xref:System.Windows.Input.StylusPointCollection> aufgerufen `points`. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBlock> aufgerufen `packetOutput`.  
+  
+ [!code-csharp[PacketSpy#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[PacketSpy#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Windows.Input.StylusPoint.PressureFactor" /> Eigenschaft auf einen Wert kleiner als 0 oder größer als 1 festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValue">
+      <MemberSignature Language="C#" Value="public void SetPropertyValue (System.Windows.Input.StylusPointProperty stylusPointProperty, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPropertyValue(class System.Windows.Input.StylusPointProperty stylusPointProperty, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.SetPropertyValue(System.Windows.Input.StylusPointProperty,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointProperty" Type="System.Windows.Input.StylusPointProperty" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointProperty">Die <see cref="T:System.Windows.Input.StylusPointProperty" /> , die angibt, dessen Eigenschaftswert festgelegt.</param>
+        <param name="value">Der Wert der Eigenschaft.</param>
+        <summary>Legt die angegebene Eigenschaft mit dem angegebenen Wert fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu überprüfen, ob die <xref:System.Windows.Input.StylusPoint> enthält die angegebene Eigenschaft mit dem Aufruf der <xref:System.Windows.Input.StylusPoint.HasProperty%2A> vor dem Aufrufen von entweder der <xref:System.Windows.Input.StylusPoint.GetPropertyValue%2A> Methode oder die <xref:System.Windows.Input.StylusPoint.SetPropertyValue%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob ein Stift vorhanden ist, bevor Sie den Wert der Eigenschaft festlegen. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Input.StylusPoint> aufgerufen `point`.  
+  
+ [!code-csharp[PacketSpy#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#12)]
+ [!code-vb[PacketSpy#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stylusPointProperty" />ist keine der Eigenschaften in <see cref="P:System.Windows.Input.StylusPoint.Description" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Point ToPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point ToPoint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPoint.ToPoint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert ein <see cref="T:System.Windows.Input.StylusPoint" />-Element in ein <see cref="T:System.Windows.Point" />-Element.</summary>
+        <returns>Eine <see cref="T:System.Windows.Point" />-Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public double X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPoint.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die X-Koordinate des der <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+        <value>Die X-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Input.StylusPoint.X%2A> Eigenschaft für die einzelnen <xref:System.Windows.Input.StylusPoint> in einem <xref:System.Windows.Input.StylusPointCollection>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBlock> aufgerufen `packetOutput`.  
+  
+ [!code-csharp[PacketSpy#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[PacketSpy#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public double Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPoint.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die y-Koordinate des der <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+        <value>Die Y-Koordinate des <see cref="T:System.Windows.Input.StylusPoint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Input.StylusPoint.Y%2A> Eigenschaft für die einzelnen <xref:System.Windows.Input.StylusPoint> in einem <xref:System.Windows.Input.StylusPointCollection>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBlock> aufgerufen `packetOutput`.  
+  
+ [!code-csharp[PacketSpy#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[PacketSpy#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

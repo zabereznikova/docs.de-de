@@ -1,0 +1,809 @@
+<Type Name="ProfileBase" FullName="System.Web.Profile.ProfileBase">
+  <TypeSignature Language="C#" Value="public class ProfileBase : System.Configuration.SettingsBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProfileBase extends System.Configuration.SettingsBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingsBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht nicht typisierten Zugriff auf Profileigenschaftswerte und Informationen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet die <xref:System.Web.Profile.ProfileBase> Klasse, die für das Benutzerprofil verwendete Klasse zu erstellen. Wenn eine Anwendung mit aktiviertem Benutzerprofil gestartet wird, erstellt ASP.NET eine neue Klasse des Typs `ProfileCommon`, erbt von der <xref:System.Web.Profile.ProfileBase> Klasse. Stark typisierte Accessoren werden hinzugefügt, um die `ProfileCommon` Klasse für jede Eigenschaft in den Konfigurationsabschnitt definiert. Stark typisierte Accessor die `ProfileCommon` -Klasse rufen die <xref:System.Web.Profile.ProfileBase.GetPropertyValue%2A> und <xref:System.Web.Profile.ProfileBase.SetPropertyValue%2A> Methoden die <xref:System.Web.Profile.ProfileBase> Basisklasse zum Abrufen und festlegen Profil Eigenschaftswerte bzw.. Eine Instanz von der `ProfileCommon` "Class" festgelegt ist, als Wert für die <xref:System.Web.HttpContext.Profile%2A> -Eigenschaft für die ASP.NET-Anwendung.  
+  
+ Um eine Instanz eines Benutzerprofils in einer ASP.NET-Anwendung zu erstellen, wird empfohlen, dass Sie verwenden die <xref:System.Web.Profile.ProfileBase.Create%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Datei "Web.config", die ein Benutzerprofil angibt, enthält eine `ZipCode` Eigenschaft vom Typ `string` und ein `RecentSearchList` Eigenschaft vom Typ <xref:System.Collections.Specialized.StringCollection>. Die generierte <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> verfügt über stark typisierte Accessoren für jede der angegebenen Eigenschaften.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <anonymousIdentification enabled="true" />  
+  
+    <profile enabled="true" defaultProvider="SqlProvider" >  
+      <properties>  
+        <add name="ZipCode" allowAnonymous="true" />  
+        <add name="RecentSearchList"  
+          type="System.Collections.Specialized.StringCollection"  
+          serializeAs="Xml"  
+          allowAnonymous="true" />  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite, die gelesen und legt die `ZipCode` für das Benutzerprofil angegebene Eigenschaft. Bevor Sie versuchen, diesen Code auszuführen, den Anbieter auf den Standardwert festgelegt `AspNetSqlProvider` in den ASP.NET-Konfigurationseinstellungen für die Website.  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/VB/defaultvb.aspx#1)]  
+  
+ Das folgende Codebeispiel definiert eine Klasse, die von erben die <xref:System.Web.Profile.ProfileBase> Klasse, um ein benutzerdefiniertes Profil erstellen. Der Typ des benutzerdefinierten Profils wird angegeben, der `inherits` Attribut des Konfigurationselements in der Datei "Web.config" für eine Anwendung.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[System.Web.Profile.ProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/CS/employeeprofile.cs#1)]
+ [!code-vb[System.Web.Profile.ProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/VB/employeeprofile.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Sie können eine benutzerdefiniertes Profil-Implementierung, die von erbt erstellen die <see cref="T:System.Web.Profile.ProfileBase" /> abstrakte Klasse und definiert die Eigenschaften für das Benutzerprofil, die nicht in das Konfigurationselement angegeben werden. Sie können einen benutzerdefinierten Benutzerprofil-Typ angeben, in der Datei "Web.config" mit der <see langword="inherits" /> Attribut des Konfigurationselements, wie im folgenden Beispiel gezeigt. Der Code für die <c>EmployeeProfile</c> Klasse ist im Abschnitt "Beispiel" dieses Themas enthalten.  
+  
+```  
+&lt;profile inherits="Samples.AspNet.Profile.EmployeeProfile"  
+  defaultProvider="SqlProvider"&gt;  
+  &lt;providers&gt;  
+    &lt;clear /&gt;  
+    &lt;add  
+      name="SqlProvider"  
+      type="System.Web.Profile.SqlProfileProvider"   
+      connectionStringName="SqlServices"   
+      description="SQL Profile Provider for Sample"/&gt;   
+    &lt;add  
+      name="EmployeeInfoProvider"  
+      type="System.Web.Profile.SqlProfileProvider"   
+      connectionStringName="SqlServices"   
+      description="SQL Profile Provider for Employee Info"/&gt;   
+  &lt;/providers&gt;  
+  
+  &lt;properties&gt;  
+    &lt;add name="GarmentSize" /&gt;  
+  &lt;/properties&gt;  
+&lt;/profile&gt;  
+```</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.Profile.ProfileBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet die <xref:System.Web.Profile.ProfileBase> Klasse, die für das Benutzerprofil verwendete Klasse zu erstellen. Wenn eine Anwendung mit aktiviertem Benutzerprofil gestartet wird, erstellt ASP.NET eine neue Klasse des Typs `ProfileCommon`, erbt von der <xref:System.Web.Profile.ProfileBase> Klasse. Stark typisierte Accessoren werden hinzugefügt, um die `ProfileCommon` Klasse für jede Eigenschaft in den Konfigurationsabschnitt definiert. Stark typisierte Accessor die `ProfileCommon` -Klasse rufen die <xref:System.Web.Profile.ProfileBase.GetPropertyValue%2A> und <xref:System.Web.Profile.ProfileBase.SetPropertyValue%2A> Methoden die <xref:System.Web.Profile.ProfileBase> Basisklasse zum Abrufen und festlegen Profil Eigenschaftswerte bzw.. Eine Instanz von der `ProfileCommon` "Class" festgelegt ist, als Wert für die <xref:System.Web.HttpContext.Profile%2A> -Eigenschaft für die ASP.NET-Anwendung.  
+  
+> [!NOTE]
+>  Die Basisklasse, die zum Generieren der Klasse gespeichert, der <xref:System.Web.HttpContext.Profile%2A> -Eigenschaft kann überschrieben werden, mithilfe der `inherits` -Attribut des Abschnitts der Konfigurationsdatei. In diesem Fall würden Sie angeben, eine benutzerdefinierte Klasse, die von erben die <xref:System.Web.Profile.ProfileBase> Basisklasse.  
+  
+ Dieser Konstruktor ist nicht für die Verwendung von Anwendungscode vorgesehen. Verwenden Sie zum Erstellen einer Instanz eines Benutzerprofils die <xref:System.Web.Profile.ProfileBase.Create%2A> Methode.  
+  
+   
+  
+## Examples  
+ Die folgende Datei "Web.config" gibt ein Benutzerprofil an, die enthält eine `ZipCode` Eigenschaft vom Typ `string` und ein `RecentSearchList` Eigenschaft vom Typ <xref:System.Collections.Specialized.StringCollection>. Die generierte <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> verfügt über stark typisierte Accessoren für jede der angegebenen Eigenschaften.  
+  
+```  
+<configuration>  
+   <connectionStrings>  
+       <add name="SqlServices" connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+   </connectionStrings>  
+  
+  <system.web>  
+   <anonymousIdentification enabled="true" />  
+  
+   <profile defaultProvider="SqlProvider" >  
+     <providers>  
+       <add  
+         name="SqlProvider"  
+         connectionStringName="SqlServices"  
+         applicationName="ProfileBaseApplication"  
+         type="System.Web.Profile.SqlProfileProvider" />  
+     </providers>  
+  
+     <properties>  
+       <add name="ZipCode" allowAnonymous="true" />  
+       <add name="RecentSearchList"  
+            type="System.Collections.Specialized.StringCollection"  
+            serializeAs="Xml"  
+            allowAnonymous="true" />  
+      </properties>  
+    </profile>  
+   </system.web>  
+</configuration>  
+```  
+  
+ Die folgende ASP.NET-Seite liest und legt die `ZipCode` für das Benutzerprofil angegebene Eigenschaft.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Die <see langword="enabled" /> -Attribut des Abschnitts der Datei "Web.config" wird <see langword="false" />.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Im Abschnitt der Datei "Web.config" angegebenen Eigenschaftentyp konnte nicht erstellt werden.  
+  
+ - oder -   
+  
+ Die <see langword="allowAnonymous" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see langword="true" /> und <see langword="enabled" /> -Attribut des Elements wird festgelegt, um <see langword="false" />.  
+  
+ - oder -   
+  
+ Die <see langword="serializeAs" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see cref="F:System.Configuration.SettingsSerializeAs.Binary" /> und <see cref="P:System.Type.IsSerializable" /> -Eigenschaft des angegebenen <see langword="type" /> gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Der Name eines Anbieters mithilfe der <see langword="provider" /> Attribut einer Eigenschaft Profil konnte nicht gefunden werden, der <see cref="P:System.Web.Profile.ProfileManager.Providers" /> Auflistung.  
+  
+ - oder -   
+  
+ Die <see langword="type" /> angegeben, für eine Profileigenschaft konnten nicht gefunden werden.  
+  
+ - oder -   
+  
+ Eine Profileigenschaft wurde angegeben, mit einem Namen, die einen Eigenschaftsnamen in der Basisklasse, die im angegebenen entspricht der <see langword="inherits" /> -Attribut des Abschnitts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileBase Create (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileBase Create(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des Benutzers, der für ein Profil erstellen.</param>
+        <summary>Der von ASP.NET zum Erstellen einer Instanz eines Profils für den angegebenen Benutzernamen ein.</summary>
+        <returns>Eine <see cref="T:System.Web.Profile.ProfileBase" /> , die das Profil für den angegebenen Benutzer darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileBase.Create%2A> Methode erstellt und initialisiert eine neue Profilinstanz und ist nützlich für Anwendungen, die ein benutzerdefiniertes Profil verwenden Objekt oder Benutzerprofile in einer Umgebung ohne ASP.NET verwalten.  
+  
+ Diese Überladung von der <xref:System.Web.Profile.ProfileBase.Create%2A> Methode wird davon ausgegangen, dass der angegebene Benutzername eines authentifizierten Benutzers ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz eines benutzerdefinierten Profils-Objekts, Festlegen einer Eigenschaft und speichert das Profil in der Datenquelle.  
+  
+ [!code-csharp[System.Web.Profile.ProfileBase.Create#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileBase.Create/CS/profileBaseCreatecs.aspx.cs#1)]
+ [!code-vb[System.Web.Profile.ProfileBase.Create#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileBase.Create/VB/profileBaseCreatevb.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Die <see langword="enabled" /> -Attribut des Abschnitts der Datei "Web.config" wird <see langword="false" />.</exception>
+        <exception cref="T:System.Web.HttpException">Die aktuelle hosting Berechtigungsebene besteht aus weniger als <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" />.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Im Abschnitt der Datei "Web.config" angegebenen Eigenschaftentyp konnte nicht erstellt werden.  
+  
+ - oder -   
+  
+ Die <see langword="allowAnonymous" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see langword="true" /> und <see langword="enabled" /> -Attribut des Elements wird festgelegt, um <see langword="false" />.  
+  
+ - oder -   
+  
+ Die <see langword="serializeAs" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see cref="F:System.Configuration.SettingsSerializeAs.Binary" /> und <see cref="P:System.Type.IsSerializable" /> -Eigenschaft des angegebenen <see langword="type" /> gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Der Name eines Anbieters mithilfe der <see langword="provider" /> Attribut einer Eigenschaft Profil konnte nicht gefunden werden, der <see cref="P:System.Web.Profile.ProfileManager.Providers" /> Auflistung.  
+  
+ - oder -   
+  
+ Die <see langword="type" /> angegeben, für eine Profileigenschaft konnten nicht gefunden werden.  
+  
+ - oder -   
+  
+ Eine Profileigenschaft wurde angegeben, mit einem Namen, die einen Eigenschaftsnamen in der Basisklasse, die im angegebenen entspricht der <see langword="inherits" /> -Attribut des Abschnitts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileBase Create (string username, bool isAuthenticated);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileBase Create(string username, bool isAuthenticated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.Create(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="isAuthenticated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des Benutzers, der für ein Profil erstellen.</param>
+        <param name="isAuthenticated">
+          <see langword="true" />um anzugeben, dass der Benutzer authentifiziert ist. <see langword="false" /> an, dass der Benutzer anonym ist.</param>
+        <summary>Der von ASP.NET zum Erstellen einer Instanz eines Profils für den angegebenen Benutzernamen ein. Nimmt einen Parameter, der angibt, ob der Benutzer authentifiziert oder anonym ist.</summary>
+        <returns>Ein <see cref="T:System.Web.Profile.ProfileBase" /> -Objekt, das Profil für den angegebenen Benutzer darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileBase.Create%2A> Methode erstellt und initialisiert eine neue Profilinstanz und ist nützlich für Anwendungen, die ein benutzerdefiniertes Profil verwenden Objekt oder Benutzerprofile in einer Umgebung ohne ASP.NET verwalten.  
+  
+ Diese Überladung von der <xref:System.Web.Profile.ProfileBase.Create%2A> Methode kann verwendet werden, um ein Profil für einen authentifizierten Benutzer oder einen anonymen Benutzer zu erstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz eines benutzerdefinierten Profils-Objekts, Festlegen einer Eigenschaft und speichert das Profil in der Datenquelle.  
+  
+ [!code-csharp[System.Web.Profile.ProfileBase.Create#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileBase.Create/CS/profileBaseCreatecs.aspx.cs#2)]
+ [!code-vb[System.Web.Profile.ProfileBase.Create#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileBase.Create/VB/profileBaseCreatevb.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Die <see langword="enabled" /> -Attribut des Abschnitts der Datei "Web.config" wird <see langword="false" />.</exception>
+        <exception cref="T:System.Web.HttpException">Die aktuelle hosting Berechtigungsebene besteht aus weniger als <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" />.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Im Abschnitt der Datei "Web.config" angegebenen Eigenschaftentyp konnte nicht erstellt werden.  
+  
+ - oder -   
+  
+ Die <see langword="allowAnonymous" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see langword="true" /> und <see langword="enabled" /> -Attribut des Elements wird festgelegt, um <see langword="false" />.  
+  
+ - oder -   
+  
+ Die <see langword="serializeAs" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see cref="F:System.Configuration.SettingsSerializeAs.Binary" /> und <see cref="P:System.Type.IsSerializable" /> -Eigenschaft des angegebenen <see langword="type" /> gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Der Name eines Anbieters mithilfe der <see langword="provider" /> Attribut einer Eigenschaft Profil konnte nicht gefunden werden, der <see cref="P:System.Web.Profile.ProfileManager.Providers" /> Auflistung.  
+  
+ - oder -   
+  
+ Die <see langword="type" /> angegeben, für eine Profileigenschaft konnten nicht gefunden werden.  
+  
+ - oder -   
+  
+ Eine Profileigenschaft wurde angegeben, mit einem Namen, die einen Eigenschaftsnamen in der Basisklasse, die im angegebenen entspricht der <see langword="inherits" /> -Attribut des Abschnitts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProfileGroup">
+      <MemberSignature Language="C#" Value="public System.Web.Profile.ProfileGroupBase GetProfileGroup (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Profile.ProfileGroupBase GetProfileGroup(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.GetProfileGroup(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileGroupBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Der Name der Gruppe von Eigenschaften.</param>
+        <summary>Ruft eine Gruppe von Eigenschaften, die durch einen Gruppennamen identifiziert.</summary>
+        <returns>Ein <see cref="T:System.Web.Profile.ProfileGroupBase" /> Objekt für eine Gruppe von Eigenschaften, die mit dem angegebenen Gruppennamen konfiguriert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Profileigenschaften können in Gruppen für eine bessere Organisation getrennt werden. Die <xref:System.Web.Profile.ProfileBase.GetProfileGroup%2A> Eigenschaft kann zum Abrufen einer Gruppe von Eigenschaften mit dem Gruppennamen verwendet werden. Sie können auch eine Profileigenschaft in einer Gruppe zugreifen, durch Angeben der Gruppenname als Mitglied der `Profile` Eigenschaft, die auf jeder Seite verfügbar. Z. B. die `ZipCode` Profil-Eigenschaft, die ein Mitglied der `Address` Profilgruppe mit zugegriffen werden konnte `Profile.Address.ZipCode`.  
+  
+   
+  
+## Examples  
+ Die folgende Datei "Web.config" gibt ein Benutzerprofil an, die Gruppe von Eigenschaften mit dem Gruppennamen enthält `Address`. Die Gruppeneigenschaften für generiert die <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> wird der Gruppenname vorangestellt sein. Beispielsweise `Profile.Address.Street`.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString=  
+      "Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx"  
+        name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <authorization>  
+      <deny users="?" />  
+    </authorization>  
+  
+    <membership defaultProvider="SqlProvider"   
+      userIsOnlineTimeWindow="15">  
+      <providers>  
+        <clear />  
+        <add   
+          name="SqlProvider"   
+          type="System.Web.Security.SqlMembershipProvider"   
+          connectionStringName="SqlServices"  
+          enablePasswordRetrieval="false"  
+          enablePasswordReset="true"  
+          requiresQuestionAndAnswer="true"   
+          requiresUniqueEmail="false"  
+          passwordFormat="Hashed"  
+          applicationName="MyApplication" />  
+      </providers>  
+    </membership>  
+  
+    <profile defaultProvider="SqlProvider">  
+      <providers>  
+        <add  
+          name="SqlProvider"  
+          connectionStringName="SqlServices"  
+          applicationName="MyApplication"  
+          type="System.Web.Profile.SqlProfileProvider" />  
+  
+      </providers>  
+  
+      <properties>  
+        <add name="ZipCode" />  
+        <group name="Address">  
+          <add name="Street" />  
+          <add name="City" />  
+          <add name="State" />  
+          <add name="CountryOrRegion" />  
+        </group>  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Die folgende ASP.NET-Seite liest und legt für das Benutzerprofil angegebenen gruppierten Eigenschaften.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileGroupBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileGroupBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Das angegebene Profil Gruppenname wurde nicht im Konfigurationsabschnitt gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public object GetPropertyValue (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetPropertyValue(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.GetPropertyValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Profileigenschaft.</param>
+        <summary>Ruft den Wert einer Eigenschaft Profil ab.</summary>
+        <returns>Der Wert der angegebenen Profileigenschaft, als typisierte <see langword="object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet die <xref:System.Web.Profile.ProfileBase> Klasse, die für das Benutzerprofil verwendete Klasse zu erstellen. Wenn eine Anwendung mit aktiviertem Benutzerprofil gestartet wird, erstellt ASP.NET eine neue Klasse des Typs `ProfileCommon`, erbt von der <xref:System.Web.Profile.ProfileBase> Klasse. Stark typisierte Accessoren werden hinzugefügt, um die `ProfileCommon` Klasse für jede Eigenschaft in den Konfigurationsabschnitt definiert. Die stark typisierten Accessoren der `ProfileCommon` -Klasse rufen die <xref:System.Web.Profile.ProfileBase.GetPropertyValue%2A> Methode zum Abrufen von nicht typisierter Werten aus der <xref:System.Web.Profile.ProfileProvider> , die der generierte Accessor dann wandelt den angegebenen Typ und gibt als Wert der Eigenschaft zurück.  
+  
+ Sie können die <xref:System.Web.Profile.ProfileBase.GetPropertyValue%2A> Methode, um Eigenschaftswerte für das Benutzerprofil für Ihre Anwendung nach Namen abzurufen. Zurückgegebene Werte nicht typisiert sind und als beim Abrufen der bestimmten Objekttyp umgewandelt werden müssen. Für den stark typisierten Zugriff auf Profileigenschaftswerte, Sie können die Eigenschaft anhand des Namens zuzugreifen als Mitglied der Profil-Eigenschaft, die auf jeder Seite verfügbar z. B. `Profile.CustomerAddress`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite, die gelesen und legt die `ZipCode` für das Benutzerprofil angegebene Eigenschaft. Ein Beispiel der Datei "Web.config", die Eigenschaften für das Benutzerprofil angibt, finden Sie im Beispiel für die <xref:System.Web.Profile.ProfileBase> Klasse.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Es wurde versucht, einen Eigenschaftswert für ein anonymes Profil festlegen, in dem der Eigenschaft <see langword="allowAnonymous" /> -Attribut ist <see langword="false" />.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyNotFoundException">Es sind keine Eigenschaften, die für das aktuelle Profil definiert.  
+  
+ - oder -   
+  
+ Der angegebene Profilname Eigenschaft in das aktuelle Profil ist nicht vorhanden.  
+  
+ - oder -   
+  
+ Der Anbieter für die Eigenschaft angegebene Profil hat nicht die angegebene Eigenschaft erkannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (string username, bool isAuthenticated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(string username, bool isAuthenticated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.Initialize(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="isAuthenticated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="username">Der Name des Benutzers, der das Profil für das initialisieren.</param>
+        <param name="isAuthenticated">
+          <see langword="true" />um anzugeben, dass der Benutzer authentifiziert ist. <see langword="false" /> an, dass der Benutzer anonym ist.</param>
+        <summary>Initialisiert die Profileigenschaftswerte und Informationen für den aktuellen Benutzer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht für die Verwendung aus dem Code vorgesehen. Gehen Sie die <xref:System.Web.Profile.ProfileBase.Create%2A> Überladungen zum Erstellen einer Instanz des Benutzerprofils.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAnonymous">
+      <MemberSignature Language="C#" Value="public bool IsAnonymous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAnonymous" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileBase.IsAnonymous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Benutzerprofil für einen anonymen Benutzer ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Benutzerprofil für einen anonymen Benutzer ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anonymer Zugriff auf das Benutzerprofil wird mithilfe des Konfigurationsabschnitts aktiviert und die `allowAnonymous` Attribut des Konfigurationselements verwendet, um Profileigenschaften anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileBase.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Profileigenschaften geändert worden sind.</summary>
+        <value>
+          <see langword="true" />Wenn keines der Profileigenschaften geändert wurden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileBase.IsDirty%2A> Eigenschaft kann verwendet werden, von einem Profilanbieter während der <xref:System.Configuration.SettingsBase.Save%2A> Methode, um zu bestimmen, ob Eigenschaften, primitive Typen, Zeichenfolgen, bestehend aus oder <xref:System.DateTime> Objekte geändert wurden. Geänderte Eigenschaften werden dann vom Profilanbieter im aktualisiert die <xref:System.Configuration.SettingsBase.Save%2A> Methode. Die <xref:System.Configuration.SettingsBase.Save%2A> Methode wird automatisch am Ende der seitenausführung aufgerufen, wenn die <xref:System.Web.Profile.ProfileManager.AutomaticSaveEnabled%2A> Eigenschaft ist`true`  
+  
+ Ein Anbieter aufgerufen wird, der <xref:System.Configuration.SettingsBase.Save%2A> Methode kann nicht explizit zu ermitteln, ob eine Profileigenschaft mit einem benutzerdefinierten Klassentyp oder einen komplexen Typ, z. B. eine Auflistung geändert wurde. Sie können die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis, um zu bestimmen, ob ein benutzerdefiniertes Objekt geändert wurde und das automatische Speichern geänderter Objekte fortsetzen oder die automatische Speicheraktion Abbrechen, wenn keine Objekte geändert wurden. Das Standardverhalten der <xref:System.Web.Profile.ProfileBase> Klasse besteht darin, die <xref:System.Web.Profile.ProfileBase.IsDirty%2A> Eigenschaft `true` für Eigenschaften mit einer benutzerdefinierten oder komplexen Typ der ersten Eigenschaft Mal zugegriffen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string propertyName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Profileigenschaft.</param>
+        <summary>Ruft ab, oder legt ihn fest einen Profil-Eigenschaftswert, der durch den Namen der Eigenschaft indiziert.</summary>
+        <value>Der Wert der angegebenen Profileigenschaft, als typisierte <see langword="object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Abrufen oder Festlegen der Eigenschaftswerte des Benutzerprofils für die Anwendung anhand des Namens. Zurückgegebenen Werte werden als typisierte `object` und als beim Abrufen der bestimmten Objekttyp umgewandelt werden muss. Für den stark typisierten Zugriff auf Profileigenschaftswerte, können Sie die Eigenschaft anhand des Namens zuzugreifen, als ein Mitglied der `Profile` auf jeder Seite, z. B. verfügbare Eigenschaft `Profile.CustomerAddress`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel listet die Namen der Eigenschaften im Benutzerprofil Binden der <xref:System.Configuration.SettingsProperty.Name%2A> Eigenschaft aus der statischen <xref:System.Web.Profile.ProfileBase.Properties%2A> Auflistung von <xref:System.Configuration.SettingsProperty> Datenbankobjekte in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Den Wert der ausgewählten Eigenschaft wird abgerufen, mithilfe der Name der <xref:System.Web.Profile.ProfileBase.Item%2A> Auflistung. Ein Beispiel der Datei "Web.config", die Eigenschaften für das Benutzerprofil angibt, finden Sie im Beispiel für die <xref:System.Web.Profile.ProfileBase> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileBase#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/CS/ViewProfilecs.aspx#2)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileBase#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/VB/ViewProfilevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Es wurde versucht, einen Eigenschaftswert für ein anonymes Profil festlegen, in dem der Eigenschaft <see langword="allowAnonymous" /> -Attribut ist <see langword="false" />.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyNotFoundException">Es sind keine Eigenschaften, die für das aktuelle Profil definiert.  
+  
+ - oder -   
+  
+ Der angegebene Profilname Eigenschaft in das aktuelle Profil ist nicht vorhanden.  
+  
+ - oder -   
+  
+ Der Anbieter für die Eigenschaft angegebene Profil hat nicht die angegebene Eigenschaft erkannt.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyIsReadOnlyException">Es wurde versucht, einen Eigenschaftswert, der markiert wurde als schreibgeschützt festgelegt.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyWrongTypeException">Es wurde versucht, eine Eigenschaft mit einem inkompatiblen Typ einen Wert zuweisen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LastActivityDate">
+      <MemberSignature Language="C#" Value="public DateTime LastActivityDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastActivityDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileBase.LastActivityDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum und die Uhrzeit, zu der das Profil gelesen oder geändert wurde.</summary>
+        <value>Das letzte Datum und die Uhrzeit, die das Profil zu lesen oder von der Standardanbieter geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Eigenschaftswert wird nur von den Standardanbieter für das Profil geändert. Änderungen an Profileigenschaften von einem Anbieter den Standardanbieter für das Profil wirken sich nicht auf den Wert der <xref:System.Web.Profile.ProfileBase.LastActivityDate%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastUpdatedDate">
+      <MemberSignature Language="C#" Value="public DateTime LastUpdatedDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastUpdatedDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileBase.LastUpdatedDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum und die Uhrzeit der Änderung des Profils.</summary>
+        <value>Das letzte Datum und die Uhrzeit, die das Profil vom Standardanbieter geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Eigenschaftswert wird nur von den Standardanbieter für das Profil geändert. Änderungen an Profileigenschaften von einem Anbieter den Standardanbieter für das Profil wirken sich nicht auf den Wert der <xref:System.Web.Profile.ProfileBase.LastUpdatedDate%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public static System.Configuration.SettingsPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Configuration.SettingsPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileBase.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Configuration.SettingsProperty" /> Objekte für jede Eigenschaft im Profil.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsPropertyCollection" /> von <see cref="T:System.Configuration.SettingsProperty" /> Objekte für jede Eigenschaft im Profil für die Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, beim Abrufen von Informationen über die Eigenschaften des Profils für eine Anwendung, einschließlich der Eigenschaftennamen und-Typen konfiguriert. Sie können auch verweisen die <xref:System.Web.Profile.ProfileProvider> der einzelnen Eigenschaften. Ein <xref:System.Web.Profile.ProfileProvider> speichern und Abrufen von Eigenschaftswerten in und aus der Datenquelle verwaltet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel listet die Namen der Eigenschaften im Benutzerprofil Binden der <xref:System.Configuration.SettingsProperty.Name%2A> Eigenschaft aus der statischen <xref:System.Web.Profile.ProfileBase.Properties%2A> Auflistung von <xref:System.Configuration.SettingsProperty> Datenbankobjekte in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Den Wert der ausgewählten Eigenschaft wird abgerufen, mithilfe der Name der <xref:System.Web.Profile.ProfileBase.Item%2A> Auflistung. Ein Beispiel der Datei "Web.config", die Eigenschaften für das Benutzerprofil angibt, finden Sie im Beispiel für die <xref:System.Web.Profile.ProfileBase> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileBase#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/CS/ViewProfilecs.aspx#2)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileBase#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/VB/ViewProfilevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Im Abschnitt der Datei "Web.config" angegebenen Eigenschaftentyp konnte nicht erstellt werden.  
+  
+ - oder -   
+  
+ Die <see langword="allowAnonymous" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see langword="true" /> und <see langword="enabled" /> -Attribut des Elements wird festgelegt, um <see langword="false" />.  
+  
+ - oder -   
+  
+ Die <see langword="serializeAs" /> für den Wert einer Eigenschaft im Abschnitt der Datei "Web.config"-Attribut <see cref="F:System.Configuration.SettingsSerializeAs.Binary" /> und <see cref="P:System.Type.IsSerializable" /> -Eigenschaft des angegebenen <see langword="type" /> gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Der Name eines Anbieters mithilfe der <see langword="provider" /> Attribut einer Eigenschaft Profil konnte nicht gefunden werden, der <see cref="P:System.Web.Profile.ProfileManager.Providers" /> Auflistung.  
+  
+ - oder -   
+  
+ Die <see langword="type" /> angegeben, für eine Profileigenschaft konnten nicht gefunden werden.  
+  
+ - oder -   
+  
+ Eine Profileigenschaft wurde angegeben, mit einem Namen, die einen Eigenschaftsnamen in der Basisklasse, die im angegebenen entspricht der <see langword="inherits" /> -Attribut des Abschnitts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public override void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die Profil-Datenquelle aktualisiert mit geänderten Profileigenschaftswerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileBase.Save%2A> -Methode schreibt geänderte Profil Eigenschaftswerte in der Datenquelle. Die Profilanbieter kann die Menge der Aktivität in der Datenquelle reduzieren, indem Sie Aktualisierungen nur, wenn die <xref:System.Web.Profile.ProfileBase.IsDirty%2A> -Eigenschaftensatz auf `true`. Dies ist der Fall für den standardmäßigen <xref:System.Web.Profile.SqlProfileProvider>. Nach der <xref:System.Web.Profile.ProfileBase.Save%2A> Methode wurde die Eigenschaftswerte gespeichert, mit der Datenquelle <xref:System.Web.Profile.ProfileBase.IsDirty%2A> festgelegt ist, um `false`.  
+  
+ Sie können die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis implementieren benutzerdefinierte Logik, die bestimmt, ob eine Profileigenschaft mit einem benutzerdefinierten Typ oder einen komplexen Typ geändert wurde und das automatische Speichern geänderter Objekte fortsetzen oder die automatische Speicheraktion Abbrechen, wenn keine Objekte über verfügen wurde geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValue">
+      <MemberSignature Language="C#" Value="public void SetPropertyValue (string propertyName, object propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPropertyValue(string propertyName, object propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileBase.SetPropertyValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der festzulegenden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert, der der Eigenschaft zugewiesen werden soll.</param>
+        <summary>Legt den Wert einer Eigenschaft Profil.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet die <xref:System.Web.Profile.ProfileBase> Klasse, die für das Benutzerprofil verwendete Klasse zu erstellen. Wenn eine Anwendung mit aktiviertem Benutzerprofil gestartet wird, erstellt ASP.NET eine neue Klasse des Typs `ProfileCommon`, erbt von der <xref:System.Web.Profile.ProfileBase> Klasse. Stark typisierte Accessoren werden hinzugefügt, um die `ProfileCommon` Klasse für jede Eigenschaft in den Konfigurationsabschnitt definiert. Stark typisierte Accessor die `ProfileCommon` -Klasse rufen die <xref:System.Web.Profile.ProfileBase.SetPropertyValue%2A> Methode, um die Eigenschaft übergeben-Werte in der <xref:System.Web.Profile.ProfileProvider> in der Datenquelle gespeichert werden soll.  
+  
+ Sie können die <xref:System.Web.Profile.ProfileBase.SetPropertyValue%2A> Methode zum Zuweisen von Eigenschaftswerten in das Benutzerprofil für Ihre Anwendung anhand des Namens. Werte nicht typisiert sind, und die typüberprüfung zur Laufzeit nicht Zeitpunkt der Kompilierung durchgeführt werden. Für den stark typisierten Zugriff auf Profileigenschaftswerte, können Sie die Eigenschaft anhand des Namens zuzugreifen, als ein Mitglied der `Profile` -Eigenschaft, die auf jeder Seite verfügbar ist, z. B. `Profile.CustomerAddress`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine ASP.NET-Seite, die gelesen und legt die `ZipCode` für das Benutzerprofil angegebene Eigenschaft. Ein Beispiel der Datei "Web.config", die Eigenschaften für das Benutzerprofil angibt, finden Sie im Beispiel für die <xref:System.Web.Profile.ProfileBase> Klasse.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Profile.HttpProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.HttpProfileBase/VB/defaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Es wurde versucht, einen Eigenschaftswert für ein anonymes Profil festlegen, in dem der Eigenschaft <see langword="allowAnonymous" /> -Attribut ist <see langword="false" />.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyNotFoundException">Es sind keine Eigenschaften, die für das aktuelle Profil definiert.  
+  
+ - oder -   
+  
+ Der angegebene Profilname Eigenschaft in das aktuelle Profil ist nicht vorhanden.  
+  
+ - oder -   
+  
+ Der Anbieter für die Eigenschaft angegebene Profil hat nicht die angegebene Eigenschaft erkannt.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyIsReadOnlyException">Es wurde versucht, einen Wert für eine Eigenschaft festlegen, die als schreibgeschützt gekennzeichnet wurde.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyWrongTypeException">Es wurde versucht, eine Eigenschaft mit einem inkompatiblen Typ einen Wert zuweisen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileBase.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Benutzernamen für das Profil ab.</summary>
+        <value>Der Benutzername für das Profil oder die anonyme Benutzer-ID, die das Profil zugewiesen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileBase.UserName%2A> Eigenschaft gibt entweder den Namen des authentifizierten Benutzers, die das Profil zugeordnet ist oder die anonyme Benutzer-ID, die dem Profil zugewiesen werden, wenn die <xref:System.Web.Profile.ProfileBase.IsAnonymous%2A> Eigenschaft ist `true`.  
+  
+ Anonymer Zugriff auf das Benutzerprofil wird mithilfe des Konfigurationsabschnitts aktiviert und die `allowAnonymous` Attribut des Konfigurationselements verwendet, um Profileigenschaften anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

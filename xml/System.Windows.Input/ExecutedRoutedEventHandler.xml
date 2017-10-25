@@ -1,0 +1,56 @@
+<Type Name="ExecutedRoutedEventHandler" FullName="System.Windows.Input.ExecutedRoutedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ExecutedRoutedEventHandler(object sender, ExecutedRoutedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExecutedRoutedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ExecutedRoutedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.ExecutedRoutedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Input.CommandBinding.Executed" /> und <see cref="E:System.Windows.Input.CommandBinding.PreviewExecuted" /> Routingereignisse sowie verwandter angefügter Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat enthält, das die Implementierungslogik für eine <xref:System.Windows.Input.RoutedCommand>.  Trennen der Implementierungslogik des Befehls den Befehl aus, um aus verschiedenen Quellen und Typen aufgerufen werden kann, und ermöglicht die Zentralisierung von Logik für die.  
+  
+ Dieser Delegat wird auch zum <xref:System.Windows.Input.CommandManager.Executed?displayProperty=nameWithType> und <xref:System.Windows.Input.CommandManager.PreviewExecuted?displayProperty=nameWithType>, wobei es sich um angefügte Ereignisse auf die <xref:System.Windows.Input.CommandManager> Klasse, die viele der Befehle Infrastruktur implementiert. Aber die zweckmäßigste Handler verarbeiten die <xref:System.Windows.Input.CommandBinding.Executed> Ereignisse aus einem bestimmten <xref:System.Windows.Input.CommandBinding>, sondern als für die Arbeit an der <xref:System.Windows.Input.CommandManager> Ebene.  
+  
+ In <xref:System.Windows.Input.ExecutedRoutedEventArgs>, die folgenden Eigenschaften sind im Allgemeinen von Interesse sind, wenn Sie einen Ereignishandler für ein Routingereignis schreiben, die aus einer ausgeführten Befehl ergibt:  
+  
+-   <xref:System.Windows.RoutedEventArgs.Source%2A>meldet das Ziel, auf dem der Befehl ausgeführt wurde. Nachdem der Befehl ausgeführt wurde, können auch Stellen Sie die <xref:System.Windows.RoutedEventArgs.Source%2A> mehr in der Regel in weitergeleitet Ereignis Begriffe, wie das Objekt, das ein Routingereignis ausgelöst.  
+  
+-   <xref:System.Windows.Input.ExecutedRoutedEventArgs.Command%2A>meldet die Anweisung ausgeführte Befehl. Diese Eigenschaft ist nützlich, wenn Sie befehlsbindungen verwenden und Sie Handler schreiben, die potenziell mehrere Befehle behandelt.  
+  
+-   <xref:System.Windows.Input.ExecutedRoutedEventArgs.Parameter%2A>meldet alle befehlsspezifische-Parameter, die vom ausgeführten Befehl übergeben wurden. Nicht alle Befehle verwenden oder befehlsspezifische Parameter erwartet.  
+  
+-   <xref:System.Windows.RoutedEventArgs.Handled%2A>Gibt an, ob das Routingereignis, das von den ausgeführten Befehl geführt hat bereits ein anderes Element entlang der Route behandelt wurde. Für Routingereignishandler, ist es eine empfohlene Methode Handler aufweisen, die sinnvolle Aufgaben ausführen, wenn das Ereignis als festzulegen Behandlung von <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true`. Dies verhindert, dass typische Handler für das Ereignis behandeln, die das Ereignis weiter erneut entlang der Route. Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Routingereignisse als bearbeitete sowie die Behandlung von Klasse markieren](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+ Dieser Delegat stellt auch Handler für <xref:System.Windows.Input.CommandManager.Executed?displayProperty=nameWithType> und <xref:System.Windows.Input.CommandManager.PreviewExecutedEvent?displayProperty=nameWithType>, wobei es sich um angefügte Ereignisse auf die <xref:System.Windows.Input.CommandManager> Klasse, die viele der Befehle Infrastruktur implementiert. Aber die zweckmäßigste Handler verarbeiten die <xref:System.Windows.Input.CommandBinding.Executed> Ereignisse aus einem bestimmten <xref:System.Windows.Input.CommandBinding>, sondern als für die Arbeit an der <xref:System.Windows.Input.CommandManager> Ebene.  
+  
+ Weitere Informationen über Befehle finden Sie unter [Befehlsübersicht](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird ein <xref:System.Windows.Input.ExecutedRoutedEventHandler> eine visuelle Eigenschaft auf dem Ziel, die festlegt, wenn der Befehl ausgeführt wird. Das Beispiel enthält auch die <xref:System.Windows.Input.CanExecuteRoutedEventHandler> für den gleichen Befehl.  
+  
+ [!code-csharp[Custom_RoutedCommand#Custom_RoutedCommandHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/Custom_RoutedCommand/CSharp/Window1.xaml.cs#custom_routedcommandhandlers)]
+ [!code-vb[Custom_RoutedCommand#Custom_RoutedCommandHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Custom_RoutedCommand/visualbasic/window1.xaml.vb#custom_routedcommandhandlers)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,59 @@
+<Type Name="DiskSpaceExhaustedOption" FullName="Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption">
+  <TypeSignature Language="C#" Value="public enum DiskSpaceExhaustedOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DiskSpaceExhaustedOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt, auf welche, wenn die <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> Objekt in ein Protokoll schreibt und weniger freier Speicherplatz verfügbar ist als die <see cref="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace" /> Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> Eigenschaft auf DiscardMessages festgelegt ist, die protokollmeldungen sind standardmäßig verworfen, wenn es ist nicht genügend Speicherplatz reserviert. Dies verhindert, dass einfache Anwendungen fehlschlägt, wenn der Datenträger zu voll abruft.  
+  
+ Legen Sie für eine Anwendung unter Umständen stabiler der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> Eigenschaft ThrowException, und fügen `Try...Catch` -Blöcke für Code, der in das Protokoll schreibt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DiscardMessages">
+      <MemberSignature Language="C#" Value="DiscardMessages" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption DiscardMessages = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwerfen Sie protokollmeldungen an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowException">
+      <MemberSignature Language="C#" Value="ThrowException" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption ThrowException = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.ThrowException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst eine Ausnahme aus.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

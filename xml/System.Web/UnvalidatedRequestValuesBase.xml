@@ -1,0 +1,279 @@
+<Type Name="UnvalidatedRequestValuesBase" FullName="System.Web.UnvalidatedRequestValuesBase">
+  <TypeSignature Language="C#" Value="public abstract class UnvalidatedRequestValuesBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UnvalidatedRequestValuesBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UnvalidatedRequestValuesBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dient als Basisklasse für Klassen, die Zugriff auf HTTP-Anforderungswerte, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zur anforderungsüberprüfung finden Sie unter <xref:System.Web.UnvalidatedRequestValues>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UnvalidatedRequestValuesBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UnvalidatedRequestValuesBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Wird von Konstruktoren in abgeleiteten Klassen aufgerufen, um Initialisieren der <see cref="T:System.Web.UnvalidatedRequestValuesBase" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpCookieCollection Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCookieCollection Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Auflistung der Cookies, die der Client gesendet, ohne die Anforderungsvalidierung für ASP.NET, ab.</summary>
+        <value>Die Cookies aus dem HTTP-Anforderung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpFileCollectionBase Files { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpFileCollectionBase Files" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.Files" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpFileCollectionBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Auflistung der Dateien, die der Client, ohne die Anforderungsvalidierung für ASP.NET hochgeladen, ab.</summary>
+        <value>Die Dateien aus der HTTP-Anforderung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.NameValueCollection Form { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Form" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.Form" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Auflistung der Formularvariablen, die der Client übermittelt, ohne die Anforderungsvalidierung für ASP.NET, ab.</summary>
+        <value>Die Formularvariablen der HTTP-Anforderung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.NameValueCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Auflistung von HTTP-Headern, die der Client gesendet, ohne die Anforderungsvalidierung für ASP.NET, ab.</summary>
+        <value>Die Header der HTTP-Anforderung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual string this[string field] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="field">Der Schlüssel des abzurufenden Objekts.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft das angegebene Objekt aus der <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.Cookies" />, <see cref="P:System.Web.HttpRequest.QueryString" />, oder <see cref="P:System.Web.HttpRequest.ServerVariables" /> -Auflistung, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+        <value>Das Objekt, das gemäß der <paramref name="field" /> Parameter.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public virtual string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den virtuellen Pfad der angeforderten Ressource ab, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+        <value>Der virtuelle Pfad.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PathInfo">
+      <MemberSignature Language="C#" Value="public virtual string PathInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PathInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.PathInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse Ruft zusätzliche Pfadinformationen für eine Ressource mit einer URL-Erweiterung, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+        <value>Eine Zeichenfolge, die zusätzlichen Pfadinformationen für eine Ressource enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.NameValueCollection QueryString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Auflistung von HTTP-Abfrage Zeichenfolgenvariablen, die der Client übermittelt, ohne die Anforderungsvalidierung für ASP.NET, ab.</summary>
+        <value>Die Auflistung der vom Client gesendeten Abfragezeichenfolgenvariablen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RawUrl">
+      <MemberSignature Language="C#" Value="public virtual string RawUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RawUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.RawUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Teil der angeforderten URL an, die Namen den Website an, ohne die Anforderungsvalidierung für ASP.NET folgt.</summary>
+        <value>Der Teil der URL, der den Websitenamen an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die vollständige Anforderungs-URL ist `http://www.contoso.com/default.aspx?id=44`, den Wert der <xref:System.Web.UnvalidatedRequestValuesBase.RawUrl%2A> ist `/default.aspx?id=44`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public virtual Uri Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValuesBase.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die URL-Daten für die Anforderung ohne die Anforderungsvalidierung ab.</summary>
+        <value>Ein Objekt, das die URL-Daten für die Anforderung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die URL-Daten, z. B. die Portnummer, Hostname, Pfadinformationen und Daten über den Benutzer aus Abrufen der <xref:System.Uri> dieser Eigenschaft zurückgegebene Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Eigenschaft ist nicht implementiert.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

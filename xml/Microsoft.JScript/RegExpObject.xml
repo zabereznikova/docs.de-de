@@ -1,0 +1,138 @@
+<Type Name="RegExpObject" FullName="Microsoft.JScript.RegExpObject">
+  <TypeSignature Language="C#" Value="public sealed class RegExpObject : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegExpObject extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.RegExpObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Objekt für reguläre Ausdrücke darstellt. Diese Klasse gehört zu "Modell" integrierten Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="global">
+      <MemberSignature Language="C#" Value="public bool global { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool global" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.global" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Suchvorgänge, mit der globalen Kennzeichnung ausgeführt werden (<c>/g</c>), mit allen Vorkommen.</summary>
+        <value>
+          <see langword="true" />Wenn globale Suchvorgänge ausgeführt werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ignoreCase">
+      <MemberSignature Language="C#" Value="public bool ignoreCase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ignoreCase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.ignoreCase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Suchvorgänge mit dem Flag "Groß-/Kleinschreibung" ausgeführt werden (<c>/i</c>).</summary>
+        <value>
+          <see langword="true" />Wenn die Groß-/Kleinschreibung Suchvorgänge ausgeführt werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="lastIndex">
+      <MemberSignature Language="C#" Value="public object lastIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object lastIndex" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.lastIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index der letzten erfolgreichen Übereinstimmung fest.</summary>
+        <value>Der Index des letzten erfolgreichen Übereinstimmung, wenn vorhanden war.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="multiline">
+      <MemberSignature Language="C#" Value="public bool multiline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool multiline" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.multiline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Suchvorgänge, mit der multiline-Flags ausgeführt werden (<c>/m</c>).</summary>
+        <value>
+          <see langword="true" />Wenn Suchvorgänge im mehrzeiligen Modus ausgeführt werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="source">
+      <MemberSignature Language="C#" Value="public string source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string source" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpObject.source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Muster des regulären Ausdrucks, das von diesem Objekt dargestellt wird.</summary>
+        <value>Muster für reguläre Ausdrücke, das von diesem Objekt dargestellt wird.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.RegExpObject.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung dieses Objekts, das Muster eines regulären Ausdrucks und die Flags enthält.</summary>
+        <returns>Eine Zeichenfolgendarstellung dieses Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Services">
+  <Docs>
+    <summary>Bietet Zugriff auf Klassen, die zum Erstellen von WCF Data Services verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

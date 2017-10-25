@@ -1,0 +1,111 @@
+<Type Name="AddInSecurityLevel" FullName="System.AddIn.Hosting.AddInSecurityLevel">
+  <TypeSignature Language="C#" Value="public enum AddInSecurityLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AddInSecurityLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInSecurityLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Vertrauensebene, die das die Anwendungsdomäne gewährt wird, die in einem Add-In geladen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Add-in-System aktiviert das Add-in mit dem Berechtigungssatz, der die Vertrauensebene für das Add-in Anwendungsdomäne angegebenen entspricht. Dieser Berechtigungssatz wird durch die common Language Runtime Code Access Sicherheit (Security, CAS) Konfiguration definiert.  
+  
+ Die Werte dieser Enumeration können nicht mit dem bitweisen OR-Operation kombiniert werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein Add-in mit einer angegebenen Vertrauensebene aktiviert.  
+  
+ [!code-csharp[AddInP3Host#5](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#5)]
+ [!code-vb[AddInP3Host#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FullTrust">
+      <MemberSignature Language="C#" Value="FullTrust" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel FullTrust = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.FullTrust" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Sicherheitsstufe für volle Vertrauenswürdigkeit für Add-Ins, die zulässig sind, zum Lesen und Schreiben in das lokale Dateisystem, Netzwerkverbindungen zu erstellen, und aus der Registrierung gelesen. Bei dieser Sicherheitsstufe gewährt vollen Zugriff auf das Add-in Codezugriffssicherheit (CAS) durch Anwenden der <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> Feld.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="Host" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel Host = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.Host" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Sicherheitsstufe für den Host, um das Add-in derselben des Hostcodes derzeit erteilten Berechtigungen zu gewähren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Einstellung besitzt zwei Zwecken:  
+  
+-   Es stellt maximale Berechtigungssatzes, in denen ein Hosts zu gewähren, kann deren Add-Ins dar.  
+  
+-   Es kann eine ClickOnce- oder eine Extensible Application Markup Language (XAML) Browseranwendung (XBAP) Host die Ursprungssite für die add-ins, verteilt der mit dem Server hergestellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Internet">
+      <MemberSignature Language="C#" Value="Internet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel Internet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.Internet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Sicherheitsstufe für Internet für Add-Ins, die eine niedrige Vertrauensebene aufweisen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Intranet">
+      <MemberSignature Language="C#" Value="Intranet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel Intranet = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.Intranet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Sicherheitsstufe für Intranet für Add-Ins, die im Intranet des Unternehmens befinden. Diese Add-Ins können eine höhere Vertrauensebene aufweisen, da die Server und die Informationen innerhalb eines Unternehmens-Firewall befinden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

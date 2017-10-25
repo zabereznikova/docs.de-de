@@ -1,0 +1,213 @@
+<Type Name="PermissionRequestEvidence" FullName="System.Security.Policy.PermissionRequestEvidence">
+  <TypeSignature Language="C#" Value="public sealed class PermissionRequestEvidence : System.Security.Policy.EvidenceBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PermissionRequestEvidence extends System.Security.Policy.EvidenceBase" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.PermissionRequestEvidence" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.EvidenceBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Beweise, die berechtigungsanforderungen darstellt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anforderungen für die Berechtigungen umfassen, die minimale Berechtigungen, die der Code erfordert Berechtigungen ausgeführt, den Code verwenden kann, wenn sie gewährt werden, jedoch nicht erforderlich sind, und Berechtigungen der Code explizit bittet, nicht erteilt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PermissionRequestEvidence (System.Security.PermissionSet request, System.Security.PermissionSet optional, System.Security.PermissionSet denied);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.PermissionSet request, class System.Security.PermissionSet optional, class System.Security.PermissionSet denied) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PermissionRequestEvidence.#ctor(System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="request" Type="System.Security.PermissionSet" />
+        <Parameter Name="optional" Type="System.Security.PermissionSet" />
+        <Parameter Name="denied" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die minimale Berechtigungen muss der Code ausgeführt.</param>
+        <param name="optional">Die Berechtigungen können den Code verwenden, wenn sie erteilt werden, aber nicht erforderlich sind.</param>
+        <param name="denied">Die Berechtigungen, die der Code explizit bittet, nicht erteilt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Policy.PermissionRequestEvidence" /> Klasse mit der berechtigungsanforderung einer Code-Assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das .NET Framework-Sicherheitssystem Richtlinie verwendet die angeforderten Berechtigungen werden zusammen mit einer Codeassembly <xref:System.Security.Policy.Evidence> um zu bestimmen, welche Berechtigungen Code erteilt werden sollte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.EvidenceBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.EvidenceBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PermissionRequestEvidence.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.EvidenceBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.PermissionRequestEvidence Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Policy.PermissionRequestEvidence Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PermissionRequestEvidence.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PermissionRequestEvidence</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine äquivalente Kopie des aktuellen <see cref="T:System.Security.Policy.PermissionRequestEvidence" />.</summary>
+        <returns>Eine entsprechende Kopie des aktuellen <see cref="T:System.Security.Policy.PermissionRequestEvidence" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeniedPermissions">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet DeniedPermissions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet DeniedPermissions" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.PermissionRequestEvidence.DeniedPermissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Berechtigungen, die der Code explizit bittet, nicht erteilt werden.</summary>
+        <value>Die Berechtigungen, die der Code explizit bittet, nicht erteilt werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionalPermissions">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet OptionalPermissions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet OptionalPermissions" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.PermissionRequestEvidence.OptionalPermissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Berechtigungen, die den Code verwenden können, wenn sie erteilt werden, jedoch sind nicht erforderlich.</summary>
+        <value>Die Berechtigungen können den Code verwenden, wenn sie erteilt werden, jedoch sind nicht erforderlich.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedPermissions">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet RequestedPermissions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet RequestedPermissions" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.PermissionRequestEvidence.RequestedPermissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mindestberechtigungen benötigten Code ausführen.</summary>
+        <value>Die minimale Berechtigungen muss der Code ausgeführt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PermissionRequestEvidence.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung des Zustands der <see cref="T:System.Security.Policy.PermissionRequestEvidence" />.</summary>
+        <returns>Eine Darstellung des Zustands der <see cref="T:System.Security.Policy.PermissionRequestEvidence" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nützlich während des Debuggens, um eine einfach zu lesende Darstellung erhalten die <xref:System.Security.Policy.PermissionRequestEvidence>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

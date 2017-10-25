@@ -1,0 +1,98 @@
+<Type Name="RecognitionEventArgs" FullName="System.Speech.Recognition.RecognitionEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class RecognitionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit RecognitionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.RecognitionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen zur Sprache Recognition-Ereignisse bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Recognition.RecognitionEventArgs.Result%2A> Eigenschaft Plattforminformationen der Erkennungsvorgang als ein <xref:System.Speech.Recognition.RecognitionResult> Objekt. Weitere Informationen zu Speech Recognition-Ereignissen finden Sie unter [mit Spracherkennung Recognition Ereignissen](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482).  
+  
+ **RecognitionEventArgs** ist die Grundlage für die folgenden Klassen:  
+  
+-   <xref:System.Speech.Recognition.SpeechRecognizedEventArgs>  
+  
+-   <xref:System.Speech.Recognition.SpeechRecognitionRejectedEventArgs>  
+  
+-   <xref:System.Speech.Recognition.SpeechHypothesizedEventArgs>  
+  
+ <xref:System.Speech.Recognition.RecognitionEventArgs> wird von <xref:System.EventArgs> abgeleitet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fügt einen Handler für das <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechHypothesized>, <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized>, und <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognitionRejected> Ereignisse von der von der Spracherkennung. Die Ereignisargumenttypen für alle drei Ereignisse abgeleitet <xref:System.Speech.Recognition.RecognitionEventArgs>, der als Parameter für das Daten in den Handler verwendet wird.  
+  
+```csharp  
+  
+// Initialize the speech recognizer.  
+private void Initialize(SpeechRecognitionEngine recognizer)  
+{  
+  // Attach handlers for the SpeechHypothesized, SpeechRecognitionRejected,  
+  // and SpeechRecognized events.  
+  recognizer.SpeechHypothesized +=  
+    new EventHandler<SpeechHypothesizedEventArgs>(DisplayResult);  
+  recognizer.SpeechRecognitionRejected +=  
+    new EventHandler<SpeechRecognitionRejectedEventArgs>(DisplayResult);  
+  recognizer.SpeechRecognized +=  
+    new EventHandler<SpeechRecognizedEventArgs>(DisplayResult);  
+  
+  // Add other initialization code here.  
+}  
+  
+// Handle the SpeechHypothesized, SpeechRecognitionRejected,  
+// and SpeechRecognized events.  
+private void DisplayResult(object sender, RecognitionEventArgs e)  
+{  
+  if (e is SpeechHypothesizedEventArgs)  
+  {  
+    Console.WriteLine("Speech hypothesized:");  
+  }  
+  else if (e is SpeechRecognitionRejectedEventArgs)  
+  {  
+    Console.WriteLine("Speech recognition rejected:");  
+  }  
+  else if (e is SpeechRecognizedEventArgs)  
+  {  
+    Console.WriteLine("Speech recognized:");  
+  }  
+  
+  // Add code to handle the event.  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.RecognitionResult Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Recognition.RecognitionResult Result" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognitionEventArgs.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognitionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anerkennung Ergebnisdaten Speech Recognition Ereignisses ab.</summary>
+        <value>Die <see cref="P:System.Speech.Recognition.RecognitionEventArgs.Result" /> -Eigenschaft gibt die <see cref="T:System.Speech.Recognition.RecognitionResult" /> , die Informationen über die Anerkennung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

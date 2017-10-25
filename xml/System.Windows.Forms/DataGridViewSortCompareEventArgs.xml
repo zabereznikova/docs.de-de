@@ -1,0 +1,260 @@
+<Type Name="DataGridViewSortCompareEventArgs" FullName="System.Windows.Forms.DataGridViewSortCompareEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewSortCompareEventArgs : System.ComponentModel.HandledEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewSortCompareEventArgs extends System.ComponentModel.HandledEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewSortCompareEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.HandledEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.DataGridView.SortCompare" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können behandeln die <xref:System.Windows.Forms.DataGridView.SortCompare> Ereignis, um benutzerdefinierte Sortierung bereitzustellen. Dieses Ereignis tritt nur auf, wenn die <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType> Eigenschaft nicht festgelegt ist und die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `false`. Dieses Ereignis tritt einmal für jedes Paar von Zellen in der Spalte, die sortiert wird. Es tritt nur, wenn der Benutzer den Header einer Spalte mit klickt ein <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>, oder beim Aufrufen der <xref:System.Windows.Forms.DataGridView.Sort%28System.Windows.Forms.DataGridViewColumn%2CSystem.ComponentModel.ListSortDirection%29?displayProperty=nameWithType> überladen. Tritt dieses Ereignis für eine Spalte mit einem <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>, Sie müssen das Sortiersymbol selbst anzeigen über die <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Sie können dieses Ereignis zum Sortieren von Zeilen, die mit den Zellenwerten in einer Spalte oder in mehreren Spalten verwenden. Verwenden der <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue1%2A> und <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue2%2A> Eigenschaften zum Vergleichen von Zellenwerten in der Spalte angegeben wird, der <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.Column%2A> Eigenschaft. Verwenden der <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex1%2A> und <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex2%2A> Eigenschaften Werte in anderen Spalten wird über den Zugriff auf die <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.DataGridView.SortCompare> in einer Sortierung für mehrere Spalten. In diesem Beispiel ist Teil eines umfangreicheren Beispiels [wie: Sortieren von anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewSortCompareEventArgs (System.Windows.Forms.DataGridViewColumn dataGridViewColumn, object cellValue1, object cellValue2, int rowIndex1, int rowIndex2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewColumn dataGridViewColumn, object cellValue1, object cellValue2, int32 rowIndex1, int32 rowIndex2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewSortCompareEventArgs.#ctor(System.Windows.Forms.DataGridViewColumn,System.Object,System.Object,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataGridViewColumn" Type="System.Windows.Forms.DataGridViewColumn" />
+        <Parameter Name="cellValue1" Type="System.Object" />
+        <Parameter Name="cellValue2" Type="System.Object" />
+        <Parameter Name="rowIndex1" Type="System.Int32" />
+        <Parameter Name="rowIndex2" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewColumn">Die Spalte zu sortieren.</param>
+        <param name="cellValue1">Der Wert der ersten Zelle, verglichen werden soll.</param>
+        <param name="cellValue2">Der Wert der zweiten Zelle, die verglichen werden soll.</param>
+        <param name="rowIndex1">Der Index der Zeile, die die erste Zelle enthält.</param>
+        <param name="rowIndex2">Der Index der Zeile, die die zweite Zelle enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewSortCompareEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellValue1">
+      <MemberSignature Language="C#" Value="public object CellValue1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CellValue1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der ersten Zelle, verglichen werden soll.</summary>
+        <value>Der Wert der ersten Zelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft dient in der Regel in Verbindung mit der <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue2%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue1%2A> in einer Sortierung für mehrere Spalten. In diesem Beispiel ist Teil eines umfangreicheren Beispiels [wie: Sortieren von anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellValue2">
+      <MemberSignature Language="C#" Value="public object CellValue2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CellValue2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der zweiten Zelle, die verglichen werden soll.</summary>
+        <value>Der Wert der zweiten Zelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft dient in der Regel in Verbindung mit der <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue1%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue2%2A> in einer Sortierung für mehrere Spalten. In diesem Beispiel ist Teil eines umfangreicheren Beispiels [wie: Sortieren von anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewSortCompareEventArgs.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die sortierte Spalte ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.DataGridViewColumn" /> zu sortieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist hilfreich beim bestimmen und Steuern des Verhaltens der Sortierreihenfolge in programmgesteuerten Sortiervorgängen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.Column%2A> in einer Sortierung für mehrere Spalten. In diesem Beispiel wird die ID-Spalte verwendet, um die endgültige Reihenfolge zu bestimmen, wenn identische Werte in der sortierten Spalte vorhanden sind, damit keine zusätzliche Sortierung durchgeführt wird, wenn in der ID-Spalte doppelte Werte vorhanden sind. In diesem Beispiel ist Teil eines umfangreicheren Beispiels [wie: Sortieren von anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex1">
+      <MemberSignature Language="C#" Value="public int RowIndex1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der Zeile, die die erste Zelle, verglichen werden soll.</summary>
+        <value>Der Index der Zeile, die die zweite Zelle enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, wenn Zeilen basierend auf den Zellenwerten in mehreren Spalten sortieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex1%2A> in einer Sortierung für mehrere Spalten. In diesem Beispiel ist Teil eines umfangreicheren Beispiels [wie: Sortieren von anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex2">
+      <MemberSignature Language="C#" Value="public int RowIndex2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der Zeile mit der zweiten Zelle, verglichen werden soll.</summary>
+        <value>Der Index der Zeile, die die zweite Zelle enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, wenn Zeilen basierend auf den Zellenwerten in mehreren Spalten sortieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex2%2A> in einer Sortierung für mehrere Spalten. In diesem Beispiel ist Teil eines umfangreicheren Beispiels [wie: Sortieren von anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortResult">
+      <MemberSignature Language="C#" Value="public int SortResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SortResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewSortCompareEventArgs.SortResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Reihenfolge, in der die verglichenen Zellen sortiert werden.</summary>
+        <value>Kleiner als 0 (null), wenn die erste Zelle vor der zweiten Zelle sortiert wird. NULL, wenn die erste Zelle und die zweite Zelle gleichwertig sind; größer als 0 (null), wenn vor der ersten Zelle die zweite Zelle sortiert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Festlegen dieses Werts ist in der Regel der letzte Vorgang in einem Ereignishandler für ausführen wird das <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> Ereignis. Sie werden in der Regel legen Sie diesen Wert auf den Rückgabewert einer Methode Vergleich wie z. B. <xref:System.String.Compare%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Windows.Forms.DataGridViewSortCompareEventArgs.SortResult%2A> in einer Sortierung für mehrere Spalten. In diesem Beispiel ist Teil eines umfangreicheren Beispiels [wie: Sortieren von anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.SortCompare#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+<Type Name="IBinarySerialize" FullName="Microsoft.SqlServer.Server.IBinarySerialize">
+  <TypeSignature Language="C#" Value="public interface IBinarySerialize" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBinarySerialize" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.IBinarySerialize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt benutzerdefinierte Implementierung für den benutzerdefinierten Typ (UDT) und benutzerdefinierte aggregate Serialisierung und Deserialisierung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Typen (UDTs) und benutzerdefinierte Aggregate sind erforderlich, um ein Speicherformat definieren die kann entweder <xref:Microsoft.SqlServer.Server.Format>.`Native` oder <xref:Microsoft.SqlServer.Server.Format>.`UserDefined`.  
+  
+ <xref:Microsoft.SqlServer.Server.Format>.`Native` ermöglicht SQL Server die automatische Behandeln der Serialisierung und Deserialisierung, aber das Format weist Einschränkungen auf die Art der Typen, die sie behandeln kann. <xref:Microsoft.SqlServer.Server.Format>.`UserDefined` ermöglicht, benutzerdefinierte Typen und Aggregate, eigene Serialisierung zu behandeln. Benutzerdefinierte Typen und Aggregate müssen mit dem gekennzeichnet werden <xref:Microsoft.SqlServer.Server.Format>.`UserDefined` in der `SqlUserDefinedType` oder `SqlUserDefinedAggregate` Attribut, und implementieren müssen die <xref:Microsoft.SqlServer.Server.IBinarySerialize> Schnittstelle.  
+  
+ Beachten Sie, dass selbst bei einer benutzerdefinierten Serialisierung beträgt die Gesamtgröße der einzelnen Instanzen unter den maximal zulässigen Grenzwert, derzeit 8000 Byte sein muss.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read (System.IO.BinaryReader r);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Read(class System.IO.BinaryReader r) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.IBinarySerialize.Read(System.IO.BinaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="System.IO.BinaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="r">Die <see cref="T:System.IO.BinaryReader" /> stream, aus dem das Objekt deserialisiert wird.</param>
+        <summary>Generiert einen benutzerdefinierten Typ (UDT) oder benutzerdefinierte Aggregat aus seiner binären Form an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A> Methode muss das Objekt, das anhand der Informationen durch Wiederherstellen der <xref:Microsoft.SqlServer.Server.IBinarySerialize.Write%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Implementierung der <xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A> Methode des UDT, der verwendet eine <xref:System.IO.BinaryReader> einen zuvor beibehaltenen UDT deserialisiert werden. In diesem Beispiel wird davon ausgegangen, dass der UDT über zwei Dateneigenschaften verfügt: `StringValue` und `DoubleValue`.  
+  
+ [!code-csharp[DataWorks IBinarySerialize Samples#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/CS/source.cs#1)]
+ [!code-vb[DataWorks IBinarySerialize Samples#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.BinaryWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.IO.BinaryWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.IBinarySerialize.Write(System.IO.BinaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.IO.BinaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Die <see cref="T:System.IO.BinaryWriter" /> Stream, in dem der UDT oder das benutzerdefinierte Aggregat serialisiert wird.</param>
+        <summary>Konvertiert einen benutzerdefinierten Typ (UDT) oder benutzerdefinierte Aggregat in das binäre Format, damit sie beibehalten werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schreiben Sie ausreichende Informationen in den binären Datenstrom zum Zulassen der <xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A> Methode, um den UDT oder das benutzerdefinierte Aggregat wieder zusammenzusetzen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Implementierung von der <xref:Microsoft.SqlServer.Server.IBinarySerialize.Write%2A> Methode des UDT, der verwendet eine <xref:System.IO.BinaryWriter> den UDT in der benutzerdefinierten binären Format zu serialisieren. Der Zweck des Abstands Null-Zeichen ist, stellen Sie sicher, dass der Zeichenfolgenwert vollständig aus dem double-Wert, getrennt ist, sodass ein UDT im Vergleich zu anderen Transact-SQL-Code, Zeichenfolgenbytes auf Zeichenfolgenbytes verglichen werden und Doppelbytezeichen in Doppel verglichen werden Bytes.  
+  
+ [!code-csharp[DataWorks IBinarySerialize Samples#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/CS/source.cs#2)]
+ [!code-vb[DataWorks IBinarySerialize Samples#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

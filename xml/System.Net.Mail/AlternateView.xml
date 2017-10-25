@@ -1,0 +1,511 @@
+<Type Name="AlternateView" FullName="System.Net.Mail.AlternateView">
+  <TypeSignature Language="C#" Value="public class AlternateView : System.Net.Mail.AttachmentBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AlternateView extends System.Net.Mail.AttachmentBase" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.AlternateView" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Mail.AttachmentBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Format eine e-Mail-Nachricht anzeigen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Net.Mail.AlternateView> Klasse, um Kopien einer e-Mail-Nachricht in verschiedenen Formaten anzugeben. Z. B. Wenn Sie eine Nachricht im HTML-Format senden, sollten auch Sie eine nur-Text-Version angeben, für den Fall, dass einige Empfänger e-Mail-Reader verwenden, die HTML-Inhalt nicht anzeigen kann.  
+  
+ Diese Klasse verfügt über zwei Eigenschaften <xref:System.Net.Mail.AlternateView.LinkedResources%2A> und <xref:System.Net.Mail.AlternateView.BaseUri%2A> zum Auflösen von URLs in den Inhalt der e-Mail verwendet werden. <xref:System.Net.Mail.AlternateView.LinkedResources%2A>ist eine Sammlung von <xref:System.Net.Mail.LinkedResource> Objekte. Beim Rendern werden die URLs im Inhalt der e-Mail-Nachricht zuerst für die URLs in Übereinstimmungen die <xref:System.Net.Mail.LinkedResource.ContentLink%2A> jedes <xref:System.Net.Mail.LinkedResource> Objekt in der <xref:System.Net.Mail.AlternateView.LinkedResources%2A> -Auflistung, und aufgelöst. <xref:System.Net.Mail.AlternateView.BaseUri%2A>wird von e-Mail-Reader verwendet, zum Auflösen relativer URLs innerhalb des Texts sowie zum Auflösen relativer <xref:System.Net.Mail.LinkedResource.ContentLink%2A> URLs in der <xref:System.Net.Mail.AlternateView.LinkedResources%2A> Auflistung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Net.Mail.AlternateView" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Net.Mail.AlternateView> Klasse rufen auch durch einen Aufruf der initialisiert die <xref:System.Net.Mail.AlternateView.CreateAlternateViewFromString%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlternateView (System.IO.Stream contentStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese Sicht enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.AlternateView" /> mit dem angegebenen <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Net.Mail.AlternateView> Klasse rufen auch durch einen Aufruf der initialisiert die <xref:System.Net.Mail.AlternateView.CreateAlternateViewFromString%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlternateView (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die den Inhalt für diese alternative Ansicht enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.AlternateView" /> mit dem angegebenen Dateinamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Net.Mail.AlternateView> Klasse rufen auch durch einen Aufruf der initialisiert die <xref:System.Net.Mail.AlternateView.CreateAlternateViewFromString%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.IOException">Ein e/a-Fehler aufgetreten, z. B. ein Datenträgerfehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der angeforderte Zugriff wird vom Betriebssystem für das angegebene Dateihandle, z. B. wenn der Zugriff Schreib- oder Lese-/Schreibmodus ist nicht zulässig, und das Dateihandle für schreibgeschützten Zugriff festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlternateView (System.IO.Stream contentStream, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.#ctor(System.IO.Stream,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese Anlage enthält.</param>
+        <param name="contentType">Der Typ des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.AlternateView" /> mit dem angegebenen <see cref="T:System.IO.Stream" /> und <see cref="T:System.Net.Mime.ContentType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Net.Mail.AlternateView> Klasse rufen auch durch einen Aufruf der initialisiert die <xref:System.Net.Mail.AlternateView.CreateAlternateViewFromString%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="contentType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlternateView (System.IO.Stream contentStream, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Ein Datenstrom, der den Inhalt für diese Anlage enthält.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.AlternateView" /> mit dem angegebenen <see cref="T:System.IO.Stream" /> und dem Medientyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Net.Mail.AlternateView> Klasse rufen auch durch einen Aufruf der initialisiert die <xref:System.Net.Mail.AlternateView.CreateAlternateViewFromString%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" />ist kein gültiger Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlternateView (string fileName, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.#ctor(System.String,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die den Inhalt für diese alternative Ansicht enthält.</param>
+        <param name="contentType">Der Typ des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.AlternateView" /> mit dem angegebenen Dateinamen und den Inhaltstyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Net.Mail.AlternateView> Klasse rufen auch durch einen Aufruf der initialisiert die <xref:System.Net.Mail.AlternateView.CreateAlternateViewFromString%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="contentType" />ist kein gültiger Wert.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.IOException">Ein e/a-Fehler aufgetreten, z. B. ein Datenträgerfehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der angeforderte Zugriff wird vom Betriebssystem für das angegebene Dateihandle, z. B. wenn der Zugriff Schreib- oder Lese-/Schreibmodus ist nicht zulässig, und das Dateihandle für schreibgeschützten Zugriff festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlternateView (string fileName, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, die den Inhalt für diese alternative Ansicht enthält.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.AlternateView" /> mit dem angegebenen Namen und Medien Dateityp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Net.Mail.AlternateView> Klasse rufen auch durch einen Aufruf der initialisiert die <xref:System.Net.Mail.AlternateView.CreateAlternateViewFromString%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" />ist kein gültiger Wert.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.IOException">Ein e/a-Fehler aufgetreten, z. B. ein Datenträgerfehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der angeforderte Zugriff wird vom Betriebssystem für das angegebene Dateihandle, z. B. wenn der Zugriff Schreib- oder Lese-/Schreibmodus ist nicht zulässig, und das Dateihandle für schreibgeschützten Zugriff festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.AlternateView.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Basis-URI zum Auflösen von relativen URIs in die <see cref="T:System.Net.Mail.AlternateView" />.</summary>
+        <value>Ein <see cref="T:System.Uri" />.  
+  
+ Der Basis-<see cref="T:System.Uri" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAlternateViewFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.AlternateView CreateAlternateViewFromString (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.AlternateView CreateAlternateViewFromString(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.CreateAlternateViewFromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.AlternateView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">Die <see cref="T:System.String" /> , die den Inhalt der e-Mail-Nachricht enthält.</param>
+        <summary>Erstellt eine <see cref="T:System.Net.Mail.AlternateView" /> von einer e-Mail-Nachricht mit dem angegebenen im Inhalt einer <see cref="T:System.String" />.</summary>
+        <returns>Ein <see cref="T:System.Net.Mail.AlternateView" /> Objekt, das eine alternative Ansicht einer e-Mail-Nachricht darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardmedientyp um Klartext handelt und die standardcodierung ist ASCII.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAlternateViewFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.AlternateView CreateAlternateViewFromString (string content, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.AlternateView CreateAlternateViewFromString(string content, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.CreateAlternateViewFromString(System.String,System.Net.Mime.ContentType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.AlternateView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="content">Ein <see cref="T:System.String" /> , die Inhalte für diese Anlage enthält.</param>
+        <param name="contentType">Ein <see cref="T:System.Net.Mime.ContentType" /> , beschreibt die Daten in <c>Zeichenfolge</c>.</param>
+        <summary>Erstellt ein <see cref="T:System.Net.Mail.AlternateView" /> von einer e-Mail-Nachricht mit dem angegebenen im Inhalt einer <see cref="T:System.String" /> und den angegebenen MIME-Medientyp des Inhalts.</summary>
+        <returns>Ein <see cref="T:System.Net.Mail.AlternateView" /> Objekt, das eine alternative Ansicht einer e-Mail-Nachricht darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAlternateViewFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.AlternateView CreateAlternateViewFromString (string content, System.Text.Encoding encoding, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.AlternateView CreateAlternateViewFromString(string content, class System.Text.Encoding encoding, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.CreateAlternateViewFromString(System.String,System.Text.Encoding,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.AlternateView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="contentEncoding" Type="System.Text.Encoding" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">Ein <see cref="T:System.String" /> , die Inhalte für diese Anlage enthält.</param>
+        <param name="encoding">To be added.</param>
+        <param name="mediaType">Der MIME-Medientyp des Inhalts.</param>
+        <summary>Erstellt ein <see cref="T:System.Net.Mail.AlternateView" /> von einer e-Mail-Nachricht mit dem angegebenen im Inhalt einer <see cref="T:System.String" />, die angegebene textcodierung und MIME-Medientyp des Inhalts.</summary>
+        <returns>Ein <see cref="T:System.Net.Mail.AlternateView" /> Objekt, das eine alternative Ansicht einer e-Mail-Nachricht darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.AlternateView.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Net.Mail.AlternateView" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Net.Mail.AlternateView> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkedResources">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.LinkedResourceCollection LinkedResources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mail.LinkedResourceCollection LinkedResources" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.AlternateView.LinkedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.LinkedResourceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz der eingebettete Ressourcen, die von dieser Anlage bezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Net.Mail.LinkedResourceCollection" /> -Objekt, speichert die Auflistung der verknüpften Ressourcen, die als Teil einer e-Mail-Nachricht gesendet werden.</value>
+        <remarks>To be added.</remarks>
+        <altCompliant cref="None." />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

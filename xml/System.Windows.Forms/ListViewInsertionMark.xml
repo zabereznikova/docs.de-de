@@ -1,0 +1,260 @@
+<Type Name="ListViewInsertionMark" FullName="System.Windows.Forms.ListViewInsertionMark">
+  <TypeSignature Language="C#" Value="public sealed class ListViewInsertionMark" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ListViewInsertionMark extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListViewInsertionMark" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwendet, um die erwartete Dateiablage-Speicherort anzugeben, wenn ein Element, um eine neue Position in gezogen wird einer <see cref="T:System.Windows.Forms.ListView" /> Steuerelement. Diese Funktion ist nur auf Windows XP und höher verfügbar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgerufen werden können eine <xref:System.Windows.Forms.ListViewInsertionMark> aus der <xref:System.Windows.Forms.ListView.InsertionMark%2A> Eigenschaft von einer <xref:System.Windows.Forms.ListView> steuern und verwenden, um die erwartete Dateiablage-Speicherort in einem Drag & Drop-Vorgang grafisch angeben, wenn ein Element an eine neue Position gezogen wird.  
+  
+ Dieses Feature funktioniert nur, wenn die <xref:System.Windows.Forms.ListView.AutoArrange%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true` und wann die <xref:System.Windows.Forms.ListView> Steuerelement werden nicht sortiert die Elemente automatisch. Um zu verhindern, dass automatische Sortierung, die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft muss festgelegt werden, um <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> Eigenschaft muss festgelegt werden, um <xref:System.Windows.Forms.View?displayProperty=nameWithType>, <xref:System.Windows.Forms.View?displayProperty=nameWithType>, oder <xref:System.Windows.Forms.View?displayProperty=nameWithType>. Darüber hinaus kann nicht das Einfügemarkenfeature verwendet werden, mit der <xref:System.Windows.Forms.ListView> Funktion gruppieren, da die Grouping-Funktion die Elemente durch Gruppenmitgliedschaft sortiert.  
+  
+ Die <xref:System.Windows.Forms.ListViewInsertionMark> Klasse dient in der Regel in einem Ereignishandler für das <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.MouseMove?displayProperty=nameWithType> Ereignis, um die Position der Einfügemarke aktualisieren ein Elements gezogen wird. Darüber hinaus wird in einem Ereignishandler für das <xref:System.Windows.Forms.Control.DragDrop?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.MouseUp?displayProperty=nameWithType> Ereignis, um ein gezogenes Element an der richtigen Position eingefügt.  
+  
+ Gehen Sie folgendermaßen vor, um die Position der Einfügemarke zu aktualisieren:  
+  
+1.  In einem Ereignishandler für die <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.MouseMove?displayProperty=nameWithType> -Ereignis können Sie mithilfe der <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType> aufzurufende Eigenschaft der <xref:System.Windows.Forms.ListViewInsertionMark> Objekt zugeordnet der <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+2.  Verwenden der <xref:System.Windows.Forms.ListViewInsertionMark.NearestIndex%2A> Methode, um den Index des Elements, die der Mauszeiger die Form am nächsten abzurufen.  
+  
+3.  Übergeben Sie den Indexwert auf die <xref:System.Windows.Forms.ListView.GetItemRect%2A?displayProperty=nameWithType> Methode, um das umschließende Rechteck des Elements abzurufen.  
+  
+4.  Wenn der Mauszeiger sich links neben dem Mittelpunkt des umschließenden Rechtecks ist, legen Sie die <xref:System.Windows.Forms.ListViewInsertionMark.AppearsAfterItem%2A> Eigenschaft `false`ist, andernfalls legen Sie es auf `true`.  
+  
+5.  Festlegen der <xref:System.Windows.Forms.ListViewInsertionMark.Index%2A> Eigenschaft, um den Indexwert abgerufen, die von der <xref:System.Windows.Forms.ListViewInsertionMark.NearestIndex%2A> Methode. Die Einfügemarke wird neben dem Element mit dem angegebenen Index, entweder nach links oder rechts, abhängig von der <xref:System.Windows.Forms.ListViewInsertionMark.AppearsAfterItem%2A> Eigenschaftswert. Wenn ein Element über sich selbst gezogen wird, wird der Index ist-1, und die Einfügemarke ist ausgeblendet.  
+  
+ Um das gezogene Element am richtigen Speicherort einzufügen, gehen Sie folgendermaßen vor:  
+  
+1.  In einem Ereignishandler für das <xref:System.Windows.Forms.Control.DragDrop?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.MouseUp?displayProperty=nameWithType> -Ereignis können Sie mithilfe der <xref:System.Windows.Forms.ListViewInsertionMark.Index%2A> Eigenschaft, um die aktuelle Position der Einfügemarke zu bestimmen. Speichern Sie diesen Wert höher als der Einfügeindex verwendet werden soll.  
+  
+2.  Wenn die <xref:System.Windows.Forms.ListViewInsertionMark.AppearsAfterItem%2A> -Eigenschaftensatz auf `true`, erhöhen Sie den Indexwert gespeicherten einfügen.  
+  
+3.  Verwenden der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A?displayProperty=nameWithType> aufzurufende Methode fügen Sie einen Klon des gezogenen Elements in der <xref:System.Windows.Forms.ListView.Items%2A?displayProperty=nameWithType> Auflistung am Einfügeindex gespeicherte.  
+  
+4.  Verwenden der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Remove%2A?displayProperty=nameWithType> Methode, um die ursprüngliche Kopie des das gezogene Element zu entfernen.  
+  
+ Sie müssen einen Klon des das gezogene Element einfügen, bevor die ursprüngliche Kopie entfernt werden, damit die Indexwerte in der <xref:System.Windows.Forms.ListView.Items%2A?displayProperty=nameWithType> Auflistung vor dem Einfügen nicht geändert werden.  
+  
+ Um sicherzustellen, dass die Elemente in der gleichen Reihenfolge wie ihre Indexwerte angezeigt werden, müssen Sie festlegen der <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A?displayProperty=nameWithType> Eigenschaft eine Implementierung von der <xref:System.Collections.IComparer> -Schnittstelle, die Elemente nach Indexwert sortiert. Weitere Informationen finden Sie im Beispielabschnitt.  
+  
+ Sie können die Farbe der Einfügemarke ändern, indem Sie mit der <xref:System.Windows.Forms.ListViewInsertionMark.Color%2A> Eigenschaft. Wenn Sie die Größe oder Position der Einfügemarke benötigen, erhalten Sie das umschließende Rechteck über die <xref:System.Windows.Forms.ListViewInsertionMark.Bounds%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Das Einfügemarkenfeature steht nur unter Windows XP und Windows Server 2003-Produktfamilie werden, wenn die Anwendung ruft die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode. Unter älteren Betriebssystemen Code in Zusammenhang mit der Einfügemarke werden ignoriert, und die Einfügemarke wird nicht angezeigt. Jeglicher Code, der das Einfügemarkenfeature abhängt kann daher nicht ordnungsgemäß funktioniert. Sie können einen Test, der bestimmt, ob das Einfügemarkenfeature verfügbar ist, einschließen möchten und eine andere Funktionalität bereitstellen, wenn sie nicht verfügbar ist. Beispielsweise empfiehlt es sich, alle Code umgehen, der bei Ausführung unter Betriebssystemen, die keine Einfügemarken unterstützen Neupositionieren Drag-and-Drop-Element implementiert.  
+>   
+>  Das Einfügemarkenfeature wird von der gleichen Bibliothek bereitgestellt, die das Feature des Betriebssystems Designs bereitstellt. Aufrufen, um die Verfügbarkeit dieser Bibliothek zu überprüfen, die <xref:System.Windows.Forms.FeatureSupport.IsPresent%28System.Object%29?displayProperty=nameWithType> -methodenüberladung, und übergeben Sie die <xref:System.Windows.Forms.OSFeature.Themes?displayProperty=nameWithType> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListView> Einfügemarkenfeature und implementiert die Drag-and-Drop-Element Neuanordnen von mit den standardmäßigen Ziehereignisse. Die Position der Einfügemarke wird aktualisiert, in einen Handler für das <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType> Ereignis. In diesem Handler die Position des Mauszeigers im Vergleich zu den Mittelpunkt des nächsten Elements, und das Ergebnis wird verwendet, um zu bestimmen, ob die Einfügemarke nach links oder rechts neben dem Element angezeigt wird.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppearsAfterItem">
+      <MemberSignature Language="C#" Value="public bool AppearsAfterItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AppearsAfterItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewInsertionMark.AppearsAfterItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Einfügemarke die rechts neben dem Element mit dem angegebenen Index angezeigt wird die <see cref="P:System.Windows.Forms.ListViewInsertionMark.Index" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn die Einfügemarke die rechts neben dem Element mit dem angegebenen Index angezeigt wird der <see cref="P:System.Windows.Forms.ListViewInsertionMark.Index" /> Eigenschaft ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListViewInsertionMark.NearestIndex%2A> Methode können Sie das Element, das der Mauszeiger die Form am nächsten suchen, jedoch müssen Sie eigene Berechnungen durch, um zu bestimmen, ob die Einfügemarke vor oder nach diesem Element angezeigt werden soll.  
+  
+ Um den Wert für erforderlichen Berechnen der <xref:System.Windows.Forms.ListViewInsertionMark.AppearsAfterItem%2A> -Eigenschaft, gehen Sie folgendermaßen vor:  
+  
+1.  Verwenden der <xref:System.Windows.Forms.ListViewInsertionMark.NearestIndex%2A> Methode, um den Index des Elements, die der Mauszeiger die Form am nächsten abzurufen.  
+  
+2.  Übergeben Sie den Indexwert auf die <xref:System.Windows.Forms.ListView.GetItemRect%2A?displayProperty=nameWithType> Methode, um das umschließende Rechteck des Elements abzurufen.  
+  
+3.  Wenn der Mauszeiger sich links neben dem Mittelpunkt des umschließenden Rechtecks ist, legen Sie die <xref:System.Windows.Forms.ListViewInsertionMark.AppearsAfterItem%2A> Eigenschaft `false`ist, andernfalls legen Sie es auf `true`.  
+  
+ Weitere Informationen finden Sie unter der <xref:System.Windows.Forms.ListViewInsertionMark> Verweis Übersichtsthema.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListView> Einfügemarkenfeature und implementiert die Drag-and-Drop-Element Neuanordnen von mit den standardmäßigen Ziehereignisse. Die Position der Einfügemarke wird aktualisiert, in einen Handler für das <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType> Ereignis. In diesem Handler die Position des Mauszeigers im Vergleich zu den Mittelpunkt des nächsten Elements, und das Ergebnis wird verwendet, um zu bestimmen, ob die Einfügemarke nach links oder rechts neben dem Element angezeigt wird.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.ListViewInsertionMark> Verweis Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#3)]
+ [!code-csharp[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#3)]
+ [!code-vb[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewInsertionMark.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das umschließende Rechteck der Einfügemarke ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , die die Position und Größe der Einfügemarke darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Koordinaten im umschließenden Rechteck der Einfügemarke sind relativ zur linken oberen Ecke von der <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewInsertionMark.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe der Einfügemarke fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der die Farbe der Einfügemarke darstellt. Der Standardwert ist der Wert der <see cref="P:System.Windows.Forms.ListView.ForeColor" />-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie die Farbe der Einfügemarke auf einen anderen Wert als die Vordergrundfarbe des festgelegt die <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListView> Einfügemarkenfeature und implementiert die Drag-and-Drop-Element Neuanordnen von mit den standardmäßigen Ziehereignisse. Die Position der Einfügemarke wird aktualisiert, in einen Handler für das <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType> Ereignis. In diesem Handler die Position des Mauszeigers im Vergleich zu den Mittelpunkt des nächsten Elements, und das Ergebnis wird verwendet, um zu bestimmen, ob die Einfügemarke nach links oder rechts neben dem Element angezeigt wird.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.ListViewInsertionMark> Verweis Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.InsertionMark#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ListView.InsertionMark#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#2)]
+ [!code-vb[System.Windows.Forms.ListView.InsertionMark#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewInsertionMark.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index des Elements, das neben dem die Einfügemarke angezeigt wird.</summary>
+        <value>Der Index des Elements, das neben die Einfügemarke angezeigt wird, oder-1 zurück, wenn die Einfügemarke ausgeblendet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einfügemarke wird auf der linken Seite des Elements mit dem angegebenen Index angezeigt, wenn die <xref:System.Windows.Forms.ListViewInsertionMark.AppearsAfterItem%2A> -Eigenschaftensatz auf `false`ist, andernfalls wird angezeigt, auf der rechten Seite des Elements. Die Einfügemarke wird automatisch ausgeblendet, wenn ein gezogenes Element eingefügt wird die <xref:System.Windows.Forms.ListView.Items%2A?displayProperty=nameWithType> Auflistung. Um die Einfügemarke manuell, z. B. beim Entfernen eines Elements gezogen selbst oder außerhalb des Steuerelements gezogen wird, legen Sie die <xref:System.Windows.Forms.ListViewInsertionMark.Index%2A> Wert auf-1 festgelegt.  
+  
+ Verwenden der <xref:System.Windows.Forms.ListViewInsertionMark.NearestIndex%2A> Methode, um den Index des Elements, die einen bestimmten Speicherort, z. B. die Position des Mauszeigers beim Positionieren eines Elements in einem Drag & Drop-Vorgang am nächsten abzurufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListView> Einfügemarkenfeature und implementiert die Drag-and-Drop-Element Neuanordnen von mit den standardmäßigen Ziehereignisse. Die Position der Einfügemarke wird aktualisiert, in einen Handler für das <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType> Ereignis. In diesem Handler die Position des Mauszeigers im Vergleich zu den Mittelpunkt des nächsten Elements, und das Ergebnis wird verwendet, um zu bestimmen, ob die Einfügemarke nach links oder rechts neben dem Element angezeigt wird.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.ListViewInsertionMark> Verweis Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#3)]
+ [!code-csharp[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#3)]
+ [!code-vb[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NearestIndex">
+      <MemberSignature Language="C#" Value="public int NearestIndex (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 NearestIndex(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewInsertionMark.NearestIndex(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">Ein <see cref="T:System.Drawing.Point" /> , die die Position, suchen Sie das nächste Element darstellt.</param>
+        <summary>Ruft den Index des Elements am nächsten an der angegebenen Position ab.</summary>
+        <returns>Der Index des Elements am nächsten an der angegebenen Position oder -1, wenn das nächste Element das Element gerade gezogen werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie das Element, das der Mauszeiger die Form am nächsten gelegenen zu suchen, wenn ein Drag & Drop-Vorgang ausgeführt. Verwendet der Indexwert zurückgegeben wird, Festlegen der <xref:System.Windows.Forms.ListViewInsertionMark.Index%2A> Eigenschaft. Wenn das Element, das der Mauszeiger die Form am nächsten gelegenen das gezogene Element ist, ist der Rückgabewert dieser Methode-1. In diesem Fall Festlegen der <xref:System.Windows.Forms.ListViewInsertionMark.Index%2A> Eigenschaft mit diesem Wert Blendet die Einfügemarke.  
+  
+ Diese Methode sucht das nächste Element unabhängig davon, wo sich der Mauszeiger die Form, beim befindet der <xref:System.Windows.Forms.ListView.GetItemAt%2A?displayProperty=nameWithType> Methodenrückgabe das Element am angegebenen Speicherort nur oder `null` Wenn an dieser Stelle kein Element vorhanden ist. Die <xref:System.Windows.Forms.ListView.GetItemAt%2A?displayProperty=nameWithType> -Methode zurückkehrt `null`, z. B. wenn der Mauszeiger befindet sich zwischen zwei Elementen. Aus diesem Grund sollten Sie immer verwenden die <xref:System.Windows.Forms.ListViewInsertionMark.NearestIndex%2A> Methode, wenn einen Drag & Drop-Vorgang verwenden, um Elemente zu positionieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListView> Einfügemarkenfeature und implementiert die Drag-and-Drop-Element Neuanordnen von mit den standardmäßigen Ziehereignisse. Die Position der Einfügemarke wird aktualisiert, in einen Handler für das <xref:System.Windows.Forms.Control.DragOver?displayProperty=nameWithType> Ereignis. In diesem Handler die Position des Mauszeigers im Vergleich zu den Mittelpunkt des nächsten Elements, und das Ergebnis wird verwendet, um zu bestimmen, ob die Einfügemarke nach links oder rechts neben dem Element angezeigt wird.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.ListViewInsertionMark> Verweis Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#3)]
+ [!code-csharp[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#3)]
+ [!code-vb[System.Windows.Forms.ListView.InsertionMark#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

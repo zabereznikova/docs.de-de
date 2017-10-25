@@ -1,0 +1,151 @@
+<Type Name="OdbcException" FullName="System.Data.Odbc.OdbcException">
+  <TypeSignature Language="C#" Value="public sealed class OdbcException : System.Data.Common.DbException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OdbcException extends System.Data.Common.DbException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die generiert wird, wenn eine Warnung oder einen Fehler von einer ODBC-Datenquelle zurückgegeben wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird erstellt, wenn die <xref:System.Data.Odbc.OdbcDataAdapter> auf einen vom Server generierten Fehler trifft (Client-Side-Fehler werden als standard common Language Runtime-Ausnahmen ausgelöst.). Er enthält immer mindestens eine Instanz des <xref:System.Data.Odbc.OdbcError>.  
+  
+ Wenn die Auswirkungen des Fehlers zu schwerwiegend sind, trennt der Server möglicherweise die <xref:System.Data.Odbc.OdbcConnection>. Die Benutzer können die Verbindung aber erneut öffnen und fortfahren.  
+  
+ Allgemeine Informationen zur Behandlung von Ausnahmen für einen .NET Framework-Datenanbieter finden Sie unter <xref:System.Data.SqlClient.SqlException>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Data.Odbc.OdbcException> aufgrund einer fehlenden Datenquelle, und klicken Sie dann die Ausnahme angezeigt.  
+  
+ [!code-csharp[Classic WebData OdbcException#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcException/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcException#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcException/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcException.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung einer oder mehrerer <see cref="T:System.Data.Odbc.OdbcError" /> Objekte, mit denen erhalten detaillierte Informationen zu Ausnahmen, die von der .NET Framework-Datenanbieter für ODBC generiert.</summary>
+        <value>Die gesammelten Instanzen der dem <see cref="T:System.Data.Odbc.OdbcError" /> Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist ein Wrapper für die <xref:System.Data.Odbc.OdbcErrorCollection>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.Odbc.OdbcError> innerhalb einer <xref:System.Data.Odbc.OdbcErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData OdbcError.Message#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcError.Message#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Dieser Member überschreibt <see cref="M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcException.GetObjectData%2A> legt die <xref:System.Runtime.Serialization.SerializationInfo> mit allen Daten für das Ausnahmeobjekt fest, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird die Ausnahme aus der über den Stream übertragenen <xref:System.Runtime.Serialization.SerializationInfo> wiederhergestellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="si" /> Parameter ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public override string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcException.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des ODBC-Treibers, der den Fehler generiert hat.</summary>
+        <value>Der Name des ODBC-Treiber, der den Fehler generiert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.Odbc.OdbcError.Source%2A> Eigenschaft des ersten <xref:System.Data.Odbc.OdbcError> in der <xref:System.Data.Odbc.OdbcException.Errors%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:System.Data.Odbc.OdbcError.Message%2A>, <xref:System.Data.Odbc.OdbcError.Source%2A>, und <xref:System.Data.Odbc.OdbcError.NativeError%2A> Eigenschaften des ersten <xref:System.Data.Odbc.OdbcError> innerhalb der <xref:System.Data.Odbc.OdbcErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData OdbcException.Source#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcException.Source/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcException.Source#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcException.Source/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,100 @@
+<Type Name="InstanceContextMode" FullName="System.ServiceModel.InstanceContextMode">
+  <TypeSignature Language="C#" Value="public enum InstanceContextMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InstanceContextMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.InstanceContextMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Anzahl von Dienstinstanzen an, die verfügbar sind, um die in eingehenden Nachrichten enthaltenen Aufrufe zu behandeln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> verwaltet die Zuordnung von Kanälen und benutzerdefinierten Dienstobjekten. Verwenden Sie die <xref:System.ServiceModel.InstanceContextMode>-Enumeration mit der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>-Eigenschaft, um die Lebensdauer des <xref:System.ServiceModel.InstanceContext>-Objekts anzugeben. [!INCLUDE[indigo1](~/includes/indigo1-md.md)] kann für jeden Aufruf und jede Sitzung ein neues <xref:System.ServiceModel.InstanceContext>-Objekt erstellen oder angeben, dass das <xref:System.ServiceModel.InstanceContext>-Objekt an ein einzelnes Dienstobjekt gebunden ist. Ein Arbeitsbeispiel finden Sie unter der [Instancing](~/docs/framework/wcf/samples/instancing.md).  
+  
+ Der Wert gibt an, dass ein einzelnes <xref:System.ServiceModel.InstanceContextMode.Single> Objekt für die Lebensdauer des Diensts verwendet werden soll.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> Wert wird festgelegt, in das Ergebnis ist, dass der Dienst nur eine Nachricht zu einem Zeitpunkt verarbeitet werden kann, wenn Sie auch festlegen, einzelne die <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> Wert <xref:System.ServiceModel.ConcurrencyMode>.  
+  
+   
+  
+## Examples  
+ Am folgenden Code ist zu erkennen, wie <xref:System.ServiceModel.InstanceContextMode> für eine Dienstklasse angegeben wird:  
+  
+ [!code-csharp[S_ReliableSession#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_reliablesession/cs/service.cs#1)]
+ [!code-vb[S_ReliableSession#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_reliablesession/vb/service.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PerCall">
+      <MemberSignature Language="C#" Value="PerCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.InstanceContextMode PerCall = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.InstanceContextMode.PerCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContextMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein neues <see cref="T:System.ServiceModel.InstanceContext" />-Objekt wird vor jedem Aufruf erstellt und im Anschluss wiederverwendet. Wenn der Kanal keine Sitzung erstellt, verhält sich dieser Wert wie <see cref="F:System.ServiceModel.InstanceContextMode.PerCall" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PerSession">
+      <MemberSignature Language="C#" Value="PerSession" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.InstanceContextMode PerSession = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.InstanceContextMode.PerSession" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContextMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein neues <see cref="T:System.ServiceModel.InstanceContext" />-Objekt wird zu jeder Sitzung erstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.InstanceContextMode Single = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.InstanceContextMode.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContextMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur ein <see cref="T:System.ServiceModel.InstanceContext" />-Objekt wird für alle eingehenden Aufrufe verwendet und nicht bei den nachfolgenden Aufrufen wiederverwendet. Wenn ein Dienstobjekt nicht vorhanden ist, wird eins erstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Laufzeitverhalten von Singleton-Klassen (z. B., wenn die hostanwendung Ruft die <xref:System.ServiceModel.ServiceHost.%23ctor%2A> Konstruktor und ein Objekt zur Verwendung als Dienst übergibt), muss die Serviceklasse <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> in einzelne, oder eine Ausnahme wird ausgelöst, wenn der Diensthost geöffnet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

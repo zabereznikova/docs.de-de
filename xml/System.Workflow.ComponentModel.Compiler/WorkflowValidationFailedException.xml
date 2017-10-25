@@ -1,0 +1,156 @@
+<Type Name="WorkflowValidationFailedException" FullName="System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowValidationFailedException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit WorkflowValidationFailedException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Exception" /> dar, die auftritt, wenn ein Workflow die Validierung nicht besteht. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> stellt eine Ausnahme dar, die beim Überprüfen des Workflows auftritt, wenn die Ausführung mithilfe von <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> erfolgt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowValidationFailedException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowValidationFailedException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException" />-Klasse.  Die Ausnahmemeldung wird als Parameter übergeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowValidationFailedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="innerException">Die dieser Ausnahme zugeordnete <see cref="P:System.Exception.InnerException" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException" />-Klasse.  Die Ausnahmemeldung und die innere Ausnahme werden als Parameter übergeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowValidationFailedException (string message, System.Workflow.ComponentModel.Compiler.ValidationErrorCollection errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException.#ctor(System.String,System.Workflow.ComponentModel.Compiler.ValidationErrorCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errors" Type="System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="errors">Die dieser Ausnahme zugeordnete <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException" />-Klasse.  Die Ausnahmemeldung und die Fehlerauflistung werden als Parameter übergeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationError" /> zurück, die beim Erstellen/Überprüfen von Workflows aufgetreten sind.</summary>
+        <value>Ein Array, das die einzelnen <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationError" /> enthält, die diese Ausnahme verursacht haben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Verweis auf das Objekt, das die für das Serialisieren und Deserialisieren der Ausnahme erforderlichen Daten enthält.</param>
+        <param name="context">Ermöglicht das Serialisieren der Ausnahmedaten.</param>
+        <summary>Legt die angegebene <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit Informationen zur <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert `ISerializable.GetObjectData`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

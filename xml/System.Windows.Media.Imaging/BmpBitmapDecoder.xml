@@ -1,0 +1,105 @@
+<Type Name="BmpBitmapDecoder" FullName="System.Windows.Media.Imaging.BmpBitmapDecoder">
+  <TypeSignature Language="C#" Value="public sealed class BmpBitmapDecoder : System.Windows.Media.Imaging.BitmapDecoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BmpBitmapDecoder extends System.Windows.Media.Imaging.BitmapDecoder" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BmpBitmapDecoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapDecoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Decoder für Bitmapbilder (BMP) codiert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BmpBitmapDecoder (System.IO.Stream bitmapStream, System.Windows.Media.Imaging.BitmapCreateOptions createOptions, System.Windows.Media.Imaging.BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream bitmapStream, valuetype System.Windows.Media.Imaging.BitmapCreateOptions createOptions, valuetype System.Windows.Media.Imaging.BitmapCacheOption cacheOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BmpBitmapDecoder.#ctor(System.IO.Stream,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="bitmapStream" Type="System.IO.Stream" />
+        <Parameter Name="createOptions" Type="System.Windows.Media.Imaging.BitmapCreateOptions" />
+        <Parameter Name="cacheOption" Type="System.Windows.Media.Imaging.BitmapCacheOption" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapStream">Bitmap-Datenstrom zu decodieren.</param>
+        <param name="createOptions">Initialisierungsoptionen für das Bitmap-Bild.</param>
+        <param name="cacheOption">Die Cache-Methode, die für das Bitmap-Bild verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.BmpBitmapDecoder" /> aus dem Stream angegebene Datei mit dem angegebenen <paramref name="createOptions" /> und <paramref name="cacheOption" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnLoad> cache-Option, wenn Sie schließen möchten die `bitmapStream` nach der Erstellung des Decoders. Die Standardeinstellung <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnDemand> cacheOption behält Zugriff auf den Stream, bis die Bitmap benötigt wird und die Bereinigung wird vom Garbage Collector behandelt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Instanz von erstellen und Verwenden einer <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> aus einem Dateistream. Das decodierte Bild wird als Quelle verwendet ein <xref:System.Windows.Controls.Image> Steuerelement.  
+  
+ [!code-cpp[BmpBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#1)]
+ [!code-csharp[BmpBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#1)]
+ [!code-vb[BmpBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="bitmapStream" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">Die <paramref name="bitmapStream" /> ist eine [!INCLUDE[TLA#tla_bmp](~/includes/tlasharptla-bmp-md.md)] codiertes Bild.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BmpBitmapDecoder (Uri bitmapUri, System.Windows.Media.Imaging.BitmapCreateOptions createOptions, System.Windows.Media.Imaging.BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri bitmapUri, valuetype System.Windows.Media.Imaging.BitmapCreateOptions createOptions, valuetype System.Windows.Media.Imaging.BitmapCacheOption cacheOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BmpBitmapDecoder.#ctor(System.Uri,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="bitmapUri" Type="System.Uri" />
+        <Parameter Name="createOptions" Type="System.Windows.Media.Imaging.BitmapCreateOptions" />
+        <Parameter Name="cacheOption" Type="System.Windows.Media.Imaging.BitmapCacheOption" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapUri">
+          <see cref="T:System.Uri" />die die zu decodierende Bitmap identifiziert.</param>
+        <param name="createOptions">Initialisierungsoptionen für das Bitmap-Bild.</param>
+        <param name="cacheOption">Die Cache-Methode, die für das Bitmap-Bild verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.BmpBitmapDecoder" /> aus dem angegebenen <see cref="T:System.Uri" /> mit dem angegebenen <paramref name="createOptions" /> und <paramref name="cacheOption" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Instanz von erstellen und Verwenden einer <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> aus einem <xref:System.Uri>. Das decodierte Bild wird als Quelle verwendet ein <xref:System.Windows.Controls.Image> Steuerelement.  
+  
+ [!code-cpp[BmpBitmapDecoderEncoder#5](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
+ [!code-csharp[BmpBitmapDecoderEncoder#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
+ [!code-vb[BmpBitmapDecoderEncoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="bitmapUri" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">Die <paramref name="bitmapUri" /> ist eine [!INCLUDE[TLA#tla_bmp](~/includes/tlasharptla-bmp-md.md)] codiertes Bild.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

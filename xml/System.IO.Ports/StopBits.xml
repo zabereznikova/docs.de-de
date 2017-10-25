@@ -1,0 +1,126 @@
+<Type Name="StopBits" FullName="System.IO.Ports.StopBits">
+  <TypeSignature Language="C#" Value="public enum StopBits" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StopBits extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.StopBits" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Anzahl von Stoppbits an, die das <see cref="T:System.IO.Ports.SerialPort" />-Objekt verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Enumeration beim Festlegen des Werts von der <xref:System.IO.Ports.SerialPort.StopBits%2A> Eigenschaft auf die <xref:System.IO.Ports.SerialPort> Klasse. Stoppbits trennen Sie die jeweilige Zeiteinheit von Daten auf eine asynchrone serielle Verbindung. Sie werden auch gesendet, fortlaufend, wenn keine Daten für die Übertragung verfügbar sind.  
+  
+ Die <xref:System.IO.Ports.SerialPort> -Klasse löst ein <xref:System.ArgumentOutOfRangeException> Ausnahme beim Festlegen der <xref:System.IO.Ports.SerialPort.StopBits%2A> -Eigenschaft auf None.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.IO.Ports.SerialPort.StopBits%2A> Eigenschaft `One`.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#20](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/datareceived.cpp#20)]
+ [!code-csharp[System.IO.Ports.SerialPort#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/datareceived.cs#20)]
+ [!code-vb[System.IO.Ports.SerialPort#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/datareceived.vb#20)]  
+  
+ Das folgende Codebeispiel zeigt die möglichen Werte für die <xref:System.IO.Ports.StopBits> Enumeration an die Konsole, fordert den Benutzer um eines auszuwählen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#04](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#04)]
+ [!code-csharp[System.IO.Ports.SerialPort#04](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#04)]
+ [!code-vb[System.IO.Ports.SerialPort#04](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#04)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.StopBits None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.StopBits.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.StopBits</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden keine Stoppbits verwendet. Dieser Wert wird nicht unterstützt, durch die <see cref="P:System.IO.Ports.SerialPort.StopBits" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="One">
+      <MemberSignature Language="C#" Value="One" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.StopBits One = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.StopBits.One" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.StopBits</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Stoppbit wird verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnePointFive">
+      <MemberSignature Language="C#" Value="OnePointFive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.StopBits OnePointFive = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.StopBits.OnePointFive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.StopBits</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>1,5 Stoppbits werden verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Two">
+      <MemberSignature Language="C#" Value="Two" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.StopBits Two = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.StopBits.Two" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.StopBits</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden zwei Stoppbits verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

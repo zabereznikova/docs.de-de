@@ -1,0 +1,90 @@
+<Type Name="NamedPipeConnectionPoolSettings" FullName="System.ServiceModel.Channels.NamedPipeConnectionPoolSettings">
+  <TypeSignature Language="C#" Value="public sealed class NamedPipeConnectionPoolSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NamedPipeConnectionPoolSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Einstellungen dar, die das Verhalten des Named Pipe-Verbindungspools kontrollieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Gruppennamen der Verbindungspoolgruppe auf dem Client ab oder legt diesen fest.</summary>
+        <value>Der Name der Verbindungspoolgruppe auf dem Client. Der Standardname lautet "default".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert kann geändert werden, um die Verbindungen für einen bestimmten Client in separate Gruppen zu isolieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings.IdleTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Zeit ab oder legt die maximale Zeit fest, in der sich eine Verbindung im Verbindungspool im Leerlauf befinden kann, bevor sie unterbrochen wird.</summary>
+        <value>Gibt eine <see cref="T:System.TimeSpan" />-Struktur zurück, die die maximale Zeit angibt, in der sich eine Verbindung im Verbindungspool im Leerlauf befinden kann, bevor sie unterbrochen wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOutboundConnectionsPerEndpoint">
+      <MemberSignature Language="C#" Value="public int MaxOutboundConnectionsPerEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxOutboundConnectionsPerEndpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von ausgehenden Verbindungen für jeden Endpunkt ab, der im Verbindungspool zwischengespeichert wird, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl an erlaubten ausgehenden Verbindungen für jeden Endpunkt, der im Verbindungspool zwischengespeichert wird. Der Standardwert ist 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies schränkt die Anzahl von Verbindungen ein, die für jeden eindeutigen Endpunkt zwischengespeichert werden. Wird dieser Wert durch zu viele aktive Clientverbindungen überschritten, reagiert der Dienst möglicherweise nicht mehr auf den Client und dieser Wert sollte daraufhin angepasst werden, dass er die maximale Anzahl an erwarteten Verbindungen, die für jeden eindeutigen Endpunkt zwischengespeichert werden, übersteigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

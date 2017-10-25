@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Caching.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Caching.Configuration" /> Namespace beinhaltet Konfigurationsklassen der Handler für das caching .NET Framework-Feature.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Handler Konfigurationsklassen in diesem Namespace sind für allgemeine caching mit .NET Framework-Anwendungen verwendet. Der Konfigurationshandler für das caching von ASP.NET sind in enthalten die <xref:System.Web.Configuration> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

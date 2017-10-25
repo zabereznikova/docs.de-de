@@ -1,0 +1,206 @@
+<Type Name="DataGridCellsPanel" FullName="System.Windows.Controls.DataGridCellsPanel">
+  <TypeSignature Language="C#" Value="public class DataGridCellsPanel : System.Windows.Controls.VirtualizingPanel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DataGridCellsPanel extends System.Windows.Controls.VirtualizingPanel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridCellsPanel" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.VirtualizingPanel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Bereich, der Zellen und Spaltenüberschriften in einem Datenraster angelegt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridCellsPanel> dient als die <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> von der <xref:System.Windows.Controls.Primitives.DataGridCellsPresenter> um das Layout der Zellen in einer Zeile. Dient als die <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> von der <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> zum Erstellen von Spaltenüberschriften. Der Bereich ordnet Zellen horizontal und Informationen in jeder Zelle der Spalte verwendet, um zu bestimmen, die richtige Größe für jede Zelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridCellsPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCellsPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataGridCellsPanel" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCellsPanel.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die maximale Größe, die im Bereich einnehmen kann.</param>
+        <summary>Bestimmt die endgültige Größe und Position des Bereichs.</summary>
+        <returns>Die endgültige Größe und Position des Bereichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridCellsPanel> -Klasse verwendet die <xref:System.Windows.Controls.DataGridCellsPanel.ArrangeOverride%2A> Methode, um das Layout der Zellen, die sichtbar sind. Zellen, die nicht sichtbar sind virtualisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringIndexIntoView">
+      <MemberSignature Language="C#" Value="protected override void BringIndexIntoView (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void BringIndexIntoView(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements, das angezeigt werden soll.</param>
+        <summary>Ermöglicht das Scrollen des Viewports, um das Element am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Index liegt außerhalb des gültigen Bereichs.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)" /> in einer abgeleiteten Klasse sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)" /> Methode; andernfalls, wichtige Funktionen werden deaktiviert werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCellsPanel.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die maximale Größe, die im Bereich einnehmen kann.</param>
+        <summary>Bestimmt die gewünschte Größe des Bereichs an.</summary>
+        <returns>Die gewünschte Größe des Panels.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridCellsPanel> -Klasse verwendet die <xref:System.Windows.Controls.DataGridCellsPanel.MeasureOverride%2A> Methode, um zu bestimmen, welche Zellen sichtbar sind und welche Zellen virtualisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearChildren">
+      <MemberSignature Language="C#" Value="protected override void OnClearChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClearChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCellsPanel.OnClearChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die Auflistung der untergeordneten Elemente in der <see cref="T:System.Windows.Controls.DataGrid" /> deaktiviert ist.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridCellsPanel.OnClearChildren" /> in einer abgeleiteten Klasse sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Windows.Controls.DataGridCellsPanel.OnClearChildren" /> Methode; andernfalls, wichtige Funktionen werden deaktiviert werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsItemsHostChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsItemsHostChanged (bool oldIsItemsHost, bool newIsItemsHost);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsItemsHostChanged(bool oldIsItemsHost, bool newIsItemsHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCellsPanel.OnIsItemsHostChanged(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldIsItemsHost" Type="System.Boolean" />
+        <Parameter Name="newIsItemsHost" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="oldIsItemsHost">Der alte Wert der <see cref="P:System.Windows.Controls.Panel.IsItemsHost" />-Eigenschaft.</param>
+        <param name="newIsItemsHost">Der neue Wert der <see cref="P:System.Windows.Controls.Panel.IsItemsHost" />-Eigenschaft.</param>
+        <summary>Gibt an, dass die <see cref="P:System.Windows.Controls.Panel.IsItemsHost" /> -Eigenschaftswert geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können diese Methode überschreiben, und es als eine Benachrichtigung, die die <see cref="P:System.Windows.Controls.Panel.IsItemsHost" /> -Eigenschaft geändert hat. Führen Sie dann Ihre eigene Logik, anhand der alten und neuen Werte ein. Achten Sie darauf, dass Sie der Basisklasse aufgerufen <see cref="M:System.Windows.Controls.DataGridCellsPanel.OnIsItemsHostChanged(System.Boolean,System.Boolean)" /> Methode; andernfalls, wichtige Funktionen werden deaktiviert werden. Synchronisiert die grundlegende Implementierung der <see cref="T:System.Windows.Controls.DataGridCellsPanel" /> mit der <see cref="T:System.Windows.Controls.Primitives.DataGridCellsPresenter" /> oder <see cref="T:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter" /> , der er zugeordnet ist.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsChanged (object sender, System.Windows.Controls.Primitives.ItemsChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsChanged(object sender, class System.Windows.Controls.Primitives.ItemsChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCellsPanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="System.Windows.Controls.Primitives.ItemsChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das ausgelöst, die <see cref="E:System.Windows.Controls.ItemContainerGenerator.ItemsChanged" /> Ereignis.</param>
+        <param name="args">Die Daten für das Ereignis.</param>
+        <summary>Aktualisiert die sichtbaren Zellen aus, wenn ein Element in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> Auflistung wurde geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Controls.DataGridCellsPanel.OnItemsChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridCellsPanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" /> in einer abgeleiteten Klasse sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Windows.Controls.DataGridCellsPanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

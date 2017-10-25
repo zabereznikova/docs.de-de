@@ -1,0 +1,41 @@
+<Type Name="ItemDragEventHandler" FullName="System.Windows.Forms.ItemDragEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ItemDragEventHandler(object sender, ItemDragEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ItemDragEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ItemDragEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.ItemDragEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.ItemDragEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.ListView.ItemDrag" /> -Ereignis für ein <see cref="T:System.Windows.Forms.ListView" /> oder <see cref="T:System.Windows.Forms.TreeView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.ItemDragEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Aktivieren von Drag & Drop-Operationen innerhalb einer <xref:System.Windows.Forms.TreeView> Steuerelement. Im Beispiel kann einen beliebigen Knoten auf einen anderen Knoten gezogen werden, die kein Nachfolger des gezogenen Knotens ist. Der gezogene Knoten, einschließlich aller untergeordneten Knoten, wird ein untergeordnetes Element des Zielknotens. Wenn die linke Maustaste gedrückt verwendet wird, wird der gezogene Knoten auf den Zielknoten verschoben. Wenn die rechte Maustaste gedrückt verwendet wird, wird der gezogene Knoten auf den Zielknoten kopiert.  
+  
+ [!code-cpp[TreeViewDragDrop#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewDragDrop/CPP/treeviewdragdrop.cpp#1)]
+ [!code-csharp[TreeViewDragDrop#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewDragDrop/CS/treeviewdragdrop.cs#1)]
+ [!code-vb[TreeViewDragDrop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewDragDrop/VB/treeviewdragdrop.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

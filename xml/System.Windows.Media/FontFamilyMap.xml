@@ -1,0 +1,189 @@
+<Type Name="FontFamilyMap" FullName="System.Windows.Media.FontFamilyMap">
+  <TypeSignature Language="C#" Value="public class FontFamilyMap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontFamilyMap extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FontFamilyMap" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert, welche <see cref="T:System.Windows.Media.FontFamily" /> für einen angegebenen Satz von Unicode-Codepunkten und eine kulturspezifische Sprache verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FontFamilyMap> gibt auch an ein Skalierungsfaktor, sodass das Ziel <xref:System.Windows.Media.FontFamily> Größe angepasst werden, damit sie die Größe der anderen in der zusammengesetzten Schriftfamilie verwendeten Schriftarten besser übereinstimmt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontFamilyMap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FontFamilyMap.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.FontFamilyMap" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[FontSnippets#FontMapSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontMapSnippets.xaml.cs#fontmapsnippet1)]
+ [!code-vb[FontSnippets#FontMapSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontmapsnippets.xaml.vb#fontmapsnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.XmlLanguage Language { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.XmlLanguage Language" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamilyMap.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XmlLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die kulturspezifische Sprache für die <see cref="T:System.Windows.Media.FontFamilyMap" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Markup.XmlLanguage" /> Wert, der die kulturspezifische Sprache darstellt. Der Standardwert ist eine <see langword="null" /> Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FontFamilyMap.Language%2A> Eigenschaft kann auf einen der folgenden verweisen:  
+  
+-   Eine bestimmte Sprache Wenn die <xref:System.Windows.Media.FontFamilyMap> gilt für nur in dieser Sprache.  
+  
+-   Eine neutrale Sprache, wenn es für eine Gruppe verwandter Sprachen gilt.  
+  
+-   Eine leere Zeichenfolge trifft auf einer beliebigen Sprache.  
+  
+ Der Standardwert ist die leere Zeichenfolge.  
+  
+   
+  
+## Examples  
+ [!code-csharp[FontSnippets#FontMapSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontMapSnippets.xaml.cs#fontmapsnippet5)]
+ [!code-vb[FontSnippets#FontMapSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontmapsnippets.xaml.vb#fontmapsnippet5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public double Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamilyMap.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Skalierungsfaktor für die Schriftart für das Ziel <see cref="T:System.Windows.Media.FontFamily" />.</summary>
+        <value>Ein <see cref="T:System.Double" /> Wert, der den Skalierungsfaktor darstellt. Der Standardwert ist <c>1.0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FontFamilyMap.Scale%2A> ermöglicht das Ziel <xref:System.Windows.Media.FontFamily> Größe angepasst werden, damit sie die Größe der anderen in der zusammengesetzten Schriftfamilie verwendeten Schriftarten besser übereinstimmt. Der Skalierungsfaktor ist relativ zum "Em" Einheiten.  
+  
+   
+  
+## Examples  
+ [!code-csharp[FontSnippets#FontMapSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontMapSnippets.xaml.cs#fontmapsnippet2)]
+ [!code-vb[FontSnippets#FontMapSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontmapsnippets.xaml.vb#fontmapsnippet2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamilyMap.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DesignerSerializationOptions(System.Windows.Markup.DesignerSerializationOptions.SerializeAsAttribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Zielnamen der Schriftfamilie für die Unicode-Bereich gültig.</summary>
+        <value>Ein <see cref="T:System.String" /> Wert, der den Namen der Schriftfamilie darstellt. Der Standardwert ist eine <see langword="null" /> Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[FontSnippets#FontMapSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontMapSnippets.xaml.cs#fontmapsnippet3)]
+ [!code-vb[FontSnippets#FontMapSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontmapsnippets.xaml.vb#fontmapsnippet3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unicode">
+      <MemberSignature Language="C#" Value="public string Unicode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Unicode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FontFamilyMap.Unicode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DesignerSerializationOptions(System.Windows.Markup.DesignerSerializationOptions.SerializeAsAttribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Zeichenfolgenwert, der einen oder mehrere Unicode-Code Point Bereiche darstellt.</summary>
+        <value>Ein <see cref="T:System.String" /> Wert, der Unicode-Code Point Bereiche darstellt. Der Standardwert ist "0000-10ffff".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Unicode-Codepunktbereich wird durch den ersten und letzten Codepunkt im Bereich dargestellt, z. B. `"0000-00ff"`. Die Zeichenfolge von Unicode-Code Point Bereiche wird durch ein Komma getrennt, z. B. `"0000-00ff, 00e0-00ef"`.  
+  
+ Eine Codepage ist eine Liste der ausgewählten Zeichencodes (Zeichen, die als die Codepunkte dargestellt) in einer bestimmten Reihenfolge. Codepages werden zur Unterstützung bestimmter Sprachen oder Gruppen von Sprachen, die gemeinsame Schriftsysteme verwenden in der Regel definiert. Windows-Codepages enthalten 256 Codepunkte und sind nullbasiert. Bei den meisten Codepages stellen die Codepunkte 0 bis 127 dieselben Zeichen dar. Dadurch können für Geschäftskontinuität und die Legacy-Code. Die Codepunkte 128 bis 255 unterscheiden sich erheblich zwischen Codepages. Weitere Informationen finden Sie unter [Codierung unterstützt Codepages](http://msdn.microsoft.com/en-us/5db4c290-41d5-41f5-a7e6-3ab0f4bfafae).  
+  
+   
+  
+## Examples  
+ [!code-csharp[FontSnippets#FontMapSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontMapSnippets.xaml.cs#fontmapsnippet4)]
+ [!code-vb[FontSnippets#FontMapSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontmapsnippets.xaml.vb#fontmapsnippet4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Unicode-Bereich ist ungültig.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

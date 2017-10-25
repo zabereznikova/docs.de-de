@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input.StylusPlugIns">
+  <Docs>
+    <summary>Enthält Klassen, die zum Bearbeiten von Daten von einem Tablettstift auf der Plattform Windows Presentation Foundation (WPF) unterstützen.  Diese Klassen-Eingaben auf niedriger Ebene über <see cref="T:System.Windows.Input.Stylus" /> Eingabe und die Erstellung von Freihandeingaben <see cref="T:System.Windows.Ink.Stroke" /> Objekte. Die <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" /> Klasse bietet einen Mechanismus für benutzerdefinierte Verhalten implementieren und Anwenden dieses Verhalten in den Stream der Daten aus der Tablettstiftgerät, um eine optimale Leistung zu erzielen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

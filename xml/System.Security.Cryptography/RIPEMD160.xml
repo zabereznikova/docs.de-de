@@ -1,0 +1,146 @@
+<Type Name="RIPEMD160" FullName="System.Security.Cryptography.RIPEMD160">
+  <TypeSignature Language="C#" Value="public abstract class RIPEMD160 : System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RIPEMD160 extends System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RIPEMD160" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die abstrakte Klasse, die von der alle Implementierungen des MD160 Hashalgorithmus erben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hash ordnen binäre Zeichenfolgen beliebiger Länge kleinen binären Zeichenfolgen fester Länge. Eine kryptografischen Hashfunktion verfügt über die Eigenschaft, dass es rechnerisch unmöglich, zwei verschiedene Eingabewerte, die denselben Hashwert gefunden wird; d. h. sollten Hashes von zwei Sätzen von Daten entsprechen, wenn auch die entsprechenden Daten übereinstimmen. Kleine Änderungen an den Daten führen in umfangreichen unvorhersehbare Änderungen im HashSet.  
+  
+ RIPEMD-160 ist eine kryptografische 160-Bit-Hash-Funktion. Es ist für die Verwendung als Ersatz für die 128-Bit-Hashfunktionen MD4, MD5 und RIPEMD vorgesehen. RIPEMD wurde das Framework der EU-Projekts RIPE (RACE Integrity Primitives Evaluation, 1988-1992) entwickelt.  
+  
+> [!NOTE]
+>  <xref:System.Security.Cryptography.RIPEMD160>wurde die Secure Hash-Algorithmen SHA-256, SHA-512 und ihren abgeleiteten Klassen abgelöst. <xref:System.Security.Cryptography.SHA256>und <xref:System.Security.Cryptography.SHA512> bieten eine höhere Sicherheit und Leistung als <xref:System.Security.Cryptography.RIPEMD160>. Verwendung <xref:System.Security.Cryptography.RIPEMD160> nur für Kompatibilität mit älteren Anwendungen und Daten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel berechnet die <xref:System.Security.Cryptography.RIPEMD160> Hash für alle Dateien in einem Verzeichnis.  
+  
+ [!code-cpp[RIPEMD160#1](~/samples/snippets/cpp/VS_Snippets_CLR/RIPEMD160/CPP/ripemd160.cpp#1)]
+ [!code-csharp[RIPEMD160#1](~/samples/snippets/csharp/VS_Snippets_CLR/RIPEMD160/CS/ripemd160.cs#1)]
+ [!code-vb[RIPEMD160#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RIPEMD160/vb/ripemd160.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RIPEMD160 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RIPEMD160.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RIPEMD160" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Security.Cryptography.RIPEMD160Managed>-Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel berechnet die <xref:System.Security.Cryptography.RIPEMD160> Hash für alle Dateien in einem Verzeichnis.  
+  
+ [!code-cpp[RIPEMD160#1](~/samples/snippets/cpp/VS_Snippets_CLR/RIPEMD160/CPP/ripemd160.cpp#1)]
+ [!code-csharp[RIPEMD160#1](~/samples/snippets/csharp/VS_Snippets_CLR/RIPEMD160/CS/ripemd160.cs#1)]
+ [!code-vb[RIPEMD160#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RIPEMD160/vb/ripemd160.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RIPEMD160 Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RIPEMD160 Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RIPEMD160.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RIPEMD160</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der Standardimplementierung von der <see cref="T:System.Security.Cryptography.RIPEMD160" /> Hashalgorithmus.</summary>
+        <returns>Eine neue Instanz der dem <see cref="T:System.Security.Cryptography.RIPEMD160" /> Hash-Algorithmus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Security.Cryptography.RIPEMD160Managed>-Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel berechnet die <xref:System.Security.Cryptography.RIPEMD160> Hash für alle Dateien in einem Verzeichnis.  
+  
+ [!code-cpp[RIPEMD160#1](~/samples/snippets/cpp/VS_Snippets_CLR/RIPEMD160/CPP/ripemd160.cpp#1)]
+ [!code-csharp[RIPEMD160#1](~/samples/snippets/csharp/VS_Snippets_CLR/RIPEMD160/CS/ripemd160.cs#1)]
+ [!code-vb[RIPEMD160#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RIPEMD160/vb/ripemd160.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus wurde verwendet, mit dem Federal Information Processing Standards (FIPS) Modus aktiviert, aber es ist nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RIPEMD160 Create (string hashName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RIPEMD160 Create(string hashName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RIPEMD160.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RIPEMD160</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hashName">Der Name der spezifischen Implementierung des <see cref="T:System.Security.Cryptography.RIPEMD160" /> verwenden.</param>
+        <summary>Erstellt eine Instanz der angegebenen Implementierung der <see cref="T:System.Security.Cryptography.RIPEMD160" /> Hashalgorithmus.</summary>
+        <returns>Eine neue Instanz der angegebenen Implementierung von <see cref="T:System.Security.Cryptography.RIPEMD160" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Security.Cryptography.RIPEMD160Managed>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus beschrieben, die von der <paramref name="hashName" /> Parameter wurde verwendet, mit dem Federal Information Processing Standards (FIPS) Modus aktiviert, aber es ist nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

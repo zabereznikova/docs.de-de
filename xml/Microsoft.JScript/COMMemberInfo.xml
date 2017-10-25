@@ -1,0 +1,113 @@
+<Type Name="COMMemberInfo" FullName="Microsoft.JScript.COMMemberInfo">
+  <TypeSignature Language="C#" Value="public interface COMMemberInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract COMMemberInfo" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.COMMemberInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("84BCEB62-16EB-4e1c-975C-FCB40D331043")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Methoden, mit denen JScript für die Kommunikation mit einer externen COM-Members. Diese Schnittstelle wird von einer externen COM-Implementierung verwendet, deren Objekte für JScript verfügbar zu machen, da JScript eine verwaltete erfordert <see cref="T:System.Reflection.MemberInfo" /> zum Binden an ein externes Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="public object Call (System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] arguments, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Call(valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] arguments, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMMemberInfo.Call(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="arguments" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="invokeAttr">Eine bitweise Kombination der Enumerationswerte, die die Bindung steuern.</param>
+        <param name="binder">Ein Objekt, das typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments ausführt.</param>
+        <param name="arguments">Die Argumentliste, die an den externen COM-Members übergeben.</param>
+        <param name="culture">Enthält Informationen über eine bestimmte Kultur oder ein Gebietsschema zur ordnungsgemäßen Formatierung von Zahlen, Datumsangaben und Zeichenfolgen.</param>
+        <summary>Bei Implementierung in einer Klasse können JScript zum Aufrufen einer externen COM-Members. Verwendet die Informationen für die angegebene Bindung.</summary>
+        <returns>Der Wert des Aufrufs an den externen COM-Members.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] index, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] index, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMMemberInfo.GetValue(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="index" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="invokeAttr">Eine bitweise Kombination der Enumerationswerte, die die Bindung steuern.</param>
+        <param name="binder">Ein Objekt, das typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments ausführt.</param>
+        <param name="index">Die Argumentliste, die an den externen COM-Members übergeben.</param>
+        <param name="culture">Enthält Informationen über eine bestimmte Kultur oder ein Gebietsschema zur ordnungsgemäßen Formatierung von Zahlen, Datumsangaben und Zeichenfolgen.</param>
+        <summary>Bei Implementierung in einer Klasse können JScript zum Abrufen des Werts einer externen COM-Members unter Verwendung des angegebenen Bindung.</summary>
+        <returns>Der Wert des externen COM-Members.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (object value, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] index, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object value, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] index, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMMemberInfo.SetValue(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="index" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der neue Wert des externen COM-Members.</param>
+        <param name="invokeAttr">Eine bitweise Kombination der Enumerationswerte, die die Bindung steuern.</param>
+        <param name="binder">Ein Objekt, das typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments ausführt.</param>
+        <param name="index">Die Argumentliste, die an den externen COM-Members übergeben.</param>
+        <param name="culture">Enthält Informationen über eine bestimmte Kultur oder ein Gebietsschema zur ordnungsgemäßen Formatierung von Zahlen, Datumsangaben und Zeichenfolgen.</param>
+        <summary>Bei Implementierung in einer Klasse ermöglicht JScript der Wert von einer externen COM-Members auf dem angegebenen neuen Wert ein, der unter Verwendung des angegebenen Bindung festgelegt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

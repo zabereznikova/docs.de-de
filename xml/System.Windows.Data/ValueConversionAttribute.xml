@@ -1,0 +1,136 @@
+<Type Name="ValueConversionAttribute" FullName="System.Windows.Data.ValueConversionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ValueConversionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValueConversionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.ValueConversionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Attribut dar, mit dem Autoren eines Wertkonverters die Datentypen angeben können, die für die Implementierung des Konverters zu berücksichtigen sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValueConversionAttribute (Type sourceType, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceType, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ValueConversionAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceType" Type="System.Type" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceType">Der Typ, den dieser Konverter konvertiert.</param>
+        <param name="targetType">Der Typ, in den dieser Konverter konvertiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Data.ValueConversionAttribute" /> Klasse mit dem angegebenen Quelltyp und der Zieltyp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="targetType" />-Parameter darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.ValueConversionAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück <see cref="T:System.Windows.Data.ValueConversionAttribute" />.</summary>
+        <returns>Der Hashcode für diese Instanz von <see cref="T:System.Windows.Data.ValueConversionAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public Type ParameterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ParameterType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ValueConversionAttribute.ParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Typ des optionalen Werts Konverter Parameterobjekts.</summary>
+        <value>Der Typ des optionalen Werts Konverter Parameterobjekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceType">
+      <MemberSignature Language="C#" Value="public Type SourceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SourceType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ValueConversionAttribute.SourceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ ab, den dieser Konverter konvertiert.</summary>
+        <value>Der Typ, den dieser Konverter konvertiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public Type TargetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ValueConversionAttribute.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ ab, in den dieser Konverter konvertiert.</summary>
+        <value>Der Typ, in den dieser Konverter konvertiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.ValueConversionAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner dieses <see cref="T:System.Windows.Data.ValueConversionAttribute" /> Instanz.</summary>
+        <value>Der eindeutige Bezeichner dieser <see cref="T:System.Windows.Data.ValueConversionAttribute" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,814 @@
+<Type Name="Vbc" FullName="Microsoft.Build.Tasks.Vbc">
+  <TypeSignature Language="C#" Value="public class Vbc : Microsoft.Build.Tasks.ManagedCompiler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Vbc extends Microsoft.Build.Tasks.ManagedCompiler" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Vbc" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ManagedCompiler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>Vbc</c> Aufgabe. Verwenden der <c>Vbc</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [Vbc-Aufgabe](http://msdn.microsoft.com/library/595278b1-2782-4577-b1ba-b4b5ab5625a3).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vbc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Vbc" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddResponseFileCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Befehlszeilen-Generator, dem Argumente hinzugefügt werden sollen.</param>
+        <summary>Füllt den angegebenen <paramref name="commandLine" />-Parameter mit Schaltern und anderen Informationen, die in eine Antwortdatei aufgenommen werden können.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAddress">
+      <MemberSignature Language="C#" Value="public string BaseAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.BaseAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basisadresse der DLL ab oder legt sie fest.</summary>
+        <value>Die Basisadresse der DLL.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CallHostObjectToExecute">
+      <MemberSignature Language="C#" Value="protected override bool CallHostObjectToExecute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CallHostObjectToExecute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.CallHostObjectToExecute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kompiliert das Projekt über das Hostobjekt.</summary>
+        <returns>
+          <see langword="true" />, wenn die Kompilierung erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Ausführung aufgerufen abrufen, wenn ein Hostobjekt, um übergeben wurde die `Vbc` Aufgabe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DisabledWarnings">
+      <MemberSignature Language="C#" Value="public string DisabledWarnings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisabledWarnings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.DisabledWarnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine oder mehrere zu unterdrückende Warnungen ab oder legt diese fest, die vom numerischen Teil des Warnungsbezeichners angegeben werden.</summary>
+        <value>Die zu unterdrückenden Warnungen, die vom numerischen Teil des Warnungsbezeichners angegeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mehrere Warnungen werden durch Semikolons getrennt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentationFile">
+      <MemberSignature Language="C#" Value="public string DocumentationFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentationFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.DocumentationFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert die Verarbeitung von Dokumentationskommentaren und ruft die XML-Ausgabedatei mit der Dokumentation ab oder legt diese fest.</summary>
+        <value>Die XML-Ausgabedatei mit der Dokumentation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft überschreibt die <xref:Microsoft.Build.Tasks.Vbc.GenerateDocumentation%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorReport">
+      <MemberSignature Language="C#" Value="public string ErrorReport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorReport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.ErrorReport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Zeichenfolgenwert ab oder legt diesen fest, der angibt, wie interne Compilerfehler von der Aufgabe gemeldet werden.</summary>
+        <value>Ein Zeichenfolgenwert, der angibt, wie interne Compilerfehler von der Aufgabe gemeldet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann die folgenden Werte aufweisen:  
+  
+-   `prompt`  
+  
+-   `send`  
+  
+-   `none`  
+  
+ Wenn `prompt` angegeben ist und ein interner Compilerfehler auftritt, wird der Benutzer wird aufgefordert, mit einer Option an, der angibt, ob die Fehlerdaten an Microsoft gesendet.  
+  
+ Wenn `send` angegeben ist und ein interner Compilerfehler auftritt, sendet die Aufgabe Fehlerdaten an Microsoft.  
+  
+ Der Standardwert ist `none`, der Fehler im nur als Textausgabe berichtet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreiben Sie ausführen, damit wir die PDB-Datei verschieben können, wenn wir, müssen nach Abschluss der Compiler.</summary>
+        <returns>Gibt <see cref="T:System.Boolean" />zurück.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDocumentation">
+      <MemberSignature Language="C#" Value="public bool GenerateDocumentation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GenerateDocumentation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.GenerateDocumentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob Dokumentationskommentare in einer XML-Datei verarbeitet werden sollen, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Vbc</c> Aufgabe verarbeitet Dokumentationskommentare zu einer XML-Datei; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name der XML-Ausgabedatei ist der Name der ausführbaren Datei oder die Bibliothek, die der Task erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPathToTool">
+      <MemberSignature Language="C#" Value="protected override string GenerateFullPathToTool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateFullPathToTool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.GenerateFullPathToTool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den vollständigen Pfad des Tools zurück.</summary>
+        <returns>Der vollständige Dateipfad des Tools.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Imports">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Imports { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Imports" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.Imports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elementauflistungen ab oder legt diese fest, aus denen Namespaces importiert werden.</summary>
+        <value>Die Elementauflistungen, aus denen Namespaces importiert werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeHostObject">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.InitializeHostObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.HostObjectInitializationStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Initialisierungsstatuswert eines Hostobjekts zurück, der die nächste zu erfolgende Aktion angibt.</summary>
+        <returns>Ein Initialisierungsstatuswert eines Hostobjekts, der die nächste zu erfolgende Aktion angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Ausführung dieser Aufgabe aufgerufen abrufen, wenn ein Hostobjekt, um übergeben wurde die `Vbc` Aufgabe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LangVersion">
+      <MemberSignature Language="C#" Value="public string LangVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LangVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.LangVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Sprachversion.</summary>
+        <value>Gibt die Sprachversion zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LogEventsFromTextOutput">
+      <MemberSignature Language="C#" Value="protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LogEventsFromTextOutput(string singleLine, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.LogEventsFromTextOutput(System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singleLine" Type="System.String" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="singleLine">Eine einzelne Zeile aus der "stdout" des Compilers Vbc erfasst</param>
+        <param name="messageImportance">Die Wichtigkeit der Meldung: hoch, Low oder Normal</param>
+        <summary>Diese Methode fängt die Zeilen, die protokolliert werden "stdout" aus VBC stammt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald wir eine standard-Vb-Warnung oder Fehler angezeigt wird, klicken Sie dann wir erfassen und ziehen Sie die nächsten 3 Zeilen ein, damit wir uns die Zeilen- und Spaltennummer der IDE Berichten kann in Form einer Zeichenfolge der Form von filename.vb(Zeile) in filename.vb transformieren können , und somit den Fehler in der doppelten Groß-/Kleinschreibung für die Festlegung von Zielversionen filtern oder nur Gewundener entsprechende Token anstelle der gesamten Zeile.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleAssemblyName">
+      <MemberSignature Language="C#" Value="public string ModuleAssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleAssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.ModuleAssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Assembly, der dieses Modul angehören soll.</summary>
+        <value>Der Name der Assembly, der dieses Modul angehören soll.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoStandardLib">
+      <MemberSignature Language="C#" Value="public bool NoStandardLib { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoStandardLib" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.NoStandardLib" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt diesen fest, der angibt, ob der Compiler nicht auf die Standardbibliotheken verweisen soll.</summary>
+        <value>
+          <see langword="true" />Wenn der Compiler nicht auf die Standardbibliotheken verweisen soll andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoVBRuntimeReference">
+      <MemberSignature Language="C#" Value="public bool NoVBRuntimeReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoVBRuntimeReference" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.NoVBRuntimeReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob der Compiler ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren soll.</summary>
+        <value>
+          <see langword="true" />Wenn der Compiler ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren soll; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoWarnings">
+      <MemberSignature Language="C#" Value="public bool NoWarnings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoWarnings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.NoWarnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Aufgabe alle Warnungen unterdrückt, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Aufgabe alle Warnungen unterdrückt werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OptionCompare">
+      <MemberSignature Language="C#" Value="public string OptionCompare { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OptionCompare" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.OptionCompare" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Zeichenfolgenwert ab oder legt diesen fest, der angibt, wie Zeichenfolgenvergleiche durchgeführt werden.</summary>
+        <value>Ein Zeichenfolgenwert, der angibt, wie Zeichenfolgenvergleiche durchgeführt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann die folgenden Werte aufweisen:  
+  
+-   `binary`  
+  
+-   `text`  
+  
+ Der Wert `binary` gibt an, dass die Aufgabe binäre Zeichenfolgenvergleiche verwendet. Der Wert `text` gibt an, dass die Aufgabe Textzeichenfolgenvergleiche verwendet. Der Standardwert ist `binary`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OptionExplicit">
+      <MemberSignature Language="C#" Value="public bool OptionExplicit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OptionExplicit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.OptionExplicit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die explizite Deklaration von Variablen erforderlich ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die explizite Deklaration von Variablen erforderlich ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OptionInfer">
+      <MemberSignature Language="C#" Value="public bool OptionInfer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OptionInfer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.OptionInfer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob der lokale Typrückschluss in Variablendeklarationen verwenden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Vbc</c> Task verwendet einen lokalen Typrückschluss in Variablendeklarationen; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OptionStrict">
+      <MemberSignature Language="C#" Value="public bool OptionStrict { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OptionStrict" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.OptionStrict" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob die Aufgabe eine strikte Typsemantik erzwingt, um implizite Typkonvertierungen zu beschränken.</summary>
+        <value>
+          <see langword="true" />Wenn die Aufgabe eine strikte Typsemantik erzwingt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OptionStrictType">
+      <MemberSignature Language="C#" Value="public string OptionStrictType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OptionStrictType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.OptionStrictType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert für die <see cref="P:Microsoft.Build.Tasks.Vbc.OptionStrict" /> Eigenschaft. Der Wert, der derzeit auf „Benutzerdefiniert“ festgelegt werden kann, gibt an, ob die Aufgabe Warnungen für implizite einschränkende Typkonvertierungen generiert.</summary>
+        <value>Ein Wert für die <see cref="P:Microsoft.Build.Tasks.Vbc.OptionStrict" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PdbFile">
+      <MemberSignature Language="C#" Value="public string PdbFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PdbFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.PdbFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pfad zu der. PDB-Datei.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveIntegerChecks">
+      <MemberSignature Language="C#" Value="public bool RemoveIntegerChecks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RemoveIntegerChecks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.RemoveIntegerChecks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob Überprüfungen auf Ganzzahlüberlauf-Fehler deaktiviert werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Vbc</c> -Aufgabe Überprüfungen auf Ganzzahlüberlauf Fehler deaktiviert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespace">
+      <MemberSignature Language="C#" Value="public string RootNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.RootNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stammnamespace für alle Typdeklarationen ab oder legt diesen fest.</summary>
+        <value>Der Stammnamespace für alle Typdeklarationen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SdkPath">
+      <MemberSignature Language="C#" Value="public string SdkPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SdkPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.SdkPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort von „mscorlib.dll“ und „microsoft.visualbasic.dll“ ab oder legt ihn fest.</summary>
+        <value>Der Speicherort von „mscorlib.dll“ und „microsoft.visualbasic.dll“.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetCompactFramework">
+      <MemberSignature Language="C#" Value="public bool TargetCompactFramework { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TargetCompactFramework" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.TargetCompactFramework" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob das Ziel der [!INCLUDE[Compact](~/includes/compact-md.md)].</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Vbc</c> Task sollten als Ziel der [!INCLUDE[Compact](~/includes/compact-md.md)]ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToolName">
+      <MemberSignature Language="C#" Value="protected override string ToolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.ToolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der ausführbaren Datei des Tools ab (vbc.exe).</summary>
+        <value>Der Name der ausführbaren Datei des Tools.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseHostCompilerIfAvailable">
+      <MemberSignature Language="C#" Value="public bool UseHostCompilerIfAvailable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseHostCompilerIfAvailable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.UseHostCompilerIfAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob das prozessinterne Compilerobjekt (falls verfügbar) verwendet werden soll, oder legt diesen fest. Wird nur von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendet.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Vbc</c> Task verwendet das prozessinterne Compilerobjekt, falls verfügbar ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateParameters">
+      <MemberSignature Language="C#" Value="protected override bool ValidateParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ValidateParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Vbc.ValidateParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft Eingabeparameter und protokolliert Fehler oder Warnungen (sofern vorhanden). Gibt einen booleschen Wert zurück, der angibt, ob die Aufgabenausführung fortgesetzt werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die aufgabenausführung fortgesetzt werden soll andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="VBRuntime">
+      <MemberSignature Language="C#" Value="public string VBRuntime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VBRuntime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.VBRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob mit der Standardlaufzeit für Visual Basic kompilieren.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="VBRuntimePath">
+      <MemberSignature Language="C#" Value="public string VBRuntimePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VBRuntimePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.VBRuntimePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pfad für die Visual Basic-Laufzeit verwendet werden soll.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public string Verbosity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausführlichkeit der Compilerausgabe, kann u. <c>stillen</c>, <c>Normal</c>, oder <c>ausführlich</c>.</summary>
+        <value>Die Ausführlichkeit der Ausgabe des Compilers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist die Standardeinstellung für den Ausführlichkeitsgrad `Normal`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WarningsAsErrors">
+      <MemberSignature Language="C#" Value="public string WarningsAsErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WarningsAsErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.WarningsAsErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste mit Warnungen ab, die als Fehler behandelt werden sollen, oder legt diese Liste fest.</summary>
+        <value>Eine Liste mit Warnungen, die als Fehler behandelt werden sollen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WarningsNotAsErrors">
+      <MemberSignature Language="C#" Value="public string WarningsNotAsErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WarningsNotAsErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Vbc.WarningsNotAsErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste mit Warnungen ab, die nicht als Fehler behandelt werden sollen, oder legt diese fest.</summary>
+        <value>Eine Liste mit Warnungen, die nicht als Fehler behandelt werden sollen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

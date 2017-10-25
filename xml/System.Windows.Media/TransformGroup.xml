@@ -1,0 +1,195 @@
+<Type Name="TransformGroup" FullName="System.Windows.Media.TransformGroup">
+  <TypeSignature Language="C#" Value="public sealed class TransformGroup : System.Windows.Media.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransformGroup extends System.Windows.Media.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TransformGroup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine zusammengesetzte <see cref="T:System.Windows.Media.Transform" /> besteht aus anderen <see cref="T:System.Windows.Media.Transform" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.TransformGroup> Wenn Sie mehrere anwenden möchten <xref:System.Windows.Media.Transform> Objekte einer einzelnen Eigenschaft.  
+  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+ **Features von Freezable:** , da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.TransformGroup> Klasse bietet verschiedene spezielle Funktionen: <xref:System.Windows.Media.TransformGroup> Objekte deklariert werden können, wie für mehrere Objekte, die zur Verbesserung der Schreibschutz versehen wurden freigegeben Leistung, geklont und als threadsicher. Weitere Informationen zu den verschiedenen Features von <xref:System.Windows.Freezable> anzuzeigen, [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransformGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TransformGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.TransformGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TransformCollection Children { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TransformCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TransformGroup.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TransformCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.TransformCollection" /> ab, mit der diese <see cref="T:System.Windows.Media.TransformGroup" /> definiert wird, oder legt sie fest.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Media.Transform" />-Objekten, die diese <see cref="T:System.Windows.Media.TransformGroup" /> definieren. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+<a name="dependencyPropertyInfo_Children"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TransformGroup.ChildrenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ChildrenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ChildrenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TransformGroup.ChildrenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TransformGroup.Children" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TransformGroup Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.TransformGroup Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TransformGroup.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TransformGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare Kopie dieses <see cref="T:System.Windows.Media.TransformGroup" />-Objekts, indem tiefe Kopien seiner Werte erzeugt werden.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts gibt <see langword="false" /> zurück, selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Wenn Abhängigkeitseigenschaften diese Methode kopiert kopiert Ressource Ressourcenverweise und datenbindungen, obwohl sie nicht mehr aufgelöst werden können. Er kopiert keine Animationen oder ihre aktuellen Werte.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TransformGroup CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.TransformGroup CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TransformGroup.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TransformGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare Kopie dieses <see cref="T:System.Windows.Media.TransformGroup" /> Objekt, indem tiefe Kopien seiner Werte. Diese Methode wird nicht Ressourcenverweise, datenbindungen und Animationen, kopiert, auch wenn sie ihre aktuellen Werte kopiert.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" /> -Eigenschaft des geklonten Objekts ist <see langword="false" /> selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft der Quelle ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TransformGroup.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TransformGroup.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Matrix" /> Struktur, die die Transformation, die von diesem dargestellt beschreibt <see cref="T:System.Windows.Media.TransformGroup" />.</summary>
+        <value>Eine Kombination der <see cref="T:System.Windows.Media.Transform" /> -Objekte in dieser <see cref="T:System.Windows.Media.TransformGroup" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

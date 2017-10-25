@@ -1,0 +1,151 @@
+<Type Name="AsyncLocal&lt;T&gt;" FullName="System.Threading.AsyncLocal&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class AsyncLocal&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AsyncLocal`1&lt;T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.AsyncLocal`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Der Typ der Umgebungsdaten.</typeparam>
+    <summary>Stellt Umgebungsdaten dar, die für eine angegebene asynchrone Ablaufsteuerung lokal sind, wie etwa eine asynchrone Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da das aufgabenbasierte asynchrone Programmiermodell i. d. r. die Verwendung von Threads, abstrakte <xref:System.Threading.AsyncLocal%601> Instanzen können zum threadübergreifenden beibehalten von Daten verwendet werden.  
+  
+ Die <xref:System.Threading.AsyncLocal%601> Klasse bietet auch optionale Benachrichtigungen, wenn Sie der Wert der aktuelle Thread wird geändert, entweder zugeordnet, da sie nicht explizit, durch Festlegen geändert wurde der <xref:System.Threading.AsyncLocal%601.Value%2A> -Eigenschaft oder implizit geändert werden, wenn der Thread ein ermittelthat.`await` oder andere kontextübergang.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Threading.AsyncLocal%601> Klasse, um einen Zeichenfolgenwert ein asynchroner Fluss beizubehalten. Auch die Verwendung von gegenübergestellt <xref:System.Threading.AsyncLocal%601> mit <xref:System.Threading.ThreadLocal%601>.  
+  
+ [!code-csharp[System.Threading.AsyncLocal#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.asynclocal/cs/Example1.cs#1)]
+ [!code-vb[System.Threading.AsyncLocal#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.asynclocal/vb/Example1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsyncLocal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncLocal`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Instanziiert eine <see cref="T:System.Threading.AsyncLocal`1" />-Instanz, die keine Änderungsbenachrichtigungen empfängt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsyncLocal (Action&lt;System.Threading.AsyncLocalValueChangedArgs&lt;T&gt;&gt; valueChangedHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Action`1&lt;valuetype System.Threading.AsyncLocalValueChangedArgs`1&lt;!T&gt;&gt; valueChangedHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncLocal`1.#ctor(System.Action{System.Threading.AsyncLocalValueChangedArgs{`0}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="valueChangedHandler" Type="System.Action&lt;System.Threading.AsyncLocalValueChangedArgs&lt;T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="valueChangedHandler">Der Delegat, der aufgerufen wird, wenn sich der aktuelle Wert auf einem beliebigen Thread ändert.</param>
+        <summary>Instanziiert eine lokale <see cref="T:System.Threading.AsyncLocal`1" />-Instanz, die Änderungsbenachrichtigungen empfängt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Signatur des Delegaten wird `Action<ASyncLocalValueChangedArgs<T>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.AsyncLocal`1.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Umgebungsdaten ab oder legt ihn fest.</summary>
+        <value>Der Wert der Umgebungsdaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

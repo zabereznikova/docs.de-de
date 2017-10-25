@@ -1,0 +1,214 @@
+<Type Name="ChartHttpHandlerSettings" FullName="System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings">
+  <TypeSignature Language="C#" Value="public class ChartHttpHandlerSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartHttpHandlerSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Attribute, die zum Schreiben eines benutzerdefinierten HTTP-Handlers zum Speichern von temporären Dateien verwendet werden können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CustomHandlerName">
+      <MemberSignature Language="C#" Value="public string CustomHandlerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomHandlerName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.CustomHandlerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des benutzerdefinierten Handlers fest.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen des benutzerdefinierten Handlers darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Directory">
+      <MemberSignature Language="C#" Value="public string Directory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Directory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Directory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Verzeichnis des benutzerdefinierten Handlers, in dem die Dateien des temporären Bilds gespeichert werden.</summary>
+        <value>Ein <see langword="string" /> Wert, der das Verzeichnis darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderName">
+      <MemberSignature Language="C#" Value="public string FolderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FolderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.FolderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Ordner, die zum Speichern von Bildern in das angegebene Verzeichnis verwendet werden soll.</summary>
+        <value>Ein <see langword="string" /> , der den Namen des Ordners darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerType">
+      <MemberSignature Language="C#" Value="public Type HandlerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type HandlerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.HandlerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Handler des benutzerdefinierten Handlers ab.</summary>
+        <value>Die <see cref="T:System.Type" /> des benutzerdefinierten Handlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name des abzurufenden Parameters.</param>
+        <summary>Ruft Einstellungsparameter mit dem angegebenen Namen in der Datei "Web.config" unter registriert die <c>ChartHttpHandler</c> Schlüssel.</summary>
+        <value>Der Parameterwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode keine Parameter in der Datei "Web.config" unter den Zugriff auf die `ChartHttpHandler` Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateImages">
+      <MemberSignature Language="C#" Value="public bool PrivateImages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrivateImages" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.PrivateImages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Flag, das angibt, ob der Handler private Bilder verwendet wird.</summary>
+        <value>
+          <see langword="True" />Wenn der Handler private Bilder verwendet, andernfalls wird <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.PrivateImages%2A> Eigenschaft festgelegt ist, gibt der Handler nicht Bilder aus der Gültigkeitsbereich einer Sitzung zurück. Darüber hinaus wird der Client nicht Bilder eines anderen Benutzers heruntergeladen werden. Dies ist das Standardverhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType StorageType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType StorageType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.StorageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Speichertyp für Diagrammbilder.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType" /> -Enumerationswert ab, der den Speichertyp für Diagrammbilder darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diagrammbilder können als Dateien oder im Arbeitsspeicher gespeichert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Timeout des benutzerdefinierten Handlers.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> -Enumerationswert ab, der die Lebensdauer der Diagrammbilder darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Timeout abgelaufen ist, ist das gespeicherte Diagrammbild durch ein neues Diagrammbild überschrieben oder verworfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL, entspricht dem HTTP-Pfad, in dem temporäre Dateien gespeichert sind.</summary>
+        <value>Ein <see langword="string" /> Wert, der die URL darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

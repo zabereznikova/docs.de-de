@@ -1,0 +1,632 @@
+<Type Name="BaseDataEnvironment" FullName="Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment">
+  <TypeSignature Language="C#" Value="public abstract class BaseDataEnvironment : IDisposable, msdatasrc.DataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract BaseDataEnvironment extends System.Object implements class msdatasrc.DataSource, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>msdatasrc.DataSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Visual Basic 6.0 emuliert <see langword="Data Environment" /> in Anwendungen, die von Visual Basic 6.0 aktualisiert wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0, datengebundenen Formularen wurden automatisch erstellt, wenn Sie Datenbankelemente aus gezogen haben eine `Data Environment` auf das Formular. Die `Data Environment` alle Zuordnungen zwischen Visual Basic 6.0- und ADO-Datenschicht behandelt. Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseDataEnvironment ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyspecialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="addDataSourceListener">
+      <MemberSignature Language="C#" Value="public virtual void addDataSourceListener (msdatasrc.DataSourceListener ds);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void addDataSourceListener(class msdatasrc.DataSourceListener ds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.addDataSourceListener(msdatasrc.DataSourceListener)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ds" Type="msdatasrc.DataSourceListener" />
+      </Parameters>
+      <Docs>
+        <param name="ds">Keine</param>
+        <summary>Diese Methode ist in der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />-Klasse nicht implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist in der <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment>-Klasse nicht implementiert.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Collection Commands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Collection Commands" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see langword="ADODB.Command" /> Objekte für die Verwendung in einer Anwendung von Visual Basic 6.0 aktualisiert.</summary>
+        <value>Eine Auflistung von <see langword="ADODB.Command" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public ADODB.Command Commands[object lpVar] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ADODB.Command Commands(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Commands(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ADODB.Command</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lpVar" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lpVar">Eine Visual Basic 6.0 <see langword="Variant" /> , enthält die <see langword="ADODB.Command" /> Objekte.</param>
+        <summary>Ruft eine Auflistung von <see langword="ADODB.Command" /> Objekte für die Verwendung in einer Anwendung von Visual Basic 6.0 aktualisiert.</summary>
+        <value>Eine Auflistung von <see langword="ADODB.Command" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connections">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Collection Connections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Collection Connections" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Connections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see langword="ADODB.Connection" /> Objekte für die Verwendung in einer Anwendung von Visual Basic 6.0 aktualisiert.</summary>
+        <value>Eine Auflistung von <see langword="ADODB.Connection" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connections">
+      <MemberSignature Language="C#" Value="public ADODB.Connection Connections[object lpVar] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ADODB.Connection Connections(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Connections(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ADODB.Connection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lpVar" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lpVar">Eine Visual Basic 6.0 <see langword="Variant" /> , enthält die <see langword="ADODB.Connection" /> Objekte.</param>
+        <summary>Ruft eine Auflistung von <see langword="ADODB.Connection" /> Objekte für die Verwendung in einer Anwendung von Visual Basic 6.0 aktualisiert.</summary>
+        <value>Eine Auflistung von <see langword="ADODB.Connection" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familynewslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, eine <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />, und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit der disposing-Parameter auf festgelegt `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit der disposing-Parameter auf festgelegt `false`.  
+  
+ Wenn der disposing-Parameter ist `true`, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die auf dieses Steuerelement verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~BaseDataEnvironment ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="M:System.Object.Finalize" />-Methode außer Kraft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="getDataMember">
+      <MemberSignature Language="C#" Value="public virtual object getDataMember (string strDataMember, ref Guid Id);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance object getDataMember(string strDataMember, valuetype System.Guid&amp; Id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.getDataMember(System.String,System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strDataMember" Type="System.String" />
+        <Parameter Name="Id" Type="System.Guid&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="strDataMember">Ein <see langword="String" /> , enthält ein <see langword="ADODB.Command" /> Objekt.</param>
+        <param name="Id">Eine GUID, ein <see langword="ADODB.Recordset" /> Objekt.</param>
+        <summary>Ruft eine Methode, die auf der Grundlage einer <see langword="ADODB.Command" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , enthält die <see langword="ADODB.Command" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataMemberCount">
+      <MemberSignature Language="C#" Value="public virtual int GetDataMemberCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance int32 GetDataMemberCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.GetDataMemberCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Anzahl der <see langword="ADODB.Command" /> Objekte.</summary>
+        <returns>Ein <see langword="Integer" /> , der die Anzahl enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur `ADODB.Command` Objekte, die keine Zurückgeben einer `ADODB.Recordset` gezählt werden.  
+  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataMemberName">
+      <MemberSignature Language="C#" Value="public virtual string GetDataMemberName (int Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance string GetDataMemberName(int32 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.GetDataMemberName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Nicht zutreffend.</param>
+        <summary>Diese Methode ist in der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />-Klasse nicht implementiert.</summary>
+        <returns>
+          <see langword="Nothing" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist in der <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment>-Klasse nicht implementiert.  
+  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="m_Commands">
+      <MemberSignature Language="C#" Value="protected Microsoft.VisualBasic.Collection m_Commands;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Microsoft.VisualBasic.Collection m_Commands" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_Commands" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die <see cref="Overload:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Commands" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="m_Connections">
+      <MemberSignature Language="C#" Value="protected Microsoft.VisualBasic.Collection m_Connections;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Microsoft.VisualBasic.Collection m_Connections" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_Connections" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die <see cref="Overload:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Connections" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="m_NonRSReturningCommands">
+      <MemberSignature Language="C#" Value="protected Microsoft.VisualBasic.Collection m_NonRSReturningCommands;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Microsoft.VisualBasic.Collection m_NonRSReturningCommands" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_NonRSReturningCommands" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält eine Auflistung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="m_Recordsets">
+      <MemberSignature Language="C#" Value="protected Microsoft.VisualBasic.Collection m_Recordsets;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Microsoft.VisualBasic.Collection m_Recordsets" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.m_Recordsets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die <see cref="Overload:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Recordsets" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="public object Object { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Object" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Object" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />-Objekt ab.</summary>
+        <value>Ein <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recordsets">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Collection Recordsets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Collection Recordsets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Recordsets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see langword="ADODB.Recordset" /> Objekte für die Verwendung in einer Anwendung von Visual Basic 6.0 aktualisiert.</summary>
+        <value>Eine Auflistung von <see langword="ADODB.Recordset" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recordsets">
+      <MemberSignature Language="C#" Value="public ADODB.Recordset Recordsets[object lpVar] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ADODB.Recordset Recordsets(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.Recordsets(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ADODB.Recordset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lpVar" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lpVar">Eine Visual Basic 6.0 <see langword="Variant" /> , enthält die <see langword="ADODB.Recordset" /> Objekte.</param>
+        <summary>Ruft eine Auflistung von <see langword="ADODB.Recordset" /> Objekte für die Verwendung in einer Anwendung von Visual Basic 6.0 aktualisiert.</summary>
+        <value>Eine Auflistung von <see langword="ADODB.Recordset" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="removeDataSourceListener">
+      <MemberSignature Language="C#" Value="public virtual void removeDataSourceListener (msdatasrc.DataSourceListener ds);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void removeDataSourceListener(class msdatasrc.DataSourceListener ds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment.removeDataSourceListener(msdatasrc.DataSourceListener)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ds" Type="msdatasrc.DataSourceListener" />
+      </Parameters>
+      <Docs>
+        <param name="ds">Nicht zutreffend.</param>
+        <summary>Diese Methode ist in der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment" />-Klasse nicht implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist in der <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseDataEnvironment>-Klasse nicht implementiert.  
+  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ein `BaseDataEnvironment` wird erstellt, um die ADO-Code zu aktivieren.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

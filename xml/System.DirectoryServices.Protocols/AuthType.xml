@@ -1,0 +1,189 @@
+<Type Name="AuthType" FullName="System.DirectoryServices.Protocols.AuthType">
+  <TypeSignature Language="C#" Value="public enum AuthType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.AuthType" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.AuthType" /> Enumeration wird verwendet, um die Authentifizierungsmethode für die Verwendung bei einer Verbindung anzugeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anonymous">
+      <MemberSignature Language="C#" Value="Anonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Anonymous = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Anonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Verbindung hergestellt werden soll, ohne Anmeldeinformationen zu übergeben. Der Wert ist gleich 0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic">
+      <MemberSignature Language="C#" Value="Basic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Basic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Basic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Standardauthentifizierung für die Verbindung verwendet werden soll. Der Wert ist gleich 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Digest">
+      <MemberSignature Language="C#" Value="Digest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Digest = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Digest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Digestauthentifizierung für den Zugriff auf die Verbindung verwendet werden soll. Der Wert ist gleich 4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dpa">
+      <MemberSignature Language="C#" Value="Dpa" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Dpa = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Dpa" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Verteilte Kennwortauthentifizierung (DPA) für die Verbindung verwendet werden soll. Der Wert ist gleich 6.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="External" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType External = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.External" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine externe Methode zur Authentifizierung der Verbindung verwendet wird. Der Wert ist gleich 8.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Kerberos">
+      <MemberSignature Language="C#" Value="Kerberos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Kerberos = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Kerberos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Kerberos-Authentifizierung für die Verbindung verwendet werden soll. Der Wert ist gleich 9.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Msn">
+      <MemberSignature Language="C#" Value="Msn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Msn = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Msn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass sie durch "Microsoft-Netzwerkauthentifizierungsdienst" authentifiziert wird. Der Wert ist gleich 7.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Negotiate">
+      <MemberSignature Language="C#" Value="Negotiate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Negotiate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Negotiate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Microsoft Negotiate-Authentifizierung für die Verbindung verwendet werden soll. Der Wert ist gleich 2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ntlm">
+      <MemberSignature Language="C#" Value="Ntlm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Ntlm = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Ntlm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Windows NT Challenge/Antwortsicherheit (NTLM)-Authentifizierung für die Verbindung verwendet werden soll. Der Wert ist gleich 3.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sicily">
+      <MemberSignature Language="C#" Value="Sicily" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.AuthType Sicily = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.AuthType.Sicily" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Aushandlung (Sicily) zum Auswählen von MSN, DPA oder NTLM verwendet wird.  Dies sollte nur LDAPv2-Server verwendet werden. Der Wert ist gleich 5.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

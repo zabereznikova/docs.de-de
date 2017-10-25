@@ -1,0 +1,513 @@
+<Type Name="TabRenderer" FullName="System.Windows.Forms.TabRenderer">
+  <TypeSignature Language="C#" Value="public sealed class TabRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TabRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Rendern ein Registerkarten-Steuerelement mit visuellen Stilen verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TabRenderer> Klasse bietet eine Reihe von `static` Methoden, die zum Rendern von Registerkarten-Steuerelement mit dem aktuellen visuellen Stil des Betriebssystems verwendet werden können. Unter dem Rendern eine Steuerelements versteht man das Zeichnen der Benutzeroberfläche eines Steuerelements. Dies ist hilfreich, wenn Sie ein benutzerdefiniertes Steuerelement zeichnen, das die Darstellung des aktuellen visuellen Stil aufweisen sollte. Um ein Registerkarten-Steuerelement zu zeichnen, verwenden Sie die <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> -Methode zum Zeichnen der Seite, und verwenden die <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> -Methode zum Zeichnen der einzelnen Registerkarten.  
+  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile auf den Clientbereich der Anwendungsfenster angewendet werden, werden die Methoden dieser Klasse das Registerkarten-Steuerelement mit dem aktuellen visuellen Stil gezeichnet. Andernfalls lösen die Methoden und Eigenschaften dieser Klasse einer <xref:System.InvalidOperationException>. Um zu bestimmen, ob die Member dieser Klasse verwendet werden können, überprüfen Sie den Wert von der <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> Eigenschaft.  
+  
+ Diese Klasse dient als Wrapper für die Funktionalität des eine <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> , festgelegt ist, um eines der Elemente, die verfügbar gemacht werden, indem die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab?displayProperty=nameWithType> Klasse. Weitere Informationen finden Sie unter [Rendern von Steuerelementen mit visuellen Stilen](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein benutzerdefiniertes Steuerelement zu erstellen, verwendet die <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> und <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> Methoden, um eine grundlegende Registerkarten-Steuerelement mit zwei Registerkarten gezeichnet werden soll.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.TabRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte in der angegebenen Zustand und die Grenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte in den angegebenen Zustand und die Grenzen, und klicken Sie mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="tabItemText">Die <see cref="T:System.String" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TabItemText</c>.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte in den angegebenen Zustand und die Grenzen, und klicken Sie mit dem angegebenen Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Drawing.Image image, System.Drawing.Rectangle imageRectangle, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageRectangle, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="imageRectangle">Die <see cref="T:System.Drawing.Rectangle" /> , angibt, dass die Grenzen des <c>Image</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte in der angegebenen Zustand und die Grenzen, mit dem angegebenen Bild und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="tabItemText">Die <see cref="T:System.String" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TabItemText</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte in der angegebenen Zustand und die Grenzen, mit dem angegebenen Text und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.TabRenderer.DrawTabItem%28System.Drawing.Graphics%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Boolean%2CSystem.Windows.Forms.VisualStyles.TabItemState%29> -Methode in eines benutzerdefinierten Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um ein Registerkartenelement zu zeichnen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.TabRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TabRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="tabItemText">Die <see cref="T:System.String" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TabItemText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte in der angegebenen Zustand und die Grenzen, mit dem angegebenen Text und textformatierung und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Drawing.Image image, System.Drawing.Rectangle imageRectangle, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageRectangle, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="tabItemText">Die <see cref="T:System.String" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TabItemText</c>.</param>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="imageRectangle">Die <see cref="T:System.Drawing.Rectangle" /> , angibt, dass die Grenzen des <c>Image</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte in der angegebenen Zustand und die Grenzen, mit dem angegebenen Text und Bild und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Drawing.Image image, System.Drawing.Rectangle imageRectangle, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageRectangle, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkarte gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkarte angibt.</param>
+        <param name="tabItemText">Die <see cref="T:System.String" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>TabItemText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> auf der Registerkarte gezeichnet werden soll.</param>
+        <param name="imageRectangle">Die <see cref="T:System.Drawing.Rectangle" /> , angibt, dass die Grenzen des <c>Image</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> Werten, die den visuellen Status der Registerkarte angibt.</param>
+        <summary>Zeichnet eine Registerkarte im angegebenen Zustand und Grenzen; mit dem angegebenen Text, Formatieren von Text und Bild; und mit einem optionalen Fokusrechteck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabPage">
+      <MemberSignature Language="C#" Value="public static void DrawTabPage (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabPage(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabPage(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Registerkartenseite gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen der Registerkartenseite angibt.</param>
+        <summary>Zeichnet eine Registerkarte in der angegebenen Grenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode sollten Sie sicherstellen, dass die <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> -Eigenschaft gibt `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> -Methode in eines benutzerdefinierten Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um eine Registerkarte zu zeichnen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.TabRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TabRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabRenderer.IsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.TabRenderer" /> Klasse kann verwendet werden, um ein Registerkarten-Steuerelement mit visuellen Stilen gezeichnet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer visuelle Stile im Betriebssystem aktiviert hat, und visuelle Stile werden auf den Clientbereich des Anwendungsfenster angewendet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft ist `false`, <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> und <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> Methoden lösen eine <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> Eigenschaft, um festzustellen, ob verwendet die <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> und <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> Methoden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.TabRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TabRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

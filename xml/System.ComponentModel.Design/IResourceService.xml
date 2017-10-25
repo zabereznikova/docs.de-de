@@ -1,0 +1,117 @@
+<Type Name="IResourceService" FullName="System.ComponentModel.Design.IResourceService">
+  <TypeSignature Language="C#" Value="public interface IResourceService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IResourceService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IResourceService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle für Designer bereit, um Zugriff Ressource Readern und Writern für bestimmte <see cref="T:System.Globalization.CultureInfo" /> Ressourcentypen zur Verfügung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ressourcenwriters oder Ressourcenreaders zum Serialisieren verwendet werden oder Deserialze Objekte oder Daten entsprechend den Angaben <xref:System.Globalization.CultureInfo> ressourceneinstellungen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Designer, verwendet die <xref:System.ComponentModel.Design.IResourceService> zum Lesen und Schreiben in Ressourcendateien, um eine Eigenschaft des zugeordneten Steuerelements zu konfigurieren.  
+  
+ [!code-cpp[IResourceServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IResourceServiceExample/CPP/source.cpp#1)]
+ [!code-csharp[IResourceServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IResourceServiceExample/CS/source.cs#1)]
+ [!code-vb[IResourceServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IResourceServiceExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetResourceReader">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceReader GetResourceReader (System.Globalization.CultureInfo info);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Resources.IResourceReader GetResourceReader(class System.Globalization.CultureInfo info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IResourceService.GetResourceReader(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Globalization.CultureInfo" /> der Ressource für die eine Ressourcenreaders abzurufen.</param>
+        <summary>Sucht die Ressourcenreaders für die angegebene Kultur, und gibt ihn zurück.</summary>
+        <returns>Ein <see cref="T:System.Resources.IResourceReader" /> -Schnittstelle, die Ressourcen für die Kultur enthält, oder <see langword="null" /> Wenn keine Ressourcen für die Kultur vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Ressourcen auf dem Designer für die angegebene Kultur zugeordnet sind, gibt diese Methode `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceWriter">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceWriter GetResourceWriter (System.Globalization.CultureInfo info);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Resources.IResourceWriter GetResourceWriter(class System.Globalization.CultureInfo info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IResourceService.GetResourceWriter(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Globalization.CultureInfo" /> der Ressource, für die einen Ressourcenwriter erstellt.</param>
+        <summary>Sucht die Ressourcenwriters für die angegebene Kultur, und gibt ihn zurück.</summary>
+        <returns>Ein <see cref="T:System.Resources.IResourceWriter" /> Schnittstelle für die angegebene Kultur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine neue Ressource für die angegebene Kultur und eine vorhandene Ressource zerstört, wenn bereits eine vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1701 @@
+<Type Name="XamlMember" FullName="System.Xaml.XamlMember">
+  <TypeSignature Language="C#" Value="public class XamlMember : IEquatable&lt;System.Xaml.XamlMember&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlMember extends System.Object implements class System.IEquatable`1&lt;class System.Xaml.XamlMember&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlMember" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Xaml.XamlMember&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Verwendung von XAML-Typsystembezeichner für Mitglieder der XAML-Typen bereit. Der Bezeichner wird vom XAML-Readern und XAML-Writer verwendet, während der Verarbeitung der Element-Knoten (wenn befindet sich der XAML-Reader auf einem <see cref="F:System.Xaml.XamlNodeType.StartMember" />) und auch für die allgemeine Logik für XAML-Typ System.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlMember>können drei Methoden zum Zurückgeben von Informationen zu XAML-Member: standard common Language Runtime (CLR) Reflektion; eine reine Verweis Reflektion Technik Aufrufen von internen flags APIs mithilfe einer optimierten Bit; oder virtuelle Aufrufen von überschreibt die `Lookup*` -API, die vom möglich bereitgestellt wird <xref:System.Xaml.XamlMember> Unterklassen. Für die meisten Verwendungen von .NET Framework-XAML-Dienste-APIs und die <xref:System.Xaml.XamlMember> -API verwenden Sie die standardmäßigen XAML-Schemakontext. Der standardmäßigen XAML-Schemakontext für .NET Framework XAML Services verwendet die CLR-Unterstützung für das Typsystem. Dadurch wird der XAML-Readern und XAML-Writer, einen beliebigen Typ oder Member gilt, oder anderweitig verfügbar definiert ist, die CLR und seine Reflektion Methoden verwenden.  
+  
+## <a name="lookup-apis-and-xamlmember-derived-classes"></a>Suche * APIs und XamlMember abgeleitete Klassen  
+ <xref:System.Xaml.XamlMember>definiert mehrere virtuelle Member, die abgeleitete Klassen können außer Kraft gesetzt. Diese Member haben Namen, die immer mit der Zeichenfolge beginnen `Lookup`. Der Rest der API benennen Verweise Sie die Eigenschaft, die die virtuelle Methode beeinflusst. Z. B. eine <xref:System.Xaml.XamlMember> kann abgeleiteten Klasse außer Kraft gesetzt <xref:System.Xaml.XamlMember.LookupTargetType%2A> zu beeinflussen, welche die Basis-definierte Eigenschaft <xref:System.Xaml.XamlMember.TargetType%2A> in einer abgeleiteten Klasse zurückgibt. Sie können die Rückgabewerte für solche Eigenschaften in Vorhersagen <xref:System.Xaml.XamlMember> oder vorhandene abgeleitete Klassen durch Lesen der Dokumentation für das entsprechende `Lookup*` Methoden.  
+  
+ Der Zweck der `Lookup*` Methoden wird ein XAML-Typsystem-Erweiterungsmethode angegeben, der die umfasst die <xref:System.Xaml.XamlMember> Basisklasse. Durch Ableiten von <xref:System.Xaml.XamlMember> und überschreiben die `Lookup` virtuelle Member Sie definieren, das Konzept des XAML-Member für ein XAML-Schema in einem XAML-Typsystem ohne auf die Einzelheiten einer Unterstützungstypsystem oder Technologie gebunden wird. Sie können auch verwenden, einen bereitgestellten XAML-Schemakontext bei diesem Schema und weiterhin die gewünschten Ergebnisse zurückgegeben.  
+  
+ Beispielsweise sollten Sie die <xref:System.Xaml.XamlMember> Eigenschaft <xref:System.Xaml.XamlMember.IsWritePublic%2A>. Diese Eigenschaft Aufrufer darüber informiert, dass Vorgänge wie die Verwendung einer <xref:System.Xaml.XamlWriter> für Serialisierung, einen Wert für diesen Member für ein Zielobjekt schreiben kann. In der Standardimplementierung erfolgt die Festlegung, ob das Element schreibgeschützt ist mithilfe von Reflektionstechniken für die unterstützende CLR <xref:System.Type> und ihre Member (die <xref:System.Reflection.MemberInfo>). Aus diesem Grund hängt standardmäßig das XAML-Typsystem der CLR-Typsystem. Sie können jedoch diese Abhängigkeit entfernen, für die Verwendung von XAML-Typ System Berichte von <xref:System.Xaml.XamlMember.IsWritePublic%2A> durch Überschreiben der API <xref:System.Xaml.XamlMember.LookupIsWritePublic%2A>. In der Außerkraftsetzung können Sie andere Bestimmung, z. B. Metadaten, die spezifisch für Ihre Technologie, die eine master Nachschlagetabelle, die für ein festes XAML-Vokabular oder einer Vielzahl anderer Strategien zum bestimmen, ob ein XAML-Member in beschreibbar ist optimiert ist Ihre Verwendung von XAML-Vokabular.  
+  
+## <a name="constructing-xamlmember-without-xaml-schema-context"></a>Erstellen von XamlMember ohne Verwendung von XAML-Schemakontext  
+ Die meisten Konstruktoren von <xref:System.Xaml.XamlMember> erfordern eine <xref:System.Xaml.XamlSchemaContext> als Teil der Initialisierung. Die <xref:System.Xaml.XamlSchemaContext> ist auch erforderlich, die für viele interne <xref:System.Xaml.XamlSchemaContext> Vorgänge, z. B. das Abrufen von Informationen, die von der Unterstützungstyp weitergeleitet wird. Bei der Arbeit mit der <xref:System.Xaml.XamlMember> -API, die Sie in der Regel haben eine <xref:System.Xaml.XamlSchemaContext> verfügbar ist von einem umgebenden Konstrukt wie z. B. eine <xref:System.Xaml.XamlWriter>. In diesem Fall können Sie übergeben die <xref:System.Xaml.XamlSchemaContext> über einen Verweis auf alle XAML-Typ Systemaufrufe, die einen XAML-Schemakontext erfordern.  
+  
+ Einen bestimmten Konstruktor <xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29>, erfordert eine <xref:System.Xaml.XamlSchemaContext>. Allerdings eine <xref:System.Xaml.XamlMember> erstellt, die mit der <xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29> Signatur zurückgibt `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A>.  
+  
+ Für einen Ladepfad, die umfasst <xref:System.Xaml.XamlObjectWriter>, ein Element kann nicht in einem Objektdiagramm geschrieben werden. Mithilfe der .NET Framework-XAML-Dienste-Implementierung der <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=nameWithType> aufrufen, löst eine <xref:System.Xaml.XamlObjectWriterException> Wenn die relevanten <xref:System.Xaml.XamlMember> Berichte `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A>.  
+  
+ Sie sollten nicht erstellen eine <xref:System.Xaml.XamlMember> mit dem Wert des `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A> , wenn Ihre Implementierung die Ausnahmen von verarbeiten kann <xref:System.Xaml.XamlObjectWriter>, oder Sie über andere Möglichkeiten zum Anpassen der <xref:System.Xaml.XamlObjectWriter> Verhalten. Beispielsweise könnte eine oder mehrere der folgenden Ihrer Implementierung zutreffen:  
+  
+-   Der XAML-Schemakontext ist später verfügbar.  
+  
+-   Sie verwenden ein Member Invoker-Muster.  
+  
+-   Sie absichtlich überschreiben <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=nameWithType> in einem benutzerdefinierten XAML-Writer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (System.Reflection.EventInfo eventInfo, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.EventInfo eventInfo, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.Reflection.EventInfo,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventInfo" Type="System.Reflection.EventInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="eventInfo">Das CLR-Typsystem <see cref="T:System.Reflection.EventInfo" /> , die den Ereignismember darstellt.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> -Klasse unter Verwendung von CLR-Typsystem <see cref="T:System.Reflection.EventInfo" /> und ein <see cref="T:System.Xaml.XamlSchemaContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn das Element ein Ereignis (Ereignis-Handler Verbindungspunkt Eigenschaft) darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (System.Reflection.PropertyInfo propertyInfo, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.PropertyInfo propertyInfo, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.Reflection.PropertyInfo,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyInfo" Type="System.Reflection.PropertyInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="propertyInfo">Das CLR-Typsystem <see cref="T:System.Reflection.PropertyInfo" /> , die das Eigenschaftsmember darstellt.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> -Klasse unter Verwendung von CLR-Typsystem <see cref="T:System.Reflection.PropertyInfo" /> und ein <see cref="T:System.Xaml.XamlSchemaContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn das Element eine Eigenschaft stellt (und insbesondere keine Ereignis-Handler Verbindung ist).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (System.Reflection.EventInfo eventInfo, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.Schema.XamlMemberInvoker invoker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.EventInfo eventInfo, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.Schema.XamlMemberInvoker invoker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.Reflection.EventInfo,System.Xaml.XamlSchemaContext,System.Xaml.Schema.XamlMemberInvoker)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventInfo" Type="System.Reflection.EventInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="invoker" Type="System.Xaml.Schema.XamlMemberInvoker" />
+      </Parameters>
+      <Docs>
+        <param name="eventInfo">Das CLR-Typsystem <see cref="T:System.Reflection.EventInfo" /> , die den Ereignismember darstellt.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <param name="invoker">Die <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Implementierung, die Reflektion zur Laufzeit behandelt, die <see cref="T:System.Xaml.XamlMember" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> -Klasse unter Verwendung von CLR-Typsystem <see cref="T:System.Reflection.EventInfo" /> und ein <see cref="T:System.Xaml.XamlSchemaContext" />, einschließlich <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Informationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn das Element ein Ereignis (oder eine Ereignishandler-Verbindungspunkt Ereigniseigenschaft) darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (System.Reflection.PropertyInfo propertyInfo, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.Schema.XamlMemberInvoker invoker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.PropertyInfo propertyInfo, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.Schema.XamlMemberInvoker invoker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.Reflection.PropertyInfo,System.Xaml.XamlSchemaContext,System.Xaml.Schema.XamlMemberInvoker)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyInfo" Type="System.Reflection.PropertyInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="invoker" Type="System.Xaml.Schema.XamlMemberInvoker" />
+      </Parameters>
+      <Docs>
+        <param name="propertyInfo">Das CLR-Typsystem <see cref="T:System.Reflection.PropertyInfo" /> , die das Eigenschaftsmember darstellt.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <param name="invoker">Die <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Implementierung, die zur Laufzeit Aufruf behandelt aufruft, für die <see cref="T:System.Xaml.XamlMember" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> -Klasse unter Verwendung von Reflektion <see cref="T:System.Reflection.PropertyInfo" /> und ein <see cref="T:System.Xaml.XamlSchemaContext" />, einschließlich <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Informationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, und nur dann, wenn das Element eine Eigenschaft darstellt, wenn es sich nicht um eine Ereignis-Handler-Verbindung handelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (string attachableEventName, System.Reflection.MethodInfo adder, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attachableEventName, class System.Reflection.MethodInfo adder, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.String,System.Reflection.MethodInfo,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attachableEventName" Type="System.String" />
+        <Parameter Name="adder" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="attachableEventName">Der Zeichenfolgenname des anfügbaren Ereignisses.</param>
+        <param name="adder">Das CLR-Typsystem <see cref="T:System.Reflection.MethodInfo" /> für den Handler <see langword="Add" /> Methode des anfügbaren Members der Implementierung sichern.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> -Klasse für eine <see cref="T:System.Xaml.XamlMember" /> , die ein anfügbares Ereignis darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn das Element einen anfügbaren Ereignismember darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (string name, System.Xaml.XamlType declaringType, bool isAttachable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Xaml.XamlType declaringType, bool isAttachable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.String,System.Xaml.XamlType,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="declaringType" Type="System.Xaml.XamlType" />
+        <Parameter Name="isAttachable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Zeichenfolgenname des Members.</param>
+        <param name="declaringType">Die <see cref="T:System.Xaml.XamlType" /> Informationen für den deklarierenden Typ.</param>
+        <param name="isAttachable">
+          <see langword="true" />um anzugeben, dass der Member anfügbar ist. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> mit einem Zeichenfolgennamen und deklarierenden Klasse <see cref="T:System.Xaml.XamlType" /> Informationen. Ein <see cref="T:System.Xaml.XamlMember" /> erstellt, die mit dieser Signatur aufweist, verfügen über umfassende Einschränkungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Xaml.XamlMember> erstellt, die mit der <xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29> Signatur zurückgibt `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A>.  
+  
+ Für einen Ladepfad, die umfasst <xref:System.Xaml.XamlObjectWriter>, ein Element kann nicht in einem Objektdiagramm geschrieben werden. Mithilfe der .NET Framework-XAML-Dienste-Implementierung der <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=nameWithType> löst das Aufrufen einer <xref:System.Xaml.XamlObjectWriterException> Wenn die relevanten <xref:System.Xaml.XamlMember> Berichte `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A>.  
+  
+ Sie sollten nicht erstellen eine <xref:System.Xaml.XamlMember> mit <xref:System.Xaml.XamlMember.IsUnknown%2A> `true` , wenn Ihre Implementierung die Ausnahmen von verarbeiten kann <xref:System.Xaml.XamlObjectWriter>, oder Sie über andere Möglichkeiten zum Anpassen der <xref:System.Xaml.XamlObjectWriter> Verhalten. Beispielsweise könnte eine oder mehrere der folgenden Ihrer Implementierung zutreffen:  
+  
+-   Der XAML-Schemakontext ist später verfügbar.  
+  
+-   Sie verwenden ein Member Invoker-Muster.  
+  
+-   Sie absichtlich überschreiben <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=nameWithType> in einem benutzerdefinierten XAML-Writer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="declaringType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (string attachablePropertyName, System.Reflection.MethodInfo getter, System.Reflection.MethodInfo setter, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attachablePropertyName, class System.Reflection.MethodInfo getter, class System.Reflection.MethodInfo setter, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.String,System.Reflection.MethodInfo,System.Reflection.MethodInfo,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attachablePropertyName" Type="System.String" />
+        <Parameter Name="getter" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="setter" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="attachablePropertyName">Der Zeichenfolgenname der anfügbare Eigenschaft.</param>
+        <param name="getter">Das CLR-Typsystem <see cref="T:System.Reflection.MethodInfo" /> für die <see langword="get" /> Accessor des anfügbaren Members der Implementierung sichern.</param>
+        <param name="setter">Das CLR-Typsystem <see cref="T:System.Reflection.MethodInfo" /> für die <see langword="set" /> Accessor des anfügbaren Members der Implementierung sichern.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> Klasse für eine <see cref="T:System.Xaml.XamlMember" /> , eine anfügbare Eigenschaft darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn das Element eine anfügbare Eigenschaft darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (string attachableEventName, System.Reflection.MethodInfo adder, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.Schema.XamlMemberInvoker invoker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attachableEventName, class System.Reflection.MethodInfo adder, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.Schema.XamlMemberInvoker invoker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.String,System.Reflection.MethodInfo,System.Xaml.XamlSchemaContext,System.Xaml.Schema.XamlMemberInvoker)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attachableEventName" Type="System.String" />
+        <Parameter Name="adder" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="invoker" Type="System.Xaml.Schema.XamlMemberInvoker" />
+      </Parameters>
+      <Docs>
+        <param name="attachableEventName">Der Zeichenfolgenname des anfügbaren Ereignisses.</param>
+        <param name="adder">Das CLR-Typsystem <see cref="T:System.Reflection.MethodInfo" /> für den Handler <see langword="Add" /> Methode des anfügbaren Members der Implementierung sichern.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <param name="invoker">Die <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Implementierung, die zur Laufzeit Aufruf behandelt aufruft, für die <see cref="T:System.Xaml.XamlMember" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlMember" /> -Klasse für eine <see cref="T:System.Xaml.XamlMember" /> , die ein anfügbares Ereignis darstellt einschließlich <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Informationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn das Element einen anfügbaren Ereignismember darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMember (string attachablePropertyName, System.Reflection.MethodInfo getter, System.Reflection.MethodInfo setter, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.Schema.XamlMemberInvoker invoker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attachablePropertyName, class System.Reflection.MethodInfo getter, class System.Reflection.MethodInfo setter, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.Schema.XamlMemberInvoker invoker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.#ctor(System.String,System.Reflection.MethodInfo,System.Reflection.MethodInfo,System.Xaml.XamlSchemaContext,System.Xaml.Schema.XamlMemberInvoker)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attachablePropertyName" Type="System.String" />
+        <Parameter Name="getter" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="setter" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="invoker" Type="System.Xaml.Schema.XamlMemberInvoker" />
+      </Parameters>
+      <Docs>
+        <param name="attachablePropertyName">Der Zeichenfolgenname der anfügbare Eigenschaft.</param>
+        <param name="getter">Das CLR-Typsystem <see cref="T:System.Reflection.MethodInfo" /> für die <see langword="get" /> Accessor des anfügbaren Members der Implementierung sichern.</param>
+        <param name="setter">Das CLR-Typsystem <see cref="T:System.Reflection.MethodInfo" /> für die <see langword="set" /> Accessor des anfügbaren Members der Implementierung sichern.</param>
+        <param name="schemaContext">Die <see cref="T:System.Xaml.XamlSchemaContext" /> Kontext, der das Element qualifiziert.</param>
+        <param name="invoker">Die <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Implementierung, die zur Laufzeit Aufruf behandelt aufruft, für die <see cref="T:System.Xaml.XamlMember" />.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Xaml.XamlMember" /> -Klasse für eine <see cref="T:System.Xaml.XamlMember" /> , die eine anfügbare Eigenschaft darstellt, einschließlich <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Informationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn der Member einen Member anfügbare Eigenschaft darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlType DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xaml.XamlType" /> für den Typ, der die Member deklariert, die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <value>Die <see cref="T:System.Xaml.XamlType" /> für den Typ, der die Member deklariert, die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird in der Regel während der Initialisierung festgelegt und ist normalerweise nicht `null`.  
+  
+> [!IMPORTANT]
+>  <xref:System.Xaml.XamlMember.DeclaringType%2A>Informationen können von den Konstruktoren für die Initialisierung übergeben werden. Durch Aufruf direkt in Basis Konstruktoren initialisieren der <xref:System.Xaml.XamlMember> abgeleitete Klassen können weglassen, einige Wert-Überprüfungen, die in der Basisklasse vorgenommen werden. Aus diesem Grund kann abgeleitete Initialisierung die Beziehungsinformationen gemeldeten Typmember von einem XAML-Member ändern, sodass sie nicht mehr auf eine erwartete Weise mit dem Typsysteminformationen von der zugrunde liegenden CLR-Deklaration entspricht. Verwenden Sie für die als sicherheitskritisch Überprüfungen Typinformationen zu deklarieren stattdessen den zugrunde liegenden CLR-Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferringLoader">
+      <MemberSignature Language="C#" Value="public System.Xaml.Schema.XamlValueConverter&lt;System.Xaml.XamlDeferringLoader&gt; DeferringLoader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.Xaml.XamlDeferringLoader&gt; DeferringLoader" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.DeferringLoader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.Xaml.XamlDeferringLoader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Objekt, das für das verzögerte Laden der XAML dient als Objekte deklariert.</summary>
+        <value>Ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> mit <see cref="T:System.Xaml.XamlDeferringLoader" /> Einschränkung für den generischen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.DeferringLoader%2A> ruft <xref:System.Xaml.XamlMember.LookupDeferringLoader%2A> oder eine bestimmte Außerkraftsetzung der Methode. Dieses Verhalten tritt in Fällen, in denen die Reflektionslogik der anfänglichen internen nicht bereits die Informationen festgelegt hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOn">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Xaml.XamlMember&gt; DependsOn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Xaml.XamlMember&gt; DependsOn" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.DependsOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Xaml.XamlMember&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von <see cref="T:System.Xaml.XamlMember" />-Objekten ab. Diese melden, dass die Elemente, in dem abhängigkeitsbeziehungen für Initialisierungsreihenfolge vorhanden, relativ zu dieser ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <value>Eine Liste von <see cref="T:System.Xaml.XamlMember" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.DependsOn%2A> ruft <xref:System.Xaml.XamlMember.LookupDependsOn%2A> oder eine bestimmte Außerkraftsetzung der Methode. Dieses Verhalten tritt in Fällen, in denen die Reflektionslogik der anfänglichen internen nicht bereits die Informationen festgelegt hat.  
+  
+ Die `DependsOn` Muster auf Objektmodellfälle, die absichtlich eine allgemeine XAML-Regel widersprechen angewendet werden kann. Die allgemeine XAML-Regel ist, dass Member eines Typs, die nicht als Initialisierungstext (oder eine Factorymethode in XAML 2009) übergeben werden können in beliebiger Reihenfolge zugewiesen werden müssen. Durch Anwenden einer `DependsOn` Muster auf einen Member, Sie können XAML-Writern anweisen, immer das Element verwiesen wird, vor diesem Element zu verarbeiten. Sie können dieses Muster in Situationen anwenden, in denen der Wert des aktuellen Elements erfordert, Kontext oder andere Informationen, die nur verfügbar ist, nachdem das andere Element festgelegt ist.  
+  
+ Die `DependsOn` Muster Umsicht angewendet und für Szenarios, in denen es einen architektonischen Zweck dient, reserviert werden soll. Große Anzahl von Abhängigkeiten haben die Möglichkeit, die XAML-Verarbeitung verlangsamt. Es ist auch möglich, die ringabhängigkeiten, erzeugen in diesem Fall ist die Verwendung von XAML-Verarbeitungsverhalten nicht definiert.  
+  
+ Beispiel `DependsOn` Szenarien von WPF umfassen bestimmte Eigenschaften von <xref:System.Windows.Controls.ControlTemplate> und <xref:System.Windows.DataTemplate>auf <xref:System.Windows.Trigger>, und klicken Sie auf <xref:System.Windows.Setter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit diesem Objekt verglichen werden soll.</param>
+        <summary>Gibt an, ob das aktuelle Objekt gleich einem anderen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das aktuelle Objekt gleich dem <paramref name="obj" />-Parameter ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Xaml.XamlMember other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Xaml.XamlMember other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.Equals(System.Xaml.XamlMember)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Xaml.XamlMember" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein Objekt, das mit diesem Objekt verglichen werden soll.</param>
+        <summary>Gibt an, ob das aktuelle Objekt gleich einem anderen Objekt des gleichen Typs ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das aktuelle Objekt gleich dem <paramref name="other" />-Parameter ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für dieses Objekt zurück.</summary>
+        <returns>Ein Hashcode als ganze Zahl.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXamlNamespaces">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IList&lt;string&gt; GetXamlNamespaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;string&gt; GetXamlNamespaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.GetXamlNamespaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste von XAML-Namespaces zurück, in dem diesem XAML-Member vorhanden sind.</summary>
+        <returns>Eine Liste von XAML-Namespacebezeichner als Zeichenfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung der <xref:System.Xaml.XamlType.GetXamlNamespaces%2A?displayProperty=nameWithType> Ergebnis von Aufrufen der <xref:System.Xaml.XamlMember.DeclaringType%2A> , die mit dieser verknüpft ist <xref:System.Xaml.XamlMember>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoker">
+      <MemberSignature Language="C#" Value="public System.Xaml.Schema.XamlMemberInvoker Invoker { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.Schema.XamlMemberInvoker Invoker" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.Invoker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlMemberInvoker</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Implementierung, die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <value>Die <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Implementierung, die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Invoker` Muster ist eine erweiterte Verwendung von XAML-Typsystem-Erweiterungsmethode. Die `Invoker` Muster bietet eine Möglichkeit zum Einfügen von verschiedenen Typs Zuordnung Schemaverhalten, gleichzeitiger Verwendung von XAML-System Typdefinitionen aus .NET Framework-XAML-Dienste.  
+  
+ Wenn eine <xref:System.Xaml.XamlMember.LookupInvoker%2A> überschreiben gibt `null`, oder wenn die standardmäßige Implementierung gibt `null` , da es fehlt die <xref:System.Xaml.XamlMember.UnderlyingMember%2A> für diesen <xref:System.Xaml.XamlMember>, die <xref:System.Xaml.XamlMember.Invoker%2A> -Eigenschaft gibt <xref:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker%2A?displayProperty=nameWithType>.  
+  
+ Standardmäßig ist <xref:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker%2A?displayProperty=nameWithType> festgelegt. Dies gilt für die meisten Vorgänge, die .NET Framework-XAML-Dienste und die Verwendung von XAML-Standardschemakontext verwenden, und, bei denen keine bestimmten überschreiben `Invoker` Muster für die Konstruktion von XAML-Typsystementitäten übergeben werden.  
+  
+ Aufrufen von <xref:System.Xaml.XamlMember.Invoker%2A> ruft <xref:System.Xaml.XamlMember.LookupInvoker%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAmbient">
+      <MemberSignature Language="C#" Value="public bool IsAmbient { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAmbient" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsAmbient" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> wird gemeldet, als ambient-Eigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> als ambient-Eigenschaft gemeldet wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.IsAmbient%2A> ruft <xref:System.Xaml.XamlMember.LookupIsAmbient%2A> oder eine bestimmte Außerkraftsetzung der Methode. Dieses Verhalten tritt in Implementierungen, in denen die Reflektionslogik der anfänglichen internen nicht bereits die Informationen festgelegt hat.  
+  
+ Die Überprüfung auf Umgebungseigenschaften sind normalerweise Teil der XAML-Verarbeitungslogik, stellen Sie sicher, dass Objekte und Werte, die ambient-Verwendung für benötigen, ordnungsgemäß funktionieren können. Die .NET Framework-XAML-Dienste-APIs und die Verwendung von XAML-Standardschemakontext füllt diesen Wert auf namensnennung mit Basis <xref:System.Windows.Markup.AmbientAttribute>. Die standardmäßige Implementierung des <xref:System.Xaml.XamlMember.LookupIsAmbient%2A> verwendet diese vorhandene <xref:System.Windows.Markup.AmbientAttribute> Technik, und es wird `true` Wenn <xref:System.Windows.Markup.AmbientAttribute> auf eine Memberdeklaration vorhanden ist.  
+  
+ <xref:System.Windows.Markup.AmbientAttribute>befindet sich auf mehrere WPF-Typen, einschließlich der Mitglieder <xref:System.Windows.Application>, <xref:System.Windows.Setter>, und <xref:System.Windows.Style>. Finden sie auch auf die <xref:System.Windows.ResourceDictionary> -Typ, der suggeriert, dass alle Member, die verwendet <xref:System.Windows.ResourceDictionary> als Anwendungstyp ambient berücksichtigt werden, selbst wenn das Element nicht speziell attributiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAttachable">
+      <MemberSignature Language="C#" Value="public bool IsAttachable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAttachable" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsAttachable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> einer anfügbaren Members ist.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> einer anfügbaren Members ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.XamlMember.IsAttachable%2A> Wert initialisiert wird, anhand welcher Konstruktor, zum Erstellen verwendet wurde einer <xref:System.Xaml.XamlMember>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirective">
+      <MemberSignature Language="C#" Value="public bool IsDirective { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirective" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsDirective" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> ist eine XAML-Direktive.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> ein XAML-, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.XamlMember.IsDirective%2A> Wert initialisiert wird, anhand welcher Konstruktor, zum Erstellen verwendet wurde einer <xref:System.Xaml.XamlMember>. Die Basis <xref:System.Xaml.XamlMember> Konstruktoren initialisieren, damit <xref:System.Xaml.XamlMember.IsDirective%2A> ist `false`. Allerdings die <xref:System.Xaml.XamlDirective> Klasse (eine <xref:System.Xaml.XamlMember> abgeleitete Klasse) initialisiert, damit <xref:System.Xaml.XamlMember.IsDirective%2A> ist `true`.  
+  
+ Wenn Sie einen Bericht erstellen möchten <xref:System.Xaml.XamlMember.IsDirective%2A> als `true` auf Aufrufer mit einer benutzerdefinierten XAML-Schemaklasse für XAML-Member, sicherstellen, dass Sie eine Ableitung von <xref:System.Xaml.XamlDirective> da dies die einzige Möglichkeit, dieses Verhalten zu aktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEvent">
+      <MemberSignature Language="C#" Value="public bool IsEvent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEvent" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> einen Ereignismember darstellt.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> ein Ereignis darstellt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.IsEvent%2A> ruft <xref:System.Xaml.XamlMember.LookupIsEvent%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNameValid">
+      <MemberSignature Language="C#" Value="public bool IsNameValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNameValid" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsNameValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> wird initialisiert, indem ein gültiger <see langword="xamlName" /> Zeichenfolge als seine <see cref="P:System.Xaml.XamlMember.Name" />.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> wird initialisiert, indem ein gültiger <see langword="xamlName" /> Zeichenfolge; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt ein nur-Lese Element dar.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> stellt ein Element schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.IsReadOnly%2A> ruft <xref:System.Xaml.XamlMember.LookupIsReadOnly%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadPublic">
+      <MemberSignature Language="C#" Value="public bool IsReadPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsReadPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt ein Element mit einem aufrufbaren öffentlichen <see langword="get" /> Accessor.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> stellt einen aufrufbaren öffentlichen <see langword="get" /> Accessor ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.XamlMember.IsReadPublic%2A> Wert überprüft, ob die <xref:System.Xaml.XamlMember.DeclaringType%2A> ist öffentlich. Wenn <xref:System.Xaml.XamlMember.DeclaringType%2A> nicht öffentlich ist, die `get` Accessor kann nicht in eine praktische Möglichkeit aufgerufen werden kann und <xref:System.Xaml.XamlMember.IsReadPublic%2A> gibt `false`.  
+  
+ Aufrufen von <xref:System.Xaml.XamlMember.IsReadPublic%2A> ruft <xref:System.Xaml.XamlMember.LookupIsReadPublic%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xaml.XamlMember.LookupIsReadPublic%2A> Methode ist virtuell und kann daher überschrieben werden. Die Außerkraftsetzung kann (gehindert, vorsätzlich oder auf andere Weise) die gemeldeten Informationen über eine XAML-Elements ändern, sodass sie nicht mehr auf eine erwartete Weise mit dem Typ Zugriff Systeminformationen von der zugrunde liegenden CLR-Deklaration entspricht. Verwenden Sie für alle als sicherheitskritisch Überprüfungen aus der Zugriffsebenen stattdessen den zugrunde liegenden CLR-Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnknown">
+      <MemberSignature Language="C#" Value="public bool IsUnknown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnknown" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsUnknown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Element nicht vom System dahinter liegende aufgelöst werden, die für die Auflösung von Typ- und Memberdaten verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Element nicht aufgelöst werden kann; <see langword="false" /> ist das Element aufgelöst werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Xaml.XamlMember> erstellt, die mit der <xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29> Signatur zurückgibt `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A>.  
+  
+ Für einen Ladepfad, bei der <xref:System.Xaml.XamlObjectWriter>, <xref:System.Xaml.XamlMember> mit `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A> kann nicht in einem Objektdiagramm geschrieben werden. Unter den APIs von .NET Framework-XAML-Dienste-standardimplementierungen das <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=nameWithType> aufrufen, löst eine <xref:System.Xaml.XamlObjectWriterException> Wenn die relevanten <xref:System.Xaml.XamlMember> Berichte `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A>.  
+  
+ Sie sollten nicht erstellen eine <xref:System.Xaml.XamlMember> mit dem Wert des `true` für <xref:System.Xaml.XamlMember.IsUnknown%2A> , wenn Ihre Implementierung die Ausnahmen von verarbeiten kann <xref:System.Xaml.XamlObjectWriter>, oder Sie über andere Möglichkeiten zum Anpassen der <xref:System.Xaml.XamlObjectWriter> Verhalten.  
+  
+ Aufrufen von <xref:System.Xaml.XamlMember.IsUnknown%2A> ruft <xref:System.Xaml.XamlMember.LookupIsUnknown%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWriteOnly">
+      <MemberSignature Language="C#" Value="public bool IsWriteOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWriteOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsWriteOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt ein nur-schreiben Element dar.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> ein nur-schreiben Element darstellt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.IsWriteOnly%2A> ruft <xref:System.Xaml.XamlMember.LookupIsWriteOnly%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWritePublic">
+      <MemberSignature Language="C#" Value="public bool IsWritePublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWritePublic" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.IsWritePublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt einen Member mit einem aufrufbaren öffentlichen <see langword="set" /> Accessor.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> stellt einen aufrufbaren öffentlichen <see langword="set" /> Accessor ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.XamlMember.IsWritePublic%2A> Wert berücksichtigt, ob die <xref:System.Xaml.XamlMember.DeclaringType%2A> ist öffentlich als Teil der Ermittlung. Wenn <xref:System.Xaml.XamlMember.DeclaringType%2A> nicht öffentlich ist, die `set` Accessor kann nicht in eine praktische Möglichkeit aufgerufen werden kann und <xref:System.Xaml.XamlMember.IsWritePublic%2A> gibt `false`.  
+  
+ Aufrufen von <xref:System.Xaml.XamlMember.IsWritePublic%2A> ruft <xref:System.Xaml.XamlMember.LookupIsWritePublic%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xaml.XamlMember.LookupIsWritePublic%2A> Methode ist virtuell und kann daher überschrieben werden. Die Außerkraftsetzung kann (gehindert, vorsätzlich oder auf andere Weise) die gemeldeten Informationen über eine XAML-Elements ändern, sodass sie nicht mehr auf eine erwartete Weise mit dem Typ Zugriff Systeminformationen von der zugrunde liegenden CLR-Deklaration entspricht. Verwenden Sie für alle als sicherheitskritisch Überprüfungen aus der Zugriffsebenen stattdessen den zugrunde liegenden CLR-Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupCustomAttributeProvider">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.ICustomAttributeProvider LookupCustomAttributeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Reflection.ICustomAttributeProvider LookupCustomAttributeProvider() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupCustomAttributeProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ICustomAttributeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt bei Implementierung in einer abgeleiteten Klasse eine <see cref="T:System.Reflection.ICustomAttributeProvider" /> Implementierung.</summary>
+        <returns>Eine <see cref="T:System.Reflection.ICustomAttributeProvider" />-Implementierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Methode zum Bereitstellen der internen Reflektions eine alternative Möglichkeit zum Abrufen von CLR-Attributwerte an. In Ermangelung einer Außerkraftsetzung der internen Reflector verwendet typische CLR Reflektionslogik, z. B. Aufrufe der <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A>.  
+  
+ Die Standardimplementierung gibt `null` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupDeferringLoader">
+      <MemberSignature Language="C#" Value="protected virtual System.Xaml.Schema.XamlValueConverter&lt;System.Xaml.XamlDeferringLoader&gt; LookupDeferringLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.Xaml.XamlDeferringLoader&gt; LookupDeferringLoader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupDeferringLoader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.Xaml.XamlDeferringLoader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Objekt, das für das verzögerte Laden der XAML dient als Objekte deklariert.</summary>
+        <returns>Ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> , besitzt eine <see cref="T:System.Xaml.XamlDeferringLoader" /> Einschränkung für den generischen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab der <xref:System.Xaml.XamlMember.DeferringLoader%2A> Eigenschaft. Überschreiben Sie diese Methode, wenn Sie möchten <xref:System.Xaml.XamlMember.DeferringLoader%2A> einen Wert, der unterscheidet sich vom Wert zurückgegeben, die durch die standardmäßige interne Reflektion, aktiviert ist und wenn Sie auch benutzerdefinierte bereitstellen <xref:System.Xaml.Schema.XamlMemberInvoker> Informationen.  
+  
+ Die Standardimplementierung gibt ein Objekt entweder durch Lesen <xref:System.Windows.Markup.XamlDeferLoadAttribute> oder über eine <xref:System.Xaml.XamlDeferringLoader> aus der deklarierende Typ. Wenn kein Objekt verfügbar ist, kann diese Methode zurück `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupDependsOn">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IList&lt;System.Xaml.XamlMember&gt; LookupDependsOn ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Xaml.XamlMember&gt; LookupDependsOn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupDependsOn" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Xaml.XamlMember&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste von <see cref="T:System.Xaml.XamlMember" /> Objekte. Elemente in der Liste zu melden, in dem abhängigkeitsbeziehungen für Initialisierungsreihenfolge vorhanden, relativ zu dieser ist, Elemente <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Eine Liste von <see cref="T:System.Xaml.XamlMember" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab der <xref:System.Xaml.XamlMember.DependsOn%2A> Eigenschaft. Überschreiben Sie diese Methode, wenn Sie möchten <xref:System.Xaml.XamlMember.DependsOn%2A> einen Wert, der unterscheidet sich vom Wert zurückgegeben, die durch die standardmäßige interne Reflektion, aktiviert ist und wenn Sie auch benutzerdefinierte bereitstellen <xref:System.Xaml.Schema.XamlMemberInvoker> Informationen.  
+  
+ Die WPF XAML-Reader und Writer-Implementierungen-Attribut bei diesem Fall <xref:System.Windows.Markup.DependsOnAttribute>. Die Standardimplementierung verwendet diese vorhandene <xref:System.Windows.Markup.DependsOnAttribute> Technik.  
+  
+ Überschreiben Sie diese Methode, wenn Sie nicht arbeiten <xref:System.Windows.Markup.DependsOnAttribute> für diesen Zweck, und diese Technik zum Angeben der Eigenschaft Verarbeitungsreihenfolge von Artikeln mit Ihren eigenen Technik ersetzen möchten. Wenn Sie nicht beabsichtigen, um eine Eigenschaft Verarbeitungsreihenfolge von Artikeln zu unterstützen, können Sie die standardmäßige Implementierung verwenden, da sie keine Ergebnisse zurückgibt, was angebracht ist.  
+  
+ Die Liste ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupInvoker">
+      <MemberSignature Language="C#" Value="protected virtual System.Xaml.Schema.XamlMemberInvoker LookupInvoker ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xaml.Schema.XamlMemberInvoker LookupInvoker() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupInvoker" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlMemberInvoker</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> , die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Die <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> Informationen für diesen <see cref="T:System.Xaml.XamlMember" />; oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Aufrufe <xref:System.Xaml.XamlMember.Invoker%2A>.  
+  
+ Die standardmäßige Implementierung nicht erfordert, dass eine <xref:System.Xaml.XamlMember> erstellt werden, mithilfe einer der Konstruktoren, die einen ersten übergeben <xref:System.Xaml.Schema.XamlMemberInvoker>. Allerdings ein <xref:System.Xaml.XamlMember.UnderlyingMember%2A> Wert muss vorhanden sein, für die <xref:System.Xaml.XamlMember>ist, andernfalls gibt die standardmäßige Implementierung `null`.  
+  
+ Überschreiben Sie diese Methode, wenn Sie auch von ableiten <xref:System.Xaml.Schema.XamlMemberInvoker> und die abgeleitete Klasse zurückgeben möchten. Wenn Sie zurückkehren, `null`, <xref:System.Xaml.XamlMember.Invoker%2A> gibt <xref:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker%2A?displayProperty=nameWithType> für Aufrufer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsAmbient">
+      <MemberSignature Language="C#" Value="protected virtual bool LookupIsAmbient ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LookupIsAmbient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupIsAmbient" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob dies <see cref="T:System.Xaml.XamlMember" /> wird gemeldet, als ambient-Eigenschaft.</summary>
+        <returns>
+          <see langword="true" />Um dies zu melden <see cref="T:System.Xaml.XamlMember" /> als ambient-Eigenschaft; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom internen Aufrufe aufgerufen, die ambient-XAML-Eigenschaftsinformationen überprüfen. Das Verhalten der Ambient-Eigenschaft ist in der öffentlichen API-Verhalten von XAML-Readern und XAML-Writern berücksichtigt. Diese internen Aufrufe, die auf verweisen <xref:System.Xaml.XamlMember.LookupIsAmbient%2A> sind in der Regel Bestandteil des XAML-Verarbeitungslogik, um sicherzustellen, dass Objekte und Werte, die ambient-Verwendung für benötigen, ordnungsgemäß funktionieren können. Die standardmäßige .NET Framework-XAML-Dienste-Implementierung verwendet zum Abrufen von Informationen von Reflektion über Unterstützungstypen Attributierung CLR. Insbesondere sucht die standardmäßige Implementierung <xref:System.Windows.Markup.AmbientAttribute> und gibt `true` für <xref:System.Xaml.XamlMember.LookupIsAmbient%2A> Wenn <xref:System.Windows.Markup.AmbientAttribute> vorhanden ist, auf die Definition eines Elements.  
+  
+ Überschreiben Sie diese Methode, wenn Sie nicht arbeiten <xref:System.Windows.Markup.AmbientAttribute> für diesen Zweck, und dieser Technik zum Angeben der Verwendung von XAML-Umgebungseigenschaften mit Ihren eigenen Technik ersetzen möchten.  
+  
+ Beispiel-APIs von WPF, die mit dem Attribut <xref:System.Windows.Markup.AmbientAttribute> sind <xref:System.Windows.Trigger.Property%2A?displayProperty=nameWithType> und <xref:System.Windows.Style.BasedOn%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsEvent">
+      <MemberSignature Language="C#" Value="protected virtual bool LookupIsEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LookupIsEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupIsEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt ein Ereignis dar.</summary>
+        <returns>
+          <see langword="true" />Bericht, die von diesem <see cref="T:System.Xaml.XamlMember" /> ein Ereignis darstellt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung überprüft, ob <xref:System.Xaml.XamlMember.UnderlyingMember%2A> ist vom Typ <xref:System.Reflection.EventInfo>, und wenn dies der Fall, gibt `true`.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.IsEvent%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn spezialisierte Metadaten verfügbar interpretiert werden kann, um zu bestimmen, XAML, geben Sie System-Darstellungen pro Fall zu entscheiden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsReadOnly">
+      <MemberSignature Language="C#" Value="protected virtual bool LookupIsReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LookupIsReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupIsReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob dies <see cref="T:System.Xaml.XamlMember" /> eine beabsichtigte schreibgeschützte Eigenschaft darstellt.</summary>
+        <returns>
+          <see langword="true" />Um dies zu melden <see cref="T:System.Xaml.XamlMember" /> als beabsichtigten nur-Lese Eigenschaft; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung `true` Wenn <xref:System.Xaml.XamlMember.UnderlyingMember%2A> vorhanden ist, aber eine öffentliche `set` Accessor existiert nicht dafür, wie durch die interne Reflektion bestimmt.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.IsReadOnly%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn spezialisierte Metadaten verfügbar interpretiert werden kann, um zu bestimmen, XAML, geben Sie System-Darstellungen pro Fall zu entscheiden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsReadPublic">
+      <MemberSignature Language="C#" Value="protected virtual bool LookupIsReadPublic ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LookupIsReadPublic() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupIsReadPublic" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt eine Eigenschaft, die einen öffentlichen <see langword="get" /> Accessor.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> stellt eine Eigenschaft, die einen öffentlichen <see langword="get" /> Accessor ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt Ergebnisse basieren auf internen Reflektion oder die Negation des <xref:System.Xaml.XamlMember.IsWriteOnly%2A>, Verarbeitung in dieser Reihenfolge.  
+  
+ <xref:System.Xaml.XamlMember.LookupIsReadPublic%2A>Gibt zurück, ob der Member selbst öffentlich ist. Es gibt `true` für einen öffentlichen Member auf ein Nonpublic Typ deklarieren. Verwendung <xref:System.Xaml.XamlMember.IsReadPublic%2A> stattdessen, wenn Sie auch die Sichtbarkeit des deklarierenden Typs berücksichtigen möchten.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.IsReadPublic%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xaml.XamlMember.LookupIsReadPublic%2A> Methode ist virtuell und kann daher überschrieben werden. Die Außerkraftsetzung kann (gehindert, vorsätzlich oder auf andere Weise) die gemeldeten Informationen über eine XAML-Elements ändern, sodass sie nicht mehr auf eine erwartete Weise mit dem Typ Zugriff Systeminformationen von der zugrunde liegenden CLR-Deklaration entspricht. Verwenden Sie für alle als sicherheitskritisch Überprüfungen aus der Zugriffsebenen stattdessen den zugrunde liegenden CLR-Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsUnknown">
+      <MemberSignature Language="C#" Value="protected virtual bool LookupIsUnknown ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LookupIsUnknown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupIsUnknown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt ein Element, das nicht vom System dahinter liegende aufgelöst werden, die für die Auflösung von Typ- und Memberdaten verwendet wird.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> stellt ein Element nicht aufgelöst werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann aufgerufen werden, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.IsUnknown%2A>. Die Standardimplementierung gibt Ergebnisse, die basierend auf einer internen Reflektion oder bei der Überprüfung sind eine `null` Wert <xref:System.Xaml.XamlMember.UnderlyingMember%2A>, Verarbeitung in dieser Reihenfolge.  
+  
+ Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsWriteOnly">
+      <MemberSignature Language="C#" Value="protected virtual bool LookupIsWriteOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LookupIsWriteOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupIsWriteOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt ein Element, das einen öffentlichen <see langword="set" /> Accessor, jedoch nicht über einen öffentlichen <see langword="get" /> Accessor.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> ein nur-schreiben Element darstellt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung `true` Wenn ein <xref:System.Xaml.XamlMember.UnderlyingMember%2A> vorhanden ist, besitzt eine öffentliche `set` -Accessor und einen Nonpublic `get` Accessor, wie durch die interne Reflektion bestimmt.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.IsWriteOnly%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsWritePublic">
+      <MemberSignature Language="C#" Value="protected virtual bool LookupIsWritePublic ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LookupIsWritePublic() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupIsWritePublic" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob dies <see cref="T:System.Xaml.XamlMember" /> stellt ein Element, das einen öffentlichen <see langword="set" /> Accessor.</summary>
+        <returns>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlMember" /> einen schreibbaren Member darstellt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt Ergebnisse basieren, interne Reflektion oder die Negation des <xref:System.Xaml.XamlMember.IsReadOnly%2A>, Verarbeitung in dieser Reihenfolge.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.IsWritePublic%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xaml.XamlMember.LookupIsWritePublic%2A> Methode ist virtuell und kann daher überschrieben werden. Die Außerkraftsetzung kann (gehindert, vorsätzlich oder auf andere Weise) die gemeldeten Informationen über eine XAML-Elements ändern, sodass sie nicht mehr auf eine erwartete Weise mit dem Typ Zugriff Systeminformationen von der zugrunde liegenden CLR-Deklaration entspricht. Verwenden Sie für alle als sicherheitskritisch Überprüfungen aus der Zugriffsebenen stattdessen den zugrunde liegenden CLR-Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupMarkupExtensionBracketCharacters">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IReadOnlyDictionary&lt;char,char&gt; LookupMarkupExtensionBracketCharacters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;char, char&gt; LookupMarkupExtensionBracketCharacters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupMarkupExtensionBracketCharacters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.Char,System.Char&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichen für öffnende und schließende Klammern einer Markuperweiterung zurück.</summary>
+        <returns>Eine Auflistung, die die Zeichen für öffnende und schließende Klammern enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupTargetType">
+      <MemberSignature Language="C#" Value="protected virtual System.Xaml.XamlType LookupTargetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xaml.XamlType LookupTargetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupTargetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Xaml.XamlType" /> des Typs, in dem die <see cref="T:System.Xaml.XamlMember" /> vorhanden sein können.</summary>
+        <returns>Der Typ, in dem die <see cref="T:System.Xaml.XamlMember" /> vorhanden sein können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung unterscheidet zwischen anfügbare und nicht anfügbare Member. Für nicht anfügbare Member <xref:System.Xaml.XamlMember.LookupTargetType%2A> gibt immer <xref:System.Xaml.XamlMember.DeclaringType%2A>. Für anfügbare Member <xref:System.Xaml.XamlMember.LookupTargetType%2A> gibt ein Ergebnis basierend auf der Prüfung der <xref:System.Xaml.XamlMember.UnderlyingMember%2A> Accessor Parametertyp und interpretiert, dass das Typ auf XAML-Schemakontext.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.TargetType%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupType">
+      <MemberSignature Language="C#" Value="protected virtual System.Xaml.XamlType LookupType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xaml.XamlType LookupType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Xaml.XamlType" /> des Typs, der vom Element verwendet wird.</summary>
+        <returns>Die <see cref="T:System.Xaml.XamlType" /> des Typs, der vom Element verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.Type%2A>. Überschreiben Sie diese Methode, wenn Sie möchten <xref:System.Xaml.XamlMember.Type%2A> einen Wert, der unterscheidet sich vom Wert zurückgegeben, die durch die standardmäßige interne Reflektion, aktiviert ist und wenn Sie auch benutzerdefinierte bereitstellen <xref:System.Xaml.Schema.XamlMemberInvoker> Informationen.  
+  
+ Die Standardimplementierung verwendet die unterschiedlichen Codepfaden und konzeptionelle Bedeutung für das zurückgegebene <xref:System.Xaml.XamlType> , ist abhängig davon, ob dies <xref:System.Xaml.XamlMember> stellt eine Eigenschaft, eine Methode oder ein Ereignis.  
+  
+-   Für eine Eigenschaft, die den zurückgegebenen <xref:System.Xaml.XamlType> ist der Typ, der die Eigenschaft oder von der Eigenschaft zurückgegeben wird.  
+  
+-   Für ein Ereignis, das zurückgegebene <xref:System.Xaml.XamlType> ist die erforderliche Ereignishandlertyp (ein Delegat in einer CLR-Implementierung).  
+  
+-   Bei einer Methode <xref:System.Xaml.XamlType> ist der Rückgabetyp.  
+  
+ In jedem Fall wird XAML-Schemakontext verwendet, um den XAML-Typ aus den zugrunde liegenden Systemtyp auszuwerten.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.Type%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupTypeConverter">
+      <MemberSignature Language="C#" Value="protected virtual System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt; LookupTypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.ComponentModel.TypeConverter&gt; LookupTypeConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupTypeConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Typkonverter-Implementierung, die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Instanz mit <see cref="T:System.ComponentModel.TypeConverter" /> Einschränkung oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung verwendet die folgende Logik und die Verarbeitungsreihenfolge von Artikeln:  
+  
+-   Wenn Attributierung auf Memberebene vorhanden ist (<xref:System.ComponentModel.TypeConverterAttribute>), wird die Attributinformationen für einen Aufruf verwendet <xref:System.Xaml.XamlSchemaContext.GetValueConverter%2A> für die Verwendung von XAML-Schemakontext.  
+  
+-   Wenn <xref:System.Xaml.XamlMember.Type%2A> gültig ist, ein Typkonverter, der mit dem Typ verknüpft ist, wird zurückgegeben.  
+  
+-   Wenn der Member eines Ereignisses ist, wird ein ereignisspezifische Typkonverter zurückgegeben.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.TypeConverter%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupUnderlyingGetter">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.MethodInfo LookupUnderlyingGetter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Reflection.MethodInfo LookupUnderlyingGetter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupUnderlyingGetter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see langword="get" /> Accessor, der mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Die <see cref="T:System.Reflection.MethodInfo" /> für den zugeordneten <see langword="get" /> Accessor; oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung interpretiert die <xref:System.Xaml.XamlMember.UnderlyingMember%2A> Eigenschaft als <xref:System.Reflection.PropertyInfo> und gibt den Wert der <xref:System.Reflection.PropertyInfo.GetGetMethod%2A?displayProperty=nameWithType> (mit den Parametersatz hinzu `true`), was bedeutet, dass die zurückgegebene Methode nicht öffentliche werden kann. Dieses Verhalten kann dazu führen, `null` für bestimmte Fälle. einschließlich der Fälle, in denen kein zugeordneter Accessor vorhanden ist oder das Element ist keine Eigenschaft.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab der <xref:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter%2A> Eigenschaft eines zugeordneten <xref:System.Xaml.Schema.XamlMemberInvoker>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen. Achten Sie darauf, implementieren <xref:System.Xaml.XamlMember.LookupUnderlyingGetter%2A>, <xref:System.Xaml.XamlMember.LookupUnderlyingSetter%2A>, und <xref:System.Xaml.XamlMember.LookupUnderlyingMember%2A> , damit sie alle korrelierende Ergebnisse zurückgeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupUnderlyingMember">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.MemberInfo LookupUnderlyingMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Reflection.MemberInfo LookupUnderlyingMember() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupUnderlyingMember" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine CLR-Typsystem <see cref="T:System.Reflection.MemberInfo" /> , die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Ein CLR-Typsystem <see cref="T:System.Reflection.MemberInfo" /> -Objekt, das mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />; oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt die zugrunde liegende Memberinformationen, die Konstruktion basiert. Wenn die <xref:System.Reflection.MemberInfo> -Objekt mit einer Signatur, die nicht über genügend Informationen, um die zugrunde liegenden Elementgruppe bietet erstellt wird, gibt diese Methode zurück `null`.  
+  
+ Wenn ein zugrunde liegende Member während der Erstellung festgelegt wurde, müssen Sie nicht diese Methode aufrufen.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.UnderlyingMember%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen. Achten Sie darauf, implementieren <xref:System.Xaml.XamlMember.LookupUnderlyingGetter%2A>, <xref:System.Xaml.XamlMember.LookupUnderlyingSetter%2A>, und <xref:System.Xaml.XamlMember.LookupUnderlyingMember%2A> , damit sie alle korrelierende Ergebnisse zurückgeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupUnderlyingSetter">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.MethodInfo LookupUnderlyingSetter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Reflection.MethodInfo LookupUnderlyingSetter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupUnderlyingSetter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see langword="set" /> Accessor, der mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Die <see cref="T:System.Reflection.MethodInfo" /> für den zugeordneten <see langword="set" /> Accessor; oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung interpretiert <xref:System.Xaml.XamlMember.UnderlyingMember%2A> als <xref:System.Reflection.PropertyInfo> und gibt den Wert der <xref:System.Reflection.PropertyInfo.GetSetMethod%2A?displayProperty=nameWithType> (mit den Parametersatz hinzu `true`), was bedeutet, dass die zurückgegebene Methode nicht öffentliche werden kann. Dies kann dazu führen `null` in bestimmten Fällen, einschließlich der Fälle, in denen kein solcher Accessor vorhanden ist, oder das Element ist keine Eigenschaft.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter%2A> eines zugeordneten <xref:System.Xaml.Schema.XamlMemberInvoker>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen. Achten Sie darauf, implementieren <xref:System.Xaml.XamlMember.LookupUnderlyingGetter%2A>, <xref:System.Xaml.XamlMember.LookupUnderlyingSetter%2A>, und <xref:System.Xaml.XamlMember.LookupUnderlyingMember%2A> , damit sie alle korrelierende Ergebnisse zurückgeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupValueSerializer">
+      <MemberSignature Language="C#" Value="protected virtual System.Xaml.Schema.XamlValueConverter&lt;System.Windows.Markup.ValueSerializer&gt; LookupValueSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.Windows.Markup.ValueSerializer&gt; LookupValueSerializer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.LookupValueSerializer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.Windows.Markup.ValueSerializer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Wertserialisierungsprogramm-Implementierung, die mit dieser verknüpft ist <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Instanz mit <see cref="T:System.Windows.Markup.ValueSerializer" /> -Einschränkung oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung verwendet die folgende Logik und die Verarbeitungsreihenfolge von Artikeln:  
+  
+-   Wenn Attributierung auf Memberebene vorhanden ist (<xref:System.Windows.Markup.ValueSerializerAttribute>), wird die Attributinformationen für einen Aufruf verwendet <xref:System.Xaml.XamlSchemaContext.GetValueConverter%2A> für die Verwendung von XAML-Schemakontext.  
+  
+-   Wenn <xref:System.Xaml.XamlMember.Type%2A> gültig ist, wird ein Wertkonverter, der mit dem Typ verknüpft wird zurückgegeben.  
+  
+-   Wenn die genannten Bedingungen nicht zutreffen, `null` wird zurückgegeben.  
+  
+ Diese Methode wird aufgerufen, wenn ein Aufrufer ruft einen Wert aus ab <xref:System.Xaml.XamlMember.ValueSerializer%2A>. Überschreiben Sie diese Methode, wenn Sie einheitliche Ergebnisse für eine gesamte möchten <xref:System.Xaml.XamlMember> abgeleitete Klasse, oder wenn Sie Metadaten verfügbar sind spezielle, diese regelmäßig pro Groß-/Kleinschreibung zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkupExtensionBracketCharacters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;char,char&gt; MarkupExtensionBracketCharacters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;char, char&gt; MarkupExtensionBracketCharacters" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.MarkupExtensionBracketCharacters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.Char,System.Char&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert die Zeichen für öffnende und schließende Klammern einer Markuperweiterung.</summary>
+        <value>Eine Auflistung, die die Zeichen für öffnende und schließende Klammern enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="xamlName" /> Namenszeichenfolge, der diese deklariert <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <value>Die <see langword="xamlName" /> Namenszeichenfolge, der diese deklariert <see cref="T:System.Xaml.XamlMember" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird immer während der Konstruktion festgelegt. Die Konstruktoren, die von implementiert werden <xref:System.Xaml.XamlMember> in der Regel löst eine Ausnahme aus, wenn ein ursprünglicher Name nicht angegeben wird; daher erwarten nicht, diese Eigenschaft wird `null` oder eine leere Zeichenfolge, wenn Sie standardmäßige .NET Framework-XAML-Dienste verwenden Implementierungen.  
+  
+ [XamlName-Grammatik](~/docs/framework/xaml-services/xamlname-grammar.md) und Benennungsregeln für CLR-Typ und Member sind keine genaue Schnittmenge. Es ist möglich, einen Elementnamen zu deklarieren, der unter CLR ist jedoch nicht unter Verwendung von XAML-Benennung gültig. Diese Situation sollte nach Möglichkeit vermieden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Xaml.XamlMember xamlMember1, System.Xaml.XamlMember xamlMember2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Xaml.XamlMember xamlMember1, class System.Xaml.XamlMember xamlMember2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.op_Equality(System.Xaml.XamlMember,System.Xaml.XamlMember)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlMember1" Type="System.Xaml.XamlMember" />
+        <Parameter Name="xamlMember2" Type="System.Xaml.XamlMember" />
+      </Parameters>
+      <Docs>
+        <param name="xamlMember1"><see cref="T:System.Xaml.XamlMember" /> oder <see langword="null" />.</param>
+        <param name="xamlMember2"><see cref="T:System.Xaml.XamlMember" /> oder <see langword="null" />.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.Xaml.XamlMember" />-Objekte denselben Wert haben.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="xamlMember1" /> und <paramref name="xamlMember2" /> denselben Wert haben, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Xaml.XamlMember xamlMember1, System.Xaml.XamlMember xamlMember2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Xaml.XamlMember xamlMember1, class System.Xaml.XamlMember xamlMember2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.op_Inequality(System.Xaml.XamlMember,System.Xaml.XamlMember)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlMember1" Type="System.Xaml.XamlMember" />
+        <Parameter Name="xamlMember2" Type="System.Xaml.XamlMember" />
+      </Parameters>
+      <Docs>
+        <param name="xamlMember1"><see cref="T:System.Xaml.XamlMember" /> oder <see langword="null" />.</param>
+        <param name="xamlMember2"><see cref="T:System.Xaml.XamlMember" /> oder <see langword="null" />.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.Xaml.XamlMember" /> -Objekte verschiedene Werte haben.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert der <paramref name="xamlMember1" /> unterscheidet sich von den Wert der <paramref name="xamlMember2" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredXamlNamespace">
+      <MemberSignature Language="C#" Value="public string PreferredXamlNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredXamlNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.PreferredXamlNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die einzelnen XAML-Namespace-URI, der die primären Verwendung von XAML-Namespace für diese identifiziert <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <value>Der Bezeichner für den primären XAML-Namespace für diese <see cref="T:System.Xaml.XamlMember" />, als Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.XamlMember.PreferredXamlNamespace%2A> Eigenschaft ermöglicht den gleichen Wert wie das Aufrufen <xref:System.Xaml.XamlMember.GetXamlNamespaces%2A> , und klicken Sie dann die erste Wertzeichenfolge aus der zurückgegebenen Liste abrufen. Beim Schreiben von des Elements zurück, um Text oder anderen Darstellungen bereit, die XAML-Namespaceinformationen beibehalten, sollte der bevorzugte Verwendung von XAML-Namespace verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationVisibility">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DesignerSerializationVisibility SerializationVisibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.DesignerSerializationVisibility SerializationVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.SerializationVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.DesignerSerializationVisibility" /> -Wert, der angibt, wie das Element mit ein visuellen Designer verarbeitet werden soll.</summary>
+        <value>Der Wert der <see cref="T:System.ComponentModel.DesignerSerializationVisibility" /> Enumeration. Die Standardeinstellung ist <see cref="F:System.ComponentModel.DesignerSerializationVisibility.Visible" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlType TargetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType TargetType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xaml.XamlType" /> des Typs, in dem die <see cref="T:System.Xaml.XamlMember" /> vorhanden sein können.</summary>
+        <value>Der Typ, in dem die <see cref="T:System.Xaml.XamlMember" /> vorhanden sein können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert ist für anfügbare und nicht anfügbare Member unterschiedlich. Für nicht anfügbare Member <xref:System.Xaml.XamlMember.TargetType%2A> gibt <xref:System.Xaml.XamlMember.DeclaringType%2A>. Für anfügbare Member <xref:System.Xaml.XamlMember.LookupTargetType%2A> ein Wert zurückgegeben, die auf diese Logik basiert:  
+  
+-   Wenn Reflektion nicht, einen Sicherungsspeicher beheben kann (<xref:System.Xaml.XamlMember.IsUnknown%2A> `true`), diese Methode gibt eine interne-Konstante, die ein generisches Objekt darstellt.  
+  
+-   Wenn die vorherige Bedingung nicht gilt, <xref:System.Xaml.XamlMember.LookupTargetType%2A> aufgerufen wird. Die Standardimplementierung gibt ein <xref:System.Xaml.XamlType> auf Grundlage untersuchen die Methoden, implementieren die `get` und `set` Accessoren. Eine Klasse möglicherweise außer Kraft gesetzt <xref:System.Xaml.XamlMember.LookupTargetType%2A> auf ein anderes Verhalten verwenden, z. B. andere Metadaten bildet, die möglicherweise Zieltypen für anfügbare Member gemeldet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlMember.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung dieses <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung dieses <see cref="T:System.Xaml.XamlMember" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung gibt <xref:System.Xaml.XamlMember.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xaml.XamlType" /> des Typs, der vom Element verwendet wird.</summary>
+        <value>Die <see cref="T:System.Xaml.XamlType" /> des Typs, der vom Element verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.Type%2A> ruft <xref:System.Xaml.XamlMember.LookupType%2A> oder eine bestimmte Außerkraftsetzung der Methode. Dies tritt auf, wenn die Reflektionslogik der anfänglichen internen die Informationen noch nicht festgelegt wurde.  
+  
+ Im Standardverhalten (keine <xref:System.Xaml.XamlMember.LookupType%2A> überschreiben), das zurückgegebene <xref:System.Xaml.XamlType> können verschiedene grundlegende Bedeutungen haben. Welche Bedeutung gilt abhängig, ob dies <xref:System.Xaml.XamlMember> stellt eine Eigenschaft, eine Methode oder ein Ereignis, wie die folgende Liste zeigt:  
+  
+-   Für eine Eigenschaft, die den zurückgegebenen <xref:System.Xaml.XamlType> ist der Typ, der die Eigenschaft oder von der Eigenschaft zurückgegeben wird.  
+  
+-   Für ein Ereignis, das zurückgegebene <xref:System.Xaml.XamlType> ist die erforderliche Ereignishandlertyp (ein Delegat in einer CLR-Implementierung).  
+  
+-   Bei einer Methode <xref:System.Xaml.XamlType> ist der Rückgabetyp der Methode, die möglicherweise `null`.  
+  
+ In jedem Fall wird die Verwendung von XAML-Schemakontext verwendet, um den XAML-Typ aus dem unterstützenden Typ auszuwerten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeConverter">
+      <MemberSignature Language="C#" Value="public System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt; TypeConverter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.ComponentModel.TypeConverter&gt; TypeConverter" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.TypeConverter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Objekt, das für die Konstruktion von Typ Konvertierung von in XAML deklarierten Objekte verwendet werden kann.</summary>
+        <value>Ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> Wert mit einem <see cref="T:System.ComponentModel.TypeConverter" /> Einschränkung für den generischen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.TypeConverter%2A> ruft <xref:System.Xaml.XamlMember.LookupTypeConverter%2A> oder eine bestimmte Außerkraftsetzung der Methode. Dieses Verhalten tritt auf, wenn die Reflektionslogik der anfänglichen internen die Informationen noch nicht festgelegt wurde.  
+  
+ Dem Wert für Implementierungen, die eine Eigenschaft nicht Null zurückgeben <xref:System.Xaml.XamlMember.TypeConverter%2A> weisen nicht unbedingt eine funktionierende <xref:System.ComponentModel.TypeConverter>. Im folgenden werden eine Liste der möglichen Rückgabewerte ungleich Null für <xref:System.Xaml.XamlMember.TypeConverter%2A> und was diese Werte darstellen:  
+  
+-   Der Rückgabewert gibt einen Typkonverter, der speziell für dieses Element oder, üblicher, in den Zieltyp des Konverters attributiert ist. Dieses Verhalten ist in der Regel welche die meisten XAML-Typsysteme und XAML-Prozessoren gesucht, um einen Typkonverter zu instanziieren und Aufrufen ihrer Methoden.  
+  
+-   Der Rückgabewert meldet einen integrierten Wertkonverter. Dieser Konverter sind für bestimmte interne Vorgänge, die von einem XAML-Writer ausgeführt werden. Insbesondere konvertieren diese integrierten Wertkonverter die unformatierte Zeichenfolge Attributwerte in die Verwendung von XAML-Sprachebene primitiven. Für die .NET Framework-XAML-Dienste-Implementierung weiterleiten an einen Typkonverter, der in der System-Assembly definiert ist häufig diese integrierten typkonvertierungen. Z. B. eine Konvertierung für einen <xref:System.Int32> Wert verfügt über integrierte weitergeleitete Konvertierung, und daher die <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterType%2A> Wert Verweise <xref:System.ComponentModel.Int32Converter>.  
+  
+-   Der Rückgabewert meldet besonderen Fall eines uneingeschränkten Objektmodells; d. h. die <xref:System.Xaml.XamlMember> verfügt über eine <xref:System.Xaml.XamlMember.Type%2A> Wert <xref:System.Object>. In diesem Fall die <xref:System.Xaml.Schema.XamlValueConverter%601> meldet, das die <xref:System.Xaml.Schema.XamlValueConverter%601.Name%2A?displayProperty=nameWithType> ist {`Object}`. Allerdings <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A> ist `null` , da keine tatsächlichen Typ oder die Instanz zum Ausführen dieser Konvertierung verfügbar ist. Stattdessen kann das Verhalten des Objektmodells bis zur Laufzeit bestimmt werden bei der Common Language Runtime von der jeweiligen Technologie für die Behandlung von seinem Objektdiagramm bestimmt.  
+  
+ Wenn Sie eine funktionierende zugreifen können <xref:System.ComponentModel.TypeConverter> aus <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>, können Sie seine Konvertierungsmethoden aufrufen. Dienstkontext jedoch abhängig viele Konvertierungsmethoden. Wenn Sie den gleichen Dienstkontext nicht verfügen, der Typkonverter für seine typische Rolle beim Schreiben von Objekten für Objektdiagramme erwartet, können die Konvertermethoden Ausnahmen auslösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingMember">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberInfo UnderlyingMember { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MemberInfo UnderlyingMember" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.UnderlyingMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den CLR-Typsystem <see cref="T:System.Reflection.MemberInfo" /> , die steht für ein Element, das von konstruiert wird <see cref="T:System.Reflection.PropertyInfo" />, <see cref="T:System.Reflection.MethodInfo" />, oder <see cref="T:System.Reflection.EventInfo" />.</summary>
+        <value>CLR-Typsystem <see cref="T:System.Reflection.MemberInfo" /> Informationen, wie die Umwandlung von den ursprünglichen Konstruktorparametern. Ein <see cref="T:System.Xaml.XamlMember" /> erstellt, die mit der <see cref="M:System.Xaml.XamlMember.#ctor(System.String,System.Xaml.XamlType,System.Boolean)" /> Signatur zurückgibt <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.UnderlyingMember%2A> ruft <xref:System.Xaml.XamlMember.LookupUnderlyingMember%2A> oder eine bestimmte Außerkraftsetzung der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueSerializer">
+      <MemberSignature Language="C#" Value="public System.Xaml.Schema.XamlValueConverter&lt;System.Windows.Markup.ValueSerializer&gt; ValueSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.Windows.Markup.ValueSerializer&gt; ValueSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlMember.ValueSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.Windows.Markup.ValueSerializer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> Objekt, das für die Wertserialisierung des XAML deklarierten Objekten verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> mit <see cref="T:System.Windows.Markup.ValueSerializer" /> Einschränkung für den generischen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Xaml.XamlMember.ValueSerializer%2A> ruft <xref:System.Xaml.XamlMember.LookupValueSerializer%2A> oder eine bestimmte Außerkraftsetzung der Methode. Dieses Verhalten tritt auf, wenn die Reflektionslogik der anfänglichen internen die Informationen noch nicht festgelegt wurde.  
+  
+ Nicht alle Fälle, die eine Eigenschaft nicht Null zurückgeben Wert für <xref:System.Xaml.XamlMember.ValueSerializer%2A> sind unbedingt eine funktionierende <xref:System.Windows.Markup.ValueSerializer>. Finden Sie unter <xref:System.Xaml.XamlMember.TypeConverter%2A>; die gleichen Überlegungen gelten für <xref:System.Xaml.XamlMember.ValueSerializer%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

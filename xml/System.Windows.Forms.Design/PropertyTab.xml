@@ -1,0 +1,338 @@
+<Type Name="PropertyTab" FullName="System.Windows.Forms.Design.PropertyTab">
+  <TypeSignature Language="C#" Value="public abstract class PropertyTab : System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PropertyTab extends System.Object implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.PropertyTab" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Basisklasse für Registerkarten für Eigenschaften bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.PropertyTab> -Klasse stellt das Verhalten der Basisklasse einer Registerkarte für Eigenschaften bereit. Registerkarten werden angezeigt, auf der Symbolleiste der <xref:System.Windows.Forms.PropertyGrid> Kontrolle über das Eigenschaftenfenster und ermöglichen einer Komponente, um unterschiedliche Ansichten von Eigenschaften oder andere Daten anzuzeigen.  
+  
+ Benutzercode erstellt eine Instanz des in der Regel keine <xref:System.Windows.Forms.Design.PropertyTab> direkt. Stattdessen eine <xref:System.ComponentModel.PropertyTabAttribute> Wert vom Typ der Eigenschaftenregisterkarte oder die Eigenschaft Registerkarten zum Anzeigen von für eine Komponente mit den Eigenschaften zugeordnet werden kann oder Typen, die <xref:System.Windows.Forms.Design.PropertyTab> für angezeigt werden soll.  
+  
+ Die <xref:System.Windows.Forms.PropertyGrid> instanziiert dann eine <xref:System.Windows.Forms.Design.PropertyTab> von den vom angegebenen Typ ein <xref:System.ComponentModel.PropertyTabAttribute> zugeordnete Feld oder den Eigenschaftennamen der Komponente, die durchsucht wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält ein Beispiel <xref:System.Windows.Forms.Design.PropertyTab> , die alle Eigenschaften für eine Komponente, angeordnet nach dem Typennamen auflistet.  
+  
+ [!code-cpp[PropertyTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[PropertyTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyTabExample/CS/class1.cs#1)]
+ [!code-vb[PropertyTabExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyTabExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyTab ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.PropertyTab" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bitmap">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Bitmap Bitmap { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Bitmap Bitmap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.PropertyTab.Bitmap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Bitmap ab, die angezeigt wird, für die <see cref="T:System.Windows.Forms.Design.PropertyTab" />.</summary>
+        <value>Die <see cref="T:System.Drawing.Bitmap" /> anzuzeigenden für die <see cref="T:System.Windows.Forms.Design.PropertyTab" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public virtual bool CanExtend (object extendee);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExtend(object extendee) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extendee" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extendee">Das zu überprüfende Objekt.</param>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Forms.Design.PropertyTab" /> können Anzeigeeigenschaften für die angegebene Komponente.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt erweitert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Components">
+      <MemberSignature Language="C#" Value="public virtual object[] Components { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] Components" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.PropertyTab.Components" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Array von Komponenten, denen die Registerkarte für Eigenschaften zugeordnet ist.</summary>
+        <value>Das Array von Komponenten der Eigenschaftenregisterkarte zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von <see cref="T:System.Windows.Forms.Design.PropertyTab" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.Forms.Design.PropertyTab.Dispose%2A> auf, wenn Sie <xref:System.Windows.Forms.Design.PropertyTab> nicht mehr benötigen. Die <xref:System.Windows.Forms.Design.PropertyTab.Dispose%2A>-Methode bewirkt, dass <xref:System.Windows.Forms.Design.PropertyTab> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Windows.Forms.Design.PropertyTab.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Windows.Forms.Design.PropertyTab> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Windows.Forms.Design.PropertyTab> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Windows.Forms.Design.PropertyTab.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Windows.Forms.Design.PropertyTab> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Windows.Forms.Design.PropertyTab>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.Design.PropertyTab" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Windows.Forms.Design.PropertyTab> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~PropertyTab ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht eine <see cref="T:System.Windows.Forms.Design.PropertyTab" /> Versuch, Ressourcen freizugeben und andere Bereinigungsvorgänge durch vor dem Ausführen der <see cref="T:System.Windows.Forms.Design.PropertyTab" /> durch die Garbagecollection wieder zugänglich gemacht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultProperty">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptor GetDefaultProperty (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor GetDefaultProperty(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.GetDefaultProperty(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, für die die Standardeigenschaft abgerufen werden soll.</param>
+        <summary>Ruft die Standardeigenschaft für die angegebene Komponente ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , die die Standardeigenschaft darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptorCollection GetProperties (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.GetProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, die Eigenschaften eines abzurufen.</param>
+        <summary>Ruft die Eigenschaften der angegebenen Komponente ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Eigenschaften der Komponente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.PropertyDescriptorCollection GetProperties (object component, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(object component, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.GetProperties(System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, von der Eigenschaften abgerufen werden sollen.</param>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> , die Attribute der abzurufenden Eigenschaften angibt.</param>
+        <summary>Ruft die Eigenschaften der angegebenen Komponente ab, die mit den angegebenen Attributen übereinstimmen.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Eigenschaften enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptorCollection GetProperties (System.ComponentModel.ITypeDescriptorContext context, object component, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.ComponentModel.ITypeDescriptorContext context, object component, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.PropertyTab.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , der den Kontext zum Abrufen von Eigenschaften angibt.</param>
+        <param name="component">Die Komponente, von der Eigenschaften abgerufen werden sollen.</param>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> , die Attribute der abzurufenden Eigenschaften angibt.</param>
+        <summary>Ruft die Eigenschaften der angegebenen Komponente ab, die mit den angegebenen Attributen und dem angegebenen Kontext übereinstimmen.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , enthält die Eigenschaften, die mit dem angegebenen Kontext und Attribute übereinstimmen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeyword">
+      <MemberSignature Language="C#" Value="public virtual string HelpKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeyword" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.PropertyTab.HelpKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hilfeschlüsselwort ab, das mit dieser Registerkarte zugeordnet werden soll.</summary>
+        <value>Das Hilfeschlüsselwort auf dieser Registerkarte zugeordnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist dies der Name der Registerkarte fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabName">
+      <MemberSignature Language="C#" Value="public abstract string TabName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TabName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.PropertyTab.TabName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Registerkarte für Eigenschaften ab.</summary>
+        <value>Der Name der Registerkarte für Eigenschaften.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

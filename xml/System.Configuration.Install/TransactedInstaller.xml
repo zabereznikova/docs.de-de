@@ -1,0 +1,138 @@
+<Type Name="TransactedInstaller" FullName="System.Configuration.Install.TransactedInstaller">
+  <TypeSignature Language="C#" Value="public class TransactedInstaller : System.Configuration.Install.Installer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TransactedInstaller extends System.Configuration.Install.Installer" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Install.TransactedInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.Installer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert ein Installationsprogramm, das entweder vollständig erfolgreich ausgeführt oder schlägt fehl, und den Computer in ihren ursprünglichen Zustand verlässt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Installationsprogramme in einer Transaktion auszuführen, fügen sie der <xref:System.Configuration.Install.Installer.Installers%2A> -Eigenschaft dieser <xref:System.Configuration.Install.TransactedInstaller> Instanz.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Configuration.Install.TransactedInstaller.%23ctor%2A>, <xref:System.Configuration.Install.TransactedInstaller.Install%2A> und <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> Methoden die <xref:System.Configuration.Install.TransactedInstaller> Klasse.  
+  
+ In diesem Beispiel stellt eine Implementierung, die ähnlich dem Konzept [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md). Assemblys installiert mit den Optionen, die vor der betreffenden Assembly. Wenn eine Option für eine Assembly nicht angegeben wird, werden der vorherigen Assemblyoptionen verwendet, wenn es sich um eine vorherigen Assembly in der Liste. Wenn entweder der "/ u" oder "/ uninstall" angegeben wird, werden die Assemblys deinstalliert. Wenn die "/?" oder "/ help" angegeben wird, die Hilfeinformationen werden in der Konsole angezeigt.  
+  
+ [!code-cpp[TransactedInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/TransactedInstaller/CPP/transactedinstaller.cpp#1)]
+ [!code-csharp[TransactedInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/TransactedInstaller/CS/transactedinstaller.cs#1)]
+ [!code-vb[TransactedInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TransactedInstaller/VB/transactedinstaller.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactedInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.TransactedInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.Install.TransactedInstaller" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.TransactedInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" /> in dem diese Methode speichert Informationen zum Ausführen eines Commit-, Rollback- oder Deinstallationsvorgangs.</param>
+        <summary>Führt die Installation aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Configuration.Install.TransactedInstaller.Install%2A> Methode für alle Installationsprogramme der <xref:System.Configuration.Install.Installer.Installers%2A> -Eigenschaft dieser Instanz. Die <xref:System.Collections.IDictionary> Objekt verweist die `savedState` Parameter wird aktualisiert, und der Status der Installation wieder, nachdem die Installationsprogramme ausgeführt haben. Wenn alle der <xref:System.Configuration.Install.TransactedInstaller.Install%2A> Methoden erfolgreich, die <xref:System.Configuration.Install.Installer.Commit%2A> -Methode aufgerufen wird. Andernfalls die <xref:System.Configuration.Install.Installer.Rollback%2A> Methode wird für jedes Installationsprogramm aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Configuration.Install.TransactedInstaller.%23ctor%2A>, <xref:System.Configuration.Install.TransactedInstaller.Install%2A> und <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> Methoden die <xref:System.Configuration.Install.TransactedInstaller> Klasse.  
+  
+ Dieses Beispiel enthält eine Implementierung von InstallUtil.exe ähnlich. Assemblys installiert mit den Optionen, die vor der betreffenden Assembly. Wenn für eine Assembly keine Option angegeben ist, stammen die Optionen, wenn es sich um eine vorherigen Assembly in der Liste. Wenn die "/ u" oder "/ uninstall"-Option angegeben wird, und klicken Sie dann die Assemblys deinstalliert werden. Wenn die "/?" oder "/ help" angegeben wird und dann die Hilfeinformationen auf der Konsole ausgegeben wird.  
+  
+ [!code-cpp[TransactedInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/TransactedInstaller/CPP/transactedinstaller.cpp#1)]
+ [!code-csharp[TransactedInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/TransactedInstaller/CS/transactedinstaller.cs#1)]
+ [!code-vb[TransactedInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TransactedInstaller/VB/transactedinstaller.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="savedState" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Exception">Die Installation ist fehlgeschlagen und wird zurückgesetzt.</exception>
+        <block subset="none" type="usage">
+          <para>Die <see cref="T:System.Collections.IDictionary" /> gemäß der <paramref name="savedState" /> Parameter sollte leer sein, wenn an der <see cref="M:System.Configuration.Install.TransactedInstaller.Install(System.Collections.IDictionary)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.TransactedInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Eine <see cref="T:System.Collections.IDictionary" /> , die den Zustand des Computers nach dem Abschluss der Installation enthält.</param>
+        <summary>Entfernt eine Installation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, um eine zuvor abgeschlossenen Installation zu entfernen. Dies <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> Methodenaufrufe der <xref:System.Configuration.Install.Installer.Uninstall%2A> -Methode für alle Installationsprogramme in der <xref:System.Configuration.Install.Installer.Installers%2A> Eigenschaft so deinstallieren Sie alle Ressourcen, die während der Installation festgelegt. Ausnahmen bei der Deinstallation werden ignoriert.  
+  
+> [!NOTE]
+>  Obwohl die <xref:System.Configuration.Install.Installer.Install%2A> und <xref:System.Configuration.Install.Installer.Commit%2A> Methoden Speichern des Zustands des Computers nach der Installation der Datei mit den <xref:System.Collections.IDictionary> aus der `savedState` Parameter wurden möglicherweise gelöscht irgendwann nach Abschluss der Installation befindet. Wenn die Datei gelöscht wird, die `savedState` Parameter ist `null`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Configuration.Install.TransactedInstaller.%23ctor%2A>, <xref:System.Configuration.Install.TransactedInstaller.Install%2A> und <xref:System.Configuration.Install.TransactedInstaller.Uninstall%2A> Methoden die <xref:System.Configuration.Install.TransactedInstaller> Klasse.  
+  
+ In diesem Beispiel stellt eine Implementierung, die ähnlich dem Konzept [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md). Assemblys installiert mit den Optionen, die vor der betreffenden Assembly. Wenn eine Option für eine Assembly nicht angegeben wird, werden der vorherigen Assemblyoptionen verwendet, wenn es sich um eine vorherigen Assembly in der Liste. Wenn entweder der "/ u" oder "/ uninstall" angegeben wird, werden die Assemblys deinstalliert. Wenn die "/?" oder "/ help" angegeben wird, die Hilfeinformationen werden in der Konsole angezeigt.  
+  
+ [!code-cpp[TransactedInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/TransactedInstaller/CPP/transactedinstaller.cpp#1)]
+ [!code-csharp[TransactedInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/TransactedInstaller/CS/transactedinstaller.cs#1)]
+ [!code-vb[TransactedInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TransactedInstaller/VB/transactedinstaller.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

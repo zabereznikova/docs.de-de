@@ -1,0 +1,1257 @@
+<Type Name="LegendItem" FullName="System.Windows.Forms.DataVisualization.Charting.LegendItem">
+  <TypeSignature Language="C#" Value="public class LegendItem : System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LegendItem extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.LegendItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Legendenelement, die in gespeichert ist die <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendItemsCollection" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem> Klasse stellt ein Legendenelement, der entweder ein Standard- oder benutzerdefiniertes Element sein kann:  
+  
+-   Standardmäßige Legendenelemente werden automatisch in der Legende für die Datenreihe oder Datenpunkte eingefügt. Standardeinträge für Kreis-und Ringdiagramme darstellen der gezeichneten Daten zeigt, wohingegen Einträge für alle anderen Diagrammtypen die gezeichnete Reihe darstellen. Standardmäßig verwenden diese Legendeneinträge die Daten zeigen oder Reihe der Farbe für die Symbolfarbe und den Namen der Reihe oder Daten für den Text des Legendenelements. Standardmäßige Legendenelemente angepasst oder zur Laufzeit mit gelöscht werden können, die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CustomizeLegend> -Ereignis für die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement.  
+  
+-   Benutzerdefinierte Legendenelemente haben benutzerdefinierter Text, Symbolfarbe und So weiter. Im Gegensatz zu den Standardeinträgen sind sie nicht mit den gezeichneten Daten verbunden. Benutzerdefinierte Legendenelemente können zur Entwurfszeit oder zur Laufzeit hinzugefügt werden mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.Legend.CustomItems%2A> Eigenschaft von der <xref:System.Windows.Forms.DataVisualization.Charting.Legend> Objekt.  
+  
+ Legendensymbole können es sich um Rechtecke, Linien oder Marker, abhängig von der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle%2A> eigenschaftseinstellung ein <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem> Objekt.  
+  
+ Der Text, der ein benutzerdefiniertes Legendenelement richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem> Klasse.  
+  
+ Beachten Sie, dass Sie auch benutzerdefinierte Legendenelemente mit hinzufügen, können die `Add` und `Insert` zugeordneten Methoden der <xref:System.Windows.Forms.DataVisualization.Charting.Legend.CustomItems%2A> Auflistungseigenschaft der <xref:System.Windows.Forms.DataVisualization.Charting.Legend> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendItem (string name, System.Drawing.Color color, string image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Drawing.Color color, string image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendItem.#ctor(System.String,System.Drawing.Color,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="image" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Legendenelements.</param>
+        <param name="color">Die Farbe des Legendenelements.</param>
+        <param name="image">Der Pfad des Bilds für das Legendenelement angezeigt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendItem" /> Klasse mit dem angegebenen Namen, Farb- und Bildoptionen Pfad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die `image` oder `color` Parameter muss angegeben werden. Wenn beide angegeben werden, die `image` Parameter hat Vorrang vor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackGradientStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.GradientStyle BackGradientStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.GradientStyle BackGradientStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackGradientStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.GradientEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.GradientStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung für den Hintergrundfarbverlauf eines Legendenelements fest. Außerdem wird bestimmt, ob ein Farbverlauf verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.GradientStyle" /> Enumeration, der die Ausrichtung für den Hintergrundfarbverlauf eines Legendenelements angibt. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.GradientStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> Eigenschaft, um zu bestimmen, ob ein Titel einen Farbverlauf anzeigt und auf die Ausrichtung des Verlaufs zu bestimmen, ob dient.  
+  
+ Diese Eigenschaft wird nur implementiert werden, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle.Rectangle>.  
+  
+ Eine Liste der verfügbaren Muster, finden Sie in der <xref:System.Windows.Forms.DataVisualization.Charting.GradientStyle> Enumeration.  
+  
+ So verwenden Sie Verlaufsfarben:  
+  
+-   Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.Color%2A> Eigenschaft, um die primäre Farbe festzulegen.  
+  
+-   Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> Eigenschaft, um die sekundäre Farbe festzulegen.  
+  
+-   Verwenden Sie diese <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> Eigenschaft, um die gewünschte Art des Farbverlaufs festzulegen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackHatchStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle BackHatchStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle BackHatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackHatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.HatchStyleEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schraffurart des Legendenelements.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle" /> -Enumeration, die Schraffurart eines Legendenelements angibt. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle> Enumeration gibt an, die von einem Pinsel des Typs verwendete Schraffur <xref:System.Drawing.Drawing2D.HatchBrush>. Die Schraffur besteht aus einer Hintergrundfarbe und über dem Hintergrund gezeichneten Linien verwendet werden.  
+  
+ Eine Liste der verfügbaren schraffurstile, finden Sie in der <xref:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle> Enumeration.  
+  
+> [!NOTE]
+>  Die Farbe der Linien Schraffurmuster richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Farbe an, die durch eine transparente Farbe ersetzt wird, wenn das Hintergrundbild gezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der als transparent angezeigt wird, wenn das Hintergrundbild gezeichnet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackSecondaryColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackSecondaryColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackSecondaryColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackSecondaryColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die sekundäre Farbe eines Legendenelements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert für die sekundäre Farbe des Hintergrunds mit Schraffur oder graduelle Füllung verwendet. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> -Eigenschaft ist eine mehrerer verwandter Eigenschaften, die bestimmen, die sekundäre Hintergrundfarbe vieler <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekte; wird verwendet, wenn Farbverlauf übernommen werden.  
+  
+ Diese Eigenschaft wird nur implementiert werden, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle.Rectangle>.  
+  
+ Sie können festlegen, <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau)-Wert.  
+  
+ Wenn Schraffuren verwendet wird, die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> Eigenschaft bestimmt die Farbe der Linien Schraffur für das Legendenelement.  
+  
+ So verwenden Verlaufsfarben für eine Legendenzelle im Hintergrund:  
+  
+ So verwenden Sie Verlaufsfarben:  
+  
+-   Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.Color%2A> Eigenschaft, um die primäre Farbe festzulegen.  
+  
+-   Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> Eigenschaft, um die sekundäre Farbe festzulegen.  
+  
+-   Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> Eigenschaft, um die gewünschte Art des Farbverlaufs festzulegen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe des Legendenelements ab oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Wert, der zum Zeichnen der Rahmenfarbe eines Legendenelements verwendet wird. Die Standardfarbe ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau) Wert festlegen.  
+  
+> [!NOTE]
+>  Wenn Sie einen Marker für ein benutzerdefiniertes Legendenelement verwenden. Diese Eigenschaft wird die Rahmenfarbe des Markers festgelegt. Jedoch, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerBorderColor%2A> Eigenschaft auch festgelegt ist, dessen Wert hat Vorrang vor.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.BorderDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Rahmenart eines Legendenelements.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" /> -Enumerationswert, der die Rahmenart des Legendenelements bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt die Linienart für einen Rahmen verwendet. Die Zeile kann einfarbig, gepunktet usw. sein.  
+  
+ Andere Rahmenarten finden Sie unter der <xref:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle> Enumerationsthema.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public int BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des Rahmens eines Legendenelements.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Breite in Pixel des Rahmens Legende Element bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BorderWidth%2A> Eigenschaft kann auch verwendet werden, um die Breite der Linien festlegen, wenn Sie z. B. benutzerdefinierte Legendenelemente mit angezeigt werden eine <xref:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle.Line> Stil.  
+  
+ **Hinweis** diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cells">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.LegendCellCollection Cells { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.LegendCellCollection Cells" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.Cells" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.LegendCellCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LegendCellCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Zellen im Legendenelement ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection" /> Objekt, das die Auflistung von Zellen im Legendenelement darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Legendenelement besteht aus einer oder mehrerer Legendenzellen, dargestellt durch eine <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> -Objekt und gespeichert, eine <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection>.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt für die gesamte <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe eines Legendenelements fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der zum Zeichnen des Legendenelements verwendet wird. Die Standardfarbe ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.Color%2A> Eigenschaft ist eine mehrerer verwandter Eigenschaften, die die Farbe von vielen Diagrammelementen abrufen oder festlegen, kann auf einen beliebigen Wert ARGB (Alpha, Rot, Grün, Blau) festgelegt werden.  
+  
+ Wenn diese Eigenschaft für einen Datenpunkt und die Reihe festgelegt ist, wird die Datenpunktfarbe Vorrang haben. Die Reihenfarbe wird nur für die Datenpunkte verwendet werden, die keine eigene Farbe definieren.  
+  
+ Wenn ein benutzerdefiniertes Legendenelement einen Marker verwendet wird, wird diese Eigenschaft die Markerfarbe bestimmt. Jedoch, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerColor%2A> Eigenschaft festgelegt ist, wird den Wert dann Vorrang hat.  
+  
+ Diese Eigenschaft wird ignoriert, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.Image%2A> Eigenschaft gibt ein Bild für das Legend-Element-Symbol verwendet werden soll.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendItem.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendItem" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob das Legendenelement "" aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Legendenelement "" aktiviert ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt für die gesamte <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public string Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Image" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ImageValueEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild, das für eine Legende Element Symbol angezeigt wird.</summary>
+        <value>Ein <see langword="string" /> Wert, der die URL einer Bilddatei darstellt. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt die Bilddatei, die für die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem> Symbol.  
+  
+ Der Pfad kann es sich um eine Absolute oder relative URL sein.  
+  
+ Wenn Sie ein Hintergrundbild festlegen, wird das Bild angezeigt unabhängig von der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle%2A> Einstellung der Eigenschaft.  
+  
+ Legen Sie die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BackImageTransparentColor%2A> Eigenschaft, können eine Farbe, die von dem Abbild verwendet werden, um transparent angezeigt werden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.LegendImageStyle ImageStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LegendImageStyle ImageStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.LegendImageStyle), "Rectangle")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LegendImageStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Anzeigenformat des Legend-Element-Image.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle" /> -Enumerationswert, der den Anzeigestil der Legende-Elementbild angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Stile ermitteln, wie die entsprechenden Symbol des Elements angezeigt werden sollen.  
+  
+ Ein <xref:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle.Line> Stil kann zusammen mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle.Marker> Stil. Um dies zu erreichen, legen Sie zuerst die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle%2A> Eigenschaft <xref:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle.Line>. Verwenden Sie dann die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerImage%2A> Eigenschaft, um ein Markerbild anzugeben oder die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerStyle%2A> Eigenschaft, um ein Markerformat anzugeben. Das resultierende Symbol werden eine Kombination aus einer Zeile und ein Bild oder einen Marker.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Legend">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Legend Legend { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Legend Legend" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.Legend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Legend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.DataVisualization.Charting.Legend" /> dieses Legendenelement zugeordnete Objekt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.Legend" /> dieses Legendenelement zugeordnete Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerBorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color MarkerBorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MarkerBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Rahmenfarbe der Marker aus, wenn verwendet.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der die ARGB (Alpha, Rot, Grün, Blau)-Farbe eines Markerrahmens darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Marker verwenden zu können, legen die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerStyle%2A> -Eigenschaft auf einen anderen Wert als <xref:System.Windows.Forms.DataVisualization.Charting.MarkerStyle.None>.  
+  
+ Beachten Sie, dass Marker werden nicht angewendet werden, um Kreis-, Ring-, Gestapelte Diagrammtypen.  
+  
+ Für benutzerdefinierte Legenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BorderColor%2A> -Eigenschaft wird auch die Rahmenfarbe der Marker festgelegt. Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerBorderColor%2A> Einstellung der Eigenschaft hat Vorrang gegenüber der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.BorderColor%2A> Einstellung der Eigenschaft.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerBorderWidth">
+      <MemberSignature Language="C#" Value="public int MarkerBorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MarkerBorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerBorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Rahmenbreite der Marker aus, wenn verwendet. In Pixel gemessen.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Rahmenbreite der Marker darstellt. Der Standardwert ist eins (1) Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color MarkerColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MarkerColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe der Marker aus, wenn verwendet.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der die Farbe der Marker darstellt. Die Standardfarbe ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerImage">
+      <MemberSignature Language="C#" Value="public string MarkerImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MarkerImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ImageValueEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Markerbild des Legendenelements.</summary>
+        <value>Ein <see langword="string" /> Wert, der die URL einer Bilddatei darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt einen Pfad zu einer Bilddatei, die eine absolute oder relative URL sein kann.  
+  
+ Um den Marker verwenden zu können, legen die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerStyle%2A> -Eigenschaft auf einen anderen Wert als <xref:System.Windows.Forms.DataVisualization.Charting.MarkerStyle.None>.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerImage%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerColor%2A> Eigenschaft.  
+  
+ Ein Markerbild kann eine beliebige gültige Grafikdatei von .NET Framework, einschließlich der Symbole unterstützt werden.  
+  
+ Um eine Farbe des Markerbilds transparent festzulegen, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerImageTransparentColor%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color MarkerImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MarkerImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Farbe, die durch eine transparente Farbe ersetzt, wenn das Markerbild gezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der eine ARGB (Alpha, Rot, Grün, Blau)-Farbe darstellt, die durch eine transparente Farbe ersetzt, wenn das Markerbild gezeichnet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerImageTransparentColor%2A> Eigenschaft wird verwendet, um eine Farbe in ein Markerbild auszuwählen, die als transparent angezeigt werden.  
+  
+ Sie können diese Eigenschaft auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau) Wert festlegen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerSize">
+      <MemberSignature Language="C#" Value="public int MarkerSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MarkerSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(5)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe der Legende Element-Marker fest, wenn verwendet.</summary>
+        <value>Ein <see langword="integer" /> Ausdruck, der die Höhe und Breite der Zeichenfläche der Marker aus, in Pixel darstellt. Der Standardwert ist 5 Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Marker verwenden zu können, legen die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerStyle%2A> -Eigenschaft auf einen anderen Wert als <xref:System.Windows.Forms.DataVisualization.Charting.MarkerStyle.None>.  
+  
+ Beachten Sie, dass Marker nicht auf Datenpunkte von Kreis-, Ring- und anderen gestapelten Diagrammtypen angewendet werden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.MarkerStyle MarkerStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.MarkerStyle MarkerStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.MarkerStyleEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.MarkerStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen / Definieren einer Legende Element Markerformat. So aktivieren oder deaktivieren die Anzeige von markern auch verwendet.</summary>
+        <value>Ein <see cref="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.MarkerStyle" /> Integer-Enumeration, die eine Legende Element Markerformat angibt. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.MarkerStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Marker zu deaktivieren, legen Sie diese Eigenschaft auf <xref:System.Windows.Forms.DataVisualization.Charting.MarkerStyle.None>.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Legendenelements.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen des Legendenelements darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color SeparatorColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SeparatorColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.SeparatorColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des elementtrennzeichens Legende fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert verwendet, um die Farbe des elementtrennzeichens Legende gezeichnet werden soll. Der Standardwert ist <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt für die gesamte <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle SeparatorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle SeparatorType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.SeparatorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle), "None")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil der Trennlinie des Legendenelements.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle" /> -Enumerationswert, der den Stil der Trennlinie des Legendenelements angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeriesName">
+      <MemberSignature Language="C#" Value="public string SeriesName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SeriesName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.SeriesName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der der <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> ein Legendenelement "Standard" zugeordnet.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen der Reihe eine Standard-Legendenelement zugeordnete bestimmt. Der Standardwert ist eine Zeichenfolge der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte nur verwendet werden, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CustomizeLegend> Ereignis, um zu bestimmen, welche Datenreihe ein Legende Standardeintrag darstellt.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.SeriesName%2A> Eigenschaft gilt für alle Diagrammtypen außer Kreis-und Kugel; ihre standardmäßige Legendenelemente entsprechen, die Datenpunkte dargestellt und nicht auf die Reihe gezeichnet. Wenn Sie mit Kreis-und Kugel arbeiten, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.SeriesPointIndex%2A> Eigenschaft stattdessen.  
+  
+ Diese Eigenschaft sollte nicht vom Entwickler festgelegt werden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt für die gesamte <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeriesPointIndex">
+      <MemberSignature Language="C#" Value="public int SeriesPointIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SeriesPointIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.SeriesPointIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index des ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> Objekt ein Legendenelement "Standard" zugeordnet.</summary>
+        <value>Ein <see langword="integer" /> Datenpunkt in einem nullbasierten Index zugeordnete Wert, der die Position der Legende Standardwert darstellt. Alle Diagrammtypen außer Kreis- und Ringdiagramme zurück eine Negative Eins (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte nur verwendet werden, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CustomizeLegend> Ereignis, um zu bestimmen, die <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> -Objekt, das durch einen standardmäßigen Kreis- oder dargestellt wird.  
+  
+ Andere Diagrammtypen als Kreis oder Kugeldiagramme zurück eine Negative Eins (1), da der standardmäßige Legendenelemente entsprechen gezeichneten Reihen und Datenpunkte nicht gezeichnet. Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.SeriesName%2A> -Eigenschaft für diese Diagrammtypen.  
+  
+ Diese Eigenschaft sollte nicht vom Entwickler festgelegt werden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt für die gesamte <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ShadowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ShadowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.ShadowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128,0,0,0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schattenfarbe eines Legendenelements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der die Schattenfarbe eines Legendenelements darstellt. Die Standardfarbe ist <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft ab oder legt die Schattenfarbe mehrere Diagrammelemente, und es kann sein, die auf alle gültigen ARGB (Alpha, Rot, Grün, Blau) Wert festgelegt werden.  
+  
+ Der alpha-Wert kann verwendet werden, um eine "realistische" shadowing Effekt zu erzielen; Verwenden Sie eine Farbe "128,0,0,0" für Schatten.  
+  
+ Um einen Schatten zu implementieren, legen Sie die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ShadowOffset%2A> Eigenschaft auf einen Wert ungleich 0 (null).  
+  
+ **Hinweis** diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowOffset">
+      <MemberSignature Language="C#" Value="public int ShadowOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ShadowOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.ShadowOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Offset des Schattens in Pixel eines Legendenelements.</summary>
+        <value>Ein <see langword="integer" /> Wert, der den Schattenoffset der relevanten Diagrammelements in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie einen anderen Wert als 0 (null), um Schatten zu implementieren. Ein positiver Wert führt einen Schatten, die nach unten und rechts verschiebt. Ein negativer Wert führt einen Schatten, die oben "und" auf der linken Seite verschiebt.  
+  
+ **Hinweis** diese Eigenschaft gilt nur für <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> Objekte mit einem <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType> entweder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol> oder <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendItem.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die QuickInfo des Legendenelements.</summary>
+        <value>Ein <see langword="string" /> Wert, der die QuickInfo für das Legendenelement darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie spezielle Schlüsselwörter zum Anzeigen verschiedener Arten von Daten im Zusammenhang mit dem Diagramm festlegen. Weitere Informationen finden Sie unter [Schlüsselwörter &#91; Rs_vsDataVis &#93;](http://msdn.microsoft.com/library/8a19d422-4eee-45ff-a5c3-feff7b76fa8c).  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt für die gesamte <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

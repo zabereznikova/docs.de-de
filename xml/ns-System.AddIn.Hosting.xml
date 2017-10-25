@@ -1,0 +1,6 @@
+<Namespace Name="System.AddIn.Hosting">
+  <Docs>
+    <summary>Die <see cref="N:System.AddIn.Hosting" /> -Namespace stellt Klassen zum Ermitteln, registrieren, aktivieren und Steuern von Add-Ins.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

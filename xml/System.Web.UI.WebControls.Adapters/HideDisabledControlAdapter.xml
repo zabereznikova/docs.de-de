@@ -1,0 +1,121 @@
+<Type Name="HideDisabledControlAdapter" FullName="System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter">
+  <TypeSignature Language="C#" Value="public class HideDisabledControlAdapter : System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HideDisabledControlAdapter extends System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Adapters.WebControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Renderingfunktionen für das zugeordnete Steuerelement so ändern Sie den Standardcode oder ein neues Verhalten für einen bestimmten Browser bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> Klasse passt das zugeordnete <xref:System.Web.UI.WebControls.WebControl> Steuerelement so ändern Sie die Standard-Markup oder das Verhalten für einen bestimmten Browser. Sie erweitern die <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> Klasse weiter anpassen, die Darstellung von der <xref:System.Web.UI.WebControls.WebControl> Steuerelement.  
+  
+ Adapter sind kompilierte .NET Framework-Komponenten, die eine oder mehrere Phasen des Lebenszyklus einer Seite oder Steuerelement übernehmen. Erweitern der <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> Klasse ermöglicht den Zugriff auf die Phasen des Lebenszyklus – von der <xref:System.Web.UI.WebControls.WebControl> Steuerelement. Weitere Informationen finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ Die ursprüngliche Anforderung für einen Adapter bewirkt, dass .NET Framework, um nach einem zugeordneten Adapter für das Steuerelement den Eigenschaften des anfordernden Browsers zu suchen. Browser-Definitionsdateien werden verwendet, durch die <xref:System.Web.HttpBrowserCapabilities> -Klasse zum Identifizieren der Merkmale des Clientbrowsers und zum Zuordnen des Adapters zum Browsertyp. Weitere Informationen finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ Eine Beschreibung der adaptive Rendering-Architektur von ASP.NET und eine schrittweise exemplarische Vorgehensweise, die zeigt, wie einen Steuerelementadapter implementieren, und ordnen Sie es an ein Steuerelement, finden Sie unter "Erstellen von ASP.NET Server Steuerelement Adapter: An Introduction" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> zum Anzeigen einer <xref:System.Web.UI.WebControls.Label> Steuerelement in einem aktivierten und deaktivierten Zustand. In diesem Beispiel besteht aus drei Teilen:  
+  
+-   Ein Adapter abgeleitet aus dem <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> Klasse.  
+  
+-   Die ASPX-Datei, integriert der <xref:System.Web.UI.WebControls.Label> -Steuerelement und den gerätespezifischen Inhalt.  
+  
+-   Eine Browserdatei, die den Adapter mit einem Gerätetyp verknüpft werden soll.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/CS/hidedisabledcontrolcontosoadapter.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/VB/hidedisabledcontrolcontosoadapter.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Deklarieren einer <xref:System.Web.UI.WebControls.Label> -Steuerelement mit gerätespezifischen Inhalt.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/CS/implcs.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/VB/implvb.aspx#3)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verknüpfen der <xref:System.Web.UI.WebControls.Label> Steuerelement mit dem benutzerdefinierten Adapter für Browser, die auf .NET für Windows CE ausgeführt wird.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HideDisabledControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt eine Instanz von der <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> Klasse. Die ursprüngliche Anforderung für einen Adapter bewirkt, dass .NET Framework, um nach einem zugeordneten Adapter für das Steuerelement den Eigenschaften des anfordernden Browsers zu suchen. Einmal gefunden, das Steuerelement enthält einen Verweis auf die zugeordnete Adapterinstanz in seiner <xref:System.Web.UI.Control.Adapter%2A> Eigenschaft. Informationen zum Adapter Zuordnungen und Browserdefinitionsdateien, finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der Methoden für die Erstellung und das Rendern der gerätespezifischen Ausgabe enthält.</param>
+        <summary>Schreibt das zugeordnete Websteuerelement in den Ausgabestream als HTML an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> Methode schreibt den zugeordneten <xref:System.Web.UI.WebControls.WebControl> in den Ausgabestream als HTML-Steuerelement.  
+  
+ Standardmäßig ruft .NET Framework für des Webserversteuerelements des eigenen <xref:System.Web.UI.Control.Render%2A> Methode. Allerdings nach der <xref:System.Web.UI.Control.Adapter%2A> -Eigenschaft dieses Steuerelements festgelegt ist, das .NET Framework führt der Adapter-Implementierung von der <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> Ereignis Kosten des zugeordneten Steuerelements.  
+  
+ Die <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> Ereignis wird verwendet, um Änderungen an den Markupcode auszuführen, die auf einem Gerätebrowser gerendert wird. Steuerelementeigenschaften sollte vor dieser Phase des Lebenszyklus und nur die Erstellung der eigentlichen Markup für das Steuerelement bereits hier getan, festgelegt werden. In dieser Phase des Lebenszyklus der auf das Steuerelement vorgenommene Änderungen werden nicht gespeichert, zum Anzeigen des Status. Zum Speichern von Änderungen, die an das Steuerelement vorgenommen wurden, überschreiben die <xref:System.Web.UI.Adapters.ControlAdapter.OnPreRender%2A> Ereignis.  
+  
+ Die <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> Ereignis kann auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten das bevorzugte Verfahren ist für die Behandlung des Ereignisses in einer abgeleiteten Klasse zu behandeln.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> -Methode zum Übergeben der <xref:System.Web.UI.HtmlTextWriter> Objekt, das das übergeordnete Steuerelement zum Rendern des zugeordneten Steuerelements aktiviert ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/CS/hidedisabledcontrolcontosoadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/VB/hidedisabledcontrolcontosoadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

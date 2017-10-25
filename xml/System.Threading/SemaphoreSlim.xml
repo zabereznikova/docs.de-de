@@ -1,0 +1,951 @@
+<Type Name="SemaphoreSlim" FullName="System.Threading.SemaphoreSlim">
+  <TypeSignature Language="C#" Value="public class SemaphoreSlim : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SemaphoreSlim extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.SemaphoreSlim" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Current Count = {m_currentCount}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine einfache Alternative zu <see cref="T:System.Threading.Semaphore" />, die die Anzahl der Threads beschränkt, die gleichzeitig auf eine Ressource oder einen Ressourcenpool zugreifen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semaphoren sind zwei Typen: lokale Semaphore und benanntes Semaphore. Das erstere ist für eine app lokal. Letzteres ist im gesamten Betriebssystem sichtbar und eignet sich für die prozessübergreifende Synchronisierung. Die <xref:System.Threading.SemaphoreSlim> ist eine einfache Alternative zu den <xref:System.Threading.Semaphore> -Klasse, die keine Windows-Kernel-Semaphore verwendet. Im Gegensatz zu den <xref:System.Threading.Semaphore> -Klasse, die <xref:System.Threading.SemaphoreSlim> Klasse unterstützt keine benannten Systemsemaphore. Sie können es als nur ein lokales Semaphor verwenden. Die <xref:System.Threading.SemaphoreSlim> Klasse ist die empfohlene Semaphor für die Synchronisierung innerhalb einer einzigen app.  
+  
+ Ein einfaches Semaphor steuert den Zugriff auf einen Pool von Ressourcen, der für Ihre Anwendung lokal ist. Wenn Sie einen Semaphor instanziieren, können Sie die maximale Anzahl von Threads angeben, die das Semaphor gleichzeitig eingeben können. Sie geben außerdem die anfängliche Anzahl von Threads, die das Semaphor gleichzeitig eingeben können. Dadurch wird die Anzahl des Semaphors definiert.  
+  
+ Die Anzahl wird wieder um eins erniedrigt jedes Mal ein Thread das Semaphor gibt, und jedes Mal erhöht, wenn ein Thread das Semaphor freigibt. Um das Semaphor eingegeben haben, ruft eine von ein Thread die <xref:System.Threading.SemaphoreSlim.Wait%2A> oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> Überladungen. Um das Semaphor freizugeben, ruft Sie eine von der <xref:System.Threading.SemaphoreSlim.Release%2A> Überladungen. Wenn die Anzahl 0 (null), und nachfolgende Aufrufe eines erreicht die `Wait` Methoden zu blockieren, bis andere Threads das Semaphor freizugeben. Wenn mehrere Threads blockiert werden, besteht keine festgelegte Reihenfolge, z. B. FIFO oder LIFO steuert, wann Threads das Semaphor.  
+  
+ Die grundlegende Struktur für Code, einen Semaphor beim Schützen von Ressourcen verwendet, wird:  
+  
+```  
+  
+' Enter semaphore by calling one of the Wait or WaitAsync methods.  
+SemaphoreSlim.Wait()  
+'   
+' Execute code protected by the semaphore.   
+'  
+SemaphoreSlim.Release()  
+  
+```  
+  
+ Wenn alle Threads das Semaphor freigegeben haben, wird die Anzahl der zulässige Höchstwert angegeben, wenn das Semaphor erstellt wurde. Die Anzahl des Semaphors steht über die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Threading.SemaphoreSlim> Klasse Thread oder Aufgabe Identität bei Aufrufen erzwingt nicht die <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.SemaphoreSlim.WaitAsync%2A>, und <xref:System.Threading.SemaphoreSlim.Release%2A> Methoden. Darüber hinaus Wenn die <xref:System.Threading.SemaphoreSlim.%23ctor%28System.Int32%29> Konstruktor wird zum Instanziieren der <xref:System.Threading.SemaphoreSlim> -Objekt, das <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft der durch den Konstruktor festgelegte Wert hinaus erhöhen kann. Es dem Programmierer ist dafür verantwortlich, stellen Sie sicher, das Aufrufe an <xref:System.Threading.SemaphoreSlim.Wait%2A> oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> Methoden werden durch Aufrufe von entsprechend gekoppelt <xref:System.Threading.SemaphoreSlim.Release%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Semaphore mit einer maximalen Anzahl von drei Threads und eine anfängliche Anzahl von Threads an. Das Beispiel beginnt fünf Tasks, die alle für das Semaphor warten blockieren. Der Hauptthread Ruft die <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29> methodenüberladung, um den Zähler des Semaphors auf das Maximum zu erhöhen, wozu die drei Aufgaben in das Semaphor ermöglicht. Jedes Mal, wenn das Semaphor freigegeben wird, wird die vorherige Anzahl des Semaphors angezeigt. Konsole Nachrichten nachverfolgen Semaphore verwenden. Das simulierte Intervall wird für jeden Thread, um die Ausgabe leichter lesbar zu machen etwas erhöht.  
+  
+ [!code-csharp[System.Threading.SemaphoreSlim#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.semaphoreslim/cs/example.cs#1)]
+ [!code-vb[System.Threading.SemaphoreSlim#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.semaphoreslim/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen und geschützten Member der <see cref="T:System.Threading.SemaphoreSlim" /> sind threadsicher und können mit Ausnahme der gleichzeitig von mehreren Threads verwendet werden <see cref="M:System.Threading.SemaphoreSlim.Dispose" />, dieser muss verwendet werden, nur, wenn alle Vorgänge für die <see cref="T:System.Threading.SemaphoreSlim" /> abgeschlossen haben.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SemaphoreSlim (int initialCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">Die anfängliche Anzahl von Anforderungen für das Semaphor, die gleichzeitig gewährt werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.SemaphoreSlim" />-Klasse und gibt die ursprüngliche Anzahl von Anforderungen an, die gleichzeitig gewährt werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `initialCount` Parameter definiert die Anzahl gleichzeitiger Anforderungen in das Semaphor, die gewährt werden können. Allerdings definiert er nicht die maximale Anzahl von Anforderungen, die gleichzeitig gewährt werden können. Ein <xref:System.Threading.SemaphoreSlim> Objekt instanziiert, indem das Aufrufen dieses Konstruktors löst keine <xref:System.Threading.SemaphoreFullException> -Ausnahme aus, wenn ein Aufruf der <xref:System.Threading.SemaphoreSlim.Release%2A> Methode erhöht den Wert des der <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft hinter `initialCount`. Dies geschieht, wenn weitere Aufrufe <xref:System.Threading.SemaphoreSlim.Release%2A> Methoden als dort <xref:System.Threading.SemaphoreSlim.Wait%2A> oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> Methoden. Rufen Sie zum Festlegen der maximalen Anzahl gleichzeitiger Anforderungen in das Semaphor, die gewährt werden können, die <xref:System.Threading.SemaphoreSlim.%23ctor%28System.Int32%2CSystem.Int32%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="initialCount" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SemaphoreSlim (int initialCount, int maxCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount, int32 maxCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+        <Parameter Name="maxCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">Die anfängliche Anzahl von Anforderungen für das Semaphor, die gleichzeitig gewährt werden können.</param>
+        <param name="maxCount">Die maximale Anzahl von Anforderungen für das Semaphor, die gleichzeitig gewährt werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.SemaphoreSlim" />-Klasse und gibt die ursprüngliche sowie die maximale Anzahl von Anforderungen an, die gleichzeitig gewährt werden können.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="initialCount" />ist kleiner als 0 (null) oder <paramref name="initialCount" /> ist größer als <paramref name="maxCount" />, oder <paramref name="maxCount" /> ist gleich oder kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableWaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle AvailableWaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle AvailableWaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SemaphoreSlim.AvailableWaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Threading.WaitHandle" /> zurück, das verwendet werden kann um auf die Semaphore zu warten.</summary>
+        <value>Ein <see cref="T:System.Threading.WaitHandle" />, das verwendet werden kann um auf die Semaphore zu warten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft nur, wenn Sie auf einen SemaphoreSlim zusammen mit anderen kernelbasierten Synchronisierungsobjekten mit dem gleichen WaitHandle zu warten müssen. Ein erfolgreicher Wartevorgang für die <xref:System.Threading.SemaphoreSlim.AvailableWaitHandle%2A> bedeutet eine erfolgreiche warten nicht auf die <xref:System.Threading.SemaphoreSlim> selbst, noch wird die Anzahl des Semaphors dekrementiert. Nachdem das verfügbare Wait-Handle signalisiert wird, sollten Sie warten, auf die <xref:System.Threading.SemaphoreSlim> speziell.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Threading.SemaphoreSlim" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentCount">
+      <MemberSignature Language="C#" Value="public int CurrentCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentCount" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SemaphoreSlim.CurrentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der verbleibenden Threads ab, für die das Eintreten in das <see cref="T:System.Threading.SemaphoreSlim" />-Objekt zulässig ist.</summary>
+        <value>Die Anzahl der verbleibenden Threads, für die das Eintreten in das Semaphor zulässig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Anfangswert von der <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft wird festgelegt, durch den Aufruf der <xref:System.Threading.SemaphoreSlim.%23ctor%2A> Klassenkonstruktor. Es wird entsprechend dekrementiert durch jeden Aufruf der <xref:System.Threading.SemaphoreSlim.Wait%2A> oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> -Methode, und inkrementiert durch jeden Aufruf der <xref:System.Threading.SemaphoreSlim.Release%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Threading.SemaphoreSlim" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:System.Threading.SemaphoreSlim> nicht mehr benötigen. Die `Dispose`-Methode bewirkt, dass <xref:System.Threading.SemaphoreSlim> nicht mehr verwendet werden kann. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:System.Threading.SemaphoreSlim> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Threading.SemaphoreSlim> belegt wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:System.Threading.SemaphoreSlim> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Threading.SemaphoreSlim>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Threading.SemaphoreSlim" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den Großteil der Mitglieder <xref:System.Threading.SemaphoreSlim>, <xref:System.Threading.SemaphoreSlim.Dispose%2A> ist nicht threadsicher und können nicht gleichzeitig mit anderen Mitgliedern dieser Instanz verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="public int Release ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Release() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Release" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das <see cref="T:System.Threading.SemaphoreSlim" />-Objekt einmal frei.</summary>
+        <returns>Die vorherige Anzahl von <see cref="T:System.Threading.SemaphoreSlim" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Aufruf der <xref:System.Threading.SemaphoreSlim.Release> Methode inkrementiert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft um eins. Wenn der Wert von der <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft ist 0 (null), bevor diese Methode aufgerufen wird, kann die Methode auch einen Thread oder Aufgabe, die durch einen Aufruf blockiert die <xref:System.Threading.SemaphoreSlim.Wait%2A> oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> Methode, um das Semaphor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.Threading.SemaphoreFullException">Die <see cref="T:System.Threading.SemaphoreSlim" /> hat bereits die maximale Größe erreicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="public int Release (int releaseCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Release(int32 releaseCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Release(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="releaseCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="releaseCount">Die Anzahl von Malen, die das Semaphor freigegeben werden soll.</param>
+        <summary>Gibt das <see cref="T:System.Threading.SemaphoreSlim" />-Objekt eine festgelegte Anzahl von Malen frei.</summary>
+        <returns>Die vorherige Anzahl von <see cref="T:System.Threading.SemaphoreSlim" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Aufruf der <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29> Methode inkrementiert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft `releaseCount`. Wenn der Wert des der <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft ist 0 (null), bevor diese Methode aufgerufen wird, wird die Methode auch ermöglicht `releaseCount` Threads oder Aufgaben, die durch einen Aufruf blockiert die <xref:System.Threading.SemaphoreSlim.Wait%2A> oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> Methode, um das Semaphor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="releaseCount" /> ist kleiner als 1.</exception>
+        <exception cref="T:System.Threading.SemaphoreFullException">Die <see cref="T:System.Threading.SemaphoreSlim" /> hat bereits die maximale Größe erreicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public void Wait ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Wait() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Blockiert den aktuellen Thread, bis er in <see cref="T:System.Threading.SemaphoreSlim" /> eintreten kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Thread oder eine Aufgabe in das Semaphor kann es verringert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft um eins.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl der Millisekunden, die gewartet wird, <see cref="F:System.Threading.Timeout.Infinite" />(1), um unbegrenzt zu warten, oder 0 (null), um den Status des Wait-Handle zu testen und kehrt sofort zurück.</param>
+        <summary>Blockiert den aktuellen Thread, bis er in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht werden kann, wobei das Timeout mit einer 32-Bit-Ganzzahl mit Vorzeichen angegeben wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der aktuelle Thread erfolgreich in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks 
+Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+ 
+Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück.
+
+Wenn ein Thread oder eine Aufgabe in das Semaphor kann es verringert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft um eins.  
+  
+Wenn ein Thread oder eine Aufgabe blockiert wird, beim Aufrufen von <xref:System.Threading.SemaphoreSlim.Wait%28System.Int32%29> und das Timeoutintervall gemäß `millisecondsTimeout` läuft ab:
+
+- Der Thread oder der Task Semaphor nicht das.
+- Die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft nicht verringert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />ist eine negative Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public void Wait (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Wait(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />-Token.</param>
+        <summary>Blockiert den aktuellen Thread, bis er in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht werden kann, wobei ein <see cref="T:System.Threading.CancellationToken" /> überwacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Thread oder eine Aufgabe in das Semaphor kann es verringert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft um eins.  
+  
+ Wenn `cancellationToken` wird abgebrochen, den Thread oder den Task nicht in das Semaphor, und die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft nicht verringert. Stattdessen löst die Methode eine <xref:System.OperationCanceledException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Ein <see cref="T:System.TimeSpan" /> stellt die Anzahl der Millisekunden, die gewartet wird, eine <see cref="T:System.TimeSpan" /> , die-1 Millisekunden zum unendlichen, warten darstellt oder eine <see cref="T:System.TimeSpan" /> , 0 Millisekunden für das Wait-Handle zu testen und kehrt sofort zurück darstellt.</param>
+        <summary>Blockiert den aktuellen Thread, bis er in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht werden kann, wobei ein <see cref="T:System.TimeSpan" /> zum Angeben des Timeouts verwendet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der aktuelle Thread erfolgreich in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+ 
+Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück. 
+ 
+Wenn ein Thread oder eine Aufgabe in das Semaphor kann es verringert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft um eins.  
+  
+Wenn ein Thread oder eine Aufgabe blockiert wird, beim Aufrufen von <xref:System.Threading.SemaphoreSlim.Wait%28System.TimeSpan%29> und das Timeoutintervall gemäß `millisecondsTimeout` läuft ab:
+
+- Der Thread oder der Task Semaphor nicht das.
+- Die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft nicht verringert.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />ist eine negative Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die SemaphoreSlim-Instanz wurde verworfen<paramref name="." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (int millisecondsTimeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(int32 millisecondsTimeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl der Millisekunden, die gewartet wird, <see cref="F:System.Threading.Timeout.Infinite" />(1), um unbegrenzt zu warten, oder 0 (null), um den Status des Wait-Handle zu testen und kehrt sofort zurück.</param>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />.</param>
+        <summary>Blockiert den aktuellen Thread, bis er in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht werden kann, wobei eine 32-Bit-Ganzzahl mit Vorzeichen zum Angeben des Timeouts verwendet und ein <see cref="T:System.Threading.CancellationToken" /> überwacht wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der aktuelle Thread erfolgreich in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+ 
+Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück.
+
+Wenn ein Thread oder eine Aufgabe in das Semaphor kann es verringert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft um eins.  
+  
+Wenn `cancellationToken` abgebrochen wird, oder wenn ein Thread oder eine Aufgabe blockiert wird, beim Aufrufen von <xref:System.Threading.SemaphoreSlim.Wait%28System.Int32%2CSystem.Threading.CancellationToken%29> und das Timeoutintervall gemäß `millisecondsTimeout` läuft ab:
+
+- Der Thread oder der Task Semaphor nicht das.
+- Die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft nicht verringert.  
+ 
+Wenn `cancellationToken` wird abgebrochen, löst die Methode eine <xref:System.OperationCanceledException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />ist eine negative Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.SemaphoreSlim" /> -Instanz wurde verworfen, oder die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Ein <see cref="T:System.TimeSpan" /> stellt die Anzahl der Millisekunden, die gewartet wird, eine <see cref="T:System.TimeSpan" /> , die-1 Millisekunden zum unendlichen, warten darstellt oder eine <see cref="T:System.TimeSpan" /> , 0 Millisekunden für das Wait-Handle zu testen und kehrt sofort zurück darstellt.</param>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />.</param>
+        <summary>Blockiert den aktuellen Thread, bis er in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht werden kann, wobei eine <see cref="T:System.TimeSpan" /> den Timeout angibt und ein <see cref="T:System.Threading.CancellationToken" /> überwacht wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der aktuelle Thread erfolgreich in die Warteschlange von <see cref="T:System.Threading.SemaphoreSlim" /> eingereiht wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+ 
+Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück. 
+
+Wenn ein Thread oder eine Aufgabe in das Semaphor kann es verringert die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft um eins.  
+  
+Wenn `cancellationToken` abgebrochen wird, oder wenn ein Thread oder eine Aufgabe blockiert wird, beim Aufrufen von <xref:System.Threading.SemaphoreSlim.Wait%28System.TimeSpan%2CSystem.Threading.CancellationToken%29> und das Timeoutintervall gemäß `millisecondsTimeout` läuft ab:
+
+- Der Thread oder der Task Semaphor nicht das.
+- Die <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> Eigenschaft nicht verringert.  
+
+Wenn `cancellationToken` wird abgebrochen, löst die Methode eine <xref:System.OperationCanceledException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />ist eine negative Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die SemaphoreSlim-Instanz wurde verworfen<paramref name="." /><paramref name="-or-" />  
+  
+ Die <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WaitAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WaitAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wartet asynchron auf den Eintritt in <see cref="T:System.Threading.SemaphoreSlim" />.</summary>
+        <returns>Eine Aufgabe, die abgeschlossen wird, wenn das Semaphor eingegeben wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl der Millisekunden, die gewartet wird, <see cref="F:System.Threading.Timeout.Infinite" /> (1), um unbegrenzt zu warten, oder 0 (null), um den Status des Wait-Handle zu testen und kehrt sofort zurück.</param>
+        <summary>Wartet asynchron auf den Zutritt zum <see cref="T:System.Threading.SemaphoreSlim" />, wobei eine 32-Bit-Ganzzahl mit Vorzeichen zum Messen des Zeitintervalls verwendet wird.</summary>
+        <returns>Eine Aufgabe, die mit dem Ergebnis <see langword="true" /> abgeschlossen wird, wenn der aktuelle Thread erfolgreich in <see cref="T:System.Threading.SemaphoreSlim" /> gewechselt ist, andernfalls mit dem Ergebnis <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+ 
+ Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />ist eine negative Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WaitAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WaitAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />-Token.</param>
+        <summary>Wartet asynchron auf den Zutritt zum <see cref="T:System.Threading.SemaphoreSlim" />, während ein ein <see cref="T:System.Threading.CancellationToken" /> beobachtet wird.</summary>
+        <returns>Eine Aufgabe, die abgeschlossen wird, wenn das Semaphor eingegeben wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Ein <see cref="T:System.TimeSpan" /> stellt die Anzahl der Millisekunden, die gewartet wird, eine <see cref="T:System.TimeSpan" /> , die-1 Millisekunden zum unendlichen, warten darstellt oder eine <see cref="T:System.TimeSpan" /> , 0 Millisekunden für das Wait-Handle zu testen und kehrt sofort zurück darstellt.</param>
+        <summary>Wartet asynchron auf den Zutritt zum <see cref="T:System.Threading.SemaphoreSlim" /> unter Verwendung einer <see cref="T:System.TimeSpan" /> zum Messen des Zeitintervalls.</summary>
+        <returns>Eine Aufgabe, die mit dem Ergebnis <see langword="true" /> abgeschlossen wird, wenn der aktuelle Thread erfolgreich in <see cref="T:System.Threading.SemaphoreSlim" /> gewechselt ist, andernfalls mit dem Ergebnis <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+ 
+ Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />ist eine negative Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (int millisecondsTimeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(int32 millisecondsTimeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl der Millisekunden, die gewartet wird, <see cref="F:System.Threading.Timeout.Infinite" /> (1), um unbegrenzt zu warten, oder 0 (null), um den Status des Wait-Handle zu testen und kehrt sofort zurück.</param>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />.</param>
+        <summary>Wartet asynchron auf den Zutritt zum <see cref="T:System.Threading.SemaphoreSlim" />, wobei eine 32-Bit-Ganzzahl mit Vorzeichen zum Messen des Zeitintervalls verwendet wird, während ein <see cref="T:System.Threading.CancellationToken" /> beobachtet wird.</summary>
+        <returns>Eine Aufgabe, die mit dem Ergebnis <see langword="true" /> abgeschlossen wird, wenn der aktuelle Thread erfolgreich in <see cref="T:System.Threading.SemaphoreSlim" /> gewechselt ist, andernfalls mit dem Ergebnis <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+ 
+ Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />ist eine Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Ein <see cref="T:System.TimeSpan" /> stellt die Anzahl der Millisekunden, die gewartet wird, eine <see cref="T:System.TimeSpan" /> , die-1 Millisekunden zum unendlichen, warten darstellt oder eine <see cref="T:System.TimeSpan" /> , 0 Millisekunden für das Wait-Handle zu testen und kehrt sofort zurück darstellt.</param>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />-Token.</param>
+        <summary>Wartet asynchron auf den Zutritt zum <see cref="T:System.Threading.SemaphoreSlim" /> unter Verwendung einer <see cref="T:System.TimeSpan" /> zum Messen des Zeitintervalls, während ein <see cref="T:System.Threading.CancellationToken" /> beobachtet wird.</summary>
+        <returns>Eine Aufgabe, die mit dem Ergebnis <see langword="true" /> abgeschlossen wird, wenn der aktuelle Thread erfolgreich in <see cref="T:System.Threading.SemaphoreSlim" /> gewechselt ist, andernfalls mit dem Ergebnis <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Timeout auf-1 Millisekunden festgelegt ist, wird die Methode unbegrenzt wartet.
+
+ Die Methode wird blockiert, wenn das Timeout auf 0 Millisekunden beträgt, festgelegt ist, nicht. Er überprüft den Status des Wait-Handle und kehrt sofort zurück. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />ist eine negative Zahl ungleich-1 zurück, die darstellt, die einen unendlichen Timeout - oder - Timeout größer als ist <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

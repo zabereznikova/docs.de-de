@@ -1,0 +1,146 @@
+<Type Name="PingException" FullName="System.Net.NetworkInformation.PingException">
+  <TypeSignature Language="C#" Value="public class PingException : InvalidOperationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PingException extends System.InvalidOperationException" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.PingException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Ping</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.InvalidOperationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Ausnahme wird ausgelöst, wenn eine <see cref="Overload:System.Net.NetworkInformation.Ping.Send" />-Methode oder eine <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" />-Methode eine Methode aufruft, die eine Ausnahme auslöst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.NetworkInformation.Ping> Klasse löst diese Ausnahme aus, um anzugeben, dass beim Senden einer Internet Control Message Protocol (ICMP) echoanforderung, eine Methode, indem aufgerufen die <xref:System.Net.NetworkInformation.Ping> Klasse hat eine nicht behandelte Ausnahme ausgelöst. Anwendungen sollten die inneren Ausnahme Überprüfen einer <xref:System.Net.NetworkInformation.PingException> -Objekt, das Problem zu identifizieren.  
+  
+ Die <xref:System.Net.NetworkInformation.Ping> Klasse löst keine diese Ausnahme aus, wenn die ICMP-Echoanfrage Grund von Fehlern im Netzwerk, eine ICMP- oder Ziel ein Fehler auftritt. Für solche Fehler die <xref:System.Net.NetworkInformation.Ping> -Klasse zurückgegeben wird ein <xref:System.Net.NetworkInformation.PingReply> Objekt mit den entsprechenden <xref:System.Net.NetworkInformation.IPStatus> Wert festgelegt wird, der <xref:System.Net.NetworkInformation.PingReply.Status%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PingException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PingException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.NetworkInformation.PingException" />-Klasse unter Verwendung der angegebenen Meldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> Eigenschaft mit dem Text in der `message` Parameter. Die <xref:System.Exception.InnerException%2A>-Eigenschaft ist auf `null` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PingException (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> , der die Kontextinformationen zur Quelle bzw. zum Ziel für diese Serialisierung angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.NetworkInformation.PingException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird aufgerufen, während der Deserialisierung eine zuvor serialisierte wiederherstellen <xref:System.Net.NetworkInformation.PingException> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PingException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PingException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.NetworkInformation.PingException" />-Klasse unter Verwendung der angegebenen Nachricht und der internen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> Eigenschaft mit dem Text in der `message` Parameter, und die <xref:System.Exception.InnerException%2A> Eigenschaft mit der `innerException` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

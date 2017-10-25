@@ -1,0 +1,553 @@
+<Type Name="CanonicalTrackedOutputFiles" FullName="Microsoft.Build.Utilities.CanonicalTrackedOutputFiles">
+  <TypeSignature Language="C#" Value="public class CanonicalTrackedOutputFiles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CanonicalTrackedOutputFiles extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Klasse ist die Datei Interpreter für .write nachverfolgen. Nachverfolgen, die in kanonische Form Canoncial .write protokolliert werden. Protokolle müssen Stamm werden, da die Ausgaben mit der Eingabe zugeordnet werden soll müssen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedOutputFiles (Microsoft.Build.Framework.ITaskItem[] tlogFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITaskItem[] tlogFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.#ctor(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="tlogFiles">Die .write. tprot-Dateien interpretiert werden sollen</param>
+        <summary>Konstruktor</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedOutputFiles (Microsoft.Build.Framework.ITask ownerTask, Microsoft.Build.Framework.ITaskItem[] tlogFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask ownerTask, class Microsoft.Build.Framework.ITaskItem[] tlogFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerTask" Type="Microsoft.Build.Framework.ITask" />
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="ownerTask">Die Aufgabe, die Datei Tracker verwendet wird</param>
+        <param name="tlogFiles">Die .write. tprot-Dateien interpretiert werden sollen</param>
+        <summary>Konstruktor</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedOutputFiles (Microsoft.Build.Framework.ITask ownerTask, Microsoft.Build.Framework.ITaskItem[] tlogFiles, bool constructOutputsFromTLogs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask ownerTask, class Microsoft.Build.Framework.ITaskItem[] tlogFiles, bool constructOutputsFromTLogs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerTask" Type="Microsoft.Build.Framework.ITask" />
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="constructOutputsFromTLogs" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ownerTask">Die Aufgabe, die Datei Tracker verwendet wird</param>
+        <param name="tlogFiles">Die .write. tprot-Dateien interpretiert werden sollen</param>
+        <param name="constructOutputsFromTLogs">Bei "true", erstellen Sie Ausgaben aus Tlog-Dateien.</param>
+        <summary>Konstruktor</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddComputedOutputForSourceRoot">
+      <MemberSignature Language="C#" Value="public void AddComputedOutputForSourceRoot (string sourceKey, string computedOutput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddComputedOutputForSourceRoot(string sourceKey, string computedOutput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.AddComputedOutputForSourceRoot(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceKey" Type="System.String" />
+        <Parameter Name="computedOutput" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceKey">Die Quelle für Ausgaben hinzufügen</param>
+        <param name="computedOutput">Die berechnete Ausgaben für diesen Quellschlüssel.</param>
+        <summary>Diese Methode fügt berechnete Ausgaben für den Schlüssel für die angegebene Quelle für die Ausgabediagramm</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddComputedOutputsForSourceRoot">
+      <MemberSignature Language="C#" Value="public void AddComputedOutputsForSourceRoot (string sourceKey, Microsoft.Build.Framework.ITaskItem[] computedOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddComputedOutputsForSourceRoot(string sourceKey, class Microsoft.Build.Framework.ITaskItem[] computedOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.AddComputedOutputsForSourceRoot(System.String,Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceKey" Type="System.String" />
+        <Parameter Name="computedOutputs" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="sourceKey">Die Quelle für Ausgaben hinzufügen.</param>
+        <param name="computedOutputs">Die berechnete Ausgaben für diesen Quellschlüssel.</param>
+        <summary>Diese Methode fügt berechnete Ausgaben für den Schlüssel für die angegebene Quelle für die Ausgabediagramm an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddComputedOutputsForSourceRoot">
+      <MemberSignature Language="C#" Value="public void AddComputedOutputsForSourceRoot (string sourceKey, string[] computedOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddComputedOutputsForSourceRoot(string sourceKey, string[] computedOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.AddComputedOutputsForSourceRoot(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceKey" Type="System.String" />
+        <Parameter Name="computedOutputs" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="sourceKey">Die Quelle für Ausgaben hinzufügen.</param>
+        <param name="computedOutputs">Die berechnete Ausgaben für diesen Quellschlüssel.</param>
+        <summary>Diese Methode fügt berechnete Ausgaben für den Schlüssel für die angegebene Quelle für die Ausgabediagramm an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyTable">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.Dictionary&lt;string,DateTime&gt;&gt; DependencyTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.Dictionary`2&lt;string, valuetype System.DateTime&gt;&gt; DependencyTable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.DependencyTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Collections.Generic.Dictionary&lt;System.String,System.DateTime&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Abhängigkeitstabelle ab.</summary>
+        <value>Gibt die Abhängigkeitstabelle zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputsForNonCompositeSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] OutputsForNonCompositeSource (params Microsoft.Build.Framework.ITaskItem[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ITaskItem[] OutputsForNonCompositeSource(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.OutputsForNonCompositeSource(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="sources">Die Quellen aus, die Ausgaben für Suchen</param>
+        <summary>Diese Methode bestimmt die Ausgaben für ein Quellstamm (wie der Inhalt einer rooting-Marker)</summary>
+        <returns>Array von Ausgaben für die Quelle</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputsForSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] OutputsForSource (params Microsoft.Build.Framework.ITaskItem[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ITaskItem[] OutputsForSource(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.OutputsForSource(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="sources">Die Quellen für die Ausgaben gesucht.</param>
+        <summary>Diese Methode bestimmt die Ausgaben für ein Quellstamm (wie der Inhalt einer rooting-Marker).</summary>
+        <returns>Array von Ausgaben für die Quelle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputsForSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] OutputsForSource (Microsoft.Build.Framework.ITaskItem[] sources, bool searchForSubRootsInCompositeRootingMarkers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ITaskItem[] OutputsForSource(class Microsoft.Build.Framework.ITaskItem[] sources, bool searchForSubRootsInCompositeRootingMarkers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.OutputsForSource(Microsoft.Build.Framework.ITaskItem[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="searchForSubRootsInCompositeRootingMarkers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sources">Die Quellen für die Ausgaben gesucht.</param>
+        <param name="searchForSubRootsInCompositeRootingMarkers">Bei "true", suchen Sie zusammengesetzte rooting-Marker für Unterstämmen.</param>
+        <summary>Diese Methode bestimmt die Ausgaben für einen Quellstamm (wie der Inhalt einer rooting-Marker) optional Suche zusammengesetzte rooting Marker für Unterstämmen, die möglicherweise enthalten die Ausgabedateien.</summary>
+        <returns>Gibt ein Array von Ausgaben für die Quelle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quelle, die aus dem Diagramm entfernt werden soll</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem[] source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem[] source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quellen, die aus dem Diagramm entfernt werden soll</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem source, Microsoft.Build.Framework.ITaskItem correspondingOutput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem source, class Microsoft.Build.Framework.ITaskItem correspondingOutput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="correspondingOutput" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quelle, die aus dem Diagramm entfernt werden soll</param>
+        <param name="correspondingOutput">Ausgaben, die den Quellen (verwendet für die Verarbeitung der gleichen Datei) entsprechen.</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem[] source, Microsoft.Build.Framework.ITaskItem[] correspondingOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem[] source, class Microsoft.Build.Framework.ITaskItem[] correspondingOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="correspondingOutputs" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quellen, die aus dem Diagramm entfernt werden soll</param>
+        <param name="correspondingOutputs">Ausgaben, die den Quellen (verwendet für die Verarbeitung der gleichen Datei) entsprechen.</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependencyFromEntry">
+      <MemberSignature Language="C#" Value="public void RemoveDependencyFromEntry (Microsoft.Build.Framework.ITaskItem source, Microsoft.Build.Framework.ITaskItem dependencyToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependencyFromEntry(class Microsoft.Build.Framework.ITaskItem source, class Microsoft.Build.Framework.ITaskItem dependencyToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="dependencyToRemove" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quelle, die aus dem Diagramm entfernt werden soll</param>
+        <param name="dependencyToRemove">Die Abhängigkeit zu entfernen.</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für die angegebene Quelle und die entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependencyFromEntry">
+      <MemberSignature Language="C#" Value="public void RemoveDependencyFromEntry (Microsoft.Build.Framework.ITaskItem[] sources, Microsoft.Build.Framework.ITaskItem dependencyToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependencyFromEntry(class Microsoft.Build.Framework.ITaskItem[] sources, class Microsoft.Build.Framework.ITaskItem dependencyToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="dependencyToRemove" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="sources">Quellen, die aus dem Diagramm entfernt werden soll</param>
+        <param name="dependencyToRemove">Die Abhängigkeit zu entfernen.</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEntriesForSource">
+      <MemberSignature Language="C#" Value="public void RemoveEntriesForSource (Microsoft.Build.Framework.ITaskItem source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntriesForSource(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quellen, die aus dem Diagramm entfernt werden soll</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEntriesForSource">
+      <MemberSignature Language="C#" Value="public void RemoveEntriesForSource (Microsoft.Build.Framework.ITaskItem[] source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntriesForSource(class Microsoft.Build.Framework.ITaskItem[] source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quellen, die aus dem Diagramm entfernt werden soll</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEntriesForSource">
+      <MemberSignature Language="C#" Value="public void RemoveEntriesForSource (Microsoft.Build.Framework.ITaskItem source, Microsoft.Build.Framework.ITaskItem correspondingOutput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntriesForSource(class Microsoft.Build.Framework.ITaskItem source, class Microsoft.Build.Framework.ITaskItem correspondingOutput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="correspondingOutput" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quellen, die aus dem Diagramm entfernt werden soll</param>
+        <param name="correspondingOutput">Ausgaben, die den Quellen (verwendet für die Verarbeitung der gleichen Datei) entsprechen.</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEntriesForSource">
+      <MemberSignature Language="C#" Value="public void RemoveEntriesForSource (Microsoft.Build.Framework.ITaskItem[] source, Microsoft.Build.Framework.ITaskItem[] correspondingOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntriesForSource(class Microsoft.Build.Framework.ITaskItem[] source, class Microsoft.Build.Framework.ITaskItem[] correspondingOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="correspondingOutputs" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quellen, die aus dem Diagramm entfernt werden soll</param>
+        <param name="correspondingOutputs">Ausgaben, die zu die Quellen (verwendet für die Verarbeitung der gleichen Datei) entsprechen</param>
+        <summary>Entfernen Sie die Ausgabe-Graph-Einträge für den angegebenen Quellen und entsprechenden Ausgaben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveOutputForSourceRoot">
+      <MemberSignature Language="C#" Value="public bool RemoveOutputForSourceRoot (string sourceRoot, string outputPathToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveOutputForSourceRoot(string sourceRoot, string outputPathToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveOutputForSourceRoot(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceRoot" Type="System.String" />
+        <Parameter Name="outputPathToRemove" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceRoot">Der Quellstamm.</param>
+        <param name="outputPathToRemove">Der Ausgabepfad entfernt werden soll</param>
+        <summary>Entfernt die angegebene Ausgabe aus dem Abhängigkeitsdiagramm für die angegebene Quelldatei an.</summary>
+        <returns>"Wahr" zurückgegeben, der den Ausgabepfad wurde entfernt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRootsWithSharedOutputs">
+      <MemberSignature Language="C#" Value="public string[] RemoveRootsWithSharedOutputs (Microsoft.Build.Framework.ITaskItem[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] RemoveRootsWithSharedOutputs(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.RemoveRootsWithSharedOutputs(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="sources">Der Satz von Datenquellen, die die rooting Marker entfernt werden soll.</param>
+        <summary>Entfernt alle Stammelemente, die dieselbe Ausgabe wie die rooting aus das Abhängigkeitsdiagramm gemeinsam nutzen.</summary>
+        <returns>Ein Array von rooting Marker aus, die entfernt wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveTlog">
+      <MemberSignature Language="C#" Value="public void SaveTlog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveTlog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.SaveTlog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode schreibt die Nachverfolgungsprotokolle erneut aus der aktuellen Ausgabetabelle. Neue Einträge werden verfolgt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveTlog">
+      <MemberSignature Language="C#" Value="public void SaveTlog (Microsoft.Build.Utilities.DependencyFilter includeInTLog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveTlog(class Microsoft.Build.Utilities.DependencyFilter includeInTLog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedOutputFiles.SaveTlog(Microsoft.Build.Utilities.DependencyFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeInTLog" Type="Microsoft.Build.Utilities.DependencyFilter" />
+      </Parameters>
+      <Docs>
+        <param name="includeInTLog">Der Filter für die Abhängigkeitseigenschaft.</param>
+        <summary>Diese Methode schreibt die Nachverfolgungsprotokolle erneut aus der aktuellen Ausgabetabelle. Neue Einträge werden verfolgt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

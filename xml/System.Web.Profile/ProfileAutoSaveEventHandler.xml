@@ -1,0 +1,46 @@
+<Type Name="ProfileAutoSaveEventHandler" FullName="System.Web.Profile.ProfileAutoSaveEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ProfileAutoSaveEventHandler(object sender, ProfileAutoSaveEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileAutoSaveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileAutoSaveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Profile.ProfileAutoSaveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die <see cref="T:System.Web.Profile.ProfileModule" /> ausgelösten der <see cref="E:System.Web.Profile.ProfileModule.ProfileAutoSaving" /> Ereignis.</param>
+    <param name="e">Ein <see cref="T:System.Web.Profile.ProfileAutoSaveEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Web.Profile.ProfileModule.ProfileAutoSaving" />-Ereignisses eines <see cref="T:System.Web.Profile.ProfileModule" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileAutoSaveEventHandler> Delegat wird definiert, für die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> -Ereignis für die <xref:System.Web.Profile.ProfileModule> Klasse. Sie erreichen die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> -Ereignis für die <xref:System.Web.Profile.ProfileModule> -Klasse in der Datei "Global.asax", damit Ihre ASP.NET-Anwendung wie im Beispiel in diesem Thema gezeigt. Die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis wird am Ende der seitenausführung ausgelöst, wenn die <xref:System.Web.Profile.ProfileManager.AutomaticSaveEnabled%2A> Eigenschaft ist `true`.  
+  
+ Die <xref:System.Configuration.SettingsBase.Save%2A> Methode bestimmt automatisch, ob Eigenschaften, primitive Typen, Zeichenfolgen, bestehend aus oder <xref:System.DateTime> Objekte geändert wurden, indem Sie überprüfen die <xref:System.Configuration.SettingsPropertyValue.IsDirty%2A> Eigenschaftswert für die einzelnen <xref:System.Configuration.SettingsPropertyValue> im Benutzerprofil. Allerdings die <xref:System.Configuration.SettingsBase.Save%2A> Methode kann nicht explizit zu ermitteln, ob eine benutzerdefinierte Klasse geändert hat. Sie können behandeln die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis, um zu bestimmen, ob ein benutzerdefiniertes Objekt geändert wurde und das automatische Speichern geänderter Objekte fort, und die automatische Speicheraktion Abbrechen, wenn keine Objekte geändert wurden.  
+  
+ Legen Sie zum Abbrechen des automatischen Profile Speichervorgang der <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> Eigenschaft, um `false` in der <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis; andernfalls festgelegt die <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> Eigenschaft `true`.  
+  
+ Möglicherweise gibt es mehrere Abonnenten für die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis. Die <xref:System.Web.Profile.ProfileModule> wird verwendet den letzten Wert, der die <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> Eigenschaft auf festgelegt ist. Es wird daher empfohlen, dass Sie explizit festlegen, die <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> Eigenschaft in der <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis, unabhängig davon, ob Sie Abbrechen oder fortsetzen das automatische Speichern, wie Sie möglicherweise den von einem früheren Abonnenten festgelegten Wert überschreiben müssen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> Ereignis in der Datei "Global.asax" für eine ASP.NET-Anwendung enthalten.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager.ProfileAutoSaving#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.ProfileAutoSaving/CS/global.asax#11)]
+ [!code-vb[System.Web.Profile.ProfileManager.ProfileAutoSaving#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.ProfileAutoSaving/VB/global.asax#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

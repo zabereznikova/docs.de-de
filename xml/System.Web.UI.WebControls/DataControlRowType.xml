@@ -1,0 +1,131 @@
+<Type Name="DataControlRowType" FullName="System.Web.UI.WebControls.DataControlRowType">
+  <TypeSignature Language="C#" Value="public enum DataControlRowType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataControlRowType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlRowType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Funktion einer Zeile in einem Steuerelement, z. B. eine <see cref="T:System.Web.UI.WebControls.DetailsView" /> oder <see cref="T:System.Web.UI.WebControls.GridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlRowType> Enumeration gibt die Funktion von Zeilen in einem Datensteuerelement. Es dient der <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView> Steuerelemente Zeilen, die Daten anzeigen von Zeilen, die andere Benutzer anzeigen unterschieden Schnittstellenelemente (UI), z. B. eine Kopfzeile, Zeilentrennzeichen oder Pagerschaltflächen.  
+  
+ Können Sie die <xref:System.Web.UI.WebControls.DataControlRowType> identifiziert den Typ der Enumeration eine <xref:System.Web.UI.WebControls.GridViewRow> oder <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt, wenn Sie Durchlaufen einer <xref:System.Web.UI.WebControls.GridViewRowCollection> oder <xref:System.Web.UI.WebControls.DetailsViewRowCollection> Auflistung. Wenn Sie ein Steuerelement, das Zeilen erstellt schreiben, können Sie die <xref:System.Web.UI.WebControls.DataControlRowType> Enumeration, um die Funktion verschiedener Zeilen im Steuerelement zu identifizieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataControlRowType> Enumeration zum Überprüfen des Typs einer Zeile, bei der Arbeit mit einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Der `AuthorsGridView_RowCreated` Methode wird sichergestellt, dass der <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.LinkButton> Steuerelement ist eindeutig für alle Datenzeilen in der <xref:System.Web.UI.WebControls.GridView> -Steuerelement, so, dass wenn einer Zeile <xref:System.Web.UI.WebControls.LinkButton> Steuerelement geklickt wird, korrekt identifiziert werden können.  
+  
+ [!code-aspx-csharp[GridViewCommandEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewCommandEventArgs/CS/gridviewcommandeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewCommandEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewCommandEventArgs/VB/gridviewcommandeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataRow">
+      <MemberSignature Language="C#" Value="DataRow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType DataRow = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.DataRow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Datenzeile ein Steuerelement. Nur <see cref="F:System.Web.UI.WebControls.DataControlRowType.DataRow" /> Zeilen Daten gebunden werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyDataRow">
+      <MemberSignature Language="C#" Value="EmptyDataRow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType EmptyDataRow = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.EmptyDataRow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die leere Zeile eines datengebundenen Steuerelements. Die leere Zeile wird angezeigt, wenn das datengebundene Steuerelement keine Einträge zum Anzeigen besitzt und die <see langword="EmptyDataTemplate" /> Vorlage ist nicht <see langword="null" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Footer">
+      <MemberSignature Language="C#" Value="Footer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Footer = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Footer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Fußzeile eines Steuerelements. Fußzeile können nicht an Daten gebunden werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="Header" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Header = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Header" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Kopfzeile eines Steuerelements. Kopfzeilen können nicht an Daten gebunden werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pager">
+      <MemberSignature Language="C#" Value="Pager" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Pager = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Pager" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeile, in dem Pagerschaltflächen oder einem Pagersteuerelement angezeigt. Pagerzeilen können nicht an Daten gebunden werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Separator">
+      <MemberSignature Language="C#" Value="Separator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Separator = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeilentrennzeichen. Zeilentrennzeichen können nicht an Daten gebunden werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

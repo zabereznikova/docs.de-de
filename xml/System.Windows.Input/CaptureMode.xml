@@ -1,0 +1,75 @@
+<Type Name="CaptureMode" FullName="System.Windows.Input.CaptureMode">
+  <TypeSignature Language="C#" Value="public enum CaptureMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CaptureMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.CaptureMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die Richtlinien für die Erfassung der Maus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Input.CaptureMode> ist festgelegt auf Element, Mauseingaben aufzufangen angewendet wird, nur für das Element, das die Maus erfasst hat.  
+  
+ Wenn <xref:System.Windows.Input.CaptureMode.Element> ist Teilstruktur festgelegt ist, auf das Element, das Mauseingaben aufzufangen oder einer seiner untergeordneten Elemente verfügt, wenn der Mauszeiger über das untergeordnete Element befindet, Mauseingaben aufzufangen angewendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="Element" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.CaptureMode Element = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.CaptureMode.Element" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.CaptureMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfasst Mauseingaben wird auf ein einzelnes Element angewendet.  Mauseingabe wechselt zu dem aufgezeichneten Element.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.CaptureMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.CaptureMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.CaptureMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Mauseingaben aufzufangen.  Mauseingabe wechselt zu dem Element unter der Maus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SubTree">
+      <MemberSignature Language="C#" Value="SubTree" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.CaptureMode SubTree = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.CaptureMode.SubTree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.CaptureMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfasst Mauseingaben wird auf eine Unterstruktur von Elementen angewendet.  Wenn die Maus über ein untergeordnetes Element eines Elements mit der Erfassung befindet, wird dem untergeordneten Element Mauseingabe gesendet.  Andernfalls wird die Mauseingabe auf das Element mit Mauseingaben aufzufangen gesendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

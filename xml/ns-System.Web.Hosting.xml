@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Hosting">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Hosting" /> -Namespace stellt die Funktionalität zum Hosten von ASP.NET-Anwendungen von verwalteten Anwendungen außerhalb der Microsoft Internet Information Services (IIS) bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,353 @@
+<Type Name="DataTrigger" FullName="System.Windows.DataTrigger">
+  <TypeSignature Language="C#" Value="public class DataTrigger : System.Windows.TriggerBase, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataTrigger extends System.Windows.TriggerBase implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.TriggerBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Setters")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.XamlSetMarkupExtension("ReceiveMarkupExtension")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Trigger, der Eigenschaftswerte anwendet oder Aktionen ausführt, wenn die gebundenen Daten eine angegebene Bedingung erfüllt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, und <xref:System.Windows.DataTemplate> alle verfügen über eine Auflistung von Triggern. Ein <xref:System.Windows.DataTrigger> können Sie Eigenschaftswerte festlegen, wenn der Eigenschaftswert des Datenobjekts ein angegebenes übereinstimmt <xref:System.Windows.Condition.Value%2A>. Angenommen, wenn Sie eine Liste von anzeigen `Employee` Objekte aufweist, sollten Sie die Vordergrundfarbe unterscheiden basierend auf einzelnen `Employee's` aktueller Anwesenheit. (Z. B. `Employees` , die sich aktuell in Urlaub sind mit einem violetten Vordergrund angezeigt werden.) In einigen Szenarien ist es möglicherweise besser geeignet, um einen Konverter erstellen oder verwenden Sie eine <xref:System.Windows.Controls.DataTemplateSelector>. Weitere Informationen finden Sie unter der [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ Beachten Sie, dass Sie beide angeben können, müssen die <xref:System.Windows.DataTrigger.Binding%2A> und <xref:System.Windows.DataTrigger.Value%2A> Eigenschaften auf eine <xref:System.Windows.DataTrigger> für den Datentrigger sinnvoll ist. Wenn eine oder beide der Eigenschaften nicht angegeben werden, wird eine Ausnahme ausgelöst.  
+  
+ Die <xref:System.Windows.DataTrigger.Setters%2A> Eigenschaft von einem <xref:System.Windows.DataTrigger> Objekt kann nur bestehen <xref:System.Windows.Setter> Objekte. Hinzufügen einer <xref:System.Windows.Setter> untergeordnetes Element einer <xref:System.Windows.DataTrigger> Objekt implizit hinzugefügt der <xref:System.Windows.SetterBaseCollection> für die <xref:System.Windows.DataTrigger> Objekt. <xref:System.Windows.EventSetter>Objekte werden nicht unterstützt. nur <xref:System.Windows.Style.Setters%2A?displayProperty=nameWithType> unterstützt <xref:System.Windows.EventSetter> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> von der <xref:System.Windows.Controls.ListBox> gebunden ist *stellen*, wird ein <xref:System.Collections.ObjectModel.ObservableCollection%601> von *Stelle* Objekte. *Ort* Objekte verfügen über Eigenschaften *Namen* und *Zustand*.  
+  
+ Jede <xref:System.Windows.Controls.ListBoxItem> von der <xref:System.Windows.Controls.ListBox> zeigt eine *Stelle* Objekt. Die <xref:System.Windows.Style> im Beispiel wird angewendet auf die einzelnen <xref:System.Windows.Controls.ListBoxItem>.  
+  
+ Die <xref:System.Windows.DataTrigger> angegeben ist, dass wenn der *Zustand* von der *Ort* Datenelement ist "WA" und dann den Vordergrund des entsprechenden <xref:System.Windows.Controls.ListBoxItem> auf Rot festgelegt wird.  
+  
+ [!code-xaml[DataTrigger#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTrigger/CSharp/Window1.xaml#1)]  
+  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.DataTrigger>, <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion, und ein <xref:System.Windows.Media.Animation.Storyboard> auf eine Eigenschaft animiert werden soll, wenn gebundene Daten, die eine angegebene Bedingung erfüllt. Das Beispiel zeigt die Inventurinformationen in einem <xref:System.Windows.Controls.ListBox> Steuerelement. Verwendet eine <xref:System.Windows.DataTrigger> zum Animieren der <xref:System.Windows.UIElement.Opacity%2A> von jeder <xref:System.Windows.Controls.ListBoxItem> , enthält eine Out-of-Stock-Buch.  
+  
+ [!code-xaml[AnimatePropertyStoryboards#GraphicsMMDataTriggerStoryboardWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/DataTriggerStoryboardExample.xaml#graphicsmmdatatriggerstoryboardwholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTrigger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DataTrigger" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingBase Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataTrigger.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindung ab, die den Eigenschaftswert für das Datenobjekt erzeugt, bzw. legt diese fest.</summary>
+        <value>Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eigenschaftswert, der von dieser Bindung erzeugten mit dem angegebenen Wert verglichen wird die <xref:System.Windows.DataTrigger.Value%2A> Eigenschaft. Konvertiert den Typ des Werts der Bindung (sofern möglich), dass der erste Wert ist, und klicken Sie dann die beiden Werte sind einem Vergleich unter Verwendung der `Object.Equals` Methode. Wenn die beiden Werte gleich sind, werden die zugeordneten Aktionen oder Setter angewendet.  
+  
+ Eine Bindung erstellen und verwenden Sie die <xref:System.Windows.Data.Binding.Path%2A> Eigenschaft zum Binden an eine Eigenschaft eines bestimmten Objekts (das Bindungsquellobjekt). Z. B. Binden an die *Priorität* Eigenschaft von einem *Aufgabe*. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Beachten Sie, dass Sie beide angeben können, müssen die <xref:System.Windows.DataTrigger.Binding%2A> und <xref:System.Windows.DataTrigger.Value%2A> Eigenschaften auf eine <xref:System.Windows.DataTrigger> für den Datentrigger sinnvoll ist. Wenn eine oder beide der Eigenschaften nicht festgelegt werden, wird eine Ausnahme ausgelöst.  
+  
+<a name="xamlAttributeUsage_PriorityBinding"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="{Binding  declaration}"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_Binding"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Binding>  
+    <Binding …/>  
+  </object.Binding>  
+</object>  
+```  
+  
+<a name="xamlValues_PriorityBinding"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *declaration*  
+ NULL oder mehr attributzuweisung Klauseln durch Kommas (,) getrennt. Finden Sie unter [Markuperweiterung binden](~/docs/framework/wpf/advanced/binding-markup-extension.md) für Weitere Informationen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.DataTrigger> legt die <xref:System.Windows.Controls.Border.BorderBrush%2A> des Elements mit dem Namen `border` auf `Yellow` Wenn die `TaskType` Eigenschaft ist `TaskType.Home`.  
+  
+ [!code-xaml[DataTemplatingIntro#DT](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#dt)]  
+[!code-xaml[DataTemplatingIntro#DataTrigger](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#datatrigger)]  
+[!code-xaml[DataTemplatingIntro#AddingMore2](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#addingmore2)]  
+  
+ Eine ausführliche Erläuterung dieses Beispiels, finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveMarkupExtension">
+      <MemberSignature Language="C#" Value="public static void ReceiveMarkupExtension (object targetObject, System.Windows.Markup.XamlSetMarkupExtensionEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReceiveMarkupExtension(object targetObject, class System.Windows.Markup.XamlSetMarkupExtensionEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTrigger.ReceiveMarkupExtension(System.Object,System.Windows.Markup.XamlSetMarkupExtensionEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.Object" />
+        <Parameter Name="eventArgs" Type="System.Windows.Markup.XamlSetMarkupExtensionEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Das Objekt, in dem die Markuperweiterung den Wert festlegt.</param>
+        <param name="eventArgs">Daten, die für die Verarbeitung von Markup Extension relevant ist.</param>
+        <summary>Behandelt Fälle, in denen eine Markuperweiterung einen Wert für eine Eigenschaft enthält, eine <see cref="T:System.Windows.DataTrigger" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die Methode verweist ein angewendeten <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> Attribute auf Klassenebene, was bedeutet, dass diese Methode alle Versuche zum Festlegen von Werten von verarbeitet <xref:System.Windows.DataTrigger> mit eine Markuperweiterung. In der Regel wird diese Methode nicht direkt aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Setters">
+      <MemberSignature Language="C#" Value="public System.Windows.SetterBaseCollection Setters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.SetterBaseCollection Setters" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataTrigger.Setters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.SetterBaseCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Setter" /> Objekte, die beschreiben die Eigenschaftswerte angewendet, wenn das Datenelement die angegebene Bedingung erfüllt.</summary>
+        <value>Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_Setters"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Setters>  
+    ZeroOrMoreSetters  
+  </object.Setters>  
+</object>  
+```  
+  
+<a name="xamlValues_Setters"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *ZeroOrMoreSetters*  
+ NULL oder mehr <xref:System.Windows.Setter> Objekte.  
+  
+ Ein <xref:System.Windows.DataTrigger> können Sie Aktionen starten oder verwenden Sie <xref:System.Windows.Setter>s anzuwendende Eigenschaft Werte, wenn das Datenelement eine angegebene Bedingung erfüllt.  
+  
+ Ist mehr als eine Setter-Methode in der gleichen Auflistung der Setter dieselbe Eigenschaft festlegen, wird der Setter-Methode, die deklariert wird zuletzt verwendet.  
+  
+ Die <xref:System.Windows.DataTrigger.Setters%2A> Eigenschaft von einem <xref:System.Windows.DataTrigger> Objekt kann nur bestehen <xref:System.Windows.Setter> Objekte. Hinzufügen einer <xref:System.Windows.Setter> untergeordnetes Element einer <xref:System.Windows.DataTrigger> Objekt implizit hinzugefügt der <xref:System.Windows.SetterBaseCollection> für die <xref:System.Windows.DataTrigger> Objekt. <xref:System.Windows.EventSetter>Objekte werden nicht unterstützt. nur <xref:System.Windows.Style.Setters%2A?displayProperty=nameWithType> unterstützt <xref:System.Windows.EventSetter> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt zwei <xref:System.Windows.DataTrigger> in definierten Objekte eine <xref:System.Windows.DataTemplate>. Die <xref:System.Windows.DataTemplate> angewendet wird, um *AuctionItem* Datenobjekte (in diesem Beispiel nicht dargestellt), die die Eigenschaft verfügen *SpecialFeatures*.  
+  
+ Das erste <xref:System.Windows.DataTrigger> angegeben ist, dass verfügt das Datenobjekt eine *SpecialFeatures* Wert *Farbe*, und klicken Sie dann das Element angezeigt wird, mit eine `DodgerBlue` Hintergrund dunkelblaue betitelt. Wenn das Datenobjekt verfügt über eine *SpecialFeatures* Wert *markieren*, klicken Sie dann die zweite <xref:System.Windows.DataTrigger> aktiv, sodass das Element mit orangefarbenem Rahmen mit einem Stern angezeigt werden.  
+  
+ Das vollständige Beispiel finden Sie unter [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ [!code-xaml[DataBindingLab#AuctionItemsDataTriggers](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemsdatatriggers)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTrigger.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataTrigger>-Instanz in eine <xref:System.Windows.Markup.IAddChild>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTrigger.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.DataTrigger>-Instanz in eine <xref:System.Windows.Markup.IAddChild>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataTrigger.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Binding")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert mit dem Eigenschaftswert des Datenobjekts verglichen werden soll.</summary>
+        <value>Der Standardwert ist <see langword="null" />. Siehe auch-Abschnitt für Ausnahmen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_Value"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Value>  
+    Value  
+  </object.Value>  
+</object>  
+```  
+  
+ Dieser Wert wird mit dem Werttypfelder Eigenschaftswert verglichen die <xref:System.Windows.DataTrigger.Binding%2A> Eigenschaft von der <xref:System.Windows.DataTrigger>. Beim Vergleich wird eine verweisgleichheitsprüfung. Wenn die beiden Werte gleich sind, werden die zugeordneten Aktionen oder Setter angewendet.  
+  
+ Beachten Sie, dass Sie beide angeben können, müssen die <xref:System.Windows.DataTrigger.Binding%2A> und <xref:System.Windows.DataTrigger.Value%2A> Eigenschaften auf eine <xref:System.Windows.DataTrigger> für den Datentrigger sinnvoll ist. Wenn eine oder beide Eigenschaften nicht festgelegt werden, wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> von der <xref:System.Windows.Controls.ListBox> gebunden ist *stellen*, wird ein <xref:System.Collections.ObjectModel.ObservableCollection%601> von *Stelle* Objekte. *Ort* Objekte verfügen über Eigenschaften *Namen* und *Zustand*.  
+  
+ Jede <xref:System.Windows.Controls.ListBoxItem> von der <xref:System.Windows.Controls.ListBox> zeigt eine *Stelle* Objekt. Die <xref:System.Windows.Style> im Beispiel wird angewendet auf die einzelnen <xref:System.Windows.Controls.ListBoxItem>.  
+  
+ Die <xref:System.Windows.DataTrigger> angegeben ist, dass wenn der *Zustand* von der *Ort* Datenelement ist "WA" und dann den Vordergrund des entsprechenden <xref:System.Windows.Controls.ListBoxItem> auf Rot festgelegt wird.  
+  
+ [!code-xaml[DataTrigger#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTrigger/CSharp/Window1.xaml#1)]  
+  
+ Das folgende Beispiel zeigt zwei <xref:System.Windows.DataTrigger>e, die in definierten ein <xref:System.Windows.DataTemplate>. Die <xref:System.Windows.DataTemplate> angewendet wird, um *AuctionItem* Datenobjekte (in diesem Beispiel nicht dargestellt), die die Eigenschaft verfügen *SpecialFeatures*. Finden Sie unter [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703) das vollständige Beispiel.  
+  
+ Die erste <xref:System.Windows.DataTrigger> angegeben ist, dass verfügt das Datenobjekt eine *SpecialFeatures* Wert *Farbe*, und klicken Sie dann das Element mit einem DodgerBlue-Hintergrund mit dunkelblaue Titel angezeigt wird. Wenn das Datenobjekt verfügt über eine *SpecialFeatures* Wert *markieren*, klicken Sie dann die zweite <xref:System.Windows.DataTrigger> aktiv, sodass das Element mit orangefarbenem Rahmen mit einem Stern angezeigt werden.  
+  
+ [!code-xaml[DataBindingLab#AuctionItemsDataTriggers](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemsdatatriggers)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ausdrücke werden nicht unterstützt. Bindungen werden nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

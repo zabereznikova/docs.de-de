@@ -1,0 +1,348 @@
+<Type Name="SoapRpcMethodAttribute" FullName="System.Web.Services.Protocols.SoapRpcMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapRpcMethodAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapRpcMethodAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapRpcMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass SOAP-Nachrichten an und von der Verwendung der Methode gesendet <see langword="RPC" /> formatieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Web Services Description Language (WSDL) definiert zwei Stile für das wie ein XML-Webdienstmethode oder Vorgang in einer SOAP-Nachricht formatiert werden kann: `RPC` und `Document`. `RPC`-Formatierung bezieht sich auf die Formatierung des Vorgangs gemäß der SOAP-Spezifikation für die Verwendung von SOAP für RPC. auch bezeichnet als Abschnitt 7 der SOAP-Spezifikation. `RPC`Formatieren von Zustände, die alle Parameter werden in einem einzelnen XML-Element mit dem Namen der XML-Webdienstmethode gekapselt und, die jedes XML-Element innerhalb dieses XML-Element stellt einen Parameter mit dem Namen des Parameters, den es darstellt.  
+  
+ SOAP-Nachrichten in beiden formatiert die `RPC` und `Document` Formatvorlagen können verwendet werden, um die Kommunikation mit einem XML-Webdienst in einer Weise Remoteprozeduraufruf (RPC); jedoch `Document` Stil kann auch problemlos in einer lose gekoppelten Kommunikation verwendet werden Art und Weise. Aus diesem Grund `Document` Format (XML-Webdienste) wird empfohlen. Weitere Informationen finden Sie unter der `Customizing SOAP Messages` Thema.  
+  
+ Weitere Informationen finden Sie unter [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93; ](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952).  
+  
+ Dieses Attribut kann eine XML-Webdienstmethode auf dem Server und eine Proxyklasse auf dem Client angewendet werden. XML-Webdienstmethoden, die über die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.OneWay%2A> -Eigenschaftensatz auf `true` haben keinen Zugriff auf ihre <xref:System.Web.HttpContext>. Daher wird beim Zugriff auf die Eigenschaften des der <xref:System.Web.Services.WebService> -Klasse Return `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Format der Nachricht auf `Rpc` für die `GetUserName` XML-Webdienstmethode.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapRpcMethodAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapRpcMethodAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapRpcMethodAttribute" /> Klasse, indem alle Eigenschaften mit ihren Standardwerten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapRpcMethodAttribute (string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapRpcMethodAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Der Zweck der SOAP-Anforderung. Legt die <see cref="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.Action" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapRpcMethodAttribute" /> Klasse, indem die <see cref="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.Action" /> auf den Wert der Eigenschaft der <paramref name="action" /> Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="SOAPAction" /> -HTTP-Headerfeld der SOAP-Anforderung.</summary>
+        <value>Die <see langword="SOAPAction" /> -HTTP-Headerfeld der SOAP-Anforderung. Die Standardeinstellung ist http://tempuri.org/MethodName wobei Methodenname der Name der XML-Webdienstmethode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.Action%2A> Eigenschaft ist ein URI, der angibt, der die Absicht der SOAP-Anforderung. Die SOAP-Spezifikation bedeutet jedoch keine Einschränkungen auf das Format und gibt an, ob der URI auf ein vorhandenes Dokument verweist. Das Vorhandensein und Inhalt der <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.Action%2A> Eigenschaft kann von Webservern verwendet werden, z. B. Firewalls entsprechend Filtern von SOAP-Anforderungsnachrichten in HTTP.  
+  
+ Standardmäßig veröffentlicht die .NET Framework, Version 1.1 der <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.Action%2A> Eigenschaft in der `soapAction` Attribut des der `soap:operation` -Element für jede unterstützte SOAP-Bindung in WSDL-Dokumenten, die für einen XML-Webdienst generiert. Unterstützte SOAP-Bindung ist SOAP 1.1.  
+  
+ Weitere Informationen über die SOAP-Spezifikation finden Sie in der W3C-Website (http://www.w3.org/TR/SOAP).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.Action%2A> Eigenschaft `http://www.contoso.com/Sample`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public string Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bindung, der eine XML-Webdienstmethode einen Vorgang implementiert.</summary>
+        <value>Die Bindung, der eine XML-Webdienstmethode einen Vorgang implementiert. Die Standardeinstellung ist der Name des XML-Webdiensts "SOAP" angehängt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bindung ist von Web Services Description Language (WSDL) definiert eine Schnittstelle ähnelt insofern, dass es sich um eine konkrete Reihe von Vorgängen definiert. In Bezug auf ASP.NET ist jede XML-Webdienstmethode ein Vorgang innerhalb einer Bindung. XML-Webdienstmethoden sind Mitglieder der die standardbindung für einen XML-Webdienst oder einer angegebenen Bindung eine <xref:System.Web.Services.WebServiceBindingAttribute> auf einen XML-Webdienst angewendet. Ein XML-Webdienst kann mehrere Bindungen implementieren, wenn mehrere <xref:System.Web.Services.WebServiceBindingAttribute> Attribute gelten für einen XML-Webdienst.  
+  
+ Mindestens einmal <xref:System.Web.Services.WebServiceBindingAttribute> Attribute gelten für einen XML-Webdienst eine <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> auf einzelne XML-Webdienstmethoden an, der durch eine bestimmte XML-Webdienstmethode implementierten Bindungsvorgang angewendet werden können. Legen Sie die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Binding%2A> Eigenschaft <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> die Bindung an eine XML-Webdienstmethode einen Vorgang implementiert. Nur ein <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> kann auf eine XML-Webdienstmethode angewendet werden. Aus diesem Grund kann eine XML-Webdienstmethode nur einen Vorgang für eine Bindung implementieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mehrere Bindungen in eine XML-Webdienst implementiert.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="public bool OneWay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneWay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.OneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ein XML-Webdienstclient auf dem Webserver zum Abschließen der Verarbeitung einer XML-Webdienstmethode wartet.</summary>
+        <value>
+          <see langword="true" />Wenn der XML-Client Webdienstmethode wartet nicht auf dem Webserver eine XML-Webdienstmethode vollständig verarbeitet; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine XML-Webdienstmethode hat die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.OneWay%2A> -Eigenschaftensatz auf `true`, die XML-Webdienstclient keinen auf dem Webserver zum Abschließen der Verarbeitung der XML-Webdienstmethode warten. Sobald der Webserver deserialisiert wurde der <xref:System.Web.Services.Protocols.SoapServerMessage>, aber bevor der XML-Webdienstmethode aufgerufen wird, gibt der Server einen HTTP-Statuscode 202 zurück. Ein Statuscode "HTTP 202" gibt an den Client, dass der Webserver die Verarbeitung der Nachricht gestartet wurde. Daher empfängt ein XML-Webdienstclient keine Bestätigung, dass der Webserver die Nachricht erfolgreich verarbeitet.  
+  
+ Ein Rückgabewert oder eine unidirektionale Methoden keine `out` Parameter.  
+  
+ Bei Verwendung der .NET Framework Version 1.0 XML-Webdienstmethoden, die entweder die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> -Attribut angewendet wird, mit der <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay%2A> -Eigenschaftensatz auf `true`, lassen sich nicht auf den Zugriff auf ihre <xref:System.Web.HttpContext> mithilfe der statische <xref:System.Web.HttpContext.Current%2A> Eigenschaft. Für den Zugriff auf die <xref:System.Web.HttpContext>, leiten Sie die Klasse implementieren die XML-Webdienstmethode aus <xref:System.Web.Services.WebService> und Zugriff auf die <xref:System.Web.Services.WebService.Context%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.OneWay%2A> Eigenschaft `true`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestElementName">
+      <MemberSignature Language="C#" Value="public string RequestElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das XML-Element in der SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet.</summary>
+        <value>Das XML-Element, das SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet ist. Der Standardwert ist der Name der XML-Webdienstmethode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist veraltet. Er wirkt sich nicht auf jedes Verhalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestElementName%2A> Eigenschaft `MyCustomRequestElement`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestNamespace">
+      <MemberSignature Language="C#" Value="public string RequestNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Namespace der SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet.</summary>
+        <value>Der XML-Namespace der SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet. Der Standardwert ist http://tempuri.org/.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestNamespace%2A> Eigenschaft `http://www.contoso.com`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseElementName">
+      <MemberSignature Language="C#" Value="public string ResponseElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das XML-Element in der SOAP-Antwort für eine XML-Webdienstmethode zugeordnet.</summary>
+        <value>Das XML-Element, das SOAP-Anforderung für eine XML-Webdienstmethode zugeordnet ist. Der Standardwert ist <c>WebServiceNameResult</c>, wobei <c>WebServiceName</c> ist der Name der XML-Webdienstmethode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseElementName%2A> -Eigenschaft definiert das XML-Element verwendet, um die Parameter innerhalb der `Body` Element der SOAP-Antwort.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseElementName%2A> Eigenschaft `MyCustomResponseElement`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseNamespace">
+      <MemberSignature Language="C#" Value="public string ResponseNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Namespace der SOAP-Antwort für eine XML-Webdienstmethode zugeordnet.</summary>
+        <value>Der XML-Namespace der SOAP-Antwort für eine XML-Webdienstmethode zugeordnet. Der Standardwert ist http://tempuri.org/.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseNamespace%2A> Eigenschaft wird in der XSD-Schema für die XML-Webdienstmethode in seine dienstbeschreibung verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseNamespace%2A> Eigenschaft `http://www.contoso.com`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Use">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingUse Use { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingUse Use" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapRpcMethodAttribute.Use" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Bindung verwendet, wenn die Methode aufrufen.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Web.Services.Description.SoapBindingUse" /> -Enumeration, die beim Aufruf der Methode verwendete Bindung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist <xref:System.Web.Services.Description.SoapBindingUse.Default>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

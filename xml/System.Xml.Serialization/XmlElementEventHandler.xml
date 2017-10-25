@@ -1,0 +1,62 @@
+<Type Name="XmlElementEventHandler" FullName="System.Xml.Serialization.XmlElementEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void XmlElementEventHandler(object sender, XmlElementEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlElementEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlElementEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Xml.Serialization.XmlElementEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Xml.Serialization.XmlElementEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownElement" /> -Ereignis für ein <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Xml.Serialization.XmlElementEventHandler> -Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ Die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis tritt auf, wenn Sie nur Aufrufen der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei namens UnknownElements.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis auftritt. Zum Testen dieses Beispiels, fügen Sie den folgenden XML-Code in eine Datei UnknownElements.XML ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <GroupName>MyGroup</GroupName>  
+  <GroupSize>Large</GroupSize>  
+  <GroupNumber>444</GroupNumber>  
+  <GroupBase>West</GroupBase>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CPP/unknownelement.cpp#1)]
+ [!code-csharp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CS/unknownelement.cs#1)]
+ [!code-vb[XmlSerializer.UnknownElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/VB/unknownelement.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,141 @@
+<Type Name="ProsodyVolume" FullName="System.Speech.Synthesis.TtsEngine.ProsodyVolume">
+  <TypeSignature Language="C#" Value="public enum ProsodyVolume" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProsodyVolume extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.ProsodyVolume" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Listet Werte für die <see langword="Volume" /> Eigenschaft von einem <see langword="Prosody" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel synthetische Sprachmodul Ausgabe Volume gemäß der Mitglieder <xref:System.Speech.Synthesis.TtsEngine.ProsodyVolume> entsprechen den Prozentsatz der maximal möglichen Ausgaben Lautstärke. Entspricht z. B. Loud ungefähr 80 % des maximal Volumes.  Bestimmte synthetische Spracherkennung Modul Implementierungen können jedoch wie Audioausgabe für einen gegebenen Wert von gerendert <xref:System.Speech.Synthesis.TtsEngine.ProsodyVolume.Loud>.  
+  
+ Die aktuelle Basis Volume-Einstellung für eine benutzerdefinierte synthetische Sprachmodul als abgerufen wird eine <xref:System.Speech.Synthesis.TtsEngine.ProsodyVolume> Wert über die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.Volume%2A> Eigenschaft auf die <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.Volume%2A> für dieses Modul angegebene Website. <xref:System.Speech.Synthesis.TtsEngine.ProsodyVolume>.  
+  
+ Optionen für Feinabstimmung und Modulation Ausgabe Volumes wird basierend auf bestimmten verwaltet <xref:System.Speech.Synthesis.TtsEngine.TextFragment> Objekte mithilfe von Membern der <xref:System.Speech.Synthesis.TtsEngine.ProsodyVolume> festzulegende der <xref:System.Speech.Synthesis.TtsEngine.Prosody.Volume%2A> -Eigenschaft bei Instanzen <xref:System.Speech.Synthesis.TtsEngine.Prosody.Volume%2A> verwendet beim Erstellen oder Ändern der <xref:System.Speech.Synthesis.TtsEngine.FragmentState> Objekt für die Instanz von <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.ProsodyVolume Default = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyVolume.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktuelle Volume Standardwert, entspricht der zurückgegebene Wert den <see cref="P:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.Volume" /> Eigenschaft auf die <see cref="T:System.Speech.Synthesis.TtsEngine.ITtsEngineSite" /> für dieses Modul angegebene Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraLoud">
+      <MemberSignature Language="C#" Value="ExtraLoud" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.ProsodyVolume ExtraLoud = int32(-7)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyVolume.ExtraLoud" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Maximale Volume.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraSoft">
+      <MemberSignature Language="C#" Value="ExtraSoft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.ProsodyVolume ExtraSoft = int32(-3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyVolume.ExtraSoft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ungefähr 20 % des maximal Volume.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loud">
+      <MemberSignature Language="C#" Value="Loud" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.ProsodyVolume Loud = int32(-6)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyVolume.Loud" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ungefähr 80 % des maximal Volumes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.ProsodyVolume Medium = int32(-5)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyVolume.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Etwa 60 % der maximale Volume.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Silent">
+      <MemberSignature Language="C#" Value="Silent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.ProsodyVolume Silent = int32(-2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyVolume.Silent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Volume deaktiviert</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Soft">
+      <MemberSignature Language="C#" Value="Soft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.ProsodyVolume Soft = int32(-4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.ProsodyVolume.Soft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Etwa 40 % des maximal Volumes.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

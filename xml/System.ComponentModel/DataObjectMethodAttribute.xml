@@ -1,0 +1,302 @@
+<Type Name="DataObjectMethodAttribute" FullName="System.ComponentModel.DataObjectMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataObjectMethodAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataObjectMethodAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataObjectMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine durch einen Typ, welche Art von Vorgang führt die Methode und gibt an, ob die Methode die Standardmethode für die Daten ist verfügbar gemachten Daten Vorgang-Methode. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.ComponentModel.DataObjectMethodAttribute> zum Identifizieren von Daten der Methoden der Dienstvorgänge für einen Typ mit markiert die <xref:System.ComponentModel.DataObjectAttribute> Attribut, damit sie leichter von Aufrufern mithilfe der Reflektion identifiziert werden. Wenn die <xref:System.ComponentModel.DataObjectMethodAttribute> Attribut an eine Methode angewendet wird, wird er beschreibt den Typ des Vorgangs die Methode führt, und gibt an, ob die Methode die Standardmethode für die Operation von Daten eines Typs ist. Komponenten, wie z. B. die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement und dem <xref:System.Web.UI.Design.WebControls.ObjectDataSourceDesigner> Klasse untersuchen die Werte dieses Attributs, sofern vorhanden, um zu ermitteln, welche Datenmethode, die zur Laufzeit aufgerufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.ComponentModel.DataObjectMethodAttribute> -Attribut auf eine öffentlich verfügbar gemachte Methode und bestimmen Sie den Typ des Datenvorgangs ausgeführt, die auch, ob es sich um den Typ Daten Standardmethode handelt. In diesem Beispiel wird die `NorthwindData` Typ macht zwei Methoden verfügbar: eine zum Abrufen von bestimmten Daten, die mit dem Namen `GetAllEmployees`, und ein weiteres zum Löschen von Daten mit dem Namen `DeleteEmployeeByID`. Die <xref:System.ComponentModel.DataObjectMethodAttribute> -Attribut angewendet wird, an beide Methoden die `GetAllEmployees` Methode als die Standardmethode für den Select Datenvorgang gekennzeichnet ist und die `DeleteEmployeeByID` Methode als die Standardmethode für den Löschvorgang für die Daten gekennzeichnet ist.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#3)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectMethodAttribute (System.ComponentModel.DataObjectMethodType methodType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.DataObjectMethodType methodType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectMethodAttribute.#ctor(System.ComponentModel.DataObjectMethodType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodType" Type="System.ComponentModel.DataObjectMethodType" />
+      </Parameters>
+      <Docs>
+        <param name="methodType">Eines der <see cref="T:System.ComponentModel.DataObjectMethodType" /> Werten, die den Datenvorgang beschreiben die Methode ausführt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> -Klasse und gibt den Typ der Datenvorgang, die die Methode ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> -Eigenschaftensatz auf `false` beim Erstellen einer <xref:System.ComponentModel.DataObjectMethodAttribute> mit diesem Objekt <xref:System.ComponentModel.DataObjectMethodAttribute.%23ctor%28System.ComponentModel.DataObjectMethodType%29> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.ComponentModel.DataObjectMethodAttribute> -Attribut auf eine öffentlich verfügbar gemachte Methode und bestimmen Sie den Typ des Datenvorgangs ausgeführt, die auch, ob es sich um den Typ Daten Standardmethode handelt. In diesem Beispiel wird die `NorthwindData` Typ macht zwei Methoden verfügbar: eine zum Abrufen von bestimmten Daten, die mit dem Namen `GetAllEmployees`, und ein weiteres zum Löschen von Daten mit dem Namen `DeleteEmployeeByID`. Die <xref:System.ComponentModel.DataObjectMethodAttribute> -Attribut angewendet wird, an beide Methoden die `GetAllEmployees` Methode als die Standardmethode für den Select Datenvorgang gekennzeichnet ist und die `DeleteEmployeeByID` Methode als die Standardmethode für den Löschvorgang für die Daten gekennzeichnet ist.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#3)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectMethodAttribute (System.ComponentModel.DataObjectMethodType methodType, bool isDefault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.DataObjectMethodType methodType, bool isDefault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectMethodAttribute.#ctor(System.ComponentModel.DataObjectMethodType,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodType" Type="System.ComponentModel.DataObjectMethodType" />
+        <Parameter Name="isDefault" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="methodType">Eines der <see cref="T:System.ComponentModel.DataObjectMethodType" /> Werten, die den Datenvorgang beschreiben die Methode ausführt.</param>
+        <param name="isDefault">
+          <see langword="true" />um anzugeben, die Methode, die das Attribut angewendet wird, ist die Standardmethode des Datenobjekts für den angegebenen <c>MethodType</c>ist, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> Klasse, gibt den Typ der Datenvorgang die Methode führt, und gibt an, ob die Methode die Standardmethode für die Daten ist, die das Datenobjekt verfügbar macht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.ComponentModel.DataObjectMethodAttribute> -Attribut auf eine öffentlich verfügbar gemachte Methode und bestimmen Sie den Typ des Datenvorgangs ausgeführt, die auch, ob es sich um den Typ Daten Standardmethode handelt. In diesem Beispiel wird die `NorthwindData` Typ macht zwei Methoden verfügbar: eine zum Abrufen von bestimmten Daten, die mit dem Namen `GetAllEmployees`, und ein weiteres zum Löschen von Daten mit dem Namen `DeleteEmployeeByID`. Die <xref:System.ComponentModel.DataObjectMethodAttribute> -Attribut angewendet wird, an beide Methoden die `GetAllEmployees` Methode als die Standardmethode für den Select Datenvorgang gekennzeichnet ist und die `DeleteEmployeeByID` Methode als die Standardmethode für den Löschvorgang für die Daten gekennzeichnet ist.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#3)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectMethodAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll <see cref="T:System.ComponentModel.DataObjectMethodAttribute" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz identisch mit der Instanz, die gemäß ist der <paramref name="obj" /> Parameter ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt, ob dies <xref:System.ComponentModel.DataObjectMethodAttribute> dem Muster eines anderen Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectMethodAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public bool IsDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataObjectMethodAttribute.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Methode, die <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> auf angewendet wird ist die Standardmethode-Daten verfügbar gemacht werden, indem das Objekt für einen bestimmten Typ.</summary>
+        <value>
+          <see langword="true" />Wenn die Methode die Standardmethode, die vom Objekt für einen Methodentyp verfügbar gemacht wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSource> steuern verwendet der <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> Eigenschaft mehrere Methoden unterscheiden, die die Signatur-Anforderungen für einen bestimmten Typ entsprechen. Wenn zwei Methoden übereinstimmen, die die Signatur-Anforderungen, die Methode mit dem <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> -Eigenschaftensatz auf `true` ausgewählt ist.  
+  
+ Zur Entwurfszeit die <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> Eigenschaft wird verwendet, um automatisch die <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.UpdateMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod%2A>, und <xref:System.Web.UI.WebControls.ObjectDataSource.InsertMethod%2A> Eigenschaften auf eine <xref:System.Web.UI.WebControls.ObjectDataSource> Instanz.  
+  
+ Wenn die <xref:System.ComponentModel.DataObjectMethodAttribute> erstellt, wobei die <xref:System.ComponentModel.DataObjectMethodAttribute.%23ctor%28System.ComponentModel.DataObjectMethodType%29> Konstruktor, die nur eine <xref:System.ComponentModel.DataObjectMethodType> Parameter, die <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectMethodAttribute.Match(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll <see cref="T:System.ComponentModel.DataObjectMethodAttribute" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob diese Instanz mit einem angegebenen Attribut ein allgemeines Muster verwendet.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz identisch mit der Instanz, die gemäß ist der <paramref name="obj" /> Parameter ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt, ob ein <xref:System.ComponentModel.DataObjectMethodAttribute> dem Muster eines anderen entspricht. Seine Implementierung ist nicht identisch mit der <xref:System.ComponentModel.DataObjectMethodAttribute.Equals%2A>jedoch, da nicht auf "true" Gleichheit getestet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DataObjectMethodType MethodType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.DataObjectMethodType MethodType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataObjectMethodAttribute.MethodType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.DataObjectMethodType" /> Wert, der angibt, der des Typs des Datenvorgangs die Methode führt.</summary>
+        <value>Eines der <see cref="T:System.ComponentModel.DataObjectMethodType" /> Werte, die den Typ des Datenvorgangs ausgeführt, die von der Methode, identifiziert die <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> angewendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

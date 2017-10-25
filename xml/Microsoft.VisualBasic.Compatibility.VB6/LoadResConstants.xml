@@ -1,0 +1,83 @@
+<Type Name="LoadResConstants" FullName="Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants">
+  <TypeSignature Language="C#" Value="public enum LoadResConstants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LoadResConstants extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Konstanten für die Kompatibilität mit Visual Basic 6.0 <see langword="LoadResPicture" /> Funktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 die `LoadResPicture` Funktion wurde verwendet, um eine Ressource aus einer Datei laden die `LoadResPicture` Konstanten angegeben, den Typ der Ressource geladen. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]die `LoadResPicture` Funktion wird nicht mehr unterstützt.  
+  
+ Diese Konstanten unterstützen Code, der von Visual Basic 6.0 auf weiterhin ausgeführt, ohne zusätzliche Änderung aktualisiert wurde.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ResBitmap">
+      <MemberSignature Language="C#" Value="ResBitmap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants ResBitmap = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants.ResBitmap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbResBitmap" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResCursor">
+      <MemberSignature Language="C#" Value="ResCursor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants ResCursor = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants.ResCursor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbResCursor" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResIcon">
+      <MemberSignature Language="C#" Value="ResIcon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants ResIcon = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants.ResIcon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbResIcon" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

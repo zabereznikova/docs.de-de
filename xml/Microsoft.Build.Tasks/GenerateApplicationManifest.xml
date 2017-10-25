@@ -1,0 +1,652 @@
+<Type Name="GenerateApplicationManifest" FullName="Microsoft.Build.Tasks.GenerateApplicationManifest">
+  <TypeSignature Language="C#" Value="public sealed class GenerateApplicationManifest : Microsoft.Build.Tasks.GenerateManifestBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateApplicationManifest extends Microsoft.Build.Tasks.GenerateManifestBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GenerateApplicationManifest" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.GenerateManifestBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>GenerateApplicationManifest</c> Aufgabe. Verwenden der <c>GenerateApplicationManifest</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [GenerateApplicationManifest-Aufgabe](http://msdn.microsoft.com/library/a494102b-0cb2-4755-8e2a-d2c0f39fac1d).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `EntryPoint`ist eine optionale <xref:Microsoft.Build.Framework.ITaskItem> `[]` Parameter, der den Einstiegspunkt für die generierte Manifestassembly angibt. Bei einem [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]-Bereitstellungsmanifest gibt diese Eingabe das [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]-Anwendungsmanifest an.  
+  
+ In [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], [GenerateApplicationManifest-Aufgabe](http://msdn.microsoft.com/library/a494102b-0cb2-4755-8e2a-d2c0f39fac1d) erfordert eine `EntryPoint` Wenn ein Anwendungsmanifest generiert wird. (Assemblys oder systemeigene Manifeste erfordern keinen `EntryPoint`.) Diese Anforderung wird durch die Buildfehler erzwungen "MSB3185: EntryPoint für das Manifest nicht angegeben."  
+  
+ In [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)], [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] gibt keine aus dieser Fehler bei der `EntryPoint` Aufgabenparamenter nicht angegeben. Stattdessen die \<CustomHostSpecified >-Tag als untergeordnetes Element eingefügt wird die \<EntryPoint >-Tag, z. B., wie folgt.  
+  
+```  
+<entryPoint xmlns="urn:schemas-   
+  microsoft-com:asm.v2">  
+    <co.v1:customHostSpecified />  
+</entryPoint>  
+```  
+  
+ Sie können dem Anwendungsmanifest DLL-Abhängigkeiten hinzufügen, indem Sie die folgenden Schritte ausführen:  
+  
+1.  Lösen Sie die Verweise in der Assembly mit einem Aufruf von <xref:Microsoft.Build.Tasks.ResolveAssemblyReference>.  
+  
+2.  Übergeben Sie die Ausgabe der vorherigen Aufgabe und die Assembly selbst an <xref:Microsoft.Build.Tasks.ResolveManifestFiles>.  
+  
+3.  Übergeben Sie die Abhängigkeiten über den `Dependencies`-Parameter an <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenerateApplicationManifest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateApplicationManifest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.GenerateApplicationManifest" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ClrVersion">
+      <MemberSignature Language="C#" Value="public string ClrVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClrVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ClrVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für die Anwendung erforderliche Mindestversion der Common Language Runtime (CLR) ab oder legt diese fest.</summary>
+        <value>Die für die Anwendung mindestens erforderliche Version der Common Language Runtime (CLR).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist der Wert für die CLR-Version von das Buildsystem verwendet wird. Wenn die Aufgabe ein systemeigenes Manifest generiert, wird diese Eigenschaft ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem ConfigFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem ConfigFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ConfigFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Aufgabenelement ab, das die Anwendungskonfigurationsdatei enthält, oder legt dieses fest.</summary>
+        <value>Das Aufgabenelement, das die Anwendungskonfigurationsdatei enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Aufgabe ein systemeigenes Manifest generiert, wird diese Eigenschaft ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Dependencies">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Dependencies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Dependencies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Dependencies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Elementliste ab oder legt diese fest, die die abhängigen Assemblys für das generierte Manifest definiert.</summary>
+        <value>Eine Elementliste der Namen der abhängigen Assemblys.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element kann von Elementmetadaten um zusätzlich den Bereitstellungszustand und die Art der Abhängigkeit anzugeben, näher beschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorReportUrl">
+      <MemberSignature Language="C#" Value="public string ErrorReportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorReportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ErrorReportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL der Webseite, die während der ClickOnce-Installationen in Dialogfeldern angezeigt wird.</summary>
+        <value>Ein Zeichenfolgenwert, der die URL einer Webseite darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt eine Webseite, die in Dialogfeldern angezeigt werden, die während der ClickOnce-Installationen angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FileAssociations">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] FileAssociations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] FileAssociations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.FileAssociations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste der einen oder mehrere Dateitypen, die das ClickOnce-Bereitstellungsmanifest zugeordnet sind. Dateizuordnungen sind nur nur gültig, wenn [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 oder höher ausgerichtet ist.</summary>
+        <value>Eine Liste der Dateitypen, die das generierte Manifest zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dateitypen können benutzerdefinierte sein. Im folgenden ist ein Beispiel für eine [ \<FileAssociation >-Element (ClickOnce-Anwendung)](http://msdn.microsoft.com/library/8f951b4f-54f9-412e-a9e5-af4e379fcf08):  
+  
+```  
+<FileAssociation Include=".nyt">  
+    <ProgId>NewYorkTimes.Document</ProgId>  
+    <DefaultIcon>nyt.ico</DefaultIcon>  
+    <Description>New York Times Reader document</Description>  
+</FileAssociation>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Files { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Files" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Files" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vollständigen Pfade der Dateien ab oder legt diese fest, die in das Manifest einbezogen werden.</summary>
+        <value>Pfade zu Dateien, die in das Manifest einbezogen werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectType">
+      <MemberSignature Language="C#" Value="protected override Type GetObjectType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type GetObjectType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateApplicationManifest.GetObjectType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostInBrowser">
+      <MemberSignature Language="C#" Value="public bool HostInBrowser { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HostInBrowser" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.HostInBrowser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob die Anwendung in einem Browser gehostet wird (wie WPF-Webbrowseranwendungen).</summary>
+        <value>Ein boolescher Wert, der angibt, ob die bereitgestellte Anwendung in einem Browser gehostet wird (<see langword="true" />), oder nicht (<see langword="false" />). <see langword="true" />gilt nur für WPF-Webbrowseranwendungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie für die Projekttypen als WPF-Webbrowseranwendungen <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.HostInBrowser%2A> auf `false` (Standardwert).  
+  
+ Wenn Sie eine WPF-Webbrowseranwendung bereitstellen, müssen Sie festlegen der <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.HostInBrowser%2A> Eigenschaft `true`. Dies bewirkt, dass die `<hostInBrowser>` Tag hinzugefügt werden, auf die generierten Anwendungsmanifest Aktivieren von ClickOnce-Projekte für im Browser gehostete Anwendungen bereitstellen, der XBAP-Dateien enthalten.  
+  
+ Außerdem müssen Sie die Anwendung online nur durch das Festlegen zur Verfügung <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install%2A> auf `false`. Wenn diese Bedingung nicht erfüllt ist, erhalten Sie [MSBuild-Fehler MSB3116](http://msdn.microsoft.com/library/bf04c587-d0e2-4d68-bbff-da9a985ea70e).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IconFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem IconFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem IconFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.IconFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Symboldatei der Anwendung ab oder legt sie fest.</summary>
+        <value>Die Symboldatei, die für die Anwendung verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Anwendungssymbol wird im generierten Anwendungsmanifest ausgedrückt und wird verwendet, auf die **starten** Menü und klicken Sie in der **deinstallieren oder Ändern eines Programms** (Dialogfeld). Erfolgt diese Angabe nicht, wird ein Standardsymbol verwendet. Wenn die Aufgabe ein systemeigenes Manifest generiert, wird diese Eigenschaft ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsolatedComReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] IsolatedComReferences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] IsolatedComReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.IsolatedComReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die COM-Komponenten ab, die im generierten Manifest isoliert werden sollen, oder legt sie fest.</summary>
+        <value>Die COM-Komponenten, die im generierten Manifest isoliert werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie die COM-Komponenten für die Bereitstellung von "Com ohne Registrierung" zu isolieren. Es funktioniert, indem Sie die automatische Generierung von ein Manifest, das standard-COM-Registrierung Definitionen verfügt. Die COM-Komponenten müssen auf dem Buildcomputer registriert werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ManifestType">
+      <MemberSignature Language="C#" Value="public string ManifestType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ManifestType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ManifestType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zu generierenden Manifesttyp ab oder legt ihn fest.</summary>
+        <value>Der Typ des zu generierenden Manifests.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann die folgenden Werte aufweisen:  
+  
+-   `Native`  
+  
+-   `ClickOnce`  
+  
+ Wenn diese Eigenschaft nicht angegeben ist, verwendet die Aufgabe standardmäßig `ClickOnce`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnManifestLoaded">
+      <MemberSignature Language="C#" Value="protected override bool OnManifestLoaded (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnManifestLoaded(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateApplicationManifest.OnManifestLoaded(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifest" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />
+      </Parameters>
+      <Docs>
+        <param name="manifest">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnManifestResolved">
+      <MemberSignature Language="C#" Value="protected override bool OnManifestResolved (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnManifestResolved(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateApplicationManifest.OnManifestResolved(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifest" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />
+      </Parameters>
+      <Docs>
+        <param name="manifest">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OSVersion">
+      <MemberSignature Language="C#" Value="public string OSVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.OSVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für die Anwendung mindestens erforderliche Betriebssystemversion ab oder legt sie fest.</summary>
+        <value>Die für die Anwendung mindestens erforderliche Betriebssystemversion.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert "5.1.2600.0" bedeutet z. B. das Betriebssystem Windows XP ist. Wenn diese Eigenschaft nicht angegeben ist, wird der Wert "4.10.0.0" verwendet. Dies weist darauf hin, Windows 98 Zweite Ausgabe, die Mindestanforderung ist Betriebssystem für die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ Wenn die Aufgabe ein natives Manifest generiert, wird diese Eingabe ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Product">
+      <MemberSignature Language="C#" Value="public string Product { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Product" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Product" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <c>ProductName</c> Eigenschaft in der Projektdatei.</summary>
+        <value>Ein Zeichenfolgenwert, der entspricht der <c>ProductName</c> Eigenschaft in der Projektdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `ProductName` Eigenschaft in der Projektdatei. Der Standardwert ist `null`. Wenn `ProductName` ist null und <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.UseApplicationTrust%2A> ist `true`, wird der RegisteredOrganization-Wert in der Registrierung auf das Anwendungsmanifest geschrieben. Wenn RegisteredOrganization auch null ist, wird der Name der Assembly verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Publisher">
+      <MemberSignature Language="C#" Value="public string Publisher { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Publisher" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Publisher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <c>PublisherName</c> Eigenschaft in der Projektdatei.</summary>
+        <value>Ein Zeichenfolgenwert, der entspricht der <c>PublisherName</c> Eigenschaft in der Projektdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `PublisherName` Eigenschaft in der Projektdatei. Der Standardwert ist `null`. Wenn `PublisherName` ist null und <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.UseApplicationTrust%2A> ist `true`, wird der Name der Assembly auf das Anwendungsmanifest geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresMinimumFramework35SP1">
+      <MemberSignature Language="C#" Value="public bool RequiresMinimumFramework35SP1 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresMinimumFramework35SP1" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.RequiresMinimumFramework35SP1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Anwendung ist .NET Framework 3.5 SP1 erforderlich.</summary>
+        <value>
+          <see langword="true" />Wenn die Anwendung .NET Framework 3.5 SP1 erforderlich ist; <see langword="false" /> andernfalls.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SuiteName">
+      <MemberSignature Language="C#" Value="public string SuiteName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuiteName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.SuiteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Ordners auf dem **starten** Menü, in dem die Anwendung befindet sich nach der ClickOnce-Bereitstellung.</summary>
+        <value>Eine Zeichenfolge, die den Namen des darstellt eine **starten** im Ordner.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SupportUrl">
+      <MemberSignature Language="C#" Value="public string SupportUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SupportUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.SupportUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <c>SupportUrl</c> Eigenschaft in der Projektdatei.</summary>
+        <value>Ein Zeichenfolgenwert, der entspricht der <c>SupportUrl</c> Eigenschaft in der Projektdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `SupportUrl` Eigenschaft in der Projektdatei. Der Standardwert ist **null**. Wenn `SupportUrl` ist null und <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.UseApplicationTrust%2A> ist `true`, eine leere Zeichenfolge in das Anwendungsmanifest geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkProfile">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkProfile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.TargetFrameworkProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Profil des Zielframeworks.</summary>
+        <value>Gibt das Zielframeworkprofil an.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkSubset">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkSubset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkSubset" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.TargetFrameworkSubset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Teilmenge zum Ziel.</summary>
+        <value>Der Name des der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Teilmenge.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrustInfoFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem TrustInfoFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem TrustInfoFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.TrustInfoFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein XML-Dokument ab, das die Anwendungssicherheit angibt, oder legt es fest.</summary>
+        <value>Das XML-Dokument, das die Anwendungssicherheit angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Stammelement im XML-Dokument muss ein TrustInfo-Knoten im Namespace asm.v2. Wenn die Aufgabe ein systemeigenes Manifest generiert, wird diese Eigenschaft ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseApplicationTrust">
+      <MemberSignature Language="C#" Value="public bool UseApplicationTrust { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseApplicationTrust" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateApplicationManifest.UseApplicationTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Product" />, <see cref="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Publisher" />, und <see cref="P:Microsoft.Build.Tasks.GenerateApplicationManifest.SupportUrl" /> Eigenschaften werden auf das Anwendungsmanifest geschrieben.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die <see cref="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Product" />, <see cref="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Publisher" />, und <see cref="P:Microsoft.Build.Tasks.GenerateApplicationManifest.SupportUrl" /> Eigenschaften werden auf das Anwendungsmanifest geschrieben (<see langword="true" />). Wenn der Wert <see langword="false" />, diese Eigenschaften werden ignoriert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.Product%2A>, <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.Publisher%2A>, und <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.SupportUrl%2A> Eigenschaften standardmäßig `null`. Diese Eigenschaften werden nur verwendet, wenn <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.UseApplicationTrust%2A> ist `true`; Wenn also die Werte dieser Eigenschaften in die entsprechenden Tags im Anwendungsmanifest geschrieben werden.  
+  
+ Wenn <xref:Microsoft.Build.Tasks.GenerateApplicationManifest.UseApplicationTrust%2A> ist `false` (der Standardwert), diese Eigenschaften werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInputs">
+      <MemberSignature Language="C#" Value="protected override bool ValidateInputs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ValidateInputs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateApplicationManifest.ValidateInputs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

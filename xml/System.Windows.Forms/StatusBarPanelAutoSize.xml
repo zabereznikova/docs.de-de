@@ -1,0 +1,84 @@
+<Type Name="StatusBarPanelAutoSize" FullName="System.Windows.Forms.StatusBarPanelAutoSize">
+  <TypeSignature Language="C#" Value="public enum StatusBarPanelAutoSize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StatusBarPanelAutoSize extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.StatusBarPanelAutoSize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie eine <see cref="T:System.Windows.Forms.StatusBarPanel" /> auf eine <see cref="T:System.Windows.Forms.StatusBar" /> Steuerelement verhält, wenn die Größe des Steuerelements ändert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> Eigenschaft gibt an, wie eine <xref:System.Windows.Forms.StatusBarPanel> automatisch angepasst wird, auf eine <xref:System.Windows.Forms.StatusBar> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.StatusBarPanelAutoSize> -Enumeration und deren Behandlung die <xref:System.Windows.Forms.StatusBar.PanelClick> Ereignis.  
+  
+ Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Rufen Sie die `InitializeStatusBarPanels` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contents">
+      <MemberSignature Language="C#" Value="Contents" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.StatusBarPanelAutoSize Contents = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.StatusBarPanelAutoSize.Contents" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelAutoSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Breite der <see cref="T:System.Windows.Forms.StatusBarPanel" /> richtet sich nach dessen Inhalt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.StatusBarPanelAutoSize None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.StatusBarPanelAutoSize.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelAutoSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der <see cref="T:System.Windows.Forms.StatusBarPanel" /> ändert sich nicht wenn die Größe der <see cref="T:System.Windows.Forms.StatusBar" /> ändert die Größe zu steuern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Spring">
+      <MemberSignature Language="C#" Value="Spring" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.StatusBarPanelAutoSize Spring = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.StatusBarPanelAutoSize.Spring" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelAutoSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.StatusBarPanel" /> teilt den verfügbaren Speicherplatz auf der <see cref="T:System.Windows.Forms.StatusBar" /> (der Speicherplatz in Anspruch genommen nicht von anderen Bilder, deren <see cref="P:System.Windows.Forms.StatusBarPanel.AutoSize" /> -Eigenschaftensatz auf <see cref="F:System.Windows.Forms.StatusBarPanelAutoSize.None" /> oder <see cref="F:System.Windows.Forms.StatusBarPanelAutoSize.Contents" />) mit anderen Bereichen, ist ihre <see cref="P:System.Windows.Forms.StatusBarPanel.AutoSize" /> Eigenschaftensatz zu <see cref="F:System.Windows.Forms.StatusBarPanelAutoSize.Spring" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

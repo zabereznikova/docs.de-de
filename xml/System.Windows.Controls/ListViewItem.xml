@@ -1,0 +1,53 @@
+<Type Name="ListViewItem" FullName="System.Windows.Controls.ListViewItem">
+  <TypeSignature Language="C#" Value="public class ListViewItem : System.Windows.Controls.ListBoxItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewItem extends System.Windows.Controls.ListBoxItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ListViewItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ListBoxItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Element in einem <see cref="T:System.Windows.Controls.ListView" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.ListViewItem> ist eine <xref:System.Windows.Controls.ContentControl>, was bedeutet, dass es ein einzelnes Objekt eines beliebigen Typs (z. B. eine Zeichenfolge, ein Bild oder ein Bereich) enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ContentControl>-Klasse.  
+  
+ Ein <xref:System.Windows.Controls.ListView> in der Regel gibt den Inhalt für ihre <xref:System.Windows.Controls.ListViewItem> Steuerelemente durch Festlegen der <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft oder die <xref:System.Windows.Controls.ItemsControl.Items%2A> Eigenschaft. Ein Beispiel finden Sie unter.  
+  
+ Vorlagen und Formatvorlagen, die für definiert sind die <xref:System.Windows.Controls.ListViewItem> Typ werden verwendet, um die Anzeige des Inhalts im Angeben einer <xref:System.Windows.Controls.ListView>.  
+  
+## <a name="customizing-the-listviewitem-control"></a>Anpassen des ListViewItem-Steuerelements  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.ListViewItem> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.ListViewItem>, finden Sie unter [ListView-Stile und Vorlagen](~/docs/framework/wpf/controls/listview-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.ListViewItem> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListViewItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ListViewItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

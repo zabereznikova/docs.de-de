@@ -1,0 +1,105 @@
+<Type Name="CommonBehaviorsSection" FullName="System.ServiceModel.Configuration.CommonBehaviorsSection">
+  <TypeSignature Language="C#" Value="public class CommonBehaviorsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommonBehaviorsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.CommonBehaviorsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Konfigurationsabschnitt, der eine Liste der Verhaltensweisen enthält, die für alle Windows Communication Foundation (WCF)-Dienste auf dem Computer, bevor die Verhaltensweisen im gilt die <see langword="behaviors" /> -Abschnitt angewendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konfigurationsabschnitt wird in der Datei 'Machine.config' definiert. Sie enthält eine Liste der Verhaltensweisen, die auf alle [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienste auf dem Computer angewendet werden, bevor die Verhaltensweisen im `behaviors`-Abschnitt angewendet werden. Wenn ein Verhalten in beiden Abschnitten definiert wird, gilt das Verhalten in den `behaviors`-Abschnitten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonBehaviorsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.CommonBehaviorsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.CommonBehaviorsSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointBehaviors">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.CommonEndpointBehaviorElement EndpointBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.CommonEndpointBehaviorElement EndpointBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CommonBehaviorsSection.EndpointBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("endpointBehaviors", Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.CommonEndpointBehaviorElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Einträge ab, die durch ihren eindeutigen Namen als <see langword="EndpointBehavior" />-Elemente identifiziert werden.</summary>
+        <value>Die untergeordneten Einträge <see langword="EndpointBehavior" /> Elemente, die durch ihren eindeutigen Namen identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CommonBehaviorsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceBehaviors">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.CommonServiceBehaviorElement ServiceBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.CommonServiceBehaviorElement ServiceBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.CommonBehaviorsSection.ServiceBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serviceBehaviors", Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.CommonServiceBehaviorElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Einträge ab, die durch ihren eindeutigen Namen als <see langword="serviceBehavior" />-Elemente identifiziert werden.</summary>
+        <value>Die untergeordneten Einträge <see langword="serviceBehavior" /> Elemente, die durch ihren eindeutigen Namen identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1489 @@
+<Type Name="HttpUtility" FullName="System.Web.HttpUtility">
+  <TypeSignature Language="C#" Value="public sealed class HttpUtility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpUtility extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpUtility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Web.HttpUtility</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Codieren und Decodieren von URLs bei der Verarbeitung von Webanforderungen bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility> Klasse wird intern von verwendet die <xref:System.Web.HttpServerUtility> -Klasse, deren Methoden und Eigenschaften verfügbar, über die systeminternen ASP.NET gemacht sind <xref:System.Web.HttpContext.Server%2A> Objekt. Darüber hinaus die <xref:System.Web.HttpUtility> Klasse enthält, Codierung und Decodierung von Utility-Methoden, die nicht aus zugegriffen werden kann die <xref:System.Web.HttpContext.Server%2A>.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.HttpUtility.UrlEncode%2A>, <xref:System.Web.HttpUtility.UrlDecode%2A> und <xref:System.Web.HttpUtility.ParseQueryString%2A> Methoden die <xref:System.Web.HttpUtility> Klasse.  
+  
+ [!code-aspx-csharp[HttpUtilityExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpUtilityExample/cs/httputilityexample.aspx#1)]
+ [!code-aspx-vb[HttpUtilityExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpUtilityExample/vb/httputilityexample.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpUtility ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpUtility" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility> -Klasse stellt Methoden zum Codieren und Decodieren von Zeichenfolgen basierend auf URLs, URL-Token und Pfade. Die <xref:System.Web.HttpUtility> wird intern von verwendet die <xref:System.Web.HttpServerUtility> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlAttributeEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlAttributeEncode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlAttributeEncode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.HtmlAttributeEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu codierende Zeichenfolge.</param>
+        <summary>Führt eine minimale Konvertierung einer Zeichenfolge in eine HTML-codierte Zeichenfolge aus.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility.HtmlAttributeEncode%2A> Methode codiert die Zeichen, die für das Einfügen in eine HTML-Attributwert geeignet.  
+  
+ Das Zeichenfolgenergebnis aus der <xref:System.Web.HttpUtility.HtmlAttributeEncode%2A> Methode sollte nur für Attribute in Anführungszeichen verwendet werden. Sicherheitsprobleme können auftreten, wenn mithilfe der <xref:System.Web.HttpUtility.HtmlAttributeEncode%2A> Methode mit einfachen Anführungszeichen Attribute.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlAttributeEncode">
+      <MemberSignature Language="C#" Value="public static void HtmlAttributeEncode (string s, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HtmlAttributeEncode(string s, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.HtmlAttributeEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu codierende Zeichenfolge.</param>
+        <param name="output">Ein <see cref="T:System.IO.TextWriter" />-Ausgabestream.</param>
+        <summary>Minimal konvertiert eine Zeichenfolge in eine HTML-codierte Zeichenfolge und sendet die codierte Zeichenfolge an eine <see cref="T:System.IO.TextWriter" /> Ausgabestream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility.HtmlAttributeEncode%2A> Methode konvertiert nur Anführungszeichen ("), kaufmännische und-Zeichen (&) und linke spitze Klammern (<) in entsprechende Zeichenentitäten. Es ist wesentlich schneller als die <xref:System.Web.HttpUtility.HtmlEncode%2A> Methode.  
+  
+ Das Zeichenfolgenergebnis aus der <xref:System.Web.HttpUtility.HtmlAttributeEncode%2A> Methode sollte nur für Attribute in Anführungszeichen verwendet werden. Sicherheitsprobleme können auftreten, wenn mithilfe der <xref:System.Web.HttpUtility.HtmlAttributeEncode%2A> Methode mit einfachen Anführungszeichen Attribute.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecode">
+      <MemberSignature Language="C#" Value="public static string HtmlDecode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlDecode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.HtmlDecode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu decodierende Zeichenfolge.</param>
+        <summary>Konvertiert eine Zeichenfolge, die für die HTTP-Übertragung HTML-codiert wurde, in eine decodierte Zeichenfolge.</summary>
+        <returns>Eine decodierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. HTML-Codierung konvertiert unzulässige Zeichen im HTML-Format in Zeichenentitäten sind; Die HTML-Decodierung kehrt die Codierung. Beispielsweise, wenn in einem Textblock, der Zeichen eingebettet \< und > werden als codiert &lt; und &gt; für HTTP-Übertragung.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpUtility.HtmlEncode%2A> und <xref:System.Web.HttpUtility.HtmlDecode%2A> Methoden die <xref:System.Web.HttpUtility> Klasse. Die Eingabezeichenfolge unter Verwendung von codiert die <xref:System.Web.HttpUtility.HtmlEncode%2A> Methode. Die codierte Zeichenfolge wird dann mit decodiert die <xref:System.Web.HttpUtility.HtmlDecode%2A> Methode.  
+  
+ [!code-csharp[HttpUtility_HtmlDecode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpUtility_HtmlDecode/CS/httputility_htmldecode.cs#1)]
+ [!code-vb[HttpUtility_HtmlDecode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpUtility_HtmlDecode/VB/httputility_htmldecode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecode">
+      <MemberSignature Language="C#" Value="public static void HtmlDecode (string s, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HtmlDecode(string s, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.HtmlDecode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu decodierende Zeichenfolge.</param>
+        <param name="output">Ein <see cref="T:System.IO.TextWriter" />-Ausgabestream.</param>
+        <summary>Konvertiert eine HTML-codierte Zeichenfolge in eine decodierte Zeichenfolge und sendet die decodierte Zeichenfolge an einen <see cref="T:System.IO.TextWriter" />-Ausgabestream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. HTML-Codierung konvertiert unzulässige Zeichen im HTML-Format in Zeichenentitäten sind; Die HTML-Decodierung kehrt die Codierung. Beispielsweise, wenn in einem Textblock, der Zeichen eingebettet \< und > werden als codiert &lt; und &gt; für HTTP-Übertragung.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlEncode (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlEncode(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.HtmlEncode(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt.</param>
+        <summary>Konvertiert die Zeichenfolgendarstellung eines Objekts in eine HTML-codierte Zeichenfolge und gibt die codierte Zeichenfolge zurück.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlEncode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlEncode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.HtmlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu codierende Zeichenfolge.</param>
+        <summary>Konvertiert eine Zeichenfolge in eine HTML-codierte Zeichenfolge.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. HTML-Codierung konvertiert unzulässige Zeichen im HTML-Format in Zeichenentitäten sind; Die HTML-Decodierung kehrt die Codierung. Beispielsweise, wenn in einem Textblock, der Zeichen eingebettet \< und > werden als codiert &lt; und &gt; für HTTP-Übertragung.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpUtility.HtmlEncode%2A> und <xref:System.Web.HttpUtility.HtmlDecode%2A> Methoden die <xref:System.Web.HttpUtility> Klasse. Die Eingabezeichenfolge unter Verwendung von codiert die <xref:System.Web.HttpUtility.HtmlEncode%2A> Methode. Die codierte Zeichenfolge wird dann mit decodiert die <xref:System.Web.HttpUtility.HtmlDecode%2A> Methode.  
+  
+ [!code-csharp[HttpUtility_HtmlDecode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpUtility_HtmlDecode/CS/httputility_htmldecode.cs#1)]
+ [!code-vb[HttpUtility_HtmlDecode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpUtility_HtmlDecode/VB/httputility_htmldecode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public static void HtmlEncode (string s, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HtmlEncode(string s, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.HtmlEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu codierende Zeichenfolge.</param>
+        <param name="output">Ein <see cref="T:System.IO.TextWriter" />-Ausgabestream.</param>
+        <summary>Konvertiert eine Zeichenfolge in eine HTML-codierte Zeichenfolge und gibt das Ergebnis in Form eines <see cref="T:System.IO.TextWriter" />-Ausgabestreams zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. HTML-Codierung konvertiert unzulässige Zeichen im HTML-Format in Zeichenentitäten sind; Die HTML-Decodierung kehrt die Codierung. Beispielsweise, wenn in einem Textblock, der Zeichen eingebettet \< und >, werden als codiert &lt; und &gt; für HTTP-Übertragung.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="JavaScriptStringEncode">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Codiert eine Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode codiert Zeichenfolgen. Einfache Anführungszeichen und doppelte Anführungszeichen eingeschlossen sind z. B. als enthalten `\'` und `\"` in die codierte Zeichenfolge.  
+  
+ URL-Codierung wird sichergestellt, dass es sich bei allen Browsern Text in URL-Zeichenfolgen ordnungsgemäß übermitteln. Zeichen, z. B. ein Fragezeichen (?), kaufmännisches und-Zeichen (&), Schrägstrich (/) und Leerzeichen möglicherweise abgeschnitten, oder von einigen Browsern beschädigt werden. Daher müssen diese Zeichen codiert werden, `a` Elemente oder in Abfragezeichenfolgen können werden die Zeichenfolgen, in dem von einem Browser in einer Anforderungszeichenfolge erneut gesendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="JavaScriptStringEncode">
+      <MemberSignature Language="C#" Value="public static string JavaScriptStringEncode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string JavaScriptStringEncode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.JavaScriptStringEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine zu codierende Zeichenfolge.</param>
+        <summary>Codiert eine Zeichenfolge.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JavaScriptStringEncode">
+      <MemberSignature Language="C#" Value="public static string JavaScriptStringEncode (string value, bool addDoubleQuotes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string JavaScriptStringEncode(string value, bool addDoubleQuotes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="addDoubleQuotes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine zu codierende Zeichenfolge.</param>
+        <param name="addDoubleQuotes">Ein Wert, der angibt, ob die codierte Zeichenfolge in doppelte Anführungszeichen gesetzt wird.</param>
+        <summary>Codiert eine Zeichenfolge.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseQueryString">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.NameValueCollection ParseQueryString (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Specialized.NameValueCollection ParseQueryString(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.ParseQueryString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Die zu zerlegende Abfragezeichenfolge.</param>
+        <summary>Analysiert eine Abfragezeichenfolge in einem <see cref="T:System.Collections.Specialized.NameValueCollection" /> mit <see cref="P:System.Text.Encoding.UTF8" /> Codierung.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> von Abfrageparametern und -Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility.ParseQueryString%2A> -Methode verwendet <xref:System.Text.Encoding.UTF8%2A> Format beim Analysieren der Abfragezeichenfolge In der zurückgegebenen <xref:System.Collections.Specialized.NameValueCollection>, URL-codierte Zeichen decodiert und mehrere Vorkommen des gleichen Abfragezeichenfolgen-Parameters als einzelnen Eintrag durch ein Komma voneinander getrennt aufgeführt sind Wert.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Web.HttpUtility.ParseQueryString%2A> Methode verwendet, Abfragezeichenfolgen, die möglicherweise eine Benutzereingabe, enthalten, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.HttpUtility.ParseQueryString%2A>-Methode verwenden. Wenn mehrfaches Vorkommen der gleichen Abfragezeichenfolgen-Variablen werden in einen Eintrag des zurückgegebenen konsolidiert <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ [!code-aspx-csharp[HttpUtility_ParseQueryString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpUtility_ParseQueryString/cs/httputility_parsequerystring.aspx#1)]
+ [!code-aspx-vb[HttpUtility_ParseQueryString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpUtility_ParseQueryString/vb/httputility_parsequerystring.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseQueryString">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.NameValueCollection ParseQueryString (string query, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Specialized.NameValueCollection ParseQueryString(string query, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.ParseQueryString(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="query">Die zu zerlegende Abfragezeichenfolge.</param>
+        <param name="encoding">Der zu verwendende <see cref="T:System.Text.Encoding" />.</param>
+        <summary>Analysiert eine Abfragezeichenfolge in einem <see cref="T:System.Collections.Specialized.NameValueCollection" /> unter Verwendung des angegebenen <see cref="T:System.Text.Encoding" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> von Abfrageparametern und -Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der zurückgegebenen <xref:System.Collections.Specialized.NameValueCollection>, URL-codierte Zeichen decodiert und mehrere Vorkommen des gleichen Abfragezeichenfolgen-Parameters sind durch ein Komma trennen jeden Wert als einzelnen Eintrag aufgeführt.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Web.HttpUtility.ParseQueryString%2A> Methode verwendet, Abfragezeichenfolgen, die möglicherweise eine Benutzereingabe, enthalten, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="encoding" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecode">
+      <MemberSignature Language="C#" Value="public static string UrlDecode (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlDecode(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die zu decodierende Zeichenfolge.</param>
+        <summary>Konvertiert eine Zeichenfolge, die für die Übertragung in einer URL codiert wurde, in eine decodierte Zeichenfolge.</summary>
+        <returns>Eine decodierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecode">
+      <MemberSignature Language="C#" Value="public static string UrlDecode (byte[] bytes, System.Text.Encoding e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlDecode(unsigned int8[] bytes, class System.Text.Encoding e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecode(System.Byte[],System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="e" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu decodierende Bytearray.</param>
+        <param name="e">Die <see cref="T:System.Text.Encoding" /> , die das Decodierungsschema angibt.</param>
+        <summary>Konvertiert ein URL-codiertes Bytearray mit dem angegebenen Decodierungsobjekt in eine decodierte Zeichenfolge.</summary>
+        <returns>Eine decodierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecode">
+      <MemberSignature Language="C#" Value="public static string UrlDecode (string s, System.Text.Encoding e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlDecode(string s, class System.Text.Encoding e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecode(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+        <Parameter Name="e" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="s">To be added.</param>
+        <param name="e">Die <see cref="T:System.Text.Encoding" /> , die das Decodierungsschema angibt.</param>
+        <summary>Konvertiert eine URL-codierte Zeichenfolge mit dem angegebenen Codierungsobjekt in eine decodierte Zeichenfolge.</summary>
+        <returns>Eine decodierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecode">
+      <MemberSignature Language="C#" Value="public static string UrlDecode (byte[] bytes, int offset, int count, System.Text.Encoding e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlDecode(unsigned int8[] bytes, int32 offset, int32 count, class System.Text.Encoding e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecode(System.Byte[],System.Int32,System.Int32,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="e" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu decodierende Bytearray.</param>
+        <param name="offset">Die Position im Bytearray, an der Decodierung begonnen werden soll.</param>
+        <param name="count">Die Anzahl der zu decodierenden Bytes.</param>
+        <param name="e">Die <see cref="T:System.Text.Encoding" /> -Objekt, das das Decodierungsschema angibt.</param>
+        <summary>Konvertiert ein URL-codiertes Bytearray mithilfe des angegebenen Codierungsobjekts in eine decodierte Zeichenfolge, beginnend an der angegebenen Position im Array und für die angegebene Anzahl von Bytes.</summary>
+        <returns>Eine decodierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Beispielsweise, wenn in einem Textblock in einer URL übertragen werden die Zeichen eingebettet \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" />ist <see langword="null" />, aber <paramref name="count" /> stimmt nicht mit <see langword="0" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />ist kleiner als <see langword="0" /> oder größer als die Länge der <paramref name="bytes" /> Array.  
+  
+ \- oder –  
+  
+ <paramref name="count" />ist kleiner als <see langword="0" />, oder <paramref name="count" />  +  <paramref name="offset" /> ist größer als die Länge der <paramref name="bytes" /> Array.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlDecodeToBytes (byte[] bytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlDecodeToBytes(unsigned int8[] bytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecodeToBytes(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu decodierende Bytearray.</param>
+        <summary>Konvertiert ein URL-codiertes Bytearray in ein decodiertes Bytearray.</summary>
+        <returns>Ein decodiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlDecodeToBytes (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlDecodeToBytes(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecodeToBytes(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die zu decodierende Zeichenfolge.</param>
+        <summary>Konvertiert eine URL-codierte Zeichenfolge in ein decodiertes Bytearray.</summary>
+        <returns>Ein decodiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlDecodeToBytes (string str, System.Text.Encoding e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlDecodeToBytes(string str, class System.Text.Encoding e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecodeToBytes(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+        <Parameter Name="e" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die zu decodierende Zeichenfolge.</param>
+        <param name="e">Die <see cref="T:System.Text.Encoding" /> -Objekt, das das Decodierungsschema angibt.</param>
+        <summary>Konvertiert eine URL-codierte Zeichenfolge mit dem angegebenen Decodierungsobjekt in ein decodiertes Bytearray.</summary>
+        <returns>Ein decodiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlDecodeToBytes (byte[] bytes, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlDecodeToBytes(unsigned int8[] bytes, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlDecodeToBytes(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu decodierende Bytearray.</param>
+        <param name="offset">Die Position im Bytearray, an der die Decodierung begonnen werden soll.</param>
+        <param name="count">Die Anzahl der zu decodierenden Bytes.</param>
+        <summary>Konvertiert ein URL-codiertes Bytearray in ein decodiertes Bytearray, beginnend an der angegebenen Position im Array und für die angegebene Anzahl von Bytes.</summary>
+        <returns>Ein decodiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" />ist <see langword="null" />, aber <paramref name="count" /> stimmt nicht mit <see langword="0" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />ist kleiner als <see langword="0" /> oder größer als die Länge der <paramref name="bytes" /> Array.  
+  
+ \- oder –  
+  
+ <paramref name="count" />ist kleiner als <see langword="0" />, oder <paramref name="count" />  +  <paramref name="offset" /> ist größer als die Länge der <paramref name="bytes" /> Array.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (byte[] bytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(unsigned int8[] bytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu codierende Bytearray.</param>
+        <summary>Konvertiert ein Bytearray in eine codierte URL-Zeichenfolge.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility.UrlEncode%2A> Methode kann verwendet werden, um die gesamte URL, einschließlich der Abfragezeichenfolgenwerte zu codieren. Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Z. B., wenn die Zeichen \< und > werden eingebettet in einen Textblock in einer URL übertragen werden, werden sie als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Der zu codierende Text.</param>
+        <summary>Codiert eine URL-Zeichenfolge.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility.UrlEncode%28System.String%29> Methode kann verwendet werden, um die gesamte URL, einschließlich der Abfragezeichenfolgenwerte zu codieren. Zeichen wie Leerzeichen und Interpunktion ohne Codierung in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Z. B., wenn die Zeichen \< und > werden eingebettet in einen Textblock in einer URL übertragen werden, werden sie als "%3c" und %3-3e codiert.  
+  
+ Sie können eine URL mit Codieren der <xref:System.Web.HttpUtility.UrlEncode%2A> Methode oder die <xref:System.Web.HttpUtility.UrlPathEncode%2A> Methode. Die Methoden werden jedoch andere Ergebnisse zurückgeben. Die <xref:System.Web.HttpUtility.UrlEncode%2A> Methode konvertiert jedes Leerzeichen in ein Pluszeichen (+). Die <xref:System.Web.HttpUtility.UrlPathEncode%2A> Methode konvertiert jedes Leerzeichen in die Zeichenfolge "% 20", der ein Leerzeichen in Hexadezimalschreibweise darstellt. Verwenden der <xref:System.Web.HttpUtility.UrlPathEncode%2A> Methode, wenn Sie den Pfadteil einer URL codieren, um eine konsistente decodierte URL, unabhängig von der Plattform oder den Browser zu gewährleisten, führt die Decodierung aus.  
+  
+ Die <xref:System.Web.HttpUtility.UrlEncode%2A?displayProperty=nameWithType> Methode verwendet standardmäßig die Codierung UTF-8. Daher verwenden die <xref:System.Web.HttpUtility.UrlEncode%2A> Methode bietet die gleichen Ergebnisse wie die Verwendung der <xref:System.Web.HttpUtility.UrlEncode%2A> -Methode und angeben <xref:System.Text.Encoding.UTF8%2A> als zweiten Parameter.  
+  
+ <xref:System.Web.HttpServerUtility.UrlEncode%2A>ist eine einfache Möglichkeit, Zugriff auf die <xref:System.Web.HttpUtility.UrlEncode%2A> Methode zur Laufzeit von einer ASP.NET-Anwendung. Intern <xref:System.Web.HttpServerUtility.UrlEncode%2A> verwendet die <xref:System.Web.HttpUtility.UrlEncode%2A> Methode, um Zeichenfolgen zu codieren.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (string s, System.Text.Encoding Enc);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(string s, class System.Text.Encoding Enc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncode(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+        <Parameter Name="e" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="s">To be added.</param>
+        <param name="Enc">To be added.</param>
+        <summary>Codiert eine URL-Zeichenfolge mithilfe des angegebenen Codierungsobjekts.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um die gesamte URL, einschließlich der Abfragezeichenfolgenwerte zu codieren. Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Z. B., wenn die Zeichen \< und > werden eingebettet in einen Textblock in einer URL übertragen werden, werden sie als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (byte[] bytes, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(unsigned int8[] bytes, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncode(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu codierende Bytearray.</param>
+        <param name="offset">Die Position im Bytearray, an der die Codierung begonnen werden soll.</param>
+        <param name="count">Die Anzahl von zu codierenden Bytes.</param>
+        <summary>Konvertiert ein Bytearray in eine URL-codierte Zeichenfolge, beginnend an der angegebenen Position im Array und für die angegebene Anzahl von Bytes.</summary>
+        <returns>Eine codierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpUtility.UrlEncode%28System.String%29> Methode kann verwendet werden, um die gesamte URL, einschließlich der Abfragezeichenfolgenwerte zu codieren. Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Z. B., wenn die Zeichen \< und > werden eingebettet in einen Textblock in einer URL übertragen werden, werden sie als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlEncodeToBytes (byte[] bytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlEncodeToBytes(unsigned int8[] bytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncodeToBytes(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu codierende Bytearray.</param>
+        <summary>Konvertiert ein Bytearray in ein URL-codiertes Bytearray.</summary>
+        <returns>Ein codiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlEncodeToBytes (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlEncodeToBytes(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncodeToBytes(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die zu codierende Zeichenfolge.</param>
+        <summary>Konvertiert eine Zeichenfolge in ein URL-codiertes Bytearray.</summary>
+        <returns>Ein codiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlEncodeToBytes (string str, System.Text.Encoding e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlEncodeToBytes(string str, class System.Text.Encoding e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncodeToBytes(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+        <Parameter Name="e" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die zu codierende Zeichenfolge.</param>
+        <param name="e">Die <see cref="T:System.Text.Encoding" /> , die das Codierungsschema angibt.</param>
+        <summary>Konvertiert eine Zeichenfolge mit dem angegebenen Codierungsobjekt in ein URL-codiertes Bytearray.</summary>
+        <returns>Ein codiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlEncodeToBytes (byte[] bytes, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlEncodeToBytes(unsigned int8[] bytes, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncodeToBytes(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Das zu codierende Bytearray.</param>
+        <param name="offset">Die Position im Bytearray, an der die Codierung begonnen werden soll.</param>
+        <param name="count">Die Anzahl von zu codierenden Bytes.</param>
+        <summary>Konvertiert ein Bytearray in ein URL-codiertes Bytearray, beginnend an der angegebenen Position im Array und für die angegebene Anzahl von Bytes.</summary>
+        <returns>Ein codiertes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert unzulässige Zeichen in einer URL in Zeichenentitäten sind; URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ Verwenden Sie zum Codieren oder Decodieren von Werten außerhalb einer Webanwendung die <xref:System.Net.WebUtility>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" />ist <see langword="null" />, aber <paramref name="count" /> stimmt nicht mit <see langword="0" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />ist kleiner als <see langword="0" /> oder größer als die Länge der <paramref name="bytes" /> Array.  
+  
+ \- oder –  
+  
+ <paramref name="count" />ist kleiner als <see langword="0" />, oder <paramref name="count" />  +  <paramref name="offset" /> ist größer als die Länge der <paramref name="bytes" /> Array.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncodeUnicode">
+      <MemberSignature Language="C#" Value="public static string UrlEncodeUnicode (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncodeUnicode(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncodeUnicode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert eine Zeichenfolge in eine Unicode-Zeichenfolge.</summary>
+        <returns>Eine Unicode-Zeichenfolge in %<paramref name="UnicodeValue" /> Notation.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert Zeichen, die in einer URL zu Zeichenentitäten ungültig sind. URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncodeUnicodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlEncodeUnicodeToBytes (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlEncodeUnicodeToBytes(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlEncodeUnicodeToBytes(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert eine Unicode-Zeichenfolge in ein Bytearray.</summary>
+        <returns>Ein Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeichen wie Leerzeichen und Interpunktion in einem HTTP-Datenstrom übergeben werden, können sie auf der Empfängerseite fehlinterpretiert werden. URL-Codierung konvertiert Zeichen, die in einer URL zu Zeichenentitäten ungültig sind. URL-Decodierung kehrt die Codierung. Angenommen, bei der Einbettung in einen Textblock zu übertragende in einer URL, die Zeichen \< und > werden als "%3c" und %3-3e codiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlPathEncode">
+      <MemberSignature Language="C#" Value="public static string UrlPathEncode (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlPathEncode(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpUtility.UrlPathEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.HttpUtility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">To be added.</param>
+        <summary>Nicht verwenden. Nur für die Browserkompatibilität vorgesehen. Verwenden Sie <see cref="M:System.Web.HttpUtility.UrlEncode(System.String)" />.</summary>
+        <returns>Der codierte Text.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

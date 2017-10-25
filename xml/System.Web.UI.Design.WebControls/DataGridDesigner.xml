@@ -1,0 +1,443 @@
+<Type Name="DataGridDesigner" FullName="System.Web.UI.Design.WebControls.DataGridDesigner">
+  <TypeSignature Language="C#" Value="public class DataGridDesigner : System.Web.UI.Design.WebControls.BaseDataListDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridDesigner extends System.Web.UI.Design.WebControls.BaseDataListDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DataGridDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.BaseDataListDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erweitert das Entwurfszeitverhalten für das <see cref="T:System.Web.UI.WebControls.DataGrid" />-Webserversteuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.Design.WebControls.DataGridDesigner> Klasse. Der Code überschreibt die <xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetDesignTimeHtml%2A> Methode zum Anpassen der <xref:System.Web.UI.WebControls.BaseDataList.CellPadding%2A>, <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>, und <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> Eigenschaften bei der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement auf einer Entwurfsoberfläche gerendert wird.  
+  
+ [!code-vb[DataListDesigner_Sample2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListDesigner_Sample2/VB/simpledatalistdesigner.vb#1)]  
+  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DesignerAttribute> Attribut, um dem Designer zuzuordnende der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ [!code-vb[DataListDesigner_Sample2#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListDesigner_Sample2/VB/simpledatalistdesigner.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.DataGridDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataGridDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> diesem Designer zugeordnete Objekt.</summary>
+        <value>Die diesem Designer zugeordnete <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTemplateEditingFrame">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.Design.ITemplateEditingFrame CreateTemplateEditingFrame (System.Web.UI.Design.TemplateEditingVerb verb);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.Design.ITemplateEditingFrame CreateTemplateEditingFrame(class System.Web.UI.Design.TemplateEditingVerb verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.CreateTemplateEditingFrame(System.Web.UI.Design.TemplateEditingVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ITemplateEditingFrame</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.Web.UI.Design.TemplateEditingVerb" />
+      </Parameters>
+      <Docs>
+        <param name="verb">Die <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> für die der Vorlagenbearbeitungsrahmen erstellt.</param>
+        <summary>Erstellt einen Vorlagenbearbeitungsrahmen mithilfe des angegebenen Verbs an.</summary>
+        <returns>Ein Vorlagenbearbeitungsrahmen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />um die verwalteten und nicht verwalteten Ressourcen freizugeben. <see langword="false" /> , nur die nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die vom <see cref="T:System.Web.UI.Design.WebControls.DataGridDesigner" />-Objekt verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `disposing` Parameter ist `true`, die <xref:System.Web.UI.Design.WebControls.DataGridDesigner.Dispose%2A> Methode alle verwaltete Objekte reservierten Ressourcen frei, die von diesem <xref:System.Web.UI.Design.WebControls.DataGridDesigner> Objektverweise.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.Design.WebControls.DataGridDesigner.Dispose(System.Boolean)" /> Methode kann von anderen Objekten mehrmals aufgerufen werden. Wenn es zu überschreiben, müssen Sie sicher, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see cref="M:System.Web.UI.Design.WebControls.DataGridDesigner.Dispose(System.Boolean)" />. Weitere Informationen dazu, wie Sie diese Methode implementieren, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu den <see cref="M:System.Web.UI.Control.Dispose" /> und <see cref="M:System.Object.Finalize" /> Methoden, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCachedTemplateEditingVerbs">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.Design.TemplateEditingVerb[] GetCachedTemplateEditingVerbs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.Design.TemplateEditingVerb[] GetCachedTemplateEditingVerbs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.GetCachedTemplateEditingVerbs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateEditingVerb[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die zwischengespeicherte Vorlage für den Designer verfügbaren Verben bearbeiten.</summary>
+        <returns>Ein Array von <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> -Objekten bestehend aus den zwischengespeicherten Vorlagenbearbeitungsmodus-Verben, die in den Designer verfügbar sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das HTML-Markup, das zur Darstellung der <see cref="T:System.Web.UI.WebControls.DataGrid" /> -Steuerelements zur Entwurfszeit.</summary>
+        <returns>Das HTML-Markup, das zur Darstellung der <see cref="T:System.Web.UI.WebControls.DataGrid" /> -Steuerelements zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetDesignTimeHtml%2A> Methode, um die Darstellung des ändern die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ Der Code verwendet `Try...Catch...Finally` Syntax, um die folgenden Aktionen ausführen:  
+  
+-   Die `Try` Abschnitt ändert die Werte der Eigenschaften des das Datenraster-Steuerelement.  
+  
+-   Die `Catch` Abschnitt alle Ausnahmen abzufangen und sendet diese an die <xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetErrorDesignTimeHtml%2A> Methode.  
+  
+-   Die `Finally` Abschnitt legt die Eigenschaften auf ihre ursprünglichen Werte fest.  
+  
+ In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.WebControls.DataGridDesigner> Klasse.  
+  
+ [!code-vb[DataListDesigner_Sample2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListDesigner_Sample2/VB/simpledatalistdesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das HTML-Markup verwendet, um die Darstellung eines leeren Template-basierten-Steuerelements zur Entwurfszeit ab.</summary>
+        <returns>Das HTML-Markup verwendet, um ein leeres Template-basierten Steuerelement zur Entwurfszeit darzustellen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetErrorDesignTimeHtml (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetErrorDesignTimeHtml(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.GetErrorDesignTimeHtml(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die aufgetretene Ausnahme.</param>
+        <summary>Ruft das HTML-Markup zur Entwurfszeit für die angegebene Ausnahme angezeigt wird, wenn ein Fehler, beim Rendern des Steuerelements aufgetreten ist ab.</summary>
+        <returns>Das HTML-Markup zur Entwurfszeit für die angegebene Ausnahme angezeigt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetErrorDesignTimeHtml%2A> Methode zum Ändern der Darstellung der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement auf der Entwurfsoberfläche angezeigt, wenn eine Ausnahme auftritt.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.WebControls.DataGridDesigner> Klasse.  
+  
+ [!code-vb[DataListDesigner_Sample2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListDesigner_Sample2/VB/simpledatalistdesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateContainerDataItemProperty">
+      <MemberSignature Language="C#" Value="public override string GetTemplateContainerDataItemProperty (string templateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetTemplateContainerDataItemProperty(string templateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContainerDataItemProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <summary>Ruft die Eigenschaft für den Artikel der Container der Vorlage ab.</summary>
+        <returns>Das Datenelement-Eigenschaft des Containers der Vorlage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContainerDataItemProperty%2A> Methode ist veraltet. Um die vorlagemetadaten zugreifen zu können, finden Sie unter <xref:System.Web.UI.Design.TemplateDefinition>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateContent">
+      <MemberSignature Language="C#" Value="public override string GetTemplateContent (System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, out bool allowEditing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetTemplateContent(class System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, [out] bool&amp; allowEditing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContent(System.Web.UI.Design.ITemplateEditingFrame,System.String,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingFrame" Type="System.Web.UI.Design.ITemplateEditingFrame" />
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="allowEditing" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="editingFrame">Die <see cref="T:System.Web.UI.Design.ITemplateEditingFrame" /> aus dem den Inhalt abgerufen.</param>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <param name="allowEditing">
+          <see langword="true" />Wenn der Inhalt der Vorlage bearbeitet werden kann. <see langword="false" /> , wenn der Inhalt schreibgeschützt ist.</param>
+        <summary>Ruft den Inhalt der Vorlage ab.</summary>
+        <returns>Der Inhalt der Vorlage.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplatePropertyParentType">
+      <MemberSignature Language="C#" Value="public override Type GetTemplatePropertyParentType (string templateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetTemplatePropertyParentType(string templateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplatePropertyParentType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <summary>Ruft die <see cref="T:System.Type" /> -Objekt, das übergeordnete Element der angegebenen Vorlage entspricht.</summary>
+        <returns>Die <see cref="T:System.Type" /> , das übergeordnete Element der angegebenen Vorlage entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplatePropertyParentType%2A> Methode ist veraltet. Um die vorlagemetadaten zugreifen zu können, finden Sie unter <xref:System.Web.UI.Design.TemplateDefinition>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Steuerelement, das entworfen wird.</param>
+        <summary>Initialisiert den Designer mit dem angegebenen <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.DataGridDesigner.Initialize%2A> Methode, um sicherzustellen, dass der Designer nur mit Instanzen von initialisiert wird die `SimpleDataGrid` Klasse.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.WebControls.DataGridDesigner> Klasse.  
+  
+ [!code-vb[DataListDesigner_Sample2#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListDesigner_Sample2/VB/simpledatalistdesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnColumnsChanged">
+      <MemberSignature Language="C#" Value="public virtual void OnColumnsChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnColumnsChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.OnColumnsChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die Spalten der Vorlage ändern möchten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTemplateEditingVerbsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTemplateEditingVerbsChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTemplateEditingVerbsChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.OnTemplateEditingVerbsChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die Vorlage bearbeiten Verben ändern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTemplateContent">
+      <MemberSignature Language="C#" Value="public override void SetTemplateContent (System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, string templateContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetTemplateContent(class System.Web.UI.Design.ITemplateEditingFrame editingFrame, string templateName, string templateContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataGridDesigner.SetTemplateContent(System.Web.UI.Design.ITemplateEditingFrame,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingFrame" Type="System.Web.UI.Design.ITemplateEditingFrame" />
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="templateContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="editingFrame">Die <see cref="T:System.Web.UI.Design.ITemplateEditingFrame" /> Inhalt für festgelegt.</param>
+        <param name="templateName">Der Name der Vorlage.</param>
+        <param name="templateContent">Der neue Inhalt für die Vorlage.</param>
+        <summary>Legt den Inhalt der angegebenen Vorlage und Rahmen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

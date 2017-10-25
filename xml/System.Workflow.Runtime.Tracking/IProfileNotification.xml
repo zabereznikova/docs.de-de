@@ -1,0 +1,80 @@
+<Type Name="IProfileNotification" FullName="System.Workflow.Runtime.Tracking.IProfileNotification">
+  <TypeSignature Language="C#" Value="public interface IProfileNotification" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProfileNotification" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.IProfileNotification" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Benachrichtigungsmechanismus für den Überwachungsdienst bereit, mit dem die Laufzeitverfolgungsinfrastruktur über Änderungen am <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> für einen bestimmten Workflow <see cref="T:System.Type" /> informiert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Überwachungsdienste verwalten die für die Laufzeitverfolgungsinfrastruktur verfügbaren Verfolgungsprofile. Ein Überwachungsdienst, der  <xref:System.Workflow.Runtime.Tracking.IProfileNotification> implementiert, kann Benachrichtigungen an die Laufzeitverfolgungsinfrastruktur senden, wenn sich ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für einen bestimmten Workflow <xref:System.Type> ändert oder nicht mehr gültig ist. Die Laufzeitverfolgungsinfrastruktur abonniert die Ereignisse <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated> und <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved> und aktualisiert ihren Cache, wenn diese Ereignisse eintreten. Das verringert die Anzahl der Verfolgungsprofile, die die Laufzeitverfolgungsinfrastruktur von einen Überwachungsdienst anfordert. Hinweis: Die Laufzeitverfolgungsinfrastruktur verwendet noch immer die überladenen <xref:System.Workflow.Runtime.Tracking.TrackingService.GetProfile%2A>-Methoden des Überwachungsdiensts, ruft sie jedoch nicht so häufig auf.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ProfileRemoved">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs&gt; ProfileRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs&gt; ProfileRemoved" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> für einen bestimmten Workflowtyp entfernt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Überwachungsdienst kann das <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved>-Ereignis auslösen, um die Laufzeitverfolgungsinfrastruktur zu informieren, dass neue Instanzen des in <xref:System.Type> angegebenen Workflow-<xref:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs> nicht mehr verfolgt werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProfileUpdated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs&gt; ProfileUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs&gt; ProfileUpdated" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ein <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> für einen bestimmten Workflow-<see cref="T:System.Type" /> aktualisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Überwachungsdienst kann das <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated>-Ereignis auslösen, um die Laufzeitverfolgungsinfrastruktur zu informieren, dass ein neues <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für den angegebenen Workflow-<xref:System.Type> verfügbar ist. Der Workflow-<xref:System.Type> und das <xref:System.Workflow.Runtime.Tracking.TrackingProfile> werden in <xref:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs> übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

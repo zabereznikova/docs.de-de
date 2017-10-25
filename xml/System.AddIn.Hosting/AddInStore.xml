@@ -1,0 +1,495 @@
+<Type Name="AddInStore" FullName="System.AddIn.Hosting.AddInStore">
+  <TypeSignature Language="C#" Value="public static class AddInStore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AddInStore extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInStore" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Speichern und erfahren Sie mehr über die verfügbaren Add-Ins und Pipelinesegmenten bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse erstellen, neu erstellen und aktualisieren zwei Cachedateien, wie in der folgenden Tabelle beschrieben.  
+  
+|Cache-Datei|Methoden, die zum Erstellen der das|  
+|----------------|----------------------------------|  
+|PipelineSegments.store<br /><br /> Diese Datei befindet sich im Stammverzeichnis der Pipelineverzeichnisstruktur.|<xref:System.AddIn.Hosting.AddInStore.Update%2A><br /><br /> Die Datei aktualisiert mit neuen Pipelinesegmente. Wenn keine neuen Segmente installiert sind, überprüft diese Methode nur den Cache.<br /><br /> <xref:System.AddIn.Hosting.AddInStore.Rebuild%2A><br /><br /> Erstellt die Datei neu, und neue Pipelinesegmente enthält.|  
+|AddIns.store<br /><br /> Diese Datei befindet sich in einem Verzeichnis, das eine oder mehrere Add-in-Unterverzeichnisse enthält. Wenn dieses Verzeichnis in der Pipelineverzeichnisstruktur befindet, muss er-Add-Ins benannt werden.|<xref:System.AddIn.Hosting.AddInStore.UpdateAddIns%2A><br /><br /> Aktualisiert die Datei mit neuen Add-Ins an einer angegebenen Position. Rufen Sie diese Methode, wenn Ihre Add-Ins außerhalb der Pipelineverzeichnisstruktur enthalten sind.<br /><br /> Wenn keine neuen Add-Ins installiert sind, überprüft diese Methode nur den Cache.<br /><br /> <xref:System.AddIn.Hosting.AddInStore.RebuildAddIns%2A><br /><br /> Erstellt die Datei neu, und enthält Add-Ins an einer angegebenen Position. Rufen Sie diese Methode, wenn Ihre Add-Ins außerhalb der Pipelineverzeichnisstruktur enthalten sind.<br /><br /> <xref:System.AddIn.Hosting.AddInStore.Update%2A><br /><br /> Wenn die Add-ins in der Pipelineverzeichnisstruktur befinden, aktualisiert diese Methode die Datei mit neuen-Add-ins.<br /><br /> <xref:System.AddIn.Hosting.AddInStore.Rebuild%2A><br /><br /> Wenn die Add-ins in der Pipelineverzeichnisstruktur befinden, wird diese Methode stellt die Datei und schließt neue Add-Ins.|  
+  
+ Diese Methoden erstellen die Cache-Dateien aus, wenn sie nicht bereits vorhanden sind.  
+  
+ Nachdem der Cache-Dateien erstellt wurden, verwenden die <xref:System.AddIn.Hosting.AddInStore.FindAddIns%2A> Methode, um die Dateien, um alle Add-ins finden, die mit einer angegebenen Hostansicht des Add-Ins zu untersuchen. Sie können auch die <xref:System.AddIn.Hosting.AddInStore.FindAddIn%2A> Methode, um ein bestimmtes Add-in ermitteln.  
+  
+> [!IMPORTANT]
+>  Es wird nicht unterstützt, um nicht vertrauenswürdige Benutzer oder Entitäten PipelineSegments.store und Addins.store zugreifen können. Dadurch kann Probleme mit beschädigten Daten für Anwendungen auftreten.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Cachedateien aktualisiert wird.  
+  
+ [!code-csharp[AddInP3Host#2](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#2)]
+ [!code-vb[AddInP3Host#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindAddIn">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt; FindAddIn (Type hostViewOfAddIn, string pipelineRootFolderPath, string addInFilePath, string addInTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.Collection`1&lt;class System.AddIn.Hosting.AddInToken&gt; FindAddIn(class System.Type hostViewOfAddIn, string pipelineRootFolderPath, string addInFilePath, string addInTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.FindAddIn(System.Type,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostViewOfAddIn" Type="System.Type" />
+        <Parameter Name="pipelineRootFolderPath" Type="System.String" />
+        <Parameter Name="addInFilePath" Type="System.String" />
+        <Parameter Name="addInTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostViewOfAddIn">Der Typ, der die Hostansicht des Add-Ins definiert.</param>
+        <param name="pipelineRootFolderPath">Der Pfad zum Stammverzeichnis der Pipelineverzeichnisstruktur.</param>
+        <param name="addInFilePath">Der Pfad und Dateiname der Name das Add-in zu suchen.</param>
+        <param name="addInTypeName">Der Typname des Add-Ins.</param>
+        <summary>Sucht nach einem bestimmten add-in.</summary>
+        <returns>Eine Auflistung von Token, die enthält nur das Token, die das Add-in, das gefunden wurde, darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine einzelne Pipeline für ein Add-in gefunden wird, wird es das einzige Element in der <xref:System.AddIn.Hosting.AddInToken> Auflistung. Wenn mehrere Pipelines für das angegebene Add-in gefunden werden, können Sie diese unterscheiden, indem Sie untersuchen die <xref:System.AddIn.Hosting.AddInToken.QualificationData%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel sucht nach einem bestimmten add-in.  
+  
+ [!code-csharp[AddInP3Host#6](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#6)]
+ [!code-vb[AddInP3Host#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge des <paramref name="pipelineRootFolderPath" /> oder <paramref name="addInFilePath" /> oder <paramref name="addInTypeName" /> ist 0.  
+  
+ \- oder –  
+  
+ Die Add-in Datei ist nicht vorhanden, <paramref name="addInfilePath" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Mindestens ein Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die Read Access-Berechtigung auf <paramref name="pipelineRootFolderPath" />.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für die Fähigkeit, die Add-in-Ordner zu lesen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAddIns">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt; FindAddIns (Type hostViewOfAddIn, System.AddIn.Hosting.PipelineStoreLocation location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.Collection`1&lt;class System.AddIn.Hosting.AddInToken&gt; FindAddIns(class System.Type hostViewOfAddIn, valuetype System.AddIn.Hosting.PipelineStoreLocation location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.FindAddIns(System.Type,System.AddIn.Hosting.PipelineStoreLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostViewOfAddIn" Type="System.Type" />
+        <Parameter Name="location" Type="System.AddIn.Hosting.PipelineStoreLocation" />
+      </Parameters>
+      <Docs>
+        <param name="hostViewOfAddIn">Der Typ, der die Hostansicht des Add-Ins definiert.</param>
+        <param name="location">Die hostanwendung Basisverzeichnis.</param>
+        <summary>Sucht nach allen Add-ins für eine angegebene Hostansicht das Add-in an einem Speicherort, der gemäß den <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> -Enumerationswert.</summary>
+        <returns>Eine Auflistung von Token auf, die Add-Ins darstellen, die gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AddIn.Hosting.PipelineStoreLocation> Enumeration enthält derzeit nur die <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> -Wert, der auf dem Host Anwendungsbasisverzeichnis verweist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel findet-add-ins an der Position, die gemäß der <xref:System.AddIn.Hosting.PipelineStoreLocation> Enumeration.  
+  
+ [!code-csharp[AddInP3Host#4](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#4)]
+ [!code-vb[AddInP3Host#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="location" />ist ein ungültiger <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAddIns">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt; FindAddIns (Type hostViewOfAddIn, System.AddIn.Hosting.PipelineStoreLocation location, params string[] addInFolderPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.Collection`1&lt;class System.AddIn.Hosting.AddInToken&gt; FindAddIns(class System.Type hostViewOfAddIn, valuetype System.AddIn.Hosting.PipelineStoreLocation location, string[] addInFolderPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.FindAddIns(System.Type,System.AddIn.Hosting.PipelineStoreLocation,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostViewOfAddIn" Type="System.Type" />
+        <Parameter Name="location" Type="System.AddIn.Hosting.PipelineStoreLocation" />
+        <Parameter Name="addInFolderPaths" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="hostViewOfAddIn">Der Typ, der die Hostansicht des Add-Ins definiert.</param>
+        <param name="location">Einer der Enumerationswerte.  
+  
+ Derzeit ist der einzige Wert in dieser Enumeration von angegebene Verzeichnis die <see cref="P:System.AppDomainSetup.ApplicationBase" /> -Eigenschaft, die zum Einrichten der Anwendungsdomäne des Hosts verwendet wurde.</param>
+        <param name="addInFolderPaths">(Optional) Der Pfad des Verzeichnisses, das eine oder mehrere Unterverzeichnisse von add-ins enthält. Da dieser Parameter ein Array von Zeichenfolgen akzeptiert, können Sie mehrere Pfade angeben.  
+  
+ Dieser Parameter ist nicht erforderlich, wenn Ihre Add-Ins in der Pipelineverzeichnisstruktur-Add-Ins im Ordner befinden.</param>
+        <summary>Sucht nach allen Add-ins für eine angegebenen Hostansicht des Add-Ins an der vom angegebenen Position ein <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> Wert und eine optionale-Add-ins-Ordner.</summary>
+        <returns>Eine Auflistung von Token auf, die Add-Ins darstellen, die gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung, um einem teilweise vertrauenswürdigen Host, die nicht über Pfad Discovery-Berechtigung, einen eigenen Speicherort ermitteln kann, im Verzeichnis eigenen-add-ins finden aktivieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="location" />ist ein ungültiger <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAddIns">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt; FindAddIns (Type hostViewOfAddIn, string pipelineRootFolderPath, params string[] addInFolderPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.Collection`1&lt;class System.AddIn.Hosting.AddInToken&gt; FindAddIns(class System.Type hostViewOfAddIn, string pipelineRootFolderPath, string[] addInFolderPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.FindAddIns(System.Type,System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.AddIn.Hosting.AddInToken&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostViewOfAddIn" Type="System.Type" />
+        <Parameter Name="pipelineRootFolderPath" Type="System.String" />
+        <Parameter Name="addInFolderPaths" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="hostViewOfAddIn">Der Typ, der die Hostansicht des Add-Ins definiert.</param>
+        <param name="pipelineRootFolderPath">Der Pfad zum Stamm der Pipelineverzeichnisstruktur.</param>
+        <param name="addInFolderPaths">(Optional) Der Pfad des Verzeichnisses, das eine oder mehrere Unterverzeichnisse von add-ins enthält. Da dieser Parameter ein Array von Zeichenfolgen akzeptiert, können Sie mehrere Pfade angeben.  
+  
+ Dieser Parameter ist nicht erforderlich, wenn Ihre Add-Ins in der Pipelineverzeichnisstruktur-Add-Ins im Ordner befinden.</param>
+        <summary>Sucht alle Add-Ins für eine angegebene Hostansicht das Add-in aus einem angegebenen Stammverzeichnis.</summary>
+        <returns>Eine Auflistung von Token auf, die Add-Ins darstellen, die gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft die Speicherdateien zwischengespeicherte-add-Ins und -Segment Pipelineinformationen alle add-ins gefunden, ein angegebenes `hostAddInView` Typ. Anschließend können Sie eines der Token in der zurückgegebenen <xref:System.AddIn.Hosting.AddInToken> Auflistung so aktivieren Sie ein bestimmtes Add-in durch Aufrufen der <xref:System.AddIn.Hosting.AddInToken.Activate%2A> Methode der <xref:System.AddIn.Hosting.AddInToken> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rebuild">
+      <MemberSignature Language="C#" Value="public static string[] Rebuild (System.AddIn.Hosting.PipelineStoreLocation location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] Rebuild(valuetype System.AddIn.Hosting.PipelineStoreLocation location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.Rebuild(System.AddIn.Hosting.PipelineStoreLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.AddIn.Hosting.PipelineStoreLocation" />
+      </Parameters>
+      <Docs>
+        <param name="location">Einer der Enumerationswerte.  
+  
+ Derzeit ist der einzige Wert in dieser Enumeration von angegebene Verzeichnis die <see cref="P:System.AppDomainSetup.ApplicationBase" /> -Eigenschaft, die zum Einrichten der Anwendungsdomäne des Hosts verwendet wurde.</param>
+        <summary>Pipeline Segmente Cache neu und schließt neue Segmente an der vom angegebenen Position ein <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> Wert.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, die Warnungen zu beschreiben, wie die Pipelinesegmente ausgewertet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung, um einem teilweise vertrauenswürdigen Host, die nicht über die Berechtigung, einen eigenen Speicherort ermitteln kann, um-add-ins im Verzeichnis eigenen zu ermitteln aktivieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException">Ein Segmentverzeichnis fehlt in der Pipelineverzeichnisstruktur zur Verfügung.</exception>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="location" />ist ein ungültiger <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rebuild">
+      <MemberSignature Language="C#" Value="public static string[] Rebuild (string pipelineRootFolderPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] Rebuild(string pipelineRootFolderPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.Rebuild(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipelineRootFolderPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pipelineRootFolderPath">Der Pfad zum Stamm der Pipelineverzeichnisstruktur.</param>
+        <summary>Erstellt den Pipeline-Segmente Cache neu und schließt neue Segmente aus einem angegebenen Stammverzeichnis.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, die Warnungen zu beschreiben, wie die Pipelinesegmente ausgewertet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt die Cache-Add-ins neu, wenn die Add-ins in der Pipelineverzeichnisstruktur befinden.  
+  
+ Verwenden Sie diese Methode nur, wenn es möglicherweise liegt ein Problem mit dem Cache und neu erstellt werden müssen. Verwenden Sie die Leistung zu verbessern, die <xref:System.AddIn.Hosting.AddInStore.Update%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException">Ein Segmentverzeichnis fehlt in der Pipelineverzeichnisstruktur zur Verfügung.</exception>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RebuildAddIns">
+      <MemberSignature Language="C#" Value="public static string[] RebuildAddIns (string addInsFolderPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] RebuildAddIns(string addInsFolderPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.RebuildAddIns(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addInsFolderPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="addInsFolderPath">Der Pfad des Verzeichnisses, das eine oder mehrere Unterverzeichnisse von add-ins enthält.</param>
+        <summary>Erstellt den Add-in-Cache neu und neue Add-ins aus einem angegebenen Stammverzeichnis enthält.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, die Warnungen zu beschreiben, wie die Pipelinesegmente ausgewertet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, wenn Ihre Add-Ins außerhalb der Pipelineverzeichnisstruktur enthalten sind.  
+  
+ Verwenden Sie diese Methode nur, wenn es möglicherweise liegt ein Problem mit dem Cache und neu erstellt werden müssen. Verwenden Sie die Leistung zu verbessern, die <xref:System.AddIn.Hosting.AddInStore.UpdateAddIns%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException">Ein Segmentverzeichnis fehlt in der Pipelineverzeichnisstruktur zur Verfügung.</exception>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="addInsFolderPath" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Aufrufer verfügt nicht über Lese-und Schreibzugriff auf den Speicherort, der von angegeben wird <paramref name="addInsFolderPath" />.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für die Fähigkeit zum Lesen und aktualisieren die Add-In-Ordners. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />, <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public static string[] Update (System.AddIn.Hosting.PipelineStoreLocation location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] Update(valuetype System.AddIn.Hosting.PipelineStoreLocation location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.Update(System.AddIn.Hosting.PipelineStoreLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.AddIn.Hosting.PipelineStoreLocation" />
+      </Parameters>
+      <Docs>
+        <param name="location">Einer der Enumerationswerte.  
+  
+ Derzeit ist der einzige Wert in dieser Enumeration für das Verzeichnis entsprechend den Angaben von der <see cref="P:System.AppDomainSetup.ApplicationBase" /> -Eigenschaft, die zum Einrichten der Anwendungsdomäne des Hosts verwendet wurde.</param>
+        <summary>Updates die Pipeline Segmente Cache mit neuen Segmenten an die vom angegebenen Position ein <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> Wert.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, die Warnungen zu beschreiben, wie die Pipelinesegmente ausgewertet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung, um einem teilweise vertrauenswürdigen Host, die nicht über die Berechtigung, einen eigenen Speicherort ermitteln kann, um-add-ins im Verzeichnis eigenen zu ermitteln aktivieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException">Ein Segmentverzeichnis fehlt in der Pipelineverzeichnisstruktur zur Verfügung.</exception>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="location" />ist ein ungültiger <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public static string[] Update (string pipelineRootFolderPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] Update(string pipelineRootFolderPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.Update(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipelineRootFolderPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pipelineRootFolderPath">Der Pfad zum Stamm der Pipelineverzeichnisstruktur.</param>
+        <summary>Aktualisiert den Cache der Pipeline-Segmente mit neuen Segmente aus einem angegebenen Stammverzeichnis.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, die Warnungen zu beschreiben, wie die Pipelinesegmente ausgewertet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird den Cache-Add-ins auch aktualisiert, wenn die Add-ins in der Pipelineverzeichnisstruktur befinden.  
+  
+ Wenn keine neuen Pipelinesegmente oder -add-ins sind, überprüft diese Methode nur den Cache.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die Cache-Dateien zu aktualisieren. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.AddIn.Hosting.AddInStore> Klasse.  
+  
+ [!code-csharp[AddInP3Host#3](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#3)]
+ [!code-vb[AddInP3Host#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException">Ein Segmentverzeichnis fehlt in der Pipelineverzeichnisstruktur zur Verfügung.</exception>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAddIns">
+      <MemberSignature Language="C#" Value="public static string[] UpdateAddIns (string addInsFolderPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] UpdateAddIns(string addInsFolderPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInStore.UpdateAddIns(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addInsFolderPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="addInsFolderPath">Der Pfad des Verzeichnisses, das eine oder mehrere Unterverzeichnisse von add-ins enthält.</param>
+        <summary>Aktualisiert den Cache-Add-in und enthält neue Add-Ins an einer angegebenen Position.</summary>
+        <returns>Eine Auflistung von Zeichenfolgen, die Warnungen zu beschreiben, wie die Pipelinesegmente ausgewertet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, wenn Ihre Add-Ins außerhalb der Pipelineverzeichnisstruktur enthalten sind.  
+  
+ Wenn keine neuen Add-Ins installiert sind, überprüft diese Methode nur den Cache.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException">Ein Segmentverzeichnis fehlt in der Pipelineverzeichnisstruktur zur Verfügung.</exception>
+        <exception cref="T:System.AddIn.Hosting.InvalidPipelineStoreException">Es ist eine zugriffsverletzung auf der Pipelineverzeichnisstruktur ein.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="addInsFolderPath" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Aufrufer verfügt nicht über Lese-und Schreibzugriff auf den Speicherort, der von angegeben wird <paramref name="addInsFolderPath" />.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für die Fähigkeit zum Lesen und aktualisieren die Add-In-Ordners. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />, <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,413 @@
+<Type Name="RibbonContextualTabGroup" FullName="System.Windows.Controls.Ribbon.RibbonContextualTabGroup">
+  <TypeSignature Language="C#" Value="public class RibbonContextualTabGroup : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi RibbonContextualTabGroup extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Header")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> Gruppe von Registerkarten, die dynamisch Steuerelemente angezeigt, die nur in einem bestimmten Kontext relevant sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie verwenden eine *Kontextregisterkarte* um Gruppen von Befehlen anzuzeigen, die nur in einem bestimmten Kontext relevant sind. Kontextregisterkartengruppen angezeigt oder ausgeblendet basierend auf den angegebenen Kriterien. Beispielsweise kann eine Gruppe von Registerkarten Freihandtools angezeigt werden, wenn Tabletteingabe gefunden wird, oder eine Gruppe von Registerkarten Bildtools möglicherweise angezeigt werden, wenn ein Image-Objekt ausgewählt ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.Ribbon.RibbonTab> mit dem Namen **Stifte** , die sich in der **Freihandtools** Kontextregisterkartengruppe.  
+  
+```xaml  
+</ribbon:Ribbon>  
+    <ribbon:RibbonTab Name="Pens" Header="Pens" ContextualTabGroupHeader="Ink Tools" >  
+    <!-- Ribbon Tab Content -->  
+    </ribbon:RibbonTab>  
+    <ribbon:Ribbon.ContextualTabGroups>  
+        <ribbon:RibbonContextualTabGroup Header="Ink Tools" Visibility="Visible" Background="Green" />  
+    </ribbon:Ribbon.ContextualTabGroups>  
+</ribbon:Ribbon>  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonContextualTabGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public object Header { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Inhalt des Gruppenkopfs Kontextregisterkarte fest.</summary>
+        <value>Der Inhalt des Gruppenkopfs Kontextregisterkarte. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Header"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Header" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStringFormat">
+      <MemberSignature Language="C#" Value="public string HeaderStringFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderStringFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderStringFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format, das verwendet wird, um den Headerinhalt als Zeichenfolge anzuzeigen.</summary>
+        <value>Das Format, das verwendet wird, um den Headerinhalt als Zeichenfolge anzuzeigen. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderStringFormat%2A> Eigenschaft wird nur verwendet, wenn die Headervorlage keine vorhanden ist.  
+  
+<a name="dependencyPropertyInfo_HeaderStringFormat"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderStringFormatProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStringFormatProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderStringFormatProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderStringFormatProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderStringFormatProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderStringFormat" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate HeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate HeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.DataTemplate" /> , die zur Anzeige der Inhalte des Headers verwendet wird.</summary>
+        <value>Eine Vorlage, die die Visualisierung des Headers angibt. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HeaderTemplate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplateProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die benutzerdefinierte Logik zum Auswählen einer <see cref="T:System.Windows.DataTemplate" /> , die zur Anzeige der Inhalte des Headers verwendet wird.</summary>
+        <value>Eine benutzerdefinierte <see cref="T:System.Windows.Controls.DataTemplateSelector" /> -Objekt, das Logik bereitstellt und gibt eine <see cref="T:System.Windows.DataTemplate" />. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate%2A> Eigenschaft, um die Visualisierung des Headers anzugeben. Wenn Sie mehr als einer Vorlage definiert haben und Logik angeben, die eine zu verwendende Vorlage auswählt, und Sie diese Eigenschaft verwenden möchten. Diese Eigenschaft wird ignoriert, wenn die <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate%2A> festgelegt wird.  
+  
+<a name="dependencyPropertyInfo_HeaderTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplateSelectorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplateSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Automation.Peers.RibbonContextualTabGroupAutomationPeer" />-Objekt für dieses Steuerelement.</summary>
+        <returns>Ein neues Automatisierungspeerobjekt für dieses Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderChanged (object oldHeader, object newHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderChanged(object oldHeader, object newHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.OnHeaderChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldHeader" Type="System.Object" />
+        <Parameter Name="newHeader" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldHeader">Der alte Wert der <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Header" />-Eigenschaft.</param>
+        <param name="newHeader">Der neue Wert der <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Header" />-Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Header" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.MouseDown" />-Routingereignis bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erfasst die Maus, einem Einfachklick erfolgt auf der Kontextregisterkarte-Gruppe. Es minimiert oder bei ein Doppelklick maximiert.  
+  
+ Diese Implementierung kennzeichnet die <xref:System.Windows.UIElement.MouseLeftButtonDown> Ereignis als behandelt, indem die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft der Ereignisdaten zu `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.MouseUp" /> Routingereignis und die Maustaste loslässt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt das Erfassen von Mauseingaben frei, und sendet auf Benachrichtigungen an die <xref:System.Windows.Controls.Ribbon.Ribbon>.  
+  
+ Diese Implementierung kennzeichnet die <xref:System.Windows.UIElement.MouseUp> Ereignis als behandelt, indem die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft der Ereignisdaten zu `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ribbon">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.Ribbon Ribbon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Ribbon.Ribbon Ribbon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Ribbon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.Ribbon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> , die dieses Steuerelement gehört.</summary>
+        <value>Ein Verweis auf die <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> , die dieses Steuerelement gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, der visuelle Stil Pinsel auf definiert den Zugriff auf die <xref:System.Windows.Controls.Ribbon.Ribbon> Klasse.  
+  
+<a name="dependencyPropertyInfo_Ribbon"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.RibbonProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RibbonProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RibbonProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RibbonProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.RibbonProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Ribbon" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

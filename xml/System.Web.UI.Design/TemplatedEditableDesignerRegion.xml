@@ -1,0 +1,94 @@
+<Type Name="TemplatedEditableDesignerRegion" FullName="System.Web.UI.Design.TemplatedEditableDesignerRegion">
+  <TypeSignature Language="C#" Value="public class TemplatedEditableDesignerRegion : System.Web.UI.Design.EditableDesignerRegion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplatedEditableDesignerRegion extends System.Web.UI.Design.EditableDesignerRegion" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TemplatedEditableDesignerRegion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.EditableDesignerRegion</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen bearbeitbaren Bereich der Inhalt innerhalb der Entwurfszeitmarkup für das zugeordnete Steuerelement an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplatedEditableDesignerRegion (System.Web.UI.Design.TemplateDefinition templateDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.TemplateDefinition templateDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedEditableDesignerRegion.#ctor(System.Web.UI.Design.TemplateDefinition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="templateDefinition" Type="System.Web.UI.Design.TemplateDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="templateDefinition">Ein <see cref="T:System.Web.UI.Design.TemplateDefinition" /> -Instanz für die zu bearbeitende Vorlage.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplatedEditableDesignerRegion" /> -Klasse unter Verwendung der angegebenen Vorlagendefinition.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingleInstanceTemplate">
+      <MemberSignature Language="C#" Value="public virtual bool IsSingleInstanceTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSingleInstanceTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedEditableDesignerRegion.IsSingleInstanceTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob die Vorlage nur einmal pro Instanz des Containersteuerelements, z. B. tritt auf, eine <see langword="header" /> Vorlage, oder mehrmals vorkommen kann gemäß den verfügbaren Daten, z. B. eine <see langword="item" /> Vorlage.</summary>
+        <value>
+          <see langword="true" />Wenn die Vorlage nur einmal angezeigt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDataBinding">
+      <MemberSignature Language="C#" Value="public override bool SupportsDataBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDataBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedEditableDesignerRegion.SupportsDataBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Vorlage mit einer Datenquelle gebunden werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Vorlage vom Bereich dargestellt, kann an eine Datenquelle gebunden werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, diese Eigenschaft festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateDefinition">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.TemplateDefinition TemplateDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateDefinition TemplateDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedEditableDesignerRegion.TemplateDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.Design.TemplateDefinition" /> -Objekt, beschreibt die Vorlage, die von der Region verwiesen wird.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.TemplateDefinition" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

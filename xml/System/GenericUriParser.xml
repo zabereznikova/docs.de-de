@@ -1,0 +1,95 @@
+<Type Name="GenericUriParser" FullName="System.GenericUriParser">
+  <TypeSignature Language="C#" Value="public class GenericUriParser : UriParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GenericUriParser extends System.UriParser" />
+  <TypeSignature Language="DocId" Value="T:System.GenericUriParser" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.UriParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein vom Benutzer anpassbaren Parser für einen hierarchischen URI.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie erstellen möchten ein Parser basierend auf einem bekannten Schema, verwenden Sie <xref:System.HttpStyleUriParser>, <xref:System.FtpStyleUriParser>, <xref:System.GopherStyleUriParser>, <xref:System.LdapStyleUriParser>, oder <xref:System.NewsStyleUriParser>.  
+  
+ Beim Erstellen eines anpassbaren Parsers wird das Verhalten des Parsers angegeben, durch eine bitweise Kombination der in verfügbaren Werte übergeben der <xref:System.GenericUriParserOptions?displayProperty=nameWithType> -Enumeration der <xref:System.GenericUriParser> Konstruktor.  
+  
+ Die vorhandene <xref:System.Uri?displayProperty=nameWithType> Klasse wurde erweitert, damit die Unterstützung von International Resource Identifiers (IRI) und internationale Domänennamen (IDN). Derzeitige Benutzer werden keine Änderung gegenüber dem .NET Framework 2.0-Verhalten feststellen, außer IRI wird explizit aktiviert. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
+  
+ Alle Parser abgeleitet <xref:System.GenericUriParser> IRI und IDN-Unterstützung in der Standardeinstellung wird nicht zu erhalten. Die <xref:System.GenericUriParserOptions.Default> Option umfasst keine IRI und IDN unterstützt. Zwei neue Werte hinzugefügt, die <xref:System.GenericUriParserOptions?displayProperty=nameWithType> Enumeration, um anzugeben, ob ein benutzerdefinierter Parser IRI und IDN unterstützt.  
+  
+ Weitere Informationen zur IRI und IDN-Unterstützung finden Sie im Abschnitt "Hinweise" der <xref:System.Uri?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericUriParser (GenericUriParserOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.GenericUriParserOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.GenericUriParser.#ctor(System.GenericUriParserOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="System.GenericUriParserOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Geben Sie die Optionen für diesen <see cref="T:System.GenericUriParser" />.</param>
+        <summary>Erstellen Sie einen vom Benutzer anpassbaren Parser für einen hierarchischen URI.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor als Argument an<xref:System.UriParser.Register%28System.UriParser%2CSystem.String%2CSystem.Int32%29?displayProperty=nameWithType>  
+  
+ Wenn Sie erstellen möchten ein Parser basierend auf einem bekannten Schema, verwenden Sie <xref:System.HttpStyleUriParser>, <xref:System.FtpStyleUriParser>, <xref:System.GopherStyleUriParser>, <xref:System.LdapStyleUriParser>, oder <xref:System.NewsStyleUriParser>.  
+  
+ Beim Erstellen eines anpassbaren Parsers wird das Verhalten des Parsers angegeben, durch eine bitweise Kombination der in verfügbaren Werte übergeben der <xref:System.GenericUriParserOptions?displayProperty=nameWithType> -Enumeration der <xref:System.GenericUriParser> Konstruktor.  
+  
+ Die vorhandene <xref:System.Uri?displayProperty=nameWithType> Klasse wurde erweitert, damit die Unterstützung von International Resource Identifiers (IRI) und internationale Domänennamen (IDN). Derzeitige Benutzer werden keine Änderung gegenüber dem .NET Framework 2.0-Verhalten feststellen, außer IRI wird explizit aktiviert. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
+  
+ Alle Parser abgeleitet <xref:System.GenericUriParser> IRI und IDN-Unterstützung in der Standardeinstellung wird nicht zu erhalten. Die <xref:System.GenericUriParserOptions.Default> Option umfasst keine IRI und IDN unterstützt. Zwei neue Werte hinzugefügt, die <xref:System.GenericUriParserOptions?displayProperty=nameWithType> Enumeration, um anzugeben, ob ein benutzerdefinierter Parser IRI und IDN unterstützt.  
+  
+ Der <xref:System.GenericUriParserOptions.IriParsing>-Typ gibt an, dass der Parser die in RFC 3987 angegebenen Analyseregeln für International Resource Identifiers (IRI) unterstützt. Durch die Konfigurationswerte wird bestimmt, ob IRI verwendet wird.  
+  
+ Der <xref:System.GenericUriParserOptions.Idn>-Typ gibt an, dass der Parser die IDN-Analyse von Hostnamen unterstützt. Durch die Konfigurationswerte wird bestimmt, ob IDN verwendet wird.  
+  
+ Die Konfigurationseinstellung für die <xref:System.Configuration.IdnElement?displayProperty=nameWithType> wird indirekt gesteuert, indem die <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> Konfigurationseinstellung, steuert die IRI-Verarbeitung in die <xref:System.Uri?displayProperty=nameWithType> Klasse. Die IRI-Verarbeitung muss aktiviert werden, damit die IDN-Verarbeitung überhaupt möglich ist. Ist die IRI-Verarbeitung deaktiviert, wird die IDN-Verarbeitung auf die Standardeinstellung festgelegt. Darin wird aus Kompatibilitätsgründen das .NET Framework 2.0-Verhalten verwendet, und IDN-Namen werden nicht verwendet.  
+  
+ IDN-Verarbeitung wird nur das Attribut Internationalized Domain Name (IDN) gesteuert. Alle anderen IRI-Verarbeitung (z. B. die Normalisierung von Zeichen) wird standardmäßig ausgeführt.  
+  
+ Weitere Informationen zur IRI und IDN-Unterstützung finden Sie im Abschnitt "Hinweise" der <xref:System.Uri?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

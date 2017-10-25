@@ -1,0 +1,408 @@
+<Type Name="WizardStepBase" FullName="System.Web.UI.WebControls.WizardStepBase">
+  <TypeSignature Language="C#" Value="public abstract class WizardStepBase : System.Web.UI.WebControls.View" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WizardStepBase extends System.Web.UI.WebControls.View" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WizardStepBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.View</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.WizardStepControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die grundlegenden Funktionen von einem Schritt in einem <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz kann nicht direkt erstellt die <xref:System.Web.UI.WebControls.WizardStepBase> Klasse. Stattdessen wird von dieser Klasse geerbt der <xref:System.Web.UI.WebControls.WizardStep> Klasse und die <xref:System.Web.UI.WebControls.TemplatedWizardStep> -Klasse, die grundlegende Funktionalität eines Schritts in einem Steuerelement bereitzustellen, das als Assistent fungiert.  
+  
+ Sie können aus Ableiten der <xref:System.Web.UI.WebControls.WizardStepBase> Klasse, um eine benutzerdefinierte Klasse zu erstellen, die einen eindeutigen Schritt in einem Assistenten-Steuerelement darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WizardStepBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowReturn">
+      <MemberSignature Language="C#" Value="public virtual bool AllowReturn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowReturn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepBase.AllowReturn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Filterable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Benutzer wieder den aktuellen Schritt in einem nachfolgenden Schritt in einem <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer mit dem aktuellen Schritt zurück; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> Eigenschaft kann verwendet werden, um erzwingen lineare Navigation in einem <xref:System.Web.UI.WebControls.Wizard> Steuerelement. Wenn jeder Schritt hat seine <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> -Eigenschaftensatz auf `false`, der Benutzer wird nicht in der Lage, auf einen Schritt zurück, nachdem auf sie zugegriffen wurde. Ein Szenario, in dem Sie diese Funktion beispielsweise verwenden, wird, zu der einen Benutzer auf einen Schritt zurück, nachdem er abgeschlossen ist, da Sie die Daten in einer Datenbank als jeder Schritt beibehalten werden unterbinden abgeschlossen ist. Wenn Sie die Daten nach jedem Schritt speichern und ermöglicht dem Benutzer zu einem Schritt zurückzukehren und Informationen zu ändern, nachdem es gespeichert wurde, wird die gespeicherten Daten möglicherweise beschädigt. Durch Festlegen der <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> Eigenschaft `false`, nachdem der Benutzer einen Schritt verlassen hat, er wird nicht möglicherweise zurückzukehren und Werte zu ändern.  
+  
+ Die <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> Eigenschaft bestimmt, wie und wann die **vorherige** Schaltfläche wird nicht gerendert. Die folgende Tabelle beschreibt die **vorherige** Renderingverhalten Schaltfläche.  
+  
+|Szenario|Verhalten|  
+|--------------|--------------|  
+|Linear: Schritt 1 hat <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> festgelegt `false` und Benutzeraktion wird mit Schritt 2 fort.|Schritt 2 zeigt keine der **vorherige** Schaltfläche.|  
+|Nicht lineare: Schritt 1 hat <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> festgelegt `false` und Benutzeraktion wird mit Schritt 3 fort.|Schritt 3 zeigt keine der **vorherige** Schaltfläche.|  
+|Randleistenschaltflächen: Schritt 2 wurde <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> festgelegt `false` , <xref:System.Web.UI.WebControls.Wizard.DisplaySideBar%2A> festgelegt ist, um `true`, und ein Benutzer auf die Schaltfläche "Randleiste" klickt.|Keine Schaltflächen sind auf der Randleiste automatisch deaktiviert Wenn <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> festgelegt ist, um `false`. Wenn ein Benutzer auf die Schaltfläche klickt, wird die Aktion ignoriert.|  
+|Lineare & nicht-Linear mit benutzerdefinierten Vorlage: der Schritt wurde eine benutzerdefinierte Navigation-Vorlage.|Keine automatische ausblenden oder Anzeigen von tritt auf, wenn <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> festgelegt ist, um `false` bei Verwendung eine Vorlage für die Navigation. Die **vorherige** Schaltfläche sollte in der Vorlage optional sein.|  
+|Mit dem Visual Studio-Designer und <xref:System.Web.UI.WebControls.Wizard.ActiveStepIndex%2A> : das Steuerelement hat 5 Schritten und arbeiten Sie in Schritt 4, und führen Sie die Seite.|Wenn Schritt 4 ist der <xref:System.Web.UI.WebControls.Wizard.ActiveStepIndex%2A>, und klicken Sie dann die **zurück** Schaltfläche gerendert wird. Die **zurück** Schaltfläche ist nur für ausgeblendete <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A> festgelegt <xref:System.Web.UI.WebControls.WizardStepType.Step> bei den vorherigen Schritt im Verlauf hat <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> festgelegt `false`. Da Schritt 4 zuerst dargestellt wird, und es keine Schritte in den Verlauf sind der **vorherige** Schaltfläche wird nicht ausgeblendet.|  
+|Startschritt und nichtlineare Navigation: ein Benutzer besucht, Schritt 3 und 4 und dann zu Schritt 1, <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A> festgelegt <xref:System.Web.UI.WebControls.WizardStepType.Start>.|Vom Assistenten werden keine hinzugefügt. eine **zurück** Schaltfläche, wenn die <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A> auf festgelegt ist <xref:System.Web.UI.WebControls.WizardStepType.Start> unabhängig davon, wie der Benutzer zu diesem Schritt navigiert.|  
+|Gleicher Schritt im Verlauf: Ein Benutzer besucht Schritt 3, in denen <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A> festgelegt ist, um <xref:System.Web.UI.WebControls.WizardStepType.Step> und der Benutzer führt keinen Commit für ihre Aktionen. Sie klicken Sie dann auf die Schaltfläche "Vorherige" Schritt 3.|Der Assistent überprüft, um festzustellen, wenn die **vorherige** Schritt im Verlauf ist der "dieselbe" Schritt, die der Benutzer aktuell auf. Wenn der Schritt identisch ist, wird das Assistenten-Steuerelement sieht wieder im Verlauf "anderen" vorherigen Schritt bestimmt und die Anzeige von Basen die **vorherige** Schaltfläche und das Ziel basierend auf den Schritt"andere" im Verlauf.|  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> -Eigenschaftensatz auf `false`, aber die <xref:System.Web.UI.WebControls.Wizard.DisplaySideBar%2A> Eigenschaft des übergeordneten Steuerelements des <xref:System.Web.UI.WebControls.WizardStepBase> auf festgelegt ist `true`, durch Klicken auf eine Schaltfläche in der Randleistenbereich hat keine Auswirkungen. Der Randleistenbereich ist in der Regel angezeigt, um nicht lineare Navigation zu ermöglichen, wenn Sie nicht die Funktionalität nicht linearen Navigationspfad verwenden, Sie möglicherweise festlegen möchten der <xref:System.Web.UI.WebControls.Wizard.DisplaySideBar%2A> Eigenschaft `false`.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> Eigenschaft so beenden Sie den Benutzer zurückgeben, die auf einen Schritt in der <xref:System.Web.UI.WebControls.Wizard> steuern, nachdem auf sie zugegriffen wurde. Im Beispiel die `Step1` Schritt hat seine <xref:System.Web.UI.WebControls.WizardStepBase.AllowReturn%2A> -Eigenschaftensatz auf `false`. Nachdem der Benutzer lässt die `Step1` Schritt keine Schaltfläche "zurück" wird angezeigt, auf die `Step2` Schritt.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardStepBaseAllowReturn#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepBaseAllowReturn/CS/wizardstepbaseallowreturncs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardStepBaseAllowReturn#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepBaseAllowReturn/VB/wizardstepbaseallowreturnvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepBase.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob für dieses Steuerelement Designs gelten.</summary>
+        <value>
+          <see langword="true" />Designs zu verwenden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WizardStepBase.EnableTheming%2A> Eigenschaft gibt an, ob Designs, für aktiviert sind die <xref:System.Web.UI.WebControls.WizardStepBase> Steuerelement. Die <xref:System.Web.UI.WebControls.WizardStepBase.EnableTheming%2A> Eigenschaft bestimmt außerdem, ob Designs für die Steuerelemente in der Auflistung der Steuerelemente aktiviert sind. Wenn die <xref:System.Web.UI.WebControls.WizardStepBase.EnableTheming%2A> Eigenschaft ist `true`, Design-Verzeichnis der Anwendung wird gesucht Steuerelementdesigns angewendet. Wenn kein Design für das jeweilige Steuerelement im Designverzeichnis vorhanden ist, wird ein Design angewendet. Wenn die <xref:System.Web.UI.WebControls.WizardStepBase.EnableTheming%2A> Eigenschaft ist `false`, Designverzeichnis nicht durchsucht und der Wert des der <xref:System.Web.UI.Control.SkinID%2A> Eigenschaft wird nicht verwendet.  
+  
+ Ein Steuerelement kann überschreiben die <xref:System.Web.UI.WebControls.WizardStepBase.EnableTheming%2A> festgelegten Wert, durch das übergeordnete Steuerelement oder von der enthaltenden Seite. Z. B. wenn eine <xref:System.Web.UI.WebControls.WizardStepBase> -Steuerelement <xref:System.Web.UI.WebControls.WizardStepBase.EnableTheming%2A> festgelegt `false`, können Sie selektiv Designs anwenden, um untergeordnete Steuerelemente innerhalb der Schritt des Assistenten durch Festlegen der <xref:System.Web.UI.Control.EnableTheming%2A> Eigenschaft `true` auf einzelne untergeordnete Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public override string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepBase.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den programmgesteuerten Bezeichner, der dem Serversteuerelement zugewiesen.</summary>
+        <value>Der programmgesteuerte Bezeichner, der dem Steuerelement zugewiesen ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepBase.ID%2A> Eigenschaft zu identifizieren, und verweisen auf ein bestimmten Assistenten Schritt-Steuerelement in einer Web Forms-Seite. Die <xref:System.Web.UI.WebControls.WizardStepBase.ID%2A> Wert wird der Name der Steuerelementinstanz auf der Seite ", daher können Sie problemlos auf einen bestimmten Schritt im Code für diese Seite zuzugreifen. Wenn Sie festlegen, z. B. die <xref:System.Web.UI.WebControls.WizardStepBase.ID%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.WizardStepBase> Steuerelement "Schritt 1", können Sie die untergeordneten Steuerelemente von den Assistentenschritt im Code für diese Seite als Verweis `Step1.Controls`.  
+  
+ Die <xref:System.Web.UI.WebControls.WizardStepBase> Steuerelement wird sichergestellt, dass jeder Schritt in einem <xref:System.Web.UI.WebControls.WizardStepBase.Wizard%2A> Steuerelement hat einen gültigen eindeutigen Bezeichner aus, wenn die Schritte zur Entwurfszeit geändert oder hinzugefügt werden. Z. B. beim Festlegen der <xref:System.Web.UI.WebControls.WizardStepBase.ID%2A> für einen Schritt zur Entwurfszeit, er darf nicht den Bezeichner für einen weiteren Schritt in enthaltenen übereinstimmen der <xref:System.Web.UI.WebControls.WizardStepBase.Wizard%2A> -Steuerelement, und es kann nicht übereinstimmen. die <xref:System.Web.UI.Control.ID%2A> für das enthaltende <xref:System.Web.UI.WebControls.WizardStepBase.Wizard%2A> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert drei Assistentenschritte für eine <xref:System.Web.UI.WebControls.Wizard> -Steuerelement in einer Web Forms-Seite. Im Code für die Seite, die Assistenten-Schritt-Instanzen durch ihre ID-Werte benannt werden, und sie können im Code als verwiesen werden `WizardStep1`, `WizardStep2`, und `WizardStep3`.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardActiveStep#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardActiveStep/CS/wizardactivestepcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardActiveStep#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardActiveStep/VB/wizardactivestepvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wurde auf eine ungültige Bezeichnerzeichenfolge zur Entwurfszeit festgelegt.  
+  
+ - oder -   
+  
+ Die Eigenschaft festgelegt wurde, auf den gleichen Bezeichner wie das enthaltende <see cref="P:System.Web.UI.WebControls.WizardStepBase.Wizard" /> -Steuerelements zur Entwurfszeit.  
+  
+ - oder -   
+  
+ Die Eigenschaft festgelegt wurde, auf den gleichen Bezeichner wie ein anderer Schritt im mit <see cref="P:System.Web.UI.WebControls.WizardStepBase.Wizard" /> -Steuerelements zur Entwurfszeit.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepBase.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> dar, stellt die, die Zustand des Steuerelements wiederhergestellt werden.</param>
+        <summary>Stellt Ansichtszustandsinformationen aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <see cref="M:System.Web.UI.WebControls.WebControl.SaveViewState" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepBase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen, die einen Schritt in einem Steuerelement, das als Assistent fungiert zugeordnet.</summary>
+        <value>Der Name, der einen Schritt in einem Steuerelement, das als Assistent fungiert zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WizardStepBase.Name%2A> Eigenschaft gibt eine Zeichenfolge, die einen Schritt in einem Assistenten-Steuerelement identifiziert. Wenn ein Wert, für angegeben wird die <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.WizardStepBase.Name%2A> -Eigenschaft diesen Wert zurück. Wenn kein Wert, für angegeben wird die <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.WizardStepBase.Name%2A> Eigenschaft gibt den Wert der <xref:System.Web.UI.WebControls.WizardStepBase.ID%2A> Eigenschaft. Wenn entweder keine Werte angegeben werden die <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> oder <xref:System.Web.UI.WebControls.WizardStepBase.ID%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.WizardStepBase.Name%2A> -Eigenschaft gibt `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepBase.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.EventArgs" /> Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Web.UI.Control.OnLoad(System.EventArgs)" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderChildren">
+      <MemberSignature Language="C#" Value="protected override void RenderChildren (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderChildren(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepBase.RenderChildren(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Gibt den Inhalt von der <see cref="T:System.Web.UI.WebControls.WizardStepBase" /> die untergeordneten Steuerelemente des Steuerelements, mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt, das auf dem Client der zu rendernden Inhalt schreibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StepType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WizardStepType StepType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WizardStepType StepType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepBase.StepType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Navigation-Benutzeroberfläche (UI) für die anzuzeigenden für einen Schritt einem <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.WizardStepType" />-Enumerationswerte. Der Standardwert ist <see langword="WizardStepType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A> Eigenschaft zur Angabe der Navigationsschaltflächen anzuzeigenden für einen Schritt in einem <xref:System.Web.UI.WebControls.Wizard> Steuerelement. Wenn Sie einen Wert für diese Eigenschaft angeben, werden alle Schritte als gekennzeichnet <xref:System.Web.UI.WebControls.WizardStepType.Complete> in einem deaktivierten Zustand in der Randleiste angezeigt.  
+  
+ Wenn Sie einen Wert für diese Eigenschaft nicht angeben, wird standardmäßig `WizardStepType.Auto`.  
+  
+ Die folgende Tabelle enthält die verfügbaren Einstellungen für die <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A> -Eigenschaft und das resultierende Verhalten des Schritts:  
+  
+ `WizardStepType.Auto`  
+ Die Navigationsbenutzeroberfläche, die für den Schritt gerendert wird richtet sich nach der Reihenfolge, in dem der Schritt deklariert wird.  
+  
+ `WizardStepType.Complete`  
+ Der Schritt wird das letzte Lesezeichen angezeigt werden. Es werden keine Navigationsschaltflächen gerendert.  
+  
+ `WizardStepType.Finish`  
+ Der Schritt wird der letzte Schritt bei der Auflistung. Die Schaltflächen Fertig stellen "und" Previous "werden für die Navigation gerendert.  
+  
+ `WizardStepType.Start`  
+ Der Schritt wird die erste Vorlage zum angezeigt werden. Eine zurück-Schaltfläche wird nicht gerendert.  
+  
+ `WizardStepType.Step`  
+ Der Schritt ist jeder Schritt zwischen dem Anfang und dem Schritt "Fertig stellen". Schaltflächen "zurück" und "Weiter" werden für die Navigation gerendert. Dieser Schritt ist hilfreich zum Außerkraftsetzen der <xref:System.Web.UI.WebControls.WizardStepType.Auto> Schritttyp.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist nicht der <see cref="T:System.Web.UI.WebControls.WizardStepType" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public virtual string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepBase.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel, der für einen Schritt in einem <see cref="T:System.Web.UI.WebControls.Wizard" /> steuern, wann die Randleiste-Funktion aktiviert ist.</summary>
+        <value>Der Titel, der für einen Schritt in einem <see cref="T:System.Web.UI.WebControls.Wizard" /> steuern, wann die Randleiste-Funktion aktiviert ist. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> Eigenschaft anzuzeigenden einen benutzerfreundlichen Titel für einen Schritt in einer <xref:System.Web.UI.WebControls.Wizard> steuern, wann die Randleiste-Funktion aktiviert ist. Wenn die <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> Eigenschaft nicht festgelegt ist und die Randleiste-Funktion aktiviert ist, den Wert von der <xref:System.Web.UI.WebControls.WizardStepBase.ID%2A> Eigenschaft wird für die Schaltfläche "Randleiste" angezeigt.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> Eigenschaft anzuzeigenden einen benutzerfreundlichen Titel für einen Schritt in der <xref:System.Web.UI.WebControls.Wizard> Steuerelement. Im Beispiel `Step1` verfügt nicht über die <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> Eigenschaftensatz, Kanton in der <xref:System.Web.UI.WebControls.Wizard> -Steuerelement "WizardStep1". `Step2`verfügt über seine <xref:System.Web.UI.WebControls.WizardStepBase.Title%2A> Eigenschaft festgelegt, damit es als "Schritt 2" angezeigt wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardStepBaseTitle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepBaseTitle/CS/wizardstepbasetitlecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardStepBaseTitle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepBaseTitle/VB/wizardstepbasetitlevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wizard">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Wizard Wizard { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Wizard Wizard" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepBase.Wizard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Wizard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement, das das übergeordnete Element des Objekts abgeleitet <see cref="T:System.Web.UI.WebControls.WizardStepBase" />.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement, das das übergeordnete Element des Objekts abgeleitet <see cref="T:System.Web.UI.WebControls.WizardStepBase" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

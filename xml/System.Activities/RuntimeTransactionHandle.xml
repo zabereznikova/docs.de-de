@@ -1,0 +1,403 @@
+<Type Name="RuntimeTransactionHandle" FullName="System.Activities.RuntimeTransactionHandle">
+  <TypeSignature Language="C#" Value="public sealed class RuntimeTransactionHandle : System.Activities.Handle, System.Activities.IExecutionProperty, System.Activities.IPropertyRegistrationCallback" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RuntimeTransactionHandle extends System.Activities.Handle implements class System.Activities.IExecutionProperty, class System.Activities.IPropertyRegistrationCallback" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.RuntimeTransactionHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Handle</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Activities.IExecutionProperty</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Activities.IPropertyRegistrationCallback</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Zugriff auf die Laufzeittransaktion in einer Workflowinstanz.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuntimeTransactionHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.RuntimeTransactionHandle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuntimeTransactionHandle (System.Transactions.Transaction rootTransaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Transactions.Transaction rootTransaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.#ctor(System.Transactions.Transaction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rootTransaction" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="rootTransaction">Die Stammtransaktion.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.RuntimeTransactionHandle" />-Klasse unter Verwendung der angegebenen Stammtransaktion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbortInstanceOnTransactionFailure">
+      <MemberSignature Language="C#" Value="public bool AbortInstanceOnTransactionFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AbortInstanceOnTransactionFailure" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.RuntimeTransactionHandle.AbortInstanceOnTransactionFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab bzw. legt fest, ob die Workflowinstanz bei einem Transaktionsfehler abgebrochen werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die Workflowinstanz bei einem Transaktionsfehler abgebrochen werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Activities.RuntimeTransactionHandle.AbortInstanceOnTransactionFailure%2A> ist `false`, Transaktionsfehler führt die Ausnahme, die bewirkt, dass den Fehler als normale weitergegeben werden. Der Standardwert für <xref:System.Activities.RuntimeTransactionHandle.AbortInstanceOnTransactionFailure%2A> lautet `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteTransaction">
+      <MemberSignature Language="C#" Value="public void CompleteTransaction (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompleteTransaction(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.CompleteTransaction(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Ausführungsumgebung.</param>
+        <summary>Schließt die aktuelle Laufzeittransaktion ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteTransaction">
+      <MemberSignature Language="C#" Value="public void CompleteTransaction (System.Activities.NativeActivityContext context, System.Activities.BookmarkCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompleteTransaction(class System.Activities.NativeActivityContext context, class System.Activities.BookmarkCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.CompleteTransaction(System.Activities.NativeActivityContext,System.Activities.BookmarkCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+        <Parameter Name="callback" Type="System.Activities.BookmarkCallback" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Ausführungsumgebung.</param>
+        <param name="callback">Der nach Abschluss der Transaktion aufzurufende Lesezeichenrückruf.</param>
+        <summary>Schließt die aktuelle Laufzeittransaktion ab und plant den Lesezeichenrückruf nach Abschluss der Transaktion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentTransaction">
+      <MemberSignature Language="C#" Value="public System.Transactions.Transaction GetCurrentTransaction (System.Activities.AsyncCodeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Transaction GetCurrentTransaction(class System.Activities.AsyncCodeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.GetCurrentTransaction(System.Activities.AsyncCodeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.AsyncCodeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Ausführungsumgebung.</param>
+        <summary>Gibt einen Verweis auf die aktuelle Laufzeittransaktion zurück.</summary>
+        <returns>Die aktuelle Transaktion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentTransaction">
+      <MemberSignature Language="C#" Value="public System.Transactions.Transaction GetCurrentTransaction (System.Activities.CodeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Transaction GetCurrentTransaction(class System.Activities.CodeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.GetCurrentTransaction(System.Activities.CodeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.CodeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Ausführungsumgebung.</param>
+        <summary>Gibt einen Verweis auf die aktuelle Laufzeittransaktion zurück.</summary>
+        <returns>Die aktuelle Transaktion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentTransaction">
+      <MemberSignature Language="C#" Value="public System.Transactions.Transaction GetCurrentTransaction (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Transaction GetCurrentTransaction(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.GetCurrentTransaction(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Ausführungsumgebung.</param>
+        <summary>Gibt einen Verweis auf die aktuelle Laufzeittransaktion zurück.</summary>
+        <returns>Die aktuelle Laufzeittransaktion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialize">
+      <MemberSignature Language="C#" Value="protected override void OnInitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.OnInitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUninitialize">
+      <MemberSignature Language="C#" Value="protected override void OnUninitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnUninitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.OnUninitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestTransactionContext">
+      <MemberSignature Language="C#" Value="public void RequestTransactionContext (System.Activities.NativeActivityContext context, Action&lt;System.Activities.NativeActivityTransactionContext,object&gt; callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RequestTransactionContext(class System.Activities.NativeActivityContext context, class System.Action`2&lt;class System.Activities.NativeActivityTransactionContext, object&gt; callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.RequestTransactionContext(System.Activities.NativeActivityContext,System.Action{System.Activities.NativeActivityTransactionContext,System.Object},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+        <Parameter Name="callback" Type="System.Action&lt;System.Activities.NativeActivityTransactionContext,System.Object&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Ausführungsumgebung.</param>
+        <param name="callback">Die Methode, die aufgerufen werden soll, wenn das <see cref="T:System.Activities.NativeActivityTransactionContext" />-Element erstellt wird.</param>
+        <param name="state">Ein optionaler vom Benutzer bereitgestellter Status, der Informationen zur Anforderung enthält.</param>
+        <summary>Initiiert die Erstellung eines <see cref="T:System.Activities.NativeActivityTransactionContext" />-Elements zur Verwendung mit einer neuen Transaktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, wenn die Aktivität eine neue Transaktion für die Laufzeit erstellt. Für den Workflow können potenziell ein oder mehrere Persistenzspeichervorgänge ausgeführt werden, bevor der Rückruf aufgerufen wird. Diese Methode lässt Transaktionsbereiche in mehreren Verzweigungen einer parallelen Struktur zu, damit gleichzeitige Anforderungen in eine Warteschlange gestellt werden können, ohne dass die Persistenzspeichervorgänge bei Abschluss der Transaktion in Konflikt treten. Um Fehler beim Ablegen des Workflows im Persistenzspeicher zu vermeiden, stellen Sie sicher, dass das Statusobjekt serialisiert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireTransactionContext">
+      <MemberSignature Language="C#" Value="public void RequireTransactionContext (System.Activities.NativeActivityContext context, Action&lt;System.Activities.NativeActivityTransactionContext,object&gt; callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RequireTransactionContext(class System.Activities.NativeActivityContext context, class System.Action`2&lt;class System.Activities.NativeActivityTransactionContext, object&gt; callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.RequireTransactionContext(System.Activities.NativeActivityContext,System.Action{System.Activities.NativeActivityTransactionContext,System.Object},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+        <Parameter Name="callback" Type="System.Action&lt;System.Activities.NativeActivityTransactionContext,System.Object&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Ausführungsumgebung.</param>
+        <param name="callback">Die Methode, die aufgerufen werden soll, wenn das <see cref="T:System.Activities.NativeActivityTransactionContext" />-Element erstellt wird.</param>
+        <param name="state">Ein optionaler vom Benutzer bereitgestellter Status, der Informationen zur Anforderung enthält.</param>
+        <summary>Initiiert die Erstellung eines <see cref="T:System.Activities.NativeActivityTransactionContext" />-Elements zur Verwendung mit einer vorhandenen Transaktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, wenn die Aktivität über eine Transaktion für die Laufzeit verfügt. Der Workflow kann zwischen einem Aufruf von <xref:System.Activities.RuntimeTransactionHandle.RequireTransactionContext%2A> und dem darauffolgenden Rückruf nicht im Persistenzspeicher abgelegt werden. Es ist nicht zulässig, <xref:System.Activities.RuntimeTransactionHandle.RequireTransactionContext%2A> vor dem Abschluss des ersten Aufrufs erneut aufzurufen, und alle Aufrufe nach dem ersten Aufruf lösen Ausnahmen aus. Diese Methode ermöglicht die Bereitstellung der Transaktionen aus einem Transaktionsfluss vom Host für die Laufzeit ohne das Risiko eines Zwischenpersistenzpunkts. Das Statusobjekt, das serialisiert werden kann, ist nicht erforderlich, da bei Verwendung dieser Methode kein Persistenzspeichervorgang für die Instanz ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressTransaction">
+      <MemberSignature Language="C#" Value="public bool SuppressTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.RuntimeTransactionHandle.SuppressTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob diese Laufzeittransaktion unterdrückt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die laufzeittransaktion unterdrückt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Activities.IExecutionProperty.CleanupWorkflowThread">
+      <MemberSignature Language="C#" Value="void IExecutionProperty.CleanupWorkflowThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Activities.IExecutionProperty.CleanupWorkflowThread() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.System#Activities#IExecutionProperty#CleanupWorkflowThread" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Activities.IExecutionProperty.CleanupWorkflowThread" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Activities.IExecutionProperty.SetupWorkflowThread">
+      <MemberSignature Language="C#" Value="void IExecutionProperty.SetupWorkflowThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Activities.IExecutionProperty.SetupWorkflowThread() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.System#Activities#IExecutionProperty#SetupWorkflowThread" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Activities.IExecutionProperty.SetupWorkflowThread" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Activities.IPropertyRegistrationCallback.Register">
+      <MemberSignature Language="C#" Value="void IPropertyRegistrationCallback.Register (System.Activities.RegistrationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Activities.IPropertyRegistrationCallback.Register(class System.Activities.RegistrationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.System#Activities#IPropertyRegistrationCallback#Register(System.Activities.RegistrationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.RegistrationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine Beschreibung dieses Parameters finden Sie unter <see cref="M:System.Activities.IPropertyRegistrationCallback.Register(System.Activities.RegistrationContext)" />.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Activities.IPropertyRegistrationCallback.Register(System.Activities.RegistrationContext)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Activities.IPropertyRegistrationCallback.Unregister">
+      <MemberSignature Language="C#" Value="void IPropertyRegistrationCallback.Unregister (System.Activities.RegistrationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Activities.IPropertyRegistrationCallback.Unregister(class System.Activities.RegistrationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeTransactionHandle.System#Activities#IPropertyRegistrationCallback#Unregister(System.Activities.RegistrationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.RegistrationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine Beschreibung dieses Parameters finden Sie unter <see cref="M:System.Activities.IPropertyRegistrationCallback.UnRegister(System.Activities.RegistrationContext)" />.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Activities.IPropertyRegistrationCallback.UnRegister(System.Activities.RegistrationContext)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

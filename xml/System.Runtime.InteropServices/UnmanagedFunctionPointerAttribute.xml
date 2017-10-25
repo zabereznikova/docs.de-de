@@ -1,0 +1,281 @@
+<Type Name="UnmanagedFunctionPointerAttribute" FullName="System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class UnmanagedFunctionPointerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnmanagedFunctionPointerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Delegate, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert das Marshallingverhalten einer Delegatsignatur, die als nicht verwalteter Funktionszeiger an nicht verwalteten Code oder von nicht verwaltetem Code übergeben wurde. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Felder von der <xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute> Attribut steuern verschiedene Aspekte des Übergangs eines Delegaten in einen nicht verwalteten Funktionszeiger und sind identisch mit den Feldern mit identischem Namen in der <xref:System.Runtime.InteropServices.DllImportAttribute> Attribut. Diese Felder sind optional, aber wenn Sie keinen Feldnamen angeben <xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute> wird ignoriert.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnmanagedFunctionPointerAttribute (System.Runtime.InteropServices.CallingConvention callingConvention);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.CallingConvention callingConvention) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.#ctor(System.Runtime.InteropServices.CallingConvention)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callingConvention" Type="System.Runtime.InteropServices.CallingConvention" />
+      </Parameters>
+      <Docs>
+        <param name="callingConvention">Die angegebene Aufrufkonvention.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute" /> -Klasse mit der angegebenen Aufrufkonvention.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Aufrufkonvention an, für den Delegaten in nicht verwaltetem Code und ist die häufigste Verwendung von der <xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute> Attribut. Sie können festlegen, die `callingConvention` Parameter auf einen der Werte in der <xref:System.Runtime.InteropServices.CallingConvention> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BestFitMapping">
+      <MemberSignature Language="C#" Value="public bool BestFitMapping;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool BestFitMapping" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.BestFitMapping" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert oder deaktiviert die Zuordnung mit ähnlichen Verhalten beim Konvertieren von Unicode-Zeichen in ANSI-Zeichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.BestFitMapping> Feld ist `true` standardmäßig, was bedeutet, dass die Zuordnung mit ähnlichen Verhalten aktiviert ist. Wenn das Feld `false`optimale Zuordnung deaktiviert ist. Einstellungen für dieses Feld überschreiben alle Einstellungen für die <xref:System.Runtime.InteropServices.BestFitMappingAttribute> Attribut.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingConvention">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CallingConvention CallingConvention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.CallingConvention CallingConvention" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.CallingConvention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Aufrufkonvention ab.</summary>
+        <value>Der Wert der Aufrufkonvention, die gemäß der <see cref="M:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.#ctor(System.Runtime.InteropServices.CallingConvention)" /> Konstruktor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharSet">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CharSet CharSet;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.CharSet CharSet" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.CharSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, wie Zeichenfolgenparameter an die Methode zu marshallen und die namenszerlegung für Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Feld mit einem Mitglied der <xref:System.Runtime.InteropServices.CharSet> Enumeration, die Marshalling-Verhalten der String-Parameter angeben und die Einstiegspunktfunktion mit dem Namen aufgerufen werden soll (der exakte Name angegeben oder einen Namen mit "A" oder "W" enden) an.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLastError">
+      <MemberSignature Language="C#" Value="public bool SetLastError;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool SetLastError" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.SetLastError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die aufgerufene Methode ruft die <see langword="SetLastError" /> Win32-API-Funktion vor der Rückgabe von die attributierte Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.SetLastError> Feld `false` wird standardmäßig der Aufrufer ruft also `SetLastError`. Legen Sie dieses Feld `true` , um anzugeben, dass die aufgerufene Methode aufruft, `SetLastError` die attributierte Methode aufgegeben.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnUnmappableChar">
+      <MemberSignature Language="C#" Value="public bool ThrowOnUnmappableChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool ThrowOnUnmappableChar" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.ThrowOnUnmappableChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert oder deaktiviert das Auslösen einer Ausnahme auf ein nicht zuzuordnenden Unicode-Zeichen, das in ein ANSI konvertiert wird "?" Zeichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute.ThrowOnUnmappableChar> Feld ist `false` standardmäßig, was bedeutet, dass das Feld deaktiviert ist. Legen Sie dieses Feld `true` um anzugeben, dass eine Ausnahme, jedes Mal ausgelöst wird der Interop-Marshaller konvertiert ein Zeichen nicht zugeordnet werden kann.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

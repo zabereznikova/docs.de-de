@@ -1,0 +1,274 @@
+<Type Name="IdentitySection" FullName="System.Web.Configuration.IdentitySection">
+  <TypeSignature Language="C#" Value="public sealed class IdentitySection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IdentitySection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.IdentitySection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert die Identität einer Webanwendung an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.IdentitySection> bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und Ändern der `identity` Abschnitt einer Konfigurationsdatei.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Configuration.IdentitySection> können Informationen lesen und Schreiben von und zu dem jeweiligen Abschnitt der Konfigurationsdatei gemäß der Abschnittseigenschaft <xref:System.Configuration.SectionInformation.AllowDefinition%2A> , dessen Wert <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Configuration.IdentitySection> Objekt aus der Konfigurationsdatei von einer vorhandenen Webanwendung.  
+  
+ [!code-csharp[System.Web.Configuration.IdentitySection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/CS/identitysection.cs#1)]
+ [!code-vb[System.Web.Configuration.IdentitySection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/VB/identitysection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentitySection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IdentitySection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Configuration.IdentitySection" /> mit Standardparametern Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nur zur internen Verwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.Web.Configuration.IdentitySection> Objekt.  
+  
+ [!code-csharp[System.Web.Configuration.IdentitySection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/CS/identitysection.cs#2)]
+ [!code-vb[System.Web.Configuration.IdentitySection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/VB/identitysection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeObject">
+      <MemberSignature Language="C#" Value="protected override object GetRuntimeObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetRuntimeObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IdentitySection.GetRuntimeObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonate">
+      <MemberSignature Language="C#" Value="public bool Impersonate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Impersonate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.IdentitySection.Impersonate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("impersonate", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Clientidentitätswechsel bei jeder Anforderung verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Identitätswechsel des Clients verwendet wird. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Configuration.IdentitySection.Impersonate%2A> -Eigenschaftensatz auf `true`, wird jede Anforderung von einer Webanwendung, die Identität seines Clients bedient. D. h. derzeit angemeldeten Benutzers oder der Benutzer gemäß der <xref:System.Web.Configuration.IdentitySection.UserName%2A> und <xref:System.Web.Configuration.IdentitySection.Password%2A> Eigenschaften. Wenn die <xref:System.Web.Configuration.IdentitySection.Impersonate%2A> -Eigenschaftensatz auf `false`, die Anwendung nicht die Identität jeder Clientbenutzer.  
+  
+> [!NOTE]
+>  Aus Gründen der Sicherheit unterstützt Identitätsabschnitt die verschlüsselte Speicherung von <xref:System.Web.Configuration.IdentitySection.UserName%2A> und <xref:System.Web.Configuration.IdentitySection.Password%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.IdentitySection.Impersonate%2A>-Eigenschaft veranschaulicht. Finden Sie im Codebeispiel wird von der <xref:System.Web.Configuration.IdentitySection> Klasse zu erfahren, wie Sie den Abschnitt zuzugreifen.  
+  
+ [!code-csharp[System.Web.Configuration.IdentitySection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/CS/identitysection.cs#5)]
+ [!code-vb[System.Web.Configuration.IdentitySection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/VB/identitysection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.IdentitySection.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("password", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, des Kennworts für den Identitätswechsel verwenden.</summary>
+        <value>Das Kennwort für den Identitätswechsel verwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da das Kennwort in Klartext gespeichert wird, kann ein authentifizierter Benutzer mit den richtigen Anmeldeinformationen in der Domäne mit der Server ist es lesen.  
+  
+> [!NOTE]
+>  Aus Gründen der Sicherheit unterstützt Identitätsabschnitt die verschlüsselte Speicherung von <xref:System.Web.Configuration.IdentitySection.UserName%2A> und <xref:System.Web.Configuration.IdentitySection.Password%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.IdentitySection.Password%2A>-Eigenschaft veranschaulicht. Finden Sie im Codebeispiel wird von der <xref:System.Web.Configuration.IdentitySection> Klasse zu erfahren, wie Sie den Abschnitt zuzugreifen.  
+  
+ [!code-csharp[System.Web.Configuration.IdentitySection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/CS/identitysection.cs#3)]
+ [!code-vb[System.Web.Configuration.IdentitySection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/VB/identitysection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.IdentitySection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IdentitySection.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmerge">
+      <MemberSignature Language="C#" Value="protected override void Unmerge (System.Configuration.ConfigurationElement sourceElement, System.Configuration.ConfigurationElement parentElement, System.Configuration.ConfigurationSaveMode saveMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Unmerge(class System.Configuration.ConfigurationElement sourceElement, class System.Configuration.ConfigurationElement parentElement, valuetype System.Configuration.ConfigurationSaveMode saveMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IdentitySection.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="sourceElement">To be added.</param>
+        <param name="parentElement">To be added.</param>
+        <param name="saveMode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.IdentitySection.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("userName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, des Benutzernamen ein, für den Identitätswechsel verwenden.</summary>
+        <value>Der Benutzername für den Identitätswechsel verwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da der Benutzername in Klartext gespeichert wird, kann ein authentifizierter Benutzer mit den richtigen Anmeldeinformationen in der Domäne mit der Server ist es lesen.  
+  
+> [!NOTE]
+>  Aus Gründen der Sicherheit unterstützt Identitätsabschnitt die verschlüsselte Speicherung von <xref:System.Web.Configuration.IdentitySection.UserName%2A> und <xref:System.Web.Configuration.IdentitySection.Password%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.IdentitySection.UserName%2A>-Eigenschaft veranschaulicht. Finden Sie im Codebeispiel wird von der <xref:System.Web.Configuration.IdentitySection> Klasse zu erfahren, wie Sie den Abschnitt zuzugreifen.  
+  
+ [!code-csharp[System.Web.Configuration.IdentitySection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/CS/identitysection.cs#4)]
+ [!code-vb[System.Web.Configuration.IdentitySection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.IdentitySection/VB/identitysection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

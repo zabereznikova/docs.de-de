@@ -1,0 +1,204 @@
+<Type Name="DomainUpDown+DomainUpDownItemCollection" FullName="System.Windows.Forms.DomainUpDown+DomainUpDownItemCollection">
+  <TypeSignature Language="C#" Value="public class DomainUpDown.DomainUpDownItemCollection : System.Collections.ArrayList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit DomainUpDown/DomainUpDownItemCollection extends System.Collections.ArrayList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ArrayList</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt eine Auflistung von Objekten für die Verwendung durch die <see cref="T:System.Windows.Forms.DomainUpDown" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ So erstellen eine Auflistung von Objekten für die Anzeige der <xref:System.Windows.Forms.DomainUpDown> -Steuerelement, können Sie hinzufügen oder entfernen Sie die Elemente einzeln mithilfe der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> und <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> Methoden. Die Auflistung erfolgt über das übergeordnete Steuerelement <xref:System.Windows.Forms.DomainUpDown>, von der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im auf-ab-Steuerelement. Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox> und ein <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im auf-ab-Steuerelement.  
+  
+ [!code-cpp[Classic DomainUpDown.DomainUpDownItemCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown.DomainUpDownItemCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown.DomainUpDownItemCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown.DomainUpDownItemCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown.DomainUpDownItemCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown.DomainUpDownItemCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override int Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Object" /> am Ende der Auflistung hinzugefügt werden.</param>
+        <summary>Fügt das angegebene Objekt am Ende der Auflistung hinzu.</summary>
+        <returns>Der nullbasierte Indexwert des der <see cref="T:System.Object" /> der Teamprojektsammlung hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch einen neuen hinzufügen <xref:System.Object> auf die Auflistung mit den <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> Methode.  
+  
+ So entfernen Sie ein <xref:System.Object> , die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> oder <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und initialisiert ein <xref:System.Windows.Forms.DomainUpDown> Steuerelement. Im Beispiel können Sie einige Eigenschaften festgelegt, und erstellen eine Auflistung von Zeichenfolgen für die Anzeige im auf-ab-Steuerelement. Der Code setzt voraus, dass eine <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox> und ein <xref:System.Windows.Forms.Button> in einem Formular instanziiert wurden. Im Beispiel wird außerdem vorausgesetzt, dass Sie eine Membervariable auf Klassenebene deklariert als eine 32-Bit-Ganzzahl mit Vorzeichen, mit dem Namen verfügen `myCounter`. Sie können eine Zeichenfolge in das Textfeld eingeben, und fügen sie der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Auflistung, auf die Schaltfläche geklickt wird. Sie können durch Klicken auf "das Kontrollkästchen" Umschalten der <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft und beobachten Sie den Unterschied in der Auflistung der Elemente im auf-ab-Steuerelement.  
+  
+ [!code-cpp[Classic DomainUpDown.DomainUpDownItemCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown.DomainUpDownItemCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown.DomainUpDownItemCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown.DomainUpDownItemCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown.DomainUpDownItemCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown.DomainUpDownItemCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public override void Insert (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Insert(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die indizierten Position in der Auflistung einzufügende der <see cref="T:System.Object" />.</param>
+        <param name="item">Der einzufügende <see cref="T:System.Object" />.</param>
+        <summary>Fügt das angegebene Objekt in der Auflistung am angegebenen Speicherort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch einen neuen hinzufügen <xref:System.Object> auf die Auflistung mit den <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Methode.  
+  
+ So entfernen Sie ein <xref:System.Object> , die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> oder <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die indizierte Position des Elements in der Auflistung.</param>
+        <summary>Ruft ab oder legt das Element an der angegebenen indizierten Position in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Object" /> , das das Element an der angegebenen indizierten Position darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuweisen von Elementen an einem bestimmten Speicherort oder zum Abrufen von der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>, können Sie das Objekt mit einem bestimmten Indexwert verweisen. Der Indexwert des der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> ist ein nullbasierter Index.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die aus der Auflistung zu entfernende <see cref="T:System.Object" />.</param>
+        <summary>Entfernt das angegebene Element aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch entfernen einer <xref:System.Object> , die Sie zuvor hinzugefügt wurden mithilfe der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> Methode.  
+  
+ Zum Hinzufügen einer neuen <xref:System.Object> verwenden, auf die Auflistung der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> oder <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (int item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(int32 item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die indizierte Position von der <see cref="T:System.Object" /> in der Auflistung.</param>
+        <summary>Entfernt das Element aus der angegebenen Position in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch entfernen einer <xref:System.Object> , die Sie zuvor hinzugefügt wurden mithilfe der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> Methode.  
+  
+ Zum Hinzufügen einer neuen <xref:System.Object> verwenden, auf die Auflistung der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> oder <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

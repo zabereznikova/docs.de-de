@@ -1,0 +1,149 @@
+<Type Name="FileSecurity" FullName="System.Security.AccessControl.FileSecurity">
+  <TypeSignature Language="C#" Value="public sealed class FileSecurity : System.Security.AccessControl.FileSystemSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileSecurity extends System.Security.AccessControl.FileSystemSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.FileSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.FileSystemSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Zugriffssteuerung und die überwachungssicherheit für eine Datei. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.FileSecurity> Klasse gibt die Zugriffsrechte für eine Systemdatei und wie Zugriffsversuche überwacht werden.  Diese Klasse stellt Zugriffs- und Überwachungsrichtlinien Rechte als ein Satz von Regeln dar. Jede Zugriffsregel dargestellte eine <xref:System.Security.AccessControl.FileSystemAccessRule> -Objekt, während jede Überwachungsregel entspricht ein <xref:System.Security.AccessControl.FileSystemAuditRule> Objekt.  
+  
+ Die <xref:System.Security.AccessControl.FileSecurity> -Klasse ist eine Abstraktion der zugrunde liegenden Microsoft Windows Security-Dateisystem. In diesem System verfügt jede Datei eine besitzerverwaltete Zugriffssteuerungsliste (DACL), die steuert, den Zugriff auf die Datei, und eine System-Zugriffssteuerungsliste (SACL), versucht der Access-Steuerelement gibt an, die überwacht werden.  Die <xref:System.Security.AccessControl.FileSystemAccessRule> und <xref:System.Security.AccessControl.FileSystemAuditRule> Klassen stellen Abstraktionen von die Zugriffssteuerungseinträge (ACEs), die DACLs und SACLs bilden.  
+  
+ Die <xref:System.Security.AccessControl.FileSecurity> -Klasse blendet viele Details der DACLs und SACLs; Sie müssen keine ACE Sortier- oder null-DACLS kümmern.  
+  
+ Verwenden der <xref:System.Security.AccessControl.FileSecurity> -Klasse abrufen, hinzufügen oder ändern die Zugriffsregeln, die die DACL und SACL einer Datei darstellen.  
+  
+ Verwenden, um neue oder geänderte Zugriffs- oder Überwachungsregeln in eine Datei, die <xref:System.IO.FileInfo.SetAccessControl%2A> Methode. Mit der <xref:System.IO.FileInfo.GetAccessControl%2A>-Methode können Zugriffs- oder Überwachungsregeln aus einer vorhandenen Datei abgerufen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.AccessControl.FileSecurity> Klasse hinzufügen und entfernen Sie dann einen Zugriffssteuerungseintrag für die Zugriffssteuerungsliste (ACL) aus einer Datei.  Sie müssen ein gültiges Benutzer- oder Gruppenkonto angeben, um dieses Beispiel auszuführen.  
+  
+ [!code-cpp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.FileSecurity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie eine leere möchten <xref:System.Security.AccessControl.FileSecurity> -Objekt, das nicht auf einer vorhandenen Datei basiert.  Sie können das-Objekt mit Informationen aufgefüllt und wenden Sie es in eine Datei.  
+  
+ Zugriff hinzufügen können, oder Überwachungsregeln für die <xref:System.Security.AccessControl.FileSecurity> -Objekt unter Verwendung der <xref:System.Security.AccessControl.FileSystemSecurity.AddAccessRule%2A> Methode. Können Sie den Zugriff entfernen oder Überwachungsregeln, die mithilfe der <xref:System.Security.AccessControl.FileSystemSecurity.RemoveAccessRule%2A> Methode.  
+  
+ Verwenden, um neue oder geänderte Zugriffs- oder Überwachungsregeln in eine Datei, die <xref:System.IO.File.SetAccessControl%2A> oder <xref:System.IO.FileInfo.SetAccessControl%2A> Methode.  Verwenden Sie zum Abrufen der Zugriff oder Überwachungsregeln aus einer vorhandenen Datei, die <xref:System.IO.File.GetAccessControl%2A> oder <xref:System.IO.FileInfo.GetAccessControl%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSecurity (string fileName, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSecurity.#ctor(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Speicherort einer Datei zum Erstellen einer <see cref="T:System.Security.AccessControl.FileSecurity" /> -Objekt aus.</param>
+        <param name="includeSections">Eines der <see cref="T:System.Security.AccessControl.AccessControlSections" /> steuern Zugriffssteuerungsliste abzurufenden Informationen Werte, der den Typ des Zugriffs angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.FileSecurity" /> Klasse aus einer angegebenen Datei, die mithilfe des angegebenen Werts, der die <see cref="T:System.Security.AccessControl.AccessControlSections" /> Enumeration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ruft die Informationen für die angegebene Datei ab und erstellt dann ein <xref:System.Security.AccessControl.FileSecurity> Objekt, das die Informationen kapselt.  Sie können dann überprüfen, hinzufügen oder löschen die Informationen für die angegebene Datei.  
+  
+ Zugriff hinzufügen können, oder Überwachungsregeln für die <xref:System.Security.AccessControl.FileSecurity> -Objekt unter Verwendung der <xref:System.Security.AccessControl.FileSystemSecurity.AddAccessRule%2A> Methode. Können Sie den Zugriff entfernen oder Überwachungsregeln, die mithilfe der <xref:System.Security.AccessControl.FileSystemSecurity.RemoveAccessRule%2A> Methode.  
+  
+ Verwenden, um neue oder geänderte Zugriffs- oder Überwachungsregeln in eine Datei, die <xref:System.IO.File.SetAccessControl%2A> oder <xref:System.IO.FileInfo.SetAccessControl%2A> Methode.  Verwenden Sie zum Abrufen der Zugriff oder Überwachungsregeln aus einer vorhandenen Datei, die <xref:System.IO.File.GetAccessControl%2A> oder <xref:System.IO.FileInfo.GetAccessControl%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="fileName" />-Parameter ist eine leere Zeichenfolge, enthält nur Leerzeichen oder enthält mindestens ein ungültiges Zeichen gemäß der Definition von <see cref="F:System.IO.Path.InvalidPathChars" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die angegebene Datei der <paramref name="fileName" /> Parameter wurde nicht gefunden.</exception>
+        <exception cref="T:System.IO.IOException">Beim Öffnen der Datei ist ein E/A-Fehler aufgetreten.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="path" /> weist ein ungültiges Format auf.</exception>
+        <exception cref="T:System.Runtime.InteropServices.SEHException">Der <paramref name="fileName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.Security.AccessControl.PrivilegeNotHeldException">Das aktuelle Systemkonto verfügt nicht über Administratorrechte.</exception>
+        <exception cref="T:System.SystemException">Die Datei wurde nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der <paramref name="fileName" />-Parameter hat eine schreibgeschützte Datei angegeben.  
+  
+ - oder -   
+  
+ Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -   
+  
+ Der <paramref name="fileName" />-Parameter hat ein Verzeichnis angegeben.  
+  
+ - oder -   
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">nach der Installationsberechtigung für die angegebene Datei durch die <paramref name="name" /> Parameter. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" /> ,<see cref="F:System.Security.AccessControl.AccessControlActions.View" />  
+  
+ Sicherheitsaktion: Anforderung</permission>
+        <block subset="none" type="usage">
+          <para>Die <see cref="M:System.Security.AccessControl.FileSecurity.#ctor(System.String,System.Security.AccessControl.AccessControlSections)" /> -Konstruktor erfordert das aktuelle Konto über Administratorrechte verfügen. So erstellen eine neue Instanz der dem <see cref="T:System.Security.AccessControl.FileSecurity" /> Klasse für eine bestimmte Datei, die mit einem Konto an, die nicht über Administratorrechte verfügen, verwenden Sie die <see cref="M:System.IO.FileStream.GetAccessControl" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

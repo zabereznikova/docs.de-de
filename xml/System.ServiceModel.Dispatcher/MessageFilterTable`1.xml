@@ -1,0 +1,1063 @@
+<Type Name="MessageFilterTable&lt;TFilterData&gt;" FullName="System.ServiceModel.Dispatcher.MessageFilterTable&lt;TFilterData&gt;">
+  <TypeSignature Language="C#" Value="public class MessageFilterTable&lt;TFilterData&gt; : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;, System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;, System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageFilterTable`1&lt;TFilterData&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt;, class System.Collections.IEnumerable, class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!TFilterData&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.MessageFilterTable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TFilterData" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TFilterData">Der Typ des der <c>"filterdata"</c> dem Filter zugeordnete.</typeparam>
+    <summary>Stellt die generische Implementierung einer Filtertabelle bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> unterstützt alle Filtertypen. Die Filter werden intern in Tabellen gruppiert, die alle Filter eines gegebenen Typs enthalten. Hinzugefügte Filter werden in eine interne Filtertabelle eingefügt, die Filter dieses Typs enthält (falls vorhanden). Falls eine solche Tabelle nicht vorhanden ist, wird <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.CreateFilterTable%2A> aufgerufen, um eine neue Filtertabelle für den entsprechenden Typ zuzuweisen. Standardmäßig wird <xref:System.ServiceModel.Dispatcher.MessageFilter.CreateFilterTable%2A> aufgerufen.  
+  
+ Dieses Standardverhalten kann überschrieben werden, um den Typ der Filtertabelle, die einem Filtertyp zugeordnet wird, explizit anzugeben. Beim ersten Hinzufügen eines Filtertyps zu der Tabelle wird der erstellte Filtertabellentyp dem Filtertyp permanent zugeordnet.  
+  
+ Als Priorität wird ein Ganzzahlwert verwendet, um Filter in Prioritäts-Buckets zu gruppieren und so die Reihenfolge ihrer Verarbeitung festzulegen. Hierbei gilt: Je größer die einem Filtertyp zugewiesene Ganzzahl, desto höher die Verarbeitungspriorität. Alle Filtertabellen in einem Prioritäts-Bucket werden zusammen ausgewertet. Buckets mit niedrigerer Priorität werden nur ausgewertet, wenn Buckets mit höherer Priorität keine Übereinstimmungen ergeben. In einer Filtertabelle wird eine Standardpriorität zugewiesen, die auf hinzugefügte Filter festgelegt werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageFilterTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MessageFilterTable`1" />-Klasse mit der Standardpriorität&amp;#160;0.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hierbei gilt: Je größer die einer Filtertabelle zugewiesene Ganzzahl, desto höher ist die Priorität für die Verwendung bei der Überprüfung von Nachrichten auf Übereinstimmungen. Die Standardpriorität kann mit <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.%23ctor%2A> angegeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageFilterTable (int default_priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 default_priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultPriority" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="default_priority">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MessageFilterTable`1" />-Klasse mit der angegebenen anfänglichen Standardpriorität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hierbei gilt: Je größer die einer Filtertabelle zugewiesene Ganzzahl, desto höher ist die Priorität für die Verwendung bei der Überprüfung von Nachrichten auf Übereinstimmungen. Der Standardkonstruktor weist eine `defaultPriority` von&#160;0 zu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.Add(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt;Filter <c>"filterdata"</c> &gt; der Tabelle hinzugefügt.</param>
+        <summary>Fügt der Filtertabelle ein Filter/<paramref name="FilterData" />-Paar (Schlüssel/Wert-Paar) hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Dispatcher.MessageFilter filter, TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.ServiceModel.Dispatcher.MessageFilter filter, !TFilterData data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.Add(System.ServiceModel.Dispatcher.MessageFilter,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+        <Parameter Name="data" Type="TFilterData" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Der als Schlüssel des hinzugefügten Paares verwendete <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />.</param>
+        <param name="data">Die <c>"filterdata"</c> verknüpft sind, mit dem Filter als Wert des hinzugefügte Paares verwendet.</param>
+        <summary>Fügt der Filtertabelle einen Filter und die zugehörigen <paramref name="FilterData" /> hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weist dem Filter eine Standardpriorität zu. Verwenden Sie zur Angabe der Priorität <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.Add%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filter" /> ist bereits in der Tabelle vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Dispatcher.MessageFilter filter, TFilterData data, int priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.ServiceModel.Dispatcher.MessageFilter filter, !TFilterData data, int32 priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.Add(System.ServiceModel.Dispatcher.MessageFilter,`0,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+        <Parameter Name="data" Type="TFilterData" />
+        <Parameter Name="priority" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Der als Schlüssel des hinzugefügten Paares verwendete <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />.</param>
+        <param name="data">Die <c>"filterdata"</c> verknüpft sind, mit dem Filter als Wert des hinzugefügte Paares verwendet.</param>
+        <param name="priority">Die Priorität des hinzugefügten Filters.</param>
+        <summary>Fügt der Aktionsfiltertabelle einen Filter und die zugehörigen <paramref name="FilterData" /> mit einer angegebenen Priorität hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Als Priorität wird ein Ganzzahlwert verwendet, um Filter in Prioritäts-Buckets zu gruppieren und so die Reihenfolge ihrer Verarbeitung festzulegen. Hierbei gilt: Je größer die einem Filtertyp zugewiesene Ganzzahl, desto höher die Verarbeitungspriorität. Alle Filtertabellen in einem Prioritäts-Bucket werden zusammen ausgewertet. Buckets mit niedrigerer Priorität werden nur ausgewertet, wenn Buckets mit höherer Priorität keine Übereinstimmungen ergeben. Verwenden Sie <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.Add%2A>, um einen Filter mit der Standardpriorität hinzuzufügen. Die Standardpriorität kann mit <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.DefaultPriority%2A> angegeben werden. Der anfängliche Standardwert ist 0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> darf nicht <see langword="null" /> sein.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filter" /> ist bereits in der Tabelle vorhanden.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          Der <paramref name="filter" />-Typ stimmt nicht mit dem Tabellentyp überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Filter und die zugehörigen Daten aus der Filtertabelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert <xref:System.Collections.Generic.ICollection%601.Clear%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.Contains(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt; <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />, <c>"filterdata"</c> &gt; finden Sie in der Tabelle.</param>
+        <summary>Ermittelt, ob die Filtertabelle einen angegebenen Filter und die zugehörigen <paramref name="FilterData" /> enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="filter" /> / <paramref name="FilterData" /> Paar ist, in der Filtertabelle vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die `Contains`-Methode von <xref:System.Collections.Generic.ICollection%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(class System.ServiceModel.Dispatcher.MessageFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.ContainsKey(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Der zu prüfende <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />.</param>
+        <summary>Ermittelt, ob die Filtertabelle einen angegebenen Filter enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="filter" /> in der Tabelle vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die `ContainsKey`-Methode von <xref:System.Collections.Generic.IDictionary%602>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.CopyTo(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die nullbasierte Array des Typs <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt;Filter <c>"filterdata"</c> &gt; , die die Paare kopiert werden.</param>
+        <param name="index">To be added.</param>
+        <summary>Kopiert die Filter/<paramref name="FilterData" />-Paare in ein Array, das an einem gegebenen Index beginnt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die `CopyTo`-Methode von <xref:System.Collections.Generic.ICollection%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageFilterTable`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Filter/<paramref name="FilterData" />-Paare in der Filtertabelle ab.</summary>
+        <value>Ruft die Anzahl der Filter/<paramref name="FilterData" />-Paare in der Filtertabelle ab.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft implementiert <xref:System.Collections.Generic.ICollection%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterTable">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt; CreateFilterTable (System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!TFilterData&gt; CreateFilterTable(class System.ServiceModel.Dispatcher.MessageFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.CreateFilterTable(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Der <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />, der in der erstellten Filtertabelle enthalten sein muss.</param>
+        <summary>Instanziiert eine Filtertabelle für einen angegebenen Filtertyp.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" />, die erstellt wird und den angegebenen Filter enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPriority">
+      <MemberSignature Language="C#" Value="public int DefaultPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultPriority" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageFilterTable`1.DefaultPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardpriorität für die Filtertabelle ab bzw. legt sie fest.</summary>
+        <value>Die Standardpriorität, die von Filtern zugewiesen wird, die der Filtertabelle hinzugefügt wurden. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardpriorität ist die Priorität, die einem der Filtertabelle hinzugefügten Filter automatisch zugewiesen wird, wenn keine Priorität explizit angegeben wurde. Als Filterpriorität wird ein Ganzzahlwert verwendet, mit dem Filter in Buckets gruppiert werden, die zur Festlegung einer bestimmten Reihenfolge bei der Verarbeitung dienen. Hierbei gilt: Je größer die einem Filtertyp zugewiesene Ganzzahl, desto höher die Verarbeitungspriorität. Alle Filtertabellen in einem Prioritäts-Bucket werden zusammen ausgewertet. Buckets mit niedrigerer Priorität werden nur ausgewertet, wenn Buckets mit höherer Priorität keine Übereinstimmungen ergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Filtertabelle durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" /> &lt;KeyValuePair&lt;Filter <paramref name="FilterData" /> &gt; &gt; , der zum Durchlaufen der Filtertabelle verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die `GetEnumerator`-Methode von <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingFilter">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene Nachricht oder den Nachrichtenpuffer erfüllt wird, und gibt diesen Filter in einem <see langword="out" />-Parameter zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Testet, ob eine Nachricht einem Filter in der Filtertabelle entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.ServiceModel.Channels.Message message, out System.ServiceModel.Dispatcher.MessageFilter result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilter(class System.ServiceModel.Channels.Message message, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingFilter(System.ServiceModel.Channels.Message,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="result">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene Nachricht erfüllt wird, und gibt diesen Filter in einem <see langword="out" />-Parameter zurück.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium exakt eines <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> in der Tabelle durch die Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass ein einzelner Filter mit der Nachricht übereinstimmt und der übereinstimmende Filter erforderlich ist.  
+  
+ Wenn der Text der Nachricht durch einen Filter in der Filtertabelle überprüft werden muss, verwenden Sie die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>-Version der Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Mehr als ein Filter <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> stimmt mit <paramref name="messageBuffer" /> überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.ServiceModel.Channels.MessageBuffer buffer, out System.ServiceModel.Dispatcher.MessageFilter result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilter(class System.ServiceModel.Channels.MessageBuffer buffer, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingFilter(System.ServiceModel.Channels.MessageBuffer,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.MessageBuffer" />.</param>
+        <param name="result">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene Nachricht erfüllt wird, und gibt diesen Filter in einem <see langword="out" />-Parameter zurück.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass ein einzelner Filter mit der Nachricht übereinstimmt und der übereinstimmende Filter zurückgegeben werden muss.  
+  
+ Diese Methode implementiert <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Mehr als ein Filter <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> stimmt mit <paramref name="messageBuffer" /> überein.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingFilters">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium eines <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> in der Tabelle durch die angegebene Nachricht oder gepufferte Nachricht erfüllt wird, und fügt die übereinstimmenden Filter einer Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass mehrere Filter mit der Nachricht übereinstimmen und die übereinstimmenden Filter erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.ServiceModel.Channels.Message message, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilters(class System.ServiceModel.Channels.Message message, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingFilters(System.ServiceModel.Channels.Message,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="results">Der Verweisparameter, die speichert die <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> Objekte, die in entsprechen <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;Filter&gt;.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium eines <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> in der Tabelle durch die angegebene Nachricht erfüllt wird, und fügt die übereinstimmenden Filter einer Auflistung hinzu.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> in der Tabelle durch <paramref name="message" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass mehrere Filter mit der Nachricht übereinstimmen und die übereinstimmenden Filter erforderlich sind.  
+  
+ Diese Methode sucht nach allen übereinstimmenden Filtern im Bucket mit der höchsten Priorität, in dem mindestens eine Übereinstimmung gefunden wird.  
+  
+ Die Prüfung des Nachrichtentextes durch die Filter in der Tabelle ist nicht zulässig.  
+  
+ Die übereinstimmenden <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte werden im `results`-Parameter von <xref:System.Collections.Generic.ICollection%601> gespeichert. Die `FilterData` können anschließend unter Verwendung dieser Filter als Schlüssel mit den Methoden von <xref:System.Collections.Generic.IDictionary%602> aus der Filtertabelle wiederhergestellt werden.  
+  
+ Diese Methode implementiert <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException">Ein Filter hat versucht, den Nachrichtentext zu prüfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.ServiceModel.Channels.MessageBuffer buffer, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilters(class System.ServiceModel.Channels.MessageBuffer buffer, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingFilters(System.ServiceModel.Channels.MessageBuffer,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.MessageBuffer" />.</param>
+        <param name="results">Der Verweisparameter, die speichert die <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> Objekte, die in entsprechen <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;Filter&gt;.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch die angegebene gepufferte Nachricht erfüllt wird, und fügt die übereinstimmenden Filter aus dem Bucket mit der höchsten Priorität zu, in dem mindestens eine Übereinstimmung gefunden wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch <paramref name="message" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass mehrere Filter mit der gepufferten Nachricht übereinstimmen und die übereinstimmenden Filter erforderlich sind.  
+  
+ Die Prüfung des Nachrichtentextes durch die Filter in der Tabelle ist zulässig.  
+  
+ Die übereinstimmenden <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte werden im `results`-Parameter von <xref:System.Collections.Generic.ICollection%601> gespeichert. Die `FilterData` können anschließend unter Verwendung dieser Filter als Schlüssel mit den Methoden von <xref:System.Collections.Generic.IDictionary%602> aus der Filtertabelle wiederhergestellt werden.  
+  
+ Diese Methode implementiert <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingValue">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium von exakt einem <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> in der Tabelle durch die angegebene Nachricht oder gepufferte Nachricht erfüllt wird, und fügt die übereinstimmenden Filterdaten einer Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie eine dieser Methoden, wenn davon ausgegangen wird, dass ein einzelner Filter mit der Nachricht übereinstimmt und nur die `FilterData` des übereinstimmenden Filters wiederhergestellt werden müssen.  
+  
+ Verwenden Sie <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.GetMatchingValue%2A> zur Überprüfung von Nachrichtenheadern und <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.GetMatchingValue%2A> zur Überprüfung einer gepufferten Nachricht, wobei die Prüfung auch den Nachrichtentext umfassen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.ServiceModel.Channels.Message message, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValue(class System.ServiceModel.Channels.Message message, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingValue(System.ServiceModel.Channels.Message,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="data">Die <see langword="out" /> Parameter, speichert die <c>"filterdata"</c> , entspricht der <c>Nachricht</c>.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium von exakt einem <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> in der Tabelle durch die angegebene Nachricht erfüllt wird, und fügt die übereinstimmenden Filterdaten einer Auflistung hinzu.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium eines Filters in der Tabelle durch die Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass ein einzelner Filter mit der Nachricht übereinstimmt und nur die `FilterData` des übereinstimmenden Filters wiederhergestellt werden müssen.  
+  
+ Diese Methode implementiert <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Mehr als ein Filter stimmt mit <paramref name="message" /> überein.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException">Ein Filter hat versucht, den Nachrichtentext zu prüfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.ServiceModel.Channels.MessageBuffer buffer, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValue(class System.ServiceModel.Channels.MessageBuffer buffer, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingValue(System.ServiceModel.Channels.MessageBuffer,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.MessageBuffer" />.</param>
+        <param name="data">Die <see langword="out" /> Parameter, speichert die <c>"filterdata"</c> , entspricht der <c>MessageBuffer</c>.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene gepufferte Nachricht erfüllt wird und die übereinstimmenden Filterdaten einer Auflistung hinzufügt.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die gepufferte Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass ein einzelner Filter mit der gepufferten Nachricht übereinstimmt und nur die `FilterData` des übereinstimmenden Filters wiederhergestellt werden müssen. Da der Filter mit einer gepufferten Nachricht abgeglichen wird, kann er Bedingungen für den Nachrichtentext angeben.  
+  
+ Diese Methode implementiert <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Mehr als ein Filter stimmt mit <paramref name="messageBuffer" /> überein.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingValues">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch die angegebene Nachricht oder gepufferte Nachricht erfüllt wird, und fügt die <paramref name="FilterData" /> der übereinstimmenden Filter einer Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass mehrere Filter mit der Nachricht oder gepufferten Nachricht übereinstimmen und nur die `FilterData` erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.ServiceModel.Channels.Message message, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValues(class System.ServiceModel.Channels.Message message, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingValues(System.ServiceModel.Channels.Message,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="results">Der Verweisparameter, die speichert die <c>"filterdata"</c> übereinstimmenden Aktionsfilter in einem generischen <see cref="T:System.Collections.Generic.ICollection`1" /> &lt; <c>"filterdata"</c>&gt;.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch die angegebene Nachricht oder gepufferte Nachricht erfüllt wird, und fügt die <paramref name="FilterData" /> der übereinstimmenden Filter einer Auflistung hinzu.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass mehrere Filter mit der Nachricht übereinstimmen, nur die `FilterData` erforderlich sind und der Text der Nachricht nicht überprüft wird.  
+  
+ Die `FilterData` der übereinstimmenden <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte werden im `results`-Parameter von <xref:System.Collections.Generic.ICollection%601> gespeichert.  
+  
+ Diese Methode implementiert <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException">Ein Filter hat versucht, den Nachrichtentext zu prüfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.ServiceModel.Channels.MessageBuffer buffer, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValues(class System.ServiceModel.Channels.MessageBuffer buffer, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetMatchingValues(System.ServiceModel.Channels.MessageBuffer,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.MessageBuffer" />.</param>
+        <param name="results">Der Verweisparameter, der die Filterdaten der Filter, die speichert von erfüllt werden, die <c>MessageBuffer</c>.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch den angegebenen Nachrichtenpuffer erfüllt wird, und fügt die <paramref name="FilterData" /> der übereinstimmenden Filter der <paramref name="results" />-Auflistung hinzu.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium exakt eines <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> in der Tabelle durch die gepufferte Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass mehrere Filter mit der gepufferten Nachricht übereinstimmen und nur die `FilterData` erforderlich sind.  
+  
+ Die `FilterData` der übereinstimmenden <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte werden in der `results`<xref:System.Collections.Generic.ICollection%601> gespeichert.  
+  
+ Diese Methode implementiert <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPriority">
+      <MemberSignature Language="C#" Value="public int GetPriority (System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetPriority(class System.ServiceModel.Dispatcher.MessageFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.GetPriority(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Der in der erstellten Filtertabelle enthaltene <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />.</param>
+        <summary>Gibt die Priorität eines gegebenen Filters in der Tabelle zurück.</summary>
+        <returns>Die Priorität des <paramref name="filter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Als Priorität wird ein Ganzzahlwert verwendet, um Filter in Prioritäts-Buckets zu gruppieren und so die Reihenfolge ihrer Verarbeitung festzulegen. Hierbei gilt: Je größer die einem Filtertyp zugewiesene Ganzzahl, desto höher die Verarbeitungspriorität. Alle Filtertabellen in einem Prioritäts-Bucket werden zusammen ausgewertet. Buckets mit niedrigerer Priorität werden nur ausgewertet, wenn Buckets mit höherer Priorität keine Übereinstimmungen ergeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Filter ist nicht in der Filtertabelle vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageFilterTable`1.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Filtertabelle schreibgeschützt ist.</summary>
+        <value>
+          <see langword="false" /> für alle Filtertabellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> darf nicht schreibgeschützt sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TFilterData this[System.ServiceModel.Dispatcher.MessageFilter filter] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TFilterData Item(class System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageFilterTable`1.Item(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TFilterData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Der den abzurufenden bzw. festzulegenden Filterdaten zugewiesene <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />.</param>
+        <summary>Ruft die dem angegebenen <paramref name="filter" /> zugeordneten Filterdaten ab bzw. legt sie fest.</summary>
+        <value>Die dem <paramref name="filter" /> zugeordneten Filterdaten. Wenn der angegebene <paramref name="filter" /> nicht gefunden wird, wird durch einen get-Vorgang eine <see cref="T:System.Collections.Generic.KeyNotFoundException" /> ausgelöst und durch einen set-Vorgang ein neues Filterdatenelement mit dem angegebenen <paramref name="filter" /> als Schlüssel erstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Item`-Eigenschaft (Indexer in C#) ermöglicht Ihnen, mithilfe der folgenden Syntax auf die mit einem `filter` in der Filterauflistung der Tabelle verknüpften Filterdaten zuzugreifen.  
+  
+```csharp  
+myFilters[filter]  
+  
+```  
+  
+```vb  
+myFilters(filter)  
+  
+```  
+  
+ Sie können die `Item`-Eigenschaft auch zum Hinzufügen neuer Elemente verwenden, indem Sie die Werte eines `filter`/Filterdaten-Paares festlegen, das nicht in der Aktionsfiltertabelle vorhanden ist. Wenn der `filter` jedoch bereits in der Tabelle vorhanden ist, wird der alte Wert durch Einstellen der `Item`-Eigenschaft überschrieben. Im Gegensatz dazu ändert die <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.Add%2A>-Methode die Filterdaten eines vorhandenen `filter` nicht.  
+  
+ Das Wörterbuch `item` ist im Fall von `FilterData` ein Filter/<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>-Paar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">Die Eigenschaft wird abgerufen, und der <paramref name="filter" /> ist nicht in der Tabelle vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageFilterTable`1.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Filter in der Filtertabelle ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.ICollection`1" /> aller Filter in der Filtertabelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft implementiert <xref:System.Collections.Generic.IDictionary%602.Keys%2A>. Bei dem von der Filtertabelle implementierten Paar <xref:System.Collections.Generic.IDictionary%602><Filter, `FilterData`> wird <xref:System.ServiceModel.Dispatcher.MessageFilter> als Schlüssel und `FilterData` als Wert verwendet.  
+  
+ Die Reihenfolge der in der Auflistung zurückgegebenen Filter ist nicht vorgegeben, sie entspricht jedoch der Reihenfolge der entsprechenden `FilterData` in der Auflistung, die von der <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.Values%2A>-Eigenschaft zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.Remove(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt;Filter <c>"filterdata"</c> &gt; aus der Tabelle entfernen.</param>
+        <summary>Entfernt ein angegebenes Filter/<paramref name="FilterData" />-Paar aus der Filtertabelle.</summary>
+        <returns>
+          <see langword="true" />, wenn das Filter/<paramref name="FilterData" />-Paar gefunden und entfernt wurde; <see langword="false" />, wenn das Paar nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Filterschlüssel von `item` zwar vorhanden, jedoch Daten zugeordnet ist, die nicht den `FilterData` entsprechen, entfernt die Methode den Filter nicht und gibt `false` zurück.  
+  
+ Diese Methode implementiert <xref:System.Collections.Generic.SynchronizedReadOnlyCollection%601.System%23Collections%23Generic%23ICollection%7BT%7D%23Remove%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.ServiceModel.Dispatcher.MessageFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.Remove(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Das zu entfernende <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />-Element.</param>
+        <summary>Entfernt einen Filter und die zugehörigen <paramref name="FilterData" /> aus der Filtertabelle.</summary>
+        <returns>
+          <see langword="true" />, wenn der Filter gefunden und entfernt wurde; <see langword="false" />, wenn der Filter nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert <xref:System.Collections.Generic.SynchronizedReadOnlyCollection%601.System%23Collections%23Generic%23ICollection%7BT%7D%23Remove%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Filtertabelle durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />, der zum Durchlaufen der Filtertabelle verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert <xref:System.Collections.IEnumerable.GetEnumerator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (System.ServiceModel.Dispatcher.MessageFilter filter, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(class System.ServiceModel.Dispatcher.MessageFilter filter, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageFilterTable`1.TryGetValue(System.ServiceModel.Dispatcher.MessageFilter,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Die <c>Filter</c> , wird als Schlüssel verwendet, um die Daten abzurufen.</param>
+        <param name="data">Die <c>Daten</c> zugeordneten der <c>Filter</c>.</param>
+        <summary>Überprüft, ob ein Filter in der Filtertabelle gespeichert ist.</summary>
+        <returns>
+          <see langword="true" />, wenn in der Filtertabelle ein Filter vorhanden ist, dem Daten zugeordnet sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie effizient prüfen, ob ein Filter in der Filtertabelle vorhanden ist, da die Methode statt einer Ausnahme `false` zurückgibt, wenn der Filter nicht in der Tabelle vorhanden ist. Wenn Sie versuchen, den Filter aus der Tabelle abzurufen, und der Filter nicht vorhanden ist, wird eine Ausnahme ausgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;TFilterData&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageFilterTable`1.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TFilterData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller <paramref name="FilterData" /> in der Filtertabelle ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.ICollection`1" /> aller <paramref name="FilterData" /> in der Filtertabelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft implementiert <xref:System.Collections.Generic.IDictionary%602.Values%2A>. Bei dem von der Filtertabelle implementierten Paar <xref:System.Collections.Generic.IDictionary%602><Filter, `FilterData`> wird <xref:System.ServiceModel.Dispatcher.MessageFilter> als Schlüssel und `FilterData` als Wert verwendet.  
+  
+ Die Reihenfolge der in der Auflistung zurückgegebenen `FilterData` ist nicht vorgegeben, sie entspricht jedoch der Reihenfolge der entsprechenden Filter in der Auflistung, die von der <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.Keys%2A>-Eigenschaft zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

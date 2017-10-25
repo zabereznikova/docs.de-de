@@ -1,0 +1,59 @@
+<Type Name="TimerCallback" FullName="System.Threading.TimerCallback">
+  <TypeSignature Language="C#" Value="public delegate void TimerCallback(object state);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TimerCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.TimerCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Timer</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="state" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="state">Ein Objekt, das anwendungsspezifische Informationen an die Methode aufgerufen, indem dieser Delegat enthält oder <see langword="null" />.</param>
+    <summary>Stellt die Methode, die Aufrufe von behandelt eine <see cref="T:System.Threading.Timer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer `TimerCallback` Delegaten an die Methode, die aufgerufen wird, indem Sie eine <xref:System.Threading.Timer>. Diese Methode wird nicht in dem Thread ausgeführt, die den Zeitgeber erstellt; Er führt in einem separaten Thread des Threadpools, die vom System bereitgestellt wird. Die `TimerCallback` Delegat ruft die Methode einmal nach Ablauf der Start- und fortgesetzt wird, um es einmal pro Zeitgeberintervall bis aufzurufen der <xref:System.Threading.Timer.Dispose%2A> -Methode aufgerufen wird, oder bis die <xref:System.Threading.Timer.Change%2A?displayProperty=nameWithType> -Methode aufgerufen wird und der Intervallwert <xref:System.Threading.Timeout.Infinite>.  
+  
+> [!NOTE]
+>  Rückrufe können nach dem Auftreten der <xref:System.Threading.Timer.Dispose> methodenüberladung aufgerufen wurde, da der Zeitgeber Rückrufe für die Ausführung von Threads im Threadpool Warteschlangen. Sie können die <xref:System.Threading.Timer.Dispose%28System.Threading.WaitHandle%29> methodenüberladung warten, bis alle Rückrufe abgeschlossen haben.  
+  
+ Der Zeitgeberdelegat wird angegeben, wenn der Zeitgeber erstellt wird und kann nicht geändert werden. Die Startzeit für eine `Timer` übergeben der `dueTime` Parameter von der `Timer` Konstruktoren und der Punkt übergeben der `period` Parameter. Ein Beispiel für die Erstellung und Verwendung einer `TimerCallback` delegieren, finden Sie unter <xref:System.Threading.Timer?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen von Delegaten verwendet wird, mit der `Timer` Klasse.  
+  
+ [!code-cpp[System.Threading.Timer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Timer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source.cs#1)]
+ [!code-vb[System.Threading.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

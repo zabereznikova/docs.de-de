@@ -1,0 +1,474 @@
+<Type Name="Constants" FullName="System.Web.UI.MobileControls.Constants">
+  <TypeSignature Language="C#" Value="public class Constants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Constants extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Constants" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt ein Benutzeroberflächenelement, die Benutzer ASP.NET-Ereignishandler Aufruf und bietet eine Möglichkeit, die Benutzereingaben von den Benutzeroberflächenelementen zurück an den Server zu senden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle beschreibt die schreibgeschützte <xref:System.Web.UI.MobileControls.Constants> -Klassenmember, die Sie verwenden können.  
+  
+|Member|Beschreibung|  
+|------------|-----------------|  
+|AlternatingItemTemplateTag|Enthält den Tagnamen für die AlternatingItem-Vorlage.|  
+|ContentTemplateTag|Enthält den Tagnamen für den Inhalt der Vorlage an.|  
+|DefaultSessionsStateHistorySize|Enthält die Standardtiefe des Verlaufsstapels ab.|  
+|EventArgumentID|Das Argument des Postbacks zugeordnet ist.|  
+|EventSourceID|Enthält den Namen des Abfrage-Zeichenfolge des Ereignisziels (das Steuerelement, das das Postback generiert).|  
+|FooterTemplateTag|Enthält den Tagnamen für die Footer-Vorlage.|  
+|FormIDPrefix|Enthält das Präfix eines Formulars in einer URL an.|  
+|HeaderTemplateTag|Enthält den Tagnamen für HeaderTemplate an.|  
+|ItemDetailsTemplateTag|Enthält den Tagnamen für die ItemDetails-Vorlage.|  
+|ItemTemplateTag|Enthält den Tagnamen für die Elementvorlage.|  
+|LabelTemplateTag|Enthält den Tagnamen für die Label-Vorlage.|  
+|OptimumPageWeightParameter|Enthält die Standard-Seite-Gewichtung.|  
+|PagePrefix|Enthält die Seite Zahl Trennzeichen verwendet, um ordnungsgemäße Seitennummerierung ein Postback sicherzustellen.|  
+|ScreenCharactersHeightParameter|Enthält den Standardwert für die Höhe der Zeichen auf dem Bildschirm an.|  
+|ScriptTemplateTag|Enthält den Tagnamen für die Vorlage für ein Skript an.|  
+|SelectionListSpecialCharacter|Enthält das Zeichen in CheckBox-IDs für cHTML verwendet.|  
+|SeparatorTemplateTag|Enthält den Tagnamen für den Separator-Vorlage.|  
+|SymbolProtocol|Enthält die Zeichen verwendet, um den Anfang einer i-Mode- oder J-Phone-Symbol Schema zu kennzeichnen.|  
+|UniqueFilePathSuffixVariable|Enthält den Namen der eindeutigen Dateinamen-Pfadsuffix Abfragezeichenfolge.|  
+|UniqueFilePathSuffixVariableWithoutEqual|Enthält den Namen der eindeutigen Dateinamen Pfadsuffix, aber kein Gleichheitszeichen Abfragezeichenfolge.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Constants ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Constants.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Constants" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternatingItemTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string AlternatingItemTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string AlternatingItemTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.AlternatingItemTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für die AlternatingItem-Vorlage. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string ContentTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ContentTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.ContentTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für den Inhalt der Vorlage an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSessionsStateHistorySize">
+      <MemberSignature Language="C#" Value="public static readonly int DefaultSessionsStateHistorySize;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 DefaultSessionsStateHistorySize" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.DefaultSessionsStateHistorySize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die Standardtiefe des Verlaufsstapels ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventArgumentID">
+      <MemberSignature Language="C#" Value="public static readonly string EventArgumentID;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string EventArgumentID" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.EventArgumentID" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Argument des Postbacks zugeordnet ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceID">
+      <MemberSignature Language="C#" Value="public static readonly string EventSourceID;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string EventSourceID" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.EventSourceID" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Namen des Abfrage-Zeichenfolge des Ereignisziels (das Steuerelement, das das Postback generiert). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string FooterTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FooterTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.FooterTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für die Footer-Vorlage. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormIDPrefix">
+      <MemberSignature Language="C#" Value="public static readonly string FormIDPrefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FormIDPrefix" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.FormIDPrefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält das Präfix eines Formulars in einer URL an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string HeaderTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string HeaderTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.HeaderTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für HeaderTemplate an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDetailsTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string ItemDetailsTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ItemDetailsTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.ItemDetailsTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für die ItemDetails-Vorlage. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string ItemTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ItemTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.ItemTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für die Elementvorlage. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string LabelTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string LabelTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.LabelTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für die Label-Vorlage. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptimumPageWeightParameter">
+      <MemberSignature Language="C#" Value="public static readonly string OptimumPageWeightParameter;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string OptimumPageWeightParameter" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.OptimumPageWeightParameter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die Standard-Seite-Gewichtung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagePrefix">
+      <MemberSignature Language="C#" Value="public static readonly string PagePrefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PagePrefix" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.PagePrefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die Seite Zahl Trennzeichen verwendet, um ordnungsgemäße Seitennummerierung ein Postback sicherzustellen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenCharactersHeightParameter">
+      <MemberSignature Language="C#" Value="public static readonly string ScreenCharactersHeightParameter;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ScreenCharactersHeightParameter" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.ScreenCharactersHeightParameter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Standardwert für die Höhe der Zeichen auf dem Bildschirm an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string ScriptTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ScriptTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.ScriptTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für die Vorlage für ein Skript an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ AlternatingItemTemplateTag  
+ Enthält den Tagnamen für die AlternatingItem-Vorlage.  
+  
+ ContentTemplateTag  
+ Enthält den Tagnamen für den Inhalt der Vorlage an.  
+  
+ DefaultSessionsStateHistorySize  
+ Enthält die Standard-SessionsState-Verlauf an.  
+  
+ EventArgumentID  
+ Enthält die Ereignisargument-ID.  
+  
+ EventSourceID  
+ Enthält die Ereignisquellen-ID.  
+  
+ FooterTemplateTag  
+ Enthält den Tagnamen für die Footer-Vorlage.  
+  
+ FormIDPrefix  
+ Enthält das Formular-ID-Präfix.  
+  
+ HeaderTemplateTag  
+ Enthält den Tagnamen für die Header-Vorlage.  
+  
+ ItemDetailsTemplateTag  
+ Enthält den Tagnamen für die ItemDetails-Vorlage.  
+  
+ ItemTemplateTag  
+ Enthält den Tagnamen für die Elementvorlage.  
+  
+ LabelTemplateTag  
+ Enthält den Tagnamen für die Label-Vorlage.  
+  
+ OptimumPageWeightParameter  
+ Enthält die optimale Gewichtung-Parameter.  
+  
+ PagePrefix  
+ Die Seite "-Präfix enthält.  
+  
+ ScreenCharactersHeightParameter  
+ Enthält den Bildschirm Zeichen Höhe-Parameter.  
+  
+ ScriptTemplateTag  
+ Enthält den Tagnamen für die Vorlage für ein Skript an.  
+  
+ SelectionListSpecialCharacter  
+ Enthält die Auswahl Liste Sonderzeichen enthalten.  
+  
+ SeparatorTemplateTag  
+ Enthält den Tagnamen für den Separator-Vorlage.  
+  
+ SymbolProtocol  
+ Enthält das Symbolprotokoll.  
+  
+ UniqueFilePathSuffixVariable  
+ Enthält die Pfadvariable Suffix eindeutigen Dateinamen an.  
+  
+ UniqueFilePathSuffixVariableWithoutEqual  
+ Enthält die eindeutige Datei Suffix Pfadvariable ohne gleich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionListSpecialCharacter">
+      <MemberSignature Language="C#" Value="public static readonly char SelectionListSpecialCharacter;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly char SelectionListSpecialCharacter" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.SelectionListSpecialCharacter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält das Zeichen in CheckBox-IDs für cHTML verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorTemplateTag">
+      <MemberSignature Language="C#" Value="public static readonly string SeparatorTemplateTag;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SeparatorTemplateTag" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.SeparatorTemplateTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Tagnamen für den Separator-Vorlage. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SymbolProtocol">
+      <MemberSignature Language="C#" Value="public static readonly string SymbolProtocol;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SymbolProtocol" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.SymbolProtocol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die Zeichen verwendet, um den Anfang einer i-Mode- oder J-Phone-Symbol Schema zu kennzeichnen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueFilePathSuffixVariable">
+      <MemberSignature Language="C#" Value="public static readonly string UniqueFilePathSuffixVariable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string UniqueFilePathSuffixVariable" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.UniqueFilePathSuffixVariable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Namen der eindeutigen Dateinamen-Pfadsuffix Abfragezeichenfolge. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueFilePathSuffixVariableWithoutEqual">
+      <MemberSignature Language="C#" Value="public static readonly string UniqueFilePathSuffixVariableWithoutEqual;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string UniqueFilePathSuffixVariableWithoutEqual" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Constants.UniqueFilePathSuffixVariableWithoutEqual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält den Namen der eindeutigen Dateinamen Pfadsuffix, aber kein Gleichheitszeichen Abfragezeichenfolge. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

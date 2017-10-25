@@ -1,0 +1,421 @@
+<Type Name="FaultCode" FullName="System.ServiceModel.FaultCode">
+  <TypeSignature Language="C#" Value="public class FaultCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FaultCode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.FaultCode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen SOAP-Fehlercode dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fehlercodes enthalten einen maschinenlesbaren Bezeichner, der zur programmgesteuerten Bestimmung des Fehlerzustands und einer entsprechenden Reaktion verwendet werden kann. In den SOAP-Spezifikationen werden die folgenden Fehlercodes für SOAP 1.1 und 1.2 definiert:  
+  
+-   SOAP 1.1. `VersionMismatch`, `MustUnderstand`, `Client` und `Server`.  
+  
+-   SOAP 1.2. `VersionMismatch`, `MustUnderstand`, `DataEncodingUnknown`, `Sender` und `Receiver`.  
+  
+ Zusätzlich zu den durch die SOAP-Spezifikationen definierten Fehlercodes verwendet [!INCLUDE[indigo1](~/includes/indigo1-md.md)] Fehlercodes, die durch jede implementierte Webdienstspezifikation definiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultCode (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Fehlercodes.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultCode" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultCode (string name, System.ServiceModel.FaultCode subCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.ServiceModel.FaultCode subCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.#ctor(System.String,System.ServiceModel.FaultCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="subCode" Type="System.ServiceModel.FaultCode" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Fehlercodes.</param>
+        <param name="subCode">Der Fehlersubcode.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultCode" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultCode (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der lokale Name des Fehlercodes.</param>
+        <param name="ns">Der Namespacename des Fehlercodes.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultCode" />-Klasse mit dem angegebenen Namen und Namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ServiceModel.FaultCode>-Objekt wird in Verbindung mit einem <xref:System.ServiceModel.Channels.MessageFault>-Objekt verwendet, um einen SOAP-Fehler vollständig darzustellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="ns" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultCode (string name, string ns, System.ServiceModel.FaultCode subCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string ns, class System.ServiceModel.FaultCode subCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.#ctor(System.String,System.String,System.ServiceModel.FaultCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="subCode" Type="System.ServiceModel.FaultCode" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der lokale Name des Fehlercodes.</param>
+        <param name="ns">Der Namespacename des Fehlercodes.</param>
+        <param name="subCode">Ein <see cref="T:System.ServiceModel.FaultCode" />-Objekt, das den Fehlersubcode darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultCode" />-Klasse mit dem angegebenen Namen, Namespace und Fehlersubcode.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="ns" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReceiverFaultCode">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.FaultCode CreateReceiverFaultCode (System.ServiceModel.FaultCode subCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.FaultCode CreateReceiverFaultCode(class System.ServiceModel.FaultCode subCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.CreateReceiverFaultCode(System.ServiceModel.FaultCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subCode" Type="System.ServiceModel.FaultCode" />
+      </Parameters>
+      <Docs>
+        <param name="subCode">Ein <see cref="T:System.ServiceModel.FaultCode" />-Objekt, das den Fehlersubcode darstellt.</param>
+        <summary>Erstellt einen Empfängerfehlercode mit dem angegebenen Subcode.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.FaultCode" />-Objekt mit dem erstellten SOAP-Fehlersubcode in der <see cref="P:System.ServiceModel.FaultCode.SubCode" />-Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subCode" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReceiverFaultCode">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.FaultCode CreateReceiverFaultCode (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.FaultCode CreateReceiverFaultCode(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.CreateReceiverFaultCode(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der lokale Name für den Fehlersubcode.</param>
+        <param name="ns">Der Namespacename für den Fehlersubcode.</param>
+        <summary>Erstellt einen Empfängerfehlercode mit dem angegebenen Subcode.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.FaultCode" />-Instanz mit dem erstellten SOAP-Fehlersubcode in der <see cref="P:System.ServiceModel.FaultCode.SubCode" />-Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSenderFaultCode">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.FaultCode CreateSenderFaultCode (System.ServiceModel.FaultCode subCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.FaultCode CreateSenderFaultCode(class System.ServiceModel.FaultCode subCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.CreateSenderFaultCode(System.ServiceModel.FaultCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subCode" Type="System.ServiceModel.FaultCode" />
+      </Parameters>
+      <Docs>
+        <param name="subCode">Ein <see cref="T:System.ServiceModel.FaultCode" />-Objekt, das den Fehlersubcode darstellt.</param>
+        <summary>Erstellt einen Senderfehlercode mit dem angegebenen Subcode.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.FaultCode" />-Objekt mit dem erstellten SOAP-Fehlersubcode in der <see cref="P:System.ServiceModel.FaultCode.SubCode" />-Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subCode" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSenderFaultCode">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.FaultCode CreateSenderFaultCode (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.FaultCode CreateSenderFaultCode(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultCode.CreateSenderFaultCode(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der lokale Name für den Fehlersubcode.</param>
+        <param name="ns">Der Namespacename für den Fehlersubcode.</param>
+        <summary>Erstellt einen Senderfehlercode mit dem angegebenen Subcode.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.FaultCode" />-Objekt mit dem erstellten SOAP-Fehlersubcode in <see cref="P:System.ServiceModel.FaultCode.SubCode" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPredefinedFault">
+      <MemberSignature Language="C#" Value="public bool IsPredefinedFault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPredefinedFault" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultCode.IsPredefinedFault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Fehler ein SOAP 1.1- oder SOAP 1.2-Fehler ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Fehler ein SOAP 1.1- oder SOAP 1.2-Fehler ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReceiverFault">
+      <MemberSignature Language="C#" Value="public bool IsReceiverFault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReceiverFault" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultCode.IsReceiverFault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Fehler ein SOAP 1.1-Serverfehler oder ein SOAP 1.2-Empfängerfehler ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Fehler ein SOAP 1.1-Serverfehler oder ein SOAP 1.2-Empfängerfehler ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSenderFault">
+      <MemberSignature Language="C#" Value="public bool IsSenderFault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSenderFault" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultCode.IsSenderFault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Fehler ein SOAP 1.1-Clientfehler oder ein SOAP 1.2-Senderfehler ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Fehler ein SOAP 1.1-Clientfehler oder ein SOAP 1.2-Senderfehler ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultCode.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalen Namen des Fehlercodes ab.</summary>
+        <value>Der lokale Name des Fehlercodes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultCode.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace des Fehlercodes ab.</summary>
+        <value>Ein URI (Uniform Resource Identifier) für den Namespacenamen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubCode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.FaultCode SubCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.FaultCode SubCode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultCode.SubCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehlersubcode ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.FaultCode" />-Objekt, das den Fehlersubcode darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

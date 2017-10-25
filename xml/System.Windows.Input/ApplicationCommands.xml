@@ -1,0 +1,1090 @@
+<Type Name="ApplicationCommands" FullName="System.Windows.Input.ApplicationCommands">
+  <TypeSignature Language="C#" Value="public static class ApplicationCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ApplicationCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ApplicationCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Standardsatz anwendungsbezogener Befehle bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Befehle in der <xref:System.Windows.Input.ApplicationCommands> Klasse und Befehle in der anderen Befehl Bibliotheksklassen, z. B. <xref:System.Windows.Input.ComponentCommands> und <xref:System.Windows.Input.NavigationCommands>, sollen einen Satz von allgemeinen Befehlen darstellen, die Anwendungsprogrammierer häufig stoßen.  Nur die Befehle darstellen, die Instanz von der <xref:System.Windows.Input.RoutedCommand> und nicht auf die Implementierungslogik für den Befehl. Die Implementierungslogik gebunden ist, um den Befehl mit einem <xref:System.Windows.Input.CommandBinding>. Z. B. wenn die <xref:System.Windows.Input.ApplicationCommands.Close%2A> Befehl ausgeführt wird, auf ein Steuerelement, die Logik der durchführt der <xref:System.Windows.Input.ApplicationCommands.Close%2A> Befehl möglicherweise nicht bereitgestellt vom Steuerelement, also der Anwendungs-Writer zum Schreiben von der Logik, die bestimmt, wie das Steuerelement wird Behandeln Sie den Befehl.  
+  
+ Viele Steuerelemente bieten Implementierungslogik für viele der Befehle in der Befehlsbibliothek.  Z. B. die <xref:System.Windows.Controls.TextBox> Klasse stellt die Logik für die <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Undo%2A>, und <xref:System.Windows.Input.ApplicationCommands.Redo%2A> Befehle.  
+  
+ Weitere Informationen zu Befehlen und Befehle finden Sie unter der [Befehle (Übersicht)](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CancelPrint">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand CancelPrint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand CancelPrint" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.CancelPrint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Drucken abbrechen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Drucken abbrechen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass einen Druckauftrag abbrechen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_CancelPrint"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="CancelPrint"/>>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Close { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Close" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Close" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Schließen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Schließen Sie  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass ein Element (in der Regel eine Datei) zu schließen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Close"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Close"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ContextMenu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Kontextmenü“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>UMSCHALT + F10  
+  
+ Apps  
+  
+ </description></item><item><term>Bewegung der Maus  
+  
+ </term><description>Eine Maus Geste ist nicht mit diesem Befehl verbunden, aber die meisten Anwendungen verwenden üblicherweise verwenden das Rechtsklick-Geste zum Kontextmenü aufrufen.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Kontextmenü  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Kontextmenü geöffnet wird.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ContextMenu"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ContextMenu"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Copy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Copy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Copy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Kopieren“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + C  
+  
+ STRG + EINFG  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Kopieren  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl in die Zwischenablage zu kopieren.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Copy"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Copy"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrectionList">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand CorrectionList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand CorrectionList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.CorrectionList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Korrekturliste“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Korrekturliste  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Korrekturliste geöffnet wird.  
+  
+ Die Korrekturliste unterscheidet sich je nach Kontext. Z. B. mit [!INCLUDE[TLA#tla_ime](~/includes/tlasharptla-ime-md.md)] Eingabe der Korrekturliste identifiziert, bei der erneuten Konvertierung Auswahlmöglichkeiten.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_CorrectionList"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="CorrectionList"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Cut { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Cut" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Cut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Ausschneiden“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + X  
+  
+ UMSCHALT+ENTF  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Ausgeschnitten werden.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl in die Zwischenablage ausgeschnitten.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Cut"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Cut"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Delete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Delete" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Delete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Löschen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Del  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Löschen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl zu löschen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Delete"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Delete"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Find { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Find" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Find" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Suchen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + F  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Suchen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die dedizierten Dialogfeld "Suchen" zu öffnen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Find"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Find"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Help { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Help" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Help" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Hilfe“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>F1  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description> Hilfe  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Dialogfeld "Hilfe" (Fenster) öffnen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Help"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Help"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand New { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand New" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.New" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Neu“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + N  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Neu  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass ein neues Element erstellen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_New"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="New"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotACommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand NotACommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand NotACommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.NotACommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Befehl, der immer ignoriert wird.</summary>
+        <value>Der Befehl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl wird immer ignoriert und verarbeitet keine Eingabeereignis, das ihn verursacht hat.  Dies bietet eine Möglichkeit, ein vorhandenes Steuerelement integriert eingabebindung deaktivieren.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_NotACommand"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NotACommand"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Open { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Open" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Open" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Öffnen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + O  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Öffnen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass ein Element (in der Regel eine Datei) öffnen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Open"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Open"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Paste { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Paste" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Paste" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Einfügen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + V  
+  
+ UMSCHALT + EINFG  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Einfügen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl in die Zwischenablage einzufügen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Paste"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Paste"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Print { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Print" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Print" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Drucken“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + P  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Drucken  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Absicht an, die das aktuelle Element ausgegeben.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Print"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Print"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintPreview">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand PrintPreview { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand PrintPreview" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.PrintPreview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Seitenansicht“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + F2  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Seitenansicht  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Dialogfeld "Seitenansicht" zu öffnen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_PrintPreview"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="PrintPreview"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Eigenschaften“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>F4  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description> Eigenschaften  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass ein Eigenschaftendialogfeld zu öffnen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Properties"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Properties"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redo">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Redo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Redo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Redo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Wiederholen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + Y  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wiederherstellen:  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die letzte Aktion wiederholen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Redo"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Redo"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Replace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Replace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Replace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Ersetzen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + H  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Ersetzen Sie  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, öffnen Sie das Dialogfeld "ersetzen".  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Replace"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Replace"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Save { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Save" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Save" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Speichern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + S  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Speichern  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das aktuelle Element zu speichern.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Save"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Save"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SaveAs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SaveAs" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.SaveAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Speichern unter“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Dateityp  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Dialogfeld "Speichern unter" zu öffnen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_SaveAs"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SaveAs"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectAll { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectAll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.SelectAll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Alles auswählen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + A  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Alle auswählen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass alle Elemente auswählen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_SelectAll"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectAll"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Stop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Stop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Stop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Beenden“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>ESC-Taste  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Beenden  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht Verarbeitung zu beenden.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Stop"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Stop"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Undo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Undo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Undo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Rückgängig“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + Z  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Rückgängig machen  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die letzte Aktion rückgängig zu machen.  
+  
+ Es ist nicht notwendigerweise eine Implementierung für den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung für den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_Undo"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Undo"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

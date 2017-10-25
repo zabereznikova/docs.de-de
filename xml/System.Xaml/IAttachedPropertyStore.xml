@@ -1,0 +1,149 @@
+<Type Name="IAttachedPropertyStore" FullName="System.Xaml.IAttachedPropertyStore">
+  <TypeSignature Language="C#" Value="public interface IAttachedPropertyStore" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAttachedPropertyStore" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IAttachedPropertyStore" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen anfügbaren Members-Speicher für ein Objekt, in dem anfügbare Member festgelegt werden. Dieser Speicher anfügbaren Members kann dann mit verwiesen werden <see cref="T:System.Xaml.AttachablePropertyServices" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein anfügbaren Members ist in der Regel implementiert und als anfügbare Eigenschaft verwendet. Der Begriff "anfügbaren Members" bietet die Möglichkeit, dass eine Technologie auch ein System für anfügbare Ereignisse definiert. Als ein Element in einen Eigenschaftenspeicher speichert ein anfügbares Ereignis einen Verweis auf den Handler, der über Memberverwendung zugewiesen wird. Ein anfügbares Ereignis in XAML kann den gleichen Speicher verwenden, ebenso anfügbaren Eigenschaften, auch wenn das anfügbare Ereignis nicht tatsächlich eine Eigenschaft mit dem zugrunde liegenden Typsystem ist, oder es in die praktische Verwendung betrachtet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyPropertiesTo">
+      <MemberSignature Language="C#" Value="public void CopyPropertiesTo (System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,object&gt;[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyPropertiesTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.Xaml.AttachableMemberIdentifier, object&gt;[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.CopyPropertiesTo(System.Collections.Generic.KeyValuePair{System.Xaml.AttachableMemberIdentifier,System.Object}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,System.Object&gt;[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Zielarray. Das Array ist ein generisches Array übergeben werden sollte und Komponenten müssen <see cref="T:System.Xaml.AttachableMemberIdentifier" /> und <see langword="object" />.</param>
+        <param name="index">Der Quellindex, in dem Kopiervorgang beginnen soll.</param>
+        <summary>Speicher für kopiert alle anfügbaren Members-Wert-Paare aus diesem anfügbaren Members in ein Zielarray.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyCount">
+      <MemberSignature Language="C#" Value="public int PropertyCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PropertyCount" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IAttachedPropertyStore.PropertyCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl des anfügbaren Members Einträge in diesem Speicher anfügbaren Members ab.</summary>
+        <value>Die ganzzahligen Anzahl von Einträgen im Speicher.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperty">
+      <MemberSignature Language="C#" Value="public bool RemoveProperty (System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RemoveProperty(class System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.RemoveProperty(System.Xaml.AttachableMemberIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attachableMemberIdentifier" Type="System.Xaml.AttachableMemberIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="attachableMemberIdentifier">Die Verwendung von XAML-Typsystembezeichner für anfügbaren Members zu entfernenden Eintrags.</param>
+        <summary>Entfernt den Eintrag für den angegebenen anfügbaren Members aus diesem Speicher anfügbaren Members.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Eintrag anfügbaren Members für <paramref name="attachableMemberIdentifier" /> im Speicher gefunden und entfernt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(class System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.SetProperty(System.Xaml.AttachableMemberIdentifier,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attachableMemberIdentifier" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="attachableMemberIdentifier">Die Verwendung von XAML-Typsystembezeichner für festzulegenden Eintrags anfügbaren Members.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt einen Wert für die angegebene anfügbare Element im angegebenen Speicher fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Implementierung sollte keine Ausnahme auslöst, wenn bestimmte anfügbaren Members bereits vorhanden ist. Wenn bereits ein Element vorhanden ist, sollte die Implementierung überschreiben alle vorhandenen Werte mit einer `value`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProperty">
+      <MemberSignature Language="C#" Value="public bool TryGetProperty (System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetProperty(class System.Xaml.AttachableMemberIdentifier attachableMemberIdentifier, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAttachedPropertyStore.TryGetProperty(System.Xaml.AttachableMemberIdentifier,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attachableMemberIdentifier" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="attachableMemberIdentifier">Die Verwendung von XAML-Typsystembezeichner für Eintrags anfügbaren Members, der abgerufen.</param>
+        <param name="value">Out-Parameter. Diese Methode zurückgibt, enthält das Zielobjekt für den Wert, wenn <c>AttachableMemberIdentifier</c> im Speicher vorhanden ist und einen Wert hat.</param>
+        <summary>Versucht, einen Wert für die angegebene anfügbare Element im angegebenen Speicher abzurufen.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Eintrag anfügbaren Members für <paramref name="attachableMemberIdentifier" /> im Speicher gefunden wurde und ein Wert bereitgestellt wurde, um <paramref name="value" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Implementierung sollte keine Ausnahme auslöst, die bestimmten anfügbaren Members befindet sich nicht im Speicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,271 @@
+<Type Name="StronglyTypedResourceBuilder" FullName="System.Resources.Tools.StronglyTypedResourceBuilder">
+  <TypeSignature Language="C#" Value="public static class StronglyTypedResourceBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit StronglyTypedResourceBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.Tools.StronglyTypedResourceBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Unterstützung für stark typisierte Ressourcen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcen werden in der Regel Code aus dem Inhalt innerhalb einer Anwendung trennen. Erstellen und nutzen diese Ressourcen erleichtert es lokalisierbare Anwendungen zu entwickeln. In .NET Framework werden Ressourcen in der Regel mit belegt die <xref:System.Resources.ResourceManager> -Klasse, die Methoden enthält, die Zugriff auf kulturspezifische Ressourcen zur Laufzeit zu ermöglichen. Weitere Informationen zum Erstellen und Verarbeiten von Ressourcen finden Sie unter [Ressourcen in Desktop-Apps](http://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890).  
+  
+ Ressource mit starker Typisierung-Unterstützung ist ein Kompilierzeit-Feature, das Zugriff auf Ressourcen durch Erstellen von Klassen, die einen Satz von statischen, enthalten nur-Lese kapselt (`get`) Eigenschaften. Dies bietet eine alternative Möglichkeit, nutzen Ressourcen, statt die <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> und <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> Methoden.  
+  
+ Die grundlegende Funktionalität für die Unterstützung von stark typisierten Ressourcen erfolgt über die <xref:System.Resources.Tools.StronglyTypedResourceBuilder> Klasse (als auch die `/str` Befehlszeilenoption in die [Resgen.exe (Resource File Generator)](~/docs/framework/tools/resgen-exe-resource-file-generator.md)). Die Ausgabe der <xref:System.Resources.Tools.StronglyTypedResourceBuilder.Create%2A> Methode ist eine Klasse, die stark typisierte Eigenschaften, die den Ressourcen übereinstimmen enthält, auf die der Eingabeparameter verweist. Diese Klasse bietet schreibgeschützten Zugriff auf die Ressourcen, die in der verarbeiteten Datei verfügbar sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Klasse namens `DemoResources` , die in c# oder Visual Basic (abhängig von der Beispiel-Quellcode) geschrieben ist. Diese Klasse ist der `DemoApp` Namespace und verfügt über Eigenschaften, die das Bitmuster der ein Logo und den Namen einer Anwendung zurückgeben. Im Beispiel wird eine `CreateResourceFile` Methode zum Erstellen der erforderlichen resw-Datei und setzt voraus, dass eine Bitmapdatei, die mit dem Namen Logo.bmp im aktuellen Verzeichnis im Beispiel gefunden werden. Das Codebeispiel verwendet die folgenden Ressourcendatei, die mit dem Namen Bezeichnung Demo.resx verwendet:  
+  
+ [!code-csharp[System.Resources.Tools.StronglyTypedResourceBuilder.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.tools.stronglytypedresourcebuilder.class/cs/example1.cs#1)]
+ [!code-vb[System.Resources.Tools.StronglyTypedResourceBuilder.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.tools.stronglytypedresourcebuilder.class/vb/example1.vb#1)]  
+  
+ Der Anwendungscode kann die Klasse anschließend wie folgt verwenden:  
+  
+ [!code-csharp[System.Resources.Tools.StronglyTypedResourceBuilder.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.tools.stronglytypedresourcebuilder.class/cs/demoresources.cs#2)]
+ [!code-vb[System.Resources.Tools.StronglyTypedResourceBuilder.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.tools.stronglytypedresourcebuilder.class/vb/demoresources.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.CodeCompileUnit Create (System.Collections.IDictionary resourceList, string baseName, string generatedCodeNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, out string[] unmatchable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.CodeCompileUnit Create(class System.Collections.IDictionary resourceList, string baseName, string generatedCodeNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, [out] string[]&amp; unmatchable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.Tools.StronglyTypedResourceBuilder.Create(System.Collections.IDictionary,System.String,System.String,System.CodeDom.Compiler.CodeDomProvider,System.Boolean,System.String[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceList" Type="System.Collections.IDictionary" />
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="generatedCodeNamespace" Type="System.String" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="internalClass" Type="System.Boolean" />
+        <Parameter Name="unmatchable" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="resourceList">Eine <see cref="T:System.Collections.IDictionary" />-Sammlung, wo jedes Wörterbucheintrags-Schlüssel/Wert-Paar der Name einer Ressource und der Wert der Ressource ist.</param>
+        <param name="baseName">Der Name der zu generierenden Klasse.</param>
+        <param name="generatedCodeNamespace">Der Namespace der zu generierenden Klasse.</param>
+        <param name="codeProvider">Eine <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />-Klasse, die die Sprache bereitstellt, in der die Klasse generiert wird.</param>
+        <param name="internalClass">
+          <see langword="true" /> zum Generieren einer internen Klasse; <see langword="false" /> zum Generieren einer öffentlichen Klasse.</param>
+        <param name="unmatchable">Ein Array, das jeden Ressourcennamen enthält, für den eine Eigenschaft generiert werden kann. Eine Eigenschaft kann in der Regel nicht generiert werden, da der Ressourcenname kein gültiger Bezeichner ist.</param>
+        <summary>Generiert eine Klassendatei mit stark typisierten Eigenschaften, die den Ressourcen entsprechen, auf die in der angegebenen Sammlung verwiesen wird.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeCompileUnit" />-Container.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Resources.Tools.StronglyTypedResourceBuilder.Create%2A> Methode zum Generieren einer Klasse, die einen stark typisierten, schreibgeschützten Wrapper für den Zugriff auf die Ressourcen, die in enthaltenen bietet die `resourceList` Parameter.  
+  
+ Die <xref:System.Resources.Tools.StronglyTypedResourceBuilder> Klasse ignoriert alle Ressourcennamen, die mit den Zeichen "$" beginnt, oder ">>". Die Ressourcennamen "Culture" und "ResourceManager" sind ungültige Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceList" />, <paramref name="basename" /> oder <paramref name="codeProvider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Ressourcenknotenname entspricht nicht seinem Schlüssel in <paramref name="resourceList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.CodeCompileUnit Create (string resxFile, string baseName, string generatedCodeNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, out string[] unmatchable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.CodeCompileUnit Create(string resxFile, string baseName, string generatedCodeNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, [out] string[]&amp; unmatchable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.Tools.StronglyTypedResourceBuilder.Create(System.String,System.String,System.String,System.CodeDom.Compiler.CodeDomProvider,System.Boolean,System.String[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resxFile" Type="System.String" />
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="generatedCodeNamespace" Type="System.String" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="internalClass" Type="System.Boolean" />
+        <Parameter Name="unmatchable" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="resxFile">Der Name einer RESX-Datei als Eingabe verwendet.</param>
+        <param name="baseName">Der Name der zu generierenden Klasse.</param>
+        <param name="generatedCodeNamespace">Der Namespace der zu generierenden Klasse.</param>
+        <param name="codeProvider">Eine <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />-Klasse, die die Sprache bereitstellt, in der die Klasse generiert wird.</param>
+        <param name="internalClass">
+          <see langword="true" /> zum Generieren einer internen Klasse; <see langword="false" /> zum Generieren einer öffentlichen Klasse.</param>
+        <param name="unmatchable">Ein <see cref="T:System.String" />-Array, das jeden Ressourcennamen enthält, für den eine Eigenschaft generiert werden kann. Eine Eigenschaft kann in der Regel nicht generiert werden, da der Ressourcenname kein gültiger Bezeichner ist.</param>
+        <summary>Generiert eine Klassendatei, die stark typisierte Eigenschaften enthält, die Ressourcen in der angegebenen RESX-Datei übereinstimmen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeCompileUnit" />-Container.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Resources.Tools.StronglyTypedResourceBuilder.Create%2A> Methode zum Generieren einer Klasse, die stark typisierten, schreibgeschützten Zugriff auf Ressourcen, die bereitstellt in enthaltenen der `resxFile` Parameter.  
+  
+ Die <xref:System.Resources.Tools.StronglyTypedResourceBuilder> Klasse ignoriert alle Ressourcennamen, die mit den Zeichen "$" beginnt, oder ">>". Die Ressourcennamen "Culture" und "ResourceManager" sind ungültige Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="basename" /> oder <paramref name="codeProvider" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.CodeCompileUnit Create (System.Collections.IDictionary resourceList, string baseName, string generatedCodeNamespace, string resourcesNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, out string[] unmatchable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.CodeCompileUnit Create(class System.Collections.IDictionary resourceList, string baseName, string generatedCodeNamespace, string resourcesNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, [out] string[]&amp; unmatchable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.Tools.StronglyTypedResourceBuilder.Create(System.Collections.IDictionary,System.String,System.String,System.String,System.CodeDom.Compiler.CodeDomProvider,System.Boolean,System.String[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceList" Type="System.Collections.IDictionary" />
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="generatedCodeNamespace" Type="System.String" />
+        <Parameter Name="resourcesNamespace" Type="System.String" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="internalClass" Type="System.Boolean" />
+        <Parameter Name="unmatchable" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="resourceList">Eine <see cref="T:System.Collections.IDictionary" />-Sammlung, wo jedes Wörterbucheintrags-Schlüssel/Wert-Paar der Name einer Ressource und der Wert der Ressource ist.</param>
+        <param name="baseName">Der Name der zu generierenden Klasse.</param>
+        <param name="generatedCodeNamespace">Der Namespace der zu generierenden Klasse.</param>
+        <param name="resourcesNamespace">Der Namespace der zu generierenden Ressource.</param>
+        <param name="codeProvider">Ein <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />-Objekt, das die Sprache bereitstellt, in der die Klasse generiert wird.</param>
+        <param name="internalClass">
+          <see langword="true" /> zum Generieren einer internen Klasse; <see langword="false" /> zum Generieren einer öffentlichen Klasse.</param>
+        <param name="unmatchable">Ein <see cref="T:System.String" />-Array, das jeden Ressourcennamen enthält, für den eine Eigenschaft generiert werden kann. Eine Eigenschaft kann in der Regel nicht generiert werden, da der Ressourcenname kein gültiger Bezeichner ist.</param>
+        <summary>Generiert eine Klassendatei mit stark typisierten Eigenschaften, die den Ressourcen entsprechen, auf die in der angegebenen Sammlung verwiesen wird.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeCompileUnit" />-Container.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung können Sie verwenden die `resourcesNamespace` Parameter, um den Namespace für die generierten Ressourcen anzugeben. In diesem Fall wird der generierte Code wie folgt angezeigt:  
+  
+```  
+System.Resources.ResourceManager rm = new System.Resources.ResourceManager("<resourceNamespace>.<baseName>",typeof(baseName).Assembly);  
+```  
+  
+ In den meisten Fällen müssen Sie nicht zum Aufrufen dieser Methode vom Anwendungscode.  
+  
+ Die <xref:System.Resources.Tools.StronglyTypedResourceBuilder> Klasse ignoriert alle Ressourcennamen, die mit den Zeichen "$" beginnt, oder ">>". Die Ressourcennamen "Culture" und "ResourceManager" sind ungültige Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceList" />, <paramref name="basename" /> oder <paramref name="codeProvider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Ressourcenknotenname entspricht nicht seinem Schlüssel in <paramref name="resourceList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.CodeCompileUnit Create (string resxFile, string baseName, string generatedCodeNamespace, string resourcesNamespace, System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, out string[] unmatchable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.CodeCompileUnit Create(string resxFile, string baseName, string generatedCodeNamespace, string resourcesNamespace, class System.CodeDom.Compiler.CodeDomProvider codeProvider, bool internalClass, [out] string[]&amp; unmatchable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.Tools.StronglyTypedResourceBuilder.Create(System.String,System.String,System.String,System.String,System.CodeDom.Compiler.CodeDomProvider,System.Boolean,System.String[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resxFile" Type="System.String" />
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="generatedCodeNamespace" Type="System.String" />
+        <Parameter Name="resourcesNamespace" Type="System.String" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="internalClass" Type="System.Boolean" />
+        <Parameter Name="unmatchable" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="resxFile">Der Name einer RESX-Datei als Eingabe verwendet.</param>
+        <param name="baseName">Der Name der zu generierenden Klasse.</param>
+        <param name="generatedCodeNamespace">Der Namespace der zu generierenden Klasse.</param>
+        <param name="resourcesNamespace">Der Namespace der zu generierenden Ressource.</param>
+        <param name="codeProvider">Eine <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />-Klasse, die die Sprache bereitstellt, in der die Klasse generiert wird.</param>
+        <param name="internalClass">
+          <see langword="true" /> zum Generieren einer internen Klasse; <see langword="false" /> zum Generieren einer öffentlichen Klasse.</param>
+        <param name="unmatchable">Ein <see cref="T:System.String" />-Array, das jeden Ressourcennamen enthält, für den eine Eigenschaft generiert werden kann. Eine Eigenschaft kann in der Regel nicht generiert werden, da der Ressourcenname kein gültiger Bezeichner ist.</param>
+        <summary>Generiert eine Klassendatei, die stark typisierte Eigenschaften enthält, die Ressourcen in der angegebenen RESX-Datei übereinstimmen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeCompileUnit" />-Container.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Resources.Tools.StronglyTypedResourceBuilder.Create%2A> Methode zum Generieren einer Klasse, die stark typisierten, schreibgeschützten Zugriff auf Ressourcen, die bereitstellt in enthaltenen der `resxFile` Parameter.  
+  
+ Die <xref:System.Resources.Tools.StronglyTypedResourceBuilder> Klasse ignoriert alle Ressourcennamen, die mit den Zeichen "$" beginnt, oder ">>". Die Ressourcennamen "Culture" und "ResourceManager" sind ungültige Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="basename" /> oder <paramref name="codeProvider" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyResourceName">
+      <MemberSignature Language="C#" Value="public static string VerifyResourceName (string key, System.CodeDom.Compiler.CodeDomProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyResourceName(string key, class System.CodeDom.Compiler.CodeDomProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.Tools.StronglyTypedResourceBuilder.VerifyResourceName(System.String,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="provider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Zeichenfolge, um zu überprüfen und gegebenenfalls konvertieren Sie einen gültigen Ressourcennamen.</param>
+        <param name="provider">Ein <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> Objekt, das das Ziel zu verwendenden Sprache angibt.</param>
+        <summary>Generiert eine gültige Ressourcen-Zeichenfolge anhand der angegebenen Eingabezeichenfolge und Codeanbieter.</summary>
+        <returns>Ein gültiger Ressourcenname abgeleitet aus dem <paramref name="key" /> Parameter. Alle ungültigen Token werden durch den Unterstrich (_) ersetzt oder <see langword="null" /> enthält abgeleitete Zeichenfolge noch ein ungültige Zeichen gemäß der Sprache, die gemäß der <paramref name="provider" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `key` Parameter ist eine gültige Zeichenfolge von Zeichen, wird diese Zeichenfolge zurückgegeben. Wenn die `key` Parameter ist eine ungültige Zeichenfolge oder eine Zeichenfolge, ungültige Zeichen enthält, die <xref:System.Resources.Tools.StronglyTypedResourceBuilder.VerifyResourceName%2A> Methode versucht, generieren eine gültige Zeichenfolge, die auf der Grundlage der `key` und `provider` Parameter. Wenn Sie eine gültige Zeichenfolge generiert werden kann, dass die Zeichenfolge zurückgegeben wird, andernfalls andernfalls `null` zurückgegeben wird.  
+  
+ Wenn die `key` Parameter ist eine leere Zeichenfolge (""), eine Zeichenfolge, die besteht aus einem einfachen Unterstrich (_) wird zurückgegeben. Wenn die `key` Parameter ist eine leere Zeichenfolge, die <xref:System.Resources.Tools.StronglyTypedResourceBuilder.VerifyResourceName%2A> Methode vergleicht jedes Zeichens in die Zeichenfolge, die einen Satz von ungültige Token basierend auf der Sprache gemäß der `provider` Parameter. Alle ungültiges Zeichen in der Zeichenfolge wird durch einen Unterstrich ersetzt. Die Zeichen, die durch einen Unterstrich ersetzt werden, lauten wie folgt:  
+  
+ "" (Leerzeichen), U + 00A0 (geschütztes Leerzeichen), "." (Punkt), "," (Komma), ";" Semikolon (;), "&#124;", "~", "@", "#", "%", "^", "&", "*", "+", "-", '/', '\\','\<"," > ","? "," [","] ", '(',')'," {","} "," "" (Anführungszeichen), '' "(Apostroph),": ", und"! ".  
+  
+> [!NOTE]
+>  Stark typisierte Ressourcen lassen sich nicht auf die Verwendung der Schlüsselwörter (wie z. B. `if`, `for`usw.) als Ressourcenschlüsselnamen. Allerdings die <xref:System.CodeDom> Entwurfsmuster ermöglicht die Verwendung der Schlüsselwörter, indem Sie das Schlüsselwort mit einem Unterstrich vorangestellt. Die <xref:System.Resources.Tools.StronglyTypedResourceBuilder.VerifyResourceName%2A> Methodenaufrufe der <xref:System.CodeDom.Compiler.ICodeGenerator.CreateValidIdentifier%2A> Methode, um dieses Entwurfs zu erzwingen. Z. B. Wenn Sie einen Ressourcennamen verwenden, die entspricht ein Schlüsselwort, z. B. `for`, der Name wird als `_for` in der generierten stark typisierte Ressourcenklasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> oder <paramref name="provider" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

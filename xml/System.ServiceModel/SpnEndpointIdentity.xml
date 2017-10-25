@@ -1,0 +1,155 @@
+<Type Name="SpnEndpointIdentity" FullName="System.ServiceModel.SpnEndpointIdentity">
+  <TypeSignature Language="C#" Value="public class SpnEndpointIdentity : System.ServiceModel.EndpointIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpnEndpointIdentity extends System.ServiceModel.EndpointIdentity" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.SpnEndpointIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Security</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.EndpointIdentity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Dienstprinzipalnamen (SPN) für eine Identität dar, wenn die Bindung Kerberos verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein SPN ist der Name, mit dem ein Client eine Instanz eines Diensts eindeutig identifizieren kann. Wenn Sie mehrere Instanzen eines Diensts auf Computern innerhalb einer Gesamtstruktur installieren, muss jede Instanz über einen eigenen SPN verfügen. Eine Dienstinstanz kann mehrere SPNs aufweisen, falls mehrere Namen vorhanden sind, die von den Clients zur Authentifizierung verwendet werden können.  
+  
+ Wenn ein Client eine Verbindung zu einem Dienst herstellen möchte, sucht er eine Instanz des Diensts, erstellt einen SPN für diese Instanz und legt die Identität auf <xref:System.ServiceModel.SpnEndpointIdentity> fest. Es wird geprüft, ob die Nachricht für diesen Dienst bestimmt ist.  
+  
+ Die drei unter Kerberos verwendeten Authentifizierungsmodi sind:  
+  
+-   SSPINegotiate  
+  
+-   Kerberos  
+  
+-   KerberosOverTransport.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird eine allgemeine Möglichkeit veranschaulicht, eine Instanz dieser Klasse zu erstellen.  
+  
+ [!code-csharp[S_UESpnEndpointIdentity#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uespnendpointidentity/cs/service.cs#1)]
+ [!code-vb[S_UESpnEndpointIdentity#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uespnendpointidentity/vb/service.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpnEndpointIdentity (System.IdentityModel.Claims.Claim identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Claims.Claim identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.SpnEndpointIdentity.#ctor(System.IdentityModel.Claims.Claim)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.IdentityModel.Claims.Claim" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die Identität für diesen Dienstprinzipalnamen (SPN).</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.ServiceModel.SpnEndpointIdentity" /> mit dem angegebenen Identitätsanspruch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.ServiceModel.SpnEndpointIdentity.SpnLookupTime%2A>-Eigenschaft auf 1 Minute fest.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie Identitäten aus einem Satz von Ansprüchen erstellt werden.  
+  
+ [!code-csharp[S_UESpnEndpointIdentity#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uespnendpointidentity/cs/service.cs#2)]
+ [!code-vb[S_UESpnEndpointIdentity#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uespnendpointidentity/vb/service.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Anspruchstyp <paramref name="identity" /> ist kein <see cref="P:System.IdentityModel.Claims.ClaimTypes.Spn" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpnEndpointIdentity (string spnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string spnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.SpnEndpointIdentity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="spnName">Der SPN.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.ServiceModel.SpnEndpointIdentity" /> mit dem angegebenen Dienstprinzipalnamen (SPN).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.ServiceModel.SpnEndpointIdentity.SpnLookupTime%2A>-Eigenschaft auf 1 Minute fest.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie Identitäten aus einer Zeichenfolgendarstellung des SPNs erstellt werden.  
+  
+ [!code-csharp[S_UESpnEndpointIdentity#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uespnendpointidentity/cs/service.cs#3)]
+ [!code-vb[S_UESpnEndpointIdentity#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uespnendpointidentity/vb/service.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="spnName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SpnLookupTime">
+      <MemberSignature Language="C#" Value="public static TimeSpan SpnLookupTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan SpnLookupTime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.SpnEndpointIdentity.SpnLookupTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die maximale Zeitspanne an, in der nach dem Dienstprinzipalnamen (SPN) gesucht werden kann.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />. Der Standardwert beträgt 1&amp;#160;Minute.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist auf kleiner 0 (null) festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

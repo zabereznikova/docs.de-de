@@ -1,0 +1,105 @@
+<Type Name="WebBrowserReadyState" FullName="System.Windows.Forms.WebBrowserReadyState">
+  <TypeSignature Language="C#" Value="public enum WebBrowserReadyState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebBrowserReadyState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowserReadyState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Konstanten an, die den Zustand des <see cref="T:System.Windows.Forms.WebBrowser" />-Steuerelements definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.WebBrowser.ReadyState%2A?displayProperty=nameWithType> Eigenschaft, um den aktuellen Status der angeben der <xref:System.Windows.Forms.WebBrowser> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="Complete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Complete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Complete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement hat das neue Dokument und seinen gesamten Inhalt geladen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Interactive">
+      <MemberSignature Language="C#" Value="Interactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Interactive = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Interactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement hat so viel von dem Dokument geladen, das eingeschränkte Benutzerinteraktion möglich ist, z.B. Klicken auf Hyperlinks, die angezeigt wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loaded">
+      <MemberSignature Language="C#" Value="Loaded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Loaded = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Loaded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement hat das neue Dokument geladen und initialisiert, aber noch nicht alle Dokumentdaten empfangen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loading">
+      <MemberSignature Language="C#" Value="Loading" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Loading = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Loading" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement lädt ein neues Dokument.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninitialized">
+      <MemberSignature Language="C#" Value="Uninitialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Uninitialized = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Uninitialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Derzeit ist kein Dokument geladen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

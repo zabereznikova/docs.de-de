@@ -1,0 +1,787 @@
+<Type Name="EventWaitHandle" FullName="System.Threading.EventWaitHandle">
+  <TypeSignature Language="C#" Value="public class EventWaitHandle : System.Threading.WaitHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventWaitHandle extends System.Threading.WaitHandle" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.EventWaitHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Threading.WaitHandle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Threadsynchronisierungsereignis dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.EventWaitHandle> -Klasse können Threads durch Signalisieren miteinander kommunizieren. In der Regel eine oder mehrere Threads blockiert ein <xref:System.Threading.EventWaitHandle> erst ein Blockierung Thread aufruft, die <xref:System.Threading.EventWaitHandle.Set%2A> -Methode, einen oder mehrere blockierte Threads freigibt. Ein Thread kann darauf hinweisen ein <xref:System.Threading.EventWaitHandle> und dann blockieren, durch Aufrufen der `static` (`Shared` in Visual Basic) <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Threading.EventWaitHandle> Klasse bietet Zugriff auf benannte Synchronisierungsereignisse.  
+  
+ Das Verhalten einer <xref:System.Threading.EventWaitHandle> , signalisiert wurde hängt von seiner Zurücksetzmodus. Ein <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> Flag wird automatisch zurückgesetzt, wenn nach der Freigabe eines einzelnen wartenden Threads signalisiert. Ein <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> Flag bleibt signalisiert, bis seine <xref:System.Threading.EventWaitHandle.Reset%2A> -Methode aufgerufen wird.  
+  
+ Automatisches Rücksetzen Ereignisse bieten exklusiven Zugriff auf eine Ressource. Wenn ein Automatisches Rücksetzen Ereignis signalisiert wird, wenn keine Threads warten, bleibt es signalisiert, bis ein Thread versucht, darauf zu warten. Das Ereignis den Thread freigibt und sofort zurückgesetzt werden, sodass nachfolgende Threads blockiert.  
+  
+ Manuelle Zurücksetzung Ereignisse wie Gates sind. Wenn das Ereignis signalisiert wird, werden Threads, die darauf warten blockiert. Wenn das Ereignis signalisiert wird, alle wartenden Threads freigegeben werden und das Ereignis signalisiert bleibt (d. h. nachfolgende Wartevorgänge werden nicht blockiert) bis dessen <xref:System.Threading.EventWaitHandle.Reset%2A> -Methode aufgerufen wird. Manuelle Zurücksetzung Ereignisse sind nützlich, wenn ein Thread eine Aktivität abgeschlossen werden muss, bevor andere Threads fortfahren können.  
+  
+ <xref:System.Threading.EventWaitHandle>Objekte können verwendet werden, mit der `static`(`Shared` in Visual Basic) <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> und <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> Methoden.  
+  
+ Weitere Informationen zu Threadsynchronisierung, finden Sie unter [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](~/docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Threading.WaitHandle.SignalAndWait%28System.Threading.WaitHandle%2CSystem.Threading.WaitHandle%29> -methodenüberladung ermöglichen den Hauptthread zu einen blockierten Thread zu signalisieren und warten Sie, bis der Thread eine Aufgabe beendet ist.  
+  
+ Im Beispiel fünf Threads gestartet, und ermöglicht es ihnen, blockiert ein <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> Flag, und klicken Sie dann auf Versionen nur ein Threadzeit, die der Benutzer drückt die EINGABETASTE. Anschließend fünf weitere Threads und freigegeben, alle mit einem <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> Flag.  
+  
+ [!code-cpp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CS/source.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWaitHandle (bool initialState, System.Threading.EventResetMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool initialState, valuetype System.Threading.EventResetMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.#ctor(System.Boolean,System.Threading.EventResetMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="initialState" Type="System.Boolean" />
+        <Parameter Name="mode" Type="System.Threading.EventResetMode" />
+      </Parameters>
+      <Docs>
+        <param name="initialState">
+          <see langword="true" />auf den Ausgangszustand signalisierten Zustand festgelegt werden soll; <see langword="false" /> , sie zu "nicht signalisiert" festzulegen.</param>
+        <param name="mode">Einer der <see cref="T:System.Threading.EventResetMode" />-Werte, der bestimmt, ob das Ereignis automatisch oder manuell zurückgesetzt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.EventWaitHandle" /> -Klasse und gibt an, ob zunächst das Wait-Handle signalisiert wird, und gibt an, ob sie automatisch oder manuell zurückgesetzt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der anfängliche Zustand des Ereignisses auf "nicht signalisiert" festgelegt ist, blockiert Threads, die auf das Ereignis zu warten. Wenn der anfängliche Zustand signalisiert wird, und die <xref:System.Threading.EventResetMode.ManualReset> Flag angegeben wird, für `mode`, Threads, die auf das Ereignis warten werden nicht blockiert. Wenn der anfängliche Zustand signalisiert wird, und `mode` ist <xref:System.Threading.EventResetMode.AutoReset>, der erste Thread, der auf das Ereignis wartet sofort freigegeben, nach dem das Ereignis zurückgesetzt wird, und nachfolgende Threads blockieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Threading.WaitHandle.SignalAndWait%28System.Threading.WaitHandle%2CSystem.Threading.WaitHandle%29> -methodenüberladung ermöglichen den Hauptthread zu einen blockierten Thread zu signalisieren und warten Sie, bis der Thread eine Aufgabe beendet ist.  
+  
+ Im Beispiel fünf Threads gestartet, und ermöglicht es ihnen, blockiert ein <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> Flag, und klicken Sie dann auf Versionen nur ein Threadzeit, die der Benutzer drückt die EINGABETASTE. Anschließend fünf weitere Threads und freigegeben, alle mit einem <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> Flag.  
+  
+ [!code-cpp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CS/source.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWaitHandle (bool initialState, System.Threading.EventResetMode mode, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool initialState, valuetype System.Threading.EventResetMode mode, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.#ctor(System.Boolean,System.Threading.EventResetMode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="initialState" Type="System.Boolean" />
+        <Parameter Name="mode" Type="System.Threading.EventResetMode" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="initialState">
+          <see langword="true" /> zum Festlegen des anfänglichen Zustands auf „signalisiert“, wenn das benannte Ereignis als Ergebnis dieses Aufrufs erstellt wird; <see langword="false" /> zum Festlegen auf „nicht signalisiert“.</param>
+        <param name="mode">Einer der <see cref="T:System.Threading.EventResetMode" />-Werte, der bestimmt, ob das Ereignis automatisch oder manuell zurückgesetzt wird.</param>
+        <param name="name">Der Name des systemweiten Synchronisierungsereignisses.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.EventWaitHandle" /> Klasse, die angibt, ob das Wait-Handle anfänglich signalisiert wird, wenn als Ergebnis dieses Aufrufs erstellt haben, ob sie automatisch oder manuell zurückgesetzt und der Name des ein Systemereignis für die Synchronisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `name` ist `null` oder eine leere Zeichenfolge, eine lokale <xref:System.Threading.EventWaitHandle> wird erstellt.  
+  
+ Wenn ein Systemereignis mit der angegebene Name für die `name` Parameter bereits vorhanden ist, die `initialState` Parameter wird ignoriert.  
+  
+> [!IMPORTANT]
+>  Geben Sie bei Verwendung dieses Konstruktors für benanntes Systemereignisse `false` für `initialState`. Dieser Konstruktor bietet keine Möglichkeit zu bestimmen, ob ein benanntes Systemereignis erstellt wurde, damit Sie keine Annahmen über den Status der benannten Ereignis vornehmen können. Um zu bestimmen, ob ein benanntes Ereignis erstellt wurde, verwenden die <xref:System.Threading.EventWaitHandle.%23ctor%28System.Boolean%2CSystem.Threading.EventResetMode%2CSystem.String%2CSystem.Boolean%40%29> Konstruktor oder die <xref:System.Threading.EventWaitHandle.%23ctor%28System.Boolean%2CSystem.Threading.EventResetMode%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.EventWaitHandleSecurity%29> Konstruktor.  
+  
+ Wenn der anfängliche Zustand des Ereignisses auf "nicht signalisiert" festgelegt ist, blockiert Threads, die auf das Ereignis zu warten. Wenn der anfängliche Zustand signalisiert wird, und die <xref:System.Threading.EventResetMode.ManualReset> Flag angegeben wird, für `mode`, Threads, die auf das Ereignis warten werden nicht blockiert. Wenn der anfängliche Zustand signalisiert wird, und `mode` ist <xref:System.Threading.EventResetMode.AutoReset>, der erste Thread, der auf das Ereignis wartet sofort freigegeben, nach dem das Ereignis zurückgesetzt wird, und nachfolgende Threads blockieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Ereignis ist vorhanden und verfügt über Zugriffssteuerungssicherheit, aber der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.EventWaitHandleRights.FullControl" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Das benannte Ereignis kann nicht erstellt werden, möglicherweise weil ein Wait-Handle eines anderen Typs den gleichen Namen hat.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWaitHandle (bool initialState, System.Threading.EventResetMode mode, string name, out bool createdNew);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool initialState, valuetype System.Threading.EventResetMode mode, string name, [out] bool&amp; createdNew) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.#ctor(System.Boolean,System.Threading.EventResetMode,System.String,System.Boolean@)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="initialState" Type="System.Boolean" />
+        <Parameter Name="mode" Type="System.Threading.EventResetMode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="createdNew" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="initialState">
+          <see langword="true" /> zum Festlegen des anfänglichen Zustands auf „signalisiert“, wenn das benannte Ereignis als Ergebnis dieses Aufrufs erstellt wird; <see langword="false" /> zum Festlegen auf „nicht signalisiert“.</param>
+        <param name="mode">Einer der <see cref="T:System.Threading.EventResetMode" />-Werte, der bestimmt, ob das Ereignis automatisch oder manuell zurückgesetzt wird.</param>
+        <param name="name">Der Name des systemweiten Synchronisierungsereignisses.</param>
+        <param name="createdNew">Enthält bei Rückgabe dieser Methode <see langword="true" /> , wenn ein lokales Ereignis erstellt wurde (d. h., wenn <c>Namen</c> ist <see langword="null" /> oder eine leere Zeichenfolge) oder wenn das angegebene benannte Systemereignis erstellt wurde. <see langword="false" /> Wenn das angegebene benannte Systemereignis bereits vorhanden. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.EventWaitHandle" />-Klasse, die Folgendes angibt: ob das Wait-Handle anfänglich signalisiert wird, wenn es als Ergebnis dieses Aufrufs erstellt wird; ob es automatisch oder manuell zurückgesetzt wird; den Namen eines Systemsynchronisierungsereignisses und eine boolesche Variable, deren Wert nach dem Aufruf angibt, ob das benannte Systemereignis erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Systemereignis mit der angegebene Name für die `name` Parameter bereits vorhanden ist, die `initialState` Parameter wird ignoriert. Verwenden Sie nach dem Aufrufen des Konstruktors den Wert in der Variablen angegeben werden, für die `ref` Parameter (`ByRef` -Parameter in Visual Basic)`createdNew` zu bestimmen, ob das benannte Systemereignis bereits vorhanden war oder erstellt wurde.  
+  
+ Wenn der anfängliche Zustand des Ereignisses auf "nicht signalisiert" festgelegt ist, blockiert Threads, die auf das Ereignis zu warten. Wenn der anfängliche Zustand signalisiert wird, und die <xref:System.Threading.EventResetMode.ManualReset> Flag angegeben wird, für `mode`, Threads, die auf das Ereignis warten werden nicht blockiert. Wenn der anfängliche Zustand signalisiert wird, und `mode` ist <xref:System.Threading.EventResetMode.AutoReset>, der erste Thread, der auf das Ereignis wartet sofort freigegeben, nach dem das Ereignis zurückgesetzt wird, und nachfolgende Threads blockieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Ereignis ist vorhanden und verfügt über Zugriffssteuerungssicherheit, aber der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.EventWaitHandleRights.FullControl" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Das benannte Ereignis kann nicht erstellt werden, möglicherweise weil ein Wait-Handle eines anderen Typs den gleichen Namen hat.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWaitHandle (bool initialState, System.Threading.EventResetMode mode, string name, out bool createdNew, System.Security.AccessControl.EventWaitHandleSecurity eventSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool initialState, valuetype System.Threading.EventResetMode mode, string name, [out] bool&amp; createdNew, class System.Security.AccessControl.EventWaitHandleSecurity eventSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.#ctor(System.Boolean,System.Threading.EventResetMode,System.String,System.Boolean@,System.Security.AccessControl.EventWaitHandleSecurity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="initialState" Type="System.Boolean" />
+        <Parameter Name="mode" Type="System.Threading.EventResetMode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="createdNew" Type="System.Boolean&amp;" RefType="out" />
+        <Parameter Name="eventSecurity" Type="System.Security.AccessControl.EventWaitHandleSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="initialState">
+          <see langword="true" /> zum Festlegen des anfänglichen Zustands auf „signalisiert“, wenn das benannte Ereignis als Ergebnis dieses Aufrufs erstellt wird; <see langword="false" /> zum Festlegen auf „nicht signalisiert“.</param>
+        <param name="mode">Einer der <see cref="T:System.Threading.EventResetMode" />-Werte, der bestimmt, ob das Ereignis automatisch oder manuell zurückgesetzt wird.</param>
+        <param name="name">Der Name des systemweiten Synchronisierungsereignisses.</param>
+        <param name="createdNew">Enthält bei Rückgabe dieser Methode <see langword="true" /> , wenn ein lokales Ereignis erstellt wurde (d. h., wenn <c>Namen</c> ist <see langword="null" /> oder eine leere Zeichenfolge) oder wenn das angegebene benannte Systemereignis erstellt wurde. <see langword="false" /> Wenn das angegebene benannte Systemereignis bereits vorhanden. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="eventSecurity">Ein <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" />-Objekt, das die Zugriffssteuerungssicherheit darstellt, die auf das benannte Systemereignis angewendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.EventWaitHandle" />-Klasse, die Folgendes angibt: ob das Wait-Handle anfänglich signalisiert wird, wenn es als Ergebnis dieses Aufrufs erstellt wird; ob es automatisch oder manuell zurückgesetzt wird; den Namen eines Systemsynchronisierungsereignisses, eine boolesche Variable, deren Wert nach dem Aufruf angibt, ob das benannte Systemereignis erstellt wurde, und die Zugriffssteuerungssicherheit, die auf das benannte Ereignis angewandt werden soll, falls es erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor Steuerung des Zugriffs auf ein benanntes Systemereignis, wenn sie verhindern, dass anderer Code Kontrolle über das Ereignis erstellt wird, angewendet werden soll.  
+  
+ Dieser Konstruktor initialisiert ein <xref:System.Threading.EventWaitHandle> Objekt, das eine Systemereignis darstellt. Sie können mehrere erstellen <xref:System.Threading.EventWaitHandle> Objekte, die das gleiche Systemereignis darstellen.  
+  
+ Wenn das Systemereignis nicht vorhanden ist, wird er mit dem angegebenen zugriffssteuerungssicherheit erstellt. Wenn das Ereignis vorhanden ist, wird die angegebene zugriffssteuerungssicherheit ignoriert.  
+  
+> [!NOTE]
+>  Der Aufrufer hat Vollzugriff auf das neu erstellte <xref:System.Threading.EventWaitHandle> Objekt erstellen, selbst wenn `eventSecurity` verweigert oder einige über die Zugriffsrechte für den aktuellen Benutzer zu erteilen. Jedoch wenn der aktuelle Benutzer versucht, erhalten eine andere <xref:System.Threading.EventWaitHandle> Objekt zur Darstellung der gleiche Ereignis unter Verwendung entweder mit dem Namen eines Konstruktors oder die <xref:System.Threading.EventWaitHandle.OpenExisting%2A> -Methode, Windows-zugriffssteuerungssicherheit angewendet wird.  
+  
+ Wenn ein Systemereignis mit der angegebene Name für die `name` Parameter bereits vorhanden ist, die `initialState` Parameter wird ignoriert. Verwenden Sie nach dem Aufrufen des Konstruktors den Wert in der Variablen angegeben werden, für die `ref` Parameter (`ByRef` -Parameter in Visual Basic) `createdNew` zu bestimmen, ob das benannte Systemereignis bereits vorhanden war oder erstellt wurde.  
+  
+ Wenn der anfängliche Zustand des Ereignisses auf "nicht signalisiert" festgelegt ist, blockiert Threads, die auf das Ereignis zu warten. Wenn der anfängliche Zustand signalisiert wird, und die <xref:System.Threading.EventResetMode.ManualReset> Flag angegeben wird, für `mode`, Threads, die auf das Ereignis warten werden nicht blockiert. Wenn der anfängliche Zustand signalisiert wird, und `mode` ist <xref:System.Threading.EventResetMode.AutoReset>, der erste Thread, der auf das Ereignis wartet sofort freigegeben, nach dem das Ereignis zurückgesetzt wird, und nachfolgende Threads blockieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Systemereignis mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein von einem benannten Ereignis zu testen.  
+  
+ Wenn das Ereignis nicht vorhanden ist, wird es erstellt, mit den anfänglichen Besitz und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, die dem Ereignis, aber das Recht zum Lesen und Ändern von Berechtigungen für das Ereignis gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29>. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%29> -methodenüberladung, um mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen auf das Ereignis warten.  
+  
+ Nachdem die Berechtigungen geändert werden, wird das Ereignis mit den erforderlichen Benutzerrechten zum Warten und signalisieren geöffnet. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird im Beispiel mit den neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CS/source.cs#1)]
+ [!code-vb[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Ereignis ist vorhanden und verfügt über Zugriffssteuerungssicherheit, aber der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.EventWaitHandleRights.FullControl" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Das benannte Ereignis kann nicht erstellt werden, möglicherweise weil ein Wait-Handle eines anderen Typs den gleichen Namen hat.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.EventWaitHandleSecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.EventWaitHandleSecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.EventWaitHandleSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" /> -Objekt, das die zugriffssteuerungssicherheit für das benannte Systemereignis dargestellt, die vom aktuellen darstellt <see cref="T:System.Threading.EventWaitHandle" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" /> -Objekt, das die zugriffssteuerungssicherheit für das benannte Systemereignis darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.EventWaitHandle.GetAccessControl%2A> Methode verwendet die folgende Kombination von Flags, die (mit dem bitweisen OR-Operation kombiniert) zu suchende Berechtigungen: <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, und <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>.  
+  
+ Der Benutzer benötigt <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Rechte für diese Methode aufzurufen, und das Ereignis müssen mit geöffnet wurden die <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Flag.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Systemereignis mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein von einem benannten Ereignis zu testen.  
+  
+ Wenn das Ereignis nicht vorhanden ist, wird es erstellt, mit den anfänglichen Besitz und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, die dem Ereignis, aber das Recht zum Lesen und Ändern von Berechtigungen für das Ereignis gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29>. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%29> -methodenüberladung, um mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen auf das Ereignis warten.  
+  
+ Nachdem die Berechtigungen mit gelesen wurden, die <xref:System.Threading.EventWaitHandle.GetAccessControl%2A> -Methode, und geändert, mit den erforderlichen Benutzerrechten zum Warten und signalisieren das Ereignis geöffnet wird. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird im Beispiel mit den neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CS/source.cs#1)]
+ [!code-vb[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Die aktuelle <see cref="T:System.Threading.EventWaitHandle" /> -Objekt stellt ein benanntes Systemereignis dar, und der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.EventWaitHandleRights.ReadPermissions" />.  
+  
+ - oder -   
+  
+ Die aktuelle <see cref="T:System.Threading.EventWaitHandle" /> Objekt stellt ein benanntes Systemereignis dar und wurde nicht mit geöffnet <see cref="F:System.Security.AccessControl.EventWaitHandleRights.ReadPermissions" />.</exception>
+        <exception cref="T:System.NotSupportedException">Wird nicht für Windows 98 oder Windows Millennium Edition unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="M:System.Threading.WaitHandle.Close" /> Methode hieß früher auf diesem <see cref="T:System.Threading.EventWaitHandle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.Threading.EventWaitHandle OpenExisting (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.EventWaitHandle OpenExisting(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.OpenExisting(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.EventWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsynchronisierungsereignisses.</param>
+        <summary>Öffnet die angegebene benannte Synchronisierungsereignis, bereits vorhanden ist.</summary>
+        <returns>Ein Objekt, das das benannte Systemereignis darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.EventWaitHandle.OpenExisting%2A> Methode versucht, das angegebene benannte Systemereignis zu öffnen. Wenn das Systemereignis nicht vorhanden ist, löst diese Methode eine Ausnahme aus, anstatt das Systemereignis erstellen. So erstellen das Systemereignis, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.EventWaitHandle.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Mehrere Aufrufe dieser Methode, die den gleichen Wert für `name` nicht unbedingt zurück, die gleiche <xref:System.Threading.EventWaitHandle> -Objekt, auch wenn die Objekte, die zurückgegeben werden die gleichen benanntes Systemereignis dar.  
+  
+ Überladung dieser Methode entspricht dem Aufrufen der <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%29> methodenüberladung und Angeben von <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> und <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Rechte, die mit dem bitweisen OR-Operation kombiniert.  
+  
+ Angeben der <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread wartet auf das benannte Systemereignis und Angeben der <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread aufrufen, die <xref:System.Threading.EventWaitHandle.Set%2A> und <xref:System.Threading.EventWaitHandle.Reset%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Systemereignis mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein von einem benannten Ereignis zu testen.  
+  
+ Wenn das Ereignis nicht vorhanden ist, wird es erstellt, mit den anfänglichen Besitz und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, die dem Ereignis, aber das Recht zum Lesen und Ändern von Berechtigungen für das Ereignis gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29>. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%29> -methodenüberladung, um mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen auf das Ereignis warten.  
+  
+ Nachdem die Berechtigungen geändert werden, wird das Ereignis mit den erforderlichen Benutzerrechten zum Warten und signalisieren geöffnet. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird im Beispiel mit den neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CS/source.cs#1)]
+ [!code-vb[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Das benannte Systemereignis vorhanden nicht.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Ereignis ist vorhanden, aber der Benutzer verfügt nicht über den Sicherheitszugriff erforderlich, um es verwenden.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.Threading.EventWaitHandle OpenExisting (string name, System.Security.AccessControl.EventWaitHandleRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.EventWaitHandle OpenExisting(string name, valuetype System.Security.AccessControl.EventWaitHandleRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.OpenExisting(System.String,System.Security.AccessControl.EventWaitHandleRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.EventWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Security.AccessControl.EventWaitHandleRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsynchronisierungsereignisses.</param>
+        <param name="rights">Eine bitweise Kombination von Enumerationswerten, die die gewünschten Sicherheitszugriffsrechte darstellen.</param>
+        <summary>Öffnet das angegebene Synchronisierungsereignis, mit dem Namen, wenn sie bereits mit dem gewünschten Sicherheitszugriff vorhanden ist.</summary>
+        <returns>Ein Objekt, das das benannte Systemereignis darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `rights` Parameter umfasst die <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> -Kennzeichen an die Threads ermöglichen, auf das Ereignis warten und die <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> -Kennzeichen an die Threads ermöglichen, rufen Sie die <xref:System.Threading.EventWaitHandle.Set%2A> und <xref:System.Threading.EventWaitHandle.Reset%2A> Methoden.  
+  
+ Die <xref:System.Threading.EventWaitHandle.OpenExisting%2A> Methode versucht, ein vorhandenes benanntes Systemereignis zu öffnen. Wenn das Systemereignis nicht vorhanden ist, löst diese Methode eine Ausnahme aus, anstatt das Systemereignis erstellen. So erstellen das Systemereignis, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.EventWaitHandle.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Mehrere Aufrufe dieser Methode, die den gleichen Wert für `name` nicht unbedingt zurück, die gleiche <xref:System.Threading.EventWaitHandle> -Objekt, auch wenn die Objekte, die zurückgegeben werden die gleichen benanntes Systemereignis dar.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Systemereignis mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein von einem benannten Ereignis zu testen.  
+  
+ Wenn das Ereignis nicht vorhanden ist, wird es erstellt, mit den anfänglichen Besitz und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, die dem Ereignis, aber das Recht zum Lesen und Ändern von Berechtigungen für das Ereignis gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29>. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%29> -methodenüberladung, um mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen auf das Ereignis warten.  
+  
+ Nachdem die Berechtigungen geändert werden, wird das Ereignis mit den erforderlichen Benutzerrechten zum Warten und signalisieren geöffnet. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird im Beispiel mit den neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CS/source.cs#1)]
+ [!code-vb[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Das benannte Systemereignis vorhanden nicht.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Ereignis ist vorhanden, aber der Benutzer verfügt nicht über den erforderlichen Sicherheitszugriff.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public bool Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Zustand des Ereignisses auf „nicht signalisiert“ fest, sodass Threads blockiert werden.</summary>
+        <returns>
+          <see langword="true" />, wenn die Operation erfolgreich ausgeführt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="M:System.Threading.WaitHandle.Close" /> Methode hieß früher auf diesem <see cref="T:System.Threading.EventWaitHandle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public bool Set ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Set() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.Set" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Zustand des Ereignisses auf „signalisiert“ fest und ermöglicht so einem oder mehreren wartenden Threads das Fortfahren.</summary>
+        <returns>
+          <see langword="true" />, wenn die Operation erfolgreich ausgeführt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Threading.EventWaitHandle> mit <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> (einschließlich <xref:System.Threading.AutoResetEvent>), wird die <xref:System.Threading.EventWaitHandle.Set%2A> Methode frei, die einen einzelnen Thread. Wenn keine wartenden Threads vorhanden sind, das Wait-Handle bleibt signalisiert, bis ein Thread versucht, warten Sie darauf, oder bis die <xref:System.Threading.EventWaitHandle.Reset%2A> -Methode aufgerufen wird.  
+  
+> [!IMPORTANT]
+>  Besteht keine Garantie, die jedem Aufruf von der <xref:System.Threading.EventWaitHandle.Set%2A> Methode gibt einen Thread aus frei ein <xref:System.Threading.EventWaitHandle> , deren Zurücksetzmodus ist <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>. Wenn zwei Aufrufe zu nahe beieinander sind, so, dass der zweite Aufruf tritt auf, bevor ein Thread freigegeben wurde, wird nur ein Thread freigegeben. Dabei wird angenommen, der zweite Aufruf nicht der Fall. Auch wenn <xref:System.Threading.EventWaitHandle.Set%2A> wird aufgerufen, wenn es werden keine wartenden Threads und die <xref:System.Threading.EventWaitHandle> bereits signalisiert wird, wird der Aufruf hat keine Auswirkungen.  
+  
+ Für eine <xref:System.Threading.EventWaitHandle> mit <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> (einschließlich <xref:System.Threading.ManualResetEvent>) wird beim Aufrufen der <xref:System.Threading.EventWaitHandle.Set%2A> Methode bewirkt, dass das Wait-Handle im signalisierten Zustand, bis seine <xref:System.Threading.EventWaitHandle.Reset%2A> -Methode aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Threading.WaitHandle.SignalAndWait%28System.Threading.WaitHandle%2CSystem.Threading.WaitHandle%29> -methodenüberladung ermöglichen den Hauptthread zu einen blockierten Thread zu signalisieren und warten Sie, bis der Thread eine Aufgabe beendet ist.  
+  
+ Im Beispiel fünf Threads gestartet, und ermöglicht es ihnen, blockiert ein <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> Flag, und klicken Sie dann auf Versionen nur ein Threadzeit, die der Benutzer drückt die EINGABETASTE. Anschließend fünf weitere Threads und freigegeben, alle mit einem <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> Flag.  
+  
+ [!code-cpp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CS/source.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="M:System.Threading.WaitHandle.Close" /> Methode hieß früher auf diesem <see cref="T:System.Threading.EventWaitHandle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.Security.AccessControl.EventWaitHandleSecurity eventSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.Security.AccessControl.EventWaitHandleSecurity eventSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.SetAccessControl(System.Security.AccessControl.EventWaitHandleSecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSecurity" Type="System.Security.AccessControl.EventWaitHandleSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="eventSecurity">Ein <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" />-Objekt, das die Zugriffssteuerungssicherheit darstellt, die auf das benannte Systemereignis angewendet werden soll.</param>
+        <summary>Legt die Zugriffssteuerungssicherheit für ein benanntes Systemereignis fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Benutzer benötigt <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Rechte für diese Methode aufzurufen, und das Ereignis müssen mit geöffnet wurden die <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Flag.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Systemereignis mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein von einem benannten Ereignis zu testen.  
+  
+ Wenn das Ereignis nicht vorhanden ist, wird es erstellt, mit den anfänglichen Besitz und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, die dem Ereignis, aber das Recht zum Lesen und Ändern von Berechtigungen für das Ereignis gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29>. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%29> -methodenüberladung, um mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen auf das Ereignis warten.  
+  
+ Nach dem Ändern der Berechtigungen mithilfe der <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> -Methode, das Ereignis wird mit den erforderlichen Benutzerrechten zum Warten und signalisieren geöffnet. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird im Beispiel mit den neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/CS/source.cs#1)]
+ [!code-vb[System.Threading.EventWaitHandle.ctor named 5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.EventWaitHandle.ctor named 5/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="eventSecurity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.EventWaitHandleRights.ChangePermissions" />.  
+  
+ - oder -   
+  
+ Das Ereignis wurde nicht mit geöffnet <see cref="F:System.Security.AccessControl.EventWaitHandleRights.ChangePermissions" />.</exception>
+        <exception cref="T:System.SystemException">Die aktuelle <see cref="T:System.Threading.EventWaitHandle" /> Objekt stellt kein benanntes Systemereignis dar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="M:System.Threading.WaitHandle.Close" /> Methode hieß früher auf diesem <see cref="T:System.Threading.EventWaitHandle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOpenExisting">
+      <MemberSignature Language="C#" Value="public static bool TryOpenExisting (string name, out System.Threading.EventWaitHandle result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryOpenExisting(string name, [out] class System.Threading.EventWaitHandle&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.TryOpenExisting(System.String,System.Threading.EventWaitHandle@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="result" Type="System.Threading.EventWaitHandle&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsynchronisierungsereignisses.</param>
+        <param name="result">Enthält nach Rückgabe dieser Methode ein <see cref="T:System.Threading.EventWaitHandle" />-Objekt, das das benannte Synchronisierungsereignis darstellt, wenn der Aufruf erfolgreich ausgeführt wurde, oder <see langword="null" />, wenn beim Aufruf ein Fehler aufgetreten ist. Dieser Parameter wird nicht initialisiert behandelt.</param>
+        <summary>Öffnet das angegebene benannte Synchronisierungsereignis, wenn es bereits vorhanden ist, und gibt einen Wert zurück, der angibt, ob der Vorgang erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />, wenn das benannte Synchronisierungsereignis erfolgreich geöffnet wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der benannte Synchronisierungsereignis nicht vorhanden ist, wird es von dieser Methode nicht erstellt. So erstellen das Systemereignis, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.EventWaitHandle.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Wenn Sie unsicher sind, ob ein benanntes Synchronisierungsereignis vorhanden ist, verwenden Sie die Überladung dieser Methode anstelle des dem <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%29> methodenüberladung, die eine Ausnahme auslöst, wenn das Synchronisierungsereignis nicht vorhanden ist.  
+  
+ Überladung dieser Methode entspricht dem Aufrufen der <xref:System.Threading.EventWaitHandle.TryOpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%2CSystem.Threading.EventWaitHandle%40%29> methodenüberladung und Angeben von <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> und <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Rechte, die mit dem bitweisen OR-Operation kombiniert. Angeben der <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread wartet auf das benannte Systemereignis und Angeben der <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread aufrufen, die <xref:System.Threading.EventWaitHandle.Set%2A> und <xref:System.Threading.EventWaitHandle.Reset%2A> Methoden.  
+  
+ Mehrere Aufrufe dieser Methode, die den gleichen Wert für `name` nicht unbedingt zurück, die gleiche <xref:System.Threading.EventWaitHandle> -Objekt, auch wenn die Objekte, die zurückgegeben werden die gleichen benanntes Systemereignis dar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Ereignis ist vorhanden, aber der Benutzer verfügt nicht über den erforderlichen Sicherheitszugriff.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOpenExisting">
+      <MemberSignature Language="C#" Value="public static bool TryOpenExisting (string name, System.Security.AccessControl.EventWaitHandleRights rights, out System.Threading.EventWaitHandle result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryOpenExisting(string name, valuetype System.Security.AccessControl.EventWaitHandleRights rights, [out] class System.Threading.EventWaitHandle&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.EventWaitHandle.TryOpenExisting(System.String,System.Security.AccessControl.EventWaitHandleRights,System.Threading.EventWaitHandle@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Security.AccessControl.EventWaitHandleRights" />
+        <Parameter Name="result" Type="System.Threading.EventWaitHandle&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsynchronisierungsereignisses.</param>
+        <param name="rights">Eine bitweise Kombination von Enumerationswerten, die die gewünschten Sicherheitszugriffsrechte darstellen.</param>
+        <param name="result">Enthält nach Rückgabe dieser Methode ein <see cref="T:System.Threading.EventWaitHandle" />-Objekt, das das benannte Synchronisierungsereignis darstellt, wenn der Aufruf erfolgreich ausgeführt wurde, oder <see langword="null" />, wenn beim Aufruf ein Fehler aufgetreten ist. Dieser Parameter wird nicht initialisiert behandelt.</param>
+        <summary>Öffnet das angegebene benannte Synchronisierungsereignis, wenn es bereits mit dem gewünschten Sicherheitszugriff vorhanden ist, und gibt einen Wert zurück, der angibt, ob der Vorgang erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />, wenn das benannte Synchronisierungsereignis erfolgreich geöffnet wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der benannte Synchronisierungsereignis nicht vorhanden ist, wird es von dieser Methode nicht erstellt. So erstellen das Systemereignis, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.EventWaitHandle.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Wenn Sie unsicher sind, ob ein benanntes Synchronisierungsereignis vorhanden ist, verwenden Sie die Überladung dieser Methode anstelle des dem <xref:System.Threading.EventWaitHandle.OpenExisting%28System.String%2CSystem.Security.AccessControl.EventWaitHandleRights%29> methodenüberladung, die eine Ausnahme auslöst, wenn das Synchronisierungsereignis nicht vorhanden ist.  
+  
+ Die `rights` Parameter umfasst die <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> -Kennzeichen an die Threads ermöglichen, auf das Ereignis warten und die <xref:System.Security.AccessControl.EventWaitHandleRights?displayProperty=nameWithType> -Kennzeichen an die Threads ermöglichen, rufen Sie die <xref:System.Threading.EventWaitHandle.Set%2A> und <xref:System.Threading.EventWaitHandle.Reset%2A> Methoden.  
+  
+ Mehrere Aufrufe dieser Methode, die den gleichen Wert für `name` nicht unbedingt zurück, die gleiche <xref:System.Threading.EventWaitHandle> -Objekt, auch wenn die Objekte, die zurückgegeben werden die gleichen benanntes Systemereignis dar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Ereignis ist vorhanden, aber der Benutzer verfügt nicht über den erforderlichen Sicherheitszugriff.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

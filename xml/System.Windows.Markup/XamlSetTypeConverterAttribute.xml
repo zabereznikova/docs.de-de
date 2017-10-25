@@ -1,0 +1,74 @@
+<Type Name="XamlSetTypeConverterAttribute" FullName="System.Windows.Markup.XamlSetTypeConverterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XamlSetTypeConverterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XamlSetTypeConverterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XamlSetTypeConverterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Klasse eines Typkonverters mithilfe kann einen Wert angeben, und verweist auf einen Handler für das Einstellen des Typkonverters verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XAML-Verhalten, die CLR-Attribute interpretiert verwendet dieses Attribut, um zu bestimmen, ob ein absichtliche Rückruf für alle Nutzungsarten eines Typs oder Members vorhanden ist. Z. B. eine <xref:System.Xaml.XamlServices> geladen oder analysiert wird, oder ein <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlObjectWriter> -Sequenz wird dieses Attribut verwenden, und ruft die namens "Callback" im Rahmen des Vorgangs immer basierend auf einen Typ aufgerufenen geschrieben einen Objektknoten Konverter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSetTypeConverterAttribute (string xamlSetTypeConverterHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xamlSetTypeConverterHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlSetTypeConverterAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xamlSetTypeConverterHandler" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xamlSetTypeConverterHandler">Der Name des Handlers für Typkonverter, Festlegen von Vorgängen verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XamlSetTypeConverterAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode, die auf die verwiesen wird anhand des Namens durch die `xamlSetTypeConverterHandler` Wert eine generische <xref:System.EventHandler%601> mit Delegieren <xref:System.Windows.Markup.XamlSetTypeConverterEventArgs> Ereignisdaten-Einschränkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XamlSetTypeConverterHandler">
+      <MemberSignature Language="C#" Value="public string XamlSetTypeConverterHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XamlSetTypeConverterHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XamlSetTypeConverterAttribute.XamlSetTypeConverterHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <paramref name="xamlSetTypeConverterHandler" /> Initialisierungswert (den Handlernamen) angegeben, der <see cref="T:System.Windows.Markup.XamlSetTypeConverterAttribute" />.</summary>
+        <value>Die <paramref name="xamlSetTypeConverterHandler" /> Wert in der <see cref="T:System.Windows.Markup.XamlSetTypeConverterAttribute" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

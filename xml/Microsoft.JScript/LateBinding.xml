@@ -1,0 +1,349 @@
+<Type Name="LateBinding" FullName="Microsoft.JScript.LateBinding">
+  <TypeSignature Language="C#" Value="public sealed class LateBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LateBinding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.LateBinding" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Verweis auf einen Klassenmember, aufrufbaren Ausdruck oder Variablenname. Diese Klasse versucht, den Verweis auf den richtigen Wert zur Laufzeit aufgelöst.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LateBinding (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Eine Zeichenfolge, die den Bindungsverweis bezeichnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.LateBinding" /> -Klasse mit dem angegebenen Bezeichner.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LateBinding (string name, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Eine Zeichenfolge, die den Bindungsverweis bezeichnet.</param>
+        <param name="obj">Das Objekt, dem auf der Bindungsverweis definiert ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.LateBinding" /> -Klasse unter Verwendung der angegebenen ID und des Objekts.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="public object Call (object[] arguments, bool construct, bool brackets, Microsoft.JScript.Vsa.VsaEngine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Call(object[] arguments, bool construct, bool brackets, class Microsoft.JScript.Vsa.VsaEngine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.Call(System.Object[],System.Boolean,System.Boolean,Microsoft.JScript.Vsa.VsaEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object[]" />
+        <Parameter Name="construct" Type="System.Boolean" />
+        <Parameter Name="brackets" Type="System.Boolean" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Die an das Element zu übergebenden Argumente.</param>
+        <param name="construct">
+          <see langword="true" />um die Construct-Methode zu verwenden. andernfalls <see langword="false" />.</param>
+        <param name="brackets">
+          <see langword="true" />Wenn Sie der Bindungsverweis Klammern enthält. andernfalls <see langword="false" />.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <summary>Löst den Bindungsverweis durch Aufrufen eines Members.</summary>
+        <returns>Der Rückgabewert des Aufrufs an das Element.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CallValue">
+      <MemberSignature Language="C#" Value="public static object CallValue (object thisob, object val, object[] arguments, bool construct, bool brackets, Microsoft.JScript.Vsa.VsaEngine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CallValue(object thisob, object val, object[] arguments, bool construct, bool brackets, class Microsoft.JScript.Vsa.VsaEngine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.CallValue(System.Object,System.Object,System.Object[],System.Boolean,System.Boolean,Microsoft.JScript.Vsa.VsaEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="val" Type="System.Object" />
+        <Parameter Name="arguments" Type="System.Object[]" />
+        <Parameter Name="construct" Type="System.Boolean" />
+        <Parameter Name="brackets" Type="System.Boolean" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem auf der Bindungsverweis definiert ist.</param>
+        <param name="val">Informationen zum Member aufrufen.</param>
+        <param name="arguments">Die an das Element zu übergebenden Argumente.</param>
+        <param name="construct">
+          <see langword="true" />um die Construct-Methode zu verwenden. andernfalls <see langword="false" />.</param>
+        <param name="brackets">
+          <see langword="true" />Wenn Sie der Bindungsverweis Klammern enthält. andernfalls <see langword="false" />.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <summary>Löst den Bindungsverweis durch Aufrufen eines Members.</summary>
+        <returns>Der Rückgabewert des Aufrufs an das Element.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CallValue2">
+      <MemberSignature Language="C#" Value="public static object CallValue2 (object val, object thisob, object[] arguments, bool construct, bool brackets, Microsoft.JScript.Vsa.VsaEngine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CallValue2(object val, object thisob, object[] arguments, bool construct, bool brackets, class Microsoft.JScript.Vsa.VsaEngine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.CallValue2(System.Object,System.Object,System.Object[],System.Boolean,System.Boolean,Microsoft.JScript.Vsa.VsaEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Object" />
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="arguments" Type="System.Object[]" />
+        <Parameter Name="construct" Type="System.Boolean" />
+        <Parameter Name="brackets" Type="System.Boolean" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+      </Parameters>
+      <Docs>
+        <param name="val">Informationen zum Member aufrufen.</param>
+        <param name="thisob">Das Objekt, dem auf der Bindungsverweis definiert ist.</param>
+        <param name="arguments">Die an das Element zu übergebenden Argumente.</param>
+        <param name="construct">
+          <see langword="true" />um die Construct-Methode zu verwenden. andernfalls <see langword="false" />.</param>
+        <param name="brackets">
+          <see langword="true" />Wenn Sie der Bindungsverweis Klammern enthält. andernfalls <see langword="false" />.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <summary>Löst den Bindungsverweis durch Aufrufen eines Members.</summary>
+        <returns>Der Rückgabewert des Aufrufs an das Element.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public bool Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Bindunsverweismember aus dem Objekt, dem auf der Bindungsverweis definiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich gelöscht wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMember">
+      <MemberSignature Language="C#" Value="public static bool DeleteMember (object obj, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeleteMember(object obj, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.DeleteMember(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das Löschen aus.</param>
+        <param name="name">Der Member gelöscht.</param>
+        <summary>Löscht das angegebene Element aus dem angegebenen Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element erfolgreich gelöscht wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetNonMissingValue">
+      <MemberSignature Language="C#" Value="public object GetNonMissingValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetNonMissingValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.GetNonMissingValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Wert, der den Bindungsverweis ab und konvertiert einen <see cref="T:Microsoft.JScript.Missing" /> Wert auf null.</summary>
+        <returns>Der Wert, der den Bindungsverweis; Andernfalls wird null verwendet.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue2">
+      <MemberSignature Language="C#" Value="public object GetValue2 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue2() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.GetValue2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Wert, der den Bindungsverweis ab und löst eine Ausnahme aus, wenn er aufgelöst werden kann.</summary>
+        <returns>Der Wert des Bindungsverweises.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="obj">
+      <MemberSignature Language="C#" Value="public object obj;" />
+      <MemberSignature Language="ILAsm" Value=".field public object obj" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LateBinding.obj" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert einen Verweis auf das Objekt, dem auf der Bindungsverweis definiert ist.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetIndexedPropertyValueStatic">
+      <MemberSignature Language="C#" Value="public static void SetIndexedPropertyValueStatic (object obj, object[] arguments, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIndexedPropertyValueStatic(object obj, object[] arguments, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.SetIndexedPropertyValueStatic(System.Object,System.Object[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="arguments" Type="System.Object[]" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dem auf der Bindungsverweis definiert ist.</param>
+        <param name="arguments">Die an das Element zu übergebenden Argumente.</param>
+        <param name="value">Der neue Wert der Eigenschaft.</param>
+        <summary>Legt eine indizierte Eigenschaft fest.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.LateBinding.SetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der neue Wert der Eigenschaft.</param>
+        <summary>Festlegen einer Eigenschaft an.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

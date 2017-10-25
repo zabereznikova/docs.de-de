@@ -1,0 +1,122 @@
+<Type Name="ActivityScheduledRecord" FullName="System.Activities.Tracking.ActivityScheduledRecord">
+  <TypeSignature Language="C#" Value="public sealed class ActivityScheduledRecord : System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityScheduledRecord extends System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.ActivityScheduledRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Nachverfolgungsdatensatz einer Aktivität dar, der zur Ausführung geplant wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityScheduledRecord (Guid instanceId, long recordNumber, System.Activities.Tracking.ActivityInfo activity, System.Activities.Tracking.ActivityInfo child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, int64 recordNumber, class System.Activities.Tracking.ActivityInfo activity, class System.Activities.Tracking.ActivityInfo child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.ActivityScheduledRecord.#ctor(System.Guid,System.Int64,System.Activities.Tracking.ActivityInfo,System.Activities.Tracking.ActivityInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="recordNumber" Type="System.Int64" />
+        <Parameter Name="activity" Type="System.Activities.Tracking.ActivityInfo" />
+        <Parameter Name="child" Type="System.Activities.Tracking.ActivityInfo" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die Instanz-ID der geplanten Aktivität.</param>
+        <param name="recordNumber">Eine Sequenz, die die Reihenfolge angibt, in der Nachverfolgungsdatensätze generiert werden.</param>
+        <param name="activity">Die Aktivität, die die geplante Ausführungsanforderung ausgibt.</param>
+        <param name="child">Die geplante Aktivität.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Tracking.ActivityScheduledRecord" />-Klasse mithilfe der angegebenen Instanz-ID, der Datensatznummer, der Aktivität und der untergeordneten Aktivität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public System.Activities.Tracking.ActivityInfo Activity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Tracking.ActivityInfo Activity" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.ActivityScheduledRecord.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ActivityInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Activities.Tracking.ActivityInfo" /> für die Aktivität ab.</summary>
+        <value>Die Aktivitätsinformationen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Activities.Tracking.ActivityInfo Child { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Tracking.ActivityInfo Child" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.ActivityScheduledRecord.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ActivityInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Activities.Tracking.ActivityInfo" /> für die untergeordnete Aktivität ab.</summary>
+        <value>Die Informationen zur untergeordneten Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Tracking.TrackingRecord Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Activities.Tracking.TrackingRecord Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.ActivityScheduledRecord.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingRecord</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.ActivityScheduledRecord.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge mit allen Details des <see cref="T:System.Activities.Tracking.ActivityScheduledRecord" />es zurück.</summary>
+        <returns>Die Details des Nachverfolgungsdatensatzes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

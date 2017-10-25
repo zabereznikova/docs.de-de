@@ -1,0 +1,145 @@
+<Type Name="FontStyles" FullName="System.Windows.FontStyles">
+  <TypeSignature Language="C#" Value="public static class FontStyles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FontStyles extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontStyles" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Reihe von statischen vordefinierten <see cref="T:System.Windows.FontStyle" /> Werte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Schriftschnitt bezieht sich auf die Neigung einer Schriftart: Normal, kursiv und Schiefer.  
+  
+|Schriftschnitt|Beschreibung|  
+|----------------|-----------------|  
+|Normal|Die Zeichen in einer normalen bzw. roman-Schriftart sind aufrecht.|  
+|Kursiv|Die Zeichen in eine kursive Schriftart sind schräg und angezeigt werden, wie sie entwickelt wurden.|  
+|Schräg|Die Zeichen in einer schrägen Schriftart werden künstlich schräg.|  
+  
+ Für <xref:System.Windows.FontStyles.Oblique%2A>, die Neigung durch Ausführen einer Scherungstransformation hinsichtlich der Zeichen aus einer normalen Schriftart erreicht ist. Bei "true" kursive Schriftart nicht auf einem Computer oder Drucker verfügbar ist, kann eine Schräge Formatvorlage generiert aus der normalen und simuliert eine kursive Schriftart verwendet werden.  
+  
+ Die folgende Abbildung zeigt die normale, kursive und schräge Schriftschnitte für die Schriftart Palatino Linotype. Beachten Sie, wie die kursiven Schriftschnitt hat ausführlicher fließen und visuell ansprechender als der schräge Schriftschnitt, die einfach durch die Version des Formats normaler Schriftart des Texts neigen erstellt wird.  
+  
+ ![normale, kursive und schräge Schriftschnitte](~/add/media/fontstyle01.PNG "normale, kursive und schräge Schriftschnitte")  
+Beispiel für Schriftschnitte  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel <xref:System.Windows.FontStyles.Normal%2A>, <xref:System.Windows.FontStyles.Italic%2A>, und <xref:System.Windows.FontStyles.Oblique%2A> werden verwendet, um die Schriftschnitte für definieren die <xref:System.Windows.Controls.TextBlock> Objekte.  
+  
+ [!code-xaml[FontSnippets#FontStyleSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml#fontstylesnippet1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Italic">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle Italic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontStyle Italic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontStyles.Italic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen kursiven <see cref="T:System.Windows.FontStyle" />.</summary>
+        <value>Ein Wert, der eine Kursiv <see cref="T:System.Windows.FontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichen in eine kursive Schriftart sind schräg und angezeigt werden, wie sie entwickelt wurden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel die <xref:System.Windows.FontStyles.Italic%2A> Eigenschaft wird zum Zurückgeben einer <xref:System.Windows.FontStyle>.  
+  
+ [!code-csharp[FontSnippets#FontStyleSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml.cs#fontstylesnippet3)]
+ [!code-vb[FontSnippets#FontStyleSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontstylesnippets.xaml.vb#fontstylesnippet3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontStyle Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontStyles.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen normalen <see cref="T:System.Windows.FontStyle" />.</summary>
+        <value>Ein Wert, der ein normaler <see cref="T:System.Windows.FontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichen in einer normalen bzw. roman-Schriftart sind aufrecht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel die <xref:System.Windows.FontStyles.Normal%2A> Eigenschaft wird zum Zurückgeben einer <xref:System.Windows.FontStyle>.  
+  
+ [!code-csharp[FontSnippets#FontStyleSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml.cs#fontstylesnippet2)]
+ [!code-vb[FontSnippets#FontStyleSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontstylesnippets.xaml.vb#fontstylesnippet2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oblique">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle Oblique { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontStyle Oblique" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontStyles.Oblique" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen schrägen <see cref="T:System.Windows.FontStyle" />.</summary>
+        <value>Ein Wert, der einen schrägen <see cref="T:System.Windows.FontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichen in einer schrägen Schriftart werden künstlich geneigt dargestellt. Die Neigung erfolgt durch Ausführen einer Scherungstransformation hinsichtlich der Zeichen aus einer normalen Schriftart. Bei "true" kursive Schriftart nicht auf einem Computer oder Drucker verfügbar ist, kann eine Schräge Formatvorlage generiert aus der normalen und simuliert eine kursive Schriftart verwendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel die <xref:System.Windows.FontStyles.Oblique%2A> Eigenschaft wird zum Zurückgeben einer <xref:System.Windows.FontStyle>.  
+  
+ [!code-csharp[FontSnippets#FontStyleSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml.cs#fontstylesnippet4)]
+ [!code-vb[FontSnippets#FontStyleSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontstylesnippets.xaml.vb#fontstylesnippet4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

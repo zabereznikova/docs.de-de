@@ -1,0 +1,397 @@
+<Type Name="OperationContractGenerationContext" FullName="System.ServiceModel.Description.OperationContractGenerationContext">
+  <TypeSignature Language="C#" Value="public class OperationContractGenerationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OperationContractGenerationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.OperationContractGenerationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>An die <see cref="M:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation(System.ServiceModel.Description.OperationContractGenerationContext)" />-Methode übergeben, um die Änderung eines Vorgangsvertrags und des Kontexts desselben vor der Generierung von Code zu ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie das <xref:System.ServiceModel.Description.OperationContractGenerationContext>-Objekt, das an die <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%2A?displayProperty=nameWithType>-Methode übergeben wird, um das Code-Dokumentobjektmodell vor der Codegenerierung zu ändern. In der Regel wird die <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>-Schnittstelle in einer benutzerdefinierten <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>-Implementierung implementiert, die verwendet wird, um benutzerdefinierte WSDL-Elemente zu importieren oder andernfalls den Code auf Dienst- oder Vorgangsebene zu ändern. Informationen zur Änderung des Codes auf Dienstebene finden Sie unter <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des <xref:System.ServiceModel.Description.OperationContractGenerationContext>-Objekts dargestellt, das an die <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%2A?displayProperty=nameWithType>-Methode übergeben wird, um aus benutzerdefinierten WSDL-Elementen extrahierte Codekommentare hinzuzufügen.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#14](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#14)]  
+  
+ Im folgenden Codebeispiel sind die resultierenden Codecommentare dargestellt.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#13)]
+ [!code-vb[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationContractGenerationContext (System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, System.ServiceModel.Description.ServiceContractGenerationContext contract, System.ServiceModel.Description.OperationDescription operation, System.CodeDom.CodeTypeDeclaration declaringType, System.CodeDom.CodeMemberMethod method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, class System.ServiceModel.Description.ServiceContractGenerationContext contract, class System.ServiceModel.Description.OperationDescription operation, class System.CodeDom.CodeTypeDeclaration declaringType, class System.CodeDom.CodeMemberMethod method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationContractGenerationContext.#ctor(System.ServiceModel.Description.ServiceContractGenerator,System.ServiceModel.Description.ServiceContractGenerationContext,System.ServiceModel.Description.OperationDescription,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeMemberMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceContractGenerator" Type="System.ServiceModel.Description.ServiceContractGenerator" />
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ServiceContractGenerationContext" />
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="declaringType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="method" Type="System.CodeDom.CodeMemberMethod" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractGenerator">Der Dienstvertragsgenerator, der den Code generiert.</param>
+        <param name="contract">Der Vertrag und dessen Generierungskontext.</param>
+        <param name="operation">Die Vorgangsbeschreibung für den zu generierenden Vorgang.</param>
+        <param name="declaringType">Der deklarierende Codetyp.</param>
+        <param name="method">Die zu generierende Methode.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceModel.Description.OperationContractGenerationContext" /> -Klasse mit dem angegebenen Vertragsgenerator, vertragskontext, vorgangsbeschreibung, Codetypdeklaration, Synchronisierungsmethode und Task-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationContractGenerationContext (System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, System.ServiceModel.Description.ServiceContractGenerationContext contract, System.ServiceModel.Description.OperationDescription operation, System.CodeDom.CodeTypeDeclaration declaringType, System.CodeDom.CodeMemberMethod syncMethod, System.CodeDom.CodeMemberMethod taskMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, class System.ServiceModel.Description.ServiceContractGenerationContext contract, class System.ServiceModel.Description.OperationDescription operation, class System.CodeDom.CodeTypeDeclaration declaringType, class System.CodeDom.CodeMemberMethod syncMethod, class System.CodeDom.CodeMemberMethod taskMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationContractGenerationContext.#ctor(System.ServiceModel.Description.ServiceContractGenerator,System.ServiceModel.Description.ServiceContractGenerationContext,System.ServiceModel.Description.OperationDescription,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceContractGenerator" Type="System.ServiceModel.Description.ServiceContractGenerator" />
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ServiceContractGenerationContext" />
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="declaringType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="syncMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="taskMethod" Type="System.CodeDom.CodeMemberMethod" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractGenerator">Der Dienstvertragsgenerator, der den Code generiert.</param>
+        <param name="contract">Der Vertrag und dessen Generierungskontext.</param>
+        <param name="operation">Die Vorgangsbeschreibung für den zu generierenden Vorgang.</param>
+        <param name="declaringType">Der deklarierende Codetyp.</param>
+        <param name="syncMethod">Synchronisierungsmethode generiert werden soll.</param>
+        <param name="taskMethod">Die Task-Methode verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.OperationContractGenerationContext" />-Klasse mit dem angegebenen Vertragsgenerator und -kontext sowie der angegebenen Vorgangsbeschreibung, Codetypdeklaration und Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationContractGenerationContext (System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, System.ServiceModel.Description.ServiceContractGenerationContext contract, System.ServiceModel.Description.OperationDescription operation, System.CodeDom.CodeTypeDeclaration declaringType, System.CodeDom.CodeMemberMethod syncMethod, System.CodeDom.CodeMemberMethod beginMethod, System.CodeDom.CodeMemberMethod endMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, class System.ServiceModel.Description.ServiceContractGenerationContext contract, class System.ServiceModel.Description.OperationDescription operation, class System.CodeDom.CodeTypeDeclaration declaringType, class System.CodeDom.CodeMemberMethod syncMethod, class System.CodeDom.CodeMemberMethod beginMethod, class System.CodeDom.CodeMemberMethod endMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationContractGenerationContext.#ctor(System.ServiceModel.Description.ServiceContractGenerator,System.ServiceModel.Description.ServiceContractGenerationContext,System.ServiceModel.Description.OperationDescription,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceContractGenerator" Type="System.ServiceModel.Description.ServiceContractGenerator" />
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ServiceContractGenerationContext" />
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="declaringType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="syncMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="beginMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="endMethod" Type="System.CodeDom.CodeMemberMethod" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractGenerator">Der Dienstvertragsgenerator, der den Code generiert.</param>
+        <param name="contract">Der Vertrag und dessen Generierungskontext.</param>
+        <param name="operation">Die Vorgangsbeschreibung für den zu generierenden Vorgang.</param>
+        <param name="declaringType">Der deklarierende Codetyp.</param>
+        <param name="syncMethod">Die synchrone Methode.</param>
+        <param name="beginMethod">Die asynchrone Anfangsmethode.</param>
+        <param name="endMethod">Die asynchrone Abschlussmethode.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.OperationContractGenerationContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationContractGenerationContext (System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, System.ServiceModel.Description.ServiceContractGenerationContext contract, System.ServiceModel.Description.OperationDescription operation, System.CodeDom.CodeTypeDeclaration declaringType, System.CodeDom.CodeMemberMethod syncMethod, System.CodeDom.CodeMemberMethod beginMethod, System.CodeDom.CodeMemberMethod endMethod, System.CodeDom.CodeMemberMethod taskMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, class System.ServiceModel.Description.ServiceContractGenerationContext contract, class System.ServiceModel.Description.OperationDescription operation, class System.CodeDom.CodeTypeDeclaration declaringType, class System.CodeDom.CodeMemberMethod syncMethod, class System.CodeDom.CodeMemberMethod beginMethod, class System.CodeDom.CodeMemberMethod endMethod, class System.CodeDom.CodeMemberMethod taskMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationContractGenerationContext.#ctor(System.ServiceModel.Description.ServiceContractGenerator,System.ServiceModel.Description.ServiceContractGenerationContext,System.ServiceModel.Description.OperationDescription,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceContractGenerator" Type="System.ServiceModel.Description.ServiceContractGenerator" />
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ServiceContractGenerationContext" />
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="declaringType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="syncMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="beginMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="endMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="taskMethod" Type="System.CodeDom.CodeMemberMethod" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractGenerator">Der Dienstvertragsgenerator, der den Code generiert.</param>
+        <param name="contract">Der Vertrag und dessen Generierungskontext.</param>
+        <param name="operation">Die Vorgangsbeschreibung für den zu generierenden Vorgang.</param>
+        <param name="declaringType">Der deklarierende Codetyp.</param>
+        <param name="syncMethod">Synchronisierungsmethode generiert werden soll.</param>
+        <param name="beginMethod">Die asynchrone Anfangsmethode.</param>
+        <param name="endMethod">Die asynchrone Abschlussmethode.</param>
+        <param name="taskMethod">Die Task-Methode verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceModel.Description.OperationContractGenerationContext" /> -Klasse unter Verwendung der angegebenen Vertragsgenerator vertragskontext, vorgangsbeschreibung, Codetypdeklaration Synchronisierungsmethode, begin-Methode, die End-Methode und die Task-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginMethod">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeMemberMethod BeginMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeMemberMethod BeginMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.BeginMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMemberMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.CodeDom.CodeMemberMethod" /> für den asynchronen Anfangsvorgang ab.</summary>
+        <value>Der <see cref="T:System.CodeDom.CodeMemberMethod" /> für den asynchronen Anfangsvorgang. Gibt NULL zurück, wenn der Vorgang ein synchroner Vorgang ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.ServiceModel.Description.OperationContractGenerationContext.BeginMethod%2A>, um die asynchrone Anfangsmethode, die den zu generierenden Vorgang darstellt, zu überprüfen oder zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceContractGenerationContext Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceContractGenerationContext Contract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceContractGenerationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Codegenerierungskontext für den Dienstvertrag ab.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Description.ServiceContractGenerationContext" /> für den aktuellen Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationContractGenerationContext.Contract%2A>-Eigenschaft, um den Vertragsgenerierungskontext für den Dienstvertrag zu erhalten, der den Vorgang enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeDeclaration DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeDeclaration DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den deklarierenden Typ für die aktuelle Operation ab.</summary>
+        <value>Der deklarierende Typ für den aktuellen Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationContractGenerationContext.DeclaringType%2A>-Eigenschaft, um die Codetypdeklaration für den aktuellen Vorgang zu überprüfen oder zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndMethod">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeMemberMethod EndMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeMemberMethod EndMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.EndMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMemberMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die asynchrone Abschlussvorgangsdeklaration ab.</summary>
+        <value>Der asynchrone Abschlussvorgang. Gibt NULL zurück, wenn der Vorgang ein synchroner Vorgang ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationContractGenerationContext.EndMethod%2A>-Eigenschaft, um die asynchrone Abschlussvorgangsmethode, die einen asynchronen Vorgang gestaltet, zu überprüfen oder zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsync">
+      <MemberSignature Language="C#" Value="public bool IsAsync { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsync" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.IsAsync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob asynchrone Methoden für den aktuellen Vorgang generiert werden.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang asynchron ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTask">
+      <MemberSignature Language="C#" Value="public bool IsTask { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTask" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.IsTask" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine Aufgabe für den aktuellen Vorgang generiert wird.</summary>
+        <value>
+          <see langword="True" />Wenn eine Aufgabe für den aktuellen Vorgang generiert wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.OperationDescription Operation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.OperationDescription Operation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.OperationDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.Description.OperationDescription" /> für den aktuellen Vorgang ab.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Description.OperationDescription" /> für den aktuellen Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationContractGenerationContext.Operation%2A>-Eigenschaft, um Vorgangsinformationen vor der Generierung von Code für diesen Vorgang zu überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceContractGenerator">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceContractGenerator ServiceContractGenerator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceContractGenerator ServiceContractGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.ServiceContractGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceContractGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" /> ab, der den aktuellen Vorgang generiert.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" />, der den aktuellen Vorgang generiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationContractGenerationContext.ServiceContractGenerator%2A>-Eigenschaft, um das Objekt, das Code für den aktuellen Vorgang generiert, zu überprüfen oder zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncMethod">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeMemberMethod SyncMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeMemberMethod SyncMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.SyncMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMemberMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.CodeDom.CodeMemberMethod" /> für den synchronen Vorgang ab.</summary>
+        <value>Der <see cref="T:System.CodeDom.CodeMemberMethod" /> für den synchronen Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationContractGenerationContext.SyncMethod%2A>-Eigenschaft, um den synchronen Vorgang zu überprüfen oder zu ändern, bevor er generiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des <xref:System.ServiceModel.Description.OperationContractGenerationContext>-Objekts dargestellt, das an die <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%2A?displayProperty=nameWithType>-Methode übergeben wird, um aus benutzerdefinierten WSDL-Elementen extrahierte Codekommentare hinzuzufügen.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#14](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#14)]  
+  
+ Im folgenden Codebeispiel sind die resultierenden Codecommentare dargestellt.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#13)]
+ [!code-vb[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskMethod">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeMemberMethod TaskMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeMemberMethod TaskMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationContractGenerationContext.TaskMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMemberMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.CodeDom.CodeMemberMethod" /> für den Taskvorgang.</summary>
+        <value>Die <see cref="T:System.CodeDom.CodeMemberMethod" /> für den Taskvorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,256 @@
+<Type Name="RangeValidator" FullName="System.Web.UI.MobileControls.RangeValidator">
+  <TypeSignature Language="C#" Value="public class RangeValidator : System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RangeValidator extends System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.RangeValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.BaseValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:RangeValidator runat="server" ErrorMessage="RangeValidator"&gt;&lt;/{0}:RangeValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Überprüft, dass der Wert eines anderen Steuerelements innerhalb eines zulässigen Bereichs liegt. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die minimalen und maximalen Werte des Bereichs werden entweder direkt oder durch einen Verweis auf ein anderes Steuerelement bereitgestellt. Diese Klasse verhält sich genauso wie die <xref:System.Web.UI.WebControls.RangeValidator?displayProperty=nameWithType> Steuerelement.  
+  
+ Standardmäßig <xref:System.Web.UI.MobileControls.Command> Steuerelemente in einem Formular Mausklickereignisse Validierungssteuerelemente für das Formular validiert, wenn das Formular an den Server gesendet wird. Um automatische Validierung zu deaktivieren, legen die <xref:System.Web.UI.MobileControls.Command.CausesValidation%2A> Eigenschaft auf die <xref:System.Web.UI.MobileControls.Command> auf `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.RangeValidator.MinimumValue%2A> Eigenschaft so überprüfen Sie einen numerischen Wert eingegeben werden, in einem <xref:System.Web.UI.MobileControls.TextBox>.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RangeValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.RangeValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.RangeValidator" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected override bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.RangeValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die zu überprüfenden Eigenschaften gültig sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.MobileControls.RangeValidator.MinimumValue" /> und <see cref="P:System.Web.UI.MobileControls.RangeValidator.MaximumValue" /> Eigenschaften gültige Werte aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Entweder die <see cref="P:System.Web.UI.MobileControls.RangeValidator.MinimumValue" /> oder <see cref="P:System.Web.UI.MobileControls.RangeValidator.MaximumValue" /> Eigenschaften verfügen über ungültige Typen  
+  
+ - oder -   
+  
+ die <see cref="P:System.Web.UI.MobileControls.RangeValidator.MinimumValue" /> ist größer als <see cref="P:System.Web.UI.MobileControls.RangeValidator.MaximumValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebValidator">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.BaseValidator CreateWebValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.BaseValidator CreateWebValidator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.RangeValidator.CreateWebValidator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BaseValidator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Webbestätigung dient zum Abrufen und Festlegen der allgemeinen Eigenschaften von einer webbasierten Bestätigung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Keine</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.RangeValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird während der Validierungsphase aufgerufen, wenn ASP.NET ein Web Form verarbeitet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Keine</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumValue">
+      <MemberSignature Language="C#" Value="public string MaximumValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MaximumValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.RangeValidator.MaximumValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des Steuerelements, das Sie überprüfen, die kleiner oder gleich dem Wert dieser Eigenschaft sein muss. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Höchstwert des Bereichs überprüft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.RangeValidator.MinimumValue%2A> Eigenschaft so überprüfen Sie einen numerischen Wert eingegeben werden, in einem <xref:System.Web.UI.MobileControls.TextBox> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+<!-- TODO: review snippet reference  [!CODE [MobileRangeValidator#1](MobileRangeValidator#1)]  -->  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumValue">
+      <MemberSignature Language="C#" Value="public string MinimumValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MinimumValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.RangeValidator.MinimumValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des Steuerelements, das Sie überprüfen, die größer als oder gleich dem Wert dieser Eigenschaft sein muss. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Mindestwert des Bereichs überprüft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.RangeValidator.MinimumValue%2A> Eigenschaft so überprüfen Sie einen numerischen Wert eingegeben werden, in einem <xref:System.Web.UI.MobileControls.TextBox> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+<!-- TODO: review snippet reference  [!CODE [MobileRangeValidator#1](MobileRangeValidator#1)]  -->  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ValidationDataType Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ValidationDataType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.RangeValidator.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationDataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp, der angibt, wie die verglichenen Werte interpretiert werden soll. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Datentyp, der angibt, wie die verglichenen Werte interpretiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte werden implizit in den angegebenen Datentyp konvertiert, bevor der Vergleich durchgeführt wird. Wenn die Datenkonvertierung ein Fehler auftritt, bei der datenvalidierung.  
+  
+ Die folgende Tabelle enthält die Definitionen der <xref:System.Web.UI.WebControls.ValidationDataType> Enumerationen.  
+  
+|Enumerationen|Wert|Datentyp|  
+|------------------|-----------|---------------|  
+|Zeichenfolge|0|Zeichenfolge|  
+|Ganze Zahl|1|Ganze Zahl|  
+|Double|2|Double|  
+|Datum|3|DateTime|  
+|Währung|4|Währung|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.ValidationDataType" /> Werte.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

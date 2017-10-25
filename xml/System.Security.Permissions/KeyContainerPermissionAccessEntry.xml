@@ -1,0 +1,463 @@
+<Type Name="KeyContainerPermissionAccessEntry" FullName="System.Security.Permissions.KeyContainerPermissionAccessEntry">
+  <TypeSignature Language="C#" Value="public sealed class KeyContainerPermissionAccessEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit KeyContainerPermissionAccessEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, die Zugriffsrechte für bestimmte Schlüsselcontainer. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Berechtigung ist vorgesehen, sodass Benutzer problemlos Schlüsselcontainer verwalten, wenn entweder eine kleine Anzahl von Schlüsseln betroffen ist oder der Zugriff ist nur für einige Schlüssel gewährt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermissionAccessEntry (System.Security.Cryptography.CspParameters parameters, System.Security.Permissions.KeyContainerPermissionFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.CspParameters parameters, valuetype System.Security.Permissions.KeyContainerPermissionFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntry.#ctor(System.Security.Cryptography.CspParameters,System.Security.Permissions.KeyContainerPermissionFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.CspParameters" />
+        <Parameter Name="flags" Type="System.Security.Permissions.KeyContainerPermissionFlags" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Ein <see cref="T:System.Security.Cryptography.CspParameters" /> Objekt, das die Parametern der cryptographic Service Provider (CSP) enthält.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> -Klasse mit den Parametern angegebenen cryptographic Service Provider (CSP) und die Zugriffsberechtigungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor können Zugriffsrechten für bestimmte Schlüsselcontainer identifiziert, die einem <xref:System.Security.Cryptography.CspParameters> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry.%23ctor%28System.Security.Cryptography.CspParameters%2CSystem.Security.Permissions.KeyContainerPermissionFlags%29> Konstruktor.  
+  
+ [!code-cpp[System.Security.Permissions.KeyContainerPermission#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CPP/keycontainerpermission.cpp#3)]
+ [!code-csharp[System.Security.Permissions.KeyContainerPermission#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CS/keycontainerpermission.cs#3)]
+ [!code-vb[System.Security.Permissions.KeyContainerPermission#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermissionAccessEntry (string keyContainerName, System.Security.Permissions.KeyContainerPermissionFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyContainerName, valuetype System.Security.Permissions.KeyContainerPermissionFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntry.#ctor(System.String,System.Security.Permissions.KeyContainerPermissionFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyContainerName" Type="System.String" />
+        <Parameter Name="flags" Type="System.Security.Permissions.KeyContainerPermissionFlags" />
+      </Parameters>
+      <Docs>
+        <param name="keyContainerName">Der Name des Schlüsselcontainers.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> -Klasse unter Verwendung der angegebenen Schlüsselcontainer und die Zugriffsberechtigungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor können Sie über Zugriffsrechte für bestimmte anhand des Namens identifizierte Schlüsselcontainer angeben; Verwenden Sie ein Sternchen ("*") auf die Schlüsselcontainer darstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry.%23ctor%28System.String%2CSystem.Security.Permissions.KeyContainerPermissionFlags%29> Konstruktor.  
+  
+ [!code-cpp[System.Security.Permissions.KeyContainerPermission#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CPP/keycontainerpermission.cpp#2)]
+ [!code-csharp[System.Security.Permissions.KeyContainerPermission#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CS/keycontainerpermission.cs#2)]
+ [!code-vb[System.Security.Permissions.KeyContainerPermission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermissionAccessEntry (string keyStore, string providerName, int providerType, string keyContainerName, int keySpec, System.Security.Permissions.KeyContainerPermissionFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyStore, string providerName, int32 providerType, string keyContainerName, int32 keySpec, valuetype System.Security.Permissions.KeyContainerPermissionFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntry.#ctor(System.String,System.String,System.Int32,System.String,System.Int32,System.Security.Permissions.KeyContainerPermissionFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyStore" Type="System.String" />
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="providerType" Type="System.Int32" />
+        <Parameter Name="keyContainerName" Type="System.String" />
+        <Parameter Name="keySpec" Type="System.Int32" />
+        <Parameter Name="flags" Type="System.Security.Permissions.KeyContainerPermissionFlags" />
+      </Parameters>
+      <Docs>
+        <param name="keyStore">Der Name der Schlüsselspeicher.</param>
+        <param name="providerName">Der Name des Anbieters.</param>
+        <param name="providerType">Der Typcode für den Anbieter. Finden Sie unter der <see cref="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.ProviderType" /> -Eigenschaft für Werte.</param>
+        <param name="keyContainerName">Der Name des Schlüsselcontainers.</param>
+        <param name="keySpec">Die Schlüssel-Spezifikation. Finden Sie unter der <see cref="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.KeySpec" /> -Eigenschaft für Werte.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> Klasse mit den angegebenen Eigenschaftswerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor können Zugriffsrechte für bestimmte Schlüsselcontainer zugewiesen werden. Ein `keySpec` oder `providerType` der Wert-1 darstellt, alle Schlüssel Spezifikationen oder Anbietertypen. Ein `keyStore`, `providerName`, oder `keyContainerName` von "*" alle Schlüsselspeicher, Anbieter oder Schlüsselcontainer darstellt. Ein `providerName` oder `keyContainerName` also `null` stellt alle Anbieter oder Schlüsselcontainer.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry.%23ctor%28System.String%2CSystem.String%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Security.Permissions.KeyContainerPermissionFlags%29> Konstruktor.  
+  
+ [!code-cpp[System.Security.Permissions.KeyContainerPermission#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CPP/keycontainerpermission.cpp#4)]
+ [!code-csharp[System.Security.Permissions.KeyContainerPermission#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CS/keycontainerpermission.cs#4)]
+ [!code-vb[System.Security.Permissions.KeyContainerPermission#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntry.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> mit der aktuellen Instanz zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> Objekt gleich der aktuellen Instanz.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> gleich dem aktuellen <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" />-Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry.Equals%2A> Methode vergleicht die Eigenschaften der beiden <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> Objekte, um festzustellen, ob sie gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionFlags Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.KeyContainerPermissionFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Berechtigungen für die Schlüsselcontainer.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte. Die Standardeinstellung ist <see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.NoFlags" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Viele dieser Flags sind leistungsstark, und lassen Sie den Zugriff auf Schlüsselcontainer, die nur für hoch vertrauenswürdigen Code erteilt werden sollte.  
+  
+ Die leistungsstärksten der Flags sind <xref:System.Security.Permissions.KeyContainerPermissionFlags.Create>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Delete>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Import>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Export>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Sign>, <xref:System.Security.Permissions.KeyContainerPermissionFlags.Decrypt>, und <xref:System.Security.Permissions.KeyContainerPermissionFlags.AllFlags>. Bestimmte Bedrohung durch die Verwendung eines dieser Flags finden Sie Beschreibungen der einzelnen Flags.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntry.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für die aktuelle Instanz, die für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen geeignet ist.</summary>
+        <returns>Ein Hashcode für das aktuelle <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dient als Hashfunktion für die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry>geeignet für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyContainerName">
+      <MemberSignature Language="C#" Value="public string KeyContainerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.KeyContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Schlüsselcontainers.</summary>
+        <value>Der Name des Schlüsselcontainers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den Wert "*" den Zugriffseintrag auf alle Schlüsselcontainer innerhalb des angegebenen Anbieternamen und Anbietertyp anwenden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySpec">
+      <MemberSignature Language="C#" Value="public int KeySpec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySpec" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.KeySpec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schlüssel-Spezifikation.</summary>
+        <value>Einer der in der Headerdatei Wincrypt.h definierten AT_-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte für diese Eigenschaft sind AT_KEYEXCHANGE (1) und AT_SIGNATURE (2). Der Standardwert ist-1 und stellt alle möglichen Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyStore">
+      <MemberSignature Language="C#" Value="public string KeyStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.KeyStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Schlüsselspeicher.</summary>
+        <value>Der Name der Schlüsselspeicher.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte sind "User", "Machine" oder "*". Wenn `null` angegeben ist, wird der Wert wird festgelegt, um "\*".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anbieternamen fest.</summary>
+        <value>Der Name des Anbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für einen Anbieternamen ist "Microsoft Enhanced Cryptographic Provider". Wenn `null` angegeben ist, wird der erweiterte Kryptografieanbieter verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderType">
+      <MemberSignature Language="C#" Value="public int ProviderType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProviderType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntry.ProviderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anbietertyp.</summary>
+        <value>Einer der in der Headerdatei Wincrypt.h definierten PROV_-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist-1 und stellt alle möglichen Werte.  
+  
+ Die Headerdatei Wincrypt.h definiert die folgenden Werte:  
+  
+-   \#Definieren von PROV_RSA_FULL 1  
+  
+-   \#Definieren von PROV_RSA_SIG 2  
+  
+-   \#Definieren von PROV_DSS 3  
+  
+-   \#Definieren von PROV_FORTEZZA 4  
+  
+-   \#Definieren von PROV_MS_EXCHANGE 5  
+  
+-   \#Definieren von PROV_SSL 6  
+  
+-   \#Definieren von PROV_RSA_SCHANNEL 12  
+  
+-   \#Definieren von PROV_DSS_DH 13  
+  
+-   \#Definieren von PROV_EC_ECDSA_SIG 14  
+  
+-   \#Definieren von PROV_EC_ECNRA_SIG 15  
+  
+-   \#Definieren von PROV_EC_ECDSA_FULL 16  
+  
+-   \#Definieren von PROV_EC_ECNRA_FULL 17  
+  
+-   \#Definieren von PROV_DH_SCHANNEL 18  
+  
+-   \#Definieren von PROV_SPYRUS_LYNKS 20  
+  
+-   \#Definieren von PROV_RNG 21  
+  
+-   \#Definieren von PROV_INTEL_SEC 22  
+  
+-   \#Definieren von PROV_REPLACE_OWF 23  
+  
+-   \#Definieren von PROV_RSA_AES 24  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der resultierende Eintrag würde über uneingeschränkten Zugriff verfügen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,135 @@
+<Type Name="WS2007FederationHttpBinding" FullName="System.ServiceModel.WS2007FederationHttpBinding">
+  <TypeSignature Language="C#" Value="public class WS2007FederationHttpBinding : System.ServiceModel.WSFederationHttpBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WS2007FederationHttpBinding extends System.ServiceModel.WSFederationHttpBinding" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WS2007FederationHttpBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.WSFederationHttpBinding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine sichere und vollständig kompatible Bindung, die von <see cref="T:System.ServiceModel.WS2007HttpBinding" /> abgeleitet ist und Verbundsicherheit unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Verbund zeichnet sich durch die Möglichkeit aus, Identitäten in mehreren Unternehmen oder vertrauenswürdigen Domänen für Authentifizierung und Autorisierung freizugeben. Er verwendet das WS-Trust-Protokoll, um die Identitätsdarstellung von einer vertrauenswürdigen Domäne zu einer anderen zuzuordnen. Eine verbundene HTTP-Bindung unterstützt sowohl SOAP-Sicherheit als auch Sicherheit im gemischten Modus, jedoch keine Transportsicherheit. Mit dieser Bindung konfigurierte Dienste müssen den HTTP-Transport verwenden. [!INCLUDE[crdefault](~/includes/crabout-md.md)] <xref:System.ServiceModel.WSFederationHttpBinding>.  
+  
+> [!NOTE]
+>  Beim Aufrufen eines mit .NET Framework 4.0 erstellten [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Diensts aus einer WCF-Clientanwendung, die mit [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)] oder früher erstellt wurde, enthält die von svcutil.exe generierte Konfigurationsdatei oder ein hinzugefügter Dienstverweis aus [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] das establishSecurityContext-Attribut in der Bindungskonfiguration. Dieses Attribut wird von der [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)]-Laufzeit nicht erkannt, und die Anwendung löst eine Ausnahme des Typs <xref:System.Configuration.ConfigurationErrorsException> aus und gibt die Meldung aus, dass das Attribut establishSecurityContext nicht erkannt wurde. Zur Umgehung dieses Problems entfernen Sie das establishSecurityContext-Attribut aus der Bindungskonfiguration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007FederationHttpBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007FederationHttpBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007FederationHttpBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Details dieser Einstellungen sind über die Instanz von <xref:System.ServiceModel.FederatedMessageSecurityOverHttp> verfügbar, die von der <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>-Eigenschaft zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007FederationHttpBinding (System.ServiceModel.WSFederationHttpSecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.WSFederationHttpSecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007FederationHttpBinding.#ctor(System.ServiceModel.WSFederationHttpSecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.WSFederationHttpSecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der Wert von <see cref="T:System.ServiceModel.WSFederationHttpSecurityMode" />, der den Sicherheitstyp angibt, der für die SOAP-Nachricht und den Client verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007FederationHttpBinding" />-Klasse mit einem von der Bindung verwendeten Sicherheitstyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert von <xref:System.ServiceModel.WSFederationHttpSecurityMode> ist <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>. Dieser gibt an, dass Integrität, Vertraulichkeit sowie Server- und Clientauthentifizierung mittels SOAP-Nachrichtensicherheit bereitgestellt werden. Die Details dieser Einstellungen sind über die Instanz von <xref:System.ServiceModel.FederatedMessageSecurityOverHttp> verfügbar, die von der <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>-Eigenschaft zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007FederationHttpBinding (string configName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007FederationHttpBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configName">Der Bindungskonfigurationsname für das <see cref="T:System.ServiceModel.Configuration.WS2007HttpBindingElement" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007FederationHttpBinding" />-Klasse mit einer durch ihren Konfigurationsnamen angegebenen Bindung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Das Bindungselement mit dem Namen <paramref name="configurationName" /> wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WS2007FederationHttpBinding (System.ServiceModel.WSFederationHttpSecurityMode securityMode, bool reliableSessionEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.WSFederationHttpSecurityMode securityMode, bool reliableSessionEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007FederationHttpBinding.#ctor(System.ServiceModel.WSFederationHttpSecurityMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.WSFederationHttpSecurityMode" />
+        <Parameter Name="reliableSessionEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der Wert von <see cref="T:System.ServiceModel.WSFederationHttpSecurityMode" />, der den Sicherheitstyp angibt, der für die SOAP-Nachricht und den Client verwendet wird.</param>
+        <param name="reliableSessionEnabled">
+          <see langword="true" />, wenn eine zuverlässige Sitzung aktiviert ist, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.WS2007FederationHttpBinding" />-Klasse mit einem von der Bindung verwendeten Sicherheitstyp und einem Wert, der angibt, ob eine zuverlässige Sitzung aktiviert ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageSecurity">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.SecurityBindingElement CreateMessageSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Channels.SecurityBindingElement CreateMessageSecurity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WS2007FederationHttpBinding.CreateMessageSecurity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt mit den von dieser Instanz bereitgestellten Einstellungen ein <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> unter Verwendung der von dieser Instanz bereitgestellten Bindungen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

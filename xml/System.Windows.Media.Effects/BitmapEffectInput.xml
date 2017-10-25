@@ -1,0 +1,330 @@
+<Type Name="BitmapEffectInput" FullName="System.Windows.Media.Effects.BitmapEffectInput">
+  <TypeSignature Language="C#" Value="public sealed class BitmapEffectInput : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BitmapEffectInput extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.BitmapEffectInput" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Wendet die <see cref="T:System.Windows.Media.Effects.BitmapEffect" /> in bestimmten die <see cref="P:System.Windows.UIElement.BitmapEffect" /> Eigenschaft in einem angegebenen Bereich des visuellen Objekts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt ein Prägeeffekt auf einen Teil eines Bildes angewendet.  
+  
+ ![Ein Prägeeffekt für Teiles eines Bildes. ] (~/add/media/effectinput-centered-emboss.jpg "Ein Prägeeffekt für Teile eines Bildes.")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapEffectInput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.BitmapEffectInput.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Effects.BitmapEffectInput" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapEffectInput (System.Windows.Media.Imaging.BitmapSource input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Imaging.BitmapSource input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.BitmapEffectInput.#ctor(System.Windows.Media.Imaging.BitmapSource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="input" Type="System.Windows.Media.Imaging.BitmapSource" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die Bitmapquelle, die von diesem Eingabeobjekt verwendet werden.</param>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Effects.BitmapEffectInput" /> -Klasse unter Verwendung der <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> als Quelle für diese Eingabe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreaToApplyEffect">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect AreaToApplyEffect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect AreaToApplyEffect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Ruft ab oder legt einen rechteckigen Bereich auf das visuelle Element, das <see cref="T:System.Windows.Media.Effects.BitmapEffect" /> angewendet wird.</summary>
+        <value>Der rechteckige Bereich des visuellen Elements auf den der Effekt angewendet wird. Der Standardwert ist <see cref="P:System.Windows.Rect.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Rechteck hat eine <xref:System.Windows.Rect.Width%2A> oder <xref:System.Windows.Rect.Height%2A> gleich **0**, die Auswirkungen auf die Visualisierung werden nicht angewendet.  
+  
+ <xref:System.Windows.Media.Effects.BitmapEffectInput>drückt anderes Verhalten abhängig davon, ob der Hintergrund des Elements transparent ist. Wenn kein Hintergrund vorhanden oder definiert ist, ist <xref:System.Windows.UIElement> berücksichtigt nur die untergeordneten Elemente für Änderungen an seiner Größe und zum Starten für Koordinaten beginnen, an der die visuelle Darstellung beginnt.  
+  
+<a name="dependencyPropertyInfo_AreaToApplyEffect"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffectProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreaToApplyEffectProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AreaToApplyEffectProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AreaToApplyEffectProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffectProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffect" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreaToApplyEffectUnits">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BrushMappingMode AreaToApplyEffectUnits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.BrushMappingMode AreaToApplyEffectUnits" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffectUnits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BrushMappingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Ruft ab oder legt die Methode in dem die bereitgestellte Rechteck von <see cref="P:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffect" />.</summary>
+        <value>Die Methode in dem die bereitgestellte Rechteck von der <see cref="P:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffectUnits" /> Eigenschaft. Der Standardwert ist <see cref="F:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_AreaToApplyEffectUnits"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffectUnitsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreaToApplyEffectUnitsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AreaToApplyEffectUnitsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AreaToApplyEffectUnitsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffectUnitsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.BitmapEffectInput.AreaToApplyEffectUnits" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.BitmapEffectInput Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.BitmapEffectInput Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.BitmapEffectInput.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.BitmapEffectInput</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Effects.BitmapEffectInput" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.BitmapEffectInput CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.BitmapEffectInput CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.BitmapEffectInput.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.BitmapEffectInput</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Effects.BitmapEffectInput" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextInputSource">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource ContextInputSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Imaging.BitmapSource ContextInputSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.BitmapEffectInput.ContextInputSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Ruft einen Wert, der die <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> , aus dem Kontext abgeleitet ist.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> , aus dem Kontext abgeleitet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.BitmapEffectInput.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapSource Input { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Input" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.BitmapEffectInput.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Ruft ab oder legt die <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> , die für die Eingabe für das Objekt verwendet wird.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> , die als Eingabe für das Objekt verwendet wird. Der Standardwert ist **null**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft ersetzt das aktuelle visuelle Element mit dem angegebenen <xref:System.Windows.Media.Imaging.BitmapSource>. Vorsichtig sollte vorgenommen werden, da dies zu unerwünschte Ergebnissen führen kann. Z. B., wenn die Eingabe ist ein <xref:System.Windows.Controls.Image> und ist das Objekt, das den Effekt gilt eine <xref:System.Windows.Controls.TextBox>, das Bild wird das Textfeld als das visuelle Element ersetzt.  
+  
+<a name="dependencyPropertyInfo_Input"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.BitmapEffectInput.InputProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty InputProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty InputProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.BitmapEffectInput.InputProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.BitmapEffectInput.Input" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeInput">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeInput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeInput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.BitmapEffectInput.ShouldSerializeInput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Bestimmt, ob <see cref="P:System.Windows.Media.Effects.BitmapEffectInput.Input" /> serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn <see cref="P:System.Windows.Media.Effects.BitmapEffectInput.Input" /> sollten serialisiert werden, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

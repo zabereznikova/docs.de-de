@@ -1,0 +1,154 @@
+<Type Name="IQueryable" FullName="System.Linq.IQueryable">
+  <TypeSignature Language="C#" Value="public interface IQueryable : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IQueryable implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IQueryable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Funktionen zur Auswertung von Abfragen für eine bestimmte Datenquelle ohne Angabe des Datentyps bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq.IQueryable> Schnittstelle für die Implementierung von Abfrageanbieter vorgesehen ist. Sie sollte nur von Anbietern implementiert werden, die ebenfalls implementieren <xref:System.Linq.IQueryable%601>. Wenn der Anbieter keine auch implementiert <xref:System.Linq.IQueryable%601>, Standardabfrageoperatoren können nicht auf die Datenquelle des Anbieters verwendet werden.  
+  
+ Die <xref:System.Linq.IQueryable> Schnittstelle erbt die <xref:System.Collections.IEnumerable> Schnittstelle, damit die Ergebnisse der Abfrage auf, wenn es sich um eine Abfrage darstellt, aufgelistet werden können. Enumeration führt dazu, dass die zugeordnete Ausdrucksbaumstruktur ein <xref:System.Linq.IQueryable> Objekt, das ausgeführt werden. Die Definition von "Ausführen einer Ausdrucksbaumstruktur" bezieht sich auf ein Abfrageanbieter. Es kann z. B. umfassen, übersetzen die Ausdrucksbaumstruktur in eine entsprechende Abfragesprache für die zugrunde liegenden Datenquelle. Abfragen, die keine aufzählbare Ergebnisse zurückgeben werden ausgeführt. wenn die <xref:System.Linq.IQueryProvider.Execute%2A> Methode wird aufgerufen.  
+  
+ Weitere Informationen über das Erstellen eigener LINQ-Anbieters finden Sie unter [LINQ: Erstellen eines Anbieters IQueryable](http://go.microsoft.com/fwlink/?LinkID=112370) auf MSDN-Blogs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public Type ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.IQueryable.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Elemente, die zurückgegeben werden, wenn Sie diese Instanz die Ausdrucksbaumstruktur zugeordnet <see cref="T:System.Linq.IQueryable" /> ausgeführt wird.</summary>
+        <value>Ein <see cref="T:System.Type" /> , der den Typ der Elemente, die zurückgegeben werden, wenn die Ausdrucksbaumstruktur, die diesem Objekt zugeordneten ausgeführt wird, darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq.IQueryable.ElementType%2A> Eigenschaft stellt das "T" in `IQueryable<T>` oder `IQueryable(Of T)`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.IQueryable.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausdrucksbaumstruktur, die mit der Instanz von anfallen <see cref="T:System.Linq.IQueryable" />.</summary>
+        <value>Die <see cref="T:System.Linq.Expressions.Expression" /> , dieser Instanz zugeordnet ist <see cref="T:System.Linq.IQueryable" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Instanz von <xref:System.Linq.IQueryable> stellt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage für eine Datenquelle, die zugehörigen Ausdrucksbaumstruktur stellt die Abfrage dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Linq.IQueryProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.IQueryProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.IQueryable.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abfrageanbieter, der mit dieser Datenquelle zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Linq.IQueryProvider" /> , die mit dieser Datenquelle verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Instanz von <xref:System.Linq.IQueryable> stellt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage für eine Datenquelle zugeordneten Abfrage-Anbieter ist der Anbieter, die erstellt die <xref:System.Linq.IQueryable> Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

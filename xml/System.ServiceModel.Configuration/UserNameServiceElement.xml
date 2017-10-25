@@ -1,0 +1,265 @@
+<Type Name="UserNameServiceElement" FullName="System.ServiceModel.Configuration.UserNameServiceElement">
+  <TypeSignature Language="C#" Value="public sealed class UserNameServiceElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UserNameServiceElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.UserNameServiceElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Konfigurationselement dar, das die Anmeldeinformationen eines Diensts auf Grundlage von Benutzernamen und Kennwort angibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserNameServiceElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.UserNameServiceElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.UserNameServiceElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachedLogonTokenLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan CachedLogonTokenLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CachedLogonTokenLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.CachedLogonTokenLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cachedLogonTokenLifetime", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Länge der Zeit ab, die ein Token zwischengespeichert wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> , die die maximale Zeitdauer, die ein Token zwischengespeichert wird darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheLogonTokens">
+      <MemberSignature Language="C#" Value="public bool CacheLogonTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CacheLogonTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.CacheLogonTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cacheLogonTokens", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Anmeldetoken zwischengespeichert werden, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn Anmeldetoken zwischengespeichert werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy (System.ServiceModel.Configuration.UserNameServiceElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Copy(class System.ServiceModel.Configuration.UserNameServiceElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.UserNameServiceElement.Copy(System.ServiceModel.Configuration.UserNameServiceElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.UserNameServiceElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Das zu kopierende Konfigurationselement.</param>
+        <summary>Kopiert den Inhalt des angegebenen Konfigurationselements in dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="from" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomUserNamePasswordValidatorType">
+      <MemberSignature Language="C#" Value="public string CustomUserNamePasswordValidatorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomUserNamePasswordValidatorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.CustomUserNamePasswordValidatorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customUserNamePasswordValidatorType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des verwendeten Validierungssteuerelements für benutzerdefinierte Benutzerkennwörter ab oder legt ihn fest.</summary>
+        <value>Der Typ des verwendeten Validierungssteuerelements für benutzerdefinierte Benutzerkennwörter.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeWindowsGroups">
+      <MemberSignature Language="C#" Value="public bool IncludeWindowsGroups { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeWindowsGroups" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.IncludeWindowsGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("includeWindowsGroups", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Windows-Gruppen im Sicherheitskontext enthalten sind, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn Windows-Gruppen im Sicherheitskontext enthalten sind, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft auf `true` festzulegen, hat Auswirkungen auf die Leistung, da dies zu einer vollständigen Gruppenerweiterung führt. Legen Sie diese Eigenschaft auf `false` fest, wenn Sie die Liste der Gruppen, zu denen ein Benutzer gehört, nicht einrichten müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCachedLogonTokens">
+      <MemberSignature Language="C#" Value="public int MaxCachedLogonTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxCachedLogonTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.MaxCachedLogonTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxCachedLogonTokens", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Anmeldetoken ab, die zwischengespeichert werden können, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl von Anmeldetoken, die zwischengespeichert werden können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipProviderName">
+      <MemberSignature Language="C#" Value="public string MembershipProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MembershipProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.MembershipProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("membershipProviderName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab oder legt eine Zeichenfolge fest, die den Namen eines Memberanbieters angibt, der Kennwortüberprüfungslogik bereitstellt.</summary>
+        <value>Der Name eines Memberanbieters, der Kennwortvalidierungslogik bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Benutzernamen `ClientCredentialType` auf einer Bindung verwenden, werden Windows-Konten den Benutzernamen standardmäßig zugeordnet. Mithilfe dieser Eigenschaft, die den Namen des <xref:System.Web.Security.MembershipProvider> bereitstellt, der die relevante Kennwortüberprüfungslogik angibt, kann dieses Verhalten außer Kraft gesetzt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserNamePasswordValidationMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.UserNamePasswordValidationMode UserNamePasswordValidationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.UserNamePasswordValidationMode UserNamePasswordValidationMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.UserNameServiceElement.UserNamePasswordValidationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("userNamePasswordValidationMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.UserNamePasswordValidationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Art und Weise ab, in der das Benutzerkennwort überprüft wird.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.Security.UserNamePasswordValidationMode" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="ConcurrencyMode" FullName="System.ServiceModel.ConcurrencyMode">
+  <TypeSignature Language="C#" Value="public enum ConcurrencyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConcurrencyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ConcurrencyMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob eine Dienstklasse den Singlethread- oder den Multithread-Betriebsmodus unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.ConcurrencyMode> wird in Verbindung mit der <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>-Eigenschaft verwendet, um anzugeben, ob eine Dienstklasse den Singlethread- oder den Multithread-Betriebsmodus unterstützt. Ein Singlethread-Betrieb kann wiedereintrittsfähig oder nicht wiedereintrittsfähig sein.  
+  
+ In der folgenden Tabelle wird dargestellt, wann [!INCLUDE[indigo1](~/includes/indigo1-md.md)] den Aufruf einer Operation zulässt, während eine andere Operation läuft, abhängig vom <xref:System.ServiceModel.ConcurrencyMode>.  
+  
+|Parallelitätsmodus-Wert|Kann eine neue Operation aufgerufen werden?|  
+|---------------------------|-------------------------------------|  
+|Single|Nie|  
+|Reentrant|Nur, wenn ein anderer Dienst oder ein Rückruf aufgerufen wird|  
+|Mehrere|Immer|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die zwischen der Verwendung von Reentrant, einzelnen und mehreren verschiedenen. Dieses Beispiel kann nur mit einer echten Implementierung kompiliert werden; es verdeutlicht jedoch die Art der Threadinggarantien, die von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] gewährt werden, und welche Bedeutung dies für den Vorgangscode hat.  
+  
+ [!code-csharp[C_BestPractices-Concurrency#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_bestpractices-concurrency/cs/reentrantandmultiple.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Multiple">
+      <MemberSignature Language="C#" Value="Multiple" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ConcurrencyMode Multiple = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ConcurrencyMode.Multiple" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ConcurrencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Dienstinstanz ist eine Multithread-Instanz. Es werden keine Synchronisierungsgarantien gegeben. Da andere Threads jederzeit das Dienstobjekt ändern können, müssen Sie die Synchronisierung und die Zustandskonsistenz ständig verarbeiten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reentrant">
+      <MemberSignature Language="C#" Value="Reentrant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ConcurrencyMode Reentrant = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ConcurrencyMode.Reentrant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ConcurrencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Dienstinstanz ist eine Singlethread-Instanz und nimmt wiedereintrittsfähige Aufrufe an. Der wiedereintrittsfähige Dienst nimmt Aufrufe an, wenn Sie einen anderen Dienst aufrufen. Sie sind daher verantwortlich dafür, den Objektzustand vor Aufrufen konsistent zu lassen, und Sie müssen bestätigen, dass lokale Operationsdaten nach Aufrufen gültig sind. Beachten Sie, dass die Dienstinstanz nur durch das Aufrufen eines anderen Diensts über einen [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Kanal entsperrt wird. In diesem Fall kann der aufgerufene Dienst über einen Rückruf wieder in den ersten Dienst eintreten. Wenn der erste Dienst nicht wiedereintrittsfähig ist, führt die Sequenz der Aufrufe zu einem Deadlock. Ausführliche Informationen finden Sie unter <see cref="P:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ConcurrencyMode Single = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ConcurrencyMode.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ConcurrencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Dienstinstanz ist eine Singlethread-Instanz und nimmt keine wiedereintrittsfähige Aufrufe an. Wenn die <see cref="P:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode" />-Eigenschaft <see cref="F:System.ServiceModel.InstanceContextMode.Single" /> ist und weitere Meldungen ankommen, während die Instanz einen Aufruf bedient, müssen diese Meldungen warten, bis der Dienst verfügbar ist oder bis eine Zeitüberschreitung bei den Meldungen eintritt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

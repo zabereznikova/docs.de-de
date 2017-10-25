@@ -1,0 +1,80 @@
+<Type Name="DataBindingHandler" FullName="System.Web.UI.Design.DataBindingHandler">
+  <TypeSignature Language="C#" Value="public abstract class DataBindingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataBindingHandler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DataBindingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für einen Handler für die Datenbindung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.DataBindingHandler>Stellt eine Basisklasse für die Datenbindung Handler. Ein Datenbindung-Ereignishandler kann in einem Designer verwendet werden, zum Ausführen der Datenbindung, um eine sinnvolle des Steuerelements auf der Entwurfsoberfläche angezeigt werden kann. Eine Steuerelement-Designer ist in der Regel für diese Funktionalität verantwortlich. Wenn ein Steuerelement ist jedoch nicht auf der Entwurfsoberfläche angezeigt, z. B. in der Vorlage eines anderen Steuerelements, sie verfügt nicht über einen Designer, und diese Funktionalität wird von einem Handler Datenbindungsfunktionen bereitgestellt, wenn eine mit angegeben wurde eine <xref:System.Web.UI.DataBindingHandlerAttribute> im Code für das Steuerelement .  
+  
+ Um einen Handler für die Datenbindung verwenden zu können, muss das Steuerelement mit der datengebundenen Eigenschaft oder Eigenschaften haben eine <xref:System.Web.UI.DataBindingHandlerAttribute> angegebenen innerhalb des Codes, der den Typ der Datenbindung Handler verwenden angibt.  
+  
+ Z. B. die <xref:System.Web.UI.WebControls.Label> Steuerelement zugeordnet ist die <xref:System.Web.UI.Design.TextDataBindingHandler> -Klasse über eine <xref:System.Web.UI.DataBindingHandlerAttribute> im Code für die <xref:System.Web.UI.WebControls.Label> Klasse. Innerhalb einer Vorlage für eine <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.Label> , deren Texteigenschaft datengebundene wurde, Steuerelement das Wort "Datengebundenen" in der Bezeichnung angezeigt. Ohne den Handler für die Datenbindung würde die Bezeichnung zur Entwurfszeit verwendet wird, nicht sichtbar sein, da es keinen Designer, die datengebundene Eigenschaften in einem Steuerelement mit Vorlagen zur Entwurfszeit zu binden.  
+  
+ Um einen Handler für die Datenbindung zu implementieren, definieren Sie eine neue Klasse, die von dieser Klasse und implementieren leitet die <xref:System.Web.UI.Design.DataBindingHandler.DataBindControl%2A> Methode, um die entsprechenden Eigenschaften festlegen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataBindingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataBindingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.DataBindingHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindControl">
+      <MemberSignature Language="C#" Value="public abstract void DataBindControl (System.ComponentModel.Design.IDesignerHost designerHost, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DataBindControl(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataBindingHandler.DataBindControl(System.ComponentModel.Design.IDesignerHost,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das Dokument.</param>
+        <param name="control">Das zu bindende <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Bindet das angegebene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte in einer abgeleiteten Klasse eine Funktionalität zu einem benutzerdefinierten Handler für die Datenbindung implementiert werden. Die Logik für die Datenbindung kann innerhalb dieser Methode implementiert werden soll, und auf den Typ oder die Typen, die die Datenbindungsfunktionen Handler mindestens auf eine Eigenschaft zu binden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die meisten Daten Bindung Handler müssen untersuchen Sie die Datensammlung für die Bindungen auf das Steuerelement mit der <see cref="T:System.Web.UI.IDataBindingsAccessor" /> Schnittstelle, um zu bestimmen, ob bestimmten Eigenschaften, die sie behandeln kann an Daten gebunden sind.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

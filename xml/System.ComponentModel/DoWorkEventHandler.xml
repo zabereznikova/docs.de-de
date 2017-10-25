@@ -1,0 +1,50 @@
+<Type Name="DoWorkEventHandler" FullName="System.ComponentModel.DoWorkEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DoWorkEventHandler(object sender, DoWorkEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DoWorkEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DoWorkEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.DoWorkEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.ComponentModel.DoWorkEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.ComponentModel.BackgroundWorker.DoWork" />-Ereignisses dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.ComponentModel.DoWorkEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Die Ereignishandlermethode ist bei Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.DoWorkEventHandler> Delegat zum Behandeln der <xref:System.ComponentModel.BackgroundWorker.DoWork> Ereignis. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](~/docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+  
+ [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
+ [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

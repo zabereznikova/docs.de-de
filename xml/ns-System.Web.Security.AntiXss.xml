@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.Security.AntiXss">
+  <Docs>
+    <summary>Enthält Methoden, die Sie verwenden können, um Zeichenfolgen in der Reihenfolge Hilfe zu codieren, die Sie schützen Ihre Anwendung mit siteübergreifendem Skripting (XSS) und LDAP-Injection-Angriffe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Suchen Sie die codieren Algorithmen für einen vorgegebenen Satz von Zeichen, die als sicher eingestuft werden, und alle anderen Zeichen zu codieren. (Dies wird manchmal als "Safe-Auflistung" oder "Whitelisting." bezeichnet)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

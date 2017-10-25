@@ -1,0 +1,45 @@
+<Type Name="SyncUpdateCallback" FullName="System.DirectoryServices.ActiveDirectory.SyncUpdateCallback">
+  <TypeSignature Language="C#" Value="public delegate bool SyncUpdateCallback(SyncFromAllServersEvent eventType, string targetServer, string sourceServer, SyncFromAllServersOperationException exception);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SyncUpdateCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.SyncUpdateCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="eventType" Type="System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent" />
+    <Parameter Name="targetServer" Type="System.String" />
+    <Parameter Name="sourceServer" Type="System.String" />
+    <Parameter Name="exception" Type="System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="eventType">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent" /> Member, der den Typ des Ereignisses angibt.</param>
+    <param name="targetServer">Enthält den DNS-Namen des Servers, der das Ziel der Replikation ist. Dieser Parameter wird sein <see langword="null" /> Wenn es nicht von der Benachrichtigung verwendet wird.</param>
+    <param name="sourceServer">Enthält den DNS-Namen des Servers, der die Quelle der Replikation. Dieser Parameter wird sein <see langword="null" /> Wenn es nicht von der Benachrichtigung verwendet wird.</param>
+    <param name="exception">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException" /> Objekt, das zusätzliche Informationen über Fehler enthält, der aufgetreten ist. Dieser Parameter wird sein <see langword="null" /> sei kein Fehler aufgetreten ist.</param>
+    <summary>Empfängt ereignisbenachrichtigungen während einer Synchronisierung des Replikats.</summary>
+    <returns>
+      <see langword="true" />Wenn die SyncReplicaFromAllServers-Methode aufgerufen wird, auf eine <see cref="T:System.DirectoryServices.ActiveDirectory.ADAMInstance" />, <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> oder <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> Objekt sollte fortsetzen; <see langword="false" /> , wenn die SyncReplicaFromAllServers-Methode beendet werden soll.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.DirectoryServices.ActiveDirectory.DomainController.SyncReplicaFromAllServers%2A>  
+  
+ Vorgang eine lange Zeit in Anspruch nimmt und könnte möglicherweise auf einem Server fehlschlagen.  Die <xref:System.DirectoryServices.ActiveDirectory.SyncUpdateCallback> Rückruffunktion ermöglicht der Anwendung, um anzugeben, ob die SyncReplicaFromAllServers-Methode weiterhin ausgeführt werden soll.  Beispielsweise könnte die Anwendung beenden "false" zurückgeben<xref:System.DirectoryServices.ActiveDirectory.DirectoryServer.SyncReplicaFromAllServers%2A>  
+  
+ Ausführung, wenn ein Fehler auftritt.  Ist ein weiteres Szenario, in dem diese Funktion verwendet werden würde, beenden<xref:System.DirectoryServices.ActiveDirectory.DirectoryServer.SyncReplicaFromAllServers%2A>  
+  
+ Ausführung sobald die Anwendung, dass die Synchronisierung erkennt wurde für einen bestimmten Zielserver oder Schlüsselpaar an Quelle Server abgeschlossen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

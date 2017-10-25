@@ -1,0 +1,281 @@
+<Type Name="ConnectionStringsExpressionBuilder" FullName="System.Web.Compilation.ConnectionStringsExpressionBuilder">
+  <TypeSignature Language="C#" Value="public class ConnectionStringsExpressionBuilder : System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionStringsExpressionBuilder extends System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ConnectionStringsExpressionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.ExpressionBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionEditor("System.Web.UI.Design.ConnectionStringsExpressionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionPrefix("ConnectionStrings")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ruft ab oder generiert Code zum Abrufen von Werten aus der &lt; <see langword="connectionStrings" /> &gt; Abschnitt der Datei "Web.config".</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> Klasse ermöglicht den Zugriff auf Werte in der <`connectionStrings`>-Abschnitt der Datei "Web.config". Die <`connectionStrings`>-Abschnitt der Datei "Web.config" enthält Verbindungszeichenfolgenwerte in Name/Wert-Paaren.  
+  
+ Ein Zeichenfolgenwert für die Verbindung wird abgerufen, indem ein Ausdruck der form  
+  
+ `<%$ ConnectionStrings: secureConnectionString %>`  
+  
+ Um eine Steuerelementeigenschaft. Der Teil des Ausdrucks vor dem Doppelpunkt (:)) kennzeichnet den Typ des Ausdrucks abgerufen werden sollen, und der Teil nach der Doppelpunkt gibt den Namen der Verbindungszeichenfolge an. Der vorangehende Ausdruck würde den folgenden Wert aus der Datei "Web.config" abgerufen werden.  
+  
+ `<connectionStrings>`  
+  
+ `<add name="secureConnectionString" connectionString="Data`  
+  
+ `Source=localhost;Integrated Security=SSPI;Initial`  
+  
+ `Catalog=Northwind;" providerName="System.Data.SqlClient" />`  
+  
+ `</connectionStrings>`  
+  
+ Wenn der Parser einen Ausdruck mit dem Präfix trifft `ConnectionStrings`, erstellt er eine Instanz von der <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> Klasse, um den Ausdruck zu verarbeiten.  
+  
+ Wenn der Ausdruck in eine Seite gefunden wird, die kompiliert werden, die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> Objekt generiert Code, der die angegebene Verbindungszeichenfolge aus der Datei "Web.config" abruft. Wenn der Ausdruck in eine Seite gefunden wird, die nicht kompiliert werden, die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> Objekt den Wert aus der Datei "Web.config" zurückgibt, wenn die Seite analysiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ verwendet eine <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement zum Abrufen von Daten von einem Computer mit Microsoft SQL Server, und zeigen Sie es in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_3sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_3sql/CS/sql3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_3sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_3sql/VB/sql3vb.aspx#1)]
+  
+ Der Code Ruft die folgende Verbindungszeichenfolge aus der Datei "Web.config" ab.  
+  
+ `<configuration   xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">`  
+  
+ `<connectionStrings>`  
+  
+ `<add name="MyNorthwind" connectionString="Data`  
+  
+ `Source=localhost;Integrated Security=SSPI;Initial`  
+  
+ `Catalog=Northwind;" providerName="System.Data.SqlClient" />`  
+  
+ `</connectionStrings>`  
+  
+ `</configuration>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionStringsExpressionBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.ConnectionStringsExpressionBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (object target, System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(object target, class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Objekt, das den Ausdruck enthält.</param>
+        <param name="entry">Die Eigenschaft, an die der Ausdruck gebunden ist.</param>
+        <param name="parsedData">Das Objekt, das darstellt analysiert Daten wie vom <see cref="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Eigenschaften für das Steuerelement oder die Seite.</param>
+        <summary>Gibt einen Wert aus der &lt; <see langword="connectionStrings" /> &gt; Abschnitt der Datei "Web.config".</summary>
+        <returns>Die <see cref="T:System.Object" /> verknüpft sind mit einem Schlüssel in der &lt; <see langword="connectionStrings" /> &gt; Abschnitt der Datei "Web.config".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Ausdruck der Form `<%$ ConnectionStrings: secureConnectionString %>` festgestellt wird, auf einer Seite, die nicht kompiliert wird. Ruft ab den entsprechenden Wert aus der <`connectionStrings`>-Abschnitt der Datei "Web.config". Diese Methode überschreibt die <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> Methode durch Aufrufen der <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionString%2A> Methode, wenn eine Verbindungszeichenfolge, in enthalten ist der `parsedData` Parameter, oder durch Aufrufen der <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionStringProviderName%2A> Methode, wenn eine Verbindungszeichenfolge nicht, in enthalten ist der `parsedData` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Name der Verbindungszeichenfolge konnte nicht in der Datei "Web.config" gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeExpression">
+      <MemberSignature Language="C#" Value="public override System.CodeDom.CodeExpression GetCodeExpression (System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.CodeDom.CodeExpression GetCodeExpression(class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Ein Objekt, das Informationen über die Eigenschaft darstellt, die durch den Ausdruck an gebunden werden.</param>
+        <param name="parsedData">Das Objekt, das darstellt analysiert Daten wie vom <see cref="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Eigenschaften für das Steuerelement oder die Seite.</param>
+        <summary>Gibt einen Codeausdruck auszuwertende während der Seitenanalyse zurück.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeExpression" /> , die eine Methode aufruft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Erstellung eines CodeDOM für eine Seite oder ein Steuerelement aufgerufen. Die <xref:System.CodeDom.CodeExpression> zurückgegebene Objekt ist vom Typ <xref:System.CodeDom.CodeMethodInvokeExpression> und stellt die Methode aufrufen, wenn der Wert einer Verbindungszeichenfolge abrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectionString">
+      <MemberSignature Language="C#" Value="public static string GetConnectionString (string connectionStringName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetConnectionString(string connectionStringName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionStringName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionStringName">Name der Verbindungszeichenfolge:</param>
+        <summary>Gibt eine Verbindungszeichenfolge aus der &lt; <see langword="connectionStrings" /> &gt; Abschnitt der Datei "Web.config".</summary>
+        <returns>Die Verbindungszeichenfolge nach einem <see cref="T:System.String" /> für diese Verbindungszeichenfolgenname.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> Eigenschaft gibt eine Auflistung von Zeichenfolgenwerten. Die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionString%2A> -Methode gibt den Wert aus der Auflistung, die mit dem Namen der Verbindungszeichenfolge verknüpft ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Name der Verbindungszeichenfolge konnte nicht in der Datei "Web.config" gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectionStringProviderName">
+      <MemberSignature Language="C#" Value="public static string GetConnectionStringProviderName (string connectionStringName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetConnectionStringProviderName(string connectionStringName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionStringProviderName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionStringName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionStringName">Name der Verbindungszeichenfolge:</param>
+        <summary>Gibt den Verbindungszeichenfolgenanbieter aus der &lt; <see langword="connectionStrings" /> &gt; Abschnitt der Datei "Web.config".</summary>
+        <returns>Der Anbieter als eine <see cref="T:System.String" /> für diese Verbindungszeichenfolgenname.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A?displayProperty=nameWithType> Eigenschaft gibt eine Auflistung von Zeichenfolgenwerten. Die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionStringProviderName%2A> Methode gibt den Anbieter für den Wert aus der Auflistung, die mit dem Namen der Verbindungszeichenfolge verknüpft ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Name der Verbindungszeichenfolge konnte nicht in der Datei "Web.config" gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseExpression">
+      <MemberSignature Language="C#" Value="public override object ParseExpression (string expression, Type propertyType, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ParseExpression(string expression, class System.Type propertyType, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Wert der deklarativen Ausdrucks.</param>
+        <param name="propertyType">Der Zieltyp für den Ausdruck.</param>
+        <param name="context">Eigenschaften für das Steuerelement oder die Seite.</param>
+        <summary>Gibt ein Objekt, das den analysierten Ausdrucks darstellt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , enthält die analysierte Darstellung des Ausdrucks.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Object> ist vom Typ <xref:System.Web.UI.Pair>. Dies <xref:System.Web.UI.Pair> Objekt übergeben werden, sowohl die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A> Methode und die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetCodeExpression%2A> Methode als `parsedData`. Die <xref:System.Web.UI.Pair> Objekt enthält den Namen und Wert der Verbindungszeichenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsEvaluate">
+      <MemberSignature Language="C#" Value="public override bool SupportsEvaluate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsEvaluate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ConnectionStringsExpressionBuilder.SupportsEvaluate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob ein Ausdruck in einer Seite ausgewertet werden kann, die nicht kompiliert wird.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.SupportsEvaluate%2A> Eigenschaft gibt an, ob die <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A> Methode wurde in der Klasse implementiert. <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A>muss implementiert werden, in einem Ausdrucksgenerator für einen Ausdruck in einer Seite ausgewertet werden, die nicht kompiliert wird. <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder>unterstützt Sie keine Kompilierung Auswertung von Verbindungszeichenfolgen, also `true` wird immer zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

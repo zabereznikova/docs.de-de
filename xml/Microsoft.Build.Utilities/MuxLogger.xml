@@ -1,0 +1,222 @@
+<Type Name="MuxLogger" FullName="Microsoft.Build.Utilities.MuxLogger">
+  <TypeSignature Language="C#" Value="public class MuxLogger : Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MuxLogger extends System.Object implements class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.MuxLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.INodeLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine multiplexing Protokollierung dar. Diese Protokollierung dient zum Registrieren und Aufheben der Registrierung mehrere Protokollierungen während des Buildvorgangs. Unterstützt das Visual Studio-IDE-Szenario, in dem Protokollierungen registriert und die Registrierung aufgehoben werden, für jede Projektsystem Buildanforderung an. Eine physische Build kann mehrere logische Builds, die jeweils über einen eigenen Satz von Protokollierungen haben.  
+  
+ Die <see langword="MuxLogger" /> registriert sich selbst mit dem Build-Manager als eine reguläre zentralen/l-Stil-Protokollierung. Er empfängt Nachrichten aus dem Build-Manager und Routen, damit die richtige Protokollierung, basierend auf dem logischen erstellen, die die Nachricht stammt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `MuxLogger` im Allgemeinen funktioniert wie folgt:  
+  
+-   Die `MuxLogger` am Anfang der Build-Manager Begin Build registriert ist.  
+  
+     Alle Protokollierungen, die vor der Build-Manager zu dem Buildvorgang registriert rufen Sie das Ereignis gestarteten Buildvorgangs zur gleichen Zeit wie die `MuxLogger`.  
+  
+     Alle Protokollierungen registriert, nachdem der Build-Manager den Build gestartet rufen Sie eine künstliche gestarteten Buildvorgangs-Ereignis. Das Ereignis kann nicht zwischengespeichert werden, da der Zeitstempel des Ereignisses gestarteten Buildvorgangs bestimmt wird, wenn das Ereignis erstellt wurde und Zwischenspeichern des Ereignisses in die Protokollierungen registriert falsche Buildzeiten geben die `MuxLogger`.  
+  
+-   Die `MuxLogger` wird initialisiert, indem die Build-Manager  
+  
+     Die `MuxLogger` überwacht alle Ereignisse für die Ereignisquelle aus dem Build-Manager, und leitet Ereignisse ordnungsgemäß in der registrierten Protokollierungen.  
+  
+-   Die `MuxLogger` Herunterfahren ist, wenn der Build in End-Build abgeschlossen ist. Zu diesem Zeitpunkt hebt die Registrierung es alle Protokollierungen angefügt ist.  
+  
+-   Die `MuxLogger` protokolliert der Buildvorgang abgeschlossen-Ereignis, wenn das Projekt abgeschlossen-Ereignis für das erste Projekt gestartet hat-Ereignis für jede Protokollierung angezeigt wird.  
+  
+ Die `MuxLogger` registriert Protokollierungen auf folgende Weise:  
+  
+1.  Die Protokollierung wird zum Übergeben der `MuxLogger.RegisterLogger` Methode mit einer Übermittlung-ID, die zum Weiterleiten einer Nachricht an diese Protokollierung verwendet wird.  
+  
+2.  Die `MuxLogger` registriert die Protokollierung der `MuxLogger` Ereignisquelle verwendet wurden.  
+  
+3.  Wenn das Ereignis gestarteten Buildvorgangs bereits angemeldet wurde, die `MuxLogger` erstellt ein neues Build gestartet-Ereignis und sendet sie an der Protokollierung Ereignisquelle verwendet wurden.  
+  
+ Die `MuxLogger` hebt die Registrierung Protokollierungen auf folgende Weise:  
+  
+1.  Wenn eine Buildübermittlung abgeschlossen ist, die `MuxLogger.UnregisterLogger` -Methode aufgerufen wird und die Übermittlung-ID für die Protokollierung.  
+  
+2.  Die `MuxLogger` sucht den Erfolgsstatus des Ereignisses Projekt & ndash; beendet für die Übermittlung-ID und protokolliert ein Ereignis Build & ndash; beendet die Protokollierung.  
+  
+3.  Die `MuxLogger` bereinigt die Ereignisquelle.  
+  
+     Beachten Sie, dass die Aufhebung der Registrierung ergibt sich aus einem anderen Thread als dem Protokollierungsthread und ein Problem bei der Synchronisierung kann auftreten, wenn Unregister aufgerufen wird, während Ereignisse protokolliert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MuxLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der multiplexing Protokollierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">Die Ereignisquelle.</param>
+        <summary>Initialisieren der <see langword="MuxLogger" /> -Instanz mit die angegebene Ereignisquelle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int maxNodeCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource, int32 maxNodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+        <Parameter Name="maxNodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">Die Ereignisquelle.</param>
+        <param name="maxNodeCount">Die maximale Anzahl von Knoten.</param>
+        <summary>Initialisieren der <see langword="MuxLogger" /> -Instanz mit dem angegebenen Ereignisquelle und die angegebene maximale Anzahl von Knoten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public string Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.MuxLogger.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Parameter-Attribut, die erforderlich sind, durch die <see langword="ILogger" /> Schnittstelle.</summary>
+        <value>Gibt die Parameter-Attribut zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterLogger">
+      <MemberSignature Language="C#" Value="public void RegisterLogger (int submissionId, Microsoft.Build.Framework.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterLogger(int32 submissionId, class Microsoft.Build.Framework.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.RegisterLogger(System.Int32,Microsoft.Build.Framework.ILogger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="submissionId" Type="System.Int32" />
+        <Parameter Name="logger" Type="Microsoft.Build.Framework.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="submissionId">Die ID der Übermittlung der Protokollierung, die registriert wird.</param>
+        <param name="logger">Die Protokollierung zu registrieren.</param>
+        <summary>Registriert eine Protokollierung für die <see langword="MuxLogger" /> und löst ein Build gestartet-Ereignis aus, wenn der Build gestartet-Ereignis bereits protokolliert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fährt den <see langword="MuxLogger" /> und löscht alle Status.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterLoggers">
+      <MemberSignature Language="C#" Value="public bool UnregisterLoggers (int submissionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool UnregisterLoggers(int32 submissionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.UnregisterLoggers(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="submissionId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="submissionId">Die ID der Übermittlung der Protokollierung entfernt werden soll.</param>
+        <summary>Entfernt die angegebene Protokollierung aus den MuxLogger an.</summary>
+        <returns>Gibt <see langword="true" /> , wenn die Methode erfolgreich ist, entfernen Sie die Protokollierung ist, andernfalls wird <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.MuxLogger.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Ausführlichkeit-Attribut, das von erforderlich die <see langword="ILogger" /> Schnittstelle.</summary>
+        <value>Gibt den Ausführlichkeitsgrad-Attribut zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

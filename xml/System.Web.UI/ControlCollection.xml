@@ -1,0 +1,552 @@
+<Type Name="ControlCollection" FullName="System.Web.UI.ControlCollection">
+  <TypeSignature Language="C#" Value="public class ControlCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Auflistungscontainer, mit der ASP.NET-Serversteuerelemente eine Liste von deren untergeordneten Steuerelemente verwalten kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie erreichen eine der Eigenschaften und Methoden des der <xref:System.Web.UI.ControlCollection> -Klasse über die <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> Eigenschaft. Da die <xref:System.Web.UI.Control> Klasse ist die Basisklasse für alle ASP.NET-Serversteuerelemente, alle Serversteuerelemente erben diese Eigenschaft.  
+  
+ Weitere Informationen zu Sammlungen finden Sie unter [Auflistungen und Datenstrukturen](http://msdn.microsoft.com/library/60cc581f-1db5-445b-ba04-a173396bf872).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel setzt die <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> Methode zum Erstellen von zwei Steuerelementen, beide Instanzen von der benutzerdefinierten Klasse `ChildControl`, die über eine Zeichenfolgeneigenschaft, die mit dem Namen verfügt `Message`. Wenn erstellt, die beiden Steuerelemente hinzugefügt werden die <xref:System.Web.UI.ControlCollection>. Die <xref:System.Web.UI.ControlCollection.Add%2A> Methode wird aufgerufen, für jedes dieser Steuerelemente so sie die Klasse hinzu, die diese Version der enthält <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType>. Die <xref:System.Web.UI.Control.ChildControlsCreated%2A> -Eigenschaftensatz auf `true` , damit diese Steuerelemente nicht unnötigerweise erneut erstellt werden.  
+  
+ [!code-csharp[Control_Sample_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Control_Sample_1/CS/control_sample.cs#1)]
+ [!code-vb[Control_Sample_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Control_Sample_1/VB/control_sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlCollection (System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.#ctor(System.Web.UI.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die ASP.NET-Serversteuerelement, dem für die Auflistung der Steuerelemente erstellt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ControlCollection" /> Klasse für das angegebene übergeordnete Serversteuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte <xref:System.Web.UI.ControlCollection> Klasse, die den Konstruktor, um das Schreiben von Nachrichten überschreibt (darunter den Namen des der <xref:System.Web.UI.ControlCollection.Owner%2A> Eigenschaft) in das Ablaufverfolgungsprotokoll, wenn eine Instanz der Auflistung erstellt wird. Ablaufverfolgung für die Seite oder einer Anwendung für dieses Beispiel funktioniert, muss aktiviert werden.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/cs/controlcollection_7.cs#1)]
+ [!code-vb[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/VB/controlcollection_7.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tritt auf, wenn die <paramref name="owner" /> Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="child">Der der Auflistung hinzuzufügende <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Fügt der Auflistung das angegebene <see cref="T:System.Web.UI.Control" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das neue Steuerelement wird am Ende eines Arrays Ordinalindex hinzugefügt. Das Steuerelement kann eine Instanz von ASP.NET-Serversteuerelementen, ein benutzerdefiniertes Steuerelement, die, das Sie erstellen, oder ein literal-Steuerelement sein.  
+  
+ Verwenden Sie zum Hinzufügen eines Steuerelements an einer bestimmten Indexposition in die Auflistung der <xref:System.Web.UI.ControlCollection.AddAt%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.ControlCollection.Add%2A> Methode, um eine Reihe von Vorlagenelementen, hinzuzufügen, die Anzahl der stammen aus dem Ansichtszustand des Serversteuerelements, einer benutzerdefinierten Steuerelementvorlage.  
+  
+ [!code-csharp[TemplatedDataBoundControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplatedDataBoundControl/CS/templatedataboundcontrol.cs#2)]
+ [!code-vb[TemplatedDataBoundControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplatedDataBoundControl/VB/templatedataboundcontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn die <paramref name="child" /> -Parameter gibt nicht an ein Steuerelement.</exception>
+        <exception cref="T:System.Web.HttpException">Wird ausgelöst, wenn die <see cref="T:System.Web.UI.ControlCollection" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public virtual void AddAt (int index, System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAt(int32 index, class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position im Array, an dem das untergeordnete Steuerelement hinzugefügt werden soll.</param>
+        <param name="child">Der der Auflistung hinzuzufügende <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.Control" /> Objekt der Auflistung an der angegebenen Indexposition.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das hinzugefügte Steuerelement kann eine Instanz von ASP.NET-Serversteuerelementen, ein benutzerdefiniertes Steuerelement, die, das Sie erstellen, oder ein literal-Steuerelement sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.ControlCollection.AddAt%2A> Methode zum Erstellen eines neuen <xref:System.Web.UI.LiteralControl> mit dem Namen `ChildControl2` und fügen Sie diese der `myButton` des Steuerelements <xref:System.Web.UI.ControlCollection> Auflistung am Index 1.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#1)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="child" /> -Parameter gibt nicht an ein Steuerelement.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter ist kleiner als 0 (null) oder größer als die <see cref="P:System.Web.UI.ControlCollection.Count" /> Eigenschaft.</exception>
+        <exception cref="T:System.Web.HttpException"><see cref="T:System.Web.UI.ControlCollection" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Steuerelemente aus der aktuellen Serversteuerelements <see cref="T:System.Web.UI.ControlCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um eines benutzerdefinierten Steuerelements zu leeren <xref:System.Web.UI.ControlCollection> beim Überschreiben der <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> und <xref:System.Web.UI.Control.DataBind%2A> Methoden. Führen Sie dies aus, wenn Sie zusammengesetzte, aus einer Vorlage gebildete Steuerelemente oder auf Vorlagen basierenden datengebundenen Steuerelementen entwickeln.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> -Methode und der Verwendung der <xref:System.Web.UI.ControlCollection.Clear%2A> Methode, um alle untergeordneten Steuerelemente zuvor im Löschen der <xref:System.Web.UI.ControlCollection> Objekt. In diesem Fall Sie müssen dies tun, damit veraltete Objekte in des Steuerelements <xref:System.Web.UI.ControlCollection> nicht nicht ordnungsgemäß angezeigt werden.  
+  
+ [!code-csharp[TemplatedDataBoundControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplatedDataBoundControl/CS/templatedataboundcontrol.cs#2)]
+ [!code-vb[TemplatedDataBoundControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplatedDataBoundControl/VB/templatedataboundcontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (System.Web.UI.Control c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Web.UI.Control c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Contains(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="c">Das Steuerelement an, in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Serversteuerelement in der Server des übergeordneten Steuerelements <see cref="T:System.Web.UI.ControlCollection" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Serversteuerelement in der Auflistung vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Web.UI.ctrlCollection_Contains#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.CtrlCollection_Contains/CS/ctrlcollection_contains.cs.aspx#1)]
+ [!code-vb[System.Web.UI.ctrlCollection_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.CtrlCollection_Contains/VB/ctrlcollection_contains.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.Array" /> So kopieren Sie die untergeordneten Steuerelemente.</param>
+        <param name="index">Der nullbasierte relative Index im <c>Array</c> , in dem Kopiervorgang beginnt.</param>
+        <summary>Kopien, die die untergeordneten Steuerelemente, in gespeichert der <see cref="T:System.Web.UI.ControlCollection" /> -Objekt an eine <see cref="T:System.Array" /> -Objekt, beginnend an der angegebenen Indexposition in der <see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="array" />ist kein <see langword="null" /> und nicht eindimensional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Serversteuerelementen in die <see cref="T:System.Web.UI.ControlCollection" /> Objekt für das angegebene Serversteuerelement von ASP.NET.</summary>
+        <value>Die Anzahl von Serversteuerelementen in die <see cref="T:System.Web.UI.ControlCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.ControlCollection.Count%2A> Eigenschaft zum Durchlaufen des Steuerelements <xref:System.Web.UI.ControlCollection> Objekt. Die Verwendung der <xref:System.Web.UI.Control.HasControls%2A?displayProperty=nameWithType> Eigenschaft überprüft, ob das Steuerelement untergeordnete Steuerelemente verfügt. Wenn <xref:System.Web.UI.Control.HasControls%2A?displayProperty=nameWithType> gibt `false`, wird der restliche Code wird nicht ausgeführt.  
+  
+ [!code-csharp[Classic Control.HasControls Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Control.HasControls Example/CS/source.cs#1)]
+ [!code-vb[Classic Control.HasControls Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Control.HasControls Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator, der durchlaufen kann ab der <see cref="T:System.Web.UI.ControlCollection" /> Objekt.</summary>
+        <returns>Der Enumerator zum Durchlaufen der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Methode, die über Listet die <xref:System.Web.UI.ControlCollection> Auflistung von einer <xref:System.Web.UI.WebControls.Button> Steuerelement `myButton`. Wenn der Enumerator erstellt wird, die <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> -Eigenschaft überprüft, um zu ermitteln, ob der Vorgang threadsicher ist, und ist er nicht, die <xref:System.Web.UI.ControlCollection.SyncRoot%2A> Eigenschaft wird verwendet, um ein Objekt, um den Vorgang threadsicher zu erhalten. Wenn die Enumeration abgeschlossen ist, wird der Wert von der <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> Eigenschaft geschrieben wird, als die <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public virtual int IndexOf (System.Web.UI.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(class System.Web.UI.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.IndexOf(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Web.UI.Control" /> für das der Index zurückgegeben wird.</param>
+        <summary>Ruft den Index eines angegebenen <see cref="T:System.Web.UI.Control" /> Objekt in der Auflistung.</summary>
+        <returns>Der Index des angegebenen Steuerelements. Wenn das Serversteuerelement derzeit nicht um ein Element der Auflistung ist, wird-1 zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie die Indexposition des angegebenen Serversteuerelements in bestimmen die <xref:System.Web.UI.ControlCollection> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.ControlCollection.IndexOf%2A> -Methode, schreiben die Indexposition eines Steuerelements, `myLiteralControl`in der <xref:System.Web.UI.ControlCollection> Auflistung von einer <xref:System.Web.UI.WebControls.Button> -Steuerelement namens `myButton`.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#1)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.ControlCollection" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement schreibgeschützt ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Methode, die über Listet die <xref:System.Web.UI.ControlCollection> Auflistung von einer <xref:System.Web.UI.WebControls.Button> Steuerelement `myButton`. Wenn der Enumerator erstellt wird, die <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> -Eigenschaft überprüft, um zu ermitteln, ob der Vorgang threadsicher ist, und ist er nicht, die <xref:System.Web.UI.ControlCollection.SyncRoot%2A> Eigenschaft wird verwendet, um ein Objekt, um den Vorgang threadsicher zu erhalten. Wenn die Enumeration abgeschlossen ist, wird der Wert von der <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> Eigenschaft geschrieben wird, als die <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.ControlCollection" /> Objekt synchronisiert wird.</summary>
+        <value>Diese Eigenschaft ist immer <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Methode, die über Listet die <xref:System.Web.UI.ControlCollection> Auflistung von einer <xref:System.Web.UI.WebControls.Button> Steuerelement `myButton`. Wenn der Enumerator erstellt wird, die <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> -Eigenschaft überprüft, um zu ermitteln, ob der Vorgang threadsicher ist, und ist er nicht, die <xref:System.Web.UI.ControlCollection.SyncRoot%2A> Eigenschaft wird verwendet, um ein Objekt, um den Vorgang threadsicher zu erhalten. Wenn die Enumeration abgeschlossen ist, wird der Wert von der <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> Eigenschaft geschrieben wird, als die <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Control this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Speicherort des Serversteuerelements in das <see cref="T:System.Web.UI.ControlCollection" />.</param>
+        <summary>Ruft einen Verweis auf das Serversteuerelement an der angegebenen Indexposition in der <see cref="T:System.Web.UI.ControlCollection" /> Objekt.</summary>
+        <value>Der Verweis auf das Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.ControlCollection.Item%2A> Eigenschaft, um anzugeben, die Indexposition eines untergeordneten Elements zu steuern, die entfernt wird, in einem <xref:System.Web.UI.ControlCollection.Remove%2A> -Methodenaufruf. Dies erfolgt durch die `myButton.Controls.Remove` Syntax.  
+  
+ [!code-aspx-csharp[ControlCollection_ReSubmit_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlCollection_ReSubmit_2/CS/controlcollection_copyto.cs.aspx#1)]
+ [!code-aspx-vb[ControlCollection_ReSubmit_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlCollection_ReSubmit_2/VB/controlcollection_copyto.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter ist kleiner als 0 (null) oder größer als oder gleich <see cref="P:System.Web.UI.ControlCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Control Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ASP.NET-Serversteuerelement, der die <see cref="T:System.Web.UI.ControlCollection" /> Objekt gehört.</summary>
+        <value>Die <see cref="T:System.Web.UI.Control" /> , der die <see cref="T:System.Web.UI.ControlCollection" /> gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte <xref:System.Web.UI.ControlCollection> -Klasse, überschreibt die <xref:System.Web.UI.ControlCollection.%23ctor%2A> Methode zum Schreiben von Nachrichten (darunter den Namen des der <xref:System.Web.UI.ControlCollection.Owner%2A> Eigenschaft) in das Ablaufverfolgungsprotokoll, wenn eine Instanz der Auflistung erstellt wird. Ablaufverfolgung für die Seite oder einer Anwendung für dieses Beispiel funktioniert, muss aktiviert werden.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/cs/controlcollection_7.cs#1)]
+ [!code-vb[System.Web.UI.ControlCollection_CTor_Owner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_CTor_Owner/VB/controlcollection_7.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (System.Web.UI.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class System.Web.UI.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.Remove(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Webserversteuerelement entfernt werden soll.</param>
+        <summary>Entfernt das angegebene Serversteuerelement aus des übergeordneten Serversteuerelements <see cref="T:System.Web.UI.ControlCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Entfernen eines Steuerelements aus eine Indexposition der <xref:System.Web.UI.ControlCollection.RemoveAt%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.ControlCollection.Remove%2A> Methode so löschen Sie ein untergeordnetes Steuerelement aus der `myButton` Serversteuerelement. Zunächst verwendet der Code die <xref:System.Web.UI.ControlCollection.Contains%2A> Methode, um zu bestimmen, ob die `myChildControl` ist Bestandteil der <xref:System.Web.UI.ControlCollection> -Objekt, und wenn dies der Fall, werden entfernt.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#4)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Ordinalindex des Serversteuerelements aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt ein untergeordnetes Steuerelement, an der angegebenen Indexposition aus der <see cref="T:System.Web.UI.ControlCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Entfernen eines Steuerelements aus der Auflistung, auf Grundlage des Werts der <xref:System.Web.UI.ControlCollection.Remove%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.ControlCollection.RemoveAt%2A> Methode so löschen Sie ein untergeordnetes Steuerelement aus der `myButton` Serversteuerelement. Aufruf der Methode gibt zuerst eine Indexposition 1 aus der das Steuerelement gelöscht wird. Das Beispiel dann Schreibvorgänge auf den enthaltenden Seite eine Textnachricht, die besagt, dass das Steuerelement an diesem Speicherort aus gelöscht wurde der <xref:System.Web.UI.ControlCollection> Auflistung.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#5)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Wird ausgelöst, wenn die <see cref="T:System.Web.UI.ControlCollection" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das zum Synchronisieren des Zugriffs auf die Auflistung von Steuerelementen verwendet werden kann.</summary>
+        <value>Die <see cref="T:System.Object" /> verwendet, um die Auflistung zu synchronisieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Methode, die über Listet die <xref:System.Web.UI.ControlCollection> Auflistung von einer <xref:System.Web.UI.WebControls.Button> Steuerelement `myButton`. Wenn der Enumerator erstellt wird, die <xref:System.Web.UI.ControlCollection.IsSynchronized%2A> -Eigenschaft überprüft, um zu ermitteln, ob der Vorgang threadsicher ist, und ist er nicht, die <xref:System.Web.UI.ControlCollection.SyncRoot%2A> Eigenschaft wird verwendet, um ein Objekt, um den Vorgang threadsicher zu erhalten. Wenn die Enumeration abgeschlossen ist, wird der Wert von der <xref:System.Web.UI.ControlCollection.IsReadOnly%2A> Eigenschaft geschrieben wird, als die <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+ [!code-csharp[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/CS/controlcollection1_cs.aspx#2)]
+ [!code-vb[System.Web.UI.ControlCollection_NewSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCollection_NewSamples/VB/controlcollection1_vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

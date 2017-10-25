@@ -1,0 +1,71 @@
+<Type Name="TicketCompatibilityMode" FullName="System.Web.Configuration.TicketCompatibilityMode">
+  <TypeSignature Language="C#" Value="public enum TicketCompatibilityMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TicketCompatibilityMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TicketCompatibilityMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert, ob Coordinated Universal Time (UTC) oder Ortszeit für das Ticketablaufdatum für die Formularauthentifizierung verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ticketablaufdatum für ASP.NET-Formularauthentifizierung kann mithilfe der koordinierten Weltzeit (Coordinated Universal Time, UTC) oder der lokalen Zeit gespeichert werden. Für die Kompatibilität zwischen Anwendungen und für die Kompatibilität zwischen verschiedenen Versionen von .NET Framework, kann das Tickettimeout angegeben werden, mithilfe der `ticketCompatilityMode` -Attribut des Elements. Der Standardwert für die `ticketCompatibilityMode` Attribut ist Framework20.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel konfiguriert das Ablaufdatum des Forms Formularauthentifizierungstickets als UTC-Zeit.  
+  
+```  
+<system.web>  
+  <authentication mode="Forms">   
+    <forms ticketCompatilityMode="Framework40">  
+    </forms>  
+  </authentication>  
+</system.web>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Framework20">
+      <MemberSignature Language="C#" Value="Framework20" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.TicketCompatibilityMode Framework20 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.TicketCompatibilityMode.Framework20" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TicketCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Ticketablaufdatum als lokale Zeit gespeichert werden. Dies ist der Standardwert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Framework40">
+      <MemberSignature Language="C#" Value="Framework40" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.TicketCompatibilityMode Framework40 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.TicketCompatibilityMode.Framework40" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TicketCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Ticketablaufdatum als UTC gespeichert wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

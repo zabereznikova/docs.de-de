@@ -1,0 +1,89 @@
+<Type Name="ListChildrenAccessRule" FullName="System.DirectoryServices.ListChildrenAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class ListChildrenAccessRule : System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ListChildrenAccessRule extends System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ListChildrenAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectoryAccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ListChildrenAccessRule" /> Klasse stellt einen bestimmten Typ von Zugriffsregel, die zum Zulassen oder verweigern ein Active Directory-Domänendienste-Objekt das Recht zum Auflisten von untergeordneten Objekten verwendet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListChildrenAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ListChildrenAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Ein <see cref="T:System.Security.Principal.IdentityReference" />-Objekt, das den Vertrauensnehmer der Zugriffsregel identifiziert.</param>
+        <param name="type">Einer der <see cref="T:System.Security.AccessControl.AccessControlType" />-Enumerationswerte, der den Zugriffsregeltyp angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.ListChildrenAccessRule" />-Klasse mit dem angegebenen Identitätsverweis und Zugriffssteuerungstyp.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListChildrenAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ListChildrenAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.ActiveDirectorySecurityInheritance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Ein <see cref="T:System.Security.Principal.IdentityReference" />-Objekt, das den Vertrauensnehmer der Zugriffsregel identifiziert.</param>
+        <param name="type">Einer der <see cref="T:System.Security.AccessControl.AccessControlType" />-Enumerationswerte, der den Zugriffsregeltyp angibt.</param>
+        <param name="inheritanceType">Einer der <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" />-Enumerationswerte, der den Vererbungstyp der Zugriffsregel angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ListChildrenAccessRule" /> Klasse mit dem angegebenen Identitätsverweis, Zugriffssteuerungstyp und Sicherheitsvererbungsinformationen für Active Directory-Domänendienste.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListChildrenAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ListChildrenAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.ActiveDirectorySecurityInheritance,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Ein <see cref="T:System.Security.Principal.IdentityReference" />-Objekt, das den Vertrauensnehmer der Zugriffsregel identifiziert.</param>
+        <param name="type">Einer der <see cref="T:System.Security.AccessControl.AccessControlType" />-Enumerationswerte, der den Zugriffsregeltyp angibt.</param>
+        <param name="inheritanceType">Einer der <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" />-Enumerationswerte, der den Vererbungstyp der Zugriffsregel angibt.</param>
+        <param name="inheritedObjectType">Die Schema-GUID des untergeordneten Objekttyps, der diese Zugriffsregel erben kann.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ListChildrenAccessRule" /> Klasse mit dem angegebenen Identitätsverweis, Zugriffssteuerungstyp, Sicherheitsvererbungsinformationen für Active Directory-Domänendienste und vererbten Objekttyp.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

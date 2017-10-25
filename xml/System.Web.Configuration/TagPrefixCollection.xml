@@ -1,0 +1,313 @@
+<Type Name="TagPrefixCollection" FullName="System.Web.Configuration.TagPrefixCollection">
+  <TypeSignature Language="C#" Value="public sealed class TagPrefixCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TagPrefixCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TagPrefixCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.TagPrefixInfo), AddItemName="add", CollectionType=System.Configuration.ConfigurationElementCollectionType.BasicMap)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Web.Configuration.TagPrefixInfo" />-Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TagPrefixInfo> -Klasse ermöglicht den programmgesteuerten Zugriff auf und ändern die Tagpräfix Informationen in einer Konfigurationsdatei gespeichert. Tagpräfixe ordnen einen "Namespace" in ASP.NET den Assemblys und Namespaces, die aus Gründen der benutzerdefinierten Steuerelemente und Benutzersteuerelemente ordnungsgemäß ausgeführt werden muss.  
+  
+ <xref:System.Web.Configuration.TagPrefixInfo>Objekte werden als Mitglieder gespeichert ein <xref:System.Web.Configuration.TagPrefixCollection> Objekt. Die <xref:System.Web.Configuration.TagPrefixCollection> -Klasse ermöglicht den programmgesteuerten Zugriff auf und Ändern der `controls` -Unterabschnitt des der `pages` Abschnitt einer Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Der folgende Auszug aus der Datei wird gezeigt, wie Werte für mehrere Eigenschaften der deklarativ angeben, die <xref:System.Web.Configuration.TagPrefixCollection> Typ.  
+  
+```  
+<system.web>  
+  <pages>  
+    <controls>  
+      <clear />  
+      <remove tagPrefix="MyTags" />  
+      <!—- Searches all linked assemblies for the namespace -->  
+      <add tagPrefix="MyTags1" namespace=" MyNameSpace "/>  
+      <!-- Uses a specified assembly -->  
+      <add tagPrefix="MyTags2" namespace="MyNameSpace"   
+        assembly="MyAssembly"/>  
+      <!-- Uses the specified source for the user control -->  
+      <add tagprefix="MyTags3" tagname="MyCtrl" src="MyControl.ascx"/>  
+    </controls>  
+   </pages>  
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.TagPrefixCollection> Klasse programmgesteuert Tagpräfix Einstellungen zu ändern. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#12)]
+ [!code-vb[System.Web.Configuration.PagesSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagPrefixCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.Configuration.TagPrefixCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TagPrefixCollection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Die <xref:System.Web.Configuration.PagesSection.Controls%2A> Eigenschaft von der <xref:System.Web.Configuration.PagesSection> Klasse enthält immer eine Instanz von der <xref:System.Web.Configuration.TagPrefixCollection> Typ. Verwenden Sie diese Instanz, anstatt eine eigene erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.TagPrefixInfo tagPrefixInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.TagPrefixInfo tagPrefixInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixCollection.Add(System.Web.Configuration.TagPrefixInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagPrefixInformation" Type="System.Web.Configuration.TagPrefixInfo" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefixInformation">Das <see cref="T:System.Web.Configuration.TagPrefixInfo" />-Objekt, das zur Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.TagPrefixInfo" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung darf nicht bereits ein <xref:System.Web.Configuration.TagPrefixInfo> Objekt mit denselben Eigenschaftswerten. Wenn dies der Fall ist, eine <xref:System.Configuration.ConfigurationException> ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TagPrefixCollection.Add%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#32](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#32)]
+ [!code-vb[System.Web.Configuration.PagesSection#32](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.TagPrefixInfo" /> Objekt bereits in der Auflistung vorhanden ist.  
+  
+ \- oder –  
+  
+ Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Objekte aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixCollection.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Konfigurationsauflistung ab.</summary>
+        <value>Die <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> Objekt der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="protected override string ElementName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixCollection.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TagPrefixInfo this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.TagPrefixInfo Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TagPrefixInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.TagPrefixInfo" /> Objekt in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Configuration.TagPrefixInfo" /> Objekt an der angegebenen Indexposition.</summary>
+        <value>Die <see cref="T:System.Web.Configuration.TagPrefixInfo" /> Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft überschreibt die <xref:System.Web.Configuration.TagPrefixInfo> -Objekt am angegebenen Index bereits vorhanden ist; andernfalls ein neues Objekt erstellt und der Teamprojektsammlung hinzugefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TagMapCollection.Item%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#30](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#30)]
+ [!code-vb[System.Web.Configuration.PagesSection#30](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Configuration.TagPrefixInfo tagPrefixInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Configuration.TagPrefixInfo tagPrefixInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixCollection.Remove(System.Web.Configuration.TagPrefixInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagPrefixInformation" Type="System.Web.Configuration.TagPrefixInfo" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefixInformation">Ein <see cref="T:System.Web.Configuration.TagPrefixInfo" /> Objekt in der Auflistung.</param>
+        <summary>Entfernt das angegebene Objekt aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnDuplicate">
+      <MemberSignature Language="C#" Value="protected override bool ThrowOnDuplicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnDuplicate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixCollection.ThrowOnDuplicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

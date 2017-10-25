@@ -1,0 +1,52 @@
+<Type Name="IXamlSchemaContextProvider" FullName="System.Xaml.IXamlSchemaContextProvider">
+  <TypeSignature Language="C#" Value="public interface IXamlSchemaContextProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXamlSchemaContextProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IXamlSchemaContextProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Dienst, der XAML-Schemakontextinformationen für Typkonverter und Markuperweiterungen bereitstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.IXamlSchemaContextProvider> Service bietet eine Eigenschaft <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>.  
+  
+ Verwenden der <xref:System.Xaml.IXamlSchemaContextProvider> Dienst und seine <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A> Eigenschaft, wenn Sie den aktiven XAML-Schemakontext aus einer Markuperweiterung benötigen, oder geben Sie eine Typenkonverter-Implementierung. Viele XAML-bezogene Vorgänge, insbesondere einen XAML-Typ in seiner Unterstützungstyp für die Graph-objekterstellung, auflösen, basieren auf über eine verfügbaren XAML-Schemakontext zu verfügen. Allerdings können Sie für viele Szenarien den XAML-Schemakontext verwenden, der von einem bestimmten Framework bereitgestellt wird. Oder Sie können die standardmäßigen XAML-Schemakontext, die von .NET Framework-XAML-Dienste, die CLR und sichern Reflektion verwendet bereitgestellt und können den notwendigen XAML-Schemakontext für alle CLR-benutzerdefinierten Typs bereitstellen.  
+  
+ Die <xref:System.Xaml.IXamlSchemaContextProvider> Dienst ist in erster Linie relevant für Implementierungen, die erwarten, dass ihre wertkonverterimplementierung aufgerufen werden kann, wenn sie von benutzerdefinierten XAML-Schema-Kontexten unterstützt wird. Sie erhalten den Dienst über die Einstiegspunkt-Parameter, der die virtuellen Methoden der <xref:System.ComponentModel.TypeConverter> oder <xref:System.Windows.Markup.MarkupExtension> , Dienstkontext Bericht. Oder Sie können stattdessen den Schemakontext direkt aus dedizierten Eigenschaften eines bestimmten XAML-Readern oder XAML-Writern abrufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IXamlSchemaContextProvider.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xaml.XamlSchemaContext" /> , die vom Dienstkontext gemeldet wird.</summary>
+        <value>Der XAML-Schemakontext, der von der Dienstkontext gemeldet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie das zurückgegebene <xref:System.Xaml.XamlSchemaContext> für Vorgänge wie das Abrufen von Listen aller Typen in einer Assembly oder zum Abrufen von Details zu der Assembly, die Zuordnung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,119 @@
+<Type Name="IProvideValueTarget" FullName="System.Windows.Markup.IProvideValueTarget">
+  <TypeSignature Language="C#" Value="public interface IProvideValueTarget" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProvideValueTarget" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.IProvideValueTarget" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Dienst dar, der situationsbedingte Objekteigenschaftsbeziehungen zur Auswertung der Markuperweiterung meldet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.IProvideValueTarget>Stellt einen Dienst, der Informationen bezüglich der Objekteigenschaft Struktur, umgibt, in dem ein Wertkonverter aufgerufen wird.  
+  
+ Typkonverter und Markuperweiterungen können Abfragen für <xref:System.Windows.Markup.IProvideValueTarget> als Dienst auf dem Dienstkontext, der durch einen XAML-Objektwriter bereitgestellt wird, wenn der XAML-Objektwriter den Wertkonvertierungsverhalten aufruft. Weitere Informationen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) und [verfügbare Dienstkontexte Typkonverter und Markuperweiterungen](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ Für Markuperweiterungen insbesondere ein Szenario, in dem <xref:System.Windows.Markup.IProvideValueTarget> eignet sich die Gültigkeit der situationsbedingt Verwendung der Markuperweiterung zu bestimmen. Z. B. die Markuperweiterung einen Wert Deferral Mechanismus implementieren kann, jedoch mit diesen Mechanismus nur möglicherweise angemessen, wenn das Zielobjekt kann mit anderen Komponenten des Deferral Mechanismus zur Laufzeit ist. Konnte, überprüfen Sie die Typ-System-Eigenschaften des Objekts zurückgegeben wird, als <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A> und sicherstellen, dass das Objekt unterstützt die Deferral-Technik. Wenn dies der Fall ist, gibt die Markuperweiterung einen Wert zurück, und falls nicht, Ihre Markuperweiterung löst eine Ausnahme aus, die als interne Ausnahme durch einen XAML-Objektwriter übernommen wird. Ein ähnliches Szenario gewährleistet, dass eine bestimmte Eigenschaft eine Funktion, durch Überprüfen der eigenschaftssystemmerkmale Typ unterstützt die <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
+  
+ Obwohl der Name der API <xref:System.Windows.Markup.IProvideValueTarget> möglicherweise eine Zuordnung zu implizieren <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType>, die Informationen gemeldet werden, indem <xref:System.Windows.Markup.IProvideValueTarget> kann auch hilfreich sein, eine <xref:System.ComponentModel.TypeConverter> oder <xref:System.Windows.Markup.ValueSerializer>. Ein <xref:System.ComponentModel.TypeConverter> oder <xref:System.Windows.Markup.ValueSerializer> haben in der Regel mehr Kontext als eine Markuperweiterung, da sie auf einen bestimmten Zielcomputer Typ oder die Eigenschaft "Ziel" vorgesehen sind, und daher die situationsbedingte Gültigkeit normalerweise im Typsystem vorhersagbar ist. Es gelten jedoch andere Szenarien. Im folgenden finden eine Liste von einigen Szenarien, die durch einen Typkonverter oder einer Markuperweiterungen implementiert werden kann:  
+  
+-   Abrufen <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A> Instanzwerte anderer Eigenschaften für dieses Objekt gelesen. Beachten Sie, dass die Behandlung hier möglicherweise für nicht festgelegte Werte stabil sein, da die Verarbeitungsreihenfolge von XAML-Elementen für das Zielobjekt nicht deterministisch sein kann.  
+  
+-   Abrufen <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A> auf Typebene Metadaten zu lesen, oder um sicherzustellen, dass die erforderliche Schnittstellen vom Typ implementiert werden.  
+  
+-   Abrufen <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> zum Lesen der Metadaten der Eigenschaft.  
+  
+ Ein Szenario ist die Verwendung <xref:System.Windows.Markup.IProvideValueTarget> Informationen Limit, welche Objekte oder Eigenschaften sind zulässig, von der Markuperweiterung festgelegt werden.  
+  
+ Bevor Sie versuchen, den Dienst verwenden, stellen Sie sicher, dass der Dienst selbst nicht `null` nach der Rückgabe durch die entsprechenden Serviceprovider-Parameter verwenden Sie für den Kontext.  
+  
+> [!IMPORTANT]
+>  Wenn Sie den Dienst zu verwenden, es ist besonders wichtig, nicht auf das Objekt verwiesen wird, durch Ändern der <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A> Eigenschaft oder andere Objekte, die auf dieses Objekt verweist. Für WPF insbesondere verursachen diese Änderungen unerwartete Änderungen können, die im WPF-Eigenschaftensystem ungültig machen würde.  
+  
+> [!NOTE]
+>  Verwenden Sie nicht den Typ des <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> bestimmen die genaue ein Markup-Erweiterung oder ein Typkonverter zurückgeben soll. Dies ist nicht empfohlen. Der Rückgabetyp muss konsistent mit den Attributen (<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> für Markuperweiterungen) oder Mustern (Klassenname des Typkonverters).  
+  
+ In früheren Versionen von .NET Framework war diese Schnittstelle in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.IProvideValueTarget> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Dieser Dienst unterstützt die Framework-Funktionen wie z. B. Bindung auf eine Abhängigkeitseigenschaft.  
+  
+ In WPF, der Dienst dargestellte <xref:System.Windows.Markup.IProvideValueTarget> können Objekte und Eigenschaften für Situationen, in denen der Wert aus einer Markup-Erweiterung oder ein Typkonverter zurückgeben hängt vom Kontext, zurückgeben.  
+  
+ <xref:System.Windows.Markup.IProvideValueTarget>stark genutzt wird, in die interne Implementierung der <xref:System.Windows.Data.BindingBase>, Klasse, die in WPF Bindungsmechanismus für Abhängigkeitseigenschaften implementiert.  
+  
+ Ein interner Standarddienstanbieter für WPF implementiert <xref:System.Windows.Markup.IProvideValueTarget> für die Verwendung durch eine benutzerdefinierte Markuperweiterung oder Typ-Typkonverter. Das Objekt und Eigenschaft von gemeldeten <xref:System.Windows.Markup.IProvideValueTarget> kann nur vom internen WPF-Dienst festgelegt werden. Jenseits dieser Definition der wie <xref:System.Windows.Markup.IProvideValueTarget> arbeitet, müsste Definieren eigener Dienstanbieter für Markup Extension und Typ-Konverter Verwendungen, die zumindest implementiert die <xref:System.Windows.Markup.IProvideValueTarget> und <xref:System.Windows.Markup.IXamlTypeResolver> Dienste und also eine erweiterte Szenario, bei dem hier nicht beschrieben wird.  
+  
+ Ein null-Wert für <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> oder <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A> bedeutet nicht unbedingt, dass eine Markuperweiterung oder Typ Typkonverter verwendet werden kann, obwohl, die von der Implementierung abhängig ist. Ein Beispiel für Fall, in dem die Werte aus <xref:System.Windows.Markup.IProvideValueTarget> null sind, auch wenn der Dienst verfügbar ist ist, wenn die Markuperweiterung innerhalb einer anderen Markuperweiterung, z. B. geschachtelt ist eine <xref:System.Windows.Data.Binding>. Eine Implementierung, die abhängt <xref:System.Windows.Markup.IProvideValueTarget> sollten immer überprüfen auf Null-Werte nur für das Auslösen eine bestimmte Ausnahme, wenn das beabsichtigt ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public object TargetObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.IProvideValueTarget.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zielobjekt ab, das gemeldet wird.</summary>
+        <value>Das gemeldete Zielobjekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert von <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A> ist der tatsächliche Verweis, keine Typsystembezeichner oder anderer Bezeichner. Der Wert kann auch `null`; finden Sie unter <xref:System.Windows.Markup.IProvideValueTarget>.  
+  
+> [!IMPORTANT]
+>  Wenn Sie den Dienst zu verwenden, es ist besonders wichtig, nicht auf das Objekt verwiesen wird, durch Ändern der <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A> Eigenschaft oder andere Objekte von diesem Objekt verwiesen wird, wie Eigenschaften, die nicht speziell die Wert-Konvertierung sind Zustimmung Behandlung von. Für WPF insbesondere verursachen das Zielobjekt ändern unerwartete Änderungen können, die im WPF-Eigenschaftensystem ungültig machen würde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetProperty">
+      <MemberSignature Language="C#" Value="public object TargetProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TargetProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.IProvideValueTarget.TargetProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner für die Zieleigenschaft ab, die gemeldet wird.</summary>
+        <value>Ein Bezeichner für die Zieleigenschaft, die gemeldet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert kann auch `null`; finden Sie unter <xref:System.Windows.Markup.IProvideValueTarget>.  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Der Standard-WPF-Dienst möglicherweise für eine Abhängigkeitseigenschaft zurück eine <xref:System.Windows.DependencyProperty>, sodass die Markup-Erweiterung oder der Typkonverter Metadaten verwenden kann. Andernfalls kann das zurückgegebene Objekt eine <xref:System.Reflection.PropertyInfo> für eine CLR-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

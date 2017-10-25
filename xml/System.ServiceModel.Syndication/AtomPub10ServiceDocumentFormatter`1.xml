@@ -1,0 +1,117 @@
+<Type Name="AtomPub10ServiceDocumentFormatter&lt;TServiceDocument&gt;" FullName="System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter&lt;TServiceDocument&gt;">
+  <TypeSignature Language="C#" Value="public class AtomPub10ServiceDocumentFormatter&lt;TServiceDocument&gt; : System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter where TServiceDocument : ServiceDocumentnew()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AtomPub10ServiceDocumentFormatter`1&lt;.ctor (class System.ServiceModel.Syndication.ServiceDocument) TServiceDocument&gt; extends System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TServiceDocument">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>System.ServiceModel.Syndication.ServiceDocument</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("service", Namespace="http://www.w3.org/2007/app")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TServiceDocument">Die von einer <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Instanz abgeleitete Klasse, die mithilfe der Atom&amp;#160;1.0-Formatierung in XML serialisiert oder aus XML deserialisiert werden muss.</typeparam>
+    <summary>Ein Formatierungsprogramm, das von einer <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Instanz abgeleitete Klassen mit Atom&amp;#160;1.0-Formaten aus und in XML serialisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls Sie eine <xref:System.ServiceModel.Syndication.ServiceDocument>-Instanz anstelle eines von dieser Instanz von <xref:System.ServiceModel.Syndication.ServiceDocument> abgeleiteten Objekts serialisieren oder deserialisieren möchten, verwenden Sie stattdessen das <xref:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter>-Formatierungsprogramm.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10ServiceDocumentFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.ServiceDocumentFormatter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10ServiceDocumentFormatter (TServiceDocument documentToWrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TServiceDocument documentToWrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="documentToWrite" Type="TServiceDocument" />
+      </Parameters>
+      <Docs>
+        <param name="documentToWrite">Das dem Atom&amp;#160;1.0-Formatierungsprogramm zugewiesene <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />.</param>
+        <summary>Erstellt eine neue Instanz der Atom&amp;#160;1.0-basierten <see cref="T:System.ServiceModel.Syndication.ServiceDocumentFormatter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `documentToWrite` kann vom Formatierungsprogramm mithilfe von Atom&amp;#160;1.0-Formaten in eine XML-Darstellung serialisiert oder aus einer XML-Darstellung deserialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="documentToWrite" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDocumentInstance">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Syndication.ServiceDocument CreateDocumentInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Syndication.ServiceDocument CreateDocumentInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10ServiceDocumentFormatter`1.CreateDocumentInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.ServiceDocument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue dem Atom&amp;#160;1.0-Formatierungsprogramm zugeordnete <see cref="T:System.ServiceModel.Syndication.ServiceDocument" />-Instanz.</summary>
+        <returns>Gibt eine Instanz von <see cref="T:System.ServiceModel.Syndication.ServiceDocument" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,437 @@
+<Type Name="IImmutableSet&lt;T&gt;" FullName="System.Collections.Immutable.IImmutableSet&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IImmutableSet&lt;T&gt; : System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IReadOnlyCollection&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IImmutableSet`1&lt;T&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.IImmutableSet`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ des in der Gruppe gespeicherten Elements.</typeparam>
+    <summary>Stellt eine Gruppe von Elementen dar, die nur durch Erstellen einer neuen Instanz der Gruppe geändert werden kann.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mutationen auf diesem Satz generieren Sie neue Sätze. Inkrementelle Änderungen an einen Satz freigeben so viel Arbeitsspeicher wie möglich mit früheren Versionen von einer Menge und lässt keine eindeutigen Satzdaten bereinigen, die nicht mehr verwiesen wird, wird die Garbagecollection.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;T&gt; Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende Element.</param>
+        <summary>Fügt dieser unveränderlichen Gruppe das angegebene Element hinzu.</summary>
+        <returns>Eine neue Gruppe mit dem hinzugefügten Element oder diese Gruppe, wenn das Element bereits in der Gruppe enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;T&gt; Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine leere unveränderliche Gruppe ab, die dieselbe Sortierungs- und Reihenfolgensematik wie diese Instanz besitzt.</summary>
+        <returns>Eine leere unveränderliche Gruppe, die dieselbe Sortierungs- und Reihenfolgensematik wie diese Instanz besitzt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Element, das in der Gruppe gesucht werden soll.</param>
+        <summary>Ermittelt, ob diese unverändertliche Gruppe ein bestimmtes Element enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Gruppe den angegebenen Wert enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Except">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;T&gt; Except (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; Except(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Except(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung der Elemente, die aus dieser Gruppe entfernt werden sollen.</param>
+        <summary>Entfernt die Elemente in der angegebenen Auflistung aus der aktuellen unveränderlichen Gruppe.</summary>
+        <returns>Eine neue Gruppe, aus der die Elemente entfernt wurden; oder die ursprüngliche Gruppe, wenn keines der Elemente in der Gruppe enthalten war.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;T&gt; Intersect (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; Intersect(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Intersect(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen <see cref="T:System.Collections.Immutable.IImmutableSet`1" /> verglichen werden soll.</param>
+        <summary>Erstellt eine unveränderliche Gruppe, die nur Elemente enthält, die in dieser Gruppe und der angegebenen Gruppe vorhanden sind.</summary>
+        <returns>Eine neue unverändertliche Gruppe, die Elemente enthält, die in beiden Gruppen vorhanden sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProperSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsProperSubsetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsProperSubsetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.IsProperSubsetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unverändertliche Gruppe eine echte (strikte) Teilmenge einer angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine echte Teilmenge der angegebenen Auflistung ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle Gruppe eine echte Teilmenge von ist `other`, `other` muss mindestens ein Element, das die aktuelle Gruppe keine aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProperSupersetOf">
+      <MemberSignature Language="C#" Value="public bool IsProperSupersetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsProperSupersetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.IsProperSupersetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche Gruppe eine echte (strikte) Teilmenge der angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine echte Teilmenge der angegebenen Auflistung ist; andernfalls false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle Gruppe eine echte Obermenge von ist `other`, die aktuelle Gruppe muss mindestens ein Element besitzen, `other` verfügt nicht über.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsSubsetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSubsetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.IsSubsetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche Gruppe eine Teilmenge einer angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine Teilmenge der angegebenen Auflistung ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupersetOf">
+      <MemberSignature Language="C#" Value="public bool IsSupersetOf (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupersetOf(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.IsSupersetOf(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche Gruppe eine Obermenge einer angegebenen Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe eine Obermenge der angegebenen Auflistung ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Overlaps">
+      <MemberSignature Language="C#" Value="public bool Overlaps (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Overlaps(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Overlaps(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob sich die aktuelle unveränderliche Gruppe und die angegebene Auflistung überschneiden.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Gruppe und die angegebene Auflistung über mindestens ein gemeinsames Element verfügen; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;T&gt; Remove (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; Remove(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu entfernende Element.</param>
+        <summary>Fügt dieser unveränderlichen Gruppe das angegebene Element hinzu.</summary>
+        <returns>Eine neue Gruppe, aus der das angegebene Element entfernt wurde, oder die aktuelle Gruppe, wenn das Element in der Gruppe nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEquals">
+      <MemberSignature Language="C#" Value="public bool SetEquals (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetEquals(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.SetEquals(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle unveränderliche Gruppe und die angegebene Auflistung dieselben Elemente enthalten.</summary>
+        <returns>
+          <see langword="true" />, wenn die Gruppen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SymmetricExcept">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;T&gt; SymmetricExcept (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; SymmetricExcept(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.SymmetricExcept(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, die mit der aktuellen Gruppe verglichen werden soll.</param>
+        <summary>Erstellt eine unveränderliche Gruppe, die nur Elemente enthält, die entweder in der aktuellen Gruppe oder in der angegebenen Auflistung, aber nicht in beiden vorhanden sind.</summary>
+        <returns>Eine neue Gruppe mit den Elementen, die nur in der aktuellen Gruppe oder in der angegebenen Auflistung, aber nicht in beiden vorhanden sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (T equalValue, out T actualValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(!T equalValue, [out] !T&amp; actualValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.TryGetValue(`0,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equalValue" Type="T" />
+        <Parameter Name="actualValue" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equalValue">Der zu suchende Wert.</param>
+        <param name="actualValue">Der übereinstimmende Wert aus der Gruppe, wenn gefunden, oder <c>Equalvalue</c> , wenn keine Übereinstimmungen vorhanden sind.</param>
+        <summary>Bestimmt, ob die Liste einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, Wenn ein entsprechender Wert gefunden wurde; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es folgen einige Szenarien, in denen <xref:System.Collections.Immutable.IImmutableSet%601.TryGetValue%2A> kann nützlich sein:  
+  
+-   Möchten Sie einen zuvor gespeicherten Objektverweis, statt einen neuen Verweis wiederverwenden.  
+  
+-   Vollständigere Daten über ein Objekt abgerufen werden soll  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;T&gt; Union (System.Collections.Generic.IEnumerable&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableSet`1&lt;!T&gt; Union(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableSet`1.Union(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Auflistung, aus der Elemente hinzugefügt werden sollen.</param>
+        <summary>Erstellt eine unveränderliche Gruppe, die alle Elemente enthält, die entweder in der aktuellen Gruppe oder in der angegebenen Auflistung vorhanden sind.</summary>
+        <returns>Eine neue unveränderliche Gruppe mit den hinzugefügten Elementen; oder die ursprüngliche Gruppe, wenn alle Elemente bereits in der Gruppe enthalten waren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle doppelten Elemente, die in enthaltenen `other` werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

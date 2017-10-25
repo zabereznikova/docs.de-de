@@ -1,0 +1,1396 @@
+<Type Name="FileVersionInfo" FullName="System.Diagnostics.FileVersionInfo">
+  <TypeSignature Language="C#" Value="public sealed class FileVersionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileVersionInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.FileVersionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Versionsinformationen für eine physikalische Datei auf einem Datenträger bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Versionsnummer für die Datei ist eine 64-Bit-Zahl, die Versionsnummer für eine Datei wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FilePrivatePart%2A> Anzahl.  
+  
+ Verwenden der <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> Methode dieser Klasse zum Abrufen einer <xref:System.Diagnostics.FileVersionInfo> mit Informationen zu einer Datei, dann sehen Sie sich die Eigenschaften für Informationen zur Datei. Die <xref:System.Diagnostics.FileVersionInfo.FileVersion%2A> Eigenschaft enthält die Versionsinformationen zur Datei. Die <xref:System.Diagnostics.FileVersionInfo.ProductMajorPart%2A>, <xref:System.Diagnostics.FileVersionInfo.ProductMinorPart%2A>, <xref:System.Diagnostics.FileVersionInfo.ProductBuildPart%2A>, <xref:System.Diagnostics.FileVersionInfo.ProductPrivatePart%2A>, und <xref:System.Diagnostics.FileVersionInfo.ProductVersion%2A> Eigenschaften geben Sie Versionsinformationen für das Produkt, das die angegebene Datei gehört. Rufen Sie <xref:System.Diagnostics.FileVersionInfo.ToString%2A> auf eine unvollständige Liste der Eigenschaften und ihre Werte für diese Datei abzurufen.  
+  
+ Die <xref:System.Diagnostics.FileVersionInfo> Eigenschaften basieren auf Versionsressourceninformationen in die Datei erstellt. Versionsressourcen werden häufig in Binärdateien, z. B. .exe oder .dll-Dateien erstellt; Versionsinformationen für die Ressource keine Textdateien.  
+  
+ Versionsressourcen sind in der Regel in einer Win32-Ressourcendatei oder in Assemblyattribute angegeben. Z. B. die <xref:System.Diagnostics.FileVersionInfo.IsDebug%2A> Eigenschaft zeigt die `VS_FF_DEBUG` Flagwert in der Datei `VS_FIXEDFILEINFO` Block, der aus erstellt wird die `VERSIONINFO` Ressource in einer Win32-Ressourcendatei.  Weitere Informationen zum Angeben von Versionsressourcen in einer Win32-Ressourcendatei finden Sie unter "Über Ressourcendateien" und "VERSIONINFO-Ressource" im Plattform-SDK. Weitere Informationen zum Angeben von Versionsressourcen in einem Modul .NET finden Sie unter der [Festlegen von Assemblyattributen](~/docs/framework/app-domains/set-assembly-attributes.md) Thema.  
+  
+> [!NOTE]
+>  Diese Klasse stellt einen Linkaufruf auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn Sie der unmittelbaren Aufrufer nicht über die Berechtigung volle Vertrauenswürdigkeit verfügt. Ausführliche Informationen über Linkaufrufe finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Es gibt dann die Dateinummer Beschreibung und Version in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Comments">
+      <MemberSignature Language="C#" Value="public string Comments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comments" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.Comments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die der Datei zugeordneten Kommentare ab.</summary>
+        <value>Die der Datei zugeordneten Kommentare oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält zusätzliche Informationen, die um zu Diagnosezwecken angezeigt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Klicken Sie dann Kommentare die in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.Comments Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/Classic FileVersionInfo.Comments Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.Comments Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/Classic FileVersionInfo.Comments Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.Comments Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/Classic FileVersionInfo.Comments Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompanyName">
+      <MemberSignature Language="C#" Value="public string CompanyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompanyName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.CompanyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Unternehmens ab, das die Datei erstellt hat.</summary>
+        <value>Der Name des Unternehmens, dass die Datei erstellt hat, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.CompanyName%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.CompanyName Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.CompanyName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.CompanyName Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.CompanyName Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.CompanyName Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.CompanyName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileBuildPart">
+      <MemberSignature Language="C#" Value="public int FileBuildPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FileBuildPart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.FileBuildPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Buildnummer der Datei ab.</summary>
+        <value>Ein Wert, der die Buildnummer der Datei darstellt, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Versionsnummer für die Datei ist eine 64-Bit-Zahl, die Versionsnummer für eine Datei wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FilePrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft den dritten Satz von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.FileBuildPart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.FileBuildPart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileBuildPart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.FileBuildPart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileBuildPart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.FileBuildPart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileBuildPart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileDescription">
+      <MemberSignature Language="C#" Value="public string FileDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.FileDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung der Datei ab.</summary>
+        <value>Die Beschreibung der Datei oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.FileDescription%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.FileDescription Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileDescription Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.FileDescription Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileDescription Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.FileDescription Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileDescription Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileMajorPart">
+      <MemberSignature Language="C#" Value="public int FileMajorPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FileMajorPart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.FileMajorPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Hauptteil der Versionsnummer ab.</summary>
+        <value>Ein Wert, der den Hauptteil der Versionsnummer darstellt, oder 0, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Versionsnummer für die Datei ist eine 64-Bit-Zahl, die Versionsnummer für eine Datei wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FilePrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft den ersten Satz von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.FileMajorPart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.FileMajorPart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileMajorPart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.FileMajorPart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileMajorPart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.FileMajorPart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileMajorPart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileMinorPart">
+      <MemberSignature Language="C#" Value="public int FileMinorPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FileMinorPart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.FileMinorPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zweiten Teil der Versionsnummer (Nebenversionsnummer) der Datei ab.</summary>
+        <value>Ein Wert, der den Nebenteil der Versionsnummer der Datei darstellt, oder 0, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Versionsnummer für die Datei ist eine 64-Bit-Zahl, die Versionsnummer für eine Datei wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FilePrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft die zweite Gruppe von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.FileMinorPart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.FileMinorPart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileMinorPart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.FileMinorPart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileMinorPart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.FileMinorPart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileMinorPart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datei ab, die diese Instanz von <see cref="T:System.Diagnostics.FileVersionInfo" /> beschreibt.</summary>
+        <value>Der Name der Datei, die durch diese Instanz von <see cref="T:System.Diagnostics.FileVersionInfo" /> beschrieben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.FileName%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.FileName Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.FileName Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileName Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.FileName Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.FileName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Abrufen des Dateinamens. Zugeordnete Enumeration:<see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePrivatePart">
+      <MemberSignature Language="C#" Value="public int FilePrivatePart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FilePrivatePart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.FilePrivatePart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einzelteilnummer der Datei ab.</summary>
+        <value>Ein Wert, der die Einzelteilnummer der Datei darstellt, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Versionsnummer für die Datei ist eine 64-Bit-Zahl, die Versionsnummer für eine Datei wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FilePrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft den letzten Satz von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.FilePrivatePart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.FilePrivatePart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FilePrivatePart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.FilePrivatePart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.FilePrivatePart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.FilePrivatePart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.FilePrivatePart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileVersion">
+      <MemberSignature Language="C#" Value="public string FileVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.FileVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer der Datei ab.</summary>
+        <value>Die Versionsnummer von der Datei oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Versionsnummer für die Datei ist eine 64-Bit-Zahl, die Versionsnummer für eine Datei wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FileBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.FilePrivatePart%2A> Anzahl.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Es gibt dann die Dateinummer Beschreibung und Version in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[classic fileversioninfo example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/CPP/source.cpp#1)]
+ [!code-csharp[classic fileversioninfo example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/CS/source.cs#1)]
+ [!code-vb[classic fileversioninfo example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersionInfo">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.FileVersionInfo GetVersionInfo (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.FileVersionInfo GetVersionInfo(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.FileVersionInfo.GetVersionInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.FileVersionInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der voll gekennzeichnete Pfad und Name der Datei, für die die Versionsinformationen abgerufen werden sollen.</param>
+        <summary>Gibt eine <see cref="T:System.Diagnostics.FileVersionInfo" /> zurück, die die Versionsinformationen darstellt, die der angegebenen Datei zugeordnet sind.</summary>
+        <returns>Eine <see cref="T:System.Diagnostics.FileVersionInfo" /> mit Informationen über die Datei. Wenn in der Datei keine Versionsinformationen vorhanden sind, enthält <see cref="T:System.Diagnostics.FileVersionInfo" /> nur den Namen der angeforderten Datei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor und zeigt die Beschreibung und Version Zahl im Konsolenfenster angezeigt.  
+  
+ [!code-cpp[classic fileversioninfo example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/CPP/source.cpp#1)]
+ [!code-csharp[classic fileversioninfo example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/CS/source.cs#1)]
+ [!code-vb[classic fileversioninfo example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">Die angegebene Datei wurde nicht gefunden.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">um die Versionsinformationen abzurufen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalName">
+      <MemberSignature Language="C#" Value="public string InternalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InternalName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.InternalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den internen Namen der Datei ab, sofern vorhanden.</summary>
+        <value>Der interne Name der Datei. Wenn kein interner Name vorhanden ist, enthält diese Eigenschaft den ursprünglichen Namen der Datei ohne die Erweiterung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.InternalName%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.InternalName Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.InternalName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.InternalName Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.InternalName Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.InternalName Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.InternalName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDebug">
+      <MemberSignature Language="C#" Value="public bool IsDebug { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDebug" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.IsDebug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Datei Debuginformationen enthält oder mit aktivierten Debugfunktionen kompiliert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Datei Debuginformationen enthält oder mit aktivierten Debugfeatures kompiliert wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.FileVersionInfo> Eigenschaften basieren auf Versionsressourceninformationen in die Datei erstellt. Versionsressourcen werden häufig in Binärdateien, z. B. .exe oder .dll-Dateien erstellt; Versionsinformationen für die Ressource keine Textdateien.  
+  
+ Versionsressourcen sind in der Regel in einer Win32-Ressourcendatei oder in Assemblyattribute angegeben. Die <xref:System.Diagnostics.FileVersionInfo.IsDebug%2A> Eigenschaft zeigt die `VS_FF_DEBUG` Flagwert in der Datei `VS_FIXEDFILEINFO` Block, der aus erstellt wird die `VERSIONINFO` Ressource in einer Win32-Ressourcendatei. Weitere Informationen zum Angeben von Versionsressourcen in einer Win32-Ressourcendatei, finden Sie im Plattform-SDK `About Resource Files` Thema und `VERSIONINFO Resource` Themen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Er den Status der boolesche Wert zeigt <xref:System.Diagnostics.FileVersionInfo.IsDebug%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.IsDebug Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsDebug Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.IsDebug Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsDebug Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.IsDebug Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsDebug Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPatched">
+      <MemberSignature Language="C#" Value="public bool IsPatched { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPatched" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.IsPatched" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Datei geändert wurde und von der Originaldatei mit derselben Versionsnummer abweicht.</summary>
+        <value>
+          <see langword="true" />Wenn die Datei geändert wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Er den Status der boolesche Wert zeigt <xref:System.Diagnostics.FileVersionInfo.IsPatched%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.IsPatched Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPatched Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.IsPatched Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPatched Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.IsPatched Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPatched Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPreRelease">
+      <MemberSignature Language="C#" Value="public bool IsPreRelease { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPreRelease" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.IsPreRelease" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Datei eine Entwicklungsversion und kein kommerziell vertriebenes Produkt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Datei eine Vorabversion ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Es zeigt dann, ob diese Version einer Vorabversion in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.IsPreRelease Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPreRelease Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.IsPreRelease Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPreRelease Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.IsPreRelease Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPreRelease Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrivateBuild">
+      <MemberSignature Language="C#" Value="public bool IsPrivateBuild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrivateBuild" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.IsPrivateBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Datei mithilfe von Standardverfahren zum Release erstellt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Datei auf einem privaten Build ist; <see langword="false" /> , wenn die Datei mithilfe von Standardverfahren zur Veröffentlichung erstellt wurde oder wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Wert ist `true`, <xref:System.Diagnostics.FileVersionInfo.PrivateBuild%2A> wird beschrieben, wie diese Version der Datei von der Standardversion unterscheidet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Informationen über das private Build in einem Textfeld angezeigt. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.IsPrivateBuild Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPrivateBuild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.IsPrivateBuild Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPrivateBuild Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.IsPrivateBuild Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsPrivateBuild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpecialBuild">
+      <MemberSignature Language="C#" Value="public bool IsSpecialBuild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSpecialBuild" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.IsSpecialBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Datei ein besonderes Build ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Datei ein besonderes Build ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Datei, die ein besonderes Build ist mithilfe von Standardverfahren zur Veröffentlichung erstellt wurde, aber die Datei unterscheidet sich von einer Standarddatei mit derselben Versionsnummer abweicht. Wenn dieser Wert ist `true`die <xref:System.Diagnostics.FileVersionInfo.SpecialBuild%2A> -Eigenschaft muss angeben, wie sich diese Datei von der standard-Version unterscheidet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Es zeigt dann, ob diese Version ist eine spezielle Version in einem Textfeld erstellen. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.IsSpecialBuild Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsSpecialBuild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.IsSpecialBuild Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsSpecialBuild Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.IsSpecialBuild Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.IsSpecialBuild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge der Standardsprache für den Versionsinformationsblock ab.</summary>
+        <value>Die Beschreibungszeichenfolge für den Microsoft-Sprachbezeichner in der Versionsressource oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalCopyright">
+      <MemberSignature Language="C#" Value="public string LegalCopyright { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LegalCopyright" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.LegalCopyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Copyrighthinweise ab, die für die angegebene Datei gültig sind.</summary>
+        <value>Die Copyrighthinweise, die für die angegebene Datei gültig sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies sollte den vollständigen Text der Hinweise, rechtliche Symbole, copyright-Datumsangaben und So weiter enthalten oder `null` , wenn die Datei keine Versionsinformationen enthielt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.LegalCopyright%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.LegalCopyright Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.LegalCopyright Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.LegalCopyright Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.LegalCopyright Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.LegalCopyright Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.LegalCopyright Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalTrademarks">
+      <MemberSignature Language="C#" Value="public string LegalTrademarks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LegalTrademarks" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.LegalTrademarks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Marken und eingetragenen Marken ab, die die Datei betreffen.</summary>
+        <value>Die für die Datei gültigen Marken und eingetragenen Marken oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die eingetragenen Marken umfassen den vollständigen Text aller Hinweise, rechtliche Symbole und Markennummern.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.LegalTrademarks%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.LegalTrademarks Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.LegalTrademarks Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.LegalTrademarks Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.LegalTrademarks Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.LegalTrademarks Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.LegalTrademarks Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalFilename">
+      <MemberSignature Language="C#" Value="public string OriginalFilename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginalFilename" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.OriginalFilename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen ab, mit dem die Datei erstellt wurde.</summary>
+        <value>Der Name, mit dem die Datei erstellt wurde, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht eine Anwendung, um zu bestimmen, ob eine Datei umbenannt wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.OriginalFilename%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.OriginalFilename Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.OriginalFilename Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.OriginalFilename Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.OriginalFilename Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.OriginalFilename Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.OriginalFilename Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateBuild">
+      <MemberSignature Language="C#" Value="public string PrivateBuild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateBuild" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.PrivateBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über eine private Version der Datei ab.</summary>
+        <value>Informationen zu einer privaten Version der Datei oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Informationen sind vorhanden, wenn <xref:System.Diagnostics.FileVersionInfo.IsPrivateBuild%2A> ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Es gibt dann Informationen über das private Build in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.PrivateBuild Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.PrivateBuild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.PrivateBuild Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.PrivateBuild Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.PrivateBuild Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.PrivateBuild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductBuildPart">
+      <MemberSignature Language="C#" Value="public int ProductBuildPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProductBuildPart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.ProductBuildPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Buildnummer des Produkts ab, dem diese Datei zugeordnet ist.</summary>
+        <value>Ein Wert, der die Buildnummer des Produkts darstellt, dem diese Datei zugeordnet ist, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Produktversionsnummer ist eine 64-Bit-Zahl, die die Versionsnummer, wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductPrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft den dritten Satz von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.ProductBuildPart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.ProductBuildPart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductBuildPart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.ProductBuildPart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductBuildPart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.ProductBuildPart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductBuildPart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductMajorPart">
+      <MemberSignature Language="C#" Value="public int ProductMajorPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProductMajorPart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.ProductMajorPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Hauptteil der Versionsnummer des Produkts ab, dem diese Datei zugeordnet ist.</summary>
+        <value>Ein Wert, der den Hauptteil der Produktversionsnummer darstellt, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Produktversionsnummer ist eine 64-Bit-Zahl, die die Versionsnummer, wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductPrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft den ersten Satz von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.ProductMajorPart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.ProductMajorPart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductMajorPart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.ProductMajorPart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductMajorPart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.ProductMajorPart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductMajorPart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductMinorPart">
+      <MemberSignature Language="C#" Value="public int ProductMinorPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProductMinorPart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.ProductMinorPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zweiten Teil der Versionsnummer (Nebenversionsnummer) des Produkts ab, dem diese Datei zugeordnet ist.</summary>
+        <value>Ein Wert, der den Nebenteil der Produktversionsnummer darstellt, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Produktversionsnummer ist eine 64-Bit-Zahl, die die Versionsnummer, wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductPrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft die zweite Gruppe von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.ProductMinorPart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.ProductMinorPart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductMinorPart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.ProductMinorPart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductMinorPart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.ProductMinorPart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductMinorPart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductName">
+      <MemberSignature Language="C#" Value="public string ProductName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProductName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.ProductName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Produkts ab, mit dem diese Datei geliefert wird.</summary>
+        <value>Der Name des Produkts, mit dem diese Datei verteilt wird, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.ProductName%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.ProductName Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.ProductName Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductName Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.ProductName Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductPrivatePart">
+      <MemberSignature Language="C#" Value="public int ProductPrivatePart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProductPrivatePart" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.ProductPrivatePart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einzelteilnummer des Produkts ab, dem diese Datei zugeordnet ist.</summary>
+        <value>Ein Wert, der die Einzelteilnummer des Produkts darstellt, dem diese Datei zugeordnet ist, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Produktversionsnummer ist eine 64-Bit-Zahl, die die Versionsnummer, wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductPrivatePart%2A> Anzahl.  
+  
+ Diese Eigenschaft ruft den letzten Satz von 16 Bits lang sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.ProductPrivatePart%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.ProductPrivatePart Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductPrivatePart Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.ProductPrivatePart Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductPrivatePart Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.ProductPrivatePart Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductPrivatePart Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductVersion">
+      <MemberSignature Language="C#" Value="public string ProductVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProductVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.ProductVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des Produkts ab, mit dem diese Datei geliefert wird.</summary>
+        <value>Die Version des Produkts, mit dem diese Datei verteilt wird, oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird eine Versionsnummer als "wichtige number.minor wird number.private Teilenummer" angezeigt. Eine Produktversionsnummer ist eine 64-Bit-Zahl, die die Versionsnummer, wie folgt enthält:  
+  
+-   Die ersten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMajorPart%2A> Anzahl.  
+  
+-   Die nächste 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductMinorPart%2A> Anzahl.  
+  
+-   Die dritte Gruppe von 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductBuildPart%2A> Anzahl.  
+  
+-   Die letzten 16 Bits sind die <xref:System.Diagnostics.FileVersionInfo.ProductPrivatePart%2A> Anzahl.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend gibt die <xref:System.Diagnostics.FileVersionInfo.ProductVersion%2A> in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.ProductVersion Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductVersion Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.ProductVersion Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductVersion Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.ProductVersion Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.ProductVersion Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecialBuild">
+      <MemberSignature Language="C#" Value="public string SpecialBuild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SpecialBuild" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.FileVersionInfo.SpecialBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Informationen über das besondere Build für die Datei ab.</summary>
+        <value>Die besonderen Buildinformationen für die Datei oder <see langword="null" />, wenn die Datei keine Versionsinformationen enthielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Diagnostics.FileVersionInfo.IsSpecialBuild%2A> ist `true`, <xref:System.Diagnostics.FileVersionInfo.SpecialBuild%2A> müssen angeben, wie diese Datei die Standardversion der Datei unterscheidet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Es gibt dann die besonderen Buildinformationen in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.SpecialBuild Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.SpecialBuild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.SpecialBuild Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.SpecialBuild Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.SpecialBuild Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.SpecialBuild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.FileVersionInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.FileVersionInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine unvollständige Liste der Eigenschaften in <see cref="T:System.Diagnostics.FileVersionInfo" /> und deren Werte zurück.</summary>
+        <returns>Eine Liste der folgenden Eigenschaften in dieser Klasse und deren Werte:  
+  
+ <see cref="P:System.Diagnostics.FileVersionInfo.FileName" />, <see cref="P:System.Diagnostics.FileVersionInfo.InternalName" />, <see cref="P:System.Diagnostics.FileVersionInfo.OriginalFilename" />, <see cref="P:System.Diagnostics.FileVersionInfo.FileVersion" />, <see cref="P:System.Diagnostics.FileVersionInfo.FileDescription" />, <see cref="P:System.Diagnostics.FileVersionInfo.ProductName" />, <see cref="P:System.Diagnostics.FileVersionInfo.ProductVersion" />, <see cref="P:System.Diagnostics.FileVersionInfo.IsDebug" />, <see cref="P:System.Diagnostics.FileVersionInfo.IsPatched" />, <see cref="P:System.Diagnostics.FileVersionInfo.IsPreRelease" />, <see cref="P:System.Diagnostics.FileVersionInfo.IsPrivateBuild" />, <see cref="P:System.Diagnostics.FileVersionInfo.IsSpecialBuild" />,  
+  
+ <see cref="P:System.Diagnostics.FileVersionInfo.Language" />.  
+  
+ Wenn in der Datei keine Versionsinformationen vorhanden sind, enthält diese Liste nur den Namen der angeforderten Datei. Boolesche Werte sind auf <see langword="false" /> und alle anderen Einträge auf <see langword="null" /> festgelegt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Diagnostics.FileVersionInfo.GetVersionInfo%2A> zum Abrufen der <xref:System.Diagnostics.FileVersionInfo> für den Editor. Anschließend ruft <xref:System.Diagnostics.FileVersionInfo.ToString%2A> So drucken Sie eine Übersicht über die Dateiversionsinformationen in einem Textfeld. Dieser Code geht davon aus `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic FileVersionInfo.ToString Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ToString Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileVersionInfo.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileVersionInfo.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic FileVersionInfo.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileVersionInfo.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

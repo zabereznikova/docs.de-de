@@ -1,0 +1,1359 @@
+<Type Name="Splitter" FullName="System.Windows.Forms.Splitter">
+  <TypeSignature Language="C#" Value="public class Splitter : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Splitter extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Splitter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SplitterMoved")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Dock")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.SplitterDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Aufteilungssteuerelement dar, mit dem der Benutzer die Größe angedockter Steuerelemente ändern kann. <see cref="T:System.Windows.Forms.Splitter" />wurde ersetzt durch <see cref="T:System.Windows.Forms.SplitContainer" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Splitter> Control ermöglicht dem Benutzer, um die Größe von Steuerelementen, die an den Rändern eines angedockt sind die <xref:System.Windows.Forms.Splitter> Steuerelement zur Laufzeit. Wenn übergibt der Benutzer den Mauszeiger über die <xref:System.Windows.Forms.Splitter> zu steuern, ändert sich der Cursor, um anzugeben, dass die Steuerelemente angedockt der <xref:System.Windows.Forms.Splitter> Steuerelement geändert werden kann. Die <xref:System.Windows.Forms.Splitter> Control ermöglicht dem Benutzer die Größe des angedockten Steuerelements, das unmittelbar vor ihr in der Dockingstation Reihenfolge ist. Aus diesem Grund zum Aktivieren des Benutzers die Größe eines angedockten Steuerelements docken Sie das Steuerelement der Benutzer in der Lage, um die Größe um einen Rand eines Containers sein soll, und docken Sie anschließend eine Aufteilung auf der gleichen Seite des Containers. Zum Erstellen eines Fensters Windows Explorer ähnelt, z. B. Hinzufügen einer <xref:System.Windows.Forms.TreeView> zu einem Formular zu steuern, und legen Sie seine <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft `DockStyle.Left`. Hinzufügen einer <xref:System.Windows.Forms.Splitter> -Steuerelement auf das Formular, und legen Sie seine <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft `DockStyle.Left` ebenfalls. Um das Formularlayout abzuschließen, fügen Sie eine <xref:System.Windows.Forms.ListView> steuern und festlegen, seine <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft `DockStyle.Fill` haben die <xref:System.Windows.Forms.ListView> den verbleibenden Platz im Formular einnehmen. Zur Laufzeit kann der Benutzer dann die Breite des ändern die <xref:System.Windows.Forms.TreeView> Steuerelement (als auch die <xref:System.Windows.Forms.ListView> Steuerelement) durch Verschieben der <xref:System.Windows.Forms.Splitter> Steuerelement.  
+  
+ Um sicherzustellen, dass die <xref:System.Windows.Forms.Splitter> Größe Steuerelements Steuerelemente nicht angedockt auf eine Größe, die für den Benutzer hilfreich ist zu klein ist, verwenden Sie die <xref:System.Windows.Forms.Splitter.MinExtra%2A> und <xref:System.Windows.Forms.Splitter.MinSize%2A> Eigenschaften. Die <xref:System.Windows.Forms.Splitter.MinExtra%2A> und <xref:System.Windows.Forms.Splitter.MinSize%2A> Eigenschaften bestimmen die minimale Größe, die steuert, links und rechts angedockt (oder oben und unten, wenn eine horizontale <xref:System.Windows.Forms.Splitter> Steuerelement) vergrößert werden kann. Wenn die andere auf dem Formular Steuerelemente, die die <xref:System.Windows.Forms.Splitter> Steuerelement zum Anzeigen einer bestimmten Art des Rahmens angedockt wird, können Sie mithilfe der <xref:System.Windows.Forms.Splitter.BorderStyle%2A> Eigenschaft entsprechend die Rahmenart der Steuerelemente, die darauf angedockt sind.  
+  
+ Möglicherweise möchten Sie festlegen eine maximalen Größe für Steuerelemente, die <xref:System.Windows.Forms.Splitter> Steuerelement angedockt ist. Die <xref:System.Windows.Forms.Splitter.SplitterMoved> und <xref:System.Windows.Forms.Splitter.SplitterMoving> Ereignisse ermöglichen es Ihnen, zu bestimmen, wenn der Benutzer ein verankertes Steuerelement Größe ist. Können Sie die <xref:System.Windows.Forms.Splitter.SplitPosition%2A> Eigenschaft in einem Ereignishandler für die <xref:System.Windows.Forms.Splitter.SplitterMoved> oder <xref:System.Windows.Forms.Splitter.SplitterMoving> Ereignisse zur Bestimmung der Größe des Steuerelements, die die <xref:System.Windows.Forms.Splitter> Steuerelement angedockt ist, und legen Sie die <xref:System.Windows.Forms.Splitter.SplitPosition%2A> Eigenschaft auf einen anderen Wert der angedockten beschränken die Breite des Steuerelements auf eine angegebene maximale Breite (oder Höhe bei einem horizontal ausgerichteten <xref:System.Windows.Forms.Splitter> Steuerelement).  
+  
+> [!NOTE]
+>  Ändern der Größe von einem Steuerelement mithilfe der <xref:System.Windows.Forms.Splitter> Steuerelement kann nur erfolgen mithilfe der Maus. Es ist nicht möglich, den Zugriff auf die <xref:System.Windows.Forms.Splitter> mithilfe der Tastatur zu steuern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Forms.Splitter> -Steuerelement in Kombination mit <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente beim Erstellen eines Fensters in Windows Explorer ähnelt. Zum Identifizieren der <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente, Knoten und Elemente werden hinzugefügt, um beide Steuerelemente. Im Beispiel wird die <xref:System.Windows.Forms.Splitter.MinExtra%2A> und <xref:System.Windows.Forms.Splitter.MinSize%2A> Eigenschaften der <xref:System.Windows.Forms.Splitter> um zu verhindern, dass der <xref:System.Windows.Forms.TreeView> oder <xref:System.Windows.Forms.ListView> -Steuerelement aus, dessen Größe geändert zu groß oder zu klein. Dieses Beispiel benötigen Sie, dass die Methode, die in diesem Beispiel erstellte in definiert ist ein <xref:System.Windows.Forms.Form> und, die die Methode wird vom Konstruktor aufgerufen der <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Splitter Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Splitter Example/CPP/form1.cpp#1)]
+ [!code-csharp[Splitter Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Splitter Example/CS/form1.cs#1)]
+ [!code-vb[Splitter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Splitter Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Splitter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Splitter" />-Klasse. <see cref="T:System.Windows.Forms.Splitter" />wurde ersetzt durch <see cref="T:System.Windows.Forms.SplitContainer" />, und wird nur für Kompatibilität mit früheren Versionen bereitgestellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.Splitter.MinSize%2A> und <xref:System.Windows.Forms.Splitter.MinExtra%2A> Eigenschaften werden auf 25 festgelegt. Die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaftensatz auf `DockStyle.Left` standardmäßig.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Forms.Splitter> -Steuerelement in Kombination mit <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente beim Erstellen eines Fensters in Windows Explorer ähnelt. Zum Identifizieren der <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente, Knoten und Elemente werden hinzugefügt, um beide Steuerelemente. Im Beispiel wird die <xref:System.Windows.Forms.Splitter.MinExtra%2A> und <xref:System.Windows.Forms.Splitter.MinSize%2A> Eigenschaften der <xref:System.Windows.Forms.Splitter> um zu verhindern, dass der <xref:System.Windows.Forms.TreeView> oder <xref:System.Windows.Forms.ListView> -Steuerelement aus, dessen Größe geändert zu groß oder zu klein. Dieses Beispiel benötigen Sie, dass die Methode, die in diesem Beispiel erstellte in definiert ist ein <xref:System.Windows.Forms.Form> und, die die Methode wird vom Konstruktor aufgerufen der <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Splitter Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Splitter Example/CPP/form1.cpp#1)]
+ [!code-csharp[Splitter Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Splitter Example/CS/form1.cs#1)]
+ [!code-vb[Splitter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Splitter Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDrop">
+      <MemberSignature Language="C#" Value="public override bool AllowDrop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDrop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.AllowDrop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          Im aktivierten Zustand <see langword="true" />, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Anchor">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AnchorStyles Anchor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AnchorStyles Anchor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.Anchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.AnchorStyles" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Das im Steuerelement angezeigte Hintergrundbild.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImageLayout" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stil des Rahmens für das Steuerelement ab. <see cref="P:System.Windows.Forms.Splitter.BorderStyle" />wurde ersetzt durch <see cref="P:System.Windows.Forms.SplitContainer.BorderStyle" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.BorderStyle" />-Werte. Die Standardeinstellung ist <see langword="BorderStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist in der Regel verwendet, wenn die Steuerelemente der <xref:System.Windows.Forms.Splitter> Steuerelement angedockt ist, mit einer bestimmten Rahmenart angezeigt werden und Sie möchten die <xref:System.Windows.Forms.Splitter> Steuerelement Darstellungsart übereinstimmen. Angenommen, Sie haben eine <xref:System.Windows.Forms.TreeView> und ein <xref:System.Windows.Forms.ListView> zu steuern, die die <xref:System.Windows.Forms.Splitter> Steuerelement angedockt wird an, dass Sie ohne Rahmen anzeigen möchten, legen Sie die <xref:System.Windows.Forms.Splitter.BorderStyle%2A> Eigenschaft, um `BorderStyle.None`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert der Eigenschaft ist nicht die <see cref="T:System.Windows.Forms.BorderStyle" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die zum Erstellen des Handles erforderlichen Parameter zurück.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erbende Klassen kann diese Eigenschaft zum Bereitstellen zusätzlicher Funktionalität überschreiben. Achten Sie darauf, allerdings, dass diese Klassen Aufruf `base.getCreateParams()` zuerst an, um die Struktur enthält die grundlegende Informationen zu erhalten.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCursor">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Cursor DefaultCursor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor DefaultCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.DefaultCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardcursor für das Steuerelement ab oder legt ihn fest.</summary>
+        <value>Ein Objekt vom Typ <see cref="T:System.Windows.Forms.Cursor" />, das den aktuellen Standardcursor darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von diesem Steuerelement unterstützten Standardmodus des IME (Eingabemethoden-Editor) ab.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die Standardgröße des Steuerelements darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dock">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DockStyle Dock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle Dock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.Dock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, welche <see cref="T:System.Windows.Forms.Splitter" />-Rahmen am übergeordneten Steuerelement angedockt sind, und bestimmt, wie die Größe eines <see cref="T:System.Windows.Forms.Splitter" /> mit dem übergeordneten Steuerelement geändert wird.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DockStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DockStyle.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Splitter.Dock%2A> Eigenschaft definieren, wie die Größe eines Steuerelements automatisch geändert wird, während das übergeordnete Steuerelement angepasst wird. Sie können nur Festlegen der <xref:System.Windows.Forms.Splitter.Dock%2A> Eigenschaft, um <xref:System.Windows.Forms.DockStyle.Top>, <xref:System.Windows.Forms.DockStyle.Bottom>, <xref:System.Windows.Forms.DockStyle.Left>, oder <xref:System.Windows.Forms.DockStyle.Right>. Die <xref:System.Windows.Forms.Splitter> Control ermöglicht dem Benutzer die Größe des angedockten Steuerelements, das unmittelbar vor ihr in der Dockingstation Reihenfolge ist. Um dem Benutzer die Größe eines angedockten Steuerelements zu ermöglichen, daher docken Sie das Steuerelement an eine Kante der einen Container, und docken Sie anschließend eine <xref:System.Windows.Forms.Splitter> Steuerelement auf der gleichen Seite des Containers. Weitere Informationen finden Sie im Beispiel in der <xref:System.Windows.Forms.Splitter> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Forms.Splitter.Dock" />nicht festgelegt ist, auf einen der gültigen <see cref="T:System.Windows.Forms.DockStyle" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public event EventHandler Enter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Enter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.Enter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Die Schriftart des Texts, der vom Steuerelement angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Die Vordergrundfarbe des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyPressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="public event EventHandler Leave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Leave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.Leave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinExtra">
+      <MemberSignature Language="C#" Value="public int MinExtra { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinExtra" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.MinExtra" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(25)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nicht zu unterschreitenden Mindestabstand zwischen dem Aufteilungssteuerelement und dem Rand der gegenüberliegenden Seite des Containers (oder dem nächsten an dieser Seite angedockten Steuerelement) ab oder legt diesen Mindestabstand fest. <see cref="P:System.Windows.Forms.Splitter.MinExtra" />wurde ersetzt durch ähnliche Eigenschaften in <see cref="T:System.Windows.Forms.SplitContainer" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <value>Der Mindestabstand in Pixel, zwischen den <see cref="T:System.Windows.Forms.Splitter" /> Steuerelement und dem Rand der entgegengesetzten Seite des Containers (oder dem nächsten Steuerelement auf dieser Seite angedockt). Der Standard ist 25.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem horizontalen <xref:System.Windows.Forms.Splitter> Steuerelement (eine <xref:System.Windows.Forms.Splitter> Steuerelement angedockt wird, um die oberen oder unteren Rand eines Containers), die minimale Höhe des Bereichs des Containers nicht angedockter Steuerungsport reserviert ist dieser Wert abzüglich der Höhe des der <xref:System.Windows.Forms.Splitter> Steuerelement. Bei einem vertikalen <xref:System.Windows.Forms.Splitter> Steuerelement (eine <xref:System.Windows.Forms.Splitter> Steuerelement angedockt, links oder rechts von einem Container), die minimale Breite des Bereichs des Containers nicht angedockter Steuerungsport reserviert ist dieser Wert abzüglich der Breite des der <xref:System.Windows.Forms.Splitter> Steuerelement. Der Benutzer kann nicht den Splitter über die von dieser Eigenschaft angegebene Limit hinaus verschoben.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.Splitter.MinExtra%2A> Eigenschaft auf einen negativen Wert festgelegt ist, den Wert der Eigenschaft auf 0 zurückgesetzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Forms.Splitter> -Steuerelement in Kombination mit <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente beim Erstellen eines Fensters in Windows Explorer ähnelt. Zum Identifizieren der <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente, Knoten und Elemente werden hinzugefügt, um beide Steuerelemente. Im Beispiel wird die <xref:System.Windows.Forms.Splitter.MinExtra%2A> und <xref:System.Windows.Forms.Splitter.MinSize%2A> Eigenschaften der <xref:System.Windows.Forms.Splitter> um zu verhindern, dass der <xref:System.Windows.Forms.TreeView> oder <xref:System.Windows.Forms.ListView> -Steuerelement aus, dessen Größe geändert zu groß oder zu klein. Dieses Beispiel benötigen Sie, dass die Methode, die in diesem Beispiel erstellte in definiert ist ein <xref:System.Windows.Forms.Form> und, die die Methode wird vom Konstruktor aufgerufen der <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Splitter Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Splitter Example/CPP/form1.cpp#1)]
+ [!code-csharp[Splitter Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Splitter Example/CS/form1.cs#1)]
+ [!code-vb[Splitter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Splitter Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSize">
+      <MemberSignature Language="C#" Value="public int MinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.MinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(25)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Mindestabstand, der zwischen der Splitter-Steuerelement und dem Rand des Containers, dem auf das Steuerelement angedockt ist bleiben muss. <see cref="P:System.Windows.Forms.Splitter.MinSize" />wurde ersetzt durch <see cref="P:System.Windows.Forms.SplitContainer.Panel1MinSize" /> und <see cref="P:System.Windows.Forms.SplitContainer.Panel2MinSize" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <value>Der Mindestabstand in Pixel, zwischen den <see cref="T:System.Windows.Forms.Splitter" /> Steuerelement und dem Rand des Containers, die auf das Steuerelement angedockt ist. Der Standard ist 25.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem horizontalen <xref:System.Windows.Forms.Splitter> Steuerelement (ein <xref:System.Windows.Forms.Splitter> Steuerelement angedockt wird, um die oberen oder unteren Rand eines Containers), dieser Wert ist die minimale Höhe des Steuerelements geändert werden kann. Bei einem vertikalen <xref:System.Windows.Forms.Splitter> Steuerelement (ein <xref:System.Windows.Forms.Splitter> Steuerelement angedockt, links oder rechts von einem Container), dieser Wert ist die minimale Breite des Steuerelements geändert werden kann. Der Benutzer kann nicht den Splitter über die von dieser Eigenschaft angegebene Limit hinaus verschoben.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.Splitter.MinSize%2A> Eigenschaft auf einen negativen Wert festgelegt ist, den Wert der Eigenschaft auf 0 zurückgesetzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Forms.Splitter> -Steuerelement in Kombination mit <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente beim Erstellen eines Fensters in Windows Explorer ähnelt. Zum Identifizieren der <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente, Knoten und Elemente werden hinzugefügt, um beide Steuerelemente. Im Beispiel wird die <xref:System.Windows.Forms.Splitter.MinExtra%2A> und <xref:System.Windows.Forms.Splitter.MinSize%2A> Eigenschaften der <xref:System.Windows.Forms.Splitter> um zu verhindern, dass der <xref:System.Windows.Forms.TreeView> oder <xref:System.Windows.Forms.ListView> -Steuerelement aus, dessen Größe geändert zu groß oder zu klein. Dieses Beispiel benötigen Sie, dass die Methode, die in diesem Beispiel erstellte in definiert ist ein <xref:System.Windows.Forms.Form> und, die die Methode wird vom Konstruktor aufgerufen der <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Splitter Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Splitter Example/CPP/form1.cpp#1)]
+ [!code-csharp[Splitter Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Splitter Example/CS/form1.cs#1)]
+ [!code-vb[Splitter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Splitter Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Diese Methode ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseDown" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Splitter.OnMouseDown%2A> Methode beginnt, ziehen die `Splitter` Steuerelement ändern der Größe der angedockten Steuerelements, das unmittelbar vor der `Splitter` in der Dockingstation Reihenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseMove" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer Sie linke Maustaste gedrückt hält, und die Maus so bewegt, den <xref:System.Windows.Forms.Splitter.OnMouseMove%2A> -Methode verschiebt die <xref:System.Windows.Forms.Splitter> Steuerelement ändern der Größe der angedockten Steuerelements, das unmittelbar vor der <xref:System.Windows.Forms.Splitter> in der Dockingstation Reihenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseUp" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Splitter.OnMouseUp%2A> Methode ändert die Größe der angedockten Steuerelements, das unmittelbar vor dem Splitter in der Dockingstation Reihenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSplitterMoved">
+      <MemberSignature Language="C#" Value="protected virtual void OnSplitterMoved (System.Windows.Forms.SplitterEventArgs sevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSplitterMoved(class System.Windows.Forms.SplitterEventArgs sevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.OnSplitterMoved(System.Windows.Forms.SplitterEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sevent" Type="System.Windows.Forms.SplitterEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sevent">Ein <see cref="T:System.Windows.Forms.SplitterEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Splitter.SplitterMoved" />-Ereignis aus. <see cref="M:System.Windows.Forms.Splitter.OnSplitterMoved(System.Windows.Forms.SplitterEventArgs)" />wurde ersetzt durch <see cref="M:System.Windows.Forms.SplitContainer.OnSplitterMoved(System.Windows.Forms.SplitterEventArgs)" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Splitter.OnSplitterMoved%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Splitter.OnSplitterMoved(System.Windows.Forms.SplitterEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Splitter.OnSplitterMoved(System.Windows.Forms.SplitterEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSplitterMoving">
+      <MemberSignature Language="C#" Value="protected virtual void OnSplitterMoving (System.Windows.Forms.SplitterEventArgs sevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSplitterMoving(class System.Windows.Forms.SplitterEventArgs sevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.OnSplitterMoving(System.Windows.Forms.SplitterEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sevent" Type="System.Windows.Forms.SplitterEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sevent">Ein <see cref="T:System.Windows.Forms.SplitterEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Splitter.SplitterMoving" />-Ereignis aus. <see cref="M:System.Windows.Forms.Splitter.OnSplitterMoving(System.Windows.Forms.SplitterEventArgs)" />wurde ersetzt durch <see cref="M:System.Windows.Forms.SplitContainer.OnSplitterMoving(System.Windows.Forms.SplitterCancelEventArgs)" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Splitter.OnSplitterMoving%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Splitter.OnSplitterMoving(System.Windows.Forms.SplitterEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Splitter.OnSplitterMoving(System.Windows.Forms.SplitterEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der neue <see cref="P:System.Windows.Forms.Control.Left" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="y">Der neue <see cref="P:System.Windows.Forms.Control.Top" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="width">Der neue <see cref="P:System.Windows.Forms.Control.Width" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="height">Der neue <see cref="P:System.Windows.Forms.Control.Height" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="specified">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.BoundsSpecified" />-Werte.</param>
+        <summary>Legt die angegebenen Begrenzungen dieses Steuerelements fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitPosition">
+      <MemberSignature Language="C#" Value="public int SplitPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SplitPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.SplitPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen dem Aufteilungssteuerelement und dem Rand des Containers ab, an den das Steuerelement angedockt ist, oder legt diesen fest. <see cref="P:System.Windows.Forms.Splitter.SplitPosition" />wurde ersetzt durch <see cref="P:System.Windows.Forms.SplitContainer.Panel1MinSize" /> und <see cref="P:System.Windows.Forms.SplitContainer.Panel2MinSize" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <value>Der Abstand in Pixel, zwischen den <see cref="T:System.Windows.Forms.Splitter" /> Steuerelement und dem Rand des Containers, die auf das Steuerelement angedockt ist. Wenn die <see cref="T:System.Windows.Forms.Splitter" /> -Steuerelement nicht an ein Steuerelement gebunden ist, der Wert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem horizontalen <xref:System.Windows.Forms.Splitter> Steuerelement (ein <xref:System.Windows.Forms.Splitter> Steuerelement angedockt wird, um die oberen oder unteren Rand eines Containers), dieser Wert ist die Höhe des Steuerelements geändert werden kann. Bei einem vertikalen <xref:System.Windows.Forms.Splitter> Steuerelement (ein <xref:System.Windows.Forms.Splitter> Steuerelement angedockt, links oder rechts von einem Container), dieser Wert ist die Breite des Steuerelements geändert werden kann. Können Sie die <xref:System.Windows.Forms.Splitter.SplitPosition%2A> Eigenschaft in einem Ereignishandler für die <xref:System.Windows.Forms.Splitter.SplitterMoved> oder <xref:System.Windows.Forms.Splitter.SplitterMoving> Ereignisse zur Bestimmung der Größe des Steuerelements, das <xref:System.Windows.Forms.Splitter> Steuerelement angedockt ist, und beschränken Sie seine Breite auf eine angegebene maximale Breite (oder der Höhe Wenn ein horizontal angedockten <xref:System.Windows.Forms.Splitter> Steuerelement).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterMoved">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.SplitterEventHandler SplitterMoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.SplitterEventHandler SplitterMoved" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.SplitterMoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SplitterEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Verschieben des Aufteilungssteuerelements ein. <see cref="E:System.Windows.Forms.Splitter.SplitterMoved" />wurde ersetzt durch <see cref="E:System.Windows.Forms.SplitContainer.SplitterMoved" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können, erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignis Resize-Validierung in Ihrer Anwendung durchführen. Z. B. wenn ein <xref:System.Windows.Forms.Splitter> an den Rändern des Steuerelements angedockt ist ein <xref:System.Windows.Forms.TreeView> Steuerelement und ein <xref:System.Windows.Forms.ListView> -Steuerelement, können Sie Code schreiben, der <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignis, um festzustellen, wo die Größe Mindest- oder Höchstwerte für die <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente überschritten wurde und die Größe der Steuerelemente auf ihre minimale oder maximale Größe.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Splitter> mit dem Namen `Splitter1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#550](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#550)]
+ [!code-vb[System.Windows.Forms.EventExamples#550](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#550)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterMoving">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.SplitterEventHandler SplitterMoving;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.SplitterEventHandler SplitterMoving" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.SplitterMoving" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SplitterEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während des Verschiebens des Aufteilungssteuerelements ein. <see cref="E:System.Windows.Forms.Splitter.SplitterMoving" />wurde ersetzt durch <see cref="E:System.Windows.Forms.SplitContainer.SplitterMoving" /> und dient nur zur Kompatibilität mit früheren Versionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können, erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Splitter.SplitterMoving> Ereignis Resize-Validierung in Ihrer Anwendung durchführen. Z. B. wenn ein <xref:System.Windows.Forms.Splitter> an den Rändern des Steuerelements angedockt ist ein <xref:System.Windows.Forms.TreeView> Steuerelement und ein <xref:System.Windows.Forms.ListView> -Steuerelement, können Sie Code schreiben, der <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignis, um festzustellen, wo die Größe Mindest- oder Höchstwerte für die <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelemente überschritten wurde und die Größe der Steuerelemente auf ihre minimale oder maximale Größe.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Splitter.SplitterMoving> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Splitter> mit dem Namen `Splitter1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Splitter.SplitterMoving> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#549](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#549)]
+ [!code-vb[System.Windows.Forms.EventExamples#549](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#549)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          Im aktivierten Zustand <see langword="true" />, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStopChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.TabStopChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Splitter.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Eine Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Splitter.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Splitter.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das <see cref="T:System.Windows.Forms.Splitter" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Windows.Forms.Splitter" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Splitter.ToString%2A> Methode gibt eine Zeichenfolge, die den Typ und die Werte für umfasst die <xref:System.Windows.Forms.Splitter.MinSize%2A> und <xref:System.Windows.Forms.Splitter.MinExtra%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

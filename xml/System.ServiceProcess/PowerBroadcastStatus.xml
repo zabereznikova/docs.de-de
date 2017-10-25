@@ -1,0 +1,189 @@
+<Type Name="PowerBroadcastStatus" FullName="System.ServiceProcess.PowerBroadcastStatus">
+  <TypeSignature Language="C#" Value="public enum PowerBroadcastStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PowerBroadcastStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.PowerBroadcastStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Systemenergiezustand an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceProcess.PowerBroadcastStatus>wird verwendet, durch die <xref:System.ServiceProcess.ServiceBase> Klasse, um eine Änderung in der Systemenergiezustand anzugeben. Sie können die Anwendung, zu jeder statusänderung Power reagieren entwerfen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BatteryLow">
+      <MemberSignature Language="C#" Value="BatteryLow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus BatteryLow = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.BatteryLow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Akkubetrieb ist gering.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OemEvent">
+      <MemberSignature Language="C#" Value="OemEvent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus OemEvent = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.OemEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein BIOS Advanced Power Management (APM) wird ein APM-OEM-Ereignis signalisiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerStatusChange">
+      <MemberSignature Language="C#" Value="PowerStatusChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus PowerStatusChange = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.PowerStatusChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Änderung in Energiezustand des Computers wird, z. B. ein Switch über Akkubetrieb mit Wechselstrom erkannt. Das System sendet auch dieses Ereignis, wenn verbleibende Akkubetrieb unterhalb des Schwellenwerts, der vom Benutzer angegebenen verzögert oder um einen angegebenen Prozentwert des Akkus ändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QuerySuspend">
+      <MemberSignature Language="C#" Value="QuerySuspend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus QuerySuspend = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.QuerySuspend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das System hat die Berechtigung zum Anhalten des Computers angefordert. Eine Anwendung, die die Berechtigung erteilt sollte vor der Rückgabe Vorbereitungen für die Unterbrechung durchzuführen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QuerySuspendFailed">
+      <MemberSignature Language="C#" Value="QuerySuspendFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus QuerySuspendFailed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.QuerySuspendFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das System wurde über die Berechtigung zum Anhalten von des Computers verweigert. Dieser Status wird gesendet, wenn eine Anwendung oder Treiber einer früheren verweigert <see langword="QuerySuspend" /> Status.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeAutomatic">
+      <MemberSignature Language="C#" Value="ResumeAutomatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus ResumeAutomatic = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.ResumeAutomatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Computer wurde automatisch für die Ereignisbehandlung reaktiviert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nach dem Senden Benutzeraktivität festgestellt `ResumeAutomatic`, überträgt er eine `ResumeSuspend` Ereignis, um Anwendungen kennen, können sie vollständige Interaktion mit dem Benutzer fortsetzen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeCritical">
+      <MemberSignature Language="C#" Value="ResumeCritical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus ResumeCritical = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.ResumeCritical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das System hat Vorgang, nachdem Sie einer kritischen Unterbrechung durch einen fehlerhaften Akku verursacht fortgesetzt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Da eine kritische Unterbrechung ohne vorherige Benachrichtigung auftritt, Ressourcen und Daten, die zuvor verfügbar waren möglicherweise nicht vorhanden, wenn die Anwendung dieses Ereignis empfängt. Die Anwendung sollten versuchen, um dessen Status wiederherzustellen, die am besten von nutzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeSuspend">
+      <MemberSignature Language="C#" Value="ResumeSuspend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus ResumeSuspend = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.ResumeSuspend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das System hat Vorgang, nachdem er angehalten wurde fortgesetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspend">
+      <MemberSignature Language="C#" Value="Suspend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.PowerBroadcastStatus Suspend = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.PowerBroadcastStatus.Suspend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.PowerBroadcastStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Computer ist in einem angehaltenen Zustand übergeht. Dieses Ereignis wird in der Regel übertragen werden, wenn alle Anwendungen und installierbare Treiber zurückgegeben haben <see langword="true" /> auf einen früheren <see langword="QuerySuspend" /> Zustand.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

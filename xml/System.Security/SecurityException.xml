@@ -1,0 +1,1053 @@
+<Type Name="SecurityException" FullName="System.Security.SecurityException">
+  <TypeSignature Language="C#" Value="public class SecurityException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SecurityException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SecurityException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Ausnahme wird ausgelöst, wenn ein Sicherheitsfehler erkannt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Security.SecurityException> Ausnahme wird ausgelöst, wenn ein Aufrufer nicht über die erforderlichen Berechtigungen zum Zugriff auf eine Ressource verfügt. Im folgenden Beispiel wird instanziiert ein <xref:System.Security.PermissionSet> -Objekt, das enthält eine <xref:System.Security.Permissions.UIPermission> Objekt, das Zugriff auf Benutzeroberflächenobjekte und die Zwischenablage zuzulassen und ein <xref:System.Security.Permissions.RegistryPermission> Objekt, das Zugriff auf die Registrierung zu verhindern. Der Aufruf der <xref:System.Security.PermissionSet.PermitOnly%2A?displayProperty=nameWithType> Methode bedeutet, dass diese Berechtigungen, unabhängig von den Berechtigungen, die an den Aufrufer zugewiesen angewendet werden. Daher löst der Versuch, einen Registrierungsschlüssel erstellen eine <xref:System.Security.SecurityException>.  
+  
+ [!code-csharp[System.SecurityException.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.securityexception.class/cs/se_ex1.cs#1)]
+ [!code-vb[System.SecurityException.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.securityexception.class/vb/se_ex1.vb#1)]  
+  
+ <xref:System.Security.SecurityException>verwendet die HRESULT COR_E_SECURITY mit dem Wert 0x8013150A.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von der <xref:System.Security.SecurityException> Klasse, finden Sie unter einem bestimmten <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SecurityException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel für die Verwendung von einem <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor, finden Sie im Beispiel für die <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SecurityException" />-Klasse mit Standardeigenschaften.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Security.SecurityException>-Klasse.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die Verwendung von einem <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor, finden Sie im Beispiel für die <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SecurityException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Security.SecurityException>-Klasse.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die Verwendung von einem <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor, finden Sie im Beispiel für die <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SecurityException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen.  
+  
+ Dieser Konstruktor legt die folgenden Eigenschaftswerte anhand der Informationen in den `info` Parameter:  
+  
+-   <xref:System.Security.SecurityException.Action%2A>  
+  
+-   <xref:System.Security.SecurityException.FirstPermissionThatFailed%2A>  
+  
+-   <xref:System.Security.SecurityException.Demanded%2A>  
+  
+-   <xref:System.Security.SecurityException.RefusedSet%2A>  
+  
+-   <xref:System.Security.SecurityException.DenySetInstance%2A>  
+  
+-   <xref:System.Security.SecurityException.PermitOnlySetInstance%2A>  
+  
+-   <xref:System.Security.SecurityException.FailedAssemblyInfo%2A>  
+  
+-   <xref:System.Security.SecurityException.Method%2A>  
+  
+-   <xref:System.Security.SecurityException.Zone%2A>  
+  
+-   <xref:System.Security.SecurityException.Url%2A>  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die Verwendung von einem <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor, finden Sie im Beispiel für die <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SecurityException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Security.SecurityException>-Klasse.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die Verwendung von einem <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor, finden Sie im Beispiel für die <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityException (string message, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="type">Der Berechtigungstyp, der das Auslösen der Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.SecurityException" /> Klasse mit einer angegebenen Fehlermeldung und dem Berechtigungstyp, der die Ausnahme ausgelöst wird, verursacht hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Eigenschaftswerte, die von diesem Konstruktor festgelegt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der lokalisierten Fehlermeldung gemäß `message`.|  
+|<xref:System.Security.SecurityException.PermissionType%2A>|Die <xref:System.Type> der Berechtigung, die Fehler, angegeben durch `type`.|  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die Verwendung von einem <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor, finden Sie im Beispiel für die <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityException (string message, Type type, string state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Type type, string state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor(System.String,System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="state" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="type">Der Berechtigungstyp, der das Auslösen der Ausnahme verursacht hat.</param>
+        <param name="state">Der Berechtigungszustand, der das Auslösen der Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.SecurityException" /> -Klasse mit einer angegebenen Fehlermeldung, dem Berechtigungstyp, der die Ausnahme ausgelöst werden und dem Berechtigungszustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Eigenschaftswerte, die von diesem Konstruktor festgelegt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der lokalisierten Fehlermeldung gemäß `message`.|  
+|<xref:System.Security.SecurityException.PermissionType%2A>|Die <xref:System.Type> der Berechtigung, die Fehler, angegeben durch `type`.|  
+|<xref:System.Security.SecurityException.Demanded%2A>|Die angeforderte Sicherheitsberechtigung, Berechtigungssatz, ein Berechtigungssatz oder Sammlung, die Fehler.|  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die Verwendung von einem <xref:System.Security.SecurityException.%23ctor%2A> Konstruktor, finden Sie im Beispiel für die <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityException (string message, object deny, object permitOnly, System.Reflection.MethodInfo method, object demanded, System.Security.IPermission permThatFailed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, object deny, object permitOnly, class System.Reflection.MethodInfo method, object demanded, class System.Security.IPermission permThatFailed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor(System.String,System.Object,System.Object,System.Reflection.MethodInfo,System.Object,System.Security.IPermission)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="deny" Type="System.Object" />
+        <Parameter Name="permitOnly" Type="System.Object" />
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="demanded" Type="System.Object" />
+        <Parameter Name="permThatFailed" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="deny">Die verweigerte Berechtigung oder der verweigerte Berechtigungssatz.</param>
+        <param name="permitOnly">Die "PermitOnly"-Berechtigung oder der "PermitOnly"-Berechtigungssatz.</param>
+        <param name="method">Ein <see cref="T:System.Reflection.MethodInfo" /> zur Identifikation der Methode, die die Ausnahme aufgetreten.</param>
+        <param name="demanded">Die angeforderte Berechtigung, der angeforderte Berechtigungssatz oder die angeforderte Auflistung von Berechtigungen.</param>
+        <param name="permThatFailed">Ein <see cref="T:System.Security.IPermission" /> , identifiziert die fehlerhaften Berechtigung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.SecurityException" /> Klasse für eine Ausnahme, die durch eine DENY-Anweisung auf dem Stapel verursacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn ein Frame, der eine DENY-Anweisung enthält den Bedarf-Fehler verursacht hat. Die folgende Tabelle zeigt die Eigenschaftswerte, die von diesem Konstruktor festgelegt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der lokalisierten Fehlermeldung gemäß `message`.|  
+|<xref:System.Security.SecurityException.FirstPermissionThatFailed%2A>|Die erste Berechtigung in den Berechtigungssatz festgelegt oder durch die angegebene Sammlung Berechtigungssatz `permThatFailed`.|  
+|<xref:System.Security.SecurityException.GrantedSet%2A>|Eine leere Zeichenfolge.|  
+|<xref:System.Security.SecurityException.Demanded%2A>|Die Sicherheitsberechtigung Berechtigungssatz oder die Berechtigungssatz durch die angegebene Sammlung `demanded`.|  
+|<xref:System.Security.SecurityException.RefusedSet%2A>|Eine leere Zeichenfolge.|  
+|<xref:System.Security.SecurityException.DenySetInstance%2A>|Die verweigerten Sicherheitsberechtigung Berechtigungssatz oder die Berechtigungssatz durch die angegebene Sammlung `deny`.|  
+|<xref:System.Security.SecurityException.PermitOnlySetInstance%2A>|Die Berechtigung Berechtigungssatzes oder Berechtigungssatz durch die angegebene Sammlung `permitOnly`.|  
+|<xref:System.Security.SecurityException.FailedAssemblyInfo%2A>|`null`.|  
+|<xref:System.Security.SecurityException.Method%2A>|Die von <xref:System.Reflection.MethodInfo> angegebene `method`.|  
+|<xref:System.Security.SecurityException.Zone%2A>|<xref:System.Security.SecurityZone.NoZone>.|  
+|<xref:System.Security.SecurityException.Url%2A>|Eine leere Zeichenfolge.|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.SecurityException.%23ctor%28System.String%2CSystem.Object%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Object%2CSystem.Security.IPermission%29> Konstruktor.  
+  
+ [!code-cpp[System.Security.SecurityException#16](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.SecurityException/CPP/form1.cpp#16)]
+ [!code-csharp[System.Security.SecurityException#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.SecurityException/CS/form1.cs#16)]
+ [!code-vb[System.Security.SecurityException#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecurityException/VB/form1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityException (string message, System.Reflection.AssemblyName assemblyName, System.Security.PermissionSet grant, System.Security.PermissionSet refused, System.Reflection.MethodInfo method, System.Security.Permissions.SecurityAction action, object demanded, System.Security.IPermission permThatFailed, System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Reflection.AssemblyName assemblyName, class System.Security.PermissionSet grant, class System.Security.PermissionSet refused, class System.Reflection.MethodInfo method, valuetype System.Security.Permissions.SecurityAction action, object demanded, class System.Security.IPermission permThatFailed, class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.#ctor(System.String,System.Reflection.AssemblyName,System.Security.PermissionSet,System.Security.PermissionSet,System.Reflection.MethodInfo,System.Security.Permissions.SecurityAction,System.Object,System.Security.IPermission,System.Security.Policy.Evidence)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.Reflection.AssemblyName" />
+        <Parameter Name="grant" Type="System.Security.PermissionSet" />
+        <Parameter Name="refused" Type="System.Security.PermissionSet" />
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+        <Parameter Name="demanded" Type="System.Object" />
+        <Parameter Name="permThatFailed" Type="System.Security.IPermission" />
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="assemblyName">Eine <see cref="T:System.Reflection.AssemblyName" /> , die angibt, dass der Name der Assembly, die die Ausnahme verursacht hat.</param>
+        <param name="grant">Ein <see cref="T:System.Security.PermissionSet" /> , die die Berechtigungen für die Assembly darstellt.</param>
+        <param name="refused">Ein <see cref="T:System.Security.PermissionSet" /> , darstellt, die verweigerte Berechtigung oder die Berechtigung festlegen.</param>
+        <param name="method">Ein <see cref="T:System.Reflection.MethodInfo" /> zur Darstellung der Methode, die die Ausnahme aufgetreten.</param>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <param name="demanded">Die angeforderte Berechtigung, der angeforderte Berechtigungssatz oder die angeforderte Auflistung von Berechtigungen.</param>
+        <param name="permThatFailed">Ein <see cref="T:System.Security.IPermission" /> , die fehlerhaften Berechtigung darstellt.</param>
+        <param name="evidence">Die <see cref="T:System.Security.Policy.Evidence" /> für die Assembly, die die Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.SecurityException" /> Klasse für eine Ausnahme, die durch einen unzureichenden Berechtigungssatz verursacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um eine Ausnahme auszulösen, wenn der Berechtigungssatz die Anforderung fehlschlägt.  
+  
+ Die folgende Tabelle zeigt die Eigenschaftswerte, die von diesem Konstruktor festgelegt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der lokalisierten Fehlermeldung gemäß `message`.|  
+|<xref:System.Security.SecurityException.FirstPermissionThatFailed%2A>|Die erste Berechtigung in den Berechtigungssatz festgelegt oder durch die angegebene Sammlung Berechtigungssatz `permThatFailed`.|  
+|<xref:System.Security.SecurityException.GrantedSet%2A>|Die von <xref:System.Security.PermissionSet> angegebene `grant`.|  
+|<xref:System.Security.SecurityException.Demanded%2A>|Die angeforderte Sicherheitsberechtigung Berechtigungssatz oder die Auflistung, die nicht angegeben, `demanded`.|  
+|<xref:System.Security.SecurityException.RefusedSet%2A>|Die von <xref:System.Security.PermissionSet> angegebene `refused`.|  
+|<xref:System.Security.SecurityException.DenySetInstance%2A>|Eine leere Zeichenfolge.|  
+|<xref:System.Security.SecurityException.PermitOnlySetInstance%2A>|Eine leere Zeichenfolge.|  
+|<xref:System.Security.SecurityException.FailedAssemblyInfo%2A>|Die von <xref:System.Reflection.AssemblyName> angegebene `assemblyName`.|  
+|<xref:System.Security.SecurityException.Method%2A>|Die von <xref:System.Reflection.MethodInfo> angegebene `method`.|  
+|<xref:System.Security.SecurityException.Zone%2A>|Die <xref:System.Security.SecurityZone> Wert aus der <xref:System.Security.Policy.Evidence> gemäß `evidence`.|  
+|<xref:System.Security.SecurityException.Url%2A>|Die URL aus der <xref:System.Security.Policy.Evidence> gemäß `evidence`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.SecurityAction Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.SecurityAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sicherheitsaktion, von der die Ausnahme verursacht wurde, ab oder legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.SecurityException.Action%2A> Eigenschaft enthält die Sicherheitsaktion, die dem Kontrollkästchen Sicherheitsfehler verursacht hat. Viele der Sicherheitsaktionen können dazu führen, dass eine Sicherheitsausnahme ausgelöst wird. Eine Anforderung für eine Berechtigung festlegen z. B. überprüft, dass alle Aufrufer in der Aufrufliste über die erforderlichen Berechtigungen in den Berechtigungssatz verfügen. Wenn einer der Aufrufer in der Aufrufliste nicht über eine erforderliche Berechtigung verfügt, schlägt die sicherheitsüberprüfung. Alternativ kann eine Methode in der Aufrufkette das Ergebnis des Stackwalk ändern, indem ein Stackwalkmodifizierer, z. B. platzieren <xref:System.Security.Permissions.SecurityAction.Deny> oder <xref:System.Security.Permissions.SecurityAction.PermitOnly>, auf dem Stapel, die zulässigen Berechtigungen zu beschränken. Beispielsweise kann eine Methode in der Aufrufliste alle Aufrufer einen Satz von Berechtigungen, die mit dem Namen PSET1 verweigern, dass jede Anforderung für eine Berechtigung, die Teil von PSET1 ist für diese Aufrufer fehlschlägt. Die <xref:System.Security.SecurityException.Action%2A> Eigenschaft enthält die Sicherheitsaktion, die die Ausnahme verursacht hat.  
+  
+ <xref:System.Security.Permissions.SecurityAction>ist eine Enumeration in der <xref:System.Security.Permissions.SecurityAction> Namespace, der Wert für die Sicherheit für die <xref:System.Security.SecurityException.Action%2A> Eigenschaft. In der Regel enthält diese Eigenschaft einen der Werte in der folgenden Tabelle gezeigt.  
+  
+|Sicherheitsaktion|Beschreibung|  
+|---------------------|-----------------|  
+|<xref:System.Security.Permissions.SecurityAction.Demand>|Kein vollständiger Stackwalk Fehler aufgrund einer Anforderung für die Assembly identifiziert, die durch die <xref:System.Security.SecurityException.FailedAssemblyInfo%2A> Eigenschaft.|  
+|<xref:System.Security.Permissions.SecurityAction.LinkDemand>|Ein Linkaufruf für die Assembly identifiziert, indem Sie die <xref:System.Security.SecurityException.FailedAssemblyInfo%2A> Eigenschaft ist fehlgeschlagen.|  
+|<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>|Eine Assembly durch identifiziert die <xref:System.Security.SecurityException.FailedAssemblyInfo%2A> Eigenschaft keine vererbungsanforderung erfüllt.|  
+|<xref:System.Security.Permissions.SecurityAction.PermitOnly>|Eine geforderte Berechtigung stimmt nicht mit Berechtigungen in der <xref:System.Security.Permissions.SecurityAction.PermitOnly> Berechtigungssatz. Die Methode für die platziert die <xref:System.Security.Permissions.SecurityAction.PermitOnly> Stapel wird beim Aufruf von identifiziert die <xref:System.Security.SecurityException.Method%2A> Eigenschaft.|  
+|<xref:System.Security.Permissions.SecurityAction.Deny>|Eine geforderte Berechtigung übereinstimmenden eine Berechtigung in der Deny-Berechtigung in der Aufrufliste an. Die Methode für die platziert die <xref:System.Security.Permissions.SecurityAction.Deny> Stapel wird beim Aufruf von identifiziert die <xref:System.Security.SecurityException.Method%2A> Eigenschaft.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Demanded">
+      <MemberSignature Language="C#" Value="public object Demanded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Demanded" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.Demanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die angeforderte Sicherheitsberechtigung, den Berechtigungssatz oder einer Auflistung von Berechtigungssätzen ab, bei deren Anforderung ein Fehler aufgetreten ist, oder legt diese fest.</summary>
+        <value>Eine Berechtigung, ein Berechtigungssatz oder ein Auflistungsobjekt mit Berechtigungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem zurückgegebenen Satz oder die Berechtigung Auflistung von Berechtigungen das zurückgegebene Objekt enthält die angeforderten Berechtigungen, eine oder mehrere der den Fehler verursacht hat.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.SecurityException.Demanded%2A> anzuzeigenden die angeforderte Sicherheitsberechtigung, den Berechtigungssatz oder die Berechtigung Eigenschaftensatz-Auflistung, die Fehler. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.SecurityException> Klasse.  
+  
+ [!code-cpp[System.Security.SecurityException#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.SecurityException/CPP/form1.cpp#3)]
+ [!code-csharp[System.Security.SecurityException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.SecurityException/CS/form1.cs#3)]
+ [!code-vb[System.Security.SecurityException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecurityException/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bearbeiten des Hauptobjekts. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DenySetInstance">
+      <MemberSignature Language="C#" Value="public object DenySetInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DenySetInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.DenySetInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der verweigerten Sicherheitsberechtigung, des verweigerten Berechtigungssatzes oder der verweigerten Berechtigungssatzauflistung, die/der einen Fehler bei einer Anforderung verursacht hat.</summary>
+        <value>Eine Berechtigung, ein Berechtigungssatz oder ein Auflistungsobjekt mit Berechtigungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält die verweigerte Berechtigung, den Berechtigungssatz oder die Auflistung von Berechtigungen, die aufgrund die sicherheitsüberprüfung fehlschlägt. Es ist `null` für Ausnahmen, die nicht durch eine DENY-Anweisung verursacht werden. Die Eigenschaft ist vom Typ <xref:System.Object> , da sie eine Berechtigung enthalten kann, ein Berechtigungssatz oder ein Berechtigungssatz-Auflistung. Zum Testen des Run-Time-Typs dieser Eigenschaft können Sie die <xref:System.Object.GetType%2A> -Methode oder eine bestimmte Sprache-Operator, z. B. den Operator in c# oder der Operator in Visual Basic.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FailedAssemblyInfo">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName FailedAssemblyInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.AssemblyName FailedAssemblyInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.FailedAssemblyInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über die fehlgeschlagene Assembly ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Reflection.AssemblyName" /> , der die fehlgeschlagene Assembly identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält eine <xref:System.Reflection.AssemblyName> Objekt, das die Assembly, die aufgrund die sicherheitsüberprüfung identifiziert fehlschlägt.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nicht aufgefüllt, wenn eine Sicherheitsausnahme, in ausgelöst eine <xref:System.Security.Permissions.SecurityAction.Deny> oder <xref:System.Security.Permissions.SecurityAction.PermitOnly> Stapelrahmen, da die Assembly, die <xref:System.Security.Permissions.SecurityAction.Deny> oder <xref:System.Security.Permissions.SecurityAction.PermitOnly> Sicherheitsaktion ist nicht die Assembly, die den Stackwalk ist fehlgeschlagen. In diesen Fällen wird die Sicherheitsausnahme mit einem Konstruktor, der Namen einer Assembly keine erfordert erstellt gewährt Informationen oder Informationen verweigert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.SecurityException.FailedAssemblyInfo%2A> Eigenschaft, um die Informationen über die fehlgeschlagene Assembly anzuzeigen.  
+  
+ [!code-cpp[System.Security.SecurityException#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.SecurityException/CPP/form1.cpp#12)]
+ [!code-csharp[System.Security.SecurityException#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.SecurityException/CS/form1.cs#12)]
+ [!code-vb[System.Security.SecurityException#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecurityException/VB/form1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstPermissionThatFailed">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission FirstPermissionThatFailed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.IPermission FirstPermissionThatFailed" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.FirstPermissionThatFailed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die erste Berechtigung in einem Berechtigungssatz oder einer Auflistung von Berechtigungen ab, bei deren Anforderung ein Fehler aufgetreten ist, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Security.IPermission" /> Objekt, das die erste Berechtigung, die Fehler darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angeforderte Objekt ein Berechtigungssatz ist oder eine Auflistung, die <xref:System.Security.SecurityException.FirstPermissionThatFailed%2A> stellt nur die erste Berechtigung, die die Ausnahme verursacht hat. Zusätzliche Berechtigungen in der Gruppe oder einer Auflistung können auch einen Bedarf-Fehler verursachen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Legt die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit Informationen zu den <see cref="T:System.Security.SecurityException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetObjectData` legt die <xref:System.Runtime.Serialization.SerializationInfo> mit allen Daten für das Ausnahmeobjekt fest, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird die Ausnahme aus der über den Stream übertragenen `SerializationInfo` wiederhergestellt.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung der <xref:System.Security.SecurityException.GetObjectData%2A> Methode, um den Berechtigungsstatus in enthaltenen anzuzeigen die <xref:System.Runtime.Serialization.SerializationInfo> Objekt.  
+  
+ [!code-cpp[System.Security.SecurityException#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.SecurityException/CPP/form1.cpp#9)]
+ [!code-csharp[System.Security.SecurityException#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.SecurityException/CS/form1.cs#9)]
+ [!code-vb[System.Security.SecurityException#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecurityException/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="info" />-Parameter ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GrantedSet">
+      <MemberSignature Language="C#" Value="public string GrantedSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GrantedSet" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.GrantedSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den gewährten Berechtigungssatz der Assembly, die aufgrund der <see cref="T:System.Security.SecurityException" />.</summary>
+        <value>Die XML-Darstellung des gewährten Berechtigungssatzes der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft möglicherweise nicht enthalten, die relevante Daten Sicherheitsausnahmen nicht Ausnahmen, die im Zusammenhang mit sucht die <xref:System.Security.AllowPartiallyTrustedCallersAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo Method" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Informationen zu der Methode ab, die der Ausnahme zugeordnet ist, oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.Reflection.MethodInfo" /> -Objekt, das die Methode beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält die folgenden:  
+  
+-   Informationen über die Methode, die die fehlgeschlagene Assembly ausgeführt wurde, beim Auftreten der sicherheitsüberprüfung, die die Ausnahme ausgelöst hat.  
+  
+-   Informationen über die Methode, die entweder platziert eine <xref:System.Security.Permissions.SecurityAction.PermitOnly> oder <xref:System.Security.Permissions.SecurityAction.Deny> Sicherheitsaktion in der Aufrufliste, im Falle eines Ausfalls aufgrund einer <xref:System.Security.Permissions.SecurityAction.PermitOnly> oder <xref:System.Security.Permissions.SecurityAction.Deny>.  
+  
+-   `null`, wenn ein Fehler auftritt, die in "Attribut" an eine bestimmte Methode nicht möglich ist.  
+  
+ Die <xref:System.Reflection.MethodInfo> Objekt der Methodenname, den Klassennamen und die Assembly enthält Informationen, die die Methode eindeutig identifiziert.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionState">
+      <MemberSignature Language="C#" Value="public string PermissionState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PermissionState" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.PermissionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand der Berechtigung ab, der die Ausnahme ausgelöst hat, oder legt diesen fest.</summary>
+        <value>Der Zustand der Berechtigung zum Zeitpunkt der Auslösung der Ausnahme.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />,<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionType">
+      <MemberSignature Language="C#" Value="public Type PermissionType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PermissionType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.PermissionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Berechtigung ab, bei der ein Fehler aufgetreten ist, oder legt diesen fest.</summary>
+        <value>Der Typ der Berechtigung, bei der ein Fehler aufgetreten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermitOnlySetInstance">
+      <MemberSignature Language="C#" Value="public object PermitOnlySetInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PermitOnlySetInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.PermitOnlySetInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der Berechtigung, des Berechtigungssatzes oder der Berechtigungssatzauflistung, die/der Teil des Stapelrahmens vom Typ "Nur zulassen" ist, der bewirkt hat, dass eine Sicherheitsprüfung nicht bestanden wurde.</summary>
+        <value>Eine Berechtigung, ein Berechtigungssatz oder ein Auflistungsobjekt mit Berechtigungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.SecurityException.PermitOnlySetInstance%2A> Eigenschaft darstellt, die zulässige Berechtigung, oder eine Auflistung enthalten sind, in dem Stapelrahmen entspricht, die die Ausnahme verursacht hat. Z. B. eine Sicherheitsausnahme tritt aufgrund des eine <xref:System.Security.PermissionSet.Demand%2A?displayProperty=nameWithType> Fehler, die zulässige Berechtigung wird angezeigt, in diese Eigenschaft und die angeforderte <xref:System.Security.PermissionSet> ist Bestandteil der <xref:System.Security.SecurityException.Demanded%2A> Eigenschaft.  
+  
+ Diese Eigenschaft ist vom Typ <xref:System.Object> da Festlegen von Berechtigungen, Berechtigungssätze oder Berechtigung Sammlungen können alle werden erforderlich und <xref:System.Object> häufige Basisklasse ist.  Zum Testen des Run-Time-Typs dieser Eigenschaft können Sie die <xref:System.Object.GetType%2A> -Methode oder eine bestimmte Sprache-Operator, z. B. den Operator in c# oder der Operator in Visual Basic.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RefusedSet">
+      <MemberSignature Language="C#" Value="public string RefusedSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RefusedSet" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.RefusedSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den verweigerten Berechtigungssatz der Assembly, die aufgrund der <see cref="T:System.Security.SecurityException" />.</summary>
+        <value>Die XML-Darstellung des verweigerten Berechtigungssatzes der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft möglicherweise nicht enthalten, die relevante Daten Sicherheitsausnahmen nicht Ausnahmen, die im Zusammenhang mit sucht die <xref:System.Security.AllowPartiallyTrustedCallersAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Darstellung des aktuellen <see cref="T:System.Security.SecurityException" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des aktuellen <see cref="T:System.Security.SecurityException" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.SecurityException.ToString%2A> Methodenrückgabe die vollständige Beschreibung der <xref:System.Security.SecurityException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL der Assembly ab, die die Ausnahme verursacht hat, oder legt diese fest.</summary>
+        <value>Eine URL, die den Speicherort der Assembly angibt.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bereitstellen von Beweisen und zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityZone Zone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.SecurityZone Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityException.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityZone</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zone der Assembly ab, die die Ausnahme verursacht hat, oder legt diese fest.</summary>
+        <value>Eines der <see cref="T:System.Security.SecurityZone" /> Werte, die die Zone der Assembly identifiziert, die die Ausnahme verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

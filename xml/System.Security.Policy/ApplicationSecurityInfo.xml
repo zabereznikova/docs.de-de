@@ -1,0 +1,174 @@
+<Type Name="ApplicationSecurityInfo" FullName="System.Security.Policy.ApplicationSecurityInfo">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationSecurityInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationSecurityInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.ApplicationSecurityInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält den Sicherheitsbeweis für eine Anwendung an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.ApplicationSecurityInfo>enthält Informationen über ein Manifest aktivierte Anwendung mit Informationen von der Anwendung Manifeste und dessen <xref:System.ActivationContext>.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationSecurityInfo (ActivationContext activationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ActivationContext activationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationSecurityInfo.#ctor(System.ActivationContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activationContext" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="activationContext">Ein <see cref="T:System.ActivationContext" /> -Objekt, das die Anwendung eindeutig identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Policy.ApplicationSecurityInfo" /> -Klasse unter Verwendung des angegebenen Aktivierungskontexts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ActivationContext> Objekt enthält eine <xref:System.ApplicationIdentity> -Objekt, das eine Anwendung nach ihrem vollständigen Namen und Speicherort eindeutig identifiziert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activationContext" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationEvidence">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.Evidence ApplicationEvidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence ApplicationEvidence" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationEvidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Beweis für die Anwendung.</summary>
+        <value>Ein <see cref="T:System.Security.Policy.Evidence" /> Objekt für die Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beweise ist der Satz von Informationen, die bildet für Sicherheit Entscheidungen dienen, z. B. entscheiden, welche Berechtigungen Code erteilt werden können.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Für <see cref="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationEvidence" /> ist <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationId">
+      <MemberSignature Language="C#" Value="public ApplicationId ApplicationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ApplicationId ApplicationId" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ApplicationId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Identität Anwendungsinformationen.</summary>
+        <value>Ein <see cref="T:System.ApplicationId" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Identität einer Anwendung besteht aus dem öffentlichen Schlüssel des Herausgebers, den Namen der Anwendung, die Zielprozessorarchitektur, die Anwendungskultur und die Version der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Für <see cref="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationId" /> ist <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRequestSet">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet DefaultRequestSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet DefaultRequestSet" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.DefaultRequestSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardberechtigungssatz.</summary>
+        <value>Ein <see cref="T:System.Security.PermissionSet" /> Objekt, das die Standardberechtigungen für die Anwendung darstellt. Der Standardwert ist eine <see cref="T:System.Security.PermissionSet" /> mit dem Berechtigungszustand<see cref="F:System.Security.Permissions.PermissionState.None" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Eigenschaft nicht festgelegt wurde, gibt der Get-Accessor ein <xref:System.Security.PermissionSet> mit dem Berechtigungszustand <xref:System.Security.Permissions.PermissionState.None>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Für <see cref="P:System.Security.Policy.ApplicationSecurityInfo.DefaultRequestSet" /> ist <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentId">
+      <MemberSignature Language="C#" Value="public ApplicationId DeploymentId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ApplicationId DeploymentId" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.DeploymentId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ApplicationId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das oberste Element in der Anwendung, die in der Bereitstellungsidentität beschrieben wird.</summary>
+        <value>Ein <see cref="T:System.ApplicationId" /> -Objekt, das oberste Element der Anwendung beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bereitstellungsidentität besteht aus dem öffentlichen Schlüssel des Herausgebers, den Namen der Anwendung, die Zielprozessorarchitektur, die Anwendungskultur und die Version der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Für <see cref="P:System.Security.Policy.ApplicationSecurityInfo.DeploymentId" /> ist <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

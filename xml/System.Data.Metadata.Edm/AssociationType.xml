@@ -1,0 +1,98 @@
+<Type Name="AssociationType" FullName="System.Data.Metadata.Edm.AssociationType">
+  <TypeSignature Language="C#" Value="public sealed class AssociationType : System.Data.Metadata.Edm.RelationshipType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssociationType extends System.Data.Metadata.Edm.RelationshipType" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.AssociationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.RelationshipType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Zuordnung in einem konzeptionellen Modell dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Zuordnung (EDM)](http://msdn.microsoft.com/en-us/1467cb18-e463-4405-8c7d-350d04933aeb).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssociationEndMembers">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.AssociationEndMember&gt; AssociationEndMembers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1&lt;class System.Data.Metadata.Edm.AssociationEndMember&gt; AssociationEndMembers" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.AssociationType.AssociationEndMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.AssociationEndMember&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste von Enden für diesen <see cref="T:System.Data.Metadata.Edm.AssociationType" /> ab.</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1" />, die die Liste der Enden für diesen <see cref="T:System.Data.Metadata.Edm.AssociationType" /> enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuiltInTypeKind">
+      <MemberSignature Language="C#" Value="public override System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.AssociationType.BuiltInTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.BuiltInTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.AssociationType" /> auf.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.BuiltInTypeKind" />-Objekt, das die integrierte Typart für <see cref="T:System.Data.Metadata.Edm.AssociationType" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsForeignKey">
+      <MemberSignature Language="C#" Value="public bool IsForeignKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsForeignKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.AssociationType.IsForeignKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den booleschen Eigenschaftswert, der angibt, ob die Spalte ein Fremdschlüssel ist.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die Spalte ein Fremdschlüssel ist. Wenn <see langword="true" />, die Spalte ist ein Fremdschlüssel. Wenn <see langword="false" /> (Standard), die Spalte ist nicht mit einem Fremdschlüssel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferentialConstraints">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.ReferentialConstraint&gt; ReferentialConstraints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1&lt;class System.Data.Metadata.Edm.ReferentialConstraint&gt; ReferentialConstraints" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.AssociationType.ReferentialConstraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.ReferentialConstraint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Einschränkungen für diesen <see cref="T:System.Data.Metadata.Edm.AssociationType" /> ab.</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1" />, die die Liste der Einschränkungen für diesen <see cref="T:System.Data.Metadata.Edm.AssociationType" /> enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

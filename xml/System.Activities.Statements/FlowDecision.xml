@@ -1,0 +1,260 @@
+<Type Name="FlowDecision" FullName="System.Activities.Statements.FlowDecision">
+  <TypeSignature Language="C#" Value="public sealed class FlowDecision : System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FlowDecision extends System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.FlowDecision" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Statements.FlowNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein spezieller <see cref="T:System.Activities.Statements.FlowNode" />, mit dessen Hilfe ein Modell eines bedingten Knotens mit zwei Ergebnissen erstellt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Statements.FlowDecision>wird eine Bedingung und Aktionen an, wenn die Bedingung definiert `true` oder `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowDecision>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.FlowDecision" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowDecision>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDecision ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowDecision.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.FlowDecision" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowDecision>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDecision (System.Activities.Activity&lt;bool&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity`1&lt;bool&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowDecision.#ctor(System.Activities.Activity{System.Boolean})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Activities.Activity&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Die Bedingung, die die <see cref="T:System.Activities.Statements.FlowDecision" /> testet.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.FlowDecision" />-Klasse mit der angegebenen Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowDecision>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDecision (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,bool&gt;&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, bool&gt;&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowDecision.#ctor(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,System.Boolean}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,System.Boolean&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Die Bedingung, die die <see cref="T:System.Activities.Statements.FlowDecision" /> testet.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.FlowDecision" />-Klasse mit der angegebenen Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowDecision>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;bool&gt; Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;bool&gt; Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bedingung an, die die <see cref="T:System.Activities.Statements.FlowDecision" /> testet.</summary>
+        <value>Ein Wertausdruck, der die Bedingung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Bedingung ergibt `true`, die <xref:System.Activities.Statements.FlowNode> in der <xref:System.Activities.Statements.FlowDecision.True%2A> -Eigenschaft ausgeführt. Anderenfalls wird der <xref:System.Activities.Statements.FlowNode> in der <xref:System.Activities.Statements.FlowDecision.False%2A>-Eigenschaft ausgeführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der Condition-Eigenschaft eines <xref:System.Activities.Statements.FlowDecision>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("Decision")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name dieser Entscheidung Datenfluss in den Aktivitäts-Designer angezeigt werden.</summary>
+        <value>Der Name der Datenfluss Entscheidung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="public System.Activities.Statements.FlowNode False { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Statements.FlowNode False" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.False" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("True")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Statements.FlowNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Activities.Statements.FlowNode" /> , die ausgeführt wird, wenn die Bedingung ergibt <see langword="false" />.</summary>
+        <value>Die Aktivität, die ausgeführt wird, wenn die Bedingung ergibt <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der False-Eigenschaft eines <xref:System.Activities.Statements.FlowDecision>-Knotens gezeigt. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="public System.Activities.Statements.FlowNode True { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Statements.FlowNode True" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.True" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Condition")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Statements.FlowNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Activities.Statements.FlowNode" /> , die ausgeführt wird, wenn die Bedingung ergibt <see langword="true" />.</summary>
+        <value>Die Aktivität ausführen, wenn die Bedingung ergibt <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der True-Eigenschaft eines <xref:System.Activities.Statements.FlowDecision>-Knotens gezeigt. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,50 @@
+<Type Name="FillBehavior" FullName="System.Windows.Media.Animation.FillBehavior">
+  <TypeSignature Language="C#" Value="public enum FillBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FillBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.FillBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie eine <see cref="T:System.Windows.Media.Animation.Timeline" /> verhält, wenn es außerhalb ihres aktiven Zeitraums ist jedoch das übergeordnete Element in seinem aktiven ist oder haltezeitraum befindet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HoldEnd">
+      <MemberSignature Language="C#" Value="HoldEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.FillBehavior HoldEnd = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.FillBehavior.HoldEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.FillBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nachdem die Zeitachse das Ende ihres aktiven Zeitraums erreicht hat, hält Sie Ihren Status bis zum Ende des aktiven und Haltezeitraums ihres übergeordneten Elements.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="Stop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.FillBehavior Stop = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.FillBehavior.Stop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.FillBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeitachse wird beendet, wenn sie sich außerhalb ihres aktiven Zeitraums befindet, während sich ihr übergeordnetes Element in seinem aktiven Zeitraum befindet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

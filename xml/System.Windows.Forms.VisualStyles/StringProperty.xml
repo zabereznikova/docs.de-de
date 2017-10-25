@@ -1,0 +1,41 @@
+<Type Name="StringProperty" FullName="System.Windows.Forms.VisualStyles.StringProperty">
+  <TypeSignature Language="C#" Value="public enum StringProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringProperty extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.StringProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifiziert die Zeichenfolgeneigenschaften eines visuellen Stilelements an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.StringProperty> Enumeration stellt eine Reihe von String-Eigenschaften, die visuellen Stilelemente zu beschreiben. Die <xref:System.Windows.Forms.VisualStyles.StringProperty> Werte dienen als Argument in der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetString%2A?displayProperty=nameWithType> Methode, um anzugeben, dessen Eigenschaftswert für das Element abgerufen, die die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.StringProperty Text = int32(3201)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.StringProperty.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.StringProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Text, der mit dem Element angezeigt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

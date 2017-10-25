@@ -1,0 +1,1463 @@
+<Type Name="DbCommand" FullName="System.Data.Common.DbCommand">
+  <TypeSignature Language="C#" Value="public abstract class DbCommand : System.ComponentModel.Component, IDisposable, System.Data.IDbCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbCommand extends System.ComponentModel.Component implements class System.Data.IDbCommand, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.IDbCommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine SQL-Anweisung oder eine gespeicherte Prozedur dar, die in einer Datenquelle ausgeführt werden soll. Stellt eine Basisklasse für datenbankspezifische Klassen bereit, die Befehle darstellen. <see cref="Overload:System.Data.Common.DbCommand.ExecuteNonQueryAsync" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Data.Common.DbCommand" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public abstract void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versuche, bricht die Ausführung einer <see cref="T:System.Data.Common.DbCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es nichts auf "Abbrechen", geschieht nichts. Wenn jedoch das Abbrechen für einen aktuell ausgeführten Befehl fehlschlägt, wird keine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandText">
+      <MemberSignature Language="C#" Value="public abstract string CommandText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandText" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.CommandText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den für die Datenquelle auszuführenden Textbefehl ab bzw. legt ihn fest.</summary>
+        <value>Der auszuführende Textbefehl. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Data.CommandType> auf `StoredProcedure`, sollten Sie festlegen, die <xref:System.Data.Common.DbCommand.CommandText%2A> -Eigenschaft auf den Namen der gespeicherten Prozedur. Der Befehl führt diese gespeicherte Prozedur aus, wenn Sie eine der Aufrufen der `Execute` Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTimeout">
+      <MemberSignature Language="C#" Value="public abstract int CommandTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CommandTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.CommandTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeit ab, die gewartet werden soll, bis der Versuch einer Befehlsausführung beendet und ein Fehler generiert wird, oder legt diese fest.</summary>
+        <value>Die Dauer in Sekunden, für die auf die Ausführung des Befehls gewartet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ArgumentException> wird generiert, wenn der zugewiesene <xref:System.Data.Common.DbCommand.CommandTimeout%2A> Eigenschaftswert ist kleiner als 0.  
+  
+ Beachten Sie für Implementierer, es wird empfohlen, dass "0" bedeutet kein Timeout.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandType">
+      <MemberSignature Language="C#" Value="public abstract System.Data.CommandType CommandType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.CommandType CommandType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.CommandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.CommandType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an bzw. legt fest, wie die <see cref="P:System.Data.Common.DbCommand.CommandText" />-Eigenschaft interpretiert wird.</summary>
+        <value>Einer der <see cref="T:System.Data.CommandType" />-Werte. Die Standardeinstellung ist <see langword="Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Data.CommandType> auf `StoredProcedure`, sollten Sie festlegen, die <xref:System.Data.Common.DbCommand.CommandText%2A> -Eigenschaft auf den Namen der gespeicherten Prozedur. Der Befehl führt diese gespeicherte Prozedur aus, wenn Sie eine der Aufrufen der `Execute` Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbConnection Connection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die von diesem <see cref="T:System.Data.Common.DbConnection" /> verwendete <see cref="T:System.Data.Common.DbCommand" /> ab oder legt diese fest.</summary>
+        <value>Die Verbindung mit der Datenquelle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDbParameter">
+      <MemberSignature Language="C#" Value="protected abstract System.Data.Common.DbParameter CreateDbParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.Common.DbParameter CreateDbParameter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.CreateDbParameter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz eines <see cref="T:System.Data.Common.DbParameter" />-Objekts.</summary>
+        <returns>Ein <see cref="T:System.Data.Common.DbParameter" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParameter">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbParameter CreateParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DbParameter CreateParameter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.CreateParameter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz eines <see cref="T:System.Data.Common.DbParameter" />-Objekts.</summary>
+        <returns>Ein <see cref="T:System.Data.Common.DbParameter" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbConnection">
+      <MemberSignature Language="C#" Value="protected abstract System.Data.Common.DbConnection DbConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection DbConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.DbConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die von diesem <see cref="T:System.Data.Common.DbConnection" /> verwendete <see cref="T:System.Data.Common.DbCommand" /> ab oder legt diese fest.</summary>
+        <value>Die Verbindung mit der Datenquelle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbParameterCollection">
+      <MemberSignature Language="C#" Value="protected abstract System.Data.Common.DbParameterCollection DbParameterCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbParameterCollection DbParameterCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.DbParameterCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Data.Common.DbParameter" /> Objekte.</summary>
+        <value>Die Parameter der SQL-Anweisung bzw. der gespeicherten Prozedur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbTransaction">
+      <MemberSignature Language="C#" Value="protected abstract System.Data.Common.DbTransaction DbTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbTransaction DbTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.DbTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Data.Common.DbCommand.DbTransaction" /> ab, in der dieses <see cref="T:System.Data.Common.DbCommand" />-Objekt ausgeführt wird, oder legt sie fest.</summary>
+        <value>Die Transaktion, innerhalb, die ein Command-Objekt eines .NET Framework-Datenanbieters ausgeführt wird. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeVisible">
+      <MemberSignature Language="C#" Value="public abstract bool DesignTimeVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignTimeVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.DesignTimeVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Befehlsobjekt in einem Steuerelement für die benutzerdefinierte Schnittstelle sichtbar sein soll.</summary>
+        <value>
+          <see langword="true" />, wenn das Befehlsobjekt in einem Steuerelement sichtbar sein soll andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDbDataReader">
+      <MemberSignature Language="C#" Value="protected abstract System.Data.Common.DbDataReader ExecuteDbDataReader (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.Common.DbDataReader ExecuteDbDataReader(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteDbDataReader(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Eine Instanz von <see cref="T:System.Data.CommandBehavior" />.</param>
+        <summary>Führt den Befehlstext für die Verbindung an.</summary>
+        <returns>Eine Aufgabe, die den Vorgang darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiger <see cref="T:System.Data.CommandBehavior" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDbDataReaderAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt; ExecuteDbDataReaderAsync (System.Data.CommandBehavior behavior, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Data.Common.DbDataReader&gt; ExecuteDbDataReaderAsync(valuetype System.Data.CommandBehavior behavior, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Optionen zur Ausführung der Anweisung und zum Datenabruf.</param>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Anbieter sollten diese Methode, um eine nicht standardmäßige Implementierung für gewährleisten implementieren <see cref="Overload:System.Data.Common.DbCommand.ExecuteReader" /> Überladungen.  
+  
+ Die Standardimplementierung Ruft die synchrone <see cref="M:System.Data.Common.DbCommand.ExecuteReader" /> Methode und gibt eine abgeschlossene Aufgabe, die den aufrufenden Thread zu blockieren. Die standardmäßige Implementierung gibt eine abgebrochene Aufgabe zurück, wenn ein bereits abgebrochen Abbruchtoken übergeben. ExecuteReader ausgelöste Ausnahmen werden über die zurückgegebene Aufgabe Exception-Eigenschaft übermittelt werden.  
+  
+ Diese Methode nimmt ein Abbruchtoken, das verwendet werden kann, um den Vorgang zu einem frühen Zeitpunkt kündigende anzufordern. Implementierungen können diese Anforderung ignorieren.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiger <see cref="T:System.Data.CommandBehavior" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteNonQuery">
+      <MemberSignature Language="C#" Value="public abstract int ExecuteNonQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ExecuteNonQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteNonQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt eine SQL­Anweisung für ein Verbindungsobjekt.</summary>
+        <returns>Die Anzahl der betroffenen Zeilen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können <xref:System.Data.Common.DbCommand.ExecuteNonQuery%2A> zum Ausführen von Katalogoperationen (z. B. Abfragen die Struktur einer Datenbank oder Erstellen von Datenbankobjekten wie Tabellen) oder die Daten in einer Datenbank durch Ausführen von Update-, INSERT- oder DELETE-Anweisungen ändern.  
+  
+ Obwohl <xref:System.Data.Common.DbCommand.ExecuteNonQuery%2A> nicht Zeilen zurückgibt, alle Ausgabeparameter oder Rückgabewerte Werte, die Parametern zugeordnet werden mit Daten aufgefüllt.  
+  
+ Für Update-, INSERT- und DELETE-Anweisungen ist der Rückgabewert die Anzahl der Zeilen, die von dem Befehl betroffen sind. Für alle anderen Typen von Anweisungen wird der Wert-1 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ExecuteNonQueryAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Diese Methode implementiert die asynchrone Version von <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery" />, gibt jedoch eine <see cref="T:System.Threading.Tasks.Task" /> synchron blockiert den aufrufenden Thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ExecuteNonQueryAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;int&gt; ExecuteNonQueryAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;int32&gt; ExecuteNonQueryAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteNonQueryAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine asynchrone Version der <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery" />, der eine SQL­Anweisung für ein Verbindungsobjekt ausgeführt.  
+  
+ Ruft <see cref="M:System.Data.Common.DbCommand.ExecuteNonQueryAsync(System.Threading.CancellationToken)" /> mit CancellationToken.None.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteNonQueryAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;int&gt; ExecuteNonQueryAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ExecuteNonQueryAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteNonQueryAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Dies ist die asynchrone Version von <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery" />. Anbieter sollten mit einer entsprechenden Implementierung überschreiben. Das Abbruchtoken, das möglicherweise optional ignoriert werden.  
+  
+ Die Standardimplementierung Ruft die synchrone <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery" /> Methode und gibt eine abgeschlossene Aufgabe, die den aufrufenden Thread zu blockieren. Die standardmäßige Implementierung gibt eine abgebrochene Aufgabe zurück, wenn ein bereits abgebrochen Abbruchtoken übergeben.  Ausgelöste Ausnahmen <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery" /> mitgeteilt wird über die zurückgegebene Aufgabe Exception-Eigenschaft.  
+  
+ Führen Sie nicht aufgerufen werden, andere Methoden und Eigenschaften des der <see langword="DbCommand" /> Objekt, bis die zurückgegebene Aufgabe abgeschlossen ist.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReader">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbDataReader ExecuteReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DbDataReader ExecuteReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <see cref="P:System.Data.Common.DbCommand.CommandText" /> gegen die <see cref="P:System.Data.Common.DbCommand.Connection" />, und gibt eine <see cref="T:System.Data.Common.DbDataReader" />.</summary>
+        <returns>Ein <see cref="T:System.Data.Common.DbDataReader" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReader">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbDataReader ExecuteReader (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DbDataReader ExecuteReader(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteReader(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Einer der <see cref="T:System.Data.CommandBehavior" />-Werte.</param>
+        <summary>Führt die <see cref="P:System.Data.Common.DbCommand.CommandText" /> für die <see cref="P:System.Data.Common.DbCommand.Connection" />, und gibt ein <see cref="T:System.Data.Common.DbDataReader" /> mithilfe eines der der <see cref="T:System.Data.CommandBehavior" /> Werte.</summary>
+        <returns>Ein <see cref="T:System.Data.Common.DbDataReader" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ExecuteReaderAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Eine asynchrone Version der <see cref="Overload:System.Data.Common.DbCommand.ExecuteReader" />, das ausgeführt wird die <see cref="P:System.Data.Common.DbCommand.CommandText" /> gegen die <see cref="P:System.Data.Common.DbCommand.Connection" /> und gibt eine <see cref="T:System.Data.Common.DbDataReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwalteten Anbieter für Implementierer müssen Aufrufen <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A> in <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A>. Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ExecuteReaderAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt; ExecuteReaderAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Data.Common.DbDataReader&gt; ExecuteReaderAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteReaderAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine asynchrone Version der <see cref="Overload:System.Data.Common.DbCommand.ExecuteReader" />, das ausgeführt wird die <see cref="P:System.Data.Common.DbCommand.CommandText" /> gegen die <see cref="P:System.Data.Common.DbCommand.Connection" /> und gibt eine <see cref="T:System.Data.Common.DbDataReader" />.  
+  
+ Ruft <see cref="M:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)" /> mit CancellationToken.None.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwalteten Anbieter für Implementierer müssen Aufrufen <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A> in <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A>. Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiger <see cref="T:System.Data.CommandBehavior" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReaderAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt; ExecuteReaderAsync (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Data.Common.DbDataReader&gt; ExecuteReaderAsync(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteReaderAsync(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Einer der <see cref="T:System.Data.CommandBehavior" />-Werte.</param>
+        <summary>Eine asynchrone Version der <see cref="Overload:System.Data.Common.DbCommand.ExecuteReader" />, das ausgeführt wird die <see cref="P:System.Data.Common.DbCommand.CommandText" /> gegen die <see cref="P:System.Data.Common.DbCommand.Connection" /> und gibt eine <see cref="T:System.Data.Common.DbDataReader" />.  
+  
+ Ruft <see cref="M:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)" />.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwalteten Anbieter für Implementierer müssen Aufrufen <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A> in <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A>. Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiger <see cref="T:System.Data.CommandBehavior" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReaderAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt; ExecuteReaderAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Data.Common.DbDataReader&gt; ExecuteReaderAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteReaderAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Eine asynchrone Version der <see cref="Overload:System.Data.Common.DbCommand.ExecuteReader" />, das ausgeführt wird die <see cref="P:System.Data.Common.DbCommand.CommandText" /> gegen die <see cref="P:System.Data.Common.DbCommand.Connection" /> und gibt eine <see cref="T:System.Data.Common.DbDataReader" />. Diese Methode gibt eine Benachrichtigung, dass Vorgänge abgebrochen werden sollen.  
+  
+ Ruft <see cref="M:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)" />.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwalteten Anbieter für Implementierer müssen Aufrufen <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A> in <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A>. Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiger <see cref="T:System.Data.CommandBehavior" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReaderAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt; ExecuteReaderAsync (System.Data.CommandBehavior behavior, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Data.Common.DbDataReader&gt; ExecuteReaderAsync(valuetype System.Data.CommandBehavior behavior, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Data.Common.DbDataReader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Einer der <see cref="T:System.Data.CommandBehavior" />-Werte.</param>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Ruft <see cref="M:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)" />.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwalteten Anbieter für Implementierer müssen Aufrufen <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A> in <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A>. Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiger <see cref="T:System.Data.CommandBehavior" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteScalar">
+      <MemberSignature Language="C#" Value="public abstract object ExecuteScalar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ExecuteScalar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteScalar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Abfrage und gibt die erste Spalte der ersten Zeile in der von der Abfrage zurückgegebenen Resultset zurück. Alle anderen Spalten und Zeilen werden ignoriert.</summary>
+        <returns>Legen Sie die erste Spalte der ersten Zeile im Resultset.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.Common.DbCommand.ExecuteScalar%2A> Methode, um einen einzelnen Wert (z. B. einen Aggregatwert) aus einer Datenbank abzurufen. Dies erfordert weniger Code als das Verwenden der <xref:System.Data.Common.DbCommand.ExecuteReader%2A> -Methode und die Vorgänge erforderlich, zu den einzelnen Wert, der mit den Daten zurückgegebene Generieren einer <xref:System.Data.Common.DbDataReader>.  
+  
+ Wenn die erste Spalte der ersten Zeile im Resultset nicht gefunden wird, wird einen null-Verweis (`Nothing` in Visual Basic) zurückgegeben. Wenn der Wert in der Datenbank ist `null`, gibt die Abfrage `DBNull.Value`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ExecuteScalarAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Implementiert die asynchrone Version von <see cref="M:System.Data.Common.DbCommand.ExecuteScalar" />, gibt jedoch eine <see cref="T:System.Threading.Tasks.Task" /> synchron blockiert den aufrufenden Thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ExecuteScalarAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;object&gt; ExecuteScalarAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;object&gt; ExecuteScalarAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteScalarAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine asynchrone Version der <see cref="M:System.Data.Common.DbCommand.ExecuteScalar" />, dem führt die Abfrage und gibt die erste Spalte der ersten Zeile in der von der Abfrage zurückgegebenen Resultset zurück. Alle anderen Spalten und Zeilen werden ignoriert.  
+  
+ Ruft <see cref="M:System.Data.Common.DbCommand.ExecuteScalarAsync(System.Threading.CancellationToken)" /> mit CancellationToken.None.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteScalarAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;object&gt; ExecuteScalarAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;object&gt; ExecuteScalarAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.ExecuteScalarAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen .</param>
+        <summary>Dies ist die asynchrone Version von <see cref="M:System.Data.Common.DbCommand.ExecuteScalar" />. Anbieter sollten mit einer entsprechenden Implementierung überschreiben. Das Abbruchtoken, das möglicherweise optional ignoriert werden.  
+  
+ Die Standardimplementierung Ruft die synchrone <see cref="M:System.Data.Common.DbCommand.ExecuteScalar" /> Methode und gibt eine abgeschlossene Aufgabe, die den aufrufenden Thread zu blockieren. Die standardmäßige Implementierung gibt eine abgebrochene Aufgabe zurück, wenn ein bereits abgebrochen Abbruchtoken übergeben. ExecuteScalar ausgelöste Ausnahmen werden über die zurückgegebene Aufgabe Exception-Eigenschaft übermittelt werden.  
+  
+ Führen Sie nicht aufgerufen werden, andere Methoden und Eigenschaften des der <see langword="DbCommand" /> Objekt, bis die zurückgegebene Aufgabe abgeschlossen ist.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Ausführen des Befehlstexts.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbParameterCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbParameterCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Data.Common.DbParameter" /> Objekte. Weitere Informationen zu Parametern finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).</summary>
+        <value>Die Parameter der SQL-Anweisung bzw. der gespeicherten Prozedur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepare">
+      <MemberSignature Language="C#" Value="public abstract void Prepare ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Prepare() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.Prepare" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine vorbereitete (oder kompilierte) Version des Befehls für die Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.Common.DbCommand.CommandType%2A> -Eigenschaftensatz auf `TableDirect`, `Prepare` wird keine Aktion ausgeführt. Wenn <xref:System.Data.Common.DbCommand.CommandType%2A> festgelegt ist, um `StoredProcedure`, den Aufruf von `Prepare` sollte erfolgreich sein, obwohl er keine Auswirkungen führen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbCommand.Connection">
+      <MemberSignature Language="C#" Value="System.Data.IDbConnection System.Data.IDbCommand.Connection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbConnection System.Data.IDbCommand.Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.System#Data#IDbCommand#Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.IDbConnection" /> ab, die von dieser Instanz des <see cref="T:System.Data.IDbCommand" /> verwendet wird, oder legt diese fest.</summary>
+        <value>Die Verbindung mit der Datenquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbCommand.Connection%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbCommand.CreateParameter">
+      <MemberSignature Language="C#" Value="System.Data.IDbDataParameter IDbCommand.CreateParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDbDataParameter System.Data.IDbCommand.CreateParameter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.System#Data#IDbCommand#CreateParameter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbDataParameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz eines <see cref="T:System.Data.IDbDataParameter" />-Objekts.</summary>
+        <returns>Ein <see langword="IDbDataParameter" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbCommand>-Instanz in eine <xref:System.Data.IDbCommand>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbCommand.CreateParameter%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbCommand.ExecuteReader">
+      <MemberSignature Language="C#" Value="System.Data.IDataReader IDbCommand.ExecuteReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDataReader System.Data.IDbCommand.ExecuteReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.System#Data#IDbCommand#ExecuteReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt den <see cref="P:System.Data.IDbCommand.CommandText" /> für die <see cref="P:System.Data.IDbCommand.Connection" /> aus und erstellt einen <see cref="T:System.Data.IDataReader" />.</summary>
+        <returns>Ein <see cref="T:System.Data.IDataReader" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbCommand>-Instanz in eine <xref:System.Data.IDbCommand>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbCommand.ExecuteReader%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbCommand.ExecuteReader">
+      <MemberSignature Language="C#" Value="System.Data.IDataReader IDbCommand.ExecuteReader (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommand.System#Data#IDbCommand#ExecuteReader(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Einer der <see cref="T:System.Data.CommandBehavior" />-Werte.</param>
+        <summary>Führt den <see cref="P:System.Data.IDbCommand.CommandText" /> für die <see cref="P:System.Data.IDbCommand.Connection" /> aus und erstellt einen <see cref="T:System.Data.IDataReader" /> mithilfe eines der <see cref="T:System.Data.CommandBehavior" />-Werte.</summary>
+        <returns>Ein <see cref="T:System.Data.IDataReader" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbCommand>-Instanz in eine <xref:System.Data.IDbCommand>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbCommand.ExecuteReader%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbCommand.Parameters">
+      <MemberSignature Language="C#" Value="System.Data.IDataParameterCollection System.Data.IDbCommand.Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDataParameterCollection System.Data.IDbCommand.Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.System#Data#IDbCommand#Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Data.IDataParameterCollection" /> ab.</summary>
+        <value>Die Parameter der SQL-Anweisung bzw. der gespeicherten Prozedur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbCommand>-Instanz in eine <xref:System.Data.IDbCommand>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbCommand.Parameters%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbCommand.Transaction">
+      <MemberSignature Language="C#" Value="System.Data.IDbTransaction System.Data.IDbCommand.Transaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbTransaction System.Data.IDbCommand.Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.System#Data#IDbCommand#Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Data.Common.DbCommand.DbTransaction" /> ab, in der dieses <see cref="T:System.Data.Common.DbCommand" />-Objekt ausgeführt wird, oder legt sie fest.</summary>
+        <value>Die Transaktion, innerhalb der das <see langword="Command" />-Objekt eines .NET Framework-Datenanbieters ausgeführt wird. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbCommand.Transaction*>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transaction">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbTransaction Transaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbTransaction Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Common.DbTransaction" /> ab, in der dieses <see cref="T:System.Data.Common.DbCommand" />-Objekt ausgeführt wird, oder legt sie fest.</summary>
+        <value>Die Transaktion, innerhalb der das <see langword="Command" />-Objekt eines .NET Framework-Datenanbieters ausgeführt wird. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedRowSource">
+      <MemberSignature Language="C#" Value="public abstract System.Data.UpdateRowSource UpdatedRowSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.UpdateRowSource UpdatedRowSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbCommand.UpdatedRowSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.UpdateRowSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, wie die Befehlsergebnisse auf angewendet werden die <see cref="T:System.Data.DataRow" /> Wenn von der Update-Methode verwendet eine <see cref="T:System.Data.Common.DbDataAdapter" />.</summary>
+        <value>Einer der <see cref="T:System.Data.UpdateRowSource" />-Werte. Die Standardeinstellung ist <see langword="Both" />, sofern der Befehl nicht automatisch generiert wird. Dann ist die Standardeinstellung <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst ein <xref:System.ArgumentException> Wenn der eingegebene Wert nicht von war die <xref:System.Data.UpdateRowSource> Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

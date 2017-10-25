@@ -1,0 +1,180 @@
+<Type Name="PrintJobInfoCollection" FullName="System.Printing.PrintJobInfoCollection">
+  <TypeSignature Language="C#" Value="public class PrintJobInfoCollection : System.Printing.PrintSystemObjects, IDisposable, System.Collections.Generic.IEnumerable&lt;System.Printing.PrintSystemJobInfo&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintJobInfoCollection extends System.Printing.PrintSystemObjects implements class System.Collections.Generic.IEnumerable`1&lt;class System.Printing.PrintSystemJobInfo&gt;, class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintJobInfoCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintSystemObjects</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Printing.PrintSystemJobInfo&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine oder mehrere <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintJobInfoCollection (System.Printing.PrintQueue printQueue, string[] propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintQueue printQueue, string[] propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintJobInfoCollection.#ctor(System.Printing.PrintQueue,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+        <Parameter Name="propertyFilter" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">Die Druckerwarteschlange, deren Druckaufträge auf die Auflistung aufgenommen werden.</param>
+        <param name="propertyFilter">Eine Liste mit einer Teilmenge der Eigenschaften von einem <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintJobInfoCollection" /> Klasse enthält die <see cref="T:System.Printing.PrintSystemJobInfo" /> -Objekte für jeden Auftrag, der im angegebenen <see cref="T:System.Printing.PrintQueue" /> und, die initialisiert diese Objekte nur in den Eigenschaften, die im Filter angegebenen Eigenschaft aufgelistet sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Printing.PrintSystemJobInfo> Objekte in der Auflistung werden nur diejenigen Eigenschaften, die aufgelisteten initialisiert die `propertyFilter`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Printing.PrintSystemJobInfo printObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Printing.PrintSystemJobInfo printObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintJobInfoCollection.Add(System.Printing.PrintSystemJobInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printObject" Type="System.Printing.PrintSystemJobInfo" />
+      </Parameters>
+      <Docs>
+        <param name="printObject">Das Objekt, das hinzugefügt wird.</param>
+        <summary>Fügt ein Element der <see cref="T:System.Printing.PrintJobInfoCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintJobInfoCollection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">To be added.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, die <see cref="T:System.Printing.PrintJobInfoCollection" /> und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit den unbenannten booleschen Parametersatz hinzu `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit den Parametersatz hinzu `false`.  
+  
+ Wenn der boolesche Parameter auf "true" festgelegt ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte frei, die von diesem <xref:System.Printing.PrintJobInfoCollection> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerator&lt;System.Printing.PrintSystemJobInfo&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Printing.PrintSystemJobInfo&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintJobInfoCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Printing.PrintSystemJobInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Objekt, das den generischen implementiert <see cref="T:System.Collections.IEnumerator" /> -Schnittstelle, die mit geschlossenem <see cref="T:System.Printing.PrintSystemJobInfo" />.</summary>
+        <returns>Ein Objekt, das den generischen implementiert <see cref="T:System.Collections.IEnumerator" /> -Schnittstelle durchlaufen kann die <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekte, die <see cref="T:System.Printing.PrintJobInfoCollection" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wir empfehlen die Verwendung der `foreach` Anweisung, um alle Elemente der Auflistung zu durchlaufen. Verwendung <xref:System.Printing.PrintJobInfoCollection.GetEnumerator%2A> nur, wenn Sie müssen auf die Iteration, z. B. anpassen, indem Sie jedes andere Element zu überspringen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNonGenericEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetNonGenericEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetNonGenericEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintJobInfoCollection.GetNonGenericEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Objekt, das die nicht generische implementiert <see cref="T:System.Collections.IEnumerator" /> Schnittstelle.</summary>
+        <returns>Ein Objekt, das die nicht generische implementiert <see cref="T:System.Collections.IEnumerator" /> -Schnittstelle durchlaufen kann die <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekte, die <see cref="T:System.Printing.PrintJobInfoCollection" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wir empfehlen die Verwendung der `foreach` Anweisung, um alle Elemente der Auflistung zu durchlaufen. Verwenden Sie nur, wenn Sie Iteration, z. B. anpassen, indem Sie jeden anderen Member müssen eigene Enumerator-Objekt.  
+  
+ Wenn Sie einen eigenen Enumerator benötigen, es wird empfohlen, dass Sie der Funktion generische, typsichere mithilfe <xref:System.Printing.PrintJobInfoCollection.GetEnumerator%2A> anstelle von <xref:System.Printing.PrintJobInfoCollection.GetNonGenericEnumerator%2A>. Die <xref:System.Printing.PrintJobInfoCollection.GetNonGenericEnumerator%2A> ist öffentlich sein, nur um die Anforderungen erfüllt die <xref:System.Collections.IEnumerable> -Schnittstelle, die von dieser Sammlung implementiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

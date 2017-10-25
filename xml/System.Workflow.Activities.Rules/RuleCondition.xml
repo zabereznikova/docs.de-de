@@ -1,0 +1,164 @@
+<Type Name="RuleCondition" FullName="System.Workflow.Activities.Rules.RuleCondition">
+  <TypeSignature Language="C#" Value="public abstract class RuleCondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit RuleCondition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleCondition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Basistyp für <see cref="T:System.Workflow.Activities.Rules.RuleExpressionCondition" /> und für alle von Benutzern erstellten benutzerdefinierten Bedingungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RuleCondition ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleCondition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Implementieren in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract System.Workflow.Activities.Rules.RuleCondition Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Workflow.Activities.Rules.RuleCondition Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleCondition.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleCondition</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse eine tiefe Kopie des aktuellen <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />.</summary>
+        <returns>Eine <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />, die mit dieser Instanz identisch ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public abstract bool Evaluate (System.Workflow.Activities.Rules.RuleExecution execution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Evaluate(class System.Workflow.Activities.Rules.RuleExecution execution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleCondition.Evaluate(System.Workflow.Activities.Rules.RuleExecution)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="execution" Type="System.Workflow.Activities.Rules.RuleExecution" />
+      </Parameters>
+      <Docs>
+        <param name="execution">Der Laufzeitkontext, in dem die Regel ausgeführt wird.</param>
+        <summary>Wertet beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> aus.</summary>
+        <returns>
+          <see langword="true" />, um anzugeben, dass <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /><see langword="true" /> ergibt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDependencies">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.ICollection&lt;string&gt; GetDependencies (System.Workflow.Activities.Rules.RuleValidation validation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.ICollection`1&lt;string&gt; GetDependencies(class System.Workflow.Activities.Rules.RuleValidation validation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleCondition.GetDependencies(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validation">Die <see cref="T:System.Workflow.Activities.Rules.RuleValidation" />, die zuvor in einem Aufruf an <see cref="M:System.Workflow.Activities.Rules.RuleAction.Validate(System.Workflow.Activities.Rules.RuleValidation)" /> verwendet wurde.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Abhängigkeiten für die <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> ab.</summary>
+        <returns>Eine Liste von Symbolen, die von der Bedingung gelesene Entitäten darstellen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleCondition.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> ab oder legt diesen fest.</summary>
+        <value>Der Name des <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRuntimeInitialized">
+      <MemberSignature Language="C#" Value="public virtual void OnRuntimeInitialized ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnRuntimeInitialized() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleCondition.OnRuntimeInitialized" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn alle Eigenschaften Werte erhalten haben. Nach diesem Aufruf können keine Eigenschaften geändert werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public abstract bool Validate (System.Workflow.Activities.Rules.RuleValidation validation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Validate(class System.Workflow.Activities.Rules.RuleValidation validation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleCondition.Validate(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validation">Die Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> mit der die Validierung von Regeln und Regelbedingungen verwaltet wird.</param>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird überprüft, ob <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> ordnungsgemäß konfiguriert und fehlerfrei ist.</summary>
+        <returns>
+          <see langword="true" />, um anzugeben, dass <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> fehlerfrei ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.Activities.Rules.RuleCondition> Fehler aufweist (die `Validate`-Methode gibt `false` zurück), enthält <xref:System.Workflow.Activities.Rules.RuleValidation.Errors%2A?displayProperty=nameWithType> eine Liste der festgestellten Fehler.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

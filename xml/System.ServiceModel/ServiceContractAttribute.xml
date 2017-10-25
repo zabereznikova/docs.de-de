@@ -1,0 +1,415 @@
+<Type Name="ServiceContractAttribute" FullName="System.ServiceModel.ServiceContractAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ServiceContractAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceContractAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ServiceContractAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Schnittstelle oder eine Klasse einen Dienstvertrag in einer Windows Communication Foundation (WCF)-Anwendung definiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie das <xref:System.ServiceModel.ServiceContractAttribute>-Attribut in einer Schnittstelle (oder Klasse), um einen Dienstvertrag zu definieren. Verwenden Sie dann das <xref:System.ServiceModel.OperationContractAttribute>-Attribut in einer oder mehreren Klassenmethoden (oder Schnittstellenmethoden), um die Dienstvertragvorgänge zu definieren. Wenn die Dienstvertrag implementiert und zusammen mit einem [Bindungen](~/docs/framework/wcf/bindings.md) und ein <xref:System.ServiceModel.EndpointAddress> -Objekt, die den Dienstvertrag wird verfügbar gemacht werden für die Verwendung von Clients. Einen Überblick über den Prozess mit einfachen Beispielen finden Sie unter [Lernprogramm für erste Schritte](~/docs/framework/wcf/getting-started-tutorial.md). Weitere Informationen zum Erstellen von Dienstverträgen finden Sie unter [entwerfen und Implementieren von Diensten](~/docs/framework/wcf/designing-and-implementing-services.md).  
+  
+ Die von einem <xref:System.ServiceModel.ServiceContractAttribute> wiedergegebenen Informationen und seine Schnittstelle hängen lose mit dem Web Services Description Language (WSDL)-`<portType>`-Element zusammen. Ein Dienstvertrag wird auf Dienstseite verwendet, um anzugeben, was der Dienstendpunkt für die Aufrufer verfügbar macht. Er wird außerdem auf Clientseite verwendet, um den Vertrag des Endpunkts anzugeben, mit dem der Client kommuniziert, und um im Fall von Duplexverträgen den Rückrufvertrag anzugeben (unter Verwendung der <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A>-Eigenschaft), den der Client implementieren muss, um an einer Duplexkonversation teilzunehmen.  
+  
+> [!NOTE]
+>  Eine Schnittstelle oder Klasse, der <xref:System.ServiceModel.ServiceContractAttribute> zugeordnet ist, muss mindestens eine Methode aufweisen, die mit dem <xref:System.ServiceModel.OperationContractAttribute>-Attribut markiert ist, um Funktionen bereitstellen zu können. Im Beispielabschnitt finden Sie ein Codebeispiel, in dem die beiden Attribute auf einfache Weise zum Definieren und Implementieren eines Diensts eingesetzt werden.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.ServiceContractAttribute>-Eigenschaften, um den Dienstvertrag zu ändern.  
+  
+-   Die <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A>-Eigenschaft gibt den Namen des Dienstelements in der zu verwendenden Konfigurationsdatei an.  
+  
+-   Die <xref:System.ServiceModel.ServiceContractAttribute.Name%2A>-Eigenschaft und die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft steuern den Namen und den Namespace des Vertrags im WSDL-`<portType>`-Element.  
+  
+-   Die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>-Eigenschaft gibt an, ob der Vertrag eine Bindung erfordert, die Sitzungen unterstützt.  
+  
+-   Die <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A>-Eigenschaft gibt den Rückgabevertrag in einer bidirektionalen (Duplex-) Konversation an.  
+  
+-   Die <xref:System.ServiceModel.ServiceContractAttribute.HasProtectionLevel%2A>-Eigenschaft und die <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A>-Eigenschaft geben an, ob alle den Vertrag unterstützenden Nachrichten einen expliziten <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A>-Wert haben, und wenn ja, welcher Stufe sie angehören.  
+  
+ Dienste implementieren Dienstverträge, die den von einem Diensttyp unterstützten Datenaustausch darstellen. Eine Dienstklasse kann einen Dienstvertrag implementieren (durch Implementierung einer mit <xref:System.ServiceModel.ServiceContractAttribute> markierten Schnittstelle, die Methoden aufweist, die mit <xref:System.ServiceModel.OperationContractAttribute> markiert sind), oder sie kann mit <xref:System.ServiceModel.ServiceContractAttribute> markiert werden und das <xref:System.ServiceModel.OperationContractAttribute>-Attribut auf seine eigenen Methoden anwenden. (Wenn eine Klasse eine mit <xref:System.ServiceModel.ServiceContractAttribute> markierte Schnittstelle implementiert, kann sie nicht ihrerseits mit <xref:System.ServiceModel.ServiceContractAttribute> markiert sein.) Methoden für Diensttypen, die mit <xref:System.ServiceModel.OperationContractAttribute> markiert sind, werden als Teil eines vom Diensttypen selbst angegebenen Standarddienstvertrags behandelt. Einzelheiten zu Dienstvorgängen finden Sie unter <xref:System.ServiceModel.OperationContractAttribute>.  
+  
+ Standardmäßig sind die <xref:System.ServiceModel.ServiceContractAttribute.Name%2A>-Eigenschaft und die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft der Name des Vertragstyps bzw. `http://tempuri.org`, und <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> ist <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Es wird empfohlen, dass Dienstverträge ihre Namen, Namespaces und Schutzebenen explizit mit diesen Eigenschaften festlegen. Dadurch können zwei Ziele erreicht werden. Erstens wird dabei ein Vertrag erstellt, der nicht direkt mit den Informationen zum verwalteten Typ verbunden ist und es Ihnen dadurch ermöglicht, Ihren verwalteten Code und Ihre verwalteten Namespaces umzugestalten, ohne den in WSDL angegebenen Vertrag zu brechen. Zweitens wird der Laufzeit durch die explizite Anforderung einer bestimmten Schutzebene beim Vertrag selbst ermöglicht zu prüfen, ob die Bindungskonfiguration diese Sicherheitsebene unterstützt, wodurch verhindert wird, dass durch eine unzureichende Konfiguration vertrauliche Informationen weitergegeben werden. Weitere Informationen zu Schutzebenen finden Sie unter [Verständnis Schutzebene](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ Um einen Dienst für die Verwendung durch Clientanwendungen verfügbar zu machen, müssen Sie eine Hostanwendung erstellen, um den Dienstendpunkt mithilfe von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] zu registrieren. Sie können [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienste mithilfe von Windows Activation Services (WAS) in Konsolenanwendungen, Windows-Dienstanwendungen, ASP.NET-Anwendungen, Windows Forms-Anwendungen oder anderen Anwendungsdomänen hosten.  
+  
+ Das Hosten in WAS ähnelt stark dem Erstellen einer ASP.NET-Anwendung. Weitere Informationen finden Sie unter [wie: Hosten eines WCF-Diensts in IIS](~/docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+  
+ Clients verwenden entweder die Dienstvertragsschnittstelle (die mit <xref:System.ServiceModel.ServiceContractAttribute> markierte Schnittstelle), um einen Kanal für den Dienst zu erstellen, oder sie verwenden die Clientobjekte (die die Typinformationen der Dienstvertragsschnittstelle mit der <xref:System.ServiceModel.ClientBase%601>-Klasse kombinieren), um mit dem Dienst zu kommunizieren. Einzelheiten zu Clientkanälen für Dienste finden Sie unter der <xref:System.ServiceModel.ChannelFactory%601> Klasse und [Überblick über WCF-Client](~/docs/framework/wcf/wcf-client-overview.md).  
+  
+ Durch Verwendung einer <xref:System.ServiceModel.ServiceContractAttribute>-Klasse oder -Schnittstelle zum Erben von einer anderen <xref:System.ServiceModel.ServiceContractAttribute>-Klasse oder -Schnittstelle wird der übergeordnete Vertrag erweitert. Wenn z.&#160;B. eine `IChildContract`-Schnittstelle mit <xref:System.ServiceModel.ServiceContractAttribute> markiert ist und von der Dienstvertragsschnittstelle `IParentContract`erbt, enthält der `IChildContract`-Dienstvertrag die Methoden von `IParentContract` und `IChildContract`. Das Erweitern von Verträgen (ob für Klassen oder Schnittstellen) ähnelt stark dem Erweitern verwalteter Klassen und Schnittstellen.  
+  
+ Die flexibelste Herangehensweise an das Erstellen von Diensten ist die Definition von Dienstvertragsschnittstellen und die anschließende Implementierung dieser Schnittstellen durch die Dienstklasse. (Dies ist auch der einfachste Weg, Dienste zu erstellen, wenn Sie Dienstverträge implementieren müssen, die von anderen definiert wurden.) Das direkte Erstellen von Diensten durch das Markieren einer Klasse mit <xref:System.ServiceModel.ServiceContractAttribute> und ihrer Methoden mit <xref:System.ServiceModel.OperationContractAttribute> funktioniert, wenn der Dienst nur einen Vertrag verfügbar macht (aber dieser Vertrag kann durch mehr als einen Endpunkt verfügbar gemacht werden).  
+  
+ Verwenden der <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> Eigenschaft, um einen anderen Dienstvertrag, der einen Nachrichtenaustausch definiert, die unabhängig voneinander auf zwei Arten ausgetauscht werden können, bei der gebundenen zusammen mit der ursprüngliche Dienstvertrag anzugeben. Ausführliche Informationen finden Sie unter <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie <xref:System.ServiceModel.ServiceContractAttribute> auf eine Schnittstelle angewendet wird, um einen Dienstvertrag mit einer Dienstmethode zu definieren, die durch <xref:System.ServiceModel.OperationContractAttribute> angegeben wird. In diesem Fall ist die erforderliche Schutzebene der Bindungen für alle Nachrichten <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>.  
+  
+ Im Codebeispiel wird dieser Vertrag dann über die `SampleService`-Klasse implementiert.  
+  
+ [!code-csharp[ServiceContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/servicecontractattribute/cs/services.cs#1)]
+ [!code-vb[ServiceContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/servicecontractattribute/vb/services.vb#1)]  
+  
+ Im folgenden Codebeispiel wird eine einfache Konfigurationsdatei für den vorangehenden Dienst gezeigt, die einen Endpunkt erstellt.  
+  
+ [!code-xml[ServiceContractAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/servicecontractattribute/cs/hostapplication.exe.config#2)]   
+  
+ Im folgenden Codebeispiel wird ein einfacher Client gezeigt, der den vorangehenden `SampleService` aufruft.  
+  
+ [!code-csharp[ServiceContractAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/servicecontractattribute/cs/client.cs#3)]
+ [!code-vb[ServiceContractAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/servicecontractattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceContractAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ServiceContractAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor erstellt eine Instanz des Attributs ohne Sitzungsanforderungen, ohne Rückrufvertrag und mit Standardname und Namespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallbackContract">
+      <MemberSignature Language="C#" Value="public Type CallbackContract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CallbackContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.CallbackContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Rückrufvertrags ab oder legt ihn fest, wenn es sich beim Vertrag um einen Duplexvertrag handelt.</summary>
+        <value>Ein <see cref="T:System.Type" />, der den Rückrufvertrag angibt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie eine Schnittstelle in der <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A>-Eigenschaft an, die den erforderlichen entgegengesetzten Vertrag in einem bidirektionalen (Duplex-) Nachrichtenaustausch darstellt. Dies ermöglicht es Clientanwendungen, auf eingehende Vorgangsaufrufe zu überwachen, die die Dienstanwendung der Serverseite unabhängig von der Clientaktivität senden kann. Rückrufverträge mit unidirektionalen Vorgängen repräsentieren Aufrufe vom Dienst, die der Client verarbeiten kann.  
+  
+> [!NOTE]
+>  Das <xref:System.ServiceModel.ServiceContractAttribute>-Attribut wird bei Rückrufverträgen ignoriert. Um das Laufzeitverhalten von Rückrufobjekten zu konfigurieren, verwenden Sie <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein Dienst gezeigt, der einen Rückrufvertrag angibt. Laut diesem Vertrag muss ein Dienst des Typs `IDuplexHello` eine Entsprechung haben, die einen Dienst des Typs `IHelloCallbackContract` implementiert. Zusätzlich implementiert `IHelloCallbackContract` eine unidirektionale Rückrufmethode, wodurch der Dienst den Client aufrufen kann, ohne auf eine Antwort zu warten. Auf diese Weise wird ein verteilter, ereignisgesteuerter Client unterstützt.  
+  
+ [!code-csharp[SCA.CallbackContract#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/services.cs#1)]
+ [!code-vb[SCA.CallbackContract#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public string ConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen ab, mit dem der Dienst in einer Anwendungskonfigurationsdatei gesucht wird, oder legt ihn fest.</summary>
+        <value>Der Name, mit dem das Dienstelement in einer Anwendungskonfigurationsdatei gesucht wird. Der Standardwert ist der Name der Dienstimplementierungsklasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Wert festlegen möchten, mit dem das Konfigurationssystem einen Vertragswert in der Konfigurationsdatei sucht, finden Sie weitere Informationen unter <xref:System.ServiceModel.ServiceBehaviorAttribute.ConfigurationName%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist NULL.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool HasProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.HasProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dem Member eine Schutzebene zugewiesen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="P:System.ServiceModel.ServiceContractAttribute.ProtectionLevel" />-Eigenschaft nicht <see cref="F:System.Net.Security.ProtectionLevel.None" /> ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.ServiceContractAttribute.HasProtectionLevel%2A>-Eigenschaft gibt an, ob ein anderer Schutzebenenwert als `false` für den Vertrag festgelegt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen für das <see langword="&lt;portType&gt;" />-Element in Web Services Description Language (WSDL) ab oder legt ihn fest.</summary>
+        <value>Der Standardwert ist der Name der Klasse oder Schnittstelle, auf den <see cref="T:System.ServiceModel.ServiceContractAttribute" /> angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.ServiceModel.ServiceContractAttribute.Name%2A>-Eigenschaft und der <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft wird der Name und Namespace des `<portType>`-Elements in WSDL gesteuert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird dargestellt, wie die <xref:System.ServiceModel.ServiceContractAttribute.Name%2A>-Eigenschaft und die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft von <xref:System.ServiceModel.ServiceContractAttribute> verwendet werden, um die entsprechenden Werte in WSDL festzulegen.  
+  
+ [!code-csharp[SCA.Names#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/services.cs#1)]
+ [!code-vb[SCA.Names#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/services.vb#1)]  
+  
+ Das folgende Codebeispiel zeigt eine [!INCLUDE[indigo1](~/includes/indigo1-md.md)] -Client für den vorangehenden Dienst, die importiert WSDL-Datei mit den [ServiceModel Metadata Utility Tool (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Dieser Client verwendet einen `HelloWorldProxy`-Client statt einen `SampleServiceProxy`-Client (wie im Beispielabschnitt von <xref:System.ServiceModel.ServiceContractAttribute> gezeeigt).  
+  
+ [!code-csharp[SCA.Names#3](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/client.cs#3)]
+ [!code-vb[SCA.Names#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist NULL.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace des <see langword="&lt;portType&gt;" />-Elements in Web Services Description Language (WSDL) ab oder legt ihn fest.</summary>
+        <value>Der WSDL-Namespace des <see langword="&lt;portType&gt;" />-Elements. Der Standardwert ist "http://tempuri.org".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird dargestellt, wie die <xref:System.ServiceModel.ServiceContractAttribute.Name%2A>-Eigenschaft und die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft von <xref:System.ServiceModel.ServiceContractAttribute> verwendet werden, um die entsprechenden Werte in WSDL festzulegen.  
+  
+ [!code-csharp[SCA.Names#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/services.cs#1)]
+ [!code-vb[SCA.Names#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/services.vb#1)]  
+  
+ Das folgende Codebeispiel zeigt eine [!INCLUDE[indigo1](~/includes/indigo1-md.md)] -Client für den vorangehenden Dienst, die importiert WSDL-Datei mit den [ServiceModel Metadata Utility Tool (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Dieser Client verwendet einen `HelloWorldClient`-Client statt einen `SampleServiceClient`-Client (wie im Beispielabschnitt von <xref:System.ServiceModel.ServiceContractAttribute> gezeeigt).  
+  
+ [!code-csharp[SCA.Names#3](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/client.cs#3)]
+ [!code-vb[SCA.Names#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Bindung für den Vertrag den Wert der <see cref="P:System.ServiceModel.ServiceContractAttribute.ProtectionLevel" />-Eigenschaft unterstützen muss.</summary>
+        <value>Einer der <see cref="T:System.Net.Security.ProtectionLevel" />-Werte. Die Standardeinstellung ist <see cref="F:System.Net.Security.ProtectionLevel.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A>-Eigenschaft, um anzugeben, zu welchem Grad die Vertragsbindung Verschlüsselung, digitale Signaturen oder beides für Endpunkte erfordert, die den Vertrag verfügbar machen. Der hier festgelegte Wert ist der Standardwert für alle Vorgangsmeldungen einschließlich der Fehler.  
+  
+ Dabei ist wichtig zu bedenken, dass das Schutzverhalten zur Laufzeit die Kombination der Schutzebenenwerte der folgenden Eigenschaften ist. Diese Eigenschaften verfügen über eine hierarchische Struktur. Mit der Festlegung des äußersten Werts wird die Standardeinstellung für alle engeren Bereiche festgelegt, es sei denn, es wird ausdrücklich ein anderer Wert für einen engeren Bereich definiert. In diesem Fall bleibt der äußere Wert der Standardwert für alle engeren Bereiche mit Ausnahme des ausdrücklich festgelegten Werts.  
+  
+ Wenn beispielsweise <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType> auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> festgelegt ist und für keine weiteren engeren Bereiche Schutzebeneneinstellungen definiert sind, werden alle Nachrichten in einem Vorgangsvertrag verschlüsselt und signiert. Wenn aber für einen dieser Vorgänge <xref:System.ServiceModel.OperationContractAttribute> auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> festgelegt ist, werden die Nachrichten für diesen Vorgang signiert, alle anderen Nachrichten im Vertrag werden jedoch verschlüsselt und signiert.  
+  
+ Einzelheiten zu Schutzebenen und ihren Annahmen und Bereichen finden Sie unter [Verständnis Schutzebene](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ Die Bereiche, für die diese Werte festgelegt wurden:  
+  
+ <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ Die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaft für <xref:System.ServiceModel.MessageHeaderAttribute?displayProperty=nameWithType>.  
+  
+ Die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaft für <xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>.  
+  
+ Wenn im Vertrag nicht ausdrücklich eine Schutzebene festgelegt ist und die zugrunde liegende Bindung Sicherheitsfunktionen (auf der Transport- oder Nachrichtenebene) unterstützt, ist die effektive Schutzebene für den gesamten Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Wenn die Bindung keine Sicherheitsfunktionen (wie beispielsweise <xref:System.ServiceModel.BasicHttpBinding>) unterstützt, ist die effektive <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> für den gesamten Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Im Ergebnis können Clients abhängig von der Endpunktbindung unterschiedlichen Nachrichten- oder Transportebenenschutz auch dann anfordern, wenn im Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist keiner der <see cref="T:System.Net.Security.ProtectionLevel" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.SessionMode SessionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.SessionMode SessionMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.SessionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.SessionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob Sitzungen zugelassen, nicht zugelassen oder erforderlich sind, oder legt dies fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.SessionMode" />, der angibt, ob Sitzungen zugelassen, nicht zugelassen oder erforderlich sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>-Eigenschaft, um Bindungen anzufordern, die Sitzungen zwischen Endpunkten unterstützen. Eine Sitzung ist eine Möglichkeit zur Korrelation von Nachrichten, die zwischen zwei oder mehr Endpunkten ausgetauscht werden. Wenn der Dienst Kanalsitzungen unterstützt, können Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft verwenden, um die Beziehung zwischen Instanzen der Dienstvertragsimplementierung und der Kanalsitzung anzugeben. Wenn eine Bindung keine Sitzungen unterstützt, wird eine Ausnahme ausgelöst.  
+  
+ Wenn z.&#160;B. die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>-Eigenschaft auf <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> und die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft auf <xref:System.ServiceModel.InstanceContextMode.PerSession> festgelegt ist, können Clients die gleiche Verbindung verwenden, um wiederholte Aufrufe des gleichen Objekts vorzunehmen.  
+  
+ Weitere Informationen zu Sitzungen und Dienstinstanzen, finden Sie unter [mit Sitzungen](~/docs/framework/wcf/using-sessions.md) und [Sitzungen, Instancing und Parallelität](~/docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+  
+> [!NOTE]
+>  Ein Kanal, der Sitzungen unterstützt, unterstützt die Standardzuordnung einer Dienstinstanz zu einer bestimmten Sitzung. Unterschiedliche Sitzungsimplementierungen unterstützen jedoch unterschiedliche Features zusätzlich zur sitzungsbasierten Instanziierungssteuerung. [!INCLUDE[indigo2](~/includes/indigo2-md.md)] bietet vier Typen von Sitzungen, die Sie für sitzungsabhängiges Anwendungsverhalten einsetzen können; jeder Sitzungstyp bietet zusätzlich spezifische Verhalten.  
+  
+1.  Das <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> unterstützt Sicherheitssitzungen, bei denen sich beide Kommunikationspartner auf einen Verschlüsselungs- und/oder digitalen Signaturprozess verständigen; alle Nachrichten werden im Rahmen dieser sicheren Konversation in Beziehung zueinander gesetzt. Weitere Informationen finden Sie unter [Sichern von Services](~/docs/framework/wcf/securing-services.md). <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, bei der sowohl Sicherheitssitzungen als auch zuverlässige Sitzungen unterstützt werden, verwendet z.&amp;#160;B. standardmäßig nur eine sichere Sitzung, die Nachrichten digital verschlüsselt und signiert.  
+  
+2.  <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> unterstützt die Sitzungen, die von den TCP/IP-Verbindungen verfügbar gemacht werden, um sicherzustellen, dass alle Nachrichten von der Verbindungssitzung auf Socketebene miteinander in Beziehung gesetzt werden.  
+  
+3.  <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>, das die WS-ReliableMessaging-Spezifikation implementiert, bietet Unterstützung für zuverlässige Sitzungen, in denen Nachrichten der Reihenfolge nach und genau nur einmal zugestellt werden, sodass Zuverlässigkeit erzeugt wird, auch wenn sich die Nachrichten während der Konversation durch mehrere Knoten bewegen. Weitere Informationen finden Sie unter [zuverlässige Sitzungen](~/docs/framework/wcf/feature-details/reliable-sessions.md).  
+  
+4.  <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> stellt MSMQ-Datagrammsitzungen bereit. Weitere Informationen finden Sie unter [Warteschlangen in WCF](~/docs/framework/wcf/feature-details/queues-in-wcf.md).  
+  
+ Bedenken Sie, dass durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>-Eigenschaft nicht der vom Vertrag angeforderte Typ der Sitzung angegeben wird, sondern nur, dass eine Sitzung erforderlich ist.  
+  
+   
+  
+## Examples  
+ Der folgende Dienstvertrag erfordert, dass die konfigurierten Bindungen Sitzungen verwenden, wenn sie mit `SampleDuplexHello`-Dienstimplementierungen interagieren.  
+  
+ [!code-csharp[SCA.Session#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/services.cs#1)]
+ [!code-vb[SCA.Session#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.session/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist keiner der <see cref="T:System.ServiceModel.SessionMode" />-Werte.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

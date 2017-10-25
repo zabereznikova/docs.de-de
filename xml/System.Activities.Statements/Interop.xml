@@ -1,0 +1,536 @@
+<Type Name="Interop" FullName="System.Activities.Statements.Interop">
+  <TypeSignature Language="C#" Value="public sealed class Interop : System.Activities.NativeActivity, System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Interop extends System.Activities.NativeActivity implements class System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.Interop" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The WF3 Types are deprecated. Instead, please use the new WF4 Types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Aktivität, die die Ausführung einer <see cref="T:System.Workflow.ComponentModel.Activity" /> innerhalb eines Workflows verwaltet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Activities.Statements.Interop> Aktivität wird nicht in der Toolbox des Workflow-Designers angezeigt, es sei denn, das Projekt des Workflows dessen `Target Framework` eingestellt `.Net Framework 4`.  
+  
+> [!WARNING]
+>  Aufgrund von Einschränkungen bei den Schnittstellentypen, die die <xref:System.Activities.Statements.Interop>-Aktivität unterstützen kann, können das <xref:System.Workflow.Activities.HandleExternalEventActivity>-Objekt und das <xref:System.Workflow.Activities.CallExternalMethodActivity>-Objekt nicht direkt verwendet werden. Abgeleitete Aktivitäten, die mit dem Tool für Workflow-Kommunikationsaktivitäten (WCA.exe) erstellt wurden, können jedoch verwendet werden.  Finden Sie unter [Windows Workflow Foundation – Tools](http://go.microsoft.com/fwlink/?LinkId=178889) Details.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Interop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.Interop" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityMetaProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; ActivityMetaProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; ActivityMetaProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Interop.ActivityMetaProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Auflistung von Name/Wert-Paaren, die den Metadaten der <see cref="T:System.Workflow.ComponentModel.Activity" /> entsprechen, beispielsweise die <see cref="P:System.Workflow.ComponentModel.Activity.Name" />-Eigenschaft einer Aktivität oder die <see cref="T:System.Workflow.Activities.WhileActivity" />-Eigenschaft einer <see cref="P:System.Workflow.Activities.While.Condition" />-Aktivität.</summary>
+        <value>Die Auflistung der Metadaten von der <see cref="T:System.Workflow.ComponentModel.Activity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,System.Activities.Argument&gt; ActivityProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.Activities.Argument&gt; ActivityProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Interop.ActivityProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Activities.Argument&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Name/Wert-Paaren ab, die den Ein- und Ausgabeeigenschaften der <see cref="T:System.Workflow.ComponentModel.Activity" /> entspricht.</summary>
+        <value>Die Auflistung der Eingabe- und Eigenschaften der <see cref="T:System.Workflow.ComponentModel.Activity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityType">
+      <MemberSignature Language="C#" Value="public Type ActivityType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ActivityType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Interop.ActivityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Aktivität ab, die in der <see cref="T:System.Activities.Statements.Interop" />-Aktivität enthalten ist, oder legt ihn fest.</summary>
+        <value>Der Typ der Aktivität, der in der <see cref="T:System.Activities.Statements.Interop" />-Aktivität enthalten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ muss von <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType> abgeleitet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.NativeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.NativeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.CacheMetadata(System.Activities.NativeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override void Cancel (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Cancel(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.Cancel(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInduceIdle">
+      <MemberSignature Language="C#" Value="protected override bool CanInduceIdle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInduceIdle" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Interop.CanInduceIdle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetAttributes">
+      <MemberSignature Language="C#" Value="System.ComponentModel.AttributeCollection ICustomTypeDescriptor.GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection System.ComponentModel.ICustomTypeDescriptor.GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung von Attributen für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Die Auflistung der Attribute für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetClassName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen der Klasse der enthaltenen <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Der Klassenname des enthaltenden <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetComponentName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen der enthaltenen <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Der Name der Aktivität des enthaltenden <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetConverter">
+      <MemberSignature Language="C#" Value="System.ComponentModel.TypeConverter ICustomTypeDescriptor.GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.TypeConverter System.ComponentModel.ICustomTypeDescriptor.GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den zugeordneten Typkonverter für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Der Typkonverter für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptor ICustomTypeDescriptor.GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Standardereignis für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Das Standardereignis für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor ICustomTypeDescriptor.GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Standardeigenschaft für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Die Standardeigenschaft für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEditor">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Der Typ des angeforderten Editors.</param>
+        <summary>Gibt den Editor für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Der Editor für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung von Ereignissen für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Die Auflistung von Ereignissen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attribute, mit denen die zurückgegebenen Ereignisse gefiltert werden.</param>
+        <summary>Gibt die Auflistung der Ereignisse für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück. Hierbei wird das angegebene Array von Attributen als Filter verwendet.</summary>
+        <returns>Die Auflistung von Ereignissen für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung von Eigenschaften für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Auflistung von Eigenschaften für die enthaltene darstellt <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Das Attributarray zum Filtern der Eigenschaften.</param>
+        <summary>Gibt die Auflistung der Eigenschaften für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" /> zurück. Hierbei wird ein angegebenes Array von Attributen als Filter verwendet.</summary>
+        <returns>Eine Auflistung von Eigenschaften für die enthaltene <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Interop.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Die Eigenschaft, deren Besitzer abgerufen werden soll.</param>
+        <summary>Gibt den Besitzer des angegebenen Eigenschaftendeskriptors oder die <see cref="T:System.Activities.Statements.Interop" />-Aktivität selbst zurück, wenn der Eigenschaftendeskriptor keinen Besitzer hat.</summary>
+        <returns>Der Eigenschaftenbesitzer oder die <see cref="T:System.Activities.Statements.Interop" /> Aktivität selbst, wenn der Eigenschaftendeskriptor keinen Besitzer hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.Statements.Interop>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

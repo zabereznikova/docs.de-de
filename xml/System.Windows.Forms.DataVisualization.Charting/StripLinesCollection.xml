@@ -1,0 +1,32 @@
+<Type Name="StripLinesCollection" FullName="System.Windows.Forms.DataVisualization.Charting.StripLinesCollection">
+  <TypeSignature Language="C#" Value="public class StripLinesCollection : System.Windows.Forms.DataVisualization.Charting.ChartElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.StripLine&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StripLinesCollection extends System.Windows.Forms.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.StripLine&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.StripLinesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.StripLine&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.StripLine</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Windows.Forms.DataVisualization.Charting.StripLine" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.StripLinesCollection> Klasse stellt eine Auflistung von <xref:System.Windows.Forms.DataVisualization.Charting.StripLine> Objekte und wird implementiert, als die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.StripLines%2A> Eigenschaft von der <xref:System.Windows.Forms.DataVisualization.Charting.Axis> Klasse.  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.StripLine>Objekte können angefügt, eingefügt oder entfernt aus der Auflistung zur Entwurfszeit und zur Laufzeit.  
+  
+ **Hinweis** Bereichsstreifen können angezeigt werden einmal oder mehrmals für einen bestimmten Zeitraum.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

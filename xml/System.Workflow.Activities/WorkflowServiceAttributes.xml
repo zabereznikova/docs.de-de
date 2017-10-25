@@ -1,0 +1,432 @@
+<Type Name="WorkflowServiceAttributes" FullName="System.Workflow.Activities.WorkflowServiceAttributes">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowServiceAttributes : System.Workflow.ComponentModel.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowServiceAttributes extends System.Workflow.ComponentModel.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.WorkflowServiceAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer), typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer), typeof(System.ComponentModel.Design.Serialization.CodeDomSerializer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.Activities.WorkflowServiceAttributesTypeConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt das Dienstverhalten für den Workflowdienst, den es ausstattet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die WorkflowServiceAttributes-Klasse wird verwendet, um Dienstattribute für eine <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität zu definieren.  
+  
+ Einige der Attribute besitzen Standardwerte (siehe unten).  
+  
+|||  
+|-|-|  
+|Attribut|Standardwert|  
+|AddressFilterMode|Genau|  
+|IgnoreExtensionDataObject|False|  
+|IncludeExceptionDetailInFault|False|  
+|MaxItemsInObjectGraph|2147483647|  
+|UseSynchronizationContext|True|  
+|ValidateMustUnderstand|True|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowServiceAttributes.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.WorkflowServiceAttributes" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird normalerweise aufgerufen, wenn die übergeordnete <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität erstellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine neue Instanz der <xref:System.Workflow.Activities.WorkflowServiceAttributes>-Klasse erstellt wird.  
+  
+ [!code-csharp[WorkflowServiceAttributes#0](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#0)]
+ [!code-vb[WorkflowServiceAttributes#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressFilterMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AddressFilterMode AddressFilterMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AddressFilterMode AddressFilterMode" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.AddressFilterMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AddressFilterMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Enumeration <see cref="T:System.ServiceModel.AddressFilterMode" /> an, der vom Verteiler für die Weiterleitung eingehender Nachrichten an den korrekten Endpunkt verwendet wird, oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.AddressFilterMode" />-Enumerationswert, der vom Verteiler für die Weiterleitung eingehender Nachrichten an den korrekten Endpunkt verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `AddressFilterMode.Exact`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `AddressFilterMode`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#1](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#1)]
+ [!code-vb[WorkflowServiceAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public string ConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, mit dem das Dienstelement in einer Anwendungskonfigurationsdatei gesucht wird, oder legt ihn fest.</summary>
+        <value>Der Wert, der in der Konfigurationsdatei gesucht wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist NULL.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `ConfigurationName`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#2](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#2)]
+ [!code-vb[WorkflowServiceAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreExtensionDataObject">
+      <MemberSignature Language="C#" Value="public bool IgnoreExtensionDataObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreExtensionDataObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.IgnoreExtensionDataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob unbekannte Serialisierungsdaten gesendet werden sollen, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />, wenn unbekannte Serialisierungsdaten nie gesendet werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `IgnoreExtensionDataObject`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#3](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#3)]
+ [!code-vb[WorkflowServiceAttributes#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeExceptionDetailInFaults">
+      <MemberSignature Language="C#" Value="public bool IncludeExceptionDetailInFaults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeExceptionDetailInFaults" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.IncludeExceptionDetailInFaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt ihn fest, der angibt, dass allgemeine nicht behandelte Ausführungsausnahmen in eine <see cref="T:System.ServiceModel.FaultException" /> vom Typ <see cref="T:System.ServiceModel.ExceptionDetail" /> konvertiert und als Fehlermeldung gesendet werden. Legen Sie dieses Attribut nur während der Entwicklung auf <see langword="true" /> fest, um Fehler in einem Dienst zu beheben.</summary>
+        <value>
+          <see langword="true" />, wenn nicht behandelte Ausnahmen als SOAP-Fehler zurückgegeben werden sollen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `IncludeExceptionDetailInFaults`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#4](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#4)]
+ [!code-vb[WorkflowServiceAttributes#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxItemsInObjectGraph">
+      <MemberSignature Language="C#" Value="public int MaxItemsInObjectGraph { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxItemsInObjectGraph" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.MaxItemsInObjectGraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl der in einem serialisierten Objekt zulässigen Elemente ab oder legt sie fest.</summary>
+        <value>Die maximale Anzahl der in einem Objekt zulässigen Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist <xref:System.Int32.MaxValue>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `MaxItemsInObjectGraph`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#5](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#5)]
+ [!code-vb[WorkflowServiceAttributes#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Namensattributs im Dienstelement in WSDL (Web Services Description Language) ab oder legt ihn fest.</summary>
+        <value>Der Wert der Name-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der <`wsdl:service`>-Element, wenn exportiert.  Der Standardwert ist NULL.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `Name`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#6](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#6)]
+ [!code-vb[WorkflowServiceAttributes#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Zielnamespace für den Dienst in WSDL (Web Services Description Language) ab oder legt ihn fest.</summary>
+        <value>Der Wert der Namespace-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert entspricht dem Wert von der `targetNamespace` -Attribut für die <`wsdl:definitions`>-Element, enthält der <`wsdl:service`> Element beim Exportieren.  Der Standardwert ist NULL.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `Namespace`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#7](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#7)]
+ [!code-vb[WorkflowServiceAttributes#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSynchronizationContext">
+      <MemberSignature Language="C#" Value="public bool UseSynchronizationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSynchronizationContext" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.UseSynchronizationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob der aktuelle Synchronisierungskontext zum Auswählen des Ausführungsthreads verwendet wird.</summary>
+        <value>
+          <see langword="true" />, wenn alle Aufrufe des Diensts in dem vom <see cref="T:System.Threading.SynchronizationContext" /> angegebenen Thread ausgeführt werden müssen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `UseSynchronizationContext`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#8](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#8)]
+ [!code-vb[WorkflowServiceAttributes#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateMustUnderstand">
+      <MemberSignature Language="C#" Value="public bool ValidateMustUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateMustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowServiceAttributes.ValidateMustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der angibt, ob das System oder die Anwendung die Verarbeitung von <see langword="MustUnderstand" />-SOAP-Headern erzwingt.</summary>
+        <value>
+          <see langword="true" />, wenn das System die <see langword="MustUnderstand" />-SOAP-Header verarbeiten soll; andernfalls <see langword="false" />, was bedeutet, dass die Anwendung diese Header verarbeitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `ValidateMustUnderstand`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[WorkflowServiceAttributes#9](~/samples/snippets/csharp/VS_Snippets_CFX/workflowserviceattributes/cs/snippets.cs#9)]
+ [!code-vb[WorkflowServiceAttributes#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/workflowserviceattributes/vb/snippets.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

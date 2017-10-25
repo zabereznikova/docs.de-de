@@ -1,0 +1,21 @@
+<Namespace Name="System.Web.Security">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Security" /> -Namespace enthält Klassen, die zum Implementieren von ASP.NET-Sicherheit in Server-Webanwendungen verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.Membership> Klasse wird von ASP.NET-Anwendungen verwendet, um die Anmeldeinformationen des Benutzers zu überprüfen und Verwalten von benutzereinstellungen wie Kennwörter und e-Mail-Adressen. Die <xref:System.Web.Security.Roles> -Klasse ermöglicht es Ihnen zum Verwalten der Autorisierung für Ihre Anwendung basierend auf Gruppen von Benutzern, denen die Rollen in der Webanwendung zugewiesen.  
+  
+ Sowohl die <xref:System.Web.Security.Membership> Klasse und die <xref:System.Web.Security.Roles> -Klasse dazu, Klassen, die den Zugriff auf Ihre Anwendung Daten Store zum Abrufen von Informationen zu Mitgliedschaft und Rollen verwenden. Mitgliedschaft und Rollen Daten gespeichert werden können, in einer Microsoft SQL Server-Datenbank mithilfe der <xref:System.Web.Security.SqlMembershipProvider> und <xref:System.Web.Security.SqlRoleProvider> Klassen; in einer Active Directory mittels der <xref:System.Web.Security.ActiveDirectoryMembershipProvider> und <xref:System.Web.Security.AuthorizationStoreRoleProvider> Klassen oder in eine benutzerdefinierte Datenquelle unter Verwendung von Implementierungen der die <xref:System.Web.Security.MembershipProvider> und <xref:System.Web.Security.RoleProvider> Klassen.  
+  
+ Sie konfigurieren die ASP.NET-Mitgliedschaft wird mithilfe der [Mitgliedschaft-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b9c1ee8f-33ca-4361-8666-b42a0fe86049). Wenn eine Anwendung mithilfe von Mitgliedschaft zugegriffen wird, erstellt ASP.NET eine Instanz von der <xref:System.Web.Security.Membership> -Klasse, die zum Mitgliedschaftsinformationen für die Abfrage verwendet werden können. Anbieterspezifischen Implementierungen von der <xref:System.Web.Security.MembershipUser> -Klasse enthalten Informationen über den Benutzer auf die Seite zuzugreifen. Sie können benutzerdefinierte Implementierungen der erstellen die <xref:System.Web.Security.MembershipUser> Klasse für Ihre Anwendung.  
+  
+ Konfigurieren von ASP.NET-Rollen, die von der [RoleManager Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b0f6078-4824-4fc8-a5ee-4ae00ee3ceec). Erstellt eine Instanz von ASP.NET die <xref:System.Web.Security.Roles> -Klasse, die Informationen über die Rollenmitgliedschaft des aktuellen Benutzers enthält.  
+  
+ ASP.NET bietet-Serversteuerelemente, die Interaktion mit der <xref:System.Web.Security.Membership> Klasse und die <xref:System.Web.Security.Roles> Klasse. Die <xref:System.Web.UI.WebControls.Login>, <xref:System.Web.UI.WebControls.CreateUserWizard>, und <xref:System.Web.UI.WebControls.ChangePassword> Steuerelemente arbeiten mit der <xref:System.Web.Security.Membership> Klasse zum Erstellen einer authentifizierten Webanwendung vereinfachen und die <xref:System.Web.UI.WebControls.LoginView> Steuerelement verwendet rollenspezifische Vorlagen, um Webseiten für bestimmte Benutzergruppen anpassen der Benutzer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,32 @@
+<Type Name="StylusDownEventHandler" FullName="System.Windows.Input.StylusDownEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void StylusDownEventHandler(object sender, StylusDownEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StylusDownEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusDownEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.StylusDownEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Input.StylusDownEventArgs" />, das die Ereignisdaten enthält. .</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Windows.Input.Stylus.StylusDown" /> Ereignis als auch von verschiedenen Varianten, die das entsprechende Vorschau-Ereignis. Erneut macht auch das Ereignis in den Basiselement-Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat entspricht in der Regel ein Routingereignis. Überprüfen Sie die Ereignisdaten, insbesondere die <xref:System.Windows.RoutedEventArgs.Source%2A> -Eigenschaft, um zu bestimmen, welches Element das Ereignis ausgelöst hat.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

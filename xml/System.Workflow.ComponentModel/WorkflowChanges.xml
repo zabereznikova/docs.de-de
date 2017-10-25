@@ -1,0 +1,211 @@
+<Type Name="WorkflowChanges" FullName="System.Workflow.ComponentModel.WorkflowChanges">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowChanges" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowChanges extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.WorkflowChanges" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Satz vorgeschlagener Änderungen an einer ausgeführten Workflowinstanz dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Alle vorgeschlagenen Änderungen an einer ausgeführten Workflowinstanz müssen mithilfe eines <xref:System.Workflow.ComponentModel.WorkflowChanges>-Objekts vorgenommen werden.  
+  
+ Wird ein <xref:System.Workflow.ComponentModel.WorkflowChanges>-Objekt im Anwendungscode erstellt (außerhalb der Workflowinstanz), muss es sich bei dem an den Konstruktor übergebenen <xref:System.Workflow.ComponentModel.Activity>-Objekt um das Objekt handeln, das von der <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowDefinition%2A>-Methode der <xref:System.Workflow.Runtime.WorkflowInstance> Klasse zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen einer neuen Instanz eines <xref:System.Workflow.ComponentModel.WorkflowChanges>-Objekts. Dieses Beispiel stammt aus dem Ordering State Machine SDK-Beispiel. Weitere Informationen finden Sie unter [Bestelldienst State Machine Beispiel](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[WF_Samples#87](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#87)]
+ [!code-vb[WF_Samples#87](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#87)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowChanges (System.Workflow.ComponentModel.Activity rootActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Activity rootActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.WorkflowChanges.#ctor(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rootActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="rootActivity">Die Stamm-<see cref="T:System.Workflow.ComponentModel.Activity" /> des Workflows.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rootActivity" /> ist ein NULL-Verweis (Visual Basic <see langword="Nothing" />).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="rootActivity" /> ist keine <see cref="T:System.Workflow.ComponentModel.CompositeActivity" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rootActivity" /> befindet sich im Entwurfsmodus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ConditionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ConditionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.WorkflowChanges.ConditionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bedingung an, die erfüllt werden muss, um <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" /> zu übernehmen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann auf einer Stammaktivität festgelegt werden, um dynamische Updates für den ausgeführten Workflow nicht zuzulassen.  
+  
+ Wird die Eigenschaft für die Stammaktivität festgelegt und ergibt die Bedingung `false`, sind die dynamischen Updates in der Workflowinstanz nicht zulässig. Wenn die Bedingung `true` ergibt, oder die Bedingung nicht festgelegt ist, sind dynamische Updates zulässig.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCondition">
+      <MemberSignature Language="C#" Value="public static object GetCondition (object dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetCondition(object dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.WorkflowChanges.GetCondition(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">Ein <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> (oder abgeleiteter Typ), der eine Bedingungseigenschaft enthält, beispielsweise die <see cref="T:System.Workflow.Activities.SequentialWorkflowActivity" />-Aktivität und die <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />-Aktivität.</param>
+        <summary>Ruft die Bedingungseigenschaft für ein Abhängigkeitsobjekt ab.</summary>
+        <returns>Ein Bedingungseigenschaftentyp, beispielsweise <see cref="T:System.Workflow.ComponentModel.ActivityCondition" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.WorkflowChanges.ConditionProperty> ist eine angehängte Abhängigkeitseigenschaft, d.&amp;#160;h., sie wird von einem Typ deklariert, verwendet und auf einem anderen Typen festgelegt. Deshalb sind für den Typ, von dem die Eigenschaft deklariert wird, statische `get`- und `set`-Methoden erforderlich.  
+  
+ Hilfsmethode für das Abrufen von <xref:System.Workflow.ComponentModel.WorkflowChanges.ConditionProperty>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependencyObject" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dependencyObject" /> ist kein <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> oder ein Typ, der von <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> abgeleitet wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCondition">
+      <MemberSignature Language="C#" Value="public static void SetCondition (object dependencyObject, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCondition(object dependencyObject, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.WorkflowChanges.SetCondition(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">Ein <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> (oder abgeleiteter Typ), der eine Bedingungseigenschaft enthält, beispielsweise die <see cref="T:System.Workflow.Activities.SequentialWorkflowActivity" />-Aktivität und die <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />-Aktivität.</param>
+        <param name="value">Der Bedingungstyp, der auf dem Abhängigkeitsobjekt festgelegt werden soll, beispielsweise <see cref="T:System.Workflow.ComponentModel.ActivityCondition" />.</param>
+        <summary>Legt die Bedingungseigenschaft für ein Abhängigkeitsobjekt fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.WorkflowChanges.ConditionProperty> ist eine angehängte Abhängigkeitseigenschaft, d.&amp;#160;h., sie wird von einem Typ deklariert, verwendet und auf einem anderen Typen festgelegt. Deshalb sind für den Typ, von dem die Eigenschaft deklariert wird, statische `get`- und `set`-Methoden erforderlich.  
+  
+ Hilfsmethode für das Festlegen von <xref:System.Workflow.ComponentModel.WorkflowChanges.ConditionProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransientWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.CompositeActivity TransientWorkflow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.CompositeActivity TransientWorkflow" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.WorkflowChanges.TransientWorkflow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.CompositeActivity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine geklonte Aktivitätsstruktur zurück, an der Änderungen möglich sind, die anschließend für die ausgeführte Workflowinstanz übernommen werden können.</summary>
+        <value>Eine <see cref="T:System.Workflow.ComponentModel.CompositeActivity" />, die die geklonte Stammaktivität für den Workflow enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Hinzufügen von Aktivitäten zur TransientWorkflow-Eigenschaft gezeigt. Dieses Beispiel stammt aus dem Ordering State Machine SDK-Beispiel. Weitere Informationen finden Sie unter [Bestelldienst State Machine Beispiel](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[WF_Samples#88](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#88)]
+ [!code-vb[WF_Samples#88](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#88)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.WorkflowChanges.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft den aktuellen Satz vorgeschlagener Änderungen an der Aktivitätsstruktur, die von der <see cref="P:System.Workflow.ComponentModel.WorkflowChanges.TransientWorkflow" />-Eigenschaft dargestellt werden.</summary>
+        <returns>Ein <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" />-Objekt, das alle Fehler bzw. Warnungen enthält, die während der Validierung aufgetreten sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,642 @@
+<Type Name="LegendCell" FullName="System.Windows.Forms.DataVisualization.Charting.LegendCell">
+  <TypeSignature Language="C#" Value="public class LegendCell : System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LegendCell extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.LegendCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Legendenzelle in einem Legendenelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Legende mit Legendenelemente, die durch Werte dargestellt werden aufgefüllt ist die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItemsCollection>. Diese Legendenelemente bestehen aus einzelnen Legendenzellen, die wiederum von dargestellt sind die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCell" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendCell (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendCell.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see langword="string" /> Wert, der je nach Typ der Zelle den Text- oder Image darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCell" /> -Klasse mit einer <paramref name="text" /> Parameter, der der Zelle Text oder Image-Namen angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendCell (System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendCell.#ctor(System.Windows.Forms.DataVisualization.Charting.LegendCellType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cellType" Type="System.Windows.Forms.DataVisualization.Charting.LegendCellType" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cellType">Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCellType" /> Wert, der die Legendenzellentyp zu verwendende darstellt.</param>
+        <param name="text">Ein Zeichenfolgenwert, der der Zelle Text oder Image Name, je nach Typ der Zelle darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCell" /> Klasse mit dem Typ der angegebenen Zelle und eine <paramref name="text" /> Parameter, der der Zelle Text oder Image-Namen angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendCell (System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text, System.Drawing.ContentAlignment alignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text, valuetype System.Drawing.ContentAlignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendCell.#ctor(System.Windows.Forms.DataVisualization.Charting.LegendCellType,System.String,System.Drawing.ContentAlignment)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cellType" Type="System.Windows.Forms.DataVisualization.Charting.LegendCellType" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="alignment" Type="System.Drawing.ContentAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="cellType">Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCellType" /> Wert, der die Legendenzellentyp zu verwendende darstellt.</param>
+        <param name="text">Ein <see langword="string" /> Wert, der je nach Typ der Zelle den Text- oder Image darstellt.</param>
+        <param name="alignment">Ein <see cref="T:System.Drawing.ContentAlignment" /> Wert, der die Ausrichtung der Legende des Inhalts der Zelle darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCell" /> Klasse mit dem Typ der angegebenen Zelle inhaltsausrichtung, und ein <paramref name="text" /> Parameter, der der Zelle Text oder Image-Namen angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.ContentAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung der Legende Inhalt der Zelle.</summary>
+        <value>Ein <see cref="T:System.Drawing.ContentAlignment" /> Wert, der die Ausrichtung der Legende des Inhalts der Zelle darstellt. Der Standardwert ist <see cref="F:System.Drawing.ContentAlignment.MiddleCenter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.Alignment%2A> Eigenschaft wird zum Ausrichten von Text, Reihensymbole oder Bilder innerhalb der Legendenzelle verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Hintergrundfarbe der Legendenzelle.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert verwendet, um die Legendenzelle Hintergrund gezeichnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.BackColor%2A> Eigenschaft hat die höchste Priorität beim Festlegen der Hintergrundfarbe aller Entitäten in der Legende.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellSpan">
+      <MemberSignature Language="C#" Value="public virtual int CellSpan { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl von horizontalen Zellen verwendet, um den Inhalt der Legendenzelle gezeichnet werden soll.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Anzahl von horizontalen Zellen verwendet, um den Inhalt der Legende Zelle gezeichnet werden soll. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Breite der Zelle der Zelleninhalt hinausgehen müssen, legen Sie die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellSpan%2A> Eigenschaft, um die Anzahl der Zellen, die erforderlich, um den Inhalt anzupassen. Diese Eigenschaft wird am häufigsten verwendet, wenn Sie einen erweiterten Header oder Titel aus, um die Legende hinzufügen möchten.  
+  
+ Wenn diese Eigenschaft auf einen Wert größer als 1 festgelegt ist, müssen leer Legendenzellen hinzugefügt werden, um den Inhalt der erweiterten Legendenzelle aufzunehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellType">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.LegendCellType CellType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LegendCellType CellType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LegendCellType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Legendenzellentyp an, der verwendet wird, um den Inhalt der Legendenzelle definieren.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCellType" /> -Enumerationswert ab, der den Typ, die verwendet wird darstellt, um den Inhalt der Legendenzelle definieren. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType%2A> Eigenschaft bestimmt den Typ des Inhalts, der in jeder einzelnen Legendenzelle angezeigt werden soll. Einer der folgenden Zellentypen angegeben werden:  
+  
+-   : Eine Zeichenfolge angegeben wird mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.Text%2A> -Eigenschaft, und wird in der Legendenzelle angezeigt werden.  
+  
+-   SeriesSymbol: Ein Reihensymbol wird definiert, indem Sie die <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle%2A> Eigenschaft in der <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem> Klasse. Es wird für die Legendenzelle angezeigt werden. Beachten Sie, dass ein Reihensymbol ein visueller Indikator wird – einer Linie, Rechteck oder Marker. Wenn <xref:System.Windows.Forms.DataVisualization.Charting.LegendItem.ImageStyle%2A> festgelegt ist, um <xref:System.Windows.Forms.DataVisualization.Charting.LegendImageStyle.Marker>, alle Markerattribute für das benutzerdefinierte Element anwenden, auf die Zelle.  
+  
+-   Bild: Ein Bild wird mit definiert die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.Image%2A> Eigenschaft und wird in der Legendenzelle angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendCell.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCell" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftart für die Legendenzelle.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> Objekt, das die Schriftart für die Legendenzelle darstellt. Der Standardwert ist "Microsoft Sans Serif, 8pt".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.Font%2A> Eigenschaft kann verwendet werden, um Schriftarteigenschaften der Legendenzelle festzulegen.  
+  
+ Wenn Sie versuchen, ändern Sie die Eigenschaften dieses <xref:System.Drawing.Font> -Objekt zur Laufzeit, tritt ein Kompilierungsfehler auf. Um zur Laufzeit Schriftarteigenschaften festzulegen, müssen Sie ein neues erstellen <xref:System.Drawing.Font> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Textfarbe der Legendenzelle fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert verwendet, um den Legendentext für die Zelle gezeichnet werden soll. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Text>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public virtual string Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Image" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ImageValueEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Bilds in eine Legendenzelle fest.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen des Bilds in der Legendenzelle zu verwendende darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name sollte ein URL sein.  
+  
+ Diese Eigenschaft gilt nur wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size ImageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size ImageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.ImageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Size), "0, 0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SizeEmptyValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des Bilds in eine Legendenzelle fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> Wert, der die Größe des Bilds darstellt. Der Standardwert ist (0,0), was bedeutet, dass die ursprüngliche Größe des Bilds verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.ImageSize%2A> Eigenschaft wird verwendet, um die Breite und Höhe des Legendenzellenbilds explizit festzulegen.  
+  
+ Diese Eigenschaft gilt nur wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageTransparentColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.ImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Farbe an, die durch eine transparente Farbe ersetzt wird, wenn das Bild gezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der als transparente Farbe in eine Legendenzellenbilds verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.ImageTransparentColor%2A> Eigenschaft gilt nur, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Legend">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.Legend Legend { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Legend Legend" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.Legend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Legend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Legende, in der diese Zelle gehört.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.Legend" /> Objekt, das die Legende darstellt, in denen diese Zelle gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegendItem">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.LegendItem LegendItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.LegendItem LegendItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.LegendItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LegendItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Legendenelement, in dem diese Zelle gehört.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendItem" /> -Objekt, das Legendenelement darstellt, in denen diese Zelle gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margins">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.Margins Margins { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Margins Margins" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.Margins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.Margins), "0,0,15,15")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Margins</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ränder der Legendenzelle.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.Margins" /> -Objekt, das oben, unten, links und rechts Werte von der legendenzellenränder darstellt. Die Standardwerte für oben, unten, links und rechts sind "0,0,15,15".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ränder werden als Prozentsatz des Schriftgrads für die Legendenzelle gemessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Legendenzelle.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Textnamen der Legendenzelle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name der Legendenzelle muss eindeutig sein; Andernfalls wird eine Ausnahme ausgelöst werden.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.Name%2A> Eigenschaft kann als Indexer verwendet werden, beim Abrufen einer <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell> -Objekt aus der <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection>.  
+  
+ Wenn Sie diese Eigenschaft auf eine Zeichenfolge der Länge 0 (null) festlegen, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeriesSymbolSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size SeriesSymbolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size SeriesSymbolSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.SeriesSymbolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Size), "200, 70")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des Reihensymbols, die in der Legendenzelle angezeigt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> Objekt, das die Größe des Reihensymbols darstellt. Die Standardwerte für die Breite und Höhe des Symbols sind 200 und 70.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe des Reihensymbols wird als Prozentsatz des Legendenschriftgrads gemessen.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.SeriesSymbolSize%2A> Eigenschaft gilt nur, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.SeriesSymbol>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Legendentext für die Zelle.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Text für die Legendenzelle darstellt. Der Standardwert ist eine Zeichenfolge der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.Text%2A> Eigenschaft gilt nur, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.CellType%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.LegendCellType.Text>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public virtual string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.LegendCell.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text für die Legendenzelle.</summary>
+        <value>Ein <see langword="string" /> Wert, der die QuickInfo für die Legendenzelle darstellt. Der Standardwert ist eine Zeichenfolge der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `ToolTip` -Eigenschaft für ein Legendenelement und eine Legendenzelle festgelegt ist, die Legende Zelleneigenschaft hat Vorrang vor.  
+  
+ Dies <xref:System.Windows.Forms.DataVisualization.Charting.LegendCell.ToolTip%2A> -Eigenschaft können Sie spezielle Schlüsselwörter zum Anzeigen verschiedener Arten von Daten im Zusammenhang mit dem Diagramm festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

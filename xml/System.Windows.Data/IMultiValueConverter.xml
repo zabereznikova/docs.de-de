@@ -1,0 +1,109 @@
+<Type Name="IMultiValueConverter" FullName="System.Windows.Data.IMultiValueConverter">
+  <TypeSignature Language="C#" Value="public interface IMultiValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMultiValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.IMultiValueConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit, benutzerdefinierten Logik in Anwenden einer <see cref="T:System.Windows.Data.MultiBinding" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuordnen einen Konverter, für eine <xref:System.Windows.Data.MultiBinding>, erstellen Sie eine Klasse, die implementiert der <xref:System.Windows.Data.IMultiValueConverter> Schnittstelle, und implementieren Sie dann die <xref:System.Windows.Data.IMultiValueConverter.Convert%2A> und <xref:System.Windows.Data.IMultiValueConverter.ConvertBack%2A> Methoden.  
+  
+ Einzelne Bindungen in der Auflistung können ihre eigenen Wertkonverter haben. Weitere Informationen finden Sie unter <xref:System.Windows.Data.IValueConverter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object[] values, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.IMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="values">Das Array von Werten, das von den Quellbindungen in der <see cref="T:System.Windows.Data.MultiBinding" /> erzeugt wird. Der Wert <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> gibt an, dass die Quellbindung keinen Wert für die Konvertierung bereitstellen kann.</param>
+        <param name="targetType">Der Typ der Bindungsziel-Eigenschaft.</param>
+        <param name="parameter">Der zu verwendende Konverterparameter.</param>
+        <param name="culture">Die im Konverter zu verwendende Kultur.</param>
+        <summary>Konvertiert Quellwerte in einen Wert für das Bindungsziel. Das Datenbindungsmodul ruft diese Methode auf, wenn es die Werte von Quellbindungen an das Bindungsziel weitergibt.</summary>
+        <returns>Ein konvertierter Wert.  
+  
+ Wenn die Methode <see langword="null" /> zurückgibt, wird der gültige <see langword="null" />-Wert verwendet.  
+  
+ Ein Rückgabewert von <see cref="T:System.Windows.DependencyProperty" />.<see cref="F:System.Windows.DependencyProperty.UnsetValue" /> Gibt an, dass der Konverter keinen Wert erzeugt hat und die Bindung der <see cref="P:System.Windows.Data.BindingBase.FallbackValue" /> , wenn es verfügbar ist, oder andernfalls ist den Standardwert verwendet.  
+  
+ Ein Rückgabewert von <see cref="T:System.Windows.Data.Binding" />.<see cref="F:System.Windows.Data.Binding.DoNothing" /> Gibt an, dass die Bindung nicht den Wert übertragen oder verwenden Sie die <see cref="P:System.Windows.Data.BindingBase.FallbackValue" /> oder den Standardwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Datenbindungsmodul fängt keine Ausnahmen, die von einem Benutzer angegebenen Konverter ausgelöst werden. Jede Ausnahme, die ausgelöst wird, indem Sie die <xref:System.Windows.Data.IMultiValueConverter.Convert%2A> Methode oder eine nicht abgefangenen Ausnahmen, die durch Methoden ausgelöst werden, die die <xref:System.Windows.Data.IMultiValueConverter.Convert%2A> Methodenaufrufe, als zur Laufzeit Fehler behandelt werden. Behandeln von erwarteten Probleme durch zurückgeben <xref:System.Windows.DependencyProperty>.<xref:System.Windows.DependencyProperty.UnsetValue>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object[] ConvertBack (object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ConvertBack(object value, class System.Type[] targetTypes, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.IMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetTypes" Type="System.Type[]" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der vom Bindungsziel erzeugt wird.</param>
+        <param name="targetTypes">Das Array von Typen, in die konvertiert werden soll. Die Arraylänge gibt die Anzahl und Typen von Werten an, die von der Methode zurückgegeben werden sollen.</param>
+        <param name="parameter">Der zu verwendende Konverterparameter.</param>
+        <param name="culture">Die im Konverter zu verwendende Kultur.</param>
+        <summary>Konvertiert einen Bindungszielwert in die Quellbindungswerte.</summary>
+        <returns>Ein Array von Werten, die aus dem Zielwert zurück in die Quellwerte konvertiert wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Treten mehrere Rückgabewerte als vorhanden Bindungen in sind der <xref:System.Windows.Data.MultiBinding>, werden die überzähligen Rückgabewerte ignoriert. Treten weitere quellbindungen als Rückgabewerte vorhanden sind, haben die verbleibenden quellbindungen keine Werte festgelegt werden. Typen der Rückgabewerte werden nicht für überprüft `targetTypes`; die Werte werden direkt auf den quellbindungen festgelegt.  
+  
+ Zurückgeben <xref:System.Windows.Data.Binding.DoNothing> an Position `i` um anzugeben, dass kein Wert für die quellbindung am Index festgelegt werden `i`.  
+  
+ Zurückgeben <xref:System.Windows.DependencyProperty>.<xref:System.Windows.DependencyProperty.UnsetValue> an Position `i` um anzugeben, dass der Konverter einen Wert für die quellbindung am Index angeben kann `i`, und dass kein Wert festgelegt werden sollen.  
+  
+ Zurückgeben `null` , um anzugeben, dass der Konverter die Konvertierung nicht ausführen kann oder Konvertierung in diese Richtung nicht unterstützt.  
+  
+ Das Datenbindungsmodul fängt keine Ausnahmen, die von einem Benutzer angegebenen Konverter ausgelöst werden. Jede Ausnahme, die ausgelöst wird, indem Sie die <xref:System.Windows.Data.IMultiValueConverter.ConvertBack%2A> -Methode oder eine nicht abgefangene Ausnahmen, die durch Methoden ausgelöst werden, die die <xref:System.Windows.Data.IMultiValueConverter.ConvertBack%2A> Methodenaufrufe als zur Laufzeit Fehler behandelt werden. Behandeln von erwarteten Probleme durch zurückgeben `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

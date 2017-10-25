@@ -1,0 +1,359 @@
+<Type Name="Signature" FullName="System.Security.Cryptography.Xml.Signature">
+  <TypeSignature Language="C#" Value="public class Signature" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Signature extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.Signature" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das <see langword="&lt;Signature&gt;" />-Element einer XML-Signatur dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.Signature> -Klasse stellt die <`Signature`>-Element ein XML-Signatur, die durch die XML-Signatur-Spezifikation definiert. Die <`Signature`>-Element ist das Stammelement einer XML-Signatur. Die <xref:System.Security.Cryptography.Xml.Signature.SignedInfo%2A>, <xref:System.Security.Cryptography.Xml.Signature.SignatureValue%2A>, <xref:System.Security.Cryptography.Xml.Signature.KeyInfo%2A>, und <xref:System.Security.Cryptography.Xml.Signature.ObjectList%2A> kapseln die Unterelemente von Eigenschaften der <`Signature`> Element.  
+  
+ Weitere Informationen zu den <`Signature`>-Element finden Sie in der W3C-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> Klasse zum Signieren und Überprüfen eines XML-Dokuments mithilfe einer eingeschlossenen Signatur.  
+  
+ [!code-cpp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> -Klasse zum Signieren eines Objekts und ein XML-Dokuments mithilfe einer getrennten Signatur zu überprüfen.  
+  
+ [!code-cpp[XMLDSIG - Signature - Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CPP/sample.cpp#1)]
+ [!code-csharp[XMLDSIG - Signature - Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CS/sample.cs#1)]
+ [!code-vb[XMLDSIG - Signature - Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG - Signature - Detached/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Signature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Signature.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.Signature" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> Klasse zum Signieren und Überprüfen eines XML-Dokuments mithilfe einer eingeschlossenen Signatur.  
+  
+ [!code-cpp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> -Klasse zum Signieren eines Objekts und ein XML-Dokuments mithilfe einer getrennten Signatur zu überprüfen.  
+  
+ [!code-cpp[XMLDSIG - Signature - Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CPP/sample.cpp#1)]
+ [!code-csharp[XMLDSIG - Signature - Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CS/sample.cs#1)]
+ [!code-vb[XMLDSIG - Signature - Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG - Signature - Detached/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddObject">
+      <MemberSignature Language="C#" Value="public void AddObject (System.Security.Cryptography.Xml.DataObject dataObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddObject(class System.Security.Cryptography.Xml.DataObject dataObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Signature.AddObject(System.Security.Cryptography.Xml.DataObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataObject" Type="System.Security.Cryptography.Xml.DataObject" />
+      </Parameters>
+      <Docs>
+        <param name="dataObject">Die <see cref="T:System.Security.Cryptography.Xml.DataObject" /> die Liste der zu signierenden Objekte hinzugefügt werden.</param>
+        <summary>Fügt eine <see cref="T:System.Security.Cryptography.Xml.DataObject" /> zur Liste der Objekte, die signiert werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.Signature.AddObject%2A> Methode fügt eine <xref:System.Security.Cryptography.Xml.DataObject> Objekt, das eine Auflistung mit den <xref:System.Security.Cryptography.Xml.Signature.ObjectList%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Signature.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.Signature" />.</summary>
+        <returns>Die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.Signature" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <see cref="P:System.Security.Cryptography.Xml.Signature.SignedInfo" />-Eigenschaft ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Security.Cryptography.Xml.Signature.SignatureValue" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Signature.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des aktuellen <see cref="T:System.Security.Cryptography.Xml.Signature" />.</summary>
+        <value>Die ID des aktuellen <see cref="T:System.Security.Cryptography.Xml.Signature" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.Signature.Id%2A> eine Zeichenfolgen-ID der XML-Darstellung des aktuellen hinzuzufügenden Eigenschaft <xref:System.Security.Cryptography.Xml.Signature> Element. Die ID wird verwendet, um Verweis der <xref:System.Security.Cryptography.Xml.Signature> von einem anderen Speicherort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyInfo">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.KeyInfo KeyInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.KeyInfo KeyInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Signature.KeyInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.KeyInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> der aktuellen <see cref="T:System.Security.Cryptography.Xml.Signature" /> ab oder legt ihn fest.</summary>
+        <value>Der <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> der aktuellen <see cref="T:System.Security.Cryptography.Xml.Signature" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.Signature.KeyInfo%2A> Eigenschaft verwendet einen <xref:System.Security.Cryptography.Xml.KeyInfo> Objekt zur Darstellung der <`KeyInfo`> einer digitalen Signatur von XML-Element.  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie in der W3C-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> Klasse zum Signieren und Überprüfen eines XML-Dokuments mithilfe einer eingeschlossenen Signatur.  
+  
+ [!code-cpp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> -Klasse zum Signieren eines Objekts und ein XML-Dokuments mithilfe einer getrennten Signatur zu überprüfen.  
+  
+ [!code-cpp[XMLDSIG - Signature - Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CPP/sample.cpp#1)]
+ [!code-csharp[XMLDSIG - Signature - Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CS/sample.cs#1)]
+ [!code-vb[XMLDSIG - Signature - Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG - Signature - Detached/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Signature.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die XML-Element, aus dem Laden der <see cref="T:System.Security.Cryptography.Xml.Signature" /> Zustand.</param>
+        <summary>Lädt eine <see cref="T:System.Security.Cryptography.Xml.Signature" /> Zustand aus einer XML-Element.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <paramref name="value" /> Parameter enthält keine gültige <see cref="P:System.Security.Cryptography.Xml.Signature.SignatureValue" />.  
+  
+ - oder -   
+  
+ Die <paramref name="value" /> Parameter enthält keine gültige <see cref="P:System.Security.Cryptography.Xml.Signature.SignedInfo" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectList">
+      <MemberSignature Language="C#" Value="public System.Collections.IList ObjectList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList ObjectList" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Signature.ObjectList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste von Objekten, die signiert werden.</summary>
+        <value>Eine Liste von Objekten, die signiert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.Signature.ObjectList%2A> Eigenschaft verwendet eine Auflistung von <xref:System.Security.Cryptography.Xml.DataObject> -Objekten zur Darstellung der <`Object`>-Tag eine digitale Signatur.  
+  
+ Sie können auch Hinzufügen einer <xref:System.Security.Cryptography.Xml.DataObject> dieser Auflistung mit den <xref:System.Security.Cryptography.Xml.Signature.AddObject%2A> Methode.  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie in der W3C-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureValue">
+      <MemberSignature Language="C#" Value="public byte[] SignatureValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SignatureValue" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Signature.SignatureValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der digitalen Signatur.</summary>
+        <value>Ein Bytearray, das den Wert der digitalen Signatur enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.Signature.SignatureValue%2A> Eigenschaft verwendet ein Bytearray zur Darstellung der <`SignatureValue`>-Element der digitalen XML-Signatur enthaltenen.  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie in der W3C-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedInfo">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.SignedInfo SignedInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.SignedInfo SignedInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Signature.SignedInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.SignedInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> der aktuellen <see cref="T:System.Security.Cryptography.Xml.Signature" /> ab oder legt ihn fest.</summary>
+        <value>Der <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> der aktuellen <see cref="T:System.Security.Cryptography.Xml.Signature" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.Signature.SignedInfo%2A> Eigenschaft verwendet die <xref:System.Security.Cryptography.Xml.SignedInfo> -Klasse zur Darstellung der <`SignedInfo`> Element des enthaltenen digitalen XML-Signatur.  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie in der W3C-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> Klasse zum Signieren und Überprüfen eines XML-Dokuments mithilfe einer eingeschlossenen Signatur.  
+  
+ [!code-cpp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Xml.Signature> -Klasse mit der <xref:System.Security.Cryptography.Xml.SignedXml> -Klasse zum Signieren eines Objekts und ein XML-Dokuments mithilfe einer getrennten Signatur zu überprüfen.  
+  
+ [!code-cpp[XMLDSIG - Signature - Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CPP/sample.cpp#1)]
+ [!code-csharp[XMLDSIG - Signature - Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR/XMLDSIG - Signature - Detached/CS/sample.cs#1)]
+ [!code-vb[XMLDSIG - Signature - Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/XMLDSIG - Signature - Detached/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

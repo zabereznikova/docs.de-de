@@ -1,0 +1,271 @@
+<Type Name="CreateManifestResourceName" FullName="Microsoft.Build.Tasks.CreateManifestResourceName">
+  <TypeSignature Language="C#" Value="public abstract class CreateManifestResourceName : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CreateManifestResourceName extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.CreateManifestResourceName" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bestimmt den Manifestressourcennamen für die Zuordnung zu einer Ressource.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CreateManifestResourceName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.CreateManifestResourceName" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateManifestName">
+      <MemberSignature Language="C#" Value="protected abstract string CreateManifestName (string fileName, string linkFileName, string rootNamespaceName, string dependentUponFileName, System.IO.Stream binaryStream);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string CreateManifestName(string fileName, string linkFileName, string rootNamespaceName, string dependentUponFileName, class System.IO.Stream binaryStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.CreateManifestName(System.String,System.String,System.String,System.String,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="linkFileName" Type="System.String" />
+        <Parameter Name="rootNamespaceName" Type="System.String" />
+        <Parameter Name="dependentUponFileName" Type="System.String" />
+        <Parameter Name="binaryStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der abhängigen Datei.</param>
+        <param name="linkFileName">Der Name der vom Link-Attribut angegebenen Datei.</param>
+        <param name="rootNamespaceName">Der Stammnamespace. Dieser Parameter kann ein NULL-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).</param>
+        <param name="dependentUponFileName">Der Dateiname des übergeordneten Elements dieser Abhängigkeit. Dieser Parameter kann ein NULL-Verweis sein (<see langword="Nothing" />).</param>
+        <param name="binaryStream">Der binäre Stream mit dem Dateiinhalt. Dieser Parameter kann ein NULL-Verweis sein (<see langword="Nothing" />).</param>
+        <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse den Manifestressourcennamen.</summary>
+        <returns>Der Manifestressourcenname.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Aufgabe aus.</summary>
+        <returns>
+          <see langword="true" />, wenn die Methode erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsSourceFile">
+      <MemberSignature Language="C#" Value="protected abstract bool IsSourceFile (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsSourceFile(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.IsSourceFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse an, ob die angegebene Datei eine gültige Quelldatei ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Datei eine gültige Quelldatei ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="itemSpecToTaskitem">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;string,Microsoft.Build.Framework.ITaskItem&gt; itemSpecToTaskitem;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Build.Framework.ITaskItem&gt; itemSpecToTaskitem" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Tasks.CreateManifestResourceName.itemSpecToTaskitem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Build.Framework.ITaskItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält das Aufgabenelement in einem Wörterbuch, schnellen Zugriff von einer abgeleiteten Klasse bereitzustellen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MakeValidEverettIdentifier">
+      <MemberSignature Language="C#" Value="public static string MakeValidEverettIdentifier (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakeValidEverettIdentifier(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Dateiname.</param>
+        <summary>Erstellt einen gültigen Bezeichner für die Verwendung mit Visual Studio 2003.</summary>
+        <returns>Der Bezeichner für die Verwendung mit Visual Studio 2003.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ManifestResourceNames">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ManifestResourceNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ManifestResourceNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die erstellten Manifestressourcennamen ab.</summary>
+        <value>Die erstellten Manifestressourcennamen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PrependCultureAsDirectory">
+      <MemberSignature Language="C#" Value="public bool PrependCultureAsDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrependCultureAsDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob der Name der Kultur der Manifestressourcenname als Verzeichnis vorangestellt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn der Kulturname vorangestellt werden soll, <see langword="false" /> Wenn andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist `true` standardmäßig.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ResourceFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ResourceFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die abhängigen Ressourcendateien ab, oder legt diese fest.</summary>
+        <value>Die abhängigen Ressourcendateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceFilesWithManifestResourceNames">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ResourceFilesWithManifestResourceNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ResourceFilesWithManifestResourceNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ursprüngliche Liste von Ressourcennamen sowie zusätzliche Metadaten, die für den Manifestressourcennamen.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Framework.ITaskItem" /> Objekt, das Sie den Ressourcennamen und die Metadaten darstellt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespace">
+      <MemberSignature Language="C#" Value="public string RootNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stammnamespace ab oder legt diesen fest, der für die Benennung verwendet werden soll.</summary>
+        <value>Der Stammnamespace, der für die Benennung verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

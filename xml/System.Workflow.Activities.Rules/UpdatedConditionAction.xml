@@ -1,0 +1,166 @@
+<Type Name="UpdatedConditionAction" FullName="System.Workflow.Activities.Rules.UpdatedConditionAction">
+  <TypeSignature Language="C#" Value="public sealed class UpdatedConditionAction : System.Workflow.Activities.Rules.RuleConditionChangeAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UpdatedConditionAction extends System.Workflow.Activities.Rules.RuleConditionChangeAction" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.UpdatedConditionAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.Rules.RuleConditionChangeAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Änderung an einem <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> für dynamische Aktualisierungen dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Klasse kann ein Überwachungsdienst ermitteln, welche <xref:System.Workflow.Activities.Rules.RuleCondition>-Objekte während einer dynamischen Aktualisierung geändert wurden. Eine Instanz dieses Objekts wird für jede RuleCondition erstellt, die vor der dynamischen Aktualisierung vorhanden war, anschließend weiterhin besteht und einen anderen Ausdruck aufweist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdatedConditionAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.UpdatedConditionAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.UpdatedConditionAction" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdatedConditionAction (System.Workflow.Activities.Rules.RuleCondition conditionDefinition, System.Workflow.Activities.Rules.RuleCondition newConditionDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.Activities.Rules.RuleCondition conditionDefinition, class System.Workflow.Activities.Rules.RuleCondition newConditionDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.UpdatedConditionAction.#ctor(System.Workflow.Activities.Rules.RuleCondition,System.Workflow.Activities.Rules.RuleCondition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="conditionDefinition" Type="System.Workflow.Activities.Rules.RuleCondition" />
+        <Parameter Name="newConditionDefinition" Type="System.Workflow.Activities.Rules.RuleCondition" />
+      </Parameters>
+      <Docs>
+        <param name="conditionDefinition">Die Bedingung, die ersetzt wird.</param>
+        <param name="newConditionDefinition">Die neue Bedingung.</param>
+        <summary>Initialisiert mit den vorhandenen und neuen Bedingungen der Änderung eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.UpdatedConditionAction" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="newConditionDefinition" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+        <exception cref="T:System.ArgumentException">Der Name der <paramref name="conditionDefinition" /> ist nicht identisch mit dem Namen der <paramref name="newConditionDefinition." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyTo">
+      <MemberSignature Language="C#" Value="protected override bool ApplyTo (System.Workflow.ComponentModel.Activity rootActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ApplyTo(class System.Workflow.ComponentModel.Activity rootActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.UpdatedConditionAction.ApplyTo(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="rootActivity">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionDefinition">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleCondition ConditionDefinition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.Rules.RuleCondition ConditionDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.UpdatedConditionAction.ConditionDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bedingung ab, die mit dieser Aktion ersetzt wird, oder legt die Bedingung fest.</summary>
+        <value>Die Bedingung, die mit dieser Aktion ersetzt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann festgelegt werden, sodass die Klasse deserialisiert werden kann. In der Regel ist es nicht erforderlich, diese Eigenschaft festzulegen. Wenn sie während einer dynamischen Aktualisierung geändert wird, könnte das zu unerwarteten Ergebnissen führen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, diese Eigenschaft auf einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic) festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionName">
+      <MemberSignature Language="C#" Value="public override string ConditionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConditionName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.UpdatedConditionAction.ConditionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der zu ersetzenden Bedingung ab.</summary>
+        <value>Der Name der zu ersetzenden Bedingung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewConditionDefinition">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleCondition NewConditionDefinition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.Rules.RuleCondition NewConditionDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.UpdatedConditionAction.NewConditionDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bedingung ab, die die vorhandene Bedingung ersetzt, oder legt sie fest.</summary>
+        <value>Die Bedingung, die die vorhandene Bedingung ersetzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann festgelegt werden, sodass die Klasse deserialisiert werden kann. In der Regel ist es nicht erforderlich, diese Eigenschaft festzulegen. Wenn sie während einer dynamischen Aktualisierung geändert wird, könnte das zu unerwarteten Ergebnissen führen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, diese Eigenschaft auf einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic) festzulegen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

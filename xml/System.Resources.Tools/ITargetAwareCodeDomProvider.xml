@@ -1,0 +1,45 @@
+<Type Name="ITargetAwareCodeDomProvider" FullName="System.Resources.Tools.ITargetAwareCodeDomProvider">
+  <TypeSignature Language="C#" Value="public interface ITargetAwareCodeDomProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITargetAwareCodeDomProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.Tools.ITargetAwareCodeDomProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Schnittstelle, die die Ressource mit starker Typisierung-Generator ermöglicht (<see cref="T:System.Resources.Tools.StronglyTypedResourceBuilder" /> Objekt) zu ermitteln, welche Typen und Eigenschaften verfügbar sind, damit er die richtigen Code Document Object Model (CodeDOM) Struktur ausgeben kann.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="SupportsProperty">
+      <MemberSignature Language="C#" Value="public bool SupportsProperty (Type type, string propertyName, bool isWritable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SupportsProperty(class System.Type type, string propertyName, bool isWritable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.Tools.ITargetAwareCodeDomProvider.SupportsProperty(System.Type,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="isWritable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, dessen Eigenschaften abgefragt werden.</param>
+        <param name="propertyName">Der Name des zu suchenden in Eigenschaft <c>Typ</c>.</param>
+        <param name="isWritable">Ein Flag, das angibt, ob die Eigenschaft eine "Get"-Zugriffsmethode enthalten muss.</param>
+        <summary>Gibt an, ob der angegebene Typ für das Zielframework des Projekts eine angegebene benannte Eigenschaft verfügt.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="type" /> auf das Projektziel Framework verfügt über eine Eigenschaft namens <paramref name="propertyname" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

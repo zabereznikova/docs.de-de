@@ -1,0 +1,200 @@
+<Type Name="ObfuscateAssemblyAttribute" FullName="System.Reflection.ObfuscateAssemblyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ObfuscateAssemblyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObfuscateAssemblyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ObfuscateAssemblyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Weist die obfuskation Tools ihren standardmäßigen Verbergung Regeln für die entsprechende Assembly-Datentyp verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.ObfuscationAttribute> und <xref:System.Reflection.ObfuscateAssemblyAttribute> Attribute bieten eine Möglichkeit für die Assembly Autoren ihre Binärdateien mit Anmerkungen versehen, damit Verbergungstools mit externen Minimalkonfiguration ordnungsgemäß verarbeitet werden können.  
+  
+ Dieses Attribut auf eine Assembly angewendet, weist das Verbergungstool die Standardregeln für die Assembly-Datentyp verwendet.  
+  
+> [!IMPORTANT]
+>  Das Anwenden dieses Attributs wird nicht automatisch zum Verbergen der Assembly. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+ Sie können anwenden <xref:System.Reflection.ObfuscationAttribute> für Typen innerhalb einer Assembly und Elemente auf diese Typen. Innerste Attribut steuert, wie ein Verbergungstool behandelt jede Entität für die jeweilige Codepage.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine private Assembly, die mit markiert wurde die <xref:System.Reflection.ObfuscateAssemblyAttribute>. Die <xref:System.Reflection.ObfuscateAssemblyAttribute.StripAfterObfuscation%2A> Eigenschaft `false`, um zu verhindern, dass das Verbergungstool das Attribut nach der Verarbeitung entfernt.  
+  
+ Ein Codebeispiel, das die Verwendung der <xref:System.Reflection.ObfuscateAssemblyAttribute> mit <xref:System.Reflection.ObfuscationAttribute>, finden Sie unter der <xref:System.Reflection.ObfuscationAttribute> Klasse.  
+  
+ [!code-csharp[ObfuscateAssemblyAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscateAssemblyAttribute/cs/source.cs#1)]
+ [!code-vb[ObfuscateAssemblyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscateAssemblyAttribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObfuscateAssemblyAttribute (bool assemblyIsPrivate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool assemblyIsPrivate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ObfuscateAssemblyAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyIsPrivate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyIsPrivate">
+          <see langword="true" />Wenn die Assembly im Rahmen einer Anwendung verwendet wird; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.ObfuscateAssemblyAttribute" /> Klasse, die angibt, ob die Assembly verborgen werden öffentlich oder privat ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markieren Sie Assemblys als privat, wenn sie nur von der Anwendung verwendet werden und sind keine Bibliotheken von anderer Software verwendet werden. Im Allgemeinen weist eine Assembly als privat kennzeichnen einer beim verbergen, dass die Namen aller Methoden, einschließlich der öffentlichen Methoden als Teil eine Anwendung verborgen verborgen werden können. Wenn eine Assembly öffentlich ist, sollte ein beim Verbergen nicht die Namen der öffentlichen Member verbergen.  
+  
+> [!IMPORTANT]
+>  Das Anwenden dieses Attributs wird nicht automatisch zum Verbergen der Assembly. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Attributkonstruktor gibt an, dass eine Assembly private. Die <xref:System.Reflection.ObfuscateAssemblyAttribute.StripAfterObfuscation%2A> Eigenschaft `false`, um zu verhindern, dass das Verbergungstool das Attribut nach der Verarbeitung entfernt.  
+  
+ [!code-csharp[ObfuscateAssemblyAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscateAssemblyAttribute/cs/source.cs#1)]
+ [!code-vb[ObfuscateAssemblyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscateAssemblyAttribute/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyIsPrivate">
+      <MemberSignature Language="C#" Value="public bool AssemblyIsPrivate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AssemblyIsPrivate" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscateAssemblyAttribute.AssemblyIsPrivate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Assembly als privat markiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Assembly als privat markiert wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine private Assembly wird verwendet, nur von der Anwendung, von dem es ein Teil ist und nicht von anderer Software.  
+  
+> [!IMPORTANT]
+>  Das Anwenden dieses Attributs wird nicht automatisch zum Verbergen der Assembly. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Attributkonstruktor legt die <xref:System.Reflection.ObfuscateAssemblyAttribute.AssemblyIsPrivate%2A> Eigenschaft `true`, um anzugeben, dass eine Assembly privat ist. Die <xref:System.Reflection.ObfuscateAssemblyAttribute.StripAfterObfuscation%2A> Eigenschaft `false`, um zu verhindern, dass das Verbergungstool das Attribut nach der Verarbeitung entfernt.  
+  
+ [!code-csharp[ObfuscateAssemblyAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscateAssemblyAttribute/cs/source.cs#1)]
+ [!code-vb[ObfuscateAssemblyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscateAssemblyAttribute/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripAfterObfuscation">
+      <MemberSignature Language="C#" Value="public bool StripAfterObfuscation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StripAfterObfuscation" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ObfuscateAssemblyAttribute.StripAfterObfuscation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Boolean" /> Wert, der angibt, ob das Verbergungstool das Attribut nach der Verarbeitung entfernt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Verbergungstool das Attribut nach der Verarbeitung entfernen soll; andernfalls <see langword="false" />. Der Standardwert für diese Eigenschaft ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Attribute sollten nicht entfernt werden, wenn Ihre Bibliothek Bestandteil einer anderen Anwendung als, und als Teil der Anwendung verborgen.  
+  
+ Gibt an, dass die obfuskation Tools zu entfernen, sollten die <xref:System.Reflection.ObfuscateAssemblyAttribute> wirkt sich nicht auf Instanzen von <xref:System.Reflection.ObfuscationAttribute> , Typen und Membern in der Assembly angewendet wurden.  
+  
+> [!IMPORTANT]
+>  Das Anwenden dieses Attributs wird nicht automatisch zum Verbergen der Assembly. Anwenden des Attributs ist eine Alternative zum Erstellen einer Konfigurationsdatei für das Verbergungstool. D. h. stellt lediglich Anweisungen für ein Verbergungstool bereit. Microsoft empfiehlt, Anbieter von Verbergungstools die hier beschriebenen Semantik folgen. Es ist jedoch keine Garantie, dass ein bestimmtes Tool Microsoft Empfehlungen folgt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Reflection.ObfuscateAssemblyAttribute> -Attribut mit dem <xref:System.Reflection.ObfuscateAssemblyAttribute.StripAfterObfuscation%2A> -Eigenschaftensatz auf `false`, um zu verhindern, dass das Verbergungstool entfernen das Attribut nach der Verarbeitung.  
+  
+ [!code-csharp[ObfuscateAssemblyAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObfuscateAssemblyAttribute/cs/source.cs#1)]
+ [!code-vb[ObfuscateAssemblyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObfuscateAssemblyAttribute/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

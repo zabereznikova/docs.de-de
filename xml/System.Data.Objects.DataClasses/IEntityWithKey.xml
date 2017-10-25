@@ -1,0 +1,54 @@
+<Type Name="IEntityWithKey" FullName="System.Data.Objects.DataClasses.IEntityWithKey">
+  <TypeSignature Language="C#" Value="public interface IEntityWithKey" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEntityWithKey" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.IEntityWithKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Entitätstyp, der einen Entitätsschlüssel verfügbar macht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird verwendet, um den Entitätsschlüssel für Object Services verfügbar zu machen.  
+  
+ Die <xref:System.Data.Objects.DataClasses.IEntityWithKey.EntityKey%2A>-Eigenschaft wird von Object Services verwendet, um Objekte im Objektkontext zu verwalten.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EntityKey">
+      <MemberSignature Language="C#" Value="public System.Data.EntityKey EntityKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityKey EntityKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IEntityWithKey.EntityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.EntityKey" /> für Instanzen von Entitätstypen ab, die diese Schnittstelle implementieren, oder legt diesen fest.</summary>
+        <value>Die <see cref="T:System.Data.EntityKey" /> für Instanzen von Entitätstypen, die diese Schnittstelle implementieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.IEntityWithKey.EntityKey%2A>-Eigenschaft wird von Object Services verwendet, um Objekte im Objektkontext zu verwalten.  
+  
+ Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) und [Nachverfolgen von Änderungen in POCO-Entitäten](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

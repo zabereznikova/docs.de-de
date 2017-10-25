@@ -1,0 +1,375 @@
+<Type Name="OutArgument&lt;T&gt;" FullName="System.Activities.OutArgument&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class OutArgument&lt;T&gt; : System.Activities.OutArgument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutArgument`1&lt;T&gt; extends System.Activities.OutArgument" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.OutArgument`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.OutArgument</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Activities.XamlIntegration.OutArgumentConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Expression")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Activities.XamlIntegration.ArgumentValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Der Datentyp des <see cref="T:System.Activities.OutArgument`1" />-Elements.</typeparam>
+    <summary>Ein Bindungsterminal, das den Datenfluss aus einer Aktivität darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Activities.OutArgument%601> wird für den Datenfluss aus einer Aktivität verwendet. Wenn die Aktivität die Stammaktivität eines Workflows ist, dann wird das Element auch für den Datenfluss vom Workflow zum Workflowhost verwendet. In diesem Beispiel wird eine benutzerdefinierte `Divide`-Aktivität als Stammaktivität eines Workflows verwendet, die über zwei Eingabeargumente und ein Ausgabeargument verfügt. Die Hostanwendung übergibt zwei Werte an den Workflow und ruft dann das Ergebnis der Division ab, nachdem der Workflow abgeschlossen ist.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#20](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#20)]  
+  
+ Die `Divide`-Aktivität verwendet Argumente, um die Eingabewerte zu empfangen und die berechneten Ergebniswerte bereitzustellen. Die `Remainder` <xref:System.Activities.OutArgument%601> wird verwendet, um den Rest der Division zu übergeben und die <xref:System.Activities.Activity%601.Result%2A> -ausgabeargument gebotenen <xref:System.Activities.Activity%601> abgeleitete Aktivitäten zum Übergeben des Quotienten verwendet wird.  
+  
+> [!NOTE]
+>  Wenn die benutzerdefinierte Aktivität von der generischen <xref:System.Activities.CodeActivity%601> mit <xref:System.Int32> als generischem Typargument abgeleitet wird und Sie die Aktivität mit der <xref:System.Activities.WorkflowInvoker>-Aufrufmethode aufrufen, wird ein <xref:System.Int32>-Wert zurückgegeben. Darüber hinaus die <xref:System.Activities.CodeActivity%601.Execute%2A?displayProperty=nameWithType> Methodenrückgabewert wird ein <xref:System.Int32> Wert anstelle des `void` und Sie müssen nicht auf einen Wert festgelegt.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#120](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#120)]  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.OutArgument%601> gezeigt. Dieses Beispiel stammt aus dem Formatiererbeispiel.  
+  
+ [!code-csharp[wfs_Formatter#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_formatter/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutArgument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.OutArgument`1" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.OutArgument%601> gezeigt. Dieses Beispiel stammt aus dem Formatiererbeispiel.  
+  
+ [!code-csharp[wfs_Formatter#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_formatter/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutArgument (System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity`1&lt;class System.Activities.Location`1&lt;!T&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.#ctor(System.Activities.Activity{System.Activities.Location{`0}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Wert des Arguments.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.OutArgument`1" />-Klasse mit dem angegebenen <see cref="T:System.Activities.Activity`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutArgument (System.Activities.DelegateArgument delegateArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.DelegateArgument delegateArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.#ctor(System.Activities.DelegateArgument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="delegateArgument" Type="System.Activities.DelegateArgument" />
+      </Parameters>
+      <Docs>
+        <param name="delegateArgument">Der Wert des Arguments.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.OutArgument`1" />-Klasse mit dem angegebenen <see cref="T:System.Activities.DelegateArgument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutArgument (System.Activities.Variable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Variable variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.#ctor(System.Activities.Variable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="variable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="variable">Der Wert des Arguments.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.OutArgument`1" />-Klasse mit dem angegebenen <see cref="T:System.Activities.Variable" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutArgument (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,T&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !T&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.#ctor(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,`0}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Wert des Arguments.</param>
+        <summary>Initialisiert mit dem angegebenen Ausdruck eine neue Instanz der <see cref="T:System.Activities.OutArgument`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt; Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;class System.Activities.Location`1&lt;!T&gt;&gt; Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.OutArgument`1.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Activities.Activity`1" /> ab, die den Wert von <see cref="T:System.Activities.OutArgument`1" /> darstellt.</summary>
+        <value>Eine Aktivität, die den Wert des Arguments darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromDelegateArgument">
+      <MemberSignature Language="C#" Value="public static System.Activities.OutArgument&lt;T&gt; FromDelegateArgument (System.Activities.DelegateArgument delegateArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.OutArgument`1&lt;!T&gt; FromDelegateArgument(class System.Activities.DelegateArgument delegateArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.FromDelegateArgument(System.Activities.DelegateArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.OutArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateArgument" Type="System.Activities.DelegateArgument" />
+      </Parameters>
+      <Docs>
+        <param name="delegateArgument">Der Wert des Arguments.</param>
+        <summary>Initialisiert mit der angegebenen <see cref="T:System.Activities.OutArgument`1" /> ein neues <see cref="T:System.Activities.DelegateArgument" /> und gibt es zurück.</summary>
+        <returns>Das neue Argument.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromExpression">
+      <MemberSignature Language="C#" Value="public static System.Activities.OutArgument&lt;T&gt; FromExpression (System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.OutArgument`1&lt;!T&gt; FromExpression(class System.Activities.Activity`1&lt;class System.Activities.Location`1&lt;!T&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.FromExpression(System.Activities.Activity{System.Activities.Location{`0}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.OutArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Wert des Arguments.</param>
+        <summary>Initialisiert mit der angegebenen <see cref="T:System.Activities.OutArgument`1" /> ein neues <see cref="T:System.Activities.Activity`1" /> und gibt es zurück.</summary>
+        <returns>Das neue Argument.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromVariable">
+      <MemberSignature Language="C#" Value="public static System.Activities.OutArgument&lt;T&gt; FromVariable (System.Activities.Variable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.OutArgument`1&lt;!T&gt; FromVariable(class System.Activities.Variable variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.FromVariable(System.Activities.Variable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.OutArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="variable">Der Wert des Arguments.</param>
+        <summary>Initialisiert mit der angegebenen <see cref="T:System.Activities.OutArgument`1" /> ein neues <see cref="T:System.Activities.Variable" /> und gibt es zurück.</summary>
+        <returns>Das neue Argument.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public T Get (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T Get(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.Get(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der aktuelle Aktivitätskontext.</param>
+        <summary>Ruft den Wert von <see cref="T:System.Activities.OutArgument`1" /> mithilfe des angegebenen Aktivitätskontexts ab.</summary>
+        <returns>Der Wert des Arguments.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public System.Activities.Location&lt;T&gt; GetLocation (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.Location`1&lt;!T&gt; GetLocation(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.GetLocation(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Location&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Aktivitätskontext, der den Wert der Variablen enthält.</param>
+        <summary>Ruft den Speicherort des Werts für das <see cref="T:System.Activities.OutArgument`1" /> ab.</summary>
+        <returns>Ein Verweis auf den Speicherort, an dem der Wert des Arguments gespeichert ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Activities.OutArgument&lt;T&gt; (System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Activities.OutArgument`1&lt;!T&gt; op_Implicit(class System.Activities.Activity`1&lt;class System.Activities.Location`1&lt;!T&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.op_Implicit(System.Activities.Activity{System.Activities.Location{`0}})~System.Activities.OutArgument{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.OutArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.Activity&lt;System.Activities.Location&lt;T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Activities.OutArgument&lt;T&gt; (System.Activities.DelegateArgument delegateArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Activities.OutArgument`1&lt;!T&gt; op_Implicit(class System.Activities.DelegateArgument delegateArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.op_Implicit(System.Activities.DelegateArgument)~System.Activities.OutArgument{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.OutArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateArgument" Type="System.Activities.DelegateArgument" />
+      </Parameters>
+      <Docs>
+        <param name="delegateArgument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Activities.OutArgument&lt;T&gt; (System.Activities.Variable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Activities.OutArgument`1&lt;!T&gt; op_Implicit(class System.Activities.Variable variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.op_Implicit(System.Activities.Variable)~System.Activities.OutArgument{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.OutArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Activities.ActivityContext context, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Activities.ActivityContext context, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OutArgument`1.Set(System.Activities.ActivityContext,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der aktuelle Aktivitätskontext.</param>
+        <param name="value">Der neue Wert.</param>
+        <summary>Legt den Wert von <see cref="T:System.Activities.OutArgument`1" /> mithilfe des angegebenen Aktivitätskontexts fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

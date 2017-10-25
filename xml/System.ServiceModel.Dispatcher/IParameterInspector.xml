@@ -1,0 +1,172 @@
+<Type Name="IParameterInspector" FullName="System.ServiceModel.Dispatcher.IParameterInspector">
+  <TypeSignature Language="C#" Value="public interface IParameterInspector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IParameterInspector" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IParameterInspector" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den von benutzerdefinierten Parameterinspektoren implementierten Vertrag, der die Prüfung oder Änderung von Informationen vor und nach Aufrufen am Client oder Dienst ermöglicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Schnittstelle, um einen benutzerdefinierten Parameterinspektor zu erstellen, mit dem die Inhalte eines Aufrufs vor und nach dem Aufruf in Client- oder Dienstanwendungen angezeigt und geändert werden können.  
+  
+ Bei Aufrufen, die von einem Client ausgehen, wird der Inspektor aufgerufen, bevor die Anforderungsinhalte serialisiert und an den Dienst gesendet werden. Der Inspektor wird auch aufgerufen, nachdem die Antwort deserialisiert wurde, aber bevor die Rückgabewerte an die Proxymethode verteilt wurden.  
+  
+ Bei Aufrufen, die bei einem Dienst eingehen, wird der Inspektor aufgerufen, nachdem Parameter deserialisiert wurden, aber bevor sie an den Dienstvorgang verteilt wurden.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType>-Eigenschaft oder die <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType>-Eigenschaft, um der Inspektorauflistung eine <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Implementierung für einen bestimmten Vorgang hinzuzufügen.  
+  
+ **Hinweis** Entwicklern und Administratoren müssen sicherstellen, dass die Interaktion mit anderen <xref:System.ServiceModel.Dispatcher.IParameterInspector> -Implementierungen verstanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Implementierung veranschaulicht, die:  
+  
+-   den Vorgangsnamen und Rückgabewert in die Konsole schreibt, nachdem eine Antwort vom Dienst deserialisiert oder eine Anforderung von einem Client serialisiert wurde.  
+  
+-   den Vorgangsnamen in die Konsole schreibt, nachdem eine Antwort am Client deserialisiert oder eine Antwort am Dienst serialisiert wurde.  
+  
+ [!code-csharp[Interceptors#4](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
+ [!code-vb[Interceptors#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  
+  
+ Im folgenden Codebeispiel wird die Verwendung von <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> zum Einfügen von <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Objekten gezeigt.  
+  
+ [!code-csharp[Interceptors#5](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#5)]
+ [!code-vb[Interceptors#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterCall">
+      <MemberSignature Language="C#" Value="public void AfterCall (string operationName, object[] outputs, object returnValue, object correlationState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AfterCall(string operationName, object[] outputs, object returnValue, object correlationState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IParameterInspector.AfterCall(System.String,System.Object[],System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="outputs" Type="System.Object[]" />
+        <Parameter Name="returnValue" Type="System.Object" />
+        <Parameter Name="correlationState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">Der Name des aufgerufenen Vorgangs.</param>
+        <param name="outputs">Ausgabeobjekte.</param>
+        <param name="returnValue">Der Rückgabewert des Vorgangs.</param>
+        <param name="correlationState">Ein Korrelationsstatus, der von der <see cref="M:System.ServiceModel.Dispatcher.IParameterInspector.BeforeCall(System.String,System.Object[])" />-Methode zurückgegeben wurde, oder <see langword="null" />.</param>
+        <summary>Wird aufgerufen, nachdem Clientaufrufe zurückgegeben wurden und bevor Dienstantworten gesendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Aufrufen, die von einem Client ausgehen, wird der Inspektor aufgerufen, bevor die Anforderungsinhalte serialisiert und an den Dienst gesendet werden. Der Inspektor wird auch aufgerufen, nachdem die Antwort deserialisiert wurde, aber bevor die Rückgabewerte an die Proxymethode verteilt wurden.  
+  
+ Bei Aufrufen, die bei einem Dienst eingehen, wird der Inspektor aufgerufen, nachdem Parameter deserialisiert wurden, aber bevor sie an den Dienstvorgang verteilt wurden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Implementierung veranschaulicht, die:  
+  
+-   den Vorgangsnamen und Rückgabewert in die Konsole schreibt, nachdem eine Antwort vom Dienst deserialisiert oder eine Anforderung von einem Client serialisiert wurde.  
+  
+-   den Vorgangsnamen in die Konsole schreibt, nachdem eine Antwort am Client deserialisiert oder eine Antwort am Dienst serialisiert wurde.  
+  
+ [!code-csharp[Interceptors#4](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
+ [!code-vb[Interceptors#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  
+  
+ Im folgenden Codebeispiel wird die Verwendung von <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> zum Einfügen von <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Objekten gezeigt.  
+  
+ [!code-csharp[Interceptors#5](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#5)]
+ [!code-vb[Interceptors#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeCall">
+      <MemberSignature Language="C#" Value="public object BeforeCall (string operationName, object[] inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object BeforeCall(string operationName, object[] inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IParameterInspector.BeforeCall(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="inputs" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">Der Name des Vorgangs.</param>
+        <param name="inputs">Die vom Client an die Methode übergebenen Objekte.</param>
+        <summary>Wird aufgerufen, bevor Clientaufrufe gesendet und nachdem Dienstantworten zurückgegeben wurden.</summary>
+        <returns>Der Korrelationsstatus, der als <paramref name="correlationState" />-Parameter in <see cref="M:System.ServiceModel.Dispatcher.IParameterInspector.AfterCall(System.String,System.Object[],System.Object,System.Object)" /> zurückgegeben wird. Geben Sie <see langword="null" /> zurück, wenn Sie nicht beabsichtigen, den Korrelationsstatus zu verwenden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Aufrufen, die von einem Client ausgehen, wird der Inspektor aufgerufen, bevor die Anforderungsinhalte serialisiert und an den Dienst gesendet werden. Der Inspektor wird auch aufgerufen, nachdem die Antwort deserialisiert wurde, aber bevor die Rückgabewerte an die Proxymethode verteilt wurden.  
+  
+ Bei Aufrufen, die bei einem Dienst eingehen, wird der Inspektor aufgerufen, nachdem die Anforderungsinhalte deserialisiert und an den Dienstvorgang verteilt werden und bevor die Antwortinhalte serialisiert und an den Client gesendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Implementierung veranschaulicht, die:  
+  
+-   den Vorgangsnamen und Rückgabewert in die Konsole schreibt, nachdem eine Antwort vom Dienst deserialisiert oder eine Anforderung von einem Client serialisiert wurde.  
+  
+-   den Vorgangsnamen in die Konsole schreibt, nachdem eine Antwort am Client deserialisiert oder eine Antwort am Dienst serialisiert wurde.  
+  
+ [!code-csharp[Interceptors#4](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
+ [!code-vb[Interceptors#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  
+  
+ Im folgenden Codebeispiel wird die Verwendung von <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> zum Einfügen von <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Objekten gezeigt.  
+  
+ [!code-csharp[Interceptors#5](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#5)]
+ [!code-vb[Interceptors#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

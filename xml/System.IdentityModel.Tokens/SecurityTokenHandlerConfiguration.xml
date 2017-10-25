@@ -1,0 +1,440 @@
+<Type Name="SecurityTokenHandlerConfiguration" FullName="System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration">
+  <TypeSignature Language="C#" Value="public class SecurityTokenHandlerConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenHandlerConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Konfiguration, die alle Sicherheitstokenhandler gemeinsam.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenHandlerConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudienceRestriction">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.AudienceRestriction AudienceRestriction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.AudienceRestriction AudienceRestriction" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.AudienceRestriction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.AudienceRestriction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen die Zielgruppe-Einschränkung.</summary>
+        <value>Die Zielgruppe-Einschränkung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caches">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.IdentityModelCaches Caches { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.IdentityModelCaches Caches" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.Caches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.IdentityModelCaches</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Caches, die für diese Konfiguration verwendet werden.</summary>
+        <value>Die Caches.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateValidationMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.CertificateValidationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.X509CertificateValidationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der x. 509-Clientzertifikat-Validierungsmodus von Handler verwendet, um Zertifikate zu überprüfen.</summary>
+        <value>Der zertifikatsvalidierungsmodus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateValidator">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.X509CertificateValidator CertificateValidator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.X509CertificateValidator CertificateValidator" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.CertificateValidator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das x. 509-Zertifikats-Validierungssteuerelement von Handler verwendet, um Zertifikate zu überprüfen.</summary>
+        <value>Der zertifikatvalidator.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCertificateValidationMode">
+      <MemberSignature Language="C#" Value="public static readonly System.ServiceModel.Security.X509CertificateValidationMode DefaultCertificateValidationMode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.ServiceModel.Security.X509CertificateValidationMode DefaultCertificateValidationMode" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultCertificateValidationMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.X509CertificateValidationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardwert für die x. 509-zertifikatvalidierungsmodus an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCertificateValidator">
+      <MemberSignature Language="C#" Value="public static readonly System.IdentityModel.Selectors.X509CertificateValidator DefaultCertificateValidator;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.IdentityModel.Selectors.X509CertificateValidator DefaultCertificateValidator" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultCertificateValidator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die x. 509-Zertifikats-Validierungssteuerelement Standardinstanz an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDetectReplayedTokens">
+      <MemberSignature Language="C#" Value="public static readonly bool DefaultDetectReplayedTokens;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly bool DefaultDetectReplayedTokens" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultDetectReplayedTokens" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert, der bestimmt, ob wiedergegebene Token erkannt; <see langword="false" />, wiedergegebene Token nicht erkennen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIssuerNameRegistry">
+      <MemberSignature Language="C#" Value="public static readonly System.IdentityModel.Tokens.IssuerNameRegistry DefaultIssuerNameRegistry;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.IdentityModel.Tokens.IssuerNameRegistry DefaultIssuerNameRegistry" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultIssuerNameRegistry" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.IssuerNameRegistry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die Standardinstanz Issuer Name Registry; eine Instanz der konfigurationsbasierte ausstellernamenregistration.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIssuerTokenResolver">
+      <MemberSignature Language="C#" Value="public static readonly System.IdentityModel.Selectors.SecurityTokenResolver DefaultIssuerTokenResolver;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.IdentityModel.Selectors.SecurityTokenResolver DefaultIssuerTokenResolver" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultIssuerTokenResolver" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die standardmäßige Aussteller tokenresolver-Instanz an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMaxClockSkew">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan DefaultMaxClockSkew;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan DefaultMaxClockSkew" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultMaxClockSkew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die standardmäßige maximale uhrabweichung an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRevocationMode">
+      <MemberSignature Language="C#" Value="public static readonly System.Security.Cryptography.X509Certificates.X509RevocationMode DefaultRevocationMode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode DefaultRevocationMode" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultRevocationMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Sperrmodus für Standard x. 509-Zertifikat an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSaveBootstrapContext">
+      <MemberSignature Language="C#" Value="public static readonly bool DefaultSaveBootstrapContext;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly bool DefaultSaveBootstrapContext" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultSaveBootstrapContext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob bootstrap-Token gespeichert; <see langword="false" />, bootstrap Token werden nicht gespeichert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTokenReplayCacheExpirationPeriod">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan DefaultTokenReplayCacheExpirationPeriod;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan DefaultTokenReplayCacheExpirationPeriod" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultTokenReplayCacheExpirationPeriod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, der standardablaufzeitraum für token-Replay-Cache.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTrustedStoreLocation">
+      <MemberSignature Language="C#" Value="public static readonly System.Security.Cryptography.X509Certificates.StoreLocation DefaultTrustedStoreLocation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Security.Cryptography.X509Certificates.StoreLocation DefaultTrustedStoreLocation" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DefaultTrustedStoreLocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardspeicherort für x. 509-Zertifikat vertrauenswürdig.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectReplayedTokens">
+      <MemberSignature Language="C#" Value="public bool DetectReplayedTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DetectReplayedTokens" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.DetectReplayedTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Wiedergabe Token vom Handler in dieser Konfiguration erkannt werden sollen.</summary>
+        <value>
+          <see langword="true" />Wenn die wiedergegebene Token erkannt werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerNameRegistry">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.IssuerNameRegistry IssuerNameRegistry { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.IssuerNameRegistry IssuerNameRegistry" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.IssuerNameRegistry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.IssuerNameRegistry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Aussteller Namen Registrierung für diese Konfiguration.</summary>
+        <value>Der ausstellernamenregistration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerTokenResolver">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenResolver IssuerTokenResolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenResolver IssuerTokenResolver" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.IssuerTokenResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest-Resolver der Aussteller für diese Konfiguration.</summary>
+        <value>Der Aussteller tokenresolver.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxClockSkew">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxClockSkew { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxClockSkew" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.MaxClockSkew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest maximale Uhr Zeitversatz für Handler, die mit dieser Konfiguration.</summary>
+        <value>Die maximale uhrabweichung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationMode">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.RevocationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den x. 509-Sperrmodus für diese Konfiguration.</summary>
+        <value>Der x. 509-Sperrmodus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveBootstrapContext">
+      <MemberSignature Language="C#" Value="public bool SaveBootstrapContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveBootstrapContext" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.SaveBootstrapContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die bootstrap-Kontext (Token), in gespeichert wird der <see cref="T:System.Security.Claims.ClaimsIdentity" /> und Sitzungen nach tokenüberprüfung.</summary>
+        <value>
+          <see langword="true" />Das bootstrap-Token zu speichern; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceTokenResolver">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenResolver ServiceTokenResolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenResolver ServiceTokenResolver" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.ServiceTokenResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Sicherheitstoken-Resolver zu verwenden, um das Token des Zugriffssteuerungsdiensts zu beheben.</summary>
+        <value>Der Resolver des Tokens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenReplayCacheExpirationPeriod">
+      <MemberSignature Language="C#" Value="public TimeSpan TokenReplayCacheExpirationPeriod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TokenReplayCacheExpirationPeriod" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.TokenReplayCacheExpirationPeriod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ablaufzeitraum für Elemente, die im token-Replay-Cache abgelegt.</summary>
+        <value>Das Ablaufdatum.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedStoreLocation">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.TrustedStoreLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort des x. 509-vertrauenswürdigen Speichers von Handler verwendet, um Zertifikate zu überprüfen.</summary>
+        <value>Der Speicherort des vertrauenswürdigen Speichers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,644 @@
+<Type Name="DirectoryCatalog" FullName="System.ComponentModel.Composition.Hosting.DirectoryCatalog">
+  <TypeSignature Language="C#" Value="public class DirectoryCatalog : System.ComponentModel.Composition.Primitives.ComposablePartCatalog, System.ComponentModel.Composition.Hosting.INotifyComposablePartCatalogChanged, System.ComponentModel.Composition.Primitives.ICompositionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectoryCatalog extends System.ComponentModel.Composition.Primitives.ComposablePartCatalog implements class System.ComponentModel.Composition.Hosting.INotifyComposablePartCatalogChanged, class System.ComponentModel.Composition.Primitives.ICompositionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Composition.Primitives.ComposablePartCatalog</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Composition.Hosting.INotifyComposablePartCatalogChanged</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Composition.Primitives.ICompositionElement</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.ComponentModel.Composition.Hosting.DirectoryCatalog/DirectoryCatalogDebuggerProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermittelt attribuierte Teile in den Assemblys im angegebenen Verzeichnis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> Objekt Analysieren des Inhalts eines angegebenen Verzeichnisses. Alle attributierte Teile in Dateien dynamic Link Library (DLL) enthaltenen extrahiert und über den Katalog verfügbar gemacht. Sie können einem Suchmuster mit derselben Syntax wie angeben, um auf bestimmte DLLs Analyse zu beschränken, die <xref:System.IO.Directory.GetFiles%2A?displayProperty=nameWithType> Methode.  
+  
+> [!WARNING]
+>  Das angegebene Verzeichnis sollte keinen Zugriff auf nicht-Administratoren zulassen. Beispielsweise konnte einen Ordner mit temporären Internetdateien mit Sicherheitsrisiken in Ihrer Anwendung erstellt werden.  
+  
+ Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> -Objekt, das das Verzeichnis der Anwendung durchsucht wird für Teile aus ausgeführt. Einen einfachen Import verwendet, um den Katalog zu testen. Um diesem Import zugewiesen werden, muss eine DLL im Verzeichnis einen entsprechenden Export haben, wie im zweiten Codeblock veranschaulicht.  
+  
+ [!code-csharp[Composition.DirectoryCatalog#1](~/samples/snippets/csharp/VS_Snippets_Misc/composition.directorycatalog/cs/consoleapplication7/program.cs#1)]
+ [!code-vb[Composition.DirectoryCatalog#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/composition.directorycatalog/vb/consoleapplication8/module1.vb#1)]  
+  
+ Um die entsprechenden Export zu erstellen, muss der folgende Code in eine DLL-Datei sein. Um eine DLL-Datei in Visual Studio zu erstellen, fügen Sie der Projektmappe ein neues Projekt des Typs "Klassenbibliothek", und versehen Sie dieser Code.  
+  
+ [!code-csharp[Composition.DirectoryCatalog#2](~/samples/snippets/csharp/VS_Snippets_Misc/composition.directorycatalog/cs/classlibrary1/class1.cs#2)]
+ [!code-vb[Composition.DirectoryCatalog#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/composition.directorycatalog/vb/classlibrary1/class1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte basierend auf die DLL-Dateien in den angegebenen Verzeichnispfad.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path, System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String,System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="definitionOrigin" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <param name="definitionOrigin">Das Element, das von der Diagnose verwendet werden, um die Quelle für die Teile zu identifizieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte auf Grundlage aller DLL-Dateien in den angegebenen Verzeichnispfad mit der angegebenen Quelle für Teile.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path, System.Reflection.ReflectionContext reflectionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class System.Reflection.ReflectionContext reflectionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String,System.Reflection.ReflectionContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="reflectionContext" Type="System.Reflection.ReflectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <param name="reflectionContext">Der Kontext, der zum Erstellen von Webparts verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte basierend auf die DLL-Dateien in den angegebenen Verzeichnispfad, in der angegebenen Reflektionskontext.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path, string searchPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string searchPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="searchPattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <param name="searchPattern">Die Suchzeichenfolge. Das Format der Zeichenfolge muss die gleiche wie angegeben, für die <see cref="M:System.IO.Directory.GetFiles(System.String,System.String)" /> Methode.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte, die einem angegebenen Suchmuster im angegebenen Verzeichnispfad entsprechen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="searchPattern" /> enthält kein gültiges Muster.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path, System.Reflection.ReflectionContext reflectionContext, System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class System.Reflection.ReflectionContext reflectionContext, class System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String,System.Reflection.ReflectionContext,System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="reflectionContext" Type="System.Reflection.ReflectionContext" />
+        <Parameter Name="definitionOrigin" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <param name="reflectionContext">Der Kontext, der zum Erstellen von Webparts verwendet wird.</param>
+        <param name="definitionOrigin">Das Element, das von der Diagnose verwendet werden, um die Quelle für die Teile zu identifizieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte basierend auf die DLL-Dateien in den angegebenen Verzeichnispfad, in der angegebenen Reflektionskontext.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path, string searchPattern, System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string searchPattern, class System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String,System.String,System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="definitionOrigin" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <param name="searchPattern">Die Suchzeichenfolge. Das Format der Zeichenfolge muss die gleiche wie angegeben, für die <see cref="M:System.IO.Directory.GetFiles(System.String,System.String)" /> Methode.</param>
+        <param name="definitionOrigin">Das Element, das von der Diagnose verwendet werden, um die Quelle für die Teile zu identifizieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte basierend auf dem angegebenen Suchmuster im angegebenen Verzeichnispfad mit der angegebenen Quelle für Teile.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="searchPattern" /> enthält kein gültiges Muster.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path, string searchPattern, System.Reflection.ReflectionContext reflectionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string searchPattern, class System.Reflection.ReflectionContext reflectionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String,System.String,System.Reflection.ReflectionContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="reflectionContext" Type="System.Reflection.ReflectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <param name="searchPattern">Die Suchzeichenfolge. Das Format der Zeichenfolge muss die gleiche wie angegeben, für die <see cref="M:System.IO.Directory.GetFiles(System.String,System.String)" /> Methode.</param>
+        <param name="reflectionContext">Der Kontext, der zum Erstellen von Webparts verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte basierend auf dem angegebenen Suchmuster im angegebenen Verzeichnispfad, unter Verwendung des angegebenen Reflektion-Kontexts.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="searchPattern" /> enthält kein gültiges Muster.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryCatalog (string path, string searchPattern, System.Reflection.ReflectionContext reflectionContext, System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string searchPattern, class System.Reflection.ReflectionContext reflectionContext, class System.ComponentModel.Composition.Primitives.ICompositionElement definitionOrigin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.#ctor(System.String,System.String,System.Reflection.ReflectionContext,System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="reflectionContext" Type="System.Reflection.ReflectionContext" />
+        <Parameter Name="definitionOrigin" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zum Verzeichnis, das Scannen für Assemblys, um den Katalog hinzuzufügen.  
+  
+ Der Pfad muss absolut oder relativ zum <see cref="P:System.AppDomain.BaseDirectory" />.</param>
+        <param name="searchPattern">Die Suchzeichenfolge. Das Format der Zeichenfolge muss die gleiche wie angegeben, für die <see cref="M:System.IO.Directory.GetFiles(System.String,System.String)" /> Methode.</param>
+        <param name="reflectionContext">Der Kontext, der zum Erstellen von Webparts verwendet wird.</param>
+        <param name="definitionOrigin">Das Element, das von der Diagnose verwendet werden, um die Quelle für die Teile zu identifizieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Klasse, indem <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte basierend auf dem angegebenen Suchmuster im angegebenen Verzeichnispfad, unter Verwendung des angegebenen Reflektion-Kontexts.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene <paramref name="path" /> ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />eine Zeichenfolge der Länge 0 (null) ist, enthält nur Leerzeichen oder enthält mindestens ein ungültiges implementierungsspezifische-Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="searchPattern" /> enthält kein gültiges Muster.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das angegebene <paramref name="path" />, und/oder Dateiname überschreiten die vom System definierte maximale Länge. Z. B. dürfen auf Windows-basierten Computern Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Composition.Hosting.DirectoryCatalog.Changed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Inhalt des Katalogs geändert hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changing" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Composition.Hosting.DirectoryCatalog.Changing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Katalog ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.DirectoryCatalog.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den übersetzten absoluten Pfad durch das <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Objekt.</summary>
+        <value>Die übersetzten absoluten Pfad vom Katalog.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der den Katalog durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen des Katalogs verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports (System.ComponentModel.Composition.Primitives.ImportDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Tuple`2&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition, class System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports(class System.ComponentModel.Composition.Primitives.ImportDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">Die Bedingungen für die <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> Objekte zurückgegeben werden.</param>
+        <summary>Ruft die Exportdefinition ein, die die Einschränkung durch die angegebenen Importdefinition ausgedrückt entsprechen.</summary>
+        <returns>Eine Auflistung von Objekten, enthalten die <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> Objekte und ihre zugeordneten <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte, die die Einschränkung, angegeben durch entsprechen <paramref name="definition" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" />-Objekt wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadedFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; LoadedFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; LoadedFiles" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.DirectoryCatalog.LoadedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Dateien, die derzeit im Katalog geladen.</summary>
+        <value>Eine Auflistung von Dateien geladen derzeit im Katalog.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnChanged (System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChanged(class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.OnChanged(System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Composition.Hosting.DirectoryCatalog.Changed" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnChanging (System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChanging(class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.OnChanging(System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Composition.Hosting.DirectoryCatalog.Changing" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.DirectoryCatalog.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad, der beobachtet, indem die <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Objekt.</summary>
+        <value>Der Pfad vom Katalog beobachtet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> Objekte mit den neuesten Dateien im Verzeichnis, die dem Suchmuster entsprechen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Dateien in das Verzeichnis hinzugefügt wurden, werden sie auch im Katalog hinzugefügt. Wenn Dateien aus dem Verzeichnis entfernt wurden, werden sie auch aus dem Katalog entfernt. Für Dateien, die entfernt wurden, nicht mit die Assembly daher aus dem Prozess entladen <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition> -Objekte für diese Dateien nur aus dem Katalog entfernt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchPattern">
+      <MemberSignature Language="C#" Value="public string SearchPattern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SearchPattern" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.DirectoryCatalog.SearchPattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Suchmuster, das an den Konstruktor übergeben wird die <see cref="T:System.ComponentModel.Composition.Hosting.DirectoryCatalog" /> Objekt.</summary>
+        <value>Das Suchmuster den Katalog verwendet, um Dateien zu suchen. Der Standardwert ist *.dll, die alle DLL-Dateien zurückgibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Composition.Primitives.ICompositionElement.DisplayName">
+      <MemberSignature Language="C#" Value="string System.ComponentModel.Composition.Primitives.ICompositionElement.DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.ComponentModel.Composition.Primitives.ICompositionElement.DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.DirectoryCatalog.System#ComponentModel#Composition#Primitives#ICompositionElement#DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen des Verzeichniskatalogs ab.</summary>
+        <value>Eine Zeichenfolge, die eine lesbare Anzeigename des Verzeichniskatalogs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>-Instanz in eine <xref:System.ComponentModel.Composition.Primitives.ICompositionElement>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Composition.Primitives.ICompositionElement.Origin">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Composition.Primitives.ICompositionElement System.ComponentModel.Composition.Primitives.ICompositionElement.Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ICompositionElement System.ComponentModel.Composition.Primitives.ICompositionElement.Origin" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.DirectoryCatalog.System#ComponentModel#Composition#Primitives#ICompositionElement#Origin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ICompositionElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kompositionselement, das von dem der Katalog Directory stammt.</summary>
+        <value>Immer <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>-Instanz in eine <xref:System.ComponentModel.Composition.Primitives.ICompositionElement>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.DirectoryCatalog.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung des Verzeichniskatalogs ab.</summary>
+        <returns>Eine Zeichenfolgendarstellung des Katalogs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

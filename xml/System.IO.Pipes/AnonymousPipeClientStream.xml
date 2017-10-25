@@ -1,0 +1,332 @@
+<Type Name="AnonymousPipeClientStream" FullName="System.IO.Pipes.AnonymousPipeClientStream">
+  <TypeSignature Language="C#" Value="public sealed class AnonymousPipeClientStream : System.IO.Pipes.PipeStream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnonymousPipeClientStream extends System.IO.Pipes.PipeStream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Pipes.AnonymousPipeClientStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Pipes.PipeStream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht die Clientseite der anonymen Pipestreams, welche unterstützt synchrone und asynchrone Lese- und Schreibvorgänge verfügbar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anonyme Pipes tragen zur sicheren prozessübergreifenden Kommunikation zwischen untergeordneten und übergeordneten Prozesse. Die <xref:System.IO.Pipes.AnonymousPipeClientStream> -Klasse ermöglicht es einen untergeordneten Prozess eine Verbindung herstellen und Informationen mit einem übergeordneten Prozess austauschen.  
+  
+ Anonyme Pipes sind unbenannte, unidirektionale Pipes, die Daten in der Regel zwischen übergeordneten und untergeordneten Prozessen übertragen. Anonyme Pipes sind immer lokal. Sie können über ein Netzwerk verwendet werden. Ein <xref:System.IO.Pipes.PipeDirection> Wert <xref:System.IO.Pipes.PipeDirection.InOut> wird nicht unterstützt, da anonyme Pipes definiert werden, um unidirektional sein.  
+  
+ Anonyme Pipes unterstützen keine <xref:System.IO.Pipes.PipeTransmissionMode.Message> Modi zu lesen.  
+  
+ Die Clientseite einer anonymen Pipe muss erstellt werden, ein Pipehandle bereitgestellt von der Serverseite durch Aufrufen der <xref:System.IO.Pipes.AnonymousPipeServerStream.GetClientHandleAsString%2A> Methode. Die Zeichenfolge wird dann als Parameter übergeben, für die Erstellung den Clientprozess. Vom Clientprozess, erfolgt eine Übergabe an die <xref:System.IO.Pipes.AnonymousPipeClientStream> Konstruktor als die `pipeHandleAsString` Parameter.  
+  
+> [!NOTE]
+>  Für [!INCLUDE[winxppro](~/includes/winxppro-md.md)] und [!INCLUDE[win2kserver](~/includes/win2kserver-md.md)], maximal 10 Pipes kann gleichzeitig über das Netzwerk verbinden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Zeichenfolge von einem übergeordneten Prozess an einen untergeordneten Prozess zu senden, indem Sie mithilfe von anonymen Pipes. In diesem Beispiel wird ein <xref:System.IO.Pipes.AnonymousPipeServerStream>-Objekt in einem übergeordneten Prozess mit dem <xref:System.IO.Pipes.PipeDirection>-Wert <xref:System.IO.Pipes.PipeDirection.Out> erstellt. Erstellt auch eine <xref:System.IO.Pipes.AnonymousPipeClientStream> Objekt in einem untergeordneten Prozess mit einem <xref:System.IO.Pipes.PipeDirection> Wert <xref:System.IO.Pipes.PipeDirection.In>. Der übergeordnete Prozess sendet daraufhin eine vom Benutzer bereitgestellte Zeichenfolge an den untergeordneten Prozess. Die Zeichenfolge wird in der Konsole angezeigt.  
+  
+ Dieses Beispiel gilt für den Clientprozess, der durch den Serverprozess gestartet wird. Nennen Sie die resultierende ausführbare Datei aus dem Clientcode `pipeClient.exe` und kopieren Sie sie in dasselbe Verzeichnis wie die ausführbare Datei der Server aus, wenn Sie dieses Beispiel ausführen. Das gesamte Codebeispiel, einschließlich des Codes für die Pipeclient und Server, finden Sie unter [wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](~/docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeClientStream (string pipeHandleAsString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pipeHandleAsString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeClientStream.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipeHandleAsString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pipeHandleAsString">Eine Zeichenfolge, die das Pipehandle darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> Klasse mit der angegebenen Zeichenfolgendarstellung das Pipehandle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Konstruktoren ohne eine <xref:System.IO.Pipes.PipeDirection> Parameter, die die standardrichtung ist <xref:System.IO.Pipes.PipeDirection.In>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Zeichenfolge von einem übergeordneten Prozess an einen untergeordneten Prozess zu senden, indem Sie mithilfe von anonymen Pipes. In diesem Beispiel wird ein <xref:System.IO.Pipes.AnonymousPipeClientStream> Objekt in einem untergeordneten Prozess erstellt wird.  
+  
+ [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_ctorSample1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_ctorSample1/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_ctorSample1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_ctorSample1/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="pipeHandleAsString" />ist kein gültiges Pipehandle.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeClientStream (System.IO.Pipes.PipeDirection direction, Microsoft.Win32.SafeHandles.SafePipeHandle safePipeHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, class Microsoft.Win32.SafeHandles.SafePipeHandle safePipeHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeClientStream.#ctor(System.IO.Pipes.PipeDirection,Microsoft.Win32.SafeHandles.SafePipeHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="safePipeHandle" Type="Microsoft.Win32.SafeHandles.SafePipeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Einer der Enumerationswerte, der die Richtung der Pipe bestimmt.  
+  
+ Anonyme Pipes kann in eine Richtung, sodass nur <c>Richtung</c> kann nicht festgelegt werden, um <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</param>
+        <param name="safePipeHandle">Ein sicheres Handle für die Pipe, die von diesem <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" />-Objekt gekapselt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> Klasse aus dem angegebenen Handle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.IO.Pipes.PipeDirection> Wert <xref:System.IO.Pipes.PipeDirection.InOut> wird nicht unterstützt, da anonyme Pipes definiert werden, um unidirektional sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Zeichenfolge von einem übergeordneten Prozess an einen untergeordneten Prozess zu senden, indem Sie mithilfe von anonymen Pipes. In diesem Beispiel wird ein <xref:System.IO.Pipes.AnonymousPipeClientStream> -Objekts wird in einem untergeordneten Prozess mit einer <xref:System.IO.Pipes.PipeDirection> Wert <xref:System.IO.Pipes.PipeDirection.In>.  
+  
+ [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_ctorSample1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_ctorSample1/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_ctorSample1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_ctorSample1/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="safePipeHandle" />ist kein gültiges Handle.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="safePipeHandle" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          Für <paramref name="direction" /> ist <see cref="F:System.IO.Pipes.PipeDirection.InOut" /> festgelegt.</exception>
+        <exception cref="T:System.IO.IOException">Ein e/a-Fehler, z. B. ein Datenträgerfehler aufgetreten.  
+  
+ - oder -   
+  
+ Der Stream wurde geschlossen.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeClientStream (System.IO.Pipes.PipeDirection direction, string pipeHandleAsString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, string pipeHandleAsString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeClientStream.#ctor(System.IO.Pipes.PipeDirection,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="pipeHandleAsString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Einer der Enumerationswerte, der die Richtung der Pipe bestimmt.  
+  
+ Anonyme Pipes kann in eine Richtung, sodass nur <c>Richtung</c> kann nicht festgelegt werden, um <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</param>
+        <param name="pipeHandleAsString">Eine Zeichenfolge, die das Pipehandle darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> -Klasse mit der angegebenen piperichtung und eine Zeichenfolgendarstellung der Pipehandle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.IO.Pipes.PipeDirection> Wert <xref:System.IO.Pipes.PipeDirection.InOut> wird nicht unterstützt, da anonyme Pipes definiert werden, um unidirektional sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Zeichenfolge von einem übergeordneten Prozess an einen untergeordneten Prozess zu senden, indem Sie mithilfe von anonymen Pipes. In diesem Beispiel wird ein <xref:System.IO.Pipes.AnonymousPipeClientStream> -Objekts wird in einem untergeordneten Prozess mit einer <xref:System.IO.Pipes.PipeDirection> Wert <xref:System.IO.Pipes.PipeDirection.In>.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pipeHandleAsString" />ist ein ungültiges Handle.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeHandleAsString" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          Für <paramref name="direction" /> ist <see cref="F:System.IO.Pipes.PipeDirection.InOut" /> festgelegt.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~AnonymousPipeClientStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeClientStream.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nicht verwaltete Ressourcen frei und führt andere Bereinigungsvorgänge vor der <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> Instanz durch die Garbagecollection wieder zugänglich gemacht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMode">
+      <MemberSignature Language="C#" Value="public override System.IO.Pipes.PipeTransmissionMode ReadMode { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeTransmissionMode ReadMode" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.AnonymousPipeClientStream.ReadMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeTransmissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt den Lesemodus für das <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> Objekt.</summary>
+        <value>Die <see cref="T:System.IO.Pipes.PipeTransmissionMode" /> für die <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anonyme Pipes unterstützen keine <xref:System.IO.Pipes.PipeTransmissionMode.Message> im Lesemodus befindet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Zeichenfolge von einem übergeordneten Prozess an einen untergeordneten Prozess zu senden, indem Sie mithilfe von anonymen Pipes. In diesem Beispiel wird ein <xref:System.IO.Pipes.AnonymousPipeClientStream> Objekt in einem untergeordneten Prozess erstellt wird. Die <xref:System.NotSupportedException> abgefangen, wenn die <xref:System.IO.Pipes.AnonymousPipeClientStream.ReadMode%2A> -Eigenschaftensatz auf <xref:System.IO.Pipes.PipeTransmissionMode.Message>.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Übertragungsmodus ist ungültig. Für anonyme Pipes nur <see cref="F:System.IO.Pipes.PipeTransmissionMode.Byte" /> wird unterstützt.</exception>
+        <exception cref="T:System.NotSupportedException">Wird der Übertragungsmodus <see cref="F:System.IO.Pipes.PipeTransmissionMode.Message" />.</exception>
+        <exception cref="T:System.IO.IOException">Die Verbindung wurde unterbrochen, oder ein anderer e/a-Fehler auftritt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmissionMode">
+      <MemberSignature Language="C#" Value="public override System.IO.Pipes.PipeTransmissionMode TransmissionMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeTransmissionMode TransmissionMode" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.AnonymousPipeClientStream.TransmissionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeTransmissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von der aktuellen Pipe unterstützten Pipeübertragungsmodus ab.</summary>
+        <value>Die <see cref="T:System.IO.Pipes.PipeTransmissionMode" /> von der aktuellen Pipe unterstützten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anonyme Pipes unterstützen keine <xref:System.IO.Pipes.PipeTransmissionMode.Message> im Lesemodus befindet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Zeichenfolge von einem übergeordneten Prozess an einen untergeordneten Prozess zu senden, indem Sie mithilfe von anonymen Pipes. In diesem Beispiel wird ein <xref:System.IO.Pipes.AnonymousPipeClientStream> Objekt in einem untergeordneten Prozess erstellt wird und die <xref:System.IO.Pipes.AnonymousPipeClientStream.TransmissionMode%2A> in der Konsole angezeigt wird.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

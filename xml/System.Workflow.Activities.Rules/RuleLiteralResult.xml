@@ -1,0 +1,64 @@
+<Type Name="RuleLiteralResult" FullName="System.Workflow.Activities.Rules.RuleLiteralResult">
+  <TypeSignature Language="C#" Value="public class RuleLiteralResult : System.Workflow.Activities.Rules.RuleExpressionResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuleLiteralResult extends System.Workflow.Activities.Rules.RuleExpressionResult" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleLiteralResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.Rules.RuleExpressionResult</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das literale Ergebnis eines benutzerdefinierten Ausdrucks dar, der mithilfe von <see cref="T:System.Workflow.Activities.Rules.IRuleExpression" /> geschrieben wurde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleLiteralResult (object literal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object literal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleLiteralResult.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="literal" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="literal">Das literale Ergebnis des Ausdrucks.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleLiteralResult" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleLiteralResult.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ergebnis des Ausdrucks ab.</summary>
+        <value>Das Ergebnis des Ausdrucks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.InvalidOperationException> wird bei jedem Versuch, <xref:System.Workflow.Activities.Rules.RuleLiteralResult.Value%2A> festzulegen, ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Workflow.Activities.Rules.RuleLiteralResult.Value" /> ist festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

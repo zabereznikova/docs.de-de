@@ -1,0 +1,452 @@
+<Type Name="HMAC" FullName="System.Security.Cryptography.HMAC">
+  <TypeSignature Language="C#" Value="public abstract class HMAC : System.Security.Cryptography.KeyedHashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HMAC extends System.Security.Cryptography.KeyedHashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.HMAC" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.KeyedHashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die abstrakte Klasse dar, von der alle Implementierungen von Hash-Nachrichtenauthentifizierungscodes (HMAC, Hash-based Message Authentication Code) abgeleitet werden müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hash-based Message Authentication Code (HMAC) kann verwendet werden, um zu bestimmen, ob eine über einen unsicheren Kanal gesendete Nachricht manipuliert wurde, vorausgesetzt, dass Sender und Empfänger einen gemeinsamen geheimen Schlüssel besitzen. Der Absender berechnet den Hashwert für die ursprünglichen Daten und sendet die ursprünglichen Daten und der HMAC als eine einzelne Nachricht. Der Empfänger den Hashwert für die empfangene Nachricht neuberechnungen und überprüft, ob der berechnete Hashwert der empfangenen Hashwert übereinstimmt.  
+  
+ HMAC kann mit jeder iterativen kryptografischen Hashfunktion, z. B. MD5 und SHA-1, in Kombination mit einem gemeinsamen geheimen Schlüssel verwendet werden. Die kryptografische Stärke einer HMAC hängt von den Eigenschaften der zugrunde liegenden Hashfunktion ab.  
+  
+ Alle Änderungen an den Daten oder der Hashwert führt keine Übereinstimmung gefunden, da Wissen des geheimen Schlüssels zum Ändern der Nachricht, und reproduzieren Sie den richtigen Hashwert erforderlich ist. Aus diesem Grund wird der ursprüngliche und der berechnete Hashwerte übereinstimmen, die Nachricht authentifiziert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HMAC ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMAC.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.HMAC" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSizeValue">
+      <MemberSignature Language="C#" Value="protected int BlockSizeValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlockSizeValue" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HMAC.BlockSizeValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für den Hashwert verwendete Blockgröße ab oder legt diese fest.</summary>
+        <value>Die Blockgröße, die für den Hashwert verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hash-based Message Authentication Code (HMAC) verwendet eine Hashfunktion, in denen Daten gehasht wird, durch eine grundlegende Komprimierung-Funktion für Datenblocks iterieren durch. <xref:System.Security.Cryptography.HMAC.BlockSizeValue%2A>ist die Bytegröße so eines Blocks. Der Wert ist 64 Bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.HMAC Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.HMAC Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMAC.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HMAC</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der Standardimplementierung eines Hash-Nachrichtenauthentifizierungscodes (HMAC, Hash-based Message Authentication Code).</summary>
+        <returns>Eine neue SHA-1-Instanz, sofern die Standardeinstellungen mit geändert wurden die [ &lt;CryptoClass&gt; Element](~/docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig verwendet diese Überladung die SHA-1-Implementierung der HMAC. Wenn Sie eine andere Implementierung angeben möchten, verwenden Sie die <xref:System.Security.Cryptography.HMAC.Create%28System.String%29> überladen, sodass Sie stattdessen einen Algorithmusnamen angeben können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.HMAC Create (string algorithmName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.HMAC Create(string algorithmName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMAC.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HMAC</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithmName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithmName">Die zu verwendende HMAC-Implementierung. Die folgende Tabelle zeigt die gültigen Werte für die <c>AlgorithmName</c> -Parameter sowie die Algorithmen, denen sie sind zugeordnet.  
+  
+ <list type="table"><listheader><term>Parameterwert  
+  
+ </term><description>Implementiert  
+  
+ </description></listheader><item><term>System.Security.Cryptography.HMAC  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.KeyedHashAlgorithm  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACMD5  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>System.Security.Cryptography.HMACMD5  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>HMACRIPEMD160  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>System.Security.Cryptography.HMACRIPEMD160  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>HMACSHA1  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.HMACSHA1  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACSHA256  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>System.Security.Cryptography.HMACSHA256  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>HMACSHA384  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>System.Security.Cryptography.HMACSHA384  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>HMACSHA512  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>System.Security.Cryptography.HMACSHA512  
+  
+ </term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>MACTripleDES  
+  
+ </term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item><item><term>System.Security.Cryptography.MACTripleDES  
+  
+ </term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item></list></param>
+        <summary>Erstellt eine Instanz der angegebenen Implementierung eines Hash-Nachrichtenauthentifizierungscodes (HMAC, Hash-based Message Authentication Code).</summary>
+        <returns>Eine neue Instanz der angegebenen HMAC-Implementierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ HMAC unterstützt eine Reihe von Hashalgorithmen, einschließlich MD5, SHA-1, SHA-256 und RIPEMD160. Die vollständige Liste finden Sie die unterstützten Werte für die `algorithmName` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMAC.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von der <see cref="T:System.Security.Cryptography.HMAC" />-Klasse verwendeten nicht verwalteten Ressourcen frei, wenn eine Schlüsseländerung zulässig ist, und gibt optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die `Finalize` Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. `Finalize`Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Security.Cryptography.HMAC> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see langword="Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HashCore">
+      <MemberSignature Language="C#" Value="protected override void HashCore (byte[] rgb, int ib, int cb);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HashCore(unsigned int8[] rgb, int32 ib, int32 cb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMAC.HashCore(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+        <Parameter Name="ib" Type="System.Int32" />
+        <Parameter Name="cb" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">Die Eingabedaten.</param>
+        <param name="ib">Der Offset im Bytearray, ab dem Daten verwendet werden sollen.</param>
+        <param name="cb">Die Anzahl der Bytes im Array, die als Daten verwendet werden sollen.</param>
+        <summary>Leitet beim Überschreiben in einer abgeleiteten Klasse die in das Objekt geschriebenen Daten zum Berechnen des Hashwerts an den standardmäßigen <see cref="T:System.Security.Cryptography.HMAC" />-Hashalgorithmus weiter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Anwendungscode nicht aufgerufen.  
+  
+ Diese abstrakte Methode führt die Berechnung des Hashs. Bei jedem Schreibvorgang für das Kryptografiestreamobjekt übergibt die Daten über diese Methode. Für jeden Block von Daten aktualisiert diese Methode den Zustand des Hashobjekts, damit ein richtige Hashwert am Ende des Datenstroms zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashFinal">
+      <MemberSignature Language="C#" Value="protected override byte[] HashFinal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashFinal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMAC.HashFinal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt beim Überschreiben in einer abgeleiteten Klasse die Berechnung des Hashs ab, nachdem die letzten Daten vom Kryptografiestreamobjekt verarbeitet wurden.</summary>
+        <returns>Der berechnete Hashcode in einem Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Anwendungscode nicht aufgerufen. Diese Methode schließt alle partiellen Berechnung ab und gibt den richtigen Hashwert des Datenstroms zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashName">
+      <MemberSignature Language="C#" Value="public string HashName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HMAC.HashName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des für die Hashoperation verwendeten Hashalgorithmus ab oder legt diesen fest.</summary>
+        <value>Der Name des Hashalgorithmus.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der aktuelle Hashalgorithmus kann nicht geändert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMAC.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der Standardimplementierung des <see cref="T:System.Security.Cryptography.HMAC" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hash-based Message Authentication Code (HMAC) kann verwendet werden, um zu bestimmen, ob eine über einen unsicheren Kanal gesendete Nachricht manipuliert wurde, vorausgesetzt, dass Sender und Empfänger einen gemeinsamen geheimen Schlüssel besitzen. Der Absender berechnet den Hashwert für die ursprünglichen Daten und sendet die ursprünglichen Daten und der HMAC als eine einzelne Nachricht. Der Empfänger den Hashwert für die empfangene Nachricht neuberechnungen und überprüft, ob der berechnete Hashwert der empfangenen Hashwert übereinstimmt.  
+  
+ HMAC kann mit jeder iterativen kryptografischen Hashfunktion, z. B. MD5 und SHA-1, in Kombination mit einem gemeinsamen geheimen Schlüssel verwendet werden. Die kryptografische Stärke einer HMAC hängt von den Eigenschaften der zugrunde liegenden Hashfunktion ab.  
+  
+ Alle Änderungen an den Daten oder der Hashwert führt keine Übereinstimmung gefunden, da Wissen des geheimen Schlüssels erforderlich ist, ändern Sie die Nachricht, und reproduzieren den richtigen Hashwert. Aus diesem Grund wird der ursprüngliche und der berechnete Hashwerte übereinstimmen, die Nachricht authentifiziert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public override byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HMAC.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den im Hashalgorithmus zu verwendenden Schlüssel ab oder legt diesen fest.</summary>
+        <value>Der im Hashalgorithmus zu verwendende Schlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist der Schlüssel für den schlüsselgebundenen Hashalgorithmus.  
+  
+ Ein Hash-based Message Authentication Code (HMAC) kann verwendet werden, um zu bestimmen, ob eine über einen unsicheren Kanal gesendete Nachricht manipuliert wurde, vorausgesetzt, dass Sender und Empfänger einen gemeinsamen geheimen Schlüssel besitzen. Der Absender berechnet den Hashwert für die ursprünglichen Daten und sendet die ursprünglichen Daten und der HMAC als eine einzelne Nachricht. Der Empfänger den Hashwert für die empfangene Nachricht neuberechnungen und überprüft, ob der berechnete Hashwert der empfangenen Hashwert übereinstimmt.  
+  
+ HMAC kann mit jeder iterativen kryptografischen Hashfunktion, z. B. MD5 und SHA-1, in Kombination mit einem gemeinsamen geheimen Schlüssel verwendet werden. Die kryptografische Stärke einer HMAC hängt von den Eigenschaften der zugrunde liegenden Hashfunktion ab.  
+  
+ Alle Änderungen an den Daten oder der Hashwert führt keine Übereinstimmung gefunden, da Wissen des geheimen Schlüssels zum Ändern der Nachricht, und reproduzieren Sie den richtigen Hashwert erforderlich ist. Aus diesem Grund wird der ursprüngliche und der berechnete Hashwerte übereinstimmen, die Nachricht authentifiziert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Es wird versucht, so ändern Sie die <see cref="P:System.Security.Cryptography.HMAC.Key" /> Eigenschaft nach dem hashing begonnen hat.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

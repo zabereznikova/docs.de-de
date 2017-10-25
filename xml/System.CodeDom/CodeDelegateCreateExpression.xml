@@ -1,0 +1,162 @@
+<Type Name="CodeDelegateCreateExpression" FullName="System.CodeDom.CodeDelegateCreateExpression">
+  <TypeSignature Language="C#" Value="public class CodeDelegateCreateExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeDelegateCreateExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeDelegateCreateExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Ausdruck, der einen Delegaten erstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeDelegateCreateExpression>Stellt Code, der einen Delegaten erstellt. <xref:System.CodeDom.CodeDelegateCreateExpression>wird häufig mit <xref:System.CodeDom.CodeAttachEventStatement> oder <xref:System.CodeDom.CodeRemoveEventStatement> zur Darstellung der eines ereignishandlers an das Anfügen oder von einem Ereignis zu entfernen.  
+  
+ Die <xref:System.CodeDom.CodeDelegateCreateExpression.DelegateType%2A> Eigenschaft gibt den Typ des zu erstellenden Delegaten. Die <xref:System.CodeDom.CodeDelegateCreateExpression.TargetObject%2A> Eigenschaft gibt an, das Objekt, das die Ereignishandlermethode enthält. Die <xref:System.CodeDom.CodeDelegateCreateExpression.MethodName%2A> Eigenschaft gibt den Namen der Ereignishandler Methode, deren Signatur der Methode die Methodensignatur des Delegaten entspricht, an.  
+  
+ In c# Delegaterstellungsausdrücke hat normalerweise das folgende Format: `new EventHandler(this.HandleEventMethod)`. In Visual Basic Delegaterstellungsausdrücke hat normalerweise das folgende Format: `AddressOf Me.HandleEventMethod`.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode verwendet eine <xref:System.CodeDom.CodeDelegateCreateExpression> zum Erstellen eines Delegaten.  
+  
+ [!code-cpp[CodeAttachEventStatementExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeAttachEventStatementExample/CPP/codeattacheventstatementexample.cpp#3)]
+ [!code-csharp[CodeAttachEventStatementExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeAttachEventStatementExample/CS/codeattacheventstatementexample.cs#3)]
+ [!code-vb[CodeAttachEventStatementExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeAttachEventStatementExample/VB/codeattacheventstatementexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDelegateCreateExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDelegateCreateExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeDelegateCreateExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDelegateCreateExpression (System.CodeDom.CodeTypeReference delegateType, System.CodeDom.CodeExpression targetObject, string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference delegateType, class System.CodeDom.CodeExpression targetObject, string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDelegateCreateExpression.#ctor(System.CodeDom.CodeTypeReference,System.CodeDom.CodeExpression,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="delegateType" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="delegateType">Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Datentyp des Delegaten angibt.</param>
+        <param name="targetObject">Ein <see cref="T:System.CodeDom.CodeExpression" /> , der angibt, dass des Objekts, das die Ereignishandlermethode enthält.</param>
+        <param name="methodName">Der Name des Ereignishandler Methode.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeDelegateCreateExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelegateType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference DelegateType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference DelegateType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateCreateExpression.DelegateType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp des Delegaten fest.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Datentyp des Delegaten angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateCreateExpression.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Ereignishandlermethode.</summary>
+        <value>Der Name der Ereignishandlermethode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression TargetObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateCreateExpression.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das die Ereignishandlermethode enthält.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , der angibt, dass des Objekts, das die Ereignishandlermethode enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

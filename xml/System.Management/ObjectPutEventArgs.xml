@@ -1,0 +1,49 @@
+<Type Name="ObjectPutEventArgs" FullName="System.Management.ObjectPutEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectPutEventArgs : System.Management.ManagementEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectPutEventArgs extends System.Management.ManagementEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ObjectPutEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Ereignisdaten für die <see cref="E:System.Management.ManagementOperationObserver.ObjectPut" /> Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementPath Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ObjectPutEventArgs.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Identität des Objekts, das gestellt wurden.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementPath" /> mit dem Pfad des Objekts, das gestellt wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.ManagementPath> mit dem Pfad des Objekts, das gestellt wurden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

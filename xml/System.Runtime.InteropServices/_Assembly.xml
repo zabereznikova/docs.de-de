@@ -1,0 +1,1602 @@
+<Type Name="_Assembly" FullName="System.Runtime.InteropServices._Assembly">
+  <TypeSignature Language="C#" Value="public interface _Assembly" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _Assembly" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices._Assembly" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("17156360-2F1A-384A-BC52-FDE93C215C5B")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibImportClass(typeof(System.Reflection.Assembly))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die öffentlichen Member des macht die <see cref="T:System.Reflection.Assembly" /> Klasse an nicht verwalteten Code.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Diese Schnittstelle behält die Vtable-Reihenfolge von der <xref:System.Reflection.Assembly?displayProperty=nameWithType> -Klassenmember, die von nicht verwalteten COM-Objekte zugegriffen werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CodeBase">
+      <MemberSignature Language="C#" Value="public string CodeBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CodeBase" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._Assembly.CodeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="P:System.Reflection.Assembly.CodeBase" /> Eigenschaft.</summary>
+        <value>Der Speicherort der Assembly, der ursprünglich angegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.CodeBase%2A?displayProperty=nameWithType> Eigenschaft ruft den Speicherort der Assembly gemäß ursprünglich, z. B. ein <xref:System.Reflection.AssemblyName> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateInstance">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.CreateInstance" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.CreateInstance%2A> Methoden einen Typ aus dieser Assembly suchen und mithilfe der systemaktivierung eine Instanz erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public object CreateInstance (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.CreateInstance(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der <see cref="P:System.Type.FullName" /> des zu suchenden Typs.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.CreateInstance(System.String)" /> Methode.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Object" /> , der den Typ darstellt, wobei Kultur, Argumente, Binder und Aktivierung Attribute festgelegt, um <see langword="null" />, und <see cref="T:System.Reflection.BindingFlags" /> in öffentliche oder Instanz festlegen oder <see langword="null" /> Wenn <paramref name="typeName" /> wurde nicht gefunden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.CreateInstance%2A> Methode sucht den angegebenen Typ aus dieser Assembly und erstellt eine Instanz des mithilfe der systemaktivierung mithilfe der Suche Groß-/Kleinschreibung beachtet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public object CreateInstance (string typeName, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(string typeName, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.CreateInstance(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der <see cref="P:System.Type.FullName" /> des zu suchenden Typs.</param>
+        <param name="ignoreCase">
+          <see langword="true" />, um die Groß- und Kleinschreibung des Typnamens zu ignorieren, andernfalls <see langword="false" />.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.CreateInstance(System.String,System.Boolean)" /> Methode.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Object" /> , der den Typ darstellt, wobei Kultur, Argumente, Binder und Aktivierung Attribute festgelegt, um <see langword="null" />, und <see cref="T:System.Reflection.BindingFlags" /> in öffentliche oder Instanz festlegen oder <see langword="null" /> Wenn <paramref name="typeName" /> wurde nicht gefunden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.CreateInstance%2A> Methode sucht den angegebenen Typ aus dieser Assembly und erstellt eine Instanz des mithilfe der systemaktivierung, Groß-/Kleinschreibung wahlweiser.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public object CreateInstance (string typeName, bool ignoreCase, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, object[] args, System.Globalization.CultureInfo culture, object[] activationAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(string typeName, bool ignoreCase, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, object[] args, class System.Globalization.CultureInfo culture, object[] activationAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.CreateInstance(System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="activationAttributes" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der <see cref="P:System.Type.FullName" /> des zu suchenden Typs.</param>
+        <param name="ignoreCase">
+          <see langword="true" />, um die Groß- und Kleinschreibung des Typnamens zu ignorieren, andernfalls <see langword="false" />.</param>
+        <param name="bindingAttr">Eine Bitmaske, die beeinflussen, wie die Suche durchgeführt wird. Der Wert ist eine Kombination von Bitflags aus <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <param name="binder">Ein Objekt, das die Bindung, die Umwandlung von Argumenttypen, das Aufrufen von Membern und das Abrufen von <see langword="MemberInfo" />-Objekten über Reflektion ermöglicht. Wenn <c>Binder</c> ist <see langword="null" />, wird der Standardbinder verwendet.</param>
+        <param name="args">Ein Array vom Typ <see langword="Object" /> mit den Argumenten, die an den Konstruktor übergeben werden. Dieses Array von Argumenten muss bezüglich Anzahl, Reihenfolge und Typ mit den Parametern des aufzurufenden Konstruktors übereinstimmen. Wenn der Standardkonstruktor gewünscht ist, <c>Args</c> muss ein leeres Array oder <see langword="null" />.</param>
+        <param name="culture">Eine Instanz von <see langword="CultureInfo" /> für die Steuerung der Umwandlung von Typen. Wenn dies <see langword="null" /> ist, wird die <see langword="CultureInfo" /> des aktuellen Threads verwendet. (Dies ist z. B. erforderlich, um einen <see langword="String" />, der 1000 darstellt, in einen <see langword="Double" />-Wert zu konvertieren, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird.)</param>
+        <param name="activationAttributes">Ein Array vom Typ <see langword="Object" /> , enthält eine oder mehrere Aktivierungsattribute, die bei der Aktivierung beteiligt sein können. Ein Beispiel für ein Aktivierungsattribut ist:  
+  
+ URLAttribute (http://hostname/appname/objectURI)</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.CreateInstance(System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])" /> Methode.</summary>
+        <returns>Eine Instanz von <see langword="Object" /> , der den Typ darstellt, und den angegebenen Kriterien entspricht oder <see langword="null" /> Wenn <paramref name="typeName" /> wurde nicht gefunden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.CreateInstance%2A> Methode sucht den angegebenen Typ aus dieser Assembly und erstellt eine Instanz mithilfe der systemaktivierung mit optionalen Groß-/ Kleinschreibung der angegebenen Kultur, Argumente und Bindungs-und Aktivierungsattribute.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPoint">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo EntryPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo EntryPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._Assembly.EntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="P:System.Reflection.Assembly.EntryPoint" /> Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.Reflection.MethodInfo" /> -Objekt, das den Einstiegspunkt dieser Assembly darstellt. Wenn kein Einstiegspunkt gefunden wird, z. B. weil die Assembly eine DLL ist, wird <see langword="null" /> zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.EntryPoint%2A> Eigenschaft ruft den Einstiegspunkt dieser Assembly ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das <see cref="T:System.Object" />, das mit dem aktuellen <see cref="T:System.Object" /> verglichen werden soll.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Object.Equals(System.Object)" /> Methode.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Object" /> gleich der aktuellen <see cref="T:System.Object" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Object.Equals%2A> Methode bestimmt, ob das angegebene <xref:System.Object> ist gleich dem aktuellen <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapedCodeBase">
+      <MemberSignature Language="C#" Value="public string EscapedCodeBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EscapedCodeBase" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._Assembly.EscapedCodeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="P:System.Reflection.Assembly.EscapedCodeBase" /> Eigenschaft.</summary>
+        <value>Ein Uniform Resource Identifier (URI) mit Escapezeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.EscapedCodeBase%2A> Eigenschaft ruft den URI ab, einschließlich Escapezeichen, der die Codebase darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evidence">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.Evidence Evidence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence Evidence" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._Assembly.Evidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="P:System.Reflection.Assembly.Evidence" /> Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.Security.Policy.Evidence" /> Objekt für diese Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.Evidence%2A> Eigenschaft ruft den Beweis für diese Assembly ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._Assembly.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="P:System.Reflection.Assembly.FullName" /> Eigenschaft.</summary>
+        <value>Der Anzeigename der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft ruft den Anzeigenamen der Assembly ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetCustomAttributes">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetCustomAttributes" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetCustomAttributes%2A> Methoden rufen die benutzerdefinierten Attribute für diese Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Dieses Argument wird für Objekte vom Typ <see cref="T:System.Reflection.Assembly" /> ignoriert.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetCustomAttributes(System.Boolean)" /> Methode.</summary>
+        <returns>Ein Array vom Typ <see langword="Object" /> , das die benutzerdefinierten Attribute für diese Assembly enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetCustomAttributes%2A> Methode ruft alle benutzerdefinierten Attribute für diese Assembly ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Die <see cref="T:System.Type" /> sind benutzerdefinierte Attribute zurückgegeben werden.</param>
+        <param name="inherit">Dieses Argument wird für Objekte vom Typ <see cref="T:System.Reflection.Assembly" /> ignoriert.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetCustomAttributes(System.Type,System.Boolean)" /> Methode.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Object" /> , enthält die benutzerdefinierten Attribute für diese Assembly entsprechend den Angaben von <paramref name="attributeType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetCustomAttributes%2A> Methode ruft alle benutzerdefinierten Attribute für diese Assembly ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedTypes">
+      <MemberSignature Language="C#" Value="public Type[] GetExportedTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type[] GetExportedTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetExportedTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetExportedTypes" /> Eigenschaft.</summary>
+        <returns>Ein Array von <see cref="T:System.Type" /> Objekte, die in dieser Assembly definierten Typen darstellen, die außerhalb der Assembly sichtbar sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetExportedTypes%2A> Eigenschaft ruft in dieser Assembly definierten exportierten Typen, die außerhalb der Assembly sichtbar sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFile">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream GetFile (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.FileStream GetFile(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der angegebenen Datei. Der Pfad zur Datei darf nicht enthalten sein.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetFile(System.String)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.IO.FileStream" /> für die angegebene Datei oder <see langword="null" /> , wenn die Datei nicht gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetFile%2A> Methode ruft eine <xref:System.IO.FileStream> für die angegebene Datei in der Dateitabelle des Manifests dieser Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetFiles">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetFiles" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetFiles%2A> Methoden rufen die Dateien in der Dateitabelle eines Assemblymanifests.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetFiles">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream[] GetFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.FileStream[] GetFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetFiles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetFiles" /> Methode.</summary>
+        <returns>Ein Array von <see cref="T:System.IO.FileStream" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetFiles%2A> Methode ruft die Dateien in der Dateitabelle eines Assemblymanifests ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFiles">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream[] GetFiles (bool getResourceModules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.FileStream[] GetFiles(bool getResourceModules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetFiles(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getResourceModules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="getResourceModules">
+          <see langword="true" />, wenn Ressourcenmodule eingebunden werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetFiles(System.Boolean)" /> Methode.</summary>
+        <returns>Ein Array von <see cref="T:System.IO.FileStream" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetFiles%2A> Methode ruft die Dateien in der Dateitabelle eines Assemblymanifests, gibt an, ob Ressourcenmodule eingebunden werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Object.GetHashCode" /> Methode.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Object.GetHashCode%2A> Methode dient als Hashfunktion für einen bestimmten Typ. <xref:System.Object.GetHashCode%2A> ist für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. in einer Hashtabelle, geeignet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetLoadedModules">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetLoadedModules" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetLoadedModules%2A> Methoden rufen alle geladenen Module, die Bestandteil dieser Assembly sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetLoadedModules">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module[] GetLoadedModules ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Module[] GetLoadedModules() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetLoadedModules" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetLoadedModules" /> Methode.</summary>
+        <returns>Ein Array von Modulen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetLoadedModules%2A> Methode ruft alle geladenen Module, die Bestandteil dieser Assembly sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLoadedModules">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module[] GetLoadedModules (bool getResourceModules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Module[] GetLoadedModules(bool getResourceModules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetLoadedModules(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getResourceModules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="getResourceModules">
+          <see langword="true" />, wenn Ressourcenmodule eingebunden werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetLoadedModules(System.Boolean)" /> Methode.</summary>
+        <returns>Ein Array von Modulen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetLoadedModules%2A> Methode ruft alle geladenen Module, die Bestandteil dieser Assembly, die angibt, ob Ressourcenmodule eingebunden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManifestResourceInfo">
+      <MemberSignature Language="C#" Value="public System.Reflection.ManifestResourceInfo GetManifestResourceInfo (string resourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.ManifestResourceInfo GetManifestResourceInfo(string resourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetManifestResourceInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ManifestResourceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Der Ressourcenname unter Berücksichtigung der Groß- und Kleinschreibung.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetManifestResourceInfo(System.String)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Reflection.ManifestResourceInfo" /> Objekt mit Informationen zur Topologie der Ressource aufgefüllt oder <see langword="null" /> , wenn die Ressource nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A> Methodenrückgabe Informationen wie die angegebene Ressource beibehalten wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManifestResourceNames">
+      <MemberSignature Language="C#" Value="public string[] GetManifestResourceNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetManifestResourceNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetManifestResourceNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetManifestResourceNames" /> Methode.</summary>
+        <returns>Ein Array des Typs <see langword="String" />, das die Namen sämtlicher Ressourcen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> Methode gibt die Namen aller Ressourcen in dieser Assembly zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetManifestResourceStream">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetManifestResourceStream" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> Methoden, die angegebene Manifestressource aus dieser Assembly zu laden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetManifestResourceStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetManifestResourceStream (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetManifestResourceStream(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetManifestResourceStream(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der angeforderten Manifestressource unter Berücksichtigung der Groß- und Kleinschreibung.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetManifestResourceStream(System.String)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" />, der diese Manifestressource darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> Methode lädt die angegebene Manifestressource aus dieser Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManifestResourceStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetManifestResourceStream (Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetManifestResourceStream(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetManifestResourceStream(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, dessen Namespace verwendet wird, um den Gültigkeitsbereich des Manifestressourcennamens festzulegen.</param>
+        <param name="name">Der Name der angeforderten Manifestressource unter Berücksichtigung der Groß- und Kleinschreibung.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetManifestResourceStream(System.Type,System.String)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" />, der diese Manifestressource darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> Methode lädt die angegebene Manifestressource, deren Gültigkeitsbereich durch den Namespace des angegebenen Typs, aus dieser Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module GetModule (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Module GetModule(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetModule(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Moduls, das angefordert wird.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetModule(System.String)" /> Methode.</summary>
+        <returns>Das angeforderte Modul oder <see langword="null" />, wenn das Modul nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetModule%2A> Methode ruft das angegebene Modul in dieser Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetModules">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetModules" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetModules%2A> Methoden rufen alle Module, die Bestandteil dieser Assembly sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetModules">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module[] GetModules ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Module[] GetModules() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetModules" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetModules" /> Methode.</summary>
+        <returns>Ein Array von Modulen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetModules%2A> -Methode ruft alle Module, die Bestandteil dieser Assembly sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModules">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module[] GetModules (bool getResourceModules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Module[] GetModules(bool getResourceModules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetModules(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getResourceModules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="getResourceModules">
+          <see langword="true" />, wenn Ressourcenmodule eingebunden werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetModules(System.Boolean)" /> Methode.</summary>
+        <returns>Ein Array von Modulen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetModules%2A> -Methode ruft alle Module, die Bestandteil dieser Assembly, die angibt, ob Ressourcenmodule eingebunden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetName">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetName" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetName%2A> Methoden rufen ein <xref:System.Reflection.AssemblyName> für diese Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName GetName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.AssemblyName GetName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetName" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Reflection.AssemblyName" /> für diese Assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetName%2A> Methode ruft eine <xref:System.Reflection.AssemblyName> für diese Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName GetName (bool copiedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.AssemblyName GetName(bool copiedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetName(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="copiedName" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="copiedName">
+          <see langword="true" />, um die <see cref="P:System.Reflection.Assembly.CodeBase" /> auf den Speicherort der Assembly festzulegen, nachdem sie verborgen kopiert wurde. <see langword="false" />, um die <see cref="P:System.Reflection.Assembly.CodeBase" /> auf den ursprünglichen Speicherort festzulegen.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetName(System.Boolean)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Reflection.AssemblyName" /> für diese Assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetName%2A> Methode ruft eine <xref:System.Reflection.AssemblyName> für diese Assembly Sie legt die CodeBase fest entsprechend den Angaben von der `copiedName` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das mit Serialisierungsinformationen aufgefüllt werden soll.</param>
+        <param name="context">Der Zielkontext der Serialisierung.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetObjectData%2A> Methode Ruft Serialisierungsinformationen mit allen Daten für das erneute Instanziieren dieser Assembly benötigt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReferencedAssemblies">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName[] GetReferencedAssemblies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.AssemblyName[] GetReferencedAssemblies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetReferencedAssemblies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetReferencedAssemblies" /> Methode.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Reflection.AssemblyName" /> , enthält alle Assemblys, die auf diese Assembly verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A> Methode ruft die <xref:System.Reflection.AssemblyName> Objekte für alle Assemblys, die auf diese Assembly verweist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetSatelliteAssembly">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetSatelliteAssembly" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetSatelliteAssembly%2A> Methoden rufen die Satellitenassembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetSatelliteAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly GetSatelliteAssembly (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Assembly GetSatelliteAssembly(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Die angegebene Kultur.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo)" /> Methode.</summary>
+        <returns>Die angegebene Satellitenassembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetSatelliteAssembly%2A> Methode ruft die Satellitenassembly für die angegebene Kultur ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSatelliteAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly GetSatelliteAssembly (System.Globalization.CultureInfo culture, Version version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Assembly GetSatelliteAssembly(class System.Globalization.CultureInfo culture, class System.Version version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="version" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Die angegebene Kultur.</param>
+        <param name="version">Die Version der Satellitenassembly.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo,System.Version)" /> Methode.</summary>
+        <returns>Die angegebene Satellitenassembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetSatelliteAssembly%2A> Methode ruft die angegebene Version der Satellitenassembly für die angegebene Kultur ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetType">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.GetType" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetType%2A> get-Methoden der <xref:System.Type> -Objekt, das den angegebenen Typ darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Object.GetType" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Type" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Object.GetType%2A> Methode ruft den Typ der aktuellen Instanz ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der vollständige Name des Typs.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetType(System.String)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Type" /> Objekt, das die angegebene Klasse darstellt oder <see langword="null" /> , wenn die Klasse nicht gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetType%2A> Methode ruft die <xref:System.Type> Objekt mit dem angegebenen Namen aus der Assemblyinstanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string name, bool throwOnError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string name, bool throwOnError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetType(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="throwOnError" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der vollständige Name des Typs.</param>
+        <param name="throwOnError">
+          <see langword="true" />, damit eine Ausnahme ausgelöst wird, wenn der Typ nicht gefunden wurde. <see langword="false" />, damit <see langword="null" /> zurückgegeben wird.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetType(System.String,System.Boolean)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Type" /> -Objekt, das die angegebene Klasse darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetType%2A> Methode ruft die <xref:System.Type> Objekt mit dem angegebenen Namen aus der Assemblyinstanz und optional eine Ausnahme auslöst, wenn der Typ nicht gefunden wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string name, bool throwOnError, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string name, bool throwOnError, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetType(System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="throwOnError" Type="System.Boolean" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der vollständige Name des Typs.</param>
+        <param name="throwOnError">
+          <see langword="true" />, damit eine Ausnahme ausgelöst wird, wenn der Typ nicht gefunden wurde. <see langword="false" />, damit <see langword="null" /> zurückgegeben wird.</param>
+        <param name="ignoreCase">
+          <see langword="true" />, um die Groß- und Kleinschreibung des Typnamens zu ignorieren, andernfalls <see langword="false" />.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetType(System.String,System.Boolean,System.Boolean)" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Type" /> -Objekt, das die angegebene Klasse darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetType%2A> Methode ruft die <xref:System.Type> Objekt mit dem angegebenen Namen aus der Assemblyinstanz, mit den Optionen, und ignorieren die Groß-/Kleinschreibung und eine Ausnahme auszulösen, wenn der Typ nicht gefunden wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypes">
+      <MemberSignature Language="C#" Value="public Type[] GetTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type[] GetTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.GetTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.GetTypes" /> Methode.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Type" /> , Objekte für alle in dieser Assembly definierten Typen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GetTypes%2A> Methode ruft die in dieser Assembly definierten Typen ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalAssemblyCache">
+      <MemberSignature Language="C#" Value="public bool GlobalAssemblyCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GlobalAssemblyCache" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._Assembly.GlobalAssemblyCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="P:System.Reflection.Assembly.GlobalAssemblyCache" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />, wenn die Assembly aus dem globalen Assemblycache geladen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.GlobalAssemblyCache%2A> -Eigenschaft ruft einen Wert, der angibt, ob die Assembly aus dem globalen Assemblycache geladen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Die <see cref="T:System.Type" /> des benutzerdefinierten Attributs auf diese Assembly überprüft werden soll.</param>
+        <param name="inherit">Dieses Argument wird für Objekte dieses Typs ignoriert.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.IsDefined(System.Type,System.Boolean)" /> Methode.</summary>
+        <returns>
+          <see langword="true" />Wenn ein benutzerdefiniertes Attribut identifiziert, die durch das angegebene <see cref="T:System.Type" /> definiert ist; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.IsDefined%2A> Methode gibt an, ob ein benutzerdefiniertes Attribut mit der angegebenen identifiziert <xref:System.Type> definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="LoadModule">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="Overload:System.Reflection.Assembly.LoadModule" /> Elemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.LoadModule%2A> Member laden das Modul für diese Assembly intern ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="LoadModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module LoadModule (string moduleName, byte[] rawModule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Module LoadModule(string moduleName, unsigned int8[] rawModule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.LoadModule(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleName" Type="System.String" />
+        <Parameter Name="rawModule" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="moduleName">Der Name des Moduls. Muss einem Dateinamen im Manifest dieser Assembly entsprechen.</param>
+        <param name="rawModule">Ein Bytearray, das ein COFF-Image mit einem ausgegebenen Modul oder eine Ressource ist.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.LoadModule(System.String,System.Byte[])" /> Methode.</summary>
+        <returns>Das geladene Modul.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.LoadModule%2A> Methode lädt das Modul, die für diese Assembly intern ist mit einem Common Object File Format COFF-Basis-Image mit einem ausgegebenen Modul oder eine Ressourcendatei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module LoadModule (string moduleName, byte[] rawModule, byte[] rawSymbolStore);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Module LoadModule(string moduleName, unsigned int8[] rawModule, unsigned int8[] rawSymbolStore) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.LoadModule(System.String,System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleName" Type="System.String" />
+        <Parameter Name="rawModule" Type="System.Byte[]" />
+        <Parameter Name="rawSymbolStore" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="moduleName">Der Name des Moduls. Muss einem Dateinamen im Manifest dieser Assembly entsprechen.</param>
+        <param name="rawModule">Ein Bytearray, das ein COFF-Image mit einem ausgegebenen Modul oder eine Ressource ist.</param>
+        <param name="rawSymbolStore">Ein Bytearray, das die Rohdatenbytes enthält, die die Symbole für das Modul darstellen. Muss <see langword="null" /> sein, wenn es sich um eine Ressourcendatei handelt.</param>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.LoadModule(System.String,System.Byte[],System.Byte[])" /> Methode.</summary>
+        <returns>Das geladene Modul.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.LoadModule%2A> Methode lädt das Modul, die für diese Assembly intern ist mit einem Common Object File Format COFF-Basis-Image mit einem ausgegebenen Modul oder eine Ressourcendatei. Die Rohdatenbytes, die die Symbole für das Modul darstellen, werden ebenfalls geladen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public string Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._Assembly.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="P:System.Reflection.Assembly.Location" /> Eigenschaft.</summary>
+        <value>Der Speicherort der geladenen Datei, die das Manifest enthält. Wenn eine Schattenkopie der geladenen Datei erstellt wurde, entspricht der Speicherort dem der Datei nach dem Erstellen der Schattenkopie. Wenn die Assembly aus einem Bytearray geladen wurde, z. B. bei Verwendung der Überladung der <see cref="M:System.Reflection.Assembly.Load(System.Byte[])" />-Methode, ist der zurückgegebene Wert eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.Location%2A> Eigenschaft ruft den Pfad oder (UNC = Universal Naming Convention) Speicherort der geladenen Datei, die das Manifest enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleResolve">
+      <MemberSignature Language="C#" Value="public event System.Reflection.ModuleResolveEventHandler ModuleResolve;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Reflection.ModuleResolveEventHandler ModuleResolve" />
+      <MemberSignature Language="DocId" Value="E:System.Runtime.InteropServices._Assembly.ModuleResolve" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ModuleResolveEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="E:System.Reflection.Assembly.ModuleResolve" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.ModuleResolve> Ereignis tritt auf, wenn das Klassenladeprogramm der common Language Runtime einen Verweis auf ein internes Modul einer Assembly nicht auf normale Weise auflösen kann.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._Assembly.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt COM-Objekte mit versionsunabhängigem Zugriff auf die <see cref="M:System.Reflection.Assembly.ToString" /> Methode.</summary>
+        <returns>Der vollständige Name der Assembly oder der Klassenname, wenn der vollständige Name der Assembly nicht bestimmt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ Die <xref:System.Reflection.Assembly.ToString%2A> -Methode gibt den vollständigen Namen der Assembly, auch bekannt als der Anzeigename.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

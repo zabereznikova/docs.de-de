@@ -1,0 +1,469 @@
+<Type Name="MessageQueryTable&lt;TItem&gt;" FullName="System.ServiceModel.Dispatcher.MessageQueryTable&lt;TItem&gt;">
+  <TypeSignature Language="C#" Value="public class MessageQueryTable&lt;TItem&gt; : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;&gt;, System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueryTable`1&lt;TItem&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.MessageQueryTable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TItem" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TItem">Der Typ der Werte, die von den Abfragen zurückgegeben werden.</typeparam>
+    <summary>Verwaltet eine Auflistung von Meldungsabfrageobjekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel werden eine neue Meldung und XPath-Meldungsabfragen erstellt. Die Abfragen werden von den <xref:System.ServiceModel.XPathMessageQuery>-Objekten ausgewertet, die in einem <xref:System.ServiceModel.Dispatcher.XPathMessageQueryCollection>-Objekt enthalten sind. Die Ergebnisse einer jeden Abfrage werden mit der <xref:System.ServiceModel.Dispatcher.XPathResult.ResultType%2A>-Eigenschaft der <xref:System.ServiceModel.Dispatcher.XPathResult>-Klasse getestet. Heben Sie die Auskommentierung des alternativen Codes auf, um eine ähnliche, mit der <xref:System.ServiceModel.Dispatcher.MessageQueryTable%601> dargestellte Funktionalität zu veranschaulichen.  
+  
+ [!code-csharp[XPathMessageQuery#0](~/samples/snippets/csharp/VS_Snippets_CFX/xpathmessagequery/cs/source.cs#0)]
+ [!code-vb[XPathMessageQuery#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xpathmessagequery/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueryTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MessageQueryTable`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Add(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageQuery,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das allgemeine <see cref="T:System.Collections.Generic.KeyValuePair`2" />, das hinzugefügt werden soll.</param>
+        <summary>Fügt ein als Schlüssel-Wert-Paar definiertes Element hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Dispatcher.MessageQuery key, TItem value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.ServiceModel.Dispatcher.MessageQuery key, !TItem value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Add(System.ServiceModel.Dispatcher.MessageQuery,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ServiceModel.Dispatcher.MessageQuery" />
+        <Parameter Name="value" Type="TItem" />
+      </Parameters>
+      <Docs>
+        <param name="key">Eine <see cref="T:System.ServiceModel.Dispatcher.MessageQuery" />, die als Schlüssel dient.</param>
+        <param name="value">Der dem Schlüssel zugeordnete Wert, der hinzugefügt werden soll.</param>
+        <summary>Fügt der Auflistung mithilfe eines Schlüssel-Wert-Systems ein Element hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Member aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Contains(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageQuery,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der Schlüssel des zu suchenden Objekts.</param>
+        <summary>Bestimmt, ob die Auflistung ein bestimmtes, als Schlüssel-Wert-Struktur formatiertes Element enthält.</summary>
+        <returns>
+          <see cref="T:System.Boolean" />
+          <see langword="true" />Wenn das Element in der Auflistung gefunden wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (System.ServiceModel.Dispatcher.MessageQuery key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(class System.ServiceModel.Dispatcher.MessageQuery key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.ContainsKey(System.ServiceModel.Dispatcher.MessageQuery)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ServiceModel.Dispatcher.MessageQuery" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der zu suchende Schlüssel.</param>
+        <summary>Ermittelt, ob die Auflistung ein Element mit dem angegebenen Wert enthält.</summary>
+        <returns>
+          <see cref="T:System.Boolean" />
+          <see langword="true" />Wenn die Auflistung ein Element mit dem Schlüssel enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt;[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.CopyTo(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageQuery,`0}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionales Array, bei dem es sich um das Ziel der aus der Auflistung kopierten Elemente handelt. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="arrayIndex">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Auflistung in ein <see cref="T:System.Array" />, wobei bei dem angegebenen Index begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageQueryTable`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Abfrage-Daten-Paare in der Tabelle ab.</summary>
+        <value>Gibt <see cref="T:System.Int32" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt; Evaluate&lt;TResult&gt; (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !!TResult&gt;&gt; Evaluate&lt;TResult&gt;(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Evaluate``1(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des zurückzugebenden Ergebnisses.</typeparam>
+        <param name="message">Die abzufragende Nachricht.</param>
+        <summary>Führt eine Abfrage für die Meldung durch, und gibt eine Auflistung von Ergebnissen zurück. Der Text kann nicht abgefragt werden.</summary>
+        <returns>
+          <see cref="T:System.Collections.Generic.IEnumerable`1" />  
+  
+ Die aufzählbare Auflistung von Ergebnissen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt; Evaluate&lt;TResult&gt; (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !!TResult&gt;&gt; Evaluate&lt;TResult&gt;(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Evaluate``1(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TResult&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">Der Typ des zurückzugebenden Ergebnisses.</typeparam>
+        <param name="buffer">Die abzufragende Nachricht.</param>
+        <summary>Führt eine Abfrage für die Meldung durch, und gibt das Ergebnis zurück.</summary>
+        <returns>
+          <see cref="T:System.Collections.Generic.IEnumerable`1" />  
+  
+ Das Ergebnis der Abfrage. Es können mehrere Ergebnisse aufgelistet werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+        <returns>
+          <see cref="T:System.Collections.Generic.IEnumerator`1" />  
+  
+ Das Enumeratorobjekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageQueryTable`1.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Tabelle schreibgeschützt ist.</summary>
+        <value>
+          <see cref="T:System.Boolean" />
+          <see langword="false" />für alle Tabellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TItem this[System.ServiceModel.Dispatcher.MessageQuery key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TItem Item(class System.ServiceModel.Dispatcher.MessageQuery)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageQueryTable`1.Item(System.ServiceModel.Dispatcher.MessageQuery)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ServiceModel.Dispatcher.MessageQuery" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das abzurufende oder festzulegende Abfrageobjekt.</param>
+        <summary>Ruft das dem Datentyp zugeordnete Abfrageobjekt ab bzw. legt es fest.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageQuery&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageQuery&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageQueryTable`1.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageQuery&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Auflistung aller Auflistungsschlüssel in der Tabelle zurück.</summary>
+        <value>
+          <see cref="T:System.Collections.Generic.ICollection`1" />  
+  
+ Eine Auflistung aller in der Tabelle enthaltenen Abfrageobjekte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageQuery, !TItem&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Remove(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageQuery,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageQuery,TItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das <see cref="T:System.Collections.Generic.KeyValuePair`2" />-Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen Objekts aus der Auflistung.</summary>
+        <returns>
+          <see cref="T:System.Boolean" />
+          <see langword="true" />Wenn das Element erfolgreich aus der Auflistung entfernt wurde; andernfalls <see langword="false" />. Diese Methode gibt auch zurück <see langword="false" /> , wenn das Element nicht in der Auflistung gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.ServiceModel.Dispatcher.MessageQuery key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.ServiceModel.Dispatcher.MessageQuery key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.Remove(System.ServiceModel.Dispatcher.MessageQuery)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ServiceModel.Dispatcher.MessageQuery" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu entfernenden Elements.</param>
+        <summary>Entfernt das dem angegebenen Schlüssel zugeordnete Element aus der Auflistung.</summary>
+        <returns>
+          <see cref="T:System.Boolean" />
+          <see langword="true" />Wenn das Element gefunden und entfernt wurde; <see langword="false" /> , wenn das Element nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der zum Durchlaufen der Auflistung verwendet werden kann.</summary>
+        <returns>
+          <see cref="T:System.Collections.IEnumerator" />  
+  
+ Der Enumerator, der zum Durchlaufen der Auflistung verwendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (System.ServiceModel.Dispatcher.MessageQuery key, out TItem value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(class System.ServiceModel.Dispatcher.MessageQuery key, [out] !TItem&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MessageQueryTable`1.TryGetValue(System.ServiceModel.Dispatcher.MessageQuery,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ServiceModel.Dispatcher.MessageQuery" />
+        <Parameter Name="value" Type="TItem&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Abfrage, die als Schlüssel verwendet wird, um die Daten abzurufen.</param>
+        <param name="value">Der Wert, der der Abfrage zugeordnet ist.</param>
+        <summary>Überprüft, ob eine übereinstimmende Abfrage in der Tabelle gespeichert ist.</summary>
+        <returns>
+          <see cref="T:System.Boolean" />
+          <see langword="true" />Wenn eine übereinstimmende Abfrage in der Tabelle vorhanden ist (der zugeordneten Wert durch die Abfrage befindet sich der <see langword="out" /> <paramref name="value" /> Parameter) ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;TItem&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TItem&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MessageQueryTable`1.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der in der Tabelle enthaltenen Ergebniswerte ab.</summary>
+        <value>
+          <see cref="T:System.Collections.Generic.ICollection`1" />  
+  
+ Alle in der Tabelle enthaltenen Ergebniswerte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

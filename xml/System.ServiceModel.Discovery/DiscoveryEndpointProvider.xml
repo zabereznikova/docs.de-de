@@ -1,0 +1,67 @@
+<Type Name="DiscoveryEndpointProvider" FullName="System.ServiceModel.Discovery.DiscoveryEndpointProvider">
+  <TypeSignature Language="C#" Value="public abstract class DiscoveryEndpointProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DiscoveryEndpointProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.DiscoveryEndpointProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Ermittlungsendpunkt bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>-Klasse verwendet vom <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> abgeleitete Klassen, um den zu verwendenden Suchendpunkt abzurufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DiscoveryEndpointProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpointProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.DiscoveryEndpointProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiscoveryEndpoint">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Discovery.DiscoveryEndpoint GetDiscoveryEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Discovery.DiscoveryEndpoint GetDiscoveryEndpoint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.DiscoveryEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Ermittlungsendpunkt ab.</summary>
+        <returns>Der Ermittlungsendpunkt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>-Klasse ruft die <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>-Methode auf der <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>-Instanz auf, die vom Benutzer gesendet wurde, um den <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> zum Ermitteln der Dienste zu erhalten. Das <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> ruft darüber hinaus immer dann die  <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>-Methode auf, wenn das Element selbst geklont werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

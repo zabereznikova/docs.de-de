@@ -1,0 +1,411 @@
+<Type Name="DynamicDataManager" FullName="System.Web.DynamicData.DynamicDataManager">
+  <TypeSignature Language="C#" Value="public class DynamicDataManager : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicDataManager extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicDataManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.DynamicData.Design.DynamicDataManagerDesigner, System.Web.DynamicData.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.DynamicData.DynamicDataManager), "DynamicDataManager.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.NonVisualControl</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Aktiviert dynamisches Verhalten für ASP.NET-Websteuerelemente, die ASP.NET Dynamic Data unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.DynamicData.DynamicDataManager> Steuerelement stellt die Verbindung zwischen dem datengebundenen Steuerelement, Datenquellen-Steuerelements und dynamische Daten auf folgende Weise:  
+  
+-   Legt ein Feld-Generator für das datengebundene Steuerelement so erstellen Sie die richtige Spalte festgelegt, wenn <xref:System.Web.UI.WebControls.GridView.AutoGenerateColumns%2A> festgelegt ist, um `true`. Das datengebundene Steuerelement kann ein <xref:System.Web.UI.WebControls.GridView> -Steuerelement, ein <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, oder ein <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+-   Legt den Kontext und den Tabelle für das Datenquellensteuerelement fest. Datenquellen-Steuerelements für LINQ to SQL ist <xref:System.Web.UI.WebControls.LinqDataSource>. Datenquellen-Steuerelements für das ADO Entity Framework ist <xref:System.Web.UI.WebControls.EntityDataSource>.  
+  
+-   Legt die <xref:System.Web.DynamicData.IDynamicDataSource.AutoGenerateWhereClause%2A> zu `true` für die Datenquelle, es ist keine Where Klausel.  
+  
+-   Wird erweitert, die spezielle dynamischen Parameter wie z. B. <xref:System.Web.DynamicData.DynamicControlParameter> in Parameter, die die Datenquelle nutzen können.  
+  
+-   Wenn die LINQ to SQL- <xref:System.Web.DynamicData.DynamicDataManager.AutoLoadForeignKeys%2A> -Eigenschaftensatz auf `true`, lädt die Fremdschlüssel.  
+  
+ Die <xref:System.Web.DynamicData.DynamicDataManager> Steuerelement enthalten sein muss, auf einer Seite in der Reihenfolge für Data-Steuerelemente, die Dynamic Data-Unterstützung verwendet wird. Das Markup für die <xref:System.Web.DynamicData.DynamicDataManager> Steuerelement muss das Markup vorangehen, für alle Steuerelemente, die Dynamic Data unterstützen.  
+  
+> [!NOTE]
+>  Ein <xref:System.Web.DynamicData.DynamicDataManager> Steuerelement kann nicht abgelegt werden, in einem <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:DynamicDataManager  
+    AutoLoadForeignKeys="True|False"  
+    EnableQueryStringSelection="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+>  
+</asp:DynamicDataManager>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Web.DynamicData.DynamicDataManager> Steuerelement so aktivieren Sie dynamisches Verhalten für eine Instanz von der <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.DynamicData.DynamicDataManager#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.DynamicDataManager/cs/List.aspx#1)]
+ [!code-aspx-vb[System.Web.DynamicData.DynamicDataManager#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.DynamicDataManager/vb/List.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicDataManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.DynamicData.DynamicDataManager" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoLoadForeignKeys">
+      <MemberSignature Language="C#" Value="public bool AutoLoadForeignKeys { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoLoadForeignKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataManager.AutoLoadForeignKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Fremdschlüssel für eine LINQ to SQL-Datenkontext automatisch geladen werden.</summary>
+        <value>
+          <see langword="true" />Wenn der Fremdschlüssel automatisch geladen werden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Datenmodell nicht auf LINQ to SQL basiert, wird diese Eigenschaft ignoriert. Wenn die Eigenschaft auf festgelegt `true`, er bewirkt, dass die verbundenen Entitäten in der ursprünglichen Abfrage geladen werden soll. Wenn die Eigenschaft auf festgelegt ist `false`, LINQ to SQL laden die verwandten Objekte aus, wenn sie angefordert werden. Diese Eigenschaft ist nur für die Optimierung der Auslastung und hat keinen Einfluss auf was angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientID">
+      <MemberSignature Language="C#" Value="public override string ClientID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataManager.ClientID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Web.UI.Control.ClientID" /> -Eigenschaft, die von ASP.NET generiert wird.</summary>
+        <value>Die <see cref="P:System.Web.UI.Control.ClientID" /> -Eigenschaft, die von ASP.NET generiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <xref:System.Web.UI.Control.ClientID%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientIDMode">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ClientIDMode ClientIDMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ClientIDMode ClientIDMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataManager.ClientIDMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Algorithmus, der verwendet wird, zum Generieren des Werts in der <see cref="P:System.Web.UI.Control.ClientID" /> Eigenschaft.</summary>
+        <value>Ein Wert, der gibt an, wie die <see cref="P:System.Web.UI.Control.ClientID" /> Eigenschaft generiert wird. Diese Eigenschaft kann nicht festgelegt werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataControls">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.DataControlReferenceCollection DataControls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.DataControlReferenceCollection DataControls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataManager.DataControls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.DataControlReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Verweise auf Daten in der <see cref="T:System.Web.DynamicData.DynamicDataManager" /> Steuerelement.</summary>
+        <value>Die Liste der Verweise auf Daten in der <see cref="T:System.Web.DynamicData.DynamicDataManager" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel enthält Markup aus einer Dynamic Data-Seite-Vorlage, die verwendet die <xref:System.Web.DynamicData.DynamicDataManager.DataControls%2A> Eigenschaft.  
+  
+```  
+<asp:DynamicDataManager ID="DDM1" runat="server">  
+  <DataControls>  
+    <asp:DataControlReference ControlID="FormView1" />  
+  </DataControls>  
+</asp:DynamicDataManager>  
+  
+<asp:UpdatePanel ID="UpdatePanel1" runat="server">  
+  <ContentTemplate>  
+  
+    <asp:FormView runat="server" ID="FormView1" DataSourceID="DDS">  
+        <!-- Items omitted for clarity. -->  
+    </asp:FormView>  
+  
+  </ContentTemplate>  
+</asp:UpdatePanel>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataManager.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataManager.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Load" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterControl">
+      <MemberSignature Language="C#" Value="public void RegisterControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataManager.RegisterControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement zu registrieren.</param>
+        <summary>Registriert ein Steuerelement mit dem <see cref="T:System.Web.DynamicData.DynamicDataManager" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktiviert dynamisches Verhalten in einem Steuerelement müssen Sie sie registrieren.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Registrieren einer <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> steuern, der `Page_Init` Methode von einer ASP.NET-Webseite.  
+  
+ [!code-aspx-csharp[System.Web.DynamicData.DynamicDataManager#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.DynamicDataManager/cs/List.aspx#1)]
+ [!code-aspx-vb[System.Web.DynamicData.DynamicDataManager#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.DynamicDataManager/vb/List.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterControl">
+      <MemberSignature Language="C#" Value="public void RegisterControl (System.Web.UI.Control control, bool setSelectionFromUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterControl(class System.Web.UI.Control control, bool setSelectionFromUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataManager.RegisterControl(System.Web.UI.Control,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="setSelectionFromUrl" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement zu registrieren.</param>
+        <param name="setSelectionFromUrl">
+          <see langword="true" />um den primären Schlüssel verwenden, um das ausgewählte Element festgelegt; Andernfalls wird das ausgewählte Element nicht festgelegt.</param>
+        <summary>Registriert ein Steuerelement mit dem <see cref="T:System.Web.DynamicData.DynamicDataManager" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Registrieren des Steuerelements ermöglicht das dynamische Verhalten. Wenn die `setSelectionFromUrl` Parameter ist `true` und der Primärschlüsselwert in die Routenwerte gefunden wird, legen Sie das ausgewählte Element der Primärschlüssel verwendet werden. Der primäre Schlüssel-Wert wird in der Regel in der Route mithilfe der Abfragezeichenfolge in der Anforderungs-URL übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataManager.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.DynamicData.DynamicDataManager" /> Steuerelement sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.DynamicData.DynamicDataManager" /> sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.DynamicDataManager> ist kein Steuerelement zur Laufzeit sichtbar. Die Eigenschaft wird nur zur Entwurfszeit in einem Designer verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

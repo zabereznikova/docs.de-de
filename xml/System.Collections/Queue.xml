@@ -1,0 +1,939 @@
+<Type Name="Queue" FullName="System.Collections.Queue">
+  <TypeSignature Language="C#" Value="public class Queue : ICloneable, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Queue extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Queue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Queue/QueueDebugView))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine FIFO-Auflistung (First-In-First-Out) von Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse implementiert eine Warteschlange als zirkuläre Array. In gespeicherten Objekte einer <xref:System.Collections.Queue> an einem Ende eingefügt und von der anderen entfernt werden.  
+  
+ Warteschlangen und Stapel sind nützlich, wenn Sie die temporäre Speicherung für Informationen benötigen; d. h., wenn sein soll ein Element zu verwerfen, sobald dessen Wert abgerufen. Verwendung <xref:System.Collections.Queue> Wenn müssen Sie die Informationen in der gleichen Reihenfolge zugegriffen werden, dass er in der Auflistung gespeichert wird. Verwendung <xref:System.Collections.Stack> Wenn Sie die Informationen in umgekehrter Reihenfolge zugreifen müssen. Verwendung <xref:System.Collections.Concurrent.ConcurrentQueue%601> oder <xref:System.Collections.Concurrent.ConcurrentStack%601> Wenn Sie die Sammlung von mehreren Threads gleichzeitig zugreifen müssen.  
+  
+ Drei wichtigsten Operationen ausgeführt werden können, auf eine <xref:System.Collections.Queue> und seine Elemente:  
+  
+-   <xref:System.Collections.Queue.Enqueue%2A>Fügt ein Element am Ende der <xref:System.Collections.Queue>.  
+  
+-   <xref:System.Collections.Queue.Dequeue%2A>Entfernt das älteste Element vom Anfang der <xref:System.Collections.Queue>.  
+  
+-   <xref:System.Collections.Queue.Peek%2A>Gibt das älteste Element am Anfang der <xref:System.Collections.Queue> jedoch nicht aus entfernt die <xref:System.Collections.Queue>.  
+  
+ Die Kapazität einer <xref:System.Collections.Queue> ist die Anzahl der Elemente der <xref:System.Collections.Queue> aufnehmen kann. Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Queue>, die Kapazität wird automatisch erhöht, nach Bedarf über die neuzuordnung.  Die Kapazität kann verringert werden, durch den Aufruf <xref:System.Collections.Queue.TrimToSize%2A>.  
+  
+ Die Wachstumsfaktor ist die Anzahl mit der die aktuelle Kapazität multipliziert wird, wenn eine höhere Kapazität erforderlich ist.  Die Wachstumsfaktor wird bestimmt, wenn die <xref:System.Collections.Queue> erstellt wird. Die Wachstumsfaktor der Standardwert lautet 2.0. Die Kapazität der <xref:System.Collections.Queue> wird immer erhöhen, indem Sie mindestens vier unabhängig von der Wachstumsfaktor. Z. B. eine <xref:System.Collections.Queue> mit einem Wachstumsfaktor 1,0 wird immer Anstieg der Kapazität von vier Wenn eine höhere Kapazität erforderlich ist.  
+  
+ <xref:System.Collections.Queue>akzeptiert `null` als gültigen Wert und lässt doppelte Elemente.  
+  
+ Die generische Version dieser Auflistung finden Sie unter<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und Hinzufügen von Werten für eine <xref:System.Collections.Queue> und wie Sie die entsprechenden Werte ausgegeben.  
+  
+ [!code-cpp[Classic Queue Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Öffentliche statische (<see langword="Shared" /> in Visual Basic) Member dieses Typs sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.  
+  
+ Um die Threadsicherheit der <see cref="T:System.Collections.Queue" />, alle Operationen müssen ausgeführt werden, über den Wrapper zurückgegebene die <see cref="M:System.Collections.Queue.Synchronized(System.Collections.Queue)" /> Methode.  
+  
+ Die Enumeration einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Queue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Collections.Queue" /> -Klasse, die leer ist, wird über die anfängliche Standardkapazität verfügt und die Wachstumsfaktor der Standardwert verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Queue> ist die Anzahl der Elemente der <xref:System.Collections.Queue> aufnehmen kann.  Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Queue>, die Kapazität wird automatisch erhöht, nach Bedarf über die neuzuordnung.  Die Kapazität kann verringert werden, durch den Aufruf <xref:System.Collections.Queue.TrimToSize%2A>.  
+  
+ Die Wachstumsfaktor ist die Anzahl mit der die aktuelle Kapazität multipliziert wird, wenn eine höhere Kapazität erforderlich ist.  Die Wachstumsfaktor wird bestimmt, wenn die <xref:System.Collections.Queue> erstellt wird.  
+  
+ Dieser Konstruktor ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Queue (System.Collections.ICollection col);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection col) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="col" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="col">Die <see cref="T:System.Collections.ICollection" /> die Elemente kopiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Collections.Queue" /> -Klasse, die aus der angegebenen Auflistung kopierte Elemente enthält die anfängliche Kapazität als die Anzahl der kopierten Elemente und die Wachstumsfaktor der Standardwert verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Queue> ist die Anzahl der Elemente der <xref:System.Collections.Queue> aufnehmen kann.  Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Queue>, die Kapazität wird automatisch erhöht, nach Bedarf über die neuzuordnung.  Die Kapazität kann verringert werden, durch den Aufruf <xref:System.Collections.Queue.TrimToSize%2A>.  
+  
+ Die Wachstumsfaktor ist die Anzahl mit der die aktuelle Kapazität multipliziert wird, wenn eine höhere Kapazität erforderlich ist.  Die Wachstumsfaktor wird bestimmt, wenn die <xref:System.Collections.Queue> erstellt wird.  
+  
+ Die Elemente kopiert werden, auf die <xref:System.Collections.Queue> in der gleichen Reihenfolge, die sie vom gelesen werden die <xref:System.Collections.IEnumerator> von der <xref:System.Collections.ICollection>.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist die Anzahl der Elemente im `col`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="col" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Queue (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Elementen, die das <see cref="T:System.Collections.Queue" /> enthalten kann.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Collections.Queue" /> -Klasse, die leer ist, wird die angegebene Anfangskapazität aufweist und der Wachstumsfaktor der Standardeinstellung verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Queue> ist die Anzahl der Elemente der <xref:System.Collections.Queue> aufnehmen kann.  Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Queue>, die Kapazität wird automatisch erhöht, nach Bedarf über die neuzuordnung.  Die Kapazität kann verringert werden, durch den Aufruf <xref:System.Collections.Queue.TrimToSize%2A>.  
+  
+ Die Wachstumsfaktor ist die Anzahl mit der die aktuelle Kapazität multipliziert wird, wenn eine höhere Kapazität erforderlich ist.  Die Wachstumsfaktor wird bestimmt, wenn die <xref:System.Collections.Queue> erstellt wird.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Queue>.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Queue (int capacity, float growFactor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity, float32 growFactor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.#ctor(System.Int32,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="growFactor" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Elementen, die das <see cref="T:System.Collections.Queue" /> enthalten kann.</param>
+        <param name="growFactor">Der Faktor, der Kapazität der <see cref="T:System.Collections.Queue" /> erweitert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Collections.Queue" /> -Klasse, die leer ist, wird die angegebene Anfangskapazität aufweist, und verwendet den angegebenen Wachstumsfaktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Queue> ist die Anzahl der Elemente der <xref:System.Collections.Queue> aufnehmen kann.  Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Queue>, die Kapazität wird automatisch erhöht, nach Bedarf über die neuzuordnung.  Die Kapazität kann verringert werden, durch den Aufruf <xref:System.Collections.Queue.TrimToSize%2A>.  
+  
+ Die Wachstumsfaktor ist die Anzahl mit der die aktuelle Kapazität multipliziert wird, wenn eine höhere Kapazität erforderlich ist.  Die Wachstumsfaktor wird bestimmt, wenn die <xref:System.Collections.Queue> erstellt wird. Die Kapazität der <xref:System.Collections.Queue> wird immer erhöhen, indem Sie einen minimalen Wert, unabhängig von der Wachstumsfaktor; eine Wachstumsfaktor 1.0 wird nicht verhindert, dass die <xref:System.Collections.Queue> aus an Größe zunehmen.  
+  
+ Wenn die Größe der Auflistung geschätzt werden kann, die anfängliche Kapazität angeben entfällt die Notwendigkeit einer Reihe von größenänderungsvorgänge beim Hinzufügen von Elementen zum Ausführen der <xref:System.Collections.Queue>.  
+  
+ Dieser Konstruktor ist eine O (`n`) Vorgang, wobei `n` ist `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="growFactor" />ist kleiner als 1.0 oder größer als 10.0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Objekte aus dem <see cref="T:System.Collections.Queue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Queue.Count%2A>ist auf 0 (null) festgelegt, und Verweise auf andere Objekte von Elementen in der Auflistung werden ebenfalls freigegeben.  
+  
+ Die Kapazität bleibt unverändert. Die Kapazität des Zurücksetzen der <xref:System.Collections.Queue>, rufen Sie <xref:System.Collections.Queue.TrimToSize%2A>. Indem Sie eine leere <xref:System.Collections.Queue> legt die Kapazität der <xref:System.Collections.Queue> auf die festgelegte Standardkapazität.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Queue.Count%2A>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Löschen der Werte der <xref:System.Collections.Queue>.  
+  
+ [!code-cpp[Classic Queue.Clear Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.Clear Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine flache Kopie von <see cref="T:System.Collections.Queue" />.</summary>
+        <returns>Eine flache Kopie von <see cref="T:System.Collections.Queue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine flache Kopie einer Auflistung kopiert nur die Elemente der Auflistung, ob sie Verweis- oder Werttypen sind, aber die Objekte, denen auf die verwiesen wird nicht kopiert. Die Verweise in der neuen Auflistung zeigen auf dieselben Objekte, denen auf die Verweise in der ursprünglichen Auflistung verweisen.  
+  
+ Im Gegensatz dazu eine tiefe Kopie einer Auflistung kopiert die Elemente aus, und alles, was durch die Elemente direkt oder indirekt verweist.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Queue.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, das in der <see cref="T:System.Collections.Queue" /> gesucht werden soll. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Bestimmt, ob sich ein Element in <see cref="T:System.Collections.Queue" /> befindet.</summary>
+        <returns>
+          <see langword="true" />, wenn das <paramref name="obj" /> in der <see cref="T:System.Collections.Queue" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt die Gleichheit durch Aufrufen von <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Diese Methode führt eine lineare Suche. Diese Methode ist daher eine O (`n`)-Vorgang, in dem `n` ist <xref:System.Collections.Queue.Count%2A>.  
+  
+ Beginnend mit .NET Framework 2.0, verwendet diese Methode Objekte in der Auflistung <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden auf `obj` um zu bestimmen, ob `item` vorhanden ist. In früheren Versionen von .NET Framework-diese Entscheidung wurde versucht, mithilfe der <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden der `obj` Parameter für die Objekte in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.Queue" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die <see cref="T:System.Collections.Queue" />-Elemente in ein vorhandenes eindimensionales <see cref="T:System.Array" />, beginnend beim angegebenen Arrayindex.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente kopiert werden, um die <xref:System.Array> in der gleichen Reihenfolge, in dem sich der Enumerator durchläuft, die <xref:System.Collections.Queue>.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Queue.Count%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Vorgehensweise beim Kopieren einer <xref:System.Collections.Queue> in ein eindimensionales Array.  
+  
+ [!code-cpp[Classic Queue.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.Queue" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziel-<paramref name="array" />s.</exception>
+        <exception cref="T:System.ArrayTypeMismatchException">Der Typ des Quell-<see cref="T:System.Collections.Queue" />s kann nicht automatisch in den Typ des Ziel-<paramref name="array" />s umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Queue.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente ab, die in <see cref="T:System.Collections.Queue" /> enthalten sind.</summary>
+        <value>Die Anzahl der Elemente, die in <see cref="T:System.Collections.Queue" /> enthalten sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Queue> ist die Anzahl der Elemente, die die <xref:System.Collections.Queue> speichern können. <xref:System.Collections.Queue.Count%2A>ist die Anzahl der Elemente, die tatsächlich in der <xref:System.Collections.Queue>.  
+  
+ Die Kapazität einer <xref:System.Collections.Queue> ist immer größer als oder gleich <xref:System.Collections.Queue.Count%2A>. Wenn <xref:System.Collections.Queue.Count%2A> überschreitet die Kapazität beim Hinzufügen von Elementen, die Kapazität wird automatisch durch Neuzuordnen des internen Arrays vor dem Kopieren der alten Elemente und das Hinzufügen neuer Elemente. Die neue Kapazität richtet sich nach der Wachstumsfaktor, also die aktuelle Kapazität multipliziert bestimmt, wann die <xref:System.Collections.Queue> erstellt wird. Die Kapazität der <xref:System.Collections.Queue> wird immer erhöhen, indem Sie einen minimalen Wert, unabhängig von der Wachstumsfaktor; eine Wachstumsfaktor 1.0 wird nicht verhindert, dass die <xref:System.Collections.Queue> aus an Größe zunehmen.  
+  
+ Die Kapazität kann verringert werden, durch den Aufruf <xref:System.Collections.Queue.TrimToSize%2A>.  
+  
+ Das Abrufen des Werts dieser Eigenschaft ist ein O(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dequeue">
+      <MemberSignature Language="C#" Value="public virtual object Dequeue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Dequeue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.Dequeue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt das Objekt am Anfang der <see cref="T:System.Collections.Queue" /> und gibt es zurück.</summary>
+        <returns>Das Objekt, das vom Anfang der <see cref="T:System.Collections.Queue" /> entfernt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ähnelt der <xref:System.Collections.Queue.Peek%2A>-Methode, aber <xref:System.Collections.Queue.Peek%2A> ändert die <xref:System.Collections.Queue> nicht.  
+  
+ `null`können hinzugefügt werden, um die <xref:System.Collections.Queue> als Wert. Zur Unterscheidung zwischen einem null-Wert und am Ende der <xref:System.Collections.Queue>, überprüfen Sie die <xref:System.Collections.Queue.Count%2A> Eigenschaft oder ein Catch der <xref:System.InvalidOperationException>, wird ausgelöst, wenn die <xref:System.Collections.Queue> ist leer.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie zum Hinzufügen von Elementen der <xref:System.Collections.Queue>, entfernen Sie Elemente aus der <xref:System.Collections.Queue>, oder zeigen Sie das Element am Anfang der <xref:System.Collections.Queue>.  
+  
+ [!code-cpp[Classic Queue.Enqueue Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.Enqueue Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.Enqueue Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Collections.Queue" /> ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enqueue">
+      <MemberSignature Language="C#" Value="public virtual void Enqueue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Enqueue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.Enqueue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das <see cref="T:System.Collections.Queue" /> hinzugefügt werden soll. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Fügt am Ende der <see cref="T:System.Collections.Queue" /> ein Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kapazität einer <xref:System.Collections.Queue> ist die Anzahl der Elemente der <xref:System.Collections.Queue> aufnehmen kann.  Wenn Elemente hinzugefügt werden eine <xref:System.Collections.Queue>, die Kapazität wird automatisch erhöht, nach Bedarf über die neuzuordnung.  Die Kapazität kann verringert werden, durch den Aufruf <xref:System.Collections.Queue.TrimToSize%2A>.  
+  
+ Die Wachstumsfaktor ist die Anzahl mit der die aktuelle Kapazität multipliziert wird, wenn eine höhere Kapazität erforderlich ist.  Die Wachstumsfaktor wird bestimmt, wenn die <xref:System.Collections.Queue> erstellt wird. Die Kapazität der <xref:System.Collections.Queue> wird immer erhöhen, indem Sie einen minimalen Wert, unabhängig von der Wachstumsfaktor; eine Wachstumsfaktor 1.0 wird nicht verhindert, dass die <xref:System.Collections.Queue> aus an Größe zunehmen.  
+  
+ Wenn <xref:System.Collections.Queue.Count%2A> ist kleiner als die Kapazität des internen Arrays, diese Methode ist ein o(1)-Vorgang. Wenn des internen Arrays neu zugeordnet werden, um das neue Element aufzunehmen muss, wird diese Methode eine O (`n`)-Vorgang, in dem `n` ist <xref:System.Collections.Queue.Count%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie zum Hinzufügen von Elementen der <xref:System.Collections.Queue>, entfernen Sie Elemente aus der <xref:System.Collections.Queue>, oder zeigen Sie das Element am Anfang der <xref:System.Collections.Queue>.  
+  
+ [!code-cpp[Classic Queue.Enqueue Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.Enqueue Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.Enqueue Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Collections.Queue" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Collections.Queue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren.  Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. <xref:System.Collections.IEnumerator.Reset%2A> setzt den Enumerator ebenfalls auf diese Position zurück.  An dieser Position ist <xref:System.Collections.IEnumerator.Current%2A> nicht definiert. Daher muss der Enumerator durch einen Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> auf das erste Element der Auflistung gesetzt werden, bevor der Wert von <xref:System.Collections.IEnumerator.Current%2A> gelesen werden kann.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> aufgerufen wird. <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.IEnumerator.Current%2A> auf das nächste Element fest.  
+  
+ Wenn <xref:System.Collections.IEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.IEnumerator.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.Collections.IEnumerator.MoveNext%2A> zurückgegebene `false`, <xref:System.Collections.IEnumerator.Current%2A> ist nicht definiert. Um <xref:System.Collections.IEnumerator.Current%2A> wieder auf das erste Element der Auflistung festzulegen, können Sie <xref:System.Collections.IEnumerator.Reset%2A> gefolgt von <xref:System.Collections.IEnumerator.MoveNext%2A> aufrufen.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Werden an der Auflistung Änderungen wie z. B. Hinzufügen, Bearbeiten oder Entfernen von Elementen vorgenommen, verliert der Enumerator unwiederbringlich seine Gültigkeit und sein Verhalten ist nicht definiert.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung; daher ist die Enumeration einer Auflistung systembedingt kein threadsicheres Verfahren.  Um während der Enumeration Threadsicherheit zu garantieren, können Sie die Auflistung während der gesamten Enumeration sperren.  Um den Lese- und Schreibzugriff auf diese Auflistung durch mehrere Threads zuzulassen, müssen Sie eine eigene Synchronisierung implementieren.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Queue.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Collections.Queue" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Collections.Queue" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die Threadsicherheit der <xref:System.Collections.Queue>, alle Operationen müssen ausgeführt werden, über den Wrapper zurückgegebene die <xref:System.Collections.Queue.Synchronized%2A> Methode.  
+  
+ Die Enumeration einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das die Auflistung mit Sperren der <xref:System.Collections.Queue.SyncRoot%2A> während der gesamten Enumeration. Das Abrufen des Werts dieser Eigenschaft ist ein O(1)-Vorgang.  
+  
+ [!code-cpp[Classic Queue.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic Queue.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic Queue.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ Das folgende Beispiel zeigt die Vorgehensweise beim Synchronisieren einer <xref:System.Collections.Queue>, zu bestimmen, ob eine <xref:System.Collections.Queue> synchronisiert ist, und verwenden Sie eine synchronisierte <xref:System.Collections.Queue>.  
+  
+ [!code-cpp[Classic Queue.IsSynchronized Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.IsSynchronized Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.IsSynchronized Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Peek">
+      <MemberSignature Language="C#" Value="public virtual object Peek ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Peek() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.Peek" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Objekt am Anfang der <see cref="T:System.Collections.Queue" /> zurück, ohne es zu entfernen.</summary>
+        <returns>Das Objekt am Anfang der <see cref="T:System.Collections.Queue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ähnelt der <xref:System.Collections.Queue.Dequeue%2A>-Methode, aber <xref:System.Collections.Queue.Peek%2A> ändert die <xref:System.Collections.Queue> nicht.  
+  
+ `null`können hinzugefügt werden, um die <xref:System.Collections.Queue> als Wert. Zur Unterscheidung zwischen einem null-Wert und am Ende der <xref:System.Collections.Queue>, überprüfen Sie die <xref:System.Collections.Queue.Count%2A> Eigenschaft oder ein Catch der <xref:System.InvalidOperationException>, wird ausgelöst, wenn die <xref:System.Collections.Queue> ist leer.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie zum Hinzufügen von Elementen der <xref:System.Collections.Queue>, entfernen Sie Elemente aus der <xref:System.Collections.Queue>, oder zeigen Sie das Element am Anfang der <xref:System.Collections.Queue>.  
+  
+ [!code-cpp[Classic Queue.Enqueue Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.Enqueue Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.Enqueue Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.Enqueue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Collections.Queue" /> ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Collections.Queue Synchronized (System.Collections.Queue queue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Queue Synchronized(class System.Collections.Queue queue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.Synchronized(System.Collections.Queue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Queue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queue" Type="System.Collections.Queue" />
+      </Parameters>
+      <Docs>
+        <param name="queue">Die <see cref="T:System.Collections.Queue" />, die synchronisiert werden soll.</param>
+        <summary>Gibt eine neue <see cref="T:System.Collections.Queue" /> , die die ursprünglichen Warteschlange umschließt und ist threadsicher.</summary>
+        <returns>Ein <see cref="T:System.Collections.Queue" /> Wrapper, der synchronisiert (threadsicher).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wrapper, die von dieser Methode zurückgegebene sperrt die Warteschlange, bevor ein Vorgang ausgeführt wird, sodass er auf threadsichere Weise erfolgt.  
+  
+ Um die Threadsicherheit der <xref:System.Collections.Queue>, alle Operationen müssen über diesen Wrapper nur ausgeführt werden.  
+  
+ Die Enumeration einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das die Auflistung mit Sperren der <xref:System.Collections.Queue.SyncRoot%2A> während der gesamten Enumeration. Diese Methode ist ein o(1)-Vorgang.  
+  
+ [!code-cpp[Classic Queue.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic Queue.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic Queue.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ Das folgende Beispiel zeigt die Vorgehensweise beim Synchronisieren einer <xref:System.Collections.Queue>, zu bestimmen, ob eine <xref:System.Collections.Queue> synchronisiert wird und eine synchronisierte verwenden <xref:System.Collections.Queue>.  
+  
+ [!code-cpp[Classic Queue.IsSynchronized Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.IsSynchronized Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.IsSynchronized Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="queue" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Queue.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Collections.Queue" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.Queue" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine synchronisierte Version der Erstellung der <xref:System.Collections.Queue>, verwenden Sie die <xref:System.Collections.Queue.Synchronized%2A> Methode. Abgeleitete Klassen können jedoch eigene synchronisierte Version der Bereitstellen der <xref:System.Collections.Queue> mithilfe der <xref:System.Collections.Queue.SyncRoot%2A> Eigenschaft. Die Synchronisierungscode dürfen Vorgänge auf die <xref:System.Collections.Queue.SyncRoot%2A> von der <xref:System.Collections.Queue>, nicht direkt auf die <xref:System.Collections.Queue>. Dies gewährleistet die einwandfreie Funktion von Auflistungen, die von anderen Objekten abgeleitet sind. Es Auflistungsinstanz ordnungsgemäße Synchronisierung mit anderen Threads, die gleichzeitig eventuell die <xref:System.Collections.Queue> Objekt.  
+  
+ Die Enumeration einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das die Auflistung mit Sperren der <xref:System.Collections.Queue.SyncRoot%2A> während der gesamten Enumeration. Das Abrufen des Werts dieser Eigenschaft ist ein O(1)-Vorgang.  
+  
+ [!code-cpp[Classic Queue.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic Queue.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic Queue.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public virtual object[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kopiert die <see cref="T:System.Collections.Queue" />-Elemente in ein neues Array.</summary>
+        <returns>Ein neues Array mit aus der kopierten Elemente der <see cref="T:System.Collections.Queue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Queue> wird nicht geändert. Die Reihenfolge der Elemente im neuen Array entspricht der Reihenfolge der Elemente vom Anfang der <xref:System.Collections.Queue> bis Ende.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Queue.Count%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Vorgehensweise beim Kopieren einer <xref:System.Collections.Queue> in ein eindimensionales Array.  
+  
+ [!code-cpp[Classic Queue.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Queue.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Queue.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Queue.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic Queue.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Queue.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimToSize">
+      <MemberSignature Language="C#" Value="public virtual void TrimToSize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TrimToSize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Queue.TrimToSize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die Kapazität auf die Anzahl der tatsächlich in der <see cref="T:System.Collections.Queue" /> enthaltenen Elemente fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, eine Warteschlange Speicher Aufwand minimiert werden können, wenn die Warteschlange keine neuen Elemente hinzugefügt werden.  
+  
+ Zurücksetzen einer <xref:System.Collections.Queue> Aufrufen auf ihren ursprünglichen Zustand der <xref:System.Collections.Queue.Clear%2A> Methode vor dem Aufruf <xref:System.Collections.Queue.TrimToSize%2A>. Indem Sie eine leere <xref:System.Collections.Queue> legt die Kapazität der <xref:System.Collections.Queue> auf die festgelegte Standardkapazität.  
+  
+ Diese Methode ist eine O (`n`) Vorgang, wobei `n` ist <xref:System.Collections.Queue.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.Queue" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

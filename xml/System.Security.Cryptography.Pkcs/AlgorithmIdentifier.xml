@@ -1,0 +1,201 @@
+<Type Name="AlgorithmIdentifier" FullName="System.Security.Cryptography.Pkcs.AlgorithmIdentifier">
+  <TypeSignature Language="C#" Value="public sealed class AlgorithmIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AlgorithmIdentifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" /> Klasse definiert den für einen kryptografischen Vorgang verwendeten Algorithmus.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlgorithmIdentifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.#ctor" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" /> Klasse, indem Sie einen Satz von Standardparametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> -Klasse verfügt über die folgenden Standardwerte für die Eigenschaft.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Oid%2A>|1.2.840.113549.3.7 (RSA_DES_EDE3_CBC)|  
+|<xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.KeyLength%2A>|Maximal standardmäßig Cryptographic Service Provider bereitgestellt wird.|  
+  
+ Um den höchsten Grad an Kontrolle über eine Anwendung mit dem Erstellen einer Instanz dieser Klasse zu erhalten, verwenden Sie die Konstruktoren, die mit dem Algorithmus durch Übergabe von festgelegt werden können dessen <xref:System.Security.Cryptography.Oid> Objekt.  Dies schützt gegen mögliche Zugriffe, die aufgrund von Sicherheits- oder andere Aspekte der Standardalgorithmus ändern kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlgorithmIdentifier (System.Security.Cryptography.Oid oid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.#ctor(System.Security.Cryptography.Oid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.Security.Cryptography.Oid" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Eine Objekt-ID für den Algorithmus.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.#ctor(System.Security.Cryptography.Oid)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" /> -Klasse mit dem angegebenen Algorithmus-Bezeichner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardwerte für Eigenschaften mit diesem Konstruktor verwendet, finden Sie unter <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.%23ctor>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AlgorithmIdentifier (System.Security.Cryptography.Oid oid, int keyLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid, int32 keyLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.#ctor(System.Security.Cryptography.Oid,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.Security.Cryptography.Oid" />
+        <Parameter Name="keyLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Eine Objekt-ID für den Algorithmus.</param>
+        <param name="keyLength">Die Länge des des Schlüssels in Bits.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.#ctor(System.Security.Cryptography.Oid,System.Int32)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" /> Klasse mit der angegebenen Algorithmus-ID und Schlüssel Länge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `keyLength` Parameter wird ignoriert, für die Algorithmen, die eine feste Schlüssellänge verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyLength">
+      <MemberSignature Language="C#" Value="public int KeyLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeyLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.KeyLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.KeyLength" /> Eigenschaft legt fest oder ruft die Schlüssellänge in Bits ab. Diese Eigenschaft wird nicht für Algorithmen verwendet, die eine feste Schlüssellänge verwenden.</summary>
+        <value>Int-Wert, der die Schlüssellänge in Bits darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird aufgrund einer Einschränkung bei der ASN. 1-Codierung der Länge des Schlüssels für den RC4-Verschlüsselungsalgorithmus geschätzt; Es ist nicht garantiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oid">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid Oid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid Oid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Oid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Oid" /> Eigenschaft legt fest oder ruft die <see cref="T:System.Security.Cryptography.Oid" /> Objekt, das die Objekt-ID für den Algorithmus angibt.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Oid" /> -Objekt, das den Algorithmus darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public byte[] Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Parameters" /> Eigenschaft legt fest oder ruft alle durch den Algorithmus erforderlichen Parameter.</summary>
+        <value>Ein Array von Bytewerten, das durch den Algorithmus erforderlichen Parameter angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

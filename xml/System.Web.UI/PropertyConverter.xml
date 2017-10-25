@@ -1,0 +1,157 @@
+<Type Name="PropertyConverter" FullName="System.Web.UI.PropertyConverter">
+  <TypeSignature Language="C#" Value="public static class PropertyConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit PropertyConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PropertyConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Hilfsfunktionen zum Konvertieren von Eigenschaftswerten in und aus Zeichenfolgen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PropertyConverter> Klasse wird durch das ASP.NET-Seitenframework verwendet und sollte nicht direkt aus Ihrem Code zugegriffen werden. Sie können die <xref:System.Enum> Struktur zum Konvertieren von Zeichenfolgenwerten in und aus Enumeratoren, oder <xref:System.ComponentModel.TypeConverter> um Objekte zu konvertieren.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="EnumFromString">
+      <MemberSignature Language="C#" Value="public static object EnumFromString (Type enumType, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object EnumFromString(class System.Type enumType, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PropertyConverter.EnumFromString(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein <see cref="T:System.Type" /> , der den Enumerationstyp für die Erstellung von darstellt der <c>Wert</c> Parameter.</param>
+        <param name="value">Die <see cref="T:System.String" /> , die einen Wert im Enumerator darstellt.</param>
+        <summary>Konvertiert die Zeichenfolgendarstellung auf einen Wert des angegebenen Enumerationstyps.</summary>
+        <returns>Eine Enumeration vom Typ <paramref name="enumType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PropertyConverter.EnumFromString%2A> Methode wird verwendet, um einen Zeichenfolgenwert in den entsprechenden Enumerationswert konvertiert.  
+  
+> [!NOTE]
+>  Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen. Um einen Zeichenfolgenwert in den entsprechenden Enumerationswert zu konvertieren, verwenden Sie die <xref:System.Enum.Parse%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.  
+  
+ \- oder –  
+  
+ <paramref name="value" />ist entweder eine leere Zeichenfolge ("") oder enthält nur Leerzeichen.  
+  
+ \- oder –  
+  
+ <paramref name="value" />ist ein Name, aber keiner der genannten Konstanten für die Enumeration definiert.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EnumToString">
+      <MemberSignature Language="C#" Value="public static string EnumToString (Type enumType, object enumValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EnumToString(class System.Type enumType, object enumValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PropertyConverter.EnumToString(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="enumValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein <see cref="T:System.Type" /> , der den Enumerationstyp darstellt <c>EnumValue</c>.</param>
+        <param name="enumValue">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert den Wert des angegebenen Enumerationstyps in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="enumValue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PropertyConverter.EnumToString%2A> -Methode ein Enumerationswerts in die entsprechende Zeichenfolgendarstellung konvertiert werden.  
+  
+> [!NOTE]
+>  Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen. Verwenden Sie zum Konvertieren eines Enumerationswerts in die entsprechende Zeichenfolgendarstellung der <xref:System.Enum.Format%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="enumType" />-Parameter oder der <paramref name="enumValue" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="enumType" /> -Parameter ist ein <see cref="T:System.Enum" /> Typ.  
+  
+ \- oder –  
+  
+ Die <paramref name="enumValue" /> Parameter enthält einen Wert aus einer Enumeration, die sich sich beim Typ von unterscheidet <paramref name="enumType" />.  
+  
+ \- oder –  
+  
+ Der Typ des <paramref name="enumValue" /> ist kein zugrunde liegenden Typ des <paramref name="enumType" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectFromString">
+      <MemberSignature Language="C#" Value="public static object ObjectFromString (Type objType, System.Reflection.MemberInfo propertyInfo, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ObjectFromString(class System.Type objType, class System.Reflection.MemberInfo propertyInfo, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PropertyConverter.ObjectFromString(System.Type,System.Reflection.MemberInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objType" Type="System.Type" />
+        <Parameter Name="propertyInfo" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objType">Die <see cref="T:System.Type" /> für die Erstellung von <c>Wert</c>.</param>
+        <param name="propertyInfo">Die Eigenschaften, die während der Konvertierung verwendet.</param>
+        <param name="value">Die <see cref="T:System.String" /> in ein Objekt zu konvertieren.</param>
+        <summary>Konvertiert den Zeichenfolgenwert in den angegebenen Objekttyp.</summary>
+        <returns>Ein Objekt vom Typ <paramref name="objType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PropertyConverter.ObjectFromString%2A> Methode wird verwendet, um einen Zeichenfolgenwert in ein Objekt zu konvertieren.  
+  
+> [!NOTE]
+>  Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen. Um einen Zeichenfolgenwert in ein Objekt zu konvertieren, verwenden die `Parse` Methode für das Objekt, wenn das Objekt enthält eine `Parse` Methode. Angenommen, ein <xref:System.Int32> Objekt kann erstellt werden, aus einer Zeichenfolge durch die <xref:System.Int32.Parse%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Ein Objekt des Typs gemäß <paramref name="objType" /> kann nicht erstellt werden, aus der <paramref name="value" /> Parameter.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,387 @@
+<Type Name="AdRotator" FullName="System.Web.UI.MobileControls.AdRotator">
+  <TypeSignature Language="C#" Value="public class AdRotator : System.Web.UI.MobileControls.MobileControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdRotator extends System.Web.UI.MobileControls.MobileControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.AdRotator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.MobileControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("AdCreated")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("AdvertisementFile")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.AdRotatorDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(typeof(System.Web.UI.Design.WebControlToolboxItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.Design.MobileControls.Adapters.DesignerAdRotatorAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:AdRotator runat="server"&gt;&lt;/{0}:AdRotator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Serversteuerelement bereit, um eine zufällig ausgewählte Werbung auf einer mobilen Seite anzuzeigen. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.AdRotator> -Klasse verwendet die gleiche Konfigurationsdatei als Web Forms <xref:System.Web.UI.WebControls.AdRotator> Klasse. Die <xref:System.Web.UI.MobileControls.AdRotator?displayProperty=nameWithType> mobilen ASP.NET-Steuerelements stellt viele der gleichen Eigenschaften und Ereignisse wie das <xref:System.Web.UI.WebControls.AdRotator?displayProperty=nameWithType> Steuerelement plus es mobilen Funktionen hinzugefügt. Die angezeigte Werbung ändert sich, wenn die Seite aktualisiert wird.  
+  
+ Die <xref:System.Web.UI.MobileControls.AdRotator.AdvertisementFile%2A> Eigenschaft gibt den Speicherort einer XML-Datei, die Ankündigungsinformationen enthält. Diese Datei muss innerhalb der Anwendungsdomäne befinden. Aus Sicherheitsgründen muss XML-Dateien im Ordner "App_Data", die konfiguriert wird, um Benutzer direkten Zugriff auf XML-Dateien nicht zulassen. Wenn die <xref:System.Web.UI.MobileControls.AdRotator.AdvertisementFile%2A> Eigenschaft leer ist, ist die <xref:System.Web.UI.MobileControls.AdRotator> Steuerelement generiert ein einzelnes Break-Tag als Platzhalter. Dies ist hilfreich, wenn keine Ankündigung angezeigt werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel besteht aus zwei Teilen: einer ASP.NET Mobile Web Forms-Seite einem `.aspx` Datei- und eine XML-Datei. Die `.aspx` -Datei verwendet, eine Datei namens `ads.xml` drehen über verschiedene Ankündigungen, die auf der Grundlage der <xref:System.Web.UI.MobileControls.AdRotator.KeywordFilter%2A> Eigenschaft. Wenn Sie die Images für das Beispiel angeben, werden sie angezeigt werden; andernfalls die <xref:System.Web.UI.MobileControls.AdRotator> Steuerelement zeigt den Wert des der <xref:System.Web.UI.MobileControls.Image.AlternateText%2A> -Eigenschaft für die Ankündigungen. Wenn der Benutzer die mobile Web Forms-Seite aktualisiert wird, wird die Seite zeigt die nächste zufällig ausgewählte Werbung, basierend auf den <xref:System.Web.UI.MobileControls.AdRotator.KeywordFilter%2A>.  
+  
+ Außerdem wird gezeigt, wie Sie eine [ \<Wahl >](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) Element die Eigenschaften zu überschreiben, wenn der Browser des Benutzers WML-Markup und zum Zuordnen des Bilds erfordert `src` und `href` auf die Daten in der XML-Attribute Datei mit den <xref:System.Web.UI.MobileControls.AdRotator.ImageKey%2A> und <xref:System.Web.UI.MobileControls.AdRotator.NavigateUrlKey%2A> Eigenschaften bzw..  
+  
+ Obwohl das Beispiel eine Funktion verwendet, um zu bestimmen, ob der Browser WML erfordert (`isWML11`), können Sie stattdessen eine Datei "Web.config" verwenden, definieren eine <xref:System.Web.UI.MobileControls.DeviceSpecific> Element, das .NET Framework automatisch verwendet, um die Entscheidung für Sie zu treffen:  
+  
+  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ Die `.aspx` Datei:  
+  
+ [!code-aspx-csharp[MobileAdRotatorSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileAdRotatorSample/CS/MobileHome.aspx#1)]
+ [!code-aspx-vb[MobileAdRotatorSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileAdRotatorSample/VB/MobileHome.aspx#1)]  
+  
+ Im Beispiel `ads.xml` Datei (die, müssen sich im die **App_Data** Ordner):  
+  
+ [!code-xml[MobileAdRotatorSample#2](~/samples/snippets/common/VS_Snippets_WebNet/MobileAdRotatorSample/Common/ads.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdRotator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.AdRotator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.AdRotator" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.AdRotator?displayProperty=nameWithType> mobilen ASP.NET-Steuerelements stellt viele der gleichen Eigenschaften und Ereignisse wie das <xref:System.Web.UI.WebControls.AdRotator?displayProperty=nameWithType> Steuerelement plus es mobilen Funktionen hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdCreated">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.AdCreatedEventHandler AdCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.AdCreatedEventHandler AdCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.AdRotator.AdCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.AdCreatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt jedes Mal, wenn eine Ankündigung angezeigt wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.MobileControls.AdRotator.AdvertisementFile%2A> Eigenschaft festgelegt ist, dieses Ereignis tritt auf, nachdem die Ankündigung aus der Datei ausgewählt wurde.  
+  
+ Der Ereignishandler empfängt ein <xref:System.Web.UI.WebControls.AdCreatedEventArgs> -Eigenschaft, enthält die Eigenschaften der Ankündigung angezeigt wird. Die folgende Tabelle zeigt die Eigenschaften, die Informationen speziell für dieses Ereignis.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.AdCreatedEventArgs.AdProperties%2A>|Gibt das Wörterbuch alle Eigenschaften aus einer XML-Datei nach extrahiert enthält die <xref:System.Web.UI.MobileControls.AdRotator.AdCreated> Ereignis wird ausgelöst.|  
+|<xref:System.Web.UI.MobileControls.Image.AlternateText%2A>|Gibt den alternativen Text und die QuickInfo (wenn vom Browser unterstützt) um in gerendert werden die <xref:System.Web.UI.MobileControls.AdRotator> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.AdCreatedEventArgs.ImageUrl%2A>|Gibt an, das Bild, das im gerendert werden die <xref:System.Web.UI.MobileControls.AdRotator> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.AdCreatedEventArgs.NavigateUrl%2A>|Gibt den URL-Verweis, dem der Browser navigiert, wenn die Ankündigung geklickt wird.|  
+  
+   
+  
+## Examples  
+ Der folgende code behandelt das <xref:System.Web.UI.MobileControls.AdRotator.AdCreated> Ereignis, und ist nur ein Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.AdRotator> Übersicht über die Klasse.  
+  
+ [!code-csharp[MobileAdRotatorSample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileAdRotatorSample/CS/MobileHome.aspx#3)]
+ [!code-vb[MobileAdRotatorSample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileAdRotatorSample/VB/MobileHome.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdvertisementFile">
+      <MemberSignature Language="C#" Value="public string AdvertisementFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AdvertisementFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.AdRotator.AdvertisementFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.XmlUrlEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der XML-Datei, die Ankündigung Daten enthält. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Pfad der XML-Datei mit den Eigenschaften von Ankündigungen für das Rendern der <see langword="AdRotator" /> Steuerelement.  
+  
+ <block subset="none" type="note"><para>  
+ Aus Sicherheitsgründen sollten XML-Dateien im App_Data-Ordner gespeichert werden, die für Benutzer direkten Zugriff auf XML-Dateien nicht zulassen konfiguriert ist.  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Dateiformat und die Datei Einschränkungen beziehen sich auf den beschriebenen für die <xref:System.Web.UI.WebControls.AdRotator.AdvertisementFile%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebAdRotator">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.AdRotator CreateWebAdRotator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.AdRotator CreateWebAdRotator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.AdRotator.CreateWebAdRotator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.AdRotator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein neues <see cref="T:System.Web.UI.MobileControls.AdRotator" />-Objekt zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.MobileControls.AdRotator" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird bereitgestellt, für Entwickler von Steuerelementen zum Überschreiben der <xref:System.Web.UI.MobileControls.AdRotator> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageKey">
+      <MemberSignature Language="C#" Value="public string ImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.AdRotator.ImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("ImageUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Elementnamen aus dem die Bild-URL von einer Ankündigung abgerufen wird. Der Standardwert ist "ImageUrl". Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Elementname, von dem die Bild-URL für eine Ankündigung abgerufen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Elemente in der XML-Quelldatei für eine Vielzahl von Zwecken erstellen. Angenommen, möchten Sie die gleiche XML-Datei für mobile Webseiten und Web Pages verwenden, allerdings möchten eine anderes Bild-Datei für jeden dieser. Verwenden Sie die <xref:System.Web.UI.MobileControls.AdRotator.ImageKey%2A> Eigenschaft, um anzugeben, welches Element in der XML-Datei, die Sie für die Bild-URL verwenden möchten.  
+  
+ Sie können auch in der separaten [ \<Choice >](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) Elemente überschreiben Sie diese Einstellung, um alternative Bilder für die Ankündigung angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.AdRotator.ImageKey%2A> Eigenschaft, um ein bestimmtes Element aus einem Datensatz in der XML-Datei auszuwählen. ASPX-Datei gibt an, dass der Wert für die Bild-URL aus abgerufen werden kann die `<MobileImageSrc>` Element der XML-Datei und verwendet eine [ \<Choice >](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) Element auf eine anderes Bild-URL zu aktivieren, wenn der Browser des Benutzers WML erfordert Markup.  
+  
+ Die `.aspx` Datei:  
+  
+ [!code-aspx-csharp[MobileAdRotatorSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileAdRotatorSample/CS/MobileHome.aspx#1)]
+ [!code-aspx-vb[MobileAdRotatorSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileAdRotatorSample/VB/MobileHome.aspx#1)]  
+  
+ Im Beispiel `ads.xml` Datei (die, müssen sich im die **App_Data** Ordner):  
+  
+ [!code-xml[MobileAdRotatorSample#2](~/samples/snippets/common/VS_Snippets_WebNet/MobileAdRotatorSample/Common/ads.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeywordFilter">
+      <MemberSignature Language="C#" Value="public string KeywordFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeywordFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.AdRotator.KeywordFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Kategorieschlüsselwort, das Sie verwenden können, um Ankündigungen aus einer Ankündigungsdatei zu filtern. Der Standardwert ist eine leere Zeichenfolge (""). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Schlüsselwort verwendet, um Ankündigungen innerhalb einer bestimmten Kategorie zu identifizieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.MobileControls.AdRotator.AdvertisementFile%2A> Eigenschaft verfügt über Daten, und dies <xref:System.Web.UI.MobileControls.AdRotator.KeywordFilter%2A> Eigenschaft hat den Inhalt, der <xref:System.Web.UI.MobileControls.AdRotator> Steuerelement wählt eine Ankündigung mit einem übereinstimmenden Schlüsselwort.  
+  
+ Wenn die <xref:System.Web.UI.MobileControls.AdRotator.AdvertisementFile%2A> Eigenschaft verfügt über Daten, und dies <xref:System.Web.UI.MobileControls.AdRotator.KeywordFilter%2A> Eigenschaft Inhalt jedoch keine Schlüsselwort Übereinstimmung zwischen dieser Eigenschaft und die Datei vorhanden ist, ein leeres Bild zeigt befindet und eine Warnung für die Ablaufverfolgung wird generiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.AdRotator.KeywordFilter%2A> -Eigenschaft zum Festlegen der Einstellung für eine Sammlung von Bildern in der Datei bezeichnet, durch die <xref:System.Web.UI.MobileControls.AdRotator.AdvertisementFile%2A> Eigenschaft. Den vollständigen Beispielcode finden Sie unter der <xref:System.Web.UI.MobileControls.AdRotator> -Klassenübersicht.  
+  
+ [!code-aspx-csharp[MobileAdRotatorSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileAdRotatorSample/CS/MobileHome.aspx#4)]
+ [!code-aspx-vb[MobileAdRotatorSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileAdRotatorSample/VB/MobileHome.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrlKey">
+      <MemberSignature Language="C#" Value="public string NavigateUrlKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrlKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.AdRotator.NavigateUrlKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("NavigateUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Elements, das die Ziel-URL enthält. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Name des Elements in der XML-Datei, die die Ziel-URL enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können [ \<Choice >](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) Elemente überschreiben Sie diese Einstellung, um alternative URLs für die Ankündigung angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.AdRotator.NavigateUrlKey%2A> Eigenschaft, um die Ziel-URL für die Ankündigung festzulegen. Den vollständigen Beispielcode finden Sie unter der <xref:System.Web.UI.MobileControls.AdRotator> -Klassenübersicht.  
+  
+ [!code-aspx-csharp[MobileAdRotatorSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileAdRotatorSample/CS/MobileHome.aspx#4)]
+ [!code-aspx-vb[MobileAdRotatorSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileAdRotatorSample/VB/MobileHome.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAdCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnAdCreated (System.Web.UI.WebControls.AdCreatedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAdCreated(class System.Web.UI.WebControls.AdCreatedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.AdRotator.OnAdCreated(System.Web.UI.WebControls.AdCreatedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.AdCreatedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Web.UI.WebControls.AdCreatedEventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.MobileControls.AdRotator.AdCreated" />-Ereignis für das <see cref="T:System.Web.UI.MobileControls.AdRotator" />-Steuerelement aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erbende Klassen kann diese Methode, um andere Aufgaben überschreiben. Beispielsweise können Sie andere Kriterien um zu filtern, wie eine Ankündigung vom ausgewählt wird, verwenden die <xref:System.Web.UI.MobileControls.AdRotator> -Steuerelement, oder Sie können die Ankündigung für die Abrechnung aufzeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.AdRotator.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt, das den Ausgabestream zum Rendern enthält.</param>
+        <summary>Rendert das Steuerelement auf dem Client. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

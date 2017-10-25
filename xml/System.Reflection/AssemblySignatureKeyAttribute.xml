@@ -1,0 +1,163 @@
+<Type Name="AssemblySignatureKeyAttribute" FullName="System.Reflection.AssemblySignatureKeyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblySignatureKeyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblySignatureKeyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblySignatureKeyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Migration aus einer älteren, einfacher starken Schlüsselnamen zu einem größeren Schlüssel mit einem stärkeren Hashalgorithmus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der neue größere Schlüssel wird der Signaturschlüssel. In Versionen vor der [!INCLUDE[net_v45](~/includes/net-v45-md.md)], der Signaturschlüssel wurde mit den Identitätsschlüssel identisch. Beginnend mit der [!INCLUDE[net_v45](~/includes/net-v45-md.md)]die <xref:System.Reflection.AssemblySignatureKeyAttribute> Attribut ermöglicht, dass die Assemblymetadaten den alten Token des öffentlichen Schlüssels und binary large Object (BLOB) verfügen, damit vorhandene Assemblyverweise weiterhin funktionieren weiterhin. Darüber hinaus wird sichergestellt, dass die Zuordnung von einem Besitzer des den Identitätsschlüssel stammen.  
+  
+ Das Vorhandensein des Attributs, bedeutet nicht unbedingt, dass die Überprüfung mit starkem Namen stattfindet. Gemeinsame volle Vertrauenswürdigkeit Szenarien, wird das Attribut nie angesehen, da Signaturen mit starkem Namen nicht überprüft werden. Jedoch, wenn die Signatur mit starkem Namen verfügt, die überprüft werden, müssen sowohl die starke Namenssignatur als auch die Gegensignatur überprüft werden. Der Assembly aneinander gehängt Identitätsschlüssel braucht nicht identisch mit den Signaturschlüssel (führen Sie das tatsächliche Signieren verwendete Schlüssel und Überprüfung) sein. Der Identitätsschlüssel kann einen anderen Signaturschlüssel (eine robustere) zugeordnet werden. Dadurch können Sie die Identität einer Assembly festgelegt, und Aktualisieren von Signier-Schlüssel und Algorithmen auf Weitere sicherere Versionen.  
+  
+ Die Sicherheitsaspekte Gegensignatur Adressen, wenn eine bösartige Assembly eine andere Identität Ansprüche. Beispielsweise konnte eine bösartige Assembly von "System.Core.dll" den öffentlichen Microsoft-Schlüssel in seinen Metadaten enthalten, und verwenden Sie das Attribut anzuweisen, die Überprüfung des starken Namens der Angreifer Signaturschlüssel zu verwenden, wenn keine Gegensignatur vorhanden ist. Daher konnte die sich als starkem Namen überprüft Microsoft Assembly auszugeben.  
+  
+ Informationen zum Signieren von Assemblys für die Verwendung mit diesem neuen Attribut finden Sie unter [verbesserte starke Namen](~/docs/framework/app-domains/enhanced-strong-naming.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblySignatureKeyAttribute (string publicKey, string countersignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string publicKey, string countersignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblySignatureKeyAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="publicKey" Type="System.String" />
+        <Parameter Name="countersignature" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="publicKey">Der öffentliche oder Identity-Schlüssel.</param>
+        <param name="countersignature">Die Gegensignatur, also der Signatur Schlüsselteil des Schlüssel mit starkem Namen.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Reflection.AssemblySignatureKeyAttribute" /> Klasse mit dem angegebenen öffentlichen Schlüssel und die Gegensignatur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie Sn.exe, um die Parameter für diesen Konstruktor zu generieren.  
+  
+```  
+sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Countersignature">
+      <MemberSignature Language="C#" Value="public string Countersignature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Countersignature" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblySignatureKeyAttribute.Countersignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gegensignatur für den starken Namen für diese Assembly ab.</summary>
+        <value>Die Gegensignatur für diesen Signaturschlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Gegensignatur stellt den öffentlichen Schlüssel, der durch den Identitätsschlüssel signiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public string PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblySignatureKeyAttribute.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den öffentlichen Schlüssel nach einem starken Namen, die zum Signieren der Assembly verwendet.</summary>
+        <value>Der öffentliche Schlüssel für diese Assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

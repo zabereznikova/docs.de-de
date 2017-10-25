@@ -1,0 +1,425 @@
+<Type Name="CorrelationCallbackMessageProperty" FullName="System.ServiceModel.Channels.CorrelationCallbackMessageProperty">
+  <TypeSignature Language="C#" Value="public abstract class CorrelationCallbackMessageProperty : System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CorrelationCallbackMessageProperty extends System.Object implements class System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IMessageProperty</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse zum Verzögern der Korrelationshauptberechnung bereit, bis alle Korrelationsdaten verfügbar sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies wird in der Regel verwendet, damit anderen Kanälen Korrelationsdaten bereitgestellt werden, bevor eine Nachricht über das Kabel gesendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CorrelationCallbackMessageProperty (System.Collections.Generic.ICollection&lt;string&gt; neededData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.ICollection`1&lt;string&gt; neededData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.#ctor(System.Collections.Generic.ICollection{System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="neededData" Type="System.Collections.Generic.ICollection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="neededData">Die Korrelationsdaten, die erforderlich sind, um die Korrelation zu berechnen.</param>
+        <summary>Wird von abgeleiteten Klassen aufgerufen, um eine neue Instanz der abgeleiteten Klasse mithilfe der angegebenen Auflistung von Korrelationsdaten, die zum Berechnen der Korrelation erforderlich sind, zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CorrelationCallbackMessageProperty (System.ServiceModel.Channels.CorrelationCallbackMessageProperty callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.CorrelationCallbackMessageProperty callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.#ctor(System.ServiceModel.Channels.CorrelationCallbackMessageProperty)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callback" Type="System.ServiceModel.Channels.CorrelationCallbackMessageProperty" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Die zu kopierende abgeleitete <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" />-Klasseninstanz.</param>
+        <summary>Wird von abgeleiteten Klassen aufgerufen, um eine neue Instanz der abgeleiteten Klasse mithilfe der erforderlichen Korrelationsdaten aus einer anderen abgeleiteten <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" />-Klasseninstanz zu initialisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddData">
+      <MemberSignature Language="C#" Value="public void AddData (string name, Func&lt;string&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddData(string name, class System.Func`1&lt;string&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.AddData(System.String,System.Func{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Func&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Korrelationsdatenwerts.</param>
+        <param name="value">Stellt den Wert der Korrelationsdaten bereit.</param>
+        <summary>Fügt der Eigenschaft die erforderlichen Korrelationsdaten hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die erforderlichen Korrelationsdaten hinzugefügt werden, werden sie aus der Liste <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.NeededData%2A> entfernt. Wenn alle erforderlichen Daten wurde hinzugefügt, die <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.NeededData%2A> Liste ist leer und <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.IsFullyDefined%2A> gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginFinalizeCorrelation">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginFinalizeCorrelation (System.ServiceModel.Channels.Message message, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginFinalizeCorrelation(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.BeginFinalizeCorrelation(System.ServiceModel.Channels.Message,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu korrelierende Meldung.</param>
+        <param name="timeout">Das Intervall, in dem die Korrelation abgeschlossen werden muss. Andernfalls wird eine <see cref="T:System.TimeoutException" /> ausgelöst.</param>
+        <param name="callback">Die Methode, die aufgerufen werden soll, wenn die Korrelationsberechnung abgeschlossen ist.</param>
+        <param name="state">Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.</param>
+        <summary>Wird von einem Korrelationsprotokoll aufgerufen, wenn alle Korrelationsinformationen zum asynchronen Erstellen der Korrelation verfügbar sind.</summary>
+        <returns>Ein Verweis auf den aktuellen asynchronen Vorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnBeginFinalizeCorrelation%2A> auf, um die Korrelation zu erstellen. Anwendungen müssen eine Implementierung von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnBeginFinalizeCorrelation%2A> bereitstellen, die die Korrelationsberechnung der angegebenen Meldung asynchron durchführt.  
+  
+ Rufen Sie <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.EndFinalizeCorrelation%2A> der `callback`-Methode auf, um benachrichtigt zu werden, wenn der asynchrone Vorgang abgeschlossen ist. Wenn <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.EndFinalizeCorrelation%2A> aufgerufen wird, bevor der asynchrone Vorgang abgeschlossen ist, wird es bis zum Abschluss des Vorgangs gesperrt. <xref:System.TimeoutException> wird ausgelöst, wenn der Vorgang nicht innerhalb des angegebenen Zeitintervalls abgeschlossen wird.  
+  
+ Diese Methode ist eine asynchrone Version von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.FinalizeCorrelation%2A> mithilfe des asynchronen <xref:System.IAsyncResult>-Entwurfsmusters. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.IMessageProperty CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IMessageProperty CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wenn sie in einer abgeleiteten Klasse überschrieben wird, initialisiert diese Methode eine Kopie der abgeleiteten Nachrichteneigenschafteninstanz und gibt sie zurück.</summary>
+        <returns>Eine Kopie der abgeleiteten Nachrichteneigenschafteninstanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndFinalizeCorrelation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message EndFinalizeCorrelation (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.Message EndFinalizeCorrelation(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.EndFinalizeCorrelation(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen <see cref="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.BeginFinalizeCorrelation(System.ServiceModel.Channels.Message,System.TimeSpan,System.AsyncCallback,System.Object)" />-Vorgang verweist.</param>
+        <summary>Gibt die Nachricht zurück, die asynchron zu Korrelation vorbereitet wurde.</summary>
+        <returns>Die Meldung, die für die Korrelation vorbereitet wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnEndFinalizeCorrelation%2A> zum Abrufen der Meldung auf. Anwendungen müssen eine Implementierung von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnEndFinalizeCorrelation%2A> bereitstellen, die die für die Korrelation vorbereitete Meldung zurückgibt.  
+  
+ Wenn <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.EndFinalizeCorrelation%2A> aufgerufen wird, bevor der asynchrone Vorgang abgeschlossen ist, wird es bis zum Abschluss des Vorgangs gesperrt. Wenn der Vorgang innerhalb des Timeoutintervalls, das im Aufruf von  <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.BeginFinalizeCorrelation%2A> angegeben ist, nicht abgeschlossen wird, wird beim Aufrufen dieser Methode <xref:System.TimeoutException> ausgelöst.  
+  
+ Diese Methode schließt die asynchrone Version von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.FinalizeCorrelation%2A> mithilfe des asynchronen <xref:System.IAsyncResult>-Entwurfsmusters ab. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Übersicht über die asynchrone Programmierung](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalizeCorrelation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message FinalizeCorrelation (System.ServiceModel.Channels.Message message, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.Message FinalizeCorrelation(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.FinalizeCorrelation(System.ServiceModel.Channels.Message,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu korrelierende Meldung.</param>
+        <param name="timeout">Das Intervall, in dem die Korrelationsberechnung abgeschlossen werden muss. Andernfalls wird ein <see cref="T:System.TimeoutException" /> ausgelöst.</param>
+        <summary>Wird von einem Korrelationsprotokoll aufgerufen, wenn alle Korrelationsinformationen zum Erstellen der Korrelation verfügbar sind.</summary>
+        <returns>Die korrelierte Meldung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnFinalizeCorrelation%2A> auf, um die Korrelation zu erstellen. Anwendungen müssen eine Implementierung von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnFinalizeCorrelation%2A> bereitstellen, die die Korrelationsberechnung der angegebenen Meldung durchführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFullyDefined">
+      <MemberSignature Language="C#" Value="public bool IsFullyDefined { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFullyDefined" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.IsFullyDefined" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob der <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" /> alle erforderlichen Korrelationsdaten aufweist.</summary>
+        <value>
+          <see langword="true" />Wenn alle erforderlichen Korrelationsdaten vorhanden Sie ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn alle erforderlichen Daten wurde hinzugefügt, die <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.NeededData%2A> Liste ist leer und <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.IsFullyDefined%2A> gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieser Nachrichteneigenschaft ab: "CorrelationCallbackMessageProperty".</summary>
+        <value>Der Zeichenfolgenwert "CorrelationCallbackMessageProperty".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeededData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; NeededData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; NeededData" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.NeededData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Korrelationsdaten ab, die erforderlich sind, bevor Korrelation übernommen werden kann.</summary>
+        <value>Eine Liste mit den erforderlichen Korrelationsdaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginFinalizeCorrelation">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginFinalizeCorrelation (System.ServiceModel.Channels.Message message, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginFinalizeCorrelation(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnBeginFinalizeCorrelation(System.ServiceModel.Channels.Message,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu korrelierende Meldung.</param>
+        <param name="timeout">Das Intervall, in dem die Korrelationsberechnung abgeschlossen werden muss. Andernfalls wird ein <see cref="T:System.TimeoutException" /> ausgelöst.</param>
+        <param name="callback">Die Methode, die aufgerufen werden soll, wenn die Korrelationsberechnung abgeschlossen ist.</param>
+        <param name="state">Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.</param>
+        <summary>Führt beim Überschreiben in einer abgeleiteten Klasse die Korrelationsberechnung für die angegebene Nachricht asynchron durch.</summary>
+        <returns>Ein Verweis auf den aktuellen asynchronen Vorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.BeginFinalizeCorrelation%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndFinalizeCorrelation">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Channels.Message OnEndFinalizeCorrelation (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Channels.Message OnEndFinalizeCorrelation(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnEndFinalizeCorrelation(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen <see cref="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.BeginFinalizeCorrelation(System.ServiceModel.Channels.Message,System.TimeSpan,System.AsyncCallback,System.Object)" />-Vorgang verweist.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse die Meldung zurück, die asynchron für die Korrelation vorbereitet wurde.</summary>
+        <returns>Die korrelierte Meldung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.EndFinalizeCorrelation%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFinalizeCorrelation">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Channels.Message OnFinalizeCorrelation (System.ServiceModel.Channels.Message message, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Channels.Message OnFinalizeCorrelation(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.OnFinalizeCorrelation(System.ServiceModel.Channels.Message,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu korrelierende Meldung.</param>
+        <param name="timeout">Das Intervall, in dem die Korrelationsberechnung abgeschlossen werden muss. Andernfalls wird ein <see cref="T:System.TimeoutException" /> ausgelöst.</param>
+        <summary>Führt beim Überschreiben in einer abgeleiteten Klasse die Korrelationsberechnung für die angegebene Meldung durch.</summary>
+        <returns>Die korrelierte Meldung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.FinalizeCorrelation%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.Message message, out System.ServiceModel.Channels.CorrelationCallbackMessageProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.Message message, [out] class System.ServiceModel.Channels.CorrelationCallbackMessageProperty&amp; property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.TryGet(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.CorrelationCallbackMessageProperty@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="property" Type="System.ServiceModel.Channels.CorrelationCallbackMessageProperty&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, die die zu überprüfenden <see cref="P:System.ServiceModel.Channels.Message.Properties" /> enthält.</param>
+        <param name="property">Enthält bei Rückgabe dieser Methode die <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" /> in der angegebenen Nachricht enthaltene <see cref="P:System.ServiceModel.Channels.Message.Properties" />ist, andernfalls <see langword="null" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, eine <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" /> aus den <see cref="P:System.ServiceModel.Channels.Message.Properties" /> der angegebenen Nachricht abzurufen.</summary>
+        <returns>
+          <see langword="true" />Wenn der Nachricht <see cref="P:System.ServiceModel.Channels.Message.Properties" /> enthalten eine <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.MessageProperties properties, out System.ServiceModel.Channels.CorrelationCallbackMessageProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.MessageProperties properties, [out] class System.ServiceModel.Channels.CorrelationCallbackMessageProperty&amp; property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CorrelationCallbackMessageProperty.TryGet(System.ServiceModel.Channels.MessageProperties,System.ServiceModel.Channels.CorrelationCallbackMessageProperty@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.ServiceModel.Channels.MessageProperties" />
+        <Parameter Name="property" Type="System.ServiceModel.Channels.CorrelationCallbackMessageProperty&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die zu überprüfenden Nachrichteneigenschaften.</param>
+        <param name="property">Enthält bei Rückgabe dieser Methode die <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" /> in den Eigenschaften der angegebenen Nachricht enthalten ist; andernfalls <see langword="null" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, die <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" /> aus den Eigenschaften der angegebenen Nachricht abzurufen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Nachrichteneigenschaften enthalten eine <see cref="T:System.ServiceModel.Channels.CorrelationCallbackMessageProperty" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

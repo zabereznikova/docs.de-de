@@ -1,0 +1,65 @@
+<Type Name="IMessageProperty" FullName="System.ServiceModel.Channels.IMessageProperty">
+  <TypeSignature Language="C#" Value="public interface IMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMessageProperty" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Schnittstelle, die Sie implementieren können, um für eine Nachricht einen Eigenschaftensatz zu beschreiben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Schnittstelle implementieren, um eine Nachrichteneigenschaft zu erstellen und diese während der Laufzeit an die Nachricht anzuhängen.  
+  
+ Wird ein Objekt, das diese Schnittstelle implementiert, zu <xref:System.ServiceModel.Channels.Message.Properties%2A> hinzugefügt, erfolgt das Hinzufügen durch einen Wert und nicht durch einen Verweis. Hiernach können Benutzer der Nachrichteneigenschaften der Nachrichteninstanz dieses Objekt durch Klonen in andere Nachrichten kopieren, anstatt ein einzelnes Objekt für alle Nachrichten freizugeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.IMessageProperty CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IMessageProperty CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IMessageProperty.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie der aktuellen Instanz.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IMessageProperty" /> -Objekt, das eine Kopie der aktuellen Instanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird immer dann aufgerufen, wenn eine Implementierung dieser Schnittstelle erstellt wird. Dies geschieht, wenn ein Objekt, das diese Schnittstelle implementiert, als benutzerdefinierte Eigenschaft zu <xref:System.ServiceModel.Channels.Message.Properties%2A> hinzugefügt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

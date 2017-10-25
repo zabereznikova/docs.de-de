@@ -1,0 +1,19 @@
+<Namespace Name="System.Windows.Documents.DocumentStructures">
+  <Docs>
+    <summary>Enthält Klassen, um die Struktur der beschreiben eine <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> im Hinblick auf die Abschnitte, Absätze, Zahlen, Aufzählungen oder nummerierten Listen und Tabellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Formatierung und das Layout einer [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument können Sie verschiedene Teile des Inhalts in semantischen wie Absätze, Tabellen, Verhalten und Listen.  Personen können die semantische Struktur des Inhalts von dessen Darstellung erfassen. aber die physische Format und das Layout des Markups identifizieren jedoch nicht explizit die tatsächlichen semantischen Elemente.  So aktivieren Sie die programmgesteuerte Überblick über die Dokumentorganisation die <xref:System.Windows.Documents.DocumentStructures> Namespace bietet Strukturelemente, die zum Definieren des Dokuments anhand seiner semantischen Teile verwendet werden können.  
+  
+ Jeder Seite des ein [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument enthält eine <xref:System.Windows.Documents.FixedPage> Element, das definiert seine *Inhalt* in Form von Text mit Feldern fester Breite ausgeführt wird und Grafiken.  Durch die Verwendung von Strukturelemente Seiten des Dokuments ein [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument kann auch zugeordnete <xref:System.Windows.Documents.DocumentStructures.StoryFragment> Elemente, die definieren die *Struktur* Rand der Seite in Form von Abschnitten, Absätze, Listen, Zahlen, und Tabellen.  Die <xref:System.Windows.Documents.DocumentStructures.NamedElement> Klasse wird verwendet, um die Zuordnungen zwischen den Inhalt und die Struktur der Markup des Dokuments definieren.  Ein <xref:System.Windows.Documents.DocumentStructures.NamedElement> das untergeordnete Element eines Strukturelements, z. B. eine Tabelle Tabellenzelle oder Listenelement, die befindet sich im die <xref:System.Windows.Documents.DocumentStructures.StoryFragment> Hierarchie einer Seite.  Ein <xref:System.Windows.Documents.DocumentStructures.NamedElement> kennzeichnet ein Element in der <xref:System.Windows.Documents.FixedPage> Hierarchie der gleichen Seite.  Das Element, dem er verweist ist des Inhalts der das strukturelle Element.  
+  
+ Anwendungen, die erstellen [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokumente sind nicht erforderlich, um strukturelle Markup einzuschließen, aber die Verwendung der Dokument-Strukturelemente verbessert die Flexibilität, nach dem Anwendungen zugreifen können, und verwenden Sie den Inhalt eines Dokuments.  
+  
+ Weitere Informationen zu den Strukturelementen eines [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokumente, finden Sie in Kapitel 9 "und" Anhang E der XML Paper Specification (XPS), die am [http://go.microsoft.com/fwlink/?LinkID=67000](http://go.microsoft.com/fwlink/?LinkID=67000).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,202 @@
+<Type Name="MsmqIntegrationBindingElement" FullName="System.ServiceModel.Configuration.MsmqIntegrationBindingElement">
+  <TypeSignature Language="C#" Value="public class MsmqIntegrationBindingElement : System.ServiceModel.Configuration.MsmqBindingElementBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MsmqIntegrationBindingElement extends System.ServiceModel.Configuration.MsmqBindingElementBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.MsmqIntegrationBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.MsmqBindingElementBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dieses Bindungselement kann verwendet werden, zum Aktivieren von Windows Communication Foundation (WCF)-Anwendungen, um Nachrichten zu senden und Empfangen von Nachrichten von vorhandenen MSMQ-Anwendungen, die COM, MSMQ-interne APIs oder die APIs im verwenden <see cref="N:System.Messaging" />. Verwenden Sie diese Klasse, um Nachrichten von MSMQ-basierten Messaginganwendungen zu senden und zu empfangen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>-Klasse verfügt über Eigenschaften, um anzugeben, wie die Warteschlange adressiert und wie die Übertragungszusicherungen angegeben werden, ob Meldungen permanent gespeichert werden müssen und wie Meldungen geschützt und authentifiziert werden sollen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.MsmqIntegrationBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationBindingElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu verwendende Bindungsname.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.MsmqIntegrationBindingElement" />-Klasse mithilfe des angegebenen Bindungsnamens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="protected override Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Bindungselements ab.</summary>
+        <value>Ein <see cref="T:System.Type" />-Objekt, das den Typ des Bindungselements darstellt, das mit diesem Konfigurationselement verknüpft ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.InitializeFrom(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Das <see cref="T:System.ServiceModel.Channels.Binding" />-Objekt, das zum Initialisieren der Eigenschaften des <see cref="T:System.ServiceModel.Configuration.MsmqIntegrationBindingElement" />-Objekts verwendet werden soll.</param>
+        <summary>Initialisiert die Eigenschaften des <see cref="T:System.ServiceModel.Configuration.MsmqIntegrationBindingElement" />-Objekts mithilfe der Eigenschaften des angegebenen <see cref="T:System.ServiceModel.Channels.Binding" />-Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void OnApplyConfiguration (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnApplyConfiguration(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.OnApplyConfiguration(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Bindung, für die die Einstellungen übernommen werden.</param>
+        <summary>Wird aufgerufen, wenn der Inhalt dieser Bindung für eine angegebene Bindung übernommen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine diesem Konfigurationselement zugeordnete Konfigurationseigenschaftenauflistung ab.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die einen Satz von diesem Konfigurationselement zugeordneten Eigenschaften enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.MsmqIntegrationSecurityElement Security { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.MsmqIntegrationSecurityElement Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("security")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.MsmqIntegrationSecurityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Sicherheitstyp ab, der mit der Bindung verwendet werden soll.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement" />, das den Sicherheitstyp angibt, der mit dieser Bindung verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationFormat">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat SerializationFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat SerializationFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.SerializationFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serializationFormat", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat" /> ab, das beim Serialisieren von MSMQ-Nachrichten verwendet werden soll, oder legt es fest.</summary>
+        <value>Das <see cref="T:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat" /> das zum Serialisieren von MSMQ-Nachrichten verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann einen der folgenden Werte aufweisen:  
+  
+-   `ActiveX` – Das ActiveX-Serialisierungsprogramm wird verwendet, um Objekte zu serialisieren.  
+  
+-   `Binary` – Der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wird verwendet, um Objekte zu serialisieren.  
+  
+-   `ByteArray` – Das Objekt wird in ein Bytearray serialisiert.  
+  
+-   `Stream` – Das Objekt wird in einen Stream serialisiert.  
+  
+-   `Xml` – Der <xref:System.Xml.Serialization.XmlSerializer> wird verwendet, um Objekte zu serialisieren.  
+  
+ Der Standardwert ist `Xml`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,145 @@
+<Type Name="DataGridViewHitTestType" FullName="System.Windows.Forms.DataGridViewHitTestType">
+  <TypeSignature Language="C#" Value="public enum DataGridViewHitTestType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewHitTestType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewHitTestType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt eine Position in einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.DataGridView.HitTestInfo> beschreibt ein Koordinatenpaar auf die <xref:System.Windows.Forms.DataGridView> Steuerelement. Die <xref:System.Windows.Forms.DataGridView.HitTestInfo.Type%2A> Eigenschaft gibt an, welcher Teil der <xref:System.Windows.Forms.DataGridView> den Punkt enthält.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> Referenzthemen.  
+  
+ [!code-csharp[System.Windows.Forms.GridViewAutoSize#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GridViewAutoSize/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.GridViewAutoSize#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GridViewAutoSize/VB/form1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cell">
+      <MemberSignature Language="C#" Value="Cell" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewHitTestType Cell = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewHitTestType.Cell" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHitTestType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zelle in der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeader">
+      <MemberSignature Language="C#" Value="ColumnHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewHitTestType ColumnHeader = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewHitTestType.ColumnHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHitTestType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Spaltenüberschrift in der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollBar">
+      <MemberSignature Language="C#" Value="HorizontalScrollBar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewHitTestType HorizontalScrollBar = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewHitTestType.HorizontalScrollBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHitTestType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die horizontale Schiebeleiste des der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewHitTestType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewHitTestType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHitTestType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einen leeren Teil der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeader">
+      <MemberSignature Language="C#" Value="RowHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewHitTestType RowHeader = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewHitTestType.RowHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHitTestType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeile mit einer Überschrift in der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeftHeader">
+      <MemberSignature Language="C#" Value="TopLeftHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewHitTestType TopLeftHeader = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewHitTestType.TopLeftHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHitTestType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die obere linke Spaltenüberschrift in der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollBar">
+      <MemberSignature Language="C#" Value="VerticalScrollBar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewHitTestType VerticalScrollBar = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewHitTestType.VerticalScrollBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHitTestType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die vertikale Schiebeleiste des der <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

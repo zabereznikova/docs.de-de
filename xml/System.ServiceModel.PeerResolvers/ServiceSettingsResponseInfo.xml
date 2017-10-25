@@ -1,0 +1,109 @@
+<Type Name="ServiceSettingsResponseInfo" FullName="System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo">
+  <TypeSignature Language="C#" Value="public class ServiceSettingsResponseInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceSettingsResponseInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die Informationen, die zurückgegeben werden, wenn ein Peer die Einstellungen für einen Peerresolverdienst anfordert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen dieser Klasse werden vorwiegend zur Übergabe von Diensteinstellungs-Antwortinformationen vom Resolverdienst an einen Netzwerkclient dieses Diensts verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceSettingsResponseInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für den Standardwert von `control` ist True festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceSettingsResponseInfo (bool control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="control" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="control">
+          <see cref="T:System.Boolean" />, der angibt, ob Verweise vom Resolverdienst übergeben werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo" />-Klasse mit dem bereitgestellten Verweisrichtlinienwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlMeshShape">
+      <MemberSignature Language="C#" Value="public bool ControlMeshShape { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlMeshShape" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.ControlMeshShape" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob Verweise vom Resolverdienst übergeben werden.</summary>
+        <value>True, wenn Verweise von Peers, die am Netz teilnehmen, übergeben werden, False, wenn sie ignoriert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Text der Nachricht, die eine serialisierte Instanz dieses Typs enthält, richtig formatiert ist.</summary>
+        <returns>True, wenn der Diensteinstellungs-Antwortinformationstext vom Absender richtig formatiert wurde, False, wenn dies nicht der Fall ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,36 @@
+<Type Name="IDuplexChannel" FullName="System.ServiceModel.Channels.IDuplexChannel">
+  <TypeSignature Language="C#" Value="public interface IDuplexChannel : System.ServiceModel.Channels.IInputChannel, System.ServiceModel.Channels.IOutputChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDuplexChannel implements class System.ServiceModel.Channels.IChannel, class System.ServiceModel.Channels.IInputChannel, class System.ServiceModel.Channels.IOutputChannel, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IDuplexChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IInputChannel</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IOutputChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Schnittstelle, die ein Kanal implementieren muss, um Nachrichten senden und empfangen zu können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.IDuplexChannel>-Schnittstelle ist die Gesamtmenge der <xref:System.ServiceModel.Channels.IInputChannel>- und <xref:System.ServiceModel.Channels.IOutputChannel>-Schnittstellen. Die <xref:System.ServiceModel.Channels.IDuplexChannel>-Schnittstelle ermittelt keine Korrelation zwischen <xref:System.ServiceModel.Channels.IInputChannel> und <xref:System.ServiceModel.Channels.IOutputChannel>, wenn eingebunden. Dies bedeutet insbesondere, dass der Vertrag nicht anordnet, dass der Absender der Nachrichten, die durch <xref:System.ServiceModel.Channels.IInputChannel> empfangen werden, dem Empfänger der Nachrichten entspricht, die durch <xref:System.ServiceModel.Channels.IOutputChannel> gesendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

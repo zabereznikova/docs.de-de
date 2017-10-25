@@ -1,0 +1,357 @@
+<Type Name="SiteMembershipCondition" FullName="System.Security.Policy.SiteMembershipCondition">
+  <TypeSignature Language="C#" Value="public sealed class SiteMembershipCondition : System.Security.Policy.IMembershipCondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SiteMembershipCondition extends System.Object implements class System.Security.ISecurityEncodable, class System.Security.ISecurityPolicyEncodable, class System.Security.Policy.IMembershipCondition" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.SiteMembershipCondition" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Policy.IMembershipCondition</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bestimmt, ob eine Assembly zu einer Codegruppe gehört durch Testen der Website, von der sie stammt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Codeassembly erfüllt die mitgliedschaftsbedingung für eine Website aus, wenn die Website, die gemäß dieser Code stammt <xref:System.Security.Policy.SiteMembershipCondition.Site%2A>. Identität der Site wird für Code von URLs mit beliebigen Protokollen außer FILE definiert. Eine Website ist die Zeichenfolge zwischen der "/ /" nach dem Protokoll eine URL und dem folgenden "/", falls vorhanden. Beispielsweise ist www.fourthcoffee.com die Identität der Site in der URL http://www.fourthcoffee.com/process/grind.htm. Dies umfasst nicht die Portnummern. Wenn eine angegebene URL Http://www.fourthcoffee.com:8000 ist / der Standort www.fourthcoffee.com, nicht www.fourthcoffee.com: 8000 ist.  
+  
+ Standorte können abgeglichen werden, genau oder anhand eines Platzhalters ("*") am Punkttrennzeichen Präfix. Beispielsweise lautet der Name der Website *. fourthcoffee.com entspricht fourthcoffee.com sowie www.fourthcoffee.com. Ohne Platzhalter muss der Namen der Website eine genaue Übereinstimmung. Der Standortname * entspricht einem beliebigen Standort, nicht jedoch Code, der keinen Evidence Standort aufweist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMembershipCondition (string site);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="site" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="site">Der Standortnamen oder Platzhalterausdruck.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Policy.SiteMembershipCondition" /> Klasse mit dem Namen des Standorts, der Mitgliedschaft bestimmt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Code erfüllt diese Bedingung aus, wenn es von einer Website heruntergeladen wird, deren DNS-Namen, den Standort gemäß übereinstimmt <xref:System.Security.Policy.SiteMembershipCondition.Site%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="site" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="site" /> Parameter ist kein gültiger <see cref="T:System.Security.Policy.Site" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Check">
+      <MemberSignature Language="C#" Value="public bool Check (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Check(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.Check(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Die <see cref="T:System.Security.Policy.Evidence" /> an, für den Test.</param>
+        <summary>Bestimmt, ob die angegebene Beweise die mitgliedschaftsbedingung erfüllt.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Beweise die mitgliedschaftsbedingung erfüllt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Bedingung testet nur <xref:System.Security.Policy.Site> Beweis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.IMembershipCondition Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.IMembershipCondition Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.IMembershipCondition</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine äquivalente Kopie der mitgliedschaftsbedingung an.</summary>
+        <returns>Eine neue, identische Kopie der aktuellen mitgliedschaftsbedingung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.Security.Policy.SiteMembershipCondition" /> mit der aktuellen zu vergleichende Objekt <see cref="T:System.Security.Policy.SiteMembershipCondition" />.</param>
+        <summary>Bestimmt, ob der Standort aus dem angegebenen <see cref="T:System.Security.Policy.SiteMembershipCondition" /> -Objekts ist gleichbedeutend mit dem Standort in der aktuellen enthaltenen <see cref="T:System.Security.Policy.SiteMembershipCondition" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Website aus dem angegebenen <see cref="T:System.Security.Policy.SiteMembershipCondition" /> -Objekts ist gleichbedeutend mit dem Standort in der aktuellen enthaltenen <see cref="T:System.Security.Policy.SiteMembershipCondition" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" /> -Eigenschaft für das aktuelle Objekt oder das angegebene Objekt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die XML-Codierung zur Wiederherstellung des Sicherheitsobjekts.</param>
+        <summary>Stellt ein Sicherheitsobjekt mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="e" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="e" /> -Parameter ist kein gültiger Mitgliedschaft Condition-Elements.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement e, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.FromXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die XML-Codierung zur Wiederherstellung des Sicherheitsobjekts.</param>
+        <param name="level">Die <see cref="T:System.Security.Policy.PolicyLevel" /> Kontext verwendet, um aufzulösen <see cref="T:System.Security.NamedPermissionSet" /> Verweise.</param>
+        <summary>Stellt ein Sicherheitsobjekt mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="e" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="e" /> -Parameter ist kein gültiger Mitgliedschaft Condition-Elements.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für die aktuelle mitgliedschaftsbedingung ab.</summary>
+        <returns>Der Hashcode für den aktuellen Zustand der Mitgliedschaft.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public string Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Site" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.SiteMembershipCondition.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen die Website für die die Bedingung testet.</summary>
+        <value>Die Site, für die die Bedingung testet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird mit dem Standort verglichen aus dem eine Codeassembly stammt, um die mitgliedschaftsbedingung zu testen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Es wird versucht, festzulegende <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" /> auf <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Es wird versucht, festzulegende <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" /> einen ungültigen <see cref="T:System.Security.Policy.Site" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine Zeichenfolgendarstellung der mitgliedschaftsbedingung zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung der mitgliedschaftsbedingung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung des Sicherheitsobjekts und seines aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung des Sicherheitsobjekts, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml (System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml(class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.SiteMembershipCondition.ToXml(System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">Die <see cref="T:System.Security.Policy.PolicyLevel" /> Kontext verwendet, um aufzulösen <see cref="T:System.Security.NamedPermissionSet" /> Verweise.</param>
+        <summary>Erstellt eine XML-Codierung des Sicherheitsobjekts und seinem aktuellen Status mit dem angegebenen <see cref="T:System.Security.Policy.PolicyLevel" />.</summary>
+        <returns>Eine XML-Codierung des Sicherheitsobjekts, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.SiteMembershipCondition.Site" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

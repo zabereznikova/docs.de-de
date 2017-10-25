@@ -1,0 +1,333 @@
+<Type Name="CompareOptions" FullName="System.Globalization.CompareOptions">
+  <TypeSignature Language="C#" Value="public enum CompareOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CompareOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CompareOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die zeichenfolgenvergleichsoptionen für die Verwendung mit <see cref="T:System.Globalization.CompareInfo" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Optionen geben an, Groß-/Kleinschreibung oder die Notwendigkeit, um Zeichen zu ignorieren.  
+  
+ .NET Framework verwendet drei unterschiedliche Arten der Sortierung: Sortieren, Zeichenfolge sortieren und Ordinalsortierung in word. Word sortieren führt einen kulturabhängigen Vergleich von Zeichenfolgen. Bestimmte nicht alphanumerischen Zeichen möglicherweise bestimmte Gewichtungen zugewiesen. Beispielsweise wird dem Bindestrich ("-") ggf. eine sehr geringe Gewichtung zugeordnet, sodass "coop" und "co-op" in einer sortierten Liste nebeneinander angezeigt werden. Zeichenfolge Sortieren ähnelt Word sortieren, mit dem Unterschied, dass keine besondere Fälle vorhanden sind. Aus diesem Grund sind alle nicht alphanumerische Symbole vor den alphanumerischen Zeichen ein. Ordinalsortierung vergleicht Zeichenfolgen anhand der Unicode-Werte jedes Element der Zeichenfolge.  
+  
+ Der Wert StringSort kann nur verwendet werden, mit <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> und <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>. <xref:System.ArgumentException>wird ausgelöst, wenn der StringSort-Wert verwendet wird, mit <xref:System.Globalization.CompareInfo.IsPrefix%2A?displayProperty=nameWithType>, <xref:System.Globalization.CompareInfo.IsSuffix%2A?displayProperty=nameWithType>, <xref:System.Globalization.CompareInfo.IndexOf%2A?displayProperty=nameWithType>, oder <xref:System.Globalization.CompareInfo.LastIndexOf%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Nach Möglichkeit die Anwendung die zu verwendende Methoden zum Zeichenfolgenvergleich, die akzeptieren einen <xref:System.Globalization.CompareOptions> Wert, der Art von Vergleich erwartet anzugeben. Als allgemeine Regel benutzerseitige Vergleiche am besten erfüllt werden durch die Verwendung von linguistischen Optionen (mit der aktuellen Kultur), und die Sicherheit sollten Vergleiche Ordinal oder OrdinalIgnoreCase angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Sortierung mit StringSort unterscheidet sich von Sortierung ohne StringSort.  
+  
+ [!code-cpp[System.Globalization.CompareOptions.StringSort#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CompareOptions.StringSort/CPP/compareoptions_stringsort.cpp#1)]
+ [!code-csharp[System.Globalization.CompareOptions.StringSort#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CompareOptions.StringSort/CS/compareoptions_stringsort.cs#1)]
+ [!code-vb[System.Globalization.CompareOptions.StringSort#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CompareOptions.StringSort/VB/compareoptions_stringsort.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="IgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreCase = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zeichenfolgenvergleich die Groß-und Kleinschreibung muss.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreKanaType">
+      <MemberSignature Language="C#" Value="IgnoreKanaType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreKanaType = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreKanaType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zeichenfolgenvergleich den Kanatyp ignorieren muss. Kanatyp bezieht sich auf japanische Hiragana und Katakana-Zeichen, die phonetischen Sounds in Japanischer Sprache darstellen. Hiragana wird für systemeigene japanische Ausdrücke und Wörter, verwendet, während Katakana für Wörter, die von anderen Sprachen, z. B. "Computer" oder "Internet" geliehener verwendet wird. In Hiragana und Katakana kann Sound phonetischen ausgedrückt werden. Wenn dieser Wert aktiviert ist, gilt das Hiragana-Zeichen für einen Sound Katakana-Zeichens, für den gleichen Sound gleich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreNonSpace">
+      <MemberSignature Language="C#" Value="IgnoreNonSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreNonSpace = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreNonSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zeichenfolgenvergleich Kombinationszeichen ohne Zwischenraum, wie diakritische Zeichen ignorieren muss. Die [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123) definiert Kombinationszeichen als Zeichen, die mit Basiszeichen erzeugt ein neues Zeichen kombiniert werden. Kombinationszeichen ohne Zwischenraum beansprucht keinen Platz selbst beim Rendern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreSymbols">
+      <MemberSignature Language="C#" Value="IgnoreSymbols" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreSymbols = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreSymbols" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zeichenfolgenvergleich Symbole, z. B. Leerzeichen, Satzzeichen, Währungssymbolen, das Prozentzeichen, mathematischen Symbolen, die kaufmännisches und-Zeichen usw. ignoriert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreWidth">
+      <MemberSignature Language="C#" Value="IgnoreWidth" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions IgnoreWidth = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.IgnoreWidth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zeichenfolgenvergleich die Zeichenbreite ignoriert. Beispielsweise können japanische Katakana-Zeichen als voller Breite oder halber Breite geschrieben werden. Wenn dieser Wert aktiviert ist, gelten die Katakana-Zeichen als voller Breite geschrieben gleich den gleichen Zeichen halber Breite geschrieben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Standardeinstellungen der Optionen für Zeichenfolgenvergleiche an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordinal">
+      <MemberSignature Language="C#" Value="Ordinal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions Ordinal = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.Ordinal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zeichenfolgenvergleich aufeinander folgenden Unicode-UTF-16-codierte Werte verwenden, muss führende eines schnellen Vergleichs, aber eine, die der Zeichenfolge ist (Codeeinheit durch Code Einheit Vergleich), kulturunabhängige ist. Eine Zeichenfolge, beginnend mit einem Code Einheit XXXX16 kommt vor einer Zeichenfolge, beginnend mit YYYY16, wenn XXXX16 kleiner als YYYY16 ist. Dieser Wert kann nicht kombiniert werden, mit anderen <see cref="T:System.Globalization.CompareOptions" /> Werte und müssen allein verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OrdinalIgnoreCase">
+      <MemberSignature Language="C#" Value="OrdinalIgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions OrdinalIgnoreCase = int32(268435456)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.OrdinalIgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleich von Zeichenfolgen muss Groß-/Kleinschreibung ignorieren, und führen einen Ordinalvergleich. Diese Technik ist für die Konvertierung der Zeichenfolge in Großbuchstaben unter Verwendung der invarianten Kultur, und klicken Sie dann einen Ordinalvergleich ausführen, auf das Ergebnis entspricht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StringSort">
+      <MemberSignature Language="C#" Value="StringSort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CompareOptions StringSort = int32(536870912)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CompareOptions.StringSort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zeichenfolgensortieralgorithmus Zeichenfolgenvergleich verwendet werden muss. In einer Sortierung Zeichenfolge vorangestellt alphanumerischer Zeichen wird dem Bindestrich und dem Apostroph sowie andere nicht alphanumerische Symbole.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

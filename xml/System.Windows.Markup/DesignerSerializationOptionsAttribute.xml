@@ -1,0 +1,80 @@
+<Type Name="DesignerSerializationOptionsAttribute" FullName="System.Windows.Markup.DesignerSerializationOptionsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignerSerializationOptionsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerSerializationOptionsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.DesignerSerializationOptionsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Serialisierungsflags für eine Eigenschaft an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute>Stellt eine Einschränkung für die Form, die Designer und Entwurfsoberflächen verwenden sollten, bei der Interaktion mit die attributierte Eigenschaft, bereit. Der Grund dafür ist im Allgemeinen so zu Hinweis <xref:System.Windows.Markup.DesignerSerializationOptions.SerializeAsAttribute>. Sie können dies in Fällen tun, in dem Risiko von unbegründete Leerraum hat Interaktion mit dieser Eigenschaft als eine Form Inhalt serialisiert, der die Zeichenfolge. Ein Beispiel für Fall, in dem <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> gilt für aus diesem Grund ist <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>.  
+  
+ Attribut-Nutzung für <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> unterstützt das an eine Methode zuweisen. Dadurch können Sie deklarieren Serialisierungsoptionen für eine XAML-Eigenschaft, durch das Zuweisen von <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> auf die `Get` Accessor-Methode, die angefügte Eigenschaft Verwendung-Muster unterstützt. Ein Beispiel dafür in den WPF-Typen wird <xref:System.Windows.Markup.XmlAttributeProperties.XmlSpace%2A> und seine `Get` Accessor <xref:System.Windows.Markup.XmlAttributeProperties.GetXmlSpace%2A>.  
+  
+ Beachten Sie, dass <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> Hinweise der gewünschten Serialisierung Formular nicht, ob die Eigenschaft oder wird nicht serialisiert. Wenn Sie andere Aspekte der Eigenschaftenserialisierung beeinflussen möchten, können Sie <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>, oder implementieren können `ShouldSerialize` Muster Methoden für die Besitzerklasse. Weitere Informationen zu den allgemeinen für die Entwurfszeit, finden Sie unter [Designer Serialization Overview](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerSerializationOptionsAttribute (System.Windows.Markup.DesignerSerializationOptions designerSerializationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Markup.DesignerSerializationOptions designerSerializationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DesignerSerializationOptionsAttribute.#ctor(System.Windows.Markup.DesignerSerializationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerSerializationOptions" Type="System.Windows.Markup.DesignerSerializationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="designerSerializationOptions">Gibt an, wie die Eigenschaft serialisiert werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.DesignerSerializationOptionsAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="designerSerializationOptions" /> ist kein gültiger <see cref="T:System.Windows.Markup.DesignerSerializationOptions" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerSerializationOptions">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.DesignerSerializationOptions DesignerSerializationOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Markup.DesignerSerializationOptions DesignerSerializationOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.DesignerSerializationOptionsAttribute.DesignerSerializationOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.DesignerSerializationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.DesignerSerializationOptions" /> für das Attribut festgelegt.</summary>
+        <value>Die Serialisierungsoption als Wert der Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktuell der einzig mögliche Wert ist <xref:System.Windows.Markup.DesignerSerializationOptions?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

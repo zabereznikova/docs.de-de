@@ -1,0 +1,343 @@
+<Type Name="ClockController" FullName="System.Windows.Media.Animation.ClockController">
+  <TypeSignature Language="C#" Value="public sealed class ClockController : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClockController extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ClockController" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Steuert eine <see cref="T:System.Windows.Media.Animation.Clock" /> interaktiv.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.Animation.ClockController> , interaktiv starten, anhalten, fortsetzen, suchen, überspringen, beenden und Entfernen einer <xref:System.Windows.Media.Animation.Clock>. Sie können auf der Stammebene Uhren nur interaktiv steuern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public void Begin ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Begin() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.Begin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt das Ziel <see cref="P:System.Windows.Media.Animation.ClockController.Clock" /> beim nächsten Ticken beginnen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bewirkt, dass das Ziel <xref:System.Windows.Media.Animation.Clock> verhält wie seine <xref:System.Windows.Media.Animation.Timeline> des Objekts <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> zum Zeitpunkt des nächsten Ticken festgelegt wurden. Die Zeitachse des tatsächlichen <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Einstellung wird ignoriert (jedoch nicht geändert).  
+  
+ Diese Methode ändert der Zieluhr <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> auf <xref:System.Windows.Media.Animation.ClockState.Active>. Die <xref:System.Windows.Media.Animation.ClockController.Begin%2A> -Methode setzt eine angehaltene Uhr nicht fort.  
+  
+ Diese Methode hat keine Auswirkungen auf die Zeitstruktur, bis das nächste Mal, das ein Takt verarbeitet wird. Als Nebeneffekt werden auch erst dann die entsprechenden Ereignisse ausgelöst. Löst beim Aufrufen dieser Methode die <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> und <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> Ereignisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Clock Clock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.Clock Clock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockController.Clock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Animation.Clock" /> gesteuert, die von diesem <see cref="T:System.Windows.Media.Animation.ClockController" />.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Animation.Clock" /> gesteuert, die von diesem <see cref="T:System.Windows.Media.Animation.ClockController" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.Pause" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hält den Ziel- <see cref="T:System.Windows.Media.Animation.Clock" /> Fortschreiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Anhalten einer <xref:System.Windows.Media.Animation.Clock> unabhängig von seinem aktuellen Status und das Anhalten eine Uhr ändert nicht den aktuellen Zustand. Eine Uhr angehalten werden kann während <xref:System.Windows.Media.Animation.ClockState.Active>, <xref:System.Windows.Media.Animation.ClockState.Stopped>, oder <xref:System.Windows.Media.Animation.ClockState.Filling>. Die einzige Möglichkeit zum angehaltenen Status eine Uhr aufzuheben, ist die Verwendung der <xref:System.Windows.Media.Animation.ClockController.Resume%2A> Methode. Durch das Anhalten einer Uhr implizit hält seine untergeordneten Elemente.  
+  
+ Wenn die Zieluhr bereits angehalten ist, wird durch das Aufrufen dieser Methode hat keine Auswirkungen.  
+  
+ Durch das Anhalten einer Uhr werden die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.Remove" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt die <see cref="T:System.Windows.Media.Animation.Clock" /> zugeordnete <see cref="T:System.Windows.Media.Animation.ClockController" /> aus den Eigenschaften, die es erstellt eine Animation. Die Uhr und deren untergeordneten Uhren wirkt sich nicht mehr auf diese Eigenschaften aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst die <xref:System.Windows.Media.Animation.Clock.RemoveRequested> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie entfernen und eine Uhr interaktiv steuern.  
+  
+ [!code-csharp[ClockController_procedural_snip#ClockControllerSeekExample](~/samples/snippets/csharp/VS_Snippets_Wpf/ClockController_procedural_snip/CSharp/SeekAlignedToLastTickExample.cs#clockcontrollerseekexample)]
+ [!code-vb[ClockController_procedural_snip#ClockControllerSeekExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClockController_procedural_snip/visualbasic/seekalignedtolasttickexample.vb#clockcontrollerseekexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resume">
+      <MemberSignature Language="C#" Value="public void Resume ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resume() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.Resume" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht eine <see cref="T:System.Windows.Media.Animation.Clock" /> zuvor angehaltenen fortgesetzt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können anhalten oder Fortsetzen einer <xref:System.Windows.Media.Animation.Clock> unabhängig von dessen aktuellen Status und das Anhalten oder fortsetzen eine Uhr ändert nicht den aktuellen Zustand. Eine Uhr angehalten werden kann während <xref:System.Windows.Media.Animation.ClockState.Active>, <xref:System.Windows.Media.Animation.ClockState.Stopped>, oder <xref:System.Windows.Media.Animation.ClockState.Filling>. Die einzige Möglichkeit, eine angehaltene Uhren wird mithilfe der <xref:System.Windows.Media.Animation.ClockController.Resume%2A> Methode. Beim Fortsetzen einer Uhr implizit setzt seine untergeordneten Elemente. Beim Aufrufen dieser Methode gemeint, die nicht angehalten wurde, hat keine Auswirkungen.  
+  
+ Fortsetzen einer angehaltenen Uhr werden die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public void Seek (TimeSpan offset, System.Windows.Media.Animation.TimeSeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Seek(valuetype System.TimeSpan offset, valuetype System.Windows.Media.Animation.TimeSeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.Seek(System.TimeSpan,System.Windows.Media.Animation.TimeSeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.TimeSpan" />
+        <Parameter Name="origin" Type="System.Windows.Media.Animation.TimeSeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Offset der Suche, gemessen in der Zeit der Zieluhr. Dieser Offset ist relativ zu der Uhr <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.BeginTime" /> oder <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.Duration" />, abhängig vom Wert der <c>Ursprung</c>.</param>
+        <param name="origin">Ein Wert, der angibt, ob der angegebene Offset relativ zu der Zieluhr ist <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.BeginTime" /> oder <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.Duration" />.</param>
+        <summary>Sucht die Ziel- <see cref="P:System.Windows.Media.Animation.ClockController.Clock" /> um den angegebenen Betrag, wenn das nächste Ticken auftritt. Wenn die Zieluhr beendet wird, erfolgt die erneute Aktivierung durch einen Suchvorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seek-Vorgänge nehmen nicht die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> oder <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A> Einstellungen der Zeitachse dieser Uhr berücksichtigt: die Uhr wird behandelt, als wären die Zeitachse wurde eine <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> 1 und Nein <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>.  
+  
+ Diese Methode ändert der Uhr <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> auf <xref:System.Windows.Media.Animation.ClockState.Active>. Diese Methode hat keine Auswirkungen auf die Zeitstruktur, bis das nächste Mal, das ein Takt verarbeitet wird. Als Nebeneffekt werden auch erst dann die entsprechenden Ereignisse ausgelöst.  
+  
+ Suchen eines Storyboards werden die <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeedInvalidated> und <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> Ereignisse.  
+  
+ Wenn die Zieluhr untergeordnete Elemente verfügt, wird die aktuelle Uhrzeit entsprechend aktualisiert.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Suche mithilfe einer <xref:System.Windows.Media.Animation.ClockController>.  
+  
+ [!code-csharp[ClockController_procedural_snip#ClockControllerSeekExample](~/samples/snippets/csharp/VS_Snippets_Wpf/ClockController_procedural_snip/CSharp/SeekAlignedToLastTickExample.cs#clockcontrollerseekexample)]
+ [!code-vb[ClockController_procedural_snip#ClockControllerSeekExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClockController_procedural_snip/visualbasic/seekalignedtolasttickexample.vb#clockcontrollerseekexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeekAlignedToLastTick">
+      <MemberSignature Language="C#" Value="public void SeekAlignedToLastTick (TimeSpan offset, System.Windows.Media.Animation.TimeSeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SeekAlignedToLastTick(valuetype System.TimeSpan offset, valuetype System.Windows.Media.Animation.TimeSeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick(System.TimeSpan,System.Windows.Media.Animation.TimeSeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.TimeSpan" />
+        <Parameter Name="origin" Type="System.Windows.Media.Animation.TimeSeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Offset der Suche, gemessen in der Zeit der Zieluhr. Dieser Offset ist relativ zu der Uhr <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.BeginTime" /> oder <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.Duration" />, abhängig vom Wert der <c>Ursprung</c>.</param>
+        <param name="origin">Ein Wert, der angibt, ob der angegebene Offset relativ zu der Zieluhr ist <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.BeginTime" /> oder <see cref="F:System.Windows.Media.Animation.TimeSeekOrigin.Duration" />.</param>
+        <summary>Sucht die Ziel- <see cref="T:System.Windows.Media.Animation.Clock" /> um sofort auf den angegebenen Betrag. Wenn die Zieluhr beendet wird, erfolgt die erneute Aktivierung durch einen Suchvorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seek-Vorgänge nehmen nicht die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> oder <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A> Einstellungen der Zeitachse dieser Uhr berücksichtigt: die Uhr wird behandelt, als wären die Zeitachse wurde eine <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> 1 und Nein <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>.  
+  
+ <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A>Richtet die gesuchte Zeit der Uhr mit dem letzten Ticken aus. Werte werden sofort aktualisiert, um die Änderungen wider <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A>, auch wenn der Bildschirm nicht bis die Updates Bildschirm diese Änderungen widerspiegeln.  
+  
+ Wenn die Zieluhr untergeordnete Elemente verfügt, wird die aktuelle Uhrzeit entsprechend aktualisiert.  
+  
+ Diese Methode ändert der Uhr <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> auf <xref:System.Windows.Media.Animation.ClockState.Active>.  
+  
+ Suchen eines Storyboards werden die <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeedInvalidated> und <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> Ereignisse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt sowohl den <xref:System.Windows.Media.Animation.ClockController.Seek%2A> und <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> Methoden eine <xref:System.Windows.Media.Animation.ClockController>.  
+  
+ [!code-csharp[ClockController_procedural_snip#ClockControllerSeekExample](~/samples/snippets/csharp/VS_Snippets_Wpf/ClockController_procedural_snip/CSharp/SeekAlignedToLastTickExample.cs#clockcontrollerseekexample)]
+ [!code-vb[ClockController_procedural_snip#ClockControllerSeekExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClockController_procedural_snip/visualbasic/seekalignedtolasttickexample.vb#clockcontrollerseekexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipToFill">
+      <MemberSignature Language="C#" Value="public void SkipToFill ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SkipToFill() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.SkipToFill" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die aktuelle Uhrzeit des Ziels <see cref="T:System.Windows.Media.Animation.Clock" /> an das Ende seines Aktivitätszeitraums fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verschiebt der Zieluhr schon an das Ende seines Aktivitätszeitraums fest; das Verhalten der Uhr zu diesem Zeitpunkt wird angegeben, indem die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> festlegen, der seine <xref:System.Windows.Media.Animation.Timeline>. Wenn der Zeitachse <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> -Eigenschaftensatz auf <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, füllt; ist die Eigenschaft, um festgelegt wird die Uhr <xref:System.Windows.Media.Animation.FillBehavior.Stop>, die Uhr beendet.  
+  
+ Diese Methode verfügt über ein nur wirksam, wenn die Zieluhr <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> ist <xref:System.Windows.Media.Animation.ClockState.Active>.  
+  
+ Diese Methode hat keine Auswirkungen auf die Zeitstruktur, bis das nächste Mal, das ein Takt verarbeitet wird. Als Nebeneffekt werden auch erst dann die entsprechenden Ereignisse ausgelöst.  
+  
+ Vorlauf ein Storyboard auf die Füllung Zeitraum Trigger die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> und <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> Ereignisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeedRatio">
+      <MemberSignature Language="C#" Value="public double SpeedRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SpeedRatio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockController.SpeedRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die interaktionsgeschwindigkeit der Ziel- <see cref="T:System.Windows.Media.Animation.Clock" />.</summary>
+        <value>Ein endlicher Wert größer als 0 (null), der die Interaktionsgeschwindigkeit der Zieluhr beschreibt. Dieser Wert wird anhand des Werts multipliziert die <see cref="P:System.Windows.Media.Animation.Timeline.SpeedRatio" /> der Uhr <see cref="T:System.Windows.Media.Animation.Timeline" />. Z. B. wenn der Zeitachse <see cref="P:System.Windows.Media.Animation.Timeline.SpeedRatio" /> ist 0,5 und die <see cref="T:System.Windows.Media.Animation.ClockController" /> des Objekts <see cref="P:System.Windows.Media.Animation.ClockController.SpeedRatio" /> 3.0 ist, auf die Zeitachse mit 1,5-facher normale Geschwindigkeit (0,5 * 3,0) verschoben. Der Standardwert ist 1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkungen, bis das nächste Ticken. Wenn Sie diese Eigenschaft festlegen, und klicken Sie dann deren Wert vor dem Abrufen wird das nächste Ticken auftritt, erhalten Sie den alten Wert. Diese Eigenschaft wird den neuen Wert nach dem nächsten Ticken zurück.  
+  
+ Durch Festlegen dieser Eigenschaft ändert sich nicht auf den Wert von der zugrunde liegenden Zeitachse <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>.  
+  
+ Durch Festlegen dieser Eigenschaft löst der Zieluhr <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeedInvalidated> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockController.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hält den Ziel- <see cref="T:System.Windows.Media.Animation.Clock" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ändert der Zieluhr <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> auf <xref:System.Windows.Media.Animation.Clock.Stopped%2A>.  
+  
+ Ein <xref:System.Windows.Media.Animation.Clock.Stopped%2A> Uhr kann neu gestartet werden, mithilfe der <xref:System.Windows.Media.Animation.ClockController.Begin%2A>, <xref:System.Windows.Media.Animation.ClockController.Seek%2A>, oder <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> Methode.  
+  
+ Diese Methode hat keine Auswirkungen auf die Zeitstruktur, bis das nächste Mal, das ein Takt verarbeitet wird. Als Nebeneffekt werden auch erst dann die entsprechenden Ereignisse ausgelöst.  
+  
+ Beenden einer Uhr werden die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> und <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> Ereignisse, aber nicht die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

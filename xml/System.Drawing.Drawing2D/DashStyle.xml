@@ -1,0 +1,132 @@
+<Type Name="DashStyle" FullName="System.Drawing.Drawing2D.DashStyle">
+  <TypeSignature Language="C#" Value="public enum DashStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DashStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.DashStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Stil der mit gezeichneten gestrichelten Linien eine <see cref="T:System.Drawing.Pen" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definieren eine benutzerdefinierten <xref:System.Drawing.Pen.DashStyle%2A>legen die <xref:System.Drawing.Pen.DashPattern%2A> Eigenschaft von der <xref:System.Drawing.Pen>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Erstellen eines Stiftes und Festlegen der <xref:System.Drawing.Pen.DashStyle%2A> Eigenschaft mit dem <xref:System.Drawing.Drawing2D.DashStyle> Enumeration.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, enthält ein <xref:System.Windows.Forms.Button> mit dem Namen `Button3`. Fügen Sie den Code in das Formular, und ordnen Sie die `Button3_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ImageExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ImageExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.DashStyle Custom = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.DashStyle.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine benutzerdefinierte Strichformat an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dash">
+      <MemberSignature Language="C#" Value="Dash" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.DashStyle Dash = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.DashStyle.Dash" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Zeile, Gedankenstriche enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DashDot">
+      <MemberSignature Language="C#" Value="DashDot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.DashStyle DashDot = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.DashStyle.DashDot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Zeile, bestehend aus einem sich wiederholenden Strich-Punkt an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DashDotDot">
+      <MemberSignature Language="C#" Value="DashDotDot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.DashStyle DashDotDot = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.DashStyle.DashDotDot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Zeile, bestehend aus einem sich wiederholenden Strich-Punkt-Punkt an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dot">
+      <MemberSignature Language="C#" Value="Dot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.DashStyle Dot = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.DashStyle.Dot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Zeile aus Punkten bestehen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Solid">
+      <MemberSignature Language="C#" Value="Solid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.DashStyle Solid = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.DashStyle.Solid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine durchgehende Linie an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

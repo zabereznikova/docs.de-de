@@ -1,0 +1,966 @@
+<Type Name="NumericUpDown" FullName="System.Windows.Forms.NumericUpDown">
+  <TypeSignature Language="C#" Value="public class NumericUpDown : System.Windows.Forms.UpDownBase, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NumericUpDown extends System.Windows.Forms.UpDownBase implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.NumericUpDown" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.UpDownBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ValueChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Windows-Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) dar, in dem numerische Werte angezeigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.NumericUpDown> Steuerelement enthält einen einzelnen numerischen Wert, der inkrementiert oder dekrementiert durch Klicken auf die auf- oder ab-Schaltflächen des Steuerelements sein kann. Der Benutzer kann auch einen Wert eingeben, es sei denn, die <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> -Eigenschaftensatz auf `true`.  
+  
+ Die numerische Anzeige formatiert werden kann, durch Festlegen der <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>, oder <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Eigenschaften. Hexadezimale Werten im Steuerelement anzeigen, legen Sie die <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaft `true`. Ein Tausendertrennzeichen angezeigt in Dezimalzahlen, wenn dies angebracht ist, legen Sie die <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Eigenschaft `true`. Die Anzahl der Ziffern nach dem Dezimaltrennzeichen angezeigt, legen die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Eigenschaft, um die Anzahl der anzuzeigenden Dezimalstellen.  
+  
+ Legen Sie zum Angeben des zulässigen Bereichs von Werten für das Steuerelement die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaften. Legen Sie die <xref:System.Windows.Forms.NumericUpDown.Increment%2A> -Wert den Wert, um inkrementiert oder dekrementiert werden an die <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft klickt der Benutzer den nach-oben bzw. abwärts gerichteten Pfeil. Sie können die Geschwindigkeit, mit dem das Steuerelement verschoben Zahlen durchläuft, wenn der Benutzer die auf- bzw. Pfeil nach unten durch Festlegen von erhöhen die <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> oder <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methoden aufgerufen werden, entweder im Code oder mithilfe der auf die auf- oder ab-Schaltflächen, der neue Wert wird überprüft und das Steuerelement mit dem neuen Wert im entsprechenden Format aktualisiert. Insbesondere wenn die <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Forms.NumericUpDown.ParseEditText%2A> Methode wird vor der Überprüfung oder Aktualisierung des Werts aufgerufen. Der Wert wird dann überprüft, ob zwischen den <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Werte, und die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> -Methode aufgerufen wird.  
+  
+ Beginnend mit der [!INCLUDE[net_2015](~/includes/net-2015-md.md)]die <xref:System.Windows.Forms.NumericUpDown> Steuerelement geändert, die basierend auf der-DPI-Systemeinstellung, wenn die Datei "App.config" den folgenden Eintrag enthält:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NumericUpDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.NumericUpDown" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accelerations">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.NumericUpDownAccelerationCollection Accelerations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.NumericUpDownAccelerationCollection Accelerations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Accelerations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.NumericUpDownAccelerationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von sortierten Beschleunigungsobjekten für das <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelement ab.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.NumericUpDownAccelerationCollection" /> mit den sortierten Beschleunigungsobjekten für das <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> Eigenschaft kann verwendet werden, um die Geschwindigkeit, mit denen die <xref:System.Windows.Forms.NumericUpDown> wechselt über eine große Menge von Zahlen, wenn der Benutzer, die nach-oben hält oder nach-unten, mit der Tastatur oder mit der Maus. Durch Festlegen dieser Eigenschaft die Anzahl der absteigend <xref:System.Windows.Forms.NumericUpDown.ValueChanged> Ereignisse, die auftreten, je nach der <xref:System.Windows.Forms.NumericUpDownAcceleration.Increment%2A> und <xref:System.Windows.Forms.NumericUpDownAcceleration.Seconds%2A> Eigenschaftswerte, die für die einzelnen angegeben <xref:System.Windows.Forms.NumericUpDownAcceleration> Objekt in der Auflistung. Die <xref:System.Windows.Forms.NumericUpDownAcceleration> in der Auflistung enthaltenen Objekte sind sortiert nach ihren <xref:System.Windows.Forms.NumericUpDownAcceleration.Seconds%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, und rufen die `InitializeAcceleratedUpDown` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode. Während der Code ausgeführt wird, drücken Sie und halten Sie die nach-oben oder nach-unten Sie-Taste, um die Beschleunigung auftreten, finden Sie unter.  
+  
+ [!code-csharp[System.Windows.Forms.MiscBugDriven#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/CS/Form1.cs#6)]
+ [!code-vb[System.Windows.Forms.MiscBugDriven#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt die Initialisierung eines <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelements, das in einem Formular oder von einer anderen Komponente verwendet wird. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt für die Barrierefreiheit für das Steuerelement.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.AccessibleObject" /> für das Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecimalPlaces">
+      <MemberSignature Language="C#" Value="public int DecimalPlaces { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DecimalPlaces" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.DecimalPlaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die im Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) anzuzeigende Anzahl von Dezimalstellen ab oder legt diese fest.</summary>
+        <value>Die Anzahl von Dezimalstellen, die im Drehfeld angezeigt werden. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> Methode wird aufgerufen, um die Anzeige des Drehfelds in das neue Format zu aktualisieren.  
+  
+ Das entsprechende Dezimalsymbol richtet sich nach den regionalen Einstellungen des Betriebssystems des Benutzers.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der zugewiesene Wert ist kleiner als 0.  
+  
+ - oder -   
+  
+ Der zugewiesene Wert ist größer als 99.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DownButton">
+      <MemberSignature Language="C#" Value="public override void DownButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DownButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.DownButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dekrementiert den Wert des Drehfelds (auch als Auf-Ab-Steuerelement bezeichnet).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methode wird aufgerufen, entweder im Code oder durch Klicken auf die Schaltfläche unten, der neue Wert wird überprüft und das Steuerelement mit dem neuen Wert im entsprechenden Format aktualisiert. Insbesondere wenn die <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Forms.NumericUpDown.ParseEditText%2A> Methode wird vor der Überprüfung oder Aktualisierung des Werts aufgerufen. Der Wert wird dann überprüft, um zwischen werden die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Werte, und die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Initialisierung eines <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelements, das in einem Formular oder von einer anderen Komponente verwendet wird. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hexadecimal">
+      <MemberSignature Language="C#" Value="public bool Hexadecimal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Hexadecimal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Hexadecimal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der im Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) enthaltene Wert im Hexadezimalformat angezeigt werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Wert im Drehfeld im Hexadezimalformat angezeigt werden soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> Methode wird aufgerufen, um die Anzeige des Drehfelds in das neue Format zu aktualisieren.  
+  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaft sollte festgelegt werden, um <xref:System.Int32.MaxValue?displayProperty=nameWithType> und <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Eigenschaft sollte festgelegt werden, um <xref:System.Int32.MinValue?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public decimal Increment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal Increment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Increment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert für das Inkrementieren oder Dekrementieren des Drehfelds (auch als Auf-Ab-Steuerelement bezeichnet) ab, wenn auf die Auf- bzw. Ab-Schaltfläche geklickt wird, oder legt diesen fest.</summary>
+        <value>Der Wert, um den die <see cref="P:System.Windows.Forms.NumericUpDown.Value" />-Eigenschaft inkrementiert oder dekrementiert werden soll, wenn im Drehfeld auf die Auf- bzw. Ab-Schaltflächen geklickt wird. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Klicken auf die Schaltfläche "nach" die <xref:System.Windows.Forms.NumericUpDown.Value%2A> -Eigenschaft zu erhöhen, indem die Menge, gemäß der <xref:System.Windows.Forms.NumericUpDown.Increment%2A> -Eigenschaft und einen neuen Ansatz der <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaft. Bewirkt, dass Sie auf die Schaltfläche nach unten der <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft, um den angegebenen Betrag dekrementierte werden die <xref:System.Windows.Forms.NumericUpDown.Increment%2A> -Eigenschaft und einen neuen Ansatz der <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der zugewiesene Wert ist nicht größer als oder gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public decimal Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den maximalen Wert für das Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) ab oder legt diesen fest.</summary>
+        <value>Der maximale Wert für das Drehfeld. Der Standardwert ist 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Eigenschaft ausgewertet wird und die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> Methode wird aufgerufen. Wenn die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> -Eigenschaft ist größer als die neue <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> -Eigenschaft, die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Eigenschaftswert festgelegt ist gleich der <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Wert. Wenn die aktuelle <xref:System.Windows.Forms.NumericUpDown.Value%2A> ist größer als die neue <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Wert. die <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaftswert festgelegt ist gleich der <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public decimal Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den kleinsten zulässigen Wert für das Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) ab oder legt diesen fest.</summary>
+        <value>Der kleinste zulässige Wert für das Drehfeld. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaft ausgewertet wird und die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> Methode wird aufgerufen. Wenn die neue <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Eigenschaftswert ist größer als die <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaftswert, der <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> gleich Wert wird festgelegt, die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Wert. Wenn die <xref:System.Windows.Forms.NumericUpDown.Value%2A> ist kleiner als die neue <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Wert, der <xref:System.Windows.Forms.NumericUpDown.Value%2A> -Eigenschaft ebenfalls gleich festgelegt die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.KeyDown" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.NumericUpDown.OnKeyDown%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.NumericUpDown.OnKeyDown(System.Windows.Forms.KeyEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.NumericUpDown.OnKeyDown(System.Windows.Forms.KeyEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.OnKeyUp(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.KeyUp" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.NumericUpDown.OnKeyUp%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.NumericUpDown.OnKeyUp(System.Windows.Forms.KeyEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.NumericUpDown.OnKeyUp(System.Windows.Forms.KeyEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.OnLostFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.LostFocus" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.NumericUpDown.OnLostFocus%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.NumericUpDown.OnLostFocus(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.NumericUpDown.OnLostFocus(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxKeyPress">
+      <MemberSignature Language="C#" Value="protected override void OnTextBoxKeyPress (object source, System.Windows.Forms.KeyPressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextBoxKeyPress(object source, class System.Windows.Forms.KeyPressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.Windows.Forms.KeyPressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyPressEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.KeyPress" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.NumericUpDown> Steuerelement akzeptiert nur Ziffern, das Minuszeichen, Dezimaltrennzeichen und Tastatureingaben, z. B. RÜCKTASTE bearbeiten. Wenn die <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Forms.NumericUpDown> hexadezimale Ziffern akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnValueChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValueChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.OnValueChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.NumericUpDown.ValueChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.NumericUpDown.OnValueChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.NumericUpDown.OnValueChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.NumericUpDown.OnValueChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen den Rändern eines <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelements und dessen Inhalt ab oder legt diesen fest.</summary>
+        <value>
+          <see cref="F:System.Windows.Forms.Padding.Empty" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.NumericUpDown.Padding%2A> wirken sich nicht auf die Darstellung des-Eigenschaft der <xref:System.Windows.Forms.NumericUpDown> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NumericUpDown.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.NumericUpDown.Padding" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseEditText">
+      <MemberSignature Language="C#" Value="protected void ParseEditText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ParseEditText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.ParseEditText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den im Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) angezeigten Text in einen numerischen Wert und wertet diesen aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> -Eigenschaftensatz auf `true`, der angezeigten Text wird in einen numerischen Wert konvertiert, sodass überprüft werden kann, werden zwischen den <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaftswerte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den im <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelement anzuzeigenden Text ab oder legt diesen fest.</summary>
+        <value>
+          <see langword="Null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.NumericUpDown.Text%2A> hat keine Auswirkung auf das Aussehen von der <xref:System.Windows.Forms.NumericUpDown> steuern; daher es im Designer und von IntelliSense ausgeblendet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NumericUpDown.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.NumericUpDown.Text" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThousandsSeparator">
+      <MemberSignature Language="C#" Value="public bool ThousandsSeparator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThousandsSeparator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.ThousandsSeparator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob im Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) ggf. ein Tausendertrennzeichen angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn im Drehfeld ggf. ein Tausendertrennzeichen angezeigt wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> Methode wird aufgerufen, um die Anzeige des Drehfelds in das neue Format zu aktualisieren.  
+  
+ Die entsprechenden Tausende Trennzeichen richtet sich nach den regionalen Einstellungen des Betriebssystems des Benutzers.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Windows.Forms.NumericUpDown" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge enthält den Typ und die Werte für die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpButton">
+      <MemberSignature Language="C#" Value="public override void UpButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.UpButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inkrementiert den Wert des Drehfelds (auch als Auf-Ab-Steuerelement bezeichnet).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> Methode wird aufgerufen, entweder im Code oder durch Klicken auf die Schaltfläche "oben", der neue Wert wird überprüft und das Steuerelement mit dem neuen Wert im entsprechenden Format aktualisiert. Insbesondere wenn <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> festgelegt ist, um `true`, <xref:System.Windows.Forms.NumericUpDown.ParseEditText%2A> aufgerufen wird, bevor überprüfen oder aktualisieren den Wert. Der Wert wird dann überprüft, um zwischen werden die <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Werte und die <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateEditText">
+      <MemberSignature Language="C#" Value="protected override void UpdateEditText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateEditText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.UpdateEditText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt den aktuellen Wert des Drehfelds (auch als Auf-Ab-Steuerelement bezeichnet) im entsprechenden Format an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie das Drehfeld nicht initialisiert wird, wird der aktuelle Wert überprüft, um zwischen den <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Werte und in das richtige Format für die Anzeige im Steuerelement konvertiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateEditText">
+      <MemberSignature Language="C#" Value="protected override void ValidateEditText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateEditText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NumericUpDown.ValidateEditText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Validiert und aktualisiert den im Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) angezeigten Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.NumericUpDown.ValidateEditText%2A> Methodenaufrufe der <xref:System.Windows.Forms.NumericUpDown.ParseEditText%2A> und <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> Methoden zum Überprüfen und aktualisieren die Anzeige des Drehfelds.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public decimal Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NumericUpDown.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den dem Drehfeld (auch als Auf-Ab-Steuerelement bezeichnet) zugewiesenen Wert ab oder legt diesen fest.</summary>
+        <value>Der numerische Wert des <see cref="T:System.Windows.Forms.NumericUpDown" />-Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft festgelegt ist, wird der neue Wert wird überprüft, um zwischen den <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> und <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> Werte. Anschluss der <xref:System.Windows.Forms.NumericUpDown.UpdateEditText%2A> Methode wird aufgerufen, um die Anzeige des Drehfelds mit dem neuen Wert im entsprechenden Format zu aktualisieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, einige seiner allgemeinen Eigenschaften festgelegt, und ermöglicht dem Benutzer, einige dieser Eigenschaften zur Laufzeit ändern. Dieser Code geht davon aus drei <xref:System.Windows.Forms.CheckBox> Steuerelemente in einem Formular und Handler für platziert wurden ihre <xref:System.Windows.Forms.Control.Click> Ereignisse instanziiert wurden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>, <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>, und <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaften werden festgelegt, auf die <xref:System.Windows.Forms.Control.Click> -Ereignis für jedes Kontrollkästchen.  
+  
+ [!code-cpp[Classic NumericUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic NumericUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NumericUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic NumericUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic NumericUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic NumericUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der zugewiesene Wert ist kleiner als das <see cref="P:System.Windows.Forms.NumericUpDown.Minimum" /> Eigenschaftswert.  
+  
+ - oder -   
+  
+ Der zugewiesene Wert ist größer als die <see cref="P:System.Windows.Forms.NumericUpDown.Maximum" /> Eigenschaftswert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NumericUpDown.ValueChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="P:System.Windows.Forms.NumericUpDown.Value" />-Eigenschaft geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Windows.Forms.NumericUpDown.ValueChanged> -Ereignis auftritt, die <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft kann im Code geändert werden, durch Klicken auf den nach-oben oder unten Schaltfläche oder durch den Benutzer, die Eingabe des neuen Werts, der vom Steuerelement gelesen wird. Der neue Wert wird gelesen, wenn der Benutzer die EINGABETASTE drückt oder das Steuerelement verlässt. Wenn der Benutzer einen neuen Wert eingibt, und klickt dann auf den nach-oben oder nach-unten-Schaltfläche, die <xref:System.Windows.Forms.NumericUpDown.ValueChanged> Ereignis wird zweimal auftreten.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NumericUpDown.ValueChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NumericUpDown> mit dem Namen `NumericUpDown1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NumericUpDown.ValueChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#515](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#515)]
+ [!code-vb[System.Windows.Forms.EventExamples#515](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#515)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

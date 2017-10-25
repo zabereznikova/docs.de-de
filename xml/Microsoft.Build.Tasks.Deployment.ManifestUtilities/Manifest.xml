@@ -1,0 +1,597 @@
+<Type Name="Manifest" FullName="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest">
+  <TypeSignature Language="C#" Value="public abstract class Manifest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Manifest extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisfunktionalität dar, die alle unterstützten Manifesttypen aufweisen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Manifest ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyIdentity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity AssemblyIdentity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity AssemblyIdentity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.AssemblyIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Identität des Manifests ab oder legt sie fest.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" /> Objekt, das die Identität des Manifests darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection AssemblyReferences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection AssemblyReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.AssemblyReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von Assemblys ab, auf den das Manifest verweist.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection" />-Objekt, das den Satz von Assemblys darstellt, auf den das Manifest verweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Textbeschreibung für das Manifest ab oder legt sie fest.</summary>
+        <value>Eine Zeichenfolge, die das Manifest beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPoint">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference EntryPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference EntryPoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.EntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Assemblyverweis ab, der den Einstiegspunkt der Anwendung darstellt, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference" />-Objekt zur Darstellung eines Assemblyverweises, der dem Einstiegspunkt der Anwendung entspricht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection FileReferences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection FileReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.FileReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von Dateien ab, auf den das Manifest verweist.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection" /> Objekt, das den Satz von Dateien, die das Manifest verweist darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream InputStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream InputStream" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eingabedatenstrom ab, aus dem das Manifest gelesen wurde, oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" /> Objekt, das den Eingabedatenstrom, aus dem das Manifest gelesen wurde, darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter>verwendet diese Eigenschaft, um Eingaben wiederherzustellen, die nicht in der objektdarstellung dargestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputMessages">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection OutputMessages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection OutputMessages" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.OutputMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der aktuellen Fehler- und Warnmeldungen ab.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection" /> Objekt, das eine Auflistung von aktuellen Fehler- und Warnmeldungen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Manifest im schreibgeschützten Modus oder im Lese-/Schreibmodus ausgeführt wird, oder legt diesen Wert fest.</summary>
+        <value>Ein <see langword="Boolean" /> Wert, der angibt, ob das Manifest im schreibgeschützten oder Lese-/ Schreibzugriff Modus betrieben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nur ein Manifest lesen müssen, legen Sie dieses Flag auf `True`. Wenn Sie ein neues Manifest schreiben müssen, legen Sie dieses Flag auf `False`. Die Standardeinstellung ist `False`. Diese Eigenschaft stellt zusätzlichen Kontext für den Manifestgenerator bereit und wirkt sich auf wie einige Fehlermeldungen gemeldet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveFiles">
+      <MemberSignature Language="C#" Value="public void ResolveFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.ResolveFiles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Findet alle angegebenen Assembly- und Dateiverweise durch die Suche in demselben Verzeichnis wie das geladene Manifest oder im aktuellen Verzeichnis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Speicherort der einzelnen referenzierten Assemblys und Datei für den Hash für die Berechnung und Assembly identitätsauflösung erforderlich ist. Alle resultierenden Fehler oder Warnungen werden gemeldet, der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveFiles">
+      <MemberSignature Language="C#" Value="public void ResolveFiles (string[] searchPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveFiles(string[] searchPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.ResolveFiles(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPaths" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="searchPaths">Ein Array von Zeichenfolgen, das die zu durchsuchenden Verzeichnisse angibt.</param>
+        <summary>Bestimmt alle angegebenen Assembly- und Dateiverweise, indem die angegebenen Verzeichnisse durchsucht werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Speicherort der einzelnen referenzierten Assemblys und Datei für den Hash für die Berechnung und Assembly identitätsauflösung erforderlich ist. Alle resultierenden Fehler oder Warnungen werden gemeldet, der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourcePath">
+      <MemberSignature Language="C#" Value="public string SourcePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourcePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.SourcePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Speicherorts, an dem das Manifest geladen oder gespeichert wurde.</summary>
+        <value>Eine Zeichenfolge, die den Speicherort angibt, an dem das Manifest geladen oder gespeichert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Manifestnamen.</summary>
+        <returns>Eine Zeichenfolge, die den Namen des Manifests angibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="UpdateFileInfo">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Aktualisiert die Dateiinformationen für jede Assembly und Datei, auf die verwiesen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Dateiinformationen enthält einen Hashberechnung und einer Dateigröße für jede Datei verwiesen wird und die Assembly. Darüber hinaus wird die Identität der Assembly für alle referenzierten Assemblys mit angegebene Assemblyidentität abgerufen. Alle resultierenden Fehler oder Warnungen werden gemeldet, der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="UpdateFileInfo">
+      <MemberSignature Language="C#" Value="public void UpdateFileInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateFileInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Dateiinformationen für jede Assembly und Datei, auf die verwiesen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Dateiinformationen enthält einen Hashberechnung und einer Dateigröße für jede Datei verwiesen wird und die Assembly. Darüber hinaus wird die Identität der Assembly für alle referenzierten Assemblys mit angegebene Assemblyidentität abgerufen. Alle resultierenden Fehler oder Warnungen werden gemeldet, der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateFileInfo">
+      <MemberSignature Language="C#" Value="public void UpdateFileInfo (string targetFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateFileInfo(string targetFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFrameworkVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkVersion">Die Version des das Zielframework verwenden. NULL, wenn keine Framework-Zielversion. Wenn keine Zielframeworkversion verwendet sha256-Algorithmus.</param>
+        <summary>Aktualisiert die Dateiinformationen für jede Assembly verwiesen wird und die Datei, mit der angegebenen Version des Zielframeworks.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Dateiinformationen enthält einen Hashberechnung und einer Dateigröße für jede Datei verwiesen wird und die Assembly. Darüber hinaus wird die Identität der Assembly für alle referenzierten Assemblys mit angegebene Assemblyidentität abgerufen. Alle resultierenden Fehler oder Warnungen werden gemeldet, der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt verschiedene Überprüfungen aus, um die Gültigkeit des Manifests zu bestätigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle resultierenden Fehler oder Warnungen werden gemeldet, der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatePlatform">
+      <MemberSignature Language="C#" Value="protected void ValidatePlatform ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ValidatePlatform() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.ValidatePlatform" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft die Manifestplattform.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle resultierenden Fehler oder Warnungen werden gemeldet, der <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlAssemblyIdentity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity XmlAssemblyIdentity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity XmlAssemblyIdentity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.XmlAssemblyIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("AssemblyIdentity")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.AssemblyIdentity" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Ein Objekt, das die Identität einer Assembly angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlAssemblyReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference[] XmlAssemblyReferences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference[] XmlAssemblyReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.XmlAssemblyReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArray("AssemblyReferences")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.AssemblyReferences" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Ein Array von Manifestassemblyverweisen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlDescription">
+      <MemberSignature Language="C#" Value="public string XmlDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.XmlDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("Description")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.Description" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlFileReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference[] XmlFileReferences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference[] XmlFileReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.XmlFileReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArray("FileReferences")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer Eigenschaft, die verwendet wird, um die <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.FileReferences" />-Eigenschaft in eine XML-Datei zu serialisieren.</summary>
+        <value>Ein Array von Manifestdatei-Verweisobjekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchema">
+      <MemberSignature Language="C#" Value="public string XmlSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSchema" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.XmlSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("Schema")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab oder legt diese fest, die verwendet wird, um das Schema in eine XML-Datei zu serialisieren.</summary>
+        <value>Das Schema in eine XML-Datei.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

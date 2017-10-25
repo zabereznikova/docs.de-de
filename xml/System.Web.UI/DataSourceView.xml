@@ -1,0 +1,772 @@
+<Type Name="DataSourceView" FullName="System.Web.UI.DataSourceView">
+  <TypeSignature Language="C#" Value="public abstract class DataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataSourceView extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dient als Basisklasse für alle Klassen der Datenquellenansicht, die definieren, das die Funktionen des Datenquellen-Steuerelementen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt eine Datenbindungsarchitektur, die Webserver-Steuerelemente binden an Daten auf konsistente Weise ermöglicht. Webserversteuerelemente, die an Daten gebunden werden als datengebundene Steuerelemente und die Klassen, die zu ermöglichen, dass die Bindung heißen Datenquellensteuerelemente bezeichnet. Datenquellensteuerelemente können jede beliebige Datenquelle darstellen: eine relationale Datenbank, eine Datei, einen Stream, ein Geschäftsobjekt usw.. Datenquelle steuert die Darstellung der Daten auf konsistente Weise für datengebundene Steuerelemente, unabhängig von der Quelle oder das Format der zugrunde liegenden Daten.  
+  
+ Verwenden Sie die Datenquellen-Steuerelementen, die bereitgestellt werden, mit ASP.NET einschließlich <xref:System.Web.UI.WebControls.SqlDataSource>, <xref:System.Web.UI.WebControls.AccessDataSource>, und <xref:System.Web.UI.WebControls.XmlDataSource>, um die meisten Webentwicklungsaufgaben auszuführen. Sie verwenden die Basis <xref:System.Web.UI.DataSourceControl> und <xref:System.Web.UI.DataSourceView> quellcodeverwaltung für Klassen, wenn Sie Ihren eigenen benutzerdefinierten Daten implementieren möchten.  
+  
+ Sie können ein Datenquellensteuerelement vorstellen, als die Kombination der <xref:System.Web.UI.IDataSource> Objekt und der zugehörigen Liste der Daten, die von Datenquellensichten aufgerufen. Jede Liste der Daten wird dargestellt, indem ein <xref:System.Web.UI.DataSourceView> Objekt. Die <xref:System.Web.UI.DataSourceView> Klasse ist die Basisklasse für alle Datenquellensichten oder Listen der Daten, die Datenquellen-Steuerelementen zugeordnet. Datenquellensichten definieren, das die Funktionen des ein Datenquellen-Steuerelement. Da der zugrunde liegenden Datenspeicher eine oder mehrere Listen der Daten enthält, ist ein Datenquellen-Steuerelement immer mindestens eine benannte Datenquellensichten zugeordnet. Datenquellen-Steuerelements verwendet die <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methode, um das Auflisten der Daten Datenquellensichten, die aktuell zugeordneten Datenquellen-Steuerelements und der <xref:System.Web.UI.DataSourceControl.GetView%2A> Methode, um eine Instanz einer bestimmten Ansicht anhand des Namens abzurufen.  
+  
+ Alle <xref:System.Web.UI.DataSourceView> Objekte unterstützen das Abrufen von Daten aus der zugrunde liegenden Datenquelle mithilfe der <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Methode. Alle Ansichten unterstützen optional eine Reihe grundlegende Vorgänge, wie z. B. <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A>, <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A>, und <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A>. Ein datengebundenes Steuerelement erkennen, das die Funktionen des ein Datenquellensteuerelement durch Abrufen von einer Datenquelle zugeordneten Daten anzeigen, mit der <xref:System.Web.UI.DataSourceControl.GetView%2A> und <xref:System.Web.UI.DataSourceControl.GetViewNames%2A> Methoden, und durch Abfragen der Sicht zur Entwurfszeit oder zur Laufzeit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.DataSourceView> Klasse zum Erstellen einer stark typisierten Ansicht-Klasse für ein Datenquellen-Steuerelement. Die `CsVDataSourceView` Klasse definiert, das die Funktionen des die `CsvDataSource` Datenquellensteuerelement und stellt eine Implementierung für datengebundene Steuerelemente mit Daten in Dateien mit kommagetrennten Werten (CSV) gespeichert. Weitere Informationen zu den `CsvDataSource` Datenquellensteuerelement, finden Sie unter der <xref:System.Web.UI.DataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#5)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataSourceView (System.Web.UI.IDataSource owner, string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.IDataSource owner, string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.#ctor(System.Web.UI.IDataSource,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.IDataSource" />
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die Datenquelle zu steuern, die die <see cref="T:System.Web.UI.DataSourceView" /> zugeordnet ist.</param>
+        <param name="viewName">Der Name des <see cref="T:System.Web.UI.DataSourceView" />-Objekts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataSourceView" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="viewName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public virtual bool CanDelete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.CanDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.DataSourceView" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" /> -Objekt unterstützt die <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" /> Vorgang.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Gibt die basisklassenimplementierung <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.CanDelete%2A> -Eigenschaft entspricht nicht nur eine Möglichkeit, Datenquellen-Steuerelements, sondern auch, ob es derzeit geeignet ist, einen Vorgang auszuführen. Beispielsweise, obwohl eine Datenquellensicht unterstützt die <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Vorgang im Allgemeinen gilt: Wenn eine erforderliche Eigenschaft oder andere Daten nicht festgelegt ist, die <xref:System.Web.UI.DataSourceView.CanDelete%2A> -Eigenschaft gibt `false`, wie ein Delete-Vorgang fehlschlägt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.DataSourceView.CanDelete%2A> Eigenschaft und die <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Methode in einer Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#8](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#8)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExecute">
+      <MemberSignature Language="C#" Value="public virtual bool CanExecute (string commandName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExecute(string commandName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.CanExecute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der Name des Befehls.</param>
+        <summary>Bestimmt, ob der angegebene Befehl ausgeführt werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der Befehl ausgeführt werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public virtual bool CanInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.CanInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.DataSourceView" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" /> -Objekt unterstützt die <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)" /> Vorgang.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Gibt die basisklassenimplementierung <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.CanInsert%2A> -Eigenschaft entspricht nicht nur eine Möglichkeit, Datenquellen-Steuerelements, sondern auch, ob es derzeit geeignet ist, einen Vorgang auszuführen. Unterstützt ein Datenquellen-Steuerelement die <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Vorgang, wenn ein erforderliches insert-Befehl oder andere Daten nicht festgelegt ist, die <xref:System.Web.UI.DataSourceView.CanInsert%2A> -Eigenschaft gibt `false`, wie ein Insert-Vorgang fehlschlägt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.DataSourceView.CanInsert%2A> Eigenschaft und die <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Methode in einer Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#9](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#9)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPage">
+      <MemberSignature Language="C#" Value="public virtual bool CanPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.CanPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.DataSourceView" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" /> Objekt Paging der abgerufenen Daten unterstützt die <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> Methode.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Gibt die basisklassenimplementierung <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein datengebundenes Steuerelement kann Paging anfordern, durch Hinzufügen der <xref:System.Web.UI.DataSourceCapabilities.Page> Feld der <xref:System.Web.UI.DataSourceSelectArguments> , übergeben die <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Methode. Wenn ein datengebundenes Steuerelement Paging anfordert, aber die <xref:System.Web.UI.DataSourceView.CanPage%2A> -Eigenschaft gibt `false`, löst eine Ausnahme aus die Datenquellensicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public virtual bool CanRetrieveTotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.DataSourceView" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" /> Objekt unterstützt das Abrufen der Gesamtanzahl der Datenzeilen anstelle der Daten.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Gibt die basisklassenimplementierung <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein datengebundenes Steuerelement kann eine Gesamtzeilenanzahl anfordern, durch Hinzufügen der <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> Feld der <xref:System.Web.UI.DataSourceSelectArguments?displayProperty=nameWithType> Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Methode. Wenn ein datengebundenes Steuerelement eine Gesamtzeilenanzahl anfordert, aber die <xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A> -Eigenschaft gibt `false`, löst eine Ausnahme aus die Datenquellensicht an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public virtual bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.DataSourceView" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" /> Objekt eine sortierte Ansicht der zugrunde liegenden Datenquelle unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Die Standardimplementierung gibt <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein datengebundenes Steuerelement kann durch Hinzufügen von Sortierung anfordern, die <xref:System.Web.UI.DataSourceCapabilities.Sort> Feld der <xref:System.Web.UI.DataSourceSelectArguments> -Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Methode. Wenn ein datengebundenes Sortierung anfordert Steuerelement, aber die <xref:System.Web.UI.DataSourceView.CanSort%2A> -Eigenschaft gibt `false`, die die Datenquellensicht löst eine Ausnahme aus.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.DataSourceView.CanSort%2A> Eigenschaft in einer Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#7](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#7)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public virtual bool CanUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.CanUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.DataSourceView" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Web.UI.DataSourceControl" /> -Objekt unterstützt die <see cref="M:System.Web.UI.DataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" /> Vorgang.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Die Standardimplementierung gibt <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.CanUpdate%2A> -Eigenschaft entspricht nicht nur eine Möglichkeit, Datenquellen-Steuerelements, sondern auch, ob es derzeit geeignet ist, einen Vorgang auszuführen. Unterstützt ein datengebundenes Steuerelement die <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> Vorgang, wenn ein erforderliches Update-Befehl oder andere Daten nicht festgelegt ist, die <xref:System.Web.UI.DataSourceView.CanUpdate%2A> -Eigenschaft gibt `false`, wie ein Update-Vorgang fehlschlägt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.DataSourceView.CanUpdate%2A> Eigenschaft und die <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> Methode in einer Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#10](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#10)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceViewChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DataSourceViewChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataSourceViewChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.DataSourceView.DataSourceViewChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Datenquellensicht geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Änderung an der Datenquellensicht konnte aufgrund einer Änderung in den Werten oder auf eine Änderung in den Daten aufgrund von einem Datenvorgang, durch die die Datenquellensicht ausgeführt werden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public virtual void Delete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues, System.Web.UI.DataSourceViewOperationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues, class System.Web.UI.DataSourceViewOperationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.Delete(System.Collections.IDictionary,System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewOperationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein <see cref="T:System.Collections.IDictionary" /> von Objekt- oder Zeilenschlüsseln von gelöscht werden soll die <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" /> Vorgang.</param>
+        <param name="oldValues">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die Datenelemente und ihre ursprünglichen Werte darstellen.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.DataSourceViewOperationCallback" /> Delegat, der verwendet wird, um ein datengebundenes Steuerelement zu benachrichtigen, wenn der asynchrone Vorgang abgeschlossen ist.</param>
+        <summary>Führt einen asynchronen Löschvorgang in der Liste der Daten, die die <see cref="T:System.Web.UI.DataSourceView" /> -Objekt darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.Delete%2A> Methode ist die Schnittstelle für alle Datenquellensicht-Objekte asynchronen Löschvorgang. Die <xref:System.Web.UI.DataSourceView.Delete%2A> Methodenaufrufe der <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> mit einer Methode `keys` und `oldValues` angegebenen Parameterwerte. Die `callback` Parameter ist ein Delegat, der mit der Datenquelle ein datengebundenes Steuerelement übergibt Sicht, die verwendet wird, um das datengebundene benachrichtigen steuern, wann die <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Vorgang abgeschlossen wurde. Die Methode verwendet die Parameter von der <xref:System.Web.UI.DataSourceViewOperationCallback> Delegat, der die Anzahl der betroffenen Datensätze und zurück <xref:System.Exception> Ausnahme, die ausgelöst wird, indem Sie die <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.DataSourceViewOperationCallback" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.EventHandlerList Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.EventHandlerList Events" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventHandlerList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Delegaten für Ereignishandler für die Datenquellensicht an.</summary>
+        <value>Die Liste der Ereignishandlerdelegaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist vom Typ <xref:System.ComponentModel.EventHandlerList>, die einen lineare Suche-Algorithmus verwendet, um Einträge in der Liste der Delegaten finden. Ein lineare Suche-Algorithmus ist ineffizient, bei der Arbeit mit einer großen Anzahl von Einträgen. Aus diesem Grund bei Verwendung einer langen Liste findet, dass Einträge mit dieser Eigenschaft langsam ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand">
+      <MemberSignature Language="C#" Value="protected virtual int ExecuteCommand (string commandName, System.Collections.IDictionary keys, System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 ExecuteCommand(string commandName, class System.Collections.IDictionary keys, class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.ExecuteCommand(System.String,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der Name des Befehls.</param>
+        <param name="keys">Ein Wörterbuch von Objekt- oder Zeilenschlüsseln, zu verwenden.</param>
+        <param name="values">Ein Wörterbuch von Name/Wert-Paaren, die Datenelemente und ihre Werte darstellen.</param>
+        <summary>Führt den angegebenen Befehl aus.</summary>
+        <returns>Die Anzahl der Elemente, die von dem Vorgang betroffen sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand">
+      <MemberSignature Language="C#" Value="public virtual void ExecuteCommand (string commandName, System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Web.UI.DataSourceViewOperationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteCommand(string commandName, class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Web.UI.DataSourceViewOperationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.ExecuteCommand(System.String,System.Collections.IDictionary,System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewOperationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der Name des Befehls.</param>
+        <param name="keys">Ein Wörterbuch von Objekt- oder Zeilenschlüsseln, zu verwenden.</param>
+        <param name="values">Ein Wörterbuch von Name/Wert-Paaren, die Datenelemente und ihre Werte darstellen.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.DataSourceViewOperationCallback" />-Objekt.</param>
+        <summary>Führt den angegebenen Befehl aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt keinen Wert zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDelete">
+      <MemberSignature Language="C#" Value="protected virtual int ExecuteDelete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 ExecuteDelete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein <see cref="T:System.Collections.IDictionary" /> von Objekt- oder Zeilenschlüsseln von gelöscht werden soll die <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" /> Vorgang.</param>
+        <param name="oldValues">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die Datenelemente und ihre ursprünglichen Werte darstellen.</param>
+        <summary>Führt einen Löschvorgang in der Liste der Daten, die die <see cref="T:System.Web.UI.DataSourceView" /> -Objekt darstellt.</summary>
+        <returns>Die Anzahl der Elemente, die aus dem zugrunde liegenden Datenspeicher gelöscht wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datengebundene Steuerelemente können bestimmen, ob der <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Vorgang wird durch ein Datenquellensteuerelement durch Abrufen von unterstützt die <xref:System.Web.UI.DataSourceView> -Objekt unter Verwendung der <xref:System.Web.UI.DataSourceControl.GetView%2A?displayProperty=nameWithType> -Methode, und Überprüfen der <xref:System.Web.UI.DataSourceView.CanDelete%2A> Eigenschaft.  
+  
+ Die `keys` Parameter stellt das Objekt oder Zeilenschlüssel der Daten zu löschen. Für Datenquellen, die Darstellung von relationalen Daten, z. B. die <xref:System.Web.UI.WebControls.SqlDataSource> -Steuerelement, das `keys` Parameter ist eine Sammlung von Datenbank-Primärschlüssel. In anderen Szenarien die `keys` Parameter ist eine Auflistung von Name/Wert-Paare und wird verwendet, um eine Liste mit Daten zu filtern. Alle Daten, die Übereinstimmung von Name/Wert-Paar werden gelöscht.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataSourceView> Standardimplementierung-Klasse ist das Auslösen einer <xref:System.NotSupportedException> Ausnahme. Wenn Sie erweitern die <xref:System.Web.UI.DataSourceView> -Klasse außer Kraft, indem die <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Methode, wenn Ihre Klasse aus der zugrunde liegenden Datenspeicher unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> -Klasse überschreiben die <xref:System.Web.UI.DataSourceView.CanDelete%2A> Eigenschaft und die <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#8](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#8)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" /> Vorgang wird nicht unterstützt, indem Sie die <see cref="T:System.Web.UI.DataSourceView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteInsert">
+      <MemberSignature Language="C#" Value="protected virtual int ExecuteInsert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 ExecuteInsert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die bei einem Einfügevorgang verwendet.</param>
+        <summary>Führt einen Einfügevorgang in der Liste der Daten, die die <see cref="T:System.Web.UI.DataSourceView" /> -Objekt darstellt.</summary>
+        <returns>Die Anzahl der Elemente, die in der zugrunde liegenden Datenspeicher eingefügt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datengebundene Steuerelemente können bestimmen, ob der <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Vorgang wird durch ein Datenquellensteuerelement durch Abrufen von unterstützt die <xref:System.Web.UI.DataSourceView> -Objekt unter Verwendung der <xref:System.Web.UI.DataSourceControl.GetView%2A> -Methode, und Überprüfen der <xref:System.Web.UI.DataSourceView.CanInsert%2A> Eigenschaft.  
+  
+ Die `values` Parameter ist ein Satz von Name/Wert-Paaren, die Datenspalten oder Felder und die entsprechenden einzufügenden Werte darstellt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataSourceView> Standardimplementierung-Klasse ist das Auslösen einer <xref:System.NotSupportedException> Ausnahme. Wenn Sie erweitern die <xref:System.Web.UI.DataSourceView> -Klasse außer Kraft, indem die <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Methode, wenn Ihre Klasse einfügen in die zugrunde liegenden Datenspeicher unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> -Klasse überschreiben die <xref:System.Web.UI.DataSourceView.CanInsert%2A> Eigenschaft und die <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#9](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#9)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)" /> Vorgang wird nicht unterstützt, indem Sie die <see cref="T:System.Web.UI.DataSourceView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> , wird verwendet, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Ruft eine Liste mit Daten aus der zugrunde liegenden Datenspeicher ab.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" /> Liste von Daten aus der zugrunde liegenden Datenspeicher.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Methode wird aufgerufen, um Daten aus dem zugrunde liegenden Datenspeicher abzurufen und zurückzugeben als ein <xref:System.Collections.IEnumerable> Objekt. Alle Datenquellensteuerelemente unterstützen Abrufen von Daten aus ihren zugrunde liegenden Datenspeicher verfügt, selbst wenn andere Vorgänge wie das Einfügen und die Sortierung nicht unterstützt werden. Da ein datengebundenes Steuerelement eine Liste mit Daten zu einem beliebigen Zeitpunkt als Ergebnis des anfordern kann eine <xref:System.Web.UI.IDataSource.DataSourceChanged> Ereignis oder ein <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> -Methodenaufruf, das Abrufen von Daten bei Bedarf ausgeführt werden muss.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Methode in einer Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> Klasse. Die `CsvDataSourceView` öffnet eine Datei mit kommagetrennten Werten (CSV), analysiert er zeilenweise und erstellt eine <xref:System.Data.DataTable> Objekt und ein <xref:System.Data.DataView> Objekt zum Speichern der Daten im Arbeitsspeicher. Schließlich ein Sortierungsausdruck angewendet, sofern von bereitgestellt der <xref:System.Web.UI.DataSourceSelectArguments> -Objekt, und die <xref:System.Data.DataView> Objekt wird zurückgegeben, als ein <xref:System.Collections.IEnumerable> Instanz. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#6)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteUpdate">
+      <MemberSignature Language="C#" Value="protected virtual int ExecuteUpdate (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 ExecuteUpdate(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein <see cref="T:System.Collections.IDictionary" /> von Objekt- oder Zeilenschlüsseln Updatevorgang aktualisiert werden.</param>
+        <param name="values">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die Datenelemente und ihre neue Werte darstellen.</param>
+        <param name="oldValues">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die Datenelemente und ihre ursprünglichen Werte darstellen.</param>
+        <summary>Führt einen Updatevorgang in der Liste der Daten, die die <see cref="T:System.Web.UI.DataSourceView" /> -Objekt darstellt.</summary>
+        <returns>Die Anzahl der Elemente, die in der zugrunde liegenden Datenspeicher aktualisiert wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datengebundene Steuerelemente können bestimmen, ob die <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> Vorgang wird durch ein Datenquellen-Steuerelement unterstützt, mit der <xref:System.Web.UI.DataSourceControl.GetView%2A?displayProperty=nameWithType> Methode zum Abrufen der <xref:System.Web.UI.DataSourceView> -Objekt und die Überprüfung des Werts der der <xref:System.Web.UI.DataSourceView.CanUpdate%2A> Eigenschaft.  
+  
+ Die `keys` Parameter stellt das Objekt oder Zeilenschlüssel der Daten zu aktualisieren. Für Datenquellen, die Darstellung von relationalen Daten, z. B. die <xref:System.Web.UI.WebControls.SqlDataSource> -Steuerelement, das `keys` Parameter ist eine Sammlung von Datenbank-Primärschlüssel. In anderen Szenarien die `keys` Parameter ist eine Auflistung von Name/Wert-Paare und wird verwendet, um eine Liste mit Daten zu filtern. Alle Daten, die Übereinstimmung von Name/Wert-Paar werden aktualisiert, mit den Werten der `values` Parameter, der einen Satz von Name/Wert-Paare, die neuen Werte für vorhandene Felder oder Spalten darstellt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.DataSourceView> Standardimplementierung-Klasse ist das Auslösen einer <xref:System.NotSupportedException> Ausnahme. Wenn Sie erweitern die <xref:System.Web.UI.DataSourceView> -Klasse außer Kraft, indem die <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> Methode, wenn Ihre Klasse aktualisieren von Daten in der zugrunde liegenden Datenspeicher unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die erweitert die <xref:System.Web.UI.DataSourceView> -Klasse überschreiben die <xref:System.Web.UI.DataSourceView.CanUpdate%2A> Eigenschaft und die <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceView> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#10](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#10)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="M:System.Web.UI.DataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" /> Vorgang wird nicht unterstützt, indem Sie die <see cref="T:System.Web.UI.DataSourceView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual void Insert (System.Collections.IDictionary values, System.Web.UI.DataSourceViewOperationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(class System.Collections.IDictionary values, class System.Web.UI.DataSourceViewOperationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.Insert(System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewOperationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die bei einem Einfügevorgang verwendet.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.DataSourceViewOperationCallback" /> Delegat, der verwendet wird, um ein datengebundenes Steuerelement zu benachrichtigen, wenn der asynchrone Vorgang abgeschlossen ist.</param>
+        <summary>Führt einen asynchronen Einfügevorgang in der Liste der Daten, die die <see cref="T:System.Web.UI.DataSourceView" /> -Objekt darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.Insert%2A> Methode ist die Schnittstelle für asynchrone Datenaktualisierungsvorgänge für alle Datenquellenobjekte anzeigen. Die <xref:System.Web.UI.DataSourceView.Insert%2A> Methodenaufrufe der <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Methode, die mit einer `values` angegeben. Die `callback` Parameter ist ein Delegat, der mit der Datenquelle ein datengebundenes Steuerelement übergibt Sicht, die verwendet wird, um das datengebundene benachrichtigen steuern, wann die <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Vorgang abgeschlossen wurde. Die Methode verwendet die Parameter von der <xref:System.Web.UI.DataSourceViewOperationCallback> Delegat, der die Anzahl der betroffenen Datensätze und zurück <xref:System.Exception> Ausnahme, die ausgelöst wird, indem Sie die <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> -Methodenaufruf.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.DataSourceViewOperationCallback" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceView.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datenquellensicht.</summary>
+        <value>Der Name des der <see cref="T:System.Web.UI.DataSourceView" />, falls vorhanden. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceViewChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSourceViewChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSourceViewChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.OnDataSourceViewChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.DataSourceView.DataSourceViewChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.OnDataSourceViewChanged%2A> Methode weist ein datengebundenes Steuerelement aus, und, dass die zugrunde liegenden Datenquelle geändert hat, dass das Steuerelement binden soll, und führen Sie alle notwendigen Schritte. In der Regel die <xref:System.Web.UI.DataSourceView.OnDataSourceViewChanged%2A> Methode wird aufgerufen, wenn eine Eigenschaft der Datenquellensicht geändert wurde.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.DataSourceView.OnDataSourceViewChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.DataSourceView.OnDataSourceViewChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.DataSourceView.OnDataSourceViewChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseUnsupportedCapabilityError">
+      <MemberSignature Language="C#" Value="protected virtual void RaiseUnsupportedCapabilityError (System.Web.UI.DataSourceCapabilities capability);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void RaiseUnsupportedCapabilityError(valuetype System.Web.UI.DataSourceCapabilities capability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.RaiseUnsupportedCapabilityError(System.Web.UI.DataSourceCapabilities)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="capability" Type="System.Web.UI.DataSourceCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="capability">Eines der <see cref="T:System.Web.UI.DataSourceCapabilities" /> Werte, die mit den Funktionen verglichen wird, die die Sicht unterstützt.</param>
+        <summary>Wird aufgerufen, indem Sie die <see cref="M:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError(System.Web.UI.DataSourceView)" /> Methode, um die Funktionen für angeforderte vergleichen ein <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> Vorgang, mit denen, die die Sicht unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.RaiseUnsupportedCapabilityError%2A> Methode wird von der Datenquellensicht verwendet, die einzelnen Funktionen, die von einem datengebundenen Steuerelement, dargestellt durch angefordert untersucht die <xref:System.Web.UI.DataSourceSelectArguments> -Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.Select%2A> -Methode, und vergleichen sie die Funktionen unterstützt, durch die Daten Datenquellensicht an.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die angegebene Quelle zusätzliche Verarbeitungskapazität unterstützt die Datenquellensicht nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public virtual void Select (System.Web.UI.DataSourceSelectArguments arguments, System.Web.UI.DataSourceViewSelectCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Select(class System.Web.UI.DataSourceSelectArguments arguments, class System.Web.UI.DataSourceViewSelectCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewSelectCallback" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> , wird verwendet, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.DataSourceViewSelectCallback" /> Delegat, der verwendet wird, um ein datengebundenes Steuerelement zu benachrichtigen, wenn der asynchrone Vorgang abgeschlossen ist.</param>
+        <summary>Ruft eine Liste mit Daten, die asynchron aus dem zugrunde liegenden Datenspeicher ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.Select%2A> Methode ist die asynchronen Abruf Schnittstelle für alle Datenquellensicht-Objekte. Die <xref:System.Web.UI.DataSourceView.Select%2A> Methodenaufrufe der <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> -Methode auf und übergibt alle <xref:System.Web.UI.DataSourceSelectArguments> angegeben. Die `callback` Parameter ist ein Delegat, der mit der Datenquelle ein datengebundenes Steuerelement übergibt Sicht, die verwendet wird, um das datengebundene benachrichtigen steuern, wann die <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Vorgang abgeschlossen wurde. Von zurückgegebenen Daten der <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Aufruf wird zurückgegeben, in den-Parameter von der <xref:System.Web.UI.DataSourceViewSelectCallback> delegieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.DataSourceViewSelectCallback" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public virtual void Update (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues, System.Web.UI.DataSourceViewOperationCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Update(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues, class System.Web.UI.DataSourceViewOperationCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceView.Update(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+        <Parameter Name="callback" Type="System.Web.UI.DataSourceViewOperationCallback" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein <see cref="T:System.Collections.IDictionary" /> von Objekt- oder Zeilenschlüsseln Updatevorgang aktualisiert werden.</param>
+        <param name="values">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die Datenelemente und ihre neue Werte darstellen.</param>
+        <param name="oldValues">Ein <see cref="T:System.Collections.IDictionary" /> von Name/Wert-Paaren, die Datenelemente und ihre ursprünglichen Werte darstellen.</param>
+        <param name="callback">Ein <see cref="T:System.Web.UI.DataSourceViewOperationCallback" /> Delegat, der verwendet wird, um ein datengebundenes Steuerelement zu benachrichtigen, wenn der asynchrone Vorgang abgeschlossen ist.</param>
+        <summary>Führt eine asynchrone Update-Operation in der Liste der Daten, die die <see cref="T:System.Web.UI.DataSourceView" /> -Objekt darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceView.Update%2A> Methode ist die Schnittstelle für asynchrone Datenänderungsvorgänge für alle Datenquellenobjekte anzeigen. Die <xref:System.Web.UI.DataSourceView.Update%2A> Methodenaufrufe der <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> mit einer Methode `keys`, `values`, und `oldValues` angegebenen Parameterwerte. Die `callback` Parameter ist ein Delegat, der mit der Datenquelle ein datengebundenes Steuerelement übergibt Sicht, die verwendet wird, um das datengebundene benachrichtigen steuern, wann die <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> Vorgang abgeschlossen wurde. Die Methode verwendet die Parameter von der <xref:System.Web.UI.DataSourceViewOperationCallback> Delegat, der die Anzahl der betroffenen Datensätze und zurück <xref:System.Exception> Ausnahme, die ausgelöst wird, indem Sie die <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> aufrufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.DataSourceViewOperationCallback" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

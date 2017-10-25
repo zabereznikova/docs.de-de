@@ -1,0 +1,288 @@
+<Type Name="ExpressionEditor" FullName="System.Web.UI.Design.ExpressionEditor">
+  <TypeSignature Language="C#" Value="public abstract class ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExpressionEditor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Satz von Eigenschaften und Methoden zum Auswerten eines Ausdrucks, das zur Entwurfszeit und ein Ausdrucks-Editor-Blatt auf dem visuellen Entwurfshost für die Verwendung in den Ausdrucks-Editor-Dialogfeld Bereitstellen einer Steuerelementeigenschaft zugeordnet ist. Diese Klasse ist abstrakt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein visuellen Designer hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], verwendet die <xref:System.Web.UI.Design.ExpressionEditor> -Klasse benutzerdefinierter Ausdrucks-Editor-Stylesheets, die dem Benutzer anzuzeigen, und wertet dann den ausgewählten Ausdruck für das Rendering zur Entwurfszeit.  
+  
+ Beim Durchsuchen der <xref:System.Web.UI.Design.HtmlControlDesigner.Expressions%2A> Eigenschaft für ein Steuerelement im Eigenschaftenraster zur Entwurfszeit der visuelle Designer zeigt ein Dialogfeld zum Festlegen von Ausdrücken für eine Steuerelementeigenschaft an. Sie können den Typ des Ausdrucks basierend auf eine Liste mit Ausdruckspräfixen auswählen. Wenn Sie ein Ausdruckspräfix aus der Liste auswählen, verwendet der visuelle Designer zugeordneten <xref:System.Web.UI.Design.ExpressionEditor> und <xref:System.Web.UI.Design.ExpressionEditorSheet> Objekte festlegen, auszuwerten und die Ausdruckszeichenfolge anhand der Syntax für diesen Typ des Ausdrucks zu konvertieren. Der visuelle Designer legt den Ausdruck für die der zugeordneten Steuerelementeigenschaft fest und verwendet dann das Ergebnis des ausgewerteten Ausdrucks, um Steuerelementeigenschaften Werte zuzuweisen, die auf der Entwurfsoberfläche gerendert werden.  
+  
+ Die statische <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> Methoden rufen den Ausdrucks-Editor, der mit einem bestimmten Ausdruckspräfix oder einer Ausdrucks-Generator zugeordnet ist. Die <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> -Eigenschaft für ein <xref:System.Web.UI.Design.ExpressionEditor> Objekt zurückgibt, das konfigurierte Ausdruckspräfix. Die <xref:System.Web.UI.Design.ExpressionEditor.EvaluateExpression%2A> Methode ergibt eine Eingabeausdruck-Zeichenfolge. Die <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> Methode gibt die <xref:System.Web.UI.Design.ExpressionEditorSheet> Implementierung, mit der Aufforderung für den benutzerdefinierten Ausdruckseigenschaften im Dialogfeld "Ausdrücke".  
+  
+ In der Regel um einen neuen Ausdruckstyp zur Entwurfszeit zu unterstützen, Sie definieren eine eindeutige Ausdruckspräfix und Bereitstellen von benutzerdefinierten <xref:System.Web.Compilation.ExpressionBuilder> und <xref:System.Web.UI.Design.ExpressionEditor> Implementierungen. Optional können Sie angeben, ein benutzerdefiniertes <xref:System.Web.UI.Design.ExpressionEditorSheet> Implementierung, die die Eigenschaften, die verwendet werden definiert, um den Ausdruck im Dialogfeld Ausdrücke zu bilden.  
+  
+ Das Ausdruckspräfix identifiziert den benutzerdefinierten Ausdruck und ordnet einen Ausdruck mit dem Ausdrucks-Generator und Ausdrucks-Editor. Wenn auf einer Seite benutzerdefinierte Ausdrücke analysiert werden, dient das Ausdruckspräfix zum Erstellen von Instanzen der zugeordneten <xref:System.Web.Compilation.ExpressionBuilder> und <xref:System.Web.UI.Design.ExpressionEditor> Klassen. Um ein Ausdrucks-Generator und Ausdrucks-Editor ein Ausdruckspräfix zuzuordnen, gelten die <xref:System.Web.Compilation.ExpressionEditorAttribute> und <xref:System.Web.Compilation.ExpressionPrefixAttribute> der benutzerdefinierten Attribute <xref:System.Web.Compilation.ExpressionBuilder> Klasse, und konfigurieren Sie das Ausdruckspräfix für einen Ausdrucks-Generator in der `expressionBuilders` Element in der Webkonfigurationsdatei. Das Präfix ist nicht erforderlich, aber es wird dringend empfohlen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Ableitung der <xref:System.Web.UI.Design.ExpressionEditor> Klasse, um einen benutzerdefinierten Ausdrucks-Editor definieren.  
+  
+ [!code-csharp[CustomExpressionEditor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/customexpressioneditor/cs/CustomAppSettingsExpression.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die folgenden Schritte sind erforderlich, in einer benutzerdefinierten Ableitung <see cref="T:System.Web.UI.Design.ExpressionEditor" /> Klasse:  
+  
+-   Überschreiben Sie die <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> Methode, um den Typ des benutzerdefinierten Ausdruck zur Entwurfszeit auszuwerten.  
+  
+-   Überschreiben Sie optional die <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> Methode, um eine benutzerdefinierte Klasse zurückzugeben, die Eigenschaften, die kombiniert werden definiert, um den benutzerdefinierten Ausdruck bilden.  
+  
+-   Anwenden der <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> -Attribut auf die <see cref="T:System.Web.Compilation.ExpressionBuilder" /> -Klassendeklaration die abgeleiteten Ausdrucks-Editor-Klasse den benutzerdefinierten Ausdrucks-Generator zugeordnet werden soll.  
+  
+ Z. B. die <see cref="T:System.Web.UI.Design.ResourceExpressionEditor" /> Klasse leitet sich von der <see cref="T:System.Web.UI.Design.ExpressionEditor" /> -Klasse und stellt eine Implementierung für das Auswerten und Zuordnen eines Eigenschaft eines Steuerelements zur Entwurfszeit einen Ressourcenverweis-Zeichenfolge. Die <see cref="T:System.Web.Compilation.ResourceExpressionBuilder" /> Klasse bezieht sich auf das Ausdruckspräfix <see langword="Resources" /> und <see cref="T:System.Web.UI.Design.ResourceExpressionEditor" /> Implementierung. Die <see cref="M:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> Methode gibt ein <see cref="T:System.Web.UI.Design.ResourceExpressionEditorSheet" />, der definiert, dass der einzelnen Eigenschaften, die einen Ressource Verweisausdruck bilden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.ExpressionEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.Design.ExpressionEditor> Klasse ist abstrakt, können Sie eine Instanz von erstellen die <xref:System.Web.UI.Design.ExpressionEditor> -Klasse direkt unter Verwendung der <xref:System.Web.UI.Design.ExpressionEditor.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Ableiten von der <see cref="T:System.Web.UI.Design.ExpressionEditor" /> -Klasse außer Kraft, indem die <see cref="M:System.Web.UI.Design.ExpressionEditor.#ctor" /> Konstruktor, um die angepasste Initialisierung von Aktionen für die Implementierung des Ausdrucks-Editor zu implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public abstract object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Eine auszuwertende Ausdruckszeichenfolge. Der Ausdruck enthält das Ausdruckspräfix keine.</param>
+        <param name="parseTimeData">Ein Objekt mit zusätzlichen Analyseinformationen für die Bewertung von <c>Ausdruck</c>. Dies wird in der Regel von den Ausdrucks-Generator bereitgestellt.</param>
+        <param name="propertyType">Der Typ der Steuerelementeigenschaft, <c>Ausdruck</c> gebunden ist.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Wertet eine Ausdruckszeichenfolge aus, und den Wert zur Entwurfszeit eine Steuerelementeigenschaft bereitstellt.</summary>
+        <returns>Das Objekt, auf die durch die Zeichenfolge ausgewerteter Ausdruck verwiesen wird, wenn die Auswertung von Ausdrücken erfolgreich war. andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der visuelle Designerhost verwendet die <xref:System.Web.UI.Design.ExpressionEditor.EvaluateExpression%2A> Methode zum Auswerten eines Ausdrucks, und geben Sie den Wert zur Entwurfszeit für eine Eigenschaft des zugeordneten Steuerelements.  
+  
+ Der visuelle Designer verwendet die <xref:System.Web.Compilation.ExpressionBuilder.ParseExpression%2A?displayProperty=nameWithType> Methode analysiert die Ausdruckszeichenfolge zur Entwurfszeit und ruft dann die <xref:System.Web.UI.Design.ExpressionEditor.EvaluateExpression%2A> Methode mit den Daten des analysierten Ausdrucks. Der visuelle Designer verwendet das Ergebnis des ausgewerteten Ausdrucks Steuerelement Eigenschaftswerte zugewiesen, die auf der Entwurfsoberfläche gerendert werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Klassen, die von der <see cref="T:System.Web.UI.Design.ExpressionEditor" /> Klasse überschreiben, muss die <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> Methode, um den Typ des benutzerdefinierten Ausdruck zur Entwurfszeit auszuwerten.  
+  
+ Mindestens ein <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> Implementierung verwenden, muss die folgenden Schritte aus:  
+  
+1.  Die Ausdruckszeichenfolge ausgewertet, und bestimmen Sie das Objekt, das durch den Ausdruck verwiesen wird.  
+  
+2.  Zurückgeben <see langword="null" />, wenn die Ausdruckszeichenfolge nicht ausgewertet werden kann.  
+  
+3.  Verwenden der <see cref="M:System.Type.IsAssignableFrom(System.Type)" /> Methode <paramref name="propertyType" /> um zu bestimmen, ob das referenzierte Objekt kann zugewiesen werden direkt für den Steuerelementtyp für die Eigenschaft, und klicken Sie dann je nach Ergebnis, führen Sie eins der folgenden Aktionen:  
+  
+    -   Wenn das referenzierte Objekt direkt an die Steuerelementeigenschaft zugewiesen werden kann, geben Sie das referenzierte Objekt für den Ausdruck zurück.  
+  
+    -   Wenn das referenzierte Objekt ein einfacher Typ ist, z. B. eine Zeichenfolge zurück das referenzierte Objekt.  
+  
+    -   Andernfalls bestimmt, ob das referenzierte Objekt zugewiesen oder in den Eigenschaftentyp konvertiert werden kann.  
+  
+4.  Verwenden der <see cref="Overload:System.ComponentModel.TypeConverter.CanConvertFrom" /> Methode für die <see cref="T:System.ComponentModel.TypeConverter" /> -Objekt für <paramref name="propertyType" /> um zu bestimmen, ob das referenzierte Objekt konvertiert werden kann für den Steuerelementtyp für die Eigenschaft, und klicken Sie dann je nach Ergebnis, führen Sie eins der folgenden Aktionen:  
+  
+    -   Wenn das Objekt für den Steuerelementtyp "Eigenschaft" konvertiert werden kann, zurückgeben, das konvertierte Objekt mit der <see cref="Overload:System.ComponentModel.TypeConverter.ConvertFrom" /> Methode.  
+  
+    -   Wenn das referenzierte Objekt kann nicht zugewiesen oder in konvertiert <paramref name="propertyType" />, das referenzierte Objekt zurückgeben.  
+  
+ Optional die <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> Implementierung können die <paramref name="parseTimeData" /> Objekt, das vom angebotene der <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" /> optimieren oder Hilfe bei der Auswertung der Eingabeausdruck Zeichenfolge.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionPrefix">
+      <MemberSignature Language="C#" Value="public string ExpressionPrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExpressionPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ausdruckspräfix, das Ausdruckszeichenfolgen identifiziert, die durch die Implementierung des Ausdrucks-Editor unterstützt werden.</summary>
+        <value>Eine Zeichenfolge, die das Präfix darstellt, für die Ausdrücke, die von der Klasse unterstützt abgeleitet der <see cref="T:System.Web.UI.Design.ExpressionEditor" />ist, andernfalls eine leere Zeichenfolge (""), wenn der Ausdrucks-Editor keinen zugeordneten Ausdruckspräfix.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ausdruckspräfix identifiziert den benutzerdefinierten Ausdruck und ordnet einen Ausdruck mit dem Ausdrucks-Generator und Ausdrucks-Editor. Wenn auf einer Seite benutzerdefinierte Ausdrücke analysiert werden, dient das Ausdruckspräfix zum Erstellen von Instanzen der zugeordneten <xref:System.Web.Compilation.ExpressionBuilder> und <xref:System.Web.UI.Design.ExpressionEditor> Klassen. Um ein Ausdrucks-Generator und Ausdrucks-Editor ein Ausdruckspräfix zuzuordnen, gelten die <xref:System.Web.Compilation.ExpressionEditorAttribute> und <xref:System.Web.Compilation.ExpressionPrefixAttribute> der benutzerdefinierten Attribute <xref:System.Web.Compilation.ExpressionBuilder> Klasse, und konfigurieren Sie das Ausdruckspräfix für einen Ausdrucks-Generator in der `expressionBuilders` Element in der Webkonfigurationsdatei.  
+  
+ In der Regel abgeleitete Klassen überschreiben Sie nicht die <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> Eigenschaft. Die Basis <xref:System.Web.UI.Design.ExpressionEditor> -Klasse legt die <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> Wert auf Grundlage der <xref:System.Web.Compilation.ExpressionPrefixAttribute> Attribut für den zugeordneten <xref:System.Web.Compilation.ExpressionBuilder> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditor">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ExpressionEditor GetExpressionEditor (string expressionPrefix, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ExpressionEditor GetExpressionEditor(string expressionPrefix, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressionPrefix" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expressionPrefix">Das Ausdruckspräfix verwendet, um den zugeordneten Ausdruck Editor suchen.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Gibt eine <see cref="T:System.Web.UI.Design.ExpressionEditor" /> Implementierung, die dem angegebenen Ausdruckspräfix zugeordnet ist.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.ExpressionEditor" /> zugeordnete Implementierung <paramref name="expressionPrefix" />ist, andernfalls <see langword="null" />, wenn <paramref name="expressionPrefix" /> ist nicht definiert oder nicht zugeordnet ist ein <see cref="T:System.Web.UI.Design.ExpressionEditor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die statische <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> Überladungen der Methode zum Suchen der <xref:System.Web.UI.Design.ExpressionEditor> -Objekt, das einem bestimmten Ausdruckspräfix oder Typ des Ausdrucks-Generator zugeordnet ist.  
+  
+ Für jeden benutzerdefinierten Ausdruck kennzeichnet ein Ausdruckspräfix den zugeordneten Ausdrucks-Generator und Ausdrucks-Editor. Wenn auf einer Seite benutzerdefinierte Ausdrücke analysiert werden, dient das Ausdruckspräfix zum Erstellen von Instanzen der zugeordneten <xref:System.Web.Compilation.ExpressionBuilder> und <xref:System.Web.UI.Design.ExpressionEditor> Klassen.  
+  
+ Um ein Ausdrucks-Generator und Ausdrucks-Editor ein Ausdruckspräfix zuzuordnen, gelten die <xref:System.Web.Compilation.ExpressionEditorAttribute> und <xref:System.Web.Compilation.ExpressionPrefixAttribute> der benutzerdefinierten Attribute <xref:System.Web.Compilation.ExpressionBuilder> Klasse, und konfigurieren Sie das Ausdruckspräfix für einen Ausdrucks-Generator in der `expressionBuilders` Element in der Webkonfigurationsdatei.  
+  
+ Der zugehörige Ausdruck suchen Editors für ein Ausdruckspräfix der <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> Methode listet die verfügbaren <xref:System.Web.Compilation.ExpressionBuilder> Implementierungen für eine entsprechendes Präfix. Die <xref:System.Web.Compilation.ExpressionBuilder> Implementierungen können konfiguriert werden, der `expressionBuilders` Abschnitt der Konfigurationsdatei. Wenn Sie ein verfügbares <xref:System.Web.Compilation.ExpressionBuilder> Implementierung definiert das Ausdruckspräfix der <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> Methodenrückgabe den Typ, der im angegebenen der <xref:System.Web.Compilation.ExpressionEditorAttribute> Attribut des der <xref:System.Web.Compilation.ExpressionBuilder> Metadaten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceProvider" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditor">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ExpressionEditor GetExpressionEditor (Type expressionBuilderType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ExpressionEditor GetExpressionEditor(class System.Type expressionBuilderType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor(System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressionBuilderType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expressionBuilderType">Der Typ der abgeleiteten Ausdrucks-Generator-Klasse, zum Suchen des zugeordneten Ausdrucks-Editors verwendet werden soll.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Gibt eine <see cref="T:System.Web.UI.Design.ExpressionEditor" /> Implementierung, die Typ des angegebenen Ausdrucks-Generator zugeordnet ist.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.ExpressionEditor" /> zugeordnete Implementierung <paramref name="expressionBuilderType" />ist, andernfalls <see langword="null" />, wenn <paramref name="expressionBuilderType" /> kann nicht gefunden werden oder verfügt über kein zugeordnetes <see cref="T:System.Web.UI.Design.ExpressionEditor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die statische <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> Überladungen zum Suchen der <xref:System.Web.UI.Design.ExpressionEditor> -Objekt, das einem bestimmten Ausdruckspräfix oder Typ des Ausdrucks-Generator zugeordnet ist.  
+  
+ Für jeden benutzerdefinierten Ausdruck kennzeichnet ein Ausdruckspräfix den zugeordneten Ausdrucks-Generator und Ausdrucks-Editor. Wenn auf einer Seite benutzerdefinierte Ausdrücke analysiert werden, dient das Ausdruckspräfix zum Erstellen von Instanzen der zugeordneten <xref:System.Web.Compilation.ExpressionBuilder> und <xref:System.Web.UI.Design.ExpressionEditor> Klassen.  
+  
+ Um ein Ausdrucks-Generator und Ausdrucks-Editor ein Ausdruckspräfix zuzuordnen, gelten die <xref:System.Web.Compilation.ExpressionEditorAttribute> und <xref:System.Web.Compilation.ExpressionPrefixAttribute> der benutzerdefinierten Attribute <xref:System.Web.Compilation.ExpressionBuilder> Klasse, und konfigurieren Sie das Ausdruckspräfix für einen Ausdrucks-Generator in der `expressionBuilders` Element in der Webkonfigurationsdatei.  
+  
+ Die <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> Methode listet die verfügbaren <xref:System.Web.Compilation.ExpressionBuilder> Implementierungen zu suchende `expressionBuilderType`. Die <xref:System.Web.Compilation.ExpressionBuilder> Implementierungen können konfiguriert werden, der `expressionBuilders` Abschnitt der Konfigurationsdatei. Wenn `expressionBuilderType` befindet sich in der Menge der verfügbaren <xref:System.Web.Compilation.ExpressionBuilder> Implementierungen der <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> Methodenrückgabe den Typ, der im angegebenen der <xref:System.Web.Compilation.ExpressionEditorAttribute> Attribut des der <xref:System.Web.Compilation.ExpressionBuilder> Metadaten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="expressionBuilderType" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="serviceProvider" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Die Ausdruckszeichenfolge, legen Sie bei einer Steuerelementeigenschaft verwendet, um das Blatt der Ausdrucks-Editor zu initialisieren.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Gibt ein Ausdrucks-Editor-Arbeitsblatt, die den aktuellen Ausdrucks-Editor zugeordnet ist.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> , der die benutzerdefinierten Ausdruckseigenschaften definiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> Methode gibt ein <xref:System.Web.UI.Design.ExpressionEditorSheet> Implementierung, die die Zeichenfolgen, die kombiniert werden definiert, um einen benutzerdefinierten Ausdruck bilden. Der visuelle Designer verwendet ein Ausdrucks-Editor-Arbeitsblatt an eine oder mehrere Zeichenfolgen aufzufordern, das in einen benutzerdefinierten Ausdruck kombinieren. Die Basisklasse-Methode gibt ein standardmäßig Ausdrucks-Editorblatt, der eine einzelne Eingabe Zeichenfolge verwendet wird, um den Ausdruck zu bilden. Der Ausdrucks-Editor-Blatt definiert das Eigenschaftenraster für den Ausdruck. Aus diesem Grund werden die Eigenschaften, die der Ausdrucks-Editor verfügbar macht, Eigenschaften, die für den Ausdruck im Dialogfeld definiert werden können.  
+  
+ Klassen, die von der <xref:System.Web.UI.Design.ExpressionEditor> Klasse optional kann außer Kraft setzen die <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> Methode, um ein benutzerdefinierter Ausdrucks-Editor-Blatt bereitzustellen. Ein benutzerdefinierter Ausdrucks-Editor-Blatt können während der Entwurfszeit-Eingabe für mehrere Eigenschaften werden dem Formular die Ausdruckszeichenfolge kombiniert werden.  
+  
+ Z. B. die <xref:System.Web.UI.Design.ResourceExpressionEditor> Klasse leitet sich von der <xref:System.Web.UI.Design.ExpressionEditor> -Klasse und stellt eine Implementierung für das Auswerten und Zuordnen eines Eigenschaft eines Steuerelements zur Entwurfszeit einen Ressourcenverweis-Zeichenfolge. Die <xref:System.Web.Compilation.ResourceExpressionBuilder> Klasse bezieht sich auf das Ausdruckspräfix `Resources` und <xref:System.Web.UI.Design.ResourceExpressionEditor> Implementierung. Die <xref:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet%2A?displayProperty=nameWithType> Methode gibt ein <xref:System.Web.UI.Design.ResourceExpressionEditorSheet>, der definiert, dass der einzelnen Eigenschaften, die einen Ressource Verweisausdruck bilden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Normalerweise zum Bereitstellen eines neuen Ausdruckstyp zur Entwurfszeit ein eindeutiger Ausdruckspräfix definieren und Bereitstellen von benutzerdefinierten <see cref="T:System.Web.Compilation.ExpressionBuilder" /> und <see cref="T:System.Web.UI.Design.ExpressionEditor" /> Implementierungen. Optional können Sie angeben, ein benutzerdefiniertes <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> Implementierung, die die Eigenschaften, die verwendet werden definiert, um den Ausdruck zu bilden. Obwohl das Präfix in die Konfigurationsdatei definiert wird, sollten Sie auch Anwenden einer <see cref="T:System.Web.Compilation.ExpressionPrefixAttribute" /> Objekt und ein <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> Objekt.  
+  
+ Überschreiben Sie die <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> Methode, um ein Ausdrucks-Editor-Arbeitsblatt zurückzugeben, die während der Entwurfszeit-Eingabe für mehrere Eigenschaften in einem benutzerdefinierten Ausdruck definiert. Wenn Sie eine Steuerelementeigenschaft und den Typ des Ausdrucks-Editor auswählen, ruft der visuelle Designer die <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> -Methode auf und stellt der aktuelle Ausdruck Zeichenfolge, die dann für die Eigenschaft "" festgelegt. Verwendung <paramref name="expression" /> die Anfangswerte für die Ausdruckseigenschaften festgelegt. Verwendung <paramref name="serviceProvider" /> einen benutzerdefinierten Ausdruck Blatt-Konstruktor initialisiert werden und auf Dienste zugreifen, die vom Designerhost bereitgestellt werden. Beispielsweise rufen Sie die <see cref="M:System.IServiceProvider.GetService(System.Type)" /> Methode mit der <see cref="T:System.Web.UI.Design.IWebApplication" /> Typ Zugriff-Projektelemente, Dokumente oder Informationen in der Konfigurationsdatei, die über den visuellen Designer bereitgestellt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

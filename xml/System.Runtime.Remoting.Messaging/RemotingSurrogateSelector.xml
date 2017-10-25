@@ -1,0 +1,229 @@
+<Type Name="RemotingSurrogateSelector" FullName="System.Runtime.Remoting.Messaging.RemotingSurrogateSelector">
+  <TypeSignature Language="C#" Value="public class RemotingSurrogateSelector : System.Runtime.Serialization.ISurrogateSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RemotingSurrogateSelector extends System.Object implements class System.Runtime.Serialization.ISurrogateSelector" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISurrogateSelector</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Wählt das Remoting-Ersatzzeichen, die verwendet werden kann, zum Serialisieren eines Objekts, das von abgeleitet ist eine <see cref="T:System.MarshalByRefObject" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ersatzzeichen ist ein Objekt, das die Serialisierungsanforderungen eines Objekts verarbeiten kann. Remoting Ersatzzeichen Remoting-Serialisierungsanforderungen eines von abgeleitete Objekte behandeln <xref:System.MarshalByRefObject>. Die <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector> verwaltet registrierten Ersatz für die Verwendung durch die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
+  
+ Während der Serialisierung Remoting im Rahmen einer <xref:System.MarshalByRefObject>, erstellt das Ersatzzeichen Remoting ein <xref:System.Runtime.Remoting.ObjRef> , alle relevanten Informationen, die für die Aktivierung und kommunizieren mit dem remote-Objekt enthält. Das neu erstellte <xref:System.Runtime.Remoting.ObjRef> an einem Remotestandort gesendet und ein Proxy verwendet werden kann.  
+  
+> [!NOTE]
+>  Diese Klasse stellt einen Linkaufruf und einer vererbungsanforderung auf Klassenebene. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse Berechtigung für die Infrastruktur verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemotingSurrogateSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainSelector">
+      <MemberSignature Language="C#" Value="public virtual void ChainSelector (System.Runtime.Serialization.ISurrogateSelector selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ChainSelector(class System.Runtime.Serialization.ISurrogateSelector selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.ChainSelector(System.Runtime.Serialization.ISurrogateSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector" />
+      </Parameters>
+      <Docs>
+        <param name="selector">Das nächste <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> untersuchen.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> auf die Ersatzzeichen-Selektor-Kette.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remoting Ersatzzeichen in Ketten, die mit einer Instanz von angefügt sind angeordnet sind die <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector>. Jede Kette enthält Remoting-Ersatzzeichen, die der Ersatzselektor überprüft, um einen kompatiblen Ersatz für einen bestimmten Objekttyp zu suchen. Die aktuelle Methode hinzugefügt Ersatzzeichen-Kette, die auf Ersatz überprüft werden kompatibel überprüft wird ein neuer Remoting Ersatzselektor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.MessageSurrogateFilter Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Messaging.MessageSurrogateFilter Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.MessageSurrogateFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Runtime.Remoting.Messaging.MessageSurrogateFilter" /> für die aktuelle Instanz des Delegaten die <see cref="T:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector" />.</summary>
+        <value>Die <see cref="T:System.Runtime.Remoting.Messaging.MessageSurrogateFilter" /> für die aktuelle Instanz des Delegaten die <see cref="T:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextSelector">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Serialization.ISurrogateSelector GetNextSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Serialization.ISurrogateSelector GetNextSelector() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.GetNextSelector" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die nächste <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> in der Kette der Selektoren Ersatzzeichen.</summary>
+        <returns>Das nächste <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> in der Kette der Selektoren Ersatzzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootObject">
+      <MemberSignature Language="C#" Value="public object GetRootObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetRootObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.GetRootObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Objekt im Stammverzeichnis des Objektdiagramms zurück.</summary>
+        <returns>Das Objekt auf der Stammebene des Objektdiagramm enthalten sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSurrogate">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Serialization.ISerializationSurrogate GetSurrogate (Type type, System.Runtime.Serialization.StreamingContext context, out System.Runtime.Serialization.ISurrogateSelector ssout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Serialization.ISerializationSurrogate GetSurrogate(class System.Type type, valuetype System.Runtime.Serialization.StreamingContext context, [out] class System.Runtime.Serialization.ISurrogateSelector&amp; ssout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.GetSurrogate(System.Type,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISerializationSurrogate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+        <Parameter Name="ssout" Type="System.Runtime.Serialization.ISurrogateSelector&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> für das das Ersatzzeichen angefordert wird.</param>
+        <param name="context">Die Quelle oder das Ziel der Serialisierung.</param>
+        <param name="ssout">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> , die für den angegebenen Objekttyp geeignet ist. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt das geeignete Ersatzzeichen für den angegebenen Typ im angegebenen Kontext zurück.</summary>
+        <returns>Das geeignete Ersatzzeichen für den angegebenen Typ im angegebenen Kontext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ersatzzeichen Remoting behandelt, die Remoting Serialisierungsanforderungen eines Objekts, das von abgeleitet ist eine <xref:System.MarshalByRefObject>. Während der Serialisierung eines Objekts, das von abgeleitet ist <xref:System.MarshalByRefObject> an einem Remotestandort befindet, das Ersatzzeichen Remoting erstellt eine <xref:System.Runtime.Remoting.ObjRef> , alle relevanten Informationen, die für die Aktivierung und kommunizieren mit dem remote-Objekt enthält. Das neu erstellte <xref:System.Runtime.Remoting.ObjRef> an einem Remotestandort gesendet und ein Proxy verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRootObject">
+      <MemberSignature Language="C#" Value="public void SetRootObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRootObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.SetRootObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt auf der Stammebene des Objektdiagramm enthalten sind.</param>
+        <summary>Legt das Objekt im Stammverzeichnis des Objektdiagramms fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="obj" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSoapFormat">
+      <MemberSignature Language="C#" Value="public virtual void UseSoapFormat ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UseSoapFormat() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.UseSoapFormat" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Richtet den aktuellen Ersatzselektor aufweist, das SOAP-Format verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode wird mit den SOAP-Formatierungssenken verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

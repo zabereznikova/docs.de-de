@@ -1,0 +1,248 @@
+<Type Name="LdapDirectoryIdentifier" FullName="System.DirectoryServices.Protocols.LdapDirectoryIdentifier">
+  <TypeSignature Language="C#" Value="public class LdapDirectoryIdentifier : System.DirectoryServices.Protocols.DirectoryIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LdapDirectoryIdentifier extends System.DirectoryServices.Protocols.DirectoryIdentifier" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryIdentifier</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" /> -Klasse erstellt eine ID des Verzeichnisses für eine oder mehrere LDAP-Server.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapDirectoryIdentifier (string server);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string server) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="server">Die Server-ID. Eine den Server angebende Zeichenfolge, die ein Domänenname, LDAP-Servername oder eine Zeichenfolge in Punktschreibweise sein kann, die die IP-Adresse des LDAP-Servers darstellt, oder <see langword="null" />. Wenn der Wert <see langword="null" /> ist, stellt er die Identität eines beliebigen Domänencontrollers in der Domäne dar, die dem Computerkonto zugeordnet ist.  
+  
+ Optional kann dieser Parameter auch eine Portnummer enthalten, die von der ID selbst durch einen Doppelpunkt (:) getrennt ist.</param>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String)" />-Konstruktor erstellt mithilfe des angegebenen Servers eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="server" /> Leerzeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapDirectoryIdentifier (string server, int portNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string server, int32 portNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="portNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="server">Die Server-ID. Eine den Server angebende Zeichenfolge, die ein Domänenname, LDAP-Servername oder eine Zeichenfolge in Punktschreibweise sein kann, die die IP-Adresse des LDAP-Servers darstellt. Optional kann dieser Parameter auch eine Portnummer enthalten, die von der ID selbst durch einen Doppelpunkt (:) getrennt ist.</param>
+        <param name="portNumber">Die beim Herstellen einer Verbindung mit dem Server zu verwendende Portnummer.</param>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String,System.Int32)" />-Konstruktor erstellt mithilfe des angegebenen Servers und der angegebenen Eigenschaften eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />-Klasse.  Dieser Konstruktor erstellt einen Bezeichner, der einen Satz von LDAP-Servern darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="server" /> Leerzeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapDirectoryIdentifier (string server, bool fullyQualifiedDnsHostName, bool connectionless);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string server, bool fullyQualifiedDnsHostName, bool connectionless) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="fullyQualifiedDnsHostName" Type="System.Boolean" />
+        <Parameter Name="connectionless" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="server">Die Server-ID. Eine den Server angebende Zeichenfolge, die ein Domänenname, LDAP-Servername oder eine Zeichenfolge in Punktschreibweise sein kann, die die IP-Adresse des LDAP-Servers darstellt. Optional kann dieser Parameter auch eine Portnummer enthalten, die von der ID selbst durch einen Doppelpunkt (:) getrennt ist.</param>
+        <param name="fullyQualifiedDnsHostName">
+          <see langword="true" />, wenn jedes Element in Servern ein vollqualifizierter DNS-Hostname ist. Wenn <see langword="false" />, kann ein Element eine IP-Adresse, eine DNS-Domäne bzw. ein DNS-Hostname oder <see langword="null" /> sein. Wenn der Wert <see langword="null" /> ist, stellt er die Identität eines beliebigen Domänencontrollers in der Domäne dar, die dem Computerkonto zugeordnet ist.</param>
+        <param name="connectionless">
+          <see langword="true" />, wenn es sich um eine UDP-Verbindung handelt, oder <see langword="false" />, wenn die Verbindung TCP/IP verwendet.</param>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String,System.Boolean,System.Boolean)" />-Konstruktor erstellt mithilfe des angegebenen Servers und der angegebenen Eigenschaften eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />-Klasse.  Dieser Konstruktor erstellt einen Bezeichner, der einen Satz von LDAP-Servern darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="server" /> nur Leerzeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapDirectoryIdentifier (string[] servers, bool fullyQualifiedDnsHostName, bool connectionless);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] servers, bool fullyQualifiedDnsHostName, bool connectionless) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String[],System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="servers" Type="System.String[]" />
+        <Parameter Name="fullyQualifiedDnsHostName" Type="System.Boolean" />
+        <Parameter Name="connectionless" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="servers">Die Server-ID. Eine den Server angebende Zeichenfolge, die ein Domänenname, LDAP-Servername oder eine Zeichenfolge in Punktschreibweise sein kann, die die IP-Adresse des LDAP-Servers darstellt. Optional kann dieser Parameter auch eine Portnummer enthalten, die von der ID selbst durch einen Doppelpunkt (:) getrennt ist.</param>
+        <param name="fullyQualifiedDnsHostName">
+          <see langword="true" />, wenn jedes Element in Servern ein vollqualifizierter DNS-Hostname ist. Wenn <see langword="false" />, kann ein Element eine IP-Adresse, eine DNS-Domäne bzw. ein DNS-Hostname oder NULL sein. Wenn der Wert NULL ist, stellt er die Identität eines beliebigen Domänencontrollers in der Domäne dar, die dem Computerkonto zugeordnet ist.</param>
+        <param name="connectionless">
+          <see langword="true" />, wenn es sich um eine UDP-Verbindung handelt, oder <see langword="false" />, wenn die Verbindung TCP/IP verwendet.</param>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String,System.Boolean,System.Boolean)" />-Konstruktor erstellt mithilfe des angegebenen Servers und der angegebenen Eigenschaften eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />-Klasse.  Dieser Konstruktor erstellt einen Bezeichner, der einen Satz von LDAP-Servern darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="server" /> Leerzeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapDirectoryIdentifier (string server, int portNumber, bool fullyQualifiedDnsHostName, bool connectionless);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string server, int32 portNumber, bool fullyQualifiedDnsHostName, bool connectionless) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String,System.Int32,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="portNumber" Type="System.Int32" />
+        <Parameter Name="fullyQualifiedDnsHostName" Type="System.Boolean" />
+        <Parameter Name="connectionless" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="server">Die Server-ID. Eine den Server angebende Zeichenfolge, die ein Domänenname, LDAP-Servername oder eine Zeichenfolge in Punktschreibweise sein kann, die die IP-Adresse des LDAP-Servers darstellt. Optional kann dieser Parameter auch eine Portnummer enthalten, die von der ID selbst durch einen Doppelpunkt (:) getrennt ist.</param>
+        <param name="portNumber">Die beim Herstellen einer Verbindung mit dem Server zu verwendende Portnummer.</param>
+        <param name="fullyQualifiedDnsHostName">
+          <see langword="true" />, wenn jedes Element in Servern ein vollqualifizierter DNS-Hostname ist. Wenn <see langword="false" />, kann ein Element eine IP-Adresse, eine DNS-Domäne bzw. ein DNS-Hostname oder NULL sein. Wenn der Wert NULL ist, stellt er die Identität eines beliebigen Domänencontrollers in der Domäne dar, die dem Computerkonto zugeordnet ist.</param>
+        <param name="connectionless">
+          <see langword="true" />, wenn es sich um eine UDP-Verbindung handelt, oder <see langword="false" />, wenn die Verbindung TCP/IP verwendet.</param>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String,System.Int32,System.Boolean,System.Boolean)" />-Konstruktor erstellt mithilfe des angegebenen Servers und der angegebenen Eigenschaften eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />-Klasse.  Dieser Konstruktor erstellt einen Bezeichner, der einen Satz von LDAP-Servern darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="server" /> Leerzeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapDirectoryIdentifier (string[] servers, int portNumber, bool fullyQualifiedDnsHostName, bool connectionless);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] servers, int32 portNumber, bool fullyQualifiedDnsHostName, bool connectionless) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String[],System.Int32,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="servers" Type="System.String[]" />
+        <Parameter Name="portNumber" Type="System.Int32" />
+        <Parameter Name="fullyQualifiedDnsHostName" Type="System.Boolean" />
+        <Parameter Name="connectionless" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="servers">Die Server-ID. Eine den Server angebende Zeichenfolge, die ein Domänenname, LDAP-Servername oder eine Zeichenfolge in Punktschreibweise sein kann, die die IP-Adresse des LDAP-Servers darstellt. Optional kann dieser Parameter auch eine Portnummer enthalten, die von der ID selbst durch einen Doppelpunkt (:) getrennt ist.</param>
+        <param name="portNumber">Die beim Herstellen einer Verbindung mit einem Server zu verwendende Portnummer.</param>
+        <param name="fullyQualifiedDnsHostName">
+          <see langword="true" />, wenn jedes Element in Servern ein vollqualifizierter DNS-Hostname ist. Wenn <see langword="false" />, kann ein Element eine IP-Adresse, eine DNS-Domäne bzw. ein DNS-Hostname oder NULL sein. Wenn der Wert NULL ist, stellt er die Identität eines beliebigen Domänencontrollers in der Domäne dar, die dem Computerkonto zugeordnet ist.</param>
+        <param name="connectionless">
+          <see langword="true" />, wenn es sich um eine UDP-Verbindung handelt, oder <see langword="false" />, wenn die Verbindung TCP/IP verwendet.</param>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.#ctor(System.String[],System.Int32,System.Boolean,System.Boolean)" />-Konstruktor erstellt mithilfe des angegebenen Servers und der angegebenen Eigenschaften eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />-Klasse.  Dieser Konstruktor erstellt einen Bezeichner, der einen Satz von LDAP-Servern darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="server" /> Leerzeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connectionless">
+      <MemberSignature Language="C#" Value="public bool Connectionless { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Connectionless" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.Connectionless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.Connectionless" /> Eigenschaft gibt an, dass die Verbindung (UDP = User Datagram Protocol).</summary>
+        <value>Diese Eigenschaft ist <see langword="true" /> , wenn die Verbindung UDP ist. Diese Eigenschaft ist <see langword="false" /> ist die LDAP-Verbindung über TCP/IP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifiedDnsHostName">
+      <MemberSignature Language="C#" Value="public bool FullyQualifiedDnsHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FullyQualifiedDnsHostName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.FullyQualifiedDnsHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.FullyQualifiedDnsHostName" /> Eigenschaft gibt an, dass ein Servername einen vollständig qualifizierten DNS-Hostnamen an.</summary>
+        <value>Diese Eigenschaft ist <see langword="true" /> ist ein Servername einen vollständig qualifizierten DNS-Hostnamen an.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortNumber">
+      <MemberSignature Language="C#" Value="public int PortNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PortNumber" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.PortNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.PortNumber" /> Eigenschaft enthält die Portnummer für die Verbindung mit dem Server verwendet werden.</summary>
+        <value>Gibt eine ganze Zahl, die die Nummer des Ports darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Servers">
+      <MemberSignature Language="C#" Value="public string[] Servers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Servers" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.Servers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapDirectoryIdentifier.Servers" /> Eigenschaft enthält die Gruppe von Servern, die das Objekt identifiziert.</summary>
+        <value>Der Satz von Servern, die das Objekt identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

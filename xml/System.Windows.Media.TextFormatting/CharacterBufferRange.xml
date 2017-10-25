@@ -1,0 +1,285 @@
+<Type Name="CharacterBufferRange" FullName="System.Windows.Media.TextFormatting.CharacterBufferRange">
+  <TypeSignature Language="C#" Value="public struct CharacterBufferRange : IEquatable&lt;System.Windows.Media.TextFormatting.CharacterBufferRange&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CharacterBufferRange extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.Media.TextFormatting.CharacterBufferRange&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.Media.TextFormatting.CharacterBufferRange&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Beschreibt eine Zeichenfolge von Zeichen an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharacterBufferRange (char* unsafeCharacterString, int characterLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char* unsafeCharacterString, int32 characterLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.#ctor(System.Char*,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="unsafeCharacterString" Type="System.Char*" />
+        <Parameter Name="characterLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="unsafeCharacterString">Ein nicht verwalteter Zeigerverweis auf eine Zeichenfolge.</param>
+        <param name="characterLength">Die Anzahl der Zeichen in <c>UnsafecharacterString</c> verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />-Struktur aus einer nicht verwalteten Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer benötigt die Berechtigung für nicht verwalteten Code zum Aufrufen der <xref:System.Windows.Media.TextFormatting.CharacterBufferRange.%23ctor%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharacterBufferRange (char[] characterArray, int offsetToFirstChar, int characterLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char[] characterArray, int32 offsetToFirstChar, int32 characterLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.#ctor(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="characterArray" Type="System.Char[]" />
+        <Parameter Name="offsetToFirstChar" Type="System.Int32" />
+        <Parameter Name="characterLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="characterArray">Das Zeichenarray.</param>
+        <param name="offsetToFirstChar">Der Puffer Zeichenoffset auf das erste Zeichen.</param>
+        <param name="characterLength">Die Anzahl der Zeichen in <c>CharacterArray</c> verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Struktur aus einem Zeichenarray von.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharacterBufferRange (string characterString, int offsetToFirstChar, int characterLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string characterString, int32 offsetToFirstChar, int32 characterLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="characterString" Type="System.String" />
+        <Parameter Name="offsetToFirstChar" Type="System.Int32" />
+        <Parameter Name="characterLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="characterString">Die Zeichenfolge.</param>
+        <param name="offsetToFirstChar">Der Puffer Zeichenoffset auf das erste Zeichen.</param>
+        <param name="characterLength">Die Anzahl der Zeichen in <c>CharacterString</c> verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Struktur aus einer Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterBufferReference">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextFormatting.CharacterBufferReference CharacterBufferReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.TextFormatting.CharacterBufferReference CharacterBufferReference" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.CharacterBufferRange.CharacterBufferReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.CharacterBufferReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf eine Zeichenfolge der Zeichenpuffer.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> Wert, der der Zeichenpuffer einer Zeichenfolge darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.TextFormatting.CharacterBufferRange Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.TextFormatting.CharacterBufferRange Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.CharacterBufferRange.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.CharacterBufferRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine leere Zeichenfolge.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekt, dessen <see cref="P:System.Windows.Media.TextFormatting.CharacterBufferRange.Length" /> gleich 0 ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Object" /> für den Vergleich mit dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekt.</param>
+        <summary>Bestimmt, ob das angegebene Objekt und das aktuelle <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="o" /> gleich dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />-Objekt ist; andernfalls <see langword="false" />. Wenn <paramref name="o" /> keine <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekt <see langword="false" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Windows.Media.TextFormatting.CharacterBufferRange> -Objekte sind gleich, wenn die <xref:System.Windows.Media.TextFormatting.CharacterBufferRange.CharacterBufferReference%2A> Eigenschaften gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.TextFormatting.CharacterBufferRange value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.Media.TextFormatting.CharacterBufferRange value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.Equals(System.Windows.Media.TextFormatting.CharacterBufferRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.TextFormatting.CharacterBufferRange" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> für den Vergleich mit dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekt.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekt gleich der aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> gleich dem aktuellen <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />-Objekt ist; andernfalls <see langword="false" />. Wenn <paramref name="value" /> keine <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekt <see langword="false" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Windows.Media.TextFormatting.CharacterBufferRange> -Objekte sind gleich, wenn die <xref:System.Windows.Media.TextFormatting.CharacterBufferRange.CharacterBufferReference%2A> Eigenschaften gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />. Sie eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> Wert, der den Hashcode für das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.CharacterBufferRange.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeichen im Text Quellspeicher Zeichen ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die Gesamtzahl der Zeichen darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.TextFormatting.CharacterBufferRange left, System.Windows.Media.TextFormatting.CharacterBufferRange right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Media.TextFormatting.CharacterBufferRange left, valuetype System.Windows.Media.TextFormatting.CharacterBufferRange right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.op_Equality(System.Windows.Media.TextFormatting.CharacterBufferRange,System.Windows.Media.TextFormatting.CharacterBufferRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Media.TextFormatting.CharacterBufferRange" />
+        <Parameter Name="right" Type="System.Windows.Media.TextFormatting.CharacterBufferRange" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />.</param>
+        <summary>Vergleichen Sie zwei <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Zeichenfolgen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />das angegebene anzuzeigende <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Objekte sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.TextFormatting.CharacterBufferRange left, System.Windows.Media.TextFormatting.CharacterBufferRange right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Media.TextFormatting.CharacterBufferRange left, valuetype System.Windows.Media.TextFormatting.CharacterBufferRange right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.CharacterBufferRange.op_Inequality(System.Windows.Media.TextFormatting.CharacterBufferRange,System.Windows.Media.TextFormatting.CharacterBufferRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Media.TextFormatting.CharacterBufferRange" />
+        <Parameter Name="right" Type="System.Windows.Media.TextFormatting.CharacterBufferRange" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" />.</param>
+        <summary>Vergleichen Sie zwei <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferRange" /> Zeichenfolgen auf Ungleichheit.</summary>
+        <returns>
+          <see langword="false" />anzuzeigende <paramref name="left" /> gleich <paramref name="right" />ist, andernfalls <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

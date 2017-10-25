@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography.Xml">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.Cryptography.Xml" /> -Namespace enthält Klassen, um die Erstellung und Überprüfung digitaler Signaturen von XML-Unterstützung. Die Klassen in diesem Namespace implementieren die Empfehlung der World Wide Web Consortium "XML Signature Syntax and Processing", die unter http://www.w3.org/TR/xmldsig-core/ beschrieben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

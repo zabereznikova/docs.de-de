@@ -1,0 +1,222 @@
+<Type Name="XmlSchemaParticle" FullName="System.Xml.Schema.XmlSchemaParticle">
+  <TypeSignature Language="C#" Value="public abstract class XmlSchemaParticle : System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlSchemaParticle extends System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaParticle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaAnnotated</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Abstrakte Klasse, ist die Basisklasse für alle Partikeltypen (z. B. <see cref="T:System.Xml.Schema.XmlSchemaAny" />).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Partikeltypen sind in der Regel austauschbar. Partikel kann eine lokale Elementdeklaration oder ein Verweis auf eine globale Elementdeklaration (`element`), ein Compositor (`sequence`, `choice`, oder `all`), einen Verweis auf eine benannte Inhaltsmodell-Gruppe (`group`), oder ein Element-Platzhalter ( `any`).  
+  
+   
+  
+## Examples  
+ Finden Sie unter <xref:System.Xml.Schema.XmlSchemaAny>, <xref:System.Xml.Schema.XmlSchemaElement>, oder <xref:System.Xml.Schema.XmlSchemaGroup> für ein Beispiel für die Verwendung dieser Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlSchemaParticle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaParticle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaParticle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOccurs">
+      <MemberSignature Language="C#" Value="public decimal MaxOccurs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal MaxOccurs" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaParticle.MaxOccurs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl der Häufigkeit, mit die das Partikel auftreten kann.</summary>
+        <value>Die maximale Anzahl der Häufigkeit, mit die das Partikel auftreten kann. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert kann eine ganze Zahl sein, die größer oder gleich 0 (null) ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOccursString">
+      <MemberSignature Language="C#" Value="public string MaxOccursString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MaxOccursString" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaParticle.MaxOccursString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("maxOccurs")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl als Zeichenfolge zurück. Die Höchstzahl der Versuche der Partikels.</summary>
+        <value>Die Anzahl als Zeichenfolge zurück. <see langword="String.Empty" />Gibt an, dass <see langword="MaxOccurs" /> ist der Standardwert gleich. Der Standardwert ist ein NULL-Verweis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann ein NULL-Wert aufweisen ("") Wert oder `String.Empty`.  
+  
+ Wenn die maximale Anzahl nach oben hin unbegrenzt sein soll, verwenden Sie die Zeichenfolge unbounded.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinOccurs">
+      <MemberSignature Language="C#" Value="public decimal MinOccurs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal MinOccurs" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaParticle.MinOccurs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Mindestanzahl der Häufigkeit, mit die das Partikel auftreten kann.</summary>
+        <value>Die minimale Anzahl der Häufigkeit, mit die das Partikel auftreten kann. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert kann eine ganze Zahl sein, die größer oder gleich 0 (null) ist. Legen Sie dieses Attribut auf 0 (null), um anzugeben, dass das Attribut optional ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinOccursString">
+      <MemberSignature Language="C#" Value="public string MinOccursString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MinOccursString" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaParticle.MinOccursString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("minOccurs")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl als Zeichenfolge zurück. Die minimale Anzahl der Häufigkeit, mit die das Partikel auftreten kann.</summary>
+        <value>Die Anzahl als Zeichenfolge zurück. <see langword="String.Empty" />Gibt an, dass <see langword="MinOccurs" /> ist der Standardwert gleich. Der Standardwert ist ein NULL-Verweis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann ein NULL-Wert aufweisen ("") Wert oder `String.Empty`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

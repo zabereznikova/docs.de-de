@@ -1,0 +1,466 @@
+<Type Name="CodeNamespaceCollection" FullName="System.CodeDom.CodeNamespaceCollection">
+  <TypeSignature Language="C#" Value="public class CodeNamespaceCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeNamespaceCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeNamespaceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.CodeDom.CodeNamespace" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.CodeNamespaceCollection>-Klasse stellt ein einfaches Auflistungsobjekt bereit, mit dem ein Satz von <xref:System.CodeDom.CodeNamespace>-Objekten gespeichert werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.CodeDom.CodeNamespaceCollection>-Klasse veranschaulicht. Das Beispiel erstellt eine neue Instanz der Klasse und verwendet mehrere Methoden Anweisungen auf die Auflistung, deren Index zurückzugeben und hinzufügen oder Entfernen von Attributen zu einem bestimmten Index.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#1)]
+ [!code-csharp[CodeNamespaceCollectionExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#1)]
+ [!code-vb[CodeNamespaceCollectionExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeNamespaceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeNamespaceCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine leere Instanz der <xref:System.CodeDom.CodeNamespaceCollection> Klasse.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#2)]
+ [!code-csharp[CodeNamespaceCollectionExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#2)]
+ [!code-vb[CodeNamespaceCollectionExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeNamespaceCollection (System.CodeDom.CodeNamespace[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeNamespace[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.#ctor(System.CodeDom.CodeNamespace[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespace[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array von <see cref="T:System.CodeDom.CodeNamespace" /> Objekten, mit denen die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeNamespaceCollection" /> Klasse, die das angegebene Array von enthält <see cref="T:System.CodeDom.CodeNamespace" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Ein oder mehrere Objekte im Array sind <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeNamespaceCollection (System.CodeDom.CodeNamespaceCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeNamespaceCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.#ctor(System.CodeDom.CodeNamespaceCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespaceCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.CodeDom.CodeNamespaceCollection" /> mit dem die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeNamespaceCollection" /> Klasse, die die Elemente der Auflistung angegebenen Quelle enthält.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.CodeDom.CodeNamespace value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.CodeDom.CodeNamespace value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.Add(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende <see cref="T:System.CodeDom.CodeNamespace" />.</param>
+        <summary>Fügt der Auflistung das angegebene <see cref="T:System.CodeDom.CodeNamespace" />-Objekt hinzu.</summary>
+        <returns>Der Index, an dem das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.CodeNamespaceCollection.Add%2A> -Methode zum Hinzufügen einer <xref:System.CodeDom.CodeNamespace> -Objekt an eine <xref:System.CodeDom.CodeNamespaceCollection> Instanz.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#3)]
+ [!code-csharp[CodeNamespaceCollectionExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#3)]
+ [!code-vb[CodeNamespaceCollectionExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeNamespace[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeNamespace[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.AddRange(System.CodeDom.CodeNamespace[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespace[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array vom Typ <see cref="T:System.CodeDom.CodeNamespace" /> , enthält die Objekte in der Auflistung hinzu.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.CodeDom.CodeNamespace" /> Array an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.CodeNamespaceCollection.AddRange%28System.CodeDom.CodeNamespaceCollection%29> methodenüberladung zum Hinzufügen von Mitgliedern der eine <xref:System.CodeDom.CodeNamespace> array an die <xref:System.CodeDom.CodeNamespaceCollection>.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#4)]
+ [!code-csharp[CodeNamespaceCollectionExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#4)]
+ [!code-vb[CodeNamespaceCollectionExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeNamespaceCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeNamespaceCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.AddRange(System.CodeDom.CodeNamespaceCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespaceCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.CodeNamespaceCollection" /> , enthält die Objekte in der Auflistung hinzu.</param>
+        <summary>Fügt den Inhalt des angegebenen <see cref="T:System.CodeDom.CodeNamespaceCollection" /> Objekt an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.CodeNamespaceCollection.AddRange%28System.CodeDom.CodeNamespaceCollection%29> methodenüberladung hinzufügen <xref:System.CodeDom.CodeNamespace> Objekte aus einer <xref:System.CodeDom.CodeNamespaceCollection> in eine andere <xref:System.CodeDom.CodeNamespaceCollection>.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#4)]
+ [!code-csharp[CodeNamespaceCollectionExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#4)]
+ [!code-vb[CodeNamespaceCollectionExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.CodeDom.CodeNamespace value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.CodeDom.CodeNamespace value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.Contains(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.CodeDom.CodeNamespace" /> , in der Auflistung gesucht werden soll.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung das angegebene <see cref="T:System.CodeDom.CodeNamespace" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.CodeDom.CodeNamespace" /> in der Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird der <xref:System.CodeDom.CodeNamespaceCollection.Contains%2A> Methode zum Suchen einer <xref:System.CodeDom.CodeNamespace> -Objekt in ein <xref:System.CodeDom.CodeNamespaceCollection>.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#5)]
+ [!code-csharp[CodeNamespaceCollectionExample#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#5)]
+ [!code-vb[CodeNamespaceCollectionExample#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.CodeDom.CodeNamespace[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.CodeDom.CodeNamespace[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.CopyTo(System.CodeDom.CodeNamespace[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.CodeDom.CodeNamespace[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , die das Ziel der aus der Auflistung kopierten Werte ist.</param>
+        <param name="index">Der Index des Arrays, bei dem eingefügt werden soll.</param>
+        <summary>Kopiert die Auflistungsobjekte in ein eindimensionales <see cref="T:System.Array" /> -Instanz, beginnend am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.CodeNamespaceCollection.CopyTo%2A> Methode zum Kopieren der Inhalte von einem <xref:System.CodeDom.CodeNamespaceCollection> Objekt in ein Array, beginnend am angegebenen Index-Wert.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#6](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#6)]
+ [!code-csharp[CodeNamespaceCollectionExample#6](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#6)]
+ [!code-vb[CodeNamespaceCollectionExample#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Zielarray ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.CodeDom.CodeNamespaceCollection" /> ist größer als der verfügbare Platz zwischen dem Index des Zielarrays gemäß der <paramref name="index" /> Parameter und dem Ende des Zielarrays.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="array" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter ist kleiner als der minimale Index im Zielarray.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.CodeDom.CodeNamespace value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.CodeDom.CodeNamespace value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.IndexOf(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu suchende <see cref="T:System.CodeDom.CodeNamespace" />.</param>
+        <summary>Ruft den Index des angegebenen <see cref="T:System.CodeDom.CodeNamespace" /> Objekt in der <see cref="T:System.CodeDom.CodeNamespaceCollection" />, wenn sie in der Auflistung vorhanden ist.</summary>
+        <returns>Der Index des angegebenen <see cref="T:System.CodeDom.CodeNamespace" />, sofern, in der Auflistung befindet gefunden, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel sucht das Vorhandensein eines bestimmten <xref:System.CodeDom.CodeNamespace> und verwendet die <xref:System.CodeDom.CodeNamespaceCollection.IndexOf%2A> Methode, um den Indexwert abzurufen, bei dem es gefunden wurde.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#5)]
+ [!code-csharp[CodeNamespaceCollectionExample#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#5)]
+ [!code-vb[CodeNamespaceCollectionExample#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.CodeDom.CodeNamespace value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.CodeDom.CodeNamespace value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.Insert(System.Int32,System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, in dem das neue Element eingefügt werden soll.</param>
+        <param name="value">Der einzufügende <see cref="T:System.CodeDom.CodeNamespace" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.CodeDom.CodeNamespace" /> Objekt am angegebenen Index in die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.CodeNamespaceCollection.Insert%2A> Methode zum Einfügen einer <xref:System.CodeDom.CodeNamespace> -Objekt in ein <xref:System.CodeDom.CodeNamespaceCollection>.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#8)]
+ [!code-csharp[CodeNamespaceCollectionExample#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#8)]
+ [!code-vb[CodeNamespaceCollectionExample#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeNamespace this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeNamespace Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeNamespaceCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeNamespace</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Auflistung zuzugreifen.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.CodeDom.CodeNamespaceCollection" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeNamespace" /> an jedem gültigen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist ein Indexer, der zum Zugriff auf die Auflistung verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="index" />-Parameter liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.CodeDom.CodeNamespace value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.CodeDom.CodeNamespace value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeNamespaceCollection.Remove(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die aus der Auflistung zu entfernende <see cref="T:System.CodeDom.CodeNamespace" />.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.CodeDom.CodeNamespace" />-Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.CodeNamespaceCollection.Remove%2A> Methode zum Löschen einer <xref:System.CodeDom.CodeNamespace> -Objekt aus einer <xref:System.CodeDom.CodeNamespaceCollection>.  
+  
+ [!code-cpp[CodeNamespaceCollectionExample#9](~/samples/snippets/cpp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CPP/class1.cpp#9)]
+ [!code-csharp[CodeNamespaceCollectionExample#9](~/samples/snippets/csharp/VS_Snippets_CLR/CodeNamespaceCollectionExample/CS/class1.cs#9)]
+ [!code-vb[CodeNamespaceCollectionExample#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeNamespaceCollectionExample/VB/class1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das angegebene Objekt ist nicht in der Auflistung gefunden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

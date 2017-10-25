@@ -1,0 +1,51 @@
+<Type Name="UnknownMessageReceivedEventArgs" FullName="System.ServiceModel.UnknownMessageReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class UnknownMessageReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnknownMessageReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.UnknownMessageReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Nachricht, die von einem Kanal empfangen wurde und keinem Rückrufvorgang und keiner ausstehenden Anforderung zugeordnet werden kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Message Message" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.UnknownMessageReceivedEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die unbekannte Nachricht ab, die das Ereignis verursacht hat.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.Message" />, die das Ereignis verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

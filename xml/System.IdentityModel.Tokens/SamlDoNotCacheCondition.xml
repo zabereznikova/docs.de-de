@@ -1,0 +1,182 @@
+<Type Name="SamlDoNotCacheCondition" FullName="System.IdentityModel.Tokens.SamlDoNotCacheCondition">
+  <TypeSignature Language="C#" Value="public class SamlDoNotCacheCondition : System.IdentityModel.Tokens.SamlCondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlDoNotCacheCondition extends System.IdentityModel.Tokens.SamlCondition" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlDoNotCacheCondition" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SamlCondition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Bedingung dar, die bei der Bewertung der Gültigkeit einer SAML-Assertion in Erwägung gezogen werden muss.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken geben ihre Ansprüche mithilfe von SAML-Assertionen und einem Satz an Bedingungen an, die bei der Bewertung der Gültigkeit der SAML-Assertion berücksichtigt werden müssen. Die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition>-Klasse stellt eine der Bedingungen dar, die durch die SAML-Spezifikation definiert werden, und bestätigt, dass die SAML-Assertion nicht gepuffert werden darf. Wenn Sie diese Bedingung für eine SAML-Assertion angeben möchten, fügen Sie die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition>-Klasse zur Auflistung hinzu, die durch die <xref:System.IdentityModel.Tokens.SamlAssertion.Conditions%2A>-Eigenschaft zurückgegeben wurde.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition> als Bedingung zu einem <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken hinzugefügt wird, das durch einen Sicherheitstokendienst für den [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client ausgegeben wird, führt der [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client keine Pufferung des Sicherheitstokens durch. Da der Client den Inhalt des ausgegebenen Tokens nicht überprüft, wird das Token zwischengespeichert. Der Client verhält sich tokenagnostisch für den ausgegebenen Tokentyp und verarbeitet das zurückgegebene Token als transparentes XML-Element. Die [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Sicherheit führt eine Zwischenspeicherung des erhaltenen ausgegebenen Tokens niemals serviceseitig aus; sie speichert lediglich die extrahierten Ansprüche während des Tokenautorisierungsprozesses.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlDoNotCacheCondition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlDoNotCacheCondition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlDoNotCacheCondition" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition.IsReadOnly%2A>-Eigenschaft mit `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlDoNotCacheCondition.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Eigenschaften dieser Instanz schreibgeschützt sind.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften dieser Instanz schreibgeschützt sind, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Instanz der <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition>-Klasse schreibgeschützt machen möchten, rufen Sie die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition.MakeReadOnly%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public override void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlDoNotCacheCondition.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass diese Instanz schreibgeschützt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition.MakeReadOnly%2A>-Methode abgerufen wird, wird die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition.IsReadOnly%2A>-Eigenschaft als `true` festgelegt, und die Eigenschaften dieser Instanz können nicht mehr festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public override void ReadXml (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer, System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReadXml(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlDoNotCacheCondition.ReadXml(System.Xml.XmlDictionaryReader,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" />, um die <see langword="&lt;saml:DoNotCacheCondition&gt;" /> zu lesen.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in der SAML-Autorisierungsanweisung lesen kann, die in der SAML-Spezifikation festgelegt wurde.</param>
+        <param name="keyInfoSerializer">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />, der die <see langword="KeyInfo" />-Klausel der digitalen Signatur liest.</param>
+        <param name="outOfBandTokenResolver">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />, der das Sicherheitstoken bestimmt, das die digitale Signatur erstellt hat.</param>
+        <summary>Liest das <see langword="&lt;saml:DoNotCacheCondition&gt;" />-Element vom angegebenen XML-Reader.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition.ReadXml%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Tokens.SamlSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode werden keine Eigenschaften festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist gleich <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">
+          <paramref name="reader" /> zeigt nicht auf ein <see langword="&lt;saml:DoNotCacheCondition&gt;" />-Element.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public override void WriteXml (System.Xml.XmlDictionaryWriter writer, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteXml(class System.Xml.XmlDictionaryWriter writer, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlDoNotCacheCondition.WriteXml(System.Xml.XmlDictionaryWriter,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlDictionaryWriter" /> zum Schreiben des <see langword="&lt;saml:DoNotCacheCondition&gt;" />-Elements.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in eine SAML-Assertion schreiben kann.</param>
+        <param name="keyInfoSerializer">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />, der <see langword="KeyInfo" />-Klauseln schreiben kann.</param>
+        <summary>Schreibt das <see langword="&lt;saml:DoNotCacheCondition&gt;" />-Element in das angegebene XML-Serialisierungsprogramm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition.WriteXml%28System.Xml.XmlDictionaryWriter%2CSystem.IdentityModel.Tokens.SamlSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%29>-Methode, um die aktuelle <xref:System.IdentityModel.Tokens.SamlDoNotCacheCondition>-Instanz in ein `<saml:DoNotCacheCondition>`-Element zu schreiben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

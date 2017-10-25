@@ -1,0 +1,192 @@
+<Type Name="Partitioner&lt;TSource&gt;" FullName="System.Collections.Concurrent.Partitioner&lt;TSource&gt;">
+  <TypeSignature Language="C#" Value="public abstract class Partitioner&lt;TSource&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Partitioner`1&lt;TSource&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Concurrent.Partitioner`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Concurrent</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.14.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TSource" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TSource">Der Typ der Elemente in der Auflistung.</typeparam>
+    <summary>Stellt eine bestimmte Methode dar, mit der eine Datenquelle in mehrere Partitionen aufgeteilt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie einen Partitionierer, der jeweils ein einzelnes Element zurückgibt, implementiert wird:  
+  
+ [!code-csharp[System.Collections.Concurrent.Partitioner#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.partitioner/cs/partitioner.cs#1)]
+ [!code-vb[System.Collections.Concurrent.Partitioner#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.partitioner/vb/partitioner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Die statischen Methoden auf <see cref="T:System.Collections.Concurrent.Partitioner`1" /> sind alle threadsicher und können von mehreren Threads gleichzeitig verwendet werden. Allerdings während ein erstellter Partitionierer verwendet wird, sollte die zugrunde liegenden Datenquelle nicht geändert werden, ob aus demselben Thread, der einen Partitionierer verwendet oder von einem separaten Thread.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Partitioner ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Partitioniererinstanz an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicPartitions">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;TSource&gt; GetDynamicPartitions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;!TSource&gt; GetDynamicPartitions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner`1.GetDynamicPartitions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Objekt, das die zugrunde liegende Auflistung in eine Variable Anzahl von Partitionen partitioniert werden kann.</summary>
+        <returns>Ein Objekt, das Partitionen über der zugrunde liegenden Datenquelle erstellen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Objekt implementiert die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> Schnittstelle. Aufrufen von <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> für das Objekt eine andere Partition über die Sequenz erstellt.  
+  
+ Die <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> Methode wird nur unterstützt, wenn die <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> Eigenschaft gibt "true" zurück. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dynamische Partitionierung wird von der Basisklasse nicht unterstützt. Sie müssen es in einer abgeleiteten Klasse implementieren.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartitions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Collections.Generic.IEnumerator&lt;TSource&gt;&gt; GetPartitions (int partitionCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Collections.Generic.IEnumerator`1&lt;!TSource&gt;&gt; GetPartitions(int32 partitionCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Collections.Generic.IEnumerator&lt;TSource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partitionCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="partitionCount">Die Anzahl von Partitionen zu erstellen.</param>
+        <summary>Partitioniert die zugrunde liegende Auflistung in die angegebene Anzahl von Partitionen.</summary>
+        <returns>Eine Liste mit <paramref name="partitionCount" /> Enumeratoren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Klasse, die diese Methode implementiert wird erwartet genau die Anzahl von Partitionen zurückgibt, die im angegebenen `partitionCount`. Wenn eine Partition keine Elemente enthält, müssen Sie anschließend einen leeren Enumerator anstelle von Null (Nothing in Visual Basic) zurück. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDynamicPartitions">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsDynamicPartitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDynamicPartitions" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob zusätzliche Partitionen dynamisch erstellt werden können.</summary>
+        <value>True, wenn die <see cref="T:System.Collections.Concurrent.Partitioner`1" /> können Partitionen dynamisch erstellen, wie sie angefordert werden; false, wenn die <see cref="T:System.Collections.Concurrent.Partitioner`1" /> Partitionen nur statisch zuweisen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine abgeleitete Klasse, nicht überschreiben und implementieren <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> sollte "false" zurückgeben. Der Wert des <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> sollten nicht über die Lebensdauer dieser Instanz variieren. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

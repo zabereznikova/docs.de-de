@@ -1,0 +1,17 @@
+<Namespace Name="System.Windows.Forms.Layout">
+  <Docs>
+    <summary>Die <see cref="N:System.Windows.Forms.Layout" /> -Namespace enthält Klassen zum Implementieren von Layoutverhalten in einem Formular oder Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Liste enthält die Klassen in diesem Namespace enthalten:  
+  
+-   Die <xref:System.Windows.Forms.Layout.LayoutEngine> abstrakten Klasse wird verwendet, durch die <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelemente zum Erstellen von benutzerdefinierten Layoutmodule.  
+  
+-   Die <xref:System.Windows.Forms.Layout.ArrangedElementCollection> Klasse erfasst Objekte, die in einem Layout von verwaltet einbezogen eine <xref:System.Windows.Forms.Layout.LayoutEngine>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

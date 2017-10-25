@@ -1,0 +1,321 @@
+<Type Name="StructLayoutAttribute" FullName="System.Runtime.InteropServices.StructLayoutAttribute">
+  <TypeSignature Language="C#" Value="public sealed class StructLayoutAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StructLayoutAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.StructLayoutAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Hiermit können Sie das physikalische Layout der Datenfelder einer Klasse oder Struktur im Speicher steuern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Klassen oder Strukturen anwenden.  
+  
+ Die common Language Runtime steuert das physische Layout der Datenfelder einer Klasse oder Struktur im verwalteten Speicher. Wenn den Typ von nicht verwaltetem Code übergeben werden sollen, Sie können jedoch die <xref:System.Runtime.InteropServices.StructLayoutAttribute> Attribut, das nicht verwaltete Layout des Typs steuern. Verwenden Sie das Attribut mit <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> die Member sequenziell in der Reihenfolge angeordnet werden, sie angezeigt werden. Für <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> steuert das Layout im verwalteten Speicher, und das Layout im nicht verwalteten Speicher. Für nicht blitfähige Typen steuert sie das Layout, wenn die Klasse oder Struktur zu nicht verwaltetem Code gemarshallt wird, aber das Layout im verwalteten Speicher nicht steuert. Verwenden Sie das Attribut mit <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> um die genaue Position der einzelnen Datenmember zu steuern. Dies wirkt sich sowohl verwaltete als auch nicht verwaltete Layout für blitfähige und nicht blitfähige Typen auf. Mit <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> erfordert die Verwendung der <xref:System.Runtime.InteropServices.FieldOffsetAttribute> Attribut, um die Position jedes Felds im Typ anzugeben.  
+  
+ Anwenden von c#, Visual Basic und C++-Compiler die <xref:System.Runtime.InteropServices.LayoutKind.Sequential> Layoutwert standardmäßig auf Strukturen. Für Klassen, übernehmen Sie die <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> Wert explizit. Die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) gilt auch für die <xref:System.Runtime.InteropServices.StructLayoutAttribute> -Attribut; es gilt immer die <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> Wert beim Importieren einer Typbibliothek.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Deklaration eines verwaltete der `GetSystemTime` -Funktion und definiert `MySystemTime` -Klasse mit <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> Layout. `GetSystemTime`Ruft die Systemzeit ab und gibt in der Konsole aus.  
+  
+ [!code-cpp[StructLayoutAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/StructLayoutAttribute/CPP/structlayoutattribute.cpp#1)]
+ [!code-csharp[StructLayoutAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/StructLayoutAttribute/CS/structlayoutattribute.cs#1)]
+ [!code-vb[StructLayoutAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/StructLayoutAttribute/VB/structlayoutattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StructLayoutAttribute (short layoutKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 layoutKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.StructLayoutAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="layoutKind" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="layoutKind">Eine 16-Bit-Ganzzahl, die einen der <see cref="T:System.Runtime.InteropServices.LayoutKind" />-Werte darstellt, der angibt, wie die Klasse oder Struktur angeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.StructLayoutAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.InteropServices.LayoutKind" />-Enumerationsmember.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor nimmt eine zugrunde liegende 16-Bit-Ganzzahl, die jeder darstellt <xref:System.Runtime.InteropServices.LayoutKind> Enumerationsmember. Die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) dieser Konstruktor verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StructLayoutAttribute (System.Runtime.InteropServices.LayoutKind layoutKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.LayoutKind layoutKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.StructLayoutAttribute.#ctor(System.Runtime.InteropServices.LayoutKind)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="layoutKind" Type="System.Runtime.InteropServices.LayoutKind" />
+      </Parameters>
+      <Docs>
+        <param name="layoutKind">Einer der Enumerationswerte, der angibt, wie die Klasse oder Struktur angeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.StructLayoutAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.InteropServices.LayoutKind" />-Enumerationsmember.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie für Code übersichtlicher gestalten, die weniger fehleranfällig ist immer diesen Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharSet">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CharSet CharSet;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.CharSet CharSet" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.StructLayoutAttribute.CharSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob Zeichenfolgendatenfelder in der Klasse standardmäßig als <see langword="LPWSTR" /> oder als <see langword="LPSTR" /> gemarshallt werden müssen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `CharSet` Feld <xref:System.Runtime.InteropServices.CharSet?displayProperty=nameWithType>, alle Zeichenfolgenargumente in Unicode-Zeichen konvertiert werden (`LPWSTR`), bevor sie an die nicht verwaltete Implementierung übergeben werden. Wenn das Feld, um festgelegt ist <xref:System.Runtime.InteropServices.CharSet?displayProperty=nameWithType>, werden die Zeichenfolgen in ANSI-Zeichenfolgen konvertiert (`LPSTR`). Wenn die `CharSet` Feld <xref:System.Runtime.InteropServices.CharSet?displayProperty=nameWithType>, die Konvertierung ist plattformabhängig (d. h. ANSI unter Windows 98 und Windows Me und Unicode in höheren Versionen).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pack">
+      <MemberSignature Language="C#" Value="public int Pack;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 Pack" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.StructLayoutAttribute.Pack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Steuert die Ausrichtung der Datenfelder einer Klasse oder Struktur im Speicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> Feld steuert die Ausrichtung des Typs Felder im Arbeitsspeicher.  Sie wirkt sich auf beide <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> und <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>. Standardmäßig ist der Wert 0 (null), der angibt, der Standardkomprimierungsgröße für die aktuelle Plattform. Der Wert des <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> muss 0, 1, 2, 4, 8, 16, 32, 64 oder 128 sein:  
+  
+ Die Felder der eine Instanz eines Datentyps werden ausgerichtet, mithilfe der folgenden Regeln:  
+  
+-   Die Ausrichtung des Typs ist die Größe des größten Elements (1, 2, 4, 8, usw., Byte) oder die angegebene Größe, welcher Wert kleiner ist.  
+  
+-   Jedes Feld muss Felder des eigenen Größe ausgerichtet (1, 2, 4, 8, Bytes usw.) oder die Ausrichtung des Typs, welcher Wert kleiner ist.  Da die standardausrichtung des Typs der Größe des größten Elements, die größer als oder gleich auf alle anderen Feldlängen ist handelt, bedeutet normalerweise, dass die Felder durch ihre Größe ausgerichtet sind. Angenommen, selbst wenn die größten Feld in einem Typ eine 64-Bit-Ganzzahl (8 Byte) oder das Feld Pack ist auf 8 festgelegt ist <xref:System.Byte> Felder auf der 1-Byte-Grenzen ausgerichtet <xref:System.Int16> Felder auf 2-Byte-Grenzen ausgerichtet und <xref:System.Int32> Felder auf 4-Byte-Grenzen ausgerichtet.  
+  
+-   Auffüllung zwischen Feldern, die ausrichtungsanforderungen zu erfüllen hinzugefügt.  
+  
+ Betrachten Sie beispielsweise die folgende Struktur besteht aus zwei <xref:System.Byte> Felder und eine <xref:System.Int32> Feld wird zusammen mit verschiedenen Werten für die <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> Feld.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex0.cs#1)]  
+  
+> [!IMPORTANT]
+>  Um den C#-Beispielen erfolgreich zu kompilieren, geben Sie die `/unsafe` Compilerschalter.  
+  
+ Wenn Sie die Standardkomprimierungsgröße angeben, wird die Größe der Struktur 8 Bytes. Die zwei Bytes belegen die ersten zwei Bytes an Arbeitsspeicher, da Bytes an ein-Byte-Grenzen ausgerichtet werden müssen. Da die standardmäßige Ausrichtung des Typs 4 Bytes, d. h. die Größe des größten Tabellenfelder ist, `i3`, es gibt zwei Byte-Auffüllung, gefolgt von der Ganzzahlfeld.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex1.cs#2)]  
+  
+ Wenn <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> festgelegt ist, 2, beträgt die Größe der Struktur 6 Bytes. Belegen vor, die zwei Bytes die ersten zwei Bytes an Arbeitsspeicher. Da Felder jetzt auf 2-Byte-Grenzen ausgerichtet werden, gibt es keine Leerstellen zwischen das zweite Byte und die ganze Zahl.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex2.cs#3)]  
+  
+ Wenn <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> festgelegt ist, 4, die Größe der Struktur ist dasselbe wie bei der Standardfall, in den Typ Ausrichtung durch die Größe des größten Felds definiert wurde, `i3`, ist 4.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex3.cs#4)]  
+  
+ Wenn <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> festgelegt ist auf 8 ist die Größe der Struktur immer noch in der Standardeinstellung identisch Groß-/Kleinschreibung, da die `i3` Feld ausgerichtet auf eine 4-Byte-Grenze, die kleiner als die 8-Byte-Grenze, die nach dem Feld Pack angegeben ist.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex4.cs#5)]  
+  
+ Um ein weiteres Beispiel nutzen zu können, sollten Sie in der folgenden Struktur besteht aus zwei Byte-Feldern, eine 32-Bit-Ganzzahl mit Vorzeichen Feld eine Einzelelement-Byte-Array und einen Dezimalwert. Die Standardkomprimierungsgröße ist die Größe der Struktur 28 Bytes. Die zwei Bytes belegen die ersten zwei Bytes an Arbeitsspeicher, gefolgt von zwei Byte-Auffüllung, gefolgt von der ganzen Zahl. Als Nächstes wird ein-Byte-Array, gefolgt von drei Byte-Auffüllung. Schließlich die <xref:System.Decimal> Feld d5, auf eine 4-Byte-Grenze ausgerichtet sein, da ein Dezimalwert von vier besteht aus <xref:System.Int32> Felder, damit die Ausrichtung auf die Größe des größten basiert und ihre Felder nicht auf die Größe des der <xref:System.Decimal> Struktur als Ganzes.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex5.cs#6)]  
+  
+ Wenn <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> festgelegt ist, 2, ist die Größe der Struktur 24 Bytes. Im Vergleich zu die standardausrichtung wurden zwei Bytes der Auffüllung zwischen den zwei Bytes und die ganze Zahl entfernt, da die Ausrichtung des Typs jetzt 4 anstelle von 2 ist. Und die drei Bytes Abstand nach dem `a4` ersetzt wurden um ein Byte der Auffüllung, da `d5` jetzt auf eine 4-Byte-Grenze, statt eine 2-Byte-Grenze ausgerichtet.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex6.cs#7)]  
+  
+ Wenn <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> festgelegt ist, 8, die Größe der Struktur entspricht dem wie beim Standardfall, da die ausrichtungsanforderungen in dieser Struktur weniger als 8 sind.  
+  
+ [!code-csharp[System.Runtime.InteropServices.StructLayoutAttribute.Pack#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.structlayoutattribute.pack/cs/packex7.cs#8)]  
+  
+ Die <xref:System.Runtime.InteropServices.StructLayoutAttribute.Pack> Feld wird häufig verwendet, wenn Strukturen, während die Datenträger exportiert werden und Netzwerk-Schreibvorgänge. Das Feld wird auch häufig verwendet, während der Plattform aufrufen und Interop-Vorgänge.  
+  
+ In einigen Fällen wird das Feld verwendet, um speicheranforderungen zu reduzieren, indem Sie eine engere Komprimierungsgröße erzeugen. Diese Art der Verwendung erfordert eine sorgfältige tatsächliche Hardware Einschränkungen und tatsächlich die Leistung beeinträchtigen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public int Size;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 Size" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.StructLayoutAttribute.Size" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die absolute Größe der Klasse oder Struktur an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld muss gleich oder größer als die Gesamtgröße in Bytes, der die Member der Klasse oder Struktur sein. Dieses Feld ist in erster Linie für Compilerwriter, erweitern den durch eine Struktur zum direkten, nicht verwalteten Zugriff belegten Arbeitsspeicher frei möchten. Beispielsweise können Sie dieses Feld verwenden, bei der Arbeit mit Unions, die nicht in Metadaten direkt dargestellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.LayoutKind Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.LayoutKind Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.StructLayoutAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.LayoutKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Runtime.InteropServices.LayoutKind" />-Wert ab, der angibt, wie die Klasse oder Struktur angeordnet ist.</summary>
+        <value>Einer der Enumerationswerte, der angibt, wie die Klasse oder Struktur angeordnet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,97 @@
+<Type Name="GridPattern+GridPatternInformation" FullName="System.Windows.Automation.GridPattern+GridPatternInformation">
+  <TypeSignature Language="C#" Value="public struct GridPattern.GridPatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit GridPattern/GridPatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.GridPattern.GridPatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Eigenschaftswerte einer <see cref="T:System.Windows.Automation.GridPattern" /> -Objekt mithilfe seiner <see cref="P:System.Windows.Automation.GridPattern.Current" /> oder <see cref="P:System.Windows.Automation.GridPattern.Cached" /> Accessoren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in einem Raster an.</summary>
+        <value>Die Gesamtanzahl der Spalten in einem Raster.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausgeblendete Zeilen und Spalten können je nach der anbieterimplementierung geladen werden die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Struktur angezeigt werden und werden daher berücksichtigt werden, der <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> und <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> Eigenschaften. Wenn die ausgeblendeten Zeilen und Spalten noch nicht geladen wurde, werden sie nicht gezählt.  
+  
+ Der Standardwert ist 0.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Ereignislistener für ein Raster Struktur ändern, z. B. eine Zeile oder Spalte Raster Element wird eingerichtet, hinzugefügt oder entfernt aus dem Raster.  
+  
+ [!code-csharp[UIAGridPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#102)]
+ [!code-vb[UIAGridPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#102)]  
+[!code-csharp[UIAGridPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#103)]
+[!code-vb[UIAGridPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#103)]  
+[!code-csharp[UIAGridPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#101)]
+[!code-vb[UIAGridPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Zeilen in einem Raster ab.</summary>
+        <value>Die Gesamtanzahl der Zeilen in einem Raster.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausgeblendete Zeilen und Spalten können je nach der anbieterimplementierung geladen werden die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Struktur angezeigt werden und werden daher berücksichtigt werden, der <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> und <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> Eigenschaften. Wenn die ausgeblendeten Zeilen und Spalten noch nicht geladen wurde, werden sie nicht gezählt.  
+  
+ Der Standardwert ist 0.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Ereignislistener für ein Raster Struktur ändern, z. B. eine Zeile oder Spalte Raster Element wird eingerichtet, hinzugefügt oder entfernt aus dem Raster.  
+  
+ [!code-csharp[UIAGridPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#102)]
+ [!code-vb[UIAGridPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#102)]  
+[!code-csharp[UIAGridPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#103)]
+[!code-vb[UIAGridPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#103)]  
+[!code-csharp[UIAGridPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#101)]
+[!code-vb[UIAGridPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

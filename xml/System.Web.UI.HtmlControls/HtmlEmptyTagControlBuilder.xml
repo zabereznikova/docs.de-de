@@ -1,0 +1,75 @@
+<Type Name="HtmlEmptyTagControlBuilder" FullName="System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder">
+  <TypeSignature Language="C#" Value="public sealed class HtmlEmptyTagControlBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlEmptyTagControlBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Interaktion mit der Parser zum Erstellen von HTML-Serversteuerelemente, die keinen Text oder ein schließendes Tag aufweisen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder> Steuerelement interagiert mit dem Seitenparser HTML-Serversteuerelemente, die einen Text oder das Endtag, z. B. keine `<img>`, `<link>`, `<input>`, und `<meta>`. Die <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.HasBody%2A> -Eigenschaft gibt immer `false`, gibt an, dass die Steuerelemente mit erstellt die <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder> Steuerelement keine schließenden Tags.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlEmptyTagControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.%23ctor%2A> Methode wird durch das ASP.NET-Seitenframework intern verwendet und sollte nicht aus dem Code aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public override bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die Steuerelemente mit erstellt die <see cref="T:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder" /> Steuerelement keine schließenden Tags.</summary>
+        <returns>
+          <see langword="false" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.HasBody%2A> Methode überschreibt der Basisklasse <xref:System.Web.UI.ControlBuilder.HasBody%2A> Methode, um stets `false`, da die <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder> Klasse stellt Steuerelemente, die keine schließenden Tags dar. Die <xref:System.Web.UI.ControlBuilder.HasBody%2A> Methode von der <xref:System.Web.UI.ControlBuilder> -Klasse bestimmt, ob ein Steuerelement ein öffnendes und ein schließendes Tag aufweist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,140 @@
+<Type Name="IChannel" FullName="System.Runtime.Remoting.Channels.IChannel">
+  <TypeSignature Language="C#" Value="public interface IChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannel" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IChannel" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Nachrichten, die über Remotegrenzen hinweg gelten bereit Conduits.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remotegrenzen hinweg möglich <xref:System.Runtime.Remoting.Contexts.Context>s, <xref:System.AppDomain>s, Prozessen oder Computern. Eine Anwendung diese Grenzen hinweg kann nur mithilfe von Kanälen. Diese überschneidungen können ein- und ausgehende sein. Ein Kanal kann für einen Endpunkt für eingehende Nachrichten überwachen, an einen Endpunkt für ausgehende Nachrichten oder für beides senden. Dies stellt einen Erweiterbarkeitspunkt in der Common Language Runtime eine Vielzahl von Protokollen, einbinden bereit, obwohl die Common Language Runtime möglicherweise nicht am anderen Ende des Kanals.  
+  
+ Laufzeit-Objekte können verwendet werden, um einen Satz breit, umfangreiche Semantik und Entitäten darstellen. Der Kanal stellt den Erweiterungspunkt zum Konvertieren von Nachrichten in und aus die spezifischen Protokolle bereit. Wenn Laufzeiten an beiden Enden des Kanals vorhanden sind, wird zwischen den zwei Enden, um die Client- und senkenketten auf beiden Seiten der Grenze zu verbinden ein virtuelles Channel erstellt.  
+  
+ Der Client Teil der Kanal befindet sich am Ende der Senkenkette eine Client-Kontext. Der Serverteil des Kanals befindet sich am Anfang der Kontextsenkenkette. Nachrichten werden an die Client-Kanal mit übermittelt die <xref:System.Runtime.Remoting.Messaging.IMessageSink> Schnittstelle, über diesen Kanal übertragen und dann vom Server-Kanal empfangen werden. Die Serverchannel übermittelt die Nachricht an den ersten Server Kontext Senke.  
+  
+ Kanäle verfügbar machen müssen die <xref:System.Runtime.Remoting.Channels.IChannel> -Schnittstelle, die informative Eigenschaften, z. B. bereitstellt die <xref:System.Runtime.Remoting.Channels.IChannel.ChannelName%2A> und <xref:System.Runtime.Remoting.Channels.IChannel.ChannelPriority%2A> Eigenschaften. Kanäle können registriert werden, mithilfe der <xref:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChannelName">
+      <MemberSignature Language="C#" Value="public string ChannelName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChannelName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IChannel.ChannelName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Kanals ab.</summary>
+        <value>Der Name des Kanals.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[HttpServerChannel_Server_Client#2](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpServerChannel_Server_Client/CPP/httpserverchannel_9_server.cpp#2)]
+ [!code-csharp[HttpServerChannel_Server_Client#2](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpServerChannel_Server_Client/CS/httpserverchannel_9_server.cs#2)]
+ [!code-vb[HttpServerChannel_Server_Client#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpServerChannel_Server_Client/VB/httpserverchannel_9_server.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelPriority">
+      <MemberSignature Language="C#" Value="public int ChannelPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChannelPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IChannel.ChannelPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Priorität des Kanals ab.</summary>
+        <value>Eine ganze Zahl, die die Priorität des Kanals angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Höhere Zahlen geben eine höhere Priorität, damit ein Kanal mit der Priorität von 50 eine höhere Priorität als ein Kanal mit Priorität 25 muss. Die Anwendungsdomäne überschreitende Channel hat eine Priorität von 100.  
+  
+ Clientkanäle mit höherer Priorität werden zuerst die Möglichkeit zur Verbindung mit einem Remoteobjekt, angegeben durch eine URL oder einen bestimmten Kanal Dateneingabe aus erhält eine <xref:System.Runtime.Remoting.ObjRef>.  
+  
+ Für Server-Kanäle, gibt die Priorität der Reihenfolge in der ihre Kanaldaten werden an eine <xref:System.Runtime.Remoting.ObjRef>, die wiederum wirkt sich auf die Reihenfolge, in denen Clients zur Verbindung mit des Serverobjekts versucht. Wenn der Server an einen HTTP-Kanal mit der Priorität 50 und einen TCP-Kanal mit Priorität 25 lauscht und der Client verfügt über eine HTTP- und TCP-Kanal registriert, wird der Client den HTTP-Kanal verwenden, sprechen Sie mit dem Server klicken.  
+  
+   
+  
+## Examples  
+ [!code-cpp[HttpServerChannel_Server_Client#5](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpServerChannel_Server_Client/CPP/httpclientchannel_6_client.cpp#5)]
+ [!code-csharp[HttpServerChannel_Server_Client#5](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpServerChannel_Server_Client/CS/httpclientchannel_6_client.cs#5)]
+ [!code-vb[HttpServerChannel_Server_Client#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpServerChannel_Server_Client/VB/httpclientchannel_6_client.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public string Parse (string url, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Parse(string url, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IChannel.Parse(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL des Objekts.</param>
+        <param name="objectURI">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , enthält das URI-Objekt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt das URI-Objekt als Out-Parameter und den URI des aktuellen Kanals als Rückgabewert zurück.</summary>
+        <returns>Der URI des aktuellen Kanals oder <see langword="null" /> , wenn der URI nicht zu diesem Kanal gehört.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[HttpServerChannel_Server_Client#5](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpServerChannel_Server_Client/CPP/httpclientchannel_6_client.cpp#5)]
+ [!code-csharp[HttpServerChannel_Server_Client#5](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpServerChannel_Server_Client/CS/httpclientchannel_6_client.cs#5)]
+ [!code-vb[HttpServerChannel_Server_Client#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpServerChannel_Server_Client/VB/httpclientchannel_6_client.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

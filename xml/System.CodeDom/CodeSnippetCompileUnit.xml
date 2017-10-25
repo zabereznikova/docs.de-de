@@ -1,0 +1,154 @@
+<Type Name="CodeSnippetCompileUnit" FullName="System.CodeDom.CodeSnippetCompileUnit">
+  <TypeSignature Language="C#" Value="public class CodeSnippetCompileUnit : System.CodeDom.CodeCompileUnit" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeSnippetCompileUnit extends System.CodeDom.CodeCompileUnit" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeSnippetCompileUnit" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeCompileUnit</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein literal Codefragment, das kompiliert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeSnippetCompileUnit>kann einen literal Codeblock darstellen, die direkt in der Quelle ohne Änderungen enthalten ist.  
+  
+ Ein <xref:System.CodeDom.CodeSnippetCompileUnit> speichert einen Codeabschnitt genau im ursprünglichen Format, als Zeichenfolge. CodeDOM übersetzt keine literalen Codefragmente. Literale Codefragmente werden gespeichert und in ihrem ursprünglichen Format ausgegeben. CodeDOM-Objekten, die literalen Code enthalten werden bereitgestellt, damit Entwickler Code kapseln können, die bereits in der Zielsprache verwendet wird.  
+  
+ Die <xref:System.CodeDom.CodeSnippetCompileUnit.Value%2A> Eigenschaft enthält die literale Codefragment als Zeichenfolge. Die <xref:System.CodeDom.CodeSnippetCompileUnit.LinePragma%2A> Eigenschaft ist optional und gibt die Position des Codes innerhalb eines Quellcodedokuments.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von der <xref:System.CodeDom.CodeSnippetCompileUnit> Klasse, indem eine Zeichenfolge, die literalen Code darstellt.  
+  
+ [!code-cpp[CodeDomSampleBatch#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomSampleBatch/CPP/class1.cpp#8)]
+ [!code-csharp[CodeDomSampleBatch#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomSampleBatch/CS/class1.cs#8)]
+ [!code-vb[CodeDomSampleBatch#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomSampleBatch/VB/class1.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetCompileUnit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetCompileUnit.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeSnippetCompileUnit" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diesen Konstruktor verwenden, legen Sie auch die <xref:System.CodeDom.CodeSnippetCompileUnit.Value%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetCompileUnit (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetCompileUnit.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das literal Codefragment dargestellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeSnippetCompileUnit" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von der <xref:System.CodeDom.CodeSnippetCompileUnit> Klasse, indem eine Zeichenfolge, die literalen Code darstellt.  
+  
+ [!code-cpp[CodeDomSampleBatch#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomSampleBatch/CPP/class1.cpp#8)]
+ [!code-csharp[CodeDomSampleBatch#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomSampleBatch/CS/class1.cs#8)]
+ [!code-vb[CodeDomSampleBatch#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomSampleBatch/VB/class1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePragma">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeLinePragma LinePragma { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeLinePragma LinePragma" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeSnippetCompileUnit.LinePragma" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeLinePragma</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, die die Quellcodezeile und den Dateinamen zu, in dem der Code im Quellcodedokuments befindet.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeLinePragma" /> , der die Position des Codefragments angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeSnippetCompileUnit.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das literal Codefragment dargestellt.</summary>
+        <value>Das literal Codefragment.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

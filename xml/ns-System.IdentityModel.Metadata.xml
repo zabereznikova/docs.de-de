@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel.Metadata">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Metadata" /> -Namespace enthält Klassen, die Elemente in einem verbundmetadatendokument darstellen. Ein verbundmetadatendokument ist ein XML-Dokument, das Informationen bereitstellt, die bei der herstellen eines Verbunds mit Partnern hilfreich sein können. Weitere Informationen zu den Verbundmetadaten finden Sie in Abschnitt 3 der folgenden Spezifikation: <see href="http://go.microsoft.com/fwlink/?LinkID=210152">Web Services Federation Language (WS-Federation) Version 1.2</see> (http://go.microsoft.com/fwlink/?LinkID=210152).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

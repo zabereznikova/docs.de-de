@@ -1,0 +1,724 @@
+<Type Name="ToolBarButton" FullName="System.Windows.Forms.ToolBarButton">
+  <TypeSignature Language="C#" Value="public class ToolBarButton : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolBarButton extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBarButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ToolBarButtonDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Windows-Symbolleisten-Schaltfläche dar. Obwohl <see cref="T:System.Windows.Forms.ToolStripButton" /> das <see cref="T:System.Windows.Forms.ToolBarButton" />-Steuerelement vorheriger Versionen ersetzt und erweitert, wird das <see cref="T:System.Windows.Forms.ToolBarButton" />-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolBarButton>Steuerelemente werden durch ein übergeordnetes Element besitzt <xref:System.Windows.Forms.ToolBar> Steuerelemente. Allgemeine Eigenschaften festlegen, nach dem Erstellen der Symbolleisten-Schaltfläche werden <xref:System.Windows.Forms.ToolBarButton.Text%2A> und <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>. Legen Sie die <xref:System.Windows.Forms.ToolBarButton.Text%2A> -Eigenschaft der Schaltfläche zum Anzeigen von Text unterhalb oder auf der rechten Seite des Bilds. Zuweisen von Bildern zu den Schaltflächen erstellen ein <xref:System.Windows.Forms.ImageList>, Zuweisung zu den <xref:System.Windows.Forms.ToolBar.ImageList%2A> Eigenschaft der Symbolleiste; weisen Sie die Bild-Indexwerts, um die <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> -Eigenschaft der Schaltfläche.  
+  
+ Um die Darstellung der Symbolleisten-Schaltflächen auf der Symbolleiste zu ändern, legen die <xref:System.Windows.Forms.ToolBar.Appearance%2A> Eigenschaft des übergeordneten Symbolleisten-Steuerelements. Die `ToolBarAppearance.Flat` Darstellung wird den Schaltflächen flach dargestellt. Wie die Maus bewegt sich über die Schaltflächen, die ihre Darstellung Änderungen an dreidimensionalen Zeiger. Schaltfläche Trennzeichen werden als Zeilen anstelle von Leerzeichen zwischen den Schaltflächen, wenn die Schaltflächen eine flache Darstellung haben. Wenn die <xref:System.Windows.Forms.ToolBar.Appearance%2A> -Eigenschaftensatz auf `ToolBarAppearance.Normal`Schaltflächen erhöht und dreidimensional und die Trennzeichen, die als eine Lücke zwischen den Schaltflächen angezeigt werden.  
+  
+ Sie können zuweisen eine <xref:System.Windows.Forms.ContextMenu> mit einer Schaltfläche Wenn die <xref:System.Windows.Forms.ToolBarButton.Style%2A> Eigenschaft auf festgelegt ist `ToolBarButtonStyle.DropDown`. Auf die Schaltfläche geklickt wird, wird das zugeordnete Menü angezeigt.  
+  
+ So erstellen eine Auflistung von <xref:System.Windows.Forms.ToolBarButton> Steuerelemente zum Anzeigen auf eine <xref:System.Windows.Forms.ToolBar>, einzeln mithilfe der Schaltflächen Hinzufügen der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> Methode der <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft. Sie können auch mehrere Symbolleistenschaltflächen mit Hinzufügen der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.AddRange%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> Steuerelemente. Schaltflächen die Symbolleiste auf die Schaltfläche Auflistung zugewiesen sind, die Auflistung der Symbolleiste zugewiesen ist und die Symbolleiste zum Formular hinzugefügt wird. Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> -Ereignis für die Symbolleiste die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> wird ausgewertet und das entsprechende Dialogfeld geöffnet. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.Form>, wird ein <xref:System.Windows.Forms.OpenFileDialog>, <xref:System.Windows.Forms.SaveFileDialog>, und ein <xref:System.Windows.Forms.PrintDialog> erstellt wurden.  
+  
+ [!code-cpp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBar.ToolBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBarButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolBarButton" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein neu erstelltes <xref:System.Windows.Forms.ToolBarButton> besitzt keinen Standard <xref:System.Windows.Forms.ToolBarButton.Text%2A> oder <xref:System.Drawing.Image> zugewiesen. Ist die Schaltfläche Standardformat `ToolBarButtonStyle.PushButton`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> steuert, weist die Schaltflächen der Symbolleiste und setzt Sie einige der allgemeinen Eigenschaften der Schaltflächen. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> und ein <xref:System.Windows.Forms.Form> erstellt wurden und die <xref:System.Windows.Forms.ImageList> verfügt über mindestens ein <xref:System.Drawing.Image> zugewiesen.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBarButton (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem neuen anzuzeigende Text <see cref="T:System.Windows.Forms.ToolBarButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolBarButton" /> -Klasse und zeigt den zugewiesenen Text auf der Schaltfläche.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das neu erstellte <xref:System.Windows.Forms.ToolBarButton> hat keine <xref:System.Drawing.Image> zugewiesen. Ist die Schaltfläche Standardformat <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>. Die `text` Parameter zugewiesen ist die <xref:System.Windows.Forms.ToolBarButton.Text%2A> Eigenschaft und wird in das neue Symbolleiste Schaltflächen-Steuerelement angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> steuert, weist die Schaltflächen der Symbolleiste und setzt Sie einige der allgemeinen Eigenschaften der Schaltflächen. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> und ein <xref:System.Windows.Forms.Form> erstellt wurden und die <xref:System.Windows.Forms.ImageList> verfügt über mindestens ein <xref:System.Drawing.Image> zugewiesen.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.ToolBarButton" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Windows.Forms.ToolBarButton> Verweise. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Menu DropDownMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Menu DropDownMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.DropDownMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Menu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest im Menü in der Dropdown-Symbolleiste auf die Schaltfläche angezeigt werden.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ContextMenu" /> in der Dropdown-Symbolleiste auf die Schaltfläche angezeigt werden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können angeben, eine <xref:System.Windows.Forms.ContextMenu> , die angezeigt werden, wenn die Dropdown-Schaltfläche geklickt wird. Diese Eigenschaft wird nicht verwendet werden, es sei denn, die <xref:System.Windows.Forms.ToolBarButton.Style%2A> Eigenschaftswert festgelegt ist, um <xref:System.Windows.Forms.ToolBarButtonStyle?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Obwohl die <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> -Eigenschaft ist definiert als eine <xref:System.Windows.Forms.Menu> geben, müssen Sie sie Zuweisen einer <xref:System.Windows.Forms.ContextMenu> dafür zur korrekten Darstellung. Wenn Sie eine eigene erstellen <xref:System.Windows.Forms.MenuItem> abgeleitete Klasse muss, weisen Sie dieses Objekt an eine <xref:System.Windows.Forms.ContextMenu> , und weisen Sie die <xref:System.Windows.Forms.ContextMenu> auf die <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> steuert, weist die Schaltflächen der Symbolleiste und setzt Sie einige der allgemeinen Eigenschaften der Schaltflächen. Dieser Code erfordert, dass ein <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> und ein <xref:System.Windows.Forms.Form> erstellt wurden und die <xref:System.Windows.Forms.ImageList> verfügt über mindestens ein <xref:System.Drawing.Image> zugewiesen.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die zugewiesene Objekt ist keine <see cref="T:System.Windows.Forms.ContextMenu" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Schaltfläche aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schaltfläche aktiviert ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> -Eigenschaftensatz auf `false`kann nicht die Symbolleisten-Schaltfläche geklickt werden und die Darstellung der Schaltfläche ändert. Die <xref:System.Drawing.Image> und <xref:System.Windows.Forms.ToolBarButton.Text%2A> zugewiesen, auf die Schaltfläche abgeblendet. Wenn das Bild oder Textfeld mehrere Farben aufweist, werden sie einfarbig grau dargestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageIndex">
+      <MemberSignature Language="C#" Value="public int ImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.ImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageIndexConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Indexwert des Bilds der Schaltfläche zugewiesen.</summary>
+        <value>Der Indexwert des der <see cref="T:System.Drawing.Image" /> die Symbolleisten-Schaltfläche zugewiesen. Der Standard ist -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Wert verweist auf den indizierten Wert der Bilder in einem <xref:System.Windows.Forms.ImageList> an das übergeordnete Element zugewiesen <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> steuert, weist die Schaltflächen der Symbolleiste und setzt Sie einige der allgemeinen Eigenschaften der Schaltflächen. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> und ein <xref:System.Windows.Forms.Form> erstellt wurden und die <xref:System.Windows.Forms.ImageList> verfügt über mindestens ein <xref:System.Drawing.Image> zugewiesen.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zugewiesene Wert ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageKey">
+      <MemberSignature Language="C#" Value="public string ImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.ImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Bilds der Schaltfläche zugewiesen.</summary>
+        <value>Der Name des der <see cref="T:System.Drawing.Image" /> die Symbolleisten-Schaltfläche zugewiesen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBarButton.ImageKey%2A> Wert steht für ein Bild in der <xref:System.Windows.Forms.ImageList> zugewiesen an das übergeordnete Element <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name der Schaltfläche.</summary>
+        <value>Der Name der Schaltfläche.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Namen der Schaltfläche als Schlüssel zum Abrufen der <xref:System.Windows.Forms.ToolBarButton> aus der <xref:System.Windows.Forms.ToolBar.Buttons%2A> Auflistung von ein <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolBar Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolBar Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Symbolleisten-Steuerelement, dem das die Symbolleisten-Schaltfläche zugewiesen ist.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ToolBar" /> zu steuern, die die <see cref="T:System.Windows.Forms.ToolBarButton" /> zugewiesen ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialPush">
+      <MemberSignature Language="C#" Value="public bool PartialPush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PartialPush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.PartialPush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Symbolleiste ein-/ausschalten-Schaltfläche teilweise übertragen wird.</summary>
+        <value>
+          <see langword="true" />Wenn eine Symbolleiste ein-/ausschalten-Schaltfläche teilweise abgelegt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A> festgelegt ist, um `true`, die Symbolleisten-Schaltfläche wird die Oberfläche abgeblendet angezeigt. Diese Darstellung unterscheidet sich von der abgeblendeten Darstellung bei der <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> -Eigenschaftensatz auf `false` , da die Partial-Push-Darstellung gedrückten auf die gesamte Schaltflächenoberseite gewährt. Diese Eigenschaft hat keine Auswirkungen, es sei denn, die <xref:System.Windows.Forms.ToolBarButtonStyle> festgelegt ist, um `ToggleButton`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ToolBarButton.Pushed%2A>, und <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A> Eigenschaften. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.RichTextBox> -Steuerelement namens `RichTextBox1`. Rufen Sie die `InitializeToolBar` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pushed">
+      <MemberSignature Language="C#" Value="public bool Pushed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Pushed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Pushed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Symbolleiste ein-/ausschalten-Schaltfläche derzeit im gedrückten Zustand ist.</summary>
+        <value>
+          <see langword="true" />Wenn eine Symbolleiste ein-/ausschalten-Schaltfläche derzeit im gedrückten Zustand ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.ToolBarButton.Pushed%2A> festgelegt ist, um `true`, die Symbolleisten-Schaltfläche angezeigt wird, vertieft oder abgesenkt relativ zu anderen Schaltflächen. Diese Eigenschaft hat keine Auswirkungen, es sei denn, die <xref:System.Windows.Forms.ToolBarButtonStyle> festgelegt ist, um `ToggleButton`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ToolBarButton.Pushed%2A>, und <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A> Eigenschaften. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.RichTextBox> -Steuerelement namens `RichTextBox1`. Rufen Sie die `InitializeToolBar` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Rectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Rectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Rectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das umschließende Rechteck für eine Symbolleisten-Schaltfläche.</summary>
+        <value>Das umschließende <see cref="T:System.Drawing.Rectangle" /> für eine Symbolleisten-Schaltfläche.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ToolBar> und die Schaltfläche mit der aktuellen sind beide <xref:System.Windows.Forms.ToolBarButton.Visible%2A>, und klicken Sie dann diese Eigenschaft ruft das umschließende Rechteck ab, die Schaltfläche sich derzeit in befindet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolBarButtonStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolBarButtonStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil der Symbolleisten-Schaltfläche fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ToolBarButtonStyle" />-Werte. Die Standardeinstellung ist <see langword="ToolBarButtonStyle.PushButton" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Schaltfläche mit den <xref:System.Windows.Forms.ToolBarButton.Style%2A> festgelegt ist, um <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton> können Sie angeben, eine <xref:System.Windows.Forms.MenuItem> , die angezeigt werden, wenn die Dropdown-Schaltfläche aufgerufen werden. Wenn das Format, um festgelegt wird `ToolBarButtonStyle.Separator`, die Symbolleisten-Schaltfläche angezeigt wird, als Schaltflächentrennzeichen und nicht als Schaltfläche. Der `ToolBarButtonStyle.ToggleButton` Format bewirkt, dass die Symbolleisten-Schaltfläche, eine Schaltfläche zum ein-/ausschalten zu fungieren, er einem ein- oder ausschalten Zustand.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> steuert, weist die Schaltflächen der Symbolleiste und setzt Sie einige der allgemeinen Eigenschaften der Schaltflächen. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> und ein <xref:System.Windows.Forms.Form> erstellt wurden und die <xref:System.Windows.Forms.ImageList> verfügt über mindestens ein <xref:System.Drawing.Image> zugewiesen.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.ToolBarButtonStyle" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das Daten über die Symbolleistenschaltfläche enthält.</summary>
+        <value>Ein <see cref="T:System.Object" /> , das Daten über die Symbolleistenschaltfläche enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft ab oder weist die Daten, die derzeit mit der Symbolleisten-Schaltfläche zugewiesen ist. Alle <xref:System.Object> abgeleiteter Typ kann diese Eigenschaft zugewiesen werden. Wenn diese Eigenschaft mit dem Windows Forms-Designer festgelegt wird, kann nur Text zugewiesen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ToolBarButton.Pushed%2A>, <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>, und <xref:System.Windows.Forms.ToolBarButton.Tag%2A> Eigenschaften. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.RichTextBox> -Steuerelement namens `RichTextBox1`. Rufen Sie die `InitializeToolBar` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text auf der Symbolleiste auf die Schaltfläche angezeigt.</summary>
+        <value>Der Text, der auf die Symbolleisten-Schaltfläche angezeigt wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert der Text-Eigenschaft ist eine leere Zeichenfolge (""), wenn Sie das Steuerelement mit erstellt die <xref:System.Windows.Forms.ToolBar.%23ctor%2A> Konstruktor, der die Zeichenfolge als Parameter akzeptiert. Die Ausrichtung des Texts auf der Symbolleiste auf die Schaltfläche richtet sich nach der <xref:System.Windows.Forms.ToolBar.TextAlign%2A> Eigenschaft von der Schaltfläche übergeordneten <xref:System.Windows.Forms.ToolBar>, die auf einen der festgelegt werden kann die <xref:System.Windows.Forms.ToolBarTextAlign> Enumerationswerte. Die Ausrichtung ist in Bezug auf das Bild der Schaltfläche zugewiesen. Wenn kein Bild der Schaltfläche zugewiesen ist, werden Leerzeichen vom linken Rand für eine auf der Oberfläche der Symbolleisten-Schaltfläche.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> steuert, weist die Schaltflächen der Symbolleiste und setzt Sie einige der allgemeinen Eigenschaften der Schaltflächen. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> und ein <xref:System.Windows.Forms.Form> erstellt wurden und die <xref:System.Windows.Forms.ImageList> verfügt über mindestens ein <xref:System.Drawing.Image> zugewiesen.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipText">
+      <MemberSignature Language="C#" Value="public string ToolTipText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.ToolTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der als QuickInfo für die Schaltfläche angezeigt wird.</summary>
+        <value>Der Text, der angezeigt wird, wenn der Mauszeiger über die Symbolleisten-Schaltfläche bewegt wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die Anzeige des QuickInfo-Text zu aktivieren, wenn der Mauszeiger über die Schaltfläche bewegt wird, legen Sie die <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> Eigenschaft von der Schaltfläche übergeordneten <xref:System.Windows.Forms.ToolBar> auf `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> steuert, weist die Schaltflächen der Symbolleiste und setzt Sie einige der allgemeinen Eigenschaften der Schaltflächen. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> und ein <xref:System.Windows.Forms.Form> erstellt wurden und die <xref:System.Windows.Forms.ImageList> verfügt über mindestens ein <xref:System.Drawing.Image> zugewiesen.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das <see cref="T:System.Windows.Forms.ToolBarButton" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Windows.Forms.ToolBarButton" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBarButton.ToString%2A> Methode gibt eine Zeichenfolge, die den Typ und den Wert der enthält die <xref:System.Windows.Forms.ToolBarButton.Style%2A> und <xref:System.Windows.Forms.ToolBarButton.Text%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Symbolleisten-Schaltfläche sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Symbolleisten-Schaltfläche sichtbar ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Symbolleisten-Schaltfläche nicht sichtbar ist, nicht auf der Symbolleiste angezeigt und kann deshalb keine Benutzereingaben empfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

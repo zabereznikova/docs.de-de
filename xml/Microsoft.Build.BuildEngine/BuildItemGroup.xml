@@ -1,0 +1,373 @@
+<Type Name="BuildItemGroup" FullName="Microsoft.Build.BuildEngine.BuildItemGroup">
+  <TypeSignature Language="C#" Value="public class BuildItemGroup : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildItemGroup extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.BuildItemGroup" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("BuildItemGroup (Count = { Count }, Condition = { Condition })")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:Microsoft.Build.BuildEngine.BuildItem" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.Build.BuildEngine.BuildItemGroup> Objekt kann ein Element in das Projekt darstellen, oder eine virtuelle Auflistung von Elementen, die mit den Elementen erstellt, nach dem Evaluieren von Platzhaltern in den `Include` und `Exclude` Attribute ein `Item` Element.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildItemGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddNewItem">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt ein neues <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> auf die <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddNewItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItem AddNewItem (string itemName, string itemInclude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItem AddNewItem(string itemName, string itemInclude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.AddNewItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="itemInclude" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Die <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> Eigenschaftswert zuweisen der neuen <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <param name="itemInclude">Die <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> Eigenschaftswert zuweisen der neuen <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <summary>Fügt ein neues <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> mit dem angegebenen <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> und <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> Eigenschaftswerte die <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <returns>Die neue <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItem AddNewItem (string itemName, string itemInclude, bool treatItemIncludeAsLiteral);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItem AddNewItem(string itemName, string itemInclude, bool treatItemIncludeAsLiteral) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.AddNewItem(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="itemInclude" Type="System.String" />
+        <Parameter Name="treatItemIncludeAsLiteral" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Die <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> Eigenschaftswert zuweisen der neuen <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <param name="itemInclude">Die <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> Eigenschaftswert zuweisen der neuen <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <param name="treatItemIncludeAsLiteral">
+          <see langword="true" />behandelt die <c>ItemInclude</c> -Parameter als Literalwert; anderenfalls <see langword="false" />.</param>
+        <summary>Fügt ein neues <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> mit dem angegebenen <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> und <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> Eigenschaftswerte die <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />, ermöglicht Ihnen die Angabe, ob die <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> Eigenschaftswert wird als Literal behandelt.</summary>
+        <returns>Die neue <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt die <see cref="P:Microsoft.Build.BuildEngine.BuildItemGroup.Condition" /> Eigenschaftswert und alle <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> Objekte aus der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItemGroup Clone (bool deepClone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItemGroup Clone(bool deepClone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.Clone(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deepClone" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deepClone">
+          <see langword="true" />So erstellen eine tiefe Kopie der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt eine Tiefe oder flache Kopie der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <returns>Eine Kopie von <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine flache Kopie von einer <xref:Microsoft.Build.BuildEngine.BuildItemGroup> verweist auf die gleiche Eigenschaftengruppe wie das Original. Änderungen, die eine flache Kopie in beide Kopien reflektiert werden.  
+  
+ Eine tiefe Kopie einer <xref:Microsoft.Build.BuildEngine.BuildItemGroup> erstellt ein neues XML-Element zu verweisen, sodass beide Kopien der <xref:Microsoft.Build.BuildEngine.BuildItemGroup> können unabhängig voneinander geändert werden.  
+  
+ Wenn der <xref:Microsoft.Build.BuildEngine.BuildItemGroup> direkt auf ein Element im Projekt entspricht (statt, die eine Auflistung von Elementen, die nach Auswertung der Platzhalter im erstellten entspricht der `Include` und `Exclude` Attribute ein `Item` Element), sind nur tiefe Kopien sind zulässig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItemGroup.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Bedingung</c> -Attributwert der Elementgruppe.</summary>
+        <value>Die <c>Bedingung</c> -Attributwert der Elementgruppe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItemGroup.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der Anzahl der <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> Objekte in der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <value>Ein Ganzzahlwert, der die Anzahl der <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> Objekte in der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für die gesamte <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht den Aufrufer die Verwendung der `foreach` -Anweisung der Programmiersprache c# (`for each` in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) zum Durchlaufen der einzelnen <xref:Microsoft.Build.BuildEngine.BuildItem> Objekte in der <xref:Microsoft.Build.BuildEngine.BuildItemGroup>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty> <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Klassen, die alle Elemente und Eigenschaften des Projekts anzuzeigen.  
+  
+ [!code-csharp[msbuild_ListItemsAndProperties#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ListItemsAndProperties/CS/Program.cs#1)]
+ [!code-vb[msbuild_ListItemsAndProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImported">
+      <MemberSignature Language="C#" Value="public bool IsImported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItemGroup.IsImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Elementgruppe in das Projekt importiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Elementgruppe in das Projekt importiert wurde. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItemGroup.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des der <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> Objekt zum Abrufen oder festlegen.</param>
+        <summary>Ruft ab oder legt einen <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> Objekt in dieser <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> Objekt in dieser <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="public void RemoveItem (Microsoft.Build.BuildEngine.BuildItem itemToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveItem(class Microsoft.Build.BuildEngine.BuildItem itemToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.RemoveItem(Microsoft.Build.BuildEngine.BuildItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemToRemove" Type="Microsoft.Build.BuildEngine.BuildItem" />
+      </Parameters>
+      <Docs>
+        <param name="itemToRemove">Das zu entfernende <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />-Element.</param>
+        <summary>Entfernt die angegebene <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> aus der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItemAt">
+      <MemberSignature Language="C#" Value="public void RemoveItemAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveItemAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.RemoveItemAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />-Objekts.</param>
+        <summary>Entfernt die <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> am angegebenen Index aus der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItem[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItem[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItemGroup.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kopiert die <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> Objekte in der <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> in ein neues Array.</summary>
+        <returns>Ein neues Array mit den <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> aus kopierten Objekte die <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

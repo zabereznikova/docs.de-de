@@ -1,0 +1,1225 @@
+<Type Name="ListView+ListViewItemCollection" FullName="System.Windows.Forms.ListView+ListViewItemCollection">
+  <TypeSignature Language="C#" Value="public class ListView.ListViewItemCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ListView/ListViewItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListView.ListViewItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Auflistung der Elemente in einem <see cref="T:System.Windows.Forms.ListView" /> steuern oder den zugewiesenen eine <see cref="T:System.Windows.Forms.ListViewGroup" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.ListView.ListViewItemCollection> speichert die Elemente angezeigt, die einer <xref:System.Windows.Forms.ListView> steuern oder den zugewiesenen eine <xref:System.Windows.Forms.ListViewGroup>. Es gibt zwei Auflistungen, die definiert, die innerhalb der <xref:System.Windows.Forms.ListView> Klasse, mit denen Sie bestimmen, welche Elemente ausgewählt sind, in eine <xref:System.Windows.Forms.ListView> Steuerelement. Die <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> Klasse enthält Eigenschaften und Methoden zum bestimmen, welche Elemente ausgewählt sind, in eine <xref:System.Windows.Forms.ListView> -Steuerelement, während die <xref:System.Windows.Forms.ListView.SelectedIndexCollection> -Klasse ermöglicht es Ihnen zu bestimmen, was innerhalb indiziert die <xref:System.Windows.Forms.ListView.ListViewItemCollection> von einer <xref:System.Windows.Forms.ListView> festlegen, handelt es ausgewählt. Zusätzlich zur Auswahl von Auflistungsklassen, es gibt auch zwei Klassen, mit denen Sie bestimmen, welche Elemente aktiviert sind (wenn die <xref:System.Windows.Forms.ListView.CheckBoxes%2A> Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement auf festgelegt ist `true`) in dieser Auflistung.  
+  
+ Es gibt eine Reihe von Möglichkeiten, um der Auflistung Elemente hinzuzufügen. Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode fügt ein einzelnes Element der Auflistung hinzu. Um eine Anzahl von Elementen der Auflistung hinzugefügt haben, erstellen Sie ein Array von Elementen, und übergeben Sie sie an der <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode. Wenn Sie ein Element an einer bestimmten Position in der Auflistung einfügen möchten, können Sie mithilfe der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode. Um Elemente zu entfernen, verwenden Sie entweder die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Remove%2A> Methode oder die <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> Methode, wenn Sie wissen, wo sich das Element in der Auflistung befindet. Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> Methode ermöglicht es Ihnen so entfernen Sie alle Elemente aus der Auflistung anstelle der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Remove%2A> Methode, um ein einzelnes Element zu einem Zeitpunkt zu entfernen.  
+  
+ Zusätzlich zu den Methoden und Eigenschaften zum Hinzufügen und Entfernen von Elementen die <xref:System.Windows.Forms.ListView.ListViewItemCollection> stellt auch Methoden zum Suchen von Elementen in der Auflistung bereit. Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Contains%2A> Methode können Sie bestimmen, ob ein Element ein Member der Auflistung ist. Wenn Sie wissen, dass das Element in der Auflistung befindet, können Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.IndexOf%2A> Methode, um zu bestimmen, wo sich das Element in der Auflistung befindet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Elemente hinzufügen einer <xref:System.Windows.Forms.ListView.ListViewItemCollection>. Beachten Sie, dass die <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft `ListView1` ist vom Typ <xref:System.Windows.Forms.ListView.ListViewItemCollection>. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, enthält ein <xref:System.Windows.Forms.ListView> Objekt mit dem Namen `ListView1` und ein <xref:System.Windows.Forms.TextBox> mit dem Namen `TextBox1`. Rufen Sie die `InitializeListView` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+  
+ [!code-cpp[System.Windows.Forms.ListView1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView1/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewItemCollection (System.Windows.Forms.ListView owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListView owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.#ctor(System.Windows.Forms.ListView)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListView" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.ListView" /> , die die Auflistung besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vermeiden Sie die Verwendung dieses Konstruktors. Greifen Sie stattdessen die <xref:System.Windows.Forms.ListView.ListViewItemCollection> über die <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Add (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Add(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, der für das Element angezeigt.</param>
+        <summary>Erstellt ein Element mit dem angegebenen Text und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diese Version von den <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode zum Erstellen eines neuen <xref:System.Windows.Forms.ListViewItem> hinzufügen zu einer <xref:System.Windows.Forms.ListView> Steuerelement. Der Text des neuen <xref:System.Windows.Forms.ListViewItem> hinzugefügt, das Steuerelement basiert auf der `text` Parameter. Wenn Sie ein Bild für das Element angeben möchten, verwenden Sie die Version der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> -Methode, die einen Abbildindex als Parameter akzeptiert. Wenn Sie eine vorhandene <xref:System.Windows.Forms.ListViewItem> , dass Sie der Auflistung hinzugefügt haben, verwenden Sie die Version des möchten die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode, akzeptiert eine <xref:System.Windows.Forms.ListViewItem> als Parameter.  
+  
+ Wenn die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> oder, wenn die <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A> Eigenschaft festgelegt ist, die Liste sortiert wird, nachdem das Element hinzugefügt wird. Anderenfalls wird das Element am Ende der Liste eingefügt. Wenn die Liste nicht sortiert sind, können Sie mithilfe der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode zum Einfügen eines Elements in der <xref:System.Windows.Forms.ListView> an einer bestimmten Position. Um eine Gruppe von Elementen auf das Steuerelement in einem einzigen Vorgang hinzuzufügen, verwenden die <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode. Wenn Sie verwenden möchten die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode, um eine große Anzahl von Elementen zum Steuerelement hinzufügen, verwenden Sie die <xref:System.Windows.Forms.ListView.BeginUpdate%2A> und <xref:System.Windows.Forms.ListView.EndUpdate%2A> Methoden, um zu verhindern, dass die <xref:System.Windows.Forms.ListView> aktualisiert wird, bis alle Elemente hinzugefügt werden. Beim Hinzufügen von Elementen zu einer <xref:System.Windows.Forms.ListView>, es ist jedoch effizienter, zu den Elementen am Anfang sortieren und dann neue Elemente hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Add (System.Windows.Forms.ListViewItem value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Add(class System.Windows.Forms.ListViewItem value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Add(System.Windows.Forms.ListViewItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der der Auflistung hinzuzufügende <see cref="T:System.Windows.Forms.ListViewItem" />.</param>
+        <summary>Fügt einer vorhandenen <see cref="T:System.Windows.Forms.ListViewItem" /> auf die Auflistung.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Version von der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> -Methode zum Hinzufügen einer vorhandenen <xref:System.Windows.Forms.ListViewItem> auf die Auflistung. Diese Version von den <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode wird in der Regel verwendet, um Elemente aus anderen <xref:System.Windows.Forms.ListView> Steuerelemente oder, wenn die <xref:System.Windows.Forms.ListViewItem> manuell erstellt wurde, bevor der Auflistung hinzugefügt. Wenn Sie ein neues erstellen möchten <xref:System.Windows.Forms.ListViewItem> verwenden Sie anstelle eines vorhandenen Elements andere Versionen der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode.  
+  
+ Wenn die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> oder, wenn die <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A> Eigenschaft festgelegt ist, die Liste sortiert wird, nachdem das Element hinzugefügt wird. Anderenfalls wird das Element am Ende der Liste eingefügt. Wenn die Liste nicht sortiert sind, können Sie mithilfe der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode zum Einfügen eines Elements in der <xref:System.Windows.Forms.ListView> an einer bestimmten Position. Um eine Gruppe von Elementen auf das Steuerelement in einem einzigen Vorgang hinzuzufügen, verwenden die <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode. Wenn Sie verwenden möchten die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode, um eine große Anzahl von Elementen zum Steuerelement hinzufügen, verwenden Sie die <xref:System.Windows.Forms.ListView.BeginUpdate%2A> und <xref:System.Windows.Forms.ListView.EndUpdate%2A> Methoden, um zu verhindern, dass die <xref:System.Windows.Forms.ListView> aktualisiert wird, bis alle Elemente hinzugefügt werden. Beim Hinzufügen von Elementen zu einer <xref:System.Windows.Forms.ListView>, es ist jedoch effizienter, zu den Elementen am Anfang sortieren und dann neue Elemente hinzuzufügen.  
+  
+ Diese Version von der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode wird auch zum Zuweisen einer <xref:System.Windows.Forms.ListViewItem> auf eine <xref:System.Windows.Forms.ListViewGroup>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Add (string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Add(string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Add(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text des Elements.</param>
+        <param name="imageIndex">Der Index des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein Element mit dem angegebenen Text und Bild und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diese Version von den <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode zum Erstellen eines neuen <xref:System.Windows.Forms.ListViewItem> hinzuzufügende der <xref:System.Windows.Forms.ListView> Steuerelement. Der Text des neuen <xref:System.Windows.Forms.ListViewItem> hinzugefügt, das Steuerelement basiert auf der `text` Parameter. Sie können auch ein Bild für das Element angeben, durch den Index des übergeben der <xref:System.Windows.Forms.ImageList> zugewiesen der <xref:System.Windows.Forms.ListView.LargeImageList%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListView.SmallImageList%2A?displayProperty=nameWithType> Eigenschaften der `imageIndex` Parameter. (In der Regel die <xref:System.Windows.Forms.ListView.LargeImageList%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListView.SmallImageList%2A?displayProperty=nameWithType> Eigenschaften, die die gleichen Indexpositionen verwenden, um verwandte Bilder anzuzeigen.) Wenn Sie nicht für das Element einen Bildindex angeben möchten, verwenden Sie die Version von der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> -Methode, die nur eine Zeichenfolge als Parameter annimmt. Wenn Sie eine vorhandene <xref:System.Windows.Forms.ListViewItem> , dass Sie der Auflistung hinzugefügt haben, verwenden Sie die Version des möchten die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode, akzeptiert eine <xref:System.Windows.Forms.ListViewItem> als Parameter.  
+  
+ Wenn die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> oder, wenn die <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A> Eigenschaft festgelegt ist, die Liste sortiert wird, nachdem das Element hinzugefügt wird. Anderenfalls wird das Element am Ende der Liste eingefügt. Wenn die Liste nicht sortiert sind, können Sie mithilfe der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode zum Einfügen eines Elements in der <xref:System.Windows.Forms.ListView> an einer bestimmten Position. Um eine Gruppe von Elementen auf das Steuerelement in einem einzigen Vorgang hinzuzufügen, verwenden die <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode. Wenn Sie verwenden möchten die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode, um eine große Anzahl von Elementen zum Steuerelement hinzufügen, verwenden Sie die <xref:System.Windows.Forms.ListView.BeginUpdate%2A> und <xref:System.Windows.Forms.ListView.EndUpdate%2A> Methoden, um zu verhindern, dass die <xref:System.Windows.Forms.ListView> aktualisiert wird, bis alle Elemente hinzugefügt werden. Beim Hinzufügen von Elementen zu einer <xref:System.Windows.Forms.ListView>, es ist jedoch effizienter, zu den Elementen am Anfang sortieren und dann neue Elemente hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Add (string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Add(string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text des Elements.</param>
+        <param name="imageKey">Der Schlüssel des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein Element mit dem angegebenen Text und Bild und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> der Teamprojektsammlung hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ListView> wird sortiert, wird das Element in der richtigen Sortierreihenfolge hinzugefügt; andernfalls wird es bis zum Ende der Auflistung hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Add (string key, string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Add(string key, string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Add(System.String,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">Name des Elements.</param>
+        <param name="text">Der Text des Elements.</param>
+        <param name="imageIndex">Der Index des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein Element mit dem angegebenen Schlüssel, Text und Image, und fügt ein Element der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> der Teamprojektsammlung hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ListView> wird sortiert, wird das Element in der richtigen Sortierreihenfolge hinzugefügt; andernfalls wird es bis zum Ende der Auflistung hinzugefügt. Die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem> in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode legt die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft auf den angegebenen Schlüssel, sodass das Element über seinen Index oder Schlüssel abgerufen werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die mit <see cref="T:System.Windows.Forms.ListView" /> im virtuellen Modus befindet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Add (string key, string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Add(string key, string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Add(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Name des Elements.</param>
+        <param name="text">Der Text des Elements.</param>
+        <param name="imageKey">Der Schlüssel des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein Element mit dem angegebenen Schlüssel, Text und Image, und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> der Teamprojektsammlung hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem> in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ Wenn die <xref:System.Windows.Forms.ListView> wird sortiert, wird das Element in der richtigen Sortierreihenfolge hinzugefügt; andernfalls wird es bis zum Ende der Auflistung hinzugefügt. Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode legt die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft des Elements, das dem angegebenen Schlüssel, sodass das Element über seinen Index oder Schlüssel abgerufen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Windows.Forms.ListView.ListViewItemCollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Windows.Forms.ListView/ListViewItemCollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.AddRange(System.Windows.Forms.ListView.ListViewItemCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Windows.Forms.ListView+ListViewItemCollection" />
+      </Parameters>
+      <Docs>
+        <param name="items">Der der Auflistung hinzuzufügende <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</param>
+        <summary>Eine Auflistung von Elementen hinzugefügt der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die enthaltende <xref:System.Windows.Forms.ListView> sortiert wird, die <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode werden die Elemente in einer sortierten Reihenfolge hinzufügen; ansonsten, es wird hinzufügen sie am Ende der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die mit <see cref="T:System.Windows.Forms.ListView" /> im virtuellen Modus befindet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Windows.Forms.ListViewItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Windows.Forms.ListViewItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.AddRange(System.Windows.Forms.ListViewItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Windows.Forms.ListViewItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="items">Ein Array von <see cref="T:System.Windows.Forms.ListViewItem" />-Objekten, die der Auflistung hinzugefügt werden sollen.</param>
+        <summary>Fügt ein Array von <see cref="T:System.Windows.Forms.ListViewItem" /> -Objekte der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, um Elemente aus einer anderen wiederverwenden <xref:System.Windows.Forms.ListView> Steuerelement. Wenn Sie ein einzelnes hinzufügen möchten <xref:System.Windows.Forms.ListViewItem>, verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode. Sie können auch die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode, wenn Sie ein einzelnes hinzufügen möchten <xref:System.Windows.Forms.ListViewItem> an einer bestimmten Position in der Auflistung.  
+  
+ Sie können diese Methode auch verwenden, auf mehrere weisen <xref:System.Windows.Forms.ListViewItem> Datenbankobjekte in einem <xref:System.Windows.Forms.ListViewGroup>.  
+  
+ Wenn die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> oder, wenn die <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A> Eigenschaft festgelegt ist, die Liste sortiert wird, nachdem die Elemente hinzugefügt werden. Andernfalls werden die Elemente am Ende der Liste eingefügt. Wenn die Liste nicht sortiert sind, können Sie mithilfe der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode zum Einfügen von Elementen in der <xref:System.Windows.Forms.ListView> an bestimmten Positionen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Forms.ListView> Steuerelement mit drei <xref:System.Windows.Forms.ListViewItem> angegebenen Objekte und drei <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> Objekte, die für jedes Element angegeben. Im Beispiel wird auch erstellt <xref:System.Windows.Forms.ColumnHeader> Objekte die Unterelemente in der Detailansicht angezeigt. Zwei <xref:System.Windows.Forms.ImageList> Objekte werden auch im Bereitstellen von Images für das Codebeispiel erstellt die <xref:System.Windows.Forms.ListViewItem> Objekte. Diese <xref:System.Windows.Forms.ImageList> Objekte werden hinzugefügt, um die <xref:System.Windows.Forms.ListView.LargeImageList%2A> und <xref:System.Windows.Forms.ListView.SmallImageList%2A> Eigenschaften. Das Beispiel verwendet die folgenden Eigenschaften bei der Erstellung der <xref:System.Windows.Forms.ListView> Steuerelement:  
+  
+-   <xref:System.Windows.Forms.ListView.View%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.LabelEdit%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.AllowColumnReorder%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.CheckBoxes%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.FullRowSelect%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.GridLines%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.Sorting%2A>  
+  
+ Dieses Beispiel benötigen Sie, dass Sie den Code hinzugefügt haben eine <xref:System.Windows.Forms.Form> und dem Namen der Methode, die im Beispiel aus dem Konstruktor oder eine andere Methode auf dem Formular erstellt. Im Beispiel erfordert auch, dass Bilder mit dem Namen `MySmallImage1`, `MySmallImage2`, `MyLargeImage1`, und `MyLargeImage2` befinden sich im Stammverzeichnis von Laufwerk "c"  
+  
+ [!code-cpp[ListViewExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ListViewExample/CPP/form1.cpp#1)]
+ [!code-csharp[ListViewExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewExample/CS/form1.cs#1)]
+ [!code-vb[ListViewExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Elemente aus der Auflistung entfernen, wird alle Informationen über die gelöschten Elemente verloren. Verwenden Sie zum Entfernen eines einzelnen Elements aus der Auflistung der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Remove%2A> oder <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Contains(System.Windows.Forms.ListViewItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein <see cref="T:System.Windows.Forms.ListViewItem" /> , das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Bestimmt, ob das angegebene Element in der Auflistung befindet.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element in der Auflistung enthalten ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Contains%2A> Methode können Sie bestimmen, ob ein <xref:System.Windows.Forms.ListViewItem> ist ein Member der Auflistung. Wenn Sie wissen, dass das Element in der Auflistung befindet, können Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.IndexOf%2A> Methode, um die Position des Elements in der Auflistung zu ermitteln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des zu suchenden Elements.</param>
+        <summary>Bestimmt, ob die Auflistung ein Element mit dem angegebenen Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />um anzugeben, dass die Auflistung ein Element mit dem angegebenen Schlüssel enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem> in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Ein <see cref="T:System.Array" /> , das das Array, kopieren Sie den Inhalt der Auflistung darstellt.</param>
+        <param name="index">Die Position im Zielarray, um die Elemente aus der Auflistung zu kopieren.</param>
+        <summary>Kopiert die gesamte Auflistung in ein vorhandenes Array an einer angegebenen Position innerhalb des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, kombinieren Sie die ausgewählten Elemente aus mehreren Sammlungen in ein einzelnes Array.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie bestimmen die Anzahl der Elemente in der <xref:System.Windows.Forms.ListView>. Sie können dann diesen Wert verwenden, müssen Sie eine Anzahl von Iterationen der Schleife bereitstellen, wenn Sie die Werte der Auflistung durchlaufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem[] Find (string key, bool searchAllSubItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ListViewItem[] Find(string key, bool searchAllSubItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Find(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="searchAllSubItems" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der zu suchende Elementname.</param>
+        <param name="searchAllSubItems">
+          <see langword="true" />Unterelemente gesucht werden soll. andernfalls <see langword="false" />.</param>
+        <summary>Sucht nach Elementen, deren Name mit den angegebenen Schlüssel, die optional suchen Unterelemente übereinstimmt.</summary>
+        <returns>Ein Array von <see cref="T:System.Windows.Forms.ListViewItem" /> -Objekten mit den entsprechenden Elementen oder ein leeres Array, wenn keine Übereinstimmung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem> in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der Auflistung verwendet.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , das die Elementauflistung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Besitzer <xref:System.Windows.Forms.ListView> ist im virtuellen Modus können Sie keine Enumeration der <xref:System.Windows.Forms.ListView.ListViewItemCollection> mit einem Enumerator oder einen Aufruf <xref:System.Windows.Forms.ListView.ListViewItemCollection.GetEnumerator%2A>. Verwenden Sie stattdessen die <xref:System.Windows.Forms.ListView.Items%2A?displayProperty=nameWithType> Eigenschaft Zugriffsberechtigung für ein Element durch Indexwert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Besitzer <see cref="T:System.Windows.Forms.ListView" /> im virtuellen Modus befindet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.IndexOf(System.Windows.Forms.ListViewItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein <see cref="T:System.Windows.Forms.ListViewItem" /> , das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Gibt den Index in der Auflistung des angegebenen Elements zurück.</summary>
+        <returns>Der nullbasierte Index der Position des Elements in der Auflistung ist; andernfalls -1, wenn das Element nicht in der Auflistung befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.IndexOf%2A> Methode können Sie die Position eines Elements in der Auflistung zu bestimmen. Um zu bestimmen, ob ein Element in der Auflistung vor dem Aufrufen dieser Methode enthalten ist, verwenden die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Contains%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOfKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.IndexOfKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Elements, das in der Auflistung gesucht werden soll.</param>
+        <summary>Ruft den Index des Elements mit dem angegebenen Schlüssel ab.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens des Elements mit dem angegebenen Schlüssel, falls gefunden; andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.ListView.ListViewItemCollection.IndexOfKey%2A> wird aufgerufen, die letzte Index zuerst nach einer Übereinstimmung Schlüssel überprüft, und wenn keine Übereinstimmung vorhanden ist, beginnt die Suche am Anfang der Auflistung zurückgegeben.  
+  
+ Die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem> in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Wenn die `key` Parameter ist `null` oder eine leere Zeichenfolge <xref:System.Windows.Forms.ListView.ListViewItemCollection.IndexOfKey%2A> gibt-1 zurück`.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem Insert (int index, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ListViewItem Insert(int32 index, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Insert(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Indexspeicherort, in den das Element eingefügt wird.</param>
+        <param name="text">Der Text, der für das Element angezeigt.</param>
+        <summary>Erstellt ein neues Element und fügt es am angegebenen Index in die Auflistung ein.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> , die in die Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von den <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode ermöglicht das Einfügen eines neuen Elements an einer bestimmten Position in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>. Der Text im angegebenen der `text` -Parameter wird zum Erstellen eines neuen <xref:System.Windows.Forms.ListViewItem> , wird dann in eingefügt die <xref:System.Windows.Forms.ListView.ListViewItemCollection> an der angegebenen Position.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> oder, wenn die <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A> Eigenschaft festgelegt ist, die Liste sortiert wird, nachdem das Element eingefügt wurde.  
+  
+ Verwenden Sie zum Hinzufügen eines Elements ohne Angabe einer bestimmten Position in der Auflistung der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode. Wenn Sie ein Array von Elementen zur Auflistung hinzufügen möchten, verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode. Sie können diese Methode verwenden, wenn Sie ein neues Element in einer bestehenden Kollektion von Elementen einfügen möchten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als der Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem Insert (int index, System.Windows.Forms.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ListViewItem Insert(int32 index, class System.Windows.Forms.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Insert(System.Int32,System.Windows.Forms.ListViewItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Indexspeicherort, in den das Element eingefügt wird.</param>
+        <param name="item">Die <see cref="T:System.Windows.Forms.ListViewItem" /> , die das einzufügende Element darstellt.</param>
+        <summary>Fügt einer vorhandenen <see cref="T:System.Windows.Forms.ListViewItem" /> am angegebenen Index in die Auflistung.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> , die in die Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von den <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode können Sie eine vorhandene einzufügende <xref:System.Windows.Forms.ListViewItem> an einer bestimmten Position in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> oder, wenn die <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A> Eigenschaft festgelegt ist, die Liste sortiert wird, nachdem das Element eingefügt wurde.  
+  
+ Um ein Element hinzuzufügen, ohne Angabe einer bestimmten Position in der Auflistung, um das Element hinzuzufügen, verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode. Wenn Sie ein Array von Elementen zur Auflistung hinzufügen möchten, verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode. Sie können diese Methode verwenden, wenn Sie ein neues Element in einer bestehenden Kollektion von Elementen einfügen möchten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als der Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem Insert (int index, string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ListViewItem Insert(int32 index, string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Insert(System.Int32,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Indexspeicherort, in den das Element eingefügt wird.</param>
+        <param name="text">Der Text, der für das Element angezeigt.</param>
+        <param name="imageIndex">Der Index des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein neues Element mit dem angegebenen Bildindex, und fügt es am angegebenen Index in die Auflistung ein.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> , die in die Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von den <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode ermöglicht das Einfügen eines neuen Elements an einer bestimmten Position in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>. Der Text im angegebenen der `text` -Parameter wird zum Erstellen eines neuen <xref:System.Windows.Forms.ListViewItem> , wird dann in eingefügt die <xref:System.Windows.Forms.ListView.ListViewItemCollection> an der angegebenen Position.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.ListView.Sorting%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.SortOrder?displayProperty=nameWithType> oder, wenn die <xref:System.Windows.Forms.ListView.ListViewItemSorter%2A> Eigenschaft festgelegt ist, die Liste sortiert wird, nachdem das Element eingefügt wurde.  
+  
+ Können Sie auch diese Version von den <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode, um ein Bild für das Element zu geben, indem Sie den Index des der <xref:System.Windows.Forms.ImageList> zugewiesen der <xref:System.Windows.Forms.ListView.LargeImageList%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListView.SmallImageList%2A?displayProperty=nameWithType> Eigenschaften der `imageIndex` Parameter. (In der Regel die <xref:System.Windows.Forms.ListView.LargeImageList%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListView.SmallImageList%2A?displayProperty=nameWithType> Eigenschaften, die die gleichen Indexpositionen verwenden, um verwandte Bilder anzuzeigen.) Wenn Sie nicht für das Element einen Bildindex angeben möchten, verwenden Sie die andere Version der der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> -Methode, die eine Zeichenfolge als Parameter akzeptiert.  
+  
+ Verwenden Sie zum Hinzufügen eines Elements ohne Angabe einer bestimmten Position in der Auflistung der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode. Wenn Sie ein Array von Elementen zur Auflistung hinzufügen möchten, verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.AddRange%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als der Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem Insert (int index, string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ListViewItem Insert(int32 index, string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Insert(System.Int32,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Indexspeicherort, in den das Element eingefügt wird.</param>
+        <param name="text">Der Text der <see cref="T:System.Windows.Forms.ListViewItem" />.</param>
+        <param name="imageKey">Der Schlüssel des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein neues Element mit dem angegebenen Text und Bild und fügt es am angegebenen Index in die Auflistung ein.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> der Teamprojektsammlung hinzugefügt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als der Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Insert (int index, string key, string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Insert(int32 index, string key, string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Insert(System.Int32,System.String,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexposition, an das Element eingefügt wird</param>
+        <param name="key">Die <see cref="P:System.Windows.Forms.ListViewItem.Name" /> des Elements.</param>
+        <param name="text">Der Text des Elements.</param>
+        <param name="imageIndex">Der Index des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein neues Element mit dem angegebenen Schlüssel, Text und Image und fügt es in der Auflistung am angegebenen Index.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> der Teamprojektsammlung hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode legt die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft des Elements, das dem angegebenen Schlüssel, sodass das Element über seinen Index oder Schlüssel abgerufen werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als der Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem Insert (int index, string key, string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.ListViewItem Insert(int32 index, string key, string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Insert(System.Int32,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Indexspeicherort, in den das Element eingefügt wird.</param>
+        <param name="key">Die <see cref="P:System.Windows.Forms.ListViewItem.Name" /> des Elements.</param>
+        <param name="text">Der Text des Elements.</param>
+        <param name="imageKey">Der Schlüssel des Bilds, das für das Element angezeigt.</param>
+        <summary>Erstellt ein neues Element mit dem angegebenen Schlüssel, Text und Bild und fügt es der Auflistung am angegebenen Index hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ListViewItem" /> der Teamprojektsammlung hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Insert%2A> Methode legt die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft des Elements, das dem angegebenen Schlüssel, sodass das Element über seinen Index oder Schlüssel abgerufen werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als der Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist immer `false` für diese Sammlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements in der Auflistung zum Abrufen oder festlegen.</param>
+        <summary>Ruft ab oder legt das Element am angegebenen Index in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ListViewItem" /> am angegebenen Index in der Auflistung befindet, die das Element darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Abrufen der <xref:System.Windows.Forms.ListViewItem> an einer bestimmten Position in der Auflistung gespeichert. Um den Index eines bestimmten Elements in der Auflistung zu bestimmen, verwenden die <xref:System.Windows.Forms.ListView.ListViewItemCollection.IndexOf%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als oder gleich dem Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewItem Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des abzurufenden Elements.</param>
+        <summary>Ruft das Element mit dem angegebenen Schlüssel ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ListViewItem" /> , deren <see cref="P:System.Windows.Forms.ListViewItem.Name" /> -Eigenschaft mit den angegebenen Schlüssel übereinstimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem> in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (System.Windows.Forms.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class System.Windows.Forms.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.Remove(System.Windows.Forms.ListViewItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein <see cref="T:System.Windows.Forms.ListViewItem" /> , die aus der Auflistung zu entfernenden Elements darstellt.</param>
+        <summary>Entfernt das angegebene Element aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein Element aus der Auflistung entfernen, ändern die Indizes für die folgenden Elemente in der Auflistung. Alle Informationen über das entfernte Element wird gelöscht. Sie können diese Methode verwenden, um ein bestimmtes Element aus der Auflistung zu entfernen, durch Angeben der zu entfernende Element. Verwenden Sie zum Angeben des Indexes des Elements, das statt des Elements selbst Entfernen der <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> Methode. Um alle Elemente aus der Auflistung zu entfernen, verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Windows.Forms.ListViewItem" /> zugewiesen werden, um die <paramref name="item" /> Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein Element aus der Auflistung entfernen, ändern die Indizes für die folgenden Elemente in der Auflistung. Alle Informationen über das entfernte Element wird gelöscht. Sie können diese Methode verwenden, um ein bestimmtes Element aus der Auflistung zu entfernen, indem Sie den Index des Elements, das aus der Auflistung zu entfernende angeben. Verwenden Sie zum Angeben der das zu entfernende anstelle der Index des Elements die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Remove%2A> Methode. Um alle Elemente aus der Auflistung zu entfernen, verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 oder größer als oder gleich dem Wert von der <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveByKey">
+      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveByKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.RemoveByKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Elements, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das Element mit dem angegebenen Schlüssel aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Die <xref:System.Windows.Forms.ListViewItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem> in der <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist (threadsicher).</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das zum Synchronisieren des Zugriffs auf die Auflistung von Steuerelementen verwendet werden kann.</summary>
+        <value>Das Objekt, mit dem die Auflistung synchronisiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, das der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt ein vorhandenes Objekt der Auflistung hinzu.</summary>
+        <returns>Der nullbasierte Index, der angibt, des Speicherort des Objekts, wenn es der Auflistung hinzugefügt wurde. andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `item` Parameter kann einen beliebigen Typ sein. Wenn `item` ist ein <xref:System.Windows.Forms.ListViewItem>, es hinzugefügt wird die <xref:System.Windows.Forms.ListView.ListViewItemCollection>. Wenn `item` einen anderen Typ ist ein neues <xref:System.Windows.Forms.ListViewItem> wird erstellt, enthält die Zeichenfolge aus der <xref:System.Object.ToString%2A> Methode `item`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein Objekt, das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Bestimmt, ob das angegebene Element in der Auflistung befindet.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Element in der Auflistung befindet; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein <see cref="T:System.Windows.Forms.ListViewItem" /> , das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Gibt den Index in der Auflistung des angegebenen Elements zurück.</summary>
+        <returns>Der nullbasierte Index des Elements, wenn es in der Auflistung ist; andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Indexspeicherort, in den das Element eingefügt wird.</param>
+        <param name="item">Das Objekt, das einzufügende Element darstellt.</param>
+        <summary>Fügt ein Objekt am angegebenen Index in die Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `item` Parameter kann einen beliebigen Typ sein. Wenn `item` ist ein <xref:System.Windows.Forms.ListViewItem>, es hinzugefügt wird die <xref:System.Windows.Forms.ListView.ListViewItemCollection>. Wenn `item` einen anderen Typ ist ein neues <xref:System.Windows.Forms.ListViewItem> wird erstellt, enthält die Zeichenfolge aus der <xref:System.Object.ToString%2A> Methode `item`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Indexparameter ist kleiner als 0 oder größer als der Wert, der die <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Elements.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.ListViewItem" /> am angegebenen Index in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ListViewItem" />, das das Element am angegebenen Index in der Auflistung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `item` Parameter kann auf einen beliebigen Typ festgelegt werden. Wenn `item` ist ein <xref:System.Windows.Forms.ListViewItem>, es hinzugefügt wird die <xref:System.Windows.Forms.ListView.ListViewItemCollection>. Wenn `item` einen anderen Typ ist ein neues <xref:System.Windows.Forms.ListViewItem> wird erstellt, enthält die Zeichenfolge aus der <xref:System.Object.ToString%2A> Methode `item`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Indexparameter ist kleiner als 0 oder größer als oder gleich dem Wert, der die <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.ListViewItemCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein <see cref="T:System.Windows.Forms.ListViewItem" /> , die aus der Auflistung zu entfernenden Elements darstellt.</param>
+        <summary>Entfernt das angegebene Element aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

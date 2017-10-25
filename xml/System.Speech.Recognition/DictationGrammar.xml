@@ -1,0 +1,161 @@
+<Type Name="DictationGrammar" FullName="System.Speech.Recognition.DictationGrammar">
+  <TypeSignature Language="C#" Value="public class DictationGrammar : System.Speech.Recognition.Grammar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DictationGrammar extends System.Speech.Recognition.Grammar" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.DictationGrammar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.Grammar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Spracherkennung Recognition Grammatik für freien Text diktieren verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse bietet Anwendungen eine vordefinierte Sprachmodell, die in Text gesprochen Benutzereingaben verarbeiten kann. Diese Klasse unterstützt Standardbuilds und benutzerdefinierte <xref:System.Speech.Recognition.DictationGrammar> Objekte. Informationen zum Auswählen einer diktieren Grammatik finden Sie unter der <xref:System.Speech.Recognition.DictationGrammar.%23ctor%28System.String%29> Konstruktor.  
+  
+ Wird standardmäßig die <xref:System.Speech.Recognition.DictationGrammar> Sprachmodell ist Kontext frei. Er nimmt die Verwendung von bestimmten Wörtern oder word-Auftrag zu identifizieren und zu interpretieren Audioeingabe. Um die Grammatik diktieren Kontext hinzuzufügen, verwenden die <xref:System.Speech.Recognition.DictationGrammar.SetDictationContext%2A> Methode.  
+  
+> [!NOTE]
+>  <xref:System.Speech.Recognition.DictationGrammar>Objekte unterstützen nicht die <xref:System.Speech.Recognition.Grammar.Priority%2A> Eigenschaft. <xref:System.Speech.Recognition.DictationGrammar>Löst ein <xref:System.NotSupportedException> Wenn <xref:System.Speech.Recognition.Grammar.Priority%2A> festgelegt ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt drei diktieren Grammatiken, fügt sie einem neuen <xref:System.Speech.Recognition.SpeechRecognitionEngine> -Objekt und gibt das neue Objekt zurück. Die erste Grammatik ist die Standardeinstellung diktieren-Grammatik. Die zweite Grammatik ist die Rechtschreibung und Grammatik diktieren. Die dritte Grammatik ist die Standardeinstellung diktieren-Grammatik, die einen Kontext einen Ausdruck enthält. Die <xref:System.Speech.Recognition.DictationGrammar.SetDictationContext%2A> Methode wird verwendet, um die Kontext-Ausdruck diktieren-Grammatik zuordnen, nachdem es, in geladen wird der <xref:System.Speech.Recognition.SpeechRecognitionEngine> Objekt.  
+  
+```csharp  
+  
+private SpeechRecognitionEngine LoadDictationGrammars()  
+{  
+  
+  // Create a default dictation grammar.  
+  DictationGrammar defaultDictationGrammar = new DictationGrammar();  
+  defaultDictationGrammar.Name = "default dictation";  
+  defaultDictationGrammar.Enabled = true;  
+  
+  // Create the spelling dictation grammar.  
+  DictationGrammar spellingDictationGrammar =  
+    new DictationGrammar("grammar:dictation#spelling");  
+  spellingDictationGrammar.Name = "spelling dictation";  
+  spellingDictationGrammar.Enabled = true;  
+  
+  // Create the question dictation grammar.  
+  DictationGrammar customDictationGrammar =  
+    new DictationGrammar("grammar:dictation");  
+  customDictationGrammar.Name = "question dictation";  
+  customDictationGrammar.Enabled = true;  
+  
+  // Create a SpeechRecognitionEngine object and add the grammars to it.  
+  SpeechRecognitionEngine recoEngine = new SpeechRecognitionEngine();  
+  recoEngine.LoadGrammar(defaultDictationGrammar);  
+  recoEngine.LoadGrammar(spellingDictationGrammar);  
+  recoEngine.LoadGrammar(customDictationGrammar);  
+  
+  // Add a context to customDictationGrammar.  
+  customDictationGrammar.SetDictationContext("How do you", null);  
+  
+  return recoEngine;  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DictationGrammar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.DictationGrammar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.DictationGrammar" /> Klasse für die standardmäßige diktieren-Grammatik, die von Windows-Desktop-Speech-Technologie bereitgestellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung diktieren Grammatik emuliert standard diktieren-Methoden, einschließlich Zeichensetzung. Die Schreibweise eines Worts wird nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DictationGrammar (string topic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string topic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.DictationGrammar.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="topic" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="topic">Ein XML-kompatiblen Universal Resource Identifier (URI), der entweder, die Grammatik diktieren angibt <c>Grammatik: diktieren</c> oder <c>Grammatik: diktieren #spelling</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.DictationGrammar" /> Klasse mit einer bestimmten diktieren-Grammatik.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sprachplattform verwendet eine spezielle URI-Syntax, um die benutzerdefinierte diktieren Grammatik definieren. Der Wert `grammar:dictation` gibt die Standard-Grammatik diktieren an. Der Wert `grammar:dictation#spelling` die Rechtschreibung und Grammatik diktieren angibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDictationContext">
+      <MemberSignature Language="C#" Value="public void SetDictationContext (string precedingText, string subsequentText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDictationContext(string precedingText, string subsequentText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.DictationGrammar.SetDictationContext(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="precedingText" Type="System.String" />
+        <Parameter Name="subsequentText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="precedingText">Text, der den Anfang eines Kontexts diktieren angibt.</param>
+        <param name="subsequentText">Text, der das Ende eines Kontexts diktieren angibt.</param>
+        <summary>Fügt einen Kontext einen diktieren-Grammatik, die von geladen wurde eine <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> oder ein <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig nimmt die Grammatik diktieren die Verwendung von bestimmten Wörtern oder word-Auftrag zu identifizieren und zu interpretieren Audioeingabe. Das Erkennungsmodul wird verwendet, wenn ein Kontext eine diktieren Grammatik hinzugefügt wird, die `precedingText` und `subsequentText` zu ermitteln, wann Spracherkennung als diktieren interpretiert werden sollen.  
+  
+> [!NOTE]
+>  Eine diktieren Grammatik muss geladen werden, indem eine <xref:System.Speech.Recognition.SpeechRecognizer> oder <xref:System.Speech.Recognition.SpeechRecognitionEngine> Objekt vor der Verwendung <xref:System.Speech.Recognition.DictationGrammar.SetDictationContext%2A> um einen Kontext hinzuzufügen.  
+  
+ In der folgenden Tabelle wird beschrieben, wie das Erkennungsmodul der zwei Parameter verwendet, zum Ermitteln, wann die Grammatik diktieren verwenden.  
+  
+|`precedingText`|`subsequentText`|Beschreibung|  
+|---------------------|----------------------|-----------------|  
+|nicht `null`|nicht `null`|Das Erkennungsmodul mithilfe der Begriffe möglich Frage kommenden Ausdrücken.|  
+|`null`|nicht `null`|Das Erkennungsmodul verwendet die `subsequentText` diktieren abgeschlossen.|  
+|nicht `null`|`null`|Das Erkennungsmodul verwendet die `precedingText` diktieren zu starten.|  
+|`null`|`null`|Das Erkennungsmodul ist keinen Kontext verwenden, wenn die Grammatik diktieren zu verwenden.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

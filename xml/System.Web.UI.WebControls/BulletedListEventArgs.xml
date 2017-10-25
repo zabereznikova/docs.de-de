@@ -1,0 +1,100 @@
+<Type Name="BulletedListEventArgs" FullName="System.Web.UI.WebControls.BulletedListEventArgs">
+  <TypeSignature Language="C#" Value="public class BulletedListEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BulletedListEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BulletedListEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.BulletedList.Click" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.BulletedList" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BulletedList.Click> Ereignis wird ausgelöst, wenn eine Linkschaltfläche in einem <xref:System.Web.UI.WebControls.BulletedList> Steuerelement geklickt wird.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.BulletedListEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.BulletedListEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.BulletedList.Click> -Ereignis für ein <xref:System.Web.UI.WebControls.BulletedList> Steuerelement. Wenn ein Listenelement geklickt wird, wird eine Meldung angezeigt, einem <xref:System.Web.UI.WebControls.Label> auf der Seite.  
+  
+ [!code-aspx-csharp[BulletedListClickEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListClickEvent/CS/bulletedlistclickeventcs.aspx#1)]
+ [!code-aspx-vb[BulletedListClickEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListClickEvent/VB/bulletedlistclickeventvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BulletedListEventArgs (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedListEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Listenelements in einen <see cref="T:System.Web.UI.WebControls.BulletedList" /> , die das Ereignis ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.BulletedListEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.BulletedListEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.BulletedListEventArgs>-Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.BulletedListEventArgs.Index%2A>|Der Wert des `index`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedListEventArgs.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Listenelements in einen <see cref="T:System.Web.UI.WebControls.BulletedList" /> Steuerelement, das das Ereignis ausgelöst hat.</summary>
+        <value>Der Index des Listenelements in einen <see cref="T:System.Web.UI.WebControls.BulletedList" /> Steuerelement, das das Ereignis ausgelöst hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie den Index des Listenelements in programmgesteuerten Zugriff auf eine <xref:System.Web.UI.WebControls.BulletedList> Steuerelement, das das Ereignis ausgelöst hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.BulletedList.Click> -Ereignis für ein <xref:System.Web.UI.WebControls.BulletedList> Steuerelement. Wenn ein Listenelement geklickt wird, wird eine Meldung angezeigt, einem <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+ [!code-aspx-csharp[BulletedListClickEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListClickEvent/CS/bulletedlistclickeventcs.aspx#1)]
+ [!code-aspx-vb[BulletedListClickEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListClickEvent/VB/bulletedlistclickeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

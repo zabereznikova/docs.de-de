@@ -1,0 +1,95 @@
+<Type Name="DataServiceKeyAttribute" FullName="System.Data.Services.Common.DataServiceKeyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataServiceKeyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataServiceKeyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Common.DataServiceKeyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bezeichnet die Schlüsseleigenschaft(en) einer Entität.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten das <xref:System.Data.Services.Common.DataServiceKeyAttribute>-Attribut nur auf eine Eigenschaft anwenden, mit der eine Instanz des Entitätstyps eindeutig identifiziert werden kann. Dieses Attribut wird ignoriert, wenn es auf eine Navigationseigenschaft angewendet wird. Weitere Informationen finden Sie unter [Reflektionsanbieter](~/docs/framework/data/wcf/reflection-provider-wcf-data-services.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataServiceKeyAttribute (string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Common.DataServiceKeyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Die Zeichenfolge, die den Namen des Schlüsselattributs enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Services.Common.DataServiceKeyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataServiceKeyAttribute (params string[] keyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] keyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Common.DataServiceKeyAttribute.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyNames" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="keyNames">Ein Array von Zeichenfolgenwerten, die Schlüsselattributnamen enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Services.Common.DataServiceKeyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; KeyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; KeyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.DataServiceKeyAttribute.KeyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen von Schlüsselattributen ab.</summary>
+        <value>Zeichenfolgenwert, der Namen von Schlüsselattributen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

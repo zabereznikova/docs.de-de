@@ -1,0 +1,68 @@
+<Type Name="CookieHandlerMode" FullName="System.IdentityModel.Services.CookieHandlerMode">
+  <TypeSignature Language="C#" Value="public enum CookieHandlerMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CookieHandlerMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.CookieHandlerMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Cookie handlermodi, die unterstützt werden.  
+  
+ Definiert die möglichen Werte für die <see cref="P:System.IdentityModel.Services.CookieHandlerElement.Mode" /> Eigenschaft. Diese Eigenschaft definiert die Art der Cookie-Handler, ein <see cref="T:System.IdentityModel.Services.CookieHandlerElement" /> Objekt konfiguriert. Weitere Informationen finden Sie in den Ausführungen zur <see cref="T:System.IdentityModel.Services.CookieHandlerElement" />-Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Chunked">
+      <MemberSignature Language="C#" Value="Chunked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Services.CookieHandlerMode Chunked = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Services.CookieHandlerMode.Chunked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandlerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Handler aufgeteilte Cookie an. ein Cookie-Handler ist eine Instanz von oder davon abgeleitet, die die <see cref="T:System.IdentityModel.Services.ChunkedCookieHandler" /> Klasse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Services.CookieHandlerMode Custom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Services.CookieHandlerMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandlerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen benutzerdefinierten Cookie-Handler. ein benutzerdefiniertes Cookie-Handler, der von abgeleitet ist die <see cref="T:System.IdentityModel.Services.CookieHandler" /> Klasse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Services.CookieHandlerMode Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Services.CookieHandlerMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandlerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Standardtyp der Cookie-Handler verwendet wird. Für die <see cref="T:System.IdentityModel.Services.CookieHandlerElement" /> -Klasse der Standard ist eine aufgeteilte Cookie-Handler.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

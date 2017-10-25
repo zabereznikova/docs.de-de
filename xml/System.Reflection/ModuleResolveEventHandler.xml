@@ -1,0 +1,76 @@
+<Type Name="ModuleResolveEventHandler" FullName="System.Reflection.ModuleResolveEventHandler">
+  <TypeSignature Language="C#" Value="public delegate System.Reflection.Module ModuleResolveEventHandler(object sender, ResolveEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ModuleResolveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ModuleResolveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ResolveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Reflection.Module</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Assembly, die die Quelle des Ereignisses war.</param>
+    <param name="e">Die Argumente, die von dem Objekt, das das Ereignis beschrieben wird.</param>
+    <summary>Stellt die Methode dar, die das <see cref="E:System.Reflection.Assembly.ModuleResolve" />-Ereignis eines <see cref="T:System.Reflection.Assembly" /> behandelt.</summary>
+    <returns>Das Modul, das die Anforderung erfüllt.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Klassenladeprogramm der common Language Runtime einen Verweis auf ein internes Modul einer Assembly nicht auf normale Weise auflösen kann, wird dieses Ereignis ausgelöst. Der Ereignishandler für diesen Delegaten muss suchen und zurückgeben ein Moduls, das die Anforderung erfüllt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Reihenfolge der Ausführung, in dem ein Ereignishandler aufgerufen wird. In diesem Beispiel ist "Server1" ein externes Modul der MySample-Klasse.  
+  
+### <a name="to-compile-and-run-the-example"></a>So kompilieren und Ausführen des Beispiels  
+  
+1.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, das mysample.cs enthält.  
+  
+2.  Kompilieren Sie "Server1" mit dem folgenden Befehl:  
+  
+    ```  
+    csc /out:subfolder\Server1.netmodule /t:module Server1.cs  
+    ```  
+  
+3.  Kompilieren Sie MySample mit dem folgenden Befehl ein:  
+  
+    ```  
+    csc /out:MySample.exe /t:exe /addmodule:subfolder\Server1.netmodule MySample.cs  
+    ```  
+  
+4.  Führen Sie MySample.exe.  
+  
+> [!NOTE]
+>  -Datei des Moduls muss Server1.netmodule in einem Unterverzeichnis mit dem Namen "Unterordner" für dieses Beispiel ordnungsgemäß funktioniert.  
+  
+ [!code-csharp[System.Reflection.ModuleResolveEventHandler#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.moduleresolveeventhandler/cs/mysample.cs#1)]  
+[!code-csharp[System.Reflection.ModuleResolveEventHandler#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.moduleresolveeventhandler/cs/server1.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

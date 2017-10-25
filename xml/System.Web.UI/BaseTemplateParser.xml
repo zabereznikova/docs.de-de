@@ -1,0 +1,113 @@
+<Type Name="BaseTemplateParser" FullName="System.Web.UI.BaseTemplateParser">
+  <TypeSignature Language="C#" Value="public abstract class BaseTemplateParser : System.Web.UI.TemplateParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseTemplateParser extends System.Web.UI.TemplateParser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.BaseTemplateParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.TemplateParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert ASP.NET-Vorlage für die Vorlagendateien analysieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.BaseTemplateParser> -Klasse bietet eine Parser-Funktionalität für die <xref:System.Web.UI.TemplateControl> und <xref:System.Web.UI.PageTheme> Klassen. Da die <xref:System.Web.UI.BaseTemplateParser> Klasse abstrakt ist, wird eine Instanz dieser Klasse nicht direkt erstellt.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseTemplateParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BaseTemplateParser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.BaseTemplateParser" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetReferencedType">
+      <MemberSignature Language="C#" Value="protected Type GetReferencedType (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Type GetReferencedType(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BaseTemplateParser.GetReferencedType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, der die <see cref="T:System.Web.UI.Page" /> oder <see cref="T:System.Web.UI.UserControl" />.</param>
+        <summary>Kompiliert, und gibt den Typ des der <see cref="T:System.Web.UI.Page" /> oder <see cref="T:System.Web.UI.UserControl" /> Steuerelement, das durch den virtuellen Pfad angegeben wird.</summary>
+        <returns>Der Typ, der die Seite oder das Benutzersteuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.PageParserFilter> Objekt definiert ist und die zugehörige <xref:System.Web.UI.PageParserFilter.AllowVirtualReference%2A> Eigenschaft ist `false`, <xref:System.Web.UI.BaseTemplateParser.GetUserControlType%2A> -Methode löst eine <xref:System.Web.HttpException> Ausnahme.  
+  
+ Die <xref:System.Web.UI.BaseTemplateParser.GetUserControlType%2A> Methode ist ein Wrapper für die <xref:System.Web.UI.BaseTemplateParser.GetReferencedType%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Der Parser lässt sich nicht auf einen virtuellen Verweis auf die Ressource, die vom angegebenen <paramref name="virtualPath" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetUserControlType">
+      <MemberSignature Language="C#" Value="protected Type GetUserControlType (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Type GetUserControlType(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BaseTemplateParser.GetUserControlType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Der virtuelle Pfad, der die <see cref="T:System.Web.UI.UserControl" />.</param>
+        <summary>Kompiliert, und gibt den Typ des der <see cref="T:System.Web.UI.UserControl" /> -Objekt, das durch den virtuellen Pfad angegeben wird.</summary>
+        <returns>Der Typ des Benutzersteuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.PageParserFilter> Objekt definiert ist und die zugehörige <xref:System.Web.UI.PageParserFilter.AllowVirtualReference%2A> Eigenschaft ist `false`, <xref:System.Web.UI.BaseTemplateParser.GetUserControlType%2A> -Methode löst eine <xref:System.Web.HttpException> Ausnahme.  
+  
+ Darüber, wenn die <xref:System.Web.UI.UserControl> -Objekt, das durch den virtuellen Pfad verwiesen wird als ein Steuerelement ohne Kompilierung markiert ist ein <xref:System.Web.HttpException> Ausnahme wird ausgelöst. Erzwingen einer <xref:System.Web.UI.UserControl> kompiliert werden soll, legen Sie die Kompilierung Mode-Attribut seine [@ Control](http://msdn.microsoft.com/en-us/5fd824c2-7d70-4f8a-ab47-0c7e0e43578b) -Direktive die <xref:System.Web.UI.CompilationMode.Always> Feld. Legen Sie zum Festlegen des Kompilierungsmodus für Seiten und Steuerelemente über die Anwendung die `compilationMode` Attribut von der [pages Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458) in der Datei "Web.config".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.UI.UserControl" /> gemäß <paramref name="virtualPath" /> als keine Kompilierung markiert ist.  
+  
+ \- oder –  
+  
+ Der Parser lässt sich nicht auf einen virtuellen Verweis auf die <see cref="T:System.Web.UI.UserControl" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

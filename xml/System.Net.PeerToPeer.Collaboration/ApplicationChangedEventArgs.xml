@@ -1,0 +1,127 @@
+<Type Name="ApplicationChangedEventArgs" FullName="System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ApplicationChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Qualifizierenden Informationen an eine Rückrufmethode beim ein <see cref="E:System.Net.PeerToPeer.Collaboration.PeerApplication.ApplicationChanged" /> Ereignis auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Net.PeerToPeer.Collaboration.ContactManager.ApplicationChanged> Ereignis wird ausgelöst, wenn:  
+  
+-   Ein Peer startet eine Anwendung in einer Zusammenarbeit  
+  
+-   Ein Peer beendet eine Anwendung im Rahmen einer Zusammenarbeit  
+  
+-   Die <xref:System.Net.PeerToPeer.Collaboration.PeerContact> Objekt, das einen zusammenarbeiten Peer darstellt hat eine Änderung in den Eigenschaften, z. B. die zugeordnete Spitzname  
+  
+-   Der Bereich der Anwendung ist auf des Peerkontakts,-Computer geändert.  
+  
+-   Ein Peer wechselt in eine andere IP-Adresse im Netzwerk  
+  
+-  
+  
+ Jede Klasse, verwendet der <xref:System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs> Klasse erfordert eine <xref:System.Security.Permissions.PermissionState> nicht eingeschränkt. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> -Objekt erstellt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PeerApplication">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerApplication PeerApplication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerApplication PeerApplication" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerApplication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> ab, für den das Ereignis ausgelöst wurde.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> -Instanz, die aktualisiert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern nicht angegeben, wird der Standardwert für diese Eigenschaft ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerChangeType">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerChangeType PeerChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.PeerChangeType PeerChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Änderung der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> aufgetreten ist.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerChangeType" /> -Enumerationswert ab, der den Typ der Änderung angibt, die auf ausgeführt wurde die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern nicht angegeben, wird der Standardwert für diese Eigenschaft ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerContact">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContact PeerContact { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerContact PeerContact" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerContact" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> ab, der dem <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> zugeordnet ist.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />zugeordnete der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Endpunkt für die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> Benutzerinformationen wurden geändert.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> , enthält den Endpunkt für die Anwendung Benutzerinformationen wurden geändert. Sofern nicht explizit angegeben wird, ist der Standardwert für alle Eigenschaften <see langword="null" /> für Referenztypen und 0 (null) für Eigenschaften vom Typ <see langword="int" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

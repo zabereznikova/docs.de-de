@@ -1,0 +1,308 @@
+<Type Name="XmlDictionary" FullName="System.Xml.XmlDictionary">
+  <TypeSignature Language="C#" Value="public class XmlDictionary : System.Xml.IXmlDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDictionary extends System.Object implements class System.Xml.IXmlDictionary" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.IXmlDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementiert verwendet ein Wörterbuch, um Windows Communication Foundation (WCF) XML-Reader-/ writerimplementierungen optimiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Wörterbüchern wird die Zuordnung von häufig auftretenden Textzeichenfolgen und ganzen Zahlen eingerichtet und ein effektiver Mechanismus zur Komprimierung und Dekomprimierung von XML bereitgestellt. [!INCLUDE[indigo1](~/includes/indigo1-md.md)] verwendet zwei Arten von Wörterbüchern: statische und dynamische.  
+  
+ Bei statischen Wörterbüchern nutzen beide Kommunikationsseiten ein vordefiniertes Wörterbuch.  
+  
+ Bei dynamischen Wörterbüchern kann der Absender neue Zeichenfolgen und Zuordnungsangaben, die noch nicht im statischen Wörterbuch vorhanden sind, hinzufügen. Dynamische Wörterbücher werden außerhalb des Bereichs zusammen mit der Nachricht gesendet. Dynamische Wörterbücher verwenden die <xref:System.Xml.XmlBinaryWriterSession>-Klasse und die <xref:System.Xml.XmlBinaryReaderSession>-Klasse, um Nachrichten und Zuordnungen zu senden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein leeres <see cref="T:System.Xml.XmlDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDictionary (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionary.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die Anfangsgröße des Wörterbuchs.</param>
+        <summary>Erstellt ein <see cref="T:System.Xml.XmlDictionary" /> mit einer Anfangskapazität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Wörterbuch ändert seine Größe selbst nach Bedarf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlDictionaryString Add (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlDictionaryString Add(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionary.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Zeichenfolge, die dem Wörterbuch hinzugefügt wird.</param>
+        <summary>Fügt <see cref="T:System.Xml.XmlDictionary" /> eine Zeichenfolge hinzu.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlDictionaryString" />, die hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlDictionaryString> wird aus `value` erstellt.  
+  
+ Wenn der Zeichenfolgenwert bereits im Wörterbuch vorhanden ist, wird die zuvor erstellte <xref:System.Xml.XmlDictionaryString>, zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Xml.IXmlDictionary Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xml.IXmlDictionary Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionary.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.IXmlDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erhält ein leeres <see langword="static" />-<see cref="T:System.Xml.IXmlDictionary" />.</summary>
+        <value>Ein leeres <see langword="static" />-<see cref="T:System.Xml.IXmlDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Instanz sollte verwendet werden, wenn <xref:System.Xml.IXmlDictionary> erforderlich ist, aber <xref:System.Xml.XmlDictionaryString> nicht benötigt werden.  
+  
+ Das leere Wörterbuch kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="TryLookup">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Es wurde versucht, einen Eintrag im Wörterbuch nachzuschlagen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch diese Methode wird vermieden, dass eine Ausnahme ausgelöst wird, wenn die Zeichenfolge zurzeit nicht im Wörterbuch vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TryLookup">
+      <MemberSignature Language="C#" Value="public virtual bool TryLookup (int key, out System.Xml.XmlDictionaryString result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryLookup(int32 key, [out] class System.Xml.XmlDictionaryString&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionary.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Int32" />
+        <Parameter Name="result" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Zu suchender Schlüssel.</param>
+        <param name="result">Wenn <c>Schlüssel</c> definiert ist, die <see cref="T:System.Xml.XmlDictionaryString" /> , der dem Schlüssel zugeordnete; andernfalls ist <see langword="null" />.</param>
+        <summary>Es wurde versucht, einen Eintrag im Wörterbuch nachzuschlagen.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schlüssel im Wörterbuch vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryLookup">
+      <MemberSignature Language="C#" Value="public virtual bool TryLookup (string value, out System.Xml.XmlDictionaryString result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryLookup(string value, [out] class System.Xml.XmlDictionaryString&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionary.TryLookup(System.String,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="result" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="value">Zeichenfolgenwert, auf den überprüft wird.</param>
+        <param name="result">Die entsprechende <see cref="T:System.Xml.XmlDictionaryString" />, wenn sie gefunden wird, andernfalls <see langword="null" />.</param>
+        <summary>Überprüft das Wörterbuch auf einen bestimmten Zeichenfolgenwert.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert im Wörterbuch vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryLookup">
+      <MemberSignature Language="C#" Value="public virtual bool TryLookup (System.Xml.XmlDictionaryString value, out System.Xml.XmlDictionaryString result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryLookup(class System.Xml.XmlDictionaryString value, [out] class System.Xml.XmlDictionaryString&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionary.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="result" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Xml.XmlDictionaryString" />, auf die überprüft wird.</param>
+        <param name="result">Die passende <see cref="T:System.Xml.XmlDictionaryString" />, wenn sie gefunden wird, andernfalls <see langword="null" />.</param>
+        <summary>Überprüft das Wörterbuch auf eine bestimmte <see cref="T:System.Xml.XmlDictionaryString" />.</summary>
+        <returns>
+          <see langword="true" />, wenn sich die <see cref="T:System.Xml.XmlDictionaryString" /> im Wörterbuch befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

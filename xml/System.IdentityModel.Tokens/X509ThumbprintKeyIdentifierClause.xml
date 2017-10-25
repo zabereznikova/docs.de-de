@@ -1,0 +1,155 @@
+<Type Name="X509ThumbprintKeyIdentifierClause" FullName="System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class X509ThumbprintKeyIdentifierClause : System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509ThumbprintKeyIdentifierClause extends System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.BinaryKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schlüsselbezeichnerklausel dar, die ein <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />-Sicherheitstoken unter Verwendung des Fingerabdrucks des X.509-Zertifikats identifiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel ist es nicht erforderlich, die <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause> zu verwenden, es sei denn, es wird ein benutzerdefinierter Sicherheitstokendienst erstellt. Wenn ein Sicherheitstokendienst ein Sicherheitstoken zurückgibt, enthält das ausgegebene Sicherheitstoken Verweise auf angefügte und nicht angefügte Sicherheitstoken. Die angefügten Verweise beziehen sich auf Sicherheitstoken, die im Sicherheitsheader eines SOAP-Nachrichtentokens enthalten sind, und nicht angehängte Verweise beziehen sich auf Sicherheitstoken, die nicht im Sicherheitsheader einer SOAP-Nachricht enthalten sind. Diese Verweise bestätigen in der Regel die Echtheit des ausgegebenen Sicherheitstokens. Verwenden Sie die <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>-Klasse, um unter Verwendung des Fingerabdrucks des X.509-Zertifikats auf ein <xref:System.IdentityModel.Tokens.X509SecurityToken>-Sicherheitstoken zu verweisen. Die <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause.GetX509Thumbprint%2A>-Methode gibt den Fingerabdruck zurück.  
+  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] unterstützt die folgenden Typen von Sicherheitstokenverweisen für <xref:System.IdentityModel.Tokens.X509SecurityToken>-Sicherheitstoken.  
+  
+-   <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509ThumbprintKeyIdentifierClause (byte[] certificateThumbprint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] certificateThumbprint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="thumbprint" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificateThumbprint">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause" />-Klasse unter Verwendung des angegebenen Fingerabdrucks für ein X.509-Zertifikat.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificateThumbprint" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="certificateThumbprint" /> hat die Länge 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509ThumbprintKeyIdentifierClause (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Objekt, das das X.509-Zertifikat enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause" />-Klasse unter Verwendung des angegebenen X.509-Zertifikats.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor enthält den Fingerabdruck (den SHA-1-Hashwert der unformatierten Daten des X.509-Zertifikats) durch Aufrufen der <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetX509Thumbprint">
+      <MemberSignature Language="C#" Value="public byte[] GetX509Thumbprint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetX509Thumbprint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause.GetX509Thumbprint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Fingerabdruck für das X.509-Zertifikat zurück.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array, das den Fingerabdruck des X.509-Zertifikats enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause.Matches(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />, der das zu vergleichende X.509-Zertifikat enthält.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Schlüsselbezeichner für diese Instanz mit dem angegebenen Fingerabdruck des X.509-Zertifikats übereinstimmt.</summary>
+        <returns>
+          <see langword="true" /> wenn <paramref name="certificate" /> den gleichen Fingerabdruck aufweist wie die aktuelle Instanz, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das aktuelle Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause.ToString%2A>-Methode gibt den Fingerabdruck zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

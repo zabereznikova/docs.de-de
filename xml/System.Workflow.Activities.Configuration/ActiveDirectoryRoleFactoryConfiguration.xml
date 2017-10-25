@@ -1,0 +1,223 @@
+<Type Name="ActiveDirectoryRoleFactoryConfiguration" FullName="System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration">
+  <TypeSignature Language="C#" Value="public sealed class ActiveDirectoryRoleFactoryConfiguration : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActiveDirectoryRoleFactoryConfiguration extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Abschnitt in der Konfigurationsdatei dar, der die Rollenklasse behandelt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Diese Klasse wird bei Implementierung in einer abgeleiteten Klasse von der <xref:System.Configuration.ConfigurationSection>-Klasse abgeleitet, die einen Abschnitt in einer Konfigurationsdatei darstellt.  Sie erhalten möglicherweise weitere Informationen, wenn Sie auf diese Klasse verweisen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryRoleFactoryConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectReports">
+      <MemberSignature Language="C#" Value="public string DirectReports { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DirectReports" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.DirectReports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("DirectReports", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen der direkten Berichte ab oder legt die Namen fest.</summary>
+        <value>Die Namen der direkten Berichte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.DirectReports%2A>ist eine <xref:System.Configuration.ConfigurationProperty> definiert für diesen Typ mit Standardwert "`DirectReports`". Dieser Typ stellt eine in einem Element einer Konfigurationsdatei enthaltene Konfigurationseigenschaft, ein Attribut oder ein untergeordnetes Element dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinguishedName">
+      <MemberSignature Language="C#" Value="public string DistinguishedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistinguishedName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.DistinguishedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("DistiguishedName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Distinguished Name für diese Instanz ab oder legt ihn fest.</summary>
+        <value>Der Distinguished Name für diese Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.DistinguishedName%2A>ist eine <xref:System.Configuration.ConfigurationProperty> definiert für diesen Typ mit Standardwert "`DistiguishedName`". Dieser Typ stellt eine in einem Element einer Konfigurationsdatei enthaltene Konfigurationseigenschaft, ein Attribut oder ein untergeordnetes Element dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public string Group { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Group" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("Group", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Gruppe für diese Instanz ab oder legt ihn fest.</summary>
+        <value>Der Name der Gruppe für diese Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manager">
+      <MemberSignature Language="C#" Value="public string Manager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Manager" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.Manager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("Manager", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Managers ab, der dieser Instanz zugeordnet ist, oder legt den Namen fest.</summary>
+        <value>Der Name des Managers, der dieser Instanz zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.Manager%2A>ist eine <xref:System.Configuration.ConfigurationProperty> definiert für diesen Typ mit Standardwert "`Manager`". Dieser Typ stellt eine in einem Element einer Konfigurationsdatei enthaltene Konfigurationseigenschaft, ein Attribut oder ein untergeordnetes Element dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public string Member { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Member" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("Member", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Member für diese Instanz ab oder legt diesen fest.</summary>
+        <value>Der Member für diese Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.Member%2A>ist eine <xref:System.Configuration.ConfigurationProperty> definiert für diesen Typ mit Standardwert "`Member`". Dieser Typ stellt eine in einem Element einer Konfigurationsdatei enthaltene Konfigurationseigenschaft, ein Attribut oder ein untergeordnetes Element dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootPath">
+      <MemberSignature Language="C#" Value="public string RootPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootPath" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.RootPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("RootPath", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stammpfad für diese Instanz ab oder legt ihn fest.</summary>
+        <value>Der Stammpfad für diese Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.RootPath%2A> ist eine für diesen Typ mit Standardwert "<xref:System.Configuration.ConfigurationProperty>" definierte `RootPath`. Dieser Typ stellt eine in einem Element einer Konfigurationsdatei enthaltene Konfigurationseigenschaft, ein Attribut oder ein untergeordnetes Element dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

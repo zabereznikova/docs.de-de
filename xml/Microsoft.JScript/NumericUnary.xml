@@ -1,0 +1,67 @@
+<Type Name="NumericUnary" FullName="Microsoft.JScript.NumericUnary">
+  <TypeSignature Language="C#" Value="public sealed class NumericUnary : Microsoft.JScript.UnaryOp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NumericUnary extends Microsoft.JScript.UnaryOp" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.NumericUnary" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.UnaryOp</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Führt unäre Operationen für numerische Operanden. Diese Klasse gehört zur abstract Syntax Tree Kategorie.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NumericUnary (int operatorTok);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 operatorTok) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumericUnary.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="operatorTok" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="operatorTok">Einer der <see cref="T:Microsoft.JScript.JSToken" />-Enumerationswerte. Gibt den auszuführenden Vorgang an.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.NumericUnary" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateUnary">
+      <MemberSignature Language="C#" Value="public object EvaluateUnary (object v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object EvaluateUnary(object v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumericUnary.EvaluateUnary(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="v">Der Operand.</param>
+        <summary>Führt eine unäre Operation für einen numerischen Operanden aus.</summary>
+        <returns>Das Ergebnis des Vorgangs.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

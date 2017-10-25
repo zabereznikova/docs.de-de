@@ -1,0 +1,161 @@
+<Type Name="ListViewDeleteEventArgs" FullName="System.Web.UI.WebControls.ListViewDeleteEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewDeleteEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewDeleteEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewDeleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.ListView.ItemDeleting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListView> -Steuerelement löst die <xref:System.Web.UI.WebControls.ListView.ItemDeleting> Ereignis aus, wenn eine Schaltfläche "löschen" geklickt wird oder die <xref:System.Web.UI.WebControls.ListView.DeleteItem%2A> Methode aufgerufen wird, jedoch bevor die <xref:System.Web.UI.WebControls.ListView> Steuerelement löscht das Element. (Eine Schaltfläche "löschen" ist, dessen `CommandName` Eigenschaft auf "Löschen" festgelegt ist.) Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf, z. B. die Delete-Vorgang abgebrochen wird.  
+  
+ Ein <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, können Sie den Index des Elements zu ermitteln, die gelöscht wird. Sie können auch den Löschvorgang abzubrechen. Legen Sie hierzu die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft der <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs> -Objekt `true`. Bei Bedarf auch kann die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Values%2A> Sammlungen, bevor die Werte an die Datenquelle übergeben werden.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs> Objekt, das den Löschvorgang abzubrechen, wenn der Benutzer versucht, das letzte Element entfernt werden soll eine <xref:System.Web.UI.WebControls.ListView> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewItemDeleting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItemDeleting/CS/ListViewItemItemDeletingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewItemDeleting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItemDeleting/VB/ListViewItemItemDeletingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewDeleteEventArgs (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewDeleteEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Der Index des Elements, das die Schaltfläche "löschen" enthält, die das Ereignis ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListViewDeleteEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.ItemIndex%2A>|Der Wert des `itemIndex`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeleteEventArgs.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Elements gelöscht werden.</summary>
+        <value>Der nullbasierte Index des Elements gelöscht werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.ItemIndex%2A> -Eigenschaft bestimmt den Index des Elements gelöscht werden. Der Elementindex dient normalerweise zum Abrufen des angegebenen Elements aus der <xref:System.Web.UI.WebControls.ListView.Items%2A> Auflistung von der <xref:System.Web.UI.WebControls.ListView> -Steuerelement, das Sie auf die Eigenschaften des Elements zugreifen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Name/Wert-Paare, die die primary key- oder der Schlüssel des zu löschenden Elements darstellen.</summary>
+        <value>Ein Objekt, das die Name/Wert-Paare, die die primary key- oder der Schlüssel des enthält zu löschenden Elements darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.ListView.DataKeyNames%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.ListView> Steuerelement festgelegt ist, verwenden die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys%2A> Eigenschaft Zugriff auf den Wert des Primärschlüssels oder der Schlüssel in das zu löschende Element.  
+  
+> [!NOTE]
+>  Diese Eigenschaft enthält nur die wichtigsten Felder. Verwenden Sie die Werte der Felder nicht-Schlüssel für den Zugriff auf die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Values%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys%2A> Wörterbuch automatisch durch die Name/Wert-Paare des Felds oder der Felder, die im angegebenen ersetzt die <xref:System.Web.UI.WebControls.ListView.DataKeyNames%2A> Eigenschaft. Wenn der Primärschlüssel mehrere Felder enthält, wird ein separater Eintrag hinzugefügt, auf die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys%2A> Wörterbuch für jede Schlüsselfeld.  
+  
+ Verwenden Sie den Namen eines Schlüsselfelds zu ermitteln, die <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Collections.DictionaryEntry> -Objekt, das in enthalten ist die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys%2A> Wörterbuch. Um den Wert eines Schlüsselfelds zu bestimmen, verwenden die <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeleteEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch der Schlüsselfelder Name/Wert-Paare im Element zu löschen.</summary>
+        <value>Ein Objekt, das die Schlüsselfelder Name/Wert-Paare von das zu löschende Element enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie das Wörterbuch in das <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Values%2A> Eigenschaft, um die Werte der Felder nicht-Schlüssel in das zu löschende Element zugreifen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist nicht die Primärschlüsselfelds oder Felder enthalten. Verwenden Sie die Werte des Primärschlüssels oder der Primärschlüssel für den Zugriff auf die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Values%2A> Eigenschaft wird automatisch mit den Name/Wert-Paaren von nicht-Schlüsselfelder im Element angegeben. Ein separater Eintrag wird hinzugefügt, um die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Keys%2A> -Eigenschaft für jedes Feld im Element.  
+  
+ Verwenden Sie zum Bestimmen der Feldname eines Eintrags der <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Collections.DictionaryEntry> -Objekt, das in enthalten ist die <xref:System.Web.UI.WebControls.ListViewDeleteEventArgs.Values%2A> Wörterbuch. Um den Wert eines Eintrags zu ermitteln, verwenden die <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

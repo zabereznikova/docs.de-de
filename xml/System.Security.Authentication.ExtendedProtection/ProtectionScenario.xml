@@ -1,0 +1,80 @@
+<Type Name="ProtectionScenario" FullName="System.Security.Authentication.ExtendedProtection.ProtectionScenario">
+  <TypeSignature Language="C#" Value="public enum ProtectionScenario" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProtectionScenario extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Authentication.ExtendedProtection.ProtectionScenario" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Authentication.ExtendedProtection.ProtectionScenario" /> Enumeration gibt das von der Richtlinie erzwungene Schutzszenario an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TransportSelected">
+      <MemberSignature Language="C#" Value="TransportSelected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Authentication.ExtendedProtection.ProtectionScenario TransportSelected = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ProtectionScenario</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Transport wählt zwischen einer sicheren und standard Schutzszenario je nach Typ des Kanals verwendet. Für den sicheren Schutz integrierte Windows-Authentifizierung wird in einen sicheren Kanal umschlossen und verfügt über eine genau übereinstimmende Kanalbindungstoken ohne Validierung der Anbieter (Service Principal Name, SPN). Schutz der standardmäßige integrierte Windows-Authentifizierung wird in einen sicheren Kanal mit einer optionalen Kanalbindungstoken optional umschlossen und SPN-Validierung erforderlich ist. Also wenn die Anforderung über einen sicheren Kanal stammen, das Kanalbindungstoken (CBT) aktiviert ist, werden andernfalls wird der SPN überprüft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedProxy">
+      <MemberSignature Language="C#" Value="TrustedProxy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Authentication.ExtendedProtection.ProtectionScenario TrustedProxy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TrustedProxy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ProtectionScenario</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Integrierte Windows-Authentifizierung wird in einen sicheren Kanal beendet, die von einem vertrauenswürdigen Proxy eingebunden und verfügt über ein Kanalbindungstoken mit SPN-Überprüfung erforderlich. Dies erfordert das Vorhandensein eines CBT, aber das CBT wird nicht überprüft werden, während der SPN aktiviert ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

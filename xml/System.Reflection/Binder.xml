@@ -1,0 +1,429 @@
+<Type Name="Binder" FullName="System.Reflection.Binder">
+  <TypeSignature Language="C#" Value="public abstract class Binder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Binder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Binder" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDual)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Element aus einer Liste von Kandidaten auswählt, und führt der typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen von der <xref:System.Reflection.Binder> Klasse werden durch Methoden verwendet, z. B. <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>, die aus einem Satz von möglichen Member auswählt, ausgeführt werden, basierend auf einem Satz von Parameter- und Argumentwerte; <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, der eine Auswahl einer Methode basierend auf Parametertypen; und So weiter.  
+  
+ Eine Standardimplementierung der <xref:System.Reflection.Binder> Klasse wird bereitgestellt, indem Sie die <xref:System.Type.DefaultBinder%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel implementiert, und zeigt alle Elemente der `Binder` Klasse. Die private Methode `CanConvertFrom` kompatible Typen eines bestimmten Typs sucht.  
+  
+ [!code-cpp[Binder_1#1](~/samples/snippets/cpp/VS_Snippets_CLR/Binder_1/CPP/binder.cpp#1)]
+ [!code-csharp[Binder_1#1](~/samples/snippets/csharp/VS_Snippets_CLR/Binder_1/CS/binder.cs#1)]
+ [!code-vb[Binder_1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Binder_1/VB/binder.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Reflection.Binder" />, müssen Sie die folgenden Member überschreiben: <see cref="M:System.Reflection.Binder.BindToMethod(System.Reflection.BindingFlags,System.Reflection.MethodBase[],System.Object[]@,System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[],System.Object@)" />, <see cref="M:System.Reflection.Binder.BindToField(System.Reflection.BindingFlags,System.Reflection.FieldInfo[],System.Object,System.Globalization.CultureInfo)" />, <see cref="M:System.Reflection.Binder.ReorderArgumentArray(System.Object[]@,System.Object)" />, <see cref="M:System.Reflection.Binder.SelectMethod(System.Reflection.BindingFlags,System.Reflection.MethodBase[],System.Type[],System.Reflection.ParameterModifier[])" />, <see cref="M:System.Reflection.Binder.SelectProperty(System.Reflection.BindingFlags,System.Reflection.PropertyInfo[],System.Type,System.Type[],System.Reflection.ParameterModifier[])" />, und <see cref="M:System.Reflection.Binder.ChangeType(System.Object,System.Type,System.Globalization.CultureInfo)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Binder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.Binder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von den Konstruktoren der abgeleiteten Klassen, die zum Initialisieren des Status bei dieser Art aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToField">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.FieldInfo BindToField (System.Reflection.BindingFlags bindingAttr, System.Reflection.FieldInfo[] match, object value, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.FieldInfo BindToField(valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.FieldInfo[] match, object value, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.BindToField(System.Reflection.BindingFlags,System.Reflection.FieldInfo[],System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="match" Type="System.Reflection.FieldInfo[]" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination von <see cref="T:System.Reflection.BindingFlags" /> Werte.</param>
+        <param name="match">Der Satz von Feldern, die für den Abgleich infrage. Beispielsweise, wenn eine <see cref="T:System.Reflection.Binder" /> Objekt dient der <see cref="Overload:System.Type.InvokeMember" />, dieser Parameter gibt der Satz von Feldern, die Reflektion ermittelt hat, werden übereinstimmt, in der Regel da sie den richtigen Membernamen aufweisen. Die standardmäßige Implementierung gebotenen <see cref="P:System.Type.DefaultBinder" /> ändert die Reihenfolge der diesem Array.</param>
+        <param name="value">Der Wert des Felds verwendet, um ein übereinstimmendes Feld zu suchen.</param>
+        <param name="culture">Eine Instanz von <see cref="T:System.Globalization.CultureInfo" /> , wird verwendet, um die Umwandlung von Datentypen in Binder-Implementierungen steuern, die Typen umgewandelt werden. Wenn <c>Kultur</c> ist <see langword="null" />die <see cref="T:System.Globalization.CultureInfo" /> des aktuellen Threads verwendet wird.  
+  
+ Beachten Sie z. B. wenn eine Implementierung der Binder Umwandlung von Zeichenfolgenwerten in numerische Typen ermöglicht dieser Parameter ist erforderlich, Konvertieren einer <see langword="String" /> , der 1000 darstellt, in eine <see langword="Double" /> Wert, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird. Der Standardbinder keine solche Zeichenfolgenumwandlungen.</param>
+        <summary>Wählt ein Feld aus einem vorhandenen Satz von Feldern, die basierend auf den angegebenen Kriterien.</summary>
+        <returns>Das entsprechende Feld.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `bindingAttr` enthält keine <xref:System.Reflection.BindingFlags?displayProperty=nameWithType>, die standardmäßige Binder-Implementierung von bereitgestellten <xref:System.Type.DefaultBinder%2A?displayProperty=nameWithType> einfach gibt das erste Element des `match`. Es erfolgt keine Auswahl getroffen wurde.  
+  
+ Diese Methode steuert die Bindung, die von bereitgestellte <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Für den Standardbinder <paramref name="bindingAttr" /> enthält <see cref="F:System.Reflection.BindingFlags.SetField" />, und <paramref name="match" /> enthält mehrere Felder, die ebenso gut Übereinstimmungen für <paramref name="value" />. Beispielsweise <paramref name="value" /> enthält eine <c>MyClass</c> Objekt, implementiert die <c>IMyClass</c> -Schnittstelle, und <paramref name="match" /> enthält ein Feld vom Typ <c>MyClass</c> und ein Feld des Typs <c>IMyClass</c>.</exception>
+        <exception cref="T:System.MissingFieldException">Für den Standardbinder <paramref name="bindingAttr" /> enthält <see cref="F:System.Reflection.BindingFlags.SetField" />, und <paramref name="match" /> enthält keine Felder, die akzeptieren <paramref name="value" />.</exception>
+        <exception cref="T:System.NullReferenceException">Für den Standardbinder <paramref name="bindingAttr" /> enthält <see cref="F:System.Reflection.BindingFlags.SetField" />, und <paramref name="match" /> ist <see langword="null" /> oder ein leeres Array.  
+  
+ - oder -   
+  
+ <paramref name="bindingAttr" />enthält <see cref="F:System.Reflection.BindingFlags.SetField" />, und <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToMethod">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodBase BindToMethod (System.Reflection.BindingFlags bindingAttr, System.Reflection.MethodBase[] match, ref object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, string[] names, out object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodBase BindToMethod(valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.MethodBase[] match, object[]&amp; args, valuetype System.Reflection.ParameterModifier[] modifiers, class System.Globalization.CultureInfo culture, string[] names, [out] object&amp; state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.BindToMethod(System.Reflection.BindingFlags,System.Reflection.MethodBase[],System.Object[]@,System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="match" Type="System.Reflection.MethodBase[]" />
+        <Parameter Name="args" Type="System.Object[]&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="names" Type="System.String[]" />
+        <Parameter Name="state" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination von <see cref="T:System.Reflection.BindingFlags" /> Werte.</param>
+        <param name="match">Der Satz von Methoden, die für den Abgleich infrage. Beispielsweise, wenn eine <see cref="T:System.Reflection.Binder" /> Objekt dient der <see cref="Overload:System.Type.InvokeMember" />, dieser Parameter gibt der Satz von Methoden, die Reflektion festgestellt, dass mögliche übereinstimmt, in der Regel da sie den richtigen Membernamen aufweisen. Die standardmäßige Implementierung gebotenen <see cref="P:System.Type.DefaultBinder" /> ändert die Reihenfolge der diesem Array.</param>
+        <param name="args">Die Argumente, die übergeben werden. Der Binder kann die Reihenfolge der Argumente in diesem Array ändern. der Standardbinder ändert z. B. die Reihenfolge der Argumente, wenn die <c>Namen</c> Parameter wird verwendet, um eine Sortierung als Positionsreihenfolge anzugeben. Wenn eine Implementierung der Binder Argumenttypen wandelt, können die Typen und Werte der Argumente ebenfalls geändert werden.</param>
+        <param name="modifiers">Ein Array von Parametermodifizierern, mit denen Bindung mit Parametersignaturen in der die Typen geändert wurden. Die Binder-Standardimplementierung verwendet diesen Parameter nicht.</param>
+        <param name="culture">Eine Instanz von <see cref="T:System.Globalization.CultureInfo" /> , wird verwendet, um die Umwandlung von Datentypen in Binder-Implementierungen steuern, die Typen umgewandelt werden. Wenn <c>Kultur</c> ist <see langword="null" />die <see cref="T:System.Globalization.CultureInfo" /> des aktuellen Threads verwendet wird.  
+  
+ Beachten Sie z. B. wenn eine Implementierung der Binder Umwandlung von Zeichenfolgenwerten in numerische Typen ermöglicht dieser Parameter ist erforderlich, Konvertieren einer <see langword="String" /> , der 1000 darstellt, in eine <see langword="Double" /> Wert, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird. Der Standardbinder keine solche Zeichenfolgenumwandlungen.</param>
+        <param name="names">Die Parameternamen, wenn Parameternamen sind berücksichtigt werden, wenn Sie zuordnen, oder <see langword="null" /> wenn Argumente werden als rein mit Feldern fester Breite behandelt werden soll. Parameternamen müssen beispielsweise verwendet werden, wenn Argumente in der Reihenfolge mit Feldern fester Breite nicht angegeben werden.</param>
+        <param name="state">Nach der Methodenrückgabe, <c>Zustand</c> enthält ein Binder bereitgestelltes Objekt, das verfolgt Argument neu anordnen. Der Binder erstellt dieses Objekt und der Binder ist der einzige Consumer dieses Objekts. Wenn <c>Status</c> ist nicht <see langword="null" /> Wenn <see langword="BindToMethod" /> zurückgegeben wird, müssen Sie übergeben <c>Status</c> auf die <see cref="M:System.Reflection.Binder.ReorderArgumentArray(System.Object[]@,System.Object)" /> Methode, wenn Sie wiederherstellen möchten <c>Args</c> auf den ursprünglichen Sortieren, z. B. so, dass die Werte abgerufen werden können <see langword="ref" /> Parameter (<see langword="ByRef" /> -Parameter in Visual Basic).</param>
+        <summary>Wählt eine Methode zum Aufrufen aus einem vorhandenen Satz von Methoden, abhängig von den übergebenen Argumenten.</summary>
+        <returns>Die entsprechende Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardbinder berücksichtigt beide Parameter, die über Werte verfügen und `params` Arrays (`ParamArray` Arrays in Visual Basic). Daher ist es möglich, eine Übereinstimmung zu finden, in Fällen, in denen `args` und `match` enthalten nicht die gleiche Anzahl von Elementen.  
+  
+ Der Binder kann ein Client das Array von Argumenten zurück in ihr ursprüngliches Format zuordnen, wenn das Argumentarray durch verändert wurde <xref:System.Reflection.Binder.BindToMethod%2A>. Verwenden Sie diese neuzuordnung-Funktion, um Argumente nach Verweis zurück zu erhalten, wenn solche Argumente vorhanden sind. Wenn Sie Argumente anhand des Namens übergeben, Argumentarrays Binder. Die `state` Parameter der nachverfolgt Argument neu anordnen, sodass des Binders <xref:System.Reflection.Binder.ReorderArgumentArray%2A> Methode, um das Argumentarray in ihr ursprüngliches Format neu anordnen.  
+  
+ Die <xref:System.Reflection.Binder.BindToMethod%2A> Methode wird verwendet, durch die <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Für den Standardbinder <paramref name="match" /> enthält mehrere Methoden, die ebenso gut Übereinstimmungen für <paramref name="args" />. Beispielsweise <paramref name="args" /> enthält eine <c>MyClass</c> Objekt, implementiert die <c>IMyClass</c> -Schnittstelle, und <paramref name="match" /> enthält eine Methode, die akzeptiert <c>MyClass</c> und eine Methode, die <c>IMyClass</c>.</exception>
+        <exception cref="T:System.MissingMethodException">Für den Standardbinder <paramref name="match" /> enthält keine Methoden, die die angegebenen Argumente annehmen können <paramref name="args" />.</exception>
+        <exception cref="T:System.ArgumentException">Für den Standardbinder <paramref name="match" /> ist <see langword="null" /> oder ein leeres Array.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeType">
+      <MemberSignature Language="C#" Value="public virtual bool CanChangeType (object value, Type type, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanChangeType(object value, class System.Type type, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.CanChangeType(System.Object,System.Type,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <param name="type">To be added.</param>
+        <param name="culture">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public abstract object ChangeType (object value, Type type, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ChangeType(object value, class System.Type type, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.ChangeType(System.Object,System.Type,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt so ändern Sie in eine neue <see langword="Type" />.</param>
+        <param name="type">Die neue <see langword="Type" /> , <c>Wert</c> werden.</param>
+        <param name="culture">Eine Instanz von <see cref="T:System.Globalization.CultureInfo" /> dient außerdem zur Steuerung der Umwandlung von Datentypen. Wenn <c>Kultur</c> ist <see langword="null" />die <see cref="T:System.Globalization.CultureInfo" /> des aktuellen Threads verwendet wird.  
+  
+ Beachten Sie z. B. dieser Parameter ist erforderlich, um Konvertieren einer <see langword="String" /> , der 1000 darstellt, in eine <see langword="Double" /> Wert, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird.</param>
+        <summary>Ändert den Typ von der angegebenen <see langword="Object" /> auf die angegebenen <see langword="Type" />.</summary>
+        <returns>Ein Objekt, das den angegebenen Wert als neuen Typ enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Reflektion modelliert die Zugriffsregeln des allgemeinen Typsystems. Z. B. wenn der Aufrufer in der gleichen Assembly befindet, benötigt der Aufrufer keine besondere Berechtigungen für interne Member. Andernfalls muss der Aufrufer <xref:System.Security.Permissions.ReflectionPermission>. Dies ist konsistent mit der Suche nach Membern, die geschützt werden, private und usw. ein.  
+  
+ Im Allgemeinen gilt `ChangeType` sollten ausführen, nur widening-Umwandlungen, die keine Daten verloren gehen. Ein Beispiel für eine erweiternde Konvertierung ist eine Umwandlung einer 32-Bit-Ganzzahl mit Vorzeichen in einen Wert einer 64-Bit-Ganzzahl mit Vorzeichen. Dies wird über eine einschränkende Konvertierung unterschieden, die Daten verloren gehen können. Ein Beispiel für eine einschränkende Konvertierung ist eine 64-Bit-Ganzzahl mit Vorzeichen in eine 32-Bit-Ganzzahl mit Vorzeichen umzuwandeln.  
+  
+ Die folgende Tabelle enthält die Umwandlungen durchgeführt, die standardmäßig `ChangeType`.  
+  
+|Quelltyp|Zieltyp|  
+|-----------------|-----------------|  
+|Beliebiger Typ|Der Basistyp.|  
+|Beliebiger Typ|Die Schnittstelle implementiert.|  
+|Char|UInt16, UInt32, Int32, UInt64, Int64, Single, Double|  
+|Byte|Char, UInt16, Int16, UInt32, Int32, UInt64, Int64, Single, Double|  
+|SByte|Int16, Int32, Int64, Single, Double|  
+|UInt16|UInt32, Int32, UInt64, Int64, Single, Double|  
+|Int16|Int32, Int64, Single, Double|  
+|UInt32|UInt64, Int64, Single, Double|  
+|Int32|Int64, Single, Double|  
+|UInt64|Single, Double|  
+|Int64|Single, Double|  
+|Single|Double|  
+|Ohne Verweis|Per-Verweis.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReorderArgumentArray">
+      <MemberSignature Language="C#" Value="public abstract void ReorderArgumentArray (ref object[] args, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReorderArgumentArray(object[]&amp; args, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.ReorderArgumentArray(System.Object[]@,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]&amp;" RefType="ref" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="args">Die tatsächlichen Argumente, die übergeben werden. Die Typen und die Werte der Argumente können geändert werden.</param>
+        <param name="state">Ein Binder bereitgestelltes Objekt, das verfolgt Argument neu anordnen.</param>
+        <summary>Bei der Rückkehr aus <see cref="M:System.Reflection.Binder.BindToMethod(System.Reflection.BindingFlags,System.Reflection.MethodBase[],System.Object[]@,System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[],System.Object@)" />, stellt die <paramref name="args" /> Argument wurde der, die er stammt <see langword="BindToMethod" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die common Language Runtime ruft diese Methode auf, wenn `state` nicht `null` nach einer Rückgabe von `BindToMethod`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMethod">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodBase SelectMethod (System.Reflection.BindingFlags bindingAttr, System.Reflection.MethodBase[] match, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodBase SelectMethod(valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.MethodBase[] match, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.SelectMethod(System.Reflection.BindingFlags,System.Reflection.MethodBase[],System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="match" Type="System.Reflection.MethodBase[]" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination von <see cref="T:System.Reflection.BindingFlags" /> Werte.</param>
+        <param name="match">Der Satz von Methoden, die für den Abgleich infrage. Beispielsweise, wenn eine <see cref="T:System.Reflection.Binder" /> Objekt dient der <see cref="Overload:System.Type.InvokeMember" />, dieser Parameter gibt der Satz von Methoden, die Reflektion festgestellt, dass mögliche übereinstimmt, in der Regel da sie den richtigen Membernamen aufweisen. Die standardmäßige Implementierung gebotenen <see cref="P:System.Type.DefaultBinder" /> ändert die Reihenfolge der diesem Array.</param>
+        <param name="types">Die Parametertypen, die zum Suchen einer übereinstimmenden Methode verwendet wird.</param>
+        <param name="modifiers">Ein Array von Parametermodifizierern, mit denen Bindung mit Parametersignaturen in der die Typen geändert wurden.</param>
+        <summary>Wählt eine Methode aus einem vorhandenen Satz von Methoden, basierend auf den Typ des Arguments.</summary>
+        <returns>Die entsprechende Methode, sofern gefunden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte zurückgeben `null` Wenn keine Methode mit die Kriterien entspricht. Diese Methode steuert die bereitgestellte durch Auswahl der `GetConstructor` und `GetMethod` Methoden auf `Type`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Für den Standardbinder <paramref name="match" /> enthält mehrere Methoden, die gut Übereinstimmungen für die Parametertypen von beschrieben sind <paramref name="types" />. Z. B. das Array in <paramref name="types" /> enthält eine <see cref="T:System.Type" /> -Objekt für <c>MyClass</c> und das Array in <paramref name="match" /> enthält eine Methode, die als Basisklasse akzeptiert <c>MyClass</c> und eine Methode, die akzeptiert eine Schnittstelle, die <c>MyClass</c> implementiert.</exception>
+        <exception cref="T:System.ArgumentException">Für den Standardbinder <paramref name="match" /> ist <see langword="null" /> oder ein leeres Array.  
+  
+ - oder -   
+  
+ Ein Element von <paramref name="types" /> leitet sich von <see cref="T:System.Type" />, ist aber nicht vom Typ <see langword="RuntimeType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectProperty">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.PropertyInfo SelectProperty (System.Reflection.BindingFlags bindingAttr, System.Reflection.PropertyInfo[] match, Type returnType, Type[] indexes, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.PropertyInfo SelectProperty(valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.PropertyInfo[] match, class System.Type returnType, class System.Type[] indexes, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Binder.SelectProperty(System.Reflection.BindingFlags,System.Reflection.PropertyInfo[],System.Type,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="match" Type="System.Reflection.PropertyInfo[]" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="indexes" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Eine bitweise Kombination von <see cref="T:System.Reflection.BindingFlags" /> Werte.</param>
+        <param name="match">Der Satz von Eigenschaften, die für den Abgleich infrage. Beispielsweise, wenn eine <see cref="T:System.Reflection.Binder" /> Objekt dient der <see cref="Overload:System.Type.InvokeMember" />, dieser Parameter gibt der Satz von Eigenschaften, die Reflektion festgestellt, dass mögliche übereinstimmt, in der Regel da sie den richtigen Membernamen aufweisen. Die standardmäßige Implementierung gebotenen <see cref="P:System.Type.DefaultBinder" /> ändert die Reihenfolge der diesem Array.</param>
+        <param name="returnType">Der Rückgabewert der entsprechenden Eigenschaft benötigen.</param>
+        <param name="indexes">Die Indextypen der zu suchenden Eigenschaft. Verwendet für Indexeigenschaften fest, wie z. B. der Indexer für eine Klasse.</param>
+        <param name="modifiers">Ein Array von Parametermodifizierern, mit denen Bindung mit Parametersignaturen in der die Typen geändert wurden.</param>
+        <summary>Wählt eine Eigenschaft aus dem angegebenen Satz von Eigenschaften, die basierend auf den angegebenen Kriterien.</summary>
+        <returns>Die entsprechende Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode steuert die bereitgestellte durch Auswahl der `GetProperty` Methode `Type`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Für den Standardbinder <paramref name="match" /> enthält mehrere Eigenschaften, die ebenso gut für übereinstimmen <paramref name="returnType" /> und <paramref name="indexes" />.</exception>
+        <exception cref="T:System.ArgumentException">Für den Standardbinder <paramref name="match" /> ist <see langword="null" /> oder ein leeres Array.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

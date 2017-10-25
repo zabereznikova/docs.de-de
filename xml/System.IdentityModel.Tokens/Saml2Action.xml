@@ -1,0 +1,118 @@
+<Type Name="Saml2Action" FullName="System.IdentityModel.Tokens.Saml2Action">
+  <TypeSignature Language="C#" Value="public class Saml2Action" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2Action extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2Action" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see langword="&lt;saml:Action&gt;" /> von SAML 2.0 definierten Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2Action> Klasse gibt eine Aktion für eine Ressource für die Autorisierung wird angefordert, erteilt oder verweigert wurde und eine <xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement>.  
+  
+ Die <xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement> stellt einen Anspruch über die Fähigkeit eines das Subjekt einer SAML-2-Assertion, die einen angegebenen Satz von Aktionen für eine angegebene Ressource ausführen. Ein <xref:System.IdentityModel.Tokens.Saml2Action> hinzugefügt werden können, um die <xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Actions%2A?displayProperty=nameWithType> Eigenschaft, um die gewünschte Aktion anzugeben. Die <xref:System.IdentityModel.Tokens.Saml2Action.Value%2A> Eigenschaft darstellt, die Aktion und die <xref:System.IdentityModel.Tokens.Saml2Action.Namespace%2A> Eigenschaft gibt an, der XML-Namespace, in dem die Aktion definiert wird. Die <xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource%2A?displayProperty=nameWithType> Eigenschaft gibt an, die Ressource, auf dem die zugriffsentscheidung angewendet wird, und die <xref:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Decision%2A> Eigenschaft gibt an, der die zugriffsentscheidung.  
+  
+ [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2Action (string value, Uri actionNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value, class System.Uri actionNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2Action.#ctor(System.String,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="actionNamespace" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Aktion, die ausgeführt werden soll.</param>
+        <param name="actionNamespace">Der URI, der den Namespace darstellt, in dem der Name der angegebenen Aktion interpretiert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.Saml2Action" /> Klasse mit dem angegebenen Namespace und Aktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="actionNamespace" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="value" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentException">
+          Der <paramref name="actionNamespace" /> ist kein absoluter URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public Uri Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Action.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den URI-Verweis, der den XML-Namespace darstellt, in dem der Name der angegebenen Aktion interpretiert werden.</summary>
+        <value>Die <see cref="T:System.Uri" /> , die den Namespace darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das `Namespace`-Attribut des `<saml:Action>`-Elements. Dieses Attribut ist erforderlich. [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, die Eigenschaft auf festgelegt <see langword="null" /> auftritt.</exception>
+        <exception cref="T:System.ArgumentException">Tritt auf beim Versuch, einen Wert festzulegen, der kein absoluter URI ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Action.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, die Aktion, die das Subjekt der <see cref="T:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement" /> an die Ressource ausführen können.</summary>
+        <value>Die Aktion, die das Subjekt des der <see cref="T:System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement" /> können für die Ressource ausführen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des `<saml:Action>`-Elements. [!INCLUDE[wif_saml2_ref](~/includes/wif-saml2-ref-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, einen Wert festzulegen, ist <see langword="null" /> oder eine leere Zeichenfolge auftritt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

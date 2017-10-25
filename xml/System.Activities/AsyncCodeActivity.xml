@@ -1,0 +1,262 @@
+<Type Name="AsyncCodeActivity" FullName="System.Activities.AsyncCodeActivity">
+  <TypeSignature Language="C#" Value="public abstract class AsyncCodeActivity : System.Activities.Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AsyncCodeActivity extends System.Activities.Activity" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.AsyncCodeActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Activity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet die asynchrone Codeaktivitätsausführung vom Start bis zum Abschluss. Dies ist eine abstrakte Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine Klasse von <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um eine benutzerdefinierte Aktivität zu erstellen.  
+  
+ [!code-csharp[Async#0](~/samples/snippets/csharp/VS_Snippets_CFX/async/cs/filewriter.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsyncCodeActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.AsyncCodeActivity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginExecute">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult BeginExecute (System.Activities.AsyncCodeActivityContext context, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginExecute(class System.Activities.AsyncCodeActivityContext context, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivity.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.AsyncCodeActivityContext" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Informationen, die die Ausführungsumgebung für <see cref="T:System.Activities.AsyncCodeActivity" /> definieren.</param>
+        <param name="callback">Die Methode, die nach dem Eintreten der asynchronen Aktivität und der Abschlussbenachrichtigung aufgerufen werden soll.</param>
+        <param name="state">Ein Objekt, das Variableninformationen für eine Instanz einer asynchronen Aktivität speichert.</param>
+        <summary>Reiht bei Implementierung in einer abgeleiteten Klasse und bei Verwendung des angegebenen Ausführungskontexts, der Rückrufmethode und des Benutzerstatus eine asynchrone Aktivität in die Warteschlange in einem Laufzeitworkflow ein.</summary>
+        <returns>Das Objekt, das Variableninformationen für eine Instanz einer asynchronen Aktivität speichert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>-Methode in einer benutzerdefinierten Aktivität überschrieben wird.  
+  
+ [!code-csharp[Async#1](~/samples/snippets/csharp/VS_Snippets_CFX/async/cs/filewriter.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CacheMetadata">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Dient als virtuelle Methode und konvertiert Informationen, die von der Cachereflektion abgerufen wurden, in Argumente für eine asynchrone Aktivität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.AsyncCodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.AsyncCodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override sealed void CacheMetadata (System.Activities.ActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.ActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivity.CacheMetadata(System.Activities.ActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.ActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Nicht implementiert.</param>
+        <summary>Nicht implementiert. Verwenden Sie stattdessen <see cref="M:System.Activities.AsyncCodeActivity.CacheMetadata(System.Activities.CodeActivityMetadata)" /> .</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected virtual void CacheMetadata (System.Activities.CodeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CacheMetadata(valuetype System.Activities.CodeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivity.CacheMetadata(System.Activities.CodeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.CodeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">
+          <see cref="T:System.Activities.CodeActivityMetadata" />-Objekt, das Daten für einen Satz asynchroner Aktivitätsargumente enthält.</param>
+        <summary>Dient als virtuelle Methode und konvertiert Informationen, die von der Cachereflektion abgerufen wurden, in Argumente für eine asynchrone Aktivität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.AsyncCodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.AsyncCodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected virtual void Cancel (System.Activities.AsyncCodeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Cancel(class System.Activities.AsyncCodeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivity.Cancel(System.Activities.AsyncCodeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.AsyncCodeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Informationen, die die Ausführungsumgebung für <see cref="T:System.Activities.AsyncCodeActivity" /> definieren.</param>
+        <summary>Benachrichtigt bei Implementierung in einer abgeleiteten Klasse und bei Verwendung der angegebenen Informationen zur Ausführungsumgebung die Workflowlaufzeit darüber, dass der asynchrone Aktivitätsvorgang einen frühen Abschluss erreicht hat. Dient als virtuelle Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndExecute">
+      <MemberSignature Language="C#" Value="protected abstract void EndExecute (System.Activities.AsyncCodeActivityContext context, IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndExecute(class System.Activities.AsyncCodeActivityContext context, class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivity.EndExecute(System.Activities.AsyncCodeActivityContext,System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.AsyncCodeActivityContext" />
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="context">Informationen, die die Ausführungsumgebung für <see cref="T:System.Activities.AsyncCodeActivity" /> definieren.</param>
+        <param name="result">Das implementierte <see cref="T:System.IAsyncResult" />, das den Status einer asynchronen Aktivität zurückgibt, wenn die Ausführung endet.</param>
+        <summary>Benachrichtigt bei Implementierung in einer abgeleiteten Klasse und bei Verwendung der angegebenen Informationen zur Ausführungsumgebung die Workflowlaufzeit darüber, dass der zugehörige asynchrone Aktivitätsvorgang abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>-Methode in einer benutzerdefinierten Aktivität überschrieben wird.  
+  
+ [!code-csharp[Async#2](~/samples/snippets/csharp/VS_Snippets_CFX/async/cs/filewriter.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Implementation">
+      <MemberSignature Language="C#" Value="protected override sealed Func&lt;System.Activities.Activity&gt; Implementation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`1&lt;class System.Activities.Activity&gt; Implementation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.AsyncCodeActivity.Implementation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.IgnoreDataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Activities.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see langword="null" /> oder löst einen Fehler aus, wenn der Versuch zum Festlegen des Werts dieser Eigenschaft.</summary>
+        <value>Eine Aktivitätsfunktion.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationVersion">
+      <MemberSignature Language="C#" Value="protected override sealed Version ImplementationVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ImplementationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.AsyncCodeActivity.ImplementationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die implementierungsversion der Aktivität.</summary>
+        <value>Die implementierungsversion der Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override sealed void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.UpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.UpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.AsyncCodeActivity.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.UpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.UpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Die Metadaten, die verwendet wird.</param>
+        <param name="originalActivity">Die ursprünglichen Aktivität.</param>
+        <summary>Löst ein Ereignis für die Erstellung einer Zuordnung für das dynamische Update.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

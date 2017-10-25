@@ -1,0 +1,1378 @@
+<Type Name="ProcessStartInfo" FullName="System.Diagnostics.ProcessStartInfo">
+  <TypeSignature Language="C#" Value="public sealed class ProcessStartInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ProcessStartInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ProcessStartInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Wertemenge an, die beim Starten eines Prozesses verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.ProcessStartInfo>dient zusammen mit der <xref:System.Diagnostics.Process> Komponente. Beim Starten von einem Prozess mit der <xref:System.Diagnostics.Process> -Klasse haben Sie Zugriff auf die verfügbaren Informationen zu verarbeiten, wenn an einen laufenden Prozess anfügen.  
+  
+ Sie können die <xref:System.Diagnostics.ProcessStartInfo> Klasse für eine bessere Steuerung des Prozesses, die Sie starten. Sie müssen mindestens Festlegen der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft muss entweder manuell oder mithilfe des Konstruktors. Der Dateiname ist Anwendung oder das Dokument. Hier wird ein Dokument definiert, um einen beliebigen Dateityp, die über ein offenes verfügt oder Standardaktion zugeordnet. Sie können registrierte Dateitypen und der zugehörigen Anwendung für den Computer anzeigen, indem Sie mit der **Ordneroptionen** (Dialogfeld), die über das Betriebssystem verfügbar ist. Die **erweitert** Schaltfläche führt zu einem Dialogfeld, das anzeigt, ob es eine open-Aktion mit einer bestimmten registrierten Dateityp verknüpft ist ist.  
+  
+ Darüber hinaus können Sie andere Eigenschaften festlegen, die Aktionen an, die mit dieser Datei zu definieren. Sie können einen Wert für den Typ des spezifischen angeben der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> -Eigenschaft für die <xref:System.Diagnostics.ProcessStartInfo.Verb%2A> Eigenschaft. Beispielsweise können Sie angeben, "print" für einen Dokumenttyp. Darüber hinaus können Sie angeben <xref:System.Diagnostics.ProcessStartInfo.Arguments%2A> Eigenschaftswerte Befehlszeilenargumente an die Datei öffnen-Prozedur übergeben werden. Angenommen, Sie geben Sie eine Text-Editor-Anwendung in der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> -Eigenschaft, können Sie die <xref:System.Diagnostics.ProcessStartInfo.Arguments%2A> -Eigenschaft an eine Textdatei, die vom Editor geöffnet werden.  
+  
+ Standardeingabe wird in der Regel die Tastatur und Standardausgabe und der Standardfehler werden in der Regel auf den Bildschirm. Sie können jedoch die <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardInput%2A>, <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardOutput%2A>, und <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardError%2A> Eigenschaften, die dazu führen, dass der Vorgang zum Abrufen von Eingabe oder Ausgabe an eine Datei oder ein anderes Gerät zurückgegeben. Bei Verwendung der <xref:System.Diagnostics.Process.StandardInput%2A>, <xref:System.Diagnostics.Process.StandardOutput%2A>, oder <xref:System.Diagnostics.Process.StandardError%2A> Eigenschaften auf der <xref:System.Diagnostics.Process> Komponente zunächst legen Sie den entsprechenden Wert für die <xref:System.Diagnostics.ProcessStartInfo> Eigenschaft. Andernfalls löst das System eine Ausnahme beim Lesen oder in den Stream schreiben.  
+  
+ Legen Sie die <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft, um anzugeben, ob zum Starten des Prozesses die Betriebssystemshell mit. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> festgelegt ist, um `false`, erbt der neue Prozess die Standardeingabe Standard ausgeben und Standardfehlerstreams der aufrufenden verarbeiten, es sei denn, die <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardInput%2A>, <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardOutput%2A>, oder <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardError%2A> Eigenschaften werden jeweils um festlegen `true`. 
+  
+ Sie können den Wert eines beliebigen ändern <xref:System.Diagnostics.ProcessStartInfo> Eigenschaft bis zum Zeitpunkt der Prozess gestartet wird. Nachdem Sie den Prozess starten, hat das Ändern dieser Werte keine Auswirkungen.  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn Sie der unmittelbaren Aufrufer nicht über die volle Vertrauenswürdigkeit verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.ProcessStartInfo> Klasse zum Starten von Internet Explorer, und die Ziel-URLs als <xref:System.Diagnostics.ProcessStartInfo> Argumente.  
+  
+ [!code-cpp[Process.Start_static#1](~/samples/snippets/cpp/VS_Snippets_CLR/Process.Start_static/CPP/processstartstatic.cpp#1)]
+ [!code-csharp[Process.Start_static#1](~/samples/snippets/csharp/VS_Snippets_CLR/Process.Start_static/CS/processstartstatic.cs#1)]
+ [!code-vb[Process.Start_static#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process.Start_static/VB/processstartstatic.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von Membern <see cref="T:System.Diagnostics.ProcessStartInfo" />. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: benannte Berechtigungssätze](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessStartInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ProcessStartInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.ProcessStartInfo" />-Klasse, ohne einen Dateinamen anzugeben, mit dem der Prozess gestartet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen festlegen, mit mindestens der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft vor dem Starten des Prozesses. Der Dateiname ist Anwendung oder das Dokument. In diesem Fall wird ein Dokument definiert, um einen beliebigen Dateityp, die über ein offenes verfügt oder Standardaktion zugeordnet. Sie können registrierte Dateitypen und der zugehörigen Anwendung für den Computer anzeigen, indem Sie mit der **Ordneroptionen** (Dialogfeld), die über das Betriebssystem verfügbar ist. Die **erweitert** Schaltfläche führt zu einem Dialogfeld, das anzeigt, ob es eine open-Aktion mit einer bestimmten registrierten Dateityp verknüpft ist ist.  
+  
+ Optional können Sie auch andere Eigenschaften festlegen, bevor Sie den Prozess starten. Die <xref:System.Diagnostics.ProcessStartInfo.Verb%2A> Eigenschaft stellt Aktionen bereit, z. B. "Print", mit der Datei angegeben, der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft. Die <xref:System.Diagnostics.ProcessStartInfo.Arguments%2A> Eigenschaft bietet die Möglichkeit, übergeben Sie Befehlszeilenargumente in die Datei ein, wenn das System geöffnet wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessStartInfo (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ProcessStartInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Eine Anwendung oder ein Dokument, mit der bzw. dem ein Prozess gestartet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.ProcessStartInfo" />-Klasse und gibt einen Dateinamen an, mit dem der Prozess gestartet werden soll, z. B. eine Anwendung oder ein Dokument.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Dateiname ist Anwendung oder das Dokument. In diesem Fall wird ein Dokument definiert, um einen beliebigen Dateityp, die über ein offenes verfügt oder Standardaktion zugeordnet. Sie können registrierte Dateitypen und der zugehörigen Anwendung für den Computer anzeigen, indem Sie mit der **Ordneroptionen** (Dialogfeld), die über das Betriebssystem verfügbar ist. Die **erweitert** Schaltfläche führt zu einem Dialogfeld, das anzeigt, ob es eine open-Aktion mit einer bestimmten registrierten Dateityp verknüpft ist ist.  
+  
+ Sie können ändern, die <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft nach dem Aufruf dieses Konstruktors wird bis zum Zeitpunkt der Prozess gestartet wird. Nachdem Sie den Prozess starten, hat das Ändern dieser Werte keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessStartInfo (string fileName, string arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ProcessStartInfo.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Eine Anwendung, mit der ein Prozess gestartet wird.</param>
+        <param name="arguments">Befehlszeilenargumente, die beim Starten des Prozesses an die Anwendung übergeben werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.ProcessStartInfo" />-Klasse und gibt einen Anwendungsdateinamen an, mit dem der Prozess gestartet wird, sowie einen Satz von Befehlszeilenargumenten, die an die Anwendung übergeben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Dateiname ist Anwendung oder das Dokument. In diesem Fall wird ein Dokument definiert, um einen beliebigen Dateityp, die über ein offenes verfügt oder Standardaktion zugeordnet. Sie können registrierte Dateitypen und der zugehörigen Anwendung für den Computer anzeigen, indem Sie mit der **Ordneroptionen** (Dialogfeld), die über das Betriebssystem verfügbar ist. Die **erweitert** Schaltfläche führt zu einem Dialogfeld, das anzeigt, ob es eine open-Aktion mit einer bestimmten registrierten Dateityp verknüpft ist ist.  
+  
+ Sie können ändern, die <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> oder <xref:System.Diagnostics.ProcessStartInfo.Arguments%2A> Eigenschaften nach dem Aufruf dieses Konstruktors wird bis zum Zeitpunkt der Prozess gestartet wird. Nachdem Sie den Prozess starten, hat das Ändern dieser Werte keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public string Arguments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Command line arguments that will be passed to the application specified by the FileName property.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von Befehlszeilenargumenten ab, die beim Starten der Anwendung verwendet werden sollen, oder legt diesen fest.</summary>
+        <value>Eine einzelne Zeichenfolge, die die Argumente enthält, die an die in der <see cref="P:System.Diagnostics.ProcessStartInfo.FileName" />-Eigenschaft angegebene Zielanwendung übergeben werden sollen. Der Standardwert ist eine leere Zeichenfolge (""). Unter Windows Vista und früheren Versionen des Windows-Betriebssystems muss die Länge der Argumente, die der Länge des vollständigen Pfads des Prozesses hinzugefügt werden, kleiner sein als 2080. Unter Windows 7 und höheren Versionen muss die Länge kleiner als 32699 sein.  
+  
+ Argumente werden von der Zielanwendung analysiert und interpretiert und müssen daher den Erwartungen der betreffenden Anwendung entsprechen. Bei .NET-Anwendungen, wie sie in den Beispielen unten dargestellt sind, werden Leerzeichen als Trennzeichen zwischen Argumenten interpretiert. Ein einzelnes Argument, das Leerzeichen enthält, muss in Anführungszeichen eingeschlossen sein, diese Anführungszeichen werden jedoch nicht an die Zielanwendung übergeben. Eingeschlossene Anführungszeichen, die in das endgültige analysierte Argument aufgenommen werden sollen, müssen dreifach escaped werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das erste Beispiel unten erstellt eine kleine Anwendung (argsecho.exe), Echos Argumente an die Konsole. Im zweite Beispiel erstellt eine Anwendung, die zur Veranschaulichung der verschiedenen Varianten für die Eigenschaft Argumente argsecho.exe aufruft.  
+  
+ [!code-cpp[Process.Start_static#3](~/samples/snippets/cpp/VS_Snippets_CLR/Process.Start_static/CPP/processstartstatic.cpp#3)]
+ [!code-csharp[Process.Start_static#3](~/samples/snippets/csharp/VS_Snippets_CLR/Process.Start_static/CS/processstartstatic.cs#3)]
+ [!code-vb[Process.Start_static#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process.Start_static/VB/processstartstatic.vb#3)]  
+  
+ [!code-cpp[Process.Start_static#2](~/samples/snippets/cpp/VS_Snippets_CLR/Process.Start_static/CPP/processstartstatic.cpp#2)]
+ [!code-csharp[Process.Start_static#2](~/samples/snippets/csharp/VS_Snippets_CLR/Process.Start_static/CS/processstartstatic.cs#2)]
+ [!code-vb[Process.Start_static#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process.Start_static/VB/processstartstatic.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNoWindow">
+      <MemberSignature Language="C#" Value="public bool CreateNoWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreateNoWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.CreateNoWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Whether to start the process without creating a new window to contain it.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Prozess in einem neuen Fenster gestartet werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Prozess ohne Erstellung eines neuen, für ihn bestimmten Fensters gestartet werden soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft `true` oder <xref:System.Diagnostics.ProcessStartInfo.UserName%2A> und <xref:System.Diagnostics.ProcessStartInfo.Password%2A> Eigenschaften sind nicht `null`, die <xref:System.Diagnostics.ProcessStartInfo.CreateNoWindow%2A> Eigenschaftswert wird ignoriert, und ein neues Fenster erstellt wird.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Process.Start_instance#1](~/samples/snippets/cpp/VS_Snippets_CLR/Process.Start_instance/CPP/processstart.cpp#1)]
+ [!code-csharp[Process.Start_instance#1](~/samples/snippets/csharp/VS_Snippets_CLR/Process.Start_instance/CS/processstart.cs#1)]
+ [!code-vb[Process.Start_instance#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process.Start_instance/VB/processstart.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Domäne kennzeichnet, die beim Starten des Prozesses verwendet werden soll, oder legt diesen fest. Wenn dieser Wert ist <see langword="null" />die <see cref="P:System.Diagnostics.ProcessStartInfo.UserName" /> Eigenschaft muss im UPN-Format angegeben werden. </summary>
+        <value>Die Active Directory-Domäne, die beim Starten des Prozesses verwendet werden soll. Wenn dieser Wert ist <see langword="null" />die <see cref="P:System.Diagnostics.ProcessStartInfo.UserName" /> Eigenschaft muss im UPN-Format angegeben werden. </value>
+        <remarks>Diese Eigenschaft ist in erster Linie für Benutzer von Interesse in unternehmensumgebungen mit dem Active Directory verwenden.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Environment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Environment" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.Environment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Umgebungsvariablen ab, die für diesen Prozess und seine untergeordneten Prozesse gelten.</summary>
+        <value>Ein generisches Wörterbuch, das die Umgebungsvariablen enthält, die für diesen Prozess und seine untergeordneten Prozesse gelten. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Umgebungsvariablen enthalten Suchpfade für Dateien, Verzeichnisse für temporäre Dateien, anwendungsspezifische Optionen und andere ähnliche Informationen. Obwohl Sie direkt festlegen, können die <xref:System.Diagnostics.ProcessStartInfo.Environment%2A> -Eigenschaft, Sie können das generische Wörterbuch, das von der Eigenschaft zurückgegebene ändern. Der folgende Code fügt z. B. eine TEMP-Umgebungsvariable: `myProcess.StartInfo.Environment.Add("TempPath", "C:\\Temp")`.  Müssen Sie festlegen der <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft `false` zum Starten des Prozesses nach dem Ändern der <xref:System.Diagnostics.ProcessStartInfo.Environment%2A> Eigenschaft. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `true`, wird ein <xref:System.InvalidOperationException> wird ausgelöst, wenn die <xref:System.Diagnostics.Process.Start%2A> -Methode aufgerufen wird.  
+  
+ Auf .NET Framework-Anwendungen mithilfe der <xref:System.Diagnostics.ProcessStartInfo.Environment%2A> Eigenschaft entspricht der Verwendung der <xref:System.Diagnostics.ProcessStartInfo.EnvironmentVariables%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentVariables">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringDictionary EnvironmentVariables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary EnvironmentVariables" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.EnvironmentVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Diagnostics.Design.StringDictionaryEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Set of environment variables that apply to this process and child processes.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Suchpfade für Dateien, Verzeichnisse für temporäre Dateien, anwendungsspezifische Optionen und andere ähnliche Informationen ab.</summary>
+        <value>Ein Zeichenfolgenwörterbuch, das Umgebungsvariablen für diesen Prozess und untergeordnete Prozesse bereitstellt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl Sie nicht festlegen können die <xref:System.Diagnostics.ProcessStartInfo.EnvironmentVariables%2A> -Eigenschaft, die Sie ändern die <xref:System.Collections.Specialized.StringDictionary> von der Eigenschaft zurückgegeben. Der folgende Code fügt z. B. eine TEMP-Umgebungsvariable: `myProcess.StartInfo.EnvironmentVariables.Add("TempPath", "C:\\Temp")`.  Müssen Sie festlegen der <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft `false` zum Starten des Prozesses nach dem Ändern der <xref:System.Diagnostics.ProcessStartInfo.EnvironmentVariables%2A> Eigenschaft. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `true`, wird ein <xref:System.InvalidOperationException> wird ausgelöst, wenn die <xref:System.Diagnostics.Process.Start%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorDialog">
+      <MemberSignature Language="C#" Value="public bool ErrorDialog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ErrorDialog" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.ErrorDialog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Whether to show an error dialog to the user if there is an error.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dem Benutzer ein Fehlerdialogfeld angezeigt wird, wenn der Prozess nicht gestartet werden kann, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn auf dem Bildschirm ein Fehlerdialogfeld angezeigt werden soll, wenn der Prozess nicht gestartet werden kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A>muss `true` , wenn Sie festlegen möchten <xref:System.Diagnostics.ProcessStartInfo.ErrorDialog%2A> auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorDialogParentHandle">
+      <MemberSignature Language="C#" Value="public IntPtr ErrorDialogParentHandle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ErrorDialogParentHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.ErrorDialogParentHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Fensterhandle ab, das beim Anzeigen eines Fehlerdialogfelds für einen fehlgeschlagenen Prozessstart verwendet wird, oder legt dieses fest.</summary>
+        <value>Ein Zeiger auf das Handle des Fehlerdialogfelds, das aus einem fehlerhaften Prozessstart resultiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Diagnostics.ProcessStartInfo.ErrorDialog%2A> ist `true`die <xref:System.Diagnostics.ProcessStartInfo.ErrorDialogParentHandle%2A> Eigenschaft gibt das übergeordnete Fenster für das Dialogfeld angezeigt wird. Es ist nützlich, um ein übergeordnetes Element, um das Dialogfeld vor der Anwendung beibehalten anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Diagnostics.Design.StartFileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The name of the application, document or URL to start.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu startende Anwendung oder das zu startende Dokument ab oder legt die Anwendung bzw. das Dokument fest.</summary>
+        <value>Der Name der zu startenden Anwendung oder der Dokumentname eines einer Anwendung zugeordneten Dateityps, für den eine Standard-Öffnen-Aktion verfügbar ist. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen festlegen, mit mindestens der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft vor dem Starten des Prozesses. Der Dateiname ist Anwendung oder das Dokument. Ein Dokument wird definiert, um einen beliebigen Dateityp, die über ein offenes verfügt oder Standardaktion zugeordnet. Sie können registrierte Dateitypen und der zugehörigen Anwendung für den Computer anzeigen, indem Sie mit der **Ordneroptionen** (Dialogfeld), die über das Betriebssystem verfügbar ist. Die **erweitert** Schaltfläche führt zu einem Dialogfeld, das anzeigt, ob es eine open-Aktion mit einer bestimmten registrierten Dateityp verknüpft ist ist.  
+  
+ Welche Dateitypen, die für Sie verfügbaren richtet sich teilweise auf dem Wert des der <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `true`, Sie können jedes Dokument und Vorgänge auf die Datei, z. B. drucken, mit der <xref:System.Diagnostics.Process> Komponente. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `false`, Sie können nur ausführbare Dateien mit Starten der <xref:System.Diagnostics.Process> Komponente.  
+  
+ Sie können eine ClickOnce-Anwendung starten, indem die <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft, um den Speicherort (z. B. eine Webadresse), die von der Sie die Anwendung ursprünglich installiert haben. Starten Sie eine ClickOnce-Anwendung nicht durch Angabe der entsprechenden Speicherort auf Ihrer Festplatte.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Process.Start_instance#1](~/samples/snippets/cpp/VS_Snippets_CLR/Process.Start_instance/CPP/processstart.cpp#1)]
+ [!code-csharp[Process.Start_instance#1](~/samples/snippets/csharp/VS_Snippets_CLR/Process.Start_instance/CS/processstart.cs#1)]
+ [!code-vb[Process.Start_instance#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process.Start_instance/VB/processstart.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadUserProfile">
+      <MemberSignature Language="C#" Value="public bool LoadUserProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LoadUserProfile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.LoadUserProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Windows-Benutzerprofil aus der Registrierung geladen werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn das Windows-Benutzerprofil geladen werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Prozess mit dem Benutzernamen, Kennwort und Domäne gestartet wird, wird diese Eigenschaft verwiesen.  
+  
+ Wenn der Wert `true`, das Profil des Benutzers in der `HKEY_USERS` Registrierungsschlüssel wird geladen. Laden des Profils kann zeitaufwändig sein. Daher ist es am besten geeignet, diesen Wert nur, wenn Sie die Informationen in zuzugreifen, müssen die `HKEY_CURRENT_USER` Registrierungsschlüssel.  
+  
+ Das Profil wird in Windows Server 2003 und Windows 2000 entladen, nachdem der neue Prozess beendet wurde, unabhängig davon, ob das untergeordnete Prozesse erstellt wurde.  
+  
+ Unter Windows XP: das Profil wird entladen, nachdem der neue Prozess und alle untergeordneten Prozesse, die sie erstellt haben, wurde beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public System.Security.SecureString Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.SecureString Password" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecureString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine sichere Zeichenfolge ab, die das Benutzerkennwort enthält, das beim Starten des Prozesses verwendet werden soll, oder legt diese fest.</summary>
+        <value>Das beim Starten des Prozesses zu verwendende Kennwort.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft muss festgelegt werden, wenn <xref:System.Diagnostics.ProcessStartInfo.UserName%2A> und <xref:System.Diagnostics.ProcessStartInfo.Password%2A> bereitgestellt werden. Wenn die Eigenschaft nicht festgelegt ist, wird das standardmäßige Arbeitsverzeichnis % SYSTEMROOT%\system32.  
+  
+> [!NOTE]
+>  Festlegen der <xref:System.Diagnostics.ProcessStartInfo.Domain%2A>, <xref:System.Diagnostics.ProcessStartInfo.UserName%2A>, und die <xref:System.Diagnostics.ProcessStartInfo.Password%2A> Eigenschaften in einem <xref:System.Diagnostics.ProcessStartInfo> Objekt ist die empfohlene Vorgehensweise zum Starten eines Prozesses mit Anmeldeinformationen des Benutzers.  
+  
+ Ein <xref:System.Security.SecureString> Objekt ist wie ein <xref:System.String> -Objekt, da es einen Textwert besitzt. Allerdings den Wert des einem <xref:System.Security.SecureString> Objekt wird automatisch verschlüsselt und kann geändert werden, bis der Anwendung als schreibgeschützt markiert und von der Anwendung oder der .NET Framework-Garbagecollector aus dem Computerspeicher gelöscht werden kann.  
+  
+ Weitere Informationen zu sicheren Zeichenfolgen und ein Beispiel dazu, wie ein Kennwort zum Festlegen dieser Eigenschaft beziehen, finden Sie unter der <xref:System.Security.SecureString> Klasse.  
+  
+> [!NOTE]
+>  Wenn Sie einen Wert für die <xref:System.Diagnostics.ProcessStartInfo.Password%2A> -Eigenschaft, die <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft muss `false`, oder ein <xref:System.InvalidOperationException> ausgelöst, wenn die <xref:System.Diagnostics.Process.Start%28System.Diagnostics.ProcessStartInfo%29?displayProperty=nameWithType> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordInClearText">
+      <MemberSignature Language="C#" Value="public string PasswordInClearText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PasswordInClearText" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.PasswordInClearText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des unverschlüsselten Benutzerkennworts, das beim Starten des Prozesses verwendet werden soll.</summary>
+        <value>Das unverschlüsselte Benutzerkennwort.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectStandardError">
+      <MemberSignature Language="C#" Value="public bool RedirectStandardError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RedirectStandardError" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.RedirectStandardError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Whether the process's error output is written to the Process instance's StandardError member.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Fehlerausgabe einer Anwendung in den <see cref="P:System.Diagnostics.Process.StandardError" />-Datenstrom geschrieben wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Fehlerausgabe in <see cref="P:System.Diagnostics.Process.StandardError" /> geschrieben werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Diagnostics.Process> Text in seinen Stream Standardfehler schreibt Text in der Regel in der Konsole angezeigt wird. Durch das Umleiten der <xref:System.Diagnostics.Process.StandardError%2A> Stream, können Sie bearbeiten oder die Fehlerausgabe eines Prozesses zu unterdrücken. Sie können z. B. den Text zu filtern, unterschiedlich zu formatieren oder Schreiben der Ausgabe in der Konsole und einer angegebenen Protokolldatei.  
+  
+> [!NOTE]
+>  Sie müssen festlegen, <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> auf `false` , wenn Sie festlegen möchten <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardError%2A> auf `true`. Lesen, andernfalls aus den <xref:System.Diagnostics.Process.StandardError%2A> Datenstrom löst eine Ausnahme aus.  
+  
+ Die umgeleiteten <xref:System.Diagnostics.Process.StandardError%2A> Stream gelesen werden kann, synchron oder asynchron. Methoden, z. B. <xref:System.IO.StreamReader.Read%2A>, <xref:System.IO.StreamReader.ReadLine%2A> und <xref:System.IO.StreamReader.ReadToEnd%2A> führen synchrone Lesevorgänge auf den Fehlerausgabestream des Prozesses. Diese synchrone Vorgänge werden abgeschlossen, bis das zugeordnete lesen <xref:System.Diagnostics.Process> schreibt in seine <xref:System.Diagnostics.Process.StandardError%2A> stream oder schließt den Stream.  
+  
+ Im Gegensatz dazu <xref:System.Diagnostics.Process.BeginErrorReadLine%2A> startet asynchrone Lesevorgänge auf die <xref:System.Diagnostics.Process.StandardError%2A> Stream. Diese Methode ermöglicht es einen angegebenen Ereignishandler für die Streamausgabe und an den Aufrufer, der andere Aufgaben ausführen kann, während die Streamausgabe an den Ereignishandler geleitet wird sofort zurückgegeben.  
+  
+> [!NOTE]
+>  Die Anwendung, die die asynchrone Ausgabe verarbeitet sollte Aufrufen der <xref:System.Diagnostics.Process.WaitForExit%2A> Methode, um sicherzustellen, dass der Ausgabepuffer geleert wurde.  
+  
+ Synchrone Lesevorgänge verursachen eine Abhängigkeit zwischen dem Aufrufer, die beim Lesen der <xref:System.Diagnostics.Process.StandardError%2A> Stream und das untergeordnete Element das Schreiben in diesem Datenstrom zu verarbeiten. Diese Abhängigkeiten können dazu führen, dass Deadlockbedingungen. Wenn der Aufrufer aus dem umgeleiteten Stream eines untergeordneten Prozesses liest, ist es das untergeordnete Element abhängig. Der Aufrufer wartet der Lesevorgang, bis das untergeordnete Element in den Stream schreibt oder den Stream schließt. Wenn der untergeordnete Prozess genügend Daten zum Füllen von dessen umgeleiteten Streams schreibt, ist es das übergeordnete Element abhängig. Der untergeordnete Prozess wartet der nächste Schreibvorgang, bis das übergeordnete Element aus dem vollständigen Stream gelesen oder den Stream schließt. Die Deadlockbedingung entsteht, wenn der Aufrufer und der untergeordnete Prozess miteinander wartet, um einen Vorgang abzuschließen, und weder können weiter. Sie können Deadlocks vermeiden, durch das Auswerten von Abhängigkeiten zwischen dem Aufrufer und dem untergeordneten Prozess.  
+  
+ Der folgende C#-Code zeigt z. B. wie aus einem umgeleiteten Stream lesen und Warten auf den untergeordneten Prozess zu beenden.  
+  
+```  
+// Start the child process.  
+ Process p = new Process();  
+ // Redirect the error stream of the child process.  
+ p.StartInfo.UseShellExecute = false;  
+ p.StartInfo.RedirectStandardError = true;  
+ p.StartInfo.FileName = "Write500Lines.exe";  
+ p.Start();  
+ // Do not wait for the child process to exit before  
+ // reading to the end of its redirected error stream.  
+ // p.WaitForExit();  
+ // Read the error stream first and then wait.  
+ string error = p.StandardError.ReadToEnd();  
+ p.WaitForExit();  
+```  
+  
+ Im Codebeispiel wird eine Deadlockbedingung vermieden, durch den Aufruf `p.StandardError.ReadToEnd` vor `p.WaitForExit`. Eine Deadlock kann dazu führen, wenn das übergeordnete Element Aufrufe verarbeiten `p.WaitForExit` vor `p.StandardError.ReadToEnd` und der untergeordneten Prozess genug Text zum Füllen des umgeleiteten Streams schreibt. Der übergeordnete Prozess würde unbegrenzt warten, für den untergeordneten Prozess zu beenden. Der untergeordnete Prozess würde unbegrenzt warten, für das übergeordnete Element gelesen werden, die vollständige <xref:System.Diagnostics.Process.StandardError%2A> Stream.  
+  
+ Es wird ein ähnliches Problem beim Lesen von Text in die Standardausgabe und der Standardfehler des Streams. Beispielsweise führt der folgende C#-Code einen Lesevorgang für beide Streams.  
+  
+```  
+// Do not perform a synchronous read to the end of both  
+// redirected streams.  
+// string output = p.StandardOutput.ReadToEnd();  
+// string error = p.StandardError.ReadToEnd();  
+// p.WaitForExit();  
+// Use asynchronous read operations on at least one of the streams.  
+p.BeginOutputReadLine();  
+string error = p.StandardError.ReadToEnd();  
+p.WaitForExit();  
+```  
+  
+ Im Codebeispiel wird die Deadlockbedingung vermieden, indem asynchrone Lesevorgänge auf die <xref:System.Diagnostics.Process.StandardOutput%2A> Stream. Eine Deadlock führt, wenn das übergeordnete Element Aufrufe verarbeiten `p.StandardOutput.ReadToEnd` gefolgt von `p.StandardError.ReadToEnd` und der untergeordneten Prozess genug Text zum Füllen des Fehlerstreams schreibt. Der übergeordnete Prozess würde unbegrenzt warten, für den untergeordneten Prozess zu schließen die <xref:System.Diagnostics.Process.StandardOutput%2A> Stream. Der untergeordnete Prozess würde unbegrenzt warten, für das übergeordnete Element gelesen werden, die vollständige <xref:System.Diagnostics.Process.StandardError%2A> Stream.  
+  
+ Sie können asynchrone Lesevorgänge verwenden, um diese Abhängigkeiten und deren potenzielle Deadlocks zu vermeiden. Alternativ können Sie die Deadlockbedingung vermeiden, indem zwei Threads erstellen und Lesen der Ausgabe der einzelnen Streams in einem separaten Thread.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `net use` Befehl Verbindung mit einem Benutzer bereitgestellte Argument eine Netzwerkressource zugeordnet. Anschließend liest der Standardfehlerstream des Befehls net und in die Konsole schreibt.  
+  
+ [!code-cpp[Process_StandardError#1](~/samples/snippets/cpp/VS_Snippets_CLR/Process_StandardError/CPP/source.cpp#1)]
+ [!code-csharp[Process_StandardError#1](~/samples/snippets/csharp/VS_Snippets_CLR/Process_StandardError/CS/source.cs#1)]
+ [!code-vb[Process_StandardError#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process_StandardError/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectStandardInput">
+      <MemberSignature Language="C#" Value="public bool RedirectStandardInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RedirectStandardInput" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.RedirectStandardInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Whether the process command input is read from the Process instance's StandardInput member.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Eingabe für eine Anwendung aus dem <see cref="P:System.Diagnostics.Process.StandardInput" />-Datenstrom gelesen wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Eingabe von <see cref="P:System.Diagnostics.Process.StandardInput" /> gelesen werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Diagnostics.Process> seine Standardeingabestream in der Regel auf der Tastatur Eingabetext auslesen können. Durch das Umleiten der <xref:System.Diagnostics.Process.StandardInput%2A> Stream, können Sie die Eingabe eines Prozesses programmgesteuert angeben. Beispielsweise können Sie anstelle von Tastatureingaben Text aus dem Inhalt einer angegebenen Datei oder die Ausgabe aus einer anderen Anwendung bereitstellen.  
+  
+> [!NOTE]
+>  Sie müssen festlegen, <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> auf `false` , wenn Sie festlegen möchten <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardInput%2A> auf `true`. Andernfalls Schreiben in die <xref:System.Diagnostics.Process.StandardInput%2A> Datenstrom löst eine Ausnahme aus.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie zum Umleiten der <xref:System.Diagnostics.Process.StandardInput%2A> Stream eines Prozesses. Die `sort` Befehl ist eine Konsolenanwendung, liest und Texteingabe sortiert.  
+  
+ Das Beispiel beginnt die `sort` -Befehl mit umgeleiteter Eingabe. Anschließend fordert den Benutzer für den Text, und übergeben den Text, der die `sort` -Prozess durch im umgeleiteten <xref:System.Diagnostics.Process.StandardInput%2A> Stream. Die `sort` Ergebnisse werden an den Benutzer in der Konsole angezeigt.  
+  
+ [!code-cpp[Process_StandardInput#1](~/samples/snippets/cpp/VS_Snippets_CLR/Process_StandardInput/CPP/process_standardinput.cpp#1)]
+ [!code-csharp[Process_StandardInput#1](~/samples/snippets/csharp/VS_Snippets_CLR/Process_StandardInput/CS/process_standardinput.cs#1)]
+ [!code-vb[Process_StandardInput#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process_StandardInput/VB/process_standardinput.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectStandardOutput">
+      <MemberSignature Language="C#" Value="public bool RedirectStandardOutput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RedirectStandardOutput" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.RedirectStandardOutput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Whether the process output is written to the Process instance's StandardOutput member.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Textausgabe einer Anwendung in den <see cref="P:System.Diagnostics.Process.StandardOutput" />-Datenstrom geschrieben wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Ausgabe in <see cref="P:System.Diagnostics.Process.StandardOutput" /> geschrieben werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Diagnostics.Process> schreibt Text in den standard-Stream, dass Text in der Regel in der Konsole angezeigt wird. Durch Festlegen von <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardOutput%2A> auf `true` zum Umleiten der <xref:System.Diagnostics.Process.StandardOutput%2A> Stream, können Sie bearbeiten oder die Ausgabe eines Prozesses zu unterdrücken. Sie können z. B. den Text zu filtern, unterschiedlich zu formatieren oder Schreiben der Ausgabe in der Konsole und einer angegebenen Protokolldatei.  
+  
+> [!NOTE]
+>  Sie müssen festlegen, <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> auf `false` , wenn Sie festlegen möchten <xref:System.Diagnostics.ProcessStartInfo.RedirectStandardOutput%2A> auf `true`. Lesen, andernfalls aus den <xref:System.Diagnostics.Process.StandardOutput%2A> Datenstrom löst eine Ausnahme aus.  
+  
+ Die umgeleiteten <xref:System.Diagnostics.Process.StandardOutput%2A> Stream gelesen werden kann, synchron oder asynchron. Methoden, z. B. <xref:System.IO.StreamReader.Read%2A>, <xref:System.IO.StreamReader.ReadLine%2A>, und <xref:System.IO.StreamReader.ReadToEnd%2A> führen synchrone Lesevorgänge im Ausgabestream des Prozesses. Diese synchrone Vorgänge werden abgeschlossen, bis das zugeordnete lesen <xref:System.Diagnostics.Process> schreibt in seine <xref:System.Diagnostics.Process.StandardOutput%2A> stream oder schließt den Stream.  
+  
+ Im Gegensatz dazu <xref:System.Diagnostics.Process.BeginOutputReadLine%2A> startet asynchrone Lesevorgänge auf die <xref:System.Diagnostics.Process.StandardOutput%2A> Stream. Diese Methode ermöglicht einen festgelegten Ereignishandler (siehe <xref:System.Diagnostics.Process.OutputDataReceived>) Streamausgabe und sofort an den Aufrufer zurückgegeben, kann die andere Arbeiten ausführen, während die Streamausgabe an den Ereignishandler geleitet wird.  
+  
+> [!NOTE]
+>  Die Anwendung, die die asynchrone Ausgabe verarbeitet sollte Aufrufen der <xref:System.Diagnostics.Process.WaitForExit%2A> Methode, um sicherzustellen, dass der Ausgabepuffer geleert wurde.  
+  
+ Synchrone Lesevorgänge verursachen eine Abhängigkeit zwischen dem Aufrufer, die beim Lesen der <xref:System.Diagnostics.Process.StandardOutput%2A> Stream und das untergeordnete Element das Schreiben in diesem Datenstrom zu verarbeiten. Diese Abhängigkeiten können dazu führen, dass Deadlockbedingungen. Wenn der Aufrufer aus dem umgeleiteten Stream eines untergeordneten Prozesses liest, ist es das untergeordnete Element abhängig. Der Aufrufer wartet der Lesevorgang, bis das untergeordnete Element in den Stream schreibt oder den Stream schließt. Wenn der untergeordnete Prozess genügend Daten zum Füllen von dessen umgeleiteten Streams schreibt, ist es das übergeordnete Element abhängig. Der untergeordnete Prozess wartet der nächste Schreibvorgang, bis das übergeordnete Element aus dem vollständigen Stream gelesen oder den Stream schließt. Die Deadlockbedingung entsteht, wenn der Aufrufer und der untergeordnete Prozess miteinander wartet, um einen Vorgang abzuschließen, und weder können weiter. Sie können Deadlocks vermeiden, durch das Auswerten von Abhängigkeiten zwischen dem Aufrufer und dem untergeordneten Prozess.  
+  
+ Der folgende C#-Code zeigt z. B. wie aus einem umgeleiteten Stream lesen und Warten auf den untergeordneten Prozess zu beenden.  
+  
+```  
+Process p = new Process();  
+p.StartInfo.UseShellExecute = false;  
+p.StartInfo.RedirectStandardOutput = true;  
+p.StartInfo.FileName = "Write500Lines.exe";  
+p.Start();  
+  
+// To avoid deadlocks, always read the output stream first and then wait.  
+string output = p.StandardOutput.ReadToEnd();  
+p.WaitForExit();  
+```  
+  
+ Im Codebeispiel wird eine Deadlockbedingung vermieden, durch den Aufruf `p.StandardOutput.ReadToEnd` vor `p.WaitForExit`. Eine Deadlock kann dazu führen, wenn das übergeordnete Element Aufrufe verarbeiten `p.WaitForExit` vor `p.StandardOutput.ReadToEnd` und der untergeordneten Prozess genug Text zum Füllen des umgeleiteten Streams schreibt. Der übergeordnete Prozess würde unbegrenzt warten, für den untergeordneten Prozess zu beenden. Der untergeordnete Prozess würde unbegrenzt warten, für das übergeordnete Element gelesen werden, die vollständige <xref:System.Diagnostics.Process.StandardOutput%2A> Stream.  
+  
+ Es wird ein ähnliches Problem beim Lesen von Text in die Standardausgabe und der Standardfehler des Streams. Beispielsweise führt der folgende C#-Code einen Lesevorgang für beide Streams.  
+  
+```  
+// To avoid deadlocks, use asynchronous read operations on at least one of the streams.  
+// Do not perform a synchronous read to the end of both redirected streams.  
+p.BeginOutputReadLine();  
+string error = p.StandardError.ReadToEnd();  
+p.WaitForExit();  
+```  
+  
+ Im Codebeispiel wird die Deadlockbedingung vermieden, indem asynchrone Lesevorgänge auf die <xref:System.Diagnostics.Process.StandardOutput%2A> Stream. Eine Deadlock führt, wenn das übergeordnete Element Aufrufe verarbeiten `p.StandardOutput.ReadToEnd` gefolgt von `p.StandardError.ReadToEnd` und der untergeordneten Prozess genug Text zum Füllen des Fehlerstreams schreibt. Der übergeordnete Prozess würde unbegrenzt warten, für den untergeordneten Prozess zu schließen die <xref:System.Diagnostics.Process.StandardOutput%2A> Stream. Der untergeordnete Prozess würde unbegrenzt warten, für das übergeordnete Element gelesen werden, die vollständige <xref:System.Diagnostics.Process.StandardError%2A> Stream.  
+  
+ Sie können asynchrone Lesevorgänge verwenden, um diese Abhängigkeiten und deren potenzielle Deadlocks zu vermeiden. Alternativ können Sie die Deadlockbedingung vermeiden, indem zwei Threads erstellen und Lesen der Ausgabe der einzelnen Streams in einem separaten Thread.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ProcessOneStream#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessOneStream/CPP/stdstr.cpp#1)]
+ [!code-csharp[ProcessOneStream#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessOneStream/CS/stdstr.cs#1)]
+ [!code-vb[ProcessOneStream#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessOneStream/VB/stdstr.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardErrorEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding StandardErrorEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding StandardErrorEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.StandardErrorEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bevorzugte Codierung für die Fehlerausgabe ab oder legt diese fest.</summary>
+        <value>Ein Objekt, das die bevorzugte Codierung für die Fehlerausgabe darstellt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert von der <xref:System.Diagnostics.ProcessStartInfo.StandardErrorEncoding%2A> Eigenschaft ist `null`, der Prozess verwendet die Standard-Standardfehler-Codierung für die Fehlerausgabe. Die <xref:System.Diagnostics.ProcessStartInfo.StandardErrorEncoding%2A> Eigenschaft muss festgelegt werden, bevor der Prozess gestartet wird. Diese Einstellung garantiert nicht, dass der Prozess verwendet die angegebene Codierung verwendet. der Prozess wird nur diese Codierungen verwenden, die es unterstützt. Die Anwendung sollte getestet werden, um zu bestimmen, welche Codierung unterstützt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding StandardOutputEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding StandardOutputEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.StandardOutputEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bevorzugte Codierung für die Standardausgabe ab oder legt diese fest.</summary>
+        <value>Ein Objekt, das die bevorzugte Codierung für die Standardausgabe darstellt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der <xref:System.Diagnostics.ProcessStartInfo.StandardOutputEncoding%2A> Eigenschaft ist `null`, kommt die Standardausgabe standardcodierung für die Standardausgabe. Die <xref:System.Diagnostics.ProcessStartInfo.StandardOutputEncoding%2A> Eigenschaft muss festgelegt werden, bevor der Prozess gestartet wird. Durch Festlegen dieser Eigenschaft kann nicht garantiert, dass der Prozess der angegebenen Codierung verwendet wird. Die Anwendung sollte getestet werden, um zu bestimmen, welche Codierungen der Prozess unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Benutzernamen ein, verwenden Sie beim Starten des Prozesses. Wenn Sie das UPN-Format verwenden <paramref name="user" /> @ <paramref name="DNS_domain_name" />, <see cref="P:System.Diagnostics.ProcessStartInfo.Domain" /> Eigenschaft muss <see langword="null" />.</summary>
+        <value>Der beim Starten des Prozesses zu verwendende Benutzername. Wenn Sie das UPN-Format verwenden <paramref name="user" /> @ <paramref name="DNS_domain_name" />, <see cref="P:System.Diagnostics.ProcessStartInfo.Domain" /> Eigenschaft muss <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft muss festgelegt werden, wenn <xref:System.Diagnostics.ProcessStartInfo.UserName%2A> und <xref:System.Diagnostics.ProcessStartInfo.Password%2A> bereitgestellt werden. Wenn die Eigenschaft nicht festgelegt ist, wird das standardmäßige Arbeitsverzeichnis % SYSTEMROOT%\system32.  
+  
+ Wenn die <xref:System.Diagnostics.ProcessStartInfo.UserName%2A> Eigenschaft ist nicht `null` oder eine leere Zeichenfolge, die <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft muss `false`, oder eine <xref:System.InvalidOperationException> ausgelöst, wenn die <xref:System.Diagnostics.Process.Start%28System.Diagnostics.ProcessStartInfo%29?displayProperty=nameWithType> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseShellExecute">
+      <MemberSignature Language="C#" Value="public bool UseShellExecute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseShellExecute" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.UseShellExecute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Whether to use the operating system shell to start the process.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob zum Starten des Prozesses die Betriebssystemshell verwendet werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn beim Starten des Prozesses die Shell verwendet werden soll; <see langword="false" />, wenn der Prozess direkt von der ausführbaren Datei aus erstellt werden soll. Die Standardeinstellung ist <see langword="true" /> auf .NET Framework-apps und <see langword="false" /> auf .NET Core-apps.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf `false` ermöglicht es Ihnen, die Eingabe, Ausgabe und Fehler Datenströme umgeleitet werden.  
+  
+> [!NOTE]
+>  <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A>muss `false` Wenn die <xref:System.Diagnostics.ProcessStartInfo.UserName%2A> Eigenschaft ist nicht `null` oder eine leere Zeichenfolge oder ein <xref:System.InvalidOperationException> ausgelöst, wenn die <xref:System.Diagnostics.Process.Start%28System.Diagnostics.ProcessStartInfo%29?displayProperty=nameWithType> -Methode aufgerufen wird.  
+  
+ Wenn Sie die Betriebssystemshell verwenden, um Prozesse zu starten, können Sie jedes Dokument (die alle registrierten Dateityp zugeordneten eine ausführbare Datei, die eine Standard-öffnen-Aktion verfügt) und Operationen auf die Datei, z. B. drucken, mithilfe der <xref:System.Diagnostics.Process> -Objekt. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `false`, Sie können nur die ausführbaren Dateien starten, indem Sie mit der <xref:System.Diagnostics.Process> Objekt.  
+  
+> [!NOTE]
+>  <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A>muss `true` , wenn Sie festlegen, die <xref:System.Diagnostics.ProcessStartInfo.ErrorDialog%2A> Eigenschaft `true`.  
+  
+ Die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft verhält sich anders, abhängig vom Wert der <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> Eigenschaft. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `true`die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft gibt den Speicherort der ausführbaren Datei. Wenn <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> ist eine leere Zeichenfolge, es wird davon ausgegangen, dass das aktuelle Verzeichnis die ausführbaren Datei enthält.  
+  
+ Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `false`die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft wird nicht verwendet, um die ausführbare Datei zu suchen. Stattdessen wird es nur vom Prozess verwendet, wird gestartet, und ist nur im Kontext des neuen Prozesses von Bedeutung. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `false`die <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft kann entweder einen vollqualifizierten Pfad zur ausführbaren Datei oder einen einfachen ausführbare Namen, die das System versucht, in der von der PATH-Umgebungsvariable angegebenen Ordner zu suchen.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ProcessOneStream#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProcessOneStream/CPP/stdstr.cpp#1)]
+ [!code-csharp[ProcessOneStream#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessOneStream/CS/stdstr.cs#1)]
+ [!code-vb[ProcessOneStream#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessOneStream/VB/stdstr.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Ein Versuch zum Festlegen des Werts auf <see langword="true" /> für apps der universellen Windows-Plattform (UWP) auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public string Verb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Verb" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.VerbConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The verb to apply to the document specified by the FileName property.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Verb ab, das beim Öffnen der in der <see cref="P:System.Diagnostics.ProcessStartInfo.FileName" />-Eigenschaft angegebenen Anwendung oder des in dieser Eigenschaft angegebenen Dokuments verwendet wird, oder legt dieses fest.</summary>
+        <value>Die Aktion, die mit der vom Prozess geöffneten Datei durchzuführen ist. Der Standardwert ist eine leere Zeichenfolge (""), die keine Aktion angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Dateinamenerweiterung hat einen eigenen Satz von Verben, die mithilfe von abgerufen werden können die <xref:System.Diagnostics.ProcessStartInfo.Verbs%2A> Eigenschaft. Angenommen, die "`print`" Verb Druckt ein Dokument mit angegebenen <xref:System.Diagnostics.ProcessStartInfo.FileName%2A>. Das Standardverb kann angegeben werden, mit der eine leere Zeichenfolge (""). Beispiele für Verben sind "Bearbeiten", "Öffnen", "OpenAsReadOnly", "Print" und "Printto". Sie sollten nur Verben, die in der Menge der Verben zurückgegebenes verwenden die <xref:System.Diagnostics.ProcessStartInfo.Verbs%2A> Eigenschaft.  
+  
+ Bei Verwendung der <xref:System.Diagnostics.ProcessStartInfo.Verb%2A> -Eigenschaft, müssen Sie die Dateinamenerweiterung einschließen, wenn Sie den Wert der Festlegen der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft. Der Dateiname muss nicht Erweiterung aufweisen, wenn Sie manuell einen Wert für die <xref:System.Diagnostics.ProcessStartInfo.Verb%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird startet einen neuen Prozess mithilfe des angegebenen Verbs und den Dateinamen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.ProcessStartInfo.Verbs%2A> Eigenschaft.  
+  
+ [!code-csharp[ProcessVerbs_Diagnostics#4](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessVerbs_Diagnostics/CS/source.cs#4)]
+ [!code-vb[ProcessVerbs_Diagnostics#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessVerbs_Diagnostics/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public string[] Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz der Verben ab, der dem durch die <see cref="P:System.Diagnostics.ProcessStartInfo.FileName" />-Eigenschaft angegebenen Dateityp zugeordnet ist.</summary>
+        <value>Die Aktionen, die das System auf die durch die <see cref="P:System.Diagnostics.ProcessStartInfo.FileName" />-Eigenschaft angegebene Datei anwenden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.ProcessStartInfo.Verbs%2A> -Eigenschaft ermöglicht es Ihnen, die Verben, die die angegebene Datei verwendet werden können, bestimmen die <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft. Sie können festlegen, die <xref:System.Diagnostics.ProcessStartInfo.Verb%2A> Eigenschaft auf den Wert eines beliebigen Verbs im Satz. Beispiele für Verben sind "Bearbeiten", "Öffnen", "OpenAsReadOnly", "Print" und "Printto".  
+  
+ Bei Verwendung der <xref:System.Diagnostics.ProcessStartInfo.Verbs%2A> -Eigenschaft, müssen Sie die Dateinamenerweiterung einschließen, wenn Sie den Wert der Festlegen der <xref:System.Diagnostics.ProcessStartInfo.FileName%2A> Eigenschaft. Die Dateierweiterung bestimmt den Satz von möglichen Verben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die definierten Verben für den ausgewählten Dateinamen. Wenn der Benutzer eine der definierten Verben auswählt, wird im Beispiel einen neuen Prozess mit dem ausgewählten Verb und den Namen der Eingabedatei gestartet.  
+  
+ [!code-csharp[ProcessVerbs_Diagnostics#3](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessVerbs_Diagnostics/CS/source.cs#3)]
+ [!code-vb[ProcessVerbs_Diagnostics#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessVerbs_Diagnostics/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStyle">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.ProcessWindowStyle WindowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.ProcessWindowStyle WindowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.WindowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("How the main window should be created when the process starts.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fensterzustand ab, der beim Starten des Prozesses verwendet werden soll, oder legt diesen fest.</summary>
+        <value>Einer der Enumerationswerte, der angibt, ob der Prozess in einem maximierten, minimierten, normalen (weder maximierten noch minimierten) oder in einem nicht sichtbaren Fenster gestartet wird. Die Standardeinstellung ist <see langword="Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[Process.Start_static#1](~/samples/snippets/cpp/VS_Snippets_CLR/Process.Start_static/CPP/processstartstatic.cpp#1)]
+ [!code-csharp[Process.Start_static#1](~/samples/snippets/csharp/VS_Snippets_CLR/Process.Start_static/CS/processstartstatic.cs#1)]
+ [!code-vb[Process.Start_static#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Process.Start_static/VB/processstartstatic.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Fensterstil gehört nicht der <see cref="T:System.Diagnostics.ProcessWindowStyle" /> Enumerationsmember.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkingDirectory">
+      <MemberSignature Language="C#" Value="public string WorkingDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WorkingDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessStartInfo.WorkingDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Diagnostics.Design.WorkingDirectoryEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The initial working directory for the process.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Arbeitsverzeichnis für den zu startenden Prozess ab oder legt es fest, wenn die <see cref="P:System.Diagnostics.ProcessStartInfo.UseShellExecute" /> Eigenschaft <see langword="false" /> ist. Ruft das Verzeichnis ab, das den zu startenden Prozess enthält, oder legt es fest, wenn <see cref="P:System.Diagnostics.ProcessStartInfo.UseShellExecute" /><see langword="true" /> ist.</summary>
+        <value>Wenn <see cref="P:System.Diagnostics.ProcessStartInfo.UseShellExecute" /> <see langword="true" /> ist, der voll gekennzeichnete Name des Verzeichnisses, das den zu startenden Prozess enthält. Wenn die <see cref="P:System.Diagnostics.ProcessStartInfo.UseShellExecute" /> Eigenschaft <see langword="false" /> ist, das Arbeitsverzeichnis für den zu startenden Prozess. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft muss festgelegt werden, wenn <xref:System.Diagnostics.ProcessStartInfo.UserName%2A> und <xref:System.Diagnostics.ProcessStartInfo.Password%2A> bereitgestellt werden. Wenn die Eigenschaft nicht festgelegt ist, wird das standardmäßige Arbeitsverzeichnis % SYSTEMROOT%\system32.  
+  
+ Wenn das Verzeichnis bereits Teil der Systemvariable Path ist, müssen Sie nicht das Verzeichnis, in dieser Eigenschaft wiederholen.  
+  
+ Die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft verhält sich anders bei <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `true` als bei <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `false`. Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `true`die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft gibt den Speicherort der ausführbaren Datei. Wenn <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> ist eine leere Zeichenfolge das aktuelle Verzeichnis wird verstanden, die ausführbare Datei enthalten.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `true`, das Arbeitsverzeichnis der Anwendung, die beginnt, die ausführbare Datei wird auch das Arbeitsverzeichnis der ausführbaren Datei.  
+  
+ Wenn <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute%2A> ist `false`die <xref:System.Diagnostics.ProcessStartInfo.WorkingDirectory%2A> Eigenschaft wird nicht verwendet, um die ausführbare Datei zu suchen. Stattdessen gilt der Wert an den Prozess, der gestartet wird und nur im Kontext des neuen Prozesses von Bedeutung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

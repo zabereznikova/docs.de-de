@@ -1,0 +1,247 @@
+<Type Name="MatrixTransform3D" FullName="System.Windows.Media.Media3D.MatrixTransform3D">
+  <TypeSignature Language="C#" Value="public sealed class MatrixTransform3D : System.Windows.Media.Media3D.Transform3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MatrixTransform3D extends System.Windows.Media.Media3D.Transform3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.MatrixTransform3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Transform3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Transformation, die gemäß einer <see cref="T:System.Windows.Media.Media3D.Matrix3D" />, mit denen Objekte oder Koordinatensysteme im Raum, 3D bearbeiten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Media3D.MatrixTransform3D> Klasse, um benutzerdefinierte Transformationen erstellen, die nicht enthalten sind die <xref:System.Windows.Media.Media3D.RotateTransform3D>, <xref:System.Windows.Media.Media3D.ScaleTransform3D>, oder <xref:System.Windows.Media.Media3D.TranslateTransform3D> Klasse.  
+  
+ Sie können kombinieren <xref:System.Windows.Media.Media3D.Transform3D> Objekte mithilfe der <xref:System.Windows.Media.Media3D.Transform3DGroup> Klasse.  
+  
+   
+  
+## Examples  
+ [!code-csharp[matrixtransform3dview#MatrixTransform3DView3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixTransform3DView/CSharp/Window1.xaml.cs#matrixtransform3dview3dn1)]
+ [!code-vb[matrixtransform3dview#MatrixTransform3DView3DN1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MatrixTransform3DView/visualbasic/window1.xaml.vb#matrixtransform3dview3dn1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatrixTransform3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MatrixTransform3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.MatrixTransform3D" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatrixTransform3D (System.Windows.Media.Media3D.Matrix3D matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Matrix3D matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MatrixTransform3D.#ctor(System.Windows.Media.Media3D.Matrix3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Windows.Media.Media3D.Matrix3D" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Eine Matrix3D, der die Transformation angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.MatrixTransform3D" />-Klasse mit dem angegebenen <see cref="T:System.Windows.Media.Media3D.Matrix3D" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MatrixTransform3D Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.MatrixTransform3D Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MatrixTransform3D.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MatrixTransform3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.MatrixTransform3D" />, und stellt die tiefe Kopien der Werte dieses Objekts. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und datenbindungen von Ressourcen (obwohl sie nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte oder eines beliebigen <xref:System.Windows.Freezable> Objekt. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MatrixTransform3D CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.MatrixTransform3D CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MatrixTransform3D.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MatrixTransform3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.MatrixTransform3D" /> Objekt und macht tiefe Kopien der aktuellen Werte dieses Objekts. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte oder eines beliebigen <xref:System.Windows.Freezable> Objekt. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MatrixTransform3D.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAffine">
+      <MemberSignature Language="C#" Value="public override bool IsAffine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAffine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MatrixTransform3D.IsAffine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Transformation affin ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Transformation affin ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matrix">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Matrix3D Matrix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Matrix3D Matrix" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MatrixTransform3D.Matrix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Matrix3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Windows.Media.Media3D.Matrix3D" /> gibt, die an eine [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)] Transformation.</summary>
+        <value>Eine Matrix3D, der angibt, eine [!INCLUDE[TLA2#tla_3d](~/includes/tla2sharptla-3d-md.md)] Transformation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Matrix"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.MatrixTransform3D.MatrixProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-csharp[matrixtransform3dview#MatrixTransform3DView3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixTransform3DView/CSharp/Window1.xaml.cs#matrixtransform3dview3dn1)]
+ [!code-vb[matrixtransform3dview#MatrixTransform3DView3DN1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MatrixTransform3DView/visualbasic/window1.xaml.vb#matrixtransform3dview3dn1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatrixProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MatrixProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MatrixProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.MatrixTransform3D.MatrixProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.MatrixTransform3D.Matrix" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Media3D.Matrix3D Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Matrix3D Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MatrixTransform3D.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Matrix3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Matrix Repräsentation der [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)] Transformation.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Media3D.Matrix3D" /> Darstellung der [!INCLUDE[TLA2#tla_3d](~/includes/tla2sharptla-3d-md.md)] Transformation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Media3D.MatrixTransform3D.Value%2A> Eigenschaft erbt von der <xref:System.Windows.Media.Media3D.Transform3D> Klasse. Die <xref:System.Windows.Media.Media3D.MatrixTransform3D.Value%2A> Eigenschaft ermöglicht Ihnen, eine zu konvertierende <xref:System.Windows.Media.Media3D.Transform3D> -Objekt in ein <xref:System.Windows.Media.Media3D.Matrix3D> Objekt. Da die <xref:System.Windows.Media.MatrixTransform> Klasse wird mithilfe einer Matrix3D definiert die <xref:System.Windows.Media.Media3D.MatrixTransform3D.Matrix%2A> und <xref:System.Windows.Media.Media3D.MatrixTransform3D.Value%2A> Eigenschaften immer den gleichen Wert zurück. Die MatrixTransform3D Klasse macht die <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft Schreibzugriff aktivieren.  
+  
+   
+  
+## Examples  
+ [!code-csharp[matrixtransform3dview#MatrixTransform3DView3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixTransform3DView/CSharp/Window1.xaml.cs#matrixtransform3dview3dn13)]
+ [!code-vb[matrixtransform3dview#MatrixTransform3DView3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MatrixTransform3DView/visualbasic/window1.xaml.vb#matrixtransform3dview3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

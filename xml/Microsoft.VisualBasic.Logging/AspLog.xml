@@ -1,0 +1,128 @@
+<Type Name="AspLog" FullName="Microsoft.VisualBasic.Logging.AspLog">
+  <TypeSignature Language="C#" Value="public class AspLog : Microsoft.VisualBasic.Logging.Log" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi AspLog extends Microsoft.VisualBasic.Logging.Log" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Logging.AspLog" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.Logging.Log</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis-und Ausnahmeinformationen in die Anwendung-Protokolllistener bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Application.Log` Objekt stellt einen einfachen Einstiegspunkt für den Zugriff auf die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]Protokollierdienste. Die `WriteEntry` und `WriteException` Methoden Nachrichten in der Anwendung-Protokolllistener schreiben. Die Listener können durch die Konfigurationsdatei der Anwendung konfiguriert werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern von "My.Application.log" schreibt Informationen Where](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md) und [arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ Die `My.Application.Log` Objekt ist nur für Clientanwendungen verfügbar. Verwenden Sie für Webanwendungen, `My.Log`. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Application.Log` Objekt.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Schreiben von Ereignisinformationen in die Anwendung Protokolllistener|[Gewusst wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Schreibt Ausnahmeinformationen in die Protokolllistener der Anwendung|[Gewusst wie: Protokollieren von Ausnahmen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Bestimmen des Installationsorts `My.Application.Log` Informationen schreibt|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry` -Methode zum Protokollieren von Ablaufprotokollinformationen. Weitere Informationen finden Sie unter [wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspLog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.AspLog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Logging.AspLog" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Log` Objekt stellt einen einfachen Einstiegspunkt für den Zugriff auf die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]Protokollierdienste. Die `WriteEntry` und `WriteException` Methoden Nachrichten in der Anwendung-Protokolllistener schreiben. Die Listener können durch die Konfigurationsdatei der Anwendung konfiguriert werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern von "My.Application.log" schreibt Informationen Where](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md) und [arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspLog (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.AspLog.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <see cref="T:System.String" />. Den Namen, um die <see cref="P:Microsoft.VisualBasic.Logging.Log.TraceSource" /> Property-Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Logging.AspLog" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Log` Objekt stellt einen einfachen Einstiegspunkt für den Zugriff auf die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]Protokollierdienste. Die `WriteEntry` und `WriteException` Methoden Nachrichten in der Anwendung-Protokolllistener schreiben. Die Listener können durch die Konfigurationsdatei der Anwendung konfiguriert werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern von "My.Application.log" schreibt Informationen Where](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md) und [arbeiten mit Anwendungsprotokollen](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeWithDefaultsSinceNoConfigExists">
+      <MemberSignature Language="C#" Value="protected override void InitializeWithDefaultsSinceNoConfigExists ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeWithDefaultsSinceNoConfigExists() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.AspLog.InitializeWithDefaultsSinceNoConfigExists" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> und fügt es der <see cref="P:System.Diagnostics.TraceSource.Listeners" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt ein neues <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>, legt dessen Name `FileLog`, und konfiguriert ihn zum Protokollieren von Nachrichten mit einem Schweregrad <xref:System.Diagnostics.SourceLevels.Information> und höher. Die neue <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Objekt wird dann hinzugefügt, um die <xref:System.Diagnostics.TraceSource.Listeners%2A> Auflistung.  
+  
+ Die <xref:Microsoft.VisualBasic.Logging.Log.%23ctor%2A> Ruft die Methode aus, wenn die <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> Eigenschaft wurde nicht konfiguriert. Die Ablaufverfolgungsquelle kann in der Anwendungskonfigurationsdatei konfiguriert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

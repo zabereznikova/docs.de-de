@@ -1,0 +1,739 @@
+<Type Name="MessageQueueInstaller" FullName="System.Messaging.MessageQueueInstaller">
+  <TypeSignature Language="C#" Value="public class MessageQueueInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht das Installieren und konfigurieren eine Warteschlange, die Ihre Anwendung ausführen erforderliches Sitzungsverzeichnis. Diese Klasse heißt vom Installationsprogramm, z. B. InstallUtil.exe, bei der Installation einer <see cref="T:System.Messaging.MessageQueue" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueInstaller> werden vom Installationsprogramm um Registrierungswerte zu schreiben, die der Warteschlange zugeordnet sind. Weitere Informationen über Installationsprogramme finden Sie unter [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md).  
+  
+ Um eine Warteschlange zu installieren, erstellen Sie eine Projekt Installerklasse, die von erben die <xref:System.Configuration.Install.Installer>, und legen Sie die <xref:System.ComponentModel.RunInstallerAttribute> für die Klasse, um `true`. Erstellen Sie in Ihrem Projekt eine <xref:System.Messaging.MessageQueueInstaller> Instanz für jede Warteschlange in der Installation, und fügen Sie die Instanz der Installer-Klasse.  
+  
+ Beim Erstellen einer <xref:System.Messaging.MessageQueueInstaller> Instanz, Sie können optional übergeben, eine vorhandene <xref:System.Messaging.MessageQueue> (z. B. von einem Testserver) auf die <xref:System.Messaging.MessageQueueInstaller.%23ctor%2A> Konstruktor. Dieser Ansatz bietet automatisch die Konfigurationseinstellungen für die neue Warteschlange, indem Sie spiegeln die Einstellungen der Warteschlange übergeben. Alternativ können Sie die Eigenschaften manuell festlegen, der <xref:System.Messaging.MessageQueueInstaller> Instanz um die Zustände, Sie möchten, und den Standardkonstruktor aufrufen.  
+  
+ Wenn das Installationsprogramm aufgerufen wird, sucht es nach der <xref:System.ComponentModel.RunInstallerAttribute>. Wird jedoch `true`, das Hilfsprogramm installiert alle Warteschlangen in der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung zugeordnet ist, in den Projekt-Installer. Wenn <xref:System.ComponentModel.RunInstallerAttribute> ist `false`, ignoriert das Dienstprogramm den Projekt-Installer.  
+  
+ Ändern Sie andere Eigenschaften des eine <xref:System.Messaging.MessageQueueInstaller> Instanz vor oder nach dem Hinzufügen der Instanz, die <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung von Ihrem Projekt Installer. Z. B. einer Warteschlange <xref:System.Messaging.MessageQueue.Path%2A> muss festgelegt werden, bevor das Installationsprogramm ausgeführt wird.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Messaging.MessageQueueInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur vom Installationsprogramm installutil.exe. Ruft das Hilfsprogramm automatisch die <xref:System.Messaging.MessageQueueInstaller.Install%2A> Methode während des Installationsvorgangs und Aufrufe <xref:System.Messaging.MessageQueueInstaller.Commit%2A> , wenn die Installation nicht auf eine Ausnahme ausgelöst hat. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> für das Objekt, das die Ausnahme generiert hat.  
+  
+ Installationsroutine einer Anwendung verwendet die Projekt-Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> automatisch Informationen zu den Komponenten zu verwalten, die bereits installiert wurden. Diese Statusinformationen wird ständig aktualisiert, als jede <xref:System.Messaging.MessageQueueInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist nicht in der Regel für Ihren Code so ändern Sie die Statusinformationen explizit erforderlich.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Messaging.MessageQueueInstaller" />-Klasse. Alle Instanzeigenschaften wird nicht festgelegt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueInstaller (System.Messaging.MessageQueue componentToCopy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.MessageQueue componentToCopy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.#ctor(System.Messaging.MessageQueue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="componentToCopy" Type="System.Messaging.MessageQueue" />
+      </Parameters>
+      <Docs>
+        <param name="componentToCopy">Die <see cref="T:System.Messaging.MessageQueue" /> Komponente, deren Einstellungen die eigenschafteneinstellungen für die neue Warteschlange installiert bestimmen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.MessageQueueInstaller" /> Klasse, wobei die installationseinstellungen, mit denen von einem vorhandenen <see cref="T:System.Messaging.MessageQueue" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public bool Authenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Authenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die zu installierenden Warteschlange nur authentifizierte Nachrichten akzeptiert werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Warteschlange nur authentifizierte Nachrichten akzeptiert; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine nicht authentifizierte Nachricht an eine Warteschlange gesendet wird, die nur authentifizierte Nachrichten akzeptiert werden, wird die Nachricht abgelehnt. Die sendende Anwendung kann Benachrichtigungen zu einer Ablehnung der Nachricht anfordern, indem die <xref:System.Messaging.Message.AcknowledgeType%2A> für die Nachricht. Andernfalls entsteht keinen Hinweis darauf, dass die Nachricht abgelehnt wurde, damit die Nachricht verloren gehen kann, wenn es an die Dead Letter-Warteschlange zu senden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BasePriority">
+      <MemberSignature Language="C#" Value="public short BasePriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 BasePriority" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.BasePriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Basispriorität, die verwendet wird, um eine öffentliche Warteschlange Nachrichten über das Netzwerk weiterzuleiten.</summary>
+        <value>Die einzelnen Basispriorität für alle Nachrichten, die an die öffentliche Warteschlange gesendet. Der Standardwert ist null (0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueInstaller.BasePriority%2A> für das routing von Nachrichten in die Warteschlange über das Netzwerk verwendet wird. Verwenden der <xref:System.Messaging.MessageQueueInstaller.BasePriority%2A> so erteilen Sie die Nachrichten an die Warteschlange, die eine höhere oder niedrigere Priorität als die für Nachrichten an andere Warteschlangen gesendet. Wenn eine Warteschlange Basispriorität festgelegt ist, werden alle an ihn gesendeten Nachrichten eine höhere Priorität als die, die Nachrichten an Warteschlangen mit einer niedrigeren Priorität für die Basis angegeben. Die Warteschlange Basispriorität wirkt sich nicht Reihenfolge der Nachrichten in der Warteschlange oder wie Nachrichten aus der Warteschlange gelesen werden.  
+  
+ Die <xref:System.Messaging.MessageQueueInstaller.BasePriority%2A> betrifft nur öffentliche Warteschlangen, die über den Domänencontroller zugegriffen werden (also das Format des öffentlichen Namen verwenden). Die Basispriorität von privaten Warteschlangen und der direkte Zugriff auf Öffentliche Warteschlangen ist immer 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public Guid Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Category" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.GuidConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen implementierungsspezifischen Warteschlangentyp.</summary>
+        <value>Ein <see cref="T:System.Guid" /> , darstellt, die Kategorie der Warteschlange (oder Typbezeichner Message Queuing) Dies ermöglicht es Anwendungen ihre Warteschlangen gemäß deren Verwendung kategorisieren. Die Standardeinstellung ist <see langword="Guid.empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kategorie der Warteschlange ermöglicht einer Anwendung zugeordneten Warteschlangen entsprechend der zugriffsweise zu kategorisieren, die sie verwendet werden. Die <xref:System.Messaging.MessageQueue.Category%2A> kann ein null-Verweis sein. Sie können auch eine neue Kategorie definieren.  
+  
+ Die <xref:System.Messaging.MessageQueue.Category%2A> Eigenschaft ermöglicht den Zugriff auf die Message Queuing-Bezeichner Typeigenschaft, die einer bestimmten Warteschlange zugeordnet ist, und Lese-/Schreibzugriff ist. Sie können die <xref:System.Guid.NewGuid%2A> Methode, um einen Kategoriewert zu erstellen, die garantiert in allen eindeutig sein <xref:System.Guid> Werte. Es ist jedoch nur für die Kategorie-Wert aus anderen Kategorien, die nicht von allen anderen unterscheiden erforderlich <xref:System.Guid> Werte. Sie können z. B. Festlegen der <xref:System.Messaging.MessageQueue.Category%2A> für eine Gruppe von Warteschlangen und {00000000-0000-0000-0000-000000000001} und die <xref:System.Messaging.MessageQueue.Category%2A> für eine andere Gruppe {00000000-0000-0000-0000-000000000002}.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Commit(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" /> , die den Status nach der Installation des Computers enthält.</param>
+        <summary>Schließt den Installationsprozess durch Ausführen eines Commits für die <see cref="T:System.Messaging.MessageQueue" /> Informationen zur Installation, die die <see cref="M:System.Messaging.MessageQueueInstaller.Install(System.Collections.IDictionary)" /> Methode wurde in der Registrierung geschrieben. Diese Methode soll vom Installations-Tools verwendet werden, automatisch die entsprechenden Methoden aufrufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Messaging.MessageQueueInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur vom Installationsprogramm installutil.exe. Ruft das Hilfsprogramm automatisch die <xref:System.Messaging.MessageQueueInstaller.Install%2A> Methode während der Installation. Installation ist transaktional, daher ist es ein Fehler in der jeder Komponente während der Installation, die zuvor installierten Komponenten in ihren Zustand vor der Installation Rollback ausgeführt werden. Dies erfolgt durch Aufrufen der einzelnen Komponenten <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> Methode.  
+  
+ Nach eine erfolgreiche Installation aller Komponenten, die mit dem Installations-Projekt verknüpft sind aufgetreten ist, das Installationsprogramm die Installationen ein Commit ausgeführt wird. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>Schließt die Installation von der <xref:System.Messaging.MessageQueue> durch Festlegen der Warteschlangenobjekts auf den entsprechenden ursprünglichen Zustand. Wenn die Warteschlange, wird angegeben die <xref:System.Messaging.MessageQueueInstaller.Path%2A> Eigenschaft bereits vorhanden ist und Nachrichten enthält <xref:System.Messaging.MessageQueueInstaller.Commit%2A> löscht die Nachrichten. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>, anstatt <xref:System.Messaging.MessageQueueInstaller.Install%2A>, löscht die Nachrichten, da die Act die Nachrichten löschen ein Rollback ausgeführt werden kann.  
+  
+ Installationsroutine einer Anwendung verwendet die Projekt-Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> automatisch Informationen zu den Komponenten zu verwalten, die bereits installiert wurden. Diese Statusinformationen, die übergeben werden <xref:System.Messaging.MessageQueueInstaller.Commit%2A> als die `savedState` -Parameter wird ständig aktualisiert werden, wie das Hilfsprogramm jedes führt einen Commit für <xref:System.Messaging.MessageQueueInstaller> Instanz. In der Regel ist es nicht erforderlich für Ihren Code so ändern Sie diese Statusinformationen explizit. Wenn die Warteschlange gelöscht wurde, <xref:System.Messaging.MessageQueueInstaller.Commit%2A> sendet einen Protokolleintrag, um die `savedState` , die Installation zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.ComponentModel.IComponent" /> für die Verwendung als Vorlage für die <see cref="T:System.Messaging.MessageQueueInstaller" />.</param>
+        <summary>Kopiert die Eigenschaftswerte einer <see cref="T:System.Messaging.MessageQueue" /> Komponente, die für eine Warteschlange während der Installation erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Messaging.MessageQueueInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur vom Installationsprogramm installutil.exe. <xref:System.Messaging.MessageQueueInstaller.CopyFromComponent%2A>wird vom Installationsprogramm dazu verwendet, legen Sie die Eigenschaftswerte für die <xref:System.Messaging.MessageQueueInstaller> auf die Werte eines vorhandenen <xref:System.Messaging.MessageQueue>.  
+  
+ Wenn die <xref:System.Messaging.MessageQueue.Path%2A> von der <xref:System.Messaging.MessageQueue> also übergeben, ist eine leere Zeichenfolge (""), müssen Sie festlegen der <xref:System.Messaging.MessageQueue.Path%2A> Eigenschaft auf einen nicht leeren Wert vor der Ausführung des Installationsprogramms.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die zugeordnete Komponente <see cref="T:System.Messaging.MessageQueueInstaller" /> ist eine <see cref="T:System.Messaging.MessageQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionRequired">
+      <MemberSignature Language="C#" Value="public System.Messaging.EncryptionRequired EncryptionRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.EncryptionRequired EncryptionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.EncryptionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionRequired</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Warteschlange nur private oder verschlüsselte Nachrichten akzeptiert.</summary>
+        <value>Eines der <see cref="T:System.Messaging.EncryptionRequired" /> Werte, die Verschlüsselung erforderlichen Grad an die Warteschlange gesendeten Nachrichten angibt. Die Standardeinstellung ist <see langword="Optional" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Verschlüsselung angegeben ist, nur die <xref:System.Messaging.Message.Body%2A> einer Nachricht verschlüsselt ist. Andere Eigenschaften, z. B. die <xref:System.Messaging.Message.Label%2A>, werden nicht verschlüsselt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Ein <see cref="T:System.Collections.IDictionary" /> zum Speichern von Informationen zum Ausführen eines Commit-, Rollback- oder Deinstallationsvorgangs.</param>
+        <summary>Führt die Installation, und schreibt Message Queue-Informationen in der Registrierung. Diese Methode soll vom Installations-Tools verwendet werden, automatisch die entsprechenden Methoden aufrufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueInstaller.Install%2A> Methode zur Registrierung schreibt, und ordnet die <xref:System.Messaging.MessageQueue> Instanz einer Warteschlange, die sich am angegeben Pfad befindet der <xref:System.Messaging.MessageQueueInstaller.Path%2A> Eigenschaft. Wenn die Warteschlange nicht bereits vorhanden ist, <xref:System.Messaging.MessageQueueInstaller.Install%2A> eine Transaktionswarteschlange erstellt. <xref:System.Messaging.MessageQueueInstaller.Install%2A>Legt die Eigenschaften der neuen oder vorhandenen Warteschlange auf solche, die Sie angegeben haben die <xref:System.Messaging.MessageQueueInstaller>. Wenn die Warteschlange bereits vorhanden ist, werden dessen Eigenschaften mit denen von zurückgesetzt der <xref:System.Messaging.MessageQueueInstaller>. Wenn die vorhandene Warteschlange nicht transaktional ist, wird sie gelöscht und dann neu erstellt, als eine transaktionale Warteschlange.  
+  
+> [!CAUTION]
+>  Wenn es erforderlich, um die Warteschlange erneut zu erstellen ist, werden Nachrichten in der Warteschlange verloren gehen.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Messaging.MessageQueueInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur vom Installationsprogramm installutil.exe. Ruft das Hilfsprogramm automatisch die <xref:System.Messaging.MessageQueueInstaller.Install%2A> Methode während des Installationsvorgangs Registrierungsinformationen zu schreiben, die die Nachrichtenwarteschlange installierenden zugeordnet ist. Installation ist transaktional, daher ist es ein Fehler in der jeder Komponente während der Installation, die zuvor installierten Komponenten in ihren Zustand vor der Installation Rollback ausgeführt werden. Dies erfolgt durch Aufrufen der einzelnen Komponenten <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> Methode.  
+  
+ Nach eine erfolgreiche Installation aller Komponenten, die mit dem Installations-Projekt verknüpft sind aufgetreten ist, das Installationsprogramm die Installationen ein Commit ausgeführt wird. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>Schließt die Installation von der <xref:System.Messaging.MessageQueue> durch Festlegen der Warteschlangenobjekts auf den entsprechenden ursprünglichen Zustand. Wenn die Warteschlange, wird angegeben die <xref:System.Messaging.MessageQueueInstaller.Path%2A> Eigenschaft bereits vorhanden ist und Nachrichten enthält <xref:System.Messaging.MessageQueueInstaller.Commit%2A> löscht die Nachrichten. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>, anstatt <xref:System.Messaging.MessageQueueInstaller.Install%2A>, löscht die Nachrichten, da die Act die Nachrichten löschen ein Rollback ausgeführt werden kann.  
+  
+ Installationsroutine einer Anwendung verwendet die Projekt-Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> automatisch Informationen zu den Komponenten zu verwalten, die bereits installiert wurden. Diese Statusinformationen, die übergeben werden <xref:System.Messaging.MessageQueueInstaller.Install%2A> als die `stateSaver` -Parameter wird ständig aktualisiert, während das Hilfsprogramm installiert wird, jede <xref:System.Messaging.MessageQueueInstaller> Instanz. In der Regel ist es nicht erforderlich für Ihren Code so ändern Sie diese Statusinformationen explizit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentInstaller">
+      <MemberSignature Language="C#" Value="public override bool IsEquivalentInstaller (System.Configuration.Install.ComponentInstaller otherInstaller);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEquivalentInstaller(class System.Configuration.Install.ComponentInstaller otherInstaller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherInstaller" Type="System.Configuration.Install.ComponentInstaller" />
+      </Parameters>
+      <Docs>
+        <param name="otherInstaller">Das Installationsprogramm, verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Installationsprogramm die gleiche Art von Installation wie dieses Installationsprogramm verarbeiten kann.</summary>
+        <returns>
+          <see langword="true" />Wenn dieses Installationsprogramm und die vom angegebenen der <paramref name="otherInstaller" /> Parameters kann gleich behandeln Art der Installation ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel <xref:System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller%2A> gibt `true` nur, wenn dieses Installationsprogramm und die vom angegebenen der `otherInstaller` Parameter vom selben Typ sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Beschreibung der Warteschlange.</summary>
+        <value>Die Bezeichnung, die Nachrichtenwarteschlange beschreibt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueue.Label%2A> Eigenschaft muss nicht für Warteschlangen eindeutig sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException"><see cref="P:System.Messaging.MessageQueueInstaller.Label" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumJournalSize">
+      <MemberSignature Language="C#" Value="public long MaximumJournalSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumJournalSize" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.MaximumJournalSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe der Erfassung, die mit der Warteschlange assoziiert ist.</summary>
+        <value>Die maximale Größe in Kilobyte, der Journalwarteschlange, die Nachrichten aufzeichnet, die aus der Warteschlange entfernt werden. Der Message Queuing-Standard gibt keine Beschränkung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Warteschlange erstellt wird, erstellt Message Queuing automatisch eine Warteschlangenjournals am gleichen Speicherort wie die neue Warteschlange. Warteschlangenjournals wird verwendet, um die Nachrichten zu verfolgen, die aus der Warteschlange entfernt werden.  
+  
+ Zwei Arten von Nachrichten verbleiben verfolgte: solche, die aus der Warteschlange entfernt werden, da ihre Zeit auf den Empfang der Zeitgeber ist abgelaufen, und solche, die aus der Warteschlange gelöscht werden.  
+  
+ Anwendungen können nicht in die Journalwarteschlange Nachrichten senden. Allerdings müssen Sie in regelmäßigen Abständen löschen die Warteschlange, um die Nachrichten zu entfernen, die nicht mehr benötigt werden. Nachrichten, die im Journal Warteschlangen Anzahl gegen das Kontingent für den Computer, auf dem die Warteschlangen befinden, gespeichert werden. (Das Computerkontingent wird vom Administrator festgelegt.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumQueueSize">
+      <MemberSignature Language="C#" Value="public long MaximumQueueSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumQueueSize" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.MaximumQueueSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe der Warteschlange.</summary>
+        <value>Die maximale Größe in Kilobyte, der die Warteschlange. Der Message Queuing-Standard gibt keine Beschränkung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Warteschlangengröße wird zum Zeitpunkt der Erstellung der Warteschlange, in der Regel festgelegt, obwohl sie später zurückgesetzt werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastAddress">
+      <MemberSignature Language="C#" Value="public string MulticastAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MulticastAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.MulticastAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In MSMQ 3.0 eingeführt. Ruft ab, oder der Warteschlange zugeordnete Multicastadresse festgelegt.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält eine gültige Multicastadresse (im unten gezeigten Formular) oder <see langword="null" />, was bedeutet, dass die Warteschlange nicht mit einer Multicastadresse verknüpft ist.  
+  
+```  
+&lt;address&gt;:&lt;port&gt;  
+```</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">MSMQ 3.0 ist nicht installiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Messaging.Design.QueuePathEditor", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort der Warteschlange, die von diesem Objekt verwiesen wird.</summary>
+        <value>Der Pfad, der den Speicherort der Warteschlange im Netzwerk darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Syntax für die <xref:System.Messaging.MessageQueue.Path%2A> Eigenschaft hängt vom Typ der Warteschlange es Verweise. Die folgende Tabelle zeigt die Syntax, für Warteschlangen verschiedener Typen zu verwenden.  
+  
+|Warteschlangentyp|Syntax|  
+|----------------|------------|  
+|öffentliche Warteschlange|`machineName`\\`queueName`|  
+|private Warteschlange|`machineName`\\`Private$`\\`queueName`|  
+|Journalwarteschlange|`machineName`\\`queueName`\\`Journal$`|  
+|Computer-Journalwarteschlange|`machineName`\\`Journal$`|  
+|Computer, Warteschlange für unzustellbare|`machineName`\\`Deadletter$`|  
+|Computer Transaktionswarteschlange für unzustellbare|`machineName`\\`XactDeadletter$`|  
+  
+ Verwenden "." für den lokalen Computer.  
+  
+ Sie können auch die <xref:System.Messaging.MessageQueue.FormatName%2A> oder <xref:System.Messaging.MessageQueue.Label%2A> eines Objekts des Message Queuing-Anwendung zum Beschreiben des Warteschlangenpfads. Die folgende Tabelle zeigt die korrekte Syntax für jeden Typ des Verweises.  
+  
+|Verweis|Syntax|  
+|---------------|------------|  
+|Formatname|FormatName: [ *Formatnamen* ]|  
+|Bezeichnung|Bezeichnung: [ *Bezeichnung* ]|  
+  
+ Wenn Sie offline arbeiten, müssen Sie den Formatnamen verwenden, um die Warteschlange zu definieren <xref:System.Messaging.MessageQueue.Path%2A>. Wenn Sie nicht, die Anwendung löst eine Ausnahme aus, da der primäre Domänencontroller auflösen nicht verfügbar ist die <xref:System.Messaging.MessageQueue.Path%2A> in der <xref:System.Messaging.MessageQueue.FormatName%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Messaging.MessageQueueInstaller.Path" /> wurde festgelegt, auf einen ungültigen Wert, möglicherweise weil die Syntax ungültig ist.  
+  
+ - oder -   
+  
+ <see cref="P:System.Messaging.MessageQueueInstaller.Path" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Permissions">
+      <MemberSignature Language="C#" Value="public System.Messaging.AccessControlList Permissions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.AccessControlList Permissions" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Permissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AccessControlList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen von Berechtigungen, die der Warteschlange zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Messaging.AccessControlList" /> , enthält eine oder mehrere Zugriffssteuerungseinträgen, die dem Vertrauensnehmer und für die Warteschlange zu erteilenden Berechtigungen angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig der Ersteller des eine öffentliche oder private Warteschlange verfügt über Vollzugriff und der Domänengruppe "Jeder" über die Berechtigung zum Abrufen von Eigenschaften für eine Warteschlange, Berechtigungen und Schreiben in die Warteschlange hat. Message Queuing greift dann auf jede Liste Berechtigungseintrag bis findet, die für den aktuellen Benutzer sowie die aktuelle versuchte Aktion gilt. Können Sie, wie mit den Betriebssystem-Berechtigungen, die Rechte, die Sie speziell für einem Benutzer verweigern Vorrang.  
+  
+ Bei der Erstellung der <xref:System.Messaging.MessageQueueInstaller.Permissions%2A> Eigenschaft hinzufügen <xref:System.Messaging.AccessControlEntry> -Instanzen Ihrer <xref:System.Messaging.AccessControlList> Auflistung. Beim Erstellen jedes Zugriffssteuerungseintrag können Sie generische oder "standard" Zugriffsrechte angeben. Die Rechte für eine Warteschlange können eine beliebige Kombination der folgenden sein:  
+  
+-   Löschen  
+  
+-   Sicherheit lesen  
+  
+-   Schreiben Sie die Sicherheit  
+  
+-   Synchronisieren  
+  
+-   Besitzer ändern  
+  
+-   Lesen  
+  
+-   Write  
+  
+-   Ausführen  
+  
+-   Erforderlich  
+  
+-   Alle  
+  
+-   Keine  
+  
+ Diese Rechte sind ein Satz von Bitflags, die Sie kombinieren können, verwenden den bitweisen OR-Operator:  
+  
+-   Vollzugriff  
+  
+-   Nachricht löschen  
+  
+-   Fehlermeldung  
+  
+-   Peek-Nachricht  
+  
+-   Meldung für die Erfassung  
+  
+-   Abrufen von Eigenschaften für eine Warteschlange  
+  
+-   Festlegen von Eigenschaften  
+  
+-   Abrufen von Berechtigungen  
+  
+-   Festlegen von Berechtigungen  
+  
+-   Besitz übernehmen  
+  
+-   Schreiben der Nachricht  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" /> , die den Zustand vor der Installation des Computers enthält.</param>
+        <summary>Stellt den Zustand, in der vor der Installation durch ein Rollback für die Warteschlangeninformationen, die die Installationsprozedur in die Registrierung geschrieben wurde der Computer wieder her. Diese Methode soll vom Installations-Tools verwendet werden, automatisch die entsprechenden Methoden aufrufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> Methode macht die Auswirkungen der <xref:System.Messaging.MessageQueueInstaller.Install%2A> Methode. <xref:System.Messaging.MessageQueueInstaller.Rollback%2A>wird aufgerufen, wenn die Installation der Komponenten in das Projekt für die Installation schlägt fehl. Die <xref:System.Messaging.MessageQueueInstaller.Install%2A> Methode erstellt, oder legt die Eigenschaften für eine Warteschlange fest. <xref:System.Messaging.MessageQueueInstaller.Rollback%2A>Löscht die Warteschlange oder setzt die Eigenschaften einer vorhandenen Warteschlange auf die Werte vor der Installation.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Messaging.MessageQueueInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur vom Installationsprogramm InstallUtil.exe. Ruft das Hilfsprogramm automatisch die <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> -Methode auf, nachdem ein Installationsfehler alle rückgängig machen, die sich während des Installationsvorgangs wurde bereits vorgenommen.  
+  
+ Installationsroutine einer Anwendung verwendet die Projekt-Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> automatisch Informationen zu den Komponenten zu verwalten, die bereits installiert wurden. Diese Statusinformationen, die übergeben werden <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> als die `savedState` -Parameter wird ständig aktualisiert werden, wie das Hilfsprogramm führt ein Sichern <xref:System.Messaging.MessageQueueInstaller> Instanz. In der Regel ist es nicht erforderlich für Ihren Code so ändern Sie diese Statusinformationen explizit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transactional">
+      <MemberSignature Language="C#" Value="public bool Transactional { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Transactional" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Transactional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Warteschlange akzeptiert werden nur Nachrichten, die als Teil einer Transaktion gesendet.</summary>
+        <value>
+          <see langword="true" />Wenn die Warteschlange nur im Rahmen einer Transaktion gesendete Nachrichten akzeptiert; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachrichten können über eine lokale Transaktionswarteschlange mit oder ohne Verwendung einer Transaktion abgerufen werden. Wenn Sie einen bereits verwendeten Transaktionskontext nicht angeben, erstellt das Message Queuing eine einzelne, interne Transaktion für Sie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" /> , die den Status nach der Installation des Computers enthält.</param>
+        <summary>Entfernt eine Installation von Warteschlangeninformationen aus der Registrierung entfernen. Diese Methode soll durch Deinstallation-Tools verwendet werden, automatisch die entsprechenden Methoden aufrufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Messaging.MessageQueueInstaller.UninstallAction%2A> ist `Remove`, <xref:System.Messaging.MessageQueueInstaller.Uninstall%2A> löscht auch die zugeordnete Warteschlange die <xref:System.Messaging.MessageQueue>.  
+  
+ In der Regel rufen Sie nicht die Methoden der <xref:System.Messaging.MessageQueueInstaller> von innerhalb des Codes; sie werden in der Regel aufgerufen nur vom Installationsprogramm InstallUtil.exe (im Deinstallationsmodus). Ruft das Hilfsprogramm automatisch die <xref:System.Messaging.MessageQueueInstaller.Uninstall%2A> Methode, um die Teile des Systems wiederherzustellen, die durch die Installation in ihren Zustand vor der Installation betroffen sind. Dies schließt das Löschen der Registrierungsinformationen, die die zu deinstallierenden MessageQueue zugeordnet ist.  
+  
+ Deinstallieren Sie eine Anwendung routinemäßige verwendet des Projektinstallationsprogramms <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> automatisch Informationen zu den Komponenten zu verwalten, die bereits deinstalliert wurden. Diese Statusinformationen, die übergeben werden <xref:System.Messaging.MessageQueueInstaller.Uninstall%2A> als die `savedState` -Parameter wird ständig aktualisiert werden, wie das Hilfsprogramm jedes deinstalliert <xref:System.Messaging.MessageQueueInstaller> Instanz. In der Regel ist es nicht erforderlich für Ihren Code so ändern Sie diese Statusinformationen explizit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallAction">
+      <MemberSignature Language="C#" Value="public System.Configuration.Install.UninstallAction UninstallAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Install.UninstallAction UninstallAction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.UninstallAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Install.UninstallAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie das Installationsprogramm die Warteschlange auf Deinstallieren mit: Entfernen Sie es, den Zustand vor der Installation wiederherstellen oder in seinem aktuellen Zustand des installierten lassen.</summary>
+        <value>Eines der <see cref="T:System.Configuration.Install.UninstallAction" /> Werte, der angibt, welchem Zustand, wenn die Warteschlange verlassen die <see cref="T:System.Messaging.MessageQueue" /> deinstalliert wird. Die Standardeinstellung ist <see langword="Remove" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Warteschlange installieren, können Sie optional eine vorhandene Warteschlange verwenden. Wenn Sie dies tun, müssen Sie entscheiden, ob die Warteschlange in den Zustand vor der Installation zurück oder in seinem aktuellen Zustand nach der Installation verbleiben soll. Wenn Sie festlegen, die Warteschlange den Status vor der Installation wiederherstellen ob, werden Nachrichten, die aus der Warteschlange, während der Installation gelöscht wurden nicht wiederhergestellt. Sie können nur Eigenschaften für eine Warteschlange, die zugeordnet sind Zurücksetzen der <xref:System.Messaging.MessageQueueInstaller> auf ihre Werte vor der Installation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseJournalQueue">
+      <MemberSignature Language="C#" Value="public bool UseJournalQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseJournalQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.UseJournalQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Nachrichten, die aus der Warteschlange abgerufen werden auch in der zugehörigen Journalwarteschlange kopiert werden.</summary>
+        <value>
+          <see langword="true" />Beim Kopieren von Nachrichten, die aus der Warteschlange, in die Journalwarteschlange abgerufen werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Journalwarteschlange können Sie verfolgen Nachrichten selbst, wenn sie aus der Warteschlange abgerufen wurden. Zwei Typen von Nachrichten verbleiben jedoch nicht verfolgte: solche, die aus der Warteschlange entfernt werden, wenn ihre Zeit auf den empfangen-Zeitgeber abläuft, und solche, die aus der Warteschlange gelöscht werden.  
+  
+ Eine Journalwarteschlange sollen in regelmäßigen Abständen gelöscht werden, um Nachrichten zu entfernen, die nicht mehr benötigt werden. Nachrichten in der Erfassung Warteschlangenanzahl gegen das Kontingent für den Computer, auf dem die Erfassung befindet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

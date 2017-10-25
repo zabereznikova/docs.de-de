@@ -1,0 +1,2217 @@
+<Type Name="ProjectRootElement" FullName="Microsoft.Build.Construction.ProjectRootElement">
+  <TypeSignature Language="C#" Value="public class ProjectRootElement : Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectRootElement extends Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectRootElement" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Construction.ProjectElementContainer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{FullPath} #Children={Count} DefaultTargets={DefaultTargets} ToolsVersion={ToolsVersion} InitialTargets={InitialTargets} ExplicitlyLoaded={IsExplicitlyLoaded}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein MSBuild-Projekt, eine Targets-Datei oder eine beliebige andere Datei, die entspricht dem MSBuild-Projektdateischema dar. Diese Klasse und seinen verwandten Klassen ermöglichen eine vollständige MSBuild Projekts oder der Targets Datei gelesen und geschrieben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kommentare und Leerzeichen können nicht über dieses Modell derzeit bearbeitet werden. Jedes Projektstammelement ist genau eine Teamprojektsammlung zugeordnet. Dadurch wird den Besitzer dieser Projektsammlung steuern die Lebensdauer und nicht durch Änderungen, die von einer anderen projektauflistung stammen überrascht sein.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddImport">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectImportElement AddImport (string project);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectImportElement AddImport(string project) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddImport(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectImportElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="project">Das Projekt importiert werden sollen.</param>
+        <summary>Dieses Projekt hinzugefügt einen Projektimport.</summary>
+        <returns>Gibt die hinzugefügte Projektimport zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Importgruppen vorhanden sind, fügt der Projektimport in der letzten Gruppe importieren, die keine Condition-Attribut aufweist. Andernfalls erstellt einen Import, am Ende des Projekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddImportGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectImportGroupElement AddImportGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectImportGroupElement AddImportGroup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddImportGroup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectImportGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Gruppe importieren am Ende dieses Projekt.</summary>
+        <returns>Gibt die Gruppe importieren, die am Ende dieses Projekt erstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Hilfsmethode wählt eine Position in der MSBuild-DOM basierend auf einem heuristischen Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemElement AddItem(string itemType, string include) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="include" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp des Elements, das hinzugefügt werden.</param>
+        <param name="include">Der Include-Wert des Elements, das hinzugefügt werden.</param>
+        <summary>Fügt ein Element zu diesem Projekt an.</summary>
+        <returns>Gibt das hinzugefügte Element zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt ein Element, und fügt dann an eine Elementgruppe mit keine Condition-Attribut und mindestens ein Element des gleichen Elementtyps. Wenn keine solche Elementgruppe gefunden wird, wird eine neue Gruppe erstellt, und das Element hinzugefügt. Elemente werden von Include-Werten sortiert.  
+  
+ Wird keine Aktion ausgeführt, wenn das Element einen vorhandenen Platzhalterausdruck für diesen Elementtyp übereinstimmt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemElement AddItem(string itemType, string include, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItem(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="include" Type="System.String" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp des Elements, das hinzugefügt werden.</param>
+        <param name="include">Der Include-Wert des Elements, das hinzugefügt werden.</param>
+        <param name="metadata">Die Metadaten hinzugefügt werden.</param>
+        <summary>Fügt ein Element mit Metadaten zu diesem Projekt hinzu.</summary>
+        <returns>Gibt das hinzugefügte Element zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt ein Element, und fügt dann an eine Elementgruppe mit keine Condition-Attribut und mindestens ein Element des gleichen Elementtyps. Wenn keine solche Elementgruppe gefunden wird, wird eine neue Gruppe erstellt, und das Element hinzugefügt. Elemente werden von Include-Werten sortiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItemDefinition">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemDefinitionElement AddItemDefinition (string itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemDefinitionElement AddItemDefinition(string itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItemDefinition(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemDefinitionElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp der Elementdefinition hinzugefügt werden.</param>
+        <summary>Dieses Projekt hinzugefügt eine Elementdefinition.</summary>
+        <returns>Gibt die hinzugefügte Elementdefinition zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt ein Element, und fügt dann an eine Elementgruppe mit keine Condition-Attribut und mindestens ein Element des gleichen Elementtyps. Wenn keine solche Elementgruppe gefunden wird, wird eine neue Gruppe erstellt, und das Element hinzugefügt. Elemente werden von Include-Werten sortiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItemDefinitionGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemDefinitionGroupElement AddItemDefinitionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemDefinitionGroupElement AddItemDefinitionGroup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItemDefinitionGroup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemDefinitionGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieses Projekt hinzugefügt eine Elementdefinitionsgruppe.</summary>
+        <returns>Gibt die hinzugefügte Elementdefinitionsgruppe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt und fügt eine Elementdefinitionsgruppe nach der letzten vorhandenen Elementdefinitionsgruppe, sofern vorhanden. Andernfalls erstellt eine Elementdefinitionsgruppe nach der letzten vorhandenen Eigenschaftengruppe, sofern vorhanden. Wenn keine Eigenschaftengruppe vorhanden ist, erstellt eine neue Elementdefinitionsgruppe am Ende des Projekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItemGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemGroupElement AddItemGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemGroupElement AddItemGroup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddItemGroup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und diesem Projekt eine Elementgruppe hinzugefügt.</summary>
+        <returns>Gibt das hinzugefügte Elementgruppe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt und fügt eine Elementgruppe ggf. nach der letzten vorhandenen Elementgruppe hinzu. Andernfalls erstellt eine Elementgruppe nach der letzten vorhandenen Eigenschaftengruppe, sofern vorhanden. Wenn keine Eigenschaftengruppe vorhanden ist, erstellt eine neue Gruppe am Ende des Projekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectPropertyElement AddProperty (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectPropertyElement AddProperty(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectPropertyElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft, die hinzugefügt oder aktualisiert werden.</param>
+        <param name="value">Der Wert der Eigenschaft, die hinzugefügt oder aktualisiert werden.</param>
+        <summary>Aktualisiert oder fügt eine Eigenschaft zu diesem Projekt.</summary>
+        <returns>Gibt die Eigenschaft hinzugefügte oder aktualisierte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktualisiert die letzte vorhandene Eigenschaft mit dem angegebenen `name` , die keine Condition-Attribut hat, von sich selbst oder in der Eigenschaftengruppe, die es enthält. Andernfalls erstellt eine Eigenschaft, und der erste Eigenschaftengruppe, die keine Condition-Attribut wurde hinzugefügt. Wenn keine solche Eigenschaftengruppe vorhanden ist, erstellt eine Eigenschaftengruppe nach der letzten vorhandenen Eigenschaftengruppe, sofern vorhanden, und die Eigenschaft hinzugefügt. Andernfalls erstellt und am Anfang des Projekts eine Eigenschaftengruppe hinzugefügt, und der Eigenschaft hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPropertyGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectPropertyGroupElement AddPropertyGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectPropertyGroupElement AddPropertyGroup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddPropertyGroup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectPropertyGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieses Projekt wird eine neue Eigenschaftsgruppe hinzugefügt.</summary>
+        <returns>Gibt die Gruppe hinzugefügten Eigenschaft zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt eine Eigenschaftengruppe und fügt es ggf. nach der letzten vorhandenen Eigenschaftengruppe hinzu. Andernfalls fügt die Eigenschaftengruppe auf den Anfang des Projekts ein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTarget">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectTargetElement AddTarget (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectTargetElement AddTarget(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddTarget(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectTargetElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Ziels hinzugefügt werden.</param>
+        <summary>Ein Ziel und dem Projekt hinzugefügt.</summary>
+        <returns>Gibt das hinzugefügte Ziel zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hilfsmethode, die einen Ort wählt auf Grundlage eines heuristischen: erstellt ein Ziel am Ende des Projekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUsingTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskElement AddUsingTask (string name, string assemblyFile, string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectUsingTaskElement AddUsingTask(string name, string assemblyFile, string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.AddUsingTask(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="assemblyFile" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name der Aufgabe.</param>
+        <param name="assemblyFile">Der Dateipfad zur Assembly.</param>
+        <param name="assemblyName">Der Namen zu ladenden Assembly.</param>
+        <summary>Fügt eine [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) zum Projekt.</summary>
+        <returns>Gibt das hinzugefügte UsingTask-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entweder die `assemblyName` oder `assemblyFile` muss Null, aber nicht beides sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChooseElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectChooseElement&gt; ChooseElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectChooseElement&gt; ChooseElements" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ChooseElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectChooseElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten [Choose-Element (MSBuild)](http://msdn.microsoft.com/library/7b8b025a-d944-4f5c-9018-c89fc2ef146d) in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten Elemente auswählen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public override string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft null ab, da das Condition-Attribut für dieses Element nicht vorhanden ist und eine nicht vorhandene Bedingung implizit "true wird".</summary>
+        <value>Gibt Null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionLocation">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ConditionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ConditionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht verwenden. Condition-Attribut ist nicht für vorhandene <see cref="T:Microsoft.Build.Construction.ProjectRootElement" />. Get löst einen internen Fehler.</summary>
+        <value>Löst einen internen Fehler aus und gibt null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und initialisiert eine in-Memory-leere ProjectRootElement Instanz und der globalen Projektsammlung hinzugefügt.</summary>
+        <returns>Gibt den neuen Projektstamm zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Create (Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Create(class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="projectCollection">Die projektauflistung hinzugefügt werden.</param>
+        <summary>Erstellt und initialisiert eine in-Memory-leere ProjectRootElement Instanz und der angegebenen Projektsammlung hinzugefügt.</summary>
+        <returns>Gibt den neuen Projektstamm zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Create (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Create(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Dateipfad, auf die Daten für die Initialisierung verwendet werden soll.</param>
+        <summary>Erstellt und initialisiert eine in-Memory-leere ProjectRootElement Instanz und der globalen Projektsammlung hinzugefügt. Der neue Projektstamm wird aus Daten finden Sie unter den angegebenen Dateipfad initialisiert.</summary>
+        <returns>Gibt den neuen Projektstamm zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Create (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Create(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Der XML-Reader für die Initialisierung verwendet.</param>
+        <summary>Erstellt und initialisiert eine in-Memory-leere ProjectRootElement Instanz und der globalen Projektsammlung hinzugefügt. Der neue Projektstamm wird aus Daten, die aus dem angegebenen XmlReader gelesen initialisiert.</summary>
+        <returns>Gibt den neuen Projektstamm zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ InvalidProjectFileException möglicherweise ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Create (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Create(string path, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Dateipfad, auf die Daten für die Initialisierung verwendet werden soll.</param>
+        <param name="projectCollection">Die projektauflistung hinzugefügt werden.</param>
+        <summary>Erstellt und initialisiert eine in-Memory-leere ProjectRootElement Instanz und der angegebenen Projektsammlung hinzugefügt. Der neue Projektstamm wird aus Daten finden Sie unter den angegebenen Dateipfad initialisiert.</summary>
+        <returns>Gibt den neuen Projektstamm zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Create (System.Xml.XmlReader xmlReader, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Create(class System.Xml.XmlReader xmlReader, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Create(System.Xml.XmlReader,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Der XML-Reader für die Initialisierung verwendet.</param>
+        <param name="projectCollection">Die projektauflistung hinzugefügt werden.</param>
+        <summary>Erstellt und initialisiert eine in-Memory-leere ProjectRootElement Instanz und der angegebenen Projektsammlung hinzugefügt. Der neue Projektstamm wird aus Daten, die aus dem angegebenen XmlReader gelesen initialisiert.</summary>
+        <returns>Gibt den neuen Projektstamm zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ InvalidProjectFileException möglicherweise ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChooseElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectChooseElement CreateChooseElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectChooseElement CreateChooseElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateChooseElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectChooseElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine [Choose-Element (MSBuild)](http://msdn.microsoft.com/library/7b8b025a-d944-4f5c-9018-c89fc2ef146d).</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.Construction.ProjectChooseElement" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss das Element auswählen auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateImportElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectImportElement CreateImportElement (string project);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectImportElement CreateImportElement(string project) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateImportElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectImportElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="project">Das Projekt importiert werden sollen.</param>
+        <summary>Erstellt ein [Import-Element (MSBuild)](http://msdn.microsoft.com/library/3bfecaf1-69fd-4008-b651-c9dafd4389d9).</summary>
+        <returns>Gibt das erstellte Import-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die Import-Element auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateImportGroupElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectImportGroupElement CreateImportGroupElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectImportGroupElement CreateImportGroupElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateImportGroupElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectImportGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Gruppe importieren.</summary>
+        <returns>Gibt die Gruppe importieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die Gruppe importieren auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItemDefinitionElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemDefinitionElement CreateItemDefinitionElement (string itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemDefinitionElement CreateItemDefinitionElement(string itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemDefinitionElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp der Elementdefinition.</param>
+        <summary>Erstellt eine Elementdefinition.</summary>
+        <returns>Gibt die Elementdefinition zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die Elementdefinition auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItemDefinitionGroupElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemDefinitionGroupElement CreateItemDefinitionGroupElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemDefinitionGroupElement CreateItemDefinitionGroupElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionGroupElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemDefinitionGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Elementdefinitionsgruppe.</summary>
+        <returns>Gibt die Elementdefinitionsgruppe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die Elementdefinitionsgruppe auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItemElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemElement CreateItemElement (string itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemElement CreateItemElement(string itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp des Elements.</param>
+        <summary>Erstellt ein Element.</summary>
+        <returns>Gibt das Element zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss das Element auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItemElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemElement CreateItemElement (string itemType, string include);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemElement CreateItemElement(string itemType, string include) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemElement(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="include" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp des Elements.</param>
+        <param name="include">Der Include-Wert des Elements.</param>
+        <summary>Erstellt ein Element mit dem angegebenen Include-Wert.</summary>
+        <returns>Gibt das Element zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss das Element auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItemGroupElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemGroupElement CreateItemGroupElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectItemGroupElement CreateItemGroupElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateItemGroupElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Elementgruppe.</summary>
+        <returns>Gibt die Elementgruppe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss Elementgruppe auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMetadataElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectMetadataElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadaten.</param>
+        <summary>Erstellt einen Metadatenknoten mit dem angegebenen Namen.</summary>
+        <returns>Der Metadatenknoten zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufer muss die Metadatenknoten auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMetadataElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement (string name, string unevaluatedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement(string name, string unevaluatedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectMetadataElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="unevaluatedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadaten.</param>
+        <param name="unevaluatedValue">Der Wert der Metadaten.</param>
+        <summary>Erstellt einen Metadatenknoten mit dem angegebenen Namen und Wert.</summary>
+        <returns>Gibt das Metadatenelement zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufer muss die Metadatenknoten auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOnErrorElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOnErrorElement CreateOnErrorElement (string executeTargets);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOnErrorElement CreateOnErrorElement(string executeTargets) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateOnErrorElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOnErrorElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executeTargets" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="executeTargets">Die Ziele, die ausgeführt werden, wenn bei einer Aufgabe ein Fehler auftritt.</param>
+        <summary>Erstellt ein [OnError-Element (MSBuild)](http://msdn.microsoft.com/library/765767d3-ecb7-4cd9-ba1e-d9468964dddc).</summary>
+        <returns>Gibt das OnError-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss das OnError-Element auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOtherwiseElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOtherwiseElement CreateOtherwiseElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOtherwiseElement CreateOtherwiseElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateOtherwiseElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOtherwiseElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein [Otherwise-Element (MSBuild)](http://msdn.microsoft.com/library/de3997e9-1595-4263-a886-95530b56a319). Der Aufrufer muss es auf den Speicherort der im Projekt hinzufügen.</summary>
+        <returns>Gibt das Otherwise-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss das Otherwise-Element auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOutputElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOutputElement CreateOutputElement (string taskParameter, string itemType, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectOutputElement CreateOutputElement(string taskParameter, string itemType, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateOutputElement(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOutputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskParameter" Type="System.String" />
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskParameter">Der Name des Ausgabeparameters der Aufgabe.</param>
+        <param name="itemType">Das Element, das den Ausgabeparameterwert der Aufgabe empfängt.</param>
+        <param name="propertyName">Die Eigenschaft, die den Ausgabeparameterwert der Aufgabe empfängt.</param>
+        <summary>Erstellt ein [Output-Element (MSBuild)](http://msdn.microsoft.com/library/34bc7cd1-efd3-4b57-b691-4584eeb6a0e9).</summary>
+        <returns>Gibt das Output-Element zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss das Output-Element auf den Speicherort der im Projekt hinzufügen. ItemType oder PropertyName muss angegeben werden, aber nicht beides sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProjectExtensionsElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectExtensionsElement CreateProjectExtensionsElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectExtensionsElement CreateProjectExtensionsElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateProjectExtensionsElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectExtensionsElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine [ProjectExtensions-Element (MSBuild)](http://msdn.microsoft.com/library/f95f312f-ff92-41eb-9469-ad99e236a307).</summary>
+        <returns>Gibt das ProjectExtensions-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die ProjectExtensions-Element auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePropertyElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectPropertyElement CreatePropertyElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectPropertyElement CreatePropertyElement(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreatePropertyElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectPropertyElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <summary>Erstellt eine Eigenschaft an.</summary>
+        <returns>Gibt die Eigenschaft zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die Eigenschaft auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePropertyGroupElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectPropertyGroupElement CreatePropertyGroupElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectPropertyGroupElement CreatePropertyGroupElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreatePropertyGroupElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectPropertyGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Eigenschaftengruppe.</summary>
+        <returns>Gibt die Eigenschaftsgruppe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufer muss die Eigenschaftsgruppe auf den Speicherort der im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTargetElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectTargetElement CreateTargetElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectTargetElement CreateTargetElement(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateTargetElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectTargetElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Ziels.</param>
+        <summary>Erstellt ein Ziel.</summary>
+        <returns>Gibt das Ziel zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss das Ziel auf den Speicherort der Auswahl in diesem Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTaskElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectTaskElement CreateTaskElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectTaskElement CreateTaskElement(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateTaskElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectTaskElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Tasks.</param>
+        <summary>Erstellt eine Aufgabe.</summary>
+        <returns>Gibt die Aufgabe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die Aufgabe zum Speicherort der Auswahl in diesem Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUsingTaskBodyElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskBodyElement CreateUsingTaskBodyElement (string evaluate, string body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectUsingTaskBodyElement CreateUsingTaskBodyElement(string evaluate, string body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskBodyElement(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskBodyElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evaluate" Type="System.String" />
+        <Parameter Name="body" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="evaluate">Die Zeichenfolge ausgewertet werden soll.</param>
+        <param name="body">Der hinzuzufügende Text.</param>
+        <summary>Erstellt eine Aufgabe von verwiesen wird eine [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43).</summary>
+        <returns>Gibt die Aufgabe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die Aufgabe der UsingTask-Element im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUsingTaskElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement (string taskName, string assemblyFile, string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement(string taskName, string assemblyFile, string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="assemblyFile" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">Name der Aufgabe.</param>
+        <param name="assemblyFile">Der Dateipfad zur Assembly.</param>
+        <param name="assemblyName">Der Namen zu ladenden Assembly.</param>
+        <summary>Fügt eine [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) zum Projekt.</summary>
+        <returns>Gibt das UsingTask-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die UsingTask-Element auf den Speicherort der im Projekt hinzufügen. Entweder die `assemblyName` oder `assemblyFile` muss Null, aber nicht beides sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUsingTaskElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement (string taskName, string assemblyFile, string assemblyName, string runtime, string architecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement(string taskName, string assemblyFile, string assemblyName, string runtime, string architecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="assemblyFile" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+        <Parameter Name="runtime" Type="System.String" />
+        <Parameter Name="architecture" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">Name der Aufgabe.</param>
+        <param name="assemblyFile">Der Dateipfad zur Assembly.</param>
+        <param name="assemblyName">Der Namen zu ladenden Assembly.</param>
+        <param name="runtime">Optionale Common Language Runtime-Spezifizierer.</param>
+        <param name="architecture">Optionale Architektur Spezifizierer.</param>
+        <summary>Fügt eine [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) zum Projekt.</summary>
+        <returns>Gibt das UsingTask-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die UsingTask-Element auf den Speicherort der im Projekt hinzufügen. Entweder die `assemblyName` oder `assemblyFile` muss Null, aber nicht beides sein. Sowohl die `runtime` und `architecture` kann null sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUsingTaskParameterElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectUsingTaskParameterElement CreateUsingTaskParameterElement (string name, string output, string required, string parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectUsingTaskParameterElement CreateUsingTaskParameterElement(string name, string output, string required, string parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterElement(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectUsingTaskParameterElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="output" Type="System.String" />
+        <Parameter Name="required" Type="System.String" />
+        <Parameter Name="parameterType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <c>UsingTask</c> Element.</param>
+        <param name="output">Speichert die Ausgaben der Aufgabe in der Projektdatei.</param>
+        <param name="required">Ein benutzerdefinierter Aufgabenparameter, der den Parameterwert als Wert enthält.</param>
+        <param name="parameterType">Der Typ des Parameters.</param>
+        <summary>Erstellt einen Parameter für die Verwendung in einem [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) -Parametergruppe hinzu.</summary>
+        <returns>Gibt die Parameter zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufer muss die Parameter der UsingTask Parametergruppe Wahl im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUsingTaskParameterGroupElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.UsingTaskParameterGroupElement CreateUsingTaskParameterGroupElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.UsingTaskParameterGroupElement CreateUsingTaskParameterGroupElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterGroupElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.UsingTaskParameterGroupElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Parameter für eine [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43).</summary>
+        <returns>Gibt die Parametergruppe zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufer muss die Gruppe der Parameter der UsingTask-Element im Projekt hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWhenElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectWhenElement CreateWhenElement (string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Construction.ProjectWhenElement CreateWhenElement(string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.CreateWhenElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectWhenElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der Wert des Condition-Attribut.</param>
+        <summary>Erstellt eine [When-Element (MSBuild)](http://msdn.microsoft.com/library/eb27de6f-4e71-4e87-87e2-d93f7bf5899c) mit einem angegebenen Condition-Attribut.</summary>
+        <returns>Gibt die When Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss die When hinzufügen Element auf den Speicherort der Auswahl in diesem Projekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTargets">
+      <MemberSignature Language="C#" Value="public string DefaultTargets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.DefaultTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des DefaultTargets-Attribut.</summary>
+        <value>Gibt den Wert des DefaultTargets-Attribut. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DefaultTargets-Attribut entfernt, wenn der Wert auf Null oder eine leere Zeichenfolge ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation DefaultTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation DefaultTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.DefaultTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speicherort der DefaultTargets-Attribut für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Speicherort der DefaultTargets-Attribut zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Möglicherweise nicht richtig, wenn Datei nicht gespeichert wird oder die Datei seit ihrer letzten Speicherung bearbeitet wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryPath">
+      <MemberSignature Language="C#" Value="public string DirectoryPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DirectoryPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.DirectoryPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Verzeichnispfad für die Projektdatei.</summary>
+        <value>Gibt den Verzeichnispfad an, der nie null ist. Wenn das Projekt nicht von der Festplatte geladen wird, gibt das aktuelle Verzeichnis zurück, zu dem Zeitpunkt, den das Projekt geladen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für die Bewertung der relativen Pfade erforderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das die zeichencodierung, die die Projektdatei gespeichert werden kann.</summary>
+        <value>Gibt die zeichencodierung, dass die Projektdatei in gespeichert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt zurück, die durch die XML-Deklaration in der Projektdatei angegebenen Codierung. Wenn keine Codierung angegeben ist, wird standardmäßig UTF-8.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string FullPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Pfad zur Projektdatei ab.</summary>
+        <value>Gibt den vollständigen Pfad zur Projektdatei zurück. Wenn das Projekt nicht von der Festplatte geladen wird, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasUnsavedChanges">
+      <MemberSignature Language="C#" Value="public bool HasUnsavedChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasUnsavedChanges" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.HasUnsavedChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob das Projekt geändert wurde, seit es zuletzt geladen oder gespeichert wurde.</summary>
+        <value>"Wahr" zurückgegeben, wenn das Projekt geändert wurde; "false" andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportGroups">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportGroupElement&gt; ImportGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectImportGroupElement&gt; ImportGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ImportGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Gruppen importieren in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten Importgruppen in diesem Projekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportGroupsReversed">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportGroupElement&gt; ImportGroupsReversed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectImportGroupElement&gt; ImportGroupsReversed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ImportGroupsReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Gruppen importieren in diesem Projekt an, beginnend mit der letzten Gruppe.</summary>
+        <value>Gibt alle untergeordneten Gruppen in diesem Projekt beginnend mit der letzten Gruppe zu importieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imports">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportElement&gt; Imports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectImportElement&gt; Imports" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Imports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectImportElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elemente importieren in diesem Projekt.</summary>
+        <value>Ruft alle untergeordneten Elemente importieren in diesem Projekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialTargets">
+      <MemberSignature Language="C#" Value="public string InitialTargets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitialTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.InitialTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des Attributs InitialTargets fest.</summary>
+        <value>Gibt den Attributwert InitialTargets zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt das InitialTargets-Attribut an, wenn der Wert auf Null oder eine leere Zeichenfolge ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation InitialTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation InitialTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.InitialTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Attributs InitialTargets für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt die InitialTargets Attributpfad zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDefinitionGroups">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt; ItemDefinitionGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt; ItemDefinitionGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elementdefinitionsgruppen in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten Elementdefinitionsgruppen in diesem Projekt zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDefinitionGroupsReversed">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt; ItemDefinitionGroupsReversed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt; ItemDefinitionGroupsReversed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroupsReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elementdefinitionsgruppen in diesem Projekt an, beginnend mit der letzten Gruppe.</summary>
+        <value>Gibt das untergeordnete Element Definitionsgruppen in diesem Projekt an, beginnend mit der letzten Gruppe zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDefinitions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionElement&gt; ItemDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectItemDefinitionElement&gt; ItemDefinitions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemDefinitionElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elementdefinitionen in allen Elementdefinitionsgruppen an einer beliebigen Stelle in diesem Projekt ab.</summary>
+        <value>Ruft alle untergeordneten Elementdefinitionen in allen Elementdefinitionsgruppen an einer beliebigen Stelle in diesem Projekt ab.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemGroups">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt; ItemGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectItemGroupElement&gt; ItemGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elementgruppen in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten Elementgruppen in diesem Projekt zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umfasst keine Elementgruppen enthaltenen Elemente auswählen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemGroupsReversed">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt; ItemGroupsReversed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectItemGroupElement&gt; ItemGroupsReversed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ItemGroupsReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elementgruppen in diesem Projekt mit der letzten Gruppe ab.</summary>
+        <value>Gibt alle untergeordneten Elementgruppen in diesem Projekt beginnend mit der letzten Gruppe zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umfasst keine Elementgruppen enthaltenen Elemente auswählen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemElement&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectItemElement&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Elemente in diesem Projekt an.</summary>
+        <value>Gibt alle untergeordneten Elemente in diesem Projekt zurück, auch wenn sie durch Auswählen von Elementen enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastWriteTimeWhenRead">
+      <MemberSignature Language="C#" Value="public DateTime LastWriteTimeWhenRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastWriteTimeWhenRead" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.LastWriteTimeWhenRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den letzten Schreibens der Projektdatei an.</summary>
+        <value>Ruft den letzten Schreibens der Projektdatei an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, um zu bestimmen, ob eine Datei auf dem Datenträger von einem anderen Prozess als MSBuild-Prozesses geändert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Open (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Open(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Open(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Dateipfad für die Daten.</param>
+        <summary>Initialisiert einen Projektstamm in der globalen projektauflistung Laden von Daten aus den angegebenen Dateipfad.</summary>
+        <returns>Gibt den initialisierten Projektstamm zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ InvalidProjectFileException möglicherweise ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement Open (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement Open(string path, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Open(System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Dateipfad für die Daten.</param>
+        <param name="projectCollection">Die projektauflistung, das das zu initialisierende enthält.</param>
+        <summary>Initialisiert einen Projektstamm in der Auflistung angegebenen Projekt Laden von Daten aus den angegebenen Dateipfad.</summary>
+        <returns>Gibt den initialisierten Projektstamm zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ InvalidProjectFileException möglicherweise ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFileLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ProjectFileLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ProjectFileLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort der ursprünglichen Datei selbst, aber keine bestimmte Inhalt auf. Wenn die Datei kein Name zugewiesen wurde, ist dies ein leerer Speicherort. Dies ist ein legitimen Fall, dass kein Speicherort.</summary>
+        <value>Gibt den ursprünglichen Speicherort oder ein leerer Speicherort zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyElement&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectPropertyElement&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Eigenschaften in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten Eigenschaften in diesem Projekt zurück, auch wenn sie durch Auswählen von Elementen enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyGroups">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyGroupElement&gt; PropertyGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectPropertyGroupElement&gt; PropertyGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.PropertyGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Eigenschaftengruppen in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten Eigenschaftengruppen in diesem Projekt zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umfasst keine Elementgruppen enthaltenen Elemente auswählen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyGroupsReversed">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyGroupElement&gt; PropertyGroupsReversed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectPropertyGroupElement&gt; PropertyGroupsReversed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.PropertyGroupsReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyGroupElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Eigenschaftengruppen in diesem Projekt mit der letzten Gruppe ab.</summary>
+        <value>Gibt alle untergeordneten Eigenschaftengruppen in diesem Projekt beginnend mit der letzten Gruppe zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umfasst keine Elementgruppen enthaltenen Elemente auswählen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawXml">
+      <MemberSignature Language="C#" Value="public string RawXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RawXml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.RawXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den XML-Code ab, das Inhalt, der dieses Projekt darstellt.</summary>
+        <value>Gibt die XML-Inhalt, der dieses Projekt als Zeichenfolge darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markiert den Inhalt als unverändert nicht. Die MSBuild-Objektmodell stellt keine andere Möglichkeit zum Zugriff auf die XML-Inhalte bereit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert das Projekt aus, wenn auf das Dateisystem geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet das Zeichen, die Codierung von der Codierung-Eigenschaft zurückgegeben. Markiert das Projekt als unverändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der TextWriter, das Projekt zu schreiben.</param>
+        <summary>Speichert das Projekt in den angegebenen TextWriter an, ob geändert oder nicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet die zeichencodierung der TextWriter. Markiert das Projekt als unverändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Dateipfad zum Projekt im Speicher.</param>
+        <summary>Speichert das Projekt an, wenn geändert oder der Pfad zum Speicher geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markiert das Projekt als unverändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Text.Encoding saveEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.Text.Encoding saveEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="saveEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="saveEncoding">Die zeichencodierung verwendet zum Speichern des Projekts.</param>
+        <summary>Speichert das Projekt an, wenn mithilfe der angegebenen zeichencodierung geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markiert das Projekt als unverändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string path, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string path, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.Save(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Dateipfad zum Projekt im Speicher.</param>
+        <param name="encoding">Die zeichencodierung verwendet zum Speichern des Projekts.</param>
+        <summary>Speichert das Projekt an, wenn geändert oder der Pfad zum Speicher geändert hat. Mithilfe der angegebenen zeichencodierung...</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markiert das Projekt als unverändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Targets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectTargetElement&gt; Targets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectTargetElement&gt; Targets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Targets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectTargetElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Ziele in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten Ziele in diesem Projekt zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeLastChanged">
+      <MemberSignature Language="C#" Value="public DateTime TimeLastChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeLastChanged" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.TimeLastChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt der letzten Änderung dieses Projekt ab.</summary>
+        <value>Gibt die Uhrzeit der letzten Änderung dieses Projekt zurück. Gibt null zurück, wenn das Projekt nicht geändert wurde, seit erstellt oder geladen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der ToolsVersion-Attribut.</summary>
+        <value>Gibt den Wert der ToolsVersion-Attribut. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ToolsVersion-Attribut entfernt, wenn der Wert auf Null oder eine leere Zeichenfolge ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersionLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ToolsVersionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ToolsVersionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.ToolsVersionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort der ToolsVersion-Attribut für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Speicherort der ToolsVersion-Attribut zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreatAsLocalProperty">
+      <MemberSignature Language="C#" Value="public string TreatAsLocalProperty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TreatAsLocalProperty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des Attributs TreatAsLocalProperty fest.</summary>
+        <value>Gibt den Attributwert TreatAsLocalProperty zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt das TreatAsLocalProperty-Attribut an, wenn der Wert auf Null oder eine leere Zeichenfolge ist.  
+  
+ Weitere Informationen zu den `TreatAsLocalProperty` -Attribut angegeben wird, finden Sie unter [Project-Element (MSBuild)](http://msdn.microsoft.com/library/d1cda56a-dbef-4109-9201-39e962e3f653) und [Vorgehensweise: Erstellen identischer Quelldateien mit unterschiedlichen Optionen](http://msdn.microsoft.com/library/d14f1212-ddd9-434f-b138-f840011b0fb2).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreatAsLocalPropertyLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation TreatAsLocalPropertyLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation TreatAsLocalPropertyLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalPropertyLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Position des Attributs TreatAsLocalProperty für dieses Element, sofern vorhanden.</summary>
+        <value>Gibt den Speicherort der TreatAsLocalProperty-Attribut zurück. Wenn kein solches Attribut vorhanden ist, gibt Sie null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOpen">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement TryOpen (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement TryOpen(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.TryOpen(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad des ProjectRootElement, darf nicht null sein.</param>
+        <summary>Ruft den Projektstamm in der globalen projektauflistung, die vom angegebenen Dateipfad in den Speicher geladen wurde. bzw. Null, wenn es derzeit nicht im Speicher befindet.</summary>
+        <returns>Gibt den Projektstamm zurück. Gibt null zurück, wenn kein Projekt in den Arbeitsspeicher aus dem angegebenen Dateipfad geladen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist möglich, ProjectRootElements Speicher eingebunden und aufgrund von ungenügendem Arbeitsspeicher verworfen werden. Wenn TryOpen null zurückgibt, es nicht dass der Projektstamm nie, nur geladen wurde, die er zurzeit nicht im Arbeitsspeicher ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOpen">
+      <MemberSignature Language="C#" Value="public static Microsoft.Build.Construction.ProjectRootElement TryOpen (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Build.Construction.ProjectRootElement TryOpen(string path, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectRootElement.TryOpen(System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad des ProjectRootElement, darf nicht null sein.</param>
+        <param name="projectCollection">Die projektauflistung zu suchenden Projektstammverzeichnis.</param>
+        <summary>Ruft den Projektstamm in der angegebenen Projekt-Auflistung, die vom angegebenen Dateipfad in den Speicher geladen wurde. bzw. Null, wenn es derzeit nicht im Speicher befindet.</summary>
+        <returns>Gibt den Projektstamm zurück. Gibt null zurück, wenn kein Projekt in den Arbeitsspeicher aus dem angegebenen Dateipfad geladen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist möglich, ProjectRootElements Speicher eingebunden und aufgrund von ungenügendem Arbeitsspeicher verworfen werden. Wenn TryOpen null zurückgibt, es nicht dass der Projektstamm nie, nur geladen wurde, die er zurzeit nicht im Arbeitsspeicher ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsingTasks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectUsingTaskElement&gt; UsingTasks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectUsingTaskElement&gt; UsingTasks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.UsingTasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectUsingTaskElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten [UsingTask-Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) in diesem Projekt.</summary>
+        <value>Gibt alle untergeordneten UsingTask-Elemente in diesem Projekt zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectRootElement.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer dieses Objekts ab.</summary>
+        <value>Gibt die Versionsnummer dieses Objekts zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vergleichen Sie diese Versionsnummer, um eine gespeicherte Versionsnummer, um zu bestimmen, ob das Projekt XML-Inhalt geändert wurde, selbst wenn das Projekt nach der Änderung gespeichert wurde. Eine Bearbeitung kann die Versionsnummer mehrmals erhöht, damit Version nur mit dem gespeicherten Wert verglichen werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

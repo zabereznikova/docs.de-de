@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Services.Configuration">
+  <Docs>
+    <summary>Dieser Namespace stellt die Konfigurationseinstellungen für WCF Data Services-Funktionen bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

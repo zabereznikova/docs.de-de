@@ -1,0 +1,131 @@
+<Type Name="PeerResolverElement" FullName="System.ServiceModel.Configuration.PeerResolverElement">
+  <TypeSignature Language="C#" Value="public sealed class PeerResolverElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PeerResolverElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.PeerResolverElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert das Konfigurationselement für einen Peerresolver.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerResolverElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PeerResolverElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.PeerResolverElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.PeerCustomResolverElement Custom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.PeerCustomResolverElement Custom" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.Custom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("custom")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.PeerCustomResolverElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Konfigurationselement für diesen Peerresolver ab, wenn es sich um eine benutzerdefinierte Peerresolverimplementierung handelt.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.Configuration.PeerCustomResolverElement" />, das das Konfigurationselement für den Peerresolver enthält, wenn es sich um eine benutzerdefinierte Peerresolverimplementierung handelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält eine Instanz von <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>, wenn die <xref:System.ServiceModel.Configuration.PeerResolverElement.Mode%2A>-Eigenschaft auf <xref:System.ServiceModel.PeerResolvers.PeerResolverMode.Custom> festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.PeerResolverMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.PeerResolvers.PeerResolverMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.PeerResolverMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des durch dieses Konfigurationselement dargestellten Peerresolvers ab oder legt ihn fest.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerResolvers.PeerResolverMode" />-Enumerationswert, der den Typ des durch dieses Konfigurationselement dargestellten Peerresolvers angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferralPolicy">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.PeerReferralPolicy ReferralPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.PeerResolvers.PeerReferralPolicy ReferralPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.ReferralPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("referralPolicy", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.PeerReferralPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Verweisrichtlinie für mit diesem Element konfigurierte Peerresolver ab oder legt sie fest.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerResolvers.PeerReferralPolicy" />, der die Verweisrichtlinie für mit diesem Element konfigurierte Peerresolver angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

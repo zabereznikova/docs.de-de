@@ -1,0 +1,192 @@
+<Type Name="BuildSubmission" FullName="Microsoft.Build.Execution.BuildSubmission">
+  <TypeSignature Language="C#" Value="public class BuildSubmission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildSubmission extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildSubmission" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Buildanforderung gesendet wurde, die dem Build-Manager für die Verarbeitung. Die Methoden dieser Klasse können synchron oder asynchron Build-Anforderungen ausführen und für den Zugriff auf die Ergebnisse nach dem Abschluss verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist threadsicher.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncContext">
+      <MemberSignature Language="C#" Value="public object AsyncContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AsyncContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.AsyncContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den asynchronen Kontext bereitgestellt, um <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />, sofern vorhanden.</summary>
+        <value>Gibt den asynchronen Kontext bereitgestellt, um <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />. Gibt null zurück, wenn kein Kontext bereitgestellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildManager">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildManager BuildManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.BuildManager BuildManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.BuildManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Build-Manager, dem dieser Buildübermittlung zugeordnet ist.</summary>
+        <value>Gibt den Build-Manager, dem dieser Buildübermittlung zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildResult">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResult BuildResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.BuildResult BuildResult" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.BuildResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Ergebnis des Builds fest.</summary>
+        <value>Das Ergebnis des Builds zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis ist nicht gültig bis <xref:Microsoft.Build.Execution.BuildSubmission.WaitHandle%2A> signalisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResult Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.BuildResult Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmission.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet eine Buildanforderung synchron und wartet, bis Ergebnisse verfügbar sind.</summary>
+        <returns>Gibt die Buildanforderung zurück.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anforderung wurde bereits gestartet oder bereits abgeschlossen ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsync">
+      <MemberSignature Language="C#" Value="public void ExecuteAsync (Microsoft.Build.Execution.BuildSubmissionCompleteCallback callback, object context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExecuteAsync(class Microsoft.Build.Execution.BuildSubmissionCompleteCallback callback, object context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="Microsoft.Build.Execution.BuildSubmissionCompleteCallback" />
+        <Parameter Name="context" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Die Rückrufmethode aufgerufen werden, wenn die Buildübermittlung abgeschlossen ist.</param>
+        <param name="context">Der Kontext, in dem die Buildübermittlung auftritt.</param>
+        <summary>Startet eine Buildanforderung, asynchron und innerhalb des angegebenen Kontexts. Steuerung wird sofort an den Aufrufer zurückgegeben.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anforderung wurde bereits gestartet oder bereits abgeschlossen ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Buildübermittlung abgeschlossen ist.</summary>
+        <value>Gibt "true" zurück, wenn die Buildübermittlung abgeschlossen ist; "false" andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmissionId">
+      <MemberSignature Language="C#" Value="public int SubmissionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubmissionId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.SubmissionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine ID, die Buildübermittlung eindeutig identifiziert.</summary>
+        <value>Gibt eine ID, die Buildübermittlung eindeutig identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese ID wird verwendet, um dieser Buildübermittlung von anderen Buildübermittlungen innerhalb des gleichen Builds zu unterscheiden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle WaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle WaitHandle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildSubmission.WaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Threading.WaitHandle" /> -Objekt, das signalisiert wird, wenn der Build abgeschlossen ist.</summary>
+        <value>Gibt null bis <see cref="M:Microsoft.Build.Execution.BuildSubmission.Execute" /> oder <see cref="M:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)" /> zurückgibt, dann gibt das Objekt "WaitHandle" zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

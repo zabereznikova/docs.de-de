@@ -1,0 +1,302 @@
+<Type Name="RoleGroupCollection" FullName="System.Web.UI.WebControls.RoleGroupCollection">
+  <TypeSignature Language="C#" Value="public sealed class RoleGroupCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RoleGroupCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RoleGroupCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.RoleGroupCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine sequenzielle Liste der Rollengruppen, die die <see cref="T:System.Web.UI.WebControls.LoginView" /> Steuerelement verwendet, um zu bestimmen, welche Steuerelementvorlage für Benutzer, die basierend auf ihrer Rolle angezeigt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RoleGroupCollection> Klasse verwaltet die Liste der Rollengruppen, die mit einem bestimmten verknüpften <xref:System.Web.UI.WebControls.LoginView> Vorlage. Jede Rollengruppe definiert den Inhalt und die Steuerelemente, die eine bestimmte Gruppe von Benutzern auf Ihrer Website angezeigt. Es ist möglich, mehrere Rollengruppen der gleichen Vorlage zuzuweisen.  
+  
+ Um die Rollengruppe "" in der Auflistung gesucht werden soll, die ein bestimmter Benutzer gehört, können Sie die <xref:System.Web.UI.WebControls.RoleGroupCollection.GetMatchingRoleGroup%2A> Methode, um der Auflistung über den Benutzernamen zu suchen.  
+  
+> [!CAUTION]
+>  Die Reihenfolge der Rollen in der <xref:System.Web.UI.WebControls.RoleGroupCollection> Auflistung ist wichtig, da Abgleich sequenziell basierend auf der ersten Rolle gefunden erfolgt.  
+  
+ Sie müssen konfigurieren, Rollenverwaltung verwenden die <xref:System.Web.UI.WebControls.RoleGroupCollection> Klasse, um eine Liste der Rollengruppen verwalten. Weitere Informationen finden Sie unter [Grundlegendes zur Rollenverwaltung](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleGroupCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.RoleGroupCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.RoleGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.RoleGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.Add(System.Web.UI.WebControls.RoleGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Web.UI.WebControls.RoleGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">Der der Auflistung hinzuzufügende <see cref="T:System.Web.UI.WebControls.RoleGroup" />.</param>
+        <summary>Fügt eine Rollengruppe bis zum Ende der Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel fügt ein dynamisch erstelltes <xref:System.Web.UI.WebControls.RoleGroup> -Objekt an die <xref:System.Web.UI.WebControls.RoleGroupCollection>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.RoleGroup> Klasse.  
+  
+ [!code-csharp[RoleGroupClass#2](~/samples/snippets/csharp/VS_Snippets_WebNet/RoleGroupClass/CS/rolegroupclasscs.aspx#2)]
+ [!code-vb[RoleGroupClass#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RoleGroupClass/VB/rolegroupclassvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.RoleGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.RoleGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.Contains(System.Web.UI.WebControls.RoleGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Web.UI.WebControls.RoleGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">Die <see cref="T:System.Web.UI.WebControls.RoleGroup" /> , der in der Auflistung gesucht.</param>
+        <summary>Gibt an, ob die Auflistung die angegebene Rolle-Gruppe enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Rolle-Gruppe ein Element der Auflistung ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.RoleGroup[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.RoleGroup[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.CopyTo(System.Web.UI.WebControls.RoleGroup[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.RoleGroup[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes Array von <see cref="T:System.Web.UI.WebControls.RoleGroup" /> Kopieren von Objekten, die die Elemente aus der Auflistung.</param>
+        <param name="index">Die Position im Zielarray, an dem das Array startet den Empfang von kopierten Elemente.</param>
+        <summary>Kopiert alle Elemente aus der <see cref="T:System.Web.UI.WebControls.RoleGroupCollection" /> Auflistung in ein kompatibles eindimensionales Array von <see cref="T:System.Web.UI.WebControls.RoleGroup" /> -Objekten, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RoleGroupCollection.CopyTo%2A> Methode, um den Inhalt der Auflistung in das angegebene nullbasierte Array kopieren. Elemente werden kopiert, beginnend am angegebenen Index des Zielarrays. Nachdem die Elemente in einem Array sind, können Sie Arraysyntax verwenden, den Zugriff auf die Elemente in der <xref:System.Web.UI.WebControls.RoleGroupCollection> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingRoleGroup">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.RoleGroup GetMatchingRoleGroup (System.Security.Principal.IPrincipal user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.RoleGroup GetMatchingRoleGroup(class System.Security.Principal.IPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.GetMatchingRoleGroup(System.Security.Principal.IPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RoleGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.Security.Principal.IPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="user">Eine <see cref="T:System.Security.Principal.IPrincipal" /> , die das Benutzerkonto die Rolle Auflistung gefunden darstellt.</param>
+        <summary>Gibt die erste Rollengruppe, die das angegebene Benutzerkonto enthält.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.RoleGroup" /> , die in der Auflistung, die dem angegebenen Benutzerkonto aus die erste Rollengruppe darstellt. Wenn der Benutzer, die nicht Teil einer Rollengruppe in der Auflistung ist, gibt es <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RoleGroupCollection.GetMatchingRoleGroup%2A> Methode sucht in der Auflistung der Rolle-Gruppe, und gibt die erste Rollengruppe, die das angegebene Benutzerkonto enthält. Die Methode sucht in der Auflistung in der Reihenfolge-Rolle, die Gruppen der Auflistung hinzugefügt werden, und gibt nur die erste übereinstimmende Rollengruppe.  
+  
+ Wenn das angegebene Benutzerkonto nicht Teil der Rollengruppen in der Auflistung ist `null` wird zurückgegeben.  
+  
+ Sie müssen konfigurieren, Rollenverwaltung verwenden die <xref:System.Web.UI.WebControls.RoleGroupCollection.GetMatchingRoleGroup%2A> Methode. Weitere Informationen finden Sie unter [Grundlegendes zur Rollenverwaltung](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="user" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.RoleGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.RoleGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.IndexOf(System.Web.UI.WebControls.RoleGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Web.UI.WebControls.RoleGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">Die <see cref="T:System.Web.UI.WebControls.RoleGroup" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Sucht in der Auflistung und gibt den nullbasierten Index des ersten Vorkommens des angegebenen <see cref="T:System.Web.UI.WebControls.RoleGroup" />.</summary>
+        <returns>Der nullbasierte Index des ggf. ersten Vorkommens von <paramref name="group" /> in der gesamten <see cref="T:System.Web.UI.WebControls.RoleGroupCollection" />, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RoleGroupCollection.IndexOf%2A> Methode führt eine lineare Suche ist die durchschnittliche Ausführungszeit daher hängt die Anzahl der Elemente in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.RoleGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.RoleGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.Insert(System.Int32,System.Web.UI.WebControls.RoleGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="group" Type="System.Web.UI.WebControls.RoleGroup" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem die Rollengruppe "" eingefügt werden soll.</param>
+        <param name="group">Die Rollengruppe eingefügt werden soll.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.WebControls.RoleGroup" /> auf die Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RoleGroupCollection.Insert%2A> Methode fügt das angegebene <xref:System.Web.UI.WebControls.RoleGroup> am angegebenen Speicherort. Rollengruppen, die von der Einfügemarke nach unten in der Auflistung an das neue Element aufzunehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.RoleGroup this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.RoleGroup Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RoleGroupCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RoleGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Rolle "" Gruppe "zurückgegeben.</param>
+        <summary>Ruft die Rollengruppe "" am angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.Web.UI.WebControls.RoleGroup" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.RoleGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.RoleGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroupCollection.Remove(System.Web.UI.WebControls.RoleGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Web.UI.WebControls.RoleGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">Die aus der Auflistung zu entfernende <see cref="T:System.Web.UI.WebControls.RoleGroup" />.</param>
+        <summary>Löscht das erste Vorkommen der angegebenen Rolle-Gruppe aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die erste Instanz des angegebenen <xref:System.Web.UI.WebControls.RoleGroup> Objekt entfernt wird, aus der <xref:System.Web.UI.WebControls.RoleGroupCollection> Auflistung. Gruppen, die die entfernte Gruppe folgen, werden im Index oben verschoben, und die frei gewordene Stelle füllt. Wenn mehr als eine des angegebenen Instanz <xref:System.Web.UI.WebControls.RoleGroup> Objekt wird nur die erste Instanz entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

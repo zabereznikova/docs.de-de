@@ -1,0 +1,15 @@
+<Namespace Name="System.Runtime.Remoting.Lifetime">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Lifetime" /> -Namespace enthält Klassen, die die Lebensdauer des remote-Objekte zu verwalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Üblicherweise verwendet die verteilte Garbagecollection Verweiszähler und Ping-Signale zur Steuerung der Lebensdauer von Objekten. Dies funktioniert gut, wenn einige Clients pro Dienst, jedoch nicht gut, wenn Tausende von Clients pro Dienst skalieren. Der Remotedienst Lebensdauer ordnet eine Lease mit jedem Dienst und löscht einen Dienst nach Ablauf der Leasedauer. Die Lebensdauerdienst kann für die Funktion von einem herkömmlichen verteilten Garbage Collector dauern, und es auch passt auch wenn die Anzahl der Clients pro Server zunimmt.  
+  
+ Jede Anwendungsdomäne enthält einen Lease-Manager, der zum Steuern von Leases in seiner Domäne verantwortlich ist. Alle Leases sind für abgelaufene Leasedauer in regelmäßigen Abständen geprüft werden. Wenn eine Lease abgelaufen ist, werden eine oder mehrere der Lease Sponsoren aufgerufen und die Möglichkeit, die Adresslease zu erneuern. Wenn keines der Sponsoren entscheidet, die Lease zu verlängern, der Lease-Manager entfernt die Lease, und das Objekt vom Garbage Collector gesammelt werden kann. Der Lease-Manager verwaltet eine Liste mit Leases verbleibenden Leasedauer geordnet. Die Lease mit der kürzesten verbleibenden Zeit werden am oberen Rand der Liste gespeichert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

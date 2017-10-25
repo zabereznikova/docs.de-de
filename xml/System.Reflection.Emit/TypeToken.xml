@@ -1,0 +1,193 @@
+<Type Name="TypeToken" FullName="System.Reflection.Emit.TypeToken">
+  <TypeSignature Language="C#" Value="public struct TypeToken" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit TypeToken extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.TypeToken" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die <see langword="Token" /> zurückgegeben, durch die Metadaten, um einen Typ darzustellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ eines Objekts ist auch bekannt als die Klasse eines Objekts.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Reflection.Emit.TypeToken Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Reflection.Emit.TypeToken Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.TypeToken.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.TypeToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standardeinstellung <see langword="TypeToken" /> mit <see cref="P:System.Reflection.Emit.TypeToken.Token" /> Wert 0.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.TypeToken.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit diesem TypeToken verglichen werden soll.</param>
+        <summary>Überprüft, ob das angegebene Objekt eine Instanz ist <see langword="TypeToken" /> und gleich dieser Instanz ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> eine Instanz von <see langword="TypeToken" /> und gleich diesem Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Reflection.Emit.TypeToken obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Reflection.Emit.TypeToken obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.TypeToken.Equals(System.Reflection.Emit.TypeToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Reflection.Emit.TypeToken" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der <see cref="T:System.Reflection.Emit.TypeToken" />, der mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt an, ob die aktuelle Instanz und der angegebene <see cref="T:System.Reflection.Emit.TypeToken" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert von <paramref name="obj" /> dem Wert der aktuellen Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.TypeToken.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert den Hashcode für diesen Typ an.</summary>
+        <returns>Gibt den Hashcode für diesen Typ zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.Emit.TypeToken a, System.Reflection.Emit.TypeToken b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Reflection.Emit.TypeToken a, valuetype System.Reflection.Emit.TypeToken b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.TypeToken.op_Equality(System.Reflection.Emit.TypeToken,System.Reflection.Emit.TypeToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Emit.TypeToken" />
+        <Parameter Name="b" Type="System.Reflection.Emit.TypeToken" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die <see cref="T:System.Reflection.Emit.TypeToken" /> für den Vergleich <c>b</c>.</param>
+        <param name="b">Die <see cref="T:System.Reflection.Emit.TypeToken" /> für den Vergleich <c>eine</c>.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.Emit.TypeToken" />-Strukturen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Reflection.Emit.TypeToken.Equals%28System.Reflection.Emit.TypeToken%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.Emit.TypeToken a, System.Reflection.Emit.TypeToken b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Reflection.Emit.TypeToken a, valuetype System.Reflection.Emit.TypeToken b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.TypeToken.op_Inequality(System.Reflection.Emit.TypeToken,System.Reflection.Emit.TypeToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Emit.TypeToken" />
+        <Parameter Name="b" Type="System.Reflection.Emit.TypeToken" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die <see cref="T:System.Reflection.Emit.TypeToken" /> für den Vergleich <c>b</c>.</param>
+        <param name="b">Die <see cref="T:System.Reflection.Emit.TypeToken" /> für den Vergleich <c>eine</c>.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.Emit.TypeToken" />-Strukturen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Reflection.Emit.TypeToken.Equals%28System.Reflection.Emit.TypeToken%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public int Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Token" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.TypeToken.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Metadatentoken für diese Klasse ab.</summary>
+        <value>Schreibgeschützt. Ruft das Metadatentoken dieses Typs ab.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

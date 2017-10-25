@@ -1,0 +1,134 @@
+<Type Name="Form+ControlCollection" FullName="System.Windows.Forms.Form+ControlCollection">
+  <TypeSignature Language="C#" Value="public class Form.ControlCollection : System.Windows.Forms.Control.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit Form/ControlCollection extends System.Windows.Forms.Control/ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Form.ControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von Steuerelemente auf dem Formular dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt die Auflistung der Steuerelemente in einem Formular. Können Sie die <xref:System.Windows.Forms.Form.ControlCollection.Add%2A> Methode, um dem Formular ein Steuerelement hinzuzufügen und die <xref:System.Windows.Forms.Form.ControlCollection.Remove%2A> Methode, um das Steuerelement aus dem Formular zu entfernen. Die Control-Auflistung, die von dieser Klasse dargestellt kann nur an eine bestimmte Form erstellt werden. Daher nicht, erstellen mehrere Instanzen dieser Steuerelement-Sammlung und interchange sie mit der eine aktive Formular Steuerelementlayouts für andere bereitstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel fügt ein <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.Label> Steuerelement auf die steuerelementauflistung eines Formulars. Beispiel erforderlich, dass ein Formular erstellt und mit dem Namen wurden `Form1`.  
+  
+ [!code-cpp[Classic Form.ControlCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Form.ControlCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic Form.ControlCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Form.ControlCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlCollection (System.Windows.Forms.Form owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Form owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Form.ControlCollection.#ctor(System.Windows.Forms.Form)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.Form" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.Form" /> steuerelementauflistung hinzugefügten Steuerelemente enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Form.ControlCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor können Sie die Auflistung der Steuerelemente zum Formular, um Steuerelemente auf dem Formular hinzugefügt werden können ordnungsgemäß zu binden.  
+  
+> [!NOTE]
+>  Da die Auflistung der Steuerelemente mit einer bestimmten Form erstellt werden muss, nicht mehrere Sammlungen von Steuerelementen und interchange sie mit dem Formular.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Windows.Forms.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Windows.Forms.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Form.ControlCollection.Add(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Windows.Forms.Control" /> auf dem Formular hinzuzufügen.</param>
+        <summary>Das Formular hinzugefügt ein Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, auf dem Formular Steuerelemente hinzuzufügen. Wenn Sie eine Gruppe von bereits erstellten Steuerelementen zum Formular hinzufügen möchten, verwenden Sie die <xref:System.Windows.Forms.Control.ControlCollection.AddRange%2A?displayProperty=nameWithType> Methode der <xref:System.Windows.Forms.Control.ControlCollection> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel fügt ein <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.Label> Steuerelement auf die steuerelementauflistung eines Formulars. Beispiel erforderlich, dass ein Formular erstellt und mit dem Namen wurden `Form1`.  
+  
+ [!code-cpp[Classic Form.ControlCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Form.ControlCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Form.ControlCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic Form.ControlCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Form.ControlCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Eine übergeordnete Formular von multiple Document Interface (MDI) sind keine Steuerelemente hinzugefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (System.Windows.Forms.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(class System.Windows.Forms.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Form.ControlCollection.Remove(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Windows.Forms.Control" /> aus dem Formular zu entfernen.</param>
+        <summary>Entfernt ein Steuerelement aus dem Formular an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, zum Entfernen von Steuerelementen, die Sie nicht mehr in Ihrem Formular benötigen. Wenn Sie möchten ein Steuerelement angezeigt wird, nachdem er entfernt wurde, müssen Sie das Steuerelement an die Verwendung des Formulars hinzufügen der <xref:System.Windows.Forms.Form.ControlCollection.Add%2A> Methode. Wenn ein Steuerelement im Formular bleiben jedoch nicht angezeigt wird, verwenden Sie die <xref:System.Windows.Forms.Control.Visible%2A> Eigenschaft des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

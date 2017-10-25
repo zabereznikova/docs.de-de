@@ -1,0 +1,131 @@
+<Type Name="MarkupExtension" FullName="System.Windows.Markup.MarkupExtension">
+  <TypeSignature Language="C#" Value="public abstract class MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MarkupExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.MarkupExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Basisklasse für Implementierungen von XAML-Markuperweiterungen bereit, die von .NET Framework-XAML-Diensten sowie anderen XAML-Readern und XAML-Writern unterstützt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markuperweiterungen geben Objekte basierend auf zeichenfolgenattributwerten oder Markupelementen in XAML-Eingabe Aufrufern zurück. Markuperweiterungen geben Objekte zurück, auf anspruchsvollere Weise als Typkonverter allein ausführen können. Ein XAML-Objektwriter Ruft einen Typkonverter, da ein Typ oder Member eine Typkonverter-Implementierung zugeordnet ist. Von der CLR Referenzrahmen, dies bedeutet, dass ein Typ oder Member <xref:System.ComponentModel.TypeConverterAttribute> attributiert. Aus der Perspektive der Verwendung von XAML-Typ-System, das heißt, dass ein XAML-Typ oder ein XAML-Element einen Wert für die `TypeConverter` Eigenschaft. Der Aufruf eines Typkonverters ist auf die Definition oder den Eigenschaftennamen gebunden und wird vom XAML-Verarbeitung für diese Fälle immer aufgerufen. Im Gegensatz dazu eine Markuperweiterung mehr unter der Kontrolle der Benutzercode als auch Markup Benutzer erstellt und kann angewendet werden, wenn ein Szenario für die Anwendung es erfordert. Eine Markuperweiterung kann aufgerufen werden und kann zum Festlegen von Werten der verschiedenen Typmember, verwendet werden, solange die Markuperweiterung Rückgabetyp zugewiesen werden, um diesen Wert ist.  
+  
+ Informationen zum Erstellen einer benutzerdefinierten Markuperweiterung finden Sie unter <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Weitere Informationen über Markuperweiterungen im Allgemeinen finden Sie unter [Markup Extensions for XAML Overview](~/docs/framework/xaml-services/markup-extensions-for-xaml-overview.md). Wenn Sie auf WPF und verwenden oder erstellen Markuperweiterungen für XAML erstellen, weitere relevante Informationen finden Sie im Thema [Markuperweiterungen und WPF-XAML](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+ Die <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> -Methode jeder Markuperweiterungsimplementierung können eine <xref:System.IServiceProvider> zur Laufzeit, das Kontext bereitstellen kann. Dies <xref:System.IServiceProvider> wird dann abgefragt, für bestimmte Dienste, die Weitergabe von Informationen, wie z. B. <xref:System.Windows.Markup.IProvideValueTarget> oder <xref:System.Windows.Markup.IXamlTypeResolver>. Weitere Informationen über Dienstkontexte für eine Markuperweiterung finden Sie unter [verfügbare Dienstkontexte Typkonverter und Markuperweiterungen](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ Abgeleitete Klassen sollten zugeschrieben werden <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> Consumer, von dem am spezifischsten Rückgabetyp entsprechen, die von der Markuperweiterung informiert <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MarkupExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz einer Klasse abgeleitet <see cref="T:System.Windows.Markup.MarkupExtension" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.MarkupExtension> abstrakte Klasse enthält private Werte, die Initialisierung erfordern.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Eine funktionale Markuperweiterung sollten ihren eigenen öffentlichen Standardkonstruktor definieren. Darüber hinaus sollte die Markuperweiterung Konstruktoren implementieren, die für die Erweiterung beabsichtigten Funktionen und Markupverwendung geeignet sind. Weitere Informationen finden Sie unter [Markup Extensions for XAML Overview](~/docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public abstract object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Dienstanbieter-Hilfsprogramm, das Dienste für die Markuperweiterung bereitstellen kann.</param>
+        <summary>Gibt bei Implementierung in einer abgeleiteten Klasse ein Objekt zurück, das als Wert der Zieleigenschaft für diese Markuperweiterung bereitgestellt wird.</summary>
+        <returns>Der Objektwert, der für die Eigenschaft festgelegt werden soll, auf die die Erweiterung angewendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein XAML-Prozessor einen Knoten und Element, der eine Markuperweiterung ist verarbeitet, ruft der <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> -Methode dieser Markuperweiterung und das Ergebnis in den Objektstream, Diagramm oder der Serialisierung schreibt. Der XAML-Objektwriter übergibt Dienstkontext an jede solche Implementierung über die `serviceProvider` Parameter.  
+  
+ Weitere Informationen zum Implementieren finden Sie unter "Hinweise zur Implementierung" Abschnitt <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> in eine benutzerdefinierte Markuperweiterung.  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+  
+> [!IMPORTANT]
+>  WPF-Klassen, die bestimmte Interaktionen mit Markup-Mengenoperationen verfügen sollten Sie sich nicht auf <xref:System.Windows.Markup.IReceiveMarkupExtension> für eine [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] Implementierung. Verwendung <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>-stattdessen Rückrufe.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Allgemeine Dienste, die von der Standard-Dienstanbieter, der in der Regel an einen benutzerdefinierten verfügbar oder vorhandene zurückgegeben <see cref="T:System.Windows.Markup.MarkupExtension" /> Implementierung enthalten die folgenden primären Dienste.  
+  
+-   <see cref="T:System.Windows.Markup.IProvideValueTarget" />meldet den Objektverweis und einen Eigenschaftenbezeichner aus dem Kontext, wo die Markuperweiterung verwendet wird  
+  
+-   <see cref="T:System.Windows.Markup.IXamlTypeResolver" />einen Dienst, der die allgemeine XAML-Objekt, das Schreiben von Verhalten, das bereitstellen kann parallel macht eine <see cref="T:System.Type" /> basierend auf einem XAML-Typnamen. Der Name kann optional ein Präfix für einen zugeordneten XAML-Namespace enthalten.  
+  
+-   <see cref="T:System.Xaml.IXamlSchemaContextProvider" />macht den aktiven XAML-Schemakontext direkt verfügbar. Aus der gemeldeten <see cref="T:System.Xaml.XamlSchemaContext" />, Informationen erhalten Sie von XAML-Schema Kontext z. B. wie Assemblys, für die Unterstützung von Typen, bevorzugte Präfix in Assemblys zugeordnet sind, listet jedes <see cref="T:System.Xaml.XamlType" /> in einer Assembly und So weiter.  
+  
+-   Andere Dienste verfügbar für spezialisierter Markup Extension-Szenarien umfassen:  
+  
+    -   <see cref="T:System.Windows.Markup.IUriContext" />  
+  
+    -   <see cref="T:System.Xaml.IAmbientProvider" />  
+  
+    -   <see cref="T:System.Xaml.IDestinationTypeProvider" />  
+  
+    -   <see cref="T:System.Xaml.IRootObjectProvider" />  
+  
+    -   <see cref="T:System.Xaml.IXamlNameResolver" />  
+  
+    -   <see cref="T:System.Xaml.IXamlNamespaceResolver" />  
+  
+ Potenziell Implementierungen von <see cref="M:System.Windows.Markup.MarkupExtension.ProvideValue(System.IServiceProvider)" /> können ignorieren die <paramref name="serviceProvider" /> Parameter. Dies ist für einige grundlegende Szenarien, in denen überhaupt kein Kontext für die Rückgabe eines Werts erforderlich ist.  
+  
+ In der typischen Auslastung der .NET Framework-XAML-Dienste und die implementierten XAML-Objekt Writer bietet einen Dienstanbieter, um alle Wert die Konvertermethoden aufruft, die während der XAML aufgerufen werden verarbeitet. Allerdings sollten aus Gründen der Stabilität Sie Codepfade für null-Werte für den Service-Anbieter selbst und für alle angeforderten Dienst bereitstellen. NULL-Werte auftreten, wenn die Markuperweiterung in einer Situation angewendet wird, ist zur Unterstützung typischer Dienst durch einen XAML-Prozessor-Infrastruktur nicht verfügbar.  
+  
+ Weitere Informationen über die verfügbare Dienste aus der Verwendung von XAML-Dienstkontext für Anbieter und deren Verwendung finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+  
+ Implementierungen, die einen bestimmten Dienst verfügbar sind, um nützlich zu erzeugen, erfordern <see cref="M:System.Windows.Markup.MarkupExtension.ProvideValue(System.IServiceProvider)" /> Ergebnis voraussichtlich Ausnahmen auslösen, wenn dieser Dienst nicht verfügbar ist. Ist die empfohlene auszulösende Ausnahme <see cref="T:System.InvalidOperationException" />.  
+  
+ Die Implementierung kann auch Ausnahmen auslösen, wenn eines der Argumente, die die benutzerdefinierte Markuperweiterung benötigt, um zu gewährleisten, dass ein Wert null ist, ist für diesen Datentyp ungültig oder enthält keinen Wert an, dass die Markuperweiterung verarbeiten kann. Ist die empfohlene auszulösende Ausnahme <see cref="T:System.InvalidOperationException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

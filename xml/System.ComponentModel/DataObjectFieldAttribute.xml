@@ -1,0 +1,405 @@
+<Type Name="DataObjectFieldAttribute" FullName="System.ComponentModel.DataObjectFieldAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataObjectFieldAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataObjectFieldAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataObjectFieldAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Metadaten für eine Eigenschaft, die ein Feld "Daten" darstellt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ComponentModel.DataObjectFieldAttribute> Attribut, um Informationen über das Schema der zugrunde liegenden Daten bereitzustellen. Entwurfszeit Klassen wie der <xref:System.Web.UI.Design.WebControls.ObjectDataSourceDesigner> -Klasse verwenden die <xref:System.ComponentModel.DataObjectAttribute> Attribut zum Festlegen von Eigenschaften zur Entwurfszeit basierend auf dem verfügbar gemachten Schema.  
+  
+ Sie gelten die <xref:System.ComponentModel.DataObjectFieldAttribute> -Attribut auf die Member der Element-Objekte, die von der Select-Methode eines Objekts mit markierten zurückgegeben werden die <xref:System.ComponentModel.DataObjectAttribute> Attribut. Im folgenden Beispiel die `NorthwindData` Klasse gekennzeichnet wird, mit der <xref:System.ComponentModel.DataObjectAttribute> -Attribut, und gibt eine <xref:System.Collections.IEnumerable> mit `NorthwindEmployee` Objekte aus der `GetAllEmployees` Methode. Felder in der `NorthwindEmployee` Klasse gekennzeichnet sind, mit der <xref:System.ComponentModel.DataObjectFieldAttribute> Attribut an, dass sie die Datenfelder in der zugrunde liegenden Datenquelle darstellen.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.ComponentModel.DataObjectFieldAttribute> auf eine öffentlich verfügbar gemachten Eigenschaft, mit der Eigenschaft verknüpften Metadaten zu identifizieren. In diesem Beispiel wird die `NorthwindEmployee` Typ macht drei Dateneigenschaften: `EmployeeID`, `FirstName`, und `LastName`. Die <xref:System.ComponentModel.DataObjectFieldAttribute> Attribut gilt für alle drei Eigenschaften; allerdings nur die `EmployeeID` Property-Attribut gibt an, es den Primärschlüssel für die Datenzeile.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#2)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectFieldAttribute (bool primaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool primaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectFieldAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="primaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="primaryKey">
+          <see langword="true" />um anzugeben, dass das Feld im Primärschlüssel der Datenzeile. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataObjectFieldAttribute" /> -Klasse und gibt an, ob das Feld den Primärschlüssel für die Datenzeile ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectFieldAttribute (bool primaryKey, bool isIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool primaryKey, bool isIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectFieldAttribute.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="primaryKey" Type="System.Boolean" />
+        <Parameter Name="isIdentity" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="primaryKey">
+          <see langword="true" />um anzugeben, dass das Feld im Primärschlüssel der Datenzeile. andernfalls <see langword="false" />.</param>
+        <param name="isIdentity">
+          <see langword="true" />um anzugeben, dass das Feld ein Identitätsfeld handelt, die die Datenzeile eindeutig identifiziert. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataObjectFieldAttribute" /> -Klasse und gibt an, ob das Feld für den Primärschlüssel für die Datenzeile ist, und gibt an, ob das Feld ein Identitätsfeld Datenbank ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectFieldAttribute (bool primaryKey, bool isIdentity, bool isNullable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool primaryKey, bool isIdentity, bool isNullable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectFieldAttribute.#ctor(System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="primaryKey" Type="System.Boolean" />
+        <Parameter Name="isIdentity" Type="System.Boolean" />
+        <Parameter Name="isNullable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="primaryKey">
+          <see langword="true" />um anzugeben, dass das Feld im Primärschlüssel der Datenzeile. andernfalls <see langword="false" />.</param>
+        <param name="isIdentity">
+          <see langword="true" />um anzugeben, dass das Feld ein Identitätsfeld handelt, die die Datenzeile eindeutig identifiziert. andernfalls <see langword="false" />.</param>
+        <param name="isNullable">
+          <see langword="true" />um anzugeben, dass das Feld im Datenspeicher null sein kann. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataObjectFieldAttribute" /> -Klasse und gibt an, ob das Feld für den Primärschlüssel für die Datenzeile ist, gibt an, ob das Feld ein Identitätsfeld Datenbank ist und gibt an, ob das Feld null sein kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.ComponentModel.DataObjectFieldAttribute> auf eine öffentlich verfügbar gemachten Eigenschaft, mit der Eigenschaft verknüpften Metadaten zu identifizieren. In diesem Beispiel wird die `NorthwindEmployee` Typ macht drei Dateneigenschaften: `EmployeeID`, `FirstName`, und `LastName`. Die <xref:System.ComponentModel.DataObjectFieldAttribute> Attribut gilt für alle drei Eigenschaften; allerdings nur die `EmployeeID` Property-Attribut gibt an, es den Primärschlüssel für die Datenzeile.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#2)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectFieldAttribute (bool primaryKey, bool isIdentity, bool isNullable, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool primaryKey, bool isIdentity, bool isNullable, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectFieldAttribute.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="primaryKey" Type="System.Boolean" />
+        <Parameter Name="isIdentity" Type="System.Boolean" />
+        <Parameter Name="isNullable" Type="System.Boolean" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="primaryKey">
+          <see langword="true" />um anzugeben, dass das Feld im Primärschlüssel der Datenzeile. andernfalls <see langword="false" />.</param>
+        <param name="isIdentity">
+          <see langword="true" />um anzugeben, dass das Feld ein Identitätsfeld handelt, die die Datenzeile eindeutig identifiziert. andernfalls <see langword="false" />.</param>
+        <param name="isNullable">
+          <see langword="true" />um anzugeben, dass das Feld im Datenspeicher null sein kann. andernfalls <see langword="false" />.</param>
+        <param name="length">Die Länge des Felds in Bytes.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataObjectFieldAttribute" /> -Klasse und gibt an, ob das Feld für den Primärschlüssel für die Datenzeile ist, gibt an, ob es sich um ein Identitätsfeld Datenbank ist und gibt an, ob es null sein kann, und legt die Länge des Felds fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectFieldAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll <see cref="T:System.ComponentModel.DataObjectFieldAttribute" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz identisch mit der Instanz, die gemäß ist der <paramref name="obj" /> Parameter ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt, ob diese Instanz von <xref:System.ComponentModel.DataObjectFieldAttribute> dem Muster eines anderen Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectFieldAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentity">
+      <MemberSignature Language="C#" Value="public bool IsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataObjectFieldAttribute.IsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine Eigenschaft ein Identitätsfeld in den zugrunde liegenden Daten darstellt.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft ein Identitätsfeld in den zugrunde liegenden Daten darstellt; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.ComponentModel.DataObjectFieldAttribute.IsIdentity%2A> Eigenschaft `true` bei der <xref:System.ComponentModel.DataObjectFieldAttribute> -Attribut angewendet wird, um eine Eigenschaft, die ein Identitätsfeld im zugrunde liegenden Datenspeicher darstellt. In der Regel ein Identitätsfeld wird vom Datenspeicher generiert und eindeutig identifiziert eine Entität im Datenspeicher.  
+  
+ Legen Sie die <xref:System.ComponentModel.DataObjectFieldAttribute.IsIdentity%2A> Eigenschaft mit einem der <xref:System.ComponentModel.DataObjectFieldAttribute> Konstruktoren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public bool IsNullable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataObjectFieldAttribute.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine Eigenschaft, ein Feld darstellt, die in den zugrunde liegenden Datenspeicher null sein kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft ein Feld, die in den zugrunde liegenden Datenspeicher null sein kann darstellt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.ComponentModel.DataObjectFieldAttribute.IsNullable%2A> Eigenschaft `true` beim Klicken Sie dann <xref:System.ComponentModel.DataObjectFieldAttribute> -Attribut angewendet wird, um eine Eigenschaft, die ein Feld in der zugrunde liegenden Datenspeicher darstellt, die festgelegt werden kann auf Null. Der Wert, der Null-Datenspeicher kann von abweichen `null` in der Programmiersprache ab.  
+  
+ Legen Sie die <xref:System.ComponentModel.DataObjectFieldAttribute.IsNullable%2A> Eigenschaft mit einem der <xref:System.ComponentModel.DataObjectFieldAttribute> Konstruktoren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataObjectFieldAttribute.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Eigenschaft in Bytes ab.</summary>
+        <value>Die Länge der Eigenschaft in Bytes oder-1 zurück, wenn festgelegt nicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.ComponentModel.DataObjectFieldAttribute.Length%2A> Eigenschaft, um die Länge in Bytes, der Daten aus dem zugrunde liegenden Datenspeicher. Wenn die <xref:System.ComponentModel.DataObjectFieldAttribute.Length%2A> Eigenschaft nicht festgelegt ist, wird es-1 sein.  
+  
+ Legen Sie die <xref:System.ComponentModel.DataObjectFieldAttribute.Length%2A> Eigenschaft mit einem der <xref:System.ComponentModel.DataObjectFieldAttribute> Konstruktoren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryKey">
+      <MemberSignature Language="C#" Value="public bool PrimaryKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataObjectFieldAttribute.PrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine Eigenschaft in den Primärschlüssel in der zugrunde liegenden Daten.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft im Primärschlüssel des Datenspeichers ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.ComponentModel.DataObjectFieldAttribute.PrimaryKey%2A> Eigenschaft `true` bei der <xref:System.ComponentModel.DataObjectFieldAttribute> -Attribut angewendet wird, um eine Eigenschaft, die den Primärschlüsselwert der zugrunde liegenden Daten darstellt. Der Primärschlüssel wird in der Regel von den zugrunde liegenden Datenspeicher zur eindeutigen Identifizierung eine Entität im Datenspeicher, verwendet und häufig, jedoch ist nicht erforderlich, einen Datenspeicher-Identitätsfeld.  
+  
+ Legen Sie die <xref:System.ComponentModel.DataObjectFieldAttribute.PrimaryKey%2A> Eigenschaft mit einem der <xref:System.ComponentModel.DataObjectFieldAttribute> Konstruktoren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

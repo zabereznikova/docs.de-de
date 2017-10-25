@@ -1,0 +1,84 @@
+<Type Name="RecognizerState" FullName="System.Speech.Recognition.RecognizerState">
+  <TypeSignature Language="C#" Value="public enum RecognizerState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecognizerState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.RecognizerState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Listet Werte des Zustands der Erkennung auf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Speech.Recognition.RecognizerState>Kapselt den Ausführungsstatus der Standard-Spracherkennungsmoduls für Clients mit <xref:System.Speech.Recognition.SpeechRecognizer> Zugriff auf den Dienst Windows Desktop Speech Recognition-Technologie.  
+  
+ Anwendungen können den aktuellen Zustand des Moduls desktop Recognition als Abrufen einer <xref:System.Speech.Recognition.RecognizerState> Objekt durch Abfragen der <xref:System.Speech.Recognition.SpeechRecognizer.State%2A> Eigenschaft auf einen <xref:System.Speech.Recognition.SpeechRecognizer> Instanz.  Um den Status der desktop Erkennungsmodul zu erhalten, nach dem ändern, können Anwendungen Abfragen der <xref:System.Speech.Recognition.StateChangedEventArgs.RecognizerState%2A> Eigenschaft von der <xref:System.Speech.Recognition.StateChangedEventArgs> -Objekt übergeben, um einen Handler für <xref:System.Speech.Recognition.SpeechRecognizer.StateChanged> Ereignisse.  
+  
+> [!NOTE]
+>  <xref:System.Speech.Recognition.SpeechRecognitionEngine>in-Process-Instanzen ausgeführt werden und ihre Ausführungsstatus wird unter der Kontrolle der Anwendung. Aus diesem Grund <xref:System.Speech.Recognition.SpeechRecognitionEngine> enthält keine zurückzugebende Eigenschaft ein <xref:System.Speech.Recognition.RecognizerState> Objekt.  
+  
+ Der Status eines Servers Recognition desktop Sprache ist eine schreibgeschützte Eigenschaft und kann nicht programmgesteuert kontrolliert werden. Benutzer können eine freigegebene Spracherkennung Zustand mit der Spracherkennung-Benutzeroberfläche (UI) ändern oder über die **Spracherkennung** Mitglied der Windows **Systemsteuerung**.  
+  
+ Sowohl die **auf** und **Standbymodus** Einstellungen in der Sprache Recognition Benutzeroberfläche entsprechen den `Listening` Zustand. Die **deaktiviert** Einstellung in der Sprache Recognition Benutzeroberfläche entspricht beendet.  
+  
+ <xref:System.Speech.Recognition.SpeechRecognizer.Enabled%2A>ist die andere Eigenschaft, die wirkt sich auf die Bereitschaft des freigegebenen Spracherkennungsmoduls zum Empfangen und Verarbeiten von Spracheingabe. Sie können <xref:System.Speech.Recognition.SpeechRecognizer.Enabled%2A> steuern, und zwar unabhängig davon, ob eine freigegebenen Spracherkennungsmoduls des Grammatiken für Recognition aktiv sind. Allerdings ändern die <xref:System.Speech.Recognition.SpeechRecognizer.Enabled%2A> Eigenschaft hat keine Auswirkungen auf die <xref:System.Speech.Recognition.RecognizerState> Eigenschaft.  
+  
+ Informationen wie z. B. die Beschreibung, der unterstützten Kultur und audio-Formate und der Modulname Recognition in gekapselt der <xref:System.Speech.Recognition.RecognizerInfo> Typ.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel zeigt eine Anwendung den Status des eine Erkennung in seiner Implementierung von einem Handler für das <xref:System.Speech.Recognition.SpeechRecognizer.StateChanged> Ereignis.  
+  
+```  
+  
+_recognizer.StateChanged +=  
+    delegate(object sender, StateChangedEventArgs eventArgs) {  
+        _recognizerStateLabel.Text = "Speech Recognizer State: " + eventArgs.RecognizerState.ToString();  
+    };  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Listening">
+      <MemberSignature Language="C#" Value="Listening" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.RecognizerState Listening = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.RecognizerState.Listening" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizerState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Erkennungsmodul ist verfügbar, um Audioeingaben zu empfangen und zu analysieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopped">
+      <MemberSignature Language="C#" Value="Stopped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.RecognizerState Stopped = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.RecognizerState.Stopped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizerState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Erkennungsmodul empfängt oder analysiert keine Audioeingabe.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

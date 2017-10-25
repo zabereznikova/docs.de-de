@@ -1,0 +1,41 @@
+<Type Name="IPersistedSelector" FullName="System.Web.UI.WebControls.IPersistedSelector">
+  <TypeSignature Language="C#" Value="public interface IPersistedSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersistedSelector" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IPersistedSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Eigenschaft, die von verwendet wird, die <see cref="T:System.Web.DynamicData.DynamicDataManager" /> Steuerelement zum Auswählen von Daten in einem datengebundenen Steuerelement über die Abfragezeichenfolge zu aktivieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataKey">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKey DataKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKey DataKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IPersistedSelector.DataKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Daten-Schlüssel-Wert für den ausgewählten Datensatz in einem datengebundenen Steuerelement.</summary>
+        <value>Der Schlüssel zur Wert für den ausgewählten Datensatz in einem datengebundenen Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.IPersistedSelector.DataKey%2A> -Eigenschaft unterscheidet sich von der Standardeinstellung Auswahl, die durch das datengebundene Steuerelement getroffen werden, da das ausgewählte Element kann über mehrere Seiten beibehalten werden und das Element möglicherweise nicht auf der aktuellen Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

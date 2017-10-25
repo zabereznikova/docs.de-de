@@ -1,0 +1,170 @@
+<Type Name="XamlTypeTypeConverter" FullName="System.Xaml.Schema.XamlTypeTypeConverter">
+  <TypeSignature Language="C#" Value="public class XamlTypeTypeConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlTypeTypeConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.Schema.XamlTypeTypeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert ein <see cref="T:System.Xaml.XamlType" />-Objekt in eine und aus einer Zeichenfolge, die den Typnamen darstellt. Diese Funktionalität wird für die XAML-Erweiterbarkeit durch Markupdefinitionen über <see cref="T:System.Windows.Markup.PropertyDefinition" /> verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlTypeTypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeTypeConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.Schema.XamlTypeTypeConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="sourceType">Der Typ für die Konvertierung ausgewertet wird.</param>
+        <summary>Bestimmt, ob ein Objekt des angegebenen Typs kann, mit einer Instanz von konvertiert werden <see cref="T:System.Xaml.XamlType" />, mit dem angegebenen Kontext.</summary>
+        <returns>
+          <see langword="true" />Wenn dieser Konverter den Vorgang ausführen kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.Schema.XamlTypeTypeConverter> Klasse konvertiert nur eine Instanz von <xref:System.Xaml.XamlType> in und aus einem <xref:System.String> (oder <xref:System.Xaml.XamlType>). Andere `sourceType` Eingaben Return `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="destinationType">Der Typ für die Konvertierung ausgewertet wird.</param>
+        <summary>Bestimmt, ob eine Instanz von <see cref="T:System.Xaml.XamlType" /> konvertiert werden kann, in den angegebenen Typ, mit dem angegebenen Kontext.</summary>
+        <returns>
+          <see langword="true" />Wenn dieser Konverter den Vorgang ausführen kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.Schema.XamlTypeTypeConverter> Klasse konvertiert nur eine Instanz von <xref:System.Xaml.XamlType> in und aus einem <xref:System.String> (oder <xref:System.Xaml.XamlType>). Andere `destinationType` Eingaben Return `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="culture">Kulturabhängige Informationen.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Versucht, konvertiert das angegebene Objekt in eine <see cref="T:System.Xaml.XamlType" />, mit dem angegebenen Kontext.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.Schema.XamlTypeTypeConverter> Klasse konvertiert nur eine Instanz von <xref:System.Xaml.XamlType> in und aus einem <xref:System.String> (oder <xref:System.Xaml.XamlType>). Andere `value` Typen lösen eine Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" /> kann nicht konvertiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlTypeTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="culture">Kulturabhängige Informationen.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <param name="destinationType">Der Typ, in den das Objekt konvertiert werden soll.</param>
+        <summary>Versucht, konvertieren Sie eine <see cref="T:System.Xaml.XamlType" /> unter Verwendung des angegebenen Kontexts, in den angegebenen Typ.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.Schema.XamlTypeTypeConverter> Klasse konvertiert nur eine Instanz von <xref:System.Xaml.XamlType> in und aus einem <xref:System.String> (oder <xref:System.Xaml.XamlType>). Andere `value` Typen oder `destinationType` Eingaben lösen eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" /> kann nicht konvertiert werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

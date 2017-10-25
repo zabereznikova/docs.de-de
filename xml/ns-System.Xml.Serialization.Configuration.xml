@@ -1,0 +1,25 @@
+<Namespace Name="System.Xml.Serialization.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.Xml.Serialization.Configuration" /> -Namespace enthält Klassen, mit denen Werte in den Anwendungskonfigurationsdateien unter Lesen der [ &lt;system.xml.serialization&gt; Element](~/docs/standard/serialization/system-xml-serialization-element.md) Abschnitt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace werden von der Serialisierungsinfrastruktur zur Behandlung von Konfigurationselementen verwendet und können nicht direkt verwendet werden. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](~/docs/framework/configure-apps/file-schema/index.md).  
+  
+ Stattdessen so konfigurieren Sie die <xref:System.Xml.Serialization.XmlSerializer> oder <xref:System.Xml.Serialization.XmlSchemaImporter>, erstellen Sie eine Anwendungskonfigurationsdatei und verwenden Sie die folgenden XML-Elemente:  
+  
+-   [&lt;System.Xml.Serialization&gt; Element](~/docs/standard/serialization/system-xml-serialization-element.md)  
+  
+-   [&lt;SchemaImporterExtensions&gt; Element](~/docs/standard/serialization/schemaimporterextensions-element.md)  
+  
+-   [&lt;Hinzufügen&gt; -Element für &lt;XmlSchemaImporterExtensions&gt;](~/docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
+  
+-   [&lt;DateTimeSerialization&gt; Element](~/docs/standard/serialization/datetimeserialization-element.md)  
+  
+-   [&lt;XmlSerializer&gt; Element](~/docs/standard/serialization/xmlserializer-element.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

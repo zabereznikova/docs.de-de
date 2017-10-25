@@ -1,0 +1,322 @@
+<Type Name="SoapYear" FullName="System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear">
+  <TypeSignature Language="C#" Value="public sealed class SoapYear : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SoapYear extends System.Object implements class System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Wrapper für XSD-Code <see langword="gYear" /> Typ.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über XSD-Datentypen finden Sie unter "XML Data Types Reference" in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear> Klasse, um XSD-Code umschließen `gYear` Typ.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#10](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo.cpp#10)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo.cs#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapYear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#21](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo2.cpp#21)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#21](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo2.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapYear (DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.#ctor(System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.DateTime" /> Objekt, um die aktuelle Instanz zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear" /> -Klasse mit einer angegebenen <see cref="T:System.DateTime" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#22](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo2.cpp#22)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#22](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo2.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapYear (DateTime value, int sign);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime value, int32 sign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.#ctor(System.DateTime,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+        <Parameter Name="sign" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.DateTime" /> Objekt, um die aktuelle Instanz zu initialisieren.</param>
+        <param name="sign">Eine ganze Zahl, der angibt, ob <c>Wert</c> ist positiv.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear" /> -Klasse mit einer angegebenen <see cref="T:System.DateTime" /> -Objekt und eine ganze Zahl, der angibt, ob <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Value" /> ist ein positiver oder negativer Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#23](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo2.cpp#23)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#23](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo2.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXsdType">
+      <MemberSignature Language="C#" Value="public string GetXsdType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetXsdType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.GetXsdType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Schemadefinitionssprache (XSD) des aktuellen SOAP-Typs zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> , der die XSD des aktuellen SOAP-Typs angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#13](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo.cpp#13)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#13](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear Parse (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear Parse(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende <see cref="T:System.String" />.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.String" /> in einem <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear" /> -Objekt, das von der abgerufen wird <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Parse%2A> Methode kann Analysieren von Zeichenfolgen in verschiedenen Formaten. Zeichenfolgenformate bestehen aus folgenden Formatmuster.  
+  
+|Formatmuster|Beschreibung|Beispiele|  
+|--------------------|-----------------|--------------|  
+|yyyy|Das Jahr im Format 4 Ziffern.|1999, 1812|  
+|zzz|Der vollständige Zeitzonenoffset (Stunde und Minuten) aus dem Universal Time Coordinate (Greenwich Mean Time). Einstellige Stundenangaben weisen eine führende 0 auf.|-07:00, 08:00|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#11](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo.cpp#11)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">
+          <paramref name="value" />enthält keine Datum und Uhrzeit, das keines der erkannten Muster entspricht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public int Sign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Sign" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Sign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob das Datum und die Uhrzeit der aktuellen Instanz ist positiv oder negativ sein.</summary>
+        <value>Eine ganze Zahl, der angibt, ob <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Value" /> positiv oder negativ ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#15](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo.cpp#15)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#15](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Value" /> als <see cref="T:System.String" /> zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> abgerufener <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Value" /> im Format "Yyyy" oder "-Yyyy" Wenn <see cref="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Sign" /> ist ein negativer Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#12](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo.cpp#12)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#12](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public DateTime Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Datum und Uhrzeit der aktuellen Instanz.</summary>
+        <value>Die <see cref="T:System.DateTime" /> -Objekt, das Datum und die Uhrzeit der aktuellen Instanz enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#14](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo.cpp#14)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#14](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsdType">
+      <MemberSignature Language="C#" Value="public static string XsdType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XsdType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear.XsdType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XML-Schemadefinitionssprache (XSD) des aktuellen SOAP-Typs ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , der die XSD des aktuellen SOAP-Typs angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#16](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CPP/demo.cpp#16)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear#16](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYear/CS/demo.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,91 @@
+<Type Name="Docking" FullName="System.Windows.Forms.DataVisualization.Charting.Docking">
+  <TypeSignature Language="C#" Value="public enum Docking" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Docking extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.Docking" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wo ein Diagrammelement, z. B. eine Legende oder Titel im Diagramm angedockt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Docking> -Enumeration stellt die Andockposition dar, auf die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> steuern, dass ein Diagrammelement angedockt werden soll.  
+  
+ Legen Sie die `IsDockedInsideChartArea` Eigenschaft angeben, ob dieses Element auf das gesamte Diagrammbild oder angedockt werden die relevanten Diagrammelements eine <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekt. Die Diagrammfläche wird angegeben, der <xref:System.Windows.Forms.DataVisualization.Charting.Title.DockedToChartArea> Eigenschaft das Diagrammelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.Docking Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.Docking.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Docking</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die letzte entweder das Diagrammbild angedockt oder ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.Docking Left = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.Docking.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Docking</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Auf der linken Seite entweder das Diagrammbild angedockt oder ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.Docking Right = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.Docking.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Docking</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Auf der rechten Seite des entweder das Diagrammbild angedockt oder ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.Docking Top = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.Docking.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Docking</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Am oberen Rand entweder das Diagrammbild angedockt oder ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

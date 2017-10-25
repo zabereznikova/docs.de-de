@@ -1,0 +1,263 @@
+<Type Name="ArrayTypeMismatchException" FullName="System.ArrayTypeMismatchException">
+  <TypeSignature Language="C#" Value="public class ArrayTypeMismatchException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ArrayTypeMismatchException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.ArrayTypeMismatchException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die bei dem Versuch ausgelöst wird, ein Element des falschen Typs in einem Array zu speichern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ArrayTypeMismatchException>wird ausgelöst, wenn das System das Element in den für das Array deklarierten Typ konvertieren kann. Angenommen, ein Element des Typs <xref:System.String> kann nicht gespeichert werden, eine <xref:System.Int32> Arrays, da die Konvertierung zwischen diesen Typen nicht unterstützt wird. Es ist im Allgemeinen nicht erforderlich, bei Anwendungen, die diese Ausnahme auslösen.  
+  
+ Die folgenden Microsoft intermediate Language (MSIL)-Anweisungen auslösen <xref:System.ArrayTypeMismatchException> :  
+  
+-   Ldelem. \<Typ >  
+  
+-   ldelema  
+  
+-   Stelem. \<Typ >  
+  
+ <xref:System.ArrayTypeMismatchException>verwendet HRESULT COR_E_ARRAYTYPEMISMATCH mit den Wert 0 x 80131503.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.ArrayTypeMismatchException>, finden Sie unter der <xref:System.ArrayTypeMismatchException> Konstruktoren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht Szenarien, in denen <xref:System.ArrayTypeMismatchException> ausgelöst wird.  
+  
+ [!code-cpp[System.ArrayTypeMismatch#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.ArrayTypeMismatch/CPP/class1.cpp#1)]
+ [!code-csharp[System.ArrayTypeMismatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ArrayTypeMismatch/CS/class1.cs#1)]
+ [!code-vb[System.ArrayTypeMismatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ArrayTypeMismatch/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayTypeMismatchException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArrayTypeMismatchException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ArrayTypeMismatchException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, wie z. B. "Array Quelltyp kann nicht in Array Zieltyp nicht zugewiesen werden". Diese Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.ArrayTypeMismatchException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht den ArrayTypeMismatchException()-Konstruktor von der <xref:System.ArrayTypeMismatchException> Klasse. Es enthält eine Funktion, die zwei Arrays als Argumente akzeptiert und überprüft, ob die beiden Arrays des gleichen Typs sind. Wenn die Arrays verschiedene Typen sind ein neues <xref:System.ArrayTypeMismatchException> ausgelöst wird, und klicken Sie dann in der aufrufenden Methode abgefangen.  
+  
+ [!code-cpp[ArrayTypeMisMatch_Constructor1#1](~/samples/snippets/cpp/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor1/CPP/arraytypemismatch_constructor1.cpp#1)]
+ [!code-csharp[ArrayTypeMisMatch_Constructor1#1](~/samples/snippets/csharp/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor1/CS/arraytypemismatch_constructor1.cs#1)]
+ [!code-vb[ArrayTypeMisMatch_Constructor1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor1/VB/arraytypemismatch_constructor1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayTypeMismatchException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArrayTypeMismatchException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ArrayTypeMismatchException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.ArrayTypeMismatchException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht den ArrayTypeMismatchException(String)-Konstruktor von der <xref:System.ArrayTypeMismatchException> Klasse. Es enthält eine Funktion, die zwei Arrays als Argumente akzeptiert und überprüft, ob die beiden Arrays des gleichen Typs sind. Wenn die Arrays verschiedene Typen sind ein neues <xref:System.ArrayTypeMismatchException> ausgelöst wird, und klicken Sie dann in der aufrufenden Methode abgefangen.  
+  
+ [!code-cpp[ArrayTypeMisMatch_Constructor2#1](~/samples/snippets/cpp/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor2/CPP/arraytypemismatch_constructor2.cpp#1)]
+ [!code-csharp[ArrayTypeMisMatch_Constructor2#1](~/samples/snippets/csharp/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor2/CS/arraytypemismatch_constructor2.cs#1)]
+ [!code-vb[ArrayTypeMisMatch_Constructor2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor2/VB/arraytypemismatch_constructor2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ArrayTypeMismatchException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArrayTypeMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ArrayTypeMismatchException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayTypeMismatchException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArrayTypeMismatchException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> -Parameter kein null-Verweis, die aktuelle Ausnahme wird ausgelöst, einem <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ArrayTypeMismatchException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt denselben Wert zurück, der an den Konstruktor übergeben wurde, bzw. einen NULL-Verweis (`Nothing` in Visual Basic), wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft nicht den Wert für die innere Ausnahme für den Konstruktor bereitstellt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.ArrayTypeMismatchException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.ArrayTypeMismatchException.%23ctor%2A> Konstruktor, der die <xref:System.ArrayTypeMismatchException> Klasse. Es enthält eine Funktion, die zwei Arrays als Argumente akzeptiert und überprüft, ob die beiden Arrays des gleichen Typs sind. Wenn die Arrays verschiedene Typen sind ein neues <xref:System.ArrayTypeMismatchException> ausgelöst wird, und klicken Sie dann in der aufrufenden Methode abgefangen.  
+  
+ [!code-cpp[ArrayTypeMisMatch_Constructor3#1](~/samples/snippets/cpp/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor3/CPP/arraytypemismatch_constructor3.cpp#1)]
+ [!code-csharp[ArrayTypeMisMatch_Constructor3#1](~/samples/snippets/csharp/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor3/CS/arraytypemismatch_constructor3.cs#1)]
+ [!code-vb[ArrayTypeMisMatch_Constructor3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ArrayTypeMisMatch_Constructor3/VB/arraytypemismatch_constructor3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

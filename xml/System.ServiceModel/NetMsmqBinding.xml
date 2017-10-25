@@ -1,0 +1,412 @@
+<Type Name="NetMsmqBinding" FullName="System.ServiceModel.NetMsmqBinding">
+  <TypeSignature Language="C#" Value="public class NetMsmqBinding : System.ServiceModel.MsmqBindingBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NetMsmqBinding extends System.ServiceModel.MsmqBindingBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.NetMsmqBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.MsmqBindingBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Bindung in der Warteschlange dar, die für eine computerübergreifende Kommunikation geeignet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.NetMsmqBinding>-Bindung stellt Unterstützung für Warteschlangen bereit, indem MSMQ (Microsoft Message Queuing) als Transport eingesetzt wird, und ermöglicht Unterstützung für lose miteinander verknüpfte Anwendungen, Fehlerisolierung, Lastenausgleich und Vorgänge im Offlinemodus. Eine Erörterung dieser Features finden Sie unter [Warteschlangenübersicht](~/docs/framework/wcf/feature-details/queues-overview.md).  
+  
+ Dies ist eine der vom System bereitgestellten Bindungen, die von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] zur Verfügung gestellt werden. Mit Ausnahme einiger erweiterter Szenarien, in denen Konfigurationswerte beim Initialisieren eines Diensts festgelegt werden müssen, wird empfohlen, anstelle eines codebasierten Ansatzes die Bindung mit Konfigurationswerten zu definieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein Dienst konfiguriert wird, um die <xref:System.ServiceModel.NetMsmqBinding>-Bindung zu verwenden:  
+  
+ Als Erstes die Konfigurationsdatei.  
+  
+  
+  
+ Danach der tatsächliche Dienstcode.  
+  
+ [!code-csharp[S_Msmq_Default#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_msmq_default/cs/service.cs#1)]
+ [!code-vb[S_Msmq_Default#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_default/vb/service.vb#1)]  
+  
+ [!code-csharp[S_Msmq_Default#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_msmq_default/cs/service.cs#2)]
+ [!code-vb[S_Msmq_Default#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_default/vb/service.vb#2)]  
+  
+ [!code-csharp[S_Msmq_Default#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_msmq_default/cs/hostapp.cs#10)]
+ [!code-vb[S_Msmq_Default#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_default/vb/hostapp.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetMsmqBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetMsmqBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetMsmqBinding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetMsmqBinding (System.ServiceModel.NetMsmqSecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.NetMsmqSecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetMsmqBinding.#ctor(System.ServiceModel.NetMsmqSecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.NetMsmqSecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der Sicherheitsmodus, mit dem die neue Instanz initialisiert werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetMsmqBinding" />-Klasse unter Verwendung des angegebenen Sicherheitsmodus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird veranschaulicht, wie die <xref:System.ServiceModel.NetMsmqBinding> mit einem Sicherheitsmodus erstellt wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert ist keiner der <see cref="T:System.ServiceModel.NetMsmqSecurityMode" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetMsmqBinding (string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetMsmqBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configurationName">Der Wert des <see langword="configurationName" />-Attributs, mit dem das <see langword="binding" />-Element identifiziert wird, dessen Einstellungen zur Initialisierung der Bindung verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetMsmqBinding" />-Klasse aus den Einstellungen eines angegebenen Konfigurationsbindungselements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Name überschreibt alle Konfigurationsnamen zur Laufzeit, der zugewiesen wurde die `NetMsmqBinding` Element in einer Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie eine Instanz der <xref:System.ServiceModel.NetMsmqBinding>-Klasse instanziiert wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/service.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetMsmqBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine geordnete Auflistung von Bindungselementen zurück, die in der aktuellen Bindung enthalten sind.</summary>
+        <returns>Die geordnete Auflistung an Bindungselementen, die von der <see cref="T:System.ServiceModel.NetMsmqBinding" />-Bindung beschrieben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wichtig ist die Reihenfolge der Bindungselemente. Sie spiegelt die Reihenfolge wider, in der die Protokollkanäle und Transportkanäle erstellt und gestapelt werden. Diese Auflistung von Bindungselementen ist eine neue Auflistung, die geändert werden kann. Mit ihr kann anschließend eine <xref:System.ServiceModel.Channels.CustomBinding> erstellt werden.  
+  
+   
+  
+## Examples  
+ Anhand des folgenden Codes wird eine `NetMsmqBinding` erstellt und es werden `CreateBindingElements` aufgerufen. Anschließend wird der Name jedes Bindungselements in der `BindingElements`-Auflistung ausgegeben.  
+  
+ [!code-csharp[S_UENetMsmqBinding#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvelopeVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EnvelopeVersion EnvelopeVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EnvelopeVersion EnvelopeVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetMsmqBinding.EnvelopeVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EnvelopeVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SOAP-Version ab, die für Nachrichten verwendet wird, die von dieser Bindung verarbeitet werden.</summary>
+        <value>Der Wert der <see cref="T:System.ServiceModel.EnvelopeVersion" />, die mit dieser Bindung verwendet wird. Der Standardwert ist SOAP&amp;#160;1.2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie die <xref:System.ServiceModel.NetMsmqBinding.EnvelopeVersion%2A> abgerufen wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetMsmqBinding.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(524288)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Speicherkapazität ab, die vom Puffer-Manager für Nachrichten verwendet werden kann, der Nachrichten aus dem Kanal empfängt, oder legt diese fest.</summary>
+        <value>Die maximale Speicherkapazität in Byte, die vom Puffer-Manager für Nachrichten verwendet werden kann. Der Standardwert ist 524288 (0x80000) Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Channels.BufferManager> reduziert den Pufferaufwand durch Verwendung eines Pufferpools. Puffer sind zur Verarbeitung von Nachrichten durch den Dienst erforderlich, wenn sie aus dem Kanal eintreffen. Wenn die Speicherkapazität des Pufferpools zur Verarbeitung der Nachrichten nicht ausreicht, muss der <xref:System.ServiceModel.Channels.BufferManager> zusätzliche Speicherkapazität aus dem CLR-Heap zuweisen. Dadurch wird die Auslastung der Garbage Collection erhöht. Eine umfangreiche Zuweisung aus dem CLR-Heap der Garbage Collection weist darauf hin, dass die Größe des Pufferpools nicht ausreichend ist und dass die Leistung durch eine größere Zuweisung infolge einer Erhöhung der maximalen <xref:System.ServiceModel.BasicHttpBinding.MaxBufferPoolSize%2A> verbessert werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.NetMsmqBinding.MaxBufferPoolSize%2A>-Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueTransferProtocol">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.QueueTransferProtocol QueueTransferProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.QueueTransferProtocol QueueTransferProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetMsmqBinding.QueueTransferProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.QueueTransferProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerationswert ab, der den Wartenschlangentransport für den Kommunikationskanal angibt, der von der Bindung verwendet wird, oder legt diesen fest.</summary>
+        <value>Der Transport zwischen Warteschlangen-Managern, die diese Bindung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Active Directory-Adressierung wird bei Verwendung des SOAP Reliable Messaging Protocols von Message Queuing (MSMQ) nicht unterstützt. <xref:System.ServiceModel.NetMsmqBinding.QueueTransferProtocol%2A> sollte daher nicht auf <xref:System.ServiceModel.QueueTransferProtocol.Srmp> oder <xref:System.ServiceModel.QueueTransferProtocol.SrmpSecure> gesetzt werden, wenn für <xref:System.ServiceModel.NetMsmqBinding.UseActiveDirectory%2A> der Wert `true` festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.NetMsmqBinding.QueueTransferProtocol%2A>-Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotas ReaderQuotas { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryReaderQuotas ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetMsmqBinding.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dieser Bindung zugeordnete <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> ab oder legt diese fest.</summary>
+        <value>Die <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, die dieser Bindung zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Xml.XmlDictionaryReaderQuotas>-Objekt definiert Beschränkungen für die Komplexität von SOAP-Nachrichten, die von mit einer Bindung konfigurierten Endpunkten verarbeitet werden können. Zu diesen Einschränkungen gehören `maxArrayLength`, `maxBytesPerRead`, `maxDepth`, `maxNameTableCharCount` und `maxStringContentLength`. Diese Werte helfen, Denial-of-Service-Angriffe zu verhindern. [!INCLUDE[crdefault](~/includes/crabout-md.md)]<xref:System.Xml.XmlDictionaryReaderQuotas>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Xml.XmlDictionaryReaderQuotas>-Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.NetMsmqSecurity Security { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.NetMsmqSecurity Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetMsmqBinding.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.NetMsmqSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dieser Bindung zugeordnete <see cref="T:System.ServiceModel.NetMsmqSecurity" /> ab oder legt diese fest.</summary>
+        <value>Die <see cref="T:System.ServiceModel.NetMsmqSecurity" />, die mit der Bindung verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.NetMsmqSecurity> stellt eine Kapselung des MSMQ (Message Queuing)-Transports und der SOAP-Sicherheit dar. Dadurch wird angegeben, ob die Transportsicherheit oder die SOAP-Sicherheit aktiviert sind und ggf. welcher Authentifizierungsmodus und welche Schutzebenen verwendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie das <xref:System.ServiceModel.NetMsmqSecurity>-Objekt abgerufen wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeReaderQuotas">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeReaderQuotas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetMsmqBinding.ShouldSerializeReaderQuotas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.NetMsmqBinding.ReaderQuotas" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.NetMsmqBinding.ReaderQuotas" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSecurity">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSecurity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetMsmqBinding.ShouldSerializeSecurity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.NetMsmqBinding.Security" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.NetMsmqBinding.Security" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseActiveDirectory">
+      <MemberSignature Language="C#" Value="public bool UseActiveDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseActiveDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetMsmqBinding.UseActiveDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert zurück oder legt einen Wert fest, der angibt, ob Warteschlangenadressen mit Active Directory konvertiert werden sollen.</summary>
+        <value>
+          <see langword="true" />, wenn Warteschlangenadressen mit Active Directory konvertiert werden sollen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Message Queuing (MSMQ)-Warteschlangenadressen können aus Pfadnamen oder direkten Formatnamen bestehen. Bei einem direkten Formatnamen löst Message Queuing den Warteschlangennamen mithilfe von DNS, NetBIOS oder IP auf. Bei einem Pfadnamen löst Message Queuing den Warteschlangenname mithilfe von Active Directory auf.  
+  
+ Die URI einer Nachrichtenwarteschlange wird vom [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Wartenschlangentransport standardmäßig in einen direkten Formatnamen konvertiert. Durch Festlegen der <xref:System.ServiceModel.NetMsmqBinding.UseActiveDirectory%2A>-Eigenschaft auf `true` kann von einer Anwendung angegeben werden, dass der Warteschlangenname vom Warteschlangentransport mit Active Directory anstelle von DNS, NetBIOS oder IP aufgelöst werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.NetMsmqBinding.UseActiveDirectory%2A>-Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[S_UENetMsmqBinding#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetmsmqbinding/cs/snippets.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

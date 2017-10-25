@@ -1,0 +1,258 @@
+<Type Name="XPathMessageContext" FullName="System.ServiceModel.Dispatcher.XPathMessageContext">
+  <TypeSignature Language="C#" Value="public class XPathMessageContext : System.Xml.Xsl.XsltContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi XPathMessageContext extends System.Xml.Xsl.XsltContext" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.XPathMessageContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Xsl.XsltContext</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.XamlIntegration.XPathMessageContextTypeConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert mehrere XPath-Funktionen und Namespacezuordnungen, die häufig bei der Auswertung von XPath-Ausdrücken anhand von SOAP-Dokumenten verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das XPath-Modul bietet eine umfassende XPath-Kontextunterstützung und verwendet die .NET Framework-Klasse  <xref:System.Xml.Xsl.XsltContext> in derselben Weise wie <xref:System.Xml.XPath.XPathNavigator> zur Implementierung dieser Unterstützung. <xref:System.Xml.Xsl.XsltContext> ist eine abstrakte Klasse, die es Entwicklern ermöglicht, benutzerdefinierte XPath-Funktionsbibliotheken zu implementieren und XPath-Variablen zu deklarieren. <xref:System.Xml.Xsl.XsltContext> ist ein <xref:System.Xml.XmlNamespaceManager> und enthält daher auch die Namespace-Präfixzuordnungen.  
+  
+ Das Filtermodul implementiert einen <xref:System.Xml.Xsl.XsltContext> mit dem Namen <xref:System.ServiceModel.Dispatcher.XPathMessageContext>. <xref:System.ServiceModel.Dispatcher.XPathMessageContext> definiert benutzerdefinierte Funktionen, die in XPath-Ausdrücken verwendet werden und deklariert mehrere übliche Namespace-Präfixzuordnungen. Die folgende Tabelle enthält die benutzerdefinierten Funktionen, die durch definierten <xref:System.ServiceModel.Dispatcher.XPathMessageContext> , die in XPath-Ausdrücken verwendet werden kann.  
+  
+|XPath-Funktion|Beschreibung|  
+|--------------------|-----------------|  
+|body|Gibt die SOAP-Textknoten, unabhängig von der SOAP-Version (1.1. oder 1.2).|  
+|header|Gibt den SOAP-Header-Knoten, unabhängig von der SOAP-Version (1.1 oder 1.2) zurück.|  
+|Korrelations-Daten|Akzeptiert eine Eingabezeichenfolge, und gibt den Wert der zugehörigen Korrelation Nachrichteneigenschaft zurück.  "Wsc-InstanceId" ist eine reservierte Zeichenfolge, die für die kontextbasierte Korrelation verwendet.|  
+|MessageId|Gibt den Wert der WS-Adressierung MessageID-Header zurück.|  
+|relatesTo|Gibt den Wert der WS-Adressierung RelatesTo-Header, unabhängig von der Version (August2004 oder WSA 1.0) zurück.|  
+|ReplyTo-Element|Gibt den Wert der WS-Addressing-ReplyTo-Header, unabhängig von der Version (August2004 oder WSA 1.0) zurück.|  
+|from|Gibt den Wert des Headers WS-Adressierung von unabhängig von der Version (August2004 oder WSA 1.0).|  
+|"FaultTo"|Gibt den Wert der WS-Adressierung FaultTo-Header, unabhängig von der Version (August2004 oder WSA 1.0) zurück.|  
+|auf|Gibt den Wert von der WS-Adressierung To-Header vorhanden ist, andernfalls gibt, wird Anonymous.|  
+|action|Gibt den Wert des WS-Adressierung Action-Headers.|  
+|SOAP-uri|Der SOAP-Namespace-Uri zurückgegeben.|  
+|Header mit Akteur|Akzeptiert einen SOAP-Akteur-Uri und gibt alle Header, die dieser Akteur, unabhängig von der SOAP-Version (1.1 oder 1.2) enthalten.|  
+|actor|Der SOAP-Akteur-Uri des ersten untergeordneten Knotens, unabhängig von der SOAP-Version (1.1 oder 1.2) zurückgegeben.|  
+|ist obligatorisch.|Gibt zurück, und zwar unabhängig davon, ob der erste untergeordnete Knoten erforderlich, unabhängig von der SOAP-Version (1.1 oder 1.2) ist.|  
+|ist-Akteur-weiter|Gibt zurück, und zwar unabhängig davon, ob der SOAP-Akteur-Uri des ersten untergeordneten Knotens wird die Rolle "Weiter", unabhängig von der SOAP-Version (1.1 oder 1.2) angenommen.|  
+|ist-Akteur-Ultimate-Empfänger|Gibt zurück, und zwar unabhängig davon, ob der SOAP-Akteur-Uri des ersten untergeordneten Knotens nimmt die UltimateReceiver-Rolle, unabhängig von der SOAP-Version (1.1 oder 1.2).|  
+|Datum / Uhrzeit|Akzeptiert eine Zeichenfolge für die Eingabe von Datum und gibt den Wert in einen Double konvertiert.|  
+|Dauer|Akzeptiert eine Timespan-Eingabewert-Zeichenfolge und gibt den Wert als eine Anzahl von Tagen.|  
+|UTC-jetzt|Gibt den Wert der <xref:System.DateTime.UtcNow%2A>.|  
+  
+ Die folgende Tabelle enthält die Standard-Namespaces und Präfixen, die von deklariert werden <xref:System.ServiceModel.Dispatcher.XPathMessageContext>.  
+  
+|Präfix|Namespace|  
+|------------|---------------|  
+|s11|http://schemas.xmlsoap.org/soap/envelope (möglicherweise in englischer Sprache)|  
+|s12|http://www.w3.org/2003/05/soap-envelope|  
+|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
+|wsa10|http://www.w3.org/2005/08/addressing (möglicherweise in englischer Sprache)|  
+|sm|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
+|tempuri|http://tempuri.org|  
+|ser|http://schemas.microsoft.com/2003/10/Serialization|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XPathMessageContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.ServiceModel.Dispatcher.XPathMessageContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XPathMessageContext (System.Xml.NameTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.NameTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageContext.#ctor(System.Xml.NameTable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Xml.NameTable" />
+      </Parameters>
+      <Docs>
+        <param name="table">Eine <see cref="T:System.Xml.NameTable" />-Klasse, die verwendet wird, um Zeichenfolgen intern zu speichern.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.XPathMessageContext" />-Klasse mit der angegebenen <see cref="T:System.Xml.NameTable" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verschiedene Klassen, einschließlich dieser sowie <xref:System.Xml.XmlDocument> und <xref:System.Xml.XmlReader>, verwenden die <xref:System.Xml.NameTable>-Klasse intern zum Speichern von Attribut- und Elementnamen. Wenn ein Element- oder Attributname in einem XML-Dokument mehrfach auftritt, wird er in <xref:System.Xml.NameTable> nur einmal gespeichert. Die Namen werden als Objekttypen der CLR (Common Language Runtime) gespeichert. Dadurch können Sie statt eines aufwendigeren Zeichenfolgenvergleichs Objektvergleiche an diesen Zeichenfolgen durchführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareDocument">
+      <MemberSignature Language="C#" Value="public override int CompareDocument (string baseUri, string nextBaseUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 CompareDocument(string baseUri, string nextBaseUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageContext.CompareDocument(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.String" />
+        <Parameter Name="nextBaseUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Die Basis-URI des ersten zu vergleichenden Dokuments.</param>
+        <param name="nextBaseUri">Die Basis-URI des zweiten zu vergleichenden Dokuments.</param>
+        <summary>Vergleicht die Basis-URIs (Uniform Resource Identifiers) zweier Dokumente basierend auf der Reihenfolge, in der die Dokumente vom XSLT-Prozessor geladen wurden.</summary>
+        <returns>Gibt immer 0 zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte in einer abgeleiteten Klasse überschrieben werden, um verwendet werden zu können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveWhitespace">
+      <MemberSignature Language="C#" Value="public override bool PreserveWhitespace (System.Xml.XPath.XPathNavigator node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool PreserveWhitespace(class System.Xml.XPath.XPathNavigator node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageContext.PreserveWhitespace(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="node">Der Leerraumknoten, der im aktuellen Kontext beibehalten oder entfernt werden soll.</param>
+        <summary>Wertet aus, ob Leerraumknoten beibehalten oder für den gegebenen Kontext entfernt werden sollen.</summary>
+        <returns>Gibt immer <see langword="false" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte in einer abgeleiteten Klasse überschrieben werden, um verwendet werden zu können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveFunction">
+      <MemberSignature Language="C#" Value="public override System.Xml.Xsl.IXsltContextFunction ResolveFunction (string prefix, string name, System.Xml.XPath.XPathResultType[] argTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.Xsl.IXsltContextFunction ResolveFunction(string prefix, string name, valuetype System.Xml.XPath.XPathResultType[] argTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageContext.ResolveFunction(System.String,System.String,System.Xml.XPath.XPathResultType[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.IXsltContextFunction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="argTypes" Type="System.Xml.XPath.XPathResultType[]" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix der Funktion, so wie es im XPath-Ausdruck auftritt.</param>
+        <param name="name">Der Name der Funktion.</param>
+        <param name="argTypes">Ein Array von Argumenttypen für die Funktion, die aufgelöst wird. Hierdurch wird es Ihnen ermöglicht, zwischen Methoden mit demselben Namen auszuwählen (z.&amp;#160;B. überladene Methoden).</param>
+        <summary>Löst einen Funktionsverweis und gibt eine [: System.Xml.Xsl.IXsltContextFunction](ms-help://MS.MSSDK.1033/MS.WinFXSDK.1033/cpref37/html/T_System_Xml_Xsl_IXsltContextFunction.htm) , die die Funktion darstellt.</summary>
+        <returns>Ein [: System.Xml.Xsl.IXsltContextFunction](ms-help://MS.MSSDK.1033/MS.WinFXSDK.1033/cpref37/html/T_System_Xml_Xsl_IXsltContextFunction.htm) , die die Funktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [: System.Xml.Xsl.IXsltContextFunction](ms-help://MS.MSSDK.1033/MS.WinFXSDK.1033/cpref37/html/T_System_Xml_Xsl_IXsltContextFunction.htm) dient zum Zeitpunkt der Ausführung der Funktion ausgewertet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="argTypes" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveVariable">
+      <MemberSignature Language="C#" Value="public override System.Xml.Xsl.IXsltContextVariable ResolveVariable (string prefix, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.Xsl.IXsltContextVariable ResolveVariable(string prefix, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageContext.ResolveVariable(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.IXsltContextVariable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix der Variablen, so wie es im XPath-Ausdruck auftritt.</param>
+        <param name="name">Der Name der Variablen.</param>
+        <summary>Löst einen variablen Verweis auf und gibt <see cref="T:System.Xml.Xsl.IXsltContextVariable" /> zurück, die die Variable darstellt.</summary>
+        <returns><see cref="T:System.Xml.Xsl.IXsltContextVariable" />, die die Variable zur Laufzeit darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.Xsl.IXsltContextVariable> wird während der Ausführung verwendet, um den Wert der Variablen abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Whitespace">
+      <MemberSignature Language="C#" Value="public override bool Whitespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Whitespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.XPathMessageContext.Whitespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Leerraumknoten in die Ausgabe eingeschlossen werden sollen.</summary>
+        <value>Gibt immer <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte in einer abgeleiteten Klasse überschrieben werden, um verwendet werden zu können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

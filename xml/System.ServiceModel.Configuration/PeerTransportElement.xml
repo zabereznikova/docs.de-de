@@ -1,0 +1,312 @@
+<Type Name="PeerTransportElement" FullName="System.ServiceModel.Configuration.PeerTransportElement">
+  <TypeSignature Language="C#" Value="public class PeerTransportElement : System.ServiceModel.Configuration.BindingElementExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PeerTransportElement extends System.ServiceModel.Configuration.BindingElementExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.PeerTransportElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BindingElementExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("PeerChannel feature is obsolete and will be removed in the future.", false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt ein Konfigurationselement an, das dafür sorgt, dass ein Kanal Nachrichten auf dem Peertransport überträgt, wenn es in einer benutzerdefinierten Bindung eingeschlossen ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Konfigurationselement ermöglicht es Ihnen, eine benutzerdefinierte Bindung zu erstellen, die das Peertransportprotokoll implementiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerTransportElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PeerTransportElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.PeerTransportElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public override void ApplyConfiguration (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyConfiguration(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PeerTransportElement.ApplyConfiguration(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">Das <see cref="T:System.ServiceModel.Channels.BindingElement" />, dessen Einstellungen für dieses Konfigurationselement übernommen werden sollen.</param>
+        <summary>Übernimmt die Einstellungen vom angegebenen <see cref="T:System.ServiceModel.Channels.BindingElement" /> für dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="public override Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Type" />-Objekt ab, das das benutzerdefinierte Bindungselement darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" />-Objekt, das das benutzerdefinierte Bindungselement darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PeerTransportElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Ein <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionElement" />, das das Konfigurationselement enthält, dessen Einstellungen in diesen Konfigurationselementabschnitt kopiert werden sollen.</param>
+        <summary>Kopiert die Einstellungen des angegebenen Konfigurationselements in dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElement">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.BindingElement CreateBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Channels.BindingElement CreateBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PeerTransportElement.CreateBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Bindungselement aus den Einstellungen in diesem Konfigurationselement.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.BindingElement" />, dessen Eigenschaften aus den Einstellungen in diesem Konfigurationselement kopiert werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PeerTransportElement.InitializeFrom(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">Ein <see cref="T:System.ServiceModel.Channels.BindingElement" />-Objekt, das zum Initialisieren dieser Bindungskonfigurationsinstanz verwendet werden soll.</param>
+        <summary>Initialisiert diesen Peertransport-Bindungskonfigurationsabschnitt mit dem Inhalt des angegebenen Bindungselements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenIPAddress">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress ListenIPAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress ListenIPAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportElement.ListenIPAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.PeerTransportListenAddressConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("listenIPAddress", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Konfigurationselement ab, das die IP-Adresse angibt, die vom Peertransport überwacht wird, und legt es fest.</summary>
+        <value>Eine <see cref="T:System.Net.IPAddress" />-Instanz, die die IP-Adresse enthält, die vom Peertransport überwacht wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wurde diese Eigenschaft nicht oder auf eine Nullreferenz festgelegt, dann überwacht das zugeordnete <xref:System.ServiceModel.PeerNode>-Objekt alle globalen Adressen (sowohl IPv4 als auch IPv6), die für den lokalen Computer konfiguriert sind.   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportElement.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxBufferPoolSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.LongValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Konfigurationselement ab, das die maximale Größe des TCP-Nachrichtenpufferpools in Byte angibt, und legt es fest.</summary>
+        <value>Ein <see cref="T:System.Int64" />-Wert, der die maximale Größe des TCP-Nachrichtenpufferpools in Byte angibt. Der Standardwert ist 524.288 Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie mehr Daten empfangen als Sie puffern können, verbleiben die nach dem Überschreiten der Puffergröße übrigen Daten auf der zugrunde liegenden Ebene, bis der Puffer ausreichend Platz für die restlichen Daten aufweist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportElement.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxReceivedMessageSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.LongValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Konfigurationselement ab, das die maximale Größe der TCP-Nachrichten,  die von der Peerbindung empfangen werden, in Byte angibt, und legt es fest.</summary>
+        <value>Ein <see cref="T:System.Int64" />-Wert, der die maximale Größe von TCP-Nachrichten in Byte angibt, die über die mit dieser Bindung erstellten Kanäle gesendet werden. Der Standardwert ist 65.536 (64&amp;#160;KB).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportElement.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("port", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=65535, MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Konfigurationselement ab, das den Port für die Peertransportbindung angibt, und legt es fest.</summary>
+        <value>Ein <see cref="T:System.Int32" />-Wert, der den Port für die Peertransportbindung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist der Anschlusswert ungültig, wird <xref:System.ArgumentException> ausgelöst. Der Standardwert für diese Eigenschaft ist 0 (null), wodurch angegeben wird, dass der Listeneranschluss per Zufallsprinzip aus den nicht reservierten Anschlüssen ausgewählt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.PeerSecurityElement Security { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.PeerSecurityElement Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportElement.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("security")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.PeerSecurityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Konfigurationselement ab, das die Sicherheit angibt, die auf von dieser Bindung erstellten Peerchannels festgelegt werden soll, und legt es fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.PeerSecuritySettings" />-Enumerationswert, der die festzulegende Sicherheit für Peerchannels angibt, die mit dieser Bindung erstellt wurden. Sicherheit kann entweder nachrichten- oder transportspezifisch sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

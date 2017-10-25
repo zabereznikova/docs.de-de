@@ -1,0 +1,109 @@
+<Type Name="ActivityDesignerOptionsAttribute" FullName="System.Activities.Presentation.ActivityDesignerOptionsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ActivityDesignerOptionsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityDesignerOptionsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.ActivityDesignerOptionsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Drilldown- und Knotenanzeigemodus für einen <see cref="T:system.Activities.Presentation.ActivityDesigner" /> an, z. B. Flussdiagramme zum Verfassen von Aktivitäten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Drilldown in die Benutzeroberflächenelemente ist standardmäßig zulässig. Es kann nicht durch Festlegen von zulässig der <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn%2A> Eigenschaft, um `false`. Untergeordnete Knoten werden nicht standardmäßig immer reduziert, jedoch kann festgelegt werden, um immer reduzieren durch Festlegen der <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren%2A> Eigenschaft `true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesignerOptionsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesignerOptionsAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="M:System.Activities.Presentation.ActivityDesignerOptionsAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardwerte, die von diesem Konstruktor zugewiesen sind `true` für die <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn%2A> Eigenschaft und `false` für die <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDrillIn">
+      <MemberSignature Language="C#" Value="public bool AllowDrillIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDrillIn" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab (bzw. legt diesen fest), der angibt, ob der Drilldown um eine Ebene in einen <see cref="T:system.Activities.Presentation.ActivityDesigner" /> zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn Drilldowns in die Benutzeroberflächenelemente ist zulässig. andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlwaysCollapseChildren">
+      <MemberSignature Language="C#" Value="public bool AlwaysCollapseChildren { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AlwaysCollapseChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab (bzw. legt diesen fest), der angibt, ob untergeordnete Knoten immer reduziert werden.</summary>
+        <value>
+          <see langword="true" />Wenn die untergeordneten Knoten immer reduziert werden; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewIconProvider">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Activities.Presentation.Model.ModelItem,System.Windows.Media.DrawingBrush&gt; OutlineViewIconProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Activities.Presentation.Model.ModelItem, class System.Windows.Media.DrawingBrush&gt; OutlineViewIconProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ActivityDesignerOptionsAttribute.OutlineViewIconProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Activities.Presentation.Model.ModelItem,System.Windows.Media.DrawingBrush&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Funktion der Gliederung sichtanbieter-Symbol.</summary>
+        <value>Die Gliederung Symbol sichtanbieter-Funktion.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

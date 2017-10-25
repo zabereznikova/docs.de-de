@@ -1,0 +1,537 @@
+<Type Name="BamlLocalizationDictionary" FullName="System.Windows.Markup.Localizer.BamlLocalizationDictionary">
+  <TypeSignature Language="C#" Value="public sealed class BamlLocalizationDictionary : System.Collections.IDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BamlLocalizationDictionary extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält alle lokalisierbaren Ressourcen in einem BAML-Datensatz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Wörterbuch enthält eine Zuordnung von Ressourcenschlüssel (als angegeben <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey> Objekte) zu Ressourcenwerten (angegeben als <xref:System.Windows.Markup.Localizer.BamlLocalizableResource> Objekte).  
+  
+<a name="xamlTextUsage_BamlLocalizationDictionary"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Markup.Localizer.BamlLocalizationDictionary>.  
+  
+ [!code-csharp[GrabBaml#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GrabBaml/CSharp/GrabBaml.cs#1)]
+ [!code-vb[GrabBaml#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GrabBaml/visualbasic/grabbaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizationDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Markup.Localizer.BamlLocalizableResourceKey key, System.Windows.Markup.Localizer.BamlLocalizableResource value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.Markup.Localizer.BamlLocalizableResourceKey key, class System.Windows.Markup.Localizer.BamlLocalizableResource value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Add(System.Windows.Markup.Localizer.BamlLocalizableResourceKey,System.Windows.Markup.Localizer.BamlLocalizableResource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />
+        <Parameter Name="value" Type="System.Windows.Markup.Localizer.BamlLocalizableResource" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein Schlüssel für die Ressource.</param>
+        <param name="value">Ein Objekt, das die Ressource enthält.</param>
+        <summary>Fügt ein Element mit dem angegebenen Schlüssel und Wert, der die <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Element mit demselben Schlüssel ist bereits vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Ressourcen aus der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Markup.Localizer.BamlLocalizableResourceKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Markup.Localizer.BamlLocalizableResourceKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Contains(System.Windows.Markup.Localizer.BamlLocalizableResourceKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Ressourcenschlüssel gefunden.</param>
+        <summary>Bestimmt, ob ein <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> -Objekt eine Ressource mit einem angegebenen Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> Objekt enthält eine Ressource mit dem angegebenen Schlüssel ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Schlüssel ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Collections.DictionaryEntry[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(valuetype System.Collections.DictionaryEntry[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.CopyTo(System.Collections.DictionaryEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.DictionaryEntry[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array von Objekten, die die Daten aufzunehmen.</param>
+        <param name="arrayIndex">Der Startindexwert.</param>
+        <summary>Kopiert den Inhalt einer <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> Objekt in ein eindimensionales Array von <see cref="T:System.Collections.DictionaryEntry" /> -Objekten, beginnend am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="arrayIndex" />überschreitet die Länge der Ziel-Array.  
+  
+ - oder -   
+  
+ Kopie passt nicht in den verbleibenden Array Platz zwischen <paramref name="arrayIndex" /> und das Ziel der Arraylänge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der in lokalisierbare Ressourcen der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</summary>
+        <value>Die Anzahl der lokalisierbaren Ressourcen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> durchläuft.</summary>
+        <returns>Ein spezieller <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator" /> können, die den Inhalt des Wörterbuchs durchlaufen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />-Objekt eine feste Größe hat.</summary>
+        <value>Gibt immer <see langword="false" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />-Objekt schreibgeschützt ist.</summary>
+        <value>Gibt immer <see langword="false" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizableResource this[System.Windows.Markup.Localizer.BamlLocalizableResourceKey key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.Localizer.BamlLocalizableResource Item(class System.Windows.Markup.Localizer.BamlLocalizableResourceKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Item(System.Windows.Markup.Localizer.BamlLocalizableResourceKey)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizableResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüsselwert der Ressource.</param>
+        <summary>Ermittelt oder definiert einen lokalisierbaren Ressourcen über seinen Schlüssel angegebene.</summary>
+        <value>Der Wert der Ressource.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung, die die Schlüssel im enthält die <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> Objekt.</summary>
+        <value>Eine Auflistung, die alle Schlüssel in das Objekt enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Markup.Localizer.BamlLocalizableResourceKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Markup.Localizer.BamlLocalizableResourceKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Remove(System.Windows.Markup.Localizer.BamlLocalizableResourceKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel für die Ressource entfernt werden soll.</param>
+        <summary>Entfernt eine angegebene lokalisierbare Ressource aus der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Schlüssel ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootElementKey">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizableResourceKey RootElementKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.Localizer.BamlLocalizableResourceKey RootElementKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.RootElementKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizableResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel des Stammelements, ab, wenn es lokalisierbar ist.</summary>
+        <value>Der Schlüssel des Stammelements, wenn es lokalisierbar ist. Andernfalls wird der Wert festgelegt, um <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können bestimmte Eigenschaften für die gesamte Seite festlegen, durch Hinzufügen oder Ändern der Eigenschaften des Stammelements aufgrund von eigenschaftenvererbung für Abhängigkeitseigenschaften. Ändern Sie z. B. des Stammelements <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft legt diese Eigenschaft für jedes Element auf der Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Eine nullbasierte <see cref="T:System.Array" /> , empfängt der kopierten Elemente.</param>
+        <param name="index">Die erste Position in der angegebenen <see cref="T:System.Array" /> den kopierten Inhalt empfängt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.Count" />.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Add">
+      <MemberSignature Language="C#" Value="void IDictionary.Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#IDictionary#Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des hinzuzufügenden Elements.</param>
+        <param name="value">Der Objektwert, der zum Hinzufügen der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IDictionary.Add(System.Object,System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Contains">
+      <MemberSignature Language="C#" Value="bool IDictionary.Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IDictionary.Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#IDictionary#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der im Wörterbuch zu suchende Schlüssel.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IDictionary.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="T:System.Object" /> in der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionaryEnumerator IDictionary.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator System.Collections.IDictionary.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#IDictionary#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IDictionary.GetEnumerator" />.</summary>
+        <returns>Ein Enumeratorobjekt, mit dessen Hilfe die Auflistung durchlaufen werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionary.Item[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionary.Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#IDictionary#Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden oder festzulegenden Elements.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IDictionary.Item(System.Object)" />.</summary>
+        <value>Das Element mit dem angegebenen Schlüssel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Remove">
+      <MemberSignature Language="C#" Value="void IDictionary.Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#IDictionary#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der <see cref="T:System.Object" />, der aus der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> entfernt werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IDictionary.Remove(System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionary.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit allen Werten in der <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</summary>
+        <value>Eine Auflistung, die alle Werte des Objekts enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

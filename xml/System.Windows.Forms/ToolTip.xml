@@ -1,0 +1,1298 @@
+<Type Name="ToolTip" FullName="System.Windows.Forms.ToolTip">
+  <TypeSignature Language="C#" Value="public class ToolTip : System.ComponentModel.Component, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolTip extends System.ComponentModel.Component implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolTip" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Popup")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("ToolTip", typeof(System.Windows.Forms.Control))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein kleines Popupfenster dar, in dem eine kurze Beschreibung des Steuerelements angezeigt wird, wenn mit dem Mauszeiger auf das Steuerelement gezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.ToolTip> -Klasse, Sie können Hinweise für einen Benutzer bereitstellen, wenn der Benutzer den Zeiger auf ein Steuerelement platziert. Die <xref:System.Windows.Forms.ToolTip> Klasse wird in der Regel verwendet, um Benutzer darauf aufmerksam für die beabsichtigte Verwendung eines Steuerelements. Sie können beispielsweise angeben, QuickInfo-Text für ein <xref:System.Windows.Forms.TextBox> Steuerelement, das einen Namen, die Festlegung des Formats für den Namen in das Steuerelement eingegeben werden akzeptiert. Zusätzlich zum Bereitstellen von hinweisen, können Sie auch die <xref:System.Windows.Forms.ToolTip> Klasse, um Statusinformationen zur Laufzeit bereitzustellen. Beispielsweise können Sie die <xref:System.Windows.Forms.ToolTip> -Klasse Verbindung Geschwindigkeit und Qualität Positionsdaten angezeigt, wenn der Benutzer den Zeiger auf richtet eine <xref:System.Windows.Forms.PictureBox> Steuerelement, das Internet Verbindungsstatus anzeigt.  
+  
+ Die <xref:System.Windows.Forms.ToolTip> -Klasse kann in jedem Container verwendet werden. Um einen Container explizit anzugeben, verwenden Sie die <xref:System.Windows.Forms.ToolTip.%23ctor%28System.ComponentModel.IContainer%29> Konstruktor. Eine einzelne <xref:System.Windows.Forms.ToolTip> Komponente ist in der Regel zum Erstellen von QuickInfos für mehrere Steuerelemente in einem Formular verwendet. Nach der Erstellung einer <xref:System.Windows.Forms.ToolTip>, verwenden Sie einen separaten Aufruf der <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode, um QuickInfo-Anzeigetext auf ein einzelnes Steuerelement zuzuordnen. Klicken Sie dann, wenn der Benutzer den Zeiger auf ein Steuerelement bewegt wird, wird die QuickInfo mit dem Text angezeigt. Sie können Aufrufen <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> mehrmals für dasselbe Steuerelement zum Ändern des Texts, der dem Steuerelement zugeordnet ist. Um den Text abzurufen, die mit einem Steuerelement verknüpft ist, verwenden die <xref:System.Windows.Forms.ToolTip.GetToolTip%2A> Methode. So entfernen Sie alle Zuordnungen der QuickInfo-Text mit einer Instanz von der <xref:System.Windows.Forms.ToolTip> Klasse, verwenden Sie die <xref:System.Windows.Forms.ToolTip.RemoveAll%2A> Methode.  
+  
+> [!NOTE]
+>  QuickInfo-Text wird für Steuerelemente, die deaktiviert sind, nicht angezeigt. Wenn die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> -Eigenschaftensatz auf `true`, QuickInfos werden nicht angezeigt, wenn der Container nicht aktiv ist.  
+  
+ Die <xref:System.Windows.Forms.ToolTip> -Klasse bietet die folgenden Eigenschaften und Methoden, um das Standardverhalten und die Darstellung einer QuickInfo zu ändern.  
+  
+|Kategorie|Zugeordnete Elemente|  
+|--------------|------------------------|  
+|Manuelle anzeigen|<xref:System.Windows.Forms.ToolTip.Active%2A>, <xref:System.Windows.Forms.ToolTip.Show%2A>, <xref:System.Windows.Forms.ToolTip.Hide%2A>, <xref:System.Windows.Forms.ToolTip.ShowAlways%2A>, <xref:System.Windows.Forms.ToolTip.Popup>, <xref:System.Windows.Forms.ToolTip.StopTimer%2A>|  
+|Zeitliche Steuerung der QuickInfo|<xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, <xref:System.Windows.Forms.ToolTip.StopTimer%2A>|  
+|Inhalt|<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>, <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>, <xref:System.Windows.Forms.ToolTip.StripAmpersands%2A>, <xref:System.Windows.Forms.ToolTip.ToolTipIcon%2A>, <xref:System.Windows.Forms.ToolTip.ToolTipTitle%2A>, <xref:System.Windows.Forms.ToolTip.RemoveAll%2A>|  
+|Darstellung|<xref:System.Windows.Forms.ToolTip.BackColor%2A>, <xref:System.Windows.Forms.ToolTip.ForeColor%2A>, <xref:System.Windows.Forms.ToolTip.IsBalloon%2A>, <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>, <xref:System.Windows.Forms.ToolTip.UseAnimation%2A>, <xref:System.Windows.Forms.ToolTip.UseFading%2A>|  
+  
+ Wenn alle QuickInfo-Text zu deaktivieren, sodass sie in der Anwendung kann nicht angezeigt werden sollen, können Sie mithilfe der <xref:System.Windows.Forms.ToolTip.Active%2A> Eigenschaft. In der Regel die QuickInfo vom Betriebssystem, sondern die Darstellung anpassen gezeichnet wird die <xref:System.Windows.Forms.ToolTip>, Sie können festlegen, die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> Eigenschaft, um `true` und Behandeln der <xref:System.Windows.Forms.ToolTip.Draw> Ereignis.  
+  
+ Die <xref:System.Windows.Forms.ToolTip.ToolTipTitle%2A> -Klasse implementiert die <xref:System.ComponentModel.IExtenderProvider?displayProperty=nameWithType> -Schnittstelle, die eine einzelne Methode, <xref:System.Windows.Forms.ToolTip.CanExtend%2A>. QuickInfos erweitern Steuerelemente auf die gleiche Form zur Entwurfszeit Hinzufügen einer `ToolTip` Eigenschaft. Weitere Informationen über Extenderanbieter finden Sie unter [Extenderanbieter](http://msdn.microsoft.com/library/4ce043d8-cd48-49dd-abef-185a2079e96a).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse und ordnet die Instanz mit der <xref:System.Windows.Forms.Form> , die innerhalb die Instanz erstellt wird. Im Code initialisiert dann die Delay-Eigenschaften <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Darüber hinaus die Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse legt die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaft `true` So aktivieren Sie QuickInfo-Text auch angezeigt, unabhängig davon, ob das Formular aktiv ist. Im Beispiel wird schließlich QuickInfo-Text mit zwei Steuerelementen in einem Formular ein <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.CheckBox>. Im Codebeispiel wird vorausgesetzt, dass die im Beispiel definierte Methode im befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> Steuerelement namens `button1` und ein <xref:System.Windows.Forms.CheckBox> -Steuerelement namens `checkBox1`, und, die die Methode wird vom Konstruktor aufgerufen von der <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolTip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolTip" /> ohne einen angegebenen Container.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine Instanz einer QuickInfo, die keine Container zugewiesen sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Windows.Forms.ToolTip> Klasse. Im Code initialisiert dann die Delay-Eigenschaften <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Darüber hinaus die Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse legt die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaft `true` So aktivieren Sie QuickInfo-Text angezeigt werden, unabhängig davon, ob das Formular aktiv ist. Im Beispiel wird schließlich QuickInfo-Text mit zwei Steuerelementen in einem Formular ein <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.CheckBox>. Im Codebeispiel wird vorausgesetzt, dass die im Beispiel definierte Methode im befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> -Steuerelement namens `button1` und ein <xref:System.Windows.Forms.CheckBox> Steuerelement namens `checkBox1,` und, die die Methode wird vom Konstruktor aufgerufen die <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolTip (System.ComponentModel.IContainer cont);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer cont) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cont" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="cont">Ein <see cref="T:System.ComponentModel.IContainer" /> , die den Container darstellt, die <see cref="T:System.Windows.Forms.ToolTip" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolTip" /> Klasse mit einem angegebenen Container.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip> Konstruktor ermöglicht das Zuordnen einer <xref:System.Windows.Forms.ToolTip> mit <xref:System.ComponentModel.Container> Objekt. Durch das Zuordnen der <xref:System.Windows.Forms.ToolTip> auf diese Weise übergeben Sie die Kontrolle der Lebensdauer der die QuickInfo ein, die <xref:System.ComponentModel.Container>. Dies kann nützlich sein, wenn Sie mehrere Komponenten in Ihrer Anwendung verwenden, und alle von ihnen gleichzeitig freigeben möchten. Angenommen, Sie ordnen eine <xref:System.Windows.Forms.ToolTip>, wird eine <xref:System.Windows.Forms.ImageList>, und eine <xref:System.Windows.Forms.Timer> mit einer <xref:System.ComponentModel.Container>wird beim Aufrufen <xref:System.ComponentModel.Container.Dispose%2A> auf der <xref:System.ComponentModel.Container> Verwerfen von alle diese Komponenten auch erzwingen, wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Active">
+      <MemberSignature Language="C#" Value="public bool Active { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Active" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.Active" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die QuickInfo gerade aktiv ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die QuickInfo gerade aktiv ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.ToolTip.Active%2A> -Eigenschaft, können Sie aktivieren oder deaktivieren Sie die Anzeige des QuickInfo-Text für alle Steuerelemente, die von dieser bestimmten angegebenen Text <xref:System.Windows.Forms.ToolTip> Komponente. Obwohl mehrere <xref:System.Windows.Forms.ToolTip> Komponente erstellt und zu einem Formular, das Festlegen von zugewiesen werden kann die <xref:System.Windows.Forms.ToolTip.Active%2A> Eigenschaft `false` wirkt sich nur auf die aktuelle <xref:System.Windows.Forms.ToolTip>. Sie können angeben, können Benutzer den Wert dieser Eigenschaft in einem Formular festgelegt wird, die Anwendungsoptionen bereitstellt. Diese Optionen geben dem Benutzer wiederum die Möglichkeit, aktiviert oder deaktiviert die Anzeige von QuickInfos in Ihrer Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticDelay">
+      <MemberSignature Language="C#" Value="public int AutomaticDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutomaticDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.AutomaticDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(500)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die automatische Verzögerung für die QuickInfo ab oder legt diese fest.</summary>
+        <value>Die automatische Verzögerung (in Millisekunden). Der Standard ist 500.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft ermöglicht Ihnen, eine einzelne Verzögerung festgelegt, dann dient zum Festlegen der Werte der <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Eigenschaften. Jedes Mal die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft festgelegt ist, werden die folgenden Werte standardmäßig festgelegt.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>|10-Mal die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftswert.|  
+|<xref:System.Windows.Forms.ToolTip.InitialDelay%2A>|Gleich der <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftswert.|  
+|<xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>|1/5, der die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftswert.|  
+  
+ Diese Eigenschaften können auch unabhängig voneinander einmal festgelegt werden die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft festgelegt wurde. Weitere Informationen finden Sie unter der <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Eigenschaften. Diese Eigenschaft wird normalerweise verwendet, um eine konsistente Verzögerung Muster für die QuickInfo-Fenster bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPopDelay">
+      <MemberSignature Language="C#" Value="public int AutoPopDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutoPopDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.AutoPopDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeitspanne ab, während der die QuickInfo sichtbar bleibt, wenn der Zeiger auf einem Steuerelement mit angegebenem QuickInfo-Text nicht bewegt wird, oder legt diese Zeitspanne fest.</summary>
+        <value>Die Zeitspanne in Millisekunden, die die <see cref="T:System.Windows.Forms.ToolTip" /> sichtbar bleibt, wenn der Zeiger auf ein Steuerelement nicht bewegt wird. Der Standardwert ist 5000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Eigenschaft können Sie die Zeit verkürzen oder verlängern, die die <xref:System.Windows.Forms.ToolTip> Fenster wird angezeigt, wenn der Mauszeiger in einem Steuerelement befindet. Z. B. Wenn Sie eine ausführliche Hilfe in einer QuickInfo-Fenster anzeigen, können Sie erhöhen Sie den Wert dieser Eigenschaft, um sicherzustellen, dass der Benutzer ausreichend Zeit zum Lesen des Texts.  
+  
+ Wenn Sie eine konsistente Verzögerung Muster für die QuickInfo-Fenster haben möchten, legen Sie die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft. Die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftensätze der <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, und <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Eigenschaften Anfangswerte basierend auf einem einzelnen Wert. Jedes Mal, wenn die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> -Eigenschaftensatz ist auf 10 Mal den <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftswert. Einmal die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> -Eigenschaft gesetzt ist, können Sie unabhängig voneinander Festlegen der <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> -Eigenschaft, den Standardwert zu überschreiben.  
+  
+ Die maximale Zeit, die Sie ein Popup verzögern können ist 5000 Millisekunden. Verwenden Sie für eine längere Dauer der <xref:System.Windows.Forms.ToolTip.Show%2A> Methode, um den genauen Zeitpunkt zu steuern, wenn die QuickInfo wird angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse und ordnet die Instanz mit der <xref:System.Windows.Forms.Form> , die innerhalb die Instanz erstellt wird. Im Code initialisiert dann die Delay-Eigenschaften <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Darüber hinaus die Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse legt die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaft `true` So aktivieren Sie QuickInfo-Text angezeigt werden, unabhängig davon, ob das Formular aktiv ist. Im Beispiel wird schließlich QuickInfo-Text mit zwei Steuerelementen in einem Formular ein <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.CheckBox>. Im Codebeispiel wird vorausgesetzt, dass die im Beispiel definierte Methode im befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> -Steuerelement namens `button1` und ein <xref:System.Windows.Forms.CheckBox> Steuerelement namens `checkBox1,` und, die die Methode wird vom Konstruktor aufgerufen die <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Info")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hintergrundfarbe für die QuickInfo ab oder legt diese fest.</summary>
+        <value>Der Hintergrund des <see cref="T:System.Drawing.Color" />-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die QuickInfo Ownerdrawn-ist, wird diese Eigenschaft ignoriert.  
+  
+ Die Standardschriftart des Systems wird automatisch verwendet und kann nur überschrieben, indem Ownerdrawing-QuickInfo. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExtend(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Zielobjekt eine Extendereigenschaft hinzufügen.</param>
+        <summary>Gibt <see langword="true" /> , wenn die QuickInfo eine Extender-Eigenschaft für die angegebene Zielkomponente anbieten kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.ToolTip" /> Klasse kann eine oder mehrere Extendereigenschaften bieten, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.CanExtend%2A> Methode ist das einzige Mitglied der <xref:System.ComponentModel.IExtenderProvider?displayProperty=nameWithType> Schnittstelle. Diese Methode gibt `true` Wenn die `target` Parameter ist vom Typ <xref:System.Windows.Forms.Control>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Erstellungsparameter für das QuickInfo-Fenster ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.CreateParams" /> mit den Informationen zum Erstellen der QuickInfo erforderlich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.CreateParams%2A> Eigenschaft sollte nur erweitert werden, wenn Sie eine standardmäßige Windows-Steuerelementklasse oder festzulegende Formate werden nicht von bereitgestellten der <xref:System.Windows.Forms?displayProperty=nameWithType> Namespace. Weitere Informationen zum Erstellen von Steuerelementparameter, finden Sie unter der `CreateWindow` und `CreateWindowEx` Funktionen und die `CREATESTRUCT` Struktur-Dokumentation in der Referenz zu Windows-Plattform-SDK befindet sich in der MSDN Library.  
+  
+> [!NOTE]
+>  Zum Überschreiben der <xref:System.Windows.Forms.ToolTip.CreateParams%2A> verwenden Sie Eigenschaft in einer abgeleiteten Klasse der Basisklasse <xref:System.Windows.Forms.ToolTip.CreateParams%2A> Eigenschaft, um die grundlegende Implementierung zu erweitern.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">Für erbende Klassen zum Aufrufen von nicht verwalteten Codes beim Abrufen des Werts der Eigenschaft.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für den unmittelbaren Aufrufer nicht verwalteten Code aufgerufen werden, wenn der Wert der Eigenschaft abrufen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Component" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DrawToolTipEventHandler Draw;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DrawToolTipEventHandler Draw" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolTip.Draw" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawToolTipEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die QuickInfo gezeichnet wird und die <see cref="P:System.Windows.Forms.ToolTip.OwnerDraw" /> -Eigenschaftensatz auf <see langword="true" /> und <see cref="P:System.Windows.Forms.ToolTip.IsBalloon" /> Eigenschaft ist <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.ToolTip.Draw> -Ereignis können Sie die Darstellung der Anpassen der <xref:System.Windows.Forms.ToolTip>.  
+  
+ Die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis wird ausgelöst, durch die <xref:System.Windows.Forms.ToolTip> Klasse an, wenn die <xref:System.Windows.Forms.ToolTip> gezeichnet wird und die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType> Eigenschaftswert ist `true` und <xref:System.Windows.Forms.ToolTip.IsBalloon%2A> Eigenschaft ist `false`. Die <xref:System.Windows.Forms.DrawToolTipEventArgs> Klasse enthält alle Informationen, die zum Zeichnen der <xref:System.Windows.Forms.ToolTip>, einschließlich des QuickInfo-Texts der <xref:System.Drawing.Rectangle>, und die <xref:System.Drawing.Graphics> -Objekt, auf dem gezeichnet werden soll. Verwenden Sie zum Anpassen der Darstellung der QuickInfo der <xref:System.Drawing.Rectangle> um die Grenzen der QuickInfo zu bestimmen und die <xref:System.Drawing.Graphics> Objekt, das Ihre benutzerdefinierte Zeichnung zu erstellen. Sie können die Grenzen des der <xref:System.Windows.Forms.ToolTip> vor dem durch Behandeln der <xref:System.Windows.Forms.ToolTip.Popup> Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> Eigenschaft `true` und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte unterschiedlich, je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ToolTip ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die nicht verwalteten Ressourcen frei und führt andere Bereinigungsvorgänge vor der <see cref="T:System.Windows.Forms.Cursor" /> durch den Garbage Collector wieder zugänglich gemacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt <xref:System.Object.Finalize%2A> Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode. Weitere Informationen finden Sie unter [Finalize-Methoden und Destruktoren](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md), und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "InfoText")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe für die QuickInfo ab oder legt diese fest.</summary>
+        <value>Vordergrund <see cref="T:System.Drawing.Color" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolTip.BackColor%2A> und <xref:System.Windows.Forms.ToolTip.ForeColor%2A> Eigenschaften so ändern Sie das Farbschema von QuickInfos verwendet. Die Standardschriftart des Systems wird automatisch verwendet und kann nur überschrieben, indem Ownerdrawing-QuickInfo. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolTip">
+      <MemberSignature Language="C#" Value="public string GetToolTip (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetToolTip(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.GetToolTip(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die <see cref="T:System.Windows.Forms.Control" /> für das Abrufen der <see cref="T:System.Windows.Forms.ToolTip" /> Text.</param>
+        <summary>Ruft den QuickInfo-Text ab, der dem angegebenen Steuerelement zugeordnet ist.</summary>
+        <returns>Ein <see cref="T:System.String" /> , das den QuickInfo-Text für das angegebene Steuerelement enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.ToolTip.GetToolTip%2A> -Methode, können Sie den QuickInfo-Text für jedes Steuerelement abzurufen. Wenn die QuickInfo-Text in einer Anwendung dynamisch geändert wird, können Sie diese Methode verwenden, um herauszufinden, welche Text zu jedem Zeitpunkt abhängig vom Status der Anwendung angezeigt wird. Um den Text zu ändern, die ein Steuerelement angezeigt wird, verwenden die <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="public void Hide (System.Windows.Forms.IWin32Window win);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Hide(class System.Windows.Forms.IWin32Window win) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Hide(System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="win" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="win">Die <see cref="T:System.Windows.Forms.IWin32Window" /> das zugeordnete Fenster bzw. eines Steuerelements, das die QuickInfo zugeordnet ist.</param>
+        <summary>Blendet das angegebene QuickInfo-Fenster aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.Hide%2A> -Methode blendet die QuickInfo für das angegebene <xref:System.Windows.Forms.Control> , wenn er aktuell angezeigt wird. Deaktivieren oder nicht andernfalls möglicherweise nicht die gleiche QuickInfo in der Zukunft angezeigt wird. So deaktivieren Sie stattdessen alle aktuellen zugeordnete QuickInfo-Fenster <xref:System.Windows.Forms.ToolTip.ToolTipTitle%2A> Komponentensatz, die <xref:System.Windows.Forms.ToolTip.Active%2A> Eigenschaft `false`.  
+  
+ Ausführen in teilweise vertrauenswürdigen Anwendungen bestätigen müssen die <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Berechtigung zur Verwendung dieser Methode wird als <xref:System.Windows.Forms.ToolTip.Hide%2A> können Ausblenden des Tipps unabhängig von Handlung des Benutzers.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="win" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Erfordert <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialDelay">
+      <MemberSignature Language="C#" Value="public int InitialDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InitialDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.InitialDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bis zum Anzeigen der QuickInfo verstreichende Zeit ab oder legt diese fest.</summary>
+        <value>Die Zeitspanne in Millisekunden, in der der Zeiger auf einem Steuerelement nicht bewegt werden darf, bevor das QuickInfo-Fenster angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> -Eigenschaft, können Sie verkürzen oder verlängern die Zeit, die die <xref:System.Windows.Forms.ToolTip> wartet, bevor eine QuickInfo-Fenster anzeigt. Wenn der Wert, der die <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Eigenschaft auf einen Wert zu lange Dauer festgelegt ist, der Benutzer der Anwendung möglicherweise nicht weiß, dass Ihre Anwendung die QuickInfo-Hilfe bietet. Sie können diese Eigenschaft verwenden, um sicherzustellen, dass der Benutzer QuickInfos schnell angezeigt werden, indem die angegebene Zeit verkürzen.  
+  
+ Der Wert für diese Eigenschaft darf 32767 nicht überschreiten.  
+  
+ Wenn Sie eine konsistente Verzögerung Muster für die QuickInfo-Fenster haben möchten, legen Sie die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft. Die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftensätze der <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, und <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Eigenschaften Anfangswerte basierend auf einem einzigen Wert. Jedes Mal, wenn die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Eigenschaftensatz wird auf den gleichen Wert wie die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft. Einmal die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> -Eigenschaft gesetzt ist, können Sie unabhängig voneinander Festlegen der <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> -Eigenschaft, den Standardwert zu überschreiben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse und ordnet die Instanz mit der <xref:System.Windows.Forms.Form> , die innerhalb die Instanz erstellt wird. Im Code initialisiert dann die Delay-Eigenschaften <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Darüber hinaus die Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse legt die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaft `true` So aktivieren Sie QuickInfo-Text angezeigt werden, unabhängig davon, ob das Formular aktiv ist. Im Beispiel wird schließlich QuickInfo-Text mit zwei Steuerelementen in einem Formular ein <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.CheckBox>. Im Codebeispiel wird vorausgesetzt, dass die im Beispiel definierte Methode im befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> -Steuerelement namens `button1` und ein <xref:System.Windows.Forms.CheckBox> Steuerelement namens `checkBox1,` und, die die Methode wird vom Konstruktor aufgerufen die <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBalloon">
+      <MemberSignature Language="C#" Value="public bool IsBalloon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBalloon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.IsBalloon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob für die QuickInfo ein Sprechblasenfenster verwenden werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn ein Sprechblasenfenster verwendet werden soll. andernfalls <see langword="false" /> , wenn ein standard rechteckiges Fenster verwendet werden soll. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden QuickInfos mit einfachen rechteckigen Fenstern angezeigt. Durch Festlegen der <xref:System.Windows.Forms.ToolTip.IsBalloon%2A> Eigenschaft `true`, die QuickInfo ein Sprechblasenfenster verwenden angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDraw">
+      <MemberSignature Language="C#" Value="public bool OwnerDraw { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OwnerDraw" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.OwnerDraw" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die QuickInfo vom Betriebssystem oder von dem Code, den Sie bereitstellen, gezeichnet wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.ToolTip" /> von Code, die Sie bereitstellen gezeichnet wird <see langword="false" /> Wenn die <see cref="T:System.Windows.Forms.ToolTip" /> vom Betriebssystem gezeichnet wird. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel eine <xref:System.Windows.Forms.ToolTip> gezeichnet wird, vom Betriebssystem, sondern die Darstellung Anpassen der <xref:System.Windows.Forms.ToolTip> können Sie festlegen, die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> Eigenschaft, um `true` und behandeln die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis.  
+  
+ Die <xref:System.Windows.Forms.ToolTip.IsBalloon%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> Eigenschaft. Wenn beide so `true`, die <xref:System.Windows.Forms.ToolTip> wird über ein Sprechblasenfenster statt über einen Besitzer gezeichneten Fenster angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Besitzer zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> Eigenschaft `true` und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte gezeichnet, je nachdem welche Schaltfläche ist die <xref:System.Windows.Forms.ToolTip> wie angegeben angezeigt wird die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Popup">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PopupEventHandler Popup;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PopupEventHandler Popup" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolTip.Popup" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PopupEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, bevor eine QuickInfo anfänglich angezeigt wird. Dies ist das Standardereignis für die <see cref="T:System.Windows.Forms.ToolTip" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.Popup> Ereignis wird ausgelöst, wenn eine QuickInfo angezeigt wird, entweder durch einen expliziten Aufruf eines der <xref:System.Windows.Forms.ToolTip.Show%2A> Methoden oder wenn die <xref:System.Windows.Forms.ToolTip> Klasse wird implizit ein QuickInfo angezeigt. Dieses Ereignis kann abgebrochen werden.  
+  
+ Aufrufen von Eigenschaften in diesem Fall, die dazu führen, dass das zugrunde liegende Fensterhandle, z. B. neu erstellt werden <xref:System.Windows.Forms.ToolTip.IsBalloon%2A>, führt zu einer Ausnahme, die ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolTip.Popup> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolTip> mit dem Namen `ToolTip1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolTip.Popup> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#619](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#619)]
+ [!code-vb[System.Windows.Forms.EventExamples#619](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#619)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt den gesamten QuickInfo-Text, der derzeit der QuickInfo-Komponente zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, um alle QuickInfo-Text zu entfernen, die zugeordnet ist die <xref:System.Windows.Forms.ToolTip> -Komponente für alle zugeordneten Steuerelemente. Um die Anzeige von Text stattdessen zu deaktivieren, verwenden Sie die <xref:System.Windows.Forms.ToolTip.Active%2A> Eigenschaft. Um den Text für eine einzelnes zugeordnete Steuerelement zu ändern, verwenden die <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReshowDelay">
+      <MemberSignature Language="C#" Value="public int ReshowDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReshowDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ReshowDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeitspanne für das Anzeigen weiterer QuickInfo-Fenster ab, wenn der Zeiger von einem Steuerelement zu einem anderen bewegt wird, oder legt diese fest.</summary>
+        <value>Die Zeitspanne in Millisekunden, nach der weitere QuickInfo-Fenster angezeigt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> -Eigenschaft, können Sie verkürzen oder verlängern die Zeit, die die <xref:System.Windows.Forms.ToolTip> wartet, bevor eine QuickInfo-Fenster anzeigt, nachdem ein vorheriges QuickInfo-Fenster angezeigt wird. Beim ersten ein QuickInfo-Fenster angezeigt wird, den Wert des der <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Eigenschaft wird verwendet, um die Verzögerung anzuwendende vor dem ersten Anzeigen der QuickInfo-Fenster zu ermitteln. Wenn gerade ein QuickInfo-Fenster angezeigt wird und der Benutzer den Mauszeiger auf ein anderes Steuerelement, das ein QuickInfo-Fenster den Wert des anzeigt die <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Eigenschaft vor dem Anzeigen der QuickInfo für das neue Steuerelement verwendet wird. Die QuickInfo-Fenster das vorherige Steuerelement muss immer noch in der Reihenfolge für die Verzögerung, die im angegebenen angezeigt werden die <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Eigenschaft verwendet werden; andernfalls die <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Eigenschaftswert verwendet wird.  
+  
+ Wenn Sie eine konsistente Verzögerung Muster für QuickInfo-Fenster haben möchten, legen Sie die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft. Die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftensätze der <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, und <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Eigenschaften Anfangswerte basierend auf einem einzigen Wert. Jedes Mal, wenn der <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaft festgelegt ist, der <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Eigenschaftensatz wird auf 1/5, der die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> Eigenschaftswert. Einmal die <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> -Eigenschaft gesetzt ist, können Sie unabhängig voneinander Festlegen der <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> -Eigenschaft, den Standardwert zu überschreiben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse und ordnet die Instanz mit der <xref:System.Windows.Forms.Form> , die innerhalb die Instanz erstellt wird. Im Code initialisiert dann die Delay-Eigenschaften <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Darüber hinaus die Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse legt die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaft `true` So aktivieren Sie QuickInfo-Text angezeigt werden, unabhängig davon, ob das Formular aktiv ist. Im Beispiel wird schließlich QuickInfo-Text mit zwei Steuerelementen in einem Formular ein <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.CheckBox>. Im Codebeispiel wird vorausgesetzt, dass die im Beispiel definierte Methode im befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> -Steuerelement namens `button1` und ein <xref:System.Windows.Forms.CheckBox> Steuerelement namens `checkBox1,` und, die die Methode wird vom Konstruktor aufgerufen die <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetToolTip">
+      <MemberSignature Language="C#" Value="public void SetToolTip (System.Windows.Forms.Control control, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetToolTip(class System.Windows.Forms.Control control, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.SetToolTip(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die <see cref="T:System.Windows.Forms.Control" /> den QuickInfo-Text mit zuordnen.</param>
+        <param name="caption">Der QuickInfo-Text angezeigt, wenn der Mauszeiger auf dem Steuerelement befindet.</param>
+        <summary>Ordnet QuickInfo-Text dem angegebenen Steuerelement zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zum Angeben des QuickInfo-Texts für ein Steuerelement anzeigen, können Sie diese Methode auch verwenden, um den QuickInfo-Text für ein Steuerelement zu ändern. Aufrufen der <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode mehr als einmal für ein bestimmtes Steuerelement gibt keinen mehrere QuickInfo-Text für ein Steuerelement anzeigen, aber stattdessen ändert die aktuelle QuickInfo-Text für das Steuerelement. Um den QuickInfo-Text zu bestimmen, die zur Laufzeit ein Steuerelement zugeordnet ist, verwenden die <xref:System.Windows.Forms.ToolTip.GetToolTip%2A> Methode.  
+  
+ Als allgemeine Regel sollte der verwendete Text kurz sein; Sie können jedoch Zeilenumbrüche einfügen, indem die `\r\n` Escapesequenz für Zeichen. Kaufmännische und-Zeichen (&) im Text werden behandelt, wie in der <xref:System.Windows.Forms.ToolTip.StripAmpersands%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse und ordnet die Instanz mit der <xref:System.Windows.Forms.Form> , die innerhalb die Instanz erstellt wird. Im Code initialisiert dann die Delay-Eigenschaften <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Darüber hinaus die Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse legt die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaft `true` So aktivieren Sie QuickInfo-Text angezeigt werden, unabhängig davon, ob das Formular aktiv ist. Im Beispiel wird schließlich QuickInfo-Text mit zwei Steuerelementen in einem Formular ein <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.CheckBox>. Dieses Beispiel benötigen Sie, dass die im Beispiel definierte Methode im befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> -Steuerelement namens `button1` und ein <xref:System.Windows.Forms.CheckBox> -Steuerelement namens `checkBox1`, und die-Methode wird vom Konstruktor aufgerufen die <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see cref="T:System.String" /> mit dem neuen QuickInfo-Text.</param>
+        <param name="window">Die <see cref="T:System.Windows.Forms.Control" /> zum Anzeigen der QuickInfo für.</param>
+        <summary>Legt den dem angegebenen Steuerelement zugeordneten QuickInfo-Text fest und zeigt die QuickInfo modal an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version der <xref:System.Windows.Forms.ToolTip.Show%2A> Methode zeigt die QuickInfo für das angegebene Steuerelement modal; d. h. die QuickInfo wird angezeigt, bis die <xref:System.Windows.Forms.ToolTip.Hide%2A> Methode aufgerufen wird, oder bis das übergeordnete Formular minimiert, ausgeblendet oder geschlossen. Die QuickInfo wird in der Mitte des zugeordneten Steuerelements positioniert.  
+  
+ Ausführen in teilweise vertrauenswürdigen Anwendungen bestätigen müssen die <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Berechtigung zur Verwendung dieser Methode wird als <xref:System.Windows.Forms.ToolTip.Show%2A> können die Anzeige sowie die Position einer QuickInfo, die unabhängig von Handlung des Benutzers steuern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="window" />-Parameter ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Erfordert <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see cref="T:System.String" /> mit dem neuen QuickInfo-Text.</param>
+        <param name="window">Die <see cref="T:System.Windows.Forms.Control" /> zum Anzeigen der QuickInfo für.</param>
+        <param name="point">Ein <see cref="T:System.Drawing.Point" /> , enthält des Offsets in Pixel relativ zur linken oberen Ecke des zugeordneten Steuerelementfensters, mit der QuickInfo angezeigt.</param>
+        <summary>Legt den dem angegebenen Steuerelement zugeordneten QuickInfo-Text fest und zeigt die QuickInfo dann modal an der angegebenen relativen Position an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `pt` Parameter kann geben eine Position außerhalb der Grenzen des zugeordneten Steuerelements, deren übergeordnetes Formular oder sogar auf dem Desktop. Die Version der <xref:System.Windows.Forms.ToolTip.Show%2A> Methode zeigt die QuickInfo für das angegebene Steuerelement modal; d. h. die QuickInfo wird angezeigt, bis die <xref:System.Windows.Forms.ToolTip.Hide%2A> Methode aufgerufen wird, oder bis das übergeordnete Formular minimiert, ausgeblendet oder geschlossen.  
+  
+ Ausführen in teilweise vertrauenswürdigen Anwendungen bestätigen müssen die <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Berechtigung zur Verwendung dieser Methode wird als <xref:System.Windows.Forms.ToolTip.Show%2A> können die Anzeige sowie die Position einer QuickInfo, die unabhängig von Handlung des Benutzers steuern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="window" />-Parameter ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Erfordert <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see cref="T:System.String" /> mit dem neuen QuickInfo-Text.</param>
+        <param name="window">Die <see cref="T:System.Windows.Forms.Control" /> zum Anzeigen der QuickInfo für.</param>
+        <param name="duration">Ein <see cref="T:System.Int32" /> , enthält die Dauer in Millisekunden, die auf die QuickInfo angezeigt.</param>
+        <summary>Legt den dem angegebenen Steuerelement zugeordneten QuickInfo-Text fest und zeigt die QuickInfo dann während einer angegebenen Zeitdauer an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die QuickInfo wird in der Mitte des zugeordneten Steuerelements dargestellte positioniert das `win` Parameter. Um die QuickInfo modal anzuzeigen, rufen die <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%29> stattdessen, Version dieser Methode zu überladen.  
+  
+ Ausführen in teilweise vertrauenswürdigen Anwendungen bestätigen müssen die <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Berechtigung zur Verwendung dieser Methode wird als <xref:System.Windows.Forms.ToolTip.Show%2A> können die Anzeige sowie die Position einer QuickInfo, die unabhängig von Handlung des Benutzers steuern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="window" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="duration" /> ist kleiner oder gleich 0.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Erfordert <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, System.Drawing.Point point, int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, valuetype System.Drawing.Point point, int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Drawing.Point,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="point" Type="System.Drawing.Point" />
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see cref="T:System.String" /> mit dem neuen QuickInfo-Text.</param>
+        <param name="window">Die <see cref="T:System.Windows.Forms.Control" /> zum Anzeigen der QuickInfo für.</param>
+        <param name="point">Ein <see cref="T:System.Drawing.Point" /> , enthält des Offsets in Pixel relativ zur linken oberen Ecke des zugeordneten Steuerelementfensters, mit der QuickInfo angezeigt.</param>
+        <param name="duration">Ein <see cref="T:System.Int32" /> , enthält die Dauer in Millisekunden, die auf die QuickInfo angezeigt.</param>
+        <summary>Legt den dem angegebenen Steuerelement zugeordneten QuickInfo-Text fest und zeigt die QuickInfo dann während der angegebenen Zeitdauer an der angegebenen relativen Position an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `pt` Parameter kann geben eine Position außerhalb der Grenzen des zugeordneten Steuerelements, deren übergeordnetes Formular oder sogar auf dem Desktop.  Die QuickInfo wird in der Mitte des zugeordneten Steuerelements positioniert. Um die QuickInfo modal anzuzeigen, rufen die <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Drawing.Point%29> stattdessen, Version dieser Methode zu überladen.  
+  
+ Ausführen in teilweise vertrauenswürdigen Anwendungen bestätigen müssen die <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Berechtigung zur Verwendung dieser Methode wird als <xref:System.Windows.Forms.ToolTip.Show%2A> können die Anzeige sowie die Position einer QuickInfo, die unabhängig von Handlung des Benutzers steuern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="window" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="duration" /> ist kleiner oder gleich 0.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Erfordert <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see cref="T:System.String" /> mit dem neuen QuickInfo-Text.</param>
+        <param name="window">Die <see cref="T:System.Windows.Forms.Control" /> zum Anzeigen der QuickInfo für.</param>
+        <param name="x">Der horizontale Offset in Pixel relativ zur linken oberen Ecke des zugeordneten Steuerelementfensters, mit dem die QuickInfo angezeigt wird.</param>
+        <param name="y">Der vertikale Offset in Pixel relativ zur linken oberen Ecke des zugeordneten Steuerelementfensters, mit dem die QuickInfo angezeigt wird.</param>
+        <summary>Legt den dem angegebenen Steuerelement zugeordneten QuickInfo-Text fest und zeigt die QuickInfo dann modal an der angegebenen relativen Position an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version der überladenen <xref:System.Windows.Forms.ToolTip.Show%2A> -Methode funktioniert genauso wie die <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Drawing.Point%29> Version, mit dem Unterschied, dass der Offset angegeben wird, &; b. separate x- und y-Koordinaten anstelle von einer <xref:System.Drawing.Point>.  
+  
+ Ausführen in teilweise vertrauenswürdigen Anwendungen bestätigen müssen die <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Berechtigung zur Verwendung dieser Methode wird als <xref:System.Windows.Forms.ToolTip.Show%2A> können die Anzeige sowie die Position einer QuickInfo, die unabhängig von Handlung des Benutzers steuern.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Erfordert <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, int x, int y, int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, int32 x, int32 y, int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see cref="T:System.String" /> mit dem neuen QuickInfo-Text.</param>
+        <param name="window">Die <see cref="T:System.Windows.Forms.Control" /> zum Anzeigen der QuickInfo für.</param>
+        <param name="x">Der horizontale Offset in Pixel relativ zur linken oberen Ecke des zugeordneten Steuerelementfensters, mit dem die QuickInfo angezeigt wird.</param>
+        <param name="y">Der vertikale Offset in Pixel relativ zur linken oberen Ecke des zugeordneten Steuerelementfensters, mit dem die QuickInfo angezeigt wird.</param>
+        <param name="duration">Ein <see cref="T:System.Int32" /> , enthält die Dauer in Millisekunden, die auf die QuickInfo angezeigt.</param>
+        <summary>Legt den dem angegebenen Steuerelement zugeordneten QuickInfo-Text fest und zeigt die QuickInfo dann während der angegebenen Zeitdauer an der angegebenen relativen Position an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version der überladenen <xref:System.Windows.Forms.ToolTip.Show%2A> -Methode funktioniert genauso wie die <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Drawing.Point%2CSystem.Int32%29> Version, mit dem Unterschied, dass der Offset ist als separate x und y-anstelle von Koordinaten einer <xref:System.Drawing.Point>. Um die QuickInfo modal anzuzeigen, rufen die <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Int32%2CSystem.Int32%29> stattdessen, Version dieser Methode zu überladen.  
+  
+ Ausführen in teilweise vertrauenswürdigen Anwendungen bestätigen müssen die <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Berechtigung zur Verwendung dieser Methode wird als <xref:System.Windows.Forms.ToolTip.Show%2A> können die Anzeige sowie die Position einer QuickInfo, die unabhängig von Handlung des Benutzers steuern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="window" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="duration" /> ist kleiner oder gleich 0.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Erfordert <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowAlways">
+      <MemberSignature Language="C#" Value="public bool ShowAlways { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowAlways" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ShowAlways" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein QuickInfo-Fenster auch dann angezeigt wird, wenn das übergeordnete Steuerelement nicht aktiv ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die QuickInfo immer angezeigt wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> -Eigenschaft, die Sie anzeigen können ein QuickInfo-Fenster auch dann, wenn der Container das <xref:System.Windows.Forms.ToolTip> ist nicht aktiv. Können Sie diese Funktion in einer nicht modalen Windows-Anwendung so aktivieren Sie die QuickInfo-Fenster angezeigt werden unabhängig davon, welches nicht modale Fenster aktiv ist. Diese Funktion ist auch nützlich, wenn Sie, erstellen Sie ein Steuerelement mithilfe möchten der <xref:System.Windows.Forms.UserControl>, enthält eine Reihe von Kontrollmechanismen darin, die QuickInfo-Fenster angezeigt. Da die <xref:System.Windows.Forms.UserControl> ist häufig nicht aktive Fenster in einem Formular, das Festlegen dieser Eigenschaft auf `true` aktiviert die Steuerelemente innerhalb der <xref:System.Windows.Forms.UserControl> QuickInfo-Fenster jederzeit anzeigen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse und ordnet die Instanz mit der <xref:System.Windows.Forms.Form> , die innerhalb die Instanz erstellt wird. Im Code initialisiert dann die Delay-Eigenschaften <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, und <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Darüber hinaus die Instanz von der <xref:System.Windows.Forms.ToolTip> -Klasse legt die <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaft `true` So aktivieren Sie QuickInfo-Text angezeigt werden, unabhängig davon, ob das Formular aktiv ist. Im Beispiel wird schließlich QuickInfo-Text mit zwei Steuerelementen in einem Formular ein <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.CheckBox>. Im Codebeispiel wird vorausgesetzt, dass die im Beispiel definierte Methode im befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> Steuerelement namens `button1` und ein <xref:System.Windows.Forms.CheckBox> -Steuerelement namens `checkBox1`, und, die die Methode wird vom Konstruktor aufgerufen von der <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopTimer">
+      <MemberSignature Language="C#" Value="protected void StopTimer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void StopTimer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.StopTimer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hält den Timer an, der angezeigte QuickInfos ausblendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip> -Klasse verfügt über einen internen Zeitgeber, die es verwendet, um die Anzeigedauer für QuickInfos festzulegen. Dieser Zeitgeber zugeordnete Dauer festgelegt ist, über die <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Eigenschaft. Die <xref:System.Windows.Forms.ToolTip.StopTimer%2A> Methode hält diese internen Timer, wodurch alle angezeigten QuickInfos modal angezeigt werden, bis die <xref:System.Windows.Forms.ToolTip.Hide%2A> Methode aufgerufen wird, oder das übergeordnete Formular minimiert, ausgeblendet oder geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripAmpersands">
+      <MemberSignature Language="C#" Value="public bool StripAmpersands { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StripAmpersands" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.StripAmpersands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, wie kaufmännische und-Zeichen (&amp;) Zeichen behandelt.</summary>
+        <value>
+          <see langword="true" />Wenn das kaufmännische und-Zeichen aus dem QuickInfo-Text entfernt werden; andernfalls <see langword="false" />. Der Standardwert ist false.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung verwendet häufig die gleichen Zeichenfolgenressource für mehrere Zwecke, z. B. ein Menüelement und eine QuickInfo an. Menüs ermöglichen jedoch häufig Zugriffstasten ist gekennzeichnet durch ein kaufmännisches und-Zeichen, in der Zeichenfolge des Menüelements. QuickInfos unterstützen diese Funktion nicht damit standardmäßig kaufmännische und-Zeichen nur als normale Zeichen angezeigt werden. Festlegen der <xref:System.Windows.Forms.ToolTip.StripAmpersands%2A> Eigenschaft `true` sämtliche kaufmännischen und-Zeichen aus dem QuickInfo-Text entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das zugeordneten Programmierer bereitgestellte Daten enthält die <see cref="T:System.Windows.Forms.ToolTip" />.</summary>
+        <value>Ein <see cref="T:System.Object" />, das Daten über den <see cref="T:System.Windows.Forms.ToolTip" /> enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise verwenden Sie die <xref:System.Windows.Forms.ToolTip.Tag%2A> Eigenschaft zum Speichern von Daten, die eng mit der <xref:System.Windows.Forms.ToolTip>. Angenommen, Sie Anzeigen einer <xref:System.Windows.Forms.ToolTip> für ein Steuerelement, Kundeninformationen anzeigt, können Sie speichern die <xref:System.Data.DataSet> , enthält die Kundeninformationen in der <xref:System.Windows.Forms.ToolTip.Tag%2A> Eigenschaft, sodass die Daten schnell zugegriffen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipIcon">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolTipIcon ToolTipIcon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolTipIcon ToolTipIcon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ToolTipIcon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolTipIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Typ des neben dem QuickInfo-Text anzuzeigenden Symbols definiert, oder legt diesen fest.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.ToolTipIcon" /> -Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie möchten eine Grafik zu verwenden, die nicht von definiert wird die <xref:System.Windows.Forms.ToolTipIcon?displayProperty=nameWithType> -Enumeration, Sie müssen Besitzer gezeichnetes die gesamte QuickInfo. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipTitle">
+      <MemberSignature Language="C#" Value="public string ToolTipTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ToolTipTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Titel für das QuickInfo-Fenster ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält des Titels des Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Titel wird als eine Zeile mit fett formatierten Text über dem standard Text, der eine Beschreibung der QuickInfo-Steuerelement innerhalb des Fensters angezeigt. Titel werden in der Regel nur entweder zur Unterscheidung von anderer Kategorien von Steuerelementen in einem Formular oder als eine Einführung in eine relativ lange Steuerelement Beschreibung verwendet.  
+  
+ Die maximale Länge der Titel ist 99 Zeichen besteht. Wenn diese Eigenschaft eine Zeichenfolge mit mehr als 99 Zeichen enthält, wird kein Titel angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung für dieses Steuerelement zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> , enthält eine Beschreibung der <see cref="T:System.Windows.Forms.ToolTip" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese überschriebene Version der der <xref:System.Windows.Forms.ToolTip.ToString%2A> Methode zeigt den Klassennamen gefolgt von den Werten der an die <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> und <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAnimation">
+      <MemberSignature Language="C#" Value="public bool UseAnimation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAnimation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.UseAnimation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der bestimmt, ob beim Anzeigen der QuickInfo ein Animationseffekt verwendet werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn Fensteranimation verwendet werden soll andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Internet Explorer 5 und Microsoft Windows XP eingeführten dynamische Effekte der Benutzeroberfläche, z. B. das Ausblenden von Fenstern und Animation. Wenn der Benutzer diese Funktionen nicht deaktiviert hat die <xref:System.Windows.Forms.ToolTip.UseAnimation%2A> Eigenschaft zum Aktivieren dieser Funktion für QuickInfos auf diesen Plattformen angezeigte verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseFading">
+      <MemberSignature Language="C#" Value="public bool UseFading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseFading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.UseFading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der bestimmt, ob beim Anzeigen der QuickInfo ein Ausblendungseffekt verwendet werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Ausblenden von Fenstern verwendet werden soll andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Internet Explorer 5 und Microsoft Windows XP eingeführten dynamische Effekte der Benutzeroberfläche, z. B. das Ausblenden von Fenstern und Animation. Wenn der Benutzer diese Funktionen nicht deaktiviert hat die <xref:System.Windows.Forms.ToolTip.UseFading%2A> Eigenschaft zum Aktivieren dieser Funktion für QuickInfos auf diesen Plattformen angezeigte verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

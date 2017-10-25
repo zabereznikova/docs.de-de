@@ -1,0 +1,793 @@
+<Type Name="ControlAdapter" FullName="System.Web.UI.MobileControls.Adapters.ControlAdapter">
+  <TypeSignature Language="C#" Value="public abstract class ControlAdapter : System.Web.UI.MobileControls.IControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ControlAdapter extends System.Object implements class System.Web.UI.MobileControls.IControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.ControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.IControlAdapter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.Web.UI.MobileControls.Adapters.ControlAdapter" /> Klasse selbst ist abstrakt und kann nicht instanziiert werden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter> -Klasse stellt eine allgemeine Basisklasse, von welcher Adapter erben können. Diese Klasse stellt eine Standardimplementierung von der <xref:System.Web.UI.MobileControls.IControlAdapter> Schnittstelle, die für alle Adapter erforderlich. Die Standard-Rendering-Implementierung der Basisklasse sollte sein, um alle untergeordneten Steuerelemente zu rendern. Dadurch wird die Basisklasse als Adapter für Kompositionssteuerelemente verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int BackLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 BackLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.BackLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **wieder** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **wieder** oder die lokalisierte Übersetzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateOptimumPageWeight">
+      <MemberSignature Language="C#" Value="protected virtual int CalculateOptimumPageWeight (int defaultPageWeight);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 CalculateOptimumPageWeight(int32 defaultPageWeight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.CalculateOptimumPageWeight(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultPageWeight" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="defaultPageWeight">Die Seite Gewichtung zu verwenden, wenn die Seite Gewichtung andernfalls bestimmt werden kann.</param>
+        <summary>Bestimmt die optimale Gewichtung für das Gerät an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Die optimale Gewichtung für das Gerät.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Gewichtung für eine optimale Seite wird als 100-fache der Anzahl von Zeilen mit Zeichen berechnet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int CallLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 CallLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.CallLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **Aufrufen** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **Aufrufen** oder die lokalisierte Übersetzung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.MobileControl Control { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobileControl Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.ControlAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen stark typisierten Verweis auf das zugeordnete Steuerelement zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Einen stark typisierten Verweis auf das zugeordnete Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Control%2A> Eigenschaft ist eine Implementierung von der <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Control%2A> -Eigenschaft für die <xref:System.Web.UI.MobileControls.IControlAdapter> -Schnittstelle, die Ruft ab oder legt das Steuerelement an die der Adapter angefügt ist.  
+  
+ Für einzelne Steuerelementadapter, können Sie eine stark typisierte Eigenschaft ausblenden erstellen die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Control%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTemplatedUI">
+      <MemberSignature Language="C#" Value="public virtual void CreateTemplatedUI (bool doDataBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateTemplatedUI(bool doDataBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.CreateTemplatedUI(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doDataBind" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doDataBind">Wenn auf <see langword="true" /> festgelegt, werden die instanziierten Vorlagen an verfügbare Daten gebunden (dies geschieht in der Regel bei der ersten Anforderung). Wenn auf <see langword="false" /> festgelegt, werden die Vorlagen nicht an Daten gebunden, sondern verwenden stattdessen den Ansichtszustand zum Ausfüllen (dies geschieht in der Regel bei nachfolgenden Postbacks).</param>
+        <summary>Wird von einem Steuerelement zum Erstellen einer vorlagenbasierten Benutzeroberfläche aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung Ruft die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.CreateTemplatedUI%2A> Methode von der entsprechenden Steuerelementadapter, die wiederum wieder des Steuerelements aufrufen kann <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.CreateTemplatedUI%2A> Methode oder eine eigenen gerätespezifischen vorlagenbasierte Benutzeroberfläche erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Device">
+      <MemberSignature Language="C#" Value="public virtual System.Web.Mobile.MobileCapabilities Device { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Mobile.MobileCapabilities Device" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Mobile.MobileCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Objekt mit der Anforderung verknüpften Funktionen zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Gerät Capabilities-Objekt mit der Anforderung verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird der Einfachheit halber bereitgestellt, und entspricht dem Aufrufen des Browsers mit einer <xref:System.Web.HttpRequest>, wie z. B. <xref:System.Web.HttpRequest.Browser%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultLabel">
+      <MemberSignature Language="C#" Value="protected string GetDefaultLabel (int labelID);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetDefaultLabel(int32 labelID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.GetDefaultLabel(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelID" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="labelID">Der Bezeichner für die Bezeichnung.</param>
+        <summary>Gibt die lokalisierte Standardzeichenfolge für das Label-Steuerelement zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Die lokalisierte Standardzeichenfolge für das Label-Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Werte für `labelID` Parameter:  
+  
+|LabelID|Wert|  
+|-------------|-----------|  
+|Wechseln|0|  
+|GoLabel|1|  
+|OKLabel|2|  
+|MoreLabel|3|  
+|OptionsLabel|4|  
+|NextLabel|5|  
+|PreviousLabel|6|  
+|LinkLabel|7|  
+|CallLabel|8|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="labelID" />ist kleiner als 0 oder größer als oder gleich der Anzahl der gültigen Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GoLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int GoLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 GoLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.GoLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **Go** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **Go** oder die lokalisierte Übersetzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePostBackEvent">
+      <MemberSignature Language="C#" Value="public virtual bool HandlePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HandlePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.HandlePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Der Name des Ereignisses.</param>
+        <summary>Gibt <see langword="true" /> zurück, wenn das Ereignis behandelt wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />, wenn das Ereignis behandelt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von einem Steuerelement aufgerufen, wenn er eine Benachrichtigung Postbackereignis erhält zu überprüfen, ob das Ereignis adapterspezifische ist. Wenn das Steuerelement implementiert die <xref:System.Web.UI.IPostBackEventHandler> Methode und ein Postbackereignis empfängt die <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> der Steuerelementadapter-Methode aufgerufen wird. Wenn Ereignisse, die an das Steuerelement gesendet, die je nach Zielgerät variieren können, muss die Steuerelement-Implementierung dieser Methode aufrufen der <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.HandlePostBackEvent%2A> -Methode des Steuerelementadapters.  
+  
+ Diese Methode gibt `true` oder `false`gibt an, ob dem Geräteadapter das Ereignis behandelt. Es gibt `false` standardmäßig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemWeight">
+      <MemberSignature Language="C#" Value="public virtual int ItemWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.ControlAdapter.ItemWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Greift auf die ungefähre Gewichtung eines einzelnen Elements im Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die ungefähre Gewichtung eines einzelnen Elements im Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert-1 gibt an, dass die standardgewichtung für das Element verwendet werden muss. Die erbende Klasse muss diese Eigenschaft überschreiben. Weitere Informationen zum Überschreiben dieser Eigenschaft finden Sie unter [Paginierung](http://msdn.microsoft.com/en-us/b4f4c4bc-226b-46ec-ae46-00497a32f4f2).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int LinkLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 LinkLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.LinkLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **Link** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **Link** oder die lokalisierte Übersetzung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAdapterState">
+      <MemberSignature Language="C#" Value="public virtual void LoadAdapterState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadAdapterState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.LoadAdapterState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Der aktuelle Ansichtszustand.</param>
+        <summary>Lädt den Ansichtszustand. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn das Steuerelement seinen privaten Ansichtszustand lädt. Ein Geräteadapter kann die adapterspezifische Ansicht für ein Steuerelement zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="public virtual bool LoadPostData (string key, System.Collections.Specialized.NameValueCollection data, object controlPrivateData, out bool dataChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool LoadPostData(string key, class System.Collections.Specialized.NameValueCollection data, object controlPrivateData, [out] bool&amp; dataChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection,System.Object,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="data" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="controlPrivateData" Type="System.Object" />
+        <Parameter Name="dataChanged" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Bezeichnet das Steuerelement.</param>
+        <param name="data">Enthält die Auflistung aller eingehenden Namenswerte.</param>
+        <param name="controlPrivateData">Dient zum Senden von privaten Daten des Steuerelements, die möglicherweise zum Laden von POST-Daten erforderlich sind. Das Steuerelement bestimmt den Typ, der an den Parameter übergeben wird.</param>
+        <param name="dataChanged">Gibt <see langword="true" /> Wenn das erforderliche Objekt in <c>PrivateControlData</c> geändert wurde, sodass der <see cref="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" /> -Ereignis ausgelöst werden kann.</param>
+        <summary>Gibt <see langword="true" /> , wenn der Adapter das Laden der Post-Daten verarbeitet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn der Adapter das Laden der Post-Daten verarbeitet andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Steuerelement, die implementiert die <xref:System.Web.UI.IPostBackDataHandler?displayProperty=nameWithType> Schnittstelle verfügt über eine eigene <xref:System.Web.UI.IPostBackDataHandler.LoadPostData%2A> aufgerufene Methode.  
+  
+> [!NOTE]
+>  Verschiedene Geräte möglicherweise auf unterschiedliche Weise ihre Daten an den aufrufenden Server bereit. Ein Beispiel ist der Unterschied zwischen wie WML und HTML wieder die Ergebnisse der Bericht ein<xref:System.Web.UI.MobileControls.SelectionList>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoreLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int MoreLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 MoreLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.MoreLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **weitere** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **weitere** oder die lokalisierte Übersetzung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int NextLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 NextLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.NextLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **Weiter** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **Weiter** oder die lokalisierte Übersetzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OKLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int OKLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 OKLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.OKLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **OK** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **OK** oder die lokalisierte Übersetzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="public virtual void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.EventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Wird nach der Initialisierung eines Objekts, z. B. eines Formulars oder einer Seite, aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode zum Festlegen von Geräte-spezifischer Eigenschaften überschreiben. Erbende Klassen kann diese Methode, um andere Aufgaben überschreiben. Wenn diese Methode in einer erbenden Klasse überschrieben wird, müssen Sie die basisimplementierung aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="public virtual void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.EventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Lädt Daten, die sich auf ein Steuerelement, eine Seite oder einen Geräteadapter beziehen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnLoad%2A> Methode wird vom übergeordneten Element des Steuerelements geerbt. Wenn das Steuerelement eine mobile-Steuerelement ist, wird diese Methode geerbt von der <xref:System.Web.UI.Control?displayProperty=nameWithType> -Klasse; Wenn das Steuerelement eine <xref:System.Web.UI.MobileControls.MobilePage>, diese Methode wird vom geerbt der <xref:System.Web.UI.Page?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="public virtual void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.EventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, indem Sie des Steuerelements <see cref="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnPreRender(System.EventArgs)" /> Methode, um adapterspezifische Aufgaben vor dem Rendering ausführen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnload">
+      <MemberSignature Language="C#" Value="public virtual void OnUnload (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnUnload(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnUnload(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.EventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Entlädt Daten, die ein Steuerelement, eine Seite oder einen Geräteadapter beziehen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.MobileControl> -Basisklasse Implementierung ruft die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnUnload%2A> Methode von der Steuerelementadapter. Die <xref:System.Web.UI.MobileControls.MobilePage> -Basisklasse Implementierung ruft die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnUnload%2A> -Methode des Seitenadapters.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionsLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int OptionsLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 OptionsLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.OptionsLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **Optionen** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **Optionen** oder die lokalisierte Übersetzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.MobileControls.MobilePage Page { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobilePage Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.ControlAdapter.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobilePage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Seite, die dem Geräteadapter zugeordnet zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Seite, die dem Geräteadapter zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entspricht dem Aufrufen der <xref:System.Web.UI.MobileControls.MobileControl.MobilePage%2A> Eigenschaft eines Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Es wurde versucht, diese Eigenschaft in der Basisklasse festgelegt. Möglicherweise möchten diese Methode in einer abgeleiteten Klasse außer Kraft setzen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousLabel">
+      <MemberSignature Language="C#" Value="protected static readonly int PreviousLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 PreviousLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.ControlAdapter.PreviousLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Bezeichnung Bezeichner zurück die **vorherige** Bezeichnung. Dieses Feld ist konstant. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Feld können Sie die standardbezeichnung eines Steuerelements festlegen **vorherige** oder die lokalisierte Übersetzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public virtual void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter zum Empfangen der Ausgabe.</param>
+        <summary>Wird von der <see cref="M:System.Web.UI.MobileControls.MobileControl.Render(System.Web.UI.HtmlTextWriter)" />-Methode des Steuerelements zum Durchführen des Rendervorgangs aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter> -Klasse, die diese Methode rendert die untergeordneten Elemente des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderChildren">
+      <MemberSignature Language="C#" Value="protected void RenderChildren (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RenderChildren(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Dem angegebenen Writer.</param>
+        <summary>Rendert die untergeordneten Elemente des Steuerelements. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdapterState">
+      <MemberSignature Language="C#" Value="public virtual object SaveAdapterState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SaveAdapterState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.ControlAdapter.SaveAdapterState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode wird aufgerufen, wenn das Steuerelement seinen privaten Ansichtszustand speichert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="Null" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Adapter kann adapterspezifische Zustand für ein Steuerelement zu speichern. Wenn keine solche Funktionalität erforderlich ist, gibt der Adapter `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Style Style { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Style Style" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.ControlAdapter.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Style-Objekt verknüpft sind, mit dem Steuerelement auf dem dem Geräteadapter zugeordnet ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Style-Objekt verknüpft sind, mit dem Steuerelement auf dem dem Geräteadapter zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleWeight">
+      <MemberSignature Language="C#" Value="public virtual int VisibleWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.ControlAdapter.VisibleWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ungefähre Gewichtung des Steuerelements in Zeichen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die ungefähre Gewichtung des Steuerelements in Zeichen</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für die Paginierung von Formularen verwendet. Der Wert-1 gibt an, dass die standardgewichtung für das Element verwendet werden muss. Weitere Informationen finden Sie unter [Paginierung](http://msdn.microsoft.com/en-us/b4f4c4bc-226b-46ec-ae46-00497a32f4f2).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

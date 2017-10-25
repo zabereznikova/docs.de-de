@@ -1,0 +1,156 @@
+<Type Name="UCOMIEnumConnections" FullName="System.Runtime.InteropServices.UCOMIEnumConnections">
+  <TypeSignature Language="C#" Value="public interface UCOMIEnumConnections" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UCOMIEnumConnections" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UCOMIEnumConnections" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use System.Runtime.InteropServices.ComTypes.IEnumConnections instead. http://go.microsoft.com/fwlink/?linkid=14202", false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("B196B287-BAB4-101A-B69C-00AA00341D07")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.IEnumConnections" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `IEnumConnections` Schnittstelle, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public void Clone (out System.Runtime.InteropServices.UCOMIEnumConnections ppenum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clone([out] class System.Runtime.InteropServices.UCOMIEnumConnections&amp; ppenum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIEnumConnections.Clone(System.Runtime.InteropServices.UCOMIEnumConnections@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppenum" Type="System.Runtime.InteropServices.UCOMIEnumConnections&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppenum">Bei erfolgreicher Rückgabe einen Verweis auf den neu erstellten Enumerator.</param>
+        <summary>Erstellt einen anderen Enumerator, der den gleichen Enumeration Status als aktueller Planer enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IEnumConnections::Clone`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public int Next (int celt, System.Runtime.InteropServices.CONNECTDATA[] rgelt, out int pceltFetched);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Next(int32 celt, [out] valuetype System.Runtime.InteropServices.CONNECTDATA[] rgelt, [out] int32&amp; pceltFetched) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIEnumConnections.Next(System.Int32,System.Runtime.InteropServices.CONNECTDATA[],System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="celt" Type="System.Int32" />
+        <Parameter Name="rgelt" Type="System.Runtime.InteropServices.CONNECTDATA[]" />
+        <Parameter Name="pceltFetched" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="celt">Die Anzahl der <see cref="T:System.Runtime.InteropServices.CONNECTDATA" /> Strukturen im zurückzugebenden <c>Rgelt</c>.</param>
+        <param name="rgelt">Bei erfolgreicher Rückgabe einen Verweis auf die aufgelisteten Verbindungen.</param>
+        <param name="pceltFetched">Nach erfolgreicher Rückkehr aufgezählt ein Verweis auf die tatsächliche Anzahl von Verbindungen <c>Rgelt</c>.</param>
+        <summary>Ruft eine angegebene Anzahl von Elementen in der Enumerationsfolge ab.</summary>
+        <returns>
+          <see langword="S_OK" />Wenn die <paramref name="pceltFetched" /> entspricht der <paramref name="celt" /> Parameter ist, andernfalls <see langword="S_FALSE" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IEnumConnections::Next`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIEnumConnections.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die Enumerationsfolge auf den Anfang zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IEnumConnections::Reset`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public int Skip (int celt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Skip(int32 celt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIEnumConnections.Skip(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="celt" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="celt">Die Anzahl der Elemente in der Enumeration übersprungen werden sollen.</param>
+        <summary>Überspringt eine angegebene Anzahl von Elementen in der Enumerationsfolge.</summary>
+        <returns>
+          <see langword="S_OK" />Wenn die Anzahl der Elemente gleich übersprungenen der <paramref name="celt" /> Parameter ist, andernfalls <see langword="S_FALSE" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IEnumConnections::Skip`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

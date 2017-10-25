@@ -1,0 +1,2420 @@
+<Type Name="HttpApplication" FullName="System.Web.HttpApplication">
+  <TypeSignature Language="C#" Value="public class HttpApplication : IDisposable, System.ComponentModel.IComponent, System.Web.IHttpAsyncHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpApplication extends System.Object implements class System.ComponentModel.IComponent, class System.IDisposable, class System.Web.IHttpAsyncHandler, class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpApplication" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.IHttpAsyncHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Methoden, Eigenschaften und Ereignisse, die alle Anwendungsobjekte in einer ASP.NET-Anwendung gemeinsam haben. Diese Klasse ist die Basisklasse für Anwendungen, die vom Benutzer in der Datei „Global.asax“ definiert sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen der <xref:System.Web.HttpApplication> -Klasse werden in die ASP.NET-Infrastruktur nicht direkt vom Benutzer erstellt. Eine Instanz der <xref:System.Web.HttpApplication> Klasse wird verwendet, um viele Anforderungen während seiner Lebensdauer zu verarbeiten. Es kann jedoch nur eine Anforderung zu einem Zeitpunkt verarbeitet. Folglich können Membervariablen zum Speichern von Daten pro Anforderung verwendet werden.  
+  
+ Eine Anwendung löst Ereignisse aus, die von benutzerdefinierten Modulen behandelt werden können, die implementieren die <xref:System.Web.IHttpModule> -Schnittstelle oder die Datei vom Ereignishandlercode, die in der Datei Global.asax definiert ist. Benutzerdefinierte Module, implementieren die <xref:System.Web.IHttpModule> Schnittstelle im Ordner "App_Code" oder in einer DLL im Ordner "Bin" gesetzt werden kann.  
+  
+ <xref:System.Web.HttpApplication>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+> [!NOTE]
+>  Bei der Ausführung von IIS 7.0 im integrierten Modus gelten benutzerdefinierte Module im Ordner "App_Code" oder der Ordner "Bin" für alle Anforderungen in der Anforderungspipeline. Ereignishandlercode in der Datei "Global.asax" gilt nur für Anforderungen, die an ein ASP.NET-Handler zugeordnet sind.  
+  
+ Die Anwendungsereignisse werden in der folgenden Reihenfolge ausgelöst:  
+  
+1.  <xref:System.Web.HttpApplication.BeginRequest>  
+  
+2.  <xref:System.Web.HttpApplication.AuthenticateRequest>  
+  
+3.  <xref:System.Web.HttpApplication.PostAuthenticateRequest>  
+  
+4.  <xref:System.Web.HttpApplication.AuthorizeRequest>  
+  
+5.  <xref:System.Web.HttpApplication.PostAuthorizeRequest>  
+  
+6.  <xref:System.Web.HttpApplication.ResolveRequestCache>  
+  
+7.  <xref:System.Web.HttpApplication.PostResolveRequestCache>  
+  
+     Nach der <xref:System.Web.HttpApplication.PostResolveRequestCache> Ereignis und vor dem <xref:System.Web.HttpApplication.PostMapRequestHandler> -Ereignis ein Ereignishandler (also eine Seite, die der Anforderungs-URL entspricht) wird erstellt. Wenn ein Server ausgeführt wird IIS 7.0 im integrierten Modus sowie .NET Framework, Version 3.0, die <xref:System.Web.HttpApplication.MapRequestHandler> Ereignis wird ausgelöst. Wenn ein Server IIS 7.0 im klassischen Modus oder eine frühere Version von IIS ausgeführt wird, kann dieses Ereignis verarbeitet werden.  
+  
+8.  <xref:System.Web.HttpApplication.PostMapRequestHandler>  
+  
+9. <xref:System.Web.HttpApplication.AcquireRequestState>  
+  
+10. <xref:System.Web.HttpApplication.PostAcquireRequestState>  
+  
+11. <xref:System.Web.HttpApplication.PreRequestHandlerExecute>  
+  
+     Der Ereignishandler ausgeführt wird.  
+  
+12. <xref:System.Web.HttpApplication.PostRequestHandlerExecute>  
+  
+13. <xref:System.Web.HttpApplication.ReleaseRequestState>  
+  
+14. <xref:System.Web.HttpApplication.PostReleaseRequestState>  
+  
+     Nach der <xref:System.Web.HttpApplication.PostReleaseRequestState> Ereignis ausgelöst wird, alle vorhandenen Antwortfilter werden die Ausgabe zu filtern.  
+  
+15. <xref:System.Web.HttpApplication.UpdateRequestCache>  
+  
+16. <xref:System.Web.HttpApplication.PostUpdateRequestCache>  
+  
+17. <xref:System.Web.HttpApplication.LogRequest>.  
+  
+     Dieses Ereignis wird in IIS 7.0 im integrierten Modus und unterstützt .NET Framework 3.0  
+  
+18. <xref:System.Web.HttpApplication.PostLogRequest>  
+  
+     Dieses Ereignis ist für unterstützte IIS 7.0 im integrierten Modus und mindestens .NET Framework 3.0  
+  
+19. <xref:System.Web.HttpApplication.EndRequest>  
+  
+   
+  
+## Examples  
+ Die beiden folgenden Beispiele veranschaulichen, wie mithilfe der <xref:System.Web.HttpApplication> Klasse und ihre Ereignisse. Das erste Beispiel veranschaulicht die Vorgehensweise erstellen ein benutzerdefinierte HTTP-Modul und ein Ereignis herstellen. Im zweiten Beispiel wird veranschaulicht, wie die Datei "Web.config" ändern.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie ein benutzerdefinierte HTTP-Modul erstellen und verbinden die <xref:System.Web.HttpApplication.AcquireRequestState> Ereignis, um das HTTP-Modul. HTTP-Modulen abfangen für jede Anforderung an Webanwendungsressourcen, wodurch Sie Clientanforderungen zu filtern. Alle HTTP-Module, die abonniert, eine <xref:System.Web.HttpApplication> Ereignis implementieren muss die <xref:System.Web.IHttpModule> Schnittstelle.  
+  
+ [!code-csharp[System.Web.HttpApplication1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpApplication1/cs/source.cs#1)]
+ [!code-vb[System.Web.HttpApplication1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpApplication1/vb/source.vb#1)]  
+  
+ Bevor ein Ereignis in einem benutzerdefinierten HTTP-Modul ausgeführt werden kann, müssen Sie die Konfigurationseinstellungen in der Datei "Web.config", damit ASP.NET über das HTTP-Modul benachrichtigt ändern. Das folgende Beispiel zeigt die entsprechenden-Konfigurationseinstellung in der `httpModules` Abschnitt der Datei "Web.config". Die folgende Einstellung gilt für IIS 7.0 im klassischen Modus und mit früheren Versionen von IIS.  
+  
+```csharp  
+<configuration>  
+  <system.web>  
+    <httpModules>  
+      <add type="Samples.AspNet.CS.CustomHTTPModule"  
+        name="CustomHttpModule" />  
+      </httpModules>  
+  </system.web>  
+</configuration>  
+```  
+  
+```vb  
+<configuration>  
+  <system.web>  
+    <httpModules>  
+      <add type="Samples.AspNet.VB.CustomHTTPModule"  
+        name="CustomHttpModule" />  
+      </httpModules>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Die folgende Einstellung gilt für IIS 7.0 im integrierten Modus.  
+  
+```csharp  
+<configuration>  
+  <system.webServer>  
+    <modules>  
+      <add type="Samples.AspNet.CS.CustomHTTPModule"  
+        name="CustomHttpModule" />  
+      </modules>  
+  </system.webServer>  
+</configuration>  
+```  
+  
+```vb  
+<configuration>  
+  <system.webServer>  
+    <modules>  
+      <add type="Samples.AspNet.VB.CustomHTTPModule"  
+        name="CustomHttpModule" />  
+      <modules>  
+  </system.webServer>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpApplication ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpApplication" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireRequestState">
+      <MemberSignature Language="C#" Value="public event EventHandler AcquireRequestState;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AcquireRequestState" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.AcquireRequestState" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ASP.NET den aktuellen Zustand (z. B. Sitzungsstatus) abruft, der die aktuelle Anforderung zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.AcquireRequestState> Ereignis wird ausgelöst, nachdem der Ereignishandler erstellt wurde.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die Behandlung der <xref:System.Web.HttpApplication.AcquireRequestState> -Ereignis finden Sie unter der <xref:System.Web.HttpApplication> Übersichtsthema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnAcquireRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnAcquireRequestStateAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnAcquireRequestStateAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnAcquireRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.AcquireRequestState" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.AcquireRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.AcquireRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.AcquireRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnAcquireRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnAcquireRequestStateAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnAcquireRequestStateAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnAcquireRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.AcquireRequestState" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.AcquireRequestState" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.AcquireRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.AcquireRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.AcquireRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnAuthenticateRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnAuthenticateRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnAuthenticateRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnAuthenticateRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.AuthenticateRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.AuthenticateRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.AuthenticateRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.AuthenticateRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnAuthenticateRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnAuthenticateRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnAuthenticateRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnAuthenticateRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.AuthenticateRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.AuthenticateRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.AuthenticateRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.AuthenticateRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.AuthenticateRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnAuthorizeRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnAuthorizeRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnAuthorizeRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnAuthorizeRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.AuthorizeRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.AuthorizeRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.AuthorizeRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.AuthorizeRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnAuthorizeRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnAuthorizeRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnAuthorizeRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnAuthorizeRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.AuthorizeRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.AuthorizeRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.AcquireRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.AuthorizeRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.AuthorizeRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnBeginRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnBeginRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnBeginRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnBeginRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.BeginRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.BeginRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.BeginRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.BeginRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnBeginRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnBeginRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnBeginRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnBeginRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.BeginRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.BeginRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.BeginRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.BeginRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.BeginRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnEndRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnEndRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnEndRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnEndRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.EndRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.EndRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.EndRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.EndRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnEndRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnEndRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnEndRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnEndRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.EndRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.EndRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.EndRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.EndRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.EndRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddOnLogRequestAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.LogRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.LogRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpApplication.AddOnLogRequestAsync%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddOnLogRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnLogRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnLogRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnLogRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.LogRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.LogRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.LogRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.LogRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpApplication.AddOnLogRequestAsync%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnLogRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnLogRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnLogRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnLogRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.LogRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.LogRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.LogRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.LogRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.LogRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddOnMapRequestHandlerAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.MapRequestHandler" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.MapRequestHandler" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpApplication.AddOnMapRequestHandlerAsync%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddOnMapRequestHandlerAsync">
+      <MemberSignature Language="C#" Value="public void AddOnMapRequestHandlerAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnMapRequestHandlerAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnMapRequestHandlerAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.MapRequestHandler" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.MapRequestHandler" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.MapRequestHandler" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.MapRequestHandler" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpApplication.AddOnMapRequestHandlerAsync%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnMapRequestHandlerAsync">
+      <MemberSignature Language="C#" Value="public void AddOnMapRequestHandlerAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnMapRequestHandlerAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnMapRequestHandlerAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.MapRequestHandler" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.MapRequestHandler" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.MapRequestHandler" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.MapRequestHandler" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.MapRequestHandler" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostAcquireRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostAcquireRequestStateAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostAcquireRequestStateAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostAcquireRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostAcquireRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostAcquireRequestStateAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostAcquireRequestStateAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostAcquireRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostAcquireRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostAuthenticateRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostAuthenticateRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostAuthenticateRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostAuthenticateRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostAuthenticateRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostAuthenticateRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostAuthenticateRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostAuthenticateRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostAuthenticateRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostAuthenticateRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostAuthenticateRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostAuthenticateRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostAuthorizeRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostAuthorizeRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostAuthorizeRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostAuthorizeRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostAuthorizeRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostAuthorizeRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostAuthorizeRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostAuthorizeRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" /> auf die Auflistung von asynchronen <see cref="E:System.Web.HttpApplication.PostAuthorizeRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddOnPostLogRequestAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostLogRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostLogRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpApplication.AddOnPostLogRequestAsync%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddOnPostLogRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostLogRequestAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostLogRequestAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostLogRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostLogRequest" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostLogRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostLogRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostLogRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpApplication.AddOnPostLogRequestAsync%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostLogRequestAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostLogRequestAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostLogRequestAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostLogRequestAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostLogRequest" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostLogRequest" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostLogRequest" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostLogRequest" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostLogRequest" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostMapRequestHandlerAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostMapRequestHandlerAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostMapRequestHandlerAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostMapRequestHandlerAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostMapRequestHandlerAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostMapRequestHandlerAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostMapRequestHandlerAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostMapRequestHandlerAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" /> Auflistung.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostMapRequestHandler" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostReleaseRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostReleaseRequestStateAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostReleaseRequestStateAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostReleaseRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostReleaseRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostReleaseRequestStateAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostReleaseRequestStateAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostReleaseRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostReleaseRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostRequestHandlerExecuteAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostRequestHandlerExecuteAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostRequestHandlerExecuteAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostRequestHandlerExecuteAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostRequestHandlerExecuteAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostRequestHandlerExecuteAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostRequestHandlerExecuteAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostRequestHandlerExecuteAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostRequestHandlerExecute" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostResolveRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostResolveRequestCacheAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostResolveRequestCacheAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostResolveRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostResolveRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostResolveRequestCacheAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostResolveRequestCacheAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostResolveRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostResolveRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostUpdateRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostUpdateRequestCacheAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostUpdateRequestCacheAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostUpdateRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPostUpdateRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPostUpdateRequestCacheAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPostUpdateRequestCacheAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPostUpdateRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung des Ereignisses gestartet wurde.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PostUpdateRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPreRequestHandlerExecuteAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPreRequestHandlerExecuteAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPreRequestHandlerExecuteAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPreRequestHandlerExecuteAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnPreRequestHandlerExecuteAsync">
+      <MemberSignature Language="C#" Value="public void AddOnPreRequestHandlerExecuteAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnPreRequestHandlerExecuteAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnPreRequestHandlerExecuteAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" /> Auflistung.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.PreRequestHandlerExecute" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnReleaseRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnReleaseRequestStateAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnReleaseRequestStateAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnReleaseRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.ReleaseRequestState" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.ReleaseRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.ReleaseRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.ReleaseRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnReleaseRequestStateAsync">
+      <MemberSignature Language="C#" Value="public void AddOnReleaseRequestStateAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnReleaseRequestStateAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnReleaseRequestStateAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.ReleaseRequestState" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.ReleaseRequestState" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.ReleaseRequestState" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.ReleaseRequestState" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.ReleaseRequestState" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnResolveRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnResolveRequestCacheAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnResolveRequestCacheAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnResolveRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.ResolveRequestCache" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.ResolveRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.ResolveRequestCache" /> -Ereignishandler, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.ResolveRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnResolveRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnResolveRequestCacheAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnResolveRequestCacheAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnResolveRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.ResolveRequestCache" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.ResolveRequestCache" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.ResolveRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.ResolveRequestCache" /> -Ereignishandler, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.ResolveRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnUpdateRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnUpdateRequestCacheAsync (System.Web.BeginEventHandler bh, System.Web.EndEventHandler eh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnUpdateRequestCacheAsync(class System.Web.BeginEventHandler bh, class System.Web.EndEventHandler eh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnUpdateRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bh" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="eh" Type="System.Web.EndEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="bh">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.UpdateRequestCache" />.</param>
+        <param name="eh">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.UpdateRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.UpdateRequestCache" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.UpdateRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnUpdateRequestCacheAsync">
+      <MemberSignature Language="C#" Value="public void AddOnUpdateRequestCacheAsync (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOnUpdateRequestCacheAsync(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.AddOnUpdateRequestCacheAsync(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Die <see cref="T:System.Web.BeginEventHandler" /> , die asynchrone Verarbeitung der startet die <see cref="E:System.Web.HttpApplication.UpdateRequestCache" />.</param>
+        <param name="endHandler">Die <see cref="T:System.Web.EndEventHandler" /> , dass die asynchrone Verarbeitung der endet die <see cref="E:System.Web.HttpApplication.UpdateRequestCache" />.</param>
+        <param name="state">Die hinzuzufügende auf den asynchronen zugeordneten Zustand <see cref="E:System.Web.HttpApplication.UpdateRequestCache" />.</param>
+        <summary>Fügt das angegebene <see cref="E:System.Web.HttpApplication.UpdateRequestCache" /> Ereignis, um die Auflistung der asynchronen <see cref="E:System.Web.HttpApplication.UpdateRequestCache" /> Ereignishandler für die aktuelle Anforderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public System.Web.HttpApplicationState Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpApplicationState Application" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpApplicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand einer Anwendung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpApplicationState" /> für die aktuelle Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der aktuelle Status einer Anwendung besteht ein Schlüssel/Wert-Wörterbuch anwendungsweite-Objekte, die Sie verwenden können, zum Speichern von .NET Framework-Objekte und skalaren Werten, die von mehreren Clients zu mehreren webanforderungen verknüpft sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticateRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler AuthenticateRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AuthenticateRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.AuthenticateRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Sicherheitsmodul der Identität des Benutzers hergestellt hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.AuthenticateRequest> -Ereignis signalisiert, dass die konfigurierten Authentifizierungsmechanismus auf die aktuelle Anforderung authentifiziert wurde. Abonnieren von der <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis wird sichergestellt, dass vor der Verarbeitung der angefügten Modul oder der ereignishandlers die Anforderung authentifiziert werden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizeRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler AuthorizeRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AuthorizeRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.AuthorizeRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Sicherheitsmodul benutzerautorisierung überprüft hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.AuthorizeRequest> -Ereignis signalisiert, dass ASP.NET die aktuelle Anforderung autorisiert hat. Abonnieren von der <xref:System.Web.HttpApplication.AuthorizeRequest> Ereignis wird sichergestellt, dass die Anforderung authentifiziert und autorisiert vor der Verarbeitung des angefügten Modul oder Ereignis-Handlers werden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler BeginRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BeginRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.BeginRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, als das erste Ereignis in der HTTP-Pipeline Ausführungskette, wenn ASP.NET auf eine Anforderung reagiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.BeginRequest> Ereignis signalisiert die Erstellung einer neuen Anforderung. Dieses Ereignis wird immer ausgelöst, und ist immer das erste Ereignis bei der Verarbeitung einer Anforderung auftritt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteRequest">
+      <MemberSignature Language="C#" Value="public void CompleteRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompleteRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.CompleteRequest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass alle Ereignisse und Filtern in der HTTP-pipeline Ausführungskette und direktes Ausführen von ASP.NET die <see cref="E:System.Web.HttpApplication.EndRequest" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die HTTP-spezifische Informationen zur aktuellen Anforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpContext" /> für die aktuelle Anforderung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft die <see cref="T:System.Web.HttpApplication" /> Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.Request%2A>, <xref:System.Web.HttpApplication.Response%2A>, <xref:System.Web.HttpApplication.Session%2A>, und <xref:System.Web.HttpApplication.Application%2A> Eigenschaften sind nicht verfügbar für verwenden in folgenden Fällen die <xref:System.Web.HttpApplication.Dispose%2A> Methode ausgeführt wird.  
+  
+ Die <xref:System.Web.HttpApplication.Dispose%2A> Methodenaufrufe der <xref:System.Web.IHttpModule.Dispose%2A> -Methode für jedes der registrierten <xref:System.Web.Configuration.SystemWebSectionGroup.HttpModules%2A> in der Anwendungsinstanz und löst die <xref:System.Web.HttpApplication.Disposed> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Web.HttpApplication.Dispose" /> in einer abgeleiteten Klasse, stellen Sie sicher, dass der Basisklasse aufgerufen <see cref="M:System.Web.HttpApplication.Dispose" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.Disposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Anwendung gelöscht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Web.HttpApplication.Disposed>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie eine Instanz des der <xref:System.Web.HttpApplication.Disposed> auf das Ereignis zu delegieren. Der Ereignishandler wird bei Eintreten des Ereignisses aufgerufen, es sei denn, Sie entfernen die <xref:System.Web.HttpApplication.Disposed> delegieren.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler EndRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EndRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.EndRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, als das letzte Ereignis in der HTTP-Pipeline Ausführungskette, wenn ASP.NET auf eine Anforderung reagiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.EndRequest> Ereignis wird immer ausgelöst wird, wenn die <xref:System.Web.HttpApplication.CompleteRequest%2A> -Methode aufgerufen wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public event EventHandler Error;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Error" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.Error" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine nicht behandelte Ausnahme ausgelöst wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausnahme, die löst die <xref:System.Web.HttpApplication.Error> Ereignis möglich, die durch einen Aufruf der <xref:System.Web.HttpServerUtility.GetLastError%2A> Methode. Unterdrückt werden die Standardfehlermeldung, die durch einen Aufruf von ASP.NET generiert wird, wenn die Anwendung benutzerdefinierte Fehlerausgabe erzeugt, die <xref:System.Web.HttpServerUtility.ClearError%2A> Methode.  
+  
+> [!NOTE]
+>  Wenn Ihre Webanwendung XML-Webdienste enthält, können keine der <xref:System.Web.HttpApplication.Error> Ereignis für die globale Ausnahmebehandlung dieser Dienste. Der HTTP-Handler für XML-Webdienste verbraucht jede Ausnahme, die tritt in einem XML-Webdienst und konvertiert ihn in einen SOAP-Fehler vor der <xref:System.Web.HttpApplication.Error> aufgerufen werden. Erstellen Sie eine SOAP-Erweiterung zum Verarbeiten von Web Service-Ausnahmen in einem benutzerdefinierten globalen Ausnahmehandler zum Behandeln von Ausnahmen für XML-Webdienste-Dienst.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.EventHandlerList Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.EventHandlerList Events" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventHandlerList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Handlerdelegaten, die alle Anwendungsereignisse verarbeiten.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.EventHandlerList" /> , den Namen der Ereignishandlerdelegaten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutputCacheProviderName">
+      <MemberSignature Language="C#" Value="public virtual string GetOutputCacheProviderName (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetOutputCacheProviderName(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.GetOutputCacheProviderName(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Web.HttpContext" /> , der Verweise auf systeminterne Serverobjekte, die verwendet werden, HTTP-Anforderungen bereitstellt.</param>
+        <summary>Ruft den Namen des dem Ausgabecache-Standardanbieter, der so konfiguriert ist, für eine Website an.</summary>
+        <returns>Der Name des standardmäßigen Anbieters an.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode überschreiben und verwenden, um den Namen des alle Ausgabecacheanbieter zurückzugeben, die für eine Website konfiguriert ist. ASP.NET ruft einen Verweis auf den benannten Anbieter ab und verwendet, um die Ausgabe-Cache-Daten für die derzeit ausgeführte Anforderung zu speichern.  
+  
+ Wird standardmäßig in ASP.NET verwenden alle HTTP-Antworten, gerenderten Seiten und Steuerelemente den Ausgabecache im Arbeitsspeicher. Sie können ändern, den Ausgabecache-Standardanbieter, die für eine Webanwendung verwendet wird, unter Angabe eines anderen Anbieter Namens für `defaultProvider`.  
+  
+ Darüber hinaus können Sie verschiedene Ausgabecacheanbieter für einzelne Steuerelemente und Informationen zu einzelnen Anforderungen auswählen. Die einfachste Möglichkeit, einen anderen Ausgabecache-Anbieter für andere Web-Benutzersteuerelemente auswählen möchten dies deklarativ mit dem neuen ist `providerName` Attribut in einer Direktive Seite oder eines Steuerelements, wie im folgenden Beispiel gezeigt:  
+  
+```  
+<%@ OutputCache Duration="60" VaryByParam="None"   
+    providerName="DiskCache" %>  
+```  
+  
+ Um einen anderen Ausgabecacheanbieter für eine HTTP-Anforderung anzugeben, überschreiben Sie diese Methode in der Datei "Global.asax", um programmgesteuert welcher Anbieter für eine bestimmte Anforderung anzugeben. Weitere Informationen finden Sie unter [Übersicht über die ASP.NET-Zwischenspeicherung](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie der Cacheanbieter mit dem Namen programmgesteuert an `DiskCache` für jede HTTP-Anforderung, die auf der Seite "Advanced.aspx" geht.  
+
+```csharp  
+public override string GetOutputCacheProviderName(HttpContext context)  
+{  
+    if (context.Request.Path.EndsWith("Advanced.aspx"))  
+        return "DiskCache";  
+    else  
+        return base.GetOutputCacheProviderName(context);  
+}  
+```  
+
+```vb  
+Public Overloads Overrides Sub GetOutputCacheProviderName(ByVal context _  
+        As HttpContext) As String   
+    If context.Request.Path.EndsWith("Advanced.aspx") Then   
+        Return "DiskCache"   
+    Else   
+        Return MyBase.GetOutputCacheProviderName(context)   
+    End If   
+End Sub  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="context" />ist <see langword="null" /> oder ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVaryByCustomString">
+      <MemberSignature Language="C#" Value="public virtual string GetVaryByCustomString (System.Web.HttpContext context, string custom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetVaryByCustomString(class System.Web.HttpContext context, string custom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="custom" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Web.HttpContext" /> -Objekt, das Informationen zu der aktuellen webanforderung enthält.</param>
+        <param name="custom">Benutzerdefinierte Zeichenfolge, die angibt, welche zwischengespeicherten Antwort verwendet wird, auf die aktuelle Anforderung zu reagieren.</param>
+        <summary>Stellt eine anwendungsweite Implementierung von der <see cref="P:System.Web.UI.PartialCachingAttribute.VaryByCustom" /> Eigenschaft.</summary>
+        <returns>Wenn der Wert der <paramref name="custom" /> Parameter ist <see langword="&quot;browser&quot;" />, des Browsers <see cref="P:System.Web.Configuration.HttpCapabilitiesBase.Type" />ist, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Web.HttpApplication.GetVaryByCustomString%2A> hinzufügen eine neue Methode zum Berechnen der benutzerdefinierten variieren-für-Werte, die für die aktuelle Anforderung basieren. Die Implementierung hat, rufen Sie die Basisklasse für benutzerdefinierte Werte, die er nicht erkennt. Weitere Informationen finden Sie unter [Vorgehensweise: Cache-Versionen von einer Seite mithilfe benutzerdefinierter Zeichenfolgen](http://msdn.microsoft.com/library/b6c73735-a3cd-4d19-ba4d-0431881b0db0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public virtual void Init ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.Init" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt benutzerdefinierten Initialisierungscode aus, nachdem alle Ereignis-Handler-Module hinzugefügt wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können in einer abgeleiteten Klasse überschreiben die <xref:System.Web.HttpApplication.Init%2A> Methode, um Initialisierungscode hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler LogRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LogRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.LogRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt unmittelbar vor ASP.NET eine Protokollierung für die aktuelle Anforderung ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.LogRequest> Ereignis wird ausgelöst, auch wenn ein Fehler auftritt. Sie können angeben, einen Ereignishandler für die <xref:System.Web.HttpApplication.LogRequest> Ereignis, um benutzerdefinierte Protokollierung für die Anforderung bereitzustellen.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ <xref:System.Web.HttpApplication.LogRequest>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Geben Sie einen Ereignishandler für das <xref:System.Web.HttpApplication.LogRequest> Ereignis. Der Ereignishandler behandelt auch mehrere andere Ereignisse. Aus diesem Grund die <xref:System.Web.HttpContext.CurrentNotification%2A> und <xref:System.Web.HttpContext.IsPostNotification%2A> Eigenschaften werden verwendet, um zu bestimmen, um den auszuführenden code.  
+  
+ [!code-csharp[System.Web.HttpResponse.IsPostNotification#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.IsPostNotification/CS/App_Code/TestModule.cs#1)]
+ [!code-vb[System.Web.HttpResponse.IsPostNotification#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.IsPostNotification/VB/App_Code/TestModule.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapRequestHandler">
+      <MemberSignature Language="C#" Value="public event EventHandler MapRequestHandler;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MapRequestHandler" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.MapRequestHandler" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Handler ausgewählt ist, auf die Anforderung reagieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.MapRequestHandler> Ereignis wird durch die Infrastruktur von ASP.NET verwendet, um zu bestimmen, der Ereignishandler für die aktuelle Anforderung. Weitere Informationen finden Sie unter [Vorgehensweise: Registrieren von HTTP-Handler](http://msdn.microsoft.com/library/d5633f9a-03fb-4ccc-a799-dc67d656fa60).  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ <xref:System.Web.HttpApplication.MapRequestHandler>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modules">
+      <MemberSignature Language="C#" Value="public System.Web.HttpModuleCollection Modules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpModuleCollection Modules" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Modules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpModuleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Modulen für die aktuelle Anwendung ab.</summary>
+        <value>Eine <see cref="T:System.Web.HttpModuleCollection" /> , die den Namen der Module für die Anwendung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostAcquireRequestState">
+      <MemberSignature Language="C#" Value="public event EventHandler PostAcquireRequestState;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostAcquireRequestState" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostAcquireRequestState" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn es sich bei der Anforderungsstatus (z. B. Sitzungsstatus), der mit der aktuellen Anforderung verknüpft ist abgerufen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.PostAcquireRequestState> Ereignis wird ausgelöst, nachdem die <xref:System.Web.HttpApplication.AcquireRequestState> Ereignis ist aufgetreten. Funktionen, die abonniert die <xref:System.Web.HttpApplication.AcquireRequestState> Ereignis erreichen alle Daten, die Verarbeitung durch die <xref:System.Web.HttpApplication.PostAcquireRequestState>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostAuthenticateRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler PostAuthenticateRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostAuthenticateRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostAuthenticateRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Sicherheitsmodul der Identität des Benutzers hergestellt hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.PostAuthenticateRequest> Ereignis wird ausgelöst, nachdem die <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis ist aufgetreten. Funktionen, die abonniert die <xref:System.Web.HttpApplication.PostAuthenticateRequest> Ereignis erreichen alle Daten, die Verarbeitung durch die <xref:System.Web.HttpApplication.PostAuthenticateRequest>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostAuthorizeRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler PostAuthorizeRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostAuthorizeRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostAuthorizeRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer für die aktuelle Anforderung autorisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.PostAuthorizeRequest> -Ereignis signalisiert, dass ASP.NET die aktuelle Anforderung autorisiert hat. Abonnieren von der <xref:System.Web.HttpApplication.PostAuthorizeRequest> Ereignis wird sichergestellt, Authentifizierung und Autorisierung der Anforderung vor der Verarbeitung der angefügten Modul oder der ereignishandlers.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostLogRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler PostLogRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostLogRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostLogRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ASP.NET abgeschlossen wurde, verarbeiten die Ereignishandler für das <see cref="E:System.Web.HttpApplication.LogRequest" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ <xref:System.Web.HttpApplication.PostLogRequest>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostMapRequestHandler">
+      <MemberSignature Language="C#" Value="public event EventHandler PostMapRequestHandler;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostMapRequestHandler" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostMapRequestHandler" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ASP.NET die aktuelle Anforderung an den entsprechenden Ereignishandler zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostReleaseRequestState">
+      <MemberSignature Language="C#" Value="public event EventHandler PostReleaseRequestState;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostReleaseRequestState" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostReleaseRequestState" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ASP.NET die Ausführung abgeschlossen wurde, dass alle anfordern, Ereignishandler und Zustandsdaten der Anforderung gespeichert wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostRequestHandlerExecute">
+      <MemberSignature Language="C#" Value="public event EventHandler PostRequestHandlerExecute;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostRequestHandlerExecute" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostRequestHandlerExecute" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der ASP.NET-Ereignishandler (z. B. einer Seite oder einem XML-Webdienst) die Ausführung beendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostResolveRequestCache">
+      <MemberSignature Language="C#" Value="public event EventHandler PostResolveRequestCache;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostResolveRequestCache" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostResolveRequestCache" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn es sich bei ASP.NET umgeht die Ausführung des aktuellen ereignishandlers und ermöglicht eine Cachemodul eine Anforderung aus dem Cache zu bedienen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostUpdateRequestCache">
+      <MemberSignature Language="C#" Value="public event EventHandler PostUpdateRequestCache;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PostUpdateRequestCache" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PostUpdateRequestCache" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ASP.NET beendet wird, aktualisieren Module Zwischenspeichern und Speichern von Antworten, die verwendet werden, um nachfolgende Anforderungen aus dem Cache dienen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.PostUpdateRequestCache> Ereignis wird ausgelöst, nachdem die <xref:System.Web.HttpApplication.UpdateRequestCache> Ereignis ist aufgetreten. Wenn die <xref:System.Web.HttpApplication.PostUpdateRequestCache> wird ausgelöst, ASP.NET Verarbeitungscode abgeschlossen ist und der Inhalt des Caches abgeschlossen ist.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreRequestHandlerExecute">
+      <MemberSignature Language="C#" Value="public event EventHandler PreRequestHandlerExecute;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PreRequestHandlerExecute" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PreRequestHandlerExecute" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt unmittelbar vor ASP.NET startet die Ausführung eines ereignishandlers (z. B. einer Seite oder einem XML-Webdienst).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreSendRequestContent">
+      <MemberSignature Language="C#" Value="public event EventHandler PreSendRequestContent;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PreSendRequestContent" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PreSendRequestContent" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt unmittelbar vor ASP.NET Inhalt an den Client gesendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.PreSendRequestContent> Ereignis möglicherweise mehrmals auftreten.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreSendRequestHeaders">
+      <MemberSignature Language="C#" Value="public event EventHandler PreSendRequestHeaders;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PreSendRequestHeaders" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.PreSendRequestHeaders" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt unmittelbar vor der ASP.NET HTTP-Header an den Client sendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterModule">
+      <MemberSignature Language="C#" Value="public static void RegisterModule (Type moduleType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterModule(class System.Type moduleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.RegisterModule(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="moduleType">Der Typ des Moduls.</param>
+        <summary>Registriert ein Anwendungsmoduls.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseRequestState">
+      <MemberSignature Language="C#" Value="public event EventHandler ReleaseRequestState;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ReleaseRequestState" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.ReleaseRequestState" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem ASP.NET die Ausführung von alle Ereignishandler für die Anforderung abgeschlossen ist. Dieses Ereignis verursacht Status-Module, um die aktuellen Daten zu speichern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.HttpApplication.ReleaseRequestState> Ereignis wird ausgelöst, die Anwendung mit der Anforderung abgeschlossen ist und ASP.NET wird angegeben, dass die Anforderungszustand zu speichern.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.Web.HttpRequest Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpRequest Request" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systeminterne Anforderungsobjekt für die aktuelle Anforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpRequest" /> Objekt, das die Anwendung ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.HttpRequest" /> Objekt <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler RequestCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RequestCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.RequestCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die verwalteten Objekte, die der Anforderung zugeordnet sind freigegeben wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplication.RequestCompleted> Ereignis wird aufgerufen, nachdem alle verwalteten Module und Handler in der ASP.NET-Pipeline aufgerufen wurden. Sie können Module zum Bereinigen von Ressourcen, nachdem alle verwalteten Module und Handler ausgeführt haben. Verwenden Sie dieses Ereignis, wenn Sie einen bestimmten Zeitpunkt benötigen für die verwalteten Ressourcen explizit freigeben, die Sie während einer Anforderung erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveRequestCache">
+      <MemberSignature Language="C#" Value="public event EventHandler ResolveRequestCache;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ResolveRequestCache" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.ResolveRequestCache" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn ASP.NET ein Autorisierungsereignis zu lassen, dass die Zwischenspeichern Module erstanforderungsinitialisierung aus dem Cache, die Ausführung des ereignishandlers (z. B. einer Seite oder einem XML-Webdienst) umgehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public System.Web.HttpResponse Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpResponse Response" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systeminterne Antwortobjekt für die aktuelle Anforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpResponse" /> Objekt, das die Anwendung ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.HttpResponse" /> Objekt <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public System.Web.HttpServerUtility Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpServerUtility Server" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpServerUtility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systeminterne Serverobjekt für die aktuelle Anforderung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpServerUtility" /> Objekt, das die Anwendung ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public System.Web.SessionState.HttpSessionState Session { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SessionState.HttpSessionState Session" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.HttpSessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systeminterne Sitzungsobjekt, das Zugriff auf Daten bereitstellt.</summary>
+        <value>Die <see cref="T:System.Web.SessionState.HttpSessionState" /> Objekt für die aktuelle Sitzung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.SessionState.HttpSessionState" /> Objekt <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Standort-Schnittstelle für ein <see cref="T:System.ComponentModel.IComponent" /> Implementierung.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.ISite" /> -Objekt, das einen Container mit untergeordneten Komponenten kommunizieren und diese verwalten kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpAsyncHandler.BeginProcessRequest">
+      <MemberSignature Language="C#" Value="IAsyncResult IHttpAsyncHandler.BeginProcessRequest (System.Web.HttpContext context, AsyncCallback cb, object extraData);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.IAsyncResult System.Web.IHttpAsyncHandler.BeginProcessRequest(class System.Web.HttpContext context, class System.AsyncCallback cb, object extraData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.System#Web#IHttpAsyncHandler#BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="cb" Type="System.AsyncCallback" />
+        <Parameter Name="extraData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Web.HttpContext" /> , der Verweise auf systeminterne Serverobjekte, die verwendet werden, HTTP-Anforderungen bereitstellt.</param>
+        <param name="cb">Die <see cref="T:System.AsyncCallback" /> , der beim Abschluss des asynchronen Methodenaufrufs aufgerufen. Wenn die <c>Cb</c> Parameter ist <see langword="null" />, der Delegat wird nicht aufgerufen.</param>
+        <param name="extraData">Alle zusätzlichen unbekannten Daten, die zum Verarbeiten der Anforderung erforderlich ist.</param>
+        <summary>Initiiert einen asynchronen Aufruf an den HTTP-Ereignishandler.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" /> , Informationen über den Status des Prozesses enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpAsyncHandler.EndProcessRequest">
+      <MemberSignature Language="C#" Value="void IHttpAsyncHandler.EndProcessRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpAsyncHandler.EndProcessRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.System#Web#IHttpAsyncHandler#EndProcessRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Ein <see cref="T:System.IAsyncResult" /> , Informationen über den Status des Prozesses enthält.</param>
+        <summary>Stellt einen asynchronen Prozess <see langword="End" /> Methode, wenn der Prozess abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.HttpApplication.System%23Web%23IHttpAsyncHandler%23EndProcessRequest%2A> Methode zum Auslösen von Ausnahmen, die während des asynchronen Prozesses abgefangen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.IsReusable">
+      <MemberSignature Language="C#" Value="bool System.Web.IHttpHandler.IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.IHttpHandler.IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.System#Web#IHttpHandler#IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="Boolean" /> Wert, der angibt, ob eine andere Anforderung verwenden, kann die <see cref="T:System.Web.IHttpHandler" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.IHttpHandler" /> Objekt wird wiederverwendet werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Explizit festlegen der `IsReusable` Eigenschaft `true` oder `false`, geben Sie Code, überschreibt die `IsReusable` Eigenschaftenaccessor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.ProcessRequest">
+      <MemberSignature Language="C#" Value="void IHttpHandler.ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpHandler.ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplication.System#Web#IHttpHandler#ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Web.HttpContext" /> , der Verweise auf die systeminternen Serverobjekte, die verwendet werden, HTTP-Anforderungen bereitstellt.</param>
+        <summary>Ermöglicht die Verarbeitung von HTTP-webanforderungen durch einen benutzerdefinierten HTTP-Handler, der implementiert die <see cref="T:System.Web.IHttpHandler" /> Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, erben die <xref:System.Web.IHttpModule> und <xref:System.Web.IHttpHandler> Schnittstellen dienen als Verweis auf ein <xref:System.Web.HttpContext> Objekt für die aktuelle HTTP-Anforderung. Das Objekt bietet Zugriff auf die systeminterne Funktion `Request`, `Response`, und `Server` Objekte für die Anforderung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRequestCache">
+      <MemberSignature Language="C#" Value="public event EventHandler UpdateRequestCache;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler UpdateRequestCache" />
+      <MemberSignature Language="DocId" Value="E:System.Web.HttpApplication.UpdateRequestCache" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ASP.NET beendet wird, einen Ereignishandler ausführen, um können Zwischenspeichern Module Antworten gespeichert, die verwendet wird, um nachfolgende Anforderungen aus dem Cache zu fungieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplication.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systeminterne Benutzerobjekt für die aktuelle Anforderung ab.</summary>
+        <value>Die <see cref="T:System.Security.Principal.IPrincipal" /> -Objekt, das den aktuellen authentifizierten oder anonymen Benutzer darstellt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Security.Principal.IPrincipal" /> Objekt <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

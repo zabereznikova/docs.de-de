@@ -1,0 +1,93 @@
+<Type Name="ControlEventArgs" FullName="System.Windows.Forms.ControlEventArgs">
+  <TypeSignature Language="C#" Value="public class ControlEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ControlEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Control.ControlAdded" />-Ereignis und das <see cref="E:System.Windows.Forms.Control.ControlRemoved" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.Control.ControlAdded> und <xref:System.Windows.Forms.Control.ControlRemoved> Ereignisse. Das Beispiel erfordert, dass zwei <xref:System.Windows.Forms.Button> Steuerelementen zum Formular hinzugefügt und mit verbunden sind die `addControl_Click` und `removeControl_Click` Methoden für die Ereignisbehandlung.  
+  
+ [!code-cpp[Control.ControlRemoved#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.ControlRemoved/CPP/form1.cpp#1)]
+ [!code-csharp[Control.ControlRemoved#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.ControlRemoved/CS/form1.cs#1)]
+ [!code-vb[Control.ControlRemoved#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.ControlRemoved/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlEventArgs (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlEventArgs.#ctor(System.Windows.Forms.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die <see cref="T:System.Windows.Forms.Control" /> in diesem Fall speichern.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ControlEventArgs" /> Klasse für das angegebene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.Control.ControlAdded> und <xref:System.Windows.Forms.Control.ControlRemoved> Ereignisse. Das Beispiel erfordert, dass zwei <xref:System.Windows.Forms.Button> Steuerelementen zum Formular hinzugefügt und mit verbunden sind die `addControl_Click` und `removeControl_Click` Methoden für die Ereignisbehandlung.  
+  
+ [!code-cpp[Control.ControlRemoved#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.ControlRemoved/CPP/form1.cpp#1)]
+ [!code-csharp[Control.ControlRemoved#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.ControlRemoved/CS/form1.cs#1)]
+ [!code-vb[Control.ControlRemoved#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.ControlRemoved/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ControlEventArgs.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das von diesem Ereignis verwendete Steuerelementobjekt ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Control" /> von diesem Ereignis verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.Control.ControlAdded> und <xref:System.Windows.Forms.Control.ControlRemoved> Ereignisse. Das Beispiel erfordert, dass zwei <xref:System.Windows.Forms.Button> Steuerelementen zum Formular hinzugefügt und mit verbunden sind die `addControl_Click` und `removeControl_Click` Methoden für die Ereignisbehandlung.  
+  
+ [!code-cpp[Control.ControlRemoved#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.ControlRemoved/CPP/form1.cpp#1)]
+ [!code-csharp[Control.ControlRemoved#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.ControlRemoved/CS/form1.cs#1)]
+ [!code-vb[Control.ControlRemoved#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.ControlRemoved/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

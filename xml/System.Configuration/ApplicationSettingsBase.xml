@@ -1,0 +1,952 @@
+<Type Name="ApplicationSettingsBase" FullName="System.Configuration.ApplicationSettingsBase">
+  <TypeSignature Language="C#" Value="public abstract class ApplicationSettingsBase : System.Configuration.SettingsBase, System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ApplicationSettingsBase extends System.Configuration.SettingsBase implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ApplicationSettingsBase" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingsBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fungiert als Basisklasse für konkrete Wrapperklassen ableiten, implementieren das Feature "Anwendung" in Windows Forms-Anwendungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Configuration.ApplicationSettingsBase>Fügt die folgende Funktionen, die <xref:System.Configuration.SettingsBase> -Klasse, die von webbasierten Anwendungen verwendet wird:  
+  
+-   Die Fähigkeit zum Erkennen der Attribute in einer abgeleiteten Wrapperklasse für Anwendungseinstellungen. <xref:System.Configuration.ApplicationSettingsBase>unterstützt die deklarative Modell für die Wrapperklasseneigenschaften verwendet, wie weiter unten beschrieben.  
+  
+-   Auf höherer Ebene <xref:System.Configuration.ApplicationSettingsBase.Save%2A> und <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> Methoden.  
+  
+-   Zusätzliche Validierung-Ereignisse, die Sie behandeln können, um die Richtigkeit der einzelnen Einstellungen sicherzustellen.  
+  
+ In der Architektur der Anwendungseinstellungen, auf eine Gruppe von Eigenschaften müssen Sie eine konkrete Wrapperklasse aus ableiten <xref:System.Configuration.ApplicationSettingsBase>. Die Wrapperklasse passt <xref:System.Configuration.ApplicationSettingsBase> auf folgende Weise:  
+  
+-   Für jede Eigenschaft zugegriffen werden wird die Wrapperklasse eine entsprechende stark typisierte öffentliche Eigenschaft hinzugefügt. Diese Eigenschaft hat `get` und `set` Accessoren für Lese-/Schreibzugriff-Anwendungseinstellungen, jedoch nur eine `get` -Accessor für nur-Lese Einstellungen.  
+  
+-   Gruppenkonten Attribute müssen angewendet werden, um die Wrapperklasse öffentlichen Eigenschaften, Merkmale der Settings-Eigenschaft, z. B. das Festlegen des Gültigkeitsbereichs (Anwendung oder Benutzer), um anzugeben, ob die Einstellung roaming unterstützen soll, des Standardwerts für die Einstellung den Einstellungsanbieter verwendet werden, und so weiter. Jede Eigenschaft ist erforderlich, um ihren Bereich entweder angeben <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>. Anwendungsspezifische Einstellungen sind schreibgeschützt sind und wenn die Standardeinstellung <xref:System.Configuration.LocalFileSettingsProvider> wird verwendet.  
+  
+ Die <xref:System.Configuration.ApplicationSettingsBase> Klasse verwendet Reflektion, um diese Attribute zur Laufzeit zu erkennen. Die meisten dieser Informationen weitergegeben wird, um Einstellungen für Anbieter der Ebene der für den Speicher, Persistenzformat usw. verantwortlich ist.  
+  
+ Wenn eine Anwendung verfügt über mehrere Einstellungswrapperklassen, jeder Klasse definiert ein *Einstellungsgruppe*. Jede Gruppe verfügt über die folgenden Eigenschaften:  
+  
+-   Eine Gruppe kann eine beliebige Zahl oder den Typ der eigenschafteneinstellungen enthalten.  
+  
+-   Wenn der Gruppenname nicht explizit von der Wrapperklasse mit ergänzenden festgelegt ist eine <xref:System.Configuration.SettingsGroupNameAttribute>, und klicken Sie dann automatisch ein Name generiert wird.  
+  
+ Standardmäßig verwenden alle Client-basierten Anwendungen die <xref:System.Configuration.LocalFileSettingsProvider> zum Bereitstellen von Speicher. Wenn ein anderer Einstellungsanbieter gewünscht ist, die Wrapperklasse oder die Eigenschaft mit einem entsprechenden ergänzt werden muss <xref:System.Configuration.SettingsProviderAttribute>.  
+  
+ Weitere Informationen zum Verwenden von Anwendungseinstellungen finden Sie unter [Anwendung Einstellungen für Windows Forms](~/docs/framework/winforms/advanced/application-settings-for-windows-forms.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von Anwendungseinstellungen, um die folgenden Attribute des Hauptformulars beibehalten: Speicherort, Größe, Hintergrundfarbe und Text der Titelleiste. Alle diese Attribute werden als einzelne Anwendungseinstellungseigenschaften im beibehalten der `FormSettings` Klasse, mit dem Namen `FormLocation`, `FormSize`, `FormBackColor` und `FormText`zugeordnet. Alle mit Ausnahme von `FormText` und `Size` werden Daten an die zugeordneten Formulareigenschaften gebunden und haben einen Standardwert angewendet, mit der Einstellungswert <xref:System.Configuration.DefaultSettingValueAttribute>.  
+  
+ Das Formular enthält vier untergeordnete Steuerelemente, die die folgenden Namen und Funktionen:  
+  
+-   Eine Schaltfläche mit dem Namen `btnBackColor` verwendet, um die Anzeige der **Farbe** Standarddialogfeld.  
+  
+-   Eine Schaltfläche mit dem Namen `btnReload` verwendet, um <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> die Anwendungseinstellungen.  
+  
+-   Eine Schaltfläche mit dem Namen `btnReset` verwendet, um <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> die Anwendungseinstellungen.  
+  
+-   Ein Textfeld mit dem Namen `tbStatus` verwendet, um Statusinformationen über das Programm anzuzeigen.  
+  
+ Beachten Sie, dass nach jeder Ausführung der Anwendung, eine zusätzliche Punktzeichen, um den Titeltext des Formulars angefügt wird.  
+  
+ Dieses Codebeispiel benötigen Sie ein Formular mit einer <xref:System.Windows.Forms.ColorDialog> Klasse mit dem Namen `colorDialog1`, und ein <xref:System.Windows.Forms.StatusStrip> -Steuerelement mit einer <xref:System.Windows.Forms.ToolStripStatusLabel> mit dem Namen `tbStatus`. Darüber hinaus erfordert drei <xref:System.Windows.Forms.Button> Objekte, die mit dem Namen `btnReload`, `btnReset`, und `btnBackColor`.  
+  
+ [!code-cpp[AppSettingsSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#1)]
+ [!code-csharp[AppSettingsSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#1)]
+ [!code-vb[AppSettingsSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ApplicationSettingsBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Configuration.ApplicationSettingsBase" /> Klasse, um den Standardzustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor wurde entworfen, um unter der Annahme zu arbeiten, die es keine Komponente, die die aktuellen Einstellungen-Wrapperklasse, abgeleitet gibt von zugeordneten <xref:System.Configuration.ApplicationSettingsBase>.  
+  
+ Wenn eine Instanz einer Klasse Wrapper erstellt wird, werden geerbte Code automatisch die folgenden Aktionen ausgeführt:  
+  
+1.  Reflektieren Sie über die Klasse.  
+  
+2.  Für jede Eigenschaft auf den Wrapper mit entweder markiert `[UserScopedSettingAttribute]` oder `[ApplicationScopedSettingAttribute]`, ein entsprechendes <xref:System.Configuration.SettingsProperty> wird erstellt.  
+  
+3.  Jede <xref:System.Configuration.SettingsProperty> weist einige der festgelegten Eigenschaften basierend auf anderen Attributen, die auf den Wrapper-Eigenschaften, z. B. der Standardwert oder der Einstellungsanbieter optional vorhanden sind.  
+  
+4.  Alle anderen Attribute sind in einer Attributsammlung einfach gesagt die <xref:System.Configuration.SettingsProperty.Attributes%2A> Eigenschaft von der <xref:System.Configuration.SettingsProperty> Klasse.  
+  
+5.  Alle <xref:System.Configuration.SettingsProperty> Objekte werden hinzugefügt, um eine <xref:System.Configuration.SettingsPropertyCollection> dargestellte der <xref:System.Configuration.ApplicationSettingsBase.Properties%2A> Eigenschaft von der <xref:System.Configuration.ApplicationSettingsBase> Klasse. Diese Auflistung wird dann zum Übergeben der <xref:System.Configuration.SettingsBase.Initialize%2A> Methode.  
+  
+ Schritt 3 erwähnten, wie nahe legen <xref:System.Configuration.ApplicationSettingsBase> systemintern arbeitet mit verschiedenen Eigenschaftenattributen, insbesondere: <xref:System.Configuration.SettingsProviderAttribute>, <xref:System.Configuration.DefaultSettingValueAttribute>, und <xref:System.Configuration.SettingsSerializeAsAttribute>. Alle anderen Einstellungsattribute sind einfach über den entsprechenden zugrunde liegenden Anbieter übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ApplicationSettingsBase (System.ComponentModel.IComponent owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.#ctor(System.ComponentModel.IComponent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die Komponente, die als Besitzer des Anwendungsobjekts Einstellungen fungieren sollen.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Configuration.ApplicationSettingsBase" /> -Klasse unter Verwendung der angegebenen Besitzerkomponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor entspricht genau der <xref:System.Configuration.ApplicationSettingsBase.%23ctor%28System.ComponentModel.IComponent%2CSystem.String%29> Konstruktor mithilfe des Aufrufs:  
+  
+ `ApplicationSettingsBase(owner, String.Empty)`  
+  
+ Informationen, wie Reflektion, während der Instanziierung des eine Wrapperklasse verwendet wird, finden Sie unter der Standard <xref:System.Configuration.ApplicationSettingsBase.%23ctor> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ApplicationSettingsBase (string settingsKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string settingsKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settingsKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="settingsKey">Ein <see cref="T:System.String" /> , mit dem separate Instanzen von der Wrapperklasse eindeutig identifiziert.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Configuration.ApplicationSettingsBase" /> -Klasse unter Verwendung des angegebenen Einstellungsschlüssels.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> auf den Wert der Eigenschaft der `settingsKey` Parameter. Diese Eigenschaft ist nützlich in eindeutig gemacht verschiedene Instanzen von der Einstellungswrapperklasse in der gleichen Anwendungsdomäne.  
+  
+ Informationen, wie Reflektion, während der Instanziierung des eine Wrapperklasse verwendet wird, finden Sie unter der Standard <xref:System.Configuration.ApplicationSettingsBase.%23ctor> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ApplicationSettingsBase (System.ComponentModel.IComponent owner, string settingsKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent owner, string settingsKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.#ctor(System.ComponentModel.IComponent,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="settingsKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die Komponente, die als Besitzer des Anwendungsobjekts Einstellungen fungieren sollen.</param>
+        <param name="settingsKey">Ein <see cref="T:System.String" /> , mit dem separate Instanzen von der Wrapperklasse eindeutig identifiziert.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Configuration.ApplicationSettingsBase" /> -Klasse mit dem angegebenen Besitzerkomponente und Einstellungsschlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.IComponent> Objekt gemäß der `owner` Parameter fungiert als Besitzer der aktuellen Instanz dieser Anwendungen Settings-Klasse. Während der Initialisierung der Wrapperklasse abgeleitet Einstellungen <xref:System.Configuration.ApplicationSettingsBase>, des Besitzers der Standort wird abgefragt, für eine <xref:System.Configuration.ISettingsProviderService>. Wenn eines vorhanden ist, wird es verwendet aufrufanweisung native Einstellungsanbieter für alle Eigenschaften der Wrapperklasse, entsprechend den Angaben von der <xref:System.Configuration.SettingsProviderAttribute>.  
+  
+ Dieser Konstruktor initialisiert die <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> auf den Wert der Eigenschaft der `settingsKey` Parameter. Diese Eigenschaft ist nützlich in eindeutig gemacht verschiedene Instanzen von der Wrapperklasse in dieselbe Anwendungsdomäne.  
+  
+ Informationen, wie Reflektion, während der Instanziierung des eine Wrapperklasse verwendet wird, finden Sie unter der Standard <xref:System.Configuration.ApplicationSettingsBase.%23ctor> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public override System.Configuration.SettingsContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ApplicationSettingsBase.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellungsgruppe zugeordneten Einstellungen Anwendungskontexts ab.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsContext" /> Einstellungsgruppe zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Wrapperklasse für Anwendungseinstellungen abgeleitet <xref:System.Configuration.ApplicationSettingsBase> hat einen Kontext zugeordnet. Der Kontext übergeben wird, an den Einstellungsanbieter für jede Eigenschaft, um zu identifizieren, wie die Eigenschaft verwendet wird. Der Kontext fungiert daher als Hinweis auf den Einstellungsanbieter ermitteln, wie sich die zugehörige Anwendung Einstellungswerte beibehalten werden können.  
+  
+ Im Gegensatz dazu die <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> Eigenschaft ermöglicht den Einstellungsanbieter, um mehrere Instanzen derselben Wrapperklasse zu unterscheiden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviousVersion">
+      <MemberSignature Language="C#" Value="public object GetPreviousVersion (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetPreviousVersion(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.GetPreviousVersion(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Ein <see cref="T:System.String" /> mit dem Namen der Settings-Eigenschaft, deren Wert zurückgegeben werden.</param>
+        <summary>Gibt den Wert der benannten Eigenschaft für die vorherige Version derselben Anwendung zurück.</summary>
+        <returns>Ein <see cref="T:System.Object" /> mit dem Wert des angegebenen <see cref="T:System.Configuration.SettingsProperty" /> Wenn gefunden, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.GetPreviousVersion%2A> -Methode werden häufig in Verbindung mit der <xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A> Methode, wenn die Anwendungseinstellungen für die während der Installations einer neuen Version einer Anwendung zu migrieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.SettingsPropertyNotFoundException">Die Eigenschaft ist nicht vorhanden. Die Eigenschaftenanzahl ist 0 (null), oder die Eigenschaft kann nicht im Datenspeicher nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string propertyName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ApplicationSettingsBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Ein <see cref="T:System.String" /> mit dem Namen der Eigenschaft auf.</param>
+        <summary>Ruft ab oder legt den Wert der angegebenen Anwendungseinstellungseigenschaft.</summary>
+        <value>Wenn festgestellt wird, der Wert der benannten Einstellungseigenschaft; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.Item%2A> -Eigenschaft, auch bekannt als Indexer wird üblicherweise verwendet, in den Einstellungen, die Wrapperklasse abgeleitet <xref:System.Configuration.ApplicationSettingsBase>. <xref:System.Configuration.ApplicationSettingsBase.Item%2A>Bindet die öffentliche Eigenschaft von der Wrapperklasse an die entsprechende Einstellungen an.  
+  
+ <xref:System.Configuration.ApplicationSettingsBase.Item%2A>Löst verschiedene Ereignisse abhängig vom Vorgang ausgeführt wird:  
+  
+-   Die ersten Mal eine Eigenschaft abgerufen wird, die <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded> Ereignis wird ausgelöst.  
+  
+-   Wenn eine Eigenschaft festgelegt ist, die <xref:System.Configuration.ApplicationSettingsBase.OnSettingChanging%2A> Ereignis wird ausgelöst. Wenn der Ereignishandler das Ereignis nicht abgebrochen, und klicken Sie dann den Wert der Eigenschaft festgelegt ist und die <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged> Ereignis wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.SettingsPropertyNotFoundException">Es sind keine Eigenschaften, die dem aktuellen Wrapper zugeordnet, oder die angegebene Eigenschaft wurde nicht gefunden werden.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyIsReadOnlyException">Es wurde versucht, eine schreibgeschützte Eigenschaft festzulegen.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyWrongTypeException">Der angegebene Wert ist eines Typs, der nicht kompatibel mit der Eigenschaft, während eine Set-Vorgang.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht analysiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(object sender, class System.ComponentModel.PropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.ComponentModel.PropertyChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Configuration.ApplicationSettingsBase.PropertyChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Configuration.ApplicationSettingsBase.OnPropertyChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Configuration.ApplicationSettingsBase.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Configuration.ApplicationSettingsBase.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSettingChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnSettingChanging (object sender, System.Configuration.SettingChangingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSettingChanging(object sender, class System.Configuration.SettingChangingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.OnSettingChanging(System.Object,System.Configuration.SettingChangingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.Configuration.SettingChangingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.Configuration.SettingChangingEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Configuration.ApplicationSettingsBase.SettingChanging" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Configuration.ApplicationSettingsBase.OnSettingChanging%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Configuration.ApplicationSettingsBase.OnSettingChanging(System.Object,System.Configuration.SettingChangingEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Configuration.ApplicationSettingsBase.OnSettingChanging(System.Object,System.Configuration.SettingChangingEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSettingsLoaded">
+      <MemberSignature Language="C#" Value="protected virtual void OnSettingsLoaded (object sender, System.Configuration.SettingsLoadedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSettingsLoaded(object sender, class System.Configuration.SettingsLoadedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.OnSettingsLoaded(System.Object,System.Configuration.SettingsLoadedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.Configuration.SettingsLoadedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.Configuration.SettingsLoadedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Configuration.ApplicationSettingsBase.SettingsLoaded" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Configuration.ApplicationSettingsBase.OnSettingsLoaded%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Configuration.ApplicationSettingsBase.OnSettingsLoaded(System.Object,System.Configuration.SettingsLoadedEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Configuration.ApplicationSettingsBase.OnSettingsLoaded(System.Object,System.Configuration.SettingsLoadedEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSettingsSaving">
+      <MemberSignature Language="C#" Value="protected virtual void OnSettingsSaving (object sender, System.ComponentModel.CancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSettingsSaving(object sender, class System.ComponentModel.CancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.OnSettingsSaving(System.Object,System.ComponentModel.CancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.ComponentModel.CancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.ComponentModel.CancelEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Configuration.ApplicationSettingsBase.SettingsSaving" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Configuration.ApplicationSettingsBase.OnSettingsSaving%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Configuration.ApplicationSettingsBase.OnSettingsSaving(System.Object,System.ComponentModel.CancelEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Configuration.ApplicationSettingsBase.OnSettingsSaving(System.Object,System.ComponentModel.CancelEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public override System.Configuration.SettingsPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ApplicationSettingsBase.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Einstellungseigenschaften im Wrapper ab.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsPropertyCollection" /> , die alle enthält die <see cref="T:System.Configuration.SettingsProperty" /> -Objekten, die im aktuellen Wrapper verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `get` Accessor, der die <xref:System.Configuration.ApplicationSettingsBase.Properties%2A> -Eigenschaft reflektiert wird, über die Metadaten der Settings-Wrapper-Klasse, das von abgeleitet ist <xref:System.Configuration.ApplicationSettingsBase>, um die verfügbaren Einstellungseigenschaften dynamisch bestimmen.  
+  
+ Die <xref:System.Configuration.ApplicationSettingsBase> Klasse erkennt bestimmte Eigenschaften für eine anwendungseinstellung fest, wie ihre Namen Eigenschaftentyp, Einstellungsanbieter, Standardwert, lesen Sie nur die Status und eine Einstellung für die Serialisierung. Diese Eigenschaften werden als Eigenschaften in gespiegelt der <xref:System.Configuration.SettingsProperty> Klasse. Alle anderen Attribute der Einstellungseigenschaft sind nur über den zugeordneten Einstellungsanbieter übergeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Der zugeordnete Einstellungsanbieter konnte nicht gefunden werden oder seiner Instanziierung ist fehlgeschlagen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Configuration.ApplicationSettingsBase.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem der Wert einer Anwendungseinstellungseigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged> Ereignis wird ausgelöst, wenn eine Eigenschaft, über geändert wird die `set` Accessor, der die <xref:System.Configuration.ApplicationSettingsBase.Item%2A> -Methode, oder für jede Eigenschaft, die wiederhergestellt wird, wenn ein Aufruf der <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> oder <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> Methoden.  
+  
+ Es ist kein entsprechendes `PropertyChanging` Ereignis für diese Klasse; stattdessen finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValues">
+      <MemberSignature Language="C#" Value="public override System.Configuration.SettingsPropertyValueCollection PropertyValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsPropertyValueCollection PropertyValues" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ApplicationSettingsBase.PropertyValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Eigenschaftswerten.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> von Eigenschaftswerten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public override System.Configuration.SettingsProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ApplicationSettingsBase.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Application Settings Provider verwendet, die für den Wrapper.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsProviderCollection" /> , die alle enthält die <see cref="T:System.Configuration.SettingsProvider" /> Objekte, die die Eigenschaften des aktuellen Einstellungswrappers verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsProviderAttribute> bestimmt, welche Einstellungsanbieter durch eine Wrapperklasse für Anwendungseinstellungen oder eine einzelne Einstellungseigenschaft verwendet wird. Wenn dieses Attribut nicht angegeben wird, mithilfe einer Clientanwendung die <xref:System.Configuration.LocalFileSettingsProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reload">
+      <MemberSignature Language="C#" Value="public void Reload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.Reload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Werte der Anwendungseinstellungseigenschaft aus dem permanenten Speicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> Methode löscht die aktuell zwischengespeicherten Eigenschaftswerte erneut der folgenden Werte aus dem permanenten Speicher verursacht werden, wenn anschließend darauf zugegriffen werden. Diese Methode führt die folgenden Aktionen aus:  
+  
+-   Löscht die derzeit zwischengespeicherten Eigenschaften durch Deaktivieren der Auflistung dargestellte der <xref:System.Configuration.SettingsBase.PropertyValues%2A> Eigenschaft.  
+  
+-   Es wird ausgelöst, die <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged> -Ereignis für jedes Mitglied der <xref:System.Configuration.ApplicationSettingsBase.Properties%2A> Auflistung.  
+  
+ <xref:System.Configuration.ApplicationSettingsBase.Reload%2A>steht im Gegensatz zu <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> insofern, dass die erste den letzten Satz von gespeicherten Einstellungswerte geladen werden, während der zweite Wert die gespeicherten Standardwerte geladen werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> im Text der aufgerufenen Methode der <xref:System.Windows.Forms.Control.Click> -Ereignishandler für eine Schaltfläche mit dem Namen `btnReload`. Als Ergebnis dieses Aufrufs werden die aktuell gespeicherten Werte für die Anwendungseinstellungen in ihren entsprechenden Eigenschaften neu geladen. Das vollständige Codebeispiel, finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase> -Klassenübersicht.  
+  
+ [!code-cpp[AppSettingsSample#6](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#6)]
+ [!code-csharp[AppSettingsSample#6](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#6)]
+ [!code-vb[AppSettingsSample#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die permanente Anwendung Einstellungswerte in den entsprechenden Standardeigenschaften wiederhergestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> Methode überschreibt die benutzerspezifische Einstellungseigenschaften durch das Wiederherstellen des derzeit persistenten Wert der einzelnen Anwendungseinstellungen. Diese Methode führt die folgenden Aktionen aus:  
+  
+-   Ruft die <xref:System.Configuration.IApplicationSettingsProvider.Reset%2A?displayProperty=nameWithType> -Methode für jede Einstellungsanbieter, die diese optionale Methode unterstützt.  
+  
+-   Ruft die <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> Methode zum Erzwingen der Aktualisierung der Einstellungseigenschaftswerte.  
+  
+ <xref:System.Configuration.ApplicationSettingsBase.Reload%2A>steht im Gegensatz zu <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> insofern, dass die erste den letzten Satz von gespeicherten Einstellungswerte geladen werden, während der zweite Wert die gespeicherten Standardwerte geladen werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> im Text der aufgerufenen Methode der <xref:System.Windows.Forms.Control.Click> -Ereignishandler für eine Schaltfläche mit dem Namen `btnReset`. Als Ergebnis dieses Aufrufs werden die gespeicherten Standardwerte für die Anwendungseinstellungen in ihren entsprechenden Eigenschaften neu geladen. Das vollständige Codebeispiel, finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase> -Klassenübersicht.  
+  
+ [!code-cpp[AppSettingsSample#5](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#5)]
+ [!code-csharp[AppSettingsSample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#5)]
+ [!code-vb[AppSettingsSample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht analysiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public override void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die aktuellen Werten der Eigenschaften der Anwendung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.Save%2A> -Methode schreibt den aktuellen Wert der einzelnen Einstellungseigenschaft in seinen zugeordneten Datenspeicher. Für jede Eigenschaft, die diese Methode ruft die <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> Methode auf dem zugeordneten Einstellungsanbieter.  
+  
+ Diese Methode unterscheidet sich von der Implementierung der Basisklasse löst es das <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis, bevor die Werte geschrieben werden.  
+  
+ Wenn die einzigen Einstellungen definiert anwendungsspezifische Einstellungen sind <xref:System.Configuration.ApplicationSettingsBase.Save%2A> hat keine Auswirkung und keine Fehler zurück, wenn mit dem Standardnamen bezeichnet <xref:System.Configuration.LocalFileSettingsProvider>. <xref:System.Configuration.LocalFileSettingsProvider>nur speichert benutzerspezifische Einstellungen.  
+  
+> [!IMPORTANT]
+>  Es gibt keine entsprechenden Load-Methode auf, da die Werte der Anwendungseinstellungen automatisch während der Initialisierung der Wrapper-Klasse geladen werden. Im Gegensatz dazu werden diese Werte werden nicht automatisch gespeichert, wenn eine Anwendung beendet. Aus diesem Grund müssen Sie explizit aufrufen der <xref:System.Configuration.ApplicationSettingsBase.Save%2A> Methode, um die aktuellen Werte von den Anwendungseinstellungen beizubehalten. Dies erfolgt in der Regel in der <xref:System.Windows.Forms.Form.Closing> -Ereignishandler des primären oder enthaltenden <xref:System.Windows.Forms.Form>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Configuration.ApplicationSettingsBase.Save%2A> vom aufgerufenen Methode der <xref:System.Windows.Forms.Form.Closing> -Ereignishandler für das primäre Formular. Diese Methode fügt auch einen zusätzlichen Zeitraum an der Eigenschaft, die mit des Formulars anfallen <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft.  
+  
+ Das vollständige Codebeispiel, finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase> -Klassenübersicht.  
+  
+ [!code-cpp[AppSettingsSample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#3)]
+ [!code-csharp[AppSettingsSample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#3)]
+ [!code-vb[AppSettingsSample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingChanging">
+      <MemberSignature Language="C#" Value="public event System.Configuration.SettingChangingEventHandler SettingChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Configuration.SettingChangingEventHandler SettingChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Configuration.ApplicationSettingsBase.SettingChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingChangingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor der Wert einer Anwendungseinstellungseigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis tritt auf, bevor eine Anwendung Einstellung Value-Eigenschaft, über geändert wird die <xref:System.Configuration.ApplicationSettingsBase.Item%2A> Methode. Dieses Ereignis wird nicht ausgelöst, wenn die <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> oder <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> Methoden aufgerufen werden. <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>kann abgebrochen werden, über die <xref:System.Configuration.SettingChangingEventArgs> Ereignisdatenklasse.  
+  
+ In der Regel die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis, um die sofortige Überprüfung einer Eigenschaft für die einzelnen Einstellungen behandeln. Weitere Informationen zur Validierung finden Sie unter [Vorgehensweise: Überprüfen von Anwendungseinstellungen](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md).  
+  
+ Es ist kein entsprechendes `SettingChanged` Ereignis für diese Klasse; stattdessen finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> -Ereignishandler für das Objekt vom Typ `FormSettings`, eine Wrapperklasse abgeleitet aus <xref:System.Configuration.ApplicationSettingsBase>. Der Ereignishandler zeigt die Ereignisinformationen in ein Textfeld mit dem Namen `tbStatus`. Das vollständige Codebeispiel, finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase> -Klassenübersicht.  
+  
+ [!code-cpp[AppSettingsSample#7](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#7)]
+ [!code-csharp[AppSettingsSample#7](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#7)]
+ [!code-vb[AppSettingsSample#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingsKey">
+      <MemberSignature Language="C#" Value="public string SettingsKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ApplicationSettingsBase.SettingsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Einstellungsschlüssel für die Einstellungsgruppe für die Anwendung.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Einstellungsschlüssel für die aktuelle Einstellungsgruppe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> Eigenschaft wird bereitgestellt, um die Aktivierung von Clientcode und insbesondere den Einstellungsanbieter, um zwischen mehreren Instanzen der gleichen Anwendung Settings-Klasse zu unterscheiden.  
+  
+ Wenn die Wrapperklasse für Anwendungseinstellungen unter Verwendung der Singleton-Muster entworfen wurde, können mehrere Instanzen der gleichen Anwendung Settings-Klasse in einer einzigen Anwendung sein. Der Wert des <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> sollte festgelegt werden, gemäß wie die Eigenschaftswerte freigegeben werden sollen.  
+  
+-   Wenn die Eigenschaften des Wrappers für alle Instanzen des Wrappers in derselben Anwendung, klicken Sie dann freigegeben sein sollen <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> müssen den gleichen Wert in allen Instanzen. Dies ist das Standardverhalten der <xref:System.Configuration.ApplicationSettingsBase> Klasse.  
+  
+-   Falls die Eigenschaften des Wrappers pro Instanz, dann werden dienen <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> sollte einen eindeutigen Wert für jede Instanz aufweisen. Die <xref:System.Configuration.ApplicationSettingsBase.%23ctor%28System.String%29> Version des Konstruktors können Sie initialisieren <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> an eine eindeutige Zeichenfolge.  
+  
+ Im Gegensatz dazu die <xref:System.Configuration.ApplicationSettingsBase.Context%2A> Eigenschaft bietet Hinweise auf den Einstellungsanbieter auf Werte in einer Weise effizient und systematisch beibehalten werden können.  
+  
+ Die <xref:System.Configuration.SettingChangingEventArgs> Klasse enthält ein ähnliches <xref:System.Configuration.SettingChangingEventArgs.SettingKey%2A> Eigenschaft, die die Quelle der Identifizierung erleichtert die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingsLoaded">
+      <MemberSignature Language="C#" Value="public event System.Configuration.SettingsLoadedEventHandler SettingsLoaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Configuration.SettingsLoadedEventHandler SettingsLoaded" />
+      <MemberSignature Language="DocId" Value="E:System.Configuration.ApplicationSettingsBase.SettingsLoaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsLoadedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem die Einstellungen für die aus dem Speicher abgerufen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded> Ereignis tritt auf, nur nach der Erstkonfiguration `get` Zugriff auf die erste Konfigurationseigenschaft verwendet, in der Regel über die <xref:System.Configuration.ApplicationSettingsBase.Item%2A> Methode. Nachfolgende Zugriffe verwenden Werte für die Settings-Eigenschaft, die lokal zwischengespeichert werden. Die <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> und <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> Methoden werden alle zwischengespeicherten Werte löschen, damit dieses Ereignis bei nachfolgenden Eigenschaftenzugriff erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingsSaving">
+      <MemberSignature Language="C#" Value="public event System.Configuration.SettingsSavingEventHandler SettingsSaving;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Configuration.SettingsSavingEventHandler SettingsSaving" />
+      <MemberSignature Language="DocId" Value="E:System.Configuration.ApplicationSettingsBase.SettingsSaving" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsSavingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor die Werte im Datenspeicher gespeichert sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis wird ausgelöst, durch die <xref:System.Configuration.ApplicationSettingsBase.Save%2A> -Methode auf, bevor sie die Eigenschaften der Anwendung auf ihrer zugeordneten Datenspeicher gespeichert. Der zugeordnete Ereignishandler kann dieses Ereignis abbrechen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> -Ereignishandler für das Objekt vom Typ `FormSettings`, eine Wrapperklasse abgeleitet aus <xref:System.Configuration.ApplicationSettingsBase>. Der Handler fragt die Benutzer aus, um die aktuellen Werte der Anwendungseinstellungseigenschaft speichern. Das vollständige Codebeispiel, finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase> -Klassenübersicht.  
+  
+ [!code-cpp[AppSettingsSample#8](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#8)]
+ [!code-csharp[AppSettingsSample#8](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#8)]
+ [!code-vb[AppSettingsSample#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Upgrade">
+      <MemberSignature Language="C#" Value="public virtual void Upgrade ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Upgrade() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationSettingsBase.Upgrade" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Anwendungseinstellungen entsprechend mehr kürzlich durchgeführten Installationen der Anwendung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A> -Methode führt zwei Aktionen, um den reibungslosen Übergang auf eine neue Version einer Anwendung zu gewährleisten:  
+  
+-   Benachrichtigt alle entsprechenden Einstellungsanbieter von der Existenz der aktualisierten Anwendung durch einen Aufruf von ihren <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A?displayProperty=nameWithType> -Methode, sofern sie implementiert haben die <xref:System.Configuration.IApplicationSettingsProvider> Schnittstelle. Diese Aktion wird nicht ausgeführt, wenn die Wrapperklasse für Anwendungseinstellungen mit gekennzeichnet ist <xref:System.Configuration.NoSettingsVersionUpgradeAttribute>.  
+  
+-   Es lädt die Werte für alle Anwendungseinstellungen für die erneut.  
+  
+ Sie können das Standardverhalten überschreiben <xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A> um benutzerdefinierte aktualisieren oder Zusammenführen von Verhalten zu implementieren. Verwenden der <xref:System.Configuration.ApplicationSettingsBase.GetPreviousVersion%2A> Methode, um einzelne Werte für eine Einstellung für die vorherige Version der Anwendung abzurufen. Beispiele für benutzerdefinierte Upgradeverhalten:  
+  
+-   Mithilfe von neue Richtlinie Standardwerte, die eine oder mehrere der vorherigen Benutzer angegebene Werte überschreiben oder vorherigen Standardwerte.  
+  
+-   Spezielle Übersetzung der alten Werte mit neueren Bereiche, eine andere Einstellungseigenschaftengruppe usw. kompatibel sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei konnte nicht analysiert werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

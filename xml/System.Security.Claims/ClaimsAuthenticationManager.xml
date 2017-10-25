@@ -1,0 +1,132 @@
+<Type Name="ClaimsAuthenticationManager" FullName="System.Security.Claims.ClaimsAuthenticationManager">
+  <TypeSignature Language="C#" Value="public class ClaimsAuthenticationManager : System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClaimsAuthenticationManager extends System.Object implements class System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Claims.ClaimsAuthenticationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IdentityModel.Configuration.ICustomIdentityConfiguration</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die grundlegende Implementierung für eine Anspruchsanbieter-Authentifizierungs-Manager. Ansprüche Authentifizierungs-Manager bietet eine Position in der antragsverarbeitung-Pipeline zum Anwenden von Verarbeitungslogik (filtern, Validierung, Erweiterung) auf die Auflistung der Ansprüche im eingehenden Prinzipal vor Ausführung den Anwendungscode erreicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ansprüche Authentifizierungs-Manager bietet ein Erweiterungspunkt in der Anwendungsverzeichnis Ansprüche Pipeline zur anforderungsverarbeitung, das Sie verwenden können, um zu überprüfen, zu filtern, zu ändern, eingehenden Ansprüche an, oder fügen Sie neue Ansprüche in den Satz von Ansprüchen, präsentiert von einem <xref:System.Security.Claims.ClaimsPrincipal> vor Anwendung der vertrauenden Seite Anwendungscode wird ausgeführt. Sie können auch eine benutzerdefinierte Implementierung von zurückgeben <xref:System.Security.Claims.ClaimsPrincipal> Wenn Ihre Anwendung der vertrauenden Seite erforderlich ist. Die standardmäßige Implementierung von bereitgestellten der <xref:System.Security.Claims.ClaimsAuthenticationManager> Klasse gibt die Ansprüche im die <xref:System.Security.Claims.ClaimsPrincipal> unverändert bleiben sollen, allerdings können Sie von dieser Klasse ableiten und überschreiben die <xref:System.Security.Claims.ClaimsAuthenticationManager.Authenticate%2A> Methode, um die Ansprüche im Ändern der <xref:System.Security.Claims.ClaimsPrincipal> (oder eine benutzerdefinierte zurückzugeben <xref:System.Security.Claims.ClaimsPrincipal>).  
+  
+ Ein häufiger Grund für das Erstellen einer benutzerdefinierten Anspruchsauthentifizierung Manager wird zum Hinzufügen, entfernen oder Transformieren von Ansprüchen basierend auf Informationen, die nur bekannt ist, oder ist, ggf. eine bessere Leistung durch die Anwendung der vertrauenden Seite verwaltet. Z. B. ein Verlauf der Einkäufe von Kunden in einen Warenkorb-Anwendung möglicherweise bleiben in einer Datenbank von der Anwendung der vertrauenden Seite verwaltet und dann zu der anspruchsprinzipal zurückgegebenes Ansprüche Authentifizierungs-Manager basierend auf dem Wert des Namensanspruchs gefunden wird, der Eingehende Prinzipal.  
+  
+ Sie können konfigurieren, dass die Anwendung verwendet ein `ClaimsAuthenticationManager` entweder programmgesteuert mithilfe der <xref:System.IdentityModel.Configuration.IdentityConfiguration> Klasse oder in der Konfiguration über die [ &lt;Komponente "ClaimsAuthenticationManager"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md) Element ( Dies ist ein untergeordnetes Element von der [ &lt;IdentityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element). Sie überschreiben können die <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Methode zum Bereitstellen der Verarbeitung für benutzerdefinierte untergeordneten Elemente der `<claimsAuthenticationManager>` Element über die Ihre benutzerdefinierte Manager konfiguriert werden kann. Die grundlegende Implementierung der <xref:System.Security.Claims.ClaimsAuthenticationManager> all seine untergeordneten Elemente werden nicht behandelt.  
+  
+ Konfigurieren der anwendungskennworts zur Verwendung eines Anspruchsanbieter-Authentifizierungs-Managers wird sichergestellt, dass sie von Windows Identity Foundation (WIF) aus der Anforderungspipeline aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt eine einfache Anspruchsauthentifizierung Manager, der einen Rollenanspruch eingehende Prinzipal hinzufügt, ohne eine Überprüfung auf die eingehenden Ansprüche ausgeführt wird...  
+  
+ [!code-csharp[WifWebApplication1#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifwebapplication1/cs/myclaimsauthenticationmanager/simpleclaimsauthenticatonmanager.cs#1)]  
+  
+ Das folgende XML zeigt die `<claimsAuthenticationManager>` Element.  
+  
+```xml  
+<system.identityModel>  
+  <identityConfiguration>  
+    <claimsAuthenticationManager type="MyClaimsAuthenticationManager.SimpleClaimsAuthenticatonManager, MyClaimsAuthenticationManager" />  
+  
+    ...  
+  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsAuthenticationManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthenticationManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Claims.ClaimsAuthenticationManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Claims.ClaimsPrincipal Authenticate (string resourceName, System.Security.Claims.ClaimsPrincipal incomingPrincipal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Claims.ClaimsPrincipal Authenticate(string resourceName, class System.Security.Claims.ClaimsPrincipal incomingPrincipal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthenticationManager.Authenticate(System.String,System.Security.Claims.ClaimsPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="incomingPrincipal" Type="System.Security.Claims.ClaimsPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Die Adresse der Ressource, die angefordert werden.</param>
+        <param name="incomingPrincipal">Der anspruchsprinzipal, der den authentifizierten Benutzer, der versucht darstellt, auf die Ressource zuzugreifen.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Security.Claims.ClaimsPrincipal" /> Objekt konsistent mit den Anforderungen der Anwendung der vertrauenden Seite. Die standardmäßige Implementierung ändert nicht den eingehenden <see cref="T:System.Security.Claims.ClaimsPrincipal" />.</summary>
+        <returns>Eine anspruchsprinzipal, die alle für die Anwendung der vertrauenden Seite erforderlichen Änderungen aufweist. Die Standardimplementierung gibt zurück, die eingehenden Ansprüche principal unverändert bleiben sollen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Claims.ClaimsAuthenticationManager.Authenticate%2A> Methode wird aufgerufen, von der Pipeline zur anforderungsverarbeitung, Sie diese Methode in einer abgeleiteten Klasse zum Filtern überschreiben kann, ändern oder Einfügen von Ansprüchen in der anspruchsprinzipal gemäß der Richtlinie für Ihre Anwendung der vertrauenden Seite. Je nach den Anforderungen der Anwendung der vertrauenden Seite, können Sie auch eine benutzerdefinierte Implementierung von zurückgeben <xref:System.Security.Claims.ClaimsPrincipal>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Die benutzerdefinierte Konfiguration-Elemente. Jeder Knoten in der Liste ist vom Typ <see cref="T:System.Xml.XmlElement" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse lädt benutzerdefinierte Konfiguration aus XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Methode wird von der Konfigurationsinfrastruktur aufgerufen. Wenn diese Methode aufgerufen wird, die `nodelist` der obersten Ebene der untergeordneten Elemente des enthält die [ &lt;Komponente "ClaimsAuthenticationManager"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md) Element aus der Konfigurationsdatei. Jedes dieser Elemente kann wiederum enthalten Attribute oder untergeordnete Elemente abhängig von dem Konfigurationsschema, das Sie für die abgeleitete Klasse zu definieren. Wenn keine untergeordneten Elemente unter werden die `<claimsAuthenticationManager>` Element in der Konfigurationsdatei, die diese Methode wird nicht aufgerufen.  
+  
+ Die Standardimplementierung löst eine <xref:System.NotImplementedException>. Überschreiben Sie diese Methode in der abgeleiteten Klasse auf die Initialisierung von Ihrer Ansprüche Authentifizierungs-Manager aus einer Konfigurationsdatei zu aktivieren. Elemente der Konfiguration können z. B. eine Richtlinie angewendet werden, bei der Authentifizierung einer anspruchsprinzipal beschreiben; oder sie können verwendet werden, um einem Attributspeicher verweisen aus dem sind zusätzliche Ansprüche dem Prinzipal hinzugefügt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

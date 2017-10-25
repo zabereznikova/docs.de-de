@@ -1,0 +1,260 @@
+<Type Name="CatalogPartChrome" FullName="System.Web.UI.WebControls.WebParts.CatalogPartChrome">
+  <TypeSignature Language="C#" Value="public class CatalogPartChrome" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CatalogPartChrome extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es Entwicklern, das Rendering für nur die ausgewählten Bereiche von überschreiben <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente in einem <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> Zone.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chrom bezieht sich auf die peripheren Elemente der Benutzeroberfläche (UI), jedes Webparts-Steuerelement oder das Webserversteuerelement in einer Zone enthalten sind. Chrom für ein Steuerelement enthält eine Rahmenlinie, Titelleiste, und die Symbole, Titeltext und Verbmenü, die in der Titelleiste angezeigt werden. Die Darstellung der Chrome auf der Ebene der Zone festgelegt ist, und gilt für alle Steuerelemente in der Zone.  
+  
+ Die Webparts-Steuerelementen werden mithilfe der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> Klasse zum Rendern der Chrome für <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Diese Klasse bietet darüber hinaus eine Möglichkeit für Entwickler zum Anpassen des Renderings eines beliebigen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone. Sie können z. B. überschreiben die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.CreateCatalogPartChromeStyle%2A> Methode, um einige spezifische Stilattribute anzupassen angewendet, um die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> Klasse enthält mehrere wichtige Methoden, die hilfreich sind, wenn Sie das Rendering außer Kraft setzen möchten <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Ist die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.%23ctor%2A> -Konstruktor, der Sie verwenden, wenn Sie außer Kraft setzen die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogPartChrome%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone zum Erstellen einer Instanz des benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> Objekt. Eine andere nützliche Methode ist die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderPartContents%2A> -Methode, die Sie verwenden können, um das Rendering des Inhaltsbereichs von Steuerelementen in einer Zone (im Gegensatz zu Chromelemente werden z. B. Kopfzeilen, Fußzeilen und Titelleisten) zu steuern. Schließlich umfassende programmgesteuerte Kontrolle über alle Aspekte des Renderings gegebenenfalls die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelemente, die Sie überschreiben die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderCatalogPart%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> Klasse, um das Standardrendering der außer Kraft setzen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone.  
+  
+ Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite, die alle Steuerelemente im Beispiel hostet.  
+  
+-   Eine Klasse, die den Quellcode für ein benutzerdefiniertes enthält <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> Klasse und <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone.  
+  
+ Der erste Teil des Codebeispiels wird das Benutzersteuerelement. Der Quellcode für das Benutzersteuerelement stammen aus einem anderen Thema. Für dieses Codebeispiel funktioniert, müssen Sie die ASCX-Datei für das Benutzersteuerelement aus der [Exemplarische Vorgehensweise: Ändern von Anzeigemodi auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) Thema, und platzieren Sie die Datei im gleichen Ordner wie die ASPX-Seite in diesem Codebeispiel wird.  
+  
+ Der zweite Teil des Beispiels wird die Webseite. Beachten Sie, dass es eine `Register` -Direktive am Anfang der Datei so registrieren Sie die kompilierte Komponente und ein Tagpräfix. Beachten Sie, dass die Seite Katalogzone benutzerdefinierte mithilfe des Elements verweist auf `<aspSample:MyCatalogZone>`.  
+  
+ [!code-aspx-csharp[WebParts_CatalogPartChrome_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/CS/CatalogPartDemo.aspx#1)]
+ [!code-aspx-vb[WebParts_CatalogPartChrome_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/VB/CatalogPartDemo.aspx#1)]  
+  
+ Der dritte Teil des Beispiels enthält die Implementierung des benutzerdefinierten Katalogs Chrom und der Katalogzone. `MyCatalogZone`Erweitert <xref:System.Web.UI.WebControls.WebParts.CatalogZone> und überschreibt <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogPartChrome%2A> an den benutzerdefinierten Katalog Chrom zurückzugeben. `MyCatalogPartChrome`Ändert die Hintergrundfarbe des Katalogsteuerelements in der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.CreateCatalogPartChromeStyle%2A> Methode. Die Hintergrundfarbe der Zone wird geändert, der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.PerformPreRender%2A> -Methode und der Text wird hinzugefügt, mit dem Webpart Katalog in der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderPartContents%2A> Methode.  
+  
+ [!code-csharp[WebParts_CatalogPartChrome_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/CS/source2.cs#2)]
+ [!code-vb[WebParts_CatalogPartChrome_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/VB/source2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> -Klasse, müssen Sie erstellen eine benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> Zone zurückzugebenden Ihrer benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> Klasse. Im Abschnitt "Beispiel" Übersicht für diese Klasse veranschaulicht, wie eine benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> Zone aus, um eine angepasste zurückgeben <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> Klasse.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogPartChrome (System.Web.UI.WebControls.WebParts.CatalogZoneBase zone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.CatalogZoneBase zone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartChrome.#ctor(System.Web.UI.WebControls.WebParts.CatalogZoneBase)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="zone" Type="System.Web.UI.WebControls.WebParts.CatalogZoneBase" />
+      </Parameters>
+      <Docs>
+        <param name="zone">Die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> Klasse. Es dient in erster Linie durch eine <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zone in seine <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogPartChrome%2A> Methode zum Erstellen einer Instanz von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> -Objekt, das das Chromrendering und benutzerdefinierte Rendering für behandelt <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in der Zone.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> , <paramref name="zone" /> verweist, ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCatalogPartChromeStyle">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.Style CreateCatalogPartChromeStyle (System.Web.UI.WebControls.WebParts.CatalogPart catalogPart, System.Web.UI.WebControls.WebParts.PartChromeType chromeType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.Style CreateCatalogPartChromeStyle(class System.Web.UI.WebControls.WebParts.CatalogPart catalogPart, valuetype System.Web.UI.WebControls.WebParts.PartChromeType chromeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartChrome.CreateCatalogPartChromeStyle(System.Web.UI.WebControls.WebParts.CatalogPart,System.Web.UI.WebControls.WebParts.PartChromeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="catalogPart" Type="System.Web.UI.WebControls.WebParts.CatalogPart" />
+        <Parameter Name="chromeType" Type="System.Web.UI.WebControls.WebParts.PartChromeType" />
+      </Parameters>
+      <Docs>
+        <param name="catalogPart">Das Steuerelement, das gerade gerendert wird.</param>
+        <param name="chromeType">Der Typ der Chrome für ein bestimmtes Steuerelement. eines der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> Enumerationswerte.</param>
+        <summary>Erstellt die Formatvorlagenobjekt, das für die einzelnen Stilattribute bereitstellt <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement gerendert wird, indem Sie die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Style" /> mit Stilattributen für <paramref name="catalogPart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.CreateCatalogPartChromeStyle%2A> Methode erstellt eine <xref:System.Web.UI.WebControls.Style> -Objekt, das von verwendet wird, die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> Objekt zum Rendern einer <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.CreateCatalogPartChromeStyle%2A> Methode, um die Hintergrundfarbe des Katalogsteuerelements zu ändern. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, einschließlich der Webseite zum Hosten der Steuerelemente finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_CatalogPartChrome_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/CS/source2.cs#3)]
+ [!code-vb[WebParts_CatalogPartChrome_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/VB/source2.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Steuerelement, <paramref name="catalogPart" /> verweist, ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="chromeType" /> ist keine <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> -Klasse, Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.CatalogPartChrome.CreateCatalogPartChromeStyle(System.Web.UI.WebControls.WebParts.CatalogPart,System.Web.UI.WebControls.WebParts.PartChromeType)" /> -Methode und zusammenführen, die die Stilinformationen aus der Basismethode mit benutzerdefinierten Stil Attribute, die Sie hinzufügen möchten. Eine Veranschaulichung finden Sie im Beispielabschnitt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformPreRender">
+      <MemberSignature Language="C#" Value="public virtual void PerformPreRender ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PerformPreRender() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartChrome.PerformPreRender" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt Aufgaben aus, die vor dem Rendering erfolgen müssen <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.PerformPreRender%2A> Methode können Sie Aufgaben, die während der erfolgen muss <xref:System.Web.UI.Control.PreRender> und kann nicht durchgeführt werden, wenn das Steuerelement gerendert wird, z. B. ein Stylesheet an ein Steuerelement anwenden,.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.PerformPreRender%2A> Methode, um die Hintergrundfarbe der Katalogzone zu ändern. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, einschließlich der Webseite zum Hosten der Steuerelemente finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_CatalogPartChrome_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/CS/source2.cs#4)]
+ [!code-vb[WebParts_CatalogPartChrome_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/VB/source2.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderCatalogPart">
+      <MemberSignature Language="C#" Value="public virtual void RenderCatalogPart (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebParts.CatalogPart catalogPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderCatalogPart(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebParts.CatalogPart catalogPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderCatalogPart(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.CatalogPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="catalogPart" Type="System.Web.UI.WebControls.WebParts.CatalogPart" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , empfängt der <c>CatalogPart</c> Inhalt.</param>
+        <param name="catalogPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Rendert ein vollständiges <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> -Steuerelement mit allen zugehörigen Bereichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderCatalogPart%2A> Methode rendert das vollständige <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement mit Header, Inhalt und Fußzeile. Überschreiben diese Methode ermöglicht Entwicklern die programmgesteuerte Kontrolle über alle Aspekte der Rendern vollständige `catalogPart`; aus diesem Grund Überschreiben dieser Methode ist relativ komplex.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Steuerelement, <paramref name="catalogPart" /> verweist, ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPartContents">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPartContents (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebParts.CatalogPart catalogPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPartContents(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebParts.CatalogPart catalogPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderPartContents(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.CatalogPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="catalogPart" Type="System.Web.UI.WebControls.WebParts.CatalogPart" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , empfängt der <c>CatalogPart</c> Inhalt.</param>
+        <param name="catalogPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Den Hauptinhaltsbereich der rendert eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> -Steuerelement, mit Ausnahme von Kopf- und Fußzeilen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderPartContents%2A> Methode können Sie die Darstellung der im Textbereich der überschreiben `catalogPart`, lassen Sie die Darstellung von Kopf- und Fußzeilen auf das Standardrendering zurückgreifen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderPartContents%2A> Methode, um den Katalog Teil Text hinzuzufügen. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, einschließlich der Webseite zum Hosten der Steuerelemente finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_CatalogPartChrome_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/CS/source2.cs#5)]
+ [!code-vb[WebParts_CatalogPartChrome_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPartChrome_Overview/VB/source2.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Steuerelement, <paramref name="catalogPart" /> verweist, ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.CatalogPartChrome.RenderPartContents(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.CatalogPart)" /> Methode. Wenn daher einfach die Renderinganpassungen ausführen können sollen für <paramref name="catalogPart" />, und rufen Sie anschließend die <see cref="M:System.Web.UI.Control.RenderControl(System.Web.UI.HtmlTextWriter)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.CatalogZoneBase Zone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.CatalogZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogPartChrome.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> Zone.</summary>
+        <value>Ein Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zugeordneten der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome.Zone%2A> Eigenschaft stellt einen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone, die die Steuerelemente, für die enthält die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> -Objekt Rendering bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

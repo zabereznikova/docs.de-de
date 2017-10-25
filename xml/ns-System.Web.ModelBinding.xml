@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.ModelBinding">
+  <Docs>
+    <summary>Der <see cref="N:System.Web.ModelBinding" />-Namespace stellt Klassen bereit, mit denen Sie Datenobjekte an ASP.NET Web Forms-Serversteuerelemente binden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

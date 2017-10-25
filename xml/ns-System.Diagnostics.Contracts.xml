@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Contracts">
+  <Docs>
+    <summary>Die <see cref="N:System.Diagnostics.Contracts" /> -Namespace enthält statische Klassen zum Darstellen von programmverträgen, z. B. Vorbedingungen, nachbedingungen und Invarianten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

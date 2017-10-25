@@ -1,0 +1,200 @@
+<Type Name="IServerChannelSink" FullName="System.Runtime.Remoting.Channels.IServerChannelSink">
+  <TypeSignature Language="C#" Value="public interface IServerChannelSink : System.Runtime.Remoting.Channels.IChannelSinkBase" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServerChannelSink implements class System.Runtime.Remoting.Channels.IChannelSinkBase" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IServerChannelSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelSinkBase</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden für Sicherheit und für Transportsenken verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanal senken ermöglichen-Plug-Ins, die Zugriff auf die zugrunde liegenden Nachrichten, die durch den Kanal sowie der Stream, der zum Senden von Nachrichten zu einem Remoteobjekt vom Transportmechanismus verwendet fließen können. Kanal senken in einer Kette von Senke Channelanbieter miteinander verknüpft sind, und alle Kanalnachrichten auf diese Kette von senken passieren, bevor die Nachricht serialisiert und transportiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Implementierung veranschaulicht die <xref:System.Runtime.Remoting.Channels.IServerChannelSink> Schnittstelle.  
+  
+ [!code-cpp[Remoting_Sinks#60](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Sinks/CPP/serversink.cpp#60)]
+ [!code-csharp[Remoting_Sinks#60](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Sinks/CS/serversink.cs#60)]  
+  
+ Finden Sie unter der <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider> Dokumentation für ein Beispiel für die entsprechenden Server Sink-anbieterimplementierung-Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncProcessResponse">
+      <MemberSignature Language="C#" Value="public void AsyncProcessResponse (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AsyncProcessResponse(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IServerChannelSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Ein Stapel von senken, die zurück an den Server-Transport-Senke.</param>
+        <param name="state">Informationen, die generiert wird, auf der Anforderungsseite, die diese Senke zugeordnet ist.</param>
+        <param name="msg">Die Antwortnachricht.</param>
+        <param name="headers">Die Header der Antwortnachricht Überschrift an den Client hinzu.</param>
+        <param name="stream">Die Überschrift Stream zurück an die Transportsenke.</param>
+        <summary>Fordert die Verarbeitung von der aktuellen Senke der Antwort aus einem Methodenaufruf asynchron gesendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `state` -Parameter enthält Informationen, die auf dem Kanal Senke-Stapel abgelegt und der aktuellen Senke zugeordnet wurde.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CommonTransportKeys#1](~/samples/snippets/cpp/VS_Snippets_Remoting/CommonTransportKeys/CPP/commontransportkeys.cpp#1)]
+ [!code-csharp[CommonTransportKeys#1](~/samples/snippets/csharp/VS_Snippets_Remoting/CommonTransportKeys/CS/commontransportkeys.cs#1)]
+ [!code-vb[CommonTransportKeys#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CommonTransportKeys/VB/commontransportkeys.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetResponseStream (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetResponseStream(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IServerChannelSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Ein Stapel von senken, die zurück an den Server-Transport-Senke.</param>
+        <param name="state">Der Status, der von diesem Empfänger auf den Stapel gelegt wurde.</param>
+        <param name="msg">Die Antwortnachricht zu serialisieren.</param>
+        <param name="headers">Die Header in den Ausgabestream für Antworten an den Client aufgenommen werden sollen.</param>
+        <summary>Gibt die <see cref="T:System.IO.Stream" /> in dem die angegebene Antwortnachricht serialisiert werden.</summary>
+        <returns>Die <see cref="T:System.IO.Stream" /> in dem die angegebene Antwortnachricht serialisiert werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Antwortstream erstellt werden muss.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NextChannelSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IServerChannelSink.NextChannelSink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die nächste Kanalsenke in der Senkenkette ab.</summary>
+        <value>Der nächste Serverchannel sink in der Senkenkette.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanal senken in einer Kette von Senkenanbietern miteinander verknüpft sind, und alle Kanalnachrichten passieren dieser Kette aus, bevor die Nachricht serialisiert und transportiert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer verfügt nicht über die erforderlichen <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /> Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage (System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, System.Runtime.Remoting.Messaging.IMessage requestMsg, System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, System.IO.Stream requestStream, out System.Runtime.Remoting.Messaging.IMessage responseMsg, out System.Runtime.Remoting.Channels.ITransportHeaders responseHeaders, out System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage(class System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, class System.Runtime.Remoting.Messaging.IMessage requestMsg, class System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, class System.IO.Stream requestStream, [out] class System.Runtime.Remoting.Messaging.IMessage&amp; responseMsg, [out] class System.Runtime.Remoting.Channels.ITransportHeaders&amp; responseHeaders, [out] class System.IO.Stream&amp; responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.ServerProcessing</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerChannelSinkStack" />
+        <Parameter Name="requestMsg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="requestHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="requestStream" Type="System.IO.Stream" />
+        <Parameter Name="responseMsg" Type="System.Runtime.Remoting.Messaging.IMessage&amp;" RefType="out" />
+        <Parameter Name="responseHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders&amp;" RefType="out" />
+        <Parameter Name="responseStream" Type="System.IO.Stream&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Ein Stapel von senken, die die aktuelle Senke aufgerufen.</param>
+        <param name="requestMsg">Die Meldung, die die Anforderung enthält.</param>
+        <param name="requestHeaders">Header, die aus der eingehenden Nachricht vom Client abgerufen werden.</param>
+        <param name="requestStream">Der Stream, der verarbeitet und an die Deserialisierungssenke übergeben werden muss.</param>
+        <param name="responseMsg">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> , die die Antwortnachricht enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="responseHeaders">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> , enthält die Header, die hinzugefügt werden, auf die Überschrift der Nachricht an den Client zurückgegeben. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="responseStream">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.IO.Stream" /> also Überschrift zurück an die Transportsenke. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Anforderungen der Nachrichtenverarbeitung von der aktuellen Senke.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> Statuswert, der Informationen zur Verarbeitung von Nachrichten bietet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Auftrag eines Proxys wird Aufruf einer Methode, die davon aufgerufen werden, in ein Nachrichtenobjekt zu konvertieren. Diese Message-Objekt, das implementiert die <xref:System.Runtime.Remoting.Messaging.IMessage> Schnittstelle, wird vom Client an den Server übergeben, durch den Aufruf <xref:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage%2A> auf Senke Nachrichtenobjekte. Nachricht senken miteinander verkettet werden, in dem Sinne, dass jede Nachricht Senke verantwortlich für das Aufrufen ist <xref:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage%2A> auf die nächste Nachricht Senke, nachdem er seine Arbeit ausgeführt wurde. Beispielsweise kann Senke Synchronisierung zugehörigen Nachricht dazu führen, dass eine Sperre abgerufen oder veröffentlicht und dann zusätzlich die downstreamverarbeitung von Nachrichten Senke delegiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

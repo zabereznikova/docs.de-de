@@ -1,0 +1,670 @@
+<Type Name="IPStatus" FullName="System.Net.NetworkInformation.IPStatus">
+  <TypeSignature Language="C#" Value="public enum IPStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IPStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IPStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Ping</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Meldet den Status der per Internet Control Message Protocol (ICMP) Echo-Nachricht an einen Computer senden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.NetworkInformation.Ping> Klasse verwendet die Werte in dieser Enumeration zum Festlegen der <xref:System.Net.NetworkInformation.PingReply.Status%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Net.NetworkInformation.Ping> zurück <xref:System.Net.NetworkInformation.PingReply> Objekte beim Aufrufen der <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> oder <xref:System.Net.NetworkInformation.Ping.SendAsync%2A?displayProperty=nameWithType> Methoden zu überprüfen, ob Sie einen Computer im Netzwerk erreichbar sind.  
+  
+> [!WARNING]
+>  Die Enumerationswerte DestinationProhibited und DestinationProtocolUnreachable haben denselben numerischen Wert. Dies ist möglich, da DestinationProhibited nur für IPv6 gilt und DestinationProtocolUnreachable nur für IPv4 gilt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine ICMP-Echo-Nachricht sendet und überprüft den Status.  
+  
+ [!code-cpp[NclPingSync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingSync/CPP/syncping.cpp#1)]
+ [!code-csharp[NclPingSync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingSync/CS/syncping.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BadDestination">
+      <MemberSignature Language="C#" Value="BadDestination" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadDestination = int32(11018)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadDestination" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung Fehler bei, weil die Ziel-IP-Adresse nicht von ICMP-echoanforderungen empfangen kann oder sollte nie in das Zieladressfeld für alle IP-Datagramm angezeigt werden. Beispielsweise Aufrufen <see cref="Overload:System.Net.NetworkInformation.Ping.Send" /> und IP-Adresse "000.0.0.0 angegeben wird" gibt dieser Status zurück.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadHeader">
+      <MemberSignature Language="C#" Value="BadHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadHeader = int32(11042)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, da der Header ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadOption">
+      <MemberSignature Language="C#" Value="BadOption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadOption = int32(11007)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadOption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, da sie eine ungültige Option enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadRoute">
+      <MemberSignature Language="C#" Value="BadRoute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadRoute = int32(11012)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadRoute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung fehlgeschlagen: Es ist keine gültige Route zwischen den Quell- und Ziel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationHostUnreachable">
+      <MemberSignature Language="C#" Value="DestinationHostUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationHostUnreachable = int32(11003)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationHostUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, da der Zielcomputer nicht erreichbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationNetworkUnreachable">
+      <MemberSignature Language="C#" Value="DestinationNetworkUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationNetworkUnreachable = int32(11002)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationNetworkUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, da das Netzwerk, das den Zielcomputer enthält nicht erreichbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationPortUnreachable">
+      <MemberSignature Language="C#" Value="DestinationPortUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationPortUnreachable = int32(11005)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationPortUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, da der Port auf dem Zielcomputer nicht verfügbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationProhibited">
+      <MemberSignature Language="C#" Value="DestinationProhibited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationProhibited = int32(11004)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationProhibited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fehler bei der ICMPv6 Echo-Anforderung, da die Verbindung mit dem Zielcomputer für die Verwaltung nicht zulässig ist. Dieser Wert gilt nur für IPv6.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationProtocolUnreachable">
+      <MemberSignature Language="C#" Value="DestinationProtocolUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationProtocolUnreachable = int32(11004)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationProtocolUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, da der Zielcomputer, der in einer ICMP-Echo-Nachricht angegeben ist nicht erreichbar ist, da das Protokoll des Pakets nicht unterstützt wird. Dieser Wert gilt nur für IPv4. Dieser Wert wird als Kommunikation für die Verwaltung nicht zulässig in der IETF RFC 1812 beschrieben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationScopeMismatch">
+      <MemberSignature Language="C#" Value="DestinationScopeMismatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationScopeMismatch = int32(11045)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationScopeMismatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ICMP-Echoanfrage aufgrund der Quelladresse und die Zieladresse, die in einer ICMP-Echo-Nachricht angegeben werden nicht im gleichen Bereich enthalten sind. Dies wird normalerweise verursacht durch einen Router Weiterleiten eines Pakets mit einer Schnittstelle, die außerhalb des Bereichs der Quelladresse ist. Adressbereiche (verbindungslokale standortlokale und Globaler Gültigkeitsbereich) bestimmen, wo im Netzwerk eine Adresse gültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUnreachable">
+      <MemberSignature Language="C#" Value="DestinationUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationUnreachable = int32(11040)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ICMP-Echoanfrage ist fehlgeschlagen, da der Zielcomputer, der in einer ICMP-Echo-Nachricht angegeben ist, nicht erreichbar ist; die genaue Ursache des Problems ist unbekannt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HardwareError">
+      <MemberSignature Language="C#" Value="HardwareError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus HardwareError = int32(11008)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.HardwareError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung konnte aufgrund eines Fehlers Hardware.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IcmpError">
+      <MemberSignature Language="C#" Value="IcmpError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus IcmpError = int32(11044)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.IcmpError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung konnte aufgrund eines Fehlers der ICMP-Protokoll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoResources">
+      <MemberSignature Language="C#" Value="NoResources" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus NoResources = int32(11006)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.NoResources" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fehler bei der ICMP-echoanforderung aufgrund unzureichender Netzwerkressourcen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketTooBig">
+      <MemberSignature Language="C#" Value="PacketTooBig" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus PacketTooBig = int32(11009)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.PacketTooBig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung Fehler, weil das Paket mit der Anforderung größer als die maximum Transmission Unit (MTU) eines Knotens (Router- oder Gatewaygerät) zwischen Quelle und Ziel ist. Die maximale Übertragungseinheit definiert die maximale Größe eines Übertragungseinehit Pakets.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterProblem">
+      <MemberSignature Language="C#" Value="ParameterProblem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus ParameterProblem = int32(11015)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.ParameterProblem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ICMP-Echoanfrage aufgrund ein Knotens (Router- oder Gatewaygerät) Probleme aufgetreten, während der Verarbeitung von Paket-Header. Dies ist der Status, wenn Sie z. B. der Header ungültige Felddaten oder eine nicht erkannte Option enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceQuench">
+      <MemberSignature Language="C#" Value="SourceQuench" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus SourceQuench = int32(11016)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.SourceQuench" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, weil das Paket verworfen wurde. Dies tritt auf, wenn die Ausgabewarteschlange des Quellcomputers nicht genügend Speicherplatz aufweist, oder zu schnell Eintreffen von Paketen am Ziel verarbeitet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung erfolgreich ausgeführt wurde Ein ICMP-Echoantworten wurde empfangen. Wenn Sie diesen Statuscode, der andere erhalten <see cref="T:System.Net.NetworkInformation.PingReply" /> Eigenschaften auch gültige Daten enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimedOut">
+      <MemberSignature Language="C#" Value="TimedOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TimedOut = int32(11010)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TimedOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ICMP-Echoantwort wurde nicht innerhalb der vorgesehenen Zeit empfangen. Die Standardzeit für Antworten zulässig ist 5 Sekunden. Sie können ändern, diesen Wert mit dem <see cref="Overload:System.Net.NetworkInformation.Ping.Send" /> oder <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> Methoden, die eine <paramref name="timeout" /> Parameter.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeExceeded">
+      <MemberSignature Language="C#" Value="TimeExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TimeExceeded = int32(11041)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TimeExceeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung Fehler bei, da es Zeit für die Gültigkeitsdauer (TTL) 0 (null), den Weiterleitungsknoten (Router- oder Gatewaygerät) erreicht, um das Paket verwerfen verursacht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TtlExpired">
+      <MemberSignature Language="C#" Value="TtlExpired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TtlExpired = int32(11013)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TtlExpired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung Fehler bei, da es Zeit für die Gültigkeitsdauer (TTL) 0 (null), den Weiterleitungsknoten (Router- oder Gatewaygerät) erreicht, um das Paket verwerfen verursacht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TtlReassemblyTimeExceeded">
+      <MemberSignature Language="C#" Value="TtlReassemblyTimeExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TtlReassemblyTimeExceeded = int32(11014)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TtlReassemblyTimeExceeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist fehlgeschlagen, da das Paket in Fragmente für die Übertragung unterteilt wurde, und alle Fragmente nicht innerhalb der vorgegebenen Zeit für die Reassemblierung empfangen wurden. RFC 2460 (verfügbar unter www.ietf.org) gibt an, 60 Sekunden als das Zeitlimit überschreiten, die in der alle Fragmente empfangen werden müssen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ICMP-echoanforderung ist aus einem unbekannten Grund fehlgeschlagen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnrecognizedNextHeader">
+      <MemberSignature Language="C#" Value="UnrecognizedNextHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus UnrecognizedNextHeader = int32(11043)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.UnrecognizedNextHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ICMP-Echoanfrage aufgrund der nächsten-Headerfeld kein gültiger Wert nicht enthält. Das nächste Headerfeld gibt an, der Header Erweiterungstyp (falls vorhanden) oder über die IP-Schicht, z. B. TCP oder UDP-Protokoll.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

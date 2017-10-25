@@ -1,0 +1,114 @@
+<Type Name="ICompositeViewEvents" FullName="System.Activities.Presentation.ICompositeViewEvents">
+  <TypeSignature Language="C#" Value="public interface ICompositeViewEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICompositeViewEvents" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.ICompositeViewEvents" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Behandelt Ereignisse, die während der Anzeige von <see cref="T:System.Activities.Presentation.ICompositeView" />-Elementen auftreten können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ansicht besteht normalerweise aus verschiedenen lose verknüpften visuellen Komponenten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RegisterCompositeView">
+      <MemberSignature Language="C#" Value="public void RegisterCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.RegisterCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Ein Objekt, das die benutzerdefinierten Steuerelemente enthält, die registriert werden sollen.</param>
+        <summary>Registriert die benutzerdefinierten Steuerelemente, die während der Ausführung einer zusammengesetzten Anwendung angezeigt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Registrierung von Ansichtskomponenten in einer virtuellen Tabelle gibt Entwicklern die einfache Möglichkeit, benutzerdefinierte Steuerelemente in einer zusammengesetzten Anwendung zu behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaultCompositeView">
+      <MemberSignature Language="C#" Value="public void RegisterDefaultCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterDefaultCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.RegisterDefaultCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Ein Objekt, das die Standardsteuerelemente enthält, die registriert werden sollen.</param>
+        <summary>Registriert die Standardsteuerelemente, die während der Ausführung einer zusammengesetzten Anwendung angezeigt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterCompositeView">
+      <MemberSignature Language="C#" Value="public void UnregisterCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.UnregisterCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Ein Objekt, das die benutzerdefinierten Steuerelemente enthält, deren Registrierung aufgehoben werden soll.</param>
+        <summary>Hebt die Registrierung der benutzerdefinierten Steuerelemente auf, die während der Ausführung einer zusammengesetzten Anwendung angezeigt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterDefaultCompositeView">
+      <MemberSignature Language="C#" Value="public void UnregisterDefaultCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterDefaultCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.UnregisterDefaultCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Ein Objekt, das die Standardsteuerelemente enthält, deren Registrierung aufgehoben werden soll.</param>
+        <summary>Hebt die Registrierung der Standardsteuerelemente auf, die während der Ausführung einer zusammengesetzten Anwendung angezeigt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

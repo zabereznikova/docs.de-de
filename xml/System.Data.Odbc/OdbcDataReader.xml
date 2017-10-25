@@ -1,0 +1,1305 @@
+<Type Name="OdbcDataReader" FullName="System.Data.Odbc.OdbcDataReader">
+  <TypeSignature Language="C#" Value="public sealed class OdbcDataReader : System.Data.Common.DbDataReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcDataReader extends System.Data.Common.DbDataReader" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcDataReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbDataReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit, einen Vorwärtsstream von Datenzeilen aus einer Datenquelle zu lesen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Erstellen einer <xref:System.Data.Odbc.OdbcDataReader>, rufen Sie die <xref:System.Data.Odbc.OdbcCommand.ExecuteReader%2A> Methode der <xref:System.Data.Odbc.OdbcCommand> Objekts anstatt direkt mit einem Konstruktor.  
+  
+ Während der <xref:System.Data.Odbc.OdbcDataReader> verwendet wird, zugeordneten <xref:System.Data.Odbc.OdbcConnection> Informationsfluss der <xref:System.Data.Odbc.OdbcDataReader>, und keine anderen Vorgänge ausgeführt werden können, auf die <xref:System.Data.Odbc.OdbcConnection> außer schließen. Dies ist der Fall, bis die <xref:System.Data.Odbc.OdbcDataReader.Close%2A> Methode der <xref:System.Data.Odbc.OdbcDataReader> aufgerufen wird. Sie können nicht z. B. Ausgabeparameter erst abrufen, nach dem Aufruf <xref:System.Data.Odbc.OdbcDataReader.Close%2A>.  
+  
+ Änderungen an einem Resultset von einem anderen Prozess oder Thread während des Lesens von Daten ist möglicherweise für den Benutzer der sichtbare der <xref:System.Data.Odbc.OdbcDataReader>. Das genaue Verhalten ist jedoch, Treiber und Zeitpunkt abhängig.  
+  
+ <xref:System.Data.Odbc.OdbcDataReader.IsClosed%2A>und <xref:System.Data.Odbc.OdbcDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.Odbc.OdbcDataReader> geschlossen wird. In einigen Fällen müssen Sie aufrufen <xref:System.Data.Odbc.OdbcDataReader.Close%2A> vor dem Aufruf können <xref:System.Data.Odbc.OdbcDataReader.RecordsAffected%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Odbc.OdbcConnection>, wird ein <xref:System.Data.Odbc.OdbcCommand>, und ein <xref:System.Data.Odbc.OdbcDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.Odbc.OdbcDataReader>, und klicken Sie dann die <xref:System.Data.Odbc.OdbcConnection>.  
+  
+ [!code-csharp[Classic WebData OdbcDataReader#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcDataReader/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcDataReader#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcDataReader/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das <see cref="T:System.Data.Odbc.OdbcDataReader" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie explizit aufrufen der <xref:System.Data.Odbc.OdbcDataReader.Close%2A> Methode, wenn Sie fertig sind mit den <xref:System.Data.Odbc.OdbcDataReader> an die zugeordnete <xref:System.Data.Odbc.OdbcConnection> für andere Zwecke.  
+  
+> [!CAUTION]
+>  Rufen Sie nicht `Close` oder `Dispose` auf eine Verbindung, eines "DataReader" oder ein anderes verwaltetes Objekt in der `Finalize` -Methode der Klasse. In einer Finalize-Methode sollten Sie nur nicht verwaltete Ressourcen freizugeben, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Odbc.OdbcConnection>, wird ein <xref:System.Data.Odbc.OdbcCommand>, und ein <xref:System.Data.Odbc.OdbcDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.Odbc.OdbcDataReader>, und klicken Sie dann die <xref:System.Data.Odbc.OdbcConnection>.  
+  
+ [!code-csharp[Classic WebData IDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public override int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcDataReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Tiefe der Schachtelung für die aktuelle Zeile angibt.</summary>
+        <value>Die Tiefe der Schachtelung für die aktuelle Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die äußerste Tabelle hat die Tiefe 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldCount">
+      <MemberSignature Language="C#" Value="public override int FieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcDataReader.FieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in der aktuellen Zeile ab.</summary>
+        <value>Falls in keinem gültigen Recordset 0 positioniert; andernfalls die Anzahl der Spalten im aktuellen Datensatz. Der Standard ist -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schließt ausgeblendete Felder ein. Verwenden Sie <xref:System.Data.Common.DbDataReader.VisibleFieldCount%2A>, um ausgeblendete Felder auszuschließen.  
+  
+ Nachdem Sie eine Abfrage ausführen, die keine Zeilen zurückgibt <xref:System.Data.Odbc.OdbcDataReader.FieldCount%2A> gibt 0 zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es ist keine Verbindung mit einer Datenquelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public override bool GetBoolean (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetBoolean(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als booleschen Wert ab.</summary>
+        <returns>Ein boolescher Wert, der den Wert der Spalte ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, wird der Methodenaufruf fehlschlägt.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public override byte GetByte (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8 GetByte(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein Byte ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein Byte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override long GetBytes (int i, long dataIndex, byte[] buffer, int bufferIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetBytes(int32 i, int64 dataIndex, unsigned int8[] buffer, int32 bufferIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="dataIndex" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="dataIndex">Der Index innerhalb des Felds, in dem der Lesevorgang wird gestartet.</param>
+        <param name="buffer">Der Puffer, in den der Bytedatenstrom gelesen werden soll.</param>
+        <param name="bufferIndex">Der Index innerhalb der <c>Puffer</c> , in dem der Schreibvorgang wird gestartet.</param>
+        <param name="length">Die Anzahl der zu lesenden Bytes.</param>
+        <summary>Liest einen Datenstrom von Bytes aus dem angegebenen Spaltenoffset in den Puffer als Array, beginnend ab dem bestimmten Pufferoffset an.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcDataReader.GetBytes%2A>Gibt die Anzahl der verfügbaren Bytes in das Feld zurück. In den meisten Fällen ist dies die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die tatsächliche Länge des Felds Wenn <xref:System.Data.Odbc.OdbcDataReader.GetBytes%2A> bereits zum Abrufen von Bytes aus dem Feld verwendet wurde. Dies kann der Fall, z. B. sein, wenn die <xref:System.Data.Odbc.OdbcDataReader> ist eine umfangreiche Datenstruktur in einen Puffer lesen. Weitere Informationen finden Sie unter der `SequentialAccess` festlegen für <xref:System.Data.CommandBehavior>.  
+  
+ Wenn Sie einen Puffer übergeben, die einen null-Wert ist <xref:System.Data.Odbc.OdbcDataReader.GetBytes%2A> gibt die Länge des Felds in Bytes zurück.  
+  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, wird der Methodenaufruf fehlschlägt.  
+  
+> [!NOTE]
+>  Es werden keine Ausnahmen ausgelöst, wenn der Wert des `bufferIndex` liegt außerhalb des Arrays. Keine Daten gelesen werden, und die Methode gibt 0 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public override char GetChar (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance char GetChar(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetChar(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Zeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public override long GetChars (int i, long dataIndex, char[] buffer, int bufferIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetChars(int32 i, int64 dataIndex, char[] buffer, int32 bufferIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="dataIndex" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="bufferIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="dataIndex">Der Index innerhalb der Zeile mit dem der Lesevorgang gestartet.</param>
+        <param name="buffer">Der Puffer, in denen Daten kopiert werden soll.</param>
+        <param name="bufferIndex">Der Index innerhalb der <c>Puffer</c> , in dem der Schreibvorgang wird gestartet.</param>
+        <param name="length">Die Anzahl der zu lesenden Zeichen.</param>
+        <summary>Liest einen Datenstrom von Zeichen aus dem angegebenen Spaltenoffset in den Puffer als Array, beginnend ab dem bestimmten Pufferoffset an.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcDataReader.GetChars%2A>Gibt die Anzahl der verfügbaren Zeichen im Feld zurück. In den meisten Fällen ist dies die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die tatsächliche Länge des Felds Wenn <xref:System.Data.Odbc.OdbcDataReader.GetChars%2A> bereits zum Abrufen von Zeichen aus dem Feld verwendet wurde. Dies kann der Fall, z. B. sein, wenn die <xref:System.Data.Odbc.OdbcDataReader> ist eine umfangreiche Datenstruktur in einen Puffer lesen. Weitere Informationen finden Sie unter der `SequentialAccess` festlegen für <xref:System.Data.CommandBehavior>.  
+  
+ Wenn Sie einen Puffer übergeben, die einen null-Wert ist <xref:System.Data.Odbc.OdbcDataReader.GetChars%2A> gibt die Länge des Felds in Zeichen zurück.  
+  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, wird der Methodenaufruf fehlschlägt.  
+  
+> [!NOTE]
+>  Es werden keine Ausnahmen ausgelöst, wenn der Wert des `bufferIndex` liegt außerhalb des Arrays. Keine Daten gelesen werden, und die Methode gibt 0 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public override string GetDataTypeName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDataTypeName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetDataTypeName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Namen des Quelldatentyps ab.</summary>
+        <returns>Der Name des Quelldatentyps.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDate">
+      <MemberSignature Language="C#" Value="public DateTime GetDate (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.DateTime GetDate(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetDate(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.DateTime" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.DateTime" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime GetDateTime (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime GetDateTime(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.DateTime" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.DateTime" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, wird der Methodenaufruf fehlschlägt.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public override decimal GetDecimal (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Decimal GetDecimal(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.Decimal" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Decimal" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, wird der Methodenaufruf fehlschlägt.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ <xref:System.Data.Odbc.OdbcDataReader.GetDecimal%2A>hat eine maximale Genauigkeit von 28. Versuch, Dezimaldaten mit einer höheren Genauigkeit abzurufen, wird eine Ausnahme ausgelöst. Eine Lösung wäre, ändern Sie die Abfrage umgewandelt Dezimaltyp in einen kleineren Datentyp, oder konvertieren Sie in Zeichenfolgen- oder Binärdatentyps.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public override double GetDouble (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 GetDouble(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Gleitkommazahl mit doppelter Genauigkeit ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als Gleitkommazahl mit doppelter Genauigkeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, mit dem die Zeilen im Datenleser durchlaufen werden können.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, mit dem die Zeilen im Datenleser durchlaufen werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl Sie mit dieser Methode einen expliziten Enumerator abrufen können, in Sprachen, unterstützen einen `foreach` Konstrukt, es ist einfacher, das Schleifenkonstrukt direkt, um die Zeilen im Datenleser durchlaufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetFieldType (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetFieldType(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft die <see cref="T:System.Type" /> also der Datentyp des Objekts.</summary>
+        <returns>Der <see cref="T:System.Type" />, der der Datentyp des Objekts ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public override float GetFloat (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float32 GetFloat(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetFloat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Gleitkommazahl mit einfacher Genauigkeit ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als Gleitkommazahl mit einfacher Genauigkeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, wird der Methodenaufruf fehlschlägt.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGuid">
+      <MemberSignature Language="C#" Value="public override Guid GetGuid (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Guid GetGuid(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als global eindeutigen Bezeichner (GUID) ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als GUID.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public override short GetInt16 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int16 GetInt16(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine 16-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als eine 16-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public override int GetInt32 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetInt32(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine 32-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als eine 32-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public override long GetInt64 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetInt64(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als 64-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als eine 64-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public override string GetName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Namen der angegebenen Spalte ab.</summary>
+        <returns>Eine Zeichenfolge, die den Namen der angegebenen Spalte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrdinal">
+      <MemberSignature Language="C#" Value="public override int GetOrdinal (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetOrdinal(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetOrdinal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Name der Spalte.</param>
+        <summary>Ruft den Namen der Spalte anhand der Spalte ordinal, ab.</summary>
+        <returns>Die nullbasierte Ordnungszahl der Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcDataReader.GetOrdinal%2A>führt zuerst eine Suche Groß-/Kleinschreibung beachtet. Falls dies fehlschlägt, wird eine zweite Suche Groß-und Kleinschreibung hergestellt. Die Methode löst eine `IndexOutOfRange` -Ausnahme aus, wenn die nullbasierte Ordnungszahl der Spalte nicht gefunden wird.  
+  
+ <xref:System.Data.Odbc.OdbcDataReader.GetOrdinal%2A>wird die Laufweite von Kana nicht beachtet.  
+  
+ Da Ordnungszahlen basierende Suchvorgänge effizienter als Nachschlagevorgänge nach Namen, ist es ineffizient, rufen Sie <xref:System.Data.Odbc.OdbcDataReader.GetOrdinal%2A> innerhalb einer Schleife. Rufen Sie stattdessen <xref:System.Data.Odbc.OdbcDataReader.GetOrdinal%2A> einmal und weisen dann die Ergebnisse in eine ganzzahlige Variable für innerhalb der Schleife verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Data.Odbc.OdbcDataReader.GetOrdinal%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[Classic WebData OdbcDataReader.GetOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcDataReader.GetOrdinal/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcDataReader.GetOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcDataReader.GetOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaTable">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchemaTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchemaTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetSchemaTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Data.DataTable" /> zurück, die die Spaltenmetadaten des <see cref="T:System.Data.Odbc.OdbcDataReader" /> beschreibt.</summary>
+        <returns>Eine <see cref="T:System.Data.DataTable" />, die die Spaltenmetadaten beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Odbc.OdbcDataReader.GetSchemaTable%2A> Methodenrückgabe Metadaten zu jeder Spalte in der folgenden Reihenfolge:  
+  
+|DataReader-Spalte|Beschreibung|  
+|-----------------------|-----------------|  
+|Spaltenname|Der Name der Spalte; dies möglicherweise nicht eindeutig sein. Wenn der Spaltenname nicht bestimmt werden kann, wird ein null-Wert zurückgegeben. Dieser Name gibt immer die aktuellste Benennung der Spalte in der aktuellen Ansichts- oder Befehlstext wieder.|  
+|ColumnOrdinal|Die nullbasierte Ordnungszahl der Spalte. Diese Spalte kann nicht auf einen null-Wert enthalten.|  
+|ColumnSize|Die maximal mögliche Länge eines Werts in der Spalte. Für Spalten, die einen Datentyp mit fester Länge verwenden, ist dies die Größe des Datentyps.|  
+|NumericPrecision|Wenn <xref:System.Data.DbType> ein numerischen Datentyp aufweisen, ist dies die maximale Genauigkeit der Spalte ist. Die Genauigkeit hängt von der Definition der Spalte ab. Wenn <xref:System.Data.DbType> ist keine numerischen Daten geben, verwenden Sie die Daten nicht in dieser Spalte. Wenn der zugrunde liegenden ODBC-Treiber einen Genauigkeitswert für einen nicht numerischen Datentyp zurückgibt, wird dieser Wert in der Schematabelle verwendet.|  
+|NumericScale|Wenn <xref:System.Data.DbType> ist <xref:System.Data.DbType.Decimal>, die Anzahl der Ziffern rechts vom Dezimaltrennzeichen an. Andernfalls ist dies ein null-Wert. Wenn der zugrunde liegenden ODBC-Treiber einen Genauigkeitswert für einen nicht numerischen Datentyp zurückgibt, wird dieser Wert in der Schematabelle verwendet.|  
+|DataType|Führt eine Zuordnung zum Typ common Language Runtime von <xref:System.Data.DbType>.|  
+|ProviderType|Der zugrunde liegenden Treibertyp.|  
+|IsLong|`true`Wenn die Spalte eine lange BLOB (Binary Object), die sehr lange Daten enthält enthält. Die Definition eines sehr langen Daten ist treiberspezifische.|  
+|AllowDBNull|`true`Wenn der Consumer die Spalte auf einen null-Wert festlegen kann, oder wenn der Treiber nicht bestimmen kann, ob der Consumer die Spalte auf einen null-Wert festlegen kann. Andernfalls `false`. Eine Spalte kann null-Werte enthalten, selbst wenn sie auf den Wert null festgelegt werden kann.|  
+|IsReadOnly|`true`Wenn die Spalte kann nicht geändert werden. andernfalls `false`.|  
+|IsRowVersion|Festlegen Sie, ob die Spalte enthält einen permanenten Zeilenbezeichner, der in die geschrieben werden kann, und keinen sinnvollen Wert außer Identifizierung der Zeile hat.|  
+|IsUnique|`true`: Keine zwei Zeilen in der Basistabelle (die Tabelle, die in "BaseTableName" zurückgegeben wird) können den gleichen Wert in dieser Spalte haben. IsUnique ist garantiert `true` , wenn die Spalte selbst einen Schlüssel darstellt oder eine Einschränkung des Typs UNIQUE, die nur für diese Spalte gilt vorhanden ist.<br /><br /> `false`: Die Spalte kann in der Basistabelle doppelte Werte enthalten. Der Standardwert für diese Spalte ist `false`.|  
+|IsKey|`true`: Die Spalte gehört zu einem Satz von Spalten im Rowset, die zusammen die Zeile eindeutig identifizieren. Legen Sie die Anzahl der Spalten mit IsKey auf `true` muss eine Zeile im Rowset eindeutig identifizieren. Es ist nicht erforderlich, dass dieser Satz von Spalten einen minimalen Satz von Spalten ist. Diese Gruppe von Spalten kann aus einem Primärschlüssel der Basistabelle, eine unique-Einschränkung oder einen eindeutigen Index generiert werden.<br /><br /> `false`: Die Spalte ist nicht erforderlich, um die Zeile eindeutig zu identifizieren.|  
+|IsAutoIncrement|`true`Wenn die Spalte neuen Zeilen in festen Schritten Werte zuweist; andernfalls `false`. Der Standardwert für diese Spalte ist `false`.|  
+|BaseSchemaName|Der Name des Schemas in der Datenquelle, die die Spalte enthält. NULL, wenn der Name des Basiskatalogs nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|BaseCatalogName|Der Name des Katalogs im Datenspeicher, der die Spalte enthält. NULL, wenn der Name des Basiskatalogs nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|"BaseTableName"|Der Name der Tabelle oder Sicht im Datenspeicher, der die Spalte enthält. Ein null-Wert, wenn der Name der Basistabelle nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|BaseColumnName|Der Name der Spalte im Datenspeicher. Dies ist möglicherweise unterschiedliche aus dem Spaltennamen in der ColumnName-Spalte zurückgegeben werden, wenn ein Alias verwendet wurde. Ein null-Wert, wenn der Name der Basisspalte nicht bestimmt werden kann oder wenn die Spalte des Rowsets abgeleitet, jedoch nicht identisch mit ist, eine Spalte in den Daten speichern. Der Standardwert für diese Spalte ist ein null-Wert.|  
+  
+ Eine Zeile für jede Spalte im Resultset zurückgegeben.  
+  
+ Die .NET Framework-Datenanbieter für ODBC wird davon ausgegangen, dass nach einer der Metadateninformationen aus einem ODBC-Treiber verfügbar ist **SQLPrepare**, **SQLExecute**, oder **SQLExecuteDirect**Funktionen aufgerufen werden. Für "SchemaOnly" Befehlsverhalten ordnungsgemäß funktioniert **SQLPrepare** müssen die erforderlichen Metadateninformationen zurückgeben. Nicht alle ODBC-Treiber unterstützen diese Funktion oder Metadateninformationen zurückgeben. In diesen Fällen werden die Informationen in der SchemaTable ganz oder teilweise fehlen. Nach dem Aufruf **SQLPrepare**, der Datenanbieter Ruft den ODBC- **SQLColAttribute** Funktion, die die Metadateninformationen für die einzelnen Spalten in den Abfrageergebnissen (z. B. IsLong, IsUnique, ermittelt. AllowDBNull, BaseTableName, BaseColumnName). Wenn die zugrunde liegenden Treiber nicht Teil dieser Informationen zurückgibt, werden die entsprechenden Werte in der SchemaTable nicht ordnungsgemäß festgelegt werden.  
+  
+ Ruft die .NET Framework-Datenanbieter für ODBC auch **SQLPrimaryKeys** zum Abrufen der wichtigsten Informationen für jede Tabelle. Wenn der zugrunde liegenden ODBC-Treiber diese Funktion nicht unterstützt, ruft der Datenanbieter **SQLStatistics** und wählt einen der eindeutigen Indizes als Primärschlüssel für die Tabelle. Dies möglicherweise nicht immer die Ergebnisse liefern.  
+  
+ <xref:System.Data.Odbc.OdbcCommandBuilder>benötigt die richtige ID der Primärschlüssel der Tabelle, um ordnungsgemäß zu funktionieren. Wenn die "BaseTableName" nicht für jede Spalte in den Abfrageergebnissen zurückgegeben wird, versucht der .NET Framework-Datenanbieter für ODBC, analysieren die SQL-Anweisung, um den Tabellennamen in der Abfrage finden. Dies funktioniert mit UPDATE, INSERT, DELETE und einfache SELECT-Anweisungen, aber nicht mit gespeicherten Prozeduren oder SELECT-Anweisungen basierend auf Joins. Wenn einige oder alle der Schemainformationen aus dieser Tabelle fehlt die <xref:System.Data.Odbc.OdbcCommandBuilder> nicht voll funktionsfähig, da sie nicht genügend Schemainformationen zum automatischen Generieren der richtigen INSERT-, Update- oder DELETE-Anweisungen enthält.  
+  
+ Um sicherzustellen, dass die Metadatenspalten die richtigen Informationen zurückgeben, rufen Sie <xref:System.Data.Odbc.OdbcCommand.ExecuteReader%2A> mit den KeyInfo Parametersatz Verhalten. Andernfalls möglicherweise einige der Spalten in der Schematabelle in der Standardeinstellung null oder falsche Daten zurückgegeben.  
+  
+ Wenn Sie ODBC.NET zu Oracle über den ODBC-Treiber verwenden, werden die Schlüsselspalten als Schlüssel nicht erkannt. Dies wirkt sich auf die Spalten IsKey und IsUnique in der Schematabelle des OdbcDataReader aus. Er wirkt sich auch auf des OdbcCommandBuilder aus Möglichkeit Aktualisierungslogik zu generieren. Erwägen Sie, nicht über einen Alias für eine primäre Schlüsselspalte.  
+  
+> [!NOTE]
+>  Der Microsoft Jet ODBC-Treiber gibt immer eindeutigen Index und Primärschlüsselspalten als NULL-Werte zulässt, unabhängig davon, ob sie NULL-Werte zulässt oder nicht. Der Treiber gibt auch keine Primärschlüsselinformationen zurück. Es gibt nur eine Liste von eindeutigen Indizes und ihre Spalten, einschließlich der Primärschlüsselspalten, ohne Unterscheidung zwischen ihnen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der <see cref="T:System.Data.Odbc.OdbcDataReader" /> ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public override string GetString (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetString(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see cref="T:System.String" />.</summary>
+        <returns>Der Wert der angegebenen Spalte als <see cref="T:System.String" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konvertierungen werden basierend auf den zugrunde liegenden Funktionen des ODBC-Treibers ausgeführt. Wenn die Konvertierung nicht unterstützt wird, schlägt der Methodenaufruf fehl.  
+  
+ Rufen Sie <xref:System.Data.Odbc.OdbcDataReader.IsDBNull%2A> für null-Werten gesucht werden soll, bevor diese Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTime">
+      <MemberSignature Language="C#" Value="public TimeSpan GetTime (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.TimeSpan GetTime(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see cref="T:System.TimeSpan" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.TimeSpan" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der Spalte an der angegebenen Ordnungsposition im systemeigenen Format ab.</summary>
+        <returns>Der zurückzugebende Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override int GetValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.GetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array vom Typ <see cref="T:System.Object" /> in das die Attributspalten kopiert.</param>
+        <summary>Füllt ein Objektarray mit den Spaltenwerten der aktuellen Zeile.</summary>
+        <returns>Die Anzahl der Instanzen von <see cref="T:System.Object" /> im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die meisten Anwendungen die <xref:System.Data.Odbc.OdbcDataReader.GetValues%2A> Methode ein effizientes Instrument zum Abrufen aller Spalten, statt jede Spalte einzeln abzurufen.  
+  
+ Sie können übergeben ein <xref:System.Object> Array, das weniger als die Anzahl der Spalten enthält, die in der resultierenden Zeile enthalten sind. Nur die Menge der Daten die <xref:System.Object> Array enthält, wird in das Array kopiert. Sie können auch übergeben ein <xref:System.Object> Array, dessen Länge ist größer als die Anzahl der Spalten, die in der resultierenden Zeile enthalten sind.  
+  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten.  
+  
+   
+  
+## Examples  
+ [!code-csharp[OdbcDataReader_GetValues#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/odbcdatareader_getvalues/cs/source.cs#1)]
+ [!code-vb[OdbcDataReader_GetValues#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/odbcdatareader_getvalues/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasRows">
+      <MemberSignature Language="C#" Value="public override bool HasRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasRows" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcDataReader.HasRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Data.Odbc.OdbcDataReader" /> eine oder mehrere Zeilen enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Odbc.OdbcDataReader" /> enthält eine oder mehrere Zeilen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public override bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcDataReader.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see cref="T:System.Data.Odbc.OdbcDataReader" /> geschlossen wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Odbc.OdbcDataReader" /> geschlossen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcDataReader.IsClosed%2A>und <xref:System.Data.Odbc.OdbcDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.Odbc.OdbcDataReader> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public override bool IsDBNull (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDBNull(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.IsDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob die Spalte nicht vorhandene oder fehlende Werte enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Spaltenwert gleich <see cref="T:System.DBNull" />andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu vermeiden, ein Fehler ausgelöst wird, rufen Sie diese Methode gesucht werden soll, für null-Spaltenwerte vor dem Aufruf typisierter-Methoden Get (z. B. <xref:System.Data.Odbc.OdbcDataReader.GetByte%2A>, <xref:System.Data.Odbc.OdbcDataReader.GetChar%2A>usw.).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcDataReader.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die Spaltenordnungszahl.</param>
+        <summary>Ruft den Wert der angegebenen Spalte im systemeigenen Format angegebener Spaltenordnungszahl ab.</summary>
+        <value>Der Wert der angegebenen Spalte im systemeigenen Format.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string value] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcDataReader.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Spaltenname</param>
+        <summary>Ruft den Wert der angegebenen Spalte im systemeigenen Format Berücksichtigung des Spaltennamens.</summary>
+        <value>Der Wert der angegebenen Spalte im systemeigenen Format.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Suche Groß-/Kleinschreibung beachtet wird zuerst ausgeführt. Falls dies fehlschlägt, wird eine zweite Suche Groß-und Kleinschreibung hergestellt.  
+  
+ Diese Methode ist die Laufweite von Kana nicht beachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Keine Spalte mit dem angegebenen Namen wurde gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextResult">
+      <MemberSignature Language="C#" Value="public override bool NextResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool NextResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.NextResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="T:System.Data.Odbc.OdbcDataReader" /> auf das nächste Ergebnis beim Lesen der Ergebnisse von Batch-SQL-Anweisungen.</summary>
+        <returns>
+          <see langword="true" />Falls weitere Resultsets vorhanden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet, um mehrere Ergebnisse zu verarbeiten, die durch das Ausführen von SQL-Batchanweisungen generiert werden können.  
+  
+ Wird standardmäßig der <xref:System.Data.Odbc.OdbcDataReader> befindet sich auf das erste Ergebnis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcDataReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den <see cref="T:System.Data.Odbc.OdbcDataReader" /> auf den nächsten Datensatz.</summary>
+        <returns>
+          <see langword="true" />, wenn weitere Zeilen vorhanden sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardposition des der <xref:System.Data.Odbc.OdbcDataReader> steht vor dem ersten Datensatz. Aus diesem Grund müssen Sie aufrufen <xref:System.Data.Odbc.OdbcDataReader.Read%2A> um den Zugriff auf alle Daten zu starten.  
+  
+ Während der <xref:System.Data.Odbc.OdbcDataReader> verwendet wird, zugeordneten <xref:System.Data.Odbc.OdbcConnection> Informationsfluss bis Aufruf <xref:System.Data.Odbc.OdbcDataReader.Close%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Odbc.OdbcConnection>, wird ein <xref:System.Data.Odbc.OdbcCommand>, und ein <xref:System.Data.Odbc.OdbcDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.Odbc.OdbcDataReader>, und klicken Sie dann die <xref:System.Data.Odbc.OdbcConnection>.  
+  
+ [!code-csharp[Classic WebData IDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordsAffected">
+      <MemberSignature Language="C#" Value="public override int RecordsAffected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecordsAffected" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcDataReader.RecordsAffected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der durch die Ausführung der SQL-Anweisung geänderten, eingefügten oder gelöschten Zeilen ab.</summary>
+        <value>Die Anzahl der geänderten, eingefügten oder gelöschten Zeilen. -1 für SELECT-Anweisungen; Fehler bei 0, wenn keine Zeilen betroffen sind oder die Anweisung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Odbc.OdbcDataReader.RecordsAffected%2A> Eigenschaft ist nicht festgelegt, bis alle Zeilen gelesen wurden, und Sie schließen die <xref:System.Data.Odbc.OdbcDataReader>.  
+  
+ Der Wert dieser Eigenschaft ist kumulativ. Angenommen, zwei Datensätze eingefügt werden, im Batchmodus ausgeführt, den Wert der <xref:System.Data.Odbc.OdbcDataReader.RecordsAffected%2A> 2.  
+  
+ <xref:System.Data.Odbc.OdbcDataReader.IsClosed%2A>und <xref:System.Data.Odbc.OdbcDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.Odbc.OdbcDataReader> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

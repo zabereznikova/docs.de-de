@@ -1,0 +1,321 @@
+<Type Name="TabletDevice" FullName="System.Windows.Input.TabletDevice">
+  <TypeSignature Language="C#" Value="public sealed class TabletDevice : System.Windows.Input.InputDevice" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TabletDevice extends System.Windows.Input.InputDevice" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.TabletDevice" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputDevice</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Digitizergerät eines Tablet PC dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Eigenschaften abzurufen, die eine <xref:System.Windows.Input.TabletDevice> unterstützt.  
+  
+ [!code-csharp[PacketSpy#27](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#27)]
+ [!code-vb[PacketSpy#27](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#27)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveSource">
+      <MemberSignature Language="C#" Value="public override System.Windows.PresentationSource ActiveSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PresentationSource ActiveSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.ActiveSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.PresentationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.PresentationSource" /> besagt, dass die aktuelle Eingabe für die tabletgerät.</summary>
+        <value>Die <see cref="T:System.Windows.PresentationSource" /> besagt, dass die aktuelle Eingabe für die tabletgerät.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.ActiveSource%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#4](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[HwCaps#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Für diese Eigenschaft lesen erforderlich sind. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner für die tabletgerät auf dem System ab.</summary>
+        <value>Der eindeutige Bezeichner für die tabletgerät auf dem System.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.Id%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#8](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#8)]
+ [!code-vb[HwCaps#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Tablettgeräts ab.</summary>
+        <value>Der Name des Tablettgeräts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.Name%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#9](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#9)]
+ [!code-vb[HwCaps#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductId">
+      <MemberSignature Language="C#" Value="public string ProductId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProductId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.ProductId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Produkt-ID für die tabletgerät ab.</summary>
+        <value>Die Produkt-ID für die tabletgerät.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hersteller des Tablettgeräts ist verantwortlich für das Hinzufügen dieser Zeichenfolge. Der Rückgabewert ist leer, wenn die tabletgerät nicht über einen Bezeichner verfügt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.ProductId%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#10)]
+ [!code-vb[HwCaps#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusDevices">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusDeviceCollection StylusDevices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StylusDeviceCollection StylusDevices" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.StylusDevices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusDeviceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.StylusDeviceCollection" /> der tabletgerät zugeordnet.</summary>
+        <value>Die <see cref="T:System.Windows.Input.StylusDeviceCollection" /> der tabletgerät zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.StylusDevices%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#11)]
+ [!code-vb[HwCaps#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedStylusPointProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Input.StylusPointProperty&gt; SupportedStylusPointProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Input.StylusPointProperty&gt; SupportedStylusPointProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.SupportedStylusPointProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Input.StylusPointProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Input.StylusPointProperty" /> Objekte, die <see cref="T:System.Windows.Input.TabletDevice" /> unterstützt.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Input.StylusPointProperty" /> Objekte, die <see cref="T:System.Windows.Input.TabletDevice" /> unterstützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Eigenschaften abzurufen, die eine <xref:System.Windows.Input.TabletDevice> unterstützt.  
+  
+ [!code-csharp[PacketSpy#27](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#27)]
+ [!code-vb[PacketSpy#27](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabletHardwareCapabilities">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.TabletHardwareCapabilities TabletHardwareCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.TabletHardwareCapabilities TabletHardwareCapabilities" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.TabletHardwareCapabilities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletHardwareCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.TabletHardwareCapabilities" /> für die tabletgerät.</summary>
+        <value>Die <see cref="T:System.Windows.Input.TabletHardwareCapabilities" /> für die tabletgerät.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.TabletHardwareCapabilities%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[HwCaps#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public override System.Windows.IInputElement Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement Target" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.IInputElement" /> , die grundlegende Eingabeverarbeitung für die tabletgerät bereitstellt.</summary>
+        <value>Die <see cref="T:System.Windows.IInputElement" /> , die grundlegende Eingabeverarbeitung für die tabletgerät bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.Target%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#13](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#13)]
+ [!code-vb[HwCaps#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TabletDevice.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen des Tablettgeräts zurück.</summary>
+        <returns>Eine <see cref="T:System.String" />, die den <see cref="T:System.Windows.Input.TabletDevice" />-Namen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice> Methode.  
+  
+ [!code-csharp[HwCaps#14](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#14)]
+ [!code-vb[HwCaps#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.TabletDeviceType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.TabletDeviceType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TabletDevice.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletDeviceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.TabletDeviceType" /> des Tablettgeräts.</summary>
+        <value>Die <see cref="T:System.Windows.Input.TabletDeviceType" /> des Tablettgeräts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Input.TabletDevice.Type%2A> Eigenschaft.  
+  
+ [!code-csharp[HwCaps#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[HwCaps#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

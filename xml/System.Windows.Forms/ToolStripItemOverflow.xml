@@ -1,0 +1,73 @@
+<Type Name="ToolStripItemOverflow" FullName="System.Windows.Forms.ToolStripItemOverflow">
+  <TypeSignature Language="C#" Value="public enum ToolStripItemOverflow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripItemOverflow extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemOverflow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt, ob eine <see cref="T:System.Windows.Forms.ToolStripItem" /> befindet sich in der Überlaufspalte <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es weitere Überlaufelementen als auf dem Formular angezeigt werden können, verwenden die [ToolStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25) diese Situation verwalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemOverflow Always = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemOverflow.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemOverflow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine <see cref="T:System.Windows.Forms.ToolStripItem" /> wird dauerhaft in der Überlaufspalte angezeigt <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AsNeeded">
+      <MemberSignature Language="C#" Value="AsNeeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemOverflow AsNeeded = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemOverflow.AsNeeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemOverflow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine <see cref="T:System.Windows.Forms.ToolStripItem" /> unterscheidet zwischen den Hauptknoten <see cref="T:System.Windows.Forms.ToolStrip" /> und der Überlauf <see cref="T:System.Windows.Forms.ToolStrip" /> als erforderlich, wenn der Speicherplatz nicht verfügbar ist, klicken Sie im hauptblatt <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemOverflow Never = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemOverflow.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemOverflow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine <see cref="T:System.Windows.Forms.ToolStripItem" /> ist nie ein Kandidat für die der Überlauf <see cref="T:System.Windows.Forms.ToolStrip" />. Wenn die <see cref="T:System.Windows.Forms.ToolStripItem" /> nicht auf den Hauptknoten passt <see cref="T:System.Windows.Forms.ToolStrip" />, es wird nicht angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

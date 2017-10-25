@@ -1,0 +1,19 @@
+<Namespace Name="Microsoft.Build.BuildEngine">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Build.BuildEngine" /> -Namespace stellt die MSBuild-Modul dar. Informationen finden Sie unter <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace sind veraltet. Verwenden Sie Sie stattdessen die Klassen in diesen Namespaces:  
+  
+ <xref:Microsoft.Build.Construction>  
+  
+ <xref:Microsoft.Build.Evaluation>  
+  
+ <xref:Microsoft.Build.Execution>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

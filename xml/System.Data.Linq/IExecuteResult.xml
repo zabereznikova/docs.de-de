@@ -1,0 +1,74 @@
+<Type Name="IExecuteResult" FullName="System.Data.Linq.IExecuteResult">
+  <TypeSignature Language="C#" Value="public interface IExecuteResult : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExecuteResult implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.IExecuteResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet Zugriff auf den Rückgabewert oder die Ergebnisse der Ausführung einer Abfrage.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetParameterValue">
+      <MemberSignature Language="C#" Value="public object GetParameterValue (int parameterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetParameterValue(int32 parameterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.IExecuteResult.GetParameterValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterIndex">Der Index des Parameters abgerufen werden sollen.</param>
+        <summary>Ermöglicht den Zugriff auf die * n *ten output-Parameter.</summary>
+        <returns>Ein Objekt, das den Wert des angegebenen Parameters enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird normalerweise verwendet, wenn die Abfrage eine zugeordnete Funktion, die mit Output-Parameter ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnValue">
+      <MemberSignature Language="C#" Value="public object ReturnValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.IExecuteResult.ReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Rückgabewert oder das Ergebnis der ausgeführten Abfrage.</summary>
+        <value>Der Wert oder das Ergebnis der ausgeführten Abfrage.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Objekt hat den gleichen zugrunde liegenden Typ wie der `Type` Eigenschaft des Abfrageausdrucks.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

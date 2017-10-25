@@ -1,0 +1,72 @@
+<Type Name="DescriptionAttribute" FullName="System.EnterpriseServices.DescriptionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DescriptionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DescriptionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.DescriptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Legt die Beschreibung für eine Assembly (Anwendung), Komponente, Methode oder Schnittstelle fest. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Attributs.  
+  
+ [!code-cpp[EnterpriseServices_Crm#4](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#4)]
+ [!code-csharp[EnterpriseServices_Crm#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#4)]
+ [!code-vb[EnterpriseServices_Crm#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DescriptionAttribute (string desc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string desc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.DescriptionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="desc" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="desc">Die Beschreibung der Assembly (Anwendung), Komponente, Methode oder Schnittstelle.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.DescriptionAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[EnterpriseServices_Crm#4](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#4)]
+ [!code-csharp[EnterpriseServices_Crm#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#4)]
+ [!code-vb[EnterpriseServices_Crm#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,52 @@
+<Type Name="IsExplicitlyDereferenced" FullName="System.Runtime.CompilerServices.IsExplicitlyDereferenced">
+  <TypeSignature Language="C#" Value="public static class IsExplicitlyDereferenced" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit IsExplicitlyDereferenced extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.IsExplicitlyDereferenced" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, dass ein verwalteter Zeiger auf einen Zeigerparameter in einer Methodensignatur darstellt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In C++ werden verwaltete Zeiger und verwaltete Verweise als Zeiger in Metadaten ausgegeben.  Damit zwischen den beiden Typen in den Metadaten unterschieden werden kann, gilt der Microsoft C++-Compiler dieser Modifizierer für verwaltete Zeiger an.  Es gibt keine Modifizierer für verwaltete Verweistypen aus.  Compiler müssen die richtige Aufrufsyntax kennen, wenn eine Methode aus der Gültigkeitsbereich der Metadaten zu importieren.  Die <xref:System.Runtime.CompilerServices.IsExplicitlyDereferenced> Klasse und ihre Partner, der <xref:System.Runtime.CompilerServices.IsImplicitlyDereferenced> Klasse, die Verweisparameter von Zeigerparametern eindeutig.  
+  
+ Compiler geben benutzerdefinierte Modifizierer innerhalb der Metadaten zum Ändern der Darstellungsweise der Just-in-Time-Compiler (JIT)-Werte behandelt, wenn das Standardverhalten nicht zulässig ist.  Stößt der JIT-Compiler einen benutzerdefinierten Modifizierer, behandelt den Wert, der angibt, der Modifizierer wie.  Compiler können Anwenden von benutzerdefinierten Modifizierer auf Methoden, Parameter und Rückgabewerte.  Der JIT-Compiler, erforderlichen Modifizierern reagieren muss jedoch optionale Modifizierer ignorieren kann.  
+  
+ Sie können benutzerdefinierte Modifizierer in Metadaten, die mit einer der folgenden Methoden ausgeben:  
+  
+-   Mithilfe der Methoden in der <xref:System.Reflection.Emit.TypeBuilder> -Klasse wie z. B. <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A>, und <xref:System.Reflection.Emit.TypeBuilder.DefineProperty%2A>.  
+  
+-   Generieren eine Anweisungsdatei Microsoft intermediate Language (MSIL), die Aufrufe enthält `modopt` und `modreq`, und Assemblieren der Datei mit den [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md).  
+  
+-   Verwenden die nicht verwaltete Reflektions-API.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Ausgeben einer <xref:System.Runtime.CompilerServices.IsExplicitlyDereferenced> Objekt in eine Assembly über Reflektion ermöglicht.  
+  
+ [!code-cpp[Runtime.CompilerServices.IsExplicitlyDereferenced#1](~/samples/snippets/cpp/VS_Snippets_CLR/Runtime.CompilerServices.IsExplicitlyDereferenced/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

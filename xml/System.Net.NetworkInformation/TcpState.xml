@@ -1,0 +1,382 @@
+<Type Name="TcpState" FullName="System.Net.NetworkInformation.TcpState">
+  <TypeSignature Language="C#" Value="public enum TcpState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TcpState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.TcpState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Status einer Verbindung Transmission Control Protocol (TCP).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration definiert die gültigen Werte für die <xref:System.Net.NetworkInformation.TcpConnectionInformation.State%2A> Eigenschaft. TCP ist ein Transport Layer-Protokoll für zuverlässig senden und Empfangen von Datenpaketen verantwortlich. Die TCP-Zustände in dieser Enumeration werden definiert, in der IETF RFC 793 unter [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird zählt die festgelegten TCP-Verbindungen.  
+  
+ [!code-cpp[NCLNetInfo2#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#2)]
+ [!code-csharp[NCLNetInfo2#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#2)]
+ [!code-vb[NCLNetInfo2#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="Closed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState Closed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.Closed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die TCP-Verbindung ist geschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseWait">
+      <MemberSignature Language="C#" Value="CloseWait" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState CloseWait = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.CloseWait" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung wartet darauf, dass die Anforderung zum Beenden einer Verbindung vom lokalen Benutzer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Closing">
+      <MemberSignature Language="C#" Value="Closing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState Closing = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.Closing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung wartet auf eine Bestätigung von zuvor gesendeten Anforderung zum Beenden der Verbindung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTcb">
+      <MemberSignature Language="C#" Value="DeleteTcb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState DeleteTcb = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.DeleteTcb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Transmission Control Buffer (TCB) für die TCP-Verbindung wird gelöscht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Established">
+      <MemberSignature Language="C#" Value="Established" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState Established = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.Established" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der TCP-Handshake ist abgeschlossen. Die Verbindung hergestellt wurde, und Daten gesendet werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FinWait1">
+      <MemberSignature Language="C#" Value="FinWait1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState FinWait1 = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.FinWait1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung wartet für eine Anforderung zum Beenden einer Verbindung vom Remoteendpunkt oder auf eine Bestätigung von zuvor gesendeten Anforderung zum Beenden der Verbindung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FinWait2">
+      <MemberSignature Language="C#" Value="FinWait2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState FinWait2 = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.FinWait2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung wartet darauf, dass die Anforderung zum Beenden einer Verbindung vom Remoteendpunkt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LastAck">
+      <MemberSignature Language="C#" Value="LastAck" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState LastAck = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.LastAck" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung wartet darauf, dass die letzte Bestätigung von zuvor gesendeten Anforderung zum Beenden der Verbindung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Listen">
+      <MemberSignature Language="C#" Value="Listen" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState Listen = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.Listen" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung lauscht für eine verbindungsanforderung von remote-Endpunkt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SynReceived">
+      <MemberSignature Language="C#" Value="SynReceived" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState SynReceived = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.SynReceived" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung gesendeten und empfangenen eine verbindungsanforderung wartet auf eine Bestätigung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SynSent">
+      <MemberSignature Language="C#" Value="SynSent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState SynSent = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.SynSent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung wurde den Remoteendpunkt gesendet, ein Segment-Header mit dem Synchronisieren (SYN)-Steuerelement, das bit festgelegt ist, und eine übereinstimmende verbindungsanforderung wartet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeWait">
+      <MemberSignature Language="C#" Value="TimeWait" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState TimeWait = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.TimeWait" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der lokale Endpunkt der TCP-Verbindung wartet für genügend Zeit zum übergeben, um sicherzustellen, dass der Remoteendpunkt die Bestätigung der Anforderung zum Beenden der Verbindung empfangen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.TcpState Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.TcpState.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zustand der TCP-Verbindung ist unbekannt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

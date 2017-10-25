@@ -1,0 +1,213 @@
+<Type Name="FilterElement" FullName="System.ServiceModel.Routing.Configuration.FilterElement">
+  <TypeSignature Language="C#" Value="public class FilterElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Routing.Configuration.FilterElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Konfigurationselement dar, das ein Filterelement definiert. Dieses Element wird zur Definition des Filtertyps sowie zusätzlicher Daten oder Parameter verwendet, die der Filter benötigt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Routing.Configuration.FilterElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomType">
+      <MemberSignature Language="C#" Value="public string CustomType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElement.CustomType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customType", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollqualifizierten Typnamen des benutzerdefinierten Typs ab, der als Filter verwendet werden soll, oder legt diesen fest.</summary>
+        <value>Der vollqualifizierte Typ.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn für<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterType%2A> ein benutzerdefinierter Typ festgelegt wurde, dann ist <xref:System.ServiceModel.Routing.Configuration.FilterElement.CustomType%2A> der vollqualifizierte Typname der zu erstellenden Klasse. <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> kann auch Werte enthalten, die während der Auswertung des <xref:System.ServiceModel.Routing.Configuration.FilterElement.CustomType%2A>-Filters verwendet werden sollen. Der <xref:System.ServiceModel.Routing.Configuration.FilterElement.CustomType%2A> muss einen Konstruktor implementieren, der einen Zeichenfolgenwert annimmt, der die <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>-Informationen enthält.  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)]<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter1">
+      <MemberSignature Language="C#" Value="public string Filter1 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter1" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElement.Filter1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("filter1", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Filter1-Daten dieses Konfigurationselements ab oder legt diese fest. Dieser Wert wird nur verwendet, wenn <see cref="P:System.ServiceModel.Routing.Configuration.FilterElement.FilterType" /> auf "And" gesetzt wird.</summary>
+        <value>Der Filter1-Wert dieses Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt von <xref:System.ServiceModel.Routing.Configuration.FilterElement.Filter1%2A> wird nur während der Auswertung des AND-Filters verwendet. [!INCLUDE[crdefault](~/includes/crabout-md.md)]<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter2">
+      <MemberSignature Language="C#" Value="public string Filter2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter2" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElement.Filter2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("filter2", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Filter2-Daten dieses Konfigurationselements ab oder legt diese fest. Dieser Wert wird nur verwendet, wenn <see cref="P:System.ServiceModel.Routing.Configuration.FilterElement.FilterType" /> auf "AND" gesetzt wird.</summary>
+        <value>Der Filter2-Wert dieses Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt von <xref:System.ServiceModel.Routing.Configuration.FilterElement.Filter2%2A> wird nur während der Auswertung der AND-Filter verwendet. [!INCLUDE[crdefault](~/includes/crabout-md.md)]<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterData">
+      <MemberSignature Language="C#" Value="public string FilterData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilterData" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElement.FilterData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("filterData", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Filterdaten dieses Konfigurationselements ab oder legt diese fest.</summary>
+        <value>Die Filterdaten dieses Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle wird die Bedeutung der <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>, basierend auf dem Wert für <xref:System.ServiceModel.Routing.Configuration.FilterType>, beschrieben.  
+  
+|Filtertyp|Beschreibung|Bedeutung der Filterdaten|Beispielfilter|  
+|------------------|-----------------|-------------------------|--------------------|  
+|Aktion|Verwendet den ActionMessageFilter, der in WCF enthalten ist.|Die Aktion, nach der gefiltert werden soll.|\<Filtername = "action1" FilterType = "Action" unter "filterdata" = "http://ACTION" / >|  
+|Adresse|Verwendet den EndpointAddressMessageFilter, der in WCF enthalten ist, wobei " ignore host name" == true.|Die Adresse, nach der gefiltert werden soll (im To-Header).|\<Filtername = "address1" FilterType = "Address" unter "filterdata" = "http://host/vdir/s.svc/b" / >|  
+|AddressPrefix|Verwendet den PrefixEndpointAddressMessageFilter, der in WCF enthalten ist, wobei " ignore host name" == true.|Die Adresse, nach der unter Verwendung der längsten Präfixübereinstimmung gefiltert werden soll.|\<Filtername = "prefix1" FilterType = "AddressPrefix" unter "filterdata" = "http://host" / >|  
+|StrictAnd|Ein benutzerdefinierter AndMessageFilter, der vor der Rückgabe stets beide Bedingungen auswertet.|"filterData" wird nicht verwendet. Stattdessen verfügen "filter1" und "filter2" über die Namen der entsprechenden Meldungsfilter (ebenfalls in der Tabelle), die per AND verbunden sein sollten.|\<Filtername = "and1" FilterType = "Und" filter1 = "filter2"address1"" = "action1" / >|  
+|Benutzerdefiniert|Ein benutzerdefinierter Typ, der den MessageFilter erweitert und über einen Konstruktor verfügt, der eine Zeichenfolge verwendet.|Das Attribut "customType" ist der vollqualifizierte Typname der zu erstellenden Klasse. "filterData" ist die Zeichenfolge, die beim Erstellen des Filters an den Konstruktor übergeben werden soll.|\<Filtername = "custom1" FilterType = "Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" unter "filterdata" = "Benutzerdefinierte Daten" / >|  
+|EndpointName|Ein benutzerdefinierter Meldungsfilter zur Verwendung einzig und allein im Routingdienst, der Meldungen auf Grundlage des Namens des Dienstendpunkts filtert.|Der Name des Dienstendpunkts, z. B.: "serviceEndpoint1".  Hierbei sollte es sich um einen der Endpunkte handeln, die vom Routingdienst verfügbar gemacht werden.|\<Filtername = "stock1" FilterType = "Endpoint" unter "filterdata" = "SvcEndpoint" / >|  
+|MatchAll|Verwendet den MatchAllMessageFilter, der in WCF enthalten ist.|Nicht zutreffend|\<Filtername = "matchAll1" FilterType = "MatchAll" / >|  
+|XPath|Verwendet den XPathMessageFilter, der in WCF enthalten ist.|Die XPath-Abfrage, die beim Ermitteln von Übereinstimmungen für Nachrichten verwendet wird.|\<Filtername = "XPath1" FilterType = "XPath" unter "filterdata" = "//ns:element" / >|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterType">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Routing.Configuration.FilterType FilterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Routing.Configuration.FilterType FilterType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElement.FilterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("filterType", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.IsRequired)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Routing.Configuration.FilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.Routing.Configuration.FilterType" /> dieses Konfigurationselements ab oder legt diesen fest.</summary>
+        <value>Der Filtertyp dieses Elements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieses Konfigurationselements ab oder legt ihn fest.</summary>
+        <value>Der eindeutige Name dieses Konfigurationselements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

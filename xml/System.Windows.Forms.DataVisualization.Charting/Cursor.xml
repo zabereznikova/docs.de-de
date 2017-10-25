@@ -1,0 +1,739 @@
+<Type Name="Cursor" FullName="System.Windows.Forms.DataVisualization.Charting.Cursor">
+  <TypeSignature Language="C#" Value="public class Cursor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Cursor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.Cursor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine horizontale oder vertikale Linie, die eine Position auf einer Achse definiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Cursor ist eine horizontale oder vertikale Linie, die eine Position auf einer Achse definiert. Eine Bereichsauswahl ist ein Bereich auf einer Achse, die durch eine Position Anfang und Ende definiert ist, und verwenden eine halb transparente Farbe angezeigt.  
+  
+ Cursor und Bereichsauswahlen werden durch implementiert die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor> -Klasse, die als zugänglich ist die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.CursorX%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.CursorY%2A> Eigenschaften der <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekt. Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.CursorX%2A> Objekt ist für die x-Achse des Diagrammbereichs, und die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.CursorY%2A> Objekt ist für die Y-Achse an. Die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.AxisType%2A> Eigenschaft dieser Objekte bestimmt, ob die zugeordnete Achse Primär oder sekundär ist.  
+  
+ Die einzige Cursor und Auswahl Funktionalität außerhalb der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor> Klasse werden die Ereignisse im Zusammenhang mit dem Cursor und Bereichsauswahl, die am Stamm <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cursor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Cursor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.Cursor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScroll">
+      <MemberSignature Language="C#" Value="public bool AutoScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.AutoScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob das Durchführen eines Bildlaufs kommt es, wenn eine Grenze der Diagrammfläche ein Auswahl Range-Vorgang hinausgeht.</summary>
+        <value>
+          <see langword="true" />Wenn die Datensicht automatisch gescrollt werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Data source View alle Datenpunkte in eine gezeichnete Reihe nicht angezeigt, und ein Bereich vom Benutzer ausgewählt wird wird, der automatische Bildlauf der Ansicht wird auftreten, wenn diese Eigenschaft `true` als auch die Maus – und somit den Cursor – außerhalb der Grenzen des Diagramms Bereich verschoben wird.  
+  
+ Durchführen eines Bildlaufs wird nur auf einer Achse auftreten, wenn weitere Daten, die angezeigt werden.  
+  
+ Eine Data source View, die nicht alle Daten in der Regel angezeigt wird ausgegeben, wenn der Endbenutzer in eine Teilmenge der Daten vergrößert. Ansichten und Zoomen werden von implementiert die <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleView> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AxisType AxisType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.AxisType AxisType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.AxisType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Achse, die der Cursor angefügt ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisType" /> -Enumerationswert ab, der angibt, ob die Achse auf der primären oder sekundären Achse angefügt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt zwei Sätze von Achsen: primären und sekundären. Primärachsen für alle Diagrammtypen außer den Balkendiagrammen befinden sich am unteren (primäre X-Achse) und linken (primäre Y-Achse), Rahmen der Diagrammfläche angezeigt.  
+  
+ Sekundären Achsen befinden sich rechts (sekundäre X-Achse) und nach oben (sekundäre Y-Achse), Rahmen der Diagrammfläche angezeigt.  
+  
+> [!NOTE]
+>  Wenn alle Reihen in einem Diagrammbereich gezeichnet verwenden nur eine Art von Achse (z. B. der primären X-Achse), klicken Sie dann Festlegen dieser Eigenschaft auf eine Achsentyp nicht von der Reihe (in diesem Fall wird die sekundäre X-Achse) verwendet keine Auswirkung hat. der Cursor wird automatisch an die einzige Achse verwendet, um die Reihe zu zeichnen angefügt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Cursor.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt anwendungsspezifische Aufgaben, die frei, freigeben oder Zurücksetzen von nicht verwalteten Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Cursor.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" /> um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt nicht verwaltete und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public double Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Cursorintervall fest.</summary>
+        <value>Das Cursorintervall.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.Interval%2A> Eigenschaft bestimmt, wie oft und wo ein Cursor von einem Endbenutzer gezeichnet werden kann sowie, wo die Anfangs- und Endpunkte einer Bereichsauswahl gezeichnet werden können. Wert 0 (null), die der Standardwert ist, gibt an, dass eine Auswahl Cursor- oder Bereich an einer beliebigen Stelle in einer Diagrammfläche gezeichnet werden kann. Ein Wert ungleich Null gibt an, dass der Cursor oder Anfang und/oder Endpunkte des ausgewählten Wertebereichs nur im angegebenen Intervall, bei der Einstellung durch eine Benutzerinteraktion gezeichnet wird.  
+  
+ Die Maßeinheit richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalType%2A> Eigenschaft.  
+  
+ Diese Eigenschaft kann auch verwendet werden, zusammen mit der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffset%2A> -Eigenschaft, die Ihnen ermöglicht, einen Offset des angegebenen Intervalls anzugeben. Beispielsweise sollten damit wird einen Cursor, der nur jeden Samstag angezeigt werden, ein Intervall von 1 Woche, zusammen mit der ein Intervalloffset von 6 Tagen angegeben werden. In .NET Framework wird Sonntag als erster Tag der Woche betrachtet.  
+  
+ Wenn die Cursorbenutzeroberfläche, indem Sie festlegen aktiviert ist der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IsUserEnabled%2A> -Eigenschaft und die Maus innerhalb des Diagrammbereichs geklickt wird, wird die Position des Cursors festgelegt werden, um die nächste zulässige Position.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.Interval%2A> Eigenschaft hat keine Auswirkungen, wenn Sie die Position des Cursors festgelegt oder programmgesteuert Auswahl im Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffset">
+      <MemberSignature Language="C#" Value="public double IntervalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 IntervalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Intervalloffset der beeinflusst, in denen die Cursor und Bereichsauswahl gezeichnet werden können, wenn sie von einem Benutzer festgelegt wurden.</summary>
+        <value>Der Offset des Intervalls. Der Standardwert ist 0 (null), die keine Einschränkungen gibt an, und negative Werte sind zulässig.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffset%2A> Eigenschaft bestimmt den Intervalloffset eines Cursors und dem Anfang und/oder Endpunkte einer Bereichsauswahl. In Verbindung mit der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.Interval%2A> -Eigenschaft, diese Eigenschaft bestimmt, wo ein Cursor und Bereich in einer Diagrammfläche angezeigt werden kann. Der Wert 0 (null), wird der Standardwert gibt an, dass es kein Versatz.  
+  
+ Die Maßeinheit richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffsetType%2A> Eigenschaft.  
+  
+ Der Offset wirkt sich auf die Speicherorte, an denen ein Cursor und den Anfang und/oder Endpunkte einer Bereichsauswahl gezeichnet werden können. Beispielsweise sollten damit wird einen Cursor, der nur jeden Samstag angezeigt werden, ein Intervall von 1 Woche, zusammen mit der ein Intervalloffset von 6 Tagen angegeben werden. In .NET Framework wird Sonntag als erster Tag der Woche betrachtet.  
+  
+ Wenn die Cursorbenutzeroberfläche, indem Sie festlegen aktiviert ist der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IsUserEnabled%2A> -Eigenschaft und die Maus innerhalb des Diagrammbereichs geklickt wird, wird die Position des Cursors festgelegt werden, um die nächste zulässige Position.  
+  
+> [!IMPORTANT]
+>  Intervall-bezogene Eigenschaften wirken sich nicht bei einer Bereichsauswahl oder Cursorposition programmgesteuert festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffsetType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffsetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Intervalloffsettyp eines Cursors und der ausgewählte Bereich für eine Achse.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType" /> -Enumerationswert, der die Maßeinheit für den Intervalloffset bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffsetType%2A> Eigenschaft bestimmt den Typ der Intervalloffset, der angegeben wird, mit der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffset%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffsetType%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto>die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalType%2A> Einstellung der Eigenschaft verwendet werden.  
+  
+> [!NOTE]
+>  Intervall-bezogene Eigenschaften wirken sich nicht bei einer Bereichsauswahl oder Cursorposition programmgesteuert festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Intervalltyp des Cursors und der ausgewählte Bereich einer Achse.</summary>
+        <value>Den Intervalltyp des Cursors und der ausgewählte Bereich einer Achse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalType%2A> -Eigenschaft bestimmt den Typ des Intervalls, der dem angegebenen unter Verwendung der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.Interval%2A> Eigenschaft.  
+  
+ Wenn der Intervalltyp ist <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto>, als Maßeinheit für das Intervall wird behandelt, als eine `double`, entspricht einem Tag bei <xref:System.DateTime> Werte angegeben werden.  
+  
+> [!NOTE]
+>  Intervall-bezogene Eigenschaften wirken sich nicht bei einer Bereichsauswahl oder Cursorposition programmgesteuert festgelegt ist.  
+  
+ Wenn Sie der Intervalltyp der Achse einen Zeitwert darstellt – z. B. Stunden, Minuten und So weiter – und damit ordnungsgemäß die Zoom-Funktion können die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalType%2A> muss auch auf einen Zeitwert festgelegt werden. Z. B. wenn der ChartArea1.AxisX.IntervalType in Stunden angegeben wird, konnte dann kann der ChartArea1.CursorX.IntervalType auf Minuten festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserEnabled">
+      <MemberSignature Language="C#" Value="public bool IsUserEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUserEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.IsUserEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das aktiviert oder deaktiviert die Cursorbenutzeroberfläche.</summary>
+        <value>
+          <see langword="true" />Wenn die Cursorbenutzeroberfläche aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserSelectionEnabled">
+      <MemberSignature Language="C#" Value="public bool IsUserSelectionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUserSelectionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.IsUserSelectionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das aktiviert oder deaktiviert die Benutzeroberfläche der Bereichsauswahl.</summary>
+        <value>
+          <see langword="true" />Wenn die Benutzeroberfläche der Bereichsauswahl aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.LineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Red")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe der Cursor.</summary>
+        <value>Die Linienfarbe des Cursors. Der Standardwert ist <see cref="P:System.Drawing.Color.Red" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.LineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil der Cursorlinie fest.</summary>
+        <value>Der Stil der Cursorlinie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineWidth">
+      <MemberSignature Language="C#" Value="public int LineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.LineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienstärke des Cursors in Pixel</summary>
+        <value>Die Linienstärke in Pixel. Der Standardwert ist eins (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Linienstärke des Cursors in Pixel anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public double Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.DoubleDateNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position des Cursors fest.</summary>
+        <value>Die Position des Cursors.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, zum Abrufen der Position eines Cursors, sowie um die Cursorposition programmgesteuert festzulegen.  
+  
+ Die Position wird gemessen, als Wert der Achse, zu der der Cursor gehört, dies durch bestimmt die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.AxisType%2A> Eigenschaft. Z. B. wenn der Cursor mit dem primären Replikat X Achse, und klicken Sie dann durch Festlegen dieser Eigenschaft auf einen Wert, der dem 1. Januar 2000 gehört führt im gezeichnet werden, der dem 1. Januar 2000 Position entlang der X-Achse Cursor. Dieser Achsenwert nicht vorhanden ist, wird der Cursor nicht angezeigt werden.  
+  
+ Beachten Sie, dass, wenn Sie diese Eigenschaft festlegen, wird die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.Interval%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalOffset%2A> Eigenschaften hat keine Auswirkungen; also wird der Cursor an dieser angegebenen Position angezeigt.  
+  
+ Diese Eigenschaft keine löst Einstellung der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged> oder <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging> Ereignisse.  
+  
+ Alternativ können Sie die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetCursorPosition%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetCursorPixelPosition%2A> Methoden zum Festlegen des Cursors verwendet werden können.  
+  
+ Um einen Cursor programmgesteuert zu entfernen, verwenden Sie diese Eigenschaft zum Festlegen der Position des Cursors um <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color SelectionColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SelectionColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "LightGray")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine halb transparente Farbe, die einen Bereich von Daten werden hervorgehoben.</summary>
+        <value>Die Farbe des markierten Bereichs. Der Standardwert ist <see cref="P:System.Drawing.Color.LightGray" />, mit einem Alphawert von 120.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt die Farbe der Bereichsauswahl und kann auf jeden gültigen ARGB (Alpha, Rot, Grün, Blau)-Wert festgelegt werden. Wenn ein Alphawert, der den Grad an Transparenz bestimmt wird, nicht angegeben wird, wird alpha Standardwert lautet 120 verwendet.  
+  
+ Die ausgewählte Farbe kann festgelegt werden bei der X- und Y-Achse Cursorn die wird mithilfe von implementiert die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.CursorX%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.CursorY%2A> Eigenschaften des der <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> -Objekts. Wenn ein Bereich nur an der X-Achse ausgewählt ist die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionColor%2A> Wert für der x-Achsencursor verwendet wird, wenn ein Bereich nur entlang der Y-Achse ausgewählt ist die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionColor%2A> Wert für der y-Achsencursor verwendet wird. Wenn ein Bereich, an beiden Achsen ausgewählt ist der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionColor%2A> Wert für der y-Achsencursor auch für die ausgewählte Farbe verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEnd">
+      <MemberSignature Language="C#" Value="public double SelectionEnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.DoubleDateNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Endposition einer Bereichsauswahl.</summary>
+        <value>Die Endposition des ausgewählten Bereichs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Benutzer kann einen Bereich innerhalb einer Diagrammfläche auswählen, durch Klicken auf die linke Maustaste gedrückt und klicken Sie dann die Maus ziehen. Beachten Sie, dass die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IsUserSelectionEnabled%2A> muss auch-Eigenschaftensatz auf `true`. Darüber hinaus eine Bereichsauswahl kann festgelegt werden entweder programmgesteuert mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionEnd%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionStart%2A> Eigenschaften, oder die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPosition%2A> oder <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPixelPosition%2A> Methoden.  
+  
+ Die Endposition einer Bereichsauswahl wird als Wert der Achse berechnet, der der Cursor angehört. Der Cursor an der primären X-Achse gehört, und legen Sie beispielsweise die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionEnd%2A> Eigenschaft auf einen Wert von dem 31. Dezember 2000 das Ende des ausgewählten Bereichs erfolgt am 31. Dezember 2000 an der primären X-Achse angezeigt.  
+  
+ Um eine Bereichsauswahl programmgesteuert zu entfernen, legen Sie die Anfangs- und Endpunkte des Bereichs, der <xref:System.Double.NaN> mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionEnd%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionStart%2A> Eigenschaften, oder verwenden Sie die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPosition%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public double SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.DoubleDateNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position des ausgewählten Bereichs eines Cursors.</summary>
+        <value>Die Startposition des ausgewählten Bereichs eines Cursors.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Benutzer kann einen Bereich auswählen, durch Klicken auf die linke Maustaste gedrückt, und klicken Sie dann die Cursorposition durch Ziehen der Maus verschieben. Beachten Sie, dass die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IsUserSelectionEnabled%2A> muss auch-Eigenschaftensatz auf `true`. Darüber hinaus eine Bereichsauswahl kann festgelegt werden entweder programmgesteuert mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionEnd%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionStart%2A> Eigenschaften, oder die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPosition%2A> oder <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPixelPosition%2A> Methoden.  
+  
+ Die Startposition einer Bereichsauswahl wird als Wert der Achse berechnet, der der Cursor angehört. Der Cursor an der primären X-Achse gehört, und legen Sie beispielsweise die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionStart%2A> Eigenschaft auf einen Wert, der dem 1. Januar 2000 der Anfang des ausgewählten Bereichs treten am 1. Januar 2000 an der primären X-Achse angezeigt.  
+  
+ Um eine Bereichsauswahl programmgesteuert zu entfernen, legen Sie die Anfangs- und Endpunkte des Bereichs, der <xref:System.Double.NaN> mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionEnd%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SelectionStart%2A> Eigenschaften, oder verwenden Sie die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPosition%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursorPixelPosition">
+      <MemberSignature Language="C#" Value="public void SetCursorPixelPosition (System.Drawing.PointF point, bool roundToBoundary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCursorPixelPosition(valuetype System.Drawing.PointF point, bool roundToBoundary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Cursor.SetCursorPixelPosition(System.Drawing.PointF,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.PointF" />
+        <Parameter Name="roundToBoundary" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point">Ein <see cref="T:System.Drawing.PointF" /> Struktur, die angibt, wo der Cursor gezeichnet wird.</param>
+        <param name="roundToBoundary">Wenn <see langword="true" />, der Cursor wird entlang der nächste Diagramm Bereich Begrenzung gezeichnet werden, wenn nicht innerhalb die angegebene Position liegt ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> Objekt.</param>
+        <summary>Zeigt einen Cursor an der angegebenen Position. In Pixel gemessen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursorPosition">
+      <MemberSignature Language="C#" Value="public void SetCursorPosition (double newPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCursorPosition(float64 newPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Cursor.SetCursorPosition(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newPosition" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="newPosition">Die neue Position des Cursors. Als Wert der relevanten Achse gemessen.</param>
+        <summary>Legt die Position eines Cursors in einer Diagrammfläche an der angegebenen Achsenwert fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectionPixelPosition">
+      <MemberSignature Language="C#" Value="public void SetSelectionPixelPosition (System.Drawing.PointF startPoint, System.Drawing.PointF endPoint, bool roundToBoundary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSelectionPixelPosition(valuetype System.Drawing.PointF startPoint, valuetype System.Drawing.PointF endPoint, bool roundToBoundary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPixelPosition(System.Drawing.PointF,System.Drawing.PointF,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startPoint" Type="System.Drawing.PointF" />
+        <Parameter Name="endPoint" Type="System.Drawing.PointF" />
+        <Parameter Name="roundToBoundary" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="startPoint">Ein <see cref="T:System.Drawing.PointF" /> Struktur, die angibt, wo die Bereichsauswahl beginnt.</param>
+        <param name="endPoint">Ein <see cref="T:System.Drawing.PointF" /> -Struktur, die angibt, wo die Bereichsauswahl endet.</param>
+        <param name="roundToBoundary">Wenn <see langword="true" />, die Start- und Endpunkte abgerundet wird auf die nächste Begrenzung des Diagramm-Bereich, wenn nicht, die angegebenen Positionen innerhalb fallen einer <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> Objekt.</param>
+        <summary>Legt das Anfangs- und Endposition einer Bereichsauswahl.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectionPosition">
+      <MemberSignature Language="C#" Value="public void SetSelectionPosition (double newStart, double newEnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSelectionPosition(float64 newStart, float64 newEnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Cursor.SetSelectionPosition(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newStart" Type="System.Double" />
+        <Parameter Name="newEnd" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="newStart">Die neue Startposition der Bereichsauswahl. Als Wert der relevanten Achse gemessen.</param>
+        <param name="newEnd">Die neue Endposition der Bereichsauswahl. Als Wert der relevanten Achse gemessen.</param>
+        <summary>Legt die Position des ausgewählten Wertebereichs in einer Diagrammfläche an der angegebenen Achsenwerte fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

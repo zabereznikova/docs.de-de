@@ -1,0 +1,99 @@
+<Type Name="WebPartExportMode" FullName="System.Web.UI.WebControls.WebParts.WebPartExportMode">
+  <TypeSignature Language="C#" Value="public enum WebPartExportMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartExportMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartExportMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob alle, einige oder keine der eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Eigenschaften des Steuerelements exportiert werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Wert aus der <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode> Enumerator kann angewendet werden, um die <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft, um anzugeben, welche Eigenschaften von Webparts-Steuerelement exportiert werden können. Standardmäßig werden die Eigenschaften einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement kann nicht exportiert werden und des Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft ist auf None festgelegt. Legen Sie zum Aktivieren der Export aller Eigenschaften für das Steuerelement die <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Wert für alle. Exportieren Sie nur bestimmte Eigenschaften während verhindert den Export von Eigenschaften, die vertrauliche Daten enthalten, legen Sie den Wert der Eigenschaft auf NonSensitiveData an.  
+  
+ Eine Eigenschaft kann über als vertraulich gekennzeichnet werden die <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> Attribut.  
+  
+> [!NOTE]
+>  Damit kann die Exportfunktion für eine Webanwendung, die Webparts-Steuerelemente in der Datei "Web.config" für die Anwendung enthält, müssen Sie ein Attribut zum Hinzufügen der `<webParts>` Element innerhalb der `<system.web>` Abschnitt, wie das folgende Markup.  
+>   
+>  `<webParts enableExport="true">`  
+>   
+>  `</webParts>`  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft. Beachten Sie, dass für den Export Codebeispiel funktioniert, Sie ebenfalls die Datei "Web.config" aktualisieren müssen wie im Abschnitt "Hinweise" angegeben.  
+  
+ Der erste Teil dieses Beispiels enthält den Code für ein Steuerelement namens `TextDisplayWebPart`. Dieses Steuerelement ist identisch mit das benutzerdefinierte Steuerelement, das im Abschnitt "Beispiel" der gefunden wird die <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData> Klassenübersicht, mit dem Unterschied, dass er fügt eine `Personalizable` -Attribut auf die `TextDisplayWebPart.ContentText` Eigenschaft, sodass die Eigenschaft exportiert werden kann. Beachten Sie, dass die Attributdeklaration enthält den Wert `true` für die `isSensitive` Dies bedeutet, dass die Eigenschaft markiert ist, wie vertrauliche Daten zu exportieren. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel wird davon ausgegangen, dass Sie den Quellcode in eine Assembly kompilieren, fügen Sie ihn in einen Unterordner "bin" Ihrer Webanwendung und verweisen auf die Assembly mit einem `Register` -Direktive in der Webseite. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPart_ExportMode#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_WebPart_ExportMode#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/VB/textdisplaywebpart.vb#2)]  
+  
+ Der zweite Teil des Beispiels wird gezeigt, wie auf die `TextDisplayWebPart` -Steuerelement in eine ASP.NET-Webseite. Beachten Sie, dass im deklarativen Markup, das <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> auf alle "," Eigenschaftswert festgelegt ist, was bedeutet, dass auch Eigenschaften mit vertraulichen Werte exportiert werden sollen.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_ExportMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/CS/exportmodecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_ExportMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/VB/exportmodevb.aspx#1)]  
+  
+ Laden Sie die Webseite in einem Browser, und klicken Sie auf die Verbmenü des der <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> steuern, klicken Sie auf das Exportieren-Verb, und befolgen Sie die Anweisungen zum Exportieren einer Beschreibungsdatei, die das Steuerelement Zustands- und Daten enthält.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartExportMode All = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartExportMode.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartExportMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Eigenschaften eines Webparts-Steuerelements können exportiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartExportMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartExportMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartExportMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine der Eigenschaften eines Webparts-Steuerelements können exportiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonSensitiveData">
+      <MemberSignature Language="C#" Value="NonSensitiveData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartExportMode NonSensitiveData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartExportMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es können nur Eigenschaften eines Steuerelements Webparts, die als nicht vertraulich definiert wurden exportiert werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

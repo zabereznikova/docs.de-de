@@ -1,0 +1,122 @@
+<Type Name="DataGridViewButtonCell+DataGridViewButtonCellAccessibleObject" FullName="System.Windows.Forms.DataGridViewButtonCell+DataGridViewButtonCellAccessibleObject">
+  <TypeSignature Language="C#" Value="protected class DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject : System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit DataGridViewButtonCell/DataGridViewButtonCellAccessibleObject extends System.Windows.Forms.DataGridViewCell/DataGridViewCellAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewCell+DataGridViewCellAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Clientanwendungen für Barrierefreiheit Informationen über eine <see cref="T:System.Windows.Forms.DataGridViewButtonCell" /> bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms umfasst integrierte Accessibility-Unterstützung, die Ihre Anwendung zur Bearbeitung von Clientanwendungen für Barrierefreiheit erlaubt. Beispiele für Clientanwendungen für Barrierefreiheit a. Dienstprogramme für Bildschirm Enlarger "und" Prüfer, voice-Hilfsprogramme, auf dem Bildschirm Tastaturen, alternative Eingabegeräte und Tastatur Erweiterung Hilfsprogramme.  
+  
+ Die <xref:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject> Klasse erbt von der <xref:System.Windows.Forms.AccessibleObject> Klasse von Informationen über die <xref:System.Windows.Forms.DataGridViewButtonCell> Clientanwendungen für Barrierefreiheit. Jede Klasse, die einen sichtbaren Teil des darstellt der <xref:System.Windows.Forms.DataGridView>– z. B. <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>, <xref:System.Windows.Forms.DataGridViewRowHeaderCell>, <xref:System.Windows.Forms.DataGridViewRow> und <xref:System.Windows.Forms.DataGridViewCell>– enthält außerdem eine Klasse, die von erben <xref:System.Windows.Forms.AccessibleObject> um Informationen über die enthaltende Klasse bereitzustellen und Führen Sie die Aktionen im Auftrag von Clientanwendungen für Barrierefreiheit.  
+  
+ Instanzen vorhanden sind, wenn Sie, geben Sie zusätzliche Informationen wie den Namen oder die Beschreibung möchten der <xref:System.Windows.Forms.DataGridView> -Steuerelement, Clientanwendungen für Barrierefreiheit. Es gibt zwei Methoden zum Bereitstellen von zusätzlichen Informationen. Festlegen, um begrenzte Informationen zu Eingabehilfen für vorhandene Steuerelemente zu ermöglichen, welches Steuerelement <xref:System.Windows.Forms.Control.AccessibleName%2A> und <xref:System.Windows.Forms.Control.AccessibleDescription%2A> Eigenschaftswerte, die Clientanwendungen für Barrierefreiheit gemeldet werden.  
+  
+> [!NOTE]
+>  Ändern Sie die <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A> und <xref:System.Windows.Forms.Control.AccessibleRole%2A> Standardwerte für die Eigenschaft nur in seltenen Fällen, z. B. Wenn Sie stellen eine <xref:System.Windows.Forms.DataGridView> wie eine Liste.  
+  
+ Es kann vorkommen, benötigen Sie ggf. Weitere Informationen über Eingabehilfen oder andere Aktionen für Eingabehilfen in Ihre benutzerdefinierte enthalten <xref:System.Windows.Forms.DataGridView> oder <xref:System.Windows.Forms.DataGridViewCell>. Eingabehilfen anpassen, können Sie eigene von abgeleitete Klasse schreiben der <xref:System.Windows.Forms.DataGridView.DataGridViewAccessibleObject> oder <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> Klassen und überschreiben die <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode. Z. B. Wenn Sie eine benutzerdefinierte Zeilenheaderzelle, die eindeutige benutzerdefinierte Aktionen schreiben, z. B. spezielle Treffertests in die Zelle implementiert sollten Sie erstellen eine Klasse, die von erben die <xref:System.Windows.Forms.DataGridViewRowHeaderCell.DataGridViewRowHeaderCellAccessibleObject> Klasse, und überschreiben die <xref:System.Windows.Forms.DataGridViewRowHeaderCell.CreateAccessibilityInstance%2A> Methode.  
+  
+ Die <xref:System.Windows.Forms.DataGridView> macht die Datenstruktur mit <xref:System.Windows.Forms.AccessibleRole> Werte, um die Daten definieren Tabelle Hierarchie. Weitere Informationen zum Verfügbarmachen von Datentabellen, um Microsoft Active Accessibility finden Sie unter "Verfügbarmachen von Daten Tabellen über Microsoft Active Accessibility" in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewButtonCellAccessibleObject (System.Windows.Forms.DataGridViewCell owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewCell owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject.#ctor(System.Windows.Forms.DataGridViewCell)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.DataGridViewCell" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Forms.DataGridViewCell" />, der die <see cref="T:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject" /> besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAction">
+      <MemberSignature Language="C#" Value="public override string DefaultAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject.DefaultAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.String" /> , die die Standardaktion des stellt die <see cref="T:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject" />.</summary>
+        <value>Die <see cref="T:System.String" /> "Drücken", wenn die <see cref="P:System.Windows.Forms.DataGridViewCell.ReadOnly" /> -Eigenschaftensatz auf <see langword="false" />ist, andernfalls ein leeres <see cref="T:System.String" /> ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Standardaktion des der<see cref="T:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject" /></summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject.DoDefaultAction%2A> Methode bewirkt, dass die Schaltfläche in der <xref:System.Windows.Forms.DataGridViewButtonCell> geklickt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Forms.DataGridViewButtonCell" /> zurückgegebenes der <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> Eigenschaft gehört nicht zu einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Windows.Forms.DataGridViewButtonCell" /> zurückgegebenes der <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> Eigenschaft gehört, um eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildCount">
+      <MemberSignature Language="C#" Value="public override int GetChildCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChildCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject.GetChildCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Anzahl der untergeordneten verfügbaren Objekte, die zu gehören die <see cref="T:System.Windows.Forms.DataGridViewButtonCell.DataGridViewButtonCellAccessibleObject" />.</summary>
+        <returns>Der Wert – 1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,148 @@
+<Type Name="ExpressionBuilder" FullName="System.Web.Configuration.ExpressionBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionBuilder : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExpressionBuilder extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ExpressionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft eine dynamische Ressource während der Kompilierung ab.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET wertet Ausdrücke automatisch während der Analyse mit Seite der <xref:System.Web.Configuration.ExpressionBuilder> Klasse. Die <xref:System.Web.Configuration.ExpressionBuilderCollection> -Auflistung, die an die `expressionBuilders` Elemente in der `compilation` Teil der Konfiguration. Die <xref:System.Web.Configuration.ExpressionBuilder> bestimmte Werte im Schlüssel/Wert-Paare enthält.  
+  
+ Ein Wert wird abgerufen, indem ein Ausdruck der form  
+  
+ `<%$ ExpressionPrefix: ExpressionKey %>`  
+  
+ auf der Seite. Die `ExpressionPrefix` ordnet den Typ des Ausdrucks als einen gemeinsamen Ausdrucks-Generator-Typ abgerufen werden sollen (d. h. <xref:System.Web.Compilation.AppSettingsExpressionBuilder>) oder ein benutzerdefinierter Ausdrucks-Generator-Typ. Die `ExpressionKey` gibt den Schlüssel verwendet, um den zurückgegebenen Wert zu verweisen.  
+  
+ Wenn Sie einen allgemeinen Ausdrucks-Generator-Typ implementieren möchten, müssen Sie den Ausdrucks-Generator in der Konfiguration der zugehörigen Abschnittsname zuordnen. Wenn Sie einen benutzerdefinierten Ausdrucks-Generator-Typ implementieren möchten, müssen Sie den Ausdrucks-Generator zuordnen, auf Ihre benutzerdefinierten Ausdrucks-Generator-Klasse abgeleitet sein muss die <xref:System.Web.Configuration.ExpressionBuilder> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBuilder (string expressionPrefix, string theType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string expressionPrefix, string theType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilder.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expressionPrefix" Type="System.String" />
+        <Parameter Name="theType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="expressionPrefix">Eine Zeichenfolge, die den Typ des abzurufenden Ausdrucks identifiziert.</param>
+        <param name="theType">Eine Zeichenfolge, die den Ausdruckstyp angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ExpressionBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.Configuration.ExpressionBuilder> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ExpressionBuilderCollection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ExpressionBuilderCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/CS/ExpressionBuilderCollection.cs#2)]
+ [!code-vb[System.Web.Configuration.ExpressionBuilderCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/VB/ExpressionBuilderCollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionPrefix">
+      <MemberSignature Language="C#" Value="public string ExpressionPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExpressionPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ExpressionBuilder.ExpressionPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("expressionPrefix", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die den Typ des abzurufenden Ausdrucks identifiziert.</summary>
+        <value>Eine Zeichenfolge, die den Typ des abzurufenden Ausdrucks identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ExpressionBuilder.ExpressionPrefix%2A> ordnet den Ausdruck der Name des zugehörigen Abschnitts in der Konfiguration für allgemeine Ausdruckstypen oder ordnet den Ausdruck auf die benutzerdefinierten Ausdrucks-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ExpressionBuilder.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ExpressionBuilder.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die den Ausdruckstyp angibt.</summary>
+        <value>Eine Zeichenfolge, die den Ausdruckstyp angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ExpressionBuilder.Type%2A> gibt den Typ des Objekts verwendet, um den Wert des Ausdrucks zu bestimmen. Der Typ kann entweder ein Abschnitt in der Konfiguration oder eine benutzerdefinierte Klasse angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

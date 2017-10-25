@@ -1,0 +1,643 @@
+<Type Name="Padding" FullName="System.Windows.Forms.Padding">
+  <TypeSignature Language="C#" Value="public struct Padding" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Padding extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Padding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.PaddingConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Füllzeichen oder Rand Informationen, die ein Element der Benutzeroberfläche (UI) zugeordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Padding> Struktur darstellt, der Auffüllung oder Rand ein rechteckiges Benutzeroberflächenelement, z. B. ein Steuerelement zugeordnet. Die Auffüllung wird den internen Abstand zwischen den Hauptteil des UI-Elements und dessen Rand. Im Gegensatz dazu ist ein Rand der Abstand zwischen die benachbarten Rändern des zwei benachbarte Elemente der Benutzeroberfläche. Aufgrund von strukturellen Ähnlichkeit <xref:System.Windows.Forms.Padding> wird verwendet, um die Auffüllung und Rändern darstellen.  
+  
+ Für ein Diagramm zur Veranschaulichung der <xref:System.Windows.Forms.Control.Padding%2A> und <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft für ein Steuerelement finden Sie unter [Rand und Abstand in Windows Forms-Steuerelementen](~/docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md).  
+  
+ Auffüllung hat unterschiedliche Wirkungen für Steuerelemente, die Container als Steuerelemente sind, die nicht sind. Z. B. in einer <xref:System.Windows.Forms.Panel> -Steuerelement, die <xref:System.Windows.Forms.Padding> Eigenschaft definiert den Abstand zwischen den Rahmen der <xref:System.Windows.Forms.Panel> und seine untergeordneten Steuerelemente. Für eine <xref:System.Windows.Forms.Button> -Steuerelement, die <xref:System.Windows.Forms.Padding> Eigenschaft definiert den Abstand zwischen den Rahmen der <xref:System.Windows.Forms.Button> Steuerelement und dem darin enthaltenen Text.  
+  
+ Zusätzlich zu den typischen Methoden und Eigenschaften <xref:System.Windows.Forms.Padding> definiert außerdem die folgenden Typebene Member:  
+  
+-   Die <xref:System.Windows.Forms.Padding.Empty> Feld, das ein vordefinierter darstellt <xref:System.Windows.Forms.Padding> ohne Auffüllung.  
+  
+-   Eine Reihe von Operatoren zur Durchführung von allgemeine arithmetischer Operations für die Klasse, z. B. Addition zweier <xref:System.Windows.Forms.Padding> Objekten zusammen. Für Sprachen, die Überladen von Operatoren nicht unterstützen, können Sie diese Member alternative Methoden mittels Methodensyntax aufrufen.  
+  
+-   Die <xref:System.Windows.Forms.Padding.Horizontal%2A>, <xref:System.Windows.Forms.Padding.Vertical%2A>, und <xref:System.Windows.Forms.Padding.Size%2A> Eigenschaften, die kombinierten Werte bereitstellen, die für die Verwendung in benutzerdefinierten Layouts Berechnungen sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie Padding-Eigenschaft, um zu eine Kontur erstellen eine <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Erstellen Sie einen Rahmen um ein Windows Forms-Steuerelement mithilfe Padding](~/docs/framework/winforms/controls/how-to-create-a-border-around-a-windows-forms-control-using-padding.md).  
+  
+ [!code-csharp[System.Windows.Forms.Padding#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.Padding#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Padding (int all);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 all) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="all" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="all">Die Anzahl der Pixel für die Auffüllung für alle Ränder verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Padding" /> -Klasse unter Verwendung der angegebenen Textabstand für alle Ränder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, <xref:System.Windows.Forms.Padding.Top%2A> und <xref:System.Windows.Forms.Padding.All%2A> auf den Wert der Eigenschaften der `all` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Padding (int left, int top, int right, int bottom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 left, int32 top, int32 right, int32 bottom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="left" Type="System.Int32" />
+        <Parameter Name="top" Type="System.Int32" />
+        <Parameter Name="right" Type="System.Int32" />
+        <Parameter Name="bottom" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die Größe der Auffüllung für den linken Rand in Pixel.</param>
+        <param name="top">Die Größe der Auffüllung für den oberen Rand in Pixel.</param>
+        <param name="right">Die Größe der Auffüllung für den rechten Rand in Pixel.</param>
+        <param name="bottom">Die Größe der Auffüllung für den unteren Rand in Pixel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Padding" /> -Klasse mit einem separaten Textabstand für jede Kante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn alle Parameterwerte gleich sind, und klicken Sie dann die <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft dieser allgemeinen Wert wider.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.Padding Add (System.Windows.Forms.Padding p1, System.Windows.Forms.Padding p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.Padding Add(valuetype System.Windows.Forms.Padding p1, valuetype System.Windows.Forms.Padding p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.Add(System.Windows.Forms.Padding,System.Windows.Forms.Padding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.Padding" />
+        <Parameter Name="p2" Type="System.Windows.Forms.Padding" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Ein <see cref="T:System.Windows.Forms.Padding" />.</param>
+        <param name="p2">Ein <see cref="T:System.Windows.Forms.Padding" />.</param>
+        <summary>Berechnet die Summe der beiden angegebenen <see cref="T:System.Windows.Forms.Padding" /> Werte.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.Padding" /> , enthält die Summe der beiden angegebenen <see cref="T:System.Windows.Forms.Padding" /> Werte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="public int All { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 All" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.All" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den auffüllungswert für alle Ränder fest.</summary>
+        <value>Der Abstand in Pixel für alle Ränder Wenn identisch sind; andernfalls -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Eigenschaft abrufen, wenn alle Seiten den gleichen auffüllungswert verwenden, wird dieser allgemeinen Wert zurückgegeben. Andernfalls wird-1 zurückgegeben, um anzugeben, dass die Auffüllung-Werte nicht gleich sind.  
+  
+ Festlegen dieses Werts ändert die <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, und <xref:System.Windows.Forms.Padding.Top%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public int Bottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für den Leerraum für die Unterkante.</summary>
+        <value>Die Auffüllung für den unteren Rand in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einstellung dieses Werts kann auch alter der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Forms.Padding Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Windows.Forms.Padding Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Padding.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine <see cref="T:System.Windows.Forms.Padding" /> Objekt ohne Auffüllung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein leeres Auffüllung Objekt definiert ist, dass die <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A> und <xref:System.Windows.Forms.Padding.Top%2A> auffüllungseigenschaften auf 0 festgelegt.  
+  
+ Dieses unveränderliche Feld ist nützlich für Vergleichsvorgänge und Initialisierungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das zu vergleichende mit dem aktuellen Objekt <see cref="T:System.Windows.Forms.Padding" />.</param>
+        <summary>Bestimmt, ob der Wert des angegebenen Objekts gleich der aktuellen <see cref="T:System.Windows.Forms.Padding" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.Padding" /> Objekte sind, entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur auf andere Objekte vom Typ <xref:System.Windows.Forms.Padding> (oder eines abgeleiteten Typs) kann gleich dem aktuellen <xref:System.Windows.Forms.Padding>. Darüber hinaus das entsprechende <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A> und <xref:System.Windows.Forms.Padding.Top%2A> für beide Eigenschaften <xref:System.Windows.Forms.Padding> Objekte müssen identisch sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Hash für die aktuelle <see cref="T:System.Windows.Forms.Padding" />.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Padding.GetHashCode%2A> -Methode verwendet die <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, und <xref:System.Windows.Forms.Padding.Bottom%2A> Werte für ein 32-Bit-Hashcode zu generieren, die das aktuelle darstellt <xref:System.Windows.Forms.Padding>.  
+  
+ Ein Hashcode ist eine Zahl, die entspricht dem Wert eines Objekts (damit zwei Objekte, die den gleichen Wert haben den gleichen Hashcode generiert werden sollen). Hashcodes dienen zum Sortieren und speichern die Auflistungen von Objekten. Z. B. eine <xref:System.Collections.Hashtable?displayProperty=nameWithType> stellt eine Auflistung von Schlüssel-Wert-Paare, die organisiert werden basierend auf dem Hashcode des Schlüssels.  
+  
+ Weitere Informationen zu Hashcodes und Hashfunktionen finden Sie unter der <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="public int Horizontal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Horizontal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.Horizontal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den kombinierten Abstand für den rechten und linken Rands ab.</summary>
+        <value>Ruft die Summe in Pixel ab, oder die <see cref="P:System.Windows.Forms.Padding.Left" /> und <see cref="P:System.Windows.Forms.Padding.Right" /> Auffüllung von Werten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für die Verwendung in vielen Layout Berechnungen praktisch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public int Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für den Leerraum für den linken Rand.</summary>
+        <value>Die Auffüllung für den linken Rand in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einstellung dieses Werts kann auch alter der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.Padding operator + (System.Windows.Forms.Padding p1, System.Windows.Forms.Padding p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Forms.Padding op_Addition(valuetype System.Windows.Forms.Padding p1, valuetype System.Windows.Forms.Padding p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.op_Addition(System.Windows.Forms.Padding,System.Windows.Forms.Padding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.Padding" />
+        <Parameter Name="p2" Type="System.Windows.Forms.Padding" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Die erste <see cref="T:System.Windows.Forms.Padding" /> hinzufügen.</param>
+        <param name="p2">Die zweite <see cref="T:System.Windows.Forms.Padding" /> hinzufügen.</param>
+        <summary>Führt Sie Vektor Ergänzung für die zwei angegebenen <see cref="T:System.Windows.Forms.Padding" /> Objekte, was zu einer neuen <see cref="T:System.Windows.Forms.Padding" />.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.Padding" /> , Hinzufügen von resultiert <paramref name="p1" /> und <paramref name="p2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Vektor Additionsoperation ist das Ergebnis der Addition der Abstandswerte für jeden Rand. Z. B. die <xref:System.Windows.Forms.Padding.Left%2A> -Eigenschaft des Ergebnisses ist die Summe der <xref:System.Windows.Forms.Padding.Left%2A> Eigenschaften der beiden Operanden.  
+  
+ Dieser Vorgang ist transitiv.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Forms.Padding.Add%28System.Windows.Forms.Padding%2CSystem.Windows.Forms.Padding%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.Padding p1, System.Windows.Forms.Padding p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Forms.Padding p1, valuetype System.Windows.Forms.Padding p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.op_Equality(System.Windows.Forms.Padding,System.Windows.Forms.Padding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.Padding" />
+        <Parameter Name="p2" Type="System.Windows.Forms.Padding" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Ein <see cref="T:System.Windows.Forms.Padding" /> zu testen.</param>
+        <param name="p2">Ein <see cref="T:System.Windows.Forms.Padding" /> zu testen.</param>
+        <summary>Testet, ob zwei angegebene <see cref="T:System.Windows.Forms.Padding" /> -Objekte identisch sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden <see cref="T:System.Windows.Forms.Padding" />-Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Windows.Forms.Padding> Objekte sind gleich, wenn die Auffüllung von für jeden der vier Ränder Werten – <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, und <xref:System.Windows.Forms.Padding.Bottom%2A> – für beide Objekte gleich sind.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Forms.Padding.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.Padding p1, System.Windows.Forms.Padding p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Forms.Padding p1, valuetype System.Windows.Forms.Padding p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.op_Inequality(System.Windows.Forms.Padding,System.Windows.Forms.Padding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.Padding" />
+        <Parameter Name="p2" Type="System.Windows.Forms.Padding" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Ein <see cref="T:System.Windows.Forms.Padding" /> zu testen.</param>
+        <param name="p2">Ein <see cref="T:System.Windows.Forms.Padding" /> zu testen.</param>
+        <summary>Testet, ob zwei angegebene <see cref="T:System.Windows.Forms.Padding" /> Objekte sind kein Äquivalent.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden <see cref="T:System.Windows.Forms.Padding" /> Objekte unterschiedlich sind, und andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang ist das Gegenteil der <xref:System.Windows.Forms.Padding.op_Equality%2A>.  
+  
+ Die entsprechende Methode für diesen Operator ist die Negation des<xref:System.Windows.Forms.Padding.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.Padding operator - (System.Windows.Forms.Padding p1, System.Windows.Forms.Padding p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Forms.Padding op_Subtraction(valuetype System.Windows.Forms.Padding p1, valuetype System.Windows.Forms.Padding p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.op_Subtraction(System.Windows.Forms.Padding,System.Windows.Forms.Padding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.Padding" />
+        <Parameter Name="p2" Type="System.Windows.Forms.Padding" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Die <see cref="T:System.Windows.Forms.Padding" /> aus (der Minuend) subtrahiert werden soll.</param>
+        <param name="p2">Die <see cref="T:System.Windows.Forms.Padding" /> aus (der Subtrahend) subtrahiert werden soll.</param>
+        <summary>Vektor subtrahiert für die zwei angegebenen <see cref="T:System.Windows.Forms.Padding" /> Objekte, was zu einer neuen <see cref="T:System.Windows.Forms.Padding" />.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.Padding" /> Ergebnis der Subtraktion von <paramref name="p2" /> aus <paramref name="p1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Vektor Subtraktion ist das Ergebnis der Subtraktion der Abstandswerte für jeden Rand. Z. B. die <xref:System.Windows.Forms.Padding.Left%2A> -Eigenschaft des Ergebnisses ist der Unterschied zwischen der <xref:System.Windows.Forms.Padding.Left%2A> Eigenschaften der beiden Operanden.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Forms.Padding.Subtract%28System.Windows.Forms.Padding%2CSystem.Windows.Forms.Padding%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public int Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für den Leerraum für den rechten Rand.</summary>
+        <value>Die Auffüllung für den rechten Rand in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einstellung dieses Werts kann auch alter der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auffüllung Informationen in Form einer <see cref="T:System.Drawing.Size" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> mit Informationen über das Auffüllung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Padding.Size%2A> Eigenschaft führt eine Konvertierung vom Typ von <xref:System.Windows.Forms.Padding> auf <xref:System.Drawing.Size?displayProperty=nameWithType>. Die <xref:System.Windows.Forms.Padding.Horizontal%2A> Eigenschaft entspricht der <xref:System.Drawing.Size.Width%2A?displayProperty=nameWithType> -Eigenschaft, und die <xref:System.Windows.Forms.Padding.Vertical%2A> Eigenschaft entspricht der <xref:System.Drawing.Size.Height%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ <xref:System.Windows.Forms.Padding.Size%2A>eignet sich für die Verwendung in vielen Layout Berechnungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.Padding Subtract (System.Windows.Forms.Padding p1, System.Windows.Forms.Padding p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.Padding Subtract(valuetype System.Windows.Forms.Padding p1, valuetype System.Windows.Forms.Padding p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.Subtract(System.Windows.Forms.Padding,System.Windows.Forms.Padding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.Padding" />
+        <Parameter Name="p2" Type="System.Windows.Forms.Padding" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Ein <see cref="T:System.Windows.Forms.Padding" />.</param>
+        <param name="p2">Ein <see cref="T:System.Windows.Forms.Padding" />.</param>
+        <summary>Subtrahiert einen angegebenen <see cref="T:System.Windows.Forms.Padding" />-Wert von einem anderen.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.Padding" /> , enthält das Ergebnis der Subtraktion von einem angegebenen <see cref="T:System.Windows.Forms.Padding" /> von einem anderen Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public int Top { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für den Leerraum für den oberen Rand.</summary>
+        <value>Die Auffüllung für den oberen Rand in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einstellung dieses Werts kann auch alter der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Padding.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Windows.Forms.Padding" />-Objekt darstellt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den aktuellen <see cref="T:System.Windows.Forms.Padding" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Zeichenfolge, die mit der Bezeichnung Werte, der die Auffüllung für alle vier Seiten enthält.  
+  
+ Diese Methode überschreibt <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="public int Vertical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Vertical" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Padding.Vertical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den kombinierten Abstand für die oberen und unteren Randes ab.</summary>
+        <value>Ruft die Summe in Pixel ab, oder die <see cref="P:System.Windows.Forms.Padding.Top" /> und <see cref="P:System.Windows.Forms.Padding.Bottom" /> Auffüllung von Werten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für die Verwendung in vielen Layout Berechnungen praktisch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

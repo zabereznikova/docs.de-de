@@ -1,0 +1,150 @@
+<Type Name="HtmlSelectionListAdapter" FullName="System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter">
+  <TypeSignature Language="C#" Value="public class HtmlSelectionListAdapter : System.Web.UI.MobileControls.Adapters.HtmlControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlSelectionListAdapter extends System.Web.UI.MobileControls.Adapters.HtmlControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.HtmlControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auswahl-Adapterklasse für die HTML-Adaptergruppe bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlSelectionListAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.MobileControls.SelectionList Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.SelectionList Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.SelectionList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen stark typisierten Verweis auf das zugeordnete Steuerelement zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Einen stark typisierten Verweis auf das zugeordnete Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="public override bool LoadPostData (string key, System.Collections.Specialized.NameValueCollection data, object controlPrivateData, out bool dataChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool LoadPostData(string key, class System.Collections.Specialized.NameValueCollection data, object controlPrivateData, [out] bool&amp; dataChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection,System.Object,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="data" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="controlPrivateData" Type="System.Object" />
+        <Parameter Name="dataChanged" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Bezeichnet das Steuerelement.</param>
+        <param name="data">Enthält die Auflistung aller eingehenden Namenswerte.</param>
+        <param name="controlPrivateData">Dient zum Senden von privaten Daten des Steuerelements, die möglicherweise zum Laden von POST-Daten erforderlich sind. Das Steuerelement bestimmt den Typ, der an den Parameter übergeben wird.</param>
+        <param name="dataChanged">Gibt <see langword="true" /> Wenn das erforderliche Objekt in <c>PrivateControlData</c> geändert wurde, sodass der <see cref="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" /> -Ereignis ausgelöst werden kann.</param>
+        <summary>Gibt <see langword="true" /> , wenn der Adapter das Laden der Post-Daten verarbeitet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn der Adapter das Laden der Post-Daten verarbeitet andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="public override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.EventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Wird nach der Initialisierung eines Objekts, z. B. eines Formulars oder einer Seite, aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public override void Render (System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Render(class System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter.Render(System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter zum Empfangen der Ausgabe.</param>
+        <summary>Wird von der <see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)" />-Methode des Steuerelements zum Durchführen des Rendervorgangs aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsHiddenInputField">
+      <MemberSignature Language="C#" Value="protected override void RenderAsHiddenInputField (System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAsHiddenInputField(class System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter.RenderAsHiddenInputField(System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter.</param>
+        <summary>Rendert ein ausgeblendetes Feldtext für ein Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

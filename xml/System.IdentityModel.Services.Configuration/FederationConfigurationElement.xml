@@ -1,0 +1,245 @@
+<Type Name="FederationConfigurationElement" FullName="System.IdentityModel.Services.Configuration.FederationConfigurationElement">
+  <TypeSignature Language="C#" Value="public sealed class FederationConfigurationElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FederationConfigurationElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.Configuration.FederationConfigurationElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="&lt;federationConfiguration&gt;" /> Element in einer Konfigurationsdatei. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<federationConfiguration>` Element enthält die Einstellungen, die das WS-Verbund-Authentifizierungsmodul konfigurieren (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>) und die Sitzung Authentifizierungsmodul (<xref:System.IdentityModel.Services.SessionAuthenticationModule>).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederationConfigurationElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfigurationElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Services.Configuration.FederationConfigurationElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.CookieHandlerElement CookieHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.CookieHandlerElement CookieHandler" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationElement.CookieHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieHandler", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandlerElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das untergeordnete Element <see langword="&lt;cookieHandler&gt;" /> Element.</summary>
+        <value>Das untergeordnete Element <see langword="&lt;cookieHandler&gt;" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<cookieHandler>` Element konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> Objekt, mit der Sitzung Authentifizierungsmodul (<xref:System.IdentityModel.Services.SessionAuthenticationModule>) zum Lesen und Schreiben von Cookies verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomElement">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement CustomElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement CustomElement" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationElement.CustomElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen untergeordneten Konfigurationselement, falls vorhanden.</summary>
+        <value>Das benutzerdefinierte Konfigurationselement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdentityConfigurationName">
+      <MemberSignature Language="C#" Value="public string IdentityConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IdentityConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationElement.IdentityConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("identityConfigurationName", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="identityConfigurationName" /> Attribut.</summary>
+        <value>Der Name des der <see langword="&lt;identityConfiguration&gt;" /> Abschnitt zuzuordnen <see langword="&lt;federationConfiguration&gt;" /> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConfigured">
+      <MemberSignature Language="C#" Value="public bool IsConfigured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConfigured" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationElement.IsConfigured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieses Element nicht standardmäßiger Werte konfiguriert worden ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Element nicht standardmäßiger Werte konfiguriert worden ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", Options=System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="name" /> Attribut.</summary>
+        <value>Der Name dieses Konfigurationselements Verbund.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `name` -Attribut legt den Namen zuzuordnen `<federationConfiguration>` Element. Wenn die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement.Name%2A> Eigenschaft ist `null`, das aktuelle Element ist die Standardkonfiguration für den Verbund.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedElement">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedElement (string elementName, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedElement(string elementName, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfigurationElement.OnDeserializeUnrecognizedElement(System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">To be added.</param>
+        <param name="reader">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceCertificate">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.ServiceCertificateElement ServiceCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.ServiceCertificateElement ServiceCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationElement.ServiceCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serviceCertificate", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.ServiceCertificateElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das untergeordnete Element <see langword="&lt;serviceCertificate&gt;" /> Element.</summary>
+        <value>Das untergeordnete Element <see langword="&lt;serviceCertificate&gt;" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<serviceCertificate>` Element stellt die Position und Validierung der Einstellungen für das x. 509-Zertifikat, das zum Verschlüsseln und Entschlüsseln von Token verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WsFederation">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.Configuration.WSFederationElement WsFederation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.Configuration.WSFederationElement WsFederation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationElement.WsFederation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("wsFederation", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.Configuration.WSFederationElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das untergeordnete Element <see langword="&lt;wsFederation&gt;" /> Element.</summary>
+        <value>Das untergeordnete Element <see langword="&lt;wsFederation&gt;" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<wsFederation>` -Element stellt die Konfiguration für das WS-Verbund-Konfigurationsmodul bereit (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

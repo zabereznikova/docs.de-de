@@ -1,0 +1,1716 @@
+<Type Name="WebEventCodes" FullName="System.Web.Management.WebEventCodes">
+  <TypeSignature Language="C#" Value="public sealed class WebEventCodes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebEventCodes extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebEventCodes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Codes der ASP.NET-Systemüberwachung Ereignisse zugeordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Systemüberwachung kann Produktions- und Vorgänge Mitarbeiter bereitgestellte Webanwendungen verwalten. Die <xref:System.Web.Management> Namespace enthält die integritätsereignis Typen, die verantwortlich für das Verpacken Integritätsstatus Anwendungsdaten und die Anbietertypen, die für die Verarbeitung dieser Daten verantwortlich. Darüber hinaus wird die unterstützende Typen, mit denen bei der Verwaltung von integritätsereignisse enthält.  
+  
+ Die <xref:System.Web.Management.WebEventCodes> Klasse enthält Code, der Identifizierung der Systemüberwachung Ereignisse. Zwei Typen von Codes innerhalb der Klasse definiert werden: wichtigen Codes die Systemüberwachung ASP.NET-Ereignissen identifizieren; und Detail-Codes, die Weitere Informationen zu einem zugehörigem wichtige Code bereitstellen. Diese Codes werden als ganze Zahlen anstatt als eine Enumeration, um Erweiterungen zuzulassen implementiert.  
+  
+ Wenn ein Systemüberwachung-Ereignis ausgelöst wird, ist er ein wichtiges Ereigniscode zugeordnet. Die folgende Liste enthält die Kategorien von wichtigen Ereigniscodes an, die innerhalb der <xref:System.Web.Management.WebEventCodes> Klasse:  
+  
+-   **Anwendungscode**. Anwendungscode gibt Ereignisse in der Lebensdauer einer Anwendung, z. B. starten und Herunterfahren. Ihre Werte sind größer als die <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase> Feldkonstante. Sie zugeordnet sind die <xref:System.Web.Management.WebApplicationLifetimeEvent> -Ereignis des Typs. Das Taktereignis ist eine besondere Art von Ereignis zu Anwendungsfehler. Er gibt Ereignisse, die ausgelöst wird, in regelmäßigen Abständen, um Informationen über den Zustand des ausgeführten Prozesses bereitzustellen. Er zugeordnet ist die <xref:System.Web.Management.WebHeartbeatEvent> -Ereignis des Typs.  
+  
+-   **Anfordern von Codes**. Anforderungscodes identifizieren nicht Fehlerereignisse, die pro Anforderung Informationen bereitstellen. Ihre Werte sind größer als die <xref:System.Web.Management.WebEventCodes.RequestCodeBase> Feldkonstante. Sie zugeordnet sind die <xref:System.Web.Management.WebRequestEvent> -Ereignis des Typs.  
+  
+-   **Fehlercodes**. Fehlercodes Identifizieren der Ereignisse, die Informationen über zwei Arten von Fehlern enthalten: Fehler mit speziellem Bezug auf eine webanforderung und Systemfehler. Im Zusammenhang mit webanforderungen Fehlern zählen nicht behandelte Ausnahmen, Fehler Ansichtszustand und Eingabe-Validierungsfehler. Sie zugeordnet sind die <xref:System.Web.Management.WebRequestErrorEvent> -Ereignis des Typs. Der Systemfehler betreffen die Konfiguration oder einer Anwendung Code, einschließlich Parser- und Kompilierungsfehler auftreten. Sie zugeordnet sind die <xref:System.Web.Management.WebErrorEvent> -Ereignis des Typs. Beide Arten von Fehlern sind Werte größer als die <xref:System.Web.Management.WebEventCodes.ErrorCodeBase> Feldkonstante.  
+  
+-   **Audit Codes**. Audit-Codes Identifizieren der Ereignisse, die überprüfbaren Informationen wie z. B. Anmeldeversuche Zugriff sicherheitsverletzungen und Autorisierung Verstöße enthalten. Ihre Werte sind größer als <xref:System.Web.Management.WebEventCodes.AuditCodeBase>. Sie zugeordnet sind <xref:System.Web.Management.WebAuditEvent> und der zugehörigen Typen abgeleitete Ereignis.  
+  
+-   **Sonstige Fehlercodes**. Sonstige Codes nicht identifizieren der Ereignisse, aber es werden verwendet, um den nicht standardmäßigen Ereignisinformationen zu kennzeichnen. Ihre Werte sind größer als <xref:System.Web.Management.WebEventCodes.MiscCodeBase>. Finden Sie auch mit <xref:System.Web.Management.WebEventCodes.WebEventProviderInformation> für Weitere Informationen.  
+  
+ Sie können Ihre eigenen benutzerdefinierten Ereigniscode erstellen, indem Sie die oben genannten Codewerte auswählen <xref:System.Web.Management.WebEventCodes.WebExtendedBase>.  
+  
+ In der `eventMappings` Systemüberwachung Konfigurationselement, Sie können optional einen Ereigniscode Adressbereich angeben.  Wenn der Bereichs angegeben wird, gilt die Zuordnung nur auf die Ereignisse, die einen Ereigniscode innerhalb dieses Bereichs liegt; Andernfalls gilt es die Ereigniscodes. Die folgende Konfigurationsdatei Auszug zeigt die <xref:System.Web.Management.EventLogWebEventProvider> Verarbeitung konfiguriert <xref:System.Web.Management.WebFailureAuditEvent> Ereignisse, deren Ereigniscodes, zu "Überwachung gehören".  
+  
+```  
+<healthMonitoring>  
+  <eventMappings>   
+    <add name="Failure Audits" type=  
+      "System.Web.Management.WebFailureAuditEvent,System.Web, Version=2.0.3600.0,Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />  
+  </eventMappings>  
+  
+  <rules>  
+    <add name="Failure Audits Default"  
+      eventName="Failure Audits"  
+      provider="EventLogProvider"  
+      profile="Default"  
+      minInterval="00:01:00" />  
+  </rules>  
+</healthMonitoring>  
+```  
+  
+ Sie können Ihre eigenen benutzerdefinierten Ereigniscode erstellen, indem Sie die oben genannten Codewerte auswählen <xref:System.Web.Management.WebEventCodes.WebExtendedBase>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationCodeBase">
+      <MemberSignature Language="C#" Value="public const int ApplicationCodeBase = 1000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationCodeBase = (1000)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1000</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die ASP.NET Systemüberwachung Anwendung-Ereigniscodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase> Wert stellt den Offset für wichtige Ereigniscodes zugeordneten der <xref:System.Web.Management.WebApplicationLifetimeEvent> Typ. Werte größer als alle Anwendungscodes zugewiesen <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationCompilationEnd">
+      <MemberSignature Language="C#" Value="public const int ApplicationCompilationEnd = 1004;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationCompilationEnd = (1004)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationCompilationEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1004</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Kompilierung der Anwendung beendet hat. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationCompilationEnd> Wert ist ein wichtigen Code, und sein Wert ist größer als die <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase> Wert. ASP.NET löst das zugehörige <xref:System.Web.Management.WebApplicationLifetimeEvent> Ereignis aus, wenn die Kompilierung der Anwendung beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationCompilationStart">
+      <MemberSignature Language="C#" Value="public const int ApplicationCompilationStart = 1003;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationCompilationStart = (1003)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationCompilationStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1003</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Kompilierung der Anwendung gestartet wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationCompilationStart> Wert ist ein wichtigen Code, und sein Wert ist größer als die <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase> Wert. ASP.NET löst das zugehörige <xref:System.Web.Management.WebApplicationLifetimeEvent> Ereignis, wenn die Kompilierung der Anwendung startet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationDetailCodeBase">
+      <MemberSignature Language="C#" Value="public const int ApplicationDetailCodeBase = 50000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationDetailCodeBase = (50000)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationDetailCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50000</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die Anwendung Detail-Ereigniscodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationDetailCodeBase> Wert stellt den Offset für die Details des Bereichs zugeordneten der <xref:System.Web.Management.WebApplicationLifetimeEvent> Typ. Alle Details-Anwendungscodes zugewiesen Werte größer als <xref:System.Web.Management.WebEventCodes.ApplicationDetailCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationHeartbeat">
+      <MemberSignature Language="C#" Value="public const int ApplicationHeartbeat = 1005;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationHeartbeat = (1005)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationHeartbeat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1005</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass ein Taktereignis aufgetreten ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationHeartbeat> ist ein wichtiger Code, und sein Wert ist größer als <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase>. ASP.NET löst das zugehörige <xref:System.Web.Management.WebHeartbeatEvent> Ereignis in regelmäßigen Abständen, wie von der Konfigurationsdatei definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdown">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdown = 1002;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdown = (1002)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1002</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass eine Anwendung heruntergefahren wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdown>ist ein wichtiger Code, und sein Wert ist größer als <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase>. ASP.NET löst das zugehörige <xref:System.Web.Management.WebApplicationLifetimeEvent> Ereignis aus, wenn die Anwendung beendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownBinDirChangeOrDirectoryRename">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownBinDirChangeOrDirectoryRename = 50007;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownBinDirChangeOrDirectoryRename = (50007)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownBinDirChangeOrDirectoryRename" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50007</MemberValue>
+      <Docs>
+        <summary>Stellt den Ereigniscode, der angibt, ein Unterverzeichnis im Verzeichnis Bin der Anwendung geändert oder umbenannt wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationShutdownBinDirChangeOrDirectoryRename> ist der Detailcode, der die Ursachen für das Herunterfahren angibt.  
+  
+ Wenn ein Unterverzeichnis im Verzeichnis Bin der Anwendung geändert oder umbenannt wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownBinDirChangeOrDirectoryRename>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownBrowsersDirChangeOrDirectoryRename">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownBrowsersDirChangeOrDirectoryRename = 50008;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownBrowsersDirChangeOrDirectoryRename = (50008)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownBrowsersDirChangeOrDirectoryRename" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50008</MemberValue>
+      <Docs>
+        <summary>Stellt den Ereigniscode, der angibt, ein Unterverzeichnis im Anwendungsverzeichnis geändert oder umbenannt wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownBrowsersDirChangeOrDirectoryRename>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn ein Unterverzeichnis im Anwendungsverzeichnis geändert oder umbenannt wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownBrowsersDirChangeOrDirectoryRename>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownBuildManagerChange">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownBuildManagerChange = 50017;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownBuildManagerChange = (50017)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownBuildManagerChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50017</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der Build-Manager eine Änderung, die die Anwendungsdomäne vorgenommen hat beendet werden muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownBuildManagerChange>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn der Build-Manager einer Änderung vorgenommen hat erfordert, dass der Anwendungsdomäne beendet werden, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownBuildManagerChange>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownChangeInGlobalAsax">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownChangeInGlobalAsax = 50003;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownChangeInGlobalAsax = (50003)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownChangeInGlobalAsax" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50003</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Datei "Global.asax" geändert hat. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownChangeInGlobalAsax>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn die Datei "Global.asax" geändert wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code, der <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownChangeInGlobalAsax>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownChangeInSecurityPolicyFile">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownChangeInSecurityPolicyFile = 50006;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownChangeInSecurityPolicyFile = (50006)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownChangeInSecurityPolicyFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50006</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Sicherheitsrichtliniendatei geändert hat. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownChangeInSecurityPolicyFile>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn die Sicherheitsrichtliniendatei geändert wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownChangeInSecurityPolicyFile>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownCodeDirChangeOrDirectoryRename">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownCodeDirChangeOrDirectoryRename = 50009;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownCodeDirChangeOrDirectoryRename = (50009)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownCodeDirChangeOrDirectoryRename" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50009</MemberValue>
+      <Docs>
+        <summary>Stellt den Ereigniscode, der angibt, ein Unterverzeichnis im Verzeichnis App_Code geändert oder umbenannt wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownCodeDirChangeOrDirectoryRename>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn ein Unterverzeichnis im Verzeichnis App_Code geändert oder umbenannt wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownCodeDirChangeOrDirectoryRename>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownConfigurationChange">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownConfigurationChange = 50004;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownConfigurationChange = (50004)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownConfigurationChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50004</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Konfigurationsdatei geändert hat. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownConfigurationChange>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn die Konfigurationsdatei geändert wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code, der <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownConfigurationChange>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownHostingEnvironment">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownHostingEnvironment = 50002;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownHostingEnvironment = (50002)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownHostingEnvironment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50002</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die hostumgebung heruntergefahren wird. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationShutdownHostingEnvironment> ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn die hostumgebung heruntergefahren wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownHostingEnvironment>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownHttpRuntimeClose">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownHttpRuntimeClose = 50013;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownHttpRuntimeClose = (50013)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownHttpRuntimeClose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50013</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die ASP.NET zur Laufzeit explizit geschlossen wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownHttpRuntimeClose>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn ASP.NET zur Laufzeit explizit geschlossen wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownHttpRuntimeClose>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownIdleTimeout">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownIdleTimeout = 50011;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownIdleTimeout = (50011)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownIdleTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50011</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass das Leerlauftimeout überschritten wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ApplicationShutdownIdleTimeout> ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn das Leerlaufzeitlimit überschritten wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownIdleTimeout>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownInitializationError">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownInitializationError = 50014;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownInitializationError = (50014)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownInitializationError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50014</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis zeigt an, dass der anwendungsinitialisierung Fehler dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownInitializationError>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn ein anwendungsinitialisierung Fehler auftritt, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownInitializationError>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownMaxRecompilationsReached">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownMaxRecompilationsReached = 50015;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownMaxRecompilationsReached = (50015)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownMaxRecompilationsReached" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50015</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die maximale Anzahl der neukompilierungen erreicht wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownMaxRecompilationsReached>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn die maximale Anzahl der neukompilierungen erreicht wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code, der <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownMaxRecompilationsReached>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownPhysicalApplicationPathChanged">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownPhysicalApplicationPathChanged = 50012;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownPhysicalApplicationPathChanged = (50012)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownPhysicalApplicationPathChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50012</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der physische Pfad der Anwendung geändert wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownPhysicalApplicationPathChanged>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn der physische Pfad der Anwendung geändert wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownPhysicalApplicationPathChanged>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownResourcesDirChangeOrDirectoryRename">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownResourcesDirChangeOrDirectoryRename = 50010;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownResourcesDirChangeOrDirectoryRename = (50010)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownResourcesDirChangeOrDirectoryRename" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50010</MemberValue>
+      <Docs>
+        <summary>Stellt den Ereigniscode, der angibt, ein Unterverzeichnis im Verzeichnis App_Resources geändert oder umbenannt wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownResourcesDirChangeOrDirectoryRename>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn ein Unterverzeichnis im Verzeichnis App_Resources geändert oder umbenannt wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownResourcesDirChangeOrDirectoryRename>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownUnknown">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownUnknown = 50001;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownUnknown = (50001)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownUnknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50001</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis angegeben wird, dass der Grund für das Herunterfahren der Anwendung unbekannt ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownUnknown>ist der Detailcode, der die Ursachen für das Herunterfahren angibt.  
+  
+ Wenn die Anwendung aus einem unbekannten Grund heruntergefahren wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownUnknown>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationShutdownUnloadAppDomainCalled">
+      <MemberSignature Language="C#" Value="public const int ApplicationShutdownUnloadAppDomainCalled = 50005;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationShutdownUnloadAppDomainCalled = (50005)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationShutdownUnloadAppDomainCalled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50005</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Anwendungsdomäne explizit entladen wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationShutdownUnloadAppDomainCalled>ist der Detailcode, der die Ursache für das Herunterfahren angibt.  
+  
+ Wenn die Anwendungsdomäne explizit entladen wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code, der <xref:System.Web.Management.WebEventCodes.ApplicationShutdown> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ApplicationShutdownUnloadAppDomainCalled>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationStart">
+      <MemberSignature Language="C#" Value="public const int ApplicationStart = 1001;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ApplicationStart = (1001)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ApplicationStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1001</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass eine Anwendung gestartet wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ApplicationStart>ist der wichtige Code, der auf den Anfang einer Anwendung verweist. Wenn die Anwendung gestartet wird, löst ASP.NET eine <xref:System.Web.Management.WebApplicationLifetimeEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.ApplicationStart>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditCodeBase">
+      <MemberSignature Language="C#" Value="public const int AuditCodeBase = 4000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditCodeBase = (4000)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4000</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die ASP.NET Systemüberwachung Audit-Ereigniscodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.AuditCodeBase> Wert stellt den Offset für der Code Bereich zugeordneten der <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent>, <xref:System.Web.Management.WebSuccessAuditEvent>, <xref:System.Web.Management.WebAuthenticationFailureAuditEvent>, <xref:System.Web.Management.WebFailureAuditEvent>, und <xref:System.Web.Management.WebViewStateFailureAuditEvent> Typen.  
+  
+ Alle Audit-Codes sind Werte, die größer als zugewiesen <xref:System.Web.Management.WebEventCodes.AuditCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditDetailCodeBase">
+      <MemberSignature Language="C#" Value="public const int AuditDetailCodeBase = 50200;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditDetailCodeBase = (50200)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditDetailCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50200</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die ASP.NET Audit-Detail-Ereigniscodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditDetailCodeBase>Stellt den Offset für den Details der Ereigniscode Bereich Überwachungsereignisse zugeordnet. Alle Audit-Detail-Codes sind Werte, die größer als zugewiesen <xref:System.Web.Management.WebEventCodes.AuditDetailCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditFileAuthorizationFailure">
+      <MemberSignature Language="C#" Value="public const int AuditFileAuthorizationFailure = 4008;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditFileAuthorizationFailure = (4008)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditFileAuthorizationFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4008</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis gibt an, dass die Datei Autorisierung während einer webanforderung Fehler dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditFileAuthorizationFailure>ist der wichtige Code für das Systemereignis im Zusammenhang mit dem Zugriff auf eine Datei, die für die Autorisierung nicht gewährt wird. Wenn eine Datei Autorisierungsfehler auftritt, löst ASP.NET eine <xref:System.Web.Management.WebFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditFileAuthorizationFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditFileAuthorizationSuccess">
+      <MemberSignature Language="C#" Value="public const int AuditFileAuthorizationSuccess = 4004;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditFileAuthorizationSuccess = (4004)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditFileAuthorizationSuccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4004</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis gibt an, dass die Datei-Autorisierung erfolgreich während einer webanforderung aufgetreten ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditFileAuthorizationSuccess>ist der wichtige Code für das Systemereignis im Zusammenhang mit dem Zugriff auf eine Datei, die für die Autorisierung gewährt wird. Wenn eine Autorisierung erfolgreich ist, löst ASP.NET eine <xref:System.Web.Management.WebSuccessAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditFileAuthorizationSuccess>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditFormsAuthenticationFailure">
+      <MemberSignature Language="C#" Value="public const int AuditFormsAuthenticationFailure = 4005;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditFormsAuthenticationFailure = (4005)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditFormsAuthenticationFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4005</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis zeigt an, dass die Formular-Authentifizierung während einer webanforderung Fehler dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationFailure>ist der wichtige Code für das Systemereignis in Bezug auf fehlgeschlagene Authentifizierung des Benutzers. Wenn dieses Ereignis auftritt, löst ASP.NET eine <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditFormsAuthenticationSuccess">
+      <MemberSignature Language="C#" Value="public const int AuditFormsAuthenticationSuccess = 4001;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditFormsAuthenticationSuccess = (4001)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditFormsAuthenticationSuccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4001</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis zeigt an, dass die Formular-Authentifizierung erfolgreich während einer webanforderung aufgetreten sind. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationSuccess> der wichtige Code für das integritätsereignis im Zusammenhang mit einer Benutzer Authentifizierung erfolgreich ist. Wenn dieses Ereignis auftritt, löst ASP.NET eine <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationSuccess>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditInvalidViewStateFailure">
+      <MemberSignature Language="C#" Value="public const int AuditInvalidViewStateFailure = 4009;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditInvalidViewStateFailure = (4009)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditInvalidViewStateFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4009</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der Ansichtszustand Überprüfung fehlgeschlagen. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditInvalidViewStateFailure>ist der wichtige Code für die im Zusammenhang mit der Ansichtszustand Verifizierungsfehler integritätsereignis. Wenn dieses Ereignis auftritt, löst ASP.NET eine <xref:System.Web.Management.WebViewStateFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditInvalidViewStateFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditMembershipAuthenticationFailure">
+      <MemberSignature Language="C#" Value="public const int AuditMembershipAuthenticationFailure = 4006;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditMembershipAuthenticationFailure = (4006)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4006</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis gibt an, dass eine Mitgliedschaft-Authentifizierung während einer webanforderung Fehler dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationFailure> ist der wichtige Code für das integritätsereignis im Zusammenhang mit der ein Benutzer Mitglied-Authentifizierungsfehler. Wenn dieses Ereignis auftritt, löst ASP.NET eine <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditMembershipAuthenticationSuccess">
+      <MemberSignature Language="C#" Value="public const int AuditMembershipAuthenticationSuccess = 4002;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditMembershipAuthenticationSuccess = (4002)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationSuccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4002</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis gibt an, dass eine Mitgliedschaft Clientauthentifizierungsversuche während einer webanforderung aufgetreten ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationSuccess>ist der wichtige Code für das Systemereignis im Zusammenhang mit der ein Benutzer Mitgliedschaft Authentifizierung erfolgreich. Wenn dieses Ereignis auftritt, löst ASP.NET eine <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationSuccess>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditUnhandledAccessException">
+      <MemberSignature Language="C#" Value="public const int AuditUnhandledAccessException = 4011;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditUnhandledAccessException = (4011)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditUnhandledAccessException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4011</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass eine nicht behandelte Ausnahme während einer webanforderung aufgetreten sind. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditUnhandledAccessException>ist der wichtige Code für das nicht behandelte Systemereignis im Zusammenhang mit dem Zugriff auf eine Ressource, die für die Autorisierung nicht gewährt wird. Wenn dieses Ereignis auftritt, löst ASP.NET eine <xref:System.Web.Management.WebFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditUnhandledAccessException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditUnhandledSecurityException">
+      <MemberSignature Language="C#" Value="public const int AuditUnhandledSecurityException = 4010;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditUnhandledSecurityException = (4010)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditUnhandledSecurityException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4010</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass eine nicht behandelte Ausnahme während einer webanforderung aufgetreten sind. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditUnhandledSecurityException>ist der wichtige Code von der nicht behandelten integritätsereignis im Zusammenhang mit einer sicherheitsverletzung. Wenn eine nicht behandelte Ausnahme ausgelöst wird, löst ASP.NET eine <xref:System.Web.Management.WebFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditUnhandledSecurityException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditUrlAuthorizationFailure">
+      <MemberSignature Language="C#" Value="public const int AuditUrlAuthorizationFailure = 4007;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditUrlAuthorizationFailure = (4007)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditUrlAuthorizationFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4007</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis gibt an, dass die URL-Autorisierung während einer webanforderung Fehler dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditUrlAuthorizationFailure>ist der wichtige Code für das Systemereignis im Zusammenhang mit der Verwendung einer URL für die Autorisierung nicht gewährt wird. Wenn die URL-Autorisierungsfehler auftritt, löst ASP.NET eine <xref:System.Web.Management.WebFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditUrlAuthorizationFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditUrlAuthorizationSuccess">
+      <MemberSignature Language="C#" Value="public const int AuditUrlAuthorizationSuccess = 4003;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AuditUrlAuthorizationSuccess = (4003)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.AuditUrlAuthorizationSuccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4003</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis zeigt an, dass die URL-Autorisierung erfolgreich während einer webanforderung aufgetreten sind. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.AuditUrlAuthorizationSuccess>ist der wichtige Code für das Systemereignis im Zusammenhang mit der Verwendung einer URL für die Autorisierung gewährt wird. Wenn eine URL erfolgreich autorisiert wurde, löst ASP.NET eine <xref:System.Web.Management.WebSuccessAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditUrlAuthorizationSuccess>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCodeBase">
+      <MemberSignature Language="C#" Value="public const int ErrorCodeBase = 3000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ErrorCodeBase = (3000)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ErrorCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3000</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die ASP.NET Systemüberwachung Ereignis Fehlercodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.ErrorCodeBase> Wert stellt den Offset für der Code Bereich zugeordneten der <xref:System.Web.Management.WebRequestErrorEvent> und <xref:System.Web.Management.WebErrorEvent> Typen. Alle Fehlercodes sind Werte, die größer als zugewiesen <xref:System.Web.Management.WebEventCodes.ErrorCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiredTicketFailure">
+      <MemberSignature Language="C#" Value="public const int ExpiredTicketFailure = 50202;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ExpiredTicketFailure = (50202)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.ExpiredTicketFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50202</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass das angegebene Ticket abgelaufen ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.ExpiredTicketFailure>ist der Detailcode, der die Ursache der fehlgeschlagenen Authentifizierung des Benutzers angibt.  
+  
+ Wenn die Authentifizierung des Benutzers aufgrund eines abgelaufenen Tickets fehlschlägt, löst ASP.NET eine <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationFailure> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.ExpiredTicketFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidEventCode">
+      <MemberSignature Language="C#" Value="public const int InvalidEventCode = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidEventCode = (-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.InvalidEventCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der Wert des Ereignisses nicht zulässig ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.InvalidEventCode> stellt die Verwendung von einem Codewert, der vom System nicht zulässig ist. Dies kann z. B. der Fall sein, wenn Sie ein ASP.NET Systemüberwachung Ereignis anpassen und verwenden Sie einen Codewert, der bereits vom System zugewiesen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidTicketFailure">
+      <MemberSignature Language="C#" Value="public const int InvalidTicketFailure = 50201;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidTicketFailure = (50201)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.InvalidTicketFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50201</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass das übergebene Ticket ungültig ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.InvalidTicketFailure>ist der Detailcode, der die Ursache der fehlgeschlagenen Authentifizierung des Benutzers angibt.  
+  
+ Wenn die Authentifizierung des Benutzers aufgrund eines ungültigen Tickets fehlschlägt, löst ASP.NET eine <xref:System.Web.Management.WebAuthenticationFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationFailure> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.InvalidTicketFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidViewState">
+      <MemberSignature Language="C#" Value="public const int InvalidViewState = 50204;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidViewState = (50204)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.InvalidViewState" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50204</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der bereitgestellte Ansichtszustand ungültig ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.InvalidViewState>ist der Detailcode, der die Ursache des Fehlers Ansichtszustand angibt.  
+  
+ Wenn der Ansichtszustand Fehler auftritt, löst ASP.NET eine <xref:System.Web.Management.WebViewStateFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditInvalidViewStateFailure> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.InvalidViewState>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidViewStateMac">
+      <MemberSignature Language="C#" Value="public const int InvalidViewStateMac = 50203;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidViewStateMac = (50203)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.InvalidViewStateMac" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50203</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der bereitgestellte Ansichtszustand die integritätsprüfung ist fehlgeschlagen. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.InvalidViewStateMac>ist der Detailcode, der die Ursache des Fehlers Ansichtszustand angibt.  
+  
+ Wenn die Überprüfung der Nachrichtenintegrität der bereitgestellten Ansichtszustand ein Fehler auftritt, löst ASP.NET eine <xref:System.Web.Management.WebViewStateFailureAuditEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.AuditInvalidViewStateFailure> und den Detailcode ein <xref:System.Web.Management.WebEventCodes.InvalidViewStateMac>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiscCodeBase">
+      <MemberSignature Language="C#" Value="public const int MiscCodeBase = 6000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MiscCodeBase = (6000)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.MiscCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>6000</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die ASP.NET Systemüberwachung Web sonstige Ereigniscodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.MiscCodeBase> Wert stellt den Offset für den Code Bereich zugeordneten integritätsereignisse, die nicht kategorisiert wurden. Alle sonstigen Codes sind Werte, die größer als zugewiesen <xref:System.Web.Management.WebEventCodes.MiscCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestCodeBase">
+      <MemberSignature Language="C#" Value="public const int RequestCodeBase = 2000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RequestCodeBase = (2000)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RequestCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2000</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die ASP.NET Systemüberwachung Web-Request-Ereigniscodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.RequestCodeBase> Wert stellt den Offset für der Code Bereich zugeordneten der <xref:System.Web.Management.WebRequestEvent> Typ. Alle anforderungscodes sind Werte, die größer als zugewiesen <xref:System.Web.Management.WebEventCodes.RequestCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestTransactionAbort">
+      <MemberSignature Language="C#" Value="public const int RequestTransactionAbort = 2002;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RequestTransactionAbort = (2002)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RequestTransactionAbort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2002</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die webanforderung abgebrochen wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.RequestTransactionAbort>ist der wichtige Code, der auf eine nicht ordnungsgemäße Beendigung von Web-Anforderung verweist. Bei eine webanforderung abgebrochen wird, löst ASP.NET eine <xref:System.Web.Management.WebRequestEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.RequestTransactionAbort>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestTransactionComplete">
+      <MemberSignature Language="C#" Value="public const int RequestTransactionComplete = 2001;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RequestTransactionComplete = (2001)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RequestTransactionComplete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2001</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Web-Anforderung abgeschlossen wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.RequestTransactionComplete>ist der wichtige Code, der auf die normale Beendigung einer Web-Anforderung verweist. Beim Abschluss der webanforderung normalerweise löst ASP.NET eine <xref:System.Web.Management.WebRequestEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.RequestTransactionComplete>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeErrorPostTooLarge">
+      <MemberSignature Language="C#" Value="public const int RuntimeErrorPostTooLarge = 3004;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RuntimeErrorPostTooLarge = (3004)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RuntimeErrorPostTooLarge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3004</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Größe der bereitgestellten Informationen den zulässigen Höchstwert überschritten. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.RuntimeErrorPostTooLarge>ist der wichtige Code, der mit einer Datenquelle Posten von Beiträgen, dessen Größe bezieht sich der zulässigen Grenzwerte überschreitet. Wenn ein Formular Daten, die den zulässigen Grenzen überschreitet sendet, löst ASP.NET eine <xref:System.Web.Management.WebRequestErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.RuntimeErrorPostTooLarge>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeErrorRequestAbort">
+      <MemberSignature Language="C#" Value="public const int RuntimeErrorRequestAbort = 3001;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RuntimeErrorRequestAbort = (3001)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RuntimeErrorRequestAbort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3001</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass die Web-Anforderung wurde abgebrochen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.RuntimeErrorRequestAbort>ist der wichtige Code, der auf die nicht ordnungsgemäße Beendigung der webanforderung verweist. Wenn die webanforderung abgebrochen wird, löst ASP.NET eine <xref:System.Web.Management.WebRequestErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.RuntimeErrorRequestAbort>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeErrorUnhandledException">
+      <MemberSignature Language="C#" Value="public const int RuntimeErrorUnhandledException = 3005;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RuntimeErrorUnhandledException = (3005)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RuntimeErrorUnhandledException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3005</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis zeigt an, dass eine nicht behandelte Ausnahme aufgetreten ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.RuntimeErrorUnhandledException>ist der wichtige Code, der auf das Auftreten einer Ausnahme verweist, die nicht von ASP.NET behandelt wird. Wenn die Ausnahme auftritt, löst ASP.NET eine <xref:System.Web.Management.WebRequestErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.RuntimeErrorUnhandledException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeErrorValidationFailure">
+      <MemberSignature Language="C#" Value="public const int RuntimeErrorValidationFailure = 3003;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RuntimeErrorValidationFailure = (3003)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RuntimeErrorValidationFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3003</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass ein Fehler bei der Validierung. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.RuntimeErrorValidationFailure>ist der wichtige Code, der auf das Vorkommen von eine Validierungsausnahme verweist, die nicht von ASP.NET behandelt wird. Wenn diese Ausnahme tritt auf, löst ASP.NET eine <xref:System.Web.Management.WebRequestErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.RuntimeErrorValidationFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeErrorViewStateFailure">
+      <MemberSignature Language="C#" Value="public const int RuntimeErrorViewStateFailure = 3002;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RuntimeErrorViewStateFailure = (3002)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RuntimeErrorViewStateFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3002</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass ein Ansichtszustand Fehler aufgetreten ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.RuntimeErrorViewStateFailure>ist der wichtige Code, der auf einem Ansichtszustand Fehler verweist. In diesem Fall löst ASP.NET eine <xref:System.Web.Management.WebRequestErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.RuntimeErrorViewStateFailure>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeErrorWebResourceFailure">
+      <MemberSignature Language="C#" Value="public const int RuntimeErrorWebResourceFailure = 3012;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RuntimeErrorWebResourceFailure = (3012)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.RuntimeErrorWebResourceFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3012</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass ein Zugriff auf eine Webressource Fehler aufgetreten. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlProviderEventsDropped">
+      <MemberSignature Language="C#" Value="public const int SqlProviderEventsDropped = 50301;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SqlProviderEventsDropped = (50301)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.SqlProviderEventsDropped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50301</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der SQL-Anbieter Ereignisse gelöscht. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn nach der die Benachrichtigung währenddessen Ereignisse verworfen wurden eintritt, wird eine spezielle Zeile für die Warnung mit SQLServer geschrieben. Diese Zeile geschrieben werden, bevor alle anderen Ereignisse in der Benachrichtigung und wird nicht in die Gesamtanzahl der Ereignisse gezählt, soweit die konfigurierte Größe geleert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateServerConnectionError">
+      <MemberSignature Language="C#" Value="public const int StateServerConnectionError = 50016;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 StateServerConnectionError = (50016)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.StateServerConnectionError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50016</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass bei der Kommunikation mit dem Statusserver ist ein Fehler aufgetreten. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tritt ein Verbindungsfehler während der Kommunikation mit dem Statusserver, löst ASP.NET eine <xref:System.Web.Management.WebErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.WebErrorOtherError> und Code, der detaillierte <xref:System.Web.Management.WebEventCodes.StateServerConnectionError>.  
+  
+ Die <xref:System.Web.Management.WebEventCodes.StateServerConnectionError> ist ein Detailcode und seinen Wert ist größer als die <xref:System.Web.Management.WebEventCodes.ApplicationCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndefinedEventCode">
+      <MemberSignature Language="C#" Value="public const int UndefinedEventCode = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 UndefinedEventCode = (0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.UndefinedEventCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code, der angibt, dass der Codewert wichtiges Ereignis nicht definiert ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.UndefinedEventCode>Stellt die Verwendung eines Werts von wichtigen Code, die nicht vom System definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndefinedEventDetailCode">
+      <MemberSignature Language="C#" Value="public const int UndefinedEventDetailCode = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 UndefinedEventDetailCode = (0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.UndefinedEventDetailCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass der Wert des Detail-Ereignis nicht definiert ist. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.UndefinedEventCode>Stellt die Verwendung von ein Detail-Code-Wert, der nicht durch das System definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebErrorCompilationError">
+      <MemberSignature Language="C#" Value="public const int WebErrorCompilationError = 3007;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebErrorCompilationError = (3007)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebErrorCompilationError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3007</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass ein Fehler aufgetreten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.WebErrorCompilationError>ist der wichtige Code, der auf einen Fehler verweist, die während der Kompilierung der Anwendung aufgetreten sind. Wenn dieser Fehler tritt auf, löst ASP.NET eine <xref:System.Web.Management.WebErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.WebErrorCompilationError>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebErrorConfigurationError">
+      <MemberSignature Language="C#" Value="public const int WebErrorConfigurationError = 3008;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebErrorConfigurationError = (3008)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebErrorConfigurationError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3008</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass ein Konfigurationsfehler aufgetreten. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.WebErrorConfigurationError>ist der wichtige Code, der auf einen Fehler verweist, die während der Phase zum Konfigurieren der Anwendung aufgetreten sind. Wenn dieser Fehler tritt auf, löst ASP.NET eine <xref:System.Web.Management.WebErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.WebErrorConfigurationError>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebErrorObjectStateFormatterDeserializationError">
+      <MemberSignature Language="C#" Value="public const int WebErrorObjectStateFormatterDeserializationError = 3011;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebErrorObjectStateFormatterDeserializationError = (3011)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebErrorObjectStateFormatterDeserializationError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3011</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass während der Deserialisierung des Typs oder der Wert eines Objekts ein Fehler aufgetreten. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebErrorOtherError">
+      <MemberSignature Language="C#" Value="public const int WebErrorOtherError = 3009;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebErrorOtherError = (3009)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebErrorOtherError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3009</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass ein nicht klassifiziertes Fehlers aufgetreten sind. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.WebErrorOtherError>ist der wichtige Code für eines nicht klassifizierten Fehlers. Wenn dieser Fehler tritt auf, löst ASP.NET eine <xref:System.Web.Management.WebErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.WebErrorOtherError>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebErrorParserError">
+      <MemberSignature Language="C#" Value="public const int WebErrorParserError = 3006;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebErrorParserError = (3006)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebErrorParserError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3006</MemberValue>
+      <Docs>
+        <summary>Stellt den Code für das Ereignis zeigt an, dass ein Parserfehler dar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.WebErrorParserError>ist der wichtige Code, der auf einen Fehler verweist, die während der Anwendungsanalyse aufgetreten. Wenn dieser Fehler tritt auf, löst ASP.NET eine <xref:System.Web.Management.WebErrorEvent> mit einem wichtigen Code <xref:System.Web.Management.WebEventCodes.WebErrorParserError>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebErrorPropertyDeserializationError">
+      <MemberSignature Language="C#" Value="public const int WebErrorPropertyDeserializationError = 3010;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebErrorPropertyDeserializationError = (3010)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebErrorPropertyDeserializationError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3010</MemberValue>
+      <Docs>
+        <summary>Stellt das Ereignis Code gibt an, dass während der Deserialisierung einer Eigenschaft ein Fehler aufgetreten. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebEventDetailCodeBase">
+      <MemberSignature Language="C#" Value="public const int WebEventDetailCodeBase = 50300;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebEventDetailCodeBase = (50300)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebEventDetailCodeBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>50300</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die ASP.NET Systemüberwachung Web / Detail-Ereigniscodes an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventCodes.WebEventDetailCodeBase> Wert den Offset darstellt, für die zugeordneten der Detail-Ereignis des Bereichs der <xref:System.Web.Management.WebApplicationLifetimeEvent> Typ. Alle Details-Anwendungscodes zugewiesen Werte größer als <xref:System.Web.Management.WebEventCodes.ApplicationDetailCodeBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebEventProviderInformation">
+      <MemberSignature Language="C#" Value="public const int WebEventProviderInformation = 6001;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebEventProviderInformation = (6001)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebEventProviderInformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>6001</MemberValue>
+      <Docs>
+        <summary>Stellt den Ereigniscode von Anbietern verwendet werden, um nicht dem Standard entsprechende Informationen zu einem Ereignis aufzuzeichnen. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.WebEventCodes.WebEventProviderInformation>die Hauptbestandteile des Codes von Anbietern dient zum Speichern von Ereignisinformationen nicht dem Standard entsprechende Integrität. Der Wert ist größer als <xref:System.Web.Management.WebEventCodes.MiscCodeBase>.  
+  
+ Z. B. wenn ASP.NET integritätsereignisse gelöscht werden, während der Pufferung der <xref:System.Web.Management.SimpleMailWebEventProvider> Fügt eine Warnung an den Anfang der Nachrichten ohne Verwendung der <xref:System.Web.Management.WebEventCodes.WebEventProviderInformation>. Jedoch die einzige Möglichkeit für die <xref:System.Web.Management.SqlWebEventProvider> schreiben Sie diese Warnung ist einen Datensatz in der Datenbank erstellt. Da jeder Datensatz in der Datenbank eine Ereignis-ID erfordert, verwendet der Anbieter die <xref:System.Web.Management.WebEventCodes.WebEventProviderInformation> als die Hauptbestandteile des Codes und <xref:System.Web.Management.WebEventCodes.SqlProviderEventsDropped> als der Detailcode zum Erstellen von dieser ID  
+  
+> [!NOTE]
+>  Wie Sie aus der oben genannten Diskussion sehen die <xref:System.Web.Management.WebEventCodes.WebEventProviderInformation> keine ASP.NET integritätsereignis zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebExtendedBase">
+      <MemberSignature Language="C#" Value="public const int WebExtendedBase = 100000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WebExtendedBase = (100000)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.WebEventCodes.WebExtendedBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>100000</MemberValue>
+      <Docs>
+        <summary>Gibt den Offset für die benutzerdefinierte Ereigniscodes an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein eigenes benutzerdefinierte Ereignis erstellen, müssen Sie einen Ereigniscode verwenden, mit einem Wert größer als <xref:System.Web.Management.WebEventCodes.WebExtendedBase>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

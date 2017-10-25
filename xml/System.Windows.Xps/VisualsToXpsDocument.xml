@@ -1,0 +1,341 @@
+<Type Name="VisualsToXpsDocument" FullName="System.Windows.Xps.VisualsToXpsDocument">
+  <TypeSignature Language="C#" Value="public class VisualsToXpsDocument : System.Windows.Documents.Serialization.SerializerWriterCollator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VisualsToXpsDocument extends System.Windows.Documents.Serialization.SerializerWriterCollator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.VisualsToXpsDocument" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Serialization.SerializerWriterCollator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Schreiben <see cref="T:System.Windows.Media.Visual" /> Objekte zu XML Paper Specification (XPS)-Dokumenten oder auf eine Druckwarteschlange im Batchmodus ausgeführt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da diese Klasse keinen Konstruktor verfügt, verwenden Sie die <xref:System.Windows.Xps.XpsDocumentWriter.CreateVisualsCollator%2A> Methode zum Erstellen einer Instanz.  
+  
+ Die <xref:System.Windows.Xps.VisualsToXpsDocument> schreibt in dasselbe Ziel <xref:System.Windows.Xps.Packaging.XpsDocument> oder <xref:System.Printing.PrintQueue> als die <xref:System.Windows.Xps.XpsDocumentWriter> , erstellt die <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+ Jede <xref:System.Windows.Media.Visual> wird eine Seite im Dokument.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie ein Sortierer visuelle Elemente erstellen und verwenden es zum Schreiben in ein [!INCLUDE[TLA#tla_metro](~/includes/tlasharptla-metro-md.md)] Dokument.  
+  
+ [!code-csharp[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createandwritetovisualscollator)]
+ [!code-vb[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createandwritetovisualscollator)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginBatchWrite">
+      <MemberSignature Language="C#" Value="public override void BeginBatchWrite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void BeginBatchWrite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.BeginBatchWrite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass Schreibvorgänge beginnen können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen diese Methode aufrufen, bevor Sie eine Aufrufen <xref:System.Windows.Xps.VisualsToXpsDocument.Write%2A> oder <xref:System.Windows.Xps.VisualsToXpsDocument.WriteAsync%2A> Methoden.  
+  
+ Rufen Sie nach dem letzten Schreibvorgang, <xref:System.Windows.Xps.VisualsToXpsDocument.EndBatchWrite%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public override void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht einen synchronen Schreibvorgang ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispielsweise wird eine Ausnahme ausgelöst, wenn die <xref:System.Windows.Xps.VisualsToXpsDocument.Cancel%2A> Methode wird aufgerufen, und ein Schreibvorgang wird nicht ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.Xps.XpsWriterException">Der Zustand des <see cref="T:System.Windows.Xps.VisualsToXpsDocument" />-Elements ist nicht kompatibel mit einem <see cref="M:System.Windows.Xps.VisualsToXpsDocument.Cancel" />-Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public override void CancelAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CancelAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.CancelAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht einen asynchronen Schreibvorgang ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispielsweise wird eine Ausnahme ausgelöst, wenn die <xref:System.Windows.Xps.VisualsToXpsDocument.CancelAsync%2A> Methode wird aufgerufen, und ein Schreibvorgang wird nicht ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.Xps.XpsWriterException">Der Zustand des <see cref="T:System.Windows.Xps.VisualsToXpsDocument" />-Elements ist nicht kompatibel mit einem <see cref="M:System.Windows.Xps.VisualsToXpsDocument.CancelAsync" />-Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndBatchWrite">
+      <MemberSignature Language="C#" Value="public override void EndBatchWrite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndBatchWrite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.EndBatchWrite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass Schreibvorgänge enden müssen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem letzten Aufruf von <xref:System.Windows.Xps.VisualsToXpsDocument.Write%2A> oder <xref:System.Windows.Xps.VisualsToXpsDocument.WriteAsync%2A>, rufen Sie diese Methode.  
+  
+ Rufen Sie <xref:System.Windows.Xps.VisualsToXpsDocument.BeginBatchWrite%2A> vor Schreibvorgänge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.Write(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das geschriebene <see cref="T:System.Windows.Media.Visual" />-Objekt.</param>
+        <summary>Schreibt ein <see cref="T:System.Windows.Media.Visual" /> synchron in ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> oder eine <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode verwendet zum Schreiben in ein [!INCLUDE[TLA#tla_metro](~/includes/tlasharptla-metro-md.md)] Dokument.  
+  
+ [!code-csharp[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createandwritetovisualscollator)]
+ [!code-vb[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createandwritetovisualscollator)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.Write(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das geschriebene <see cref="T:System.Windows.Media.Visual" />-Objekt.</param>
+        <param name="printTicket">Ein <see cref="T:System.Printing.PrintTicket" />, das die Standarddruckeinstellungen für das Dokument darstellt.</param>
+        <summary>Schreibt ein <see cref="T:System.Windows.Media.Visual" /> synchron in ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> oder eine <see cref="T:System.Printing.PrintQueue" /> und schließt dabei ein <see cref="T:System.Printing.PrintTicket" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode nicht überprüfen oder ändern Sie den angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>. Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode zum Erstellen einer <xref:System.Printing.PrintTicket> speziell für die <xref:System.Printing.PrintQueue> und gilt für einen angegebenen Drucker.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.WriteAsync(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das geschriebene <see cref="T:System.Windows.Media.Visual" />-Objekt.</param>
+        <summary>Schreibt ein <see cref="T:System.Windows.Media.Visual" /> asynchron in ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> oder eine <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.WriteAsync(System.Windows.Media.Visual,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das geschriebene <see cref="T:System.Windows.Media.Visual" />-Objekt.</param>
+        <param name="userSuppliedState">Ein Objekt, das Daten enthält, die vom Aufrufer an den <see cref="E:System.Windows.Xps.XpsDocumentWriter.WritingCompleted" />-Ereignishandler übergeben werden sollen.</param>
+        <summary>Schreibt ein <see cref="T:System.Windows.Media.Visual" /> asynchron in ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> oder eine <see cref="T:System.Printing.PrintQueue" /> und bezieht zusätzliche Informationen mit ein, die vom Aufrufer an einen Ereignishandler übergeben werden sollen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das geschriebene <see cref="T:System.Windows.Media.Visual" />-Objekt.</param>
+        <param name="printTicket">Ein <see cref="T:System.Printing.PrintTicket" />, das die Standarddruckeinstellungen für das Dokument darstellt.</param>
+        <summary>Schreibt ein <see cref="T:System.Windows.Media.Visual" /> asynchron in ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> oder eine <see cref="T:System.Printing.PrintQueue" /> und schließt dabei ein <see cref="T:System.Printing.PrintTicket" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode nicht überprüfen oder ändern Sie den angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>. Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode zum Erstellen einer <xref:System.Printing.PrintTicket> speziell für die <xref:System.Printing.PrintQueue> und gilt für einen angegebenen Drucker.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.VisualsToXpsDocument.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das geschriebene <see cref="T:System.Windows.Media.Visual" />-Objekt.</param>
+        <param name="printTicket">Ein <see cref="T:System.Printing.PrintTicket" />, das die Standarddruckeinstellungen für das Dokument darstellt.</param>
+        <param name="userSuppliedState">Ein Objekt, das die Daten enthält, die vom Aufrufer an den <see cref="E:System.Windows.Xps.XpsDocumentWriter.WritingCompleted" />-Ereignishandler übergeben werden sollen.</param>
+        <summary>Schreibt ein <see cref="T:System.Windows.Media.Visual" /> asynchron in ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> oder eine <see cref="T:System.Printing.PrintQueue" /> und bezieht auch ein <see cref="T:System.Printing.PrintTicket" /> und zusätzliche Informationen mit ein, die vom Aufrufer an einen Ereignishandler übergeben werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode nicht überprüfen oder ändern Sie den angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>. Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode zum Erstellen einer <xref:System.Printing.PrintTicket> speziell für die <xref:System.Printing.PrintQueue> und gilt für einen angegebenen Drucker.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

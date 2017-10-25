@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.JScript.Vsa">
+  <Docs>
+    <summary>Der Microsoft.JScript.Vsa-Namespace enthält Schnittstellen, mit denen Sie Skripts für.NET Framework-Skriptmodule in JScript können zu integrieren und kompilieren und Ausführen von Code zur Laufzeit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

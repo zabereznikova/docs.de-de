@@ -1,0 +1,95 @@
+<Type Name="ResourceKey" FullName="System.Windows.ResourceKey">
+  <TypeSignature Language="C#" Value="public abstract class ResourceKey : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ResourceKey extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ResourceKey" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Windows.ResourceKey))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse für verschiedene Ressourcenschlüssel.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt keine Funktionen zum Angeben einer gemeinsamen Basisklasse zur Erkennung von einfachen Schlüssel in Ressourcenkomponenten.  
+  
+ / / Ressourcenschlüssel werden Zeichenfolgen oder Instanzen eines Typs. Diese Klasse bietet Unterstützung für Klassen, die andere Objektwerte Schlüsselwerte basieren, in dem die übergebenen Objekte die Eindeutigkeit der generierten Ressourcenschlüssel gewährleisten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ResourceKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz einer Klasse abgeleitet <see cref="T:System.Windows.ResourceKey" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass dies der geschützte Konstruktor einer abstrakten Basisklasse ist. Er kann nur von abgeleiteten Klassen aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.Assembly Assembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceKey.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Assemblyobjekt, welche Assembly Wörterbuch, das für den mit diesem Schlüssel zugeordneten Wert zu suchen, in angibt.</summary>
+        <value>Die abgerufene Assembly als eine Reflektionsklasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceKey.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Eine dienstimplementierung, die den gewünschten Wert enthält.</param>
+        <summary>Dies gibt <see cref="T:System.Windows.ResourceKey" />. Instanzen dieser Klasse werden in der Regel in ein Wörterbuch als Schlüssel verwendet.</summary>
+        <returns>Beim Aufrufen dieser Methode wird immer zurückgegeben die Instanz selbst.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

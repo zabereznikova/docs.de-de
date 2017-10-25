@@ -1,0 +1,178 @@
+<Type Name="ContentLocatorGroup" FullName="System.Windows.Annotations.ContentLocatorGroup">
+  <TypeSignature Language="C#" Value="public sealed class ContentLocatorGroup : System.Windows.Annotations.ContentLocatorBase, System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContentLocatorGroup extends System.Windows.Annotations.ContentLocatorBase implements class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.ContentLocatorGroup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Annotations.ContentLocatorBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot(ElementName="ContentLocatorGroup", Namespace="http://schemas.microsoft.com/windows/annotations/2003/11/core")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine geordnete Menge von <see cref="T:System.Windows.Annotations.ContentLocator" />-Elementen dar, die ein Inhaltselement bezeichnen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.ContentLocator>definierte Elemente eine <xref:System.Windows.Annotations.ContentLocatorGroup> bietet eine strukturierte Möglichkeit zum Verweisen auf ein externes Datenelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentLocatorGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.ContentLocatorGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Annotations.ContentLocatorGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.ContentLocatorGroup.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare tiefe Kopie (d. h. einen Klon) dieses <see cref="T:System.Windows.Annotations.ContentLocatorGroup" />.</summary>
+        <returns>Eine änderbare tiefe Kopie (d. h. ein Klon) dieses <see cref="T:System.Windows.Annotations.ContentLocatorGroup" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Windows.Annotations.ContentLocatorGroup.Clone%2A> Methode erstellt, geändert werden Kopien der fixierten <xref:System.Windows.Freezable> Objekte.  Der Einfachheit halber <xref:System.Windows.Annotations.ContentLocatorGroup.Clone%2A> Shadowing der geerbten Version mit einer Implementierung mit starker Typisierung.  Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Das geklonte <xref:System.Windows.Annotations.ContentLocatorGroup>des <xref:System.Windows.Freezable.IsFrozen%2A> -Eigenschaft `false` auch wenn diese Quelle <xref:System.Windows.Annotations.ContentLocatorGroup>des <xref:System.Windows.Freezable.IsFrozen%2A> Eigenschaft ist`true.`  
+  
+ Beim Kopieren von Abhängigkeitseigenschaften, <xref:System.Windows.Annotations.ContentLocatorGroup.Clone%2A> kopiert Ressource Ressourcenverweise und datenbindungen (obwohl sie nicht mehr aufgelöst werden können), jedoch keine Animationen oder aktuellen Animationswerte nicht kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.ContentLocatorGroup.GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt immer <see langword="null" /> zurück.  Finden Sie unter [Schema mit Anmerkungen](~/docs/framework/wpf/advanced/annotations-schema.md) Schema Details.</summary>
+        <returns>Immer <see langword="null" />.  Finden Sie unter [Schema mit Anmerkungen](~/docs/framework/wpf/advanced/annotations-schema.md) Schema Details.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.ContentLocatorGroup.GetSchema%2A>wird bereitgestellt, um den Vertrag der Erfüllung der <xref:System.Xml.Serialization.IXmlSerializable> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locators">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Annotations.ContentLocator&gt; Locators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Annotations.ContentLocator&gt; Locators" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.ContentLocatorGroup.Locators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Annotations.ContentLocator&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der dem <see cref="T:System.Windows.Annotations.ContentLocator" /> Elemente, die diese bilden <see cref="T:System.Windows.Annotations.ContentLocatorGroup" />.</summary>
+        <value>Die Auflistung der <see cref="T:System.Windows.Annotations.ContentLocator" /> Elemente, die diese bilden <see cref="T:System.Windows.Annotations.ContentLocatorGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.ContentLocator> zurückgegebenen Auflistung werden nie `null`.  Wenn die <xref:System.Windows.Annotations.ContentLocatorGroup> enthält keine <xref:System.Windows.Annotations.ContentLocator> Objekte, die zurückgegebene Auflistung enthält 0 (null) Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public void ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.ContentLocatorGroup.ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XML-Reader, der zum Deserialisieren des <see cref="T:System.Windows.Annotations.ContentLocatorGroup" /> verwendet wird.</param>
+        <summary>Deserialisiert die <see cref="T:System.Windows.Annotations.ContentLocatorGroup" /> ausgehend von einem angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">Die serialisierte XML für die <see cref="T:System.Windows.Annotations.ContentLocatorGroup" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public void WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.ContentLocatorGroup.WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer, der zum Serialisieren der <see cref="T:System.Windows.Annotations.ContentLocatorGroup" /> verwendet werden soll.</param>
+        <summary>Serialisiert die <see cref="T:System.Windows.Annotations.ContentLocatorGroup" /> mit einem angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

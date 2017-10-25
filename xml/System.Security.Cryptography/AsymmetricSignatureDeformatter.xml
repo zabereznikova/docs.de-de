@@ -1,0 +1,230 @@
+<Type Name="AsymmetricSignatureDeformatter" FullName="System.Security.Cryptography.AsymmetricSignatureDeformatter">
+  <TypeSignature Language="C#" Value="public abstract class AsymmetricSignatureDeformatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AsymmetricSignatureDeformatter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die abstrakte Basisklasse dar, von der alle Implementierungen asymmetrischer Signaturdeformatierer abgeleitet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Asymmetrischer Signaturdeformatierer Überprüfen der digitalen Signaturen, die erstellt werden unter Verwendung von Implementierungen der <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsymmetricSignatureDeformatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureDeformatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ Implementierungen von <xref:System.Security.Cryptography.AsymmetricSignatureDeformatter.SetKey%2A> und <xref:System.Security.Cryptography.AsymmetricSignatureDeformatter.SetHashAlgorithm%2A> den Schlüssel und Hash-Algorithmus festgelegt wird, vor dem Aufrufen einer Implementierung der <xref:System.Security.Cryptography.AsymmetricSignatureDeformatter.VerifySignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHashAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract void SetHashAlgorithm (string strName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetHashAlgorithm(string strName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureDeformatter.SetHashAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strName">Der Name des Hashalgorithmus, der zum Überprüfen der Signatur verwendet werden soll.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse den Hashalgorithmus fest, der zum Überprüfen der Signatur verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie einen Hash-Algorithmus festlegen, bevor Sie eine Implementierung von Aufrufen <xref:System.Security.Cryptography.AsymmetricSignatureDeformatter.VerifySignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public abstract void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureDeformatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Instanz einer Implementierung der <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> , die den öffentlichen Schlüssel enthält.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse den öffentlichen Schlüssel fest, der zum Überprüfen der Signatur verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen einen Schlüssel festlegen, bevor eine Implementierung von <xref:System.Security.Cryptography.AsymmetricSignatureDeformatter.VerifySignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public abstract bool VerifySignature (byte[] rgbHash, byte[] rgbSignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifySignature(unsigned int8[] rgbHash, unsigned int8[] rgbSignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureDeformatter.VerifySignature(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbHash" Type="System.Byte[]" />
+        <Parameter Name="rgbSignature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbHash">Signieren mit <c>RgbSignature</c>.</param>
+        <param name="rgbSignature">Die Signatur für zu überprüfende <c>RgbHash</c>.</param>
+        <summary>Überprüft beim Überschreiben in einer abgeleiteten Klasse die Signatur für die angegebenen Daten.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="rgbSignature" /> der Signatur entspricht, mit dem angegebenen Hashalgorithmus und Schlüssel für berechnete <paramref name="rgbHash" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor dem Aufrufen dieser Methode müssen Sie einen öffentlichen Schlüssel und einen Hashalgorithmus angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public virtual bool VerifySignature (System.Security.Cryptography.HashAlgorithm hash, byte[] rgbSignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifySignature(class System.Security.Cryptography.HashAlgorithm hash, unsigned int8[] rgbSignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricSignatureDeformatter.VerifySignature(System.Security.Cryptography.HashAlgorithm,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Security.Cryptography.HashAlgorithm" />
+        <Parameter Name="rgbSignature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der zum Überprüfen der Signatur zu verwendende Hashalgorithmus.</param>
+        <param name="rgbSignature">Die zu überprüfende Signatur.</param>
+        <summary>Überprüft die Signatur aus dem angegebenen Hashwert.</summary>
+        <returns>
+          <see langword="true" />Wenn die Signatur für den Hash gültig ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Hashalgorithmus vor dem Überprüfen der Signatur des Eingabe-Hash-Algorithmus Werts verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="hash" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,59 @@
+<Type Name="ManagementConfigurationType" FullName="System.Management.Instrumentation.ManagementConfigurationType">
+  <TypeSignature Language="C#" Value="public enum ManagementConfigurationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ManagementConfigurationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementConfigurationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt die möglichen Commitverhalten einer Lese-/Schreibeigenschaft dar. Wird als Wert eines Parameters des <see cref="T:System.Management.Instrumentation.ManagementConfigurationAttribute" />-Attributs verwendet.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut wird verwendet, als Parameterwert für die <xref:System.Management.Instrumentation.ManagementConfigurationAttribute> Attribut nur, wenn die <xref:System.Management.Instrumentation.ManagementCommitAttribute> Attribut wird verwendet, um eine Methode, um Werte für einen Commit auszuführen zu identifizieren. Andernfalls werden Eigenschaftswerte Lese-/Schreibzugriff automatisch angewendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Apply">
+      <MemberSignature Language="C#" Value="Apply" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.ManagementConfigurationType Apply = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.ManagementConfigurationType.Apply" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementConfigurationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die festgelegten Werte sind nur bei Aufruf von Commit wirksam.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCommit">
+      <MemberSignature Language="C#" Value="OnCommit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.ManagementConfigurationType OnCommit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.ManagementConfigurationType.OnCommit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementConfigurationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die festgelegten Werte werden sofort angewendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

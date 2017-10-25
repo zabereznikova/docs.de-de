@@ -1,0 +1,126 @@
+<Type Name="TransformPatternIdentifiers" FullName="System.Windows.Automation.TransformPatternIdentifiers">
+  <TypeSignature Language="C#" Value="public static class TransformPatternIdentifiers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TransformPatternIdentifiers extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TransformPatternIdentifiers" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Werte, die als Bezeichner für <see cref="T:System.Windows.Automation.Provider.ITransformProvider" /> verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Werte werden von Benutzeroberflächenautomatisierungs-Anbietern verwendet. Benutzeroberflächenautomatisierungs-Clientanwendungen verwenden, sollten die entsprechenden Felder im <xref:System.Windows.Automation.TransformPattern>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanMoveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanMoveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanMoveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanMove" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird von Benutzeroberflächenautomatisierungs-Anbietern verwendet. Benutzeroberflächenautomatisierungs-Clientanwendungen verwenden, sollte das entsprechende Feld im <xref:System.Windows.Automation.TransformPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanResizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanResizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanResize" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird von Benutzeroberflächenautomatisierungs-Anbietern verwendet. Benutzeroberflächenautomatisierungs-Clientanwendungen verwenden, sollte das entsprechende Feld im <xref:System.Windows.Automation.TransformPattern>.  
+  
+ Bei einem Aufruf in einem Steuerelement, das Teilen Bereiche unterstützt, diese Methode kann den Nebeneffekt, Ändern der Größe von anderen Bereichen zusammenhängenden haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRotateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanRotateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanRotateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanRotate" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird von Benutzeroberflächenautomatisierungs-Anbietern verwendet. Benutzeroberflächenautomatisierungs-Clientanwendungen verwenden, sollte das entsprechende Feld im <xref:System.Windows.Automation.TransformPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TransformPatternIdentifiers.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.TransformPattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird von Benutzeroberflächenautomatisierungs-Anbietern verwendet. Benutzeroberflächenautomatisierungs-Clientanwendungen verwenden, sollte das entsprechende Feld im <xref:System.Windows.Automation.TransformPattern>.  
+  
+ Das Muster [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] übergeben an Methoden wie z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen Benutzeroberflächenautomatisierungs-Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

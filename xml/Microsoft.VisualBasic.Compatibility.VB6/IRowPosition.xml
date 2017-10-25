@@ -1,0 +1,181 @@
+<Type Name="IRowPosition" FullName="Microsoft.VisualBasic.Compatibility.VB6.IRowPosition">
+  <TypeSignature Language="C#" Value="public interface IRowPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRowPosition" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0C733A94-2A1C-11CE-ADE5-00AA0044773D")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Implementierung der OLE DB <see langword="IRowPosition" /> Schnittstelle für die Verwendung von Anwendungen, die ein Upgrade von Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearRowPosition">
+      <MemberSignature Language="C#" Value="public void ClearRowPosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void ClearRowPosition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.ClearRowPosition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Zeilenposition.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowPosition">
+      <MemberSignature Language="C#" Value="public void GetRowPosition (out int hChapter, out int hRow, out int dbPositionFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void GetRowPosition([out] int32&amp; hChapter, [out] int32&amp; hRow, [out] int32&amp; dbPositionFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.GetRowPosition(System.Int32@,System.Int32@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hChapter" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="hRow" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="dbPositionFlags" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="hChapter">Ein Zeiger auf Speicher, in den zurückzugebenden im Kapitel über das der aktuellen Zeile zugeordnet. Wenn das Rowset befindet sich nicht in Kapitel unterteilten, <c>hChapter</c> festgelegt ist, um <see langword="DB_NULL_HCHAPTER" />. Wenn <c>hChapter</c> ist ein null-Zeiger bei der Eingabe, wird kein Kapitelwert zurückgegeben.</param>
+        <param name="hRow">Ein Zeiger auf Speicher, in dem Zurückgeben der <see langword="hRow" /> des die aktuelle Zeilenposition; oder <see langword="DB_NULL_HROW" /> es ist keine aktuelle Zeilenposition.</param>
+        <param name="dbPositionFlags">Ein Zeiger auf den Arbeitsspeicher, in dem Weitere Informationen über die Zeilenposition zurückgeben.</param>
+        <summary>Ruft die aktuelle Zeilenposition ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowset">
+      <MemberSignature Language="C#" Value="public void GetRowset (ref Guid iid, out object rowset);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void GetRowset([in]valuetype System.Guid&amp; iid, [out] object&amp; rowset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.GetRowset(System.Guid@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rowset" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="iid">Die angeforderte IID für das im zurückgegebenen Rowset <c>Rowset</c>.</param>
+        <param name="rowset">Ein Zeiger auf Speicher, in dem den Schnittstellenzeiger des zugrunde liegenden Rowsets zurückgegeben werden soll.</param>
+        <summary>Gibt das aktuelle zugrunde liegende <see langword="Rowset" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (object rowset);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Initialize([in]object rowset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.Initialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowset" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="rowset">Ein Zeiger auf eine Schnittstelle für das Quellrowset.</param>
+        <summary>Initialisiert das Position Zeilenobjekt durch das Quellrowset festlegen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRowPosition">
+      <MemberSignature Language="C#" Value="public void SetRowPosition (int hChapter, int hRow, int dbPositionFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void SetRowPosition([in]int32 hChapter, [in]int32 hRow, [in]int32 dbPositionFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowPosition.SetRowPosition(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hChapter" Type="System.Int32" />
+        <Parameter Name="hRow" Type="System.Int32" />
+        <Parameter Name="dbPositionFlags" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hChapter">Im Kapitel über das der aktuellen Zeile, oder dem zugeordneten <see langword="DB_NULL_HCHAPTER" /> , wenn das Rowset nicht unterteilt ist.</param>
+        <param name="hRow">Die neue parallelitätszeile.</param>
+        <param name="dbPositionFlags">Ein Flag, das zusätzliche Informationen über die neue Zeilenposition angibt.</param>
+        <summary>Legt die aktuelle Zeilenposition.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

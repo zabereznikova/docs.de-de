@@ -1,0 +1,508 @@
+<Type Name="DBDataPermission" FullName="System.Data.Common.DBDataPermission">
+  <TypeSignature Language="C#" Value="public abstract class DBDataPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit DBDataPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DBDataPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ermöglicht es einen .NET Framework-Datenanbieter, um sicherzustellen, dass ein Benutzer eine Sicherheitsebene, die für den Zugriff auf Daten verfügt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DBDataPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("DBDataPermission() has been deprecated.  Use the DBDataPermission(PermissionState.None) constructor.  http://go.microsoft.com/fwlink/?linkid=14202", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz einer <see langword="DBDataPermission" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DBDataPermission (System.Data.Common.DBDataPermission permission);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DBDataPermission permission) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.#ctor(System.Data.Common.DBDataPermission)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permission" Type="System.Data.Common.DBDataPermission" />
+      </Parameters>
+      <Docs>
+        <param name="permission">Eine vorhandene <see langword="DBDataPermission" /> verwendet zum Erstellen eines neuen <see langword="DBDataPermission" />.</param>
+        <summary>Initialisiert eine neue Instanz von einem <see langword="DBDataPermission" /> -Klasse mit einer vorhandenen <see langword="DBDataPermission" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DBDataPermission (System.Data.Common.DBDataPermissionAttribute permissionAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DBDataPermissionAttribute permissionAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.#ctor(System.Data.Common.DBDataPermissionAttribute)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAttribute" Type="System.Data.Common.DBDataPermissionAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAttribute">Es wurde eine Sicherheitsaktion mit einem benutzerdefinierten Attribut verknüpft sind.</param>
+        <summary>Initialisiert eine neue Instanz von einem <see langword="DBDataPermission" /> Klasse mit dem angegebenen <see langword="DBDataPermissionAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DBDataPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz von einem <see langword="DBDataPermission" /> Klasse mit dem angegebenen <see cref="T:System.Security.Permissions.PermissionState" /> Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DBDataPermission (System.Security.Permissions.PermissionState state, bool allowBlankPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state, bool allowBlankPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.#ctor(System.Security.Permissions.PermissionState,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("DBDataPermission(PermissionState state,Boolean allowBlankPassword) has been deprecated.  Use the DBDataPermission(PermissionState.None) constructor.  http://go.microsoft.com/fwlink/?linkid=14202", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+        <Parameter Name="allowBlankPassword" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <param name="allowBlankPassword">Gibt an, ob ein leeres Kennwort zulässig ist.</param>
+        <summary>Initialisiert eine neue Instanz von einem <see langword="DBDataPermission" /> Klasse mit dem angegebenen <see cref="T:System.Security.Permissions.PermissionState" /> Wert und einen Wert, der angibt, ob ein leeres Kennwort zulässig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.PermissionState> Enumeration hat Vorrang vor den <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> Eigenschaft. Deshalb, wenn Sie festlegen, <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> auf `false`, müssen Sie auch festlegen <xref:System.Security.Permissions.PermissionState> zu `None` um zu verhindern, dass einen Benutzer eine Verbindung mit einem leeren Kennwort vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (string connectionString, string restrictions, System.Data.KeyRestrictionBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string connectionString, string restrictions, valuetype System.Data.KeyRestrictionBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.Add(System.String,System.String,System.Data.KeyRestrictionBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="restrictions" Type="System.String" />
+        <Parameter Name="behavior" Type="System.Data.KeyRestrictionBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Eine zulässige Verbindungszeichenfolge.</param>
+        <param name="restrictions">Eine Zeichenfolge, die Parameter für Verbindungszeichenfolgen identifiziert, die zulässig bzw. unzulässig sind.</param>
+        <param name="behavior">Eines der <see cref="T:System.Data.KeyRestrictionBehavior" /> Eigenschaften.</param>
+        <summary>Dem vorhandenen Zustand der Zugriff für die angegebene Verbindungszeichenfolge hinzugefügt der <see langword="DBDataPermission" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nützlich sein, bei der Implementierung:  
+  
+-   Ein .NET Framework-Datenanbieter.  
+  
+-   Eine API, die für Data Access-Berechtigung bestätigen muss.  
+  
+-   Ein Tool oder die Installation Verwaltungsprogramm, die Sicherheitsrichtlinie geändert werden muss.  
+  
+-   Wenn mehr als eine Regel angegeben wird, wird die restriktivste Regel ausgewählt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowBlankPassword">
+      <MemberSignature Language="C#" Value="public bool AllowBlankPassword { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowBlankPassword" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DBDataPermission.AllowBlankPassword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein leeres Kennwort zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn ein leeres Kennwort, andernfalls zulässig ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.PermissionState> Enumeration hat Vorrang vor den <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> Eigenschaft. Deshalb, wenn Sie festlegen, <xref:System.Data.Common.DBDataPermission.AllowBlankPassword%2A> auf `false`, müssen Sie auch festlegen <xref:System.Security.Permissions.PermissionState> zu `None` um zu verhindern, dass einen Benutzer eine Verbindung mit einem leeren Kennwort vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="protected void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Berechtigungen, die zuvor hinzugefügt wurden, mit der <see cref="M:System.Data.Common.DBDataPermission.Add(System.String,System.String,System.Data.KeyRestrictionBehavior)" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine identische Kopie des aktuellen Berechtigungsobjekts.</summary>
+        <returns>Eine Kopie des aktuellen Berechtigungsobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie des Berechtigungsobjekts stellt den gleichen Zugriff auf Ressourcen wie die ursprüngliche Berechtigungsobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected virtual System.Data.Common.DBDataPermission CreateInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.Common.DBDataPermission CreateInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.CreateInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DBDataPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see langword="DBDataPermission" />-Klasse.</summary>
+        <returns>Ein neues <see langword="DBDataPermission" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">Die XML-Codierung zur Wiederherstellung des Sicherheitsobjekts.</param>
+        <summary>Stellt ein Sicherheitsobjekt mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierter Code, der erweitert Sicherheitsobjekte implementieren muss die `ToXml` und `FromXml` Methoden die datenbankobjektsicherheit Sicherheitsrichtlinienverwendung vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Berechtigungsobjekt für die Überschneidung mit dem aktuellen Berechtigungsobjekt. Sie müssen den gleichen Typ wie das aktuelle Berechtigungsobjekt aufweisen.</param>
+        <summary>Gibt ein neues Berechtigungsobjekt, das die Schnittmenge des aktuellen Berechtigungsobjekts und das Objekt der angegebenen Berechtigung darstellt.</summary>
+        <returns>Ein neues Berechtigungsobjekt, das die Schnittmenge des aktuellen Berechtigungsobjekts und das Objekt der angegebenen Berechtigung darstellt. Dieses neue Berechtigungsobjekt ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic), wenn die Schnittmenge leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittmenge zweier Berechtigungen ist eine Berechtigung, die den Satz an Vorgängen beschreibt, die beide beschreiben. Nur eine Anforderung, die beide ursprünglichen Berechtigungen erfolgreich durchläuft, wird die Schnittmenge übergeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> Parameter ist kein null-Verweis (<see langword="Nothing" /> in Visual Basic) und ist keine Instanz derselben Klasse wie das aktuelle Berechtigungsobjekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Berechtigungsobjekt, das auf die teilmengenbeziehung geprüft werden soll. Dieses Objekt muss denselben Typ wie das aktuelle Berechtigungsobjekt aufweisen.</param>
+        <summary>Gibt einen Wert, der angibt, ob das aktuelle Berechtigungsobjekt eine Teilmenge des angegebenen Berechtigungsobjekts ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das aktuelle Berechtigungsobjekt eine Teilmenge des angegebenen Berechtigungsobjekts andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Berechtigungsobjekt ist eine Teilmenge des angegebenen Berechtigungsobjekts, wenn das aktuelle Berechtigungsobjekt eine Reihe von Vorgängen angibt, die durch das angegebene Berechtigungsobjekt vollständig enthalten ist. Eine Berechtigung, die Zugriff auf C:\example.txt darstellt wird z. B. eine Teilmenge einer Berechtigung, die Zugriff auf "c:" darstellt\\. Wenn diese Methode zurückgibt `true`, das aktuelle Berechtigungsobjekt stellt keine umfassenderen Zugriff auf die geschützte Ressource als die angegebene Berechtigungsobjekt verweist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> Parameter ist ein Objekt, das nicht denselben Typ wie das aktuelle Berechtigungsobjekt angehört.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Wert, der angibt, ob die Berechtigung als dargestellt werden kann ohne Kenntnis der Berechtigungssemantik nicht eingeschränkt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Berechtigung als uneingeschränkt dargestellt werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung des Sicherheitsobjekts und seines aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung des Sicherheitsobjekts, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierter Code, der erweitert Sicherheitsobjekte implementieren muss die <xref:System.Data.Common.DBDataPermission.ToXml%2A> und <xref:System.Data.Common.DBDataPermission.FromXml%2A> Methoden die datenbankobjektsicherheit Sicherheitsrichtlinienverwendung vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Berechtigungsobjekt, mit das aktuelle Berechtigungsobjekt zu kombinieren. Sie müssen den gleichen Typ wie das aktuelle Berechtigungsobjekt aufweisen.</param>
+        <summary>Gibt ein neues Berechtigungsobjekt, das als Kombination der aktuellen und dem angegebenen Berechtigungsobjekte zurück.</summary>
+        <returns>Ein neues Berechtigungsobjekt, das die Kombination des aktuellen Berechtigungsobjekts und das Objekt der angegebenen Berechtigung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis eines Aufrufs von <xref:System.Data.Common.DBDataPermission.Union%2A> ist eine Berechtigung, alle Vorgänge darstellt, die durch das aktuelle Berechtigungsobjekt und das Objekt für die angegebene Berechtigung zulässig. Jede Anforderung, entweder Berechtigung durchläuft, übergibt die Union.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> Objekt ist nicht denselben Typ wie das aktuelle Berechtigungsobjekt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

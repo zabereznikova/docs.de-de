@@ -1,0 +1,70 @@
+<Type Name="WorkflowDebuggerSteppingOption" FullName="System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption">
+  <TypeSignature Language="C#" Value="public enum WorkflowDebuggerSteppingOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WorkflowDebuggerSteppingOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie der Workflowdebugger die nacheinander ausgeführten untergeordneten Aktivitäten einer zusammengesetzten Aktivität durchläuft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Diese Enumeration wird zusammen mit dem <xref:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute>-Attribut verwendet, um die zwei folgenden Arten von Verhalten zu definieren:  
+  
+-   **Gleichzeitige stepping**. In diesem Modus können Sie gleichzeitig ausgeführte Aktivitäten des Workflows schrittweise durchlaufen und debuggen. Bei dieser Option ändert sich das Steuerungsverhalten, wenn im Workflow gleichzeitig ausgeführte Aktivitäten aktiv sind.  
+  
+-   **Sequenzielle stepping**. In diesem Modus können Sie eine bestimmte Verzweigung einer zusammengesetzten Aktivität schrittweise durchlaufen und debuggen, beispielsweise die <xref:System.Workflow.Activities.ParallelActivity> oder die <xref:System.Workflow.Activities.ConditionedActivityGroup>-Aktivität. Wenn Sie diese Option zum Debuggen verwenden, bemerken Sie nicht, dass sich das Steuerungsverhalten ändert, weil andere Aktivitäten im Workflow gleichzeitig ausgeführt werden. Der Debugger durchläuft nur die Aktivitäten in der momentan ausgewählten Verzweigung schrittweise, während gleichzeitig ggf. andere Aktivitäten des Workflows ausgeführt werden. Standardmäßig werden beispielsweise die am weitesten links befindliche Verzweigung einer <xref:System.Workflow.Activities.ParallelActivity>-Aktivität und die erste untergeordnete Aktivität einer <xref:System.Workflow.Activities.ConditionedActivityGroup>-Aktivität schrittweise durchlaufen. Wenn Sie eine andere Verzweigung oder untergeordnete Aktivität debuggen möchten, müssen Sie in der jeweiligen Verzweigung bzw. untergeordneten Aktivität einen expliziten Haltepunkt einfügen. Die Verzweigung wird weiter schrittweise durchlaufen, wenn der Haltepunkt ausgelöst wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Concurrent">
+      <MemberSignature Language="C#" Value="Concurrent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption Concurrent = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption.Concurrent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für die untergeordneten Aktivitäten wird das Debugging gleichzeitig durchgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sequential">
+      <MemberSignature Language="C#" Value="Sequential" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption Sequential = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption.Sequential" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für die untergeordneten Aktivitäten wird das Debugging sequenziell durchgeführt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

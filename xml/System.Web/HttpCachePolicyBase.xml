@@ -1,0 +1,538 @@
+<Type Name="HttpCachePolicyBase" FullName="System.Web.HttpCachePolicyBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpCachePolicyBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpCachePolicyBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCachePolicyBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für Klassen, die Methoden zum Festlegen von cachespezifischen HTTP-Headern und zum Steuern des ASP.NET-Seitenausgabecaches enthalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpCachePolicyBase> Klasse ist eine abstrakte Klasse, die dieselben Member wie enthält die <xref:System.Web.HttpCachePolicy> Klasse. Die <xref:System.Web.HttpCachePolicyBase> -Klasse können Sie die abgeleitete Klassen zu erstellen, z. B. sind, die <xref:System.Web.HttpCachePolicy> -Klasse jedoch, die Sie anpassen können und außerhalb der ASP.NET-Pipeline arbeiten. Beim Ausführen von Komponententests verwenden Sie in der Regel eine abgeleitete Klasse auf um Member mit angepasstem Verhalten zu implementieren, die das Szenario erfüllt, das Sie testen.  
+  
+ Die <xref:System.Web.HttpCachePolicyWrapper>-Klasse wird aus der <xref:System.Web.HttpCachePolicyBase>-Klasse abgeleitet. Die <xref:System.Web.HttpCachePolicyWrapper> Klasse dient als Wrapper für die <xref:System.Web.HttpCachePolicy> Klasse. Zur Laufzeit verwenden Sie in der Regel eine Instanz von der <xref:System.Web.HttpCachePolicyWrapper> zum Aufrufen von Membern der Klasse die <xref:System.Web.HttpCachePolicy> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpCachePolicyBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValidationCallback">
+      <MemberSignature Language="C#" Value="public virtual void AddValidationCallback (System.Web.HttpCacheValidateHandler handler, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddValidationCallback(class System.Web.HttpCacheValidateHandler handler, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.AddValidationCallback(System.Web.HttpCacheValidateHandler,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.HttpCacheValidateHandler" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Das Objekt, von dem die Anforderung verarbeitet wird.</param>
+        <param name="data">Die vom Benutzer bereitgestellten Daten, die an den <see cref="M:System.Web.HttpCachePolicyWrapper.AddValidationCallback(System.Web.HttpCacheValidateHandler,System.Object)" />-Delegaten übergeben werden.</param>
+        <summary>Registriert beim Überschreiben in einer abgeleiteten Klasse einen Validierungsrückruf für die aktuelle Antwort.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendCacheExtension">
+      <MemberSignature Language="C#" Value="public virtual void AppendCacheExtension (string extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AppendCacheExtension(string extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.AppendCacheExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Der Text, der an den <see langword="Cache-Control" />-Header angefügt werden soll.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse fügt den angegebenen Text an den <see langword="Cache-Control" /> HTTP-Header.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAllowResponseInBrowserHistory">
+      <MemberSignature Language="C#" Value="public virtual void SetAllowResponseInBrowserHistory (bool allow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetAllowResponseInBrowserHistory(bool allow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetAllowResponseInBrowserHistory(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="allow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allow">
+          <see langword="true" />um die Clientbrowsers, dass Antworten im Verlaufscache Browsers gespeichert werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse zur Verfügung der Antwort im Verlaufscache Browsers unabhängig von der <see cref="T:System.Web.HttpCacheability" /> Einstellung, die auf dem Server vorgenommen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheability">
+      <MemberSignature Language="C#" Value="public virtual void SetCacheability (System.Web.HttpCacheability cacheability);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCacheability(valuetype System.Web.HttpCacheability cacheability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetCacheability(System.Web.HttpCacheability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cacheability" Type="System.Web.HttpCacheability" />
+      </Parameters>
+      <Docs>
+        <param name="cacheability">Die <see cref="T:System.Web.HttpCacheability" /> Enumerationswert, auf die Header festgelegt werden soll.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Cache-Control" /> -Header auf den angegebenen <see cref="T:System.Web.HttpCacheability" /> Wert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheability">
+      <MemberSignature Language="C#" Value="public virtual void SetCacheability (System.Web.HttpCacheability cacheability, string field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCacheability(valuetype System.Web.HttpCacheability cacheability, string field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetCacheability(System.Web.HttpCacheability,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cacheability" Type="System.Web.HttpCacheability" />
+        <Parameter Name="field" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cacheability">Die <see cref="T:System.Web.HttpCacheability" /> Enumerationswert, auf die Header festgelegt werden soll.</param>
+        <param name="field">Die Cache-Control-Erweiterung, die dem Header hinzugefügt werden soll.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Cache-Control" /> -Header auf den angegebenen <see cref="T:System.Web.HttpCacheability" /> -Wert und fügt eine Erweiterung an die Direktive.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetETag">
+      <MemberSignature Language="C#" Value="public virtual void SetETag (string etag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetETag(string etag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetETag(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="etag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="etag">Der Text, der für die <see langword="ETag" /> Header.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="ETag" /> HTTP-Header auf die angegebene Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetETagFromFileDependencies">
+      <MemberSignature Language="C#" Value="public virtual void SetETagFromFileDependencies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetETagFromFileDependencies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetETagFromFileDependencies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="ETag" /> HTTP-Header auf Grundlage der Zeitstempel der dateiabhängigkeiten des Handlers.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExpires">
+      <MemberSignature Language="C#" Value="public virtual void SetExpires (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetExpires(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetExpires(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Die absolute Ablaufzeit.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Expires" /> HTTP-Header auf ein absolutes Datum und Uhrzeit.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLastModified">
+      <MemberSignature Language="C#" Value="public virtual void SetLastModified (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetLastModified(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetLastModified(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Der festzulegende Datum / Uhrzeit-Wert der <see langword="Last-Modified" /> Header an.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Last-Modified" /> -HTTP-Header angegebene Datum und Uhrzeit.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLastModifiedFromFileDependencies">
+      <MemberSignature Language="C#" Value="public virtual void SetLastModifiedFromFileDependencies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetLastModifiedFromFileDependencies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetLastModifiedFromFileDependencies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Last-Modified" /> HTTP-Header auf Grundlage der Zeitstempel der dateiabhängigkeiten des Handlers.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMaxAge">
+      <MemberSignature Language="C#" Value="public virtual void SetMaxAge (TimeSpan delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetMaxAge(valuetype System.TimeSpan delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetMaxAge(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delta" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="delta">Die Zeitspanne, legen Sie die <see langword="Cache-Control: max-age" /> Header an.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Cache-Control: max-age" /> HTTP-Header auf die angegebene Zeitspanne.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoServerCaching">
+      <MemberSignature Language="C#" Value="public virtual void SetNoServerCaching ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetNoServerCaching() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetNoServerCaching" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet beim Überschreiben in einer abgeleiteten Klasse jegliches Zwischenspeichern auf dem Ausgangsserver für die aktuelle Antwort.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoStore">
+      <MemberSignature Language="C#" Value="public virtual void SetNoStore ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetNoStore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetNoStore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Cache-Control: no-store" /> HTTP-Header.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoTransforms">
+      <MemberSignature Language="C#" Value="public virtual void SetNoTransforms ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetNoTransforms() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetNoTransforms" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Cache-Control: no-transform" /> HTTP-Header.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOmitVaryStar">
+      <MemberSignature Language="C#" Value="public virtual void SetOmitVaryStar (bool omit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOmitVaryStar(bool omit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetOmitVaryStar(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="omit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="omit">
+          <see langword="true" />Weiterleiten der <see cref="T:System.Web.HttpCachePolicy" /> Objekt nicht mithilfe der * Wert für seine <see cref="P:System.Web.HttpCachePolicy.VaryByHeaders" /> Eigenschaft ist, andernfalls <see langword="false" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt an, ob die Antwort enthält den <see langword="vary:*" /> Header hat beim Zwischenspeichern von variiert je nach Parameter.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProxyMaxAge">
+      <MemberSignature Language="C#" Value="public virtual void SetProxyMaxAge (TimeSpan delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProxyMaxAge(valuetype System.TimeSpan delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetProxyMaxAge(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delta" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="delta">Die Zeitspanne, legen Sie die <see langword="Cache-Control: s-maxage" /> Header an.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Cache-Control: s-maxage" /> HTTP-Header auf die angegebene Zeitspanne.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRevalidation">
+      <MemberSignature Language="C#" Value="public virtual void SetRevalidation (System.Web.HttpCacheRevalidation revalidation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetRevalidation(valuetype System.Web.HttpCacheRevalidation revalidation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetRevalidation(System.Web.HttpCacheRevalidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="revalidation" Type="System.Web.HttpCacheRevalidation" />
+      </Parameters>
+      <Docs>
+        <param name="revalidation">Die <see cref="T:System.Web.HttpCacheRevalidation" /> Enumerationswert festzulegende der <see langword="Cache-Control" /> Header an.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see langword="Cache-Control" /> -HTTP-Header entweder die <see langword="must-revalidate" /> oder <see langword="proxy-revalidate" /> Direktiven, basierend auf dem angegebenen Enumerationswert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSlidingExpiration">
+      <MemberSignature Language="C#" Value="public virtual void SetSlidingExpiration (bool slide);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSlidingExpiration(bool slide) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetSlidingExpiration(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="slide" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="slide">
+          <see langword="true" />eine gleitende Ablaufzeit für den Cache, festgelegt oder <see langword="false" /> eine absolute Cache Ablaufdauer festlegen.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die Ablaufzeit für den Cache auf absolut oder gleitend fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValidUntilExpires">
+      <MemberSignature Language="C#" Value="public virtual void SetValidUntilExpires (bool validUntilExpires);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValidUntilExpires(bool validUntilExpires) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetValidUntilExpires(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validUntilExpires" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validUntilExpires">
+          <see langword="true" />um anzugeben, dass ASP.NET ignorieren soll <see langword="Cache-Control" /> -ungültigkeitserklärungsheader ist, andernfalls <see langword="false" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt an, ob der ASP.NET-Cache HTTP ignorieren sollen <see langword="Cache-Control" /> Header, die vom Client gesendet werden, die den Cache für ungültig zu erklären.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVaryByCustom">
+      <MemberSignature Language="C#" Value="public virtual void SetVaryByCustom (string custom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetVaryByCustom(string custom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCachePolicyBase.SetVaryByCustom(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="custom" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="custom">Die Textzeichenfolge, mit der die zwischengespeicherte Ausgabe variiert werden soll.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse eine Textzeichenfolge an, mit der zwischengespeicherte Ausgabeantworten variiert werden sollen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByContentEncodings">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpCacheVaryByContentEncodings VaryByContentEncodings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCacheVaryByContentEncodings VaryByContentEncodings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCachePolicyBase.VaryByContentEncodings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheVaryByContentEncodings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Liste der <see langword="Content-Encoding" /> Header, mit denen der Ausgabecache variiert.</summary>
+        <value>Die <see langword="Content-Encoding" /> Header, die zum Auswählen der zwischengespeicherten Antwort verwendet werden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByHeaders">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpCacheVaryByHeaders VaryByHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCacheVaryByHeaders VaryByHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCachePolicyBase.VaryByHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheVaryByHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Liste aller HTTP-Header ab, die verwendet werden, um Cacheausgaben zu variieren.</summary>
+        <value>Die HTTP-Header, die zum Auswählen der zwischengespeicherten Antwort verwendet werden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByParams">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpCacheVaryByParams VaryByParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCacheVaryByParams VaryByParams" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCachePolicyBase.VaryByParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheVaryByParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Liste der Parameter, die von einem HTTP-stammen <see langword="GET" /> oder <see langword="POST" /> Verb für die Zwischenspeicherung auswirken.</summary>
+        <value>Die Cachesteuerungsparameter, die zum Auswählen der zwischengespeicherten Antwort verwendet werden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,101 @@
+<Type Name="CorrelationProperty" FullName="System.Workflow.Runtime.CorrelationProperty">
+  <TypeSignature Language="C#" Value="public class CorrelationProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CorrelationProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.CorrelationProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Name/Wert-Paar dar. Wird verwendet, um Meldungen mit bestimmten empfangenden Aktivitäten in Beziehung zu setzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.CorrelationProperty>-Klassen sind als <xref:System.Workflow.ComponentModel.ActivityBind>-Eigenschaften von Workflowverbindungsdienste-Aktivitäten definiert. Standardmäßig sind diese Eigenschaften an Variablen gebunden, die unter der Stammworkflowaktivität deklariert werden. Bei dynamischen Aktivitäten wie <xref:System.Workflow.Activities.ReplicatorActivity> und <xref:System.Workflow.Activities.ConditionedActivityGroup> können die einzelnen untergeordneten Elemente kein universelles <xref:System.Workflow.Runtime.CorrelationProperty>-Objekt gemeinsam nutzen. Stellen Sie sich ein Szenario vor, bei dem die einzelnen Aufgaben innerhalb einer <xref:System.Workflow.Activities.ReplicatorActivity> jeweils ihre eigenen Konversationen verwalten müssen. Die untergeordneten Aktivitäten in der <xref:System.Workflow.Activities.ReplicatorActivity> erfordern pro Ausführungskontext bzw. pro Aufgabe eine eindeutige <xref:System.Workflow.Runtime.CorrelationProperty>-Instanz. Um dies zu erreichen, müssen Sie eine benutzerdefinierte Aktivität definieren, die über eine <xref:System.Workflow.Runtime.CorrelationProperty>-Instanzeigenschaft verfügt, und die Workflowverbindungsdienste-Aktivitäten müssen an diese Eigenschaft gebunden sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Erstellung eines Korrelationseigenschaftobjekts und den Zugriff auf die Name-Eigenschaft und die Value-Eigenschaft.  
+  
+ [!code-csharp[WF_Samples#2](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#2)]
+ [!code-vb[WF_Samples#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CorrelationProperty (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.CorrelationProperty.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der im Korrelationssatz verwendeten Eigenschaft.</param>
+        <param name="value">Der Wert der Korrelationssatzeigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.CorrelationProperty" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.CorrelationProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der im Korrelationssatz verwendeten Eigenschaft ab.</summary>
+        <value>Der Name der im Korrelationssatz verwendeten Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.CorrelationProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Korrelationssatzeigenschaft ab.</summary>
+        <value>Der Wert der Korrelationssatzeigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

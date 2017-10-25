@@ -1,0 +1,290 @@
+<Type Name="EncodingInfo" FullName="System.Text.EncodingInfo">
+  <TypeSignature Language="C#" Value="public sealed class EncodingInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EncodingInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.EncodingInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält grundlegende Informationen über eine Codierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient in erster Linie durch die <xref:System.Text.Encoding> Klasse. Die <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> Methode gibt ein Array dieses Typs zurück.  
+  
+ Diese Klasse dient wenige Informationen über eine Codierung angeben. Um weitere Informationen zu erhalten, die Anwendung verwenden, sollten die <xref:System.Text.EncodingInfo.GetEncoding%2A> Methode zum Abrufen einer Instanz von der <xref:System.Text.Encoding> -Klasse, die umfassendere Typeninformationen über die Codierung darstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Text.EncodingInfo> Objekt für jede Codierung von .NET Framework unterstützt. Es zeigt dann den Wert der einzelnen Codierung <xref:System.Text.EncodingInfo.CodePage%2A>, <xref:System.Text.EncodingInfo.Name%2A>, und <xref:System.Text.EncodingInfo.DisplayName%2A> Eigenschaft und vergleicht diese mit dem entsprechenden <xref:System.Text.Encoding> Namen.  
+  
+ [!code-cpp[System.Text.EncodingInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CPP/encodinginfo.cpp#1)]
+ [!code-csharp[System.Text.EncodingInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CS/encodinginfo.cs#1)]
+ [!code-vb[System.Text.EncodingInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.EncodingInfo/VB/encodinginfo.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CodePage">
+      <MemberSignature Language="C#" Value="public int CodePage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Text.EncodingInfo.CodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Codepagebezeichner der Codierung ab.</summary>
+        <value>Der Codepagebezeichner der Codierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member entspricht <xref:System.Text.Encoding.CodePage%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die verschiedenen Namen für jede Codierung abgerufen, und vergleicht diese mit den entsprechenden <xref:System.Text.Encoding> Namen.  
+  
+ [!code-cpp[System.Text.EncodingInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CPP/encodinginfo.cpp#1)]
+ [!code-csharp[System.Text.EncodingInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CS/encodinginfo.cs#1)]
+ [!code-vb[System.Text.EncodingInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.EncodingInfo/VB/encodinginfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Text.EncodingInfo.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die lesbare Beschreibung der Codierung ab.</summary>
+        <value>Der lesbare Beschreibung der Codierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft definiert einen Anzeigenamen ein, die den Namen durch dargestellt ist, die <xref:System.Text.Encoding.EncodingName%2A> Eigenschaft. Ihre Anwendungen zu verwendende <xref:System.Text.EncodingInfo.Name%2A> für einen Namen für die Übergabe an <xref:System.Text.Encoding.GetEncoding%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die verschiedenen Namen für jede Codierung abgerufen, und vergleicht diese mit den entsprechenden <xref:System.Text.Encoding> Namen.  
+  
+ [!code-cpp[System.Text.EncodingInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CPP/encodinginfo.cpp#1)]
+ [!code-csharp[System.Text.EncodingInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CS/encodinginfo.cs#1)]
+ [!code-vb[System.Text.EncodingInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.EncodingInfo/VB/encodinginfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Text.EncodingInfo" />-Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob das angegebene Objekt und das aktuelle <see cref="T:System.Text.EncodingInfo" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> ein <see cref="T:System.Text.EncodingInfo" />-Objekt und gleich dem aktuellen <see cref="T:System.Text.EncodingInfo" />-Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Text.EncodingInfo> -Objekte sind gleich, wenn ihre <xref:System.Text.EncodingInfo.CodePage%2A> Eigenschaften gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding GetEncoding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Text.Encoding GetEncoding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingInfo.GetEncoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Text.Encoding" /> Objekt ab, mit dem aktuellen entspricht <see cref="T:System.Text.EncodingInfo" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Text.Encoding" /> Objekt ab, mit dem aktuellen entspricht <see cref="T:System.Text.EncodingInfo" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die verschiedenen Namen für jede Codierung abgerufen, und vergleicht diese mit den entsprechenden <xref:System.Text.Encoding> Namen.  
+  
+ [!code-cpp[System.Text.EncodingInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CPP/encodinginfo.cpp#1)]
+ [!code-csharp[System.Text.EncodingInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CS/encodinginfo.cs#1)]
+ [!code-vb[System.Text.EncodingInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.EncodingInfo/VB/encodinginfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für das aktuelle <see cref="T:System.Text.EncodingInfo" />-Objekt zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert den <xref:System.Text.EncodingInfo.GetHashCode%2A> Methode eignet sich nicht für die Unterscheidung eines <xref:System.Text.EncodingInfo> von einem anderen Objekt. Wenn Ihre Anwendung einen eindeutiger Hashcode benötigt, sollten Sie überschreiben die <xref:System.Text.EncodingInfo.GetHashCode%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Text.EncodingInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen, die mit dem Internet IANA Assigned Numbers Authority () für die Codierung registriert.</summary>
+        <value>Der IANA-Name für die Codierung. Weitere Informationen zu der IANA finden Sie unter www.iana.org.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft definiert den Namen, die für die Übergabe an geeignet ist <xref:System.Text.Encoding.GetEncoding%2A>. Dieser Name ist identisch mit den Namen, dargestellt durch die <xref:System.Text.Encoding.WebName%2A> Eigenschaft. Wenn der Wert der Name der Standard ist, entspricht die tatsächliche Implementierung der Codierung möglicherweise nicht vollständig dieses Standards. Ihre Anwendungen zu verwendende <xref:System.Text.EncodingInfo.DisplayName%2A> für einen menschenlesbaren Namen.  
+  
+ Die <xref:System.Text.Encoding.GetEncodings%2A> Methode ruft eine vollständige Liste der unterstützten Codierungen, die eindeutig durch die Codepage unterschieden. Wenn Ihre Anwendung Codierungen mithilfe empfängt der <xref:System.Text.EncodingInfo.Name%2A> -Eigenschaft, beachten Sie, dass einige doppelten Codierungen abgerufen werden. Weitere Informationen zur Behandlung von diese Duplikate finden Sie unter der Beschreibung der <xref:System.Text.Encoding.GetEncodings%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die verschiedenen Namen für jede Codierung abgerufen, und vergleicht diese mit den entsprechenden <xref:System.Text.Encoding> Namen.  
+  
+ [!code-cpp[System.Text.EncodingInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CPP/encodinginfo.cpp#1)]
+ [!code-csharp[System.Text.EncodingInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.EncodingInfo/CS/encodinginfo.cs#1)]
+ [!code-vb[System.Text.EncodingInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.EncodingInfo/VB/encodinginfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

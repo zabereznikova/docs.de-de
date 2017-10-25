@@ -1,0 +1,44 @@
+<Type Name="ToolboxItemCreatorCallback" FullName="System.Drawing.Design.ToolboxItemCreatorCallback">
+  <TypeSignature Language="C#" Value="public delegate System.Drawing.Design.ToolboxItem ToolboxItemCreatorCallback(object serializedObject, string format);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolboxItemCreatorCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.ToolboxItemCreatorCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="serializedObject" Type="System.Object" />
+    <Parameter Name="format" Type="System.String" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="serializedObject">Das Objekt enthält die Daten zum Erstellen einer <see cref="T:System.Drawing.Design.ToolboxItem" /> für.</param>
+    <param name="format">Der Name der das Datenformat der Zwischenablage zum Erstellen einer <see cref="T:System.Drawing.Design.ToolboxItem" /> für.</param>
+    <summary>Stellt einen Rückrufmechanismus bereit, die erstellen kann ein <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+    <returns>Das deserialisierte <see cref="T:System.Drawing.Design.ToolboxItem" /> angegebene Objekt <paramref name="serializedObject" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Toolbox Element Creator-Methode implementieren, mit der Signatur einer Methode entsprechen die Methodensignatur dieses Delegattyps, aus der ein Objekt für einen bestimmten Zwischenablage-Datenformat platziert, in der Toolbox ein Toolboxelement erstellt. Sie können z. B. einen Toolbox-Elementersteller, der erstellt Entwerfen einer <xref:System.Windows.Forms.TextBox> zum Speichern von Text aus der Zwischenablage der Toolbox eingefügt. Können Sie die <xref:System.Drawing.Design.IToolboxService.AddCreator%2A> Methode der <xref:System.Drawing.Design.IToolboxService> Hinzufügen einer <xref:System.Drawing.Design.ToolboxItemCreatorCallback> -Ereignishandler für einen bestimmten Datentyp in der Toolbox. Die `serializedObject` Parameter enthält das Datenobjekt.  
+  
+ Beim Erstellen eines <xref:System.Drawing.Design.ToolboxItemCreatorCallback>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht eine Komponente, verwendet der <xref:System.Drawing.Design.IToolboxService> Datenhandler Format eine "Text" hinzufügen oder <xref:System.Drawing.Design.ToolboxItemCreatorCallback>, zur Toolbox. Der Ersteller Rückrufdelegat übergibt alle Textdaten in der Toolbox eingefügt und an eine benutzerdefinierte auf ein Formular gezogene <xref:System.Drawing.Design.ToolboxItem> , erstellt eine <xref:System.Windows.Forms.TextBox> mit dem Text.  
+  
+ [!code-cpp[ToolboxCreatorCallbackSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CPP/textdatatextboxcomponent.cpp#1)]
+ [!code-csharp[ToolboxCreatorCallbackSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CS/textdatatextboxcomponent.cs#1)]
+ [!code-vb[ToolboxCreatorCallbackSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/VB/textdatatextboxcomponent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Resources">
+  <Docs>
+    <summary>Die <see cref="N:System.Resources" /> Namespace stellt Klassen und Schnittstellen, die Entwicklern ermöglichen, zu erstellen, speichern und verwalten verschiedene kulturspezifische Ressourcen in einer Anwendung verwendet. Eine der wichtigsten Klassen von der <see cref="N:System.Resources" /> Namespace ist die <see cref="T:System.Resources.ResourceManager" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Resources.ResourceManager> Klasse ermöglicht dem Benutzer Zugriff und Steuerung Ressourcen, die in die Hauptassembly oder in Ressourcensatellitenassemblys gespeichert. Verwenden der <xref:System.Resources.ResourceManager.GetObject%2A> und <xref:System.Resources.ResourceManager.GetString%2A> Methoden zum Abrufen von kulturspezifischen Objekte und Zeichenfolgen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

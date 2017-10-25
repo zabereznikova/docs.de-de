@@ -1,0 +1,90 @@
+<Type Name="ListControlConvertEventArgs" FullName="System.Windows.Forms.ListControlConvertEventArgs">
+  <TypeSignature Language="C#" Value="public class ListControlConvertEventArgs : System.Windows.Forms.ConvertEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListControlConvertEventArgs extends System.Windows.Forms.ConvertEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListControlConvertEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ConvertEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ListControl.Format" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListControl.Format> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ListControl>, z. B. eine <xref:System.Windows.Forms.ComboBox> oder <xref:System.Windows.Forms.ListBox>. Geben Sie den Namen der Instanz `ListControl1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListControl.Format> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#144](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#144)]
+ [!code-vb[System.Windows.Forms.EventExamples#144](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#144)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListControlConvertEventArgs (object value, Type desiredType, object listItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value, class System.Type desiredType, object listItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListControlConvertEventArgs.#ctor(System.Object,System.Type,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="desiredType" Type="System.Type" />
+        <Parameter Name="listItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert angezeigt, der <see cref="T:System.Windows.Forms.ListControl" />.</param>
+        <param name="desiredType">Die <see cref="T:System.Type" /> für das angezeigte Element.</param>
+        <param name="listItem">Das Datenquellenelement im angezeigt werden die <see cref="T:System.Windows.Forms.ListControl" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ListControlConvertEventArgs" /> Klasse mit dem angegebenen Objekt, den Typ und die Listenelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann verwendet werden, erstellen Sie eine benutzerdefinierte Zeichenfolge so an die <xref:System.Windows.Forms.ListControl> aus dem Datenquellenelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="public object ListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListControlConvertEventArgs.ListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Datenquellenelement ab.</summary>
+        <value>Die <see cref="T:System.Object" /> , die ein Element in der Datenquelle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListControl.Format?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ListControl>, z. B. eine <xref:System.Windows.Forms.ComboBox> oder <xref:System.Windows.Forms.ListBox>. Geben Sie den Namen der Instanz `ListControl1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListControl.Format?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#144](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#144)]
+ [!code-vb[System.Windows.Forms.EventExamples#144](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#144)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

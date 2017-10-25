@@ -1,0 +1,357 @@
+<Type Name="EventDescriptor" FullName="System.ComponentModel.EventDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class EventDescriptor : System.ComponentModel.MemberDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EventDescriptor extends System.ComponentModel.MemberDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EventDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.MemberDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen über ein Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.EventDescriptor> umfasst einen Namen, ihre Attribute, die Komponente, die das Ereignis gebunden ist, der Ereignisdelegat, den Typ des Delegaten, und gibt an, ob der Delegat multicast vorliegt.  
+  
+ <xref:System.ComponentModel.EventDescriptor>bietet die folgenden `abstract` Eigenschaften und Methoden:  
+  
+-   <xref:System.ComponentModel.EventDescriptor.ComponentType%2A>enthält den Typ der Komponente, der dieses Ereignis deklariert ist.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.EventType%2A>enthält den Typ des Delegaten für das Ereignis.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.IsMulticast%2A>enthält einen Wert, der angibt, ob der Ereignisdelegat ein multicast-Delegat ist.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.AddEventHandler%2A>Bindet das Ereignis an eine Komponente an.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.RemoveEventHandler%2A>Hebt die Bindung auf den Delegaten aus der Komponente so, dass der Delegat nicht mehr Ereignisse von der Komponente empfängt.  
+  
+ Weitere Informationen zu Ereignissen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2). Weitere Informationen über Reflektion finden Sie unter den Themen in [Reflektion](~/docs/framework/reflection-and-codedom/reflection.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel basiert auf dem Beispiel in der <xref:System.ComponentModel.EventDescriptorCollection> Klasse. Gibt die Informationen der einzelnen Ereignisse (Kategorie, Beschreibung und Anzeigename) über eine Schaltfläche in einem Textfeld. Es erfordert, dass `button1` und `textbox1` in einem Formular instanziiert wurden.  
+  
+ [!code-cpp[EventDescriptor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/EventDescriptor/CPP/eventdescriptor.cpp#1)]
+ [!code-csharp[EventDescriptor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/EventDescriptor/CS/eventdescriptor.cs#1)]
+ [!code-vb[EventDescriptor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EventDescriptor/VB/eventdescriptor.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventDescriptor (System.ComponentModel.MemberDescriptor descr);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor descr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.#ctor(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="descr" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="descr">Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> , der den Namen des Ereignisses und seiner Attribute enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EventDescriptor" /> Klasse mit dem Namen und Attribute im angegebenen <see cref="T:System.ComponentModel.MemberDescriptor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventDescriptor (System.ComponentModel.MemberDescriptor descr, Attribute[] attrs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor descr, class System.Attribute[] attrs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.#ctor(System.ComponentModel.MemberDescriptor,System.Attribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="descr" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="attrs" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="descr">Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> Listenfeldsteuerelement mit dem Namen des Elements und seiner Attribute.</param>
+        <param name="attrs">Ein <see cref="T:System.Attribute" /> Array mit den Attributen, die Beschreibung des Ereignisses hinzugefügt werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.ComponentModel.EventDescriptor" /> Klasse mit dem Namen im angegebenen <see cref="T:System.ComponentModel.MemberDescriptor" /> und den Attributen in der <see cref="T:System.ComponentModel.MemberDescriptor" /> und die <see cref="T:System.Attribute" /> Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor fügt die Attribute in der <xref:System.Attribute> Array, das die Attribute in der <xref:System.ComponentModel.MemberDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventDescriptor (string name, Attribute[] attrs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name, class System.Attribute[] attrs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.#ctor(System.String,System.Attribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attrs" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Ereignisses.</param>
+        <param name="attrs">Ein Array vom Typ <see cref="T:System.Attribute" /> , das das Ereignisattribute enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EventDescriptor" /> Klasse mit dem angegebenen Namen und Attribut-Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventHandler">
+      <MemberSignature Language="C#" Value="public abstract void AddEventHandler (object component, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddEventHandler(object component, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.AddEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="component">Eine Komponente, die Ereignisse an den Delegaten bereitstellt.</param>
+        <param name="value">Ein Delegat, der die Methode darstellt, die das Ereignis behandelt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird das Ereignis an die Komponente gebunden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel durch Reflektion implementiert. Weitere Informationen über Reflektion finden Sie unter den Themen in [Reflektion](~/docs/framework/reflection-and-codedom/reflection.md).  
+  
+ Weitere Informationen über Delegaten finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Methode überschreiben, sollten sie den Delegaten Ereignisliste der Komponente hinzufügen, durch Aufrufen der entsprechenden <c>Add_myHandler</c> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentType">
+      <MemberSignature Language="C#" Value="public abstract Type ComponentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ComponentType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptor.ComponentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Typ der Komponente, die dieses Ereignis gebunden ist.</summary>
+        <value>Ein <see cref="T:System.Type" /> , der den Typ der Komponente, die das Ereignis gebunden ist, darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird i. d. r. durch Reflektion implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public abstract Type EventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EventType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptor.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Typ des Delegaten für das Ereignis ab.</summary>
+        <value>Ein <see cref="T:System.Type" /> , der den Typ des Delegaten für das Ereignis darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird i. d. r. durch Reflektion implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMulticast">
+      <MemberSignature Language="C#" Value="public abstract bool IsMulticast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMulticast" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptor.IsMulticast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert ab, ob der Ereignisdelegat ein multicast-Delegat ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Ereignisdelegat multicast vorliegt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird i. d. r. durch Reflektion implementiert.  
+  
+ Ein multicast-Delegat unterscheidet sich von einem normalen Delegaten darin, dass sie Verweise auf mehr als nur eine Methode enthalten kann. Methoden in einen Multicastdelegaten werden synchron ausgeführt werden, wenn der Delegat in der sie angezeigt werden aufgerufen wird, in der Reihenfolge. Wenn eine der aufgerufenen Methoden eine Ausnahme auslöst, der Delegat wird nicht mehr, und die Ausnahme an den Aufrufer des Delegaten weitergegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEventHandler">
+      <MemberSignature Language="C#" Value="public abstract void RemoveEventHandler (object component, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveEventHandler(object component, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.RemoveEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, der der Delegat gebunden ist.</param>
+        <param name="value">Der Delegat, der von der Komponente Aufheben der Bindung.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse hebt den Delegaten aus der Komponente so, dass der Delegat nicht mehr Ereignisse von der Komponente empfängt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel durch Reflektion implementiert. Weitere Informationen finden Sie unter den Themen in [Reflektion](~/docs/framework/reflection-and-codedom/reflection.md).  
+  
+ Weitere Informationen über Delegaten finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Methode überschreiben, sollten sie den Delegaten aus der Ereignisliste die Komponente entfernen, durch Aufrufen der entsprechenden <c>Remove_myHandler</c> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

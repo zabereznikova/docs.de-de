@@ -1,0 +1,24 @@
+<Namespace Name="System.Runtime.Caching">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Caching" /> -Namespace enthält Typen, mit denen Sie caching in .NET Framework-Anwendungen zu implementieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace bieten eine Möglichkeit, Zwischenspeicherfunktionen wie jene in ASP.NET zu verwenden, jedoch ohne eine Abhängigkeit von der `System.Web` -Assembly.  
+  
+> [!NOTE]
+>  Die Ausgabe-caching-Funktionen und Typen in der <xref:System.Runtime.Caching> Namespace wurden in eingeführt [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)].  
+  
+ Die caching-Typen, die in diesem Namespace bereitgestellt werden, bieten die folgenden Funktionen:  
+  
+-   Caching ist für alle .NET Framework-Anwendungen (nicht nur ASP.NET) zugegriffen werden kann.  
+  
+-   Caching ist erweiterbar.  
+  
+-   Sie können benutzerdefinierte Cacheanbieter erstellen. Anstatt das Standard-in-Memory-Cache-Modul zu verwenden, können Sie z. B. benutzerdefinierte Anbieter erstellen, das Zwischenspeichern von Daten in Datenbanken, in benutzerdefinierten Objekten oder im Dateisystem zu speichern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

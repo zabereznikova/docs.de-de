@@ -1,0 +1,1007 @@
+<Type Name="MetadataWorkspace" FullName="System.Data.Metadata.Edm.MetadataWorkspace">
+  <TypeSignature Language="C#" Value="public sealed class MetadataWorkspace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MetadataWorkspace extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.MetadataWorkspace" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die ADO.NET Metadaten Laufzeitdienstkomponente, die Unterstützung für das Abrufen von Metadaten aus verschiedenen Quellen bereitstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Metadata.Edm.MetadataWorkspace> -Klasse bietet eine zentrale Laufzeit-Dienstkomponente, die Sie für die Interaktion mit Metadaten eines konzeptionellen Modells im Kontext einer bestimmten Anwendung verwenden können. Weitere Informationen finden Sie unter [Metadaten-Arbeitsbereich](http://msdn.microsoft.com/en-us/601aee56-3eda-4caa-9082-a01df76c5e84).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataWorkspace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataWorkspace (System.Collections.Generic.IEnumerable&lt;string&gt; paths, System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt; assembliesToConsider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; paths, class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.Assembly&gt; assembliesToConsider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Reflection.Assembly})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="paths" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="assembliesToConsider" Type="System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="paths">Die Pfade zu den Arbeitsbereichs-Metadaten.</param>
+        <param name="assembliesToConsider">Die Namen der Assemblys verwendet, um im Arbeitsbereich zu erstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> -Klasse mit dem angegebenen Pfade und Assemblys.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearCache">
+      <MemberSignature Language="C#" Value="public static void ClearCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.ClearCache" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Metadaten-Cacheeinträge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEntitySqlParser">
+      <MemberSignature Language="C#" Value="public System.Data.Common.EntitySql.EntitySqlParser CreateEntitySqlParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.EntitySql.EntitySqlParser CreateEntitySqlParser() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.CreateEntitySqlParser" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.EntitySql.EntitySqlParser</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Data.Common.EntitySql.EntitySqlParser" /> konfiguriert die <see cref="F:System.Data.Metadata.Edm.DataSpace.CSpace" /> Datenspeicherplatz.</summary>
+        <returns>Das erstellte Parserobjekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQueryCommandTree">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbQueryCommandTree CreateQueryCommandTree (System.Data.Common.CommandTrees.DbExpression query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.CommandTrees.DbQueryCommandTree CreateQueryCommandTree(class System.Data.Common.CommandTrees.DbExpression query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.CreateQueryCommandTree(System.Data.Common.CommandTrees.DbExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbQueryCommandTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Data.Common.CommandTrees.DbExpression" />
+      </Parameters>
+      <Docs>
+        <param name="query">Ein <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> , der die Abfrage definiert.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Common.CommandTrees.DbQueryCommandTree" /> für diesen Metadatenarbeitsbereich basierend auf den angegebenen Abfrageausdruck gebunden.</summary>
+        <returns>Ein neues <see cref="T:System.Data.Common.CommandTrees.DbQueryCommandTree" /> mit dem angegebenen Ausdruck unverändert <see cref="P:System.Data.Common.CommandTrees.DbQueryCommandTree.Query" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="query" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEdmSpaceType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EnumType GetEdmSpaceType (System.Data.Metadata.Edm.EnumType objectSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EnumType GetEdmSpaceType(class System.Data.Metadata.Edm.EnumType objectSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetEdmSpaceType(System.Data.Metadata.Edm.EnumType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EnumType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.EnumType" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.EnumlType" />, der den Typ im Objektraum bereitstellt.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> Objekt, das darstellt der <see cref="T:System.Data.Metadata.Edm.EdmType" /> dem vom Parameter angegebenen Typ entspricht <paramref name="objectSpaceType" />.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />-Objekt, das den<see cref="T:System.Data.Metadata.Edm.EdmType" /> darstellt. Wenn kein entsprechender Typ vorhanden ist, gibt diese Methode NULL zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEdmSpaceType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.StructuralType GetEdmSpaceType (System.Data.Metadata.Edm.StructuralType objectSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.StructuralType GetEdmSpaceType(class System.Data.Metadata.Edm.StructuralType objectSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetEdmSpaceType(System.Data.Metadata.Edm.StructuralType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.StructuralType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.StructuralType" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />, der den Typ im Objektraum bereitstellt.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> Objekt, das darstellt der <see cref="T:System.Data.Metadata.Edm.EdmType" /> dem vom Parameter angegebenen Typ entspricht <paramref name="objectSpaceType" />.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />-Objekt, das den<see cref="T:System.Data.Metadata.Edm.EdmType" /> darstellt. Wenn kein entsprechender Typ vorhanden ist, gibt diese Methode NULL zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityContainer">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntityContainer GetEntityContainer (string name, System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EntityContainer GetEntityContainer(string name, valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetEntityContainer(System.String,System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntityContainer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Entitätscontainers.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Entitätscontainer gesucht wird.</param>
+        <summary>Gibt mithilfe des angegebenen Namens des Entitätencontainers und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" />-Objekt zurück.</summary>
+        <returns>Wenn kein Entitätencontainer vorhanden ist, gibt diese Methode NULL zurück, andernfalls wird der erste Entitätencontainer zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityContainer">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntityContainer GetEntityContainer (string name, bool ignoreCase, System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EntityContainer GetEntityContainer(string name, bool ignoreCase, valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetEntityContainer(System.String,System.Boolean,System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntityContainer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Entitätscontainers.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Entitätscontainer gesucht wird.</param>
+        <summary>Gibt mithilfe des angegebenen Namens des Entitätencontainers und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" />-Objekt zurück.</summary>
+        <returns>Wenn kein Entitätencontainer vorhanden ist, gibt diese Methode NULL zurück, andernfalls wird der erste Entitätencontainer zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFunctions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions (string name, string namespaceName, System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions(string name, string namespaceName, valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetFunctions(System.String,System.String,System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Funktion.</param>
+        <param name="namespaceName">Der Namespace der Funktion.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem die Funktion durchsucht werden.</param>
+        <summary>Gibt mithilfe des angegebenen Namens, des Namespacenamens und des Datenmodells alle Überladungen der Funktionen zurück.</summary>
+        <returns>Eine Auflistung des Typs <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />, die alle Funktionen im angegebenen Namespace und Datenmodell enthält, die den angegebenen Namen haben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFunctions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions (string name, string namespaceName, System.Data.Metadata.Edm.DataSpace dataSpace, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions(string name, string namespaceName, valuetype System.Data.Metadata.Edm.DataSpace dataSpace, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetFunctions(System.String,System.String,System.Data.Metadata.Edm.DataSpace,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Funktion.</param>
+        <param name="namespaceName">Der Namespace der Funktion.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem die Funktion durchsucht werden.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <summary>Gibt mithilfe des angegebenen Namens, des Namespacenamens und des Datenmodells alle Überladungen der Funktionen zurück.</summary>
+        <returns>Eine Auflistung des Typs <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />, die alle Funktionen im angegebenen Namespace und Datenmodell enthält, die den angegebenen Namen haben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetItem&lt;T&gt; (string identity, System.Data.Metadata.Edm.DataSpace dataSpace) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity, valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetItem``1(System.String,System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der von der Methode zurückgegeben wird.</typeparam>
+        <param name="identity">Die Identität des Elements.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem das Element gesucht wird.</param>
+        <summary>Gibt mithilfe der angegebenen Identität und des Datenmodells ein Element zurück.</summary>
+        <returns>Das Element, das der angegebenen Identität im angegebenen Datenmodell entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetItem&lt;T&gt; (string identity, bool ignoreCase, System.Data.Metadata.Edm.DataSpace dataSpace) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity, bool ignoreCase, valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetItem``1(System.String,System.Boolean,System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der von der Methode zurückgegeben wird.</typeparam>
+        <param name="identity">Die Identität des Elements.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem das Element gesucht wird.</param>
+        <summary>Gibt mithilfe der angegebenen Identität und des Datenmodells ein Element zurück.</summary>
+        <returns>Das Element, das der angegebenen Identität im angegebenen Datenmodell entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemCollection">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.ItemCollection GetItemCollection (System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.ItemCollection GetItemCollection(valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetItemCollection(System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="dataSpace">Die <see cref="T:System.Data.Metadata.Edm.DataSpace" /> aus dem Elemente abgerufen werden sollen.</param>
+        <summary>Ruft <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> Elemente.</summary>
+        <returns>Die <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> Elemente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.GlobalItem&gt; GetItems (System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.GlobalItem&gt; GetItems(valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetItems(System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.GlobalItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="dataSpace">Das konzeptionelle Modell, für das die Liste der Elemente erforderlich ist.</param>
+        <summary>Ruft alle Elemente im angegebenen Datenmodell ab.</summary>
+        <returns>Eine Auflistung des Typs <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />, in der alle Elemente im angegebenen Datenmodell enthalten sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt; GetItems&lt;T&gt; (System.Data.Metadata.Edm.DataSpace dataSpace) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;!!T&gt; GetItems&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetItems``1(System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der von der Methode zurückgegeben wird.</typeparam>
+        <param name="dataSpace">Das konzeptionelle Modell, für das die Liste der Elemente erforderlich ist.</param>
+        <summary>Ruft alle Elemente im angegebenen Datenmodell ab.</summary>
+        <returns>Eine Auflistung des Typs <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />, in der alle Elemente im angegebenen Datenmodell enthalten sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectSpaceType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EnumType GetObjectSpaceType (System.Data.Metadata.Edm.EnumType edmSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EnumType GetObjectSpaceType(class System.Data.Metadata.Edm.EnumType edmSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetObjectSpaceType(System.Data.Metadata.Edm.EnumType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EnumType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmSpaceType" Type="System.Data.Metadata.Edm.EnumType" />
+      </Parameters>
+      <Docs>
+        <param name="edmSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.EnumType" />-Objekt, das den<see cref="T:System.Data.Metadata.Edm.EdmType" /> darstellt.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> Objekt, das den Objektraumtyp darstellt, der den vom Parameter angegebenen Typ entspricht <paramref name="edmSpaceType" />.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />-Objekt, das den Objektraumtyp darstellt. Wenn kein entsprechender Typ vorhanden ist, gibt diese Methode NULL zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectSpaceType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.StructuralType GetObjectSpaceType (System.Data.Metadata.Edm.StructuralType edmSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.StructuralType GetObjectSpaceType(class System.Data.Metadata.Edm.StructuralType edmSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetObjectSpaceType(System.Data.Metadata.Edm.StructuralType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.StructuralType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmSpaceType" Type="System.Data.Metadata.Edm.StructuralType" />
+      </Parameters>
+      <Docs>
+        <param name="edmSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />-Objekt, das den<see cref="T:System.Data.Metadata.Edm.EdmType" /> darstellt.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> Objekt, das den Objektraumtyp darstellt, der den vom Parameter angegebenen Typ entspricht <paramref name="edmSpaceType" />.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />-Objekt, das den Objektraumtyp darstellt. Wenn kein entsprechender Typ vorhanden ist, gibt diese Methode NULL zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrimitiveTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.PrimitiveType&gt; GetPrimitiveTypes (System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.PrimitiveType&gt; GetPrimitiveTypes(valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetPrimitiveTypes(System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.PrimitiveType&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="dataSpace">Das Datenmodell, für das die Liste der primitiven Typen benötigt wird.</param>
+        <summary>Gibt die Liste der primitiven Typen im angegebenen Datenmodell zurück.</summary>
+        <returns>Eine Auflistung des Typs <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />, in der alle primitiven Typen im angegebenen Datenmodell enthalten sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelevantMembersForUpdate">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmMember&gt; GetRelevantMembersForUpdate (System.Data.Metadata.Edm.EntitySetBase entitySet, System.Data.Metadata.Edm.EntityTypeBase entityType, bool partialUpdateSupported);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmMember&gt; GetRelevantMembersForUpdate(class System.Data.Metadata.Edm.EntitySetBase entitySet, class System.Data.Metadata.Edm.EntityTypeBase entityType, bool partialUpdateSupported) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate(System.Data.Metadata.Edm.EntitySetBase,System.Data.Metadata.Edm.EntityTypeBase,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmMember&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySet" Type="System.Data.Metadata.Edm.EntitySetBase" />
+        <Parameter Name="entityType" Type="System.Data.Metadata.Edm.EntityTypeBase" />
+        <Parameter Name="partialUpdateSupported" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="entitySet">Eine <see cref="T:System.Data.Metadata.Edm.EntitySet" /> , die die C-Raum gehören.</param>
+        <param name="entityType">Ein <see cref="T:System.Data.Metadata.Edm.EntityType" /> beteiligt, die den angegebenen <see cref="T:System.Data.Metadata.Edm.EntitySet" />.</param>
+        <param name="partialUpdateSupported">
+          <see langword="true" />Wenn Entitäten teilweise aktualisiert werden können. andernfalls <see langword="false" />.</param>
+        <summary>Gibt die Mitglieder der einer bestimmten <see cref="T:System.Data.Metadata.Edm.EntitySet" /> / <see cref="T:System.Data.Metadata.Edm.EntityType" /> für die ursprünglichen Werte erforderlich sind, wenn eine Entität zu ändern.</summary>
+        <returns>Die <see cref="T:System.Data.Metadata.Edm.EdmMember" />s für den ursprünglichen Wert erforderlich ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredOriginalValueMembers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Metadata.Edm.EdmMember&gt; GetRequiredOriginalValueMembers (System.Data.Metadata.Edm.EntitySetBase entitySet, System.Data.Metadata.Edm.EntityTypeBase entityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Metadata.Edm.EdmMember&gt; GetRequiredOriginalValueMembers(class System.Data.Metadata.Edm.EntitySetBase entitySet, class System.Data.Metadata.Edm.EntityTypeBase entityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers(System.Data.Metadata.Edm.EntitySetBase,System.Data.Metadata.Edm.EntityTypeBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use MetadataWorkspace.GetRelevantMembersForUpdate(EntitySetBase, EntityTypeBase, bool) instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Metadata.Edm.EdmMember&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySet" Type="System.Data.Metadata.Edm.EntitySetBase" />
+        <Parameter Name="entityType" Type="System.Data.Metadata.Edm.EntityTypeBase" />
+      </Parameters>
+      <Docs>
+        <param name="entitySet">Die Entitätenmenge, aus der ursprünglichen Werte abgerufen werden soll.</param>
+        <param name="entityType">Der Entitätstyp, der die ursprünglichen Werte abgerufen werden soll.</param>
+        <summary>Ruft den ursprünglichen Wert Elemente aus einer Entitätenmenge und einen Entitätstyp ab.</summary>
+        <returns>Geben Sie den ursprünglichen Wert Elemente von einer Entitätenmenge und der Entität.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EdmType GetType (string name, string namespaceName, System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EdmType GetType(string name, string namespaceName, valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetType(System.String,System.String,System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Typs.</param>
+        <param name="namespaceName">Der Namespace des Typs.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Typ gesucht wird.</param>
+        <summary>Gibt mithilfe des angegebenen Typnamens, des Namespacenamens und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt zurück.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt, das den Typ darstellt, der dem angegebenen Typnamen und Namespacenamen im angegebenen Datenmodell entspricht. Wenn kein entsprechender Typ vorhanden ist, gibt diese Methode NULL zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EdmType GetType (string name, string namespaceName, bool ignoreCase, System.Data.Metadata.Edm.DataSpace dataSpace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EdmType GetType(string name, string namespaceName, bool ignoreCase, valuetype System.Data.Metadata.Edm.DataSpace dataSpace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.GetType(System.String,System.String,System.Boolean,System.Data.Metadata.Edm.DataSpace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Typs.</param>
+        <param name="namespaceName">Der Namespace des Typs.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Typ gesucht wird.</param>
+        <summary>Gibt mithilfe des angegebenen Typnamens, des Namespacenamens und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt zurück.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromAssembly">
+      <MemberSignature Language="C#" Value="public void LoadFromAssembly (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadFromAssembly(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die Assembly, aus der die Metadaten geladen werden.</param>
+        <summary>Lädt Metadaten einer angegebenen Assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromAssembly">
+      <MemberSignature Language="C#" Value="public void LoadFromAssembly (System.Reflection.Assembly assembly, Action&lt;string&gt; logLoadMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadFromAssembly(class System.Reflection.Assembly assembly, class System.Action`1&lt;string&gt; logLoadMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(System.Reflection.Assembly,System.Action{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="logLoadMessage" Type="System.Action&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die Assembly, aus der die Metadaten geladen werden.</param>
+        <param name="logLoadMessage">Der Delegat für die Load-Meldungen werden protokolliert.</param>
+        <summary>Lädt Metadaten einer angegebenen Assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumEdmVersionSupported">
+      <MemberSignature Language="C#" Value="public static readonly double MaximumEdmVersionSupported;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly float64 MaximumEdmVersionSupported" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.MetadataWorkspace.MaximumEdmVersionSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die maximale Version des Entity Data Models (EDM) dar, die von der Entity Framework Runtime unterstützt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterItemCollection">
+      <MemberSignature Language="C#" Value="public void RegisterItemCollection (System.Data.Metadata.Edm.ItemCollection collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterItemCollection(class System.Data.Metadata.Edm.ItemCollection collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.RegisterItemCollection(System.Data.Metadata.Edm.ItemCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Data.Metadata.Edm.ItemCollection" />
+      </Parameters>
+      <Docs>
+        <param name="collection">Die Auflistung der Ausgabeparameter, die gefüllt werden soll.</param>
+        <summary>Registriert die Elementauflistung zu jedem zugeordneten Datenmodell.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEdmSpaceType">
+      <MemberSignature Language="C#" Value="public bool TryGetEdmSpaceType (System.Data.Metadata.Edm.EnumType objectSpaceType, out System.Data.Metadata.Edm.EnumType edmSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEdmSpaceType(class System.Data.Metadata.Edm.EnumType objectSpaceType, [out] class System.Data.Metadata.Edm.EnumType&amp; edmSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetEdmSpaceType(System.Data.Metadata.Edm.EnumType,System.Data.Metadata.Edm.EnumType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.EnumType" />
+        <Parameter Name="edmSpaceType" Type="System.Data.Metadata.Edm.EnumType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.EnumType" />-Objekt, das den Objektraumtyp darstellt.</param>
+        <param name="edmSpaceType">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Data.Metadata.Edm.EnumType" /> -Objekt, das stellt die <see cref="T:System.Data.Metadata.Edm.EdmType" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.EnumType" /> Objekt über die Out-Parameter <paramref name="edmSpaceType" /> darstellt, die die <see cref="T:System.Data.Metadata.Edm.EdmType" /> dem vom Parameter angegebenen Typ entspricht <paramref name="objectSpaceType" />.</summary>
+        <returns>
+          <see langword="true" />Bei Erfolg <see langword="false" /> bei einem Fehler.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEdmSpaceType">
+      <MemberSignature Language="C#" Value="public bool TryGetEdmSpaceType (System.Data.Metadata.Edm.StructuralType objectSpaceType, out System.Data.Metadata.Edm.StructuralType edmSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEdmSpaceType(class System.Data.Metadata.Edm.StructuralType objectSpaceType, [out] class System.Data.Metadata.Edm.StructuralType&amp; edmSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetEdmSpaceType(System.Data.Metadata.Edm.StructuralType,System.Data.Metadata.Edm.StructuralType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.StructuralType" />
+        <Parameter Name="edmSpaceType" Type="System.Data.Metadata.Edm.StructuralType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />-Objekt, das den Objektraumtyp darstellt.</param>
+        <param name="edmSpaceType">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> -Objekt, das stellt die <see cref="T:System.Data.Metadata.Edm.EdmType" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> Objekt über die Out-Parameter <paramref name="edmSpaceType" /> darstellt, die die <see cref="T:System.Data.Metadata.Edm.EdmType" /> dem vom Parameter angegebenen Typ entspricht <paramref name="objectSpaceType" />.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Typ vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEntityContainer">
+      <MemberSignature Language="C#" Value="public bool TryGetEntityContainer (string name, System.Data.Metadata.Edm.DataSpace dataSpace, out System.Data.Metadata.Edm.EntityContainer entityContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEntityContainer(string name, valuetype System.Data.Metadata.Edm.DataSpace dataSpace, [out] class System.Data.Metadata.Edm.EntityContainer&amp; entityContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetEntityContainer(System.String,System.Data.Metadata.Edm.DataSpace,System.Data.Metadata.Edm.EntityContainer@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="entityContainer" Type="System.Data.Metadata.Edm.EntityContainer&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Entitätscontainers.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Entitätscontainer gesucht wird.</param>
+        <param name="entityContainer">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" />-Objekt zurück. Wenn kein Entitätencontainer vorhanden ist, enthält dieser Ausgabeparameter NULL, andernfalls wird der erste Entitätencontainer zurückgegeben. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt mithilfe des angegebenen Namens des Entitätencontainers und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" />-Objekt zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Entitätencontainer vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEntityContainer">
+      <MemberSignature Language="C#" Value="public bool TryGetEntityContainer (string name, bool ignoreCase, System.Data.Metadata.Edm.DataSpace dataSpace, out System.Data.Metadata.Edm.EntityContainer entityContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEntityContainer(string name, bool ignoreCase, valuetype System.Data.Metadata.Edm.DataSpace dataSpace, [out] class System.Data.Metadata.Edm.EntityContainer&amp; entityContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetEntityContainer(System.String,System.Boolean,System.Data.Metadata.Edm.DataSpace,System.Data.Metadata.Edm.EntityContainer@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="entityContainer" Type="System.Data.Metadata.Edm.EntityContainer&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Entitätscontainers.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Entitätscontainer gesucht wird.</param>
+        <param name="entityContainer">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" />-Objekt zurück. Wenn kein Entitätencontainer vorhanden ist, enthält dieser Ausgabeparameter NULL, andernfalls wird der erste Entitätencontainer zurückgegeben. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt mithilfe des angegebenen Namens des Entitätencontainers und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EntityContainer" />-Objekt zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Entitätencontainer vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetItem&lt;T&gt; (string identity, System.Data.Metadata.Edm.DataSpace space, out T item) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity, valuetype System.Data.Metadata.Edm.DataSpace space, [out] !!T&amp; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetItem``1(System.String,System.Data.Metadata.Edm.DataSpace,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="space" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="item" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der von der Methode zurückgegeben wird.</typeparam>
+        <param name="identity">Das konzeptionelle Modell, in dem das Element gesucht wird.</param>
+        <param name="space">Das konzeptionelle Modell, in dem das Element gesucht wird.</param>
+        <param name="item">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.GlobalIem" />-Objekt zurück. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt mithilfe der angegebenen Identität und des Datenmodells ein Element zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Element vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetItem&lt;T&gt; (string identity, bool ignoreCase, System.Data.Metadata.Edm.DataSpace dataSpace, out T item) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity, bool ignoreCase, valuetype System.Data.Metadata.Edm.DataSpace dataSpace, [out] !!T&amp; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetItem``1(System.String,System.Boolean,System.Data.Metadata.Edm.DataSpace,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="item" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der von der Methode zurückgegeben wird.</typeparam>
+        <param name="identity">Das konzeptionelle Modell, in dem das Element gesucht wird.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem das Element gesucht wird.</param>
+        <param name="item">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.GlobalIem" />-Objekt zurück. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt mithilfe der angegebenen Identität und des Datenmodells ein Element zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Element vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetItemCollection">
+      <MemberSignature Language="C#" Value="public bool TryGetItemCollection (System.Data.Metadata.Edm.DataSpace dataSpace, out System.Data.Metadata.Edm.ItemCollection collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetItemCollection(valuetype System.Data.Metadata.Edm.DataSpace dataSpace, [out] class System.Data.Metadata.Edm.ItemCollection&amp; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetItemCollection(System.Data.Metadata.Edm.DataSpace,System.Data.Metadata.Edm.ItemCollection@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="collection" Type="System.Data.Metadata.Edm.ItemCollection&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="dataSpace">Die <see cref="T:System.Data.Metadata.Edm.DataSpace" /> aus dem Abruf von versuchen <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" />.</param>
+        <param name="collection">Bei der Rückgabe dieser Methode enthält die Elementauflistung. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Testet den Abruf von <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Abruf erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetObjectSpaceType">
+      <MemberSignature Language="C#" Value="public bool TryGetObjectSpaceType (System.Data.Metadata.Edm.EnumType edmSpaceType, out System.Data.Metadata.Edm.EnumType objectSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetObjectSpaceType(class System.Data.Metadata.Edm.EnumType edmSpaceType, [out] class System.Data.Metadata.Edm.EnumType&amp; objectSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetObjectSpaceType(System.Data.Metadata.Edm.EnumType,System.Data.Metadata.Edm.EnumType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmSpaceType" Type="System.Data.Metadata.Edm.EnumType" />
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.EnumType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="edmSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.EnumType" />-Objekt, das den<see cref="T:System.Data.Metadata.Edm.EdmType" /> darstellt.</param>
+        <param name="objectSpaceType">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Data.Metadata.Edm.EnumType" /> Objekt, das den Objektraumtyp darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.EnumType" /> Objekt über die Out-Parameter <paramref name="objectSpaceType" /> , die den Typ darstellt, der entspricht der <see cref="T:System.Data.Metadata.Edm.EdmType" /> vom Parameter angegebenen <paramref name="edmSpaceType" />.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Typ vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetObjectSpaceType">
+      <MemberSignature Language="C#" Value="public bool TryGetObjectSpaceType (System.Data.Metadata.Edm.StructuralType edmSpaceType, out System.Data.Metadata.Edm.StructuralType objectSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetObjectSpaceType(class System.Data.Metadata.Edm.StructuralType edmSpaceType, [out] class System.Data.Metadata.Edm.StructuralType&amp; objectSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetObjectSpaceType(System.Data.Metadata.Edm.StructuralType,System.Data.Metadata.Edm.StructuralType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmSpaceType" Type="System.Data.Metadata.Edm.StructuralType" />
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.StructuralType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="edmSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />-Objekt, das den<see cref="T:System.Data.Metadata.Edm.EdmType" /> darstellt.</param>
+        <param name="objectSpaceType">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> Objekt, das den Objektraumtyp darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine <see cref="T:System.Data.Metadata.Edm.StructuralType" /> Objekt über die Out-Parameter <paramref name="objectSpaceType" /> , die den Typ darstellt, der entspricht der <see cref="T:System.Data.Metadata.Edm.EdmType" /> vom Parameter angegebenen <paramref name="edmSpaceType" />.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Typ vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetType">
+      <MemberSignature Language="C#" Value="public bool TryGetType (string name, string namespaceName, System.Data.Metadata.Edm.DataSpace dataSpace, out System.Data.Metadata.Edm.EdmType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetType(string name, string namespaceName, valuetype System.Data.Metadata.Edm.DataSpace dataSpace, [out] class System.Data.Metadata.Edm.EdmType&amp; type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetType(System.String,System.String,System.Data.Metadata.Edm.DataSpace,System.Data.Metadata.Edm.EdmType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="type" Type="System.Data.Metadata.Edm.EdmType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Typs.</param>
+        <param name="namespaceName">Der Namespace des Typs.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Typ gesucht wird.</param>
+        <param name="type">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt zurück. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt mithilfe des angegebenen Typnamens, des Namespacenamens und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Typ vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetType">
+      <MemberSignature Language="C#" Value="public bool TryGetType (string name, string namespaceName, bool ignoreCase, System.Data.Metadata.Edm.DataSpace dataSpace, out System.Data.Metadata.Edm.EdmType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetType(string name, string namespaceName, bool ignoreCase, valuetype System.Data.Metadata.Edm.DataSpace dataSpace, [out] class System.Data.Metadata.Edm.EdmType&amp; type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.MetadataWorkspace.TryGetType(System.String,System.String,System.Boolean,System.Data.Metadata.Edm.DataSpace,System.Data.Metadata.Edm.EdmType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="dataSpace" Type="System.Data.Metadata.Edm.DataSpace" />
+        <Parameter Name="type" Type="System.Data.Metadata.Edm.EdmType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Typs.</param>
+        <param name="namespaceName">Der Namespace des Typs.</param>
+        <param name="ignoreCase">
+          <see langword="true" />in der Groß-/Kleinschreibung gesucht; andernfalls <see langword="false" />.</param>
+        <param name="dataSpace">Das konzeptionelle Modell, in dem der Typ gesucht wird.</param>
+        <param name="type">Diese Methode gibt ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt zurück. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt mithilfe des angegebenen Typnamens, des Namespacenamens und des Datenmodells ein <see cref="T:System.Data.Metadata.Edm.EdmType" />-Objekt zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Typ vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

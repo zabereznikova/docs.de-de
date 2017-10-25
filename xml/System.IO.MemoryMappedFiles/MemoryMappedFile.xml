@@ -1,0 +1,1705 @@
+<Type Name="MemoryMappedFile" FullName="System.IO.MemoryMappedFiles.MemoryMappedFile">
+  <TypeSignature Language="C#" Value="public class MemoryMappedFile : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MemoryMappedFile extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.MemoryMappedFiles.MemoryMappedFile" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Speicherabbilddatei dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Speicherabbilddatei ordnet den Inhalt einer Datei dem logischen Adressbereich einer Anwendung. Speicherabbilddateien ermöglichen Programmierern das Bereitstellen mit sehr großen Dateien arbeiten, da Arbeitsspeicher gleichzeitig verwaltet werden kann, und ermöglichen den abgeschlossen, zufälligen Zugriff auf eine Datei ohne die Notwendigkeit, dass gesucht werden soll. Speicherabbilddateien können auch für mehrere Prozesse verwendet werden.  
+  
+ Die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> Methoden erstellen eine Speicherabbilddatei aus einem angegebenen Pfad oder ein <xref:System.IO.FileStream> einer vorhandenen Datei auf dem Datenträger. Änderungen werden automatisch weitergegeben, wenn auf dem Datenträger die Datei ist nicht zugeordnet.  
+  
+ Die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> Methoden erstellen eine Speicherabbilddatei, die nicht zu einer vorhandenen Datei auf dem Datenträger zugeordnet ist, und eignen sich für das Erstellen von freigegebenen Speicherbereichen für die prozessübergreifende Kommunikation (IPC).  
+  
+ Eine Speicherabbilddatei, die einen Namen zugeordnet ist.  
+  
+ Sie können mehrere Ansichten für die Speicherabbilddatei, einschließlich Ansichten von Teilen der Datei erstellen. Sie können die gleichen Teil der Datei mehr als eine Adresse zum Erstellen von parallelen Arbeitsspeicher zuordnen. Parallele Ansichten müssen aus der gleichen Speicherabbilddatei erstellt werden. Erstellen zwei Datei Zuordnungen der gleichen Datei mit zwei Ansichten bietet keine Parallelität.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Speicherabbild für einen Teil einer sehr großen Datei erstellt und teilweise bearbeitet.  
+  
+ [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
+ [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der abzubildenden Datei.</param>
+        <summary>Erstellt eine Speicherabbilddatei aus einer Datei auf dem Datenträger.</summary>
+        <returns>Eine Speicherabbilddatei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> Methode zum Erstellen eine Speicherabbilddatei, und klicken Sie dann ein Speicherabbild für einen Teil einer sehr großen Datei erstellt.  
+  
+ [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
+ [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />ist eine leere Zeichenfolge, enthält nur Leerzeichen oder verfügt über mindestens ein ungültiges Zeichen gemäß der <see cref="M:System.IO.Path.GetInvalidFileNameChars" /> Methode.  
+  
+ - oder -   
+  
+ <paramref name="path" />bezieht sich auf ein ungültiges Gerät.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">E/A-Fehler</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" />überschreitet die vom Betriebssystem definierte maximale Länge. In Windows Pfade darf weniger als 248 Zeichen und Dateinamen müssen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt nicht die erforderlichen Berechtigungen für die Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der abzubildenden Datei.</param>
+        <param name="mode">Der Zugriffsmodus. Muss <see cref="F:System.IO.FileMode.Open" /> sein.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit dem angegebenen Zugriffsmodus aus einer Datei auf dem Datenträger.</summary>
+        <returns>Eine im Speicher abgebildete Datei mit dem angegebenen Zugriffsmodus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter bezieht sich auf die Quelldatei auf dem Datenträger. Sie können nur die <xref:System.IO.FileMode.Open> Enumerationswert im Speicher abgebildeten Datei aus der Quelldatei auf dem Datenträger zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />ist eine leere Zeichenfolge, enthält nur Leerzeichen oder verfügt über mindestens ein ungültiges Zeichen gemäß der <see cref="M:System.IO.Path.GetInvalidFileNameChars" /> Methode.  
+  
+ - oder -   
+  
+ <paramref name="path" />bezieht sich auf ein ungültiges Gerät.  
+  
+ - oder -   
+  
+ <paramref name="mode" /> ist <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="mode" /> ist <see cref="F:System.IO.FileMode.Create" />, <see cref="F:System.IO.FileMode.CreateNew" /> oder <see cref="F:System.IO.FileMode.Truncate" />.  
+  
+ - oder -   
+  
+ <paramref name="mode" />ist <see cref="F:System.IO.FileMode.OpenOrCreate" /> und die Datei auf dem Datenträger ist nicht vorhanden.  
+  
+ - oder -   
+  
+ E/A-Fehler</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" />überschreitet die vom Betriebssystem definierte maximale Länge. In Windows Pfade darf weniger als 248 Zeichen und Dateinamen müssen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt nicht die erforderlichen Berechtigungen für die Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode, string mapName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode, string mapName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="mapName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der abzubildenden Datei.</param>
+        <param name="mode">Der Zugriffsmodus. Muss <see cref="F:System.IO.FileMode.Open" /> sein.</param>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit den angegebenen Werten für Zugriffsmodus und Name aus einer Datei auf dem Datenträger.</summary>
+        <returns>Eine im Speicher abgebildete Datei mit den angegebenen Werten für Name und Zugriffsmodus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter bezieht sich auf die Quelldatei auf dem Datenträger. Sie können nur die <xref:System.IO.FileMode.Open> Enumerationswert im Speicher abgebildeten Datei aus der Quelldatei auf dem Datenträger zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />ist eine leere Zeichenfolge, enthält nur Leerzeichen oder verfügt über mindestens ein ungültiges Zeichen gemäß der <see cref="M:System.IO.Path.GetInvalidFileNameChars" /> Methode.  
+  
+ - oder -   
+  
+ <paramref name="path" />bezieht sich auf ein ungültiges Gerät.  
+  
+ - oder -   
+  
+ <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="mode" /> ist <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="mode" /> ist <see cref="F:System.IO.FileMode.Create" />, <see cref="F:System.IO.FileMode.CreateNew" /> oder <see cref="F:System.IO.FileMode.Truncate" />.  
+  
+ - oder -   
+  
+ <paramref name="mode" />ist <see cref="F:System.IO.FileMode.OpenOrCreate" /> und die Datei auf dem Datenträger ist nicht vorhanden.  
+  
+ - oder -   
+  
+ E/A-Fehler</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" />überschreitet die vom Betriebssystem definierte maximale Länge. In Windows Pfade darf weniger als 248 Zeichen und Dateinamen müssen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt nicht die erforderlichen Berechtigungen für die Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode, string mapName, long capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode, string mapName, int64 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode,System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der abzubildenden Datei.</param>
+        <param name="mode">Zugriffsmodus; kann einer der <see cref="T:System.IO.FileMode" />-Enumerationswerte, außer <see cref="F:System.IO.FileMode.Append" />, sein.</param>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll. Geben Sie 0 an, um die Kapazität auf die Größe der Datei auf dem Datenträger festzulegen.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit den angegebenen Werten für Zugriffsmodus, Name und Kapazität aus einer Datei auf dem Datenträger.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter bezieht sich auf die Quelldatei auf dem Datenträger.  
+  
+ Wenn `capacity` ist größer als die Größe der Datei auf dem Datenträger, die Datei auf Datenträger erhöht wird, um die angegebene Kapazität zu übereinstimmt, selbst wenn keine Daten in die Speicherabbilddatei geschrieben werden. Geben Sie 0 (null) für die Standardkapazität, der intern festgelegt wird, um dies zu vermeiden, `capacity` auf die Größe der Datei auf dem Datenträger.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />ist eine leere Zeichenfolge, enthält nur Leerzeichen oder verfügt über mindestens ein ungültiges Zeichen gemäß der <see cref="M:System.IO.Path.GetInvalidFileNameChars" /> Methode.  
+  
+ - oder -   
+  
+ <paramref name="path" />bezieht sich auf ein ungültiges Gerät.  
+  
+ - oder -   
+  
+ <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="mode" /> ist <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" />ist größer als die Größe des Speicherplatzes logische Adresse.  
+  
+ - oder -   
+  
+ <paramref name="capacity" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="capacity" />ist kleiner als die Dateigröße (jedoch nicht 0 (null)).  
+  
+ - oder -   
+  
+ <paramref name="capacity" />0 (null), und die Größe der Datei auf dem Datenträger ist auch 0 (null).</exception>
+        <exception cref="T:System.IO.IOException">E/A-Fehler</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" />überschreitet die vom Betriebssystem definierte maximale Länge. In Windows Pfade darf weniger als 248 Zeichen und Dateinamen müssen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt nicht die erforderlichen Berechtigungen für die Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode, string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode, string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode,System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad der abzubildenden Datei.</param>
+        <param name="mode">Zugriffsmodus; kann einer der <see cref="T:System.IO.FileMode" />-Enumerationswerte, außer <see cref="F:System.IO.FileMode.Append" />, sein.</param>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll. Geben Sie 0 an, um die Kapazität auf die Größe der Datei auf dem Datenträger festzulegen.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit den angegebenen Werten für Zugriffsmodus, Name, Kapazität und Zugriffstyp aus einer Datei auf dem Datenträger.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter bezieht sich auf die Quelldatei auf dem Datenträger.  
+  
+ Wenn `capacity` ist größer als die Größe der Datei auf dem Datenträger, die Datei auf Datenträger erhöht wird, um die angegebene Kapazität zu übereinstimmt, selbst wenn keine Daten in die Speicherabbilddatei geschrieben werden. Geben Sie 0 (null) für die Standardkapazität, der intern festgelegt wird, um dies zu vermeiden, `capacity` auf die Größe der Datei auf dem Datenträger.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="access" />ist kein zulässiger Wert.  
+  
+ - oder -   
+  
+ <paramref name="path" />Gibt eine leere Datei an.  
+  
+ - oder -   
+  
+ <paramref name="access" />wird angegeben als <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Read" /> und Kapazität ist größer als die Größe der Datei erkennbar <paramref name="path" />.  
+  
+ - oder -   
+  
+ <paramref name="mode" /> ist <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" />ist größer als die Größe des Speicherplatzes logische Adresse.  
+  
+ - oder -   
+  
+ <paramref name="capacity" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="capacity" />ist kleiner als die Dateigröße (jedoch nicht 0 (null)).  
+  
+ - oder -   
+  
+ <paramref name="capacity" />0 (null), und die Größe der Datei auf dem Datenträger ist auch 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" />ist kein definierter <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> Wert.  
+  
+ - oder -   
+  
+ Die Größe der Datei erkennbar <paramref name="path" /> ist größer als <paramref name="capacity" />.</exception>
+        <exception cref="T:System.IO.IOException">- oder -   
+  
+ E/A-Fehler</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" />überschreitet die vom Betriebssystem definierte maximale Länge. In Windows Pfade darf weniger als 248 Zeichen und Dateinamen müssen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt nicht die erforderlichen Berechtigungen für die Datei.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (System.IO.FileStream fileStream, string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.HandleInheritability inheritability, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(class System.IO.FileStream fileStream, string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.HandleInheritability inheritability, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.IO.FileStream,System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.HandleInheritability,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileStream" Type="System.IO.FileStream" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fileStream">Der Dateistream der angegebenen Datei.</param>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll. Geben Sie 0 an, um die Kapazität auf die Größe des festzulegen <c>Filestream</c>.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt.  
+  
+ Dieser Parameter kann nicht auf <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> festgelegt werden.</param>
+        <param name="inheritability">Einer der Enumerationswerte, der angibt, ob ein Handle auf die Speicherabbilddatei von einem untergeordneten Prozess geerbt werden kann. Die Standardeinstellung ist <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <param name="leaveOpen">Dieser Wert gibt an, ob der Stream der Quelldatei geschlossen werden soll, wenn <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" /> freigegeben wird.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei aus einer vorhandenen Datei mit dem angegebenen Zugriffsmodus, Namen, Vererbbarkeit und Kapazität.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          Der <paramref name="mapName" /> ist <see langword="null" /> oder eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="capacity" />und die Länge der Datei sind 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" />wird festgelegt, um <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> oder <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> Enumerationswert, was nicht zulässig ist.  
+  
+ - oder -   
+  
+ <paramref name="access" />wird festgelegt, um <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Read" /> und <paramref name="capacity" /> ist größer als die Länge des <see langword="filestream" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="capacity" />ist kleiner als die Dateigröße.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.  
+  
+ - oder -   
+  
+ <paramref name="inheritability" /> ist kein gültiger <see cref="T:System.IO.HandleInheritability" />-Enumerationswert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (System.IO.FileStream fileStream, string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, System.IO.HandleInheritability inheritability, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(class System.IO.FileStream fileStream, string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, valuetype System.IO.HandleInheritability inheritability, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.IO.FileStream,System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileSecurity,System.IO.HandleInheritability,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileStream" Type="System.IO.FileStream" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fileStream">Die <c>FileStream</c> der abzubildenden Datei.</param>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll. Geben Sie 0 an, um die Kapazität auf die Größe der Datei auf dem Datenträger festzulegen.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt.  
+  
+ Dieser Parameter kann nicht auf <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> festgelegt werden.</param>
+        <param name="memoryMappedFileSecurity">Die Berechtigungen, die für den Dateizugriff und für Vorgänge für Speicherabbilddateien gewährt werden können.  
+  
+ Dieser Parameter kann <see langword="null" /> sein.</param>
+        <param name="inheritability">Einer der Enumerationswerte, der angibt, ob ein Handle auf die Speicherabbilddatei von einem untergeordneten Prozess geerbt werden kann. Die Standardeinstellung ist <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <param name="leaveOpen">
+          <see langword="true" />nicht freizugeben <c>FileStream</c> nach der <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" /> geschlossen wird. <see langword="false" /> zum Verwerfen <c>FileStream</c>.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit den angegebenen Werten für Name, Kapazität, Zugriffstyp, Sicherheitsberechtigungen, Vererbbarkeit und Freigabeanforderung aus einer Datei auf dem Datenträger.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `capacity` ist größer als die Größe der Datei auf dem Datenträger, die Datei auf Datenträger erhöht wird, um die angegebene Kapazität zu übereinstimmt, selbst wenn keine Daten in die Speicherabbilddatei geschrieben werden. Geben Sie 0 (null) für die Standardkapazität, der intern festgelegt wird, um dies zu vermeiden, `capacity` auf die Größe der Datei auf dem Datenträger.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="capacity" />und die Länge der Datei sind 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" />wird zum Festlegen der <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Read" /> oder <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> Enumerationswert, was nicht zulässig ist.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileStream" /> oder <paramref name="mapname" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="capacity" />ist kleiner als die Dateigröße.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.  
+  
+ - oder -   
+  
+ <paramref name="inheritability" /> ist kein gültiger <see cref="T:System.IO.HandleInheritability" />-Enumerationswert.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <paramref name="fileStream" />wurde geschlossen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="access" />auf festgelegt ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" /> Wenn <paramref name="fileStream" />des Zugriffs auf festgelegt ist <see cref="F:System.IO.FileAccess.Read" /> oder <see cref="F:System.IO.FileAccess.Write" />.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="mapName" /> ist bereits vorhanden.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit der angegebenen Kapazität im Systemspeicher.</summary>
+        <returns>Eine im Speicher abgebildete Datei mit den angegebenen Werten für Name und Kapazität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie um eine Speicherabbilddatei zu erstellen, die nicht persistent gespeichert wird (d. h. keiner Datei auf Datenträger zugeordnet), die Sie verwenden können, um Daten zwischen Prozessen gemeinsam nutzen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel besteht aus drei separate Prozesse (konsolenanwendungen) auf, die schreiben `Boolean` Werte für eine Speicherabbilddatei. Die folgende Sequenz von Aktionen wird ausgeführt:  
+  
+1.  Prozess A erstellt die Speicherabbilddatei und schreibt in diese einen Wert.  
+  
+2.  Prozess B öffnet die Speicherabbilddatei und schreibt in diese einen Wert.  
+  
+3.  Prozess C öffnet die Speicherabbilddatei und schreibt in diese einen Wert.  
+  
+4.  Ein Prozess liest und zeigt die Werte aus der Speicherabbilddatei.  
+  
+5.  Nach dem ein Prozess mit im Speicher abgebildeten Datei ist die Datei sofort von der Garbagecollection wieder zugänglich gemacht wird.  
+  
+ Gehen Sie folgendermaßen vor, um dieses Beispiel auszuführen:  
+  
+1.  Kompilieren Sie die Anwendungen, und öffnen Sie die drei Befehlsfenstern.  
+  
+2.  Führen Sie im ersten Befehlsfenster Prozess a  
+  
+3.  Führen Sie im zweiten Befehlsfenster Prozess b  
+  
+4.  Zurück zum Prozess ein, und drücken Sie die EINGABETASTE.  
+  
+5.  Führen Sie im dritten Befehlsfenster Prozess c  
+  
+6.  Zurück zum Prozess ein, und drücken Sie die EINGABETASTE.  
+  
+ Die Ausgabe von Prozess A lautet wie folgt:  
+  
+```  
+Start Process B and press ENTER to continue.  
+Start Process C and press ENTER to continue.  
+Process A says: True  
+Process B says: False  
+Process C says: True  
+```  
+  
+ **Prozess A**  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_X#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/cs/program.cs#1)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_X#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/vb/program.vb#1)]  
+  
+ **Prozess B**  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_A#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_a/cs/program.cs#1)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_A#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_a/vb/program.vb#1)]  
+  
+ **Prozess C**  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit den angegebenen Werten für Kapazität und Zugriffstyp im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie um eine Speicherabbilddatei zu erstellen, die nicht persistent gespeichert wird (d. h. keiner Datei auf Datenträger zugeordnet), die Sie verwenden können, um Daten zwischen Prozessen gemeinsam nutzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist mit dem <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />-Enumerationswert auf „Nur Schreibzugriff“ festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner gleich 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Eine bitweise Kombination von Enumerationswerten, die Speicherbelegungsoptionen für die Speicherabbilddatei angeben.</param>
+        <param name="inheritability">Ein Wert, der angibt, ob ein Handle auf die Speicherabbilddatei von einem untergeordneten Prozess geerbt werden kann. Die Standardeinstellung ist <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit den angegebenen Werten für Name, Kapazität, Zugriffstyp, Speicherbelegung und Vererbbarkeit.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist mit dem <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />-Enumerationswert auf „Nur Schreibzugriff“ festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner gleich 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.  
+  
+ - oder -   
+  
+ <paramref name="inheritability" /> ist kein gültiger <see cref="T:System.IO.HandleInheritability" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.MemoryMappedFiles.MemoryMappedFileSecurity,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Eine bitweise Kombination von Enumerationswerten, die Speicherbelegungsoptionen für die Speicherabbilddatei angeben.</param>
+        <param name="memoryMappedFileSecurity">Die Berechtigungen, die für den Dateizugriff und für Vorgänge für Speicherabbilddateien gewährt werden können.  
+  
+ Dieser Parameter kann <see langword="null" /> sein.</param>
+        <param name="inheritability">Einer der Enumerationswerte, der angibt, ob ein Handle auf die Speicherabbilddatei von einem untergeordneten Prozess geerbt werden kann. Die Standardeinstellung ist <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Erstellt eine im Speicher abgebildete Datei mit den angegebenen Werten für Kapazität, Zugriffstyp, Speicherbelegung, Sicherheitsberechtigungen und Vererbbarkeit im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie um eine Speicherabbilddatei zu erstellen, die nicht persistent gespeichert wird (d. h. keiner Datei auf Datenträger zugeordnet), die Sie verwenden können, um Daten zwischen Prozessen gemeinsam nutzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist mit dem <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />-Enumerationswert auf „Nur Schreibzugriff“ festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner gleich 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.  
+  
+ - oder -   
+  
+ <paramref name="inheritability" /> ist kein gültiger <see cref="T:System.IO.HandleInheritability" />-Enumerationswert.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <summary>Erstellt oder öffnet eine im Speicher abgebildete Datei mit der angegebenen Kapazität im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die den angegebenen Namen und die angegebene Größe aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen oder öffnen eine Speicherabbilddatei, die nicht persistent gespeichert wird (d. h. keiner Datei auf Datenträger zugeordnet), die Sie verwenden können, um Daten zwischen Prozessen gemeinsam nutzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" />ist größer als die Größe des Speicherplatzes logische Adresse.  
+  
+ - oder -   
+  
+ <paramref name="capacity" /> ist kleiner gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Erstellt oder öffnet eine im Speicher abgebildete Datei mit den angegebenen Werten für Kapazität und Zugriffstyp im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen oder öffnen eine Speicherabbilddatei, die nicht persistent gespeichert wird (d. h. keiner Datei auf Datenträger zugeordnet), die Sie verwenden können, um Daten zwischen Prozessen gemeinsam nutzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist mit dem <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />-Enumerationswert auf „Nur Schreibzugriff“ festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" />ist größer als die Größe des Speicherplatzes logische Adresse.  
+  
+ - oder -   
+  
+ <paramref name="capacity" /> ist kleiner gleich 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das Betriebssystem verweigert den angegebenen Zugriff auf die Datei; Beispielsweise ist Zugriff auf gesetzt <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> oder <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />, aber die Datei oder das Verzeichnis ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Eine bitweise Kombination von Werten, die Speicherbelegungsoptionen für die Datei angeben.</param>
+        <param name="inheritability">Ein Wert, der angibt, ob ein Handle auf die Speicherabbilddatei von einem untergeordneten Prozess geerbt werden kann. Die Standardeinstellung ist <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Erstellt eine neue leere Speicherabbilddatei oder öffnet eine vorhandene Speicherabbilddatei, wenn eine Datei mit diesem Namen existiert. Wenn Sie eine vorhandene Datei angeben, werden die Werte für Kapazität, Optionen und Speicherargumente ignoriert.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist mit dem <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />-Enumerationswert auf „Nur Schreibzugriff“ festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" />ist größer als die Größe des Speicherplatzes logische Adresse.  
+  
+ - oder -   
+  
+ <paramref name="capacity" /> ist kleiner gleich 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.  
+  
+ - oder -   
+  
+ <paramref name="inheritability" /> ist kein gültiger <see cref="T:System.IO.HandleInheritability" />-Enumerationswert.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das Betriebssystem verweigert den angegebenen Zugriff auf die Datei; Beispielsweise ist Zugriff auf gesetzt <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> oder <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />, aber die Datei oder das Verzeichnis ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.MemoryMappedFiles.MemoryMappedFileSecurity,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Ein Name, der der Speicherabbilddatei zugewiesen werden soll.</param>
+        <param name="capacity">Die maximale Größe (in Bytes), die für die Speicherabbilddatei reserviert werden soll.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Eine bitweise Kombination von Enumerationswerten, die Speicherbelegungsoptionen für die Speicherabbilddatei angeben.</param>
+        <param name="memoryMappedFileSecurity">Die Berechtigungen, die für den Dateizugriff und für Vorgänge für Speicherabbilddateien gewährt werden können.  
+  
+ Dieser Parameter kann <see langword="null" /> sein.</param>
+        <param name="inheritability">Einer der Enumerationswerte, der angibt, ob ein Handle auf die Speicherabbilddatei von einem untergeordneten Prozess geerbt werden kann. Die Standardeinstellung ist <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Erstellt oder öffnet eine im Speicher abgebildete Datei mit den angegebenen Werten für Kapazität, Zugriffstyp, Speicherbelegung, Sicherheitsberechtigungen und Vererbbarkeit im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen oder öffnen eine Speicherabbilddatei, die nicht persistent gespeichert wird (d. h. keiner Datei auf Datenträger zugeordnet), die Sie verwenden können, um Daten zwischen Prozessen gemeinsam nutzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist mit dem <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />-Enumerationswert auf „Nur Schreibzugriff“ festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" />ist größer als die Größe des Speicherplatzes logische Adresse.  
+  
+ - oder -   
+  
+ <paramref name="capacity" /> ist kleiner gleich 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.  
+  
+ - oder -   
+  
+ <paramref name="inheritability" /> ist kein gültiger <see cref="T:System.IO.HandleInheritability" />-Enumerationswert.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das Betriebssystem verweigert dem angegebenen <paramref name="access" /> in der Datei; z. B. <paramref name="access" /> auf festgelegt ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> oder <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />, aber die Datei oder das Verzeichnis ist schreibgeschützt.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewAccessor">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewAccessor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" />, der einer Ansicht der Speicherabbilddatei zugeordnet ist.</summary>
+        <returns>Ein Speicherblock mit wahlfreiem Zugriff.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Ansicht, die von dieser Methode für wahlfreien Zugriff auf eine Speicherabbilddatei zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Speicherabbilddatei ist nicht autorisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewAccessor">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor (long offset, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor(int64 offset, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewAccessor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Das Byte, ab dem die Ansicht beginnen soll.</param>
+        <param name="size">Die Größe der Ansicht. Geben Sie 0 (null), um eine Ansicht zu erstellen, die bei beginnt <c>Offset</c> und ungefähr am Ende der Speicherabbilddatei endet.</param>
+        <summary>Erstellt ein <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" />, das einer Ansicht der im Speicher abgebildeten Datei zugeordnet ist und über die angegebenen Werte für Offset und Größe verfügt.</summary>
+        <returns>Ein Speicherblock mit wahlfreiem Zugriff.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Ansicht, die von dieser Methode für wahlfreien Zugriff auf eine Speicherabbilddatei zurückgegeben.  
+  
+ Um eine vollständige Ansicht der im Speicher abgebildeten Datei zu erstellen, geben Sie 0 (null) für die `size` Parameter. Wenn Sie so vorgehen, möglicherweise die Größe der Ansicht kleiner oder größer als die Größe der Quelldatei auf dem Datenträger. Dies ist da Ansichten werden in Einheiten von Systemseiten bereitgestellt, und die Größe der Ansicht auf die nächste Systemseitengröße aufgerundet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Sicht von einer Speicherabbilddatei erstellt und es bearbeitet. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> Klasse.  
+  
+ [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#2](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#2)]
+ [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />oder <paramref name="size" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="size" />ist größer als der Platz für die logische Adresse.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Speicherabbilddatei ist nicht autorisiert.</exception>
+        <exception cref="T:System.IO.IOException">E/A-Fehler</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewAccessor">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor (long offset, long size, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor(int64 offset, int64 size, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor(System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewAccessor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Das Byte, ab dem die Ansicht beginnen soll.</param>
+        <param name="size">Die Größe der Ansicht. Geben Sie 0 (null), um eine Ansicht zu erstellen, die bei beginnt <c>Offset</c> und ungefähr am Ende der Speicherabbilddatei endet.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Erstellt ein <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" />, das einer Ansicht der im Speicher abgebildeten Datei zugeordnet ist und über die angegebenen Werte für Offset, Größe und Zugriffseinschränkungen verfügt.</summary>
+        <returns>Ein Speicherblock mit wahlfreiem Zugriff.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Ansicht, die von dieser Methode für wahlfreien Zugriff auf eine Speicherabbilddatei zurückgegeben.  
+  
+ Um eine vollständige Ansicht der im Speicher abgebildeten Datei zu erstellen, geben Sie 0 (null) für die `size` Parameter. Wenn Sie so vorgehen, möglicherweise die Größe der Ansicht kleiner oder größer als die Größe der Quelldatei auf dem Datenträger. Dies ist da Ansichten werden in Einheiten von Systemseiten bereitgestellt, und die Größe der Ansicht auf die nächste Systemseitengröße aufgerundet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />oder <paramref name="size" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="size" />ist größer als der Platz für die logische Adresse.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="access" />für die Speicherabbilddatei ist ungültig.</exception>
+        <exception cref="T:System.IO.IOException">E/A-Fehler</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewStream">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Stream, der einer Ansicht der Speicherabbilddatei zugeordnet ist.</summary>
+        <returns>Ein Speicherstream.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den von dieser Methode für den sequenziellen Zugriff wie z. B. für die prozessübergreifende Kommunikation auf eine Speicherabbilddatei zurückgegebenen Datenstrom.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Stream und schreibt in diese einen Wert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> Methode.  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_X#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/cs/program.cs#2)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_X#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Speicherabbilddatei ist nicht autorisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewStream">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream (long offset, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream(int64 offset, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Das Byte, ab dem die Ansicht beginnen soll.</param>
+        <param name="size">Die Größe der Ansicht. Geben Sie 0 (null), um eine Ansicht zu erstellen, die bei beginnt <c>Offset</c> und ungefähr am Ende der Speicherabbilddatei endet.</param>
+        <summary>Erstellt einen Datenstrom, der einer Ansicht der im Speicher abgebildeten Datei zugeordnet ist und über die angegebenen Werte für Offset und Größe verfügt.</summary>
+        <returns>Ein Speicherdatenstrom mit den angegebenen Werten für Offset und Größe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den von dieser Methode für den sequenziellen Zugriff wie z. B. für die prozessübergreifende Kommunikation auf eine Speicherabbilddatei zurückgegebenen Datenstrom.  
+  
+ Um eine vollständige Ansicht der im Speicher abgebildeten Datei zu erstellen, geben Sie 0 (null) für die `size` Parameter. Wenn Sie so vorgehen, möglicherweise die Größe der Ansicht kleiner oder größer als die Größe der Quelldatei auf dem Datenträger. Dies ist da Ansichten werden in Einheiten von Systemseiten bereitgestellt, und die Größe der Ansicht auf die nächste Systemseitengröße aufgerundet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />oder <paramref name="size" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="size" />ist größer als der Platz für die logische Adresse.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Zugriff auf die Speicherabbilddatei ist nicht autorisiert.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="size" />ist größer als die Gesamter virtueller Arbeitsspeicher.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewStream">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream (long offset, long size, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream(int64 offset, int64 size, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream(System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Das Byte, ab dem die Ansicht beginnen soll.</param>
+        <param name="size">Die Größe der Ansicht. Geben Sie 0 (null), um eine Ansicht zu erstellen, die bei beginnt <c>Offset</c> und ungefähr am Ende der Speicherabbilddatei endet.</param>
+        <param name="access">Einer der Enumerationswerte, der den zulässigen Zugriffstyp für die Speicherabbilddatei angibt. Die Standardeinstellung ist <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Erstellt einen Datenstrom, der einer Ansicht der im Speicher abgebildeten Datei zugeordnet ist und über die angegebenen Werte für Offset, Größe und Zugriffstyp verfügt.</summary>
+        <returns>Ein Speicherdatenstrom mit den angegebenen Eigenschaften.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den von dieser Methode für den sequenziellen Zugriff wie z. B. für die prozessübergreifende Kommunikation auf eine Speicherabbilddatei zurückgegebenen Datenstrom.  
+  
+ Um eine vollständige Ansicht der im Speicher abgebildeten Datei zu erstellen, geben Sie 0 (null) für die `size` Parameter. Wenn Sie so vorgehen, möglicherweise die Größe der Ansicht kleiner oder größer als die Größe der Quelldatei auf dem Datenträger. Dies ist da Ansichten werden in Einheiten von Systemseiten bereitgestellt, und die Größe der Ansicht auf die nächste Systemseitengröße aufgerundet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />oder <paramref name="size" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="size" />ist größer als der Platz für die logische Adresse.  
+  
+ - oder -   
+  
+ <paramref name="access" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />-Enumerationswert.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="access" />für die Speicherabbilddatei ist ungültig.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="size" />ist größer als die Gesamter virtueller Arbeitsspeicher.  
+  
+ - oder -   
+  
+ <paramref name="access" />für die Speicherabbilddatei ist ungültig.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" /> verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedFileSecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFileSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zugriffssteuerung für die Ressource der Speicherabbilddatei ab.</summary>
+        <returns>Die Berechtigungen, die für den Dateizugriff und für Vorgänge für Speicherabbilddateien gewährt werden können.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Fehler bei der ein zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.NotSupportedException">Fehler bei der ein zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Im Speicher abgebildeten Datei ist geschlossen.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die aktuelle Plattform ist Windows 98 oder früher.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Fehler bei der ein zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.  
+  
+ - oder -   
+  
+ Im Speicher abgebildeten Datei geöffnet wurde, als <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> nur.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting (string mapName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting(string mapName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Der Name der zu öffnenden Speicherabbilddatei.</param>
+        <summary>Öffnet eine vorhandene im Speicher abgebildete Datei mit dem angegebenen Namen im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die über den angegebenen Namen verfügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Speicher abgebildeten Datei kann entweder einen permanenten Speicher abgebildete Datei (einer Datei auf dem Datenträger zugeordnete) oder nicht dauerhaft.  
+  
+   
+  
+## Examples  
+ **Öffnen eine permanente Speicher abgebildete Datei**  
+  
+ Das folgende Beispiel öffnet eine Speicherabbilddatei, die mit dem Namen `ImgA` , die bereits aus einer Datei auf dem Datenträger erstellt wurden (Siehe das Beispiel für die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%28System.String%29> Methode).  
+  
+ [!code-csharp[memorymappedfiles.memorymappedfile.openexisting#1](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/cs/program.cs#1)]
+ [!code-vb[memorymappedfiles.memorymappedfile.openexisting#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
+  
+ **Öffnen eine nicht persistent gespeicherte Speicherabbilddatei**  
+  
+ Das folgende Beispiel öffnet eine Speicherabbilddatei, die für die prozessübergreifende Kommunikation verwendet. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%28System.String%2CSystem.Int64%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Für die angegebene Datei <paramref name="mapName" /> ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting (string mapName, System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting(string mapName, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting(System.String,System.IO.MemoryMappedFiles.MemoryMappedFileRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="desiredAccessRights" Type="System.IO.MemoryMappedFiles.MemoryMappedFileRights" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Der Name der zu öffnenden Speicherabbilddatei.</param>
+        <param name="desiredAccessRights">Einer der Enumerationswerte, der die anzuwendenden Zugriffsrechte für die Speicherabbilddatei angibt.</param>
+        <summary>Öffnet eine vorhandene im Speicher abgebildete Datei mit den angegebenen Werten für Name und Zugriffsrechte im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="desiredAccessRights" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileRights" />-Enumerationswert.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Für die angegebene Datei <paramref name="mapName" /> ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting (string mapName, System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting(string mapName, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting(System.String,System.IO.MemoryMappedFiles.MemoryMappedFileRights,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="desiredAccessRights" Type="System.IO.MemoryMappedFiles.MemoryMappedFileRights" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Der Name der zu öffnenden Speicherabbilddatei.</param>
+        <param name="desiredAccessRights">Einer der Enumerationswerte, der die anzuwendenden Zugriffsrechte für die Speicherabbilddatei angibt.</param>
+        <param name="inheritability">Einer der Enumerationswerte, der angibt, ob ein Handle auf die Speicherabbilddatei von einem untergeordneten Prozess geerbt werden kann. Die Standardeinstellung ist <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Öffnet eine vorhandene im Speicher abgebildete Datei mit den angegebenen Werten für Name, Zugriffsrechte und Vererbbarkeit im Systemspeicher.</summary>
+        <returns>Eine Speicherabbilddatei, die die angegebenen Merkmale aufweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="desiredAccessRights" /> ist kein gültiger <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileRights" />-Enumerationswert.  
+  
+ - oder -   
+  
+ <paramref name="inheritability" /> ist kein gültiger <see cref="T:System.IO.HandleInheritability" />-Enumerationswert.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der angeforderte Zugriff ist ungültig für die Speicherabbilddatei.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Für die angegebene Datei <paramref name="mapName" /> ist nicht vorhanden.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeMemoryMappedFileHandle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle SafeMemoryMappedFileHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle SafeMemoryMappedFileHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dateihandle einer Speicherabbilddatei ab.</summary>
+        <value>Das Handle für die Speicherabbilddatei.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl(System.IO.MemoryMappedFiles.MemoryMappedFileSecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="memoryMappedFileSecurity">Die Berechtigungen, die für den Dateizugriff und für Vorgänge für Speicherabbilddateien gewährt werden können.</param>
+        <summary>Legt die Zugriffssteuerung für die Ressource der Speicherabbilddatei fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="memoryMappedFileSecurity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Fehler bei der ein zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.NotSupportedException">Fehler bei der ein zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Fehler bei der ein zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1037 @@
+<Type Name="HttpListenerResponse" FullName="System.Net.HttpListenerResponse">
+  <TypeSignature Language="C#" Value="public sealed class HttpListenerResponse : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpListenerResponse extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListenerResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Antwort auf eine Anforderung verarbeitet wird, indem ein <see cref="T:System.Net.HttpListener" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Client eine Anforderung für eine Ressource macht behandelt, indem eine <xref:System.Net.HttpListener> -Objekt, die Anforderung und Antwort zur Anwendung verfügbar gemacht ein <xref:System.Net.HttpListenerContext> Objekt. Die Anforderung wird durch dargestellt ein <xref:System.Net.HttpListenerRequest> Objekt und steht in der <xref:System.Net.HttpListenerContext.Request%2A?displayProperty=nameWithType> Eigenschaft. Die Antwort wird dargestellt, indem ein <xref:System.Net.HttpListenerResponse> Objekt und steht in der <xref:System.Net.HttpListenerContext.Response%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Sie können die Antwort anpassen, indem Sie verschiedene Eigenschaften festlegen, wie z. B. <xref:System.Net.HttpListenerResponse.StatusCode%2A>, <xref:System.Net.HttpListenerResponse.StatusDescription%2A>, und <xref:System.Net.HttpListenerResponse.Cookies%2A>. Verwenden der <xref:System.Net.HttpListenerResponse.OutputStream%2A?displayProperty=nameWithType> -Eigenschaft zum Abrufen einer <xref:System.IO.Stream> Instanz, die an die Antwort Daten geschrieben werden können. Zum Schluss die Antwortdaten an den Client zu senden, durch Aufrufen der <xref:System.Net.HttpListenerResponse.Close%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, auf eine Clientanforderung reagiert.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Verbindung an den Client ohne eine Antwort zu senden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode für ein Objekt, das bereits geschlossen wurde, hat keine Auswirkungen. Wenn die Antwort nicht bereits geschlossen wurde, diese Methode schließt sie und die zugehörigen <xref:System.Net.HttpListenerRequest> und <xref:System.Net.HttpListenerContext> Objekte. Die Verbindung an den Client ist ebenfalls geschlossen, unabhängig von der <xref:System.Net.HttpListenerRequest.KeepAlive%2A> Eigenschaftswert der Anforderung des Clients.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHeader">
+      <MemberSignature Language="C#" Value="public void AddHeader (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHeader(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.AddHeader(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des HTTP-Header festgelegt.</param>
+        <param name="value">Der Wert für die <c>Namen</c> Header.</param>
+        <summary>Fügt den angegebenen Header und den Wert auf die HTTP-Header für diese Antwort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode entspricht dem Aufrufen der <xref:System.Net.WebHeaderCollection.Set%2A> Methode für die zurückgegebene Auflistung der <xref:System.Net.HttpListenerResponse.Headers%2A> Eigenschaft.  
+  
+ Wenn der Header in angegeben `name` ist nicht vorhanden, diese Methode fügt einen neuen Header in die <xref:System.Net.HttpListenerResponse.Headers%2A> der eigenschaftenauflistung. Wenn `name` ist vorhanden, in der Auflistung, die diese Methode ersetzt den vorhandenen Wert durch `value`. Um eine vorhandene Spaltenüberschrift einen Wert hinzufügen, ohne den vorhandenen Wert zu ersetzen, verwenden Sie die <xref:System.Net.HttpListenerResponse.AppendHeader%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Hinzufügen eines Headers mit dem Verwenden dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#26](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#26)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ArgumentException">Sie sind nicht zulässig, einen Wert für den angegebenen Header angeben.  
+  
+ - oder -   
+  
+ <paramref name="name" />oder <paramref name="value" /> enthält ungültige Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65.535 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendCookie">
+      <MemberSignature Language="C#" Value="public void AppendCookie (System.Net.Cookie cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendCookie(class System.Net.Cookie cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.AppendCookie(System.Net.Cookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Net.Cookie" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">Das <see cref="T:System.Net.Cookie" />, das der Sammlung hinzugefügt werden soll, die mit dieser Antwort gesendet werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Net.Cookie" /> zur Sammlung von Cookies für diese Antwort hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode entspricht dem Aufrufen der <xref:System.Net.CookieCollection.Add%2A> Methode für die zurückgegebene Auflistung der <xref:System.Net.HttpListenerResponse.Cookies%2A> Eigenschaft.  
+  
+ Wenn das angegebene Cookie nicht, in vorhanden ist der <xref:System.Net.HttpListenerResponse.Cookies%2A> des eigenschaftenauflistung `cookie` hinzugefügt wird. Wenn das Cookie in der Auflistung vorhanden ist `cookie` ersetzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Hinzufügen eines Cookies in einer Antwort  
+  
+ [!code-csharp[Net_Listener_Basic#20](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cookie" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendHeader">
+      <MemberSignature Language="C#" Value="public void AppendHeader (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendHeader(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.AppendHeader(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des HTTP-Headers anzufügende <c>Wert</c> an.</param>
+        <param name="value">Der Wert zum Anfügen an die <c>Namen</c> Header.</param>
+        <summary>Fügt einen Wert der angegebenen HTTP-Header mit dieser Antwort gesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode entspricht dem Aufrufen der <xref:System.Net.WebHeaderCollection.Add%2A> Methode für die zurückgegebene Auflistung der <xref:System.Net.HttpListenerResponse.Headers%2A> Eigenschaft.  
+  
+ Wenn der Header in angegeben `header` ist nicht vorhanden, diese Methode fügt einen neuen Header in die <xref:System.Net.HttpListenerResponse.Headers%2A> der eigenschaftenauflistung. Wenn `header` in der Auflistung vorhanden ist diese Methode fügt `value` an die vorhandenen Werte. Um den Wert eines vorhandenen Headers zu ersetzen, verwenden die <xref:System.Net.HttpListenerResponse.AddHeader%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Sie sind nicht zulässig, einen Wert für den angegebenen Header angeben.  
+  
+ - oder -   
+  
+ <paramref name="name" />oder <paramref name="value" /> enthält ungültige Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge des <paramref name="value" /> ist größer als 65.535 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet die Antwort an den Client und von diesem beanspruchten Ressourcen freigegeben <see cref="T:System.Net.HttpListenerResponse" /> Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schließt den Antwortstream und die <xref:System.Net.HttpListenerRequest> der Antwort zugeordnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode zum Senden einer <xref:System.Net.HttpStatusCode.Forbidden> (403) Antwort an den Client.  
+  
+ [!code-csharp[NclListener#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#5)]
+ [!code-vb[NclListener#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close (byte[] responseEntity, bool willBlock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close(unsigned int8[] responseEntity, bool willBlock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.Close(System.Byte[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseEntity" Type="System.Byte[]" />
+        <Parameter Name="willBlock" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="responseEntity">Ein <see cref="T:System.Byte" /> Array, das an den Client zu sendende Antwort enthält.</param>
+        <param name="willBlock">
+          <see langword="true" />die Ausführung beim Leeren des Streams an den Client zu blockieren; andernfalls <see langword="false" />.</param>
+        <summary>Das angegebene Bytearray an den Client zurück und gibt die Ressourcen frei, die von diesem <see cref="T:System.Net.HttpListenerResponse" /> Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Textdaten, die mit der Antwort senden, können Sie diese Methode zum Senden als verwenden eine <xref:System.Byte> Array anstelle der Textdaten zum Schreiben der <xref:System.Net.HttpListenerResponse.OutputStream%2A> -Eigenschaft und der Aufruf der <xref:System.Net.HttpListenerResponse.Close%2A> Methode.  
+  
+ Diese Methode schließt den Antwortstream und die <xref:System.Net.HttpListenerRequest> der Antwort zugeordnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#24](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="responseEntity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding ContentEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.ContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Text.Encoding" /> für diese Antwort <see cref="P:System.Net.HttpListenerResponse.OutputStream" />.</summary>
+        <value>Ein <see cref="T:System.Text.Encoding" /> Objekt, das für die Verwendung mit den Daten in der <see cref="P:System.Net.HttpListenerResponse.OutputStream" /> Eigenschaft oder <see langword="null" /> , wenn keine Codierung angegeben ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Text.Encoding> Objekt kann verwendet werden, um Bytesequenzen in Zeichensätze (Codepages) und die Zeichen in Bytesequenzen zu konvertieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[NclListener#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#5)]
+ [!code-vb[NclListener#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength64">
+      <MemberSignature Language="C#" Value="public long ContentLength64 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ContentLength64" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.ContentLength64" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Bytes in den Textdaten in der Antwort enthalten.</summary>
+        <value>Der Wert, der der Antwort <see langword="Content-Length" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Content-Length` -Header gibt die Länge in Bytes, der die Antwort-Textdaten. Wenn mit einem Format, das nicht für das Senden der Daten aus Ihren Segmenten zusammengesetzt oder raw, müssen Sie festlegen, die <xref:System.Net.HttpListenerResponse.ContentLength64%2A> Eigenschaft. Wenn Sie keinen der <xref:System.Net.HttpListener> sendet die Antwortdaten nicht.  
+  
+ Eine vollständige Liste von Antwortheadern finden Sie unter der <xref:System.Net.HttpResponseHeader> Enumeration.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen des Werts dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert für ein Set-Vorgang ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">Die Antwort wird bereits gesendet.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den MIME-Typ des zurückgegebenen Inhalts.</summary>
+        <value>Ein <see cref="T:System.String" /> -Instanz, die den Text der Antwort enthält <see langword="Content-Type" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Kommunikation mit einem Webbrowser, sollten Sie explizit festlegen dieser Eigenschaft beim Zurückgeben der anders als andere Inhaltstypen `text/html`.  
+  
+ Eine vollständige Liste von Antwortheadern finden Sie unter der <xref:System.Net.HttpResponseHeader> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der für einen SET-Vorgang festgelegte Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für ein Set-Vorgang eine leere Zeichenfolge ist ("").</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public System.Net.CookieCollection Cookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.CookieCollection Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.CookieCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der Cookies, die mit der Antwort zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.Net.CookieCollection" /> , Cookies, die die Antwort begleitet enthält. Die Auflistung ist leer, wenn die Antwort keine Cookies hinzugefügt wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Cookie ist Name/Wert-Text-Daten von einem Webserver, der auf dem Computer lokalen (Client) gespeichert ist. Die folgenden Cookieformate werden unterstützt: Netscape, RFC 2109 und RFC 2965. Die Netscape-Cookiespezifikation ist http://wp.Netscape.com/newsref/Std/cookie_spec.HTML verfügbar. die RFC-Dokumente finden Sie unter [http://www.rfc-editor.org](http://www.rfc-editor.org).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Anforderung für ein Cookie überprüft und ein neues Cookie mit der Antwort zurückgegeben wird, wenn die Anforderung nicht enthalten war.  
+  
+ [!code-csharp[Net_Listener_Basic#20](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public void CopyFrom (System.Net.HttpListenerResponse templateResponse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyFrom(class System.Net.HttpListenerResponse templateResponse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.CopyFrom(System.Net.HttpListenerResponse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateResponse" Type="System.Net.HttpListenerResponse" />
+      </Parameters>
+      <Docs>
+        <param name="templateResponse">Die <see cref="T:System.Net.HttpListenerResponse" /> zu kopierende Instanz.</param>
+        <summary>Kopiert Eigenschaften aus dem angegebenen <see cref="T:System.Net.HttpListenerResponse" /> für diese Antwort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie regelmäßig viele Eigenschaften die Standardwerte auf einen festen Satz von neuen Werten ändern, ist es praktisch, verwenden eine <xref:System.Net.HttpListenerResponse> Instanz als Vorlage. Die Vorlagenantwort einmal und anpassen, statt jede Antwort separat konfigurieren, rufen Sie die <xref:System.Net.HttpListenerResponse.CopyFrom%2A> Methode so konfigurieren Sie eine neue Antwort anhand von Eigenschaftswerte in der Vorlagenantwort.  
+  
+ Die folgenden Eigenschaften werden von kopiert `templateResponse` mit der aktuellen Instanz.  
+  
+-   <xref:System.Net.HttpListenerResponse.Headers%2A>  
+  
+-   <xref:System.Net.HttpListenerResponse.ContentLength64%2A>  
+  
+-   <xref:System.Net.HttpListenerResponse.StatusCode%2A>  
+  
+-   <xref:System.Net.HttpListenerResponse.StatusDescription%2A>  
+  
+-   <xref:System.Net.HttpListenerResponse.KeepAlive%2A>  
+  
+-   <xref:System.Net.HttpListenerResponse.ProtocolVersion%2A>  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Erstellen einer Antwort durch Kopieren einer Vorlagenantwort.  
+  
+ [!code-csharp[NCLListener#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#5)]
+ [!code-vb[NCLListener#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Net.WebHeaderCollection Headers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der vom Server zurückgegebenen Name/Wert-Paaren für Header.</summary>
+        <value>Ein <see cref="T:System.Net.WebHeaderCollection" /> Instanz, die alle enthält die explizit festgelegten HTTP-Header in der Antwort enthalten sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antwortheader enthalten die Metadateninformationen, z. B. das Datum und die Uhrzeit der Antwort, die Identität des antwortenden Servers und den MIME-Typ der Daten im Antworttext enthalten.  
+  
+ Eine vollständige Liste von Antwortheadern finden Sie unter der <xref:System.Net.HttpResponseHeader> Enumeration.  
+  
+> [!NOTE]
+>  Wenn Sie versuchen, einen Content-Length Keep-Alive, Transfer-Encoding oder WWW-Authenticate-Header, die mithilfe der Header-Eigenschaft eine Ausnahme ausgelöst. Verwenden der <xref:System.Net.HttpListenerResponse.KeepAlive%2A> oder <xref:System.Net.HttpListenerResponse.ContentLength64%2A> diese Header festzulegenden Eigenschaften. Der Transfer-Encoding oder WWW-Authenticate-Header kann nicht manuell festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Anzeigen der Header in einer <xref:System.Net.WebHeaderCollection>.  
+  
+ [!code-csharp[Net_Listener_Basic#23](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Net.WebHeaderCollection" /> Instanz für ein Set-Vorgang ist ungültig für eine Antwort angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAlive">
+      <MemberSignature Language="C#" Value="public bool KeepAlive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepAlive" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.KeepAlive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Server eine permanente Verbindung anfordert.</summary>
+        <value>
+          <see langword="true" />Wenn der Server eine permanente Verbindung anfordert. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein HTTP-Client und Server für den Austausch von Daten innerhalb eines kurzen Zeitraums mehrmals erwarten dass, beschleunigt eine permanente Verbindung Kommunikation durch, sodass sie zur Vermeidung des Mehraufwands für das Öffnen und schließen eine TCP-Verbindung für jede Nachricht. Dauerhafte Verbindungen werden häufig bei der Kommunikation zwischen modernen Webbrowsern und Webservern einsetzbar.  
+  
+ Dauerhafte Verbindungen werden ausführlich beschrieben unter der HTTP/1.1-Protokollspezifikation (RFC 2616) auf der Website von RTF-Editor verfügbar ([http://www.rfc-editor.org](http://www.rfc-editor.org)).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen des Werts dieser Eigenschaft.  
+  
+ [!code-csharp[NclListener#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#7)]
+ [!code-vb[NclListener#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OutputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream OutputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.OutputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IO.Stream" /> -Objekt, das eine Antwort geschrieben werden kann.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" /> -Objekt, das eine Antwort geschrieben werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListenerResponse.ContentLength64%2A> Eigenschaft muss explizit festgelegt werden, vor dem Schreiben auf das zurückgegebene <xref:System.IO.Stream> Objekt.  
+  
+> [!NOTE]
+>  Schließen die Anforderung wird den von dieser Eigenschaft zurückgegebene Stream nicht geschlossen. Wenn Sie den Stream nicht mehr benötigen, sollten Sie ihn durch Aufrufen der Close-Methode schließen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#3](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolVersion">
+      <MemberSignature Language="C#" Value="public Version ProtocolVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ProtocolVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.ProtocolVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die HTTP-Version, die für die Antwort verwendet.</summary>
+        <value>Ein <see cref="T:System.Version" /> , der angibt, der Version der Antwort an den Client verwendete HTTP-Objekt. Beachten Sie, dass diese Eigenschaft jetzt veraltet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktionen anderer HTTP-Versionen werden in den Dokumenten verfügbar unter http://www.ietf.org angegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen des Werts dieser Eigenschaft.  
+  
+ [!code-csharp[NclListener#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#5)]
+ [!code-vb[NclListener#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der für einen SET-Vorgang festgelegte Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für ein Set-Vorgang keinen seine <see cref="P:System.Version.Major" /> -Eigenschaft auf 1 festgelegt oder verfügt nicht über die <see cref="P:System.Version.Minor" /> -Eigenschaft auf 0 oder 1 festgelegt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Redirect">
+      <MemberSignature Language="C#" Value="public void Redirect (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Redirect(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.Redirect(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, die der Client verwenden sollte, um die angeforderte Ressource zu suchen.</param>
+        <summary>Konfiguriert die Antwort, um den Client zur angegebenen URL umleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListenerResponse.Redirect%2A> Methode wird verwendet, um einen Client an den neuen Speicherort für eine Ressource weiterzuleiten. Mit dieser Methode wird der Antwort `Location` Header `url`, die <xref:System.Net.HttpListenerResponse.StatusCode%2A> Eigenschaft <xref:System.Net.HttpStatusCode.Redirect>, und die <xref:System.Net.HttpListenerResponse.StatusDescription%2A> Eigenschaft auf "Found".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#27](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectLocation">
+      <MemberSignature Language="C#" Value="public string RedirectLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RedirectLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.RedirectLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des HTTP- <see langword="Location" /> Header in der Antwort.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält die absolute URL an den Client in der <see langword="Location" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Location` -Header gibt die URL, zu dem der Client gesteuert wird, um eine angeforderte Ressource zu suchen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft nicht automatisch festgelegt wird. die Einstellung der <xref:System.Net.HttpListenerResponse.StatusCode%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#25](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für ein Set-Vorgang eine leere Zeichenfolge ist ("").</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendChunked">
+      <MemberSignature Language="C#" Value="public bool SendChunked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SendChunked" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.SendChunked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Antwort aufgeteilte übertragungscodierung verwendet.</summary>
+        <value>
+          <see langword="true" />Wenn die Antwort festgelegt ist, um die aufgeteilte übertragungscodierung; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text, der eine segmentierte Nachricht besteht aus einer Reihe von Segmenten. Jeder Block besteht aus zwei Teilen – die Größe der Segmentdaten und die tatsächlichen Daten. Bei Festlegung auf die Antwort "true" ist mit gesendet aufgeteilte übertragungscodierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCookie">
+      <MemberSignature Language="C#" Value="public void SetCookie (System.Net.Cookie cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCookie(class System.Net.Cookie cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.SetCookie(System.Net.Cookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Net.Cookie" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">Ein <see cref="T:System.Net.Cookie" /> für diese Antwort.</param>
+        <summary>Fügt hinzu oder aktualisiert eine <see cref="T:System.Net.Cookie" /> in die Auflistung der Cookies, die mit dieser Antwort gesendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Cookies gelten die gleiche If die Werte von ihren <xref:System.Net.Cookie.Name%2A>, <xref:System.Net.Cookie.Domain%2A>, und <xref:System.Net.Cookie.Path%2A> Eigenschaften sind identisch. Wenn diese drei Arten von Informationen identisch sind, versucht die Methode das Cookie aktualisiert. Vergleiche und der Domäne sind nicht in der Groß-/Kleinschreibung beachtet, aber die pfadvergleich wird die Groß-/Kleinschreibung beachtet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-csharp[Net_Listener_Basic#28](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#28)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cookie" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Das Cookie ist bereits in der Auflistung vorhanden und konnten nicht ersetzt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public int StatusCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den HTTP-Statuscode an den Client zurückgegeben werden sollen.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der den HTTP-Statuscode für die angeforderte Ressource angibt. Die Standardeinstellung ist <see cref="F:System.Net.HttpStatusCode.OK" />, gibt an, dass der Server erfolgreich die Anforderung des Clients verarbeitet und die angeforderte Ressource im Antworttext enthalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clients anhand den vom Server zurückgegebene Statuscode um zum Fortsetzen des Vorgangs zu bestimmen. Der Wert <xref:System.Net.HttpStatusCode.OK> gibt an, dass der Server erfolgreich die Anforderung des Clients verarbeitet und die angeforderte Ressource im Antworttext enthalten. Andere häufig verwendete Statuscodes sind <xref:System.Net.HttpStatusCode.NotFound>, der angibt, die die angeforderte Ressource auf dem Server nicht gefunden wurde und <xref:System.Net.HttpStatusCode.NotModified>, gibt an, dass es nicht erforderlich ist, die angeforderte Ressource im Antworttext zurückgegeben, da der Client Kopie zwischengespeicherte wurde die Ressource ist auf dem neuesten Stand.  
+  
+ Eine vollständige Liste der möglichen Statuscodes, finden Sie unter der <xref:System.Net.HttpStatusCode> Enumeration.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen des Werts dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#7](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt ist geschlossen.</exception>
+        <exception cref="T:System.Net.ProtocolViolationException">Für einen Set-Vorgang angegebene Wert ist ungültig. Gültige Werte liegen zwischen 100 und 999.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusDescription">
+      <MemberSignature Language="C#" Value="public string StatusDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StatusDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerResponse.StatusDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine textbeschreibung der HTTP-Statuscode an den Client zurückgegeben.</summary>
+        <value>Die textbeschreibung der HTTP-Statuscode an den Client zurückgegeben. Die Standardeinstellung ist die RFC 2616 Beschreibung für die <see cref="P:System.Net.HttpListenerResponse.StatusCode" /> Eigenschaftswert oder eine leere Zeichenfolge ("") ist eine RFC 2616-Beschreibung ist nicht vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die statusbeschreibung in der Regel stellt Details, die erläutern die <xref:System.Net.HttpListenerResponse.StatusCode%2A> Wert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen des Werts dieser Eigenschaft.  
+  
+ [!code-csharp[NclListener#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#7)]
+ [!code-vb[NclListener#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der für einen SET-Vorgang festgelegte Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Für einen Set-Vorgang angegebene Wert enthält nicht druckbare Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerResponse.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Net.HttpListenerResponse" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Net.HttpListenerResponse.Close%2A> Methode zum Senden der Antwort und Freigeben von reservierten Ressourcen ein <xref:System.Net.HttpListenerResponse>. Um die Antwort zu verwerfen und die von dieser Instanz reservierten Ressourcen freizugeben, verwenden Sie die <xref:System.Net.HttpListenerResponse.Abort%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

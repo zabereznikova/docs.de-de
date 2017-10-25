@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.Design" /> -Namespace enthält Klassen, die verwendet werden können, um zur Entwurfszeit Unterstützung für ASP.NET Web Pages und für Webserversteuerelemente zu erweitern.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

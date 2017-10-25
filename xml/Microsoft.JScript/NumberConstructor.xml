@@ -1,0 +1,173 @@
+<Type Name="NumberConstructor" FullName="Microsoft.JScript.NumberConstructor">
+  <TypeSignature Language="C#" Value="public class NumberConstructor : Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NumberConstructor extends Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.NumberConstructor" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ScriptFunction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein prototypbasierten-Objekt, das von einer Konstruktorfunktion definiert wird. Diese Klasse gehört zu "Modell" integrierten Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.NumberObject CreateInstance (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.NumberObject CreateInstance(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberConstructor.CreateInstance(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.NumberObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Die an den Konstruktor zu übergebenden Argumente.</param>
+        <summary>Erstellt eine Instanz des prototypbasierten Objekts in den angegebenen Argumenten übergeben.</summary>
+        <returns>Eine Instanz des Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public double Invoke (object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 Invoke(object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberConstructor.Invoke(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="arg">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert das angegebene Objekt in eine Zahl.</summary>
+        <returns>
+          <paramref name="arg" />ausgedrückt als eine Zahl ein, wenn dies möglich ist.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MAX_VALUE">
+      <MemberSignature Language="C#" Value="public const double MAX_VALUE = 1.79769313486232E+308;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 MAX_VALUE = (1.79769313486232E+308)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.NumberConstructor.MAX_VALUE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>1.79769313486232E+308</MemberValue>
+      <Docs>
+        <summary>Stellt den größtmöglichen Wert von <see cref="T:System.Double" /> dar. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MIN_VALUE">
+      <MemberSignature Language="C#" Value="public const double MIN_VALUE = 4.94065645841247E-324;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 MIN_VALUE = (4.94065645841247E-324)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.NumberConstructor.MIN_VALUE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>4.94065645841247E-324</MemberValue>
+      <Docs>
+        <summary>Stellt den kleinsten positiven <see cref="T:System.Double" />-Wert dar, der größer als 0 (null) ist. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NaN">
+      <MemberSignature Language="C#" Value="public const double NaN = NaN;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 NaN = (NaN)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.NumberConstructor.NaN" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>NaN</MemberValue>
+      <Docs>
+        <summary>Stellt einen Wert, der keine Zahl (Number, NaN) ist. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NEGATIVE_INFINITY">
+      <MemberSignature Language="C#" Value="public const double NEGATIVE_INFINITY = -Infinity;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 NEGATIVE_INFINITY = (-Infinity)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.NumberConstructor.NEGATIVE_INFINITY" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>-Infinity</MemberValue>
+      <Docs>
+        <summary>Stellt minus unendlich dar. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="POSITIVE_INFINITY">
+      <MemberSignature Language="C#" Value="public const double POSITIVE_INFINITY = Infinity;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 POSITIVE_INFINITY = (Infinity)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.NumberConstructor.POSITIVE_INFINITY" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>Infinity</MemberValue>
+      <Docs>
+        <summary>Stellt plus unendlich dar. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

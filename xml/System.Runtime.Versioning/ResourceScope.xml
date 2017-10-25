@@ -1,0 +1,222 @@
+<Type Name="ResourceScope" FullName="System.Runtime.Versioning.ResourceScope">
+  <TypeSignature Language="C#" Value="public enum ResourceScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ResourceScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.ResourceScope" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Der Bereich einer freigegebenen Ressource identifiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ressource ist ein Objekt, das Zustand enthält. Beispiele für Ressourcen sind eine Datei auf Datenträger, eine Warteschlange für einen Prozess und eine benannte <xref:System.Threading.Mutex>. Zu wissen, dass ein Objekt eine Ressource ist gibt keine entsprechenden Verwendungsmöglichkeiten; Die wichtigste Eigenschaft einer Ressource ist der Bereich der Ressource. Der Bereich umfasst sowohl den Typ und die Sichtbarkeit der Ressource. Der Ressourcentyp "" gibt an, ob die Ressource einer Computerebene-Ressource, z. B. eine Datei auf dem Datenträger, eine prozessübergreifende-Ressource, z. B. ein Speicherblock, der nicht freigegebene oder eine Ressource auf Domänenebene, z. B. eine Sperre auf einer Instanz von ein nicht-Marshall, der als Verweis -Objekt.  Die Sichtbarkeitsbereiche sind, Assembly und privat; der Standardname lautet `Public`, also implizit, wenn Private oder Assembly werden nicht angezeigt.  Es ist kein Enumerationswert für `Public`.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="AppDomain">
+      <MemberSignature Language="C#" Value="AppDomain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope AppDomain = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.AppDomain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Freigabezustand von Objekten innerhalb einer <see cref="T:System.AppDomain" />.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="Assembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Assembly = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Assembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ressource ist in einem Assemblybereich sichtbar.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Library">
+      <MemberSignature Language="C#" Value="Library" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Library = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Library" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zustand wird von Objekten innerhalb einer Bibliothek gemeinsam genutzt.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Machine">
+      <MemberSignature Language="C#" Value="Machine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Machine = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Machine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zustand wird von Objekten innerhalb des Computers gemeinsam genutzt.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist kein gemeinsamer Zustand.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="Private" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Private = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Private" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ressource wird nur der Typ angezeigt.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="Process" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Process = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Process" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Status wird innerhalb eines Prozesses gemeinsam genutzt.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

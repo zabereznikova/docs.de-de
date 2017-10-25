@@ -1,0 +1,126 @@
+<Type Name="CodeConstructor" FullName="System.CodeDom.CodeConstructor">
+  <TypeSignature Language="C#" Value="public class CodeConstructor : System.CodeDom.CodeMemberMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeConstructor extends System.CodeDom.CodeMemberMethod" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeConstructor" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeMemberMethod</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Deklaration für einen Instanzkonstruktor eines Typs darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeConstructor>kann verwendet werden, um eine Deklaration eines Instanzkonstruktors für einen Typ darzustellen. Verwendung <xref:System.CodeDom.CodeTypeConstructor> um einen statischen Konstruktor für einen Typ zu deklarieren.  
+  
+ Wenn der Konstruktor einen Basisklassenkonstruktor aufruft, legen Sie die Konstruktorargumente für den Konstruktor der Basisklasse in die <xref:System.CodeDom.CodeConstructor.BaseConstructorArgs%2A> Eigenschaft. Wenn der Konstruktor einen anderen Konstruktor für den Typ überlädt, legen Sie Konstruktorargumente Übergabe an den überladenen Typkonstruktor in der <xref:System.CodeDom.CodeConstructor.ChainedConstructorArgs%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung einer <xref:System.CodeDom.CodeConstructor> verschiedene Arten von Konstruktoren deklariert.  
+  
+ [!code-cpp[CodeConstructorExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeConstructorExample/CPP/codeconstructorexample.cpp#2)]
+ [!code-csharp[CodeConstructorExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeConstructorExample/CS/codeconstructorexample.cs#2)]
+ [!code-vb[CodeConstructorExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeConstructorExample/VB/codeconstructorexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeConstructor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeConstructor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeConstructor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseConstructorArgs">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpressionCollection BaseConstructorArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpressionCollection BaseConstructorArgs" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeConstructor.BaseConstructorArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Basiskonstruktorargumente ab.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpressionCollection" /> , die den Basiskonstruktorargumente enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.CodeDom.CodeConstructor> Überladungen ein Basisklassenkonstruktor diese Auflistung enthält alle an einen Basisklassenkonstruktor zu übergebenden Argumente. Um einen Basisklassenkonstruktor ohne Argumente aufrufen zu können, legen Sie eine <xref:System.CodeDom.CodeSnippetExpression> mit einer leeren Zeichenfolge (""), die dieser Sammlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainedConstructorArgs">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpressionCollection ChainedConstructorArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpressionCollection ChainedConstructorArgs" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeConstructor.ChainedConstructorArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von verketteten Konstruktorargumente.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpressionCollection" /> , die die verketteten Konstruktorargumente enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.CodeDom.CodeConstructor> Überladungen einen anderen Konstruktor desselben Typs, diese Auflistung enthält alle an den überladenen Typkonstruktor zu übergebenden Argumente. Um einen Konstruktor für den aktuellen Typ ohne Argumente aufrufen, legen Sie eine <xref:System.CodeDom.CodeSnippetExpression> mit einer leeren Zeichenfolge (""), die dieser Sammlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

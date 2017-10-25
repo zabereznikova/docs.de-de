@@ -1,0 +1,76 @@
+<Type Name="ReturnOutOfFinally" FullName="Microsoft.JScript.ReturnOutOfFinally">
+  <TypeSignature Language="C#" Value="public sealed class ReturnOutOfFinally : ApplicationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ReturnOutOfFinally extends System.ApplicationException" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ReturnOutOfFinally" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ApplicationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Ausnahmezustand Rückkehr Ausführung von Code aus einem <see langword="finally" /> Block.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReturnOutOfFinally ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ReturnOutOfFinally.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.ReturnOutOfFinally" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReturnOutOfFinally (string m);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ReturnOutOfFinally.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.ReturnOutOfFinally" /> -Klasse unter Verwendung der angegebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReturnOutOfFinally (string m, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ReturnOutOfFinally.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <param name="e">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.ReturnOutOfFinally" /> -Klasse unter Verwendung der angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

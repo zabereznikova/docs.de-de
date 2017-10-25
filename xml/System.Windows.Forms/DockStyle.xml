@@ -1,0 +1,137 @@
+<Type Name="DockStyle" FullName="System.Windows.Forms.DockStyle">
+  <TypeSignature Language="C#" Value="public enum DockStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DockStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DockStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DockEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Position und die Art und Weise, in denen ein Steuerelement angedockt ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Steuerelement an einer Kante seines Containers angedockt wird, wird er immer leeren gegen Kante positioniert beim Ändern der Größe des Containers. Wenn mehr als ein Steuerelement an ein Rand angedockt ist, werden die Steuerelemente nebeneinander angezeigt, entsprechend ihrer Z-Reihenfolge; Steuerelemente, die weiter oben in der Z-Reihenfolge werden weiter entfernt an den Rand des Containers angeordnet.  
+  
+ Wenn links, rechts, oben oder unten ausgewählt ist, werden dem angegebenen und der gegenüberliegende Rand des Steuerelements auf die Größe der entsprechenden Rändern des Containersteuerelements angepasst. Wenn Füllung ausgewählt ist, werden alle vier Seiten des Steuerelements größenanpassung Rändern des Containersteuerelements übereinstimmen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Forms.GroupBox> und legt einige gemeinsamen Eigenschaften. Das Beispiel erstellt eine <xref:System.Windows.Forms.TextBox> und legt seine <xref:System.Windows.Forms.Control.Location%2A> innerhalb der Gruppenfeld. Als Nächstes wird die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der Gruppenfeld und wird das Gruppenfeld am oberen Rand des Formulars angedockt. Abschließend wird das Gruppenfeld deaktiviert, indem die <xref:System.Windows.Forms.Control.Enabled%2A> Eigenschaft `false`, die bewirkt, dass alle Steuerelemente, die deaktiviert werden in der Gruppe enthaltenen.  
+  
+ [!code-cpp[Windows.Forms.Control Properties#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CPP/controlproperties.cpp#2)]
+ [!code-csharp[Windows.Forms.Control Properties#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CS/controlproperties.cs#2)]
+ [!code-vb[Windows.Forms.Control Properties#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Properties/VB/controlproperties.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die unteren Rand des Steuerelements wird die letzte des Containersteuerelements angedockt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="Fill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Fill = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Fill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ränder des Steuerelements werden an die Ränder des Containersteuerelements angedockt und passende Größe verfügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Left = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Linken Rand des Steuerelements, die an den linken Rand des Containersteuerelements angedockt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement ist nicht angedockt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rechte Kante des Steuerelements, die an den rechten Rand des Containersteuerelements angedockt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Oberen Rand des Steuerelements wird an den Anfang des Containersteuerelements angedockt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

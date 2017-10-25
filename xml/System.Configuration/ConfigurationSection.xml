@@ -1,0 +1,439 @@
+<Type Name="ConfigurationSection" FullName="System.Configuration.ConfigurationSection">
+  <TypeSignature Language="C#" Value="public abstract class ConfigurationSection : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConfigurationSection extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Abschnitt innerhalb einer Konfigurationsdatei dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie verwenden die <xref:System.Configuration.ConfigurationSection> Klasse, um einen benutzerdefinierten Typ zu implementieren. Erweitern der <xref:System.Configuration.ConfigurationSection> Klasse, um benutzerdefinierte Behandlung und den programmgesteuerten Zugriff auf benutzerdefinierte Konfigurationsabschnitte bereitzustellen. Informationen dazu, wie benutzerdefinierte Konfigurationsabschnitte zu verwenden, finden Sie unter [Vorgehensweise: Erstellen benutzerdefinierter Configuration Sections Using ConfigurationSection](http://msdn.microsoft.com/library/febaca98-c727-4017-95ed-82e2fb6cf234).  
+  
+ Ein Abschnitt registriert dessen Behandlungstyp mit einem Eintrag in der `configSections` Element. Ein Beispiel finden Sie unter den Auszug aus der Konfigurationsdatei im Beispielabschnitt veranschaulicht.  
+  
+> [!NOTE]
+>  In früheren Versionen von .NET Framework Konfigurationsabschnittshandler verwendet wurden, um Änderungen an Konfigurationseinstellungen vornehmen programmgesteuert. Jetzt werden alle Standard-Konfigurationsabschnitte dargestellt, von Klassen, Erweitern der <xref:System.Configuration.ConfigurationSection> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie ein benutzerdefiniertes Abschnitts programmgesteuert implementiert wird.  
+  
+ Ein vollständiges Beispiel, das zeigt, wie die Implementierung und Verwendung eines benutzerdefinierten Abschnitts mit Modell der attributierten implementiert, finden Sie unter <xref:System.Configuration.ConfigurationElement>.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/CS/CustomConfigurationSection.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/VB/CustomConfigurationSection.vb#1)]  
+  
+ Im folgende Beispiel ist ein Auszug aus der Konfigurationsdatei an, wie das vorherige Beispiel gilt.  
+  
+ `<?xml version="1.0" encoding="utf-8"?>`  
+  
+ `<configuration>`  
+  
+ `<configSections>`  
+  
+ `<section name="CustomSection" type="Samples.AspNet. CustomSection, CustomConfigurationSection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" allowDefinition="Everywhere" allowExeDefinition="MachineToApplication" restartOnExternalChanges="true" />`  
+  
+ `</configSections>`  
+  
+ `<CustomSection fileName="default.txt" maxUsers="1000" maxIdleTime="00:15:00" />`  
+  
+ `</configuration>`  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Eine programmgesteuerte oder ein deklaratives (attributiertes) Codierung Modell können um benutzerdefinierte Konfigurationsabschnitte zu erstellen:  
+  
+-   Programmgesteuerte Modell. Dieses Modell ist es erforderlich, dass für jedes Abschnittsattribut Sie eine Eigenschaft zum Abrufen erstellen oder legen Sie dessen Wert und der internen Eigenschaftensammlung der zugrunde liegenden hinzugefügt <see cref="T:System.Configuration.ConfigurationElement" /> Basisklasse.  
+  
+-   Deklaratives Modell. Diesem einfacheren Modell, das Modell das attributierte, so genannte können Sie ein Abschnittsattribut zu definieren, indem Sie eine Eigenschaft und mit Attributen ergänzen. Diese Attribute weisen den ASP.NET-Konfigurationssystem über die Eigenschaftentypen und ihre Standardwerte. Mit diesen Informationen über Reflektion abgerufen ASP.NET-Konfigurationssystem erstellt den Abschnitt Property-Objekte und führt die erforderliche Initialisierung.  
+  
+ Die <see cref="T:System.Configuration.Configuration" /> Klasse ermöglicht den programmgesteuerten Zugriff für das Bearbeiten von Konfigurationsdateien. Sie können diese Dateien zum Lesen oder Schreiben wie folgt zugreifen:  
+  
+-   Lesen. Verwenden Sie <see cref="M:System.Configuration.Configuration.GetSection(System.String)" /> oder <see cref="M:System.Configuration.Configuration.GetSectionGroup(System.String)" /> zum Lesen von Konfigurationsinformationen. Beachten Sie, dass der Benutzer oder Prozess, der liest die folgenden Berechtigungen verfügen muss:  
+  
+    -   Read-Berechtigung für die Konfigurationsdatei an der aktuellen Ebene der Hierarchie.  
+  
+    -   Read-Berechtigungen für das übergeordnete Element von Konfigurationsdateien.  
+  
+     Wenn Ihre Anwendung nur-Lese Zugriff auf seine eigene Konfiguration benötigt, sollten Sie mithilfe der <see cref="Overload:System.Web.Configuration.WebConfigurationManager.GetSection" /> überladene Methoden im Fall von Webanwendungen, oder die <see cref="M:System.Configuration.ConfigurationManager.GetSection(System.String)" /> Methode im Fall von Clientanwendungen.  
+  
+     Diese Methoden ermöglichen den Zugriff auf die zwischengespeicherten Konfigurationswerte für die aktuelle Anwendung, die eine bessere Leistung als hat die <see cref="T:System.Configuration.Configuration" /> Klasse.  
+  
+ <block subset="none" type="note"><para>  
+ Bei Verwendung ein statischen <see langword="GetSection" /> Methode, eine <paramref name="path" /> Parameter, die <paramref name="path" /> Parameter muss finden Sie in der Anwendung, in dem der Code ausgeführt wird; andernfalls wird der Parameter ignoriert, und Konfigurationsinformationen für die derzeit die Ausführung Anwendung wird zurückgegeben.  
+  
+</para></block>  
+  
+-   Schreiben. Verwenden Sie eine von der <see cref="Overload:System.Configuration.Configuration.Save" /> Methoden zum Schreiben von Konfigurationsinformationen. Beachten Sie, dass der Benutzer oder Prozess, der schreibt die folgenden Berechtigungen verfügen muss:  
+  
+    -   Schreibberechtigung für die Konfigurationsdatei und das Verzeichnis auf der aktuellen Konfiguration Hierarchieebene.  
+  
+    -   Leseberechtigungen Sie für alle Konfigurationsdateien.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationSection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.ConfigurationSection.%23ctor%2A> -Konstruktor müssen Sie zuerst einen benutzerdefinierten Typ definieren. Ein Beispiel finden Sie unter der <xref:System.Configuration.ConfigurationSection> -Klassenübersicht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des <xref:System.Configuration.ConfigurationSection.%23ctor%2A>-Konstruktors veranschaulicht. In diesem Beispiel wird davon ausgegangen, dass die Erstellung einer benutzerdefinierten Abschnitts-Klasse, die mit dem Namen `CustomSection`. Ein Beispiel einer solchen Klasse finden Sie unter der <xref:System.Configuration.ConfigurationSection> -Klassenübersicht.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/CS/CustomConfigurationSection.cs#2)]
+ [!code-vb[System.Configuration.ConfigurationSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/VB/CustomConfigurationSection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeSection">
+      <MemberSignature Language="C#" Value="protected virtual void DeserializeSection (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void DeserializeSection(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.DeserializeSection(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> -Objekt, das aus der Konfigurationsdatei liest.</param>
+        <summary>Liest XML aus der Konfigurationsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Deserialisierung bezeichnet das Lesen von XML-Daten aus einer Konfigurationsdatei, die Transformation in Echtzeitdaten und dessen Speicher in einem Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">
+          <paramref name="reader" />gefunden Sie keine Elemente in der Konfigurationsdatei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeObject">
+      <MemberSignature Language="C#" Value="protected virtual object GetRuntimeObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object GetRuntimeObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.GetRuntimeObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein benutzerdefiniertes Objekt beim Überschreiben in einer abgeleiteten Klasse zurück.</summary>
+        <returns>Das Objekt, das im Abschnitt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Configuration.Configuration.GetSection%2A> -Methode zur Laufzeit aufgerufen wird, das Konfigurationssystem erstellt zuerst eine geeignete Instanz von der <xref:System.Configuration.ConfigurationSection> Klasse, und gibt anschließend das Objekt, das er erhält, aus der <xref:System.Configuration.ConfigurationSection.GetRuntimeObject%2A> Methode.  
+  
+ Standardmäßig <xref:System.Configuration.ConfigurationSection.GetRuntimeObject%2A> einfach gibt das Objekt, das stellt die <xref:System.Configuration.ConfigurationSection> aus dem er aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationSection.GetRuntimeObject%2A>-Methode gezeigt.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/CS/CustomConfigurationSection.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/VB/CustomConfigurationSection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="M:System.Configuration.ConfigurationSection.GetRuntimeObject" /> Methode, um zur Laufzeit einen benutzerdefinierten Typ zurückzugeben.  
+  
+ Z. B. zum Einschränken der Common Language Runtime Änderung der Einstellungen in der <see cref="T:System.Configuration.ConfigurationSection" /> -Klasse, die Sie überschreiben <see cref="M:System.Configuration.ConfigurationSection.GetRuntimeObject" /> und zurückgeben ein benutzerdefiniertes Typs, das Durchsetzen von Einschränkungen, die für die Einstellungen geändert werden können, falls vorhanden.  
+  
+ Wenn das Laufzeitobjekt ausschließlich intern verwendet wird, kann das zurückgegebene Objekt außerhalb der Assembly verwendet werden, die ihn definiert. Eine Möglichkeit, ein Objekt zu erstellen, die abgeleitet <see cref="T:System.Configuration.ConfigurationSection" /> und kann nur von Code in der Assembly zur Laufzeit zugegriffen werden Zeit zum Erstellen eines internen Common Language Runtime-Objekts, das eine Methode verfügt, die zurückgegeben wird Ihre <see cref="T:System.Configuration.ConfigurationSection" /> Implementierung.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="protected override bool IsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.IsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob dieses Konfigurationselement geändert wurde, seit es zuletzt gespeichert oder geladen, wenn in einer abgeleiteten Klasse implementiert wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn das Element geändert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetModified">
+      <MemberSignature Language="C#" Value="protected override void ResetModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ResetModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.ResetModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt bei Implementierung in einer abgeleiteten Klasse den Wert der <see cref="M:System.Configuration.ConfigurationElement.IsModified" />-Methode auf <see langword="false" /> zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SectionInformation">
+      <MemberSignature Language="C#" Value="public System.Configuration.SectionInformation SectionInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SectionInformation SectionInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSection.SectionInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SectionInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.SectionInformation" /> Objekt, das nicht anpassbaren Informationen und Funktionen von enthält die <see cref="T:System.Configuration.ConfigurationSection" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Configuration.SectionInformation" /> , der nicht anpassbaren Informationen und Funktionen von enthält die <see cref="T:System.Configuration.ConfigurationSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Configuration.ConfigurationSection.SectionInformation%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/CS/CustomConfigurationSection.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSection/VB/CustomConfigurationSection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeSection">
+      <MemberSignature Language="C#" Value="protected virtual string SerializeSection (System.Configuration.ConfigurationElement parentElement, string name, System.Configuration.ConfigurationSaveMode saveMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string SerializeSection(class System.Configuration.ConfigurationElement parentElement, string name, valuetype System.Configuration.ConfigurationSaveMode saveMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.SerializeSection(System.Configuration.ConfigurationElement,System.String,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">Die <see cref="T:System.Configuration.ConfigurationElement" /> Instanz, die als das übergeordnete Element verwendet werden soll, bei die Aufhebung der Zusammenführung ausführen.</param>
+        <param name="name">Der Name des zu erstellenden Abschnitts.</param>
+        <param name="saveMode">Die <see cref="T:System.Configuration.ConfigurationSaveMode" /> Instanz, mit der beim Schreiben in eine Zeichenfolge.</param>
+        <summary>Erstellt eine XML-Zeichenfolge, die eine nicht zusammengeführte Ansicht des enthält die <see cref="T:System.Configuration.ConfigurationSection" /> -Objekt als einen einzelnen Abschnitt in eine Datei geschrieben.</summary>
+        <returns>Eine XML-Zeichenfolge, die eine nicht zusammengeführte Ansicht des enthält die <see cref="T:System.Configuration.ConfigurationSection" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serialisierung bezieht sich auf die Transformation von Daten in Echtzeit, in ein Objekt, um XML-Format und deren Speicherung in einer Konfigurationsdatei enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeElementInTargetVersion">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeElementInTargetVersion (System.Configuration.ConfigurationElement element, string elementName, System.Runtime.Versioning.FrameworkName targetFramework);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeElementInTargetVersion(class System.Configuration.ConfigurationElement element, string elementName, class System.Runtime.Versioning.FrameworkName targetFramework) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.ShouldSerializeElementInTargetVersion(System.Configuration.ConfigurationElement,System.String,System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="targetFramework" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Configuration.ConfigurationElement" /> -Objekt, das für die Serialisierung geeignet sind.</param>
+        <param name="elementName">Der Name des der <see cref="T:System.Configuration.ConfigurationElement" /> Objekt, wie es im XML-Code auftritt.</param>
+        <param name="targetFramework">Die Zielversion von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</param>
+        <summary>Gibt an, ob das angegebene Element serialisiert werden soll, wenn für die angegebene Zielversion des Konfigurationshierarchie Objekt serialisiert wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="element" /> sollten serialisiert werden, andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Konfigurationsabschnitt, der erstellt wird die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] und höhere Versionen müssen explizit überschreiben Sie diese Methode zurückgeben `true`, jedoch nur, wenn das angegebene Element für die angegebene Version der gültig ist die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vorhandene Konfigurationsabschnitte, die für frühere Versionen erstellt wurden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] müssen nicht geändert werden.  
+  
+ Der Basistyp enthält eine standardmäßige Implementierung dieser Methode, die immer zurückgibt `true`. Wenn Sie einen Konfigurationsabschnitt implementieren und diese Methode nicht überschreiben, werden standardmäßig alle Konfigurationselemente, die in den Konfigurationsabschnitt enthalten sind für alle Frameworkversionen serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializePropertyInTargetVersion">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializePropertyInTargetVersion (System.Configuration.ConfigurationProperty property, string propertyName, System.Runtime.Versioning.FrameworkName targetFramework, System.Configuration.ConfigurationElement parentConfigurationElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializePropertyInTargetVersion(class System.Configuration.ConfigurationProperty property, string propertyName, class System.Runtime.Versioning.FrameworkName targetFramework, class System.Configuration.ConfigurationElement parentConfigurationElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.ShouldSerializePropertyInTargetVersion(System.Configuration.ConfigurationProperty,System.String,System.Runtime.Versioning.FrameworkName,System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Configuration.ConfigurationProperty" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="targetFramework" Type="System.Runtime.Versioning.FrameworkName" />
+        <Parameter Name="parentConfigurationElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die <see cref="T:System.Configuration.ConfigurationProperty" /> -Objekt, das für die Serialisierung geeignet sind.</param>
+        <param name="propertyName">Der Name des der <see cref="T:System.Configuration.ConfigurationProperty" /> Objekt, wie es im XML-Code auftritt.</param>
+        <param name="targetFramework">Die Zielversion von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</param>
+        <param name="parentConfigurationElement">Das übergeordnete Element der Eigenschaft.</param>
+        <summary>Gibt an, ob die angegebene Eigenschaft serialisiert werden soll, wenn für die angegebene Zielversion des Konfigurationshierarchie Objekt serialisiert wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="property" /> sollten serialisiert werden, andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Konfigurationsabschnitt, der erstellt wird die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] und höhere Versionen müssen explizit überschreiben Sie diese Methode zurückgeben `true`, jedoch nur, wenn die angegebene Eigenschaft für die angegebene Version der gültig ist die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vorhandene Konfigurationsabschnitte, die für frühere Versionen erstellt wurden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] müssen nicht geändert werden.  
+  
+ Der Basistyp enthält eine standardmäßige Implementierung dieser Methode, die immer zurückgibt `true`. Wenn Sie einen Konfigurationsabschnitt implementieren und diese Methode nicht überschreiben, werden standardmäßig alle Konfigurationseigenschaften, die in den Konfigurationsabschnitt enthalten sind für alle Frameworkversionen serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSectionInTargetVersion">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeSectionInTargetVersion (System.Runtime.Versioning.FrameworkName targetFramework);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeSectionInTargetVersion(class System.Runtime.Versioning.FrameworkName targetFramework) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSection.ShouldSerializeSectionInTargetVersion(System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFramework" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="targetFramework">Die Zielversion von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</param>
+        <summary>Gibt an, ob die aktuelle <see cref="T:System.Configuration.ConfigurationSection" /> Instanz serialisiert werden soll, wenn für die angegebene Zielversion des Konfigurationshierarchie Objekt serialisiert wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <returns>
+          <see langword="true" />Wenn der aktuelle Bereich serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Konfigurationsabschnitt, der erstellt wird die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] und höhere Versionen müssen explizit überschreiben Sie diese Methode zurückgeben `true`, jedoch nur, wenn der Konfigurationsabschnitt für die angegebene Version der gültig ist die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vorhandene Konfigurationsabschnitte, die für frühere Versionen erstellt wurden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] müssen nicht geändert werden.  
+  
+ Der Basistyp enthält eine standardmäßige Implementierung dieser Methode, die immer zurückgibt `true`. Wenn Sie einen Konfigurationsabschnitt implementieren und diese Methode nicht überschreiben, wird standardmäßig der Konfigurationsabschnitt für alle Frameworkversionen serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

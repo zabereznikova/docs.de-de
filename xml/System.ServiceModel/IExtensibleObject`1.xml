@@ -1,0 +1,77 @@
+<Type Name="IExtensibleObject&lt;T&gt;" FullName="System.ServiceModel.IExtensibleObject&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IExtensibleObject&lt;T&gt; where T : IExtensibleObject&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtensibleObject`1&lt;(class System.ServiceModel.IExtensibleObject`1&lt;!T&gt;) T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.IExtensibleObject`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <InterfaceName>System.ServiceModel.IExtensibleObject&lt;T&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Der Typ der Erweiterungsklasse.</typeparam>
+    <summary>Aktivieren Sie ein Objekt, um am benutzerdefinierte Verhalten, z.&amp;#160;B. dem Registrieren für Ereignisse oder dem Überwachen von Zustandsübergängen, teilzunehmen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie <xref:System.ServiceModel.IExtensibleObject%601>, um die Aggregation von Erweiterungen zu aktivieren.  
+  
+ Wenn Sie beispielsweise eine `TreeNode`-Klasse implementieren und externer Code zu einigen Instanzen von `TreeNode` Anmerkungen und Methoden hinzufügen soll, können Sie `TreeNode` anweisen, `IExtensibleObject<TreeNode>` zu implementieren. Somit wird Code aktiviert, in dem `TreeNode` zum Hinzufügen von Objekten verwendet wird, die wiederum `IExtensibleObject<TreeNode>` in der <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A>-Auflistung implementieren.  
+  
+ Es gibt vier erweiterbare Objekte in [!INCLUDE[indigo1](~/includes/indigo1-md.md)]:  
+  
+-   <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>  
+  
+-   <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>  
+  
+-   <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>  
+  
+-   <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>  
+  
+ Eine Erläuterung zum Erstellen von Erweiterungen, um mit diesen Objekten arbeiten, finden Sie unter [erweiterbare Objekte](~/docs/framework/wcf/extending/extensible-objects.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.IExtensionCollection&lt;T&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IExtensionCollection`1&lt;!T&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.IExtensibleObject`1.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IExtensionCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Erweiterungsobjekte für dieses erweiterbare Objekt ab.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.IExtensionCollection`1" /> von Erweiterungsobjekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

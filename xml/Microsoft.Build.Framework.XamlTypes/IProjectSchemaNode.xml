@@ -1,0 +1,57 @@
+<Type Name="IProjectSchemaNode" FullName="Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode">
+  <TypeSignature Language="C#" Value="public interface IProjectSchemaNode" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProjectSchemaNode" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Schnittstelle, die alle Stammklassen von XAML-Schemadateien Projekt implementieren müssen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSchemaObjects">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; GetSchemaObjects (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetSchemaObjects(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjects(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der statischen Daten abgerufen werden sollen.</param>
+        <summary>Gibt einen Enumerator für alle Instanzen von statischen Daten, die vom angegebenen Typ zurück.</summary>
+        <returns>Gibt einen Enumerator für alle Instanzen von statischen Daten, die vom angegebenen Typ zurück. Gibt <see langword="Null" /> oder eine leere Liste, wenn keine Objekte des angegebenen Typs von diesem Knoten bereitgestellt werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaObjectTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Type&gt; GetSchemaObjectTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; GetSchemaObjectTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjectTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, über alle Typen von statischen Daten für die datengesteuerten Funktionen, die dieser Knoten enthält.</summary>
+        <returns>Gibt einen Enumerator zurück, über alle Typen von statischen Daten für die datengesteuerten Funktionen, die dieser Knoten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

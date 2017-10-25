@@ -1,0 +1,259 @@
+<Type Name="NotifyFilters" FullName="System.IO.NotifyFilters">
+  <TypeSignature Language="C#" Value="public enum NotifyFilters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NotifyFilters extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.NotifyFilters" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Änderungen in einer Datei oder Ordner für die Überwachung an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Member dieser Enumeration zu überwachenden mehr als eine Art von Änderung kombinieren. Sie können z. B. Änderungen in der Größe einer Datei oder Ordner, und Änderungen in den Sicherheitseinstellungen überwachen. Dies löst ein Ereignis aus, sobald sich eine Änderung der Größe oder Sicherheit-Einstellungen einer Datei oder ein Ordner vorhanden ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.IO.FileSystemWatcher> zum Überwachen des Verzeichnisses, das zur Laufzeit festgelegt wird. Die Komponente festgelegt ist, alle Änderungen in den letzten Schreibvorgang "und" Letzter Zugriff verstrichen ist, die Erstellung, Löschung, zu überwachen oder Umbenennen von Textdateien im Verzeichnis. Wenn eine Datei geändert wird, erstellt oder gelöscht wird, gibt den Pfad zur Datei in der Konsole aus. Wenn eine Datei umbenannt wird, werden die alten und neuen Pfade auf der Konsole ausgegeben.  
+  
+ Verwenden der <xref:System.Diagnostics> und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ [!code-cpp[Classic NotifyFilters Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic NotifyFilters Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic NotifyFilters Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic NotifyFilters Example/CS/source.cs#1)]
+ [!code-vb[Classic NotifyFilters Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic NotifyFilters Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="Attributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters Attributes = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.Attributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Attribute einer Datei oder eines Ordners.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationTime">
+      <MemberSignature Language="C#" Value="CreationTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters CreationTime = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.CreationTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zeitpunkt, zu der Datei oder einen Ordner erstellt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryName">
+      <MemberSignature Language="C#" Value="DirectoryName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters DirectoryName = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.DirectoryName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name des Verzeichnisses.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="FileName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters FileName = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.FileName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name der Datei.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LastAccess">
+      <MemberSignature Language="C#" Value="LastAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters LastAccess = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.LastAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Datum, an das die Datei oder den Ordner zuletzt geöffnet wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LastWrite">
+      <MemberSignature Language="C#" Value="LastWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters LastWrite = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.LastWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Datum, an dem zuletzt in die Datei oder den Ordner geschrieben wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="Security" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters Security = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.Security" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Sicherheitseinstellungen für die Datei oder den Ordner.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="Size" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.NotifyFilters Size = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.NotifyFilters.Size" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.NotifyFilters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Größe einer Datei oder eines Ordners.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

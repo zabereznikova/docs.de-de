@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Principal">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.Principal" /> -Namespace definiert ein Hauptobjekt, das den Sicherheitskontext darstellt, in dem Code ausgeführt wird. Weitere Informationen finden Sie unter [rollenbasierte Sicherheit](~/docs/standard/security/role-based-security.md).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

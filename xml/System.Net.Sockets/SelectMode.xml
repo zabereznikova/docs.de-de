@@ -1,0 +1,122 @@
+<Type Name="SelectMode" FullName="System.Net.Sockets.SelectMode">
+  <TypeSignature Language="C#" Value="public enum SelectMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SelectMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.SelectMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Sicherheitsmodi Abruf für die <see cref="M:System.Net.Sockets.Socket.Poll(System.Int32,System.Net.Sockets.SelectMode)" /> Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.SelectMode> -Enumeration definiert die Abrufmodi, die übergeben werden können die <xref:System.Net.Sockets.Socket.Poll%2A?displayProperty=nameWithType> Methode. Verwenden Sie den SelectRead-Wert, um festzustellen, ob eine Überwachung <xref:System.Net.Sockets.Socket> eingehende verbindungsanforderungen hat. Verwenden Sie den SelectWrite-Wert, um festzustellen, ob eine <xref:System.Net.Sockets.Socket> beschreibbar ist. Verwenden Sie den SelectError-Wert, um festzustellen, ob es ist ein Fehlerzustand, der auf die <xref:System.Net.Sockets.Socket>. Weitere erläuterungen zur können, Lesbarkeit und das Vorhandensein von fehlerbedingungen, finden Sie unter der <xref:System.Net.Sockets.Socket.Poll%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft den Status einer <xref:System.Net.Sockets.Socket> mit allen drei <xref:System.Net.Sockets.SelectMode> Enumerationswerte. Ein Aufruf von <xref:System.Net.Sockets.Socket.Poll%2A?displayProperty=nameWithType> zurückgeben sollte mit dem Wert SelectWrite aufgezählt `true`.  
+  
+ [!code-cpp[SelectModeExample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SelectModeExample/CPP/source.cpp#1)]
+ [!code-csharp[SelectModeExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SelectModeExample/CS/source.cs#1)]
+ [!code-vb[SelectModeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SelectModeExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SelectError">
+      <MemberSignature Language="C#" Value="SelectError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SelectMode SelectError = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SelectMode.SelectError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SelectMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Status Fehlermodus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectRead">
+      <MemberSignature Language="C#" Value="SelectRead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SelectMode SelectRead = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SelectMode.SelectRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SelectMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Status-Lesemodus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectWrite">
+      <MemberSignature Language="C#" Value="SelectWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SelectMode SelectWrite = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SelectMode.SelectWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SelectMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Status im Schreibmodus.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

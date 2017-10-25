@@ -1,0 +1,140 @@
+<Type Name="IDataSource" FullName="System.Web.UI.IDataSource">
+  <TypeSignature Language="C#" Value="public interface IDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Datenquelle, der von datengebundenen Steuerelementen zu binden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt ein Steuerelement Datenbindungsarchitektur, die Webserver-Steuerelemente binden an Daten auf konsistente Weise ermöglicht. Webserversteuerelemente, die an Daten gebunden werden als datengebundene Steuerelemente und die Klassen, die zu ermöglichen, dass die Bindung heißen Datenquellensteuerelemente bezeichnet. Datenquellensteuerelemente können jede beliebige Datenquelle darstellen: eine relationale Datenbank, eine Datei, einen Stream, ein Geschäftsobjekt usw.. Datenquelle steuert die Darstellung der Daten auf konsistente Weise für datengebundene Steuerelemente, unabhängig von der Quelle oder das Format der zugrunde liegenden Daten.  
+  
+ Implementieren Sie die <xref:System.Web.UI.IDataSource> Schnittstelle, wenn Sie ein eigene benutzerdefinierte ASP.NET-Datenquellensteuerelement implementieren möchten.  
+  
+ Jede Klasse, implementiert die <xref:System.Web.UI.IDataSource> Schnittstelle ist ein Datenquellen-Steuerelement. Die <xref:System.Web.UI.IDataSource> Schnittstelle bildet die Grundlage für alle ASP.NET-Datenquelle und definiert die grundlegenden Konzepte der Datenbindung Architektur mit den zwei Methoden: die <xref:System.Web.UI.IDataSource.GetView%2A> Methode und die <xref:System.Web.UI.IDataSource.GetViewNames%2A> Methode. Dieses Konzept ist, dass alle Datenquellensteuerelemente eine oder mehrere benannte Ansichten auf ihre Daten zu unterstützen. Die Datenquellensicht-Objekt ähnelt der <xref:System.Data.DataView> Abstraktion in die <xref:System.Data> Namespace: datenbindbares, angepasste Ansicht der Daten zu sortieren, Filtern und andere Data-Vorgänge, die die Sicht definiert. Im Kern eine Datenquelle steuern, wird keine Aktion ausgeführt mehrere Ansichten Daten abzurufen.  
+  
+ Ein Datenquellen-Steuerelement kann eine oder mehrere zugeordnete Ansicht Datenquellenobjekte haben. Einige Datenquellensteuerelemente, einschließlich derer, die relationale Datenbanken, z. B. darstellen <xref:System.Web.UI.WebControls.SqlDataSource> und <xref:System.Web.UI.WebControls.AccessDataSource>, unterstützen nur eine Ansicht. Andere Datenquellen-Steuerelemente, einschließlich Hierarchische Datenquellensteuerelemente wie z. B. <xref:System.Web.UI.WebControls.SiteMapDataSource>, viele Ansichten zu unterstützen. Die Datenquellensicht definiert, die Funktionen einer Datenquelle sowie der Vorgänge, die er unterstützt wird.  
+  
+ Zusammenfassend Datenquellensteuerelemente implementieren die <xref:System.Web.UI.IDataSource> -Schnittstelle, unterstützen einen oder mehrere benannte Ansichten der Daten, die sie darstellen, und Abrufen von Daten aus der Datenquelle, die sie darstellen, immer zu unterstützen. Datenquellensteuerelemente immer Abrufen von Daten bei Bedarf, z. B. wenn `DataBind` für ein datengebundenes Steuerelement aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse definierten Methoden implementieren, kann die <xref:System.Web.UI.IDataSource> Schnittstelle, um die Daten für datengebundene Steuerelemente bereitstellen. Datenquellen-Steuerelements in diesem Beispiel dient als eine Datenquelle in eine CSV-Datei und kann von jedem datengebundenen Steuerelement zum Anzeigen von Dateidaten durch Trennzeichen getrennte verwendet werden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSourceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DataSourceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataSourceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.IDataSource.DataSourceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Datenquellen-Steuerelement in irgendeiner Weise geändert wurde, die von datengebundenen Steuerelementen betroffen sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IDataSource.DataSourceChanged> Ereignis wird ausgelöst, wenn in irgendeiner Form, die das datenbindungen zwischen einem datengebundenen Steuerelement und seine Daten wirkt sich auf die Eigenschaften eines datengebundenen Steuerelements oder die zugrunde liegenden Daten geändert hat. Das Ereignis wird beispielsweise ausgelöst, wenn eine Datei, z. B. Eigenschaftenname der <xref:System.Web.UI.WebControls.AccessDataSource.DataFile%2A> -Eigenschaft auf eine dateibasierte Datenquellen-Steuerelements geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.DataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDataSource.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">Der Name der abzurufenden Ansicht.</param>
+        <summary>Ruft die benannte Datenquellensicht zugeordneten Datenquellen-Steuerelements ab.</summary>
+        <returns>Gibt die benannte <see cref="T:System.Web.UI.DataSourceView" /> zugeordneten der <see cref="T:System.Web.UI.IDataSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datenquellen-Steuerelementklassen können einer oder mehreren Ansichten der zugrunde liegenden Daten unterstützen. Diese Ansichten werden durch Instanzen der dargestellt die <xref:System.Web.UI.DataSourceView> Klasse. Die Datenquellensicht definiert, das die Funktionen des ein Datenquellen-Steuerelement, und führt alle Aufgaben, die zum Abrufen von Daten aus dem zugrunde liegenden Datenspeicher und Vorgänge wie das Sortieren, einfügen, löschen und aktualisieren.  
+  
+ Datenquellen-Steuerelements Klassen implementiert, die <xref:System.Web.UI.IDataSource> Schnittstelle implementieren die <xref:System.Web.UI.IDataSource.GetView%2A> Methode, um stark typisierte zurückzugeben Anzeigen von Objekten der Klasse zugeordnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Datenquellen-Steuerelementklasse, die implementiert die <xref:System.Web.UI.IDataSource> -Schnittstelle implementiert die <xref:System.Web.UI.IDataSource.GetView%2A> Methode, die eine stark typisierte Instanz zurückgeben der <xref:System.Web.UI.DataSourceView> Klasse. Da die Datenquellen-Steuerelements nur eine Ansicht unterstützt, ignoriert die Namen und gibt eine Ansicht mit dem Namen, mit dem Standardnamen für die Sicht zurück. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDataSource.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Namen, die die Liste der zugeordneten Sichtobjekte darstellen der <see cref="T:System.Web.UI.IDataSource" /> Schnittstelle.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> , enthält die Namen der zugeordneten Ansichten der <see cref="T:System.Web.UI.IDataSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datenquellen-Steuerelementklassen können eine oder mehrere benannte Ansichten der zugrunde liegenden Daten unterstützen. Die <xref:System.Web.UI.IDataSource.GetViewNames%2A> -Methode gibt eine Auflistung von Sichtnamen, die derzeit die Datenquelleninstanz-Steuerelement zugeordnet. Aufrufer können Durchlaufen der Auflistung Sichtnamen und Abrufen einzelner <xref:System.Web.UI.DataSourceView> Objekte mit der <xref:System.Web.UI.IDataSource.GetView%2A> Methode.  
+  
+ Datenquellen-Steuerelements Klassen implementiert, die <xref:System.Web.UI.IDataSource> Schnittstelle implementieren die <xref:System.Web.UI.IDataSource.GetViewNames%2A> Methode zum Zurückgeben einer Auflistung von Namen, die die Datenquelle darstellt Anzeigen von Objekten, die mit den Datenquellen-Steuerelementklasse derzeit zugewiesen ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Datenquellensteuerelement, das implementiert die <xref:System.Web.UI.IDataSource> -Schnittstelle implementiert die <xref:System.Web.UI.IDataSource.GetViewNames%2A> Methode zurückgeben einer <xref:System.Collections.ICollection> Auflistung der Namen. Da die Datenquelle nur die Ansicht unterstützt, gibt die Methode eine Auflistung von einem Element mit dem Standardnamen für die Ansicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.DataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#4)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

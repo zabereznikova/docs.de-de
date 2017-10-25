@@ -1,0 +1,497 @@
+<Type Name="MediaTimeline" FullName="System.Windows.Media.MediaTimeline">
+  <TypeSignature Language="C#" Value="public class MediaTimeline : System.Windows.Media.Animation.Timeline, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi MediaTimeline extends System.Windows.Media.Animation.Timeline implements class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.MediaTimeline" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Timeline</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Windows.Media.Animation.Timeline" /> für den Medieninhalt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.MediaTimeline>ist ein <xref:System.Windows.Media.Animation.Timeline> Objekt, das Medien ein Timeout auf die gleiche Weise gesteuert, dass die Zeitachse Animationsobjekte Animationen steuern. Z. B. eine <xref:System.Windows.Media.MediaTimeline> verfügt über zugeordnete <xref:System.Windows.Media.Animation.Timeline.Duration%2A> und <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Eigenschaften angeben, wenn Medien beginnt und wie lange es dauert, genutzt werden. Finden Sie unter [Übersicht über Animation](~/docs/framework/wpf/graphics-multimedia/animation-overview.md) für Weitere Informationen zu Animationszeitachsen.  
+  
+ Es gibt zwei Möglichkeiten zum Zuordnen einer <xref:System.Windows.Media.Animation.Timeline> auf eine <xref:System.Windows.Controls.MediaElement> mit einer <xref:System.Windows.Media.MediaTimeline>.  
+  
+1.  Innerhalb eines eine <xref:System.Windows.Media.Animation.Storyboard>, wenn eine <xref:System.Windows.Media.MediaTimeline> Ziele ist ein <xref:System.Windows.Controls.MediaElement>, eine <xref:System.Windows.Media.MediaClock> wird erstellt und zugewiesen werden die <xref:System.Windows.Controls.MediaElement>zugeordneten Player des. Finden Sie unter [wie: Steuern Sie mithilfe eines Drehbuchs MediaElement](~/docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md) für ein Beispiel für;  
+  
+2.  Durch das explizite Erstellen einer <xref:System.Windows.Media.MediaClock> aus einer <xref:System.Windows.Media.MediaTimeline> und Zuweisung zu einer <xref:System.Windows.Controls.MediaElement>.  
+  
+ Wenn die <xref:System.Windows.Media.Animation.Timeline.Duration%2A> von der <xref:System.Windows.Media.MediaTimeline> festgelegt ist, um `Automatic` (Standard), die Dauer der <xref:System.Windows.Media.MediaTimeline> ist die natürliche Dauer der Medienquelle.  Um die natürliche Dauer der Medienquelle programmgesteuert zu ermitteln, Fragen Sie die <xref:System.Windows.Controls.MediaElement.NaturalDuration%2A> Eigenschaft von der <xref:System.Windows.Controls.MediaElement>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaTimeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.MediaTimeline" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaTimeline (Nullable&lt;TimeSpan&gt; beginTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.#ctor(System.Nullable{System.TimeSpan})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Die Zeit, die Zeitachse beginnen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.MediaTimeline" /> , die zum angegebenen Zeitpunkt beginnt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaTimeline (Uri source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Medienquelle für die Zeitachse.</param>
+        <summary>Initialisiert eine neue Instanz von einem <see cref="T:System.Windows.Media.MediaTimeline" /> -Klasse mit dem angegebenen Uri als Medienquelle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaTimeline (Nullable&lt;TimeSpan&gt; beginTime, System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime, valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.#ctor(System.Nullable{System.TimeSpan},System.Windows.Duration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Die Zeit zum Starten der Wiedergabe von Medien.</param>
+        <param name="duration">Die Zeitdauer für die Wiedergabe von Medien.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.MediaTimeline" /> , die zum angegebenen Zeitpunkt beginnt und dauert für die angegebene Dauer überschreitet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaTimeline (Nullable&lt;TimeSpan&gt; beginTime, System.Windows.Duration duration, System.Windows.Media.Animation.RepeatBehavior repeatBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime, valuetype System.Windows.Duration duration, valuetype System.Windows.Media.Animation.RepeatBehavior repeatBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.#ctor(System.Nullable{System.TimeSpan},System.Windows.Duration,System.Windows.Media.Animation.RepeatBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+        <Parameter Name="repeatBehavior" Type="System.Windows.Media.Animation.RepeatBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Die Zeit zum Starten der Wiedergabe von Medien.</param>
+        <param name="duration">Die Zeitdauer für die Wiedergabe von Medien.</param>
+        <param name="repeatBehavior">Das Wiederholungsverhalten zu verwenden, wenn die Wiedergabedauer erreicht wurde.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.MediaTimeline" /> -Klasse, die zum angegebenen Zeitpunkt über den angegebenen Zeitraum beginnt und die angegebene Wiederholungsverhalten aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllocateClock">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Animation.Clock AllocateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Windows.Media.Animation.Clock AllocateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.AllocateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Windows.Media.MediaClock" /> für diese Zeitachse.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Media.MediaClock" /> für diese Zeitachse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.MediaTimeline Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.MediaTimeline Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.MediaTimeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.MediaTimeline" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das zu klonende <see cref="T:System.Windows.Media.MediaTimeline" />.</param>
+        <summary>Macht diese Instanz zu einer tiefen Kopie der angegebenen <see cref="T:System.Windows.Media.MediaTimeline" />. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.Clone%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer änderbaren Kopie des aktuellen Objekts <xref:System.Windows.Freezable.Clone%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.MediaTimeline CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.MediaTimeline CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.MediaTimeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.MediaTimeline" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das zu klonende <see cref="T:System.Windows.Media.MediaTimeline" />.</param>
+        <summary>Macht diese Instanz mithilfe aktueller Eigenschaftswerte zu einer tiefen Kopie der angegebenen <see cref="T:System.Windows.Media.MediaTimeline" />, die geändert werden kann. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.CloneCurrentValue%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer änderbaren Kopie des aktuellen Objekts <xref:System.Windows.Freezable.CloneCurrentValue%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValueCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.MediaClock CreateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.MediaClock CreateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.CreateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.MediaClock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Media.MediaClock" /> zugeordneten der <see cref="T:System.Windows.Media.MediaTimeline" />.</summary>
+        <returns>Die neue <see cref="T:System.Windows.Media.MediaClock" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der MediaTimeline an.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreezeCore">
+      <MemberSignature Language="C#" Value="protected override bool FreezeCore (bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FreezeCore(bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.FreezeCore(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isChecking">
+          <see langword="true" />zum Überprüfen, ob die Zeitachse fixiert werden kann; <see langword="false" /> so fixieren Sie die Zeitachse.</param>
+        <summary>Macht diese Instanz von MediaTimeline als nicht änderbar fest oder bestimmt, ob es als nicht änderbar festgelegt werden kann.</summary>
+        <returns>Wenn <paramref name="isChecking" /> ist <see langword="true" />, gibt diese Methode <see langword="true" /> Wenn diese <see cref="T:System.Windows.Media.MediaTimeline" /> können änderbar festgelegt werden, oder <see langword="false" /> , wenn es als nicht änderbar festgelegt werden kann. Wenn <paramref name="isChecking" /> ist <see langword="false" />, gibt diese Methode <see langword="true" /> Wenn das angegebene <see cref="T:System.Windows.Media.MediaTimeline" /> ist jetzt als nicht änderbar fest, oder <see langword="false" /> , wenn sie als nicht änderbar festgelegt werden kann, mit dem Nebeneffekt müssen die tatsächlichen ändern in fixierten Status für dieses Objekt .</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see cref="T:System.Windows.Media.MediaTimeline" /> zu klonende und einzufrierende Objekt.</param>
+        <summary>Macht diese Instanz zu einem Klon des angegebenen <see cref="T:System.Windows.Media.MediaTimeline" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte. Beachten Sie, dass, wenn diese Eigenschaften Ressourcenverweise oder datenbindungen, enthalten <xref:System.Windows.Freezable.GetAsFrozen%2A> schlägt fehl, wenn das Objekt fixieren möchten, und löst eine <xref:System.InvalidOperationException>.  
+  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.GetAsFrozen%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer fixierten Kopie des aktuellen Objekts <xref:System.Windows.Freezable.GetAsFrozen%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das <see cref="T:System.Windows.Media.MediaTimeline" />, das kopiert und fixiert werden soll.</param>
+        <summary>Macht diese Instanz als fixierten Klon des angegebenen <see cref="T:System.Windows.Media.MediaTimeline" />. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer fixierten Kopie des aktuellen Objekts <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNaturalDurationCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Duration GetNaturalDurationCore (System.Windows.Media.Animation.Clock clock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Duration GetNaturalDurationCore(class System.Windows.Media.Animation.Clock clock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.GetNaturalDurationCore(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="clock">Die <see cref="T:System.Windows.Media.Animation.Clock" /> , deren natürliche Dauer gewünscht.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Duration" /> aus dem angegebenen Format.</summary>
+        <returns>Wenn <paramref name="clock" /> ist ein <see cref="T:System.Windows.Media.MediaClock" />, die <see cref="P:System.Windows.Media.MediaPlayer.NaturalDuration" /> Wert, der die <see cref="T:System.Windows.Media.MediaPlayer" /> zugeordnet <paramref name="clock" />, oder <see cref="P:System.Windows.Duration.Automatic" /> Wenn die <paramref name="clock" /> ist keine <see cref="T:System.Windows.Media.MediaClock" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaTimeline.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die der Zeitachse zugeordnete Medienquelle ab oder legt diese fest.</summary>
+        <value>Die der Zeitachse zugeordnete Medienquelle. Die Standardeinstellung ist **null**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Source"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.MediaTimeline.SourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.MediaTimeline.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.MediaTimeline.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaTimeline.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basis-URI des aktuellen Anwendungskontexts ab oder legt diesen fest.</summary>
+        <value>Der Basis-URI des Anwendungskontexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaTimeline.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge, die die Medienquelle darstellt.</summary>
+        <returns>Die Zeichenfolge, die Medienquelle darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

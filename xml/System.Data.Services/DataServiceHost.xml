@@ -1,0 +1,61 @@
+<Type Name="DataServiceHost" FullName="System.Data.Services.DataServiceHost">
+  <TypeSignature Language="C#" Value="public class DataServiceHost : System.ServiceModel.Web.WebServiceHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataServiceHost extends System.ServiceModel.Web.WebServiceHost" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.DataServiceHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Web.WebServiceHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die WCF Data Services-Klasse abgeleitet <see cref="T:System.ServiceModel.Web.WebServiceHost" /> verwendet, um Datendienste zu instanziieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]sind keine Serverentitäten autonome. Stattdessen ist der Dienst eine Komponente, gehostet in einer Umgebung wie der Windows Communication Foundation (WCF), die Netzwerkfunktionen für Server Core bereitstellt. Insbesondere ein Diensts nicht zu binden und Lauschen an eine netzwerksockets für eingehende Anforderungen an die Einstiegspunkte Representational State Transfer (REST). Der Host übernimmt die direkte Interaktion mit dem Netzwerk und unterstützt das Zwischenspeichern, die Skalierbarkeit und die Authentifizierungsmodule.  
+  
+ [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]definiert eine generische Hostschnittstelle <xref:System.Data.Services.IDataServiceHost> , die ihre Implementierung von einem bestimmten Host abstrahiert. Dadurch können [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] in einem Bereich von Hostingumgebungen ausgeführt. Weitere Informationen finden Sie unter [Hosting des Datendiensts](~/docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
+  
+ ]]></format>
+    </remarks>
+    <altCompliant cref="None ." />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataServiceHost (Type serviceType, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceHost.#ctor(System.Type,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Identifiziert die [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] an den Host.</param>
+        <param name="baseAddresses">Der URI des Hosts.</param>
+        <summary>Instanziiert <see cref="T:System.Data.Services.DataServiceHost" /> für [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]definiert eine generische Hostschnittstelle <xref:System.Data.Services.IDataServiceHost> , die ihre Implementierung von einem bestimmten Host abstrahiert. Dadurch können [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] in einem Bereich von Hostingumgebungen ausgeführt. Diese Schnittstelle darf nicht mit verwechselt werden <xref:System.Data.Services.DataServiceHost>, Registrierung und die Aktivierung für den Dienst stattdessen behandelt. Eine standardmäßige <xref:System.Data.Services.IDataServiceHost> in diesem Fall verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

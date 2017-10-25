@@ -1,0 +1,1537 @@
+<Type Name="DataGridViewRow" FullName="System.Windows.Forms.DataGridViewRow">
+  <TypeSignature Language="C#" Value="public class DataGridViewRow : System.Windows.Forms.DataGridViewBand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewRow extends System.Windows.Forms.DataGridViewBand" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewBand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataGridViewRowConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Zeile in einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewRow> Klasse stellt eine Zeile in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Sie können Zeilen durch Abrufen der <xref:System.Windows.Forms.DataGridView.Rows%2A> und <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> Sammlungen des Steuerelements.  
+  
+ Im Gegensatz zu einer <xref:System.Windows.Forms.DataGridViewColumn>ein <xref:System.Windows.Forms.DataGridViewRow> physisch enthält eine Auflistung von alle Zellen in dieser Zeile. Sie erreichen dieser Sammlung über die <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.DataGridViewRow> Klasse wird verwendet, um Zugriff auf die einzelne Zellenelemente sowie zum Anpassen der Darstellung und Verhalten der Zeile Benutzeroberfläche (UI), z. B. Höhe und des Zellstils. In der Regel sollten Sie alle Zeilen oder die meisten Zeilen im Steuerelement, um die gleichen Merkmale aufweisen. Um Zellstile für alle Zeilen im Steuerelement festzulegen, legen Sie die Eigenschaften des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft. Verwenden Sie zum Festlegen von Stilen für abwechselnde Zeilen die <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft. Weitere Informationen zu Zellenstile, finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md). Sie können auch die <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> Eigenschaft, um eine Zeile zu definieren, die als Grundlage für alle Zeilen, die dem Steuerelement hinzugefügt wird, verwendet werden.  
+  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement gemeinsam <xref:System.Windows.Forms.DataGridViewRow> Objekten über mehrere Datenzeilen nach Möglichkeit, um Leistungseinbußen zu vermeiden. Wenn Sie große Mengen an Daten und keine Leistungsprobleme arbeiten, können Sie in der Regel Freigeben von Zeilen ignorieren. Eine freigegebene Zeile wird angegeben, indem ein <xref:System.Windows.Forms.DataGridViewBand.Index%2A> Eigenschaftswert "-1". Einige Member der <xref:System.Windows.Forms.DataGridViewRow> Klasse kann nicht mit freigegebenen Zeilen verwendet werden, aber Sie können die Freigabe eine Zeile aufheben, durch den Zugriff auf die über die <xref:System.Windows.Forms.DataGridViewRowCollection.Item%2A?displayProperty=nameWithType> Eigenschaft. Zeilen können auch auf andere Weise aufgehoben werden. Um eine Zeile zuzugreifen, ohne die Freigabe aufzuheben, verwenden die <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> Methode. Bei der Arbeit mit großen Datenmengen sollten Sie bewusst sein wie Zeilen freigegeben werden und ohne Freigabe, um Leistungseinbußen zu vermeiden. Weitere Informationen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Vorgehensweise: Bearbeiten von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#209)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#209)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#209)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Ableiten von <see cref="T:System.Windows.Forms.DataGridViewRow" /> und der abgeleiteten Klasse neue Eigenschaften hinzugefügt haben, achten Sie darauf, dass Sie überschreiben die <see cref="M:System.Windows.Forms.DataGridViewRow.Clone" /> Methode, um die neuen Eigenschaften bei Klonvorgängen kopiert. Sie sollten auch der Basisklasse aufrufen, <see cref="M:System.Windows.Forms.DataGridViewRow.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewRow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataGridViewRow" /> Klasse ohne Verwendung einer Vorlage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die Zeile im leeren Zustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibilityObject">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AccessibleObject AccessibilityObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject AccessibilityObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.AccessibilityObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.DataGridViewRow.DataGridViewRowAccessibleObject" /> zugewiesen werden, um die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.DataGridViewRow.DataGridViewRowAccessibleObject" /> zugewiesen werden, um die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Instanz, die von dieser Methode zurückgegebene überschreiben, um die <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode.  
+  
+ Wenn dem Steuerelement gerade kein <xref:System.Windows.Forms.AccessibleObject> zugewiesen ist, wird eine neue Instanz davon erstellt.  
+  
+> [!NOTE]
+>  Zum Abrufen oder Festlegen der <xref:System.Windows.Forms.DataGridViewRow.AccessibilityObject%2A> -Eigenschaft, müssen Sie einen Verweis zum Hinzufügen der `Accessibility` mit installierte Assembly die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ Weitere Informationen zu barrierefreiheitsobjekten finden Sie unter den im Abschnitt "Active Accessibility" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustRowHeaderBorderStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewAdvancedBorderStyle AdjustRowHeaderBorderStyle (System.Windows.Forms.DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStyleInput, System.Windows.Forms.DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStylePlaceholder, bool singleVerticalBorderAdded, bool singleHorizontalBorderAdded, bool isFirstDisplayedRow, bool isLastVisibleRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.DataGridViewAdvancedBorderStyle AdjustRowHeaderBorderStyle(class System.Windows.Forms.DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStyleInput, class System.Windows.Forms.DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStylePlaceholder, bool singleVerticalBorderAdded, bool singleHorizontalBorderAdded, bool isFirstDisplayedRow, bool isLastVisibleRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.AdjustRowHeaderBorderStyle(System.Windows.Forms.DataGridViewAdvancedBorderStyle,System.Windows.Forms.DataGridViewAdvancedBorderStyle,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAdvancedBorderStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridViewAdvancedBorderStyleInput" Type="System.Windows.Forms.DataGridViewAdvancedBorderStyle" />
+        <Parameter Name="dataGridViewAdvancedBorderStylePlaceholder" Type="System.Windows.Forms.DataGridViewAdvancedBorderStyle" />
+        <Parameter Name="singleVerticalBorderAdded" Type="System.Boolean" />
+        <Parameter Name="singleHorizontalBorderAdded" Type="System.Boolean" />
+        <Parameter Name="isFirstDisplayedRow" Type="System.Boolean" />
+        <Parameter Name="isLastVisibleRow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewAdvancedBorderStyleInput">Ein <see cref="T:System.Windows.Forms.DataGridViewAdvancedBorderStyle" /> , der zu ändernde Rahmenart für die Zeile darstellt.</param>
+        <param name="dataGridViewAdvancedBorderStylePlaceholder">Ein <see cref="T:System.Windows.Forms.DataGridViewAdvancedBorderStyle" /> dient außerdem zur zwischenänderungen an der Rahmenart Zeilenheader gespeichert.</param>
+        <param name="singleVerticalBorderAdded">
+          <see langword="true" />So fügen Sie auf das Ergebnis eine einzelne vertikale Rahmenlinie hinzu; andernfalls <see langword="false" />.</param>
+        <param name="singleHorizontalBorderAdded">
+          <see langword="true" />So fügen Sie einen gemeinsamen horizontalen Linie auf das Ergebnis hinzu; andernfalls <see langword="false" />.</param>
+        <param name="isFirstDisplayedRow">
+          <see langword="true" />Wenn die Zeile der ersten Zeile angezeigt, der <see cref="T:System.Windows.Forms.DataGridView" />ist, andernfalls <see langword="false" />.</param>
+        <param name="isLastVisibleRow">
+          <see langword="true" />Wenn die Zeile die letzte Zeile in der <see cref="T:System.Windows.Forms.DataGridView" /> , hat seine <see cref="P:System.Windows.Forms.DataGridViewRow.Visible" /> -Eigenschaftensatz auf <see langword="true" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Ändert die Rahmenart für den Header einer Eingabezeile gemäß den angegebenen Kriterien.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.DataGridViewAdvancedBorderStyle" /> , der die neue verwendete Rahmenart darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement intern Ruft die <xref:System.Windows.Forms.DataGridViewRow.AdjustRowHeaderBorderStyle%2A> Methode, um die Darstellung der Rahmen für die Zeilenheaderzellen zu bestimmen. Die <xref:System.Windows.Forms.DataGridView> Steuerelement in der Regel verwendet den Wert der <xref:System.Windows.Forms.DataGridView.AdvancedRowHeadersBorderStyle%2A> -Eigenschaft für die `dataGridViewAdvancedBorderStyleInput` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Windows.Forms.DataGridViewRow.AdjustRowHeaderBorderStyle%2A> Methode, um die Rahmen der Zeilenheaderzellen anzupassen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewAdvancedBorderStyle> Klasse.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewAdvancedBorderStyle#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewAdvancedBorderStyle/CS/advancedborderstyle.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridViewAdvancedBorderStyle#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewAdvancedBorderStyle/VB/advancedborderstyle.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, wenn Sie die Darstellung des Rahmens der Zeilenheaderzellen anpassen möchten.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Cells">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewCellCollection Cells { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellCollection Cells" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.Cells" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Zellen ab, mit denen die Zeile aufgefüllt ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewCellCollection" /> , enthält alle Zellen in der Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Zeile keine Zellen enthält, wenn diese Eigenschaft zugegriffen wird, ein neues leeres <xref:System.Windows.Forms.DataGridViewCellCollection> erstellt werden, durch einen Aufruf der <xref:System.Windows.Forms.DataGridViewRow.CreateCellsInstance%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> Eigenschaft, um den Wert einer Zelle in der Zeile festzulegen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich im [Vorgehensweise: Bearbeiten von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#211](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#211)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#211](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#211)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#211](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#211)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie dieser Zeile.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die geklonte <see cref="T:System.Windows.Forms.DataGridViewRow" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewRow.Clone%2A> Methode kopiert die Zeile und die zugehörige Eigenschaft Werte, aber nicht kopiert die Zellwerte, die die Zeile enthält. Informationen zum Kopieren von Zellwerten beim Klonen einer Zeile finden Sie im Beispielabschnitt.  
+  
+ Überschreiben Sie die <xref:System.Windows.Forms.DataGridViewRow.Clone%2A> -Methode auf, wenn Sie von ableiten <xref:System.Windows.Forms.DataGridViewRow> und der abgeleiteten Klasse neue Eigenschaften hinzufügen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRow.Clone%2A> Methode zum Kopieren einer Zeile und füllen Sie dann die Kopie mit den Zellenwerten aus der ursprünglichen Zeile.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc2#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/cs/misc2.cs#60)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc2#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/vb/misc2.vb#60)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DataGridViewRow.Clone" /> rufen Sie in einer abgeleiteten Klasse die Basisklasse <see cref="M:System.Windows.Forms.DataGridViewRow.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zeile kopiert werden, und achten Sie darauf, dass Sie auch die Werte der Eigenschaften kopieren, die der abgeleiteten Klasse hinzugefügt wurden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kontextmenü für die Zeile ab oder legt dieses fest.</summary>
+        <value>Der der aktuellen <see cref="T:System.Windows.Forms.ContextMenuStrip" /> zugeordnete <see cref="T:System.Windows.Forms.DataGridViewRow" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, das Kontextmenü, das angezeigt wird, wenn der Benutzer die Zeile klickt, es sei denn, die <xref:System.Windows.Forms.DataGridView> Steuerelement <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> Ereignis oder die Zeile <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> Eigenschaft überschreibt das Kontextmenü für die bestimmte Zelle, auf die geklickt wurde.  
+  
+ Wenn der <xref:System.Windows.Forms.DataGridView> Steuerelement <xref:System.Windows.Forms.DataGridView.DataSource%2A> festgelegt wird oder den zugehörigen <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft ist `true`, Abrufen des Werts für die <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> -Eigenschaft löst der <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> -Ereignisses des Steuerelements und gibt den Wert der der <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.ContextMenuStrip%2A?displayProperty=nameWithType> -Eigenschaft im Ereignishandler angegeben. Wenn kein Handler für das Ereignis vorhanden sind, Abrufen des Werts für die <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> -Eigenschaft zurück, der zuvor angegebene Wert oder den Standardwert `null`.  
+  
+ Behandlung von der <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> Ereignis ist primär nützlich, bei der Arbeit mit großen Datenmengen um Leistungseinbußen zu vermeiden, der zum Einstellen der zeilenupdates <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> Wert für mehrere Zeilen. Weitere Informationen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Löst das Ändern dieser Eigenschaft die <xref:System.Windows.Forms.DataGridView.RowContextMenuStripChanged> -Ereignis für die besitzende <xref:System.Windows.Forms.DataGridView>, falls vorhanden.  
+  
+ Wenn die aktuelle Zeile freigegeben ist, verwenden Sie die <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> -Methode und anstatt das Abrufen des Werts dieser Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewColumn.ContextMenuStrip%2A?displayProperty=nameWithType> Eigenschaft, die nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewRow> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich der <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#130)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#130)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#130)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Abrufen des Werts dieser Eigenschaft ist die Zeile einer <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues barrierefreies Objekt für die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.DataGridViewRow.DataGridViewRowAccessibleObject" /> für die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die <xref:System.Windows.Forms.DataGridViewRow.CreateAccessibilityInstance%2A>-Methode nicht explizit aufrufen, wird sie beim Verweis auf die <xref:System.Windows.Forms.DataGridViewRow.AccessibilityObject%2A>-Eigenschaft aufgerufen.  
+  
+> [!NOTE]
+>  Zum Abrufen oder festlegen <xref:System.Windows.Forms.DataGridViewRow.AccessibilityObject%2A>, müssen Sie einen Verweis zum Hinzufügen der `Accessibility` mit installierte Assembly die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCells">
+      <MemberSignature Language="C#" Value="public void CreateCells (System.Windows.Forms.DataGridView dataGridView);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCells(class System.Windows.Forms.DataGridView dataGridView) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.CreateCells(System.Windows.Forms.DataGridView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridView" Type="System.Windows.Forms.DataGridView" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridView">Ein <see cref="T:System.Windows.Forms.DataGridView" /> , die als Vorlage für Zellstile fungiert.</param>
+        <summary>Löscht die vorhandenen Zellen und legt ihre Vorlage entsprechend dem angegebenen <see cref="T:System.Windows.Forms.DataGridView" /> Vorlage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löscht der Zeile <xref:System.Windows.Forms.DataGridViewCellCollection> und initialisiert sie mit der <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> Eigenschaft für jede Spalte von der `dataGridView` Parameter. Deshalb nimmt die Zeile für das Aussehen und Verhalten einer Zeile aus der `dataGridView` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataGridView" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Eine Zeile, die bereits zu gehört die <see cref="T:System.Windows.Forms.DataGridView" /> hinzugefügt wurde.  
+  
+ - oder -   
+  
+ Eine Spalte, die keine Zellvorlage besitzt, wurde hinzugefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCells">
+      <MemberSignature Language="C#" Value="public void CreateCells (System.Windows.Forms.DataGridView dataGridView, params object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCells(class System.Windows.Forms.DataGridView dataGridView, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.CreateCells(System.Windows.Forms.DataGridView,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridView" Type="System.Windows.Forms.DataGridView" />
+        <Parameter Name="values" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="dataGridView">Ein <see cref="T:System.Windows.Forms.DataGridView" /> , die als Vorlage für Zellstile fungiert.</param>
+        <param name="values">Ein Array von Objekten, die das Zurücksetzen der Zellen zu initialisieren.</param>
+        <summary>Löscht die vorhandenen Zellen und legt ihre Vorlage sowie ihre Werte fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löscht der Zeile <xref:System.Windows.Forms.DataGridViewCellCollection> und initialisiert sie mit der <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> Eigenschaft für jede Spalte von der `dataGridView` Parameter. Deshalb nimmt die Zeile für das Aussehen und Verhalten einer Zeile aus der `dataGridView` Parameter.  
+  
+ Wenn es weitere Elemente in der `values` Array als Zellen initialisiert werden, zusätzliche Elemente werden ignoriert. Wenn weniger Elemente als erforderlich vorhanden sind, werden die verbleibenden Zellen ohne Entsprechung anfänglichen Standardwerte beibehalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Entweder der Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Eine Zeile, die bereits zu gehört die <see cref="T:System.Windows.Forms.DataGridView" /> hinzugefügt wurde.  
+  
+ - oder -   
+  
+ Eine Spalte, die keine Zellvorlage besitzt, wurde hinzugefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCellsInstance">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.DataGridViewCellCollection CreateCellsInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Forms.DataGridViewCellCollection CreateCellsInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.CreateCellsInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt anhand dieser Zeile eine neue Auflistung von Zellen.</summary>
+        <returns>Der neu erstellte <see cref="T:System.Windows.Forms.DataGridViewCellCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt ein leeres <xref:System.Windows.Forms.DataGridViewCellCollection> mit der <xref:System.Windows.Forms.BaseCollection.Count%2A> -Eigenschaft auf 0 festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen sollten in der Regel ihre eigene Version der implementieren die <see cref="M:System.Windows.Forms.DataGridViewRow.CreateCellsInstance" /> Methode, und nicht rufen die Basisklassenversion.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBoundItem">
+      <MemberSignature Language="C#" Value="public object DataBoundItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataBoundItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.DataBoundItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das datengebundene Objekt ab, mit dem die Zeile aufgefüllt wurde.</summary>
+        <value>Der datengebundenen <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriff auf Daten gebundene Objekte direkt über Zeilenobjekte sind hilfreich, wenn Sie nicht über direkten Zugriff auf die Datenquelle mit den Objekten verfügen. Es ist auch sinnvoll, beim Bearbeiten von Objekten, die gebunden werden, auf die ausgewählten Zeilen oder Zeilen, die als Argumente an den Ereignishandler übergeben werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A> ein Geschäftsobjekt aufzurufende Eigenschaft gebunden, um eine Zeile. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Vorgehensweise: Zugriff auf Objekte zu Windows Forms-DataGridView-Zeilen gebundene](~/docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/VB/datagridviewobjectbinding.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCellStyle">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.DefaultCellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Stile für die Zeile, die verwendet werden, um Zellen in der Zeile zu rendern, es sei denn, die Stile überschrieben werden.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />, das als Standardformat übernommen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement zeigt seine Zellen mithilfe der Stile an, die von der Zelle angegeben <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> -Eigenschaft, die Stile aus anderen Eigenschaften vom Typ erbt <xref:System.Windows.Forms.DataGridViewCellStyle>. Für Zellen in dieser Zeile, die Stile angegeben, über die <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A> Eigenschaft überschreiben die Stile, die über die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>, und <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaften, jedoch außer Kraft gesetzt werden, indem die Stile, die über die <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Weitere Informationen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+ Beim Abrufen dieser Eigenschaft eine <xref:System.Windows.Forms.DataGridViewCellStyle> Standardwert erstellt, wenn die Eigenschaft noch nicht zugegriffen wurde. Dies kann Auswirkungen auf die Leistung führen, wenn diese Eigenschaft für viele Zeilen abgerufen. Verwenden Sie nach Möglichkeit ein einzelnes <xref:System.Windows.Forms.DataGridViewCellStyle> zum Festlegen dieser Eigenschaft für mehrere Zeilen. Weitere Informationen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie diese Eigenschaft in einem <xref:System.Windows.Forms.DataGridView> Steuerelement soll in erster Linie für die Anzeige. In diesem Beispiel wird die visuelle Darstellung des Steuerelements auf unterschiedliche Weise angepasst und das Steuerelement für eingeschränkte Interaktivität konfiguriert ist. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewCellStyle> -Klassenübersicht.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft wird die Zeile einer <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Displayed">
+      <MemberSignature Language="C#" Value="public override bool Displayed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Displayed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.Displayed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob diese Zeile auf dem Bildschirm angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile derzeit auf dem Bildschirm angezeigt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DividerHeight">
+      <MemberSignature Language="C#" Value="public int DividerHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DividerHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.DividerHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe des Zeilenunterteilers in Pixel ab oder legt diese fest.</summary>
+        <value>Die Höhe in Pixel des Unterteilers (die Zeile der untere Rand).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich zum Bereitstellen einer visual Begrenzung zwischen fixierten Zeilen und Zeilen, die gescrollt werden können. Der zusätzliche Rand ist Teil der aktuellen Zeile, obwohl die Vordergrundfarbe der zugeordneten dauert <xref:System.Windows.Forms.DataGridView>. Der zusätzliche Rand erstreckt sich nicht auf den Bereich, in dem Benutzer doppelklicken können, um automatisch eine Zeile ändern, aus. Zum Ändern der Größe einer Zeile muss der Benutzer auf die Grenze zwischen den Unterteiler und angrenzende Zeilen-doppelklicken.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Höhe des zeilenunterteilers zum Hervorheben geändert.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#210](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#210)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#210](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#210)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#210](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#210)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft wird die Zeile einer <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawFocus">
+      <MemberSignature Language="C#" Value="protected virtual void DrawFocus (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle bounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates rowState, System.Windows.Forms.DataGridViewCellStyle cellStyle, bool cellsPaintSelectionBackground);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void DrawFocus(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle bounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates rowState, class System.Windows.Forms.DataGridViewCellStyle cellStyle, bool cellsPaintSelectionBackground) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.DrawFocus(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Windows.Forms.DataGridViewCellStyle,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="cellsPaintSelectionBackground" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen verwendet die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</param>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" />, das die Fläche der zu zeichnenden <see cref="T:System.Windows.Forms.DataGridView" /> darstellt.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des enthält die <see cref="T:System.Windows.Forms.DataGridViewRow" /> , die gezeichnet wird.</param>
+        <param name="rowIndex">Der Zeilenindex der gezeichneten Zelle.</param>
+        <param name="rowState">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zeile angibt.</param>
+        <param name="cellStyle">Die <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> zum Zeichnen des Fokusrechtecks verwendet wird.</param>
+        <param name="cellsPaintSelectionBackground">
+          <see langword="true" />Verwenden der <see cref="P:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor" /> Eigenschaft <c>CellStyle</c> als die Farbe des Fokusrechtecks; <see langword="false" /> verwenden die <see cref="P:System.Windows.Forms.DataGridViewCellStyle.BackColor" /> Eigenschaft <c>CellStyle</c> als die Farbe des Fokusrechtecks.</param>
+        <summary>Zeichnet ein Fokusrechteck um die angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `rowIndex` Parameter wird nicht verwendet, in der Implementierung der Basisklasse der der <xref:System.Windows.Forms.DataGridViewRow.DrawFocus%2A> -Methode, obwohl er verwendet werden kann, wenn diese Methode in einer abgeleiteten Klasse außer Kraft gesetzt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wurde nicht hinzugefügt wurde, auf eine <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="graphics" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="cellStyle" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehlermeldungstext für Fehler auf Zeilenebene ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die Fehlermeldung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um eine Fehlermeldung auf Zeilenebene Fehler bereitzustellen. Die angegebene Meldung wird in einer QuickInfo angezeigt, wenn der Benutzer den Mauszeiger auf das Symbol "Fehler" angezeigt, in die Zeilenüberschrift richtet.  
+  
+ Beginnend mit .NET Framework 4.5.2, ist das Symbol "Fehler" gemäß der System-DPI-Einstellung Größe geändert, wenn die Datei "App.config" den folgenden Eintrag enthält:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+  
+```  
+  
+ Wenn diese Zeile verknüpft ist ein <xref:System.Windows.Forms.DataGridView> -Steuerelement, das Festlegen dieser Eigenschaft löst die <xref:System.Windows.Forms.DataGridView.RowErrorTextChanged> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> Eigenschaft in einer <xref:System.Windows.Forms.DataGridView.DataError> -Ereignishandler. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#50)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#50)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Abrufen des Werts dieser Eigenschaft ist die Zeile eine freigegebene Zeile in einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Frozen">
+      <MemberSignature Language="C#" Value="public override bool Frozen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Frozen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.Frozen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zeile fixiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile eingefroren ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie die halten eine oder mehrere Zeilen mit wichtigen Informationen vorhanden, wenn ein Benutzer einen Bildlauf der <xref:System.Windows.Forms.DataGridView>. Alle Zeilen über die fixierte Zeile werden ebenfalls fixiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewBand.Frozen%2A?displayProperty=nameWithType> Eigenschaft, die nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewRow.Frozen%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewRow> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewBand> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#7)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#7)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextMenuStrip">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenuStrip GetContextMenuStrip (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ContextMenuStrip GetContextMenuStrip(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der aktuellen Zeile.</param>
+        <summary>Ruft das Kontextmenü für die Zeile ab.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.ContextMenuStrip" /> , gehört zu den <see cref="T:System.Windows.Forms.DataGridViewRow" /> am angegebenen Index.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben Sie die <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> Methode der Indexer, die Sie zum Abrufen der <xref:System.Windows.Forms.DataGridViewRow>. Verwenden Sie nicht die <xref:System.Windows.Forms.DataGridViewBand.Index%2A> -Eigenschaft für die `rowIndex` Parameter. Wenn die Zeile freigegeben ist, <xref:System.Windows.Forms.DataGridViewBand.Index%2A> ist-1 und kein gültiger Wert ist für `rowIndex`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rowIndex" />ist-1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="rowIndex" />ist kleiner als 0 (null) oder größer als oder gleich der Anzahl der Zeilen im Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorText">
+      <MemberSignature Language="C#" Value="public string GetErrorText (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetErrorText(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.GetErrorText(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile, die den Fehler enthält.</param>
+        <summary>Ruft den Fehlertext für die Zeile am angegebenen Index ab.</summary>
+        <returns>Eine Zeichenfolge, die den Fehler der Zeile am angegebenen Index beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben Sie die <xref:System.Windows.Forms.DataGridViewRow.GetErrorText%2A> Methode den Index, die Sie zum Abrufen der <xref:System.Windows.Forms.DataGridViewRow>. Verwenden Sie nicht die <xref:System.Windows.Forms.DataGridViewBand.Index%2A> -Eigenschaft für die `rowIndex` Parameter. Wenn die Zeile freigegeben ist, <xref:System.Windows.Forms.DataGridViewBand.Index%2A> ist-1 und kein gültiger Wert ist für `rowIndex`. Weitere Informationen zum Freigeben von Zeilen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile gehört zu einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Zeile gehört zu einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement und <paramref name="rowIndex" /> ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen im Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredHeight">
+      <MemberSignature Language="C#" Value="public virtual int GetPreferredHeight (int rowIndex, System.Windows.Forms.DataGridViewAutoSizeRowMode autoSizeRowMode, bool fixedWidth);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetPreferredHeight(int32 rowIndex, valuetype System.Windows.Forms.DataGridViewAutoSizeRowMode autoSizeRowMode, bool fixedWidth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.GetPreferredHeight(System.Int32,System.Windows.Forms.DataGridViewAutoSizeRowMode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="autoSizeRowMode" Type="System.Windows.Forms.DataGridViewAutoSizeRowMode" />
+        <Parameter Name="fixedWidth" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile, deren bevorzugte Höhe berechnet wird.</param>
+        <param name="autoSizeRowMode">Ein <see cref="T:System.Windows.Forms.DataGridViewAutoSizeRowMode" /> , der einen Modus der automatischen Größenänderung angibt.</param>
+        <param name="fixedWidth">
+          <see langword="true" />um die bevorzugte Höhe für eine feste Breite zu berechnen; andernfalls <see langword="false" />.</param>
+        <summary>Berechnet die optimale Höhe der angegebenen Zeile anhand der angegebenen Kriterien.</summary>
+        <returns>Die optimale Höhe der Zeile in Pixel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, durch die automatische größenanpassung inhaltsbasierten-Funktion von der <xref:System.Windows.Forms.DataGridView> Steuerelement, um die optimale Höhe einer Zeile zu bestimmen. Die `rowIndex` Wert ermöglicht die Angabe den tatsächlichen Zeilenindex der eine freigegebene Zeile. (Freigegebene Zeilen haben <xref:System.Windows.Forms.DataGridViewBand.Index%2A> Eigenschaftswerte "-1".)  
+  
+ Ein `fixedWidth` -Parameterwert `false` berechnet die Höhe der Zeilen basierend auf berechnete Spaltenbreite, die ideale Höhe und Breite Verhältnis Zelle erreicht werden.  
+  
+ Für den Inhalt der Zelle in mehrere Zeilen umbrochen werden soll, müssen der Zellenstil für die Zelle ein <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewTriState.True>.  
+  
+ Weitere Informationen zur automatischen Größenänderung finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A> Methode, um die neue Auffüllung für eine Zeile zu bestimmen, die Größe geändert wurde. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="autoSizeRowMode" /> ist kein gültiger <see cref="T:System.Windows.Forms.DataGridViewAutoSizeRowMode" />-Wert.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="rowIndex" /> befindet sich nicht im gültigen Bereich von 0 bis zur Anzahl der Zeilen im Steuerelement minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetState">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewElementStates GetState (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.DataGridViewElementStates GetState(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.GetState(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewElementStates</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile.</param>
+        <summary>Gibt einen Wert zurück, der den aktuellen Zustand der Zeile angibt.</summary>
+        <returns>Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Zeilenstatus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nützlich zum Ermitteln des Status von eine freigegebene Zeile. Freigegebene Zeilen haben <xref:System.Windows.Forms.DataGridViewBand.Index%2A> Werte-1 verwendet, die Sie verhindert, dass die <xref:System.Windows.Forms.DataGridViewRow.State%2A> Eigenschaft mit dem freigegebene Zeilen. Übergeben Sie zur Verwendung dieser Methode die tatsächliche Zeilenindex. Sie können den tatsächlichen Index eine freigegebene Zeile abrufen, durch Aufrufen der <xref:System.Windows.Forms.DataGridViewRowCollection.IndexOf%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Zeile hinzugefügt wurde eine <see cref="T:System.Windows.Forms.DataGridView" /> -Steuerelement, aber die <paramref name="rowIndex" /> Wert ist nicht im gültigen Bereich von 0 bis zur Anzahl der Zeilen im Steuerelement minus 1.</exception>
+        <exception cref="T:System.ArgumentException">Die Zeile ist nicht als eine freigegebene Zeile, aber die <paramref name="rowIndex" /> Wert entspricht nicht der Zeile <see cref="P:System.Windows.Forms.DataGridViewBand.Index" /> Eigenschaftswert.  
+  
+ - oder -   
+  
+ Wurde die Zeile nicht hinzugefügt wurde eine <see cref="T:System.Windows.Forms.DataGridView" /> -Steuerelement, aber die <paramref name="rowIndex" /> Wert entspricht nicht der Zeile <see cref="P:System.Windows.Forms.DataGridViewBand.Index" /> Eigenschaftswert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderCell">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewRowHeaderCell HeaderCell { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewRowHeaderCell HeaderCell" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.HeaderCell" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewRowHeaderCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Headerzelle der Zeile ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" /> , die die Headerzelle der Zeile darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Headerzelle der Zeile wird normalerweise verwendet, um zeilenbezeichnung anzuzeigen. Benutzer können auch klicken, um die Zeile auszuwählen, wenn die Zeilenüberschrift der <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewRow.HeaderCell%2A> Eigenschaft Bezeichnung Zeilenheader.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#209)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#209)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#209)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(22)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Höhe der Zeile ab oder legt diese fest.</summary>
+        <value>Die Höhe der Zeile in Pixel. Der Standardwert wird aus der Höhe der Standardschriftart plus 9 Pixel berechnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die Mindesthöhe einer Zeile festzulegen, verwenden die <xref:System.Windows.Forms.DataGridViewRow.MinimumHeight%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewRow.Height%2A> Eigenschaft, um die Höhe der ersten Zeile festzulegen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich im [Vorgehensweise: Bearbeiten von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#208](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#208)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#208](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#208)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#208](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#208)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft wird die Zeile einer <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritedStyle">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCellStyle InheritedStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle InheritedStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.InheritedStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den für die Zeile gültigen Zellstil ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , der formatierungs- und Formatinformationen Informationen für die Zellen in der Zeile angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, um zu bestimmen, welche Zellstile auf alle Zellen in einer Zeile unabhängig von der Spaltenformate angewendet werden, die auch auf die Zellen angewendet werden. Die Zeile <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> -Eigenschaft erbt seine Werte aus den folgenden Eigenschaften:  
+  
+-   <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(für Zeilen mit ungerader Indexnummer)  
+  
+-   <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+  
+ Weitere Informationen zur Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewRow">
+      <MemberSignature Language="C#" Value="public bool IsNewRow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNewRow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.IsNewRow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Zeile die Zeile für neue Datensätze darstellt.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile die letzte Zeile in der <see cref="T:System.Windows.Forms.DataGridView" />, die für die Eingabe eine neue Zeile mit Daten verwendet, andernfalls wird <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die Zeile für neue Datensätze wird die <xref:System.Windows.Forms.DataGridView.Rows%2A> Sammlung, Nutzung der <xref:System.Windows.Forms.DataGridViewRow.IsNewRow%2A> Eigenschaft, um zu bestimmen, ob eine Zeile die Zeile für neue Datensätze ist oder eine aufgefüllte Zeile ist.  
+  
+ Eine Zeile wird beendet, die neue Zeile, die bei der Eingabe von Daten in der Zeile beginnt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewRow.IsNewRow%2A> möchte, dass die Eigenschaft, um zu verhindern, dass die Bezeichnung der Zeile für neue Datensätze festgelegt.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#209)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#209)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#209](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#209)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumHeight">
+      <MemberSignature Language="C#" Value="public int MinimumHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.MinimumHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mindesthöhe der Zeile ab oder legt diese fest.</summary>
+        <value>Die minimale Zeilenhöhe in Pixel, zwischen 2 und <see cref="F:System.Int32.MaxValue" />. Der Standard ist 3.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewRow.MinimumHeight%2A> Eigenschaft verwaltet die Anzeige der Zeile durch Festlegen einer Beschränkung, wie weit der Benutzer die Höhe der Zeile über die Benutzeroberfläche (UI) ändern kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridViewRow.MinimumHeight%2A> Eigenschaft, um die Mindesthöhe der zweiten Zeile festzulegen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich im [Vorgehensweise: Bearbeiten von Zeilen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#207](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#207)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#207](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#207)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#207](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#207)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft wird die Zeile einer <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Beim Festlegen dieser Eigenschaft angegebene Wert ist kleiner als 2.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected virtual void Paint (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle rowBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates rowState, bool isFirstDisplayedRow, bool isLastVisibleRow);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Paint(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle rowBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates rowState, bool isFirstDisplayedRow, bool isLastVisibleRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="isFirstDisplayedRow" Type="System.Boolean" />
+        <Parameter Name="isLastVisibleRow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen verwendet die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</param>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" />, das die Fläche der zu zeichnenden <see cref="T:System.Windows.Forms.DataGridView" /> darstellt.</param>
+        <param name="rowBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des enthält die <see cref="T:System.Windows.Forms.DataGridViewRow" /> , die gezeichnet wird.</param>
+        <param name="rowIndex">Der Zeilenindex der gezeichneten Zelle.</param>
+        <param name="rowState">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zeile angibt.</param>
+        <param name="isFirstDisplayedRow">
+          <see langword="true" />um anzugeben, ob die aktuelle Zeile der ersten Zeile angezeigt wird der <see cref="T:System.Windows.Forms.DataGridView" />ist, andernfalls <see langword="false" />.</param>
+        <param name="isLastVisibleRow">
+          <see langword="true" />um anzugeben, ob die aktuelle Zeile die letzte Zeile in der <see cref="T:System.Windows.Forms.DataGridView" /> , besitzt die <see cref="P:System.Windows.Forms.DataGridViewRow.Visible" /> -Eigenschaftensatz auf <see langword="true" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet die aktuelle Zeile.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ruft diese Methode, um die Zeile zu zeichnen.  
+  
+ Löst beim Aufrufen dieser Methode die <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis. Wenn ein Ereignishandler für das Ereignis nicht festgelegt ist die <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> Eigenschaft, um `true`, auch diese Methode ruft die <xref:System.Windows.Forms.DataGridViewRow.PaintHeader%2A> und <xref:System.Windows.Forms.DataGridViewRow.PaintCells%2A> Methoden und löst die <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wurde nicht hinzugefügt wurde, auf eine <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.  
+  
+ - oder -   
+  
+ Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement und <paramref name="rowIndex" /> ist kleiner als 0 (null) oder größer als die Anzahl der Zeilen im Steuerelement minus eins.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintCells">
+      <MemberSignature Language="C#" Value="protected virtual void PaintCells (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle rowBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates rowState, bool isFirstDisplayedRow, bool isLastVisibleRow, System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void PaintCells(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle rowBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates rowState, bool isFirstDisplayedRow, bool isLastVisibleRow, valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.PaintCells(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Boolean,System.Boolean,System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="isFirstDisplayedRow" Type="System.Boolean" />
+        <Parameter Name="isLastVisibleRow" Type="System.Boolean" />
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen verwendet die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</param>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" />, das die Fläche der zu zeichnenden <see cref="T:System.Windows.Forms.DataGridView" /> darstellt.</param>
+        <param name="rowBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des enthält die <see cref="T:System.Windows.Forms.DataGridViewRow" /> , die gezeichnet wird.</param>
+        <param name="rowIndex">Der Zeilenindex der gezeichneten Zelle.</param>
+        <param name="rowState">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zeile angibt.</param>
+        <param name="isFirstDisplayedRow">
+          <see langword="true" />um anzugeben, ob die aktuelle Zeile der ersten Zeile angezeigt wird der <see cref="T:System.Windows.Forms.DataGridView" />ist, andernfalls <see langword="false" />.</param>
+        <param name="isLastVisibleRow">
+          <see langword="true" />um anzugeben, ob die aktuelle Zeile die letzte Zeile in der <see cref="T:System.Windows.Forms.DataGridView" /> , besitzt die <see cref="P:System.Windows.Forms.DataGridViewRow.Visible" /> -Eigenschaftensatz auf <see langword="true" />ist, andernfalls <see langword="false" />.</param>
+        <param name="paintParts">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte, der angibt, die Teile der Zellen gezeichnet.</param>
+        <summary>Zeichnet die Zellen in der aktuellen Zeile.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ruft diese Methode, um die Zellen in der Zeile mit Ausnahme von zeichnen, einen Handler für das <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis legt die <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> Eigenschaft `true`. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataGridViewRow.Paint%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wurde nicht hinzugefügt wurde, auf eine <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="paintParts" />in der keine gültige bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintHeader">
+      <MemberSignature Language="C#" Value="protected virtual void PaintHeader (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle rowBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates rowState, bool isFirstDisplayedRow, bool isLastVisibleRow, System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void PaintHeader(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle rowBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates rowState, bool isFirstDisplayedRow, bool isLastVisibleRow, valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.PaintHeader(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Boolean,System.Boolean,System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="isFirstDisplayedRow" Type="System.Boolean" />
+        <Parameter Name="isLastVisibleRow" Type="System.Boolean" />
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen verwendet die <see cref="T:System.Windows.Forms.DataGridViewRow" />.</param>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" />, das die Fläche der zu zeichnenden <see cref="T:System.Windows.Forms.DataGridView" /> darstellt.</param>
+        <param name="rowBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des enthält die <see cref="T:System.Windows.Forms.DataGridViewRow" /> , die gezeichnet wird.</param>
+        <param name="rowIndex">Der Zeilenindex der gezeichneten Zelle.</param>
+        <param name="rowState">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zeile angibt.</param>
+        <param name="isFirstDisplayedRow">
+          <see langword="true" />um anzugeben, dass die aktuelle Zeile der ersten Zeile angezeigt, der <see cref="T:System.Windows.Forms.DataGridView" />ist, andernfalls <see langword="false" />.</param>
+        <param name="isLastVisibleRow">
+          <see langword="true" />um anzugeben, dass die aktuelle Zeile die letzte Zeile in der <see cref="T:System.Windows.Forms.DataGridView" /> , besitzt die <see cref="P:System.Windows.Forms.DataGridViewRow.Visible" /> -Eigenschaftensatz auf <see langword="true" />ist, andernfalls <see langword="false" />.</param>
+        <param name="paintParts">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte, der angibt, die Teile der Zellen gezeichnet.</param>
+        <summary>Zeichnet die Headerzelle der aktuellen Zeile.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ruft diese Methode, um die Zeilenüberschrift außer zeichnen, einen Handler für die <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis legt die <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> Eigenschaft `true`. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataGridViewRow.Paint%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wurde nicht hinzugefügt wurde, auf eine <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="paintParts" />in der keine gültige bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public override bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Zeile schreibgeschützt ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewRow.ReadOnly%2A> Eigenschaft wirkt sich auf die <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A?displayProperty=nameWithType> -Eigenschaft jeder Zelle in der Zeile.  
+  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkung, wenn der Wert der <xref:System.Windows.Forms.DataGridView.ReadOnly%2A?displayProperty=nameWithType> Eigenschaft ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewBand.ReadOnly%2A?displayProperty=nameWithType> Eigenschaft, die nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewRow.ReadOnly%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewRow> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewBand> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#11)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#11)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resizable">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewTriState Resizable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewTriState Resizable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.Resizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Größe der Zeile geändert werden kann, oder gibt an, dass das Verhalten von geerbt wird die <see cref="P:System.Windows.Forms.DataGridView.AllowUserToResizeRows" /> Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewTriState" /> Wert, der angibt, ob die Zeile geändert werden kann, oder gibt an, ob sie geändert werden, kann nur dann, wenn die <see cref="P:System.Windows.Forms.DataGridView.AllowUserToResizeRows" /> -Eigenschaftensatz auf <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht für eine freigegebene Zeile verwenden werden. Weitere Informationen zu freigegebenen Zeilen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Wenn die <xref:System.Windows.Forms.DataGridViewRow.Resizable%2A> Eigenschaft ist <xref:System.Windows.Forms.DataGridViewTriState.False>, der Benutzer wird nicht in der Lage, die Zeilenhöhe manuell anpassen.  
+  
+ Wird standardmäßig die <xref:System.Windows.Forms.DataGridViewRow.Resizable%2A> Eigenschaftswert basiert auf der <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType> Eigenschaftswert. Wenn Sie explizit festlegen, <xref:System.Windows.Forms.DataGridViewRow.Resizable%2A> auf <xref:System.Windows.Forms.DataGridViewTriState.True> oder <xref:System.Windows.Forms.DataGridViewTriState.False>, die Control-Wert wird jedoch ignoriert. Legen Sie <xref:System.Windows.Forms.DataGridViewRow.Resizable%2A> zu <xref:System.Windows.Forms.DataGridViewTriState.NotSet> um das Verhalten der Vererbung von Eigenschaftenwerten wiederherzustellen.  
+  
+ Da <xref:System.Windows.Forms.DataGridViewTriState.NotSet> Vererbung wiederhergestellt wird der Wert, der <xref:System.Windows.Forms.DataGridViewRow.Resizable%2A> Eigenschaft wird nie zurückgegeben. ein <xref:System.Windows.Forms.DataGridViewTriState.NotSet> Wert, es sei denn, die Zeile nicht hinzugefügt wurde eine <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn Sie benötigen, um zu bestimmen, ob die <xref:System.Windows.Forms.DataGridViewRow.Resizable%2A> Eigenschaftswert einer Zeile wird geerbt oder explizit angegeben wurde Überprüfen seiner <xref:System.Windows.Forms.DataGridViewElement.State%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.DataGridViewElement.State%2A> Wert umfasst die <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> Flag, das <xref:System.Windows.Forms.DataGridViewRow.Resizable%2A> Eigenschaftswert nicht geerbt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.MouseBasedResizing#15](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/CPP/mousesizing.cpp#15)]
+ [!code-csharp[System.Windows.Forms.DataGridView.MouseBasedResizing#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/CS/mousesizing.cs#15)]
+ [!code-vb[System.Windows.Forms.DataGridView.MouseBasedResizing#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/VB/mousesizing.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public override bool Selected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.Selected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zeile ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Zeile ausgewählt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht für eine freigegebene Zeile verwenden werden. Weitere Informationen zu freigegebenen Zeilen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#05](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#05)]
+ [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#05](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#05)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValues">
+      <MemberSignature Language="C#" Value="public bool SetValues (params object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.SetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Objekt oder mehrere Objekte, die die Zellwerte in der Zeile darstellen.  
+  
+ - oder -   
+  
+ Ein <see cref="T:System.Array" /> von <see cref="T:System.Object" /> Werte.</param>
+        <summary>Legt die Werte für die Zellen der Zeile fest.</summary>
+        <returns>
+          <see langword="true" />Wenn alle Werte festgelegt wurden; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `values` Parameter darstellt, eine Variable Anzahl von Argumenten verwendet, um Werte von Zellen in der Zeile zu füllen. Diese Werte können an diese Methode übergeben werden, als mehrere einzelne Argumente oder als Member einer einzelnen <xref:System.Array>. Da die Werte erwartet werden Instanzen des Typs <xref:System.Object>, jedoch wenn Sie ein Array von Werten Werttyp übergeben (z. B. <xref:System.Int32> Werte), dieser Methode das Array als ein einzelnes Objekt behandelt und weisen sie zu einer einzelnen Zelle. Um dieses Verhalten zu vermeiden, müssen Sie eine Umwandlung einem Werttyp-Array ein <xref:System.Object> array oder mehrere Werte als mehrere Argumente übergeben.  
+  
+ Wenn Sie weitere Werte in der `values` Liste als zu initialisierenden Zellen vorhanden sind, wird diese Methode ignoriert die zusätzlichen Werte und gibt `false`. Diese Methode gibt auch zurück `false` Wenn einer der angegebenen Werte festgelegt werden kann.  
+  
+ Treten weniger Werte als Zellen vorhanden sind, behalten die verbleibenden Zellen ohne Entsprechung ihre aktuellen Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wird aufgerufen, wenn die zugeordnete <see cref="T:System.Windows.Forms.DataGridView" /> im virtuellen Modus betrieben wird.  
+  
+ - oder -   
+  
+ Diese Zeile ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewElementStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewElementStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewElementStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand der Zeile ab.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Zeilenstatus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft nicht mit freigegebene Zeilen verwenden, da freigegebene Zeilen keine Zustand lokal zu speichern. Um den Status einer freigegebenen Zeile abzurufen, verwenden Sie die <xref:System.Windows.Forms.DataGridViewRow.GetState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRow.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Klartextzeichenfolge ab, die die Zeile beschreibt.</summary>
+        <returns>Ein <see cref="T:System.String" /> , diese Zeile beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese überschriebene Version der der <xref:System.Windows.Forms.DataGridViewRow.ToString%2A> Methode stellt der Name der Klasse und die <xref:System.Windows.Forms.DataGridViewBand.Index%2A> Informationen für diese Instanz die <xref:System.Windows.Forms.DataGridViewRow> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRow.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zeile sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe dieser Eigenschaft blenden eine Zeile aus der Ansicht der zeilenupdates der <xref:System.Windows.Forms.DataGridView>. Um eine Zeile vollständig zu entfernen, verwenden Sie die <xref:System.Windows.Forms.DataGridViewRowCollection.Remove%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewBand.Visible%2A?displayProperty=nameWithType> Eigenschaft, die nahezu identisch mit der <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewRow> Klasse. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewBand> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#9)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#9)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Zeile wird einem <see cref="T:System.Windows.Forms.DataGridView" /> steuern und ist eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

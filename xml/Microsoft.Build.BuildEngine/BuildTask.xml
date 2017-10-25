@@ -1,0 +1,274 @@
+<Type Name="BuildTask" FullName="Microsoft.Build.BuildEngine.BuildTask">
+  <TypeSignature Language="C#" Value="public class BuildTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildTask extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.BuildTask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine [Aufgabe](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) Element in einem Projekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddOutputItem">
+      <MemberSignature Language="C#" Value="public void AddOutputItem (string taskParameter, string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOutputItem(string taskParameter, string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildTask.AddOutputItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskParameter" Type="System.String" />
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskParameter">Der Wert des <see langword="TaskParameter" />-Attributs des <see langword="Output" />-Elements.</param>
+        <param name="itemName">Der Wert des <see langword="ItemName" />-Attributs des <see langword="Output" />-Elements.</param>
+        <summary>Fügt eine [Ausgabe](http://msdn.microsoft.com/library/34bc7cd1-efd3-4b57-b691-4584eeb6a0e9) Element mit dem angegebenen <c>TaskParameter</c> und <c>ItemName</c> -Attribute verwenden, um die [Aufgabe](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOutputProperty">
+      <MemberSignature Language="C#" Value="public void AddOutputProperty (string taskParameter, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOutputProperty(string taskParameter, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildTask.AddOutputProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskParameter" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskParameter">Der Wert des <see langword="TaskParameter" />-Attributs des <see langword="Output" />-Elements.</param>
+        <param name="propertyName">Der Wert des <see langword="PropertyName" />-Attributs des <see langword="Output" />-Elements.</param>
+        <summary>Fügt eine [Ausgabe](http://msdn.microsoft.com/library/34bc7cd1-efd3-4b57-b691-4584eeb6a0e9) Element mit dem angegebenen <c>TaskParameter</c> und <c>PropertyName</c> -Attribute verwenden, um die [Aufgabe](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildTask.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <c>Bedingung</c> -Attributwert der [Aufgabe](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) Element.</summary>
+        <value>Die <c>Bedingung</c> -Attributwert der <c>Aufgabe</c> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnError">
+      <MemberSignature Language="C#" Value="public bool ContinueOnError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContinueOnError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildTask.ContinueOnError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <c>ContinueOnError</c> -Attributwert der [Aufgabe](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) Element.</summary>
+        <value>Die <c>ContinueOnError</c> -Attributwert der <c>Aufgabe</c> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildTask.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Aufgabe dargestellt, die von diesem <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn die Methode erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterNames">
+      <MemberSignature Language="C#" Value="public string[] GetParameterNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetParameterNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildTask.GetParameterNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array mit den Namen der Parameter an die Aufgabe übergeben.</summary>
+        <returns>Ein Array mit den Parameternamen, die an die Aufgabe übergeben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Array schließt die `Condition` und `ContinueOnError` Parameter.  
+  
+ Wenn keine Parameter an die Aufgabe übergeben werden, gibt diese Methode ein leeres Array zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterValue">
+      <MemberSignature Language="C#" Value="public string GetParameterValue (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetParameterValue(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildTask.GetParameterValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">Der Name des Parameters.</param>
+        <summary>Ruft den Wert der angegebenen Aufgabenparameter ab.</summary>
+        <returns>Der Wert des angegebenen Aufgabenparameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskHost HostObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskHost HostObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildTask.HostObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hostobjekt ab oder legt dieses fest, das der Aufgabe zugeordnet ist.</summary>
+        <value>Das Hostobjekt, das der Aufgabe zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildTask.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Tasknamen an.</summary>
+        <value>Name der Aufgabe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameterValue">
+      <MemberSignature Language="C#" Value="public void SetParameterValue (string parameterName, string parameterValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameterValue(string parameterName, string parameterValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildTask.SetParameterValue(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="parameterValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters festgelegt.</param>
+        <param name="parameterValue">Der zuzuweisende Wert <c>ParameterName</c>.</param>
+        <summary>Legt den Wert der angegebenen Aufgabenparameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameterValue">
+      <MemberSignature Language="C#" Value="public void SetParameterValue (string parameterName, string parameterValue, bool treatParameterValueAsLiteral);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameterValue(string parameterName, string parameterValue, bool treatParameterValueAsLiteral) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildTask.SetParameterValue(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="parameterValue" Type="System.String" />
+        <Parameter Name="treatParameterValueAsLiteral" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters festgelegt.</param>
+        <param name="parameterValue">Der zuzuweisende Wert <c>ParameterName</c>.</param>
+        <param name="treatParameterValueAsLiteral">
+          <see langword="true" />behandelt <c>%ParameterValue</c> als Literalwert; anderenfalls <see langword="false" />.</param>
+        <summary>Legt den Wert der angegebenen Aufgabenparameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildTask.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> der Klasse, die die Aufgabe implementiert.</summary>
+        <value>Die <see cref="T:System.Type" /> der Klasse, die die Aufgabe implementiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

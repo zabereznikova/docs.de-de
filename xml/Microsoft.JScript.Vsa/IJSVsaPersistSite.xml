@@ -1,0 +1,75 @@
+<Type Name="IJSVsaPersistSite" FullName="Microsoft.JScript.Vsa.IJSVsaPersistSite">
+  <TypeSignature Language="C#" Value="public interface IJSVsaPersistSite" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IJSVsaPersistSite" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaPersistSite" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because it is being deprecated in Visual Studio 2005; there will be no replacement for this feature. Please see the ICodeCompiler documentation for additional help.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("F901A1FF-8EBA-4C38-B6E0-E7E52606D325")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwaltet die Projektdauerhaftigkeit und verwendet vom Host implementierte Lade- und Speicheroperationen, um Code und andere Elemente zu speichern und abzurufen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LoadElement">
+      <MemberSignature Language="C#" Value="public string LoadElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LoadElement(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Codeelements, das geladen werden soll. Beim Laden der Projektdatei kann dies ein NULL-Verweis sein.</param>
+        <summary>Ruft die zuvor mit der <see cref="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement(System.String,System.String)" />-Methode gespeicherte Quellzeichenfolge ab.</summary>
+        <returns>Gibt den Inhalt des dem Namensparameter zugeordneten Quellcodeelements zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveElement">
+      <MemberSignature Language="C#" Value="public void SaveElement (string name, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveElement(string name, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein Name, der dem angegebenen Quellelement zugeordnet werden soll. Beim Speichern der Projektdatei kann dies ein NULL-Verweis sein.</param>
+        <param name="source">Die Quellzeichenfolge für das Element.</param>
+        <summary>Speichert eine beliebige Quellzeichenfolge mit einem angegebenen Namensparameter, mit dem dann die <see cref="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement(System.String)" />-Methode zum erneuten Laden der Zeichenfolge aufgerufen werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

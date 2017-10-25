@@ -1,0 +1,1076 @@
+<Type Name="OleDbCommand" FullName="System.Data.OleDb.OleDbCommand">
+  <TypeSignature Language="C#" Value="public sealed class OleDbCommand : System.Data.Common.DbCommand, ICloneable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbCommand extends System.Data.Common.DbCommand implements class System.Data.IDbCommand, class System.ICloneable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbCommand</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("RecordsAffected")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VSDesigner.Data.VS.OleDbCommandDesigner, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine SQL-Anweisung oder eine gespeicherte Prozedur dar, die in einer Datenquelle ausgeführt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Instanz von <xref:System.Data.OleDb.OleDbCommand> erstellt wird, werden die Lese-/Schreibzugriff Eigenschaften werden auf ihre Ausgangswerte festgelegt. Eine Liste der folgenden Werte sind, finden Sie unter der <xref:System.Data.OleDb.OleDbCommand> Konstruktor.  
+  
+ <xref:System.Data.OleDb.OleDbCommand>enthält die folgenden Methoden Ausführen von Befehlen an einer Datenquelle:  
+  
+|Element|Beschreibung|  
+|----------|-----------------|  
+|<xref:System.Data.OleDb.OleDbCommand.ExecuteReader%2A>|Führt Befehle, die Zeilen zurückgeben. <xref:System.Data.OleDb.OleDbCommand.ExecuteReader%2A>möglicherweise nicht den gewünschten Effekt, wenn verwendet, um Befehle z. B. SQL SET-Anweisungen auszuführen.|  
+|<xref:System.Data.OleDb.OleDbCommand.ExecuteNonQuery%2A>|Führt Befehle wie z. B. SQL INSERT, DELETE, UPDATE und SET-Anweisungen.|  
+|<xref:System.Data.OleDb.OleDbCommand.ExecuteScalar%2A>|Ruft einen einzelnen Wert, z. B. einen Aggregatwert aus einer Datenbank ab.|  
+  
+ Setzen Sie zurück, die <xref:System.Data.OleDb.OleDbCommand.CommandText%2A> Eigenschaft und Wiederverwendung der <xref:System.Data.OleDb.OleDbCommand> Objekt. Sie müssen jedoch schließen die <xref:System.Data.OleDb.OleDbDataReader> bevor ein neuer oder vorherigen Befehl ausgeführt werden kann.  
+  
+ Wenn ein schwerwiegender <xref:System.Data.OleDb.OleDbException> (z. B. mit einem SQL Server-Schweregrad von 20 oder höher) wird von der Methode ausgeführten generiert eine <xref:System.Data.OleDb.OleDbCommand>, <xref:System.Data.OleDb.OleDbConnection>, die Verbindung kann geschlossen werden. Die Benutzer können die Verbindung aber erneut öffnen und fortfahren.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.OleDb.OleDbCommand>gemeinsam <xref:System.Data.OleDb.OleDbDataAdapter> und <xref:System.Data.OleDb.OleDbConnection>, um Zeilen aus einer Access-Datenbank auszuwählen. Die ausgefüllte <xref:System.Data.DataSet> wird zurückgegeben. Im Beispiel wird eine initialisierte übergeben <xref:System.Data.DataSet>, eine Verbindungszeichenfolge, eine Abfragezeichenfolge, die eine SQL SELECT-Anweisung und eine Zeichenfolge, die den Namen der Quelltabelle für die Datenbank ist.  
+  
+ [!code-csharp[Classic WebData OleDbCommand Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbCommand" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Basiskonstruktor initialisiert alle Felder mit ihren Standardwerten. In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Data.OleDb.OleDbCommand>.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandText%2A>|Leere Zeichenfolge ("")|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A>|30|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandType%2A>|`Text`|  
+|<xref:System.Data.OleDb.OleDbCommand.Connection%2A>|NULL|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.OleDbCommand Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.OleDbCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbCommand (string cmdText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string cmdText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cmdText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cmdText">Der Text der Abfrage.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbCommand" />-Klasse mit dem Text der Abfrage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Data.OleDb.OleDbCommand>.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandText%2A>|`cmdText`|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A>|30|  
+|<xref:System.Data.IDbCommand.CommandType%2A>|`Text`|  
+|<xref:System.Data.OleDb.OleDbCommand.Connection%2A>|NULL|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.OleDbCommand1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.OleDbCommand1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbCommand (string cmdText, System.Data.OleDb.OleDbConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string cmdText, class System.Data.OleDb.OleDbConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.#ctor(System.String,System.Data.OleDb.OleDbConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cmdText" Type="System.String" />
+        <Parameter Name="connection" Type="System.Data.OleDb.OleDbConnection" />
+      </Parameters>
+      <Docs>
+        <param name="cmdText">Der Text der Abfrage.</param>
+        <param name="connection">Eine <see cref="T:System.Data.OleDb.OleDbConnection" />, die die Verbindung mit einer Datenquelle darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbCommand" />-Klasse mit dem Text der Abfrage und einer <see cref="T:System.Data.OleDb.OleDbConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Data.OleDb.OleDbCommand>.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandText%2A>|`cmdText`|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A>|30|  
+|<xref:System.Data.IDbCommand.CommandType%2A>|`Text`|  
+|<xref:System.Data.OleDb.OleDbCommand.Connection%2A>|Ein neues <xref:System.Data.OleDb.OleDbConnection> , das der Wert für die `connection` Parameter.|  
+  
+ Sie können den Wert für einen der folgenden Parameter ändern, indem Sie die entsprechende Eigenschaft festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.OleDbCommand2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.OleDbCommand2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbCommand (string cmdText, System.Data.OleDb.OleDbConnection connection, System.Data.OleDb.OleDbTransaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string cmdText, class System.Data.OleDb.OleDbConnection connection, class System.Data.OleDb.OleDbTransaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.#ctor(System.String,System.Data.OleDb.OleDbConnection,System.Data.OleDb.OleDbTransaction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cmdText" Type="System.String" />
+        <Parameter Name="connection" Type="System.Data.OleDb.OleDbConnection" />
+        <Parameter Name="transaction" Type="System.Data.OleDb.OleDbTransaction" />
+      </Parameters>
+      <Docs>
+        <param name="cmdText">Der Text der Abfrage.</param>
+        <param name="connection">Eine <see cref="T:System.Data.OleDb.OleDbConnection" />, die die Verbindung mit einer Datenquelle darstellt.</param>
+        <param name="transaction">Die Transaktion, in der der <see cref="T:System.Data.OleDb.OleDbCommand" /> ausgeführt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbCommand" />-Klasse mit dem Text der Abfrage, einer <see cref="T:System.Data.OleDb.OleDbConnection" /> und der <see cref="P:System.Data.OleDb.OleDbCommand.Transaction" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Data.OleDb.OleDbCommand>.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandText%2A>|`cmdText`|  
+|<xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A>|30|  
+|<xref:System.Data.IDbCommand.CommandType%2A>|`Text`|  
+|<xref:System.Data.OleDb.OleDbCommand.Connection%2A>|Ein neues <xref:System.Data.OleDb.OleDbConnection> , das der Wert für die `connection` Parameter.|  
+  
+ Sie können den Wert für einen der folgenden Parameter ändern, indem Sie die entsprechende Eigenschaft festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.OleDbCommand3#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand3/CS/mysample.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.OleDbCommand3#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.OleDbCommand3/VB/mysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public override void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zum Abbrechen der Ausführung von versucht eine <see cref="T:System.Data.OleDb.OleDbCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Grundlage für einen Abbruch vorhanden ist, wird keine Aktion ausgeführt. Wenn jedoch das Abbrechen für einen aktuell ausgeführten Befehl fehlschlägt, wird keine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand>, führt sie aus, und klicken Sie dann die Ausführung abgebrochen. Um dies zu erreichen, wird die Methode übergeben, eine Zeichenfolge, die eine SQL SELECT-Anweisung ist und eine Zeichenfolge für die Verbindung mit der Datenquelle verwendet.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.Cancel Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Cancel Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.Cancel Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Cancel Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Data.OleDb.OleDbCommand" />-Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues <see cref="T:System.Data.OleDb.OleDbCommand" />-Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandText">
+      <MemberSignature Language="C#" Value="public override string CommandText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandText" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.CommandText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.ADO.Design.OleDbCommandTextEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die SQL-Anweisung oder gespeicherte Prozedur in der Datenquelle ausgeführt.</summary>
+        <value>Die SQL-Anweisung oder gespeicherte Prozedur, die ausgeführt werden soll. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> -Eigenschaftensatz auf `StoredProcedure`die <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> Eigenschaft sollte auf den Namen der gespeicherten Prozedur festgelegt werden. Der Benutzer möglicherweise erforderlich, um Escapezeichensyntax verwenden, wenn Sie den Namen der gespeicherten Prozedur keine Sonderzeichen enthält. Der Befehl führt diese gespeicherte Prozedur aus, wenn Sie eine der Aufrufen der `Execute` Methoden.  
+  
+ Wenn <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> festgelegt ist, um `TableDirect`, die <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> Eigenschaft sollte auf den Namen der Tabelle(n) festgelegt werden, auf die zugegriffen werden. Der Benutzer möglicherweise erforderlich, um Escapezeichensyntax verwenden, wenn eine der benannten Tabellen Sonderzeichen enthalten. Alle Zeilen und Spalten der benannten Tabelle(n) werden zurückgegeben werden, beim Aufrufen eines der `Execute` Methoden.  
+  
+ Kann nicht festgelegt werden die <xref:System.Data.OleDb.OleDbCommand.Connection%2A>, <xref:System.Data.OleDb.OleDbCommand.CommandType%2A>, und <xref:System.Data.OleDb.OleDbCommand.CommandText%2A> Eigenschaften, wenn die aktuelle Verbindung einen Execute- oder Fetch-Vorgang ausführt.  
+  
+ Der OLE DB-.NET-Anbieter unterstützt benannte Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder eine gespeicherte Prozedur wird aufgerufen, indem ein <xref:System.Data.OleDb.OleDbCommand> Wenn <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> festgelegt ist, um `Text`. In diesem Fall muss der Fragezeichenplatzhalter (?) verwendet werden. Zum Beispiel:  
+  
+ `SELECT * FROM Customers WHERE CustomerID = ?`  
+  
+ Deshalb die Reihenfolge, in der <xref:System.Data.OleDb.OleDbParameter> Objekte werden hinzugefügt, um die <xref:System.Data.OleDb.OleDbParameterCollection> muss direkt auf die Position des Fragezeichen-Platzhalter für den Parameter entsprechen.  
+  
+ Weitere Informationen finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.CommandText Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.CommandText Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.CommandText Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.CommandText Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTimeout">
+      <MemberSignature Language="C#" Value="public override int CommandTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CommandTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.CommandTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Wartezeit, bevor ein Versuch einer befehlsausführung beendet und ein Fehler generiert.</summary>
+        <value>Die Zeit in Sekunden, während der auf die Ausführung des Befehls gewartet werden soll. Der Standardwert ist 30 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert 0 gibt an, dass und sollte vermieden werden, einem <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> da Versuch einer befehlsausführung unbegrenzt gewartet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandType">
+      <MemberSignature Language="C#" Value="public override System.Data.CommandType CommandType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.CommandType CommandType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.CommandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.CommandType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, wie die <see cref="P:System.Data.OleDb.OleDbCommand.CommandText" />-Eigenschaft interpretiert werden soll, oder legt diesen Wert fest.</summary>
+        <value>Einer der <see cref="P:System.Data.OleDb.OleDbCommand.CommandType" />-Werte. Der Standardwert ist Text.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> Eigenschaft `StoredProcedure`, sollten Sie festlegen, die <xref:System.Data.OleDb.OleDbCommand.CommandText%2A> -Eigenschaft auf den Namen der gespeicherten Prozedur. Der Befehl führt diese gespeicherte Prozedur aus, wenn Sie eine der Execute-Methoden aufrufen.  
+  
+ Die <xref:System.Data.OleDb.OleDbCommand.Connection%2A>, <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> und <xref:System.Data.OleDb.OleDbCommand.CommandText%2A> Eigenschaften können nicht festgelegt werden, wenn die aktuelle Verbindung einen Execute- oder Fetch-Vorgang ausführt.  
+  
+ Der OLE DB-Anbieter für .NET unterstützt keine benannten Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder eine gespeicherte Prozedur wird aufgerufen, indem ein <xref:System.Data.OleDb.OleDbCommand> Wenn <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> auf Text festgelegt ist. In diesem Fall muss der Fragezeichenplatzhalter (?) verwendet werden. Zum Beispiel:  
+  
+ `SELECT * FROM Customers WHERE CustomerID = ?`  
+  
+ Deshalb die Reihenfolge, in der <xref:System.Data.OleDb.OleDbParameter> Objekte werden hinzugefügt, um die <xref:System.Data.OleDb.OleDbParameterCollection> muss direkt auf die Position des Fragezeichen-Platzhalter für den Parameter entsprechen. Weitere Informationen finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Wert war kein gültiger <see cref="P:System.Data.OleDb.OleDbCommand.CommandType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbConnection Connection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DbConnectionEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.OleDb.OleDbConnection" /> ab, die von dieser Instanz des <see cref="T:System.Data.OleDb.OleDbCommand" /> verwendet wird, oder legt diese fest.</summary>
+        <value>Die Verbindung mit einer Datenquelle. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann nicht festgelegt werden die <xref:System.Data.OleDb.OleDbCommand.Connection%2A>, <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> und <xref:System.Data.OleDb.OleDbCommand.CommandText%2A> Eigenschaften, wenn die aktuelle Verbindung einen Execute- oder Fetch-Vorgang ausführt.  
+  
+ Wenn Sie <xref:System.Data.OleDb.OleDbCommand.Connection%2A> festlegen, während eine Transaktion ausgeführt wird und die <xref:System.Data.OleDb.OleDbCommand.Transaction%2A>-Eigenschaft nicht NULL ist, wird eine <xref:System.InvalidOperationException> ausgelöst. Wenn die <xref:System.Data.OleDb.OleDbCommand.Transaction%2A>-Eigenschaft nicht NULL ist und für die Transaktion bereits ein Commit oder ein Rollback ausgeführt wurde, wird <xref:System.Data.OleDb.OleDbCommand.Transaction%2A> auf NULL festgelegt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.Connection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Connection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.Connection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Connection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Data.OleDb.OleDbCommand.Connection" />-Eigenschaft wurde beim Ausführen einer Transaktion geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDbParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter CreateDbParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter CreateDbParameter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.CreateDbParameter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParameter">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter CreateParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbParameter CreateParameter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.CreateParameter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz eines <see cref="T:System.Data.OleDb.OleDbParameter" />-Objekts.</summary>
+        <returns>Ein <see cref="T:System.Data.OleDb.OleDbParameter" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbCommand.CreateParameter%2A> Methode ist eine stark typisierte Version von <xref:System.Data.IDbCommand.CreateParameter%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbConnection">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbConnection DbConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection DbConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.DbConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbParameterCollection">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameterCollection DbParameterCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbParameterCollection DbParameterCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.DbParameterCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbTransaction">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbTransaction DbTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbTransaction DbTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.DbTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeVisible">
+      <MemberSignature Language="C#" Value="public override bool DesignTimeVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignTimeVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.DesignTimeVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Befehlsobjekt in einem benutzerdefinierten Windows Forms-Designer-Steuerelement sichtbar sein soll.</summary>
+        <value>Ein Wert, der angibt, ob das Befehlsobjekt in einem Steuerelement sichtbar sein soll. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDbDataReader">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbDataReader ExecuteDbDataReader (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbDataReader ExecuteDbDataReader(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.ExecuteDbDataReader(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteNonQuery">
+      <MemberSignature Language="C#" Value="public override int ExecuteNonQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ExecuteNonQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.ExecuteNonQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt eine SQL­Anweisung für die <see cref="P:System.Data.OleDb.OleDbCommand.Connection" /> und gibt die Anzahl der betroffenen Zeilen zurück.</summary>
+        <returns>Die Anzahl der betroffenen Zeilen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Data.OleDb.OleDbCommand.ExecuteNonQuery%2A> Katalogoperationen, z. B. ausführen, um die Struktur einer Datenbank abzufragen oder zum Erstellen von Datenbankobjekten, z. B. Tabellen oder So ändern Sie die Daten in einer Datenbank ohne eine <xref:System.Data.DataSet> durch Ausführen von Update-, INSERT- oder DELETE -Anweisungen.  
+  
+ Obwohl die <xref:System.Data.OleDb.OleDbCommand.ExecuteNonQuery%2A> gibt keine Zeilen zurück, das alle Ausgabeparameter oder Rückgabewerte Werte, die Parametern zugeordnet werden mit Daten aufgefüllt.  
+  
+ Für Update-, INSERT- und DELETE-Anweisungen ist der Rückgabewert die Anzahl der Zeilen, die von dem Befehl betroffen sind. Für alle anderen Typen von Anweisungen wird der Wert-1 zurückgegeben. Wenn ein Rollback ausgeführt wird, ist der Rückgabewert auch-1.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und führt dann mit <xref:System.Data.OleDb.OleDbCommand.ExecuteNonQuery%2A>. Im Beispiel wird übergeben, eine Zeichenfolge, die eine SQL-Anweisung z. B. Update-, INSERT- oder DELETE ist, und eine Zeichenfolge für die Verbindung mit der Datenquelle verwendet.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.ExecuteNonQuery Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteNonQuery Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.ExecuteNonQuery Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteNonQuery Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist nicht vorhanden.  
+  
+ - oder -   
+  
+ Die Verbindung ist nicht geöffnet.  
+  
+ - oder -   
+  
+ Einen Befehl innerhalb eines Transaktionskontexts, das unterscheidet sich kann nicht aus dem Kontext ausgeführt werden in denen die Verbindung ursprünglich eingetragen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReader">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbDataReader ExecuteReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbDataReader ExecuteReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.ExecuteReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet die <see cref="P:System.Data.OleDb.OleDbCommand.CommandText" /> auf die <see cref="P:System.Data.OleDb.OleDbCommand.Connection" /> und erstellt eine <see cref="T:System.Data.OleDb.OleDbDataReader" />.</summary>
+        <returns>Ein <see cref="T:System.Data.OleDb.OleDbDataReader" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> -Eigenschaftensatz auf `StoredProcedure`die <xref:System.Data.OleDb.OleDbCommand.CommandText%2A> Eigenschaft sollte auf den Namen der gespeicherten Prozedur festgelegt werden. Der Befehl führt diese gespeicherte Prozedur aus, wenn Sie aufrufen <xref:System.Data.OleDb.OleDbCommand.ExecuteReader%2A>.  
+  
+ Vor dem Schließen der <xref:System.Data.OleDb.OleDbConnection>, schließen Sie zuerst die <xref:System.Data.OleDb.OleDbDataReader> Objekt. Sie müssen auch schließen die <xref:System.Data.OleDb.OleDbDataReader> Objekt, wenn Sie wiederverwenden möchten eine <xref:System.Data.OleDb.OleDbCommand> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand>, und klicken Sie dann führt sie durch Übergabe einer Zeichenfolge, die eine SQL SELECT-Anweisung ist, und eine Zeichenfolge für die Verbindung mit der Datenquelle verwendet.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.ExecuteReader1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteReader1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.ExecuteReader1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteReader1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Einen Befehl innerhalb eines Transaktionskontexts, das unterscheidet sich kann nicht aus dem Kontext ausgeführt werden in denen die Verbindung ursprünglich eingetragen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReader">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbDataReader ExecuteReader (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbDataReader ExecuteReader(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.ExecuteReader(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Einer der <see cref="T:System.Data.CommandBehavior" />-Werte.</param>
+        <summary>Sendet die <see cref="P:System.Data.OleDb.OleDbCommand.CommandText" /> auf die <see cref="P:System.Data.OleDb.OleDbCommand.Connection" />, und erstellt ein <see cref="T:System.Data.OleDb.OleDbDataReader" /> mithilfe eines der der <see cref="T:System.Data.CommandBehavior" /> Werte.</summary>
+        <returns>Ein <see cref="T:System.Data.OleDb.OleDbDataReader" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie bei <xref:System.Data.CommandBehavior.SingleRow> mit der <xref:System.Data.OleDb.OleDbCommand.ExecuteReader%2A> Methode der <xref:System.Data.OleDb.OleDbCommand> -Objekt, das .NET Framework-Datenanbieter für OLE DB-führt eine Bindung mit dem OLE DB- **IRow** Schnittstelle, sofern dieser verfügbar ist. Andernfalls wird der **IRowset** Schnittstelle. Wenn die SQL-Anweisung erwartet wird, nur eine einzelne Zeile zurückgegeben, die Angabe <xref:System.Data.CommandBehavior.SingleRow> kann die Leistung auch verbessern.  
+  
+ Wenn die <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> -Eigenschaftensatz auf `StoredProcedure`die <xref:System.Data.OleDb.OleDbCommand.CommandText%2A> Eigenschaft sollte auf den Namen der gespeicherten Prozedur festgelegt werden. Der Befehl führt diese gespeicherte Prozedur aus, wenn Sie aufrufen <xref:System.Data.OleDb.OleDbCommand.ExecuteReader%2A>.  
+  
+ Die <xref:System.Data.OleDb.OleDbDataReader> unterstützt einen speziellen Modus, mit der große binäre Werte effizient gelesen werden kann. Weitere Informationen finden Sie unter der `SequentialAccess` festlegen für <xref:System.Data.CommandBehavior>.  
+  
+ Vor dem Schließen der <xref:System.Data.OleDb.OleDbConnection>, schließen Sie zuerst die <xref:System.Data.OleDb.OleDbDataReader> Objekt. Sie müssen auch schließen die <xref:System.Data.OleDb.OleDbDataReader> Objekt, wenn Sie wiederverwenden möchten eine <xref:System.Data.OleDb.OleDbCommand> Objekt. Wenn die <xref:System.Data.OleDb.OleDbDataReader> wird erstellt, mit <xref:System.Data.CommandBehavior> festgelegt `CloseConnection`schließen die <xref:System.Data.OleDb.OleDbDataReader> schließt die Verbindung automatisch.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand>, und klicken Sie dann führt sie durch Übergabe einer Zeichenfolge, die eine Transact-SQL SELECT-Anweisung ist, und eine Zeichenfolge für die Verbindung mit der Datenquelle verwendet. Für <xref:System.Data.CommandBehavior> ist <xref:System.Data.CommandBehavior.CloseConnection> festgelegt.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.ExecuteReader2#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteReader2/CS/mysample.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.ExecuteReader2#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteReader2/VB/mysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Einen Befehl innerhalb eines Transaktionskontexts, das unterscheidet sich kann nicht aus dem Kontext ausgeführt werden in denen die Verbindung ursprünglich eingetragen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteScalar">
+      <MemberSignature Language="C#" Value="public override object ExecuteScalar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ExecuteScalar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.ExecuteScalar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Abfrage aus und gibt die erste Spalte der ersten Zeile im Resultset zurück, das durch die Abfrage zurückgegeben wird. Zusätzliche Spalten oder Zeilen werden ignoriert.</summary>
+        <returns>Legen Sie die erste Spalte der ersten Zeile im Resultset oder ein null-Verweis, wenn das Resultset leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.OleDb.OleDbCommand.ExecuteScalar%2A> Methode, um einen einzelnen Wert abzurufen, z. B., einen Aggregatwert aus einer Datenquelle. Dies erfordert weniger Code als das Verwenden der <xref:System.Data.OleDb.OleDbCommand.ExecuteReader%2A> -Methode, und klicken Sie dann die Vorgänge auszuführen, die erforderlich sind, um den einzelnen Wert, der mithilfe von zurückgegebenen Daten zu generieren eine <xref:System.Data.OleDb.OleDbDataReader>.  
+  
+ Eine typische <xref:System.Data.OleDb.OleDbCommand.ExecuteScalar%2A> Abfrage wie im folgenden C#-Beispiel formatiert werden kann:  
+  
+```  
+CommandText = "SELECT COUNT(*) FROM region";  
+Int32 count = (int32) ExecuteScalar();  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und führt dann mit <xref:System.Data.OleDb.OleDbCommand.ExecuteScalar%2A>. Im Beispiel wird übergeben, eine Zeichenfolge, die eine SQL-Anweisung ist, die eine aggregierte Ergebnis zurückgibt, und eine Zeichenfolge für die Verbindung mit der Datenquelle verwendet.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.ExecuteScalar#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteScalar/CS/mysample.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.ExecuteScalar#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteScalar/VB/mysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Einen Befehl innerhalb eines Transaktionskontexts, das unterscheidet sich kann nicht aus dem Kontext ausgeführt werden in denen die Verbindung ursprünglich eingetragen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameterCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbParameterCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> ab.</summary>
+        <value>Die Parameter der SQL-Anweisung bzw. der gespeicherten Prozedur. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der OLE DB-Anbieter für .NET unterstützt keine benannten Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder eine gespeicherte Prozedur wird aufgerufen, indem ein <xref:System.Data.OleDb.OleDbCommand> Wenn <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> festgelegt ist, um `Text`. In diesem Fall muss der Fragezeichenplatzhalter (?) verwendet werden. Zum Beispiel:  
+  
+ `SELECT * FROM Customers WHERE CustomerID = ?`  
+  
+ Deshalb die Reihenfolge, in der <xref:System.Data.OleDb.OleDbParameter> Objekte werden hinzugefügt, um die <xref:System.Data.OleDb.OleDbParameterCollection> muss direkt auf die Position von der Fragezeichen-Platzhalter für den Parameter im Befehlstext entsprechen.  
+  
+> [!NOTE]
+>  Wenn die Parameter in der Auflistung nicht die Anforderungen der Abfrage auszuführende übereinstimmen, kann ein Fehler auf.  
+  
+ Weitere Informationen finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und seine Parameter werden angezeigt. Um dies zu erreichen, wird die Methode übergeben ein <xref:System.Data.OleDb.OleDbConnection>, eine Abfragezeichenfolge, die eine SQL SELECT-Anweisung, und ein Array von <xref:System.Data.OleDb.OleDbParameter> Objekte.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.Parameters Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Parameters Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.Parameters Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Parameters Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepare">
+      <MemberSignature Language="C#" Value="public override void Prepare ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Prepare() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.Prepare" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine vorbereitete (oder kompilierte) Version des Befehls für die Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> -Eigenschaftensatz auf `TableDirect`, <xref:System.Data.OleDb.OleDbCommand.Prepare%2A> wird keine Aktion ausgeführt. Wenn <xref:System.Data.OleDb.OleDbCommand.CommandType%2A> festgelegt ist, um `StoredProcedure`, den Aufruf von <xref:System.Data.OleDb.OleDbCommand.Prepare%2A> sollte erfolgreich sein, obwohl sie keine Auswirkungen führen kann.  
+  
+ Vor dem Aufruf <xref:System.Data.OleDb.OleDbCommand.Prepare%2A>, geben Sie den Datentyp jedes Parameters in der Anweisung vorbereitet werden. Für jeden Parameter, die einen Datentyp variabler Länge aufweist, müssen Sie festlegen der **Größe** Eigenschaft, um die maximale Größe, die erforderlich sind. <xref:System.Data.OleDb.OleDbCommand.Prepare%2A>Gibt einen Fehler zurück, wenn diese Bedingungen nicht erfüllt werden.  
+  
+ Beim Aufrufen einer `Execute` Methode nach dem Aufruf <xref:System.Data.OleDb.OleDbCommand.Prepare%2A>, alle Parameterwert, der größer als der angegebene Wert ist die **Größe** Eigenschaft automatisch auf die ursprünglich angegebene Größe des Parameters und keine abgeschnitten Fehler beim Abschneiden werden zurückgegeben.  
+  
+ Ausgabeparameter (ob vorbereitet sind oder nicht) muss einen benutzerdefinierten Datentyp aufweisen. Wenn Sie einen Datentyp variabler Länge angeben, müssen Sie auch angeben, auf das Maximum **Größe**.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und öffnet die Verbindung. Anschließend wird eine gespeicherte Prozedur für die Datenquelle vorbereitet, durch Übergabe einer Zeichenfolge, die eine SQL SELECT-Anweisung ist und eine Zeichenfolge für die Verbindung mit der Datenquelle verwendet.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.Prepare Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Prepare Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.Prepare Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Prepare Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException"><see cref="P:System.Data.OleDb.OleDbCommand.Connection" /> ist nicht festgelegt.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Data.OleDb.OleDbCommand.Connection" /> ist nicht geöffnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCommandTimeout">
+      <MemberSignature Language="C#" Value="public void ResetCommandTimeout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetCommandTimeout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.ResetCommandTimeout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="P:System.Data.OleDb.OleDbCommand.CommandTimeout" /> Eigenschaft auf den Standardwert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert der <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> beträgt 30 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.Data.IDbCommand.ExecuteReader">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbCommand>-Instanz in eine <xref:System.Data.IDbCommand>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.Data.IDbCommand.ExecuteReader">
+      <MemberSignature Language="C#" Value="System.Data.IDataReader IDbCommand.ExecuteReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDataReader System.Data.IDbCommand.ExecuteReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.System#Data#IDbCommand#ExecuteReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Data.IDbCommand.ExecuteReader" />.</summary>
+        <returns>Ein <see cref="T:System.Data.IDataReader" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbCommand>-Instanz in eine <xref:System.Data.IDbCommand>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbCommand.ExecuteReader">
+      <MemberSignature Language="C#" Value="System.Data.IDataReader IDbCommand.ExecuteReader (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.System#Data#IDbCommand#ExecuteReader(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Einer der <see cref="T:System.Data.CommandBehavior" />-Werte.</param>
+        <summary>Führt den <see cref="P:System.Data.IDbCommand.CommandText" /> für die <see cref="P:System.Data.IDbCommand.Connection" /> aus und erstellt einen <see cref="T:System.Data.IDataReader" /> mithilfe eines der <see cref="T:System.Data.CommandBehavior" />-Werte.</summary>
+        <returns>Ein <see cref="T:System.Data.IDataReader" /> erstellt mithilfe eines der <see cref="T:System.Data.CommandBehavior" /> Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbCommand>-Instanz in eine <xref:System.Data.IDbCommand>-Schnittstelle umgewandelt wird.  
+  
+ Eine Beschreibung dieses Elements finden Sie unter <xref:System.Data.IDbCommand.ExecuteReader%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommand.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Ein neues <see cref="T:System.Object" /> , eine Kopie dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbCommand>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transaction">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbTransaction Transaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbTransaction Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.OleDb.OleDbTransaction" /> ab, in der der <see cref="T:System.Data.OleDb.OleDbCommand" /> ausgeführt wird, bzw. legt diese fest.</summary>
+        <value>Die <see cref="T:System.Data.OleDb.OleDbTransaction" />. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann nicht festgelegt werden die <xref:System.Data.OleDb.OleDbCommand.Transaction%2A> Eigenschaft, wenn sie bereits auf einen bestimmten Wert festgelegt ist, und des Befehls derzeit ausführen. Wenn Sie die Transaktionseigenschaft auf ein <xref:System.Data.OleDb.OleDbTransaction> -Objekt, das nicht mit dem verbunden ist <xref:System.Data.OleDb.OleDbConnection> als die <xref:System.Data.OleDb.OleDbCommand> -Objekt, das nächste Mal, die Sie zum Ausführen einer Anweisung ausprobieren eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedRowSource">
+      <MemberSignature Language="C#" Value="public override System.Data.UpdateRowSource UpdatedRowSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.UpdateRowSource UpdatedRowSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommand.UpdatedRowSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.UpdateRowSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, wie die Befehlsergebnisse auf angewendet werden die <see cref="T:System.Data.DataRow" /> bei Verwendung durch die <see langword="Update" /> Methode der <see cref="T:System.Data.OleDb.OleDbDataAdapter" />.</summary>
+        <value>Einer der <see cref="T:System.Data.UpdateRowSource" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Data.OleDb.OleDbCommand.UpdatedRowSource%2A> Wert ist, wenn der Befehl automatisch generiert wird (wie bei der <xref:System.Data.OleDb.OleDbCommandBuilder>), in diesem Fall der Standardwert ist None.  
+  
+ Weitere Informationen zur Verwendung der <xref:System.Data.OleDb.OleDbCommand.UpdatedRowSource%2A> Eigenschaft finden Sie unter [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der eingegebene Wert war keiner der <see cref="T:System.Data.UpdateRowSource" />-Werte.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

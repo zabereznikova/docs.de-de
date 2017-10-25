@@ -1,0 +1,1767 @@
+<Type Name="XmlQueryOutput" FullName="System.Xml.Xsl.Runtime.XmlQueryOutput">
+  <TypeSignature Language="C#" Value="public sealed class XmlQueryOutput : System.Xml.XmlWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlQueryOutput extends System.Xml.XmlWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.XmlQueryOutput" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Xml.XmlWriter" /> , die bietet zusätzliche Funktionen, die zum Ausgeben der Ergebnisse der XSLT-Transformationen erforderlich ist.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode wird als leere implementiert, und es wird keine Aktion ausgeführt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EndCopy">
+      <MemberSignature Language="C#" Value="public void EndCopy (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndCopy(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.EndCopy(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt</param>
+        <summary>Beendet die flache Kopie des aktuellen Knotens den Navigator an. Diese Methode sollte nur für Element- und Dokumentknoten aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EndTree">
+      <MemberSignature Language="C#" Value="public void EndTree ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTree() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.EndTree" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt das Ende der Struktur.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode wird als leere implementiert, und es wird keine Aktion ausgeführt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LookupPrefix">
+      <MemberSignature Language="C#" Value="public override string LookupPrefix (string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string LookupPrefix(string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Eine Zeichenfolge, die Namespacenamen enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <returns>Eine Zeichenfolge, die das Präfix enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartCopy">
+      <MemberSignature Language="C#" Value="public bool StartCopy (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool StartCopy(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.StartCopy(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt</param>
+        <summary>Beginnt die flache Kopie des aktuellen Knotens den Navigator, ausgegeben.</summary>
+        <returns>
+          <see langword="true" />Wenn <see langword="EndCopy" /> wird aufgerufen, um den Kopiervorgang abgeschlossen ist, andernfalls sollte <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartElementContentUnchecked">
+      <MemberSignature Language="C#" Value="public void StartElementContentUnchecked ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartElementContentUnchecked() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.StartElementContentUnchecked" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, nachdem die Attribute des Elements aufgelistet wurden, jedoch bevor ihren untergeordneten Elementen aufgelistet wurden. Wohlgeformt wird angenommen, weshalb dafür keine weitere Überprüfung ausgeführt werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartTree">
+      <MemberSignature Language="C#" Value="public void StartTree (System.Xml.XPath.XPathNodeType rootType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartTree(valuetype System.Xml.XPath.XPathNodeType rootType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.StartTree(System.Xml.XPath.XPathNodeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootType" Type="System.Xml.XPath.XPathNodeType" />
+      </Parameters>
+      <Docs>
+        <param name="rootType">
+          <see cref="T:System.Xml.XPath.XPathNodeType" />-Objekt</param>
+        <summary>Beginnt die Erstellung einer neuen Struktur.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBase64">
+      <MemberSignature Language="C#" Value="public override void WriteBase64 (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteBase64(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteBase64(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">
+          <see cref="T:System.Byte" />Pufferobjekt, das zu schreibenden Daten enthält.</param>
+        <param name="index">
+          <see cref="T:System.Int32" />Der Startindex enthält.</param>
+        <param name="count">
+          <see cref="T:System.Int32" />Anzahl Bytes enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCData">
+      <MemberSignature Language="C#" Value="public override void WriteCData (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteCData(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteCData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Zeichenfolge, die zu schreibenden Daten enthält.</param>
+        <summary>Leere Implementierung, die keine Aktionen ausführt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCharEntity">
+      <MemberSignature Language="C#" Value="public override void WriteCharEntity (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteCharEntity(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteCharEntity(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">
+          <see cref="T:System.Char" />enthält eine zu schreibende Zeichen.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteChars">
+      <MemberSignature Language="C#" Value="public override void WriteChars (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteChars(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteChars(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">
+          <see cref="T:System.Char" />Array von Puffer, der zu schreibenden Daten enthält.</param>
+        <param name="index">
+          <see cref="T:System.Int32" />Der Startindex enthält.</param>
+        <param name="count">
+          <see cref="T:System.Int32" />Anzahl der zu schreibenden Zeichen enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteComment">
+      <MemberSignature Language="C#" Value="public override void WriteComment (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteComment(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteComment(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die die zu schreibenden Kommentar enthält.</param>
+        <summary>Schreibt den Kommentar an. Die Methode überprüft nicht wohlgeformt. Andere Methoden aufgerufen, die für dieses Objekt werden die erforderlichen Überprüfungen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCommentString">
+      <MemberSignature Language="C#" Value="public void WriteCommentString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteCommentString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteCommentString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die die zu schreibenden Kommentar enthält.</param>
+        <summary>Cache-Zeichenfolge des Kommentars.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDocType">
+      <MemberSignature Language="C#" Value="public override void WriteDocType (string name, string pubid, string sysid, string subset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteDocType(string name, string pubid, string sysid, string subset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteDocType(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="pubid" Type="System.String" />
+        <Parameter Name="sysid" Type="System.String" />
+        <Parameter Name="subset" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Eine Zeichenfolge, die Dokumentnamen enthält.</param>
+        <param name="pubid">Eine Zeichenfolge, die Veröffentlichungs-Id enthält.</param>
+        <param name="sysid">Eine Zeichenfolge, die System-Id enthält.</param>
+        <param name="subset">Eine Zeichenfolge, die Teilmenge Name enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />. Sollte nie aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteEndAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Das Attribut Wohlgeformtheit überprüft und schreibt das Ende des Attributs.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndAttributeUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteEndAttributeUnchecked ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEndAttributeUnchecked() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndAttributeUnchecked" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt das Ende des Attributs. Besteht eine Annahme von wohlgeformt, weshalb dafür keine weitere Überprüfung ausgeführt werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndComment">
+      <MemberSignature Language="C#" Value="public void WriteEndComment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEndComment() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndComment" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Den Kommentar Wohlgeformtheit überprüft und schreibt das Ende des Kommentars.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndDocument">
+      <MemberSignature Language="C#" Value="public override void WriteEndDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndElement">
+      <MemberSignature Language="C#" Value="public override void WriteEndElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft das Element auf wohlgeformt und schreibt das Ende des Elements.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndElementUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteEndElementUnchecked (string localName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEndElementUnchecked(string localName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndElementUnchecked(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Eine Zeichenfolge, die lokalen Namen des Elements enthält.</param>
+        <summary>Schreibt das Ende des Elements mit dem lokalen Namen. Wohlgeformt wird angenommen, weshalb dafür keine weitere Überprüfung ausgeführt werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndElementUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteEndElementUnchecked (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEndElementUnchecked(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndElementUnchecked(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, die Elementpräfix enthält.</param>
+        <param name="localName">Eine Zeichenfolge, die lokalen Namen des Elements enthält.</param>
+        <param name="ns">Eine Zeichenfolge, die Namespacenamen enthält.</param>
+        <summary>Schreibt das Ende des Elements mit dem Präfix, lokalen Namen und Namespace. Keine Überprüfungen werden ausgeführt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndNamespace">
+      <MemberSignature Language="C#" Value="public void WriteEndNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEndNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Den Namespace Wohlgeformtheit überprüft und schreibt den Namespace.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndProcessingInstruction">
+      <MemberSignature Language="C#" Value="public void WriteEndProcessingInstruction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEndProcessingInstruction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndProcessingInstruction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die verarbeitungsanweisung Wohlgeformtheit überprüft und schreibt die verarbeitungsanweisung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndRoot">
+      <MemberSignature Language="C#" Value="public void WriteEndRoot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEndRoot() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEndRoot" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt das Ende des Stamms der Struktur und setzt den Status zurück.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEntityRef">
+      <MemberSignature Language="C#" Value="public override void WriteEntityRef (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEntityRef(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteEntityRef(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Eine Zeichenfolge, die Namen der Entität enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFullEndElement">
+      <MemberSignature Language="C#" Value="public override void WriteFullEndElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteFullEndElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteFullEndElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft das Element Wohlgeformtheit vor dem Ende des Elements zu schreiben.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteItem">
+      <MemberSignature Language="C#" Value="public void WriteItem (System.Xml.XPath.XPathItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteItem(class System.Xml.XPath.XPathItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteItem(System.Xml.XPath.XPathItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Xml.XPath.XPathItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">
+          <see cref="T:System.Xml.XPath.XPathItem" />zu schreibende Objekt.</param>
+        <summary>Schreiben Sie ein Element aus, um die Ausgabe an.  Wenn derzeit eine Xml-Struktur zu konstruieren, wird das Element immer kopiert. Auf der obersten Ebene wird die Identität des Elements beibehalten, es sei denn, es sich um ein atomarer Wert ist.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNamespaceDeclaration">
+      <MemberSignature Language="C#" Value="public void WriteNamespaceDeclaration (string prefix, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteNamespaceDeclaration(string prefix, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteNamespaceDeclaration(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, die Namespace-Präfix enthält.</param>
+        <param name="ns">Eine Zeichenfolge, die Namespacenamen enthält.</param>
+        <summary>Die Namespacedeklaration Wohlgeformtheit überprüft und schreibt die Namespacedeklaration.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNamespaceDeclarationUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteNamespaceDeclarationUnchecked (string prefix, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteNamespaceDeclarationUnchecked(string prefix, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteNamespaceDeclarationUnchecked(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, die Namespace-Präfix enthält.</param>
+        <param name="ns">Eine Zeichenfolge, die Namespacenamen enthält.</param>
+        <summary>Fügt eine neue Namespacedeklaration <c>-prefix = "ns"</c> – um den Satz von Deklarationen im Gültigkeitsbereich. Diese Methode führt keine weiteren Überprüfungen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNamespaceString">
+      <MemberSignature Language="C#" Value="public void WriteNamespaceString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteNamespaceString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteNamespaceString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die den vollqualifizierten Namespace enthält.</param>
+        <summary>Speichert den Text des Namespaces an.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteProcessingInstruction">
+      <MemberSignature Language="C#" Value="public override void WriteProcessingInstruction (string target, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteProcessingInstruction(string target, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteProcessingInstruction(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Zeichenfolge, die Ziel der Anweisung enthält.</param>
+        <param name="text">Zeichenfolge, enthält der Text der Anweisung.</param>
+        <summary>Schreibt die verarbeitungsanweisung. Von dieser Methode werden keine Überprüfungen der Wohlgeformtheit ausgeführt; die aufgerufenen Methoden sind Überprüfungen bei Bedarf.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteProcessingInstructionString">
+      <MemberSignature Language="C#" Value="public void WriteProcessingInstructionString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteProcessingInstructionString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteProcessingInstructionString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die Anweisung enthält.</param>
+        <summary>Speichert die verarbeitungsanweisung Text an.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRaw">
+      <MemberSignature Language="C#" Value="public override void WriteRaw (string data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteRaw(string data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteRaw(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="data">Eine Zeichenfolge, die Rohdaten enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRaw">
+      <MemberSignature Language="C#" Value="public override void WriteRaw (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteRaw(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteRaw(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">
+          <see cref="T:System.Char" />Buffer-Array geschrieben werden.</param>
+        <param name="index">
+          <see cref="T:System.Int32" />Der Startindex enthält.</param>
+        <param name="count">
+          <see cref="T:System.Int32" />Anzahl der zu schreibenden Zeichen enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRawUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteRawUnchecked (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteRawUnchecked(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteRawUnchecked(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die zu schreibenden Text enthält.</param>
+        <summary>Schreibt einen Textblock ohne Escapezeichen für Sonderzeichen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteStartAttribute (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartAttribute(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttribute(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, das Präfix des Attributs enthält.</param>
+        <param name="localName">Eine Zeichenfolge, die lokalen Namen des Attributs enthält.</param>
+        <param name="ns">Eine Zeichenfolge, die Namespace des Attributs enthält.</param>
+        <summary>Überprüft das Attribut auf Wohlgeformtheit vor dem Schreiben der Start des Attributs an.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttributeComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartAttributeComputed (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartAttributeComputed(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">Zeichenfolge, enthält der Name des Attributs.</param>
+        <summary>Schreibt ein Attribut mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttributeComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartAttributeComputed (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartAttributeComputed(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt</param>
+        <summary>Schreibt ein Attribut mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttributeComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartAttributeComputed (string tagName, int prefixMappingsIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartAttributeComputed(string tagName, int32 prefixMappingsIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="prefixMappingsIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Zeichenfolge, enthält der Tagname.</param>
+        <param name="prefixMappingsIndex">
+          <see cref="T:System.Int32" />Präfixzuordnungsindex enthält.</param>
+        <summary>Schreibt ein Attribut mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttributeComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartAttributeComputed (string tagName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartAttributeComputed(string tagName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeComputed(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Eine Zeichenfolge, die Tagname des Attributs enthält.</param>
+        <param name="ns">Eine Zeichenfolge, die Namespace des Attributs enthält.</param>
+        <summary>Schreibt ein Attribut mit einem Namen, der berechnet wird aus einem "-Präfix: LocalName" Tag-Namen und einen Satz von/Präfix-Zuordnungen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttributeLocalName">
+      <MemberSignature Language="C#" Value="public void WriteStartAttributeLocalName (string localName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartAttributeLocalName(string localName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeLocalName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Eine Zeichenfolge, die lokalen Namen enthält.</param>
+        <summary>Schreibt den Anfang des Attributs mit einem leeren Präfix, Namespace und null Schematyp.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttributeUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteStartAttributeUnchecked (string localName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartAttributeUnchecked(string localName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeUnchecked(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Eine Zeichenfolge, die den lokalen Namen des Attributs enthält.</param>
+        <summary>Schreibt den Anfang des Attributs mit dem lokalen Namen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartAttributeUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteStartAttributeUnchecked (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartAttributeUnchecked(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartAttributeUnchecked(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, die das Präfix des Namespaces enthält.</param>
+        <param name="localName">Eine Zeichenfolge, die den lokalen Namen des Attributs enthält.</param>
+        <param name="ns">Eine Zeichenfolge, die den Namespace enthält.</param>
+        <summary>Schreibt den Anfang des Attributs mit Präfix, lokalen Namen und ns ohne Wohlgeformtheit überprüft.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartComment">
+      <MemberSignature Language="C#" Value="public void WriteStartComment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartComment() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartComment" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Der Anfang des Kommentars Wohlgeformtheit überprüft und schreibt den Anfang des Kommentars.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartDocument">
+      <MemberSignature Language="C#" Value="public override void WriteStartDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartDocument">
+      <MemberSignature Language="C#" Value="public override void WriteStartDocument (bool standalone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartDocument(bool standalone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartDocument(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="standalone" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="standalone">Boolescher Wert, der angibt, ob die XML-Deklaration mit der Versionsnummer geschrieben, die am Anfang des Dokuments angezeigt wird.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElement">
+      <MemberSignature Language="C#" Value="public override void WriteStartElement (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartElement(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElement(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, die das Namespacepräfix enthält.</param>
+        <param name="localName">Eine Zeichenfolge, die den lokalen Namen des Elements enthält.</param>
+        <param name="ns">Die Zeichenfolge, die den Namen des Namespace enthält.</param>
+        <summary>Schreibvorgänge werden Element nach dem Überprüfungen, die sicherstellen wohlgeformt gestartet.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElementComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartElementComputed (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartElementComputed(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <see cref="T:System.Xml.XmlQualifiedName" />der Name enthält.</param>
+        <summary>Schreibt ein Element mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElementComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartElementComputed (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartElementComputed(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt</param>
+        <summary>Schreibt ein Element mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElementComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartElementComputed (string tagName, int prefixMappingsIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartElementComputed(string tagName, int32 prefixMappingsIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="prefixMappingsIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Eine Zeichenfolge, die den Tagnamen enthält.</param>
+        <param name="prefixMappingsIndex">
+          <see cref="T:System.Int32" />den Index enthält.</param>
+        <summary>Schreibt ein Element mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElementComputed">
+      <MemberSignature Language="C#" Value="public void WriteStartElementComputed (string tagName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartElementComputed(string tagName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementComputed(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Eine Zeichenfolge, die den Tagnamen enthält.</param>
+        <param name="ns">Die Zeichenfolge, die den Namen des Namespace enthält.</param>
+        <summary>Schreibt ein Element mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElementLocalName">
+      <MemberSignature Language="C#" Value="public void WriteStartElementLocalName (string localName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartElementLocalName(string localName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementLocalName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Eine Zeichenfolge, die den lokalen Namen enthält.</param>
+        <summary>Schreibt den lokalen Namen mit einem leeren Präfix und Namespace.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElementUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteStartElementUnchecked (string localName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartElementUnchecked(string localName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementUnchecked(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Eine Zeichenfolge, die der lokale Name des Startelement enthält.</param>
+        <summary>Schreibt den Anfang des Elements an. Besteht eine Annahme von wohlgeformt, weshalb dafür keine weitere Überprüfung ausgeführt werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElementUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteStartElementUnchecked (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartElementUnchecked(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartElementUnchecked(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, die das Namespacepräfix enthält.</param>
+        <param name="localName">Eine Zeichenfolge, die der lokale Name des Startelement enthält.</param>
+        <param name="ns">Die Zeichenfolge, die den Namen des Namespace enthält.</param>
+        <summary>Schreibt ein Element mit einem Namen, die aus berechnet ist ein <c>Präfix: LocalName</c> Namens und einer Reihe von/Präfix-Zuordnungen zu kennzeichnen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartNamespace">
+      <MemberSignature Language="C#" Value="public void WriteStartNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Eine Zeichenfolge, die das Namespacepräfix enthält.</param>
+        <summary>Wohlgeformtheit überprüft und schreibt den Anfang des Namespaces.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartProcessingInstruction">
+      <MemberSignature Language="C#" Value="public void WriteStartProcessingInstruction (string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartProcessingInstruction(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartProcessingInstruction(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Zeichenfolge, die den Namen der das Ziel der verarbeitungsanweisung enthält.</param>
+        <summary>Den Kommentar Wohlgeformtheit überprüft und schreibt den Anfang der verarbeitungsanweisung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartRoot">
+      <MemberSignature Language="C#" Value="public void WriteStartRoot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartRoot() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStartRoot" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Den Stamm der Struktur Wohlgeformtheit überprüft und schreibt den Stamm der Struktur.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteState">
+      <MemberSignature Language="C#" Value="public override System.Xml.WriteState WriteState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.WriteState WriteState" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.WriteState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <value>Ein <see cref="T:System.Xml.WriteState" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteString">
+      <MemberSignature Language="C#" Value="public override void WriteString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die zu schreibenden Text enthält.</param>
+        <summary>Die Zeichenfolge Wohlgeformtheit überprüft und schreibt Text.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStringUnchecked">
+      <MemberSignature Language="C#" Value="public void WriteStringUnchecked (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStringUnchecked(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteStringUnchecked(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die zu schreibenden Text enthält.</param>
+        <summary>Schreibt Text. Wohlgeformt wird vorausgesetzt, damit keine Prüfungen vorgenommen wurden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSurrogateCharEntity">
+      <MemberSignature Language="C#" Value="public override void WriteSurrogateCharEntity (char lowChar, char highChar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteSurrogateCharEntity(char lowChar, char highChar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteSurrogateCharEntity(System.Char,System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowChar" Type="System.Char" />
+        <Parameter Name="highChar" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="lowChar">
+          <see cref="T:System.Char" />der niedrigen Zeichens.</param>
+        <param name="highChar">
+          <see cref="T:System.Char" />der hohe Zeichens.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteWhitespace">
+      <MemberSignature Language="C#" Value="public override void WriteWhitespace (string ws);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteWhitespace(string ws) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.WriteWhitespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ws" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ws">Eine Zeichenfolge, die die zu schreibenden Leerraum enthält.</param>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public override string XmlLang { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQueryOutput.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <value>Eine Zeichenfolge, die die Sprachen-ID enthält.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSpace">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlSpace XmlSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlSpace XmlSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQueryOutput.XmlSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst <see cref="T:System.NotSupportedException" />.</summary>
+        <value>Das <see cref="T:System.Xml.XmlSpace" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XsltCopyOf">
+      <MemberSignature Language="C#" Value="public void XsltCopyOf (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void XsltCopyOf(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQueryOutput.XsltCopyOf(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt</param>
+        <summary>Kopiert einen Knoten als Wert gemäß den folgenden Regeln für die XSLT-Ausgabe: Identität wird nie beibehalten, wenn das Element eine RTF-Datei ist, beibehalten Serialisierung Hinweise zum Kopieren und wenn das Element einen Stammknoten befindet, kopieren Sie die untergeordneten Elemente des Stamms.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

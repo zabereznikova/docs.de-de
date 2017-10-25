@@ -1,0 +1,107 @@
+<Type Name="OutputColor" FullName="System.Printing.OutputColor">
+  <TypeSignature Language="C#" Value="public enum OutputColor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OutputColor extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.OutputColor" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie Inhalte zu drucken, die Farbe oder Graustufen enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte dieses Typs für diese Zwecke verwendet:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.OutputColorCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, diese Werte geben die Art der Ausgabe, die ein Drucker unterstützt. (Viele Drucker unterstützen mehrere Typen.)  
+  
+-   Als Wert des der <xref:System.Printing.PrintTicket.OutputColor%2A> Eigenschaft eine <xref:System.Printing.PrintTicket>, den Drucker auf den angegebenen Typ der Ausgabe zu erzeugen.  
+  
+ Die **unbekannte** Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sie sollten niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft, um `Unknown`. Wenn eine andere <xref:System.Printing.PrintTicket> erstellt wurde, erzeugt die Anwendung eine *PrintTicket-Dokument* die Funktion für die Ausgabe Farben für eine nicht erkannte Option festlegt (also eine Option, die nicht in definiert ist die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)), wird eine <xref:System.Printing.PrintTicket> -Objekt in der Anwendung, die mit diesem Dokument erstellt wird `Unknown` als Wert für die <xref:System.Printing.PrintTicket.OutputColor%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie mit dieser Enumeration festgelegt <xref:System.Printing.PrintTicket> Werte.  
+  
+ [!code-csharp[XpsPrint#OutputColorAndPageOrientation](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#outputcolorandpageorientation)]
+ [!code-vb[XpsPrint#OutputColorAndPageOrientation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#outputcolorandpageorientation)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="Color" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputColor Color = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputColor.Color" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputColor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausgabe in Farbe gedruckt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Grayscale">
+      <MemberSignature Language="C#" Value="Grayscale" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputColor Grayscale = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputColor.Grayscale" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputColor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausgabe in Graustufen gedruckt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Monochrome">
+      <MemberSignature Language="C#" Value="Monochrome" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputColor Monochrome = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputColor.Monochrome" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputColor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausgabe in eine einzelne Farbe und mit den gleichen Grad der Intensität gedruckt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputColor Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputColor.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputColor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Funktion (deren Optionen durch diese Enumeration dargestellt werden) ist eine Option festgelegt, nicht definiert, der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

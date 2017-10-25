@@ -1,0 +1,437 @@
+<Type Name="CustomAttributeTypedArgument" FullName="System.Reflection.CustomAttributeTypedArgument">
+  <TypeSignature Language="C#" Value="public struct CustomAttributeTypedArgument" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit CustomAttributeTypedArgument extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.CustomAttributeTypedArgument" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Argument eines benutzerdefinierten Attributs im Reflection-Only-Kontext oder ein Element eines Arrayarguments dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Code, der in den ReflectionOnly Kontext überprüft wird kann nicht ausgeführt werden, daher es nicht immer möglich ist, benutzerdefinierte Attribute zu untersuchen, durch das Erstellen von Instanzen von sie und anschließend untersucht werden, deren Eigenschaften und Methoden wie <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>, <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>usw. . Wenn der Code für den Attributtyp selbst in den reflektionsbezogenen Kontext geladen wird, kann sie nicht ausgeführt werden.  
+  
+ Die <xref:System.Reflection.CustomAttributeNamedArgument> Struktur wird verwendet, durch die <xref:System.Reflection.CustomAttributeData> Klasse, um Zugriff auf den Typ und Wert positionelle Argumente für eine Instanz des benutzerdefinierten Attributs angegeben wird, ohne den Attributkonstruktor auszuführen. Es bietet außerdem Zugriff auf den Typ und Wert, der ein benanntes Argument ohne den Code der entsprechenden Eigenschaft des benutzerdefinierten Attributtyps ausführen.  
+  
+ Die Typen und Werte aller mit Feldern fester Breite und benannte Argumente eine Instanz des gebotenen sind <xref:System.Reflection.CustomAttributeTypedArgument> Strukturen. Zurückgegebenes Positionsargumente der <xref:System.Reflection.CustomAttributeData.ConstructorArguments%2A?displayProperty=nameWithType> die dargestellte Eigenschaft direkt <xref:System.Reflection.CustomAttributeTypedArgument> Strukturen, aber den benannten Argumenten zurückgegebenes der <xref:System.Reflection.CustomAttributeData.NamedArguments%2A?displayProperty=nameWithType> -Eigenschaft dargestellte <xref:System.Reflection.CustomAttributeNamedArgument> Strukturen; zum Abrufen der <xref:System.Reflection.CustomAttributeTypedArgument> Struktur für ein benanntes Argument, verwenden die <xref:System.Reflection.CustomAttributeNamedArgument.TypedValue%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Wenn ein Argument ein Wertearray ist die <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A> Eigenschaft von der <xref:System.Reflection.CustomAttributeTypedArgument> , dass, stellt das Argument eine generische zurückgibt <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von <xref:System.Reflection.CustomAttributeTypedArgument> Objekte. Jede <xref:System.Reflection.CustomAttributeTypedArgument> Objekt in der Auflistung darstellt, das entsprechende Element des Arrays.  
+  
+ Zum Erstellen von Instanzen der <xref:System.Reflection.CustomAttributeData> Klasse, verwenden Sie die `static` <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> Factorymethode.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAttributeTypedArgument (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeTypedArgument.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert des benutzerdefinierten Attributarguments.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.CustomAttributeTypedArgument" /> Klasse mit dem angegebenen Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `value` Parameter darf nicht sein `null` für diesen Konstruktor, da der Argumenttyp, von dem Typ des abgeleitet wird `value`. Angeben einer `null` -Wert, verwenden Sie die <xref:System.Reflection.CustomAttributeTypedArgument.%23ctor%28System.Type%2CSystem.Object%29> Konstruktor.  
+  
+ Dieser Konstruktor ist für die Verwendung durch Erben von der <xref:System.Reflection.CustomAttributeTypedArgument> Klasse. Es ist nicht für die Verwendung im Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAttributeTypedArgument (Type argumentType, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type argumentType, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeTypedArgument.#ctor(System.Type,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="argumentType">Der Typ des benutzerdefinierten Attributarguments.</param>
+        <param name="value">Der Wert des benutzerdefinierten Attributarguments.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.CustomAttributeTypedArgument" /> Klasse mit dem angegebenen Typ und Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist für die Verwendung durch Erben von der <xref:System.Reflection.CustomAttributeTypedArgument> Klasse. Es ist nicht für die Verwendung im Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="argumentType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentType">
+      <MemberSignature Language="C#" Value="public Type ArgumentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ArgumentType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeTypedArgument.ArgumentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Arguments oder des Arrayelements Argument ab.</summary>
+        <value>Ein <see cref="T:System.Type" /> Objekt, das den Typ des Arguments oder des Arrayelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für einfache Argumente oder für Elemente des Arrayargumente wird diese Eigenschaft kennzeichnet den tatsächlichen Typ, der den Rückgabewert von der <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A> Eigenschaft. Für Arrayargumente, gibt diese Eigenschaft den Arraytyp zurück, mit denen jedoch <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A> Eigenschaft gibt eine `ReadOnlyCollection<CustomAttributeTypedArgument>` (`ReadOnlyCollection(Of CustomAttributeTypedArgument)` in Visual Basic) in dem jedes Element der Auflistung das entsprechende Element des Arrayarguments darstellt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeTypedArgument.ArgumentType%2A> Eigenschaft wird verwendet, der `ShowValueOrArray` -Methode, die benutzerdefinierte Attributdaten werden angezeigt, um die Typen von Attributen anzuzeigen.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeTypedArgument.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein weiteres Objekt für den Vergleich.</param>
+        <summary>Gibt an, ob diese Instanz und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> und diese Instanz denselben Typ aufweisen und denselben Wert darstellen, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeTypedArgument.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen. Diese ist der Hashcode für die Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.CustomAttributeTypedArgument left, System.Reflection.CustomAttributeTypedArgument right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Reflection.CustomAttributeTypedArgument left, valuetype System.Reflection.CustomAttributeTypedArgument right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeTypedArgument.op_Equality(System.Reflection.CustomAttributeTypedArgument,System.Reflection.CustomAttributeTypedArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.CustomAttributeTypedArgument" />
+        <Parameter Name="right" Type="System.Reflection.CustomAttributeTypedArgument" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Struktur auf der linken Seite des Gleichheitsoperators.</param>
+        <param name="right">Die <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Struktur auf der rechten Seite des Gleichheitsoperators.</param>
+        <summary>Testet, ob zwei <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Strukturen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Strukturen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Reflection.CustomAttributeTypedArgument.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.CustomAttributeTypedArgument left, System.Reflection.CustomAttributeTypedArgument right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Reflection.CustomAttributeTypedArgument left, valuetype System.Reflection.CustomAttributeTypedArgument right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeTypedArgument.op_Inequality(System.Reflection.CustomAttributeTypedArgument,System.Reflection.CustomAttributeTypedArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.CustomAttributeTypedArgument" />
+        <Parameter Name="right" Type="System.Reflection.CustomAttributeTypedArgument" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Struktur auf der linken Seite des Ungleichheitsoperators.</param>
+        <param name="right">Die <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Struktur auf der rechten Seite des Ungleichheitsoperators.</param>
+        <summary>Testet, ob zwei <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Strukturen verschieden sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden <see cref="T:System.Reflection.CustomAttributeTypedArgument" />-Strukturen verschieden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Reflection.CustomAttributeTypedArgument.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeTypedArgument.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge mit den Namen des Arguments, dem Gleichheitszeichen und einer Zeichenfolgendarstellung des Argumentwerts zurück.</summary>
+        <returns>Eine Zeichenfolge mit den Namen des Arguments, dem Gleichheitszeichen und einer Zeichenfolgendarstellung des Argumentwerts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeTypedArgument.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Arguments ab, für die ein einfaches Argument oder für ein Element eines Arrayarguments; Ruft eine Auflistung von Werten für ein Arrayargument.</summary>
+        <value>Ein Objekt, das den Wert des Arguments oder Element oder eine generische darstellt <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> der <see cref="T:System.Reflection.CustomAttributeTypedArgument" /> Objekte, die die Werte der Array-Type-Argument darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Reflection.CustomAttributeTypedArgument> ein Arrayarguments darstellt, gibt diese Eigenschaft eine `ReadOnlyCollection<CustomAttributeTypedArgument>` (`ReadOnlyCollection(Of CustomAttributeTypedArgument)` in Visual Basic). Jedes Element der Auflistung stellt das entsprechende Element eines Arrayarguments dar.  
+  
+ Der Typ des Werts abgerufen werden kann, mithilfe der <xref:System.Reflection.CustomAttributeTypedArgument.ArgumentType%2A> Eigenschaft. <xref:System.Reflection.CustomAttributeTypedArgument.ArgumentType%2A>Ruft den tatsächlichen Typ, der den Rückgabewert von der <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A> -Eigenschaft für einfache Argumente oder für Elemente des Arrayargumente. Es gibt den Arraytyp für Arrayargumente zurück.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A> Eigenschaft wird verwendet, der `ShowValueOrArray` -Methode, die benutzerdefinierte Attributdaten werden angezeigt, um die Werte der Attribute anzuzeigen.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ <xref:System.Reflection.CustomAttributeTypedArgument.ArgumentType%2A> &#124; <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

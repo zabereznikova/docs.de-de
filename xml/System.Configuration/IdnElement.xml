@@ -1,0 +1,167 @@
+<Type Name="IdnElement" FullName="System.Configuration.IdnElement">
+  <TypeSignature Language="C#" Value="public sealed class IdnElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IdnElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IdnElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Konfigurationseinstellung für International Domain Name (IDN) Verarbeitung in die <see cref="T:System.Uri" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die vorhandene <xref:System.Uri?displayProperty=nameWithType> Klasse wurde erweitert, damit die Unterstützung für RFC 3987 International Resource Identifiers (IRI) basiert. Derzeitige Benutzer werden keine Änderung gegenüber dem .NET Framework 2.0-Verhalten feststellen, außer IRI wird explizit aktiviert. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
+  
+ Die Konfigurationseinstellung für die <xref:System.Configuration.IdnElement> wird indirekt gesteuert, indem die <xref:System.Configuration.IriParsingElement> Konfigurationseinstellung, steuert die IRI-Verarbeitung in die <xref:System.Uri?displayProperty=nameWithType> Klasse. Die IRI-Verarbeitung muss aktiviert werden, damit die IDN-Verarbeitung überhaupt möglich ist. Ist die IRI-Verarbeitung deaktiviert, wird die IDN-Verarbeitung auf die Standardeinstellung festgelegt. Darin wird aus Kompatibilitätsgründen das .NET Framework 2.0-Verhalten verwendet, und IDN-Namen werden nicht verwendet.  
+  
+ IDN-Verarbeitung wird nur das Attribut Internationalized Domain Name (IDN) gesteuert. Alle anderen IRI-Verarbeitung (z. B. die Normalisierung von Zeichen) wird standardmäßig ausgeführt.  
+  
+ Die Konfigurationseinstellung für die <xref:System.Configuration.IdnElement> wird einmal gelesen werden bei der ersten <xref:System.Uri?displayProperty=nameWithType> Klasse erstellt wird. Später vorgenommene Änderungen an den Konfigurationseinstellungen werden anschließend ignoriert.  
+  
+ Weitere Informationen zur IRI-Unterstützung finden Sie im Abschnitt "Hinweise" der <xref:System.Uri?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdnElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IdnElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.IdnElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Configuration.IdnElement> Instanz  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public UriIdnScope Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.UriIdnScope Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.IdnElement.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UriIdnScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see cref="T:System.Configuration.IdnElement" /> -Konfigurationseinstellung.</summary>
+        <value>Ein <see cref="T:System.UriIdnScope" /> , enthält die aktuellen Konfigurationseinstellungen für IDN-Verarbeitung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IDN-Verarbeitung wird nur das Attribut International Domain Name (IDN) gesteuert. Alle anderen International Resource Identifiers (IRI)-Verarbeitung (z. B. die Normalisierung von Zeichen) wird standardmäßig ausgeführt.  
+  
+ Die Konfigurationseinstellung für die <xref:System.Configuration.IdnElement> wird indirekt gesteuert, indem die <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> Konfigurationseinstellung, steuert die IRI-Verarbeitung in die <xref:System.Uri?displayProperty=nameWithType> Klasse. Die IRI-Verarbeitung muss aktiviert werden, damit die IDN-Verarbeitung überhaupt möglich ist. Ist die IRI-Verarbeitung deaktiviert, wird die IDN-Verarbeitung auf die Standardeinstellung festgelegt. Darin wird aus Kompatibilitätsgründen das .NET Framework 2.0-Verhalten verwendet, und IDN-Namen werden nicht verwendet.  
+  
+ Die Konfigurationseinstellung für die <xref:System.Configuration.IdnElement> wird einmal gelesen werden bei der ersten <xref:System.Uri?displayProperty=nameWithType> Klasse erstellt wird. Später vorgenommene Änderungen an den Konfigurationseinstellungen werden anschließend ignoriert.  
+  
+ Weitere Informationen zur IRI-Unterstützung finden Sie im Abschnitt "Hinweise" der <xref:System.Uri?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IdnElement.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IdnElement.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.IdnElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

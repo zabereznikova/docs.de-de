@@ -1,0 +1,52 @@
+<Type Name="TogglePattern+TogglePatternInformation" FullName="System.Windows.Automation.TogglePattern+TogglePatternInformation">
+  <TypeSignature Language="C#" Value="public struct TogglePattern.TogglePatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit TogglePattern/TogglePatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TogglePattern.TogglePatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Eigenschaftswerte einer <see cref="T:System.Windows.Automation.TogglePattern" /> -Objekt mithilfe seiner <see cref="P:System.Windows.Automation.TogglePattern.Current" /> oder <see cref="P:System.Windows.Automation.TogglePattern.Cached" /> Accessoren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ToggleState">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ToggleState ToggleState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ToggleState ToggleState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand zum ein-/Ausschalten der <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <value>Der <see cref="T:System.Windows.Automation.ToggleState" /> des <see cref="T:System.Windows.Automation.AutomationElement" />. Der Standardwert ist <see cref="F:System.Windows.Automation.ToggleState.Indeterminate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> durchlaufen muss seine <xref:System.Windows.Automation.ToggleState> in dieser Reihenfolge: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> und, falls unterstützt, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion übergeben, die eine Auflistung von Benutzeroberflächenautomatisierungs-Elementen zurückgibt, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIATogglePattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATogglePattern_snip/CSharp/UIATogglePattern_snippets.cs#100)]
+ [!code-vb[UIATogglePattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATogglePattern_snip/VisualBasic/UIATogglePattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

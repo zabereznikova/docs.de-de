@@ -1,0 +1,181 @@
+<Type Name="ConfigurationValidatorAttribute" FullName="System.Configuration.ConfigurationValidatorAttribute">
+  <TypeSignature Language="C#" Value="public class ConfigurationValidatorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationValidatorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationValidatorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für die <see cref="N:System.Configuration" /> Validierungssteuerelement Attributtypen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle ASP.NET Configuration standard-Validierungssteuerelement Attributtypen abgeleitet <xref:System.Configuration.ConfigurationValidatorAttribute>. Sie können diesen Typ verwenden, um Ihr eigenes benutzerdefiniertes Validierungssteuerelement-Attribut zu erstellen.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen, wie zum Erstellen von zwei benutzerdefinierte laufzeitvalidierungs-Steuerelemente mithilfe der <xref:System.Configuration.ConfigurationValidatorAttribute> Typ. Im erste Beispiel führt die Validierung mithilfe von hartcodierten Parametern. im zweite Beispiel überprüft mithilfe der Parameter zugewiesen, zu dem Zeitpunkt, die sie auf den entsprechenden Bereich-Eigenschaft angewendet wird. Dieses Codebeispiel enthält auch drei unterstützende Dateien. Die erste Datei enthält den benutzerdefinierten Abschnitt, der die oben beschriebenen Validierungssteuerelemente verwendet, die zweite Datei enthält einen benutzerdefinierten Konverter-Typ und die dritte Datei enthält die Konsolenanwendung, die erstellt und verwendet die benutzerdefinierte laufzeitvalidierungs-Steuerelemente und im Abschnitt aus, der sie enthält.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein festes Validierungssteuerelement mit hartcodierten Parametern zu erstellen.  
+  
+ [!code-csharp[System.Configuration.ConfigValidatorAttribute#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/CS/FixedValidatorAttribute.cs#21)]
+ [!code-vb[System.Configuration.ConfigValidatorAttribute#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/VB/FixedValidatorAttribute.vb#21)]  
+  
+ Im folgenden Codebeispiel veranschaulicht das Erstellen eines programmierbaren Validierungssteuerelements.  
+  
+ [!code-csharp[System.Configuration.ConfigValidatorAttribute#31](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/CS/ProgrammableValidatorAttribute.cs#31)]
+ [!code-vb[System.Configuration.ConfigValidatorAttribute#31](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/VB/ProgrammableValidatorAttribute.vb#31)]  
+  
+ Im folgenden Codebeispiel wird das Erstellen eines benutzerdefinierten Abschnitts mit den vorherigen Validierungssteuerelementen veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ConfigValidatorAttribute#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/CS/AutomobileSection.cs#11)]
+ [!code-vb[System.Configuration.ConfigValidatorAttribute#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/VB/AutomobileSection.vb#11)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie einen benutzerdefinierten Konverter erstellen.  
+  
+ [!code-csharp[System.Configuration.ConfigValidatorAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/CS/AutomobileConverter.cs#1)]
+ [!code-vb[System.Configuration.ConfigValidatorAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/VB/AutomobileConverter.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Konsolenanwendung zu erstellen, die erstellt und verwendet die benutzerdefinierte laufzeitvalidierungs-Steuerelemente und einem enthaltenden Bereich.  
+  
+ [!code-csharp[System.Configuration.ConfigValidatorAttribute#41](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/CS/TestingConfigValidatorAttribute.cs#41)]
+ [!code-vb[System.Configuration.ConfigValidatorAttribute#41](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigValidatorAttribute/VB/TestingConfigValidatorAttribute.vb#41)]  
+  
+ Im folgenden Codebeispiel wird eine Konfiguration Auszug aus der im vorherigen Beispiel verwendet.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+    <configSections>  
+        <section name="Cars" type="Samples.AspNet.SelectCar, ConfigValidatorAttribute, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" allowLocation="false" allowDefinition="Everywhere" allowExeDefinition="MachineToApplication" restartOnExternalChanges="true" requirePermission="true" />  
+    </configSections>  
+    <Cars commute="Make:AlfaRomeo Color:Blue Miles:10000 Year:2002"  
+        dream="Make:Ferrari Color:Red Miles:10 Year:2005" />  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationValidatorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationValidatorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationValidatorAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Modell attributierten verwenden Sie diesen Konstruktor, um sicherzustellen, dass der verwandten Eigenschaft zugewiesene Wert eine ganze Zahl ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationValidatorAttribute (Type validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationValidatorAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Der Validierungssteuerelementtyp, verwenden Sie beim Erstellen einer Instanz von <see cref="T:System.Configuration.ConfigurationValidatorAttribute" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Configuration.ConfigurationValidatorAttribute" /> -Klasse unter Verwendung des angegebenen Validierungssteuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor bestimmt, ob eine Validator-Instanz kann, von einer Instanz des angegebenen erstellt werden `validator` Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="validator" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="validator" />stammt nicht aus <see cref="T:System.Configuration.ConfigurationValidatorBase" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorInstance">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.ConfigurationValidatorBase ValidatorInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationValidatorBase ValidatorInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationValidatorAttribute.ValidatorInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationValidatorBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Validierungssteuerelement Attributinstanz ab.</summary>
+        <value>Der aktuelle <see cref="T:System.Configuration.ConfigurationValidatorBase" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorType">
+      <MemberSignature Language="C#" Value="public Type ValidatorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValidatorType" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationValidatorAttribute.ValidatorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Attributs ein Validator ab.</summary>
+        <value>Die <see cref="T:System.Type" /> von der aktuellen Instanz des Validierungssteuerelement-Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

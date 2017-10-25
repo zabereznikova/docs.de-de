@@ -1,0 +1,15 @@
+<Namespace Name="System.Timers">
+  <Docs>
+    <summary>Die <see cref="N:System.Timers" /> -Namespace stellt die <see cref="T:System.Timers.Timer" /> -Komponente, die Ihnen ermöglicht, das Auslösen eines Ereignisses in einem angegebenen Intervall.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Timers.Timer> Komponente ist eine serverbasierte Zeitgeber, mit dem ermöglicht Ihnen die Angabe ein sich wiederholenden Intervall, in dem die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, in der Anwendung. Sie können dann dieses Ereignis, um die reguläre Verarbeitung bieten behandeln. Nehmen wir beispielsweise an, Sie haben einen wichtigen Server, die aufbewahrt werden muss, 24 Stunden pro Tag, 7 Tage die Woche ausgeführt. Sie erstellen einen Dienst, verwendet eine <xref:System.Timers.Timer> in regelmäßigen Abständen überprüfen Sie den Server, und stellen Sie sicher, dass das System ausgeführt wird. Wenn das System nicht reagiert wird, versucht der Dienst konnte den Server neu starten oder einen Administrator zu benachrichtigen.  
+  
+ Der Server-basierten <xref:System.Timers.Timer> ist für die Verwendung mit Arbeitsthreads in einer Multithreadumgebung konzipiert. Serverzeitgeber können zwischen Threads verschieben, erhöhten behandeln <xref:System.Timers.Timer.Elapsed> Ereignis, wodurch eine größere Genauigkeit als Windows-Zeitgeber in Auslösen des Ereignisses auf der Zeit.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

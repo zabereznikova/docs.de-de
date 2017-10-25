@@ -1,0 +1,269 @@
+<Type Name="DoubleType" FullName="Microsoft.VisualBasic.CompilerServices.DoubleType">
+  <TypeSignature Language="C#" Value="public sealed class DoubleType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DoubleType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.DoubleType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Diese Klasse ist seit Visual Basic 2005 veraltet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt Methoden zum Bearbeiten von Daten, die potenziell darstellen einer `Double` Wert.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="FromObject">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt eine <see langword="Double" /> -Wert, der dem angegebenen Objekt und eine optionale Formatierungsinformationen zum entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static double FromObject (object Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromObject(object Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DoubleType.FromObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zu konvertierende Objekt eine <see langword="Double" /> Wert.</param>
+        <summary>Gibt eine <see langword="Double" /> -Wert, der dem angegebenen Objekt entspricht.</summary>
+        <returns>Die <see langword="Double" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static double FromObject (object Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromObject(object Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DoubleType.FromObject(System.Object,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zu konvertierende Objekt eine <see langword="Double" /> Wert.</param>
+        <param name="NumberFormat">Ein <see cref="T:System.Globalization.NumberFormatInfo" /> -Objekt, das definiert, wie numerische Werte werden formatiert und angezeigt werden, abhängig von der Kultur.</param>
+        <summary>Gibt eine <see langword="Double" /> -Wert, der dem angegebenen Objekt entspricht.</summary>
+        <returns>Die <see langword="Double" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromString">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt eine <see langword="Double" /> Wert, der angegebenen Zeichenfolge und eine optionale Formatierungsinformationen zum entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static double FromString (string Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromString(string Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DoubleType.FromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zeichenfolge, die zum Konvertieren einer <see langword="Double" /> Wert.</param>
+        <summary>Gibt eine <see langword="Double" /> -Wert, der der angegebenen Zeichenfolge entspricht.</summary>
+        <returns>Die <see langword="Double" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static double FromString (string Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FromString(string Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DoubleType.FromString(System.String,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zeichenfolge, die zum Konvertieren einer <see langword="Double" /> Wert.</param>
+        <param name="NumberFormat">Ein <see cref="T:System.Globalization.NumberFormatInfo" /> -Objekt, das definiert, wie numerische Werte werden formatiert und angezeigt werden, abhängig von der Kultur.</param>
+        <summary>Gibt eine <see langword="Double" /> Wert, der angegebenen Zeichenfolge und die Informationen für das Zahlenformat entspricht.</summary>
+        <returns>Die <see langword="Double" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Parse">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt eine <see langword="Double" /> Wert, der angegebenen Zeichenfolge und eine optionale Formatierungsinformationen zum entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static double Parse (string Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Parse(string Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DoubleType.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zeichenfolge, die zum Konvertieren einer <see langword="Double" /> Wert.</param>
+        <summary>Gibt eine <see langword="Double" /> -Wert, der der angegebenen Zeichenfolge entspricht.</summary>
+        <returns>Die <see langword="Double" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static double Parse (string Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Parse(string Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DoubleType.Parse(System.String,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Erforderlich. Zeichenfolge, die zum Konvertieren einer <see langword="Double" /> Wert.</param>
+        <param name="NumberFormat">Ein <see cref="T:System.Globalization.NumberFormatInfo" /> -Objekt, das definiert, wie numerische Werte werden formatiert und angezeigt werden, abhängig von der Kultur.</param>
+        <summary>Gibt eine <see langword="Double" /> Wert, der angegebenen Zeichenfolge und die Informationen für das Zahlenformat entspricht.</summary>
+        <returns>Die <see langword="Double" /> entsprechende Wert <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt das Visual Basic-Compiler und nicht direkt aus Ihrem Code verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

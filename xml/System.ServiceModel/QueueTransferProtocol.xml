@@ -1,0 +1,79 @@
+<Type Name="QueueTransferProtocol" FullName="System.ServiceModel.QueueTransferProtocol">
+  <TypeSignature Language="C#" Value="public enum QueueTransferProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QueueTransferProtocol extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.QueueTransferProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Protokoll an, das zur Übertragung von Nachrichten zwischen Warteschlangen-Managern verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Srmp oder SrmpSecure angeben, wenn das UseActiveDirectory-Attribut, um festgelegt ist `true` wird eine Ausnahme ausgelöst, da Message Queuing (MSMQ) keine bietet für Active Directory-Adressierung mit SRMP unterstützt. UseActiveDirectory ist ein Attribut für die [ &lt;NetMsmqBinding&gt; ](~/docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) und [ &lt;MsmqIntegrationBinding&gt;](~/docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
+  
+ Weitere Informationen zur Adressierung von Warteschlangen finden Sie unter [Dienstendpunkte und Adressieren von Warteschlangen](~/docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Native">
+      <MemberSignature Language="C#" Value="Native" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.QueueTransferProtocol Native = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.QueueTransferProtocol.Native" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.QueueTransferProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie das systemeigene MSMQ-Protokoll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Srmp">
+      <MemberSignature Language="C#" Value="Srmp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.QueueTransferProtocol Srmp = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.QueueTransferProtocol.Srmp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.QueueTransferProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie das Soap Reliable Messaging Protocol (SRMP).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SrmpSecure">
+      <MemberSignature Language="C#" Value="SrmpSecure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.QueueTransferProtocol SrmpSecure = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.QueueTransferProtocol.SrmpSecure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.QueueTransferProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie den Soap Reliable Messaging Protocol Secure (SRMPS)-Transport.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

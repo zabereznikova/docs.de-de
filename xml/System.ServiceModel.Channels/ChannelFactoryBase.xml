@@ -1,0 +1,419 @@
+<Type Name="ChannelFactoryBase" FullName="System.ServiceModel.Channels.ChannelFactoryBase">
+  <TypeSignature Language="C#" Value="public abstract class ChannelFactoryBase : System.ServiceModel.Channels.ChannelManagerBase, System.ServiceModel.Channels.IChannelFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChannelFactoryBase extends System.ServiceModel.Channels.ChannelManagerBase implements class System.ServiceModel.Channels.IChannelFactory, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ChannelFactoryBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.ChannelManagerBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannelFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine allgemeine Basisimplementierung für alle benutzerdefinierten Kanalfactorys bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Basisklasse, um eine benutzerdefinierte Kanalfactory zu erstellen.  
+  
+ Die <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Klasse wird von der <xref:System.ServiceModel.Channels.ChannelManagerBase>-Klasse abgeleitet und implementiert die <xref:System.ServiceModel.Channels.IChannelFactory>-Schnittstelle für die Erstellung von Kanälen. Die Methoden handhaben die Parametervalidierung und delegieren dann zu geschützten, virtuellen oder abstrakten Methoden, die abgeleitete Klassen überschreiben können.  
+  
+ Jede der geschützten virtuellen Methoden wird in Hinsicht auf die anderen Methoden auf der <xref:System.ServiceModel.Channels.IChannelFactory>-Schnittstelle automatisch synchronisiert (einschließlich der Statusübergangsmethoden). Dies bedeutet, dass kein zusätzliches Sperren erforderlich ist, um sicherzustellen, dass sich das Objekt in einem konsistenten Status innerhalb des Methodentexts befindet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelFactoryBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor>-Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelFactoryBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelFactoryBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelFactoryBase (System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase.#ctor(System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="timeouts">Die <see cref="T:System.ServiceModel.IDefaultCommunicationTimeouts" />, die die Standardtimeoutwerte für das Öffnen, Senden und Empfangen sowie für das Schließen beim Austauschen von Nachrichten festlegen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelFactoryBase" />-Klasse mit den angegebenen Standardtimeoutwerten für die Kommunikation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Verwenden von <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> anstelle des Standardkonstruktors können Sie benutzerdefinierte Timeoutwerte für das Öffnen, Senden, Empfangen und Schließen angeben, anstatt die Standardwerte des Dienstmodells zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCloseTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultCloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultCloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelFactoryBase.DefaultCloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für den Abschluss eines Schließvorgangs bereitgestellt wird.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, wie viel Zeit für das Schließen bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelFactoryBase.DefaultCloseTimeout%2A>-Eigenschaft auf einen Wert von 1 Minute fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOpenTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultOpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelFactoryBase.DefaultOpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das für den Abschluss eines Öffnungsvorgangs bereitgestellt wird.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, wie viel Zeit für das Öffnen bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelFactoryBase.DefaultOpenTimeout%2A>-Eigenschaft auf einen Wert von 1 Minute fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultReceiveTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultReceiveTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelFactoryBase.DefaultReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für den Abschluss eines Empfangsvorgangs bereitgestellt wird, oder legt dieses fest.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, welcher Zeitraum für den Empfang bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelFactoryBase.DefaultReceiveTimeout%2A>-Eigenschaft auf einen Wert von 10 Minuten fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSendTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultSendTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultSendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelFactoryBase.DefaultSendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für den Abschluss eines Sendevorgangs bereitgestellt wird, oder legt dieses fest.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, welcher Zeitraum für das Senden bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelFactoryBase.DefaultSendTimeout%2A>-Eigenschaft auf einen Wert von 1 Minute fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelFactoryBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public virtual T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt von der entsprechenden Ebene im Kanalstapel zurück.</summary>
+        <returns>Das angeforderte typisierte Objekt T, falls vorhanden, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um ein typisiertes Objekt, wie z. B. eine Schnittstelle für Einstellungseigenschaften oder eine Statusabfrage, aus der entsprechenden Ebene im Kanalfactorystapel abzufragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf lediglich an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Kanalfactoryebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+ Dies ist ähnlich der COM+-QueryService-Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbort">
+      <MemberSignature Language="C#" Value="protected override void OnAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase.OnAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt Verarbeitung auf einem Kommunikationsobjekt ein, nachdem aufgrund des Aufrufs eines synchronen Abbruchvorgangs der Übergang zum Schließen-Status eingesetzt hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung ist leer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginClose">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die angibt, wie viel Zeit für den Beim-Schließen-Vorgang bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Vorgang bei Abschluss des Schließens empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Objekt, das dem asynchronen Beim-Schließen-Vorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet einen asynchronen Schließvorgang für jeden Kanal, der von der Factory erstellt wurde.</summary>
+        <returns>Das <see cref="T:System.IAsyncResult" />, das auf den asynchronen Beim-Schließen-Vorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected override void OnClose (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClose(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase.OnClose(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die angibt, wie viel Zeit für den Beim-Schließen-Vorgang bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Fügt Verarbeitung auf einem Kommunikationsobjekt ein, nachdem der Übergang zum Öffnungsstatus stattgefunden hat, der innerhalb eines festgelegten Zeitintervalls abgeschlossen sein muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung ist leer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndClose">
+      <MemberSignature Language="C#" Value="protected override void OnEndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase.OnEndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Channels.ChannelFactoryBase.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Schließvorgang von Kanälen ab, die von der Factory geöffnet wurden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

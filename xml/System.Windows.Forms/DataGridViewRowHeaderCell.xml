@@ -1,0 +1,417 @@
+<Type Name="DataGridViewRowHeaderCell" FullName="System.Windows.Forms.DataGridViewRowHeaderCell">
+  <TypeSignature Language="C#" Value="public class DataGridViewRowHeaderCell : System.Windows.Forms.DataGridViewHeaderCell" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewRowHeaderCell extends System.Windows.Forms.DataGridViewHeaderCell" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowHeaderCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewHeaderCell</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Zeilenkopf ein <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeile Status Bilder (Zeichenstift Sternchen und Pfeil) werden gemäß der-DPI-Systemeinstellung angepasst, wenn die Datei "App.config" den folgenden Eintrag enthält:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Ableiten von <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" /> und der abgeleiteten Klasse neue Eigenschaften hinzugefügt haben, achten Sie darauf, dass Sie überschreiben die <see cref="M:System.Windows.Forms.DataGridViewRowHeaderCell.Clone" /> Methode, um die neuen Eigenschaften bei Klonvorgängen kopiert. Sie sollten auch der Basisklasse aufrufen, <see cref="M:System.Windows.Forms.DataGridViewRowHeaderCell.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewRowHeaderCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieser Zelle.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die geklonte <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues barrierefreies Objekt für die <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" />.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell.DataGridViewRowHeaderCellAccessibleObject" /> für die <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die <xref:System.Windows.Forms.DataGridViewRowHeaderCell.CreateAccessibilityInstance%2A>-Methode nicht explizit aufrufen, wird sie beim Verweis auf die <xref:System.Windows.Forms.DataGridViewCell.AccessibilityObject%2A>-Eigenschaft aufgerufen.  
+  
+> [!NOTE]
+>  Zum Abrufen oder festlegen <xref:System.Windows.Forms.DataGridViewCell.AccessibilityObject%2A>, müssen Sie einen Verweis zum Hinzufügen der `Accessibility` Assembly, die mit .NET Framework installiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClipboardContent">
+      <MemberSignature Language="C#" Value="protected override object GetClipboardContent (int rowIndex, bool firstCell, bool lastCell, bool inFirstRow, bool inLastRow, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetClipboardContent(int32 rowIndex, bool firstCell, bool lastCell, bool inFirstRow, bool inLastRow, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetClipboardContent(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="firstCell" Type="System.Boolean" />
+        <Parameter Name="lastCell" Type="System.Boolean" />
+        <Parameter Name="inFirstRow" Type="System.Boolean" />
+        <Parameter Name="inLastRow" Type="System.Boolean" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der auf 0 (null) basierende Index der Zeile, die die Zelle enthält.</param>
+        <param name="firstCell">
+          <see langword="true" />um anzugeben, dass die Zelle in der ersten Spalte des durch die ausgewählten Zellen definierten Bereichs befindet. andernfalls <see langword="false" />.</param>
+        <param name="lastCell">
+          <see langword="true" />um anzugeben, dass die Zelle die letzte Spalte der durch die ausgewählten Zellen definierten Bereichs ist. andernfalls <see langword="false" />.</param>
+        <param name="inFirstRow">
+          <see langword="true" />um anzugeben, dass die Zelle in der ersten Zeile des Bereichs, durch die ausgewählten Zellen definiert ist. andernfalls <see langword="false" />.</param>
+        <param name="inLastRow">
+          <see langword="true" />um anzugeben, dass die Zelle in der letzten Zeile des Bereichs, durch die ausgewählten Zellen definiert ist. andernfalls <see langword="false" />.</param>
+        <param name="format">Die aktuelle Formatzeichenfolge der Zelle.</param>
+        <summary>Ruft den formatierten Wert der Zelle, die zum Kopieren der <see cref="T:System.Windows.Forms.Clipboard" />.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die den Wert der Zelle, die zum Kopieren darstellt der <see cref="T:System.Windows.Forms.Clipboard" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abhängig vom Wert der <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridView> Steuerelement diese Methode wird aufgerufen, indem Sie des Steuerelements <xref:System.Windows.Forms.DataGridView.GetClipboardContent%2A> Methode, um eine Zwischenablage formatierten Wert abzurufen, die die Zelle darstellt.  
+  
+ Die Position im Zusammenhang Parameter dieser Methode anzugeben, wo sich diese Zelle befindet, in der Tabelle der Daten, die durch die ausgewählten Zellen im definierten Bereich darstellen der <xref:System.Windows.Forms.DataGridView> Steuerelement. Abhängig von der Position der Zelle kann die Informationen zur Formatierung von dieser Methode zusätzlich zu den Wert der Zelle zurückgegeben werden. Das HTML-Format für eine Zelle in der ersten Spalte einer Zeile wird angenommen, das Tag enthalten, das den Anfang einer Zeile angibt.  
+  
+ Die unterstützten Zwischenablageformate <xref:System.Windows.Forms.DataFormats.Text?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataFormats.UnicodeText?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataFormats.Html?displayProperty=nameWithType>, und <xref:System.Windows.Forms.DataFormats.CommaSeparatedValue?displayProperty=nameWithType>.  
+  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.Clipboard>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="rowIndex" />ist kleiner als 0 (null) oder größer als oder gleich der Anzahl der Zeilen im Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentBounds">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle GetContentBounds (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle GetContentBounds(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetContentBounds(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Der Grafikkontext für die Zelle.</param>
+        <param name="cellStyle">Die <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> auf die Zelle angewendet werden soll.</param>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <summary>Gibt das umschließende Rechteck, das die Zelle Inhaltsbereichs Zellstils berechnet wird unter Verwendung des angegebenen <see cref="T:System.Drawing.Graphics" /> und Stil der Zelle.</summary>
+        <returns>Die <see cref="T:System.Drawing.Rectangle" /> , die den Inhalt der Zelle umschließt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorIconBounds">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle GetErrorIconBounds (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle GetErrorIconBounds(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetErrorIconBounds(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Der Grafikkontext für die Zelle.</param>
+        <param name="cellStyle">Die <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> auf die Zelle angewendet werden soll.</param>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <summary>Gibt das das Fehlersymbol der Zelle, sofern angezeigt, umschließende Rechteck zurück.</summary>
+        <returns>Die <see cref="T:System.Drawing.Rectangle" /> , das das Fehlersymbol der Zelle, sofern angezeigt, andernfalls <see cref="F:System.Drawing.Rectangle.Empty" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorText">
+      <MemberSignature Language="C#" Value="protected override string GetErrorText (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string GetErrorText(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetErrorText(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Zeilenindex der Zelle.</param>
+        <summary>Gibt eine Zeichenfolge zurück, die den Fehler für die Zelle darstellt.</summary>
+        <returns>Eine Zeichenfolge, die Beschreibung des Fehlers für die aktuelle <see cref="T:System.Windows.Forms.DataGridViewCell" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInheritedContextMenuStrip">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip GetInheritedContextMenuStrip (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.ContextMenuStrip GetInheritedContextMenuStrip(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetInheritedContextMenuStrip(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der abzurufenden Zeile die <see cref="T:System.Windows.Forms.ContextMenuStrip" /> von. Der Index muss 1, um die Zeile mit Spaltenüberschriften anzugeben.</param>
+        <summary>Ruft das geerbte Kontextmenü für die angegebene Zeile ab.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.ContextMenuStrip" /> der Zeile, falls vorhanden; andernfalls die <see cref="T:System.Windows.Forms.ContextMenuStrip" /> geerbt von <see cref="T:System.Windows.Forms.DataGridView" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewElement.DataGridView" /> -Eigenschaft der Zelle ist nicht <see langword="null" /> und der angegebenen <paramref name="rowIndex" /> ist kleiner als 0 oder größer als die Anzahl der Zeilen im Steuerelement minus 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInheritedStyle">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCellStyle GetInheritedStyle (System.Windows.Forms.DataGridViewCellStyle inheritedCellStyle, int rowIndex, bool includeColors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.DataGridViewCellStyle GetInheritedStyle(class System.Windows.Forms.DataGridViewCellStyle inheritedCellStyle, int32 rowIndex, bool includeColors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetInheritedStyle(System.Windows.Forms.DataGridViewCellStyle,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inheritedCellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="includeColors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inheritedCellStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> mit dem geerbten Zellstil gefüllt werden.</param>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <param name="includeColors">
+          <see langword="true" />So enthalten die geerbte Farben in den zurückgegebenen Zellenstil aus; andernfalls <see langword="false" />.</param>
+        <summary>Ruft den auf die Zelle angewendeten Stil ab.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , umfasst die stileinstellungen der Zelle geerbt von der übergeordneten Zeile der Zelle, Spalte und <see cref="T:System.Windows.Forms.DataGridView" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size GetPreferredSize (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex, System.Drawing.Size constraintSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex, valuetype System.Drawing.Size constraintSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetPreferredSize(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="constraintSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen der Zelle verwendet.</param>
+        <param name="cellStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , der den Stil der Zelle darstellt.</param>
+        <param name="rowIndex">Der auf 0 (null) basierende Zeilenindex der Zelle.</param>
+        <param name="constraintSize">Die maximal zulässige Größe der Zelle.</param>
+        <summary>Berechnet die geeignete Größe der Zelle (in Pixel).</summary>
+        <returns>Ein <see cref="T:System.Drawing.Size" /> , das die bevorzugte Größe der Zelle in Pixel darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="protected override object GetValue (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetValue(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <summary>Ruft den Wert der Zelle ab.</summary>
+        <returns>Der Wert in der <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `rowIndex` Wert-1 gibt eine freigegebene Zeile.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewElement.DataGridView" /> -Eigenschaft der Zelle ist nicht <see langword="null" /> und <paramref name="rowIndex" /> ist kleiner als-1 oder größer als oder gleich der Anzahl der Zeilen im übergeordneten <see cref="T:System.Windows.Forms.DataGridView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected override void Paint (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates cellState, object value, object formattedValue, string errorText, System.Windows.Forms.DataGridViewCellStyle cellStyle, System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Paint(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle cellBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates cellState, object value, object formattedValue, string errorText, class System.Windows.Forms.DataGridViewCellStyle cellStyle, class System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Object,System.Object,System.String,System.Windows.Forms.DataGridViewCellStyle,System.Windows.Forms.DataGridViewAdvancedBorderStyle,System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="cellBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="cellState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="formattedValue" Type="System.Object" />
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="advancedBorderStyle" Type="System.Windows.Forms.DataGridViewAdvancedBorderStyle" />
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen verwendet die <see cref="T:System.Windows.Forms.DataGridViewCell" />.</param>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das den Clientbereich darstellt der <see cref="T:System.Windows.Forms.DataGridView" /> , die neu gezeichnet werden muss.</param>
+        <param name="cellBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des enthält die <see cref="T:System.Windows.Forms.DataGridViewCell" /> , die gezeichnet wird.</param>
+        <param name="rowIndex">Der Zeilenindex der gezeichneten Zelle.</param>
+        <param name="cellState">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zelle angibt.</param>
+        <param name="value">Die Daten von der <see cref="T:System.Windows.Forms.DataGridViewCell" /> , die gezeichnet wird.</param>
+        <param name="formattedValue">Die formatierten Daten der der <see cref="T:System.Windows.Forms.DataGridViewCell" /> , die gezeichnet wird.</param>
+        <param name="errorText">Eine Fehlermeldung, die der Zelle zugeordnet ist.</param>
+        <param name="cellStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , formatierungs- und Formatinformationen Informationen über die Zelle enthält.</param>
+        <param name="advancedBorderStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewAdvancedBorderStyle" /> mit Rahmenarten für die Zelle, die gezeichnet wird.</param>
+        <param name="paintParts">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte, der angibt, welche Teile der Zelle gezeichnet werden müssen.</param>
+        <summary>Zeichnet die aktuelle <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="protected override bool SetValue (int rowIndex, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool SetValue(int32 rowIndex, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.SetValue(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <param name="value">Der festzulegende Zellwert.</param>
+        <summary>Legt den Wert der Zelle fest.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert festgelegt wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowHeaderCell.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung der Zelle zurück.</summary>
+        <returns>Eine Zeichenfolge, die aktive Zelle darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

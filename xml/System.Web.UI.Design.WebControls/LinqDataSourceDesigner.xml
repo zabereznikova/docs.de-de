@@ -1,0 +1,734 @@
+<Type Name="LinqDataSourceDesigner" FullName="System.Web.UI.Design.WebControls.LinqDataSourceDesigner">
+  <TypeSignature Language="C#" Value="public class LinqDataSourceDesigner : System.Web.UI.Design.DataSourceDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDataSourceDesigner extends System.Web.UI.Design.DataSourceDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DataSourceDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer, wenn Sie eine Sicht-Designers wechseln (z. B. **Entwurf** anzeigen in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]), wird die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelementmarkup analysiert wird. Auf der Entwurfsoberfläche wird eine Entwurfszeitversion des Steuerelements erstellt. Wenn Sie zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit als Markup für die Webseite beibehalten.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement in einem visuellen Designer.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Um Befehle in einer abgeleiteten Klasse für das Aktionsmenü-Liste zur Entwurfszeit zu gewährleisten, müssen Sie überschreiben die <see cref="P:System.Web.UI.Design.ControlDesigner.ActionLists" /> Eigenschaft. Für diese Eigenschaft zurückgeben eine benutzerdefinierten <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> -Objekt, das Elemente enthält, die Ableitung der <see cref="T:System.ComponentModel.Design.DesignerActionList" /> Objekt.  
+  
+ Weitere Informationen finden Sie in den Ausführungen zur <see cref="T:System.Web.UI.Design.DataSourceDesigner" />-Klasse.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Elementen, die zum Erstellen einer Liste Aktionsmenü zur Entwurfszeit verwendet werden.</summary>
+        <value>Eine Auflistung, die die Aktion Listenelemente enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConfigure">
+      <MemberSignature Language="C#" Value="public override bool CanConfigure { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanConfigure" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanConfigure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure" /> -Methode vom Entwurfshost aufgerufen werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure" /> Methode kann aufgerufen werden, andernfalls, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure%2A> Methode kann aufgerufen werden, wenn die <xref:System.Web.UI.Control.Site%2A?displayProperty=nameWithType> Eigenschaft der zugeordneten <xref:System.Web.UI.WebControls.LinqDataSource> -Steuerelement implementiert die <xref:System.ComponentModel.Design.ITypeDiscoveryService?displayProperty=nameWithType> Schnittstelle. In diesem Fall die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanConfigure%2A> Eigenschaftswert ist `true`.  
+  
+ Wenn die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanConfigure%2A> Eigenschaft ist `true`, **Datenquelle konfigurieren** Menüelement wird angezeigt, der **LinqDataSource-Aufgaben** Menü des zugeordneten Steuerelements für die visuelle Designeroberfläche. Wenn dieses Element ausgewählt ist, die **Datenquelle konfigurieren** -Assistent wird gestartet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRefreshSchema">
+      <MemberSignature Language="C#" Value="public override bool CanRefreshSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRefreshSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanRefreshSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema(System.Boolean)" /> -Methode vom Entwurfshost aufgerufen werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema(System.Boolean)" /> Methode kann aufgerufen werden, andernfalls, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema%2A> Methode kann aufgerufen werden, wenn alle folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.Control.Site%2A?displayProperty=nameWithType> Eigenschaft der zugeordneten <xref:System.Web.UI.WebControls.LinqDataSource> -Steuerelement implementiert die <xref:System.ComponentModel.Design.ITypeDiscoveryService?displayProperty=nameWithType> Schnittstelle.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSourceView.ContextTypeName%2A> -Eigenschaft einen Wert enthält.  
+  
+ Wenn diese Bedingungen "true" werden die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanRefreshSchema%2A> Eigenschaftswert ist `true`.  
+  
+ Wenn die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanRefreshSchema%2A> ist `true`, **Schema aktualisieren** Menüelement wird angezeigt, der **LinqDataSource-Aufgaben** Menü des zugeordneten Steuerelements für die visuelle Designeroberfläche.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Configure">
+      <MemberSignature Language="C#" Value="public override void Configure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Configure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet den Konfigurations-Assistenten im Entwurfshost an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure%2A> Methode startet die **Datenquelle konfigurieren** Assistenten auf der Oberfläche des visuellen Designer.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure%2A> Methode wird aufgerufen, wenn die **Datenquelle konfigurieren** Menüelement ausgewählt ist, auf die **LinqDataSource-Aufgaben** Menü des zugeordneten <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement. Die **Datenquelle konfigurieren** Menüelement angezeigt wird, auf die **LinqDataSource-Aufgaben** Menü bei der <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanConfigure%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.WebControls.LinqDataSourceContextTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_ContextTypeName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Typs, der die Eigenschaft enthält, dessen Wert die Daten hat, die Sie abrufen möchten.</summary>
+        <value>Der Name der Klasse zum Abrufen von Daten aus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public string Delete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Delete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Delete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.WebControls.LinqDataSourceInsertUpdateDeleteStatementConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_DeleteParameters")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert für den Löschvorgang ab oder legt ihn fest.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Web.UI.WebControls.LinqDataSource> Instanz durch Festlegen dieser Eigenschaft hat keine Auswirkung. Diese Eigenschaft führt Shadowing für eine Eigenschaft in das zugeordnete Steuerelement und dient nur zur internen Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDelete">
+      <MemberSignature Language="C#" Value="public bool EnableDelete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.EnableDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Zeilen aus der Datenquelle zur Laufzeit gelöscht werden können.</summary>
+        <value>
+          <see langword="true" />Wenn der Löschvorgang für Benutzer der zugeordneten aktiviert ist <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Instanz ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableInsert">
+      <MemberSignature Language="C#" Value="public bool EnableInsert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.EnableInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Zeilen in der Datenquelle zur Laufzeit eingefügt werden können.</summary>
+        <value>
+          <see langword="true" />Wenn der Einfügevorgang für Benutzer der zugeordneten aktiviert ist <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Instanz ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUpdate">
+      <MemberSignature Language="C#" Value="public bool EnableUpdate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.EnableUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Zeilen in der Datenquelle zur Laufzeit aktualisiert werden können.</summary>
+        <value>
+          <see langword="true" />Wenn der Update-Vorgang für Benutzer der zugeordneten aktiviert ist <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Instanz; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerDataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.DesignerDataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">Der Name der Sicht zurückgegeben werden soll.</param>
+        <summary>Gibt eine Datenquellensicht an, die dem angegebenen Namen ab.</summary>
+        <returns>Ein Objekt, dessen Name gemäß <paramref name="viewName" />ist, andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="public override string[] GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste der verfügbaren Ansichten ab.</summary>
+        <returns>Eine Auflistung mit je einem Element mit dem Namen "DefaultView".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupBy">
+      <MemberSignature Language="C#" Value="public string GroupBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.GroupBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_GroupBy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der verwendet wird, wenn die Group By-Klausel erstellt wird.</summary>
+        <value>Eine Zeichenfolge, die die Eigenschaften enthält, die zum Gruppieren von Daten verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Objekt initialisiert werden.</param>
+        <summary>Initialisiert den Steuerelementdesigner und lädt die angegebene Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public string Insert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Insert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Insert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.WebControls.LinqDataSourceInsertUpdateDeleteStatementConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_InsertParameters")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert für den Löschvorgang ab oder legt ihn fest.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Web.UI.WebControls.LinqDataSource> Instanz durch Festlegen dieser Eigenschaft hat keine Auswirkung. Diese Eigenschaft führt Shadowing für eine Eigenschaft in das zugeordnete Steuerelement und dient nur zur internen Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderBy">
+      <MemberSignature Language="C#" Value="public string OrderBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrderBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.OrderBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_OrderBy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der verwendet wird, wenn die Order By-Klausel erstellt wird.</summary>
+        <value>Eine Zeichenfolge, die die Eigenschaften enthält, die zum Sortieren der Daten verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderGroupsBy">
+      <MemberSignature Language="C#" Value="public string OrderGroupsBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrderGroupsBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.OrderGroupsBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_OrderGroupsBy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der verwendet wird, wenn die Gruppen Order By-Klausel erstellt wird.</summary>
+        <value>Eine Zeichenfolge, die die Eigenschaften enthält, die zum Sortieren der gruppierter Daten verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die zu filternden Eigenschaften.</param>
+        <summary>Wird vom Designer zum Hinzufügen oder Entfernen von Eigenschaften im Eigenschaftenraster ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshSchema">
+      <MemberSignature Language="C#" Value="public override void RefreshSchema (bool preferSilent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RefreshSchema(bool preferSilent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferSilent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferSilent">
+          <see langword="true" />alle Datenquellenereignisse unterdrückt, bis das Schema wird aktualisiert.</param>
+        <summary>Aktualisiert das Schema aus der zugrunde liegenden Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Entwurfshost ruft die <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema%2A> Methode nur, wenn <xref:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanRefreshSchema%2A> ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public string Select { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Select" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Select" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_Select")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die Werte für den ausgewählten Vorgang enthält.</summary>
+        <value>Eine Zeichenfolge, die verwendet wird, wenn die Select-Klausel erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="public IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, das zugeordnete Dienstanbieter die <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Instanz.</summary>
+        <value>Ein Objekt, das den-Dienstanbieter darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableName">
+      <MemberSignature Language="C#" Value="public string TableName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TableName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.TableName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.WebControls.LinqDataSourceTableConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_TableName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="P:System.Web.UI.WebControls.LinqDataSource.TableName" /> Eigenschaft von der <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Instanz.</summary>
+        <value>Der Name der Klasse, die die Daten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public string Update { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Update" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Update" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.WebControls.LinqDataSourceInsertUpdateDeleteStatementConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_UpdateParameters")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert für den Aktualisierungsvorgang ab.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Web.UI.WebControls.LinqDataSource> Instanz durch Festlegen dieser Eigenschaft hat keine Auswirkung. Diese Eigenschaft führt Shadowing für eine Eigenschaft in das zugeordnete Steuerelement und dient nur zur internen Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where">
+      <MemberSignature Language="C#" Value="public string Where { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Where" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Where" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.WebControls.LinqDataSourceStatementEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.ResourceDescription("LinqDataSource_Where")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Web.UI.WebControls.LinqDataSource.Where" />-Eigenschaft des <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelements ab oder legt diese fest.</summary>
+        <value>Der Wert der <see cref="P:System.Web.UI.WebControls.LinqDataSource.Where" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

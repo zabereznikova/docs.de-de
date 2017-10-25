@@ -1,0 +1,120 @@
+<Type Name="KeyNameIdentifierClause" FullName="System.ServiceModel.Security.KeyNameIdentifierClause">
+  <TypeSignature Language="C#" Value="public class KeyNameIdentifierClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyNameIdentifierClause extends System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.KeyNameIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Schlüsselnamen-Bezeichnerklausel in einem Sicherheitstoken wieder.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyNameIdentifierClause (string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.KeyNameIdentifierClause.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Schlüsselname.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.KeyNameIdentifierClause" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyName">
+      <MemberSignature Language="C#" Value="public string KeyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.KeyNameIdentifierClause.KeyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüsselnamen ab.</summary>
+        <value>Der Schlüsselname.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.KeyNameIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="clause">To be added.</param>
+        <summary>Überprüft, ob eine <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> mit der aktuellen Instanz dieser Klasse übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Übereinstimmung besteht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.KeyNameIdentifierClause.Matches(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Die Sicherheitsschlüssel-Namensklausel.</param>
+        <summary>Überprüft, ob der angegebene Schlüsselname mit dem Schlüsselnamen der aktuellen Instanz übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Übereinstimmung besteht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.KeyNameIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> zurück, die das aktuelle <see langword="Object" /> darstellt. (Geerbt von <see cref="T:System.Object" />)</summary>
+        <returns>Der aktuelle <see langword="Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

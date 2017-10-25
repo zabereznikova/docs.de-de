@@ -1,0 +1,230 @@
+<Type Name="MessageBoxIcon" FullName="System.Windows.Forms.MessageBoxIcon">
+  <TypeSignature Language="C#" Value="public enum MessageBoxIcon" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MessageBoxIcon extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MessageBoxIcon" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Konstanten an, die definieren, welche Informationen angezeigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von der <xref:System.Windows.Forms.MessageBox>-Klasse verwendet. Die Beschreibung der einzelnen Member dieser Enumeration enthält eine typische Darstellung des Symbols. Die tatsächliche angezeigte Grafik ist eine Funktion der Betriebssystem-Konstanten. Im aktuellen Implementierungen sind vier eindeutige Symbole mit mehreren Werten, die ihnen zugewiesen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.MessageBox> informiert den Benutzer, der einen fehlenden Eintrag in einer <xref:System.Windows.Forms.TextBox>. Dieses Beispiel benötigen Sie, dass die Methode aufgerufen wird, von einem vorhandenen Formular mit einem <xref:System.Windows.Forms.Button> und ein <xref:System.Windows.Forms.TextBox> darauf.  
+  
+```csharp  
+private void Form1_FormClosing(object sender, FormClosingEventArgs e)  
+{  
+    const string message =  
+        "Are you sure that you would like to close the form?";  
+    const string caption = "Form Closing";  
+    var result = MessageBox.Show(message, caption,  
+                                 MessageBoxButtons.YesNo,  
+                                 MessageBoxIcon.Exclamation);  
+  
+    // If the no button was pressed ...  
+    if (result == DialogResult.No)  
+    {  
+        // cancel the closure of the form.  
+        e.Cancel = true;  
+    }  
+}  
+```  
+  
+```cpp  
+private:  
+   void Form1_FormClosing(Object^ sender, FormClosingEventArgs^ e)  
+   {  
+      // If the no button was pressed ...  
+      if ((MessageBox::Show(  
+         "Are you sure that you would like to close the form?",   
+         "Form Closing", MessageBoxButtons::YesNo,   
+         MessageBoxIcon::Exclamation) == DialogResult::No))  
+      {  
+         // cancel the closure of the form.  
+         e->Cancel = true;  
+      }  
+   }  
+```  
+  
+```vb  
+Private Sub Form1_FormClosing( _  
+    ByVal sender As System.Object, _  
+    ByVal e As System.Windows.Forms.FormClosingEventArgs) _  
+    Handles MyBase.FormClosing  
+  
+    Dim message As String = _  
+            "Are you sure that you would like to close the form?"  
+    Dim caption As String = "Form Closing"  
+    Dim result = MessageBox.Show(message, caption, _  
+                                 MessageBoxButtons.YesNo, _  
+                                 MessageBoxIcon.Exclamation)  
+  
+    ' If the no button was pressed ...  
+    If (result = DialogResult.No) Then  
+        ' cancel the closure of the form.  
+        e.Cancel = True  
+    End If  
+End Sub  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Asterisk">
+      <MemberSignature Language="C#" Value="Asterisk" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Asterisk = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Asterisk" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol, das aus dem Kleinbuchstaben „i“ in einem Kreis besteht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Error = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol, das aus einem weißen X in einem Kreis mit rotem Hintergrund besteht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclamation">
+      <MemberSignature Language="C#" Value="Exclamation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Exclamation = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Exclamation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol, das aus einem Ausrufezeichen in einem Dreieck mit gelben Hintergrund besteht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hand">
+      <MemberSignature Language="C#" Value="Hand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Hand = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Hand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol, das aus einem weißen X in einem Kreis mit rotem Hintergrund besteht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Information">
+      <MemberSignature Language="C#" Value="Information" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Information = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Information" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol, das aus dem Kleinbuchstaben „i“ in einem Kreis besteht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält keine Symbole.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Question">
+      <MemberSignature Language="C#" Value="Question" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Question = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Question" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol mit einem Fragezeichen in einem Kreis. Das Fragezeichen-Meldungssymbol wird nicht mehr empfohlen, da es keinen bestimmten Meldungstyp eindeutig darstellt und die Formulierung einer Nachricht als Frage kann auf alle Meldungstypen angewendet werden. Darüber hinaus können Benutzer das Meldungssymbol „Fragezeichen“ mit Hilfeinformationen verwechseln. Verwenden Sie dieses Fragezeichen-Meldungssymbol nicht in Ihren Meldungsfeldern. Das System unterstützt seine Einbindung nur aus Gründen der Abwärtskompatibilität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="Stop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Stop = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Stop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol, das aus einem weißen X in einem Kreis mit rotem Hintergrund besteht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="Warning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MessageBoxIcon Warning = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MessageBoxIcon.Warning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MessageBoxIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Meldungsfeld enthält ein Symbol, das aus einem Ausrufezeichen in einem Dreieck mit gelben Hintergrund besteht.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

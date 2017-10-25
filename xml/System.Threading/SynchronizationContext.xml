@@ -1,0 +1,548 @@
+<Type Name="SynchronizationContext" FullName="System.Threading.SynchronizationContext">
+  <TypeSignature Language="C#" Value="public class SynchronizationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SynchronizationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.SynchronizationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Grundfunktionen für die Weitergabe eines Synchronisierungskontexts in unterschiedlichen Synchronisierungsmodellen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.SynchronizationContext> Klasse ist eine Basisklasse, die ohne einen Freethread-Kontext bereitstellt.  
+  
+ Der Zweck des Synchronisierungsmodells von dieser Klasse implementiert ist, die interne asynchrone/synchrone Vorgänge für die common Language Runtime mit verschiedenen Synchronisierungsmodellen ordnungsgemäß verhält. Dieses Modell auch vereinfacht einen Teil der Anforderungen, die verwaltete Anwendungen mussten die ausführen, um verschiedene synchronisierungsmöglichkeiten-Umgebung ordnungsgemäß funktioniert.  
+  
+ Anbieter von Synchronisierungsmodellen können diese Klasse erweitern und eigene Implementierungen dieser Methoden bereitstellen.  
+  
+ Weitere Informationen zu Synchronisierung finden Sie im Artikel [darauf, dass alle über SynchronizationContext](http://msdn.microsoft.com/magazine/gg598924.aspx) im MSDN Magazin.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">Vererbung benötigen <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> und <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SynchronizationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Threading.SynchronizationContext" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor führt keine Parameter-Initialisierung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">Vererbung benötigen <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /> und <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.SynchronizationContext CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.SynchronizationContext CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.SynchronizationContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse eine Kopie des Synchronisierungskontexts.</summary>
+        <returns>Ein neues <see cref="T:System.Threading.SynchronizationContext" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt ein leeres <xref:System.Threading.SynchronizationContext> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Threading.SynchronizationContext Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Threading.SynchronizationContext Current" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SynchronizationContext.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.SynchronizationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Synchronisierungskontext für den aktuellen Thread ab.</summary>
+        <value>Ein <see cref="T:System.Threading.SynchronizationContext" />-Objekt, das den aktuellen Synchronisierungskontext darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich für die Weitergabe eines Synchronisierungskontexts von einem Thread zu einem anderen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWaitNotificationRequired">
+      <MemberSignature Language="C#" Value="public bool IsWaitNotificationRequired ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsWaitNotificationRequired() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.IsWaitNotificationRequired" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob eine Wartezeitbenachrichtigung erforderlich ist.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Wartezeitbenachrichtigung erforderlich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationCompleted">
+      <MemberSignature Language="C#" Value="public virtual void OperationCompleted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OperationCompleted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.OperationCompleted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Antwortet beim Überschreiben in einer abgeleiteten Klasse auf die Benachrichtigung, dass ein Vorgang abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung enthält keinen Code. Sie können optional überschreiben diese Methode, um Code bereitstellen, die ausgeführt wird, wenn ein Vorgang abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationStarted">
+      <MemberSignature Language="C#" Value="public virtual void OperationStarted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OperationStarted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.OperationStarted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Antwortet beim Überschreiben in einer abgeleiteten Klasse auf die Benachrichtigung, dass ein Vorgang gestartet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung enthält keinen Code. Sie können optional überschreiben diese Methode, um Code bereitstellen, die ausgeführt wird, wenn ein Vorgang gestartet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Post">
+      <MemberSignature Language="C#" Value="public virtual void Post (System.Threading.SendOrPostCallback d, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Post(class System.Threading.SendOrPostCallback d, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.Post(System.Threading.SendOrPostCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Threading.SendOrPostCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="d">Der aufzurufende <see cref="T:System.Threading.SendOrPostCallback" />-Delegat.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <summary>Sendet beim Überschreiben in einer abgeleiteten Klasse eine asynchrone Meldung an einen Synchronisierungskontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.SynchronizationContext.Post%2A> Methode startet eine asynchrone Anforderung an eine Nachricht zu senden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public virtual void Send (System.Threading.SendOrPostCallback d, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Send(class System.Threading.SendOrPostCallback d, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.Send(System.Threading.SendOrPostCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Threading.SendOrPostCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="d">Der aufzurufende <see cref="T:System.Threading.SendOrPostCallback" />-Delegat.</param>
+        <param name="state">Das an den Delegaten übergebene Objekt.</param>
+        <summary>Sendet beim Überschreiben in einer abgeleiteten Klasse eine synchrone Meldung an einen Synchronisierungskontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.SynchronizationContext.Send%2A> Methode startet eine asynchrone Anforderung zum Senden einer Nachricht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Methode wurde in einer Windows Store-app aufgerufen. Die Implementierung der <see cref="T:System.Threading.SynchronizationContext" /> für Windows Store apps unterstützt nicht die <see cref="M:System.Threading.SynchronizationContext.Send(System.Threading.SendOrPostCallback,System.Object)" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSynchronizationContext">
+      <MemberSignature Language="C#" Value="public static void SetSynchronizationContext (System.Threading.SynchronizationContext syncContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSynchronizationContext(class System.Threading.SynchronizationContext syncContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.SetSynchronizationContext(System.Threading.SynchronizationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="syncContext" Type="System.Threading.SynchronizationContext" />
+      </Parameters>
+      <Docs>
+        <param name="syncContext">Das festzulegende <see cref="T:System.Threading.SynchronizationContext" />-Objekt.</param>
+        <summary>Legt den aktuellen Synchronisierungskontext fest.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreadStaticContext">
+      <MemberSignature Language="C#" Value="public static void SetThreadStaticContext (System.Threading.SynchronizationContext syncContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetThreadStaticContext(class System.Threading.SynchronizationContext syncContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.SetThreadStaticContext(System.Threading.SynchronizationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The method is not supported and will be removed")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="syncContext" Type="System.Threading.SynchronizationContext" />
+      </Parameters>
+      <Docs>
+        <param name="syncContext">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWaitNotificationRequired">
+      <MemberSignature Language="C#" Value="protected void SetWaitNotificationRequired ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetWaitNotificationRequired() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.SetWaitNotificationRequired" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt fest, dass eine Wartezeitbenachrichtigung erforderlich ist, und bereitet die Rückrufmethode vor, sodass sie bei einem Wartevorgang zuverlässiger aufgerufen werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public virtual int Wait (IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Wait(native int[] waitHandles, bool waitAll, int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.Wait(System.IntPtr[],System.Boolean,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.PrePrepareMethod</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.IntPtr[]" />
+        <Parameter Name="waitAll" Type="System.Boolean" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein Array vom Typ <see cref="T:System.IntPtr" />, das die systemeigenen Betriebssystemhandles enthält.</param>
+        <param name="waitAll">
+          <see langword="true" />, um auf alle Handles zu warten, <see langword="false" />, um auf ein beliebiges Handle zu warten.</param>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <summary>Wartet darauf, dass ein beliebiges oder alle Elemente im angegebenen Array ein Signal empfangen.</summary>
+        <returns>Der Arrayindex des Objekts, das den Wartevorgang erfüllt hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.SynchronizationContext.Wait%2A> Methode ruft die externe Deklaration <xref:System.Threading.SynchronizationContext.WaitHelper%2A> auszuführenden warten-Aktivität.  Überschreiben Sie die <xref:System.Threading.SynchronizationContext.Wait%2A> Methode, um das Verhalten der Wartezeit für den Synchronisierungskontext zu ändern.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.WaitHandle.WaitAll(System.Threading.WaitHandle[],System.TimeSpan,System.Boolean)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="waitHandles" /> ist NULL.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitHelper">
+      <MemberSignature Language="C#" Value="protected static int WaitHelper (IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig int32 WaitHelper(native int[] waitHandles, bool waitAll, int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SynchronizationContext.WaitHelper(System.IntPtr[],System.Boolean,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.PrePrepareMethod</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.IntPtr[]" />
+        <Parameter Name="waitAll" Type="System.Boolean" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein Array vom Typ <see cref="T:System.IntPtr" />, das die systemeigenen Betriebssystemhandles enthält.</param>
+        <param name="waitAll">
+          <see langword="true" />, um auf alle Handles zu warten, <see langword="false" />, um auf ein beliebiges Handle zu warten.</param>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <summary>Hilfsfunktion, die darauf wartet, dass ein beliebiges oder alle Elemente im angegebenen Array ein Signal empfangen.</summary>
+        <returns>Der Arrayindex des Objekts, das den Wartevorgang erfüllt hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.SynchronizationContext.WaitHelper%2A>ist eine Deklaration für eine nicht verwaltete externe Hilfsfunktion. <xref:System.Threading.SynchronizationContext.WaitHelper%2A>wird aufgerufen, indem Sie die <xref:System.Threading.SynchronizationContext.Wait%2A> Methode, um ein Signal für das angegebene Betriebssystem Ziehpunkte gewartet.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.WaitHandle.WaitAll(System.Threading.WaitHandle[],System.TimeSpan,System.Boolean)" />
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

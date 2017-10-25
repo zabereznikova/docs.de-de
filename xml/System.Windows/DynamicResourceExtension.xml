@@ -1,0 +1,148 @@
+<Type Name="DynamicResourceExtension" FullName="System.Windows.DynamicResourceExtension">
+  <TypeSignature Language="C#" Value="public class DynamicResourceExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicResourceExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DynamicResourceExtension" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.DynamicResourceExtensionConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Object))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert versucht eine Markuperweiterung, die unterstützt dynamische Ressourcenverweise aus XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dynamische Ressourcenverweise sind erforderlich, wenn Sie Inhalte zu verweisen, die zur Laufzeit ändern können. Die Gründe für die Änderung des Zertifikatinhalts möglicherweise Anwendung initiierte oder externe sein. Ein Beispiel ist, wenn Sie Stile einschließen, die Systemressourcen abhängig, die Benutzer konfigurierten Voreinstellungen, z. B. Designs, Schriftart und So weiter zu melden.  
+  
+ Diese Klasse ist eine Implementierung der Markuperweiterung. Markuperweiterung Klassen im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] vorhanden sind, hauptsächlich, dass die Infrastruktur für einige Aspekte der unterstützen die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung sowie auf die Elemente, die von der Markuperweiterung Klassen werden nicht in der Regel aus aufgerufen verfügbar gemacht werden direkt Benutzercode. Diese Klasse unterstützt, insbesondere die [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md) Verwendung von [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Weitere Informationen zu dynamischen Ressourcenverweise, finden Sie unter [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+  
+<a name="xamlTextUsage_DynamicResourceExtension"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicResourceExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DynamicResourceExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DynamicResourceExtension" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicResourceExtension (object resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DynamicResourceExtension.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">Der Schlüssel der Ressource, die diese Markuperweiterung verweist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.DynamicResourceExtension" /> -Klasse, mit dem angegebenen ersten Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird verwendet, indem [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Prozessoren, die beim Verarbeiten der Attributsyntax für die [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DynamicResourceExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Das Objekt, das Dienste für die Markuperweiterung bereitstellen kann.</param>
+        <summary>Gibt ein Objekt zurück, das auf die Eigenschaft festgelegt werden soll, auf die diese Erweiterung angewendet wird. Für <see cref="T:System.Windows.DynamicResourceExtension" />, dies ist das Objekt in einem Ressourcenwörterbuch, in der aktuellen übergeordneten Kette, deren Schlüssel wird von der <see cref="P:System.Windows.DynamicResourceExtension.ResourceKey" />.</summary>
+        <returns>Das Objekt, für die Eigenschaft festlegen, in denen die Erweiterung angewendet wird. Dies wird statt des tatsächlichen Werts einen Ausdruck sein, der zu einem späteren Zeitpunkt ausgewertet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode unterstützt [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung, und sollte nicht direkt aufgerufen werden. Die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung verwendet diese Methode für die ordnungsgemäße Behandlung von [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md) Werte während der Erstellung des Objekts.  
+  
+ Die Eigenschaft durch den angegebenen Wert festgelegt werden muss vom Typ <xref:System.Windows.DependencyProperty>.  
+  
+ Diese Implementierung nicht auf alle Dienste, die basierend auf übergebenem beruht `serviceProvider`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, einen Wert für eine Erweiterung bereitzustellen, nicht bereitgestellt hat, eine <paramref name="resourceKey" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceKey">
+      <MemberSignature Language="C#" Value="public object ResourceKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ResourceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DynamicResourceExtension.ResourceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("resourceKey")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüssel gemäß dieser dynamischen Ressourcenverweis fest. Der Schlüssel wird verwendet, auf eine Ressource im Ressourcenverzeichnis, über einen zwischengeschalteten Ausdruck zu suchen.</summary>
+        <value>Der Ressourcenschlüssel, der diese dynamischen Ressourcenverweis angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schlüssel ist nicht stark typisiert, jedoch in der Regel als entweder eine Zeichenfolge bereitgestellt wird eine <xref:System.Type>, oder ein <xref:System.Windows.ResourceKey> abgeleitete Klasse.  
+  
+<a name="xamlTextUsage_ResourceKey"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

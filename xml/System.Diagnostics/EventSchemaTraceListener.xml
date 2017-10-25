@@ -1,0 +1,930 @@
+<Type Name="EventSchemaTraceListener" FullName="System.Diagnostics.EventSchemaTraceListener">
+  <TypeSignature Language="C#" Value="public class EventSchemaTraceListener : System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventSchemaTraceListener extends System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventSchemaTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TextWriterTraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Leitet die Ablaufverfolgungs- oder Debugausgabe von End-to-End-Ereignissen an eine XML-codierte, schemakompatible Protokolldatei weiter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventSchemaTraceListener> -Klasse ermöglicht die Verfolgung von schemakompatible End-to-End-Ereignissen. Können Sie für ein System mit heterogenen Komponenten, die Threads, cross-End-to-End-Ablaufverfolgung <xref:System.AppDomain>, Prozess- und Computergrenzen. Eine standardisierte Ereignisschema (finden Sie unter [Ereignis Darstellung für Ereignisconsumer](http://go.microsoft.com/fwlink/?LinkId=78955)) zum Aktivieren der Ablaufverfolgung über diesen hinweg definiert wurde. Das Schema ermöglicht das Hinzufügen von benutzerdefinierten, schemakompatible Elementen. Sie können die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](http://go.microsoft.com/fwlink/p/?LinkId=240129) zum Anzeigen von Daten für das Ereignis.  
+  
+ <xref:System.Diagnostics.EventSchemaTraceListener>für datenprotokollierungsleistung ist mit implizite Unterstützung für die Ablaufverfolgung sperrenfreie optimiert.  
+  
+ Die <xref:System.Diagnostics.EventSchemaTraceListener> -Klasse konvertiert, Ablaufverfolgung und Debuginformationen in einen Datenstrom von XML-codierte Text. Die Beschreibung der XML-Ausgabe wird in den Tabellen weiter unten in diesem Abschnitt dargestellt.  
+  
+ Sie aktivieren oder Deaktivieren einer <xref:System.Diagnostics.EventSchemaTraceListener> -Objekt über die Anwendungskonfigurationsdatei aufnehmen, und verwenden Sie dann auf die konfigurierte <xref:System.Diagnostics.EventSchemaTraceListener> Objekten in der Anwendung. Alternativ können Sie erstellen eine <xref:System.Diagnostics.EventSchemaTraceListener> Objekts in Ihrem Code. Es wird empfohlen, dass Sie über die Anwendungskonfigurationsdatei Ablaufverfolgungslistener aktivieren. Weitere Informationen zur Verwendung von Konfigurationsdateien für Ablaufverfolgung und Debuggen, finden Sie unter [Ablaufverfolgung und Debug-Einstellungsschema](http://msdn.microsoft.com/library/277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac).  
+  
+ So konfigurieren Sie ein <xref:System.Diagnostics.EventSchemaTraceListener> Objekt, das Ändern der Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie hinzufügen, entfernen, oder legen Sie die Eigenschaften für einen Listener. Die Konfigurationsdatei sollte wie folgt formatiert werden:  
+  
+```  
+<configuration>  
+    <system.diagnostics>  
+        <sources>  
+            <source name="TestSource" >  
+                <listeners>  
+                    <!--Remove the default trace listener for better performance.-->  
+                    <remove name="Default"/>  
+                    <!--Note: Removing the default trace listener prevents the dialog box   
+                    from being displayed for Debug.Fail or Debug.Assert commands that are   
+                    executed in user mode.-->  
+                    <add name="eventListener"   
+                      type="System.Diagnostics.EventSchemaTraceListener,  system.core"  
+                      initializeData="TraceOutput.xml"   
+                      traceOutputOptions="ProcessId, DateTime, Timestamp"   
+                      bufferSize="65536"  
+                      maximumFileSize="20480000"  
+                      logRetentionOption="LimitedCircularFiles"  
+                      maximumNumberOfFiles="2"/>  
+                </listeners>  
+            </source>  
+        </sources>  
+    </system.diagnostics>  
+```  
+  
+ Die <xref:System.Diagnostics.EventSchemaTraceListener> Klasse erbt die <xref:System.Diagnostics.TraceListener.Filter%2A> Eigenschaft von der Basisklasse <xref:System.Diagnostics.TraceListener>. Die <xref:System.Diagnostics.TraceListener.Filter%2A> Eigenschaft ermöglicht eine zusätzliche Ebene der Ablaufverfolgungsausgabe für den Listener. Wenn ein Filter vorhanden ist, ist die `Trace` Methoden der Aufruf der Trace-Listener die <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> Methode des Filters, der bestimmt, ob der Ablaufverfolgungslistener ausgeben.  
+  
+ Wenn versucht wird, in eine Datei schreiben, die verwendet wird oder nicht verfügbar ist, wird ein GUID-Suffix zum Dateinamen automatisch hinzugefügt.  
+  
+> [!NOTE]
+>  Listener-Methoden von Methoden aufgerufen werden sollen die <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen. Rufen Sie die Listenermethoden nicht direkt im Anwendungscode. Die <xref:System.Diagnostics.EventSchemaTraceListener> Listener ist hauptsächlich für die Verwendung durch die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ Die folgende Tabelle beschreibt die Elemente und Attribute der XML-Ausgabe.  
+  
+|Element|Attribute|Ausgabe|Hinweise|  
+|-------------|----------------|------------|-----------|  
+|`CallStack`|Keine|Hängt das Vorhandensein der <xref:System.Diagnostics.TraceOptions.Callstack> -flag in der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Sonderzeichen wie z. B. > oder < mit Escapesequenzen ersetzt werden. Finden Sie unter der Übersetzungstabelle Escapezeichen in der nächsten Tabelle.|  
+|`Computer`|Keine|Immer vorhanden.|Dieses Element stellt den Wert der <xref:System.Environment.MachineName%2A> Eigenschaft.|  
+|`Correlation`|`ActivityID`|Immer vorhanden.|Wenn `ActivityID` nicht angegeben ist, wird der Standardwert ist eine leere GUID.|  
+||`RelatedActivityID`|Hängt das Vorhandensein der `relatedActivityId` Parameter in der `Trace` -Methodenaufruf.|Die `RelatedActivityID` Attribut entspricht der `relatedActivityId` Parameter von der <xref:System.Diagnostics.EventSchemaTraceListener.TraceTransfer%2A> Methode.|  
+|`Data`|Keine|Immer vorhanden.|Dieses Element stellt die Parametereingabe (`data`). Ein Element wird für jedes Datenobjekt bereitgestellt. Im Fall von Ereignisprotokollen die `Data` Element enthält XML-Daten mit Escapezeichen. Im Fall von Datenprotokolle die `Data` Element ohne Escapezeichen Daten enthält. Das Protokollieren der Ausgabe verwendet die `ToString` Methode übergebene Datenobjekte.|  
+|`Event`|Keine|Immer vorhanden.|Dieses Element enthält ein Ablaufverfolgungsereignis.|  
+|`EventData`|Keine|Bei Ereignisprotokollen vorhanden.|Dieses Element stellt die Parametereingabe (`message`, `args`). Er enthält `Data` Elementen mit XML-Daten mit Escapezeichen, die durch den Aufruf erstellt wird die <xref:System.Diagnostics.EventSchemaTraceListener.TraceEvent%2A> Methode.|  
+|`EventID`|Keine|Immer vorhanden.|Dieses Element stellt die Parametereingabe (`id`).|  
+|`Execution`|`ProcessID`|Hängt das Vorhandensein der <xref:System.Diagnostics.TraceOptions.ProcessId> -flag in der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die `ProcessID` Attribut wird angegeben, der <xref:System.Diagnostics.TraceEventCache>. Auf der Microsoft Windows 98 und Windows Millennium Edition-Betriebssystemen `ProcessID` ist größer als 2.147.483.647, es ist eine positive Darstellung einer negativen Zahl und sollte konvertiert werden, um den richtigen Prozess-ID zu erhalten.|  
+||`ThreadID`|Vorhanden, wenn `ProcessID` vorhanden ist.|Die `ThreadID` Attribut wird angegeben, der <xref:System.Diagnostics.TraceEventCache>.|  
+|`Level`|Keine|Immer vorhanden.|Dieses Element stellt die Parametereingabe (der numerische Wert des `eventType`). Parameterwerte, die größer als 255 sind sind Ausgabe als Ebene 8, womit <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType>. Trace-Ereignistypen <xref:System.Diagnostics.TraceEventType.Critical>, <xref:System.Diagnostics.TraceEventType.Error>, <xref:System.Diagnostics.TraceEventType.Warning>, <xref:System.Diagnostics.TraceEventType.Information>, und <xref:System.Diagnostics.TraceEventType.Verbose> Ausgabe bzw. als Ebenen 1, 2, 4, 8 und 10 sind.|  
+|`LogicalOperationStack`|Keine|Hängt das Vorhandensein der <xref:System.Diagnostics.TraceOptions.LogicalOperationStack> -flag in der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Kann nur eine logische Operation vorhanden sein. Aus diesem Grund werden die Werte als geschrieben `LogicalOperation` Knoten unter der `LogicalOperationStack` Element.|  
+|`OpCode`|Keine|Vorhanden, wenn `Level` größer als 255 ist.|Dieses Element stellt die Ablaufverfolgungs-Ereignistypen, die numerische Werte größer als 255 aufweisen. <xref:System.Diagnostics.TraceEventType.Start>, <xref:System.Diagnostics.TraceEventType.Stop>, <xref:System.Diagnostics.TraceEventType.Suspend>, <xref:System.Diagnostics.TraceEventType.Resume>, oder <xref:System.Diagnostics.TraceEventType.Transfer> Ausgabe bzw. als Ebenen 1, 2, 4, 8 und 10 sind.|  
+|`Provider`|`GUID`|Immer vorhanden.|Immer leer.|  
+|`RenderingInfo`|`Culture`|Immer vorhanden.|Dieses Attribut stellt eine Ressourcenzeichenfolge für den Ereignistyp dar. Es ist immer "de-de\\".|  
+|`System`|`Name`|Immer vorhanden.||  
+|`TimeCreated`|`SystemTime`|Hängt das Vorhandensein der <xref:System.Diagnostics.TraceOptions.DateTime> -flag in der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeit ist der Wert der <xref:System.Diagnostics.TraceEventCache.DateTime%2A?displayProperty=nameWithType> Eigenschaft. Diese Eigenschaft wird als koordinierte Weltzeit ausgedrückt.|  
+|`TimeStamp`|Keine|Hängt das Vorhandensein der <xref:System.Diagnostics.TraceOptions.Timestamp> -flag in der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Dieses Element wird angegeben, der <xref:System.Diagnostics.TraceEventCache>.|  
+|`UserData`|Keine|Bei Datenprotokollen vorhanden.|Dieses Element enthält `Data` Elemente mit ohne Escapezeichen, vom Benutzer bereitgestellte Daten aus einer <xref:System.Diagnostics.EventSchemaTraceListener.TraceData%2A> Methode.|  
+  
+ Die folgende Tabelle zeigt die Zeichen, die mit Escapezeichen versehen werden in der XML-Ausgabe. Escapezeichen in allen Elementen und Attributen mit Ausnahme der `UserData` -Element, das vom Benutzer bereitgestellte enthält, die Daten ohne Escapezeichen. Die `UserData` Element ist das Ergebnis der Aufrufe an die <xref:System.Diagnostics.EventSchemaTraceListener.TraceData%2A> Methode.  
+  
+|Escapezeichen|Wert|  
+|-----------------------|-----------|  
+|&|&amp;|  
+|\<|&lt;|  
+|>|&gt;|  
+|"|&quot;|  
+|\|&apos;|  
+|0xD|&\#xD;|  
+|0xA|&\#xA;|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventSchemaTraceListener> Klasse.  
+  
+ [!code-cpp[System.Diagnostics.EventSchemaTraceListener#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/CPP/eventschematracelistener.cpp#1)]
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#1)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSchemaTraceListener (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Pfad der Protokolldatei.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventSchemaTraceListener" />-Klasse, wobei die angegebene Datei als Empfänger der Debug- oder Ablaufverfolgungsausgabe verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird eine Datei mit uneingeschränkter Größe protokolliert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener.Ctors#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/CS/program.cs#1)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener.Ctors#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/VB/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSchemaTraceListener (string fileName, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Pfad der Protokolldatei.</param>
+        <param name="name">Der Name des Listeners.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventSchemaTraceListener" />-Klasse mit dem angegebenen Namen und unter Verwendung der angegebenen Datei als Empfänger der Debug- oder Ablaufverfolgungsausgabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%28System.String%2CSystem.String%2CSystem.Int32%29?displayProperty=nameWithType> Konstruktor.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener.Ctors#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener.Ctors#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSchemaTraceListener (string fileName, string name, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Pfad der Protokolldatei.</param>
+        <param name="name">Der Name des Listeners.</param>
+        <param name="bufferSize">Die Größe des Ausgabepuffers in Bytes.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventSchemaTraceListener" />-Klasse mit dem angegebenen Namen und der angegebenen Puffergröße unter Verwendung der angegebenen Datei als Empfänger der Debug- oder Ablaufverfolgungsausgabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überlegungen zur Leistung `bufferSize` muss ein Vielfaches von 1024 Bytes.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%28System.String%2CSystem.String%2CSystem.Int32%29?displayProperty=nameWithType> Konstruktor.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener.Ctors#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/CS/program.cs#3)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener.Ctors#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/VB/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSchemaTraceListener (string fileName, string name, int bufferSize, System.Diagnostics.TraceLogRetentionOption logRetentionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name, int32 bufferSize, valuetype System.Diagnostics.TraceLogRetentionOption logRetentionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32,System.Diagnostics.TraceLogRetentionOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="logRetentionOption" Type="System.Diagnostics.TraceLogRetentionOption" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Pfad der Protokolldatei.</param>
+        <param name="name">Der Name des Listeners.</param>
+        <param name="bufferSize">Die Größe des Ausgabepuffers in Bytes.</param>
+        <param name="logRetentionOption">Einer der <see cref="T:System.Diagnostics.TraceLogRetentionOption" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventSchemaTraceListener" />-Klasse mit dem angegebenen Namen und der angegebenen Puffergröße unter Verwendung der angegebenen Datei mit der angegebenen Protokollbeibehaltungsrichtlinie als Empfänger der Debug- oder Ablaufverfolgungsausgabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überlegungen zur Leistung `bufferSize` muss ein Vielfaches von 1024 Bytes.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%28System.String%2CSystem.String%2CSystem.Int32%2CSystem.Diagnostics.TraceLogRetentionOption%29?displayProperty=nameWithType> Konstruktor.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener.Ctors#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/CS/program.cs#4)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener.Ctors#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/VB/program.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSchemaTraceListener (string fileName, string name, int bufferSize, System.Diagnostics.TraceLogRetentionOption logRetentionOption, long maximumFileSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name, int32 bufferSize, valuetype System.Diagnostics.TraceLogRetentionOption logRetentionOption, int64 maximumFileSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32,System.Diagnostics.TraceLogRetentionOption,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="logRetentionOption" Type="System.Diagnostics.TraceLogRetentionOption" />
+        <Parameter Name="maximumFileSize" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Pfad der Protokolldatei.</param>
+        <param name="name">Der Name des Listeners.</param>
+        <param name="bufferSize">Die Größe des Ausgabepuffers in Bytes.</param>
+        <param name="logRetentionOption">Einer der <see cref="T:System.Diagnostics.TraceLogRetentionOption" />-Werte.</param>
+        <param name="maximumFileSize">Die maximale Dateigröße in Bytes.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventSchemaTraceListener" />-Klasse mit dem angegebenen Namen und der angegebenen Puffergröße unter Verwendung der angegebenen Datei mit der angegebenen Protokollbeibehaltungsrichtlinie und der maximalen Größe als Empfänger der Debug- oder Ablaufverfolgungsausgabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überlegungen zur Leistung `bufferSize` und `maximumFileSize` muss ein Vielfaches von 1024 Bytes. `maximumFileSize`ist kein absoluter Wert, es ist ein Schwellenwert, der bis zur Größe der letzten Nachricht überschritten werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%28System.String%2CSystem.String%2CSystem.Int32%2CSystem.Diagnostics.TraceLogRetentionOption%2CSystem.Int64%29?displayProperty=nameWithType> Konstruktor.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener.Ctors#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/CS/program.cs#5)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener.Ctors#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener.Ctors/VB/program.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumFileSize" /> ist eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSchemaTraceListener (string fileName, string name, int bufferSize, System.Diagnostics.TraceLogRetentionOption logRetentionOption, long maximumFileSize, int maximumNumberOfFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name, int32 bufferSize, valuetype System.Diagnostics.TraceLogRetentionOption logRetentionOption, int64 maximumFileSize, int32 maximumNumberOfFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32,System.Diagnostics.TraceLogRetentionOption,System.Int64,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="logRetentionOption" Type="System.Diagnostics.TraceLogRetentionOption" />
+        <Parameter Name="maximumFileSize" Type="System.Int64" />
+        <Parameter Name="maximumNumberOfFiles" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Pfad der Protokolldatei.</param>
+        <param name="name">Der Name des Listeners.</param>
+        <param name="bufferSize">Die Größe des Ausgabepuffers in Bytes.</param>
+        <param name="logRetentionOption">Einer der <see cref="T:System.Diagnostics.TraceLogRetentionOption" />-Werte.</param>
+        <param name="maximumFileSize">Die maximale Dateigröße in Bytes.</param>
+        <param name="maximumNumberOfFiles">Die maximale Anzahl von Ausgabeprotokolldateien.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventSchemaTraceListener" />-Klasse mit dem angegebenen Namen und der angegebenen Puffergröße unter Verwendung der angegebenen Datei mit der angegebenen Protokollbeibehaltungsrichtlinie, der maximalen Größe und der Dateianzahl als Empfänger der Debug- oder Ablaufverfolgungsausgabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überlegungen zur Leistung `bufferSize` und `maximumFileSize` muss ein Vielfaches von 1024 Bytes. `maximumFileSize`ist kein absoluter Wert; Es ist ein Schwellenwert, der bis zur Größe der letzten Nachricht überschritten werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#2)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumNumberOfFiles" />ist kleiner als 2, und <paramref name="logRetentionOption" /> ist <see cref="F:System.Diagnostics.TraceLogRetentionOption.LimitedCircularFiles" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferSize">
+      <MemberSignature Language="C#" Value="public int BufferSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.BufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Ausgabepuffers ab.</summary>
+        <value>Die Größe des Ausgabepuffers in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eigenschaftswert wird festgelegt, durch die `bufferSize` -Parameters im Konstruktor. Aus Gründen der Leistung sollte die Größe des Puffers auf ein Vielfaches von 1024 Bytes festgelegt werden. Es wird empfohlen, entweder die Standardgröße von 32 * 1024 Bytes oder 64\*1024 Bytes für optimale Leistung zu erzielen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der anzuzeigenden der <xref:System.Diagnostics.EventSchemaTraceListener.BufferSize%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#5)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Protokolldatei für diesen Listener, sodass dieser keine Ablaufverfolgungs- oder Debugausgaben mehr empfängt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public override void Fail (string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Fail(string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Fail(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende einfache Fehlermeldung.</param>
+        <param name="detailMessage">Die ausführliche Fehlermeldung, die an die einfache Fehlermeldung angefügt werden soll.</param>
+        <summary>Schreibt Fehlerinformationen in die Protokolldatei, einschließlich einer einfachen Fehlermeldung und einer ausführlichen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass gepufferte Daten in das Protokoll für diesen Listener geschrieben werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected override string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die vom Ablaufverfolgungslistener unterstützten benutzerdefinierten XML-Konfigurationsattribute ab.</summary>
+        <returns>Ein <see cref="T:System.String" />-Array, das die von diesem Listener erkannten XML-Konfigurationsattribute enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die benutzerdefinierten Attribute, die von dieser Methode zurückgegeben werden in der XML-Konfigurationsdatei verwendet werden können, zum Steuern des Verhaltens einer Instanz von der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse. Andere Attribute verwenden, führt dazu, dass eine Konfigurationsausnahme. Die <xref:System.Diagnostics.EventSchemaTraceListener.GetSupportedAttributes%2A> Methode für die <xref:System.Diagnostics.EventSchemaTraceListener> gibt die folgende Zeichenfolge Arraywerte zurück: "BufferSize", "LogRetentionOption", "MaximumFileSize", und "MaximumNumberOfFiles".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThreadSafe">
+      <MemberSignature Language="C#" Value="public override bool IsThreadSafe { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsThreadSafe" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.IsThreadSafe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Ablaufverfolgungslistener threadsicher ist.</summary>
+        <value>Gibt immer <see langword="true" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der anzuzeigenden der <xref:System.Diagnostics.EventSchemaTraceListener.IsThreadSafe%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#4)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumFileSize">
+      <MemberSignature Language="C#" Value="public long MaximumFileSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumFileSize" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Größe der Protokolldatei ab.</summary>
+        <value>Die maximale Dateigröße in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eigenschaftswert wird festgelegt, durch die `maximumFileSize` -Parameters im Konstruktor oder die `maximumFileSize` Attribut in der Konfigurationsdatei. Aus Gründen der Leistung sollten Sie die maximale Dateigröße auf ein Vielfaches von 1024 Bytes festgelegt. Die <xref:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize%2A> Eigenschaftswert ist keine Absolute; es einen Schwellenwert, der bis zur Größe der letzten Nachricht überschritten werden kann.  
+  
+ In der folgenden Tabelle zeigt die möglich und Standardwerte für die Dateigröße, die jede Beibehaltungsoptionen für zugeordnet sind. Die Werte, die als n/v gekennzeichnet darauf hinweisen, dass die <xref:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize%2A> Eigenschaft wird nicht geprüft, <xref:System.Diagnostics.TraceLogRetentionOption> Wert.  
+  
+|TraceLogRetentionOption|Maximale Dateigröße|Standardmäßige Dateigröße|  
+|-----------------------------|-----------------------|-----------------------|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.LimitedCircularFiles>|Nicht zutreffend|-1|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.LimitedSequentialFiles>|>0|4-KB|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.SingleFileBoundedSize>|>0|4-KB|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.SingleFileUnboundedSize>|>0|4-KB|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.UnlimitedSequentialFiles>|>0|4-KB|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der anzuzeigenden der <xref:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#6)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumNumberOfFiles">
+      <MemberSignature Language="C#" Value="public int MaximumNumberOfFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumNumberOfFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Protokolldateien ab.</summary>
+        <value>Die maximale Anzahl von Protokolldateien, bestimmt durch den Wert der <see cref="P:System.Diagnostics.EventSchemaTraceListener.TraceLogRetentionOption" />-Eigenschaft für die Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eigenschaftswert wird festgelegt, durch die `maximumNumberOfFiles` -Parameters im Konstruktor oder die `maximumNumberOfFiles` Attribut in der Konfigurationsdatei.  
+  
+ In der folgenden Tabelle zeigt die Werte möglich und Standardwerte für die Dateigröße und Anzahl der Dateien, die jede Beibehaltungsoptionen für zugeordnet sind. Die Werte, die als n/v gekennzeichnet darauf hinweisen, dass die <xref:System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles%2A> Eigenschaft wird nicht geprüft, <xref:System.Diagnostics.TraceLogRetentionOption> Wert.  
+  
+|TraceLogRetentionOption|Maximale Anzahl von Dateien|Standardanzahl von Dateien|  
+|-----------------------------|-----------------------------|-----------------------------|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.LimitedCircularFiles>|Nicht zutreffend|1|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.LimitedSequentialFiles>|Nicht zutreffend|1|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.SingleFileBoundedSize>|Nicht zutreffend|-1|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.SingleFileUnboundedSize>|>0|1|  
+|<xref:System.Diagnostics.TraceLogRetentionOption.UnlimitedSequentialFiles>|>1|2|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der anzuzeigenden der <xref:System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#7)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Der Quellenname.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Ein auszugebendes Datenobjekt.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein einzelnes Datenobjekt sowie Ereignisinformationen in die Protokolldatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `eventCache`, `source`, `eventType`, und `id` Parameter werden in Kopf- und Fußzeilen der Ablaufverfolgung verwendet. Die `id` Parameter in eine Ganzzahl ohne Vorzeichen konvertiert, bevor sie geschrieben werden. Aus diesem Grund eine Negative `id` Wert wird als eine große positive ganze Zahl geschrieben. Die `data` -Parameter wird geschrieben, als eine `Data` Knoten in der `UserData` Element. Die `ToString` Methode des Datenobjekts wird verwendet, um das Objekt in eine Zeichenfolge konvertiert.  
+  
+> [!IMPORTANT]
+>  Diese Methode sollte nicht direkt von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Der Quellenname.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Ein Array von Datenobjekten, die ausgegeben werden sollen.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, mehrere Datenobjekte und Ereignisinformationen in die Protokolldatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `eventCache`, `source`, `eventType`, und `id` Parameter werden in Kopf- und Fußzeilen der Ablaufverfolgung verwendet. Die `id` Parameter in eine Ganzzahl ohne Vorzeichen konvertiert, bevor sie geschrieben werden. Aus diesem Grund eine Negative `id` Wert wird als eine große positive ganze Zahl geschrieben. Die Objekte in der `data` Parameterarray werden geschrieben, als `Data` Knoten in der `UserData` Element. Die `ToString` -Methode der einzelnen Datenobjekte wird verwendet, um das Objekt in eine Zeichenfolge konvertiert.  
+  
+> [!IMPORTANT]
+>  Diese Methode sollte nicht direkt von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Der Quellenname.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, eine Meldung und Ereignisinformationen in die Protokolldatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `eventCache`, `source`, `eventType`, und `id` Parameter werden in Kopf- und Fußzeilen der Ablaufverfolgung verwendet. Die `id` Parameter in eine Ganzzahl ohne Vorzeichen konvertiert, bevor sie geschrieben werden. Aus diesem Grund eine Negative `id` Wert wird als eine große positive ganze Zahl geschrieben. Die `message` -Parameter wird geschrieben, als eine `Data` Knoten in der `EventData` Element.  
+  
+> [!IMPORTANT]
+>  Diese Methode sollte nicht direkt von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Der Quellenname.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="format">Eine Formatzeichenfolge mit 0 (null) oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein Objektarray mit 0 (null) oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, eine formatierte Meldung und Ereignisinformationen in die Protokolldatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `eventCache`, `source`, `eventType`, und `id` Parameter werden in Kopf- und Fußzeilen der Ablaufverfolgung verwendet. Die `id` Parameter in eine Ganzzahl ohne Vorzeichen konvertiert, bevor sie geschrieben werden. Aus diesem Grund eine Negative `id` Wert wird als eine große positive ganze Zahl geschrieben. Die <xref:System.String.Format%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> Methode wird aufgerufen, und die `format` Zeichenfolge und `args` Arrays als Parameter übergeben werden. Diese Methode formatiert die `args` Objektarray und schreibt das formatierte Array als die `Data` Knoten in der `EventData` Element.  
+  
+> [!IMPORTANT]
+>  Diese Methode sollte nicht direkt von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceLogRetentionOption">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceLogRetentionOption TraceLogRetentionOption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.TraceLogRetentionOption TraceLogRetentionOption" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.TraceLogRetentionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLogRetentionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beibehaltungsoption für das Ablaufverfolgungsprotokoll der Datei ab.</summary>
+        <value>Einer der <see cref="T:System.Diagnostics.TraceLogRetentionOption" />-Werte. Die Standardeinstellung ist <see cref="F:System.Diagnostics.TraceLogRetentionOption.SingleFileUnboundedSize" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert der anzuzeigenden der <xref:System.Diagnostics.EventSchemaTraceListener.TraceLogRetentionOption%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#9)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceTransfer">
+      <MemberSignature Language="C#" Value="public override void TraceTransfer (System.Diagnostics.TraceEventCache eventCache, string source, int id, string message, Guid relatedActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceTransfer(class System.Diagnostics.TraceEventCache eventCache, string source, int32 id, string message, valuetype System.Guid relatedActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceTransfer(System.Diagnostics.TraceEventCache,System.String,System.Int32,System.String,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Der Quellenname.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="message">Eine zu schreibende Ablaufverfolgungsmeldung.</param>
+        <param name="relatedActivityId">Eine <see cref="T:System.Guid" />-Struktur, die eine verwandte Aktivität bezeichnet.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, darunter die Identität einer verwandten Aktivität, eine Meldung sowie Ereignisinformationen, in die Protokolldatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventSchemaTraceListener.TraceTransfer%2A> Methode wird verwendet, um verwandte ablaufverfolgungen zu korrelieren. Die `eventCache`, `source`, `id`, und `relatedActivityId` Parameter werden in Kopf- und Fußzeilen der Ablaufverfolgung verwendet. Die `id` Parameter in eine Ganzzahl ohne Vorzeichen konvertiert, bevor sie geschrieben werden. Aus diesem Grund eine Negative `id` Wert wird als eine große positive ganze Zahl geschrieben. Die `message` -Parameter wird geschrieben, als die `Data` Element. Die <xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType> Methode wird aufgerufen, um das Konvertieren der `relatedActivityId` Wert, der eine "B" formatierte Zeichenfolge, die in der Kopfzeile angezeigt wird. Die `Opcode` Element in der Fußzeile bezeichnet den Typ des Ablaufverfolgungsereignisses als eine <xref:System.Diagnostics.TraceEventType.Transfer>.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.EventSchemaTraceListener.TraceTransfer%2A> Methode sollte nicht von Anwendungscode aufgerufen werden. Von verwendet werden soll eine <xref:System.Diagnostics.TraceSource> die Ablaufverfolgungsinformationen für auszugebendes Datenobjekt seine <xref:System.Diagnostics.TraceSource.TraceTransfer%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung ohne weitere Kontextinformationen in die Protokolldatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventSchemaTraceListener.TraceEvent%2A> Methode wird aufgerufen, um die Protokollierung der Meldung als ein <xref:System.Diagnostics.TraceEventType.Information> Ereignis.  
+  
+> [!IMPORTANT]
+>  Diese Methode sollte nicht direkt von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung, gefolgt vom Abschlusszeichen der aktuellen Zeile und ohne weitere Kontextinformationen in die Protokolldatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventSchemaTraceListener.TraceEvent%2A> Methode wird aufgerufen, um die Protokollierung der Meldung als ein <xref:System.Diagnostics.TraceEventType.Information> Ereignis.  
+  
+> [!IMPORTANT]
+>  Diese Methode sollte nicht direkt von Anwendungscode aufgerufen werden. Durch die Methoden der aufrufhäufigkeit der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Writer">
+      <MemberSignature Language="C#" Value="public System.IO.TextWriter Writer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.TextWriter Writer" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.Writer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zugrunde liegenden TextWriter ab, der in die Protokolldatei schreibt, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.IO.TextWriter" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versuch, verwenden die Set-Zugriffsmethode für die <xref:System.Diagnostics.EventSchemaTraceListener.Writer%2A> -Eigenschaft löst eine <xref:System.NotSupportedException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, einen Wert zuzuweisen der <see cref="P:System.Diagnostics.EventSchemaTraceListener.Writer" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

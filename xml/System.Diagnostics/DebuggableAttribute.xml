@@ -1,0 +1,242 @@
+<Type Name="DebuggableAttribute" FullName="System.Diagnostics.DebuggableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DebuggableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Module, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verändert die Codegenerierung für Laufzeit-JIT-Debuggen (Just-In-Time). Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggableAttribute> steuert, wie die Common Language Runtime Code innerhalb des Moduls behandelt. Die Laufzeit möglicherweise zusätzliche Informationen über generierten Code zu verfolgen, und es kann deaktiviert werden, bestimmte Optimierungen, die auf Grundlage der in diesem Attribut enthaltenen Werte.  
+  
+ Ein Debugger kann ignoriert werden sollen die <xref:System.Diagnostics.DebuggableAttribute> Einstellungen beim Laden einer Assemblys. Allerdings kann Anfügen eines Debuggers an ein aktives Programm verhindern, dass den Debugger die Einstellungen zu ändern, da sie bereits angewendet wurden.  
+  
+ Verwenden der <xref:System.Diagnostics.DebuggableAttribute> mit dynamischer Assemblys mithilfe der Reflektionsausgabe <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A> Ausgeben von Methoden, die <xref:System.Diagnostics.DebuggableAttribute> vor dem Aufruf der <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A> Methoden, um sicherzustellen, dass die Einstellungen für die gesamte Assembly angewendet werden.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggableAttribute (System.Diagnostics.DebuggableAttribute.DebuggingModes modes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes modes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggableAttribute.#ctor(System.Diagnostics.DebuggableAttribute.DebuggingModes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modes" Type="System.Diagnostics.DebuggableAttribute+DebuggingModes" />
+      </Parameters>
+      <Docs>
+        <param name="modes">Eine bitweise Kombination der <see cref="T:System.Diagnostics.DebuggableAttribute.DebuggingModes" /> Werte, die den Debugmodus für den JIT-Compiler angeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.DebuggableAttribute" />-Klasse unter Verwendung der angegebenen Debugmodi für den JIT-Compiler (Just-In-Time).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Diagnostics.DebuggableAttribute.%23ctor%28System.Diagnostics.DebuggableAttribute.DebuggingModes%29> Konstruktor mit einer `modes` -Parameterwert <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes.Default> entspricht dem Aufrufen der <xref:System.Diagnostics.DebuggableAttribute.%23ctor%28System.Boolean%2CSystem.Boolean%29> Konstruktor mit eine `isJITTrackingEnabled` -Parameterwert `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggableAttribute (bool isJITTrackingEnabled, bool isJITOptimizerDisabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isJITTrackingEnabled, bool isJITOptimizerDisabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggableAttribute.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isJITTrackingEnabled" Type="System.Boolean" />
+        <Parameter Name="isJITOptimizerDisabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isJITTrackingEnabled">
+          <see langword="true" /> zum Aktivieren des Debuggens, andernfalls <see langword="false" />.</param>
+        <param name="isJITOptimizerDisabled">
+          <see langword="true" /> zum Deaktivieren des Optimierers für die Ausführung, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.DebuggableAttribute" />-Klasse unter Verwendung der angegebenen Optionen für Nachverfolgung und Optimierung des JIT-Compilers (Just-In-Time).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die Eigenschaften <xref:System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled%2A> und <xref:System.Diagnostics.DebuggableAttribute.IsJITOptimizerDisabled%2A>.  
+  
+ Ein `isJITTrackingEnabaled` -Parameterwert `true` bewirkt, dass die Laufzeit zum Nachverfolgen wichtiger Informationen an den Debugger bei der codegenerierung; Wert `false` führt keine Überwachung, aber verhindert nicht debuggen. Dieser Parameter wirkt sich nicht in .NET Framework, Version 2.0 aus.  JIT-Überwachungsinformationen, die Microsoft intermediate Language (MSIL)-offset zum Offset innerhalb einer Methode systemeigenem Code wird in Version 2.0 wird immer generiert.  
+  
+ Ein `isJITOptimizerDisabled` -Parameterwert `true` optimiert zum Debuggen; ein Wert von `false` für die Ausführung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebuggingFlags">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.DebuggableAttribute.DebuggingModes DebuggingFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes DebuggingFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggableAttribute.DebuggingFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggableAttribute+DebuggingModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Debugmodi für das Attribut ab.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Diagnostics.DebuggableAttribute.DebuggingModes" />-Werten, die den Debugmodus für den JIT-Compiler (Just-In-Time) beschreibt. Die Standardeinstellung ist <see cref="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggableAttribute.DebuggingFlags%2A> Eigenschaft steuert, wie die Common Language Runtime wichtiger Informationen an den Debugger bei der codegenerierung verfolgt. Diese Informationen helfen den Debugger bieten eine umfassende Debugleistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsJITOptimizerDisabled">
+      <MemberSignature Language="C#" Value="public bool IsJITOptimizerDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsJITOptimizerDisabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggableAttribute.IsJITOptimizerDisabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Laufzeitoptimierer deaktiviert ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Laufzeitoptimierer deaktiviert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Wert von `true` verbessert die Leistung für die Laufzeit zu debuggen, was einen Rückgang im ausführungsleistung führen kann. Ein Wert von `false` verbessert die Leistung bei der Ausführung. Wenn <xref:System.Diagnostics.DebuggableAttribute.IsJITOptimizerDisabled%2A> festgelegt ist, um `false`, schrittweises Durchlaufen von Code in ein anderes Verhalten als wird unter Umständen bei Festlegung auf `true` , da der Compiler möglicherweise Neuanordnen von Anweisungen oder springt zu gemeinsamen Code einfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsJITTrackingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsJITTrackingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsJITTrackingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Laufzeit während der Codegenerierung für den Debugger Informationen verfolgen wird.</summary>
+        <value>
+          <see langword="true" />, wenn die Laufzeit während der Codegenerierung für den Debugger Informationen verfolgen wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled%2A>Steuert, ob die Laufzeit wichtiger Informationen an den Debugger bei der codegenerierung verfolgt. Diese Informationen helfen den Debugger bieten eine umfassende Debugleistung.  
+  
+ Ab .NET Framework 2.0 werden JIT-Tracking-Informationen ist während des Debuggens immer aktiviert und Wert dieser Eigenschaft wird ignoriert.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nicht die Fähigkeit zum Debuggen, gesteuert, sondern angewiesen der Just-in-Time (JIT)-Compiler Verfolgungsinformationen zu generieren. Insbesondere verfolgt der Compiler die Microsoft Intermediate Language MSIL-Offset auf den offset von systemeigenem Code in einer Methode an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,162 @@
+<Type Name="EventLogPermissionAccess" FullName="System.Diagnostics.EventLogPermissionAccess">
+  <TypeSignature Language="C#" Value="public enum EventLogPermissionAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventLogPermissionAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogPermissionAccess" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Zugriffsebenen verwendeten <see cref="T:System.Diagnostics.EventLog" /> Berechtigungsklassen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Administer">
+      <MemberSignature Language="C#" Value="Administer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.EventLogPermissionAccess Administer = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.EventLogPermissionAccess.Administer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Diagnostics.EventLog" /> kann eine Ereignisquelle erstellen, vorhandene Protokolle lesen, Ereignisquellen oder Protokolle löschen, reagieren auf Einträge, Löschen eines Ereignisprotokolls, Ereignisse überwachen und der Zugriff auf eine Auflistung sämtlicher Ereignisprotokolle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Audit">
+      <MemberSignature Language="C#" Value="Audit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.EventLogPermissionAccess Audit = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.EventLogPermissionAccess.Audit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Diagnostics.EventLog" /> können vorhandene Protokolle lesen, Löschen von Ereignisquellen oder Protokolle, reagieren auf Einträge, Löschen eines Ereignisprotokolls, Ereignisse überwachen und der Zugriff auf eine Auflistung sämtlicher Ereignisprotokolle. <see langword="Note" />Dieser Member ist veraltet, verwenden <see cref="F:System.Diagnostics.EventLogPermissionAccess.Administer" /> stattdessen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Browse">
+      <MemberSignature Language="C#" Value="Browse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.EventLogPermissionAccess Browse = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.EventLogPermissionAccess.Browse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Diagnostics.EventLog" /> vorhandene Protokolle lesen können. <see langword="Note" />Dieser Member ist veraltet, verwenden <see cref="F:System.Diagnostics.EventLogPermissionAccess.Administer" /> stattdessen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Instrument">
+      <MemberSignature Language="C#" Value="Instrument" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.EventLogPermissionAccess Instrument = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.EventLogPermissionAccess.Instrument" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Diagnostics.EventLog" /> können gelesen oder vorhandenen Protokolle schreiben und Erstellen von Ereignisquellen und Protokolle. <see langword="Note" />Dieser Member ist veraltet, verwenden <see cref="F:System.Diagnostics.EventLogPermissionAccess.Write" /> stattdessen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.EventLogPermissionAccess None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.EventLogPermissionAccess.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Diagnostics.EventLog" /> verfügt über keine Berechtigungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.EventLogPermissionAccess Write = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.EventLogPermissionAccess.Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Diagnostics.EventLog" /> können Sie vorhandene Protokolle schreiben und Erstellen von Ereignisquellen und Protokolle.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

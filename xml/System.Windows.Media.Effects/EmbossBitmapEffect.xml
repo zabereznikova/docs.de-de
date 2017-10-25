@@ -1,0 +1,300 @@
+<Type Name="EmbossBitmapEffect" FullName="System.Windows.Media.Effects.EmbossBitmapEffect">
+  <TypeSignature Language="C#" Value="public sealed class EmbossBitmapEffect : System.Windows.Media.Effects.BitmapEffect" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EmbossBitmapEffect extends System.Windows.Media.Effects.BitmapEffect" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.EmbossBitmapEffect" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Effects.BitmapEffect</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Erstellt ein Bumpmapping des visuellen Objekts, um den Eindruck von Tiefe und Textur von einer künstlichen Lichtquelle zu vermitteln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)]Bitmapeffekte handelt es sich um Software gerendert. Jedes Objekt, das einen Effekt anwendet, wird auch in der Software gerendert werden. Bitmapeffekte sollten nicht auf große visuelle Objekte oder Animationen angewendet werden, da dies die Leistung beeinträchtigen kann.  
+  
+ <xref:System.Windows.Media.Effects.EmbossBitmapEffect>ist eine von mehreren Effekten, die mit dem SDK enthalten sind. Andere Effekte gehören:  
+  
+-   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect>  
+  
+-   <xref:System.Windows.Media.Effects.BlurBitmapEffect>  
+  
+-   <xref:System.Windows.Media.Effects.BevelBitmapEffect>  
+  
+-   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>  
+  
+ Eine Prägung wird eine Auswahl, die angezeigt werden, gestempelte oder heraufgestuft wird, durch die Füllfarbe in Grau konvertiert, und verfolgen die Ränder mit der ursprünglichen Füllfarbe. Die folgende Abbildung zeigt eine <xref:System.Windows.Media.Effects.EmbossBitmapEffect> auf ein visuelles Objekt angewendet (in diesem Fall angewendet, um eine <xref:System.Windows.Controls.Image>).  
+  
+ ![Bildschirmabbildung: Vergleichen eines Bilds mit und ohne Prägung](~/add/media/effects-embosssimple.png "Bildschirmabbildung: Vergleichen eines Bilds mit und ohne Prägung")  
+  
+ Die visuelle Effekt einer Prägung kann geändert werden, mithilfe der <xref:System.Windows.Media.Effects.EmbossBitmapEffect.Relief%2A> und <xref:System.Windows.Media.Effects.EmbossBitmapEffect.LightAngle%2A> Eigenschaften.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.UIPermission">Erstellen Sie eine Instanz der <see cref="T:System.Windows.Media.Effects.EmbossBitmapEffect" /> Klasse. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmbossBitmapEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.EmbossBitmapEffect.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Effects.EmbossBitmapEffect" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.EmbossBitmapEffect Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.EmbossBitmapEffect Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.EmbossBitmapEffect.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.EmbossBitmapEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Effects.EmbossBitmapEffect" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.EmbossBitmapEffect CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.EmbossBitmapEffect CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.EmbossBitmapEffect.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.EmbossBitmapEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Effects.EmbossBitmapEffect" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.EmbossBitmapEffect.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUnmanagedEffect">
+      <MemberSignature Language="C#" Value="protected override System.Runtime.InteropServices.SafeHandle CreateUnmanagedEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Runtime.InteropServices.SafeHandle CreateUnmanagedEffect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.EmbossBitmapEffect.CreateUnmanagedEffect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.SafeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LightAngle">
+      <MemberSignature Language="C#" Value="public double LightAngle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LightAngle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.EmbossBitmapEffect.LightAngle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Ruft die Richtung ab, in der das künstliche Licht auf das geprägte Objekt geworfen wird, oder legt diese fest.</summary>
+        <value>Die Richtung, in der das künstliche Licht auf das geprägte Objekt geworfen wird. Der gültige Bereich liegt zwischen <c>zwischen 0 und 360</c> (Grad) mit <c>0</c> die rechte Seite des Objekts und der nachfolgenden Werte gegen den Uhrzeigersinn um das Objekt bewegt angibt. Der Standardwert ist <c>45</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Richtung des hell Umwandlung auf das geprägte Objekt wirkt sich das shadowing des Geprägte visuellen Objekts.  
+  
+ Das folgende Diagramm zeigt, welche Richtung hell stammen, für einen angegebenen Wert dieser Eigenschaft:  
+  
+ ![Diagramm: DropShadow-Richtung](~/add/media/effects-dropshadowdirection2.png "Diagramm: DropShadow-Richtung")  
+  
+<a name="dependencyPropertyInfo_LightAngle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.EmbossBitmapEffect.LightAngleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LightAngleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LightAngleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LightAngleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.EmbossBitmapEffect.LightAngleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.EmbossBitmapEffect.LightAngle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Relief">
+      <MemberSignature Language="C#" Value="public double Relief { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Relief" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.EmbossBitmapEffect.Relief" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Ruft die Relieftiefe der Prägung ab oder legt sie fest.</summary>
+        <value>Die Relieftiefe der Prägung. Der gültige Wertebereich ist <c>0-1</c> mit <c>0</c> die geringsten Relief angibt und <c>1</c> die größte. Der Standardwert ist <c>0.44</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft:  
+  
+ ![Bildschirmabbildung: Vergleichen von Mindest- und eines höheren Reliefs](~/add/media/effects-embossrelief.png "Bildschirmabbildung: Vergleichen des minimalen und eines höheren Reliefs")  
+  
+<a name="dependencyPropertyInfo_Relief"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.EmbossBitmapEffect.ReliefProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReliefProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ReliefProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ReliefProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.EmbossBitmapEffect.ReliefProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.Effect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.EmbossBitmapEffect.Relief" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateUnmanagedPropertyState">
+      <MemberSignature Language="C#" Value="protected override void UpdateUnmanagedPropertyState (System.Runtime.InteropServices.SafeHandle unmanagedEffect);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateUnmanagedPropertyState(class System.Runtime.InteropServices.SafeHandle unmanagedEffect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.EmbossBitmapEffect.UpdateUnmanagedPropertyState(System.Runtime.InteropServices.SafeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedEffect" Type="System.Runtime.InteropServices.SafeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedEffect">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

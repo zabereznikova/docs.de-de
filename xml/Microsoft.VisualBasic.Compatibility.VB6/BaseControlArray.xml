@@ -1,0 +1,788 @@
+<Type Name="BaseControlArray" FullName="Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray">
+  <TypeSignature Language="C#" Value="public abstract class BaseControlArray : System.ComponentModel.Component, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract BaseControlArray extends System.ComponentModel.Component implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die Grundfunktionen, die Control-Arrays in Anwendungen Visual Basic 6.0 aktualisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie in der Regel erben nicht von `BaseControlArray`. Um eine eigene Steuerelementarray zu erstellen, erben von einem der Steuerelementklassen im Array der `Microsoft.VisualBasic.Compatibility.VB6` Namespace.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseControlArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyspecialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet. Da diese Klasse in der Regel nicht zum Erstellen einer Instanz der Klasse verwendet wird, wird dieser Konstruktor wird in der Regel nicht direkt aufgerufen, aber stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseControlArray (System.ComponentModel.IContainer Container);" />
+      <MemberSignature Language="ILAsm" Value=".method familyspecialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer Container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="Container">Die <see cref="T:System.ComponentModel.IContainer" /> , in dem das Steuerelementarray gehostet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray" /> -Klasse und gibt optional einen Container.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse in der Regel nicht zum Erstellen einer Instanz der Klasse verwendet wird, wird dieser Konstruktor wird in der Regel nicht direkt aufgerufen, aber stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseCanExtend">
+      <MemberSignature Language="C#" Value="protected bool BaseCanExtend (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method familyinstance bool BaseCanExtend(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseCanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Der zu überprüfende <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob ein Steuerelement einem Steuerelementarray angehört.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement ein Element des Steuerelementarrays ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse nicht in der Regel zum Erstellen einer Instanz der Klasse verwendet wird dies `Protected` Methode wird in der Regel nicht direkt aufgerufen, sondern stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen sollten sicherstellen, dass <paramref name="target" /> den richtigen Typ für das Steuerelementarray ist.  
+  
+ Wenn Sie außer Kraft setzen <see langword="BaseCanExtend" /> rufen Sie in einer abgeleiteten Klasse nicht die <see langword="BaseCanExtend" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetIndex">
+      <MemberSignature Language="C#" Value="protected short BaseGetIndex (object ctl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyinstance int16 BaseGetIndex(object ctl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseGetIndex(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctl" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ctl">Die <see cref="T:System.Windows.Forms.Control" /> für die der Index abgerufen werden sollen.</param>
+        <summary>Ruft den Index eines Steuerelements in einem Steuerelementarray.</summary>
+        <returns>Ein <see langword="Short" /> ganze Zahl, die den Index des Steuerelements im Steuerelementarray darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse nicht in der Regel zum Erstellen einer Instanz der Klasse verwendet wird dies `Protected` Methode wird in der Regel nicht direkt aufgerufen, sondern stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see langword="BaseGetIndex" /> rufen Sie in einer abgeleiteten Klasse nicht die <see langword="BaseGetIndex" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetItem">
+      <MemberSignature Language="C#" Value="protected object BaseGetItem (short Index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyinstance object BaseGetItem(int16 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseGetItem(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Eine ganze Zahl, die den Index des Steuerelements im Steuerelementarray darstellt.</param>
+        <summary>Ruft das Steuerelement für einen angegebenen Index in einem Steuerelementarray.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.Control" /> an der angegebenen <paramref name="Index" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse nicht in der Regel zum Erstellen einer Instanz der Klasse verwendet wird dies `Protected` Methode wird in der Regel nicht direkt aufgerufen, sondern stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see langword="BaseGetItem" /> rufen Sie in einer abgeleiteten Klasse nicht die <see langword="BaseGetItem" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseResetIndex">
+      <MemberSignature Language="C#" Value="protected void BaseResetIndex (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyinstance void BaseResetIndex(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseResetIndex(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Nicht unterstützt, die der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht unterstützt.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. -  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSetIndex">
+      <MemberSignature Language="C#" Value="protected void BaseSetIndex (object ctl, short Index, bool fIsDynamic = false);" />
+      <MemberSignature Language="ILAsm" Value=".method familyinstance void BaseSetIndex(object ctl, int16 Index, bool fIsDynamic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseSetIndex(System.Object,System.Int16,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctl" Type="System.Object" />
+        <Parameter Name="Index" Type="System.Int16" />
+        <Parameter Name="fIsDynamic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ctl">Die <see cref="T:System.Windows.Forms.Control" /> für den Sie den Index festlegen möchten.</param>
+        <param name="Index">Ein <see langword="Short" /> ganze Zahl, die den Index für das Steuerelement darstellt.</param>
+        <param name="fIsDynamic">Dies ist optional. Ein <see langword="Boolean" /> angibt, ob das Steuerelement zur Entwurfszeit erstellt wurde (<see langword="false" />) oder zur Laufzeit (<see langword="true" />).</param>
+        <summary>Legt den Index für ein Steuerelement in einem Steuerelementarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse nicht in der Regel zum Erstellen einer Instanz der Klasse verwendet wird dies `Protected` Methode wird in der Regel nicht direkt aufgerufen, sondern stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see langword="BaseSetIndex" /> rufen Sie in einer abgeleiteten Klasse nicht die <see langword="BaseSetIndex" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseShouldSerializeIndex">
+      <MemberSignature Language="C#" Value="protected bool BaseShouldSerializeIndex (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyinstance bool BaseShouldSerializeIndex(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseShouldSerializeIndex(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein Steuerelement einem Steuerelementarray angehört.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement ein Element des Steuerelementarrays ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse nicht in der Regel zum Erstellen einer Instanz der Klasse verwendet wird dies `Protected` Methode wird in der Regel nicht direkt aufgerufen, sondern stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see langword="BaseShouldSerialiazeIndex" /> rufen Sie in einer abgeleiteten Klasse nicht die <see langword="BaseShouldSerialiazeIndex" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="components">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.IContainer components;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.ComponentModel.IContainer components" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.components" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert den Container für ein Steuerelementarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="controlAddedAtDesignTime">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable controlAddedAtDesignTime;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Hashtable controlAddedAtDesignTime" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.controlAddedAtDesignTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert Werte zum Nachverfolgen, ob ein Steuerelement in einem Steuerelementarray zur Entwurfszeit oder zur Laufzeit erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="controls">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable controls;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Hashtable controls" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.controls" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert die Werte, die die Steuerelemente in einem Steuerelementarray darstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public short Count ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance int16 Count() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Count" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Anzahl der Steuerelemente in einem Steuerelementarray.</summary>
+        <returns>Ein kurzer, die die Anzahl der Steuerelemente enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft in einer [für... Nächste Anweisung](~/docs/visual-basic/language-reference/statements/for-next-statement.md) zum Ausführen eines Vorgangs auf die Steuerelemente in einem Steuerelementarray.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, die von einem Steuerelement in einem Steuerelementarray verwendet werden, und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit der disposing-Parameter auf festgelegt `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit der disposing-Parameter auf festgelegt `false`.  
+  
+ Wenn der disposing-Parameter ist `true`, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die auf dieses Steuerelement verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Wenn Sie außer Kraft setzen <see langword="Dispose(Boolean)" />, stellen Sie sicher, dass nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md). Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="fIsEndInitCalled">
+      <MemberSignature Language="C#" Value="protected bool fIsEndInitCalled;" />
+      <MemberSignature Language="ILAsm" Value=".field family bool fIsEndInitCalled" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.fIsEndInitCalled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert einen Wert, der angibt, ob der Initialisierungscode für ein Steuerelementarray Container die Ausführung beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlInstanceType">
+      <MemberSignature Language="C#" Value="protected abstract Type GetControlInstanceType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familynewslot virtual instance class System.Type GetControlInstanceType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Typ eines Steuerelements in einem Steuerelementarray zurück.</summary>
+        <returns>Diese Methode muss überschrieben werden.  
+  
+ Die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray" /> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse nicht in der Regel zum Erstellen einer Instanz der Klasse verwendet wird dies <see langword="Protected" /> Methode wird in der Regel nicht direkt aufgerufen, sondern stattdessen durch eine abgeleitete Klasse aufgerufen wird.  
+  
+ <block subset="none" type="note"><para>  
+ Funktionen und Objekte der <see cref="N:Microsoft.VisualBasic.Compatibility.VB6" /> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+</para></block></returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see langword="GetControlInstanceType" /> rufen Sie in einer abgeleiteten Klasse nicht die <see langword="GetControlInstanceType" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Verweis auf ein Enumeratorobjekt, die verwendet wird, um zu einem Steuerelementarray durchlaufen.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookUpControlEvents">
+      <MemberSignature Language="C#" Value="protected abstract void HookUpControlEvents (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familynewslot virtual instance void HookUpControlEvents(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.HookUpControlEvents(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Fügt der Ereignishandler für ein Steuerelement in einem Steuerelementarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss überschrieben werden.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see langword="HookUpControlEvents" /> rufen Sie in einer abgeleiteten Klasse nicht die <see langword="HookUpControlEvents" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="indices">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable indices;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Hashtable indices" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.indices" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert die Indizes für ein Steuerelementarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LBound">
+      <MemberSignature Language="C#" Value="public short LBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance int16 LBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.LBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see langword="Short" /> , die die kleinste mögliche Feldindex für ein Steuerelementarray enthält.</summary>
+        <returns>Ein <see langword="Short" /> , das die Untergrenze ein Steuerelementarray enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `LBound` Funktion wird verwendet, mit der <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.UBound%2A> Funktion zur Bestimmung der Größe von einem Steuerelementarray.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (short Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Load(int16 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Ein <see langword="Short" /> , die den Index des neuen Steuerelements darstellt.</param>
+        <summary>Erstellt ein neues Element in einem Steuerelementarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die Entsprechung von Visual Basic 6.0 `Load` -Funktion zum dynamischen Erstellen eines neuen Elements im Array.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt die Initialisierung des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entwurfsumgebungen mit dieser Methode in der Regel können um die Initialisierung einer Komponente zu starten, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:MMicrosoft.VisualBasic.Compatibility.VB6.BaseControlArray.System#ComponentModel#ISupportInitialize#EndInit%2A> -Methode beendet die Initialisierung. Mithilfe der `BeginInit` und <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.System#ComponentModel#ISupportInitialize#EndInit*> Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde. Die Initialisierung erfolgt zur Laufzeit.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Initialisierung eines Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entwurfsumgebungen mit dieser Methode in der Regel können um die Initialisierung einer Komponente fertig zu stellen, die in einem Formular oder von einer anderen Komponente verwendet wird. Die `EndInit` -Methode beendet die Initialisierung. Mithilfe der <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.System#ComponentModel#ISupportInitialize#BeginInit> und `EndInit` Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde. Die Initialisierung erfolgt zur Laufzeit.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UBound">
+      <MemberSignature Language="C#" Value="public short UBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance int16 UBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.UBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see langword="Short" /> , die die größte mögliche Feldindex für ein Steuerelementarray enthält.</summary>
+        <returns>Ein <see langword="Short" /> , enthält die oberen Grenzen der einem Steuerelementarray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `UBound` Funktion wird verwendet, mit der <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.LBound%2A> Funktion zur Bestimmung der Größe von einem Steuerelementarray.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unload">
+      <MemberSignature Language="C#" Value="public void Unload (short Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Unload(int16 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Unload(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Ein <see langword="Short" /> , die den Index des zu entfernenden Steuerelements darstellt.</param>
+        <summary>Entfernt ein Steuerelement aus einem Steuerelementarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die Entsprechung von Visual Basic 6.0 `Unload` -Funktion für dynamische Entfernen eines Elements im Array.  
+  
+> [!NOTE]
+>  Nur die Steuerelemente, die dynamisch hinzugefügt wurden die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A> Methode aus dem Steuerelementarray entfernt werden kann.  
+  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

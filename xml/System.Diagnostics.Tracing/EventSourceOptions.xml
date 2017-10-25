@@ -1,0 +1,189 @@
+<Type Name="EventSourceOptions" FullName="System.Diagnostics.Tracing.EventSourceOptions">
+  <TypeSignature Language="C#" Value="public struct EventSourceOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit EventSourceOptions extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventSourceOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt das Überschreibungsverhalten für Standard-Ereigniseinstellungen wie z. B. Protokollebene, Schlüsselwörter und Vorgangscode an, wenn die <see cref="M:System.Diagnostics.Tracing.EventSource.Write``1(System.String,System.Diagnostics.Tracing.EventSourceOptions,``0)" />-Methode aufgerufen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu ETW-Schlüsselwörter und-Ebenen, finden Sie unter [CLR-ETW-Schlüsselwörter und-Ebenen](~/docs/framework/performance/clr-etw-keywords-and-levels.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivityOptions">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventActivityOptions ActivityOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventActivityOptions ActivityOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceOptions.ActivityOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventActivityOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aktivitätsoptionen, die für diese Ereignisquelle definiert sind.</summary>
+        <value>Gibt <see cref="T:System.Diagnostics.Tracing.EventActivityOptions" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventKeywords Keywords { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventKeywords Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceOptions.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventKeywords</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schlüsselwörter für das Ereignis ab oder legt diese fest. Wenn diese Eigenschaft nicht festgelegt ist, lauten die Schlüsselwörter des Ereignisses <see langword="None" />.</summary>
+        <value>Die Schlüsselwörter für das Ereignis oder <see langword="None" />, wenn keine Schlüsselwörter festgelegt sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventLevel Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceOptions.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ereignisebene für das Ereignis ab oder legt diese fest.</summary>
+        <value>Die Ereignisebene für das Ereignis. Wenn nicht festgelegt, ist der Standardwert Ausführlich (5).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ETW-Ereignisse können auch nach Ebene gefiltert werden. Wenn die Ebene zur ausführlich (5) festgelegt ist, werden Ereignisse aller Ebenen, einschließlich ausführlich und darunter ausgelöst. Wenn die Ebene auf Fehler (2) festgelegt ist, werden nur Ereignisse, die auf der Fehlerstufe und darunter gehören ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opcode">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventOpcode Opcode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventOpcode Opcode" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceOptions.Opcode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventOpcode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vorgangscode zu dem angegebenen Ereignis ab oder legt diesen fest.</summary>
+        <value>Der Vorgangscode für das angegebene Ereignis. Wenn nicht festgelegt, ist der Standardwert <see langword="Info" /> (0).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tags">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventTags Tags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventTags Tags" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSourceOptions.Tags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventTags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die für diese Ereignisquelle definierten Ereignistags.</summary>
+        <value>Gibt <see cref="T:System.Diagnostics.Tracing.EventTags" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,474 @@
+<Type Name="PathGeometry" FullName="System.Windows.Media.PathGeometry">
+  <TypeSignature Language="C#" Value="public sealed class PathGeometry : System.Windows.Media.Geometry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PathGeometry extends System.Windows.Media.Geometry" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.PathGeometry" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Geometry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Figures")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine komplexe Form dar, die aus Bögen, Kurven, Ellipsen, Linien und Rechtecken erstellt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Windows.Media.PathGeometry> -Objekt definiert eine Auflistung von <xref:System.Windows.Media.PathFigure> Objekte. Jede der <xref:System.Windows.Media.PathFigure> Objekte besteht aus einem oder mehreren <xref:System.Windows.Media.PathSegment> Objekte, z. B. <xref:System.Windows.Media.ArcSegment> und <xref:System.Windows.Media.LineSegment>, die tatsächlich ihre Form definieren.  
+  
+ Die gefärbten Bereich von der <xref:System.Windows.Media.PathGeometry> wird definiert, indem er alle enthaltenen <xref:System.Windows.Media.PathFigure> Objekte mit ihren <xref:System.Windows.Media.PathFigure.IsFilled%2A> -Eigenschaftensatz auf `true` und Anwenden der <xref:System.Windows.Media.PathGeometry.FillRule%2A> zum Ermitteln des eingeschlossenen Bereichs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.PathGeometry" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGeometry (System.Collections.Generic.IEnumerable&lt;System.Windows.Media.PathFigure&gt; figures);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Media.PathFigure&gt; figures) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.#ctor(System.Collections.Generic.IEnumerable{System.Windows.Media.PathFigure})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="figures" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Media.PathFigure&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="figures">Die <see cref="P:System.Windows.Media.PathGeometry.Figures" /> von der <see cref="T:System.Windows.Media.PathGeometry" /> der beschrieben wird, den Inhalt der <see cref="T:System.Windows.Shapes.Path" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.PathGeometry" />-Klasse mit der angegebenen <see cref="P:System.Windows.Media.PathGeometry.Figures" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGeometry (System.Collections.Generic.IEnumerable&lt;System.Windows.Media.PathFigure&gt; figures, System.Windows.Media.FillRule fillRule, System.Windows.Media.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Media.PathFigure&gt; figures, valuetype System.Windows.Media.FillRule fillRule, class System.Windows.Media.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.#ctor(System.Collections.Generic.IEnumerable{System.Windows.Media.PathFigure},System.Windows.Media.FillRule,System.Windows.Media.Transform)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="figures" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Media.PathFigure&gt;" />
+        <Parameter Name="fillRule" Type="System.Windows.Media.FillRule" />
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="figures">Die <see cref="P:System.Windows.Media.PathGeometry.Figures" /> von der <see cref="T:System.Windows.Media.PathGeometry" /> der beschrieben wird, den Inhalt der <see cref="T:System.Windows.Shapes.Path" />.</param>
+        <param name="fillRule">Die <see cref="P:System.Windows.Media.PathGeometry.FillRule" /> des <see cref="T:System.Windows.Media.PathGeometry" />.</param>
+        <param name="transform">Die <see cref="P:System.Windows.Media.Geometry.Transform" /> gibt die Transformation angewendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.PathGeometry" /> Klasse mit dem angegebenen <see cref="P:System.Windows.Media.PathGeometry.Figures" />, <see cref="P:System.Windows.Media.PathGeometry.FillRule" />, und <see cref="P:System.Windows.Media.Geometry.Transform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddGeometry">
+      <MemberSignature Language="C#" Value="public void AddGeometry (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddGeometry(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.AddGeometry(System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die Geometrie auf den Pfad hinzufügen.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Windows.Media.Geometry" /> in eine Auflistung von <see cref="T:System.Windows.Media.PathFigure" /> -Objekte und fügt es dem Pfad hinzu.   **Hinweis:** Wenn das angegebene <see cref="T:System.Windows.Media.Geometry" /> animiert wird, die Konvertierung von <see cref="T:System.Windows.Media.Geometry" /> auf <see cref="T:System.Windows.Media.PathFigure" /> Verlust von Informationen führen kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Windows.Rect Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PathGeometry.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Rect" /> , die angibt, dass des umgebenden Felds dieses <see cref="T:System.Windows.Media.PathGeometry" /> Objekt.   **Hinweis:** diese Methode nimmt kein Stifte berücksichtigt.</summary>
+        <value>Das umgebende Feld dieses <see cref="T:System.Windows.Media.PathGeometry" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Animationen vorhanden sind, die Basiswerte von der <xref:System.Windows.Media.Geometry> Objekt werden zum Berechnen des umgebenden Felds.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Windows.Media.PathFigure" /> Objekte aus dieser <see cref="T:System.Windows.Media.PathGeometry" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.PathGeometry" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.PathGeometry" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromGeometry">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.PathGeometry CreateFromGeometry (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.PathGeometry CreateFromGeometry(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.CreateFromGeometry(System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die Geometrie aus der Erstellung einer <see cref="T:System.Windows.Media.PathGeometry" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Windows.Media.PathGeometry" /> Version des angegebenen <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.PathGeometry" /> erstellt, die von den aktuellen Werten des angegebenen <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die angegebene Geometrie animiert wird, werden die aktuellen animierten Werte verwendet, beim Erstellen der neuen <xref:System.Windows.Media.PathGeometry> (obwohl die Animationen selbst nicht kopiert werden). Wenn die Geometrie animiert wird, kann die Konvertierung zu Genauigkeitsverlust führen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Figures">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathFigureCollection Figures { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.PathFigureCollection Figures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PathGeometry.Figures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathFigureCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der <see cref="T:System.Windows.Media.PathFigure" /> -Objekten, die den pfadinhalt beschreiben.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Media.PathFigure" /> -Objekten, die den pfadinhalt beschreiben. Jedes einzelne <see cref="T:System.Windows.Media.PathFigure" /> beschreibt eine Form.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Figures"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Figures="moveAndDrawCommands"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_Figures"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Figures>  
+    oneOrMoreFigures  
+  </object.Figures>  
+</object>  
+```  
+  
+<a name="xamlValues_Figures"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *moveAndDrawCommands*  
+ Eine oder mehrere verschieben, und zeichnen-Befehle. Finden Sie unter [Markup Pfadsyntax](~/docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).  
+  
+ *oneOrMoreFigures*  
+ <xref:System.Windows.Media.PathFigure?displayProperty=nameWithType>  
+  
+ Eine oder mehrere <xref:System.Windows.Media.PathFigure> Objekte.  
+  
+<a name="dependencyPropertyInfo_Figures"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.PathGeometry.FiguresProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FiguresProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FiguresProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FiguresProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PathGeometry.FiguresProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.PathGeometry.Figures" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRule">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FillRule FillRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.FillRule FillRule" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PathGeometry.FillRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FillRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, wie die sich überschneidenden Bereiche in dieser enthaltenen <see cref="T:System.Windows.Media.PathGeometry" /> kombiniert werden.</summary>
+        <value>Gibt an, wie die sich überschneidenden Bereiche dieser <see cref="T:System.Windows.Media.PathGeometry" /> kombiniert werden.  Der Standardwert ist <c>EvenOdd</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **EvenOdd** bestimmt, ob"eines Punkts auf die Form durch ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet und zählen der Anzahl der Pfadsegmente in der angegebenen Form, die den Strahl schneidet. Bei einer ungeraden Zahl liegt der Punkt innen, und bei einer geraden Zahl liegt er außen.  
+  
+ **Ungleich NULL** bestimmt, die "ob" eines Punkts auf der Form indem ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet und anschließend die Stellen untersucht, in denen ein Segment der Form den Strahl schneidet. Beginnen Sie mit dem Wert 0 (null), und addieren Sie für jede Stelle, an der ein Segment den Strahl von links nach rechts schneidet, den Wert 1. Wenn das Ergebnis nach dem Zählen der Überschneidungen 0 (null) ist, liegt der Punkt außerhalb des Pfads. Andernfalls liegt er innerhalb des Pfads.  
+  
+ ![Füllungsregel-Darstellung](~/add/media/ref-mil-fillrule-stars.PNG "Füllungsregel-Darstellung")  
+Beispiel für FillRule  
+  
+<a name="dependencyPropertyInfo_FillRule"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.PathGeometry.FillRuleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRuleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FillRuleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FillRuleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PathGeometry.FillRuleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.PathGeometry.FillRule" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPointAtFractionLength">
+      <MemberSignature Language="C#" Value="public void GetPointAtFractionLength (double progress, out System.Windows.Point point, out System.Windows.Point tangent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetPointAtFractionLength(float64 progress, [out] valuetype System.Windows.Point&amp; point, [out] valuetype System.Windows.Point&amp; tangent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.GetPointAtFractionLength(System.Double,System.Windows.Point@,System.Windows.Point@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progress" Type="System.Double" />
+        <Parameter Name="point" Type="System.Windows.Point&amp;" RefType="out" />
+        <Parameter Name="tangent" Type="System.Windows.Point&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="progress">Der Anteil der Länge dieses <see cref="T:System.Windows.Media.PathGeometry" />.</param>
+        <param name="point">Bei der Rückgabe dieser Methode enthält Sie den Speicherort für dieses <see cref="T:System.Windows.Media.PathGeometry" /> am angegebenen Bruchteil seine Länge. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="tangent">Bei der Rückgabe dieser Methode enthält den Tangenten Vektor. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Point" /> und einen Tangens Vektor für dieses <see cref="T:System.Windows.Media.PathGeometry" /> am angegebenen Bruchteil seine Länge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public override bool IsEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.IsEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.PathGeometry" /> Objekt leer ist.</summary>
+        <returns>**"true"** Wenn diese <see cref="T:System.Windows.Media.PathGeometry" /> leer ist; andernfalls, **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayHaveCurves">
+      <MemberSignature Language="C#" Value="public override bool MayHaveCurves ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MayHaveCurves() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.MayHaveCurves" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Media.PathGeometry" /> Objekt möglicherweise gekrümmte Segmente aufweisen.</summary>
+        <returns>**"true"** Wenn diese <see cref="T:System.Windows.Media.PathGeometry" /> Objekt möglicherweise gekrümmte Segmente aufweisen, andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected override void OnChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PathGeometry.OnChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

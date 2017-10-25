@@ -1,0 +1,378 @@
+<Type Name="FormViewDesigner" FullName="System.Web.UI.Design.WebControls.FormViewDesigner">
+  <TypeSignature Language="C#" Value="public class FormViewDesigner : System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewDesigner extends System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.FormViewDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.DataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.FormView" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt die <xref:System.Web.UI.WebControls.FormView> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+ Die Eigenschaften der <xref:System.Web.UI.Design.WebControls.FormViewDesigner> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.ActionLists%2A> Eigenschaft gibt eine <xref:System.ComponentModel.Design.DesignerActionListCollection> -Objekt, das in der Regel auf ein Objekt enthält, die abgeleitet ist die <xref:System.ComponentModel.Design.DesignerActionList> Klasse für jede Ebene in der Vererbungsstruktur des Designers.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.AutoFormats%2A> -Eigenschaft gibt eine Auflistung der Formatierungsschemas für die Anzeige in der **AutoFormat** (Dialogfeld).  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.TemplateGroups%2A> -Eigenschaft gibt eine Auflistung der Vorlagengruppen für die Vorlagen der zugeordneten <xref:System.Web.UI.WebControls.FormView>.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.UsePreviewControl%2A> -Eigenschaft gibt immer `true`, gibt an, dass der Designer eine temporäre Kopie des zugeordneten erstellt <xref:System.Web.UI.WebControls.FormView> Markup zur Entwurfszeit zu generieren.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner> -Klasse, Methoden bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> -Methode gibt das Markup ab, das Rendering des zugeordneten <xref:System.Web.UI.WebControls.FormView> zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.Initialize%2A> Methode bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des zugeordneten <xref:System.Web.UI.WebControls.FormView>.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.OnSchemaRefreshed%2A> Methode wird aufgerufen, wenn das Schema der Datenquelle für den zugeordneten <xref:System.Web.UI.WebControls.FormView> ändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.Design.WebControls.FormViewDesigner> auf die Darstellung von Steuerelementen zu ändern, die von der abgeleiteten Klasse die <xref:System.Web.UI.WebControls.FormView> -Steuerelements zur Entwurfszeit.  
+  
+ Im Beispiel leitet der `MyFormView` -Steuerelement aus der <xref:System.Web.UI.WebControls.FormView> Steuerelement. Die `MyFormView` ist einfach eine Kopie der <xref:System.Web.UI.WebControls.FormView>. Im Beispiel wird außerdem abgeleitet der `MyFormViewDesigner` -Klasse aus der <xref:System.Web.UI.Design.WebControls.FormViewDesigner> und platziert eine <xref:System.ComponentModel.DesignerAttribute> -Objekt für die `MyFormViewDesigner` auf die `MyFormView` Steuerelement.  
+  
+ Die `MyFormViewDesigner` überschreibt die folgenden Elemente:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.SampleRowCount%2A> Eigenschaft, um anzugeben, dass die Pagerzeile für die Entwurfszeitansicht des der `MyFormView` vier Seitenlinks enthalten.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> Methode zum Einschließen der <xref:System.Web.UI.WebControls.FormView.Caption%2A> Eigenschaft, wenn er, als neue erste Zeile in angegeben wird der `MyFormView` Raster zur Entwurfszeit. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft von der `MyFormView` ist die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Wert, der <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> zeichnet einen blauen gestrichelten Rahmen um das Steuerelement an sein Wertebereich mehr sichtbar zu machen.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.FormViewDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.FormViewDesigner/CS/formviewdesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.FormViewDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.FormViewDesigner/VB/formviewdesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.FormViewDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.FormViewDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der der <xref:System.Web.UI.Design.WebControls.FormViewDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.FormView> Steuerelement oder eine Kopie der <xref:System.Web.UI.WebControls.FormView> Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.FormViewDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Designer-Aktionslistenauflistung für diesen Designer ab.</summary>
+        <value>Die diesem Designer zugeordnete <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.FormViewDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der automatischen Formatierungsschemas ab für die Anzeige in der **AutoFormat** (Dialogfeld).</summary>
+        <value>Eine <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" />, die die vordefinierten Schemas für <see cref="T:System.Web.UI.WebControls.FormView" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.DesignerAutoFormatCollection> Objekt wird von einem XML-codierten Member einer internen Klasse aufgefüllt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup ab, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das Markup enthält, mit dem der <see cref="T:System.Web.UI.WebControls.FormView" /> zur Entwurfszeit gerendert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Elementvorlage für definiert wurde die <xref:System.Web.UI.WebControls.FormView> -Steuerelement, die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> Methode legt die <xref:System.Web.UI.WebControls.FormView.DataKeyNames%2A> des Steuerelements auf eine leere Auflistung <xref:System.String> array-Wenn das Schema für die Datenquelle kann nicht abgerufen werden. Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> aktualisiert die <xref:System.ComponentModel.TypeDescriptor> Objekt einen Aufruf zum Erzwingen der <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner.PreFilterProperties%2A> Methode. Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> ruft dann die Basismethode, um das Markup zu generieren.  
+  
+ Wenn keine Elementvorlage für definiert wurde die <xref:System.Web.UI.WebControls.FormView> -Steuerelement, das <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> Aufrufe der <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetEmptyDesignTimeHtml%2A> Methode Markup generiert, die an einem Platzhalter gerendert wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> Methode in einer Klasse, die vom geerbt wird der <xref:System.Web.UI.Design.WebControls.FormViewDesigner> Klasse so ändern Sie die Darstellung der <xref:System.Web.UI.WebControls.FormView> -Steuerelements zur Entwurfszeit. Im Beispiel fügt eine neue erste Zeile der Raster enthält die <xref:System.Web.UI.WebControls.FormView.Caption%2A> -Eigenschaft, wenn die <xref:System.Web.UI.WebControls.FormView.Caption%2A> definiert ist. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft des Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.FormView> ist die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Wert, der <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> zeichnet einen blauen gestrichelten Rahmen um das Steuerelement an sein Wertebereich mehr sichtbar zu machen. Im Beispiel ändert sich nicht auf die Laufzeit-Darstellung des Steuerelements aus.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.FormViewDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.FormViewDesigner/CS/formviewdesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.FormViewDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.FormViewDesigner/VB/formviewdesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen die <see cref="M:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml" /> -Methode, achten Sie darauf, dass Sie die Basismethode aufrufen, da er schließlich über mehrere Außerkraftsetzung Ebenen auf aufruft der <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement oder eine Kopie der <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement zum Generieren des Markups.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.FormViewDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Markuptext, mit dem einen Platzhalter für das zugeordnete Steuerelement zur Entwurfszeit gerendert wird.</summary>
+        <returns>Ein <see cref="T:System.String" /> mit Markuptext, der an einem Platzhalter auf der Entwurfsoberfläche gerendert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Markup für die <xref:System.Web.UI.WebControls.FormView> Steuerelement enthält keine eines Elementvorlagen, die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetDesignTimeHtml%2A> Methodenaufrufe der <xref:System.Web.UI.Design.WebControls.FormViewDesigner.GetEmptyDesignTimeHtml%2A> -Methode, die das Markup für einen Platzhalter generiert, die Anweisungen zum Bearbeiten von Vorlageninhalt und eine Nachricht enthält dass eine Elementvorlage erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.FormViewDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.Web.UI.WebControls.FormView" />, das eine <see cref="T:System.ComponentModel.IComponent" /> implementiert.</param>
+        <summary>Bereitet den Designer zum Anzeigen, Bearbeiten und Entwerfen des zugeordneten Steuerelements vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.Initialize%2A> Methode, wenn es der Designer zum Rendern verwenden kann die <xref:System.Web.UI.WebControls.FormView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.Initialize%2A> und ihre Basismethoden Eigenschaften konfigurieren und Verbinden mit Ereignissen, die für die Ausführung des Designers erforderlich sind.  
+  
+ Die `component` Parameter ist der <xref:System.Web.UI.WebControls.FormView> Steuerelement, das diesem Designer zugeordnet oder eine Kopie des der <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSchemaRefreshed">
+      <MemberSignature Language="C#" Value="protected override void OnSchemaRefreshed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSchemaRefreshed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.FormViewDesigner.OnSchemaRefreshed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn das Schema der Datenquelle für das zugeordnete Steuerelement geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Designer im Modus oder ein Feld Bearbeiten von Vorlagen ist wird hinzugefügt oder bearbeitet, die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.OnSchemaRefreshed%2A> Methodenaufrufe der <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> Methode, die ihrerseits die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> Methode zum Aktualisieren der <xref:System.Web.UI.WebControls.FormView> Steuerelement, um die Änderung an der Datenquelle widerspiegeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.FormViewDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaften für die Klasse der Komponente.</param>
+        <summary>Fügt Eigenschaften im Eigenschaftenraster in einem Entwurfshost zur Entwurfszeit entfernt oder bietet neue zur Entwurfszeit-Eigenschaften, die die Eigenschaften des zugeordneten Steuerelements entsprechen können.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderOuterTable">
+      <MemberSignature Language="C#" Value="public bool RenderOuterTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderOuterTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.FormViewDesigner.RenderOuterTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see cref="T:System.Web.UI.Design.WebControls.FormViewDesigner" /> Steuerelement verwendet einen äußeren Tabelle-Container, um Inline-CSS-Stilregeln anzuwenden.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement einen Container der äußeren Tabelle anzuwendende Inline-CSS-Stilregeln; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner> Steuerelement verwendet einen äußeren Tabelle-Container, um Inline-Formatierungsregel im Markup angewendet werden. Sie können den Container der äußeren Tabelle entfernen, durch Festlegen dieser Eigenschaft auf `true`. Dies bietet Flexibilität bei der Anwendung von CSS-Stilregeln in Markup des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleRowCount">
+      <MemberSignature Language="C#" Value="protected override int SampleRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SampleRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.FormViewDesigner.SampleRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der anzuzeigenden Beispielzeilen für das zugeordnete Steuerelement ab.</summary>
+        <value>Die Anzahl der Beispielzeilen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.SampleRowCount%2A> gibt immer `2`. Dies bewirkt, dass zwei Seitenlinks in der Pagerzeile angezeigt werden die <xref:System.Web.UI.WebControls.FormView> zur Entwurfszeit zu steuern, wenn die <xref:System.Web.UI.WebControls.FormView.PagerSettings%2A> Modus numerisch ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.FormViewDesigner.SampleRowCount%2A> Eigenschaft in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.FormViewDesigner> Klasse, um die Anzahl der Seitenlinks angezeigt werden, in der Pagerzeile ändern die <xref:System.Web.UI.WebControls.FormView> -Steuerelements zur Entwurfszeit. Im Beispiel bewirkt, dass vier Seitenlinks angezeigt.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.FormViewDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.FormViewDesigner/CS/formviewdesigner.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.FormViewDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.FormViewDesigner/VB/formviewdesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.FormViewDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Vorlagengruppen für die Felder des zugeordneten Steuerelements ab.</summary>
+        <value>Eine <see cref="T:System.Web.UI.Design.TemplateGroupCollection" />, die ein Element für jedes aus einer Vorlage gebildete Feld in der <see cref="T:System.Web.UI.WebControls.FormView" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.TemplateGroups%2A> Eigenschaft erstellt eine Auflistung von <xref:System.Web.UI.Design.TemplateGroup> Objekten, eines für jede Steuerelementvorlage in der zugeordneten <xref:System.Web.UI.WebControls.FormView> Steuerelement. Die Steuerelementvorlagen sind Header, Footer, Pager, Element, Element bearbeiten, Insert-Element und leere Daten. Die Steuerelementvorlage <xref:System.Web.UI.Design.TemplateGroup> Elemente enthalten einen einzelnen <xref:System.Web.UI.Design.TemplateDefinition> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.FormViewDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer das tatsächliche Steuerelement, das der Designer zum Generieren des Markups zur Entwurfszeit zugeordnet ist, anstatt eine temporäre Kopie verwenden soll.</summary>
+        <value>Gibt immer <see langword="true" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.UsePreviewControl%2A> Eigenschaft ist immer "true", verwendet der Designer einen <xref:System.Web.UI.WebControls.View> Steuerelement, das eine Kopie des zugeordneten enthält <xref:System.Web.UI.WebControls.FormView> Steuerelement, um das Markup zur Entwurfszeit zu generieren. Die <xref:System.Web.UI.WebControls.View> Steuerelement wirkt sich nicht auf die Persistenz der <xref:System.Web.UI.WebControls.FormView>. Wenn die <xref:System.Web.UI.Design.WebControls.FormViewDesigner.UsePreviewControl%2A> Eigenschaft wurde überschrieben, um zurückzukehren `false`, mithilfe des Designers die zugeordnete <xref:System.Web.UI.WebControls.FormView> selbst das Markup zur Entwurfszeit zu generieren.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="P:System.Web.UI.Design.WebControls.FormViewDesigner.UsePreviewControl" /> -Eigenschaft zum Zurückgeben von <see langword="false" /> oder um zu bestimmen, deren Wert basierend auf, ob das Steuerelement mit einem auf Klassenebene gekennzeichnet ist <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Objekt. Wenn die <see cref="P:System.Web.UI.Design.WebControls.FormViewDesigner.UsePreviewControl" /> nicht überschrieben wird, die <see cref="T:System.Web.UI.WebControls.FormView" /> -Steuerelement ignoriert die <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

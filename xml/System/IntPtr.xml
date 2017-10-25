@@ -1,0 +1,1215 @@
+<Type Name="IntPtr" FullName="System.IntPtr">
+  <TypeSignature Language="C#" Value="public struct IntPtr : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit native int extends System.ValueType implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.IntPtr" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IntPtr> ist eine ganze Zahl sein, dessen Größe plattformspezifisch ist, ausgelegt. D. h. muss eine Instanz dieses Typs werden 32-Bit unter 32-Bit-Hardware und Betriebssystemen und 64-Bit unter 64-Bit-Hardware und Betriebssystemen.  
+  
+ Die <xref:System.IntPtr> -Typ kann von Sprachen, die Zeiger unterstützen, und als allgemeine Mittel zum Verweisen auf Daten zwischen Sprachen, die und unterstützen keine Zeiger verwendet werden.  
+  
+ <xref:System.IntPtr>Objekte können auch verwendet werden, um Handles zu speichern. Z. B. Instanzen von <xref:System.IntPtr> umfassenden dienen der <xref:System.IO.FileStream?displayProperty=nameWithType> Klasse zum Halten von Dateihandles.  
+  
+ Die <xref:System.IntPtr> Typ CLS-kompatibel ist während der <xref:System.UIntPtr> ist keine. Nur die <xref:System.IntPtr> Typ wird in der common Language Runtime verwendet. Die <xref:System.UIntPtr> Typ dient hauptsächlich architektonische Einheitlichkeit mit verwalten die <xref:System.IntPtr> Typ.  
+  
+ Dieser Typ implementiert die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird verwalteten Zeiger, um die Zeichen in einem Array umzukehren. Nachdem er initialisiert ein <xref:System.String> -Objekt und ruft seine Länge wird Folgendes:  
+  
+1.  Ruft die <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A?displayProperty=nameWithType> Methode, um die Unicode-Zeichenfolge in nicht verwalteten Speicher als ANSI-Zeichen (Einzelbyte) zu kopieren. Die Methode gibt ein <xref:System.IntPtr> Objekt, das an den Anfang der nicht verwalteten Zeichenfolge verweist. Visual Basic-Beispiel verwendet die this-Zeiger direkt. in C++ und c#-Beispielen wird er in einen Zeiger auf ein Byte umgewandelt.  
+  
+2.  Ruft die <xref:System.Runtime.InteropServices.Marshal.AllocHGlobal%2A?displayProperty=nameWithType> Methode, um die gleiche Anzahl von Bytes Belegen wie die nicht verwaltete Zeichenfolge belegt. Die Methode gibt ein <xref:System.IntPtr> -Objekt, das an den Anfang des nicht verwalteten Speicherblocks zeigt. Visual Basic-Beispiel verwendet die this-Zeiger direkt. in C++ und c#-Beispielen wird er in einen Zeiger auf ein Byte umgewandelt.  
+  
+3.  Visual Basic-Beispiel definiert eine Variable namens `offset` , ist gleich der Länge der ANSI-Zeichenfolge. Es wird verwendet, um den Offset in den nicht verwalteten Arbeitsspeicher zu bestimmen, in die nächste Charta in der ANSI-Zeichenfolge kopiert werden. Da Startwert die Länge der Zeichenfolge ist, wird der Kopiervorgang ein Zeichen vom Anfang der Zeichenfolge bis zum Ende des Speicherblocks kopieren.  
+  
+     Der C#- und C++-Beispiele-Aufruf die <xref:System.IntPtr.ToPointer%2A> Methode, um ein nicht verwalteter Zeiger auf die Startadresse der Zeichenfolge und den nicht verwalteten Speicherblock abzurufen und sie fügen einen kleiner als die Länge der Zeichenfolge, die die Startadresse der ANSI-Zeichenfolge. Da der nicht verwalteten Zeichenfolgenzeiger nun bis zum Ende der Zeichenfolge verweist, wird der Kopiervorgang ein Zeichen vom Ende der Zeichenfolge am Anfang der Speicherblock kopieren.  
+  
+4.  Mithilfe einer Schleife um jedes Zeichen aus der Zeichenfolge in den nicht verwalteten Speicherblock zu kopieren.  
+  
+     Im Visual Basic-Beispiel wird die <xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.IntPtr%2CSystem.Int32%29?displayProperty=nameWithType> Methode, um die Byte (oder ein-Byte-Zeichen) an einem angegebenen Offset aus dem verwalteten Zeiger auf die ANSI-Zeichenfolge zu lesen. Der Offset wird bei jeder Iteration der Schleife erhöht. Er ruft dann die <xref:System.Runtime.InteropServices.Marshal.WriteByte%28System.IntPtr%2CSystem.Int32%2CSystem.Byte%29?displayProperty=nameWithType> Methode zum Schreiben von Bytes auf die Speicheradresse, die durch die Startadresse des plus nicht verwalteten Speicherblock definierten `offset`. Es wird dann verringert `offset`.  
+  
+     Die C#- und C++-Beispiele Ausführen des Kopiervorgangs, verringern den Zeiger auf die Adresse von der nächsten Position in der nicht verwalteten ANSI-Zeichenfolge und erhöhen den Zeiger auf die nächste Adresse im nicht verwalteten Block.  
+  
+5.  Alle Beispiele rufen die <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A?displayProperty=nameWithType> den nicht verwaltete Speicherblock mit der kopierten ANSI-Zeichenfolge in einen verwalteten Unicode konvertiert <xref:System.String> Objekt.  
+  
+6.  Rufen Sie nach dem Anzeigen von Verbindungszeichenfolgen für die ursprüngliche und umgekehrten alle Beispiele für die <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> Methode, um den für den nicht verwalteten ANSI-Zeichenfolge und den nicht verwalteten Speicherblock belegten Arbeitsspeicher freizugeben.  
+  
+ [!code-cpp[System.IntPtr#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.intptr/cpp/topointer.cpp#1)]
+ [!code-csharp[System.IntPtr#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.intptr/cs/topointer.cs#1)]
+ [!code-vb[System.IntPtr#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.intptr/vb/topointer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntPtr (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein von einer 32-Bit-Ganzzahl mit Vorzeichen dargestellter Zeiger bzw. ein Handle.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.IntPtr" /> mit dem angegebenen 32-Bit-Zeiger bzw. -Handle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntPtr (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.#ctor(System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein von einer 64-Bit-Ganzzahl mit Vorzeichen dargestellter Zeiger bzw. ein Handle.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.IntPtr" /> mit einem 64-Bit-Zeiger oder -Handle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme wird nur ausgelöst, wenn der Wert der `value` erfordert mehr Bits als die aktuelle Plattform unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">Auf einer 32-Bit-Plattform <paramref name="value" /> ist zu groß oder zu klein, um die Darstellung als eine <see cref="T:System.IntPtr" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntPtr (void* value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(void* value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.#ctor(System.Void*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.Void*" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Zeiger auf einen nicht angegebenen Typ.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.IntPtr" /> mit dem angegebenen Zeiger auf einen nicht angegebenen Typ.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static IntPtr Add (IntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int Add(native int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.Add(System.IntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.IntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger, zu dem der Offset addiert werden soll.</param>
+        <param name="offset">Der Offset, der addiert werden soll.</param>
+        <summary>Addiert einen Offset zum Wert eines Zeigers.</summary>
+        <returns>Ein neuer Zeiger, der die Addition von <paramref name="offset" /> zu <paramref name="pointer" /> widerspiegelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IntPtr.Add%2A> Methode löst keine Ausnahme aus, wenn das Ergebnis zu groß, um als Zeiger auf den angegebenen Plattformen dargestellt wird. Stattdessen wird die Additionsoperation in einem nicht geprüften Kontext ausgeführt.  
+  
+ Sprachen, die Überladen von Operatoren oder benutzerdefinierten Operatoren nicht unterstützt werden können diese Methode verwenden, um einen Offset auf den Wert eines Zeigers hinzuzufügen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.IntPtr> -Objekt, das auf den Anfang des ein Array mit 10 Elementen verweist, und ruft dann die <xref:System.IntPtr.Add%2A> Methode, um die Elemente im Array durchlaufen.  
+  
+ [!code-csharp[System.IntPtr.Add#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.intptr.add/cs/add1.cs#1)]
+ [!code-vb[System.IntPtr.Add#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.intptr.add/vb/add1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> eine Instanz von <see cref="T:System.IntPtr" /> ist, deren Wert gleich dem Wert dieser Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static IntPtr operator + (IntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native int op_Addition(native int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Addition(System.IntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.IntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger, zu dem der Offset addiert werden soll.</param>
+        <param name="offset">Der Offset, der addiert werden soll.</param>
+        <summary>Addiert einen Offset zum Wert eines Zeigers.</summary>
+        <returns>Ein neuer Zeiger, der die Addition von <paramref name="offset" /> zu <paramref name="pointer" /> widerspiegelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IntPtr.op_Addition%2A> Methode definiert die Additionsoperation für <xref:System.IntPtr> Objekte. Dadurch wird dem folgenden Code.  
+  
+ [!code-csharp[System.IntPtr.op_Addition#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.intptr.op_addition/cs/addition1.cs#1)]
+ [!code-vb[System.IntPtr.op_Addition#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.intptr.op_addition/vb/addition1.vb#1)]  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.IntPtr.Add%2A> Methode stattdessen.  
+  
+ Die Additionsoperation wird keine Ausnahme auslöst, wenn das Ergebnis zu groß, um als Zeiger auf den angegebenen Plattformen darstellen. Stattdessen wird es in einem nicht geprüften Kontext ausgeführt.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.IntPtr.Add%28System.IntPtr%2CSystem.Int32%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (IntPtr value1, IntPtr value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(native int value1, native int value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Equality(System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.IntPtr" />
+        <Parameter Name="value2" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Zeiger bzw. das erste Handle für den Vergleich.</param>
+        <param name="value2">Der zweite Zeiger bzw. das zweite Handle für den Vergleich.</param>
+        <summary>Bestimmt, ob zwei angegebene Instanzen von <see cref="T:System.IntPtr" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value1" /> gleich <paramref name="value2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.IntPtr.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator IntPtr (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native int op_Explicit(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Explicit(System.Int32)~System.IntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine 32-Bit-Ganzzahl mit Vorzeichen.</param>
+        <summary>Konvertiert den Wert einer 32-Bit-Ganzzahl mit Vorzeichen in einen <see cref="T:System.IntPtr" />-Konstruktor.</summary>
+        <returns>Eine neue, mit <see cref="T:System.IntPtr" /> initialisierte Instanz von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator IntPtr (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native int op_Explicit(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Explicit(System.Int64)~System.IntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine 64-Bit-Ganzzahl mit Vorzeichen.</param>
+        <summary>Konvertiert den Wert einer 64-Bit-Ganzzahl mit Vorzeichen in einen <see cref="T:System.IntPtr" />-Konstruktor.</summary>
+        <returns>Eine neue, mit <see cref="T:System.IntPtr" /> initialisierte Instanz von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.OverflowException">Auf einer 32-Bit-Plattform <paramref name="value" /> ist zu groß für die Darstellung als eine <see cref="T:System.IntPtr" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator int (IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname int32 op_Explicit(native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Explicit(System.IntPtr)~System.Int32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Zeiger bzw. das zu konvertierende Handle.</param>
+        <summary>Konvertiert den Wert des angegebenen <see cref="T:System.IntPtr" />-Konstruktors in eine 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Der Inhalt von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme wird nur ausgelöst, wenn der Wert der `value` erfordert mehr Bits als die aktuelle Plattform unterstützt.
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">Auf einer 64-Bit-Plattform den Wert des <paramref name="value" /> ist zu groß für die Darstellung als eine 32-Bit-Ganzzahl mit Vorzeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator long (IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname int64 op_Explicit(native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Explicit(System.IntPtr)~System.Int64" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Zeiger bzw. das zu konvertierende Handle.</param>
+        <summary>Konvertiert den Wert des angegebenen <see cref="T:System.IntPtr" />-Konstruktors in eine 64-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Der Inhalt von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator void* (IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname void* op_Explicit(native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Explicit(System.IntPtr)~System.Void*" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void*</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Zeiger bzw. das zu konvertierende Handle.</param>
+        <summary>Konvertiert den Wert des angegebenen <see cref="T:System.IntPtr" /> in einen Zeiger auf einen nicht angegebenen Typ.  
+  
+ Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Der Inhalt von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator IntPtr (void* value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native int op_Explicit(void* value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Explicit(System.Void*)~System.IntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Void*" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Zeiger auf einen nicht angegebenen Typ.</param>
+        <summary>Konvertiert den angegebenen Zeiger auf einen nicht angegebenen Typ in einen <see cref="T:System.IntPtr" />.  
+  
+ Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Eine neue, mit <see cref="T:System.IntPtr" /> initialisierte Instanz von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (IntPtr value1, IntPtr value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(native int value1, native int value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Inequality(System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.IntPtr" />
+        <Parameter Name="value2" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Zeiger bzw. das erste Handle für den Vergleich.</param>
+        <param name="value2">Der zweite Zeiger bzw. das zweite Handle für den Vergleich.</param>
+        <summary>Bestimmt, ob zwei angegebene Instanzen von <see cref="T:System.IntPtr" /> nicht gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value1" /> ungleich <paramref name="value2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.IntPtr.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static IntPtr operator - (IntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native int op_Subtraction(native int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.op_Subtraction(System.IntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.IntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger, von dem der Offset subtrahiert werden soll.</param>
+        <param name="offset">Der Offset, der subtrahiert werden soll.</param>
+        <summary>Subtrahiert einen Offset vom Wert eines Zeigers.</summary>
+        <returns>Ein neuer Zeiger, der die Subtraktion von <paramref name="offset" /> von <paramref name="pointer" /> widerspiegelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IntPtr.op_Subtraction%2A> Methode definiert, dem der Subtraktionsvorgang für <xref:System.IntPtr> Objekte. Dadurch wird dem folgenden Code.  
+  
+ [!code-csharp[System.IntPtr.op_Addition#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.intptr.op_addition/cs/op_subtraction1.cs#2)]
+ [!code-vb[System.IntPtr.op_Addition#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.intptr.op_addition/vb/op_subtraction1.vb#2)]  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.IntPtr.Subtract%2A> Methode stattdessen.  
+  
+ Die Operation der Mengensubtraktion wird keine Ausnahme auslöst, wenn das Ergebnis zu klein, um als Zeiger auf den angegebenen Plattformen darstellen. Stattdessen wird es in einem nicht geprüften Kontext ausgeführt.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.IntPtr.Subtract%28System.IntPtr%2CSystem.Int32%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public static int Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.IntPtr.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe dieser Instanz ab.</summary>
+        <value>Die Größe eines Zeigers bzw. Handles in diesem Prozess in Bytes. Der Wert dieser Eigenschaft in einem 32-Bit-Prozess ist 4 und in einem 64-Bit-Prozess 8. Sie können den Prozesstyp definieren, indem Sie den <see langword="/platform" />-Schalter festlegen, wenn Sie den Code mit den C#- und Visual Basic-Compilern kompilieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static IntPtr Subtract (IntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int Subtract(native int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.Subtract(System.IntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.IntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger, von dem der Offset subtrahiert werden soll.</param>
+        <param name="offset">Der Offset, der subtrahiert werden soll.</param>
+        <summary>Subtrahiert einen Offset vom Wert eines Zeigers.</summary>
+        <returns>Ein neuer Zeiger, der die Subtraktion von <paramref name="offset" /> von <paramref name="pointer" /> widerspiegelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IntPtr.Subtract%2A> Methode löst keine Ausnahme aus, wenn das Ergebnis zu klein, um als Zeiger auf den angegebenen Plattformen dargestellt wird. Stattdessen wird die Operation der Mengensubtraktion in einem nicht geprüften Kontext ausgeführt.  
+  
+ Sprachen, die Überladen von Operatoren oder benutzerdefinierten Operatoren nicht unterstützen, können diese Methode verwenden, subtrahiert einen Offset vom Wert eines Zeigers.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.IntPtr> -Objekt, das am Ende ein Array mit 10 Elementen verweist, und ruft dann die <xref:System.IntPtr.Subtract%2A> Methode, um die Elemente im Array in umgekehrter Reihenfolge zu durchlaufen.  
+  
+ [!code-csharp[System.IntPtr.Subtract#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.intptr.subtract/cs/subtract1.cs#1)]
+ [!code-vb[System.IntPtr.Subtract#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.intptr.subtract/vb/subtract1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IEquatable&lt;System.IntPtr&gt;.Equals">
+      <MemberSignature Language="C#" Value="bool IEquatable&lt;IntPtr&gt;.Equals (IntPtr other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.IEquatable&lt;System.IntPtr&gt;.Equals(native int other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.System#IEquatable&lt;System#IntPtr&gt;#Equals(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das mit Daten aufzufüllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt.</param>
+        <param name="context">Das Ziel dieser Serialisierung. (Dieser Parameter wird nicht verwendet, geben Sie <see langword="null" /> an.)</param>
+        <summary>Füllt ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den für das Serialisieren des aktuellen <see cref="T:System.IntPtr" />-Objekts erforderlichen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode füllt die `info` Parameter mit dem Wert des aktuellen <xref:System.IntPtr> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt32">
+      <MemberSignature Language="C#" Value="public int ToInt32 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ToInt32() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.ToInt32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in eine 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die gleich dem Wert dieser Instanz ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OverflowException">Auf einer 64-Bit-Plattform ist der Wert dieser Instanz zu groß oder zu klein, um als eine 32-Bit-Ganzzahl mit Vorzeichen dar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt64">
+      <MemberSignature Language="C#" Value="public long ToInt64 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 ToInt64() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.ToInt64" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in eine 64-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Eine 64-Bit-Ganzzahl mit Vorzeichen, die gleich dem Wert dieser Instanz ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPointer">
+      <MemberSignature Language="C#" Value="public void* ToPointer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void* ToPointer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.ToPointer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void*</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in einen Zeiger auf einen nicht angegebenen Typ.</summary>
+        <returns>Ein Zeiger auf <see cref="T:System.Void" />, d. h. ein Zeiger auf Speicher, der Daten eines nicht angegebenen Typs enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird verwalteten Zeiger, um die Zeichen in einem Array umzukehren. Nachdem er initialisiert ein <xref:System.String> -Objekt und ruft seine Länge wird Folgendes:  
+  
+-   Ruft die <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A?displayProperty=nameWithType> Methode, um die Unicode-Zeichenfolge in nicht verwalteten Speicher als ANSI (1-Byte-Zeichen) zu kopieren. Die Methode gibt ein <xref:System.IntPtr> Objekt, das an den Anfang der nicht verwalteten Zeichenfolge verweist.  
+  
+-   Ruft die <xref:System.Runtime.InteropServices.Marshal.AllocHGlobal%2A?displayProperty=nameWithType> Methode, um die gleiche Anzahl von Bytes Belegen wie die nicht verwaltete Zeichenfolge belegt. Die Methode gibt ein <xref:System.IntPtr> -Objekt, das an den Anfang des nicht verwalteten Speicherblocks zeigt.  
+  
+-   Ruft die <xref:System.IntPtr.ToPointer%2A> Methode, um ein nicht verwalteter Zeiger auf die Startadresse der Zeichenfolge und den nicht verwalteten Speicherblock abzurufen und fügt eine kleiner als die Länge der Zeichenfolge, die die Startadresse der ANSI-Zeichenfolge. Da der nicht verwalteten Zeichenfolgenzeiger nun bis zum Ende der Zeichenfolge verweist, wird der Kopiervorgang ein Zeichen vom Ende der Zeichenfolge am Anfang der Speicherblock kopieren.  
+  
+-   Mithilfe einer Schleife um jedes Zeichen aus der Zeichenfolge in den nicht verwalteten Speicherblock zu kopieren. Nach jedem Kopiervorgang es verringert den Zeiger auf die Adresse von der nächsten Position in der nicht verwalteten ANSI-Zeichenfolge und den Zeiger auf die nächste Adresse im nicht verwalteten Block inkrementiert.  
+  
+-   Ruft die <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A?displayProperty=nameWithType> den nicht verwaltete Speicherblock mit der kopierten ANSI-Zeichenfolge in einen verwalteten Unicode konvertiert <xref:System.String> Objekt.  
+  
+-   Nach dem Anzeigen der ursprünglichen und umgekehrten Zeichenfolgen, ruft die <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A?displayProperty=nameWithType> Methode, um den für den nicht verwalteten ANSI-Zeichenfolge und den nicht verwalteten Speicherblock belegten Arbeitsspeicher freizugeben.  
+  
+ [!code-cpp[System.IntPtr.ToPointer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/System.IntPtr.ToPointer/cpp/topointer.cpp#1)]
+ [!code-csharp[System.IntPtr.ToPointer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.IntPtr.ToPointer/cs/topointer.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den numerischen Wert des aktuellen <see cref="T:System.IntPtr" />-Objekts in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der <xref:System.IntPtr.Size%2A> Eigenschaft für diese Instanz ist 4, und klicken Sie dann diese Methode entspricht <xref:System.Int32.ToString%2A?displayProperty=nameWithType>ist, andernfalls dieser Methode entspricht <xref:System.Int64.ToString%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IntPtr.ToString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Formatangabe, die bestimmt, wie das aktuelle <see cref="T:System.IntPtr" />-Objekt konvertiert wird.</param>
+        <summary>Konvertiert den numerischen Wert des aktuellen <see cref="T:System.IntPtr" />-Objekts in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts des aktuellen <see cref="T:System.IntPtr" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `format` Parameter ist `null` oder eine leere Zeichenfolge (""), der Rückgabewert mit dem allgemeinen Formatbezeichner ("G") formatiert ist. Weitere Informationen zu numerischen Formatbezeichnern finden Sie unter der [Standard Numeric Format Strings](~/docs/standard/base-types/standard-numeric-format-strings.md) Thema.  
+  
+ Der Rückgabewert wird mit der invarianten Kultur formatiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static readonly IntPtr Zero;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly native int Zero" />
+      <MemberSignature Language="DocId" Value="F:System.IntPtr.Zero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein schreibgeschütztes Feld, das einen mit 0 (null) initialisierten Zeiger oder ein Handle darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds ist nicht gleichbedeutend mit `null`. Mit diesem Feld können Sie um effizient zu ermitteln, ob eine Instanz von <xref:System.IntPtr> auf einen anderen Wert als 0 (null) festgelegt wurde.  
+  
+ Nehmen wir beispielsweise an, die Variable, die IP-Adresse ist eine Instanz der <xref:System.IntPtr>. Sie können feststellen, ob er festgelegt wurde, indem sie z. B. von einem Konstruktor zurückgegebenen Wert vergleichen: " `if ip != new IntPtr(0)...` ". Allerdings ist das Aufrufen eines Konstruktors zum Abrufen einer nicht initialisierten Zeigers ineffizient. Es ist besser, entweder " `if ip != IntPtr.Zero...` ", oder " `if !IntPtr.Zero.Equals(ip)...` ".  
+  
+ Wenn die Windows-API von verwaltetem Code aufrufen, übergeben Sie <xref:System.IntPtr.Zero?displayProperty=nameWithType> anstelle von `null` Wenn ein Argument erwartet wird, um entweder einen Zeiger oder ein `null`. Beispielsweise beim folgenden Aufruf der Windows `CreateFile` Funktion stellt <xref:System.IntPtr.Zero?displayProperty=nameWithType> für die `pSecurityAttributes` und `hTemplateFile` Argumentwerte gelten.  
+  
+ [!code-csharp[System.IntPtr.Zero#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.intptr.zero/cs/zero4.cs#2)]
+ [!code-vb[System.IntPtr.Zero#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.intptr.zero/vb/zero4.vb#2)]  
+  
+> [!NOTE]
+>  Obwohl <xref:System.IntPtr.Zero> entspricht `null` für Windows-API-Funktionen mit Parametern oder Rückgabewerten, die beide Zeiger werden können oder `null`, <xref:System.IntPtr.Zero> entspricht nicht dem `null`. Übergeben von `null` auf die `IntPtr.Zero.Equals` immer Methodenrückgabe `false`.  
+  
+ Sie können auch testen, für eine `null` Rückgabewert aus Windows-API-Funktionsaufrufe ein, die entweder einen Zeiger zurückgeben oder ein `null` durch Vergleichen des zurückgegebenen Werts mit <xref:System.IntPtr.Zero?displayProperty=nameWithType>. Z. B. der Aufruf der `GetWindow` Funktion im folgenden Beispiel versucht, die das Handle eines Fensters nicht existierende abgerufen werden soll. Wenn sie von nicht verwaltetem Code aufgerufen wurden, würde die Funktion zurückgeben `null`, wenn sie aus verwaltetem Code aufgerufen wird, gibt jedoch <xref:System.IntPtr.Zero?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.IntPtr.Zero#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.intptr.zero/cs/zero2.cs#1)]
+ [!code-vb[System.IntPtr.Zero#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.intptr.zero/vb/zero2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

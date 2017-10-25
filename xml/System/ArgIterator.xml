@@ -1,0 +1,320 @@
+<Type Name="ArgIterator" FullName="System.ArgIterator">
+  <TypeSignature Language="C#" Value="public struct ArgIterator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ArgIterator extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.ArgIterator" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Argumentliste variabler Länge dar. Parameter einer Funktion verwendet, die also eine Variable Anzahl von Argumenten:</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entwickler, die Compiler schreiben, verwenden die <xref:System.ArgIterator> Struktur zum Auflisten der obligatorische und optionale Argumente in einer Argumentliste. Die <xref:System.ArgIterator> Struktur ist nicht für andere Anwendungen als Compiler im Allgemeinen hilfreich.  
+  
+ Die Funktion in der <xref:System.ArgIterator> Struktur wird in der Regel in der Syntax von einer bestimmten Programmiersprache Ihrer Wahl ausgeblendet. Beispielsweise deklarieren in der Programmiersprache C++ Sie eine Argumentliste mit variabler Länge, die durch ein Auslassungszeichen ("...") am Ende der Argumentliste angeben. Die <xref:System.ArgIterator> Struktur eignet sich hauptsächlich beim eine Entwicklungssprache keine direkte Unterstützung bietet für den Zugriff auf Parameter mit variabler Länge.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgIterator (RuntimeArgumentHandle arglist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.RuntimeArgumentHandle arglist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.#ctor(System.RuntimeArgumentHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="arglist" Type="System.RuntimeArgumentHandle" />
+      </Parameters>
+      <Docs>
+        <param name="arglist">Eine Argumentliste, bestehend aus obligatorischen und optionalen Argumenten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ArgIterator" /> -Struktur unter Verwendung der angegebenen Argumentliste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue <xref:System.ArgIterator> -Objekt listet die Argumentliste enthalten, beginnend mit dem ersten optionalen Argument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgIterator (RuntimeArgumentHandle arglist, void* ptr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.RuntimeArgumentHandle arglist, void* ptr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.#ctor(System.RuntimeArgumentHandle,System.Void*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="arglist" Type="System.RuntimeArgumentHandle" />
+        <Parameter Name="ptr" Type="System.Void*" />
+      </Parameters>
+      <Docs>
+        <param name="arglist">Eine Argumentliste, bestehend aus obligatorischen und optionalen Argumenten.</param>
+        <param name="ptr">Ein Zeiger auf das Argument in <c>Arglist</c> Zugriff auf den ersten oder das erste obligatorische Argument in <c>Arglist</c> Wenn <c>Ptr</c> ist <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ArgIterator" /> -Struktur unter Verwendung der angegebenen Argumentliste und einen Zeiger auf ein Element in der Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue <xref:System.ArgIterator> -Objekt listet die Argumentliste enthalten, die durch angegebenen Arguments beginnend `ptr`, oder das erste obligatorische Argument Wenn `ptr` ist `null`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public void End ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void End() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.End" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Verarbeitung der variabler Länge, die Argumentliste, die durch diese Instanz dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Prinzip <xref:System.ArgIterator.End%2A> schließt die Verarbeitung von einer Argumentliste variabler Länge. Diese Methode hat jedoch keine tatsächliche Implementierung; die <xref:System.ArgIterator.End%2A> Methodentext ist leer. Sie können diese Methode im Code als Markierung verwenden, um anzugeben, wo die Verarbeitung logisch variabler Länge, die der Argumentliste endet.  
+  
+ Die <xref:System.ArgIterator.End%2A> Methode entspricht der `va_end` Methode in der C-Standardbibliothek.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein Objekt, das mit dieser Instanz verglichen werden soll.</param>
+        <summary>Diese Methode wird nicht unterstützt und löst immer eine <see cref="T:System.NotSupportedException" />.</summary>
+        <returns>Dieser Vergleich wird nicht unterstützt. Es wird kein Wert zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode dieses Objekts zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextArg">
+      <MemberSignature Language="C#" Value="public TypedReference GetNextArg ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.TypedReference GetNextArg() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.GetNextArg" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TypedReference</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das nächste Argument in einer Argumentliste variabler Länge zurück.</summary>
+        <returns>Das nächste Argument als ein <see cref="T:System.TypedReference" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Iterator wird automatisch vorgerückt, auf das folgende Argument.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, hinter das Ende der Liste zu lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextArg">
+      <MemberSignature Language="C#" Value="public TypedReference GetNextArg (RuntimeTypeHandle rth);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.TypedReference GetNextArg(valuetype System.RuntimeTypeHandle rth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.GetNextArg(System.RuntimeTypeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TypedReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rth" Type="System.RuntimeTypeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="rth">Ein Handle der Common Language Runtime-Typ, der den Typ des abzurufenden Arguments identifiziert.</param>
+        <summary>Gibt das nächste Argument in eine Argumentliste mit variabler Länge, die mit dem angegebenen Typ zurück.</summary>
+        <returns>Das nächste Argument als ein <see cref="T:System.TypedReference" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Iterator wird automatisch vorgerückt, auf das folgende Argument.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, hinter das Ende der Liste zu lesen.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Zeiger auf die übrigen Argumente ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextArgType">
+      <MemberSignature Language="C#" Value="public RuntimeTypeHandle GetNextArgType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeTypeHandle GetNextArgType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.GetNextArgType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeTypeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Typ des nächsten Arguments zurück.</summary>
+        <returns>Der Typ des Arguments weiter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode weitergeführt nicht den Iterator auf das folgende Argument.  
+  
+ <xref:System.ArgIterator.GetNextArgType%2A>Gibt den Typ des Arguments entsprechend den Angaben in der aufrufenden Funktion zurück. Angenommen, ein Argument ist <xref:System.String>, aber die aufrufende Funktion gibt das Argument als Typ <xref:System.Object>, <xref:System.ArgIterator.GetNextArgType%2A> meldet das Argument als Typ <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemainingCount">
+      <MemberSignature Language="C#" Value="public int GetRemainingCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRemainingCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgIterator.GetRemainingCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Anzahl von Argumenten, die verbleiben in der Argumentliste zurück.</summary>
+        <returns>Die Anzahl der übrigen Argumente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

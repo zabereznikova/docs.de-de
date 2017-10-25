@@ -1,0 +1,175 @@
+<Type Name="ClaimsAuthorizationModule" FullName="System.IdentityModel.Services.ClaimsAuthorizationModule">
+  <TypeSignature Language="C#" Value="public class ClaimsAuthorizationModule : System.IdentityModel.Services.HttpModuleBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClaimsAuthorizationModule extends System.IdentityModel.Services.HttpModuleBase" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.ClaimsAuthorizationModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Services.HttpModuleBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein HTTP-Modul, die anspruchsbasierte Autorisierung ausführt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ermöglicht die anspruchsbasierte Autorisierung durch als ein HTTP-Modul in der Verarbeitungspipeline HTTP-Ausgabe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsAuthorizationModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsAuthorizationModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Services.ClaimsAuthorizationModule" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authorize">
+      <MemberSignature Language="C#" Value="protected virtual bool Authorize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool Authorize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsAuthorizationModule.Authorize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob der anforderer (Prinzipal) für die aktuelle Anforderung autorisiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Prinzipal autorisiert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" /> Wenn keine Ansprüche Authentifizierungs-Manager dieses Modul zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im angegebenen Ansprüche Authentifizierungs-Manager die <xref:System.IdentityModel.Services.ClaimsAuthorizationModule.ClaimsAuthorizationManager%2A> Eigenschaft wird aufgerufen, um die Anforderung zu autorisieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Die <see cref="T:System.Security.Claims.ClaimsPrincipal" /> zugeordneten die Anforderung ist nicht autorisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsAuthorizationManager">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsAuthorizationManager ClaimsAuthorizationManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsAuthorizationManager ClaimsAuthorizationManager" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.ClaimsAuthorizationModule.ClaimsAuthorizationManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsAuthorizationManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Ansprüche Autorisierungs-Manager-Instanz, die von diesem Modul verwendet wird.</summary>
+        <value>Die Ansprüche Autorisierungs-Manager-Instanz oder <see langword="null" /> Wenn keine Ansprüche Autorisierungs-Manager dieses Modul zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, die Eigenschaft auf festgelegt <see langword="null" /> auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsAuthorizationModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die vom Modul verwendeten Ressourcen (mit Ausnahme des Speichers) frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeModule">
+      <MemberSignature Language="C#" Value="protected override void InitializeModule (System.Web.HttpApplication context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeModule(class System.Web.HttpApplication context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsAuthorizationModule.InitializeModule(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das Anwendungsobjekt, das dieses Modul enthält.</param>
+        <summary>Initialisiert das Modul und bereitet es zum Behandeln von Ereignissen aus seiner [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Application-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializePropertiesFromConfiguration">
+      <MemberSignature Language="C#" Value="protected override void InitializePropertiesFromConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializePropertiesFromConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsAuthorizationModule.InitializePropertiesFromConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Moduleigenschaften basierend auf Definitionen in der Konfigurationsdatei an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert die <xref:System.IdentityModel.Services.ClaimsAuthorizationModule.ClaimsAuthorizationManager%2A> Eigenschaft aus der anspruchsautorisierungs-Manager, der in der Konfiguration von angegeben wird die <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> Eigenschaft auf die <xref:System.IdentityModel.Configuration.IdentityConfiguration> Objektsatz auf die <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> -Objekt, das auf festgelegt ist die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft. Sie können die Ansprüche Authentifizierungs-Manager in einer Konfigurationsdatei durch Angeben der [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAuthorizeRequest">
+      <MemberSignature Language="C#" Value="protected virtual void OnAuthorizeRequest (object sender, EventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAuthorizeRequest(object sender, class System.EventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsAuthorizationModule.OnAuthorizeRequest(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="args">Die Daten für das Ereignis.</param>
+        <summary>Die HTTP-Pipeline verarbeitet <see cref="E:System.Web.HttpApplication.AuthorizeRequest" /> Ereignis</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

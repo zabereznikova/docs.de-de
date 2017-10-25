@@ -1,0 +1,93 @@
+<Type Name="ImageLockMode" FullName="System.Drawing.Imaging.ImageLockMode">
+  <TypeSignature Language="C#" Value="public enum ImageLockMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImageLockMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ImageLockMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Flags an, die auf den Flagsparameter übergeben werden die <see cref="Overload:System.Drawing.Bitmap.LockBits" /> Methode. Die <see cref="Overload:System.Drawing.Bitmap.LockBits" /> Methode sperrt einen Teil eines Bildes, sodass Sie Lese- oder Schreibzugriff auf die Pixeldaten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Image.PixelFormat%2A>, <xref:System.Drawing.Image.Height%2A>, <xref:System.Drawing.Image.Width%2A>, und <xref:System.Drawing.Imaging.BitmapData.Scan0%2A> Eigenschaften; das <xref:System.Drawing.Bitmap.LockBits%2A> und <xref:System.Drawing.Bitmap.UnlockBits%2A> -Methoden und die <xref:System.Drawing.Imaging.ImageLockMode> Enumeration. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Um dieses Beispiel auszuführen, fügen Sie ihn in ein Formular, und behandeln Sie des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis durch Aufrufen der `LockUnlockBitsExample` -Methode auf und übergibt `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.BitmapMembers#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.BitmapMembers#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="ReadOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageLockMode ReadOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageLockMode.ReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein Teil des Bilds zum Lesen gesperrt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadWrite">
+      <MemberSignature Language="C#" Value="ReadWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageLockMode ReadWrite = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageLockMode.ReadWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein Teil des Bilds zum Lesen oder Schreiben gesperrt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserInputBuffer">
+      <MemberSignature Language="C#" Value="UserInputBuffer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageLockMode UserInputBuffer = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageLockMode.UserInputBuffer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Puffer zum Lesen oder Schreiben von Pixeldaten vom Benutzer zugeordnet ist. Wenn dieses Flag festgelegt ist, die <paramref name="flags" /> Parameter von der <see cref="Overload:System.Drawing.Bitmap.LockBits" /> Methode dient als Eingabeparameter (und möglicherweise als Output-Parameter). Wenn dieses Flag deaktiviert ist, und klicken Sie dann die <paramref name="flags" /> Parameter dient nur als Output-Parameter.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteOnly">
+      <MemberSignature Language="C#" Value="WriteOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.ImageLockMode WriteOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.ImageLockMode.WriteOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein Teil des Bilds zum Schreiben gesperrt ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

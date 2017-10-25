@@ -1,0 +1,57 @@
+<Type Name="SecurityKeyUsage" FullName="System.IdentityModel.Tokens.SecurityKeyUsage">
+  <TypeSignature Language="C#" Value="public enum SecurityKeyUsage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityKeyUsage extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityKeyUsage" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie ein Schlüssel, der einem Sicherheitstoken zugeordnet ist, verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SecurityKeyUsage>-Enumeration, um die <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsage%2A>-Eigenschaft festzulegen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="Exchange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SecurityKeyUsage Exchange = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityKeyUsage.Exchange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyUsage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Schlüssel zu Austauschen von Schlüsseln zwischen einem Absender und einem Empfänger verwendet werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="Signature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SecurityKeyUsage Signature = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SecurityKeyUsage.Signature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyUsage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Schlüssel zum Generieren einer digitalen Signatur verwendet werden kann.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

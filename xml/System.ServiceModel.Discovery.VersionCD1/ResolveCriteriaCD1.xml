@@ -1,0 +1,159 @@
+<Type Name="ResolveCriteriaCD1" FullName="System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1">
+  <TypeSignature Language="C#" Value="public class ResolveCriteriaCD1 : System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveCriteriaCD1 extends System.Object implements class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlSchemaProvider("GetSchema")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die zu verwendenden Kriterien beim Auflösen eines Diensts mit Version Committee Draft 1 des WS-Discovery-Protokolls dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Auflösung wird durchgeführt, wenn ein Dienst seine Endpunktadresse ändert, für den bereits eine Endpunktreferenz vorliegt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromResolveCriteria">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1 FromResolveCriteria (System.ServiceModel.Discovery.ResolveCriteria resolveCriteria);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1 FromResolveCriteria(class System.ServiceModel.Discovery.ResolveCriteria resolveCriteria) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1.FromResolveCriteria(System.ServiceModel.Discovery.ResolveCriteria)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolveCriteria" Type="System.ServiceModel.Discovery.ResolveCriteria" />
+      </Parameters>
+      <Docs>
+        <param name="resolveCriteria">Die Auflösungskriterien.</param>
+        <summary>Initialisiert unter Verwendung der angegebenen <see cref="T:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1" />-Instanz eine neue <see cref="T:System.ServiceModel.Discovery.ResolveCriteria" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1.GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Auflösungskriterienschema ab.</summary>
+        <returns>Das Auflösungskriterienschema.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlQualifiedName GetSchema (System.Xml.Schema.XmlSchemaSet schemaSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlQualifiedName GetSchema(class System.Xml.Schema.XmlSchemaSet schemaSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1.GetSchema(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaSet" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemaSet">Das Schemaset.</param>
+        <summary>Ruft das Suchkriterienschema vom angegebenen <see cref="T:System.Xml.Schema.XmlSchemaSet" /> ab.</summary>
+        <returns>Der <see cref="T:System.Xml.XmlQualifiedName" /> des Schemas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public void ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1.ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XML-Leser, von dem gelesen wird.</param>
+        <summary>Liest eine <see cref="T:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1" />-Instanz aus XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToResolveCriteria">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.ResolveCriteria ToResolveCriteria ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Discovery.ResolveCriteria ToResolveCriteria() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1.ToResolveCriteria" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.ResolveCriteria</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ServiceModel.Discovery.ResolveCriteria" /> ab, die dieser <see cref="T:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1" />-Instanz zugeordnet sind.</summary>
+        <returns>Die Auflösungskriterien.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public void WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1.WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer, in den geschrieben werden soll.</param>
+        <summary>Schreibt eine <see cref="T:System.ServiceModel.Discovery.VersionCD1.ResolveCriteriaCD1" />-Instanz in XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

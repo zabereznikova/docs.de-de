@@ -1,0 +1,119 @@
+<Type Name="ExportsChangeEventArgs" FullName="System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs">
+  <TypeSignature Language="C#" Value="public class ExportsChangeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExportsChangeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.ComponentModel.Composition.Hosting.ExportProvider.ExportsChanging" /> und <see cref="E:System.ComponentModel.Composition.Hosting.ExportProvider.ExportsChanged" /> Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportsChangeEventArgs (System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt; addedExports, System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt; removedExports, System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition&gt; addedExports, class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition&gt; removedExports, class System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.#ctor(System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.ExportDefinition},System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.ExportDefinition},System.ComponentModel.Composition.Hosting.AtomicComposition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="addedExports" Type="System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt;" />
+        <Parameter Name="removedExports" Type="System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt;" />
+        <Parameter Name="atomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+      </Parameters>
+      <Docs>
+        <param name="addedExports">Die Ereignisse, die hinzugefügt wurden.</param>
+        <param name="removedExports">Die Ereignisse, die entfernt wurden.</param>
+        <param name="atomicComposition">Die Kompositionstransaktion, die die Änderung enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddedExports">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt; AddedExports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition&gt; AddedExports" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.AddedExports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Exporte, die in dieser Änderung hinzugefügt wurden.</summary>
+        <value>Eine Auflistung der Exporte, die hinzugefügt wurden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AtomicComposition">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Hosting.AtomicComposition AtomicComposition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Hosting.AtomicComposition AtomicComposition" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.AtomicComposition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Hosting.AtomicComposition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Transaktion Zusammensetzung der Änderung ab, sofern vorhanden.</summary>
+        <value>Ein Verweis auf die Kompositionstransaktion, die der Änderung zugeordnet oder <see langword="null" /> Wenn keine Transaktion verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangedContractNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; ChangedContractNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; ChangedContractNames" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.ChangedContractNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vertragsnamen, die die Änderung geändert wurden.</summary>
+        <value>Eine Auflistung von geänderten Vertragsnamen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedExports">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt; RemovedExports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition&gt; RemovedExports" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.RemovedExports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Exporte, die bei der Änderung entfernt wurden.</summary>
+        <value>Eine Auflistung der entfernten Exporte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

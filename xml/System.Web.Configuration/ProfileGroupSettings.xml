@@ -1,0 +1,192 @@
+<Type Name="ProfileGroupSettings" FullName="System.Web.Configuration.ProfileGroupSettings">
+  <TypeSignature Language="C#" Value="public sealed class ProfileGroupSettings : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileGroupSettings extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProfileGroupSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht programmgesteuerten Zugriff auf die <see langword="group" /> -Unterabschnitt des der <see langword="profiles" /> Konfigurationsdateiabschnitt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProfileGroupSettings> -Klasse bietet eine Möglichkeit, programmgesteuert erstellen, Zugriff auf und Ändern von Gruppen von hinzugefügten Eigenschaften der `group` -Unterabschnitt des der `profile` Abschnitt einer Konfigurationsdatei.  
+  
+ Die `profile` Abschnitt der Konfigurationsdatei gibt ein Schema für Benutzerprofile an. Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `profile` Abschnitt zum Generieren einer Klasse mit dem Namen `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `properties` -Unterabschnitt des der `profile` Abschnitt der Konfigurationsdatei. Eine Instanz dieser Klasse wird für jedes Benutzerprofil erstellt, und Sie können die Werte der einzelnen Profil zugreifen, im Code über die <xref:System.Web.HttpContext.Profile%2A?displayProperty=nameWithType> Eigenschaft. Für Weitere Informationen zu den Profilfunktionen hinzugefügt [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], finden Sie unter [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.ProfileGroupSettings> Typ. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#13)]
+ [!code-vb[System.Web.Configuration.ProfileSection#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileGroupSettings (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettings.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der neuen Gruppe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ProfileGroupSettings" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProfileGroupSettings.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.ProfileGroupSettings> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettings.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, das mit dem aktuellen <see langword="Object" /> verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see langword="Object" /> und das aktuelle <see langword="Object" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see langword="Object" /> gleich der aktuellen <see langword="Object" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettings.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen eindeutigen Wert, der den aktuellen darstellt <see cref="T:System.Configuration.ConfigurationElement" /> Instanz.</summary>
+        <returns>Ein eindeutiger Wert, der den aktuellen darstellt <see cref="T:System.Configuration.ConfigurationElement" /> Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileGroupSettings.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Namen der Gruppe der <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> Objekten dieses Objekt enthält.</summary>
+        <value>Eine Zeichenfolge, die mit dem Namen der Gruppe der <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> Objekten dieses Objekt enthält. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Gruppenname muss einzigartig sein ein <xref:System.Web.Configuration.ProfileGroupSettingsCollection> Auflistung ist; andernfalls wird eine Ausnahme ausgelöst, wenn die Konfigurationsdatei gespeichert ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileGroupSettings.Name%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#12)]
+ [!code-vb[System.Web.Configuration.ProfileSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileGroupSettings.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertySettings">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfilePropertySettingsCollection PropertySettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ProfilePropertySettingsCollection PropertySettings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileGroupSettings.PropertySettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfilePropertySettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung des Profils eigenschaftseinstellungen, die dieses Objekt enthält.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.ProfilePropertySettingsCollection" /> Auflistung mit allen der <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> in dieser Gruppe enthaltenen Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileGroupSettings.PropertySettings%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#12)]
+ [!code-vb[System.Web.Configuration.ProfileSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

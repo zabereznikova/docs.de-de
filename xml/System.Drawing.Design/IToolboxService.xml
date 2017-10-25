@@ -1,0 +1,781 @@
+<Type Name="IToolboxService" FullName="System.Drawing.Design.IToolboxService">
+  <TypeSignature Language="C#" Value="public interface IToolboxService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IToolboxService" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.IToolboxService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("4BACD258-DE64-4048-BC4E-FEDBEF9ACB76")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden und Eigenschaften zum Verwalten und Abfragen von der Toolbox in der Entwicklungsumgebung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Design.IToolboxService> Schnittstelle stellt Eigenschaften und Methoden zum Hinzufügen und Entfernen von Toolboxelementen und dem Ersteller Toolbox Rückrufdelegaten, serialisieren und Deserialisieren von Toolboxelementen und Abrufen von Statusinformationen Toolbox und Verwalten von Toolbox-Zustand.  
+  
+ Sie können Informationen über den Inhalt der Toolbox mit den folgenden Methoden abrufen:  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.CategoryNames%2A> -Eigenschaft gibt die derzeit in der Toolbox verfügbaren Kategorien an.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.SelectedCategory%2A> Eigenschaft gibt an, die aktuell ausgewählte Toolboxkategorie.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.GetToolboxItems%2A> Methode ruft die Elemente in der Toolbox, die optional durch eine angegebene Toolboxkategorie gefiltert werden.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem%2A> Methode ruft das derzeit ausgewählte <xref:System.Drawing.Design.ToolboxItem>.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.SetSelectedToolboxItem%2A> Methode markiert das angegebene <xref:System.Drawing.Design.ToolboxItem> als das aktuelle Toolboxelement.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.IsSupported%2A> Methode angibt, ob das angegebene Objekt serialisiert wird jedoch eine <xref:System.Drawing.Design.ToolboxItem>, vom angegebenen Designerhost unterstützt wird oder ob es sich um den angegebenen Attributen entspricht.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.IsToolboxItem%2A> Methode gibt an, ob das angegebene serialisierte Objekt ist eine <xref:System.Drawing.Design.ToolboxItem>.  
+  
+ Sie können hinzufügen und Entfernen von Toolboxelementen mit den folgenden Methoden:  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.AddToolboxItem%2A> Methode fügt eine <xref:System.Drawing.Design.ToolboxItem> zur Toolbox, erstellen Sie optional angegebene Kategorie ist nicht vorhanden.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem%2A> Methode fügt eine <xref:System.Drawing.Design.ToolboxItem> , die nur für das aktuelle Projekt zur Toolbox aktiviert ist.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.RemoveToolboxItem%2A> Methode entfernt das angegebene <xref:System.Drawing.Design.ToolboxItem>.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.AddCreator%2A> Methode fügt eine <xref:System.Drawing.Design.ToolboxItemCreatorCallback> Delegaten mit kann eine Art von Daten auf der Toolbox auf eine <xref:System.Drawing.Design.ToolboxItem>.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.RemoveCreator%2A> -Methode entfernt alle <xref:System.Drawing.Design.ToolboxItemCreatorCallback> Delegaten für den angegebenen Datentyp.  
+  
+ Sie können die Toolbox aktualisieren, markieren ein Toolboxelement verwendet oder legen Sie den Mauszeiger auf einen Cursor, der das aktuelle Toolboxelement mit den folgenden Methoden darstellt:  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.Refresh%2A> -Methode aktualisiert die Toolboxanzeige auf dem aktuellen Zustand der Toolboxelemente.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.SelectedToolboxItemUsed%2A> -Methode signalisiert der Toolbox, dass das ausgewählte Toolboxelement verwendet wurde.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.SetCursor%2A> Methode legt den Mauszeiger auf einen Cursor, der das aktuelle Toolboxelement darstellt.  
+  
+ Sie können die Toolbox zum Serialisieren oder Deserialisieren eines Toolboxelements mithilfe der folgenden Methoden verwenden:  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.DeserializeToolboxItem%2A> Methode versucht, das Zurückgeben einer <xref:System.Drawing.Design.ToolboxItem> aus dem angegebenen serialisierten Toolbox-Element-Objekt.  
+  
+-   Die <xref:System.Drawing.Design.IToolboxService.SerializeToolboxItem%2A> Methode gibt ein serialisiertes Objekt, die den angegebenen <xref:System.Drawing.Design.ToolboxItem>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Drawing.Design.IToolboxService> im Entwurfsmodus zum Auflisten und Auswählen von Toolboxkategorien und Elemente, sowie zum Erstellen von Komponenten oder Steuerelemente von Toolboxelementen und Hinzufügen einer <xref:System.Windows.Forms.Form>. Um das Beispiel zu verwenden, kompilieren Sie den Code auf eine Assembly, und fügen Sie einen Verweis auf die Assembly in einer Windows Forms-Anwendung. Bei Verwendung von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], `IToolboxServiceControl` wird automatisch hinzugefügt, die **Toolbox**. Erstellen Sie eine Instanz von der `IToolboxServiceControl` auf ein Formular, um dessen Verhalten zu testen.  
+  
+ [!code-cpp[IToolboxServiceExample1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxServiceExample1/CPP/itoolboxservicecontrol.cpp#1)]
+ [!code-csharp[IToolboxServiceExample1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxServiceExample1/CS/itoolboxservicecontrol.cs#1)]
+ [!code-vb[IToolboxServiceExample1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxServiceExample1/VB/itoolboxservicecontrol.vb#1)]  
+  
+ Das folgende Codebeispiel stellt eine Komponente, verwendet der <xref:System.Drawing.Design.IToolboxService> Datenhandler Format eine "Text" hinzufügen oder <xref:System.Drawing.Design.ToolboxItemCreatorCallback>, zur Toolbox. Der Ersteller Rückrufdelegat übergibt alle Textdaten in der Toolbox eingefügt und an eine benutzerdefinierte auf ein Formular gezogene <xref:System.Drawing.Design.ToolboxItem> , erstellt eine <xref:System.Windows.Forms.TextBox> mit dem Text.  
+  
+ [!code-cpp[ToolboxCreatorCallbackSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CPP/textdatatextboxcomponent.cpp#1)]
+ [!code-csharp[ToolboxCreatorCallbackSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CS/textdatatextboxcomponent.cs#1)]
+ [!code-vb[ToolboxCreatorCallbackSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/VB/textdatatextboxcomponent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddCreator">
+      <MemberSignature Language="C#" Value="public void AddCreator (System.Drawing.Design.ToolboxItemCreatorCallback creator, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddCreator(class System.Drawing.Design.ToolboxItemCreatorCallback creator, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="creator" Type="System.Drawing.Design.ToolboxItemCreatorCallback" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="creator">Ein <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" /> , die beim Aufrufen des Toolboxelements eine Komponente erstellen kann.</param>
+        <param name="format">Das Datenformat, das der Ersteller behandelt.</param>
+        <summary>Fügt einen neue Toolbox-Elementersteller für einen angegebenen Datenformat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Toolbox-Elementersteller kann Daten von einem bestimmten Datenformat, das eingefügt wurde oder gelöscht werden, in der Toolbox in Konvertieren einer <xref:System.Drawing.Design.ToolboxItem>. Wenn eine Erstellung mehrere Formate behandelt, rufen Sie <xref:System.Drawing.Design.IToolboxService.AddCreator%2A> mehr als einmal. Unerwartetes Verhalten kann auftreten, wenn Sie mehr als ein Ersteller für das gleiche Format hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCreator">
+      <MemberSignature Language="C#" Value="public void AddCreator (System.Drawing.Design.ToolboxItemCreatorCallback creator, string format, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddCreator(class System.Drawing.Design.ToolboxItemCreatorCallback creator, string format, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="creator" Type="System.Drawing.Design.ToolboxItemCreatorCallback" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="creator">Ein <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" /> , die beim Aufrufen des Toolboxelements eine Komponente erstellen kann.</param>
+        <param name="format">Das Datenformat, das der Ersteller behandelt.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> , die dem Designerhost, der Ersteller zugeordnet darstellt.</param>
+        <summary>Fügt einen neue Toolbox-Elementersteller für einen angegebenen Datenformat und Designerhost an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Toolbox-Elementersteller kann Daten von einem bestimmten Datenformat, das eingefügt wurde oder gelöscht werden, in der Toolbox in Konvertieren einer <xref:System.Drawing.Design.ToolboxItem>. Wenn eine Erstellung mehrere Formate behandelt, rufen Sie <xref:System.Drawing.Design.IToolboxService.AddCreator%2A> mehr als einmal. Unerwartetes Verhalten kann auftreten, wenn Sie mehr als ein Ersteller für das gleiche Format hinzufügen.  
+  
+ Wenn die `host` Parametersatz auf `null`, der Ersteller wird für alle Designer verfügbar sein. Wenn ein Designerhost bereitgestellt wird, wird der Ersteller nur für Designer, die mit dem angegebenen Host zur Verfügung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkedToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddLinkedToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddLinkedToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Die verknüpften <see cref="T:System.Drawing.Design.ToolboxItem" /> der Toolbox hinzu.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das aktuelle Design-Dokument.</param>
+        <summary>Fügt das angegebene Projekt verknüpfte Toolboxelement zur Toolbox hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein verknüpftes Toolboxelement ist ein Toolboxelement, die nur für ein bestimmtes Projekt verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkedToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddLinkedToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, string category, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddLinkedToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, string category, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Die verknüpften <see cref="T:System.Drawing.Design.ToolboxItem" /> der Toolbox hinzu.</param>
+        <param name="category">Die Toolbox Arbeitsaufgabenkategorien das Toolboxelement auf Hinzufügen.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das aktuelle Design-Dokument.</param>
+        <summary>Fügt das angegebene Projekt verknüpfte Toolboxelement der Toolbox in der angegebenen Kategorie an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein verknüpftes Toolboxelement ist ein Toolboxelement, die nur für ein bestimmtes Projekt verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> der Toolbox hinzu.</param>
+        <summary>Fügt das angegebene Toolboxelement zur Toolbox hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddToolboxItem(System.Drawing.Design.ToolboxItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> der Toolbox hinzu.</param>
+        <param name="category">Toolboxkategorie hinzuzufügende Element der <see cref="T:System.Drawing.Design.ToolboxItem" /> an.</param>
+        <summary>Fügt das angegebene Toolboxelement in der Toolbox in der angegebenen Kategorie an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryNames">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.CategoryNameCollection CategoryNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Design.CategoryNameCollection CategoryNames" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.IToolboxService.CategoryNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.CategoryNameCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen aller Tool Kategorien, die derzeit in der Toolbox ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Design.CategoryNameCollection" /> , die das Toolkategorien enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem DeserializeToolboxItem (object serializedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem DeserializeToolboxItem(object serializedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.DeserializeToolboxItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">Das Objekt, enthält die <see cref="T:System.Drawing.Design.ToolboxItem" /> abgerufen.</param>
+        <summary>Ruft ein Toolboxelement aus dem angegebenen Objekt, das ein Toolboxelement in serialisierter Form darstellt.</summary>
+        <returns>Die <see cref="T:System.Drawing.Design.ToolboxItem" /> aus das serialisierte Objekt erstellt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem DeserializeToolboxItem (object serializedObject, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem DeserializeToolboxItem(object serializedObject, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.DeserializeToolboxItem(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">Das Objekt, enthält die <see cref="T:System.Drawing.Design.ToolboxItem" /> abgerufen.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> zu zuzuordnen <see cref="T:System.Drawing.Design.ToolboxItem" />.</param>
+        <summary>Ruft ein Toolboxelement aus dem angegebenen Objekt, das ein Toolboxelement in serialisierter Form, die mithilfe des angegebenen Designerhosts darstellt.</summary>
+        <returns>Die <see cref="T:System.Drawing.Design.ToolboxItem" /> aus Deserialisierung erstellt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem GetSelectedToolboxItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem GetSelectedToolboxItem() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das aktuell ausgewählte Toolboxelement ab.</summary>
+        <returns>Die <see cref="T:System.Drawing.Design.ToolboxItem" /> , die derzeit ausgewählt ist, oder <see langword="null" /> , wenn kein Toolboxelement ausgewählt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem GetSelectedToolboxItem (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem GetSelectedToolboxItem(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> , dass das ausgewählte Tool dafür zurückzugebenden zugeordnet sein muss.</param>
+        <summary>Ruft das aktuell ausgewählte Toolboxelement ab, wenn er für alle Designer verfügbar ist oder wenn den angegebenen Designer unterstützt.</summary>
+        <returns>Die <see cref="T:System.Drawing.Design.ToolboxItem" /> , die derzeit ausgewählt ist, oder <see langword="null" /> Wenn derzeit kein Toolboxelement ausgewählt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt das derzeit ausgewählte <xref:System.Drawing.Design.ToolboxItem> Wenn es nicht Designer spezifisch, und nur eine Designer-spezifische aktuell ausgewählten gibt <xref:System.Drawing.Design.ToolboxItem> , wenn der Typ des Designerhosts in angegeben der `host` Parameter entspricht den Typ des Designer, die aktuell ausgewählte <xref:System.Drawing.Design.ToolboxItem> unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die gesamte Auflistung von Toolboxelementen aus der Toolbox ab.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> , die die aktuellen Toolboxelemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> , Toolboxelemente abzurufenden zugeordnet ist.</param>
+        <summary>Ruft die Auflistung von Toolboxelementen, die dem angegebenen Designerhost aus der Toolbox zugeordnet sind.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> , enthält die aktuelle Toolboxelementen, die dem angegebenen Designerhost zugeordnet sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems (string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems(string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">Die Toolbox Arbeitsaufgabenkategorien abzurufenden alle Toolboxelemente aus.</param>
+        <summary>Ruft eine Auflistung von Toolboxelementen aus der Toolbox, die die angegebene Kategorie entsprechen.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> , enthält die aktuelle Toolboxelemente, die der angegebenen Kategorie zugeordnet sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems (string category, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems(string category, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems(System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="category">Die Toolbox-Element-Kategorie aus der Toolboxelemente abgerufen werden sollen.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> , Toolboxelemente abzurufenden zugeordnet ist.</param>
+        <summary>Ruft die Auflistung von Toolboxelementen, die dem angegebenen Designerhosts und die Kategorie aus der Toolbox zugeordnet sind.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> , enthält die aktuelle Toolboxelemente, die der angegebenen Kategorie und dem Designerhost zugeordnet sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public bool IsSupported (object serializedObject, System.Collections.ICollection filterAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupported(object serializedObject, class System.Collections.ICollection filterAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsSupported(System.Object,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="filterAttributes" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">Das Objekt, enthält die <see cref="T:System.Drawing.Design.ToolboxItem" /> abgerufen.</param>
+        <param name="filterAttributes">Ein <see cref="T:System.Collections.ICollection" /> , enthält die Attribute für das serialisierte Objekt zu testen.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene Objekt, das ein serialisiertes Toolboxelement darstellt, den angegebenen Attributen entspricht.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt den angegebenen Attributen entspricht; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public bool IsSupported (object serializedObject, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupported(object serializedObject, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsSupported(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">Das Objekt, enthält die <see cref="T:System.Drawing.Design.ToolboxItem" /> abgerufen.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> So testen Sie die Unterstützung für die <see cref="T:System.Drawing.Design.ToolboxItem" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene Objekt, das ein serialisiertes Toolboxelement darstellt, die vom angegebenen Designerhost verwendet werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt mit dem angegebenen Designerhost kompatibel ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToolboxItem">
+      <MemberSignature Language="C#" Value="public bool IsToolboxItem (object serializedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsToolboxItem(object serializedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsToolboxItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">Das zu überprüfende Objekt.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene Objekt ein serialisiertes Toolboxelement ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt ein Objekt der Toolbox-Element enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToolboxItem">
+      <MemberSignature Language="C#" Value="public bool IsToolboxItem (object serializedObject, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsToolboxItem(object serializedObject, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsToolboxItem(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">Das zu überprüfende Objekt.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> ist, die diese Anforderung erfolgt.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene Objekt ein serialisiertes Toolboxelement mithilfe des angegebenen Designerhosts ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt ein Objekt der Toolbox-Element enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert den Zustand der Toolboxelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Design.IToolboxService.Refresh%2A> Methode wird verwendet, um die Toolboxdienst angeben, dass der Benutzer den Cache von Toolboxelementen aktualisieren möchte. Wenn die Toolboxdienst eine live-Liste der Toolboxelementcontainer beibehält, wird diese Methode keine Aktion aus. Wenn sie eine Momentaufnahme der Toolboxelementcontainer beibehält, muss beim Aufrufen dieser Methode stellen Sie sicher, dass die Momentaufnahme auf dem neuesten Stand ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCreator">
+      <MemberSignature Language="C#" Value="public void RemoveCreator (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveCreator(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveCreator(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das Datenformat des Erstellers zu entfernen.</param>
+        <summary>Entfernt einen zuvor hinzugefügten Toolbox Elementersteller, der dem angegebenen Datenformat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCreator">
+      <MemberSignature Language="C#" Value="public void RemoveCreator (string format, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveCreator(string format, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveCreator(System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das Datenformat des Erstellers zu entfernen.</param>
+        <param name="host">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> , der zu entfernenden Erstellung zugeordnet ist.</param>
+        <summary>Entfernt einen zuvor hinzugefügten Toolbox Ersteller, der dem angegebenen Datenformat und des angegebenen Designerhosts zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveToolboxItem">
+      <MemberSignature Language="C#" Value="public void RemoveToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> aus der Toolbox entfernt.</param>
+        <summary>Entfernt das angegebene Toolboxelement aus der Toolbox.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveToolboxItem">
+      <MemberSignature Language="C#" Value="public void RemoveToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveToolboxItem(System.Drawing.Design.ToolboxItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> aus der Toolbox entfernt.</param>
+        <param name="category">Element Toolboxkategorie So entfernen Sie die <see cref="T:System.Drawing.Design.ToolboxItem" /> aus.</param>
+        <summary>Entfernt das angegebene Toolboxelement aus der Toolbox.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedCategory">
+      <MemberSignature Language="C#" Value="public string SelectedCategory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedCategory" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.IToolboxService.SelectedCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der aktuell ausgewählten Toolkategorie aus der Toolbox.</summary>
+        <value>Der Name der aktuell ausgewählten Kategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedToolboxItemUsed">
+      <MemberSignature Language="C#" Value="public void SelectedToolboxItemUsed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectedToolboxItemUsed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SelectedToolboxItemUsed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt den Toolboxdienst, dass das ausgewählte Tool verwendet wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToolboxItem">
+      <MemberSignature Language="C#" Value="public object SerializeToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SerializeToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SerializeToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Das <see cref="T:System.Drawing.Design.ToolboxItem" />, das serialisiert werden soll.</param>
+        <summary>Ruft ein serialisierbares Objekt, das das angegebene Toolboxelement darstellt.</summary>
+        <returns>Ein Objekt, das den angegebenen stellt <see cref="T:System.Drawing.Design.ToolboxItem" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode serialisiert das angegebene <xref:System.Drawing.Design.ToolboxItem> auf ein Objekt, die beibehalten werden kann. Das zurückgegebene Objekt kann in einem Stream gespeichert oder per Drag & Drop oder Zwischenablage übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursor">
+      <MemberSignature Language="C#" Value="public bool SetCursor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetCursor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SetCursor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die aktuelle Anwendung Cursor auf einen Cursor, der das derzeit ausgewählte Tool darstellt.</summary>
+        <returns>
+          <see langword="true" />Wenn der Cursor, durch das derzeit ausgewählte Tool festgelegt ist <see langword="false" /> befindet sich kein Tool ausgewählt und der Cursor auf den standardmäßigen Windows-Cursor festgelegt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein Tool ausgewählt wird, wird der Cursor auf den standard-Windows-Cursor standardmäßig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectedToolboxItem">
+      <MemberSignature Language="C#" Value="public void SetSelectedToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSelectedToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SetSelectedToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> auswählen.</param>
+        <summary>Wählt das angegebene Toolboxelement aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

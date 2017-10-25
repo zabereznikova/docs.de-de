@@ -1,0 +1,77 @@
+<Type Name="TextDecorationUnit" FullName="System.Windows.TextDecorationUnit">
+  <TypeSignature Language="C#" Value="public enum TextDecorationUnit" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextDecorationUnit extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TextDecorationUnit" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Einheitentyp der entweder eine <see cref="T:System.Windows.TextDecoration" /> <see cref="P:System.Windows.TextDecoration.PenOffset" /> oder ein <see cref="P:System.Windows.TextDecoration.Pen" /> stärkenwert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.TextDecoration.PenThicknessUnit%2A> -Eigenschaft in Pixel.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets7](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets7)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets7)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets7](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FontRecommended">
+      <MemberSignature Language="C#" Value="FontRecommended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextDecorationUnit FontRecommended = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextDecorationUnit.FontRecommended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Einheitenwert, der relativ zum die Schriftart für die <see cref="T:System.Windows.TextDecoration" />. Wenn die Ergänzung mehrere Schriftarten umfasst, wird Durchschnittswert empfohlener Wert berechnet. Dies ist der Standardwert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FontRenderingEmSize">
+      <MemberSignature Language="C#" Value="FontRenderingEmSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextDecorationUnit FontRenderingEmSize = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextDecorationUnit.FontRenderingEmSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Komponententest-Wert, der relativ zur Größe der Schriftart Em ist. Der Wert, der den Offset oder die Stärke ist gleich dem Offset oder die Stärke-Wert, multipliziert mit der Em-Schriftgrad.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pixel">
+      <MemberSignature Language="C#" Value="Pixel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextDecorationUnit Pixel = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextDecorationUnit.Pixel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Komponententest-Wert, der in Pixeln ausgedrückt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

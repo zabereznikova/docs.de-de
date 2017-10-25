@@ -1,0 +1,46 @@
+<Type Name="ADODC+WillChangeRecordDelegate" FullName="Microsoft.VisualBasic.Compatibility.VB6.ADODC+WillChangeRecordDelegate">
+  <TypeSignature Language="C#" Value="public delegate void ADODC.WillChangeRecordDelegate(EventReasonEnum adReason, int cRecords, ref EventStatusEnum adStatus, Recordset pRecordset);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ADODC/WillChangeRecordDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillChangeRecordDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="adReason" Type="ADODB.EventReasonEnum" />
+    <Parameter Name="cRecords" Type="System.Int32" />
+    <Parameter Name="adStatus" Type="ADODB.EventStatusEnum&amp;" RefType="ref" />
+    <Parameter Name="pRecordset" Type="ADODB.Recordset" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="adReason">Eine <see langword="ADODB.EventReasonEnum" />.</param>
+    <param name="cRecords">Eine <see langword="Integer" /> , die die Anzahl der Datensätze darstellt.</param>
+    <param name="adStatus">Eine <see langword="ADODB.EventStatusEnum" />.</param>
+    <param name="pRecordset">Ein <see langword="ADODB.Recordset" />-Objekt.</param>
+    <summary>Stellt die Methode zur Behandlung eines <see langword="WillChangeRecord" />-Ereignisses dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

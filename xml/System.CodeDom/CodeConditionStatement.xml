@@ -1,0 +1,197 @@
+<Type Name="CodeConditionStatement" FullName="System.CodeDom.CodeConditionStatement">
+  <TypeSignature Language="C#" Value="public class CodeConditionStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeConditionStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeConditionStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine bedingte Verzweigung-Anweisung, die in der Regel als dargestellt eine <see langword="if" /> Anweisung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeConditionStatement>kann verwendet werden, um Code darstellen, die besteht aus einem bedingten Ausdruck, der eine Auflistung von Anweisungen, die ausgeführt werden, wenn der bedingte Ausdruck ergibt `true`, und eine optionale Auflistung von Anweisungen, die ausgeführt werden, wenn der bedingte Ausdruck ausgewertet wird. um `false`. Ein <xref:System.CodeDom.CodeConditionStatement> wird in vielen Sprachen als generiert eine `if` Anweisung.  
+  
+ Die <xref:System.CodeDom.CodeConditionStatement.Condition%2A> Eigenschaft gibt den Ausdruck zu testen. Die <xref:System.CodeDom.CodeConditionStatement.TrueStatements%2A> Eigenschaft enthält die Anweisungen, die ausgeführt werden, wenn die zu testende Ausdruck ergibt `true`. Die <xref:System.CodeDom.CodeConditionStatement.FalseStatements%2A> Eigenschaft enthält die Anweisungen, die ausgeführt werden, wenn die zu testende Ausdruck ergibt `false`.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung einer <xref:System.CodeDom.CodeConditionStatement> zur Darstellung einer `if` -Anweisung mit einer `else` Block.  
+  
+ [!code-cpp[CodeConditionStatementExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeConditionStatementExample/CPP/codeconditionstatementexample.cpp#2)]
+ [!code-csharp[CodeConditionStatementExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeConditionStatementExample/CS/codeconditionstatementexample.cs#2)]
+ [!code-vb[CodeConditionStatementExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeConditionStatementExample/VB/codeconditionstatementexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeConditionStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeConditionStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeConditionStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeConditionStatement (System.CodeDom.CodeExpression condition, params System.CodeDom.CodeStatement[] trueStatements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression condition, class System.CodeDom.CodeStatement[] trueStatements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeConditionStatement.#ctor(System.CodeDom.CodeExpression,System.CodeDom.CodeStatement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="trueStatements" Type="System.CodeDom.CodeStatement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="condition">Ein <see cref="T:System.CodeDom.CodeExpression" /> , der den auszuwertenden Ausdruck angibt.</param>
+        <param name="trueStatements">Ein Array vom Typ <see cref="T:System.CodeDom.CodeStatement" /> mit den Anweisungen ausführt, wenn die Bedingung ist <see langword="true" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeConditionStatement" /> -Klasse unter Verwendung der angegebenen Bedingung und die Anweisungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeConditionStatement (System.CodeDom.CodeExpression condition, System.CodeDom.CodeStatement[] trueStatements, System.CodeDom.CodeStatement[] falseStatements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression condition, class System.CodeDom.CodeStatement[] trueStatements, class System.CodeDom.CodeStatement[] falseStatements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeConditionStatement.#ctor(System.CodeDom.CodeExpression,System.CodeDom.CodeStatement[],System.CodeDom.CodeStatement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="trueStatements" Type="System.CodeDom.CodeStatement[]" />
+        <Parameter Name="falseStatements" Type="System.CodeDom.CodeStatement[]" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Ein <see cref="T:System.CodeDom.CodeExpression" /> , der die auszuwertende Bedingung angibt.</param>
+        <param name="trueStatements">Ein Array vom Typ <see cref="T:System.CodeDom.CodeStatement" /> mit den Anweisungen ausführt, wenn die Bedingung ist <see langword="true" />.</param>
+        <param name="falseStatements">Ein Array vom Typ <see cref="T:System.CodeDom.CodeStatement" /> mit den Anweisungen ausführt, wenn die Bedingung ist <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeConditionStatement" /> -Klasse unter Verwendung der angegebenen Bedingung und die Anweisungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Condition" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeConditionStatement.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den auszuwertenden Ausdruck <see langword="true" /> oder <see langword="false" />.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> auszuwertende <see langword="true" /> oder <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zu dieser bedingten Ausdruck ausgewertet `true`, der Code in der <xref:System.CodeDom.CodeConditionStatement.TrueStatements%2A> Auflistung ausgeführt wird. Zu dieser bedingten Ausdruck ausgewertet `false` und <xref:System.CodeDom.CodeConditionStatement.FalseStatements%2A> Auflistung ist nicht leer, wird der Code Bestandteil der <xref:System.CodeDom.CodeConditionStatement.FalseStatements%2A> Sammlung ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FalseStatements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection FalseStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection FalseStatements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeConditionStatement.FalseStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Anweisungen, die ausgeführt werden, wenn der bedingte Ausdruck ergibt <see langword="false" />.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatementCollection" /> mit den Anweisungen ausführt, wenn der bedingte Ausdruck ergibt <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueStatements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection TrueStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection TrueStatements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeConditionStatement.TrueStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Anweisungen, die ausgeführt werden, wenn der bedingte Ausdruck ergibt <see langword="true" />.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatementCollection" /> mit den Anweisungen ausführt, wenn der bedingte Ausdruck ergibt <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

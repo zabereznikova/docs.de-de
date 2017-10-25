@@ -1,0 +1,49 @@
+<Type Name="ManagementEventArgs" FullName="System.Management.ManagementEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class ManagementEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ManagementEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die virtuelle Basisklasse zum Speichern von Ereignisdaten für WMI-Ereignisse dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public object Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Context" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vorgangskontext wiederholt wieder aus dem Vorgang, der das Ereignis ausgelöst hat.</summary>
+        <value>Gibt eine <see cref="T:System.Object" /> Wert für einen Vorgangskontext.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ WMI-Kontextobjekt mit Kontextinformationen zur Verfügung gestellt, von dem Vorgang, der das Ereignis ausgelöst hat.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

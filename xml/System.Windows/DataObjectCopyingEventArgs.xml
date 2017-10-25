@@ -1,0 +1,95 @@
+<Type Name="DataObjectCopyingEventArgs" FullName="System.Windows.DataObjectCopyingEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DataObjectCopyingEventArgs : System.Windows.DataObjectEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataObjectCopyingEventArgs extends System.Windows.DataObjectEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataObjectCopyingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DataObjectEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Argumente für die <see cref="T:System.Windows.DataObject" />.<see cref="E:System.Windows.DataObject.Copying" /> Das Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DataObject.Copying> Ereignis tritt auf, wenn ein Kopiervorgang abgeschlossen ist, Konvertieren des ausgewählten Inhalts in alle angegebenen Daten formatiert alle Datenformate gespeichert hat, in dem Objekt zugeordneten Daten und das Datenobjekt in der Systemzwischenablage abgelegt oder ein Ziehvorgang begonnen wird der Vorgang.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectCopyingEventArgs (System.Windows.IDataObject dataObject, bool isDragDrop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.IDataObject dataObject, bool isDragDrop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObjectCopyingEventArgs.#ctor(System.Windows.IDataObject,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataObject" Type="System.Windows.IDataObject" />
+        <Parameter Name="isDragDrop" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataObject">Ein <see cref="T:System.Windows.DataObject" /> mit Daten, die zu kopierenden bereit.</param>
+        <param name="isDragDrop">Ein <see langword="Boolean" /> Wert, der angibt, ob die Kopie Teil eines Drag-and-Drop-Vorgangs ist. <see langword="true" />um anzugeben, dass die Kopie Teil eines Drag-and-Drop-Vorgangs. andernfalls <see langword="false" />. Wenn dieser Parameter, um festgelegt wird <see langword="true" />die <see cref="E:System.Windows.DataObject.Copying" /> Ereignis wird ausgelöst, wenn Sie ziehen initiiert wird.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Windows.DataObjectCopyingEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.DataObjectCopyingEventArgs> Objekt wird normalerweise von der Anwendung, die den Kopiervorgang initiiert wird erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="dataObject" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataObject">
+      <MemberSignature Language="C#" Value="public System.Windows.IDataObject DataObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IDataObject DataObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataObjectCopyingEventArgs.DataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das zugeordnete Objekt der <see cref="E:System.Windows.DataObject.Copying" /> Ereignis.</summary>
+        <value>Das Datenobjekt zugeordneten der <see cref="E:System.Windows.DataObject.Copying" /> Ereignis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObjectCopyingEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

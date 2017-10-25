@@ -1,0 +1,325 @@
+<Type Name="JSScanner" FullName="Microsoft.JScript.JSScanner">
+  <TypeSignature Language="C#" Value="public sealed class JSScanner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JSScanner extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.JSScanner" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Überprüft JScript-Code, die Suche nach einzelnen Einheiten von Code oder *Token*. Diese Klasse gehört zur Kategorie Scannen und analysieren. Weitere Informationen zum Scannen und analysieren können, finden Sie unter [erstellen Sie einen Sprachcompiler für .NET Framework](http://go.microsoft.com/fwlink/?LinkId=110392).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JSScanner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.JSScanner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JSScanner (Microsoft.JScript.Context sourceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.JScript.Context sourceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.#ctor(Microsoft.JScript.Context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceContext" Type="Microsoft.JScript.Context" />
+      </Parameters>
+      <Docs>
+        <param name="sourceContext">Der Quellcode zu scannen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.JSScanner" /> -Klasse und gibt den Quellcode zu scannen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentLine">
+      <MemberSignature Language="C#" Value="public int GetCurrentLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetCurrentLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.GetCurrentLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die aktuelle Zeilennummer im Code. Dies ist ein Zeiger, der verschoben werden, wie der Code überprüft wird.</summary>
+        <returns>Die aktuelle Zeilennummer im Code.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentPosition">
+      <MemberSignature Language="C#" Value="public int GetCurrentPosition (bool absolute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetCurrentPosition(bool absolute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.GetCurrentPosition(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absolute" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="absolute">Dieser Parameter wird ignoriert.</param>
+        <summary>Ruft die aktuelle Position in der Codezeichenfolge ab. Dies ist ein Zeiger, der verschoben werden, wie der Code überprüft wird.</summary>
+        <returns>Die aktuelle Position in der Codezeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextToken">
+      <MemberSignature Language="C#" Value="public void GetNextToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetNextToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.GetNextToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sucht das nächste Token im Code.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceCode">
+      <MemberSignature Language="C#" Value="public string GetSourceCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetSourceCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.GetSourceCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Quellcode, der diesem Scannerobjekt zugeordnet ist.</summary>
+        <returns>Der Quellcode zu scannen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Quellcode wird angegeben, um die <xref:Microsoft.JScript.JSScanner.%23ctor%28Microsoft.JScript.Context%29> Methode oder die <xref:Microsoft.JScript.JSScanner.SetSource%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetStartLinePosition">
+      <MemberSignature Language="C#" Value="public int GetStartLinePosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetStartLinePosition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.GetStartLinePosition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Position in der Codezeichenfolge, in die erste Zeile des aktuellen Codes beginnt. Alle Zeilen des Codes werden in einer einzelnen Zeichenfolge gespeichert. Dies ist ein Zeiger, der verschoben werden, wie der Code überprüft wird.</summary>
+        <returns>Die Position in die Zeichenfolge, in die erste Zeile des aktuellen Codes beginnt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetStringLiteral">
+      <MemberSignature Language="C#" Value="public string GetStringLiteral ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetStringLiteral() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.GetStringLiteral" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die gescannt und hatten alle seine Escapesequenzen ersetzt.</summary>
+        <returns>Eine Zeichenfolge, die gescannt und hatten alle seine Escapesequenzen ersetzt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GotEndOfLine">
+      <MemberSignature Language="C#" Value="public bool GotEndOfLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GotEndOfLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.GotEndOfLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob das Ende einer Zeile erreicht wurde, nachdem der Scanner scannt oder für ein Token einsieht.</summary>
+        <returns>
+          <see langword="true" />Wenn das Ende der Zeile erreicht wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsKeyword (Microsoft.JScript.JSToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsKeyword(valuetype Microsoft.JScript.JSToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.IsKeyword(Microsoft.JScript.JSToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.JScript.JSToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token zu überprüfen.</param>
+        <summary>Bestimmt, ob das angegebene Token ein Schlüsselwort in der Programmiersprache JScript ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Token ein Schlüsselwort ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsOperator">
+      <MemberSignature Language="C#" Value="public static bool IsOperator (Microsoft.JScript.JSToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsOperator(valuetype Microsoft.JScript.JSToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.IsOperator(Microsoft.JScript.JSToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.JScript.JSToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token zu überprüfen.</param>
+        <summary>Bestimmt, ob das angegebene Token einen Operator in der Programmiersprache JScript ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Token ein Operator ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuthoringMode">
+      <MemberSignature Language="C#" Value="public void SetAuthoringMode (bool mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAuthoringMode(bool mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.SetAuthoringMode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">
+          <see langword="true" />Um Erstellungsmodus anzugeben; andernfalls <see langword="false" />.</param>
+        <summary>Setzt ein Flag, der angibt, ob der Scanner im Erstellungsmodus funktioniert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für im Erstellungsmodus tritt auf, wenn ein Host den Code in einem Editor, um es zur farblichen Kennzeichnung der scannt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetSource">
+      <MemberSignature Language="C#" Value="public void SetSource (Microsoft.JScript.Context sourceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSource(class Microsoft.JScript.Context sourceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.SetSource(Microsoft.JScript.Context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceContext" Type="Microsoft.JScript.Context" />
+      </Parameters>
+      <Docs>
+        <param name="sourceContext">Der Quellcode zu scannen.</param>
+        <summary>Legt den Quellcode zu scannen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SkipMultiLineComment">
+      <MemberSignature Language="C#" Value="public int SkipMultiLineComment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 SkipMultiLineComment() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSScanner.SkipMultiLineComment" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lässt einen Kommentar, der mehrere Zeilen umfasst, und verschiebt die Zeiger, die die aktuelle Position im Code zu identifizieren.</summary>
+        <returns>Die neue aktuelle Position in der Codezeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

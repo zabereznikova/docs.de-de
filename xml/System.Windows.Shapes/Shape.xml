@@ -1,0 +1,650 @@
+<Type Name="Shape" FullName="System.Windows.Shapes.Shape">
+  <TypeSignature Language="C#" Value="public abstract class Shape : System.Windows.FrameworkElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Shape extends System.Windows.FrameworkElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shapes.Shape" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Basisklasse für Formelemente, z. B. <see cref="T:System.Windows.Shapes.Ellipse" />, <see cref="T:System.Windows.Shapes.Polygon" />, und <see cref="T:System.Windows.Shapes.Rectangle" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Shape ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shapes.Shape.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shapes.Shape" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shapes.Shape.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">Die endgültige ausgewertete Größe der <see cref="T:System.Windows.Shapes.Shape" />.</param>
+        <summary>Ordnet eine <see cref="T:System.Windows.Shapes.Shape" /> durch das Auswerten der <see cref="P:System.Windows.Shapes.Shape.RenderedGeometry" /> und <see cref="P:System.Windows.Shapes.Shape.Stretch" /> Eigenschaften.</summary>
+        <returns>Die endgültige Größe des angeordneten <see cref="T:System.Windows.Shapes.Shape" /> Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `finalsize` ist kein gültiger Wert (ein null-Verweis oder `empty`), wird nichts auf dem Bildschirm gezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefiningGeometry">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Media.Geometry DefiningGeometry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry DefiningGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.DefiningGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert darstellt, die die <see cref="T:System.Windows.Media.Geometry" /> von der <see cref="T:System.Windows.Shapes.Shape" />.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Geometry" /> des <see cref="T:System.Windows.Shapes.Shape" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Fill { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Fill" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.Fill" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Brush" /> , der angibt, wie das Innere der Form gezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Brush" /> , der beschreibt, wie das Innere der Form gezeichnet wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Fill"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Shapes.Shape.FillProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, f<xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.Windows.Shapes.Shape.Fill%2A> -Eigenschaft zum Festlegen der Farbe des Hintergrunds einer <xref:System.Windows.Shapes.Ellipse> Element.  
+  
+ [!code-xaml[BrushesMiscSnippets_snip#SetBackgroundColorOfShapeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_snip/CS/SetBackgroundColorOfShapeExample.xaml#setbackgroundcolorofshapeexamplewholepage)]  
+  
+ [!code-csharp[BrushesMiscSnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
+ [!code-vb[BrushesMiscSnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FillProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FillProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.FillProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.Fill" />-Abhängigkeitseigenschaft. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeometryTransform">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Transform GeometryTransform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform GeometryTransform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.GeometryTransform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der darstellt eine <see cref="T:System.Windows.Media.Transform" /> , für die Geometrie angewendet wird eine <see cref="T:System.Windows.Shapes.Shape" /> vor, wenn es gezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Transform" /> , für die Geometrie angewendet wird eine <see cref="T:System.Windows.Shapes.Shape" /> vor, wenn es gezeichnet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shapes.Shape.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Maximal <see cref="T:System.Windows.Size" /> nicht überschreiten.</param>
+        <summary>Measures einer <see cref="T:System.Windows.Shapes.Shape" /> übergeben, während der ersten Layout vor anordnen.</summary>
+        <returns>Die maximale <see cref="T:System.Windows.Size" /> für die <see cref="T:System.Windows.Shapes.Shape" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext drawingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext drawingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shapes.Shape.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">Ein <see cref="T:System.Windows.Media.DrawingContext" /> -Objekt, das während der Renderingdurchlauf dieses gezeichnet wird <see cref="T:System.Windows.Shapes.Shape" />.</param>
+        <summary>Bietet eine Möglichkeit zum Ändern der standarddarstellung eine <see cref="T:System.Windows.Shapes.Shape" /> Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderedGeometry">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Geometry RenderedGeometry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry RenderedGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.RenderedGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die endgültige gerenderte darstellt <see cref="T:System.Windows.Media.Geometry" /> von einem <see cref="T:System.Windows.Shapes.Shape" />.</summary>
+        <value>Die endgültige gerenderte <see cref="T:System.Windows.Media.Geometry" /> von einem <see cref="T:System.Windows.Shapes.Shape" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Stretch Stretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Stretch Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Windows.Media.Stretch" />-Enumerationswert ab, der beschreibt, wie die Form den zugeordneten Raum ausfüllt, oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Media.Stretch" />-Enumerationswerte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StretchProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StretchProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StretchProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.Stretch" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stroke">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Stroke { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Stroke" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.Stroke" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Brush" /> , die angibt, wie die <see cref="T:System.Windows.Shapes.Shape" /> -Kontur gezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Brush" /> , die angibt, wie die <see cref="T:System.Windows.Shapes.Shape" /> -Kontur gezeichnet wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Stroke"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Shapes.Shape.StrokeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeDashArray">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DoubleCollection StrokeDashArray { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DoubleCollection StrokeDashArray" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeDashArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DoubleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von <see cref="T:System.Double" /> Werte, die das Muster der Striche und Lücken, die verwendet wird angeben, Formen werden kann.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Double" /> Werte, die das Muster der Striche und Lücken angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Double> in der Auflistung gibt die Länge des Strichs oder einer Lücke relativ zu den <xref:System.Windows.Thickness> des Stifts. Z. B. einen Wert von `1` erstellt, ein Bindestrich oder eine Lücke, die die gleiche Länge wie die Stärke des Stifts (ein Quadrat) aufweist.  
+  
+ Das erste Element in der Auflistung, die sich am Index 0 befindet, gibt die Länge eines Strichs. Das zweite Element, das sich am Index 1 ist, gibt die Länge des eine Lücke.  
+  
+ Objekte mit einem geraden Indexwert geben Bindestriche an. Objekte mit einer ungeraden Indexwert geben Lücken.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeDashArrayProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeDashArrayProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeDashArrayProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeDashArrayProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeDashArray" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeDashCap">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PenLineCap StrokeDashCap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.PenLineCap StrokeDashCap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeDashCap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineCap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.PenLineCap" /> -Enumerationswert, der angibt, wie die Enden eines Strichs gezeichnet werden.</summary>
+        <value>Einer der Enumerationswerte Werte für <see cref="T:System.Windows.Media.PenLineCap" />. Die Standardeinstellung ist <see cref="F:System.Windows.Media.PenLineCap.Flat" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Einstellung gilt für beide Enden eines einzelnen Bindestrich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeDashCapProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeDashCapProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeDashCapProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeDashCapProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeDashCap" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeDashOffset">
+      <MemberSignature Language="C#" Value="public double StrokeDashOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrokeDashOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeDashOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Double" /> , der den Abstand innerhalb des Strichmusters ein Bindestrich beginnt angibt.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der den Abstand innerhalb des Strichmusters ein Bindestrich beginnt darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeDashOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeDashOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeDashOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeDashOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeDashOffset" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeEndLineCap">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PenLineCap StrokeEndLineCap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.PenLineCap StrokeEndLineCap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeEndLineCap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineCap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine <see cref="T:System.Windows.Media.PenLineCap" /> -Enumerationswert ab, der beschreibt, der <see cref="T:System.Windows.Shapes.Shape" /> am Ende einer Zeile.</summary>
+        <value>Einer der Enumerationswerte Werte für <see cref="T:System.Windows.Media.PenLineCap" />. Die Standardeinstellung ist <see cref="F:System.Windows.Media.PenLineCap.Flat" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat keine Auswirkung, wenn Sie auf eine Form "festlegen, die keine <xref:System.Windows.Shapes.Shape.Stroke%2A> oder ohne Start-oder Endpunkt. Diese Eigenschaft hat keine Auswirkung, wenn Sie auf Festlegen einer <xref:System.Windows.Shapes.Ellipse>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeEndLineCapProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeEndLineCapProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeEndLineCapProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeEndLineCapProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeEndLineCap" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeLineJoin">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PenLineJoin StrokeLineJoin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.PenLineJoin StrokeLineJoin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeLineJoin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.PenLineJoin" /> -Enumerationswert ab, der den Typ der Join angibt, an den Scheitelpunkten verwendet wird, eine <see cref="T:System.Windows.Shapes.Shape" />.</summary>
+        <value>Einer der Enumerationswerte für<see cref="T:System.Windows.Media.PenLineJoin" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat keine Auswirkung, wenn Sie für ein Element, das keine Scheitelpunkte festlegen auf wie z. B. über eine <xref:System.Windows.Shapes.Line> Element.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt mehrere unterschiedliche Knoten, die an den Scheitelpunkten einer Form verwendet.  
+  
+ [!code-xaml[drawingwithshapeelements#PolylineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
+  
+ Die folgende Abbildung zeigt die verschiedenen Zeile verknüpft.  
+  
+ ![Beispiel für Zeile verknüpft. ] (~/add/media/graphicslinejoins.png "Beispiel Zeile Joins.")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeLineJoinProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeLineJoinProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeLineJoinProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeLineJoinProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeLineJoin" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeMiterLimit">
+      <MemberSignature Language="C#" Value="public double StrokeMiterLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrokeMiterLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeMiterLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Grenze für das Verhältnis der Spitz Länge auf die Hälfte der <see cref="P:System.Windows.Shapes.Shape.StrokeThickness" /> von einem <see cref="T:System.Windows.Shapes.Shape" /> Element.</summary>
+        <value>Der Grenzwert für das Verhältnis zwischen der Spitz verlängert, damit die <see cref="P:System.Windows.Shapes.Shape.StrokeThickness" /> von einer <see cref="T:System.Windows.Shapes.Shape" /> Element. Dieser Wert ist immer eine positive Zahl, die größer als oder gleich 1 ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Gehrung bildet eine Ecke durch den Enden von zwei verknüpften Zeilen Abschrägung. Wenn zwei Liniensegmente in einem spitzen Winkel zu erfüllen, kann die Gehrung länger als die Stärke der Linie den Pfad sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeMiterLimitProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeMiterLimitProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeMiterLimitProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeMiterLimitProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeMiterLimit" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.Stroke" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeStartLineCap">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PenLineCap StrokeStartLineCap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.PenLineCap StrokeStartLineCap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeStartLineCap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineCap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Windows.Media.PenLineCap" /> -Enumerationswert ab, der beschreibt, die <see cref="T:System.Windows.Shapes.Shape" /> am Anfang einer <see cref="P:System.Windows.Shapes.Shape.Stroke" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Media.PenLineCap" />-Enumerationswerte. Die Standardeinstellung ist <see cref="F:System.Windows.Media.PenLineCap.Flat" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat keine Auswirkung, wenn Sie auf eine Form "festlegen, die keine <xref:System.Windows.Shapes.Shape.Stroke%2A> oder ohne Start-oder Endpunkt. Diese Eigenschaft hat keine Auswirkung, wenn Sie auf Festlegen einer <xref:System.Windows.Shapes.Ellipse>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeStartLineCapProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeStartLineCapProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeStartLineCapProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeStartLineCapProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeStartLineCap" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeThickness">
+      <MemberSignature Language="C#" Value="public double StrokeThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrokeThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Shape.StrokeThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite der <see cref="T:System.Windows.Shapes.Shape" /> Kontur.</summary>
+        <value>Die Breite der <see cref="T:System.Windows.Shapes.Shape" /> Kontur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StrokeThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StrokeThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Shape.StrokeThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Shape.StrokeThickness" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

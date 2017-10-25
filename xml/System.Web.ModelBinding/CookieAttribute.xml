@@ -1,0 +1,206 @@
+<Type Name="CookieAttribute" FullName="System.Web.ModelBinding.CookieAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CookieAttribute : System.Web.ModelBinding.ValueProviderSourceAttribute, System.Web.ModelBinding.IUnvalidatedValueProviderSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CookieAttribute extends System.Web.ModelBinding.ValueProviderSourceAttribute implements class System.Web.ModelBinding.IUnvalidatedValueProviderSource, class System.Web.ModelBinding.IValueProviderSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.CookieAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.ModelBinding.ValueProviderSourceAttribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.ModelBinding.IUnvalidatedValueProviderSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Attribut, das angibt, dass die Werte für die modellbindung durch ein Cookie bereitgestellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ModelBinding.CookieAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.CookieAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ModelBinding.CookieAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.CookieAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Cookies.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.CookieAttribute" /> -Klasse mit dem angegebenen Cookienamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModelName">
+      <MemberSignature Language="C#" Value="public override string GetModelName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetModelName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.CookieAttribute.GetModelName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Modellnamen zurück.</summary>
+        <returns>Der Name des Modells.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Wert der die <xref:System.Web.ModelBinding.CookieAttribute.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueProvider">
+      <MemberSignature Language="C#" Value="public override System.Web.ModelBinding.IValueProvider GetValueProvider (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.ModelBinding.IValueProvider GetValueProvider(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.CookieAttribute.GetValueProvider(System.Web.ModelBinding.ModelBindingExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.IValueProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">Der Ausführungskontext.</param>
+        <summary>Gibt den Wertanbieter zurück.</summary>
+        <returns>Der Wertanbieter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode speichert alle Cookienamen und Werte in ein Dictionary-Objekt erstellt und gibt eine neue Instanz der dem <xref:System.Web.ModelBinding.DictionaryValueProvider%601> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="modelBindingExecutionContext" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.CookieAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Cookies ab.</summary>
+        <value>Der Name des Cookies.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInput">
+      <MemberSignature Language="C#" Value="public bool ValidateInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateInput" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.CookieAttribute.ValidateInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Cookiewerte überprüft werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn Cookiewerte überprüft werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

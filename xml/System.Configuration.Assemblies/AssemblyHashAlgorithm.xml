@@ -1,0 +1,203 @@
+<Type Name="AssemblyHashAlgorithm" FullName="System.Configuration.Assemblies.AssemblyHashAlgorithm">
+  <TypeSignature Language="C#" Value="public enum AssemblyHashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AssemblyHashAlgorithm extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Assemblies.AssemblyHashAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, alle Hash-Algorithmen, die für das hashing von Dateien und zum Generieren des starken Namens verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `hash function``H` ist eine Transformation, die eine Eingabe akzeptiert `m` und gibt eine Zeichenfolge mit fester Größe, die aufgerufen wird, den Hashwert `h` (d. h. `h`  =  `H` (`m`)). Hashfunktionen mit nur diese Eigenschaft bieten eine Vielzahl von allgemeinen rechnerischen verwendet, aber wenn bei der Verschlüsselung eingesetzt wird, die Hashfunktionen werden in der Regel ausgewählt, um zusätzliche Eigenschaften haben.  
+  
+ Die Mindestanforderungen für einen kryptografischen Hash-Funktion sind:  
+  
+-   Die Eingabe kann mit beliebiger Länge sein.  
+  
+-   Die Ausgabe hat eine feste Länge.  
+  
+-   `H`(`x)` ist relativ leicht, für jedes angegebene x zu berechnen.  
+  
+-   `H`(`x`) ist unidirektional.  
+  
+-   `H`(`x`) besitzt kein Konflikt.  
+  
+ Der Hashwert stellt deutlicher auf, die länger Nachricht bzw. ein Dokument aus dem er berechnet wurde; Dieser Wert wird der Nachrichtenübersicht bezeichnet. Sie können einen Message Digest als digitalen Fingerabdruck des größeren Dokuments vorstellen. Beispiele für bekannte Hashfunktionen sind MD2 und und SHA.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MD5">
+      <MemberSignature Language="C#" Value="MD5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm MD5 = int32(32771)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.Assemblies.AssemblyHashAlgorithm.MD5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den MD5 Message-Digest-Algorithmus ab. MD5 wurde 1991 von Rivest entwickelt. Er im Grunde MD4 mit Sicherheitsgurte und auch wenn es etwas langsamer erfolgen als MD4 ist dient mehr Sicherheit bereitzustellen. Der Algorithmus besteht aus vier einen etwas anderen Entwurf von MD4 besitzt. Message-Digest-Größe sowie die Auffüllung von Anforderungen, bleiben unverändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.Assemblies.AssemblyHashAlgorithm.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske, die angibt, dass es kein Hashalgorithmus ist. Bei Angabe von <see langword="None" /> für eine Assembly mit mehreren Modulen die common Language Runtime für den SHA1-Algorithmus wird standardmäßig, da Assemblys mit mehreren Modulen einen Hash generieren müssen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SHA1">
+      <MemberSignature Language="C#" Value="SHA1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm SHA1 = int32(32772)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.Assemblies.AssemblyHashAlgorithm.SHA1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine Revision des Secure Hash Algorithm abzurufen, die einen nicht veröffentlichten Fehler in SHA korrigiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SHA256">
+      <MemberSignature Language="C#" Value="SHA256" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm SHA256 = int32(32780)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.Assemblies.AssemblyHashAlgorithm.SHA256" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske zum Abrufen einer Version des Secure Hash-Algorithmus mit einer Hashgröße von 256 Bit verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SHA384">
+      <MemberSignature Language="C#" Value="SHA384" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm SHA384 = int32(32781)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.Assemblies.AssemblyHashAlgorithm.SHA384" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine Version des Secure Hash-Algorithmus mit einer Hashgröße von 384 Bits abrufen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SHA512">
+      <MemberSignature Language="C#" Value="SHA512" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm SHA512 = int32(32782)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.Assemblies.AssemblyHashAlgorithm.SHA512" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Maske verwendet, um eine Version des Secure Hash-Algorithmus mit einer Hashgröße von 512 Bits abrufen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

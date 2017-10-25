@@ -1,0 +1,337 @@
+<Type Name="TypedReference" FullName="System.TypedReference">
+  <TypeSignature Language="C#" Value="public struct TypedReference" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TypedReference extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.TypedReference" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt Objekte, die sowohl einen verwalteten Zeiger auf einen Speicherort enthalten als auch eine Laufzeitdarstellung des Typs, der an diesem Ort gespeichert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein typisierter Verweis ist eine Typ/Wert-Kombination für Varargs und andere Unterstützung, die verwendet werden. `TypedReference`ist ein integrierte Werttyp, der für Parameter und lokaler Variablen verwendet werden kann.  
+  
+ Arrays von `TypedReference` Objekte konnten nicht erstellt werden. Der folgende Aufruf ist beispielsweise ungültig:  
+  
+ [!code-cpp[System.TypedReference#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.typedreference/cpp/source.cpp#1)]
+ [!code-csharp[System.TypedReference#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.typedreference/cs/source.cs#1)]
+ [!code-vb[System.TypedReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.typedreference/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypedReference.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt, mit dem das aktuelle Objekt verglichen werden soll.</param>
+        <summary>Überprüft, ob dieses Objekt gleich dem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn dieses Objekt gleich dem angegebenen Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode ist nicht implementiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypedReference.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode dieses Objekts zurück.</summary>
+        <returns>Der Hashcode dieses Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTargetType">
+      <MemberSignature Language="C#" Value="public static Type GetTargetType (TypedReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetTargetType(valuetype System.TypedReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypedReference.GetTargetType(System.TypedReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.TypedReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, für den der Typ seines Ziels zurückgegeben werden soll.</param>
+        <summary>Gibt den Typ des Ziels der angegebenen <see langword="TypedReference" /> zurück.</summary>
+        <returns>Der Typ des Ziels der angegebenen <see langword="TypedReference" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeTypedReference">
+      <MemberSignature Language="C#" Value="public static TypedReference MakeTypedReference (object target, System.Reflection.FieldInfo[] flds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.TypedReference MakeTypedReference(object target, class System.Reflection.FieldInfo[] flds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypedReference.MakeTypedReference(System.Object,System.Reflection.FieldInfo[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TypedReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="flds" Type="System.Reflection.FieldInfo[]" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Objekt, das die durch das erste Element des beschriebene Feld enthält <c>Flds</c>.</param>
+        <param name="flds">Eine Liste von Feldbeschreibungen, bei der jedes Element ein Feld beschreibt, das das durch das folgende Element beschriebene Feld enthält. Jedes beschriebene Feld muss ein Werttyp sein. Die Feldbeschreibungen müssen vom Typsystem angegebene <see langword="RuntimeFieldInfo" />-Objekte sein.</param>
+        <summary>Erstellt einen <see langword="TypedReference" /> für ein Feld, das durch ein angegebenes Objekt und eine Liste von Feldbeschreibungen gekennzeichnet ist.</summary>
+        <returns>Ein <see cref="T:System.TypedReference" /> für das Feld, das durch das letzte Element von <paramref name="flds" /> beschrieben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.TypedReference.MakeTypedReference%2A> Methodenrückgabe einen typisierten Verweis auf ein abschließendes Feld, in dem die `target` Parameter enthält, die durch das erste Element des beschriebene Feld `flds`, das Feld, das durch das erste Element des beschrieben `flds` enthält das Feld durch das zweite Element der beschriebenen `flds`, usw., bis das terminal Feld erreicht wird.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Methode kann verwendet werden, auf nicht öffentliche Member zuzugreifen, wenn der Aufrufer erteilt wurde <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> kennzeichnen und erteilen Sie der Berechtigungssatz für die nicht öffentlichen Member an des Aufrufers beschränkt ist Set- oder eine Teilmenge davon. (Siehe [Sicherheitsüberlegungen für die Reflektion](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> oder <paramref name="flds" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Ein Element von <paramref name="flds" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="flds" /> Array verfügt über keine Elemente.  
+  
+ - oder -   
+  
+ Ein Element von <paramref name="flds" /> ist ein <see langword="RuntimeFieldInfo" /> Objekt.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Reflection.FieldInfo.IsInitOnly" /> oder <see cref="P:System.Reflection.FieldInfo.IsStatic" /> Eigenschaft eines Elements <paramref name="flds" /> ist <see langword="true" />.</exception>
+        <exception cref="T:System.MissingMemberException">Parameter <paramref name="target" /> enthält nicht die durch das erste Element des beschriebene Feld <paramref name="flds" />, oder ein Element von <paramref name="flds" /> beschreibt ein Feld, das nicht in das Feld, das durch das nachfolgende Element von beschrieben enthalten ist <paramref name="flds" />.  
+  
+ - oder -   
+  
+ Das Feld, das durch ein Element der beschriebenen <paramref name="flds" /> kein Werttyp ist.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTypedReference">
+      <MemberSignature Language="C#" Value="public static void SetTypedReference (TypedReference target, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTypedReference(valuetype System.TypedReference target, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypedReference.SetTypedReference(System.TypedReference,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.TypedReference" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Ziel der Konvertierung.</param>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert den angegebenen Wert in eine <see langword="TypedReference" />. Diese Methode wird nicht unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst immer <xref:System.NotSupportedException> aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypeToken">
+      <MemberSignature Language="C#" Value="public static RuntimeTypeHandle TargetTypeToken (TypedReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.RuntimeTypeHandle TargetTypeToken(valuetype System.TypedReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypedReference.TargetTypeToken(System.TypedReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeTypeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.TypedReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see langword="TypedReference" />, deren Typhandle angefordert wird.</param>
+        <summary>Gibt das internen Metadatentyp-Handle für die angegebene <see langword="TypedReference" /> zurück.</summary>
+        <returns>Das interne Metadatentyp-Handle für die angegebene <see langword="TypedReference" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (TypedReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(valuetype System.TypedReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypedReference.ToObject(System.TypedReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.TypedReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende <see langword="TypedReference" />.</param>
+        <summary>Konvertiert die angegebene <see langword="TypedReference" /> in ein <see langword="Object" />.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das aus einem <see langword="TypedReference" /> konvertiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist möglicherweise ein Boxing-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

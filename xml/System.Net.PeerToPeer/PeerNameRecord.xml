@@ -1,0 +1,230 @@
+<Type Name="PeerNameRecord" FullName="System.Net.PeerToPeer.PeerNameRecord">
+  <TypeSignature Language="C#" Value="public class PeerNameRecord : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PeerNameRecord extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PeerNameRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert den Satz von Werten, die ein Peer-Objekt zu bilden. Dieser Datensatz enthält Elemente wie der Name des Peers und die Auflistung der Endpunkte, die mit denen er kommuniziert. Peer Namensdatensätze verwendet, um die einzelnen Peerknoten in definieren eine <see cref="T:System.Net.PeerToPeer.Cloud" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.PeerToPeer.PeerNameRecord>Objekte werden verwendet, um einzelne Knoten oder Peers in definieren eine <xref:System.Net.PeerToPeer.Cloud>. Ein Peer-Objekt kapselt alle Informationen, die über einen Peer in einen PNRP veröffentlichten <xref:System.Net.PeerToPeer.Cloud>, einschließlich seines Namens.  Die PeerNameRecord-Klasse dient zur Verwendung mit der <xref:System.Net.PeerToPeer.PeerNameResolver> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Objekt des Typs <xref:System.Net.PeerToPeer.PeerNameRecord>, deren Name ist der vollqualifizierte Name des der <xref:System.Net.PeerToPeer.PeerName> Objekt darin.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerNameRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameRecord.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PeerNameRecord (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameRecord.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Verweis auf das Objekt, das die zum Deserialisieren dieser Instanz benötigten Daten enthält.</param>
+        <param name="context">Kontext, der das Deserialisieren der Daten ermöglicht. Auch als Quelle der serialisierten Daten bezeichnet.</param>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public string Comment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerNameRecord.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie zusätzliche Informationen zu den <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt.</summary>
+        <value>Den Kommentar der <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt. Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Länge des Kommentars ist 39 Unicode-Zeichen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Kommentar, der festgelegt ist entweder größer als 39 Unicode-Zeichen oder weniger als ein Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Kommentar, der festgelegt wird.<see langword="null." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public byte[] Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Data" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerNameRecord.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest anwendungsdefinierte Binärdaten für die <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt.</summary>
+        <value>Ein Bytearray mit den dem Eintrag zugeordneten Binärdaten. Der Standardwert für diese Eigenschaft ist eine leere (leere) Arrayinstanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Höchstmenge an Daten, die übergeben werden können, ist 4096 Bytes. Diese Eigenschaft nicht mit `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge des Arrays Binärdaten festzulegende ist größer als 4096 oder weniger als 1.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Daten, die festgelegt werden.<see langword="null." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPointCollection">
+      <MemberSignature Language="C#" Value="public System.Net.IPEndPointCollection EndPointCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPEndPointCollection EndPointCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerNameRecord.EndPointCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPointCollection" /> Objekt, das alle Endpunkte für den Peer zugeordnete enthält <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Net.IPEndPointCollection" />-Objekt, das eine Auflistung von <see cref="T:System.Net.IPEndPoint" />-Objekten enthält. Diese Objekte enthalten die Endpunkte der anderen Peers in der Cloud zugeordnete Peer beteiligt. Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält den Satz von Endpunkten oder peers in den <xref:System.Net.PeerToPeer.Cloud>, für den Peer mit dem Namen in das nächste <xref:System.Net.PeerToPeer.PeerNameRecord>. Hierbei handelt es sich um diejenigen, mit denen dieser Peer direkt kommuniziert, und nicht über einen Mittler. Für jeden Endpunkt müssen eine IP-Adresse und Port angegeben werden.  Die maximale Anzahl von Endpunkten, die bereitgestellt werden kann, ist 10.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameRecord.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Enthält die serialisierten Daten, die dem <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Objekt zugeordnet sind.</param>
+        <param name="context">Enthält das Ziel für den serialisierten Datenstrom, der dem <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Objekt zugeordnet ist.</param>
+        <summary>Füllt ein Serialisierungsinformationsobjekt mit den Daten auf, die zum Serialisieren des <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerName">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerName PeerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.PeerName PeerName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerNameRecord.PeerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Net.PeerToPeer.PeerName" /> innerhalb dieser <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt. Eine Peername ist eine Zeichenfolge, die zum Identifizieren einer Peerressource verwendet.</summary>
+        <value>Die <see cref="P:System.Net.PeerToPeer.PeerNameRecord.PeerName" /> innerhalb dieser <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekt. Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameRecord.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Enthält die serialisierten Daten, die der <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Instanz zugeordnet sind.</param>
+        <param name="context">Enthält das Ziel für den serialisierten Datenstrom, der der <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Instanz zugeordnet ist.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und gibt die zum Serialisieren der <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Instanz erforderlichen Daten zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

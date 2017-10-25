@@ -1,0 +1,387 @@
+<Type Name="DefaultTraceListener" FullName="System.Diagnostics.DefaultTraceListener">
+  <TypeSignature Language="C#" Value="public class DefaultTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DefaultTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DefaultTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Standardmethoden für die Ausgabe und das Standardverhalten für die Ablaufverfolgung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse wird automatisch hinzugefügt, um die <xref:System.Diagnostics.Debug.Listeners%2A?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Sammlungen. Explizit Hinzufügen einer zweiten <xref:System.Diagnostics.DefaultTraceListener> Ursachen doppelte Nachrichten in das debuggerausgabefenster und doppelte Meldungsfelder für bestätigt.  
+  
+ Wird standardmäßig die <xref:System.Diagnostics.DefaultTraceListener.Write%2A> und <xref:System.Diagnostics.DefaultTraceListener.WriteLine%2A> Methoden auszugeben, die Nachricht an die Win32 `OutputDebugString` Funktion und die <xref:System.Diagnostics.Debugger.Log%2A?displayProperty=nameWithType> Methode. Informationen zu den `OutputDebugString` funktionieren, finden Sie in der Platform SDK oder in MSDN.  
+  
+ Die <xref:System.Diagnostics.DefaultTraceListener.Fail%2A> -Methode, in der Standardeinstellung zeigt ein Meldungsfeld, wenn die Anwendung in einem Benutzeroberflächenmodus ausgeführt wird; er auch ausgibt, die Nachricht mit <xref:System.Diagnostics.DefaultTraceListener.WriteLine%2A>.  
+  
+> [!NOTE]
+>  Die Anzeige des Meldungsfelds für <xref:System.Diagnostics.Debug.Assert%2A> und <xref:System.Diagnostics.Debug.Fail%2A> Methodenaufrufe hängt das Vorhandensein der <xref:System.Diagnostics.DefaultTraceListener>. Wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der <xref:System.Diagnostics.Trace.Listeners%2A> -Auflistung, das Meldungsfeld wird nicht angezeigt. Die <xref:System.Diagnostics.DefaultTraceListener> kann entfernt werden, indem die [ \<deaktivieren > Element](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), von der [ \<entfernen > Element](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), oder durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Sie müssen die Ablaufverfolgungs- oder Debuggen verwenden Sie einen Ablaufverfolgungslistener aktivieren. Die folgende Syntax ist compilerspezifisch. Wenn Sie den Compiler als c# oder Visual Basic verwenden, finden Sie in der Dokumentation für den Compiler.  
+  
+-   Fügen Sie zum Aktivieren des Debuggens in C# geschrieben, die `/d:DEBUG` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder fügen `#define DEBUG` an den Anfang der Datei. Fügen Sie in Visual Basic die `/d:DEBUG=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+-   Fügen Sie zum Aktivieren der Ablaufverfolgung in c# die `/d:TRACE` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder fügen `#define TRACE` an den Anfang der Datei. Fügen Sie in Visual Basic die `/d:TRACE=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+ Um einen Ablaufverfolgungslistener hinzufügen, bearbeiten Sie die Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie einen Listener hinzufügen und dessen Typ und Parameter festlegen, einen Listener zu entfernen oder deaktivieren die Listener, die zuvor von der Anwendung festgelegt. Die Konfigurationsdatei sollte ähnlich wie im folgenden Beispiel formatiert werden:  
+  
+```  
+<configuration>  
+<system.diagnostics>  
+  <trace autoflush="false" indentsize="4">  
+    <listeners>  
+      <remove name="Default" />  
+      <add name="myListener"  type="System.Diagnostics.TextWriterTraceListener"    initializeData="c:\myListener.log" />  
+    </listeners>  
+  </trace>  
+</system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel berechnet die binomial-Koeffizienten, die Werte in Wahrscheinlichkeits- und Statistiken verwendet werden. Dieses Beispiel verwendet eine <xref:System.Diagnostics.DefaultTraceListener> Ergebnisse verfolgt und protokolliert Fehler. Er erstellt ein neues <xref:System.Diagnostics.DefaultTraceListener>, hinzugefügt der <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Auflistung und legt die <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A> Eigenschaft in der Protokolldatei gespeichert, die in die Befehlszeilenargumente angegeben.  
+  
+ Wenn ein Fehler bei der Verarbeitung des Eingabeparameters gefunden wird oder wenn die `CalcBinomial` Funktion eine Ausnahme auslöst, die <xref:System.Diagnostics.DefaultTraceListener.Fail%2A> -Methode protokolliert und eine Fehlermeldung angezeigt. Wenn die <xref:System.Diagnostics.DefaultTraceListener.AssertUiEnabled%2A> Eigenschaft ist `false`, die Fehlermeldung wird auch in die Konsole geschrieben. Wenn das Ergebnis ist erfolgreich, berechnet der <xref:System.Diagnostics.DefaultTraceListener.Write%28System.String%29> und <xref:System.Diagnostics.DefaultTraceListener.WriteLine%28System.String%29> Methoden, um die Ergebnisse in die Protokolldatei geschrieben.  
+  
+ Die <xref:System.Diagnostics.DefaultTraceListener.Fail%2A>, <xref:System.Diagnostics.DefaultTraceListener.Write%2A>, und <xref:System.Diagnostics.DefaultTraceListener.WriteLine%2A> Methoden dazu führen, dass Ablaufverfolgungsinformationen nur geschrieben werden die <xref:System.Diagnostics.DefaultTraceListener>. Zum Schreiben von Ablaufverfolgungsinformationen an alle Listener in der <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Sammlung, Nutzung der <xref:System.Diagnostics.Trace.Fail%2A>, <xref:System.Diagnostics.Trace.Write%2A>, und <xref:System.Diagnostics.Trace.WriteLine%2A> Methoden die <xref:System.Diagnostics.Trace> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/CS/binomial.cs#11)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/VB/binomial.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Diese Klasse ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DefaultTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DefaultTraceListener" /> -Klasse mit "Default" als seine <see cref="P:System.Diagnostics.TraceListener.Name" /> Eigenschaftswert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel entfernt der <xref:System.Diagnostics.DefaultTraceListener> von der Anwendung aus bereitgestellt der <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Auflistung und erstellt dann ein neues <xref:System.Diagnostics.DefaultTraceListener> und fügt es der <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Auflistung.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/CS/binomial.cs#3)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/VB/binomial.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssertUiEnabled">
+      <MemberSignature Language="C#" Value="public bool AssertUiEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AssertUiEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DefaultTraceListener.AssertUiEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("AssertUiEnabled defaults to False; should follow Environment.UserInteractive.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Anwendung im Benutzeroberflächenmodus ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn Sie Benutzeroberflächen-Modus aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ruft eine Funktion aufgerufen, die <xref:System.Diagnostics.DefaultTraceListener.Fail%28System.String%2CSystem.String%29> Methode, um eine Fehlermeldung protokolliert, wenn die Funktion eine Ausnahme auslöst. Wenn die <xref:System.Diagnostics.DefaultTraceListener.AssertUiEnabled%2A> Eigenschaft ist `false`, die Methode wird auch die Fehlermeldung an die Konsole schreibt.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/CS/binomial.cs#8)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/VB/binomial.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public override void Fail (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Fail(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DefaultTraceListener.Fail(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung ausgeben oder angezeigt werden soll.</param>
+        <summary>Dient zum ausgeben oder zeigt eine Meldung und eine stapelüberwachung für eine Assertion, die immer fehlschlägt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig sendet diese Methode die `message` Parameter und eine stapelüberwachung, die in einem Meldungsfeld (wenn die Anwendung im Benutzeroberflächen-Modus ausgeführt wird) und die <xref:System.Diagnostics.DefaultTraceListener> Instanz.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird schreibt eine Fehlermeldung an eine <xref:System.Diagnostics.DefaultTraceListener> mithilfe der <xref:System.Diagnostics.DefaultTraceListener.Fail%28System.String%29> Methode. Die Methode schreibt die Nachricht auch an die Konsole, wenn eine neue Benutzeroberfläche nicht verfügbar ist.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/CS/binomial.cs#6)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/VB/binomial.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public override void Fail (string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Fail(string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DefaultTraceListener.Fail(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung ausgeben oder angezeigt werden soll.</param>
+        <param name="detailMessage">Die detaillierte Meldung ausgeben oder angezeigt werden soll.</param>
+        <summary>Dient zum ausgeben oder zeigt detaillierte Meldungen und eine stapelüberwachung für eine Assertion, die immer fehlschlägt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig diese Methode sendet die `message` Parameter, die `detailMessage` Parameter und eine stapelüberwachung, die in einem Meldungsfeld (wenn die Anwendung im Benutzeroberflächen-Modus ausgeführt wird) und die <xref:System.Diagnostics.DefaultTraceListener> Instanz.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft eine Funktion aufgerufen, die <xref:System.Diagnostics.DefaultTraceListener.Fail%28System.String%2CSystem.String%29> Methode, um eine detaillierte Fehlermeldung zu protokollieren, wenn die Funktion eine Ausnahme auslöst. Die Methode schreibt die Nachricht an die Konsole, wenn eine neue Benutzeroberfläche nicht verfügbar ist.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/CS/binomial.cs#8)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/VB/binomial.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogFileName">
+      <MemberSignature Language="C#" Value="public string LogFileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogFileName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DefaultTraceListener.LogFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen einer Protokolldatei zur Ablaufverfolgung schreiben oder zum Debuggen von Nachrichten an.</summary>
+        <value>Der Name einer Protokolldatei zur Ablaufverfolgung schreiben oder zum Debuggen von Nachrichten an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.Diagnostics.DefaultTraceListener>, hinzugefügt der <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Auflistung und legt die <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A> Eigenschaft in der Protokolldatei gespeichert, die in die Befehlszeilenargumente angegeben.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/CS/binomial.cs#4)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener/VB/binomial.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DefaultTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Nachricht zum Schreiben in <see langword="OutputDebugString" /> und <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)" />.</param>
+        <summary>Schreibt die Ausgabe in die <see langword="OutputDebugString" /> Funktion und die <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen über die Win32- `OutputDebugString` Debugfunktion finden Sie unter "OutputDebugString" in der Platform SDK oder in MSDN.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Ergebnis einer Funktion formatiert und verwendet die <xref:System.Diagnostics.DefaultTraceListener.Write%28System.String%29> -Methode, den ersten Teil der Nachricht zum Schreiben einer <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener.WriteLine#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener.WriteLine/CS/defaulttracelistener.cs#4)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener.WriteLine#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener.WriteLine/VB/defaulttracelistener.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DefaultTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Nachricht zum Schreiben in <see langword="OutputDebugString" /> und <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)" />.</param>
+        <summary>Schreibt die Ausgabe in die <see langword="OutputDebugString" /> Funktion und die <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)" /> -Methode, gefolgt von einem Wagenrücklauf und Zeilenvorschub (\r\n).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardzeilenabschlusszeichen ist ein Wagenrücklaufzeichen gefolgt von einem Zeilenvorschub (\r\n).  
+  
+ Informationen über die Win32- `OutputDebugString` Debugfunktion finden Sie im Platform SDK oder in MSDN.  
+  
+ Diese Methode legt die <xref:System.Diagnostics.TraceListener.NeedIndent%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Ergebnis einer Funktion formatiert und verwendet die <xref:System.Diagnostics.DefaultTraceListener.WriteLine%28System.String%29> Methode, um den letzten Teil der Nachricht zum Schreiben einer <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ [!code-csharp[System.Diagnostics.DefaultTraceListener.WriteLine#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener.WriteLine/CS/defaulttracelistener.cs#4)]
+ [!code-vb[System.Diagnostics.DefaultTraceListener.WriteLine#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DefaultTraceListener.WriteLine/VB/defaulttracelistener.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

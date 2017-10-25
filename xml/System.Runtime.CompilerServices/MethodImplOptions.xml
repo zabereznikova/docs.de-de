@@ -1,0 +1,272 @@
+<Type Name="MethodImplOptions" FullName="System.Runtime.CompilerServices.MethodImplOptions">
+  <TypeSignature Language="C#" Value="public enum MethodImplOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MethodImplOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.MethodImplOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Implementierungsdetails für eine Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird zusammen mit den <xref:System.Runtime.CompilerServices.MethodImplAttribute> Attribut.  
+  
+ Sie können angeben, dass mehrere <xref:System.Runtime.CompilerServices.MethodImplOptions> Werte mit dem bitweisen OR-Operator.  
+  
+> [!NOTE]
+>  Sperren für die Instanz oder die Art, wie bei den Synchronized-Flag wird für öffentliche Typen, nicht empfohlen, da der Code als Ihren eigenen Sperren für öffentliche Typen und Instanzen übernehmen können. Dadurch können Deadlocks oder andere Probleme bei der Synchronisierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AggressiveInlining">
+      <MemberSignature Language="C#" Value="AggressiveInlining" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions AggressiveInlining = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Methode sollte möglichst intern sein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardRef">
+      <MemberSignature Language="C#" Value="ForwardRef" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions ForwardRef = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.ForwardRef" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Methode wird deklariert, aber die Implementierung wird an anderer Stelle bereitgestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalCall">
+      <MemberSignature Language="C#" Value="InternalCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions InternalCall = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.InternalCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Aufruf ist intern, d.h. es wird eine Methode aufgerufen, die innerhalb der Common Language Runtime implementiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoInlining">
+      <MemberSignature Language="C#" Value="NoInlining" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions NoInlining = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.NoInlining" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Methode kann nicht intern sein. Inlining ist eine Optimierung, bei der der Aufruf einer Methode durch den Methodentext ersetzt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoOptimization">
+      <MemberSignature Language="C#" Value="NoOptimization" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions NoOptimization = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.NoOptimization" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Methode wird nicht optimiert, durch den Just-in-Time (JIT)-Compiler oder durch die Generierung von systemeigenem Code (finden Sie unter [Ngen.exe](~/docs/framework/tools/ngen-exe-native-image-generator.md)) beim Debuggen von Probleme beim Generieren von Code möglich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveSig">
+      <MemberSignature Language="C#" Value="PreserveSig" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions PreserveSig = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.PreserveSig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Signatur der Methode wird genau entsprechend der Deklaration exportiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="Synchronized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions Synchronized = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.Synchronized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Methode kann nur jeweils von einem einzigen Thread ausgeführt werden. Statische Methoden sperren den Typ, wohingegen Instanzmethoden die Instanz sperren. Nur ein einziger Thread kann in einer der Instanzfunktionen ausgeführt werden, und nur ein einziger Thread kann in einer der statischen Funktionen einer Klasse ausgeführt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmanaged">
+      <MemberSignature Language="C#" Value="Unmanaged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.MethodImplOptions Unmanaged = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplOptions.Unmanaged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Methode wird in nicht verwalteten Code implementiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

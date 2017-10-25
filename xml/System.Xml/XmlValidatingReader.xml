@@ -1,0 +1,3114 @@
+<Type Name="XmlValidatingReader" FullName="System.Xml.XmlValidatingReader">
+  <TypeSignature Language="C#" Value="public class XmlValidatingReader : System.Xml.XmlReader, System.Xml.IXmlLineInfo, System.Xml.IXmlNamespaceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlValidatingReader extends System.Xml.XmlReader implements class System.Xml.IXmlLineInfo, class System.Xml.IXmlNamespaceResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlValidatingReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlReader</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.IXmlLineInfo</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xml.IXmlNamespaceResolver</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use XmlReader created by XmlReader.Create() method using appropriate XmlReaderSettings instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Reader dar, der die Schemavalidierung für DTD (Dokumenttypdefinition), XDR (XML-Data Reduced)-Schemas und XSD (XML Schema Definition Language)-Schemas bereitstellt.  
+  
+ Diese Klasse ist veraltet. Ausgehend von .NET Framework 2.0 wird empfohlen, die <see cref="T:System.Xml.XmlReaderSettings" />-Klasse und die <see cref="Overload:System.Xml.XmlReader.Create" />-Methode zum Erstellen eines überprüfenden XML-Readers zu verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `XmlValidatingReader`implementiert die <xref:System.Xml.XmlReader> Klasse, und bietet Unterstützung für die datenüberprüfung. Verwenden der <xref:System.Xml.XmlValidatingReader.Schemas%2A> Eigenschaft so, dass den Reader die Validierung mithilfe von Schemadateien, die in zwischengespeichert werden ein <xref:System.Xml.Schema.XmlSchemaCollection>. Die <xref:System.Xml.XmlValidatingReader.ValidationType%2A> Eigenschaft gibt an, welche Art der Validierung der Reader durchgeführt werden soll. Festlegen der Eigenschaft auf ValidationType.None wird einen nicht überprüfender Reader erstellt.  
+  
+ <xref:System.Xml.XmlValidatingReader>Löst ein <xref:System.Xml.XmlException> auf XML-Analysefehler. Nachdem eine Ausnahme ausgelöst wird, ist der Zustand des Readers nicht vorhersagbar. Beispielsweise kann der angegebene Knotentyp der tatsächlichen Knotentyp des aktuellen Knotens abweichen. Verwenden der <xref:System.Xml.XmlValidatingReader.ReadState%2A> Eigenschaft zu überprüfen, ob ein Reader im Status "Fehler" ist.  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Diese Klasse verfügt über eine vererbungsanforderung. Volle Vertrauenswürdigkeit ist erforderlich, um die von erben <see langword="XmlValidatingReader" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlValidatingReader (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.#ctor(System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see langword="XmlReader" />, aus dem während der Überprüfung gelesen werden soll. Die aktuelle Implementierung unterstützt nur <see cref="T:System.Xml.XmlTextReader" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see langword="XmlValidatingReader" />-Klasse, die den vom angegebenen <see cref="T:System.Xml.XmlReader" /> zurückgegebenen Inhalt validiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Alle Knoten zurückgegeben, die aus der angegebenen `XmlReader` sind auch zurückgegeben, von diesem Reader überprüft, daher keine Verlust von Typinformationen im Prozess besteht. Neue Knoten, die nicht aus dem zugrunde liegenden Reader zurückgegeben können von diesem Reader (z. B. Standardattribute und die untergeordneten Elemente eines Entitätsverweises) hinzugefügt werden. Alle Eigenschaften für den angegebenen `XmlTextReader` gelten auch für diesen Reader überprüfen. Wenn der angegebenen Reader WhitespaceHandling.None festgelegt ist, ignoriert diese überprüfende Reader beispielsweise auch Leerzeichen.  
+  
+ Wenn externe Dokumenttypdefinitionen (DTDs) oder Schemas, für die Überprüfung erforderlich sind, die <xref:System.Xml.XmlValidatingReader.XmlResolver%2A> Eigenschaftensätze der <xref:System.Xml.XmlResolver> Objekt, das für die Auflösung externer Ressourcen verwendet.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel werden zwei Dokumente überprüft.  
+  
+ [!code-cpp[XmlValidatingReader.Cctor#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlValidatingReader.Cctor/CPP/valid_xsd2.cpp#1)]
+ [!code-csharp[XmlValidatingReader.Cctor#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlValidatingReader.Cctor/CS/valid_xsd2.cs#1)]
+ [!code-vb[XmlValidatingReader.Cctor#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlValidatingReader.Cctor/VB/valid_xsd2.vb#1)]  
+  
+ Im Beispiel werden die folgenden Eingabedateien verwendet:  
+  
+ `notValidXSD.xml`  
+  
+ [!code-xml[XmlValidatingReader.Cctor#2](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.Cctor/XML/notvalidxsd.xml#2)]  
+  
+ `books.xsd`  
+  
+ [!code-xml[XmlValidatingReader.Cctor#3](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.Cctor/XML/books.xsd#3)]  
+  
+ `inlineXSD.xml`  
+  
+ [!code-xml[XmlValidatingReader.Cctor#4](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.Cctor/XML/inlinexsd.xml#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Leser ist kein <see langword="XmlTextReader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlValidatingReader (System.IO.Stream xmlFragment, System.Xml.XmlNodeType fragType, System.Xml.XmlParserContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream xmlFragment, valuetype System.Xml.XmlNodeType fragType, class System.Xml.XmlParserContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.#ctor(System.IO.Stream,System.Xml.XmlNodeType,System.Xml.XmlParserContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlFragment" Type="System.IO.Stream" />
+        <Parameter Name="fragType" Type="System.Xml.XmlNodeType" />
+        <Parameter Name="context" Type="System.Xml.XmlParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="xmlFragment">Der Stream, der das zu analysierende XML-Fragment enthält.</param>
+        <param name="fragType">Der <see cref="T:System.Xml.XmlNodeType" /> des XML-Fragments. Damit wird der mögliche Inhalt des Fragments bestimmt (siehe Tabelle unten).</param>
+        <param name="context">Der <see cref="T:System.Xml.XmlParserContext" />, in dem das XML-Fragment analysiert werden soll. Dazu gehören die zu verwendende <see cref="T:System.Xml.XmlNameTable" />, die Codierung, der Namespacebereich, der aktuelle <see langword="xml:lang" />-Bereich und der aktuelle <see langword="xml:space" />-Bereich.</param>
+        <summary>Initialisiert eine neue Instanz der <see langword="XmlValidatingReader" />-Klasse mit den angegebenen Werten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Dieser Konstruktor analysiert die angegebene Zeichenfolge als XML-Fragment. Wenn das XML-Fragment ein Element oder Attribut ist, können Sie die Regeln auf Stammebene für wohlgeformte XML-Dokumente umgehen.  
+  
+ Die folgende Tabelle enthält die gültigen Werte für `fragType` und wie der Reader jeweils unterschiedlichen Knotentypen analysiert.  
+  
+|XmlNodeType|Es kann Fragment enthalten.|  
+|-----------------|--------------------------|  
+|Element|Jeder gültige Element-Inhalt (z. B. beliebige Kombination von Elementen, Kommentare, verarbeitungsanweisungen, Cdata, Text und Entitätsverweise).|  
+|Attribut|Der Wert eines Attributs (der Teil zwischen den Anführungszeichen).|  
+|Dokument|Der Inhalt eines vollständigen XML-Dokuments. Dies erzwingt die Regeln der Dokumentebene.|  
+  
+ Der Reader verwendet die folgenden Schritte, um zu bestimmen, die Codierung des Datenstroms:  
+  
+1.  Überprüft die <xref:System.Xml.XmlParserContext.Encoding%2A?displayProperty=nameWithType> Eigenschaft bestimmt die Codierung.  
+  
+2.  Wenn die `Encoding` Eigenschaft `null`, vom Reader überprüft eine Bytereihenfolge Marke am Anfang des Datenstroms.  
+  
+3.  Wenn die `Encoding` Eigenschaft ist `null`, und keine Bytereihenfolge-Marke gefunden wird, wird der Reader geht davon aus, der Datenstrom in UTF-8 codiert ist.  
+  
+ Wenn dieser Reader die Validierung mithilfe von Dokumenttypdefinition (DTD) (d. h. <xref:System.Xml.XmlValidatingReader.ValidationType%2A> auf ValidationType.DTD oder ValidationType.Auto festgelegt ist), wird die `XmlParserContext` im angegebenen Konstruktor muss alle erforderlichen DocumentType-Informationen bereitstellen.  
+  
+> [!NOTE]
+>  Es ist nicht möglich, ein Fragment zu überprüfen, indem Sie mithilfe einer DTD. Definitionsgemäß erfordert eine DTD ein ganzes Dokument für die Validierung geladen werden soll.  
+  
+ Verwenden, wenn dieser Reader die Validierung mithilfe von Schemas für XML-Data Reduced (XDR) oder XML Schema Definition Language (XSD), die <xref:System.Xml.XmlValidatingReader.Schemas%2A> Eigenschaft, um anzugeben der <xref:System.Xml.Schema.XmlSchemaCollection> , die Schemas enthält (d. h. die `XmlParserContext` müssen nicht angeben der DocumentType-Informationen).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="fragType" />ist keiner der in der folgenden Tabelle aufgelisteten Knotentypen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlValidatingReader (string xmlFragment, System.Xml.XmlNodeType fragType, System.Xml.XmlParserContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xmlFragment, valuetype System.Xml.XmlNodeType fragType, class System.Xml.XmlParserContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.#ctor(System.String,System.Xml.XmlNodeType,System.Xml.XmlParserContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlFragment" Type="System.String" />
+        <Parameter Name="fragType" Type="System.Xml.XmlNodeType" />
+        <Parameter Name="context" Type="System.Xml.XmlParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="xmlFragment">Die Zeichenfolge, die das zu analysierende XML-Fragment enthält.</param>
+        <param name="fragType">Der <see cref="T:System.Xml.XmlNodeType" /> des XML-Fragments. Damit wird auch der mögliche Inhalt der Fragmentzeichenfolge bestimmt (siehe Tabelle unten).</param>
+        <param name="context">Der <see cref="T:System.Xml.XmlParserContext" />, in dem das XML-Fragment analysiert werden soll. Dazu gehören die zu verwendende <see cref="T:System.Xml.NameTable" />, die Codierung, der Namespacebereich, der aktuelle xml:lang-Bereich und der aktuelle xml:space-Bereich.</param>
+        <summary>Initialisiert eine neue Instanz der <see langword="XmlValidatingReader" />-Klasse mit den angegebenen Werten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Dieser Konstruktor analysiert die angegebene Zeichenfolge als XML-Fragment. Wenn das XML-Fragment ein Element oder Attribut ist, können Sie die Regeln auf Stammebene für wohlgeformte XML-Dokumente umgehen. Dieser Konstruktor kann Zeichenfolgen, die vom zurückgegebenen behandeln <xref:System.Xml.XmlReader.ReadInnerXml%2A>.  
+  
+ Die folgende Tabelle enthält die gültigen Werte für `fragType` und wie der Reader jeweils unterschiedlichen Knotentypen analysiert.  
+  
+|XmlNodeType|Es kann Fragment enthalten.|  
+|-----------------|--------------------------|  
+|Element|Jeder gültige Element-Inhalt (z. B. beliebige Kombination von Elementen, Kommentare, verarbeitungsanweisungen, Cdata, Text und Entitätsverweise).|  
+|Attribut|Der Wert eines Attributs (der Teil zwischen den Anführungszeichen).|  
+|Dokument|Der Inhalt eines vollständigen XML-Dokuments. Dies erzwingt die Regeln der Dokumentebene.|  
+  
+ Wenn dieser Reader die Validierung mithilfe einer Dokumenttypdefinition (DTD) (d. h. <xref:System.Xml.XmlValidatingReader.ValidationType%2A> auf ValidationType.DTD oder ValidationType.Auto festgelegt ist), wird die `XmlParserContext` im angegebenen Konstruktor muss alle erforderlichen DocumentType-Informationen bereitstellen.  
+  
+> [!NOTE]
+>  Es ist nicht möglich, ein Fragment überprüfen mithilfe von DTD. Definitionsgemäß erfordert DTD ein ganzes Dokument für die Validierung geladen werden soll.  
+  
+ Verwenden, wenn dieser Reader die Validierung mithilfe von Schemas für XML-Data Reduced (XDR) oder XML Schema Definition Language (XSD), die <xref:System.Xml.XmlValidatingReader.Schemas%2A> -Eigenschaft an die <xref:System.Xml.Schema.XmlSchemaCollection> , die Schemas enthält (der `XmlParserContext` muss nicht der DocumentType angeben Informationen).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest ein XML-Fragment. Er verwendet ein `XmlParserContext` und seine <xref:System.Xml.XmlNamespaceManager> behandeln Namespace entsprechen.  
+  
+ [!code-csharp[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="fragType" />ist keiner der in der folgenden Tabelle aufgelisteten Knotentypen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeCount">
+      <MemberSignature Language="C#" Value="public override int AttributeCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AttributeCount" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.AttributeCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Attribute im aktuellen Knoten ab.</summary>
+        <value>Die Anzahl der Attribute im aktuellen Knoten. Hierzu zählen auch Standardattribute.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft ist relevant für `Element`, `DocumentType`, und `XmlDeclaration` nur Knoten. (Andere Knotentypen Attribute keine.)  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest alle Elemente im Stammknoten.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseURI">
+      <MemberSignature Language="C#" Value="public override string BaseURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.BaseURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basis-URI des aktuellen Knotens ab.</summary>
+        <value>Der Basis-URI des aktuellen Knotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Ein Netzwerk-XML-Dokument besteht aus Datensegmenten durch unter Verwendung verschiedener World Wide Web Consortium (W3C) standard aggregiert und enthält daher Knoten, die aus verschiedenen Quellen stammen. Document Type Definition (DTD) Entitäten sind ein Beispiel dafür, aber dies ist nicht auf DTDs beschränkt. Die Basis-URI gibt, woher diese Knoten stammen. Wenn Sie keinen Basis-URI für die zurückgegebenen Knoten vorhanden ist (z. B. sie ermittelt wurden aus einer Zeichenfolge im Arbeitsspeicher), "String.Empty" wird zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Datei analysiert, und zeigt den Basis-URI der einzelnen Knoten.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.BaseURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.BaseURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.BaseURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.BaseURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.BaseURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.BaseURI Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `uri.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.BaseURI Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.BaseURI Example/XML/source.xml#2)]  
+  
+ Die `style.xml` Datei enthält den XML-Text `<style>hardcover</style>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadBinaryContent">
+      <MemberSignature Language="C#" Value="public override bool CanReadBinaryContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReadBinaryContent" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.CanReadBinaryContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.Xml.XmlValidatingReader" /> die Methoden für das Lesen von Inhalt im Binärformat implementiert.</summary>
+        <value>
+          <see langword="true" />, wenn die Methoden für das Lesen von Inhalt im Binärformat implementiert werden, andernfalls <see langword="false" />. Die <see cref="T:System.Xml.XmlValidatingReader" />-Klasse gibt <see langword="true" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Xml.XmlReader> Referenzseite...  
+  
+ Inhalt im Binärformat zu lesen, erfolgen die <xref:System.Xml.XmlValidatingReader.ReadContentAsBase64%2A>, <xref:System.Xml.XmlValidatingReader.ReadContentAsBinHex%2A>, <xref:System.Xml.XmlValidatingReader.ReadElementContentAsBase64%2A>, und <xref:System.Xml.XmlValidatingReader.ReadElementContentAsBinHex%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResolveEntity">
+      <MemberSignature Language="C#" Value="public override bool CanResolveEntity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanResolveEntity" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.CanResolveEntity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieser Reader Entitäten analysieren und auflösen kann.</summary>
+        <value>
+          <see langword="true" />, wenn der Reader Entitäten analysieren und auflösen kann, andernfalls <see langword="false" />. <see langword="XmlValidatingReader" /> gibt immer <see langword="true" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ändert den <see cref="P:System.Xml.XmlReader.ReadState" /> in "Closed".</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Methode gibt auch alle beim Lesen der reservierten Ressourcen frei. Wenn dieser Reader, mithilfe erstellt wurde einer <xref:System.Xml.XmlTextReader>, ruft diese Methode auch `Close` für den zugrunde liegenden Reader. Wenn dieser Reader mit einem Stream erstellt wurde, ruft diese Methode auch `Close` auf den zugrunde liegenden Stream.  
+  
+ Wenn `Close` wurde bereits aufgerufen wird, wird keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public override int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tiefe des aktuellen Knotens im XML-Dokument ab.</summary>
+        <value>Die Tiefe des aktuellen Knotens im XML-Dokument.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jeder Knoten einschließlich der Tiefe, Zeilennummer und Zeilenposition.  
+  
+ [!code-cpp[IXmlLineInfo#1](~/samples/snippets/cpp/VS_Snippets_Data/IXmlLineInfo/CPP/lineinfo.cpp#1)]
+ [!code-csharp[IXmlLineInfo#1](~/samples/snippets/csharp/VS_Snippets_Data/IXmlLineInfo/CS/lineinfo.cs#1)]
+ [!code-vb[IXmlLineInfo#1](~/samples/snippets/visualbasic/VS_Snippets_Data/IXmlLineInfo/VB/lineinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Codierungsattribut für das Dokument ab.</summary>
+        <value>Der Codierungswert. Wenn kein Codierungsattribut vorhanden ist und keine Bytereihenfolgemarkierung vorliegt, wird dieser auf den Standardwert UTF-8 festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Wenn alle externen Verweise gelesen wird (z. B. Erweitern einer Entität in eine Datei für Document Type Definition (DTD) oder beim Lesen einer Schemadatei) wird die encoding-Eigenschaft auf der Codierungswert des externen Verweises festgelegt. Wenn diese Codierung in der externen Verweis nicht angegeben ist, und es ist keine Bytereihenfolge-Marke, standardmäßig in UTF-8.  
+  
+ Alle Codierungsstandards, die vom zugrunde liegenden Betriebssystem unterstützt werden unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityHandling">
+      <MemberSignature Language="C#" Value="public System.Xml.EntityHandling EntityHandling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.EntityHandling EntityHandling" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.EntityHandling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.EntityHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, wie der Reader Entitäten behandelt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Xml.EntityHandling" />-Werte. Wenn kein <see langword="EntityHandling" /> angegeben ist, wird dieses auf den Standardwert EntityHandling.ExpandEntities festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft kann geändert werden und wird wirksam, nach dem nächsten <xref:System.Xml.XmlValidatingReader.Read%2A> aufrufen.  
+  
+ Wenn `EntityHandling` festgelegt ist, um `ExpandCharEntities`, nur teilweise Attributwerte normalisiert werden. Der Reader normalisiert jeden einzelnen Textknoten unabhängig vom Inhalt des angrenzenden Entitätsverweisknoten.  
+  
+ Zur Veranschaulichung des Unterschieds zwischen der Entität berücksichtigen Modi die folgenden XML-Code:  
+  
+```  
+<!DOCTYPE doc [<!ENTITY num "123">]>  
+ <doc> &#65; &num; </doc>  
+```  
+  
+ Wenn `EntityHandling` festgelegt ist, um `ExpandEntities` der Elementknoten "Doc" enthält einen Textknoten mit dem erweiterten Entitätstext:  
+  
+|Tiefe|NodeType|Name|Wert|  
+|-----------|--------------|----------|-----------|  
+|1|Text||EINE 123|  
+  
+ Wenn `EntityHandling` auf festgelegt ist `ExpandCharEntites`, und <xref:System.Xml.XmlTextReader.WhitespaceHandling%2A> auf signifikante oder alle "," das "Dokument" festgelegt ist Element erweitert die Zeichenentität und gibt die allgemeine Entität als Knoten zurück:  
+  
+|Tiefe|NodeType|Name|Wert|  
+|-----------|--------------|----------|-----------|  
+|1|Text||A|  
+|1|EntityReference|num||  
+|1|SignificantWhitespace|||  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `ResolveEntity` -Methode zum Erweitern einer allgemeinen Entität.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.ResolveEntity Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.ResolveEntity Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.ResolveEntity Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `book1.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ResolveEntity Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Es wurde ein ungültiger Wert angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EOF">
+      <MemberSignature Language="C#" Value="public override bool EOF { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EOF" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.EOF" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich der Reader am Ende des Streams befindet.</summary>
+        <value>
+          <see langword="true" />, wenn der Reader am Ende des Streams positioniert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public override string GetAttribute (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAttribute(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.GetAttribute(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des Attributs. Der Index ist nullbasiert. (Das erste Attribut hat den Index 0.)</param>
+        <summary>Ruft den Wert des Attributs mit dem angegebenen Index ab.</summary>
+        <returns>Der Wert des angegebenen Attributs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verschiebt den Reader nicht.  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="i" /> Parameter ist kleiner als 0 oder größer als oder gleich <see cref="P:System.Xml.XmlValidatingReader.AttributeCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public override string GetAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der qualifizierte Name des Attributs.</param>
+        <summary>Ruft den Wert des Attributs mit dem angegebenen Namen ab.</summary>
+        <returns>Der Wert des angegebenen Attributs. Wenn das Attribut nicht gefunden wurde, wird <see langword="null" /> zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Methode verschiebt den Reader nicht.  
+  
+ Wenn der Reader positioniert ist, auf eine `DocumentType` Knoten, diese Methode kann verwendet werden, die öffentlichen und SYSTEM-Literale, z. B. Abrufen`reader.GetAttribute("PUBLIC")`  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Wert des Attributs ISBN-Nummer.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.GetAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.GetAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.GetAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.GetAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.GetAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.GetAttribute Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `attrs.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.GetAttribute Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.GetAttribute Example/XML/attrs.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public override string GetAttribute (string localName, string namespaceURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAttribute(string localName, string namespaceURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.GetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Der lokale Name des Attributs.</param>
+        <param name="namespaceURI">Der Namespace-URI dieses Attributs.</param>
+        <summary>Ruft den Wert des Attributs mit dem angegebenen lokalen Namen und Namespace-URI (Uniform Resource Identifier) ab.</summary>
+        <returns>Der Wert des angegebenen Attributs. Wenn das Attribut nicht gefunden wurde, wird <see langword="null" /> zurückgegeben. Diese Methode verschiebt den Reader nicht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Die folgende XML-Code enthält ein Attribut in einem bestimmten Namespace:  
+  
+```  
+<test xmlns:dt="urn:datatypes" dt:type="int"/>  
+```  
+  
+ Sie können Nachschlagen der `dt:type` Attribut mit einem Argument (Präfix und lokaler Name) oder zwei Argumente (lokaler Name und Namespace-URI):  
+  
+```  
+String dt = reader.GetAttribute("dt:type");  
+String dt2 = reader.GetAttribute("type","urn:datatypes");  
+```  
+  
+ Für die Suche nach der `xmlns:dt` -Attribut angegeben wird, verwenden Sie eine der folgenden Argumente:  
+  
+```  
+String dt3 = reader.GetAttribute("xmlns:dt");  
+String dt4 = reader.GetAttribute("dt",http://www.w3.org/2000/xmlns/);  
+```  
+  
+ Sie können diese Informationen auch abrufen, indem Sie mit der <xref:System.Xml.XmlValidatingReader.Prefix%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLineInfo">
+      <MemberSignature Language="C#" Value="public bool HasLineInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasLineInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.HasLineInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Klasse Zeileninformationen zurückgeben kann.</summary>
+        <returns>
+          <see langword="true" />, wenn die Klasse Zeileninformationen zurückgeben kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValue">
+      <MemberSignature Language="C#" Value="public override bool HasValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.HasValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Knoten einen anderen <see cref="P:System.Xml.XmlValidatingReader.Value" /> als String.Empty aufweisen darf.</summary>
+        <value>
+          <see langword="true" />, wenn der Knoten, auf dem der Reader derzeit positioniert ist, einen <see langword="Value" /> aufweisen darf, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ In der folgenden Tabelle sind Knotentypen aufgeführt, die einen zurückzugebenden Wert haben.  
+  
+|Knotentyp|Wert|  
+|---------------|-----------|  
+|`Attribute`|Der Wert des Attributs.|  
+|`CDATA`|Der Inhalt des CDATA-Abschnitts.|  
+|`Comment`|Der Inhalt des Kommentars.|  
+|`DocumentType`|Die interne Teilmenge.|  
+|`ProcessingInstruction`|Der gesamte Inhalt mit Ausnahme des Ziels.|  
+|`SignificantWhitespace`|Der Leerraum zwischen Markups bei einem Modell für gemischten Inhalt.|  
+|`Text`|Der Inhalt des Textknotens.|  
+|`Whitespace`|Der Leerraum zwischen Markups.|  
+|`XmlDeclaration`|Der Inhalt der Deklaration.|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel liest in XML-Datei mit verschiedenen Datentypen und zeigt die einzelnen Knoten.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.HasValue Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.HasValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.HasValue Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.HasValue Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.HasValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.HasValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public override bool IsDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Knoten ein Attribut ist, das aus dem in der DTD (Dokumenttypdefinition) oder im Schema definierten Standardwert generiert wurde.</summary>
+        <value>
+          <see langword="true" />, wenn der aktuelle Knoten ein Attribut ist, dessen Wert aus dem in der DTD oder dem Schema definierten Standardwert generiert wurde. <see langword="false" />, wenn der Attributwert explizit festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur für einen Attributknoten.  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt alle Attributknoten für das Stammelement.  
+  
+ [!code-cpp[XmlValidatingReader.IsDefault#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlValidatingReader.IsDefault/CPP/readdefattr.cpp#1)]
+ [!code-csharp[XmlValidatingReader.IsDefault#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlValidatingReader.IsDefault/CS/readdefattr.cs#1)]
+ [!code-vb[XmlValidatingReader.IsDefault#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlValidatingReader.IsDefault/VB/readdefattr.vb#1)]  
+  
+ Im Beispiel werden die folgenden Dateien als Eingabe verwendet.  
+  
+ `book4.xml`  
+  
+ [!code-xml[XmlValidatingReader.IsDefault#2](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.IsDefault/XML/book4.xml#2)]  
+  
+ `book.dtd`  
+  
+ [!code-xml[XmlValidatingReader.IsDefault#3](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.IsDefault/XML/book.dtd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmptyElement">
+      <MemberSignature Language="C#" Value="public override bool IsEmptyElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmptyElement" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.IsEmptyElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob der aktuelle Knoten ein leeres Element ist (z. B. <c> &lt;MyElement /&gt;</c>).</summary>
+        <value>
+          <see langword="true" />Wenn der aktuelle Knoten ein Element ist (<see cref="P:System.Xml.XmlValidatingReader.NodeType" /> gleich <see langword="XmlNodeType.Element" />) endet mit <c> / &gt; </c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft ermöglicht Ihnen, die Unterschiede zwischen den folgenden Elementen zu bestimmen:  
+  
+ `<item num="123"/>`(`IsEmptyElement` ist `true`).  
+  
+ `<item num="123">`(`IsEmptyElement` ist `false`, obwohl der Inhalt des Elements leer ist).  
+  
+ Ein entsprechendes `EndElement` Knoten ist nicht für leere Elemente generiert.  
+  
+ Wenn ein Element aufgrund-Schema-Validation Standardinhalt hinzugefügt wurden `IsEmptyElement` dennoch zurück `true`. Sie hat keinen Einfluss auf, und zwar unabhängig davon, ob das Element einen Standardwert verfügt. Das heißt, `IsEmptyElement` einfach meldet, und zwar unabhängig davon, ob das Element im Quelldokument Endtag hatte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Textinhalt des jeweiligen Elements.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.IsEmptyElement Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.IsEmptyElement Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.IsEmptyElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `elems.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.IsEmptyElement Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Zeilennummer ab.</summary>
+        <value>Die aktuelle Zeilennummer. Der Anfangswert für diese Eigenschaft ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft wird am häufigsten für die Fehlerberichterstattung verwendet, aber Sie kann jederzeit aufgerufen werden. Der Anfangswert für diese Eigenschaft ist 1. In Kombination mit <xref:System.Xml.XmlValidatingReader.LinePosition%2A>, ein Wert von 1,1 gibt den Anfang des Dokuments.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Zeilenposition ab.</summary>
+        <value>Die aktuelle Zeilenposition. Der Anfangswert für diese Eigenschaft ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft wird am häufigsten für die Fehlerberichterstattung verwendet, aber Sie kann jederzeit aufgerufen werden. Der Anfangswert für diese Eigenschaft ist `1`.  
+  
+ Die angegebenen Position ist das erste Zeichen des Texts im Markup.  
+  
+```  
+<root>  
+ abc<tag/>  
+</root>  
+```  
+  
+ In der ersten Zeile des vorherigen XML-Texts einer `LinePosition` von `2` entspricht dem Zeichen `r`; in der zweiten Zeile eine `LinePosition` von `5` entspricht dem Zeichen `t`; und in der dritten Zeile eine `LinePosition` von `3` entspricht dem Zeichen `r`.  
+  
+ In Kombination mit <xref:System.Xml.XmlValidatingReader.LineNumber%2A>, einen Wert von `1,1` gibt den Anfang des Dokuments.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalen Namen des aktuellen Knotens ab.</summary>
+        <value>Der Name des aktuellen Knotens ohne das Präfix. Beispielsweise <see langword="LocalName" /> ist <see langword="book" /> für das Element <c> &lt;bk: book&gt;</c>.  
+  
+ Bei unbenannten Knotentypen wie <see langword="Text" />, <see langword="Comment" /> usw. gibt diese Eigenschaft String.Empty zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest ein XML-Fragment.  
+  
+ [!code-csharp[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupNamespace">
+      <MemberSignature Language="C#" Value="public override string LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix, dessen Namespace-URI (Uniform Resource Identifier) aufgelöst werden soll. Um eine Übereinstimmung mit dem Standardnamespace zu erhalten, übergeben Sie eine leere Zeichenfolge.</param>
+        <summary>Löst ein Namespacepräfix im Gültigkeitsbereich des aktuellen Elements auf.</summary>
+        <returns>Der Namespace-URI, dem das Präfix zugeordnet ist, oder <see langword="null" />, wenn kein entsprechendes Präfix gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Xml.XmlReader> Referenzseite...  
+  
+ In der folgenden XML-Zeichenfolge, wenn der Reader positioniert ist, auf die `href` Attribut, das Präfix `a` durch den Aufruf von `reader.LookupNamespace("a", true)`. Die zurückgegebene Zeichenfolge ist `urn:456`.  
+  
+```  
+<root xmlns:a="urn:456">  
+ <item>  
+ <ref href="a:b"/>  
+ </item>  
+</root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToAttribute">
+      <MemberSignature Language="C#" Value="public override void MoveToAttribute (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MoveToAttribute(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.MoveToAttribute(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des Attributs.</param>
+        <summary>Wechselt zum Attribut mit dem angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest alle Elemente im Stammknoten.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="i" /> Parameter ist kleiner als 0 oder größer als oder gleich <see cref="P:System.Xml.XmlReader.AttributeCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.MoveToAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der qualifizierte Name des Attributs.</param>
+        <summary>Wechselt zum Attribut mit dem angegebenen Namen.</summary>
+        <returns>
+          <see langword="true" />, wenn das Attribut gefunden wurde, andernfalls <see langword="false" />. Bei <see langword="false" /> ändert sich die Position des Readers nicht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Nach dem Aufrufen dieser Methode die <xref:System.Xml.XmlValidatingReader.Name%2A>, <xref:System.Xml.XmlValidatingReader.NamespaceURI%2A>, und <xref:System.Xml.XmlValidatingReader.Prefix%2A> entsprechen Eigenschaften die Eigenschaften dieses Attributs.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein Attribut mit Text und Entitätsverweisknoten gelesen.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.MoveToAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.MoveToAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.MoveToAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToAttribute (string localName, string namespaceURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToAttribute(string localName, string namespaceURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.MoveToAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Der lokale Name des Attributs.</param>
+        <param name="namespaceURI">Der Namespace-URI dieses Attributs.</param>
+        <summary>Wechselt zu dem Attribut mit dem angegebenen lokalen Namen und Namespace-URI (Uniform Resource Identifier).</summary>
+        <returns>
+          <see langword="true" />, wenn das Attribut gefunden wurde, andernfalls <see langword="false" />. Bei <see langword="false" /> ändert sich die Position des Readers nicht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Nach dem Aufrufen dieser Methode die <xref:System.Xml.XmlValidatingReader.Name%2A>, <xref:System.Xml.XmlValidatingReader.NamespaceURI%2A>, und <xref:System.Xml.XmlValidatingReader.Prefix%2A> entsprechen Eigenschaften die Eigenschaften dieses Attributs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToElement">
+      <MemberSignature Language="C#" Value="public override bool MoveToElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.MoveToElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wechselt zu dem Element, das den aktuellen Attributknoten enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn der Reader auf einem Attribut positioniert ist (der Reader wechselt zu dem Element, das das Attribut besitzt); <see langword="false" />, wenn der Reader nicht auf einem Attribut positioniert ist (die Position des Readers bleibt unverändert).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Verwenden Sie diese Methode, um auf ein Element zurückzugeben, nach dessen Attribute das navigieren. Diese Methode verschiebt den Reader auf einen der folgenden Knotentypen: `Element`, `DocumentType`, oder `XmlDeclaration`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest alle Elemente im Stammknoten.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.AttributeCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.AttributeCount Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToFirstAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToFirstAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToFirstAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.MoveToFirstAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wechselt zum ersten Attribut.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Attribut vorhanden ist (der Reader wechselt zum ersten Attribut), andernfalls <see langword="false" /> (die Position des Readers bleibt unverändert).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest ein XML-Fragment.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.MoveToFirstAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToFirstAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.MoveToFirstAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToFirstAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.MoveToFirstAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToFirstAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToNextAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToNextAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToNextAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.MoveToNextAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wechselt zum nächsten Attribut.</summary>
+        <returns>
+          <see langword="true" />, wenn ein nächstes Attribut vorhanden ist; <see langword="false" />, wenn keine weiteren Attribute vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Wenn der aktuelle Knoten ein Elementknoten ist, entspricht diese Methode <xref:System.Xml.XmlValidatingReader.MoveToFirstAttribute%2A>. Wenn `MoveToNextAttribute` gibt `true`, der Reader wechselt zum nächsten Attribut; andernfalls wird die Position des Readers nicht geändert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest ein XML-Fragment.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.MoveToFirstAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToFirstAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.MoveToFirstAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToFirstAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.MoveToFirstAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToFirstAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den gekennzeichneten Namen des aktuellen Knotens ab.</summary>
+        <value>Der gekennzeichnete Name des aktuellen Knotens. Beispielsweise <see langword="Name" /> ist <see langword="bk:book" /> für das Element <c> &lt;bk: book&gt;</c>.  
+  
+ Der zurückgegebene Name hängt vom <see cref="P:System.Xml.XmlValidatingReader.NodeType" /> des Knotens ab. Die folgenden Knotentypen geben die jeweils aufgeführten Werte zurück. Alle anderen Knotentypen geben eine leere Zeichenfolge zurück.  
+  
+ <list type="table"><listheader><term>Knotentyp  
+  
+ </term><description>Name  
+  
+ </description></listheader><item><term><see langword="Attribute" /></term><description>Der Name des Attributs.  
+  
+ </description></item><item><term><see langword="DocumentType" /></term><description>Der Name des Dokumenttyps.  
+  
+ </description></item><item><term><see langword="Element" /></term><description>Der Tagname.  
+  
+ </description></item><item><term><see langword="EntityReference" /></term><description>Der Name der Entität, auf die verwiesen wird.  
+  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description>Das Ziel der verarbeitungsanweisung.  
+  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description>Das Zeichenfolgenliteral <see langword="xml" />.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest eine XML-Datei und zeigt die einzelnen Knoten.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `items.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespaces">
+      <MemberSignature Language="C#" Value="public bool Namespaces { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Namespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Namespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Namespaces unterstützt werden, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn Namespaces unterstützt werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceURI">
+      <MemberSignature Language="C#" Value="public override string NamespaceURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.NamespaceURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace-URI (Uniform Resource Identifier, entsprechend der Definition in der Namespacespezifikation des W3C, World Wide Web Consortium) des Knotens ab, auf dem der Reader positioniert ist.</summary>
+        <value>Der Namespace-URI des aktuellen Knotens, andernfalls eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist relevant für `Element` und `Attribute` nur Knoten.  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest ein XML-Fragment.  
+  
+ [!code-csharp[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTable">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNameTable NameTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNameTable NameTable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.NameTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNameTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.XmlNameTable" /> ab, die dieser Implementierung zugeordnet ist.</summary>
+        <value>
+          <see langword="XmlNameTable" />, die das Abrufen der atomisierten Version einer Zeichenfolge innerhalb des Knotens erlaubt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Alle Namen von Knoten und Attributnamen zurückgegebenen aus <xref:System.Xml.XmlValidatingReader> atomisiert werden, mithilfe der `NameTable`. Bei Rückgabe der gleichnamigen mehrmals (z. B. `Customer`), die gleiche `String` Objekt wird für diesen Namen zurückgegeben werden. Dadurch möglich, dass Sie effizientem Code schreiben, Objektvergleiche an diesen Zeichenfolgen statt teure Zeichenfolgenvergleiche.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+        <value>Einer der <see cref="T:System.Xml.XmlNodeType" />-Werte, der den Typ des aktuellen Knotens darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft gibt nie die folgenden `XmlNodeType` Typen: `Document`, `DocumentFragment`, `Entity`, oder `Notation`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest eine XML-Datei und zeigt die einzelnen Knoten.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `items.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public override string Prefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dem aktuellen Knoten zugeordnete Namespacepräfix ab.</summary>
+        <value>Das dem aktuellen Knoten zugeordnete Namespacepräfix.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel liest ein XML-Fragment.  
+  
+ [!code-csharp[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlParserContext.XmlParserContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlParserContext.XmlParserContext Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuoteChar">
+      <MemberSignature Language="C#" Value="public override char QuoteChar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char QuoteChar" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.QuoteChar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Anführungszeichen ab, mit dem der Wert eines Attributknotens eingeschlossen wird.</summary>
+        <value>Das Anführungszeichen (" oder '), mit dem der Wert eines Attributknotens eingeschlossen ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur für einen Attributknoten.  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest den nächsten Knoten aus dem Stream.</summary>
+        <returns>
+          <see langword="true" />, wenn der nächste Knoten erfolgreich gelesen wurde, <see langword="false" />, wenn keine weiteren zu lesenden Knoten vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Wenn ein Leser zuerst erstellt und initialisiert wird, sind keine Informationen verfügbar. Rufen Sie `Read` auf den ersten Knoten lesen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel liest eine XML-Datei, und jeder Knoten wird angezeigt.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `items.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAttributeValue">
+      <MemberSignature Language="C#" Value="public override bool ReadAttributeValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ReadAttributeValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ReadAttributeValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst den Attributwert in einen oder mehrere <see langword="Text" />-, <see langword="EntityReference" />- oder <see langword="EndEntity" />-Knoten auf.</summary>
+        <returns>
+          <see langword="true" />, wenn zurückzugebende Knoten vorhanden sind.  
+  
+ <see langword="false" />, wenn der Reader beim ersten Aufruf nicht auf einem Attributknoten positioniert ist oder alle Attributwerte gelesen wurden.  
+  
+ Ein leeres Attribut, z. B. <c>Verschiedenes = ""</c>, gibt <see langword="true" /> mit einem einzelnen Knoten mit dem Wert String.Empty zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Verwenden Sie diese Methode nach dem Aufruf <xref:System.Xml.XmlValidatingReader.MoveToAttribute%2A> den Text oder eine Entität zu lesen, aus denen der Attributwert besteht. Die <xref:System.Xml.XmlReader.Depth%2A> der Attributwertknoten ist eins plus der Tiefe des Attributknotens. Die `Depth` inkrementiert und dekrementiert Einerschritten Einzelschritts in und aus allgemeine Entitätsverweise.  
+  
+ Nehmen wir beispielsweise an, dass Sie die folgenden XML-Code verfügen:`<test name="a &b; c"/>`  
+  
+ in denen die Entität `b` ist in der Dokumenttypdefinition (DTD) wie folgt definiert:`<!ENTITY b "123">`  
+  
+ Wenn <xref:System.Xml.XmlValidatingReader.EntityHandling%2A> festgelegt ist, um `ExpandCharEntities`, der folgende C#-Code gibt den Wert des Attributs als zwei Textknoten und einen Entitätsverweisknoten zurück:  
+  
+```  
+reader.MoveToAttribute("name");  
+  while (reader.ReadAttributeValue())  
+  {  
+  if (reader.NodeType == XmlNodeType.Text)  
+  {  
+  // at this point reader.Value == "a " or " c"  
+  }  
+  else if (reader.NodeType == XmlNodeType.EntityReference)  
+  {  
+  // at this point reader.Name == "b"  
+  reader.ResolveEntity();  
+  while (reader.ReadAttributeValue() &&  
+  reader.NodeType != XmlNodeType.EndEntity)  
+  {  
+  // reader.Value == "123"  
+  }  
+  }  
+    }  
+```  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein Attribut mit Text und Entitätsverweisknoten gelesen.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.MoveToAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.MoveToAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.MoveToAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.MoveToAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadContentAsBase64">
+      <MemberSignature Language="C#" Value="public override int ReadContentAsBase64 (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadContentAsBase64(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ReadContentAsBase64(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den der resultierende Text kopiert werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="index">Der Offset im Puffer, an dem mit dem Kopieren des Ergebnisses begonnen werden soll.</param>
+        <param name="count">Die maximale Anzahl von Bytes, die in den Puffer kopiert werden sollen. Diese Methode gibt die tatsächliche Anzahl von kopierten Bytes zurück.</param>
+        <summary>Liest den Inhalt und gibt die Base64-decodierten binären Bytes zurück.</summary>
+        <returns>Die Anzahl der in den Puffer geschriebenen Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Xml.XmlReader> Referenzseite...  
+  
+ Diese Methode gibt den Inhalt, decodiert den Base64-Inhalt und gibt die decodierten Binärbytes zurück (z. B. für eine Inline mit Base64 codiert GIF-Bild) in den Puffer. Diese Methode kann nacheinander aufgerufen werden, um umfangreiche Streams mit eingebettetem Text zu lesen. Weitere Informationen finden Sie unter RFC 1521, "MIME (Multipurpose Internet Mail Extensions) Teil einer: Mechanismen zum angeben und beschreibt das Format of Internet Message Bodies". Sie erhalten RFCs von der Request for Comments-Website unter http://www.rfc-editor.org.  
+  
+> [!NOTE]
+>  Greifen Sie keines der Eigenschaften der datenreaderrolle zwischen den Aufrufen der <xref:System.Xml.XmlValidatingReader.ReadContentAsBase64%2A> Methode, bis die Methode den Wert 0 zurückgibt.  
+  
+ Diese Methode hat das folgende Verhalten:  
+  
+-   <xref:System.Xml.XmlValidatingReader.ReadContentAsBase64%2A>Gibt den Wert 0 zurück, wenn sie das Ende des Datenstroms erreicht hat, auf dem Sie ausgeführt wurde. Der Reader auf dem ersten nicht-Inhalt Knoten positioniert.  
+  
+-   Wenn Sie weniger anfordern oder die genaue Anzahl an, der als in den Stream, der Reader bleiben Bytes in seiner derzeitigen Position bleibt.  
+  
+-   <xref:System.Xml.XmlValidatingReader.ReadContentAsBase64%2A>wird auf die folgenden Typen von XML-Knoten nicht unterstützt: Element, XmlDeclaration, None, Document, DocumentType, Notation, Entity und DocumentFragment.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="buffer" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Xml.XmlValidatingReader.ReadContentAsBase64(System.Byte[],System.Int32,System.Int32)" />wird auf dem aktuellen Knoten nicht unterstützt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Index in den Puffer oder Index + Count ist größer als die Größe des reservierten Puffers.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadContentAsBinHex">
+      <MemberSignature Language="C#" Value="public override int ReadContentAsBinHex (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadContentAsBinHex(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ReadContentAsBinHex(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den der resultierende Text kopiert werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="index">Der Offset im Puffer, an dem mit dem Kopieren des Ergebnisses begonnen werden soll.</param>
+        <param name="count">Die maximale Anzahl von Bytes, die in den Puffer kopiert werden sollen. Diese Methode gibt die tatsächliche Anzahl von kopierten Bytes zurück.</param>
+        <summary>Liest den Inhalt und gibt die BinHex-decodierten binären Bytes zurück.</summary>
+        <returns>Die Anzahl der in den Puffer geschriebenen Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Xml.XmlReader> Referenzseite...  
+  
+ Diese Methode gibt den Inhalt, decodiert den BinHex-Inhalt und gibt die decodierten Binärbytes zurück (beispielsweise eine Inline mit BinHex codiertes GIF-Bild) in den Puffer. Diese Methode kann nacheinander aufgerufen werden, um umfangreiche Streams mit eingebettetem Text zu lesen.  
+  
+> [!NOTE]
+>  Greifen Sie keines der Eigenschaften der datenreaderrolle zwischen den Aufrufen der <xref:System.Xml.XmlValidatingReader.ReadContentAsBinHex%2A> Methode, bis die Methode den Wert 0 zurückgibt.  
+  
+ Diese Methode hat das folgende Verhalten:  
+  
+-   <xref:System.Xml.XmlValidatingReader.ReadContentAsBinHex%2A>Gibt den Wert 0 zurück, wenn sie das Ende des Datenstroms erreicht hat, auf dem Sie ausgeführt wurde. Der Reader auf dem ersten nicht-Inhalt Knoten positioniert.  
+  
+-   Wenn Sie weniger anfordern oder die genaue Anzahl an, der als in den Stream, der Reader bleiben Bytes in seiner derzeitigen Position bleibt.  
+  
+-   <xref:System.Xml.XmlValidatingReader.ReadContentAsBinHex%2A>wird auf die folgenden Typen von XML-Knoten nicht unterstützt: Element, XmlDeclaration, None, Document, DocumentType, Notation, Entity und DocumentFragment.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="buffer" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Xml.XmlValidatingReader.ReadContentAsBinHex(System.Byte[],System.Int32,System.Int32)" />wird auf dem aktuellen Knoten nicht unterstützt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Index in den Puffer oder Index + Count ist größer als die Größe des reservierten Puffers.</exception>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Xml.XmlValidatingReader" /> Implementierung dieser Methode nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadElementContentAsBase64">
+      <MemberSignature Language="C#" Value="public override int ReadElementContentAsBase64 (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadElementContentAsBase64(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ReadElementContentAsBase64(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den der resultierende Text kopiert werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="index">Der Offset im Puffer, an dem mit dem Kopieren des Ergebnisses begonnen werden soll.</param>
+        <param name="count">Die maximale Anzahl von Bytes, die in den Puffer kopiert werden sollen. Diese Methode gibt die tatsächliche Anzahl von kopierten Bytes zurück.</param>
+        <summary>Liest das Element und decodiert den Base64-Inhalt.</summary>
+        <returns>Die Anzahl der in den Puffer geschriebenen Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Methode liest den Elementinhalt, decodiert ihn mithilfe der Base64-Codierung und gibt die decodierten Binärbytes zurück (z. B. für eine Inline mit Base64 codiert GIF-Bild) in den Puffer. Weitere Informationen finden Sie unter RFC 1521, "MIME (Multipurpose Internet Mail Extensions) Teil einer: Mechanismen zum angeben und beschreibt das Format of Internet Message Bodies". Sie erhalten RFCs von der Request for Comments-Website unter http://www.rfc-editor.org.  
+  
+ Diese Methode kann nur Elemente mit einfachem Inhalt lesen. Das Element kann es sich um Text, Leerraum, signifikanter Leerraum, CDATA-Abschnitten, Kommentare und verarbeitungsanweisungen enthalten. Sie können auch Entitätsverweise enthalten, die automatisch erweitert werden. Das Element keine untergeordneten Elemente.  
+  
+ Diese Methode ist vergleichbar mit der <xref:System.Xml.XmlValidatingReader.ReadContentAsBase64%2A> Methode, aber sie können nur für Elementknotentypen aufgerufen werden.  
+  
+ Wenn die `count` Wert ist höher als die Anzahl der Bytes im Dokument oder gleich der Anzahl der Bytes im Dokument ist die <xref:System.Xml.XmlValidatingReader> liest die restlichen Bytes im Dokument und gibt die Anzahl der gelesenen Bytes zurück. Das nächste <xref:System.Xml.XmlValidatingReader> Methodenaufruf gibt 0 zurück, und verschiebt den Reader auf den Knoten hinter dem <xref:System.Xml.XmlNodeType.EndElement>.  
+  
+ Beim Aufrufen <xref:System.Xml.XmlValidatingReader.Read%2A> vor allen des Elementinhalts verbraucht ist, kann der Reader so, als ob der erste Inhalt genutzt wurde und dann die <xref:System.Xml.XmlValidatingReader.Read%2A> -Methode wurde aufgerufen. Dies bedeutet, dass der Reader wird der gesamte Text lesen, bis das EndElement gefunden wird. Es wird dann lesen den Knoten am Endtag, lesen den nächsten Knoten und positionieren Sie selbst auf den nächsten nachfolgenden Knoten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="buffer" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der aktuelle Knoten ist keinem Elementknoten.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Index in den Puffer oder Index + Count ist größer als die Größe des reservierten Puffers.</exception>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Xml.XmlValidatingReader" /> Implementierung dieser Methode nicht unterstützt.</exception>
+        <exception cref="T:System.Xml.XmlException">Das Element enthält gemischten Inhalt.</exception>
+        <exception cref="T:System.FormatException">Der Inhalt kann nicht in den angeforderten Typ konvertiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadElementContentAsBinHex">
+      <MemberSignature Language="C#" Value="public override int ReadElementContentAsBinHex (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadElementContentAsBinHex(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ReadElementContentAsBinHex(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den der resultierende Text kopiert werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="index">Der Offset im Puffer, an dem mit dem Kopieren des Ergebnisses begonnen werden soll.</param>
+        <param name="count">Die maximale Anzahl von Bytes, die in den Puffer kopiert werden sollen. Diese Methode gibt die tatsächliche Anzahl von kopierten Bytes zurück.</param>
+        <summary>Liest das Element und decodiert den BinHex-Inhalt.</summary>
+        <returns>Die Anzahl der in den Puffer geschriebenen Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Methode liest den Elementinhalt, decodiert Sie ihn mit BinHex-Codierung und gibt die decodierten Binärbytes zurück (beispielsweise eine Inline mit BinHex codiertes GIF-Bild) in den Puffer.  
+  
+ Diese Methode kann nur Elemente mit einfachem Inhalt lesen. Das Element kann es sich um Text, Leerraum, signifikanter Leerraum, CDATA-Abschnitten, Kommentare und verarbeitungsanweisungen enthalten. Sie können auch Entitätsverweise enthalten, die automatisch erweitert werden. Das Element keine untergeordneten Elemente.  
+  
+ Diese Methode ist vergleichbar mit der <xref:System.Xml.XmlValidatingReader.ReadContentAsBinHex%2A> Methode, aber sie können nur für Elementknotentypen aufgerufen werden.  
+  
+ Wenn die `count` Wert ist höher als die Anzahl der Bytes im Dokument oder gleich der Anzahl der Bytes im Dokument ist die <xref:System.Xml.XmlValidatingReader> liest die restlichen Bytes im Dokument und gibt die Anzahl der gelesenen Bytes zurück. Das nächste <xref:System.Xml.XmlValidatingReader> Methodenaufruf gibt 0 zurück, und verschiebt den Reader auf den Knoten hinter dem <xref:System.Xml.XmlNodeType.EndElement>.  
+  
+ Beim Aufrufen <xref:System.Xml.XmlValidatingReader.Read%2A> vor allen des Elementinhalts verbraucht ist, kann der Reader so, als ob der erste Inhalt genutzt wurde und dann die <xref:System.Xml.XmlValidatingReader.Read%2A> -Methode wurde aufgerufen. Dies bedeutet, dass der Reader wird der gesamte Text lesen, bis das EndElement gefunden wird. Es wird dann lesen den Knoten am Endtag, lesen den nächsten Knoten und positionieren Sie selbst auf den nächsten nachfolgenden Knoten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="buffer" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der aktuelle Knoten ist keinem Elementknoten.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Index in den Puffer oder Index + Count ist größer als die Größe des reservierten Puffers.</exception>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Xml.XmlValidatingReader" /> Implementierung dieser Methode nicht unterstützt.</exception>
+        <exception cref="T:System.Xml.XmlException">Das Element enthält gemischten Inhalt.</exception>
+        <exception cref="T:System.FormatException">Der Inhalt kann nicht in den angeforderten Typ konvertiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reader">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlReader Reader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlReader Reader" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Reader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Xml.XmlReader" /> ab, mit dem dieser <see langword="XmlValidatingReader" /> erstellt wird.</summary>
+        <value>Der im Konstruktor angegebene <see langword="XmlReader" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft ermöglicht dem Benutzer den Zugriff auf Eigenschaften, die spezifisch für den bereitgestellten Reader. Es gibt einen typisierten `XmlReader`. Der Benutzer sollte vor der Konvertierung Abfragen.  
+  
+ Ändern des Status von den Reader (z. B. aufrufende eine read-Methode), kann dies zu unvorhersehbaren Ergebnissen führen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadState">
+      <MemberSignature Language="C#" Value="public override System.Xml.ReadState ReadState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.ReadState ReadState" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.ReadState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ReadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand des Readers ab.</summary>
+        <value>Einer der <see cref="T:System.Xml.ReadState" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadString">
+      <MemberSignature Language="C#" Value="public override string ReadString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ReadString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ReadString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest den Inhalt eines Element- oder Textknotens als Zeichenfolge.</summary>
+        <returns>Der Inhalt des Elementknotens oder Textknotens. Dies kann eine leere Zeichenfolge sein, wenn der Reader auf einem anderen Knotentyp als einem Element- oder Textknoten positioniert ist oder wenn im aktuellen Kontext kein weiterer Textinhalt zurückgegeben werden kann.  
+  
+ <block subset="none" type="note"><para>  
+ Der Textknoten kann entweder ein Elementknoten oder ein Attributtextknoten sein.  
+  
+</para></block></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Wenn auf einem Element positioniert `ReadString` Text, signifikanter Leerraum, Leerraum und CDATA-Abschnittsknotentypen verkettet und gibt die verketteten Daten wie der Inhalt des Elements zurück. Der Reader wird angehalten, wenn Markup erkannt wird, einschließlich der Kommentare und verarbeitungsanweisungen. Dies könnte in einem Modell mit gemischtem Inhalt vorkommen oder wenn das Endtag eines Elements gelesen wird.  
+  
+ Wenn auf einen Textknoten positioniert `ReadString` führt die gleiche Verkettung aus dem Textknoten bis zum Endtag Elements. Wenn der Reader auf einem Attributtextknoten positioniert ist, verfügt `ReadString` über dieselben Funktionen wie bei einer Positionierung des Readers auf dem Starttag eines Elements. Alle verketteten Elementtextknoten werden zurückgegeben.  
+  
+ Die <xref:System.Xml.XmlValidatingReader.EntityHandling%2A> Eigenschaft bestimmt, wie `ReadString` funktioniert wie folgt:  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|ExpandEntities|Gibt erweiterte Zeichenentitäten und allgemeine Entitäten. Dies ist die Standardeinstellung.|  
+|ExpandCharEntities|Gibt den Textinhalt bis zur, aber nicht einschließlich einen allgemeinen Entitätsverweis zurück. Dies bedeutet, dass eine allgemeine Entität ReadString angehalten wird. Rufen Sie `Read` zum Überspringen des Entitätsverweises.|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Textinhalt der einzelnen Elemente an.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.IsEmptyElement Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.IsEmptyElement Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.IsEmptyElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `elems.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.IsEmptyElement Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.IsEmptyElement Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTypedValue">
+      <MemberSignature Language="C#" Value="public object ReadTypedValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ReadTypedValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ReadTypedValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Typ der Common Language Runtime für den angegebenen XSD-Typ (XML Schema Definition) ab.</summary>
+        <returns>Der Typ der Common Language Runtime für den angegebenen XSD (XML Schema Definition)-Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Angenommen, der Schematyp definiert ist, als `xsd:int`, den Laufzeittyp `int32` wird für das Objekt zurückgegeben. Dies kann mit getestet werden die <xref:System.Object.GetType%2A> -Methode und Umwandlung entsprechend. Die <xref:System.Xml.XmlValidatingReader.ReadTypedValue%2A> Methode gibt immer einen Typ, der von abgeleitet ist die <xref:System.Object> Klasse. Wird niemals zurückgegeben der <xref:System.Object> Typ.  
+  
+ Wenn der Reader auf einem Attribut positioniert ist, wird diese Methode gibt das typisierte Common Language Runtime-Objekt zurück, aber ändert die Position des Readers nicht. Wenn der Reader auf einem Element positioniert ist `ReadTypedValue` liest alle CDATA, Text, Leerraum, signifikanter Leerraum und Kommentarknoten, gibt das typisierte Objekt von Common Language Runtime und den Reader im Endtag positioniert. Alle Typen, die keine direkte Zuordnung, z. B. haben `NMTOKENS`, werden als Zeichenfolgen zurückgegeben.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Xml.XmlValidatingReader.ValidationType%2A> vorsieht auf ValidationType.None, wird keine Datentypinformationen aus Schemas oder Dokumenttypdefinitionen (DTDs) bereitgestellt.  
+  
+> [!CAUTION]
+>  Nach dem Aufruf <xref:System.Xml.XmlValidatingReader.Close%2A>, `ReadTypedValue` zurück `null`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Typinformationen für jedes Element im XML-Dokument.  
+  
+ [!code-cpp[XmlValidatingReader.SchemaType#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlValidatingReader.SchemaType/CPP/schematype.cpp#1)]
+ [!code-csharp[XmlValidatingReader.SchemaType#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlValidatingReader.SchemaType/CS/schematype.cs#1)]
+ [!code-vb[XmlValidatingReader.SchemaType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlValidatingReader.SchemaType/VB/schematype.vb#1)]  
+  
+ Im Beispiel werden die folgenden Eingabedateien verwendet:  
+  
+ `booksSchema.xml`  
+  
+ [!code-xml[XmlValidatingReader.SchemaType#2](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.SchemaType/XML/booksschema.xml#2)]  
+  
+ `books.xsd`  
+  
+ [!code-xml[XmlValidatingReader.SchemaType#3](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.SchemaType/XML/books.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveEntity">
+      <MemberSignature Language="C#" Value="public override void ResolveEntity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResolveEntity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.ResolveEntity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst den Entitätsverweis für <see langword="EntityReference" />-Knoten auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Wenn der Reader positioniert ist, auf ein `EntityReference` Knoten (`XmlNodeType.EntityReference`), wenn <xref:System.Xml.XmlValidatingReader.Read%2A> aufgerufen wird, nach dem Aufruf dieser Methode wird der Ersetzungstext der Entität wird analysiert. Nach der Ersetzungstext der Entität ist eine `EndEntity` Knoten zurückgegeben, um den Gültigkeitsbereich des Entitätsverweises zu schließen.  
+  
+> [!NOTE]
+>  Nach dem Aufrufen dieser Methode, wenn die Entität Teil eines Attributwerts ist müssen Sie aufrufen <xref:System.Xml.XmlValidatingReader.ReadAttributeValue%2A> um einen Einzelschritt für die Entität.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird `ResolveEntity` zum Erweitern einer allgemeinen Entität.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.ResolveEntity Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.ResolveEntity Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.ResolveEntity Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `book1.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ResolveEntity Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ResolveEntity Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Reader befindet sich nicht auf eine <see langword="EntityReference" /> Knoten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaCollection Schemas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaCollection Schemas" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Schemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine für die Validierung zu verwendende <see cref="T:System.Xml.Schema.XmlSchemaCollection" /> ab.</summary>
+        <value>Die für die Validierung zu verwendende <see langword="XmlSchemaCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Die `XmlSchemaCollection` enthält vorab geladenen XML-Data Reduced (XDR) und XML Schema Definition Language (XSD)-Schemas. Diese Eigenschaft die Reader-Zugriffe auf den Cache von Schemas und ermöglicht dessen überprüfen, ohne dass Schemas jedes Mal neu geladen werden müssen. Der Reader nicht hinzufügen nichts der `XmlSchemaCollection`.  
+  
+ Wenn die `XmlSchemaCollection` enthält ein XML-Schema (XSD) mit `include` oder `import` Elemente, die auf andere Namespaces können die Schemas verweisen, für die anderen Namespaces zu Validierungszwecken nur geladen werden. Es sei denn, diese Schemas zur schemaauflistung explizit hinzugefügt wurden, werden sie mit einer der Methoden oder Eigenschaften nicht verfügbar. Z. B., wenn die Auflistung die Schemadatei enthält `a.xsd`, die einen Verweis auf die Schemadatei enthält `b.xsd`, müssen Sie hinzufügen `b.xsd` zur schemaauflistung, bevor Sie es mit einem der die von Auflistungsmethoden oder Eigenschaften zugreifen können.  
+  
+ Wenn der `XmlSchemaCollection` erfolgt mithilfe der `Schemas` -Eigenschaft, die <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A?displayProperty=nameWithType> -Methode verwendet die <xref:System.Xml.XmlResolver> Angaben von der <xref:System.Xml.XmlValidatingReader.XmlResolver%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+> [!NOTE]
+>  Die Schemas müssen hinzugefügt werden, um die `XmlSchemaCollection` vor dem ersten `Read` aufrufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft die drei XML-Dateien mithilfe von Schemas in der "XmlSchemaCollection" gespeichert.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.Schemas Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.Schemas Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.Schemas Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/VB/source.vb#1)]  
+  
+ Im Beispiel werden die folgenden fünf Eingabedateien verwendet:  
+  
+ `booksSchema.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#2)]  
+  
+ `booksSchemaFail.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#3](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#3)]  
+  
+ `newbooks.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#4](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#4)]  
+  
+ `books.xsd`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#5](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#5)]  
+  
+ `schema1.xdr`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Schemas Example#6](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Schemas Example/XML/source.xml#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaType">
+      <MemberSignature Language="C#" Value="public object SchemaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.SchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt vom Typ Schema ab.</summary>
+        <value>
+          <see cref="T:System.Xml.Schema.XmlSchemaDatatype" />, <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> oder <see cref="T:System.Xml.Schema.XmlSchemaComplexType" />, abhängig davon, ob der Knotenwert ein integrierter XSD-Typ (XML Schema Definition Language) oder ein benutzerdefinierter simpleType bzw. complexType ist. <see langword="null" />, wenn der aktuelle Knoten über keinen Schematyp verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Der Benutzer muss zum Testen des zurückgegebenen Typs. Beispiel:  
+  
+```  
+object obj = vreader.SchemaType;  
+ if (obj is XmlSchemaType)  
+ {  
+   XmlSchemaType st = (XmlSchemaType)obj;  
+   // use XmlSchemaType object  
+ }  
+ if (obj is XmlSchemaDatatype)  
+ {  
+   XmlSchemaDatatype sd = (XmlSchemaDatatype)obj;  
+   Type vt = sd.ValueType;  
+   // use XmlSchemaDatatype object  
+       }  
+```  
+  
+ Wenn XML-Schema-Validierung durchgeführt wird, die `XmlSchemaType` oder `XmlSchemaDatatype` entspricht dem aktuellen Element gelesen wird. Wenn die Dokumenttypdefinition (DTD-Überprüfung) ausgeführt wird, gibt diese Eigenschaft `null`.  
+  
+ `XmlSchemaDatatype`wird zurückgegeben, wenn das aktuelle Element oder Attribut ein einfacher Typ ist, der spezielle validierungseinschränkungen für das einfache Typen, z. B. min und Max angeben können.  
+  
+ `XmlSchemaSimpleType`wird zurückgegeben, wenn das aktuelle Element oder Attribut ein benutzerdefinierter SimpleType ist.  
+  
+ `XmlSchemaComplexType`wird zurückgegeben, wenn das aktuelle Element ein benutzerdefinierter ComplexType ist. Dieser Typ kann von Attribute zurückgegeben werden.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Xml.XmlValidatingReader.ValidationType%2A> vorsieht, ValidationType.None, wird keine Datentypinformationen aus Schemas oder DTDs bereitgestellt.  
+  
+> [!CAUTION]
+>  Nach dem Aufruf <xref:System.Xml.XmlValidatingReader.Close%2A>, SchemaType gibt Null zurück.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Typinformationen für jedes Element im XML-Dokument.  
+  
+ [!code-cpp[XmlValidatingReader.SchemaType#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlValidatingReader.SchemaType/CPP/schematype.cpp#1)]
+ [!code-csharp[XmlValidatingReader.SchemaType#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlValidatingReader.SchemaType/CS/schematype.cs#1)]
+ [!code-vb[XmlValidatingReader.SchemaType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlValidatingReader.SchemaType/VB/schematype.vb#1)]  
+  
+ Im Beispiel werden die folgenden Eingabedateien verwendet:  
+  
+ `booksSchema.xml`  
+  
+ [!code-xml[XmlValidatingReader.SchemaType#2](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.SchemaType/XML/booksschema.xml#2)]  
+  
+ `books.xsd`  
+  
+ [!code-xml[XmlValidatingReader.SchemaType#3](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.SchemaType/XML/books.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlNamespaceResolver.GetNamespacesInScope">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IDictionary&lt;string,string&gt; IXmlNamespaceResolver.GetNamespacesInScope (System.Xml.XmlNamespaceScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(valuetype System.Xml.XmlNamespaceScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.System#Xml#IXmlNamespaceResolver#GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Xml.XmlNamespaceScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein <see cref="T:System.Xml.XmlNamespaceScope" />-Objekt, das den Bereich des Readers identifiziert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />.</summary>
+        <returns>Ein T:System.Collections.IDictionary-Objekt, das die Namespaces im Bereich identifiziert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Xml.XmlValidatingReader>-Instanz in eine <xref:System.Xml.IXmlNamespaceResolver>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlNamespaceResolver.LookupNamespace">
+      <MemberSignature Language="C#" Value="string IXmlNamespaceResolver.LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Xml.IXmlNamespaceResolver.LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.System#Xml#IXmlNamespaceResolver#LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Namespacepräfix.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)" />.</summary>
+        <returns>Ein Zeichenfolgenwert mit dem Namespace-URI, der dem Präfix zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Xml.XmlValidatingReader>-Instanz in eine <xref:System.Xml.IXmlNamespaceResolver>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlNamespaceResolver.LookupPrefix">
+      <MemberSignature Language="C#" Value="string IXmlNamespaceResolver.LookupPrefix (string namespaceName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Xml.IXmlNamespaceResolver.LookupPrefix(string namespaceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlValidatingReader.System#Xml#IXmlNamespaceResolver#LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">Der dem Präfix zugeordnete Namespace.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)" />.</summary>
+        <returns>Ein Zeichenfolgenwert mit dem Namespacepräfix, der dem <paramref name="namespaceName" /> zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Xml.XmlValidatingReader>-Instanz in eine <xref:System.Xml.IXmlNamespaceResolver>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationEventHandler">
+      <MemberSignature Language="C#" Value="public event System.Xml.Schema.ValidationEventHandler ValidationEventHandler;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Schema.ValidationEventHandler ValidationEventHandler" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.XmlValidatingReader.ValidationEventHandler" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.ValidationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt einen Ereignishandler für den Empfang von Informationen über Validierungsfehler von DTDs (Dokumenttypdefinition), XDR (XML-Data Reduced)-Schemas und XSD (XML Schema Definition Language)-Schemas fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Ereignisse treten während <xref:System.Xml.XmlValidatingReader.Read%2A> und nur, wenn eine <xref:System.Xml.XmlValidatingReader.ValidationType%2A> des DTD einem, XDR-Schema oder automatisch angegeben wird.  
+  
+ Wenn kein Ereignishandler bereitgestellt wird, eine <xref:System.Xml.XmlException> auf den ersten Validierungsfehler (Schweregrad ist gleich XmlSeverityType.Error) ausgelöst.  
+  
+> [!NOTE]
+>  Wenn ein Element einen Validierungsfehler meldet, wird der Rest des Inhaltsmodells für dieses Element wird nicht überprüft, jedoch seinen untergeordneten Elementen überprüft werden. Der Reader erfasst nur den ersten Fehler für ein angegebenes Element.  
+  
+ Der Rückrufhandler kann mithilfe der <xref:System.Xml.Schema.ValidationEventArgs.Severity%2A?displayProperty=nameWithType> Eigenschaft, um sicherzustellen, dass ein XML-Instanzdokument anhand eines Schemas überprüft wird. Die `Severity` -Eigenschaft können Sie Validierungsfehler (Schweregrad ist gleich XmlSeverityType.Error), die angeben, einen schwerwiegenden Fehler von validierungswarnungen (Schweregrad gleich XmlSeverityType.Warning zu benachrichtigen), die angeben, dass unterschieden kein Schema Informationen sind verfügbar.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob eine Datei für ein XML-Schema.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.ValidationEventHandler Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationEventHandler Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.ValidationEventHandler Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationEventHandler Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.ValidationEventHandler Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationEventHandler Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die folgenden beiden Eingabedateien verwendet:  
+  
+ `notValidXSD.xml`(Die `xsi:schemaLocation` Attribut identifiziert das XML-Schema für den Leser.)  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ValidationEventHandler Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationEventHandler Example/XML/source.xml#2)]  
+  
+ `books.xsd`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ValidationEventHandler Example#3](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationEventHandler Example/XML/source.xml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationType">
+      <MemberSignature Language="C#" Value="public System.Xml.ValidationType ValidationType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.ValidationType ValidationType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.ValidationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ValidationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Typ der auszuführenden Validierung angibt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Xml.ValidationType" />-Werte. Wenn diese Eigenschaft nicht festgelegt ist, wird sie auf den Standardwert ValidationType.Auto festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft muss festgelegt werden, bevor der erste Aufruf von <xref:System.Xml.XmlValidatingReader.Read%2A>. Festlegen dieser Eigenschaft auf ValidationType.None wird einen nicht überprüfender Reader erstellt.  
+  
+ Wenn externe Dokumenttypdefinitionen (DTDs) oder Schemas, für die Validierung erforderlich sind der <xref:System.Xml.XmlResolver> verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel werden zwei Dateien überprüft.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.ValidationType Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.ValidationType Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationType Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.ValidationType Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationType Example/VB/source.vb#1)]  
+  
+ Im Beispiel werden die folgenden vier Eingabedateien verwendet:  
+  
+ `notValid.xml`(Das "X-Schema:"-Präfix kennzeichnet das Schema der XML-Data Reduced (XDR) für den Leser.)  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ValidationType Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationType Example/XML/source.xml#2)]  
+  
+ `schema1.xdr`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ValidationType Example#3](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationType Example/XML/source.xml#3)]  
+  
+ `cdDTD.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ValidationType Example#4](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationType Example/XML/source.xml#4)]  
+  
+ `book1.xml`  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.ValidationType Example#5](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.ValidationType Example/XML/source.xml#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Eigenschaft festlegen, nachdem ein Lesevorgang aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Textwert des aktuellen Knotens ab.</summary>
+        <value>Der zurückgegebene Wert hängt vom <see cref="P:System.Xml.XmlValidatingReader.NodeType" /> des Knotens ab. In der folgenden Tabelle sind Knotentypen aufgeführt, die einen zurückzugebenden Wert haben. Alle anderen Knotentypen geben String.Empty zurück.  
+  
+ <list type="table"><listheader><term>Knotentyp  
+  
+ </term><description>Wert  
+  
+ </description></listheader><item><term><see langword="Attribute" /></term><description>Der Wert des Attributs.  
+  
+ </description></item><item><term><see langword="CDATA" /></term><description>Der Inhalt des CDATA-Abschnitts.  
+  
+ </description></item><item><term><see langword="Comment" /></term><description>Der Inhalt des Kommentars.  
+  
+ </description></item><item><term><see langword="DocumentType" /></term><description>Die interne Teilmenge.  
+  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description>Der gesamte Inhalt mit Ausnahme des Ziels.  
+  
+ </description></item><item><term><see langword="SignificantWhitespace" /></term><description>Die Leerzeichen zwischen Markup in einem Modell mit gemischtem Inhalt.  
+  
+ </description></item><item><term><see langword="Text" /></term><description>Der Inhalt des Textknotens.  
+  
+ </description></item><item><term><see langword="Whitespace" /></term><description>Der Leerraum zwischen Markups.  
+  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description>Der Inhalt der Deklaration.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel liest eine XML-Datei, und jeder Knoten wird angezeigt.  
+  
+ [!code-cpp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlValidatingReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `items.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlValidatingReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlValidatingReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public override string XmlLang { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen <see langword="xml:lang" />-Bereich ab.</summary>
+        <value>Der aktuelle <see langword="xml:lang" />-Bereich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Diese Eigenschaft stellt den XML: lang-Bereich, in dem der aktuelle Knoten befindet. Hier ist z. B. ein XML-Fragment mit `xml:lang` auf US festgelegt Englisch im Stammelement:  
+  
+```  
+<root xml:lang="en-us">   
+<name>Fred</name>   
+</root>   
+```  
+  
+ Wenn der Reader positioniert ist, auf die `name` -Element, können Sie diese Eigenschaft fest, dass es im Rahmen einer USA ist Englisch `xml:lang` Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlResolver">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlResolver XmlResolver { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlResolver XmlResolver" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.XmlResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt den <see cref="T:System.Xml.XmlResolver" /> fest, der zur Auflösung externer DTD- (Dokumenttypdefinitionen) und Schema-Positionsverweise verwendet wird. Der <see langword="XmlResolver" /> wird auch zum Behandeln von Import- oder Include-Elementen in XSD-Schemas (XML Schema Definition) verwendet.</summary>
+        <value>Der zu verwendende <see langword="XmlResolver" />. Wenn er auf <see langword="null" /> festgelegt ist, werden externe Ressourcen nicht aufgelöst.  
+  
+ In Version 1.1 von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] muss der Aufrufer für die Angabe eines <see langword="XmlResolver" /> voll vertrauenswürdig sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ Die `XmlResolver` wird verwendet, um das Laden jeder DTDs, Entitäten oder Schemas erforderlich, um die Überprüfung abzuschließen.  
+  
+ Diese Eigenschaft kann zu einem beliebigen Zeitpunkt festgelegt werden und tritt nach dem nächsten <xref:System.Xml.XmlValidatingReader.Read%2A> aufrufen. Wenn diese Eigenschaft, um festgelegt wird `null`, der Reader geht davon aus, der Benutzer ist nicht für das Auflösen von externen Verweisen interessiert. In diesem Fall überprüft der Reader nur für interne Ressourcen, wenn die Ressource vorhanden ist.  
+  
+ In Version 1.1 von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] , wenn diese Eigenschaft nicht festgelegt ist, bestimmt die Vertrauensebene der Anwendung das Standardverhalten.  
+  
+ `Fully trusted code:`Der Reader verwendet den Standardwert <xref:System.Xml.XmlUrlResolver> mit keine Anmeldeinformationen des Benutzers. Wenn Zugriff auf eine Netzwerkressource eine Authentifizierung erforderlich ist, verwenden Sie die `XmlResolver` -Eigenschaft an ein `XmlResolver` mit den erforderlichen Anmeldeinformationen.  
+  
+ `Semi-trusted code:`Die `XmlResolver` -Eigenschaftensatz auf `null`. Externe Ressourcen nicht aufgelöst.  
+  
+ Bei der Validierung mithilfe von Schemas können Sie den aufwändigen Ladevorgang vermeiden, indem Bereitstellen einer <xref:System.Xml.Schema.XmlSchemaCollection> mithilfe der <xref:System.Xml.XmlValidatingReader.Schemas%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `XmlResolver` Eigenschaft, um die Anmeldeinformationen zum Zugriff auf die im Netzwerk DTD-Datei anzugeben.  
+  
+ [!code-cpp[XmlValidatingReader.XmlResolver#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlValidatingReader.XmlResolver/CPP/vrdr_resolver.cpp#1)]
+ [!code-csharp[XmlValidatingReader.XmlResolver#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlValidatingReader.XmlResolver/CS/vrdr_resolver.cs#1)]
+ [!code-vb[XmlValidatingReader.XmlResolver#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlValidatingReader.XmlResolver/VB/vrdr_resolver.vb#1)]  
+  
+ Im Beispiel werden die folgenden Dateien als Eingabe verwendet.  
+  
+ `book5.xml`  
+  
+ [!code-xml[XmlValidatingReader.XmlResolver#2](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.XmlResolver/XML/book5.xml#2)]  
+  
+ `books.dtd`  
+  
+ [!code-xml[XmlValidatingReader.XmlResolver#3](~/samples/snippets/xml/VS_Snippets_Data/XmlValidatingReader.XmlResolver/XML/books.dtd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSpace">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlSpace XmlSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlSpace XmlSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlValidatingReader.XmlSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen <see langword="xml:space" />-Bereich ab.</summary>
+        <value>Einer der <see cref="T:System.Xml.XmlSpace" />-Werte. Wenn kein <see langword="xml:space" />-Bereich vorhanden ist, wird für diese Eigenschaft standardmäßig <see langword="XmlSpace.None" /> festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlValidatingReader> -Klasse ist in veraltet [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. Sie können Erstellen eines validierenden <xref:System.Xml.XmlReader> Instanz mithilfe der <xref:System.Xml.XmlReaderSettings> Klasse und die <xref:System.Xml.XmlReader.Create%2A> Methode. Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlReader> Referenzseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

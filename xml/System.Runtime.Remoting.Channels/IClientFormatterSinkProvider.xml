@@ -1,0 +1,36 @@
+<Type Name="IClientFormatterSinkProvider" FullName="System.Runtime.Remoting.Channels.IClientFormatterSinkProvider">
+  <TypeSignature Language="C#" Value="public interface IClientFormatterSinkProvider : System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IClientFormatterSinkProvider implements class System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IClientFormatterSinkProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IClientChannelSinkProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Markiert einen Kanal des Clients als Client Formatierer Senkenanbieter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.Channels.IClientFormatterSinkProvider> erstellt der Client Formatierungssenken für den Clientkanal, über welche Remoting Nachrichten fließen. Die erste Senke auf der Clientseite muss beide implementieren die <xref:System.Runtime.Remoting.Messaging.IMessageSink> und <xref:System.Runtime.Remoting.Channels.IClientChannelSink> Schnittstellen oder den <xref:System.Runtime.Remoting.Channels.IClientFormatterSink> Schnittstelle.  
+  
+ Verwenden einer `<formatter>` anstelle von tag eine `<provider>` Tag innerhalb einer Konfigurationsdatei, die Client-Anbieter implementieren muss die <xref:System.Runtime.Remoting.Channels.IClientFormatterSinkProvider> Schnittstelle statt lediglich <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider>. Weitere Informationen über die Remotekonfiguration finden Sie unter [&#91;\< Topic://cpconchannelformatterconfigurationproperties > &#93; ](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe) und [Remoting-Einstellungsschema](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e).  
+  
+ Einige Formatierer Senke Implementierungen verwenden zur Laufzeit Formatierer (<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>). Andere Implementierungen verfügen über eigene Möglichkeiten, um die Channelnachricht in den Stream zu transformieren. Auf dem Weg return wird den Nachrichtenstream Formatierungssenke besteht wieder in die Kanal-Nachrichtenelemente (Antwortnachricht) transformiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

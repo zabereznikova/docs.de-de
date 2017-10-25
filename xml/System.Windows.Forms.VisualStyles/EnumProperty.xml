@@ -1,0 +1,265 @@
+<Type Name="EnumProperty" FullName="System.Windows.Forms.VisualStyles.EnumProperty">
+  <TypeSignature Language="C#" Value="public enum EnumProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EnumProperty extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.EnumProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifiziert die enumerierten Typ-Eigenschaften eines visuellen Stilelements.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.EnumProperty> Enumeration stellt eine Reihe von aufgezählten Eigenschaften, die der visuelle Stilelemente zu beschreiben. Die <xref:System.Windows.Forms.VisualStyles.EnumProperty> Werte dienen als Argument in der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A?displayProperty=nameWithType> Methode, um anzugeben, dessen Eigenschaftswert für das Element abgerufen, die die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BackgroundType">
+      <MemberSignature Language="C#" Value="BackgroundType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty BackgroundType = int32(4001)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.BackgroundType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.BackgroundType" /> Werte, der angibt, wie der Hintergrund des Elements gezeichnet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderType">
+      <MemberSignature Language="C#" Value="BorderType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty BorderType = int32(4002)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.BorderType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.BorderType" /> Werten, die den Rahmentyp für Elemente mit einem gefüllten Rahmen Hintergrund angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentAlignment">
+      <MemberSignature Language="C#" Value="ContentAlignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty ContentAlignment = int32(4006)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.ContentAlignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.ContentAlignment" /> Werte, der angibt, wie Text im fensterbeschriftung ausgerichtet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FillType">
+      <MemberSignature Language="C#" Value="FillType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty FillType = int32(4003)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.FillType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.FillType" /> Werte, mit denen den Typ für Elemente mit einem gefüllten Rahmen Hintergrund angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphFontSizingType">
+      <MemberSignature Language="C#" Value="GlyphFontSizingType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty GlyphFontSizingType = int32(4014)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.GlyphFontSizingType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.GlyphFontSizingType" /> Werte, die angibt, wann der visuelle Stil für ein anderes Symbolschriftgrad auswählt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphType">
+      <MemberSignature Language="C#" Value="GlyphType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty GlyphType = int32(4012)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.GlyphType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.GlyphType" /> Werte, die den Typ des Symbols für Elemente mit einer Bitmaphintergrund angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlignment">
+      <MemberSignature Language="C#" Value="HorizontalAlignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty HorizontalAlignment = int32(4005)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.HorizontalAlignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.HorizontalAlign" /> Werte, der die horizontale Ausrichtung für Elemente mit fester Größe angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IconEffect">
+      <MemberSignature Language="C#" Value="IconEffect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty IconEffect = int32(4009)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.IconEffect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.IconEffect" /> Werte, die den Effekt gibt an, die der visuelle Stil auf ein Symbol angewendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageLayout">
+      <MemberSignature Language="C#" Value="ImageLayout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty ImageLayout = int32(4011)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.ImageLayout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.ImageOrientation" /> Werte, der angibt, wie mehrere Bilder in einer einzelnen Bilddatei angeordnet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSelectType">
+      <MemberSignature Language="C#" Value="ImageSelectType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty ImageSelectType = int32(4013)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.ImageSelectType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.ImageSelectType" /> Werte, die angibt, wann der visuelle Stil eine andere mehrere-Image-Datei zum Zeichnen eines Elements auswählt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetType">
+      <MemberSignature Language="C#" Value="OffsetType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty OffsetType = int32(4008)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.OffsetType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.OffsetType" /> Werte, der angibt, in dem ein Offset für ein Fensterelement im angewendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SizingType">
+      <MemberSignature Language="C#" Value="SizingType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty SizingType = int32(4004)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.SizingType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.SizingType" /> Werte, der angibt, wie Elemente mit einer als Bitmaphintergrund angepasst werden, um die Grenzen zu füllen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TextShadowType">
+      <MemberSignature Language="C#" Value="TextShadowType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty TextShadowType = int32(4010)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.TextShadowType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.TextShadowType" /> Werte, der angibt, den Typ des Schattens Text hinzufügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueSizeScalingType">
+      <MemberSignature Language="C#" Value="TrueSizeScalingType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty TrueSizeScalingType = int32(4015)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.TrueSizeScalingType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.TrueSizeScalingType" /> Werte, der angibt, wann ein Element mit fester Größe in der visuelle Stil neu skaliert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalAlignment">
+      <MemberSignature Language="C#" Value="VerticalAlignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.EnumProperty VerticalAlignment = int32(4007)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.EnumProperty.VerticalAlignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.EnumProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eines der <see cref="T:System.Windows.Forms.VisualStyles.VerticalAlignment" /> Werte, der die vertikale Ausrichtung von Elementen mit fester Größe angibt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

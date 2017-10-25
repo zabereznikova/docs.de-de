@@ -1,0 +1,1419 @@
+<Type Name="KoreanCalendar" FullName="System.Globalization.KoreanCalendar">
+  <TypeSignature Language="C#" Value="public class KoreanCalendar : System.Globalization.Calendar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit KoreanCalendar extends System.Globalization.Calendar" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.KoreanCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Globalization.Calendar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den koreanischen Kalender dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der koreanische Kalender dar ist genau mit dem gregorianischen Kalender, mit dem Unterschied, dass das Jahr und den Zeitraum unterscheiden.  
+  
+> [!NOTE]
+>  Informationen zum Verwenden der <xref:System.Globalization.KoreanCalendar> Klasse und der andere Klassen in .NET Framework "Kalender", finden Sie unter [arbeiten mit Kalendern](~/docs/standard/datetime/working-with-calendars.md).  
+  
+ Die <xref:System.Globalization.KoreanCalendar> Klasse umfasst nur den aktuellen Zeitraum.  
+  
+ Schaltjahren in den koreanischen Kalender dar, den Schaltjahren im gregorianischen Kalender entsprechen. Ein Schaltjahr im gregorianischen Kalender wird als ein gregorianischen-Jahr, teilbar ist, definiert, durch vier außer durch 100 dividiert wird. Allerdings sind gregorianischen Jahren, die durch 400 teilbar sind Schaltjahren. Ein Gemeinjahr hat 365 und ein Schaltjahr 366 Tage.  
+  
+ Koreanische Kalender verfügt über 12 Monaten mit 28 bis 31 Tagen:  
+  
+|GetMonth-Wert|Monat|Tage im Allgemeinen Jahre|Tage in Schaltjahren|  
+|--------------------|-----------|--------------------------|------------------------|  
+|1|1월 (Januar)|31|31|  
+|2|2월 (Februar)|28|29|  
+|3|3월 (März)|31|31|  
+|4|4월 (April)|30|30|  
+|5|5월 (Mai)|31|31|  
+|6|6월 (Juni)|30|30|  
+|7|7월 (Juli)|31|31|  
+|8|8월 (August)|31|31|  
+|9|9월 (September)|30|30|  
+|10|10월 (Oktober)|31|31|  
+|11|11월 (November)|30|30|  
+|12|12월 (Dezember)|31|31|  
+  
+ Der Februar hat 29 Tage in einem Schaltjahr und 28 Tage.  
+  
+ Das Datum 1. Januar 2001 n. Chr. im gregorianischen Kalender entspricht dem ersten Tag des Januar des Jahres 4334 des aktuellen Zeitraums in den koreanischen Kalender dar.  
+  
+ Jede <xref:System.Globalization.CultureInfo> Objekt unterstützt einen Satz von Kalendern. Die <xref:System.Globalization.CultureInfo.Calendar%2A> Eigenschaft gibt den Standardkalender für die Kultur und die <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> Eigenschaft gibt ein Array mit allen Kalendern, die von der Kultur unterstützt. So ändern Sie den verwendeten Kalender ein <xref:System.Globalization.CultureInfo>, sollte die Anwendung Festlegen der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> in ein neues <xref:System.Globalization.Calendar>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KoreanCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Globalization.KoreanCalendar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeInitializationException">Kann nicht initialisiert werden ein <see cref="T:System.Globalization.KoreanCalendar" /> Objekt wegen fehlender kulturinformationen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonths">
+      <MemberSignature Language="C#" Value="public override DateTime AddMonths (DateTime time, int months);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddMonths(valuetype System.DateTime time, int32 months) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.AddMonths(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="months" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die <see cref="T:System.DateTime" />, der Monate hinzugefügt werden sollen.</param>
+        <param name="months">Die Anzahl von Monaten, die hinzugefügt werden soll.</param>
+        <summary>Gibt eine <see cref="T:System.DateTime" /> d. h. die angegebene Anzahl von Monaten Weg von der angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Die <see cref="T:System.DateTime" /> , resultiert aus dem Hinzufügen der angegebenen Anzahl von Monaten in den angegebenen <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Tagesangabe des resultierenden <xref:System.DateTime> wird beeinflusst, wenn die sich ergebende Tag keinen gültigen Tag im resultierenden Monat des resultierenden Jahres ist. Es wird in den letzten gültigen Tag im resultierenden Monat des resultierenden Jahres geändert. Der Jahresteil des resultierenden <xref:System.DateTime> wird beeinflusst, wenn der resultierende Monat außerhalb des angegebenen Jahres ist <xref:System.DateTime>. Diese Implementierung unterstützt nur den aktuellen Zeitraum an. Aus diesem Grund <xref:System.ArgumentException> ausgelöst, wenn das resultierende Jahr außerhalb des Zeitraums des angegebenen <xref:System.DateTime>. Die Zeit des Tages Teil der resultierenden <xref:System.DateTime> bleibt die gleiche wie das angegebene <xref:System.DateTime>.  
+  
+ Z. B. wenn der angegebene Monat Oktober 31 Tage aufweist ist, der angegebene Tag ist 31. Tag des Monats und den Wert des der `months` -Parameter 6 ist, ist das resultierende Jahr mehr als den angegebenen Werten für Jahr, der resultierende Monat entspricht, April, und die resultierende da y ist der 30. Tag, die den letzten Tag im April ist.  
+  
+ Wenn der Wert des der `months` Parameter negativ ist, ist das resultierende <xref:System.DateTime> liegt vor dem angegebenen <xref:System.DateTime>.  
+  
+ Die <xref:System.DateTime.Kind%2A> -Eigenschaft des zurückgegebenen <xref:System.DateTime> ist der Wert immer <xref:System.DateTimeKind?displayProperty=nameWithType>. Können Sie erhalten die <xref:System.DateTime.Kind%2A> Eigenschaft von der `time` Parameter durch Aufrufen der <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> Methode, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#5)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#5)]  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="months" />ist kleiner als 120000.  
+  
+ - oder -   
+  
+ <paramref name="months" />ist größer als 120000.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddYears">
+      <MemberSignature Language="C#" Value="public override DateTime AddYears (DateTime time, int years);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddYears(valuetype System.DateTime time, int32 years) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.AddYears(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="years" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die <see cref="T:System.DateTime" />, der Jahre hinzugefügt werden sollen.</param>
+        <param name="years">Die Anzahl von Jahren, die hinzugefügt werden soll.</param>
+        <summary>Gibt eine <see cref="T:System.DateTime" /> d. h. die angegebene Anzahl von Jahren Weg von der angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Die <see cref="T:System.DateTime" /> , resultiert die angegebene Anzahl von Jahren hinzugefügt, mit dem angegebenen <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Tagesangabe des resultierenden <xref:System.DateTime> wird beeinflusst, wenn die sich ergebende Tag keinen gültigen Tag im resultierenden Monat des resultierenden Jahres ist. Es wird in den letzten gültigen Tag im resultierenden Monat des resultierenden Jahres geändert. Die Monatsangabe des resultierenden <xref:System.DateTime> bleibt die gleiche wie das angegebene <xref:System.DateTime>. Diese Implementierung unterstützt nur den aktuellen Zeitraum an. Aus diesem Grund <xref:System.ArgumentException> ausgelöst, wenn das resultierende Jahr außerhalb des Zeitraums des angegebenen <xref:System.DateTime>. Die Zeit des Tages Teil der resultierenden <xref:System.DateTime> bleibt die gleiche wie das angegebene <xref:System.DateTime>.  
+  
+ Der Februar hat z. B. 28 Tage, außer in einem Schaltjahr er 29 Tage hat. Das angegebene Datum ist der 29. Tag Februar in einem Schaltjahr und der Wert des `years` 1, ist das resultierende Datum ist der 28. Februar im folgenden Jahr.  
+  
+ Wenn `years` negativ ist, wird das resultierende <xref:System.DateTime> liegt vor dem angegebenen <xref:System.DateTime>.  
+  
+ Die <xref:System.DateTime.Kind%2A> -Eigenschaft des zurückgegebenen <xref:System.DateTime> ist der Wert immer <xref:System.DateTimeKind?displayProperty=nameWithType>. Können Sie erhalten die <xref:System.DateTime.Kind%2A> Eigenschaft von der `time` Parameter durch Aufrufen der <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> Methode, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#8)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#8)]  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="years" />oder <paramref name="time" /> liegt außerhalb des gültigen Bereichs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmType">
+      <MemberSignature Language="C#" Value="public override System.Globalization.CalendarAlgorithmType AlgorithmType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Globalization.CalendarAlgorithmType AlgorithmType" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.KoreanCalendar.AlgorithmType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der aktuelle Kalender ist, Sonnenkalender, Mondkalender oder eine Kombination aus beidem.</summary>
+        <value>Gibt immer <see cref="F:System.Globalization.CalendarAlgorithmType.SolarCalendar" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird Reflektion zum Instanziieren jedes <xref:System.Globalization.Calendar> Typ in .NET Framework gefunden und zeigt den Wert von dessen <xref:System.Globalization.Calendar.AlgorithmType%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/cs/algorithmtype1.cs#1)]
+ [!code-vb[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/vb/algorithmtype1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eras">
+      <MemberSignature Language="C#" Value="public override int[] Eras { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Eras" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.KoreanCalendar.Eras" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Zeiträume in der <see cref="T:System.Globalization.KoreanCalendar" />.</summary>
+        <value>Ein Array von Ganzzahlen, die die Zeiträume in stellt das <see cref="T:System.Globalization.KoreanCalendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.KoreanCalendar> Klasse umfasst nur den aktuellen Zeitraum. Diese Eigenschaft gibt immer ein Array mit nur einem Element zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfMonth">
+      <MemberSignature Language="C#" Value="public override int GetDayOfMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetDayOfMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <summary>Gibt den Tag des Monats im angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 31, die den Tag des Monats im angegebenen darstellt <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfWeek">
+      <MemberSignature Language="C#" Value="public override DayOfWeek GetDayOfWeek (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DayOfWeek GetDayOfWeek(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetDayOfWeek(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DayOfWeek</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <summary>Gibt den Wochentag im angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Ein <see cref="T:System.DayOfWeek" /> -Wert, der den Wochentag im angegebenen darstellt <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DayOfWeek> Werte lauten wie folgt:  
+  
+|DayOfWeek-Wert|Gibt an|  
+|---------------------|---------------------|  
+|Sonntag|일요일|  
+|Montag|월요일|  
+|Dienstag|화요일|  
+|Mittwoch|수요일|  
+|Donnerstag|목요일|  
+|Freitag|금요일|  
+|Samstag|토요일|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfYear">
+      <MemberSignature Language="C#" Value="public override int GetDayOfYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetDayOfYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <summary>Gibt den Tag des Jahres im angegebenen <see cref="T:System.DateTime" /> zurück.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 366, die den Tag des Jahres im angegebenen darstellt <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Tag des Jahres wird als die Anzahl der Tage vom ersten Tag des Jahres definiert. Beispielsweise <xref:System.Globalization.KoreanCalendar.GetDayOfYear%2A> für der erste Tag des ersten Monats 1 zurück und <xref:System.Globalization.KoreanCalendar.GetDayOfYear%2A> für den letzten Tag des letzten Monats, der die Gesamtzahl der Tage in diesem Jahr zurückgibt. Der Gesamtwert entspricht den gleichen Wert wie die von der zurückgegebene <xref:System.Globalization.KoreanCalendar.GetDaysInYear%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInMonth">
+      <MemberSignature Language="C#" Value="public override int GetDaysInMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine ganze Zahl, die das Jahr darstellt.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die den Monat darstellt.</param>
+        <param name="era">Eine ganze Zahl, die den Zeitraum darstellt.</param>
+        <summary>Gibt die Anzahl der Tage im angegebenen Monat des angegebenen Jahres im angegebenen Zeitraum zurück.</summary>
+        <returns>Die Anzahl der Tage im angegebenen Monat des angegebenen Jahres im angegebenen Zeitraum.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispielsweise diese Methode gibt 28 oder 29 für Februar (`month` = 2), je nachdem, ob `year` ein Schaltjahr ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft GetDaysInMonth für den zweiten Monat in jeder der fünf Jahre in jedem Zeitraum an.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar.GetDaysInMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetDaysInMonth/CPP/koreancalendar_getdaysinmonth.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar.GetDaysInMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetDaysInMonth/CS/koreancalendar_getdaysinmonth.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar.GetDaysInMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetDaysInMonth/VB/koreancalendar_getdaysinmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="month" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="era" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInYear">
+      <MemberSignature Language="C#" Value="public override int GetDaysInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetDaysInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine ganze Zahl, die das Jahr darstellt.</param>
+        <param name="era">Eine ganze Zahl, die den Zeitraum darstellt.</param>
+        <summary>Gibt die Anzahl der Tage des angegebenen Jahres im angegebenen Zeitraum zurück.</summary>
+        <returns>Die Anzahl der Tage des angegebenen Jahres im angegebenen Zeitraum.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt z. B. 365 oder 366, je nachdem, ob `year` ein Schaltjahr ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Globalization.KoreanCalendar.GetDaysInYear%2A> für fünf Jahre in jedem Zeitraum.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar.GetDaysInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetDaysInYear/CPP/koreancalendar_getdaysinyear.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar.GetDaysInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetDaysInYear/CS/koreancalendar_getdaysinyear.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar.GetDaysInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetDaysInYear/VB/koreancalendar_getdaysinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="era" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEra">
+      <MemberSignature Language="C#" Value="public override int GetEra (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetEra(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetEra(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <summary>Gibt den Zeitraum in der angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Eine ganze Zahl, die den Zeitraum in der angegebenen darstellt <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.KoreanCalendar> Klasse umfasst nur den aktuellen Zeitraum.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeapMonth">
+      <MemberSignature Language="C#" Value="public override int GetLeapMonth (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetLeapMonth(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetLeapMonth(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein Jahr.</param>
+        <param name="era">Ein Zeitraum.</param>
+        <summary>Berechnet den Schaltmonat für ein angegebenes Jahr und Zeitraum zurück.</summary>
+        <returns>Der Rückgabewert ist immer 0 da die <see cref="T:System.Globalization.KoreanCalendar" /> -Klasse das Konzept von Schaltmonaten nicht unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem Kalender, der das Konzept von Schaltmonaten unterstützt, kann es sich bei der Schaltmonat entweder nach einem bestimmten Monat oder nach einem beliebigen Monat eines Jahres auftreten. Z. B. die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%28System.DateTime%29?displayProperty=nameWithType> Methode gibt eine Zahl zwischen 1 und 13, der den einem bestimmten Datum zugeordneten Monat angibt. Wenn ein Schaltmonat zwischen dem achten und neunten Monate des Jahres, besteht die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> Methodenrückgabe 8 für den achten Monat, 9 für den Schaltmonat und 10 für den neunten Monat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonth">
+      <MemberSignature Language="C#" Value="public override int GetMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <summary>Gibt den Monat im angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 12, die den Monat im angegebenen darstellt <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonthsInYear">
+      <MemberSignature Language="C#" Value="public override int GetMonthsInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonthsInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetMonthsInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine ganze Zahl, die das Jahr darstellt.</param>
+        <param name="era">Eine ganze Zahl, die den Zeitraum darstellt.</param>
+        <summary>Gibt die Anzahl der Monate des angegebenen Jahres im angegebenen Zeitraum zurück.</summary>
+        <returns>Die Anzahl der Monate des angegebenen Jahres im angegebenen Zeitraum.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Globalization.KoreanCalendar.GetMonthsInYear%2A> für fünf Jahre in jedem Zeitraum.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar.GetMonthsInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetMonthsInYear/CPP/koreancalendar_getmonthsinyear.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar.GetMonthsInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetMonthsInYear/CS/koreancalendar_getmonthsinyear.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar.GetMonthsInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.GetMonthsInYear/VB/koreancalendar_getmonthsinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="era" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWeekOfYear">
+      <MemberSignature Language="C#" Value="public override int GetWeekOfYear (DateTime time, System.Globalization.CalendarWeekRule rule, DayOfWeek firstDayOfWeek);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetWeekOfYear(valuetype System.DateTime time, valuetype System.Globalization.CalendarWeekRule rule, valuetype System.DayOfWeek firstDayOfWeek) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetWeekOfYear(System.DateTime,System.Globalization.CalendarWeekRule,System.DayOfWeek)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="rule" Type="System.Globalization.CalendarWeekRule" />
+        <Parameter Name="firstDayOfWeek" Type="System.DayOfWeek" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <param name="rule">Eines der <see cref="T:System.Globalization.CalendarWeekRule" /> Werte, die eine Kalenderwoche definiert.</param>
+        <param name="firstDayOfWeek">Eines der <see cref="T:System.DayOfWeek" /> Werte, die den ersten Tag der Woche darstellt.</param>
+        <summary>Gibt die Woche des Jahres zurück, das Datum in der angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Ein 1-basierte ganze Zahl, die die Woche des Jahres darstellt, das Datum in der <paramref name="time" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um zu bestimmen, die Anzahl der Wochen im Jahr durch Festlegen der `time` Parameter bis zum letzten Tag des Jahres.  
+  
+ <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>enthält kulturspezifische Werte, die für Verteilungsszenarien der `rule` und `firstDayOfWeek` Parameter.  
+  
+ Die <xref:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek%2A> Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> enthält das Standardthema <xref:System.DayOfWeek> -Wert, der den ersten Tag der Woche für eine bestimmte Kultur, die unter Verwendung des Kalenders in angegebenen darstellt der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+  
+ Die <xref:System.Globalization.DateTimeFormatInfo.CalendarWeekRule%2A> Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> enthält das Standardthema <xref:System.Globalization.CalendarWeekRule> Wert, der eine Kalenderwoche für eine bestimmte Kultur, die unter Verwendung des Kalenders in angegebenen definiert die <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+  
+ Beispielsweise ist in <xref:System.Globalization.GregorianCalendar>, <xref:System.Globalization.Calendar.GetWeekOfYear%2A> für 1. Januar 1 zurück.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie das Ergebnis des <xref:System.Globalization.Calendar.GetWeekOfYear%2A> variiert je nach den <xref:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek%2A> und <xref:System.Globalization.CalendarWeekRule> verwendeten Werte. Wenn das angegebene Datum der letzten Tag des Jahres ist <xref:System.Globalization.Calendar.GetWeekOfYear%2A> gibt die Gesamtzahl der Wochen in diesem Jahr zurück.  
+  
+ [!code-cpp[System.Globalization.Calendar.GetWeekOfYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.Calendar.GetWeekOfYear/CPP/yslin_calendar_getweekofyear.cpp#1)]
+ [!code-csharp[System.Globalization.Calendar.GetWeekOfYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.Calendar.GetWeekOfYear/CS/yslin_calendar_getweekofyear.cs#1)]
+ [!code-vb[System.Globalization.Calendar.GetWeekOfYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.Calendar.GetWeekOfYear/VB/yslin_calendar_getweekofyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />oder <paramref name="firstDayOfWeek" /> liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="rule" /> ist kein gültiger <see cref="T:System.Globalization.CalendarWeekRule" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetYear">
+      <MemberSignature Language="C#" Value="public override int GetYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.GetYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <summary>Gibt das Jahr im angegebenen <see cref="T:System.DateTime" />.</summary>
+        <returns>Eine ganze Zahl, die das Jahr im angegebenen darstellt <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der verschiedenen Komponenten von einer <xref:System.DateTime> im Hinblick auf den koreanischen Kalender dar.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CPP/koreancalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/CS/koreancalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_AddGet/VB/koreancalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapDay">
+      <MemberSignature Language="C#" Value="public override bool IsLeapDay (int year, int month, int day, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapDay(int32 year, int32 month, int32 day, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine ganze Zahl, die das Jahr darstellt.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die den Monat darstellt.</param>
+        <param name="day">Eine ganze Zahl zwischen 1 und 31, die den Tag darstellt.</param>
+        <param name="era">Eine ganze Zahl, die den Zeitraum darstellt.</param>
+        <summary>Bestimmt, ob das angegebene Datum im angegebenen Zeitraum ein Schalttag ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Tag ein Schalttag ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schaltjahren in den koreanischen Kalender dar, den Schaltjahren im gregorianischen Kalender entsprechen. Ein Schaltjahr im gregorianischen Kalender wird als ein gregorianischen-Jahr, teilbar ist, definiert, durch vier außer durch 100 dividiert wird. Allerdings sind gregorianischen Jahren, die durch 400 teilbar sind Schaltjahren. Ein Gemeinjahr hat 365 und ein Schaltjahr 366 Tage.  
+  
+ Ein Schalttag ist ein Tag, der nur in einem Schaltjahr auftritt. Beispielsweise ist der 29. Tag Februar der einzige Schalttag.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Globalization.KoreanCalendar.IsLeapDay%2A> für den letzten Tag des zweiten Monats (Februar) für fünf Jahre in jedem Zeitraum.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar.IsLeapDay#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapDay/CPP/koreancalendar_isleapday.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar.IsLeapDay#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapDay/CS/koreancalendar_isleapday.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar.IsLeapDay#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapDay/VB/koreancalendar_isleapday.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="month" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="day" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="era" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapMonth">
+      <MemberSignature Language="C#" Value="public override bool IsLeapMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine ganze Zahl, die das Jahr darstellt.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die den Monat darstellt.</param>
+        <param name="era">Eine ganze Zahl, die den Zeitraum darstellt.</param>
+        <summary>Bestimmt, ob der angegebene Monat des angegebenen Jahres im angegebenen Zeitraum ein Schaltmonat ist.</summary>
+        <returns>Diese Methode gibt immer <see langword="false" />, es sei denn, die von einer abgeleiteten Klasse überschrieben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schaltjahren in den koreanischen Kalender dar, den Schaltjahren im gregorianischen Kalender entsprechen. Ein Schaltjahr im gregorianischen Kalender wird als ein gregorianischen-Jahr, teilbar ist, definiert, durch vier außer durch 100 dividiert wird. Allerdings sind gregorianischen Jahren, die durch 400 teilbar sind Schaltjahren. Ein Gemeinjahr hat 365 und ein Schaltjahr 366 Tage.  
+  
+ Ein Schaltmonat ist einen gesamten Monat, der nur in einem Schaltjahr auftritt. Alle Monate Leap keinen der koreanische Kalender dar.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Globalization.KoreanCalendar.IsLeapMonth%2A> für alle Monate in fünf Jahren im aktuellen Zeitraum.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar.IsLeapMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapMonth/CPP/koreancalendar_isleapmonth.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar.IsLeapMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapMonth/CS/koreancalendar_isleapmonth.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar.IsLeapMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapMonth/VB/koreancalendar_isleapmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="month" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="era" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapYear">
+      <MemberSignature Language="C#" Value="public override bool IsLeapYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.IsLeapYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine ganze Zahl, die das Jahr darstellt.</param>
+        <param name="era">Eine ganze Zahl, die den Zeitraum darstellt.</param>
+        <summary>Bestimmt, ob das angegebene Jahr im angegebenen Zeitraum ein Schaltjahr ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Jahr ein Schaltjahr ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schaltjahren in den koreanischen Kalender dar, den Schaltjahren im gregorianischen Kalender entsprechen. Ein Schaltjahr im gregorianischen Kalender wird als ein gregorianischen-Jahr, teilbar ist, definiert, durch vier außer durch 100 dividiert wird. Allerdings sind gregorianischen Jahren, die durch 400 teilbar sind Schaltjahren. Ein Gemeinjahr hat 365 und ein Schaltjahr 366 Tage.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Globalization.KoreanCalendar.IsLeapYear%2A> für fünf Jahre in jedem Zeitraum.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar.IsLeapYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapYear/CPP/koreancalendar_isleapyear.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar.IsLeapYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapYear/CS/koreancalendar_isleapyear.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar.IsLeapYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar.IsLeapYear/VB/koreancalendar_isleapyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="era" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KoreanEra">
+      <MemberSignature Language="C#" Value="public const int KoreanEra = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 KoreanEra = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.KoreanCalendar.KoreanEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Stellt den aktuellen Zeitraum dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.KoreanCalendar> Klasse umfasst nur den aktuellen Zeitraum. Dieses Feld gibt immer 1 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MaxSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.KoreanCalendar.MaxSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das späteste Datum und die späteste Uhrzeit ab, die von der <see cref="T:System.Globalization.KoreanCalendar" />-Klasse unterstützt werden.</summary>
+        <value>Das späteste Datum und Uhrzeit unterstützt werden, durch die <see cref="T:System.Globalization.KoreanCalendar" /> -Klasse, die im letzten Moment der 31. Dezember 9999 unserer Zeitrechnung entspricht im gregorianischen Kalender.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ruft den Mindestwert und der Höchstwert des Kalenders ab.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_MinMax/CPP/koreancalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_MinMax/CS/koreancalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_MinMax/VB/koreancalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MinSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.KoreanCalendar.MinSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das früheste Datum und die früheste Uhrzeit ab, die von der <see cref="T:System.Globalization.KoreanCalendar" />-Klasse unterstützt werden.</summary>
+        <value>Das früheste Datum und Uhrzeit unterstützt werden, durch die <see cref="T:System.Globalization.KoreanCalendar" /> -Klasse, die mit dem ersten Moment des 1. Januar 0001 unserer Zeitrechnung entspricht. im gregorianischen Kalender.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ruft den Mindestwert und der Höchstwert des Kalenders ab.  
+  
+ [!code-cpp[System.Globalization.KoreanCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_MinMax/CPP/koreancalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.KoreanCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_MinMax/CS/koreancalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.KoreanCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.KoreanCalendar_MinMax/VB/koreancalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime ToDateTime (int year, int month, int day, int hour, int minute, int second, int millisecond, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime ToDateTime(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="millisecond" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Eine ganze Zahl, die das Jahr darstellt.</param>
+        <param name="month">Eine ganze Zahl zwischen 1 und 12, die den Monat darstellt.</param>
+        <param name="day">Eine ganze Zahl zwischen 1 und 31, die den Tag darstellt.</param>
+        <param name="hour">Eine ganze Zahl zwischen 0 und 23, die die Stunde darstellt.</param>
+        <param name="minute">Eine ganze Zahl zwischen 0 und 59, die die Minute darstellt.</param>
+        <param name="second">Eine ganze Zahl zwischen 0 und 59, die die Sekunde darstellt.</param>
+        <param name="millisecond">Eine ganze Zahl zwischen 0 und 999, die die Millisekunde darstellt.</param>
+        <param name="era">Eine ganze Zahl, die den Zeitraum darstellt.</param>
+        <summary>Gibt eine <see cref="T:System.DateTime" /> , die auf das angegebene Datum und die Uhrzeit im angegebenen Zeitraum festgelegt ist.</summary>
+        <returns>Die <see cref="T:System.DateTime" /> , die auf das angegebene Datum und die Uhrzeit im aktuellen Zeitraum festgelegt ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="month" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="day" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.  
+  
+ - oder -   
+  
+ <paramref name="hour" /> ist kleiner als 0 (null) oder größer als 23.  
+  
+ - oder -   
+  
+ <paramref name="minute" />ist kleiner als 0 (null) oder größer als 59.  
+  
+ - oder -   
+  
+ <paramref name="second" />ist kleiner als 0 (null) oder größer als 59.  
+  
+ - oder -   
+  
+ <paramref name="millisecond" />ist kleiner als 0 (null) oder größer als 999.  
+  
+ - oder -   
+  
+ <paramref name="era" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToFourDigitYear">
+      <MemberSignature Language="C#" Value="public override int ToFourDigitYear (int year);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ToFourDigitYear(int32 year) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.KoreanCalendar.ToFourDigitYear(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Ein zwei- oder vierstellige ganze Zahl, die die zu konvertierende Jahr darstellt.</param>
+        <summary>Konvertiert das angegebene Jahr in eine vierstellige Jahresangabe unter Verwendung der <see cref="P:System.Globalization.KoreanCalendar.TwoDigitYearMax" /> -Eigenschaft können Sie das entsprechende Jahrhundert zu bestimmen.</summary>
+        <returns>Eine ganze Zahl, die die vierstellige Darstellung von <paramref name="year" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Globalization.KoreanCalendar.TwoDigitYearMax%2A>definiert das letzte Jahr in der 100-Jahre-Bereich, der durch dargestellt werden kann <xref:System.Globalization.KoreanCalendar.ToFourDigitYear%2A>. Das Jahrhundert wird bestimmt durch das einzige Vorkommen des zweistelligen Jahrs innerhalb dieses Bereichs von 100 Jahren gesucht. Z. B. wenn <xref:System.Globalization.KoreanCalendar.TwoDigitYearMax%2A> festgelegt ist, 2029, der 100-Jahre Bereich liegt zwischen 1930 und 2029. Aus diesem Grund wird ein zweistellige Wert von 30 als 1930 interpretiert, während ein zweistellige Wert 29 als 2029 interpretiert wird.  
+  
+ <xref:System.Globalization.KoreanCalendar.ToFourDigitYear%2A>unterstützt eine zweistellige Jahresangabe oder eine vierstellige Jahresangabe. Die Übergabe des Werts zweistellige Jahresangabe (weniger als 100) bewirkt, dass die Methode, die den Wert in einen vierstelligen Wert entsprechend dem Konvertieren der <xref:System.Globalization.KoreanCalendar.TwoDigitYearMax%2A> Wert, der das entsprechende Jahrhundert darstellt. Wenn die Anwendung einen vierstellige Jahresangabe Wert bereitstellt, die innerhalb des Kalenderbereichs unterstützten für <xref:System.Globalization.KoreanCalendar.ToFourDigitYear%2A>, gibt die Methode den tatsächlichen Eingabewert zurück. Wenn die Anwendung einen vierstelligen Wert bereitstellt, der außerhalb des Kalenderbereichs unterstützten ist oder wenn es sich um einen negativen Wert bereitstellt, löst die Methode eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />liegt außerhalb des Bereichs, die vom Kalender unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoDigitYearMax">
+      <MemberSignature Language="C#" Value="public override int TwoDigitYearMax { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TwoDigitYearMax" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.KoreanCalendar.TwoDigitYearMax" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das letzte Jahr eines Bereichs von 100 Jahren ab, das durch eine Jahresangabe mit 2 Stellen dargestellt werden kann, oder legt dieses fest.</summary>
+        <value>Das letzte Jahr eines Bereichs von 100 Jahren, das durch eine Jahresangabe mit 2 Stellen dargestellt werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht eine Jahresangabe mit 2 Stellen, eine Jahresangabe mit 4 Stellen ordnungsgemäß übersetzt werden. Angenommen, wenn diese Eigenschaft auf 2029 festgelegt ist werden im gregorianischen Kalender des Bereichs von 100 Jahren von 1930 2029. Aus diesem Grund wird auf ein 2-Wert von 30 als 1930 interpretiert, während der Wert 2 Ziffern von 29 als 2029 interpretiert wird.  
+  
+ Der Anfangswert für diese Eigenschaft wird aus den Einstellungen in den Regions- und Sprachoptionen Teil Systemsteuerung Optionen abgeleitet. Diese Informationen kann jedoch ändern, während der Lebensdauer der <xref:System.AppDomain>. Die <xref:System.Globalization.KoreanCalendar> Klasse erkennt keine Änderungen in den Systemeinstellungen automatisch.  
+  
+ Die Anwendung sollte diesen Wert festlegen, bis 99, um anzugeben, dass 2 zweistellige Jahresangaben als solcher akzeptiert werden. Angenommen, wenn diese Eigenschaft bis 99 festgelegt ist, ist der 100-Jahre Bereich von 0 (kein gültiger Wert für die meisten Kalender) bis 99. Aus diesem Grund wird ein Wert 2 Ziffern von 30 als 30 interpretiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">In einem Set-Vorgang angegebene Wert ist kleiner als 99.  
+  
+ - oder -   
+  
+ In einem Set-Vorgang angegebene Wert ist größer als <see langword="MaxSupportedDateTime.Year" />.</exception>
+        <exception cref="T:System.InvalidOperationException">In einem Set-Vorgang kann die aktuelle Instanz nur gelesen werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

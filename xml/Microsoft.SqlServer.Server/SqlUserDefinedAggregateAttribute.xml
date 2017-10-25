@@ -1,0 +1,285 @@
+<Type Name="SqlUserDefinedAggregateAttribute" FullName="Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SqlUserDefinedAggregateAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlUserDefinedAggregateAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der Typ als ein benutzerdefiniertes Aggregat registriert werden soll. Die Eigenschaften des Attributs entsprechen die physischen Attribute verwendet, wenn der Typ mit SQL Server registriert ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SQL Server erstellt ein benutzerdefiniertes Aggregat, das auf die Klassendefinition gebunden ist, enthält die <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute> benutzerdefinierten Attributs. Jedes benutzerdefinierte Aggregat muss dieses Attribut angefügt werden.  
+  
+ Weitere Informationen zu benutzerdefinierten Aggregaten und Beispiele finden Sie unter "CLR User-Defined Aggregate" in SQL Server 2005-Onlinedokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute> Attribut für ein benutzerdefiniertes Aggregat.  Das Aggregat verwendet benutzerdefinierte Serialisierung, hat eine maximale Größe von 8.000 Bytes bei der Serialisierung und invariant bezüglich NULL-Werte, die Duplikate und die Reihenfolge ist.  
+  
+ [!code-csharp[DataWorks SqlUserDefinedAggregateAttribute Sample#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlUserDefinedAggregateAttribute Sample/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlUserDefinedAggregateAttribute Sample#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlUserDefinedAggregateAttribute Sample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlUserDefinedAggregateAttribute (Microsoft.SqlServer.Server.Format format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.SqlServer.Server.Format format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.#ctor(Microsoft.SqlServer.Server.Format)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="Microsoft.SqlServer.Server.Format" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eines der <see cref="T:Microsoft.SqlServer.Server.Format" /> Werte, der das Serialisierungsformat des Aggregats darstellt.</param>
+        <summary>Ein erforderliches Attribut auf ein benutzerdefiniertes Aggregat verwendet wird, um anzugeben, dass der angegebene Typ ein benutzerdefiniertes Aggregat und das Speicherformat des benutzerdefinierten Aggregats ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public Microsoft.SqlServer.Server.Format Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.SqlServer.Server.Format Format" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.Format</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Serialisierungsformat als eine <see cref="T:Microsoft.SqlServer.Server.Format" />.</summary>
+        <value>Ein <see cref="T:Microsoft.SqlServer.Server.Format" /> , das das Serialisierungsformat darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[VbRaddataSQLObjects#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSQLObjects/CS/Aggregate1.cs#6)]
+ [!code-vb[VbRaddataSQLObjects#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSQLObjects/VB/Aggregate1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvariantToDuplicates">
+      <MemberSignature Language="C#" Value="public bool IsInvariantToDuplicates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInvariantToDuplicates" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToDuplicates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Aggregat bei Duplikaten unveränderlich ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Aggregat bei Duplikaten unveränderlich ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird vom Abfrageprozessor verwendet und ist für `true` , wenn das Aggregat bei Duplikaten unveränderlich ist. D. h. das Aggregat von S, {X} ist identisch mit dem Aggregat von S, wenn X bereits in s enthalten ist Aggregatfunktionen wie MIN und MAX entsprechen beispielsweise diese Eigenschaft, SUM hingegen nicht.  
+  
+ Falsch Festlegen dieser Eigenschaft kann zu falschen Abfrageergebnissen führen. Diese Eigenschaft ist keinen optimierungstipp; Er wirkt sich auf den ausgewählten Plan und die von der Abfrage zurückgegebenen Ergebnisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvariantToNulls">
+      <MemberSignature Language="C#" Value="public bool IsInvariantToNulls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInvariantToNulls" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToNulls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Aggregat bei NULL-Werten unveränderlich ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Aggregat bei NULL-Werten unveränderlich ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird vom Abfrageprozessor verwendet und ist für `true` , wenn das Aggregat bei NULL-Werten unveränderlich ist. D. h. ist das Aggregat von S, {NULL} identisch mit dem Aggregat von S. Aggregatfunktionen wie MIN und MAX entsprechen beispielsweise diese Eigenschaft, COUNT(*) hingegen nicht.  
+  
+ Falsch Festlegen dieser Eigenschaft kann zu falschen Abfrageergebnissen führen. Diese Eigenschaft ist keinen optimierungstipp; Er wirkt sich auf den ausgewählten Plan und die von der Abfrage zurückgegebenen Ergebnisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvariantToOrder">
+      <MemberSignature Language="C#" Value="public bool IsInvariantToOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInvariantToOrder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Aggregat sortiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Aggregat Reihenfolge unveränderlich ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für zukünftige Verwendung reserviert. Diese Eigenschaft wird derzeit nicht vom Abfrageprozessor verwendet: Reihenfolge wird gegenwärtig nicht gewährleistet.  
+  
+ Falsch Festlegen dieser Eigenschaft kann zu falschen Abfrageergebnissen führen. Diese Eigenschaft ist keinen optimierungstipp; Er wirkt sich auf den ausgewählten Plan und die von der Abfrage zurückgegebenen Ergebnisse.  
+  
+ Der Standardwert für diese Eigenschaft ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullIfEmpty">
+      <MemberSignature Language="C#" Value="public bool IsNullIfEmpty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullIfEmpty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsNullIfEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Aggregat zurückgibt <see langword="null" /> , wenn keine Werte gesammelt wurden.</summary>
+        <value>
+          <see langword="true" />Wenn das Aggregat zurückgibt <see langword="null" /> , wenn keine Werte, andernfalls akkumulierte wurden <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird vom Abfrageprozessor verwendet und ist für `true` , wenn das Aggregat zurückgibt `null` , wenn keine Werte gesammelt wurden.  
+  
+ Falsch Festlegen dieser Eigenschaft kann zu falschen Abfrageergebnissen führen. Diese Eigenschaft ist keinen optimierungstipp; Er wirkt sich auf den ausgewählten Plan und die von der Abfrage zurückgegebenen Ergebnisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxByteSize">
+      <MemberSignature Language="C#" Value="public int MaxByteSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxByteSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die maximale Größe in Bytes, die aggregate-Instanz.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die maximale Größe der aggregate-Instanz darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss nicht für die Serialisierung von systemeigenen Format angegeben werden.  
+  
+ Sie müssen angeben, die <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSize%2A> Eigenschaft bei der UserDefined-Serialisierung <xref:Microsoft.SqlServer.Server.Format>.  
+  
+ Die maximal zulässige Wert für diese Eigenschaft angegeben ist, indem Sie die <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSizeValue> Feld.  
+  
+ Die maximale zulässige Größe ist 2 Gigabyte (GB). Sie können eine Zahl zwischen 1 und 8000 Byte oder -1, um einen Wert größer als 8000 Bytes, bis zu 2 GB darzustellen angeben.  
+  
+ Bei einem Aggregat benutzerdefinierte Serialisierung festgelegt ist <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSize%2A> bezieht sich auf die Gesamtgröße der serialisierten Daten. Angenommen, ein Aggregat serialisiert eine Zeichenfolge von 10 Zeichen (<xref:System.Char>). Wenn die Zeichenfolge serialisiert wird mithilfe einer <xref:System.IO.BinaryWriter>, die Gesamtgröße der serialisierten Zeichenfolge ist 22 Bytes: 2 Bytes pro Unicode-UTF-16-Zeichen, die die maximale Anzahl von Zeichen, multipliziert, plus 2 Steuerelement Bytes Verarbeitungsaufwand entstehen aus beim Serialisieren eines binären Datenstroms . Also wenn bestimmt wird des Werts des <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSize%2A>, muss die Gesamtgröße der serialisierten Daten berücksichtigt werden: die Größe der ins Binärformat serialisierten Daten plus der bei der Serialisierung anfallenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxByteSizeValue">
+      <MemberSignature Language="C#" Value="public const int MaxByteSizeValue = 8000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaxByteSizeValue = (8000)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSizeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>8000</MemberValue>
+      <Docs>
+        <summary>Die maximale Größe in Bytes erforderlich, um den Zustand dieser aggregierten Instanz während der Berechnung zu speichern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Int32> Wert, der die maximale Größe der aggregate-Instanz darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name des Aggregats.</summary>
+        <value>Ein <see cref="T:System.String" /> Wert, der den Namen des Aggregats darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

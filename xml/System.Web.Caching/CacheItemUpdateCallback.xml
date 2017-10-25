@@ -1,0 +1,46 @@
+<Type Name="CacheItemUpdateCallback" FullName="System.Web.Caching.CacheItemUpdateCallback">
+  <TypeSignature Language="C#" Value="public delegate void CacheItemUpdateCallback(string key, CacheItemUpdateReason reason, out object expensiveObject, out CacheDependency dependency, out DateTime absoluteExpiration, out TimeSpan slidingExpiration);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CacheItemUpdateCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheItemUpdateCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="key" Type="System.String" />
+    <Parameter Name="reason" Type="System.Web.Caching.CacheItemUpdateReason" />
+    <Parameter Name="expensiveObject" Type="System.Object&amp;" RefType="out" />
+    <Parameter Name="dependency" Type="System.Web.Caching.CacheDependency&amp;" RefType="out" />
+    <Parameter Name="absoluteExpiration" Type="System.DateTime&amp;" RefType="out" />
+    <Parameter Name="slidingExpiration" Type="System.TimeSpan&amp;" RefType="out" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="key">Der Bezeichner des Elements, das aus dem Cache entfernt werden soll.</param>
+    <param name="reason">Der Grund, aus dem das Element aus dem Cache entfernt werden soll.</param>
+    <param name="expensiveObject">Enthält nach Rückgabe dieser Methode das zwischengespeicherte Elementobjekt, das die Updates enthält.</param>
+    <param name="dependency">Enthält nach Rückgabe dieser Methode das Objekt, das die Abhängigkeit zwischen dem Elementobjekt und einer Datei, einem Cacheschlüssel, einem Array aus Dateien oder Cacheschlüsseln oder einem anderen <see cref="T:System.Web.Caching.CacheDependency" />-Objekt definiert.</param>
+    <param name="absoluteExpiration">Enthält nach Rückgabe dieser Methode die Uhrzeit, zu der das Objekt abgelaufen ist.</param>
+    <param name="slidingExpiration">Enthält nach Rückgabe dieser Methode das Intervall zwischen dem Zeitpunkt des letzten Zugriffs auf das Objekt und dem Ablaufzeitpunkt des Objekts.</param>
+    <summary>Definiert eine Rückrufmethode zur Benachrichtigung von Anwendungen, bevor ein zwischengespeichertes Element aus dem Cache entfernt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Objekt im Cache abläuft, ruft ASP.NET die <xref:System.Web.Caching.CacheItemUpdateCallback> Methode mit dem Schlüssel für das Element im Cache und der Grund kann das Element aktualisieren möchten. Die übrigen Parameter dieser Methode sind out-Parameter. Sie geben Sie den neuen zwischengespeicherten Elements und optional Ablauf und Abhängigkeit Werte zu verwenden, wenn das zwischengespeicherte Element zu aktualisieren.  
+  
+ Der Updaterückruf wird nicht aufgerufen, wenn das zwischengespeicherte Element explizit entfernt wird, mithilfe eines Aufrufs an <xref:System.Web.Caching.Cache.Remove%2A>.  
+  
+ Wenn Sie das zwischengespeicherte Element, aus dem Cache entfernt werden soll, können Sie zurückkehren `null` in der `expensiveObject` Parameter. Andernfalls, Sie einen Verweis auf die neue zwischengespeicherte Daten zurückgeben, indem die `expensiveObject` Parameter. Wenn Sie keine Ablaufzeit oder Abhängigkeit Werte angeben, wird das Element aus dem Cache entfernt werden, nur, wenn Arbeitsspeicher benötigt wird.  
+  
+ Wenn die Rückrufmethode eine Ausnahme auslöst, wird ASP.NET unterdrückt die Ausnahme und entfernt den zwischengespeicherten Wert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

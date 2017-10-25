@@ -1,0 +1,223 @@
+<Type Name="ChartNamedElementCollection&lt;T&gt;" FullName="System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ChartNamedElementCollection&lt;T&gt; : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;T&gt; where T : ChartNamedElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChartNamedElementCollection`1&lt;(class System.Web.UI.DataVisualization.Charting.ChartNamedElement) T&gt; extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">T</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartNamedElement" />-Objekt.</typeparam>
+    <summary>Stellt die Basisklasse für alle Auflistungen benannter Diagrammelemente dar. Führt die Namenverwaltung aus und erzwingt die Eindeutigkeit der Namen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindByName">
+      <MemberSignature Language="C#" Value="public virtual T FindByName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !T FindByName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.FindByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Diagrammelements.</param>
+        <summary>Sucht das Diagrammelement mit dem angegebenen Namen.</summary>
+        <returns>Die <see cref="T:System.Web.UI.DataVisualization.Charting.ChartNamedElement" /> Objekt mit dem angegebenen Namen in der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Diagrammelements.</param>
+        <summary>Sucht den Index des Diagrammelements mit dem angegebenen Namen.</summary>
+        <returns>Ein <see langword="integer" /> Wert, der die Position in den nullbasierten Index des Diagrammelements darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, in dem das Element eingefügt werden soll.</param>
+        <param name="item">Das einzufügende Objekt.</param>
+        <summary>Fügt das angegebene Element in der Auflistung am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUniqueName">
+      <MemberSignature Language="C#" Value="public virtual bool IsUniqueName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUniqueName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.IsUniqueName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der neue Name des Diagramm-Element.</param>
+        <summary>Bestimmt, ob das Diagrammelement mit dem angegebenen Namen bereits in der Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="True" />Wenn das neue Diagrammelementname eindeutig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Diagrammelements.</param>
+        <summary>Ruft ab oder legt das Diagrammelement mit dem angegebenen Namen.</summary>
+        <value>Die <see cref="T:System.Web.UI.DataVisualization.Charting.ChartNamedElement" /> Objekt mit dem angegebenen Namen in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamePrefix">
+      <MemberSignature Language="C#" Value="protected virtual string NamePrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamePrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.NamePrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Präfix, das zum Erstellen von eindeutigen Diagrammelementnamen verwendet wird.</summary>
+        <value>Ein <see langword="string" /> Wert, der das Standardpräfix Name, der in der Auflistung gespeicherten Diagrammelemente darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextUniqueName">
+      <MemberSignature Language="C#" Value="public virtual string NextUniqueName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string NextUniqueName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.NextUniqueName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sucht den eindeutigen Namen für das neue Element der Auflistung hinzugefügt werden.</summary>
+        <returns>Ein <see langword="string" /> Wert, der den Namen der nächsten eindeutige Diagramm Element darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Diagrammelements.</param>
+        <summary>Entfernt das Diagrammelement am angegebenen Index der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1.SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Diagrammelements.</param>
+        <param name="item">Das neue Diagrammelement am angegebenen Index eingefügt.</param>
+        <summary>Ersetzt das Diagrammelement am angegebenen Index durch ein neues Diagrammelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

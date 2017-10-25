@@ -1,0 +1,420 @@
+<Type Name="HttpHandlerActionCollection" FullName="System.Web.Configuration.HttpHandlerActionCollection">
+  <TypeSignature Language="C#" Value="public sealed class HttpHandlerActionCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpHandlerActionCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpHandlerActionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.HttpHandlerAction), CollectionType=System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMapAlternate)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.Configuration.HttpHandlerAction" />-Elementen dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.HttpHandlerActionCollection> "Sammlung" ermöglicht den Zugriff auf die <xref:System.Web.Configuration.HttpHandlerAction> Elemente des Konfigurationsabschnitts für die Konfiguration.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.HttpHandlerActionCollection> Auflistung von enthaltene Informationen den Zugriff auf die `httpHandlers` Abschnitt einer Konfigurationsdatei.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#2)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#2)]  
+  
+ Der folgende Auszug aus der Konfiguration wird gezeigt, wie Sie Werte für deklarativ angeben, die `httpHandlers` Abschnitt.  
+  
+```  
+<httpHandlers>  
+  <add path="Calculator.custom"  
+    type="Samples.AspNet.SystemWebConfiguration.Calculator, CalculatorHandler"  
+    verb="GET" validate="false" />  
+</httpHandlers>   
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpHandlerActionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.HttpHandlerActionCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.HttpHandlerActionCollection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.HttpHandlerActionCollection> Klasse, indem die <xref:System.Web.Configuration.HttpHandlersSection.Handlers%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.HttpHandlerAction httpHandlerAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.HttpHandlerAction httpHandlerAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.Add(System.Web.Configuration.HttpHandlerAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpHandlerAction" Type="System.Web.Configuration.HttpHandlerAction" />
+      </Parameters>
+      <Docs>
+        <param name="httpHandlerAction">Das <see cref="T:System.Web.Configuration.HttpHandlerAction" />-Objekt, das zur Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.HttpHandlerAction" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bevor Sie mit dieser Methode müssen Sie erstellen ein <xref:System.Web.Configuration.HttpHandlerAction> Objekt, und initialisieren Sie es mit dem richtigen Namen und Typ. Danach können Sie das Objekt, das gerade erstellt haben, auf die Auflistung hinzufügen.  
+  
+> [!NOTE]
+>  ASP.NET sucht die DLL-Assembly in der Anwendung privaten Verzeichnis "bin" zuerst und sucht dann in der Assemblycache des Systems.  
+  
+ Die Auflistung darf nicht bereits ein <xref:System.Web.Configuration.HttpHandlerAction> Objekt mit derselben <xref:System.Web.Configuration.HttpHandlerAction.Verb%2A> und <xref:System.Web.Configuration.HttpHandlerAction.Path%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.Web.Configuration.HttpHandlerAction> Objekt, und fügen Sie es der Auflistung hinzu.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#3)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.HttpHandlerAction" /> Objekt bereits in der Auflistung vorhanden ist oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.Configuration.HttpHandlerAction" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `clear` Richtlinie in den entsprechenden Abschnitt der Konfigurationsdatei So löschen Sie alle Verweise auf Elemente in einer Konfigurationsdatei definiert. Entfernt alle Elemente im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Deaktivieren der <xref:System.Web.Configuration.HttpHandlerAction> in der Auflistung enthaltenen Objekte. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HttpHandlerActionCollection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#12)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerActionCollection.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des <see cref="T:System.Web.Configuration.HttpHandlerActionCollection" />.</summary>
+        <value>Die <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> dieser Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Configuration.HttpHandlerAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Configuration.HttpHandlerAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.IndexOf(System.Web.Configuration.HttpHandlerAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Web.Configuration.HttpHandlerAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die <see cref="T:System.Web.Configuration.HttpHandlerAction" /> Objekt, für das den Auflistungsindex abgerufen.</param>
+        <summary>Ruft den Auflistungsindex des angegebenen <see cref="T:System.Web.Configuration.HttpHandlerAction" /> Objekt.</summary>
+        <returns>Der Indexwert der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bevor Sie mit dieser Methode müssen Sie bestimmen, ein <xref:System.Web.Configuration.HttpHandlerAction> Objekt mit dem richtigen Namen und Typ. Dieses Objekt können dann den Auflistungsindex abrufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Web.Configuration.HttpHandlerAction> Auflistungsindex Objekt.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#9)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.HttpHandlerAction this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.HttpHandlerAction Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerActionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.HttpHandlerAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements.</param>
+        <summary>Ruft ab oder legt ein Element in dieser Auflistung.</summary>
+        <value>Das ausgewählte <see cref="T:System.Web.Configuration.HttpHandlerAction" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur zur internen Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerActionCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Configuration.HttpHandlerAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Configuration.HttpHandlerAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.Remove(System.Web.Configuration.HttpHandlerAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Web.Configuration.HttpHandlerAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Das zu entfernende <see cref="T:System.Web.Configuration.HttpHandlerAction" />-Objekt.</param>
+        <summary>Entfernt ein <see cref="T:System.Web.Configuration.HttpHandlerAction" /> Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Entfernen einer <xref:System.Web.Configuration.HttpHandlerAction> Objekt aus der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#10)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Der übergebene <see cref="T:System.Web.Configuration.HttpHandlerAction" /> Objekt in der Auflistung nicht vorhanden, das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string verb, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string verb, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.Remove(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="verb">Die <see cref="P:System.Web.Configuration.HttpHandlerAction.Verb" /> -Eigenschaftswert ab, der die zu entfernende Handler gehört.</param>
+        <param name="path">Die <see cref="P:System.Web.Configuration.HttpHandlerAction.Path" /> -Eigenschaftswert ab, der die zu entfernende Handler gehört.</param>
+        <summary>Entfernt ein <see cref="T:System.Web.Configuration.HttpHandlerAction" /> Objekt mit dem angegebenen <see cref="P:System.Web.Configuration.HttpHandlerAction.Verb" /> und <see cref="P:System.Web.Configuration.HttpHandlerAction.Path" /> Eigenschaften aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Entfernen einer <xref:System.Web.Configuration.HttpHandlerAction> Objekt aus der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#13)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.HttpHandlerAction" /> -Objekt mit dem angegebenen Schlüssel in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerActionCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Auflistungsindex der zu entfernende Objekt.</param>
+        <summary>Entfernt ein <see cref="T:System.Web.Configuration.HttpHandlerAction" /> Objekt an der angegebenen Indexposition aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Entfernen einer <xref:System.Web.Configuration.HttpHandlerAction> Objekt aus der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#11)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.HttpHandlerAction" /> -Objekt am angegebenen Index in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnDuplicate">
+      <MemberSignature Language="C#" Value="protected override bool ThrowOnDuplicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnDuplicate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerActionCollection.ThrowOnDuplicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,153 @@
+<Type Name="TcpConnectionPoolSettings" FullName="System.ServiceModel.Channels.TcpConnectionPoolSettings">
+  <TypeSignature Language="C#" Value="public sealed class TcpConnectionPoolSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TcpConnectionPoolSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TcpConnectionPoolSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften dar, die das Verhalten des TCP-Verbindungspools kontrollieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpConnectionPoolSettings.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Gruppennamen der Verbindungspoolgruppe auf dem Client ab oder legt diesen fest.</summary>
+        <value>Der Gruppenname der Verbindungspoolgruppe auf dem Client. Der Standardname lautet "default".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert kann geändert werden, um die Verbindungen für einen bestimmten Client in separate Gruppen zu isolieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpConnectionPoolSettings.IdleTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Zeit ab oder legt die maximale Zeit fest, in der sich eine Verbindung im Verbindungspool im Leerlauf befinden kann, bevor sie unterbrochen wird.</summary>
+        <value>Gibt eine <see cref="T:System.TimeSpan" />-Struktur zurück, die die maximale Zeit angibt, in der sich eine Verbindung im Verbindungspool im Leerlauf befinden kann, bevor sie unterbrochen wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaseTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan LeaseTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan LeaseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpConnectionPoolSettings.LeaseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dauer ab oder legt die Dauer fest, nach der eine Verbindung im Verbindungspool geschlossen wird.</summary>
+        <value>Gibt eine <see cref="T:System.TimeSpan" />-Struktur zurück, die die Dauer angibt, nach der eine zwischengespeicherte TCP-Verbindung aus dem Verbindungspool gelöscht wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft begrenzt die Gesamtlebensdauer von einem Socket. Ist ein Socket länger als <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings.LeaseTimeout%2A> anwesend, wird dieser geschlossen, sobald er zum Verbindungspool zurückkehrt. Der vom TCP-Transport verwendete Verbindungscache erstellt die für jeden Endpunkt erforderlichen neuen Verbindungen bis hin zu einem Cachelimit, das von <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint%2A> gesetzt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert kann nicht kleiner als 0 (null) sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOutboundConnectionsPerEndpoint">
+      <MemberSignature Language="C#" Value="public int MaxOutboundConnectionsPerEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxOutboundConnectionsPerEndpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TcpConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von ausgehenden Verbindungen für jeden Endpunkt ab, der im Verbindungspool zwischengespeichert wird, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl an erlaubten ausgehenden Verbindungen für jeden Endpunkt, der im Verbindungspool zwischengespeichert wird. Der Standardwert ist 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies schränkt die Anzahl von Verbindungen ein, die für jeden eindeutigen Remoteendpunkt zwischengespeichert werden. Wird dieser Wert durch zu viele aktive Clientverbindungen überschritten, reagiert der Dienst möglicherweise nicht mehr auf den Client, und dieser Wert sollte daraufhin angepasst werden, dass er die maximale Anzahl an erwarteten Verbindungen, die für jeden eindeutigen Remoteendpunkt zwischengespeichert werden, übersteigt.  
+  
+ Diese Einstellung kann auch festgelegt werden, auf der Dienstseite, in der der Wert wird zum Festlegen der <xref:System.ServiceModel.Channels.MaxPooledConnections%2A> auf die <xref:System.ServiceModel.Channels.TcpChannelListener>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

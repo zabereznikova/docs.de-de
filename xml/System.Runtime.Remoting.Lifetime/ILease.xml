@@ -1,0 +1,278 @@
+<Type Name="ILease" FullName="System.Runtime.Remoting.Lifetime.ILease">
+  <TypeSignature Language="C#" Value="public interface ILease" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ILease" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Lifetime.ILease" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Lebensdauerlease-Objekt, das vom Dienst Lebensdauer Remoting verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Garbage Collection-Steuerelemente verteilt, wenn serveranwendungen gelöscht werden können. Üblicherweise verwendet die verteilte Garbagecollection Verweiszähler und Ping-Signale für Steuerelement. Dies funktioniert gut, wenn einige Clients pro Objekt definiert, aber nicht funktioniert gut, wenn Tausende von Clients pro jedes Objekt. Die Lebensdauerdienst kann die Funktion von einem herkömmlichen verteilten Garbage Collector und Skalierungen voraussetzen, gut, wenn die Anzahl der Clients zunimmt.  
+  
+ Der Lebensdauerdienst ordnet eine Lease jedem Remote aktivierten Objekt an. Wenn die Lease abläuft, wird das Objekt entfernt. Eine Lease kann angeben, dass ein Objekt eine unbegrenzte Lebensdauer verfügt.  
+  
+ Jede <xref:System.AppDomain> enthält einen Lease-Manager, die die Leasedauer in der Domäne verwaltet. Der Lease-Manager überprüft in regelmäßigen Abständen die Leasedauer für den Ablauf der Zeit. Wenn eine Lease abgelaufen ist, können sie entweder durch Entfernen des Verweises auf die Lease abgebrochen oder durch den Aufruf eine oder mehrere der Sponsoren die Lease erneuert.  
+  
+ Eine Lease enthält Eigenschaften, die bestimmen, die Richtlinien und Methoden, die die Lease zu erneuern. Die Lease macht die <xref:System.Runtime.Remoting.Lifetime.ILease> Schnittstelle.  
+  
+ Ein Beispiel zur Verwendung der <xref:System.Runtime.Remoting.Lifetime.ILease> Schnittstelle finden Sie unter [Lebensdauer](http://msdn.microsoft.com/en-us/334a30e5-33cb-4f0f-a38a-ed4abc5560fa).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentLeaseTime">
+      <MemberSignature Language="C#" Value="public TimeSpan CurrentLeaseTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CurrentLeaseTime" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Menge der verbleibende Zeit für die Lease ab.</summary>
+        <value>Die Zeitspanne, für die Lease verbleiben.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentState">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Lifetime.LeaseState CurrentState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Remoting.Lifetime.LeaseState CurrentState" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.ILease.CurrentState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Lifetime.LeaseState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen <see cref="T:System.Runtime.Remoting.Lifetime.LeaseState" /> der Lease.</summary>
+        <value>Die aktuelle <see cref="T:System.Runtime.Remoting.Lifetime.LeaseState" /> der Lease.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialLeaseTime">
+      <MemberSignature Language="C#" Value="public TimeSpan InitialLeaseTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan InitialLeaseTime" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.ILease.InitialLeaseTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anfangszeit für die Lease.</summary>
+        <value>Die Anfangszeit für die Lease.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Runtime.Remoting.Lifetime.ILease.InitialLeaseTime%2A> -Eigenschaftensatz auf <xref:System.TimeSpan?displayProperty=nameWithType>, klicken Sie dann die Lease nie durch einen Timeout beendet und das Objekt zugeordnet, wird eine unbegrenzte Lebensdauer haben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public void Register (System.Runtime.Remoting.Lifetime.ISponsor obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Register(class System.Runtime.Remoting.Lifetime.ISponsor obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ILease.Register(System.Runtime.Remoting.Lifetime.ISponsor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Runtime.Remoting.Lifetime.ISponsor" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das von der Sponsor Callback-Objekt.</param>
+        <summary>Registriert einen Sponsor für die Lease ohne die Erneuerung der Lease an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Sponsor mit der aktuellen Methode registriert ist, wird die Lease nicht erneuert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public void Register (System.Runtime.Remoting.Lifetime.ISponsor obj, TimeSpan renewalTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Register(class System.Runtime.Remoting.Lifetime.ISponsor obj, valuetype System.TimeSpan renewalTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ILease.Register(System.Runtime.Remoting.Lifetime.ISponsor,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Runtime.Remoting.Lifetime.ISponsor" />
+        <Parameter Name="renewalTime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das von der Sponsor Callback-Objekt.</param>
+        <param name="renewalTime">Die Zeitdauer, um die Lease erneuert wird.</param>
+        <summary>Registriert einen Sponsor für den Lease und erneuert ihn durch den angegebenen <see cref="T:System.TimeSpan" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Renew">
+      <MemberSignature Language="C#" Value="public TimeSpan Renew (TimeSpan renewalTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TimeSpan Renew(valuetype System.TimeSpan renewalTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ILease.Renew(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="renewalTime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="renewalTime">Die Zeitdauer, um die Lease erneuert wird.</param>
+        <summary>Erneuert eine Lease für die angegebene Zeit.</summary>
+        <returns>Die neue Ablaufzeit der Lease.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Leasedauer wird festgelegt, auf das Maximum von der <xref:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime%2A> oder die aktuelle Zeit plus der Erneuerungszeitraum.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewOnCallTime">
+      <MemberSignature Language="C#" Value="public TimeSpan RenewOnCallTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RenewOnCallTime" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.ILease.RenewOnCallTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne, die mit dem ein Aufruf des Remoteobjekts erneuert die <see cref="P:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime" />.</summary>
+        <value>Die Zeitspanne, die mit dem ein Aufruf des Remoteobjekts erneuert die <see cref="P:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Aufruf eines Remoteobjekts vornehmen, fügt der Lebensdauerdienst der <xref:System.Runtime.Remoting.Lifetime.ILease.RenewOnCallTime%2A> auf der <xref:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime%2A> nur, wenn der <xref:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime%2A> wurde gelöscht, unterhalb der <xref:System.Runtime.Remoting.Lifetime.ILease.RenewOnCallTime%2A>. Sequenzielle Aufrufe steigen daher nicht die <xref:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime%2A> ohne Grenze. Stattdessen sofort nach jedem Aufruf der <xref:System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime%2A> ist garantiert die <xref:System.Runtime.Remoting.Lifetime.ILease.RenewOnCallTime%2A> oder länger.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SponsorshipTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan SponsorshipTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SponsorshipTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.ILease.SponsorshipTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie der Wartezeit für einen Sponsor eine Lease-Erneuerungszeitraum zurückgegeben werden.</summary>
+        <value>Die Menge der Wartezeit für einen Sponsor eine Lease-Erneuerungszeitraum zurückgegeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Runtime.Remoting.Lifetime.ILease.SponsorshipTimeout%2A> ist <xref:System.TimeSpan?displayProperty=nameWithType>, und klicken Sie dann diese Lease nicht Sponsoren dauert.  
+  
+ Wenn ein Sponsor zu einem Aufruf zum Verlängern einer Lease innerhalb des Timeoutzeitraums nicht reagiert, wird davon ausgegangen, dass inaktive und aus der Liste der Sponsoren für die aktuelle Lease entfernt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public void Unregister (System.Runtime.Remoting.Lifetime.ISponsor obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unregister(class System.Runtime.Remoting.Lifetime.ISponsor obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ILease.Unregister(System.Runtime.Remoting.Lifetime.ISponsor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Runtime.Remoting.Lifetime.ISponsor" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der Leasesponsor, dessen Registrierung aufgehoben werden soll.</param>
+        <summary>Entfernt einen Sponsor aus der Sponsorenliste.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

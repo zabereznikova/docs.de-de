@@ -1,0 +1,449 @@
+<Type Name="CngAlgorithmGroup" FullName="System.Security.Cryptography.CngAlgorithmGroup">
+  <TypeSignature Language="C#" Value="public sealed class CngAlgorithmGroup : IEquatable&lt;System.Security.Cryptography.CngAlgorithmGroup&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CngAlgorithmGroup extends System.Object implements class System.IEquatable`1&lt;class System.Security.Cryptography.CngAlgorithmGroup&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngAlgorithmGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Security.Cryptography.CngAlgorithmGroup&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt den Namen einer Verschlüsselungsalgorithmusgruppe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.CngAlgorithmGroup> Klasse ist eine Hilfsprogrammklasse. Er besteht aus statischen Eigenschaften, Methoden zum Zeichenfolgenvergleich und eine Private, intern verwaltete Zeichenfolge, die einen Algorithmusgruppennamen definiert.  
+  
+ Die Eigenschaften für statischen Rückgabe <xref:System.Security.Cryptography.CngAlgorithmGroup> Objekte. Jedes Objekt interne Zeichenfolge initialisiert wird auf den Namen der Algorithmus, der den Namen der statischen Eigenschaft entspricht.  
+  
+ Sie können diese Klasse auch verwenden, zum Erstellen von Objekten für den Algorithmusgruppen, die durch die statischen Eigenschaften nicht abgedeckt werden.  
+  
+ Mehrere Cryptography Next Generation (CNG)-Klassen (z. B. <xref:System.Security.Cryptography.CngKey>) zurückgeben <xref:System.Security.Cryptography.CngAlgorithmGroup> Objekte. Klassen, die erhalten <xref:System.Security.Cryptography.CngAlgorithm> Objekte können der eingebettete Algorithmusname Gruppe abrufen, indem Sie des Objekts aufrufen <xref:System.Security.Cryptography.CngKey.AlgorithmGroup%2A> Eigenschaft.  
+  
+ Aus diesem Grund <xref:System.Security.Cryptography.CngAlgorithmGroup> dient als eine Enumeration von bekannten Algorithmusgruppen. Sie können Sie einen Algorithmusgruppennamen angeben, mit einem stark typisierten Wert anstelle einer Zeichenfolge.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngAlgorithmGroup (string algorithmGroup);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string algorithmGroup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="algorithmGroup" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithmGroup">Der Name der Algorithmusgruppe initialisiert werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen der <xref:System.Security.Cryptography.CngAlgorithmGroup> Klasse intern verwalten, den Algorithmusgruppennamen, die von angegeben wird die `algorithmGroup` Parameter.  
+  
+ Der Hauptzweck dieses Konstruktors ist eine Methode zum Erstellen von angeben <xref:System.Security.Cryptography.CngAlgorithmGroup> Objekte für den Algorithmusgruppen, die nicht durch die statischen Eigenschaften der dargestellt werden die <xref:System.Security.Cryptography.CngAlgorithmGroup> Klasse. Diese Kapazität können in zukünftigen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Versionen, Servicepacks und Drittanbieter-Entwickler neue Algorithmusgruppen hinzufügen, die genau wie der Algorithmusgruppen zugegriffen werden kann, die derzeit verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="algorithmGroup" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="algorithmGroup" /> die Parameterlänge ist 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmGroup">
+      <MemberSignature Language="C#" Value="public string AlgorithmGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AlgorithmGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.AlgorithmGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Algorithmusgruppe ab, die das aktuelle <see cref="T:System.Security.Cryptography.CngAlgorithm" /> Objekt angibt.</summary>
+        <value>Der Gruppenname des eingebetteten Algorithmus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiffieHellman">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngAlgorithmGroup DiffieHellman { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngAlgorithmGroup DiffieHellman" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.DiffieHellman" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithmGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> Objekt, das die Diffie-Hellman-Familie von Algorithmen angibt.</summary>
+        <value>Ein Objekt, das die Diffie-Hellman-Familie von Algorithmen angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dsa">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngAlgorithmGroup Dsa { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngAlgorithmGroup Dsa" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.Dsa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithmGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> Objekt, das dem Digital Signature Algorithm (DSA)-Familie von Algorithmen angibt.</summary>
+        <value>Ein Objekt, das DSA-Familie von Algorithmen angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ECDiffieHellman">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngAlgorithmGroup ECDiffieHellman { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngAlgorithmGroup ECDiffieHellman" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.ECDiffieHellman" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithmGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> Objekt, das die Elliptic Curve Diffie-Hellman (ECDH)-Familie von Algorithmen angibt.</summary>
+        <value>Ein Objekt, das die ECDH-Familie von Algorithmen angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ECDsa">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngAlgorithmGroup ECDsa { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngAlgorithmGroup ECDsa" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.ECDsa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithmGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> Objekt, das die ECDSA (ELLIPTIC Curve Digital Signature Algorithm)-Familie von Algorithmen angibt.</summary>
+        <value>Ein Objekt, das die ECDSA-Familie von Algorithmen angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dem aktuellen <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" />-Objekt verglichen werden soll.</param>
+        <summary>Vergleicht das angegebene Objekt mit dem aktuellen <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" />-Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="obj" /> Parameter ist ein <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> darstellt, der denselben Algorithmus angibt wie das aktuelle Objekt, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Security.Cryptography.CngAlgorithmGroup other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Security.Cryptography.CngAlgorithmGroup other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.Equals(System.Security.Cryptography.CngAlgorithmGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.Cryptography.CngAlgorithmGroup" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein Objekt, das mit dem aktuellen <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" />-Objekt verglichen werden soll.</param>
+        <summary>Vergleicht das angegebene <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" />-Objekt mit dem aktuellen <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" />-Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="other" /> -Parameter denselben Algorithmus angibt wie das aktuelle Objekt, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Hashwert für den Algorithmusgruppennamen, die in der aktuellen eingebettet sind <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> Objekt.</summary>
+        <returns>Der Hashwert, der der eingebettete Algorithmusname Gruppe werden sollen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Security.Cryptography.CngAlgorithmGroup left, System.Security.Cryptography.CngAlgorithmGroup right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Security.Cryptography.CngAlgorithmGroup left, class System.Security.Cryptography.CngAlgorithmGroup right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.op_Equality(System.Security.Cryptography.CngAlgorithmGroup,System.Security.Cryptography.CngAlgorithmGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.CngAlgorithmGroup" />
+        <Parameter Name="right" Type="System.Security.Cryptography.CngAlgorithmGroup" />
+      </Parameters>
+      <Docs>
+        <param name="left">Ein Objekt, das eine Algorithmusgruppe angibt.</param>
+        <param name="right">Ein zweites Objekt, das mit dem Objekt verglichen werden soll, die durch identifiziert wird die <c>linken</c> Parameter.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> Objekte angeben, die denselben Algorithmusgruppe.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Objekte den gleichen Algorithmusgruppe angeben. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Security.Cryptography.CngAlgorithmGroup left, System.Security.Cryptography.CngAlgorithmGroup right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Security.Cryptography.CngAlgorithmGroup left, class System.Security.Cryptography.CngAlgorithmGroup right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.op_Inequality(System.Security.Cryptography.CngAlgorithmGroup,System.Security.Cryptography.CngAlgorithmGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.CngAlgorithmGroup" />
+        <Parameter Name="right" Type="System.Security.Cryptography.CngAlgorithmGroup" />
+      </Parameters>
+      <Docs>
+        <param name="left">Ein Objekt, das eine Algorithmusgruppe angibt.</param>
+        <param name="right">Ein zweites Objekt, das mit dem Objekt verglichen werden soll, die durch identifiziert wird die <c>linken</c> Parameter.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> -Objekte nicht den gleichen Algorithmusgruppe angeben.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Objekte nicht den gleichen Algorithmusgruppe angeben; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rsa">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngAlgorithmGroup Rsa { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngAlgorithmGroup Rsa" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.Rsa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithmGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> Objekt, das die Rivest-Shamir-Adleman (RSA)-Familie von Algorithmen angibt.</summary>
+        <value>Ein Objekt, das die RSA-Familie von Algorithmen angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen der Algorithmusgruppe ab, die das aktuelle <see cref="T:System.Security.Cryptography.CngAlgorithm" /> Objekt angibt.</summary>
+        <returns>Der Gruppenname des eingebetteten Algorithmus.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

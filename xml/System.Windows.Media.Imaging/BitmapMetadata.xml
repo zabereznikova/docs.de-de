@@ -1,0 +1,914 @@
+<Type Name="BitmapMetadata" FullName="System.Windows.Media.Imaging.BitmapMetadata">
+  <TypeSignature Language="C#" Value="public class BitmapMetadata : System.Windows.Media.ImageMetadata, System.Collections.Generic.IEnumerable&lt;string&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BitmapMetadata extends System.Windows.Media.ImageMetadata implements class System.Collections.Generic.IEnumerable`1&lt;string&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.ImageMetadata</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.String&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet Unterstützung für das Lesen und Schreiben von Metadaten in einem Bitmapbild.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadaten, die einem Bild zugeordnet sind Daten, die das Bild beschreibt, aber ist nicht erforderlich, zur Anzeige des Bilds. Jede unterstützte Bitmap Bildmetadaten Format Handles unterschiedlich, aber die Funktion zum Lesen und Schreiben von Metadaten ist identisch.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], tEXt ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] Textdaten), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], und [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+ Wenn eine <xref:System.Windows.Media.Imaging.BitmapMetadata> wird verfügbar gemacht, indem eine <xref:System.Windows.Media.Imaging.BitmapFrame> abgerufen, die mithilfe einer <xref:System.Windows.Media.Imaging.BitmapDecoder>, es ist standardmäßig schreibgeschützt und änderbare Vorgänge werden eine Ausnahme ausgelöst. Wenn es von verfügbar gemacht wird eine <xref:System.Windows.Media.Imaging.BitmapFrame> , umschließt eine andere <xref:System.Windows.Media.Imaging.BitmapSource>, änderbare auf Konstruktion ist.  
+  
+ Die <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> und <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Methoden zum Erstellen und Lesen von Metadatenabfragen verwendet werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Schreiben von Metadaten, die eine [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] Bild mithilfe der IFD und [!INCLUDE[TLA2#tla_exif](~/includes/tla2sharptla-exif-md.md)] Schemas.  
+  
+ [!code-csharp[BitmapFrameExample#7](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#7)]
+ [!code-vb[BitmapFrameExample#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapMetadata (string containerFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string containerFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="containerFormat" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="containerFormat">Das Format des Bitmapbilds, angegeben als "Gif", "Jpg", "Png" oder "Tiff".</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> für die Verwendung mit dem angegebenen Bildformat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Schreiben von Metadaten, die eine [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] Bild mithilfe der IFD und [!INCLUDE[TLA2#tla_exif](~/includes/tla2sharptla-exif-md.md)] Schemas.  
+  
+ [!code-csharp[BitmapFrameExample#7](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#7)]
+ [!code-vb[BitmapFrameExample#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="containerFormat" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Namen der Anwendung bezeichnet, die zum Konstruieren oder Ändern einer Bilddatei verwendet wurde, oder legt diesen fest.</summary>
+        <value>Der Name der Anwendung, die zum Konstruieren oder Ändern einer Bilddatei verwendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Author">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; Author { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; Author" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Author" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der den Autor eines Bilds darstellt.</summary>
+        <value>Der Autor des Bilds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CameraManufacturer">
+      <MemberSignature Language="C#" Value="public string CameraManufacturer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CameraManufacturer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.CameraManufacturer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines Werts, der den Hersteller der Kamera identifiziert, der einem Bild zugeordnet ist.</summary>
+        <value>Der Hersteller der Kamera, der einem Bild zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CameraModel">
+      <MemberSignature Language="C#" Value="public string CameraModel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CameraModel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.CameraModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das Kameramodell identifiziert, mit dem das Bild aufgenommen wurde, oder legt diesen Wert fest.</summary>
+        <value>Das Kameramodell, mit dem das Bild aufgenommen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapMetadata Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.BitmapMetadata Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das zu klonende <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />.</param>
+        <summary>Macht diese Instanz zu einer tiefen Kopie der angegebenen <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.Clone%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer änderbaren Kopie des aktuellen Objekts <xref:System.Windows.Freezable.Clone%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCore%2A?displayProperty=nameWithType>.  
+  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das zu klonende <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />.</param>
+        <summary>Macht diese Instanz mithilfe aktueller Eigenschaftswerte zu einer tiefen Kopie der angegebenen <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />, die geändert werden kann. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.CloneCurrentValue%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer änderbaren Kopie des aktuellen Objekts <xref:System.Windows.Freezable.CloneCurrentValue%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValueCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public string Comment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der einen Kommentar darstellt, der der Bilddatei zugeordnet ist, oder legt diesen fest.</summary>
+        <value>Ein Kommentar, der der Bilddatei zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsQuery">
+      <MemberSignature Language="C#" Value="public bool ContainsQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.ContainsQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Identifiziert die Zeichenfolge, die im aktuellen <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />-Objekt abgefragt wird.</param>
+        <summary>Ermittelt, ob eine bestimmte Abfragezeichenfolge innerhalb eines <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />-Objekts vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Abfragezeichenfolge innerhalb des Metadatenspeichers gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadaten, die einem Bild zugeordnet ist, Daten, die das Bild beschreibt, aber dies ist nicht erforderlich, für die Anzeige des Bilds. Jede unterstützte Bitmap Bildmetadaten Format Handles unterschiedlich, aber die Funktion zum Lesen und Schreiben von Metadaten ist identisch.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], tEXt ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] Textdaten), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], und [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copyright">
+      <MemberSignature Language="C#" Value="public string Copyright { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Copyright" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Copyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der Copyrightinformationen angibt, die der Bilddatei zugeordnet sind, oder legt diesen fest.</summary>
+        <value>Die Copyrightinformationen, die der Bilddatei zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Implementierung von <see cref="M:System.Windows.Freezable.CreateInstance" />.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTaken">
+      <MemberSignature Language="C#" Value="public string DateTaken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DateTaken" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.DateTaken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der das Datum angibt, an dem das Image erstellt wurde.</summary>
+        <value>Das Datum, an dem das Image erstellt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das Format des Bilds angibt.</summary>
+        <value>Das Format des Bitmapbilds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie verschiedene Eigenschaften Lesen der <xref:System.Windows.Media.Imaging.BitmapMetadata> Objekt, und senden ihre Parameterwerte an eine <xref:System.Windows.MessageBox> als Zeichenfolgen.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Die <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> zu klonende und einzufrierende Objekt.</param>
+        <summary>Macht diese Instanz zu einem Klon des angegebenen <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte. Beachten Sie, dass, wenn diese Eigenschaften Ressourcenverweise oder datenbindungen, enthalten <xref:System.Windows.Freezable.GetAsFrozen%2A> schlägt fehl, wenn das Objekt fixieren möchten, und löst eine <xref:System.InvalidOperationException>.  
+  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.GetAsFrozen%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer fixierten Kopie des aktuellen Objekts <xref:System.Windows.Freezable.GetAsFrozen%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />, das kopiert und fixiert werden soll.</param>
+        <summary>Macht diese Instanz als fixierten Klon des angegebenen <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer fixierten Kopie des aktuellen Objekts <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQuery">
+      <MemberSignature Language="C#" Value="public object GetQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.GetQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Identifiziert die Zeichenfolge, die im aktuellen <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />-Objekt abgefragt wird.</param>
+        <summary>Bietet Zugriff auf eine Metadatenabfrage-Readers, der Metadaten aus einer Bitmap-Bilddatei extrahieren kann.</summary>
+        <returns>Die Metadaten an der angegebenen Abfrageposition.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadaten, die einem Bild zugeordnet ist, Daten, die das Bild beschreibt, aber dies ist nicht erforderlich, für die Anzeige des Bilds. Jede unterstützte Bitmap Bildmetadaten Format Handles unterschiedlich, aber die Funktion zum Lesen und Schreiben von Metadaten ist identisch.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], tEXt ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] Textdaten), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], und [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> Methode zum Schreiben von Metadaten, die eine [!INCLUDE[TLA#tla_png](~/includes/tlasharptla-png-md.md)] Datei.  
+  
+ [!code-cpp[bitmapmetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[bitmapmetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[bitmapmetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+  
+ Nachdem die Metadaten geschrieben wurde, die <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Methode wird verwendet, um die Daten lesen und als Textzeichenfolge auszugeben.  
+  
+ [!code-cpp[bitmapmetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
+ [!code-csharp[bitmapmetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
+ [!code-vb[bitmapmetadata#GetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob die <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> Objekt hat eine feste Größe.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> ist eine feste Größe, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie verschiedene Eigenschaften Lesen der <xref:System.Windows.Media.Imaging.BitmapMetadata> Objekt, und senden ihre Parameterwerte an eine <xref:System.Windows.MessageBox> als Zeichenfolgen.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Metadaten, die einem Bild zugeordnet sind schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Metadaten schreibgeschützt ist. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie verschiedene Eigenschaften Lesen der <xref:System.Windows.Media.Imaging.BitmapMetadata> Objekt, und senden ihre Parameterwerte an eine <xref:System.Windows.MessageBox> als Zeichenfolgen.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; Keywords { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Schlüsselwörtern ab, die das Bitmapbild beschreiben.</summary>
+        <value>Eine schreibgeschützte Auflistung von Zeichenfolgen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public string Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Basisspeicherort der Metadaten bezeichnet, die einem Bild zugeordnet sind.</summary>
+        <value>Der Basisspeicherort der Bildmetadaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie verschiedene Eigenschaften Lesen der <xref:System.Windows.Media.Imaging.BitmapMetadata> Objekt, und senden ihre Parameterwerte an eine <xref:System.Windows.MessageBox> als Zeichenfolgen.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rating">
+      <MemberSignature Language="C#" Value="public int Rating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Rating" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Rating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Bewertung des Bilds identifiziert.</summary>
+        <value>Der Wert der Bewertung zwischen 0 und 5.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveQuery">
+      <MemberSignature Language="C#" Value="public void RemoveQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.RemoveQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Die zu entfernende Metadatenabfrage.</param>
+        <summary>Entfernt eine Metadatenabfrage aus einer Instanz von <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadaten, die einem Bild zugeordnet ist, Daten, die das Bild beschreibt, aber dies ist nicht erforderlich, für die Anzeige des Bilds. Jede unterstützte Bitmap Bildmetadaten Format Handles unterschiedlich, aber die Funktion zum Lesen und Schreiben von Metadaten ist identisch.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], tEXt ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] Textdaten), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], und [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Tritt auf, wenn Bildmetadaten schreibgeschützt sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetQuery">
+      <MemberSignature Language="C#" Value="public void SetQuery (string query, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetQuery(string query, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.SetQuery(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="query">Gibt den Speicherort der zu schreibenden Metadaten an.</param>
+        <param name="value">Der Wert der zu schreibenden Metadaten.</param>
+        <summary>Bietet Zugriff auf einen Metadatenabfrage-Writer, der Metadaten in eine Bitmap-Bilddatei schreiben kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadaten, die einem Bild zugeordnet ist, Daten, die das Bild beschreibt, aber dies ist nicht erforderlich, für die Anzeige des Bilds. Jede unterstützte Bitmap Bildmetadaten Format Handles unterschiedlich, aber die Funktion zum Lesen und Schreiben von Metadaten ist identisch.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], tEXt ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] Textdaten), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], und [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> Methode zum Schreiben von Metadaten, die eine [!INCLUDE[TLA#tla_png](~/includes/tlasharptla-png-md.md)] Datei.  
+  
+ [!code-cpp[bitmapmetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[bitmapmetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[bitmapmetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+  
+ Nachdem die Metadaten geschrieben wurde, die <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Methode wird verwendet, um die Daten lesen und als Textzeichenfolge auszugeben.  
+  
+ [!code-cpp[bitmapmetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
+ [!code-csharp[bitmapmetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
+ [!code-vb[bitmapmetadata#GetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Inhalt des Bitmapbilds angibt, oder legt diesen Wert fest.</summary>
+        <value>Der Inhalt des Bitmapbilds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.String&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;string&gt; IEnumerable&lt;string&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;string&gt; System.Collections.Generic.IEnumerable&lt;System.String&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.System#Collections#Generic#IEnumerable&lt;System#String&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Media.Imaging.BitmapMetadata>-Instanz in eine <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Media.Imaging.BitmapMetadata>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Titel einer Bilddatei bezeichnet, oder legt ihn fest.</summary>
+        <value>Der Titel einer Bilddatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben von Metadaten in eine Bitmap-Bild mithilfe der Eigenschaften von der <xref:System.Windows.Media.Imaging.BitmapMetadata> Klasse.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

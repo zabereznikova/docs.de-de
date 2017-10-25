@@ -1,0 +1,125 @@
+<Type Name="Saml2AudienceRestriction" FullName="System.IdentityModel.Tokens.Saml2AudienceRestriction">
+  <TypeSignature Language="C#" Value="public class Saml2AudienceRestriction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2AudienceRestriction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2AudienceRestriction" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die AudienceRestriction-Element, das in [Saml2Core 2.5.1.4] angegeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.Saml2AudienceRestriction.Audiences%2A> -Auflistung leer ist, ein <xref:System.InvalidOperationException> wird während der Serialisierung ausgelöst werden.  
+  
+ Weitere Informationen über das Element, das diese Klasse darstellt, finden Sie unter der SAML v2. 0-kernspezifikation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AudienceRestriction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AudienceRestriction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.Saml2AudienceRestriction" /> Klasse ohne Benutzergruppe Elemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2AudienceRestriction.Audiences%2A> Eigenschaft zu einer leeren Auflistung initialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AudienceRestriction (System.Collections.Generic.IEnumerable&lt;Uri&gt; audiences);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; audiences) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AudienceRestriction.#ctor(System.Collections.Generic.IEnumerable{System.Uri})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="audiences" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="audiences">Die Auflistung der <see cref="T:System.Uri" /> , enthält die Benutzergruppe Elemente in diese Einschränkung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.Saml2AudienceRestriction" /> -Klasse mit den angegebenen URIs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2AudienceRestriction.Audiences%2A> Auflistung initialisiert wird, verwenden die Elemente der angegebenen Auflistung ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AudienceRestriction (Uri audience);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri audience) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AudienceRestriction.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="audience" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="audience">Ein <see cref="T:System.Uri" /> , die den Inhalt der "Audience"-Element enthalten sind, diese Einschränkung darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.Saml2AudienceRestriction" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2AudienceRestriction.Audiences%2A> Auflistung mit den angegebenen "Audience"-Element initialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audiences">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Uri&gt; Audiences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Uri&gt; Audiences" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AudienceRestriction.Audiences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von URIs, die die Zielgruppen gibt an, an denen die Assertion adressiert wird. Die Bedingung ist gültig, wenn die vertrauende Seite Mitglied aller angegebenen Zielgruppen.</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.Uri" /> , die die Zielgruppen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Benutzergruppe Elemente im AudienceRestriction-Element enthalten sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

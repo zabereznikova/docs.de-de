@@ -1,0 +1,153 @@
+<Type Name="PathPointType" FullName="System.Drawing.Drawing2D.PathPointType">
+  <TypeSignature Language="C#" Value="public enum PathPointType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PathPointType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.PathPointType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ des Punkts in einem <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Punkt in einem <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt weist einen Typ zugeordnet. Der Typ wird bestimmt, wie der Punkt verwendet wird, um den Pfad zu zeichnen. Arten von Überprüfungspunkten aufweisen, die Formen bilden enthalten Anfangs-Anfangspunkte und Punkte einer Bézierkurve. Die folgenden Anweisungstypen auch Marker, die einen Pfad oder eine Maske, die ein- oder Ausblenden von Punkten leicht Durchlauf ermöglichen. Die Art und den Bézier-Typen mit CloseSubpath kombiniert werden können (mit dem bitweisen Operator `OR`), um anzugeben, dass die entsprechenden Punkt der letzte Punkt in einer Abbildung ist und dass die Abbildung geschlossen werden sollen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bezier">
+      <MemberSignature Language="C#" Value="Bezier" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType Bezier = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.Bezier" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Standard-Bézier-Kurve.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bezier3">
+      <MemberSignature Language="C#" Value="Bezier3" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType Bezier3 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.Bezier3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine kubische Bézierkurve.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseSubpath">
+      <MemberSignature Language="C#" Value="CloseSubpath" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType CloseSubpath = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.CloseSubpath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Endpunkt, der ein Unterpfad werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DashMode">
+      <MemberSignature Language="C#" Value="DashMode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType DashMode = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.DashMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die entsprechende Segment ist gestrichelt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="Line" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType Line = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.Line" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Liniensegment.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PathMarker">
+      <MemberSignature Language="C#" Value="PathMarker" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType PathMarker = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.PathMarker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Pfadmarker.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PathTypeMask">
+      <MemberSignature Language="C#" Value="PathTypeMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType PathTypeMask = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.PathTypeMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Maskenpunkt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="Start" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PathPointType Start = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PathPointType.Start" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PathPointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ausgangspunkt der ein <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> Objekt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

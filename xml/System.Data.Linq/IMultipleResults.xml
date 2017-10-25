@@ -1,0 +1,85 @@
+<Type Name="IMultipleResults" FullName="System.Data.Linq.IMultipleResults">
+  <TypeSignature Language="C#" Value="public interface IMultipleResults : IDisposable, System.Data.Linq.IFunctionResult" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMultipleResults implements class System.Data.Linq.IFunctionResult, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.IMultipleResults" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.Linq.IFunctionResult</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Ergebnisse der zugeordneten Funktionen oder Abfragen mit Variablen zurückzugeben Sequenzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgenden SQL-Codebeispiel hängt die Ergebnisform von der Eingabe ab (`shape =1` oder `shape = 2`). Die Reihenfolge, die Projektionen zurückgegeben werden, ist nicht definiert.  
+  
+   
+  
+## Examples  
+  
+```  
+CREATE PROCEDURE VariableResultShapes(@shape int)  
+AS  
+if(@shape = 1)  
+    select CustomerID, ContactTitle, CompanyName from customers  
+else if(@shape = 2)  
+    select OrderID, ShipName from orders  
+```  
+  
+ [!code-csharp[DLinqSprox#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#4)]
+ [!code-vb[DLinqSprox#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetResult&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TElement&gt; GetResult&lt;TElement&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;!!TElement&gt; GetResult&lt;TElement&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.IMultipleResults.GetResult``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TElement">Der Typ der Sequenz, die zurückgegeben werden.</typeparam>
+        <summary>Ruft das nächste Ergebnis als eine Sequenz eines bestimmten Typs ab.</summary>
+        <returns>Eine Enumeration für die Ergebnisse durchlaufen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die gespeicherte Prozedur auszuführen, wird in etwa der folgende Code verwendet.  
+  
+> [!NOTE]
+>  Sie müssen mithilfe Ihrer Kenntnisse über die gespeicherte Prozedur das <xref:System.Data.Linq.IMultipleResults.GetResult%2A>-Muster verwenden, um einen Enumerator mit dem richtigen Typ zu erhalten.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DLinqSprox#5](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
+ [!code-vb[DLinqSprox#5](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

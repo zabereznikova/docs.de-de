@@ -1,0 +1,281 @@
+<Type Name="DashStyle" FullName="System.Windows.Media.DashStyle">
+  <TypeSignature Language="C#" Value="public sealed class DashStyle : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DashStyle extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.DashStyle" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Folge der Striche und Lücken, die durch angewendet werden, eine <see cref="T:System.Windows.Media.Pen" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.DashStyle.Dashes%2A> -Eigenschaft dieser Klasse beschreibt die Länge der abwechselnden Striche und Lücken.  Die Werte in der Auflistung sind in Bezug auf ein Vielfaches von der <xref:System.Windows.Media.Pen.Thickness%2A> von der <xref:System.Windows.Media.Pen>.  Angenommen, ein Array von `1`,`2` gibt einen Bindestrich Länge (`1` * <xref:System.Windows.Media.Pen.Thickness%2A>) gefolgt von einer Lücke mit der Länge (`2` * <xref:System.Windows.Media.Pen.Thickness%2A>).  
+  
+> [!NOTE]
+>  Die tatsächliche Länge des Bindestrichs, der gezeichnet wird, hängt die Art des <xref:System.Windows.Media.Pen.DashCap%2A> , die an jedem Ende des Bindestrichs hinzugefügt wird. Die Standardeinstellung <xref:System.Windows.Media.Pen.DashCap%2A> Wert für eine <xref:System.Windows.Media.Pen> ist <xref:System.Windows.Media.PenLineCap.Square>. Dies bewirkt, dass ein Linienende, die Hälfte der Stärke der Linie an jedem Ende des Stiftstrichs hinzugefügt werden. (Siehe <xref:System.Windows.Media.PenLineCap> ein Beispiel.) Daher, wenn Sie angeben, dass ein Array von `0`, `2` oder ein Quadrat <xref:System.Windows.Media.Pen.DashCap%2A>, werden die tatsächlichen Dash-Länge (`0` * <xref:System.Windows.Media.Pen.Thickness%2A>) + (`2` * <xref:System.Windows.Media.Pen.DashCap%2A>).  
+  
+ Treten eine ungerade Anzahl von Werten in der Auflistung, werden die Werte interpretiert, als ob sie wiederholt würden, um eine gerade Anzahl von Werten zu erzeugen.  Angenommen, eine Auflistung mit `2`,`3`,`5` ist identisch mit der eine Auflistung mit interpretiert `2`,`3`,`5`,`2`,`3`,`5`.  
+  
+ Negative Werte im Array werden als absoluter Wert interpretiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.DashStyle> Eigenschaft eine <xref:System.Windows.Media.Pen> eine gestrichelte Linie unter dem Text zu erstellen.  
+  
+ [!code-xaml[DrawingMiscSnippets_snip#DashStyle](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DashStyleExample.xaml#dashstyle)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel erstellt.  
+  
+ ![Text mit gestrichelter Linie unterstrichener. ] (~/add/media/graphicsdashstyle.gif "Mit gestrichelter Linie unterstrichener Text.")  
+  
+ Die folgende Abbildung zeigt Beispiele für unterschiedliche Dash-Formatvorlagen, die auf einer Unterstreichung angewendet.  
+  
+ ![Zeigt die Stile für mehrere unterschiedliche gestrichelte Linie. ] (~/add/media/graphicsdashstyles.gif "Zeigt Stile für mehrere unterschiedliche gestrichelte Linie.")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DashStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.DashStyle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DashStyle (System.Collections.Generic.IEnumerable&lt;double&gt; dashes, double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;float64&gt; dashes, float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.#ctor(System.Collections.Generic.IEnumerable{System.Double},System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dashes" Type="System.Collections.Generic.IEnumerable&lt;System.Double&gt;" />
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="dashes">Die <see cref="P:System.Windows.Media.DashStyle.Dashes" /> des <see cref="T:System.Windows.Media.DashStyle" />.</param>
+        <param name="offset">Die <see cref="P:System.Windows.Media.DashStyle.Offset" /> des <see cref="T:System.Windows.Media.DashStyle" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.DashStyle" />-Klasse mit den angegebenen <see cref="P:System.Windows.Media.DashStyle.Dashes" /> und dem angegebenen <see cref="P:System.Windows.Media.DashStyle.Offset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DashStyle Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DashStyle Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.DashStyle" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressource Ressourcenverweise und datenbindungen (möglicherweise nicht mehr aufgelöst), jedoch keine Animationen oder ihre aktuellen Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DashStyle CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DashStyle CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.DashStyle" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Des geklonten Objekts <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft <see langword="false" /> selbst wenn der Quelle <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DashStyle.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dashes">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DoubleCollection Dashes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DoubleCollection Dashes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyle.Dashes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DoubleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der Striche und Lücken in diesem <see cref="T:System.Windows.Media.DashStyle" />.</summary>
+        <value>Die Auflistung der Striche und Lücken.  Standard ist eine leere <see cref="T:System.Windows.Media.DoubleCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Sammlung beschreibt die Länge der abwechselnden Striche und Lücken.  Die Werte in der Auflistung sind in Bezug auf ein Vielfaches von der <xref:System.Windows.Media.Pen.Thickness%2A> von der <xref:System.Windows.Media.Pen>.  Angenommen, ein Array von `1`,`2` gibt einen Bindestrich Länge (`1` * <xref:System.Windows.Media.Pen.Thickness%2A>) gefolgt von einer Lücke mit der Länge (`2` * <xref:System.Windows.Media.Pen.Thickness%2A>).  
+  
+> [!NOTE]
+>  Die tatsächliche Länge des Bindestrichs, der gezeichnet wird, hängt die Art des <xref:System.Windows.Media.Pen.DashCap%2A> , die an jedem Ende des Bindestrichs hinzugefügt wird. Die Standardeinstellung <xref:System.Windows.Media.Pen.DashCap%2A> Wert für eine <xref:System.Windows.Media.Pen> ist <xref:System.Windows.Media.PenLineCap.Square>. Dies bewirkt, dass ein Linienende, die Hälfte der Stärke der Linie an jedem Ende des Stiftstrichs hinzugefügt werden. (Siehe <xref:System.Windows.Media.PenLineCap> ein Beispiel.) Daher, wenn Sie angeben, dass ein Array von `0`, `2` oder ein Quadrat <xref:System.Windows.Media.Pen.DashCap%2A>, werden die tatsächlichen Dash-Länge (`0` * <xref:System.Windows.Media.Pen.Thickness%2A>) + (`2` * <xref:System.Windows.Media.Pen.DashCap%2A>).  
+  
+ Treten eine ungerade Anzahl von Werten in der Auflistung, werden die Werte interpretiert, als ob sie wiederholt würden, um eine gerade Anzahl von Werten zu erzeugen.  Angenommen, eine Auflistung mit `2`,`3`,`5` ist identisch mit der eine Auflistung mit interpretiert `2`,`3`,`5`,`2`,`3`,`5`.  
+  
+ Negative Werte im Array werden als absoluter Wert interpretiert.  
+  
+<a name="dependencyPropertyInfo_Dashes"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.DashStyle.DashesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.DashStyle> Eigenschaft eine <xref:System.Windows.Media.Pen> eine gestrichelte Linie unter dem Text zu erstellen.  
+  
+ [!code-xaml[DrawingMiscSnippets_snip#DashStyle](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DashStyleExample.xaml#dashstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DashesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DashesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DashesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DashStyle.DashesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.DashStyle.Dashes" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public double Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyle.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest, wie weit in der Dash-Sequenz, die die Kontur gestartet wird.</summary>
+        <value>Der Offset für die Sequenz Bindestrich.  Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird dringend empfohlen, einen Offsetwert verwendet werden, der in der Mitte eines beliebigen Strichs aufgelöst wird.  Dies veranlasst die meisten Striche beginnen und enden in der Mitte statt am eine Lücke.  
+  
+<a name="dependencyPropertyInfo_Offset"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.DashStyle.OffsetProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DashStyle.OffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.DashStyle.Offset" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

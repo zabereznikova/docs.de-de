@@ -1,0 +1,115 @@
+<Type Name="WebConfigurationFileMap" FullName="System.Web.Configuration.WebConfigurationFileMap">
+  <TypeSignature Language="C#" Value="public sealed class WebConfigurationFileMap : System.Configuration.ConfigurationFileMap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebConfigurationFileMap extends System.Configuration.ConfigurationFileMap" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.WebConfigurationFileMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationFileMap</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Zuordnungen für die Datei für eine Webanwendung an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.WebConfigurationFileMap> Klasse wird verwendet, um der Hierarchie der Konfigurationsdatei angeben. Standardmäßig verwendet das Konfigurationssystem die IIS-Metabasis die Webhierarchie-Datei zu bestimmen. Wenn IIS nicht installiert ist, oder wenn eine Anwendung eine Version von .NET Framework abzielt, die nicht die neueste Version ist, auf dem Server installiert ist, die <xref:System.Web.Configuration.WebConfigurationFileMap> Klasse bietet die Möglichkeit, eine benutzerdefinierte Hierarchie definieren.  
+  
+ Die <xref:System.Web.Configuration.WebConfigurationFileMap> Klasse kann einen einzelnen Pfad oder mehrere Pfade, die im Zusammenhang mit Konfigurationsdateien angeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebConfigurationFileMap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationFileMap.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.Configuration.WebConfigurationFileMap" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebConfigurationFileMap (string machineConfigFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string machineConfigFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationFileMap.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="machineConfigFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="machineConfigFileName">Den Namen der Computer Konfigurationsdatei durch den vollständigen physischen Pfad (z. B. <c>c:\Windows\Microsoft.NET\Framework\v2.0.50727\CONFIG\machine.config</c>).</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Configuration.WebConfigurationFileMap" /> Klasse, indem Sie den Konfigurationsdateinamen angegebenen Computer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Version des anvisierten, verwenden Sie diesen Konstruktor die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ist, die älter als die aktuelle, die auf dem Computer installiert ist. Die Methode ermöglicht Ihnen die Angabe eine Gerätekonfigurationsdatei, die auf die Version von geeignet ist die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] , die das Ziel sind.  
+  
+> [!NOTE]
+>  Auch wenn der Konstruktor nur den Pfad der Datei "Machine.config akzeptiert" wird das Konfigurationssystem auch der Stammdatei "Web.config" im gleichen Verzeichnis lesen, in dem die Datei "Machine.config" vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationFileMap.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von einem <see cref="T:System.Web.Configuration.WebConfigurationFileMap" /> -Klasse mit den gleichen Wert wie die vorhandene Instanz.</summary>
+        <returns>Eine neue Instanz der eine <see cref="T:System.Web.Configuration.WebConfigurationFileMap" /> Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualDirectories">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.VirtualDirectoryMappingCollection VirtualDirectories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.VirtualDirectoryMappingCollection VirtualDirectories" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebConfigurationFileMap.VirtualDirectories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.VirtualDirectoryMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aufgeführte Sammlung der virtuellen Verzeichnisse für eine Webanwendung an.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die virtuellen Verzeichnisse von einer Web-Anwendung möglicherweise nicht notwendigerweise die physischen Verzeichnisse auf dem Server zugeordnet. Die <xref:System.Web.Configuration.VirtualDirectoryMapping> Klasse ist unabhängig von IIS.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,3132 @@
+<Type Name="PrintPreviewDialog" FullName="System.Windows.Forms.PrintPreviewDialog">
+  <TypeSignature Language="C#" Value="public class PrintPreviewDialog : System.Windows.Forms.Form" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintPreviewDialog extends System.Windows.Forms.Form" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PrintPreviewDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Form</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Document")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.ComponentModel.Design.ComponentDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms.Control.TopLevel")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Dialogfeld klicken Sie im Formular, enthält eine <see cref="T:System.Windows.Forms.PrintPreviewControl" /> für den Druck aus einer Windows Forms-Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Instanz von der <xref:System.Windows.Forms.PrintPreviewDialog> "Class", sind einige der Lese-/Schreibeigenschaften auf Ausgangswerte festgelegt. Eine Liste der folgenden Werte sind, finden Sie unter der <xref:System.Windows.Forms.PrintPreviewDialog.%23ctor%2A> Konstruktor.  
+  
+ Weitere Informationen zum Drucken in Windows Forms finden Sie unter der <xref:System.Drawing.Printing> Namespace (Übersicht). Wenn Sie über eine Windows Presentation Foundation-Anwendung drucken möchten, finden Sie unter der <xref:System.Printing> Namespace.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.PrintPreviewDialog> Einstellung der <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> und <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> Eigenschaften. Im Beispiel wird vorausgesetzt, das Formular enthält ein <xref:System.Windows.Forms.TreeView> mit dem Namen `TreeView1` enthält <xref:System.Windows.Forms.TreeNode> Objekte. Die <xref:System.Windows.Forms.Control.Tag%2A> -Eigenschaft jedes <xref:System.Windows.Forms.TreeNode> Objekt muss festgelegt werden, um einen vollqualifizierten Dokumentnamen, die von der Ausführung des Beispiels Computer zugegriffen werden kann. Legen Sie jedes <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> Eigenschaft, um eine Zeichenfolge, die Datei identifiziert, die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Sie können z. B. festlegen `TreeNode1.Tag` zu "c:\myDocuments\recipe.doc" und `TreeNode1.Text` auf "Rezept.doc". Das Beispiel auch setzt voraus, das Formular enthält ein <xref:System.Windows.Forms.PrintPreviewDialog> mit dem Namen `PrintPreviewDialog1` und eine Schaltfläche mit dem Namen `Button1`. Um dieses Beispiel auszuführen, rufen Sie die `InitializePrintPreviewDialog` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+  
+ [!code-cpp[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintPreviewDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.PrintPreviewDialog" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Instanz von <xref:System.Windows.Forms.PrintPreviewDialog>, <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> -Eigenschaft wird mit initialisiert `null`. Sie können den Wert für diese Eigenschaft zur Laufzeit ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.PrintPreviewDialog> Einstellung der <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> und <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> Eigenschaften. Im Beispiel wird vorausgesetzt, das Formular enthält ein <xref:System.Windows.Forms.TreeView> mit dem Namen `TreeView1` enthält <xref:System.Windows.Forms.TreeNode> Objekte. Die <xref:System.Windows.Forms.Control.Tag%2A> -Eigenschaft jedes <xref:System.Windows.Forms.TreeNode> Objekt muss festgelegt werden, um einen vollqualifizierten Dokumentnamen, die von der Ausführung des Beispiels Computer zugegriffen werden kann. Legen Sie jedes <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> Eigenschaft, um eine Zeichenfolge, die Datei identifiziert, die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Sie können z. B. festlegen `TreeNode1.Tag` zu "c:\myDocuments\recipe.doc" und `TreeNode1.Text` auf "Rezept.doc". Das Beispiel auch setzt voraus, das Formular enthält ein <xref:System.Windows.Forms.PrintPreviewDialog> mit dem Namen `PrintPreviewDialog1` und eine Schaltfläche mit dem Namen `Button1`. Um dieses Beispiel auszuführen, rufen Sie die `InitializePrintPreviewDialog` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+  
+ [!code-cpp[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IButtonControl AcceptButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.IButtonControl AcceptButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AcceptButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IButtonControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schaltfläche im Formular ab, die beim Drücken der EINGABETASTE betätigt wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.IButtonControl" />, das die Schaltfläche darstellt, die als Bestätigungsschaltfläche für das Formular verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Diese Eigenschaft ermöglicht Ihnen, eine Standardaktion festzulegen, die auftritt, wenn der Benutzer in Ihrer Anwendung die EINGABETASTE drückt. Die Schaltfläche "dieser Eigenschaft zugewiesene" muss ein <xref:System.Windows.Forms.IButtonControl> , befindet sich auf das aktuelle Formular oder in einem Container auf das aktuelle Formular befindet.  
+  
+ Sie können diese Eigenschaft beispielsweise verwenden, damit der Benutzer schnell ein einfaches Formular navigieren, indem ihnen ermöglicht, die EINGABETASTE drücken, wenn sie anstatt manuell auf die Schaltfläche "akzeptieren", mit dem Mauszeiger fertig sind.  
+  
+ Die Schaltfläche "Annehmen" kann nicht aktiviert werden, wenn das momentan ausgewählte Steuerelement im Formular die EINGABETASTE abfängt und diese verarbeitet. Beispielsweise ermöglicht ein mehrzeiliges Textfeld-Steuerelement die EINGABETASTE gedrückt, wenn er ausgewählt ist, um ein neue-Zeile-Zeichen in das Steuerelement eingefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibleDescription">
+      <MemberSignature Language="C#" Value="public string AccessibleDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessibleDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AccessibleDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die barrierefreie Beschreibung des Steuerelements ab oder legt diese fest.</summary>
+        <value>Die barrierefreie Beschreibung des Steuerelements. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibleName">
+      <MemberSignature Language="C#" Value="public string AccessibleName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessibleName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AccessibleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den barrierefreien Namen des Steuerelements ab oder legt diesen fest.</summary>
+        <value>Der barrierefreie Name des Steuerelements. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibleRole">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AccessibleRole AccessibleRole { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole AccessibleRole" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AccessibleRole" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die barrierefreie Rolle des Steuerelements.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.AccessibleRole" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.AccessibleRole.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDrop">
+      <MemberSignature Language="C#" Value="public override bool AllowDrop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDrop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AllowDrop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob das Steuerelement Daten annehmen kann, die vom Benutzer darauf gezogen wurden.</summary>
+        <value>
+          <see langword="true" />, wenn Drag &amp; Drop-Vorgänge für das Steuerelement zulässig sind, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Anchor">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AnchorStyles Anchor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AnchorStyles Anchor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Anchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ankerstil des Steuerelements ab oder legt diesen fest.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Windows.Forms.AnchorStyles" />-Werte. Der Standardwert ist <see langword="Top" /> und <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScale">
+      <MemberSignature Language="C#" Value="public bool AutoScale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoScale" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AutoScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Größe des Formulars der Höhe der im Formular verwendeten Schriftart angepasst wird und die Steuerelemente des Formulars skaliert werden, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn das Formular und die darin befindlichen Steuerelemente automatisch entsprechend der aktuellen dem Formular zugewiesenen Schriftart skaliert werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um das Formular zu ermöglichen, und seine Steuerelemente automatisch anpassen auf der Grundlage von Änderungen in der Schriftart. Dies kann hilfreich für Anwendungen, in dem die Schriftart erhöhen kann, oder verringern, die basierend auf der Sprache, die für die Verwendung von Windows angegeben sein.  
+  
+ Zum Abrufen der Größe des Formulars werden automatisch zu verwendende Skala der <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> Eigenschaft. Gegebenenfalls zur Bestimmung der Größe des Formulars automatisch vergrößert wird, basierend auf einer bestimmten Schriftart, verwenden die <xref:System.Windows.Forms.Form.GetAutoScaleSize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScaleBaseSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size AutoScaleBaseSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScaleBaseSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AutoScaleBaseSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property has been deprecated. Use the AutoScaleDimensions property instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.PrintPreviewDialog" /> -Klasse bietet keine Unterstützung der <see cref="P:System.Windows.Forms.PrintPreviewDialog.AutoScaleBaseSize" /> Eigenschaft.</summary>
+        <value>Speichert ein geordnetes Paar von ganzen Zahlen, i. d. R. die Breite und Höhe eines Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScroll">
+      <MemberSignature Language="C#" Value="public override bool AutoScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AutoScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Formular den automatischen Bildlauf ermöglicht, oder legt diesen Wert fest.</summary>
+        <value>Stellt einen booleschen Wert dar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMargin">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AutoScrollMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des AutoBildlaufrandes ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />, die die Höhe und Breite des AutoBildlaufrandes in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Die AutoBildlaufrandes wird verwendet, um den Abstand zwischen den Rändern des bildlauffähigen Steuerelements zu bestimmen. Wenn der Abstand zwischen der Kante eines Steuerelements untergeordneten und übergeordneten bildlauffähigen Steuerelement kleiner als der Wert dieser Eigenschaft zugewiesen ist, wird die entsprechende Bildlaufleiste angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMinSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AutoScrollMinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Größe der automatischen Schiebeleisten ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />, die die Mindesthöhe und -breite der Schiebeleisten in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.PrintPreviewDialog.AutoScrollMinSize%2A> Eigenschaft wird verwendet, um die Größe des Bildschirms an die automatischen Schiebeleisten zugeordnet zu verwalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.PrintPreviewDialog" /> sollte die Größe automatisch an dessen Inhalt angepasst.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="T:System.Windows.Forms.PrintPreviewDialog" /> sollte angepasst sein Inhalt; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Festlegen der <xref:System.Windows.Forms.PrintPreviewDialog.AutoSize%2A> Eigenschaft hat keine Auswirkung auf die Darstellung der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.AutoSize" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoValidate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AutoValidate AutoValidate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoValidate AutoValidate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.AutoValidate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoValidate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, wie das Steuerelement die Validierung ausführt, wenn der Benutzer den Fokus auf ein anderes Steuerelement festlegt, oder legt dieses Verhalten fest.</summary>
+        <value>Bestimmt, wie ein Steuerelement seine Daten überprüft, wenn es den Benutzereingabefokus verliert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoValidateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoValidateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoValidateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.AutoValidateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Form.AutoValidate" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hintergrundfarbe des Formulars ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Color" />, die die Hintergrundfarbe des Steuerelements darstellt. Der Standardwert ist der Wert der <see cref="P:System.Windows.Forms.Control.DefaultBackColor" />-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.BackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.BackColor" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hintergrundbild für das Steuerelement ab oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Image" />, das das im Hintergrund des Steuerelements anzuzeigende Bild darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.BackgroundImage" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Layout der <see cref="P:System.Windows.Forms.PrintPreviewDialog.BackgroundImage" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImageLayout" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.PrintPreviewDialog.BackgroundImageLayout%2A> Eigenschaft hat keine Auswirkung auf die Darstellung der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.BackgroundImageLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IButtonControl CancelButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.IButtonControl CancelButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.CancelButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IButtonControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Schaltfläche "Abbrechen", für die <see cref="T:System.Windows.Forms.PrintPreviewDialog" />.</summary>
+        <value>Ermöglicht es einem Steuerelement, als Schaltfläche in einem Formular zu fungieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob beim Eintreten in das Steuerelement alle Steuerelemente, für die die Validierung erforderlich ist, validiert werden.</summary>
+        <value>
+          <see langword="true" />Wenn Eintreten in das Steuerelement bewirkt, dass die Validierung für eine Validierung erfordernden Steuerelemente werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CausesValidationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CausesValidationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.CausesValidationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.CausesValidation" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenu ContextMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenu ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kontextmenü für das Steuerelement ab oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ContextMenu" />, das das diesem Steuerelement zugeordnete Kontextmenü darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.ContextMenuChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.ContextMenu" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kontextmenü für das Steuerelement ab oder legt dieses fest.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ContextMenuStrip" /> für dieses Steuerelement, oder <see langword="null" />, wenn keine <see cref="T:System.Windows.Forms.ContextMenuStrip" /> vorhanden ist. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStripChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuStripChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuStripChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.ContextMenuStripChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.ContextMenuStrip" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlBox">
+      <MemberSignature Language="C#" Value="public bool ControlBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.ControlBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob auf der Beschriftungsleiste des Formulars ein Systemmenüfeld angezeigt wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Formular in der oberen linken Ecke des Formulars ein Systemmenüfeld angezeigt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.PrintPreviewDialog.ControlBox%2A> -Eigenschaftensatz auf `true`, das Steuerelement wird in der linken oberen Ecke der Titelleiste angezeigt. Das Steuerelement ist, in denen der Benutzer klicken können, um das Systemmenü zuzugreifen.  
+  
+> [!NOTE]
+>  Wenn das Formular kein Systemmenüfeld angezeigt wird, kann das Formular nicht schließen, mithilfe der Tastenkombination ALT + F4.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewDialog.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt das Handle für das Formular, kapselt die <see cref="T:System.Windows.Forms.PrintPreviewDialog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den <xref:System.Windows.Forms.PrintPreviewDialog.CreateHandle%2A> -Methode finden Sie unter der <xref:System.Windows.Forms.Control.CreateHandle%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Die Druckereinstellungen in <see cref="P:System.Windows.Forms.PrintPreviewDialog.Document" /> sind nicht gültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Cursor Cursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor Cursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Cursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Cursor für das Steuerelement ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Cursor" />, der den Cursor darstellt, der angezeigt wird, wenn sich der Mauszeiger über dem Steuerelement befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CursorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CursorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.CursorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Cursor" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindings">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ControlBindingsCollection DataBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ControlBindingsCollection DataBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.DataBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlBindingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Datenbindungen für das Steuerelement ab.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.ControlBindingsCollection" />, die die <see cref="T:System.Windows.Forms.Binding" />-Objekte für das Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Verwenden der <xref:System.Windows.Forms.PrintPreviewDialog.DataBindings%2A> aufzurufende Eigenschaft der <xref:System.Windows.Forms.ControlBindingsCollection>. Durch Hinzufügen von <xref:System.Windows.Forms.Binding> Datenbankobjekte in der Auflistung können Sie eine Eigenschaft eines Steuerelements an die Eigenschaft eines Objekts binden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMinimumSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultMinimumSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultMinimumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.DefaultMinimumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Standardgröße, in Pixel ab, oder die <see cref="T:System.Windows.Forms.PrintPreviewDialog" /> Steuerelement.</summary>
+        <value>Die <see cref="T:System.Drawing.Size" /> Struktur, die die minimale Standardgröße darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Außer in einer abgeleiteten Klasse außer Kraft gesetzt der <xref:System.Windows.Forms.PrintPreviewDialog.DefaultMinimumSize%2A> Eigenschaft gibt eine <xref:System.Drawing.Size> mit einer <xref:System.Drawing.Size.Width%2A> von 370 Pixel und eine <xref:System.Drawing.Size.Height%2A> von 300 Pixeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dock">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DockStyle Dock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle Dock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Dock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie das Steuerelement an sein übergeordnetes Steuerelement angedockt werden soll.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DockStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DockStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DockChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.DockChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Dock" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPadding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollableControl.DockPaddingEdges DockPadding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ScrollableControl/DockPaddingEdges DockPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.DockPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollableControl+DockPaddingEdges</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überschreibt die <see cref="P:System.Windows.Forms.ScrollableControl.DockPadding" /> Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ScrollableControl.DockPaddingEdges" /> , das die Auffüllung für alle Ränder des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrintDocument Document { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrintDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dokument ab, das in einer Vorschau angezeigt werden soll, oder legt dieses fest.</summary>
+        <value>Die <see cref="T:System.Drawing.Printing.PrintDocument" /> , die das Dokument, in der Vorschau anzeigen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist identisch mit <xref:System.Windows.Forms.PrintPreviewControl.Document%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Steuerelement aktiviert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement aktiviert ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler EnabledChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EnabledChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.EnabledChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Enabled" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für das Steuerelement verwendete Schriftart ab oder legt diese fest.</summary>
+        <value>Der <see cref="T:System.Drawing.Font" />, der auf den Text angewendet werden soll, der im Steuerelement angezeigt wird. Der Standardwert ist der Wert der <see cref="P:System.Windows.Forms.Control.DefaultFont" />-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Font" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe des Steuerelements ab oder legt diese fest.</summary>
+        <value>Die Vordergrund-<see cref="T:System.Drawing.Color" /> des Steuerelements. Der Standardwert ist der Wert der <see cref="P:System.Windows.Forms.Control.DefaultForeColor" />-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.ForeColor" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormBorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FormBorderStyle FormBorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FormBorderStyle FormBorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.FormBorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenart des Formulars ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.FormBorderStyle" />, der die Art des Rahmens für die Anzeige des Formulars darstellt. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.FormBorderStyle.Sizable" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Die Rahmenart des Formulars bestimmt, wie die äußeren Rand des Formulars angezeigt wird. Zusätzlich zum Ändern der Anzeige der Rahmen für ein Formular, verhindern, dass bestimmte Rahmenarten des Formulars angepasst wird. Z. B. die <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType> Rahmenart der Rahmen des Formulars, eines Dialogfelds ändert und verhindert, dass das Formular, dessen Größe geändert. Die Rahmenart kann auch die Größe oder die Verfügbarkeit von Titelleistenbereichs eines Formulars beeinflussen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert liegt außerhalb des Bereichs der gültigen Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpButton">
+      <MemberSignature Language="C#" Value="public bool HelpButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HelpButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.HelpButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein **Hilfe** Schaltfläche in der Beschriftung des Formulars die Hilfeschaltfläche angezeigt werden soll.</summary>
+        <value>
+          <see langword="true" />zum Anzeigen einer **Hilfe** Schaltfläche auf der Titelleiste des Formulars hingegen <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Wenn diese Eigenschaft festgelegt wird, um `true`, eine kleine Schaltfläche mit einem Fragezeichen angezeigt wird, auf der Titelleiste links neben der **schließen** Schaltfläche. Sie können diese Schaltfläche zum Anzeigen von Hilfe für Ihre Anwendung verwenden. Können, erstellen Sie einen Ereignishandler für die <xref:System.Windows.Forms.Control.HelpRequested> -Ereignis für die <xref:System.Windows.Forms.Control> zum Anzeigen der Hilfeinformationen für den Benutzer bei der **Hilfe** des Formulars geklickt wird.  
+  
+ Der Wert des der <xref:System.Windows.Forms.PrintPreviewDialog.HelpButton%2A> Eigenschaft wird ignoriert, wenn maximieren oder Minimieren des Dialogfelder werden angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Symbol für das Formular ab oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" />, das das Symbol für das Formular darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Symbol "des Formulars" kennzeichnet das Bild, das das Formular in der Taskleiste als auch das Symbol, das für das Steuerelement im Formular angezeigt wird, darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von diesem Steuerelement unterstützten IME-Modus ab oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.ImeMode.Inherit" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.ImeMode" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.ImeMode" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMdiContainer">
+      <MemberSignature Language="C#" Value="public bool IsMdiContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMdiContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.IsMdiContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Formular ein Container für untergeordnete MDI (Multiple Document Interface)-Formulare ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn das Formular ein Container für untergeordnete MDI-Formulare ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Diese Eigenschaft ändert die Anzeige und das Verhalten des Formulars in ein übergeordnetes MDI-Formular an. Wenn diese Eigenschaft festgelegt wird, um `true`, das Formular wird ein Gesenktes Clientbereich mit einem Rahmen ausgelöst. Alle untergeordneten MDI-Formulare an das übergeordnete Formular zugewiesen werden im Clientbereich angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPreview">
+      <MemberSignature Language="C#" Value="public bool KeyPreview { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeyPreview" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.KeyPreview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Formular Tastaturereignisse empfängt, bevor das Ereignis an das Steuerelement übergeben wird, das den Fokus besitzt, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn das Formular alle Tastaturereignisse empfängt. <see langword="false" />, wenn das momentan ausgewählte Steuerelement im Formular Tastaturereignisse empfängt. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Wenn diese Eigenschaft festgelegt wird, um `true`, erhält das Formular alle <xref:System.Windows.Forms.Control.KeyPress>, <xref:System.Windows.Forms.Control.KeyDown>, und <xref:System.Windows.Forms.Control.KeyUp> Ereignisse. Nach dem Ereignishandler für das Formular verarbeitet die Tastatureingabe abgeschlossen haben, wird die Tastatureingabe klicken Sie dann auf das Steuerelement mit Fokus zugewiesen.  
+  
+ Diese Eigenschaft können Sie alle Tastatureingaben in Ihrer Anwendung und entweder die Tastatureingabe behandeln verarbeiten, oder rufen Sie das entsprechende Steuerelement aus, um die Tastatureingabe zu behandeln. Wenn eine Anwendung Funktionstasten verwendet, sollten Sie verarbeiten die Tastatureingaben auf Formularebene, statt das Schreiben von Code für jedes Steuerelement, das möglicherweise Tastatureingabe Ereignisse empfängt.  
+  
+> [!NOTE]
+>  Wenn ein Formular keine Steuerelemente angezeigt oder aktiviert hat, erhält sie automatisch alle Tastaturereignisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Koordinaten der linken oberen Ecke des Steuerelements relativ zur linken oberen Ecke des Containers ab oder legt diese fest.</summary>
+        <value>Der <see cref="T:System.Drawing.Point" />, der die linke obere Ecke des Steuerelements relativ zur linken oberen Ecke des Containers darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.LocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Location" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margin">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Margin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Margin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Margin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ränder für das Steuerelement ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Padding" />, das den Zwischenraum zwischen Steuerelementen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MarginChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MarginChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.MarginChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Margin" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximizeBox">
+      <MemberSignature Language="C#" Value="public bool MaximizeBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MaximizeBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.MaximizeBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob auf der Titelleiste des Formulars die Schaltfläche "Maximieren" angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Schaltfläche "Maximieren" für das Formular angezeigt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Schaltfläche "Maximieren" kann Benutzer ein Fenster auf Vollbildgröße vergrößern. Um eine Schaltfläche "Maximieren" anzuzeigen, müssen Sie auch des Formulars festlegen <xref:System.Windows.Forms.PrintPreviewDialog.FormBorderStyle%2A> -Eigenschaft entweder <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>, <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>, <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>, oder <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>.  
+  
+ Schaltfläche "Maximieren" wird automatisch eine Wiederherstellungsschaltfläche, wenn ein Fenster maximiert ist. Durch Minimieren oder Wiederherstellen eines Fensters ändert sich die Schaltfläche "Wiederherstellen" wieder auf die Schaltfläche "Maximieren".  
+  
+> [!NOTE]
+>  Maximieren eines Formulars zur Laufzeit generiert eine <xref:System.Windows.Forms.Control.Resize> Ereignis. Die <xref:System.Windows.Forms.PrintPreviewDialog.WindowState%2A> Eigenschaft entspricht dem aktuellen Zustand des Fensters. Wenn Sie festlegen, der <xref:System.Windows.Forms.PrintPreviewDialog.WindowState%2A> Eigenschaft, um <xref:System.Windows.Forms.FormWindowState.Maximized>, unabhängig von wirksam, alle Einstellungen für sind das Formular maximiert die <xref:System.Windows.Forms.PrintPreviewDialog.MaximizeBox%2A> und <xref:System.Windows.Forms.PrintPreviewDialog.FormBorderStyle%2A> Eigenschaften  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size MaximumSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MaximumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.MaximumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Größe des Formulars ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />, die die maximale Größe für das Formular darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Diese Eigenschaft können Sie die Größe eines Formulars auf eine angegebene maximale Größe beschränkt. Diese Funktion können mehrere Fenster zur gleichen Zeit angezeigt, stellen Sie sicher, dass ein einziges Fenster nicht mit anderen Fenstern ausgeblendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Werte für die Höhe oder Breite innerhalb der <see cref="T:System.Drawing.Size" /> sind kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MaximumSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MaximumSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.MaximumSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.MaximumSize" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Menu">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MainMenu Menu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.MainMenu Menu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Menu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MainMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Windows.Forms.MainMenu" /> ab, das im Formular angezeigt wird, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.MainMenu" />, das das im Formular anzuzeigende Menü darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Sie können diese Eigenschaft verwenden, so wechseln Sie zwischen vollständigen Menü zur Laufzeit. Beispielsweise können Sie definieren eine <xref:System.Windows.Forms.MainMenu> angezeigt, wenn das multiple Document Interface (MDI)-Formular keine aktive untergeordnete MDI-Formulare und ein anderes hat <xref:System.Windows.Forms.MainMenu> angezeigt, wenn ein untergeordnetes Fenster angezeigt wird. Sie können auch ein anderes verwenden <xref:System.Windows.Forms.MainMenu> Wenn bestimmte Bedingungen feststellen, die erfordern, Anzeigen von einem anderen Menüsatz in der Anwendung vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizeBox">
+      <MemberSignature Language="C#" Value="public bool MinimizeBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MinimizeBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.MinimizeBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob auf der Titelleiste des Formulars die Schaltfläche "Minimieren" angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Um eine Schaltfläche "Minimieren" für das Formular anzuzeigen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Schaltfläche "Minimieren" kann Benutzer ein Fenster auf Symbolgröße minimieren. Um eine Schaltfläche "Minimieren" anzuzeigen, müssen Sie auch des Formulars festlegen <xref:System.Windows.Forms.PrintPreviewDialog.FormBorderStyle%2A> -Eigenschaft entweder <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>, <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>, <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>, oder <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Generiert ein Formular minimiert, zur Laufzeit eine <xref:System.Windows.Forms.Control.Resize> Ereignis. Die <xref:System.Windows.Forms.PrintPreviewDialog.WindowState%2A> Eigenschaft entspricht dem aktuellen Zustand des Fensters. Wenn Sie festlegen, die <xref:System.Windows.Forms.PrintPreviewDialog.WindowState%2A> Eigenschaft <xref:System.Windows.Forms.FormWindowState?displayProperty=nameWithType>, das Formular wird minimiert, unabhängig von die Einstellungen für in Kraft sind die <xref:System.Windows.Forms.PrintPreviewDialog.MinimizeBox%2A> und <xref:System.Windows.Forms.PrintPreviewDialog.FormBorderStyle%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size MinimumSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MinimumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.MinimumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Größe ab, auf die das Formular verkleinert werden kann.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />, die die minimale Größe für das Formular darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Diese Eigenschaft können Sie die Größe eines Formulars auf eine bestimmte minimale Größe beschränkt. Sie können diese Funktion verwenden, um zu verhindern, dass einen Benutzer ein Fenster an unerwünschten Größe anpassen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Werte für die Höhe oder Breite innerhalb der <see cref="T:System.Drawing.Size" /> sind kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MinimumSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MinimumSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.MinimumSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.MinimumSize" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosing">
+      <MemberSignature Language="C#" Value="protected override void OnClosing (System.ComponentModel.CancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosing(class System.ComponentModel.CancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewDialog.OnClosing(System.ComponentModel.CancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.CancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten für ein abbrechbares Ereignis bereit.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Form.Closing" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für diese Klasse nicht relevant.  
+  
+ Die <xref:System.Windows.Forms.PrintPreviewDialog.OnClosing%2A> Methode erklärt die Preview-Version aus, damit sie neu erstellt wird, wenn das Dialogfeld erneut geöffnet wird.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.PrintPreviewDialog.OnClosing%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.PrintPreviewDialog.OnClosing(System.ComponentModel.CancelEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.PrintPreviewDialog.OnClosing(System.ComponentModel.CancelEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Opacity">
+      <MemberSignature Language="C#" Value="public double Opacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Opacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Opacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Durchlässigkeit des Formulars ab oder legt diese fest.</summary>
+        <value>Die Durchlässigkeit des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Die <xref:System.Windows.Forms.PrintPreviewDialog> Klasse verwendet nicht die <xref:System.Windows.Forms.PrintPreviewDialog.Opacity%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Textabstand des Steuerelements ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Padding" />, das die internen Abstandsmerkmale des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Padding" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintPreviewControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.PrintPreviewControl PrintPreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.PrintPreviewControl PrintPreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.PrintPreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PrintPreviewControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, die <see cref="T:System.Windows.Forms.PrintPreviewControl" /> in dieser Form enthalten sind.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.PrintPreviewControl" /> in dieser Form enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessDialogKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessDialogKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessDialogKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewDialog.ProcessDialogKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte.</param>
+        <summary>Bestimmt, ob ein Tastaturanschlag weiterverarbeitet werden soll.</summary>
+        <returns>
+          <see langword="true" />Geben die Taste verarbeitet werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>, <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>, <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>, und <xref:System.Windows.Forms.Keys?displayProperty=nameWithType> Schlüsselwerte zurück `false`ist, andernfalls ist die Verarbeitung der Basisklasse übergeben <xref:System.Windows.Forms.Form.ProcessDialogKey%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Dient zum Angeben des Typs des Windows zulässig. Zugeordnete-enumeration<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessTabKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessTabKey (bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessTabKey(bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewDialog.ProcessTabKey(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forward">
+          <see langword="true" />um die Steuerelemente im Formular vorwärts zu durchlaufen; andernfalls <see langword="false" />.</param>
+        <summary>Verarbeitet die TAB-TASTE.</summary>
+        <returns>
+          <see langword="true" />Schlüssel wurde erfolgreich verarbeitet, um anzugeben, die Registerkarte "; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf alle Fenster. Verwandte Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben dieser Methode sollte ein Steuerelement "true" zurückgeben, um anzugeben, dass sie die Taste verarbeitet wurde. Für Schlüssel, die nicht vom Steuerelement verarbeitet werden, wird zurückgeben Sie das Ergebnis der Basisversion dieser Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.RightToLeft RightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.RightToLeft RightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.RightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Elemente des Steuerelements für die Unterstützung von Gebietsschemas ausgerichtet sind, die von rechts nach links geschriebene Schriftarten verwenden, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.RightToLeft" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.RightToLeft.Inherit" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.RightToLeftChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.RightToLeft" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayout">
+      <MemberSignature Language="C#" Value="public override bool RightToLeftLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeftLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.RightToLeftLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.PrintPreviewDialog" /> von rechts nach links angeordnet.</summary>
+        <value>
+          <see langword="true" />um anzugeben, die <see cref="T:System.Windows.Forms.PrintPreviewDialog" /> Inhalt angeordnet von rechts nach links ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Die <xref:System.Windows.Forms.PrintPreviewDialog.RightToLeftLayout%2A> Eigenschaft für Anwendungen verwendet wird, in die Sprache von rechts nach links geschrieben wird. Wenn sowohl die <xref:System.Windows.Forms.PrintPreviewDialog.RightToLeftLayout%2A> und <xref:System.Windows.Forms.PrintPreviewDialog.RightToLeft%2A> Eigenschaften sind `true`Spiegelung wird aktiviert, für das Dialogfeld und Positionierung von Steuerelementen und der Text von rechts nach links werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.RightToLeftLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.RightToLeftLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowInTaskbar">
+      <MemberSignature Language="C#" Value="public bool ShowInTaskbar { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowInTaskbar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.ShowInTaskbar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Formular auf der Windows-Taskleiste angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, um das Formular zur Laufzeit auf der Windows-Taskleiste anzuzeigen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Wenn ein Formular ein untergeordnetes Element eines anderen Formulars ist, wird das untergeordnete Formular nicht in der Windows-Taskleiste angezeigt.  
+  
+ Sie können diese Eigenschaft verwenden, um zu verhindern, dass Benutzer das Formular über die Windows-Taskleiste auswählen. Wenn Sie anzeigen, z. B. eine **suchen und Ersetzen** Toolfenster in der Anwendung, Sie möchten verhindern, dass dieses Fenster über die Windows-Taskleiste ausgewählt werden, da Sie im Hauptfenster der Anwendung und die müsste** Suchen und Ersetzen** Toolfenster angezeigt wird, um Suchvorgänge ordnungsgemäß zu verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Formulars ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />, die die Größe des Formulars darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Diese Eigenschaft bietet die Möglichkeit, legen Sie die Höhe und Breite des Formulars zur gleichen Zeit anstatt durch die Einstellung der <xref:System.Windows.Forms.Control.Height%2A> und <xref:System.Windows.Forms.Control.Width%2A> Eigenschaften einzeln. Wenn Sie die Größe und Position eines Formulars festlegen möchten, können Sie mithilfe der <xref:System.Windows.Forms.Form.DesktopBounds%2A> -Eigenschaft für die Größe und Position des Formulars basierend auf Desktopkoordinaten oder verwenden Sie die <xref:System.Windows.Forms.Control.Bounds%2A> Eigenschaft von der <xref:System.Windows.Forms.Control> Klasse zum Festlegen der Größe und Position des Formulars basierend auf Bildschirm Koord Inates.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.SizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Size" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeGripStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SizeGripStyle SizeGripStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.SizeGripStyle SizeGripStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.SizeGripStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SizeGripStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Art des Größenziehpunkts in der rechten unteren Ecke des Formulars ab oder legt diesen fest.</summary>
+        <value>Ruft die Art des Größenziehpunkts in der rechten unteren Ecke des Formulars ab oder legt diesen fest.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FormStartPosition StartPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FormStartPosition StartPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.StartPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormStartPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anfangsposition des Dialogfelds zur Laufzeit ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.FormStartPosition" /> , der die Anfangsposition des Dialogfelds darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht Ihnen, die Anfangsposition des Formulars festgelegt, wenn er zur Laufzeit angezeigt wird. Das Formular kann angezeigt werden, manuell oder in den Standardspeicherort von Windows angegeben. Sie können auch das Formular zum Anzeigen von in der Mitte des Bildschirms oder in der Mitte des übergeordneten Formulars für Formulare, z. B. multiple Document Interface (MDI) untergeordneten Formulare positionieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert liegt außerhalb des Bereichs der gültigen Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Benutzer den Fokus mit der TAB-TASTE auf dieses Steuerelement setzen können, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer den Fokus mit der TAB-Taste auf dieses Steuerelement setzen kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Wenn der Benutzer die TAB-Taste drückt, wird der Eingabefokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt. Steuert die <xref:System.Windows.Forms.PrintPreviewDialog.TabStop%2A> Eigenschaftswert `false` sind nicht in die Auflistung der Steuerelemente in der Aktivierreihenfolge enthalten. Die Reihenfolge der Registerkarten kann bearbeitet werden, indem Sie des Steuerelements festlegen <xref:System.Windows.Forms.Form.TabIndex%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStopChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.TabStopChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.TabStop" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das Daten über das Steuerelement enthält, oder legt dieses fest.</summary>
+        <value>Ein Objekt, das Daten zum Steuerelement enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Ruft ab oder weist die Daten, die derzeit mit der Strukturknoten zugewiesen ist. Auf diese Eigenschaft kann jeder Typ abgeleitetes Objekt zugewiesen werden. Wenn diese Eigenschaft mit dem Windows Forms-Designer festgelegt wird, kann nur Text zugewiesen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den auf dem Steuerelement angezeigten Text ab oder legt diesen fest.</summary>
+        <value>Stellt Text als eine Reihe von Unicode-Zeichen dar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Text" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopMost">
+      <MemberSignature Language="C#" Value="public bool TopMost { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TopMost" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.TopMost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Formular in der Anwendung als oberstes Formular angezeigt werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, um das Formular als oberstes Formular anzuzeigen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Oberstes Formular wird ein Formular, das die anderen Formen überschneidet, auch wenn es sich nicht um das Formular "aktiv" oder Vordergrund ist. Oberste Formulare werden immer am höchsten Punkt in der Z-Reihenfolge einer Anwendung angezeigt. Sie können diese Methode verwenden, um ein Formular erstellen, die immer in der Anwendung angezeigt wird, wie z. B. wird ein **suchen und Ersetzen** Toolfenster.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransparencyKey">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color TransparencyKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color TransparencyKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.TransparencyKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe ab, in der transparente Bereiche des Formulars darstellt werden, oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Color" />, die die Farbe für eine transparente Anzeige im Formular darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ Wenn die <xref:System.Windows.Forms.Form.TransparencyKey%2A> Eigenschaft zugewiesen ist ein <xref:System.Drawing.Color>, die Bereiche des Formulars, die dieselbe <xref:System.Windows.Forms.Control.BackColor%2A> transparent angezeigt. Alle Mausaktionen, z. B. das Klicken auf die Maus, die für die transparente Bereiche des Formulars ausgeführt werden, werden auf dem Windows unterhalb der transparenten Bereich übertragen werden. Z. B. wenn Clientbereichs eines Formulars erfolgt transparent ist, sendet klicken mit der Maus auf diesen Bereich die ereignisbenachrichtigung der klicken Sie auf einem beliebigen Fenster, die darunter liegenden. Wenn Sie die Farbe zugewiesen der <xref:System.Windows.Forms.Form.TransparencyKey%2A> Eigenschaft ist identisch mit der alle Steuerelemente im Formular, die sie auch transparent angezeigt. Angenommen, Sie haben eine <xref:System.Windows.Forms.Button> Steuerelement auf ein Formular, seine <xref:System.Windows.Forms.Form.TransparencyKey%2A> -Eigenschaftensatz auf <xref:System.Drawing.SystemColors.Control%2A>, das Steuerelement transparent angezeigt, es sei denn, der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft von der <xref:System.Windows.Forms.Button> Steuerelement wird in einer anderen Farbe geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAntiAlias">
+      <MemberSignature Language="C#" Value="public bool UseAntiAlias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAntiAlias" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob beim Drucken die Antialiasing-Funktionen des Betriebssystems verwendet werden sollen, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn Anti-Aliasing verwendet wird. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt einen Anti-Aliasing verzweigte Zeilen aus, wenn Schriftarten gerendert werden.  
+  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.PrintPreviewDialog> Einstellung der <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> und <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> Eigenschaften. Im Beispiel wird vorausgesetzt, das Formular enthält ein <xref:System.Windows.Forms.TreeView> mit dem Namen `TreeView1` enthält <xref:System.Windows.Forms.TreeNode> Objekte. Die <xref:System.Windows.Forms.Control.Tag%2A> -Eigenschaft jedes <xref:System.Windows.Forms.TreeNode> Objekt muss festgelegt werden, um einen vollqualifizierten Dokumentnamen, die von der Ausführung des Beispiels Computer zugegriffen werden kann. Legen Sie jedes <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> Eigenschaft, um eine Zeichenfolge, die Datei identifiziert, die <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> Eigenschaft. Sie können z. B. festlegen `TreeNode1.Tag` zu "c:\myDocuments\recipe.doc" und `TreeNode1.Text` auf "Rezept.doc". Das Beispiel auch setzt voraus, das Formular enthält ein <xref:System.Windows.Forms.PrintPreviewDialog> mit dem Namen `PrintPreviewDialog1` und eine Schaltfläche mit dem Namen `Button1`. Um dieses Beispiel auszuführen, rufen Sie die `InitializePrintPreviewDialog` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+  
+ [!code-cpp[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.TreeViewAndPrintPreview#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewAndPrintPreview/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseWaitCursor">
+      <MemberSignature Language="C#" Value="public bool UseWaitCursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseWaitCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.UseWaitCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wartecursor ab, i. d. R. ein Sanduhrsymbol.</summary>
+        <value>
+          <see langword="true" />, wenn der Wartecursor für das aktuelle Steuerelement und alle untergeordneten Steuerelemente verwendet werden soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Steuerelement sichtbar ist, oder legt diesen fest.</summary>
+        <value>Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ <see langword="true" />Wenn das Steuerelement sichtbar ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewDialog.VisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.PrintPreviewDialog.Visible" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowState">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FormWindowState WindowState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FormWindowState WindowState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewDialog.WindowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormWindowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fensterzustand des Formulars ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.FormWindowState" /> , der den Fensterzustand des Formulars darstellt. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.FormWindowState.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bevor Sie ein Formular angezeigt wird, die <xref:System.Windows.Forms.Form.WindowState%2A> -Eigenschaftensatz ist immer auf <xref:System.Windows.Forms.FormWindowState?displayProperty=nameWithType>, unabhängig von die ursprüngliche Einstellung. Dies spiegelt wider, der <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Left%2A>, <xref:System.Windows.Forms.Control.Top%2A>, und <xref:System.Windows.Forms.Control.Width%2A> eigenschafteneinstellungen. Wenn ein Formular ausgeblendet ist, nachdem es angezeigt wurde, diese Eigenschaften entsprechen den vorherigen Zustand erst das Formular erneut, unabhängig von der alle Änderungen angezeigt wird an der <xref:System.Windows.Forms.Form.WindowState%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert liegt außerhalb des Bereichs der gültigen Werte.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

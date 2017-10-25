@@ -1,0 +1,151 @@
+<Type Name="DsmlSoapConnection" FullName="System.DirectoryServices.Protocols.DsmlSoapConnection">
+  <TypeSignature Language="C#" Value="public abstract class DsmlSoapConnection : System.DirectoryServices.Protocols.DirectoryConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DsmlSoapConnection extends System.DirectoryServices.Protocols.DirectoryConnection" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DsmlSoapConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.DsmlSoapConnection" /> Klasse ist eine abstrakte Klasse, die nicht instanziiert werden kann. Dadurch werden Zustandslose und zustandsbehaftete Protokolle ähnlich behandelt werden, durch die Sitzung orientierten Funktionen bereitstellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DsmlSoapConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlSoapConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DsmlSoapConnection.#ctor" /> Konstruktor initialisiert eine neue Instanz der eine <see cref="T:System.DirectoryServices.Protocols.DsmlSoapConnection" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSession">
+      <MemberSignature Language="C#" Value="public abstract void BeginSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginSession() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlSoapConnection.BeginSession" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DsmlSoapConnection.BeginSession" /> -Methode weist den DSML-Server eine neue Sitzung starten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode wird beim Warten auf einer Antwort vom DSML-Server blockiert werden und tritt ein Timeout gemäß der <xref:System.DirectoryServices.Protocols.DirectoryConnection.Timeout%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wird ausgelöst, wenn bereits eine Sitzung für die Verbindung geöffnet ist.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.DsmlInvalidDocumentException">Wird ausgelöst, wenn vom Server als Antwort auf die BeginSession zurückgegebene XML nicht wohlgeformt ist.</exception>
+        <exception cref="T:System.Net.WebException">Wird ausgelöst, wenn ein Kommunikationsfehler mit dem DSML-Server vorhanden ist.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSession">
+      <MemberSignature Language="C#" Value="public abstract void EndSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSession() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlSoapConnection.EndSession" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DsmlSoapConnection.EndSession" /> Methode endet die Sitzung mit dem DSML-Server und löscht die <see cref="P:System.DirectoryServices.Protocols.DsmlSoapConnection.SessionId" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode wird beim Warten auf einer Antwort vom DSML-Server blockiert werden und tritt ein Timeout gemäß der <xref:System.DirectoryServices.Protocols.DirectoryConnection.Timeout%2A> Eigenschaft.  
+  
+ Wenn ein DSML-Server die Sitzung beendet eine<xref:System.Net.WebException>  
+  
+ wird ausgelöst. Wenn <xref:System.DirectoryServices.Protocols.DsmlSoapConnection.SessionId%2A> noch gültig ist, nachdem die Ausnahme wird ausgelöst, die Anforderung den Server nicht erreicht und die Verbindung wird immer noch als gültig betrachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">Wird ausgelöst, wenn ein Kommunikationsfehler mit dem DSML-Server auftritt.</exception>
+        <exception cref="T:System.InvalidOperationException">Wird ausgelöst, wenn es keine Sitzung geöffnet ist.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionId">
+      <MemberSignature Language="C#" Value="public abstract string SessionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionId" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlSoapConnection.SessionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.DsmlSoapConnection.SessionId" /> Eigenschaft enthält die aktiven Sitzungs-ID.</summary>
+        <value>Die aktiven Sitzungs-ID.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein null-Wert gibt keine aktive Sitzung an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapRequestHeader">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNode SoapRequestHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode SoapRequestHeader" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlSoapConnection.SoapRequestHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.DsmlSoapConnection.SoapRequestHeader" /> Eigenschaft enthält den SOAP-Header für ausgehende Anforderungen angefügt.</summary>
+        <value>Die SOAP-Header für ausgehende Anforderungen angefügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die API verwendet <xref:System.DirectoryServices.Protocols.DsmlSoapConnection.BeginSession%2A> und <xref:System.DirectoryServices.Protocols.DsmlSoapConnection.EndSession%2A> zum Nachverfolgen der Lebensdauer der Sitzung.  
+  
+ **Vorsicht** Anfügen eines EndSession-Headers, um die <xref:System.DirectoryServices.Protocols.DsmlSoapConnection.SoapRequestHeader%2A> bewirkt, dass die API inkonsistent mit der Verbindung werden und sollte vermieden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

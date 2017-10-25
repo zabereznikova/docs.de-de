@@ -1,0 +1,315 @@
+<Type Name="ImageFormat" FullName="System.Drawing.Imaging.ImageFormat">
+  <TypeSignature Language="C#" Value="public sealed class ImageFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImageFormat extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ImageFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ImageFormatConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt das Dateiformat des Bilds an. Nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften der <xref:System.Drawing.Imaging.ImageFormat> -Klasse geben Bildformate wie Bitmap (<xref:System.Drawing.Imaging.ImageFormat.Bmp%2A>), erweiterte Metadatei (<xref:System.Drawing.Imaging.ImageFormat.Emf%2A>), und das Symbol (<xref:System.Drawing.Imaging.ImageFormat.Icon%2A>). Beispielsweise können Sie die Eigenschaften der <xref:System.Drawing.Imaging.ImageFormat> Klasse, um ein Bildformat anzugeben, beim Speichern eines Bilds die <xref:System.Drawing.Image.Save%2A> Methode. Sie können zwei Bildformate vergleichen, indem Sie mit der <xref:System.Drawing.Imaging.ImageFormat.Equals%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageFormat (Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageFormat.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Die <see cref="T:System.Guid" /> Struktur, die ein bestimmtes Bildformat angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Imaging.ImageFormat" /> Klasse unter Verwendung des angegebenen <see cref="T:System.Guid" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel verwenden Sie die statischen Eigenschaften der der <xref:System.Drawing.Imaging.ImageFormat> Klasse, um ein bestimmtes Format anzugeben, wie z. B. <xref:System.Drawing.Imaging.ImageFormat.Png%2A> oder <xref:System.Drawing.Imaging.ImageFormat.Jpeg%2A>, anstatt eine neue <xref:System.Drawing.Imaging.ImageFormat>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bmp">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Bmp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Bmp" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Bmp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Bitmap (BMP)-Image-Format ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt, das die Bitmap-Bild-Format angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Emf">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Emf { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Emf" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Emf" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Bildformat Erweiterte Metadatei (EMF) ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> -Objekt, das Bildformat Erweiterte Metadatei angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageFormat.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das zu überprüfende Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Objekt ist ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> -Objekt, das dies entspricht <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> -Objekt, das dies entspricht <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exif">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Exif { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Exif" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Exif" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Exchangeable Image File (Exif)-Format ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt, das das Exif-Format angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageFormat.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashwert für den Code, der dieses Objekt darstellt.</summary>
+        <returns>Ein Hashcode, der dieses Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gif">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Gif { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Gif" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Gif" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Graphics Interchange Format (GIF)-Image-Format ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> -Objekt, das Bildformat GIF angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Guid Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Guid" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Guid" /> -Struktur, die dies stellt <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Guid" /> -Struktur, die dies stellt <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Icon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Bildformat für Windows-Symbol ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> -Objekt, das Bildformat für Windows-Symbol angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Jpeg">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Jpeg { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Jpeg" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Jpeg" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, dem Bildformat Joint Photographic Experts Group (JPEG).</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt, das das JPEG-Bild-Format angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryBmp">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat MemoryBmp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat MemoryBmp" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.MemoryBmp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Format einer Bitmap im Arbeitsspeicher ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt, das das Format einer Bitmap im Arbeitsspeicher angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Png">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Png { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Png" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Png" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, dem Bildformat W3C Portable Network Graphics (PNG).</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt, das das PNG-Bild-Format angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tiff">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Tiff { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Tiff" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Tiff" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, dem Bildformat Tagged Image File Format (TIFF).</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> Objekt, das das TIFF-Bild-Format angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageFormat.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert dieses <see cref="T:System.Drawing.Imaging.ImageFormat" />-Objekt in eine Klartextzeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die dieses <see cref="T:System.Drawing.Imaging.ImageFormat" />-Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wmf">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.ImageFormat Wmf { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Imaging.ImageFormat Wmf" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.ImageFormat.Wmf" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.ImageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Windows-Metadatei (WMF)-Image-Format ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.ImageFormat" /> -Objekt, das Bildformat der Windows-Metadatei angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

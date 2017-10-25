@@ -1,0 +1,95 @@
+<Type Name="EntityHandling" FullName="System.Xml.EntityHandling">
+  <TypeSignature Language="C#" Value="public enum EntityHandling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EntityHandling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.EntityHandling" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie die <see cref="T:System.Xml.XmlTextReader" /> oder <see cref="T:System.Xml.XmlValidatingReader" /> Entitäten behandelt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExpandCharEntities">
+      <MemberSignature Language="C#" Value="ExpandCharEntities" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.EntityHandling ExpandCharEntities = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.EntityHandling.ExpandCharEntities" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.EntityHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erweitert Zeichenentitäten und gibt allgemeine Entitäten als <see cref="F:System.Xml.XmlNodeType.EntityReference" /> Knoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Xml.XmlReader.ResolveEntity%2A> um festzustellen, welche die allgemeinen Entitäten zu erweitern. Dadurch können Sie zur Optimierung der Entität, die Verarbeitung durch die Entität erweitern nur bei der erstmaligen Verwendung.  
+  
+ Ein Reader bei der Einstellung ExpandCharEntities aufrufen werden, um die <xref:System.Xml.XmlReader.GetAttribute%2A> erweitert alle Entitäten (Allgemein oder im Zeichenformat Entitäten) Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandEntities">
+      <MemberSignature Language="C#" Value="ExpandEntities" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.EntityHandling ExpandEntities = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.EntityHandling.ExpandEntities" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.EntityHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erweitert alle Entitäten und gibt die erweiterten Knoten zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlNodeType.EntityReference>Knoten werden nicht zurückgegeben. Der Entitätstext wird anstelle der Entitätsverweise erweitert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

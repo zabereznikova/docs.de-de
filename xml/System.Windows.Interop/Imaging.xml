@@ -1,0 +1,130 @@
+<Type Name="Imaging" FullName="System.Windows.Interop.Imaging">
+  <TypeSignature Language="C#" Value="public static class Imaging" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Imaging extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.Imaging" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet verwaltetem zu nicht verwaltetem interoperation Unterstützung für Image-Objekte erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse bietet Erstellung Mechanismen für die Bitmap für die primäre Klasse in imaging [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Media.Imaging.BitmapSource>. Dazu gehören Methoden zum Erstellen einer <xref:System.Windows.Media.Imaging.BitmapSource> basierend auf [!INCLUDE[TLA#tla_gdi](~/includes/tlasharptla-gdi-md.md)] Objekte und Arbeitsspeicher-Abschnitte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateBitmapSourceFromHBitmap">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource CreateBitmapSourceFromHBitmap (IntPtr bitmap, IntPtr palette, System.Windows.Int32Rect sourceRect, System.Windows.Media.Imaging.BitmapSizeOptions sizeOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapSource CreateBitmapSourceFromHBitmap(native int bitmap, native int palette, valuetype System.Windows.Int32Rect sourceRect, class System.Windows.Media.Imaging.BitmapSizeOptions sizeOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(System.IntPtr,System.IntPtr,System.Windows.Int32Rect,System.Windows.Media.Imaging.BitmapSizeOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmap" Type="System.IntPtr" />
+        <Parameter Name="palette" Type="System.IntPtr" />
+        <Parameter Name="sourceRect" Type="System.Windows.Int32Rect" />
+        <Parameter Name="sizeOptions" Type="System.Windows.Media.Imaging.BitmapSizeOptions" />
+      </Parameters>
+      <Docs>
+        <param name="bitmap">Ein Zeiger auf die nicht verwaltete Bitmap.</param>
+        <param name="palette">Ein Zeiger auf die Bitmap Palette Zuordnung.</param>
+        <param name="sourceRect">Die Größe des Quellbilds.</param>
+        <param name="sizeOptions">Der Wert der Enumeration, die angibt, wie Konvertierungen zu behandeln.</param>
+        <summary>Gibt einen verwalteten <see cref="T:System.Windows.Media.Imaging.BitmapSource" />basierend auf dem bereitgestellten Zeiger auf eine nicht verwaltete Bitmap und Palette.</summary>
+        <returns>Der erstellte <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">ein Objekt aus dieser Methode zurückgegeben. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBitmapSourceFromHIcon">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource CreateBitmapSourceFromHIcon (IntPtr icon, System.Windows.Int32Rect sourceRect, System.Windows.Media.Imaging.BitmapSizeOptions sizeOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapSource CreateBitmapSourceFromHIcon(native int icon, valuetype System.Windows.Int32Rect sourceRect, class System.Windows.Media.Imaging.BitmapSizeOptions sizeOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.Imaging.CreateBitmapSourceFromHIcon(System.IntPtr,System.Windows.Int32Rect,System.Windows.Media.Imaging.BitmapSizeOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="icon" Type="System.IntPtr" />
+        <Parameter Name="sourceRect" Type="System.Windows.Int32Rect" />
+        <Parameter Name="sizeOptions" Type="System.Windows.Media.Imaging.BitmapSizeOptions" />
+      </Parameters>
+      <Docs>
+        <param name="icon">Ein Zeiger auf das Symbol "nicht verwaltet" Quelle.</param>
+        <param name="sourceRect">Die Größe des Quellbilds.</param>
+        <param name="sizeOptions">Der Wert der Enumeration, die angibt, wie Konvertierungen zu behandeln.</param>
+        <summary>Gibt einen verwalteten <see cref="T:System.Windows.Media.Imaging.BitmapSource" />basierend auf dem bereitgestellten Zeiger auf ein nicht verwaltetes Symbolbild.</summary>
+        <returns>Der erstellte <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">ein Objekt aus dieser Methode zurückgegeben. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBitmapSourceFromMemorySection">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource CreateBitmapSourceFromMemorySection (IntPtr section, int pixelWidth, int pixelHeight, System.Windows.Media.PixelFormat format, int stride, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapSource CreateBitmapSourceFromMemorySection(native int section, int32 pixelWidth, int32 pixelHeight, valuetype System.Windows.Media.PixelFormat format, int32 stride, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.Imaging.CreateBitmapSourceFromMemorySection(System.IntPtr,System.Int32,System.Int32,System.Windows.Media.PixelFormat,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="section" Type="System.IntPtr" />
+        <Parameter Name="pixelWidth" Type="System.Int32" />
+        <Parameter Name="pixelHeight" Type="System.Int32" />
+        <Parameter Name="format" Type="System.Windows.Media.PixelFormat" />
+        <Parameter Name="stride" Type="System.Int32" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="section">Ein Zeiger auf einen Speicherbereich.</param>
+        <param name="pixelWidth">Eine ganze Zahl, die die Breite der Bitmap in Pixel angibt.</param>
+        <param name="pixelHeight">Eine ganze Zahl, die die Höhe der Bitmap in Pixel angibt.</param>
+        <param name="format">Ein Wert aus der Enumeration.</param>
+        <param name="stride">Der Schritt der Bitmap.</param>
+        <param name="offset">Der Byte-Offset in den Arbeitsspeicherstream, in dem das Bild wird gestartet.</param>
+        <summary>Gibt einen verwalteten <see cref="T:System.Windows.Media.Imaging.BitmapSource" />basierend auf die angegebene nicht verwaltete Speicheradresse.</summary>
+        <returns>Der erstellte <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">ein Objekt aus dieser Methode zurückgegeben. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

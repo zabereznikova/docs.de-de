@@ -1,0 +1,106 @@
+<Type Name="ChartElementOutline" FullName="System.Web.UI.DataVisualization.Charting.ChartElementOutline">
+  <TypeSignature Language="C#" Value="public class ChartElementOutline : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartElementOutline extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartElementOutline" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein Array von Markerpunkten und Gliederung Pfad visual Objektauswahl im Diagramm dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Web.UI.DataVisualization.Charting.ChartElementOutline.OutlinePath%2A> Eigenschaft kann `null` für komplexe Objekte oder Objekte mit zwei Punkten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartElementOutline.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt anwendungsspezifische Aufgaben, die frei, freigeben oder Zurücksetzen von nicht verwalteten Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartElementOutline.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" /> um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt nicht verwaltete und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Markers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Drawing.PointF&gt; Markers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Drawing.PointF&gt; Markers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartElementOutline.Markers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Drawing.PointF&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Markierung an.</summary>
+        <value>Ein Array von <see cref="T:System.Drawing.PointF" /> Werte, die Markerpunkte darstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlinePath">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.GraphicsPath OutlinePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.GraphicsPath OutlinePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartElementOutline.OutlinePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.GraphicsPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Gliederung. Der Rückgabewert kann <see langword="null" /> für komplexe Objekte und Objekte mit zwei Punkten.</summary>
+        <value>Ein <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> , die Gliederung Pfad darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

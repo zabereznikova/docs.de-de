@@ -1,0 +1,188 @@
+<Type Name="ListViewItemStates" FullName="System.Windows.Forms.ListViewItemStates">
+  <TypeSignature Language="C#" Value="public enum ListViewItemStates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ListViewItemStates extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListViewItemStates" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Konstanten, die die möglichen Statuswerte des darstellen einer <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.DrawListViewItemEventArgs.State%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.ItemState%2A?displayProperty=nameWithType> Eigenschaften. Weitere Informationen finden Sie unter der <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignisse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie benutzerdefinierte Zeichnung für bieten eine <xref:System.Windows.Forms.ListView> Steuerelement. Die <xref:System.Windows.Forms.ListView> im Beispiel-Steuerelement einem Farbverlaufshintergrund. Unterelemente mit negativen Werten haben einen roten Vordergrund und schwarzem Hintergrund.  
+  
+ Ein Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> -Ereignis zeichnet den Hintergrund für gesamte Elemente und die Spaltenheader. Ein Handler für das <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis zeichnet die Textwerte sowie Text und Hintergrund für Unterelemente, die negative Werte haben.  
+  
+ Ein <xref:System.Windows.Forms.ContextMenu> Komponente bietet eine Möglichkeit, zwischen der Ansicht und der Liste zu wechseln. In der Listenansicht, nur die <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis ausgelöst wird. In diesem Fall Text und Hintergrund werden sowohl in gezeichnet der <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> -Ereignishandler.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType> Referenzthema.  
+  
+ [!code-csharp[ListViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#3)]
+ [!code-vb[ListViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="Checked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Checked = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Checked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element aktiviert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Default = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ist im Standardzustand.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Focused">
+      <MemberSignature Language="C#" Value="Focused" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Focused = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Focused" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element besitzt den Fokus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Grayed">
+      <MemberSignature Language="C#" Value="Grayed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Grayed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Grayed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ist deaktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="Hot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Hot = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Hot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ist derzeit unter dem Mauszeiger auf.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Indeterminate = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ist in einem unbestimmten Zustand.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Marked">
+      <MemberSignature Language="C#" Value="Marked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Marked = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Marked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element wird markiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="Selected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates Selected = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.Selected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ausgewählt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowKeyboardCues">
+      <MemberSignature Language="C#" Value="ShowKeyboardCues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ListViewItemStates ShowKeyboardCues = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ListViewItemStates.ShowKeyboardCues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element sollte mit einer Tastenkombination angegeben werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

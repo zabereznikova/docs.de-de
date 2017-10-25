@@ -1,0 +1,72 @@
+<Type Name="DesigntimeLicenseContextSerializer" FullName="System.ComponentModel.Design.DesigntimeLicenseContextSerializer">
+  <TypeSignature Language="C#" Value="public class DesigntimeLicenseContextSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesigntimeLicenseContextSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesigntimeLicenseContextSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Unterstützung für die Serialisierung der Lizenz während der Entwurfszeit-Kontext.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt eine Serialisierungsmethode, die einen angegebenen Entwurfszeitlizenz Kontext serialisieren kann.  
+  
+> [!IMPORTANT]
+>  Verwenden eine Instanz dieses Objekts mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Verwenden Sie diese Klasse nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public static void Serialize (System.IO.Stream o, string cryptoKey, System.ComponentModel.Design.DesigntimeLicenseContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Serialize(class System.IO.Stream o, string cryptoKey, class System.ComponentModel.Design.DesigntimeLicenseContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesigntimeLicenseContextSerializer.Serialize(System.IO.Stream,System.String,System.ComponentModel.Design.DesigntimeLicenseContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.IO.Stream" />
+        <Parameter Name="cryptoKey" Type="System.String" />
+        <Parameter Name="context" Type="System.ComponentModel.Design.DesigntimeLicenseContext" />
+      </Parameters>
+      <Docs>
+        <param name="o">Der Datenstrom für die Ausgabe.</param>
+        <param name="cryptoKey">Der Schlüssel zur Verschlüsselung verwenden.</param>
+        <param name="context">Ein <see cref="T:System.ComponentModel.Design.DesigntimeLicenseContext" /> , der angibt, die Lizenzkontext.</param>
+        <summary>Serialisiert die Lizenzen innerhalb des angegebenen Entwurfszeitlizenz-Kontexts, die mit dem angegebenen Schlüssel und den Ausgabestream an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

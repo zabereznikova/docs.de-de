@@ -1,0 +1,129 @@
+<Type Name="EtwTrackingBehaviorElement" FullName="System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement">
+  <TypeSignature Language="C#" Value="public class EtwTrackingBehaviorElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EtwTrackingBehaviorElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt und verwaltet das <see cref="T:System.ServiceModel.Activities.Description.EtwTrackingBehavior" />-Unterelement im Dienstverhaltensabschnitt einer SQL-Workflowkonfigurationsdatei.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>-Objekt enthält Einstellungen, um das Ereignisüberwachungsverhalten in einer Workflowanwendung zu steuern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EtwTrackingBehaviorElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der <see cref="T:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement" />-Instanz ab.</summary>
+        <value>Der Typ eines Ereignisüberwachungs-Verhaltenselements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine neue Instanz der <see cref="T:System.ServiceModel.Activities.Description.EtwTrackingBehavior" />-Klasse zurück.</summary>
+        <returns>Eine Instanz eines Ereignisüberwachungs-Verhaltensobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProfileName">
+      <MemberSignature Language="C#" Value="public string ProfileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProfileName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement.ProfileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("profileName", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Nachverfolgungs-Profilnamensparameter für das Ereignisüberwachungs-Verhaltenselement ab.</summary>
+        <value>Ein Zeichenfolgen-Profilname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Nachverfolgungsprofil filtert bestimmte Ereignisüberwachungsdaten heraus, die die Workflowlaufzeit generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> vom aktuellen Ereignisüberwachungs-Verhaltenselement ab.</summary>
+        <value>Eine Auflistung von Konfigurationseigenschaften.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

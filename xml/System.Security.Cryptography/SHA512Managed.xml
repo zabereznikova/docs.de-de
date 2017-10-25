@@ -1,0 +1,254 @@
+<Type Name="SHA512Managed" FullName="System.Security.Cryptography.SHA512Managed">
+  <TypeSignature Language="C#" Value="public class SHA512Managed : System.Security.Cryptography.SHA512" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SHA512Managed extends System.Security.Cryptography.SHA512" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.SHA512Managed" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.SHA512</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Berechnet die <see cref="T:System.Security.Cryptography.SHA512" /> Hashalgorithmus für die Eingabedaten mithilfe der verwalteten Bibliothek.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashwert dient als eindeutiger Wert mit fester Größe, die eine große Datenmenge darstellt. Hashes von zwei Sätzen von Daten übereinstimmen, wenn auch die entsprechenden Daten übereinstimmen. Kleine Änderungen an den Daten führen in umfangreichen unvorhersehbare Änderungen im HashSet.  
+  
+ Die Hashgröße für die <xref:System.Security.Cryptography.SHA512Managed> Algorithmus beträgt 512 Bits.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel berechnet den <xref:System.Security.Cryptography.SHA512Managed> -hash für `data` und speichert ihn in `result`. In diesem Beispiel wird davon ausgegangen, dass es eine vordefinierte Konstante ist `DATA_SIZE`.  
+  
+ [!code-cpp[Classic SHA512Managed Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic SHA512Managed Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SHA512Managed Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic SHA512Managed Example/CS/source.cs#1)]
+ [!code-vb[Classic SHA512Managed Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic SHA512Managed Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SHA512Managed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512Managed.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.SHA512Managed" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashwert dient als eindeutiger Wert mit fester Größe, die eine große Datenmenge darstellt. Hashes von zwei Sätzen von Daten übereinstimmen, wenn auch die entsprechenden Daten übereinstimmen. Kleine Änderungen an den Daten führen in umfangreichen unvorhersehbare Änderungen im HashSet.  
+  
+ Die Hashgröße für die <xref:System.Security.Cryptography.SHA512Managed> Algorithmus beträgt 512 Bits.  
+  
+ **Wichtige** Wenn Sie aktivieren die FIPS-sicherheitseinstellung entweder in der lokalen Sicherheitsrichtlinie oder als Teil der Gruppenrichtlinie Sie erhalten eine <xref:System.InvalidOperationException> beim Versuch, diesen Konstruktor verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die sicherheitseinstellung Federal Information Processing Standards (FIPS) aktiviert ist. Diese Implementierung ist nicht Teil der Windows-Plattform-FIPS-validierten kryptografischen Algorithmen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512Managed.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SHA512Managed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512Managed.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashCore">
+      <MemberSignature Language="C#" Value="protected override void HashCore (byte[] rgb, int ibStart, int cbSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HashCore(unsigned int8[] rgb, int32 ibStart, int32 cbSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512Managed.HashCore(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+        <Parameter Name="ibStart" Type="System.Int32" />
+        <Parameter Name="cbSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">Die Eingabedaten.</param>
+        <param name="ibStart">Der Offset im Bytearray, ab dem Daten verwendet werden sollen.</param>
+        <param name="cbSize">Die Anzahl der Bytes im Array, die als Daten verwendet werden sollen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse leitet Sie in das Objekt geschriebene Daten der <see cref="T:System.Security.Cryptography.SHA512Managed" /> Hashalgorithmus zum Errechnen des Hashs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Anwendungscode nicht aufgerufen.  
+  
+ Diese abstrakte Methode führt die Berechnung des Hashs. Bei jedem Schreibvorgang für das Kryptografiestreamobjekt übergibt die Daten über diese Methode. Für jeden Block von Daten aktualisiert diese Methode den Zustand des Hashobjekts so ein richtige Hashwert am Ende des Datenstroms zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashFinal">
+      <MemberSignature Language="C#" Value="protected override byte[] HashFinal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashFinal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512Managed.HashFinal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt beim Überschreiben in einer abgeleiteten Klasse die Berechnung des Hashs ab, nachdem die letzten Daten vom Kryptografiestreamobjekt verarbeitet wurden.</summary>
+        <returns>Der berechnete Hashcode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Anwendungscode nicht aufgerufen. Diese Methode schließt alle partiellen Berechnung ab und gibt den richtigen Hashwert des Datenstroms zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA512Managed.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Security.Cryptography.SHA512Managed" /> -Klasse unter Verwendung der verwalteten Bibliothek.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashwert dient als eindeutiger Wert mit fester Größe, die eine große Datenmenge darstellt. Hashes von zwei Sätzen von Daten übereinstimmen, wenn auch die entsprechenden Daten übereinstimmen. Kleine Änderungen an den Daten führen in umfangreichen unvorhersehbare Änderungen im HashSet.  
+  
+ Die Hashgröße für die <xref:System.Security.Cryptography.SHA512Managed> Algorithmus beträgt 512 Bits.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

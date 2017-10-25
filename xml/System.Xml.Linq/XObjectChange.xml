@@ -1,0 +1,279 @@
+<Type Name="XObjectChange" FullName="System.Xml.Linq.XObjectChange">
+  <TypeSignature Language="C#" Value="public enum XObjectChange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XObjectChange extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XObjectChange" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Ereignistyp an, wenn ein Ereignis für ein <see cref="T:System.Xml.Linq.XObject" /> ausgelöst wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `enum` gibt den Ereignistyp an, wenn ein Ereignis, für ausgelöst wird eine <xref:System.Xml.Linq.XObject>.  
+  
+ Alle Vorgänge, die die XML-Struktur ändern unterteilen, eine Reihe von primitiven Typen. Es gibt vier Arten von primitiven Typen. Zwei primitive (hinzufügen und entfernen) werden auf Auflistungen angewendet. Zwei dieser Parameter (Name und Wert) wirken sich auf Instanzen. Es wird ein entsprechendes Ereignis für jedes der folgenden primitiven.  
+  
+ Sie sollten vorsichtig sein, wenn eine XML-Struktur innerhalb eines dieser Ereignisse ändern, weil dies zu unerwarteten Ergebnissen führen kann. Angenommen, Sie erhalten eine <xref:System.Xml.Linq.XObject.Changing> Ereignis, und während das Ereignis verarbeitet wird, entfernen Sie den Knoten aus der Struktur, erhalten Sie möglicherweise nicht die <xref:System.Xml.Linq.XObject.Changed> Ereignis. Wenn ein Ereignis verarbeitet wird, ist es zulässig, eine XML-Struktur als der ändern, die der Knoten enthält, der das Ereignis empfangen wird. Es ist auch zulässig, die gleiche Struktur zu ändern, sofern die Änderungen nicht bestimmten Knoten beeinflussen, auf denen das Ereignis ausgelöst wurde. Wenn Sie den Bereich der Struktur, die die Knoten, die das Ereignis empfangen enthält ändern, sind jedoch die Ereignisse, die Sie erhalten und die Auswirkungen auf die Struktur nicht definiert.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel löst ein Ereignis, indem ein Element der Struktur hinzufügen.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "content");  
+root.Changing += (sender, e) =>  
+    {  
+        Console.WriteLine("Changing event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changing: " + e.ObjectChange);  
+    };  
+root.Changed += (sender, e) =>  
+    {  
+        Console.WriteLine("Changed event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changed: " + e.ObjectChange);  
+    };  
+root.Add(new XElement("Child", "child content"));  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Changing event raised  
+  Sender: System.Xml.Linq.XElement  
+  Changing: Add  
+Changed event raised  
+  Sender: System.Xml.Linq.XElement  
+  Changed: Add  
+```  
+  
+ Im folgende Beispiel löst ein Ereignis, durch das Entfernen eines Elements aus der Struktur.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root",  
+    new XElement("Child", "content")  
+);  
+root.Changing += (sender, e) =>  
+    {  
+        Console.WriteLine("Changing event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changing: " + e.ObjectChange);  
+    };  
+root.Changed += (sender, e) =>  
+    {  
+        Console.WriteLine("Changed event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changed: " + e.ObjectChange);  
+    };  
+root.Element("Child").Remove();  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Changing event raised  
+  Sender: System.Xml.Linq.XElement  
+  Changing: Remove  
+Changed event raised  
+  Sender: System.Xml.Linq.XElement  
+  Changed: Remove  
+```  
+  
+ Im folgende Beispiel löst ein Ereignis aus, indem Sie den Namen eines Elements ändern.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "content");  
+root.Changing += (sender, e) =>  
+    {  
+        Console.WriteLine("Changing event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changing: " + e.ObjectChange);  
+    };  
+root.Changed += (sender, e) =>  
+    {  
+        Console.WriteLine("Changed event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changed: " + e.ObjectChange);  
+    };  
+root.Name = "NewName";  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Changing event raised  
+  Sender: System.Xml.Linq.XElement  
+  Changing: Name  
+Changed event raised  
+  Sender: System.Xml.Linq.XElement  
+  Changed: Name  
+```  
+  
+ Im folgende Beispiel löst ein Ereignis, durch Festlegen des Werts eines Attributs.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root",  
+    new XAttribute("Att", "att value")  
+);  
+root.Changing += (sender, e) =>  
+    {  
+        Console.WriteLine("Changing event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changing: " + e.ObjectChange);  
+    };  
+root.Changed += (sender, e) =>  
+    {  
+        Console.WriteLine("Changed event raised");  
+        Console.WriteLine("  Sender: " + sender.GetType());  
+        Console.WriteLine("  Changed: " + e.ObjectChange);  
+    };  
+root.FirstAttribute.Value = "new contents";  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Changing event raised  
+  Sender: System.Xml.Linq.XAttribute  
+  Changing: Value  
+Changed event raised  
+  Sender: System.Xml.Linq.XAttribute  
+  Changed: Value  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Linq.XObjectChange Add = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChange.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Xml.Linq.XObject" /> wurde oder werden hinzugefügt, um eine <see cref="T:System.Xml.Linq.XContainer" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Linq.XObjectChange Name = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChange.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Xml.Linq.XObject" /> wurde oder wird umbenannt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="Remove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Linq.XObjectChange Remove = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChange.Remove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Xml.Linq.XObject" /> wurde oder wird daraus ein <see cref="T:System.Xml.Linq.XContainer" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="Value" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Linq.XObjectChange Value = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChange.Value" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert, der eine <see cref="T:System.Xml.Linq.XObject" /> wurde oder geändert werden. Darüber hinaus löst eine Änderung in der Serialisierung eines leeren Elements (entweder über ein leeres Tag zu Beginn/Ende des Tags Paar umgekehrt) dieses Ereignis aus.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

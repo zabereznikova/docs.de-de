@@ -1,0 +1,95 @@
+<Type Name="WorkflowSubscriptionService" FullName="System.Workflow.Activities.WorkflowSubscriptionService">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowSubscriptionService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorkflowSubscriptionService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.WorkflowSubscriptionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden bereit, mit denen ein Abonnementdienst Abonnements für eine Workflowlaufzeit verwalten kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Activities.WorkflowSubscriptionService> ist die Basisklasse für alle in der Workflow Foundation (WF) verwendeten Abonnementdienstklassen.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie von <see cref="T:System.Workflow.Activities.WorkflowSubscriptionService" /> erben, müssen die folgenden Member überschrieben werden: <see cref="M:System.Workflow.Activities.WorkflowSubscriptionService.CreateSubscription(System.Workflow.Activities.MessageEventSubscription)" /> und <see cref="M:System.Workflow.Activities.WorkflowSubscriptionService.DeleteSubscription(System.Guid)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowSubscriptionService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowSubscriptionService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Implementieren in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.Workflow.Activities.WorkflowSubscriptionService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubscription">
+      <MemberSignature Language="C#" Value="public abstract void CreateSubscription (System.Workflow.Activities.MessageEventSubscription subscription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateSubscription(class System.Workflow.Activities.MessageEventSubscription subscription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowSubscriptionService.CreateSubscription(System.Workflow.Activities.MessageEventSubscription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscription" Type="System.Workflow.Activities.MessageEventSubscription" />
+      </Parameters>
+      <Docs>
+        <param name="subscription">Das <see cref="T:System.Workflow.Activities.MessageEventSubscription" />, das von der Workflowlaufzeit erstellt wurde.</param>
+        <summary>Benachrichtigt <see cref="T:System.Workflow.Activities.WorkflowSubscriptionService" />, dass mit der Workflowlaufzeit der angegebene <see cref="T:System.Workflow.Activities.MessageEventSubscription" /> erstellt wurde, wenn eine Überschreibung in einer abgeleiteten Klasse stattfindet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSubscription">
+      <MemberSignature Language="C#" Value="public abstract void DeleteSubscription (Guid subscriptionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteSubscription(valuetype System.Guid subscriptionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowSubscriptionService.DeleteSubscription(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriptionId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="subscriptionId">Die GUID des Abonnements, das von der Workflowlaufzeit gelöscht wurde.</param>
+        <summary>Benachrichtigt <see cref="T:System.Workflow.Activities.WorkflowSubscriptionService" />, dass von der Workflowlaufzeit das der angegebenen GUID zugeordnete Abonnement gelöscht wurde (beim Überschreiben in einer abgeleiteten Klasse).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

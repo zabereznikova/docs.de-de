@@ -1,0 +1,120 @@
+<Type Name="ActivityValidationServices" FullName="System.Activities.Validation.ActivityValidationServices">
+  <TypeSignature Language="C#" Value="public static class ActivityValidationServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ActivityValidationServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Validation.ActivityValidationServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Funktionen zum Validieren eines Workflows bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Resolve (System.Activities.Activity root, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Resolve(class System.Activities.Activity root, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ActivityValidationServices.Resolve(System.Activities.Activity,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="System.Activities.Activity" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="root">Die Stammworkflowaktivität, die das Aktivitätselement enthält, auf das zugegriffen werden soll.</param>
+        <param name="id">Ein Bezeichner, der einer Aktivität zugeordnet ist.</param>
+        <summary>Ruft die Workflowaktivität mit der angegebenen ID im angegebenen Workflow ab.</summary>
+        <returns>Eine Workflowaktivität.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Validate">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Überprüft, ob eine Workflowaktivität gemäß Validierungslogik ordnungsgemäß konfiguriert ist. Bei dieser Logik kann es sich um die <see cref="M:System.Activities.CodeActivity.CacheMetadata(System.Activities.CodeActivityMetadata)" />-Methode der zu validierenden Aktivitäten oder um Build- und Richtlinieneinschränkungen handeln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static System.Activities.Validation.ValidationResults Validate (System.Activities.Activity toValidate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Validation.ValidationResults Validate(class System.Activities.Activity toValidate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ActivityValidationServices.Validate(System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Validation.ValidationResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toValidate" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="toValidate">Ein Element aus einer Workflowaktivitätsstruktur.</param>
+        <summary>Überprüft, ob eine Workflowaktivität gemäß Validierungslogik ordnungsgemäß konfiguriert ist. Bei dieser Logik kann es sich um die <see cref="M:System.Activities.CodeActivity.CacheMetadata(System.Activities.CodeActivityMetadata)" />-Methode der zu validierenden Aktivitäten oder um Build- und Richtlinieneinschränkungen handeln.</summary>
+        <returns>Eine Auflistung von Validierungsfehlern, von denen jeder den Namen der validierten Aktivität, eine Erläuterung, einen Fehlercode sowie weitere Informationen enthalten kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static System.Activities.Validation.ValidationResults Validate (System.Activities.Activity toValidate, System.Activities.Validation.ValidationSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Validation.ValidationResults Validate(class System.Activities.Activity toValidate, class System.Activities.Validation.ValidationSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ActivityValidationServices.Validate(System.Activities.Activity,System.Activities.Validation.ValidationSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Validation.ValidationResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toValidate" Type="System.Activities.Activity" />
+        <Parameter Name="settings" Type="System.Activities.Validation.ValidationSettings" />
+      </Parameters>
+      <Docs>
+        <param name="toValidate">Eine Aktivität aus einer Workflowaktivitätsstruktur.</param>
+        <param name="settings">Ein Objekt, das das Verhalten der Validierungsmethode für den Workflow bestimmt; kann die interne Validierungslogik unterdrücken und auch die Richtlinieneinschränkungen enthalten.</param>
+        <summary>Überprüft, ob eine Workflowaktivität gemäß Validierungslogik ordnungsgemäß konfiguriert ist. Bei dieser Logik kann es sich um die cacheMetadata-Methode der zu validierenden Aktivitäten oder um Build- und Richtlinieneinschränkungen handeln.</summary>
+        <returns>Eine Auflistung von Validierungsfehlern, von denen jeder den Namen der nicht ordnungsgemäß konfigurierten Aktivität, eine Erläuterung, einen Fehler- odere Warnungscode sowie weitere Informationen enthalten kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

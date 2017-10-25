@@ -1,0 +1,1177 @@
+<Type Name="DragDrop" FullName="System.Windows.DragDrop">
+  <TypeSignature Language="C#" Value="public static class DragDrop" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DragDrop extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DragDrop" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Hilfsmethoden und Felder zum Initiieren der Drag-and-Drop-Vorgänge, einschließlich einer Methode um einen Drag-and-Drop-Vorgang und Funktionen zum Hinzufügen und Entfernen von verwandten Drag-and-Drop-Ereignishandler zu starten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus (oder eines anderen Zeigegeräts) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet. Ein Drag & Drop-Vorgang ist analog zu einer Kopie (oder Ausschneiden) - und - Einfügevorgänge, die zum Übertragen von Daten von einem Objekt oder einer anderen Anwendung verwendet wird. Drag & Drop-Vorgänge umfassen in der Regel zwei Parteien: eine Quelle des Ziehvorgangs aus dem stammt der gezogenen Daten und Drop-Ziel die gelöschten Daten empfängt. Die für Drag & Drop-Vorgänge erforderlichen Ereignisse und Methoden sind in der <xref:System.Windows.DragDrop>-Klasse definiert. Die Drag-and-Drop-Ereignisse sind angefügte Ereignisse, die an ein beliebiges angehängt werden können <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement>. Drag-Quelle und Drop-Ziel kann Elemente der Benutzeroberfläche in der gleichen Anwendung oder in verschiedenen Anwendungen sein. Allerdings benötigen das Ablageziel wie durch die Quelle des Ziehvorgangs übergebenen Daten verarbeitet.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> Klassen enthalten Aliase für die Ereignisse für Drag & Drop, sodass die Ereignisse in der Liste der Klassenmember angezeigt werden, wenn diese Klassen als Basisklasse geerbt werden. Wenn Sie einen Ereignishandler auf ein Drag & Drop-Ereignis auf einer dieser Klassen anfügen, wird der Handler angefügt, auf die zugrunde liegende <xref:System.Windows.DragDrop> Ereignis und sie derselben Instanz von Ereignisdaten zu empfangen. Ein Beispiel finden Sie unter <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
+  
+ Die Ziehquelle leitet einen Drag & Drop-Vorgang durch Aufrufen der statischen <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode und Übergeben der übertragenen Daten an sie ein. Ein Element behandelt in der Regel die folgenden Ereignisse aus, wenn es sich um eine Quelle des Ziehvorgangs wird:  
+  
+-   <xref:System.Windows.DragDrop.GiveFeedback>  
+  
+-   <xref:System.Windows.DragDrop.QueryContinueDrag>  
+  
+ Ein Element behandelt in der Regel die folgenden Ereignisse aus, wenn es sich um ein Ablageziel ist:  
+  
+-   <xref:System.Windows.DragDrop.DragEnter>  
+  
+-   <xref:System.Windows.DragDrop.DragLeave>  
+  
+-   <xref:System.Windows.DragDrop.DragOver>  
+  
+-   <xref:System.Windows.DragDrop.Drop>  
+  
+ Weitere Informationen und Beispiele finden Sie unter [Drag- and -Drop Overview](~/docs/framework/wpf/advanced/drag-and-drop-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void AddDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.DragEnter" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragEnter> Ereignis tritt auf, wenn ein Objekt in die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode fügt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.DragEnter> Ereignis. Um einen Handler für das Tunneling-Version für dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddPreviewDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void AddDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.DragLeave" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragLeave> Ereignis tritt auf, wenn ein Objekt außerhalb des gültigen Bereichs für das Element gezogen wird.  
+  
+ Diese Methode fügt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.DragLeave> Ereignis. Um einen Handler für das Tunneling-Version für dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddPreviewDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void AddDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.DragOver" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragOver> Ereignis tritt auf, wenn ein Objekt über die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode fügt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.DragOver> Ereignis. Um einen Handler für das Tunneling-Version für dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddPreviewDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDropHandler">
+      <MemberSignature Language="C#" Value="public static void AddDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.Drop" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.Drop> Ereignis tritt auf, wenn ein Objekt innerhalb der Grenzen eines Elements abgelegt wird.  
+  
+ Diese Methode fügt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.Drop> Ereignis. Um einen Handler für das Tunneling-Version für dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddPreviewDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void AddGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.GiveFeedback" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.GiveFeedback> Ereignis tritt auf, während eines Ziehvorgangs ein.  
+  
+ Diese Methode fügt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.GiveFeedback> Ereignis. Um einen Handler für das Tunneling-Version für dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddPreviewGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.PreviewDragEnter" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragEnter> Ereignis tritt auf, wenn ein Objekt in die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode fügt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDragEnter> Ereignis. Um einen Handler für das bubbling-Version dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.PreviewDragLeave" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragLeave> Ereignis tritt auf, wenn ein Objekt außerhalb des gültigen Bereichs für das Element gezogen wird.  
+  
+ Diese Methode fügt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDragLeave> Ereignis. Um einen Handler für das bubbling-Version dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.PreviewDragOver" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragOver> Ereignis tritt auf, wenn ein Objekt über die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode fügt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDragOver> Ereignis. Um einen Handler für das bubbling-Version dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDropHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.PreviewDrop" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDrop> Ereignis tritt auf, wenn ein Objekt innerhalb der Grenzen eines Elements abgelegt wird.  
+  
+ Diese Methode fügt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDrop> Ereignis. Um einen Handler für das bubbling-Version dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.PreviewGiveFeedback" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewGiveFeedback> Ereignis tritt auf, während eines Ziehvorgangs ein.  
+  
+ Diese Methode fügt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewGiveFeedback> Ereignis. Um einen Handler für das bubbling-Version dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.PreviewQueryContinueDrag" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ Diese Methode fügt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> Ereignis. Um einen Handler für das bubbling-Version dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void AddQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />), dem der Ereignishandler hinzugefügt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die hinzuzufügende Handlermethode verweist.</param>
+        <summary>Fügt einem angegebenen Abhängigkeitsobjekt einen <see cref="E:System.Windows.DragDrop.QueryContinueDrag" />-Ereignishandler hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ Diese Methode fügt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis. Um einen Handler für das Tunneling-Version für dieses Ereignis hinzuzufügen, finden Sie unter <xref:System.Windows.DragDrop.AddPreviewQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDragDrop">
+      <MemberSignature Language="C#" Value="public static System.Windows.DragDropEffects DoDragDrop (System.Windows.DependencyObject dragSource, object data, System.Windows.DragDropEffects allowedEffects);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.DragDropEffects DoDragDrop(class System.Windows.DependencyObject dragSource, object data, valuetype System.Windows.DragDropEffects allowedEffects) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.DoDragDrop(System.Windows.DependencyObject,System.Object,System.Windows.DragDropEffects)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dragSource" Type="System.Windows.DependencyObject" />
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="allowedEffects" Type="System.Windows.DragDropEffects" />
+      </Parameters>
+      <Docs>
+        <param name="dragSource">Ein Verweis auf das Dependency-Objekt, das die gezogenen Daten darstellt.</param>
+        <param name="data">Ein Datenobjekt, das die gezogenen Daten enthält.</param>
+        <param name="allowedEffects">Eines der <see cref="T:System.Windows.DragDropEffects" /> Werte, der angibt, erlaubt die Auswirkungen des Drag-and-Drop-Vorgangs.</param>
+        <summary>Leitet einen Drag-and-Drop-Vorgang.</summary>
+        <returns>Eines der <see cref="T:System.Windows.DragDropEffects" /> Werte, die den abschließenden Effekt angibt, die während des Drag-and-Drop-Vorgangs ausgeführt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es liegt die Verantwortung der Anwendung, um zu ermitteln, wann ein Ziehvorgang stattfindet, und initiieren Sie den Drag & Drop-Vorgang. In der Regel ist dies bei einem <xref:System.Windows.UIElement.MouseDown> und <xref:System.Windows.UIElement.MouseMove> Abfolge der Ereignisse, über das Element gezogen wird. Initiieren Sie den Drag & Drop-Vorgang durch Aufrufen der statischen <xref:System.Windows.DragDrop.DoDragDrop%2A> -Methode und übergeben der übertragenen Daten an sie. Die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode umschließt die Daten ggf. automatisch in einem <xref:System.Windows.DataObject>. Um mehr Kontrolle über das Datenformat zu erhalten, können Sie die Daten vor der Übergabe an die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode mit einem <xref:System.Windows.DataObject> umschließen.  
+  
+ Ein Rückgabewert der <xref:System.Windows.DragDrop.DoDragDrop%2A> Methode ist der Wert von der <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> Eigenschaftengruppe in des Ablageziels <xref:System.Windows.DragDrop.Drop> -Ereignishandler. Wenn der Rückgabewert eines nicht übereinstimmt der `allowedEffects` im Aufruf angegebenen <xref:System.Windows.DragDrop.DoDragDrop%2A>, der Drag-and-Drop-Vorgang wird nicht ausgeführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ist zu sehen, wie ein Drag & Drop-Vorgang vom <xref:System.Windows.UIElement.MouseMove>-Ereignishandler eines <xref:System.Windows.Shapes.Ellipse>-Elements eingeleitet wird, um es zu einer Ziehquelle zu machen. Die übertragenen Daten sind die Zeichenfolgendarstellung der <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft der Ellipse. Die Daten werden zum Übergeben der <xref:System.Windows.DragDrop.DoDragDrop%2A> Methode als Zeichenfolge und umschlossen wird automatisch eine <xref:System.Windows.DataObject>.  
+  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dragSource" /> oder <paramref name="data" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DragEnterEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DragEnterEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DragEnterEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DragEnterEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.DragEnter" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragEnter> Ereignis tritt auf, wenn ein Objekt in die Grenzen des Elements gezogen wird.  
+  
+ Dieses Feld gibt bubbling Version mit der die <xref:System.Windows.DragDrop.DragEnter> Ereignis. Ein Bezeichner für die Tunneling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.PreviewDragEnterEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragLeaveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DragLeaveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DragLeaveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DragLeaveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.DragLeave" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragLeave> Ereignis tritt auf, wenn ein Objekt außerhalb des gültigen Bereichs für das Element gezogen wird.  
+  
+ Dieses Feld gibt bubbling Version mit der die <xref:System.Windows.DragDrop.DragLeave> Ereignis. Ein Bezeichner für die Tunneling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.PreviewDragLeaveEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragOverEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DragOverEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DragOverEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DragOverEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.DragOver" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragOver> Ereignis tritt auf, wenn ein Objekt über die Grenzen des Elements gezogen wird.  
+  
+ Dieses Feld gibt bubbling Version mit der die <xref:System.Windows.DragDrop.DragOver> Ereignis. Ein Bezeichner für die Tunneling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.PreviewDragOverEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DropEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DropEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DropEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.Drop" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.Drop> Ereignis tritt auf, wenn ein Objekt innerhalb der Grenzen eines Elements abgelegt wird.  
+  
+ Dieses Feld gibt bubbling Version mit der die <xref:System.Windows.DragDrop.Drop> Ereignis. Ein Bezeichner für die Tunneling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.PreviewDropEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GiveFeedbackEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent GiveFeedbackEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent GiveFeedbackEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.GiveFeedbackEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.GiveFeedback" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.GiveFeedback> Ereignis tritt auf, während eines Ziehvorgangs ein.  
+  
+ Dieses Feld gibt bubbling Version mit der die <xref:System.Windows.DragDrop.GiveFeedback> Ereignis. Ein Bezeichner für die Tunneling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.PreviewGiveFeedbackEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDragEnterEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDragEnterEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDragEnterEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDragEnterEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.PreviewDragEnter" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragEnter> Ereignis tritt auf, wenn ein Objekt in die Grenzen des Elements gezogen wird.  
+  
+ Dieses Feld gibt Tunneling-Version mit der die <xref:System.Windows.DragDrop.PreviewDragEnter> Ereignis. Ein Bezeichner für die bubbling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.DragEnterEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDragLeaveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDragLeaveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDragLeaveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDragLeaveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.PreviewDragLeave" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragLeave> Ereignis tritt auf, wenn ein Objekt außerhalb des gültigen Bereichs für das Element gezogen wird.  
+  
+ Dieses Feld gibt Tunneling-Version mit der die <xref:System.Windows.DragDrop.PreviewDragLeave> Ereignis. Ein Bezeichner für die bubbling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.DragLeaveEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDragOverEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDragOverEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDragOverEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDragOverEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.PreviewDragOver" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragOver> Ereignis tritt auf, wenn ein Objekt über die Grenzen des Elements gezogen wird.  
+  
+ Dieses Feld gibt Tunneling-Version mit der die <xref:System.Windows.DragDrop.PreviewDragOver> Ereignis. Ein Bezeichner für die bubbling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.DragOverEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDropEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDropEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDropEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDropEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.PreviewDrop" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDrop> Ereignis tritt auf, wenn ein Objekt innerhalb der Grenzen eines Elements abgelegt wird.  
+  
+ Dieses Feld gibt Tunneling-Version mit der die <xref:System.Windows.DragDrop.PreviewDrop> Ereignis. Ein Bezeichner für die bubbling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.DropEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewGiveFeedbackEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewGiveFeedbackEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewGiveFeedbackEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewGiveFeedbackEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.PreviewGiveFeedback" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewGiveFeedback> Ereignis tritt auf, während eines Ziehvorgangs ein.  
+  
+ Dieses Feld gibt Tunneling-Version mit der die <xref:System.Windows.DragDrop.PreviewGiveFeedback> Ereignis. Ein Bezeichner für die bubbling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.GiveFeedbackEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewQueryContinueDragEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewQueryContinueDragEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewQueryContinueDragEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewQueryContinueDragEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.PreviewQueryContinueDrag" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ Dieses Feld gibt Tunneling-Version mit der die <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> Ereignis. Ein Bezeichner für die bubbling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.QueryContinueDragEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryContinueDragEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent QueryContinueDragEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent QueryContinueDragEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.QueryContinueDragEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.DragDrop.QueryContinueDrag" /> angefügtes Ereignis</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ Dieses Feld gibt bubbling Version mit der die <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis. Ein Bezeichner für die Tunneling-Version dieses Ereignisses, finden Sie unter <xref:System.Windows.DragDrop.PreviewQueryContinueDragEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.DragEnter" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragEnter> Ereignis tritt auf, wenn ein Objekt in die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode entfernt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.DragEnter> Ereignis. Um einen Handler für das Tunneling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemovePreviewDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.DragLeave" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragLeave> Ereignis tritt auf, wenn ein Objekt außerhalb des gültigen Bereichs für das Element gezogen wird.  
+  
+ Diese Methode entfernt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.DragLeave> Ereignis. Um einen Handler für das Tunneling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemovePreviewDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.DragOver" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.DragOver> Ereignis tritt auf, wenn ein Objekt über die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode entfernt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.DragOver> Ereignis. Um einen Handler für das Tunneling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemovePreviewDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDropHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.Drop" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.Drop> Ereignis tritt auf, wenn ein Objekt innerhalb der Grenzen eines Elements abgelegt wird.  
+  
+ Diese Methode entfernt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.Drop> Ereignis. Um einen Handler für das Tunneling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemovePreviewDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.GiveFeedback" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.GiveFeedback> Ereignis tritt auf, während eines Ziehvorgangs ein.  
+  
+ Diese Methode entfernt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.GiveFeedback> Ereignis. Um einen Handler für das Tunneling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemovePreviewGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.PreviewDragEnter" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragEnter> Ereignis tritt auf, wenn ein Objekt in die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode entfernt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDragEnter> Ereignis. Um einen Handler für die bubbling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemoveDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.PreviewDragLeave" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragLeave> Ereignis tritt auf, wenn ein Objekt außerhalb des gültigen Bereichs für das Element gezogen wird.  
+  
+ Diese Methode entfernt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDragLeave> Ereignis. Um einen Handler für die bubbling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemoveDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.PreviewDragOver" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDragOver> Ereignis tritt auf, wenn ein Objekt über die Grenzen des Elements gezogen wird.  
+  
+ Diese Methode entfernt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDragOver> Ereignis. Um einen Handler für die bubbling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemoveDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDropHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.PreviewDrop" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewDrop> Ereignis tritt auf, wenn ein Objekt innerhalb der Grenzen eines Elements abgelegt wird.  
+  
+ Diese Methode entfernt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewDrop> Ereignis. Um einen Handler für die bubbling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemoveDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.PreviewGiveFeedback" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewGiveFeedback> Ereignis tritt auf, während eines Ziehvorgangs ein.  
+  
+ Diese Methode entfernt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewGiveFeedback> Ereignis. Um einen Handler für die bubbling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemoveGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.PreviewQueryContinueDrag" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ Diese Methode entfernt einen Handler für das Tunneling-Version von der <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> Ereignis. Um einen Handler für die bubbling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemoveQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Abhängigkeitsobjekt (ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" />) aus dem den Ereignishandler entfernt werden soll.</param>
+        <param name="handler">Ein Delegat, der auf die zu entfernende Handlermethode verweist.</param>
+        <summary>Entfernt eine <see cref="E:System.Windows.DragDrop.QueryContinueDrag" /> -Ereignishandler aus einem angegebenen Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ Diese Methode entfernt einen Handler für das bubbling-Version der <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis. Um einen Handler für das Tunneling-Version dieses Ereignisses zu entfernen, finden Sie unter <xref:System.Windows.DragDrop.RemovePreviewQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,389 @@
+<Type Name="ActionBlock&lt;TInput&gt;" FullName="System.Threading.Tasks.Dataflow.ActionBlock&lt;TInput&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ActionBlock&lt;TInput&gt; : System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActionBlock`1&lt;TInput&gt; extends System.Object implements class System.Threading.Tasks.Dataflow.IDataflowBlock, class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!TInput&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.ActionBlock`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TInput" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TInput">Der Typ der Daten, die von diesem <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" /> arbeitet.</typeparam>
+    <summary>Stellt einen Datenflussblock bereit, die ein bereitgestelltes aufruft <see cref="T:System.Action`1" /> -Delegaten für jedes empfangene Datenelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow> Namespace) ist nicht mit der net_v45 verteilt. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace öffnen Sie das Projekt in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], wählen Sie **NuGet-Pakete verwalten** aus der Menüs "Projekt", und suchen Sie online nach der `Microsoft.Tpl.Dataflow` Paket.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Klasse, um mehrere Datenflussblöcke mit Berechnungen auszuführen, und gibt die verstrichene Zeit erforderlich, um die Berechnungen auszuführen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die [Vorgehensweise: Festlegen des Grads der Parallelität in einem Dataflow Block](~/docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md) Thema.  
+  
+ [!code-csharp[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_degreeofparallelism/cs/dataflowdegreeofparallelism.cs#2)]
+ [!code-vb[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionBlock (Action&lt;TInput&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Action`1&lt;!TInput&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.#ctor(System.Action{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;TInput&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion jedes empfangene Datenelement aufgerufen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" /> Klasse mit der angegebenen Aktion.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionBlock (Func&lt;TInput,System.Threading.Tasks.Task&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`2&lt;!TInput, class System.Threading.Tasks.Task&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.#ctor(System.Func{`0,System.Threading.Tasks.Task})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Func&lt;TInput,System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion jedes empfangene Datenelement aufgerufen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" /> Klasse mit der angegebenen Aktion.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionBlock (Action&lt;TInput&gt; action, System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions dataflowBlockOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Action`1&lt;!TInput&gt; action, class System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions dataflowBlockOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.#ctor(System.Action{`0},System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;TInput&gt;" />
+        <Parameter Name="dataflowBlockOptions" Type="System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion jedes empfangene Datenelement aufgerufen werden soll.</param>
+        <param name="dataflowBlockOptions">Die Optionen, mit denen dies konfiguriert <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" /> -Klasse mit der angegebenen Aktion und Konfigurationsoptionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.%23ctor%28System.Action%7B%600%7D%2CSystem.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions%29> Konstruktor zum Erstellen eines neuen <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die [Vorgehensweise: Festlegen des Grads der Parallelität in einem Dataflow Block](~/docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md) Thema.  
+  
+ [!code-csharp[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_degreeofparallelism/cs/dataflowdegreeofparallelism.cs#2)]
+ [!code-vb[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="dataflowBlockOptions" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionBlock (Func&lt;TInput,System.Threading.Tasks.Task&gt; action, System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions dataflowBlockOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`2&lt;!TInput, class System.Threading.Tasks.Task&gt; action, class System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions dataflowBlockOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.#ctor(System.Func{`0,System.Threading.Tasks.Task},System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Func&lt;TInput,System.Threading.Tasks.Task&gt;" />
+        <Parameter Name="dataflowBlockOptions" Type="System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion jedes empfangene Datenelement aufgerufen werden soll.</param>
+        <param name="dataflowBlockOptions">Die Optionen, mit denen dies konfiguriert <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" /> -Klasse mit der angegebenen Aktion und Konfigurationsoptionen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="dataflowBlockOptions" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.Complete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert den Datenflussblock, den er sollte nicht annehmen oder erzeugen mehr Nachrichten und weitere zurückgestellten Nachrichten sollte nicht nutzen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.Complete%2A> wurde für einen Datenflussblock aufgerufen wird, wird dieser Block abgeschlossen (so, dass seine <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.Completion%2A> eingegebenen Vorgang einen Endzustand) Nachdem sie alle zuvor verfügbare Daten verarbeitet hat. Diese Methode blockiert warten auf Abschluss des Vorgangs ausgeführt werden, nicht jedoch die Anforderung initiiert wird. Verwenden Sie zum Abschluss ausgeführt gewartet werden soll, die <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.Completion%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.Complete%2A> Methode für den Datenflussblock angeben, dass es sollte nicht akzeptieren oder keine weiteren Nachrichten erzeugen noch weitere zurückgestellten Nachrichten verarbeiten. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die [Vorgehensweise: Festlegen des Grads der Parallelität in einem Dataflow Block](~/docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md) Thema.  
+  
+ [!code-csharp[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_degreeofparallelism/cs/dataflowdegreeofparallelism.cs#2)]
+ [!code-vb[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completion">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task Completion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Tasks.Task Completion" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.ActionBlock`1.Completion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Threading.Tasks.Task" /> Objekt, das den asynchronen Vorgang und den Abschluss der Datenflussblock darstellt.</summary>
+        <value>Die abgeschlossene Aufgabe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Datenflussblock wird als abgeschlossen betrachtet, wenn nicht gerade verarbeitet wird eine neue Meldung und wenn diese garantiert, dass keine weiteren Nachrichten verarbeitet werden. Das zurückgegebene <xref:System.Threading.Tasks.Task> Übergang zum Status "abgeschlossen" werden, nach Abschluss der zugeordneten Block. Es erfolgt ein Wechsel in den <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> Zustand, wenn der Block nach der Verarbeitung erfolgreich gemäß des Datenflussblock Abschluss definierte Semantik. Es erfolgt ein Wechsel in die <xref:System.Threading.Tasks.TaskStatus.Faulted> Zustand, wenn der Datenflussblock Verarbeitung vorzeitig aufgrund einer nicht behandelten Ausnahme abgeschlossen wurde, und es ein in Wechsel erfolgt die <xref:System.Threading.Tasks.TaskStatus.Canceled> Zustand, wenn der Datenflussblock vorzeitig nach Verarbeitung abgeschlossen ist empfängt eine abbruchanforderung. Wenn die Aufgabe abgeschlossen, in ist der <xref:System.Threading.Tasks.TaskStatus.Faulted> Status, seine `Exception` -Eigenschaft gibt ein <xref:System.AggregateException> Ausnahme, die eine oder mehrere Ausnahmen enthält, die Fehlschlagen des Blockes verursacht hat.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.Completion%2A> Eigenschaft zu warten, bis alle Nachrichten über das Netzwerk übertragen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die [Vorgehensweise: Festlegen des Grads der Parallelität in einem Dataflow Block](~/docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md) Thema.  
+  
+ [!code-csharp[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_degreeofparallelism/cs/dataflowdegreeofparallelism.cs#2)]
+ [!code-vb[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputCount">
+      <MemberSignature Language="C#" Value="public int InputCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InputCount" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.ActionBlock`1.InputCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Eingabeelementen noch durch diesen Block verarbeitet werden müssen.</summary>
+        <value>Die Anzahl von Eingabeelementen noch durch diesen Block verarbeitet werden müssen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.InputCount%2A> enthält keine Elemente, die derzeit vom Block verarbeitet werden oder alle Elemente, die bereits vom Block verarbeitet wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Post">
+      <MemberSignature Language="C#" Value="public bool Post (TInput item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Post(!TInput item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.Post(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="TInput" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das das Ziel angeboten wird.</param>
+        <summary>Stellt ein Element aus, um den Datenfluss Zielblock bereit.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element an der Datenflussblock bereitgestellt wird; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.Post%2A> Methode, um ein Element an die Ziel-Datenflussblock bereitstellen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die [Vorgehensweise: Festlegen des Grads der Parallelität in einem Dataflow Block](~/docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md) Thema.  
+  
+ [!code-csharp[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_degreeofparallelism/cs/dataflowdegreeofparallelism.cs#2)]
+ [!code-vb[TPLDataflow_DegreeOfParallelism#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Threading.Tasks.Dataflow.IDataflowBlock.Fault">
+      <MemberSignature Language="C#" Value="void IDataflowBlock.Fault (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Threading.Tasks.Dataflow.IDataflowBlock.Fault(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.System#Threading#Tasks#Dataflow#IDataflowBlock#Fault(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die Ausnahme, die die fehlgeschlagene verursacht hat.</param>
+        <summary>Bewirkt, dass den Datenflussblock in einem Fehlerzustand abgeschlossen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Fault%2A> wurde für einen Datenflussblock aufgerufen wird, wird dieser Block abgeschlossen und die zugehörige <xref:System.Threading.Tasks.Dataflow.ActionBlock%601.Completion%2A> Aufgabe wird einen abschließenden Zustand versetzt. Fehlgeschlagene einen Block, bewirkt, dass als mit Abbrechen einen Block von gepufferten Nachrichten (unverarbeiteten Eingabenachrichten sowie unoffered Ausgabenachrichten) verloren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;.OfferMessage">
+      <MemberSignature Language="C#" Value="System.Threading.Tasks.Dataflow.DataflowMessageStatus ITargetBlock&lt;TInput&gt;.OfferMessage (System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, TInput messageValue, System.Threading.Tasks.Dataflow.ISourceBlock&lt;TInput&gt; source, bool consumeToAccept);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.Threading.Tasks.Dataflow.DataflowMessageStatus System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;.OfferMessage(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, !TInput messageValue, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!TInput&gt; source, bool consumeToAccept) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.System#Threading#Tasks#Dataflow#ITargetBlock&lt;TInput&gt;#OfferMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,`0,System.Threading.Tasks.Dataflow.ISourceBlock{`0},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.DataflowMessageStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageHeader" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+        <Parameter Name="messageValue" Type="TInput" />
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TInput&gt;" />
+        <Parameter Name="consumeToAccept" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="messageHeader">Der Header der Nachricht, die angeboten wird.</param>
+        <param name="messageValue">Der Wert der Nachricht, die angeboten wird.</param>
+        <param name="source">Der Datenflussblock, der die Nachricht anbietet. Dies ist möglicherweise <see langword="null" />.</param>
+        <param name="consumeToAccept">
+          <see langword="true" />Weisen Sie das Ziel Aufrufen an <see cref="M:System.Threading.Tasks.Dataflow.ISourceBlock`1.ConsumeMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.ITargetBlock{`0},System.Boolean@)" /> synchron während des Aufrufs <see cref="M:System.Threading.Tasks.Dataflow.ITargetBlock`1.OfferMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,`0,System.Threading.Tasks.Dataflow.ISourceBlock{`0},System.Boolean)" />, vor dem Zurückgeben <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted" />, um die Meldung; verarbeitet, andernfalls <see langword="false" />.</param>
+        <summary>Bietet eine Nachricht an den Datenflussblock und vergibt für die Gelegenheit zu nutzen, oder verschieben die Nachricht.</summary>
+        <returns>Der Status der angebotene Nachricht.  Wenn die Nachricht vom Ziel akzeptiert wurde <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted" /> zurückgegeben wird, und die Quelle sollte die angebotene Nachricht nicht mehr verwenden, da nun das Ziel der Besitzer ist. Wenn die Nachricht vom Ziel verschoben wurde <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed" /> wird als eine Benachrichtigung, die das Ziel später versuchen, zu nutzen, oder die Nachricht zu reservieren, sondern in den Meantime zurückgegeben werden, die Quelle noch die Nachricht besitzt und es möglicherweise an andere Blöcke anbieten.  
+  
+ Wenn das Ziel andernfalls Nachricht verschoben haben würde, aber Quelle war <see langword="null" />, <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined" /> wird zurückgegeben.  
+  
+ Wenn das Ziel hat versucht, akzeptieren Sie die Nachricht fehlt er aber aufgrund der Quelle an ein anderes Ziel zu übermitteln oder verwerfen, einfach <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.NotAvailable" /> zurückgegeben wird.  
+  
+ Wenn das Ziel hat nicht die Meldung akzeptiert <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined" /> zurückgegeben wird. Wenn das Ziel ausgewählt haben, nicht auf die Nachricht akzeptieren und nie akzeptiert eine andere Meldung von dieser Quelle <see cref="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently" /> zurückgegeben wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="messageHeader" /> ist nicht gültig.  
+  
+ -"oder" - <paramref name="consumeToAccept" /> möglicherweise <see langword="true" /> nur, wenn ein Wert ungleich Null bereitgestellt <paramref name="source" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ActionBlock`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die den formatierten Namen dieses darstellt <see cref="T:System.Threading.Tasks.Dataflow.IDataflowBlock" /> Instanz.</summary>
+        <returns>Eine Zeichenfolge, die den formatierten Namen dieses darstellt <see cref="T:System.Threading.Tasks.Dataflow.IDataflowBlock" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird von <xref:System.Object> geerbt. Verwendet die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.NameFormat%2A> Option.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

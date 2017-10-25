@@ -1,0 +1,87 @@
+<Type Name="HorizontalAlignment" FullName="System.Windows.Forms.HorizontalAlignment">
+  <TypeSignature Language="C#" Value="public enum HorizontalAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HorizontalAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HorizontalAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie ein Objekt oder Text in einem Steuerelement horizontal relativ zu einem Element des Steuerelements ausgerichtet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird in verschiedenen Klassen verwendet. Eine partielle Liste dieser Klassen wird <xref:System.Windows.Forms.CheckedListBox>, <xref:System.Windows.Forms.ColumnHeader>, <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ControlPaint>, <xref:System.Windows.Forms.Label>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.Control>, <xref:System.Windows.Forms.RichTextBox>, und <xref:System.Windows.Forms.TextBox>.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die `HorizontalAlignment` richten Sie den Text auf der linken Seite nach rechts oder in der Mitte der Steuerelement-Enumeration. Erstellen Sie zunächst eine <xref:System.Windows.Forms.TextBox> mit einer bestimmten Größe, und fügen Sie eine Textzeichenfolge hinzu. Verwenden Sie dann die Enumerationsmember `Center` zum Ausrichten von Text in der Mitte der der `TextBox`. Im Beispiel wird davon ausgegangen, dass Sie erstellt haben eine <xref:System.Windows.Forms.Form> mit dem Namen `Form1` und ein `TextBox` mit dem Namen `textBox1`.  
+  
+ [!code-cpp[HorizontalAlignment#1](~/samples/snippets/cpp/VS_Snippets_Winforms/HorizontalAlignment/CPP/form1.cpp#1)]
+ [!code-csharp[HorizontalAlignment#1](~/samples/snippets/csharp/VS_Snippets_Winforms/HorizontalAlignment/CS/form1.cs#1)]
+ [!code-vb[HorizontalAlignment#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/HorizontalAlignment/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HorizontalAlignment Center = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HorizontalAlignment.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Objekt oder der Text wird in der Mitte der des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HorizontalAlignment Left = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HorizontalAlignment.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Objekt oder der Text wird auf der linken Seite des Steuerelements Elements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HorizontalAlignment Right = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HorizontalAlignment.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Objekt oder der Text wird am rechten Rand des Steuerelements ausgerichtet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

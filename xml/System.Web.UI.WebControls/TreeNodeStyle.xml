@@ -1,0 +1,464 @@
+<Type Name="TreeNodeStyle" FullName="System.Web.UI.WebControls.TreeNodeStyle">
+  <TypeSignature Language="C#" Value="public sealed class TreeNodeStyle : System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TreeNodeStyle extends System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNodeStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Stil eines Knotens in der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle> Klasse darstellen, den Stil eines Knotens in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Die <xref:System.Web.UI.WebControls.TreeView> Steuerelement ermöglicht Ihnen, verschiedene Formateigenschaften (z. B. Schriftart und Farbe) Geben Sie für jede der verschiedenen Knotentypen.  
+  
+ Die folgende Tabelle enthält die Knotenformate, die von unterstützt werden die <xref:System.Web.UI.WebControls.TreeNodeStyle> Klasse.  
+  
+|Knoten-Style-Eigenschaft|Beschreibung|  
+|-------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A>|Die Stileigenschaften für einen Knoten aus, wenn der Mauszeiger darauf positioniert ist.|  
+|<xref:System.Web.UI.WebControls.TreeView.LeafNodeStyle%2A>|Die Stileigenschaften für die Blattknoten.|  
+|<xref:System.Web.UI.WebControls.TreeView.NodeStyle%2A>|Die Standardeinstellungen des Stil für einen Knoten.|  
+|<xref:System.Web.UI.WebControls.TreeView.ParentNodeStyle%2A>|Die Stileigenschaften für den übergeordneten Knoten.|  
+|<xref:System.Web.UI.WebControls.TreeView.RootNodeStyle%2A>|Die Stileigenschaften für den Stammknoten.|  
+|<xref:System.Web.UI.WebControls.TreeView.SelectedNodeStyle%2A>|Die Stileigenschaften für einen ausgewählten Knoten.|  
+  
+ Beim Festlegen des Knotens Stileigenschaften der <xref:System.Web.UI.WebControls.TreeView> -Steuerelement, in der folgenden Reihenfolge angewendet werden:  
+  
+1.  <xref:System.Web.UI.WebControls.TreeView.NodeStyle%2A>.  
+  
+2.  <xref:System.Web.UI.WebControls.TreeView.RootNodeStyle%2A>, <xref:System.Web.UI.WebControls.TreeView.ParentNodeStyle%2A>, oder <xref:System.Web.UI.WebControls.TreeView.LeafNodeStyle%2A>, abhängig von den Knotentyp.  
+  
+3.  <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A>.  
+  
+4.  <xref:System.Web.UI.WebControls.TreeView.SelectedNodeStyle%2A>.  
+  
+5.  <xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A>.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeNodeStyle> Klasse erbt die meisten ihrer Member aus der <xref:System.Web.UI.WebControls.Style> Klasse. Es erweitert die <xref:System.Web.UI.WebControls.Style> Klasse durch Bereitstellen von Eigenschaften, die den Umfang der Platz um den Text in einem Knoten sowie den Abstand zwischen aufeinander folgenden Knoten steuern. Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.HorizontalPadding%2A> Eigenschaft, um die Menge des Speicherplatzes links und rechts vom Text in einem Knoten zu steuern. Auf ähnliche Weise die <xref:System.Web.UI.WebControls.TreeNodeStyle.VerticalPadding%2A> Eigenschaft steuert die Menge des Speicherplatzes, die oben genannten und unter dem Text in einem Knoten. Können Sie steuern, die Größe des Abstands zwischen den Knoten, die die <xref:System.Web.UI.WebControls.TreeNodeStyle> auf angewendet wird und dessen benachbarten Knoten durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeStyle.NodeSpacing%2A> Eigenschaft. Verwenden Sie zum Steuern der Abstand zwischen einem übergeordneten Knoten und einen untergeordneten Knoten der <xref:System.Web.UI.WebControls.TreeNodeStyle.ChildNodesPadding%2A> Eigenschaft.  
+  
+ Weitere Informationen zu den geerbten formateinstellungen, finden Sie unter <xref:System.Web.UI.WebControls.Style>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Darstellung der übergeordneten Knoten in der <xref:System.Web.UI.WebControls.TreeView> durch Festlegen die Stileigenschaften des Steuerelements die <xref:System.Web.UI.WebControls.TreeNodeStyle> von zurückgegebene Objekt der <xref:System.Web.UI.WebControls.TreeView.ParentNodeStyle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[TreeNodeStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyle/CS/treenodestylecs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyle/VB/treenodestylevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNodeStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNodeStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">Ein <see cref="T:System.Web.UI.StateBag" /> , die die Stilinformationen speichert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" /> Klasse mit dem angegebenen <see cref="T:System.Web.UI.StateBag" /> Informationen zu Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.%23ctor%2A> Konstruktor erstellt und initialisiert eine neue Instanz der der <xref:System.Web.UI.WebControls.TreeNodeStyle> Klasse, indem der <xref:System.Web.UI.StateBag> von angegebene Objekt der `bag` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodesPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit ChildNodesPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit ChildNodesPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeStyle.ChildNodesPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand zwischen einem übergeordneten Knoten und einen untergeordneten Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" /> Klasse angewendet wird.</summary>
+        <value>Die Menge des Speicherplatzes, in Pixel ist, die oberhalb und unterhalb des Abschnitts mit den untergeordneten Knoten von einem übergeordneten Knoten. Der Standardwert ist 0 Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.ChildNodesPadding%2A> Eigenschaft, um die Menge des Speicherplatzes, die oben genannten und unterhalb des Abschnitts der untergeordneten Knoten des Knotens, steuern die <xref:System.Web.UI.WebControls.TreeNodeStyle> Klasse angewendet wird. Abstand wird zwischen dem übergeordneten Knoten und den ersten untergeordneten Knoten sowie zwischen dem letzten untergeordneten Knoten und den nächsten Knoten eingefügt.  
+  
+> [!NOTE]
+>  Das Leerzeichen nach dem letzten untergeordneten Knoten wird nicht gerendert, wenn keine zusätzlichen Knoten, die nach dem letzten untergeordneten Knoten vorhanden sind, da dies ein unnötiger Zwischenraum am unteren Rand des Steuerelements entstehen würden.  
+  
+ Um den Abstand zwischen den untergeordneten Knoten zu steuern, verwenden die <xref:System.Web.UI.WebControls.TreeNodeStyle.NodeSpacing%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeStyle.ChildNodesPadding%2A> Eigenschaft, um den Leerraum oberhalb und unterhalb des Abschnitts mit den untergeordneten Knoten von einem übergeordneten Knoten anzugeben.  
+  
+ [!code-aspx-csharp[TreeNodeStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyle/CS/treenodestylecs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyle/VB/treenodestylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist vom Typ <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> oder kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Das <see cref="T:System.Web.UI.WebControls.Style" />, das kopiert werden soll.</param>
+        <summary>Kopiert die Stileigenschaften des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt in die aktuelle <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.CopyFrom%2A> Methode, um die Stileigenschaften des angegebenen doppelte <xref:System.Web.UI.WebControls.Style> -Objekt in der <xref:System.Web.UI.WebControls.TreeNodeStyle> -Objekt, das diese Methode aufruft.  
+  
+> [!NOTE]
+>  Alle Eigenschaften in der aktuellen <xref:System.Web.UI.WebControls.TreeNodeStyle> Objekt werden durch die entsprechenden Eigenschaften in der angegebenen ersetzt <xref:System.Web.UI.WebControls.Style> Objekt.  
+  
+ Verwenden Sie zum Kopieren von Stileigenschaften ohne Werte, die bereits festgelegt wurden ersetzt die <xref:System.Web.UI.WebControls.TreeNodeStyle.MergeWith%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeStyle.CopyFrom%2A> Methode, um die Stileigenschaften des angegebenen kopieren <xref:System.Web.UI.WebControls.Style> -Objekt in der <xref:System.Web.UI.WebControls.TreeNodeStyle> -Objekt, das diese Methode aufruft. Beachten Sie, dass jeder Style-Eigenschaft ersetzt wird.  
+  
+ [!code-aspx-csharp[TreeNodeStyleCopyFrom#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyleCopyFrom/CS/treenodestylecopyfromcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyleCopyFrom#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyleCopyFrom/VB/treenodestylecopyfromvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillStyleAttributes">
+      <MemberSignature Language="C#" Value="protected override void FillStyleAttributes (System.Web.UI.CssStyleCollection attributes, System.Web.UI.IUrlResolutionService urlResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void FillStyleAttributes(class System.Web.UI.CssStyleCollection attributes, class System.Web.UI.IUrlResolutionService urlResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeStyle.FillStyleAttributes(System.Web.UI.CssStyleCollection,System.Web.UI.IUrlResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Web.UI.CssStyleCollection" />
+        <Parameter Name="urlResolver" Type="System.Web.UI.IUrlResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">To be added.</param>
+        <param name="urlResolver">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit HorizontalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit HorizontalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeStyle.HorizontalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie der Abstand links und rechts vom Text im Knoten "".</summary>
+        <value>Die Menge des Speicherplatzes, in Pixel ist, die Links und rechts vom Text des Knotens. Der Standardwert ist 0 Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.HorizontalPadding%2A> Eigenschaft, um den Umfang der horizontalen Abstand zwischen dem Text des Knotens, steuern die <xref:System.Web.UI.WebControls.TreeNodeStyle> angewendet wird. Dieser Speicherplatz wird zwischen dem linken Rand des Texts und der Rahmen des Textbereichs sowie zwischen dem rechten Rand des Texts und der Rahmen für den Text eingefügt. Um den vertikalen Abstand zu steuern, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeStyle.VerticalPadding%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeStyle.HorizontalPadding%2A> Eigenschaft, um den horizontalen Abstand zwischen dem Text eines Knotens zu steuern.  
+  
+ [!code-aspx-csharp[TreeNodeStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyle/CS/treenodestylecs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyle/VB/treenodestylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist vom Typ <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> oder kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeStyle.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das neben dem Knoten angezeigt wird.</summary>
+        <value>Die URL zu einem benutzerdefinierten Bild, das neben dem Knoten angezeigt wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeStyle.ImageUrl" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.ImageUrl%2A> Eigenschaft, um ein benutzerdefiniertes Bild für den Stil anzugeben. Dieses Bild wird neben dem Knoten angezeigt, und sein können in einem beliebigen Format Bilddatei (z. B. jpg, GIF, BMP und So weiter), solange der Clientbrowser dieses Format unterstützt.  
+  
+ Wenn beide die <xref:System.Web.UI.WebControls.TreeNodeStyle.ImageUrl%2A> und <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaften werden festgelegt, das Bild, das angezeigt wird, ist dasjenige, das angegeben wird die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der ausgewählte Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.Web.UI.WebControls.Style" /> werden, die mit den aktuellen Knoten Einstellungen zusammengeführt werden.</param>
+        <summary>Kombiniert die Stileigenschaften des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt mit der die Stileigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.MergeWith%2A> -Methode kombinieren Sie die Stileigenschaften des angegebenen <xref:System.Web.UI.WebControls.Style> Objekt mit der die Stileigenschaften der <xref:System.Web.UI.WebControls.TreeNodeStyle> -Objekt, das diese Methode aufgerufen wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeNodeStyle.MergeWith%2A> Methode verbindet die Formateigenschaften zurück, indem Sie jede Eigenschaft, die nicht in der aktuellen festgelegt ist <xref:System.Web.UI.WebControls.TreeNodeStyle> Objekt mit den entsprechenden Wert im angegebenen <xref:System.Web.UI.WebControls.Style> Objekt. Es werden nur Eigenschaften, die nicht festgelegt wurden aktualisiert. Wenn eine Eigenschaft im angegebenen <xref:System.Web.UI.WebControls.Style> Objekt nicht festgelegt ist, wird die entsprechende Eigenschaft in der aktuellen <xref:System.Web.UI.WebControls.TreeNodeStyle> Objekt wird nicht geändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeStyle.MergeWith%2A> Methode, um die Stileigenschaften des angegebenen kombinieren <xref:System.Web.UI.WebControls.Style> Objekt, mit denen der der <xref:System.Web.UI.WebControls.TreeNodeStyle> -Objekt, das diese Methode aufruft. Beachten Sie, dass nur die Festlegung <xref:System.Web.UI.WebControls.TreeNodeStyle> Eigenschaften ersetzt werden.  
+  
+ [!code-aspx-csharp[TreeNodeStyleMergeWith#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyleMergeWith/CS/treenodestylemergewithcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyleMergeWith#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyleMergeWith/VB/treenodestylemergewithvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeSpacing">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit NodeSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit NodeSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeStyle.NodeSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie der vertikalen Abstand zwischen den Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" /> Objekt angewendet wird und dessen benachbarten Knoten.</summary>
+        <value>Die Menge der vertikale Abstand in Pixel, zwischen den Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" /> angewendet wird und dessen benachbarten Knoten auf derselben Ebene. Der Standardwert ist 0 Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.NodeSpacing%2A> -Eigenschaft zur Steuerung der vertikale Abstand zwischen einem Knoten, die die <xref:System.Web.UI.WebControls.TreeNodeStyle> auf angewendet wird und dessen benachbarten Knoten auf derselben Ebene. Dieser Speicherplatz ist eingefügten zwischen dem oberen Rand des aktuellen Knotens und dem unteren Rand des vorherigen Knotens sowie zwischen dem unteren Rand des aktuellen Knotens und dem oberen Rand des nächsten Knotens. Der obere Abstand wird nicht gerendert, für den ersten Knoten in der <xref:System.Web.UI.WebControls.TreeView> zu steuern, da dies ein unnötiger Zwischenraum am oberen Rand des Steuerelements entstehen würden.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeNodeStyle.NodeSpacing%2A> und <xref:System.Web.UI.WebControls.TreeNodeStyle.ChildNodesPadding%2A> Eigenschaften werden unabhängig voneinander angewendet. Und zwar unabhängig davon, ob der Knoten erweitert ist wirkt sich nicht auf den Knoten Abstand.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeStyle.NodeSpacing%2A> Eigenschaft, um den vertikalen Abstand zwischen einem Knoten und seine aufeinander folgenden Knoten auf der gleichen Ebene in der Struktur anzugeben.  
+  
+ [!code-aspx-csharp[TreeNodeStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyle/CS/treenodestylecs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyle/VB/treenodestylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist vom Typ <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> oder kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Web.UI.WebControls.TreeNodeStyle" /> Objekt in seinen ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.Reset%2A> -Methode zum Entfernen einer zuvor Stilelemente definiert und Zurücksetzen der <xref:System.Web.UI.WebControls.TreeNodeStyle> Objekt, das den Zustand der ursprünglichen (d. h. "Standard").  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeStyle.Reset%2A> -Methode zur Rückgabe der <xref:System.Web.UI.WebControls.TreeNodeStyle> Objekt auf den Standardzustand.  
+  
+ [!code-aspx-csharp[TreeNodeStyleMergeWith#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyleMergeWith/CS/treenodestylemergewithcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyleMergeWith#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyleMergeWith/VB/treenodestylemergewithvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit VerticalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit VerticalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeStyle.VerticalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Leerraum oberhalb und unterhalb der Text für einen Knoten fest.</summary>
+        <value>Die Menge der Abstand in Pixel, oberhalb und unterhalb des Knotens Text. Der Standardwert ist 0 Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeStyle.VerticalPadding%2A> Eigenschaft, um den Umfang der vertikale Abstand zwischen dem Text des Knotens, steuern die <xref:System.Web.UI.WebControls.TreeNodeStyle> Klasse angewendet wird. Dieser Speicherplatz wird zwischen dem oberen Rand des Texts und den Rahmen des Textbereichs sowie zwischen dem unteren Rand des Texts und der Rahmen für den Text eingefügt. Um den horizontalen Abstand zu steuern, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeStyle.HorizontalPadding%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeStyle.VerticalPadding%2A> Eigenschaft, um den vertikalen Abstand zwischen dem Text eines Knotens anzugeben.  
+  
+ [!code-aspx-csharp[TreeNodeStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeStyle/CS/treenodestylecs.aspx#1)]
+ [!code-aspx-vb[TreeNodeStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeStyle/VB/treenodestylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist vom Typ <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> oder kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

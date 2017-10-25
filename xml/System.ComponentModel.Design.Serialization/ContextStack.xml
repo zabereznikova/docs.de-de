@@ -1,0 +1,314 @@
+<Type Name="ContextStack" FullName="System.ComponentModel.Design.Serialization.ContextStack">
+  <TypeSignature Language="C#" Value="public sealed class ContextStack" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContextStack extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.ContextStack" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Stapelobjekt, das mit einem Serialisierer verwendet werden kann, um Informationen zu geschachtelten Serialisierungsprogrammen verfügbar zu machen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Serialisierungsprogramme benötigen Informationen zum Kontext eines Objekts, um jeweils den Status richtig beibehalten zu können. Die <xref:System.ComponentModel.Design.Serialization.ContextStack> Klasse ermöglicht ein Serialisierungsprogramm Daten zum Kontext eines Objekts, das serialisiert wird auf einen Stapel festlegen, kann ein anderes Serialisierungsprogramm darauf zugreifen. Der Wert von der <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context%2A> Eigenschaft wird bereitgestellt, indem ein <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager> Informationen für einige Serialisierungsprogramme gemeinsam verwendet werden.  
+  
+ Eine kontextstapels ist hilfreich, da der Vorgang der Serialisierung von einem Entwurfsdokument tief geschachtelt werden kann und Objekte auf jeder Ebene der Schachtelung Kontextinformationen erfordern, um den Zustand des Objekts richtig beibehalten. Ein Serialisierungsprogramm kann ein Kontextobjekt auf den Stapel festlegen, vor dem Aufrufen eines geschachtelten Serialisierungsprogramms. Jedes Objekt, das auf den Stapel festlegen sollten durch das Serialisierungsprogramm entfernt werden, die sie festlegen, nachdem ein Aufruf eines geschachtelten Serialisierungsprogramms zurück.  
+  
+ In der Regel enthalten die Objekte auf dem Stapel Informationen über den Kontext des aktuellen Objekts, das serialisiert wird. Ein übergeordnetes Serialisierungsprogramm fügt Kontextinformationen für den Stapel zum nächsten Objekt serialisiert werden, ein geeignetes Serialisierungsprogramm aufruft und Abschluss das Serialisierungsprogramm für das Objekt ausführen entfernt, die Kontextinformationen aus dem Stapel. Es ist Aufgabe der Implementierung der einzelnen Serialisierungsprogramme, um zu bestimmen, welche Objekte auf diesem Stapel abgelegt abrufen.  
+  
+ Beispielsweise können ein Objekt mit einer Eigenschaft mit dem Namen `Enabled` weist einen Datentyp der <xref:System.Boolean>. Wenn ein Serialisierungsprogramm diesen Wert in einen Datenstrom schreibt, müssen sie möglicherweise enthalten den Kontext oder Typ der Eigenschaft, die geschrieben wird. Das Serialisierungsprogramm verfügt nicht über diese Informationen jedoch, da es nur, zum Schreiben angewiesen wird der <xref:System.Boolean> Wert. Diese Informationen, um dem Serialisierungsprogramm bereitzustellen, kann das übergeordnete Serialisierungsprogramm push eine <xref:System.ComponentModel.PropertyDescriptor> , verweist auf die `Enabled` Eigenschaft auf den Stapel.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung einer <xref:System.ComponentModel.Design.Serialization.ContextStack> mithilfe von Push übertragen, und entfernen Sie dann auf 10 Werte.  
+  
+ [!code-cpp[ContextStackExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#1)]
+ [!code-csharp[ContextStackExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#1)]
+ [!code-vb[ContextStackExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.ContextStack" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.ComponentModel.Design.Serialization.ContextStack> Instanz.  
+  
+ [!code-cpp[ContextStackExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#2)]
+ [!code-csharp[ContextStackExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#2)]
+ [!code-vb[ContextStackExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public void Append (object context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Append(object context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.Append(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Kontextobjekt, auf dem Stapel angefügt werden soll.</param>
+        <summary>Fügt ein Objekt am Ende der Stapel, statt sie auf den Anfang des Stapels Programmstapel abzulegen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann ein Serialisierungsprogramm für die Kommunikation mit anderen Serialisierungsprogrammen durch Hinzufügen von Kontextdaten-Objekten, die nicht in Reihenfolge entfernt werden. Es gibt keine Möglichkeit zum Entfernen eines Objekts, das bis zum Ende des Stapels angefügt wurde, ohne zu entfernen aller anderen Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ContextStack.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Objekt auf dem Stapel ab.</summary>
+        <value>Das aktuelle Objekt auf dem Stapel oder <see langword="null" /> Wenn keine Objekte abgelegt wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Objekt ist das Objekt am oberen Ende des Stapels oder das Objekt, auf dem Stapel zuletzt hinzugefügt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int level] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ContextStack.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="level">Das Maß an das Objekt, das auf dem Stapel abrufen. Ebene 0 ist der Anfang des Stapels, Ebene 1 ist der weiter nach unten, und so weiter. Diese Ebene muss 0 oder größer sein. Wenn Ebene größer als die Anzahl der Ebenen im Stapel ist, gibt es <see langword="null" />.</param>
+        <summary>Ruft das Objekt auf dem Stapel auf der angegebenen Ebene an.</summary>
+        <value>Das Objekt auf dem Stapel auf der angegebenen Ebene oder <see langword="null" /> , wenn kein Objekt auf dieser Ebene vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="level" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[Type type] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(class System.Type)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ContextStack.Item(System.Type)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Typ, aus dem Kontextstapel abgerufen werden soll.</param>
+        <summary>Ruft das erste Objekt auf dem Stapel, der erbt oder den angegebenen Typ implementiert.</summary>
+        <value>Das erste Objekt auf dem Stapel, die erbt oder den angegebenen Typ implementiert oder <see langword="null" /> Wenn kein Objekt auf dem Stapel den Typ implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erfolgt eine Überprüfung für jede Ebene im Stapel, suchen für ein Objekt, das implementiert oder erbt `type`. Wenn eine Übereinstimmung gefunden wird, wird es zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public object Pop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Pop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.Pop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt das aktuelle Objekt vom Stapel und gibt dessen Wert zurück.</summary>
+        <returns>Das Objekt aus dem Stapel entfernt wird. <see langword="null" /> , wenn keine Objekte im Stapel befinden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, entfernen einen Wert aus einem <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ [!code-cpp[ContextStackExample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#4)]
+ [!code-csharp[ContextStackExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#4)]
+ [!code-vb[ContextStackExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Push">
+      <MemberSignature Language="C#" Value="public void Push (object context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Push(object context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.Push(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Context-Objekt, das auf dem Stapel abgelegt werden soll.</param>
+        <summary>Schiebt oder platziert, die bzw. das angegebene Objekt im Stapel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Werte auf einer <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ [!code-cpp[ContextStackExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#3)]
+ [!code-csharp[ContextStackExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#3)]
+ [!code-vb[ContextStackExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

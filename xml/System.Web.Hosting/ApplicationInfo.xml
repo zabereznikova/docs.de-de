@@ -1,0 +1,109 @@
+<Type Name="ApplicationInfo" FullName="System.Web.Hosting.ApplicationInfo">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ApplicationInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.ApplicationInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen zu einer ausgeführten Anwendung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Hosting.ApplicationInfo> Objekt wird verwendet, durch die <xref:System.Web.Hosting.ApplicationManager> Klasse, Informationen zum Ausführen von Anwendungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft ein Array von <xref:System.Web.Hosting.ApplicationInfo> Objekte aus der <xref:System.Web.Hosting.ApplicationManager> Objekt, das mit dem aktuellen Prozess zugeordnet.  
+  
+ [!code-aspx-csharp[System.Web.Hosting.ApplicationInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Hosting.ApplicationInfo/CS/applicationInfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Hosting.ApplicationInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Hosting.ApplicationInfo/VB/applicationInfovb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.ApplicationInfo.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner für die Anwendung ab.</summary>
+        <value>Der eindeutige Bezeichner für die Anwendung angegeben, wenn die Anwendung erstellt wurde, mithilfe der <see cref="M:System.Web.Hosting.ApplicationManager.CreateObject(System.String,System.Type,System.String,System.String,System.Boolean)" /> Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Anwendungen, die unter Microsoft Internet Information Services (IIS) ausgeführt werden ist die ID der Metabase-Pfad zum Stammverzeichnis Anwendung, z. B. /LM/W3SVC/1/Root/application.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalPath">
+      <MemberSignature Language="C#" Value="public string PhysicalPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.ApplicationInfo.PhysicalPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den physischen Pfad zum Stammverzeichnis der Anwendung entspricht.</summary>
+        <value>Der physische Pfad zum Stammverzeichnis der Anwendung entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Hosting.ApplicationInfo.PhysicalPath%2A> Eigenschaft ist der Pfad, der zum Übergeben der <xref:System.Web.Hosting.ApplicationManager.CreateObject%2A> Methode, wenn die Anwendung erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.ApplicationInfo.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den virtuellen Pfad zum Stammverzeichnis der Anwendung entspricht.</summary>
+        <value>Der virtuelle Pfad zum Stammverzeichnis der Anwendung entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Hosting.ApplicationInfo.VirtualPath%2A> Eigenschaft ist der virtuelle Pfad, der zum übergeben wurde die <xref:System.Web.Hosting.ApplicationManager.CreateObject%2A> Methode, wenn die Anwendung erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1915 @@
+<Type Name="ConnectionsZone" FullName="System.Web.UI.WebControls.WebParts.ConnectionsZone">
+  <TypeSignature Language="C#" Value="public class ConnectionsZone : System.Web.UI.WebControls.WebParts.ToolZone" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionsZone extends System.Web.UI.WebControls.WebParts.ToolZone" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.ToolZone</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet eine Benutzeroberfläche (UI), mit der Benutzer Verbindungen zwischen <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> und anderen Serversteuerelementen herstellen können, die sich in <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" />-Zonen befinden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden die Webparts-Steuerelementsatz, können Sie zwei Serversteuerelemente, um eine Verbindung erstellen und Freigeben von Daten, mit einem Steuerelement, als der Anbieter, und die andere fungiert als Consumer der Daten aktivieren. Die beiden Steuerelemente möglich <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente oder eines anderen Typs des Steuerelements angegeben, dass sie entwickelt werden, um Verbindungen zu behandeln und, dass sie in befinden eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone. Weitere Informationen zu Verbindungen von Webparts finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> und <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> Übersicht, zu den Klassen sowie [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ Vorausgesetzt, dass die erforderlichen Steuerelemente und Bedingungen werden zum bilden einer Webparts-Verbindungs vorhanden, ist es weiterhin erforderlich, um die Steuerelemente zu verbinden. Es gibt drei Möglichkeiten, um eine Verbindung zwischen Serversteuerelemente zu bilden: deklarieren eine Verbindung in einer Webseite, erstellen eine Verbindung im Code und das Hinzufügen einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> die Steuerung an die Seite, damit Benutzer die Steuerelemente bei Bedarf eine Verbindung herstellen können. Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement generiert eine Benutzeroberfläche, die ermöglicht Benutzern das herstellen oder trennen Sie alle Serversteuerelemente auf einer Seite, die das Herstellen eine Verbindung erforderlichen Bedingungen erfüllen. Es ist ein optionales Steuerelement, das ist nicht notwendig, Verbindungen, aber eignet sich für den Fall, in dem Benutzer steuern, welche Serversteuerelemente verbunden oder getrennt werden, sollen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement ist eines der Steuerelemente der Webparts-Zone, die von erben die <xref:System.Web.UI.WebControls.WebParts.ToolZone> Basisklasse. Als eine ToolZone die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement nur, wenn die Webseite in einem bestimmten Anzeigemodus ist sichtbar sein soll. In diesem Fall heißt der Anzeigemodus Verbindungsmodus (eine Seite ist in diesem Modus bei der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement auf der Seite hat seine <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayMode%2A> -Eigenschaftswert festgelegt wird, um <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectDisplayMode>). Nach dem Benutzer eine Seite in den Verbindungsmodus wechseln, müssen sie verbinden-Verb für Verbmenü eines Serversteuerelemente klicken, und klicken Sie dann die Verbindung UI wird angezeigt.  
+  
+ Als ein Steuerelement Webparts-Zone der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement ist eine Art von <xref:System.Web.UI.WebControls.WebParts.WebZone> Zone (geerbt von der <xref:System.Web.UI.WebControls.CompositeControl> Klasse) entwickelt, um andere Steuerelemente enthalten. Im Allgemeinen eine <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Zone verfügt größtenteils über die gleichen Elemente wie andere Webparts-Toolzonen: einen Header, einen Text "oder" Inhalt "und eine Fußzeile. Eine detaillierte Erläuterung ist eine Webparts-Zone, und die verschiedenen Teile einer Zone finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.WebZone> -Klassenübersicht.  
+  
+> [!IMPORTANT]
+>  Im Gegensatz zu den meisten anderen Webparts-Zonen, es ist wichtig zu beachten, dass eine <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Zone enthält keine eindeutigen Typ Serversteuerelement zugeordnet. Eine Liste der Zonen und der entsprechenden Steuerelemente, die sie enthalten, finden Sie im Diagramm auf die <xref:System.Web.UI.WebControls.WebParts.WebZone> -Klassenübersicht. Aber die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Zone enthält keine <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Steuerelemente. Stellt stattdessen einen sehr eingeschränkten Zweck Bereitstellen einer Benutzeroberfläche für Benutzer eine Verbindung herstellen oder trennen Serversteuerelemente, die in einigen vorhanden <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone auf der Seite. Die einzigen Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> festlegen, handelt das standardmäßige ASP.NET-Serversteuerelemente, die sie als Teil der Benutzeroberfläche für Verbindungen bilden generiert.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement gerendert wird, wird eine Benutzeroberfläche, die basierend auf der Serversteuerelemente, die Verbindungen bilden sind auf der Seite generiert. Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement bestimmt steuert, welcher Server in der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone auf der Seite werden Anbieter, die Consumer, sind die Verbindungspunkte sind verfügbar, und, ob derzeit sind die Serversteuerelemente verbunden oder getrennt, und klicken Sie dann die Benutzeroberfläche entsprechend generiert.  
+  
+ Nehmen wir beispielsweise an, es ist eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement kann ein Anbieter, eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement kann als Consumer, sie deklariert werden einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> auf der Seite, und sie sind derzeit getrennt. Wenn ein Benutzer wechselt von der Seite auf den Verbindungsmodus und klickt auf die Connect-Verb für eines der Steuerelemente, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement generiert eine Benutzeroberfläche mit einem Link, der beim Klicken auf ein Formular in der die Benutzer Optionen zum wählen kann anzeigt, eine Verbindung erstellen. (Wenn die Steuerelemente bereits verbunden waren, zeigt die anfängliche Ansicht stattdessen Benutzer mit einer Schaltfläche, um die Steuerelemente zu trennen). Die Verbindung Benutzeroberfläche zum Erstellen von neuer Verbindungen werden Benutzer angezeigt, welches Steuerelement um einen Anbieter handelt und welches Steuerelement ein Consumer ist. Ein Dropdownlisten-Steuerelement angezeigt wird, unter jedem Serversteuerelement, listet die verfügbaren <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> Objekte für das Steuerelement. Aus der entsprechenden Dropdownlisten Benutzer müssen wählen Sie eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> -Objekt für den Anbieter (zum bestimmen, welche Schnittstelle und die Daten mit dem Consumer gemeinsam genutzt werden), und ein <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt für jeden Consumer (um zu bestimmen, welche Schnittstelle und die Daten der Consumer nutzt), wird an den Anbieter verbunden werden.  
+  
+> [!NOTE]
+>  In den den Webparts steuern Standardimplementierung Satz, einen Anbieter kann an viele Consumer eine Verbindung herstellen, aber ein Consumer kann nur ein Anbieter haben.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement, deklarieren Sie es in der `<form>` Element auf einer Webseite (jedoch nicht in einem anderen Webparts-Zonenelement geschachtelt) Seite mit den `<asp:connectionszone>` -Element, oder Sie können es auf der Seite programmgesteuert hinzufügen. Wenn Sie das Element auf einer Seite, im Gegensatz zu anderen Webparts-Zonen deklarieren kann nicht, deklarieren Sie einen anderen Typ von Serversteuerelementen zwischen die Tags eines der `<asp:connectionszone>` Element. Sie können Elemente, die an ihre eigenen Eigenschaften und den Stildetails beziehen deklarieren, aber es ist ein eigenständiges Element und ist kein Vorlagensteuerelement in die anderen Server Steuerelemente deklariert werden können.  
+  
+> [!NOTE]
+>  Barrierefreiheit, verbessern die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement gerendert wird, innerhalb einer `<fieldset>` Element. Die `<fieldset>` Element gruppiert verbundenen Satz von Steuerelementen, die zum Aufbauen von Verbindungen in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement, und es Registerkartennavigation zwischen diesen Steuerelementen für beide visueller Benutzer-Agents (z. B. normale Webbrowser) und Speech-orientierte Benutzer-Agents (z. B. Lesemodus Software).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement verfügt über eine Reihe von Eigenschaften, die zum Rendern der Benutzeroberfläche für Verbindungen verwendet. Ein Satz von Eigenschaften umfasst mehrere Verben--verwendet nur in Bezug auf Verbindungen –, die in der Benutzeroberfläche Aktionen ausführen: <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureVerb%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectVerb%2A>, und <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.DisconnectVerb%2A>. Ein großer Satz von Eigenschaften, die verwendet werden, insbesondere für die Verbindungszone Benutzeroberfläche besteht aus Textzeichenfolgen, die an verschiedenen Stellen (oder in bestimmten Situationen, z. B. wenn Fehler auftreten) in der Benutzeroberfläche angezeigt: <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureConnectionTitle%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerInstructionText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerTitle%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderInstructionText%2A> , <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderTitle%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersInstructionText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersTitle%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ExistingConnectionErrorMessage%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetFromText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionTitle%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NewConnectionErrorMessage%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionInstructionText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionTitle%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersInstructionText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersTitle%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendText%2A>, und <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendToText%2A>. Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Klasse enthält auch eine Reihe von allgemeinen Eigenschaften, die in anderen Webparts-Zonen gefunden: <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.CancelVerb%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.CloseVerb%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.Display%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.EmptyZoneText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText%2A>, <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionText%2A>, und <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.PartChromeType%2A>. Schließlich die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.WebPartToConnect%2A> Eigenschaft ist nur für die Klasse, verweisen auf das Steuerelement, das die Verbindung initiiert wird (Dies ist das Steuerelement auf dem der Benutzer Verbs Connect in seiner Verben Menü, das auch das Steuerelement ist verwiesen wird klickt, in der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> des Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPart%2A> Eigenschaft).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klasse verfügt auch über eine Reihe von Methoden, wobei alle geerbt und von Basisklassen überschrieben werden, und die meisten von ihnen stammen von den Basisklassen der Webparts-Zone. Weitere Informationen finden Sie unter der einzelnen Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement im Webparts-Seite. Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite, die alle Steuerelemente hostet veranschaulicht das Deklarieren einer `<asp:connectionszone>` Element und legt eine Reihe von Eigenschaften auf den Verbindungen zone deklarativ und programmgesteuert.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu wechseln. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Beispiels wird die Quelldatei mit der Schnittstelle und benutzerdefinierte Steuerelemente. Beachten Sie, dass die `ZipCodeWebPart` -Steuerelement implementiert die `IZipCode` Schnittstelle, Hinzufügen einer `ConnectionProvider` Attribut, damit das Steuerelement als Anbieter für eine Verbindung verwendet werden kann. Die `WeatherWebPart` Steuerelement verfügt über eine Methode mit einem `ConnectionConsumer` -Attribut, wobei rechnergebunden die `IZipCode` Schnittstelle, damit es als Consumer in einer Verbindung verwendet werden kann.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. In diesem Beispiel wird die dynamische Kompilierung verwendet. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_ConnectionZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_ConnectionZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Beispielcodes wird auf der Webseite. Im oberen Bereich werden `Register` -Anweisungen für das Benutzersteuerelement, und die benutzerdefinierten Steuerelemente, die die Verbindung verwendet. Ein <`asp:connectionszone>` -Element deklariert ist, auf der Seite als ein Beispiel zur Verwendung der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> deklarativ zu steuern. Innerhalb des Elements werden eine Reihe von Eigenschaften deklarativ festgelegt. Andere Eigenschaften für die Verbindungszone programmgesteuert festgelegt werden, der `<script>` Abschnitt der Seite.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Webseite in einem Browser. Verwenden der **Anzeigemodus** Dropdownlisten-Steuerelement auf die Seite zum Verbinden-Modus zu wechseln. Im Verbmenü des der **ZIP Codeanbieter** Steuerelement (die Verben im Menü den Pfeil nach unten in der Titelleiste des Steuerelements angegeben ist), klicken Sie auf der Connect-Verb. Ein <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement angezeigt wird. Beachten Sie, dass in der Benutzeroberfläche für Verbindungen eine **End-Verbindung** Schaltfläche wird angezeigt; die Verbindung wurde bereits deklariert im Markup der Seite, damit die Steuerelemente bereits verbunden sind. Klicken Sie auf **End-Verbindung**, und verwenden Sie dann die **Anzeigemodus** Steuerelement erneut aus, um die Seite, um den Durchsuchen-Modus zurück. Als Nächstes wieder zurückkehren Sie die Seite auf den Verbindungsmodus, klicken Sie auf der Connect-Verb für eines der Steuerelemente und beachten Sie, dass jetzt für die Verbindung UI einen Link angezeigt wird, der Ihnen ermöglicht, eine Verbindung zwischen den Steuerelementen zu bilden. Klicken Sie auf den Link, und verwenden Sie die Verbindung UI, um Verbindungspunkte auszuwählen und die Verbindung herzustellen.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Klasse erweitert werden kann, wenn Entwickler das Verhalten oder die Standardbenutzeroberfläche, die es bereitstellt, für das Arbeiten mit Verbindungen ändern möchten.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionsZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Standardkonstruktor wird aufgerufen, wenn Sie deklarieren die `<asp:connectionszone>` Element auf einer ASP.NET-Seite. Sie müssen nicht implizit Aufrufen dieses Konstruktors, außer in Fällen, in dem Sie das Steuerelement auf der Seite programmgesteuert hinzufügen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.%23ctor%2A> Konstruktor zum Erstellen einer neuen Instanz von einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement programmgesteuert zu einer Webseite hinzufügen. Das Beispiel enthält nur den Code für die Webseite, die Verwendung des Konstruktors veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Webseite, die alle Steuerelemente hostet und in seine `Page_Init` -Methode verwendet die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.%23ctor%2A> Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement, und fügen Sie es auf der Seite.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Auf der Webseite in der `Page_Init` -Methode, wird ein neuer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement erstellt (mithilfe des Konstruktors) und der Seite hinzugefügt. Wenn ein Benutzer die Seite auf den Verbindungsmodus festgelegt, und klickt auf dem Verbindungsverb eines der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente eine <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement angezeigt wird.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_ctor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_ctor/CS/connectionZoneCtorCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_ctor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_ctor/VB/connectionZoneCtorVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Die Verbindung UI wird angezeigt, und die Steuerelemente sind bereits verbunden werden, da die Verbindung im Markup der Seite deklariert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelVerb">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerb CancelVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb CancelVerb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.CancelVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> -Objekt, das Endbenutzer das Herstellen einer Verbindung abbrechen kann.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> mit der Endbenutzer das Herstellen einer Verbindung zwischen zwei Steuerelementen Abbrechen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Verb "Abbrechen", wie in einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> steuern, ist ein Zonenebene-Verb, das in der Verbindungs-Benutzeroberfläche (UI) als Teil der Ansicht angezeigt wird, wählen Sie die Benutzer Verbindungspunkte für die Steuerelemente. Wenn Benutzer das Verb "Abbrechen" klicken, wird das Auswählen der Verbindungspunkte abgebrochen und gibt die Ansicht der Verbindungen auf die Hyperlinks, die Benutzer klicken können, um eine neue Verbindung herzustellen.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.CancelVerb%2A> Eigenschaft zum Abrufen eines Verweises auf den entsprechenden <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt in der Benutzeroberfläche. Obwohl die Eigenschaft selbst schreibgeschützt ist, nachdem Sie einen Verweis auf das Verb haben, können Sie die Eigenschaftswerte ändern, nach Bedarf.  
+  
+ Sie können die Eigenschaftswerte des Verbs "Abbrechen" deklarativ festlegen, durch die Deklaration der `<cancelverb>` Element innerhalb der Tags des ein `<asp:connectionszone>` Element. Die Eigenschaften des Verbs können deklarativ festgelegt werden, in der Form `Property-Subproperty`, wobei `Subproperty` ist eine Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt (z. B. `CancelVerb-Text`). Sie können die Eigenschaften auch programmgesteuert festlegen, in der Form `Property.Subproperty` (z. B. `CancelVerb.Text`).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.CancelVerb%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und zeigt, wie die Eigenschaft deklarativ und programmgesteuert.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element, und innerhalb des Elements deklariert eine `<cancelverb>` Element und legt einige Eigenschaften, die mithilfe von Attributen. Auch in der `Page_PreRender` -Methode, mit dem Code wird einige Eigenschaften auf dem Verb "Abbrechen", für die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Steuerelemente zu trennen, die bereits aufgrund der deklarativen Verbindung auf der Seite verbunden sind. Klicken Sie auf die **wählen Sie einen Consumer für den Anbieter für die Verbindung mit** Link, und beachten Sie die Auswirkung der Einstellung der verschiedenen Eigenschaften. Wenn Sie den Mauszeiger über Positionieren der **terminieren** Schaltfläche der benutzerdefinierten Description-Text wird als QuickInfo angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="protected override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Verbindung-Benutzeroberfläche (UI) erstellt, indem die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.Close%2A> Methode wird aufgerufen, wenn ein Benutzer das Verb Zonenebene schließende, in der Verbindung UI klickt. Nach Ausführung die Methode, die Verbindung UI ausgeblendet, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.WebPartToConnect%2A> Eigenschaftswert ist `null`, und die Seite verbleibt im Verbindungsanzeigemodus. An diesem Punkt können Benutzer ein Steuerelement auswählen, indem Sie auf der Connect-Verb im Verbmenü des Steuerelements oder der Seite zu einem anderen Anzeigemodus wechseln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseVerb">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerb CloseVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb CloseVerb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.CloseVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> -Objekt, das Schließen der Verbindung-Benutzeroberfläche (UI) erstellt, indem Endbenutzer kann die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> , mit dessen Hilfe Endbenutzer, die die UI-Verbindung zu schließen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schließen Verbs an, wie mit einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> steuern, ist ein Zonenebene-Verb, das am Ende (Fußzeilen) die Verbindung Benutzeroberfläche angezeigt wird. Wenn Benutzer das Verb Schließen klicken, wird abgebrochen den Verbindungsprozess und schließt die Verbindung UI, aber bewirkt, dass die Seite im Verbinden Anzeigemodus. An diesem Punkt kann der Benutzer entweder die Seite, um die Durchsuchen-Modus, oder klicken Sie auf das Verb Connect auf einem anderen Serversteuerelement erneut öffnen, die Verbindung UI zurückgeben.  
+  
+ Das Verb schließen sollte von den Header-schließen-Verb unterschieden werden (Weitere Informationen finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.ToolZone.HeaderCloseVerb%2A> Eigenschaft). Beide Verben Ausführen der Aktion identisch Schließen der Verbindung UI, aber das Header-schließen-Verb wird oben auf der Benutzeroberfläche angezeigt und wird durch einen Link in der Standardeinstellung dargestellt, während der schließen-Verb wird am unteren Rand der Benutzeroberfläche angezeigt und wird standardmäßig durch eine Schaltfläche dargestellt.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.CloseVerb%2A> Eigenschaft zum Abrufen eines Verweises auf den entsprechenden <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt in der Benutzeroberfläche. Obwohl die Eigenschaft selbst schreibgeschützt ist, nachdem Sie einen Verweis auf das Verb haben, können Sie die Eigenschaftswerte ändern, nach Bedarf.  
+  
+ Sie können die Eigenschaftswerte des Schließen-Verbs deklarativ festlegen, durch die Deklaration der `<closeverb>` Element innerhalb der Tags des ein `<asp:connectionszone>` Element. Die Eigenschaften des Verbs können deklarativ festgelegt werden, in der Form `Property-Subproperty`, wobei `Subproperty` ist eine Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt (z. B. `CloseVerb-Text`). Sie können die Eigenschaften auch programmgesteuert festlegen, in der Form `Property.Subproperty` (z. B. `CloseVerb.Text`).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.CloseVerb%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und zeigt, wie die Eigenschaft deklarativ und programmgesteuert.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element, und innerhalb des Elements deklariert eine `<closeverb>` Element und legt eine Eigenschaft mithilfe von Attributen. Auch in der `Page_PreRender` -Methode im Code Festlegen einer Eigenschaft der Schließen-Verb für die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Steuerelemente zu trennen, die bereits aufgrund der deklarativen Verbindung auf der Seite verbunden sind. Klicken Sie auf die **wählen Sie einen Consumer für den Anbieter für die Verbindung mit** Link, und beachten Sie die Auswirkung der Einstellung der verschiedenen Eigenschaften. Wenn Sie den Mauszeiger über Positionieren der **Zone schließen** Schaltfläche unten auf der Benutzeroberfläche für Verbindungen der benutzerdefinierten Description-Text wird als QuickInfo angezeigt. Beachten Sie, dass der Header Verb am oberen Rand der Verbindungszone schließen durch einen Link dargestellt wird, und die eigenschaftenzuweisungen der Schließen-Verb haben keine Auswirkungen auf die Header-schließen-Verb.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureConnectionTitle">
+      <MemberSignature Language="C#" Value="public virtual string ConfigureConnectionTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigureConnectionTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureConnectionTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text angezeigt, die als Titel des einen Unterabschnitt der Verbindungs-Benutzeroberfläche (UI) erstellt, indem eine <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge mit dem Titel für den Abschnitt Verbindungen konfigurieren. Der Standardtitel ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureConnectionTitle%2A> Eigenschaft, die einen benutzerdefinierten Wert für den Titel der in diesem Abschnitt der Benutzeroberfläche für Verbindungen verwendet. Das Konfigurieren von Verbindungen-Abschnitt der Benutzeroberfläche angezeigt wird, wenn ein Benutzer verfügt über die Benutzeroberfläche für Verbindungen mit einer vorhandenen Verbindung angezeigt wird, und klickt auf dem Verb konfigurieren (Standardmäßig wird dies durch eine **konfigurieren** Schaltfläche in der UI-Verbindung).  
+  
+ Sie können den Wert der Eigenschaft deklarativ festlegen, indem eine Zeichenfolge zum Zuweisen der `configureconnectiontitle` -Attribut auf die `<asp:connectionszone>` Tag auf einer Webseite. Oder Sie können die Eigenschaft eine Zeichenfolge programmgesteuert zuweisen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureConnectionTitle%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element, und klicken Sie in der `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureConnectionTitle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Da die Verbindung bereits vorhanden ist, sehen Sie, ein **End-Verbindung** Schaltfläche und ein **konfigurieren** Schaltfläche, die das Verb konfigurieren darstellt. Wenn die Verbindung konfiguriert werden (es ist kein in diesem Codebeispiel wird), die **konfigurieren** Schaltfläche aktiviert; klicken Sie darauf, um Verbindungen konfigurieren Sie im Abschnitt zu öffnen und der Titel wäre der Wert der Code, der zugewiesen<xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureConnectionTitle%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureVerb">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerb ConfigureVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb ConfigureVerb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> Objekt, das zum Öffnen der Configuration-Ansicht in der Verbindungs-Benutzeroberfläche (UI) verwendet.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> zum Konfigurieren von Verbindungen im Abschnitt in der Benutzeroberfläche für Verbindungen zu öffnen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Konfigurieren-Verb wird im Abschnitt Verbindungen Verwalten der Benutzeroberfläche für Verbindungen angezeigt, wenn bereits eine Verbindung vorhanden ist und ein Benutzer hat die Verbindung UI geöffnet. Die Benutzeroberfläche stellt Benutzern mit einem **End-Verbindung** Schaltfläche, um die Verbindung zu beenden und eine **konfigurieren** Schaltfläche (die das Verb konfigurieren darstellt) so konfigurieren Sie die Verbindung. Wenn ein Benutzer klickt auf die **konfigurieren** Schaltfläche, das Konfigurieren von Verbindungen-Abschnitt der Benutzeroberfläche angezeigt wird, Aktivieren von Benutzern für die Verbindung zu konfigurieren. Diese Option, um eine Verbindung zu konfigurieren (und somit die **konfigurieren** Schaltfläche) ist nur aktiviert, wenn die Verbindung einen Transformer nutzt und Transformer ein Steuerelement des Konfigurations-Assistenten bietet (<xref:System.Web.UI.WebControls.Wizard>), die aktiviert werden durch Benutzer konfiguriert. Weitere Informationen finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Klasse.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureVerb%2A> Eigenschaft zum Abrufen eines Verweises auf den entsprechenden <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt in der Benutzeroberfläche. Obwohl die Eigenschaft selbst schreibgeschützt ist, nachdem Sie einen Verweis auf das Verb haben, können Sie die Eigenschaftswerte ändern, nach Bedarf.  
+  
+ Sie können die Eigenschaftswerte des Konfigurieren-Verbs deklarativ festlegen, durch Deklarieren der `<configureverb>` Element innerhalb der Tags des ein `<asp:connectionszone>` Element. Die Eigenschaften des Verbs können deklarativ festgelegt werden, in der Form `Property-Subproperty`, wobei `Subproperty` ist eine Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt (z. B. `ConfigureVerb-Text`). Sie können die Eigenschaften auch programmgesteuert festlegen, in der Form `Property.Subproperty` (z. B. `ConfigureVerb.Text`).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConfigureVerb%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und zeigt, wie die Eigenschaft deklarativ und programmgesteuert.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element, und innerhalb des Elements deklariert eine `<configureverb>` Element und legt eine Eigenschaft mithilfe von Attributen. Auch in der `Page_PreRender` -Methode, der Code legt eine Eigenschaft für das Verb konfigurieren, für die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Beachten Sie, dass es eine **End-Verbindung** Schaltfläche, um die Steuerelemente zu trennen, die bereits verbunden sind, und einen deaktivierten **konfigurieren** Schaltfläche. Wenn Ihre Codebeispiel einen Transformer verwendet, die einen Konfigurations-Assistenten enthalten die **konfigurieren** Schaltfläche wird aktiviert, und die Benutzer klicken, um die Verbindung zu konfigurieren. Wenn Sie den Mauszeiger über Positionieren der **konfigurieren** Schaltfläche in der Benutzeroberfläche für Verbindungen der benutzerdefinierten Description-Text wird als QuickInfo angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToConsumerInstructionText">
+      <MemberSignature Language="C#" Value="public virtual string ConnectToConsumerInstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectToConsumerInstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerInstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest den Anweisungstext angezeigt, die im Abschnitt des Verbindungs-Benutzeroberfläche (UI), in denen Benutzer einen Consumerverbindungspunkt auswählen, dem der Anbieter eine Verbindung herstellt.</summary>
+        <value>Eine Zeichenfolge mit den Anweisungen zum Erstellen einer Verbindung Consumer an den Anbieter. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerInstructionText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Klickt ein Benutzer das Verb Connect auf einem Anbietersteuerelement die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt einen Teil der Verbindung Benutzeroberfläche, die Benutzern ermöglicht, einen Consumer auswählen. Wenn der Benutzer eine verbinden-Verb für den Consumer geklickt haben, klicken Sie dann die Verbindung UI sind das Gegenteil, und zeigen Informationen zum Herstellen einer Verbindung zu einem Anbieter.  
+  
+ Der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerInstructionText%2A> Eigenschaft direkt über den Dropdownlisten-Steuerelementen, die die verfügbaren Consumer-Verbindungspunkte enthalten, können Sie ein Anbieter verbunden, angezeigt wird.  
+  
+ Sie können diese Eigenschaft deklarativ festlegen, mit der `ConnectToConsumerInstructionText` Attribut im öffnenden Tag von der `<asp:connectionszone>` Element in einer Seite, oder Sie können programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerInstructionText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerInstructionText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Verbindung zu beenden, und klicken Sie dann auf die **wählen Sie einen Consumer für den Anbieter für die Verbindung mit** Link. Den Consumerverbindungspunkt Benutzeroberfläche angezeigt wird und der benutzerdefinierte Text zugewiesen werden, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerInstructionText%2A> Eigenschaft angezeigt wird, direkt über den Bereich mit dem Steuerelement, das Sie einen Verbindungspunkt, auf der Consumer zum Herstellen einer Verbindung mit dem Anbieter auswählen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToConsumerText">
+      <MemberSignature Language="C#" Value="public virtual string ConnectToConsumerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectToConsumerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text eines Hyperlinks, die Benutzer klicken, um eine Ansicht öffnen, in der ein Consumer-Steuerelement für eine Verbindung ausgewählt werden können.</summary>
+        <value>Eine Zeichenfolge, die als Text einen Link, der die Ansicht wird geöffnet, in dem Benutzer Consumer auswählen, angezeigt. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn ein Benutzer, das Verb Connect auf einem Anbietersteuerelement klickt, und keine Verbindung besteht, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt einen Link mit Text **wählen Sie einen Consumer für den Anbieter zum Herstellen einer Verbindung mit**. Wenn Benutzer auf den Link klicken, wird eine Sicht, in der einen verfügbaren Consumer für die Verbindung mit dem Anbieter ausgewählt werden kann, geöffnet.  
+  
+ Sie können diese Eigenschaft deklarativ festlegen, mit der `ConnectToConsumerText` Attribut im öffnenden Tag von der `<asp:connectionszone>` Element in einer Seite, oder Sie können programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Verbindung zu beenden, und beachten Sie, dass der Link mit den zugewiesenen benutzerdefinierten Text angezeigt wird die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToConsumerTitle">
+      <MemberSignature Language="C#" Value="public virtual string ConnectToConsumerTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectToConsumerTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des Abschnitts in der Verbindungs-Benutzeroberfläche (UI) in der Benutzer einen bestimmten Consumer für die Verbindung auswählen können.</summary>
+        <value>Eine Zeichenfolge, die als Titel des Abschnitts, in dem Benutzer Consumer auswählen. Der Standardtitel ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerTitle%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn Benutzer auf das Verb Connect auf einem Anbietersteuerelement, und keine Verbindung besteht, erreichen sie schließlich eine Sicht, in der einen Consumer zum Herstellen einer Verbindung mit dem zuvor ausgewählten Anbieter ausgewählt werden kann. Der Titel des in dieser Ansicht wird bereitgestellt, durch die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerTitle%2A> Eigenschaft.  
+  
+ Sie können diese Eigenschaft deklarativ festlegen, mit der `ConnectToConsumerTitle` Attribut im öffnenden Tag von der `<asp:connectionszone>` Element in einer Seite, oder Sie können programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerTitle%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerTitle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Verbindung zu beenden, und klicken Sie dann auf den Link, um einen auf Consumer auswählen. In der Ansicht zur Auswahl eines Consumers, beachten Sie, dass der Titeltext des Abschnitts der Text, die der Code zuweist der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToConsumerTitle%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToProviderInstructionText">
+      <MemberSignature Language="C#" Value="public virtual string ConnectToProviderInstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectToProviderInstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderInstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest den Anweisungstext angezeigt, die im Abschnitt des Verbindungs-Benutzeroberfläche (UI), in denen Benutzer einen Anbieterverbindungspunkt auswählen, dem der Consumer eine Verbindung herstellt.</summary>
+        <value>Eine Zeichenfolge mit den Anweisungen zum Erstellen einer anbieterverbindung an den Consumer. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderInstructionText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Klickt ein Benutzer das Verb Connect auf einem Consumersteuerelement der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zeigt einen Teil der Benutzeroberfläche, über die Benutzer zur Auswahl eines Anbieters, Verbindung. Wenn der Benutzer auf den Anbieter verbinden-Verb geklickt haben, klicken Sie dann die Verbindung UI sind das Gegenteil, und zeigen Informationen zum Verbinden mit einem Consumer.  
+  
+ Der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderInstructionText%2A> Eigenschaft wird angezeigt, genau über die Dropdownlisten-Steuerelemente, die die verfügbaren Anbieterverbindungspunkte enthalten, mit denen ein Consumer verbunden werden kann.  
+  
+ Sie können diese Eigenschaft deklarativ festlegen, mit der `ConnectToProviderInstructionText` Attribut im öffnenden Tag von der `<asp:connectionszone>` Element in einer Seite, oder Sie können programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderInstructionText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderInstructionText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Verbindung zu beenden, und klicken Sie dann auf die **wählen Sie einen Anbieter für den Consumer für die Verbindung mit** Link. Die anbieterverbindung beziehen UI wird angezeigt und der benutzerdefinierte Text zugewiesen werden, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderInstructionText%2A> Eigenschaft angezeigt wird, direkt über den Bereich mit dem Steuerelement, das Sie einen Verbindungspunkt, auf dem Anbieter zum Herstellen einer Verbindung mit dem Consumer auswählen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToProviderText">
+      <MemberSignature Language="C#" Value="public virtual string ConnectToProviderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectToProviderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text eines Hyperlinks, die Benutzer klicken, um eine Ansicht öffnen, in der ein Anbietersteuerelement für eine Verbindung ausgewählt werden können.</summary>
+        <value>Eine Zeichenfolge, die als Text einen Link, der die Ansicht wird geöffnet, in dem Benutzer Anbieter auswählen, angezeigt. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn ein Benutzer klickt auf die Connect-Verb für ein Consumer-Steuerelement, und keine Verbindung besteht, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt einen Link mit Text **wählen Sie einen Anbieter für den Consumer zum Herstellen einer Verbindung mit**. Wenn Benutzer auf den Link klicken, wird eine Sicht, in der sie einen verfügbaren Anbieter für die Verbindung mit dem Consumer auswählen können, geöffnet.  
+  
+ Sie können diese Eigenschaft deklarativ festlegen, mit der `ConnectToProviderText` Attribut im öffnenden Tag von der `<asp:connectionszone>` Element in einer Seite, oder Sie können programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Verbindung zu beenden, und beachten Sie, dass der Link mit den zugewiesenen benutzerdefinierten Text angezeigt wird die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToProviderTitle">
+      <MemberSignature Language="C#" Value="public virtual string ConnectToProviderTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectToProviderTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des Abschnitts in der Verbindungs-Benutzeroberfläche (UI) in der Benutzer einen bestimmten Anbieter für die Verbindung auswählen können.</summary>
+        <value>Eine Zeichenfolge, die als Titel des Abschnitts, in dem Benutzer Anbieter auswählen. Der Standardtitel ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderTitle%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn Benutzer auf der Connect-Verb für ein Consumer-Steuerelement, und keine Verbindung besteht, erreichen sie schließlich eine Sicht, in der einen Anbieter zum Herstellen einer Verbindung mit dem zuvor ausgewählten Consumer ausgewählt werden kann. Der Titel des in dieser Ansicht wird bereitgestellt, durch die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderTitle%2A> Eigenschaft.  
+  
+ Sie können diese Eigenschaft deklarativ festlegen, mit der `ConnectToProviderTitle` Attribut im öffnenden Tag von der `<asp:connectionszone>` Element in einer Seite, oder Sie können programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderTitle%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderTitle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Verbindung zu beenden, und klicken Sie dann auf den Link, um einen Anbieter auswählen. In der Ansicht für einen Anbieter auswählen, beachten Sie, dass der Titeltext des Abschnitts der Text, die der Code zuweist der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectToProviderTitle%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectVerb">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerb ConnectVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb ConnectVerb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> Objekt, das zwei ermöglicht <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente zum Herstellen einer Verbindung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> , die zwei Steuerelemente zum Herstellen einer Verbindung ermöglicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Connect-Verb, wie in einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> steuern, ist ein Zonenebene-Verb, das in der Verbindungs-Benutzeroberfläche (UI) als Teil der Ansicht angezeigt wird, welche Benutzer eine Verbindung zwischen zwei Steuerelementen abschließen. In dem Teil der Benutzeroberfläche, in dem Benutzer die Verbindungspunkte auswählen können, wenn zwei Steuerelemente verbinden können, die Connect-Verb am unteren Rand der Benutzeroberfläche aktiviert ist. Wenn Benutzer einen Verbindungspunkt ausgewählt haben, können sie klicken, das Verbindungsverb, um die Verbindung zu erstellen.  
+  
+> [!NOTE]
+>  Verbinden der Zonenebene Verb in diesem Thema erläuterten tatsächlich eine Verbindung zwischen Steuerelementen her und unterscheidet sich von dem Verb, das im Verbmenü des angezeigt wird ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Wenn ein Benutzer eine Webseite Anzeigemodus, Verbindung, wenn ein Steuerelement Verbindungen bilden kann wechselt, einem <xref:System.Web.UI.WebControls.WebParts.WebPart> verbinden Verb Verben im Menü angezeigt wird. Dies <xref:System.Web.UI.WebControls.WebParts.WebPart> verbinden Verb einfach öffnet die Verbindung UI erstellt, indem die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Im Gegensatz dazu die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectVerb%2A> Verb erläutert, die in diesem Thema, das auf der Ebene der Zone verwendet wird, tatsächlich eine Verbindung erstellt.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectVerb%2A> Eigenschaft zum Abrufen eines Verweises auf den entsprechenden <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt in der Benutzeroberfläche. Obwohl die Eigenschaft selbst schreibgeschützt ist, nachdem Sie einen Verweis auf das Verb haben, können Sie die Eigenschaftswerte ändern, nach Bedarf.  
+  
+ Sie können die Eigenschaftswerte des Verbinden-Verbs deklarativ festlegen, durch das Deklarieren der `<connectverb>` zwischen dem Start- und Endtags des Elements ein `<asp:connectionszone>` Element. Die Eigenschaften des Verbs können auch deklarativ innerhalb des öffnenden Tags von festgelegt werden die `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs in der Form `Property-Subproperty`, wobei `Subproperty` ist eine Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt (z. B. `ConnectVerb-Text`). Sie können die Eigenschaften auch programmgesteuert festlegen, in der Form `Property.Subproperty` (z. B. `ConnectVerb.Text`).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConnectVerb%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und zeigt, wie die Eigenschaft deklarativ und programmgesteuert.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und innerhalb der Elementtags, deklariert ein `<connectverb>` Element und legt einige Eigenschaften, die mithilfe von Attributen. Auch in der `Page_PreRender` -Methode, mit dem Code wird einige Eigenschaften auf der Connect-Verb für die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Steuerelemente zu trennen, die bereits aufgrund der deklarativen Verbindung auf der Seite verbunden sind. Klicken Sie auf die **wählen Sie einen Consumer für den Anbieter für die Verbindung mit** Link, und beachten Sie die Auswirkung der Einstellung der verschiedenen Eigenschaften. Wenn Sie den Mauszeiger über Positionieren der **Steuerelemente verbinden** Schaltfläche der benutzerdefinierten Description-Text wird als QuickInfo angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumersInstructionText">
+      <MemberSignature Language="C#" Value="public virtual string ConsumersInstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConsumersInstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersInstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest den Anweisungstext im Abschnitt Consumer, der die Verbindungs-Benutzeroberfläche (UI), wenn bereits eine Verbindung vorhanden ist.</summary>
+        <value>Eine Zeichenfolge, die als Anweisungstext für Consumer, die eine Verbindung beteiligt ist. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersInstructionText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn ein Benutzer auf das Verb Connect auf einem Anbietersteuerelement klickt und bereits eine Verbindung vorhanden ist, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt eine Ansicht, die Benutzern ermöglicht, die Verbindung zu trennen. Die Ansicht zeigt auch alle Consumer die Verbindung teilnehmen. Ist Sie oberhalb der Liste der Consumer der Anweisungstext Consumer, der standardmäßig eine Beschreibung der ausgeführten Consumer-Steuerelemente in eine Verbindung besteht.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `ConsumersInstructionText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersInstructionText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersInstructionText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, suchen Sie im Abschnitt "Consumer" für den benutzerdefinierten Text zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersInstructionText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumersTitle">
+      <MemberSignature Language="C#" Value="public virtual string ConsumersTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConsumersTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Titel über Consumer-Abschnitt der Verbindungs-Benutzeroberfläche (UI) angezeigt, wenn bereits eine Verbindung vorhanden ist.</summary>
+        <value>Eine Zeichenfolge, die als den Titeltext für Consumer eine Verbindung teilnehmen. Der Standardtitel ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersTitle%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn ein Benutzer auf das Verb Connect auf einem Anbietersteuerelement klickt und bereits eine Verbindung vorhanden ist, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt eine Ansicht, die Benutzern ermöglicht, die Verbindung zu trennen. Die Ansicht zeigt auch alle Consumer die Verbindung teilnehmen. Direkt über der Liste von Consumern wird der Anweisungstext für Consumer, und über die der Titel des Abschnitts Consumer für die die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersTitle%2A> Eigenschaft liefert den Text.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `ConsumersTitle` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersTitle%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersTitle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, suchen Sie im Abschnitt "Consumer" für den benutzerdefinierten Text zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ConsumersTitle%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt alle untergeordneten Steuerelementen in einem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement als Vorbereitung für die zurück an den Server oder zum Rendern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> Methode. Er bereitet alle verbindungsrelevante Objekte, die für Verbindungen erforderlich sind (z. B. abgerufen Connection Point-Objekte aus den verfügbaren Consumer- und -Steuerelemente), und erstellt verschiedene Steuerelemente der Benutzeroberfläche (UI), die Benutzern die Interaktion mit dem Verbindung UI zum Herstellen einer Verbindung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisconnectVerb">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerb DisconnectVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb DisconnectVerb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.DisconnectVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> -Objekt, das dem Benutzer zwei trennen kann verbunden <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> , die Verbindung trennt zwei verbunden <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Verb trennen, wie in einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> steuern, ist ein Zonenebene-Verb, das in der Verbindungs-Benutzeroberfläche (UI) als Teil der Ansicht angezeigt wird, welche Benutzer eine vorhandene Verbindung zwischen zwei Steuerelementen verwalten. Nachdem der Benutzer geklickt haben die <xref:System.Web.UI.WebControls.WebParts.WebPart> verbinden-Verb für die Verbmenü eines Steuerelements und die Verbindung UI wird angezeigt, wenn bereits eine Verbindung zwischen zwei Steuerelementen vorhanden ist, Trennen-Verbs angezeigt im unteren Bereich der Benutzeroberfläche aktiviert.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.DisconnectVerb%2A> Eigenschaft zum Abrufen eines Verweises auf den entsprechenden <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt in der Benutzeroberfläche. Obwohl die Eigenschaft selbst schreibgeschützt ist, nachdem Sie einen Verweis auf das Verb haben, können Sie die Eigenschaftswerte ändern, nach Bedarf.  
+  
+ Sie können die Eigenschaftswerte des Trennen-Verbs deklarativ festlegen, durch die Deklaration der `<disconnectverb>` zwischen dem Start- und Endtags des Elements ein `<asp:connectionszone>` Element. Die Eigenschaften des Verbs können auch deklarativ innerhalb des öffnenden Tags von festgelegt werden die `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs in der Form `Property-Subproperty`, wobei `Subproperty` ist eine Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt (z. B. `DisconnectVerb-Text`). Sie können die Eigenschaften auch programmgesteuert festlegen, in der Form `Property.Subproperty` (z. B. `DisconnectVerb.Text`).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.DisconnectVerb%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und zeigt, wie die Eigenschaft deklarativ und programmgesteuert.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und innerhalb der Elementtags, deklariert ein `<disconnectverb>` Element und legt einige Eigenschaften, die mithilfe von Attributen. Auch in der `Page_PreRender` -Methode, mit dem Code wird einige Eigenschaften der Disconnect-Verb für die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Codeanbieter** steuern, und klicken Sie auf der Connect-Verb. Beachten Sie die Auswirkung der Eigenschaftswerte, die auf dem Verb trennen festgelegt wurden. Wenn Sie den Mauszeiger über Positionieren der **End-Verbindung** Schaltfläche der benutzerdefinierten Description-Text wird als QuickInfo angezeigt. Klicken Sie auf die **End-Verbindung** Schaltfläche, um die Steuerelemente zu trennen, die bereits aufgrund der deklarativen Verbindung auf der Seite verbunden sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="protected override bool Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Display" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.ToolZone" />-Steuerelement aktuell angezeigt wird.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Web.UI.WebControls.WebParts.ToolZone" /> aktuell angezeigt wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyZoneText">
+      <MemberSignature Language="C#" Value="public override string EmptyZoneText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EmptyZoneText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.EmptyZoneText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Textnachricht an, die in eine leere angezeigt <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> steuern, wenn es nicht genügend Steuerelemente auf einer Webseite, eine Verbindung herzustellen.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die Nachricht für eine leere Zone enthält. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExistingConnectionErrorMessage">
+      <MemberSignature Language="C#" Value="public virtual string ExistingConnectionErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExistingConnectionErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ExistingConnectionErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text einer Nachricht in der Verbindungs-Benutzeroberfläche (UI) angezeigt wird, wenn es eine Fehlermeldung oder Warnung auf eine vorhandene Verbindung wird fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Text der Nachricht enthält. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFromText">
+      <MemberSignature Language="C#" Value="public virtual string GetFromText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GetFromText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetFromText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text im Abschnitt des Verbindungs-Benutzeroberfläche (UI), die die benannten Anbieter vorausgeht, von der ein Consumer abgerufen wird, angezeigt.</summary>
+        <value>Eine Zeichenfolge, die die benannten Anbieter vorangestellt ist, der der Consumer Daten abgerufen werden. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetFromText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Klickt ein Benutzer das Verb Connect auf einem Consumersteuerelement der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zeigt eine Ansicht, die Benutzern das Herstellen eine Verbindung zu einem Anbieter ermöglicht. Zeigen Sie auf den Teil der Benutzeroberfläche, die Benutzer anweist, eine anbieterverbindung auszuwählen, Text an, der das Dropdownlisten-Steuerelement vorangestellt ist, in dem Benutzer auswählen können Consumer erhalten ihre Daten aus der Verbindungspunkt, vorhanden ist. Dieser Text, der dem Dropdown-Steuerelement vorangestellt ist, ist der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetFromText%2A> Eigenschaft. Standardmäßig wird der Textwert **aus**.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `GetFromText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetFromText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetFromText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. Suchen Sie in der Ansicht, die für die vorhandene Verbindung geöffnet wird im Anbieterabschnitt "für den Text, der die benannten Anbieter vorausgeht. Dies ist der Text, der zugewiesen werden, um die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetFromText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public virtual string GetText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GetText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text im Abschnitt des Verbindungs-Benutzeroberfläche (UI), die die benannten Consumer vorausgeht, die Daten von einem Anbieter empfängt gezeigt fest.</summary>
+        <value>Eine Zeichenfolge, die in der Verbindungszeichenfolge die benannten Consumer vorangestellt ist. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Klickt ein Benutzer das Verb Connect auf einem Consumersteuerelement der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement zeigt eine Ansicht, die Benutzern das Herstellen eine Verbindung zu einem Anbieter ermöglicht. Zeigen Sie auf den Teil der Benutzeroberfläche, die Benutzer anweist, eine anbieterverbindung auswählen, gibt es einige Text, der die benannten Consumer vorausgeht, die in der Verbindung einbezogen werden. Den Consumer vorangestellte Text ist der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetText%2A> Eigenschaft. Standardmäßig wird der Textwert **abrufen**.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `GetText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. Suchen Sie in der Ansicht, die für die vorhandene Verbindung geöffnet wird im Anbieterabschnitt "für den Text, der die benannten Consumer vorausgeht. Dies ist der Text, der zugewiesen werden, um die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.GetText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public override string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Headertext, die am oberen Rand der Verbindungs-Benutzeroberfläche (UI) erstellt, indem die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die den Headertext für die UI-Verbindung enthält. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText%2A> Eigenschaft wird angezeigt, wenn die Verbindung Benutzeroberfläche angezeigt wird. Wenn ein Benutzer die Connect-Verb im Verbmenü des klickt ein <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, die Verbindung, die Benutzeroberfläche angezeigt wird, und der HeaderText dient als Bezeichnung ganz oben auf der Benutzeroberfläche für Verbindungen. Der Standardtext lautet **Verbindungen Zone**.  
+  
+ Diese Eigenschaft überschreibt die <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderText%2A> Eigenschaft aus der <xref:System.Web.UI.WebControls.WebParts.WebZone> Klasse, sodass der Standardtext Verbindungen Zone Header der Eigenschaft zugewiesen werden kann.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `HeaderText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, beachten Sie, dass es sich bei der HeaderText am oberen Rand der Verbindungszone der zugewiesene Wert ist die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText%2A> Eigenschaft im Codebeispiel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstructionText">
+      <MemberSignature Language="C#" Value="public override string InstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der allgemeine Anweisungen zum ausgewählten Steuerelements in der Verbindungs-Benutzeroberfläche (UI) im Abschnitt zum Verwalten von vorhandenen Verbindungen verwendet wird.</summary>
+        <value>Eine Zeichenfolge, die den Anweisungstext für die UI-Verbindung enthält. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionText%2A> Eigenschaft wird angezeigt, wenn die Verbindung, die Benutzeroberfläche angezeigt wird und bereits eine Verbindung vorhanden ist. Direkt unterhalb der HeaderText (enthalten der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText%2A> Eigenschaft), die am oberen Rand der Benutzeroberfläche für Verbindungen gefunden wird, ist der Anweisungstitel und befindet sich direkt unterhalb der Anweisungstext. Der Anweisungstext informiert Benutzer darüber, welche Art von Aktion ausgeführt werden kann auf dem derzeit ausgewählten <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement (das ausgewählte Steuerelement ist das Objekt, das für die der Benutzer geklickt eine Connect-Verb im Verbmenü des Steuerelements hat). Standardmäßig wird der Anweisungstext **verwalten die Verbindungen für das aktuelle Webpart**.  
+  
+ Diese Eigenschaft überschreibt die <xref:System.Web.UI.WebControls.WebParts.ToolZone.InstructionText%2A> Eigenschaft aus der <xref:System.Web.UI.WebControls.WebParts.ToolZone> Klasse, sodass die standardverbindungen zone Anweisung Text der Eigenschaft zugewiesen werden kann.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `InstructionText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, beachten Sie, dass der Text der verarbeitungsanweisung am oberen Rand der Verbindungszone der zugewiesene Wert ist die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionText%2A> Eigenschaft im Codebeispiel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstructionTitle">
+      <MemberSignature Language="C#" Value="public virtual string InstructionTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstructionTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für eine allgemeine Beschreibung der Aktion verwendet wird, die auf dem Consumer oder Anbieter-Steuerelement in der Verbindungs-Benutzeroberfläche (UI) zum Verwalten von vorhandenen Verbindungen ausgeführt werden können.</summary>
+        <value>Eine Zeichenfolge, die die Anweisungstitel für die UI-Verbindung enthält. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionTitle%2A> Eigenschaft wird angezeigt, wenn die Verbindung, die Benutzeroberfläche angezeigt wird und bereits eine Verbindung vorhanden ist. Der Titel Anweisungstext wird direkt unterhalb der HeaderText (enthalten der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.HeaderText%2A> Eigenschaft), befindet sich oben auf der Benutzeroberfläche für Verbindungen. Die Anweisung ist eine allgemeine Beschreibung, die Benutzer darüber informiert, welche Art von Aktion für Consumer oder Anbieter ausgeführt werden kann <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das in eine vorhandene Verbindung beteiligt ist. Standardmäßig beginnt der Anweisungstitel mit **verwalten die Verbindungen für**, und endet mit dem Namen des Consumer oder Anbieter-Steuerelements, das der Benutzer ausgewählt werden, indem Sie auf der Connect-Verb für seine Verbmenü.  
+  
+> [!NOTE]
+>  Wenn Sie einen benutzerdefinierten Wert für diese Eigenschaft zuweisen, denken Sie daran, dass Sie zur Entwurfszeit können Sie wissen, ob der Benutzer ein Anbieter oder Consumer Steuerelement auswählt, auf die Sie die Verbindung zu verwalten, also der benutzerdefinierten Anweisungstitel allgemeine Consumer oder einen Pull Request finden Sie unter sein muss Ovider-Steuerelement. Im Gegensatz dazu wird der Standardwert der Eigenschaft so gerendert, dass sie den Namen des jeweiligen Consumer oder Anbieter, die der Benutzer auswählt, dynamisch angefügt. Wenn Sie einen benutzerdefinierten Wert für die Eigenschaft angeben, der dieses Verhalten imitiert möchten, müssen Sie erben von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Klasse, und überschreiben Sie diese Eigenschaft oder die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.RenderBody%2A> Methode.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `InstructionTitle` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionTitle%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionTitle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, beachten Sie, dass der Anweisungstitel direkt unterhalb der HeaderText am oberen Rand der Verbindungszone der zugewiesene Wert ist die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.InstructionTitle%2A> Eigenschaft im Codebeispiel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadControlState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" />, das den wiederherzustellenden Steuerelementzustand darstellt.</param>
+        <summary>Wiederherstellungen steuern Zustandsinformationen aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <see cref="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveControlState" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode aufgerufen wird, bestimmt, ob es sich bei Steuerelementzustand für das Steuerelement bereits gespeichert wurde, und wenn dies der Fall ist, setzt die Zustand des Steuerelements auf den gespeicherten Wert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge des <paramref name="savedState" /> stimmt nicht mit der Länge des Arrays erstellt, indem die <see cref="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveControlState" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> , enthält den Ansichtszustand wiederhergestellt werden.</param>
+        <summary>Stellt Ansichtszustandsinformationen aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <see cref="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveViewState" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Wenn diese Methode aufgerufen wird, bestimmt, ob der Ansichtszustand für das Steuerelement bereits gespeichert wurde, und wenn dies der Fall ist, setzt den Ansichtszustand auf den gespeicherten Wert. Die Methode überschreibt die <xref:System.Web.UI.WebControls.WebParts.ToolZone.LoadViewState%2A> Methode geerbt von der <xref:System.Web.UI.WebControls.WebParts.ToolZone> Klasse, sodass es die grundlegende Implementierung hinzufügen und Wiederherstellen von Status für die verschiedenen Zonenebene-Verben verwendet werden, der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge des <paramref name="savedState" /> stimmt nicht mit der Länge des Arrays erstellt, indem die <see cref="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveViewState" /> Methode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewConnectionErrorMessage">
+      <MemberSignature Language="C#" Value="public virtual string NewConnectionErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewConnectionErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.NewConnectionErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text einer Nachricht in der Verbindungs-Benutzeroberfläche (UI) angezeigt wird, wenn es wird eine Fehlermeldung oder Warnung auf eine neue Verbindung, die ein Benutzer versucht, erstellen.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Text der Nachricht enthält. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoExistingConnectionInstructionText">
+      <MemberSignature Language="C#" Value="public virtual string NoExistingConnectionInstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NoExistingConnectionInstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionInstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anweisungstext, der im Hauptteil der Verbindungs-Benutzeroberfläche (UI) angezeigt wird, wenn ein Steuerelement Webparts keine bestehende Verbindung wurde.</summary>
+        <value>Eine Zeichenfolge, die Nachricht für den Fall enthält, in dem keine bestehende Verbindung vorhanden ist. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionInstructionText%2A> Eigenschaft wird angezeigt, sobald der Benutzeroberfläche angezeigt wird und keine Verbindung vorhanden ist. Nachdem ein Benutzer eine Seite in der Connect-Anzeigemodus umschaltet und auf Verbmenü des Verbs verbinden klickt einer <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, den Hauptverbindungsthread UI wird angezeigt. Wenn keine aktuelle Verbindung, den Text aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionInstructionText%2A> Eigenschaft am unteren Rand der Benutzeroberfläche für Verbindungen direkt über das Verb schließen im Footerbereich der Zone angezeigt wird. Der Text der Tatsache, dass es keine vorhandenen Verbindungen sind beschreibt und zeigt dem Benutzer grundlegende Anweisungen zum Erstellen einer Verbindung mit der Benutzeroberfläche.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `NoExistingConnectionInstructionText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionInstructionText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionInstructionText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, klicken Sie auf die **End-Verbindung** Schaltfläche. Beachten Sie, dass der Anweisungstext für keine vorhandenen Verbindungen am unteren Rand der Benutzeroberfläche für Verbindungen direkt über das Verb schließen im Footerbereich der Zone angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoExistingConnectionTitle">
+      <MemberSignature Language="C#" Value="public virtual string NoExistingConnectionTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NoExistingConnectionTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titeltext, der im Text der Verbindungs-Benutzeroberfläche (UI) angezeigt wird, wenn Webparts-Steuerelement keine bestehende Verbindung besitzt.</summary>
+        <value>Eine Zeichenfolge, den Titeltext für die Groß-/Kleinschreibung enthält, keine vorhandenen Verbindung. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionTitle%2A> Eigenschaft wird angezeigt, sobald der Benutzeroberfläche angezeigt wird und keine Verbindung vorhanden ist. Nachdem ein Benutzer eine Seite in der Connect-Anzeigemodus umschaltet und auf Verbmenü des Verbs verbinden klickt einer <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, den Hauptverbindungsthread UI wird angezeigt. Wenn keine aktuelle Verbindung, den Text aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionTitle%2A> Eigenschaft wird angezeigt, im oberen Bereich des Textkörpers der Benutzeroberfläche für Verbindungen direkt unter dem Link für die Benutzer klicken können, um eine neue Verbindung zu erstellen. Der Titel werden zusammengefasst, die Tatsache, die keine Verbindungen vorhanden ist und der Standardtitel **keine aktive Verbindung**.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `NoExistingConnectionTitle` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionTitle%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.NoExistingConnectionTitle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, klicken Sie auf die **End-Verbindung** Schaltfläche. Beachten Sie, dass die Anweisungstitel keine vorhandenen Verbindungen direkt unter dem Link tritt auf, die Benutzern ermöglicht, eine neue Verbindung erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDisplayModeChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDisplayModeChanged (object sender, System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDisplayModeChanged(object sender, class System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.OnDisplayModeChanged(System.Object,System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Der Absender des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged> Ereignis und stellt einen benutzerdefinierten Handler bereit. Nachdem eine Webseite betritt oder den Anzeigemodus für die Verbindung herstellen verlässt, diese Methode führt mehrere Schritte, die nur für die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Die-Methode bricht alle Verbindungsaktivität, die an diesem Punkt steht, wird sichergestellt, dass keine untergeordneten Steuerelemente von der Verbindung-Benutzeroberfläche (UI) angezeigt werden, indem die <xref:System.Web.UI.Control.ChildControlsCreated%2A> Eigenschaft `false`, und setzt die Verbindung UI in einen Modus, in dem sie Informationen zu vorhandenen Verbindungen können angezeigt werden, wenn ein Benutzer den Prozess zum Erstellen einer Verbindungs wird fortgesetzt.  
+  
+ Die Behandlung in bereitgestellten spezielle Behandlung hinzuzufügende der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.OnDisplayModeChanged%2A> -Methode, können Entwickler von erben die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Klasse, und überschreiben Sie diese Methode. Als Alternative können Entwickler auch bieten einen Handler für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged> Ereignis auf der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement durch Hinzufügen einer `OnDisplayModeChanged` -Attribut auf die `<asp:webpartmanager>` Element in einer Webseite und zuweisen den Wert einer benutzerdefinierten Methode zur Behandlung des Ereignisses. Bei dieser Methode können Entwickler den aktuellen Wert der Überprüfen der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayMode%2A> -Eigenschaft, und die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectDisplayMode>, können sie führen Sie die gewünschten Änderungen vor, um die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die Basis <xref:System.Web.UI.WebControls.WebParts.ToolZone.OnInit%2A?displayProperty=nameWithType> -Methode, und fügt benutzerdefinierte Behandlung Vorbereitung auf die Webseite zum Anzeigen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedWebPartChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSelectedWebPartChanged (object sender, System.Web.UI.WebControls.WebParts.WebPartEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSelectedWebPartChanged(object sender, class System.Web.UI.WebControls.WebParts.WebPartEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.OnSelectedWebPartChanged(System.Object,System.Web.UI.WebControls.WebParts.WebPartEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Ein <see cref="T:System.Object" /> , das den Absender des Ereignisses identifiziert.</param>
+        <param name="e">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPartChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die <xref:System.Web.UI.WebControls.WebParts.ToolZone> -Implementierung, die die Verbindungs-Benutzeroberfläche (UI) für die Tatsache zurückgesetzt, die die untergeordneten Steuerelemente neu erstellt werden. Dies ist erforderlich, da eine Änderung des ausgewählten Steuerelements, mehrere Optionen in der Verbindung, die Benutzeroberfläche ändert, je nachdem, ob das ausgewählte Steuerelement ein Consumer oder Anbieter, welche die Steuerelemente der Verbindungspunkte aufweist (die Verbindung, die Punkte in aufgeführt sind Dropdownlisten-Steuerelemente), und andere Details.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartChromeType">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.PartChromeType PartChromeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PartChromeType PartChromeType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.PartChromeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Rahmens, der die Serversteuerelemente, die im Rahmen einer <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> , bestimmt den Typ des Rahmens, der in der Verbindungszone enthaltenen Steuerelemente umgibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvidersInstructionText">
+      <MemberSignature Language="C#" Value="public virtual string ProvidersInstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProvidersInstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersInstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anweisungstext im Anbieterabschnitt, der die Verbindungs-Benutzeroberfläche (UI), wenn bereits eine Verbindung vorhanden ist.</summary>
+        <value>Eine Zeichenfolge, die als Anweisungstext für Anbieter, die eine Verbindung beteiligt ist. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersInstructionText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn ein Benutzer klickt auf die Connect-Verb für ein Consumer-Steuerelement und bereits eine Verbindung vorhanden ist, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt eine Ansicht, die Benutzern ermöglicht, die Verbindung zu trennen. Die Ansicht zeigt auch alle Anbieter, der die Verbindung beteiligt. Oberhalb der Liste der Anbieter ist der Anbieter Anweisungstext, die standardmäßig eine Beschreibung der ausgeführten Anbietersteuerelemente in eine Verbindung besteht.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `ProvidersInstructionText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersInstructionText%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersInstructionText%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, suchen Sie im Anbieterabschnitt "für den benutzerdefinierten Text zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersInstructionText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvidersTitle">
+      <MemberSignature Language="C#" Value="public virtual string ProvidersTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProvidersTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Titel, der über die Anbieterabschnitt der Verbindungs-Benutzeroberfläche (UI), angezeigt, wenn bereits eine Verbindung vorhanden ist.</summary>
+        <value>Eine Zeichenfolge, die als den Titeltext für Anbieter, die eine Verbindung beteiligt. Der Standardtitel ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersTitle%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Wenn ein Benutzer klickt auf die Connect-Verb für ein Consumer-Steuerelement und bereits eine Verbindung vorhanden ist, die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt eine Ansicht, die Benutzern ermöglicht, die Verbindung zu trennen. Die Ansicht zeigt auch alle Anbieter, der die Verbindung beteiligt. Direkt über der Liste der Anbieter ist der Anbieter Anweisungstext und oben, die der Titel des Anbieterabschnitts für die die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersTitle%2A> Eigenschaft liefert den Text.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `ProvidersTitle` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersTitle%2A> Eigenschaft mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Das Beispiel enthält nur den Code für die Webseite, die Verwendung der Eigenschaft veranschaulicht. für die anderen zwei Dateien erforderlich, um das Beispiel ausführen, finden im Beispielabschnitt von code die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu wechseln. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Eine Quelldatei mit dem Code für eine Schnittstelle für die Postleitzahl, und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung. Rufen Sie diesen Code aus der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Klassenübersicht.  
+  
+-   Deklariert eine Webseite, die alle Steuerelemente hostet eine `<asp:connectionszone>` -Element, und gezeigt, wie die Eigenschaft programmgesteuert zu verwenden.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Die Webseite deklariert ein `<asp:connectionszone>` Element und die `Page_PreRender` -Methode, der Code ein Wert zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersTitle%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/CS/connectionZoneCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionZone_Overview/VB/connectionZoneVB.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Switch-Modus die Verbindung mit der **Anzeigemodus** Steuerelement. Klicken Sie auf den Pfeil von Verben-Menü auf die **ZIP Code Consumer** steuern, und klicken Sie auf der Connect-Verb. In der Ansicht, die für die vorhandene Verbindung geöffnet wird, suchen Sie im Anbieterabschnitt "für den benutzerdefinierten Text zugewiesen der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.ProvidersTitle%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected override void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" /> die Argumentdaten für das Ereignis enthält.</param>
+        <summary>Löst ein Ereignis für die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> steuern, wenn das Formular an die darin enthaltenen zurück an den Server zurückgesendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.RaisePostBackEvent%2A> Methode verarbeitet die möglichen Folgen, die auftreten können, wenn ein Formular mit einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement an den Server zurückgesendet wird. Wenn zunächst der Wert der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.WebPartToConnect%2A> Eigenschaft ist `null`, es sind keine weiteren Verbindungen Aktion ausführen, damit alle ausstehenden Verbindungen abgebrochen werden, und gibt die Methode zurück. Zweitens: Wenn die Verbindungs-Benutzeroberfläche (UI) tatsächlich sichtbar ist, und der Benutzer beim Erstellen einer Verbindungs wird, von der Methode verarbeitet die möglichen Szenarien: der Benutzer geklickt hat, ein Verbindungsverb, die der Benutzer geklickt hat, ein Trennen-Verb der Transformer-Benutzeroberfläche wird angezeigt, die Zone geschlossen wird, eine Verbindung zu einem Anbieter erstellt wird oder eine Verbindung mit einem Consumer erstellt wird. In jedem Fall die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.RaisePostBackEvent%2A> -Methode übernimmt die `eventArgument` Parameter übergeben wird und Updates der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> entsprechend zu steuern. Wenn keiner der oben genannten Fälle zutrifft, ruft die Methode die Basismethode schließlich in die <xref:System.Web.UI.WebControls.WebParts.ToolZone> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , die den Inhalt des Webparts-Steuerelements empfängt.</param>
+        <summary>Rendert den Inhalt der <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.Render%2A> Methode aktualisiert die Verbindungs-Benutzeroberfläche (UI) mit allen Änderungen, die aufgetreten sind, da die untergeordneten Steuerelemente erstellt wurden oder während der Phase vor, und ruft dann die Basis <xref:System.Web.UI.WebControls.CompositeControl.Render%2A?displayProperty=nameWithType> Methode, um den Inhalt der Zone auf der Webseite zu schreiben .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBody">
+      <MemberSignature Language="C#" Value="protected override void RenderBody (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderBody(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.RenderBody(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , der Textinhalt des Steuerelements empfängt.</param>
+        <summary>Sendet den Inhalt von einem <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Textbereich des Steuerelements, mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt, das den Inhalt der Webseite schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hauptteil eines Webparts-Steuerelements ist der Teil zwischen den Bereichen Kopf- und Fußzeile. Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.RenderBody%2A> Methode überschreibt das Rendering des Text-Bereichs, der vom Basistyp erfolgt <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderBody%2A?displayProperty=nameWithType> Methode.  
+  
+ Diese Methode fügt eindeutige Stilattribute, die zum Anwenden einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement, und es auch rendert der entsprechende Inhalt für die untergeordneten Steuerelemente in der Verbindungs-Benutzeroberfläche (UI), basierend auf der vorherigen Auswahl, die von einem Benutzer in der Benutzeroberfläche vorgenommen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderVerbs">
+      <MemberSignature Language="C#" Value="protected override void RenderVerbs (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderVerbs(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.RenderVerbs(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , die den Inhalt der Verben zum Rendern in einer Verbindungszone empfängt.</param>
+        <summary>Rendert die Verben auf Zonenebene für eine <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode rendert, die mehrere Zonenebene-Verben, die in enthaltenen ein <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement. Im Rahmen dieser Methode die <xref:System.Web.UI.WebControls.WebParts.ToolZone.RenderVerb%2A?displayProperty=nameWithType> Methode auch aufgerufen, um die einzelne Details jeder Verb zu rendern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Webparts-Steuerelemente Zustandsänderungen, bei die seit der letzten Ausführung aufgetreten sind, das die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Gibt die aktuellen Zustand des Webparts-Steuerelements zurück. Wenn kein Zustand dem Steuerelement zugeordnet ist, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement ist in allen ihren Modi mit Ausnahme des Modus, der vorhandenen Verbindungsdetails anzeigt sichtbar Daten des Steuerelementzustands zu Verbindungsdetails zugeordnet, ist die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveControlState%2A> Methode speichert die Daten, sodass sie beibehalten werden kann über die Anzahl der Roundtrips zum Server.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert eine <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> des Steuerelements Ansichtszustandsänderungen, die seit der letzten Seite aufgetreten, die an den Server zurückgesendet.</summary>
+        <returns>Gibt eine <see cref="T:System.Object" /> , aktuellen Ansichtszustand des Steuerelements enthält. Wenn kein Ansichtszustand des Steuerelements zugeordnet ist, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ansichtszustand besteht in der Ansammlung der Werte der Eigenschaften eines Webparts-Steuerelements. Diese Werte werden automatisch in des Steuerelements eingefügt <xref:System.Web.UI.Control.ViewState%2A> -Eigenschaft, die eine Instanz von der <xref:System.Web.UI.StateBag> Klasse. Der Wert dieser Eigenschaft wird dann nach speichern Status, Phase des Lebenszyklus des Steuerelements auf ein Zeichenfolgenobjekt beibehalten.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SaveViewState%2A> Methode fügt die grundlegende Implementierung die Fähigkeit zum Speichern der Ansichtszustand für die verschiedenen Verben in einem <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendText">
+      <MemberSignature Language="C#" Value="public virtual string SendText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SendText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text im Abschnitt des Verbindungs-Benutzeroberfläche (UI), die die benannten Anbieter vorausgeht, die Daten für einen Consumer, sendet gezeigt fest.</summary>
+        <value>Eine Zeichenfolge, die die benannten Anbieter in der Verbindung vorangestellt ist. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Klickt ein Benutzer das Verb Connect auf einem Anbietersteuerelement die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt eine Ansicht, Benutzern das ermöglicht herstellen eine Verbindung mit einem Consumer. Zeigen Sie auf den Teil der Benutzeroberfläche, die Benutzer anweist, eine Verbindung Consumer auswählen, gibt es einige Text, der die benannten Anbieter vorausgeht, die in der Verbindung einbezogen werden. Dieser Text, der den Anbieter vorausgeht, ist der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendText%2A> Eigenschaft. Standardmäßig wird der Textwert **senden**.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `SendText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendToText">
+      <MemberSignature Language="C#" Value="public virtual string SendToText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SendToText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendToText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text im Abschnitt des Verbindungs-Benutzeroberfläche (UI), die die benannten Consumer vorausgeht, ein Anbieter Daten sendet, gezeigt fest.</summary>
+        <value>Eine Zeichenfolge, die die benannten Consumer vorangestellt ist, der der Anbieter Daten sendet. Der Standardtext ist eine von .NET Framework bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendToText%2A> Eigenschaft in einem Szenario mit bestimmten Verbindung wirksam. Klickt ein Benutzer das Verb Connect auf einem Anbietersteuerelement die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> -Steuerelement zeigt eine Ansicht, Benutzern das ermöglicht herstellen eine Verbindung mit einem Consumer. Zeigen Sie auf den Teil der Benutzeroberfläche, die Benutzer anweist, eine Verbindung Consumer auswählen, gibt es etwas Text ein, das das Dropdownlisten-Steuerelement vorangestellt ist, in dem Benutzer auswählen können seine Daten auf der Anbieter sendet welche Verbindungspunkt. Dieser Text, der dem Dropdown-Steuerelement vorangestellt ist, ist der Text in der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.SendToText%2A> Eigenschaft. Standardmäßig wird der Textwert **auf**.  
+  
+ Sie können den Wert dieser Eigenschaft deklarativ innerhalb des öffnenden Tags von Festlegen der `<asp:connectionszone>` Element, durch das Hinzufügen eines Attributs mit dem Namen `SendToText` und ihr einen Wert zuzuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionsZone.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verfolgt nach, Änderungen am Ansichtszustand auf die <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> steuern, damit die Änderungen können, in des Steuerelements gespeichert werden <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die Basismethode der <xref:System.Web.UI.WebControls.WebParts.ToolZone> Klasse sowie Trigger Ansichtszustand für die zugeordneten Verben eine <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartToConnect">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPart WebPartToConnect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart WebPartToConnect" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionsZone.WebPartToConnect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das derzeit ausgewählte <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement für die Verbindung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />-Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Benutzer eine Webseite in der Connect-Anzeigemodus wechselt, und klickt auf die Connect-Verb im Verbmenü des eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das für Verbindungen, die Verbindung Benutzer Benutzeroberfläche (UI) wird geöffnet und das Steuerelement aktiviert ist nun verweist die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.WebPartToConnect%2A> Diese Eigenschaft.  
+  
+> [!NOTE]
+>  Das Steuerelement, verweist der <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone.WebPartToConnect%2A> Eigenschaft ruft den Wert aus der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPart%2A> Eigenschaft des aktuellen <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

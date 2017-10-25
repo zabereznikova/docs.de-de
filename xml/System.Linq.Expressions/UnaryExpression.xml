@@ -1,0 +1,399 @@
+<Type Name="UnaryExpression" FullName="System.Linq.Expressions.UnaryExpression">
+  <TypeSignature Language="C#" Value="public sealed class UnaryExpression : System.Linq.Expressions.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnaryExpression extends System.Linq.Expressions.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.UnaryExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Linq.Expressions.Expression/UnaryExpressionProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Ausdruck mit einem unären Operator dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält die Factorymethoden, die verwendet werden können, erstellen eine <xref:System.Linq.Expressions.UnaryExpression> , besitzt einen bestimmten Knotentyp.  
+  
+|<xref:System.Linq.Expressions.Expression.NodeType%2A>|Factory-Methode|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.ArrayLength>|<xref:System.Linq.Expressions.Expression.ArrayLength%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Convert>|<xref:System.Linq.Expressions.Expression.Convert%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.ConvertChecked>|<xref:System.Linq.Expressions.Expression.ConvertChecked%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Negate>|<xref:System.Linq.Expressions.Expression.Negate%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.NegateChecked>|<xref:System.Linq.Expressions.Expression.NegateChecked%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Not>|<xref:System.Linq.Expressions.Expression.Not%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Quote>|<xref:System.Linq.Expressions.Expression.Quote%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.TypeAs>|<xref:System.Linq.Expressions.Expression.TypeAs%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.UnaryPlus>|<xref:System.Linq.Expressions.Expression.UnaryPlus%2A>|  
+  
+ Darüber hinaus die <xref:System.Linq.Expressions.Expression.MakeUnary%2A> Methoden können auch verwendet werden, zum Erstellen einer <xref:System.Linq.Expressions.UnaryExpression>. Diese Factorymethoden dienen zum Erstellen einer <xref:System.Linq.Expressions.UnaryExpression> eines beliebigen Knotentyps, die eine unäre Operation darstellt. Die Parameter dieser Methoden vom Typ <xref:System.Linq.Expressions.Expression.NodeType%2A> gibt den gewünschten Knotentyp an.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Linq.Expressions.UnaryExpression> Objekt, das die verweiskonvertierung von einer NULL-Ganzzahlausdruck, der NULL-Werte zulässt-Ganzzahltyp darstellt.  
+  
+ [!code-csharp[System.Linq.Expressions.Expression#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/CS/Expression.cs#11)]
+ [!code-vb[System.Linq.Expressions.Expression#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/VB/Expression.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="protected override System.Linq.Expressions.Expression Accept (System.Linq.Expressions.ExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Linq.Expressions.Expression Accept(class System.Linq.Expressions.ExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.UnaryExpression.Accept(System.Linq.Expressions.ExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Linq.Expressions.ExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReduce">
+      <MemberSignature Language="C#" Value="public override bool CanReduce { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReduce" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.UnaryExpression.CanReduce" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob für der Ausdrucksstrukturknoten reduziert werden kann.</summary>
+        <value>"True", wenn ein Knoten reduziert werden kann, andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLifted">
+      <MemberSignature Language="C#" Value="public bool IsLifted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLifted" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.UnaryExpression.IsLifted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob für der Ausdrucksstrukturknoten einen transformierten Aufruf an einen Operator darstellt.</summary>
+        <value>
+          <see langword="true" />Wenn der Knoten einen transformierten Aufruf darstellt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Operator-Aufruf ist *transformiert* Wenn der Operator einen NULL-Operanden erwartet, aber ein NULL-Operanden wird übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiftedToNull">
+      <MemberSignature Language="C#" Value="public bool IsLiftedToNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLiftedToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.UnaryExpression.IsLiftedToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob für der Ausdrucksstrukturknoten einen transformierten Aufruf an einen Operator darstellt, dessen Rückgabetyp zu dem nullable-Typ transformiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Operator den Rückgabetyp des transformiert Typ in einen Typ NULL-Werte zulässt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Operator-Aufruf ist *transformiert* Wenn der Operator einen NULL-Operanden erwartet, aber ein NULL-Operanden wird übergeben. Wenn der Wert der <xref:System.Linq.Expressions.UnaryExpression.IsLiftedToNull%2A> ist `true`, gibt der Operator einen NULL-Werte zu Typ und der NULL-Werte zulassen Operand als `null`, gibt der Operator `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo Method" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.UnaryExpression.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die implementierende Methode für die unäre Operation ab.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodInfo" />, die die implementierende Methode darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override sealed System.Linq.Expressions.ExpressionType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Linq.Expressions.ExpressionType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.UnaryExpression.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.ExpressionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Knotentyp dieses <see cref="T:System.Linq.Expressions.Expression" />.</summary>
+        <value>Die <see cref="T:System.Linq.Expressions.ExpressionType" /> , die diesen Ausdruck darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operand">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Operand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Operand" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.UnaryExpression.Operand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Operanden der unären Operation ab.</summary>
+        <value>Ein <see cref="T:System.Linq.Expressions.Expression" /> , der der Operand des der unären Operation darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reduce">
+      <MemberSignature Language="C#" Value="public override System.Linq.Expressions.Expression Reduce ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.Expressions.Expression Reduce() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.UnaryExpression.Reduce" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reduziert den Ausdrucksknoten zu einem einfacheren Ausdruck.</summary>
+        <returns>Der reduzierte Ausdruck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `CanReduce` Methode "true" zurückgegeben wird, sollte einen gültigen Ausdruck zurückgegeben.  
+  
+ Diese Methode kann einen anderen Knoten zurückgeben, der selbst reduziert werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override sealed Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.UnaryExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den statischen Typ des Ausdrucks ab, den dieser <see cref="T:System.Linq.Expressions.Expression" /> darstellt.</summary>
+        <value>Der <see cref="P:System.Linq.Expressions.UnaryExpression.Type" />, der den statischen Typ des Ausdrucks darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.UnaryExpression Update (System.Linq.Expressions.Expression operand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.UnaryExpression Update(class System.Linq.Expressions.Expression operand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.UnaryExpression.Update(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.UnaryExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operand" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="operand">Die <see cref="P:System.Linq.Expressions.UnaryExpression.Operand" /> -Eigenschaft des Ergebnisses.</param>
+        <summary>Erstellt einen neuen Ausdruck, der diesem ähnelt, verwendet jedoch die angegebenen untergeordneten Elemente. Wenn alle untergeordneten Elemente identisch sind, wird dieser Ausdruck zurückgegeben.</summary>
+        <returns>Dieser Ausdruck, wenn keine untergeordneten Elemente geändert werden, oder ein Ausdruck mit den aktualisierten untergeordneten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

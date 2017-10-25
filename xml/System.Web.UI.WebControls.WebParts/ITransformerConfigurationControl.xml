@@ -1,0 +1,73 @@
+<Type Name="ITransformerConfigurationControl" FullName="System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl">
+  <TypeSignature Language="C#" Value="public interface ITransformerConfigurationControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITransformerConfigurationControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den Vertrag, den ein Steuerelement implementiert, um als Konfigurationssteuerelement für eine Transformer in einer Webparts-Verbindung zu fungieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Konfigurationssteuerelement kann angezeigt werden, wenn ein Transformer Benutzer konfigurieren muss. Das Konfigurationssteuerelement bietet eine Benutzeroberfläche (UI), die den Benutzer auswählen, welche Werte transformiert werden kann. Es wird in einer Verbindungszone gerendert. Die <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer.CreateConfigurationControl%2A?displayProperty=nameWithType> Methode gibt ein Konfigurationssteuerelement zurück.  
+  
+ Sie können außer Kraft setzen die <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer.CreateConfigurationControl%2A> Methode, wenn Ihre Transformer eine angepasste Benutzeroberfläche erforderlich ist. Konfigurationssteuerelement muss implementieren die <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl> -Schnittstelle, die umfasst die <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Cancelled> und <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Succeeded> Ereignisse. Diese Ereignisse auftreten, wenn ein Transformatorsteuerelement wurde nicht konfiguriert oder bzw. erfolgreich konfiguriert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancelled">
+      <MemberSignature Language="C#" Value="public event EventHandler Cancelled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Cancelled" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Cancelled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Transformatorkonfiguration nicht abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Webparts-Steuerelement, implementiert <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl> löst dieses Ereignis, wenn eine Transformatorkonfiguration nicht abgeschlossen wird, weil der Benutzer die Konfiguration abgebrochen oder die Konfiguration konnte nicht ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="public event EventHandler Succeeded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Succeeded" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl.Succeeded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Transformatorkonfiguration erfolgreich abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Webparts-Steuerelement, implementiert <xref:System.Web.UI.WebControls.WebParts.ITransformerConfigurationControl> löst dieses Ereignis, wenn eine Transformatorkonfiguration erfolgreich abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

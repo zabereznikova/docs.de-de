@@ -1,0 +1,180 @@
+<Type Name="DiscoveryEndpoint" FullName="System.ServiceModel.Discovery.DiscoveryEndpoint">
+  <TypeSignature Language="C#" Value="public class DiscoveryEndpoint : System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiscoveryEndpoint extends System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.DiscoveryEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Description.ServiceEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Standardermittlungsendpunkt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.DiscoveryEndpoint" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist die <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryVersion%2A> mit <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> und der <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A> mit <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed> festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryEndpoint (System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress endpointAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress endpointAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpoint.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="endpointAddress" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Bindung.</param>
+        <param name="endpointAddress">Die Endpunktadresse.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.DiscoveryEndpoint" />-Klasse mit angegebener Bindung und Endpunktadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist die <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryVersion%2A> mit <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005%2A> und der <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A> mit <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed> festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, System.ServiceModel.Discovery.ServiceDiscoveryMode discoveryMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, valuetype System.ServiceModel.Discovery.ServiceDiscoveryMode discoveryMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion,System.ServiceModel.Discovery.ServiceDiscoveryMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+        <Parameter Name="discoveryMode" Type="System.ServiceModel.Discovery.ServiceDiscoveryMode" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">Ein Enumerationswert, der eine der Versionen der WS-Discovery-Protokolle darstellt.</param>
+        <param name="discoveryMode">Ein Enumerationswert, der einen der Modi darstellt, der verwendet wird, um Ermittlungsmeldungen zu senden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.DiscoveryEndpoint" />-Klasse mit der angegebenen Ermittlungsversion und dem angegebenen Ermittlungsmodus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, System.ServiceModel.Discovery.ServiceDiscoveryMode discoveryMode, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress endpointAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, valuetype System.ServiceModel.Discovery.ServiceDiscoveryMode discoveryMode, class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress endpointAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion,System.ServiceModel.Discovery.ServiceDiscoveryMode,System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+        <Parameter Name="discoveryMode" Type="System.ServiceModel.Discovery.ServiceDiscoveryMode" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="endpointAddress" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">Ein Enumerationswert, der eine der Versionen der WS-Discovery-Protokolle darstellt.</param>
+        <param name="discoveryMode">Ein Enumerationswert, der einen der Modi darstellt, der verwendet wird, um Ermittlungsmeldungen zu senden.</param>
+        <param name="binding">Die Bindungselemente, die die Protokolle, Transporte und Nachrichtenencoder enthalten, die für die Kommunikation zwischen Clients und Diensten verwendet werden.</param>
+        <param name="endpointAddress">Die eindeutige Adresse des Ermittlungsendpunkts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.DiscoveryEndpoint" />-Klasse mit den angegebenen Informationen zu Ermittlungsversion, Modus, Bindung und Endpunktadresse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscoveryMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.ServiceDiscoveryMode DiscoveryMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Discovery.ServiceDiscoveryMode DiscoveryMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.ServiceDiscoveryMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="P:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode" /> für den Endpunkt ab.</summary>
+        <value>Einer der <see cref="P:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode" />-Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ermittlung kann in zwei verschiedenen Modi durchgeführt werden: im Ad-hoc-Modus oder im verwalteten Modus. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][WCF Ermittlungsmethoden (Übersicht)](~/docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscoveryVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.DiscoveryVersion DiscoveryVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.DiscoveryVersion DiscoveryVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.DiscoveryVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> für den Endpunkt ab.</summary>
+        <value>Einer der <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" />-Enumerationswerte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResponseDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxResponseDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxResponseDelay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.DiscoveryEndpoint.MaxResponseDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale <see cref="T:System.TimeSpan" /> in der alle von der <see langword="ProbeMatches" /> für einen Dienst, die auf einen Prüfpunkt reagieren Vorgang gesendet werden.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Instanz, die die maximale Zeitspanne, in dem alle der enthält die <see langword="ProbeMatches" /> für einen Dienst, die auf einen Prüfpunkt reagieren Vorgang gesendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist eine <xref:System.TimeSpan> , die gibt den Zeitraum an, in dem sich alle `ProbeMatches` für einen Dienst, die auf einen einzelnen Test reagieren Vorgang gesendet werden. Wenn alle `ProbeMatches` werden gesendet, zur gleichen Zeit einer netzwerküberlastung kommen kann. Um dies zu vermeiden, verhindern `ProbeMatches` mit einer zufälligen Verzögerung zwischen den Probematches gesendet werden. Die zufällige Verzögerung liegt im Bereich 0 bis <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.MaxResponseDelay%2A>. Wenn <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.MaxResponseDelay%2A> ist auf 0 festgelegt, und klicken Sie dann die `ProbeMatches` Nachrichten in einer engen Schleife ohne Verzögerung gesendet werden. Andernfalls die `ProbeMatches` Nachrichten mit einigen zufällige Verzögerung für solche, die die Gesamtzeit zum Senden aller `ProbeMatches` Nachrichten nicht überschreitet die <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.MaxResponseDelay%2A>. Dieser Wert ist nur für Dienste relevant, er wird nicht von Clients verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

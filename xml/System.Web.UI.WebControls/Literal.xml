@@ -1,0 +1,346 @@
+<Type Name="Literal" FullName="System.Web.UI.WebControls.Literal">
+  <TypeSignature Language="C#" Value="public class Literal : System.Web.UI.Control, System.Web.UI.ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Literal extends System.Web.UI.Control implements class System.Web.UI.ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Literal" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITextControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LiteralDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.LiteralControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Reserviert auf der Webseite eine Position zum Anzeigen von statischem Text.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Verwenden der <xref:System.Web.UI.WebControls.Literal?displayProperty=nameWithType> Steuerelement um einen Speicherort auf der Webseite zum Anzeigen von Text zu reservieren. Die <xref:System.Web.UI.WebControls.Literal> Steuerelement ähnelt der <xref:System.Web.UI.WebControls.Label> -Steuerelement, mit Ausnahme der <xref:System.Web.UI.WebControls.Literal> Steuerelement können Sie ein Format auf den angezeigten Text angewendet. Sie können den Text im Steuerelement angezeigt wird, indem Sie programmgesteuert die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft.  
+  
+> [!CAUTION]
+>  Dieses Steuerelement kann verwendet werden, Benutzereingaben angezeigt werden, die möglicherweise böswillige Clientskripts umfassen. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten.  
+  
+ Weitere Informationen zur Sicherheit finden Sie unter [Standardsteuerelemente schützen](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [wie: schützen gegen Script Exploits in einer Web-Anwendung durch Anwenden von HTML-Codierung in Zeichenfolgen](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), und [ Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Literal  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    Mode="Transform|PassThrough|Encode"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Text="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Literal> -Steuerelement zum Anzeigen von statischen Texts.  
+  
+> [!NOTE]
+>  Im folgenden Beispiel wird das Codemodell Einzeldatei verwendet und möglicherweise nicht ordnungsgemäß, wenn Sie direkt in einem Code-Behind-Datei kopiert. Dieses Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Literal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Literal/CS/literalcs.aspx#1)]
+ [!code-aspx-vb[Literal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Literal/VB/literalvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Literal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Literal.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Literal" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Literal.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Object" />, das das analysierte Element darstellt.</param>
+        <summary>Benachrichtigt das <see cref="T:System.Web.UI.WebControls.Literal" />-Steuerelement, dass ein XML- oder HTML-Element analysiert wurde, und fügt das Element der <see cref="T:System.Web.UI.ControlCollection" /> des Steuerelements hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Literal.AddParsedSubObject%2A> Methode in einem benutzerdefinierten steuern, sodass immer festgelegt wird, die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft auf des analysierten Objekts `Text` Eigenschaft, wenn das analysierte Objekt ist eine <xref:System.Web.UI.WebControls.Literal>, und eine leere `string` andernfalls.  
+  
+ [!code-aspx-csharp[CustomLiteralAddParsedSubObject#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLiteralAddParsedSubObject/CS/custom_literal_addparsedsubobjectcs.aspx#1)]
+ [!code-aspx-vb[CustomLiteralAddParsedSubObject#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLiteralAddParsedSubObject/VB/custom_literal_addparsedsubobjectvb.aspx#1)]  
+  
+ [!code-csharp[CustomLiteralAddParsedSubObject#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLiteralAddParsedSubObject/CS/custom_literal_addparsedsubobject.cs#2)]
+ [!code-vb[CustomLiteralAddParsedSubObject#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLiteralAddParsedSubObject/VB/custom_literal_addparsedsubobject.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="obj" /> ist nicht vom Typ <see cref="T:System.Web.UI.LiteralControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Literal.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Web.UI.EmptyControlCollection" />-Objekt für die aktuelle Instanz des <see cref="T:System.Web.UI.WebControls.Literal" />-Steuerelements.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ControlCollection" />-Objekt, das die untergeordneten Serversteuerelemente des aktuellen Steuerelements enthalten soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Literal.CreateControlCollection%2A> in einem benutzerdefinierten gesteuert wird, sodass immer eine Instanz von zurückgegeben der <xref:System.Web.UI.EmptyControlCollection> -Klasse für die <xref:System.Web.UI.WebControls.Literal> Objekt.  
+  
+ [!code-aspx-csharp[CustomLiteralCreateControlCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLiteralCreateControlCollection/CS/custom_literal_createcontrolcollectioncs.aspx#1)]
+ [!code-aspx-vb[CustomLiteralCreateControlCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLiteralCreateControlCollection/VB/custom_literal_createcontrolcollectionvb.aspx#1)]  
+  
+ [!code-csharp[CustomLiteralCreateControlCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLiteralCreateControlCollection/CS/custom_literal_createcontrolcollection.cs#2)]
+ [!code-vb[CustomLiteralCreateControlCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLiteralCreateControlCollection/VB/custom_literal_createcontrolcollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public override void Focus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Focus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Literal.Focus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eingabefokus auf ein Steuerelement festgelegt; die <see cref="M:System.Web.UI.WebControls.Literal.Focus" /> -Methode Basissteuerelement wird nicht unterstützt, auf eine <see cref="T:System.Web.UI.WebControls.Literal" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Literal> -Steuerelement überschreibt die <xref:System.Web.UI.Control.Focus%2A> Methode der Basisklasse. Die <xref:System.Web.UI.WebControls.Literal.Focus%2A> Methode von einer <xref:System.Web.UI.WebControls.Literal> Steuerelement löst immer eine Ausnahme aus, um anzugeben, dass die <xref:System.Web.UI.WebControls.Literal.Focus%2A> Methode wird nicht unterstützt, auf eine <xref:System.Web.UI.WebControls.Literal> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="M:System.Web.UI.WebControls.Literal.Focus" /> aufgerufen wurde, auf eine <see cref="T:System.Web.UI.WebControls.Literal" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.LiteralMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.LiteralMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Literal.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LiteralMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Enumerationswert fest, der angibt, wie der Inhalt in die <see cref="T:System.Web.UI.WebControls.Literal" /> Steuerelement gerendert wird.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.LiteralMode" />-Enumerationswerte. Die Standardeinstellung ist <see langword="Transform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Literal.Mode%2A> Eigenschaft, um anzugeben wie den Inhalt von einem <xref:System.Web.UI.WebControls.Literal> Steuerelement gerendert werden soll. Diese Eigenschaft wird festgelegt, mit einer von der <xref:System.Web.UI.WebControls.LiteralMode> Enumerationswerte. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`PassThrough`|Der Inhalt des Steuerelements werden nicht geändert.|  
+|`Encode`|Der Inhalt des Steuerelements werden in eine HTML-codierte Zeichenfolge konvertiert.|  
+|`Transform`|Nicht unterstützte Markupsprache Elemente werden aus dem Inhalt des Steuerelements entfernt. Wenn die <xref:System.Web.UI.WebControls.Literal> Steuerelement gerendert wird, auf einen Webbrowser, HTML oder XHTML unterstützt, den Inhalt des Steuerelements nicht geändert werden.|  
+  
+ Bei Angabe von `PassThrough`, den gesamten Inhalt der <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft an das Gerät bzw. Ihren Browser übergeben werden, ohne Änderungen vorzunehmen. Z. B. wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.Literal> Steuerelement enthält eine `<hr>` Tag, es wird gesendet an alle Geräte und Browser, ob es oder nicht unterstützt wird.  
+  
+ Bei Angabe von `Encode`, den Inhalt für die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft in eine HTML-codierte Zeichenfolge vor dem Rendern konvertiert werden. Z. B. wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.Literal> Steuerelement enthält eine `<hr>` Tag, wird es in konvertiert `&lt;Hr&gt;` und an das Gerät oder den Browser gesendet.  
+  
+ Bei Angabe von `Transform`, das Renderingverhalten der der <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft hängt vom Typ des gerenderten Markups. Wenn die <xref:System.Web.UI.WebControls.Literal> Steuerelement gerendert wird, für ein Gerät oder einen Browser mit Unterstützung von HTML oder XHTML angeben <xref:System.Web.UI.WebControls.LiteralMode.Transform> führt zum gleichen Verhalten wie mit der Angabe <xref:System.Web.UI.WebControls.LiteralMode.PassThrough>. Alle Markuptags und Elemente für die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft für den anfordernden Browser gerendert werden.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.Literal> -Steuerelement für ein Markupsprache als HTML oder XHTML, z. B. WML oder cHTML gerendert wird, können Sie mithilfe der <xref:System.Web.UI.WebControls.LiteralMode.Transform> Wert, der nicht unterstützte Markupelemente entfernen. In diesem Fall werden alle Elemente der Markupsprache der <xref:System.Web.UI.WebControls.Literal.Text%2A> -Eigenschaft, die in die entsprechenden Markupsprache nicht unterstützt werden, werden nicht für das Steuerelement gerendert. Z. B. wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.Literal> Steuerelement enthält eine `<hr>` Tag, das Tag wird entfernt, bevor der Inhalt auf einem WML-Gerät gesendet wird. Wenn ein nicht unterstütztes Tag-Inhalt enthält, wird nur die Tags entfernt, und der Inhalt wird an das Gerät oder den Browser gesendet. Beispielsweise, wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft enthält den Inhalt `<XYZ>Test</XYZ>`, die `<XYZ>` und `</XYZ>` Tags werden entfernt, und der Text "Test" ist für das Gerät oder den Browser gesendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen einer <xref:System.Web.UI.WebControls.Literal> des Steuerelements <xref:System.Web.UI.WebControls.Literal.Mode%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.Literal.Mode%2A> -Eigenschaftensatz ist anfänglich auf `Encode` in die deklarative Syntax für das Steuerelement. Der Benutzer kann nach dem Laden der Seite klicken einer Schaltfläche zum Festlegen der <xref:System.Web.UI.WebControls.Literal.Mode%2A> Eigenschaft `PassThrough`. Dies bewirkt, dass der Inhalt der <xref:System.Web.UI.WebControls.Literal.Text%2A> -Eigenschaft anders gerendert.  
+  
+> [!NOTE]
+>  Im folgenden Beispiel wird das Codemodell Einzeldatei verwendet und möglicherweise nicht ordnungsgemäß, wenn Sie direkt in einem Code-Behind-Datei kopiert. Dieses Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-vb[Literal.Mode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Literal.Mode/VB/literal.modevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Typ ist nicht die <see cref="T:System.Web.UI.WebControls.LiteralMode" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Literal.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Inhalt des Serversteuerelements empfängt.</param>
+        <summary>Sendet den Inhalt des Steuerelements an ein angegebenes <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den auf dem Client zu rendernden Inhalt schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Literal.Render%2A> Methode in einem benutzerdefinierten Steuerelement von ReportViewer zur bestimmtem Text immer angezeigt wird, bevor die <xref:System.Web.UI.WebControls.Literal>.  
+  
+ [!code-aspx-csharp[CustomLiteralRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLiteralRender/CS/custom_literal_rendercs.aspx#1)]
+ [!code-aspx-vb[CustomLiteralRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLiteralRender/VB/custom_literal_rendervb.aspx#1)]  
+[!code-csharp[CustomLiteralRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLiteralRender/CS/custom_literal_render.cs#2)]
+[!code-vb[CustomLiteralRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLiteralRender/VB/custom_literal_render.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Literal.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die im Literalsteuerelement angezeigte Beschriftung der <see cref="T:System.Web.UI.WebControls.Literal" /> Steuerelement.</summary>
+        <value>Die im Literalsteuerelement angezeigte Beschriftung der <see cref="T:System.Web.UI.WebControls.Literal" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft angeben, oder ermitteln, die im Literalsteuerelement angezeigte Beschriftung der <xref:System.Web.UI.WebControls.Literal> Steuerelement. Dadurch können Sie die Beschriftung programmgesteuert zur Laufzeit ändern.  
+  
+ Die Beschriftung wird HTML decodiert werden, je nachdem, wie Sie diese Eigenschaft einen Wert zuweisen. Wenn Sie einen Wert über ein Attribut des Zuweisen der <xref:System.Web.UI.WebControls.Literal> -Steuerelement, das der Wert ist HTML-decodiert werden, bevor er angezeigt wird. Beispielsweise `<asp:Literal id="DisplayLiteral" Text="A&nbsp;B"/>` wird als "A B" im Browser gerendert. Wenn Sie diese Eigenschaft programmgesteuert aus, oder platzieren den Text zwischen den Start- und Endtag des Steuerelements festlegen, ist die Beschriftung jedoch nicht HTML-decodiert. Beispielsweise `<asp:Literal id="DisplayLiteral"> A&nbsp;B </asp:Literal>` gerendert wird, als "ein&nbsp;B".  
+  
+> [!CAUTION]
+>  Dieses Steuerelement kann verwendet werden, Benutzereingaben angezeigt werden, die möglicherweise böswillige Clientskripts umfassen. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Validation Server Control Syntax](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft so ändern Sie die im Literalsteuerelement angezeigte Beschriftung programmgesteuert die <xref:System.Web.UI.WebControls.Literal> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Beispiel wird das Codemodell Einzeldatei verwendet und möglicherweise nicht ordnungsgemäß, wenn Sie direkt in einem Code-Behind-Datei kopiert. Dieses Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Literal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Literal/CS/literalcs.aspx#1)]
+ [!code-aspx-vb[Literal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Literal/VB/literalvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

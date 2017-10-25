@@ -1,0 +1,53 @@
+<Type Name="PartialCachingControl" FullName="System.Web.UI.PartialCachingControl">
+  <TypeSignature Language="C#" Value="public class PartialCachingControl : System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PartialCachingControl extends System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PartialCachingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BasePartialCachingControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt, wenn ein Benutzersteuerelement (ASCX-Datei) zum Zwischenspeichern der Ausgabe angegeben wird, mithilfe der Seitendirektive oder <see cref="T:System.Web.UI.PartialCachingAttribute" /> Attribut und das Benutzersteuerelement wird durch dynamisches Laden das Benutzersteuerelement mit der SteuerelementhierarchieeinerSeiteeingefügt<see cref="M:System.Web.UI.TemplateControl.LoadControl(System.String)" />Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seiten- und Entwickler können keine der <xref:System.Web.UI.PartialCachingControl> -Klasse direkt verwendet. Erstellt eine Instanz von ASP.NET die <xref:System.Web.UI.PartialCachingControl> Klasse, um ein Benutzersteuerelement (ASCX-Datei) zu umschließen. wenn eine dynamisch geladene Benutzersteuerelement aktiviert Zwischenspeichern der Ausgabe. Aktivieren Sie Zwischenspeichern der Ausgabe für ein Benutzersteuerelement, verwenden entweder die [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) Seitendirektive oder der <xref:System.Web.UI.PartialCachingAttribute> Attribut.  
+  
+ Sie fügen ein Benutzersteuerelement zu einer Seite programmgesteuert durch Aufrufen der <xref:System.Web.UI.TemplateControl.LoadControl%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CachedControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control CachedControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control CachedControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingControl.CachedControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das Benutzersteuerelement, das zwischengespeichert wird.</summary>
+        <value>Das Benutzersteuerelement, das zwischengespeichert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt das Benutzersteuerelement nur, wenn dessen Ausgabe nicht zwischengespeichert wird. Wenn die Ausgabe des Benutzersteuerelements im Ausgabecache vorhanden ist, gibt diese Eigenschaft `null`, da Sie nie eine Instanz des Steuerelements erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

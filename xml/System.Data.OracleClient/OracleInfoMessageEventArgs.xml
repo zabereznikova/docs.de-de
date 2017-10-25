@@ -1,0 +1,99 @@
+<Type Name="OracleInfoMessageEventArgs" FullName="System.Data.OracleClient.OracleInfoMessageEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class OracleInfoMessageEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OracleInfoMessageEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleInfoMessageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Data.OracleClient.OracleConnection.InfoMessage" />-Ereignis bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleConnection.InfoMessage> Ereignis enthält Warnungen aus der Datenquelle gesendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public int Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Code" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleInfoMessageEventArgs.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den, der die Nachricht als Codeteil einer <see langword="int" />.</summary>
+        <value>Der, der die Nachricht als Codeteil einer <see langword="int" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleInfoMessageEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Text der Nachricht aus der Datenbank ab.</summary>
+        <value>Der Text zur Beschreibung der Nachricht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleInfoMessageEventArgs.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Objekts, das den Fehler generiert hat.</summary>
+        <value>Der Name des Objekts, das den Fehler generiert hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleInfoMessageEventArgs.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung der <see cref="E:System.Data.OracleClient.OracleConnection.InfoMessage" /> Ereignis.</summary>
+        <returns>Eine Zeichenfolge, die <see cref="E:System.Data.OracleClient.OracleConnection.InfoMessage" /> Ereignis.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

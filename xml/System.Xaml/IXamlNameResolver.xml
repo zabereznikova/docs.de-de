@@ -1,0 +1,210 @@
+<Type Name="IXamlNameResolver" FullName="System.Xaml.IXamlNameResolver">
+  <TypeSignature Language="C#" Value="public interface IXamlNameResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXamlNameResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IXamlNameResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt einen Dienst, der kann Objekte, die durch die Verwendung von XAML-Name angegeben werden, oder alternativ ein Token, das verzögert namensauflösung zurückgibt. Der Dienst kann auch einen aufzählbaren Satz aller benannten Objekte zurückgeben, die in der XAML-Namensbereich.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für externe Implementierung der typischen Verwendung von XAML-Szenarien vorgesehen, da es sich um einen Dienst handelt. Dieser Dienst ermöglicht es, Markuperweiterungen und Typkonverter XAML-Namen auf andere Objekte aus der gleichen Quelle für die Verwendung von XAML-aufgelöst, während sie sich noch in eine Darstellung der Verwendung von XAML-Knoten befinden. Der Dienst kann verwendet werden, zum Auflösen von Vorwärtsverweisen für einen beliebigen Mechanismus, der XAML-Namen für den nicht linearen Zugriff auf die umgebenden XAML-Produktion verwendet wird. Weitere Informationen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+  
+ Typkonverter und Markuperweiterungen können Abfragen für <xref:System.Xaml.IXamlNameResolver> als Dienst auf dem Dienstkontext, der durch einen XAML-Objektwriter bereitgestellt wird, wenn der XAML-Objektwriter den Wertkonvertierungsverhalten aufruft. Weitere Informationen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) und [verfügbare Dienstkontexte Typkonverter und Markuperweiterungen](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ Dieser Dienst stellt eine API, die namensauflösung verzögern kann. Das Prinzip, die vom Dienst implementiert ist, dass die Namen, die in einem ersten Durchlauf für eine partielle Name Objektdiagramm aufgelöst werden können gespeichert und für die Erstellung der Fixup-Token verwendet werden. Alle solchen Namen werden in das Standardverhalten für eine andere Lösung Versuch auf einem zweiten Durchlauf gesendet. Klicken Sie auf die zweite Übergabe der allgemeine Name-Objektdiagramm abgeschlossen ist, und alle Fixup-Token sind auflösen.  
+  
+> [!NOTE]
+>  Auch wenn sie eine bestimmte Implementierung zulässig sind, können Vorwärtsverweisen in XAML zwangsläufig die Leistung beeinträchtigen. Vermeiden Sie als bewährte Methode für professionell XAML Vorwärtsverweisen nach Möglichkeit ein.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAllNamesAndValuesInScope">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt; GetAllNamesAndValuesInScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt; GetAllNamesAndValuesInScope() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IXamlNameResolver.GetAllNamesAndValuesInScope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen aufzählbaren Satz aller benannte Objekte in der XAML-Namensbereich zurück.</summary>
+        <returns>Ein zählbarer Satz von <see cref="T:System.Collections.Generic.KeyValuePair`2" /> Objekte. Für jede <see cref="T:System.Collections.Generic.KeyValuePair`2" />, <see cref="P:System.Collections.Generic.KeyValuePair`2.Key" /> Komponente ist eine Zeichenfolge, und die <see cref="P:System.Collections.Generic.KeyValuePair`2.Value" /> Komponente ist das Objekt, mit der <see cref="P:System.Collections.Generic.KeyValuePair`2.Key" /> Namen in der XAML-Namensbereich.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFixupToken">
+      <MemberSignature Language="C#" Value="public object GetFixupToken (System.Collections.Generic.IEnumerable&lt;string&gt; names);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetFixupToken(class System.Collections.Generic.IEnumerable`1&lt;string&gt; names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IXamlNameResolver.GetFixupToken(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="names">Eine Auflistung von Namen, die mögliche Vorwärtsverweise sind.</param>
+        <summary>Gibt ein Objekt, das für bestimmte Markupmuster behoben werden kann, die Vorwärtsverweisen zu erzeugen.</summary>
+        <returns>Ein Objekt, ein Token für das Suchverhalten zu einem späteren Zeitpunkt ausgewertet werden bereitstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorhandene interne Dienstanbieter, die stehen im Schemakontexten für Markuperweiterungen und Typkonverter können diesen Dienst implementieren. Geben sie jedoch einen internen Typ, den nur die vorhandenen XAML-Writern, die unter der Verwendung von XAML-Standardschemakontext funktioniert verarbeiten kann zurück.  
+  
+ Wenn alle vorwärts referenzierten Namen aufgelöst werden, wird der Benutzercode aufgerufen, um Analysepunkt jeder Name in der Liste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFixupToken">
+      <MemberSignature Language="C#" Value="public object GetFixupToken (System.Collections.Generic.IEnumerable&lt;string&gt; names, bool canAssignDirectly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetFixupToken(class System.Collections.Generic.IEnumerable`1&lt;string&gt; names, bool canAssignDirectly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IXamlNameResolver.GetFixupToken(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="canAssignDirectly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="names">Eine Auflistung von Namen, die mögliche Vorwärtsverweise sind.</param>
+        <param name="canAssignDirectly">
+          <see langword="true" />der aufgelöste Namensverweis auf die Zieleigenschaft sofort zugewiesen. <see langword="false" />den Benutzercode für eine erneute Analyse aufrufen. Das Standardverhalten besteht <see langword="false" />.</param>
+        <summary>Gibt ein Objekt, das für bestimmte Markupmuster behoben werden kann, die Vorwärtsverweisen zu erzeugen.</summary>
+        <returns>Ein Objekt, ein Token für das Suchverhalten zu einem späteren Zeitpunkt ausgewertet werden bereitstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestehende interne Service-Anbieter, die stehen im Schemakontexten für Markuperweiterungen und Typkonverter implementieren diesen Dienst. Geben sie jedoch einen internen Typ, der nur von den vorhandenen XAML-Writern verarbeitet werden kann, die unter der Verwendung von XAML-Standardschemakontext funktioniert zurück.  
+  
+ Wenn `canAssignDirectly` ist `false`, wenn alle vorwärts referenzierten Namen aufgelöst werden kann, sind der Benutzercode aufgerufen, um Analysepunkt jeder Name in der Liste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixupTokenAvailable">
+      <MemberSignature Language="C#" Value="public bool IsFixupTokenAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixupTokenAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IXamlNameResolver.IsFixupTokenAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob Aufrufen <see cref="M:System.Xaml.IXamlNameResolver.GetFixupToken(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" /> verfügbar sind, um einen Namen in ein Token für forward Auflösung aufgelöst wird.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="M:System.Xaml.IXamlNameResolver.GetFixupToken(System.Collections.Generic.IEnumerable{System.String},System.Boolean)" /> als eine Implementierung, die ein nützlich-Token für forward Auflösung gibt verfügbar ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt `false` Wenn <xref:System.Xaml.IXamlNameResolver.GetFixupToken%2A> gibt kein Token zurück, da eine <xref:System.Xaml.Schema.XamlValueConverter%601> ist die zweite Übergabe für einen vorhandenen Token beteiligt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNameScopeInitializationComplete">
+      <MemberSignature Language="C#" Value="public event EventHandler OnNameScopeInitializationComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler OnNameScopeInitializationComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Xaml.IXamlNameResolver.OnNameScopeInitializationComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein XAML-Prozessor die entsprechenden Namen auf das dahinter liegende XAML-Namensbereich registriert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public object Resolve (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Resolve(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IXamlNameResolver.Resolve(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Namensverweis aufgelöst werden soll.</param>
+        <summary>Löst ein Objekt aus einem Namensverweis auf.</summary>
+        <returns>Das aufgelöste Objekt; oder null.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Wert, als zurückgegeben wird `null`, ist möglicherweise ein Vorwärtsverweis vorhanden. Implementierungen, die Vorwärtsverweisen unterstützen möchten können die `FixupToken` über das Muster der <xref:System.Xaml.IXamlNameResolver.GetFixupToken%2A> und <xref:System.Xaml.IXamlNameResolver.IsFixupTokenAvailable%2A> APIs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public object Resolve (string name, out bool isFullyInitialized);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Resolve(string name, [out] bool&amp; isFullyInitialized) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IXamlNameResolver.Resolve(System.String,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="isFullyInitialized" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Namensverweis aufgelöst werden soll.</param>
+        <param name="isFullyInitialized">Bei der Rückgabe dieser Methode <see langword="true" /> verfügt das zurückgegebene Objekt keine Abhängigkeiten auf nicht aufgelöste Verweise; anderenfalls <see langword="false" />.</param>
+        <summary>Löst ein Objekt aus einem Namensverweis, und bietet einen Überwachungsprofil-Wert, der meldet, ob das Objekt für Objekt Graph Zwecke vollständig initialisiert wurde.</summary>
+        <returns>Ein Objekt, ein Token für das Suchverhalten zu einem späteren Zeitpunkt ausgewertet werden bereitstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

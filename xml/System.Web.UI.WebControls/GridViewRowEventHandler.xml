@@ -1,0 +1,49 @@
+<Type Name="GridViewRowEventHandler" FullName="System.Web.UI.WebControls.GridViewRowEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void GridViewRowEventHandler(object sender, GridViewRowEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GridViewRowEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewRowEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.GridViewRowEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.GridViewRowEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, die behandelt die <see cref="E:System.Web.UI.WebControls.GridView.RowCreated" /> und <see cref="E:System.Web.UI.WebControls.GridView.RowDataBound" /> Ereignisse von einem <see cref="T:System.Web.UI.WebControls.GridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bevor Sie die <xref:System.Web.UI.WebControls.GridView> Steuerelement gerendert werden kann, eine <xref:System.Web.UI.WebControls.GridViewRow> Objekt muss für jede Zeile in das Steuerelement erstellt werden. Die <xref:System.Web.UI.WebControls.GridView.RowCreated> Ereignis wird jedes Mal eine Zeile in der <xref:System.Web.UI.WebControls.GridView> Steuerelement erstellt wird. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. das Hinzufügen von benutzerdefinierten Inhalten zu einer Zeile bei jedem dieses Ereignisses auftreten.  
+  
+ Entsprechend muss jede Zeile in das Steuerelement gebunden werden, zu einem Datensatz in der Datenquelle vor der <xref:System.Web.UI.WebControls.GridView> Steuerelement gerendert werden kann. Die <xref:System.Web.UI.WebControls.GridView.RowDataBound> Ereignis wird ausgelöst, wenn eine Datenzeile (dargestellt durch eine <xref:System.Web.UI.WebControls.GridViewRow> Objekt) an Daten gebunden ist die <xref:System.Web.UI.WebControls.GridView> Steuerelement. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, beispielsweise das Ändern der Werte der Daten auf die Zeile gebunden werden, wenn dieses Ereignis tritt auf.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.GridViewRowEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie programmgesteuert hinzufügen einer <xref:System.Web.UI.WebControls.GridViewRowEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.GridView.RowDataBound> -Ereignis für eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[GridViewRowEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowEventHandler/CS/gridviewroweventhandlercs.aspx#1)]
+ [!code-aspx-vb[GridViewRowEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowEventHandler/VB/gridviewroweventhandlervb.aspx#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie deklarativ hinzufügen eine <xref:System.Web.UI.WebControls.GridViewRowEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.GridView.RowDataBound> -Ereignis für ein <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[GridViewRowDataBound#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowDataBound/CS/gridviewrowdataboundcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowDataBound#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowDataBound/VB/gridviewrowdataboundvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

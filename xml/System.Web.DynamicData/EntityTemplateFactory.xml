@@ -1,0 +1,127 @@
+<Type Name="EntityTemplateFactory" FullName="System.Web.DynamicData.EntityTemplateFactory">
+  <TypeSignature Language="C#" Value="public class EntityTemplateFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityTemplateFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.EntityTemplateFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Entitätsvorlage.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.EntityTemplateFactory> Klasse dient zur Laufzeit durch dynamische Daten zum Abrufen einer Instanz einer Entität-Vorlage für eine Tabelle. Entitätsvorlagen sind Benutzersteuerelemente, die für eine gesamte Tabellenzeile anstatt ein einzelnes Datenfeld gelten, wie dies bei Feldvorlagen. Die Entitätsvorlagen auf einer Seite angezeigt werden, indem die <xref:System.Web.DynamicData.DynamicEntity> Klasse. Feldvorlagen verwendet, um Werte aus dem Datenmodell anzuzeigen.  
+  
+ Dynamic Data stellt Entitätsvorlagen, die im Ordner "~\DynamicData\EntityTemplates" gefunden werden. Sie können diese Entität Standardvorlagen ändern oder benutzerdefinierte erstellen, um das Aussehen und Verhalten für eine Tabelle zu ändern. Es sind Vorlagen für das anzeigen, bearbeiten und Insert-Vorgänge.  
+  
+   
+  
+## Examples  
+ Ein Beispiel zum Verwenden von Entitätsvorlagen finden Sie unter [Exemplarische Vorgehensweise: Anpassen von Tabelle Layout Entitätsvorlagen](http://msdn.microsoft.com/library/03d33a22-d3c0-41df-a717-82ce86329a08).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityTemplateFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.EntityTemplateFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEntityTemplateVirtualPath">
+      <MemberSignature Language="C#" Value="public virtual string BuildEntityTemplateVirtualPath (string templateName, System.Web.UI.WebControls.DataBoundControlMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string BuildEntityTemplateVirtualPath(string templateName, valuetype System.Web.UI.WebControls.DataBoundControlMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.BuildEntityTemplateVirtualPath(System.String,System.Web.UI.WebControls.DataBoundControlMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DataBoundControlMode" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Der Name der Entitätsvorlage für die Sie den Pfad zu erstellen.</param>
+        <param name="mode">Der Anzeigemodus der Entitätsvorlage.</param>
+        <summary>Erstellt den Pfad der Entitätsvorlage für die angegebene Tabelle.</summary>
+        <returns>Der Pfad der Entitätsvorlage für die angegebene Tabelle.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="templateName" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEntityTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.EntityTemplateUserControl CreateEntityTemplate (System.Web.DynamicData.MetaTable table, System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.DynamicData.EntityTemplateUserControl CreateEntityTemplate(class System.Web.DynamicData.MetaTable table, valuetype System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.CreateEntityTemplate(System.Web.DynamicData.MetaTable,System.Web.UI.WebControls.DataBoundControlMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.EntityTemplateUserControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DataBoundControlMode" />
+        <Parameter Name="uiHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Metadaten für die Tabelle, auf die die Entitätsvorlage angewendet, werden soll.</param>
+        <param name="mode">Der Anzeigemodus der Entitätsvorlage.</param>
+        <param name="uiHint">Der Name der Vorlage verwendet werden soll.</param>
+        <summary>Erstellt eine Instanz der Entitätsvorlage für die angegebene Tabelle.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Web.DynamicData.EntityTemplateUserControl" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die Tabelle ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityTemplateVirtualPath">
+      <MemberSignature Language="C#" Value="public virtual string GetEntityTemplateVirtualPath (System.Web.DynamicData.MetaTable table, System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetEntityTemplateVirtualPath(class System.Web.DynamicData.MetaTable table, valuetype System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.GetEntityTemplateVirtualPath(System.Web.DynamicData.MetaTable,System.Web.UI.WebControls.DataBoundControlMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DataBoundControlMode" />
+        <Parameter Name="uiHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Metadaten für die Tabelle, auf die die Entitätsvorlage angewendet, werden soll.</param>
+        <param name="mode">Der Anzeigemodus der Entitätsvorlage.</param>
+        <param name="uiHint">Der Name der Vorlage verwendet werden soll.</param>
+        <summary>Ruft den virtuellen Pfad der Entitätsvorlage für die für die angegebene Tabelle ab.</summary>
+        <returns>Der virtuelle Pfad der Entitätsvorlage für die angegebene Tabelle.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die Tabelle ist **null**.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Services.Configuration" /> Namespace enthält Klassen, die Ausführung der Verwendung von ASP.NET erstellten XML-Webdienste konfigurieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

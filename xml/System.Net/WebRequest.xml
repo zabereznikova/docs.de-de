@@ -1,0 +1,1895 @@
+<Type Name="WebRequest" FullName="System.Net.WebRequest">
+  <TypeSignature Language="C#" Value="public abstract class WebRequest : MarshalByRefObject, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit WebRequest extends System.MarshalByRefObject implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Sendet eine Anforderung an einen Uniform Resource Identifier (URI). Dies ist eine <see langword="abstract" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebRequest>ist die `abstract` Basisklasse für. NET Anforderung/Antwort-Modell für den Zugriff auf Daten aus dem Internet. Eine Anwendung, die die Anforderung/Antwort-Modell verwendet kann Daten aus dem Internet anfordern, auf eine protokollunabhängige Weise, in dem die Anwendung, klicken Sie mit Instanzen von funktioniert der <xref:System.Net.WebRequest> -Klasse, während die Details des untergeordnete Klassen protokollspezifische durchzuführen die Anforderung.  
+  
+ Anforderungen werden von einer Anwendung für einen bestimmten URI ein, z. B. eine Webseite auf einem Server gesendet. Der URI bestimmt die richtige Nachfolgerklasse aus einer Liste erstellen <xref:System.Net.WebRequest> Nachfolger für die Anwendung registriert. <xref:System.Net.WebRequest>Nachfolger sind in der Regel zum Behandeln eines bestimmten Protokolls, z. B. HTTP oder FTP, registriert, jedoch können registriert werden, um eine Anforderung für einen bestimmten Server oder einen Pfad auf einem Server zu behandeln.  
+  
+ Die <xref:System.Net.WebRequest> -Klasse löst eine <xref:System.Net.WebException> Auftreten von Fehlern beim Zugriff auf eine Internetressource. Die <xref:System.Net.WebException.Status%2A> -Eigenschaft ist eine von der <xref:System.Net.WebExceptionStatus> Werte, die die Quelle des Fehlers angibt. Wenn <xref:System.Net.WebException.Status%2A> ist <xref:System.Net.WebExceptionStatus.ProtocolError?displayProperty=nameWithType>, <xref:System.Net.WebException.Response%2A> Eigenschaft enthält die <xref:System.Net.WebResponse> von der Internetressource empfangen.  
+  
+ Da die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse, das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit richtet sich nach der Nachfolgerklasse zurückgegebenes <xref:System.Net.WebRequest.Create%2A> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+> [!NOTE]
+>  Verwenden der <xref:System.Net.WebRequest.Create%2A> Methode zum Initialisieren neuer <xref:System.Net.WebRequest> Instanzen. Verwenden Sie nicht die <xref:System.Net.WebRequest> Konstruktor.  
+  
+> [!NOTE]
+>  Wenn die Anwendung, die WebRequest-Objekt erstellt, mit den Anmeldeinformationen eines Standardbenutzers ausgeführt wird, wird die Anwendung nicht auf Zertifikate im Speicher lokalen Computers installiert werden, es sei denn, die Berechtigung wurde dem Benutzer explizit erteilt zugreifen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Net.WebRequest> -Instanz und die Antwort zurückgegeben.  
+  
+ [!code-cpp[NclWebRequestSimple#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebRequestSimple/CPP/webrequestget.cpp#1)]
+ [!code-csharp[NclWebRequestSimple#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebRequestSimple/CS/webrequestget.cs#1)]
+ [!code-vb[NclWebRequestSimple#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebRequestSimple/VB/webrequestget.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Net.WebPermission">Zugriffsrechte für den angeforderten URI oder einen beliebigen URI, der die Anforderung umgeleitet wurde. Zugeordnete Enumeration: <see cref="F:System.Net.NetworkAccess.Connect" />.</permission>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Net.WebRequest" />, müssen Sie die folgenden Member überschreiben: <see cref="P:System.Net.WebRequest.Method" />, <see cref="P:System.Net.WebRequest.RequestUri" />, <see cref="P:System.Net.WebRequest.Headers" />, <see cref="P:System.Net.WebRequest.ContentLength" />, <see cref="P:System.Net.WebRequest.ContentType" />, <see cref="P:System.Net.WebRequest.Credentials" />, <see cref="P:System.Net.WebRequest.PreAuthenticate" />, <see cref="M:System.Net.WebRequest.GetRequestStream" />, <see cref="M:System.Net.WebRequest.BeginGetRequestStream(System.AsyncCallback,System.Object)" />, <see cref="M:System.Net.WebRequest.EndGetRequestStream(System.IAsyncResult)" /> , <see cref="M:System.Net.WebRequest.GetResponse" />, <see cref="M:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)" />, und <see cref="M:System.Net.WebRequest.EndGetResponse(System.IAsyncResult)" />. Darüber hinaus müssen Sie eine Implementierung bereitstellen der <see cref="T:System.Net.IWebRequestCreate" /> -Schnittstelle, die definiert die <see cref="M:System.Net.IWebRequestCreate.Create(System.Uri)" /> Methode wie bei Aufrufen <see cref="M:System.Net.WebRequest.Create(System.Uri)" />. Sie müssen die implementierende Klasse Registrieren der <see cref="T:System.Net.IWebRequestCreate" /> Schnittstelle, mit der <see cref="M:System.Net.WebRequest.RegisterPrefix(System.String,System.Net.IWebRequestCreate)" /> -Methode oder die Konfigurationsdatei.</para>
+    </block>
+    <altmember cref="T:System.Net.HttpWebRequest" />
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebRequest" />-Klasse.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebRequest" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Net.WebRequest.Create%2A> Methode zum Initialisieren neuer <xref:System.Net.WebRequest> Instanzen. Verwenden Sie den Konstruktor nicht.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Net.WebRequest> Instanz durch Aufrufen der <xref:System.Net.WebRequest.Create%2A> Methode für die <xref:System.Net.WebRequest> Klasse.  
+  
+ [!code-cpp[Classic WebRequest.WebRequest Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic WebRequest.WebRequest Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebRequest.WebRequest Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebRequest.WebRequest Example/CS/source.cs#1)]
+ [!code-vb[Classic WebRequest.WebRequest Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebRequest.WebRequest Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebRequest (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den zum Serialisieren der neuen <see cref="T:System.Net.WebRequest" />-Instanz erforderlichen Informationen.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Quelle des der neuen <see cref="T:System.Net.WebRequest" />-Instanz zugeordneten serialisierten Streams angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebRequest" />-Klasse aus den angegebenen Instanzen der <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Klasse und der <see cref="T:System.Runtime.Serialization.StreamingContext" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung durch eine abgeleitete Klasse dieser Konstruktor implementiert die <xref:System.Runtime.Serialization.ISerializable> eine Schnittstelle für die <xref:System.Net.WebRequest> untergeordneten.  
+  
+ Beachten Sie, dass bei der Serialisierung mithilfe eine Anwendung im Modus mit vollständiger Vertrauenswürdigkeit ausgeführt werden muss.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf den Konstruktor zugreifen, wenn der Konstruktor nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public virtual void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht die Anforderung ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.Abort%2A> -Methode bricht die asynchrone Anforderungen, Internetressourcen, Schritte mit der <xref:System.Net.WebRequest.BeginGetResponse%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.AuthenticationLevel AuthenticationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.AuthenticationLevel AuthenticationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.AuthenticationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.AuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Werte ab, die die für diese Anforderung verwendete Ebene von Authentifizierung und Identitätswechsel angeben, oder legt diese fest.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Net.Security.AuthenticationLevel" />-Werte. Der Standardwert ist <see cref="F:System.Net.Security.AuthenticationLevel.MutualAuthRequested" />.  
+  
+ Bei gegenseitiger Authentifizierung stellen sowohl Client als auch Server Anmeldeinformationen bereit, um ihre Identität anzugeben. Der <see cref="F:System.Net.Security.AuthenticationLevel.MutualAuthRequired" />-Wert und der <see cref="F:System.Net.Security.AuthenticationLevel.MutualAuthRequested" />-Wert sind für die Kerberos-Authentifizierung relevant. Kerberos-Authentifizierung kann direkt unterstützt oder verwendet werden, wenn das tatsächliche Sicherheitsprotokoll mithilfe des Negotiate-Sicherheitsprotokolls ausgewählt wird. Weitere Informationen über Authentifizierungsprotokolle finden Sie unter [Internetauthentifizierung](http://msdn.microsoft.com/en-us/d342e87c-f672-4660-a513-41a2f2b80c4a).  
+  
+ Um zu bestimmen, ob eine gegenseitige Authentifizierung erfolgt ist, überprüfen Sie die <see cref="P:System.Net.WebResponse.IsMutuallyAuthenticated" />-Eigenschaft.  
+  
+ Wenn Sie den <see cref="F:System.Net.Security.AuthenticationLevel.MutualAuthRequired" />-Authentifizierungsflagwert angeben und keine gegenseitige Authentifizierung erfolgt, empfängt die Anwendung eine <see cref="T:System.IO.IOException" /> mit der inneren Ausnahme <see cref="T:System.Net.ProtocolViolationException" />, um anzugeben, dass die gegenseitige Authentifizierung fehlgeschlagen ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel legt den Wert dieser Eigenschaft fest.  
+  
+ [!code-cpp[NclCredPolicy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLCredPolicy/CPP/NCLCredPolicy.cpp#1)]
+ [!code-csharp[NclCredPolicy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLCredPolicy/CS/websample.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetRequestStream">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginGetRequestStream (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginGetRequestStream(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.BeginGetRequestStream(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat.</param>
+        <param name="state">Ein Objekt mit Zustandsinformationen für diese asynchrone Anforderung.</param>
+        <summary>Stellt beim Überschreiben in einer Nachfolgerklasse eine asynchrone Version der <see cref="M:System.Net.WebRequest.GetRequestStream" />-Methode bereit.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />, das auf die asynchrone Anforderung verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.BeginGetRequestStream%2A> Methode startet eine asynchrone Anforderung eines Streams verwendet, um Daten an eine Internetressource zu senden. Die Rückrufmethode, die implementiert die <xref:System.AsyncCallback> delegieren verwendet die <xref:System.Net.WebRequest.EndGetRequestStream%2A> Methode, um den Anforderungsstream zurückzugeben.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.BeginGetRequestStream%2A> um den Anforderungsstream asynchron abzurufen.  
+  
+ [!code-cpp[WebRequest_BeginGetRequest#3](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_BeginGetRequest/CPP/webrequest_begingetrequest.cpp#3)]
+ [!code-csharp[WebRequest_BeginGetRequest#3](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_BeginGetRequest/CS/webrequest_begingetrequest.cs#3)]
+ [!code-vb[WebRequest_BeginGetRequest#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_BeginGetRequest/VB/webrequest_begingetrequest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+        <altmember cref="M:System.Net.WebRequest.EndGetRequestStream(System.IAsyncResult)" />
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetResponse">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginGetResponse (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginGetResponse(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat.</param>
+        <param name="state">Ein Objekt mit Zustandsinformationen für diese asynchrone Anforderung.</param>
+        <summary>Startet beim Überschreiben in einer Nachfolgerklasse eine asynchrone Anforderung einer Internetressource.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />, das auf die asynchrone Anforderung verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.BeginGetResponse%2A> Methode startet eine asynchrone Anforderung einer Antwort. Die Rückrufmethode, die implementiert die <xref:System.AsyncCallback> delegieren verwendet die <xref:System.Net.WebRequest.EndGetResponse%2A> -Methode zur Rückgabe der <xref:System.Net.WebResponse> von der Internetressource.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+> [!NOTE]
+>  Wenn eine WebException ausgelöst wird, verwenden Sie die <xref:System.Net.WebException.Response%2A> und <xref:System.Net.WebException.Status%2A> Eigenschaften der Ausnahme, um die Antwort vom Server zu bestimmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Net.WebRequest.BeginGetResponse%2A> asynchron die Zielressource anfordern. Wenn die Ressource abgerufen wurde, wird die angegebene Rückrufmethode ausgeführt werden.  
+  
+ [!code-cpp[WebRequest_BeginGetResponse#2](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_BeginGetResponse/CPP/webrequest_begingetresponse.cpp#2)]
+ [!code-csharp[WebRequest_BeginGetResponse#2](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_BeginGetResponse/CS/webrequest_begingetresponse.cs#2)]
+ [!code-vb[WebRequest_BeginGetResponse#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_BeginGetResponse/VB/webrequest_begingetresponse.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePolicy">
+      <MemberSignature Language="C#" Value="public virtual System.Net.Cache.RequestCachePolicy CachePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Cache.RequestCachePolicy CachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.CachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Cacherichtlinie für diese Anforderung ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Net.Cache.RequestCachePolicy" />-Objekt, das eine Cacherichtlinie definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Cacherichtlinie und das Vorhandensein der angeforderten Ressource im Cache bestimmen, ob eine Antwort aus dem Cache abgerufen werden kann. Verwendung von zwischengespeicherten Antworten in der Regel verbessert die Anwendungsleistung, aber besteht das Risiko, dass die Antwort im Cache nicht die Antwort auf dem Server übereinstimmt.  
+  
+ Standardcacherichtlinie kann angegeben werden, in der Konfigurationsdatei "Machine.config" oder durch Festlegen der <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> -Eigenschaft für Anforderungen, die das Hypertext Transfer-Protokoll (HTTP) oder Secure Hypertext Transfer Protocol (HTTPS)-URI-Schema verwenden.  
+  
+ Eine Kopie einer Ressource wird nur in den Cache hinzugefügt, wenn der Antwortstream für die Ressource abgerufen und bis zum Ende des Streams gelesen wird. Damit eine andere Anforderung für die gleiche Ressource eine zwischengespeicherte Kopie abhängig von der Cacheebene für die Richtlinie für diese Anforderung verwenden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Festlegen der Cacherichtlinie für eine webanforderung.  
+  
+ [!code-cpp[NCLSimpleCache#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#2)]
+ [!code-csharp[NCLSimpleCache#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionGroupName">
+      <MemberSignature Language="C#" Value="public virtual string ConnectionGroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionGroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.ConnectionGroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse den Namen der Verbindungsgruppe für die Anforderung ab oder legt diesen fest.</summary>
+        <value>Der Name der Verbindungsgruppe für die Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.ConnectionGroupName%2A> Eigenschaft ordnet bestimmte Anforderungen innerhalb einer Anwendung auf eine oder mehrere Verbindungspools.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="P:System.Net.WebRequest.ConnectionGroupName" /> Eigenschaft in der Regel ordnet eine Gruppe von Anforderungen, die einen Satz von Anmeldeinformationen für eine Verbindung mit einer Internetressource zur Vermeidung potenzieller Sicherheitsfehler freigeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public virtual long ContentLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse die Inhaltslänge der zu sendenden Anforderungsdaten ab oder legt diese fest.</summary>
+        <value>Die Anzahl der Bytes der gesendeten Anforderungsdaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.ContentLength%2A> Eigenschaft enthält die Anzahl der Bytes der Daten, die gesendet werden, an die Internetressource durch die <xref:System.Net.WebRequest> Instanz.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.ContentLength%2A> Eigenschaft, um die Anzahl der Bytes in der ausgehenden Byte-Puffer.  
+  
+ [!code-cpp[WebRequest_ContentType#4](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_ContentType/CPP/webrequest_contenttype.cpp#4)]
+ [!code-csharp[WebRequest_ContentType#4](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_ContentType/CS/webrequest_contenttype.cs#4)]
+ [!code-vb[WebRequest_ContentType#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_ContentType/VB/webrequest_contenttype.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public virtual string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse den Inhaltstyp der zu sendenden Anforderungsdaten ab oder legt diese fest.</summary>
+        <value>Der Inhaltstyp der Anforderungsdaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.ContentType%2A> Eigenschaft enthält den Medientyp der Anforderung. Dies ist normalerweise die MIME-Codierung des Inhalts.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.ContentType%2A> Eigenschaft mit dem entsprechenden Medientyp.  
+  
+ [!code-cpp[WebRequest_ContentType#4](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_ContentType/CPP/webrequest_contenttype.cpp#4)]
+ [!code-csharp[WebRequest_ContentType#4](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_ContentType/CS/webrequest_contenttype.cs#4)]
+ [!code-vb[WebRequest_ContentType#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_ContentType/VB/webrequest_contenttype.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+        <altmember cref="P:System.Net.HttpWebRequest.ContentType" />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Create">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue <see cref="T:System.Net.WebRequest" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Net.WebRequest Create (string requestUriString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.WebRequest Create(string requestUriString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUriString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestUriString">Der URI, der die Internetressource bezeichnet.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Net.WebRequest" />-Instanz für das angegebene URI-Schema.</summary>
+        <returns>Ein <see cref="T:System.Net.WebRequest" />-Nachfolger für ein bestimmtes URI-Schema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.Create%2A> Methodenrückgabe einen Nachfolger des der <xref:System.Net.WebRequest> Klasse bestimmt zur Laufzeit als die größte registrierte Übereinstimmung für `requestUri`.  
+  
+ Beispielsweise, wenn eine URI, die mit beginnt `http://` oder `https://` übergeben `requestUri`, wird ein <xref:System.Net.HttpWebRequest> zurückgegebene <xref:System.Net.WebRequest.Create%2A>. Wenn eine URI, die mit beginnt `ftp://` übergeben wird, die <xref:System.Net.WebRequest.Create%2A> Methodenrückgabewert wird eine <xref:System.Net.FtpWebRequest> Instanz. Wenn eine URI, die mit beginnt `file://` übergeben wird, die <xref:System.Net.WebRequest.Create%2A> Methodenrückgabewert wird eine <xref:System.Net.FileWebRequest> Instanz.  
+  
+ Die zuvor registrierten Reservetypen, die bereits registriert umfassen Folgendes:  
+  
+-   `http://`  
+  
+-   `https://`  
+  
+-   `ftp://`  
+  
+-   `file://`  
+  
+ .NET bietet Unterstützung für die `http://`, `https://`, `ftp://`, und `file://` URI-Schemas. Benutzerdefinierte <xref:System.Net.WebRequest> Nachfolger, andere Anforderungen zu verarbeiten sind bei registriert die <xref:System.Net.WebRequest.RegisterPrefix%2A> Methode.  
+  
+ Die <xref:System.Net.WebRequest.Create%2A> -Methode verwendet die `requestUriString` Parameter zum Erstellen einer <xref:System.Uri> -Instanz, die mit dem neuen übergibt <xref:System.Net.WebRequest>.  
+  
+> [!NOTE]
+>  Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [&#91;\< Topic://conUsingNetworkTracing > &#93; ](http://msdn.microsoft.com/en-us/e993b7c3-087f-45d8-9c02-9dded936d804).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Net.WebRequest.Create%2A> zum Instanziieren einer <xref:System.Net.HttpWebRequest> Instanz. Eine Zeichenfolge, die Ziel-URL darstellt, wird als Konstruktorparameter verwendet.  
+  
+ [!code-cpp[WebResponse_ResponseUri#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebResponse_ResponseUri/CPP/webresponse_responseuri.cpp#1)]
+ [!code-csharp[WebResponse_ResponseUri#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebResponse_ResponseUri/CS/webresponse_responseuri.cs#1)]
+ [!code-vb[WebResponse_ResponseUri#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebResponse_ResponseUri/VB/webresponse_responseuri.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Das in <paramref name="requestUriString" /> angegebene Anforderungsschema wurde nicht registriert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestUriString" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt keine Berechtigung zum Herstellen einer Verbindung mit dem angeforderten URI oder einem URI, an den die Anforderung umgeleitet wurde.</exception>
+        <exception cref="T:System.UriFormatException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](http://msdn.microsoft.com/en-us/c31e1663-c164-4e65-b66d-d3aa8750a154), fangen Sie die basisklassenausnahme <see cref="T:System.FormatException" />, stattdessen.  
+  
+</para>
+          </block>  
+  
+ Der in <paramref name="requestUriString" /> angegebene URI ist kein gültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Net.WebRequest Create (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.WebRequest Create(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.Create(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Ein <see cref="T:System.Uri" /> mit dem URI der angeforderten Ressource.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Net.WebRequest" />-Instanz für das angegebene URI-Schema.</summary>
+        <returns>Ein <see cref="T:System.Net.WebRequest" />-Nachfolger für das angegebene URI-Schema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.Create%2A> Methodenrückgabe einen Nachfolger des der <xref:System.Net.WebRequest> Klasse bestimmt zur Laufzeit als die größte registrierte Übereinstimmung für `requestUri`.  
+  
+ Angenommen, Sie erstellen eine <xref:System.Net.WebRequest> Nachfolger Handler1, um Anforderungen zu verarbeiten `http://www.contoso.com/text/` und eine andere benannte Handler2 Verarbeitung von Anforderungen auf `http://www.contoso.com/code/`, können Sie <xref:System.Net.WebRequest.Create%2A> Methode, um entweder zugeordneten WebRequest Nachfolger zurückzugeben angegebenen URI.  
+  
+ Einen Nachfolger des zurückzugebenden der <xref:System.Net.WebRequest> -Klasse auf der Grundlage von nur den Schemateil eines URIs, verwenden Sie die <xref:System.Net.WebRequest.CreateDefault%2A> Methode.  
+  
+ Beispielsweise, wenn eine URI, die mit beginnt `http://` oder `https://` übergeben `requestUri`, wird ein <xref:System.Net.HttpWebRequest> zurückgegebene <xref:System.Net.WebRequest.Create%2A>. Wenn eine URI, die mit beginnt `ftp://` übergeben wird, die <xref:System.Net.WebRequest.Create%2A> Methodenrückgabewert wird eine <xref:System.Net.FileWebRequest> Instanz. Wenn eine URI, die mit beginnt `file://` übergeben wird, die <xref:System.Net.WebRequest.Create%2A> Methodenrückgabewert wird eine <xref:System.Net.FileWebRequest> Instanz.  
+  
+ Die zuvor registrierten Reservetypen, die bereits registriert umfassen Folgendes:  
+  
+-   `http://`  
+  
+-   `https://`  
+  
+-   `ftp://`  
+  
+-   `file://`  
+  
+ .NET bietet Unterstützung für die `http://`, `https://`, `ftp://`, und `file://` URI-Schemas. Benutzerdefinierte <xref:System.Net.WebRequest> Nachfolger, andere Anforderungen zu verarbeiten sind bei registriert die <xref:System.Net.WebRequest.RegisterPrefix%2A> Methode.  
+  
+> [!NOTE]
+>  Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [&#91;\< Topic://conUsingNetworkTracing > &#93; ](http://msdn.microsoft.com/en-us/e993b7c3-087f-45d8-9c02-9dded936d804).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Net.WebRequest.Create%2A> zum Instanziieren einer <xref:System.Net.HttpWebRequest> Instanz. Ein Uri, die Ziel-URL darstellt, wird als Konstruktorparameter verwendet.  
+  
+ [!code-cpp[WebRequest_Create#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_Create/CPP/webrequest_create.cpp#1)]
+ [!code-csharp[WebRequest_Create#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_Create/CS/webrequest_create.cs#1)]
+ [!code-vb[WebRequest_Create#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_Create/VB/webrequest_create.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Das Anforderungsschema im angegebenen <paramref name="requestUri" /> ist nicht registriert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt keine Berechtigung zum Herstellen einer Verbindung mit dem angeforderten URI oder einem URI, an den die Anforderung umgeleitet wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefault">
+      <MemberSignature Language="C#" Value="public static System.Net.WebRequest CreateDefault (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.WebRequest CreateDefault(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.CreateDefault(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Ein <see cref="T:System.Uri" /> mit dem URI der angeforderten Ressource.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Net.WebRequest" />-Instanz für das angegebene URI-Schema.</summary>
+        <returns>Ein <see cref="T:System.Net.WebRequest" />-Nachfolger für das angegebene URI-Schema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.CreateDefault%2A> Methode gibt ein <xref:System.Net.WebRequest> untergeordneten Instanz auf der Grundlage von nur den Schemateil des URI.  
+  
+ Beispielsweise, wenn eine URI, die mit beginnt `http://` übergeben `requestUri`, wird ein <xref:System.Net.HttpWebRequest> zurückgegebene <xref:System.Net.WebRequest.CreateDefault%2A>. Wenn eine URI, die mit beginnt `file://` übergeben wird, die <xref:System.Net.WebRequest.CreateDefault%2A> Methodenrückgabewert wird eine <xref:System.Net.FileWebRequest>.  
+  
+> [!NOTE]
+>  Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Das Anforderungsschema im angegebenen <paramref name="requestUri" /> ist nicht registriert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt keine Berechtigung zum Herstellen einer Verbindung mit dem angeforderten URI oder einem URI, an den die Anforderung umgeleitet wurde.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateHttp">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue <see cref="T:System.Net.HttpWebRequest" />-Instanz für den angegebenen URI.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateHttp">
+      <MemberSignature Language="C#" Value="public static System.Net.HttpWebRequest CreateHttp (string requestUriString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.HttpWebRequest CreateHttp(string requestUriString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.CreateHttp(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpWebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUriString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestUriString">Eine URI-Zeichenfolge, mit der die Internetressource bezeichnet wird.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Net.HttpWebRequest" />-Instanz für die angegebene URI-Zeichenfolge.</summary>
+        <returns>Eine <see cref="T:System.Net.HttpWebRequest" />-Instanz für die spezifische URI-Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.CreateHttp%28System.String%29> Methode gibt eine Instanz der <xref:System.Net.HttpWebRequest> -Klasse für die `requestUriString`.  
+  
+ Wenn ein URI, der mit beginnt `http://` oder `http://` übergeben der `requestUriString` Parameter eine <xref:System.Net.HttpWebRequest> zurückgegebene <xref:System.Net.WebRequest.CreateHttp%28System.String%29>. Eine andere anderes Schema löst eine <xref:System.NotSupportedException>.  
+  
+ Die <xref:System.Net.WebRequest.CreateHttp%28System.String%29> -Methode verwendet die `requestUriString` Parameter zum Erstellen einer <xref:System.Uri> -Instanz, die mit dem neuen übergibt <xref:System.Net.HttpWebRequest>. Wenn die Methode erfolgreich ist, ist die <xref:System.Net.HttpWebRequest.AllowReadStreamBuffering%2A> Eigenschaft für das zurückgegebene <xref:System.Net.HttpWebRequest> -Instanzensatz auf `false`.  
+  
+ .NET bietet Unterstützung für die `http://` und `https://` URI-Schemas. Benutzerdefinierte <xref:System.Net.WebRequest> Nachfolger, andere Anforderungen zu verarbeiten sind bei registriert die <xref:System.Net.WebRequest.RegisterPrefix%2A> Methode. Die <xref:System.Net.WebRequest.Create%28System.String%29> Methode kann verwendet werden, um ein Nachfolger des erstellen die <xref:System.Net.WebRequest> Klasse für andere Schemas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Das im angegebenen Anforderungsschema <paramref name="requestUriString" /> ist das HTTP- oder Https-Schema.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestUriString" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt keine Berechtigung zum Herstellen einer Verbindung mit dem angeforderten URI oder einem URI, an den die Anforderung umgeleitet wurde.</exception>
+        <exception cref="T:System.UriFormatException">Der in <paramref name="requestUriString" /> angegebene URI ist kein gültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHttp">
+      <MemberSignature Language="C#" Value="public static System.Net.HttpWebRequest CreateHttp (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.HttpWebRequest CreateHttp(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.CreateHttp(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpWebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Ein URI, mit dem die Internetressource bezeichnet wird.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Net.HttpWebRequest" />-Instanz für den angegebenen URI.</summary>
+        <returns>Eine <see cref="T:System.Net.HttpWebRequest" />-Instanz für die spezifische URI-Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.CreateHttp%28System.Uri%29> Methode gibt eine Instanz der <xref:System.Net.HttpWebRequest> -Klasse für die `requestUri`.  
+  
+ Wenn ein URI, der mit beginnt `http://` oder `http://` übergeben der `requestUri` Parameter, ein <xref:System.Net.HttpWebRequest> zurückgegebene <xref:System.Net.WebRequest.CreateHttp%28System.Uri%29>. Eine andere anderes Schema löst eine <xref:System.NotSupportedException>.  
+  
+ Die <xref:System.Net.WebRequest.CreateHttp%28System.Uri%29> -Methode verwendet die `requestUri` Parameter zum Erstellen eines neuen <xref:System.Net.HttpWebRequest> Instanz. Wenn die Methode erfolgreich ist, ist die <xref:System.Net.HttpWebRequest.AllowReadStreamBuffering%2A> Eigenschaft für das zurückgegebene <xref:System.Net.HttpWebRequest> -Instanzensatz auf `false`.  
+  
+ .NET bietet Unterstützung für die `http://` und `https://` URI-Schemas. Benutzerdefinierte <xref:System.Net.WebRequest> Nachfolger, andere Anforderungen zu verarbeiten sind bei registriert die <xref:System.Net.WebRequest.RegisterPrefix%2A> Methode. Die <xref:System.Net.WebRequest.Create%28System.Uri%29> Methode kann verwendet werden, um ein Nachfolger des erstellen die <xref:System.Net.WebRequest> Klasse für andere Schemas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Das im angegebenen Anforderungsschema <paramref name="requestUri" /> ist das HTTP- oder Https-Schema.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer besitzt keine Berechtigung zum Herstellen einer Verbindung mit dem angeforderten URI oder einem URI, an den die Anforderung umgeleitet wurde.</exception>
+        <exception cref="T:System.UriFormatException">Der in <paramref name="requestUri" /> angegebene URI ist kein gültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatorInstance">
+      <MemberSignature Language="C#" Value="public virtual System.Net.IWebRequestCreate CreatorInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IWebRequestCreate CreatorInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.CreatorInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebRequestCreate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse das von der <see cref="T:System.Net.IWebRequestCreate" />-Klasse abgeleitete Factoryobjekt ab. Mit dieser Klasse wird die <see cref="T:System.Net.WebRequest" /> erstellt, die instanziiert wird, um die Anforderung an den angegebenen URI zu stellen.</summary>
+        <value>Der abgeleitete <see cref="T:System.Net.WebRequest" />-Typ, der von der <see cref="M:System.Net.IWebRequestCreate.Create(System.Uri)" />-Methode zurückgegeben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Diese Eigenschaft ermöglicht einer Anwendung ermitteln, welche <xref:System.Net.IWebRequestCreate> abgeleitete Factoryobjekt zum Erstellen der Anforderung verwendet wurde. Dieses Objekt möglicherweise [System.Net.Browser.WebRequestCreator.BrowserHttp](https://msdn.microsoft.com/library/system.net.browser.webrequestcreator.browserhttp(v=vs.95)) oder [System.Net.Browser.WebRequestCreator.ClientHttp](https://msdn.microsoft.com/library/system.net.browser.webrequestcreator.clienthttp(v=vs.95)), aber möglicherweise auch eine benutzerdefinierte Instanz abgeleitet <xref:System.Net.IWebRequestCreate>. Dadurch kann eine Anwendung zu bestimmen, ob der Browser gehostet [!INCLUDE[silverlight](~/includes/silverlight-md.md)], die [!INCLUDE[silverlight](~/includes/silverlight-md.md)] Client oder ein benutzerdefiniertes Objekt verarbeitet die HTTP-Anforderungen und Antworten für den <xref:System.Net.WebRequest> Instanz. Die <xref:System.Net.WebRequest.RegisterPrefix%2A> Methode kann eine Anwendung so konfigurieren Sie die abgeleitete <xref:System.Net.WebRequest> Typ wird instanziiert werden, wenn eine Anforderung an einen bestimmten URI ausführen. <xref:System.Net.WebRequest>Ersteller sind in der Regel um ein bestimmtes Protokoll, z. B. HTTP oder HTTPS, behandeln registriert haben, jedoch können registriert werden, um eine Anforderung für einen bestimmten Server oder einen Pfad auf einem Server zu behandeln. Dies ist hilfreich, wenn mehrere abgeleitete <xref:System.Net.WebRequest> Typ kann Anforderungen für das gleiche Protokoll verarbeitet. Die [!INCLUDE[sil3_first](~/includes/sil3-first-md.md)] und höher-Laufzeit unterstützt mehrere HTTP-Handler jeweils unterschiedliche Funktionen. Ein Webdienst, der Representational State Transfer (REST) verwendet möglicherweise erforderlich, z. B. die [System.Net.Browser.WebRequestCreator.ClientHttp](https://msdn.microsoft.com/library/system.net.browser.webrequestcreator.clienthttp(v=vs.95)) Handler während ein SOAP-Webdienst verwenden Sie die Standardeinstellung ist [ System.Net.Browser.WebRequestCreator.BrowserHttp](https://msdn.microsoft.com/library/system.net.browser.webrequestcreator.browserhttp(v=vs.95)) Handler.
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public virtual System.Net.ICredentials Credentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse die Netzwerkanmeldeinformationen, die für die Authentifizierung der Anforderung der Internetressource verwendet werden, ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Net.ICredentials" />-Objekt mit den mit der Anforderung verknüpften Authentifizierungsanmeldeinformationen. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.Credentials%2A> Eigenschaft enthält die Anmeldeinformationen für die Authentifizierung erforderlich, um die Internet-Ressource zuzugreifen.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.Credentials%2A> Eigenschaft mithilfe der Standardanmeldeinformationen des aktuellen Benutzers. Bei der Anforderung erstellt wird, werden Anmeldeinformationen, die in dieser Eigenschaft gespeichert verwendet, um den Client zu überprüfen. Dies ist identisch mit der Einstellung der <xref:System.Net.WebRequest.UseDefaultCredentials%2A> Eigenschaft `true`.  
+  
+ [!code-cpp[NclWebRequestSimple#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebRequestSimple/CPP/webrequestget.cpp#2)]
+ [!code-csharp[NclWebRequestSimple#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebRequestSimple/CS/webrequestget.cs#2)]
+ [!code-vb[NclWebRequestSimple#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebRequestSimple/VB/webrequestget.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCachePolicy">
+      <MemberSignature Language="C#" Value="public static System.Net.Cache.RequestCachePolicy DefaultCachePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Cache.RequestCachePolicy DefaultCachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.DefaultCachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardcacherichtlinie für diese Anforderung ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Net.Cache.HttpRequestCachePolicy" />, die die für diese Anforderung gültige Cacherichtlinie angibt, wenn keine andere Richtlinie anwendbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Richtlinie ist für diese Anforderung verwendet werden, wenn folgende Bedingungen zutreffen:  
+  
+-   Es ist keine <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> -Eigenschaft für diese Anforderung angegeben.  
+  
+-   Die Dateien geben Sie eine Cacherichtlinie, die auf den Uniform Resource Identifier (URI) anwendbar ist, mit der diese Anforderung erstellt keine Computer- und anwendungsspezifische-Konfiguration.  
+  
+ Die Cacherichtlinie bestimmt, ob die angeforderte Ressource aus einem Cache für die Anforderung an den Hostcomputer für die Ressource gesendet werden, anstatt ausgeführt werden kann.  
+  
+ Eine Kopie einer Ressource wird nur in den Cache hinzugefügt, wenn der Antwortstream für die Ressource abgerufen und bis zum Ende des Streams gelesen wird. Damit eine andere Anforderung für die gleiche Ressource eine zwischengespeicherte Kopie abhängig von der Cacheebene für die Richtlinie für diese Anforderung verwenden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen von der Standardcacherichtlinie für webanforderungen.  
+  
+ [!code-cpp[NCLSimpleCache#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#15)]
+ [!code-csharp[NCLSimpleCache#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">für den uneingeschränkten Zugriff auf Netzwerkressourcen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <altmember cref="T:System.Net.Cache.RequestCachePolicy" />
+        <altmember cref="T:System.Net.Cache.HttpRequestCacheLevel" />
+        <altmember cref="T:System.Net.Cache.RequestCacheLevel" />
+        <altmember cref="P:System.Net.HttpWebRequest.DefaultCachePolicy" />
+        <altmember cref="P:System.Net.WebRequest.CachePolicy" />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultWebProxy">
+      <MemberSignature Language="C#" Value="public static System.Net.IWebProxy DefaultWebProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.IWebProxy DefaultWebProxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.DefaultWebProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den globalen HTTP-Proxy ab oder legt diesen fest.</summary>
+        <value>Ein von jedem Aufruf der Instanzen von <see cref="T:System.Net.WebRequest" /> verwendeter <see cref="T:System.Net.IWebProxy" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.DefaultWebProxy%2A> Eigenschaft ruft ab oder legt den globalen Proxy. Die <xref:System.Net.WebRequest.DefaultWebProxy%2A> -Eigenschaft bestimmt den Standardproxy, alle <xref:System.Net.WebRequest> Instanzen verwenden, wenn die Anforderung Proxys unterstützt und kein Proxy festgelegt ist, explizit mit der <xref:System.Net.HttpWebRequest.Proxy%2A> Eigenschaft. Proxys werden derzeit unterstützt, indem <xref:System.Net.FtpWebRequest> und <xref:System.Net.HttpWebRequest>.  
+  
+ Die <xref:System.Net.WebRequest.DefaultWebProxy%2A> Eigenschaft liest Proxyeinstellungen aus der Datei "App.config". Ist keine Datei "App.config", werden die Internet Explorer (IE)-Proxyeinstellungen des aktuellen Benutzers verwendet.  
+  
+ Wenn die <xref:System.Net.WebRequest.DefaultWebProxy%2A> Eigenschaftensatz ist null, alle nachfolgenden Instanzen von der <xref:System.Net.WebRequest> Klasse erstellt, indem die <xref:System.Net.WebRequest.Create%2A> oder <xref:System.Net.WebRequest.CreateDefault%2A> Methoden verfügen nicht über einen Proxy.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">zum Abrufen oder Festlegen des globalen HTTP-Proxys. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetRequestStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream EndGetRequestStream (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream EndGetRequestStream(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.EndGetRequestStream(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" />, das auf eine ausstehende Anforderung eines Streams verweist.</param>
+        <summary>Gibt beim Überschreiben in einer Nachfolgerklasse einen <see cref="T:System.IO.Stream" /> zum Schreiben von Daten in die Internetressource zurück.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" />, in den Daten geschrieben werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.EndGetRequestStream%2A> Methode schließt eine asynchronen Datenstrom-Anforderung, die von gestartet wurde. die <xref:System.Net.WebRequest.BeginGetRequestStream%2A> Methode.  
+  
+> [!NOTE]
+>  Um Probleme mit den Zeitabläufen mit Garbagecollection zu vermeiden, achten Sie darauf, schließen Sie den Antwortstream durch Aufrufen der <xref:System.IO.Stream.Close%2A> -Methode im Stream zurückgegebenes <xref:System.Net.WebResponse.GetResponseStream%2A> nach dem Aufruf <xref:System.Net.WebRequest.EndGetResponse%2A>.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel erhält und verwendet den Anforderungsstream durch Aufrufen der <xref:System.Net.WebRequest.EndGetRequestStream%2A>. Die <xref:System.Net.WebRequest.EndGetRequestStream%2A> Methode schließt den asynchronen Aufruf <xref:System.Net.WebRequest.BeginGetRequestStream%2A>.  
+  
+ [!code-cpp[WebRequest_BeginGetRequest#3](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_BeginGetRequest/CPP/webrequest_begingetrequest.cpp#3)]
+ [!code-csharp[WebRequest_BeginGetRequest#3](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_BeginGetRequest/CS/webrequest_begingetrequest.cs#3)]
+ [!code-vb[WebRequest_BeginGetRequest#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_BeginGetRequest/VB/webrequest_begingetrequest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetResponse">
+      <MemberSignature Language="C#" Value="public virtual System.Net.WebResponse EndGetResponse (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.WebResponse EndGetResponse(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.EndGetResponse(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" />, das auf eine ausstehende Anforderung einer Antwort verweist.</param>
+        <summary>Gibt beim Überschreiben in einer Nachfolgerklasse eine <see cref="T:System.Net.WebResponse" /> zurück.</summary>
+        <returns>Eine <see cref="T:System.Net.WebResponse" /> mit einer Antwort auf die Internetanforderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.EndGetResponse%2A> Methode schließt eine asynchrone Anforderung einer Internetressource, die mit dem Start der <xref:System.Net.WebRequest.BeginGetResponse%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.EndGetResponse%2A> der Zielressource abgerufen werden soll.  
+  
+ [!code-cpp[WebRequest_BeginGetResponse#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_BeginGetResponse/CPP/webrequest_begingetresponse.cpp#1)]
+ [!code-csharp[WebRequest_BeginGetResponse#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_BeginGetResponse/CS/webrequest_begingetresponse.cs#1)]
+ [!code-vb[WebRequest_BeginGetResponse#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_BeginGetResponse/VB/webrequest_begingetresponse.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+        <altmember cref="M:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der das Ziel für diese Serialisierung angibt.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte eingeschlossen wurden die <xref:System.Runtime.Serialization.SerializationInfo> automatisch nachverfolgt und vom Formatierungsprogramm serialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream GetRequestStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetRequestStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.GetRequestStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer Nachfolgerklasse einen <see cref="T:System.IO.Stream" /> zum Schreiben von Daten in die Internetressource zurück.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" /> zum Schreiben von Daten in die Internetressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.GetRequestStream%2A> Methode initiiert eine Anforderung zum Senden von Daten an die Internetressource und gibt eine <xref:System.IO.Stream> Instanz zum Senden von Daten an die Internetressource.  
+  
+ Die <xref:System.Net.WebRequest.GetRequestStream%2A> -Methode bietet synchronen Zugriff auf die <xref:System.IO.Stream>. Verwenden Sie für den asynchronen Zugriff der <xref:System.Net.WebRequest.BeginGetRequestStream%2A> und <xref:System.Net.WebRequest.EndGetRequestStream%2A> Methoden.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.GetRequestStream%2A> Methode, um einen Stream und schreibt Daten, die als Stream abzurufen.  
+  
+ [!code-cpp[WebRequest_ContentType#4](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_ContentType/CPP/webrequest_contenttype.cpp#4)]
+ [!code-csharp[WebRequest_ContentType#4](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_ContentType/CS/webrequest_contenttype.cs#4)]
+ [!code-vb[WebRequest_ContentType#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_ContentType/VB/webrequest_contenttype.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+        <altmember cref="M:System.Net.WebRequest.BeginGetRequestStream(System.AsyncCallback,System.Object)" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestStreamAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.IO.Stream&gt; GetRequestStreamAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; GetRequestStreamAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.GetRequestStreamAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt nach dem Überschreiben in einer abgeleiteten Klasse einen <see cref="T:System.IO.Stream" /> zurück, womit Daten in einem asynchronen Vorgang in die Internetressource geschrieben werden können.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, wenn die <xref:System.IO.Stream> zum Schreiben von Daten mit dem Internet Ressource verfügbar ist.  
+  
+ Nach dem Aufruf <xref:System.Net.WebRequest.GetRequestStreamAsync%2A>, vergewissern Sie sich vor dem Aufruf, schließen den Anforderungsstream <xref:System.Net.WebRequest.GetResponseAsync%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponse">
+      <MemberSignature Language="C#" Value="public virtual System.Net.WebResponse GetResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.WebResponse GetResponse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.GetResponse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer Nachfolgerklasse eine Antwort auf eine Internetanforderung zurück.</summary>
+        <returns>Eine <see cref="T:System.Net.WebResponse" /> mit der Antwort auf die Internetanforderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.GetResponse%2A> Methode sendet eine Anforderung an eine Internetressource und gibt eine <xref:System.Net.WebResponse> Instanz. Wenn die Anforderung bereits durch einen Aufruf von initiiert wurde <xref:System.Net.WebRequest.GetRequestStream%2A>die <xref:System.Net.WebRequest.GetResponse%2A> Methode schließt die Anforderung und gibt eine Antwort zurück.  
+  
+ Die <xref:System.Net.WebRequest.GetResponse%2A> -Methode bietet synchronen Zugriff auf die <xref:System.Net.WebResponse>. Verwenden Sie für den asynchronen Zugriff der <xref:System.Net.WebRequest.BeginGetResponse%2A> und <xref:System.Net.WebRequest.EndGetResponse%2A> Methoden.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+> [!NOTE]
+>  Wenn eine WebException ausgelöst wird, verwenden Sie die <xref:System.Net.WebException.Response%2A> und <xref:System.Net.WebException.Status%2A> Eigenschaften der Ausnahme, um die Antwort vom Server zu bestimmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.Timeout%2A> -Eigenschaft auf 10.000 Millisekunden. Wenn das Timeout abläuft, bevor die Ressource zurückgegeben werden kann, eine <xref:System.Net.WebException> ausgelöst wird.  
+  
+ [!code-cpp[WebRequest_Timeout#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_Timeout/CPP/webrequest_timeout.cpp#1)]
+ [!code-csharp[WebRequest_Timeout#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_Timeout/CS/webrequest_timeout.cs#1)]
+ [!code-vb[WebRequest_Timeout#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_Timeout/VB/webrequest_timeout.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.Net.WebResponse&gt; GetResponseAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.WebResponse&gt; GetResponseAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.GetResponseAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.WebResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer Nachfolgerklasse in einem asynchronen Vorgang eine Antwort auf eine Internetanforderung zurück.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem eine Antwort auf eine internetanforderung verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSystemWebProxy">
+      <MemberSignature Language="C#" Value="public static System.Net.IWebProxy GetSystemWebProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IWebProxy GetSystemWebProxy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.GetSystemWebProxy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Proxy zurück, der mit den Internet Explorer-Einstellungen des Benutzers konfiguriert ist, dessen Identität gerade verwendet wird.</summary>
+        <returns>Ein von jedem Aufruf der Instanzen von <see cref="T:System.Net.WebRequest" /> verwendeter <see cref="T:System.Net.IWebProxy" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebRequest.GetSystemWebProxy%2A>-Methode liest die Proxyeinstellungen für den aktuellen Benutzer Internet Explorer (IE). Dieser Prozess umfasst die Internet Explorer-Optionen automatisch Proxyeinstellungen erkennen, verwenden ein Skript für automatische Konfiguration, manuelle proxyservereinstellungen und erweiterte manuelle Proxy servereinstellungen.  
+  
+ Wenn Ihre Anwendung mehrere Benutzer einen Identitätswechsel ausführt, können Sie die <xref:System.Net.WebRequest.GetSystemWebProxy%2A> Methode, um einen Proxy für jede Identität eines Benutzers abzurufen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">zum Abrufen oder Festlegen des globalen HTTP-Proxys. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public virtual System.Net.WebHeaderCollection Headers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse eine Auflistung von Name-Wert-Paaren für Header ab, die mit der Anforderung verknüpft sind, oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Net.WebHeaderCollection" /> mit den dieser Anforderung zugeordneten Name-Wert-Paaren für Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.Headers%2A> Eigenschaft enthält eine <xref:System.Net.WebHeaderCollection> Instanz, die mit Headerinformationen über das an die Internetressource zu senden.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Header-Wert-Paare, die dieser Anforderung zugeordnet ist.  
+  
+ [!code-cpp[WebRequest_Headers#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_Headers/CPP/webrequest_headers.cpp#1)]
+ [!code-csharp[WebRequest_Headers#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_Headers/CS/webrequest_headers.cs#1)]
+ [!code-vb[WebRequest_Headers#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_Headers/VB/webrequest_headers.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonationLevel">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.TokenImpersonationLevel ImpersonationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Principal.TokenImpersonationLevel ImpersonationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.ImpersonationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.TokenImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ebene des Identitätswechsels für die aktuelle Anforderung ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Security.Principal.TokenImpersonationLevel" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ebene des Identitätswechsels bestimmt, wie der Server die Anmeldeinformationen des Clients verwenden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public virtual string Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Method" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse die in dieser Anforderung zu verwendende Protokollmethode ab oder legt diese fest.</summary>
+        <value>Die in dieser Anforderung zu verwendende Protokollmethode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer Nachfolgerklasse die <xref:System.Net.WebRequest.Method%2A> Eigenschaft enthält die Anforderungsmethode für diese Anforderung.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.Method%2A> Eigenschaft auf POST, um anzugeben, dass die Anforderung mit Daten auf dem Zielhost wird.  
+  
+ [!code-cpp[WebRequest_BeginGetRequest#3](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_BeginGetRequest/CPP/webrequest_begingetrequest.cpp#3)]
+ [!code-csharp[WebRequest_BeginGetRequest#3](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_BeginGetRequest/CS/webrequest_begingetrequest.cs#3)]
+ [!code-vb[WebRequest_BeginGetRequest#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_BeginGetRequest/VB/webrequest_begingetrequest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Wenn die Eigenschaft nicht in einer abgeleiteten Klasse überschrieben wird, erfolgt bei jedem Versuch zum Abrufen oder Festlegen der Eigenschaft.</exception>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="P:System.Net.WebRequest.Method" /> Eigenschaft darf eine beliebige gültige Anforderungsmethode für das Protokoll implementiert. Der Standardwert muss eine Standard-Anforderung/Antwort-Transaktion bereitstellen, die keine benötigt protokollspezifische Eigenschaften festgelegt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreAuthenticate">
+      <MemberSignature Language="C#" Value="public virtual bool PreAuthenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.PreAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer Nachfolgerklasse an, ob die Anforderung zuvor authentifiziert werden muss.</summary>
+        <value>
+          <see langword="true" /> für eine Vorauthentifizierung, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Ausnahme der ersten Anforderung der <xref:System.Net.WebRequest.PreAuthenticate%2A> Eigenschaft gibt an, ob Authentifizierungsinformationen mit nachfolgenden Anforderungen zu senden, ohne darauf warten, vom Server abgefragt werden. Wenn <xref:System.Net.WebRequest.PreAuthenticate%2A> ist `false`die <xref:System.Net.WebRequest> wartet, eine authentifizierungsaufforderung vor dem Senden der Authentifizierungsinformationen.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.PreAuthenticate%2A> Eigenschaft, um `true` , damit die <xref:System.Net.NetworkCredential> gespeichert, der <xref:System.Net.WebRequest.Credentials%2A> Eigenschaft an zusammen mit der Anforderung gesendet werden.  
+  
+ [!code-cpp[WebRequest_PreAuthenticate#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_PreAuthenticate/CPP/webrequest_preauthenticate.cpp#1)]
+ [!code-csharp[WebRequest_PreAuthenticate#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_PreAuthenticate/CS/webrequest_preauthenticate.cs#1)]
+ [!code-vb[WebRequest_PreAuthenticate#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_PreAuthenticate/VB/webrequest_preauthenticate.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+        <altmember cref="P:System.Net.HttpWebRequest.PreAuthenticate" />
+      </Docs>
+    </Member>
+    <Member MemberName="Proxy">
+      <MemberSignature Language="C#" Value="public virtual System.Net.IWebProxy Proxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IWebProxy Proxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.Proxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse den beim Zugriff auf diese Internetressource verwendeten Netzwerkproxy ab oder legt diesen fest.</summary>
+        <value>Der beim Zugriff auf die Internetressource zu verwendende <see cref="T:System.Net.IWebProxy" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.Proxy%2A> Eigenschaft identifiziert den Netzwerk-Proxy, der die Anforderung verwendet wird, Zugriff auf die Internetressource. Die Anforderung erfolgt über den Proxyserver, anstatt direkt an die Internetressource.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die aktuellen Netzwerk-Proxy-Adresse und ermöglicht es dem Benutzer eine neue Netzwerk-Proxy-Adresse und Portnummer zugewiesen.  
+  
+ [!code-cpp[WebRequest_Proxy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_Proxy/CPP/webrequest_proxy.cpp#1)]
+ [!code-csharp[WebRequest_Proxy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_Proxy/CS/webrequest_proxy.cs#1)]
+ [!code-vb[WebRequest_Proxy#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_Proxy/VB/webrequest_proxy.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterPortableWebRequestCreator">
+      <MemberSignature Language="C#" Value="public static void RegisterPortableWebRequestCreator (System.Net.IWebRequestCreate creator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterPortableWebRequestCreator(class System.Net.IWebRequestCreate creator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.RegisterPortableWebRequestCreator(System.Net.IWebRequestCreate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="creator" Type="System.Net.IWebRequestCreate" />
+      </Parameters>
+      <Docs>
+        <param name="creator">Das zu registrierende <see cref="T:System.Net.IWebRequestCreate" />-Objekt.</param>
+        <summary>Registrieren eines <see cref="T:System.Net.IWebRequestCreate" />-Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterPrefix">
+      <MemberSignature Language="C#" Value="public static bool RegisterPrefix (string prefix, System.Net.IWebRequestCreate creator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool RegisterPrefix(string prefix, class System.Net.IWebRequestCreate creator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.RegisterPrefix(System.String,System.Net.IWebRequestCreate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="creator" Type="System.Net.IWebRequestCreate" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Der vollständige URI oder das URI-Präfix, der bzw. das der<see cref="T:System.Net.WebRequest" /> -Nachfolger bearbeitet.</param>
+        <param name="creator">Die Erstellungsmethode, die die <see cref="T:System.Net.WebRequest" /> zum Erstellen des <see cref="T:System.Net.WebRequest" />-Nachfolgers aufruft.</param>
+        <summary>Registriert einen <see cref="T:System.Net.WebRequest" />-Nachfolger für den angegebenen URI.</summary>
+        <returns>
+          <see langword="true" />, wenn die Registrierung erfolgreich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.RegisterPrefix%2A> Methode registriert <xref:System.Net.WebRequest> Nachfolger zu Service-Requests. <xref:System.Net.WebRequest>Nachfolger sind in der Regel zum Behandeln eines bestimmten Protokolls, z. B. HTTP oder FTP, registriert, jedoch können registriert werden, um eine Anforderung für einen bestimmten Server oder einen Pfad auf einem Server zu behandeln.  
+  
+ Die zuvor registrierten Reservetypen, die bereits registriert umfassen Folgendes:  
+  
+-   `http://`  
+  
+-   `https://`  
+  
+-   `ftp://`  
+  
+-   `file://`  
+  
+ Weitere Informationen finden Sie unter der <xref:System.Net.WebRequest.Create%28System.String%29> und <xref:System.Net.WebRequest.Create%28System.Uri%29> Methoden.  
+  
+ Doppelte Präfixe sind nicht zulässig. <xref:System.Net.WebRequest.RegisterPrefix%2A>Gibt `false` wird ein Versuch unternommen, eine doppelte-Präfix zu registrieren.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.HttpWebRequest> Klasse für dienstanforderungen für HTTP- und HTTPS-Schemas standardmäßig registriert ist. Versucht, ein anderes registrieren <xref:System.Net.WebRequest> -Nachfolger für diese Schemas schlägt fehl.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="prefix" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="creator" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public virtual Uri RequestUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri RequestUri" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.RequestUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse den mit der Anforderung verknüpften URI der Internetressource ab.</summary>
+        <value>Ein <see cref="T:System.Uri" />, der die der Anforderung zugeordnete Ressource darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer Nachfolgerklasse die <xref:System.Net.WebRequest.RequestUri%2A> Eigenschaft enthält die <xref:System.Uri> Instanz, <xref:System.Net.WebRequest.Create%2A> Methode zum Erstellen der Anforderung verwendet.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft die <xref:System.Net.WebRequest.RequestUri%2A> -Eigenschaft können Sie die ursprünglich angeforderte Site zu bestimmen.  
+  
+ [!code-cpp[WebRequest_RequestUri1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_RequestUri1/CPP/webrequest_requesturi.cpp#1)]
+ [!code-csharp[WebRequest_RequestUri1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_RequestUri1/CS/webrequest_requesturi.cs#1)]
+ [!code-vb[WebRequest_RequestUri1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_RequestUri1/VB/webrequest_requesturi.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="P:System.Net.WebRequest.RequestUri" />muss die ursprüngliche enthalten <see cref="T:System.Uri" /> Instanz übergeben, um die <see cref="M:System.Net.WebRequest.Create(System.Uri)" /> Methode. Wenn das Protokoll zum Umleiten der Anforderung an einen anderen URI die Anforderung zu bedienen kann, muss eine Eigenschaft, um den URI enthalten, die die Anforderung tatsächlich Nachfolger bereitstellen</para>
+        </block>
+        <altmember cref="P:System.Net.HttpWebRequest.RequestUri" />
+        <altmember cref="P:System.Net.HttpWebRequest.Address" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebRequest.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den serialisierten Daten für die <see cref="T:System.Net.WebRequest" />.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> mit dem Ziel des serialisierten Streams, der der neuen <see cref="T:System.Net.WebRequest" /> zugeordnet ist.</param>
+        <summary>Füllt beim Überschreiben in einer Nachfolgerklasse eine <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Instanz mit den Daten auf, die zum Serialisieren der <see cref="T:System.Net.WebRequest" /> erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf das Objekt zu serialisieren, wenn die Schnittstelle nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public virtual int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeitspanne in Millisekunden bis zum Überschreiten des Zeitlimits der Anforderung ab.</summary>
+        <value>Der Zeitraum bis zum Timeout der Anforderung in Millisekunden oder der Wert <see cref="F:System.Threading.Timeout.Infinite" />, der angibt, dass für die Anforderung kein Timeout festgelegt wurde. Der Standardwert wird von der Nachfolgerklasse definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebRequest.Timeout%2A> Eigenschaft gibt die Zeitdauer in Millisekunden an, bis die Anforderung ein Timeout eintritt und löst eine <xref:System.Net.WebException>. Die <xref:System.Net.WebRequest.Timeout%2A> Eigenschaft wirkt sich auf nur synchronen Anforderungen durch die <xref:System.Net.WebRequest.GetResponse%2A> Methode. Die asynchrone Anforderungen Zeitlimit überschreitet, verwendet die <xref:System.Net.WebRequest.Abort%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebRequest> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebRequest> Instanzen zur Laufzeit wird von der Nachfolgerklasse zurückgegebenes bestimmt die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebRequest> und <xref:System.Net.FileWebRequest>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebRequest.Timeout%2A> -Eigenschaft auf 10.000 Millisekunden. Wenn das Timeout abläuft, bevor die Ressource zurückgegeben werden kann, eine <xref:System.Net.WebException> ausgelöst wird.  
+  
+ [!code-cpp[WebRequest_Timeout#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebRequest_Timeout/CPP/webrequest_timeout.cpp#1)]
+ [!code-csharp[WebRequest_Timeout#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebRequest_Timeout/CS/webrequest_timeout.cs#1)]
+ [!code-vb[WebRequest_Timeout#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebRequest_Timeout/VB/webrequest_timeout.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen signalisieren einen Timeout durch Auslösen einer <see cref="T:System.Net.WebException" /> mit der <see cref="P:System.Net.WebException.Status" /> -Feld festgelegt, sodass <see cref="F:System.Net.WebExceptionStatus.Timeout" />. Wenn <see cref="P:System.Net.WebRequest.Timeout" /> festgelegt ist, um <see cref="F:System.Threading.Timeout.Infinite" /> die Nachfolgerklasse gibt kein Timeout.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultCredentials">
+      <MemberSignature Language="C#" Value="public virtual bool UseDefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebRequest.UseDefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse einen <see cref="T:System.Boolean" />-Wert ab, der steuert, ob mit Anforderungen <see cref="P:System.Net.CredentialCache.DefaultCredentials" /> gesendet werden, oder legt einen solchen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Standardanmeldeinformationen verwendet werden, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` bei Anforderungen von diesem <xref:System.Net.WebRequest> Objekt sollte, wenn vom Server angefordert authentifiziert werden mit den Anmeldeinformationen des angemeldeten Benutzers. Bei Clientanwendungen ist dies das gewünschte Verhalten in den meisten Szenarien. Für Anwendungen der mittleren Ebene, z. B. ASP.NET-Anwendungen, anstatt Sie mithilfe dieser Eigenschaft, legen Sie in der Regel die <xref:System.Net.WebRequest.Credentials%2A> Eigenschaft, um die Anmeldeinformationen des Clients auf, deren Namen die Anforderung erfolgt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Sie haben versucht, diese Eigenschaft nach dem Senden der Anforderung festzulegen.</exception>
+        <exception cref="T:System.NotImplementedException">Es wird versucht, auf die Eigenschaft zuzugreifen, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

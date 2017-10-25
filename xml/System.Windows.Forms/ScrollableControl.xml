@@ -1,0 +1,1200 @@
+<Type Name="ScrollableControl" FullName="System.Windows.Forms.ScrollableControl">
+  <TypeSignature Language="C#" Value="public class ScrollableControl : System.Windows.Forms.Control, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollableControl extends System.Windows.Forms.Control implements class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollableControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ScrollableControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine Basisklasse für Steuerelemente, die Unterstützung des Verhaltens des automatischen Bildlaufs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie in der Regel verwenden Sie nicht die <xref:System.Windows.Forms.ScrollableControl> -Klasse direkt verwendet. Die <xref:System.Windows.Forms.ContainerControl> und <xref:System.Windows.Forms.Panel> Klassen, die von dieser Klasse erben.  
+  
+ Die <xref:System.Windows.Forms.ScrollableControl> -Klasse fungiert als Basisklasse für Steuerelemente, die die Möglichkeit, einen Bildlauf erfordern. Um ein Steuerelement Bildlaufleisten angezeigt, je nach Bedarf zu aktivieren, legen die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> Eigenschaft `true` und legen Sie die <xref:System.Windows.Forms.ScrollableControl.AutoScrollMinSize%2A> Eigenschaft auf die gewünschte Größe. Wenn das Steuerelement ist kleiner als die angegebene Mindestgröße angepasst, oder ein untergeordnetes Steuerelement sich außerhalb der Grenzen des Steuerelements befindet, werden die entsprechenden Bildlaufleisten angezeigt.  
+  
+ Um manuell überschreiben, welche Bildlaufleisten angezeigt werden, legen die <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> und <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> Eigenschaften. Wenn entweder die Eigenschaft festgelegt ist, `false`, die entsprechenden Bildlaufleiste ist nicht sichtbar, selbst wenn die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`.  
+  
+ Sie behandeln können die <xref:System.Windows.Forms.ScrollableControl.Scroll> Ereignis bekannt sein, wenn der Benutzer oder von Code des Clientbereichs verschiebt.  
+  
+ Wenn Sie Steuerelemente programmgesteuert zu einem Formular hinzufügen, verwenden die <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A> Eigenschaft, um das Steuerelement entweder innerhalb oder außerhalb des Bereichs der aktuellen sichtbaren Scroll positionieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollableControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ScrollableControl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Windows.Forms.ScrollableControl.%23ctor%2A> Konstruktor führt die folgenden Aktionen aus:  
+  
+-   Markiert die aktuelle Instanz als Containersteuerelement durch Aufrufen der <xref:System.Windows.Forms.Control.SetStyle%2A> -Methode zum Festlegen der <xref:System.Windows.Forms.ControlStyles.ContainerControl> Stil `true`.  
+  
+-   Aktiviert das Löschen des Hintergrunds durch Festlegen der <xref:System.Windows.Forms.ControlStyles.AllPaintingInWmPaint> auf `false`.  
+  
+-   Durch Aufrufen des automatischen Bildlaufs deaktiviert die <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> -Methode zum Festlegen der <xref:System.Windows.Forms.ScrollableControl.ScrollStateAutoScrolling> -Bit in `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustFormScrollbars">
+      <MemberSignature Language="C#" Value="protected virtual void AdjustFormScrollbars (bool displayScrollbars);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AdjustFormScrollbars(bool displayScrollbars) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.AdjustFormScrollbars(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="displayScrollbars" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="displayScrollbars">
+          <see langword="true" />, um die Bildlaufleisten anzuzeigen, andernfalls <see langword="false" />.</param>
+        <summary>Passt die Bildlaufleisten im Container anhand der aktuellen Positionen der Steuerelemente und des aktuell ausgewählten Steuerelements an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn erforderlich, die <xref:System.Windows.Forms.ScrollableControl.AdjustFormScrollbars%2A> Methode legt die Client-Bereich, einschließlich der Größe der Anzeigebereich nach Bedarf, um die Bildlaufleisten zu berücksichtigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScroll">
+      <MemberSignature Language="C#" Value="public virtual bool AutoScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.AutoScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Container Bildlauf zu allen Steuerelementen, die außerhalb des sichtbaren Bereichs platziert werden können.</summary>
+        <value>
+          <see langword="true" />Wenn der Container des automatischen Bildlaufs aktiviert; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true`, diese Eigenschaft ermöglicht den Container an eine virtuelle Größe aufweisen, die größer als des sichtbaren Bereichs ist.  
+  
+ In Windows Forms besteht derzeit eine Einschränkung, die die ordnungsgemäße Funktion aller von <xref:System.Windows.Forms.ScrollableControl> abgeleiteten Klassen verhindert, wenn sowohl <xref:System.Windows.Forms.Control.RightToLeft%2A> aktiviert als auch <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> auf <xref:System.Windows.Forms.RightToLeft.Yes> festgelegt ist. Angenommen, Sie platzieren z. B. das <xref:System.Windows.Forms.Panel>-Steuerelement oder eine von <xref:System.Windows.Forms.Panel> abgeleitete Containerklasse (z. B. <xref:System.Windows.Forms.FlowLayoutPanel> oder <xref:System.Windows.Forms.TableLayoutPanel>) in einem Formular. Wenn Sie <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> im Container auf <xref:System.Windows.Forms.RightToLeft.Yes> und dann die <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft für mindestens ein Steuerelement im Container auf <xref:System.Windows.Forms.AnchorStyles.Right> festlegen, wird grundsätzlich keine Schiebeleiste angezeigt. Die von <xref:System.Windows.Forms.ScrollableControl> abgeleitete Klasse verhält sich so, als ob <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> auf <xref:System.Windows.Forms.RightToLeft.No> festgelegt wäre.   
+  
+ Die einzige Problemumgehung besteht derzeit darin, <xref:System.Windows.Forms.ScrollableControl> in einem anderen <xref:System.Windows.Forms.ScrollableControl> zu schachteln. Wenn Sie beispielsweise in dieser Situation die Funktion von <xref:System.Windows.Forms.TableLayoutPanel> benötigen, können Sie es in einem <xref:System.Windows.Forms.Panel>-Steuerelement platzieren und <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> in <xref:System.Windows.Forms.Panel> auf <xref:System.Windows.Forms.RightToLeft.Yes> festlegen.   
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>die Sichtbarkeit der Bildlaufleisten verwaltet automatisch. Daher ist das Festlegen der <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> oder <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> Eigenschaft `true` hat keine Wirkung, wenn <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> aktiviert ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie die horizontalen bzw. vertikalen Balken werden automatisch bereitgestellt, wenn bei Bedarf die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`. Um das Beispiel auszuführen, gehen Sie folgendermaßen vor:  
+  
+1.  Erstellen Sie eine neue Windows Forms-Anwendung.  
+  
+2.  Fügen Sie dem Formular eine <xref:System.Windows.Forms.Panel> hinzu.  
+  
+3.  Hinzufügen einer <xref:System.Windows.Forms.TextBox> , wenn der Bereich, und nennen Sie sie `text1`.  
+  
+4.  Verschieben Sie das Textfeld aus, sodass im rechten Bereich über dem rechten Rand des Bereichs hinausgeht.  
+  
+     Nur einen Umriss des Teils des Textfelds, die außerhalb der Begrenzungen des Bereichs liegt, sollte angezeigt werden. Wenn das gesamte Textfeld angezeigt wird, ist das Textfeld auf dem Formular und nicht in der Systemsteuerung.  
+  
+5.  Fügen Sie dem Formular eine <xref:System.Windows.Forms.Button> hinzu.  
+  
+6.  Fügen Sie einen Handler für das `Click` -Ereignis der Schaltfläche.  
+  
+7.  Fügen Sie den folgenden Beispielcode hinzu und rufen sie über der Schaltfläche `Click` Handler.  
+  
+ Wenn Sie das Beispiel ausführen, sehen Sie nur den Teil des Textfelds, die innerhalb der Grenzen des Bereichs liegt. Wenn Sie die Schaltfläche klicken, sehen Sie eine horizontale Bildlaufleiste angezeigt wird, ermöglicht, den Rest des Textfelds anzuzeigen.  
+  
+ Wenn Sie einen Teil des im Textfeld unterhalb des Bereichs zu positionieren, sehen Sie eine vertikale Bildlaufleiste angezeigt, wenn Sie die Schaltfläche klicken.  
+  
+ Der Beispielcode überprüft fest, um festzustellen, ob das Textfeld, außerhalb des Bereichs ist, bevor sie ist die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> Eigenschaft `true`, und bevor er festgelegt die <xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A> Eigenschaft. Dies ist außerhalb des Bereichs Überprüfung nicht erforderlich. Wenn <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> festgelegt ist, um `true`, werden keine Bildlaufleisten angezeigt, wenn das Textfeld vollständig innerhalb des Bereichs ist. Darüber hinaus können Sie die Ränder die Standardeinstellungen von 0,0 lassen.  
+  
+ [!code-cpp[Classic ScrollableControl.AutoScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.AutoScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.AutoScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.AutoScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.AutoScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.AutoScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMargin">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.AutoScrollMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des AutoBildlaufrandes ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die Höhe und Breite des AutoBildlaufrandes in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die AutoBildlaufrandes entspricht dem Abstand zwischen untergeordneten Steuerelementen und den Rändern des bildlauffähigen übergeordneten Steuerelements. Die <xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A> Größe wird auf die Größe von untergeordneten Steuerelementen in bildlauffähigen Steuerelement um zu bestimmen, und zwar unabhängig davon, ob Bildlaufleisten enthaltenen hinzugefügt. Die <xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A> -Eigenschaft wird ausgewertet, wenn die Größe bildlauffähigen übergeordneten Steuerelements geändert wird oder die einzelnen untergeordneten Steuerelemente in der Ansicht, und wird verwendet, um zu bestimmen, ob Bildlaufleisten angezeigt werden müssen. Angedockten Steuerelemente werden von den Berechnungen ausgeschlossen, die bestimmen, ob Bildlaufleisten angezeigt werden müssen.  
+  
+> [!NOTE]
+>  Wenn des Steuerelements <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DockStyle?displayProperty=nameWithType>, füllt das Steuerelement bildlauffähigen übergeordneten Steuerelements und das verankerte Steuerelement wird ignoriert, wenn mit der <xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A> zu bestimmen, ob Bildlaufleisten erforderlich sind.  
+  
+ Wenn der Abstand zwischen dem Rand eines untergeordneten Steuerelements und bildlauffähigen übergeordneten Steuerelements kleiner als der zugewiesene Wert ist die <xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A> Eigenschaft und die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`, wird die entsprechende Bildlaufleiste angezeigt.  
+  
+> [!NOTE]
+>  Es wird empfohlen, wenn Steuerelemente in einem bildlauffähigen Steuerelement andocken, dass Sie ein untergeordnetes bildlauffähiges Steuerelement hinzufügen, z. B. eine <xref:System.Windows.Forms.Panel>, um weitere Steuerelemente enthalten, die einen Bildlauf erfordern kann. Sollten Sie das untergeordnete Element hinzufügen <xref:System.Windows.Forms.Panel> Steuerelement bildlauffähigen Steuerelement und seine <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DockStyle?displayProperty=nameWithType> und seine <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`. Sie sollten festlegen, die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> Eigenschaft des bildlauffähigen übergeordneten Steuerelements auf `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet die abgeleitete Klasse <xref:System.Windows.Forms.Panel>. Im Beispiel wird die Position eines Textfelds ausgewertet und ändert das Aussehen und Verhalten des übergeordneten Containers, das Panel-Steuerelement. Im Beispiel erfordert, dass es sich bei der Erstellung einer Instanz von einem <xref:System.Windows.Forms.Panel> -Steuerelement, <xref:System.Windows.Forms.TextBox>, und <xref:System.Windows.Forms.Button>. Platzieren Sie das Textfeld im Bereich, damit es mindestens eine der Kanten im Bereich überschneidet. Rufen Sie diese Funktion auf einem Klick auf eine Schaltfläche, um den Unterschied im Verhalten und die Darstellung des Bereichs anzuzeigen.  
+  
+ [!code-cpp[Classic ScrollableControl.AutoScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.AutoScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.AutoScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.AutoScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.AutoScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.AutoScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Drawing.Size.Height" /> oder <see cref="P:System.Drawing.Size.Width" /> zugewiesene Wert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMinSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.AutoScrollMinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Größe des AutoBildlaufs ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , bestimmt die minimale Größe des virtuellen Bereichs, die über die der Benutzer einen Bildlauf durchführen kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.AutoScrollMinSize%2A> Eigenschaft wird verwendet, um die Größe des Bildschirms an die automatischen Schiebeleisten zugeordnet zu verwalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollPosition">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point AutoScrollPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point AutoScrollPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.AutoScrollPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort der automatische Bildlauf Position fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" /> , der Position des AutoBildlaufs in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A> Eigenschaft stellt den Speicherort des sichtbaren Teils eines bildlauffähigen Steuerelements dar. Verwenden Sie diese Eigenschaft, um den Teil des Steuerelements ändern, die angezeigt wird.  
+  
+ Wenn Sie Steuerelemente programmgesteuert zu einem Formular hinzufügen, verwenden die <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A> Eigenschaft, um das Steuerelement entweder innerhalb oder außerhalb des Bereichs der aktuellen sichtbaren Scroll positionieren.  
+  
+> [!NOTE]
+>  Die <xref:System.Drawing.Point.X%2A> und <xref:System.Drawing.Point.Y%2A> -Koordinate abgerufenen Werte negativ ist, wenn das Steuerelement die Anfangsposition (0,0) Bildlauf durchgeführt wurde. Wenn Sie diese Eigenschaft festlegen, Sie müssen immer zuweisen positive <xref:System.Drawing.Point.X%2A> und <xref:System.Drawing.Point.Y%2A> Werte festzulegende Bildlaufposition relativ zur Position ab. Z. B. Wenn Sie eine horizontale Bildlaufleiste angezeigt, und Sie X und y auf 200 festlegen haben, verschieben Sie das Bildlauffeld 200 Pixel rechts; Wenn Sie X und y auf 100 erhöht, der Bildlauf angezeigt wird links von 100 Pixel zu springen, da Sie es 100 Pixel von der Startposition festlegen. Im ersten Fall <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A> gibt {-200, 0}; im zweiten Fall gibt es {-100,0}.  
+  
+ Erkennen, wann <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A> Änderungen, erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Control.Paint> -Ereignis den alte Positionswert in einer privaten Variablen speichern, und vergleichen Sie den neuen Wert auf den alten Wert in nachfolgenden <xref:System.Windows.Forms.Control.Paint> Ereignisse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.ScrollableControl> abgeleitete Klasse <xref:System.Windows.Forms.Panel> und fügt Sie in die linke obere Ecke des bildlauffähigen Bereichs eine Schaltfläche hinzu. Im Beispiel kann der Offset bestimmt, indem die <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A>. Im Beispiel wurde geschrieben, unter der Annahme, die eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Panel> mit einer <xref:System.Windows.Forms.Button> darauf. Platzieren Sie die Schaltfläche zum Aktivieren des automatischen Bildlaufs, außerhalb der Clientbereich der <xref:System.Windows.Forms.Panel>.  
+  
+ [!code-cpp[Windows.Forms.ScrollableControl#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.ScrollableControl/CPP/scrollablecontrol.cpp#1)]
+ [!code-csharp[Windows.Forms.ScrollableControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.ScrollableControl/CS/scrollablecontrol.cs#1)]
+ [!code-vb[Windows.Forms.ScrollableControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.ScrollableControl/VB/scrollablecontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benötigten Erstellungsparameter ab, wenn das Steuerelementhandle erstellt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayRectangle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle DisplayRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle DisplayRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.DisplayRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Rechteck, das den virtuellen Anzeigebereich des Steuerelements darstellt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" />, das den Anzeigebereich des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Forms.ScrollableControl.DisplayRectangle%2A> Eigenschaft ist für die virtuelle Größe und Position von der <xref:System.Windows.Forms.ScrollableControl> Steuerelement. Z. B. wenn die Breite und Höhe der <xref:System.Windows.Forms.ScrollableControl> sind beide 100 Pixel und das Steuerelement enthält Steuerelemente, die über die Grenzen hinaus erweitern <xref:System.Windows.Forms.ScrollableControl.DisplayRectangle%2A> stellt die Größe der <xref:System.Windows.Forms.ScrollableControl> benötigt, um die darin enthaltenen Steuerelemente umfassen. Auf ähnliche Weise die <xref:System.Drawing.Rectangle.X%2A> und <xref:System.Drawing.Rectangle.Y%2A> Eigenschaften des <xref:System.Windows.Forms.ScrollableControl.DisplayRectangle%2A> für die Bildlaufposition des relevant sind die <xref:System.Windows.Forms.ScrollableControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPadding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollableControl.DockPaddingEdges DockPadding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ScrollableControl/DockPaddingEdges DockPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.DockPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollableControl+DockPaddingEdges</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Andocken Einstellungen für alle Ränder des Steuerelements ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ScrollableControl.DockPaddingEdges" /> , das die Auffüllung für alle Ränder des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft steuert den Rahmen innerhalb dieses Steuerelements angedockten Komponenten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet die abgeleitete Klasse <xref:System.Windows.Forms.Panel>. Im Beispiel wird eine Schaltfläche in einem Panel-Steuerelement angedockt und durchläuft die <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> Eigenschaften, die jeweils einzeln in einem Klick auf die Schaltfläche "" festlegen. Im Beispiel erfordert, dass Sie eine Instanz von erstellt haben eine <xref:System.Windows.Forms.Panel> Steuerelement und ein <xref:System.Windows.Forms.Button> in einem Formular und Sie haben die Membervariable auf Ebene namens deklariert `myCounter` als eine 32-Bit-Ganzzahl mit Vorzeichen. Rufen Sie diesen Code auf die <xref:System.Windows.Forms.Control.Click> -Ereignis der Schaltfläche.  
+  
+ [!code-cpp[Classic ScrollableControl.DockPadding Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.DockPadding Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.DockPadding Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.DockPadding Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.DockPadding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.DockPadding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScrollState">
+      <MemberSignature Language="C#" Value="protected bool GetScrollState (int bit);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool GetScrollState(int32 bit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.GetScrollState(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bit" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bit">Das Flag zum überprüfen.</param>
+        <summary>Bestimmt, ob das angegebene Flag festgelegt wurde.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Flag festgelegt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle beschreibt die Flags der <xref:System.Windows.Forms.ScrollableControl> steuern verwendet.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|<xref:System.Windows.Forms.ScrollableControl.ScrollStateAutoScrolling>|Eine Maske zum Abrufen von, ob die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`.|  
+|<xref:System.Windows.Forms.ScrollableControl.ScrollStateHScrollVisible>|Eine Maske zum Abrufen von, ob die <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> -Eigenschaftensatz auf `true`.|  
+|<xref:System.Windows.Forms.ScrollableControl.ScrollStateVScrollVisible>|Eine Maske zum Abrufen von, ob die <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> -Eigenschaftensatz auf `true`.|  
+|<xref:System.Windows.Forms.ScrollableControl.ScrollStateUserHasScrolled>|Eine Maske zum Abrufen von, ob der Benutzer vorgenommen hat die <xref:System.Windows.Forms.ScrollableControl> Scroll.|  
+|<xref:System.Windows.Forms.ScrollableControl.ScrollStateFullDrag>|Eine Maske zum Abrufen von, ob der Benutzer den vollständigen Fenster Drag-and-Drop-Vorgang aktiviert hat.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScroll">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HScrollProperties HorizontalScroll { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HScrollProperties HorizontalScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.HorizontalScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HScrollProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Merkmale ab, die der horizontalen Scrollleiste zugeordnet sind.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.HScrollProperties" /> , Informationen über die horizontale Bildlaufleiste enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.HScrollProperties> -Klasse enthält Informationen über die Bildlaufleiste und den Betrieb, z. B., ob es aktiviert und sichtbar ist, führen Sie einen Bildlauf Seitengröße, Ausrichtung, Position angezeigt, und so weiter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HScroll">
+      <MemberSignature Language="C#" Value="protected bool HScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.HScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die horizontale Bildlaufleiste sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die horizontale Bildlaufleiste sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktionalität der <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> Eigenschaft kann auch über Aufrufe erreicht werden die <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> und <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> Methoden mit <xref:System.Windows.Forms.ScrollableControl.ScrollStateHScrollVisible> als Parameter.  
+  
+ **Hinweis** <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> die Sichtbarkeit der Bildlaufleisten automatisch verwaltet. Daher ist das Festlegen der <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> oder <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> Eigenschaften `true` verfügen über keine Wirkung, wenn <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs levent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs levent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="levent" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="levent">Ein <see cref="T:System.Windows.Forms.LayoutEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Layout" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseWheel" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die vertikale Bildlaufleiste sichtbar ist, d. h., die <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> -Eigenschaftensatz auf `true`, das Mausrad scrollt durch die <xref:System.Windows.Forms.ScrollableControl> vertikal zu steuern. Allerdings nur die horizontale Bildlaufleiste sichtbar ist, d. h., der <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> festgelegt ist, um `false` und die <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> Eigenschaft, um festzulegen `true,` des Mausrads ein horizontaler Bildlauf durchgeführt.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.ScrollableControl.OnMouseWheel%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.ScrollableControl.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.ScrollableControl.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaddingChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPaddingChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaddingChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.OnPaddingChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.PaddingChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.ScrollableControl.OnPaddingChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.ScrollableControl.OnPaddingChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.ScrollableControl.OnPaddingChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintBackground">
+      <MemberSignature Language="C#" Value="protected override void OnPaintBackground (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintBackground(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Zeichnet den Hintergrund des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.ScrollableControl.OnPaintBackground%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.ScrollableControl.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.ScrollableControl.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRightToLeftChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRightToLeftChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.OnRightToLeftChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.RightToLeftChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScroll">
+      <MemberSignature Language="C#" Value="protected virtual void OnScroll (System.Windows.Forms.ScrollEventArgs se);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScroll(class System.Windows.Forms.ScrollEventArgs se) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.OnScroll(System.Windows.Forms.ScrollEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="se" Type="System.Windows.Forms.ScrollEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="se">Ein <see cref="T:System.Windows.Forms.ScrollEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ScrollableControl.Scroll" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.ScrollableControl.OnScroll%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ScrollableControl.OnScroll(System.Windows.Forms.ScrollEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ScrollableControl.OnScroll(System.Windows.Forms.ScrollEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisibleChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisibleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnVisibleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.OnVisibleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.VisibleChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleControl">
+      <MemberSignature Language="C#" Value="protected override void ScaleControl (System.Drawing.SizeF factor, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ScaleControl(valuetype System.Drawing.SizeF factor, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.ScaleControl(System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factor" Type="System.Drawing.SizeF" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="factor">Der Faktor, um den die Höhe und die Breite des Steuerelements skaliert werden.</param>
+        <param name="specified">Ein <see cref="T:System.Windows.Forms.BoundsSpecified" />-Wert, der die Begrenzungen des Steuerelements angibt und bei der Definition von Größe und Position verwendet wird.</param>
+        <summary>Skaliert Speicherort, Größe, Textabstand und Rand eines Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleCore">
+      <MemberSignature Language="C#" Value="protected override void ScaleCore (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ScaleCore(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.ScaleCore(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Der Faktor für die horizontale Skalierung.</param>
+        <param name="dy">Der Faktor für die vertikale Skalierung.</param>
+        <summary>Diese Methode ist für diese Klasse nicht relevant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ScrollEventHandler Scroll;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ScrollEventHandler Scroll" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollableControl.Scroll" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn vom Benutzer oder von Code ein Bildlauf durch den Clientbereich durchgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.Scroll> Ereignis tritt auf, wenn durch den Clientbereich Bildlauf durch die Interaktion mit den Bildlaufleisten, oder wenn der Benutzer navigiert zwischen Steuerelementen und das zum aktive Steuerelement Bildlauf sichtbar. Die <xref:System.Windows.Forms.ScrollableControl.Scroll> -Ereignis tritt auch beim Schreiben von Code, z. B. die Einstellung der <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A> Eigenschaft, die ein Bildlauf durch den Clientbereich durchgeführt.  
+  
+ Können Sie die <xref:System.Windows.Forms.ScrollEventArgs.ScrollOrientation%2A> Eigenschaft im Ereignishandler bestimmt die Ausrichtung der Schiebeleiste für die <xref:System.Windows.Forms.ScrollableControl.Scroll> Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ScrollableControl.Scroll> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ScrollableControl>, z. B. eine <xref:System.Windows.Forms.Panel> oder <xref:System.Windows.Forms.ContainerControl>. Geben Sie den Namen der Instanz `ScrollableControl1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ScrollableControl.Scroll> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#74](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#74)]
+ [!code-vb[System.Windows.Forms.EventExamples#74](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollControlIntoView">
+      <MemberSignature Language="C#" Value="public void ScrollControlIntoView (System.Windows.Forms.Control activeControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollControlIntoView(class System.Windows.Forms.Control activeControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.ScrollControlIntoView(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activeControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="activeControl">Das durch einen Bildlauf anzuzeigende untergeordnete Steuerelement.</param>
+        <summary>Führt einen Bildlauf durch, um das angegebene untergeordnete Steuerelement in einem Steuerelement anzuzeigen, für das der automatische Bildlauf aktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> Eigenschaft muss festgelegt werden, um `true`, mindestens die Bildlaufleisten, Horizontal oder vertikal, muss auch in der sichtbar ist, für die <xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A> Methode, um die Auswirkungen haben. Die horizontale und vertikale Bildlaufleisten Einblenden der <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> und <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> Eigenschaften bzw. müssen festgelegt werden `true`.  
+  
+ Wenn die `activeControl` Parameter kein untergeordnetes Steuerelement ist, erfolgt keine Aktion.  
+  
+ Diese Methode löst möglicherweise die <xref:System.Windows.Forms.ScrollableControl.Scroll> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für ein Formular automatischen Bildlauf ermöglicht, ändert die Größe des Formulars und stellt sicher, dass eine Schaltfläche sichtbar bleibt, nachdem die Größe des Formulars. Im Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.Button> mit dem Namen `button2` darauf.  
+  
+ [!code-cpp[Windows.Forms.Control Member5#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Member5/CPP/controlmembers5.cpp#2)]
+ [!code-csharp[Windows.Forms.Control Member5#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Member5/CS/controlmembers5.cs#2)]
+ [!code-vb[Windows.Forms.Control Member5#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Member5/VB/controlmembers5.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollStateAutoScrolling">
+      <MemberSignature Language="C#" Value="protected const int ScrollStateAutoScrolling = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal int32 ScrollStateAutoScrolling = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollableControl.ScrollStateAutoScrolling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Bestimmt den Wert der <see cref="P:System.Windows.Forms.ScrollableControl.AutoScroll" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.ScrollStateAutoScrolling> Feld ist eine Maske. Verwenden Sie es mit der <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> und <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> Methoden zum Abrufen und Festlegen der <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollStateFullDrag">
+      <MemberSignature Language="C#" Value="protected const int ScrollStateFullDrag = 16;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal int32 ScrollStateFullDrag = (16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollableControl.ScrollStateFullDrag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>Bestimmt, ob der Benutzer Fensterinhalts aktiviert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.ScrollStateFullDrag> Feld ist eine Maske. Verwenden Sie es mit der <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> und <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> Methoden zum Abrufen und festlegen, ob der Benutzer aktiviert hat, vollständige Fenster ziehen.  
+  
+ Wenn Fensterinhalts aktiviert ist, wird der Inhalt von Windows angezeigt, wenn der Benutzer wechselt und die Windows-Größen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollStateHScrollVisible">
+      <MemberSignature Language="C#" Value="protected const int ScrollStateHScrollVisible = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal int32 ScrollStateHScrollVisible = (2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollableControl.ScrollStateHScrollVisible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Bestimmt, ob der Wert der <see cref="P:System.Windows.Forms.ScrollableControl.HScroll" /> -Eigenschaftensatz auf <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.ScrollStateHScrollVisible> Feld ist eine Maske. Verwenden Sie es mit der <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> und <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> Methoden zum Abrufen und Festlegen der <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollStateUserHasScrolled">
+      <MemberSignature Language="C#" Value="protected const int ScrollStateUserHasScrolled = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal int32 ScrollStateUserHasScrolled = (8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollableControl.ScrollStateUserHasScrolled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Bestimmt, ob der Benutzer einen Bildlauf durchgeführt hatte die <see cref="T:System.Windows.Forms.ScrollableControl" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.ScrollStateUserHasScrolled> Feld ist eine Maske. Verwenden Sie es mit der <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> Methode zum Abrufen von, ob der Benutzer einen Bildlauf durchgeführt hatte die <xref:System.Windows.Forms.ScrollableControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollStateVScrollVisible">
+      <MemberSignature Language="C#" Value="protected const int ScrollStateVScrollVisible = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal int32 ScrollStateVScrollVisible = (4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollableControl.ScrollStateVScrollVisible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Bestimmt, ob der Wert der <see cref="P:System.Windows.Forms.ScrollableControl.VScroll" /> -Eigenschaftensatz auf <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.ScrollStateVScrollVisible> Feld ist eine Maske. Verwenden Sie es mit der <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> und <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> Methoden zum Abrufen und Festlegen der <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToControl">
+      <MemberSignature Language="C#" Value="protected virtual System.Drawing.Point ScrollToControl (System.Windows.Forms.Control activeControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Drawing.Point ScrollToControl(class System.Windows.Forms.Control activeControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.ScrollToControl(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activeControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="activeControl">Das durch einen Bildlauf anzuzeigende untergeordnete Steuerelement.</param>
+        <summary>Berechnet die Bildlaufoffset an das angegebene untergeordnete Steuerelement an.</summary>
+        <returns>Die linke obere <see cref="T:System.Drawing.Point" /> neben dem Anzeigebereich relativ zum Clientbereich des Steuerelements Bildlauf anzuzeigende erforderlich.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A> -Methode verwendet die <xref:System.Windows.Forms.ScrollableControl.ScrollToControl%2A> Methode zum Berechnen, wie weit der Bildlauf durchgeführt werden muss, um das angegebene Steuerelement anzuzeigen. Die <xref:System.Windows.Forms.Control.AutoScrollOffset%2A> Eigenschaft des untergeordneten Steuerelements wird zum Anpassen der Bildlaufposition verwendet.  
+  
+ <xref:System.Windows.Forms.ScrollableControl.ScrollToControl%2A>bewirkt das Durchführen eines Bildlaufs nicht; die <xref:System.Windows.Forms.ScrollableControl.SetDisplayRectLocation%2A> Methode wird in der Regel verwendet, um später einen Bildlauf zu berechneten Position.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAutoScrollMargin">
+      <MemberSignature Language="C#" Value="public void SetAutoScrollMargin (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAutoScrollMargin(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der <see cref="P:System.Drawing.Size.Width" />-Wert.</param>
+        <param name="y">Der <see cref="P:System.Drawing.Size.Height" />-Wert.</param>
+        <summary>Legt die Größe des AutoBildlaufrandes fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rand legt die Breite und Höhe des Rahmens um jedes Steuerelement fest. Der Rand wird verwendet, um zu bestimmen, wenn die Bildlaufleisten im Container erforderlich sind und wo zu dem gescrollt werden soll, wenn ein Steuerelement ausgewählt ist.  
+  
+> [!NOTE]
+>  Wenn eine negative Zahl, als übergeben wird die `x` oder `y` Werte, die den Wert auf 0 zurückgesetzt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet die abgeleitete Klasse <xref:System.Windows.Forms.Panel>. Im Beispiel wird die Position eines Textfelds ausgewertet und ändert das Aussehen und Verhalten des übergeordneten Containers, das Panel-Steuerelement. Im Beispiel erfordert, dass es sich bei der Erstellung einer Instanz von einem <xref:System.Windows.Forms.Panel> -Steuerelement, <xref:System.Windows.Forms.TextBox>, und <xref:System.Windows.Forms.Button>. Setzen Sie das Feld im Bereich, sodass es mindestens eine der Kanten im Bereich überschneidet. Rufen Sie diese Unterprozedur auf einem Klick auf eine Schaltfläche, um den Unterschied im Verhalten und die Darstellung des Bereichs finden Sie unter.  
+  
+ [!code-cpp[Classic ScrollableControl.SetAutoScrollMargin Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.SetAutoScrollMargin Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.SetAutoScrollMargin Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.SetAutoScrollMargin Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.SetAutoScrollMargin Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.SetAutoScrollMargin Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDisplayRectLocation">
+      <MemberSignature Language="C#" Value="protected void SetDisplayRectLocation (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetDisplayRectLocation(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.SetDisplayRectLocation(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der horizontale Offset, bei dem zum Positionieren der <see cref="T:System.Windows.Forms.ScrollableControl" />.</param>
+        <param name="y">Der vertikale Offset, bei dem zum Positionieren der <see cref="T:System.Windows.Forms.ScrollableControl" />.</param>
+        <summary>Die Position der Anzeige des Ablaufverfolgungsfensters auf den angegebenen Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Forms.ScrollableControl.DisplayRectangle%2A> Eigenschaft ist für die virtuelle Größe und Position angezeigt Clientbereich der <xref:System.Windows.Forms.ScrollableControl>. Rufen Sie die <xref:System.Windows.Forms.ScrollableControl.SetDisplayRectLocation%2A> Methode, um einen Bildlauf der <xref:System.Windows.Forms.ScrollableControl> an die angegebene Position.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>
+            <see cref="M:System.Windows.Forms.ScrollableControl.SetDisplayRectLocation(System.Int32,System.Int32)" />die Position des Bildlaufleisten wird nicht aktualisiert werden. Um die Bildlaufleisten zu aktualisieren, rufen die <see cref="M:System.Windows.Forms.ScrollableControl.AdjustFormScrollbars(System.Boolean)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetScrollState">
+      <MemberSignature Language="C#" Value="protected void SetScrollState (int bit, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetScrollState(int32 bit, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.SetScrollState(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bit" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="bit">Das Scroll-Statusflag festlegen.</param>
+        <param name="value">Der Wert, um das Flag festzulegen.</param>
+        <summary>Legt das angegebene Scroll Statusflag fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Bit-Parameter auf eines der Felder der festgelegt ist die <xref:System.Windows.Forms.ScrollableControl> -Klasse, die <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> -Methode aktualisiert den Zustand des Steuerelements auf die `value` Parameter. Weitere Informationen zu den gültigen Parametern und deren Werte finden Sie unter der <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScroll">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.VScrollProperties VerticalScroll { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.VScrollProperties VerticalScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.VerticalScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VScrollProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaften, die die vertikale Schiebeleiste zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VScrollProperties" /> , die Informationen über die vertikale Bildlaufleiste enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VScrollProperties> -Klasse enthält Informationen über die Bildlaufleiste und den Betrieb, z. B., ob es aktiviert und sichtbar ist, führen Sie einen Bildlauf Seitengröße, Ausrichtung, Position angezeigt, und so weiter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VScroll">
+      <MemberSignature Language="C#" Value="protected bool VScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.VScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die vertikale Bildlaufleiste sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die vertikale Bildlaufleiste sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktionalität der <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> Eigenschaft kann auch über Aufrufe erreicht werden die <xref:System.Windows.Forms.ScrollableControl.GetScrollState%2A> und <xref:System.Windows.Forms.ScrollableControl.SetScrollState%2A> Methoden mit <xref:System.Windows.Forms.ScrollableControl.ScrollStateVScrollVisible> als Parameter.  
+  
+ **Hinweis** <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> die Sichtbarkeit der Bildlaufleisten automatisch verwaltet. Daher ist das Festlegen der <xref:System.Windows.Forms.ScrollableControl.HScroll%2A> oder <xref:System.Windows.Forms.ScrollableControl.VScroll%2A> Eigenschaften `true` verfügen über keine Wirkung, wenn <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die zu verarbeitende Windows-<see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

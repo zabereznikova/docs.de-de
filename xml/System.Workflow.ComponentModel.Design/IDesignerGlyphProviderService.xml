@@ -1,0 +1,119 @@
+<Type Name="IDesignerGlyphProviderService" FullName="System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService">
+  <TypeSignature Language="C#" Value="public interface IDesignerGlyphProviderService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerGlyphProviderService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht es Aktivitätsdesignerentwicklern, einem Aktivitätsdesigner benutzerdefinierte Symbolanbieter hinzuzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Klassen, die diese Schnittstelle implementieren, können benutzerdefinierte Symbolanbieter zu <xref:System.Workflow.ComponentModel.Design.IDesignerGlyphProvider>-Klassen hinzufügen und aus diesen Klassen entfernen. Dazu zählen alle Klassen, die die <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>-Schnittstelle implementieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie <xref:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService> abrufen, um einem Aktivitätsdesigner einen benutzerdefinierten Symbolanbieter hinzuzufügen. Im Code wird die <xref:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.AddGlyphProvider%2A>-Methode verwendet, um den Anbieter dem Aktivitätsdesigner hinzuzufügen.  
+  
+ Dieses Codebeispiel stammt aus dem Workflow Monitor SDK-Beispiel (ViewHost.cs). Der Typ `WorkflowMonitorDesignerGlyphProvider` wird im Beispielcode definiert. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Workflow-Monitor](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[Wf_samples#136](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#136)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddGlyphProvider">
+      <MemberSignature Language="C#" Value="public void AddGlyphProvider (System.Workflow.ComponentModel.Design.IDesignerGlyphProvider glyphProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddGlyphProvider(class System.Workflow.ComponentModel.Design.IDesignerGlyphProvider glyphProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.AddGlyphProvider(System.Workflow.ComponentModel.Design.IDesignerGlyphProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="glyphProvider" Type="System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" />
+      </Parameters>
+      <Docs>
+        <param name="glyphProvider">Das hinzuzufügende <see cref="T:System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" />.</param>
+        <summary>Fügt der von einem Aktivitätsdesigner verwendeten Liste von Symbolanbietern eine Klasse hinzu, die die <see cref="T:System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" />-Schnittstelle implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie die <xref:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.AddGlyphProvider%2A>-Methode verwendet werden kann, um den Anbieter einem Aktivitätsdesigner hinzuzufügen.  
+  
+ Dieses Codebeispiel stammt aus dem Workflow Monitor SDK-Beispiel (ViewHost.cs). [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Workflow-Monitor](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[Wf_samples#136](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#136)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphProviders">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.IDesignerGlyphProvider&gt; GlyphProviders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.ComponentModel.Design.IDesignerGlyphProvider&gt; GlyphProviders" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.GlyphProviders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.IDesignerGlyphProvider&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine generische schreibgeschützte Auflistung von Designersymbolanbietern ab.</summary>
+        <value>Eine schreibgeschützte <see cref="T:System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" />-Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.GlyphProviders%2A> gibt eine <xref:System.Workflow.ComponentModel.Design.IDesignerGlyphProvider>-Auflistung zurück, die einem bestimmten <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGlyphProvider">
+      <MemberSignature Language="C#" Value="public void RemoveGlyphProvider (System.Workflow.ComponentModel.Design.IDesignerGlyphProvider glyphProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveGlyphProvider(class System.Workflow.ComponentModel.Design.IDesignerGlyphProvider glyphProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.RemoveGlyphProvider(System.Workflow.ComponentModel.Design.IDesignerGlyphProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="glyphProvider" Type="System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" />
+      </Parameters>
+      <Docs>
+        <param name="glyphProvider">Das zu entfernende <see cref="T:System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" />-Element.</param>
+        <summary>Entfernt die Klasse, die die <see cref="T:System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" />-Schnittstelle implementiert, aus der von einem Aktivitätsdesigner verwendeten Liste von Symbolanbietern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

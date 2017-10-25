@@ -1,0 +1,245 @@
+<Type Name="MetaChildrenColumn" FullName="System.Web.DynamicData.MetaChildrenColumn">
+  <TypeSignature Language="C#" Value="public class MetaChildrenColumn : System.Web.DynamicData.MetaColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MetaChildrenColumn extends System.Web.DynamicData.MetaColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.MetaChildrenColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.DynamicData.MetaColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Datenbankfeld, das eine 1: n-Beziehung angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In ASP.NET Dynamic Data-Anwendungen die <xref:System.Web.DynamicData.MetaChildrenColumn> Klasse stellt ein Datenbankfeld aus, die eine 1: n-Beziehung oder eine über-/ unterordnungsbeziehung angibt.  
+  
+ Die <xref:System.Web.DynamicData.MetaChildrenColumn> Klasse Feld in der übergeordneten Tabelle der 1: n-Beziehung darstellt. Sie können jedoch die untergeordnete Tabellenobjekt zugreifen, mithilfe der <xref:System.Web.DynamicData.MetaChildrenColumn.ChildTable%2A> Eigenschaft. Sie können auch die foreign Key-Feld in der untergeordneten Tabelle abrufen, mithilfe der <xref:System.Web.DynamicData.MetaChildrenColumn.ColumnInOtherTable%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetaChildrenColumn (System.Web.DynamicData.MetaTable table, System.Web.DynamicData.ModelProviders.ColumnProvider entityMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.DynamicData.MetaTable table, class System.Web.DynamicData.ModelProviders.ColumnProvider entityMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaChildrenColumn.#ctor(System.Web.DynamicData.MetaTable,System.Web.DynamicData.ModelProviders.ColumnProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="entityMember" Type="System.Web.DynamicData.ModelProviders.ColumnProvider" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Metadaten-Tabelle.</param>
+        <param name="entityMember">Der Spaltenanbieter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.MetaChildrenColumn" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildTable">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable ChildTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaTable ChildTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaChildrenColumn.ChildTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das die untergeordnete Tabelle der 1: n-Beziehung darstellt.</summary>
+        <value>Ein Objekt, das die untergeordnete Tabelle in der 1: n-Beziehung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.DynamicData.MetaChildrenColumn.ChildTable%2A> Eigenschaft, um ein Objekt abzurufen, die untergeordnete Tabelle der 1: n-Beziehung darstellt. Sie erreichen die übergeordnete Tabelle mithilfe der <xref:System.Web.DynamicData.MetaColumn.Table%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnInOtherTable">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaColumn ColumnInOtherTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaColumn ColumnInOtherTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaChildrenColumn.ColumnInOtherTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das die foreign Key-Feld in der untergeordneten Tabelle darstellt.</summary>
+        <value>Ein Objekt, das die foreign Key-Feld in der untergeordneten Tabelle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaChildrenColumn.ColumnInOtherTable%2A> Eigenschaft ermöglicht Ihnen, einen Verweis auf das Feld in der untergeordneten Tabelle abrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenListPath">
+      <MemberSignature Language="C#" Value="public string GetChildrenListPath (object row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetChildrenListPath(object row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaChildrenColumn.GetChildrenListPath(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die Zeile, die foreign Key-Feld enthält.</param>
+        <summary>Ruft den Pfad der Liste-Action-Seite für die untergeordnete Tabelle ab.</summary>
+        <returns>Der Pfad der Liste-Action-Seite für die untergeordnete Tabelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.DynamicData.MetaChildrenColumn.GetChildrenListPath%2A> Methode, wenn Sie die Seite Liste-Aktion für die untergeordnete Tabelle mit der angegebenen Zeile als übergeordnetes Element abrufen möchten. Der Pfad wird abgerufen, indem ein Abfragezeichenfolgen-Wert an die URL, die im angegebenen Feld foreign Key-Wert enthält Anfügen der `row` Parameter.  
+  
+ Mithilfe der <xref:System.Web.DynamicData.MetaChildrenColumn.GetChildrenListPath%2A> Methode entspricht dem Aufrufen der <xref:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath%28System.String%2CSystem.Object%29> -Methode und übergeben der <xref:System.Web.DynamicData.PageAction.List%2A> Aktion als erster Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenPath">
+      <MemberSignature Language="C#" Value="public string GetChildrenPath (string action, object row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetChildrenPath(string action, object row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="row" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Zielaktion.</param>
+        <param name="row">Die Zeile, die foreign Key-Feld enthält.</param>
+        <summary>Ruft den Pfad der angegebenen Aktionsseite der untergeordneten Tabelle ab.</summary>
+        <returns>Der Pfad der angegebenen Aktionsseite der untergeordneten Tabelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath%28System.String%2CSystem.Object%29> -Methode den Pfad der angegebenen Aktionsseite für die untergeordnete Tabelle zurück. Der zurückgegebene Pfad basiert auf die Routen, die für die ASP.NET Dynamic Data-Anwendung definiert sind und die angegebene Zeile als übergeordnetes Element verfügt. Der Pfad wird abgerufen, indem ein Abfragezeichenfolgen-Wert an die URL, die im angegebenen Feld foreign Key-Wert enthält Anfügen der `row` Parameter.  
+  
+ Wenn `row` ist `null`, Rückkehr dieser Methode eine leere Zeichenfolge.  
+  
+ Können Sie die Werte gemäß der <xref:System.Web.DynamicData.PageAction> -Klasse für die `action` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenPath">
+      <MemberSignature Language="C#" Value="public string GetChildrenPath (string action, object row, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetChildrenPath(string action, object row, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="row" Type="System.Object" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Zielaktion.</param>
+        <param name="row">Die Zeile, die foreign Key-Feld enthält.</param>
+        <param name="path">Die Seite "Ziel".</param>
+        <summary>Ruft den Pfad für die angegebene Aktionsseite der untergeordneten Tabelle an.</summary>
+        <returns>Der Pfad der angegebenen Aktionsseite der untergeordneten Tabelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath%28System.String%2CSystem.Object%2CSystem.String%29> -Methode den Pfad der angegebenen Aktionsseite für die untergeordnete Tabelle zurück. Der Pfad basiert auf dem angegebenen Pfad mit der angegebenen Zeile als übergeordnetes Element. Der Pfad wird abgerufen, indem ein Abfragezeichenfolgen-Wert an die URL, die im angegebenen Feld foreign Key-Wert enthält Anfügen der `row` Parameter.  
+  
+ Wenn `row` ist `null`, diese Methode eine leere Zeichenfolge zurückgegeben. Wenn `path` ist `null`die <xref:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath%28System.String%2CSystem.Object%2CSystem.String%29> -Methode den Pfad, basierend auf der für die ASP.NET Dynamic Data-Anwendung definierten Routen zurück.  
+  
+ Können Sie die Werte gemäß der <xref:System.Web.DynamicData.PageAction> -Klasse für die `action` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaChildrenColumn.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert Daten, die möglicherweise nicht verfügbar, wenn der Konstruktor aufgerufen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht direkt aufgerufen werden. Um die Initialisierung anzupassen, können von dieser Klasse ableiten und überschreiben die `Initialize` Methode. Wenn Sie diese Methode überschreiben, rufen Sie die Basissteuerelement `Initialize` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsManyToMany">
+      <MemberSignature Language="C#" Value="public bool IsManyToMany { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsManyToMany" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaChildrenColumn.IsManyToMany" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Status der m: n-Beziehung der Spalte angibt.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte Beziehung-m; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

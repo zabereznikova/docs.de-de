@@ -1,0 +1,557 @@
+<Type Name="ConnectionOrientedTransportBindingElement" FullName="System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement">
+  <TypeSignature Language="C#" Value="public abstract class ConnectionOrientedTransportBindingElement : System.ServiceModel.Channels.TransportBindingElement, System.ServiceModel.Description.IPolicyExportExtension, System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConnectionOrientedTransportBindingElement extends System.ServiceModel.Channels.TransportBindingElement implements class System.ServiceModel.Description.IPolicyExportExtension, class System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.TransportBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IWsdlExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine abstrakte Klasse, die das Basis-<see cref="T:System.ServiceModel.Channels.TransportBindingElement" /> um zusätzliche Eigenschaften erweitert, die häufig bei verbindungsorientierten Transporten, z.&amp;#160;B. TCP und Named Pipes, verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse soll ein besseres Verständnis der Transporthierarchie vermitteln und wird im Allgemeinen nicht direkt aufgerufen. Der Konstruktor ist intern, um einen direkten Aufbau und Aufruf zu verhindern. Die öffentlichen Eigenschaften dieses Bindungselements können von den abgeleiteten Klassen <xref:System.ServiceModel.Channels.TcpTransportBindingElement> und <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement> aufgerufen werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der überprüft werden soll.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Kanal.</param>
+        <summary>Bestimmt, ob eine Kanalfactory des angegebenen Typs erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Kanalfactory erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Methode aufrufen, bevor Sie versuchen, eine Kanalfactory zu erstellen.  
+  
+ Wenn `TChannel` <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ist, gibt diese Methode nur im Puffermodus `true` zurück. Wenn `TChannel` <xref:System.ServiceModel.Channels.IRequestChannel> ist, gibt diese Methode nur im Streamingmodus `true` zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der überprüft werden soll.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Kanal.</param>
+        <summary>Bestimmt, ob ein Kanallistener des angegebenen Typs erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Kanallistener erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Methode aufrufen, bevor Sie versuchen, einen Kanallistener zu erstellen.  
+  
+ Wenn `TChannel` <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ist, gibt diese Methode nur im Puffermodus `true` zurück. Wenn `TChannel` <xref:System.ServiceModel.Channels.IReplyChannel> ist, gibt diese Methode nur im Streamingmodus `true` zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelInitializationTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ChannelInitializationTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ChannelInitializationTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.TimeSpan" /> , bestimmt die maximale Zeit, die ein Kanal kann in den Initialisierungsstatus sein, bevor Sie unterbrochen wird.</summary>
+        <value><see cref="T:System.TimeSpan" />, nach der ein Timeout für die Kanalinitialisierungsanforderung eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt die Zeit, die eine TCP-Verbindung beanspruchen darf, um sich über das .NET Framework-Protokoll zu authentifizieren. Ein Client muss vorab einige Daten senden, bevor der Server über genügend Informationen zum Ausführen der Authentifizierung verfügt. Für dieses Timeout wurde bewusst ein geringerer Wert als für ReceiveTimeout (10 Minuten) festgelegt, damit Serververbindungen von böswilligen, nicht authentifizierten Clients nicht zu lange aufrechterhalten werden können. Der Standardwert ist 30 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionBufferSize">
+      <MemberSignature Language="C#" Value="public int ConnectionBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ConnectionBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Puffergröße ab, oder legt die Puffergröße fest, die zum Übertragen eines Teils der serialisierten Nachricht vom Client oder Dienst verwendet wird.</summary>
+        <value>Die Größe des Verbindungspuffers. Der Standardwert ist 8192 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert kann geändert werden, um besseren Durchsatz auf Grundlage von durchschnittlichen Nachrichtengrößen und Austauschmustern bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Eigenschaft.</typeparam>
+        <param name="context">Der Bindungskontext.</param>
+        <summary>Ruft Eigenschaften vom Bindungsstapel ab, falls vorhanden.</summary>
+        <returns>Ein <paramref name="T" />-Objekt des Bindungsstapels, falls vorhanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode empfängt einen Bindungskontext als Eingabeparameter. Dieser stellt den Stapel von Bindungselementen dar.  
+  
+ Jedes Bindungselement im Stapel kann die Anfrage selbst verarbeiten oder weiterleiten oder eine Kombination von beidem durchführen. Jedes Bindungselement kann den Kontext ändern, wenn es die Anfrage delegiert. Ein Transportbindungselement verarbeitet die Anfrage jedoch selbst.  
+  
+ Diese Methode wird sowohl von Bindungselementen als auch von Laufzeitobjekten wie <xref:System.ServiceModel.Channels.IChannelFactory>, <xref:System.ServiceModel.Channels.IChannelListener> und <xref:System.ServiceModel.Channels.IChannel> implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameComparisonMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.HostNameComparisonMode HostNameComparisonMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.HostNameComparisonMode HostNameComparisonMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.HostNameComparisonMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Hostname zum Erreichen des Diensts bei übereinstimmendem URI verwendet werden soll.</summary>
+        <value>Der <see cref="T:System.ServiceModel.HostNameComparisonMode" />-Wert, der angibt, ob der Hostname beim Routing eingehender Anfragen an einen Endpunkt-URI eingeschlossen wird. Der Standardwert ist <see cref="F:System.ServiceModel.HostNameComparisonMode.StrongWildcard" />, wodurch der Hostname und die Anschlussnummer beim Abgleich ignoriert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Werte und ihre Beschreibungen finden Sie in der <xref:System.ServiceModel.HostnameComparisonMode>-Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kein gültiger <see cref="T:System.ServiceModel.HostnameComparisonMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferSize">
+      <MemberSignature Language="C#" Value="public int MaxBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Größe des zu verwendenden Puffers ab oder legt diese fest. Bei Streamingnachrichten sollte dieser Wert mindestens die maximale Größe der Nachrichten-Header aufweisen, die im gepufferten Modus gelesen werden.</summary>
+        <value>Die maximale Anzahl an Bytes, die verwendet wird, um eingehende Nachrichten im Arbeitsspeicher zu puffern. Der Standardwert ist 65.536 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Streamingnachrichten gilt diese Eigenschaft nur für Nachrichten-Header; bei gepufferten Nachrichten gilt sie für die gesamte Nachricht.  
+  
+ Der Wert dieser Eigenschaft muss kleiner oder gleich <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> und größer als die Header der Nachricht sein. Ansonsten gibt der Kanal eine Ausnahme aus.  
+  
+ Wenn Sie mehr Daten empfangen, als Sie puffern können, gibt der Kanal eine <xref:System.ServiceModel.CommunicationException> aus, die eine <xref:System.ServiceModel.QuotaExceededException> als interne Ausnahme enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOutputDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxOutputDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxOutputDelay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxOutputDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das maximale Zeitintervall ab, oder legt das maximale Zeitintervall fest, das als Teil einer Nachricht oder als vollständige Nachricht im Arbeitsspeicher gepuffert bleiben kann, bevor sie versendet wird.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />, die das maximale Zeitintervall angibt, das als Teil einer Nachricht oder als vollständige Nachricht im Arbeitsspeicher gepuffert bleiben kann, bevor sie versendet wird. Der Standardwert beträgt 2 Sekunden. Diese Eigenschaft ist nur nützlich, wenn die <see cref="P:System.ServiceModel.Channels.MessageProperties.AllowOutputBatching" />-Eigenschaft einer ausgehenden Nachricht auf <see langword="true" /> festgelegt wird. Andernfalls wird dieser Wert ignoriert, und die Nachrichten werden sofort gesendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Channels.MessageProperties.AllowOutputBatching%2A> auf `false` festgelegt ist, wird diese Eigenschaft für diese Nachricht ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingAccepts">
+      <MemberSignature Language="C#" Value="public int MaxPendingAccepts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingAccepts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von Kanälen, die einen Dienst warten auf einen Listener für die Verarbeitung von eingehenden Verbindungen zu dem Dienst haben kann.</summary>
+        <value>Die maximale Anzahl von Kanälen, die ein Dienst darauf auf einen Listener warten kann. Der Standardwert ist 2 * Anzahl der Prozessoren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft begrenzt die Anzahl der Kanäle, die auf dem Server auf einen Listener warten können. Weist MaxPendingAccepts einen zu geringen Wert auf, ist der Zeitraum, in dem alle wartenden Kanäle mit der Verarbeitung von Verbindungen begonnen haben, zu kurz, als dass neue Kanäle das Lauschen gestartet haben könnten. Wenn während dieses Zeitraums eine Verbindungsanforderung eingeht, wird sie fehlschlagen, da auf dem Server noch nicht auf neue Verbindungen gelauscht wird. Diese Eigenschaft kann konfiguriert werden, indem die <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>-Eigenschaft auf einen höheren Wert festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingConnections">
+      <MemberSignature Language="C#" Value="public int MaxPendingConnections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingConnections" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl an Verbindungen ab, die zum Verteilen auf dem Dienst bereitstehen, oder legt sie fest.</summary>
+        <value>Die maximale Anzahl eingehender und am Dienst zur Verteilung bereitstehender Verbindungen. Der Standardwert ist 12 * Anzahl der Prozessoren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft steuert, wie viele Verbindungen von einem Transport akzeptiert, vom ServiceModel-Verteiler jedoch noch nicht ausgewählt wurden. Um diesen Wert festzulegen, verwenden Sie `MaxConnections` für die Bindung oder `maxOutboundConnectionsPerEndpoint` für das Bindungselement.  
+  
+ Wenn eine höhere Ebene im Stapel `AcceptDispatch` aufruft, wird diese Verbindung aus der Warteschlange der Verbindungen, die zum Verteilen bereitstehen, entfernt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMaxPendingAccepts">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMaxPendingAccepts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMaxPendingAccepts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ShouldSerializeMaxPendingAccepts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob akzeptiert, die Verbindung, die maximale Anzahl von ausstehenden ausgerichteten Transportbindungselement serialisiert werden soll.</summary>
+        <returns>
+          <see langword="True" />Wenn die Verbindung ausgerichteten Transport-Bindungselement maximale Anzahl von ausstehenden serialisieren sollen akzeptiert. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMaxPendingConnections">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMaxPendingConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMaxPendingConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ShouldSerializeMaxPendingConnections" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die Verbindung ausgerichteten Transport-Bindungselement maximale Anzahl ausstehender Verbindungen serialisieren sollen.</summary>
+        <returns>
+          <see langword="True" />Wenn die maximale Anzahl ausstehender Verbindungen von Verbindung ausgerichteten-Transportbindungselement serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.MetadataExporter" />, den Sie zum Ändern des Exportvorgangs verwenden können.</param>
+        <param name="context">Der <see cref="T:System.ServiceModel.Description.PolicyConversionContext" />, den Sie zum Einfügen einer benutzerdefinierten Richtlinienassertion verwenden können.</param>
+        <summary>Exportiert eine benutzerdefinierte Richtlinienassertion über Bindungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt bindungsbezogene Anweisungen in die WSDL-Informationen, die von einem bestimmten Vertrag ausgegeben werden, und sie wird von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] verwendet, um Clients mitzuteilen, dass dieses benutzerdefinierte Bindungselement im Bindungsstapel vorhanden ist.  
+  
+ Diese Methode verwendet zwei Parameter: Das <xref:System.ServiceModel.Description.MetadataExporter>-Objekt und das <xref:System.ServiceModel.Description.PolicyConversionContext>-Objekt. Verwenden Sie die Methoden <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> und <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A>, um Auflistungen von Richtlinienassertionen aufzurufen, die bereits für verschiedene Bereiche exportiert wurden. Verwenden Sie anschließend diese Methode, um eigene Richtlinienassertionen zur entsprechenden Auflistung hinzuzufügen.  
+  
+ Die <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A>-Eigenschaft gibt die <xref:System.ServiceModel.Description.ContractDescription> für den Endpunkt aus, der exportiert wird. Dies ermöglicht dieser Methode, den richtigen Bereich für die exportierten Richtlinienassertionen festzulegen. Sicherheitsattribute im Code können beispielsweise der <xref:System.ServiceModel.Description.ContractDescription> Verhalten hinzufügen, die angeben, wo Richtlinienassertionen hinzugefügt werden sollen.  
+  
+ Nachdem benutzerdefinierte Richtlinienassertionen an die WSDL-Informationen angehängt wurden, können Clients die benutzerdefinierten Bindungsassertionen mithilfe der <xref:System.ServiceModel.Description.IPolicyImportExtension>-Schnittstelle erkennen und importieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportContract">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportContract (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlContractConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportContract(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlContractConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportContract(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.WsdlExporter" />, der die Vertragsinformationen exportiert.</param>
+        <param name="context">Stellt Zuordnungen aus exportierten WSDL-Elementen zur Vertragsbeschreibung bereit.</param>
+        <summary>Schreibt benutzerdefinierte WSDL (Web Services Description Language)-Elemente in für einen Vertrag generierte WSDL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportEndpoint (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportEndpoint(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="endpointContext" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.WsdlExporter" />, der die Vertragsinformationen exportiert.</param>
+        <param name="endpointContext">Stellt Zuordnungen aus exportierten WSDL-Elementen für die Endpunktbeschreibung bereit.</param>
+        <summary>Schreibt benutzerdefinierte WSDL (Web Services Description Language)-Elemente in die generierte WSDL für einen Endpunkt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TransferMode TransferMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.TransferMode TransferMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.TransferMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, oder legt einen Wert fest, der angibt, ob die Nachrichten bei verbindungsorientiertem Transport gepuffert oder per Stream übertragen werden.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.TransferMode" />-Wert, der angibt, ob ein Kanal den Stream- oder Puffermodus für die Nachrichtenübertragung verwendet. Die Standardeinstellung ist <see cref="F:System.ServiceModel.TransferMode.Buffered" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt den Übertragungsmodus für Anforderungen und Antworten. Mögliche Werte:  
+  
+-   <xref:System.ServiceModel.TransferMode.Buffered>  
+  
+-   <xref:System.ServiceModel.TransferMode.Streamed>  
+  
+-   <xref:System.ServiceModel.TransferMode.StreamedRequest>  
+  
+-   <xref:System.ServiceModel.TransferMode.StreamedResponse>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kein gültiger <see cref="T:System.ServiceModel.TransferMode" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

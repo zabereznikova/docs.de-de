@@ -1,0 +1,231 @@
+<Type Name="TableItemPattern+TableItemPatternInformation" FullName="System.Windows.Automation.TableItemPattern+TableItemPatternInformation">
+  <TypeSignature Language="C#" Value="public struct TableItemPattern.TableItemPatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit TableItemPattern/TableItemPatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TableItemPattern.TableItemPatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Eigenschaftswerte einer <see cref="T:System.Windows.Automation.TableItemPattern" /> -Objekt mithilfe seiner <see cref="P:System.Windows.Automation.TableItemPattern.Current" /> oder <see cref="P:System.Windows.Automation.TableItemPattern.Cached" /> Accessoren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public int Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.TableItemPatternInformation.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ordinalzahl der Spalte, die die Tabellenzelle oder ein Element enthält.</summary>
+        <value>Eine nullbasierte Ordinalzahl, der die Spalte enthält die Tabellenzelle oder ein Element darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> Listener wird deklariert, um das Durchlaufen der Tabellenelemente innerhalb eines Tabellencontainers zu überwachen. Elementeigenschaften werden nach jedem Fokusänderungsereignis geändert aufgezeichnet.  
+  
+ [!code-csharp[UIATableItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#102)]
+ [!code-vb[UIATableItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#102)]  
+[!code-csharp[UIATableItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
+[!code-vb[UIATableItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSpan">
+      <MemberSignature Language="C#" Value="public int ColumnSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.TableItemPatternInformation.ColumnSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten, die über eine Zelle einer Tabelle oder ein Element erstreckt.</summary>
+        <value>Die Anzahl der Spalten erstreckt. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> Listener wird deklariert, um das Durchlaufen der Tabellenelemente innerhalb eines Tabellencontainers zu überwachen. Elementeigenschaften werden nach jedem Fokusänderungsereignis geändert aufgezeichnet.  
+  
+ [!code-csharp[UIATableItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#102)]
+ [!code-vb[UIATableItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#102)]  
+[!code-csharp[UIATableItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
+[!code-vb[UIATableItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingGrid">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement ContainingGrid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.AutomationElement ContainingGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.TableItemPatternInformation.ContainingGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Element ab, das das GridPattern-Steuerelementmuster unterstützt und die Tabellenzelle oder den Elementcontainer darstellt.</summary>
+        <value>Ein [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Element, das das GridPattern-Steuerelementmuster unterstützt und die Tabellenzelle oder den Elementcontainer darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> Listener wird deklariert, um das Durchlaufen der Tabellenelemente innerhalb eines Tabellencontainers zu überwachen. Elementeigenschaften werden nach jedem Fokusänderungsereignis geändert aufgezeichnet.  
+  
+ [!code-csharp[UIATableItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#102)]
+ [!code-vb[UIATableItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#102)]  
+[!code-csharp[UIATableItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
+[!code-vb[UIATableItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnHeaderItems">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement[] GetColumnHeaderItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement[] GetColumnHeaderItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TableItemPattern.TableItemPatternInformation.GetColumnHeaderItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft alle Spaltenüberschriften, die einem Tabellenelement oder einer Zelle zugeordnet.</summary>
+        <returns>Eine Auflistung von Column-Header-Elemente. Der Standardwert ist ein leeres Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> Listener wird deklariert, um das Durchlaufen der Tabellenelemente innerhalb eines Tabellencontainers zu überwachen. Elementeigenschaften werden nach jedem Fokusänderungsereignis geändert aufgezeichnet.  
+  
+ [!code-csharp[UIATableItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#102)]
+ [!code-vb[UIATableItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#102)]  
+[!code-csharp[UIATableItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
+[!code-vb[UIATableItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowHeaderItems">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement[] GetRowHeaderItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement[] GetRowHeaderItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TableItemPattern.TableItemPatternInformation.GetRowHeaderItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft alle Zeilenüberschriften, die einem Tabellenelement oder einer Zelle zugeordnet.</summary>
+        <returns>Eine Auflistung von Zeile Header-Elemente. Der Standardwert ist ein leeres Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> Listener wird deklariert, um das Durchlaufen der Tabellenelemente innerhalb eines Tabellencontainers zu überwachen. Elementeigenschaften werden nach jedem Fokusänderungsereignis geändert aufgezeichnet.  
+  
+ [!code-csharp[UIATableItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#102)]
+ [!code-vb[UIATableItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#102)]  
+[!code-csharp[UIATableItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
+[!code-vb[UIATableItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public int Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Row" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.TableItemPatternInformation.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ordinalzahl der Zeile, die die Tabellenzelle oder ein Element enthält.</summary>
+        <value>Eine nullbasierte Ordinalzahl, der die Spalte enthält die Tabellenzelle oder ein Element darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> Listener wird deklariert, um das Durchlaufen der Tabellenelemente innerhalb eines Tabellencontainers zu überwachen. Elementeigenschaften werden nach jedem Fokusänderungsereignis geändert aufgezeichnet.  
+  
+ [!code-csharp[UIATableItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#102)]
+ [!code-vb[UIATableItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#102)]  
+[!code-csharp[UIATableItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
+[!code-vb[UIATableItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowSpan">
+      <MemberSignature Language="C#" Value="public int RowSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.TableItemPatternInformation.RowSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen, die über eine Zelle einer Tabelle oder ein Element erstreckt.</summary>
+        <value>Die Anzahl der Spalten erstreckt. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> Listener wird deklariert, um das Durchlaufen der Tabellenelemente innerhalb eines Tabellencontainers zu überwachen. Elementeigenschaften werden nach jedem Fokusänderungsereignis geändert aufgezeichnet.  
+  
+ [!code-csharp[UIATableItemPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#102)]
+ [!code-vb[UIATableItemPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#102)]  
+[!code-csharp[UIATableItemPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
+[!code-vb[UIATableItemPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

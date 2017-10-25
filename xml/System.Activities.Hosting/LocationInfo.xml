@@ -1,0 +1,78 @@
+<Type Name="LocationInfo" FullName="System.Activities.Hosting.LocationInfo">
+  <TypeSignature Language="C#" Value="public sealed class LocationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocationInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Hosting.LocationInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen über einen verknüpften <see cref="T:System.Activities.Location" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.LocationInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.String" />-Wert ab, der den verknüpften <see cref="T:System.Activities.Location" /> identifiziert.</summary>
+        <value>Der verknüpfte Speicherort.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDisplayName">
+      <MemberSignature Language="C#" Value="public string OwnerDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerDisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.LocationInfo.OwnerDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen optionalen Anzeigenamen ab, der für Debugging, Validierung, Ausnahmebehandlung und Nachverfolgung verwendet wird.</summary>
+        <value>Ein optionaler Anzeigename, der für Debugging, Validierung, Ausnahmebehandlung und Nachverfolgung verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.LocationInfo.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den am verknüpften <see cref="T:System.Activities.Location" /> gespeicherten Wert ab.</summary>
+        <value>Der am verknüpften <see cref="T:System.Activities.Location" /> gespeicherte Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

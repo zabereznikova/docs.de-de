@@ -1,0 +1,180 @@
+<Type Name="IContextPropertyActivator" FullName="System.Runtime.Remoting.Contexts.IContextPropertyActivator">
+  <TypeSignature Language="C#" Value="public interface IContextPropertyActivator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContextPropertyActivator" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContextPropertyActivator" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass die implementierende Eigenschaft interessiert, die bei der Aktivierung beteiligt ist, und möglicherweise keine Nachricht Senke bereitgestellt haben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Contexts.IContextPropertyActivator> Schnittstelle verfügbar gemacht wird, auf allen <xref:System.Runtime.Remoting.Contexts.Context> Eigenschaften interessiert, sind bei der Aktivierung beteiligt und, die möglicherweise nicht bereitgestellt haben eine Nachricht Senke. Client <xref:System.Runtime.Remoting.Contexts.Context> Eigenschaften senden Informationen in der Konstruktion-Nachricht, die ihren Gegenstücken am Remotestandort nicht änderbar konnte während der Aktivierung gesucht.  
+  
+ <xref:System.Runtime.Remoting.Contexts.IContextPropertyActivator>Dient zum Sammeln von Informationen aus der Kontexteigenschaft Client und Server und zum Übermitteln von Informationen vom Server Kontexteigenschaften in die Kontexteigenschaften der Client bei der Rückgabe an den Client auch <xref:System.Runtime.Remoting.Contexts.Context>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="CollectFromClientContext">
+      <MemberSignature Language="C#" Value="public void CollectFromClientContext (System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CollectFromClientContext(class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextPropertyActivator.CollectFromClientContext(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" />.</param>
+        <summary>Für jeden Client Context-Eigenschaft, die diese Schnittstelle hat, bevor die Anforderung zur Erstellung den Client bleibt aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kontexteigenschaft untersuchen und Bearbeiten des Inhalts des kann die <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CollectFromServerContext">
+      <MemberSignature Language="C#" Value="public void CollectFromServerContext (System.Runtime.Remoting.Activation.IConstructionReturnMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CollectFromServerContext(class System.Runtime.Remoting.Activation.IConstructionReturnMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextPropertyActivator.CollectFromServerContext(System.Runtime.Remoting.Activation.IConstructionReturnMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionReturnMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine <see cref="T:System.Runtime.Remoting.Activation.IConstructionReturnMessage" />.</param>
+        <summary>Für jeden Server Context-Eigenschaft, die diese Schnittstelle hat, bevor die Konstruktionsantwort bewirkt, den Server für den Client dass aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kontexteigenschaft untersuchen und Bearbeiten des Inhalts des kann die <xref:System.Runtime.Remoting.Activation.IConstructionReturnMessage>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DeliverClientContextToServerContext">
+      <MemberSignature Language="C#" Value="public bool DeliverClientContextToServerContext (System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool DeliverClientContextToServerContext(class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextPropertyActivator.DeliverClientContextToServerContext(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" />.</param>
+        <summary>Für jeden Client Context-Eigenschaft, die diese Schnittstelle hat, wenn die Konstruktion-Anforderung an den Client zurückgegeben wird, vom Server aufgerufen.</summary>
+        <returns>
+          <see langword="true" />, wenn erfolgreich, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode wird aufgerufen, für jeden Server-Kontexteigenschaft, die implementiert die <xref:System.Runtime.Remoting.Contexts.IContextPropertyActivator> Schnittstelle, wenn eine Konstruktion-Anforderung an einen Server eingeht. Dadurch wird die Kontexteigenschaft untersuchen den Inhalt der einzelnen <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DeliverServerContextToClientContext">
+      <MemberSignature Language="C#" Value="public bool DeliverServerContextToClientContext (System.Runtime.Remoting.Activation.IConstructionReturnMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool DeliverServerContextToClientContext(class System.Runtime.Remoting.Activation.IConstructionReturnMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextPropertyActivator.DeliverServerContextToClientContext(System.Runtime.Remoting.Activation.IConstructionReturnMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionReturnMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine <see cref="T:System.Runtime.Remoting.Activation.IConstructionReturnMessage" />.</param>
+        <summary>Für jeden Client Context-Eigenschaft, die diese Schnittstelle hat, wenn die Konstruktion-Anforderung an den Client zurückgegeben wird, vom Server aufgerufen.</summary>
+        <returns>
+          <see langword="true" />, wenn erfolgreich, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kontexteigenschaft kann Untersuchen des Inhalts der <xref:System.Runtime.Remoting.Activation.IConstructionReturnMessage>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsOKToActivate">
+      <MemberSignature Language="C#" Value="public bool IsOKToActivate (System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsOKToActivate(class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextPropertyActivator.IsOKToActivate(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" />.</param>
+        <summary>Gibt an, ob der angegebene Objekttyp aktivieren die <paramref name="msg" /> Parameter.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob der angeforderte Typ aktiviert werden kann.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

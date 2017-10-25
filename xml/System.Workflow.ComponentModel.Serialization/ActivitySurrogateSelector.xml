@@ -1,0 +1,103 @@
+<Type Name="ActivitySurrogateSelector" FullName="System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector">
+  <TypeSignature Language="C#" Value="public sealed class ActivitySurrogateSelector : System.Runtime.Serialization.SurrogateSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivitySurrogateSelector extends System.Runtime.Serialization.SurrogateSelector" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Serialization.SurrogateSelector</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Wählt das Ersatzzeichen aus, das verwendet werden kann, um eine <see cref="T:System.Workflow.ComponentModel.Activity" /> zu serialisieren. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Ein Serialisierungsersatz stellt Ihnen ein Objekt zur Verfügung, das die Serialisierungsanforderungen eines anderen Objekts behandeln und ggf. die Serialisierungsdaten transformieren kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivitySurrogateSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector Default" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den standardmäßigen <see cref="T:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector" /> ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Der standardmäßige <see cref="T:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector" />, der verwendet werden kann, um eine <see cref="T:System.Workflow.ComponentModel.Activity" /> zu serialisieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSurrogate">
+      <MemberSignature Language="C#" Value="public override System.Runtime.Serialization.ISerializationSurrogate GetSurrogate (Type type, System.Runtime.Serialization.StreamingContext context, out System.Runtime.Serialization.ISurrogateSelector selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Runtime.Serialization.ISerializationSurrogate GetSurrogate(class System.Type type, valuetype System.Runtime.Serialization.StreamingContext context, [out] class System.Runtime.Serialization.ISurrogateSelector&amp; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector.GetSurrogate(System.Type,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISerializationSurrogate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der <see cref="T:System.Type" />, für den ein Ersatz abgerufen werden soll.</param>
+        <param name="context"><see cref="T:System.Runtime.Serialization.StreamingContext" />, der als Quell- oder Zielkontext für die aktuelle Serialisierung dient.</param>
+        <param name="selector">Enthält nach Abschluss dieser Methode einen <see cref="T:System.Runtime.Serialization.ISurrogateSelector" />, der einen Verweis auf den Ersatzselektor aufweist, unter dem der passende Ersatz gefunden wurde. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Sucht den Ersatz für den angegebenen Typ, wobei beim angegebenen Ersatzselektor für den angegebenen Serialisierungskontext begonnen wird.</summary>
+        <returns>Das geeignete Ersatzzeichen für den angegebenen Typ und Kontext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des Ersatzzeichens, der zurückgegeben wird, hängt davon ab, welcher Typ über `type` zugewiesen werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

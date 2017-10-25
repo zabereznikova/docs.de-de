@@ -1,0 +1,225 @@
+<Type Name="DesignerActionUIService" FullName="System.ComponentModel.Design.DesignerActionUIService">
+  <TypeSignature Language="C#" Value="public sealed class DesignerActionUIService : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerActionUIService extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionUIService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet die Benutzeroberfläche (UI) für einen Smarttagbereich. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Anzeige des Designers steuern <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A> mit der <xref:System.ComponentModel.Design.DesignerActionUIService> Klasse. <xref:System.ComponentModel.Design.DesignerActionUIService>Stellt eine einfache Schnittstelle zum Anzeigen der Elemente für die einzelnen Komponenten, einschließlich der folgenden Methoden und Ereignisse bereit:  
+  
+-   Die <xref:System.ComponentModel.Design.DesignerActionUIService.ShowUI%2A> und <xref:System.ComponentModel.Design.DesignerActionUIService.HideUI%2A> Methoden anzeigen und Ausblenden der Elemente für eine Komponente.  
+  
+-   Die <xref:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange> Ereignis zeigt an, wenn die Benutzeroberfläche für eine Komponente ändert.  
+  
+ Verwenden der <xref:System.ComponentModel.Design.DesignerActionService> zum Verwalten der <xref:System.ComponentModel.Design.DesignerActionList> Sammlungen, die der Komponente zugeordnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.Design.DesignerActionUIService.Refresh%2A> Methode, um einen Smarttagbereich zu aktualisieren. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.ComponentModel.Design.DesignerActionService> -Klassenübersicht.  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#11)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DesignerActionUIStateChange">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler DesignerActionUIStateChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler DesignerActionUIStateChange" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Anforderung zum Anzeigen oder Ausblenden einen Smarttagbereich erfolgt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält den Satz von spezialisierten Klassen im Zusammenhang mit der <xref:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange> Ereignis.  
+  
+|Spezieller Typ|Beschreibung|  
+|----------------------|-----------------|  
+|<xref:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs>|Smarttag Bereich Verwaltung hinzugefügt spezifische Informationen. Diese Klasse ist eine Spezialisierung von <xref:System.EventArgs>.|  
+|<xref:System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler>|Verbindet die <xref:System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs> mit dem entsprechenden Handler.|  
+|<xref:System.ComponentModel.Design.DesignerActionUIStateChangeType>|Gibt an, ob der Smarttagbereich wird angezeigt oder ausgeblendet wird.|  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionUIService.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der <see cref="T:System.ComponentModel.Design.DesignerActionUIService" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.ComponentModel.Design.DesignerActionUIService.Dispose%2A> auf, wenn Sie <xref:System.ComponentModel.Design.DesignerActionUIService> nicht mehr benötigen. Die <xref:System.ComponentModel.Design.DesignerActionUIService.Dispose%2A>-Methode bewirkt, dass <xref:System.ComponentModel.Design.DesignerActionUIService> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.ComponentModel.Design.DesignerActionUIService.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Design.DesignerActionUIService> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Design.DesignerActionUIService> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.ComponentModel.Design.DesignerActionUIService.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Design.DesignerActionUIService> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Design.DesignerActionUIService>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideUI">
+      <MemberSignature Language="C#" Value="public void HideUI (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void HideUI(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionUIService.HideUI(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Smarttagbereich ausgeblendet werden soll.</param>
+        <summary>Blendet den Smarttagbereich für eine Komponente aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie der Smarttagbereich derzeit angezeigt wird, die <xref:System.ComponentModel.Design.DesignerActionUIService.HideUI%2A> Methode verborgen. Diese Methode löst die <xref:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange> Ereignis legt <xref:System.ComponentModel.Design.DesignerActionUIStateChangeType.Hide> als den Ereignistyp.  
+  
+> [!NOTE]
+>  Die <xref:System.ComponentModel.Design.DesignerActionUIService.HideUI%2A> und <xref:System.ComponentModel.Design.DesignerActionUIService.ShowUI%2A> Methoden werden nur implementiert, um die entsprechenden Ereignisse auszulösen. Die eigentliche Funktionen ist in die Handler für diese Ereignisse gefunden, die Teil der entwurfszeitumgebung sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionUIService.Refresh(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.ComponentModel.IComponent" /> zu aktualisieren.</param>
+        <summary>Den Smarttagbereich wird aktualisiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionUIService.Refresh%2A> Methode aktualisiert die interne `DesignerAction` <xref:System.Windows.Forms.Design.Behavior.Glyph>, sowie den Smarttagbereich.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.Design.DesignerActionUIService.Refresh%2A> Methode, um einen Smarttagbereich zu aktualisieren. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.ComponentModel.Design.DesignerActionService> -Klassenübersicht.  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#11)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldAutoShow">
+      <MemberSignature Language="C#" Value="public bool ShouldAutoShow (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldAutoShow(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionUIService.ShouldAutoShow(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.ComponentModel.IComponent" /> automatisch angezeigt.</param>
+        <summary>Gibt an, ob den Smarttagbereich wird automatisch angezeigt.</summary>
+        <returns>
+          <see langword="true" />den Smarttagbereich automatisch angezeigt werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowUI">
+      <MemberSignature Language="C#" Value="public void ShowUI (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShowUI(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionUIService.ShowUI(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Smarttagbereich angezeigt werden soll.</param>
+        <summary>Zeigt den Smarttagbereich für eine Komponente an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie der Smarttagbereich zurzeit ausgeblendet ist, die <xref:System.ComponentModel.Design.DesignerActionUIService.ShowUI%2A> Methode wird im Bereich angezeigt. Diese Methode löst die <xref:System.ComponentModel.Design.DesignerActionUIService.DesignerActionUIStateChange> Ereignis legt <xref:System.ComponentModel.Design.DesignerActionUIStateChangeType.Show> als den Ereignistyp.  
+  
+> [!NOTE]
+>  Die <xref:System.ComponentModel.Design.DesignerActionUIService.HideUI%2A> und <xref:System.ComponentModel.Design.DesignerActionUIService.ShowUI%2A> Methoden werden nur implementiert, um die entsprechenden Ereignisse auszulösen. Die eigentliche Funktionen ist in die Handler für diese Ereignisse gefunden, die Teil der entwurfszeitumgebung sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

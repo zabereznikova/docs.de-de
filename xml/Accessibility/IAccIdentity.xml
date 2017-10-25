@@ -1,0 +1,66 @@
+<Type Name="IAccIdentity" FullName="Accessibility.IAccIdentity">
+  <TypeSignature Language="C#" Value="public interface IAccIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAccIdentity" />
+  <TypeSignature Language="DocId" Value="T:Accessibility.IAccIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>Accessibility</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComConversionLoss</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("7852B78D-1CFD-41C1-A615-9C0C85960B5F")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:Accessibility.IAccIdentity" /> und alle verfügbar gemachten Member sind Teil einen verwalteten Wrapper für das Component Object Model (COM) <see langword="IAccIdentity" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu <xref:Accessibility.IAccIdentity>, finden Sie in der Dokumentation für `IAccIdentity::GetIdentityString` in der Microsoft Active Accessibility-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetIdentityString">
+      <MemberSignature Language="C#" Value="public void GetIdentityString (uint dwIDChild, IntPtr ppIDString, out uint pdwIDStringLen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetIdentityString([in]unsigned int32 dwIDChild, [out] native int ppIDString, [out] unsigned int32&amp; pdwIDStringLen) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Accessibility.IAccIdentity.GetIdentityString(System.UInt32,System.IntPtr,System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Accessibility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dwIDChild" Type="System.UInt32" />
+        <Parameter Name="ppIDString" Type="System.IntPtr" />
+        <Parameter Name="pdwIDStringLen" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="dwIDChild">Gibt an, welche untergeordnetes Element des Objekts IAccessible möchte, dass der Aufrufer zu identifizieren.</param>
+        <param name="ppIDString">Die Adresse einer Variablen, die einen Zeiger auf ein aufgerufener reservierten Identitätszeichenfolge empfängt. Der aufgerufene ordnet die Identität mithilfe <see langword="CoTaskMemAlloc" />; der Aufrufer muss die Identitätszeichenfolge mit freigeben <see langword="CoTaskMemFree" /> abschließend.</param>
+        <param name="pdwIDStringLen">Die Adresse einer Variablen, die die Länge in Bytes, der die aufgerufenen reservierten Identitätszeichenfolge empfängt.</param>
+        <summary>Die <see cref="T:Accessibility.IAccIdentity" /> und alle verfügbar gemachten Member sind Teil einen verwalteten Wrapper für das Component Object Model (COM) <see langword="IAccIndentity" /> Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu <xref:Accessibility.IAccIdentity.GetIdentityString%2A>, finden Sie in der Dokumentation für `IAccIdentity::GetIdentityString` in der Microsoft Active Accessibility-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

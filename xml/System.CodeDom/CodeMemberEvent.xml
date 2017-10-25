@@ -1,0 +1,146 @@
+<Type Name="CodeMemberEvent" FullName="System.CodeDom.CodeMemberEvent">
+  <TypeSignature Language="C#" Value="public class CodeMemberEvent : System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeMemberEvent extends System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeMemberEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeTypeMember</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Deklaration eines Ereignisses für einen Typ dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeMemberEvent>kann verwendet werden, um Ereignismember eines Typs darstellen. <xref:System.CodeDom.CodeMemberEvent>verfügt über Eigenschaften, den Datentyp des Ereignisses, um anzugeben, ob einen Datentyp privat implementiert, und welche Schnittstellentypen ggf. das Memberereignis implementiert.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeMemberEvent> auf ein Ereignis deklarieren, die akzeptiert eine `System.EventHandler` delegieren:  
+  
+ [!code-cpp[CodeMemberEventSample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMemberEventSample/CPP/codemembereventexample.cpp#3)]
+ [!code-csharp[CodeMemberEventSample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMemberEventSample/CS/codemembereventexample.cs#3)]
+ [!code-vb[CodeMemberEventSample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMemberEventSample/VB/codemembereventexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMemberEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMemberEvent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeMemberEvent" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationTypes">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReferenceCollection ImplementationTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReferenceCollection ImplementationTypes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberEvent.ImplementationTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp, den das Memberereignis implementiert.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> , der den Datentyp bzw. die Datentypen, die die Memberereignis implementiert angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der referenzierten Typen sollten aus Schnittstellen oder die Basisklasse bestehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateImplementationType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference PrivateImplementationType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference PrivateImplementationType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberEvent.PrivateImplementationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den privat implementierten Datentyp aus, falls vorhanden.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Datentyp, der das Ereignis privat implementiert angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der referenzierten Typen sollten aus Schnittstellen oder die Basisklasse bestehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference Type" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberEvent.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp des Delegattyps die Ereignisbehandlung.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Typ des Delegaten, die Behandlung des Ereignisses angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

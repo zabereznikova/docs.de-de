@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic.CompilerServices">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.VisualBasic.CompilerServices" /> -Namespace enthält die interne Verwendung nur Typen, die Visual Basic-Compiler unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Sprachelemente, finden Sie unter [Sprachreferenz zu Visual Basic](http://msdn.microsoft.com/library/5c6bd31a-9542-4f3e-bfd5-e951af58f0f2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

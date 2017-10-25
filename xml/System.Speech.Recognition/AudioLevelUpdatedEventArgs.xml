@@ -1,0 +1,78 @@
+<Type Name="AudioLevelUpdatedEventArgs" FullName="System.Speech.Recognition.AudioLevelUpdatedEventArgs">
+  <TypeSignature Language="C#" Value="public class AudioLevelUpdatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioLevelUpdatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.AudioLevelUpdatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see langword="AudioLevelUpdated" /> -Ereignis für die <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> oder <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn sie ausgelöst werden, die <xref:System.Speech.Recognition.SpeechRecognitionEngine.AudioLevelUpdated?displayProperty=nameWithType> und <xref:System.Speech.Recognition.SpeechRecognizer.AudioLevelUpdated?displayProperty=nameWithType> Ereignisse übergeben Sie eine Instanz des <xref:System.Speech.Recognition.AudioLevelUpdatedEventArgs> an den Handler für das zugeordnete Ereignis.  
+  
+ Die <xref:System.Speech.Recognition.AudioLevelUpdatedEventArgs.AudioLevel%2A> -Eigenschaft ruft die neue Ebene der Audio, wenn Eingabe die <xref:System.Speech.Recognition.SpeechRecognitionEngine.AudioLevelUpdated?displayProperty=nameWithType> oder <xref:System.Speech.Recognition.SpeechRecognizer.AudioLevelUpdated?displayProperty=nameWithType> Ereignis wird ausgelöst.  
+  
+ Die `AudioLevel` Eigenschaft von der <xref:System.Speech.Recognition.SpeechRecognizer> und <xref:System.Speech.Recognition.SpeechRecognitionEngine> Klassen bereitstellt, die aktuelle Ebene der Eingabe der Spracherkennungsmoduls audio.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fügt einen Ereignishandler an einen <xref:System.Speech.Recognition.SpeechRecognitionEngine> Objekt. Der Handler gibt die neue audio Ebene in der Konsole aus.  
+  
+ <xref:System.Speech.Recognition.AudioLevelUpdatedEventArgs> wird von <xref:System.EventArgs> abgeleitet.  
+  
+```csharp  
+  
+private SpeechRecognitionEngine sre;  
+  
+// Initialize the SpeechRecognitionEngine object.   
+private void Initialize()  
+{  
+  sre = new SpeechRecognitionEngine();  
+  
+  // Add an event handler for the AudioLevelUpdated event.  
+  sre.AudioLevelUpdated += new EventHandler<AudioLevelUpdatedEventArgs>(sre_AudioLevelUpdated);  
+  
+  // Add other initialization code here.  
+}  
+  
+// Write the audio level to the console when the AudioLevelUpdated event is raised.  
+void sre_AudioLevelUpdated(object sender, AudioLevelUpdatedEventArgs e)  
+{  
+  Console.WriteLine("The audio level is now: {0}.", e.AudioLevel);  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AudioLevel">
+      <MemberSignature Language="C#" Value="public int AudioLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AudioLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.AudioLevelUpdatedEventArgs.AudioLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die neue Ebene der Audioeingabe nach der <see cref="E:System.Speech.Recognition.SpeechRecognitionEngine.AudioLevelUpdated" /> oder <see cref="E:System.Speech.Recognition.SpeechRecognizer.AudioLevelUpdated" /> Ereignis wird ausgelöst.</summary>
+        <value>Die neue Ebene der Audioeingabe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

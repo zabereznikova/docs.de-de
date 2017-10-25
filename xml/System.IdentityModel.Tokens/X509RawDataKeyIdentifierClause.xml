@@ -1,0 +1,207 @@
+<Type Name="X509RawDataKeyIdentifierClause" FullName="System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class X509RawDataKeyIdentifierClause : System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509RawDataKeyIdentifierClause extends System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.BinaryKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schlüsselbezeichnerklausel dar, die ein <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />-Sicherheitstoken unter Verwendung der unformatierten Daten des X.509-Zertifikats identifiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel ist es nicht erforderlich, die <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> zu verwenden, es sei denn, es wird ein benutzerdefinierter Sicherheitstokendienst erstellt. Wenn ein Sicherheitstokendienst ein Sicherheitstoken zurückgibt, enthält das ausgegebene Sicherheitstoken Verweise auf angefügte und nicht angefügte Sicherheitstoken. Angefügte Verweise beziehen sich auf Sicherheitstoken, die im Sicherheitsheader einer SOAP-Nachricht enthalten sind, während sich nicht angefügte Verweise auf Sicherheitstoken beziehen, die nicht im Sicherheitsheader einer SOAP-Nachricht enthalten sind. Diese Verweise bestätigen in der Regel die Echtheit des ausgegebenen Sicherheitstokens. Verwenden Sie die <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>-Klasse, um unter Verwendung der unformatierten Daten des X.509-Zertifikats auf ein <xref:System.IdentityModel.Tokens.X509SecurityToken>-Sicherheitstoken zu verweisen. Die <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.GetX509RawData%2A>-Methode gibt die unformatierten Daten zurück.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)] unterstützt die folgenden Typen von Sicherheitstokenverweisen für <xref:System.IdentityModel.Tokens.X509SecurityToken>-Sicherheitstoken.  
+  
+-   <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>  
+  
+ <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509RawDataKeyIdentifierClause (byte[] certificateRawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] certificateRawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificateRawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificateRawData">Ein <see cref="T:System.Byte" />-Array, das die unformatierten Daten eines X.509-Zertifikats enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause" />-Klasse unter Verwendung der angegebenen unformatierten Daten eines X.509-Zertifikats.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificateRawData" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="certificateRawData" /> hat die Länge 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509RawDataKeyIdentifierClause (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Objekt, das das X.509-Zertifikat enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause" />-Klasse unter Verwendung des angegebenen X.509-Zertifikats.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die unformatierten Daten werden mithilfe der `certificate`-Methode für den <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetRawCertData%2A>-Parameter empfangen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKey">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCreateKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.CanCreateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Schlüssel aus den unformatierten Daten des X.509-Zertifikats oder aus dem in diesem Konstruktor angegebenen Bytearray erstellt werden kann.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie zum Erstellen des Schlüssels die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CreateKey%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKey">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityKey CreateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityKey CreateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.CreateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Schlüssel aus den unformatierten Daten des X.509-Zertifikats oder aus dem in diesem Konstruktor angegebenen Bytearray.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.X509AsymmetricSecurityKey" />, der den/die dem X.509-Zertifikat zugeordneten Schlüssel enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetX509RawData">
+      <MemberSignature Language="C#" Value="public byte[] GetX509RawData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetX509RawData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.GetX509RawData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die dem X.509-Zertifikat zugeordneten unformatierten Daten ab.</summary>
+        <returns>Ein Array von <see cref="T:System.Byte" />, das die dem X.509-Zertifikat zugeordneten unformatierten Daten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.Matches(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />, der das zu vergleichende X.509-Zertifikat enthält.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Schlüsselbezeichner für diese Instanz mit dem angegebenen X.509-Zertifikat übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="certificate" /> unformatierte Daten aufweist, die mit der aktuellen Instanz übereinstimmen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.Matches%2A>-Methode ruft die <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetRawCertData%2A>-Methode für das `certificate` auf und vergleicht diese daraufhin mit der aktuellen Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das aktuelle Objekt zurück.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das aktuelle Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.ToString%2A>-Methode gibt die unformatierten, Base-64-codierten Daten zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

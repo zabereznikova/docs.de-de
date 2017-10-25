@@ -1,0 +1,169 @@
+<Type Name="ProfileAttribute" FullName="System.Web.ModelBinding.ProfileAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ProfileAttribute : System.Web.ModelBinding.ValueProviderSourceAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProfileAttribute extends System.Web.ModelBinding.ValueProviderSourceAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.ProfileAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.ModelBinding.ValueProviderSourceAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Attribut, das angibt, dass die Werte für die modellbindung von einem Profil bereitgestellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ModelBinding.ProfileAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ProfileAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ModelBinding.ProfileAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileAttribute (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ProfileAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.ProfileAttribute" /> -Klasse unter Verwendung der Key-Profils.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModelName">
+      <MemberSignature Language="C#" Value="public override string GetModelName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetModelName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ProfileAttribute.GetModelName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Modellnamen ab.</summary>
+        <returns>Der Name des Modells.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Wert der die <xref:System.Web.ModelBinding.ProfileAttribute.Key%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueProvider">
+      <MemberSignature Language="C#" Value="public override System.Web.ModelBinding.IValueProvider GetValueProvider (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.ModelBinding.IValueProvider GetValueProvider(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ProfileAttribute.GetValueProvider(System.Web.ModelBinding.ModelBindingExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.IValueProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">Der Ausführungskontext.</param>
+        <summary>Ruft den Wertanbieter ab.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Web.ModelBinding.ProfileValueProvider" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="modelBindingExecutionContext" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ProfileAttribute.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Key-Profils ab.</summary>
+        <value>Die Profil-Taste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Reihe von Lernprogrammen bei Verwendung von modellbindung für Webformulare, finden Sie unter [wurden die Modellbindung und Web Forms](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

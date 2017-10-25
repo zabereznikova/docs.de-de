@@ -1,0 +1,75 @@
+<Type Name="RibbonImageSize" FullName="System.Windows.Controls.Ribbon.RibbonImageSize">
+  <TypeSignature Language="C#" Value="public enum RibbonImageSize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RibbonImageSize extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.RibbonImageSize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Konstanten, die angeben, wie Bilder angezeigt werden, <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Ribbon.Ribbon> -Steuerelement kann ein großes Bild, ein kleines Bild anzeigen oder das Bild reduziert werden kann. Wenn das Steuerelement kein Bild der Größe angeben, die entspricht der <xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.ImageSize%2A> festlegen, wird kein Bild angezeigt.  
+  
+ Ein kleines Bild ist in der Regel 16 x 16 Pixel bei 96 dpi. Ein großes Bild wird in der Regel 32 x 32 Pixel bei 96 dpi.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Collapsed">
+      <MemberSignature Language="C#" Value="Collapsed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Ribbon.RibbonImageSize Collapsed = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonImageSize.Collapsed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonImageSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Bild wird reduziert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Large">
+      <MemberSignature Language="C#" Value="Large" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Ribbon.RibbonImageSize Large = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonImageSize.Large" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonImageSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das große Bild wird angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Small">
+      <MemberSignature Language="C#" Value="Small" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Ribbon.RibbonImageSize Small = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonImageSize.Small" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonImageSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das kleine Bild wird angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,402 @@
+<Type Name="QualifierDataCollection" FullName="System.Management.QualifierDataCollection">
+  <TypeSignature Language="C#" Value="public class QualifierDataCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QualifierDataCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.QualifierDataCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Management.QualifierData" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel listet Qualifiziererinformationen über die **Win32_Service** -Klasse unter Verwendung der <xref:System.Management.QualifierData> Klasse. Weitere Informationen zu **Win32_Service**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_QualifierDataCollection#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_QualifierDataCollection/cs/QualifierDataCollection.cs#1)]
+ [!code-vb[wminet_QualifierDataCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_QualifierDataCollection/vb/QualifierDataCollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (string qualifierName, object qualifierValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string qualifierName, object qualifierValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.QualifierDataCollection.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifierName" Type="System.String" />
+        <Parameter Name="qualifierValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="qualifierName">Der Name des der <see cref="T:System.Management.QualifierData" /> hinzuzufügende der <see cref="T:System.Management.QualifierDataCollection" />.</param>
+        <param name="qualifierValue">Der Wert für den neuen Qualifizierer.</param>
+        <summary>Fügt der <see cref="T:System.Management.QualifierData" /> einen <see cref="T:System.Management.QualifierDataCollection" /> hinzu. Diese Überladung gibt den Qualifizierernamen und Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (string qualifierName, object qualifierValue, bool isAmended, bool propagatesToInstance, bool propagatesToSubclass, bool isOverridable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string qualifierName, object qualifierValue, bool isAmended, bool propagatesToInstance, bool propagatesToSubclass, bool isOverridable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.QualifierDataCollection.Add(System.String,System.Object,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifierName" Type="System.String" />
+        <Parameter Name="qualifierValue" Type="System.Object" />
+        <Parameter Name="isAmended" Type="System.Boolean" />
+        <Parameter Name="propagatesToInstance" Type="System.Boolean" />
+        <Parameter Name="propagatesToSubclass" Type="System.Boolean" />
+        <Parameter Name="isOverridable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="qualifierName">Der Name des Prozedurqualifizierers.</param>
+        <param name="qualifierValue">Der Wert des Qualifizierers.</param>
+        <param name="isAmended">
+          <see langword="true" />um anzugeben, dass diese Qualifizierer geändert wird (<c>Flavor</c>) ist, andernfalls <see langword="false" />.</param>
+        <param name="propagatesToInstance">
+          <see langword="true" />Diese Qualifizierer an Instanzen weitergegeben; andernfalls <see langword="false" />.</param>
+        <param name="propagatesToSubclass">
+          <see langword="true" />Diese Qualifizierer an Unterklassen weitergegeben; andernfalls <see langword="false" />.</param>
+        <param name="isOverridable">
+          <see langword="true" />um anzugeben, dass der Wert dieses Qualifizierers in Instanzen von Unterklassen; andernfalls <see langword="false" />.</param>
+        <summary>Fügt der <see cref="T:System.Management.QualifierData" /> einen <see cref="T:System.Management.QualifierDataCollection" /> hinzu. Diese Überladung gibt alle Eigenschaftswerte für eine <see cref="T:System.Management.QualifierData" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.QualifierDataCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, das kopiert die <see cref="T:System.Management.QualifierDataCollection" />.</param>
+        <param name="index">Der Index von dem mit dem Kopieren begonnen werden soll.</param>
+        <summary>Kopiert die <see cref="T:System.Management.QualifierDataCollection" /> in ein Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Management.QualifierData[] qualifierArray, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Management.QualifierData[] qualifierArray, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.QualifierDataCollection.CopyTo(System.Management.QualifierData[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifierArray" Type="System.Management.QualifierData[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="qualifierArray">Das spezielle Array von <see cref="T:System.Management.QualifierData" /> Objekte in das kopiert die <see cref="T:System.Management.QualifierDataCollection" />.</param>
+        <param name="index">Der Index von dem mit dem Kopieren begonnen werden soll.</param>
+        <summary>Kopiert die <see cref="T:System.Management.QualifierDataCollection" /> in ein spezielles <see cref="T:System.Management.QualifierData" /> Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierDataCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Management.QualifierData" /> Objekte in der <see cref="T:System.Management.QualifierDataCollection" />.</summary>
+        <value>Gibt ein <see cref="T:System.Int32" /> Wert, der die Anzahl der Objekte in der Auflistung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Die Anzahl der Objekte in der Auflistung.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Management.QualifierDataCollection.QualifierDataEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.QualifierDataCollection/QualifierDataEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.QualifierDataCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.QualifierDataCollection+QualifierDataEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator für die <see cref="T:System.Management.QualifierDataCollection" />. Diese Methode ist stark typisiert.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nur durchlaufen (wie in einer Visual Basic .NET `For Each` -Anweisung oder ein C#- `For` Anweisung) einen Vorwärtscursor einmal durchlaufen. So, dass der Enumerator nicht zurückgesetzt werden kann, wird der Speicher mit den Instanzen von WMI freigegeben. Aus diesem Grund die <xref:System.Management.QualifierDataCollection.Count%2A> Methode kann nicht verwendet werden, da sie das Zurücksetzen des Enumerators erfordert.  
+  
+ Vorwärtscursor Enumeratoren werden in der Regel viel schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe von <xref:System.Management.QualifierDataCollection.QualifierDataEnumerator.Reset%2A>.  
+  
+ Wenn ein Enumerator zurückspulbar ist, werden die Objekte in der Auflistung für mehrere Enumerationen verfügbar gehalten werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierDataCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Objekt synchronisiert wird.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob das Objekt synchronisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn das Objekt synchronisiert wird; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Management.QualifierData this[string qualifierName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.QualifierData Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierDataCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.QualifierData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifierName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="qualifierName">Der Name des der <see cref="T:System.Management.QualifierData" /> für den Zugriff auf die <see cref="T:System.Management.QualifierDataCollection" />.</param>
+        <summary>Ruft den angegebenen <see cref="T:System.Management.QualifierData" /> aus der <see cref="T:System.Management.QualifierDataCollection" />.</summary>
+        <value>Gibt eine <see cref="T:System.Management.QualifierData" /> mit den Daten für einen angegebenen Qualifizierer in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.QualifierData>basierend auf dem angegebenen Namen.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (string qualifierName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string qualifierName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.QualifierDataCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifierName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="qualifierName">Der Name des zu entfernenden <see cref="T:System.Management.QualifierData" />.</param>
+        <summary>Entfernt eine <see cref="T:System.Management.QualifierData" /> aus der <see cref="T:System.Management.QualifierDataCollection" /> anhand des Namens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Management.QualifierDataCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das für die Synchronisierung verwendet werden.</summary>
+        <value>Gibt eine <see cref="T:System.Object" /> Wert für die Synchronisierung verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Das Objekt, für die Synchronisierung verwendet werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.QualifierDataCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, der <see cref="T:System.Management.QualifierDataCollection" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Management.QualifierDataCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Visual Basic, c#]  
+  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren.  Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. <xref:System.Collections.IEnumerator.Reset%2A> setzt den Enumerator ebenfalls auf diese Position zurück. An dieser position Aufrufen <xref:System.Collections.IEnumerator.Current%2A> löst eine Ausnahme aus. Daher muss der Enumerator durch einen Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> auf das erste Element der Auflistung gesetzt werden, bevor der Wert von <xref:System.Collections.IEnumerator.Current%2A> gelesen werden kann.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> aufgerufen wird. <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.IEnumerator.Current%2A> auf das nächste Element fest.  
+  
+ Wenn <xref:System.Collections.IEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.IEnumerator.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.Collections.IEnumerator.MoveNext%2A> zurückgegebene `false`Aufrufen <xref:System.Collections.IEnumerator.Current%2A> löst eine Ausnahme aus. Um <xref:System.Collections.IEnumerator.Current%2A> wieder auf das erste Element der Auflistung festzulegen, können Sie <xref:System.Collections.IEnumerator.Reset%2A> gefolgt von <xref:System.Collections.IEnumerator.MoveNext%2A> aufrufen.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>. Wenn die Auflistung, zwischen geändert wird <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> gibt das Element, das auf festgelegt, wird, auch wenn der Enumerator bereits ungültig ist.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung. Daher ist die Enumeration einer Auflistung systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

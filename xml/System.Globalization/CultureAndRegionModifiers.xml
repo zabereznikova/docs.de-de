@@ -1,0 +1,102 @@
+<Type Name="CultureAndRegionModifiers" FullName="System.Globalization.CultureAndRegionModifiers">
+  <TypeSignature Language="C#" Value="public enum CultureAndRegionModifiers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CultureAndRegionModifiers extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CultureAndRegionModifiers" />
+  <AssemblyInfo>
+    <AssemblyName>sysglobl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Konstanten an, die ein <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />-Objekt definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie eine bitweise Kombination eines oder mehrerer <xref:System.Globalization.CultureAndRegionModifiers> Werte als Argument an die <xref:System.Globalization.CultureAndRegionInfoBuilder.%23ctor%28System.String%2CSystem.Globalization.CultureAndRegionModifiers%29?displayProperty=nameWithType> Konstruktor. Sie verwenden Sie die resultierende <xref:System.Globalization.CultureAndRegionInfoBuilder> Objekt um eine benutzerdefinierte Kultur zu erstellen.  
+  
+ Eine benutzerdefinierte Kultur kann eine Kombination dieser Eigenschaften aufweisen:  
+  
+-   Eine benutzerdefinierte Kultur kann es sich um eine bestimmte Kultur oder eine neutrale Kultur sein.  
+  
+     Eine bestimmte Kultur gibt eine Sprache und einer Region, während eine neutrale Kultur einer anderen Sprache jedoch keine Region angibt.  
+  
+-   Eine benutzerdefinierte Kultur kann es sich um einen Austausch oder eine ergänzende Kultur sein.  
+  
+     Eine Ersetzung Kultur ersetzt eine Kultur, die geliefert wird mit .NET Framework oder eines Gebietsschemas, das mit Windows geliefert wird.  
+  
+     Eine Ergänzungskultur ist etwas anderes als ein Ersatzkultur. Eine Ergänzungskultur kann völlig neue oder eine vorhandene .NET Framework-Kultur oder ein Windows-Gebietsschema erweitern kann.  
+  
+> [!IMPORTANT]
+>  Beachten Sie, dass die <xref:System.Globalization.CultureAndRegionModifiers> Enumeration in einer Assembly mit dem Namen sysglobl.dll gefunden wird. Erfolgreich Kompilieren von Code, der diese Art verwendet, müssen Sie einen Verweis auf sysglobl.dll hinzufügen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine benutzerdefinierte Kultur mit einem Präfix private Verwendung erstellt und enthält eine Reihe von deren Eigenschaften. Die erste Eigenschaft ist der Name der Kultur.  
+  
+ [!code-cpp[sys.glob.carib1#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.carib1/CPP/carib.cpp#1)]
+ [!code-csharp[sys.glob.carib1#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib1/CS/carib.cs#1)]
+ [!code-vb[sys.glob.carib1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib1/VB/carib.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Neutral">
+      <MemberSignature Language="C#" Value="Neutral" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureAndRegionModifiers Neutral = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureAndRegionModifiers.Neutral" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureAndRegionModifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine neutrale benutzerdefinierte Kultur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureAndRegionModifiers None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureAndRegionModifiers.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureAndRegionModifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine bestimmte benutzerdefinierte Ergänzungskultur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replacement">
+      <MemberSignature Language="C#" Value="Replacement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureAndRegionModifiers Replacement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureAndRegionModifiers.Replacement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureAndRegionModifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine benutzerdefinierte Kultur, die eine vorhandene .NET Framework-Kultur oder ein Windows-Gebietsschema ersetzt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

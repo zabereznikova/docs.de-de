@@ -1,0 +1,105 @@
+<Type Name="XmlSchemaAttributeGroupRef" FullName="System.Xml.Schema.XmlSchemaAttributeGroupRef">
+  <TypeSignature Language="C#" Value="public class XmlSchemaAttributeGroupRef : System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaAttributeGroupRef extends System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaAttributeGroupRef" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaAnnotated</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="attributeGroup" /> Element mit der <see langword="ref" /> Attribut aus dem XML-Schema entsprechend den Angaben von der [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?LinkId=49454). AttributesGroupRef ist der Verweis auf eine AttributeGroup, Name-Eigenschaft enthält die Attributgruppe, die auf die verwiesen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Verweis auf das Zwischengranularitätsattribut Gruppe kann nur als untergeordnetes Element des definiert werden die `attributeGroup` oder `complexType` Element. In diesem Fall die `ref` Attribut muss vorhanden sein und enthalten den Namen der Attributgruppe verwiesen wird.  
+  
+   
+  
+## Examples  
+ Finden Sie unter <xref:System.Xml.Schema.XmlSchemaAttributeGroup> für ein Beispiel für die Verwendung dieser Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaAttributeGroupRef ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaAttributeGroupRef.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaAttributeGroupRef" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName RefName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName RefName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAttributeGroupRef.RefName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("ref")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der auf das verwiesen wird <see langword="attributeGroup" /> Element.</summary>
+        <value>Der Name der Attributgruppe verwiesen wird. Der Wert muss ein QName sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist der Name der Attributgruppe, deren Attribute werden in einer Attributgruppe oder eines komplexen Typs aufgenommen werden. Wenn ein komplexer Typ oder eine Attributgruppe eine Attributgruppe enthält, ist Sie den Namen des enthaltenen Attributgruppe für die verwendeten die `ref` Attribut.  
+  
+ Der Wert muss ein QName sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

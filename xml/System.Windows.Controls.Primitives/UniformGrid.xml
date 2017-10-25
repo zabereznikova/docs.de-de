@@ -1,0 +1,246 @@
+<Type Name="UniformGrid" FullName="System.Windows.Controls.Primitives.UniformGrid">
+  <TypeSignature Language="C#" Value="public class UniformGrid : System.Windows.Controls.Panel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UniformGrid extends System.Windows.Controls.Panel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.UniformGrid" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit zum Inhalt in einem Raster anordnen, in dem alle Zellen im Raster auf die gleiche Größe aufweisen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniformGrid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.UniformGrid.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.UniformGrid" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.UniformGrid.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die <see cref="T:System.Windows.Size" /> des Bereichs für das Raster zu verwenden.</param>
+        <summary>Definiert das Layout des der <see cref="T:System.Windows.Controls.Primitives.UniformGrid" /> Speicherplatz gleichmäßig auf alle untergeordneten Elemente verteilt.</summary>
+        <returns>Die tatsächliche <see cref="T:System.Windows.Size" /> des Rasters, das gerendert wird, um die untergeordneten Elemente anzuzeigen, die sichtbar sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `arrangeSize` Parameter definiert den Bereich in den Layoutbereich, die für das Raster verfügbar ist. Wenn zwei Zeilen und vier Spalten in einem Raster vorhanden sind, ist die mögliche Höhe für jede Zelle z. B. 0,5\**dabei entspricht ArrangeSizeHeight* und die maximale Breite ist 0.25*auf*. Für diese Berechnungen *dabei entspricht ArrangeSizeHeight* ist die <xref:System.Windows.Size.Height%2A> Wert der `arrangeSize` Parameter und *auf* ist die <xref:System.Windows.Size.Width%2A> Wert der `arrangeSize` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public int Columns { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Columns" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.UniformGrid.Columns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Spalten, die im Raster sind.</summary>
+        <value>Die Anzahl der Spalten, die im Raster sind. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert 0 (null) für die <xref:System.Windows.Controls.Primitives.UniformGrid.Columns%2A> Eigenschaft gibt an, dass die Anzahl der Spalten berechnet wird basierend auf der Anzahl der Zeilen und die Anzahl der sichtbaren untergeordneten Elemente, die in der <xref:System.Windows.Controls.Grid>.  
+  
+ Der Wert des der <xref:System.Windows.Controls.Primitives.UniformGrid.FirstColumn%2A> muss kleiner sein als der Wert des der <xref:System.Windows.Controls.Primitives.UniformGrid.Columns%2A> -Eigenschaft für die <xref:System.Windows.Controls.Primitives.UniformGrid> ordnungsgemäß funktioniert.  
+  
+<a name="dependencyPropertyInfo_Columns"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.UniformGrid.ColumnsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.UniformGrid.ColumnsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.UniformGrid.Columns" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstColumn">
+      <MemberSignature Language="C#" Value="public int FirstColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.UniformGrid.FirstColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der führenden leeren Zellen in der ersten Zeile des Rasters.</summary>
+        <value>Die Anzahl der leeren Zellen, die in der ersten Zeile des Rasters sind. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des der <xref:System.Windows.Controls.Primitives.UniformGrid.FirstColumn%2A> muss kleiner sein als der Wert des der <xref:System.Windows.Controls.Primitives.UniformGrid.Columns%2A> -Eigenschaft für die <xref:System.Windows.Controls.Primitives.UniformGrid> ordnungsgemäß funktioniert.  
+  
+<a name="dependencyPropertyInfo_FirstColumn"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.UniformGrid.FirstColumnProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstColumnProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FirstColumnProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FirstColumnProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.UniformGrid.FirstColumnProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.UniformGrid.FirstColumn" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.UniformGrid.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die <see cref="T:System.Windows.Size" /> des verfügbaren Bereichs für das Raster.</param>
+        <summary>Berechnet die gewünschte Größe für die <see cref="T:System.Windows.Controls.Primitives.UniformGrid" /> durch das Messen der aller untergeordneten Elemente.</summary>
+        <returns>Die gewünschte <see cref="T:System.Windows.Size" /> basierend auf dem untergeordneten Inhalt des Rasters und das <paramref name="constraint" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `constraint` Parameter definiert die maximale Größe des Speicherplatzes, der für das Raster verfügbar ist. Dieser Speicherplatz ist gleichermaßen basierend auf der Anzahl von Zeilen und Spalten im Raster aufgeteilt. Die Größe jedes untergeordneten Elements wird gemessen, um die maximale Breite aller untergeordneten Elemente des Rasters zu bestimmen. Die maximalen Werte nicht überschreiten die maximale Zellengröße, die berechnet wird, aus der `constraint`. Eine gewünschte Raster <xref:System.Windows.Size> wird basierend auf der maximalen untergeordneten Dimensionen berechnet. Die <xref:System.Windows.Size.Width%2A> ist die maximale untergeordneten Breite multipliziert die Anzahl der Spalten. Die <xref:System.Windows.Size.Height%2A> ist die maximale untergeordneten Höhe multipliziert die Anzahl der Zeilen. Diese Methode gibt die gewünschte <xref:System.Windows.Size>.  
+  
+ Wenn zwei Zeilen und vier Spalten in einem Raster vorhanden sind, ist die maximale Höhe für jede Zelle z. B. 0,5\**ConstraintHeight* und die maximale Breite ist 0.25*ConstraintWidth*. Für diese Berechnungen *ConstraintHeight* ist die <xref:System.Windows.Size.Height%2A> Wert der `constraint` Parameter und *ConstraintWidth* ist die <xref:System.Windows.Size.Width%2A> Wert der `constraint` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rows">
+      <MemberSignature Language="C#" Value="public int Rows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Rows" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.UniformGrid.Rows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Zeilen, die im Raster sind.</summary>
+        <value>Die Anzahl der Zeilen, die im Raster sind. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert 0 (null) für die <xref:System.Windows.Controls.Primitives.UniformGrid.Rows%2A> Eigenschaft gibt an, dass die Zeilenanzahl berechnet wird basierend auf der Anzahl der Spalten und die Anzahl der sichtbaren untergeordneten Elemente, die im Raster sind.  
+  
+<a name="dependencyPropertyInfo_Rows"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.UniformGrid.RowsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RowsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RowsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.UniformGrid.RowsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.UniformGrid.Rows" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

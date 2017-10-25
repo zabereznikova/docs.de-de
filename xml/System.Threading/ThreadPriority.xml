@@ -1,0 +1,178 @@
+<Type Name="ThreadPriority" FullName="System.Threading.ThreadPriority">
+  <TypeSignature Language="C#" Value="public enum ThreadPriority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ThreadPriority extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadPriority" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Planungspriorität eine <see cref="T:System.Threading.Thread" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.ThreadPriority>definiert den Satz aller möglichen Werte für eine Threadpriorität. Threadprioritäten geben die relative Priorität der Threads gegenüber anderen.  
+  
+ Jeder Thread verfügt über eine Priorität zugewiesen. Threads, die innerhalb der Runtime erstellt werden anfänglich zugewiesen. die `Normal` Priorität, Threads, die außerhalb der Runtime erstellt ihre vorherige Priorität beibehalten, wenn sie die Common Language Runtime erreichen. Sie erhalten können, und legen Sie die Priorität eines Threads durch den Zugriff auf seine <xref:System.Threading.Thread.Priority%2A> Eigenschaft.  
+  
+ Threads werden basierend auf deren Priorität Ausführung geplant. Jedes Betriebssystem hängt von der Planungsalgorithmus bestimmt die Reihenfolge der Ausführung von Threads ab. Das Betriebssystem kann die Threadpriorität auch dynamisch anpassen, wie die Benutzeroberfläche den Fokus zwischen den Vordergrund und Hintergrund verschoben wird.  
+  
+ Die Priorität eines Threads wirkt sich nicht auf den Thread Zustand aus; der Zustand des Threads muss <xref:System.Threading.ThreadState.Running> , bevor das Betriebssystem geplant werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt das Ergebnis einer Änderung der Priorität eines Threads. Drei Threads erstellt, die Priorität eines Threads zum BelowNormal festgelegt ist und die Priorität einer Sekunde zu AboveNormal festgelegt ist. Jeder Thread inkrementiert den Wert einer Variablen in einem `while` Schleife und Testläufe für einen festgelegten Zeitraum.  
+  
+ [!code-csharp[System.Threading.ThreadPriority#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Threading.ThreadPriority/cs/Example1.cs#1)]
+ [!code-vb[System.Threading.ThreadPriority#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Threading.ThreadPriority/vb/Example1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveNormal">
+      <MemberSignature Language="C#" Value="AboveNormal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority AboveNormal = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.AboveNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Threading.Thread" /> geplant werden können, nach Threads mit <see langword="Highest" /> Priorität und vor Threads mit <see langword="Normal" /> Priorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowNormal">
+      <MemberSignature Language="C#" Value="BelowNormal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority BelowNormal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.BelowNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Threading.Thread" /> geplant werden können, nach Threads mit <see langword="Normal" /> Priorität und vor Threads mit <see langword="Lowest" /> Priorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Highest">
+      <MemberSignature Language="C#" Value="Highest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority Highest = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.Highest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Threading.Thread" /> vor Threads mit einer beliebigen anderen Priorität geplant werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Lowest">
+      <MemberSignature Language="C#" Value="Lowest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority Lowest = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.Lowest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Threading.Thread" /> nach Threads mit einer beliebigen anderen Priorität geplant werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority Normal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Threading.Thread" /> geplant werden können, nach Threads mit <see langword="AboveNormal" /> Priorität und vor Threads mit <see langword="BelowNormal" /> Priorität. Threads sind durch <see langword="Normal" /> Priorität standardmäßig.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

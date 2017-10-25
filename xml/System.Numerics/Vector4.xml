@@ -1,0 +1,2108 @@
+<Type Name="Vector4" FullName="System.Numerics.Vector4">
+  <TypeSignature Language="C#" Value="public struct Vector4 : IEquatable&lt;System.Numerics.Vector4&gt;, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Vector4 extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Numerics.Vector4&gt;, class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Numerics.Vector4" />
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics.Vectors</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Numerics.Vector4&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Vektor mit vier Gleitkommawerten mit einfacher Genauigkeit dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4> Struktur bietet Unterstützung für die Hardwarebeschleunigung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector4 (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.#ctor(System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der allen vier Elementen zuzuweisende Wert.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Numerics.Vector4" />-Objekt, dessen vier Elemente den gleichen Wert aufweisen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector4 (System.Numerics.Vector3 value, float w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Numerics.Vector3 value, float32 w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.#ctor(System.Numerics.Vector3,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector3" />
+        <Parameter Name="w" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der für die X-, Y- und Z-Komponente zu verwendende Vektor.</param>
+        <param name="w">Die W-Komponente.</param>
+        <summary>Erzeugt ein neues <see cref="T:System.Numerics.Vector4" />-Objekt aus dem angegebenen <see cref="T:System.Numerics.Vector3" />-Objekt sowie eine W-Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector4 (System.Numerics.Vector2 value, float z, float w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Numerics.Vector2 value, float32 z, float32 w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.#ctor(System.Numerics.Vector2,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector2" />
+        <Parameter Name="z" Type="System.Single" />
+        <Parameter Name="w" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der für die X- und Y-Komponente zu verwendende Vektor.</param>
+        <param name="z">Die Z-Komponente.</param>
+        <param name="w">Die W-Komponente.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Numerics.Vector4" />-Objekt aus dem angegebenen <see cref="T:System.Numerics.Vector2" />-Objekt sowie eine Z- und eine W-Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector4 (float x, float y, float z, float w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 x, float32 y, float32 z, float32 w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.#ctor(System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="z" Type="System.Single" />
+        <Parameter Name="w" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der Wert, der dem <see cref="F:System.Numerics.Vector4.X" />-Feld zugewiesen werden soll.</param>
+        <param name="y">Der Wert, der dem <see cref="F:System.Numerics.Vector4.Y" />-Feld zugewiesen werden soll.</param>
+        <param name="z">Der Wert, der dem <see cref="F:System.Numerics.Vector4.Z" />-Feld zugewiesen werden soll.</param>
+        <param name="w">Der Wert, der dem <see cref="F:System.Numerics.Vector4.W" />-Feld zugewiesen werden soll.</param>
+        <summary>Erstellt einen Vektor, dessen Elemente die angegebenen Werte aufweisen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abs">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Abs (System.Numerics.Vector4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Abs(valuetype System.Numerics.Vector4 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Abs(System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Vektor.</param>
+        <summary>Gibt einen Vektor zurück, dessen Elemente die absoluten Werte jedes der Elemente des angegebenen Vektors sind.</summary>
+        <returns>Der Absolutwertvektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Add (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Add(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Add(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu addierende Vektor.</param>
+        <param name="right">Der zweite zu addierende Vektor.</param>
+        <summary>Addiert zwei Vektoren.</summary>
+        <returns>Der Summenvektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clamp">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Clamp (System.Numerics.Vector4 value1, System.Numerics.Vector4 min, System.Numerics.Vector4 max);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Clamp(valuetype System.Numerics.Vector4 value1, valuetype System.Numerics.Vector4 min, valuetype System.Numerics.Vector4 max) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Clamp(System.Numerics.Vector4,System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Vector4" />
+        <Parameter Name="min" Type="System.Numerics.Vector4" />
+        <Parameter Name="max" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der einzuschränkende Vektor.</param>
+        <param name="min">Der Minimalwert.</param>
+        <param name="max">Der Maximalwert.</param>
+        <summary>Schränkt einen Vektor zwischen einem Minimal- und einem Maximalwert ein.</summary>
+        <returns>Der eingeschränkte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (float[] array);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(float32[] array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.CopyTo(System.Single[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Single[]" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Zielarray.</param>
+        <summary>Kopiert die Elemente des Vektors in ein angegebenes Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `array`muss mindestens vier Elemente enthalten kann. Die Methode kopiert die Elemente des Vektors, die beginnend bei Index 0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Anzahl von Elementen in der aktuellen Instanz ist größer als im Array.</exception>
+        <exception cref="T:System.RankException">
+          <paramref name="array" /> ist mehrdimensional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (float[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(float32[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.CopyTo(System.Single[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Single[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Zielarray.</param>
+        <param name="index">Der Index, an dem das erste Element des Vektors kopiert werden soll.</param>
+        <summary>Kopiert die Elemente des Vektors ab der angegebenen Indexposition in das angegebene Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `array`Sie benötigen eine ausreichende Anzahl von Elementen, um die vier Vektorelemente Rechnung zu tragen. Das heißt, Elemente `index` über `index` + 3 muss bereits vorhanden sein, `array`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Anzahl von Elementen in der aktuellen Instanz ist größer als im Array.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer gleich der Arraylänge.</exception>
+        <exception cref="T:System.RankException">
+          <paramref name="array" /> ist mehrdimensional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public static float Distance (System.Numerics.Vector4 value1, System.Numerics.Vector4 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Distance(valuetype System.Numerics.Vector4 value1, valuetype System.Numerics.Vector4 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Distance(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Vector4" />
+        <Parameter Name="value2" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Punkt.</param>
+        <param name="value2">Der zweite Punkt.</param>
+        <summary>Berechnet den euklidischen Abstand zwischen den zwei angegebenen Punkten.</summary>
+        <returns>Der Abstand.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceSquared">
+      <MemberSignature Language="C#" Value="public static float DistanceSquared (System.Numerics.Vector4 value1, System.Numerics.Vector4 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 DistanceSquared(valuetype System.Numerics.Vector4 value1, valuetype System.Numerics.Vector4 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.DistanceSquared(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Vector4" />
+        <Parameter Name="value2" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Punkt.</param>
+        <param name="value2">Der zweite Punkt.</param>
+        <summary>Gibt den euklidischen Abstand zwischen zwei bestimmten Punkten im Quadrat zurück.</summary>
+        <returns>Das Quadrat des Abstands.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Divide">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Divide (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Divide(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Divide(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste Vektor.</param>
+        <param name="right">Der zweite Vektor.</param>
+        <summary>Dividiert den ersten Vektor durch den zweiten.</summary>
+        <returns>Der Vektor, der sich aus der Division ergibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Divide">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Divide (System.Numerics.Vector4 left, float divisor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Divide(valuetype System.Numerics.Vector4 left, float32 divisor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Divide(System.Numerics.Vector4,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="divisor" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der Vektor.</param>
+        <param name="divisor">Der Skalarwert.</param>
+        <summary>Dividiert den angegebenen Vektor durch einen angegebenen Skalarwert.</summary>
+        <returns>Der Vektor, der aus der Division resultiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dot">
+      <MemberSignature Language="C#" Value="public static float Dot (System.Numerics.Vector4 vector1, System.Numerics.Vector4 vector2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Dot(valuetype System.Numerics.Vector4 vector1, valuetype System.Numerics.Vector4 vector2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Dot(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vector1" Type="System.Numerics.Vector4" />
+        <Parameter Name="vector2" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="vector1">Der erste Vektor.</param>
+        <param name="vector2">Der zweite Vektor.</param>
+        <summary>Gibt das Skalarprodukt zweier Vektoren zurück.</summary>
+        <returns>Das Skalarprodukt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Numerics.Vector4 other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Numerics.Vector4 other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Equals(System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der andere Vektor.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz und ein anderer Vektor gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Vektoren gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Vektoren gleich sind. Wenn ihre <xref:System.Numerics.Vector4.X>, <xref:System.Numerics.Vector4.Y>, <xref:System.Numerics.Vector4.Z>, und <xref:System.Numerics.Vector4.W> Elemente gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene Instanz und <paramref name="obj" /> gleich sind, andernfalls <see langword="false" /><see langword="" />. Wenn <paramref name="obj" /> gleich <see langword="null" /> ist, gibt die Methode <see langword="false" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Instanz und `obj` sind gleich, wenn `obj` ist ein <xref:System.Numerics.Vector4> -Objekt und die entsprechenden Elemente gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Der Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public float Length ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 Length() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Length" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Länge dieses Vektorobjekts zurück.</summary>
+        <returns>Die Länge des Vektors.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LengthSquared">
+      <MemberSignature Language="C#" Value="public float LengthSquared ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 LengthSquared() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.LengthSquared" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Quadrat der Länge des Vektors zurück.</summary>
+        <returns>Das Quadrat der Länge des Vektors.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang bietet eine bessere Leistung als das Aufrufen der <xref:System.Numerics.Vector4.Length%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lerp">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Lerp (System.Numerics.Vector4 value1, System.Numerics.Vector4 value2, float amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Lerp(valuetype System.Numerics.Vector4 value1, valuetype System.Numerics.Vector4 value2, float32 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Lerp(System.Numerics.Vector4,System.Numerics.Vector4,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Vector4" />
+        <Parameter Name="value2" Type="System.Numerics.Vector4" />
+        <Parameter Name="amount" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Vektor.</param>
+        <param name="value2">Der zweite Vektor.</param>
+        <param name="amount">Ein Wert zwischen 0 und 1 an, der die Gewichtung des gibt <c>value2</c>.</param>
+        <summary>Führt eine lineare Interpolation zwischen beiden Vektoren aus, basierend auf der angegebenen Gewichtung.</summary>
+        <returns>Der interpolierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Max (System.Numerics.Vector4 value1, System.Numerics.Vector4 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Max(valuetype System.Numerics.Vector4 value1, valuetype System.Numerics.Vector4 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Max(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Vector4" />
+        <Parameter Name="value2" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Vektor.</param>
+        <param name="value2">Der zweite Vektor.</param>
+        <summary>Gibt einen Vektor zurück, dessen Elemente das Maximum jedes der Elementpaare in zwei angegebenen Vektoren sind.</summary>
+        <returns>Der maximierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Min">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Min (System.Numerics.Vector4 value1, System.Numerics.Vector4 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Min(valuetype System.Numerics.Vector4 value1, valuetype System.Numerics.Vector4 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Min(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Vector4" />
+        <Parameter Name="value2" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Vektor.</param>
+        <param name="value2">Der zweite Vektor.</param>
+        <summary>Gibt einen Vektor zurück, dessen Elemente das Minimum jedes der Elementpaare in zwei angegebenen Vektoren sind.</summary>
+        <returns>Der minimierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Multiply (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Multiply(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Multiply(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste Vektor.</param>
+        <param name="right">Der zweite Vektor.</param>
+        <summary>Multipliziert zwei Vektoren miteinander.</summary>
+        <returns>Der Produktvektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Multiply (System.Numerics.Vector4 left, float right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Multiply(valuetype System.Numerics.Vector4 left, float32 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Multiply(System.Numerics.Vector4,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der zu multiplizierende Vektor.</param>
+        <param name="right">Der Skalarwert.</param>
+        <summary>Multipliziert einen Vektor mit einem angegebenen Skalarwert.</summary>
+        <returns>Der skalierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Multiply (float left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Multiply(float32 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Multiply(System.Single,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der Skalarwert.</param>
+        <param name="right">Der Vektor.</param>
+        <summary>Multipliziert einen Skalarwert mit einem angegebenen Vektor.</summary>
+        <returns>Der skalierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Negate">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Negate (System.Numerics.Vector4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Negate(valuetype System.Numerics.Vector4 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Negate(System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu negierende Vektor.</param>
+        <summary>Negiert einen angegebenen Vektor.</summary>
+        <returns>Der negierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Normalize (System.Numerics.Vector4 vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Normalize(valuetype System.Numerics.Vector4 vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Normalize(System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vector" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="vector">Der zu normalisierende Vektor.</param>
+        <summary>Gibt einen Vektor mit der gleichen Richtung wie der angegebene Vektor zurück, jedoch mit der Länge 1.</summary>
+        <returns>Der normalisierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="One">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 One { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector4 One" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector4.One" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Vektor ab, dessen 4 Elemente gleich eins sind.</summary>
+        <value>Gibt <see cref="T:System.Numerics.Vector4" />zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Vektor, dessen vier Elemente gleich eins sind (gibt also den Vektor zurück `(1,1,1,1)`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator + (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_Addition(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Addition(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu addierende Vektor.</param>
+        <param name="right">Der zweite zu addierende Vektor.</param>
+        <summary>Addiert zwei Vektoren.</summary>
+        <returns>Der Summenvektor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_Addition%2A> Methode definiert die Additionsoperation für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Division">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator / (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_Division(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Division(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste Vektor.</param>
+        <param name="right">Der zweite Vektor.</param>
+        <summary>Dividiert den ersten Vektor durch den zweiten.</summary>
+        <returns>Der Vektor, der aus der Division von <paramref name="left" /> durch <paramref name="right" /> resultiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_Division%2A> Methode definiert die Divisionsoperation für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Division">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator / (System.Numerics.Vector4 value1, float value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_Division(valuetype System.Numerics.Vector4 value1, float32 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Division(System.Numerics.Vector4,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Vector4" />
+        <Parameter Name="value2" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der Vektor.</param>
+        <param name="value2">Der Skalarwert.</param>
+        <summary>Dividiert den angegebenen Vektor durch einen angegebenen Skalarwert.</summary>
+        <returns>Das Ergebnis der Division.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_Division%2A> Methode definiert die Divisionsoperation für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Equality(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu vergleichende Vektor.</param>
+        <param name="right">Der zweite zu vergleichende Vektor.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob jedes Elementpaar in zwei angegebenen Vektoren gleich ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> und <paramref name="right" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Numerics.Vector4> Objekte sind gleich, wenn jedes Element im `left` ist gleich dem entsprechenden Element im `right`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Inequality(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu vergleichende Vektor.</param>
+        <param name="right">Der zweite zu vergleichende Vektor.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei angegebene Vektoren ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> und <paramref name="right" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator * (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_Multiply(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Multiply(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste Vektor.</param>
+        <param name="right">Der zweite Vektor.</param>
+        <summary>Multipliziert zwei Vektoren miteinander.</summary>
+        <returns>Der Produktvektor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_Multiply%2A> Methode definiert, dem der Multiplikationsvorgang für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator * (System.Numerics.Vector4 left, float right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_Multiply(valuetype System.Numerics.Vector4 left, float32 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Multiply(System.Numerics.Vector4,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der Vektor.</param>
+        <param name="right">Der Skalarwert.</param>
+        <summary>Dividiert den angegebenen Vektor durch den angegebenen Skalarwert.</summary>
+        <returns>Der skalierte Vektor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_Multiply%2A> Methode definiert, dem der Multiplikationsvorgang für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator * (float left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_Multiply(float32 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Multiply(System.Single,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der Vektor.</param>
+        <param name="right">Der Skalarwert.</param>
+        <summary>Multipliziert den Skalarwert mit dem angegebenen Vektor.</summary>
+        <returns>Der skalierte Vektor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_Multiply%2A> Methode definiert, dem der Multiplikationsvorgang für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator - (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_Subtraction(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_Subtraction(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste Vektor.</param>
+        <param name="right">Der zweite Vektor.</param>
+        <summary>Subtrahiert den zweiten Vektor vom ersten.</summary>
+        <returns>Der Vektor, der aus der Subtraktion von <paramref name="right" /> von <paramref name="left" /> resultiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_Subtraction%2A> Methode definiert, dem der Subtraktionsvorgang für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 operator - (System.Numerics.Vector4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Vector4 op_UnaryNegation(valuetype System.Numerics.Vector4 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.op_UnaryNegation(System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu negierende Vektor.</param>
+        <summary>Negiert den angegebenen Vektor.</summary>
+        <returns>Der negierte Vektor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Vector4.op_UnaryNegation%2A> Methode definiert, die unäre Negation-Operation für <xref:System.Numerics.Vector4> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SquareRoot">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 SquareRoot (System.Numerics.Vector4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 SquareRoot(valuetype System.Numerics.Vector4 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.SquareRoot(System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Vektor.</param>
+        <summary>Gibt einen Vektor zurück, dessen Elemente die Quadratwurzel jedes der Elemente eines angegebenen Vektors sind.</summary>
+        <returns>Der Quadratwurzelvektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Subtract (System.Numerics.Vector4 left, System.Numerics.Vector4 right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Subtract(valuetype System.Numerics.Vector4 left, valuetype System.Numerics.Vector4 right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Subtract(System.Numerics.Vector4,System.Numerics.Vector4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Vector4" />
+        <Parameter Name="right" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste Vektor.</param>
+        <param name="right">Der zweite Vektor.</param>
+        <summary>Subtrahiert den zweiten Vektor vom ersten.</summary>
+        <returns>Der Differenzvektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung der aktuellen Instanz in Standardformatierung zurück.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Zeichenfolge, die mithilfe der (Allgemein) Formatzeichenfolge "G" und der Formatierungskonventionen der aktuellen Threadkultur, in der jedes Element des Vektors formatiert wird. Die "\<" und ">" Zeichen dienen zum Starten und beenden die Zeichenfolge ein, und der aktuellen Kultur <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> gefolgt von einem Leerzeichen Eigenschaft wird verwendet, um jedes Element getrennt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.ToString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine  oder , die das Format einzelner Elemente definiert.</param>
+        <summary>Gibt die Zeichenfolgendarstellung der aktuellen Instanz zurück und verwendet dazu die angegebene Formatierungszeichenfolge, um einzelne Elemente zu formatieren.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Zeichenfolge, die in dem jedes Element des Vektors wird formatiert mit `format` und die aktuelle Kultur des Formatierungskonventionen. Die "\<" und ">" Zeichen dienen zum Starten und beenden die Zeichenfolge ein, und der aktuellen Kultur <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> gefolgt von einem Leerzeichen Eigenschaft wird verwendet, um jedes Element getrennt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(string format, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine  oder , die das Format einzelner Elemente definiert.</param>
+        <param name="formatProvider">Ein Formatanbieter, der kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Gibt die Zeichenfolgendarstellung der aktuellen Instanz zurück und verwendet dazu die angegebene Formatierungszeichenfolge, um einzelne Elemente zu formatieren, sowie den angegebenen Formatanbieter, um kulturspezifische Formatierung zu definieren.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Zeichenfolge, die in dem jedes Element des Vektors wird formatiert mit `format` und `formatProvider`. Die "\<" und ">" Zeichen werden verwendet, um Anfang und Ende der Zeichenfolge und des Formatanbieters <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A?displayProperty=nameWithType> gefolgt von einem Leerzeichen Eigenschaft wird verwendet, um jedes Element getrennt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Transform (System.Numerics.Vector2 position, System.Numerics.Matrix4x4 matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Transform(valuetype System.Numerics.Vector2 position, valuetype System.Numerics.Matrix4x4 matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Transform(System.Numerics.Vector2,System.Numerics.Matrix4x4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Numerics.Vector2" />
+        <Parameter Name="matrix" Type="System.Numerics.Matrix4x4" />
+      </Parameters>
+      <Docs>
+        <param name="position">Der zu transformierende Vektor.</param>
+        <param name="matrix">Die Transformationsmatrix.</param>
+        <summary>Transformiert einen zweidimensionalen Vektor mit einer angegebenen 4 x 4-Matrix.</summary>
+        <returns>Der transformierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Transform (System.Numerics.Vector2 value, System.Numerics.Quaternion rotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Transform(valuetype System.Numerics.Vector2 value, valuetype System.Numerics.Quaternion rotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Transform(System.Numerics.Vector2,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector2" />
+        <Parameter Name="rotation" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu drehende Vektor.</param>
+        <param name="rotation">Die anzuwendende Drehung.</param>
+        <summary>Transformiert einen zweidimensionalen Vektor um den angegebenen Quaternionrotationswert.</summary>
+        <returns>Der transformierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Transform (System.Numerics.Vector3 position, System.Numerics.Matrix4x4 matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Transform(valuetype System.Numerics.Vector3 position, valuetype System.Numerics.Matrix4x4 matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Transform(System.Numerics.Vector3,System.Numerics.Matrix4x4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Numerics.Vector3" />
+        <Parameter Name="matrix" Type="System.Numerics.Matrix4x4" />
+      </Parameters>
+      <Docs>
+        <param name="position">Der zu transformierende Vektor.</param>
+        <param name="matrix">Die Transformationsmatrix.</param>
+        <summary>Transformiert einen dreidimensionalen Vektor mit einer angegebenen 4 x 4-Matrix.</summary>
+        <returns>Der transformierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Transform (System.Numerics.Vector3 value, System.Numerics.Quaternion rotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Transform(valuetype System.Numerics.Vector3 value, valuetype System.Numerics.Quaternion rotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Transform(System.Numerics.Vector3,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector3" />
+        <Parameter Name="rotation" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu drehende Vektor.</param>
+        <param name="rotation">Die anzuwendende Drehung.</param>
+        <summary>Transformiert einen dreidimensionalen Vektor um den angegebenen Quaternionrotationswert.</summary>
+        <returns>Der transformierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Transform (System.Numerics.Vector4 vector, System.Numerics.Matrix4x4 matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Transform(valuetype System.Numerics.Vector4 vector, valuetype System.Numerics.Matrix4x4 matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Transform(System.Numerics.Vector4,System.Numerics.Matrix4x4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vector" Type="System.Numerics.Vector4" />
+        <Parameter Name="matrix" Type="System.Numerics.Matrix4x4" />
+      </Parameters>
+      <Docs>
+        <param name="vector">Der zu transformierende Vektor.</param>
+        <param name="matrix">Die Transformationsmatrix.</param>
+        <summary>Transformiert einen vierdimensionalen Vektor mit einer angegebenen 4 x 4-Matrix.</summary>
+        <returns>Der transformierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Transform (System.Numerics.Vector4 value, System.Numerics.Quaternion rotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Vector4 Transform(valuetype System.Numerics.Vector4 value, valuetype System.Numerics.Quaternion rotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Vector4.Transform(System.Numerics.Vector4,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector4" />
+        <Parameter Name="rotation" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu drehende Vektor.</param>
+        <param name="rotation">Die anzuwendende Drehung.</param>
+        <summary>Transformiert einen vierdimensionalen Vektor um den angegebenen Quaternionrotationswert.</summary>
+        <returns>Der transformierte Vektor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnitW">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 UnitW { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector4 UnitW" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector4.UnitW" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vektor (0,0,0,1) ab.</summary>
+        <value>Der Vektor <c>(0,0,0,1 ab)</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnitX">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 UnitX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector4 UnitX" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector4.UnitX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vektor (1,0,0,0) ab.</summary>
+        <value>Der Vektor <c>(1,0,0,0 ab)</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnitY">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 UnitY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector4 UnitY" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector4.UnitY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vektor (0,1,0,0) ab.</summary>
+        <value>Der Vektor <c>(0,1,0,0 ab)</c>...</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnitZ">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 UnitZ { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector4 UnitZ" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector4.UnitZ" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Vektor ab, dessen 4 Elemente gleich null sind.</summary>
+        <value>Der Vektor <c>(0,0,1,0)</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="W">
+      <MemberSignature Language="C#" Value="public float W;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 W" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Vector4.W" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die W-Komponente des Vektors.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 X" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Vector4.X" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die X-Komponente des Vektors.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 Y" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Vector4.Y" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Y-Komponente des Vektors.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="public float Z;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 Z" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Vector4.Z" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Z-Komponente des Vektors.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Vector4 Zero { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Vector4 Zero" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Vector4.Zero" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Vektor ab, dessen 4 Elemente gleich null sind.</summary>
+        <value>Ein Vektor, dessen vier Elemente gleich null (gibt also den Vektor zurück <c>(0,0,0,0)</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

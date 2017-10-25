@@ -1,0 +1,64 @@
+<Type Name="LineBreak" FullName="System.Windows.Documents.LineBreak">
+  <TypeSignature Language="C#" Value="public class LineBreak : System.Windows.Documents.Inline" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LineBreak extends System.Windows.Documents.Inline" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.LineBreak" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Inline</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.TrimSurroundingWhitespace</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Element für fortlaufenden Inlineinhalt, das einen Zeilenumbruch in fortlaufendem Inhalt verursacht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Windows.Documents.LineBreak> auf eine neue Zeile des Texts zu beginnen.  Im Gegensatz zu anderen <xref:System.Windows.Documents.Inline> Objekte <xref:System.Windows.Documents.LineBreak> lässt keine untergeordneten Elemente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LineBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LineBreak.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der der <see cref="T:System.Windows.Documents.LineBreak" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LineBreak (System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LineBreak.#ctor(System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="insertionPosition">Ein <see cref="T:System.Windows.Documents.TextPointer" /> eine Einfügeposition ab dem Einfügen der <see cref="T:System.Windows.Documents.LineBreak" /> Element, nachdem es erstellt wurde, oder <see langword="null" /> für kein automatisches einfügen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.LineBreak" /> Klasse, und fügt das neue <see cref="T:System.Windows.Documents.LineBreak" /> an einer angegebenen Position.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

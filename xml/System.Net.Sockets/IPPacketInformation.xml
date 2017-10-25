@@ -1,0 +1,238 @@
+<Type Name="IPPacketInformation" FullName="System.Net.Sockets.IPPacketInformation">
+  <TypeSignature Language="C#" Value="public struct IPPacketInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit IPPacketInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.IPPacketInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeigt die Paketinformationen aus einem Aufruf von <see cref="M:System.Net.Sockets.Socket.ReceiveMessageFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" /> oder <see cref="M:System.Net.Sockets.Socket.EndReceiveMessageFrom(System.IAsyncResult,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.IPPacketInformation.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Informationen zum Dokumentursprung des Pakets, die als Ergebnis empfangen wurde die <see cref="M:System.Net.Sockets.Socket.ReceiveMessageFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" /> Methode oder <see cref="M:System.Net.Sockets.Socket.EndReceiveMessageFrom(System.IAsyncResult,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" /> Methode.</summary>
+        <value>Ein <see cref="T:System.Net.IPAddress" /> , die gibt die Informationen zum Dokumentursprung des Pakets, die als Ergebnis empfangen wurde an die <see cref="M:System.Net.Sockets.Socket.ReceiveMessageFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" /> Methode oder <see cref="M:System.Net.Sockets.Socket.EndReceiveMessageFrom(System.IAsyncResult,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" /> Methode. Für Pakete, die von einer Unicastadresse gesendet wurden die <see cref="P:System.Net.Sockets.IPPacketInformation.Address" /> Eigenschaft gibt zurück, die <see cref="T:System.Net.IPAddress" /> des Absenders; für Multicast- oder Broadcastnetzwerkverkehr Pakete, die <see cref="P:System.Net.Sockets.IPPacketInformation.Address" /> Eigenschaft gibt die Multicast- oder die Übertragung zurück <see cref="T:System.Net.IPAddress" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.IPPacketInformation.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparand" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="comparand">Das Objekt, das mit dieser Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="comparand" /> ist eine Instanz der <see cref="T:System.Net.Sockets.IPPacketInformation" /> und entspricht dem Wert der Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.IPPacketInformation.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein Int32-Hashcode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashcode wird von den Werten der <xref:System.Net.Sockets.IPPacketInformation.Address%2A> und <xref:System.Net.Sockets.IPPacketInformation.Interface%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interface">
+      <MemberSignature Language="C#" Value="public int Interface { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Interface" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.IPPacketInformation.Interface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Informationen zur Netzwerk-Schnittstelle, die mit einem Aufruf von anfallen <see cref="M:System.Net.Sockets.Socket.ReceiveMessageFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" /> oder <see cref="M:System.Net.Sockets.Socket.EndReceiveMessageFrom(System.IAsyncResult,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@)" />.</summary>
+        <value>Ein <see cref="T:System.Int32" /> -Wert, der den Index der Netzwerkschnittstelle darstellt. Sie können diesen Index mit <see cref="M:System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces" /> um weitere Informationen zu der entsprechenden Schnittstelle zu erhalten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Net.Sockets.IPPacketInformation packetInformation1, System.Net.Sockets.IPPacketInformation packetInformation2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Net.Sockets.IPPacketInformation packetInformation1, valuetype System.Net.Sockets.IPPacketInformation packetInformation2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.IPPacketInformation.op_Equality(System.Net.Sockets.IPPacketInformation,System.Net.Sockets.IPPacketInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="packetInformation1" Type="System.Net.Sockets.IPPacketInformation" />
+        <Parameter Name="packetInformation2" Type="System.Net.Sockets.IPPacketInformation" />
+      </Parameters>
+      <Docs>
+        <param name="packetInformation1">Die <see cref="T:System.Net.Sockets.IPPacketInformation" /> -Instanz, die auf der linken Seite des Gleichheitsoperators.</param>
+        <param name="packetInformation2">Die <see cref="T:System.Net.Sockets.IPPacketInformation" /> -Instanz, die auf der rechten Seite des Gleichheitsoperators.</param>
+        <summary>Testet, ob zwei angegebene <see cref="T:System.Net.Sockets.IPPacketInformation" /> -Instanzen äquivalent sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="packetInformation1" /> und <paramref name="packetInformation2" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Operator testet die <xref:System.Net.Sockets.IPPacketInformation.Address%2A> und <xref:System.Net.Sockets.IPPacketInformation.Interface%2A> Werte für beide Argumente.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.Net.Sockets.IPPacketInformation.Equals(System.Object)>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Net.Sockets.IPPacketInformation packetInformation1, System.Net.Sockets.IPPacketInformation packetInformation2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Net.Sockets.IPPacketInformation packetInformation1, valuetype System.Net.Sockets.IPPacketInformation packetInformation2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.IPPacketInformation.op_Inequality(System.Net.Sockets.IPPacketInformation,System.Net.Sockets.IPPacketInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="packetInformation1" Type="System.Net.Sockets.IPPacketInformation" />
+        <Parameter Name="packetInformation2" Type="System.Net.Sockets.IPPacketInformation" />
+      </Parameters>
+      <Docs>
+        <param name="packetInformation1">Die <see cref="T:System.Net.Sockets.IPPacketInformation" /> -Instanz, die auf der linken Seite des Ungleichheitsoperators.</param>
+        <param name="packetInformation2">Die <see cref="T:System.Net.Sockets.IPPacketInformation" /> -Instanz, die auf der rechten Seite des Ungleichheitsoperators.</param>
+        <summary>Testet, ob zwei angegebene <see cref="T:System.Net.Sockets.IPPacketInformation" /> -Instanzen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="packetInformation1" /> und <paramref name="packetInformation2" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Operator testet die <xref:System.Net.Sockets.IPPacketInformation.Address%2A> und <xref:System.Net.Sockets.IPPacketInformation.Interface%2A> Werte für beide Argumente.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.Net.Sockets.IPPacketInformation.Equals(System.Object)>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

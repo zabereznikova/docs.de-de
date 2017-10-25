@@ -1,0 +1,65 @@
+<Type Name="DataSourceCacheExpiry" FullName="System.Web.UI.DataSourceCacheExpiry">
+  <TypeSignature Language="C#" Value="public enum DataSourceCacheExpiry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSourceCacheExpiry extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceCacheExpiry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt, wie Daten mithilfe von ASP.NET Cachemechanismen zwischengespeichert läuft ab, wenn ein Timeout festgelegt ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceCacheExpiry> Enumeration beschreibt, wie Daten, die zwischengespeichert werden, indem ein Datenquellen-Steuerelement in der ASP.NET-Cache ablaufen. Ein ASP.NET-Datenquellensteuerelement speichert Daten in der ASP.NET-Cache basierend auf dem angegebenen Timeout, mit dem festgelegt wird die `CacheDuration` Eigenschaft. Die <xref:System.Web.UI.DataSourceCacheExpiry> beschreibt, wie diese Timeouteinstellung verwendet wird. Wenn die Ablaufrichtlinie auf "absolut" festgelegt ist, werden die zwischengespeicherten Daten verworfen, wenn die angegebene Zeitspanne übergeben wird, da die Daten zuerst zwischengespeichert wurde. Wenn die Ablaufrichtlinie auf gleitend festgelegt ist, werden die zwischengespeicherten Daten verworfen, nur, wenn der Cacheeintrag für den angegebenen Zeitraum nicht verwendet wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.DataSourceCacheExpiry.Absolute> Enumeration deklarativ. In diesem Beispiel wird eine <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement wird zum Anzeigen von Daten in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelements ist das Zwischenspeichern aktiviert und die zugehörige <xref:System.Web.UI.WebControls.SqlDataSource.CacheExpirationPolicy%2A> auf gleitend zum Zwischenspeichern von Daten festgelegt wird, als ausgelastet ist.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_19sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_19sql/CS/sql19cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_19sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_19sql/VB/sql19vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Absolute">
+      <MemberSignature Language="C#" Value="Absolute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCacheExpiry Absolute = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCacheExpiry.Absolute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCacheExpiry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zwischengespeicherte Daten laufen ab, die Zeitspanne angegeben die <see langword="CacheDuration" /> Eigenschaft ist abgelaufen, seit die Daten zuerst zwischengespeichert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sliding">
+      <MemberSignature Language="C#" Value="Sliding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCacheExpiry Sliding = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCacheExpiry.Sliding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCacheExpiry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zwischengespeicherte Daten abläuft, nur wenn der Cacheeintrag nicht für den Zeitraum vom angegebenen verwendet wurde die <see langword="CacheDuration" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

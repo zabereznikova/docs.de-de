@@ -1,0 +1,86 @@
+<Type Name="DataGridViewBindingCompleteEventArgs" FullName="System.Windows.Forms.DataGridViewBindingCompleteEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewBindingCompleteEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewBindingCompleteEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewBindingCompleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.DataGridView.DataBindingComplete" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView.DataBindingComplete> Ereignis wird ausgelöst, wenn der Inhalt der Daten ändern Datenquelle oder der Wert des der <xref:System.Windows.Forms.DataGridView.DataSource%2A>, <xref:System.Windows.Forms.DataGridView.DataMember%2A>, oder <xref:System.Windows.Forms.Control.BindingContext%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridView> Änderungen steuern.  
+  
+ Diese Klasse beschreibt die Änderung durch die <xref:System.Windows.Forms.CurrencyManager> auf die zugrunde liegende Liste.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.DataBindingComplete> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.DataBindingComplete> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#333](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#333)]
+ [!code-vb[System.Windows.Forms.EventExamples#333](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#333)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewBindingCompleteEventArgs (System.ComponentModel.ListChangedType listChangedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.ListChangedType listChangedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewBindingCompleteEventArgs.#ctor(System.ComponentModel.ListChangedType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listChangedType" Type="System.ComponentModel.ListChangedType" />
+      </Parameters>
+      <Docs>
+        <param name="listChangedType">Einer der <see cref="T:System.ComponentModel.ListChangedType" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewBindingCompleteEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListChangedType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ListChangedType ListChangedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.ListChangedType ListChangedType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBindingCompleteEventArgs.ListChangedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert angeben, wie die Liste geändert.</summary>
+        <value>Einer der <see cref="T:System.ComponentModel.ListChangedType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.DataBindingComplete?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.DataBindingComplete?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#333](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#333)]
+ [!code-vb[System.Windows.Forms.EventExamples#333](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#333)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

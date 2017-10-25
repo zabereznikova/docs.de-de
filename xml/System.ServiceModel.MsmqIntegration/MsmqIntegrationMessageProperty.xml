@@ -1,0 +1,549 @@
+<Type Name="MsmqIntegrationMessageProperty" FullName="System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class MsmqIntegrationMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MsmqIntegrationMessageProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Message Queuing (MSMQ)-Integrationseigenschaften für eine Nachricht dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty>-Klasse macht alle Message Queuing-Nachrichteneigenschaften verfügbar, die Sie beim Senden oder Lesen einer Nachricht, die anhand des Integrationskanals empfangen wurde, festlegen können.  
+  
+ Die <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>-Klasse ermöglicht Ihnen auch, die Message Queuing-Nachrichteneigenschaften festzulegen und wird hierfür empfohlen.  
+  
+ Wenn Sie mit der Kanal- und Nachrichteninfrastruktur eine Nachricht erstellen und diese über einen Integrationskanal senden, können Sie die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty>-Klasse als Eigenschaft der Nachricht verwenden, damit der Integrationskanal die Nachrichteneigenschaften abrufen und die Nachricht als Message Queuing-Nachricht formatieren und senden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationMessageProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgeType">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.AcknowledgeTypes&gt; AcknowledgeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.AcknowledgeTypes&gt; AcknowledgeType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AcknowledgeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.AcknowledgeTypes&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Bestätigung ab, die an die sendende Anwendung zurückgegeben werden soll, oder legt diesen fest.</summary>
+        <value>Der Bestätigungstyp zum Zurückkehren zur sendenden Anwendung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acknowledgment">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.Acknowledgment&gt; Acknowledgment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.Acknowledgment&gt; Acknowledgment" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Acknowledgment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.Acknowledgment&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bestätigungsnachricht ab, die von Message Queuing (MSMQ) generiert wird.</summary>
+        <value>Die von Message Queuing generierte Bestätigungsnachricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Werte, auf die diese Eigenschaft festgelegt werden kann, werden von <xref:System.Messaging.Acknowledgment> definiert. Der Wert kann verwendet werden, um den Status der ursprünglichen Nachricht zu überprüfen, wenn Sie eine Nachricht von einer Verwaltungswarteschlange erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdministrationQueue">
+      <MemberSignature Language="C#" Value="public Uri AdministrationQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri AdministrationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AdministrationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Warteschlange ab, die die von Message Queuing (MSMQ) generierte Bestätigungsnachricht empfängt, oder legt diese fest.</summary>
+        <value>Die Warteschlange, die die von Message Queuing generierte Bestätigungsnachricht empfängt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In den an die Verwaltungswarteschlange gesendeten Bestätigungsnachrichten kann angezeigt werden, ob die ursprüngliche Nachricht ihre Zielwarteschlange erreicht hat und aus der Warteschlange entfernt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSpecific">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; AppSpecific { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; AppSpecific" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AppSpecific" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zusätzliche anwendungsspezifische Daten an.</summary>
+        <value>Ein <see langword="integer" />-Wert, der zusätzliche anwendungsspezifische Informationen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enthält anwendungsspezifische Daten, anhand derer verschiedene Nachrichtentypen strukturiert werden können. So können beispielsweise anwendungsspezifische Indizes verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrivedTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; ArrivedTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; ArrivedTime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.ArrivedTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt ab, zu dem die Nachricht von der Zielwarteschlange empfangen wurde, oder legt diesen fest.</summary>
+        <value>Der Zeitpunkt, zu dem die Nachricht von der Zielwarteschlange empfangen wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; Authenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Nachricht authentifiziert wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die Nachricht authentifiziert wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft einen Wert ab, der angibt, ob die Nachricht authentifiziert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public object Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Body" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Inhalt der Nachricht ab oder legt diesen fest.</summary>
+        <value>Der Inhalt des MSMQ-Nachrichtentexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyType">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; BodyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; BodyType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.BodyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der im Nachrichtenkörper enthaltenen Daten ab oder legt diesen fest.</summary>
+        <value>Der Typ der im Nachrichtenkörper enthaltenen Daten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing (MSMQ) erkennt die Daten im Nachrichtentext als Objekt oder als serialisierten Stream. Die Texttyp gibt den Typ des Objekts im Text der Nachricht an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public string CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die in Bestätigungs-, Berichts- und Antwortnachrichten für den Verweis auf die ursprüngliche Nachricht verwendete Nachrichten-ID ab oder legt diese fest.</summary>
+        <value>Die Nachrichten-ID, die von Bestätigungs-, Berichts- und Antwortnachrichten zum Verweis auf die ursprüngliche Nachricht verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Message Queuing (MSMQ) eine Bestätigungs- oder Berichtsnachricht generiert, wird die Korrelations-ID zum Angeben der Nachrichten-ID der ursprünglichen Nachricht verwendet. Auf diese Weise bindet die Korrelations-ID die Berichts- oder Bestätigungsnachricht an die ursprüngliche Nachricht.  
+  
+ Die sendende Anwendung kann der ursprünglichen Nachricht dann die Bestätigung oder den Bericht zuordnen, indem sie über die Korrelations-ID die Identität der ursprünglichen Nachricht überprüft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationQueue">
+      <MemberSignature Language="C#" Value="public Uri DestinationQueue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri DestinationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.DestinationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für eine Nachricht angegebene Zielwarteschlange ab oder legt sie fest.</summary>
+        <value>Die für eine Nachricht angegebene Zielwarteschlange.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird hauptsächlich zum Bestimmen des ursprünglichen Zieles für Nachrichten verwendet, die in einer Journalwarteschlange oder in einer Dead Letter-Warteschlange abgelegt wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public byte[] Extension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Extension" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft weitere anwendungsspezifische, der Nachricht zugeordnete Informationen ab oder legt diese fest.</summary>
+        <value>Ein Bytearray, das zusätzliche anwendungsspezifische Daten enthält, die der Nachricht zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enthält anwendungsspezifische, der Nachricht zugeordnete Informationen, z.&#160;B. ein großes binäres Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty Get (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty Get(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Get(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Nachricht, für die die Message Queuing (MSMQ)-Integrationsnachrichten-Eigenschaften abgerufen werden sollen.</param>
+        <summary>Ruft die <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" /> für eine bestimmte Nachricht ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" />-Objekt, das die Message Queuing-Integrationseigenschaften für die angegebene Nachricht enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die Eigenschaftenauflistung der Nachricht ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID der Nachricht ab.</summary>
+        <value>Die ID der Nachricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing (MSMQ) generiert beim Absenden einer Nachricht eine Nachrichten-ID. Diese besteht aus 20 Bytes und enthält zwei Elemente: die Rechner-GUID des sendenden Computers und eine eindeutige ID für die Nachricht auf dem Computer. Die Kombination beider Elemente liefert eine im Netzwerk eindeutige Nachrichten-ID.  
+  
+ Message Queuing generiert für alle Nachrichten, einschließlich Bestätigungs- und Berichtsnachrichten, eine Nachrichten-ID. Eine Bestätigungsnachricht wird von Message Queuing üblicherweise als Antwort auf den Empfang oder die Unzustellbarkeit einer zuvor gesendeten Nachricht gesendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine von der Anwendung definierte Unicode-Zeichenfolge ab, die die Nachricht beschreibt, oder legt diese fest.</summary>
+        <value>Eine von der Anwendung definierte Unicode-Zeichenfolge, die die Nachricht beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Nachrichtenbezeichnung für mehrere Zwecke verwenden. Die Bezeichnung einer Nachricht kann beispielsweise angezeigt oder für die Verarbeitung einer von der Bezeichnung abhängigen Nachrichtenauswahl verwendet werden. Es ist nicht notwendig, dass die Bezeichnung über Nachrichten hinweg eindeutig ist.  
+  
+ Bezeichnungen für Nachrichtenwarteschlangen und Nachrichten sind Werte, die von der Anwendung definiert werden und die Identifikation einer Warteschlange oder Nachricht über eine Textbeschreibung ermöglichen. Für die Interpretation der Bezeichnung ist die Anwendung zuständig, Message Queuing ignoriert den Inhalt der Bezeichnungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.MessageType&gt; MessageType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.MessageType&gt; MessageType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.MessageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.MessageType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Nachrichtentyp ab: <see langword="Normal" />, <see langword="Acknowledgment" /> oder <see langword="Report" />.</summary>
+        <value>Der Nachrichtentyp: <see langword="Normal" />, <see langword="Acknowledgment" /> oder <see langword="Report" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing (MSMQ) legt diese Eigenschaft normalerweise beim Senden der Nachricht fest. Eine Message Queuing-Nachricht kann als einer der folgenden Typen definiert sein:  
+  
+-   Normal: Entweder eine typische Nachricht, die von einer Anwendung an eine Warteschlange gesendet wird, oder eine an die sendende Anwendung zurückgesendete Antwort.  
+  
+-   Bestätigung: Wird von Message Queuing generiert, wenn eine sendende Anwendung eine Bestätigung anfordert. Message Queuing kann positive oder negative Nachrichten erzeugen und hierdurch anzeigen, ob die ursprüngliche Nachricht empfangen oder gelesen wurde. Message Queuing sendet die entsprechende Bestätigungsnachricht an die von der sendenden Anwendung festgelegte Verwaltungswarteschlange zurück.  
+  
+-   Bericht: Wird von Message Queuing generiert, wenn in dem Warteschlangen-Manager, der den Vorgang initiiert hat, eine Berichtswarteschlange definiert wurde. Wenn die Verfolgung aktiviert ist, sendet Message Queuing eine Berichtsnachricht an die Message Queuing-Berichtswarteschlange, sobald die ursprüngliche Nachricht von einem Message Queuing-Server empfangen oder weitergeleitet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public const string Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Name" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Konstantenwert "MsmqIntegrationMessageProperty".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.MessagePriority&gt; Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.MessagePriority&gt; Priority" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.MessagePriority&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nachrichtenpriorität ab, die die Position der Nachricht in der Warteschlange bestimmt, oder legt diese fest.</summary>
+        <value>Die Nachrichtenpriortät. Die Werte werden durch <see cref="T:System.Messaging.MessagePriority" /> definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Priorität beeinflusst die Behandlung der Nachricht in Message Queuing (MSMQ) während des Routings und beim Erreichen der Zielwarteschlange. Nachrichten höherer Priorität werden beim Routing bevorzugt und gegen Anfang der Zielwarteschlange eingefügt. Nachrichten mit der gleichen Priorität werden entsprechend ihrer Ankunftszeit in der Warteschlange platziert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist nicht NULL und liegt nicht im Bereich der <see cref="T:System.Messaging.MessagePriority" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseQueue">
+      <MemberSignature Language="C#" Value="public Uri ResponseQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ResponseQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.ResponseQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Warteschlange ab, die von einer Anwendung generierte Antwortnachrichten empfängt, oder legt diese fest.</summary>
+        <value>Der URI für die Warteschlange, die von einer Anwendung generierte Antwortnachrichten empfängt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichnet die Warteschlange für den Empfang der Nachrichten, die von der empfangenden Anwendung an die sendende Anwendung zurückgesendet werden. Die sendende Anwendung gibt die Antwortwarteschlangen beim Senden von Nachrichten an. Jede verfügbare Warteschlange kann als Antwortwarteschlange ausgewählt werden.  
+  
+ An die Antwortwarteschlange zurückgesendete Nachrichten sind anwendungsspezifisch. Die Anwendung muss sowohl den Inhalt der Nachrichten als auch die beim Empfang durchzuführenden Aktionen festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderId">
+      <MemberSignature Language="C#" Value="public byte[] SenderId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SenderId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.SenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID des sendenden Benutzers ab.</summary>
+        <value>Die ID des sendenden Benutzers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SentTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; SentTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; SentTime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.SentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Datum und Uhrzeit auf dem sendenden Computer ab, zu der die Nachricht vom Quellwarteschlangen-Manager gesendet wurde.</summary>
+        <value>Datum und Uhrzeit auf dem sendenden Computer, zu der die Nachricht vom Quellwarteschlangen-Manager gesendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Sendezeit wird in die lokale Zeit des Computers umgerechnet, auf dem die Nachricht erstellt wurde. Diese Zeitzone kann von der Zeitzone der Quell- oder Zielwarteschlange abweichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToReachQueue">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; TimeToReachQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; TimeToReachQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.TimeToReachQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeitbegrenzung der Nachricht für das Erreichen der Warteschlange ab oder legt diese fest.</summary>
+        <value>Die Zeitbegrenzung der Nachricht für das Erreichen der Warteschlange.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die in der <xref:System.Messaging.Message.TimeToReachQueue%2A>-Eigenschaft angegebene Zeitspanne abläuft, bevor die Nachricht das Ziel erreicht hat, verwirft MSMQ die Nachricht entsprechend dem Verhalten, das von der `DeadLetterQueue`-Eigenschaft in der Bindung festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist nicht unendlich und ist größer als Int32.MaxValue-Millisekunden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

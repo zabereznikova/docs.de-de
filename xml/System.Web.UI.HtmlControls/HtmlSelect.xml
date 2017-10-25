@@ -1,0 +1,1541 @@
+<Type Name="HtmlSelect" FullName="System.Web.UI.HtmlControls.HtmlSelect">
+  <TypeSignature Language="C#" Value="public class HtmlSelect : System.Web.UI.HtmlControls.HtmlContainerControl, System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlSelect extends System.Web.UI.HtmlControls.HtmlContainerControl implements class System.Web.UI.IParserAccessor, class System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlSelect" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackDataHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ServerChange")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.HtmlControls.HtmlSelectBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ValidationProperty("Value")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Element <see langword="&lt;select&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement ein Auswahlfeld erstellen. Angeben der angeboten in das Steuerelement platzieren HTML `<option>` Elemente zwischen den öffnenden und schließenden `<select>` Tags. Jedes Element wird dargestellt, indem ein <xref:System.Web.UI.WebControls.ListItem?displayProperty=nameWithType> Objekt. Um den Text anzugeben, die für jedes Element im Steuerelement angezeigt wird, legen Sie die <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> Eigenschaft des Elements oder einfach direkt Text zwischen den öffnenden und schließenden `<option>` Tags. Durch Festlegen der <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> -Eigenschaft des Elements, können Sie einen Wert mit dem Element, das sich aus dem Text zuordnen. Um ein Element aus der Liste standardmäßig auszuwählen, legen Sie die <xref:System.Web.UI.WebControls.ListItem.Selected%2A?displayProperty=nameWithType> Eigenschaft des Elements, das `true`.  
+  
+ Können Sie steuern das Aussehen und Verhalten von der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaften. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> Eigenschaft gibt die Höhe (in Zeilen) des Steuerelements. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft gibt an, ob mehrere Elemente gleichzeitig kann, können Sie in ausgewählt werden der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement wird als ein Dropdown-Listenfeld angezeigt. Wenn Sie die Mehrfachauswahl unterstützen (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft, um `true`), oder geben Sie eine Höhe von mehr als eine Zeile (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> Eigenschaft auf einen Wert größer als `1`), das Steuerelement wird als Listenfeld angezeigt.  
+  
+ Um zu bestimmen, das ausgewählte Element in einem Einfachauswahl <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern, verwenden Sie die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft, um den Index des ausgewählten Elements abzurufen. Sie können dann diesen Wert verwenden, zum Abrufen des Elements aus der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung.  
+  
+ Um zu bestimmen, die ausgewählten Elemente aus einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement, die Mehrfachauswahl, durchlaufen die <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung, und Testen der <xref:System.Web.UI.WebControls.ListItem.Selected%2A?displayProperty=nameWithType> Eigenschaft jedes Elements.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect> Klasse enthält zwei Eigenschaften, um die Datenbindung zu unterstützen. So binden Sie Daten auf ein beliebiges Objekt, das implementiert die <xref:System.Collections.IEnumerable?displayProperty=nameWithType> Schnittstelle (z. B. <xref:System.Data.DataView?displayProperty=nameWithType>, <xref:System.Collections.ArrayList?displayProperty=nameWithType>, und <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>), oder die <xref:System.ComponentModel.IListSource> -Schnittstelle die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft an die Datenquelle zu binden. Beim Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft müssen manuell schreiben Sie den Code um die Datenbindung auszuführen. Binden automatisch ein <xref:System.Web.UI.HtmlControls.HtmlSelect> die Steuerung an eine Datenquelle, dargestellt durch ein Datenquellensteuerelement, verwenden die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft und legen Sie dessen Wert auf die <xref:System.Web.UI.Control.ID%2A> Eigenschaft des Datenquellen-Steuerelements verwenden. Beim Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft, die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement automatisch an das angegebene Datenquellen-Steuerelement gebunden. Aus diesem Grund, Sie müssen nicht explizit aufrufen, die <xref:System.Web.UI.Control.DataBind%2A> Methode.  
+  
+ Sie können auch angeben, welche Felder in der Datenquelle zu binden der <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaften eines Elements im Steuerelement durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaften bzw.. Wenn die Datenquelle mehrere Datenquellen enthält, verwenden Sie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataMember%2A> Eigenschaft an, die bestimmten Quelle an das Steuerelement binden. Angenommen, Sie haben eine <xref:System.Data.DataSet?displayProperty=nameWithType> Objekt mit mehreren Tabellen müssen Sie angeben, welche Tabelle zum Binden an das Steuerelement mit der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataMember%2A> Eigenschaft.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlSelect>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlSelect.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Control von explizit deklarieren der Elemente, die im Steuerelement angezeigt werden.  
+  
+ [!code-aspx-csharp[htmlselect#1](~/samples/snippets/csharp/VS_Snippets_WebNet/htmlselect/CS/htmlselectcs.aspx#1)]
+ [!code-aspx-vb[htmlselect#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/htmlselect/VB/htmlselectvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement, indem Sie das Steuerelement an eine Datenquelle gebunden.  
+  
+ [!code-aspx-csharp[HtmlSelectDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectDataSource/CS/htmlselectdatasourcecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectDataSource/VB/htmlselectdatasourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft an die Datenquelle für ein <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaftensatz auf die <xref:System.Web.UI.Control.ID%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement verwendet, um die Daten abzurufen. Beim Laden der Seite ist die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement bindet automatisch an die Datenquelle, die gemäß der <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement und die Daten für den Benutzer angezeigt wird.  
+  
+ [!code-aspx-csharp[HtmlSelect.DataSourceID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelect.DataSourceID/CS/htmlselect.datasourceidcs.aspx#1)]
+ [!code-aspx-vb[HtmlSelect.DataSourceID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelect.DataSourceID/VB/htmlselect.datasourceidvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlSelect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlSelect> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlSelect>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Das Zeichenfolgenliteral "select".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dynamisch erstellen eine Instanz von der <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern und platzieren Sie es auf der Webseite.  
+  
+ [!code-aspx-csharp[HtmlSelectCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectCtor/CS/htmlselectctorcs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectCtor/VB/htmlselectctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das analysierte untergeordnete Steuerelement hinzufügen.</param>
+        <summary>Fügt eine analysierte untergeordnete Steuerelement, das <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.AddParsedSubObject%2A> Methode wird von ASP.NET analysierte untergeordnete Steuerelemente hinzugefügt verwendet die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlSelect.AddParsedSubObject%2A> Methode in einem benutzerdefinierten steuern, sodass es immer überprüft, die einer Instanz von der <xref:System.Web.UI.WebControls.ListItem> Klasse hinzugefügt, um die <xref:System.Web.UI.HtmlControls.HtmlSelect> Items-Auflistung ausgewählt.  
+  
+ [!code-aspx-csharp[CustomHtmlSelectAddParsedSubObject#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectAddParsedSubObject/CS/custom_htmlselect_addparsedsubobjectcs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlSelectAddParsedSubObject#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectAddParsedSubObject/VB/custom_htmlselect_addparsedsubobjectvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlSelectAddParsedSubObject#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectAddParsedSubObject/CS/custom_htmlselect_addparsedsubobject.cs#2)]
+ [!code-vb[CustomHtmlSelectAddParsedSubObject#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectAddParsedSubObject/VB/custom_htmlselect_addparsedsubobject.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das untergeordnete Steuerelement gemäß der <paramref name="obj" /> Parameter muss vom Typ <see cref="T:System.Web.UI.WebControls.ListItem" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearSelection">
+      <MemberSignature Language="C#" Value="protected virtual void ClearSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.ClearSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Listenauswahl von der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> -Steuerelement und stellt die <see cref="P:System.Web.UI.WebControls.ListItem.Selected" /> -Eigenschaft aller Elemente auf <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.HtmlControls.HtmlSelect.ClearSelection%2A> Methode durchläuft die <xref:System.Web.UI.WebControls.ListItemCollection> dargestellte Auflistung von der <xref:System.Web.UI.HtmlControls.HtmlSelect> des Steuerelements <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Eigenschaft und legt die <xref:System.Web.UI.WebControls.ListItem.Selected%2A> -Eigenschaft aller <xref:System.Web.UI.WebControls.ListItem> -Objekt `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlSelect.ClearSelection%2A> Methode in einem benutzerdefinierten steuern, sodass es immer alle ausgewählten Elemente löscht eine <xref:System.Web.UI.HtmlControls.HtmlSelect> Auflistung.  
+  
+ [!code-aspx-csharp[CustomHtmlSelectClearSelection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectClearSelection/CS/custom_htmlselect_clearselectioncs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlSelectClearSelection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectClearSelection/VB/custom_htmlselect_clearselectionvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlSelectClearSelection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectClearSelection/CS/custom_htmlselect_clearselection.cs#2)]
+ [!code-vb[CustomHtmlSelectClearSelection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectClearSelection/VB/custom_htmlselect_clearselection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Web.UI.EmptyControlCollection" /> -Objekt für die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ControlCollection" /> auf das aktuelle Serversteuerelement untergeordnete Steuerelemente enthalten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement lässt sich nicht auf die untergeordneten Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public virtual string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Satz von Daten zum Binden an die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> -Steuerelement aus einem <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" /> Eigenschaft mit mehreren Datensätzen.</summary>
+        <value>Der Satz von Daten zum Binden an die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> -Steuerelement aus einem <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" /> mit mehreren Datensätzen. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass der Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft enthält mehrere Sätze von Daten, verwenden Sie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataMember%2A> Eigenschaft, um anzugeben, welcher Satz von Daten an das Steuerelement binden. Angenommen, Sie haben eine <xref:System.Data.DataSet?displayProperty=nameWithType> Objekt mit mehreren Tabellen, verwenden Sie diese Eigenschaft, um anzugeben, welche Tabelle an das Steuerelement binden.  
+  
+ Nachdem Sie die Datenquelle zum Binden an das Steuerelement angegeben haben, können Sie angeben, welche Felder, aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaften jedes Elements im Steuerelement durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaften , bzw..  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataMember%2A> -Eigenschaft an einen Satz von Daten zum Binden an die <xref:System.Web.UI.HtmlControls.HtmlSelect> -Steuerelement aus einer <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft mit mehreren Datensätzen.  
+  
+ [!code-aspx-csharp[HtmlSelectDataMember#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectDataMember/CS/htmlselectdatamemberdscs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectDataMember#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectDataMember/VB/htmlselectdatamemberdsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataMember" /> Eigenschaft wird festgelegt, während der Datenbindung Phase der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public virtual object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Quelle der Informationen zum Binden an die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Collections.IEnumerable" /> oder <see cref="T:System.ComponentModel.IListSource" /> , enthält eine Auflistung von Werten, die zum Bereitstellen von Daten an dieses Steuerelement verwendet. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft an die Datenquelle zum Binden an die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Eine Datenquelle muss eine Auflistung, die entweder implementiert die <xref:System.Collections.IEnumerable?displayProperty=nameWithType> Schnittstelle (z. B. <xref:System.Data.DataView?displayProperty=nameWithType>, <xref:System.Collections.ArrayList?displayProperty=nameWithType>, oder <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>) oder die <xref:System.ComponentModel.IListSource> Schnittstelle. Beim Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft müssen manuell schreiben Sie den Code zum Binden von Daten ausführen.  
+  
+ Wenn die Datenquelle mehrere Sätze von Daten, z. B. enthält eine <xref:System.Data.DataSet?displayProperty=nameWithType> Objekt mit mehreren Tabellen, verwenden Sie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataMember%2A> Eigenschaft an, welches Dataset an das Steuerelement binden.  
+  
+ Sie können angeben, welche aus der Datenquelle zum Binden an Felder die <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaften jedes Elements im Steuerelement durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaften, bzw..  
+  
+ Alternativ können Sie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft automatisch mit einer Datenquelle, dargestellt durch ein Datenquellen-Steuerelement zu binden. Beim Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft, die Daten automatisch auflisten von Steuerelement bindet, an die angegebene Datenquellen-Steuerelements. Sie müssen nicht so schreiben Sie Code explizit, dass Aufrufe der <xref:System.Web.UI.Control.DataBind%2A> Methode.  
+  
+ Wenn für beide Werte angegeben sind die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft und die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft, ASP.NET wurde nicht die Datenquelle aufgelöst und ein <xref:System.Web.HttpException?displayProperty=nameWithType> Ausnahme wird ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft an die Quelle der Informationen zum Binden an die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelectDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectDataSource/CS/htmlselectdatasourcecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectDataSource/VB/htmlselectdatasourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Datenquelle ist nicht kompatibel mit <see cref="T:System.Collections.IEnumerable" /> oder <see cref="T:System.ComponentModel.IListSource" />, und es ist nicht <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">Die Datenquelle kann nicht aufgelöst werden, da ein Wert für beide angegeben, wird die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" /> Eigenschaft und die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceID">
+      <MemberSignature Language="C#" Value="public virtual string DataSourceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="P:System.Web.UI.Control.ID" /> -Eigenschaft der Datenquelle gesteuert, die die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement sollte verwenden, um die Datenquelle abzurufen.</summary>
+        <value>Der programmgesteuerte Bezeichner, der die Datenquellen-Steuerelement zugewiesen ist. Der Standardwert ist eine leere Zeichenfolge (""), was bedeutet, dass die Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft festlegen oder den Zugriff auf die <xref:System.Web.UI.Control.ID%2A> -Eigenschaft der Datenquelle gesteuert, die die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement sollte verwenden, um die Datenquelle abzurufen. Datenquellensteuerelement verweist die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft kann auf jedes Steuerelement, implementiert die <xref:System.Web.UI.IDataSource> Schnittstelle. Datenquellen-Steuerelements muss vorhanden, entweder in der gleichen Benennungscontainer als die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement, die darauf verweist oder in einem übergeordneten Steuerelement des der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Wenn Sie einen Wert für diese Eigenschaft angeben der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement automatisch an das angegebene Datenquellen-Steuerelement gebunden. Sie müssen nicht so schreiben Sie Code explizit, dass Aufrufe der <xref:System.Web.UI.Control.DataBind%2A> Methode.  
+  
+ Alternativ können Sie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft an die Datenquelle zum Binden an ein <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Die Datenquelle muss eine Auflistung, die implementiert werden die <xref:System.Collections.IEnumerable?displayProperty=nameWithType> Schnittstelle (z. B. <xref:System.Data.DataView?displayProperty=nameWithType>, <xref:System.Collections.ArrayList?displayProperty=nameWithType>, oder <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>) oder die <xref:System.ComponentModel.IListSource> Schnittstelle. Beim Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft müssen manuell schreiben Sie den Code zum Binden von Daten ausführen.  
+  
+ Wenn für beide Werte angegeben sind die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft und die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft, ASP.NET wurde nicht die Datenquelle aufgelöst und ein <xref:System.Web.HttpException?displayProperty=nameWithType> Ausnahme wird ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft an die Datenquelle für ein <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaftensatz auf die <xref:System.Web.UI.Control.ID%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement verwendet, um die Daten abzurufen. Beim Laden der Seite ist die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement bindet automatisch an die Datenquelle, die gemäß der <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement und die Daten für den Benutzer angezeigt wird.  
+  
+ [!code-aspx-csharp[HtmlSelect.DataSourceID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelect.DataSourceID/CS/htmlselect.datasourceidcs.aspx#1)]
+ [!code-aspx-vb[HtmlSelect.DataSourceID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelect.DataSourceID/VB/htmlselect.datasourceidvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die Datenquelle kann nicht aufgelöst werden, da ein Wert für beide angegeben, wird die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" /> Eigenschaft und die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextField">
+      <MemberSignature Language="C#" Value="public virtual string DataTextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.DataTextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Feld aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.ListItem.Text" /> Eigenschaft jedes Elements in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Das Feld aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.ListItem.Text" /> Eigenschaft jedes Elements in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge (""), was bedeutet, dass die Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> Eigenschaft, um anzugeben, welches Feld, aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> Eigenschaft jedes Elements im Steuerelement. Diese Eigenschaft wird häufig verwendet, um einen Wert für die <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> -Eigenschaft, die aus dem Wert unterscheidet sich die <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect> -Klasse enthält zwei Eigenschaften zum Angeben der Datenquelle zu binden. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft ermöglicht Ihnen, Binden einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement mit einer Sammlung, die implementiert die <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oder <xref:System.ComponentModel.IListSource?displayProperty=nameWithType> Schnittstellen (z. B. <xref:System.Data.DataView?displayProperty=nameWithType>, <xref:System.Collections.ArrayList?displayProperty=nameWithType>, oder <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>). Bei Verwendung der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft an die Datenquelle müssen Sie explizit aufrufen der <xref:System.Web.UI.Control.DataBind%2A> Methode zum Binden des Steuerelements und dessen <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> Eigenschaft mit der Datenquelle.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft können Sie zum Binden einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement an ein Datenquellen-Steuerelement, das eine Datenquelle darstellt. Bei Verwendung der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft an die Datenquelle die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement und seine <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> -Eigenschaft automatisch an das angegebene Datenquellen-Steuerelement gebunden. Aus diesem Grund, Sie müssen nicht explizit aufrufen, die <xref:System.Web.UI.Control.DataBind%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> Eigenschaften zur Angabe des Felds aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> Eigenschaft jedes Elements in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelectDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectDataSource/CS/htmlselectdatasourcecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectDataSource/VB/htmlselectdatasourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.DataTextField%2A> Eigenschaften zur Angabe des Felds aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaft jedes Elements in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelect.DataValueField2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelect.DataValueField2/CS/htmlselect.datavaluefield2cs.aspx#1)]
+ [!code-aspx-vb[HtmlSelect.DataValueField2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelect.DataValueField2/VB/htmlselect.datavaluefield2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataValueField">
+      <MemberSignature Language="C#" Value="public virtual string DataValueField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataValueField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.DataValueField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Feld aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.ListItem.Value" /> Eigenschaft jedes Elements in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Das Feld aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.ListItem.Value" /> Eigenschaft jedes Elements in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge (""), was bedeutet, dass die Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaft, um anzugeben, welches Feld, aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaft jedes Elements im Steuerelement. Diese Eigenschaft wird häufig verwendet, um einen Wert für die <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> -Eigenschaft, die aus dem Wert unterscheidet sich die <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect> -Klasse enthält zwei Eigenschaften zum Angeben der Datenquelle zu binden. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft ermöglicht Ihnen, Binden einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement mit einer Sammlung, die implementiert die <xref:System.Collections.IEnumerable> oder <xref:System.ComponentModel.IListSource> Schnittstellen (z. B. <xref:System.Data.DataView?displayProperty=nameWithType>, <xref:System.Collections.ArrayList?displayProperty=nameWithType>, oder <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>). Bei Verwendung der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> -Eigenschaft an die Datenquelle müssen Sie explizit aufrufen der <xref:System.Web.UI.Control.DataBind%2A> Methode zum Binden des Steuerelements und dessen <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaft mit der Datenquelle.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft können Sie zum Binden einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement an ein Datenquellen-Steuerelement, das eine Datenquelle darstellt. Bei Verwendung der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft an die Datenquelle die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement und seine <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaft automatisch an die Datenquellen-Steuerelement zu binden. Aus diesem Grund, Sie müssen nicht explizit aufrufen, die <xref:System.Web.UI.Control.DataBind%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaften zur Angabe des Felds aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaft jedes Elements in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelectDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectDataSource/CS/htmlselectdatasourcecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectDataSource/VB/htmlselectdatasourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> und <xref:System.Web.UI.HtmlControls.HtmlSelect.DataValueField%2A> Eigenschaften zur Angabe des Felds aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaft jedes Elements in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelect.DataValueField2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelect.DataValueField2/CS/htmlselect.datavaluefield2cs.aspx#1)]
+ [!code-aspx-vb[HtmlSelect.DataValueField2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelect.DataValueField2/VB/htmlselect.datavaluefield2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureDataBound">
+      <MemberSignature Language="C#" Value="protected void EnsureDataBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EnsureDataBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.EnsureDataBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement erfordert die Datenbindung, und dass ein gültiger Datenquellensteuerelement wird angegeben, vor dem Aufruf der <see cref="M:System.Web.UI.Control.DataBind" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie angeben, einen Wert für die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft ASP.NET automatisch die auflistungssteuerelemente-Steuerelement in den angegebenen Datenquellen-Steuerelements bindet. Wenn ASP.NET die Datenbindung für das Steuerelement ausführt, ruft er die <xref:System.Web.UI.HtmlControls.HtmlSelect.EnsureDataBound%2A> Methode, um zu überprüfen, ob das Steuerelement noch nicht von datengebundenen und implementiert, um eine gültige Datenquelle, die steuern die <xref:System.Web.UI.IDataSource> Schnittstelle für die angegeben<xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A>Eigenschaft. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.EnsureDataBound%2A> -Methode ruft dann die <xref:System.Web.UI.Control.DataBind%2A> Methode, um sicherzustellen, dass das Steuerelement sofort nach dem Aufruf dieser Methode datengebunden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IEnumerable GetData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IEnumerable GetData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.GetData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.IEnumerable" /> Objekt, das die Datenquelle darstellt, die an gebunden ist die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerable" />-Objekt. Wenn keine Datenquelle angegeben wird, den Standardwert <see langword="null" /> zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.GetData%2A> Methode gibt ein <xref:System.Collections.IEnumerable> Objekt unabhängig von, ob die Datenquelle, durch angegeben wurde die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft oder die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft ist nicht vom Typ <see cref="T:System.Web.UI.IDataSource" />.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft ist nicht vom Typ <see cref="T:System.Web.UI.IHierarchicalDataSource" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Sowohl eine <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" /> und ein <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft definiert werden, für die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.  
+  
+ \- oder –  
+  
+ Die angeforderte Datenansicht kann nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerHtml">
+      <MemberSignature Language="C#" Value="public override string InnerHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.InnerHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen von Inhalt zwischen die Start- und Endtag des Steuerelements ohne automatischen Konvertierung von Sonderzeichen in ihre entsprechenden HTML-Entitäten. Diese Eigenschaft ist für das genannte Steuerelement nicht unterstützt.</summary>
+        <value>Der Inhalt zwischen dem Start- und Endtag des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Lesen aus nicht, oder diese Eigenschaft einen Wert zuweisen. Andernfalls wird eine <xref:System.NotSupportedException?displayProperty=nameWithType>-Ausnahme ausgelöst. Diese Eigenschaft wird geerbt, aus der <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Klasse und gilt nicht für die <xref:System.Web.UI.HtmlControls.HtmlSelect> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wird versucht, zu lesen oder diese Eigenschaft einen Wert zuweisen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public override string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Inhalt zwischen dem Start- und Endtag des Steuerelements mit automatische Konvertierung von Sonderzeichen in ihre entsprechenden HTML-Entitäten. Diese Eigenschaft ist für das genannte Steuerelement nicht unterstützt.</summary>
+        <value>Der Inhalt zwischen dem Start- und Endtag des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Lesen aus nicht, oder diese Eigenschaft einen Wert zuweisen. Andernfalls wird eine <xref:System.NotSupportedException?displayProperty=nameWithType>-Ausnahme ausgelöst. Diese Eigenschaft wird geerbt, aus der <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Klasse und gilt nicht für die <xref:System.Web.UI.HtmlControls.HtmlSelect> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wird versucht, zu lesen oder diese Eigenschaft einen Wert zuweisen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBoundUsingDataSourceID">
+      <MemberSignature Language="C#" Value="protected bool IsBoundUsingDataSourceID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBoundUsingDataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.IsBoundUsingDataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft wird definiert, für die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn ein Datenquellen-Steuerelement definiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Länge der Zeichenfolge darstellen der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaftszeichenfolge ist größer als 0 (null), klicken Sie dann <xref:System.Web.UI.HtmlControls.HtmlSelect.IsBoundUsingDataSourceID%2A> gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit den Elementen im ein <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.ListItemCollection" /> , enthält die Elemente aufgeführt, die einem <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> zu die Elementen im zu verwaltende Sammlung der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Sie können programmgesteuert Elemente zum Entfernen von Elementen aus, und fügen Elemente in der Auflistung hinzufügen.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung wird häufig zum Durchlaufen der Elemente in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Z. B. wenn mehrere Elemente ausgewählt werden, durchlaufen die <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> -Auflistung, um zu bestimmen, welche Elemente ausgewählt sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung zum Durchlaufen der Elemente in der <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern und zu bestimmen, welche Elemente ausgewählt sind.  
+  
+ [!code-aspx-csharp[htmlselect#1](~/samples/snippets/csharp/VS_Snippets_WebNet/htmlselect/CS/htmlselectcs.aspx#1)]
+ [!code-aspx-vb[htmlselect#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/htmlselect/VB/htmlselectvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="protected virtual bool LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Die Schlüsselkennung für das Steuerelement.</param>
+        <param name="postCollection">Die Sammlung aller eingehenden Namenswerte.</param>
+        <summary>Verarbeitet die Postbackdaten für das <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Steuerelement.</summary>
+        <returns>
+          <see langword="true" />, wenn sich der Zustand des <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Steuerelements aufgrund eines Postbacks geändert hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.LoadPostData%2A> -Methode überprüft, ob die Postbackdaten des der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement unterscheidet sich vom vorherigen Wert, und wenn dies der Fall ist, gibt `true`. Wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect> des Steuerelements <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft ist `false`, der angibt, mit Einfachauswahl <xref:System.Web.UI.HtmlControls.HtmlSelect> -Steuerelement, und klicken Sie dann die <xref:System.Web.UI.HtmlControls.HtmlSelect.LoadPostData%2A> -Methode überprüft die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft. Wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect> des Steuerelements <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft ist `true`, der angibt, eine Mehrfachauswahl <xref:System.Web.UI.HtmlControls.HtmlSelect> -Steuerelement, und klicken Sie dann die <xref:System.Web.UI.HtmlControls.HtmlSelect.LoadPostData%2A> -Methode überprüft die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndices%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.LoadPostData%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex" /> wurde-Eigenschaftensatz auf einen Wert größer als die Anzahl der Elemente in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement oder kleiner als <see langword="-1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" />, das den wiederherzustellenden Steuerelementzustand darstellt.</param>
+        <summary>Stellt die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> des Steuerelements anzeigen, die Zustandsinformationen aus einer vorherigen Seite anfordern, die vom gespeichert wurde die <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.SaveViewState" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect> Ansichtszustand des Steuerelements wird gespeichert, als eine <xref:System.Web.UI.Triplet> Objekt. Die <xref:System.Web.UI.Triplet.First> Feld der <xref:System.Web.UI.Triplet> -Objekts enthält die <xref:System.Web.UI.HtmlControls.HtmlSelect> Ansichtszustand des Steuerelements. Die <xref:System.Web.UI.Triplet.Second> Feld der <xref:System.Web.UI.Triplet> -Objekts enthält die <xref:System.Web.UI.WebControls.ListItemCollection> dargestellte Auflistung der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Eigenschaft. Die <xref:System.Web.UI.Triplet.Third> Feld der <xref:System.Web.UI.Triplet> -Objekt enthält die ausgewählten Indizes, dargestellt durch die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndices%2A> Eigenschaft. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.LoadViewState%2A> Methode ruft der Basisklasse <xref:System.Web.UI.HtmlControls.HtmlContainerControl.LoadViewState%2A?displayProperty=nameWithType> Verfahren zum Wiederherstellen der Ansichtszustand des Steuerelements.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.LoadViewState%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.LoadViewState(System.Object)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.LoadViewState(System.Object)" /> Methode, damit die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Ansichtszustand des Steuerelements wird ordnungsgemäß verwaltet.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiple">
+      <MemberSignature Language="C#" Value="public bool Multiple { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Multiple" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.Multiple" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob mehrere Elemente gleichzeitig ausgewählt werden können die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn mehrere Elemente gleichzeitig können, können Sie in ausgewählt werden der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> steuern; anderenfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft, um anzugeben, ob mehrere Elemente gleichzeitig können, können Sie in ausgewählt werden der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement wird als ein Dropdown-Listenfeld angezeigt. Wenn Sie die Mehrfachauswahl unterstützen (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft, um `true`), oder geben Sie eine Höhe von mehr als eine Zeile (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> Eigenschaft auf einen Wert größer als `1`), das Steuerelement wird als Listenfeld angezeigt.  
+  
+ Um zu bestimmen, die ausgewählten Elemente in ein <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement, die Auswahl mehrerer Elemente gleichzeitig zulässt, durchlaufen die <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung, und Testen der <xref:System.Web.UI.WebControls.ListItem.Selected%2A?displayProperty=nameWithType> Eigenschaft jedes Elements.  
+  
+> [!NOTE]
+>  Die `multiple` Attribut gerendert, der <xref:System.Web.UI.HtmlControls.HtmlSelect> nur, wenn diese Eigenschaft, um festgelegt wird zu steuern `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft, um anzugeben, ob mehrere Elemente können, in ausgewählt werden der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelectMultiple#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectMultiple/CS/htmlselectmultiplecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectMultiple#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectMultiple/VB/htmlselectmultiplevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den eindeutigen Bezeichnernamen zugeordneten der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Den Namen des eindeutigen Bezeichners zugeordneten der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.Name%2A> Eigenschaft, um zu bestimmen, den Namen der eindeutigen Bezeichner für ein <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. In dieser Implementierung der `get` Accessor gibt den Wert der <xref:System.Web.UI.Control.UniqueID%2A?displayProperty=nameWithType> Eigenschaft. Allerdings die `set` Accessor weist einen Wert für diese Eigenschaft nicht.  
+  
+> [!NOTE]
+>  Die `set` Accessor weist keinen Wert für diese Eigenschaft, da die <xref:System.Web.UI.HtmlControls.HtmlSelect.Name%2A> Eigenschaft müssen den gleichen Wert wie die <xref:System.Web.UI.Control.UniqueID%2A?displayProperty=nameWithType> -Eigenschaft für die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement ordnungsgemäß funktioniert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.Name%2A> Eigenschaft von der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement Auswahl eines bestimmten Elements in der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Liste.  
+  
+ [!code-aspx-csharp[HtmlSelectName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectName/CS/htmlselectnamecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectName/VB/htmlselectnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBinding">
+      <MemberSignature Language="C#" Value="protected override void OnDataBinding (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBinding(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.OnDataBinding(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.DataBinding" /> -Ereignis für ein <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Control.DataBinding> Ereignis wird ausgelöst, wenn Daten, um gebunden werden die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Diese Methode benachrichtigt das Steuerelement eine Datenbindung Logik ausführen, die mit ihr verbunden ist. Insbesondere die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnDataBinding%2A> -Methode erstellt die <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung aus der Datenquelle angegeben, entweder in der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft oder die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.HtmlControls.HtmlSelect.OnDataBinding%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft ist nicht vom Typ <see cref="T:System.Web.UI.IDataSource" />.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft ist nicht vom Typ <see cref="T:System.Web.UI.IHierarchicalDataSource" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Sowohl eine <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" /> und ein <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft definiert werden, für die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.  
+  
+ \- oder –  
+  
+ Die angeforderte Datenansicht kann nicht gefunden werden.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex" /> wurde-Eigenschaftensatz auf einen Wert größer als die Anzahl der Elemente in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement oder kleiner als <see langword="-1" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.OnDataBinding(System.EventArgs)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.Control.OnDataBinding(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataPropertyChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataPropertyChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.OnDataPropertyChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" />, <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataMember" />, oder <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> -Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnDataPropertyChanged%2A> Methode legt die <xref:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding%2A> Eigenschaft `true` Wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A>, <xref:System.Web.UI.HtmlControls.HtmlSelect.DataMember%2A>, oder <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> -Eigenschaft geändert hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Es wurde versucht, so ändern Sie den Wert der Eigenschaft während der Datenbindung Phase des Steuerelements.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceViewChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSourceViewChanged (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSourceViewChanged(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.OnDataSourceViewChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" />, <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataMember" />, oder <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> -Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnDataSourceViewChanged%2A> Methode legt die <xref:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding%2A> Eigenschaft `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis für das <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Steuerelement aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnInit%2A> von der Methode wird die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement an alle Initialisierungsschritte auszuführen, die zum Erstellen und Einrichten einer Instanz erforderlich sind. Wenn die <xref:System.Web.UI.Control.IsViewStateEnabled%2A> Eigenschaft ist `false` und die <xref:System.Web.UI.Page.IsPostBack%2A> Eigenschaft ist `true`, und klicken Sie dann die <xref:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding%2A> -Eigenschaftensatz auf `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.OnInit(System.EventArgs)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.OnInit(System.EventArgs)" /> Methode, damit registrierten Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Load" />-Ereignis für das <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Steuerelement aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnLoad%2A> von der Methode wird die <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern, dass es für jede HTTP-Anforderung für die Seite Aktionen sollte er zugeordnet ist. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnLoad%2A> verbindet die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement an die entsprechende Datenquelle angegeben, entweder in der <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A> Eigenschaft oder die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft. Wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A> Eigenschaft ist die Angabe von die Datenquelle zu steuern, die die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement sollte verwenden, um die Datenquelle abzurufen und dann die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnDataSourceViewChanged%2A> Methode als Ereignishandler festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die ID angegeben wird, der <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft wurde nicht gefunden.  
+  
+ \- oder –  
+  
+ Das Steuerelement im angegebenen der <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft ist nicht vom Typ <see cref="T:System.Web.UI.IDataSource" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Datenquelle kann nicht aufgelöst werden, da ein Wert für beide angegeben, wird die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSource" /> Eigenschaft und die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID" /> Eigenschaft.  
+  
+ \- oder –  
+  
+ Der angeforderte <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.DataMember" /> Eigenschaft wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis für das <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Steuerelement aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> -Eigenschaft ist größer als 1 ist, und klicken Sie dann die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnPreRender%2A> Methode registriert die <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern, mit der <xref:System.Web.UI.Page> Steuerelement ein postback-Verarbeitung erforderlich ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlSelect.OnPreRender%2A> Methode so, dass Mehrfachauswahl in einem benutzerdefinierten können <xref:System.Web.UI.HtmlControls.HtmlSelect> Serversteuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlSelectOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectOnPreRender/CS/custom_htmlselect_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlSelectOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectOnPreRender/VB/custom_htmlselect_onprerendervb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlSelectOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectOnPreRender/CS/custom_htmlselect_onprerender.cs#2)]
+ [!code-vb[CustomHtmlSelectOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectOnPreRender/VB/custom_htmlselect_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnServerChange">
+      <MemberSignature Language="C#" Value="protected virtual void OnServerChange (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnServerChange(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.OnServerChange(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.HtmlControls.HtmlSelect.ServerChange" /> -Ereignis für die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement. Dadurch können Sie einen benutzerdefinierten Handler für das Ereignis bereitstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.ServerChange> Ereignis wird ausgelöst, wenn die ausgewählten Elemente in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement Änderung zwischen Übertragungen zum Server.  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn der Benutzer durch Klicken auf eine Schaltfläche "Absenden" POST-Methode für den Server, z. B. initiiert. Dieses Ereignis verursacht keine POST-Methode für den Server auftritt.  
+  
+> [!NOTE]
+>  Das Steuerelement benötigen Ansichtszustand für aktiviert die <xref:System.Web.UI.HtmlControls.HtmlSelect.ServerChange> Ereignis ordnungsgemäß funktioniert.  
+  
+ Verwenden Sie dieses Ereignis, um die datenüberprüfung auf auszuführen die <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern, wenn der Benutzer die Auswahl im Steuerelement ändert.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.HtmlControls.HtmlSelect.OnServerChange%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlSelect.ServerChange> -Ereignis für die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Der Ereignishandler bestimmt, ob die ausgewählten Elemente miteinander kompatibel sind.  
+  
+ [!code-aspx-csharp[HtmlSelectOnServerChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectOnServerChange/CS/htmlselectonserverchangecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectOnServerChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectOnServerChange/VB/htmlselectonserverchangevb.aspx#1)]  
+  
+ [!code-aspx-csharp[HtmlSelectServerChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectServerChange/CS/htmlselectserverchangecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectServerChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectServerChange/VB/htmlselectserverchangevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.OnServerChange(System.EventArgs)" /> Methode in einer abgeleiteten Klasse sicher, dass der Basisklasse aufgerufen werden <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.OnServerChange(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.OnServerChange(System.EventArgs)" /> Methode, um zu signalisieren die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement, das der Zustand des Steuerelements geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.RaisePostDataChangedEvent%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die Attribute des <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Steuerelements in das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.RenderAttributes%2A> Methode rendert das `name` Attribut des der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement direkt, um sicherzustellen, dass den gleichen Wert wie die <xref:System.Web.UI.Control.UniqueID%2A?displayProperty=nameWithType> Eigenschaft. Nach dem Rendern des Attributs, das <xref:System.Web.UI.HtmlControls.HtmlSelect.RenderAttributes%2A> Methode ruft der Basisklasse <xref:System.Web.UI.HtmlControls.HtmlContainerControl.RenderAttributes%2A> Methode.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.RenderAttributes%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlSelect.RenderAttributes%2A> in einem benutzerdefinierten gesteuert wird, damit immer ein bestimmter Titel angezeigt wird der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlSelectRenderAttributes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectRenderAttributes/CS/custom_htmlselect_renderattributescs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlSelectRenderAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectRenderAttributes/VB/custom_htmlselect_renderattributesvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlSelectRenderAttributes#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectRenderAttributes/CS/custom_htmlselect_renderattributes.cs#2)]
+ [!code-vb[CustomHtmlSelectRenderAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectRenderAttributes/VB/custom_htmlselect_renderattributes.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderChildren">
+      <MemberSignature Language="C#" Value="protected override void RenderChildren (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderChildren(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.RenderChildren(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> die untergeordneten Steuerelemente des Steuerelements, mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.RenderChildren%2A> Methode überschreibt der Basisklasse <xref:System.Web.UI.Control.RenderChildren%2A> Methode ohne Aufrufen der Basismethode. Aller der `<option>` Elemente zwischen den öffnenden und schließenden `<select>` -Tags wird gerendert, mit einer `value` -Attribut, ein `selected` Attribut, wenn das Element ausgewählt ist, und den dazugehörigen Text.  
+  
+ Wenn mehrere Elemente ausgewählt wurden, aber die <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> -Eigenschaftensatz auf `false`, ein <xref:System.Web.HttpException> Ausnahme wird ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlSelect.RenderChildren%2A> Methode, sodass die It stets Standardtext-Option in einem benutzerdefinierten angezeigt <xref:System.Web.UI.HtmlControls.HtmlSelect> Serversteuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlSelectRenderChildren#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectRenderChildren/CS/custom_htmlselect_renderchildrencs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlSelectRenderChildren#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectRenderChildren/VB/custom_htmlselect_renderchildrenvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlSelectRenderChildren#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlSelectRenderChildren/CS/custom_htmlselect_renderchildren.cs#2)]
+ [!code-vb[CustomHtmlSelectRenderChildren#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlSelectRenderChildren/VB/custom_htmlselect_renderchildren.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Es wurden mehrere Elemente ausgewählt, aber die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.Multiple" /> -Eigenschaftensatz auf <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresDataBinding">
+      <MemberSignature Language="C#" Value="protected bool RequiresDataBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresDataBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement an die angegebene Datenquelle gebunden werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement an eine Datenquelle gebunden werden muss andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern verwendet der <xref:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding%2A> Eigenschaft, um zu bestimmen, ob das Steuerelement aufrufen muss die <xref:System.Web.UI.Control.DataBind%2A> Methode, um auf die angegebene Datenquelle binden.  
+  
+ Jedes Mal die `set` Accessor wird aufgerufen, auf die <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSource%2A>, <xref:System.Web.UI.HtmlControls.HtmlSelect.DataSourceID%2A>, oder <xref:System.Web.UI.HtmlControls.HtmlSelect.DataMember%2A> Eigenschaft, um die Datenquelle nach dem Ändern der <xref:System.Web.UI.HtmlControls.HtmlSelect.OnInit%2A> Methode wurde bereits aufgerufen wurde, legt ASP.NET automatisch der Wert, der die <xref:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding%2A>Eigenschaft `true`. Der Wert des der <xref:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding%2A> Eigenschaft ebenfalls festgelegt wird `true` beim die <xref:System.Web.UI.HtmlControls.HtmlSelect.OnDataPropertyChanged%2A> Methode wird aufgerufen.  
+  
+ ASP.NET legt automatisch den Wert des der <xref:System.Web.UI.HtmlControls.HtmlSelect.RequiresDataBinding%2A> Eigenschaft `false` unmittelbar nach der <xref:System.Web.UI.Control.DataBind%2A> -Methode aufgerufen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelementansicht Zustand ändert, die aufgetreten, da die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Die <see cref="T:System.Object" /> , enthält die Änderungen an der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> den Ansichtszustand. Wenn kein Ansichtszustand für das Objekt ist, gibt diese Methode einen null-Verweis (<see langword="Nothing" /> in Visual Basic).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect> Ansichtszustand des Steuerelements wird gespeichert, als eine <xref:System.Web.UI.Triplet> Objekt. Die <xref:System.Web.UI.Triplet.First> Feld der <xref:System.Web.UI.Triplet> -Objekts enthält die <xref:System.Web.UI.HtmlControls.HtmlSelect> Ansichtszustand des Steuerelements. Die <xref:System.Web.UI.Triplet.Second> Feld der <xref:System.Web.UI.Triplet> -Objekts enthält die <xref:System.Web.UI.WebControls.ListItemCollection> dargestellte Auflistung der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Eigenschaft. Die <xref:System.Web.UI.Triplet.Third> Feld der <xref:System.Web.UI.Triplet> -Objekt enthält die ausgewählten Indizes, dargestellt durch die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndices%2A> Eigenschaft. Die <xref:System.Web.UI.HtmlControls.HtmlSelect.SaveViewState%2A> Methode ruft der Basisklasse <xref:System.Web.UI.Control.SaveViewState%2A?displayProperty=nameWithType> Methode, um das Steuerelement Ansichtszustand zu speichern.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.SaveViewState%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.SaveViewState" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Web.UI.HtmlControls.HtmlSelect.SaveViewState" /> Methode, damit die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Ansichtszustand des Steuerelements wird ordnungsgemäß verwaltet.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="protected virtual void Select (int[] selectedIndices);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Select(int32[] selectedIndices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.Select(System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndices" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndices">Ein <see cref="T:System.Array" /> des Typs <see cref="T:System.Int32" /> , enthält die Elemente auswählen.</param>
+        <summary>Wählt mehrere Elemente aus der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> des Steuerelements <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.Items" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.Select%2A> Methode wählt mehrere Elemente aus der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public virtual int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest den Ordinalindex des ausgewählten Elements in einem <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Der Ordinalindex des ausgewählten Elements in einem <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement. Der Wert <see langword="-1" /> gibt an, dass kein Element ausgewählt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft wird häufig verwendet, um den Index des ausgewählten Elements in einem Einfachauswahl bestimmen <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Dieser Index kann dann verwendet werden, zum Abrufen des Elements aus der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung.  
+  
+ Wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> -Eigenschaftensatz auf `true`, gibt an, dass mehrere Elemente gleichzeitig ausgewählt werden können, die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft enthält den Index des ersten ausgewählten Elements. Um zu bestimmen, die ausgewählten Elemente aus einer <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement, die Auswahl mehrerer Elemente gleichzeitig zulässt, durchlaufen die <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung, und Testen der <xref:System.Web.UI.WebControls.ListItem.Selected%2A?displayProperty=nameWithType> Eigenschaft jedes Elements.  
+  
+> [!CAUTION]
+>  Es kann kein Element ausgewählt. Wenn kein Element ausgewählt ist, die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft enthält einen Wert von `-1`. Dieser Fehler tritt häufig auf, wenn die Seite erstmals geladen und ein Element ist nicht standardmäßig aktiviert. Geben Sie Code aus, um diesen Wert zu testen, bevor Sie verweisen auf das Element in der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung. Andernfalls wird eine Ausnahme ausgelöst, wenn der Index außerhalb des Bereichs der Auflistung ist.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement wird als ein Dropdown-Listenfeld angezeigt. Wenn Sie die Mehrfachauswahl unterstützen (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft, um `true`), oder geben Sie eine Höhe von mehr als eine Zeile (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> Eigenschaft auf einen Wert größer als `1`), das Steuerelement wird als Listenfeld angezeigt. Wenn ein Dropdown-Listenfeld angezeigt wird, ist immer ein Element ausgewählt. Wenn ein Listenfeld angezeigt wird, können Sie die Auswahl aller Elemente programmgesteuert aufheben, durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft `-1`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> -Eigenschaft bestimmt den Index des ausgewählten Elements in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Der Index wird dann zum Abrufen des ausgewählten Elements aus der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung.  
+  
+ [!code-aspx-csharp[HtmlSelectSingleSelect#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectSingleSelect/CS/htmlselectsingleselectcs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectSingleSelect#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectSingleSelect/VB/htmlselectsingleselectvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wurde auf einen Wert größer als die Anzahl der Elemente in festgelegt, die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement oder kleiner als <see langword="-1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndices">
+      <MemberSignature Language="C#" Value="protected virtual int[] SelectedIndices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] SelectedIndices" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit den nullbasierten Indizes aller aktuell ausgewählten Elemente in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Eine Auflistung mit den nullbasierten Indizes aller derzeit ausgewählten Elemente in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndices%2A> Eigenschaft wird verwendet, durch die <xref:System.Web.UI.HtmlControls.HtmlSelect> Klasse zum Zurückgeben einer Auflistung, die derzeit den nullbasierten Indizes aller enthält ausgewählten Elemente in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ Erweitern der Funktionalität eines Steuerelemententwickler der <xref:System.Web.UI.HtmlControls.HtmlSelect> Klasse außer Kraft setzen kann die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndices%2A> Eigenschaft für einen benutzerdefinierten Algorithmus bei Rückgabe der zurzeit Elemente ausgewählten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerChange">
+      <MemberSignature Language="C#" Value="public event EventHandler ServerChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ServerChange" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.HtmlControls.HtmlSelect.ServerChange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die ausgewählten Elemente in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement Änderung zwischen Übertragungen zum Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.ServerChange> Ereignis wird ausgelöst, wenn die ausgewählten Elemente in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement Änderung zwischen Übertragungen zum Server.  
+  
+> [!NOTE]
+>  Das Steuerelement benötigen Ansichtszustand für aktiviert die <xref:System.Web.UI.HtmlControls.HtmlSelect.ServerChange> Ereignis ordnungsgemäß funktioniert.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und deklarativ für einen Ereignishandler code die <xref:System.Web.UI.HtmlControls.HtmlSelect.ServerChange> -Ereignis für die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Der Ereignishandler bestimmt, ob die ausgewählten Elemente miteinander kompatibel sind.  
+  
+ [!code-aspx-csharp[HtmlSelectOnServerChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectOnServerChange/CS/htmlselectonserverchangecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectOnServerChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectOnServerChange/VB/htmlselectonserverchangevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler programmgesteuert für die <xref:System.Web.UI.HtmlControls.HtmlSelect.ServerChange> -Ereignis für die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Der Ereignishandler bestimmt, ob die ausgewählten Elemente miteinander kompatibel sind.  
+  
+ [!code-aspx-csharp[HtmlSelectServerChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectServerChange/CS/htmlselectserverchangecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectServerChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectServerChange/VB/htmlselectserverchangevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public int Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Höhe (in Zeilen), der die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</summary>
+        <value>Die Höhe (in Zeilen), der die <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> Eigenschaft an, der die Höhe (in Zeilen) der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement. Wenn Sie eine Größe, die kleiner als die Anzahl der Elemente im Steuerelement ist angeben, werden Bildlaufleisten angezeigt, damit Sie nach oben oder unten der Liste verschieben können.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement wird als ein Dropdown-Listenfeld angezeigt. Wenn Sie die Mehrfachauswahl unterstützen (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Multiple%2A> Eigenschaft, um `true`), oder geben Sie eine Höhe von mehr als eine Zeile (durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> Eigenschaft auf einen Wert größer als `1`), das Steuerelement wird als Listenfeld angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.Size%2A> Eigenschaft an, der die Höhe (in Zeilen) der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelectMultiple#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectMultiple/CS/htmlselectmultiplecs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectMultiple#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectMultiple/VB/htmlselectmultiplevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.LoadPostData">
+      <MemberSignature Language="C#" Value="bool IPostBackDataHandler.LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Web.UI.IPostBackDataHandler.LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Die Schlüsselkennung für das Steuerelement.</param>
+        <param name="postCollection">Die Sammlung aller eingehenden Namenswerte.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn sich der Zustand des <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" />-Steuerelements aufgrund eines Postbacks geändert hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect>-Instanz in eine <xref:System.Web.UI.IPostBackDataHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex" /> wurde-Eigenschaftensatz auf einen Wert größer als die Anzahl der Elemente in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement oder kleiner als <see langword="-1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="void IPostBackDataHandler.RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.HtmlControls.HtmlSelect>-Instanz in eine <xref:System.Web.UI.IPostBackDataHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelect.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verfolgt anzeigen wechselt zu dem <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> steuern, damit die Änderungen können, in des Steuerelements gespeichert werden <see cref="T:System.Web.UI.StateBag" /> Objekt. Auf dieses Objekt kann über die <see cref="P:System.Web.UI.Control.ViewState" />-Eigenschaft zugegriffen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.TrackViewState%2A> Methode speichert Objekte in der <xref:System.Web.UI.HtmlControls.HtmlSelect.Items%2A> Auflistung von der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement in den Status anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlSelect.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des ausgewählten Elements in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement, oder legt die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex" /> Eigenschaft des Steuerelements auf den Index des ersten Elements in der Liste mit dem angegebenen Wert.</summary>
+        <value>Der Wert des ausgewählten Elements in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement. Wenn kein Element, in das Steuerelement ausgewählt ist <see cref="F:System.String.Empty" /> zurückgegeben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlSelect.Value%2A> Eigenschaft wird häufig verwendet, um den Wert des Elements auf die verwiesen wird durch Abrufen der <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn kein Element, in das Steuerelement ausgewählt ist <xref:System.String?displayProperty=nameWithType> zurückgegeben wird.  
+  
+ Wenn Sie diese Eigenschaft auf einen Wert festlegen die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft wird aktualisiert, mit dem Index des ersten Elements in der Liste, die diesen Wert enthält. Wenn kein übereinstimmender Wert gefunden wird, die <xref:System.Web.UI.HtmlControls.HtmlSelect.SelectedIndex%2A> Eigenschaft bleibt unverändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlSelect.Value%2A> Eigenschaft, um den Wert des ausgewählten Elements in der <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlSelectSingleSelect#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectSingleSelect/CS/htmlselectsingleselectcs.aspx#1)]
+ [!code-aspx-vb[HtmlSelectSingleSelect#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectSingleSelect/VB/htmlselectsingleselectvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Web.UI.HtmlControls.HtmlSelect.Value" /> -Eigenschaft wurde festgelegt, um ein Element größer als die Anzahl der Elemente in der <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> Steuerelement oder kleiner als <see langword="-1" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

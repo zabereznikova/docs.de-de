@@ -1,0 +1,37 @@
+<Type Name="NetworkAvailableEventHandler" FullName="Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void NetworkAvailableEventHandler(object sender, NetworkAvailableEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NetworkAvailableEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see langword="My.Application.NetworkAvailabilityChanged" /> oder <see langword="My.Computer.Network.NetworkAvailabilityChanged" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic müssen Sie nicht explizit mit dieser Delegat arbeiten zu können. Weitere Informationen finden Sie unter der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged?displayProperty=nameWithType> Ereignis oder den <xref:Microsoft.VisualBasic.Devices.Network.NetworkAvailabilityChanged?displayProperty=nameWithType> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

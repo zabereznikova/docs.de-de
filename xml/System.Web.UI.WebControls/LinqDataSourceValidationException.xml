@@ -1,0 +1,301 @@
+<Type Name="LinqDataSourceValidationException" FullName="System.Web.UI.WebControls.LinqDataSourceValidationException">
+  <TypeSignature Language="C#" Value="public class LinqDataSourceValidationException : Exception, System.Web.DynamicData.IDynamicValidatorException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit LinqDataSourceValidationException extends System.Exception implements class System.Runtime.Serialization.ISerializable, class System.Web.DynamicData.IDynamicValidatorException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSourceValidationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IDynamicValidatorException</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Beschreibt eine Ausnahme, die bei der Überprüfung des neuen oder Werte geändert, bevor Werten eingefügt, aktualisiert oder, indem gelöscht eine <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceValidationException> Klasse Typ konvertieren und die Eigenschaft-Setter-Ausnahmen enthält. Alle Ausnahmen, die während der Überprüfung ausgelöst werden, sind in enthalten die <xref:System.Web.UI.WebControls.LinqDataSourceValidationException.InnerExceptions%2A> Auflistung. Sie können jede Validierungsausnahme abrufen, indem Sie durchlaufen die <xref:System.Web.UI.WebControls.LinqDataSourceValidationException.InnerExceptions%2A> Auflistung.  
+  
+ Sie in der Regel Behandeln von Ausnahmen in der <xref:System.Web.UI.WebControls.LinqDataSource.Updating>, <xref:System.Web.UI.WebControls.LinqDataSource.Deleting>, und <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignisse. Eine Validierungsausnahme ausgelöst, die `Exception` Eigenschaft von der <xref:System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs>, <xref:System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs>, oder <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs> Objekt enthält eine <xref:System.Web.UI.WebControls.LinqDataSourceValidationException> Objekt. Wenn keine Ausnahme ausgelöst wird, die `Exception` Eigenschaft enthält `null`.  
+  
+ Erstellen Sie zum Behandeln von Validierungsausnahmen einen Handler für das <xref:System.Web.UI.WebControls.LinqDataSource.Updating>, <xref:System.Web.UI.WebControls.LinqDataSource.Deleting>, oder <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis. Im Ereignishandler, überprüfen Sie, ob die `Exception` Eigenschaft der Argument-Ereignisklasse enthält einen Wert außer `null`. Wenn die `Exception` -Eigenschaft nicht null ist, eine oder mehrere Überprüfung Ausnahmen ausgelöst wurden und Sie können jede Validierungsausnahme in Abrufen der <xref:System.Web.UI.WebControls.LinqDataSourceValidationException.InnerExceptions%2A> Eigenschaft.  
+  
+ Eine Validierungsausnahme kann auftreten, wenn ein Wert nicht mit dem Typ der Eigenschaft übereinstimmt. Versucht, eine Ganzzahleigenschaft Aktualisieren mithilfe von nicht-numerische Zeichen verursacht beispielsweise eine Validierungsausnahme auf. Eine LINQ to SQL-Klasse kann auch benutzerdefinierte Überprüfungskriterien enthalten, die sicherstellen, dass die Eigenschaft einen Wert enthält, der einen erwarteten Bereich oder ein Muster aufweist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.UI.WebControls.LinqDataSource.Updating> Ereignis. Es zeigt ausnahmemeldungen für die Validierung mithilfe einer <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+```vb  
+Protected Sub LinqDataSource_Updating(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceUpdateEventArgs)  
+    If (e.Exception IsNot Nothing) Then  
+        For Each innerException As KeyValuePair(Of String, Exception) _  
+               In e.Exception.InnerExceptions  
+            Label1.Text &= innerException.Key & ": " & _  
+                innerException.Value.Message & "<br />"  
+        Next  
+        e.ExceptionHandled = True  
+    End If  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Updating(object sender,   
+        LinqDataSourceUpdateEventArgs e)  
+{  
+    if (e.Exception != null)  
+    {  
+        foreach (KeyValuePair<string, Exception> innerException in   
+             e.Exception.InnerExceptions)  
+        {  
+        Label1.Text += innerException.Key + ": " +   
+            innerException.Value.Message + "<br />";  
+        }  
+        e.ExceptionHandled = true;  
+    }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceValidationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceValidationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.LinqDataSourceValidationException" />-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die vom System gelieferten Meldung, die den Fehler beschreibt berücksichtigt die aktuelle Systemkultur.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.LinqDataSourceValidationException>-Klasse.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Eine im System enthaltene lokalisierte Beschreibung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceValidationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceValidationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.LinqDataSourceValidationException" />-Klasse mit einer angegebenen Meldung, die den Fehler beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.LinqDataSourceValidationException>-Klasse.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Die in `message` angegebene Fehlermeldungszeichenfolge.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LinqDataSourceValidationException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.LinqDataSourceValidationException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung, das über einen Stream übertragene Ausnahmeobjekt aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceValidationException (string message, System.Collections.Generic.IDictionary&lt;string,Exception&gt; innerExceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; innerExceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceValidationException.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.Exception})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerExceptions" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <param name="innerExceptions">Die Auflistung der Ausnahmen für die Überprüfung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.LinqDataSourceValidationException" /> Klasse mit einer angegebenen Meldung, die den Fehler und eine Auflistung von Verweisen auf die inneren Ausnahmen beschreiben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceValidationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceValidationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.LinqDataSourceValidationException" /> Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird normalerweise nicht verwendet, da Validierungsausnahmen, in gespeichert werden der <xref:System.Web.UI.WebControls.LinqDataSourceValidationException.InnerExceptions%2A> -Eigenschaft, nicht die <xref:System.Exception.InnerException%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceValidationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die serialisierten Objektdaten für die ausgelöste Ausnahme enthält, die ausgelöst wird.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Ruft Informationen über die Ausnahme ab und fügt es der <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceValidationException.GetObjectData%2A> Methode fügt Informationen über die Ausnahme, die <xref:System.Runtime.Serialization.SerializationInfo> -Objekt, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird die Ausnahme von übertragenen der <xref:System.Runtime.Serialization.SerializationInfo> , die über den Stream übertragen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerExceptions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Exception&gt; InnerExceptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; InnerExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceValidationException.InnerExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine oder mehrere Ausnahmen, die aufgetreten sind, wenn neue oder geänderte Daten validiert wurde.</summary>
+        <value>Eine Auflistung, die Ausnahmen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceValidationException.InnerExceptions%2A> Auflistung enthält alle Validierungsausnahmen, die während der datenüberprüfung vor einem Update ausgelöst wurden,, Einfüge- oder Löschvorgang. Eine Validierungsausnahme kann auftreten, wenn ein Wert nicht mit dem Typ der Eigenschaft übereinstimmt. Wenn Sie versuchen, eine Ganzzahleigenschaft zu aktualisieren, indem Sie mit nicht numerischen Zeichen, wird z. B. eine Validierungsausnahme ausgelöst. Eine LINQ to SQL-Klasse kann auch benutzerdefinierte Überprüfungskriterien enthalten, die sicherstellen, dass die Eigenschaft einen Wert enthält, der einen erwarteten Bereich oder ein Muster aufweist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.UI.WebControls.LinqDataSource.Updating> Ereignis. Es zeigt ausnahmemeldungen für die Validierung mithilfe einer <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+```vb  
+Protected Sub LinqDataSource_Updating(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceUpdateEventArgs)  
+    If (e.Exception IsNot Nothing) Then  
+        For Each innerException As KeyValuePair(Of String, Exception) _  
+                In e.Exception.InnerExceptions  
+          Label1.Text &= innerException.Key & ": " & _   
+                  innerException.Value.Message & "<br />"  
+        Next  
+        e.ExceptionHandled = True  
+    End If  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Updating(object sender,   
+        LinqDataSourceUpdateEventArgs e)   
+{  
+    if (e.Exception != null)  
+    {  
+        foreach (KeyValuePair<string, Exception> innerException in   
+            e.Exception.InnerExceptions)  
+        {  
+            Label1.Text += innerException.Key + ": " +   
+                innerException.Message + "<br />";  
+        }  
+        e.ExceptionHandled = true;  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

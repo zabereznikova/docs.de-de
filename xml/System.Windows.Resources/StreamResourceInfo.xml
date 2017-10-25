@@ -1,0 +1,90 @@
+<Type Name="StreamResourceInfo" FullName="System.Windows.Resources.StreamResourceInfo">
+  <TypeSignature Language="C#" Value="public class StreamResourceInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StreamResourceInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Resources.StreamResourceInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Speichert Informationen für eine Streamressource, die in Windows Presentation Foundation (WPF) verwendet, z. B. Bilder.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamResourceInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Resources.StreamResourceInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Resources.StreamResourceInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamResourceInfo (System.IO.Stream stream, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Resources.StreamResourceInfo.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Verweis-Datenstrom.</param>
+        <param name="contentType">Die [!INCLUDE[TLA#tla_mime](~/includes/tlasharptla-mime-md.md)] Inhaltstyp des Datenstroms.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Resources.StreamResourceInfo" /> Klasse basierend auf einem angegebenen Datenstrom.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Resources.StreamResourceInfo.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Inhaltstyp eines Streams.</summary>
+        <value>Die [!INCLUDE[TLA#tla_mime](~/includes/tlasharptla-mime-md.md)] Inhaltstyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Stream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Stream" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Resources.StreamResourceInfo.Stream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Stream der Ressource.</summary>
+        <value>Der Datenstrom für die Ressource.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

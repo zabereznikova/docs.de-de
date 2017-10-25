@@ -1,0 +1,211 @@
+<Type Name="AuthenticatingEventArgs" FullName="System.Web.ApplicationServices.AuthenticatingEventArgs">
+  <TypeSignature Language="C#" Value="public class AuthenticatingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticatingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ApplicationServices.AuthenticatingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.ApplicationServices.AuthenticationService.Authenticating" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie erstellen einen Handler für das <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignis aus, wenn Sie anpassen, wie die Anmeldeinformationen des Benutzers zur Laufzeit authentifiziert werden soll. Die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs> Klasse bereitstellt, Werte für einen beliebigen <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> -Ereignishandler. Mithilfe der Eigenschaften, die in dieser Klasse verfügbar sind, können Sie die Anmeldeinformationen des Benutzers für die Authentifizierung abrufen.  
+  
+ Die <xref:System.Web.ApplicationServices.AuthenticationService> löst die <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignis, bevor die Anmeldeinformationen des Benutzers überprüft. Die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse erstellt eine Instanz von der <xref:System.Web.ApplicationServices.AuthenticatingEventArgs> -Objekt und übergibt es an ein beliebiges <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> -Ereignishandler.  
+  
+ Sie können die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A>, <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> und <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> Eigenschaften, um die Anmeldeinformationen des Benutzers abzurufen. Die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> Eigenschaft kann enthalten zusätzliche Werte, die für die Authentifizierung, z. B. eine ID erforderlich sind.  
+  
+ Die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> Eigenschaft gibt an, ob die Anmeldeinformationen des Benutzers gültig sind. Sie legen die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> Eigenschaft, um das Ergebnis der benutzerdefinierten Authentifizierung. Darüber hinaus legen Sie die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> Eigenschaft `true` , wenn Sie die Anmeldeinformationen des Benutzers überprüft haben und nicht möchten, die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse, um die Anmeldeinformationen des Benutzers über den Standardmitgliedschaftsanbieter zu überprüfen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler, der übergibt die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> und <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> Werte an ein benutzerdefinierter Mitgliedschaftsanbieter so überprüfen Sie die Anmeldeinformationen des Benutzers. Der Ereignishandler legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> auf den Rückgabewert der <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> -Methode und legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> auf `true` , damit die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse überprüft nicht die Anmeldeinformationen.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public bool Authenticated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Anmeldeinformationen des Benutzers gültig sind.</summary>
+        <value>
+          <see langword="true" />Wenn die Anmeldeinformationen des Benutzers gültig sind. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Authentifizierung die Anmeldeinformationen des Benutzers in einem Ereignishandler für das <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignissatz, der <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> Eigenschaft, um anzugeben, ob die Anmeldeinformationen des Benutzers gültig sind. Wenn die Anmeldeinformationen des Benutzers gültig sind und keine zusätzliche Validierung erforderlich ist, legen <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> auf `true` und <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> auf `true`. Sie legen die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> Eigenschaft, um anzugeben, dass der Authentifizierungsdienst standardmäßig umgehen soll die Schritte zum Authentifizieren eines Benutzers. Der Wert in <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> dient der <xref:System.Web.ApplicationServices.AuthenticationService> Klasse nur, wenn <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> festgelegt ist, um `true`. Wenn <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> ist `false`, <xref:System.Web.ApplicationServices.AuthenticationService> Klasse ruft den Standardmitgliedschaftsanbieter zum Überprüfen der Anmeldeinformationen des Benutzers, und dann überschreibt den Wert in <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler, der übergibt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> und <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> Werte an ein benutzerdefinierter Mitgliedschaftsanbieter so überprüfen Sie die Anmeldeinformationen des Benutzers. Der Ereignishandler legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> auf den Rückgabewert der <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> -Methode und legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> auf `true` , damit die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse überprüft nicht die Anmeldeinformationen.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationIsComplete">
+      <MemberSignature Language="C#" Value="public bool AuthenticationIsComplete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AuthenticationIsComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Anmeldeinformationen des Benutzers authentifiziert wurden.</summary>
+        <value>
+          <see langword="true" />Wenn alle Schritte zur Überprüfung der Anmeldeinformationen des Benutzers ausgeführt wurden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> Eigenschaft, um anzugeben, ob die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse, die Anmeldeinformationen des Benutzers authentifiziert werden muss. Wenn <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> ist `true`die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse überprüft nicht die Anmeldeinformationen des Benutzers über den Standardmitgliedschaftsanbieter. Stattdessen wird den Wert in <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> bestimmt, ob ein Authentifizierungscookie zu erstellen.  
+  
+ Wenn <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> ist `false`, <xref:System.Web.ApplicationServices.AuthenticationService> -Klasse überprüft die Anmeldeinformationen des Benutzers über den Standardmitgliedschaftsanbieter und überschreibt den Wert in der <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler, der übergibt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> und <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> Werte an ein benutzerdefinierter Mitgliedschaftsanbieter so überprüfen Sie die Anmeldeinformationen des Benutzers. Der Ereignishandler legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> auf den Rückgabewert der <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> -Methode und legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> auf `true` , damit die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse überprüft nicht die Anmeldeinformationen.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomCredential">
+      <MemberSignature Language="C#" Value="public string CustomCredential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomCredential" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft zusätzliche Benutzerwerte für die Authentifizierung an.</summary>
+        <value>Die Werte für die Authentifizierung als Benutzernamen und ein Kennwort erforderlich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können der <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> andere Authentifizierungswerte als Benutzernamen und das Kennwort während der abzurufenden Eigenschaft der <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignis. Beispielsweise kann eine Anwendung konfiguriert werden, um eine ID zusammen mit dem Benutzernamen und Kennwort zu überprüfen. In diesem Fall wird die ID übergeben werden, der `CustomCredential` Parameter von der <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> Methode. Sie können dann abrufen, den benutzerdefinierten Wert über die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> Eigenschaft enthält die benutzerdefinierte Werte im gleichen Format wie der Übergabe an die <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> Methode. In der <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignishandler, d. h. wenn mehr als einen Wert in der Eigenschaft gespeichert ist, müssen Sie den Wert der analysieren die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> Eigenschaft zum Abrufen der Werte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignis, das zwei Authentifizierungswerte aus analysiert die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> Eigenschaft. Übergibt zwei Werte und den Benutzernamen und das Kennwort auf eine benutzerdefinierte Authentifizierung-Klasse, die mit dem Namen `StudentAuthentication`.  
+  
+ [!code-csharp[System.Web.Security.LoginService_MultipleCredentials#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_MultipleCredentials#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kennwort für den Benutzer ab.</summary>
+        <value>Das zu überprüfende Kennwort.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> Eigenschaft zum Abrufen des Kennworts während der <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler, der übergibt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> und <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> Werte an ein benutzerdefinierter Mitgliedschaftsanbieter so überprüfen Sie die Anmeldeinformationen des Benutzers. Der Ereignishandler legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> auf den Rückgabewert der <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> -Methode und legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> auf `true` , damit die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse überprüft nicht die Anmeldeinformationen.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Authentifizierungsnamen für den Benutzer ab.</summary>
+        <value>Der zu überprüfende Benutzername.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> den Authentifizierungsnamen während der abzurufenden Eigenschaft der <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein Ereignishandler, die einen zu verwendende Mitgliedschaftsanbieter auswählt basierend auf den Wert der <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> Eigenschaft. Der Handler übergibt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> und <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> Werte an den benutzerdefinierten Mitgliedschaftsanbieter so überprüfen Sie die Anmeldeinformationen des Benutzers. Wird <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> auf den Rückgabewert der <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> -Methode und legt <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> auf `true` , damit die <xref:System.Web.ApplicationServices.AuthenticationService> Klasse überprüft nicht die Anmeldeinformationen.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

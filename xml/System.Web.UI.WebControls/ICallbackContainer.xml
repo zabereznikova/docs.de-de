@@ -1,0 +1,60 @@
+<Type Name="ICallbackContainer" FullName="System.Web.UI.WebControls.ICallbackContainer">
+  <TypeSignature Language="C#" Value="public interface ICallbackContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICallbackContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ICallbackContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Methode, die Steuerelemente ein Rückrufskript abrufen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, in denen die <xref:System.Web.UI.WebControls.ICallbackContainer> -Schnittstelle bereitstellen Steuerelemente mit einem Skript, das einen Rückruf an den Server initiiert. Ein Rückruf unterscheidet häufiger Postback, insofern, dass die Seite für den Rückruf verarbeitet die Seite neu erstellt, ohne Änderung der Zustandsinformationen frei, die von der Seite. Weitere Informationen zum Erstellen von Rückrufen finden Sie unter [Implementing Client Rückrufe ohne Postbacks](http://msdn.microsoft.com/library/dfaaa7d4-e1f2-4322-b2f5-796e0419f185).  
+  
+ Klassen, in denen die <xref:System.Web.UI.WebControls.ICallbackContainer> Schnittstelle sollte auch implementieren die <xref:System.Web.UI.ICallbackEventHandler> Schnittstelle, die von Steuerelementen ausgelösten Ereignisse behandeln.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCallbackScript">
+      <MemberSignature Language="C#" Value="public string GetCallbackScript (System.Web.UI.WebControls.IButtonControl buttonControl, string argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetCallbackScript(class System.Web.UI.WebControls.IButtonControl buttonControl, string argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ICallbackContainer.GetCallbackScript(System.Web.UI.WebControls.IButtonControl,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buttonControl" Type="System.Web.UI.WebControls.IButtonControl" />
+        <Parameter Name="argument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="buttonControl">Das Steuerelement die rückrufanforderung initiieren.</param>
+        <param name="argument">Die Argumente verwendet, um die Rückrufskript zu erstellen.</param>
+        <summary>Erstellt ein Skript für einen Clientrückruf an einen Webserver zu initiieren.</summary>
+        <returns>Ein Skript, das einen Rückruf an den Webserver initiiert wird, wenn auf einem Client ausgeführt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen von der <xref:System.Web.UI.WebControls.ICallbackContainer.GetCallbackScript%2A> -Methode zurückgeben sollte ein Skript, das einen Rückruf an den Webserver initiiert wird, wenn auf dem Client ausgeführt.  
+  
+ Die `argument` Parameter übergeben wird, um die <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> Methode, die den Rückruf verarbeitet.  
+  
+ Weitere Informationen zum Erstellen von Rückrufen finden Sie unter [Implementing Client Rückrufe ohne Postbacks](http://msdn.microsoft.com/library/dfaaa7d4-e1f2-4322-b2f5-796e0419f185).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

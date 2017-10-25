@@ -1,0 +1,46 @@
+<Type Name="BitmapSuffixInSatelliteAssemblyAttribute" FullName="System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute">
+  <TypeSignature Language="C#" Value="public class BitmapSuffixInSatelliteAssemblyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BitmapSuffixInSatelliteAssemblyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass beim Interpretieren von <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Deklarationen, die Assembly suchen Sie nach der angegebenen Ressourcen in eine Satellitenassembly, jedoch mit der <see cref="P:System.Drawing.Configuration.SystemDrawingSection.BitmapSuffix" /> Konfigurationswert auf den deklarierten Dateinamen angehängt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Bitmap-Suffix wird an den Dateinamen an, bevor Sie die Erweiterung angefügt. Z. B. mit einer Bitmap-Suffix von ". test.1.0", ein <xref:System.Drawing.ToolboxBitmapAttribute> Verweis auf "my.bmp" als "my.test.1.0.bmp" interpretiert wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapSuffixInSatelliteAssemblyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

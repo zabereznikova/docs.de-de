@@ -1,0 +1,1675 @@
+<Type Name="ImageAttributes" FullName="System.Drawing.Imaging.ImageAttributes">
+  <TypeSignature Language="C#" Value="public sealed class ImageAttributes : ICloneable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ImageAttributes extends System.Object implements class System.ICloneable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ImageAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält Informationen darüber, wie Bitmap- und Metadateifarben während des Renderns bearbeitet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet mehrere Farbanpassungsmatrizen-Einstellungen, einschließlich der Farbanpassungsmatrizen Matrizen, Anpassungsmatrizen Matrizen Gammakorrektur Werte, Farbkarte Tabellen und Farbschwellenwert Werte. Farben können während des Renderings, korrigiert, dunkler, aufgehellt und entfernt werden. Zum Anwenden von solchen Manipulationen initialisieren ein <xref:System.Drawing.Imaging.ImageAttributes> Objekts und übergeben Sie den Pfad der <xref:System.Drawing.Imaging.ImageAttributes> Objekt (zusammen mit dem Pfad der ein <xref:System.Drawing.Image>) auf die <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Bild, das alle eine Farbe (0,2, 0.0, 0.4, 1.0) und Doubles Rotanteils Rot-, Grün- und blauen-Komponenten 0,2 hinzugefügt  
+  
+ Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das transformierte Bild auf der rechten Seite.  
+  
+ ![Farben](~/add/media/colortrans1.png "Farben")  
+  
+ Der Code im folgenden Beispiel verwendet die folgenden Schritte aus, um das über erneutes Einfärben auszuführen:  
+  
+1.  Initialisieren einer <xref:System.Drawing.Imaging.ColorMatrix> Objekt.  
+  
+2.  Erstellen einer <xref:System.Drawing.Imaging.ImageAttributes> Objekts und übergeben der <xref:System.Drawing.Imaging.ColorMatrix> -Objekt an die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> Methode der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+3.  Übergeben der <xref:System.Drawing.Imaging.ImageAttributes> -Objekt an die <xref:System.Drawing.Graphics.DrawImage%2A> Methode von einer <xref:System.Drawing.Graphics> Objekt.  
+  
+ [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Imaging.ImageAttributes" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearBrushRemapTable">
+      <MemberSignature Language="C#" Value="public void ClearBrushRemapTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearBrushRemapTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearBrushRemapTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Pinsel-Farbumwandlungstabelle dieses <see cref="T:System.Drawing.Imaging.ImageAttributes" />-Objekts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbumwandlungstabelle für die Standardkategorie, eine andere Farbumwandlungstabelle für die Bitmapkategorie und immer noch eine andere Farbumwandlungstabelle für die Pinselkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Pinselkategorie angeben, gelten die Einstellungen der Standardrichtlinie z. B. für die Pinselkategorie.  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Tabelle mit den standardmäßigen neuzuordnung angeben, die Rot, Grün konvertiert, und geben Sie den Standardwert Gamma 1.8. Beim Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable%2A> -Methode, die Standard-Umwandlungstabelle (Rot, Grün) und der Gamma-Standardwert (1,8) werden nicht auf den Pinsel angewendet. Wenn Sie später Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearBrushRemapTable%2A> -Methode, die Pinselkategorie nicht auf die Standard-Umwandlungstabelle zurückgesetzt; stattdessen wird die Pinselkategorie keine Umwandlungstabelle haben. Auf ähnliche Weise wird die Pinselkategorie nicht auf den Standardwert für die Gamma zurückgesetzt. Stattdessen müssen die Pinselkategorie keine Gammawert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorKey">
+      <MemberSignature Language="C#" Value="public void ClearColorKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Colorkey (Transparenzbereich) für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbschlüssel für die Standardkategorie, eine andere Farbe-Schlüssel für die Bitmapkategorie und immer noch eine andere Farbe-Schlüssel für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorKey">
+      <MemberSignature Language="C#" Value="public void ClearColorKey (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorKey(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorKey(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die der Colorkey gelöscht ist.</param>
+        <summary>Löscht den Colorkey (Transparenzbereich) für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbschlüssel für die Standardkategorie, eine andere Farbe-Schlüssel für die Bitmapkategorie und immer noch eine andere Farbe-Schlüssel für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie einen Farbe Standardschlüssel angeben, der eine beliebige Farbe mit einer roten Komponente von 200 bis 255 transparent dargestellt werden, und geben Sie den Standardwert Gamma 1.8. Wenn Sie durch Aufrufen der Colorkey der Stiftkategorie Festlegen der <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%2A> -Methode, die Farbe Standardschlüssel und der Gamma-Standardwert werden nicht auf Stifte angewendet. Wenn Sie später den Stiftcolorkey durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearColorKey%2A> -Methode, die Stiftkategorie nicht auf den Standard-Farbschlüssel zurückgesetzt; stattdessen hat der Stiftkategorie keine Farbschlüssel. Auf ähnliche Weise wird die Stiftkategorie nicht auf den Standardwert für die Gamma zurückgesetzt. Stattdessen müssen die Stiftkategorie keine Gammawert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorMatrix">
+      <MemberSignature Language="C#" Value="public void ClearColorMatrix ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorMatrix() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorMatrix" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Farbanpassungsmatrix für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbanpassungsmatrix für die Standardkategorie, eine andere Farbanpassungsmatrix für die Bitmapkategorie und immer noch eine andere Farbanpassungsmatrix für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten klicken Sie dann die Standardeinstellungen zu "Stift".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorMatrix">
+      <MemberSignature Language="C#" Value="public void ClearColorMatrix (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorMatrix(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorMatrix(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Farbanpassungsmatrix gelöscht ist.</param>
+        <summary>Löscht die Farbanpassungsmatrix für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbanpassungsmatrix für die Standardkategorie, eine andere Farbanpassungsmatrix für die Bitmapkategorie und immer noch eine andere Farbanpassungsmatrix für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten klicken Sie dann die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen Sie beispielsweise an, dass Sie eine Farbanpassungsmatrix und einen Gammawert für die Standardkategorie angeben. Wenn Sie durch Aufrufen einer Farbanpassungsmatrix für die Stiftkategorie Festlegen der <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> -Methode, die Farbanpassungsmatrix Standard gelten nicht für Stifte. Wenn Sie später die Farbanpassungsmatrix Stift durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearColorMatrix%2A> -Methode, die Stiftkategorie nicht auf die Standard-Anpassungsmatrix zurückgesetzt; stattdessen müssen die Stiftkategorie keine Anpassungsmatrix. Auf ähnliche Weise wird die Stiftkategorie nicht auf den Standardwert für die Gamma zurückgesetzt. Stattdessen müssen die Stiftkategorie keine Gammawert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearGamma">
+      <MemberSignature Language="C#" Value="public void ClearGamma ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearGamma() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearGamma" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Deaktiviert die Gammakorrektur für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearGamma">
+      <MemberSignature Language="C#" Value="public void ClearGamma (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearGamma(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearGamma(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Gammakorrektur deaktiviert ist.</param>
+        <summary>Deaktiviert die Gammakorrektur für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten klicken Sie dann die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie einen Gammawert und eine Farbanpassungsmatrix für die Standardkategorie angeben. Wenn Sie durch Aufrufen der Gammawert für die Stiftkategorie Festlegen der <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%2A> -Methode der Standardwert für die Gamma gelten nicht für Stifte. Wenn Sie später den Stiftgammawert durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearGamma%2A> -Methode, die Stiftkategorie wird auf den Standardwert für die Gamma nicht zurückgesetzt; stattdessen wird die Stiftkategorie keine Gammawert haben. Auf ähnliche Weise wird die Stiftkategorie nicht auf die Standard-Farbanpassungsmatrix zurückgesetzt. Stattdessen müssen die Stiftkategorie keine Farbanpassungsmatrix.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearNoOp">
+      <MemberSignature Language="C#" Value="public void ClearNoOp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearNoOp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearNoOp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die <see langword="NoOp" />-Einstellung für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+ Sie können die Farbe Anpassung für die Standardkategorie deaktivieren, durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> Methode. Sie können später Farbe Anpassung für die Standardkategorie reaktivieren, durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearNoOp%2A> Methode. Klicken Sie dann die Farbe Anpassung zurückgibt, war bereits vor dem Aufruf von <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearNoOp">
+      <MemberSignature Language="C#" Value="public void ClearNoOp (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearNoOp(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearNoOp(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die <see langword="NoOp" />-Einstellung gelöscht ist.</param>
+        <summary>Löscht die <see langword="NoOp" />-Einstellung für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+ Sie können die Farbe Anpassung für eine bestimmte Kategorie deaktivieren, durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> Methode. Sie können später Farbe Anpassung für diese Kategorie reaktivieren, durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearNoOp%2A> Methode. Klicken Sie dann die Farbe Anpassung zurückgibt, war bereits vor dem Aufruf von <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannel">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die CMYK-Ausgabekanaleinstellung für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einem Ausgabekanal für die Standardkategorie und einen anderen Ausgabekanal für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannel">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannel (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannel(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannel(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Ausgabekanaleinstellung gelöscht ist.</param>
+        <summary>Löscht die CMYK-Ausgabekanaleinstellung für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einem Ausgabekanal für die Standardkategorie und einen anderen Ausgabekanal für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen Sie beispielsweise an, dass Sie auf einem Ausgabekanal und eine Anpassungsmatrix für die Standardkategorie angeben. Wenn Sie durch Aufrufen der Ausgabekanal für die Bitmapkategorie Festlegen der <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> -Methode, ist der Ausgabekanal gelten nicht für Bitmaps. Wenn Sie später die Bitmap Ausgabekanal durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearOutputChannel%2A> -Methode, die Bitmapkategorie wird auf dem Standard-Ausgabekanal nicht zurückgesetzt; stattdessen wird die Bitmapkategorie keine ausgabekanaleinstellung haben. Auf ähnliche Weise wird die Bitmapkategorie nicht auf die Standard-Farbanpassungsmatrix zurückgesetzt. Stattdessen müssen die Bitmapkategorie keine Farbanpassungsmatrix.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannelColorProfile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannelColorProfile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannelColorProfile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Einstellung des Ausgabekanal-Farbprofils für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie eine Ausgabe-Kanal-Profil für die Standardkategorie und eine andere Ausgabe Kanalprofil für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannelColorProfile (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannelColorProfile(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannelColorProfile(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Ausgabekanal-Profileinstellung gelöscht ist.</param>
+        <summary>Löscht die Einstellung des Ausgabekanal-Farbprofils für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie eine Ausgabe-Kanal-Profil für die Standardkategorie und eine andere Ausgabe Kanalprofil für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie ein Profil der Ausgabe-Kanal und eine Anpassungsmatrix für die Standardkategorie angeben. Wenn Sie die Ausgabe Kanal Netzwerkprofil für die Bitmapkategorie durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> -Methode, ist der Kanalprofil gelten nicht für Bitmaps. Wenn Sie später die Bitmap Ausgabe Kanalprofil durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearOutputChannelColorProfile%2A> -Methode, die Bitmapkategorie wird auf das Standardprofil für Ausgabe Kanal nicht zurückgesetzt; stattdessen wird die Bitmapkategorie keine Einstellung des Ausgabekanal haben. Auf ähnliche Weise wird die Bitmapkategorie nicht auf die Standard-Farbanpassungsmatrix zurückgesetzt. Stattdessen müssen die Bitmapkategorie keine Farbanpassungsmatrix.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearRemapTable">
+      <MemberSignature Language="C#" Value="public void ClearRemapTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearRemapTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearRemapTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Farbumwandlungstabelle für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Umwandlungstabelle für die Standardkategorie, eine andere Umwandlungstabelle für die Bitmapkategorie und immer noch eine andere Umwandlungstabelle für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearRemapTable">
+      <MemberSignature Language="C#" Value="public void ClearRemapTable (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearRemapTable(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearRemapTable(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Umwandlungstabelle gelöscht ist.</param>
+        <summary>Löscht die Farbumwandlungstabelle für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Umwandlungstabelle für die Standardkategorie, eine andere Umwandlungstabelle für die Bitmapkategorie und immer noch eine andere Umwandlungstabelle für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten klicken Sie dann die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen Sie beispielsweise an, dass Sie eine Umwandlungstabelle und einen Gammawert für die Standardkategorie angeben. Wenn Sie die Umwandlungstabelle für die Stiftkategorie durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> -Methode, die Standard-Umwandlungstabelle gelten nicht für Stifte. Wenn Sie später die Stiftumwandlungstabelle durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearRemapTable%2A> -Methode, die Stiftkategorie nicht auf die Standard-Umwandlungstabelle zurückgesetzt; stattdessen müssen die Stiftkategorie keine Umwandlungstabelle. Auf ähnliche Weise wird die Stiftkategorie nicht auf den Standardwert für die Gamma zurückgesetzt. Stattdessen müssen die Stiftkategorie keine Gammawert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearThreshold">
+      <MemberSignature Language="C#" Value="public void ClearThreshold ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearThreshold() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearThreshold" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Schwellenwert für die Standardkategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schwellenwert ist ein Wert zwischen 0 und 1, der einen Umstellungsjahr für Angaben mit Punkt für jede Komponente Farbe angibt. Nehmen wir beispielsweise an der Schwellenwert auf 0,7 festgelegt ist, und nehmen Sie einer Farbe, deren Rot rendern, Grün- und Blauanteil Komponenten sind 230, 50 und 220 bzw.. Die rote Komponente (230) ist größer als 0,7 x 255, damit Rotanteils bis 255 (volle Intensität) geändert werden. Grünanteils (50) ist kleiner als 0,7 x 255, damit Grünanteils in 0 geändert wird. Die blaue Komponente (220) ist größer als 0,7 x 255, damit Blauanteils 255 geändert wird.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie einen Schwellenwert für die Standardkategorie, jeweils unterschiedlichen Schwellenwert für die Bitmapkategorie und jeweils unterschiedlichen Schwellenwert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearThreshold">
+      <MemberSignature Language="C#" Value="public void ClearThreshold (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearThreshold(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearThreshold(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die der Schwellenwert gelöscht ist.</param>
+        <summary>Löscht den Schwellenwert für eine angegebene Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schwellenwert ist ein Wert zwischen 0 und 1, der einen Umstellungsjahr für Angaben mit Punkt für jede Komponente Farbe angibt. Nehmen wir beispielsweise an der Schwellenwert auf 0,7 festgelegt ist, und nehmen Sie einer Farbe, deren Rot rendern, Grün- und Blauanteil Komponenten sind 230, 50 und 220 bzw.. Die rote Komponente (230) ist größer als 0.7x55, damit Rotanteils bis 255 (volle Intensität) geändert werden. Grünanteils (50) ist kleiner als 0,7 x 255, damit Grünanteils in 0 geändert wird. Die blaue Komponente (220) ist größer als 0,7 x 255, damit Blauanteils 255 geändert wird.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie einen Schwellenwert für die Standardkategorie, jeweils unterschiedlichen Schwellenwert für die Bitmapkategorie und jeweils unterschiedlichen Schwellenwert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie einen Schwellenwert und einen Gammawert für die Standardkategorie angeben. Wenn Sie den Schwellenwert für die Stiftkategorie durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%2A> -Methode der Standardschwellenwert gelten nicht für Stifte. Wenn Sie später den Stiftschwellenwert durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.ClearThreshold%2A> -Methode, die Stiftkategorie nicht auf den Standardschwellenwert zurückgesetzt; stattdessen müssen die Stiftkategorie kein Schwellenwert. Auf ähnliche Weise wird die Stiftkategorie nicht auf den Standardwert für die Gamma zurückgesetzt. Stattdessen müssen die Stiftkategorie keine Gammawert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieses <see cref="T:System.Drawing.Imaging.ImageAttributes" />-Objekts.</summary>
+        <returns>Das von dieser Klasse erstellte <see cref="T:System.Drawing.Imaging.ImageAttributes" />-Objekt, umgewandelt in ein Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von diesem <see cref="T:System.Drawing.Imaging.ImageAttributes" />-Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A> auf, wenn Sie <xref:System.Drawing.Imaging.ImageAttributes> nicht mehr benötigen. Die <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A>-Methode bewirkt, dass <xref:System.Drawing.Imaging.ImageAttributes> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Drawing.Imaging.ImageAttributes> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Drawing.Imaging.ImageAttributes> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Drawing.Imaging.ImageAttributes> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Drawing.Imaging.ImageAttributes>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ImageAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einem Objekt Gelegenheit zu dem Versuch, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor es von der Garbage Collection freigegeben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAdjustedPalette">
+      <MemberSignature Language="C#" Value="public void GetAdjustedPalette (System.Drawing.Imaging.ColorPalette palette, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetAdjustedPalette(class System.Drawing.Imaging.ColorPalette palette, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.GetAdjustedPalette(System.Drawing.Imaging.ColorPalette,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="palette" Type="System.Drawing.Imaging.ColorPalette" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="palette">Eine <see cref="T:System.Drawing.Imaging.ColorPalette" />, die bei der Eingabe die anzupassende Palette und bei der Ausgabe die angepasste Palette enthält.</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, deren Anpassungseinstellungen auf die Palette angewendet werden.</param>
+        <summary>Passt die Farben in einer Palette entsprechend den Anpassungseinstellungen einer angegebenen Kategorie an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einer Farbumwandlungstabelle für die Standardkategorie, eine andere Farbumwandlungstabelle für die Bitmapkategorie und immer noch eine andere Farbumwandlungstabelle für die Stiftkategorie angeben.  
+  
+ Beim Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.GetAdjustedPalette%2A> -Methode, können Sie die Anpassungskategorie ab, das Anpassen der Palettenfarben angeben. Angenommen, Sie übergeben <xref:System.Drawing.Imaging.ColorAdjustType.Bitmap> auf die <xref:System.Drawing.Imaging.ImageAttributes.GetAdjustedPalette%2A> -Methode, die Einstellungen der Bitmapkategorie zum Anpassen der Palettenfarben dienen Anpassung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBrushRemapTable">
+      <MemberSignature Language="C#" Value="public void SetBrushRemapTable (System.Drawing.Imaging.ColorMap[] map);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBrushRemapTable(class System.Drawing.Imaging.ColorMap[] map) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable(System.Drawing.Imaging.ColorMap[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="map" Type="System.Drawing.Imaging.ColorMap[]" />
+      </Parameters>
+      <Docs>
+        <param name="map">Ein Array von <see cref="T:System.Drawing.Imaging.ColorMap" />-Objekten.</param>
+        <summary>Legt die Farbumwandlungstabelle für die Pinselkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Farbumwandlungstabelle ist ein Array von <xref:System.Drawing.Imaging.ColorMap> Strukturen. Jede <xref:System.Drawing.Imaging.ColorMap> Struktur verfügt über zwei <xref:System.Drawing.Color> Objekte: eines, der angibt, eine alte Farbe und die entsprechende neue Farbe angeben. Beim Rendern, wird jede Farbe, die einen der alten Farben in der Umwandlungstabelle entspricht, in die entsprechende neue Farbe geändert.  
+  
+ Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable%2A> Methode hat dieselbe Wirkung wie das Übergeben von <xref:System.Drawing.Imaging.ColorAdjustType.Brush> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> Methode. Die angegebene Umwandlungstabelle gilt für Elemente in Metadateien, die mit einem Pinsel gefüllt sind.  
+  
+ Diese Methode soll nur mit Metadateien verwendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Erstellt eine Einzelelement <xref:System.Drawing.Imaging.ColorMap> Array, das die alten Farbe Rot und Grün als die neu ausgewählte Farbe enthält.  
+  
+2.  Übergibt dieses Array an ein neu erstelltes <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorKey">
+      <MemberSignature Language="C#" Value="public void SetColorKey (System.Drawing.Color colorLow, System.Drawing.Color colorHigh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorKey(valuetype System.Drawing.Color colorLow, valuetype System.Drawing.Color colorHigh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorKey(System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorLow" Type="System.Drawing.Color" />
+        <Parameter Name="colorHigh" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="colorLow">Der niedrige Colorkeywert.</param>
+        <param name="colorHigh">Der hohe Colorkeywert.</param>
+        <summary>Legt den Colorkey für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt die Werte für die oberen und unteren Farbschlüssel, sodass ein Bereich von Farben transparent vorgenommen werden kann. Jede Farbe, die jeweils drei Komponenten (Rot, Grün, Blau) zwischen den entsprechenden Komponenten der hohen und niedrigen Farbe Schlüssel erfolgt transparent.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Colorkey für die Standardkategorie, eine andere Farbe-Schlüssel für die Bitmapkategorie und immer noch eine andere Farbe-Schlüssel für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%28System.Drawing.Color%2CSystem.Drawing.Color%2CSystem.Drawing.Imaging.ColorAdjustType%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorKey">
+      <MemberSignature Language="C#" Value="public void SetColorKey (System.Drawing.Color colorLow, System.Drawing.Color colorHigh, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorKey(valuetype System.Drawing.Color colorLow, valuetype System.Drawing.Color colorHigh, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorKey(System.Drawing.Color,System.Drawing.Color,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorLow" Type="System.Drawing.Color" />
+        <Parameter Name="colorHigh" Type="System.Drawing.Color" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="colorLow">Der niedrige Colorkeywert.</param>
+        <param name="colorHigh">Der hohe Colorkeywert.</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die der Colorkey festgelegt ist.</param>
+        <summary>Legt den Colorkey (Transparenzbereich) für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt die Werte für die oberen und unteren Farbschlüssel, sodass ein Bereich von Farben transparent vorgenommen werden kann. Jede Farbe, die jeweils drei Komponenten (Rot, Grün, Blau) zwischen den entsprechenden Komponenten der hohen und niedrigen Farbe Schlüssel erfolgt transparent.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Colorkey für die Standardkategorie, eine andere Farbe-Schlüssel für die Bitmapkategorie und immer noch eine andere Farbe-Schlüssel für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie durch das Übergeben der Colorkey für die Stiftkategorie festlegen <xref:System.Drawing.Imaging.ColorAdjustType.Pen> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Stifte angewendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Öffnet ein <xref:System.Drawing.Image> , das die Datei Circle.bmp verwendet und zeichnet Sie es auf dem Bildschirm.  
+  
+2.  Erstellt ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt und legt dessen Colorkey durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%2A> Methode.  
+  
+3.  Zeichnet das Bild mit den Farbschlüssel des auf dem Bildschirm die <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrices">
+      <MemberSignature Language="C#" Value="public void SetColorMatrices (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrix grayMatrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrices(class System.Drawing.Imaging.ColorMatrix newColorMatrix, class System.Drawing.Imaging.ColorMatrix grayMatrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrices(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="grayMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">Die Farbanpassungsmatrix.</param>
+        <param name="grayMatrix">Die Anpassungsmatrix für Graustufenwerte.</param>
+        <summary>Legt die Farbanpassungsmatrix und die Anpassungsmatrix für Graustufenwerte für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. Anpassungsmatrizen für die Standardkategorie, andere Anpassungsmatrizen für die Bitmapkategorie und wiederum andere Anpassungsmatrizen für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrices%28System.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrix%29?displayProperty=nameWithType> Methode entspricht dem Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrices%28System.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrixFlag%29?displayProperty=nameWithType> -Methode und übergeben des <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType> für die `flags` Parameter. <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType>Gibt an, dass alle Farben (einschließlich Grau) durch die Farbanpassungsmatrix, nicht die Anpassungsmatrix für Graustufenwerte angepasst werden. Aus diesem Grund hat die Anpassungsmatrix übergeben an diese Methode keine Auswirkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrices">
+      <MemberSignature Language="C#" Value="public void SetColorMatrices (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrix grayMatrix, System.Drawing.Imaging.ColorMatrixFlag flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrices(class System.Drawing.Imaging.ColorMatrix newColorMatrix, class System.Drawing.Imaging.ColorMatrix grayMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrices(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="grayMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">Die Farbanpassungsmatrix.</param>
+        <param name="grayMatrix">Die Anpassungsmatrix für Graustufenwerte.</param>
+        <param name="flags">Ein Element von <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" />, das angibt, welcher Bild- und Farbtyp von den Farbanpassungsmatrizen und den Anpassungsmatrizen für Graustufenwerte betroffen ist.</param>
+        <summary>Legt die Farbanpassungsmatrix und die Anpassungsmatrix für Graustufenwerte für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. Anpassungsmatrizen für die Standardkategorie, andere Anpassungsmatrizen für die Bitmapkategorie und wiederum andere Anpassungsmatrizen für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrices">
+      <MemberSignature Language="C#" Value="public void SetColorMatrices (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrix grayMatrix, System.Drawing.Imaging.ColorMatrixFlag mode, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrices(class System.Drawing.Imaging.ColorMatrix newColorMatrix, class System.Drawing.Imaging.ColorMatrix grayMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag mode, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrices(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="grayMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="mode" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">Die Farbanpassungsmatrix.</param>
+        <param name="grayMatrix">Die Anpassungsmatrix für Graustufenwerte.</param>
+        <param name="mode">Ein Element von <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" />, das angibt, welcher Bild- und Farbtyp von den Farbanpassungsmatrizen und den Anpassungsmatrizen für Graustufenwerte betroffen ist.</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Farbanpassungsmatrizen und die Anpassungsmatrizen für Graustufenwerte festgelegt werden.</param>
+        <summary>Legt die Farbanpassungsmatrix und die Anpassungsmatrix für Graustufenwerte für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. Anpassungsmatrizen für die Standardkategorie, andere Anpassungsmatrizen für die Bitmapkategorie und wiederum andere Anpassungsmatrizen für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie durch das Übergeben der Matrizen Farbanpassungsmatrizen und den Anpassungsmatrizen für die Stiftkategorie festlegen <xref:System.Drawing.Imaging.ColorAdjustType.Pen> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrices%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Stifte angewendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrix">
+      <MemberSignature Language="C#" Value="public void SetColorMatrix (System.Drawing.Imaging.ColorMatrix newColorMatrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrix(class System.Drawing.Imaging.ColorMatrix newColorMatrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrix(System.Drawing.Imaging.ColorMatrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">Die Farbanpassungsmatrix.</param>
+        <summary>Legt die Farbanpassungsmatrix für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbanpassungsmatrix für die Standardkategorie, eine andere Farbanpassungsmatrix für die Bitmapkategorie und immer noch eine andere Farbanpassungsmatrix für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%28System.Drawing.Imaging.ColorMatrix%29?displayProperty=nameWithType> Methode entspricht dem Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%28System.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrixFlag%29?displayProperty=nameWithType> -Methode und übergeben des <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType> für die `flags` Parameter. <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType>Gibt an, dass alle Farben (einschließlich Grau) durch die Farbanpassungsmatrix angepasst werden  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Erstellt ein Rechteck-Abbild, die alle die Farbe aufweist, die Werte auf 128, erzeugt ein Rechteck, das mit einer Volltonfarbe Mittel grau gefüllt ist. Der Code zeichnet klicken Sie dann das Rechteck auf dem Bildschirm.  
+  
+2.  Erstellt eine <xref:System.Drawing.Imaging.ColorMatrix> und legt seine <xref:System.Drawing.Drawing2D.Matrix> Speicherort auf 1,75, wodurch die rote Komponente des Bilds hervorgehoben.  
+  
+3.  Erstellt ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt und ruft die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> Methode.  
+  
+4.  Zeichnet das Bild (ein zweites Rechteck) auf dem Bildschirm, wobei die <xref:System.Drawing.Imaging.ColorMatrix> nur festgelegt, in der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+ Beachten Sie, dass das zweite Rechteck die Farbe Rot hervorgehoben ist.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrix">
+      <MemberSignature Language="C#" Value="public void SetColorMatrix (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrixFlag flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrix(class System.Drawing.Imaging.ColorMatrix newColorMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrix(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">Die Farbanpassungsmatrix.</param>
+        <param name="flags">Ein Element von <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" />, das angibt, welcher Bild- und Farbtyp von der Farbanpassungsmatrix betroffen ist.</param>
+        <summary>Legt die Farbanpassungsmatrix für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbanpassungsmatrix für die Standardkategorie, eine andere Farbanpassungsmatrix für die Bitmapkategorie und immer noch eine andere Farbanpassungsmatrix für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%28System.Drawing.Imaging.ColorMatrix%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrix">
+      <MemberSignature Language="C#" Value="public void SetColorMatrix (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrixFlag mode, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrix(class System.Drawing.Imaging.ColorMatrix newColorMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag mode, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrix(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="mode" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">Die Farbanpassungsmatrix.</param>
+        <param name="mode">Ein Element von <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" />, das angibt, welcher Bild- und Farbtyp von der Farbanpassungsmatrix betroffen ist.</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Farbanpassungsmatrix festgelegt ist.</param>
+        <summary>Legt die Farbanpassungsmatrix für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbanpassungsmatrix für die Standardkategorie, eine andere Farbanpassungsmatrix für die Bitmapkategorie und immer noch eine andere Farbanpassungsmatrix für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie die Farbanpassungsmatrix für die Stiftkategorie durch Übergabe festlegen <xref:System.Drawing.Imaging.ColorAdjustType.Pen> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Stifte angewendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen `RotateColors` aus des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGamma">
+      <MemberSignature Language="C#" Value="public void SetGamma (float gamma);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGamma(float32 gamma) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetGamma(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gamma" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="gamma">Der Gammakorrekturwert.</param>
+        <summary>Legt den Gammawert für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typische Werte für die `gamma` Parameter werden von 1.0 auf 2.2; allerdings können Werte zwischen 0,1 und 5.0 unter bestimmten Umständen nützlich nachzuweisen.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Gammawerte außerhalb des üblichen Bereichs möglicherweise nützlich für alte CRT-Monitore oder für Monitore, die unter Umständen ungewöhnlich Beleuchtung wie Industrie Umgebungen oder im Fenster angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Darüber hinaus müssen Sie den Bildpfad für die Datei in einen Pfad und Bild an, die für Ihr System gültig zu ändern. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Öffnet eine <xref:System.Drawing.Image> , die Datei Camera.jpg verwendet und zeichnet Sie es auf dem Bildschirm mit dem Standardwert für die Gammakorrektur.  
+  
+2.  Erstellt ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt und legt den Gammawert auf 2.2 durch Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%2A> Methode.  
+  
+3.  Zeichnet das Bild (eine zweite Kamera) auf dem Bildschirm mit den Gammawert nur festgelegt werden, der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGamma">
+      <MemberSignature Language="C#" Value="public void SetGamma (float gamma, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGamma(float32 gamma, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetGamma(System.Single,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gamma" Type="System.Single" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="gamma">Der Gammakorrekturwert.</param>
+        <param name="type">Ein Element der <see cref="T:System.Drawing.Imaging.ColorAdjustType" />-Enumeration, das die Kategorie angibt, für die der Gammawert festgelegt ist.</param>
+        <summary>Legt den Gammawert für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typische Werte für die `gamma` Parameter werden von 1.0 auf 2.2; allerdings können Werte zwischen 0,1 und 5.0 unter bestimmten Umständen nützlich nachzuweisen.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie durch das Übergeben der Gammawert für die Stiftkategorie festlegen <xref:System.Drawing.Imaging.ColorAdjustType.Pen> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Stifte angewendet.  
+  
+ Gammawerte außerhalb des üblichen Bereichs möglicherweise nützlich für alte CRT-Monitore oder für Monitore, die unter Umständen ungewöhnlich Beleuchtung wie Industrie Umgebungen oder im Fenster angezeigt werden.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%28System.Single%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoOp">
+      <MemberSignature Language="C#" Value="public void SetNoOp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetNoOp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetNoOp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Deaktiviert die Farbanpassung für die Standardkategorie. Durch Aufruf der <see cref="Overload:System.Drawing.Imaging.ImageAttributes.ClearNoOp" />-Methode können Sie die vor dem Aufruf der <see cref="Overload:System.Drawing.Imaging.ImageAttributes.SetNoOp" />-Methode gültigen Farbanpassungseinstellungen erneut aktivieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Öffnet ein <xref:System.Drawing.Image> , das die Datei Camera.jpg verwendet.  
+  
+2.  Legt den Gammawert für die <xref:System.Drawing.Imaging.ImageAttributes> Objekt 0,25.  
+  
+3.  Zeichnet das Bild auf dem Bildschirm an.  
+  
+4.  Ruft die <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> Methode.  
+  
+5.  Zeichnet das Bild (eine zweite Kamera) auf dem Bildschirm; jedoch, da die <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> -Methode wurde aufgerufen, Gamma Standardwerte auf einen Wert von 1,0 und das Bild auf dem Bildschirm mit der Gamma-Standardeinstellung gezeichnet wird.  
+  
+ Beachten Sie, dass das Bild auf der linken Seite sehr erhält (Gammawert von 0,25 ist) und das Bild auf der rechten Seite Kontrast (Gamma 1.0).  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoOp">
+      <MemberSignature Language="C#" Value="public void SetNoOp (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetNoOp(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetNoOp(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Farbkorrektur deaktiviert ist.</param>
+        <summary>Deaktiviert die Farbanpassung für eine angegebene Kategorie. Durch Aufruf der <see cref="Overload:System.Drawing.Imaging.ImageAttributes.ClearNoOp" />-Methode können Sie die vor dem Aufruf der <see cref="Overload:System.Drawing.Imaging.ImageAttributes.SetNoOp" />-Methode gültigen Farbanpassungseinstellungen erneut aktivieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einen Gammawert für die Standardkategorie, einen anderen Gammawert für die Bitmapkategorie und einen anderen Gammawert für die Stiftkategorie angeben.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannel">
+      <MemberSignature Language="C#" Value="public void SetOutputChannel (System.Drawing.Imaging.ColorChannelFlag flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannel(valuetype System.Drawing.Imaging.ColorChannelFlag flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannel(System.Drawing.Imaging.ColorChannelFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorChannelFlag" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Ein Element von <see cref="T:System.Drawing.Imaging.ColorChannelFlag" />, das den Ausgabekanal angibt.</param>
+        <summary>Legt den CMYK-Ausgabekanal für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> Methode zum Konvertieren eines Bilds in einen CMYK-Farbraum und die Intensitäten eines der CMYK-Farbkanäle untersuchen. Nehmen wir beispielsweise an, die Sie erstellen eine <xref:System.Drawing.Imaging.ImageAttributes> Objekt, und legen Sie die Bitmap-Ausgabekanal auf <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC>. Wenn Sie den Pfad des, übergeben <xref:System.Drawing.Imaging.ImageAttributes> -Objekt an die <xref:System.Drawing.Graphics.DrawImage%2A> -Methode, die Zyan-Komponente von jedem Pixel berechnet, und jedes Pixels in das gerenderte Bild ist eine Rotton grau, der die Intensität des liegenden Zyan Kanal angibt. Auf ähnliche Weise können Sie Bilder rendern, die die Intensitäten Magenta, Gelb und schwarzen Kanäle angeben.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einem Ausgabekanal für die Standardkategorie und einen anderen Ausgabekanal für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie folgenden Code in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen `ShowOutputChannels`, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#4)]
+ [!code-vb[System.Drawing.Misc3#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannel">
+      <MemberSignature Language="C#" Value="public void SetOutputChannel (System.Drawing.Imaging.ColorChannelFlag flags, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannel(valuetype System.Drawing.Imaging.ColorChannelFlag flags, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannel(System.Drawing.Imaging.ColorChannelFlag,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorChannelFlag" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Ein Element von <see cref="T:System.Drawing.Imaging.ColorChannelFlag" />, das den Ausgabekanal angibt.</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die der Ausgabekanal festgelegt ist.</param>
+        <summary>Legt den CMYK-Ausgabekanal für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> Methode zum Konvertieren eines Bilds in einen CMYK-Farbraum und die Intensitäten eines der CMYK-Farbkanäle untersuchen. Nehmen wir beispielsweise an, die Sie erstellen eine <xref:System.Drawing.Imaging.ImageAttributes> Objekt, und legen Sie die Bitmap-Ausgabekanal auf <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC>. Wenn Sie den Pfad des, übergeben <xref:System.Drawing.Imaging.ImageAttributes> -Objekt an die <xref:System.Drawing.Graphics.DrawImage%2A> -Methode, die Zyan-Komponente von jedem Pixel berechnet, und jedes Pixels in das gerenderte Bild ist eine Rotton grau, der die Intensität des liegenden Zyan Kanal angibt. Auf ähnliche Weise können Sie Bilder rendern, die die Intensitäten Magenta, Gelb und schwarzen Kanäle angeben.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. einem Ausgabekanal für die Standardkategorie und einen anderen Ausgabekanal für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie durch das übergeben den Ausgabekanal für die Bitmapkategorie festlegen <xref:System.Drawing.Imaging.ColorAdjustType.Bitmap> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Bitmaps angewendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie folgenden Code in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen `ShowOutputChannels`, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#4)]
+ [!code-vb[System.Drawing.Misc3#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void SetOutputChannelColorProfile (string colorProfileFilename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannelColorProfile(string colorProfileFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorProfileFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="colorProfileFilename">Der Pfadname einer Farbprofildatei. Wenn sich die Farbprofildatei im Verzeichnis %SystemRoot%\System32\Spool\Drivers\Color befindet, kann dieser Parameter der Dateiname sein. Andernfalls muss es sich bei diesem Parameter um den voll gekennzeichneten Pfadnamen handeln.</param>
+        <summary>Legt die Ausgabekanal-Farbprofildatei für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> und <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> Methoden zum Konvertieren eines Bilds in einen Farbraum CMYK (Zyan-Magenta-Gelb-Schwarz), und überprüfen Sie die Intensitäten eines der CMYK-Farbkanäle. Nehmen wir beispielsweise an, dass Sie Code schreiben, der die folgenden Schritte ausführt:  
+  
+1.  Erstellen einer <xref:System.Drawing.Image>.  
+  
+2.  Erstellen Sie ein <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+3.  Übergeben <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> Methode der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+4.  Der Pfadname einer Farbprofildatei zum Übergeben der <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> Methode der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+5.  Übergeben Sie die Pfade der <xref:System.Drawing.Image> und <xref:System.Drawing.Imaging.ImageAttributes> -Objekte und die <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
+  
+ [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]verwendet die Farbprofildatei Zyan-Komponente jedes Pixels in der Abbildung berechnet, und jedes Pixels in das gerenderte Bild durchgeführt werden kann, eine Rotton grau, der die Intensität des liegenden Zyan Kanal angibt.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie eine Ausgabe-Ausgabekanal-Farbprofildatei für die Standardkategorie und eine andere Ausgabe-Farbprofildatei für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void SetOutputChannelColorProfile (string colorProfileFilename, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannelColorProfile(string colorProfileFilename, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile(System.String,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorProfileFilename" Type="System.String" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="colorProfileFilename">Der Pfadname einer Farbprofildatei. Wenn sich die Farbprofildatei im Verzeichnis %SystemRoot%\System32\Spool\Drivers\Color befindet, kann dieser Parameter der Dateiname sein. Andernfalls muss es sich bei diesem Parameter um den voll gekennzeichneten Pfadnamen handeln.</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Ausgabekanal-Farbprofildatei festgelegt ist.</param>
+        <summary>Legt die Ausgabekanal-Farbprofildatei für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> und <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> Methoden zum Konvertieren eines Bilds in einen Farbraum CMYK (Zyan-Magenta-Gelb-Schwarz), und überprüfen Sie die Intensitäten eines der CMYK-Farbkanäle. Nehmen wir beispielsweise an, dass Sie Code schreiben, der die folgenden Schritte ausführt:  
+  
+1.  Erstellen einer <xref:System.Drawing.Image>.  
+  
+2.  Erstellen Sie ein <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+3.  Übergeben <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> Methode der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+4.  Der Pfadname einer Farbprofildatei zum Übergeben der <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> Methode der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+5.  Übergeben Sie die Pfade der <xref:System.Drawing.Image> und <xref:System.Drawing.Imaging.ImageAttributes> -Objekte und die <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
+  
+ [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]verwendet die Farbprofildatei Zyan-Komponente jedes Pixels in der Abbildung berechnet, und jedes Pixels in das gerenderte Bild durchgeführt werden kann, eine Rotton grau, der die Intensität des liegenden Zyan Kanal angibt.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie eine Ausgabe-Ausgabekanal-Farbprofildatei für die Standardkategorie und eine andere Ausgabe-Farbprofildatei für die Bitmapkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Wenn Sie niemals alle anpassungseinstellungen für die Bitmapkategorie angeben, gelten die Einstellungen der Standardrichtlinie beispielsweise zu "Bitmap".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie durch das Übergeben der Ausgabe Ausgabekanal-Farbprofildatei für die Bitmapkategorie festlegen <xref:System.Drawing.Imaging.ColorAdjustType.Bitmap> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Bitmaps angewendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRemapTable">
+      <MemberSignature Language="C#" Value="public void SetRemapTable (System.Drawing.Imaging.ColorMap[] map);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRemapTable(class System.Drawing.Imaging.ColorMap[] map) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="map" Type="System.Drawing.Imaging.ColorMap[]" />
+      </Parameters>
+      <Docs>
+        <param name="map">Ein Array von Farbpaaren vom Typ <see cref="T:System.Drawing.Imaging.ColorMap" />. Jedes Farbpaar enthält eine vorhandene Farbe (den ersten Wert) und die Farbe, der diese zugeordnet wird (der zweite Wert).</param>
+        <summary>Legt die Farbumwandlungstabelle für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Farbumwandlungstabelle ist ein Array von <xref:System.Drawing.Imaging.ColorMap> Strukturen. Jede <xref:System.Drawing.Imaging.ColorMap> Struktur verfügt über zwei <xref:System.Drawing.Color> Objekte: eines, der angibt, eine alte Farbe und die entsprechende neue Farbe angeben. Beim Rendern, wird jede Farbe, die einen der alten Farben in der Umwandlungstabelle entspricht, in die entsprechende neue Farbe geändert.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbumwandlungstabelle für die Standardkategorie einer Farbumwandlungstabelle für die Bitmapkategorie und immer noch eine andere Farbumwandlungstabelle für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Ein Bild (ein roter Kreis) erstellt, speichert es als Circle2.jpg, öffnet das Bild und zeichnet diese auf dem Bildschirm.  
+  
+2.  Erstellt eine Farbe, die die Farbe Grün die Farbe Rot zuordnet.  
+  
+3.  Zeichnet das Bild, das zuvor erstellte auf dem Bildschirm erneut, diesmal jedoch mit der farbzuordnung.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRemapTable">
+      <MemberSignature Language="C#" Value="public void SetRemapTable (System.Drawing.Imaging.ColorMap[] map, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRemapTable(class System.Drawing.Imaging.ColorMap[] map, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[],System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="map" Type="System.Drawing.Imaging.ColorMap[]" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="map">Ein Array von Farbpaaren vom Typ <see cref="T:System.Drawing.Imaging.ColorMap" />. Jedes Farbpaar enthält eine vorhandene Farbe (den ersten Wert) und die Farbe, der diese zugeordnet wird (der zweite Wert).</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die die Farbumwandlungstabelle festgelegt ist.</param>
+        <summary>Legt die Farbumwandlungstabelle für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Farbumwandlungstabelle ist ein Array von <xref:System.Drawing.Imaging.ColorMap> Strukturen. Jede <xref:System.Drawing.Imaging.ColorMap> Struktur verfügt über zwei <xref:System.Drawing.Color> Objekte: eines, der angibt, eine alte Farbe und die entsprechende neue Farbe angeben. Beim Rendern, wird jede Farbe, die einen der alten Farben in der Umwandlungstabelle entspricht, in die entsprechende neue Farbe geändert.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Sie können z. B. eine Farbumwandlungstabelle für die Standardkategorie einer Farbumwandlungstabelle für die Bitmapkategorie und immer noch eine andere Farbumwandlungstabelle für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie die Farbumwandlungstabelle für die Stiftkategorie durch Übergabe festlegen <xref:System.Drawing.Imaging.ColorAdjustType.Pen> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Stifte angewendet.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%28System.Drawing.Imaging.ColorMap%5B%5D%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreshold">
+      <MemberSignature Language="C#" Value="public void SetThreshold (float threshold);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetThreshold(float32 threshold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetThreshold(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threshold" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="threshold">Eine reelle Zahl, die den Schwellenwert angibt.</param>
+        <summary>Legt den Schwellenwert (Transparenzbereich) für die Standardkategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schwellenwert ist ein Wert zwischen 0 und 1, der einen Umstellungsjahr für Angaben mit Punkt für jede Komponente Farbe angibt. Nehmen wir beispielsweise an der Schwellenwert auf 0,7 festgelegt ist, und nehmen Sie einer Farbe, deren Rot rendern, Grün- und Blauanteil Komponenten sind 230, 50 und 220 bzw.. Die rote Komponente (230) ist größer als 0,7 x 255, damit Rotanteils bis 255 (volle Intensität) geändert werden. Grünanteils (50) ist kleiner als 0,7 x 255, damit Grünanteils in 0 geändert wird. Die blaue Komponente (220) ist größer als 0,7 x 255, damit Blauanteils 255 geändert wird.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie einen Schwellenwert für die Standardkategorie, einen Schwellenwert für die Bitmapkategorie und jeweils unterschiedlichen Schwellenwert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Öffnet ein <xref:System.Drawing.Image> und zeichnet es auf dem Bildschirm.  
+  
+2.  Erstellt ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt und legt den Schwellenwert für den mithilfe der <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%2A> Methode.  
+  
+3.  Zeichnet das Bild auf dem Bildschirm mithilfe des Schwellenwerts für die <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreshold">
+      <MemberSignature Language="C#" Value="public void SetThreshold (float threshold, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetThreshold(float32 threshold, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetThreshold(System.Single,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threshold" Type="System.Single" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="threshold">Ein Schwellenwert zwischen 0,0 und 1,0, der als Schwelle zum Sortieren von Farben verwendet wird, die einem Maximal- oder Minimalwert zugeordnet werden.</param>
+        <param name="type">Ein Element von <see cref="T:System.Drawing.Imaging.ColorAdjustType" />, das die Kategorie angibt, für die der Farbschwellenwert festgelegt ist.</param>
+        <summary>Legt den Schwellenwert (Transparenzbereich) für eine angegebene Kategorie fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schwellenwert ist ein Wert zwischen 0 und 1, der einen Umstellungsjahr für Angaben mit Punkt für jede Komponente Farbe angibt. Nehmen wir beispielsweise an der Schwellenwert auf 0,7 festgelegt ist, und nehmen Sie einer Farbe, deren Rot rendern, Grün- und Blauanteil Komponenten sind 230, 50 und 220 bzw.. Die rote Komponente (230) ist größer als 0,7 x 255, damit Rotanteils bis 255 (volle Intensität) geändert werden. Grünanteils (50) ist kleiner als 0,7 x 255, damit Grünanteils in 0 geändert wird. Die blaue Komponente (220) ist größer als 0,7 x 255, damit Blauanteils 255 geändert wird.  
+  
+ Ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt verwaltet, Farbe und Graustufen-Einstellungen für fünf Anpassung Kategorien: Standard, Bitmap, Pinsel, Stift und Text. Beispielsweise können Sie einen Schwellenwert für die Standardkategorie, einen Schwellenwert für die Bitmapkategorie und jeweils unterschiedlichen Schwellenwert für die Stiftkategorie angeben.  
+  
+ Die Standardeinstellungen für Farbanpassungsmatrizen und den Anpassungsmatrizen gelten für alle Kategorien, die keine eigene anpassungseinstellungen aufweisen. Beispielsweise, wenn Sie niemals alle anpassungseinstellungen für die Stiftkategorie angeben, gelten die Standardeinstellungen zu "Stift".  
+  
+ Sobald Sie eine Farbanpassungsmatrizen oder Anpassungsmatrix für Graustufenwerte für eine bestimmte Kategorie angegeben, gelten die Standardeinstellungen für die Anpassung nicht mehr für diese Kategorie. Nehmen wir beispielsweise an, dass Sie eine Auflistung der von anpassungseinstellungen für die Standardkategorie angeben. Wenn Sie den Schwellenwert für die Stiftkategorie durch übergeben <xref:System.Drawing.Imaging.ColorAdjustType.Pen> auf die <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%2A> -Methode, wird keines der Standardeinstellungen für die Anpassung auf Stifte angewendet.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%28System.Single%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWrapMode">
+      <MemberSignature Language="C#" Value="public void SetWrapMode (System.Drawing.Drawing2D.WrapMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetWrapMode(valuetype System.Drawing.Drawing2D.WrapMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetWrapMode(System.Drawing.Drawing2D.WrapMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Drawing.Drawing2D.WrapMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Ein Element von <see cref="T:System.Drawing.Drawing2D.WrapMode" />, das angibt, wie ein Bereich mit Kopien eines Bildes gekachelt wird.</param>
+        <summary>Legt den Umbruchmodus fest, mit dem bestimmt wird, wie eine Struktur in einer Form oder an den Begrenzungen der Form gekachelt werden soll. Wenn eine Struktur kleiner als eine Form ist, wird sie in der Form gekachelt, um sie auszufüllen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%29> Methode entspricht dem Aufruf <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%2CSystem.Drawing.Color%29> und übergibt <xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType> für die `color` Parameter. <xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType>Gibt die Farbe der Pixel außerhalb eines gerenderten Bilds. Diese Farbe wird angezeigt, wenn der Mode-Parameter, um festgelegt ist <xref:System.Drawing.Drawing2D.WrapMode.Clamp> und das Quellrechteck übergeben, um die <xref:System.Drawing.Graphics.DrawImage%2A> Methode größer als das eigentliche Bild ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+1.  Öffnet ein <xref:System.Drawing.Image> aus der Datei Circle3.jpg Datei (kleineren, rot ausgefüllter Kreis) und auf dem Bildschirm gezeichnet.  
+  
+2.  Erstellt ein <xref:System.Drawing.Imaging.ImageAttributes> -Objekt und stellt die <xref:System.Drawing.Drawing2D.WrapMode> -Enumeration <xref:System.Drawing.Drawing2D.WrapMode.Tile>.  
+  
+3.  Erstellt eine <xref:System.Drawing.TextureBrush> mithilfe des Images aus der Datei Circle3.jpg.  
+  
+4.  Zeichnet ein Rechteck auf dem Bildschirm, der mit dem kleinen, rot ausgefüllten Kreisen gefüllt ist.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWrapMode">
+      <MemberSignature Language="C#" Value="public void SetWrapMode (System.Drawing.Drawing2D.WrapMode mode, System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetWrapMode(valuetype System.Drawing.Drawing2D.WrapMode mode, valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetWrapMode(System.Drawing.Drawing2D.WrapMode,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Drawing.Drawing2D.WrapMode" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Ein Element von <see cref="T:System.Drawing.Drawing2D.WrapMode" />, das angibt, wie ein Bereich mit Kopien eines Bildes gekachelt wird.</param>
+        <param name="color">Ein <see cref="T:System.Drawing.Imaging.ImageAttributes" />-Objekt, das die Farbe der Pixel außerhalb eines gerenderten Bilds angibt. Diese Farbe wird angezeigt, wenn der mode-Parameter auf <see cref="F:System.Drawing.Drawing2D.WrapMode.Clamp" /> festgelegt wird und das an <see cref="Overload:System.Drawing.Graphics.DrawImage" /> übergebene Quellrechteck größer als das eigentliche Bild ist.</param>
+        <summary>Legt den Umbruchmodus und die Farbe fest, mit denen festgelegt wird, wie eine Struktur in einer Form oder an den Begrenzungen der Form gekachelt werden soll. Wenn eine Struktur kleiner als eine Form ist, wird sie in der Form gekachelt, um sie auszufüllen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWrapMode">
+      <MemberSignature Language="C#" Value="public void SetWrapMode (System.Drawing.Drawing2D.WrapMode mode, System.Drawing.Color color, bool clamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetWrapMode(valuetype System.Drawing.Drawing2D.WrapMode mode, valuetype System.Drawing.Color color, bool clamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetWrapMode(System.Drawing.Drawing2D.WrapMode,System.Drawing.Color,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Drawing.Drawing2D.WrapMode" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="clamp" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Ein Element von <see cref="T:System.Drawing.Drawing2D.WrapMode" />, das angibt, wie ein Bereich mit Kopien eines Bildes gekachelt wird.</param>
+        <param name="color">Ein Farbobjekt, das die Farbe der Pixel außerhalb eines gerenderten Bilds angibt. Diese Farbe wird angezeigt, wenn der mode-Parameter auf <see cref="F:System.Drawing.Drawing2D.WrapMode.Clamp" /> festgelegt wird und das an <see cref="Overload:System.Drawing.Graphics.DrawImage" /> übergebene Quellrechteck größer als das eigentliche Bild ist.</param>
+        <param name="clamp">Dieser Parameter hat keine Auswirkungen. Legen Sie ihn auf <see langword="false" /> fest.</param>
+        <summary>Legt den Umbruchmodus und die Farbe fest, mit denen festgelegt wird, wie eine Struktur in einer Form oder an den Begrenzungen der Form gekachelt werden soll. Wenn eine Struktur kleiner als eine Form ist, wird sie in der Form gekachelt, um sie auszufüllen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,138 @@
+<Type Name="XmlSchemaSimpleContent" FullName="System.Xml.Schema.XmlSchemaSimpleContent">
+  <TypeSignature Language="C#" Value="public class XmlSchemaSimpleContent : System.Xml.Schema.XmlSchemaContentModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaSimpleContent extends System.Xml.Schema.XmlSchemaContentModel" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaSimpleContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaContentModel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="simpleContent" /> Element im XML-Schema gemäß World Wide Web Consortium (W3C). Diese Klasse wird für einfache und komplexe Typen mit einfachem Inhaltsmodell verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.Schema.XmlSchemaSimpleContent>wird verwendet, um anzugeben, dass das Inhaltsmodell des neuen Typs nur Zeichendaten und keine Elemente enthält. Dies geschieht über <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension> oder <xref:System.Xml.Schema.XmlSchemaSimpleContentRestriction>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die `XmlSchemaSimpleContent` Klasse.  
+  
+ [!code-cpp[Classic WebData XmlSchemaSimpleContent Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaSimpleContent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaSimpleContent Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaSimpleContent Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaSimpleContent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaSimpleContent Example/VB/source.vb#1)]  
+  
+ Für das vorhergehende Codebeispiel wird die folgende XML-Datei generiert.  
+  
+ [!code-xml[Classic WebData XmlSchemaSimpleContent Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlSchemaSimpleContent Example/XML/source.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaSimpleContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSimpleContent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaSimpleContent" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public override System.Xml.Schema.XmlSchemaContent Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaContent Content" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSimpleContent.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("restriction", typeof(System.Xml.Schema.XmlSchemaSimpleContentRestriction))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("extension", typeof(System.Xml.Schema.XmlSchemaSimpleContentExtension))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine von der <see cref="T:System.Xml.Schema.XmlSchemaSimpleContentRestriction" /> oder <see cref="T:System.Xml.Schema.XmlSchemaSimpleContentExtension" />.</summary>
+        <value>Der Inhalt in die <see langword="XmlSchemaSimpleContentRestriction" /> oder <see langword="XmlSchemaSimpleContentExtension" /> Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `simpleContent` Element können Sie angeben, ein Element einen einfachen Typ keine Elemente enthält und den Wert begrenzen, der Inhalt des Elements oder den Inhalt mit Attributen erweitern.  
+  
+   
+  
+## Examples  
+ Mithilfe der `simpleContent` Element, das folgende Elementdeklaration enthält eine `complexType` , definiert den Inhalt des Elements als eine `decimal` Typ mit einem einzelnen Attribut (`sizing`):  
+  
+```  
+<xs:element name="shoeSize">  
+  <xs:complexType>  
+    <xs:simpleContent>  
+      <xs:extension base="xs:decimal">  
+        <xs:attribute name="sizing">  
+          <xs:restriction base="xs:string">  
+            <xs:enumeration value="US"/>  
+            <xs:enumeration value="European"/>  
+            <xs:enumeration value="UK"/>  
+            <xs:enumeration value="Japan"/>  
+          </xs:restriction>  
+        </xs:attribute>  
+      </xs:extension>  
+    </xs:simpleContent>  
+  </xs:complexType>  
+</xs:element>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

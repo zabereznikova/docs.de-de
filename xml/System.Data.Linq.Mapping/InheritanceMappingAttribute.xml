@@ -1,0 +1,139 @@
+<Type Name="InheritanceMappingAttribute" FullName="System.Data.Linq.Mapping.InheritanceMappingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class InheritanceMappingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InheritanceMappingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.InheritanceMappingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ordnet eine Vererbungshierarchie in einer LINQ zu SQL-Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> pro zugeordneter Klassentyp angegeben wird.  
+  
+ Beachten Sie Folgendes, wenn Sie Vererbungshierarchien zuordnen:  
+  
+-   Alle Klassen in einer Hierarchie müssen eine einzelne Tabelle zugeordnet werden.  
+  
+-   Die Tabelle für eine Vererbungshierarchie muss für den zugeordneten Typ deklariert werden, die an der Spitze der Hierarchie befindet. Sie können nicht die Tabelle oder die Zuordnung der Attribute in einer Klasse angeben, die von der Top-Klasse abgeleitet ist.  
+  
+-   Sie können eine Schnittstelle in einer Hierarchie verwenden, aber [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nicht zugeordnet.  
+  
+-   Sie können eine Klasse in der Hierarchie überspringen, wenn Sie Klassen zuordnen, aber Sie für die zugeordneten Klassen nur Abfragen können.  
+  
+ Unterscheidungseigenschaft Codewerte müssen eindeutig sein und passen Sie die Werte in der Datenbank, für die richtige Materialisierung. Eine Zeile mit einen Diskriminatorwert für Code, die nicht genau (auch nach Groß-/Kleinschreibung übereinstimmen) instanziiert die Klasse mit <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> festgelegt `true`.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt die Zuordnung für eine Hierarchie, in dem Sie im oberen Bereich zugeordnet Klasse (`Shape`) ist abstrakt.  
+  
+ [!code-csharp[System.Data.Linq.Mapping.InheritanceMappingAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.InheritanceMappingAttribute/cs/Program.cs#1)]
+ [!code-vb[System.Data.Linq.Mapping.InheritanceMappingAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.InheritanceMappingAttribute/vb/Module1.vb#1)]  
+  
+ Das folgende Beispiel zeigt die Aufnahme des nicht zugeordneten Klassen. Sie können die nicht zugeordnete Klassen an einer beliebigen Stelle in der Hierarchie einfügen.  
+  
+ [!code-csharp[System.Data.Linq.Mapping.InheritanceMappingAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.InheritanceMappingAttribute/cs/Program.cs#2)]
+ [!code-vb[System.Data.Linq.Mapping.InheritanceMappingAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.InheritanceMappingAttribute/vb/Module1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InheritanceMappingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.InheritanceMappingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Linq.Mapping.InheritanceMappingAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public object Code { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Code" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Codewert des Diskriminators in einer zugeordneten Vererbungshierarchie.</summary>
+        <value>Muss vom Benutzer angegeben werden. Es ist kein Standardwert vorhanden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public bool IsDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ein Objekt dieses Typs instanziiert werden soll, wenn der Diskriminatorwert nicht mit einen angegebenen Wert übereinstimmt.</summary>
+        <value>Standard = <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur eines der <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> Attribute müssen deklariert werden, mit <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> als `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Klasse in der Hierarchie.</summary>
+        <value>Muss vom Benutzer angegeben werden. Es ist kein Standardwert vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie nicht abstrakten Typ in der Vererbungshierarchie befindet, z. B. den Root-Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

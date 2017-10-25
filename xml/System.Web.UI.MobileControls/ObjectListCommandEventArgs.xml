@@ -1,0 +1,136 @@
+<Type Name="ObjectListCommandEventArgs" FullName="System.Web.UI.MobileControls.ObjectListCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectListCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectListCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ObjectListCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.MobileControls.ObjectList.ItemCommand" /> -Ereignis für ein <see cref="T:System.Web.UI.MobileControls.ObjectList" />. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectListCommandEventArgs (System.Web.UI.MobileControls.ObjectListItem item, string commandName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.MobileControls.ObjectListItem item, string commandName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListCommandEventArgs.#ctor(System.Web.UI.MobileControls.ObjectListItem,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.MobileControls.ObjectListItem" />
+        <Parameter Name="commandName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">Initialisiert die <see cref="P:System.Web.UI.MobileControls.ObjectListCommandEventArgs.ListItem" /> Eigenschaft.</param>
+        <param name="commandName">Initialisiert die <see cref="P:System.Web.UI.MobileControls.Command.CommandName" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.ObjectListCommandEventArgs" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectListCommandEventArgs (System.Web.UI.MobileControls.ObjectListItem item, object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.MobileControls.ObjectListItem item, object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListCommandEventArgs.#ctor(System.Web.UI.MobileControls.ObjectListItem,System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.MobileControls.ObjectListItem" />
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="item">Initialisiert die <see cref="P:System.Web.UI.MobileControls.ObjectListCommandEventArgs.ListItem" /> Eigenschaft.</param>
+        <param name="commandSource">Initialisiert die <see cref="P:System.Web.UI.MobileControls.ObjectListCommandEventArgs.CommandSource" /> Eigenschaft.</param>
+        <param name="originalArgs">Die ursprünglichen Argumente geerbt wird, von der <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.ObjectListCommandEventArgs" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Element und <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs.CommandSource%2A> Parameter Initialisieren der <xref:System.Web.UI.WebControls.ListItem> und <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs.CommandSource%2A> Eigenschaften mit ihren jeweiligen Werten. Die `originalArgs` Parameter können Sie für die Übergabe in einen Satz von Argumenten, was Befehlsargumenten nützlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Steuerelement, das das Ereignis ausgelöst hat. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Steuerelement, das das Ereignis ausgelöst hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCommand">
+      <MemberSignature Language="C#" Value="protected static readonly string DefaultCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly string DefaultCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.ObjectListCommandEventArgs.DefaultCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Befehls Standardwert fest. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn festgelegt ist, die <xref:System.Web.UI.MobileControls.ObjectList> versucht, eine Verknüpfung zum Aufrufen der Standardbefehl zu rendern. Im HTML-Format, das Standardrendering in `ListView` zeigt das erste Feld als Link zu der `DetailsView` von der <xref:System.Web.UI.MobileControls.ObjectList>. Durch Festlegen der <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs.DefaultCommand> Eigenschaft, die Sie auf den Link der Standardbefehl aufgerufen. Löst den Standardbefehl Aufrufen der <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> Ereignis. Die <xref:System.Web.UI.MobileControls.Command.CommandName%2A> von der <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs> Objektsatz auf den Wert von der <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs.DefaultCommand> Eigenschaft.  
+  
+ Auch wenn Sie ein Standardbefehl definiert ist, sollten Sie einen Befehl mit dem gleichen Namen in der befehlsauflistung enthalten. Wenn das Steuerelement durch ein grafisches Element, das eine Abkürzung für den Standardbefehl enthält nicht rendern kann, der Standardbefehl steht weiterhin über das Rendering von der <xref:System.Web.UI.MobileControls.ObjectListCommandCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListItem ListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListItem ListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListCommandEventArgs.ListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Element der Liste, das das Ereignis generiert hat. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Listenelement, das das Ereignis generiert hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

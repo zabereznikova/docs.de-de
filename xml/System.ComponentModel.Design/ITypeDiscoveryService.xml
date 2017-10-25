@@ -1,0 +1,72 @@
+<Type Name="ITypeDiscoveryService" FullName="System.ComponentModel.Design.ITypeDiscoveryService">
+  <TypeSignature Language="C#" Value="public interface ITypeDiscoveryService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeDiscoveryService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ITypeDiscoveryService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermittelt verfügbare Typen zur Entwurfszeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ITypeDiscoveryService> wird verwendet, um die verfügbaren Typen zur Entwurfszeit zu ermitteln, wenn ein Client des Diensts nicht die Namen der vorhandenen Typen oder referenzierten Assemblys kennen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetTypes (Type baseType, bool excludeGlobalTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetTypes(class System.Type baseType, bool excludeGlobalTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ITypeDiscoveryService.GetTypes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseType" Type="System.Type" />
+        <Parameter Name="excludeGlobalTypes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="baseType">Der Basistyp übereinstimmen. Kann <see langword="null" />.</param>
+        <param name="excludeGlobalTypes">Gibt an, ob die Typen aus allen referenzierten Assemblys gesucht werden soll.</param>
+        <summary>Ruft die Liste der verfügbaren Typen ab.</summary>
+        <returns>Eine Auflistung von Typen, die den vom angegebenen Kriterien entsprechen <paramref name="baseType" /> und <paramref name="excludeGlobalTypes" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `baseType` ist `null`, alle Typen werden zurückgegeben. Andernfalls werden nur aus dem angegebenen Basistyp abgeleitete Typen zurückgegeben. Wenn `excludeGlobalTypes` ist `false`, sind die Typen von alle referenzierten Assemblys überprüft. Andernfalls werden nur die Typen von nicht - Global Assembly Cache, GAC verwiesen Assemblys überprüft. Weitere Informationen finden Sie unter [arbeiten mit Assemblys und dem globalen Assemblycache](~/docs/framework/app-domains/working-with-assemblies-and-the-gac.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

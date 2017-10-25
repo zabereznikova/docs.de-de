@@ -1,0 +1,130 @@
+<Type Name="NullableBoolConverter" FullName="System.Windows.NullableBoolConverter">
+  <TypeSignature Language="C#" Value="public class NullableBoolConverter : System.ComponentModel.NullableConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NullableBoolConverter extends System.ComponentModel.NullableConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.NullableBoolConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.NullableConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert in und aus der <see cref="T:System.Nullable`1" /> Typ (mithilfe der <see cref="T:System.Boolean" /> Einschränkung für den generischen Typ).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Nullable\<Bool > wird für den Auswahlzustand in bestimmten Steuerelementen verwendet. Dieser Konverter ermöglicht es, dass nicht-Set-Attributwerte nicht entweder bedeutet `true` oder `false` , sondern einen Festlegung Zustand.  
+  
+<a name="XAMLTextUsage_NullableBoolConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NullableBoolConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.NullableBoolConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.NullableBoolConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.NullableBoolConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Stellt Kontextinformationen über eine Komponente, z. B. den zugehörigen Container und Eigenschaftendeskriptor.</param>
+        <summary>Gibt eine Auflistung von Standardwerten für den Datentyp, dem dieser Typkonverter vorgesehen ist.</summary>
+        <returns>Eine Auflistung, die einen Standardsatz gültiger Werte enthält. Für diese Implementierung diese Werte sind <see langword="true" />, <see langword="false" />, und <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `context` wird von diesem Konverter nicht verwendet und kann `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.NullableBoolConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Stellt Kontextinformationen über eine Komponente, z. B. den zugehörigen Container und Eigenschaftendeskriptor.</param>
+        <summary>Gibt zurück, ob die von <see cref="M:System.Windows.NullableBoolConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> zurückgegebene Auflistung von Standardwerten eine exklusive Liste darstellt.</summary>
+        <returns>Diese Implementierung gibt immer <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `context` wird von diesem Konverter nicht verwendet und kann `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.NullableBoolConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Stellt Kontextinformationen über eine Komponente, z. B. den zugehörigen Container und Eigenschaftendeskriptor.</param>
+        <summary>Gibt zurück, ob dieses Objekt einen Standardsatz von Werten unterstützt, die aus einer Liste ausgewählt werden können.</summary>
+        <returns>Diese Implementierung gibt immer <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `context` wird von diesem Konverter nicht verwendet und kann `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

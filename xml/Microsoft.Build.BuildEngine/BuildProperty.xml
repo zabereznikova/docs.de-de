@@ -1,0 +1,238 @@
+<Type Name="BuildProperty" FullName="Microsoft.Build.BuildEngine.BuildProperty">
+  <TypeSignature Language="C#" Value="public class BuildProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.BuildProperty" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("BuildProperty (Name = { Name }, Value = { Value }, FinalValue = { FinalValue }, Condition = { Condition })")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine einzelne Eigenschaft in einem MSBuild-Projekt dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewProperty#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewProperty/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewProperty#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewProperty/VB/Module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildProperty (string propertyName, string propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, string propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildProperty.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Eigenschaftenname.</param>
+        <param name="propertyValue">Der Eigenschaftswert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />-Klasse mit dem angegebenen Namen und Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildProperty Clone (bool deepClone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildProperty Clone(bool deepClone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildProperty.Clone(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deepClone" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deepClone">
+          <see langword="true" />So erstellen eine tiefe Kopie der <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt eine Tiefe oder flache Kopie der <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />.</summary>
+        <returns>Eine Kopie von <see cref="T:Microsoft.Build.BuildEngine.BuildProperty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine flache Kopie von einer <xref:Microsoft.Build.BuildEngine.BuildProperty> verweist auf das gleiche XML-Element wie das Original. Änderungen am Namen oder Wert, der eine flache Kopie werden in beiden Kopien widergespiegelt werden. Je nach der Auswertung von Eigenschaftenwerten, die zwei Kopien konnte haben jedoch unterschiedliche <xref:Microsoft.Build.BuildEngine.BuildProperty.FinalValue%2A> Eigenschaftswerte.  
+  
+ Eine tiefe Kopie einer <xref:Microsoft.Build.BuildEngine.BuildProperty> erstellt ein neues XML-Element zu verweisen, sodass beide Kopien der <xref:Microsoft.Build.BuildEngine.BuildProperty> können unabhängig voneinander geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildProperty.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Bedingung</c> -Attribut der Wert der Eigenschaft.</summary>
+        <value>Ruft ab oder legt die <c>Bedingung</c> -Attribut der Wert der Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalValue">
+      <MemberSignature Language="C#" Value="public string FinalValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FinalValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildProperty.FinalValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den endgültigen Wert der Eigenschaft ab, nachdem alle Eigenschaft auswertungen durchgeführt wurden.</summary>
+        <value>Der endgültige Wert der Eigenschaft, nachdem alle Eigenschaft auswertungen durchgeführt wurden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImported">
+      <MemberSignature Language="C#" Value="public bool IsImported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildProperty.IsImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaft in das Projekt importiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft in das Projekt importiert wurde; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eigenschaftennamen ab.</summary>
+        <value>Der Eigenschaftenname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewProperty#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewProperty/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewProperty#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewProperty/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator string (Microsoft.Build.BuildEngine.BuildProperty propertyToCast);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname string op_Explicit(class Microsoft.Build.BuildEngine.BuildProperty propertyToCast) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildProperty.op_Explicit(Microsoft.Build.BuildEngine.BuildProperty)~System.String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyToCast" Type="Microsoft.Build.BuildEngine.BuildProperty" />
+      </Parameters>
+      <Docs>
+        <param name="propertyToCast">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildProperty.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge, die die Eigenschaft darstellt <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />.</summary>
+        <returns>Die Zeichenfolge, die die Eigenschaft darstellt <see cref="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eigenschaftenwert ab oder legt ihn fest.</summary>
+        <value>Der Eigenschaftswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewProperty#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewProperty/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewProperty#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewProperty/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

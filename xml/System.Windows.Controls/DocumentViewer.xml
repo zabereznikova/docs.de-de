@@ -1,0 +1,1941 @@
+<Type Name="DocumentViewer" FullName="System.Windows.Controls.DocumentViewer">
+  <TypeSignature Language="C#" Value="public class DocumentViewer : System.Windows.Controls.Primitives.DocumentViewerBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DocumentViewer extends System.Windows.Controls.Primitives.DocumentViewerBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DocumentViewer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.DocumentViewerBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_FindToolBarHost", Type=typeof(System.Windows.Controls.ContentControl))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ContentHost", Type=typeof(System.Windows.Controls.ScrollViewer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das hosten kann, die paginiert anzeigen Dokument <see cref="T:System.Windows.Documents.FixedDocument" /> Inhalt, z. B. ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="customizing-the-documentviewer-control"></a>Anpassen der DocumentViewer-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.DocumentViewer> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.DocumentViewer>, finden Sie unter [DocumentViewer-Stile und Vorlagen](~/docs/framework/wpf/controls/documentviewer-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.DocumentViewer> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DocumentViewer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DocumentViewer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDecreaseZoom">
+      <MemberSignature Language="C#" Value="public bool CanDecreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDecreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.CanDecreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.DocumentViewer" /> können weitere vergrößern.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement mehrere; verkleinert werden kann andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der minimale Wert ist 5 %.  Die <xref:System.Windows.Controls.DocumentViewer.CanDecreaseZoom%2A> Eigenschaft `false` Wenn die minimale Zoomstufe erreicht ist.  
+  
+<a name="dependencyPropertyInfo_CanDecreaseZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.CanDecreaseZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDecreaseZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanDecreaseZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanDecreaseZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.CanDecreaseZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.CanDecreaseZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanIncreaseZoom">
+      <MemberSignature Language="C#" Value="public bool CanIncreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanIncreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.CanIncreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.DocumentViewer" /> mehr vergrößern kann.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement mehr, vergrößern kann andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximalen Zoomwert ist 5000 %.  <xref:System.Windows.Controls.DocumentViewer.CanIncreaseZoom%2A>wird `false` Wenn die maximale Zoomstufe erreicht ist.  
+  
+<a name="dependencyPropertyInfo_CanIncreaseZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.CanIncreaseZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanIncreaseZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanIncreaseZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanIncreaseZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.CanIncreaseZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.CanIncreaseZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveDown">
+      <MemberSignature Language="C#" Value="public bool CanMoveDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanMoveDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.CanMoveDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.DocumentViewer" /> können nach unten im Dokument.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement weiter im Dokument nach unten verschoben werden kann; andernfalls <see langword="false" /> , wenn das Dokument im unteren Bereich ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CanMoveDown"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.CanMoveDownProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveDownProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanMoveDownProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanMoveDownProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.CanMoveDownProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.CanMoveDown" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveLeft">
+      <MemberSignature Language="C#" Value="public bool CanMoveLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanMoveLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.CanMoveLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.DocumentViewer" /> im Dokument mehrere links verschoben werden können.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement mehrere Links im Dokument verschoben werden kann; andernfalls <see langword="false" /> , wenn das Dokument am äußeren linken Rand ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CanMoveLeft"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.CanMoveLeftProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveLeftProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanMoveLeftProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanMoveLeftProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.CanMoveLeftProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.CanMoveLeft" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveRight">
+      <MemberSignature Language="C#" Value="public bool CanMoveRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanMoveRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.CanMoveRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.DocumentViewer" /> im Dokument weiter nach rechts verschoben werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement mehrere rechts im Dokument wechseln kann; andernfalls <see langword="false" /> Wenn das Dokument am äußersten rechten Rand wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CanMoveRight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.CanMoveRightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveRightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanMoveRightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanMoveRightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.CanMoveRightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.CanMoveRight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveUp">
+      <MemberSignature Language="C#" Value="public bool CanMoveUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanMoveUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.CanMoveUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.DocumentViewer" /> können nach oben im Dokument.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement oben im Dokument verschoben werden kann; andernfalls <see langword="false" /> , wenn das Dokument auf den obersten Rand ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CanMoveUp"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.CanMoveUpProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanMoveUpProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanMoveUpProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanMoveUpProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.CanMoveUpProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.CanMoveUp" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseZoom">
+      <MemberSignature Language="C#" Value="public void DecreaseZoom ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DecreaseZoom() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.DecreaseZoom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Zoom aus den Dokumentinhalt von Zoom einschrittigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es folgen die Ebene Zoom-Inkremente.  
+  
+ `5%   100%   1200%`  
+  
+ `10%   125%   1600%`  
+  
+ `25%   150%   2000%`  
+  
+ `33%   175%   2400%`  
+  
+ `50%   200%   3200%`  
+  
+ `66%   300%   4000%`  
+  
+ `75%   400%   5000%`  
+  
+ `800%`  
+  
+ Die minimale Zoomstufe ist 5 %.  Nachdem die minimale Zoomstufe erreicht wird, <xref:System.Windows.Controls.DocumentViewer.DecreaseZoom%2A> wirkt sich nicht mehr.  
+  
+ Die <xref:System.Windows.Controls.DocumentViewer.CanDecreaseZoom%2A> -Eigenschaft gibt `false` Wenn die minimale Zoomstufe erreicht ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeight">
+      <MemberSignature Language="C#" Value="public double ExtentHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.ExtentHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Gesamthöhe des paginierten Dokuments ab.</summary>
+        <value>Die vertikale Gesamthöhe des paginierten Inhalts, die in geräteunabhängigen Pixeln angegeben ist.  Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für den vertikalen Regelung <xref:System.Windows.Controls.DocumentViewer.ExtentHeight%2A> ist die Summe der alle Höhe der Seite und den Leerraum zwischen Seiten enthält.  
+  
+<a name="dependencyPropertyInfo_ExtentHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.ExtentHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ExtentHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ExtentHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.ExtentHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.ExtentHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidth">
+      <MemberSignature Language="C#" Value="public double ExtentWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.ExtentWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Gesamtbreite des paginierten Dokuments ab.</summary>
+        <value>Die aktuelle horizontale Breite des Bereichs für das Inhaltslayout, angegeben in geräteunabhängigen Pixeln.  Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für horizontalen Seite Regelung <xref:System.Windows.Controls.DocumentViewer.ExtentWidth%2A> ist die Summe der alle Seitenbreiten und den Leerraum zwischen Seiten enthält.  
+  
+<a name="dependencyPropertyInfo_ExtentWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.ExtentWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ExtentWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ExtentWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.ExtentWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.ExtentWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public void Find ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Find() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.Find" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verschiebt den Fokus auf die Symbolleiste suchen, um den Dokumentinhalt zu suchen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FitToHeight">
+      <MemberSignature Language="C#" Value="public void FitToHeight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FitToHeight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.FitToHeight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Passt eine einzelne Seite an die Höhe des aktuellen Viewports an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FitToHeightCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand FitToHeightCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand FitToHeightCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.FitToHeightCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.RoutedUICommand" /> ausführt, die die <see cref="M:System.Windows.Controls.DocumentViewer.FitToHeight" /> Vorgang.</summary>
+        <value>Der weitergeleitete Befehl, der führt die <see cref="M:System.Windows.Controls.DocumentViewer.FitToHeight" /> Vorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FitToMaxPagesAcross">
+      <MemberSignature Language="C#" Value="public void FitToMaxPagesAcross ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FitToMaxPagesAcross() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.FitToMaxPagesAcross" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Passt das Dokument mit dem aktuellen <see cref="P:System.Windows.Controls.DocumentViewer.MaxPagesAcross" /> Einstellung der Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FitToMaxPagesAcross">
+      <MemberSignature Language="C#" Value="public void FitToMaxPagesAcross (int pagesAcross);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FitToMaxPagesAcross(int32 pagesAcross) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.FitToMaxPagesAcross(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pagesAcross" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pagesAcross">Die maximale Anzahl der Seiten, die in der aktuellen <see cref="P:System.Windows.Controls.DocumentViewer.ExtentWidth" />.</param>
+        <summary>Passt das Dokument an eine angegebene Höchstanzahl von Seitenbreiten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FitToMaxPagesAcrossCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand FitToMaxPagesAcrossCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand FitToMaxPagesAcrossCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.FitToMaxPagesAcrossCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.RoutedUICommand" /> ausführt, die die <see cref="P:System.Windows.Controls.DocumentViewer.MaxPagesAcross" /> Vorgang.</summary>
+        <value>Der weitergeleitete Befehl, der führt die <see cref="P:System.Windows.Controls.DocumentViewer.MaxPagesAcross" /> Vorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FitToWidth">
+      <MemberSignature Language="C#" Value="public void FitToWidth ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FitToWidth() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.FitToWidth" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entspricht eine einzelne Seite mit der Breite des aktuellen Viewports an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FitToWidthCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand FitToWidthCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand FitToWidthCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.FitToWidthCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.RoutedUICommand" /> ausführt, die die <see cref="M:System.Windows.Controls.DocumentViewer.FitToWidth" /> Vorgang.</summary>
+        <value>Der weitergeleitete Befehl, der führt die <see cref="M:System.Windows.Controls.DocumentViewer.FitToWidth" /> Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DocumentViewer.FitToWidth%2A>Legt die <xref:System.Windows.Controls.DocumentViewer> -Steuerelement zum Anzeigen einer einzelnen Seitenbreite mit Seiten vergrößert die Breite des aktuellen Viewports.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageViewsCollection">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.Primitives.DocumentPageView&gt; GetPageViewsCollection (out bool changed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Controls.Primitives.DocumentPageView&gt; GetPageViewsCollection([out] bool&amp; changed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.GetPageViewsCollection(System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.Primitives.DocumentPageView&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changed" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="changed">Enthält bei Rückgabe dieser Methode <see langword="true" /> Wenn die Auflistung der <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> Elemente geändert werden, nach dem letzten Aufruf von <see cref="M:System.Windows.Controls.DocumentViewer.GetPageViewsCollection(System.Boolean@)" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Gibt eine Auflistung von <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> aktuell angezeigten Elemente.</summary>
+        <returns>Die Auflistung der <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> im aktuell angezeigten Elemente die <see cref="T:System.Windows.Controls.DocumentViewer" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Bildlaufposition ab oder legt sie fest.</summary>
+        <value>Die aktuelle horizontale Bildlaufposition in geräteunabhängigen Pixeln.  Der anfängliche Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Controls.DocumentViewer.HorizontalOffset%2A> bewirkt, dass die <xref:System.Windows.Controls.DocumentViewer> Steuerelement einen Bildlauf bis zum angegebenen horizontalen Offset.  
+  
+ Der horizontale Offset wird vom linken Rand des Inhaltsbereichs sichtbar gemessen.  
+  
+ Beim Festlegen dieser Eigenschaft [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], können keine Einheitenqualifizierer (z. B. `in` oder `cm`), die für viele andere "Width" oder "Horizontal" Eigenschaften aktiviert sind.  
+  
+<a name="dependencyPropertyInfo_HorizontalOffset"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.HorizontalOffsetProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zum Festlegen angegebene Wert ist negativ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.HorizontalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.HorizontalOffset" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalPageSpacing">
+      <MemberSignature Language="C#" Value="public double HorizontalPageSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalPageSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.HorizontalPageSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den horizontalen Leerraum zwischen Seiten ab oder legt ihn fest.</summary>
+        <value>Der horizontale Leerraum zwischen angezeigten Seiten in geräteunabhängigen Pixeln.  Der Standardwert ist 10,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Controls.DocumentViewer.HorizontalPageSpacing%2A> Eigenschaft passt den horizontalen Abstand zwischen den Seiten an.  
+  
+ Beim Festlegen dieser Eigenschaft [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], können keine Einheitenqualifizierer (z. B. `in` oder `cm`), die für viele andere "Width" oder "Horizontal" Eigenschaften aktiviert sind.  
+  
+<a name="dependencyPropertyInfo_HorizontalPageSpacing"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.HorizontalPageSpacingProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zum Festlegen angegebene Wert ist negativ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalPageSpacingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalPageSpacingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalPageSpacingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.HorizontalPageSpacingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.HorizontalPageSpacing" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseZoom">
+      <MemberSignature Language="C#" Value="public void IncreaseZoom ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IncreaseZoom() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.IncreaseZoom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Vergrößert den Dokumentinhalt von Zoom einschrittigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es folgen die Ebene Zoom-Inkremente.  
+  
+ `5%   100%   1200%`  
+  
+ `10%   125%   1600%`  
+  
+ `25%   150%   2000%`  
+  
+ `33%   175%   2400%`  
+  
+ `50%   200%   3200%`  
+  
+ `66%   300%   4000%`  
+  
+ `75%   400%   5000%`  
+  
+ `800%`  
+  
+ Die maximalen Zoomwert ist 5000 %.  Nachdem die maximale Zoomstufe erreicht wird, <xref:System.Windows.Controls.DocumentViewer.IncreaseZoom%2A> wirkt sich nicht mehr.  
+  
+ Die <xref:System.Windows.Controls.DocumentViewer.CanIncreaseZoom%2A> -Eigenschaft gibt `false` Wenn die maximale Zoomstufe erreicht ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPagesAcross">
+      <MemberSignature Language="C#" Value="public int MaxPagesAcross { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPagesAcross" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.MaxPagesAcross" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert definieren die maximale Anzahl von Spalten zum Anzeigen der Seite fest.</summary>
+        <value>Die maximale Anzahl der Spalten der Seite angezeigt werden.  Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DocumentViewer.MaxPagesAcross%2A>kann auf eine positive ganze Zahl von 1 bis 32 (einschließlich) festgelegt werden.  
+  
+<a name="dependencyPropertyInfo_MaxPagesAcross"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.MaxPagesAcrossProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPagesAcrossProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxPagesAcrossProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxPagesAcrossProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.MaxPagesAcrossProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.MaxPagesAcross" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDown">
+      <MemberSignature Language="C#" Value="public void MoveDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.MoveDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Dokumentinhalt um 16 geräteunabhängige Pixel nach unten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLeft">
+      <MemberSignature Language="C#" Value="public void MoveLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.MoveLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt durch das Dokument einen Bildlauf nach links um 16 geräteunabhängige Pixel aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveRight">
+      <MemberSignature Language="C#" Value="public void MoveRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.MoveRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt durch das Dokument einen Bildlauf nach rechts um 16 geräteunabhängige Pixel aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUp">
+      <MemberSignature Language="C#" Value="public void MoveUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.MoveUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt durch das Dokument einen Bildlauf nach oben um 16 geräteunabhängige Pixel aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBringIntoView">
+      <MemberSignature Language="C#" Value="protected override void OnBringIntoView (System.Windows.DependencyObject element, System.Windows.Rect rect, int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBringIntoView(class System.Windows.DependencyObject element, valuetype System.Windows.Rect rect, int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnBringIntoView(System.Windows.DependencyObject,System.Windows.Rect,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das sichtbar zu machende Objekt.</param>
+        <param name="rect">Der rechteckige Bereich, der die <c>Element</c> um sichtbar zu machen.</param>
+        <param name="pageNumber">Die Anzahl der Seiten angezeigt werden.</param>
+        <summary>Reagiert auf die <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnBringIntoView(System.Windows.DependencyObject,System.Windows.Rect,System.Int32)" /> Methode aus der <see cref="T:System.Windows.Controls.Primitives.DocumentViewerBase" /> Implementierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die grundlegende Implementierung wird die Gestaltungsvorlage auf der Seite verschoben, an dem das Element wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> dafür <see cref="T:System.Windows.Controls.DocumentViewer" /> Steuerelement.</summary>
+        <returns>Die neue <see cref="T:System.Windows.Automation.Peers.DocumentViewerAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDecreaseZoomCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnDecreaseZoomCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDecreaseZoomCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnDecreaseZoomCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.DecreaseZoom" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDocumentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDocumentChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDocumentChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnDocumentChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe, wenn das anzuzeigende Dokument geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DocumentViewer.OnDocumentChanged%2A>reagiert auf Aufrufe, wenn die <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A> Eigenschaft von der <xref:System.Windows.Controls.DocumentViewer> Steuerelement festgelegt ist, um ein neues Dokument anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFindCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFindCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFindCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnFindCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.Find" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFirstPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnFirstPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFirstPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnFirstPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.FirstPage" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFitToHeightCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFitToHeightCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFitToHeightCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnFitToHeightCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.FitToHeight" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFitToMaxPagesAcrossCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFitToMaxPagesAcrossCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFitToMaxPagesAcrossCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnFitToMaxPagesAcrossCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.FitToMaxPagesAcross" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFitToMaxPagesAcrossCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFitToMaxPagesAcrossCommand (int pagesAcross);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFitToMaxPagesAcrossCommand(int32 pagesAcross) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnFitToMaxPagesAcrossCommand(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pagesAcross" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pagesAcross">Die Anzahl der Seiten, die über den Inhaltsbereich passt.</param>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.FitToMaxPagesAcross(System.Int32)" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFitToWidthCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFitToWidthCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFitToWidthCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnFitToWidthCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.FitToWidth" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGoToPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnGoToPageCommand (int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGoToPageCommand(int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnGoToPageCommand(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">Die Seitenzahl zu positionieren.</param>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.GoToPage(System.Int32)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `pageNumber`ist eine positive (nicht Negative, nicht 0 (null)) Seitenzahl, die um eins (1) beginnt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIncreaseZoomCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnIncreaseZoomCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIncreaseZoomCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnIncreaseZoomCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.IncreaseZoom" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Reagiert auf <see cref="E:System.Windows.UIElement.KeyDown" /> Ereignisse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLastPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnLastPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLastPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnLastPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.LastPage" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Reagiert auf <see cref="E:System.Windows.UIElement.MouseLeftButtonDown" /> Ereignisse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMoveDownCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnMoveDownCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMoveDownCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnMoveDownCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.MoveDown" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMoveLeftCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnMoveLeftCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMoveLeftCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnMoveLeftCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.MoveLeft" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMoveRightCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnMoveRightCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMoveRightCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnMoveRightCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.MoveRight" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMoveUpCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnMoveUpCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMoveUpCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnMoveUpCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.MoveUp" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNextPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnNextPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnNextPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnNextPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.NextPage" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseWheel (System.Windows.Input.MouseWheelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseWheel(class System.Windows.Input.MouseWheelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Reagiert auf <see cref="E:System.Windows.UIElement.PreviewMouseWheel" /> Ereignisse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviousPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnPreviousPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviousPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnPreviousPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.PreviousPage" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScrollPageDownCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnScrollPageDownCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScrollPageDownCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnScrollPageDownCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.ScrollPageDown" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScrollPageLeftCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnScrollPageLeftCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScrollPageLeftCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnScrollPageLeftCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.ScrollPageLeft" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScrollPageRightCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnScrollPageRightCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScrollPageRightCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnScrollPageRightCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.ScrollPageRight" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScrollPageUpCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnScrollPageUpCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScrollPageUpCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnScrollPageUpCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.ScrollPageUp" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewThumbnailsCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnViewThumbnailsCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnViewThumbnailsCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.OnViewThumbnailsCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reagiert auf Aufrufe der <see cref="M:System.Windows.Controls.DocumentViewer.ViewThumbnails" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageDown">
+      <MemberSignature Language="C#" Value="public void ScrollPageDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollPageDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.ScrollPageDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Bildlauf nach unten einen Viewport.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageLeft">
+      <MemberSignature Language="C#" Value="public void ScrollPageLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollPageLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.ScrollPageLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Bildlauf nach links einen Viewport.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageRight">
+      <MemberSignature Language="C#" Value="public void ScrollPageRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollPageRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.ScrollPageRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Bildlauf nach rechts, einen Viewport.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageUp">
+      <MemberSignature Language="C#" Value="public void ScrollPageUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollPageUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.ScrollPageUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Einen Viewport einen Bildlauf nach oben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowPageBorders">
+      <MemberSignature Language="C#" Value="public bool ShowPageBorders { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowPageBorders" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.ShowPageBorders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Schlagschatten Seitenränder angezeigt werden.</summary>
+        <value>
+          <see langword="true" />Wenn Drop-Shadow-Rahmen angezeigt werden. andernfalls <see langword="false" />.  Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ShowPageBorders"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.ShowPageBordersProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowPageBordersProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowPageBordersProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowPageBordersProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.ShowPageBordersProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.ShowPageBorders" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Bildlaufposition ab oder legt sie fest.</summary>
+        <value>Der aktuelle Offset der vertikalen Bildlaufposition in geräteunabhängigen Pixeln.  Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DocumentViewer.VerticalOffset%2A>muss mit nicht negativer Offset-Werte festgelegt werden.  Festlegen eines negativen Werts löst eine <xref:System.ArgumentException> Ausnahme.  
+  
+ Der vertikale Offset wird vom Anfang des sichtbaren Inhaltsbereichs gemessen.  
+  
+ Beim Festlegen dieser Eigenschaft [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], können keine Einheitenqualifizierer (z. B. `in` oder `cm`), die für viele andere "Height" oder "Vertikal" Eigenschaften aktiviert sind.  
+  
+<a name="dependencyPropertyInfo_VerticalOffset"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.VerticalOffsetProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.VerticalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.VerticalOffset" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalPageSpacing">
+      <MemberSignature Language="C#" Value="public double VerticalPageSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalPageSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.VerticalPageSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vertikalen Abstand zwischen angezeigten Seiten ab oder legt diesen fest.</summary>
+        <value>Der vertikale Abstand zwischen angezeigten Seiten in geräteunabhängigen Pixeln.  Der Standardwert ist 10,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Controls.DocumentViewer.VerticalPageSpacing%2A> Eigenschaft passt den vertikalen Abstand zwischen den Seiten auf den angegebenen Wert.  
+  
+ Die <xref:System.Windows.Controls.DocumentViewer.VerticalPageSpacing%2A> Wert darf nicht negativ sein.  Durch Festlegen dieser Eigenschaft auf einen negativen Wert löst eine <xref:System.ArgumentException> Ausnahme.  
+  
+ Beim Festlegen dieser Eigenschaft [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], können keine Einheitenqualifizierer (z. B. `in` oder `cm`), die für viele andere "Height" oder "Vertikal" Eigenschaften aktiviert sind.  
+  
+<a name="dependencyPropertyInfo_VerticalPageSpacing"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.VerticalPageSpacingProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalPageSpacingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalPageSpacingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalPageSpacingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.VerticalPageSpacingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.VerticalPageSpacing" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeight">
+      <MemberSignature Language="C#" Value="public double ViewportHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.ViewportHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Größe des scrollbaren Inhaltsbereichs ab.</summary>
+        <value>Die vertikale Größe des scrollbaren Inhaltsbereichs in geräteunabhängigen Pixeln.  Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ViewportHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.ViewportHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.ViewportHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.ViewportHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidth">
+      <MemberSignature Language="C#" Value="public double ViewportWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.ViewportWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Größe des bildlauffähigen Inhaltsbereichs ab.</summary>
+        <value>Die horizontale Größe des bildlauffähigen Inhaltsbereichs in geräteunabhängigen Pixeln.  Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ViewportWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.ViewportWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.ViewportWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.ViewportWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewThumbnails">
+      <MemberSignature Language="C#" Value="public void ViewThumbnails ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ViewThumbnails() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DocumentViewer.ViewThumbnails" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt eine Miniaturansicht der Seiten an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewThumbnailsCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ViewThumbnailsCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ViewThumbnailsCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.ViewThumbnailsCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.RoutedUICommand" /> ausführt, die die <see cref="M:System.Windows.Controls.DocumentViewer.ViewThumbnails" /> Vorgang.</summary>
+        <value>Der weitergeleitete Befehl, der führt die <see cref="M:System.Windows.Controls.DocumentViewer.ViewThumbnails" /> Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DocumentViewer.ViewThumbnailsCommand%2A>die Größe und ordnet die Ansicht, um eine Vorschau der Miniaturansicht Rand jeder Seite anzuzeigen.  
+  
+ Die folgende Tabelle zeigt die Tastenkombination, die mit diesem Befehl verbunden.  
+  
+|||  
+|-|-|  
+|Tastenkombination|[keine]|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom">
+      <MemberSignature Language="C#" Value="public double Zoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Zoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DocumentViewer.Zoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zoomfaktor Dokument.</summary>
+        <value>Der Zoomfaktor, ausgedrückt als Wert 5.0 bis 5000,0.  Der Standardwert ist 100,0 100,0 % entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einstellung dieser Eigenschaft führt dazu, dass die <xref:System.Windows.Controls.DocumentViewer> Steuerelement mit dem angegebenen Wert zu vergrößern.  
+  
+ Die <xref:System.Windows.Controls.DocumentViewer.Zoom%2A> -Eigenschaft muss einen Wert zwischen 5.0 bis 5000,0 (inklusiv), der dem Prozentbereich 5.0-5000,0 entspricht % sein.  
+  
+ Aktionen oder Befehle, die eine layoutaktualisierung erfordern möglicherweise ändern, die <xref:System.Windows.Controls.DocumentViewer.Zoom%2A> Einstellung der Eigenschaft.  Z. B. Ändern des Werts der <xref:System.Windows.Controls.DocumentViewer.MaxPagesAcross%2A>wird beim Aufrufen der <xref:System.Windows.Controls.DocumentViewer.FitToHeight%2A> -Methode oder durch Aufrufen der <xref:System.Windows.Controls.DocumentViewer.FitToHeightCommand%2A> kann dazu führen, dass die <xref:System.Windows.Controls.DocumentViewer.Zoom%2A> Einstellung zu ändern.  
+  
+<a name="dependencyPropertyInfo_Zoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.DocumentViewer.ZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DocumentViewer.ZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DocumentViewer.Zoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,225 @@
+<Type Name="Export" FullName="System.ComponentModel.Composition.Primitives.Export">
+  <TypeSignature Language="C#" Value="public class Export" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Export extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.Export" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Export, also einen Typ, der besteht aus einer Verzögerung erstellten exportierten Objekt und die Metadaten, die dieses Objekt zu beschreiben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Export ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.Export.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Primitives.Export" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Typen, der Aufruf dieses Konstruktors müssen überschreiben die <xref:System.ComponentModel.Composition.Primitives.Export.Definition%2A> Eigenschaft und die <xref:System.ComponentModel.Composition.Primitives.Export.GetExportedValueCore%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Export (System.ComponentModel.Composition.Primitives.ExportDefinition definition, Func&lt;object&gt; exportedValueGetter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ExportDefinition definition, class System.Func`1&lt;object&gt; exportedValueGetter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.Export.#ctor(System.ComponentModel.Composition.Primitives.ExportDefinition,System.Func{System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ExportDefinition" />
+        <Parameter Name="exportedValueGetter" Type="System.Func&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="definition">Ein Objekt, das den Vertrag wird beschrieben, die die <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> -Objekt erfüllt.</param>
+        <param name="exportedValueGetter">Eine Methode, die aufgerufen wird, um das exportierte Objekt erstellen der <see cref="T:System.ComponentModel.Composition.Primitives.Export" />. Dadurch wird die Erstellung des Objekts bis verzögert die <see cref="P:System.ComponentModel.Composition.Primitives.Export.Value" /> Eigenschaft wird aufgerufen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Klasse mit dem angegebenen Exportdefinition und das exportierte Objekt Getter-Methode.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="exportedObjectGetter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Export (string contractName, Func&lt;object&gt; exportedValueGetter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName, class System.Func`1&lt;object&gt; exportedValueGetter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.Export.#ctor(System.String,System.Func{System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="exportedValueGetter" Type="System.Func&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der Name des Vertrags von dem <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekt.</param>
+        <param name="exportedValueGetter">Eine Methode, die aufgerufen wird, um das exportierte Objekt erstellen der <see cref="T:System.ComponentModel.Composition.Primitives.Export" />. Dadurch wird die Erstellung des Objekts bis verzögert die <see cref="P:System.ComponentModel.Composition.Primitives.Export.Value" /> -Methode aufgerufen wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> -Klasse mit den angegebenen Vertrag Namen- und exportierte wertgetter.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="exportedObjectGetter" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contractName" /> ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Export (string contractName, System.Collections.Generic.IDictionary&lt;string,object&gt; metadata, Func&lt;object&gt; exportedValueGetter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; metadata, class System.Func`1&lt;object&gt; exportedValueGetter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.Export.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Func{System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="exportedValueGetter" Type="System.Func&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der Name des Vertrags von dem <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekt.</param>
+        <param name="metadata">Die Metadaten der <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekt oder <see langword="null" /> festzulegende der <see cref="P:System.ComponentModel.Composition.Primitives.Export.Metadata" /> Eigenschaft, um eine leere, schreibgeschützte <see cref="T:System.Collections.Generic.IDictionary`2" /> Objekt.</param>
+        <param name="exportedValueGetter">Eine Methode, die aufgerufen wird, um das exportierte Objekt erstellen der <see cref="T:System.ComponentModel.Composition.Primitives.Export" />. Dadurch wird die Erstellung des Objekts bis verzögert die <see cref="P:System.ComponentModel.Composition.Primitives.Export.Value" /> -Methode aufgerufen wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Klasse mit dem angegebenen Vertragsnamen, Metadaten und exportierte wertgetter.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="exportedObjectGetter" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contractName" /> ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Definition">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Composition.Primitives.ExportDefinition Definition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ExportDefinition Definition" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.Export.Definition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ExportDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Definition für dienstdokumente den Vertrag, den der Export erfüllt.</summary>
+        <value>Eine Definition, die den Vertrag wird beschrieben, die die <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> -Objekt erfüllt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Außerkraftsetzungen für diese Eigenschaft sollte nie zurückgeben `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Diese Eigenschaft wurde nicht durch eine abgeleitete Klasse überschrieben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValueCore">
+      <MemberSignature Language="C#" Value="protected virtual object GetExportedValueCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetExportedValueCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.Export.GetExportedValueCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das exportierte Objekt, das den Export bereitstellt.</summary>
+        <returns>Das exportierte Objekt den Export enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Die <see cref="M:System.ComponentModel.Composition.Primitives.Export.GetExportedValueCore" /> Methode wurde nicht durch eine abgeleitete Klasse überschrieben.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Fehler bei der Komposition. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" />enthält eine Auflistung von Fehlern, die aufgetreten sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.Export.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Metadaten für den Export an.</summary>
+        <value>Die Metadaten der <see cref="T:System.ComponentModel.Composition.Primitives.Export" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Wert der <xref:System.ComponentModel.Composition.Primitives.ExportDefinition.Metadata%2A> von der <xref:System.ComponentModel.Composition.Primitives.Export.Definition%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die <see cref="P:System.ComponentModel.Composition.Primitives.Export.Definition" /> Eigenschaft nicht durch eine abgeleitete Klasse überschrieben wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.Export.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt das Objekt, das diesem Export darstellt.</summary>
+        <value>Das Objekt, das diesem Export darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

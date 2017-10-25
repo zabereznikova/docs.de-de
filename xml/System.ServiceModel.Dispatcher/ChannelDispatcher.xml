@@ -1,0 +1,1143 @@
+<Type Name="ChannelDispatcher" FullName="System.ServiceModel.Dispatcher.ChannelDispatcher">
+  <TypeSignature Language="C#" Value="public class ChannelDispatcher : System.ServiceModel.Dispatcher.ChannelDispatcherBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChannelDispatcher extends System.ServiceModel.Dispatcher.ChannelDispatcherBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.ChannelDispatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.ChannelDispatcherBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Komponente, die Kanäle akzeptiert und diese einem Dienst zuordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Objekt ordnet einen <xref:System.ServiceModel.Channels.IChannelListener> an einer bestimmten URI (als Abhör-URI bezeichnet) einer Instanz eines Dienstes zu. Jedes <xref:System.ServiceModel.ServiceHost>-Objekt kann über viele <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Objekte verfügen, die jeweils einem anderen Listener und einer anderen Abhör-URI für diesen Dienst zugeordnet sind.  
+  
+ Wenn eine Nachricht eingeht, fragt der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> jedes der zugeordneten <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekte ab, ob der Endpunkt die Nachricht akzeptieren kann, und leitet die Nachricht an den Endpunkt weiter, der dies kann. Das <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekt ist verantwortlich für das Verarbeiten von Nachrichten von einem <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>, wenn die Zieladresse einer Nachricht mit der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>-Eigenschaft übereinstimmt und die Nachrichtenaktion mit der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>-Eigenschaft übereinstimmt.  
+  
+ Alle Eigenschaften, die die Lebensdauer und das Verhalten einer Kanalsitzung steuern, sind zur Überprüfung oder Änderung im <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Objekt verfügbar. Zusätzlich zum <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> enthalten diese benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IChannelInitializer>-Objekte, den <xref:System.ServiceModel.Channels.IChannelListener>, den <xref:System.ServiceModel.ServiceHost> und den zugeordneten <xref:System.ServiceModel.InstanceContext>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/service.cs#0)]
+ [!code-vb[S_UE_ChannelDispatcher#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/service.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChannelDispatcher (System.ServiceModel.Channels.IChannelListener listener);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.IChannelListener listener) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.#ctor(System.ServiceModel.Channels.IChannelListener)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listener" Type="System.ServiceModel.Channels.IChannelListener" />
+      </Parameters>
+      <Docs>
+        <param name="listener">Der <see cref="T:System.ServiceModel.Channels.IChannelListener" /> für den Kanalverteiler.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.ChannelDispatcher" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert eine neue Instanz der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Klasse vom bereitgestellten Listener mit durch das System bereitgestellten Standardtimeouts.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#1)]
+ [!code-vb[S_UE_ChannelDispatcher#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="listener" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChannelDispatcher (System.ServiceModel.Channels.IChannelListener listener, string bindingName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.IChannelListener listener, string bindingName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.#ctor(System.ServiceModel.Channels.IChannelListener,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listener" Type="System.ServiceModel.Channels.IChannelListener" />
+        <Parameter Name="bindingName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="listener">Der <see cref="T:System.ServiceModel.Channels.IChannelListener" /> für den Kanalverteiler.</param>
+        <param name="bindingName">Der Name der Bindung, die zur Konfiguration des Diensts verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.ChannelDispatcher" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert eine neue Instanz der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Klasse vom bereitgestellten Listener und der bereitgestellten Bindung mit durch das System bereitgestellten Standardtimeouts.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#2)]
+ [!code-vb[S_UE_ChannelDispatcher#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="listener" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChannelDispatcher (System.ServiceModel.Channels.IChannelListener listener, string bindingName, System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.IChannelListener listener, string bindingName, class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.#ctor(System.ServiceModel.Channels.IChannelListener,System.String,System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listener" Type="System.ServiceModel.Channels.IChannelListener" />
+        <Parameter Name="bindingName" Type="System.String" />
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="listener">Der <see cref="T:System.ServiceModel.Channels.IChannelListener" /> für den Dienst.</param>
+        <param name="bindingName">Der Name der Bindung, die zur Konfiguration des Diensts verwendet wird.</param>
+        <param name="timeouts">Der <see cref="T:System.ServiceModel.IDefaultCommunicationTimeouts" /> für den Dienst.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.ChannelDispatcher" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert eine neue Instanz der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Klasse vom bereitgestellten Listener und der bereitgestellten Bindung mit den angegebenen Standardtimeouts.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#3)]
+ [!code-vb[S_UE_ChannelDispatcher#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="listener" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AsynchronousTransactedAcceptEnabled">
+      <MemberSignature Language="C#" Value="public bool AsynchronousTransactedAcceptEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AsynchronousTransactedAcceptEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.AsynchronousTransactedAcceptEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die transaktive akzeptieren-Methodenaufrufe Listeners sich asynchron Verhalten.</summary>
+        <value>
+          <see langword="true" />Wenn die transaktive annehmen, dass Methodenaufrufe Listener sind asynchron; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="protected override void Attach (System.ServiceModel.ServiceHostBase host);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Attach(class System.ServiceModel.ServiceHostBase host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.Attach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="host">Der <see cref="T:System.ServiceModel.ServiceHostBase" /> für den Dienst.</param>
+        <summary>Fügt den Kanalverteiler an den Host an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingName">
+      <MemberSignature Language="C#" Value="public string BindingName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BindingName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.BindingName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Bindung ab, die zur Konfiguration des Diensts verwendet wird.</summary>
+        <value>Der Bindungsname des Diensts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird verwendet, um den Bindungsnamen für die Bindung zu ermitteln, der dieser Kanalverteiler zugeordnet wird.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#4)]
+ [!code-vb[S_UE_ChannelDispatcher#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelInitializers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IChannelInitializer&gt; ChannelInitializers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.IChannelInitializer&gt; ChannelInitializers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IChannelInitializer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Satz von <see cref="T:System.ServiceModel.Dispatcher.IChannelInitializer" />-Objekten ab, die Sie verwenden können, um den Zustand des Kanals bei der ersten Erstellung zu überprüfen und hinzuzufügen.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.SynchronizedCollection`1" /> von Objekten des Typs <see cref="T:System.ServiceModel.Dispatcher.IChannelInitializer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um einen benutzerdefinierten Kanalinitialisierer in die Initialisierungsauflistung einzufügen, mit dem der Kanalzustand beim Erstellen überprüft oder geändert wird. Dies ist auch nützlich, um dasselbe Verhalten für ausgehende Kanäle auszuführen, wenn der einem Verteiler zugeordnete Vertrag ein Duplexvertrag ist.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#5)]
+ [!code-vb[S_UE_ChannelDispatcher#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseInput">
+      <MemberSignature Language="C#" Value="public override void CloseInput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CloseInput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.CloseInput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hindert den Listener daran, neue Kanäle zu akzeptieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Aufrufen dieser Methode bewirkt, dass der Listener die Überwachung beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCloseTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultCloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultCloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.DefaultCloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall für das Schließen des Kanalverteilers ab.</summary>
+        <value>Die <see cref="T:System.TimeSpan" />, die das Standardzeitintervall für das Schließen des Kanalverteilers angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser standardmäßige Timeoutwert für das Schließen kann mit <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.%23ctor%28System.ServiceModel.Channels.IChannelListener%2CSystem.String%2CSystem.ServiceModel.IDefaultCommunicationTimeouts%29> festgelegt werden. Andernfalls wird ein Standardwert des Dienstmodells von 1&#160;Minute verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOpenTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultOpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.DefaultOpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für das Öffnen des Kanalverteilers zulässig ist.</summary>
+        <value>Die <see cref="T:System.TimeSpan" />, die das Standardzeitintervall für das Schließen des Kanalverteilers angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser standardmäßige Timeoutwert für das Öffnen kann mit <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.%23ctor%28System.ServiceModel.Channels.IChannelListener%2CSystem.String%2CSystem.ServiceModel.IDefaultCommunicationTimeouts%29> festgelegt werden. Andernfalls wird ein Standardwert des Dienstmodells von 1&#160;Minute verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detach">
+      <MemberSignature Language="C#" Value="protected override void Detach (System.ServiceModel.ServiceHostBase host);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Detach(class System.ServiceModel.ServiceHostBase host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.Detach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="host">Der <see cref="T:System.ServiceModel.ServiceHostBase" /> für den Dienst.</param>
+        <summary>Trennt den Diensthost vom Kanalverteiler.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.ServiceHostBase> kann nur getrennt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+ Legt für die dem Kanalverteiler zugeordnete <xref:System.ServiceModel.ServiceHostBase> den Wert `null` fest.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#18](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#18)]
+ [!code-vb[S_UE_ChannelDispatcher#18](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="host" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoints">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.EndpointDispatcher&gt; Endpoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.EndpointDispatcher&gt; Endpoints" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.Endpoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.EndpointDispatcher&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endpunktverteiler ab, die Nachrichten an die Kanalendpunkte weiterleiten.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.SynchronizedCollection`1" /> von <see cref="T:System.ServiceModel.Dispatcher.EndpointDispatcher" />, die Nachrichten an die Kanalendpunkte weiterleiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> hat einen unterschiedlichen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> für jeden Endpunkt, den der Kanal unterstützen kann.  
+  
+ Verwenden Sie den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>, um Zugriff auf die Laufzeiteigenschaften zu erhalten, die es Ihnen ermöglichen, die Laufzeit über einen ganzen Endpunkt hinweg anzupassen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#6)]
+ [!code-vb[S_UE_ChannelDispatcher#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorHandlers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.IErrorHandler&gt; ErrorHandlers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Dispatcher.IErrorHandler&gt; ErrorHandlers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.IErrorHandler&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Satz von <see cref="T:System.ServiceModel.Dispatcher.IErrorHandler" />-Objekten ab, die verwendet werden können, um benutzerdefinierte Fehlerverarbeitungsfunktionen für einen Endpunkt einzufügen.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.SynchronizedCollection`1" /> von <see cref="T:System.ServiceModel.Dispatcher.IErrorHandler" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#7)]
+ [!code-vb[S_UE_ChannelDispatcher#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.ServiceHostBase Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ServiceHostBase Host" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHostBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Host für den Dienst ab, der dem Verteiler zugeordnet ist.</summary>
+        <value><see cref="T:System.ServiceModel.ServiceHostBase" /> für den dem Verteiler zugeordneten Dienst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes <xref:System.ServiceModel.ServiceHost>-Objekt kann über viele <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Objekte verfügen, die jeweils einem anderen <xref:System.ServiceModel.Channels.IChannelListener> für diesen Dienst zugeordnet sind.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#8)]
+ [!code-vb[S_UE_ChannelDispatcher#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeExceptionDetailInFaults">
+      <MemberSignature Language="C#" Value="public bool IncludeExceptionDetailInFaults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeExceptionDetailInFaults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.IncludeExceptionDetailInFaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Einzelheiten zu einer Ausnahme in einen Fehler aufgenommen werden, bzw. ruft diesen Wert ab.</summary>
+        <value>
+          <see langword="true" />, wenn Einzelheiten zu einer Ausnahme in die Fehler aufgenommen werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#19](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#19)]
+ [!code-vb[S_UE_ChannelDispatcher#19](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransactedAccept">
+      <MemberSignature Language="C#" Value="public bool IsTransactedAccept { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTransactedAccept" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.IsTransactedAccept" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Accept-Methodenaufrufe des Listeners im Rahmen einer Transaktion erfolgen.</summary>
+        <value>
+          <see langword="true" />, wenn die Accept-Methodenaufrufe des Listeners im Rahmen einer Transaktion erfolgen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#9)]
+ [!code-vb[S_UE_ChannelDispatcher#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransactedReceive">
+      <MemberSignature Language="C#" Value="public bool IsTransactedReceive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTransactedReceive" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.IsTransactedReceive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Receive-Methodenaufrufe des Listeners im Rahmen einer Transaktion erfolgen.</summary>
+        <value>
+          <see langword="true" />, wenn die Receive-Methodenaufrufe des Listeners im Rahmen einer Transaktion erfolgen, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.IsTransactedReceive%2A>-Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#10)]
+ [!code-vb[S_UE_ChannelDispatcher#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Listener">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener Listener { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.IChannelListener Listener" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.Listener" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Listener ab, der dem Kanalverteiler zugeordnet ist.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Channels.IChannelListener" />, der dem Kanalverteiler zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ordnet einen <xref:System.ServiceModel.Channels.IChannelListener> bei einer bestimmten URI einer Instanz eines Diensts zu.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#11)]
+ [!code-vb[S_UE_ChannelDispatcher#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManualAddressing">
+      <MemberSignature Language="C#" Value="public bool ManualAddressing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ManualAddressing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.ManualAddressing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der angibt, ob der Kanalverteiler Adressierungsheader zu Anforderungs-Antwort-Nachrichten hinzufügt.</summary>
+        <value>
+          <see langword="true" />, wenn der Proxy keine Adressierungsheader hinzufügt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+ Legen Sie für die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A>-Eigenschaft den Wert `true` fest, wenn Sie verhindern möchten, dass der Client Nachrichten-ID und Antwortadressierungsheader zu Anforderung-Antwort-Nachrichten hinzufügt, damit Ihre Anwendung diese Header steuern kann.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#12)]
+ [!code-vb[S_UE_ChannelDispatcher#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingReceives">
+      <MemberSignature Language="C#" Value="public int MaxPendingReceives { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingReceives" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.MaxPendingReceives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximalen ausstehenden Nachrichten ab oder legt sie pro Kanal fest.</summary>
+        <value>Eine ganze Zahl, die eine maximale Anzahl von Nachrichten darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTransactedBatchSize">
+      <MemberSignature Language="C#" Value="public int MaxTransactedBatchSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTransactedBatchSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.MaxTransactedBatchSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Größe für einen transaktiven Batch ab oder legt diese fest.</summary>
+        <value>Die maximale Größe für einen transaktiven Batch.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.MaxTransactedBatchSize%2A>-Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#13)]
+ [!code-vb[S_UE_ChannelDispatcher#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageVersion MessageVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionen der SOAP-Nachricht und WS-Addressing ab, die verwendet oder erwartet werden, bzw. legt diese fest.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.MessageVersion" />, die verwendet oder erwartet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die SOAP-Version und die Version von WS-Adressierung an, die einer Nachricht und ihrem Austausch zugeordnet sind.  
+  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#20](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#20)]
+ [!code-vb[S_UE_ChannelDispatcher#20](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbort">
+      <MemberSignature Language="C#" Value="protected override void OnAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht den dem Verteiler zugeordneten Listener ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginClose">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Schließen bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Schließvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Objekt, das dem asynchronen Schließvorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um einen Kanallistener für den Verteiler zu schließen, der innerhalb eines bestimmten Zeitraums abgeschlossen sein muss.</summary>
+        <returns>Das <see cref="T:System.IAsyncResult" />, das auf den asynchronen Vorgang zum Schließen eines Kanallisteners für den Verteiler verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOpen">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginOpen (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginOpen(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnBeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für das Öffnen bleibt, bevor ein Timeout auftritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Öffnungsvorgangs empfängt.</param>
+        <param name="state">Ein durch die Anwendung festgelegtes Objekt, das dem asynchronen Öffnungsvorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um einen Kanallistener für den Verteiler zu öffnen, der innerhalb eines bestimmten Zeitraums abgeschlossen sein muss.</summary>
+        <returns>Das <see cref="T:System.IAsyncResult" />, das auf den asynchronen Vorgang zum Öffnen eines Kanallisteners für den Verteiler verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dem Kanalverteiler muss ein Diensthost zugeordnet sein, der nicht `null` ist, wenn diese Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Host oder die Nachrichtenversion ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected override void OnClose (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClose(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnClose(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die den Zeitraum angibt, der für das Schließen des Listeners zulässig ist.</param>
+        <summary>Schließt den dem Verteiler zugeordneten Kanallistener innerhalb eines angegebenen Zeitraums.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnClosed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Ablaufverfolgung des Schließvorgangs des Endpunktverteilers bereit, der dem Kanalverteiler zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndClose">
+      <MemberSignature Language="C#" Value="protected override void OnEndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnEndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Vorgang zum Schließen eines Kanallisteners für den Verteiler ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOpen">
+      <MemberSignature Language="C#" Value="protected override void OnEndOpen (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndOpen(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnEndOpen(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnBeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Vorgang zum Öffnen eines Kanallisteners für den Verteiler ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpen">
+      <MemberSignature Language="C#" Value="protected override void OnOpen (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpen(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die den Zeitraum angibt, der für das Öffnen des Listeners zulässig ist.</param>
+        <summary>Öffnet den Listener, der dem Kanalverteiler zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dem Kanalverteiler muss ein Diensthost zugeordnet sein, der nicht `null` ist, wenn diese Methode aufgerufen wird, und für die Nachrichtenversion muss ein Wert festgelegt sein, der nicht `null` ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Host oder die Nachrichtenversion ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpened">
+      <MemberSignature Language="C#" Value="protected override void OnOpened ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpened() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpened" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Füllt die Filtertabelle auf und validiert diese, die zur Weiterleitung an die Endpunkte verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dem Kanalverteiler muss ein Diensthost zugeordnet sein, der nicht `null` ist, wenn diese Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Host ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpening">
+      <MemberSignature Language="C#" Value="protected override void OnOpening ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpening() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpening" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob der Kanalverteiler an einen Host angefügt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dem Kanalverteiler muss beim Öffnen ein Diensthost zugeordnet sein, der nicht `null` ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Host ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveContextEnabled">
+      <MemberSignature Language="C#" Value="public bool ReceiveContextEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveContextEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.ReceiveContextEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ReceiveContext aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn ReceiveContext aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der ReceiveContext steuert die Art und Weise, wie Nachrichten vom Dienst behandelt werden, z. B. dass Nachrichten solange wie nötig gesperrt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveSynchronously">
+      <MemberSignature Language="C#" Value="public bool ReceiveSynchronously { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.ReceiveSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der angibt, ob der Verteiler synchrone Aufrufe verwendet, um Nachrichten aus Kanälen zu lesen.</summary>
+        <value>
+          <see langword="true" />, wenn der Verteiler synchrone Methoden verwendet, um Nachrichten von Kanälen zu lesen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Bindung <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> implementiert, weist [!INCLUDE[indigo1](~/includes/indigo1-md.md)] dieser Eigenschaft den Wert der <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A>-Eigenschaft zu. Wenn dieser Wert `true` ist, wird daher der `false`-Standardwert von <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A> überschrieben.  
+  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#14](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#14)]
+ [!code-vb[S_UE_ChannelDispatcher#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsynchronously">
+      <MemberSignature Language="C#" Value="public bool SendAsynchronously { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SendAsynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.SendAsynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob Nachrichten asynchron gesendet werden.</summary>
+        <value>
+          <see langword="true" />Wenn Nachrichten asynchron gesendet werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceThrottle">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.ServiceThrottle ServiceThrottle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.ServiceThrottle ServiceThrottle" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.ServiceThrottle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.ServiceThrottle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dienstdrosselung für den Dienst ab, der dem Kanalverteiler zugeordnet ist, bzw. legt sie fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Dispatcher.ServiceThrottle" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies stellt einen Zugriff auf die Steuerelemente bereit, die verwendet werden, um die Verfügbarkeit und die Leistung eines Diensts zu optimieren.  
+  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#15](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#15)]
+ [!code-vb[S_UE_ChannelDispatcher#15](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionIsolationLevel">
+      <MemberSignature Language="C#" Value="public System.Transactions.IsolationLevel TransactionIsolationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Transactions.IsolationLevel TransactionIsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.TransactionIsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardisolationsstufe für Transaktionen ab bzw. legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.Transactions.IsolationLevel" />-Werte. Die Standardeinstellung ist <see cref="F:System.Transactions.IsolationLevel.Unspecified" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.TransactionIsolationLevel%2A>-Eigenschaft, um die Standardisolierungsstufe für neue Transaktionen abzurufen bzw. festzulegen, die der Verteiler für den Dienst erstellt.  
+  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#16](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#16)]
+ [!code-vb[S_UE_ChannelDispatcher#16](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Isolationsstufensatz ist nicht definiert.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan TransactionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TransactionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ChannelDispatcher.TransactionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das Standardtimeout für neue Transaktionen angibt, die der Verteiler für den Dienst erstellt, bzw. legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Wert, der das Standardtimeout für Transaktionen darstellt. Die Standardeinstellung ist <see cref="F:System.TimeSpan.Zero" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur festgelegt werden, wenn die Instanz von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> den <xref:System.ServiceModel.CommunicationState.Created>-Zustand aufweist, da dies der einzige Zustand ist, der veränderbar ist und nicht verworfen wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChannelDispatcher#17](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_channeldispatcher/cs/snippets.cs#17)]
+ [!code-vb[S_UE_ChannelDispatcher#17](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_channeldispatcher/vb/snippets.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist kleiner als 0 (null) oder zu groß.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Opening" />-Zustand oder in einem <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

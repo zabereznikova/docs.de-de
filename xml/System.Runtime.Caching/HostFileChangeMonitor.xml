@@ -1,0 +1,200 @@
+<Type Name="HostFileChangeMonitor" FullName="System.Runtime.Caching.HostFileChangeMonitor">
+  <TypeSignature Language="C#" Value="public sealed class HostFileChangeMonitor : System.Runtime.Caching.FileChangeMonitor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HostFileChangeMonitor extends System.Runtime.Caching.FileChangeMonitor" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.HostFileChangeMonitor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Caching.FileChangeMonitor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Überwacht, Verzeichnisse und Dateipfade und benachrichtigt den Cache von Änderungen an den überwachten Elementen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse ist eine konkrete Implementierung der <xref:System.Runtime.Caching.FileChangeMonitor> Typ. Diese Klasse ist versiegelt, daher kann nicht erweitert werden. Diese Klasse ist hilfreich, wenn Sie, verwenden Sie eine vorhandene Cacheimplementierung und Überwachen von Dateien und Verzeichnissen für Änderungen möchten.  
+  
+ Für jede angegebene Datei bzw. einen Verzeichnispfad aufweist die <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse wird eine änderungsbenachrichtigung ausgelöst, wenn eine der folgenden Änderungen auftreten:  
+  
+-   Der Name der überwachten Datei oder Verzeichnis geändert wird.  
+  
+-   Die angegebene Datei oder das Verzeichnis nicht zu dem Zeitpunkt vorhanden, der Monitor wurde erstellt, aber später erstellt wurde. Das heißt, wurde eine Datei oder ein Verzeichnis im Bereich der überwachten Elemente erstellt.  
+  
+-   Die Größe einer überwachten Datei geändert.  
+  
+-   Der Inhalt einer überwachten Datei, die bzw. den Inhalt eines Verzeichnisses überwachten geändert.  
+  
+-   Die Zugriffssteuerungsliste (ACL) der Datei oder Verzeichnis wurde geändert.  
+  
+-   Die überwachten Datei oder das Verzeichnis wurde gelöscht.  
+  
+ Wenn zu viele Änderungen für die überwachten Datei oder das Verzeichnis zur gleichen Zeit auftreten der <xref:System.Runtime.Caching.HostFileChangeMonitor> Instanz Nachverfolgen von bestimmten Änderungen verloren gehen kann. In diesem Szenario die <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse löst eine änderungsbenachrichtigung. Dieses Szenario ist wahrscheinlicher auftreten, wenn die <xref:System.Runtime.Caching.HostFileChangeMonitor> Instanz überwacht, ein Verzeichnis und viele Änderungen, die im Rahmen der Verzeichnisstruktur innerhalb kurzer Zeit auftreten.  
+  
+ Da der Zweck der <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse ist nur für die darauf hinweisen, dass etwas im Satz der überwachten Dateien und Verzeichnissen geändert hat, ist nicht wichtig, dass die Details zu einer bestimmten Änderung nicht erfasst werden berücksichtigt. Der Zweck der <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse ist, geben Sie eine ereignisbenachrichtigung, der Status geändert, sodass ein Cacheeintrag (oder Einträge) entfernt werden können. Da die <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse gibt keine was genau geändert hat, Überlauf des internen änderungsnachverfolgung ist irrelevant.  
+  
+ Wenn Sie Pfade zum Angeben einer <xref:System.Runtime.Caching.HostFileChangeMonitor> -Instanz, die Verzeichnis- und Dateinamen Pfade muss die vollständige Pfade zu dem Verzeichnis oder Datei. Relative Pfade und Platzhalterzeichen in Pfaden sind nicht zulässig.  
+  
+ Wenn die <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse in einer ASP.NET-Anwendung verwendet wird, die Windows-Identität, die für den Zugriff auf überwachte Elemente verwendet wird, wird die Identität für die ASP.NET-Anwendung. Die Anwendungsidentität wird also eine der folgenden sein:  
+  
+-   Die Prozessidentität.  
+  
+-   Die konfigurierte Identität.  
+  
+-   Die UNC-Anmeldeinformationen, wenn die Anwendung von einem UNC-Freigabe ausgeführt wird.  
+  
+ Wenn die <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse wird in einer Anwendung nicht von ASP.NET verwendet die <xref:System.IO.FileSystemWatcher> Klasse wird intern verwendet, um Dateien zu überwachen. Daher wird gilt die Zugriffssteuerungsliste (ACL) auf einem überwachten Datei oder dasselbe Verzeichnis für die Windows-Identität des aktuellen Threads angewendet.  
+  
+> [!NOTE]
+>  Aufrufer müssen die erforderlichen von Codezugriffsberechtigungen (CAS) und müssen die NTFS-Berechtigungen für alle überwachten Verzeichnissen und Pfaden haben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Cacheelement, das verwendet ein <xref:System.Runtime.Caching.HostFileChangeMonitor> Objekt, das den Zustand der Quelldaten (Dies ist eine Datei) im Dateisystem zu überwachen. Mithilfe der Cacheeintrag definiert eine <xref:System.Runtime.Caching.CacheItemPolicy> entfernungs- und Ablaufrichtlinien Details für den Cacheeintrag zu verwendendes Objekt.  
+  
+ [!code-csharp[CachingASPNetApplications#1](~/samples/snippets/csharp/VS_Snippets_WebNet/cachingaspnetapplications/cs/default.aspx.cs#1)]
+ [!code-vb[CachingASPNetApplications#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/cachingaspnetapplications/vb/default.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostFileChangeMonitor (System.Collections.Generic.IList&lt;string&gt; filePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;string&gt; filePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.HostFileChangeMonitor.#ctor(System.Collections.Generic.IList{System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filePaths" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="filePaths">Eine Liste mit Verzeichnispfaden oder Dateipfade zu überwachen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Caching.HostFileChangeMonitor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufe von der <xref:System.Runtime.Caching.HostFileChangeMonitor.%23ctor%2A> Konstruktor muss Geben Sie einen Wert ungleich Null für den `filePaths` Parameter. Der Konstruktor überprüft zumindest die Auflistung der Pfade, die übergeben werden, und klicken Sie dann die Überwachung für diese Pfade initialisiert.  
+  
+> [!NOTE]
+>  Der Konstruktor führt nur eine Zeichenfolge Validierung des Pfadnamens. Umwandeln von Pfaden oder nicht überprüfen, dass die Pfade vorhanden sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filePaths" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filePaths" />enthält NULL Elemente.  
+  
+ - oder -   
+  
+ Ein Pfad in der <paramref name="filePaths" /> Liste <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.HostFileChangeMonitor.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePaths">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; FilePaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; FilePaths" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.HostFileChangeMonitor.FilePaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Verzeichnisse und Dateipfade, die übergeben wurde, die <see cref="M:System.Runtime.Caching.HostFileChangeMonitor.#ctor(System.Collections.Generic.IList{System.String})" /> Konstruktor.</summary>
+        <value>Eine Auflistung von Verzeichnissen und Dateipfade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastModified">
+      <MemberSignature Language="C#" Value="public override DateTimeOffset LastModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset LastModified" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.HostFileChangeMonitor.LastModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen nur-Lese Wert, der Zeitpunkt des letzten Schreibzugriffs für eine überwachte Datei oder Pfad angibt.</summary>
+        <value>Der letzten Schreibzugriffs für eine überwachte Datei oder Pfad.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Datei änderungsüberwachung mehrere Dateien oder Pfade überwacht wird, gibt diese Eigenschaft den Zeitpunkt des letzten Schreibzugriffs im Satz aller Dateien und Pfade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueId">
+      <MemberSignature Language="C#" Value="public override string UniqueId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UniqueId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.HostFileChangeMonitor.UniqueId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner für die <see cref="T:System.Runtime.Caching.HostFileChangeMonitor" /> -Instanz, die auf den Satz von überwachten-Verzeichnis- und Dateipfaden basiert.</summary>
+        <value>Ein Bezeichner für den Monitor ändern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge, die bildet die <xref:System.Runtime.Caching.HostFileChangeMonitor.UniqueId%2A> Eigenschaftswert aus den folgenden Teilen erstellt wird:  
+  
+-   Eine Datei- oder Verzeichnispfad.  
+  
+-   Den Zeitpunkt des letzten Schreibzugriffs im UTC-Zeit, gemessen als Teilstriche, aber als hexadezimale Zeichenfolge dargestellt.  
+  
+-   Die Dateigröße, dargestellt als hexadezimale Zeichenfolge.  
+  
+ Wenn eine Datei änderungsüberwachung mehrere Pfade überwacht wird, wird von dieser Eigenschaft zurückgegebene Informationen zu einer einzelnen Zeichenfolge für alle überwachten Verzeichnisse und Dateipfade verkettet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,200 @@
+<Type Name="EventLogWatcher" FullName="System.Diagnostics.Eventing.Reader.EventLogWatcher">
+  <TypeSignature Language="C#" Value="public class EventLogWatcher : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogWatcher extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Können Sie eingehende Ereignisse zu abonnieren. Jedes Mal ein gewünschte Ereignis in ein Ereignisprotokoll veröffentlicht wird die <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> Ereignis wird ausgelöst, und die Methode für die Behandlung dieses Ereignisses wird ausgeführt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Instanzen dieser Klasse werden erstellt, von <xref:System.Diagnostics.Eventing.Reader.EventLogQuery> Objekte, die eine Abfrage für das Ereignisabonnement angeben. Wenn ein Ereignis protokolliert wird, die die Kriterien in der Abfrage entspricht der <xref:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten> Ereignis wird ausgelöst.  
+  
+   
+  
+## Examples  
+ Z. B. Code mit dieser Klasse finden Sie unter [wie: Abonnieren von Ereignissen im Ereignisprotokoll](http://msdn.microsoft.com/en-us/62e006d3-9fab-4fdf-a8f8-e23d05498cd4).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">Gibt eine Abfrage für das Ereignisabonnement. Wenn ein Ereignis protokolliert wird, die die Kriterien in der Abfrage entspricht der <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> Ereignis wird ausgelöst.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> -Klasse unter Angabe einer Ereignisabfrage.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad oder der Name des Monitors Ereignisprotokoll nach Ereignissen. Wenn in diesem Ereignisprotokoll ein Ereignis protokolliert wird und dann die <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> Ereignis wird ausgelöst.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> -Klasse durch Angabe der Name oder Pfad auf ein Ereignisprotokoll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, System.Diagnostics.Eventing.Reader.EventBookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, class System.Diagnostics.Eventing.Reader.EventBookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery,System.Diagnostics.Eventing.Reader.EventBookmark)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+        <Parameter Name="bookmark" Type="System.Diagnostics.Eventing.Reader.EventBookmark" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">Gibt eine Abfrage für das Ereignisabonnement. Wenn ein Ereignis protokolliert wird, die die Kriterien in der Abfrage entspricht der <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> Ereignis wird ausgelöst.</param>
+        <param name="bookmark">Das Lesezeichen (Platzhalter) als Startposition in das Ereignisprotokoll oder einen Datenstrom von Ereignissen verwendet. Nur Ereignisse, die protokolliert wurden, nachdem das Lesezeichenereignis von der Abfrage zurückgegeben werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> -Klasse unter Angabe einer Ereignisabfrage und ein Lesezeichen, das als Anfangsposition für die Abfrage verwendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, System.Diagnostics.Eventing.Reader.EventBookmark bookmark, bool readExistingEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, class System.Diagnostics.Eventing.Reader.EventBookmark bookmark, bool readExistingEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery,System.Diagnostics.Eventing.Reader.EventBookmark,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+        <Parameter Name="bookmark" Type="System.Diagnostics.Eventing.Reader.EventBookmark" />
+        <Parameter Name="readExistingEvents" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">Gibt eine Abfrage für das Ereignisabonnement. Wenn ein Ereignis protokolliert wird, die die Kriterien in der Abfrage entspricht der <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> Ereignis wird ausgelöst.</param>
+        <param name="bookmark">Das Lesezeichen (Platzhalter) als Startposition in das Ereignisprotokoll oder einen Datenstrom von Ereignissen verwendet. Nur Ereignisse, die protokolliert wurden, nachdem das Lesezeichenereignis von der Abfrage zurückgegeben werden.</param>
+        <param name="readExistingEvents">Ein boolescher Wert, der bestimmt, ob die Ereignisse gelesen werden sollen, die bereits in das Ereignisprotokoll vorhanden sind. Wenn dieser Wert ist <see langword="true" />, und klicken Sie dann die vorhandenen Ereignisse gelesen werden, und wenn dieser Wert ist <see langword="false" />, und klicken Sie dann die vorhandenen Ereignisse nicht gelesen werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> -Klasse unter Angabe einer Ereignisabfrage, ein Lesezeichen, das als Anfangsposition für die Abfrage verwendet wird und ein boolescher Wert, der bestimmt, ob die Ereignisse, die bereits vorhanden sind, im Ereignisprotokoll zu lesen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von diesem Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Die von diesem Objekt verwendeten nicht verwalteten Ressourcen frei, und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogWatcher.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob das Objekt beginnt, Ereignisse an den Ereignisdelegaten übermittelt.</summary>
+        <value>Gibt <see langword="true" /> Wenn dieses Objekt kann Ereignisse an den Ereignisdelegaten und gibt übermitteln <see langword="false" /> Wenn Objekt Übermittlung beendet wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventRecordWritten">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs&gt; EventRecordWritten;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs&gt; EventRecordWritten" />
+      <MemberSignature Language="DocId" Value="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht es, dass die Abfrage für dieses Objekt festlegen eines Delegaten (Ereignishandlermethode), das aufgerufen wird, jedes Mal, wenn ein Ereignis veröffentlicht wird, das den Kriterien entspricht in der ereignismeldung angegeben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Z. B. Code mit dieser Klasse finden Sie unter [wie: Abonnieren von Ereignissen im Ereignisprotokoll](http://msdn.microsoft.com/en-us/62e006d3-9fab-4fdf-a8f8-e23d05498cd4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

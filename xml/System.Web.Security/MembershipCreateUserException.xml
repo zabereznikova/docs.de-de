@@ -1,0 +1,282 @@
+<Type Name="MembershipCreateUserException" FullName="System.Web.Security.MembershipCreateUserException">
+  <TypeSignature Language="C#" Value="public class MembershipCreateUserException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MembershipCreateUserException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.MembershipCreateUserException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web, Version=2.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Diese Ausnahme wird ausgelöst, wenn ein Benutzer nicht erfolgreich von einem Mitgliedschaftsanbieter erstellt wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.Security.MembershipCreateUserException> Klasse wird ausgelöst, wenn eine <xref:System.Web.Security.Membership.CreateUser%2A> -Vorgang fehl.  
+  
+> [!NOTE]
+>  Wenn Sie nicht mit den Mitgliedschaftsfunktionen von ASP.NET vertraut sind, finden Sie unter [Einführung in die Mitgliedschaft](http://msdn.microsoft.com/library/79184d17-f4c7-4c9f-a073-cec4f5543980) bevor Sie fortfahren. Eine Liste mit anderen Themen im Zusammenhang mit der Mitgliedschaft, finden Sie unter [Verwalten von Benutzern durch Mitgliedschaft](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+ Die <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> -Eigenschaft gibt den Grund für die Ausnahme an, damit sie ordnungsgemäß behandelt werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen neuen Benutzer für eine ASP.NET-Anwendung für die Verwendung der Formularauthentifizierung und ASP.NET-Mitgliedschaft konfiguriert. Wenn der Benutzer nicht erfolgreich erstellt wurde, wird der Code fängt die <xref:System.Web.Security.MembershipCreateUserException> und zeigt die angegebene Fehlermeldung an die <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/createuser1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.Membership#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/createuser1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MembershipCreateUserException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipCreateUserException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Security.MembershipCreateUserException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.Security.MembershipCreateUserException> Klasse ausgelöst wird, indem die <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType> Methode, wenn der Benutzer nicht erstellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType> Methode, um einen neuen Mitgliedschaftsbenutzer zu erstellen. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, eine <xref:System.Web.Security.MembershipCreateUserException> ausgelöst wird.  
+  
+ [!code-csharp[System.Web.Security.MembershipCreateUserException#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/CS/createuser3cs.aspx#3)]
+ [!code-vb[System.Web.Security.MembershipCreateUserException#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/VB/createuser3vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MembershipCreateUserException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipCreateUserException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung des Grunds für die Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Security.MembershipCreateUserException" /> -Klasse und legt die <see cref="P:System.Exception.Message" /> -Eigenschaft auf die angegebene <paramref name="message" /> Parameterwert</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.MembershipCreateUserException> Klasse ausgelöst wird, indem die <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType> Methode, wenn der Benutzer nicht erstellt wird.  
+  
+ Können Sie die `message` zum Festlegen der <xref:System.Exception.Message%2A> Eigenschaft der Ausnahme, um eine aussagekräftige Beschreibung des Grunds für die Ausnahme.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType> Methode, um einen neuen Mitgliedschaftsbenutzer zu erstellen. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, eine <xref:System.Web.Security.MembershipCreateUserException> ausgelöst und eine Nachricht auf Grundlage der <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> zurückgegebenes die <xref:System.Web.Security.Membership.CreateUser%2A> Methode.  
+  
+ [!code-csharp[System.Web.Security.MembershipCreateUserException#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/CS/createuser2cs.aspx#2)]
+ [!code-vb[System.Web.Security.MembershipCreateUserException#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/VB/createuser2vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MembershipCreateUserException (System.Web.Security.MembershipCreateStatus statusCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Security.MembershipCreateStatus statusCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipCreateUserException.#ctor(System.Web.Security.MembershipCreateStatus)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.Web.Security.MembershipCreateStatus" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">Ein <see cref="T:System.Web.Security.MembershipCreateStatus" /> Enumerationswert, der die Ursache der Ausnahme beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Security.MembershipCreateUserException" />-Klasse mit dem angegebenen <see cref="P:System.Web.Security.MembershipCreateUserException.StatusCode" />-Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.MembershipCreateUserException> Klasse ausgelöst wird, indem die <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType> Methode, wenn der Benutzer nicht erstellt wird.  
+  
+ Die `statusCode` Parameter können Sie angeben, warum die <xref:System.Web.Security.MembershipCreateUserException> ausgelöst wurde. Die `statusCode` Parameterwert wird verfügbar gemacht, indem die <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Web.Security.Membership.CreateUser%2A> Methode, um einen neuen Mitgliedschaftsbenutzer zu erstellen. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, eine <xref:System.Web.Security.MembershipCreateUserException> wird ausgelöst, mit der <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> zurückgegebenes die <xref:System.Web.Security.Membership.CreateUser%2A> Methode.  
+  
+ [!code-csharp[System.Web.Security.MembershipCreateUserException#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/CS/createuser1cs.aspx#1)]
+ [!code-vb[System.Web.Security.MembershipCreateUserException#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/VB/createuser1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MembershipCreateUserException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipCreateUserException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Security.MembershipCreateUserException" /> -Klasse mit den angegebenen Serialisierungsinformationen und dem Kontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Implementierung der <xref:System.Web.Security.MembershipCreateUserException> -Klasse, die den geschützten Konstruktor der Basisklasse mit den angegebenen Serialisierungsinformationen und dem Kontext aufruft.  
+  
+ [!code-csharp[System.Web.Security.MembershipCreateUserException#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/CS/mycreateuserexception.cs#5)]
+ [!code-vb[System.Web.Security.MembershipCreateUserException#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/VB/mycreateuserexception.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MembershipCreateUserException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipCreateUserException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung des Grunds für die Ausnahme.</param>
+        <param name="innerException">Die Ausnahme, durch die <see cref="T:System.Web.Security.MembershipCreateUserException" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Security.MembershipCreateUserException" /> -Klasse und legt die <see cref="P:System.Exception.Message" /> -Eigenschaft auf die angegebene <paramref name="message" /> und die <see cref="P:System.Exception.InnerException" /> -Eigenschaft auf die angegebene <paramref name="innerException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.Security.MembershipCreateUserException> Klasse ausgelöst wird, indem die <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType> Methode, wenn der Benutzer nicht erstellt wird.  
+  
+ Sie können diese Überladung der der <xref:System.Web.Security.MembershipCreateUserException> Konstruktor, um Informationen über eine abgefangene Ausnahme angeben, die aufgetreten sind, während der Benutzer erstellt wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Web.Security.Membership.CreateUser%2A> Methode, um einen neuen Mitgliedschaftsbenutzer zu erstellen. Wenn es sich bei der Erstellung des Benutzers ein Fehler auftritt, eine <xref:System.Web.Security.MembershipCreateUserException> ausgelöst wird. Wenn die Ausnahme keine <xref:System.Web.Security.MembershipCreateUserException>, die abgefangene Ausnahme angegeben wird, als die <xref:System.Exception.InnerException%2A> von der <xref:System.Web.Security.MembershipCreateUserException> , die ausgelöst wird.  
+  
+ [!code-csharp[System.Web.Security.MembershipCreateUserException#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/CS/createuser4cs.aspx#4)]
+ [!code-vb[System.Web.Security.MembershipCreateUserException#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipCreateUserException/VB/createuser4vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipCreateUserException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der das Ziel für diese Serialisierung angibt.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte eingeschlossen wurden die <xref:System.Runtime.Serialization.SerializationInfo> automatisch nachverfolgt und vom Formatierungsprogramm serialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public System.Web.Security.MembershipCreateStatus StatusCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Security.MembershipCreateStatus StatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.MembershipCreateUserException.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipCreateStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung des Grunds für die Ausnahme ab.</summary>
+        <value>Ein <see cref="T:System.Web.Security.MembershipCreateStatus" /> Enumerationswert, der die Ursache der Ausnahme beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> Eigenschaft können Sie ermitteln, warum die <xref:System.Web.Security.MembershipCreateUserException> ausgelöst wurde, und entsprechend reagieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen neuen Benutzer für eine ASP.NET-Anwendung für die Verwendung der Formularauthentifizierung und ASP.NET-Mitgliedschaft konfiguriert. Wenn der Benutzer nicht erfolgreich erstellt wurde, wird der Code fängt die <xref:System.Web.Security.MembershipCreateUserException> und zeigt die angegebene Fehlermeldung an die <xref:System.Web.Security.MembershipCreateUserException.StatusCode%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/createuser1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.Membership#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/createuser1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

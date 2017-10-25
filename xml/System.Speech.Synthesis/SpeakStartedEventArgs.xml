@@ -1,0 +1,27 @@
+<Type Name="SpeakStartedEventArgs" FullName="System.Speech.Synthesis.SpeakStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class SpeakStartedEventArgs : System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpeakStartedEventArgs extends System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.SpeakStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Synthesis.PromptEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Benachrichtigung von der <see cref="E:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von <xref:System.Speech.Synthesis.SpeakStartedEventArgs> wird erstellt, wenn die <xref:System.Speech.Synthesis.SpeechSynthesizer> -Objekt löst die <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> Ereignis. Die <xref:System.Speech.Synthesis.SpeechSynthesizer> löst die <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> Ereignis aus, wenn es anfängt, sprechen mit einer der Aufforderung der <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A>, <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakAsync%2A>, <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsml%2A>, oder <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsmlAsync%2A> Methoden.  
+  
+ Die <xref:System.Speech.Synthesis.SpeakStartedEventArgs> Klasse verfügt über keine Eigenschaften und keine Daten aus zurückgibt, die <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> Ereignis. So aktivieren Sie zum Schreiben von Ereignishandlern für Anwendungsentwickler erfolgt die <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

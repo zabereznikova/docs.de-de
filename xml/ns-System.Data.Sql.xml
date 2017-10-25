@@ -1,0 +1,16 @@
+<Namespace Name="System.Data.Sql">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Sql" /> -Namespace enthält Klassen, die SQL Server-spezifische Funktionen zu unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu der Funktionalität, die die Klassen in diesem Namespace zu unterstützen, finden Sie unter [beim Aufzählen der Instanzen von SQL Server (ADO.NET)](~/docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md) und [Abfragebenachrichtigungen in SQL Server](~/docs/framework/data/adonet/sql/query-notifications-in-sql-server.md).  
+  
+> [!NOTE]
+>  In der Beta-Versionen von ADO.NET 2.0 sind die <xref:System.Data.Sql> Namespace auch Klassen für die Verwendung mit SQL Server common Language Runtime (CLR)-Integration enthalten. Allerdings wurden diese Klassen in einen eigenen Namespace verschoben <xref:Microsoft.SqlServer.Server>. Weitere Informationen zur Verwendung von SQL Server-CLR-Integration finden Sie unter [SQL Server Integration Common Language Runtime](~/docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

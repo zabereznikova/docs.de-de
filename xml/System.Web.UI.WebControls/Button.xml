@@ -1,0 +1,999 @@
+<Type Name="Button" FullName="System.Web.UI.WebControls.Button">
+  <TypeSignature Language="C#" Value="public class Button : System.Web.UI.WebControls.WebControl, System.Web.UI.IPostBackEventHandler, System.Web.UI.WebControls.IButtonControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Button extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.IPostBackEventHandler, class System.Web.UI.WebControls.IButtonControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Button" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.IButtonControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ButtonDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Button runat="server" Text="Button"&gt;&lt;/{0}:Button&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zeigt ein Schaltflächen-Steuerelement auf der Webseite an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#Introduction)  
+  
+-   [Schaltfläche Postback Verhalten und die Server-Ereignisse](#ButtonPostbackBehaviorandServerEvents)  
+  
+-   [Behandeln von Ereignissen in Clientskripts Schaltfläche](#HandlingButtonEventsinClientScript)  
+  
+-   [Schaltflächen-Steuerelemente und-Validierung](#ButtonControlsAndValidation)  
+  
+-   [Schaltflächen-Steuerelemente](#ButtonsInDataControls)  
+  
+-   [Binden von Daten an Steuerelemente](#BindingDataToTheControls)  
+  
+-   [Mithilfe der Schaltflächen mit UpdatePanel-Steuerelementen](#UsingButtonsWithUpdatePanelControls)  
+  
+-   [Deklarationssyntax](#DeclarativeSyntax)  
+  
+<a name="Introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Verwenden der <xref:System.Web.UI.WebControls.Button> Steuerelement auf eine Schaltfläche auf der Webseite zu erstellen, in dem Benutzer eine Seite an den Server senden können. Das Steuerelement löst ein Ereignis in Servercode aus, die Sie behandeln können, um auf das Postback zu reagieren. Sie können auch ein Ereignis im Clientskript auslösen, die Sie behandeln können, bevor die Seite gesendet wird, oder, die ausführen und dann "Abbrechen" Übermittlung der Seite.  
+  
+> [!NOTE]
+>  ASP.NET umfasst verschiedene Arten von Schaltflächen-Steuerelemente, von die jedes anders auf Webseiten angezeigt wird. Werden die <xref:System.Web.UI.WebControls.Button> -Steuerelement, das als Schaltfläche; rendert die <xref:System.Web.UI.WebControls.LinkButton> Steuerelement, das als Link; gerendert und die <xref:System.Web.UI.WebControls.ImageButton> Steuerelement, das als Bild; gerendert und die <xref:System.Web.UI.WebControls.ImageMap> -Steuerelement, das ermöglicht die Erstellung eine Grafik dargestellt, die Hotspots enthält dass die Benutzer klicken können. Standardmäßig senden alle Schaltflächen-Steuerelemente die Seite, die beim Klicken auf. Sie können auch die <xref:System.Web.UI.HtmlControls.HtmlButton> und <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelemente zum Erstellen von Schaltflächen auf der Seite, die in Servercode programmierbar sind. Einzelheiten zu den Unterschieden zwischen HTML und Webserversteuerelementen finden Sie unter [Übersicht über das ASP.NET-Steuerelemente](http://msdn.microsoft.com/library/0d4854a3-6e79-4b7b-a27f-ac57cd9c2a84).  
+  
+ Wird standardmäßig ein <xref:System.Web.UI.WebControls.Button> -Steuerelement ist eine Schaltfläche "Absenden". Eine Schaltfläche "Absenden" verfügt nicht über einen Befehlsnamen (gemäß der <xref:System.Web.UI.WebControls.Button.CommandName%2A> Eigenschaft) die Schaltfläche und einfach die Beiträge auf der Webseite wieder auf dem Server zugeordnet. Sie können angeben, einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Click> Ereignis programmgesteuert die Aktionen ausgeführt, wenn auf die Schaltfläche "Absenden" geklickt wird.  
+  
+ Eine Befehlsschaltfläche besitzt einen Befehlsnamen der Schaltfläche zugeordnet sind, z. B. `Sort`, durch Festlegen der <xref:System.Web.UI.WebControls.Button.CommandName%2A> Eigenschaft. Dies ermöglicht Ihnen die Erstellung mehrerer <xref:System.Web.UI.WebControls.Button> Steuerelemente auf einer Webseite Seite und feststellen, welche programmgesteuert <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. Sie können auch die <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft mit dem eine Befehlsschaltfläche zum Bereitstellen zusätzlicher Informationen über den Befehl ausführen, z. B. `Ascending`. Sie können angeben, einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Command> Ereignis programmgesteuert die Aktionen ausgeführt, wenn die Schaltfläche geklickt wird.  
+  
+<a name="ButtonPostbackBehaviorandServerEvents"></a>   
+## <a name="button-postback-behavior-and-server-events"></a>Schaltfläche Postback Verhalten und die Server-Ereignisse  
+ Wenn ein Benutzer eine beliebige Webserversteuerelement-Schaltfläche klickt, wird die Seite an den Server gesendet. Dies bewirkt, dass die Webseite verarbeitet werden und alle ausstehenden Ereignisse im serverbasierten Code ausgelöst werden. Wenn jede Seite und Steuerelement Verarbeitung abgeschlossen hat, rendert die Seite selbst an den Browser erneut.  
+  
+ Die Schaltflächen können ihre eigenen auslösen <xref:System.Web.UI.WebControls.Button.Click> Ereignisse oder <xref:System.Web.UI.WebControls.Button.Command> -Ereignis, das Sie mithilfe von serverbasierten Code behandeln können. Dies ist anders als in herkömmlichen HTML-Seiten oder im Client-basierten Webanwendungen, Ereignisse, einer Schaltfläche `onclick` Ereignis behandelt wird, mithilfe von JavaScript, der auf dem Client ausgeführt wird. Weitere Informationen finden Sie unter [ASP.NET Web Forms-Steuerelement Ereignis Servermodell](http://msdn.microsoft.com/library/6304bff7-1b0e-4641-8acb-6d3b0badc4a3).  
+  
+ Wenn Benutzer auf einem Schaltflächen-Steuerelement klicken, wird die Seite an den Server zurückgesendet. Standardmäßig wird die Seite an sich selbst zurückgesendet,  
+  
+ Sie können die Schaltflächen, um die aktuelle Seite zu einer anderen Seite konfigurieren. Dies kann zum Erstellen von mehreren Seiten Forms nützlich sein. Weitere Informationen finden Sie unter [Cross-Page Posting in ASP.NET Web Forms](http://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
+  
+<a name="HandlingButtonEventsinClientScript"></a>   
+## <a name="handling-button-events-in-client-script"></a>Behandeln von Ereignissen in Clientskripts Schaltfläche  
+ Schaltflächensteuerelemente für können Serverereignisse und Client-Ereignisse auslösen. Serverereignisse treten nach dem Postback, und sie in den serverseitigen Code, den Sie, für die Seite schreiben behandelt werden. Clientereignisse in Clientskripts, in der Regel ECMAScript (JavaScript), behandelt werden und werden ausgelöst, bevor die Seite übermittelt wird. ASP.NET Schaltflächensteuerelemente für clientseitige Ereignisse hinzufügen, können Sie Aufgaben, z. B. das Anzeigen von Dialogfeldern zur Bestätigung vor dem Senden der Seite und potenziell die Übermittlung abbrechen. Weitere Informationen finden Sie unter [Clientskripts in ASP.NET Web Pages](http://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa) und [wie: Reagieren auf die Schaltfläche Web Server Steuerelementereignisse in Clientskripts](http://msdn.microsoft.com/library/1ab97f0b-1c38-4897-85b0-ac915f6a182b).  
+  
+ Sie sollten auch die <xref:System.Web.UI.WebControls.Button> Steuerelement auch Clientskripts verwenden, um das Postback (anstatt einfach einen HTTP POST-Vorgang) ausführen. Dies kann nützlich sein, wenn das Postback, z. B. andere Elemente auf der Seite zuordnen programmgesteuert bearbeitet werden soll. Sie können festlegen, die <xref:System.Web.UI.WebControls.Button> des Steuerelements <xref:System.Web.UI.WebControls.Button.UseSubmitBehavior%2A> Eigenschaft, um `true` bewirken die <xref:System.Web.UI.WebControls.Button> Steuerelement mit Clientskripts basieren Postback.  
+  
+<a name="ButtonControlsAndValidation"></a>   
+## <a name="button-controls-and-validation"></a>Schaltflächen-Steuerelemente und-Validierung  
+ Enthält eine Seite ASP.NET-Validierungssteuerelemente, standardmäßig führt dazu, dass Sie ein Button-Steuerelement auf das Validierungssteuerelement die Überprüfung. Wenn die clientseitige Validierung für ein Validator-Steuerelement aktiviert ist, wird die Seite nicht übermittelt werden, wenn die Validierung fehlgeschlagen ist.  
+  
+ Die folgende Tabelle beschreibt die Eigenschaften unterstützt Schaltflächen-Steuerelemente, mit die Sie den Überprüfungsprozess genauer steuern können.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Button.CausesValidation%2A>|Gibt an, ob Sie auf die Schaltfläche auch eine Validierung durchgeführt. Legen Sie diese Eigenschaft auf `false` um eine Überprüfung zu verhindern.|  
+|<xref:System.Web.UI.WebControls.Button.ValidationGroup%2A>|Ermöglicht Ihnen die Angabe, welche Validierungssteuerelemente auf der Seite aufgerufen werden, wenn die Schaltfläche geklickt wird. Wenn keine Überprüfung Gruppen eingerichtet sind, ruft ein Schaltflächen-Klickereignis alle der Validierungssteuerelemente, die auf der Seite befinden.|  
+  
+ Weitere Informationen finden Sie unter [Überprüfen der Benutzereingabe in ASP.NET-Webseiten](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+<a name="ButtonsInDataControls"></a>   
+## <a name="buttons-in-data-controls"></a>Schaltflächen-Steuerelemente  
+ Button-Webserversteuerelemente werden häufig in Datensteuerelementen, z. B. in verwendet das <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.GridView>, und <xref:System.Web.UI.WebControls.Repeater> Listensteuerelemente. In diesen Fällen reagieren Sie in der Regel nicht direkt auf die Schaltfläche mit den click-Ereignis. Stattdessen löst eine Schaltfläche in einem Steuerelement ein Ereignis, das für das Steuerelement spezifisch sind. Z. B. in der <xref:System.Web.UI.WebControls.DataList> -Steuerelement, eine Schaltfläche löst ggf. aus der <xref:System.Web.UI.WebControls.DataList> des Steuerelements <xref:System.Web.UI.WebControls.DataList.ItemCommand> Ereignisses statt durch das Auslösen der <xref:System.Web.UI.WebControls.Button> des Steuerelements <xref:System.Web.UI.WebControls.Button.Click> Ereignis.  
+  
+ Da von datengebundenen Steuerelementen viele Schaltflächen enthalten können, können Sie festlegen, dass der Schaltfläche <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> -Eigenschaft einen Wert zur Übergabe als Teil des Ereignisses an. Sie können dann testen für dieses Argument, um festzustellen, welches Steuerelement die Schaltfläche geklickt wurde.  
+  
+<a name="BindingDataToTheControls"></a>   
+## <a name="binding-data-to-the-controls"></a>Binden von Daten an Steuerelemente  
+ Sie können die Schaltfläche Webserversteuerelement an eine Datenquelle binden, um zu steuern, deren eigenschafteneinstellungen dynamisch. Sie können z. B. einer Schaltfläche festlegen <xref:System.Web.UI.WebControls.Button.Text%2A> Eigenschaft mithilfe der Datenbindung.  
+  
+<a name="UsingButtonsWithUpdatePanelControls"></a>   
+## <a name="using-buttons-with-updatepanel-controls"></a>Mithilfe der Schaltflächen mit UpdatePanel-Steuerelementen  
+ Teilrendering von Seiten ermöglicht die Teile einer Seite ohne Postback zu aktualisieren. <xref:System.Web.UI.UpdatePanel>Steuerelemente ermöglichen Ihnen, um Teile der Seite zu markieren, die in Teilrendering von Seiten beteiligt sind. Wird standardmäßig das Verhalten von Steuerelementen innerhalb einer <xref:System.Web.UI.UpdatePanel> zu steuern, einschließlich <xref:System.Web.UI.WebControls.Button> steuert, wird zum Ausführen eines asynchronen Postbacks statt eines Postbacks. Dies wird nur der Inhalt des aktualisiert die <xref:System.Web.UI.UpdatePanel> -Steuerelement aus dem das Postback stammt.  
+  
+ Zusätzlich zu das Szenario für eine <xref:System.Web.UI.WebControls.Button> Steuerelement in ein <xref:System.Web.UI.UpdatePanel> -Steuerelement, können Sie <xref:System.Web.UI.WebControls.Button> steuert mit <xref:System.Web.UI.UpdatePanel> Steuerelemente in den folgenden Szenarien:  
+  
+-   Definieren einer <xref:System.Web.UI.WebControls.Button> Steuerelement, das außerhalb einer <xref:System.Web.UI.UpdatePanel> steuern, wie ein <xref:System.Web.UI.AsyncPostBackTrigger> Steuerelement für den Bereich. Wenn die Schaltfläche geklickt wird, führt ein asynchrone Postback und aktualisiert den Inhalt des Bereichs.  
+  
+-   Definieren einer <xref:System.Web.UI.WebControls.Button> Steuerelement in ein <xref:System.Web.UI.UpdatePanel> steuern, wie eine <xref:System.Web.UI.PostBackTrigger> des Panels. Auf die Schaltfläche geklickt wird, führt es einen Postback, obwohl innerhalb ist einer <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ Weitere Informationen über Teilrendering von Seiten rendern und Verwenden von <xref:System.Web.UI.UpdatePanel> -Steuerelemente finden Sie unter [UpdatePanel Control Overview](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) und [Übersicht über Teilrendering von Seiten](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Button  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CausesValidation="True|False"  
+    CommandArgument="string"  
+    CommandName="string"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    OnClick="Click event handler"  
+    OnClientClick="string"  
+    OnCommand="Command event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    PostBackUrl="uri"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    Text="string"  
+    ToolTip="string"  
+    UseSubmitBehavior="True|False"  
+    ValidationGroup="string"  
+    Visible="True|False"  
+    Width="size"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Absenden <xref:System.Web.UI.WebControls.Button> Steuerelement, das die Webseite Inhalt an den Server sendet.  
+  
+ [!code-aspx-csharp[Classic Button Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Button Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Button Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Button Example/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen eines Befehls <xref:System.Web.UI.WebControls.Button> Steuerelement, das eine Liste sortiert.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Button ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Button" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Button> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.Button> Klasse.  
+  
+ [!code-aspx-csharp[ButtonCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCtor/CS/buttonctorcs.aspx#1)]
+ [!code-aspx-vb[ButtonCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCtor/VB/buttonctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> , der den Ausgabestream zum Rendern auf dem Client enthält.</param>
+        <summary>Fügt die Attribute der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement in den Ausgabestream für das Rendering auf dem Client.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Button.AddAttributesToRender%2A> Methode in einem benutzerdefinierten Serversteuerelement, damit die <xref:System.Web.UI.WebControls.Button> Text ist immer in Rot angezeigt.  
+  
+ [!code-aspx-csharp[CustomButtonAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomButtonAddAttributesToRender/CS/custombuttonaddattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomButtonAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomButtonAddAttributesToRender/VB/custombuttonaddattributestorendervb.aspx#1)]  
+[!code-csharp[CustomButtonAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomButtonAddAttributesToRender/CS/custombuttonaddattributestorender.cs#2)]
+[!code-vb[CustomButtonAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomButtonAddAttributesToRender/VB/custombuttonaddattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Überprüfung erfolgt bei der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement geklickt wird.</summary>
+        <value>
+          <see langword="true" />, wenn beim Klicken auf das <see cref="T:System.Web.UI.WebControls.Button" />-Steuerelement eine Validierung durchgeführt wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig erfolgt die Validierung bei einem <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. Seitenüberprüfung bestimmt, ob ein Validierungssteuerelement auf der Seite der Eingabesteuerelemente zugeordnet, die alle Validierungsregeln, die gemäß des Validierungssteuerelements übergeben.  
+  
+ Sie können angeben, oder zu bestimmen, ob die Überprüfung auf dem Client und dem Server ausgeführt wird beim eine <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird, mithilfe der <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> Eigenschaft. Validierung durchgeführt werden soll, legen Sie die <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Sie sollten festlegen, die <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> Eigenschaft, um `false` beim Verwenden der <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> Eigenschaft zum Zurücksenden an eine andere Seite. Wenn Sie wieder zu einer anderen Seite Posten von Beiträgen, sollten Sie explizit Validierung überprüfen. Ein Beispiel finden Sie im Abschnitt "Hinweise" der <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> Eigenschaft.  
+  
+ Diese Eigenschaft ist im Allgemeinen festgelegt, um `false` für eine `reset` oder `clear` Schaltfläche, um zu verhindern, dass die Überprüfung durchgeführt werden, wenn die Schaltfläche geklickt wird.  
+  
+ Bei den Wert des der <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> -Eigenschaftensatz auf `true`, können Sie auch die <xref:System.Web.UI.WebControls.Button.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.WebControls.Button> Steuerelement eine Validierung.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> Eigenschaft, um zu verhindern, dass bei der Validierung verhindern. Beachten Sie, dass die <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> -Methode jedes Validierungssteuerelement unabhängig aktiviert.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[ButtonControlCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonControlCausesValidation/CS/buttoncausesvalidationcs.aspx#1)]
+ [!code-aspx-vb[ButtonControlCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonControlCausesValidation/VB/buttoncausesvalidationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Button.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn auf das Steuerelement <see cref="T:System.Web.UI.WebControls.Button" /> geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Button.Click> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. Dieses Ereignis wird häufig verwendet, wenn Sie keine Befehlsname zugeordnet ist die <xref:System.Web.UI.WebControls.Button> -Steuerelement (z. B. mit einer Schaltfläche "Absenden").  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Click> Ereignis, um eine Meldung im Web anzeigen Seite, wenn die <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird.  
+  
+ [!code-aspx-csharp[ButtonClickText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonClickText/cs/ButtonClickCS.aspx#1)]
+ [!code-aspx-vb[ButtonClickText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonClickText/vb/ButtonClickVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CommandEventHandler Command;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CommandEventHandler Command" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Button.Command" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn auf das Steuerelement <see cref="T:System.Web.UI.WebControls.Button" /> geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Button.Command> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. Dieses Ereignis wird häufig verwendet, wenn ein Befehl wie z. B. `Sort`, zugeordnet ist die <xref:System.Web.UI.WebControls.Button> Steuerelement. Dies ermöglicht Ihnen die Erstellung mehrerer <xref:System.Web.UI.WebControls.Button> Steuerelemente auf einer Webseite Seite und feststellen, welche programmgesteuert <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Button.Command> Ereignis wird ausgelöst, in der Steuerelementhierarchie in Form von den `BubbleEvent`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Command> Ereignis, um eine Liste sortieren bei der <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. In diesem Beispiel gibt den Ereignishandler deklarativ mithilfe der <xref:System.Web.UI.WebControls.Button.OnClick%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Ereignishandler, und fügen sie programmgesteuert auf das Ereignis in der `Page_Load` Methode.  
+  
+ [!code-aspx-csharp[ButtonCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommand/CS/buttoncommandcs.aspx#1)]
+ [!code-aspx-vb[ButtonCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommand/VB/buttoncommandvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public string CommandArgument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen optionalen Parameter übergeben, um die <see cref="E:System.Web.UI.WebControls.Button.Command" /> Ereignis zusammen mit den zugehörigen <see cref="P:System.Web.UI.WebControls.Button.CommandName" />.</summary>
+        <value>Ein optionaler Parameter zu übergeben, um die <see cref="E:System.Web.UI.WebControls.Button.Command" /> Ereignis zusammen mit den zugehörigen <see cref="P:System.Web.UI.WebControls.Button.CommandName" />. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft, um einen Parameter angegeben wird, ergänzt die <xref:System.Web.UI.WebControls.Button.CommandName%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Sie können zwar Festlegen der <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> -Eigenschaft allein ist normalerweise nur verwendet, wenn die <xref:System.Web.UI.WebControls.Button.CommandName%2A> -Eigenschaft ebenfalls festgelegt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> -Eigenschaft ergänzt die <xref:System.Web.UI.WebControls.Button.CommandName%2A> Eigenschaft können Sie zusätzliche Informationen zu den auszuführenden Befehl bereitzustellen. Wenn Sie festlegen, z. B. die <xref:System.Web.UI.WebControls.Button.CommandName%2A> Eigenschaft, um `Sort` und die <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft, um `Ascending`, geben Sie einen Befehl zum Sortieren in aufsteigender Reihenfolge.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> zu erstellenden Eigenschaft ein <xref:System.Web.UI.WebControls.Button> Steuerelement, das eine Liste in aufsteigender Reihenfolge sortiert.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public string CommandName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Befehlsnamen zugeordneten der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement, das an die <see cref="E:System.Web.UI.WebControls.Button.Command" /> Ereignis.</summary>
+        <value>Den Befehlsnamen der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere vorhanden sind <xref:System.Web.UI.WebControls.Button> Steuerelemente auf einer Webseite verwenden die <xref:System.Web.UI.WebControls.Button.CommandName%2A> Eigenschaft angeben oder ermitteln den Namen des Befehls von einzelnen zugeordnet <xref:System.Web.UI.WebControls.Button> Steuerelement. Sie können festlegen, die <xref:System.Web.UI.WebControls.Button.CommandName%2A> Eigenschaft mit dem eine beliebige Zeichenfolge, die den auszuführenden Befehl identifiziert. Sie können den Befehlsnamen dann programmgesteuert bestimmen die <xref:System.Web.UI.WebControls.Button> steuern und die entsprechenden Aktionen ausführen.  
+  
+ Weitere Informationen zum Befehl, wie z. B. `Ascending`, kann angegeben werden, mithilfe der <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.CommandName%2A> zu erstellenden Eigenschaft ein <xref:System.Web.UI.WebControls.Button> Steuerelement, das eine Liste sortiert.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPostBackOptions">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.PostBackOptions GetPostBackOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.PostBackOptions GetPostBackOptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.GetPostBackOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PostBackOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.PostBackOptions" /> -Objekt, das stellt die <see cref="T:System.Web.UI.WebControls.Button" /> postback Verhalten des Steuerelements.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.PostBackOptions" /> darstellt, die die <see cref="T:System.Web.UI.WebControls.Button" /> postback Verhalten des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Button.GetPostBackOptions%2A> Methode erstellt eine <xref:System.Web.UI.PostBackOptions> Objekt, das darstellt der <xref:System.Web.UI.WebControls.Button> postback Verhalten des Steuerelements. Die <xref:System.Web.UI.PostBackOptions> Objekt wird dann in der Regel zum Übergeben der <xref:System.Web.UI.ClientScriptManager.GetPostBackEventReference%28System.Web.UI.PostBackOptions%29?displayProperty=nameWithType> -Methode, die verwendet wird, um einem Verweis auf die Funktion ein clientseitiges Skript abzurufen, bewirkt, dass der Server zum Zurücksenden an die Seite.  
+  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn Sie erweitern die <xref:System.Web.UI.WebControls.Button> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.Button.GetPostBackOptions" /> Methode in der abgeleiteten Klasse die postback Optionen für das Schaltflächen-Steuerelement zu ändern oder clientseitigem Skript aufgerufen werden, wenn die Schaltfläche geklickt wird. Achten Sie darauf, dass Sie der Basisklasse aufgerufen <see cref="M:System.Web.UI.WebControls.Button.GetPostBackOptions" /> Methode, damit die Standardoptionen postback festgelegt sind.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.OnClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.Button.Click" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Button.Click> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. Dieses Ereignis wird häufig verwendet, wenn Sie keine Befehlsname zugeordnet ist die <xref:System.Web.UI.WebControls.Button> -Steuerelement (z. B. mit einer Schaltfläche "Absenden").  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.WebControls.Button.OnClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Click> Ereignis, um eine einfache Nachricht auf der Webseite anzuzeigen.  
+  
+ [!code-aspx-csharp[ButtonClickText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonClickText/cs/ButtonClickCS.aspx#1)]
+ [!code-aspx-vb[ButtonClickText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonClickText/vb/ButtonClickVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.Button.OnClick(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.Button.OnClick(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClientClick">
+      <MemberSignature Language="C#" Value="public virtual string OnClientClick { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OnClientClick" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.OnClientClick" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Skriptdatei auf Clientseite, die beim Instanziieren einer <see cref="T:System.Web.UI.WebControls.Button" /> des Steuerelements <see cref="E:System.Web.UI.WebControls.Button.Click" /> Ereignis wird ausgelöst.</summary>
+        <value>Die Skriptdatei auf Clientseite, die beim Instanziieren einer <see cref="T:System.Web.UI.WebControls.Button" /> des Steuerelements <see cref="E:System.Web.UI.WebControls.Button.Click" /> Ereignis wird ausgelöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Button.OnClientClick%2A> Eigenschaft, um zusätzliche clientseitige Skripts anzugeben, die beim Instanziieren einer <xref:System.Web.UI.WebControls.Button> des Steuerelements <xref:System.Web.UI.WebControls.Button.Click> Ereignis wird ausgelöst. Das Skript, das Sie für diese Eigenschaft in gerenderten angeben der <xref:System.Web.UI.WebControls.Button> des Steuerelements `OnClick` Attributs sowie des Steuerelements vordefinierte clientseitigem Skript.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Ist ein Visual Studio Web Site-Projekt mit Quellcode zu diesem Thema steht verfügbar: [herunterladen](http://go.microsoft.com/fwlink/?LinkId=192871).  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.OnClientClick%2A> Eigenschaft, um zusätzliche clientseitige Skripts anzugeben, die beim Instanziieren einer <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird.  
+  
+ [!code-aspx-csharp[Button.OnClientClick#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Button.OnClientClick/cs/button.onclientclickcs.aspx#1)]
+ [!code-aspx-vb[Button.OnClientClick#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Button.OnClientClick/vb/button.onclientclickvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnCommand (System.Web.UI.WebControls.CommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCommand(class System.Web.UI.WebControls.CommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.Button.Command" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Button.Command> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. Dieses Ereignis wird häufig verwendet, wenn ein Befehl wie z. B. `Sort`, zugeordnet ist die <xref:System.Web.UI.WebControls.Button> Steuerelement. Dies ermöglicht Ihnen die Erstellung mehrerer <xref:System.Web.UI.WebControls.Button> Steuerelemente auf einer Webseite Seite und feststellen, welche programmgesteuert <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Button.Command> Ereignis wird ausgelöst, in der Steuerelementhierarchie in Form von den `BubbleEvent`.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.WebControls.Button.OnCommand%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Command> Ereignis, um eine Liste sortieren bei der <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. In diesem Beispiel gibt den Ereignishandler deklarativ mithilfe der <xref:System.Web.UI.WebControls.Button.OnClick%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Ereignishandler, und fügen sie programmgesteuert auf das Ereignis in der `Page_Load` Methode.  
+  
+ [!code-aspx-csharp[ButtonCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommand/CS/buttoncommandcs.aspx#1)]
+ [!code-aspx-vb[ButtonCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommand/VB/buttoncommandvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.Button.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.Button.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Bestimmt, ob die Schaltfläche mit der vor dem Rendern auf dem Client auf den geklickt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Button.OnPreRender%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Klasse von Ableiten der <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackUrl">
+      <MemberSignature Language="C#" Value="public virtual string PostBackUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.PostBackUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty("*.aspx")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL der Seite, um aus der aktuellen Seite beim Bereitstellen der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement geklickt wird.</summary>
+        <value>Die URL der Webseite, um aus der aktuellen Seite beim Bereitstellen der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement geklickt wird. Der Standardwert ist eine leere Zeichenfolge (""), wodurch die Seite zum Zurücksenden an sich selbst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> -Eigenschaft können Sie eine mithilfe von post seitenübergreifend Ausführen der <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+> [!NOTE]
+>  Nur ordnungsgemäß angegebenen Pfade, die mit dieser Eigenschaft verwendet werden. Angenommen, relative Pfade (Test), absolute Pfade (https://localhost/WebApp/default.aspx) und virtuellen (~ \Test\default.aspx) ordnungsgemäß funktionieren. Fehlerhaft Pfade wie z. B. "/ Test" oder "\Test\default.aspx" funktionieren nicht. Finden Sie unter [ASP.NET Web Projektpfade](http://msdn.microsoft.com/library/2447f50c-b849-483c-8093-85ed53e7a5bd) Nähere Informationen zum Erstellen von richtigen Pfade.  
+  
+ Legen Sie die <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> -Eigenschaft auf die URL der Webseite an, wenn die <xref:System.Web.UI.WebControls.Button> Steuerelement geklickt wird. Z. B. `Page2.aspx` bewirkt, dass die Seite mit den <xref:System.Web.UI.WebControls.Button> Steuerelement an `Page2.aspx`. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> -Eigenschaft, die Seite an sich selbst zurückgesendet.  
+  
+> [!IMPORTANT]
+>  Wenn Cross-Seite Postback mit Steuerelementen mit serverseitige Validierung ausführt, sollten Sie überprüfen, der Seite <xref:System.Web.UI.Page.IsValid%2A> Eigenschaft `true` vor der Verarbeitung des Postbacks. Im Falle eines Postbacks Cross-Seite die Seite, um zu überprüfen ist das <xref:System.Web.UI.Page.PreviousPage%2A>. Der folgende VB-Code zeigt, wie dies funktioniert:  
+  
+```  
+Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load  
+        If Page.PreviousPage.IsValid Then  
+            ' Handle the post back  
+        Else  
+            Response.Write("Invalid")  
+        End If  
+End Sub  
+```  
+  
+ Weitere Informationen zum Senden Techniken, finden Sie unter [Cross-Page Posting in ASP.NET Web Forms](http://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> Eigenschaft eine seitenübergreifend ausführen. Wenn der Benutzer klickt der <xref:System.Web.UI.WebControls.Button> -Steuerelement, die Seite sendet den Wert in das Textfeld eingegeben werden, um die Zielseite gemäß der <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> Eigenschaft. Um dieses Beispiel ausführen zu können, müssen Sie auch eine Datei für die Seite "Ziel" im selben Verzeichnis wie dieses Codebeispiel erstellen. Im nächsten Beispiel wird der Code für die Seite "Ziel" bereitgestellt.  
+  
+ [!code-aspx-csharp[Button.PostBackUrlProperty#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Button.PostBackUrlProperty/CS/button.postbackurlpropertycs.aspx#1)]
+ [!code-aspx-vb[Button.PostBackUrlProperty#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Button.PostBackUrlProperty/VB/button.postbackurlpropertyvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.Page.PreviousPage%2A?displayProperty=nameWithType> -Eigenschaft auf einen Wert, der gebucht wurde aus einer anderen Seite mithilfe der <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> Eigenschaft. Auf dieser Seite ruft die Zeichenfolge, die aus der vorherigen Seite bereitgestellt wurde, und es dem Benutzer angezeigt. Wenn Sie versuchen, dieses Codebeispiel direkt auszuführen, erhalten Sie eine Fehlermeldung, da der Wert der `text` Feld `null`. Verwenden Sie stattdessen diesen Code zum Erstellen einer Seite "Ziel" und legen Sie die Datei im gleichen Verzeichnis wie der Code für das vorherige Beispiel. Der angegebene Wert für der Namen der Datei entsprechen muss die <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> Eigenschaft im vorherigen Beispiel. Wenn Sie den Code für das vorherige Beispiel ausführen, wird diese Seite automatisch ausgeführt, wenn die seitenübergreifend gesendet.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Button.PostBackUrlPage2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Button.PostBackUrlPage2/CS/button.postbackurlpage2cs.aspx#1)]
+ [!code-aspx-vb[Button.PostBackUrlPage2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Button.PostBackUrlPage2/VB/button.postbackurlpage2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Das Argument für das Ereignis.</param>
+        <summary>Löst Ereignisse für das <see cref="T:System.Web.UI.WebControls.Button" />-Steuerelement aus, wenn es ein Postback an den Server ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird intern von verwendet die <xref:System.Web.UI.WebControls.Button> Steuerelement, wenn darauf geklickt wird, ausgelöst werden soll, eine <xref:System.Web.UI.WebControls.Button.Click> Ereignis, und wenn definiert, ein <xref:System.Web.UI.WebControls.Button.Command> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt, das den Ausgabestream zum Rendern des HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Rendert den Inhalt des Steuerelements in dem angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Button.RenderContents%2A> Methode in einem benutzerdefinierten steuern, sodass es immer nach einem benutzerdefinierten Text zeigt <xref:System.Web.UI.WebControls.Button> Serversteuerelement.  
+  
+ [!code-aspx-csharp[CustomButtonRenderContents#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomButtonRenderContents/CS/custombuttonrendercontentscs.aspx#1)]
+ [!code-aspx-vb[CustomButtonRenderContents#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomButtonRenderContents/VB/custombuttonrendercontentsvb.aspx#1)]  
+[!code-csharp[CustomButtonRenderContents#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomButtonRenderContents/CS/custombuttonrendercontents.cs#2)]
+[!code-vb[CustomButtonRenderContents#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomButtonRenderContents/VB/custombuttonrendercontents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Das Argument für das Ereignis.</param>
+        <summary>Löst Ereignisse für das <see cref="T:System.Web.UI.WebControls.Button" />-Steuerelement aus, wenn es ein Postback an den Server ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird intern von verwendet die <xref:System.Web.UI.WebControls.Button> Steuerelement, wenn darauf geklickt wird, ausgelöst werden soll, eine <xref:System.Web.UI.WebControls.Button.Click> Ereignis, und wenn definiert, ein <xref:System.Web.UI.WebControls.Button.Command> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Button.System%23Web%23UI%23IPostBackEventHandler%23RaisePostBackEvent%2A> Methode, sodass immer ausgelöst der <xref:System.Web.UI.WebControls.Button.OnClick%2A> Ereignis in einem benutzerdefinierten <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+ [!code-csharp[CustomButtonRaisePostBackEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomButtonRaisePostBackEvent/CS/custombuttonraisepostbackevent.cs#2)]
+ [!code-vb[CustomButtonRaisePostBackEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomButtonRaisePostBackEvent/VB/custombuttonraisepostbackevent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Beschriftungstext angezeigt, der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement.</summary>
+        <value>Die textbeschriftung, die angezeigt wird, der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Button.Text%2A> Eigenschaft angeben oder die Beschriftung anzuzeigenden bestimmen die <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.Text%2A> Eigenschaft an, die im Literalsteuerelement angezeigte Beschriftung der <xref:System.Web.UI.WebControls.Button> Steuerelement.  
+  
+ [!code-aspx-csharp[ButtonClickText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonClickText/cs/ButtonClickCS.aspx#1)]
+ [!code-aspx-vb[ButtonClickText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonClickText/vb/ButtonClickVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSubmitBehavior">
+      <MemberSignature Language="C#" Value="public virtual bool UseSubmitBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSubmitBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.UseSubmitBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement verwendet der Client des Browsers zu übermitteln, Mechanismus oder der ASP.NET postback-Mechanismus.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement des Clientbrowsers übermitteln Sie Mechanismus; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Button.UseSubmitBehavior%2A> Eigenschaft, um anzugeben, ob ein <xref:System.Web.UI.WebControls.Button> Steuerelement verwendet der Client des Browsers zu übermitteln, Mechanismus oder der ASP.NET postback-Mechanismus. Der Wert dieser Eigenschaft beträgt standardmäßig `true`, führte dazu, dass die <xref:System.Web.UI.WebControls.Button> Steuerelements angeben, des Browsers senden Mechanismus. Bei Angabe von `false`, das ASP.NET-Seitenframework die Seite zum Senden des Formulars an den Server clientseitigem Skript hinzugefügt.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.Button.UseSubmitBehavior%2A> Eigenschaft ist `false`, können Entwickler von Steuerelementen der <xref:System.Web.UI.ClientScriptManager.GetPostBackEventReference%2A> Methode, um den Client zurückzugeben Postbackereignis für die <xref:System.Web.UI.WebControls.Button>. Die zurückgegebene Zeichenfolge den <xref:System.Web.UI.ClientScriptManager.GetPostBackEventReference%2A> -Methode enthält den Text des clientseitigen Funktionsaufrufs und kann in einem Ereignishandler für die clientseitige eingefügt werden.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.UseSubmitBehavior%2A> Eigenschaft, um den Submit-Mechanismus anzugeben, die eine <xref:System.Web.UI.WebControls.Button> Steuerelement verwendet, wenn es an den Server zurückgesendet. Die <xref:System.Web.UI.WebControls.Button.UseSubmitBehavior%2A> -Eigenschaftensatz auf `false`, Mechanismus postback verursacht die Schaltfläche, um ASP.NET zu verwenden. Wenn Sie den Quellcode für die gerenderte Seite, die mit Ihrem Browser Quelltext anzeigen Befehl anzeigen, sehen Sie sich, dass die clientseitige Skripts durch das ASP.NET-Seitenframework zum Senden des Formulars an den Server hinzugefügt wurde.  
+  
+ [!code-aspx-csharp[Button.UseSubmitBehavior#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Button.UseSubmitBehavior/CS/button.usesubmitbehaviorcs.aspx#1)]
+ [!code-aspx-vb[Button.UseSubmitBehavior#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Button.UseSubmitBehavior/VB/button.usesubmitbehaviorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe von Steuerelementen für die die <see cref="T:System.Web.UI.WebControls.Button" /> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe von Steuerelementen, für die die <see cref="T:System.Web.UI.WebControls.Button" /> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.WebControls.Button.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.WebControls.Button> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ Diese Eigenschaft wirkt sich nur, wenn der Wert von der <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> -Eigenschaftensatz auf `true`. Wenn geben Sie einen Wert für die <xref:System.Web.UI.WebControls.Button.ValidationGroup%2A> -Eigenschaft, um nur die Validierungssteuerelemente, die Teil der angegebenen Gruppe sind sind validiert, wenn die <xref:System.Web.UI.WebControls.Button> Steuerelement an den Server sendet. Wenn Sie einen Wert für diese Eigenschaft nicht angeben und die <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> -Eigenschaftensatz auf `true`, alle Validierungssteuerelemente auf der Seite, die Validierungsgruppe zugeordnet sind werden überprüft, wenn das Steuerelement an den Server zurückgesendet.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Button.ValidationGroup%2A> Eigenschaft an, das die Steuerelemente beim Überprüfen einer <xref:System.Web.UI.WebControls.Button> Steuerelement an den Server sendet. Die Seite enthält drei Textfelder zum Erfassen von Daten aus der Benutzer und drei <xref:System.Web.UI.WebControls.RequiredFieldValidator> Steuerelemente, um sicherzustellen, dass der Benutzer nicht das Textfeld leer bleibt. Die <xref:System.Web.UI.WebControls.RequiredFieldValidator> Steuerelemente für die ersten beiden Textfeldern in sind die `PersonalInfoGroup` Validierungsgruppe und die <xref:System.Web.UI.WebControls.RequiredFieldValidator> Steuern für das dritte Textfeld befindet sich in der `LocationInfoGroup` Validierungsgruppe. Wenn `Button1` geklickt wird, wird nur die Steuerelemente in Validierungsgruppe `PersonalInfoGroup` werden überprüft. Wenn `Button2` geklickt wird, wird nur das Steuerelement in der Validierungsgruppe `LocationInfoGroup` wird überprüft.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Button.ValidationGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Button.ValidationGroup/CS/button.validationgroupcs.aspx#1)]
+ [!code-aspx-vb[Button.ValidationGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Button.ValidationGroup/VB/button.validationgroupvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

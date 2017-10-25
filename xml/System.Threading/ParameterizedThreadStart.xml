@@ -1,0 +1,79 @@
+<Type Name="ParameterizedThreadStart" FullName="System.Threading.ParameterizedThreadStart">
+  <TypeSignature Language="C#" Value="public delegate void ParameterizedThreadStart(object obj);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ParameterizedThreadStart extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ParameterizedThreadStart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="obj" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="obj">Ein Objekt, das Daten für die Threadprozedur enthält.</param>
+    <summary>Stellt die Methode dar, die in einem <see cref="T:System.Threading.Thread" /> ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein verwalteter Thread erstellt wird, wird durch die Methode, die auf dem Thread ausgeführt wird dargestellt:  
+  
+-   Ein <xref:System.Threading.ThreadStart> Delegat, der an die <xref:System.Threading.Thread.%23ctor%28System.Threading.ThreadStart%29?displayProperty=nameWithType> Konstruktor.  Jede Methode, die über keine Parameter verfügt und zurückgibt `void` in c# oder einer `Sub` Prozedur in Visual Basic kann der Delegat darstellen.  
+  
+-   Ein <xref:System.Threading.ParameterizedThreadStart> Delegat, der an die <xref:System.Threading.Thread.%23ctor%28System.Threading.ParameterizedThreadStart%29?displayProperty=nameWithType> Konstruktor. Jede Methode, die einen einzelnen vom Typ Parameter <xref:System.Object> und gibt "void" in C#- oder ist eine Subprozedur in Visual Basic kann der Delegat darstellen.  
+  
+ Der Thread beginnt nicht ausgeführt werden, bis die <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> -Methode aufgerufen wird. Die <xref:System.Threading.ThreadStart> oder <xref:System.Threading.ParameterizedThreadStart> Delegaten für den Thread aufgerufen wird, und die Ausführung beginnt, in der ersten Zeile der Methode, die durch den Delegaten dargestellt wird. Im Fall von der <xref:System.Threading.ParameterizedThreadStart> zu delegieren, das Objekt, das an die <xref:System.Threading.Thread.Start%28System.Object%29> Methode an den Delegaten übergeben wird.  
+  
+> [!NOTE]
+>  Visual Basic- und C#-Benutzer können Auslassen der <xref:System.Threading.ThreadStart> oder <xref:System.Threading.ParameterizedThreadStart> Delegatkonstruktor beim Erstellen eines Threads. In Visual Basic verwenden die `AddressOf` Operator beim Ihrer Methode zum Übergeben der <xref:System.Threading.Thread.%23ctor%2A> Konstruktor, z. B. `Dim t As New Thread(AddressOf ThreadProc)`. Geben Sie in c# ist einfach der Name der Threadprozedur an. Der Compiler wählt den richtigen Delegatkonstruktor.  
+  
+> [!NOTE]
+>  Beim Erstellen einer <xref:System.Threading.ParameterizedThreadStart> delegieren für eine Instanzmethode in C++ wird der erste Parameter des Konstruktors die Instanzvariable ist. Bei einer statischen Methode ist der erste Parameter des Konstruktors 0 (null). Bei einer statischen Methode Delegatkonstruktors erfordert nur einen Parameter: die Adresse der Rückrufmethode darstellt, durch den Klassennamen qualifiziert.  
+  
+ Die <xref:System.Threading.ParameterizedThreadStart> delegieren und <xref:System.Threading.Thread.Start%28System.Object%29?displayProperty=nameWithType> methodenüberladung erleichtern die Daten an eine Threadprozedur übergeben, aber diese Technik ist nicht typsicher, da jedes Objekt übergeben werden kann <xref:System.Threading.Thread.Start%28System.Object%29?displayProperty=nameWithType>. Eine robustere Möglichkeit, Daten an eine Threadprozedur übergeben wird, die Threadprozedur und Datenfelder zu einem Worker-Objekt eingefügt werden soll. Weitere Informationen finden Sie unter [Threads erstellen und übergeben von Daten zur Startzeit](~/docs/standard/threading/creating-threads-and-passing-data-at-start-time.md).  
+  
+ Die <xref:System.Threading.ParameterizedThreadStart> Delegat unterstützt nur einen einzelnen Parameter. Sie können mehrere Datenelemente zum Übergeben der <xref:System.Threading.ParameterizedThreadStart> , indem Sie diesen Parameter an eines der folgenden machen:  
+  
+-   Ein Array.  
+  
+-   Eine Auflistungstyp, wenn alle angegebenen Datenelemente desselben Typs sind.  
+  
+-   Geben Sie ein Tupel, z. B. <xref:System.Tuple%602> oder <xref:System.Tuple%604>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Threading.ParameterizedThreadStart> Delegaten zum Ausführen einer statischen Methode und eine Instanzenmethode. Die erste <xref:System.Threading.ParameterizedThreadStart> Delegat wird dargestellt, von der statischen `DoWork` -Methode und die zweite wird dargestellt, von der Instanz `DoMoreWork` Methode. Beide Methoden entsprechen den <xref:System.Threading.ParameterizedThreadStart> Delegatsignatur; das heißt, sie haben einen einzelnen Parameter vom Typ <xref:System.Object> und keinen Wert zurück.  
+  
+> [!NOTE]
+>  Die Visual Basic- und C#-Compiler Ableiten der <xref:System.Threading.ParameterizedThreadStart> Delegieren von den Signaturen der `DoWork` und `DoMoreWork` Methoden, und rufen Sie den richtigen Konstruktor. Daher ist keine expliziten Konstruktoraufruf im Code.  
+  
+ [!code-cpp[System.Threading.ParameterizedThreadStart#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ParameterizedThreadStart/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ParameterizedThreadStart#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ParameterizedThreadStart/CS/source.cs#1)]
+ [!code-vb[System.Threading.ParameterizedThreadStart#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ParameterizedThreadStart/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,51 @@
+<Type Name="SchemaImporter" FullName="System.Xml.Serialization.SchemaImporter">
+  <TypeSignature Language="C#" Value="public abstract class SchemaImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SchemaImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SchemaImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt einen Schemaimporter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse beschreibt einen Schemaimporter, der ein XML-Schema in entsprechende Codeentitäten transformiert. Die <xref:System.Xml.Serialization.SchemaImporter> Klasse ist die übergeordnete Klasse von der <xref:System.Xml.Serialization.XmlSchemaImporter> -Klasse, die diese Funktion implementiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SchemaImporter.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Erweiterungen des Schema-Importer ab.</summary>
+        <value>Ein <see cref="T:System.Xml.Serialization.Configuration.SchemaImporterExtensionElementCollection" /> , die eine Auflistung von Erweiterungen des Schema-Importer enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweiterungen des Schema-Importer-Tool ändern das Verhalten des <xref:System.Xml.Serialization.XmlSchemaImporter> Objekte. Durch Hinzufügen von <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> Objekte, die dieser Sammlung können Sie durch ein bestimmtes Schema Muster generierten Code anpassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

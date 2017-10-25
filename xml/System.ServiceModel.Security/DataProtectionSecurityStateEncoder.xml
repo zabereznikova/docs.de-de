@@ -1,0 +1,193 @@
+<Type Name="DataProtectionSecurityStateEncoder" FullName="System.ServiceModel.Security.DataProtectionSecurityStateEncoder">
+  <TypeSignature Language="C#" Value="public class DataProtectionSecurityStateEncoder : System.ServiceModel.Security.SecurityStateEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataProtectionSecurityStateEncoder extends System.ServiceModel.Security.SecurityStateEncoder" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.DataProtectionSecurityStateEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Security.SecurityStateEncoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Codierungs- und Decodierungsmechanismen für den Sicherheitszustand unter Verwendung der Windows-<see langword="DataProtection" />-API-Funktionalität bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verwendet, für die Codierung des Sicherheitszustands, dargestellt durch eine *Token für den Sicherheitszustandskontext* beim Senden der Nachricht und zum Decodieren des Sicherheitskontexts der Nachricht an einen Empfänger eintrifft.  
+  
+ Die Codierung kann entweder im aktuellen Benutzerbereich durchgeführt werden (wobei nur Prozesse, die als Benutzerkonto ausgeführt werden, den Sicherheitszustand decodieren können) oder im Bereich des lokalen Computers (wobei alle auf dem Computer ausgeführten Prozesse den Sicherheitszustand decodieren können). Standardmäßig wird die Codierung im aktuellen Benutzerbereich durchgeführt.  
+  
+ Diese Klasse wird vom Server verwendet, wenn den Sicherheitszustand zu senden, in der *Token für den Sicherheitszustandskontext* an den Client ausgegeben.  
+  
+ `DataProtection` basierend auf dem `CurrentUser`-Bereich erfordert, dass der aktuelle Benutzer ein Benutzerprofil hat. Wenn der Benutzer über ein servergespeichertes Profil verfügt, kann der Sicherheitszustand, der durch einen auf einem bestimmten Computer ausgeführten Benutzerprozess codiert ist, von einem Benutzerprozess auf einem anderen Computer decodiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataProtectionSecurityStateEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataProtectionSecurityStateEncoder (bool useCurrentUserProtectionScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useCurrentUserProtectionScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useCurrentUserProtectionScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useCurrentUserProtectionScope">Gibt an, ob der aktuelle Benutzerschutzbereich verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataProtectionSecurityStateEncoder (bool useCurrentUserProtectionScope, byte[] entropy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useCurrentUserProtectionScope, unsigned int8[] entropy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.#ctor(System.Boolean,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useCurrentUserProtectionScope" Type="System.Boolean" />
+        <Parameter Name="entropy" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="useCurrentUserProtectionScope">Gibt an, ob der aktuelle Benutzerschutzbereich verwendet werden soll.</param>
+        <param name="entropy">Ein <see langword="byte" />-Array, das die Entropie für zusätzliche Zufälligkeit angibt, die der Encoder zum Codieren des Sicherheitszustands verwenden kann.</param>
+        <summary>Initialisiert eine neue Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeSecurityState">
+      <MemberSignature Language="C#" Value="protected override byte[] DecodeSecurityState (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance unsigned int8[] DecodeSecurityState(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.DecodeSecurityState(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein <see langword="byte" />-Array, das den codierten Sicherheitszustand darstellt.</param>
+        <summary>Decodiert den Sicherheitszustand.</summary>
+        <returns>Ein <see langword="byte" />-Array, das den decodierten Sicherheitszustand darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeSecurityState">
+      <MemberSignature Language="C#" Value="protected override byte[] EncodeSecurityState (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance unsigned int8[] EncodeSecurityState(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.EncodeSecurityState(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein <see langword="byte" />-Array, das den decodierten Sicherheitszustand darstellt.</param>
+        <summary>Codiert den Sicherheitszustand.</summary>
+        <returns>Ein <see langword="byte" />-Array, das den codierten Sicherheitszustand darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntropy">
+      <MemberSignature Language="C#" Value="public byte[] GetEntropy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetEntropy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.GetEntropy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zufälligkeit dieses Encoders an.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Byte" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die die aktuelle <see cref="T:System.ServiceModel.Security.DataProtectionSecurityStateEncoder" />-Instanz darstellt.</summary>
+        <returns>Gibt eine <see cref="T:System.String" /> zurück, die die aktuelle <see cref="T:System.ServiceModel.Security.DataProtectionSecurityStateEncoder" />-Instanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von dieser Methode zurückgegebene Informationen schließen den <xref:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.UseCurrentUserProtectionScope%2A>-Wert und <xref:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.GetEntropy%2A>-Wert der aktuellen Instanz ein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCurrentUserProtectionScope">
+      <MemberSignature Language="C#" Value="public bool UseCurrentUserProtectionScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCurrentUserProtectionScope" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.DataProtectionSecurityStateEncoder.UseCurrentUserProtectionScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Benutzerschutzbereich verwendet werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn der aktuelle Benutzerschutzbereich verwendet wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

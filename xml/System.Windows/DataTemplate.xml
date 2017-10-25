@@ -1,0 +1,274 @@
+<Type Name="DataTemplate" FullName="System.Windows.DataTemplate">
+  <TypeSignature Language="C#" Value="public class DataTemplate : System.Windows.FrameworkTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataTemplate extends System.Windows.FrameworkTemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkTemplate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.DictionaryKeyProperty("DataTemplateKey")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt die visuelle Struktur eines Datenobjekts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie verwenden eine <xref:System.Windows.DataTemplate> um die Visualisierung der Datenobjekte anzugeben. <xref:System.Windows.DataTemplate>-Objekte sind besonders hilfreich, wenn Sie eine Bindung eine <xref:System.Windows.Controls.ItemsControl> wie z. B. eine <xref:System.Windows.Controls.ListBox> an eine vollständige Auflistung. Ohne spezifische Anweisungen eine <xref:System.Windows.Controls.ListBox> eine Zeichenfolgendarstellung der Objekte in einer Auflistung zeigt. In diesem Fall können Sie eine <xref:System.Windows.DataTemplate> um die Darstellung Ihrer Daten Objekte definieren. Der Inhalt der <xref:System.Windows.DataTemplate> wird der visuellen Struktur der Datenobjekte.  
+  
+ Eine ausführliche Erläuterung finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.DataTemplate> Inline. Die <xref:System.Windows.DataTemplate> gibt an, dass jedes Datenelement wird, wie drei angezeigt <xref:System.Windows.Controls.TextBlock> Elemente innerhalb einer <xref:System.Windows.Controls.StackPanel>. In diesem Beispiel wird das Datenobjekt eine Klasse mit dem Namen `Task`. Beachten Sie, dass jedes <xref:System.Windows.Controls.TextBlock> Element in dieser Vorlage ist an eine Eigenschaft des gebundenen der `Task` Klasse.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
+  
+ Es ist eher üblich, definieren Sie eine <xref:System.Windows.DataTemplate> im Ressourcenabschnitt, damit es ein wiederverwendbares Objekt, wie im folgenden Beispiel werden kann:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
+[!code-xaml[DataTemplatingIntro_snip#AsResource](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#asresource)]  
+[!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
+  
+ Sie können `myTaskTemplate` nun als Ressource verwenden, wie im folgenden Beispiel veranschaulicht:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#MyTaskTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#mytasktemplate)]  
+  
+ Das vollständige Beispiel finden Sie unter [Einführung in das Datenvorlagenbeispiel](http://go.microsoft.com/fwlink/?LinkID=160009).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTemplate.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DataTemplate" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTemplate (object dataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object dataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTemplate.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataType" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataType">Wenn die Vorlage für Objektdaten vorgesehen ist, ist dies der Typname des Datenobjekts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DataTemplate" />-Klasse mit der angegebenen <see cref="P:System.Windows.DataTemplate.DataType" />-Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um auf den Namen der Klasse verweisen, verwenden Sie die [X: Type-Markuperweiterung](~/docs/framework/xaml-services/x-type-markup-extension.md). Wenn die Vorlage richtet [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] Daten, dies ist die Zeichenfolge, die den Tagnamen der Daten darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTemplateKey">
+      <MemberSignature Language="C#" Value="public object DataTemplateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataTemplateKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataTemplate.DataTemplateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardschlüssel von der <see cref="T:System.Windows.DataTemplate" />.</summary>
+        <value>Den Standardschlüssel von der <see cref="T:System.Windows.DataTemplate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nicht Festlegen der [X: Key-Anweisung](~/docs/framework/xaml-services/x-key-directive.md) auf eine <xref:System.Windows.DataTemplate> , die sich in einer <xref:System.Windows.ResourceDictionary>, die <xref:System.Windows.DataTemplate.DataTemplateKey%2A> als Schlüssel verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public object DataType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataTemplate.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Typs, für den diese <see cref="T:System.Windows.DataTemplate" /> vorgesehen ist.</summary>
+        <value>Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist vergleichbar mit der <xref:System.Windows.Style.TargetType%2A> Eigenschaft von der <xref:System.Windows.Style> Klasse. Bei Festlegung dieser Eigenschaft auf den Datentyp ohne Angabe einer `x:Key`die <xref:System.Windows.DataTemplate> ruft automatisch auf Datenobjekte dieses Typs angewendet. Beachten Sie, dass, wenn Sie dies tun, die `x:Key` implizit festgelegt. Daher, wenn Sie dies zuweisen <xref:System.Windows.DataTemplate> ein `x:Key` Wert, überschreiben Sie die implizite `x:Key` und die <xref:System.Windows.DataTemplate> nicht automatisch angewendet werden.  
+  
+ Beachten Sie, dass auch, wenn die Bindung wird ein <xref:System.Windows.Controls.ContentControl> auf eine Auflistung von `Task` Objekte, die <xref:System.Windows.Controls.ContentControl> verwendet nicht die <xref:System.Windows.DataTemplate> automatisch. Grund hierfür ist, der die Bindung für einen <xref:System.Windows.Controls.ContentControl> benötigt weitere Informationen zu unterscheiden, ob Sie eine vollständige Auflistung und die einzelnen Objekte binden möchten. Wenn Ihre <xref:System.Windows.Controls.ContentControl> besteht im Nachverfolgen der Auswahl von ein <xref:System.Windows.Controls.ItemsControl> geben, können Sie festlegen der <xref:System.Windows.Data.Binding.Path%2A> Eigenschaft von der <xref:System.Windows.Controls.ContentControl> Binden an "`/`", um anzugeben, dass Sie das aktuelle Element interessiert sind. Ein Beispiel finden Sie unter [Vorgehensweise: Binden an eine Auflistung und die Anzeige Informationen basieren auf der Auswahl des](~/docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md). Andernfalls müssen Sie an der <xref:System.Windows.DataTemplate> explizit durch Festlegen der <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.DataTemplate.DataType%2A> Eigenschaft ist besonders nützlich, wenn Sie haben eine <xref:System.Windows.Data.CompositeCollection> verschiedener Typen von Objekten.  
+  
+ Wenn diese Eigenschaft ein XML-Element ausgerichtet, die nicht im Standardnamespace ist ist, müssen Sie den Elementnamen mit dem Namespace oder einen Namespacebezeichner voranstellen. Für XML über LINQ für XML verfügbar gemacht werden angezeigt wird der Namespace in geschweifte Klammern, die eine Escapesequenz geschweiften Klammern vorangestellt:  
+  
+```xaml  
+<DataTemplate DataType="{}{http://myNamespace}Details">  
+```  
+  
+ Für XML über XPath verfügbar gemacht werden, der Elementnamen ein Namespacebezeichner hergestellt, die von einer Instanz von vorangestellt <xref:System.Windows.Data.XmlNamespaceMapping>:  
+  
+```xaml  
+<DataTemplate DataType="mn:Details">  
+```  
+  
+<a name="xamlAttributeUsage_DataType"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object DataType="typeName"/>  
+```  
+  
+<a name="xamlValues_DataType"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *Typname*  
+ Wenn die Vorlage für Objektdaten vorgesehen ist, enthält diese Eigenschaft den Typnamen des Datenobjekts (als Zeichenfolge). Um auf den Namen der Klasse verweisen, verwenden Sie die [X: Type-Markuperweiterung](~/docs/framework/xaml-services/x-type-markup-extension.md). Wenn die Vorlage richtet [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] Daten, die diese Eigenschaft enthält den Namen des XML-Elements. Finden Sie in der Dokumentation weitere ausführliche Hinweise zum Angeben eines nicht standardmäßiger Namespace für das XML-Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Triggers">
+      <MemberSignature Language="C#" Value="public System.Windows.TriggerCollection Triggers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TriggerCollection Triggers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataTemplate.Triggers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("VisualTree")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Template")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.TriggerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Triggern, die Eigenschaftswerte anwenden oder Ausführen von Aktionen, die basierend auf eine oder mehrere Bedingungen.</summary>
+        <value>Eine Auflistung von Triggerobjekten. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Trigger in eine Vorlage erstellt werden, sollte der Setter der Trigger Eigenschaften festlegen, die innerhalb des Bereichs der Datenvorlage sind. Andernfalls ist es möglicherweise besser geeignet, zum Erstellen von Triggern, die über ein Format, das den Typ als Ziel verwendet, der die Daten enthält. Angenommen, Sie Binden einer <xref:System.Windows.Controls.ListBox> -Steuerelement, die Container sind <xref:System.Windows.Controls.ListBoxItem> Objekte. Wenn Sie zum Festlegen von Eigenschaften, die nicht innerhalb des Bereichs der sind Trigger verwenden die <xref:System.Windows.DataTemplate>, wird es möglicherweise besser geeignet, zum Erstellen einer <xref:System.Windows.Controls.ListBoxItem> Stil, und Erstellen von Triggern in diesem Format. Weitere Informationen finden Sie in der Was gehört in eine DataTemplate? in der [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann nur festgelegt werden, [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] gezeigt Auflistungssyntax oder durch den Zugriff auf das Objekt und dessen verschiedene Methoden wie z. B. hinzufügen. Die Eigenschaft auf das Auflistungsobjekt selbst ist schreibgeschützt, die Auflistung an sich ist Lese-/ Schreibzugriff.  
+  
+<a name="xamlPropertyElementUsage_Triggers"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Triggers>  
+    OneOrMoreTriggers  
+  </object.Triggers>  
+</object>  
+```  
+  
+<a name="xamlValues_Triggers"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreTriggers*  
+ NULL oder mehr <xref:System.Windows.TriggerBase> Objekte.  
+  
+   
+  
+## Examples  
+ Die folgenden <xref:System.Windows.DataTemplate> veranschaulicht die Verwendung von der <xref:System.Windows.DataTemplate.Triggers%2A> Eigenschaft.  
+  
+ [!code-xaml[DataBindingLab#AuctionItemDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
+  
+ Das vollständige Beispiel finden Sie unter [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTemplatedParent">
+      <MemberSignature Language="C#" Value="protected override void ValidateTemplatedParent (System.Windows.FrameworkElement templatedParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateTemplatedParent(class System.Windows.FrameworkElement templatedParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTemplate.ValidateTemplatedParent(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templatedParent" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="templatedParent">Das Element wird auf diese Vorlage angewendet.</param>
+        <summary>Überprüft, das vorlagenbasierte übergeordneten Element anhand eines Satzes von Regeln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode verwendet die folgenden Regeln:  
+  
+-   Die `templatedParent` muss eine Wert ungleich Null <xref:System.Windows.FrameworkElement>.  
+  
+-   Die <xref:System.Windows.DataTemplate> muss angewendet werden, um eine <xref:System.Windows.Controls.ContentPresenter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

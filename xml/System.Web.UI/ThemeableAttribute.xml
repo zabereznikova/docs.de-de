@@ -1,0 +1,297 @@
+<Type Name="ThemeableAttribute" FullName="System.Web.UI.ThemeableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ThemeableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ThemeableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ThemeableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Metadatenattribut, das Webserver- und ihre Member verwenden, um anzugeben, ob ihre Darstellung kann beeinflusst werden, indem Sie Designs und Skins steuern. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuern der Entwickler verwenden die <xref:System.Web.UI.ThemeableAttribute> Attribut ergänzt Steuerelementtypen und ihre Mitglieder, Signal, welche können durch Designs beeinflusst werden und Designs zu steuern. Standardmäßig sind alle Eigenschaften, die von einem Steuerelement verfügbar gemacht Design beeinflusst. Designs werden jedoch in der Regel nur auf Stileigenschaften angewendet; die `Themeable(false)` Attribut explizit auf alle nicht stilistischer Eigenschaften angewendet werden soll. Ergänzen ein Element mit der `Themeable(false)` Attribut wird sichergestellt, dass der Member nicht Designs, unabhängig vom Wert des ist die <xref:System.Web.UI.Control.EnableTheming%2A> Eigenschaft. Z. B. wenn die <xref:System.Web.UI.ThemeableAttribute> -Attribut ist auf ein Steuerelement angewendet, und legen Sie auf `false`, das Steuerelement ist nicht betroffen, von Designs, auch wenn die <xref:System.Web.UI.Control.EnableTheming%2A> -Eigenschaftensatz auf `true`.  
+  
+ Die <xref:System.Web.UI.ThemeableAttribute> -Klasse verwaltet eine statische Liste aller Typen, die Designs unterstützen, und diese Liste wird angezeigt. wenn der statischen Methoden <xref:System.Web.UI.ThemeableAttribute.IsObjectThemeable%2A> und <xref:System.Web.UI.ThemeableAttribute.IsTypeThemeable%2A> aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.Web.UI.ThemeableAttribute> -Attribut auf einen Member eines Steuerelements. In diesem Beispiel <xref:System.Web.UI.ThemeableAttribute> auf einem datengebundenen Steuerelement angewendet wird und `false` wird zum Übergeben der <xref:System.Web.UI.ThemeableAttribute.%23ctor%2A> Konstruktor gibt an, dass die `DataSourceID` Element sind keine Designs. (Übergeben `false` an den Konstruktor führt zu einer <xref:System.Web.UI.ThemeableAttribute> -Instanz, die entspricht der <xref:System.Web.UI.ThemeableAttribute.No> Feld.)  
+  
+ [!code-csharp[System.Web.UI.ThemeableAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ThemeableAttribute/CS/themeableattribute1.cs#1)]
+ [!code-vb[System.Web.UI.ThemeableAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ThemeableAttribute/VB/themeableattribute1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThemeableAttribute (bool themeable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool themeable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="themeable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="themeable">
+          <see langword="true" />zum Initialisieren der <see cref="T:System.Web.UI.ThemeableAttribute" /> zur Darstellung eines Typs oder Members, die von der Designs betroffen ist, andernfalls kann <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ThemeableAttribute" /> -Klasse unter Verwendung des angegebenen booleschen Werts um zu bestimmen, ob das Attribut stellt einen Typ oder Member, die von Designs und Steuerelementskins betroffen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben von `true` an diesen Konstruktor entspricht der Verwendung der <xref:System.Web.UI.ThemeableAttribute.Yes> Feld beim Übergeben von `false` entspricht der <xref:System.Web.UI.ThemeableAttribute.No> Feld.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.Web.UI.ThemeableAttribute> -Attribut auf einen Member eines Steuerelements. In diesem Beispiel <xref:System.Web.UI.ThemeableAttribute> auf einem datengebundenen Steuerelement angewendet wird und `false` wird zum Übergeben der <xref:System.Web.UI.ThemeableAttribute.%23ctor%2A> Konstruktor gibt an, dass die `DataSourceID` Element sind keine Designs. (Übergeben `false` an den Konstruktor führt zu einer <xref:System.Web.UI.ThemeableAttribute> -Instanz, die entspricht der <xref:System.Web.UI.ThemeableAttribute.No> Feld.)  
+  
+ [!code-csharp[System.Web.UI.ThemeableAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ThemeableAttribute/CS/themeableattribute1.cs#1)]
+ [!code-vb[System.Web.UI.ThemeableAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ThemeableAttribute/VB/themeableattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.ThemeableAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.ThemeableAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ThemeableAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ThemeableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.ThemeableAttribute" /> Instanz, die den Anwendung definierten Standardwert des Attributs darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert der <xref:System.Web.UI.ThemeableAttribute> Klasse entspricht dem <xref:System.Web.UI.ThemeableAttribute.Yes> Feld. Dies entspricht nicht unbedingt mit einer Instanz, die mit dem Standardkonstruktor der Klasse erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see langword="object" /> , mit dieser Instanz verglichen werden soll oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="obj" /> die gleiche Instanz wie die aktuelle Instanz ist oder wenn die Instanzen abweichen voneinander, aber die Attributwerte aufgeführt, entspricht, andernfalls sind <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für die <see cref="T:System.Web.UI.ThemeableAttribute" /> Typ.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Web.UI.ThemeableAttribute" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ThemeableAttribute.GetHashCode%2A> Methode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeableAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, ob die aktuelle Instanz entspricht einem <see cref="F:System.Web.UI.ThemeableAttribute.Default" /> -Instanz die <see cref="T:System.Web.UI.ThemeableAttribute" /> Klasse.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Instanz gleich einem <see cref="F:System.Web.UI.ThemeableAttribute.Default" /> Instanz der Klasse ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsObjectThemeable">
+      <MemberSignature Language="C#" Value="public static bool IsObjectThemeable (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsObjectThemeable(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeableAttribute.IsObjectThemeable(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Das Objekt, für die Unterstützung von Designs überprüft.</param>
+        <summary>Gibt einen Wert, der angibt, ob das Objekt, das an die Methode übergebenen Designs unterstützt.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt Designs und Steuerelementskins unterstützt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="instance" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeThemeable">
+      <MemberSignature Language="C#" Value="public static bool IsTypeThemeable (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsTypeThemeable(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeableAttribute.IsTypeThemeable(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> zum Testen der Unterstützung von Designs.</param>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Type" /> an die Methode unterstützt Designs übergeben.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Type" /> unterstützt Designs und Steuerelementskins; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ThemeableAttribute> Klasse verwaltet einen statischen internen Katalog von Typen zur Unterstützung von Designs und diese Methode überprüft den Katalog, um zu bestimmen, ob das angegebene <xref:System.Type> es dargestellt wird. Wenn es nicht der Fall ist, überprüft die Methode die <xref:System.ComponentModel.AttributeCollection> zugeordnete Objekt der <xref:System.Type> für die <xref:System.Web.UI.ThemeableAttribute> Attribut, um zu bestimmen, ob Designs unterstützt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="type" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.ThemeableAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.ThemeableAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ThemeableAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ThemeableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.ThemeableAttribute" /> Instanz verwendet, um ergänzen, einen Typ oder Member, die nicht von Designs und Steuerelementskins betroffen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ThemeableAttribute.No> Feld entspricht dem Erstellen einer Instanz mit der <xref:System.Web.UI.ThemeableAttribute.%23ctor%28System.Boolean%29> Konstruktor und die Übertragung des `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Themeable">
+      <MemberSignature Language="C#" Value="public bool Themeable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Themeable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ThemeableAttribute.Themeable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das aktuelle Steuerelement oder Element eines Steuerelements steuern, Designs, die für die Web-Anwendung definiert und von Designs beeinflusst werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn der aktuelle Typ oder Member von Designs beeinflusst werden kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Element wird von Designs beeinflusst, wenn keine <xref:System.Web.UI.ThemeableAttribute> Attribut für das Element explizit definiert ist oder die `Themeable(true)` Attribut angewendet wird. Ein Element wird nicht von Designs beeinflusst, wenn die `Themeable(false)` Attribut angewendet wird; dies ist der Standardwert für <xref:System.Web.UI.ThemeableAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.ThemeableAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.ThemeableAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ThemeableAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ThemeableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.ThemeableAttribute" /> Instanz verwendet, um ergänzen, einen Typ oder Member, die von Designs und Steuerelementskins betroffen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ThemeableAttribute.Yes> Feld entspricht dem Erstellen einer Instanz mit der <xref:System.Web.UI.ThemeableAttribute.%23ctor%28System.Boolean%29> Konstruktor und die Übertragung des `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

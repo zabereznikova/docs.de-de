@@ -1,0 +1,121 @@
+<Type Name="DataControlReferenceIDConverter" FullName="System.Web.DynamicData.Design.DataControlReferenceIDConverter">
+  <TypeSignature Language="C#" Value="public class DataControlReferenceIDConverter : System.ComponentModel.StringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataControlReferenceIDConverter extends System.ComponentModel.StringConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.Design.DataControlReferenceIDConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.StringConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Auflistung von auswählbaren von Data-Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Entwurfszeit die <xref:System.Web.DynamicData.Design.DataControlReferenceIDConverter> Klasse führt die Konvertierung vom Typ der Steuerelemente in der Auflistung. Diese Klasse wird in der Regel verweist die <xref:System.ComponentModel.TypeConverterAttribute> Attribut.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataControlReferenceIDConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.Design.DataControlReferenceIDConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.Design.DataControlReferenceIDConverter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neue Instanz der dem <xref:System.Web.DynamicData.Design.DataControlReferenceIDConverter> Klasse wird erstellt, wenn die Konverterklasse, indem aufgerufen wird ein <xref:System.ComponentModel.TypeConverterAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.Design.DataControlReferenceIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen für diesen Typkonverter bereitstellt.</param>
+        <summary>Gibt eine Auflistung von verfügbaren Steuerelementwerte zurück.</summary>
+        <returns>Eine Auflistung, die die Namen der verfügbaren Steuerelemente enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.Design.DataControlReferenceIDConverter.GetStandardValues%2A?displayProperty=nameWithType> Methode ruft den Satz von Steuerelementen, die konvertiert werden kann. Erstellt eine <xref:System.ComponentModel.TypeConverter.StandardValuesCollection> Instanz, die enthält Objekte, die gültige Datentypen in `context`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.Design.DataControlReferenceIDConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen für diesen Typkonverter bereitstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob die zurückgegebenen Steuerelementnamen eine exklusive Liste aller möglichen Werte sind.</summary>
+        <returns>Immer <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.Design.DataControlReferenceIDConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen für diesen Typkonverter bereitstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob dieser Konverter einen Standardsatz von Steuerelementnamen unterstützt, die aus der Auflistung ausgewählt werden können.</summary>
+        <returns>Immer <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

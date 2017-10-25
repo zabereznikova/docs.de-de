@@ -1,0 +1,141 @@
+<Type Name="IButtonControl" FullName="System.Windows.Forms.IButtonControl">
+  <TypeSignature Language="C#" Value="public interface IButtonControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IButtonControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IButtonControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es einem Steuerelement, als Schaltfläche in einem Formular zu fungieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel, in denen diese Schnittstelle implementiert werden kann ist Standard und die Schaltfläche Verarbeitung "Abbrechen". Standardschaltflächen werden benachrichtigt, wenn eine nicht verarbeitete EINGABETASTE eingegeben wird, für ein Formular, wie ein Dialogfeld geschlossen werden würde. Auf ähnliche Weise "Abbrechen" Schaltflächen werden benachrichtigt, sobald eine nicht verarbeitete ESC-Taste in einem Formular viel eingegeben wird, wie ein Dialogfeld verworfen werden würde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel erbt der <xref:System.Windows.Forms.ButtonBase> -Klasse und implementiert die <xref:System.Windows.Forms.IButtonControl> Schnittstelle. Implementierung wird hinzugefügt, um die <xref:System.Windows.Forms.IButtonControl.DialogResult%2A> Eigenschaft und die <xref:System.Windows.Forms.IButtonControl.NotifyDefault%2A> und <xref:System.Windows.Forms.IButtonControl.PerformClick%2A> Methoden.  
+  
+ [!code-cpp[IButtonControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IButtonControl Implementation/CPP/mybutton.cpp#1)]
+ [!code-csharp[IButtonControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IButtonControl Implementation/CS/mybutton.cs#1)]
+ [!code-vb[IButtonControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IButtonControl Implementation/VB/mybutton.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementieren Sie diese Schnittstelle in Klassen, die als Schaltflächen-Steuerelemente fungieren. Die Elemente dieser Schnittstelle bietet eine grundlegende Schaltflächenfunktionalität, z. B. beim Einfügen einer <see cref="T:System.Windows.Forms.DialogResult" /> auf das übergeordnete Formular oder die Fähigkeit zum Ausführen einer <see cref="E:System.Windows.Forms.Control.Click" /> ein einzelnes Ereignis oder fungiert als Standardschaltfläche eines Formulars.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="DialogResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult DialogResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DialogResult DialogResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IButtonControl.DialogResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert an das übergeordnete Formular zurückgegeben wird, wenn die Schaltfläche geklickt wird.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Formular angezeigt wird, wie ein Dialogfeld mithilfe der <xref:System.Windows.Forms.Form.ShowDialog%2A> -Methode und eine der zugehörigen Schaltflächen geklickt wird, der Schaltfläche <xref:System.Windows.Forms.IButtonControl.DialogResult%2A> Wert wird dem Formular zugewiesenen <xref:System.Windows.Forms.Form.DialogResult%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel erbt der <xref:System.Windows.Forms.ButtonBase> -Klasse und implementiert die <xref:System.Windows.Forms.IButtonControl> Schnittstelle. Implementierung wird hinzugefügt, um die <xref:System.Windows.Forms.IButtonControl.DialogResult%2A> Eigenschaft und die <xref:System.Windows.Forms.IButtonControl.NotifyDefault%2A> und <xref:System.Windows.Forms.IButtonControl.PerformClick%2A> Methoden.  
+  
+ [!code-cpp[IButtonControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IButtonControl Implementation/CPP/mybutton.cpp#1)]
+ [!code-csharp[IButtonControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IButtonControl Implementation/CS/mybutton.cs#1)]
+ [!code-vb[IButtonControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IButtonControl Implementation/VB/mybutton.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyDefault">
+      <MemberSignature Language="C#" Value="public void NotifyDefault (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifyDefault(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IButtonControl.NotifyDefault(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see langword="true" />Wenn das Steuerelement als Standardschaltfläche Verhalten soll. andernfalls <see langword="false" />.</param>
+        <summary>Benachrichtigt ein Steuerelement, dass es die Standardschaltfläche ist, sodass die Darstellung und Verhalten entsprechend angepasst wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von einem übergeordneten Formular ein Steuerelement die Standardschaltfläche vornehmen aufgerufen. Standardschaltflächen ist auf einen breiteren Rand festgelegt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel erbt der <xref:System.Windows.Forms.ButtonBase> -Klasse und implementiert die <xref:System.Windows.Forms.IButtonControl> Schnittstelle. Implementierung wird hinzugefügt, um die <xref:System.Windows.Forms.IButtonControl.DialogResult%2A> Eigenschaft und die <xref:System.Windows.Forms.IButtonControl.NotifyDefault%2A> und <xref:System.Windows.Forms.IButtonControl.PerformClick%2A> Methoden.  
+  
+ [!code-cpp[IButtonControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IButtonControl Implementation/CPP/mybutton.cpp#1)]
+ [!code-csharp[IButtonControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IButtonControl Implementation/CS/mybutton.cs#1)]
+ [!code-vb[IButtonControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IButtonControl Implementation/VB/mybutton.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformClick">
+      <MemberSignature Language="C#" Value="public void PerformClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PerformClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IButtonControl.PerformClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert eine <see cref="E:System.Windows.Forms.Control.Click" /> -Ereignis für das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen für die Schaltfläche ", die Fokus besitzt, oder die Standardschaltfläche (falls keine Schaltfläche" Sonstige "den Fokus erhält), wenn der Benutzer die EINGABETASTE drückt. Diese Methode wird auch aufgerufen, wenn der Benutzer die ESC-Taste drückt, wenn die Schaltfläche als "Abbrechen"-Schaltfläche festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel erbt der <xref:System.Windows.Forms.ButtonBase> -Klasse und implementiert die <xref:System.Windows.Forms.IButtonControl> Schnittstelle. Implementierung wird hinzugefügt, um die <xref:System.Windows.Forms.IButtonControl.DialogResult%2A> Eigenschaft und die <xref:System.Windows.Forms.IButtonControl.NotifyDefault%2A> und <xref:System.Windows.Forms.IButtonControl.PerformClick%2A> Methoden.  
+  
+ [!code-cpp[IButtonControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IButtonControl Implementation/CPP/mybutton.cpp#1)]
+ [!code-csharp[IButtonControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IButtonControl Implementation/CS/mybutton.cs#1)]
+ [!code-vb[IButtonControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IButtonControl Implementation/VB/mybutton.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

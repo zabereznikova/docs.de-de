@@ -1,0 +1,133 @@
+<Type Name="PropertyValidationContext" FullName="System.Workflow.ComponentModel.Compiler.PropertyValidationContext">
+  <TypeSignature Language="C#" Value="public sealed class PropertyValidationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyValidationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.PropertyValidationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Kontext zur Validierung einer <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyValidationContext (object propertyOwner, System.Workflow.ComponentModel.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object propertyOwner, class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.PropertyValidationContext.#ctor(System.Object,System.Workflow.ComponentModel.DependencyProperty)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyOwner" Type="System.Object" />
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="propertyOwner">Das <see cref="T:System.Object" />, das die Eigenschaft besitzt.</param>
+        <param name="dependencyProperty">Die zugeordnete <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.PropertyValidationContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyOwner" /> ist ein NULL-Verweis (Visual Basic <see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyValidationContext (object propertyOwner, System.Reflection.PropertyInfo propertyInfo, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object propertyOwner, class System.Reflection.PropertyInfo propertyInfo, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.PropertyValidationContext.#ctor(System.Object,System.Reflection.PropertyInfo,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyOwner" Type="System.Object" />
+        <Parameter Name="propertyInfo" Type="System.Reflection.PropertyInfo" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyOwner">Das <see cref="T:System.Object" />, das die Eigenschaft besitzt.</param>
+        <param name="propertyInfo">Die zugeordnete <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="propertyName">Den Namen der Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.PropertyValidationContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyName" /> ist ein NULL-Verweis (Visual Basic <see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public object Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Property" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.PropertyValidationContext.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> ab, die dieser Instanz als <see cref="T:System.Object" /> zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />, die dieser Instanz als <see cref="T:System.Object" /> zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.PropertyValidationContext.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Eigenschaftennamen ab, der dieser Instanz zugeordnet ist.</summary>
+        <value>Der Eigenschaftenname, der dieser Instanz zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyOwner">
+      <MemberSignature Language="C#" Value="public object PropertyOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PropertyOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.PropertyValidationContext.PropertyOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Object" /> ab, das die Eigenschaft besitzt, die dieser Instanz zugeordnet ist.</summary>
+        <value>Das <see cref="T:System.Object" />, das die Eigenschaft besitzt, die dieser Instanz zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

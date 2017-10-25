@@ -1,0 +1,95 @@
+<Type Name="IFileChangeNotificationSystem" FullName="System.Runtime.Caching.Hosting.IFileChangeNotificationSystem">
+  <TypeSignature Language="C#" Value="public interface IFileChangeNotificationSystem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFileChangeNotificationSystem" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Methode zum Bereitstellen einer benutzerdefiniertes <see cref="T:System.Runtime.Caching.FileChangeMonitor" /> Objekt um eine Cacheimplementierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In ASP.NET die <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem> Schnittstelle ermöglicht den Zugriff auf interne Datei-Benachrichtigung änderungsverwaltung.  
+  
+ Die <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem> Schnittstelle werden intern von der <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse.  
+  
+ Wenn eine Cacheimplementierung in einer ASP.NET-Anwendungsdomäne ausgeführt wird, den ASP.NET implementiert eine <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem> Schnittstelle, über die <xref:System.Runtime.Caching.ObjectCache.Host%2A> Eigenschaft. Die <xref:System.Runtime.Caching.HostFileChangeMonitor> Klasse diese Eigenschaft erkennt und verwendet die ASP.NET dateiänderung Benachrichtigungssystem um zu entfernenden Einträge im Cache basierend auf Datei-änderungsbenachrichtigung.  
+  
+ In nicht-ASP.NET-Anwendungen, es ist keine hostumgebung, die eine benutzerdefinierte implementiert <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem> Schnittstelle. Daher die <xref:System.Runtime.Caching.HostFileChangeMonitor> -Klasse verwendet die <xref:System.IO.FileSystemWatcher> Klasse der CLR.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="StartMonitoring">
+      <MemberSignature Language="C#" Value="public void StartMonitoring (string filePath, System.Runtime.Caching.OnChangedCallback onChangedCallback, out object state, out DateTimeOffset lastWriteTime, out long fileSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartMonitoring(string filePath, class System.Runtime.Caching.OnChangedCallback onChangedCallback, [out] object&amp; state, [out] valuetype System.DateTimeOffset&amp; lastWriteTime, [out] int64&amp; fileSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StartMonitoring(System.String,System.Runtime.Caching.OnChangedCallback,System.Object@,System.DateTimeOffset@,System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="onChangedCallback" Type="System.Runtime.Caching.OnChangedCallback" />
+        <Parameter Name="state" Type="System.Object&amp;" RefType="out" />
+        <Parameter Name="lastWriteTime" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="fileSize" Type="System.Int64&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">Der vollqualifizierte physische Pfad des Verzeichnisses oder einer Datei zum Überwachen von Änderungen.</param>
+        <param name="onChangedCallback">Ein Verweis auf eine Methode, implementiert die <see cref="T:System.Runtime.Caching.OnChangedCallback" /> delegieren. Wenn die überwachten Datei oder das Verzeichnis ändert, ändert der hostumgebung Implementierung von der <see cref="T:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem" /> Schnittstelle löst ein Ereignis aus, durch den Aufruf der <see cref="T:System.Runtime.Caching.OnChangedCallback" /> Klasse.</param>
+        <param name="state">Der Status, der von der hostumgebung bereitgestellt wird. Cache-Implementierungen und benutzerdefinierten Änderungen Monitore sollten die Status-Wert als nicht transparent behandeln. Allerdings der Zustand muss gespeichert werden, damit es an die hostumgebung gesendet werden kann, wenn die Cacheimplementierung Ruft die <see cref="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StopMonitoring(System.String,System.Object)" /> Methode.</param>
+        <param name="lastWriteTime">Wenn diese Methode zurückgibt, enthält das letzte Datum und Uhrzeit des Auftretens ein Schreibvorgangs auf <c>FilePath</c>. Dieser Parameter wird nicht initialisiert übergeben. Dieser Parameter wird von der hostumgebung zurückgegeben.</param>
+        <param name="fileSize">Bei der Rückgabe dieser Methode enthält die Gesamtgröße der überwachten <c>FilePath</c>. Dieser Parameter wird nicht initialisiert übergeben. Dieser Parameter wird von der hostumgebung zurückgegeben.</param>
+        <summary>Registriert einen Dateipfad mit der hostumgebung zu überwachen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von benutzerdefinierten Cacheobjekten verwendeten und benutzerdefinierten Änderungen Monitore, die der hostumgebung implementieren <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem> Schnittstelle, um die Dateipfade für die Überwachung mit der hostumgebung zu registrieren. Die <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StartMonitoring%2A> -Methode wird vom Implementierer aufgerufen die <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem> Schnittstelle um eine Datei oder ein Verzeichnis für die Überwachung der Änderung zu registrieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopMonitoring">
+      <MemberSignature Language="C#" Value="public void StopMonitoring (string filePath, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopMonitoring(string filePath, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StopMonitoring(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">Der Pfad der Datei oder des Ordners beim Beenden der Überwachung. Dies sollte einen Datei-Pfad-Wert, der in einen früheren Aufruf übergeben wurde entsprechen den <see cref="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StartMonitoring(System.String,System.Runtime.Caching.OnChangedCallback,System.Object@,System.DateTimeOffset@,System.Int64@)" /> Methode.</param>
+        <param name="state">Die Statusinformationen, die ursprünglich von der hostumgebung, während einen früheren Aufruf bereitgestellt wurde der <see cref="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StartMonitoring(System.String,System.Runtime.Caching.OnChangedCallback,System.Object@,System.DateTimeOffset@,System.Int64@)" /> Methode.</param>
+        <summary>Enden ändern überwachen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StopMonitoring%2A> -Methode muss aufgerufen werden, indem benutzerdefinierte Caches und benutzerdefinierte Monitore, die von der hostumgebung verworfen werden zum Beenden der Überwachung Dateipfade und Verzeichnisse zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

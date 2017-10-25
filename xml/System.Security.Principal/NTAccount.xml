@@ -1,0 +1,351 @@
+<Type Name="NTAccount" FullName="System.Security.Principal.NTAccount">
+  <TypeSignature Language="C#" Value="public sealed class NTAccount : System.Security.Principal.IdentityReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NTAccount extends System.Security.Principal.IdentityReference" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.NTAccount" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Principal.IdentityReference</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Benutzer oder Gruppe an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NTAccount (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name, der zum Erstellen der <see cref="T:System.Security.Principal.NTAccount" /> Objekt. Dieser Parameter darf nicht sein <see langword="null" /> oder eine leere Zeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Principal.NTAccount" /> Klasse mit dem angegebenen Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der angegebene Name ist nicht erforderlich, um ein vorhandenes Konto oder Gruppe, aber die Übersetzung in andere entsprechen <xref:System.Security.Principal.IdentityReference>-abgeleitete Typen ist nicht möglich, wenn das Konto oder Gruppe vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" />ist zu lang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NTAccount (string domainName, string accountName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string domainName, string accountName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="domainName" Type="System.String" />
+        <Parameter Name="accountName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="domainName">Der Name der Domäne. Dieser Parameter kann <see langword="null" /> oder eine leere Zeichenfolge. Domänennamen, die null-Werte werden wie eine leere Zeichenfolge behandelt.</param>
+        <param name="accountName">Der Name des Kontos. Dieser Parameter darf nicht sein <see langword="null" /> oder eine leere Zeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Principal.NTAccount" /> Klasse, indem Sie den angegebenen Domänennamen und den Kontonamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der angegebene Domänen- und Kontoname sind nicht erforderlich, um ein vorhandenes Konto oder Gruppe, aber die Übersetzung in andere entsprechen <xref:System.Security.Principal.IdentityReference>-abgeleitete Typen ist nicht möglich, wenn das Konto oder Gruppe vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="accountName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="accountName" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="accountName" />ist zu lang.  
+  
+ - oder -   
+  
+ <paramref name="domainName" />ist zu lang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein zu vergleichendes mit diesem Objekt <see cref="T:System.Security.Principal.NTAccount" /> -Objekt, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob dies <see cref="T:System.Security.Principal.NTAccount" /> -Objekt mit einem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ein Objekt mit dem gleichen zugrunde liegenden Typ und Wert wie diese <see cref="T:System.Security.Principal.NTAccount" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für die aktuelle <see cref="T:System.Security.Principal.NTAccount" /> Objekt. Die <see cref="M:System.Security.Principal.NTAccount.GetHashCode" /> Methode eignet sich für Hashalgorithmen und Datenstrukturen wie Hashtabellen.</summary>
+        <returns>Einen Hashwert für den aktuellen <see cref="T:System.Security.Principal.NTAccount" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidTargetType">
+      <MemberSignature Language="C#" Value="public override bool IsValidTargetType (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsValidTargetType(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.IsValidTargetType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">Der Typ, dessen Gültigkeit abgefragt wird als eine Konvertierung von dienen <see cref="T:System.Security.Principal.NTAccount" />. Die folgenden Zieltypen sind gültig:  
+  
+ \- <see cref="T:System.Security.Principal.NTAccount" />  
+  
+ \- <see cref="T:System.Security.Principal.SecurityIdentifier" /></param>
+        <summary>Gibt einen Wert, der angibt, ob der angegebene Typ ein gültiger Verschiebungstyp für ist das <see cref="T:System.Security.Principal.NTAccount" /> Klasse.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="targetType" /> ist ein Typ gültige Übersetzung für die <see cref="T:System.Security.Principal.NTAccount" /> Klasse ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Security.Principal.NTAccount left, System.Security.Principal.NTAccount right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Security.Principal.NTAccount left, class System.Security.Principal.NTAccount right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.op_Equality(System.Security.Principal.NTAccount,System.Security.Principal.NTAccount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Principal.NTAccount" />
+        <Parameter Name="right" Type="System.Security.Principal.NTAccount" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der linke Operand für den Gleichheitsvergleich verwendet. Dieser Parameter kann <see langword="null" /> sein.</param>
+        <param name="right">Der Rechte Operand für den Gleichheitsvergleich verwendet. Dieser Parameter kann <see langword="null" /> sein.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Security.Principal.NTAccount" /> Objekte bestimmen, ob sie gleich sind. Diese werden als gleich betrachtet, wenn sie den kanonischen Namen wie das zurückgegebene sind die <see cref="P:System.Security.Principal.NTAccount.Value" /> Eigenschaft oder wenn beide <see langword="null" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="left" /> und <paramref name="right" /> gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Security.Principal.NTAccount left, System.Security.Principal.NTAccount right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Security.Principal.NTAccount left, class System.Security.Principal.NTAccount right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.op_Inequality(System.Security.Principal.NTAccount,System.Security.Principal.NTAccount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Principal.NTAccount" />
+        <Parameter Name="right" Type="System.Security.Principal.NTAccount" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der linke Operand für den Ungleichheitsvergleich verwendet werden soll. Dieser Parameter kann <see langword="null" /> sein.</param>
+        <param name="right">Der Rechte Operand für den Ungleichheitsvergleich verwendet werden soll. Dieser Parameter kann <see langword="null" /> sein.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Security.Principal.NTAccount" /> Objekte bestimmen, ob diese ungleich sind. Sie sind nicht als gleich betrachtet, wenn sie anderen kanonischen Namen als dem zurückgegebenes ausgetauschten der <see cref="P:System.Security.Principal.NTAccount.Value" /> Eigenschaft oder eines der Objekte ist <see langword="null" /> und die andere nicht.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="left" /> und <paramref name="right" /> nicht gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Kontonamen im *Domäne* ** \\ ** *Konto* Format für das Konto, dargestellt durch die <see cref="T:System.Security.Principal.NTAccount" /> Objekt.</summary>
+        <returns>Der Kontoname in *Domäne* ** \\ ** *Konto* Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.IdentityReference Translate (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Principal.IdentityReference Translate(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.NTAccount.Translate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IdentityReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">Der Zieltyp für die Konvertierung von <see cref="T:System.Security.Principal.NTAccount" />. Der Zieltyp muss ein Typ, der durch gültig angesehen wird die <see cref="M:System.Security.Principal.NTAccount.IsValidTargetType(System.Type)" /> Methode.</param>
+        <summary>Übersetzt den Kontonamen, dargestellt durch die <see cref="T:System.Security.Principal.NTAccount" /> Objekt in eine andere <see cref="T:System.Security.Principal.IdentityReference" />-abgeleiteten Typ.</summary>
+        <returns>Die konvertierte Identität.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetType" /> weist nicht den <see cref="T:System.Security.Principal.IdentityReference" />-Typ auf.</exception>
+        <exception cref="T:System.Security.Principal.IdentityNotMappedException">Manche oder alle Identitätsverweise konnten nicht übersetzt werden.</exception>
+        <exception cref="T:System.SystemException">Der Kontoname für die Quelle ist zu lang.  
+  
+ - oder -   
+  
+ Ein Win32-Fehlercode wurde zurückgegeben.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Bearbeiten des Hauptobjekts. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.NTAccount.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Zeichenfolge in Großbuchstaben Darstellung dieses <see cref="T:System.Security.Principal.NTAccount" /> Objekt.</summary>
+        <value>Die Zeichenfolge in Großbuchstaben Darstellung dieses <see cref="T:System.Security.Principal.NTAccount" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

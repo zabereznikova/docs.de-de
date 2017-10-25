@@ -1,0 +1,44 @@
+<Type Name="HandledEventHandler" FullName="System.ComponentModel.HandledEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void HandledEventHandler(object sender, HandledEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HandledEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.HandledEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.HandledEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.ComponentModel.HandledEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt eine Methode, die Ereignisse verarbeiten kann, die möglicherweise erfordern ggf. keine weitere Verarbeitung, nachdem der Ereignishandler zurückgegeben hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat ist verfügbar für die Verwendung mit Ihren eigenen Ereignisse bei der <xref:System.ComponentModel.HandledEventArgs.Handled%2A?displayProperty=nameWithType> Eigenschaft ausreichend Ereignisdaten bereitstellt. Festlegen des ereignishandlers kann die <xref:System.ComponentModel.HandledEventArgs.Handled%2A> Eigenschaft `true` , wenn alle erforderlichen Verarbeitungsschritte im Handler abgeschlossen wurde.  
+  
+ In der Regel Ereignisse, die diese Funktionen erfordern benötigen Sie auch zusätzliche Ereignisdaten und verwendet eine Klasse, die abgeleitet <xref:System.ComponentModel.HandledEventArgs> zusammen mit einem entsprechenden, ähnlich benannten Delegattyp als Typ. Z. B. die <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> Ereignis verwendet die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventArgs> Ereignisdaten Typ und die <xref:System.Windows.Forms.DataGridViewRowPrePaintEventHandler> Delegattyp. Da Delegaten nicht geerbt werden, die <xref:System.ComponentModel.HandledEventHandler> wird selten verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

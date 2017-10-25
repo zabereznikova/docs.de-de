@@ -1,0 +1,1488 @@
+<Type Name="CngKey" FullName="System.Security.Cryptography.CngKey">
+  <TypeSignature Language="C#" Value="public sealed class CngKey : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CngKey extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Kernfunktionen für Schlüssel, die mit CNG-Objekten (Cryptography Next Generation) verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Wrapper NCrypt-Schlüssel, nicht BCrypt-Schlüssel. NCrypt ist eine Teilmenge von CNG, die Schlüsselspeicherfunktionen bereitstellt. BCrypt ist eine Teilmenge, die grundlegende kryptografische Dienste wie z. B. das Generieren von Zufallszahlen, Hashfunktionen, Signaturen und Verschlüsselungsschlüssel bereitstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Algorithm">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngAlgorithm Algorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngAlgorithm Algorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.Algorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Algorithmus, der durch den Schlüssel verwendet wird.</summary>
+        <value>Ein Objekt, das den Namen eines Verschlüsselungsalgorithmus angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmGroup">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngAlgorithmGroup AlgorithmGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngAlgorithmGroup AlgorithmGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.AlgorithmGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithmGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Algorithmusgruppe, die durch den Schlüssel verwendet wird.</summary>
+        <value>Ein Objekt, das den Namen einer Verschlüsselungsalgorithmusgruppe angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Create (System.Security.Cryptography.CngAlgorithm algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Create(class System.Security.Cryptography.CngAlgorithm algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Create(System.Security.Cryptography.CngAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.Security.Cryptography.CngAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Algorithmus, dem mit der Schlüssel verwendet wird.</param>
+        <summary>Erstellt eine <see cref="T:System.Security.Cryptography.CngKey" /> -Objekt, das mit dem angegebenen Algorithmus verwendet werden kann.</summary>
+        <returns>Ein temporärer Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung erstellt einen Schlüssel ohne Namen, was bedeutet, dass der Schlüssel flüchtig ist (d. h. es wird nicht beibehalten werden). Es erstellt außerdem einen Standardwert <xref:System.Security.Cryptography.CngKeyCreationParameters> Objekt, das den Standardwert angibt <xref:System.Security.Cryptography.CngProvider> und andere erweiterte Parameter für den Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="algorithm" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection">für die Berechtigung zum Erstellen eines Schlüsselcontainers. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Create" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Create (System.Security.Cryptography.CngAlgorithm algorithm, string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Create(class System.Security.Cryptography.CngAlgorithm algorithm, string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Create(System.Security.Cryptography.CngAlgorithm,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.Security.Cryptography.CngAlgorithm" />
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Algorithmus, dem mit der Schlüssel verwendet wird.</param>
+        <param name="keyName">Der Schlüsselname. Wenn ein Name nicht angegeben ist, wird der Schlüssel nicht beibehalten werden.</param>
+        <summary>Erstellt ein benanntes <see cref="T:System.Security.Cryptography.CngKey" /> -Objekt, das den angegebenen Algorithmus bereitstellt.</summary>
+        <returns>Ein beibehaltener oder flüchtiger Schlüssel, der den angegebenen Algorithmus bereitstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `keyName` angegeben wird, diese Überladung einen beibehaltenen Schlüssel erstellt. Wenn `keyName` nicht angegeben wird, die als Schlüssel kurzlebige verwendet wird. Diese Überladung erstellt auch einen Standard- <xref:System.Security.Cryptography.CngKeyCreationParameters> Objekt, das den Standardwert angibt <xref:System.Security.Cryptography.CngProvider> und andere erweiterte Parameter für den Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="algorithm" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection">für die Berechtigung zum Erstellen eines Schlüsselcontainers. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Create" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Create (System.Security.Cryptography.CngAlgorithm algorithm, string keyName, System.Security.Cryptography.CngKeyCreationParameters creationParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Create(class System.Security.Cryptography.CngAlgorithm algorithm, string keyName, class System.Security.Cryptography.CngKeyCreationParameters creationParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Create(System.Security.Cryptography.CngAlgorithm,System.String,System.Security.Cryptography.CngKeyCreationParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.Security.Cryptography.CngAlgorithm" />
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="creationParameters" Type="System.Security.Cryptography.CngKeyCreationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Algorithmus, dem mit der Schlüssel verwendet wird.</param>
+        <param name="keyName">Der Schlüsselname. Wenn ein Name nicht angegeben ist, wird der Schlüssel nicht beibehalten werden.</param>
+        <param name="creationParameters">Ein Objekt, das erweiterte Parameter für die Methode gibt an, einschließlich der <see cref="T:System.Security.Cryptography.CngProvider" />.</param>
+        <summary>Erstellt ein benanntes <see cref="T:System.Security.Cryptography.CngKey" /> Objekt, das den angegebenen Algorithmus mit den Parametern angegebenen schlüsselerstellung bereitstellt.</summary>
+        <returns>Ein beibehaltener oder flüchtiger Schlüssel, der den angegebenen Algorithmus bereitstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `keyName` angegeben wird, diese Überladung einen beibehaltenen Schlüssel erstellt. Wenn `keyName` nicht angegeben wird, die als Schlüssel kurzlebige verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="algorithm" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection">für die Berechtigung zum Erstellen eines Schlüsselcontainers. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Create" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt den Schlüssel, der dem Objekt zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Beim Aufrufen der <xref:System.Security.Cryptography.CngKey.Delete%2A> Methode für einen kurzlebigen Schlüssel schließt er das Handle für den Schlüssel.  
+  
+ Beim Aufrufen der <xref:System.Security.Cryptography.CngKey.Delete%2A> Methode für eine benannte Schlüssel die <xref:System.Security.Cryptography.CngKey> Objekt kann nicht mehr verwendet werden, nachdem der benannte Schlüssel gelöscht wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, einen gelöschten Schlüssel zugegriffen wird.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermission">für die Berechtigung zum Signieren von Daten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Delete" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Security.Cryptography.CngKey" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Security.Cryptography.CngKey.Dispose%2A> auf, wenn Sie <xref:System.Security.Cryptography.CngKey> nicht mehr benötigen. Die <xref:System.Security.Cryptography.CngKey.Dispose%2A>-Methode bewirkt, dass <xref:System.Security.Cryptography.CngKey> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Security.Cryptography.CngKey.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Security.Cryptography.CngKey> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Security.Cryptography.CngKey> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Security.Cryptography.CngKey.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Security.Cryptography.CngKey> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Security.Cryptography.CngKey>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Exists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Schlüsselname.</param>
+        <summary>Überprüft, ob ein benannte Schlüssel in der Standard-Schlüsselspeicheranbieter (KSP) vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der benannte Schlüssel in der Standard-KSP vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standard-KSP ist <xref:System.Security.Cryptography.CngProvider.MicrosoftSoftwareKeyStorageProvider%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (string keyName, System.Security.Cryptography.CngProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(string keyName, class System.Security.Cryptography.CngProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Exists(System.String,System.Security.Cryptography.CngProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="provider" Type="System.Security.Cryptography.CngProvider" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Schlüsselname.</param>
+        <param name="provider">Der Schlüsselspeicheranbieter für den Schlüssel zu überprüfen.</param>
+        <summary>Überprüft, ob ein benannte Schlüssel in den angegebenen Schlüsselspeicheranbieter (KSP) vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der benannte Schlüssel in den angegebenen Anbieter vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, um das Vorhandensein eines Schlüssels in einem KSP als der Standard-KSP, überprüfen Sie die <xref:System.Security.Cryptography.CngProvider.MicrosoftSoftwareKeyStorageProvider%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyName" /> oder <paramref name="provider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (string keyName, System.Security.Cryptography.CngProvider provider, System.Security.Cryptography.CngKeyOpenOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(string keyName, class System.Security.Cryptography.CngProvider provider, valuetype System.Security.Cryptography.CngKeyOpenOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Exists(System.String,System.Security.Cryptography.CngProvider,System.Security.Cryptography.CngKeyOpenOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="provider" Type="System.Security.Cryptography.CngProvider" />
+        <Parameter Name="options" Type="System.Security.Cryptography.CngKeyOpenOptions" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Schlüsselname.</param>
+        <param name="provider">Der KSP, für den Schlüssel gesucht werden soll.</param>
+        <param name="options">Eine bitweise Kombination der Enumerationswerte, die Optionen für das Öffnen eines Schlüssels angeben.</param>
+        <summary>Überprüft, ob in den angegebenen Schlüsselspeicheranbieter (KSP), entsprechend den angegebenen Optionen ein benannte Schlüssel vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der benannte Schlüssel in den angegebenen Anbieter vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, um das Vorhandensein eines Schlüssels in einem KSP der Standardnummer überprüfen <xref:System.Security.Cryptography.CngProvider.MicrosoftSoftwareKeyStorageProvider%2A>, und geben Sie Optionen für den Schlüssel geöffnete.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyName" /> oder <paramref name="provider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public byte[] Export (System.Security.Cryptography.CngKeyBlobFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Export(class System.Security.Cryptography.CngKeyBlobFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Export(System.Security.Cryptography.CngKeyBlobFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Objekt, das das Format des Schlüssel-BLOB angibt.</param>
+        <summary>Exportiert das Schlüsselmaterial in ein BLOB im angegebenen Format.</summary>
+        <returns>Ein BLOB, das Schlüsselmaterial im angegebenen Format enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cryptography Next Generation (CNG) ermöglicht den Export in einem beliebigen Format, das der zugrunde liegenden Schlüsselspeicheranbieter (KSP) unterstützt. Beispielsweise unter Windows Vista, der Standard-KSP (also <xref:System.Security.Cryptography.CngProvider.MicrosoftSoftwareKeyStorageProvider%2A>) lässt nur Exportieren privater Schlüssel in der <xref:System.Security.Cryptography.CngKeyBlobFormat.Pkcs8PrivateBlob%2A>, <xref:System.Security.Cryptography.CngKeyBlobFormat.EccPrivateBlob%2A>, und <xref:System.Security.Cryptography.CngKeyBlobFormat.OpaqueTransportBlob%2A> Formate. Diese Einschränkung wird durch die zugrunde liegenden KSP gesteuert. Wenn Sie einen anderen KSP verwenden, gelten möglicherweise andere Formate.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler. In der Regel die <see cref="P:System.Security.Cryptography.CngKey.ExportPolicy" /> lässt sich nicht auf den Schlüssel exportiert werden soll.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermission">für die Berechtigung zum Signieren von Daten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Export" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngExportPolicies ExportPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CngExportPolicies ExportPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.ExportPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngExportPolicies</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Exportieren einer Richtlinie, die durch den Schlüssel verwendet wird.</summary>
+        <value>Ein Objekt, das Exportieren einer Richtlinie für den Schlüssel angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Exportieren einer Richtlinie steuert die exporthäufigkeit und das Format für den Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngProperty GetProperty (string name, System.Security.Cryptography.CngPropertyOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Security.Cryptography.CngProperty GetProperty(string name, valuetype System.Security.Cryptography.CngPropertyOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.GetProperty(System.String,System.Security.Cryptography.CngPropertyOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="options" Type="System.Security.Cryptography.CngPropertyOptions" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der gewünschten Eigenschaft.</param>
+        <param name="options">Eine bitweise Kombination der Enumerationswerte, die Optionen für die benannte Eigenschaft angeben.</param>
+        <summary>Ruft eine Eigenschaft mit dem angegebenen einen Namen und einen Satz von Optionen ab.</summary>
+        <returns>Ein Objekt, das den raw-Wert der angegebenen Eigenschaft enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zweck dieser Methode ist, um den Wert einer beliebigen Eigenschaft des Schlüssels zurückzugeben. Die typische Vorgehensweise zum Abrufen von Eigenschaften mit der gebotenen Eigenschaftenaccessoren ist die <xref:System.Security.Cryptography.CngKey> Klasse. <xref:System.Security.Cryptography.CngKey>Stellt einen Wrapper für mehrere, aber nicht alle Eigenschaften bereit. Die <xref:System.Security.Cryptography.CngKey.GetProperty%2A> Methode wird hauptsächlich verwendet, um den Wert einer Eigenschaft zuzugreifen, die nicht umschlossen wird.  
+  
+ Diese Methode ist in den folgenden Fällen nützlich:  
+  
+-   Eine neue Version des Betriebssystems unterstützt eine neue Key Cryptography Next Generation (CNG)-Eigenschaft, die nicht über einen Wrapper verfügt.  
+  
+-   Fügen Sie eine benutzerdefinierte Eigenschaft an, auf den Schlüssel.  
+  
+ Die `options` -Parameter wird verwendet, um Folgendes anzugeben:  
+  
+-   Gibt an, ob die Eigenschaft integriert oder Benutzerdefiniert ist.  
+  
+-   Gibt an, ob die Eigenschaft mit dem Schlüssel beibehalten werden soll.  
+  
+ Diese Optionen entsprechen müssen, die mit die Eigenschaft festgelegt wurde, oder die Eigenschaft wird nicht gefunden werden.  
+  
+ <xref:System.Security.Cryptography.CryptographicException>wird ausgelöst, wenn die Eigenschaft nicht gefunden werden kann. Rufen Sie die <xref:System.Security.Cryptography.CngKey.HasProperty%2A> -Methodenaufruf zuerst an, um die Ausnahme anstelle der Wrapper der Methodennamens zu vermeiden, in einem `try/catch` Block.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein sicheres Handle, das einen systemeigenen Schlüssel (darstellt NCRYPT_KEY_HANDLE) darstellt.</summary>
+        <value>Ein sicheres Handle, das den Schlüssel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Handle ist ein Duplikat des Handles im aktuellen <xref:System.Security.Cryptography.CngKey> Objekt. Es bleiben erhalten, selbst wenn die aktuelle <xref:System.Security.Cryptography.CngKey> verworfen und müssen separat freigegeben werden.  
+  
+ Sie können das aktuelle Objekt und das Handle in beliebiger Reihenfolge ohne nachteiligen Auswirkungen freigeben.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProperty">
+      <MemberSignature Language="C#" Value="public bool HasProperty (string name, System.Security.Cryptography.CngPropertyOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasProperty(string name, valuetype System.Security.Cryptography.CngPropertyOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.HasProperty(System.String,System.Security.Cryptography.CngPropertyOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="options" Type="System.Security.Cryptography.CngPropertyOptions" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Eigenschaftenname zu überprüfen.</param>
+        <param name="options">Eine bitweise Kombination der Enumerationswerte, die Optionen für die benannte Eigenschaft angeben.</param>
+        <summary>Überprüft, ob die angegebene Eigenschaft für den Schlüssel vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Eigenschaft gefunden wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `options` -Parameter wird verwendet, um Folgendes anzugeben:  
+  
+-   Gibt an, ob die Eigenschaft integriert oder Benutzerdefiniert ist.  
+  
+-   Gibt an, ob die Eigenschaft mit dem Schlüssel beibehalten werden soll.  
+  
+ Diese Optionen entsprechen müssen, die mit die Eigenschaft festgelegt wurde, oder die Eigenschaft wird nicht gefunden werden.  
+  
+ Diese Methode ordnungsgemäß funktioniert, auch wenn die Eigenschaft, um festgelegt ist `false` oder 0 (null).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Import (byte[] keyBlob, System.Security.Cryptography.CngKeyBlobFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Import(unsigned int8[] keyBlob, class System.Security.Cryptography.CngKeyBlobFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Import(System.Byte[],System.Security.Cryptography.CngKeyBlobFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyBlob" Type="System.Byte[]" />
+        <Parameter Name="format" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+      </Parameters>
+      <Docs>
+        <param name="keyBlob">Ein Array, das die Schlüsselinformationen enthält.</param>
+        <param name="format">Ein Objekt, das das Format der gibt an, die <c>KeyBlob</c> Array.</param>
+        <summary>Erstellt einen neuen Schlüssel durch Importieren des angegebenen Schlüsselmaterials in den Standard-Schlüsselspeicheranbieter (KSP) und unter Verwendung des angegebenen Formats.</summary>
+        <returns>Ein neuer Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standard-KSP ist <xref:System.Security.Cryptography.CngProvider.MicrosoftSoftwareKeyStorageProvider%2A>.  
+  
+> [!IMPORTANT]
+>  Auf Windows-Betriebssystemen vor Windows 7 und Windows Server 2008 R2 werden einige Formate der CNG-binary large Object Schlüssels (BLOB) nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyBlob" /> oder <paramref name="format" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Import (byte[] keyBlob, System.Security.Cryptography.CngKeyBlobFormat format, System.Security.Cryptography.CngProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Import(unsigned int8[] keyBlob, class System.Security.Cryptography.CngKeyBlobFormat format, class System.Security.Cryptography.CngProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Import(System.Byte[],System.Security.Cryptography.CngKeyBlobFormat,System.Security.Cryptography.CngProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyBlob" Type="System.Byte[]" />
+        <Parameter Name="format" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+        <Parameter Name="provider" Type="System.Security.Cryptography.CngProvider" />
+      </Parameters>
+      <Docs>
+        <param name="keyBlob">Ein Array, das die Schlüsselinformationen enthält.</param>
+        <param name="format">Ein Objekt, das das Format der gibt an, die <c>KeyBlob</c> Array.</param>
+        <param name="provider">Der KSP.</param>
+        <summary>Erstellt einen neuen Schlüssel durch Importieren des angegebenen Schlüsselmaterials mit dem angegebenen Format in den angegebenen Schlüsselspeicheranbieter (KSP).</summary>
+        <returns>Ein neuer Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Auf Windows-Betriebssystemen vor Windows 7 und Windows Server 2008 R2 werden einige Formate der CNG-binary large Object Schlüssels (BLOB) nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyBlob" />, <paramref name="format" /> oder <paramref name="provider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermission">für die Berechtigung zum Signieren von Daten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Import" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEphemeral">
+      <MemberSignature Language="C#" Value="public bool IsEphemeral { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEphemeral" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.IsEphemeral" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Persistenz-Zustand des Schlüssels ab.</summary>
+        <value>
+          <see langword="true" />Wenn der Schlüssel flüchtig ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt, ob der Schlüssel flüchtig ist (d. h. der Schlüssel vorhanden ist nur für die Lebensdauer des Handles), oder beibehalten (d. h. der Schlüssel vorhanden ist unabhängig von das Handle).  
+  
+ Der Rückgabewert hängt von der Methode, die verwendet wird, um den Schlüssel zu erhalten:  
+  
+-   Wenn der Schlüssel nicht, durch geöffnet wurde die <xref:System.Security.Cryptography.CngKey.Open%28Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle%2CSystem.Security.Cryptography.CngKeyHandleOpenOptions%29> methodenüberladung, die common Language Runtime (CLR) die Schlüssel verwaltet und können ermitteln, ob flüchtig ist.  
+  
+-   Wenn der Schlüssel geöffnet wurde, indem Sie die <xref:System.Security.Cryptography.CngKey.Open%28Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle%2CSystem.Security.Cryptography.CngKeyHandleOpenOptions%29> methodenüberladung, die CLR kann nicht bestimmen, ob es flüchtig ist. Aus diesem Grund wird angenommen, dass der Schlüssel beibehalten werden. Jedoch wenn diese Methode verwendet wird, um ein Handle für einen Schlüssel zu öffnen, die von der CLR erstellt wird, wird die CLR Lage zu ermitteln, ob flüchtig ist.  
+  
+ Diese Eigenschaft weist kein mit einem öffentlichen Setter auf; Es ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMachineKey">
+      <MemberSignature Language="C#" Value="public bool IsMachineKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMachineKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.IsMachineKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bereich (Computer oder Benutzer) des Schlüssels ab.</summary>
+        <value>
+          <see langword="true" />Wenn der Schlüssel auf einer computerweiten Basis verfügbar ist. <see langword="false" /> Wenn der Schlüssel nur für den aktuellen Benutzer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyName">
+      <MemberSignature Language="C#" Value="public string KeyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.KeyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Schlüssels ab.</summary>
+        <value>Der Name des Schlüssels. Wenn der Schlüssel flüchtig ist, ist der Wert <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public int KeySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schlüsselgröße in Bits ab.</summary>
+        <value>Die Schlüsselgröße in Bits.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUsage">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngKeyUsages KeyUsage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CngKeyUsages KeyUsage" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.KeyUsage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyUsages</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die kryptografischen Vorgänge, die durch den Schlüssel angegeben.</summary>
+        <value>Eine bitweise Kombination der Enumerationswerte, die der für den Schlüssel zulässigen Verwendungen angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Open (string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Open(string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Open(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Name des Schlüssels.</param>
+        <summary>Erstellt eine Instanz einer <see cref="T:System.Security.Cryptography.CngKey" /> Objekt, das ein vorhandenes darstellt, mit dem Namen Schlüssel.</summary>
+        <returns>Einen vorhandenen Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung verwendet die folgenden Standardwerte:  
+  
+-   Schlüsselspeicheranbieter (KSP): <xref:System.Security.Cryptography.CngProvider.MicrosoftSoftwareKeyStorageProvider%2A>. Verwenden der <xref:System.Security.Cryptography.CngKey.Open%28System.String%2CSystem.Security.Cryptography.CngProvider%29> Überladung, wenn Sie einen anderen KSP angeben möchten.  
+  
+-   Open-Optionen: <xref:System.Security.Cryptography.CngKeyOpenOptions?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection">für die Berechtigung zum Öffnen eines Schlüsselcontainers. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Open" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Open (Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle keyHandle, System.Security.Cryptography.CngKeyHandleOpenOptions keyHandleOpenOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Open(class Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle keyHandle, valuetype System.Security.Cryptography.CngKeyHandleOpenOptions keyHandleOpenOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Open(Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle,System.Security.Cryptography.CngKeyHandleOpenOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyHandle" Type="Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle" />
+        <Parameter Name="keyHandleOpenOptions" Type="System.Security.Cryptography.CngKeyHandleOpenOptions" />
+      </Parameters>
+      <Docs>
+        <param name="keyHandle">Ein Handle für einen vorhandenen Schlüssel.</param>
+        <param name="keyHandleOpenOptions">Einer der Enumerationswerte, der angibt, ob <c>KeyHandle</c> einen kurzlebigen Schlüssel oder einen benannten Schlüssel darstellt.</param>
+        <summary>Erstellt eine Instanz einer <see cref="T:System.Security.Cryptography.CngKey" /> Objekt, indem Sie mithilfe eines Handles für einen vorhandenen Schlüssel.</summary>
+        <returns>Einen vorhandenen Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung kann erfahrene Benutzer zu verwenden, die die CNG-Klassen, auch wenn sie von der Plattform abhängig sind aufzurufen oder die verwaltete Interop-Funktionen von C++. Z. B. Wenn Sie eine systemeigene Bibliothek, die die Schlüssel als NCRYPT_KEY_HANDLE zurückgibt verfügen, können Sie diese Überladung einen verwalteten Wrapper um den Schlüssel zu erstellen und die CNG-Klassen verwenden, um es zu bearbeiten.  
+  
+ Wenn Sie einen Schlüssel über dessen Handle öffnen, Sie können nicht flüchtigen Zustand des Schlüssels bestimmt und müssen die Anzahl selbst angeben. Reihe von Eigenschaften der <xref:System.Security.Cryptography.CngKey> Klasse abhängig ist, diesen Wert korrekt zu sein. Stellen Sie daher sicher, dass Sie die korrekten Flagwerte Wert zum Übergeben der <xref:System.Security.Cryptography.CngKey.Open%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyHandle" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keyHandle" />ist ungültig oder falsch formatiert ist, oder es ist bereits geschlossen. Diese Ausnahme wird auch ausgelöst, wenn der Schlüssel einen flüchtigen Schlüssel, die von der common Language Runtime (CLR) erstellt wird, aber die <see cref="F:System.Security.Cryptography.CngKeyHandleOpenOptions.EphemeralKey" /> kein Wert angegeben wird.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Open (string keyName, System.Security.Cryptography.CngProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Open(string keyName, class System.Security.Cryptography.CngProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Open(System.String,System.Security.Cryptography.CngProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="provider" Type="System.Security.Cryptography.CngProvider" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Name des Schlüssels.</param>
+        <param name="provider">Der KSP, der den Schlüssel enthält.</param>
+        <summary>Erstellt eine Instanz einer <see cref="T:System.Security.Cryptography.CngKey" /> Objekt, das ein vorhandenes darstellt, mit dem Namen Schlüssel, mit den angegebenen Schlüsselspeicheranbieter (KSP).</summary>
+        <returns>Einen vorhandenen Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Security.Cryptography.CngKey.Open%28System.String%29> methodenüberladung, diese Überladung können Sie den Anbieter angeben. Darüber hinaus den Standardwert <xref:System.Security.Cryptography.CngKeyOpenOptions> Wert <xref:System.Security.Cryptography.CngKeyOpenOptions.None> erstellt und an den Schlüssel gebunden ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyName" /> oder <paramref name="provider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection">für die Berechtigung zum Öffnen eines Schlüsselcontainers. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Open" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKey Open (string keyName, System.Security.Cryptography.CngProvider provider, System.Security.Cryptography.CngKeyOpenOptions openOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.CngKey Open(string keyName, class System.Security.Cryptography.CngProvider provider, valuetype System.Security.Cryptography.CngKeyOpenOptions openOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.Open(System.String,System.Security.Cryptography.CngProvider,System.Security.Cryptography.CngKeyOpenOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="provider" Type="System.Security.Cryptography.CngProvider" />
+        <Parameter Name="openOptions" Type="System.Security.Cryptography.CngKeyOpenOptions" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Name des Schlüssels.</param>
+        <param name="provider">Der KSP, der den Schlüssel enthält.</param>
+        <param name="openOptions">Eine bitweise Kombination der Enumerationswerte, die Optionen zum Öffnen des Schlüssels angeben, z.B. Informationen dazu, wo der Schlüssel geöffnet wurde (Computer- oder Benutzerspeicher) und ob Aufforderungen auf der Benutzeroberfläche unterdrückt werden sollen.</param>
+        <summary>Erstellt eine Instanz einer <see cref="T:System.Security.Cryptography.CngKey" /> Objekt, das ein vorhandenes darstellt, mit dem Namen Schlüssel, mit dem angegebenen Schlüsselspeicheranbieter (KSP) und die Optionen für den Schlüssel geöffnet.</summary>
+        <returns>Einen vorhandenen Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Security.Cryptography.CngKey.Open%28System.String%29> methodenüberladung, diese Überladung können Sie angeben, öffnen den Anbieter und den Schlüssel Optionen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyName" /> oder <paramref name="provider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Cryptography Next Generation (CNG) wird auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection">für die Berechtigung zum Öffnen eines Schlüsselcontainers. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Open" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentWindowHandle">
+      <MemberSignature Language="C#" Value="public IntPtr ParentWindowHandle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ParentWindowHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.ParentWindowHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Fensterhandle (HWND), das für Benutzereingaben-Benutzeroberfläche (UI) zurückzuführen sind, den Zugriff auf den Schlüssel verwendet werden soll.</summary>
+        <value>Das Handle des übergeordneten Fensters für den Schlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Handle des übergeordneten Fensters für den Schlüssel wird verwendet, in der Benutzeroberfläche aufgefordert, z. B. Smartcard PIN aufgefordert. Dieser Wert ist nicht persistente Schlüssel beibehalten.  
+  
+ Es wird empfohlen, dass Sie immer über diese Eigenschaft für Schlüssel festlegen, die eine Benutzeroberfläche anzuzeigen. Verwenden Sie nicht den Standardwert `null` für solche Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüsselspeicheranbieter (KSP), der den Schlüssel verwaltet.</summary>
+        <value>Der KSP, der den Schlüssel verwaltet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderHandle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle ProviderHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle ProviderHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.ProviderHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine systemeigene Handle (ein NCRYPT_PROV_HANDLE) auf dem Schlüsselspeicheranbieter (KSP) ab.</summary>
+        <value>Ein Handle für den KSP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Handle ist ein Duplikat des Handles im aktuellen <xref:System.Security.Cryptography.CngKey> Objekt. Es bleiben erhalten, selbst wenn die aktuelle <xref:System.Security.Cryptography.CngKey> verworfen und müssen separat freigegeben werden.  
+  
+ Sie können das aktuelle Objekt und das Handle in beliebiger Reihenfolge ohne nachteiligen Auswirkungen freigeben.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (System.Security.Cryptography.CngProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProperty(valuetype System.Security.Cryptography.CngProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKey.SetProperty(System.Security.Cryptography.CngProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Security.Cryptography.CngProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die wichtigste Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt eine benannte Eigenschaft für den Schlüssel fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Methode können Sie einen vorhandenen Schlüssel eine neue benutzerdefinierte Eigenschaft hinzuzufügen, mit einem <xref:System.Security.Cryptography.CngProperty> Objekt. Festgelegten Optionen der <xref:System.Security.Cryptography.CngProperty> Objekt muss genau entsprechen die Optionen in der <xref:System.Security.Cryptography.CngKey.GetProperty%2A> aufrufen. Andernfalls wird die Eigenschaft nicht gefunden werden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UIPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngUIPolicy UIPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngUIPolicy UIPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.UIPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngUIPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameter, die steuern, die Benutzeroberfläche (UI) für den Zugriff auf den Schlüssel ab.</summary>
+        <value>Ein Objekt, das Konfigurationsparameter für die Anzeige der Benutzeroberflächenautomatisierungs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die wichtigsten UI-Richtlinie wird verwendet, mit Benutzeroberfläche aufgefordert werden, z. B. Smartcard-PIN aufgefordert. Diese Richtlinie steuert auch Kennwortdialogfelder für softwaregeschützte Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueName">
+      <MemberSignature Language="C#" Value="public string UniqueName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UniqueName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKey.UniqueName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Namen für den Schlüssel ab.</summary>
+        <value>Ein alternativer Name für den Schlüssel. Wenn der Schlüssel flüchtig ist, ist der Wert <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft einen alternativen Namen, der verwendet werden kann, wenn den Schlüssel zugreifen. Sie können diese Eigenschaft verwenden, wenn der ursprüngliche Schlüsselname den beibehaltenen Schlüssel nicht eindeutig identifiziert. Die <xref:System.Security.Cryptography.CngProvider.MicrosoftSoftwareKeyStorageProvider%2A> Eigenschaft gibt den Dateinamen des Schlüssels als diese Eigenschaft zurück. Der zurückgegebene Name der <xref:System.Security.Cryptography.CngProvider.MicrosoftSmartCardKeyStorageProvider%2A> ist implementierungsabhängig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

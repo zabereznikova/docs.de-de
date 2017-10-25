@@ -1,0 +1,124 @@
+<Type Name="CriticalFinalizerObject" FullName="System.Runtime.ConstrainedExecution.CriticalFinalizerObject">
+  <TypeSignature Language="C#" Value="public abstract class CriticalFinalizerObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CriticalFinalizerObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ConstrainedExecution.CriticalFinalizerObject" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt sicher, dass alle Finalisierungscode in abgeleiteten Klassen als kritisch markiert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von der <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> Klasse implizit als einem eingeschränkten Ausführungsbereich (CER) behandelt.  Dies erfordert Code in der Finalize-Methode nur Aufrufen von Code mit einem starken Zuverlässigkeitsvertrag. Weitere Informationen über CERs finden Sie unter der <xref:System.Runtime.ConstrainedExecution> Namespace.  
+  
+ In von abgeleiteten Klassen der <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> -Klasse, die common Language Runtime (CLR) wird sichergestellt, dass alle kritischen Finalisierungscode ausgeführt wird, kann bereitgestellten der Finalizer die Regeln für eine CER, auch in Situationen folgt, in denen die CLR zwangsweise Entladen einer Anwendungsdomäne oder bricht einen Thread. Wenn ein Finalizer für eine CER gegen die Regeln verstößt, kann er nicht erfolgreich ausgeführt. Darüber hinaus die CLR richtet eine schwache Sortierung von normalen und wichtigen Finalizern: für Objekte, die durch die Garbagecollection gleichzeitig freigegeben werden, werden alle nicht kritischen Finalizer vor den kritischen Finalizer aufgerufen. Z. B. eine Klasse wie z. B. <xref:System.IO.FileStream>, die enthält Daten in der <xref:System.Runtime.InteropServices.SafeHandle> abgeleitete ist <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>, standard Finalizer geleert werden vorhandene gepufferte Daten ausführen können.  
+  
+ In den meisten Fällen, Sie müssen nicht von abgeleiteten Klassen schreiben die <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> Klasse. Die .NET Framework-Klassenbibliothek stellt die beiden Klassen <xref:System.Runtime.InteropServices.SafeHandle> und <xref:System.Runtime.InteropServices.CriticalHandle>, zur Ausgabe synthetisch Handleressourcen Funktionalität für Handleressourcen. .NET Framework bietet darüber hinaus eine Reihe von vordefinierten Klassen abgeleitet wurde. die <xref:System.Runtime.InteropServices.SafeHandle> -Klasse, und dieser Gruppe befindet sich der <xref:Microsoft.Win32.SafeHandles> Namespace. Diese Klassen dienen, die allgemeine Funktionalität, die für die Unterstützung der Datei und Betriebssystemhandles bereitstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> Klasse die standardmäßigen Eingabe- und Ausgabestreams Handleressourcen bereit. Die <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, abgeleitet von der <xref:System.Runtime.InteropServices.SafeHandle> Klasse, übergeben wird, in den Dateistream, in der <xref:System.IO.FileStream> Konstruktor.  
+  
+ [!code-csharp[SafeHandle.SafeFileHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR/SafeHandle.SafeFileHandle/CS/program.cs#1)]
+ [!code-vb[SafeHandle.SafeFileHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/SafeHandle.SafeFileHandle/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CriticalFinalizerObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ConstrainedExecution.CriticalFinalizerObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.ConstrainedExecution.CriticalFinalizerObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Berechtigung zum Aufrufen von nicht verwalteten Codes. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~CriticalFinalizerObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ConstrainedExecution.CriticalFinalizerObject.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der <see cref="T:System.Runtime.ConstrainedExecution.CriticalFinalizerObject" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Finalizer für alle Typen abgeleitet <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> erhält die Gelegenheit, Ausführung und wird nicht abgebrochen, vorausgesetzt der Finalizer ordnungsgemäß folgt den Regeln für einem eingeschränkten Ausführungsbereich (CER).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

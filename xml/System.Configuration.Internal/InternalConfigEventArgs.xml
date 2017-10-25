@@ -1,0 +1,70 @@
+<Type Name="InternalConfigEventArgs" FullName="System.Configuration.Internal.InternalConfigEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class InternalConfigEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InternalConfigEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.InternalConfigEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Klasse, die die .NET Framework-Infrastruktur an, das Ereignisargumente für Konfigurationsereignisse ermöglicht.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalConfigEventArgs (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.InternalConfigEventArgs.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Einen Konfigurationspfad.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.Internal.InternalConfigEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigPath">
+      <MemberSignature Language="C#" Value="public string ConfigPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigPath" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.InternalConfigEventArgs.ConfigPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Konfigurationspfad im Zusammenhang mit der <see cref="T:System.Configuration.Internal.InternalConfigEventArgs" /> Objekt.</summary>
+        <value>Ein Zeichenfolgenwert, den Pfad angeben.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

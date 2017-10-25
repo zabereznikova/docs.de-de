@@ -1,0 +1,331 @@
+<Type Name="TripleDES" FullName="System.Security.Cryptography.TripleDES">
+  <TypeSignature Language="C#" Value="public abstract class TripleDES : System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TripleDES extends System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.TripleDES" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.SymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für Triple-DES-Algorithmen dar, von der alle <see cref="T:System.Security.Cryptography.TripleDES" />-Implementierungen abgeleitet werden müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.TripleDES>verwendet drei aufeinander folgenden Iterationen der <xref:System.Security.Cryptography.DES> Algorithmus. Es kann zwei oder drei 56-Bit-Schlüssel verwenden.  
+  
+> [!NOTE]
+>  Es ist ein neuerer symmetrischen Verschlüsselungsalgorithmus, der Advanced Encryption Standard (AES), verfügbar. Erwägen Sie die <xref:System.Security.Cryptography.Aes> Klasse und abgeleitete Klassen statt der <xref:System.Security.Cryptography.TripleDES> Klasse. Verwendung <xref:System.Security.Cryptography.TripleDES> nur für Kompatibilität mit älteren Anwendungen und Daten.  
+  
+ Dieser Algorithmus unterstützt Schlüssellängen von 128, 192 Bits in Schritten von 64 Bits.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit Methode <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> mit dem angegebenen Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) zum Verschlüsseln einer Datei, die vom angegebenen `inName`. Es gibt dann das verschlüsselte Ergebnis in die Datei `outName`.  
+  
+ [!code-cpp[Classic TripleDESCryptoServiceProvider Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TripleDESCryptoServiceProvider Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TripleDESCryptoServiceProvider Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TripleDESCryptoServiceProvider Example/CS/source.cs#1)]
+ [!code-vb[Classic TripleDESCryptoServiceProvider Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TripleDESCryptoServiceProvider Example/VB/source.vb#1)]  
+  
+ Entschlüsselung kann auf die gleiche Weise behandelt werden. Verwenden Sie <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider.CreateDecryptor%2A> anstelle von <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider.CreateEncryptor%2A>. Die gleichen Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) zum Verschlüsseln die Datei muss für die Entschlüsselung verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TripleDES ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.TripleDES.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.TripleDES" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ Diese Methode initialisiert die geschützten Felder von der <xref:System.Security.Cryptography.SymmetricAlgorithm> Klasse auf die Standardwerte, die in der folgenden Tabelle aufgeführt.  
+  
+|Feld|Standardwert|  
+|-----------|-------------------|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.KeySizeValue>|192|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue>|64|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSizeValue>|64|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.TripleDES Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.TripleDES Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.TripleDES.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.TripleDES</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz eines Kryptografieobjekts, um den <see cref="T:System.Security.Cryptography.TripleDES" />-Algorithmus auszuführen.</summary>
+        <returns>Eine Instanz eines Kryptografieobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt eine neue Instanz der <xref:System.Security.Cryptography.TripleDES>-Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und Verwenden einer <xref:System.Security.Cryptography.TripleDES> Objekt zum Verschlüsseln und Entschlüsseln von Daten in einer Datei.  
+  
+ [!code-cpp[Cryptography.3DES.Create.File#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.3DES.Create.File/CPP/fileexample.cpp#1)]
+ [!code-csharp[Cryptography.3DES.Create.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.3DES.Create.File/CS/fileexample.cs#1)]
+ [!code-vb[Cryptography.3DES.Create.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.3DES.Create.File/VB/fileexample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und Verwenden einer <xref:System.Security.Cryptography.TripleDES> Objekt zum Verschlüsseln und Entschlüsseln von Daten im Arbeitsspeicher.  
+  
+ [!code-cpp[Cryptography.3DES.Create.Memory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.3DES.Create.Memory/CPP/memoryexample.cpp#1)]
+ [!code-vb[Cryptography.3DES.Create.Memory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.3DES.Create.Memory/VB/memoryexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.TripleDES Create (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.TripleDES Create(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.TripleDES.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.TripleDES</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Der Name der spezifischen Implementierung des <see cref="T:System.Security.Cryptography.TripleDES" /> verwenden.</param>
+        <summary>Erstellt eine Instanz eines Kryptografieobjekts, um die Ausführung der angegebenen Implementierung von der <see cref="T:System.Security.Cryptography.TripleDES" /> Algorithmus.</summary>
+        <returns>Eine Instanz eines Kryptografieobjekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und Verwenden einer <xref:System.Security.Cryptography.TripleDES> Objekt zum Verschlüsseln und Entschlüsseln von Daten in einer Datei.  
+  
+ [!code-cpp[Cryptography.3DES.Createstring.File#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.3DES.Createstring.File/CPP/fileexample.cpp#1)]
+ [!code-csharp[Cryptography.3DES.Createstring.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.3DES.Createstring.File/CS/fileexample.cs#1)]
+ [!code-vb[Cryptography.3DES.Createstring.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.3DES.Createstring.File/VB/fileexample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und Verwenden einer <xref:System.Security.Cryptography.TripleDES> Objekt zum Verschlüsseln und Entschlüsseln von Daten im Arbeitsspeicher.  
+  
+ [!code-cpp[Cryptography.3DES.Createstring.Memory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.3DES.Createstring.Memory/CPP/memoryexample.cpp#1)]
+ [!code-csharp[Cryptography.3DES.Createstring.Memory#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.3DES.Createstring.Memory/CS/memoryexample.cs#1)]
+ [!code-vb[Cryptography.3DES.Createstring.Memory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.3DES.Createstring.Memory/VB/memoryexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWeakKey">
+      <MemberSignature Language="C#" Value="public static bool IsWeakKey (byte[] rgbKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsWeakKey(unsigned int8[] rgbKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.TripleDES.IsWeakKey(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">Der geheime Schlüssel zum Testen auf Schwächen.</param>
+        <summary>Bestimmt, ob der angegebene Schlüssel schwach ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schlüssel schwach ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unsichere Schlüssel sind Schlüssel, die in Chiffren, die leicht führen zu unterbrechen. Wenn Text mit einen weak-Schlüssel verschlüsselt ist, gibt die resultierende Chiffre mit der gleichen weak-Schlüssel erneut Verschlüsseln von den ursprünglichen Text zurück. Im 128-Bit-Modus Wenn die ersten 64 Bits identisch mit den letzten 64-Bit sind ist der Schlüssel schwach. Im 192-Bit-Modus ist, wenn die ersten 64 Bits mit den zweiten 64 Bits entsprechen oder die zweite 64 Bits identisch mit den letzten 64-Bit sind der Schlüssel schwach.  
+  
+ Es wird versucht, einen schwachen Schlüssel festlegen, in einem <xref:System.Security.Cryptography.CryptographicException>. Wenn <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider.GenerateKey%2A> wird aufgerufen, um einen zufälligen Schlüssel zu erstellen, ein weak-Schlüssel wird nie zurückgegeben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Größe des <paramref name="rgbKey" />-Parameters ist nicht gültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public override byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.TripleDES.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den geheimen Schlüssel für den <see cref="T:System.Security.Cryptography.TripleDES" />-Algorithmus ab oder legt diesen fest.</summary>
+        <value>Der geheime Schlüssel für den <see cref="T:System.Security.Cryptography.TripleDES" />-Algorithmus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Algorithmus unterstützt Schlüssellängen von 128, 192 Bits in Schritten von 64 Bits.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Es wurde versucht, den Schlüssel auf <see langword="null" /> festzulegen.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Es wurde versucht, einen Schlüssel festzulegen, dessen Länge ungültig ist.  
+  
+ - oder -   
+  
+ Es wurde versucht, einen Weak-Schlüssel festzulegen (siehe <see cref="M:System.Security.Cryptography.TripleDES.IsWeakKey(System.Byte[])" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalBlockSizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalBlockSizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalBlockSizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.TripleDES.LegalBlockSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalKeySizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalKeySizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.TripleDES.LegalKeySizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

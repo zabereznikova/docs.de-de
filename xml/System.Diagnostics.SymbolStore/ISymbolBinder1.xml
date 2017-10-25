@@ -1,0 +1,81 @@
+<Type Name="ISymbolBinder1" FullName="System.Diagnostics.SymbolStore.ISymbolBinder1">
+  <TypeSignature Language="C#" Value="public interface ISymbolBinder1" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISymbolBinder1" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.ISymbolBinder1" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Symbolbinder für verwalteten Code dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweis** <xref:System.Diagnostics.SymbolStore.ISymbolBinder1> ist die verwaltete Entsprechung des nicht verwalteten`ISymUnmanagedBinder`  
+  
+ Schnittstelle, eines der nicht verwalteten Diagnosesymbolspeicher-Schnittstellen, die bieten eine alternative Möglichkeit zum Lesen und Schreiben von Debugsymbolinformationen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetReader">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolReader GetReader (IntPtr importer, string filename, string searchPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolReader GetReader(native int importer, string filename, string searchPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader(System.IntPtr,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.IntPtr" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="searchPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="importer">Eine <see cref="T:System.IntPtr" /> , die auf die Metadatenimport-Schnittstelle verweist.</param>
+        <param name="filename">Der Name der Datei, für die die Readerschnittstelle erforderlich ist.</param>
+        <param name="searchPath">Der Suchpfad zum Suchen der Symboldatei.</param>
+        <summary>Ruft die Schnittstelle des Symbolreaders für die aktuelle Datei ab.</summary>
+        <returns>Die <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader" />-Schnittstelle, die die Debugsymbole liest.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Zeiger auf eine Metadatenschnittstelle, einen Dateinamen und einen Suchpfad zugeordnet der <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A> Methode gibt die <xref:System.Diagnostics.SymbolStore.ISymbolReader> -Schnittstelle, die die dem Modul zugeordneten Debugsymbole liest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

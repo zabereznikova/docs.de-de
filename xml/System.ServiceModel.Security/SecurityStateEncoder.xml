@@ -1,0 +1,93 @@
+<Type Name="SecurityStateEncoder" FullName="System.ServiceModel.Security.SecurityStateEncoder">
+  <TypeSignature Language="C#" Value="public abstract class SecurityStateEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityStateEncoder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.SecurityStateEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abstrakte Klasse, die implementiert werden kann, um den Sicherheitszustand zu codieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Klasse kann der Inhalt des Sicherheitskontexttokens codiert und decodiert werden, wenn eine Bindung mit Nachrichtensicherheit, die ein zustandsbehaftetes Sicherheitskontexttoken verwendet, verwendet wird. [!INCLUDE[crabout](~/includes/crabout-md.md)]statusbehafteten Sicherheitskontexttokens finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](~/docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md) Thema.  
+  
+ Die Microsoft-Version von <xref:System.ServiceModel.Security.SecurityStateEncoder> ist <xref:System.ServiceModel.Security.DataProtectionSecurityStateEncoder>. Er verwendet Microsofts [Windows-Datenschutz (DPAPI)](http://go.microsoft.com/fwlink/?LinkId=96704) Technologie zum Verschlüsseln/Entschlüsseln des Cookies. Durch das Implementieren dieser Klasse können unterschiedliche Mechanismen für die Ver- und Entschlüsslung von Cookies eingesetzt werden.  
+  
+ Bei der Codierung des Sicherheitszustands muss sichergestellt werden, dass der Zustand für den Dienst verschlüsselt und signiert ist.  
+  
+ Diese Klasse wird vom Server verwendet, wenn der Sicherheitszustand in dem für den Client ausgestellten `SecurityContextToken` als Cookie gesendet wird.  
+  
+ Eine Beispielimplementierung dieser Klasse ist ein `X509CertificateSecurityStateEncoder`, der das Dienstzertifikat zum Signieren und Verschlüsseln des Sicherheitszustands verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityStateEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityStateEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.SecurityStateEncoder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeSecurityState">
+      <MemberSignature Language="C#" Value="protected abstract byte[] DecodeSecurityState (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance unsigned int8[] DecodeSecurityState(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityStateEncoder.DecodeSecurityState(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Sicherheitsdaten.</param>
+        <summary>Decodiert den Sicherheitszustand.</summary>
+        <returns>Ein Bytearray, das den Sicherheitszustand darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeSecurityState">
+      <MemberSignature Language="C#" Value="protected abstract byte[] EncodeSecurityState (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance unsigned int8[] EncodeSecurityState(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityStateEncoder.EncodeSecurityState(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Sicherheitszustandsdaten.</param>
+        <summary>Codiert den Sicherheitszustand.</summary>
+        <returns>Ein Bytearray, das sich aus der Codierung des Sicherheitszustands ergibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,518 @@
+<Type Name="Ports" FullName="Microsoft.VisualBasic.Devices.Ports">
+  <TypeSignature Language="C#" Value="public class Ports" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Ports extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.Ports" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die seriellen Anschlüsse eines Computer zugreifen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Ports` Objekt stellt einen einfachen Einstiegspunkt für den Zugriff auf die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] seriellen Anschluss-Klasse, <xref:System.IO.Ports.SerialPort>.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer.Ports` Objekt.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Wählen Sie ein Modem mit einem seriellen Anschluss verbunden|[Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Senden Sie eine Zeichenfolge in einen seriellen Anschluss|[Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Empfangen von Zeichenfolgen von einem seriellen Anschluss|[Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+|Anzeigen von verfügbaren seriellen Anschlüssen|[Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird beschrieben, wie Zeichenfolgen an des Computers senden `COM1` seriellen Anschluss.  
+  
+ Der `Using`-Block ermöglicht es der Anwendung, den seriellen Port auch dann zu schließen, wenn eine Ausnahme generiert wird. Der gesamte Code, der den seriellen Anschluss ändert sollte angezeigt werden, innerhalb dieses Blocks oder innerhalb einer `Try...Catch...Finally` Block mit einem Aufruf von verwenden die <xref:System.IO.Ports.SerialPort.Close%2A> Methode.  
+  
+ Die <xref:System.IO.Ports.SerialPort.WriteLine%2A>-Methode sendet die Daten an den seriellen Anschluss.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Weitere Informationen finden Sie unter [wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ports ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Devices.Ports" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Erforderlich. Der Name des Ports zu öffnen.</param>
+        <summary>Erstellt und öffnet eine <see cref="T:System.IO.Ports.SerialPort" /> Objekt.</summary>
+        <returns>Ein offenes <see cref="T:System.IO.Ports.SerialPort" /> -Objekt, mit der angegebenen Argumente konfiguriert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Ports.OpenSerialPort` Methode erstellt und öffnet eine <xref:System.IO.Ports.SerialPort> Objekt. Die Argumente für die `OpenSerialPort` Methode zu ermitteln, die Einstellungen der <xref:System.IO.Ports.SerialPort> Objekt.  
+  
+ Der Code sollte schließen die <xref:System.IO.Ports.SerialPort> Objekt, wenn er abgeschlossen ist unter Verwendung des Objekts. Können Sie die <xref:System.IO.Ports.SerialPort.Close%2A> Methode, um das Objekt explizit schließen, oder die `Using` Anweisung implizit geschlossen. Siehe das Beispiel in diesem Thema für Weitere Informationen.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer.Ports.OpenSerialPort` Methode.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Wählen Sie ein Modem mit einem seriellen Anschluss verbunden|[Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Senden einer Zeichenfolge an den seriellen Anschluss|[Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Empfangen von Zeichenfolgen von einem seriellen Anschluss|[Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird beschrieben, wie Zeichenfolgen an des Computers senden `COM1` seriellen Anschluss.  
+  
+ Der `Using`-Block ermöglicht es der Anwendung, den seriellen Port auch dann zu schließen, wenn eine Ausnahme generiert wird. Der gesamte Code, der den seriellen Anschluss ändert sollte angezeigt werden, innerhalb dieses Blocks oder innerhalb einer `Try...Catch...Finally` Block mit einem Aufruf von verwenden die <xref:System.IO.Ports.SerialPort.Close%2A> Methode.  
+  
+ Die <xref:System.IO.Ports.SerialPort.WriteLine%2A>-Methode sendet die Daten an den seriellen Anschluss.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Weitere Informationen finden Sie unter [wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="portName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Erforderlich. Der Name des Ports zu öffnen.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Die Baudrate des Ports.</param>
+        <summary>Erstellt und öffnet eine <see cref="T:System.IO.Ports.SerialPort" /> Objekt.</summary>
+        <returns>Ein offenes <see cref="T:System.IO.Ports.SerialPort" /> -Objekt, mit der angegebenen Argumente konfiguriert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Ports.OpenSerialPort` Methode erstellt und öffnet eine <xref:System.IO.Ports.SerialPort> Objekt. Die Argumente für die `OpenSerialPort` Methode zu ermitteln, die Einstellungen der <xref:System.IO.Ports.SerialPort> Objekt.  
+  
+ Der Code sollte schließen die <xref:System.IO.Ports.SerialPort> Objekt, wenn er abgeschlossen ist unter Verwendung des Objekts. Können Sie die <xref:System.IO.Ports.SerialPort.Close%2A> Methode, um das Objekt explizit schließen, oder die `Using` Anweisung implizit geschlossen. Siehe das Beispiel in diesem Thema für Weitere Informationen.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer.Ports.OpenSerialPort` Methode.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Wählen Sie ein Modem mit einem seriellen Anschluss verbunden|[Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Senden einer Zeichenfolge an den seriellen Anschluss|[Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Empfangen von Zeichenfolgen von einem seriellen Anschluss|[Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird beschrieben, wie Zeichenfolgen an des Computers senden `COM1` seriellen Anschluss.  
+  
+ Der `Using`-Block ermöglicht es der Anwendung, den seriellen Port auch dann zu schließen, wenn eine Ausnahme generiert wird. Der gesamte Code, der den seriellen Anschluss ändert sollte angezeigt werden, innerhalb dieses Blocks oder innerhalb einer `Try...Catch...Finally` Block mit einem Aufruf von verwenden die <xref:System.IO.Ports.SerialPort.Close%2A> Methode.  
+  
+ Die <xref:System.IO.Ports.SerialPort.WriteLine%2A>-Methode sendet die Daten an den seriellen Anschluss.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Weitere Informationen finden Sie unter [wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="portName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="baudRate" /> ist kleiner gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate, System.IO.Ports.Parity parity);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32,System.IO.Ports.Parity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Erforderlich. Der Name des Ports zu öffnen.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Die Baudrate des Ports.</param>
+        <param name="parity">
+          <see cref="T:System.IO.Ports.Parity" />. Die Parität des Ports.</param>
+        <summary>Erstellt und öffnet eine <see cref="T:System.IO.Ports.SerialPort" /> Objekt.</summary>
+        <returns>Ein offenes <see cref="T:System.IO.Ports.SerialPort" /> -Objekt, mit der angegebenen Argumente konfiguriert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Ports.OpenSerialPort` Methode erstellt und öffnet eine <xref:System.IO.Ports.SerialPort> Objekt. Die Argumente für die `OpenSerialPort` Methode zu ermitteln, die Einstellungen der <xref:System.IO.Ports.SerialPort> Objekt.  
+  
+ Der Code sollte schließen die <xref:System.IO.Ports.SerialPort> Objekt, wenn er abgeschlossen ist unter Verwendung des Objekts. Können Sie die <xref:System.IO.Ports.SerialPort.Close%2A> Methode, um das Objekt explizit schließen, oder die `Using` Anweisung implizit geschlossen. Siehe das Beispiel in diesem Thema für Weitere Informationen.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer.Ports.OpenSerialPort` Methode.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Wählen Sie ein Modem mit einem seriellen Anschluss verbunden|[Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Senden einer Zeichenfolge an den seriellen Anschluss|[Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Empfangen von Zeichenfolgen von einem seriellen Anschluss|[Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird beschrieben, wie Zeichenfolgen an des Computers senden `COM1` seriellen Anschluss.  
+  
+ Der `Using`-Block ermöglicht es der Anwendung, den seriellen Port auch dann zu schließen, wenn eine Ausnahme generiert wird. Der gesamte Code, der den seriellen Anschluss ändert sollte angezeigt werden, innerhalb dieses Blocks oder innerhalb einer `Try...Catch...Finally` Block mit einem Aufruf von verwenden die <xref:System.IO.Ports.SerialPort.Close%2A> Methode.  
+  
+ Die <xref:System.IO.Ports.SerialPort.WriteLine%2A>-Methode sendet die Daten an den seriellen Anschluss.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Weitere Informationen finden Sie unter [wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="portName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="baudRate" /> ist kleiner gleich 0 (null).</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="parity" />ist keine von der <see cref="T:System.IO.Ports.Parity" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate, System.IO.Ports.Parity parity, int dataBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity, int32 dataBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32,System.IO.Ports.Parity,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+        <Parameter Name="dataBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Erforderlich. Der Name des Ports zu öffnen.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Die Baudrate des Ports.</param>
+        <param name="parity">
+          <see cref="T:System.IO.Ports.Parity" />. Die Parität des Ports.</param>
+        <param name="dataBits">
+          <see langword="Integer" />. Daten-Bit-Einstellung des Ports.</param>
+        <summary>Erstellt und öffnet eine <see cref="T:System.IO.Ports.SerialPort" /> Objekt.</summary>
+        <returns>Ein offenes <see cref="T:System.IO.Ports.SerialPort" /> -Objekt, mit der angegebenen Argumente konfiguriert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Ports.OpenSerialPort` Methode erstellt und öffnet eine <xref:System.IO.Ports.SerialPort> Objekt. Die Argumente für die `OpenSerialPort` Methode zu ermitteln, die Einstellungen der <xref:System.IO.Ports.SerialPort> Objekt.  
+  
+ Der Code sollte schließen die <xref:System.IO.Ports.SerialPort> Objekt, wenn er abgeschlossen ist unter Verwendung des Objekts. Können Sie die <xref:System.IO.Ports.SerialPort.Close%2A> Methode, um das Objekt explizit schließen, oder die `Using` Anweisung implizit geschlossen. Siehe das Beispiel in diesem Thema für Weitere Informationen.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer.Ports.OpenSerialPort` Methode.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Wählen Sie ein Modem mit einem seriellen Anschluss verbunden|[Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Senden einer Zeichenfolge an den seriellen Anschluss|[Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Empfangen von Zeichenfolgen von einem seriellen Anschluss|[Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird beschrieben, wie Zeichenfolgen an des Computers senden `COM1` seriellen Anschluss.  
+  
+ Der `Using`-Block ermöglicht es der Anwendung, den seriellen Port auch dann zu schließen, wenn eine Ausnahme generiert wird. Der gesamte Code, der den seriellen Anschluss ändert sollte angezeigt werden, innerhalb dieses Blocks oder innerhalb einer `Try...Catch...Finally` Block mit einem Aufruf von verwenden die <xref:System.IO.Ports.SerialPort.Close%2A> Methode.  
+  
+ Die <xref:System.IO.Ports.SerialPort.WriteLine%2A>-Methode sendet die Daten an den seriellen Anschluss.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Weitere Informationen finden Sie unter [wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="portName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dataBits" /> ist kleiner gleich 0 (null).</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="parity" />ist keine von der <see cref="T:System.IO.Ports.Parity" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate, System.IO.Ports.Parity parity, int dataBits, System.IO.Ports.StopBits stopBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity, int32 dataBits, valuetype System.IO.Ports.StopBits stopBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32,System.IO.Ports.Parity,System.Int32,System.IO.Ports.StopBits)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+        <Parameter Name="dataBits" Type="System.Int32" />
+        <Parameter Name="stopBits" Type="System.IO.Ports.StopBits" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Erforderlich. Der Name des Ports zu öffnen.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Die Baudrate des Ports.</param>
+        <param name="parity">
+          <see cref="T:System.IO.Ports.Parity" />. Die Parität des Ports.</param>
+        <param name="dataBits">
+          <see langword="Integer" />. Daten-Bit-Einstellung des Ports.</param>
+        <param name="stopBits">
+          <see cref="T:System.IO.Ports.StopBits" />. Stop-Bit-Einstellung des Ports.</param>
+        <summary>Erstellt und öffnet eine <see cref="T:System.IO.Ports.SerialPort" /> Objekt.</summary>
+        <returns>Ein offenes <see cref="T:System.IO.Ports.SerialPort" /> -Objekt, mit der angegebenen Argumente konfiguriert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Ports.OpenSerialPort` Methode erstellt und öffnet eine <xref:System.IO.Ports.SerialPort> Objekt. Die Argumente für die `OpenSerialPort` Methode zu ermitteln, die Einstellungen der <xref:System.IO.Ports.SerialPort> Objekt.  
+  
+ Der Code sollte schließen die <xref:System.IO.Ports.SerialPort> Objekt, wenn er abgeschlossen ist unter Verwendung des Objekts. Können Sie die <xref:System.IO.Ports.SerialPort.Close%2A> Methode, um das Objekt explizit schließen, oder die `Using` Anweisung implizit geschlossen. Siehe das Beispiel in diesem Thema für Weitere Informationen.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer.Ports.OpenSerialPort` Methode.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Wählen Sie ein Modem mit einem seriellen Anschluss verbunden|[Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Senden einer Zeichenfolge an den seriellen Anschluss|[Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Empfangen von Zeichenfolgen von einem seriellen Anschluss|[Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird beschrieben, wie Zeichenfolgen an des Computers senden `COM1` seriellen Anschluss.  
+  
+ Der `Using`-Block ermöglicht es der Anwendung, den seriellen Port auch dann zu schließen, wenn eine Ausnahme generiert wird. Der gesamte Code, der den seriellen Anschluss ändert sollte angezeigt werden, innerhalb dieses Blocks oder innerhalb einer `Try...Catch...Finally` Block mit einem Aufruf von verwenden die <xref:System.IO.Ports.SerialPort.Close%2A> Methode.  
+  
+ Die <xref:System.IO.Ports.SerialPort.WriteLine%2A>-Methode sendet die Daten an den seriellen Anschluss.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Weitere Informationen finden Sie unter [wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Der <paramref name="portName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dataBits" /> ist kleiner gleich 0 (null).</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="stopBits" />ist keine von der <see cref="T:System.IO.Ports.StopBits" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialPortNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; SerialPortNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; SerialPortNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Ports.SerialPortNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Namen der seriellen Anschlüsse auf dem Computer ab.</summary>
+        <value>Eine Auflistung der Namen der seriellen Anschlüsse auf dem Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Ports.SerialPortNames` Eigenschaft ruft eine Auflistung der Namen der seriellen Anschlüsse auf dem Computer ab.  
+  
+> [!NOTE]
+>  Die von `My.Computer.Ports.SerialPortNames` zurückgegebenen Anschlussnamen sind möglicherweise unter Windows 98 unzulässig. Verwenden Sie die Ausnahmebehandlung, um Anwendungsfehler zu verhindern – z.B die `Try...Catch...Finally`-Anweisung oder die `Using`-Anweisung beim Öffnen der Anschlüsse mithilfe der Anschlussnamen.  
+  
+ Die folgende Tabelle enthält ein Beispiel für eine Aufgabe mit der `My.Computer.Ports.SerialPortNames` Eigenschaft.  
+  
+|Beschreibung|Siehe|  
+|-|-|  
+|Anzeigen von verfügbaren seriellen Anschlüssen|[Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel werden alle Zeichenfolgen durchlaufen, die die `My.Computer.Ports.SerialPortNames`-Eigenschaft zurückgibt. Diese Zeichenfolgen sind die Namen der auf dem Computer verfügbaren Anschlüsse.  
+  
+ Üblicherweise wählt ein Benutzer aus der Liste der verfügbaren Anschlüsse aus, welchen seriellen Anschluss die Anwendung verwenden soll. In diesem Beispiel werden die Namen der seriellen Anschlüsse in einem <xref:System.Windows.Forms.ListBox>-Steuerelement gespeichert. Weitere Informationen finden Sie unter [ListBox-Steuerelement](~/docs/framework/winforms/controls/listbox-control-windows-forms.md).  
+  
+ [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
+  
+ Für dieses Beispiel benötigen Sie Folgendes:  
+  
+-   Einen Verweis auf den <xref:System?displayProperty=nameWithType>-Namespace  
+  
+-   Dass Ihr Formular ein <xref:System.Windows.Forms.ListBox>-Steuerelement mit dem Namen `ListBox1` hat.  
+  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="None." />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

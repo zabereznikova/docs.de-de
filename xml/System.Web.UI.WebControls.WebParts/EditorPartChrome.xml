@@ -1,0 +1,259 @@
+<Type Name="EditorPartChrome" FullName="System.Web.UI.WebControls.WebParts.EditorPartChrome">
+  <TypeSignature Language="C#" Value="public class EditorPartChrome" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditorPartChrome extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es Entwicklern, das Rendering für nur die ausgewählten Bereiche von überschreiben <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente in einem <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> Zone.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chrom bezieht sich auf die peripheren Elemente der Benutzeroberfläche (UI), jedes Webparts-Steuerelement oder das Webserversteuerelement in einer Zone enthalten sind. Chrom für ein Steuerelement enthält eine Rahmenlinie, Titelleiste, und die Symbole, Titeltext und Verbmenü, die in der Titelleiste angezeigt werden. Die Darstellung der Chrome auf der Ebene der Zone festgelegt ist, und gilt für alle Steuerelemente in der Zone.  
+  
+ Die Webparts-Steuerelementen werden mithilfe der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> Klasse zum Rendern der Chrome für <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Diese Klasse bietet darüber hinaus eine Möglichkeit für Entwickler zum Anpassen des Renderings eines beliebigen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone. Sie können z. B. überschreiben die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.CreateEditorPartChromeStyle%2A> Methode, um einige spezifische Stilattribute anzupassen definiert, der <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> Klasse enthält mehrere wichtige Methoden, die hilfreich sind, wenn Sie das Rendering außer Kraft setzen möchten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Ist die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.%23ctor%2A> -Konstruktor, der Sie verwenden, wenn Sie außer Kraft setzen die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.CreateEditorPartChrome%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Klasse zum Erstellen einer Instanz des benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> Objekt. Eine andere nützliche Methode ist die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderPartContents%2A> -Methode, die Sie verwenden können, um das Rendering des Inhaltsbereichs von Steuerelementen in einer Zone (im Gegensatz zu Chromelemente werden z. B. Kopfzeilen, Fußzeilen und Titelleisten) zu steuern. Schließlich umfassende programmgesteuerte Kontrolle über alle Aspekte des Renderings gegebenenfalls die <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelemente, die Sie überschreiben die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderEditorPart%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> Klasse, um das Überschreiben der Standardeinstellung Wiedergabe von <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente in eine <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone.  
+  
+ Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite, die alle Steuerelemente im Beispiel hostet.  
+  
+-   Eine Klasse, die den Quellcode für ein benutzerdefiniertes enthält <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> Klasse und <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone.  
+  
+ Der erste Teil des Codebeispiels wird das Benutzersteuerelement. Der Quellcode für das Benutzersteuerelement stammen aus einem anderen Thema. Für dieses Codebeispiel funktioniert, müssen Sie die ASCX-Datei für das Benutzersteuerelement aus der [Exemplarische Vorgehensweise: Ändern von Anzeigemodi auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) Thema, und platzieren Sie die Datei im gleichen Ordner wie die ASPX-Seite in diesem Codebeispiel wird.  
+  
+ Der zweite Teil des Beispiels wird die Webseite. Beachten Sie, dass es eine `Register` -Direktive am Anfang der Datei so registrieren Sie die kompilierte Komponente und ein Tagpräfix. Beachten Sie, dass die Seite mit den benutzerdefinierten Editor-Zone, die mithilfe des Elements verweist auf `<aspSample:MyEditorZone>`.  
+  
+ [!code-aspx-csharp[WebParts_EditorPartChrome_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/CS/EditorPartDemo.aspx#1)]
+ [!code-aspx-vb[WebParts_EditorPartChrome_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/VB/EditorPartDemo.aspx#1)]  
+  
+ Der dritte Teil des Beispiels enthält die Implementierung des benutzerdefinierten Editor Teil Chrom und -Editor-Zone. `MyEditorZone`Erweitert <xref:System.Web.UI.WebControls.WebParts.EditorZone> und überschreibt <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.CreateEditorPartChrome%2A> zurückzugebenden benutzerdefinierten Editor Teil chrome. `MyEditorPartChrome`Ändert die Hintergrundfarbe des Steuerelements in Editor die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.CreateEditorPartChromeStyle%2A> Methode. Die Hintergrundfarbe der Zone wird geändert, der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.PerformPreRender%2A> -Methode und der Text wird hinzugefügt, mit dem Editor-Webpart in der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderPartContents%2A> Methode.  
+  
+ [!code-csharp[WebParts_EditorPartChrome_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/CS/source.cs#2)]
+ [!code-vb[WebParts_EditorPartChrome_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" /> -Klasse, müssen Sie erstellen eine benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> Zone zurückzugebenden Ihrer benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" /> Klasse. Im Beispielabschnitt der Übersicht dieser Klasse veranschaulicht, wie eine benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> Zone aus, um eine angepasste zurückgeben <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" /> Klasse</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorPartChrome (System.Web.UI.WebControls.WebParts.EditorZoneBase zone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.EditorZoneBase zone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartChrome.#ctor(System.Web.UI.WebControls.WebParts.EditorZoneBase)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="zone" Type="System.Web.UI.WebControls.WebParts.EditorZoneBase" />
+      </Parameters>
+      <Docs>
+        <param name="zone">Die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> Klasse. Es dient in erster Linie durch ein <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zone in seine <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.CreateEditorPartChrome%2A> Methode zum Erstellen einer Instanz von der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> -Objekt, das das Chromrendering und benutzerdefinierte Rendering für behandelt <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente in der Zone.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> , <paramref name="zone" /> verweist, ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorPartChromeStyle">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.Style CreateEditorPartChromeStyle (System.Web.UI.WebControls.WebParts.EditorPart editorPart, System.Web.UI.WebControls.WebParts.PartChromeType chromeType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.Style CreateEditorPartChromeStyle(class System.Web.UI.WebControls.WebParts.EditorPart editorPart, valuetype System.Web.UI.WebControls.WebParts.PartChromeType chromeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartChrome.CreateEditorPartChromeStyle(System.Web.UI.WebControls.WebParts.EditorPart,System.Web.UI.WebControls.WebParts.PartChromeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorPart" Type="System.Web.UI.WebControls.WebParts.EditorPart" />
+        <Parameter Name="chromeType" Type="System.Web.UI.WebControls.WebParts.PartChromeType" />
+      </Parameters>
+      <Docs>
+        <param name="editorPart">Das Steuerelement, das gerade gerendert wird.</param>
+        <param name="chromeType">Der Typ der Chrome für ein bestimmtes Steuerelement. eines der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> Enumerationswerte.</param>
+        <summary>Erstellt die Formatvorlagenobjekt, das für die einzelnen Stilattribute bereitstellt <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement gerendert wird, indem Sie die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Style" /> mit Stilattributen für <paramref name="editorPart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.CreateEditorPartChromeStyle%2A> Methode erstellt eine <xref:System.Web.UI.WebControls.Style> -Objekt, das von verwendet wird die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> Objekt zum Rendern einer <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.CreateEditorPartChromeStyle%2A> Methode, um die Hintergrundfarbe des Editorsteuerelements ändern. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, einschließlich der Webseite zum Hosten der Steuerelemente finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_EditorPartChrome_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/CS/source.cs#3)]
+ [!code-vb[WebParts_EditorPartChrome_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Steuerelement, <paramref name="editorPart" /> verweist, ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="chromeType" /> ist keine <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" /> -Klasse, Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.EditorPartChrome.CreateEditorPartChromeStyle(System.Web.UI.WebControls.WebParts.EditorPart,System.Web.UI.WebControls.WebParts.PartChromeType)" /> -Methode und zusammenführen, die die Stilinformationen aus der Basismethode mit benutzerdefinierten Stil Attribute, die Sie hinzufügen möchten. Eine Veranschaulichung finden Sie im Beispielabschnitt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformPreRender">
+      <MemberSignature Language="C#" Value="public virtual void PerformPreRender ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PerformPreRender() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartChrome.PerformPreRender" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt Aufgaben aus, die vor dem Rendering erfolgen müssen <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.PerformPreRender%2A> Methode können Sie Aufgaben, die während der ausgeführt werden, müssen die <xref:System.Web.UI.Control.PreRender> Ereignis und kann nicht durchgeführt werden, wenn das Steuerelement gerendert wird, z. B. ein Stylesheet an ein Steuerelement anwenden,.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.PerformPreRender%2A> Methode, um die Hintergrundfarbe der EditorZone ändern. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, einschließlich der Webseite zum Hosten der Steuerelemente finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_EditorPartChrome_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/CS/source.cs#4)]
+ [!code-vb[WebParts_EditorPartChrome_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEditorPart">
+      <MemberSignature Language="C#" Value="public virtual void RenderEditorPart (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebParts.EditorPart editorPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderEditorPart(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebParts.EditorPart editorPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderEditorPart(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.EditorPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="editorPart" Type="System.Web.UI.WebControls.WebParts.EditorPart" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , empfängt der <c>EditorPart</c> Inhalt.</param>
+        <param name="editorPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Rendert ein vollständiges <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> -Steuerelement mit allen zugehörigen Bereichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderEditorPart%2A> Methode rendert das vollständige <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement mit Header, Inhalt und Fußzeile. Überschreiben diese Methode ermöglicht Entwicklern die programmgesteuerte Kontrolle über alle Aspekte der Rendern vollständige `editorPart`; aus diesem Grund Überschreiben dieser Methode ist relativ komplex.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Steuerelement, <paramref name="editorPart" /> verweist, ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPartContents">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPartContents (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebParts.EditorPart editorPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPartContents(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebParts.EditorPart editorPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderPartContents(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.EditorPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="editorPart" Type="System.Web.UI.WebControls.WebParts.EditorPart" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , empfängt der <c>EditorPart</c> Inhalt.</param>
+        <param name="editorPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Den Hauptinhaltsbereich der rendert ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> -Steuerelement, mit Ausnahme von Kopf- und Fußzeilen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderPartContents%2A> Methode können Sie die Darstellung der im Textbereich der überschreiben `editorPart`, lassen Sie die Darstellung von Kopf- und Fußzeilen auf das Standardrendering zurückgreifen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderPartContents%2A> Methode, um Text-Editor-Webpart hinzufügen. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, einschließlich der Webseite zum Hosten der Steuerelemente finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_EditorPartChrome_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/CS/source.cs#5)]
+ [!code-vb[WebParts_EditorPartChrome_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartChrome_Overview/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.EditorPartChrome.RenderPartContents(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.EditorPart)" /> Methode. Wenn daher einfach die Renderinganpassungen ausführen können sollen für <paramref name="editorPart" />, und rufen Sie anschließend die <see cref="M:System.Web.UI.Control.RenderControl(System.Web.UI.HtmlTextWriter)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.EditorZoneBase Zone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.EditorZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPartChrome.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> Zone.</summary>
+        <value>Ein Verweis auf ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> zugeordneten der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartChrome" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome.Zone%2A> Eigenschaft stellt einen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone, die die Steuerelemente, für die enthält die <xref:System.Web.UI.WebControls.WebParts.EditorPartChrome> -Objekt Rendering bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

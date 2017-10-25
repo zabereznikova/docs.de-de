@@ -1,0 +1,100 @@
+<Type Name="STAThreadAttribute" FullName="System.STAThreadAttribute">
+  <TypeSignature Language="C#" Value="public sealed class STAThreadAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit STAThreadAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.STAThreadAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass STA (Singlethreaded Apartment) als COM-Threadingmodell für eine Anwendung verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut anwenden, um die Einstiegspunktmethode (die `Main()` Methode in c# und Visual Basic). Er wirkt sich nicht auf andere Methoden aus. Verwenden, um den Apartmentzustand eines Threads festzulegen, starten Sie in Ihrem Code, der <xref:System.Threading.Thread.SetApartmentState%2A?displayProperty=nameWithType> oder <xref:System.Threading.Thread.TrySetApartmentState%2A?displayProperty=nameWithType> -Methode vor dem Starten des Threads.  
+  
+> [!NOTE]
+>  Einen Überblick über die COM-Threadingmodellen finden Sie unter [Understanding and Using COM Threading Models](http://msdn.microsoft.com/library/ms809971.aspx).  
+  
+ Com-Threadingmodellen gelten nur für Anwendungen, die COM-Interop verwenden. Das COM-Threadingmodell kann auf Singlethread-Apartment oder Multithread-Apartment festgelegt werden. Thread der Anwendung wird nur für COM-Interop initialisiert, wenn der Thread tatsächlich einen Aufruf an eine COM-Komponente sendet. Wenn COM-Interop wird nicht verwendet, wird der Thread nicht initialisiert werden wird, und die <xref:System.STAThreadAttribute> Attribut, sofern es vorhanden ist, hat keine Auswirkungen.  
+  
+ Beginnend mit .NET Framework, Version 2.0, hängt von der Standardeinstellung Threadingmodell für COM-Interop die Sprache, in der Sie die Anwendung, wie in der folgenden Tabelle gezeigt entwickeln.  
+  
+|Sprache|COM-Apartmentmodell|  
+|--------------|-------------------------|  
+|C#|Multithread-apartment|  
+|C++|Multithread-apartment|  
+|Visual Basic|Singlethread-apartment|  
+  
+ Verwenden Sie zum Ändern dieser Standardeinstellungen der <xref:System.STAThreadAttribute> Attribut festzulegende Threadingmodell für die Anwendung an, oder rufen den <xref:System.Threading.Thread.SetApartmentState%2A?displayProperty=nameWithType> oder <xref:System.Threading.Thread.TrySetApartmentState%2A?displayProperty=nameWithType> -Methode vor dem Starten des Threads zum Festlegen des Threadingmodells für einen bestimmten Thread. In C++ können Sie auch die [/CLRTHREADATTRIBUTE](http://msdn.microsoft.com/library/4907e9ef-5031-446c-aecf-0a0b32fae1e8) Linkeroption, um das Apartmentmodell anzugeben.  
+  
+ ASP.NET-Anwendungen sollten Festlegen der `ASPCompat` Attribut des der [@ Page](http://msdn.microsoft.com/en-us/f06cf9e5-22bb-461d-8b8f-549e53ff40a4) -Direktive `true` erzwingen Sie die Seite durch den STA-Thread-Pool bedient zu werden.  
+  
+ Im folgenden sind einige der Fälle, in dem soll, verwenden Sie, die <xref:System.STAThreadAttribute> Attribut zum expliziten Festlegen des Threadingmodells auf Singlethread-Apartment:  
+  
+-   Sie entwickeln eine app für Windows Forms. Windows Forms-apps muss Singlethread-Wenn die Kommunikation mit dem Windows-Systemkomponenten wie die Zwischenablage oder Windows häufig verwendete Dialogfelder, oder wenn sie Systemfunktionen wie Drag & Drop-Funktionalität verwenden. Die Vorlage für Windows Forms-Anwendung für c# fügt automatisch die <xref:System.STAThreadAttribute> -Attribut auf C#-Projekten. Da das Singlethread-Apartment-Modell die Standardeinstellung für Visual Basic ist, besteht keine Notwendigkeit für das Attribut.  
+  
+-   Sie entwickeln eine C#-app, die einen Visual Basic-Laufzeitbibliothek aufruft, die wiederum auf COM-Interop verwendet. Da das Singlethread-Apartment-Modell die Standardeinstellung für Visual Basic ist, sollten Sie Ihre app Threadingmodell in Singlethread-ändern, mithilfe der <xref:System.STAThreadAttribute> Attribut.  
+  
+-   Die Anwendung durchführt, Aufrufe von COM-Komponenten, die die Singlethread-Apartment-Modell verwendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public STAThreadAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.STAThreadAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.STAThreadAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

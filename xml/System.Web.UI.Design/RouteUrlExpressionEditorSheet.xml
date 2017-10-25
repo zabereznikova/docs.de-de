@@ -1,0 +1,141 @@
+<Type Name="RouteUrlExpressionEditorSheet" FullName="System.Web.UI.Design.RouteUrlExpressionEditorSheet">
+  <TypeSignature Language="C#" Value="public class RouteUrlExpressionEditorSheet : System.Web.UI.Design.ExpressionEditorSheet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RouteUrlExpressionEditorSheet extends System.Web.UI.Design.ExpressionEditorSheet" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.RouteUrlExpressionEditorSheet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditorSheet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Blatt des Entwurfszeit-Editors für die Eigenschaften eines <see langword="RouteUrl" />-Ausdrucks auf der Benutzeroberfläche eines Designer-Hosts zur Entwurfszeit dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der visuelle Designer verwendet die <xref:System.Web.UI.Design.RouteUrlExpressionEditor> -Klasse zusammen mit der <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet> Klasse, um die einzelnen Eigenschaften wählen eine `RouteUrl` Ausdruck, und kombinieren die ausgewählten Ausdruckseigenschaftswerte in ein `RouteUrl` Ausdruck.  
+  
+ Die <xref:System.Web.UI.Design.RouteUrlExpressionEditor.GetExpressionEditorSheet%2A?displayProperty=nameWithType>-Methode gibt ein <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet>-Objekt zurück. In der Ausdrücke (Dialogfeld), wenn Sie eine Steuerelementeigenschaft auswählen und binden Sie es an einem `RouteUrl` Ausdruck, der visuelle Designer Ruft die <xref:System.Web.UI.Design.RouteUrlExpressionEditor.GetExpressionEditorSheet%2A> Methode. Der visuelle Designer verwendet das zurückgegebene <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet> Objekt, das zur Eingabe der <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteValues%2A> und <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteName%2A> Eigenschaften. Nachdem die Eigenschaften ausgewählt sind, ruft der visuelle Designer die <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.GetExpression%2A> -Methode kombinieren Sie die Eigenschaften in einem `RouteUrl` Ausdruckszeichenfolge.  
+  
+ Die <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteValues%2A> Eigenschaft muss angegeben werden, wenn die <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteName%2A> Eigenschaft wurde nicht angegeben. Die <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteName%2A> Eigenschaft muss angegeben werden, wenn die <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteValues%2A> nicht angegeben wird. Beide Eigenschaften können angegeben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RouteUrlExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteUrlExpressionEditorSheet.#ctor(System.String,System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Ein <see langword="RouteUrl" /> Ausdruck verwendet, um das Blatt der Ausdrucks-Editor zu initialisieren.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.RouteUrlExpressionEditorSheet" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der ursprüngliche <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteValues%2A> und <xref:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteName%2A> Eigenschaftswerte festgelegt werden, werden die Eingabe `expression` Zeichenfolge. Die <xref:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider%2A> Eigenschaft festgelegt ist, verwenden die Eingabe `serviceProvider` Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpression">
+      <MemberSignature Language="C#" Value="public override string GetExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetExpression() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteUrlExpressionEditorSheet.GetExpression" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see langword="RouteUrl" /> Ausdruck, der die Eigenschaftswerte des Ausdrucks-Editor Blatt gebildet wird.</summary>
+        <returns>Die <see langword="RouteUrl" /> Ausdruckszeichenfolge für die aktuellen Einstellungen in der Tabelle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public override bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.RouteUrlExpressionEditorSheet.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see langword="RouteUrl" /> Abfrageausdrucks-Zeichenfolge ist ungültig.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="RouteUrl" /> Ausdruckszeichenfolge gültig ist andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteName">
+      <MemberSignature Language="C#" Value="public string RouteName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RouteName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Route, die eine URL generiert werden soll.</summary>
+        <value>Der Name der Route, die eine URL generiert werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteValues">
+      <MemberSignature Language="C#" Value="public string RouteValues { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RouteValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.RouteUrlExpressionEditorSheet.RouteValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL-Parameternamen und Werte, die verwendet werden, um eine URL einer Route generiert.</summary>
+        <value>Die URL-Parameternamen und die Werte, die verwendet werden, um eine URL einer Route generiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

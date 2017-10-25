@@ -1,0 +1,230 @@
+<Type Name="HtmlFormAdapter" FullName="System.Web.UI.MobileControls.Adapters.HtmlFormAdapter">
+  <TypeSignature Language="C#" Value="public class HtmlFormAdapter : System.Web.UI.MobileControls.Adapters.HtmlControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlFormAdapter extends System.Web.UI.MobileControls.Adapters.HtmlControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.HtmlControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Formularadapterklasse (d. h. den Adapter für die <see cref="T:System.Web.UI.MobileControls.Form" />) für die HTML-adapterempfangsspeicherort festlegen. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlFormAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.MobileControls.Form Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Form Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Form</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen stark typisierten Verweis auf das zugeordnete Steuerelement zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Einen stark typisierten Verweis auf das zugeordnete Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisablePager">
+      <MemberSignature Language="C#" Value="protected void DisablePager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void DisablePager() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.DisablePager" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Deaktiviert die Pager-Benutzeroberfläche (UI) für die aktuelle Anforderung. Kann von einem Adapter, um zu verhindern, dass die Paginierung der Benutzeroberfläche generiert wird, aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public override void Render (System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Render(class System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.Render(System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter zum Empfangen der Ausgabe.</param>
+        <summary>Wird von der „Render“-Methode des Steuerelements zum Durchführen des Rendervorgangs aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBodyTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBodyTag (System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer, System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBodyTag(class System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer, class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.RenderBodyTag(System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter.</param>
+        <param name="attributes">Das angegebene <see langword="&lt;body&gt;" /> Attribute.</param>
+        <summary>Rendert die <see langword="&lt;body&gt;" /> Tag. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die grundlegende Implementierung rendert eine `<body>` Tag mit den angegebenen Attributen. Adapter erben kann diese Methode überschreiben und das Wörterbuch der Attribute ändern, bevor Sie die basisimplementierung aufrufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderExtraHeadElements">
+      <MemberSignature Language="C#" Value="protected virtual bool RenderExtraHeadElements (System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool RenderExtraHeadElements(class System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.RenderExtraHeadElements(System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der angegebene Textwriter.</param>
+        <summary>Rendert zusätzliche Inhalte innerhalb der <see langword="&lt;head&gt;" /> und <see langword="&lt;/ head&gt;" /> Tags des HTML-Seite. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn zusätzliche Headerelemente geschrieben wurden. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird zweimal aufgerufen. Beim ersten Aufruf der Writer-Parameter ist `null`, und die Methode gibt `true` oder `false`, wodurch angegeben wird, davon, ob sie zusätzliche hat `<head>` -Elemente geschrieben. Beim zweiten Aufruf schreibt die Methode den Inhalt unter Verwendung des angegebenen Writers.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPager">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPager (System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPager(class System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.RenderPager(System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter.</param>
+        <summary>Rendert die Pager-Benutzeroberfläche (UI) für das Formular. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPagerTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPagerTag (System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer, int pageToNavigate, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void RenderPagerTag(class System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter writer, int32 pageToNavigate, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.RenderPagerTag(System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.HtmlMobileTextWriter" />
+        <Parameter Name="pageToNavigate" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Gibt den Ausgabestream an.</param>
+        <param name="pageToNavigate">Enthält die Seitenzahl der Zielseite.</param>
+        <param name="text">Gibt den für den Link verwendeten Text an.</param>
+        <summary>Rendert ein Pagertag in paginierten Formularen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt einen Link in den Ausgabestream an. Der Link in paginierten Formularen So aktivieren Sie für den Benutzer zum Navigieren zwischen den Seiten eines Formulars angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldRenderFormTag">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldRenderFormTag ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldRenderFormTag() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.HtmlFormAdapter.ShouldRenderFormTag" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob ein Formulartag gerendert werden soll. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Formulartag gerendert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

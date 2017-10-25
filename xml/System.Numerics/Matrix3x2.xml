@@ -1,0 +1,1457 @@
+<Type Name="Matrix3x2" FullName="System.Numerics.Matrix3x2">
+  <TypeSignature Language="C#" Value="public struct Matrix3x2 : IEquatable&lt;System.Numerics.Matrix3x2&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Matrix3x2 extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Numerics.Matrix3x2&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Numerics.Matrix3x2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics.Vectors</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Numerics.Matrix3x2&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine 3 x 2-Matrix dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Matrix3x2 (float m11, float m12, float m21, float m22, float m31, float m32);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 m11, float32 m12, float32 m21, float32 m22, float32 m31, float32 m32) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m11" Type="System.Single" />
+        <Parameter Name="m12" Type="System.Single" />
+        <Parameter Name="m21" Type="System.Single" />
+        <Parameter Name="m22" Type="System.Single" />
+        <Parameter Name="m31" Type="System.Single" />
+        <Parameter Name="m32" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="m11">Der Wert, der dem ersten Element in der ersten Zeile zugewiesen wird.</param>
+        <param name="m12">Der Wert, der dem zweiten Element in der ersten Zeile zugewiesen wird.</param>
+        <param name="m21">Der Wert, der dem ersten Element in der zweiten Zeile zugewiesen wird.</param>
+        <param name="m22">Der Wert, der dem zweiten Element in der zweiten Zeile zugewiesen wird.</param>
+        <param name="m31">Der Wert, der dem ersten Element in der dritten Zeile zugewiesen wird.</param>
+        <param name="m32">Der Wert, der dem zweiten Element in der dritten Zeile zugewiesen wird.</param>
+        <summary>Erstellt eine 4 x 2-Matrix aus den angegebenen Komponenten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 Add (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 Add(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Add(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Matrix.</param>
+        <param name="value2">Die zweite Matrix.</param>
+        <summary>Addiert zu jedem Element in einer Matrix das entsprechende Element in einer zweiten Matrix.</summary>
+        <returns>Die Matrix, die die addierten Werte von <paramref name="value1" /> und <paramref name="value2" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRotation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateRotation (float radians);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateRotation(float32 radians) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateRotation(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="radians" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="radians">Das Ausmaß der Rotation im Bogenmaß.</param>
+        <summary>Erstellt eine Rotationsmatrix mithilfe der angegebenen Drehung im Bogenmaß.</summary>
+        <returns>Die Rotationsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRotation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateRotation (float radians, System.Numerics.Vector2 centerPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateRotation(float32 radians, valuetype System.Numerics.Vector2 centerPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateRotation(System.Single,System.Numerics.Vector2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="radians" Type="System.Single" />
+        <Parameter Name="centerPoint" Type="System.Numerics.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="radians">Das Ausmaß der Rotation im Bogenmaß.</param>
+        <param name="centerPoint">Der Mittelpunkt.</param>
+        <summary>Erstellt eine Rotationsmatrix und verwendet dazu die angegebene Rotation im Bogenmaß und einen Mittelpunkt.</summary>
+        <returns>Die Rotationsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateScale">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateScale (System.Numerics.Vector2 scales);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateScale(valuetype System.Numerics.Vector2 scales) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateScale(System.Numerics.Vector2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scales" Type="System.Numerics.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="scales">Die zu verwendende Skala.</param>
+        <summary>Erstellt eine Skalierungsmatrix aus der angegebenen Vektorskala.</summary>
+        <returns>Die Skalierungsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateScale">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateScale (float scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateScale(float32 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateScale(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="scale">Der zu verwendende einheitliche Maßstab.</param>
+        <summary>Erstellt eine Skalierungsmatrix, die gleichmäßig mit dem angegebenen Maßstab skaliert.</summary>
+        <returns>Die Skalierungsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateScale">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateScale (System.Numerics.Vector2 scales, System.Numerics.Vector2 centerPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateScale(valuetype System.Numerics.Vector2 scales, valuetype System.Numerics.Vector2 centerPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateScale(System.Numerics.Vector2,System.Numerics.Vector2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scales" Type="System.Numerics.Vector2" />
+        <Parameter Name="centerPoint" Type="System.Numerics.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="scales">Die zu verwendende Skala.</param>
+        <param name="centerPoint">Der Mittelpunktversatz.</param>
+        <summary>Erstellt eine Skalierungsmatrix aus dem angegebenen Vektormaßstab mit einem Versatz gegenüber dem angegebenen Mittelpunkt.</summary>
+        <returns>Die Skalierungsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateScale">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateScale (float scale, System.Numerics.Vector2 centerPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateScale(float32 scale, valuetype System.Numerics.Vector2 centerPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateScale(System.Single,System.Numerics.Vector2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scale" Type="System.Single" />
+        <Parameter Name="centerPoint" Type="System.Numerics.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="scale">Der zu verwendende einheitliche Maßstab.</param>
+        <param name="centerPoint">Der Mittelpunktversatz.</param>
+        <summary>Erstellt eine Skalierungsmatrix, die mit dem angegebenen Maßstab mit einem Versatz gegenüber dem angegebenen Mittelpunkt gleichmäßig skaliert.</summary>
+        <returns>Die Skalierungsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateScale">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateScale (float xScale, float yScale);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateScale(float32 xScale, float32 yScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateScale(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xScale" Type="System.Single" />
+        <Parameter Name="yScale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="xScale">Der Wert für die Skalierung auf der X-Achse.</param>
+        <param name="yScale">Der Wert für die Skalierung auf der Y-Achse.</param>
+        <summary>Erstellt eine Skalierungsmatrix aus den angegebenen X- und Y-Komponenten.</summary>
+        <returns>Die Skalierungsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateScale">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateScale (float xScale, float yScale, System.Numerics.Vector2 centerPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateScale(float32 xScale, float32 yScale, valuetype System.Numerics.Vector2 centerPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateScale(System.Single,System.Single,System.Numerics.Vector2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xScale" Type="System.Single" />
+        <Parameter Name="yScale" Type="System.Single" />
+        <Parameter Name="centerPoint" Type="System.Numerics.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="xScale">Der Wert für die Skalierung auf der X-Achse.</param>
+        <param name="yScale">Der Wert für die Skalierung auf der Y-Achse.</param>
+        <param name="centerPoint">Der Mittelpunkt.</param>
+        <summary>Erstellt eine Skalierung Matrix, die um einen angegebenen Mittelpunkt versetzt ist.</summary>
+        <returns>Die Skalierungsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSkew">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateSkew (float radiansX, float radiansY);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateSkew(float32 radiansX, float32 radiansY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateSkew(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="radiansX" Type="System.Single" />
+        <Parameter Name="radiansY" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="radiansX">Der X-Winkel im Bogenmaß.</param>
+        <param name="radiansY">Der Y-Winkel im Bogenmaß.</param>
+        <summary>Erstellt eine schiefsymmetrische Matrix aus den angegebenen Winkeln im Bogenmaß.</summary>
+        <returns>Die schiefsymmetrische Matrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSkew">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateSkew (float radiansX, float radiansY, System.Numerics.Vector2 centerPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateSkew(float32 radiansX, float32 radiansY, valuetype System.Numerics.Vector2 centerPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateSkew(System.Single,System.Single,System.Numerics.Vector2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="radiansX" Type="System.Single" />
+        <Parameter Name="radiansY" Type="System.Single" />
+        <Parameter Name="centerPoint" Type="System.Numerics.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="radiansX">Der X-Winkel im Bogenmaß.</param>
+        <param name="radiansY">Der Y-Winkel im Bogenmaß.</param>
+        <param name="centerPoint">Der Mittelpunkt.</param>
+        <summary>Erstellt eine schiefsymmetrische Matrix aus den angegebenen Winkeln im Bogenmaß und einem Mittelpunkt.</summary>
+        <returns>Die schiefsymmetrische Matrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTranslation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateTranslation (System.Numerics.Vector2 position);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateTranslation(valuetype System.Numerics.Vector2 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateTranslation(System.Numerics.Vector2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Numerics.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="position">Die Translationsposition.</param>
+        <summary>Erstellt eine Translationsmatrix aus dem angegebenen zweidimensionalen Vektor.</summary>
+        <returns>Die Translationsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTranslation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 CreateTranslation (float xPosition, float yPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 CreateTranslation(float32 xPosition, float32 yPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.CreateTranslation(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPosition" Type="System.Single" />
+        <Parameter Name="yPosition" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="xPosition">Die X-Position.</param>
+        <param name="yPosition">Die Y-Position.</param>
+        <summary>Erstellt eine Translationsmatrix aus den angegebenen X- und Y-Komponenten.</summary>
+        <returns>Die Translationsmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Numerics.Matrix3x2 other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Numerics.Matrix3x2 other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Equals(System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die andere Matrix.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz und eine andere 3 x 2-Matrix gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Matrizen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Matrizen sind gleich, wenn die entsprechenden Elemente gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene Instanz und <paramref name="obj" /> gleich sind, andernfalls <see langword="false" /><see langword="" />. Wenn <paramref name="obj" /> gleich <see langword="null" /> ist, gibt die Methode <see langword="false" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Instanz und `obj` sind gleich, wenn `obj` ist ein <xref:System.Numerics.Matrix3x2> Objekt und den entsprechenden Elementen von aller Matrizen gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeterminant">
+      <MemberSignature Language="C#" Value="public float GetDeterminant ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetDeterminant() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.GetDeterminant" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Berechnet die Determinante für diese Matrix.</summary>
+        <returns>Die Determinante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Determinante wird berechnet, indem Erweitern der Matrix mit einer dritten Spalte, deren Werte (0,0,1 ab).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Der Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Matrix3x2 Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Matrix3x2.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die multiplikative Identitätsmatrix ab.</summary>
+        <value>Ruft die multiplikative Identitätsmatrix ab.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invert">
+      <MemberSignature Language="C#" Value="public static bool Invert (System.Numerics.Matrix3x2 matrix, out System.Numerics.Matrix3x2 result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Invert(valuetype System.Numerics.Matrix3x2 matrix, [out] valuetype System.Numerics.Matrix3x2&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Invert(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="result" Type="System.Numerics.Matrix3x2&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Die zu invertierende Matrix.</param>
+        <param name="result">Der Rückgabewert dieser Methode enthält die invertierte Matrix, wenn der Vorgang erfolgreich abgeschlossen wurde.</param>
+        <summary>Invertiert die angegebene Matrix. Der Rückgabewert gibt an, ob der Vorgang erfolgreich abgeschlossen wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="matrix" /> erfolgreich konvertiert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentity">
+      <MemberSignature Language="C#" Value="public bool IsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Matrix3x2.IsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die aktuelle Matrix die Identitätsmatrix ist.</summary>
+        <value>
+          <see langword="true" />, wenn die aktuelle Matrix Identitätsmatrix ist, anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lerp">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 Lerp (System.Numerics.Matrix3x2 matrix1, System.Numerics.Matrix3x2 matrix2, float amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 Lerp(valuetype System.Numerics.Matrix3x2 matrix1, valuetype System.Numerics.Matrix3x2 matrix2, float32 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Lerp(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="matrix2" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="amount" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="matrix1">Die erste Matrix.</param>
+        <param name="matrix2">Die zweite Matrix.</param>
+        <param name="amount">Die relative Gewichtung der <c>matrix2</c>.</param>
+        <summary>Führt eine lineare Interpolation zwischen einer Matrix und einer zweiten Matrix basierend auf einem Wert durch, der die Gewichtung er zweiten Matrix angibt.</summary>
+        <returns>Die interpolierte Matrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M11">
+      <MemberSignature Language="C#" Value="public float M11;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 M11" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Matrix3x2.M11" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das erste Element der ersten Zeile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M12">
+      <MemberSignature Language="C#" Value="public float M12;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 M12" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Matrix3x2.M12" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das zweite Element der ersten Zeile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M21">
+      <MemberSignature Language="C#" Value="public float M21;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 M21" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Matrix3x2.M21" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das erste Element der zweiten Zeile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M22">
+      <MemberSignature Language="C#" Value="public float M22;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 M22" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Matrix3x2.M22" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das zweite Element der zweiten Zeile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M31">
+      <MemberSignature Language="C#" Value="public float M31;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 M31" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Matrix3x2.M31" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das erste Element der dritten Zeile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M32">
+      <MemberSignature Language="C#" Value="public float M32;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 M32" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Matrix3x2.M32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das zweite Element der dritten Zeile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 Multiply (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 Multiply(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Multiply(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Matrix.</param>
+        <param name="value2">Die zweite Matrix.</param>
+        <summary>Gibt die Matrix zurück, die sich aus der Multiplikation zwei Matrizen ergibt.</summary>
+        <returns>Die Produktmatrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 Multiply (System.Numerics.Matrix3x2 value1, float value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 Multiply(valuetype System.Numerics.Matrix3x2 value1, float32 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Multiply(System.Numerics.Matrix3x2,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die zu skalierende Matrix.</param>
+        <param name="value2">Der zu verwendende Skalierungswert.</param>
+        <summary>Gibt die Matrix zurück, die sich aus der Skalierung aller Elemente einer angegebenen Matrix um einen skalaren Faktor ergibt.</summary>
+        <returns>Die skalierte Matrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Negate">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 Negate (System.Numerics.Matrix3x2 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 Negate(valuetype System.Numerics.Matrix3x2 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Negate(System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu negierende Matrix.</param>
+        <summary>Negiert die angegebene Matrix durch Multiplikation aller ihrer Werte mit -1.</summary>
+        <returns>Die negierte Matrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 operator + (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Matrix3x2 op_Addition(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.op_Addition(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Matrix.</param>
+        <param name="value2">Die zweite Matrix.</param>
+        <summary>Addiert zu jedem Element in einer Matrix das entsprechende Element in einer zweiten Matrix.</summary>
+        <returns>Die Matrix, die die addierten Werte enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Matrix3x2.op_Addition%2A> Methode definiert, die Operation der Addition-Operator für <xref:System.Numerics.Matrix3x2> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.op_Equality(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste zu vergleichende Matrix.</param>
+        <param name="value2">Die zweite zu vergleichende Matrix.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die angegebenen Matrizen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value1" /> und <paramref name="value2" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Matrizen sind gleich, wenn die entsprechenden Elemente gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.op_Inequality(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste zu vergleichende Matrix.</param>
+        <param name="value2">Die zweite zu vergleichende Matrix.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die angegebenen Matrizen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value1" /> und <paramref name="value2" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 operator * (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Matrix3x2 op_Multiply(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.op_Multiply(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Matrix.</param>
+        <param name="value2">Die zweite Matrix.</param>
+        <summary>Gibt die Matrix zurück, die sich aus der Multiplikation zwei Matrizen ergibt.</summary>
+        <returns>Die Produktmatrix.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Matrix3x2.op_Multiply%2A> Methode definiert, den Vorgang, der den Multiplikationsoperator für <xref:System.Numerics.Matrix3x2> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 operator * (System.Numerics.Matrix3x2 value1, float value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Matrix3x2 op_Multiply(valuetype System.Numerics.Matrix3x2 value1, float32 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.op_Multiply(System.Numerics.Matrix3x2,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die zu skalierende Matrix.</param>
+        <param name="value2">Der zu verwendende Skalierungswert.</param>
+        <summary>Gibt die Matrix zurück, die sich aus der Skalierung aller Elemente einer angegebenen Matrix um einen skalaren Faktor ergibt.</summary>
+        <returns>Die skalierte Matrix.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Matrix3x2.op_Multiply%2A> Methode definiert, den Vorgang, der den Multiplikationsoperator für <xref:System.Numerics.Matrix3x2> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 operator - (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Matrix3x2 op_Subtraction(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.op_Subtraction(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Matrix.</param>
+        <param name="value2">Die zweite Matrix.</param>
+        <summary>Subtrahiert jedes Element aus einer zweiten Matrix von seinem entsprechenden Element in einer ersten Matrix.</summary>
+        <returns>Die Matrix, die die Werte enthält, die sich aus der Subtraktion jedes Elements in <paramref name="value2" /> von seinem entsprechenden Element in <paramref name="value1" /> ergeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Matrix3x2.Subtract%2A> Methode definiert, den Vorgang des Subtraktionsoperators für <xref:System.Numerics.Matrix3x2> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 operator - (System.Numerics.Matrix3x2 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Matrix3x2 op_UnaryNegation(valuetype System.Numerics.Matrix3x2 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.op_UnaryNegation(System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu negierende Matrix.</param>
+        <summary>Negiert die angegebene Matrix durch Multiplikation aller ihrer Werte mit -1.</summary>
+        <returns>Die negierte Matrix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Matrix3x2 Subtract (System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Matrix3x2 Subtract(valuetype System.Numerics.Matrix3x2 value1, valuetype System.Numerics.Matrix3x2 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.Subtract(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Matrix3x2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Matrix3x2" />
+        <Parameter Name="value2" Type="System.Numerics.Matrix3x2" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Matrix.</param>
+        <param name="value2">Die zweite Matrix.</param>
+        <summary>Subtrahiert jedes Element aus einer zweiten Matrix von seinem entsprechenden Element in einer ersten Matrix.</summary>
+        <returns>Die Matrix, die die Werte enthält, die sich aus der Subtraktion jedes Elements in <paramref name="value2" /> von seinem entsprechenden Element in <paramref name="value1" /> ergeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Matrix3x2.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die diese Matrix darstellt.</summary>
+        <returns>Die Zeichenfolgendarstellung dieser Matrix.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die numerischen Werte in der zurückgegebenen Zeichenfolge werden mit den Konventionen der aktuellen Kultur formatiert. Für die Kultur En-US, kann die zurückgegebene Zeichenfolge z. B. als angezeigt `{ {M11:1.1 M12:1.2} {M21:2.1 M22:2.2} {M31:3.1 M32:3.2} }`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translation">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector2 Translation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector2 Translation" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Matrix3x2.Translation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Verschiebekomponente dieser Matrix ab oder legt sie fest.</summary>
+        <value>Die Verschiebekomponente der aktuellen Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

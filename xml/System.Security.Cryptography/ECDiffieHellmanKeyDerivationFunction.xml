@@ -1,0 +1,103 @@
+<Type Name="ECDiffieHellmanKeyDerivationFunction" FullName="System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction">
+  <TypeSignature Language="C#" Value="public enum ECDiffieHellmanKeyDerivationFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ECDiffieHellmanKeyDerivationFunction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die Schlüsselableitungsfunktion, die die <see cref="T:System.Security.Cryptography.ECDiffieHellmanCng" /> -Klasse verwendet wird, für den geheimen Verträge in Schlüsselmaterial zu konvertieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> -Enumeration definiert den Typ des Algorithmus, der verwendet wird, um eine unformatierte Geheimvertrag in Schlüsselmaterial zu transformieren. Der Geheimvertrag ist der Wert, der aus einem privaten Schlüssel und den öffentlichen Schlüssel der anderen Partei als Teil des Schlüsselaustauschs generiert wird. Es ist der Startwert für das Schlüsselmaterial, das von generiert wird die <xref:System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyMaterial%2A> Methode.  
+  
+ Die <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> Eigenschaft verwendet diese Enumeration zum Abrufen der Schlüsselableitungsfunktion für die <xref:System.Security.Cryptography.ECDiffieHellmanCng> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hash">
+      <MemberSignature Language="C#" Value="Hash" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction Hash = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hash" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Hash-Algorithmus wird verwendet, um Schlüsselmaterial zu generieren. Die <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.HashAlgorithm" /> Eigenschaft gibt den Namen des zu verwendenden Algorithmus an. Wenn der Name des Algorithmus nicht angegeben wird, <see cref="T:System.Security.Cryptography.SHA256" /> als den standardmäßigen-Algorithmus verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch angeben, die <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend%2A> und <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend%2A> Eigenschaften, aber sie sind nicht erforderlich.  
+  
+ Die Menge an Schlüsselmaterial, das generiert wird, entspricht die Größe des den Hashwert für den angegebenen Algorithmus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hmac">
+      <MemberSignature Language="C#" Value="Hmac" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction Hmac = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Hash-based Message Authentication Code (HMAC)-Algorithmus wird verwendet, um Schlüsselmaterial zu generieren. Die <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.HmacKey" /> Eigenschaft gibt an, der zu verwendende Schlüssel. Entweder diese Eigenschaft muss festgelegt werden oder die <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.UseSecretAgreementAsHmacKey" /> Eigenschaft muss festgelegt werden, um <see langword="true" />ist, andernfalls ein <see cref="T:System.Security.Cryptography.CryptographicException" /> wird ausgelöst, wenn Sie verwenden <see cref="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac" />. Wenn beide Eigenschaften festgelegt sind, wird der Geheimvertrag als HMAC-Schlüssel verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch angeben, die <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend%2A> und <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend%2A> Eigenschaften, aber sie sind nicht erforderlich.  
+  
+ Die Menge an Schlüsselmaterial, das generiert wird, entspricht die Größe des HMAC-Werts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tls">
+      <MemberSignature Language="C#" Value="Tls" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction Tls = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Transport Layer Security (TLS)-Protokoll wird verwendet, um Schlüsselmaterial zu generieren. Die <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.Seed" /> und <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.Label" /> Eigenschaften werden müssen, festgelegt ist, andernfalls ein <see cref="T:System.Security.Cryptography.CryptographicException" /> wird ausgelöst, wenn Sie verwenden <see cref="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert generiert 160 Bits Schlüsselmaterial.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography.X509Certificates">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.Cryptography.X509Certificates" /> -Namespace enthält die common Language Runtime-Implementierung des Authenticode x. 509 v. 3-Zertifikats. Dieses Zertifikat ist mit einem privaten Schlüssel signiert, der den Inhaber des Zertifikats eindeutig und sicher identifiziert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

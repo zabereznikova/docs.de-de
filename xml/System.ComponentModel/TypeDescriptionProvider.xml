@@ -1,0 +1,644 @@
+<Type Name="TypeDescriptionProvider" FullName="System.ComponentModel.TypeDescriptionProvider">
+  <TypeSignature Language="C#" Value="public abstract class TypeDescriptionProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TypeDescriptionProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.TypeDescriptionProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt zusätzliche Metadaten, die die <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.TypeDescriptionProvider> Klasse dynamisch erweitert die Typinformationen, die einen Typ oder ein Objekt durch Hinzufügen, ändern oder Ausblenden von Eigenschaften, z. B. Attribute, Eigenschaften und Ereignisse zugeordnet. Kann mehrere Beschreibung Anbieterklassen, die Metadaten zu einem einzelnen bieten <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Es gibt zwei Möglichkeiten zum Zuordnen einer <xref:System.ComponentModel.TypeDescriptionProvider> mit einem <xref:System.ComponentModel.TypeDescriptor>:  
+  
+-   Zur Entwurfszeit, wenn Zielklasse kann die entsprechende zugewiesen werden <xref:System.ComponentModel.TypeDescriptionProviderAttribute> Tag.  
+  
+-   Zur Laufzeit Wenn mindestens ein von der <xref:System.ComponentModel.TypeDescriptor.AddProvider%2A> Methoden der der <xref:System.ComponentModel.TypeDescriptor> Klasse aufgerufen werden kann. Diese überladenen Methoden erfordern das Zielobjekt oder sein Klassentyp.  
+  
+ Die <xref:System.ComponentModel.TypeDescriptionProvider> -Klasse stützt sich auf ein übergeordnetes Objekt des gleichen Typs, während der Erstellung angegeben. Dadurch können abgeleitete Klassen <xref:System.ComponentModel.CustomTypeDescriptor> selektiv Methoden überschreiben.  
+  
+ Instanzen von <xref:System.ComponentModel.TypeDescriptionProvider> werden nur auf Anforderung erstellt und zur Minimierung der Auswirkungen von benutzerdefinierten Typinformationen auf die Leistung.  
+  
+ Diese Klasse kann nicht vererbt werden.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Der abgeleitete Typ kann als gekennzeichnet sein <see langword="internal" /> oder <see langword="private" />, jedoch eine Instanz des Typs erstellt werden kann, mit der <see cref="T:System.ComponentModel.TypeDescriptor" /> Klasse. Führen Sie nicht geschrieben Sie werden, vorausgesetzt, des Aufrufers von unsicheren Code als vertrauenswürdig eingestuft wird. Nehmen Sie stattdessen, dass Aufrufer Instanzen des Typs unter teilweiser Vertrauenswürdigkeit erstellen können.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypeDescriptionProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.TypeDescriptionProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor entspricht dem Aufrufen des anderen <xref:System.ComponentModel.TypeDescriptionProvider.%23ctor%28System.ComponentModel.TypeDescriptionProvider%29> Konstruktor mit einem Parameterwert, der `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypeDescriptionProvider (System.ComponentModel.TypeDescriptionProvider parent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.TypeDescriptionProvider parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.#ctor(System.ComponentModel.TypeDescriptionProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.ComponentModel.TypeDescriptionProvider" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Der übergeordnete Typbeschreibungsanbieter.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.TypeDescriptionProvider" /> verwenden einen Typbeschreibungsanbieter für die übergeordnete Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `parent` Parameter ist `null`, dass alle <xref:System.ComponentModel.TypeDescriptionProvider> Methoden Standardwerte zurück. Andernfalls alle <xref:System.ComponentModel.TypeDescriptionProvider> Methoden delegiert an die Methoden der `parent`.  
+  
+ Die folgende Tabelle zeigt die Standard-Rückgabewerte für <xref:System.ComponentModel.TypeDescriptionProvider> Methoden.  
+  
+|Methode|Standard-Rückgabewert|  
+|------------|--------------------------|  
+|<xref:System.ComponentModel.TypeDescriptionProvider.GetCache%2A>|`null`|  
+|<xref:System.ComponentModel.TypeDescriptionProvider.CreateInstance%2A>|Ein neu erstelltes Objekt durch einen Aufruf der <xref:System.Activator.CreateInstance%2A> Methode.|  
+|<xref:System.ComponentModel.TypeDescriptionProvider.GetExtendedTypeDescriptor%2A>|Eine Standardinstanz von einer <xref:System.ComponentModel.CustomTypeDescriptor> Klasse.|  
+|<xref:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor%2A>|Eine Standardinstanz von einer <xref:System.ComponentModel.CustomTypeDescriptor> Klasse.|  
+|<xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A>|Die `objectType` ersten Parameter.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public virtual object CreateInstance (IServiceProvider provider, Type objectType, Type[] argTypes, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(class System.IServiceProvider provider, class System.Type objectType, class System.Type[] argTypes, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.CreateInstance(System.IServiceProvider,System.Type,System.Type[],System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="argTypes" Type="System.Type[]" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein optionaler Dienstanbieter.</param>
+        <param name="objectType">Der Typ des zu erstellenden Objekts. Dieser Parameter ist nie <see langword="null" />.</param>
+        <param name="argTypes">Ein optionales Array von Typen, die darstellen, die Parametertypen, die an den Konstruktor des Objekts übergeben werden. Dieses Array kann <see langword="null" /> oder der Länge Null.</param>
+        <param name="args">Ein optionales Array von Parameterwerten, die an den Konstruktor des Objekts übergeben werden.</param>
+        <summary>Erstellt ein Objekt, das einen anderen Datentyp ersetzen kann.</summary>
+        <returns>Der Ersatz <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IServiceProvider> gemäß der `provider` Parameter durch Übergeben der <xref:System.ComponentModel.TypeDescriptor.CreateInstance%2A?displayProperty=nameWithType> Methode der <xref:System.ComponentModel.TypeDescriptor> Klasse. Wenn `provider` nicht `null`, der Service-Anbieter kann von den Typbeschreibungsanbieter verwendet werden, um zusätzlichen Kontext über den Erstellungsaufruf erhalten.  
+  
+ Die <xref:System.ComponentModel.TypeDescriptionProvider.CreateInstance%2A> Methode ist `virtual` und in der Standardeinstellung gibt das Ergebnis der <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> Methode Wenn `provider` ist `null`. Wenn `provider` ist `null`, ruft diese Methode die <xref:System.ComponentModel.TypeDescriptionProvider.CreateInstance%2A> Methode des übergeordneten Anbieters.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn die abgeleitete Klasse nicht in eine Ersatz-Instanz bereitstellen möchte, sollte er einfach die basisimplementierung aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCache">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary GetCache (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionary GetCache(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetCache(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Das Objekt für den Cache abgerufen werden soll.</param>
+        <summary>Ruft einen Cache pro-Objekt zugegriffen wird, als ein <see cref="T:System.Collections.IDictionary" /> von Schlüssel/Wert-Paaren.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionary" /> , wenn das bereitgestellte Objekt das Zwischenspeichern unterstützt; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.TypeDescriptor> erfordern u. u. komplexe Vorgänge für Auflistungen von Metadaten. Da die Typen nicht für die Lebensdauer einer Domäne, entladen werden, die <xref:System.ComponentModel.TypeDescriptor> Klasse werden die Ergebnisse dieser Vorgänge basierend auf Typ automatisch zwischengespeichert. Allerdings verwenden einige Vorgänge live Objektinstanzen. Diese Vorgänge können nicht zwischengespeichert werden, innerhalb der <xref:System.ComponentModel.TypeDescriptor> Klasse, da zwischenzuspeichern das Objekt verhindern würde Garbage collection. Stattdessen die <xref:System.ComponentModel.TypeDescriptor> -Klasse ermöglicht das für einen Cache pro-Objekt zugegriffen wird, als ein <xref:System.Collections.IDictionary> von Schlüssel/Wert-Paaren auf ein Objekt vorhanden ist. Die <xref:System.ComponentModel.TypeDescriptionProvider.GetCache%2A> Methode gibt eine Instanz dieses Caches zurück. Die <xref:System.ComponentModel.TypeDescriptionProvider.GetCache%2A> Methode zurück `null` Wenn es keinen unterstützten Cache für ein Objekt.  
+  
+ Die Standardeinstellung <xref:System.ComponentModel.TypeDescriptionProvider> verwendeten <xref:System.ComponentModel.TypeDescriptor> überprüft das Objekt, um festzustellen, ob es sich um eine positionierte Komponente handelt, die implementiert die <xref:System.ComponentModel.Design.IDictionaryService> Schnittstelle. Wenn das Objekt ist, verwendet er die Wörterbuchdienst zum Speichern des Objekts Caches. Zurückgegeben, andernfalls das Objekt `null`. Andere Typbeschreibungsanbieter können hier ihre eigene Implementierung bereitstellen. Beispielsweise können Abhängigkeitsobjekte nur eine Eigenschaft vom Typ Anfügen <xref:System.Collections.IDictionary>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtendedTypeDescriptor">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.ICustomTypeDescriptor GetExtendedTypeDescriptor (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.ICustomTypeDescriptor GetExtendedTypeDescriptor(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetExtendedTypeDescriptor(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Das Objekt, für das die erweiterte Typdeskriptor abgerufen werden soll.</param>
+        <summary>Ruft einen erweiterten benutzerdefinierten Typdeskriptor für das angegebene Objekt ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.ICustomTypeDescriptor" /> , erweiterten Metadaten für das Objekt bereitstellen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein erweiterte Typdeskriptor ist ein benutzerdefinierter Typdeskriptor, die angeboten, die Eigenschaften, die diesem Objekt sich jedoch im anderen Objekten hinzugefügt haben, nicht sind tatsächlich für das Objekt definiert. Beispielsweise ist in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Komponentenmodell-Objekte implementiert, die <xref:System.ComponentModel.IExtenderProvider> Schnittstelle kann Eigenschaften anfügen, auf andere Objekte, die sich in demselben logischen Container befinden. Die überladenen <xref:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor%2A> Methoden keine zurückgeben einen Typdeskriptor, die diese zusätzlichen erweiterten Eigenschaften bereitstellt. Die <xref:System.ComponentModel.TypeDescriptionProvider.GetExtendedTypeDescriptor%2A> Methode gibt die Menge dieser erweiterten Eigenschaften zurück. Die <xref:System.ComponentModel.TypeDescriptor> die Ergebnisse dieser beiden Eigenschaft Sammlungen werden automatisch zusammengeführt. Während der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Komponentenmodell unterstützt nur erweiterte Eigenschaften <xref:System.ComponentModel.TypeDescriptionProvider.GetExtendedTypeDescriptor%2A> können für erweiterten Attribute als auch Ereignisse, verwendet werden, wenn der Typbeschreibungsanbieter unterstützt.  
+  
+ <xref:System.ComponentModel.TypeDescriptionProvider.GetExtendedTypeDescriptor%2A>ist `virtual` und in der Standardeinstellung gibt einen benutzerdefinierter Typdeskriptor, die leere Ergebnisse zurückgibt, wenn kein übergeordneter Anbieter übergeben wurde. Wenn ein übergeordneter Anbieter übergeben wurde, ruft diese Methode des übergeordneten Anbieters <xref:System.ComponentModel.TypeDescriptionProvider.GetExtendedTypeDescriptor%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtenderProviders">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.IExtenderProvider[] GetExtenderProviders (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ComponentModel.IExtenderProvider[] GetExtenderProviders(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetExtenderProviders(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IExtenderProvider[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Das Objekt, das Extenderanbieter abgerufen.</param>
+        <summary>Ruft die Extenderanbieter für das angegebene Objekt ab.</summary>
+        <returns>Ein Array von Extenderanbieter für <paramref name="instance" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFullComponentName">
+      <MemberSignature Language="C#" Value="public virtual string GetFullComponentName (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetFullComponentName(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetFullComponentName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die angegebene Komponente.</param>
+        <summary>Ruft den Namen der angegebenen Komponente ab oder <see langword="null" /> , wenn die Komponente keinen Namen hat.</summary>
+        <returns>Der Name der angegebenen Komponente.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReflectionType">
+      <MemberSignature Language="C#" Value="public Type GetReflectionType (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetReflectionType(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetReflectionType(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Eine Instanz des Typs (sollte nicht <see langword="null" />).</param>
+        <summary>Führt die normalen Reflektion mit dem angegebenen Objekt.</summary>
+        <returns>Der Typ der Reflektion für diesen <paramref name="instance" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A> Methode ist eine technisch anspruchsvolle-Version von der <xref:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor%2A> Methode. Wenn kein benutzerdefinierter Typdeskriptor für ein Objekt gefunden werden kann <xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A> wird aufgerufen, um normale Reflektion für das Objekt auszuführen.  
+  
+ Verwenden Sie diese methodenüberladung, wenn Sie einen Deskriptor Typmember aufgerufen haben, der eine Instanz anstelle eines Typs verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReflectionType">
+      <MemberSignature Language="C#" Value="public Type GetReflectionType (Type objectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetReflectionType(class System.Type objectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetReflectionType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">Der Typ des Objekts, für das Abrufen der <see cref="T:System.Reflection.IReflect" />.</param>
+        <summary>Führt die normalen Reflektion anhand eines Typs.</summary>
+        <returns>Der Typ der Reflektion für diesen <paramref name="objectType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A> Methode ist eine technisch anspruchsvolle-Version von der <xref:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor%2A> Methode. Wenn kein benutzerdefinierter Typdeskriptor für ein Objekt gefunden werden kann <xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A> wird aufgerufen, um normale Reflektion für das Objekt auszuführen.  
+  
+ Verwenden Sie diese methodenüberladung, wenn Sie einen Deskriptor Typmember aufgerufen haben, der anstelle einer Instanz ein Typs verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="objectType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReflectionType">
+      <MemberSignature Language="C#" Value="public virtual Type GetReflectionType (Type objectType, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetReflectionType(class System.Type objectType, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetReflectionType(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">Der Typ des Objekts, für das Abrufen der <see cref="T:System.Reflection.IReflect" />.</param>
+        <param name="instance">Eine Instanz des Typs. Kann <see langword="null" />.</param>
+        <summary>Führt die normalen Reflektion für das angegebene Objekt mit dem angegebenen Typ.</summary>
+        <returns>Der Typ der Reflektion für diesen <paramref name="objectType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A> Methode ist eine technisch anspruchsvolle-Version von der <xref:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor%2A> Methode. Wenn kein benutzerdefinierter Typdeskriptor für ein Objekt gefunden werden kann <xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A> wird aufgerufen, um normale Reflektion für das Objekt auszuführen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode wird als Prototyp <see langword="virtual" />, und von der Standardeinstellung gibt <paramref name="objectType" /> , wenn kein übergeordneter Anbieter übergeben wurde. Wenn ein übergeordneter Anbieter übergeben wurde, ruft diese Methode des übergeordneten Anbieters <see cref="Overload:System.ComponentModel.TypeDescriptionProvider.GetReflectionType" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeType">
+      <MemberSignature Language="C#" Value="public virtual Type GetRuntimeType (Type reflectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetRuntimeType(class System.Type reflectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetRuntimeType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reflectionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="reflectionType">Der Typ, in der Laufzeit äquivalent zu konvertieren.</param>
+        <summary>Konvertiert einen Reflektionstyp in einen Common Language Runtime-Typ.</summary>
+        <returns>Ein <see cref="T:System.Type" /> , die die Common Language Runtime-Entsprechung des darstellt <paramref name="reflectionType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.TypeDescriptionProvider.GetRuntimeType%2A> -Methode kehrt das Ergebnis der <xref:System.ComponentModel.TypeDescriptionProvider.GetReflectionType%2A> Methode zum Konvertieren eines Typs der Reflektion in einen Common Language Runtime-Typ zurück. Mithilfe der <xref:System.ComponentModel.TypeDescriptionProvider.GetRuntimeType%2A> ist die bevorzugte Methode gegenüber der <xref:System.Type.UnderlyingSystemType%2A> -Eigenschaft, die in früheren Versionen verwendet wurde, um den Laufzeittyp zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reflectionType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeDescriptor">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Eine Instanz des Typs. Kann <see langword="null" /> Wenn keine Instanz, um übergeben wurde die <see cref="T:System.ComponentModel.TypeDescriptor" />.</param>
+        <summary>Ruft ein benutzerdefinierter Typdeskriptor für das angegebene Objekt ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.ICustomTypeDescriptor" /> , der Metadaten für den Typ bereitstellen kann.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeDescriptor">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor (Type objectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor(class System.Type objectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">Der Typ des Objekts, für das Abrufen des Typdeskriptors.</param>
+        <summary>Ruft ein benutzerdefinierter Typdeskriptor für den angegebenen Typ ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.ICustomTypeDescriptor" /> , der Metadaten für den Typ bereitstellen kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeDescriptor">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor (Type objectType, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor(class System.Type objectType, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">Der Typ des Objekts, für das Abrufen des Typdeskriptors.</param>
+        <param name="instance">Eine Instanz des Typs. Kann <see langword="null" /> Wenn keine Instanz, um übergeben wurde die <see cref="T:System.ComponentModel.TypeDescriptor" />.</param>
+        <summary>Ruft die einem benutzerdefinierten Typdeskriptor für den angegebenen Typ und Objekt ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.ICustomTypeDescriptor" /> , der Metadaten für den Typ bereitstellen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird als Prototyp `virtual` und gibt standardmäßig einen leeren Deskriptor zurück, wenn kein übergeordneter Anbieter übergeben wurde. Wenn ein übergeordneter Anbieter übergeben wurde, ruft diese Methode des übergeordneten Anbieters <xref:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor(System.Type,System.Object)" /> -Methode mit einen benutzerdefinierten Typdeskriptor für das Objekt zurückgeben sollte. Wenn die Methode keine Typinformationen für das Objekt bereitstellt, sollte es zurückgeben <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupportedType">
+      <MemberSignature Language="C#" Value="public virtual bool IsSupportedType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupportedType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeDescriptionProvider.IsSupportedType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, für die Kompatibilität zu testen.</param>
+        <summary>Ruft einen Wert, der angibt, ob der angegebene Typ mit die typbeschreibung und die Kette von Typbeschreibungsanbieter kompatibel ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="type" /> mit die typbeschreibung und die Kette von Typbeschreibungsanbieter kompatibel ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

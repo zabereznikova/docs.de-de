@@ -1,0 +1,422 @@
+<Type Name="ProfileSettingsCollection" FullName="System.Web.Configuration.ProfileSettingsCollection">
+  <TypeSignature Language="C#" Value="public sealed class ProfileSettingsCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileSettingsCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProfileSettingsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.ProfileSettings))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Web.Configuration.ProfileSettings" />-Objekten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.ProfileSettings>Objekte werden verwendet, um Ereignisprofile zu definieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.ProfileSettingsCollection> Typ. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#6)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileSettingsCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ProfileSettingsCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.HealthMonitoringSection.Profiles%2A> Eigenschaft von der <xref:System.Web.Configuration.HealthMonitoringSection> Klasse enthält immer eine Instanz von der <xref:System.Web.Configuration.ProfileSettingsCollection>. Verwenden Sie diese Instanz, anstatt eine eigene erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.ProfileSettings profilesSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.ProfileSettings profilesSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.Add(System.Web.Configuration.ProfileSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="profilesSettings" Type="System.Web.Configuration.ProfileSettings" />
+      </Parameters>
+      <Docs>
+        <param name="profilesSettings">Ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.ProfileSettings" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung darf nicht bereits ein <xref:System.Web.Configuration.ProfileSettings> Objekt mit demselben Namen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.Add%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#2)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt bereits in der Auflistung vorhanden ist, oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.Configuration.ProfileSettings" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `clear` Richtlinie in den entsprechenden Abschnitt der Konfigurationsdatei So löschen Sie alle Verweise auf Elemente in einer Konfigurationsdatei definiert. Entfernt alle Elemente im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.Clear%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#61](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#61)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#61](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#61)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt in der Auflistung.</param>
+        <summary>Gibt an, ob die Auflistung enthält ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt mit dem angegebenen Namen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung enthält ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt mit dem angegebenen <paramref name="name" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.Contains%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#56](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#56)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#56](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#56)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt in der Auflistung.</param>
+        <summary>Gibt den Index des angegebenen <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt.</summary>
+        <returns>Der Index des angegebenen <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt oder-1 zurück, wenn das Objekt nicht in der Auflistung gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.IndexOf%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#57](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#57)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#57](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#57)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Configuration.ProfileSettings authorizationSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Configuration.ProfileSettings authorizationSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.Insert(System.Int32,System.Web.Configuration.ProfileSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="authorizationSettings" Type="System.Web.Configuration.ProfileSettings" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt in der Auflistung.</param>
+        <param name="authorizationSettings">Ein <see cref="T:System.Web.Configuration.ProfileSettings" /> in die Auflistung einzufügende Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `index` Parameter entspricht der Anzahl der Elemente in der Auflistung, und klicken Sie dann der Eintrag an das Ende der Auflistung angefügt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.Insert%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#54](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#54)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#54](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt bereits in der Auflistung vorhanden ist, der Index ungültig ist oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfileSettings this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ProfileSettings Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSettingsCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfileSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt am angegebenen numerischen Index in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.Item%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#67](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#67)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#67](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#67)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfileSettings this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ProfileSettings Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSettingsCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfileSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des der <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt in der Auflistung enthalten.</param>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.ProfileSettings" /> -Objekts basierend auf dem angegebenen Schlüssel in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.ProfileSettings" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSettingsCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des eine <see cref="T:System.Web.Configuration.ProfileSettings" /> aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.Configuration.BufferModeSettings" /> Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.Remove%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#59](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#59)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#59](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#59)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.ProfileSettings" /> -Objekt mit dem angegebenen Schlüssel in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileSettingsCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt in der Auflistung.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.Configuration.ProfileSettings" /> Objekt an der angegebenen Indexposition aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileSettingsCollection.RemoveAt%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.HealthMonitoringSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#60](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#60)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#60](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#60)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.ProfileSettings" /> -Objekt am angegebenen Index in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

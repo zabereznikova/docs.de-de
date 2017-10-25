@@ -1,0 +1,77 @@
+<Type Name="INestedContainer" FullName="System.ComponentModel.INestedContainer">
+  <TypeSignature Language="C#" Value="public interface INestedContainer : IDisposable, System.ComponentModel.IContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INestedContainer implements class System.ComponentModel.IContainer, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.INestedContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Funktionen für geschachtelte Container, die logisch 0 oder mehr Komponenten enthalten und sind im Besitz einer übergeordneten Komponente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.INestedContainer> -Schnittstelle fügt das Konzept einer besitzenden Komponente auf die <xref:System.ComponentModel.IContainer> Schnittstelle. Ein geschachtelter Container ist ein Objekt, das logisch, jedoch nicht unbedingt visuell NULL oder mehr untergeordneten Komponenten enthält und im Besitz einer übergeordneten Komponente. Bei der visuellen Kapselung ist die besitzende Komponente häufig einen anderen Container.  
+  
+ Geschachtelte Container können Abschnitte eines Steuerelements zu entwerfen, ohne eine explizite serialisierte Membervariable oder ein benutzerdefiniertes Serialisierungsprogramm für jedes untergeordnete Steuerelement. Stattdessen verwaltet der Formular-Designer eine master Container von Komponenten. Jede Komponente Standort kann es sich um einen geschachtelten Container verfügen, der können Sie zusätzliche Komponenten platziert bereitstellt. Wenn eine Komponente in einem geschachtelten Container positioniert wird, ist der Name, den Erhalt des eine Kombination aus seinem Namen und der Name der besitzenden Komponente. Darüber hinaus Komponenten, die eine geschachtelte Container nicht hinzugefügt haben vollen Zugriff auf die Dienste des übergeordneten Containers, und die geschachtelte Container bietet das gleiche Verhalten für das übergeordnete Element in Bezug auf die neue Komponenten hinzufügen. Die geschachtelte Container erstellt den Designer für die einzelnen darin enthaltenen Komponenten Dadurch wird zur Entwurfszeit Unterstützung. Da Standardcode Serialisierungsprogramme nicht geschachtelten Containern untersuchen, werden diese Komponenten nur dann serialisiert, wenn ein Pfad zu ihnen durch die Komponenten in der primäre Container durchlaufen abgerufen werden kann.  
+  
+ Geschachtelte Container finden Sie durch Abfragen der Website eine Komponente, für Dienste des Typs <xref:System.ComponentModel.INestedContainer>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Owner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.INestedContainer.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die besitzende Komponente für die geschachtelten Container ab.</summary>
+        <value>Die <see cref="T:System.ComponentModel.IComponent" /> , die die geschachtelten Container besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die besitzende Komponente ist das Merkmal, das geschachtelte Container von gewöhnlichen Containern unterscheidet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

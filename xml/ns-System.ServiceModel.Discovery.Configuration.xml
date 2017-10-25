@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Discovery.Configuration">
+  <Docs>
+    <summary>Die <see langword="System.ServiceModel.Discovery.Configuration" /> -Namespace enthält Klassen, mit denen Sie Discovery-Einstellungen in einer Konfigurationsdatei konfigurieren können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

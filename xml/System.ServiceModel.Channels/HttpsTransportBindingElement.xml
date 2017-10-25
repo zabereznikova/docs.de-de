@@ -1,0 +1,337 @@
+<Type Name="HttpsTransportBindingElement" FullName="System.ServiceModel.Channels.HttpsTransportBindingElement">
+  <TypeSignature Language="C#" Value="public class HttpsTransportBindingElement : System.ServiceModel.Channels.HttpTransportBindingElement, System.ServiceModel.Channels.ITransportTokenAssertionProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpsTransportBindingElement extends System.ServiceModel.Channels.HttpTransportBindingElement implements class System.ServiceModel.Channels.ITransportTokenAssertionProvider, class System.ServiceModel.Description.IPolicyExportExtension, class System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.HttpsTransportBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Http</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.HttpTransportBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.ITransportTokenAssertionProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt das Bindungselement dar, mit dem eine HTTPS-Übertragung zum Senden von Nachrichten angegeben wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>-Klasse stellt den Startpunkt für das Erstellen einer benutzerdefinierten Bindung dar, die das HTTPS-Übertragungsprotokoll implementiert. HTTPS stellt die primäre Übertragungsweise für einen sicheren Datenaustausch dar. HTTPS wird von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] unterstützt, um die Interoperabilität mit anderen Webdienststapeln sicherzustellen.  
+  
+ Das Dienstmodell in [!INCLUDE[indigo2](~/includes/indigo2-md.md)] erstellt mit dieser Klasse Factoryobjekte, die die <xref:System.ServiceModel.Channels.IChannelFactory>-Schnittstelle und die <xref:System.ServiceModel.Channels.IChannelListener>-Schnittstelle implementieren. Diese Factoryobjekte erstellen wiederum die Kanäle und Listener, mit denen SOAP-Nachrichten über das HTTPS-Protokoll übertragen werden.  
+  
+ Sie können die Konfiguration der Factorys steuern, die von dieser Klasse erstellt werden, indem Sie die Eigenschaften festlegen, z.&#160;B. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement.RequireClientCertificate%2A>.   
+  
+ Sie können auch Eigenschaften für die Basisklasse <xref:System.ServiceModel.Channels.HttpTransportBindingElement> festlegen, z.&#160;B. <xref:System.ServiceModel.Channels.HttpTransportBindingElement.AuthenticationScheme%2A>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement.HostNameComparisonMode%2A> und <xref:System.ServiceModel.Channels.HttpTransportBindingElement.MaxBufferSize%2A>.  
+  
+ Sie können auch Eigenschaften für die Basisklasse <xref:System.ServiceModel.Channels.TransportBindingElement> festlegen, z.&#160;B. <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> und <xref:System.ServiceModel.Channels.TransportBindingElement.MaxBufferPoolSize%2A>. Eine vollständige Liste der Eigenschaften finden Sie unter <xref:System.ServiceModel.Channels.TransportBindingElement>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpsTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpsTransportBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.HttpsTransportBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpsTransportBindingElement (System.ServiceModel.Channels.HttpsTransportBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.HttpsTransportBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpsTransportBindingElement.#ctor(System.ServiceModel.Channels.HttpsTransportBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.HttpsTransportBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">Eine Instanz der <see cref="T:System.ServiceModel.Channels.HttpsTransportBindingElement" />-Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.HttpsTransportBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein Kopierkonstruktor, mit dem das Bindungselement geklont (d.&#160;h. kopiert) wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ des Kanals.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />-Member, mit denen Bindungen, Verhaltensweisen, Verträge und andere Informationen beschrieben werden, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt eine Kanalfactory des angegebenen Typs zum Erstellen eines Kanals.</summary>
+        <returns>Eine Kanalfactory des angegebenen Typs, die auf der Basis der Werte konfiguriert wurde, die im Transportbindungselement festgelegt sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt eine Kanalfactory zurück, die anhand der Werte im Transportbindungselement konfiguriert wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ des Kanals.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />-Member, mit denen Bindungen, Verhaltensweisen, Verträge und andere Informationen beschrieben werden, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt einen Kanallistener des angegebenen Typs, mit dem ein Kanal erstellt werden kann.</summary>
+        <returns>Ein Kanallistener des angegebenen Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Kanallistener, der anhand der Werte im Transportbindungselement konfiguriert wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpsTransportBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des aktuellen Bindungselements.</summary>
+        <returns>Eine Kopie des aktuellen Bindungselements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpsTransportBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das Objekt, das abgerufen werden soll.</typeparam>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Ruft ein angegebenes Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> ab.</summary>
+        <returns>Das angegebene Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> oder <see langword="null" />, wenn das Objekt nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft das angegebene Objekt aus der Basisklasse oder einem der Vorgänger der Klasse ab. Das zurückgegebene Objekt stellt normalerweise eine Auflistung von Eigenschaften dar, z.&#160;B. ein Objekt, das <xref:System.ServiceModel.Channels.ISecurityCapabilities> implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransportTokenAssertion">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetTransportTokenAssertion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlElement GetTransportTokenAssertion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpsTransportBindingElement.GetTransportTokenAssertion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Xml.XmlElement" /> ab, das das Transporttoken darstellt, das in der Sicherheitsbindung verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlElement" />, das das Transporttoken darstellt, das in der Sicherheitsbindung verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf diese Weise wird die WDSL für den zugeordneten Dienst generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireClientCertificate">
+      <MemberSignature Language="C#" Value="public bool RequireClientCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireClientCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpsTransportBindingElement.RequireClientCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die SSL-Clientauthentifizierung erforderlich ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die SSL-Clientauthentifizierung erforderlich ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false." />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpsTransportBindingElement.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das URI-Schema für die Übertragung zurück.</summary>
+        <value>Gibt das URI-Schema für die Übertragung ("HTTPS") zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird bereitgestellt, um Bindungsvalidierung gegen Basisadressen zu aktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

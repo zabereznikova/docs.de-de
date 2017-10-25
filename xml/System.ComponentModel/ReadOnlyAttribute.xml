@@ -1,0 +1,360 @@
+<Type Name="ReadOnlyAttribute" FullName="System.ComponentModel.ReadOnlyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ReadOnlyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReadOnlyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ReadOnlyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob die Eigenschaft, die dieses Attribut gebunden ist schreibgeschützt ist oder Lese-/Schreibzugriff. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit gekennzeichnete Member der <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `true` oder verfügen, die nicht über eine `Set` Methode kann nicht geändert werden. Elemente, die nicht über dieses Attribut oder mit markiert sind, die <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `false` weisen Lese-/Schreibzugriff und kann geändert werden. Die Standardeinstellung ist <xref:System.ComponentModel.ReadOnlyAttribute.No>.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.ComponentModel.PropertyDescriptor> Klasse erzwingt die <xref:System.ComponentModel.ReadOnlyAttribute> in der entwurfsumgebung und zur Laufzeit. Wenn Sie eine Eigenschaft mit dem Kennzeichnen der <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `true`, der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.ReadOnlyAttribute.Yes>. Für eine Eigenschaft mit markiert die <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `false`, der Wert ist <xref:System.ComponentModel.ReadOnlyAttribute.No>. Aus diesem Grund, wenn Sie den Wert dieses Attributs im Code überprüfen möchten, geben Sie das Attribut als <xref:System.ComponentModel.ReadOnlyAttribute.Yes?displayProperty=nameWithType> oder <xref:System.ComponentModel.ReadOnlyAttribute.No?displayProperty=nameWithType>.  
+  
+ Weitere Informationen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Eigenschaft als schreibgeschützt markiert.  
+  
+ [!code-cpp[Classic ReadOnlyAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ReadOnlyAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ReadOnlyAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/VB/source.vb#1)]  
+  
+ Das nächste Codebeispiel veranschaulicht die Überprüfung des Werts der <xref:System.ComponentModel.ReadOnlyAttribute> für `MyProperty`. Zuerst wird der Code Ruft ab einen <xref:System.ComponentModel.PropertyDescriptorCollection> mit allen Eigenschaften für das Objekt. Als Nächstes sie Indizes in der <xref:System.ComponentModel.PropertyDescriptorCollection> abzurufenden `MyProperty`. Klicken Sie dann die Attribute für diese Eigenschaft zurückgegeben, und speichert sie in der Variablen Attribute wird.  
+  
+ Im Beispiel wird dargestellt, zwei unterschiedliche Arten der Überprüfung des Werts, der die <xref:System.ComponentModel.ReadOnlyAttribute>. Im zweiten Codefragment im Beispiel wird die <xref:System.ComponentModel.ReadOnlyAttribute.Equals%2A> Methode. Im letzten Codefragment im Beispiel wird die <xref:System.ComponentModel.ReadOnlyAttribute.IsReadOnly%2A> Eigenschaft, um den Wert überprüfen.  
+  
+ [!code-cpp[Classic ReadOnlyAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic ReadOnlyAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic ReadOnlyAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/VB/source.vb#2)]  
+  
+ Wenn Sie eine Klasse mit markiert die <xref:System.ComponentModel.ReadOnlyAttribute>, verwenden Sie im folgenden Codebeispiel wird den Wert überprüft.  
+  
+ [!code-cpp[Classic ReadOnlyAttribute Example#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic ReadOnlyAttribute Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/CS/source.cs#3)]
+ [!code-vb[Classic ReadOnlyAttribute Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ReadOnlyAttribute Example/VB/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReadOnlyAttribute (bool isReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ReadOnlyAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isReadOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isReadOnly">
+          <see langword="true" />ist schreibgeschützt, um anzugeben, dass die Eigenschaft, der dieses Attribut gebunden ist; <see langword="false" /> anzeigen, dass die Eigenschaft Lese-/Schreibzugriff ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.ReadOnlyAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit gekennzeichnete Member der <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `true` oder verfügen, die nicht über eine `Set` Methode kann nicht geändert werden. Elemente, die nicht über dieses Attribut oder mit markiert sind, die <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `false` weisen Lese-/Schreibzugriff und kann geändert werden. Die Standardeinstellung ist <xref:System.ComponentModel.ReadOnlyAttribute.No>.  
+  
+> [!NOTE]
+>  Wenn Sie eine Eigenschaft mit dem Kennzeichnen der <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `true`, der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.ReadOnlyAttribute.Yes>. Für eine Eigenschaft mit markiert die <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `false`, der Wert ist <xref:System.ComponentModel.ReadOnlyAttribute.No>. Aus diesem Grund, wenn Sie den Wert dieses Attributs im Code überprüfen möchten, geben Sie das Attribut als <xref:System.ComponentModel.ReadOnlyAttribute.Yes?displayProperty=nameWithType> oder <xref:System.ComponentModel.ReadOnlyAttribute.No?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Eigenschaft als schreibgeschützt markiert. Dieser Code erstellt ein neues <xref:System.ComponentModel.ReadOnlyAttribute>, wird dessen Wert auf <xref:System.ComponentModel.ReadOnlyAttribute.Yes?displayProperty=nameWithType>, und bindet sie an die Eigenschaft.  
+  
+ [!code-cpp[Classic ReadOnlyAttribute.ReadOnlyAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ReadOnlyAttribute.ReadOnlyAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ReadOnlyAttribute.ReadOnlyAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ReadOnlyAttribute.ReadOnlyAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ReadOnlyAttribute.ReadOnlyAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ReadOnlyAttribute.ReadOnlyAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.ReadOnlyAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.ReadOnlyAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ReadOnlyAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ReadOnlyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardwert für die <see cref="T:System.ComponentModel.ReadOnlyAttribute" />, also <see cref="F:System.ComponentModel.ReadOnlyAttribute.No" /> (d. h. für die Eigenschaft, die dieses Attribut gebunden ist, ist Lese-/Schreibzugriff). Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Eigenschaft mit diesem Wert markieren, wird dieses Attribut festgelegt, auf den Konstanten Member <xref:System.ComponentModel.ReadOnlyAttribute.No>. Deshalb, wenn Sie möchten überprüfen, ob das Attribut im Code auf diesen Wert festgelegt ist, geben Sie das Attribut als <xref:System.ComponentModel.ReadOnlyAttribute.No?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ReadOnlyAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein weiteres Objekt für den Vergleich.</param>
+        <summary>Gibt an, ob diese Instanz und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> gleich dieser Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ReadOnlyAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.ComponentModel.ReadOnlyAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ReadOnlyAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dieses Attribut die Standardeinstellung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut der Standardwert für diese Attributklasse ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ReadOnlyAttribute.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Eigenschaft, der dieses Attribut gebunden ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft dieses Attribut gebunden ist, die schreibgeschützt ist; <see langword="false" /> , wenn die Eigenschaft mit Lese-/Schreibzugriff verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird überprüft, ob `MyProperty` ist schreibgeschützt. Der Code ruft zuerst die Attribute für `MyProperty` folgendermaßen aus:  
+  
+-   Abrufen einer <xref:System.ComponentModel.PropertyDescriptorCollection> mit allen Eigenschaften für das Objekt.  
+  
+-   Indizieren der <xref:System.ComponentModel.PropertyDescriptorCollection> abzurufenden `MyProperty`.  
+  
+-   Speichern die Attribute für diese Eigenschaft in der Attribute-Variablen.  
+  
+ Anschließend legt der Code `myAttribute` auf den Wert, der die <xref:System.ComponentModel.ReadOnlyAttribute> in der <xref:System.ComponentModel.AttributeCollection> und überprüft, ob die Eigenschaft schreibgeschützt ist.  
+  
+ [!code-cpp[Classic ReadOnlyAttribute.IsReadOnly Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ReadOnlyAttribute.IsReadOnly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ReadOnlyAttribute.IsReadOnly Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ReadOnlyAttribute.IsReadOnly Example/CS/source.cs#1)]
+ [!code-vb[Classic ReadOnlyAttribute.IsReadOnly Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ReadOnlyAttribute.IsReadOnly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.ReadOnlyAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.ReadOnlyAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ReadOnlyAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ReadOnlyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft, der dieses Attribut gebunden ist, Lese-/Schreibzugriff ist und geändert werden kann. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist die Standardeinstellung für dieses Attribut.  
+  
+ Wenn Sie eine Eigenschaft mit dem Kennzeichnen der <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `false`, der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.ReadOnlyAttribute.No>. Deshalb, wenn Sie möchten überprüfen, ob das Attribut im Code auf diesen Wert festgelegt ist, geben Sie das Attribut als <xref:System.ComponentModel.ReadOnlyAttribute.No?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.ReadOnlyAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.ReadOnlyAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ReadOnlyAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ReadOnlyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft, der dieses Attribut gebunden ist, schreibgeschützt ist und nicht werden, im Server-Explorer geändert kann. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Eigenschaft mit dem Kennzeichnen der <xref:System.ComponentModel.ReadOnlyAttribute> festgelegt `true`, der Wert dieses Attributs wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.ReadOnlyAttribute.Yes>. Deshalb, wenn Sie möchten überprüfen, ob das Attribut im Code auf diesen Wert festgelegt ist, geben Sie das Attribut als <xref:System.ComponentModel.ReadOnlyAttribute.Yes?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

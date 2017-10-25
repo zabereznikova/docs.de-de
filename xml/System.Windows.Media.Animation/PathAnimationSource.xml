@@ -1,0 +1,73 @@
+<Type Name="PathAnimationSource" FullName="System.Windows.Media.Animation.PathAnimationSource">
+  <TypeSignature Language="C#" Value="public enum PathAnimationSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PathAnimationSource extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.PathAnimationSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Ausgabeeigenschaftswert des Pfads an, der zum Steuern der Animation verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt drei mögliche Ausgabe-Eigenschaftswerte, die eine Pfadanimation werden, zusammen - X verschoben kann, Y und Winkel. Durch Angabe einer dieser Werte, sagen Sie die Animation, Ausgabe-Eigenschaftswert des Pfads zum Steuern der Animation verwendet. Gibt z. B. Wenn Sie die Eigenschaft animieren, die die X-Koordinate eines Objekts (d. h. <xref:System.Windows.Media.TranslateTransform.X%2A?displayProperty=nameWithType>) mit einem <xref:System.Windows.Media.Animation.PathAnimationSource.Y?displayProperty=nameWithType> y, klicken Sie dann die Animation wird Animieren der X-Koordinate des Objekts, wobei die y-Koordinaten des Pfads.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Angle">
+      <MemberSignature Language="C#" Value="Angle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.PathAnimationSource Angle = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.PathAnimationSource.Angle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.PathAnimationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Tangentenwinkel der Drehung während des Fortschreitens entlang eines Animationssequenzpfads an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="X" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.PathAnimationSource X = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.PathAnimationSource.X" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.PathAnimationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die X-Koordinate des Offsets während des Fortschreitens entlang eines Animationssequenzpfads an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="Y" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.PathAnimationSource Y = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.PathAnimationSource.Y" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.PathAnimationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Y-Koordinate des Offsets während des Fortschreitens entlang eines Animationssequenzpfads an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

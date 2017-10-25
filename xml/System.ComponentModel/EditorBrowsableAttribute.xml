@@ -1,0 +1,228 @@
+<Type Name="EditorBrowsableAttribute" FullName="System.ComponentModel.EditorBrowsableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EditorBrowsableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EditorBrowsableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EditorBrowsableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Event | System.AttributeTargets.Interface | System.AttributeTargets.Delegate)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Eigenschaft oder Methode in einem Editor angezeigt werden kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.EditorBrowsableAttribute>ein Hinweis für einen Designer, der angibt, ob eine Eigenschaft oder Methode angezeigt werden. Sie können diesen Typ in einem visuellen Designer oder Text-Editor verwenden, um zu bestimmen, was für den Benutzer sichtbar ist. Z. B. das IntelliSense-Modul in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendet dieses Attribut, um zu ermitteln, ob eine Eigenschaft oder Methode anzeigen.  
+  
+ In [!INCLUDE[csprcs](~/includes/csprcs-md.md)], können Sie steuern, wenn erweiterte Eigenschaften in IntelliSense und im Eigenschaftenfenster mit angezeigt werden die **Erweiterte Member ausblenden** Einstellung unter **Tools &#124; Optionen &#124; Text-Editor &#124; C#-**. Das entsprechende <xref:System.ComponentModel.EditorBrowsableState> ist <xref:System.ComponentModel.EditorBrowsableState.Advanced>.  
+  
+> [!NOTE]
+>  In [!INCLUDE[csprcs](~/includes/csprcs-md.md)], <xref:System.ComponentModel.EditorBrowsableAttribute> unterdrückt keine Elemente aus einer Klasse in der gleichen Assembly.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie eine Eigenschaft einer Klasse von IntelliSense ausgeblendet, durch Festlegen des entsprechenden Werts für die <xref:System.ComponentModel.EditorBrowsableAttribute> Attribut. Erstellen Sie `Class1` in seiner eigenen Assembly.  
+  
+ In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], erstellen Sie eine neue Windows-Anwendung-Projektmappe, und fügen Sie einen Verweis auf die Assembly enthält `Class1`. Deklarieren Sie in Form1-Konstruktor eine Instanz von `Class1`, geben Sie den Namen der Instanz, und drücken Sie die PUNKTTASTE So aktivieren Sie die IntelliSense-Dropdownliste von `Class1` Elemente. Die `Age` Eigenschaft wird in der Dropdown-Liste nicht angezeigt.  
+  
+ [!code-cpp[EditorBrowsableAttribute#1](~/samples/snippets/cpp/VS_Snippets_Winforms/EditorBrowsableAttribute/CPP/ctleditorbrowsable.cpp#1)]
+ [!code-csharp[EditorBrowsableAttribute#1](~/samples/snippets/csharp/VS_Snippets_Winforms/EditorBrowsableAttribute/CS/ctleditorbrowsable.cs#1)]
+ [!code-vb[EditorBrowsableAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EditorBrowsableAttribute/VB/ctleditorbrowsable.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorBrowsableAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorBrowsableAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EditorBrowsableAttribute" /> -Klasse mit <see cref="P:System.ComponentModel.EditorBrowsableAttribute.State" /> auf den Standardstatus festgelegt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist <xref:System.ComponentModel.EditorBrowsableState?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorBrowsableAttribute (System.ComponentModel.EditorBrowsableState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.EditorBrowsableState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorBrowsableAttribute.#ctor(System.ComponentModel.EditorBrowsableState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.ComponentModel.EditorBrowsableState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Die <see cref="T:System.ComponentModel.EditorBrowsableState" /> festzulegende <see cref="P:System.ComponentModel.EditorBrowsableAttribute.State" /> an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EditorBrowsableAttribute" /> -Klasse mit einer <see cref="T:System.ComponentModel.EditorBrowsableState" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorBrowsableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen auf Wertgleichheit geprüft.</param>
+        <summary>Gibt zurück, ob der Wert des angegebenen Objekts gleich dem aktuellen <see cref="T:System.ComponentModel.EditorBrowsableAttribute" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert des angegebenen Objekts gleich der aktuellen ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorBrowsableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.EditorBrowsableState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.EditorBrowsableState State" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EditorBrowsableAttribute.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durchsuchbarkeitszustand der Eigenschaft oder Methode an.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.EditorBrowsableState" /> also den durchsuchbarkeitszustand der Eigenschaft oder Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist <xref:System.ComponentModel.EditorBrowsableState?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

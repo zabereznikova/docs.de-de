@@ -1,0 +1,97 @@
+<Type Name="UpWmlPageAdapter" FullName="System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter">
+  <TypeSignature Language="C#" Value="public class UpWmlPageAdapter : System.Web.UI.MobileControls.Adapters.WmlPageAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpWmlPageAdapter extends System.Web.UI.MobileControls.Adapters.WmlPageAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.WmlPageAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet die Seite-Adapterklasse für die WML-Geräteadapter speziell für den Openwave Browser einrichten. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpWmlPageAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTextWriter">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.HtmlTextWriter CreateTextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.HtmlTextWriter CreateTextWriter(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter.CreateTextWriter(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Textwriter.</param>
+        <summary>Erstellt einen für die angegebenen Adapter geeigneten Textwriter und gibt ihn zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein für die angegebenen Adapter geeigneter Textwriter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceQualifies">
+      <MemberSignature Language="C#" Value="public static bool DeviceQualifies (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeviceQualifies(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter.DeviceQualifies(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der aktuelle Anforderungskontext.</param>
+        <summary>Wertet aus, ob der festgelegte Geräteadapter für die angegebene Anforderung gilt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn dem Geräteadapter festgelegt, gilt für die angegebene Anforderung; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+|Klasse|Rückgabe|Bevorzugte Renderingtyp|Überprüfen Sie Wert des JavaScript-Eigenschaft|  
+|-----------|-------------|------------------------------|----------------------------------------|  
+|<xref:System.Web.UI.MobileControls.Adapters.HtmlPageAdapter>|`true`|Überprüft, ob der Wert der <xref:System.Web.Configuration.HttpCapabilitiesBase.PreferredRenderingType%2A> Eigenschaft ist <xref:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeHtml32> oder <xref:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeChtml10>.|Die <xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A> -Eigenschaft gibt `true`.|  
+|<xref:System.Web.UI.MobileControls.Adapters.ChtmlPageAdapter>|`true`|Überprüft, ob der Wert der <xref:System.Web.Configuration.HttpCapabilitiesBase.PreferredRenderingType%2A> Eigenschaft ist <xref:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeHtml32> oder <xref:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeChtml10>.|Die <xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A> -Eigenschaft gibt `false`.|  
+|<xref:System.Web.UI.MobileControls.Adapters.WmlPageAdapter>|`true`|Überprüft, ob der Wert der <xref:System.Web.Configuration.HttpCapabilitiesBase.PreferredRenderingType%2A> Eigenschaft ist <xref:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeWml11> oder <xref:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeWml12>.|Nicht zutreffend.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

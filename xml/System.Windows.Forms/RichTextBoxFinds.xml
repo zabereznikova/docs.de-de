@@ -1,0 +1,119 @@
+<Type Name="RichTextBoxFinds" FullName="System.Windows.Forms.RichTextBoxFinds">
+  <TypeSignature Language="C#" Value="public enum RichTextBoxFinds" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RichTextBoxFinds extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RichTextBoxFinds" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie eine Textsuche in durchgeführt wird, eine <see cref="T:System.Windows.Forms.RichTextBox" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung sucht nach Text in der <xref:System.Windows.Forms.RichTextBox> Steuerelement durch Aufrufen der <xref:System.Windows.Forms.RichTextBox.Find%2A> Methode der <xref:System.Windows.Forms.RichTextBox> Steuerelement. Diese Enumeration können Sie angeben, wie die Suche durchgeführt wird bei der <xref:System.Windows.Forms.RichTextBox.Find%2A> -Methode aufgerufen wird. Sie können einen oder mehrere Werte aus dieser Enumeration an mehr als eine Suchoption beim Aufrufen von Kombinieren der <xref:System.Windows.Forms.RichTextBox.Find%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel sucht den gesamten Inhalt einer <xref:System.Windows.Forms.RichTextBox> nach der ersten Instanz einer Suchzeichenfolge an Text-Parameter der Methode zu übergeben. Der Anfangspunkt der Suche wird von der Start-Parameter der Methode angegeben. Wenn die Suchzeichenfolge, in gefunden wird der <xref:System.Windows.Forms.RichTextBox>, die Methode gibt die Indexposition des ersten Zeichens des gefundenen Texts zurück und hebt den gefundenen Text; andernfalls wird der Wert-1 zurückgegeben. Im Beispiel wird auch die Optionen in der Suche die Groß-/Kleinschreibung der angegebenen Suchzeichenfolge übereinstimmen. Das Beispiel setzt voraus, dass diese Methode sich in der Klasse befindet eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.RichTextBox> mit dem Namen `richTextBox1`. Sie können in diesem Beispiel, bei einen "Weitersuchen" Rollenporttyp-Vorgang ausführen, nachdem die erste Instanz des Suchtexts gefunden wurde, um weitere Instanzen des Texts zu suchen.  
+  
+ [!code-cpp[Classic RichTextBox.Find2 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RichTextBox.Find2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RichTextBox.Find2 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RichTextBox.Find2 Example/CS/source.cs#1)]
+ [!code-vb[Classic RichTextBox.Find2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RichTextBox.Find2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MatchCase">
+      <MemberSignature Language="C#" Value="MatchCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxFinds MatchCase = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxFinds.MatchCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxFinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sucht nur Instanzen des Suchtexts, die die exakte Groß-/Kleinschreibung aufweisen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoHighlight">
+      <MemberSignature Language="C#" Value="NoHighlight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxFinds NoHighlight = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxFinds.NoHighlight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxFinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Suchtext ein, wenn gefunden wird, nicht markiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxFinds None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxFinds.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxFinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Instanzen des Suchtexts suchen, ganzen Wörtern suchen, ob die Instanzen in der Suche gefunden werden, oder nicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="Reverse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxFinds Reverse = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxFinds.Reverse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxFinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Suche beginnt am Ende des Dokuments und sucht auf den Anfang des Dokuments des Steuerelements.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WholeWord">
+      <MemberSignature Language="C#" Value="WholeWord" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxFinds WholeWord = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxFinds.WholeWord" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxFinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sucht nur Instanzen des Suchtexts, die ganze Wörter sind.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

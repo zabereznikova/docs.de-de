@@ -1,0 +1,260 @@
+<Type Name="WebControlAdapter" FullName="System.Web.UI.WebControls.Adapters.WebControlAdapter">
+  <TypeSignature Language="C#" Value="public class WebControlAdapter : System.Web.UI.Adapters.ControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebControlAdapter extends System.Web.UI.Adapters.ControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Adapters.ControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Passt das Rendering für das Websteuerelement, zu dem der Steuerelementadapter angefügt wird, um die Standard-Markup oder das Verhalten für bestimmte Browser zu ändern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebControl> Klasse ist die Basisklasse, die von der Websteuerelemente erben. Alle Websteuerelemente definiert werden viele Eigenschaften gemeinsam. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl>.  
+  
+ Ein <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> Objekt ist eine Komponente, die ersetzt wird, bestimmte <xref:System.Web.UI.WebControls.WebControl> Klasse oder geerbter Methoden und Ereignisse des Lebenszyklus der Ausführung an die Browser-Markup spezifische Behandlung zu ermöglichen. .NET Framework ordnet einen einzelnen Steuerelementadapter ein abgeleiteter <xref:System.Web.UI.WebControls.WebControl> Objekt für jede Clientanforderung.  
+  
+ Ein Adapter ändert ein Steuerelementverhalten für einen bestimmten Browser bzw. der Browser oder fungiert als willkürlicher Filter für einige Funktionen. Ein Großteil der Renderingverhaltens kann gekapselt werden, in die speziellen Klassen, die Ableitung der <xref:System.Web.UI.HtmlTextWriter> Klasse. Daher ist es wahrscheinlich, dass ein einzelner Adapter für eine Reihe von Browserklassenverhalten oder, einschließen von der Anpassungsfähigkeit beim verwendet werden kann die <xref:System.Web.UI.HtmlTextWriter> Klassen möglicherweise nutzen, die eine Steuerelementadapter nicht erforderlich.  
+  
+ Einen Adapter werden von Steuerelemente selbst nicht unbedingt erforderlich. Bei der Zusammensetzung Steuerelemente erweitert werden, sind die Adapter für die untergeordneten Steuerelemente in der Regel ausreichend.  
+  
+ Jedes Steuerelement sind explizite Zuordnungen Adapter über die Browser-Definitionsdateien. Daher wird bei jedem Zugriff auf die <xref:System.Web.UI.Control.Adapter%2A> Eigenschaft <xref:System.Web.UI.WebControls.WebControl> verwendet die <xref:System.Web.HttpBrowserCapabilities> Objekt aus der Browser-Definitionsdateien zum Ausführen der Suche nach der Zuordnung des Adapters zum Steuerelement extrahiert.  
+  
+ Während der Verarbeitung fängt .NET Framework Aufrufe der überschreibbaren Methoden eines Steuerelements, das zielspezifische überprüft werden. Wenn ein Steuerelementadapter angefügt wird, ruft der .NET Framework die zugeordnete Adapter-Methoden. Weitere Informationen finden Sie unter <xref:System.Web.UI.Adapters.ControlAdapter>.  
+  
+ Das Rendering für eine <xref:System.Web.UI.WebControls.WebControl> besteht normalerweise aus einem Start- und Endtag und innerem Markup zwischen dem Anfangs- und Endtags. Die Tags werden definiert. wenn die <xref:System.Web.UI.WebControls.WebControl> wird erstellt. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.%23ctor%2A>.  
+  
+ Die Tags werden generiert, indem die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> und <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> Methoden bzw.. Das innere Markup wird generiert, indem die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> Methode.  
+  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> Methode generiert alle Markup durch Aufrufen der Methoden in der folgenden Reihenfolge:  
+  
+1.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A>.  
+  
+2.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A>.  
+  
+3.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A>.  
+  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.IsEnabled%2A> -Eigenschaft gibt `true` nur, wenn die <xref:System.Web.UI.WebControls.WebControl> und alle übergeordneten Steuerelemente aktiviert sind. Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Control%2A> Eigenschaft gibt einen stark typisierten Verweis auf die <xref:System.Web.UI.WebControls.WebControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> Klasse bei der Erstellung der entsprechenden <xref:System.Web.UI.WebControls.WebControl> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebControl Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebControl Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.WebControlAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das Websteuerelement an den dieser Steuerelementadapter angefügt ist.</summary>
+        <value>Das <see cref="T:System.Web.UI.WebControls.WebControl" />, an das <see cref="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" /> angefügt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> Objekt angefügt ist, um eine <xref:System.Web.UI.WebControls.WebControl> -Objekt, ruft der .NET Framework auf den Adapter Lebenszyklus Methoden anstelle der Methoden der Steuerung. Weitere Informationen finden Sie unter <xref:System.Web.UI.Adapters.ControlAdapter>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" /> -Klasse, Sie sollten zumindest implementieren eine <see langword="Control" /> Eigenschaft, um eine stark typisierte Instanz des Steuerelements zurückzugeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="protected bool IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.WebControlAdapter.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement und alle übergeordneten Steuerelemente aktiviert sind.</summary>
+        <value>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Web.UI.WebControls.WebControl" /> und alle übergeordneten Steuerelemente sind aktiviert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.IsEnabled%2A> Eigenschaft ermöglicht den Zugriff für den Adapter und die abgeleiteten Klassen, die <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A?displayProperty=nameWithType> Eigenschaft. <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A?displayProperty=nameWithType>durchsucht die Hierarchie der übergeordneten Steuerelemente und zurückgibt `true` nur, wenn das Steuerelement und alle übergeordneten Elemente aktiviert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <summary>Generiert das zielspezifische Markup für das Steuerelement, an das der Steuerelementadapter angefügt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> Methode generiert zielspezifische Markup an den Clientbrowser gesendet. <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A>wird aufgerufen, anstelle von der <xref:System.Web.UI.WebControls.WebControl.Render%2A?displayProperty=nameWithType> Methode Wenn eine <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> Objekt angefügt ist, um eine <xref:System.Web.UI.WebControls.WebControl> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> -Basismethode ruft <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />, klicken Sie dann <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" />, und klicken Sie dann <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" />. Wenn Sie außer Kraft setzen <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> und die Basismethode nicht aufrufen, müssen Sie Sie sicher, dass diese Funktionalität bereit.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <summary>Erstellt das Anfangstag für das Websteuerelement in das Markup, das an den Zielbrowser übertragen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> Methode, um zusätzliche Markuptags zu schreiben oder Hinzufügen von Attributen zu des öffnenden Tags für die <xref:System.Web.UI.WebControls.WebControl> Objekt. Verwendung <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> in Verbindung mit der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> Methode, um die öffnend und schließend Konsistenz zu gewährleisten.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> -Basismethode ruft die <see cref="M:System.Web.UI.WebControls.WebControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> Methode. Wiederum die <see cref="M:System.Web.UI.WebControls.WebControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> base-Methode ruft die entsprechende <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" /> überladen, die durch den Typ des Tags, mit denen bestimmt wird die <see cref="T:System.Web.UI.WebControls.WebControl" /> Objekt erstellt wurde. Sie können vermeiden, überschreiben <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> durch Ableiten von der <see cref="T:System.Web.UI.HtmlTextWriter" /> -Klasse und überschreiben <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" />, und möglicherweise auch <see cref="M:System.Web.UI.HtmlTextWriter.RenderEndTag" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected virtual void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <summary>Generiert das zielspezifische innere Markup für das Websteuerelement an das der Steuerelementadapter angefügt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> Methode generiert das innere Markup zwischen dem Anfangs- und Endtags für das Steuerelement. In der Regel generierten Markup von <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A>, ruft die Methoden in der folgenden Reihenfolge:  
+  
+1.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A>.  
+  
+2.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A>.  
+  
+3.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A>.  
+  
+ Überschreiben Sie <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> zum Generieren von zielspezifische inneren Markups, das an den Clientbrowser gesendet.  
+  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> -Basismethode ruft <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A?displayProperty=nameWithType>. Die <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A?displayProperty=nameWithType> -Basismethode ruft <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType>, die wiederum ruft <xref:System.Web.UI.Control.RenderChildren%2A?displayProperty=nameWithType>. Folglich überschreibt der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> aufrufen sollten die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> -Basismethode nur, wenn die Verarbeitung nicht anstelle von, sondern zusätzlich auf <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Für ein zusammengesetztes Steuerelement müssen Sie sicherstellen, dass die untergeordneten Steuerelemente gerendert werden. Wenn Sie überschreiben die <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" /> Methode und rufen Sie die Basismethode nicht, veranlassen Sie, dass der untergeordnete Steuerelemente durch Aufrufen von gerendert werden <see cref="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" /> , die nicht überschrieben wird, ruft <see cref="M:System.Web.UI.Control.RenderChildren(System.Web.UI.HtmlTextWriter)" /> aus der <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" /> außer Kraft setzen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <summary>Erstellt das Endtag für das Websteuerelement in das Markup, das an den Zielbrowser übertragen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> Methode, um zusätzliche Markuptags zu schreiben oder Hinzufügen von Attributen zu dem Endtag für das <xref:System.Web.UI.WebControls.WebControl> Objekt. Verwendung <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> in Verbindung mit der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> Methode, um die öffnend und schließend Konsistenz zu gewährleisten.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" /> -Basismethode ruft die <see cref="M:System.Web.UI.WebControls.WebControl.RenderEndTag(System.Web.UI.HtmlTextWriter)" /> Methode. Wiederum die <see cref="M:System.Web.UI.WebControls.WebControl.RenderEndTag(System.Web.UI.HtmlTextWriter)" /> -Basismethode ruft die <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" /> Methode. Sie können vermeiden, überschreiben <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> durch Ableiten von der <see cref="T:System.Web.UI.HtmlTextWriter" /> -Klasse und überschreiben <see cref="M:System.Web.UI.HtmlTextWriter.RenderEndTag" />, und möglicherweise auch <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

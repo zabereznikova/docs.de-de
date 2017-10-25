@@ -1,0 +1,105 @@
+<Type Name="PenAlignment" FullName="System.Drawing.Drawing2D.PenAlignment">
+  <TypeSignature Language="C#" Value="public enum PenAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PenAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.PenAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Ausrichtung einer <see cref="T:System.Drawing.Pen" /> Objekt in Bezug auf die Zeile theoretische, Breite von NULL.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Pen> Objekt hat die Breite. Der Mittelpunkt dieser Stiftbreite ist relativ zu der Zeile, die gezeichnet werden, abhängig von der Ausrichtungswert ausgerichtet. Ein <xref:System.Drawing.Pen> Objekt positioniert ist, um in eine Linie gezeichnet werden soll oder zentriert werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PenAlignment Center = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PenAlignment.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PenAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Drawing.Pen" /> Objekt theoretische zentriert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inset">
+      <MemberSignature Language="C#" Value="Inset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PenAlignment Inset = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PenAlignment.Inset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PenAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Drawing.Pen" /> innerhalb der theoretische Zeile positioniert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PenAlignment Left = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PenAlignment.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PenAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Drawing.Pen" /> auf der linken Seite der theoretische Zeile positioniert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Outset">
+      <MemberSignature Language="C#" Value="Outset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PenAlignment Outset = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PenAlignment.Outset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PenAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Drawing.Pen" /> an der Außenseite der theoretische Zeile positioniert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.PenAlignment Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.PenAlignment.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.PenAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Drawing.Pen" /> rechts neben der theoretische Zeile positioniert ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

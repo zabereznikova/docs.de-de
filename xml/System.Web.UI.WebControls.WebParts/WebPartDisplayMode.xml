@@ -1,0 +1,225 @@
+<Type Name="WebPartDisplayMode" FullName="System.Web.UI.WebControls.WebParts.WebPartDisplayMode">
+  <TypeSignature Language="C#" Value="public abstract class WebPartDisplayMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebPartDisplayMode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen gemeinsamen Satz von Eigenschaften für die verschiedenen Anzeigemodi, die eine Webparts-Seite eingeben können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Seite können Sie mehrere unterschiedliche Anzeigemodi eingeben. In jedem Anzeigemodus bestimmter Elemente in der die Webparts-Benutzeroberfläche (UI), werden entweder ausgeblendet oder angezeigte werden, und bestimmte Arten von Änderungen durch den Benutzer zu einer Seite aktiviert oder deaktiviert werden. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement enthält die Implementierung für die, die in der Webparts-Steuerelementsatz verfügbaren Anzeigemodi und verwaltet die Anzeigemodi für eine Seite.  
+  
+ Die folgende Tabelle enthält die Felder, die die verfügbaren Anzeigemodi darstellen.  
+  
+|Anzeigemodus|Beschreibung|  
+|------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartManager.BrowseDisplayMode>|Zeigt Webparts-Steuerelemente und Benutzeroberflächenelemente im normalen Modus in dem Endbenutzer eine Seite anzeigen.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartManager.DesignDisplayMode>|Benutzeroberflächenelemente für die Zone angezeigt und ermöglicht es Benutzern, Webparts-Steuerelemente zum Ändern des Layouts einer Seite ziehen.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartManager.EditDisplayMode>|Zeigt besondere Bearbeiten von UI-Elemente und Endbenutzer können die Steuerelemente auf einer Seite zu bearbeiten.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartManager.CatalogDisplayMode>|Spezielle Katalog-Benutzeroberflächenelemente angezeigt und ermöglicht Endbenutzern die Seitensteuerelemente hinzufügen und entfernen.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectDisplayMode>|Spezielle Verbindungen Elemente der Benutzeroberfläche angezeigt und ermöglicht Endbenutzern die Webparts-Steuerelemente zu verbinden.|  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen die deklarative Verwendung der Anzeigemodi auf einer Webparts-Seite. Jede dieser Anzeigemodi, wie von der Webparts-Steuerelementsatz implementiert, stammt aus dem <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> Klasse.  
+  
+ Dieses Codebeispiel besteht aus vier Teilen:  
+  
+-   Eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+-   Eine Webseite mit einer Zone aus, um das benutzerdefinierte Steuerelement zu hosten.  
+  
+-   Ein Benutzersteuerelement, das Benutzern ermöglicht, die Anzeigemodi auf der Webseite zu ändern.  
+  
+-   Eine Erläuterung der Funktionsweise von der Seite in einem Browser.  
+  
+ Der erste Teil des Beispiels ist ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement `TextDisplayWebPart`. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine Demonstration der beiden Methoden der Kompilierung, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartDisplayMode_Overview#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDisplayMode_Overview/CS/textdisplaywebpart.cs#9)]
+ [!code-vb[WebParts_WebPartDisplayMode_Overview#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDisplayMode_Overview/VB/textdisplaywebpart.vb#9)]  
+  
+ Der zweite Teil des Codebeispiels ist eine Webseite, die ein standardmäßiges ASP <xref:System.Web.UI.WebControls.Calendar> -Steuerelement innerhalb einer `<asp:webpartzone>` Element, damit das Steuerelement mit umbrochen wird ein <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement außerdem Grundfunktionen Webparts zur Laufzeit angegeben werden. Die Seite auch verweist auf die `TextDisplayWebPart` -Steuerelement innerhalb einer `<asp:catalogzone>` -Element, das veranschaulicht, der Endbenutzer die Möglichkeit zum Katalogmodus zu wechseln und Hinzufügen von Steuerelementen auf der Seite. Die Seite enthält auch eine `<asp:editorzone>` -Element, das Benutzern ermöglicht, die in enthaltenen Steuerelemente Bearbeiten der `<asp:webpartzone>` Wenn die Seite im Bearbeitungsmodus befindet. Im oberen Bereich der Seite werden eine `register` -Direktive für das benutzerdefinierte Steuerelement und eine andere für das Benutzersteuerelement.  
+  
+ [!code-aspx-csharp[WebParts_WebPartDisplayMode_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDisplayMode_Overview/CS/WebPartDisplayModecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartDisplayMode_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDisplayMode_Overview/VB/WebPartDisplayModevb.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird ein Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu wechseln. Speichern Sie den Quellcode für dieses Steuerelement in einer Datei namens DisplayModeMenuCS.ascx oder DisplayModeMenuVB.ascx (je nachdem welche Sprache Sie für das Codebeispiel verwenden), und speichern Sie diese im gleichen Verzeichnis wie die Webseite. Weitere Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie im Thema [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartDisplayMode_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDisplayMode_Overview/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_WebPartDisplayMode_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDisplayMode_Overview/VB/displaymodemenuvb.ascx#5)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die **Anzeigemodus** Anzeigemodi für Dropdown-Listensteuerelement unterschiedlichen wechseln. Wählen Sie zum Bearbeiten von Steuerelementen **bearbeiten** im Dropdown-Listensteuerelement. Bieten Sie um ein bestimmtes Steuerelement zu bearbeiten, seine Verbmenü, indem Sie auf den Pfeil in der Titelleiste des Steuerelements, und klicken Sie dann auf **bearbeiten** im Verbmenü. Wenn ein Steuerelement im Bearbeitungsmodus befindet, aktivieren Sie die Bearbeitung der Steuerelemente auf dieser Seite hinzugefügt so ändern Sie die Darstellung und das Layout des bearbeiteten Steuerelements. Wenn Sie fertig sind, wählen Sie **Durchsuchen** in der **Anzeigemodus** Dropdownlisten-Steuerelement auf der Seite zu einer normalen Ansicht zurückzukehren. Wechseln Sie zum Hinzufügen von Steuerelementen auf der Seite ", Katalogmodus. Beachten Sie, dass Sie entweder mithilfe können der **Anzeigemodus** Dropdown-Steuerelement, oder klicken Sie auf die Schaltfläche am unteren Rand der Seite. Der Inlinecode für die `Button1_Click` Methode veranschaulicht, wie die Anzeigemodi programmgesteuert ändern. Während Sie im Katalogmodus sind, können Sie die benutzerdefinierte hinzufügen `TextDisplayWebPart` Steuerelement auf der Seite.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Entwickler können eine Ableitung von der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> Klasse zur Erstellung benutzerdefinierter Anzeigemodi. Zu einem benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> auf einer Webparts-Seite verfügbar ist, müssen Sie auch Ableitung der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Klasse, und überschreiben die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDisplayModes" /> Methode.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebPartDisplayMode (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Anzeigemodus.</param>
+        <summary>Initialisiert einen Wert für den Namen des Anzeigemodus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> Objekt nie erstellt, da die Klasse abstrakt ist. Zur Laufzeit die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern verwendet der <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> Klasse als Basisklasse zum Erstellen, um für jede der verschiedenen Seitenanzeigemodi Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Ableiten von der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> -Klasse zum Erstellen eines benutzerdefinierten Anzeigemodus in der Klassendeklaration, müssen Sie den Basiskonstruktor aufrufen und eine Zeichenfolge, die mit dem Namen des benutzerdefinierten Anzeigemodus an diesen weitergegeben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPageDesign">
+      <MemberSignature Language="C#" Value="public virtual bool AllowPageDesign { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPageDesign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AllowPageDesign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob Benutzer das Layout einer Webparts-Seite ändern können, wenn die Seite in einem bestimmten Anzeigemodus ab.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer des Seitenlayouts ändern können. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedWithToolZone">
+      <MemberSignature Language="C#" Value="public virtual bool AssociatedWithToolZone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AssociatedWithToolZone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AssociatedWithToolZone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein bestimmter Anzeigemodus einer Klasse zugeordnet, die ist von abgeleitet ist die <see cref="T:System.Web.UI.WebControls.WebParts.ToolZone" /> Klasse.</summary>
+        <value>
+          <see langword="true" />Wenn der Anzeigemodus zugeordnet ist eine <see cref="T:System.Web.UI.WebControls.WebParts.ToolZone" /> Klasse; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Webparts-Seite einen Anzeigemodus eingibt, deren <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AssociatedWithToolZone%2A> -Eigenschaftensatz auf `true`, die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement interpretiert, um bedeuten, dass eine zugeordnete Klasse abgeleitet der <xref:System.Web.UI.WebControls.WebParts.ToolZone> -Klasse, und diese zusätzlichen Elemente der Benutzeroberfläche (UI) angezeigt werden müssen. Z. B. wenn eine Seite in den Bearbeitungsmodus wechseln, spezielle Zonen, die Elemente der Benutzeroberfläche für die Bearbeitung von Webparts-Steuerelemente enthalten auf der Seite angezeigt. Dieses Verhalten ist möglich, da die <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AssociatedWithToolZone%2A> -Eigenschaftenwert der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.EditDisplayMode> Feld `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> Basisklasse zum Erstellen benutzerdefinierter Anzeigemodi muss überschreiben die <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AssociatedWithToolZone" /> Eigenschaft, um seinen Wert festzulegen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public virtual bool IsEnabled (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEnabled(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.IsEnabled(System.Web.UI.WebControls.WebParts.WebPartManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelementinstanz auf der aktuellen Seite.</param>
+        <summary>Ruft einen Wert, der angibt, ob Benutzer eine Seite personalisieren können, während die Seite in einem bestimmten Anzeigemodus befindet.</summary>
+        <returns>
+          <see langword="true" />Wenn Benutzer eine Seite personalisieren können; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />. Jedoch wenn <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.RequiresPersonalization" /> festgelegt ist, um <see langword="true" />, und Personalisierung wird auf der Seite deaktiviert, wird standardmäßig <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen eines Anzeigemodus ab.</summary>
+        <value>Eine Zeichenfolge, die den Namen des einen Anzeigemodus enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresPersonalization">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresPersonalization { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresPersonalization" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.RequiresPersonalization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob für ein bestimmten Anzeigemodus Personalisierung aktiviert werden muss.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die Personalisierung erforderlich ist. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHiddenWebParts">
+      <MemberSignature Language="C#" Value="public virtual bool ShowHiddenWebParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowHiddenWebParts" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.ShowHiddenWebParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Steuerelemente, die verfügen ihre <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Hidden" /> -Eigenschaftensatz auf <see langword="true" /> angezeigt werden soll.</summary>
+        <value>Ein boolescher Wert, der angibt, ob ausgeblendete Steuerelemente angezeigt werden soll. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

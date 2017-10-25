@@ -1,0 +1,427 @@
+<Type Name="HtmlInputButton" FullName="System.Web.UI.HtmlControls.HtmlInputButton">
+  <TypeSignature Language="C#" Value="public class HtmlInputButton : System.Web.UI.HtmlControls.HtmlInputControl, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlInputButton extends System.Web.UI.HtmlControls.HtmlInputControl implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlInputButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlInputControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ServerClick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML <see langword="&lt;input type= button&gt;" />, <see langword="&lt;input type= submit&gt;" />, und <see langword="&lt;input type= reset&gt;" /> Elemente auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlInputButton> Klasse, um Schaltflächen-Steuerelemente auf einer Webseite zu erstellen. Ein `<input type=button>` HTML-Element ist eine Schaltfläche ohne Standardverhalten. Ein `<input type=submit>` HTML-Element ist eine Schaltfläche, die beim Klicken auf ein Formular übermittelt. Ein `<input type=reset>` HTML-Schaltfläche setzt alle Steuerelemente auf die Anfangswerte fest, wenn Sie geklickt haben.  
+  
+ In ASP.NET 2.0 verwenden, die <xref:System.Web.UI.HtmlControls.HtmlInputReset> Klasse und die <xref:System.Web.UI.HtmlControls.HtmlInputSubmit> Klasse zum Erstellen von Schaltflächen "Zurücksetzen" und "Senden",.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputButton>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlInputButton.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement so erstellen eine Befehlsschaltfläche, eine Schaltfläche "Absenden" und eine Schaltfläche "Zurücksetzen".  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlInputButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputButton/cs/htmlinputbuttoncs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlInputButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputButton/vb/htmlinputbuttonvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlInputButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputButton>.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Web.UI.HtmlControls.HtmlInputControl.Type%2A>|Das Zeichenfolgenliteral "Button".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von einem <xref:System.Web.UI.HtmlControls.HtmlInputButton> steuern, mit dem Standardkonstruktor.  
+  
+ [!code-aspx-csharp[HtmlInputButtonCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButtonCtor/CS/htmlinputbuttonctorcs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButtonCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButtonCtor/VB/htmlinputbuttonctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlInputButton (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputButton.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Schaltflächentyp des input.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" /> -Klasse unter Verwendung des angegebenen Schaltfläche-Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputButton>.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Web.UI.HtmlControls.HtmlInputControl.Type%2A>|Der Wert des `type`-Parameters.|  
+  
+ Die folgende Tabelle zeigt die verschiedenen möglichen Werte für die `type` Parameter.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`button`|Eine Befehlsschaltfläche.|  
+|`submit`|Eine Schaltfläche, die das Formular an den Server gesendet.|  
+|`reset`|Eine Schaltfläche, die das Formular wird gelöscht.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.HtmlControls.HtmlInputButton> -Steuerelements mit den überladenen Konstruktor.  
+  
+ [!code-aspx-csharp[HtmlInputButtonCtor2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButtonCtor2/CS/htmlinputbuttonctor2cs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButtonCtor2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButtonCtor2/VB/htmlinputbuttonctor2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputButton.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Überprüfung erfolgt bei der <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" /> Steuerelement geklickt wird.</summary>
+        <value>
+          <see langword="true" />, wenn beim Klicken auf das <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" />-Steuerelement eine Validierung durchgeführt wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig erfolgt die Validierung bei der ein <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement geklickt wird. Seitenüberprüfung bestimmt, ob ein Validierungssteuerelement auf der Seite der Eingabesteuerelemente zugeordnet, die alle Validierungsregeln, die gemäß des Validierungssteuerelements übergeben.  
+  
+ Sie können angeben, oder zu bestimmen, ob die Überprüfung auf dem Client und dem Server ausgeführt wird beim ein <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement geklickt wird, mithilfe der <xref:System.Web.UI.HtmlControls.HtmlInputButton.CausesValidation%2A> Eigenschaft. Validierung durchgeführt werden soll, legen Sie die <xref:System.Web.UI.HtmlControls.HtmlInputButton.CausesValidation%2A> Eigenschaft `false`.  
+  
+ Diese Eigenschaft wird häufig verwendet, in dem Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick> Ereignis, um zu verhindern, dass Seite Validierung auftritt, wenn eine Schaltfläche "Abbrechen" oder Zurücksetzen geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputButton.CausesValidation%2A> Eigenschaft, um zu verhindern, dass bei der Validierung verhindern. Beachten Sie, dass der <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> -Methode jedes Validierungssteuerelement unabhängig aktiviert.  
+  
+ [!code-aspx-csharp[HtmlInputButtonCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButtonCausesValidation/CS/htmlinputbuttoncausesvalidationcs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButtonCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButtonCausesValidation/VB/htmlinputbuttoncausesvalidationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputButton.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="P:System.Web.UI.Design.ViewEventArgs.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> Ereignis und Register Clientskripts zum Generieren von Postback.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputButton.OnPreRender%2A> methodenüberschreibungen die <xref:System.Web.UI.Control.OnPreRender%2A?displayProperty=nameWithType> Methode. <xref:System.Web.UI.HtmlControls.HtmlInputButton.OnPreRender%2A>wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlInputButton.OnPreRender%2A> Methode, sodass die It immer eine benutzerdefinierte zeigt <xref:System.Web.UI.HtmlControls.HtmlInputButton> -Steuerelement mit fett formatierten Text.  
+  
+ [!code-aspx-csharp[CustomHtmlInputButtonOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputButtonOnPreRender/CS/custom_htmlinputbutton_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlInputButtonOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputButtonOnPreRender/VB/custom_htmlinputbutton_onprerendervb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlInputButtonOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputButtonOnPreRender/CS/custom_htmlinputbutton_onprerender.cs#2)]
+ [!code-vb[CustomHtmlInputButtonOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputButtonOnPreRender/VB/custom_htmlinputbutton_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnServerClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnServerClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnServerClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick" />-Ereignis aus. Dadurch können Sie das Ereignis direkt behandeln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick> Ereignis wird ausgelöst, wenn ein <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement geklickt wird.  
+  
+> [!NOTE]
+>  Eine Schaltfläche "Zurücksetzen" wird nicht ausgelöst. die <xref:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick> Ereignis.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.HtmlControls.HtmlInputButton>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick> Ereignis. Der Ereignishandler fügt die Werte der beiden Textfelder auf der Seite und zeigt die Ergebnisse.  
+  
+ [!code-aspx-csharp[HtmlInputButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButton/CS/htmlinputbuttoncs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButton/VB/htmlinputbuttonvb.aspx#1)]  
+  
+ [!code-aspx-csharp[HtmlInputButtonServerClick#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButtonServerClick/CS/htmlinputbuttonserverclickcs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButtonServerClick#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButtonServerClick/VB/htmlinputbuttonserverclickvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Das Argument für das Ereignis.</param>
+        <summary>Löst Ereignisse für das <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" />-Steuerelement aus, wenn es ein Postback an den Server ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent%2A> Methode wird verwendet, indem Sie die <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement, wenn darauf geklickt wird, ausgelöst werden soll, eine <xref:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick> Ereignis.  
+  
+ Wenn die <xref:System.Web.UI.HtmlControls.HtmlInputButton.CausesValidation%2A> Eigenschaft ist `true`, <xref:System.Web.UI.Page.Validate%2A?displayProperty=nameWithType> Methode wird aufgerufen, mit der angegebenen Gruppe von Steuerelementen der <xref:System.Web.UI.HtmlControls.HtmlInputButton.ValidationGroup%2A> Eigenschaft.  
+  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputButton.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> , der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die Attribute in den angegebenen Writer und ruft dann die <see cref="M:System.Web.UI.HtmlControls.HtmlControl.RenderAttributes(System.Web.UI.HtmlTextWriter)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputButton.RenderAttributes%2A> Methode überschreibt die <xref:System.Web.UI.HtmlControls.HtmlControl.RenderAttributes%2A?displayProperty=nameWithType>-Methode veranschaulicht. <xref:System.Web.UI.HtmlControls.HtmlInputButton.RenderAttributes%2A>wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlInputButton.OnPreRender%2A> Methode in einem benutzerdefinierten steuern, sodass bestimmte Titeltext, zugegriffen werden kann, als QuickInfo angezeigt, für immer angezeigt wird der <xref:System.Web.UI.HtmlControls.HtmlInputButton>.  
+  
+ [!code-aspx-csharp[CustomHtmlInputButtonRenderAttributes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputButtonRenderAttributes/CS/custom_htmlinputbutton_renderattributescs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlInputButtonRenderAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputButtonRenderAttributes/VB/custom_htmlinputbutton_renderattributesvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlInputButtonRenderAttributes#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlInputButtonRenderAttributes/CS/custom_htmlinputbutton_renderattributes.cs#2)]
+ [!code-vb[CustomHtmlInputButtonRenderAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlInputButtonRenderAttributes/VB/custom_htmlinputbutton_renderattributes.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerClick">
+      <MemberSignature Language="C#" Value="public event EventHandler ServerClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ServerClick" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" /> Steuerelement geklickt wird, auf der Webseite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn ein <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement geklickt wird.  
+  
+> [!NOTE]
+>  Eine Schaltfläche "Zurücksetzen" wird nicht ausgelöst. die <xref:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick> Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.HtmlControls.HtmlInputButton.ServerClick> Ereignis. Der Ereignishandler fügt die Werte der beiden Textfelder auf der Seite und zeigt die Ergebnisse.  
+  
+ [!code-aspx-csharp[HtmlInputButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButton/CS/htmlinputbuttoncs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButton/VB/htmlinputbuttonvb.aspx#1)]  
+  
+ [!code-aspx-csharp[HtmlInputButtonServerClick#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButtonServerClick/CS/htmlinputbuttonserverclickcs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButtonServerClick#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButtonServerClick/VB/htmlinputbuttonserverclickvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputButton.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" />, der ein optionales Ereignisargument darstellt, das an den Ereignishandler übergeben wird.</param>
+        <summary>Implementiert die <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" /> Methode durch Aufrufen der <see cref="M:System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(System.String)" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputButton.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe von Steuerelementen für die die <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" /> eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe von Steuerelementen, für die die <see cref="T:System.Web.UI.HtmlControls.HtmlInputButton" /> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge (""), der angibt, die diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.HtmlControls.HtmlInputButton.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.HtmlControls.HtmlInputButton> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ Diese Eigenschaft wirkt sich nur, wenn der Wert von der <xref:System.Web.UI.HtmlControls.HtmlInputButton.CausesValidation%2A> -Eigenschaftensatz auf `true`. Wenn geben Sie einen Wert für die <xref:System.Web.UI.HtmlControls.HtmlInputButton.ValidationGroup%2A> -Eigenschaft, um nur die Validierungssteuerelemente, die Teil der angegebenen Gruppe sind sind validiert, wenn die <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement an den Server sendet. Wenn Sie einen Wert für diese Eigenschaft nicht angeben und die <xref:System.Web.UI.HtmlControls.HtmlInputButton.CausesValidation%2A> -Eigenschaftensatz auf `true`, alle Validierungssteuerelemente auf der Seite, die Validierungsgruppe zugeordnet sind werden überprüft, wenn das Steuerelement an den Server zurückgesendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputButton.ValidationGroup%2A> Eigenschaft an, das die Steuerelemente beim Überprüfen einer <xref:System.Web.UI.HtmlControls.HtmlInputButton> Steuerelement an den Server sendet. Die Seite enthält zwei Textfelder zum Erfassen von Daten aus der Benutzer und zwei <xref:System.Web.UI.WebControls.RequiredFieldValidator> Steuerelemente, um sicherzustellen, dass der Benutzer nicht das Textfeld leer bleibt. Die <xref:System.Web.UI.WebControls.RequiredFieldValidator> -Steuerelement für das erste Textfeld in der `CityInfoGroup` Validierungsgruppe und <xref:System.Web.UI.WebControls.RequiredFieldValidator> -Steuerelement für das zweite Feld in der `StateInfoGroup` Validierungsgruppe. Wenn die `CityQueryButton` geklickt wird, wird nur das Steuerelement in der `CityInfoGroup` Validierungsgruppe wird überprüft. Wenn die `StateQueryButton` geklickt wird, wird nur das Steuerelement in der `StateInfoGroup` Validierungsgruppe wird überprüft.  
+  
+ [!code-aspx-csharp[HtmlInputButtonValidationGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlInputButtonValidationGroup/CS/htmlinputbuttonvalidationgroupcs.aspx#1)]
+ [!code-aspx-vb[HtmlInputButtonValidationGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlInputButtonValidationGroup/VB/htmlinputbuttonvalidationgroupvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

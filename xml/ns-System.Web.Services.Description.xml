@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Description">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Services.Description" /> Namespace enthält Klassen, die Ihnen ermöglichen, einen XML-Webdienst öffentlich beschreiben Sie mithilfe von Web Services Description Language (WSDL). Jede Klasse in diesem Namespace auf ein bestimmtes Element in der WSDL-Spezifikation entspricht, und die Klassenhierarchie entspricht der XML-Struktur eines gültigen WSDL-Dokuments. Weitere Informationen zu WDSL finden Sie in der Spezifikation auf der W3C-Website (http://www.w3.org/TR/wsdl/).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

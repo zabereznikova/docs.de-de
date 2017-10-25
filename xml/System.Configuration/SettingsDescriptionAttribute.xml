@@ -1,0 +1,99 @@
+<Type Name="SettingsDescriptionAttribute" FullName="System.Configuration.SettingsDescriptionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsDescriptionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsDescriptionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsDescriptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Zeichenfolge, die eine einzelne Konfigurationseigenschaft beschreibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsDescriptionAttribute> Entwurfszeittools und Tools für administrative zur Laufzeit bei der Identifizierung und Beschreibung der zugeordneten Konfigurationseigenschaft vorgesehen ist.  
+  
+ Dieses Attribut ist optional und kann nur auf der Eigenschaftenebene einzelne Konfiguration angewendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsDescriptionAttribute (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsDescriptionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die <see cref="T:System.String" /> als beschreibender Text verwendet.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Configuration.SettingsDescriptionAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwar die Beschreibung eine theoretische maximale Länge von der <xref:System.String> -Klasse, mit einer Länge wird durch eine <xref:System.Int32>, zwei praktische Folgendes schränkt die Größe des der `description` Parameter:  
+  
+-   Große textbeschreibungen schwierig, die in einer Benutzeroberfläche (UI) angezeigt werden und schwer für den Benutzer zu lesen.  
+  
+-   Einstellungsanbieter können allgemeine Kontingente erzwingen und sind erforderlich, um Benutzer Konfiguration Kontingente erzwingen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsDescriptionAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den beschreibenden Text für die zugeordnete Konfigurationseigenschaft ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den beschreibenden Text für die zugeordnete Konfiguration-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsDescriptionAttribute.Description%2A> Eigenschaft wird festgelegt, indem die <xref:System.Configuration.SettingsDescriptionAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

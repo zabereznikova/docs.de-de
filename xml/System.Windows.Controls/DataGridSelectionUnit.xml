@@ -1,0 +1,73 @@
+<Type Name="DataGridSelectionUnit" FullName="System.Windows.Controls.DataGridSelectionUnit">
+  <TypeSignature Language="C#" Value="public enum DataGridSelectionUnit" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridSelectionUnit extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridSelectionUnit" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Konstanten, die angeben, ob Zellen, Zeilen oder beides, für die Auswahl in verwendet werden einem <see cref="T:System.Windows.Controls.DataGrid" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> und <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> Eigenschaften bestimmen gemeinsam, wie Benutzer Elemente auswählen, können eine <xref:System.Windows.Controls.DataGrid>. Z. B. wenn die <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ist <xref:System.Windows.Controls.DataGridSelectionMode.Single> und <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> Zelle wird der Benutzer kann nur eine Zelle auswählen, zu einem Zeitpunkt in der <xref:System.Windows.Controls.DataGridSelectionUnit.Cell>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cell">
+      <MemberSignature Language="C#" Value="Cell" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.DataGridSelectionUnit Cell = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridSelectionUnit.Cell" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridSelectionUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es können nur Zellen ausgewählt werden. Auf eine Zelle klicken, wird die Zelle ausgewählt. Eine Zeilen- oder Spaltenüberschrift klicken, wird keine Aktion ausgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CellOrRowHeader">
+      <MemberSignature Language="C#" Value="CellOrRowHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.DataGridSelectionUnit CellOrRowHeader = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridSelectionUnit.CellOrRowHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridSelectionUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeilen und Zellen können ausgewählt werden. Klicken auf eine Zelle, wählt nur die Zelle aus. Durch Klicken auf einen Zeilenheader wählt die gesamte Zeile aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullRow">
+      <MemberSignature Language="C#" Value="FullRow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.DataGridSelectionUnit FullRow = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridSelectionUnit.FullRow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridSelectionUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es können nur vollständige Zeilen ausgewählt werden. Klicken Sie auf eine Zelle oder einen Zeilenkopf wählt die gesamte Zeile aus.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

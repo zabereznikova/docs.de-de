@@ -1,0 +1,116 @@
+<Type Name="GridViewPageEventArgs" FullName="System.Web.UI.WebControls.GridViewPageEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewPageEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewPageEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewPageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.PageIndexChanging" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.PageIndexChanging> Ereignis aus, wenn eine Pagerschaltfläche (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Seite" festgelegt) innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.GridView> Steuerelement behandelt den Pagingvorgang. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. den Pagingvorgang Abbrechen, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Pagerschaltflächen befinden sich in der Regel in der Pagerzeile eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewPageEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, wodurch Sie den Index der vom Benutzer ausgewählten Seite bestimmen und anzugeben, dass der Pagingvorgang abgebrochen werden soll. Legen Sie zum Abbrechen des Pagingvorgangs der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Web.UI.WebControls.GridViewPageEventArgs> -Objekt `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.GridViewPageEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.GridViewPageEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewPageEventArgs> -Objekt übergeben, für die Ereignisbehandlung-Methode den Index des vom Benutzer ausgewählten Seite zu bestimmen und den Pagingvorgang abzubrechen.  
+  
+ [!code-aspx-csharp[GridViewPageIndexChanging#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewPageIndexChanging/CS/gridviewpageindexchangingcs.aspx#1)]
+ [!code-aspx-vb[GridViewPageIndexChanging#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewPageIndexChanging/VB/gridviewpageindexchangingvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewPageEventArgs (int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewPageEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newPageIndex">Der Index der neuen Seite angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewPageEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewPageEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.GridViewPageEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewPageEventArgs.NewPageIndex%2A>|Der Wert des `newPageIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewPageIndex">
+      <MemberSignature Language="C#" Value="public int NewPageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewPageEventArgs.NewPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index für die neue Seite für die anzuzeigenden in die <see cref="T:System.Web.UI.WebControls.GridView" /> Steuerelement.</summary>
+        <value>Der Index für die neue Seite für die anzuzeigenden in die <see cref="T:System.Web.UI.WebControls.GridView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.WebControls.GridView.PageIndexChanging> Ereignis tritt auf, bevor die <xref:System.Web.UI.WebControls.GridView> Steuerelement führt den Pagingvorgang der <xref:System.Web.UI.WebControls.GridView.PageIndex%2A> Eigenschaft des Steuerelements kann nicht verwendet werden, um den Index des vom Benutzer ausgewählten Seite zu bestimmen. Verwenden der <xref:System.Web.UI.WebControls.GridViewPageEventArgs.NewPageIndex%2A> -Eigenschaft können Sie den Index des vom Benutzer ausgewählten Seite zu bestimmen.  
+  
+> [!NOTE]
+>  Während der <xref:System.Web.UI.WebControls.GridView.PageIndexChanging> Ereignis, das <xref:System.Web.UI.WebControls.GridView.PageIndex%2A> Eigenschaft enthält immer noch den Index des zuvor angezeigten Seite.  
+  
+ Diese Eigenschaft können auch um programmgesteuert zu überschreiben, den Seitenindex vom Benutzer ausgewählt werden, indem Sie es in einen anderen Wert festlegen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewPageEventArgs.NewPageIndex%2A> -Eigenschaft können Sie den Index des vom Benutzer ausgewählten Seite zu bestimmen.  
+  
+ [!code-aspx-csharp[GridViewPageIndexChanging#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewPageIndexChanging/CS/gridviewpageindexchangingcs.aspx#1)]
+ [!code-aspx-vb[GridViewPageIndexChanging#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewPageIndexChanging/VB/gridviewpageindexchangingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Web.UI.WebControls.GridViewPageEventArgs.NewPageIndex" /> -Eigenschaft ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

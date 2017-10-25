@@ -1,0 +1,156 @@
+<Type Name="ToolStripLayoutStyle" FullName="System.Windows.Forms.ToolStripLayoutStyle">
+  <TypeSignature Language="C#" Value="public enum ToolStripLayoutStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripLayoutStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripLayoutStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die möglichen Ausrichtungen mit dem die Elemente einer <see cref="T:System.Windows.Forms.ToolStrip" /> angezeigt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie steuern, <xref:System.Windows.Forms.ToolStrip> Layout durch Auswahl eines der Elemente der <xref:System.Windows.Forms.ToolStripLayoutStyle> mit der <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> Eigenschaft.  
+  
+#### <a name="stack-layouts"></a>Stack-Layouts  
+ Stapeln wird das Anordnen der Elemente nebeneinander an beiden Enden des der <xref:System.Windows.Forms.ToolStrip>. Die folgende Liste beschreibt die Stack-Layouts an.  
+  
+-   StackWithOverflow ist die Standardeinstellung. Diese Einstellung bewirkt, dass die <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> zum Ändern des Layouts automatisch in Abhängigkeit von der <xref:System.Windows.Forms.ToolStrip.Orientation%2A> Eigenschaft Zieh- und behandeln.  
+  
+-   VerticalStackWithOverflow rendert die <xref:System.Windows.Forms.ToolStrip.Orientation%2A> Elemente nebeneinander vertikal.  
+  
+-   HorizontalStackWithOverflow rendert die <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> horizontal nebeneinander Elemente.  
+  
+#### <a name="other-features-of-stack-layouts"></a>Andere Funktionen der Stapellayouts  
+ <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>Bestimmt das Ende der <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow> an dem das Element ausgerichtet ist.  
+  
+ Wenn Elemente nicht in passen die <xref:System.Windows.Forms.ToolStrip>, eine Überlaufschaltfläche automatisch angezeigt wird. Die <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> -eigenschafteneinstellung bestimmt, ob ein Element in den Überlaufbereich stets, bei Bedarf oder nie angezeigt wird.  
+  
+ In der <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> -Ereignis können Sie überprüfen die <xref:System.Windows.Forms.ToolStripItem.Placement%2A> -Eigenschaft können Sie bestimmen, ob ein Element auf der Hauptseite platziert wurde <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>, der Überlauf <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>, oder wenn derzeit nicht angezeigt werden. Die typische Gründe, warum ein Element wird nicht angezeigt, werden, dass das Element nicht auf der Hauptseite gepasst hat <xref:System.Windows.Forms.ToolStripItem.Placement%2A> und seine <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> -Eigenschaft wurde festgelegt, um <xref:System.Windows.Forms.ToolStripItemOverflow>.  
+  
+ Stellen ein <xref:System.Windows.Forms.ToolStrip> verschiebbar verlegen Sie es ein <xref:System.Windows.Forms.ToolStripPanel> verwendet wird und seine <xref:System.Windows.Forms.ToolStrip.GripStyle%2A> auf <xref:System.Windows.Forms.ToolStripGripStyle>.  
+  
+#### <a name="other-layout-options"></a>Andere Layoutoptionen  
+ Die anderen Layoutoptionen sind Fluss- und.  
+  
+#### <a name="flow-layout"></a>Flusslayout  
+ Flusslayout ist die Standardeinstellung für <xref:System.Windows.Forms.ContextMenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, und <xref:System.Windows.Forms.ToolStripOverflow>. Ähnliches gilt für die <xref:System.Windows.Forms.FlowLayoutPanel>. Die Funktionen der Flusslayout sind wie folgt aus:  
+  
+-   Alle Funktionen der <xref:System.Windows.Forms.FlowLayoutPanel> verfügbar gemacht werden die <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> Eigenschaft. Müssen Sie eine Umwandlung der <xref:System.Windows.Forms.LayoutSettings> Klasse, um eine <xref:System.Windows.Forms.FlowLayoutSettings> Klasse.  
+  
+-   Sie können die <xref:System.Windows.Forms.ToolStripItem.Dock%2A> und <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> Eigenschaften im Code die Elemente innerhalb der Zeile ausrichten.  
+  
+-   Die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>-Eigenschaft wird ignoriert.  
+  
+-   In der <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> -Ereignis können Sie überprüfen die <xref:System.Windows.Forms.ToolStripItem.Placement%2A> Eigenschaft, um zu bestimmen, ob ein Element auf der Hauptseite aufgegeben <xref:System.Windows.Forms.ToolStrip> oder nicht zu groß sind.  
+  
+-   Der Ziehpunkt nicht gerendert, und daher eine <xref:System.Windows.Forms.ToolStrip> im Datenfluss des Layoutstils in eine <xref:System.Windows.Forms.ToolStripPanel> kann nicht verschoben werden.  
+  
+-   Die <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> dokumentüberlauf-Schaltfläche wird nicht gerendert, und <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> wird ignoriert.  
+  
+#### <a name="table-layout"></a>Tabellenlayout  
+ Tabellenlayout ist die Standardeinstellung für <xref:System.Windows.Forms.StatusStrip>. Sie ähnelt damit <xref:System.Windows.Forms.TableLayoutPanel>. Die Funktionen des Tabellenlayouts sind wie folgt aus:  
+  
+-   Alle Funktionen der <xref:System.Windows.Forms.TableLayoutPanel> verfügbar gemacht werden die <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> Eigenschaft. Müssen Sie eine Umwandlung der <xref:System.Windows.Forms.LayoutSettings> Klasse, um eine <xref:System.Windows.Forms.TableLayoutSettings> Klasse.  
+  
+-   Sie können die <xref:System.Windows.Forms.ToolStripItem.Dock%2A> und <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> Eigenschaften im Code die Elemente in der Tabellenzelle ausrichten.  
+  
+-   Die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>-Eigenschaft wird ignoriert.  
+  
+-   In der <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> -Ereignis können Sie überprüfen die <xref:System.Windows.Forms.ToolStripItem.Placement%2A> Eigenschaft, um zu bestimmen, ob ein Element auf der Hauptseite aufgegeben <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> oder nicht zu groß sind.  
+  
+-   Der Ziehpunkt nicht gerendert, und daher ein <xref:System.Windows.Forms.ToolStrip> in Tabelle Layoutstil in eine <xref:System.Windows.Forms.ToolStripPanel> kann nicht verschoben werden.  
+  
+-   Die <xref:System.Windows.Forms.ToolStrip> dokumentüberlauf-Schaltfläche wird nicht gerendert, und <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> wird ignoriert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flow">
+      <MemberSignature Language="C#" Value="Flow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripLayoutStyle Flow = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripLayoutStyle.Flow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Elemente horizontal oder vertikal nach Bedarf fließen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalStackWithOverflow">
+      <MemberSignature Language="C#" Value="HorizontalStackWithOverflow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripLayoutStyle HorizontalStackWithOverflow = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Elemente horizontal angeordnet werden und ggf. überlaufen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StackWithOverflow">
+      <MemberSignature Language="C#" Value="StackWithOverflow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripLayoutStyle StackWithOverflow = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Elemente automatisch angelegt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="Table" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripLayoutStyle Table = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripLayoutStyle.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Elemente linksbündig angeordnet sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalStackWithOverflow">
+      <MemberSignature Language="C#" Value="VerticalStackWithOverflow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripLayoutStyle VerticalStackWithOverflow = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Elemente vertikal angeordnet werden, innerhalb des Steuerelements zentriert werden und "" nach Bedarf Überlauf.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,109 @@
+<Type Name="ProgressEventArgs" FullName="System.Management.ProgressEventArgs">
+  <TypeSignature Language="C#" Value="public class ProgressEventArgs : System.Management.ManagementEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProgressEventArgs extends System.Management.ManagementEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ProgressEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Ereignisdaten für die <see cref="E:System.Management.ManagementOperationObserver.Progress" /> Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public int Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Current" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ProgressEventArgs.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Menge an Arbeit, die durch den Vorgang ab. Dies ist immer kleiner als oder gleich <see cref="P:System.Management.ProgressEventArgs.UpperBound" />.</summary>
+        <value>Gibt ein <see cref="T:System.Int32" /> Wert, der die aktuelle Menge an Arbeit bereits abgeschlossen, indem Sie den Vorgang darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine ganze Zahl, die die aktuelle Menge an Arbeit bereits abgeschlossen, indem Sie den Vorgang darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ProgressEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt Sie optional zusätzliche Informationen über den Status des Vorgangs fest.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der Informationen über den Status des Vorgangs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die zusätzliche Informationen über den Status des Vorgangs enthält.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpperBound">
+      <MemberSignature Language="C#" Value="public int UpperBound { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UpperBound" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ProgressEventArgs.UpperBound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtmenge der Arbeit erforderlich, um die vom Vorgang durchgeführt werden.</summary>
+        <value>Gibt eine <see cref="T:System.Int32" /> -Wert für die Gesamtmenge der Arbeit, die durch den Vorgang auszuführen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine ganze Zahl, die die Gesamtmenge der Arbeit für den Vorgang darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

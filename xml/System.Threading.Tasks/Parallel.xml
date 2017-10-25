@@ -1,0 +1,2237 @@
+<Type Name="Parallel" FullName="System.Threading.Tasks.Parallel">
+  <TypeSignature Language="C#" Value="public static class Parallel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Parallel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Parallel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Unterstützung für parallele Schleifen und Bereiche bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Tasks.Parallel> -Klasse stellt die Bibliothek kennwortbasierten Datenschutzdienst parallele Ersetzungen bei allgemeinen Vorgängen z. B. für Schleifen, für jede Schleifen und die Ausführung einer Reihe von Anweisungen.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt mehrere Ansätze für die Implementierung einer parallelen Schleife mit mehreren Sprachkonstrukte.  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel#07](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelintro.cs#07)]
+ [!code-vb[System.Threading.Tasks.Parallel#07](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelintro.vb#07)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen und geschützten Member der <see cref="T:System.Threading.Tasks.Parallel" /> sind threadsicher und können von mehreren Threads gleichzeitig verwendet werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (int fromInclusive, int toExclusive, Action&lt;int,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int32 fromInclusive, int32 toExclusive, class System.Action`2&lt;int32, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int32,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" /> (<see langword="For" /> in Visual Basic)-Schleife aus, in der Iterationen parallel ausgeführt werden können und der Status der Schleife beobachtet und bearbeitet werden kann.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird mit zwei Argumenten bereitgestellt:  
+  
+-   Ein <xref:System.Int32> Wert, der die Anzahl der Iterationen darstellt.  
+  
+-   Ein <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, vorzeitig aus der Schleife unterbrechen. Die <xref:System.Threading.Tasks.ParallelLoopState> Objekt wird vom Compiler erstellt; kann nicht im Benutzercode nicht instanziiert werden.  
+  
+ Aufrufen der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode informiert den `for` Vorgang, die Iterationen nach der aktuellen ausgeführt haben. Allerdings wird alle Iterationen vor der aktuellen eine, muss ausgeführt werden, sofern sie noch nicht geschehen.  
+  
+ Aus diesem Grund Aufrufen <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> ähnelt der Verwendung einer Unterbrechungsoperation innerhalb einer herkömmlichen `for` Schleife in einer anderen Sprache wie c#, aber es ist kein perfekter Ersatz: Z. B. besteht keine Garantie, die von Iterationen nach der aktuellen definitiv nicht ausgeführt werden.  
+  
+ Wenn alle Iterationen ausführen vor der aktuellen Aktivität nicht erforderlich ist, verwenden Sie die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode statt <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>. Aufrufen von <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> informiert den `for` Schleife, dass es möglicherweise Sie alle verbleibende Iterationen verwerfen, unabhängig davon, ob sie vor oder nach der aktuellen Iteration, da alle sind erforderliche Arbeit wird bereits abgeschlossen. Da jedoch mit <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>, es gibt keine Garantien hinsichtlich der anderen Iterationen nicht ausgeführt werden.  
+  
+ Wenn eine Schleife vorzeitig beendet wird die <xref:System.Threading.Tasks.ParallelLoopResult> -Struktur, die zurückgegeben werden relevante Informationen zum Abschluss der Schleife enthält.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, die Methode kehrt sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden bis zu 100 Iterationen einer Schleife parallel ausgeführt. Jede Iteration hält für einem zufällig gewählten Zeitpunkt zwischen 1 und 1.000 Millisekunden steht. Ein zufällig generierter Wert wird bestimmt, auf welche Iteration der Schleife die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> -Methode aufgerufen wird. Wie die Ausgabe des Beispiels zeigt, keine Iterationen, deren Index größer als ist, die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A?displayProperty=nameWithType> Start des Eigenschaft-Wert nach dem Aufruf der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ Da Iterationen der Schleife, die wahrscheinlich weiterhin ausgeführt wird, wenn sind die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> -Methode aufgerufen wird, werden Aufrufe von jeder Iteration der <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A?displayProperty=nameWithType> Eigenschaft zu überprüfen, ob eine andere Iteration aufgerufen hat die <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> Methode. Wenn der Eigenschaftswert ist `true`, Iteration überprüft den Wert der die <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A?displayProperty=nameWithType> Eigenschaft und, wenn sie größer als die aktuelle Iteration Indexwert ist, kehrt sofort zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (int fromInclusive, int toExclusive, Action&lt;int&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int32 fromInclusive, int32 toExclusive, class System.Action`1&lt;int32&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" />-Schleife (<see langword="For" /> in Visual Basic) aus, in der Iterationen parallel ausgeführt werden können.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit der Anzahl der Szenarioiterationen (<xref:System.Int32>) als Parameter.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, die Methode kehrt sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%2A> Methode zum 100 Aufrufe eines Delegaten, die zufälligen Byte generiert Werte ab und berechnet die Summe.  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel.For#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel.for/cs/for1.cs#1)]
+ [!code-vb[System.Threading.Tasks.Parallel.For#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel.for/vb/for1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (long fromInclusive, long toExclusive, Action&lt;long,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int64 fromInclusive, int64 toExclusive, class System.Action`2&lt;int64, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int64,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" />-Schleife (<see langword="For" /> in Visual Basic) mit 64-Bit-Indizes aus, in der Iterationen parallel ausgeführt werden können und der Zustand der Schleife überwacht und bearbeitet werden kann.</summary>
+        <returns>Eine <see cref="T:System.Threading.Tasks.ParallelLoopResult" />-Struktur, die Informationen darüber enthält, welcher Teil der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit den folgenden Parametern: die Anzahl der Iterationen (<xref:System.Int64>), und eine <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife unterbrechen.  
+  
+ Aufrufen der <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> -Methode informiert den `for` Vorgang, die Iterationen nach der aktuellen Aktivität nicht ausgeführt werden, aber alle Iterationen vor der aktuellen Aktivität führen.  
+  
+ Aus diesem Grund aufrufen Break ähnelt mithilfe eines Break-Vorgangs innerhalb einer herkömmlichen `for` Schleife in einer anderen Sprache wie c#, aber es ist kein perfekter Ersatz: Z. B. besteht keine Garantie, dass Iterationen nach der aktuellen Aktivität definitiv nicht ausgeführt werden.  
+  
+ Wenn alle Iterationen ausführen vor der aktuellen Aktivität nicht erforderlich ist, verwenden Sie die <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> Methode statt <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>. Aufrufen von <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> informiert den `for` Schleife, dass es möglicherweise Sie alle verbleibende Iterationen verwerfen, unabhängig davon, ob sie vor oder nach der aktuellen Iteration, da alle sind erforderliche Arbeit wird bereits abgeschlossen. Da jedoch mit <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>, es gibt keine Garantien hinsichtlich der anderen Iterationen nicht ausgeführt werden.  
+  
+ Wenn eine Schleife vorzeitig beendet wird die <xref:System.Threading.Tasks.ParallelLoopResult> -Struktur, die zurückgegeben werden relevante Informationen zum Abschluss der Schleife enthält.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, dann die Methode sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (long fromInclusive, long toExclusive, Action&lt;long&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int64 fromInclusive, int64 toExclusive, class System.Action`1&lt;int64&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" />-Schleife (<see langword="For" /> in Visual Basic) mit 64-Bit-Indizes aus, in der Iterationen parallel ausgeführt werden können.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit der Anzahl der Szenarioiterationen (<xref:System.Int64>) als Parameter.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, die Methode kehrt sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (int fromInclusive, int toExclusive, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;int,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int32 fromInclusive, int32 toExclusive, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`2&lt;int32, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int32,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" /> (<see langword="For" /> in Visual Basic)-Schleife aus, in der Iterationen parallel ausgeführt und Schleifenoptionen konfiguriert werden können und wo der Status der Schleife beobachtet und bearbeitet werden kann.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit den folgenden Parametern: die Anzahl der Iterationen (<xref:System.Int32>), und eine <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife unterbrechen.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, die Methode kehrt sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (int fromInclusive, int toExclusive, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;int&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int32 fromInclusive, int32 toExclusive, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`1&lt;int32&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" /> (<see langword="For" /> in Visual Basic)-Schleife aus, in der Iterationen parallel ausgeführt und Schleifenoptionen konfiguriert werden können.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit der Anzahl der Szenarioiterationen (<xref:System.Int32>) als Parameter.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, dann die Methode sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Vorgehensweise beim Abbrechen einer parallelen Schleife:  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel#05](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforcancel.cs#05)]
+ [!code-vb[System.Threading.Tasks.Parallel#05](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforcancel.vb#05)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (long fromInclusive, long toExclusive, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;long,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int64 fromInclusive, int64 toExclusive, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`2&lt;int64, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int64,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" /> (<see langword="For" /> in Visual Basic)-Schleife mit 64-Bit-Indizes aus, in der Iterationen parallel ausgeführt und Schleifenoptionen konfiguriert werden können, und der Status der Schleife kann beobachtet und bearbeitet werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit den folgenden Parametern: die Anzahl der Iterationen (<xref:System.Int64>), und eine <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife unterbrechen.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, die Methode kehrt sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Methode mit einem <xref:System.Threading.Tasks.ParallelOptions> Objekt:  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel#03](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelfor.cs#03)]
+ [!code-vb[System.Threading.Tasks.Parallel#03](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelfor.vb#03)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For (long fromInclusive, long toExclusive, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;long&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For(int64 fromInclusive, int64 toExclusive, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`1&lt;int64&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt eine <see langword="for" /> (<see langword="For" /> in Visual Basic)-Schleife mit 64-Bit-Indizes in der Iterationen parallel ausgeführt und Schleifenoptionen konfiguriert werden können.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterstützt 64-Bit-Indizes. Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit der Anzahl der Szenarioiterationen (<xref:System.Int64>) als Parameter.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, dann die Methode sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Threading.Tasks.ParallelOptions> ein benutzerdefinierten Taskplaners angeben:  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel#06](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforwithscheduler.cs#06)]
+ [!code-vb[System.Threading.Tasks.Parallel#06](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforwithscheduler.vb#06)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For&lt;TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt; (int fromInclusive, int toExclusive, Func&lt;TLocal&gt; localInit, Func&lt;int,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt;(int32 fromInclusive, int32 toExclusive, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;int32, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;System.Int32,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt eine <see langword="for" />-Schleife (<see langword="For" /> in Visual Basic) mit lokalen Threaddaten aus, in der Iterationen parallel ausgeführt und der Status der Schleife beobachtet und bearbeitet werden können.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit den folgenden Parametern: die Anzahl der Iterationen (<xref:System.Int32>), eine <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die im selben Thread ausgeführt.  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, dann die Methode sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+ Ein Beispiel, das diese Methode verwendet, finden Sie unter [wie: Schreiben einer Parallel.For-Schleife mit Thread-lokalen Variablen](~/docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For&lt;TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt; (long fromInclusive, long toExclusive, Func&lt;TLocal&gt; localInit, Func&lt;long,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt;(int64 fromInclusive, int64 toExclusive, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;int64, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;System.Int64,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt eine <see langword="for" /> (<see langword="For" /> in Visual Basic)-Schleife mit 64-Bit-Indizes sowie lokalen Threaddaten aus, in denen Iterationen parallel ausgeführt werden können, und der Status der Schleife kann beobachtet und bearbeitet werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit den folgenden Parametern: die Anzahl der Iterationen (<xref:System.Int64>), eine <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die auf die gleiche Aufgabe ausführen.  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, dann die Methode sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+ Ein Beispiel, das diese Methode verwendet, finden Sie unter [wie: Schreiben einer Parallel.For-Schleife mit Thread-lokalen Variablen](~/docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For&lt;TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt; (int fromInclusive, int toExclusive, System.Threading.Tasks.ParallelOptions parallelOptions, Func&lt;TLocal&gt; localInit, Func&lt;int,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt;(int32 fromInclusive, int32 toExclusive, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;int32, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;System.Int32,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt eine <see langword="for" /> (<see langword="For" /> in Visual Basic)-Schleife mit lokalen Threaddaten aus, in der Iterationen parallel ausgeführt, Schleifenoptionen konfiguriert und der Status der Schleife beobachtet und bearbeitet werden können.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit den folgenden Parametern: die Anzahl der Iterationen (<xref:System.Int32>), eine <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die auf die gleiche Aufgabe ausführen.  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann in mehreren Threads gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, dann die Methode sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Thread-lokalen Variablen um die Summe der Ergebnisse des viele langwierige Operationen zu berechnen. Dieses Beispiel wird den Grad der Parallelität auf vier beschränkt.  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel#04](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/threadlocalforwithoptions.cs#04)]
+ [!code-vb[System.Threading.Tasks.Parallel#04](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/threadlocalforwithoptions.vb#04)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="For&lt;TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt; (long fromInclusive, long toExclusive, System.Threading.Tasks.ParallelOptions parallelOptions, Func&lt;TLocal&gt; localInit, Func&lt;long,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult For&lt;TLocal&gt;(int64 fromInclusive, int64 toExclusive, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;int64, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;System.Int64,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="fromInclusive">Der Startindex, einschließend.</param>
+        <param name="toExclusive">Der Endindex, ausschließend.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="localInit">Der Funktionsdelegat, der den Ausgangszustand der lokalen Daten für jeden Thread zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der eine abschließende Aktion für den lokalen Zustand jedes Threads ausführt.</param>
+        <summary>Führt eine <see langword="for" />-Schleife (<see langword="For" /> in Visual Basic) mit 64-Bit Indizes und threadlokalen Daten aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar, und der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal für jeden Wert im Iterationsbereich von aufgerufen (`fromInclusive`, `toExclusive`). Es wird bereitgestellt, mit den folgenden Parametern: die Anzahl der Iterationen (<xref:System.Int64>), eine <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die im selben Thread ausgeführt.  
+  
+ Die `localInit` Delegat wird einmal für jeden Thread, bei der Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede von diesen Threads aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe in jedem Thread. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf in jedem Thread einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Thread eine abschließende Aktion im lokalen Zustand jedes Threads ausführt aufgerufen. Dieser Delegat kann in mehreren Threads gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ Wenn `fromInclusive` ist größer als oder gleich `toExclusive`, dann die Methode sofort zurück, ohne irgendwelche Iterationen auszuführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; source, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,long&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; source, class System.Action`3&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <param name="source">Der sortierbare Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit einem <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> aus. Iterationen können parallel ablaufen, und der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Collections.Concurrent.OrderablePartitioner`1.KeysNormalized" /> Eigenschaft in der Quelle Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Alle Methoden in der Quelle Partitionierer zurückgeben <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Concurrent.Partitioner&lt;TSource&gt; source, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Concurrent.Partitioner`1&lt;!!TSource&gt; source, class System.Action`2&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.Partitioner&lt;TSource&gt;" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <param name="source">Der Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit einem <see cref="T:System.Collections.Concurrent.Partitioner" /> aus. Iterationen können parallel ablaufen, und der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Eine Methode in der <paramref name="source" /> Partitionierer gibt <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <see cref="M:System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" /> Methode in der <paramref name="source" /> Partitionierer gibt nicht die richtige Anzahl von Partitionen zurück.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Concurrent.Partitioner&lt;TSource&gt; source, Action&lt;TSource&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Concurrent.Partitioner`1&lt;!!TSource&gt; source, class System.Action`1&lt;!!TSource&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.Partitioner&lt;TSource&gt;" />
+        <Parameter Name="body" Type="System.Action&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <param name="source">Der Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) für ein <see cref="T:System.Collections.Concurrent.Partitioner" />-Objekt aus, in dem Iterationen parallel ausgeführt werden können.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Bereichspartitionierung für die Verwendung mit implementiert <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>:  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel_RangePartitioners#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel_rangepartitioners/cs/rangepartitioner.cs#01)]
+ [!code-vb[System.Threading.Tasks.Parallel_RangePartitioners#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel_rangepartitioners/vb/rangepart.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="source" /> Argument ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Die Ausnahme ausgelöst, wenn wird auf Methoden in der <paramref name="source" /> Partitionierer return <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <see cref="M:System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" /> Methode in der <paramref name="source" /> Partitionierer gibt nicht die richtige Anzahl von Partitionen zurück.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,long&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Action`3&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit 64-Bit-Indizes für einen <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ausgeführt werden. Der Schleifenzustand kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element einen <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und das aktuelle Element Index (<xref:System.Int64>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Action`2&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit einem <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ablaufen. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element und ein <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife unterbrechen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Action&lt;TSource&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Action`1&lt;!!TSource&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="body" Type="System.Action&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit einem <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ablaufen.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Sie wird mit dem aktuellen Element als Parameter bereitgestellt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Parallel.ForEach%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Action%7B%60%600%7D%29> Methode, um die Anzahl der Vokale und nicht-Leerzeichen in einer Textdatei. In diesem Fall die <xref:System.Threading.Tasks.ParallelLoopResult> von der Methode zurückgegebenen Wert wird ignoriert. Beachten Sie, dass, da Vorgänge parallel ausgeführt werden können, müssen Sie sicherstellen, dass die Zählervariablen inkrementieren ein atomarer Vorgang ist und mehrere Threads gleichzeitig auf die Zählervariablen nicht versucht werden. Zu diesem Zweck wird im Beispiel wird die `lock` -Anweisung (in c#) und die `SyncLock` -Anweisung (in Visual Basic).  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel.ForEach#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel.foreach/cs/foreach1.cs#1)]
+ [!code-vb[System.Threading.Tasks.Parallel.ForEach#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel.foreach/vb/foreach1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,long&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`3&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <param name="source">Der sortierbare Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit einem <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> aus. Iterationen können parallel ablaufen, Schleifenoptionen sind konfigurierbar, und der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="source" /> Argument ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Collections.Concurrent.OrderablePartitioner`1.KeysNormalized" /> Eigenschaft in der <paramref name="source" /> Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Die Ausnahme ausgelöst, wenn wird auf Methoden in der <paramref name="source" /> Partitionierer return <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Concurrent.Partitioner&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Concurrent.Partitioner`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`2&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.Partitioner&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <param name="source">Der Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit einem <see cref="T:System.Collections.Concurrent.Partitioner" /> aus. Iterationen können parallel ablaufen, Schleifenoptionen sind konfigurierbar, und der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Die Ausnahme ausgelöst, wenn wird auf Methoden in der <paramref name="source" /> Partitionierer return <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Concurrent.Partitioner&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;TSource&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Concurrent.Partitioner`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`1&lt;!!TSource&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.Partitioner&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <param name="source">Der Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit einem <see cref="T:System.Collections.Concurrent.Partitioner" /> aus. Iterationen können parallel ausgeführt werden, Schleifenoptionen sind konfigurierbar.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> Partitionierer gibt <see langword="false" />.  
+  
+ - oder -   
+  
+ Die Ausnahme ausgelöst, wenn wird auf Methoden in der <paramref name="source" /> Partitionierer return <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,long&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`3&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit 64-Bit-Indizes für einen <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element einen <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und das aktuelle Element Index (<xref:System.Int64>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`2&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;TSource,System.Threading.Tasks.ParallelLoopState&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) für ein <see cref="T:System.Collections.IEnumerable" />-Objekt aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element und ein <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife unterbrechen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Action&lt;TSource&gt; body);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action`1&lt;!!TSource&gt; body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="body" Type="System.Action&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) für ein <see cref="T:System.Collections.IEnumerable" />-Objekt aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Sie wird mit dem aktuellen Element als Parameter bereitgestellt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; source, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,long,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; source, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`5&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Der sortierbare Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit threadlokalen Daten für einen <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> <see cref="T:System.Collections.Concurrent.Partitioner" /> gibt <see langword="false" /> oder mit dem Partitionierer gibt <see langword="null" /> Partitionen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Concurrent.Partitioner&lt;TSource&gt; source, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Concurrent.Partitioner`1&lt;!!TSource&gt; source, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.Partitioner&lt;TSource&gt;" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Der Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit threadlokalen Daten für einen <see cref="T:System.Collections.Concurrent.Partitioner" /> aus. Iterationen können parallel ablaufen. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ Die `localInit` Delegat wird einmal für jeden Thread, bei der Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> <see cref="T:System.Collections.Concurrent.Partitioner" /> gibt <see langword="false" /> oder mit dem Partitionierer gibt <see langword="null" /> Partitionen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,long,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`5&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit threadlokalen Daten für einen <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ablaufen. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element einen <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife unterbrechen, den Index des aktuellen Elements (<xref:System.Int64>), und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die ausgeführt auf dem gleichen Thread.  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit threadlokalen Daten für einen <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ablaufen. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element einer <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die im selben Thread ausgeführt.  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Thread, um eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A> Methode mit lokalen Zustand:  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
+ [!code-vb[System.Threading.Tasks.Parallel#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,long,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`5&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Der sortierbare Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit 64-Bit-Indizes und threadlokalen Daten für einen <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf in jedem Thread einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="localInit" /> oder das <paramref name="localFinally" />-Argument ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> <see cref="T:System.Collections.Concurrent.Partitioner" /> gibt <see langword="false" /> oder mit dem Partitionierer gibt <see langword="null" /> Partitionen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Concurrent.Partitioner&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Concurrent.Partitioner`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Concurrent.Partitioner&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente im <c>Quelle</c>.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Der Partitionierer, der die ursprüngliche Datenquelle enthält.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit threadlokalen Daten für einen <see cref="T:System.Collections.Concurrent.Partitioner" /> aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird für Szenarien bereitgestellt, in denen das Überschreiben der standardmäßigen Partitionsschema werden sollen. Kleine Schleifenkörper profitiert z. B. möglicherweise aus der Partitionierung des Bereichs. Die <xref:System.Threading.Tasks.Parallel.ForEach%2A> Methode erwartet, dass benutzerdefinierte Partitionierer dynamische Partitionierung unterstützen. Diese Überladung wird für Szenarien mit kleinen Schleifenkörpern bereitgestellt, die von der statischen Bereichspartitionierung profitieren könnten. Partitionierer müssen es sich um dynamische Partitionen unterstützt.  Weitere Informationen finden Sie unter [benutzerdefinierte Partitionierer für PLINQ und TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) und [Vorgehensweise: Implementieren dynamische Partitionen](~/docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Aufgabe eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> Eigenschaft in der <paramref name="source" /> <see cref="T:System.Collections.Concurrent.Partitioner" /> gibt <see langword="false" /> oder mit dem Partitionierer gibt <see langword="null" /> Partitionen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,long,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`5&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, int64, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,System.Int64,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit threadlokalen Daten und 64-Bit-Indizes für einen <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element einen <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife unterbrechen, den Index des aktuellen Elements (<xref:System.Int64>), und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die ausgeführt auf dem gleichen Thread.  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Thread, um eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource,TLocal&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, System.Threading.Tasks.ParallelOptions parallelOptions, Func&lt;TLocal&gt; localInit, Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt; body, Action&lt;TLocal&gt; localFinally);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ParallelLoopResult ForEach&lt;TSource, TLocal&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Func`1&lt;!!TLocal&gt; localInit, class System.Func`4&lt;!!TSource, class System.Threading.Tasks.ParallelLoopState, !!TLocal, !!TLocal&gt; body, class System.Action`1&lt;!!TLocal&gt; localFinally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ParallelLoopResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TLocal" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="localInit" Type="System.Func&lt;TLocal&gt;" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.Tasks.ParallelLoopState,TLocal,TLocal&gt;" />
+        <Parameter Name="localFinally" Type="System.Action&lt;TLocal&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Daten in der Quelle.</typeparam>
+        <typeparam name="TLocal">Der Typ der threadlokalen Daten.</typeparam>
+        <param name="source">Eine auflistbare Datenquelle.</param>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="localInit">Der Funktionsdelegat, der den ursprünglichen Zustand der lokalen Daten für jede Aufgabe zurückgibt.</param>
+        <param name="body">Der Delegat, der einmal pro Iteration aufgerufen wird.</param>
+        <param name="localFinally">Der Delegat, der die endgültige Aktion beim lokalen Status jeder Aufgabe ausführt.</param>
+        <summary>Führt einen <see langword="foreach" />-Vorgang (<see langword="For Each" /> in Visual Basic) mit threadlokalen Daten für einen <see cref="T:System.Collections.IEnumerable" /> aus. Iterationen können parallel ablaufen. Schleifenoptionen sind konfigurierbar. Der Schleifenstatus kann beobachtet und manipuliert werden.</summary>
+        <returns>Eine Struktur, die Informationen darüber enthält, welcher Abschnitt der Schleife abgeschlossen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `body` Delegat wird einmal aufgerufen, für jedes Element in der `source` aufzählbar. Es wird bereitgestellt, mit den folgenden Parametern: das aktuelle Element einer <xref:System.Threading.Tasks.ParallelLoopState> -Instanz, die verwendet werden kann, um vorzeitig aus der Schleife zu unterbrechen und ein lokaler Zustand, der für Iterationen freigegeben werden kann, die im selben Thread ausgeführt.  
+  
+ Die `localInit` Delegat wird einmal für jede Aufgabe, die Ausführung der Schleife beteiligt ist und gibt den ursprünglichen lokalen Zustand für jede dieser Aufgaben aufgerufen. Diese Anfangszustände übergeben werden, mit dem ersten `body` Aufrufe für die einzelnen Tasks. Anschließend übergibt alle nachfolgenden Textaufruf einen möglicherweise Zustandsänderungen-Wert, der für den nächsten Textaufruf übergeben wird. Schließlich gibt der letzten Textaufruf für die einzelnen Tasks einen Statuswert, der an die `localFinally` delegieren. Die `localFinally` Delegat wird einmal pro Thread, um eine abschließende Aktion ausführt, lokalen Status jeder Aufgabe aufgerufen. Dieser Delegat kann auf mehrere Aufgaben gleichzeitig aufgerufen werden; aus diesem Grund müssen Sie den Zugriff auf freigegebenen Variablen synchronisieren.  
+  
+ Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Methode möglicherweise mehr Aufgaben als Threads verwenden, während der gesamten Lebensdauer der Ausführung als vorhandene Aufgaben werden abgeschlossen, und werden durch neue Aufgaben ersetzt. Dadurch werden die zugrunde liegende <xref:System.Threading.Tasks.TaskScheduler> -Objekt die Möglichkeit zum Hinzufügen, ändern oder Entfernen von Threads für die Schleife.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="source" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="body" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localInit" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="localFinally" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in die <paramref name="parallelOptions" /> Argument wird abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme, die alle einzelnen für alle Threads ausgelöste Ausnahmen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static void Invoke (params Action[] actions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class System.Action[] actions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.Invoke(System.Action[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="actions" Type="System.Action[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="actions">Ein Array auszuführender <see cref="T:System.Action" />.</param>
+        <summary>Führt jede der bereitgestellten Aktionen aus (möglicherweise parallel).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um eine Reihe von Vorgängen, potenziell parallel auszuführen.  
+  
+ Keine Garantien werden über die Reihenfolge, in der die Operationen ausgeführt werden sollen, oder gibt an, ob sie gleichzeitig auszuführen. Diese Methode gibt keinen zurück, bis jede der bereitgestellten Vorgänge abgeschlossen ist, unabhängig davon, ob Abschluss aufgrund herausragende oder nicht ordnungsgemäß beendet auftritt.  
+  
+ Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von parallelen Aufgaben mithilfe von Parallel.Invoke](~/docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.Threading.Tasks.Parallel.Invoke%2A> Methode mit anderen Methoden, anonymen Delegaten und Lambda-Ausdrücke.  
+  
+ [!code-csharp[System.Threading.Tasks.Parallel#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelinvoke.cs#01)]
+ [!code-vb[System.Threading.Tasks.Parallel#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelinvoke.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="actions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme ausgelöst, wenn ist eine Aktion in der <paramref name="actions" /> Array löst eine Ausnahme aus.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="actions" /> Array enthält ein <see langword="null" /> Element.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static void Invoke (System.Threading.Tasks.ParallelOptions parallelOptions, params Action[] actions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class System.Threading.Tasks.ParallelOptions parallelOptions, class System.Action[] actions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions,System.Action[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" />
+        <Parameter Name="actions" Type="System.Action[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="parallelOptions">Ein Objekt, das das Verhalten dieses Vorgangs konfiguriert.</param>
+        <param name="actions">Ein Array auszuführender Aktionen.</param>
+        <summary>Führt die einzelnen bereitgestellten Aktionen (nach Möglichkeit parallel) aus, es sei denn, der Vorgang wird vom Benutzer abgebrochen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um eine Reihe von Vorgängen, potenziell parallel auszuführen. Das Abbruchtoken zu übergeben, mit der <xref:System.Threading.Tasks.ParallelOptions> Struktur ermöglicht dem Aufrufer, den gesamten Vorgang abzubrechen. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](~/docs/standard/threading/cancellation-in-managed-threads.md).  
+  
+ Keine Garantien werden über die Reihenfolge, in der die Operationen ausgeführt werden sollen, oder gibt an, ob sie gleichzeitig auszuführen. Diese Methode gibt keinen zurück, bis jede der bereitgestellten Vorgänge abgeschlossen ist, unabhängig davon, ob Abschluss aufgrund herausragende oder nicht ordnungsgemäß beendet auftritt.  
+  
+ Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von parallelen Aufgaben mithilfe von Parallel.Invoke](~/docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Die <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> festgelegt ist.</exception>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="actions" />-Argument lautet <see langword="null" />.  
+  
+ - oder -   
+  
+ Das <paramref name="parallelOptions" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.AggregateException">Die Ausnahme ausgelöst, wenn ist eine Aktion in der <paramref name="actions" /> Array löst eine Ausnahme aus.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="actions" /> Array enthält ein <see langword="null" /> Element.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.CancellationTokenSource" /> zugeordneten der <see cref="T:System.Threading.CancellationToken" /> in der <paramref name="parallelOptions" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

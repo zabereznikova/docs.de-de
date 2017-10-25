@@ -1,0 +1,1379 @@
+<Type Name="Volatile" FullName="System.Threading.Volatile">
+  <TypeSignature Language="C#" Value="public static class Volatile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Volatile extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Volatile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Methoden zum Ausführen von flüchtigen Speichervorgängen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf einem Multiprozessorsystem wird sichergestellt, dass ein flüchtiger Schreibvorgang, dass ein Wert, der auf einen Speicherbereich geschrieben sofort für alle Prozessoren sichtbar ist. Ein flüchtiger Lesevorgang erhält den letzten Wert, der von einem Prozessor auf einen Speicherbereich geschrieben. Diese Vorgänge möglicherweise Prozessorcache geleert werden, die was die Leistung beeinträchtigen können.  
+  
+> [!NOTE]
+>  Bei einem Einprozessorsystem unbedingt flüchtige Lese- und Schreibvorgänge ein Wert gelesen oder in den Speicher geschrieben und (z. B. in einem Prozessorregister) nicht zwischengespeichert. Daher können Sie diese Vorgänge verwenden, um den Zugriff auf ein Feld synchronisieren, die von einem anderen Thread oder von der Hardware aktualisiert werden können.  
+  
+ Flüchtigen Speichervorgängen befinden für Sonderfälle der Synchronisierung, wobei normale Sperren nicht Alternative akzeptabel. Unter normalen Umständen c# `lock` -Anweisung, die Visual Basic `SyncLock` -Anweisung und die <xref:System.Threading.Monitor> Klasse bereitstellen, die am wenigsten fehleranfällig und einfachste Methode der Synchronisieren des Zugriffs auf Daten, und die <xref:System.Lazy%601> -Klasse bietet eine einfache Möglichkeit für die verzögerte Initialisierungscode schreiben, ohne direkt mit sich vergewissert, sperren.  
+  
+ Die <xref:System.Threading.Volatile.Read%2A?displayProperty=nameWithType> und <xref:System.Threading.Volatile.Write%2A?displayProperty=nameWithType> Methoden können Funktionen, die in Sprachen nicht unterstützt wird. Zum Beispiel:  
+  
+-   Einige Sprachen, z. B. Visual Basic, erkennen nicht das Konzept von flüchtigen Speichervorgängen. Die <xref:System.Threading.Volatile> Klasse stellt diese Funktionalität in solchen Sprachen.  
+  
+    > [!NOTE]
+    >  Aufrufen einer dieser Methoden wirkt sich auf nur einen einzigen Speicherzugriff aus. Um effektive Synchronisierung für ein Feld zu gewährleisten, muss alle Zugriff auf das Feld verwenden <xref:System.Threading.Volatile.Read%2A?displayProperty=nameWithType> und <xref:System.Threading.Volatile.Write%2A?displayProperty=nameWithType>.  
+  
+-   In c# mithilfe der `volatile` Modifizierer auf ein Feld wird sichergestellt, dass es sich bei jedem Zugriff auf dieses Feld wird verwendet, die <xref:System.Threading.Volatile.Read%2A?displayProperty=nameWithType> und <xref:System.Threading.Volatile.Write%2A?displayProperty=nameWithType> Methoden, aber die `volatile` Modifizierer kann nicht auf Elemente des Arrays angewendet werden. Die <xref:System.Threading.Volatile.Read%2A?displayProperty=nameWithType> und <xref:System.Threading.Volatile.Write%2A?displayProperty=nameWithType> Methoden können auf Elemente des Arrays verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static bool Read (ref bool location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Read(bool&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static byte Read (ref byte location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 Read(unsigned int8&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.Byte@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Byte&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static double Read (ref double location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Read(float64&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.Double@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Double&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static short Read (ref short location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 Read(int16&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.Int16@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int16&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static int Read (ref int location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Read(int32&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static long Read (ref long location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 Read(int64&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int64&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static IntPtr Read (ref IntPtr location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int Read(native int&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.IntPtr&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static sbyte Read (ref sbyte location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int8 Read(int8&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.SByte@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.SByte&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static float Read (ref float location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Read(float32&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.Single@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Single&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static ushort Read (ref ushort location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int16 Read(unsigned int16&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.UInt16@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UInt16&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Read(System.Int16@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static uint Read (ref uint location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int32 Read(unsigned int32&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UInt32&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Read(System.Int32@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static ulong Read (ref ulong location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int64 Read(unsigned int64&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.UInt64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UInt64&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Read(System.Int64@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static UIntPtr Read (ref UIntPtr location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native unsigned int Read(native unsigned int&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read(System.UIntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UIntPtr&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Wert des angegebenen Felds. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der gelesene Wert. Dieser Wert entspricht dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Read(System.IntPtr@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Read&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Read&lt;T&gt; (ref T location) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Read&lt;class T&gt;(!!T&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Read``1(``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="T&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der zu lesende Feld. Dies muss ein Verweistyp, der kein Werttyp.</typeparam>
+        <param name="location">Das zu lesende Feld.</param>
+        <summary>Liest den Objektverweis vom angegebenen Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibvorgang nach dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, bevor Sie diese Methode.</summary>
+        <returns>Der Verweis auf <paramref name="T" /> , gelesen wurde. Dieser Verweis wird dem letzten geschriebenen von einem Prozessor auf dem Computer, unabhängig von der Anzahl der Prozessoren und den Zustand des Prozessorcaches.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref bool location, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(bool&amp; location, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.Boolean@,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Boolean&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref byte location, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(unsigned int8&amp; location, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.Byte@,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Byte&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref double location, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(float64&amp; location, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.Double@,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Double&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref short location, short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(int16&amp; location, int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.Int16@,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int16&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref int location, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(int32&amp; location, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.Int32@,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref long location, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(int64&amp; location, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.Int64@,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int64&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Vorgang Arbeitsspeicher vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref IntPtr location, IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(native int&amp; location, native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.IntPtr@,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.IntPtr&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref sbyte location, sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(int8&amp; location, int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.SByte@,System.SByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.SByte&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref float location, float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(float32&amp; location, float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.Single@,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Single&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref ushort location, ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(unsigned int16&amp; location, unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.UInt16@,System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UInt16&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Write(System.Int16@,System.Int16)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref uint location, uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(unsigned int32&amp; location, unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.UInt32@,System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UInt32&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Write(System.Int32@,System.Int32)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref ulong location, ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(unsigned int64&amp; location, unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.UInt64@,System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UInt64&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Write(System.Int64@,System.Int64)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (ref UIntPtr location, UIntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(native unsigned int&amp; location, native unsigned int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write(System.UIntPtr@,System.UIntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.UIntPtr&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.UIntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="location">Das Feld, in dem der Wert geschrieben wird.</param>
+        <param name="value">Der zu schreibende Wert. Der Wert wird sofort geschrieben werden, damit es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt den angegebenen Wert für das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Threading.Volatile.Write(System.IntPtr@,System.IntPtr)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Write&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void Write&lt;T&gt; (ref T location, T value) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write&lt;class T&gt;(!!T&amp; location, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Volatile.Write``1(``0@,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="T&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ von Feld zu schreiben. Dies muss ein Verweistyp, der kein Werttyp.</typeparam>
+        <param name="location">Das Feld, in denen der Objektverweis geschrieben wird.</param>
+        <param name="value">Der Objektverweis schreiben. Der Verweis wird sofort geschrieben, damit, dass es für alle Prozessoren des Computers sichtbar ist.</param>
+        <summary>Schreibt die angegebene Objektverweis auf das angegebene Feld. Auf Systemen, die es erfordern, fügt Arbeitsspeicherbarriere, die verhindert, dass den Prozessor Neuanordnen von Speichervorgängen wie folgt: Wenn ein Lese- oder Schreibberechtigungen vor dieser Methode im Code angezeigt wird, der Prozessor kann nicht verschoben werden, nach dieser Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Volatile>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

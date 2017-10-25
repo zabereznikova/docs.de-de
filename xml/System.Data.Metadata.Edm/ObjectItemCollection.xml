@@ -1,0 +1,254 @@
+<Type Name="ObjectItemCollection" FullName="System.Data.Metadata.Edm.ObjectItemCollection">
+  <TypeSignature Language="C#" Value="public sealed class ObjectItemCollection : System.Data.Metadata.Edm.ItemCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectItemCollection extends System.Data.Metadata.Edm.ItemCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.ObjectItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.ItemCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Klasse zum Darstellen einer Auflistung von Elementen für die Objektebene. Die Implementierung für die tatsächliche Wartung der Auflistung erfolgt hauptsächlich durch ItemCollection.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hier wird kein Inhalt aktualisiert; fügen Sie hier kein Material hinzu.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectItemCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Metadata.Edm.ObjectItemCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClrType">
+      <MemberSignature Language="C#" Value="public Type GetClrType (System.Data.Metadata.Edm.EnumType objectSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetClrType(class System.Data.Metadata.Edm.EnumType objectSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.GetClrType(System.Data.Metadata.Edm.EnumType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.EnumType" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">Der zu suchenden OSpace-Typ.</param>
+        <summary>Die Methode gibt den zugrunde liegenden CLR-Typ für das angegebene OSpace Typargument. Wenn der Datenspeicher des Parameters nicht OSpace ist, wird eine ArgumentException ausgelöst.</summary>
+        <returns>Der CLR-Typ des Arguments OSpace.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClrType">
+      <MemberSignature Language="C#" Value="public Type GetClrType (System.Data.Metadata.Edm.StructuralType objectSpaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetClrType(class System.Data.Metadata.Edm.StructuralType objectSpaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.GetClrType(System.Data.Metadata.Edm.StructuralType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.StructuralType" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />, der den Objektraumtyp darstellt.</param>
+        <summary>Gibt den CLR-Typ, entspricht die <see cref="T:System.Data.Metadata.Edm.StructuralType" /> durch die bereitgestellten Parameter angegeben.</summary>
+        <returns>Der CLR-Typ des Arguments OSpace.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt; GetItems&lt;T&gt; () where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;!!T&gt; GetItems&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.GetItems``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ, der von der Methode zurückgegeben wird.</typeparam>
+        <summary>Gibt alle Elemente des angegebenen Typs zurück, die zu dieser Elementauflistung gehören.</summary>
+        <returns>Eine Auflistung vom Typ <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> alle Elemente des angegebenen Typs enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrimitiveTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Metadata.Edm.PrimitiveType&gt; GetPrimitiveTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Metadata.Edm.PrimitiveType&gt; GetPrimitiveTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.GetPrimitiveTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Metadata.Edm.PrimitiveType&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung von Objekten des primitiven Typs zurück.</summary>
+        <returns>Eine Auflistung von primitiven Type-Objekten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromAssembly">
+      <MemberSignature Language="C#" Value="public void LoadFromAssembly (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadFromAssembly(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.LoadFromAssembly(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die Assembly, aus der die Metadaten geladen werden.</param>
+        <summary>Lädt Metadaten einer angegebenen Assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromAssembly">
+      <MemberSignature Language="C#" Value="public void LoadFromAssembly (System.Reflection.Assembly assembly, System.Data.Metadata.Edm.EdmItemCollection edmItemCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadFromAssembly(class System.Reflection.Assembly assembly, class System.Data.Metadata.Edm.EdmItemCollection edmItemCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.LoadFromAssembly(System.Reflection.Assembly,System.Data.Metadata.Edm.EdmItemCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="edmItemCollection" Type="System.Data.Metadata.Edm.EdmItemCollection" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die Assembly, aus der die Metadaten geladen werden.</param>
+        <param name="edmItemCollection">Die EDM-Metadaten-Quelle für die Metadaten der O Speicherplatz.</param>
+        <summary>Lädt Metadaten aus der angegebenen Assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromAssembly">
+      <MemberSignature Language="C#" Value="public void LoadFromAssembly (System.Reflection.Assembly assembly, System.Data.Metadata.Edm.EdmItemCollection edmItemCollection, Action&lt;string&gt; logLoadMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadFromAssembly(class System.Reflection.Assembly assembly, class System.Data.Metadata.Edm.EdmItemCollection edmItemCollection, class System.Action`1&lt;string&gt; logLoadMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.LoadFromAssembly(System.Reflection.Assembly,System.Data.Metadata.Edm.EdmItemCollection,System.Action{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="edmItemCollection" Type="System.Data.Metadata.Edm.EdmItemCollection" />
+        <Parameter Name="logLoadMessage" Type="System.Action&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die Assembly, aus der die Metadaten geladen werden.</param>
+        <param name="edmItemCollection">Die EDM-Metadaten-Quelle für die Metadaten der O Speicherplatz.</param>
+        <param name="logLoadMessage">Der Delegat, der Protokolldateien Nachrichten gesendet werden.</param>
+        <summary>Lädt Metadaten einer angegebenen Assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetClrType">
+      <MemberSignature Language="C#" Value="public bool TryGetClrType (System.Data.Metadata.Edm.EnumType objectSpaceType, out Type clrType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetClrType(class System.Data.Metadata.Edm.EnumType objectSpaceType, [out] class System.Type&amp; clrType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.TryGetClrType(System.Data.Metadata.Edm.EnumType,System.Type@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.EnumType" />
+        <Parameter Name="clrType" Type="System.Type&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">OSpace Enum-Typs für die Suche nach</param>
+        <param name="clrType">Die CLR Enum-Typs des Arguments OSpace</param>
+        <summary>Gibt den zugrunde liegenden CLR-Typ für das angegebene OSpace Enum-Typ-Argument zurück. Wenn der Datenspeicher des Parameters nicht OSpace ist, wird die Methode "false" zurückgibt und legt den Out-Parameter auf null fest.</summary>
+        <returns>"true" bei "false" bei Erfolg</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetClrType">
+      <MemberSignature Language="C#" Value="public bool TryGetClrType (System.Data.Metadata.Edm.StructuralType objectSpaceType, out Type clrType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetClrType(class System.Data.Metadata.Edm.StructuralType objectSpaceType, [out] class System.Type&amp; clrType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ObjectItemCollection.TryGetClrType(System.Data.Metadata.Edm.StructuralType,System.Type@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectSpaceType" Type="System.Data.Metadata.Edm.StructuralType" />
+        <Parameter Name="clrType" Type="System.Type&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="objectSpaceType">Ein <see cref="T:System.Data.Metadata.Edm.StructuralType" />, der den Objektraumtyp darstellt.</param>
+        <param name="clrType">Der CLR-Typ.</param>
+        <summary>Gibt einen CLR-Typ entspricht der <see cref="T:System.Data.Metadata.Edm.StructuralType" /> durch die bereitgestellten Parameter angegeben.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Typ vorhanden ist übereinstimmt, die den Suchkriterien; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

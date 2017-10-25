@@ -1,0 +1,48 @@
+<Type Name="IDebugConvert2" FullName="Microsoft.JScript.IDebugConvert2">
+  <TypeSignature Language="C#" Value="public interface IDebugConvert2" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDebugConvert2" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IDebugConvert2" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("B370D709-72BD-4696-9825-C4EBADBF98CB")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Utility-Methoden, die Daten von einem Typ in einen anderen zu konvertieren. Enthält Methoden, die Werte zu konvertieren <see cref="T:System.String" /> Objekte, damit sie vom Debugger angezeigt werden können.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="DecimalToString">
+      <MemberSignature Language="C#" Value="public string DecimalToString (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string DecimalToString(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebugConvert2.DecimalToString(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert bei Implementierung in einer Klasse den angegebenen <see cref="T:System.Decimal" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

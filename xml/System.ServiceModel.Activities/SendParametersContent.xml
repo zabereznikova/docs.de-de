@@ -1,0 +1,107 @@
+<Type Name="SendParametersContent" FullName="System.ServiceModel.Activities.SendParametersContent">
+  <TypeSignature Language="C#" Value="public sealed class SendParametersContent : System.ServiceModel.Activities.SendContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SendParametersContent extends System.ServiceModel.Activities.SendContent" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.SendParametersContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activities.SendContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Parameters")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Aktiviert das Senden von Daten an oder von einem Workflowdienst in der Form von Parametern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Activities.SendParametersContent> ist mit regulären [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Clients und Diensten interoperabel. Die <xref:System.ServiceModel.Activities.SendParametersContent> -Auflistung ähnelt der Argumentdeklaration auf einer C#-Methodensignatur. Die <xref:System.ServiceModel.Activities.SendParametersContent> Auflistung darf keine Argumente, die einen Nachrichtenvertrag enthalten oder vom Typ <xref:System.ServiceModel.Channels.Message>. Verwenden Sie <xref:System.ServiceModel.Activities.SendMessageContent> für diese Datentypen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.ServiceModel.Activities.SendParametersContent>-Klasse veranschaulicht.  
+  
+ [!code-csharp[SendReceiveParameters#2](~/samples/snippets/csharp/VS_Snippets_CFX/sendreceiveparameters/cs/echoworkflowservice/program.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendParametersContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendParametersContent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendParametersContent" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendParametersContent (System.Collections.Generic.IDictionary&lt;string,System.Activities.InArgument&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, class System.Activities.InArgument&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendParametersContent.#ctor(System.Collections.Generic.IDictionary{System.String,System.Activities.InArgument})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Activities.InArgument&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Eine Auflistung von Schlüssel-Wert-Paaren mit den Schlüsseln, die die Parameternamen und die Werte mit den Argumenten enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.SendParametersContent" />-Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses <xref:System.ServiceModel.Activities.SendParametersContent>-Konstruktors veranschaulicht.  
+  
+ [!code-csharp[SendReceiveParameters#2](~/samples/snippets/csharp/VS_Snippets_CFX/sendreceiveparameters/cs/echoworkflowservice/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,System.Activities.InArgument&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.Activities.InArgument&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendParametersContent.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Activities.InArgument&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameter für den Workflowdienstvorgang ab oder legt sie fest.</summary>
+        <value>Eine geordnete Auflistung von Schlüssel-Wert-Paaren mit den Schlüsseln, die die Parameternamen und die Werte mit den Argumenten enthalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen der <xref:System.ServiceModel.Activities.SendParametersContent.Parameters%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[SendReceiveParameters#2](~/samples/snippets/csharp/VS_Snippets_CFX/sendreceiveparameters/cs/echoworkflowservice/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

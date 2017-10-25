@@ -1,0 +1,322 @@
+<Type Name="AutomationInteropProvider" FullName="System.Windows.Automation.Provider.AutomationInteropProvider">
+  <TypeSignature Language="C#" Value="public static class AutomationInteropProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AutomationInteropProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.AutomationInteropProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Unterstützung für die Kommunikation zwischen Benutzeroberflächenautomatisierungs-Anbietern und Benutzeroberflächenautomatisierungs-Clientanwendungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendRuntimeId">
+      <MemberSignature Language="C#" Value="public const int AppendRuntimeId = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AppendRuntimeId = (3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.Provider.AutomationInteropProvider.AppendRuntimeId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Enthält einen Wert, nach der Rückgabe als erstes Element des Arrays, die von einem Benutzeroberflächenautomatisierungs-Anbieter übergeben <see cref="M:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId" />, gibt an, dass die ID teilweise ist und vom Basisanbieter bereitgestellte ID angefügt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird in der Regel verwendet, in der Implementierung der <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A> für Elemente in einem Fragment, die nicht direkt in einem Fenster gehostet werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A?displayProperty=nameWithType> für ein Listenelement.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListItemFragment.cs#101)]
+ [!code-vb[UIAFragmentProvider_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListItemFragment.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientsAreListening">
+      <MemberSignature Language="C#" Value="public static bool ClientsAreListening { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool ClientsAreListening" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob für eine Benutzeroberflächenautomatisierungs-Clientanwendung [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Ereignisse abonniert sind.</summary>
+        <value>
+          <see langword="true" />, wenn für einen Client Ereignisse abonniert sind, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[UIAFragmentProvider_snip#122](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#122)]
+ [!code-vb[UIAFragmentProvider_snip#122](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#122)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostProviderFromHandle">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.Provider.IRawElementProviderSimple HostProviderFromHandle (IntPtr hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Automation.Provider.IRawElementProviderSimple HostProviderFromHandle(native int hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Das Handle des Fensters.</param>
+        <summary>Gibt einen Benutzeroberflächenautomatisierungs-Anbieter zurück, der das angegebene Fenster darstellt.</summary>
+        <returns>Der Rohdatenelement-Anbieter für das angegebene Fenster.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittstelle, die von dieser Methode zurückgegebene kann nur an übergeben werden [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]. Bei dem Versuch, eine Methode auf der Schnittstelle aufrufen, wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UIAFragmentProvider_snip#121](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#121)]
+ [!code-vb[UIAFragmentProvider_snip#121](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#121)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidateLimit">
+      <MemberSignature Language="C#" Value="public const int InvalidateLimit = 20;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidateLimit = (20)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>20</MemberValue>
+      <Docs>
+        <summary>Gibt die maximale Anzahl von Ereignissen, die vor der Batchverarbeitung zu senden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert bestimmt, ob die Benachrichtigung der einzelnen Ereignisse angegeben wird, wie z. B. <xref:System.Windows.Automation.StructureChangeType.ChildAdded> oder der Bulk-Ereignisse, z. B. <xref:System.Windows.Automation.StructureChangeType.ChildrenBulkAdded>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsInvalidateLimit">
+      <MemberSignature Language="C#" Value="public const int ItemsInvalidateLimit = 5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ItemsInvalidateLimit = (5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.Provider.AutomationInteropProvider.ItemsInvalidateLimit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>Die maximale Anzahl von Ereignissen, die vor der Batchverarbeitung für Elemente im Container zu senden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseAutomationEvent">
+      <MemberSignature Language="C#" Value="public static void RaiseAutomationEvent (System.Windows.Automation.AutomationEvent eventId, System.Windows.Automation.Provider.IRawElementProviderSimple provider, System.Windows.Automation.AutomationEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RaiseAutomationEvent(class System.Windows.Automation.AutomationEvent eventId, class System.Windows.Automation.Provider.IRawElementProviderSimple provider, class System.Windows.Automation.AutomationEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent(System.Windows.Automation.AutomationEvent,System.Windows.Automation.Provider.IRawElementProviderSimple,System.Windows.Automation.AutomationEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventId" Type="System.Windows.Automation.AutomationEvent" />
+        <Parameter Name="provider" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+        <Parameter Name="e" Type="System.Windows.Automation.AutomationEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventId">Der Ereignisbezeichner.</param>
+        <param name="provider">Das dem Ereignis zugeordnete Element.</param>
+        <param name="e">Informationen zum Ereignis.</param>
+        <summary>Löst ein Musterereignis oder ein benutzerdefiniertes Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muster Ereignisse sollten nicht nur durch eine Implementierung Muster ausgelöst werden. Angenommen, ein <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> ausgelöst werden soll, wenn das Steuerelement aufgerufen wird, entweder durch <xref:System.Windows.Automation.InvokePattern.Invoke%2A> oder durch Maus- und Tastatureingaben. Auf diese Weise können Clients über Systemereignisse informiert werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UIAFragmentProvider_snip#122](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#122)]
+ [!code-vb[UIAFragmentProvider_snip#122](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#122)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseAutomationPropertyChangedEvent">
+      <MemberSignature Language="C#" Value="public static void RaiseAutomationPropertyChangedEvent (System.Windows.Automation.Provider.IRawElementProviderSimple element, System.Windows.Automation.AutomationPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RaiseAutomationPropertyChangedEvent(class System.Windows.Automation.Provider.IRawElementProviderSimple element, class System.Windows.Automation.AutomationPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent(System.Windows.Automation.Provider.IRawElementProviderSimple,System.Windows.Automation.AutomationPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+        <Parameter Name="e" Type="System.Windows.Automation.AutomationPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das dem Ereignis zugeordnete Element.</param>
+        <param name="e">Informationen zum Ereignis.</param>
+        <summary>Löst ein Ereignis aus, wenn sich eine [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[UIAFragmentProvider_snip#123](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#123)]
+ [!code-vb[UIAFragmentProvider_snip#123](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#123)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseStructureChangedEvent">
+      <MemberSignature Language="C#" Value="public static void RaiseStructureChangedEvent (System.Windows.Automation.Provider.IRawElementProviderSimple provider, System.Windows.Automation.StructureChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RaiseStructureChangedEvent(class System.Windows.Automation.Provider.IRawElementProviderSimple provider, class System.Windows.Automation.StructureChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent(System.Windows.Automation.Provider.IRawElementProviderSimple,System.Windows.Automation.StructureChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+        <Parameter Name="e" Type="System.Windows.Automation.StructureChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Das dem Ereignis zugeordnete Element.</param>
+        <param name="e">Informationen zum Ereignis.</param>
+        <summary>Löst ein Ereignis aus, wenn sich eine [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Struktur geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für eine Änderung in der Baumstruktur wird untergeordnete Elemente hinzugefügt oder aus einem Listenfeld, entfernt oder erweitert oder reduziert ist in einer Strukturansicht an.  
+  
+ Wenn ein untergeordnetes Element entfernt wird, an der Laufzeitbezeichner des hinzugefügten Elements oder des Containers, übergeben die <xref:System.Windows.Automation.StructureChangedEventArgs> Konstruktor. In der aktuellen Version von [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)], besteht jedoch keine einfache Möglichkeit für eine Instanz eines Anbieters, um den entsprechenden Bezeichner zu ermitteln. Die <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A> Methode gibt normalerweise ein Array mit <xref:System.Windows.Automation.Provider.AutomationInteropProvider.AppendRuntimeId>, diverse Magic weist die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] System, erstellen einen eindeutigen Bezeichner für jede Instanz des Steuerelements. Der Rohwert gebotenen <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A> sollte nicht in den Ereignissen verwendet werden, da es für Clients ohne Bedeutung und nicht zum Identifizieren einer bestimmten Instanz verwendet werden.  
+  
+ Aufgrund dieser Einschränkung können die Ereignisse des Typs <xref:System.Windows.Automation.StructureChangeType.ChildAdded> und <xref:System.Windows.Automation.StructureChangeType.ChildRemoved> sind nicht sehr sinnvoll. Verwenden Sie immer als Alternative <xref:System.Windows.Automation.StructureChangeType.ChildrenBulkAdded> und <xref:System.Windows.Automation.StructureChangeType.ChildrenBulkRemoved>, übergeben 0 als Laufzeitbezeichner. Sie können keine `null`, wie dies eine Ausnahme ausgelöst wird. Clients benachrichtigt werden, dass im Container eine Änderung vorgenommen wurde (erkennbar die `sender` Parameter zu übergeben, um die <xref:System.Windows.Automation.StructureChangedEventHandler>), ohne bestimmte Beachten Sie, dass die untergeordneten Elemente hinzugefügt oder entfernt wurden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Auslösen eines Ereignisses, wenn untergeordnete Elemente hinzugefügt werden, oder Sie daraus, ein benutzerdefiniertes Listenfeld.  
+  
+ [!code-csharp[FragmentProvider#101](~/samples/snippets/csharp/VS_Snippets_Wpf/FragmentProvider/CSharp/ListFragment.cs#101)]
+ [!code-vb[FragmentProvider#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FragmentProvider/VisualBasic/ListFragment.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnRawElementProvider">
+      <MemberSignature Language="C#" Value="public static IntPtr ReturnRawElementProvider (IntPtr hwnd, IntPtr wParam, IntPtr lParam, System.Windows.Automation.Provider.IRawElementProviderSimple el);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int ReturnRawElementProvider(native int hwnd, native int wParam, native int lParam, class System.Windows.Automation.Provider.IRawElementProviderSimple el) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.AutomationInteropProvider.ReturnRawElementProvider(System.IntPtr,System.IntPtr,System.IntPtr,System.Windows.Automation.Provider.IRawElementProviderSimple)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" />
+        <Parameter Name="wParam" Type="System.IntPtr" />
+        <Parameter Name="lParam" Type="System.IntPtr" />
+        <Parameter Name="el" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Handle für das Fenster des Elements.</param>
+        <param name="wParam">Die <see langword="wParam" /> Mitglied der <see langword="WM_GETOBJECT" /> Nachricht.</param>
+        <param name="lParam">Die <see langword="lParam" /> Mitglied der <see langword="WM_GETOBJECT" /> Nachricht.</param>
+        <param name="el">Der Benutzeroberflächenautomatisierungs-Anbieter für das Element.</param>
+        <summary>Gibt den Benutzeroberflächenautomatisierungs-Anbieter für ein Element als Antwort auf eine <see langword="WM_GETOBJECT" /> Nachricht.</summary>
+        <returns>Ein Zeiger auf Daten, die zugewiesen werden soll <see cref="P:System.Windows.Forms.Message.Result" /> bevor die Nachricht an die basisfensterprozedur übergeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[UIAFragmentProvider_snip#116](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]
+ [!code-vb[UIAFragmentProvider_snip#116](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootObjectId">
+      <MemberSignature Language="C#" Value="public const int RootObjectId = -25;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RootObjectId = (-25)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.Provider.AutomationInteropProvider.RootObjectId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-25</MemberValue>
+      <Docs>
+        <summary>Enthält einen Wert, der verwendet wird, der <see langword="lParam" /> Mitglied einer <see langword="WM_GETOBJECT" /> Meldung an, dass der Server einen Verweis auf den Stamm rohdatenelement-Anbieter zurückgeben soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

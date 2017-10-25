@@ -1,0 +1,155 @@
+<Type Name="PrintStringProperty" FullName="System.Printing.IndexedProperties.PrintStringProperty">
+  <TypeSignature Language="C#" Value="public sealed class PrintStringProperty : System.Printing.IndexedProperties.PrintProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PrintStringProperty extends System.Printing.IndexedProperties.PrintProperty" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.IndexedProperties.PrintStringProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.IndexedProperties.PrintProperty</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.String" /> -Eigenschaft (und den Wert) einer Hardware- oder ein drucken.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Klasse verwenden, installieren Sie einen zweiten Drucker, der unterscheidet sich in ihren Eigenschaften aus einem bereits vorhandenen Drucker nur in Speicherort, Port und freigegebenen Status.  
+  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintStringProperty (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintStringProperty.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">Der Name des der <see cref="T:System.String" /> Eigenschaft, die die <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" /> darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" /> Klasse für die angegebene Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `attributeName` sollten geschrieben werden, genau wie den Namen einer bestimmten <xref:System.String> Eigenschaft eines Objekts Drucksystem, einschließlich der Schreibweise. Z. B. die <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> Eigenschaft von einem <xref:System.Printing.PrintSystemJobInfo> Objekt "Absender", nicht "Absender" geschrieben werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintStringProperty (string attributeName, object attributeValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attributeName, object attributeValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintStringProperty.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+        <Parameter Name="attributeValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">Der Name des der <see cref="T:System.String" /> Eigenschaft, die die <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" /> darstellt.</param>
+        <param name="attributeValue">Der Wert der Eigenschaft, die die <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" /> darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" /> -Klasse, die dem angegebenen Wert für die angegebene Eigenschaft enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `attributeName` sollten geschrieben werden, genau wie den Namen einer bestimmten <xref:System.String> Eigenschaft eines Objekts Drucksystem, einschließlich der Schreibweise. Z. B. die <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> Eigenschaft von einem <xref:System.Printing.PrintSystemJobInfo> Objekt "Absender", nicht "Absender" geschrieben werden muss.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie dieser Konstruktor verwendet wird, installieren Sie einen zweiten Drucker, der unterscheidet sich in ihren Eigenschaften aus einem bereits vorhandenen Drucker nur in Speicherort, Port und freigegebenen Status.  
+  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalDispose">
+      <MemberSignature Language="C#" Value="protected override sealed void InternalDispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InternalDispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintStringProperty.InternalDispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator string (System.Printing.IndexedProperties.PrintStringProperty attributeRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname string op_Implicit(class System.Printing.IndexedProperties.PrintStringProperty attributeRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintStringProperty.op_Implicit(System.Printing.IndexedProperties.PrintStringProperty)~System.String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeRef" Type="System.Printing.IndexedProperties.PrintStringProperty" />
+      </Parameters>
+      <Docs>
+        <param name="attributeRef">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.IndexedProperties.PrintStringProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Eigenschaft fest, die die <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" /> darstellt.</summary>
+        <value>Ein geschachtelter <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,106 @@
+<Type Name="IPolicyExportExtension" FullName="System.ServiceModel.Description.IPolicyExportExtension">
+  <TypeSignature Language="C#" Value="public interface IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IPolicyExportExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementieren Sie <see cref="T:System.ServiceModel.Description.IPolicyExportExtension" />, um benutzerdefinierte Bindungsrichtlinienassertionen in die Web Services Description Language (WSDL)-Informationen einzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Description.IPolicyExportExtension>-Schnittstelle für ein <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>-Objekt, um Anweisungen zu Endpunktfunktionen oder -anforderungen in die WSDL-Informationen zu schreiben, die von einem bestimmten Endpunkt ausgegeben werden. In der Regel ist das Bindungselement ein Element, das einige Features implementiert, aber dies ist nicht erforderlich. Um das Richtlinienexportprogramm aus einer Konfigurationsdatei zu laden, implementieren Sie ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>, das das Richtlinienexportprogramm-<xref:System.ServiceModel.Channels.BindingElement>-Objekt zurückgibt.  
+  
+ Das Richtlinienexportprogramm wird von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] verwendet, um mithilfe von Richtlinienassertionen Clients die Existenz dieser benutzerdefinierten Anforderung oder Endpunktfunktion mitzuteilen.  
+  
+ Die <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>-Methode ruft das <xref:System.ServiceModel.Description.MetadataExporter>-Objekt und das <xref:System.ServiceModel.Description.PolicyConversionContext>-Objekt auf. Verwenden Sie die Methoden <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> und <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A>, um Auflistungen von Richtlinienassertionen aufzurufen, die bereits für verschiedene Bereiche exportiert wurden. Fügen Sie dann das benutzerdefinierte Richtlinienassertionsobjekt der entsprechenden Auflistung hinzu.  
+  
+ Die <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A>-Eigenschaft gibt die <xref:System.ServiceModel.Description.ContractDescription> für den Endpunkt aus, der exportiert wird. Dies ermöglicht es der <xref:System.ServiceModel.Description.IPolicyExportExtension>-Erweiterung, den richtigen Bereich für die exportierten Richtlinienassertionen festzulegen. Sicherheitsattribute im Code können beispielsweise der <xref:System.ServiceModel.Description.ContractDescription> Verhalten hinzufügen, die angeben, wo Richtlinienassertionen hinzugefügt werden sollen.  
+  
+ Der <xref:System.ServiceModel.Description.IPolicyExportExtension>-Mechanismus unterstützt nur exportierende Richtlinienassertionen in WSDL. Um benutzerdefinierte WSDL-Elemente zu exportieren, müssen Sie den <xref:System.ServiceModel.Description.IWsdlExportExtension>-Mechanismus zum direkten Ändern der WSDL verwenden.  
+  
+ Nachdem benutzerdefinierte Richtlinienassertionen an die WSDL-Informationen angehängt wurden, können Clients die benutzerdefinierten Bindungsassertionen mithilfe eines <xref:System.ServiceModel.Description.IPolicyImportExtension>-Objekts erkennen und importieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Implementierung der <xref:System.ServiceModel.Description.IPolicyExportExtension> für ein <xref:System.ServiceModel.Channels.BindingElement> gezeigt. In diesem Beispiel wird ein benutzerdefiniertes Bindungselement an die WSDL-Datei auf Bindungsebene angehängt.  
+  
+ [!code-csharp[CustomPolicySample#14](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
+ [!code-vb[CustomPolicySample#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
+  
+ Im folgenden Codebeispiel wird eine <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>-Implementierung gezeigt, mit der das vorangehende Richtlinienexportprogramm aus einer Anwendungskonfigurationsdatei geladen werden kann.  
+  
+ [!code-csharp[CustomPolicySample#15](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#15)]
+ [!code-vb[CustomPolicySample#15](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#15)]  
+  
+ Im folgenden Beispiel wird die Hostkonfigurationsdatei gezeigt, die das benutzerdefinierte Richtlinienexportprogramm lädt.  
+  
+ [!code-xml[CustomPolicySample#3](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/app.config#3)]   
+  
+ Im folgenden Beispiel wird die benutzerdefinierte Assertion in der WSDL-Datei gezeigt.  
+  
+ [!code-xml[CustomPolicySample#16](~/samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/tempuri.org.wsdl#16)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExportPolicy">
+      <MemberSignature Language="C#" Value="public void ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.MetadataExporter" />, den Sie zum Ändern des Exportvorgangs verwenden können.</param>
+        <param name="context">Der <see cref="T:System.ServiceModel.Description.PolicyConversionContext" />, den Sie zum Einfügen einer benutzerdefinierten Richtlinienassertion verwenden können.</param>
+        <summary>Implementieren Sie dies, um beim Export eine benutzerdefinierte Richtlinienassertion zu Bindungen einzuschließen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Methoden <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> und <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A>, um Auflistungen von Richtlinienassertionen aufzurufen, die bereits für verschiedene Bereiche exportiert wurden. Fügen Sie das <xref:System.ServiceModel.Description.IPolicyExportExtension>-Objekt der entsprechenden Auflistung hinzu.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Implementierung der <xref:System.ServiceModel.Description.IPolicyExportExtension> für ein <xref:System.ServiceModel.Channels.BindingElement> gezeigt. In diesem Beispiel wird ein benutzerdefiniertes Bindungselement an die WSDL-Datei auf Bindungsebene angehängt.  
+  
+ [!code-csharp[CustomPolicySample#14](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
+ [!code-vb[CustomPolicySample#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
+  
+ Im folgenden Codebeispiel wird eine <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>-Implementierung gezeigt, mit der das vorangehende Richtlinienexportprogramm aus einer Anwendungskonfigurationsdatei geladen werden kann.  
+  
+ [!code-csharp[CustomPolicySample#15](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#15)]
+ [!code-vb[CustomPolicySample#15](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#15)]  
+  
+ Im folgenden Beispiel wird die Hostkonfigurationsdatei gezeigt, die das benutzerdefinierte Richtlinienexportprogramm lädt.  
+  
+ [!code-xml[CustomPolicySample#3](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/app.config#3)]   
+  
+ Im folgenden Beispiel wird die benutzerdefinierte Assertion in der WSDL-Datei gezeigt.  
+  
+ [!code-xml[CustomPolicySample#16](~/samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/tempuri.org.wsdl#16)]    
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

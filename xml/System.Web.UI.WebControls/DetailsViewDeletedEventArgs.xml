@@ -1,0 +1,263 @@
+<Type Name="DetailsViewDeletedEventArgs" FullName="System.Web.UI.WebControls.DetailsViewDeletedEventArgs">
+  <TypeSignature Language="C#" Value="public class DetailsViewDeletedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewDeletedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewDeletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.DetailsView.ItemDeleted" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.ItemDeleted> Ereignis aus, wenn eine Schaltfläche "löschen" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Löschen") innerhalb des Steuerelements geklickt wird, aber nachdem die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement löscht den Datensatz. Dadurch können Sie einen Ereignishandler bereitstellen, der eine benutzerdefinierte Routine ausführt, z. B. Überprüfen der Ergebnisse einer Delete-Vorgang aus, wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs> Objekt an den Ereignishandler, wodurch Sie zum Bestimmen der Anzahl der betroffenen Datensätze und alle Ausnahmen, die möglicherweise aufgetreten sind, übergeben wird. Die Anzahl der Datensätze, die durch den Löschvorgang betroffen ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.AffectedRows%2A> Eigenschaft. Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Exception%2A> Eigenschaft, um zu bestimmen, ob Ausnahmen aufgetreten sind. Sie können auch angeben, ob die Ausnahme im Ereignis Handler behandelt, indem wurde die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft. Wenn Sie die Name-Wert-Paare der Schlüsselfelder und nichtschlüsselfelder des gelöschten Datensatzes zugreifen möchten, verwenden Sie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Values%2A> Eigenschaften bzw..  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs> -Objekt übergeben, um den Ereignishandler für das <xref:System.Web.UI.WebControls.DetailsView.ItemDeleted> Ereignis, um zu bestimmen, ob eine Ausnahme während eines Delete-Vorgangs aufgetreten sind.  
+  
+ [!code-aspx-csharp[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/CS/detailsviewdeletedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/VB/detailsviewdeletedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewDeletedEventArgs (int affectedRows, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 affectedRows, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.#ctor(System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="affectedRows">Die Anzahl der Zeilen, die durch den Löschvorgang betroffen.</param>
+        <param name="e">Eine <see cref="T:System.Exception" /> , die die Ausnahme ausgelöst, wenn der Löschvorgang ausgeführt wurde darstellt. Wenn keine Ausnahme ausgelöst wird, verwenden Sie <see langword="null" /> für diesen Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DetailsViewDeletedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.AffectedRows%2A>|Der Wert des `affectedRows`-Parameters.|  
+|<xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Exception%2A>|Die <xref:System.Exception?displayProperty=nameWithType> enthalten sind, der `e` Parameter.|  
+|<xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.ExceptionHandled%2A>|Initialisiert auf `false`.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen, die durch den Löschvorgang betroffen.</summary>
+        <value>Die Anzahl der Zeilen, die durch den Löschvorgang betroffen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.AffectedRows%2A> -Eigenschaft können Sie bestimmen die Anzahl der Zeilen, die durch den Löschvorgang betroffen. Dieser Wert wird häufig verwendet, um sicherzustellen, dass die richtige Anzahl von Zeilen gelöscht wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.AffectedRows%2A> -Eigenschaft können Sie bestimmen die Anzahl der Datensätze, die von einem Löschvorgang betroffen sind.  
+  
+ [!code-aspx-csharp[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/CS/detailsviewdeletedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/VB/detailsviewdeletedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme (falls vorhanden), die während der Delete-Vorgang ausgelöst wurde.</summary>
+        <value>Eine <see cref="T:System.Exception" /> , die die Ausnahme, die während der Delete-Vorgang ausgelöst wurde darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Exception%2A> Eigenschaft, um die Ausnahme (sofern vorhanden) zu bestimmen, die während der Delete-Vorgang ausgelöst wurde. Wenn keine Ausnahmen ausgelöst wurden, gibt diese Eigenschaft `null`.  
+  
+> [!NOTE]
+>  Wenn eine Ausnahme ausgelöst wurde und Sie zur Behandlung von Ausnahmen im Ereignishandler entscheiden, müssen Sie festlegen der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft, um `true`ist, andernfalls wird die Ausnahme für den Umgang mit der nächsten Methode in der Aufrufliste weitergegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Exception%2A> Eigenschaft, um zu bestimmen, ob eine Ausnahme während eines Delete-Vorgangs aufgetreten sind.  
+  
+ [!code-aspx-csharp[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/CS/detailsviewdeletedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/VB/detailsviewdeletedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Ausnahme, die während der Delete-Vorgang ausgelöst wurde im Ereignishandler behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausnahme im Ereignishandler behandelt wurde; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme während der Delete-Vorgang ausgelöst wird, verwenden Sie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, ob die Ausnahme im Ereignishandler behandelt wurde. Wenn diese Eigenschaft festgelegt wird, um `true`, gilt die Ausnahme behandelt und nicht weiter oben in der Aufrufliste übergeben wird. Wenn diese Eigenschaft, um festgelegt wird `false`, wird die Ausnahme für den Umgang mit der nächsten Methode in der Aufrufliste weitergegeben. Um zu bestimmen, welche Ausnahme ausgelöst wurde, verwenden die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Exception%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, dass die Ausnahme im Ereignishandler behandelt wurde.  
+  
+ [!code-aspx-csharp[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/CS/detailsviewdeletedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeletedEventArgsInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeletedEventArgsInline/VB/detailsviewdeletedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein sortiertes Wörterbuch mit Schlüsselfeld Name/Wert-Paaren mit den Namen und Werte von den Schlüsselfeldern des gelöschten Elemente ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , enthält ein sortiertes Wörterbuch Schlüsselfeld Name/Wert-Paaren verwendet, um das Element zu vergleichen zu löschen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Keys%2A> Eigenschaft, um den Zugriff auf die Werte der Schlüsselfelder für den Datensatz zu löschen. Diese Werte können Sie z. B. eine gelöschte Datensätze protokollieren.  
+  
+> [!NOTE]
+>  Diese Eigenschaft enthält nur die wichtigsten Felder. Verwenden Sie die nichtschlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Values%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Keys%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry> Objekte, die die Schlüsselfeldern des zu löschenden Datensatzes darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Keys%2A> Eigenschaft, um die Werte der Schlüsselfelder für einen gelöschten Datensatz zugreifen.  
+  
+ [!code-aspx-csharp[DetailsViewDeletedEventArgsKeys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeletedEventArgsKeys/CS/detailsviewdeletedeventargskeyscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeletedEventArgsKeys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeletedEventArgsKeys/VB/detailsviewdeletedeventargskeysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch der Schlüsselfelder Name/Wert-Paare für das Element gelöscht.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , enthält ein Wörterbuch der Schlüsselfelder Name/Wert-Paare für das Element gelöscht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Values%2A> Eigenschaft, um Zugriff auf die Werte der Felder nicht-Schlüssel für den Datensatz zu löschen. Diese Werte können Sie z. B. eine gelöschte Datensätze protokollieren.  
+  
+> [!NOTE]
+>  Diese Eigenschaft enthält nicht die Schlüsselfelder für den Datensatz. Verwenden Sie die Schlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Keys%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Values%2A> -Eigenschaft gibt ein <xref:System.Collections.Specialized.IOrderedDictionary> Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry> Objekte, die nicht-Schlüsselfelder des zu löschenden Datensatzes darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.Values%2A> Eigenschaft, um die Werte der Felder nicht-Schlüssel für einen gelöschten Datensatz zugreifen.  
+  
+ [!code-aspx-csharp[DetailsViewDeletedEventArgsKeys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeletedEventArgsKeys/CS/detailsviewdeletedeventargskeyscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeletedEventArgsKeys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeletedEventArgsKeys/VB/detailsviewdeletedeventargskeysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

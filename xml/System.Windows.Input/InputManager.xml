@@ -1,0 +1,550 @@
+<Type Name="InputManager" FullName="System.Windows.Input.InputManager">
+  <TypeSignature Language="C#" Value="public sealed class InputManager : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InputManager extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.InputManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet alle Eingabedaten Systeme in Windows Presentation Foundation (WPF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.InputManager> -Klasse ist verantwortlich für die Koordination von allen Systemen input in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+ Ein Filter ist jeglicher Code, der überwacht <xref:System.Windows.Input.InputManager.PreProcessInput> oder <xref:System.Windows.Input.InputManager.PostProcessInput>.  Filter können die Eingabe im Stagingbereich ändern.  
+  
+ Ein Monitor ist ein Code, der überwacht <xref:System.Windows.Input.InputManager.PreNotifyInput> oder <xref:System.Windows.Input.InputManager.PostNotifyInput>.  Die Eingabe im Stagingbereich können nicht Monitore geändert werden.  
+  
+ Die <xref:System.Windows.Input.InputManager> steuert die Eingabe im Stagingbereich.  Die Eingabe im Stagingbereich verarbeitet Eingaben in [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Ereignisse.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.InputManager Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.InputManager Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Input.InputManager" /> dem aktuellen Thread zugeordnet.</summary>
+        <value>Die Eingabe-Manager.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird in der Internetzone nicht verfügbar.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Abrufen des aktuellen Eingabe-Managers. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterMenuMode">
+      <MemberSignature Language="C#" Value="public event EventHandler EnterMenuMode;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EnterMenuMode" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.EnterMenuMode" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Steuerelement Menümodus durch den Aufruf wechselt die <see cref="M:System.Windows.Input.InputManager.PushMenuMode(System.Windows.PresentationSource)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Komponenten registrieren Delegaten mit diesem Ereignis Reaktion auf ein Steuerelement in der Eingabe-Manager im Menü gewechselt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestInvalidatedAsync">
+      <MemberSignature Language="C#" Value="public event EventHandler HitTestInvalidatedAsync;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HitTestInvalidatedAsync" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.HitTestInvalidatedAsync" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Ergebnis eines Treffertests möglicherweise geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputProviders">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection InputProviders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection InputProviders" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.InputProviders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="P:System.Windows.Input.InputManager.InputProviders" /> registriert die <see cref="T:System.Windows.Input.InputManager" />.</summary>
+        <value>Die Eingabe enthält.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Abrufen der Auflistung der Eingabe-Anbieter. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInMenuMode">
+      <MemberSignature Language="C#" Value="public bool IsInMenuMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInMenuMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.IsInMenuMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Interop.ComponentDispatcher" /> befindet sich im Menümodus.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Interop.ComponentDispatcher" /> befindet sich im Menümodus; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.InputManager.IsInMenuMode%2A> -Eigenschaft gibt `true` Wenn alle Menüs geöffnet sind, und es gibt `false` , wenn keine Menüs geöffnet sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaveMenuMode">
+      <MemberSignature Language="C#" Value="public event EventHandler LeaveMenuMode;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LeaveMenuMode" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.LeaveMenuMode" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Steuerelement durch Aufrufen von Menümodus verlässt die <see cref="M:System.Windows.Input.InputManager.PopMenuMode(System.Windows.PresentationSource)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Komponenten registrieren Delegaten mit diesem Ereignis Reaktion auf ein Steuerelement der Eingabe-Manager im Menümodus zu verlassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MostRecentInputDevice">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.InputDevice MostRecentInputDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.InputDevice MostRecentInputDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.MostRecentInputDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der das Eingabegerät zugeordnet ist, mit der neuesten Eingabeereignis darstellt.</summary>
+        <value>Das Eingabegerät.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopMenuMode">
+      <MemberSignature Language="C#" Value="public void PopMenuMode (System.Windows.PresentationSource menuSite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PopMenuMode(class System.Windows.PresentationSource menuSite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputManager.PopMenuMode(System.Windows.PresentationSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="menuSite" Type="System.Windows.PresentationSource" />
+      </Parameters>
+      <Docs>
+        <param name="menuSite">Klicken Sie im Menü zu lassen.</param>
+        <summary>Wird aufgerufen, von Komponenten, um Menümodus zu lassen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Komponente ruft diese Methode, um die Eingabe-Manager im Menümodus zu verlassen. Die `menuSite` frei privilegierten Zugriff auf Windows-Meldungen.  
+  
+ Beim Aufrufen dieser Methode bewirkt, dass die internen Anzahl geöffneter Menüs zu verringern und legt die <xref:System.Windows.Input.InputManager.IsInMenuMode%2A> Eigenschaft `false`, ist dies der letzte Menü zu schließen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="menuSite" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PostNotifyInput">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.NotifyInputEventHandler PostNotifyInput;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.NotifyInputEventHandler PostNotifyInput" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PostNotifyInput" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.NotifyInputEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, nachdem die <see cref="E:System.Windows.Input.InputManager.PreNotifyInput" /> Handler die Verarbeitung abgeschlossen ist die Eingabe und die entsprechende [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Ereignisse ausgelöst wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Monitor ist ein Code, der überwacht <xref:System.Windows.Input.InputManager.PreNotifyInput> oder <xref:System.Windows.Input.InputManager.PostNotifyInput>.  Die Eingabe im Stagingbereich können nicht Monitore geändert werden.  
+  
+ Der Handler angefügt <xref:System.Windows.Input.InputManager.PostNotifyInput> werden in umgekehrter Reihenfolge aufgerufen, sodass Handler hinzugefügt, die von den Benutzern im System vor den Handlern aufgerufen werden.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen oder Entfernen eines ereignishandlers.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PostProcessInput">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.ProcessInputEventHandler PostProcessInput;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.ProcessInputEventHandler PostProcessInput" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PostProcessInput" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ProcessInputEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, nachdem die <see cref="E:System.Windows.Input.InputManager.PreNotifyInput" /> Handler die Verarbeitung von Eingaben beendet haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Filter ist jeglicher Code, der überwacht <xref:System.Windows.Input.InputManager.PreProcessInput> oder <xref:System.Windows.Input.InputManager.PostProcessInput>.  Filter können die Eingabe im Stagingbereich ändern.  
+  
+ Der Handler angefügt <xref:System.Windows.Input.InputManager.PostProcessInput> werden in umgekehrter Reihenfolge aufgerufen, sodass Handler hinzugefügt, die von den Benutzern im System vor den Handlern aufgerufen werden.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen oder Entfernen eines ereignishandlers. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PreNotifyInput">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.NotifyInputEventHandler PreNotifyInput;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.NotifyInputEventHandler PreNotifyInput" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PreNotifyInput" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.NotifyInputEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="E:System.Windows.Input.InputManager.PreProcessInput" /> Handler die Verarbeitung abgeschlossen ist die Eingabe, wenn die Eingabe nicht abgebrochen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Monitor ist ein Code, der überwacht <xref:System.Windows.Input.InputManager.PreNotifyInput> oder <xref:System.Windows.Input.InputManager.PostNotifyInput>.  Die Eingabe im Stagingbereich können nicht Monitore geändert werden.  
+  
+ Der Handler angefügt <xref:System.Windows.Input.InputManager.PreNotifyInput> werden in umgekehrter Reihenfolge aufgerufen, sodass Handler hinzugefügt, die von den Benutzern im System vor den Handlern aufgerufen werden.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen oder Entfernen eines ereignishandlers. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PreProcessInput">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.PreProcessInputEventHandler PreProcessInput;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.PreProcessInputEventHandler PreProcessInput" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PreProcessInput" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.PreProcessInputEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Input.InputManager" /> beim Verarbeiten der Eingabe Elements beginnt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Filter ist jeglicher Code, der überwacht <xref:System.Windows.Input.InputManager.PreProcessInput> oder <xref:System.Windows.Input.InputManager.PostProcessInput>.  Filter können die Eingabe im Stagingbereich ändern.  
+  
+ Der Handler angefügt <xref:System.Windows.Input.InputManager.PreProcessInput> werden in umgekehrter Reihenfolge aufgerufen, sodass Handler hinzugefügt, die von den Benutzern im System vor den Handlern aufgerufen werden.  
+  
+ Aufrufen von <xref:System.Windows.Input.PreProcessInputEventArgs.Cancel%2A> auf die <xref:System.Windows.Input.PreProcessInputEventArgs> übergeben, um die <xref:System.Windows.Input.PreProcessInputEventHandler> bricht die Verarbeitung der Eingabe.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen oder Entfernen eines ereignishandlers. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryKeyboardDevice">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.KeyboardDevice PrimaryKeyboardDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.KeyboardDevice PrimaryKeyboardDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.PrimaryKeyboardDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyboardDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das primäre Tastaturgerät ab.</summary>
+        <value>Das Tastaturgerät.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryMouseDevice">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseDevice PrimaryMouseDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.MouseDevice PrimaryMouseDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.PrimaryMouseDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das primäre Mausgerät ab.</summary>
+        <value>Das Mausgerät.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessInput">
+      <MemberSignature Language="C#" Value="public bool ProcessInput (System.Windows.Input.InputEventArgs input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ProcessInput(class System.Windows.Input.InputEventArgs input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputManager.ProcessInput(System.Windows.Input.InputEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Windows.Input.InputEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die Eingabe verarbeitet.</param>
+        <summary>Die angegebene Eingabe verarbeitet synchron.</summary>
+        <returns>
+          <see langword="true" />Wenn alle Eingabeereignisse verarbeitet wurden. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Filter ist jeglicher Code, der überwacht <xref:System.Windows.Input.InputManager.PreProcessInput> oder <xref:System.Windows.Input.InputManager.PostProcessInput>.  Filter können die Eingabe im Stagingbereich ändern.  
+  
+ Ein Monitor ist ein Code, der überwacht <xref:System.Windows.Input.InputManager.PreNotifyInput> oder <xref:System.Windows.Input.InputManager.PostNotifyInput>.  Die Eingabe im Stagingbereich können nicht Monitore geändert werden.  
+  
+ Die angegebene Eingabe verarbeitet alle Filter und Monitore, und schließlich an das entsprechende Element als ein Eingabeereignis weitergeleitet wird.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für die Verarbeitung der angegebenen Eingabe. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PushMenuMode">
+      <MemberSignature Language="C#" Value="public void PushMenuMode (System.Windows.PresentationSource menuSite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushMenuMode(class System.Windows.PresentationSource menuSite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputManager.PushMenuMode(System.Windows.PresentationSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="menuSite" Type="System.Windows.PresentationSource" />
+      </Parameters>
+      <Docs>
+        <param name="menuSite">Das Menü "eingeben.</param>
+        <summary>Wird von Komponenten Menümodus aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Komponente ruft diese Methode, um die Eingabe-Manager im Menümodus geben an. Die `menuSite` ruft privilegierten Zugriff auf Windows-Meldungen ab. Beim Aufrufen dieser Methode bewirkt, dass die internen Anzahl geöffneter Menüs inkrementiert und legt die <xref:System.Windows.Input.InputManager.IsInMenuMode%2A> Eigenschaft, um `true`, ist dies das erste Menü zu öffnen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="menuSite" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

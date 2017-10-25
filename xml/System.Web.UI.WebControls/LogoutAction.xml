@@ -1,0 +1,81 @@
+<Type Name="LogoutAction" FullName="System.Web.UI.WebControls.LogoutAction">
+  <TypeSignature Language="C#" Value="public enum LogoutAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogoutAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LogoutAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die Seite, der der Benutzer weitergeleitet wird, wenn er oder sie die Website abmeldet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LogoutAction> Enumerationsmember anzugeben, welche Aktion beim Anmelden des Benutzers aus der Website mithilfe der <xref:System.Web.UI.WebControls.LoginStatus> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Festlegen der <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A?displayProperty=nameWithType> Eigenschaft mithilfe der <xref:System.Web.UI.WebControls.LogoutAction> Enumeration.  
+  
+ [!code-aspx-csharp[LoginStatusLogoutAction#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusLogoutAction/CS/loginstatuslogoutactioncs.aspx#1)]
+ [!code-aspx-vb[LoginStatusLogoutAction#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusLogoutAction/VB/loginstatuslogoutactionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Redirect">
+      <MemberSignature Language="C#" Value="Redirect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LogoutAction Redirect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LogoutAction.Redirect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LogoutAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leitet den Benutzer zu einer angegebenen URL.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToLoginPage">
+      <MemberSignature Language="C#" Value="RedirectToLoginPage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LogoutAction RedirectToLoginPage = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LogoutAction.RedirectToLoginPage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LogoutAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leitet den Benutzer zur Anmeldeseite in der Website-Konfigurationsdateien ("Machine.config" und "Web.config") definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="Refresh" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LogoutAction Refresh = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LogoutAction.Refresh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LogoutAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lädt die aktuelle Seite mit der Benutzer angemeldet ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

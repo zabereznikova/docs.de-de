@@ -1,0 +1,361 @@
+<Type Name="VariantType" FullName="Microsoft.VisualBasic.VariantType">
+  <TypeSignature Language="C#" Value="public enum VariantType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VariantType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.VariantType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ des variant-Objekts zurückgegeben wird, indem Sie die <see langword="VarType" /> Funktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen der `VarType` -Funktion können Sie Enumerationsmember im Code anstelle der eigentlichen Werte.  
+  
+ Die `VariantType` -Enumeration definiert den Konstanten, um die Identifizierung möglicher `Variant` Typen. Die folgende Tabelle enthält die `VariantType` Enumerationsmember.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Array">
+      <MemberSignature Language="C#" Value="Array" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Array = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Array" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Array. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbArray" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Boolean">
+      <MemberSignature Language="C#" Value="Boolean" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Boolean = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Boolean" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Boolean" />. (<see langword="True" /> oder <see langword="False" />.) Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbBoolean" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Byte">
+      <MemberSignature Language="C#" Value="Byte" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Byte = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Byte" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Byte" />. (0 bis 255). Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbByte" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Char">
+      <MemberSignature Language="C#" Value="Char" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Char = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Char" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Char" />. (0 bis 65535). Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbChar" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Currency">
+      <MemberSignature Language="C#" Value="Currency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Currency = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Currency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Währung. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbCurrency" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DataObject">
+      <MemberSignature Language="C#" Value="DataObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType DataObject = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.DataObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>DataObject.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Date = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Date" />. (0: 00:00 am 1. Januar 0001 bis 11:59:59 am 31. Dezember 9999.) Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbDate" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Decimal">
+      <MemberSignature Language="C#" Value="Decimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Decimal = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Decimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Decimal" />. (0 bis +/-Wert 79,228,162,514,264,337,593,543,950,335 ohne Dezimaltrennzeichen; 0 bis +/-7,9228162514264337593543950335 mit 28 Stellen rechts vom Dezimaltrennzeichen; wenigsten ungleich 0 (null) ist +/-0,0000000000000000000000000001.) Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbDecimal" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Double">
+      <MemberSignature Language="C#" Value="Double" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Double = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Double" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Double" />. (- 1, 79769313486231e + 308 bis - 4.94065645841247E-324 für negative Werte; 4.94065645841247E-324 bis 1.79769313486231E + 308 für positive Werte zulässig sind.) Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbDouble" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="Empty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Empty = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>NULL-Verweis. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbEmpty" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Error = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Exception" />
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Integer">
+      <MemberSignature Language="C#" Value="Integer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Integer = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Integer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Integer" />. (-2.147.483.648 bis 2.147.483.647.) Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbInteger" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Long">
+      <MemberSignature Language="C#" Value="Long" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Long = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Long" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Long" />. (-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807.) Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbLong" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="Null" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Null = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>NULL-Objekt. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbNull" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="Object" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Object = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Object" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jeder Typ kann in einer Variablen vom Typ gespeichert werden <see langword="Object" />. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbObject" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Short">
+      <MemberSignature Language="C#" Value="Short" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Short = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Short" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Short" />. (-32.768 bis 32.767.)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Single = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Single" />. (- 3, 402823e + 38 bis - 1.401298E-45 für negative Werte; 1.401298E-45 bis 3, 402823e + 38 für positive Werte zulässig sind.) Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbSingle" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="String">
+      <MemberSignature Language="C#" Value="String" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType String = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.String" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="String" />. (0 bis ungefähr 2 Milliarden Unicode-Zeichen). Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbString" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDefinedType">
+      <MemberSignature Language="C#" Value="UserDefinedType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType UserDefinedType = int32(36)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.UserDefinedType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzerdefinierter Typ. Jedes Element der Struktur verfügt über einen Bereich, der durch Angabe des Datentyps und unabhängig von der Bereiche von den anderen Elementen bestimmt. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbUserDefinedType" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Variant">
+      <MemberSignature Language="C#" Value="Variant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType Variant = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VariantType.Variant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="Variant" />. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbVariant" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

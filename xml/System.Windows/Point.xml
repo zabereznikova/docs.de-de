@@ -1,0 +1,840 @@
+<Type Name="Point" FullName="System.Windows.Point">
+  <TypeSignature Language="C#" Value="public struct Point : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Point extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Point" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.PointConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Converters.PointValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Repräsentiert ein X-/Y-Koordinatenpaar in einem zweidimensionalen Raum.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In XAML wird als Trennzeichen zwischen den <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A> Werte von einer <xref:System.Windows.Point> kann entweder ein Komma oder ein Leerzeichen sein.  
+  
+ Einige Kulturen möglicherweise das Komma als Dezimaltrennzeichen statt das Punktzeichen verwenden. XAML-Verarbeitung für die invariante Kultur wird standardmäßig auf En-US, in den meisten Implementierungen von XAML-Prozessor und das Intervall Dezimaltrennzeichen erwartet. Vermeiden Sie das Komma als Dezimaltrennzeichen verwenden, wenn Sie angeben einer <xref:System.Windows.Point> in XAML, da, die mit der Zeichenfolge typkonvertierung miteinander in Konflikt geraten wird eine <xref:System.Windows.Point> Attributwert in der <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A> Komponenten.  
+  
+<a name="xamlAttributeUsage_Duration"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="x,y"/>  
+-or-  
+<object property="x y"/>  
+```  
+  
+<a name="xamlValues_MinWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *x*  
+ Die X-Koordinate dieses <xref:System.Windows.Point>.  
+  
+ *y*  
+ Die y-Koordinate dieses <xref:System.Windows.Point>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Point> -Strukturen ungleich sind.  Außerdem wird veranschaulicht, wie-Werte zuweisen, um eine <xref:System.Windows.Point> strukturieren, wenn die Struktur deklariert wird und nachdem die Struktur deklariert wurde.  
+  
+ [!code-csharp[PointExamples_snip#PointInequalityExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#pointinequalityexample)]
+ [!code-vb[PointExamples_snip#PointInequalityExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#pointinequalityexample)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Point (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des neuen <see cref="T:System.Windows.Point" /> Struktur.</param>
+        <param name="y">Die y-Koordinate des neuen <see cref="T:System.Windows.Point" /> Struktur.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Point" /> Struktur, die die angegebenen Koordinaten enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Windows.Point Add (System.Windows.Point point, System.Windows.Vector vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Point Add(valuetype System.Windows.Point point, valuetype System.Windows.Vector vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Add(System.Windows.Point,System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="vector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="point">Die <see cref="T:System.Windows.Point" /> Struktur hinzufügen.</param>
+        <param name="vector">Die <see cref="T:System.Windows.Vector" /> Struktur hinzufügen.</param>
+        <summary>Fügt eine <see cref="T:System.Windows.Vector" /> zu einem <see cref="T:System.Windows.Point" /> und gibt das Ergebnis als eine <see cref="T:System.Windows.Point" /> Struktur.</summary>
+        <returns>Gibt die Summe der <paramref name="point" /> und <paramref name="vector" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hinzufügen einer <xref:System.Windows.Point> -Struktur in eine <xref:System.Windows.Point> Struktur ist nicht zulässig.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird eine <xref:System.Windows.Point> zu einem <xref:System.Windows.Vector> und gibt das Ergebnis als eine <xref:System.Windows.Vector> Struktur.  
+  
+ [!code-csharp[PointExamples_snip#AddPointAndVectorExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#addpointandvectorexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Der zu vergleichende <see cref="T:System.Object" />.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> ist ein <see cref="T:System.Windows.Point" /> und ob es sich um dieselben Koordinaten wie dieser enthält <see cref="T:System.Windows.Point" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein <see cref="T:System.Windows.Point" /> und enthält die gleiche <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> wie diese Werte <see cref="T:System.Windows.Point" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Point>Koordinaten werden mithilfe von beschrieben <xref:System.Double> Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn Sie bearbeitet, einen Vergleich zwischen zwei <xref:System.Windows.Point> fehlschlagen, Werte, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Point> Strukturen sind identisch mit der nicht statischen <xref:System.Windows.Point.Equals%2A> Methode.  
+  
+ [!code-csharp[PointExamples_snip#NonStaticEqualsExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#nonstaticequalsexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Point value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Point value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Equals(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Punkt, an diese Instanz verglichen werden soll.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.Point" /> -Strukturen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn beide <see cref="T:System.Windows.Point" /> Strukturen enthalten die gleichen <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> Werte; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Point>die Koordinaten werden angegeben, mit <xref:System.Double> Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn auf einen Vergleich zwischen zwei betrieben <xref:System.Windows.Point> fehlschlagen, Werte, die logisch gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Point point1, System.Windows.Point point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Equals(System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der erste Punkt, verglichen werden soll.</param>
+        <param name="point2">Der zweite Punkt, verglichen werden soll.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.Point" /> -Strukturen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="point1" /> und <paramref name="point2" /> enthält denselben <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> Werte; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Punktkoordinaten werden mithilfe von beschrieben <xref:System.Double> Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn Sie bearbeitet, einen Vergleich zwischen zwei <xref:System.Windows.Point> fehlschlagen, Werte, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Point> Strukturen sind identisch mit der statischen <xref:System.Windows.Point.Equals%2A> Methode.  
+  
+ [!code-csharp[PointExamples_snip#StaticEqualsExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#staticequalsexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diesen <see cref="T:System.Windows.Point" /> zurück.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.Windows.Point" /> Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie den Hashcode des abzurufenden eine <xref:System.Windows.Point> Struktur.  
+  
+ [!code-csharp[PointExamples_snip#GetHashCodeExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#gethashcodeexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Windows.Point Multiply (System.Windows.Point point, System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Point Multiply(valuetype System.Windows.Point point, valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Multiply(System.Windows.Point,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der zu transformierende Punkt.</param>
+        <param name="matrix">Die Transformationsmatrix.</param>
+        <summary>Transformiert den angegebenen <see cref="T:System.Windows.Point" /> Struktur durch den angegebenen <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <returns>Der transformierte Punkt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zu multiplizierende eine <xref:System.Windows.Point> Struktur durch eine <xref:System.Windows.Media.Matrix> -Struktur unter Verwendung der <xref:System.Windows.Point.Multiply%2A> Methode.  
+  
+ [!code-csharp[PointExamples_snip#MultiplyPointByMatrixExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#multiplypointbymatrixexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Offset(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">Der Betrag für den offset des Punkts  
+  
+ <see cref="P:System.Windows.Point.X" />koordiniert werden.</param>
+        <param name="offsetY">Der Betrag für den offset der  
+  
+ der Punkt <see cref="P:System.Windows.Point.Y" /> koordinieren.</param>
+        <summary>Versetzt eines Punkts <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> Koordinaten, die die angegebenen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang ist gleichbedeutend mit dem Hinzufügen einer <xref:System.Windows.Point> zu einem <xref:System.Windows.Vector>.  
+  
+ Beachten Sie, dass der Aufruf der <xref:System.Windows.Point.Offset%2A> Methode haben nur Auswirkungen, wenn Sie ändern können, die <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A> direkt auf Eigenschaften. Da <xref:System.Windows.Point> ist ein Werttyp ist, wenn Sie verweisen auf eine <xref:System.Windows.Point> Objekt mithilfe einer Eigenschaft oder der Indexer zu verwenden, erhalten Sie eine Kopie des Objekts, keinen Verweis auf das Objekt. Wenn Sie versuchen, ändern Sie <xref:System.Windows.Point.X%2A> oder <xref:System.Windows.Point.Y%2A> auf eine Eigenschaft oder einen Indexer ein Compilerfehler auftritt. Auf ähnliche Weise aufrufen <xref:System.Windows.Point.Offset%2A> auf die Eigenschaft oder der Indexer ändert sich nicht das zugrunde liegende Objekt.  Wenn Sie den Wert ändern möchten eine <xref:System.Windows.Point> , auf den als eine Eigenschaft oder einen Indexer verwiesen wird, erstellen Sie ein neues <xref:System.Windows.Point>, ändern Sie die Felder, und weisen Sie ihm anschließend die <xref:System.Windows.Point> zurück an die Eigenschaft oder der Indexer.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie für den offset der <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A> Werte von einem <xref:System.Windows.Point> Struktur.  
+  
+ [!code-csharp[PointExamples_snip#OffsetExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#offsetexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Windows.Point operator + (System.Windows.Point point, System.Windows.Vector vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Point op_Addition(valuetype System.Windows.Point point, valuetype System.Windows.Vector vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Addition(System.Windows.Point,System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="vector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt übersetzt.</param>
+        <param name="vector">Der Betrag der Verschiebung <c>zeigen</c>.</param>
+        <summary>Übersetzt die angegebene <see cref="T:System.Windows.Point" /> durch das angegebene <see cref="T:System.Windows.Vector" /> und gibt das Ergebnis zurück.</summary>
+        <returns>Das Ergebnis der Übersetzung der angegebenen Position mit dem angegebenen Vektor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen einer <xref:System.Windows.Point> auf eine <xref:System.Windows.Vector> mit dem überladenen (+) Operator.  
+  
+ [!code-csharp[PointExamples_snip#OverloadedAdditionOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#overloadedadditionoperatorexample)]
+ [!code-vb[PointExamples_snip#OverloadedAdditionOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#overloadedadditionoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Point point1, System.Windows.Point point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Equality(System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Die erste zu vergleichende <see cref="T:System.Windows.Point" />-Struktur.</param>
+        <param name="point2">Die zweite zu vergleichende <see cref="T:System.Windows.Point" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.Point" /> -Strukturen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn beide die <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> Koordinaten der <paramref name="point1" /> und <paramref name="point2" /> gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Koordinaten eines Punkts werden mithilfe von beschrieben <xref:System.Double> Werte. Da der Wert der <xref:System.Double> abnehmen kann, wenn arithmetische Operationen, darauf, eines Vergleichs zwischen zwei ausgeführt werden <xref:System.Windows.Point> fehlschlagen, Werte, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Point> -Strukturen mit dem überladenen (==)-Operator gleich sind.  
+  
+ [!code-csharp[PointExamples_snip#OverloadedEqualityOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#overloadedequalityoperatorexample)]
+ [!code-vb[PointExamples_snip#OverloadedEqualityOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#overloadedequalityoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Windows.Size (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Size op_Explicit(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Explicit(System.Windows.Point)~System.Windows.Size" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Windows.Vector (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Vector op_Explicit(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Explicit(System.Windows.Point)~System.Windows.Vector" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Point point1, System.Windows.Point point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Inequality(System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der erste Punkt, verglichen werden soll.</param>
+        <param name="point2">Der zweite Punkt, verglichen werden soll.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.Point" /> Strukturen auf Ungleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="point1" /> und <paramref name="point2" /> weisen unterschiedliche <see cref="P:System.Windows.Point.X" /> oder <see cref="P:System.Windows.Point.Y" /> Koordinaten; <see langword="false" /> Wenn <paramref name="point1" /> und <paramref name="point2" /> verfügen über denselben <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> Koordinaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eines Punkts <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A> Koordinaten werden mithilfe von beschrieben <xref:System.Double> Werte. Da <xref:System.Double> Werte abnehmen können, wenn auf einen Vergleich zwischen zwei betrieben <xref:System.Windows.Point> fehlschlagen, Werte, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie überprüfen, ob zwei <xref:System.Windows.Point> Strukturen ungleich sind, mit dem überladenen (! =)-Operator.  
+  
+ [!code-csharp[PointExamples_snip#OverloadedInequalityOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#overloadedinequalityoperatorexample)]
+ [!code-vb[PointExamples_snip#OverloadedInequalityOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#overloadedinequalityoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Windows.Point operator * (System.Windows.Point point, System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Point op_Multiply(valuetype System.Windows.Point point, valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Multiply(System.Windows.Point,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der zu transformierende Punkt.</param>
+        <param name="matrix">Die Transformationsmatrix.</param>
+        <summary>Transformiert den angegebenen <see cref="T:System.Windows.Point" /> durch das angegebene <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <returns>Das Ergebnis der angegebenen Position, die mit der angegebenen Matrix transformiert werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zu multiplizierende eine <xref:System.Windows.Point> durch eine <xref:System.Windows.Media.Matrix> mithilfe des Operators überladenen (*).  
+  
+ [!code-csharp[PointExamples_snip#OverloadedMultiplyPointByMatrixOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#overloadedmultiplypointbymatrixoperatorexample)]
+ [!code-vb[PointExamples_snip#OverloadedMultiplyPointByMatrixOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#overloadedmultiplypointbymatrixoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Windows.Vector operator - (System.Windows.Point point1, System.Windows.Point point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Vector op_Subtraction(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Subtraction(System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der Punkt, von dem <c>punkt2</c> subtrahiert wird.</param>
+        <param name="point2">Der Punkt zu subtrahierende <c>punkt1</c>.</param>
+        <summary>Subtrahiert die angegebene <see cref="T:System.Windows.Point" /> von einer anderen angegebenen <see cref="T:System.Windows.Point" /> und gibt die Differenz als eine <see cref="T:System.Windows.Vector" />.</summary>
+        <returns>Der Unterschied zwischen <paramref name="point1" /> und <paramref name="point2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie zu subtrahierende eine <xref:System.Windows.Point> von einem anderen <xref:System.Windows.Point> und Zurückgeben einer <xref:System.Windows.Vector> mit den überladenen Operator (-).  
+  
+ [!code-csharp[PointExamples_snip#OverloadedSubtractionOperatorExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#overloadedsubtractionoperatorexample2)]
+ [!code-vb[PointExamples_snip#OverloadedSubtractionOperatorExample2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#overloadedsubtractionoperatorexample2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Windows.Point operator - (System.Windows.Point point, System.Windows.Vector vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Point op_Subtraction(valuetype System.Windows.Point point, valuetype System.Windows.Vector vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.op_Subtraction(System.Windows.Point,System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="vector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt, von dem <c>Vektor</c> subtrahiert wird.</param>
+        <param name="vector">Der Vektor zu subtrahierende <c>punkt1</c></param>
+        <summary>Subtrahiert die angegebene <see cref="T:System.Windows.Vector" /> aus dem angegebenen <see cref="T:System.Windows.Point" /> und gibt das resultierende <see cref="T:System.Windows.Point" />.</summary>
+        <returns>Der Unterschied zwischen <paramref name="point" /> und <paramref name="vector" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie zu subtrahierende eine <xref:System.Windows.Vector> aus einem <xref:System.Windows.Point> mit den überladenen Operator (-).  
+  
+ [!code-csharp[PointExamples_snip#OverloadedSubtractionOperatorExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#overloadedsubtractionoperatorexample1)]
+ [!code-vb[PointExamples_snip#OverloadedSubtractionOperatorExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#overloadedsubtractionoperatorexample1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Point Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Point Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Eine Zeichenfolgendarstellung eines Punkts.</param>
+        <summary>Erstellt eine <see cref="T:System.Windows.Point" /> aus dem angegebenen <see cref="T:System.String" />.</summary>
+        <returns>Die Entsprechung <see cref="T:System.Windows.Point" /> Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Point.Parse%2A> -Methode zum Konvertieren einer <xref:System.String> Darstellung eines Punkts in einer <xref:System.Windows.Point> Struktur.  
+  
+ [!code-csharp[PointExamples_snip#ParseExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#parseexample)]
+ [!code-vb[PointExamples_snip#ParseExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#parseexample)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">
+          <paramref name="source" />besteht nicht aus zwei durch Komma oder Leerzeichen getrennten double-Werte.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="source" />enthält keine zwei Zahlen.  
+  
+ - oder -   
+  
+ <paramref name="source" />enthält zu viele Trennzeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Windows.Vector Subtract (System.Windows.Point point1, System.Windows.Point point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Vector Subtract(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Subtract(System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der Punkt, von dem <c>punkt2</c> subtrahiert wird.</param>
+        <param name="point2">Der Punkt zu subtrahierende <c>punkt1</c>.</param>
+        <summary>Subtrahiert die angegebene <see cref="T:System.Windows.Point" /> von einer anderen angegebenen <see cref="T:System.Windows.Point" /> und gibt die Differenz als eine <see cref="T:System.Windows.Vector" />.</summary>
+        <returns>Der Unterschied zwischen <paramref name="point1" /> und <paramref name="point2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie zu subtrahierende eine <xref:System.Windows.Point> von einem anderen <xref:System.Windows.Point> mithilfe der statischen <xref:System.Windows.Point.Subtract%2A> Methode.  
+  
+ [!code-csharp[PointExamples_snip#SubtractExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#subtractexample2)]
+ [!code-vb[PointExamples_snip#SubtractExample2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#subtractexample2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Windows.Point Subtract (System.Windows.Point point, System.Windows.Vector vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Point Subtract(valuetype System.Windows.Point point, valuetype System.Windows.Vector vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.Subtract(System.Windows.Point,System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="vector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt, von dem <c>Vektor</c> subtrahiert wird.</param>
+        <param name="vector">Die <c>Vektor</c> zu subtrahierende <c>zeigen</c>.</param>
+        <summary>Subtrahiert die angegebene <see cref="T:System.Windows.Vector" /> aus dem angegebenen <see cref="T:System.Windows.Point" /> und gibt das resultierende <see cref="T:System.Windows.Point" />.</summary>
+        <returns>Der Unterschied zwischen <paramref name="point" /> und <paramref name="vector" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie zu subtrahierende eine <xref:System.Windows.Vector> aus einem <xref:System.Windows.Point> mithilfe der statischen <xref:System.Windows.Point.Subtract%2A> Methode.  
+  
+ [!code-csharp[PointExamples_snip#SubtractExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#subtractexample1)]
+ [!code-vb[PointExamples_snip#SubtractExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#subtractexample1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Die Zeichenfolge, die das zu verwendende Format angeben.  
+  
+ - oder -   
+  
+ <see langword="null" />Verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Die <see langword="IFormatProvider" /> zum Formatieren des Werts verwenden.  
+  
+ - oder -   
+  
+ <see langword="null" />um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen. Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+        <returns>Eine Zeichenfolge, die den Wert der aktuellen Instanz im angegebenen Format enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.String" /> Darstellung dieses <see cref="T:System.Windows.Point" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> , enthält die <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> Werte dieses <see cref="T:System.Windows.Point" /> Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Point.ToString%2A> Methode zum Abrufen einer <xref:System.String> Darstellung eine <xref:System.Windows.Point> Struktur.  
+  
+ [!code-csharp[PointExamples_snip#ToStringExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#tostringexample)]
+ [!code-vb[PointExamples_snip#ToStringExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#tostringexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Point.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Kulturspezifische Formatierungsinformationen.</param>
+        <summary>Erstellt eine <see cref="T:System.String" /> Darstellung dieses <see cref="T:System.Windows.Point" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> , enthält die <see cref="P:System.Windows.Point.X" /> und <see cref="P:System.Windows.Point.Y" /> Werte dieses <see cref="T:System.Windows.Point" /> Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public double X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Point.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="P:System.Windows.Point.X" />-Koordinatenwert ab dieser <see cref="T:System.Windows.Point" /> Struktur.</summary>
+        <value>Die <see cref="P:System.Windows.Point.X" />-Koordinatenwert ab dieser <see cref="T:System.Windows.Point" /> Struktur.  Der Standardwert ist <c>0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Point> -Strukturen ungleich sind.  Außerdem wird veranschaulicht, wie-Werte zuweisen, um eine <xref:System.Windows.Point> strukturieren, wenn die Struktur deklariert wird und nachdem die Struktur deklariert wurde.  
+  
+ [!code-csharp[PointExamples_snip#PointInequalityExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#pointinequalityexample)]
+ [!code-vb[PointExamples_snip#PointInequalityExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#pointinequalityexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public double Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Point.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="P:System.Windows.Point.Y" />-Koordinatenwert ab dieser <see cref="T:System.Windows.Point" />.</summary>
+        <value>Die <see cref="P:System.Windows.Point.Y" />-Koordinatenwert ab dieser <see cref="T:System.Windows.Point" /> Struktur.  Der Standardwert ist <c>0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Point> -Strukturen ungleich sind.  Außerdem wird veranschaulicht, wie-Werte zuweisen, um eine <xref:System.Windows.Point> strukturieren, wenn die Struktur deklariert wird und nachdem die Struktur deklariert wurde.  
+  
+ [!code-csharp[PointExamples_snip#PointInequalityExample](~/samples/snippets/csharp/VS_Snippets_Wpf/PointExamples_snip/CSharp/PointExample.cs#pointinequalityexample)]
+ [!code-vb[PointExamples_snip#PointInequalityExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PointExamples_snip/visualbasic/pointexample.vb#pointinequalityexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

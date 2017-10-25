@@ -1,0 +1,226 @@
+<Type Name="IRemoteArgumentDictionaryContract" FullName="System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteArgumentDictionaryContract : System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteArgumentDictionaryContract implements class System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract, class System.AddIn.Contract.Collections.IRemoteArgumentEnumerableContract, class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.AddIn.Contract.RemoteArgument" /> Objekte, die als gespeichert sind Schlüssel-Wert-Paaren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element in einer <xref:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract> ist ein Schlüssel/Wert-Paar, die in gespeichert ist ein <xref:System.AddIn.Contract.Collections.RemoteArgumentDictionaryEntry> Objekt. Jedes Schlüssel/Wert-Paar muss einen eindeutigen Schlüssel aufweisen.  
+  
+ Die <xref:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract> Schnittstelle ermöglicht, die Schlüssel und Werte aufgelistet werden sollen, aber es keine bestimmte Sortierreihenfolge nicht impliziert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.AddIn.Contract.RemoteArgument key, System.AddIn.Contract.RemoteArgument value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(valuetype System.AddIn.Contract.RemoteArgument key, valuetype System.AddIn.Contract.RemoteArgument value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.Add(System.AddIn.Contract.RemoteArgument,System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.AddIn.Contract.RemoteArgument" />
+        <Parameter Name="value" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das <see cref="T:System.AddIn.Contract.RemoteArgument" />, das als Schlüssel für das hinzuzufügende Element verwendet werden soll.</param>
+        <param name="value">Das <see cref="T:System.AddIn.Contract.RemoteArgument" />, das als Wert für das hinzuzufügende Element verwendet werden soll.</param>
+        <summary>Fügt ein Element mit einem angegebenen Schlüssel und Wert, der die <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">In <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> ist bereits ein Element mit demselben Schlüssel enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (System.AddIn.Contract.RemoteArgument key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(valuetype System.AddIn.Contract.RemoteArgument key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.ContainsKey(System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der im <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> zu suchende Schlüssel.</param>
+        <summary>Gibt an, ob die <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> ein Element mit dem angegebenen Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> ein Element mit dem angegebenen Schlüssel enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumeratorContract">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Collections.IRemoteArgumentDictionaryEnumeratorContract GetEnumeratorContract ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Collections.IRemoteArgumentDictionaryEnumeratorContract GetEnumeratorContract() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.GetEnumeratorContract" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Collections.IRemoteArgumentDictionaryEnumeratorContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryEnumeratorContract" /> , die verwendet werden kann, um das Durchlaufen der Elemente in der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" />.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryEnumeratorContract" /> , die verwendet werden kann, um das Durchlaufen der Elemente in der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument GetItem (System.AddIn.Contract.RemoteArgument key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.RemoteArgument GetItem(valuetype System.AddIn.Contract.RemoteArgument key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.GetItem(System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zurückzugebenden Werts.</param>
+        <summary>Gibt den Wert des Elements mit dem angegebenen Schlüssel zurück.</summary>
+        <returns>Das <see cref="T:System.AddIn.Contract.RemoteArgument" /> mit dem angegebenen Schlüssel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeys">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract GetKeys ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract GetKeys() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.GetKeys" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract" /> , enthält die Schlüssel, der die <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract" /> , enthält die Schlüssel, der die <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract GetValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract GetValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.GetValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract" /> , enthält die Werte der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract" /> , enthält die Werte der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.AddIn.Contract.RemoteArgument key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(valuetype System.AddIn.Contract.RemoteArgument key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.Remove(System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element mit dem angegebenen Schlüssel aus dem <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" />.</summary>
+        <returns>
+          <see langword="true" />, wenn das Element gefunden und entfernt wurde, andernfalls <see langword="false" />. Diese Methode gibt auch dann <see langword="false" /> zurück, wenn <paramref name="key" /> nicht im ursprünglichen <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract" /> gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="public void SetItem (System.AddIn.Contract.RemoteArgument key, System.AddIn.Contract.RemoteArgument value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetItem(valuetype System.AddIn.Contract.RemoteArgument key, valuetype System.AddIn.Contract.RemoteArgument value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentDictionaryContract.SetItem(System.AddIn.Contract.RemoteArgument,System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.AddIn.Contract.RemoteArgument" />
+        <Parameter Name="value" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel, der den zu ersetzenden Wert.</param>
+        <param name="value">Der neue Wert des angegebenen Elements.</param>
+        <summary>Ersetzt den Wert eines Elements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

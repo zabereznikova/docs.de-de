@@ -1,0 +1,144 @@
+<Type Name="TabItemAutomationPeer" FullName="System.Windows.Automation.Peers.TabItemAutomationPeer">
+  <TypeSignature Language="C#" Value="public class TabItemAutomationPeer : System.Windows.Automation.Peers.SelectorItemAutomationPeer, System.Windows.Automation.Provider.ISelectionItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TabItemAutomationPeer extends System.Windows.Automation.Peers.SelectorItemAutomationPeer implements class System.Windows.Automation.Provider.ISelectionItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.SelectorItemAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.ISelectionItemProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.Controls.TabItem" /> Typen für die UI-Automatisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabItemAutomationPeer (object owner, System.Windows.Automation.Peers.TabControlAutomationPeer tabControlAutomationPeer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object owner, class System.Windows.Automation.Peers.TabControlAutomationPeer tabControlAutomationPeer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.TabItemAutomationPeer.#ctor(System.Object,System.Windows.Automation.Peers.TabControlAutomationPeer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Object" />
+        <Parameter Name="tabControlAutomationPeer" Type="System.Windows.Automation.Peers.TabControlAutomationPeer" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Controls.TabItem" />, der diesem <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" /> zugeordnet ist.</param>
+        <param name="tabControlAutomationPeer">Die <see cref="T:System.Windows.Automation.Peers.TabControlAutomationPeer" /> , der das übergeordnete Element dieses <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.TabItemAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Steuerelementtyp für die <see cref="T:System.Windows.Controls.TabItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />. Wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" /> aufgerufen.</summary>
+        <returns>Der <see cref="F:System.Windows.Automation.Peers.AutomationControlType.TabItem" />-Enumerationswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.List`1&lt;class System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.TabItemAutomationPeer.GetChildrenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Auflistung der untergeordneten Elemente des der <see cref="T:System.Windows.Controls.TabItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />. Wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" /> aufgerufen.</summary>
+        <returns>Die Auflistung von untergeordneten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.TabItemAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen des der <see cref="T:System.Windows.Controls.TabItem" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />. Wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>Eine Zeichenfolge, die "TabItem" enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.TabItemAutomationPeer.GetNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Textbezeichnung des <see cref="T:System.Windows.Controls.TabItem" /> ab, das diesem <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" /> zugeordnet ist. Wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetName" /> aufgerufen.</summary>
+        <returns>Die Zeichenfolge, die die Bezeichnung enthält. Wenn festgelegt, der diese Methode den Wert zurückgibt der <see cref="P:System.Windows.Automation.AutomationProperties.Name" /> Eigenschaft; andernfalls gibt diese Methode den Wert des zurück die <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" /> Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Name-Eigenschaft kann als Textzeichenfolge betrachtet werden, die ein Benutzer verwenden würden, Erläutern Sie, welches Steuerelement auf das verwiesen wird. Es ist wichtig, Sie haben eine Textdarstellung für alle Steuerelemente in der [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)] , damit Sie programmgesteuert auf das Steuerelement in lokalisierten Versionen verweisen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection">
+      <MemberSignature Language="C#" Value="void ISelectionItemProvider.RemoveFromSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.TabItemAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#RemoveFromSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

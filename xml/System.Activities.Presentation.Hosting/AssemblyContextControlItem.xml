@@ -1,0 +1,183 @@
+<Type Name="AssemblyContextControlItem" FullName="System.Activities.Presentation.Hosting.AssemblyContextControlItem">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyContextControlItem : System.Activities.Presentation.ContextItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyContextControlItem extends System.Activities.Presentation.ContextItem" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Hosting.AssemblyContextControlItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.ContextItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht ein Element durch den Bearbeitungskontext zum Verwalten der Liste referenzierter und lokaler Assemblys, die im Workflow für Steuerelemente z. B. im Ausdrucks-Editor verwendet werden, um die Liste der Verweise zu bestimmen, verfügbar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyContextControlItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.AssemblyContextControlItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Presentation.Hosting.AssemblyContextControlItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllAssemblyNamesInContext">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; AllAssemblyNamesInContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; AllAssemblyNamesInContext" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Hosting.AssemblyContextControlItem.AllAssemblyNamesInContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Activities.Presentation.Hosting.AssemblyContextControlItem/&lt;get_AllAssemblyNamesInContext&gt;d__11))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Auflistung zurück, die die Anzeigenamen aller Assemblys enthält, die in der Umgebung geladen wurden, zusätzlich zum Anzeigenamen der lokalen Projektassembly.</summary>
+        <value>Eine Auflistung, die die Anzeigenamen aller Assemblys enthält, die in der Umgebung geladen wurden, zusätzlich zum Anzeigenamen der lokalen Projektassembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssembly">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Assembly GetAssembly (System.Reflection.AssemblyName assemblyName, System.Activities.Presentation.Hosting.IMultiTargetingSupportService multiTargetingService);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Assembly GetAssembly(class System.Reflection.AssemblyName assemblyName, class System.Activities.Presentation.Hosting.IMultiTargetingSupportService multiTargetingService) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.AssemblyContextControlItem.GetAssembly(System.Reflection.AssemblyName,System.Activities.Presentation.Hosting.IMultiTargetingSupportService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.Reflection.AssemblyName" />
+        <Parameter Name="multiTargetingService" Type="System.Activities.Presentation.Hosting.IMultiTargetingSupportService" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">Der Name der Assembly.</param>
+        <param name="multiTargetingService">Der Dienst zur Festlegung von Zielversionen, der verwendet wird, um die richtige Version der geladenen Assembly abzurufen, die der Zielversion von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] des aktuellen Projekts entspricht.</param>
+        <summary>Gibt die gerade geladene Assembly mithilfe des Diensts für die Unterstützung der Festlegung von Zielversionen zurück.</summary>
+        <returns>Die Assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `multiTargetingService` ist `null`, diese Methode lädt die Assembly aus dem angegebenen Assemblynamen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt; GetEnvironmentAssemblies (System.Activities.Presentation.Hosting.IMultiTargetingSupportService multiTargetingService);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.Assembly&gt; GetEnvironmentAssemblies(class System.Activities.Presentation.Hosting.IMultiTargetingSupportService multiTargetingService) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.AssemblyContextControlItem.GetEnvironmentAssemblies(System.Activities.Presentation.Hosting.IMultiTargetingSupportService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiTargetingService" Type="System.Activities.Presentation.Hosting.IMultiTargetingSupportService" />
+      </Parameters>
+      <Docs>
+        <param name="multiTargetingService">Der Dienst zur Festlegung von Zielversionen, der verwendet wird, um die richtigen Versionen der geladenen Assemblys abzurufen, die der Zielversion von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] des aktuellen Projekts entsprechen.</param>
+        <summary>Gibt eine Auflistung aller Assemblys zurück, die in der Umgebung geladen wurden.</summary>
+        <returns>Eine Auflistung aller Assemblys, die in der Umgebung geladen wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentAssemblyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Reflection.AssemblyName&gt; GetEnvironmentAssemblyNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.AssemblyName&gt; GetEnvironmentAssemblyNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.AssemblyContextControlItem.GetEnvironmentAssemblyNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.AssemblyName&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung zurück, die die Assemblynamen aller Assemblys enthält, die in der Umgebung geladen wurden.</summary>
+        <returns>Eine Auflistung, die die Assemblynamen aller Assemblys enthält, die in der Umgebung geladen wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public override Type ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Hosting.AssemblyContextControlItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Elementtyp ab.</summary>
+        <value>Gibt einen <see cref="T:System.Type" /> zurück, der den Elementtyp enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalAssemblyName">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName LocalAssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.AssemblyName LocalAssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Hosting.AssemblyContextControlItem.LocalAssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der lokalen Assembly ab oder legt diesen fest.</summary>
+        <value>Gibt einen <see cref="T:System.Reflection.AssemblyName" /> zurück, der den Namen der lokalen Assembly enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedAssemblyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Reflection.AssemblyName&gt; ReferencedAssemblyNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Reflection.AssemblyName&gt; ReferencedAssemblyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Hosting.AssemblyContextControlItem.ReferencedAssemblyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.AssemblyName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die referenzierten Assemblynamen ab oder legt diese fest.</summary>
+        <value>Gibt eine <see cref="T:System.Collections.Generic.IList`1" /> zurück, die die referenzierten Assemblynamen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

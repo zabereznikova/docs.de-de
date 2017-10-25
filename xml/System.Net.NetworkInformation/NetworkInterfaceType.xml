@@ -1,0 +1,765 @@
+<Type Name="NetworkInterfaceType" FullName="System.Net.NetworkInformation.NetworkInterfaceType">
+  <TypeSignature Language="C#" Value="public enum NetworkInterfaceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NetworkInterfaceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.NetworkInterfaceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Typen von Netzwerkschnittstellen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Netzwerkschnittstellen, auch bekannt als Netzwerkadapter, verbinden einen Computer mit einem Netzwerk. Der Schnittstellentyp definiert die Übertragungsmedien, die Netzwerkkonnektivität bereitstellt.  
+  
+ Diese Enumeration definiert die Rückgabewerte der <xref:System.Net.NetworkInformation.NetworkInterface.NetworkInterfaceType%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsymmetricDsl">
+      <MemberSignature Language="C#" Value="AsymmetricDsl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType AsymmetricDsl = int32(94)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.AsymmetricDsl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Asymmetric Digital Subscriber Line (ADSL).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Atm">
+      <MemberSignature Language="C#" Value="Atm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Atm = int32(37)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Atm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet den asynchronen Übertragungsmodus (Asynchronous Transfer Mode, ATM) für die Datenübertragung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BasicIsdn">
+      <MemberSignature Language="C#" Value="BasicIsdn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType BasicIsdn = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.BasicIsdn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Standardschnittstellen-ISDN-Verbindung (Integrated Services Digital Network). ISDN ist ein Satz von Standards für die Datenübertragung über Telefonleitungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ethernet">
+      <MemberSignature Language="C#" Value="Ethernet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Ethernet = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Ethernet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Ethernet-Verbindung. Ethernet ist im IEEE-Standard 802.3 definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ethernet3Megabit">
+      <MemberSignature Language="C#" Value="Ethernet3Megabit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Ethernet3Megabit = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Ethernet3Megabit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Ethernet-Verbindung mit 3 MBit/s. Diese Ethernet-Version ist in IETF RFC 895 definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FastEthernetFx">
+      <MemberSignature Language="C#" Value="FastEthernetFx" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType FastEthernetFx = int32(69)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.FastEthernetFx" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Fast Ethernet-Verbindung über Glasfaser und stellt eine Datenrate von 100 MBit/s bereit. Diese Art von Verbindung ist auch bekannt als 100Base-FX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FastEthernetT">
+      <MemberSignature Language="C#" Value="FastEthernetT" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType FastEthernetT = int32(62)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.FastEthernetT" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Fast Ethernet-Verbindung über Twisted Pair und stellt eine Datenrate von 100 MBit/s bereit. Diese Art von Verbindung wird auch als 100Base-T bezeichnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fddi">
+      <MemberSignature Language="C#" Value="Fddi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Fddi = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Fddi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Fiber Distributed Data Interface-Verbindung (FDDI). FDDI ist ein Satz von Standards für die Datenübertragung über Glasfaserkabel-Leitungen in einem lokalen Netzwerk.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericModem">
+      <MemberSignature Language="C#" Value="GenericModem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType GenericModem = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.GenericModem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet ein Modem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GigabitEthernet">
+      <MemberSignature Language="C#" Value="GigabitEthernet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType GigabitEthernet = int32(117)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.GigabitEthernet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Gigabit-Ethernet-Verbindung und stellt eine Datenrate von 1.000 MBit/s (1 GBit/s) bereit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HighPerformanceSerialBus">
+      <MemberSignature Language="C#" Value="HighPerformanceSerialBus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType HighPerformanceSerialBus = int32(144)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.HighPerformanceSerialBus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet einen High Performance Serial Bus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IPOverAtm">
+      <MemberSignature Language="C#" Value="IPOverAtm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType IPOverAtm = int32(114)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.IPOverAtm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet das Internetprotokoll (IP) in Kombination mit dem asynchronen Übertragungsmodus (ATM) zur Datenübertragung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Isdn">
+      <MemberSignature Language="C#" Value="Isdn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Isdn = int32(63)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Isdn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Verbindung, die für ISDN und das X.25-Protokoll konfiguriert ist. X.25 ermöglicht Computern in öffentlichen Netzwerken die Kommunikation mithilfe eines zwischengeschalteten Computers.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loopback">
+      <MemberSignature Language="C#" Value="Loopback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Loopback = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Loopback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle ist ein Loopbackadapter. Solche Schnittstellen werden häufig zum Testen verwendet. Es wird kein Datenverkehr über das Netzwerk gesendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiRateSymmetricDsl">
+      <MemberSignature Language="C#" Value="MultiRateSymmetricDsl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType MultiRateSymmetricDsl = int32(143)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.MultiRateSymmetricDsl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Multirate Digital Subscriber Line.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ppp">
+      <MemberSignature Language="C#" Value="Ppp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Ppp = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Ppp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Point-To-Point-Protokoll-Verbindung (PPP). PPP ist ein Protokoll für die Datenübertragung mit einem seriellen Gerät.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryIsdn">
+      <MemberSignature Language="C#" Value="PrimaryIsdn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType PrimaryIsdn = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.PrimaryIsdn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Primärmultiplexschnittstellen-ISDN-Verbindung (Integrated Services Digital Network). ISDN ist ein Satz von Standards für die Datenübertragung über Telefonleitungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RateAdaptDsl">
+      <MemberSignature Language="C#" Value="RateAdaptDsl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType RateAdaptDsl = int32(95)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.RateAdaptDsl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Rate Adaptive Digital Subscriber Line (RADSL).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Slip">
+      <MemberSignature Language="C#" Value="Slip" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Slip = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Slip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine SLIP-Verbindung (Serial Line Internet Protocol). SLIP ist in IETF RFC 1055 definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SymmetricDsl">
+      <MemberSignature Language="C#" Value="SymmetricDsl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType SymmetricDsl = int32(96)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.SymmetricDsl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Symmetric Digital Subscriber Line (SDSL).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenRing">
+      <MemberSignature Language="C#" Value="TokenRing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType TokenRing = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.TokenRing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Token Ring-Verbindung. Token Ring ist im IEEE-Standard 802.5 definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tunnel">
+      <MemberSignature Language="C#" Value="Tunnel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Tunnel = int32(131)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Tunnel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Tunnelverbindung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Unknown = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schnittstellentyp ist nicht bekannt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VeryHighSpeedDsl">
+      <MemberSignature Language="C#" Value="VeryHighSpeedDsl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType VeryHighSpeedDsl = int32(97)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.VeryHighSpeedDsl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine Very High Data Rate Digital Subscriber Line (VDSL).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wireless80211">
+      <MemberSignature Language="C#" Value="Wireless80211" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Wireless80211 = int32(71)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Wireless80211" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine W-LAN-Verbindung (IEEE 802.11-Standard).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wman">
+      <MemberSignature Language="C#" Value="Wman" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Wman = int32(237)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Wman" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine mobile Breitbandschnittstelle für WiMax-Geräte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wwanpp">
+      <MemberSignature Language="C#" Value="Wwanpp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Wwanpp = int32(243)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Wwanpp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine mobile Breitbandschnittstelle für GSM-basierte Geräte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wwanpp2">
+      <MemberSignature Language="C#" Value="Wwanpp2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetworkInterfaceType Wwanpp2 = int32(244)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetworkInterfaceType.Wwanpp2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle verwendet eine mobile Breitbandschnittstelle für CDMA-basierte Geräte.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

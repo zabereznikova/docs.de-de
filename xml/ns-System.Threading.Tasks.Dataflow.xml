@@ -1,0 +1,17 @@
+<Namespace Name="System.Threading.Tasks.Dataflow">
+  <Docs>
+    <summary>Die <see cref="N:System.Threading.Tasks.Dataflow" /> Namespace stellt ein akteurbasiertes Programmiermodell, das in-Process-Nachrichten Nachrichtenübergabe für Simple Datenfluss- und Pipelineaufgaben unterstützt.  
+  
+ Weitere Informationen finden Sie unter [Datenfluss](~/docs/standard/parallel-programming/dataflow-task-parallel-library.md).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die TPL-Datenflussbibliothek (die <xref:System.Threading.Tasks.Dataflow> Namespace) ist nicht mit .NET Framework verteilt. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace das Projekt in Visual Studio öffnen, wählen Sie **NuGet-Pakete verwalten** aus der **Projekt** Menü, und suchen Sie online nach den `Microsoft.Tpl.Dataflow` Paket.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

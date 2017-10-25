@@ -1,0 +1,273 @@
+<Type Name="PageStatePersister" FullName="System.Web.UI.PageStatePersister">
+  <TypeSignature Language="C#" Value="public abstract class PageStatePersister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PageStatePersister extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PageStatePersister" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisfunktionalität für ASP.NET Ansicht Zustand Persistenz Mechanismen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ HTTP-Anforderungen und Antworten für den weisen grundsätzlich keinen Zustand. Um Statusinformationen zwischen HTTP-Anforderungen zu gewährleisten, können Server ASP.NET-Seiten speichern <xref:System.Web.UI.Page> Zustand. Dieser Zustand mit dem Namen Ansichtszustand, besteht aus Seiten- und steuerelementeinstellungen und Daten, die die Seiten und Steuerelemente, die angezeigt werden, als ob sie identisch sind, die der Benutzer gesehen haben, und auf ihren letzten Roundtrip zum Server Interaktion. Mehrere Mechanismen vorhanden sein, damit um zwischen aufeinander folgende Anforderungen zur selben Seite Ansichtszustand zu speichern. Die abstrakte <xref:System.Web.UI.PageStatePersister> Klasse stellt die Basisklasse für diesen Zustand Informationen Speichermechanismen dar.  
+  
+ Die Standardeinstellung Ansicht Zustand Dauerhaftigkeit in ASP.NET wird die Zustandsinformationen als Base64-codierte Zeichenfolge in einem verborgenen HTML-Element zu verwalten (ein Element mit dem `type` -Attributsatz zur `"hidden"`) auf der Seite. Eine ASP.NET-Seite verwendet ein <xref:System.Web.UI.HiddenFieldPageStatePersister> Objekt Vorgang funktionieren mit einer <xref:System.Web.UI.IStateFormatter> Instanz zum Serialisieren und Deserialisieren Objektzustandsinformationen. Alternativ können Sie den Ansichtszustand speichern, für die Seiten in der <xref:System.Web.HttpContext.Session%2A> Objekt auf dem Server mithilfe der <xref:System.Web.UI.SessionPageStatePersister> Klasse für mobile Clients mit begrenzter Bandbreite und Ressourcen. In einigen Fällen können Sie Ansicht Statuspersistenz vollständig deaktivieren. Wenn Sie dies tun, ist das Ergebnis an, dass in einigen Fällen Seiten und Steuerelemente, die auf Statuspersistenz beruhen nicht ordnungsgemäß Verhalten aufweisen. Weitere Informationen zur Seite Status Verwaltungs- und Ansicht-Status finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Wenn Sie Steuerelemente schreiben, können Sie Speichern von Statusinformationen für die Steuerelemente in der <xref:System.Web.UI.Control.ViewState%2A> Wörterbuch, das ist ein <xref:System.Web.UI.StateBag> Objekt. Ein Entwickler würde den Zustand des Steuerelements durch Abrufen der <xref:System.Web.UI.PageStatePersister.ControlState%2A> Eigenschaft. Sie zuweisen, Schlüssel und Werte, die <xref:System.Web.UI.Control.ViewState%2A> -Eigenschaft, und die <xref:System.Web.UI.Page> Objekt serialisiert die Zustandsinformationen zwischen den Anforderungen. Um benutzerdefinierte Zustandsbehandlung für das Steuerelement auszuführen, überschreiben die <xref:System.Web.UI.Control.LoadViewState%2A> und <xref:System.Web.UI.Control.SaveViewState%2A> Methoden. Alle Zustandsinformationen, die in diesem Wörterbuch gespeichert sind geht verloren, wenn von einem Seitenentwickler Ansichtszustand deaktiviert ist. Mindern Sie hierzu in ASP.NET Version 2.0, die Informationen der Status "Kritisch" in ein separates Objekt aufgerufen Steuerelementzustand gespeichert werden können. Das Zustandsobjekt, das Steuerelement ist nicht betroffen, wenn der Ansichtszustand in der Entwickler einer Seite deaktiviert ist. Speichern von Zustandsinformationen in das Steuerelement Zustandsobjekt, das erfordert, dass das Steuerelement überschreiben die <xref:System.Web.UI.Control.LoadControlState%2A> und <xref:System.Web.UI.Control.SaveControlState%2A> Methoden und das Steuerelement registriert werden, zum Speichern von Statusinformationen im Steuerelementzustand jedes Mal, wenn das Steuerelement initialisiert ist. Sie können ein Steuerelement Verwendung Steuerelementzustand durch Außerkraftsetzen Registrieren der <xref:System.Web.UI.Control.OnInit%2A> -Methode und der Aufruf der <xref:System.Web.UI.Page.RegisterRequiresControlState%2A> Methode. Weitere Informationen zum Verwenden der <xref:System.Web.UI.Control.ViewState%2A> Eigenschaft und Steuerelementzustand beim Entwickeln von Steuerelementen, finden Sie unter [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+  
+ Klicken Sie auf Ansichtszustand verwaltet Clients, die vorhandenen nicht unterstützen, anzeigen Zustand Persistenz Mechanismen, können Sie erweitern die <xref:System.Web.UI.PageStatePersister> -Klasse zum Einfügen von Ihren eigenen Zustand Persistenz-Methoden anzuzeigen, und Sie können Seitenadapter zum Konfigurieren Ihrer ASP.NET-Anwendung Verwenden Sie andere Ansicht Zustand Persistenz Mechanismen basierend auf dem Typ des Clients, die auf die Seite weiterhin bedient wird. Abgeleitete Klassen die <xref:System.Web.UI.PageStatePersister> überschreiben die abstrakte Klasse <xref:System.Web.UI.PageStatePersister.Save%2A> Methode, um den Ansichtszustand und Steuerelementzustand in den Persistenz-Medium speichern und überschreiben die <xref:System.Web.UI.PageStatePersister.Load%2A> Methode, um es zu extrahieren. Wenn Sie Ansichtszustand und Steuerelementzustand in eine Zeichenfolge serialisieren müssen, können Sie mithilfe der <xref:System.Web.UI.IStateFormatter> -Objekt, das erfolgt mithilfe der <xref:System.Web.UI.PageStatePersister.StateFormatter%2A> Eigenschaft. Effizient wird serialisiert und deserialisiert Objektzustandsinformationen in eine Base64-codierte Zeichenfolge. Sie können auch überschreiben die <xref:System.Web.UI.PageStatePersister.StateFormatter%2A> Eigenschaft, um eigene Objekt Zustand Serialisierungsmechanismus bereitzustellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.PageStatePersister> Objekt, das auf dem Webserver anzeigen und steuern Status speichert. Die `StreamPageStatePersister` veranschaulicht das Überschreiben der <xref:System.Web.UI.PageStatePersister.Load%2A> und <xref:System.Web.UI.PageStatePersister.Save%2A> Methoden zum Extrahieren und speichern die Ansicht der Zustandsinformationen. Da die Persistenz-Zustandsdauerhaftigkeitsmechanismen adaptive Rendering und Clientfunktionen, die miteinander verknüpft sind die `MyPageAdapter` Klasse dient zum Aktivieren der `StreamPageStatePersister` für eine ASP.NET-Anwendung. Schließlich wird eine Browser-Funktionen (Browser)-Datei bereitgestellt, um aktivieren die `MyPageAdapter` -Adapter für eine bestimmte Objektklasse Clients (in diesem Fall wird der Standardwebbrowser).  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/textfilepagestatepersister.cs#1)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/textfilepagestatepersister.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.Adapters.PageAdapter> -Klasse, die eine Instanz zurückgegeben `StreamPageStatePersister`, der verwendet wird, anzeigen und Steuern der Status für eine ASP.NET-Webseite persistent zu speichern.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/mypageadapter.cs#5)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/mypageadapter.vb#5)]  
+  
+ Kompilieren Sie diese beiden Klassen in einer Assembly, die Sie verwenden können, führen Sie ein Beispiel, mit der folgenden Befehlszeile des Compilers. Stellen Sie sicher, dass die kompilierte Assembly in das Verzeichnis "\Bin" unter dem Stammelement des ASP.NET Anwendung ist.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/mypageadapter.cs#6)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/mypageadapter.vb#6)]  
+  
+ Schließlich zum Aktivieren der `MyPageAdapter` Adapter, müssen Sie ein Verzeichnis namens Browsern unterhalb des Stamms der ASP.NET-Anwendung erstellen und eine Browser-Datei mit den Konfigurationsinformationen enthalten. Die `<refid>` Element in der Konfigurationsdatei gibt an, dass die Konfiguration für den Standardbrowser in der Konfigurationsdatei Default.browser angegebenen Werte überschrieben. In diesem Beispiel `MyPageAdapter` dient für ASP.NET Web Pages (wenn ist normalerweise kein Adapter verwendet).  
+  
+```  
+<browsers>  
+    <browser refid="Default" >  
+        <controlAdapters>  
+            <adapter   
+                controlType="System.Web.UI.Page"                              
+                adapterType="Samples.AspNet.CS.MyPageAdapter" />  
+        </controlAdapters>  
+    </browser>  
+</browsers>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PageStatePersister (System.Web.UI.Page page);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Page page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageStatePersister.#ctor(System.Web.UI.Page)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="page" Type="System.Web.UI.Page" />
+      </Parameters>
+      <Docs>
+        <param name="page">Die <see cref="T:System.Web.UI.Page" /> , die für die Ansicht Zustand Dauerhaftigkeit erstellt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.PageStatePersister" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="page" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlState">
+      <MemberSignature Language="C#" Value="public object ControlState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ControlState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageStatePersister.ControlState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das darstellt, die steuert enthaltenen Daten von der aktuellen <see cref="T:System.Web.UI.Page" /> Objektverwendung über HTTP-Anforderungen an den Webserver beibehalten werden.</summary>
+        <value>Ein Objekt, das Daten für den Ansichtszustand enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelementzustand ist ein Objekt, bestehend aus wichtigen Ansichtszustandsdaten, die Web-Server-Steuerelemente erforderlich, Funktion, und in ein separates Objekt von normalen Ansichtszustandsinformationen enthalten ist. Daten des Steuerelementzustands ist nicht betroffen, wenn der Ansichtszustand auf deaktiviert ist die <xref:System.Web.UI.Page> Ebene, erfordert aber zusätzliche Implementierungsschritte verwenden. Weitere Informationen zur Verwendung der <xref:System.Web.UI.Control.ViewState%2A> Eigenschaft und Steuerelementzustand beim Entwickeln von Steuerelementen, finden Sie unter [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die von abgeleitet ist die <xref:System.Web.UI.PageStatePersister> -Klasse initialisiert die <xref:System.Web.UI.PageStatePersister.ControlState%2A> Eigenschaft. In diesem Beispiel die <xref:System.Web.UI.PageStatePersister.ControlState%2A> Eigenschaft zugewiesen wurde die <xref:System.Web.UI.Pair.Second> Feld eine <xref:System.Web.UI.Pair> -Objekt und serialisiert mithilfe der <xref:System.Web.UI.ObjectStateFormatter> Klasse. Wenn die <xref:System.Web.UI.PageStatePersister.Load%2A> -Methode aufgerufen wird, die <xref:System.Web.UI.ObjectStateFormatter> Klasse wird verwendet, um den Status und Steuerung Ansichtszustandsinformationen, deserialisieren und die <xref:System.Web.UI.PageStatePersister.ControlState%2A> Eigenschaft initialisiert wird das resultierende <xref:System.Web.UI.Pair> des Objekts <xref:System.Web.UI.Pair.Second> Feld. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PageStatePersister> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/textfilepagestatepersister.cs#2)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/textfilepagestatepersister.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public abstract void Load ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageStatePersister.Load" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreiben von abgeleiteten Klassen zum Deserialisieren und Laden von permanenten Zustandsinformationen bei einer <see cref="T:System.Web.UI.Page" /> Objekt seine Steuerelementhierarchie initialisiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen die <xref:System.Web.UI.PageStatePersister> Klasse implementieren die <xref:System.Web.UI.PageStatePersister.Load%2A> Methode zum Initialisieren der <xref:System.Web.UI.PageStatePersister.ViewState%2A> und <xref:System.Web.UI.PageStatePersister.ControlState%2A> Eigenschaften aus einem persistenten Format.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die von abgeleitet ist die <xref:System.Web.UI.PageStatePersister> -Klasse implementiert die <xref:System.Web.UI.PageStatePersister.Load%2A> -Methode Ansichtszustand von einem Medium Persistenz zu laden. Die `StreamPageStatePersister` versucht, Daten aus einem Stream zu lesen. Er verwendet ein <xref:System.Web.UI.IStateFormatter> Objekt Deserialisieren Ansichtszustanddaten auf und Initialisieren der <xref:System.Web.UI.PageStatePersister.ViewState%2A> Eigenschaft und die <xref:System.Web.UI.PageStatePersister.ControlState%2A> -Eigenschaft, die eine Seite verwendet, um Steuerelemente zu initialisieren. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PageStatePersister> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/textfilepagestatepersister.cs#2)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/textfilepagestatepersister.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Page Page { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Page Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageStatePersister.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Page</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.UI.Page" /> -Objekt, das für die Ansicht Zustand Dauerhaftigkeit erstellt wird.</summary>
+        <value>Das <see cref="T:System.Web.UI.Page" />, das <see cref="T:System.Web.UI.PageStatePersister" /> zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.UI.PageStatePersister.Page%2A> -Eigenschaft auf die aktuelle <xref:System.Web.HttpContext> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public abstract void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageStatePersister.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreiben von abgeleiteten Klassen zum Serialisieren beibehaltener Zustandsinformationen bei einem <see cref="T:System.Web.UI.Page" /> Objekt aus dem Arbeitsspeicher entladen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen die <xref:System.Web.UI.PageStatePersister> Klasse implementieren die <xref:System.Web.UI.PageStatePersister.Save%2A> Methode, um den Inhalt des beibehalten der <xref:System.Web.UI.PageStatePersister.ViewState%2A> und <xref:System.Web.UI.PageStatePersister.ControlState%2A> Eigenschaften auf einem Medium Persistenz.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die von abgeleitet ist die <xref:System.Web.UI.PageStatePersister> -Klasse implementiert die <xref:System.Web.UI.PageStatePersister.Save%2A> Methode, um den Ansichtszustand auf einem Medium Persistenz persistent zu speichern. Die `StreamPageStatePersister` verwendet ein <xref:System.Web.UI.IStateFormatter> zu den Inhalt der zu serialisierende Objekt die <xref:System.Web.UI.PageStatePersister.ViewState%2A> Eigenschaft und <xref:System.Web.UI.PageStatePersister.ControlState%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PageStatePersister> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/textfilepagestatepersister.cs#3)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/textfilepagestatepersister.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateFormatter">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.IStateFormatter StateFormatter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IStateFormatter StateFormatter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageStatePersister.StateFormatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IStateFormatter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Web.UI.IStateFormatter" /> -Objekt, das zum Serialisieren und Deserialisieren der Zustandsinformationen in enthaltenen dient der <see cref="P:System.Web.UI.PageStatePersister.ViewState" /> und <see cref="P:System.Web.UI.PageStatePersister.ControlState" /> Eigenschaften während des Aufrufs der <see cref="M:System.Web.UI.PageStatePersister.Save" /> und <see cref="M:System.Web.UI.PageStatePersister.Load" /> Methoden.</summary>
+        <value>Eine Instanz von <see cref="T:System.Web.UI.IStateFormatter" /> , die zum Serialisieren und Deserialisieren der Objektzustand verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen die <xref:System.Web.UI.PageStatePersister.StateFormatter%2A> Eigenschaft, um eine eigene Formatierungsprogramme für den Ansichtszustand bereitzustellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, abgeleitet wird, die <xref:System.Web.UI.PageStatePersister> Klasse greift auf die <xref:System.Web.UI.PageStatePersister.StateFormatter%2A> abzurufende ein <xref:System.Web.UI.ObjectStateFormatter> -Objekt, das bei der Standardimplementierung wird von der <xref:System.Web.UI.IStateFormatter> Schnittstelle, um die Ansicht zu serialisieren Status und des Steuerelementzustands in einen Stream. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PageStatePersister> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/textfilepagestatepersister.cs#3)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/textfilepagestatepersister.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewState">
+      <MemberSignature Language="C#" Value="public object ViewState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageStatePersister.ViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das darstellt, die steuert enthaltenen Daten von der aktuellen <see cref="T:System.Web.UI.Page" /> Objektverwendung über HTTP-Anforderungen an den Webserver beibehalten werden.</summary>
+        <value>Ein Objekt, das Daten für den Ansichtszustand enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ansichtszustand ist ein Wörterbuch von Zustandsdaten, die Webserversteuerelemente müssen Funktion und Darstellung. Entwickler von Steuerelementen in der Regel Zugriff auf den Ansichtszustand Objekt mithilfe der <xref:System.Web.UI.Control.ViewState%2A> Eigenschaft. Der Ansichtszustand ist betroffen, wenn am Ansichtszustand deaktiviert ist die <xref:System.Web.UI.Page> Ebene und demzufolge Steuerelemente verhalten sich möglicherweise nicht ordnungsgemäß in diesen Szenarien. Weitere Informationen zur Verwendung von <xref:System.Web.UI.Control.ViewState%2A> und Status beim Entwickeln von Steuerelementen zu steuern, finden Sie unter [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse, die von abgeleitet ist die <xref:System.Web.UI.PageStatePersister> -Klasse initialisiert die <xref:System.Web.UI.PageStatePersister.ViewState%2A> Eigenschaft. In diesem Beispiel die <xref:System.Web.UI.PageStatePersister.ViewState%2A> Eigenschaft zugewiesen wurde die <xref:System.Web.UI.Pair.First> Feld eine <xref:System.Web.UI.Pair> Objekt, und mit serialisiert die <xref:System.Web.UI.ObjectStateFormatter> -Objekt, das eine Instanz von der <xref:System.Web.UI.IStateFormatter> Schnittstelle. Wenn die <xref:System.Web.UI.PageStatePersister.Load%2A> -Methode aufgerufen wird, die <xref:System.Web.UI.ObjectStateFormatter> Schnittstelle wird verwendet, um die Ansichtszustandsinformationen, deserialisieren und die <xref:System.Web.UI.PageStatePersister.ViewState%2A> Eigenschaft initialisiert wird das resultierende <xref:System.Web.UI.Pair> des Objekts <xref:System.Web.UI.Pair.First> Feld. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PageStatePersister> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/CS/textfilepagestatepersister.cs#2)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_1/VB/textfilepagestatepersister.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

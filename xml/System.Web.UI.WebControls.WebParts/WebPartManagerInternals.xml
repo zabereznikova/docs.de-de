@@ -1,0 +1,739 @@
+<Type Name="WebPartManagerInternals" FullName="System.Web.UI.WebControls.WebParts.WebPartManagerInternals">
+  <TypeSignature Language="C#" Value="public sealed class WebPartManagerInternals" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartManagerInternals extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartManagerInternals" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Isoliert in einer separaten Klasse, Methoden, mit denen, die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> steuern und kann überschrieben werden, Entwickler, die das Steuerelement erweitern, jedoch selten vom Entwickler von Seiten benötigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Klasse ist die größte Klasse im Webparts-Steuerelementsatz. Es ist auch zwischen den wichtigsten Webparts-Klassen, da er wird verwendet, auf jeder Webseite, die Webparts-Steuerelemente enthält, und er koordiniert und verwaltet alle Webparts-Steuerelemente auf einer Seite.  
+  
+ Da die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Klasse so häufig verwendet wird, und da sie so viele verfügbar gemachten Methoden enthält, benötigt einige Methoden hauptsächlich von Steuerelemententwicklern erweitern die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement enthalten sind, der <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> Klasse. Diese Isolierung weniger häufig verwendeter Methoden in der <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> Klasse vereinfacht die API der der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Klasse und die isolierten Methoden werden nicht angezeigt, auf die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Objekt in IntelliSense.  
+  
+ Entwickler verwenden die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> -Klasse sind wahrscheinlich Szenarien, in denen sie zum Vererben der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern und passen Sie sie häufig. Z. B. Wenn Sie eine Web-Portal-Anwendung oder einem gepackten Satz von Webparts-Steuerelemente mit benutzerdefinierten Anzeigemodi erstellen, benutzerdefinierte Zonen, benutzerdefinierten Verben benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente und andere Erweiterungen der Basis-Webparts-Benutzeroberfläche (UI), in vielen Fällen (Not müssen Sie alle) außer Kraft setzen, und erweitern einige der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Elemente. Beziehen sich zwar die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> Klasse ist versiegelt, sodass Sie aus, die benutzerdefinierte erben können nicht <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Klasse müssen wahrscheinlich eine Anzahl von Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> Methoden zur Verwaltung von Webparts-Steuerelemente auf einer Seite.  
+  
+> [!NOTE]
+>  Wie die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Klasse, die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> -Klasse stellt ein Serversteuerelement, die über keine Benutzeroberfläche verfügt und nie auf einer Seite angezeigt wird. Im Gegensatz zu <xref:System.Web.UI.WebControls.WebParts.WebPartManager>die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> Klasse wird nie im Markup der Seite deklariert; es ist zwingend einen Worker-Objekt, das im Hintergrundaufgaben ausführt. Die gewohnte Weise mit der veranschaulichten der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Klasse, die darauf, mithilfe der geschützten verweist <xref:System.Web.UI.WebControls.WebParts.WebPartManager.Internals%2A> -Eigenschaft, und verwendet das referenzierte Objekt aufrufen, die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> Methoden.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> -Klasse enthält nur Methoden; es sind keine Eigenschaften oder Ereignisse. Alle Methoden in der Klasse umfassen, Verwalten von <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente oder Verbindungen zwischen Steuerelementen.  
+  
+ Behandeln <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> enthält Methoden zum Hinzufügen (<xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.AddWebPart%2A>), entfernen sie <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.RemoveWebPart%2A>), Behandlung von Ereignissen <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnDeleting%2A>) abzurufen oder festzulegen Details über ihre Beziehung zu ihren Zone (z. B. <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.GetZoneID%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetZoneIndex%2A>), oder das Festlegen von grundlegenden <xref:System.Web.UI.WebControls.WebParts.WebPart> Eigenschaften zu steuern (z. B. <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsClosed%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetHasSharedData%2A>).  
+  
+ Behandeln von Verbindungen, <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals> enthält Methoden zum Löschen von (<xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.DeleteConnection%2A>), Festlegen der Transformatorobjekt, das verwendet (<xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetTransformer%2A>) wird durch das festlegen, ob eine Verbindung gemeinsam verwendet wird, und gibt an, ob diese statisch ist (<xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared%28System.Web.UI.WebControls.WebParts.WebPartConnection%2CSystem.Boolean%29> und <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic%28System.Web.UI.WebControls.WebParts.WebPartConnection%2CSystem.Boolean%29>), und Festlegen einer Fehlermeldung Verbindung verwenden (<xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetConnectErrorMessage%2A>).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddWebPart">
+      <MemberSignature Language="C#" Value="public void AddWebPart (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddWebPart(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.AddWebPart(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> hinzugefügt wird, um die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> kontrollsammlung von Steuerelementen.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelement an, die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> kontrollsammlung von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente auf einer Webseite.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallOnClosing">
+      <MemberSignature Language="C#" Value="public void CallOnClosing (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CallOnClosing(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnClosing(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , die für die schließende ausgewählt wurde.</param>
+        <summary>Ruft die <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.OnClosing(System.EventArgs)" /> Methode des angegebenen Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallOnConnectModeChanged">
+      <MemberSignature Language="C#" Value="public void CallOnConnectModeChanged (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CallOnConnectModeChanged(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnConnectModeChanged(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , eingetreten ist, oder den Anzeigemodus für die Verbindung beendet.</param>
+        <summary>Ruft die <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.OnConnectModeChanged(System.EventArgs)" /> Methode des angegebenen Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallOnDeleting">
+      <MemberSignature Language="C#" Value="public void CallOnDeleting (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CallOnDeleting(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnDeleting(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , die zum Löschen ausgewählt wurde.</param>
+        <summary>Ruft die <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.OnDeleting(System.EventArgs)" /> Methode des angegebenen Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallOnEditModeChanged">
+      <MemberSignature Language="C#" Value="public void CallOnEditModeChanged (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CallOnEditModeChanged(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnEditModeChanged(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , eingetreten ist, oder Bearbeitungsanzeigemodus beendet.</param>
+        <summary>Ruft die <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.OnEditModeChanged(System.EventArgs)" /> Methode des angegebenen Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionDeleted">
+      <MemberSignature Language="C#" Value="public bool ConnectionDeleted (System.Web.UI.WebControls.WebParts.WebPartConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ConnectionDeleted(class System.Web.UI.WebControls.WebParts.WebPartConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.ConnectionDeleted(System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> , die zum Löschen ausgewählt wurde.</param>
+        <summary>Gibt an, ob das angegebene <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt gelöscht wurde.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob die Verbindung gelöscht wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObjectFromType">
+      <MemberSignature Language="C#" Value="public object CreateObjectFromType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object CreateObjectFromType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CreateObjectFromType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des zu erstellenden Objekts.</param>
+        <summary>Erstellt ein Objekt basierend auf dem Parameter an die Methode übergeben.</summary>
+        <returns>Ein <see cref="T:System.Object" /> vom gleichen Typ wie <paramref name="type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode verwendet die <xref:System.CodeDom.Compiler.CodeGenerator> Klasse, um den Typ, eine Alternative zu erstellen, die eine bessere Leistung als die Verwendung von bietet die <xref:System.Activator.CreateInstance%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteConnection">
+      <MemberSignature Language="C#" Value="public void DeleteConnection (System.Web.UI.WebControls.WebParts.WebPartConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteConnection(class System.Web.UI.WebControls.WebParts.WebPartConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.DeleteConnection(System.Web.UI.WebControls.WebParts.WebPartConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> , die zum Löschen ausgewählt wurde.</param>
+        <summary>Legt eine Eigenschaft, um anzugeben, dass das angegebene Verbindungsobjekt gelöscht wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.DeleteConnection%2A> Methode ist ein Schritt beim Beenden einer vorhandenen Verbindung zwischen zwei <xref:System.Web.UI.WebControls.WebParts.WebPart> oder andere Serversteuerelemente auf einer Webseite. Wird die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.ConnectionDeleted%2A> Eigenschaftswert an `true` gibt an, dass `connection` wird gelöscht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetZoneID">
+      <MemberSignature Language="C#" Value="public string GetZoneID (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetZoneID(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.GetZoneID(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , die sich in einer Zone befindet.</param>
+        <summary>Ruft die ID einer Zone, die das angegebene enthält <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelement.</summary>
+        <returns>Eine Zeichenfolge, die die ID der Zone darstellt, enthält <paramref name="webPart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.GetZoneID%2A> Methode gibt die ID der Zone mit dem Steuerelement verweist die `webPart` Parameter.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.WebParts.WebPart.Zone%2A> Eigenschaft `webPart` verweist auf das eigentliche Zonenobjekt, das enthält `webPart`, nicht die ID der Zone. Wenn `webPart` gegenwärtig geschlossen ist, den Wert des seine <xref:System.Web.UI.WebControls.WebParts.WebPart.Zone%2A> Eigenschaft ist `null`, und die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.GetZoneID%2A> Methodenrückgabewert wird die ID des letzten zone, die `webPart` vor geschlossen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadConfigurationState">
+      <MemberSignature Language="C#" Value="public void LoadConfigurationState (System.Web.UI.WebControls.WebParts.WebPartTransformer transformer, object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadConfigurationState(class System.Web.UI.WebControls.WebParts.WebPartTransformer transformer, object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.LoadConfigurationState(System.Web.UI.WebControls.WebParts.WebPartTransformer,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transformer" Type="System.Web.UI.WebControls.WebParts.WebPartTransformer" />
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="transformer">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> , wird verwendet, um Steuerelemente zu verbinden.</param>
+        <param name="savedState">Eine <see cref="T:System.Object" /> , die zuvor gespeicherten Zustandsdaten enthält.</param>
+        <summary>Lasten, die zuvor gespeicherten der Zustandsdaten für ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> -Objekt, das eine Verbindung zwischen Steuerelementen teilnimmt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveWebPart">
+      <MemberSignature Language="C#" Value="public void RemoveWebPart (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveWebPart(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.RemoveWebPart(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder einem anderen Serversteuerelement entfernt werden soll.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder einem anderen Serversteuerelement aus der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> kontrollsammlung von Steuerelementen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt `webPart` aus dem aktuellen <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuerelementauflistung des Webparts-Steuerelemente, die für die Seite verwaltet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveConfigurationState">
+      <MemberSignature Language="C#" Value="public object SaveConfigurationState (System.Web.UI.WebControls.WebParts.WebPartTransformer transformer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object SaveConfigurationState(class System.Web.UI.WebControls.WebParts.WebPartTransformer transformer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SaveConfigurationState(System.Web.UI.WebControls.WebParts.WebPartTransformer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transformer" Type="System.Web.UI.WebControls.WebParts.WebPartTransformer" />
+      </Parameters>
+      <Docs>
+        <param name="transformer">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> , wird verwendet, um Steuerelemente zu verbinden.</param>
+        <summary>Speichert die Zustandsdaten für einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> -Objekt, das eine Verbindung zwischen Steuerelementen teilnimmt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das den gespeicherten Zustandsdaten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SaveConfigurationState%2A> Methode speichert Konfigurationsdaten, die erstellt werden, wenn ein Benutzer konfiguriert ein <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Steuerelement auf einer Webseite als Teil einer Verbindung zwischen Steuerelementen. Diese Konfigurationsdaten werden dann erneut geladen, jedes Mal die <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Steuerelement gerendert wird, mithilfe der <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.LoadConfigurationState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetConnectErrorMessage">
+      <MemberSignature Language="C#" Value="public void SetConnectErrorMessage (System.Web.UI.WebControls.WebParts.WebPart webPart, string connectErrorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetConnectErrorMessage(class System.Web.UI.WebControls.WebParts.WebPart webPart, string connectErrorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetConnectErrorMessage(System.Web.UI.WebControls.WebParts.WebPart,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="connectErrorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> beteiligt, die eine Verbindung mit einem anderen Steuerelement.</param>
+        <param name="connectErrorMessage">Eine Zeichenfolge, die den Text der Fehlermeldung enthält.</param>
+        <summary>Erstellt eine Fehlermeldung, und bewirkt, dass die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> -Objekt, das zum Rendern zuständig ist ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement rendern, anstatt den Inhalt des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetConnectErrorMessage%2A> Methode können Sie eine Fehlermeldung mit Zuordnen einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das Verbindungen teilnimmt. Wenn ein Fehler auftritt, wenn ein anderes Steuerelement eine Verbindung mit dem Steuerelement verweist, bilden ist die `webPart` Parameter, und klicken Sie dann nach der Verbindungsprozess Fehler aufgetreten ist, die Fehlermeldung in der Benutzeroberfläche (UI), anstatt den Inhalt der angezeigtwird`webPart`.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt zugeordneten `webPart` rendert die Fehlermeldung in seiner <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHasSharedData">
+      <MemberSignature Language="C#" Value="public void SetHasSharedData (System.Web.UI.WebControls.WebParts.WebPart webPart, bool hasSharedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetHasSharedData(class System.Web.UI.WebControls.WebParts.WebPart webPart, bool hasSharedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetHasSharedData(System.Web.UI.WebControls.WebParts.WebPart,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="hasSharedData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder einem anderen Serversteuerelement, die Personalisierungsdaten freigegeben haben kann.</param>
+        <param name="hasSharedData">Ein boolescher Wert, der angibt, ob <c>WebPart</c> über freigegebene Daten.</param>
+        <summary>Legt eine Eigenschaft für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder einem anderen Serversteuerelement, das angibt, ob das Steuerelement über freigegebene Personalisierungsdaten verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetHasSharedData%2A> Methode gibt an, ob `webPart` Personalisierungsdaten wurde freigegeben. Der Wert von der `hasSharedData` Parameter, der an die Methode übergeben wird zugewiesen ist die `webPart` des Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.HasSharedData%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHasUserData">
+      <MemberSignature Language="C#" Value="public void SetHasUserData (System.Web.UI.WebControls.WebParts.WebPart webPart, bool hasUserData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetHasUserData(class System.Web.UI.WebControls.WebParts.WebPart webPart, bool hasUserData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetHasUserData(System.Web.UI.WebControls.WebParts.WebPart,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="hasUserData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder einem anderen Serversteuerelement, die Benutzerdaten für die Personalisierung aufweisen können.</param>
+        <param name="hasUserData">Ein boolescher Wert, der angibt, ob <c>WebPart</c> über freigegebene Daten.</param>
+        <summary>Legt eine Eigenschaft für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder einem anderen Serversteuerelement, das angibt, ob das Steuerelement Personalisierung Benutzerdaten hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetHasUserData%2A> Methode gibt an, ob `webPart` Personalisierungsdaten einzelner Benutzer, im Gegensatz zu freigegebenen Daten. Die Methode weist den Wert der `hasUserData` Parameter an die `webPart` des Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.HasUserData%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsClosed">
+      <MemberSignature Language="C#" Value="public void SetIsClosed (System.Web.UI.WebControls.WebParts.WebPart webPart, bool isClosed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIsClosed(class System.Web.UI.WebControls.WebParts.WebPart webPart, bool isClosed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsClosed(System.Web.UI.WebControls.WebParts.WebPart,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="isClosed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> für die diese Methode legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsClosed" /> Eigenschaft.</param>
+        <param name="isClosed">Ein boolescher Wert, der angibt, ob eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> auf einer Seite geschlossen wird.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsClosed" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsClosed%2A> Methode legt die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsClosed%2A> Eigenschaft `webPart`. Diese Methode wird nicht tatsächlich geschlossen `webPart`; es wird nur die Eigenschaft, der angibt, ob `webPart` geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SetIsShared">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsShared" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement oder <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared%2A> Methode ruft eine Methode in einer Basisklasse, eine Eigenschaft festzulegen, der angibt, ob eine bestimmte Instanz eines Steuerelements freigegeben ist. In der Webparts-Steuerelementsatz ist ein freigegebenes Steuerelement ein Steuerelement, das für alle Benutzer einer Seite angezeigt wird. Dies ist im Gegensatz zu einer pro-Benutzersteuerelement, das nur für bestimmte Benutzer sichtbar ist, die das Steuerelement auf der Seite hinzugefügt.  
+  
+> [!NOTE]
+>  Weitere Informationen über Personalisierung und im Vergleich zu Steuerelemente pro Benutzer gemeinsam verwendet, finden Sie unter [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SetIsShared">
+      <MemberSignature Language="C#" Value="public void SetIsShared (System.Web.UI.WebControls.WebParts.WebPart webPart, bool isShared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIsShared(class System.Web.UI.WebControls.WebParts.WebPart webPart, bool isShared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared(System.Web.UI.WebControls.WebParts.WebPart,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="isShared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> für die diese Methode legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsShared" /> Eigenschaft.</param>
+        <param name="isShared">Ein boolescher Wert, der angibt, ob <c>WebPart</c> freigegeben wird.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsShared" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared%2A> Methode bewirkt nicht tatsächlich das Steuerelement verweist der `webPart` -Parameter freigegeben werden; es wird nur die Eigenschaft, der angibt, ob `webPart` wird derzeit freigegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsShared">
+      <MemberSignature Language="C#" Value="public void SetIsShared (System.Web.UI.WebControls.WebParts.WebPartConnection connection, bool isShared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIsShared(class System.Web.UI.WebControls.WebParts.WebPartConnection connection, bool isShared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared(System.Web.UI.WebControls.WebParts.WebPartConnection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+        <Parameter Name="isShared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> zwischen zwei <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</param>
+        <param name="isShared">Ein boolescher Wert, der angibt, ob <c>Verbindung</c> freigegeben wird.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared%2A> Methode bewirkt nicht tatsächlich das Steuerelement verweist der `connection` -Parameter freigegeben werden; es wird nur die Eigenschaft, der angibt, ob `connection` wird derzeit freigegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsStandalone">
+      <MemberSignature Language="C#" Value="public void SetIsStandalone (System.Web.UI.WebControls.WebParts.WebPart webPart, bool isStandalone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIsStandalone(class System.Web.UI.WebControls.WebParts.WebPart webPart, bool isStandalone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStandalone(System.Web.UI.WebControls.WebParts.WebPart,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="isStandalone" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> für die diese Methode legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsStandalone" /> Eigenschaft.</param>
+        <param name="isStandalone">Ein boolescher Wert, der angibt, ob <c>WebPart</c> ein eigenständiges Steuerelement ist.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsStandalone" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStandalone%2A> Methode legt die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsStandalone%2A> Eigenschaft. Wenn diese Eigenschaft auf festgelegt ist `true` auf eine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, bedeutet das, dass das Steuerelement sich nicht innerhalb befindet einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SetIsStatic">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsStatic" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement oder <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic%2A> Methode ruft eine Methode in einer Basisklasse, eine Eigenschaft festzulegen, der angibt, ob eine bestimmte Instanz eines Steuerelements statisch ist. In der Webparts-Steuerelementsatz ist ein statisches Steuerelement ein Steuerelement, das in das Markup einer Webseite deklariert wird. Dies ist im Gegensatz zu einer dynamischen-Steuerelement, das entweder programmgesteuert auf eine Seite hinzugefügt, oder durch einen Benutzer aus einem Katalog von Steuerelementen hinzugefügt. Ein statisches Steuerelement ist grundsätzlich ein freigegebenen, d. h., dass er für alle Benutzer einer Seite sichtbar ist, und zwar Benutzer ein statisches Steuerelement schließen können, können sie niemals löschen (dauerhaft entfernen) sie.  
+  
+> [!NOTE]
+>  Weitere Informationen über die Personalisierung, statischen und dynamischen Steuerelementen und freigegebenen im Vergleich zu Benutzersteuerelemente, finden Sie unter [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SetIsStatic">
+      <MemberSignature Language="C#" Value="public void SetIsStatic (System.Web.UI.WebControls.WebParts.WebPart webPart, bool isStatic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIsStatic(class System.Web.UI.WebControls.WebParts.WebPart webPart, bool isStatic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic(System.Web.UI.WebControls.WebParts.WebPart,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="isStatic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Das Steuerelement für das Wert der Eigenschaft festgelegt wird.</param>
+        <param name="isStatic">Ein boolescher Wert, der angibt, ob <c>WebPart</c> ist statisch.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsStatic" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic%28System.Web.UI.WebControls.WebParts.WebPart%2CSystem.Boolean%29> Methode wird zum Festlegen der <xref:System.Web.UI.WebControls.WebParts.WebPart.IsStatic%2A> Eigenschaftswert des Steuerelements verweist die `webPart` Parameter. Wenn `webPart` wird deklariert, innerhalb einer Zone im Markup einer Webseite, legt diese Methode, die den Eigenschaftswert auf `true`. Wenn `webPart` hinzugefügt zu einer Seite programmgesteuert oder durch einen Benutzer über die Webparts-Benutzeroberfläche (UI), und klicken Sie dann diese Methode den Wert der Eigenschaft legt, um fest `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsStatic">
+      <MemberSignature Language="C#" Value="public void SetIsStatic (System.Web.UI.WebControls.WebParts.WebPartConnection connection, bool isStatic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIsStatic(class System.Web.UI.WebControls.WebParts.WebPartConnection connection, bool isStatic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic(System.Web.UI.WebControls.WebParts.WebPartConnection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+        <Parameter Name="isStatic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Die Verbindung für die Wert der Eigenschaft festgelegt wird.</param>
+        <param name="isStatic">Ein boolescher Wert, der angibt, ob <c>Verbindung</c> ist statisch.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic%28System.Web.UI.WebControls.WebParts.WebPartConnection%2CSystem.Boolean%29> Methode wird zum Festlegen der <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> Eigenschaftswert, der die Verbindung verweist die `connection` Parameter. Wenn `connection` wird im Markup einer Webseite, legt diese Methode, die den Eigenschaftswert auf deklariert `true`. Wenn `connection` hinzugefügt zu einer Seite programmgesteuert oder durch einen Benutzer über die Webparts-Benutzeroberfläche (UI), und klicken Sie dann diese Methode den Wert der Eigenschaft legt, um fest `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTransformer">
+      <MemberSignature Language="C#" Value="public void SetTransformer (System.Web.UI.WebControls.WebParts.WebPartConnection connection, System.Web.UI.WebControls.WebParts.WebPartTransformer transformer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTransformer(class System.Web.UI.WebControls.WebParts.WebPartConnection connection, class System.Web.UI.WebControls.WebParts.WebPartTransformer transformer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetTransformer(System.Web.UI.WebControls.WebParts.WebPartConnection,System.Web.UI.WebControls.WebParts.WebPartTransformer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Web.UI.WebControls.WebParts.WebPartConnection" />
+        <Parameter Name="transformer" Type="System.Web.UI.WebControls.WebParts.WebPartTransformer" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> , der eine Verbindung zwischen Serversteuerelemente erstellt.</param>
+        <param name="transformer">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> mit <c>Verbindung</c>.</param>
+        <summary>Weist ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> Objekt in eine Verbindung zwischen zwei Serversteuerelemente verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Verbindung zwischen zwei Serversteuerelemente einen Transformer erfordert, sodass der Consumer-Steuerelement Daten aus dem Anbietersteuerelement interpretieren kann die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetTransformer%2A> Methode wird aufgerufen, um eine spezifische <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> -Objekt an die <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt. Wenn die Verbindung bereits einen Transformer zugewiesen wurde, wird das Objekt verwiesen, indem die `transformer` Parameter überschreibt der vorhandenen Dateigruppe; andernfalls, das Objekt verwiesen, der `transformer` Parameter wird verwendet.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern verwendet der <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetTransformer%2A> Methode, die bei jedem Aufruf der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode zum Herstellen einer Verbindung, die einen Transformer erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetZoneID">
+      <MemberSignature Language="C#" Value="public void SetZoneID (System.Web.UI.WebControls.WebParts.WebPart webPart, string zoneID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetZoneID(class System.Web.UI.WebControls.WebParts.WebPart webPart, string zoneID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetZoneID(System.Web.UI.WebControls.WebParts.WebPart,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="zoneID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , deren <c>Zonen-ID</c> Eigenschaftswert festgelegt wird.</param>
+        <param name="zoneID">Eine Zeichenfolge, die ID der Zone enthält, <c>WebPart</c> angehört.</param>
+        <summary>Festlegen einer Eigenschaft, die ermöglicht eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelement an, die ID der enthaltenden Zone beibehalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern, wann ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zu einer Zone hinzugefügt wird. Jede <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement verfolgt die ID für die Zone, die sie gehört, und diese Methode legt die Eigenschaft, die den ID-Wert beibehält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetZoneIndex">
+      <MemberSignature Language="C#" Value="public void SetZoneIndex (System.Web.UI.WebControls.WebParts.WebPart webPart, int zoneIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetZoneIndex(class System.Web.UI.WebControls.WebParts.WebPart webPart, int32 zoneIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetZoneIndex(System.Web.UI.WebControls.WebParts.WebPart,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="zoneIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />-Steuerelement, für das die Methode einen Zonenindex festlegt.</param>
+        <param name="zoneIndex">Der Index des <c>WebPart</c> innerhalb seiner Zone relativ zu anderen Steuerelementen in der Zone.</param>
+        <summary>Legt den Index des angegebenen Steuerelements in der Zone relativ zu den anderen <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />-Steuerelementen in der Zone fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetZoneIndex%2A> Methode bestimmt die Ordinalzahl einfügen, `webPart` belegt in der Zone, relativ zu den anderen Serversteuerelementen in der Zone.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

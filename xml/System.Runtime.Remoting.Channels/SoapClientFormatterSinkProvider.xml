@@ -1,0 +1,129 @@
+<Type Name="SoapClientFormatterSinkProvider" FullName="System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider">
+  <TypeSignature Language="C#" Value="public class SoapClientFormatterSinkProvider : System.Runtime.Remoting.Channels.IClientFormatterSinkProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapClientFormatterSinkProvider extends System.Object implements class System.Runtime.Remoting.Channels.IClientChannelSinkProvider, class System.Runtime.Remoting.Channels.IClientFormatterSinkProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IClientFormatterSinkProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Implementierung für einen Client Formatierer Senkenanbieter bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider> erstellt der Client Formatierungssenken, mit denen die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> zum Serialisieren von Nachrichten für den Clientkanal, über welche Remoting Nachrichten fließen.  
+  
+ Die Funktion der Formatierungssenke besteht darin, die erforderlichen Header zu erstellen und die Nachricht in den Stream zu serialisieren. Nach Erreichen der Formatierungssenke besteht die <xref:System.Runtime.Remoting.Messaging.IMessage> wird an alle Senken in der Channelsenkenkette über weitergeleitet, die <xref:System.Runtime.Remoting.Channels.IClientChannelSink.ProcessMessage%2A> oder <xref:System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessRequest%2A> aufrufen. In dieser Phase wird die Nachricht bereits serialisiert wurde, und Sie wird als nur zu Informationszwecken bereitgestellt. Senken, die die Meldung erstellen oder ändern müssen, müssen in der Senkenkette vor dem Formatierungsprogramm platziert werden. Dies kann erreicht werden, indem implementieren sowohl die <xref:System.Runtime.Remoting.Messaging.IMessageSink> und <xref:System.Runtime.Remoting.Channels.IClientChannelSink> Schnittstellen. Die Formatierungssenke kann später in der Senkenkette platziert werden.  
+  
+ Formatierer senken verwenden Senkenkonfigurationseigenschaften auf den Kanal zur Laufzeit zu konfigurieren. Sink-Eigenschaften können angegeben werden, in einer Konfigurationsdatei oder programmgesteuert innerhalb von einer <xref:System.Collections.IDictionary>. In einer Konfigurationsdatei alle Werte dargestellt von Zeichenfolgen, sondern beim Erstellen einer Eigenschaft <xref:System.Collections.IDictionary> programmgesteuert Werttypen können angegeben werden mit ihren systemeigenen Werte oder Zeichenfolgen.  
+  
+ Die folgende Tabelle zeigt die Senke Konfigurationseigenschaften, die für den aktuellen Senkenanbieter angegeben werden können.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|`includeVersions`|Gibt an, ob der Formatierer Versionsinformationen enthält. Werte sind `true` oder `false`.|  
+  
+> [!IMPORTANT]
+>  Verwenden eine Instanz dieses Objekts mit nicht vertrauenswürdigen Daten oder über einen unsicheren Kanal stellt ein Sicherheitsrisiko dar. Verwenden Sie dieses Objekt nur mit vertrauenswürdigen Daten und über einen sicheren Kanal. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapClientFormatterSinkProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />-Klasse mit Standardwerten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapClientFormatterSinkProvider (System.Collections.IDictionary properties, System.Collections.ICollection providerData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IDictionary properties, class System.Collections.ICollection providerData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+        <Parameter Name="providerData" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Ein <see cref="T:System.Collections.IDictionary" /> von Konfigurationseigenschaften für die Verwendung mit der neuen Instanz von <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />.</param>
+        <param name="providerData">Ein <see cref="T:System.Collections.ICollection" /> von Anbieterdaten für die Verwendung mit der neuen Instanz von <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> -Klasse mit den angegebenen Eigenschaften und der Anbieterdaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IClientChannelSink CreateSink (System.Runtime.Remoting.Channels.IChannelSender channel, string url, object remoteChannelData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Channels.IClientChannelSink CreateSink(class System.Runtime.Remoting.Channels.IChannelSender channel, string url, object remoteChannelData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelSender,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IClientChannelSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Runtime.Remoting.Channels.IChannelSender" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="remoteChannelData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Der Kanal für die diese Senkenkette erstellt wird.</param>
+        <param name="url">Die URL des Objekts, für die Verbindung bzw. die Kanal-URI für das Zielobjekt.</param>
+        <param name="remoteChannelData">Ein Kanal-Datenobjekt Beschreiben eines Kanals auf dem Remoteserver.</param>
+        <summary>Erstellt eine Senkenkette.</summary>
+        <returns>Die erste Senke der neu gebildeten Channelsenkenkette oder <see langword="null" />, was bedeutet, dass dieser Anbieter nicht wird oder eine Verbindung für diesen Endpunkt bereitstellen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink%2A> -Methode aufgerufen wird, erstellt eine eigenen Kanalsenke, leitet die <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink%2A> Aufruf an den nächsten Senkenanbieter in der Kette (sofern vorhanden), und es wird sichergestellt, dass die nächste Senke und der aktuellen Aktivität miteinander verknüpft werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IClientChannelSinkProvider Next { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IClientChannelSinkProvider Next" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.Next" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IClientChannelSinkProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den nächsten <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> in der Kette.</summary>
+        <value>Das nächste <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> in der Kette.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

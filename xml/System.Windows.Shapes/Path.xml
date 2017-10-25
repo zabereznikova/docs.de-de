@@ -1,0 +1,161 @@
+<Type Name="Path" FullName="System.Windows.Shapes.Path">
+  <TypeSignature Language="C#" Value="public sealed class Path : System.Windows.Shapes.Shape" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Path extends System.Windows.Shapes.Shape" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shapes.Path" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Shapes.Shape</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeichnet eine Reihe von miteinander verbundenen Linien und Kurven.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Shapes.Path> Objekt kann geschlossene oder offene Formen, Mehrfachformen und sogar gekrümmte Formen gezeichnet.  
+  
+ Im Gegensatz zu den <xref:System.Windows.Shapes.Line> und <xref:System.Windows.Shapes.Polyline> Objekte aufweist, können Sie dieses Objekt zum Zeichnen von Kurven. Finden Sie unter der <xref:System.Windows.Shapes.Path.Data%2A> -Eigenschaft für eine Beschreibung der Formen, die die <xref:System.Windows.Shapes.Path> Element unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shapes.Path> Element, und legen dessen Eigenschaften mithilfe von code.  
+  
+ [!code-cpp[shapesprocedural#ShapesProceduralPath](~/samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralpath)]
+ [!code-csharp[shapesprocedural#ShapesProceduralPath](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralpath)]
+ [!code-vb[shapesprocedural#ShapesProceduralPath](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralpath)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Path ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shapes.Path.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shapes.Path" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry Data" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Path.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.Geometry" /> ab, die die zu zeichnende Form angibt, bzw. legt diese fest.</summary>
+        <value>Eine Beschreibung der zu zeichnenden Form.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um einfache Formen zu zeichnen, verwenden die <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.LineGeometry>, und <xref:System.Windows.Media.RectangleGeometry> Objekte. Verwenden Sie zum Zeichnen von Kurven, Bögen oder komplexen Formen der <xref:System.Windows.Media.PathGeometry> Objekt. Um eine zusammengesetzte Geometrie zu erstellen, verwenden Sie eine <xref:System.Windows.Media.GeometryGroup>. Um Geometrien zu kombinieren, verwenden Sie eine <xref:System.Windows.Media.CombinedGeometry>.  
+  
+<a name="xamlPropertyElementUsage_Data"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<Path>  
+  <Path.Data>  
+    singleGeometry  
+  </Path.Data>  
+</Path>  
+```  
+  
+<a name="xamlAttributeUsage_Data"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Data="moveAndDrawCommands"/>  
+```  
+  
+<a name="xamlValues_Data"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *singleGeometry*  
+ Ein einzelnes Objekt-Element, das von abgeleitet ist <xref:System.Windows.Media.Geometry>. Folgende Möglichkeiten stehen zur Auswahl:  
+  
+-   Eine der einfachen Geometrien <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.LineGeometry>, oder <xref:System.Windows.Media.RectangleGeometry>.  
+  
+-   Eine einzelne <xref:System.Windows.Media.GeometryGroup>, die andere Geometrien als untergeordnete Elemente unterstützt. Siehe Abschnitt "XAML-Werte" für <xref:System.Windows.Media.GeometryGroup>.  
+  
+-   Ein <xref:System.Windows.Media.PathGeometry>, der untergeordneten Objektelemente, die ein Pfad Geometry-Objektmodell von Abbildungen und Segmente herstellen unterstützt. Siehe Abschnitt "XAML-Werte" für <xref:System.Windows.Media.PathGeometry>.  
+  
+ *moveAndDrawCommands*  
+ Eine oder mehrere verschieben, und zeichnen-Befehle. Die vollständige Syntax finden Sie unter [Markup Pfadsyntax](~/docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).  
+  
+<a name="dependencyPropertyInfo_Data"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Shapes.Path.DataProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shapes.Path> Element, und legen die <xref:System.Windows.Shapes.Path.Data%2A> Eigenschaft mithilfe von Code.  
+  
+ [!code-cpp[shapesprocedural#ShapesProceduralPath](~/samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralpath)]
+ [!code-csharp[shapesprocedural#ShapesProceduralPath](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralpath)]
+ [!code-vb[shapesprocedural#ShapesProceduralPath](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralpath)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DataProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DataProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Path.DataProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Path.Data" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefiningGeometry">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Geometry DefiningGeometry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry DefiningGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Path.DefiningGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

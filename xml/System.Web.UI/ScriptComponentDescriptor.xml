@@ -1,0 +1,280 @@
+<Type Name="ScriptComponentDescriptor" FullName="System.Web.UI.ScriptComponentDescriptor">
+  <TypeSignature Language="C#" Value="public class ScriptComponentDescriptor : System.Web.UI.ScriptDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptComponentDescriptor extends System.Web.UI.ScriptDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptComponentDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ScriptDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Wrapper für die Konvertierung von Serverkomponenten in Clientskripts bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse verwendet eine interne Wörterbuch für Verweise auf Komponenten, Elemente, Eigenschaften und Ereignisse. Füllen Sie dieses Wörterbuch aufweist und mithilfe der <xref:System.Web.UI.ScriptComponentDescriptor.AddComponentProperty%2A>, <xref:System.Web.UI.ScriptComponentDescriptor.AddElementProperty%2A>, <xref:System.Web.UI.ScriptComponentDescriptor.AddProperty%2A>, und <xref:System.Web.UI.ScriptComponentDescriptor.AddEvent%2A> Methoden. Wenn Sie fertig sind, rufen Sie die <xref:System.Web.UI.ScriptComponentDescriptor.GetScript%2A> Methode, um das Clientskript zu generieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptComponentDescriptor (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptComponentDescriptor.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Ziel-Clientkomponente.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Web.UI.ScriptComponentDescriptor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddComponentProperty">
+      <MemberSignature Language="C#" Value="public void AddComponentProperty (string name, string componentID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddComponentProperty(string name, string componentID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptComponentDescriptor.AddComponentProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="componentID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <param name="componentID">Die ID der Zielkomponente.</param>
+        <summary>Fügt die angegebene Eigenschaft hinzu und ordnet diese Eigenschaft mit dem angegebenen Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt die angegebene Eigenschaft auf das interne Wörterbuch von Eigenschaften, die vom Steuerelement verwendeten und konvertiert in Clientskripts durch die <xref:System.Web.UI.ScriptComponentDescriptor.GetScript%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />oder <paramref name="componentID" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddElementProperty">
+      <MemberSignature Language="C#" Value="public void AddElementProperty (string name, string elementID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddElementProperty(string name, string elementID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptComponentDescriptor.AddElementProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="elementID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <param name="elementID">Die ID des Target-Element.</param>
+        <summary>Fügt die angegebene Eigenschaft hinzu und ordnet diese Eigenschaft der angegebenen Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt die angegebene Eigenschaft auf das interne Wörterbuch von Eigenschaften, die in Clientskripts konvertiert werden die <xref:System.Web.UI.ScriptComponentDescriptor.GetScript%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />oder <paramref name="component" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEvent">
+      <MemberSignature Language="C#" Value="public void AddEvent (string name, string handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddEvent(string name, string handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptComponentDescriptor.AddEvent(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="handler" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Ereignisses.</param>
+        <param name="handler">Der Name der Handlerfunktion für das angegebene Ereignis.</param>
+        <summary>Fügt das angegebene Ereignis und Ereignishandler.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt das Ereignis und den Ereignishandler an das interne Wörterbuch der Ereignisse, die in Clientskripts konvertiert werden die <xref:System.Web.UI.ScriptComponentDescriptor.GetScript%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />oder <paramref name="handler" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProperty">
+      <MemberSignature Language="C#" Value="public void AddProperty (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddProperty(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptComponentDescriptor.AddProperty(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <param name="value">Der Wert der Eigenschaft.</param>
+        <summary>Fügt die angegebene Eigenschaft und Wert hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt die Eigenschaft und Wert an das interne Wörterbuch von Eigenschaften, die in Clientskripts konvertiert werden die <xref:System.Web.UI.ScriptComponentDescriptor.GetScript%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddScriptProperty">
+      <MemberSignature Language="C#" Value="public void AddScriptProperty (string name, string script);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddScriptProperty(string name, string script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptComponentDescriptor.AddScriptProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="script" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <param name="script">Das Skript, das an den Browser gerendert wird.</param>
+        <summary>Fügt die angegebene Eigenschaft und die Eigenschaft mit dem angegebenen Skript zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.ScriptComponentDescriptor.AddScriptProperty%2A> Methode, um Skripts zu rendern, die an den Browser nicht serialisiert ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="script" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientID">
+      <MemberSignature Language="C#" Value="public virtual string ClientID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptComponentDescriptor.ClientID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Bezeichner der Clientkomponente ab.</summary>
+        <value>Die ID des Client-Komponente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScript">
+      <MemberSignature Language="C#" Value="protected override string GetScript ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string GetScript() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptComponentDescriptor.GetScript" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Clientskript, das das Zielsteuerelement auf der Seite implementiert.</summary>
+        <returns>Die Clientskript, das das Zielsteuerelement auf der Seite implementiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public virtual string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptComponentDescriptor.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des aktuellen <see cref="T:System.Web.UI.ScriptComponentDescriptor" /> Instanz.</summary>
+        <value>Die ID des aktuellen <see cref="T:System.Web.UI.ScriptComponentDescriptor" /> -Instanz, falls festgelegt; andernfalls, eine leere Zeichenfolge ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptComponentDescriptor.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Zielkomponente Client fest.</summary>
+        <value>Der Typ des Ziel-Clientkomponente.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Es wurde versucht, die Eigenschaft festgelegt wird, um <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

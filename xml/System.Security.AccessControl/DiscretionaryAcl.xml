@@ -1,0 +1,633 @@
+<Type Name="DiscretionaryAcl" FullName="System.Security.AccessControl.DiscretionaryAcl">
+  <TypeSignature Language="C#" Value="public sealed class DiscretionaryAcl : System.Security.AccessControl.CommonAcl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DiscretionaryAcl extends System.Security.AccessControl.CommonAcl" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.DiscretionaryAcl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.CommonAcl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine besitzerverwaltete Zugriffssteuerungsliste (DACL) dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscretionaryAcl (bool isContainer, bool isDS, int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isContainer, bool isDS, int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.#ctor(System.Boolean,System.Boolean,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="isDS" Type="System.Boolean" />
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Wenn die neue <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt ist ein Container.</param>
+        <param name="isDS">
+          <see langword="true" />Wenn die neue <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt eine Zugriffssteuerungsliste (ACL) für ein Verzeichnisobjekt ist.</param>
+        <param name="capacity">Die Anzahl der Zugriffssteuerungseinträge (ACEs) dies <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> -Objekt enthalten kann. Diese Zahl wird nur als Hinweis verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.DiscretionaryAcl" />-Klasse mit den angegebenen Werten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscretionaryAcl (bool isContainer, bool isDS, System.Security.AccessControl.RawAcl rawAcl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isContainer, bool isDS, class System.Security.AccessControl.RawAcl rawAcl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawAcl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="isDS" Type="System.Boolean" />
+        <Parameter Name="rawAcl" Type="System.Security.AccessControl.RawAcl" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Wenn die neue <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt ist ein Container.</param>
+        <param name="isDS">
+          <see langword="true" />Wenn die neue <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt eine Zugriffssteuerungsliste (ACL) für ein Verzeichnisobjekt ist.</param>
+        <param name="rawAcl">Die zugrunde liegende <see cref="T:System.Security.AccessControl.RawAcl" /> Objekt für die neue <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt. Geben Sie <see langword="null" /> um eine leere ACL zu erstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Klasse mit den angegebenen Werten aus dem angegebenen <see cref="T:System.Security.AccessControl.RawAcl" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zugriffssteuerungseinträge (ACEs) in der <xref:System.Security.AccessControl.RawAcl> Objekt geklont werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscretionaryAcl (bool isContainer, bool isDS, byte revision, int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isContainer, bool isDS, unsigned int8 revision, int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.#ctor(System.Boolean,System.Boolean,System.Byte,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="isDS" Type="System.Boolean" />
+        <Parameter Name="revision" Type="System.Byte" />
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Wenn die neue <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt ist ein Container.</param>
+        <param name="isDS">
+          <see langword="true" />Wenn die neue <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt eine Zugriffssteuerungsliste (ACL) für ein Verzeichnisobjekt ist.</param>
+        <param name="revision">Die Revisionsebene der neuen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</param>
+        <param name="capacity">Die Anzahl der Zugriffssteuerungseinträge (ACEs) dies <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> -Objekt enthalten kann. Diese Zahl wird nur als Hinweis verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.DiscretionaryAcl" />-Klasse mit den angegebenen Werten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccess">
+      <MemberSignature Language="C#" Value="public void AddAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, System.Security.AccessControl.ObjectAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, class System.Security.AccessControl.ObjectAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.AddAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.ObjectAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) hinzufügen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> ein ACE hinzugefügt werden soll.</param>
+        <param name="rule">Die <see cref="T:System.Security.AccessControl.ObjectAccessRule" /> für den neuen Zugriff.</param>
+        <summary>Fügt einen Zugriffssteuerungseintrag (ACE) mit den angegebenen Einstellungen mit dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccess">
+      <MemberSignature Language="C#" Value="public void AddAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.AddAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) hinzufügen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> ein ACE hinzugefügt werden soll.</param>
+        <param name="accessMask">Die Zugriffsregel für den neuen ACE.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften des neuen ACE angeben.</param>
+        <param name="propagationFlags">Flags, die die Vererbungseigenschaften der Weitergabe für den neuen ACE angeben.</param>
+        <summary>Fügt einen Zugriffssteuerungseintrag (ACE) mit den angegebenen Einstellungen mit dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann dazu führen, dass vorhandene ACEs zusammengeführt werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccess">
+      <MemberSignature Language="C#" Value="public void AddAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.ObjectAceFlags objectFlags, valuetype System.Guid objectType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.AddAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="objectFlags" Type="System.Security.AccessControl.ObjectAceFlags" />
+        <Parameter Name="objectType" Type="System.Guid" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) hinzufügen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> ein ACE hinzugefügt werden soll.</param>
+        <param name="accessMask">Die Zugriffsregel für den neuen ACE.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften des neuen ACE angeben.</param>
+        <param name="propagationFlags">Flags, die die Vererbungseigenschaften der Weitergabe für den neuen ACE angeben.</param>
+        <param name="objectFlags">Flags, die angeben, wenn die <c>ObjectType</c> und <c>Standardtyp</c> Parameter enthalten, nicht -<see langword="null" /> Werte.</param>
+        <param name="objectType">Die Identität der Klasse von Objekten, die für die der neue ACE gilt.</param>
+        <param name="inheritedObjectType">Die Identität der Klasse von untergeordneten Objekten, die den neuen ACE erben kann.</param>
+        <summary>Fügt einen Zugriffssteuerungseintrag (ACE) mit den angegebenen Einstellungen mit dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt. Verwenden Sie diese Methode für Verzeichnisobjekt Zugriffssteuerungslisten (ACLs), wenn Sie den Objekttyp oder dem vererbten Objekttyp für den neuen ACE angeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann dazu führen, dass vorhandene ACEs zusammengeführt werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="RemoveAccess">
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Entfernt die angegebene Zugriffssteuerungsregel aus dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Entfernen des Zugriffs erfolgt mithilfe eines komplexen Algorithmus, das ACEs hinzufügen können, zusätzlich zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="RemoveAccess">
+      <MemberSignature Language="C#" Value="public bool RemoveAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, System.Security.AccessControl.ObjectAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, class System.Security.AccessControl.ObjectAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.RemoveAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.ObjectAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) zu entfernen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für das Entfernen einer Zugriffssteuerungsregel.</param>
+        <param name="rule">Die <see cref="T:System.Security.AccessControl.ObjectAccessRule" /> für den Zugriff entfernen.</param>
+        <summary>Entfernt die angegebene Zugriffssteuerungsregel aus dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</summary>
+        <returns>Gibt <see cref="T:System.Boolean" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccess">
+      <MemberSignature Language="C#" Value="public bool RemoveAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.RemoveAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) zu entfernen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für das Entfernen einer Zugriffssteuerungsregel.</param>
+        <param name="accessMask">Die Zugriffsmaske für die Regel entfernt werden soll.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften der zu entfernenden Regel angeben.</param>
+        <param name="propagationFlags">Flags, die die Eigenschaften für die Regel zu entfernenden Vererbungsweitergabe angeben.</param>
+        <summary>Entfernt die angegebene Zugriffssteuerungsregel aus dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Methode wurde erfolgreich mit dem angegebenen Zugriffsmodus entfernt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Entfernen des Zugriffs erfolgt mithilfe eines komplexen Algorithmus, das Zugriffssteuerungseinträge (ACEs) hinzufügen, können zusätzlich zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccess">
+      <MemberSignature Language="C#" Value="public bool RemoveAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.ObjectAceFlags objectFlags, valuetype System.Guid objectType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.RemoveAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="objectFlags" Type="System.Security.AccessControl.ObjectAceFlags" />
+        <Parameter Name="objectType" Type="System.Guid" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) zu entfernen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für das Entfernen einer Zugriffssteuerungsregel.</param>
+        <param name="accessMask">Die Zugriffsmaske für die Regel entfernt werden soll.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften der Zugriffsregel zu entfernende Steuerelement angeben.</param>
+        <param name="propagationFlags">Flags, die die Eigenschaften für die Regel zu entfernenden Vererbungsweitergabe angeben.</param>
+        <param name="objectFlags">Flags, die angeben, wenn die <c>ObjectType</c> und <c>Standardtyp</c> Parameter enthalten, nicht -<see langword="null" /> Werte.</param>
+        <param name="objectType">Die Identität der Klasse von Objekten, die für die entfernten Zugriffsregel gilt.</param>
+        <param name="inheritedObjectType">Die Identität der Klasse von untergeordneten Objekten, die den entfernten Zugriffsregel erben kann.</param>
+        <summary>Entfernt die angegebene Zugriffssteuerungsregel aus dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt. Verwenden Sie diese Methode für Verzeichnisobjekt Zugriffssteuerungslisten (ACLs), wenn Sie den Objekttyp oder dem vererbten Objekttyp angeben.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Methode wurde erfolgreich mit dem angegebenen Zugriffsmodus entfernt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Entfernen des Zugriffs erfolgt mithilfe eines komplexen Algorithmus, das Zugriffssteuerungseinträge (ACEs) hinzufügen, können zusätzlich zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessSpecific (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, System.Security.AccessControl.ObjectAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessSpecific(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, class System.Security.AccessControl.ObjectAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.RemoveAccessSpecific(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.ObjectAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) zu entfernen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für die einen ACE zu entfernen.</param>
+        <param name="rule">Die <see cref="T:System.Security.AccessControl.ObjectAccessRule" /> für den Zugriff entfernen.</param>
+        <summary>Entfernt den angegebenen Zugriffssteuerungseintrag (ACE) aus dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessSpecific (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessSpecific(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.RemoveAccessSpecific(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) zu entfernen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für die einen ACE zu entfernen.</param>
+        <param name="accessMask">Die Zugriffsmaske für den ACE entfernt werden soll.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften der zu entfernenden ACE angeben.</param>
+        <param name="propagationFlags">Flags, die die Eigenschaften für den ACE zu entfernenden Vererbungsweitergabe angeben.</param>
+        <summary>Entfernt den angegebenen Zugriffssteuerungseintrag (ACE) aus dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessSpecific (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessSpecific(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.ObjectAceFlags objectFlags, valuetype System.Guid objectType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.RemoveAccessSpecific(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="objectFlags" Type="System.Security.AccessControl.ObjectAceFlags" />
+        <Parameter Name="objectType" Type="System.Guid" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) zu entfernen.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für die einen ACE zu entfernen.</param>
+        <param name="accessMask">Die Zugriffsmaske für den ACE entfernt werden soll.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften der zu entfernenden ACE angeben.</param>
+        <param name="propagationFlags">Flags, die die Eigenschaften für den ACE zu entfernenden Vererbungsweitergabe angeben.</param>
+        <param name="objectFlags">Flags, die angeben, wenn die <c>ObjectType</c> und <c>Standardtyp</c> Parameter enthalten, nicht -<see langword="null" /> Werte.</param>
+        <param name="objectType">Die Identität der Klasse von Objekten, die für die entfernte ACE gilt.</param>
+        <param name="inheritedObjectType">Die Identität der Klasse von untergeordneten Objekten, die den entfernten ACE erben kann.</param>
+        <summary>Entfernt den angegebenen Zugriffssteuerungseintrag (ACE) aus dem aktuellen <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> Objekt. Verwenden Sie diese Methode für Verzeichnisobjekt Zugriffssteuerungslisten (ACLs) Wenn Sie den Objekttyp oder dem vererbten Objekttyp für den ACE angeben, entfernt werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SetAccess">
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Legt die angegebenen Zugriffssteuerung für den angegebenen <see cref="T:System.Security.Principal.SecurityIdentifier" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methoden entfernen alle vorhandenen Zugriffssteuerungseinträge (ACEs), die beide entsprechen angegeben <xref:System.Security.Principal.SecurityIdentifier> Objekt und dem angegebenen Zugriffsqualifizierer (zulassen oder verweigern).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SetAccess">
+      <MemberSignature Language="C#" Value="public void SetAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, System.Security.AccessControl.ObjectAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, class System.Security.AccessControl.ObjectAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.SetAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.ObjectAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) festgelegt.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für die einen ACE festgelegt.</param>
+        <param name="rule">Die <see cref="T:System.Security.AccessControl.ObjectAccessRule" /> für den Zugriff festgelegt.</param>
+        <summary>Legt die angegebenen Zugriffssteuerung für den angegebenen <see cref="T:System.Security.Principal.SecurityIdentifier" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccess">
+      <MemberSignature Language="C#" Value="public void SetAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.SetAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) festgelegt.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für die einen ACE festgelegt.</param>
+        <param name="accessMask">Die Zugriffsregel für den neuen ACE.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften des neuen ACE angeben.</param>
+        <param name="propagationFlags">Flags, die die Vererbungseigenschaften der Weitergabe für den neuen ACE angeben.</param>
+        <summary>Legt die angegebenen Zugriffssteuerung für den angegebenen <see cref="T:System.Security.Principal.SecurityIdentifier" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt alle vorhandenen Zugriffssteuerungseinträge (ACEs), die mit übereinstimmen, die beide angegeben <xref:System.Security.Principal.SecurityIdentifier> Objekt und dem angegebenen Zugriffsqualifizierer (zulassen oder verweigern).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccess">
+      <MemberSignature Language="C#" Value="public void SetAccess (System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, int accessMask, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccess(valuetype System.Security.AccessControl.AccessControlType accessType, class System.Security.Principal.SecurityIdentifier sid, int32 accessMask, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.ObjectAceFlags objectFlags, valuetype System.Guid objectType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DiscretionaryAcl.SetAccess(System.Security.AccessControl.AccessControlType,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessType" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="objectFlags" Type="System.Security.AccessControl.ObjectAceFlags" />
+        <Parameter Name="objectType" Type="System.Guid" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="accessType">Der Typ der Zugriffssteuerung (zulassen oder verweigern) festgelegt.</param>
+        <param name="sid">Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für die einen ACE festgelegt.</param>
+        <param name="accessMask">Die Zugriffsregel für den neuen ACE.</param>
+        <param name="inheritanceFlags">Flags, die die Vererbungseigenschaften des neuen ACE angeben.</param>
+        <param name="propagationFlags">Flags, die die Vererbungseigenschaften der Weitergabe für den neuen ACE angeben.</param>
+        <param name="objectFlags">Flags, die angeben, wenn die <c>ObjectType</c> und <c>Standardtyp</c> Parameter enthalten, nicht -<see langword="null" /> Werte.</param>
+        <param name="objectType">Die Identität der Klasse von Objekten, die für die der neue ACE gilt.</param>
+        <param name="inheritedObjectType">Die Identität der Klasse von untergeordneten Objekten, die den neuen ACE erben kann.</param>
+        <summary>Legt die angegebenen Zugriffssteuerung für den angegebenen <see cref="T:System.Security.Principal.SecurityIdentifier" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt alle vorhandenen Zugriffssteuerungseinträge (ACEs), die mit übereinstimmen, die beide angegeben <xref:System.Security.Principal.SecurityIdentifier> Objekt und dem angegebenen Zugriffsqualifizierer (zulassen oder verweigern).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

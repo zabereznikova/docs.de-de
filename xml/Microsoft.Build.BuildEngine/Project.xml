@@ -1,0 +1,1827 @@
+<Type Name="Project" FullName="Microsoft.Build.BuildEngine.Project">
+  <TypeSignature Language="C#" Value="public class Project" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Project extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.Project" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.Project from the Microsoft.Build assembly instead.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Projekt, das Verwenden von MSBuild erstellt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.Build.BuildEngine.Project> stellt ein [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Projekt. Es ist ein Container für Elemente, Eigenschaften und Ziele. Sie können projizieren von Inhalten aus speicherinternes XML oder aus einer XML-Datei, und laden kann speichern als XML-Datei, die meisten Leerzeichen und alle XML-Kommentare beibehalten.  
+  
+ Jede <xref:Microsoft.Build.BuildEngine.Project> zugeordnet werden ein <xref:Microsoft.Build.BuildEngine.Engine> Informationen zu gemeinsamen Zugriff auf. Während eines Builds die <xref:Microsoft.Build.BuildEngine.Engine> Objekt der nachverfolgt welche Projekte derzeit erstellt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Project" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty> <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Klassen, die alle Elemente und Eigenschaften des Projekts anzuzeigen.  
+  
+ [!code-csharp[msbuild_ListItemsAndProperties#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ListItemsAndProperties/CS/Program.cs#1)]
+ [!code-vb[msbuild_ListItemsAndProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.BuildEngine.Project" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty> <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Klassen, die alle Elemente und Eigenschaften des Projekts anzuzeigen.  
+  
+ [!code-csharp[msbuild_ListItemsAndProperties#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ListItemsAndProperties/CS/Program.cs#1)]
+ [!code-vb[msbuild_ListItemsAndProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.BuildEngine.Engine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.BuildEngine.Engine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.#ctor(Microsoft.Build.BuildEngine.Engine)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="engine" Type="Microsoft.Build.BuildEngine.Engine" />
+      </Parameters>
+      <Docs>
+        <param name="engine">Die <see cref="T:Microsoft.Build.BuildEngine.Engine" /> Instanz zum Erstellen des Projekts im Arbeitsspeicher verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.BuildEngine.Project" /> -Klasse unter Verwendung der angegebenen <see cref="T:Microsoft.Build.BuildEngine.Engine" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.BuildEngine.Engine engine, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.BuildEngine.Engine engine, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.#ctor(Microsoft.Build.BuildEngine.Engine,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="engine" Type="Microsoft.Build.BuildEngine.Engine" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="engine">Die <see cref="T:Microsoft.Build.BuildEngine.Engine" /> Instanz zum Erstellen des Projekts im Arbeitsspeicher verwendet werden soll.</param>
+        <param name="toolsVersion">Die <see cref="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" /> zum Erstellen des Projekts im Arbeitsspeicher verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.BuildEngine.Project" /> -Klasse unter Verwendung der angegebenen <see cref="T:Microsoft.Build.BuildEngine.Engine" /> und <see cref="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewImport">
+      <MemberSignature Language="C#" Value="public void AddNewImport (string projectFile, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddNewImport(string projectFile, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.AddNewImport(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Der Name der zu importierenden Projektdatei. Entspricht dem <see langword="Project" />-Attribut des <see langword="Import" />-Elements.</param>
+        <param name="condition">Die Bedingung, die vor dem Importieren des Projekts ausgewertet werden muss. Entspricht dem <see langword="Condition" />-Attribut des <see langword="Import" />-Elements.</param>
+        <summary>Fügt eine [Import](http://msdn.microsoft.com/library/3bfecaf1-69fd-4008-b651-c9dafd4389d9) Element bis zum Ende des Projekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItem AddNewItem (string itemName, string itemInclude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItem AddNewItem(string itemName, string itemInclude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.AddNewItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="itemInclude" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name der Elementsammlung, der das Element hinzugefügt werden soll. Entspricht dem benutzerdefinierten Namen des <see langword="Item" />-Elements.</param>
+        <param name="itemInclude">Der Wert des <see langword="Include" />-Attributs des Elements.</param>
+        <summary>Fügt das angegebene [Element](http://msdn.microsoft.com/library/dcef5f91-0613-4bfc-8ee9-d7004bb6d3a9) Element zum Projekt.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />, das das erstellte Element enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode versucht, das Element auf das Projekt in der Nähe von den anderen Elementen in der Elementauflistung hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItem AddNewItem (string itemName, string itemInclude, bool treatItemIncludeAsLiteral);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItem AddNewItem(string itemName, string itemInclude, bool treatItemIncludeAsLiteral) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.AddNewItem(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="itemInclude" Type="System.String" />
+        <Parameter Name="treatItemIncludeAsLiteral" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name der Elementsammlung, der das Element hinzugefügt werden soll. Entspricht dem benutzerdefinierten Namen des <see langword="Item" />-Elements.</param>
+        <param name="itemInclude">Der Wert des <see langword="Include" />-Attributs des Elements.</param>
+        <param name="treatItemIncludeAsLiteral">
+          <see langword="true" />behandelt die <c>ItemInclude</c> -Parameter als Literalwert; anderenfalls <see langword="false" />.</param>
+        <summary>Fügt das angegebene [Element](http://msdn.microsoft.com/library/dcef5f91-0613-4bfc-8ee9-d7004bb6d3a9) Element zum Projekt.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />, das das erstellte Element enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode versucht, das Element auf das Projekt in der Nähe von den anderen Elementen in der Elementauflistung hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewItemGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItemGroup AddNewItemGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItemGroup AddNewItemGroup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.AddNewItemGroup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt ein neues [ItemGroup](http://msdn.microsoft.com/library/aac894e3-a9f1-4bbc-a796-6ef07001f35b) Element zum Projekt.</summary>
+        <returns>Eine <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" />, die die erstellte Elementgruppe enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewPropertyGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildPropertyGroup AddNewPropertyGroup (bool insertAtEndOfProject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildPropertyGroup AddNewPropertyGroup(bool insertAtEndOfProject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.AddNewPropertyGroup(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="insertAtEndOfProject" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="insertAtEndOfProject">
+          <see langword="true" /> zum Einfügen der <see langword="PropertyGroup" /> am Ende des Projekts; andernfalls <see langword="false" />.</param>
+        <summary>Fügt ein neues [PropertyGroup](http://msdn.microsoft.com/library/ff1e6c68-b9a1-4263-a1ce-dc3b829a64d4) Element zum Projekt.</summary>
+        <returns>Eine <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />, die die erstellte Eigenschaftengruppe enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewUsingTaskFromAssemblyFile">
+      <MemberSignature Language="C#" Value="public void AddNewUsingTaskFromAssemblyFile (string taskName, string assemblyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddNewUsingTaskFromAssemblyFile(string taskName, string assemblyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyFile(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="assemblyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">Der Name des Tasks, auf den aus einer Assembly heraus verwiesen wird. Entspricht dem <see langword="TaskName" />-Attribut des <see langword="UsingTask" />-Elements.</param>
+        <param name="assemblyFile">Der Dateipfad zur Assembly. Entspricht dem <see langword="AssemblyFile" />-Attribut des <see langword="UsingTask" />-Elements.</param>
+        <summary>Fügt ein neues [UsingTask](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) Element mit der angegebenen Assemblydatei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewUsingTaskFromAssemblyName">
+      <MemberSignature Language="C#" Value="public void AddNewUsingTaskFromAssemblyName (string taskName, string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddNewUsingTaskFromAssemblyName(string taskName, string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyName(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">Der Name des Tasks, auf den aus einer Assembly heraus verwiesen wird. Entspricht dem <see langword="TaskName" />-Attribut des <see langword="UsingTask" />-Elements.</param>
+        <param name="assemblyName">Der Namen zu ladenden Assembly. Entspricht dem <see langword="AssemblyName" />-Attribut des <see langword="UsingTask" />-Elements.</param>
+        <summary>Fügt ein neues [UsingTask](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) Element mit dem angegebenen Assemblynamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Build" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Standardziele des Projekts.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string targetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string targetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Build(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetName">Das Ziel zu erstellen.</param>
+        <summary>Erstellt das angegebene Ziel im Projekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string[] targetNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string[] targetNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Build(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="targetNames">Die Liste der Ziele, die erstellt werden soll. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) auf die Standardziele zu erstellen.</param>
+        <summary>Erstellt die angegebene Liste der Ziele im Projekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string[] targetNames, System.Collections.IDictionary targetOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string[] targetNames, class System.Collections.IDictionary targetOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Build(System.String[],System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="targetNames">Die Liste der Ziele, die erstellt werden soll. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) auf die Standardziele zu erstellen.</param>
+        <param name="targetOutputs">Die Ausgaben der erstellten Ziele. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" />) Wenn Ausgaben nicht erforderlich sind.</param>
+        <summary>Erstellt die angegebene Liste von Zielen im Projekt, und gibt die Ausgaben der Ziele zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string[] targetNames, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string[] targetNames, class System.Collections.IDictionary targetOutputs, valuetype Microsoft.Build.BuildEngine.BuildSettings buildFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Build(System.String[],System.Collections.IDictionary,Microsoft.Build.BuildEngine.BuildSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+        <Parameter Name="buildFlags" Type="Microsoft.Build.BuildEngine.BuildSettings" />
+      </Parameters>
+      <Docs>
+        <param name="targetNames">Die Liste der Ziele, die erstellt werden soll. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) auf die Standardziele zu erstellen.</param>
+        <param name="targetOutputs">Die Ausgaben der erstellten Ziele. Dieser Parameter kann ein null-Verweis sein (<see langword="Nothing" />) Wenn Ausgaben nicht erforderlich sind.</param>
+        <param name="buildFlags">Die <see cref="T:Microsoft.Build.BuildEngine.BuildSettings" /> für den Build angewendet.</param>
+        <summary>Erstellt die angegebene Liste von Zielen im Projekt mithilfe der angegebenen Einstellungen, und gibt die Ausgaben der Ziele zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erstellung erfolgreich war; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEnabled">
+      <MemberSignature Language="C#" Value="public bool BuildEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BuildEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.BuildEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Projekt zum Erstellen von Aufgaben und Ziele aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Projekt zum Erstellen von Aufgaben und Ziele aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig verwendet diese Eigenschaft der Wert der <xref:Microsoft.Build.BuildEngine.Engine.BuildEnabled%2A> Eigenschaft des Projekts <xref:Microsoft.Build.BuildEngine.Project.ParentEngine%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTargets">
+      <MemberSignature Language="C#" Value="public string DefaultTargets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.DefaultTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <c>DefaultTargets</c> Attribut von der [Projekt](http://msdn.microsoft.com/library/d1cda56a-dbef-4109-9201-39e962e3f653) Element in der [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Projekt.</summary>
+        <value>Ein Semikolon (;) durch Trennzeichen getrennte Liste der Ziele, angegeben der <c>DefaultTargets</c> Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultToolsVersion">
+      <MemberSignature Language="C#" Value="public string DefaultToolsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt fest oder ruft die ToolsVersion XML-Attribut finden Sie auf der <see cref="Project" /> [Project-Element (MSBuild)](http://msdn.microsoft.com/library/d1cda56a-dbef-4109-9201-39e962e3f653) Element in der Projektdatei.</summary>
+        <value>Eine Zeichenfolge, die die ToolsVersion darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion%2A> Attribut ist nicht vorhanden, auf die [Project-Element (MSBuild)](http://msdn.microsoft.com/library/d1cda56a-dbef-4109-9201-39e962e3f653) Element, das Abrufen des Werts gibt die standardmäßige Toolsversion des übergeordneten Elements <xref:Microsoft.Build.BuildEngine>.  
+  
+ Die <xref:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion%2A> Wert kann die ToolsVersion, die während eines Builds verwendet werden, wenn dessen Wert, während der Erstellung der überschrieben wird unterscheiden der <xref:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion%2A> -Instanz, oder es wird festgelegt, auf einen bestimmten Wert mit der <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion%2A> Eigenschaft. Festlegen der <xref:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion%2A> Wert kann nicht die ToolsVersion ändern, wenn überschrieben wurde, aber Sie, die Tools-Version mithilfe ändern können der <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion%2A> Eigenschaft.  
+  
+ Weitere Informationen zu Versionen der Tools finden Sie unter `MSBuild Tool Set (ToolsVersion)`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung für die Projektdatei.</summary>
+        <value>Ein <see cref="T:System.Text.Encoding" /> Wert der Projektdatei.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluatedItems">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItemGroup EvaluatedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildItemGroup EvaluatedItems" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.EvaluatedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Elemente, die während der Builderstellung ausgewertet.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> mit den Elementen, die während der Builderstellung ausgewertet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:Microsoft.Build.BuildEngine.BuildItemGroup> die ausgewerteten Elemente im Projekt nach der Erweiterung der Platzhalter und Eigenschaften enthält. Die Elemente in dieser Eigenschaft darstellen, die tatsächlichen Elemente, die während des Buildprozesses verwendet wird. Dieser Eigenschaftswert wird generiert, jedes Mal, wenn ein Element im Projekt ändert. Änderungen an vorhandenen Elementen in dieser Auflistung werden berücksichtigt, dass das nächste Mal, wenn das Projekt gespeichert ist, jedoch hinzufügen oder löschen Elemente des Projekts nicht beeinträchtigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluatedItemsIgnoringCondition">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItemGroup EvaluatedItemsIgnoringCondition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildItemGroup EvaluatedItemsIgnoringCondition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.EvaluatedItemsIgnoringCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Elemente in einem Projekt, auch wenn diese nicht in den Buildprozess verwendet werden, da ein [Bedingung](http://msdn.microsoft.com/library/9d7aa308-b667-48ed-b4c9-a61e49eb0a85) Attribut ergab <see langword="false" />.</summary>
+        <value>Eine <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> mit allen Elementen in einem Projekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:Microsoft.Build.BuildEngine.BuildItemGroup> enthält alle Elemente im Projekt nach der Erweiterung der Platzhalter und Eigenschaften, einschließlich derer, die während des Buildprozesses aufgrund von nicht verwendeten `Condition` Attribute ausgewertete `false`. Dieser Eigenschaftswert wird nur generiert, wenn bestimmte Änderungen auftreten, z. B. ein neues Element zum Projekt hinzugefügt wird. Hinzufügen oder Löschen von Elementen aus dieser Eigenschaft wirkt sich nicht auf das Projekt aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluatedProperties">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildPropertyGroup EvaluatedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildPropertyGroup EvaluatedProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.EvaluatedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Eigenschaften, die während der Builderstellung ausgewertet.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> mit den Eigenschaften, die während der Builderstellung ausgewertet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> die ausgewerteten Eigenschaften in das Projekt nach dem Ausführen der Erweiterung der Bedingung Auswertung und Eigenschaften enthält. Die Eigenschaften in dieser Auflistung enthalten globale Eigenschaften, Umgebungsvariablen, reservierte Eigenschaften und importierten Eigenschaften. Änderungen an den vorhandenen Eigenschaften in dieser Auflistung werden berücksichtigt, dass das nächste Mal, wenn das Projekt gespeichert ist, jedoch hinzufügen oder Löschen von Eigenschaften des Projekts nicht beeinträchtigt wird.  
+  
+> [!NOTE]
+>  Das Klonen einer <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> kann die Leistung negativ beeinträchtigt. Verwenden Sie nur eine Kopie dieser Eigenschaft auf, wenn es unbedingt erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullFileName">
+      <MemberSignature Language="C#" Value="public string FullFileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullFileName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.FullFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vollqualifizierten Pfad und Namen der Projektdatei.</summary>
+        <value>Der vollständige Pfad der Projektdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist eine leere `string` Wenn das Projekt keine Datei zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConditionedPropertyValues">
+      <MemberSignature Language="C#" Value="public string[] GetConditionedPropertyValues (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetConditionedPropertyValues(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.GetConditionedPropertyValues(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Die Eigenschaft beim Generieren der Liste möglicher Werte verwendet werden soll.</param>
+        <summary>Gibt eine Liste der möglichen Werte für die angegebene Eigenschaft zurück.</summary>
+        <returns>Die Liste der möglichen Werte für die Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert die Liste der möglichen Werte durch Überprüfen aller Attribute im Projekt, die die Eigenschaft beinhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvaluatedItemsByName">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItemGroup GetEvaluatedItemsByName (string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItemGroup GetEvaluatedItemsByName(string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name der Elementauflistung.</param>
+        <summary>Gibt alle Elemente, die zu der angegebenen Elementauflistung gehören ausgewertet.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> , enthält alle ausgewerteten Elemente, die zu der angegebenen Elementauflistung gehören.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvaluatedItemsByNameIgnoringCondition">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItemGroup GetEvaluatedItemsByNameIgnoringCondition (string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItemGroup GetEvaluatedItemsByNameIgnoringCondition(string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByNameIgnoringCondition(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name der angegebenen Elementsammlung.</param>
+        <summary>Gibt alle Elemente zurück, die zur angegebenen Elementsammlung gehören.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroup" /> mit allen Elementen, die auf die Auflistung angegebene Element gehört, auch wenn Sie nicht im Buildprozess verwendet werden, da ein [Bedingung](http://msdn.microsoft.com/library/9d7aa308-b667-48ed-b4c9-a61e49eb0a85) Attribut ergab <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvaluatedProperty">
+      <MemberSignature Language="C#" Value="public string GetEvaluatedProperty (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetEvaluatedProperty(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.GetEvaluatedProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Den Namen der Eigenschaft.</param>
+        <summary>Gibt den Wert der angegebenen Eigenschaft zurück.</summary>
+        <returns>Der Wert der angegebenen Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine große Anzahl von Eigenschaftswerten abrufen müssen, verwenden Sie die <xref:Microsoft.Build.BuildEngine.Project.EvaluatedProperties%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectExtensions">
+      <MemberSignature Language="C#" Value="public string GetProjectExtensions (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetProjectExtensions(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.GetProjectExtensions(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Name des Elements im zurückzugebenden <see langword="ProjectExtensions" />-Element.</param>
+        <summary>Gibt einen Zeichenfolgenwert, der XML aus dem angegebenen Element in der [ProjectExtensions](http://msdn.microsoft.com/library/f95f312f-ff92-41eb-9469-ad99e236a307) Element.</summary>
+        <returns>Der Zeichenfolgenwert des angegebenen Elements in der <c>ProjectExtensions</c> Element des Projekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildPropertyGroup GlobalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildPropertyGroup GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.GlobalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung der globalen Eigenschaften für das Projekt.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> , enthält die globalen Eigenschaften für das Projekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Globale Eigenschaften werden festgelegt, mit der **"/ Property"** wechseln Sie für die Befehlszeile oder die, die vor dem Aufrufen durch die integrierte Entwicklungsumgebung festgelegten Eigenschaften [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)]. Weitere Informationen finden Sie unter [MSBuild-Befehlszeilenreferenz](http://msdn.microsoft.com/library/edaa65ec-ab8a-42a1-84cb-d76d5b2f4584).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasToolsVersionAttribute">
+      <MemberSignature Language="C#" Value="public bool HasToolsVersionAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasToolsVersionAttribute" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.HasToolsVersionAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Projektdatei der ToolsVersion XML-Attribut verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn das Projekt das ToolsVersion-Attribut hat. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel ToolsVersion-Attribut ist `Project ToolsVersion="3.5"`. Dieses Attribut Teammodells werden Projekte Ziel .NET Framework-Versionen, derzeit 2.0, 3.0 und 3.5. Weitere Informationen zu ToolsVersion finden Sie unter [für bestimmte Versionen von .NET Framework erstellen](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imports">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.ImportCollection Imports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.ImportCollection Imports" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.Imports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.ImportCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Projekte in diesem Projekt importiert.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> Projekte, die in diesem Projekt importiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Importierte Projekte werden durch das Element in das Projekt angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialTargets">
+      <MemberSignature Language="C#" Value="public string InitialTargets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitialTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.InitialTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <c>InitialTargets</c> Attribut von der [Projekt](http://msdn.microsoft.com/library/d1cda56a-dbef-4109-9201-39e962e3f653) Element in der [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Projekt.</summary>
+        <value>Ein Semikolon (;) durch Trennzeichen getrennte Liste der Ziele, angegeben der <c>InitialTargets</c> Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Projekt geändert hat und in einer Datei gespeichert werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn das Projekt geändert wurde und muss gespeichert werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidated">
+      <MemberSignature Language="C#" Value="public bool IsValidated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValidated" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.IsValidated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Projekt ist, anhand eines Schemas überprüft werden.</summary>
+        <value>
+          <see langword="true" />Wenn das Projekt anhand eines Schemas überprüft werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemGroups">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItemGroupCollection ItemGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildItemGroupCollection ItemGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.ItemGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItemGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Elementgruppen mit angegebenen ab der [ItemGroup](http://msdn.microsoft.com/library/aac894e3-a9f1-4bbc-a796-6ef07001f35b) Element im Projekt.</summary>
+        <value>Eine <see cref="T:Microsoft.Build.BuildEngine.BuildItemGroupCollection" />, die die im Projekt angegebenen Elementgruppen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> zurückgegebene Eigenschaft enthält, die Elementgruppen in diesem Projekt und alle importierten Projekte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty> <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Klassen, die alle Elemente und Eigenschaften des Projekts anzuzeigen.  
+  
+ [!code-csharp[msbuild_ListItemsAndProperties#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ListItemsAndProperties/CS/Program.cs#1)]
+ [!code-vb[msbuild_ListItemsAndProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Load">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lädt den Inhalt einer Projektdatei in die <see cref="T:Microsoft.Build.BuildEngine.Project" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Klassen, die alle Elemente und Eigenschaften des Projekts anzuzeigen.  
+  
+ [!code-csharp[msbuild_ListItemsAndProperties#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ListItemsAndProperties/CS/Program.cs#1)]
+ [!code-vb[msbuild_ListItemsAndProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.IO.TextReader textReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(class System.IO.TextReader textReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Load(System.IO.TextReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">Die <see cref="T:System.IO.TextReader" /> geladen.</param>
+        <summary>Lädt den Inhalt des angegebenen <see cref="T:System.IO.TextReader" /> in die <see cref="T:Microsoft.Build.BuildEngine.Project" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">Die Datei, in der <paramref name="textReader" /> <see cref="T:System.IO.TextReader" /> ist keine gültige Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (string projectFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(string projectFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Load(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileName">Die Projektdatei zu laden.</param>
+        <summary>Lädt den Inhalt der angegebenen Projektdatei in die <see cref="T:Microsoft.Build.BuildEngine.Project" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Klassen, die alle Elemente und Eigenschaften des Projekts anzuzeigen.  
+  
+ [!code-csharp[msbuild_ListItemsAndProperties#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ListItemsAndProperties/CS/Program.cs#1)]
+ [!code-vb[msbuild_ListItemsAndProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">Die Datei <paramref name="projectFileName" /> ist keine gültige Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.IO.TextReader textReader, Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(class System.IO.TextReader textReader, valuetype Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Load(System.IO.TextReader,Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">Ein <see cref="T:System.IO.TextReader" /> Objekt, das den Projektinhalt enthält.</param>
+        <param name="projectLoadSettings">Ein <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> Wert, der angibt, die Einstellungen für das Projekt geladen wird.</param>
+        <summary>Liest den Inhalt dieses Projekts aus einer Zeichenfolge, die den XML-Inhalt enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (string projectFileName, Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(string projectFileName, valuetype Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Load(System.String,Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileName" Type="System.String" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileName">Eine Zeichenfolge, die den Namen der zu ladenden Datei.</param>
+        <param name="projectLoadSettings">Ein <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> Wert, der angibt, die Einstellungen für das Projekt geladen wird.</param>
+        <summary>Liest den Inhalt dieses Projekts aus einer XML-Projektdatei auf dem Datenträger.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (string projectXml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(string projectXml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.LoadXml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectXml" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectXml">Die Zeichenfolge des XML zu laden.</param>
+        <summary>Lädt den Inhalt der angegebenen Zeichenfolge in der <see cref="T:Microsoft.Build.BuildEngine.Project" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Build.BuildEngine.InvalidProjectFileException">Der XML-Code in enthaltenen <paramref name="projectXML" /> ist keine gültige Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (string projectXml, Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(string projectXml, valuetype Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.LoadXml(System.String,Microsoft.Build.BuildEngine.ProjectLoadSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectXml" Type="System.String" />
+        <Parameter Name="projectLoadSettings" Type="Microsoft.Build.BuildEngine.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="projectXml">Eine Zeichenfolge mit dem Projektinhalt.</param>
+        <param name="projectLoadSettings">Ein <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> Wert, der angibt, die Einstellungen für das Projekt geladen wird.</param>
+        <summary>Liest den Inhalt dieses Projekts aus einer Zeichenfolge, die den XML-Inhalt enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkProjectAsDirty">
+      <MemberSignature Language="C#" Value="public void MarkProjectAsDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MarkProjectAsDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.MarkProjectAsDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see cref="P:Microsoft.Build.BuildEngine.Project.IsDirty" /> -Eigenschaft des Projekts auf <see langword="true" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentEngine">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.Engine ParentEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.Engine ParentEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.ParentEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.Engine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:Microsoft.Build.BuildEngine.Engine" /> wird das Projekt erstellt.</summary>
+        <value>Das übergeordnete Element <see cref="T:Microsoft.Build.BuildEngine.Engine" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyGroups">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildPropertyGroupCollection PropertyGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildPropertyGroupCollection PropertyGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.PropertyGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von den Eigenschaftengruppen angegeben, mit der [PropertyGroup](http://msdn.microsoft.com/library/ff1e6c68-b9a1-4263-a1ce-dc3b829a64d4) Element im Projekt.</summary>
+        <value>Eine <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection" />, die die im Projekt angegebenen Projektgruppen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> zurückgegebene Eigenschaft enthält die Eigenschaftengruppen in diesem Projekt und alle importierten Projekte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty> <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Klassen, die alle Elemente und Eigenschaften des Projekts anzuzeigen.  
+  
+ [!code-csharp[msbuild_ListItemsAndProperties#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ListItemsAndProperties/CS/Program.cs#1)]
+ [!code-vb[msbuild_ListItemsAndProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ListItemsAndProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllItemGroups">
+      <MemberSignature Language="C#" Value="public void RemoveAllItemGroups ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllItemGroups() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemoveAllItemGroups" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elementgruppen aus dem Projekt, aber importierte Projekte werden nicht geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllPropertyGroups">
+      <MemberSignature Language="C#" Value="public void RemoveAllPropertyGroups ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllPropertyGroups() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemoveAllPropertyGroups" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Eigenschaftengruppen aus dem Projekt, aber importierte Projekte werden nicht geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveImportedPropertyGroup">
+      <MemberSignature Language="C#" Value="public void RemoveImportedPropertyGroup (Microsoft.Build.BuildEngine.BuildPropertyGroup propertyGroupToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveImportedPropertyGroup(class Microsoft.Build.BuildEngine.BuildPropertyGroup propertyGroupToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemoveImportedPropertyGroup(Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+      </Parameters>
+      <Docs>
+        <param name="propertyGroupToRemove">Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> Objekt, das die Gruppe zu entfernenden darstellt.</param>
+        <summary>Entfernt die Gruppe für die angegebene Eigenschaft aus der main-Projektdatei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="public void RemoveItem (Microsoft.Build.BuildEngine.BuildItem itemToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveItem(class Microsoft.Build.BuildEngine.BuildItem itemToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemoveItem(Microsoft.Build.BuildEngine.BuildItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemToRemove" Type="Microsoft.Build.BuildEngine.BuildItem" />
+      </Parameters>
+      <Docs>
+        <param name="itemToRemove">Das Element, aus dem Projekt entfernen.</param>
+        <summary>Entfernt das angegebene Element aus dem Projekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItemGroup">
+      <MemberSignature Language="C#" Value="public void RemoveItemGroup (Microsoft.Build.BuildEngine.BuildItemGroup itemGroupToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveItemGroup(class Microsoft.Build.BuildEngine.BuildItemGroup itemGroupToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemoveItemGroup(Microsoft.Build.BuildEngine.BuildItemGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildItemGroup" />
+      </Parameters>
+      <Docs>
+        <param name="itemGroupToRemove">Die Elementgruppe, aus dem Projekt entfernt werden soll.</param>
+        <summary>Entfernt die angegebenen Elementgruppe aus dem Projekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItemGroupsWithMatchingCondition">
+      <MemberSignature Language="C#" Value="public void RemoveItemGroupsWithMatchingCondition (string matchCondition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveItemGroupsWithMatchingCondition(string matchCondition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemoveItemGroupsWithMatchingCondition(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matchCondition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="matchCondition">Die Bedingung, die beim Entfernen von Elementgruppen erfüllt sein muss.</param>
+        <summary>Entfernt alle Elementgruppen mit dem angegebenen [Bedingung](http://msdn.microsoft.com/library/9d7aa308-b667-48ed-b4c9-a61e49eb0a85) aus dem Projekt jedoch importierte Projekte werden nicht geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItemsByName">
+      <MemberSignature Language="C#" Value="public void RemoveItemsByName (string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveItemsByName(string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemoveItemsByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Die Item-Auflistung entfernt werden soll.</param>
+        <summary>Entfernt alle Elemente in der angegebenen Auflistung aus dem Projekt, aber importierte Projekte werden nicht geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePropertyGroup">
+      <MemberSignature Language="C#" Value="public void RemovePropertyGroup (Microsoft.Build.BuildEngine.BuildPropertyGroup propertyGroupToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemovePropertyGroup(class Microsoft.Build.BuildEngine.BuildPropertyGroup propertyGroupToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroup(Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyGroupToRemove" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+      </Parameters>
+      <Docs>
+        <param name="propertyGroupToRemove">Die Eigenschaftengruppe, aus dem Projekt entfernt werden soll.</param>
+        <summary>Entfernt die Gruppe für die angegebene Eigenschaft aus dem Projekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="RemovePropertyGroupsWithMatchingCondition">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Entfernt alle &lt;PropertyGroup&gt;des aus der Hauptprojekt-Datei, die über eine bestimmte "Bedingung."</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies wird keine Eigenschaftengruppen aus importierten Projektdateien entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="RemovePropertyGroupsWithMatchingCondition">
+      <MemberSignature Language="C#" Value="public void RemovePropertyGroupsWithMatchingCondition (string matchCondition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemovePropertyGroupsWithMatchingCondition(string matchCondition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matchCondition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="matchCondition">Die Bedingung, die beim Entfernen von Eigenschaftsgruppen erfüllt sein muss.</param>
+        <summary>Entfernt alle Eigenschaftengruppen mit dem angegebenen [Bedingung](http://msdn.microsoft.com/library/9d7aa308-b667-48ed-b4c9-a61e49eb0a85) aus dem Projekt jedoch importierte Projekte werden nicht geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePropertyGroupsWithMatchingCondition">
+      <MemberSignature Language="C#" Value="public void RemovePropertyGroupsWithMatchingCondition (string matchCondition, bool includeImportedPropertyGroups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemovePropertyGroupsWithMatchingCondition(string matchCondition, bool includeImportedPropertyGroups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matchCondition" Type="System.String" />
+        <Parameter Name="includeImportedPropertyGroups" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="matchCondition">Eine Zeichenfolge, die die Bedingung für die PropertyGroups, die entfernt werden sollen.</param>
+        <param name="includeImportedPropertyGroups">Ein boolescher Wert, der angibt, ob importierte Eigenschaftengruppen in die Suche einbeziehen.</param>
+        <summary>Entfernt alle &lt;PropertyGroup&gt;des aus der Hauptprojekt-Datei, die über eine bestimmte "Bedingung."</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies wird keine Eigenschaftengruppen aus importierten Projektdateien entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetBuildStatus">
+      <MemberSignature Language="C#" Value="public void ResetBuildStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetBuildStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.ResetBuildStatus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Status jedes Ziel im Projekt zurück, sodass der nächste Build alle Ziele neu erstellt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.TextWriter textWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.TextWriter textWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Save(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textWriter" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="textWriter">Die <see cref="T:System.IO.TextWriter" /> Objekt, in dem das Projekt gespeichert.</param>
+        <summary>Speichert das Projekt im angegebenen <see cref="T:System.IO.TextWriter" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string projectFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string projectFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileName">Der Name der Datei, in der zum Speichern des Projekts.</param>
+        <summary>Speichert das Projekt in der angegebenen Datei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string projectFileName, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string projectFileName, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.Save(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileName" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileName">Der Name der Datei, in der zum Speichern des Projekts.</param>
+        <param name="encoding">Die <see cref="T:System.Text.Encoding" /> Wert mit dem die Datei zu speichern.</param>
+        <summary>Speichert das Projekt in der angegebenen Datei mit der angegebenen Codierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaFile">
+      <MemberSignature Language="C#" Value="public string SchemaFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SchemaFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.SchemaFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die XML-Schemadatei zu verwenden, wenn das Projekt zu überprüfen.</summary>
+        <value>Die XML-Schemadatei zu verwenden, wenn das Projekt zu überprüfen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImportedProperty">
+      <MemberSignature Language="C#" Value="public void SetImportedProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.Project importProject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetImportedProperty(string propertyName, string propertyValue, string condition, class Microsoft.Build.BuildEngine.Project importProject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="importProject" Type="Microsoft.Build.BuildEngine.Project" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des zu ändernden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert die Eigenschaft zugewiesen werden soll.</param>
+        <param name="condition">Die Bedingung für die Eigenschaft verwendet werden soll. Entspricht der <see langword="Condition" /> Attribut des Eigenschaftenelements.</param>
+        <param name="importProject">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> , die die angegebene Eigenschaft enthält.</param>
+        <summary>Legt den Wert einer Eigenschaft im angegebenen importierten Projekt fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImportedProperty">
+      <MemberSignature Language="C#" Value="public void SetImportedProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.Project importedProject, Microsoft.Build.BuildEngine.PropertyPosition position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetImportedProperty(string propertyName, string propertyValue, string condition, class Microsoft.Build.BuildEngine.Project importedProject, valuetype Microsoft.Build.BuildEngine.PropertyPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project,Microsoft.Build.BuildEngine.PropertyPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="importedProject" Type="Microsoft.Build.BuildEngine.Project" />
+        <Parameter Name="position" Type="Microsoft.Build.BuildEngine.PropertyPosition" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des zu ändernden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert die Eigenschaft zugewiesen werden soll.</param>
+        <param name="condition">Die Bedingung für die Eigenschaft verwendet werden soll. Entspricht der <see langword="Condition" /> Attribut des Eigenschaftenelements.</param>
+        <param name="importedProject">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> , die die angegebene Eigenschaft enthält.</param>
+        <param name="position">Ein <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> Wert, der angibt, des Speicherort für die Eigenschaft eingefügt.</param>
+        <summary>Legt den Wert einer Eigenschaft im angegebenen importierten Projekt fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImportedProperty">
+      <MemberSignature Language="C#" Value="public void SetImportedProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.Project importedProject, Microsoft.Build.BuildEngine.PropertyPosition position, bool treatPropertyValueAsLiteral);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetImportedProperty(string propertyName, string propertyValue, string condition, class Microsoft.Build.BuildEngine.Project importedProject, valuetype Microsoft.Build.BuildEngine.PropertyPosition position, bool treatPropertyValueAsLiteral) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetImportedProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.Project,Microsoft.Build.BuildEngine.PropertyPosition,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="importedProject" Type="Microsoft.Build.BuildEngine.Project" />
+        <Parameter Name="position" Type="Microsoft.Build.BuildEngine.PropertyPosition" />
+        <Parameter Name="treatPropertyValueAsLiteral" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des zu ändernden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert die Eigenschaft zugewiesen werden soll.</param>
+        <param name="condition">Die Bedingung für die Eigenschaft verwendet werden soll. Entspricht der <see langword="Condition" /> Attribut des Eigenschaftenelements.</param>
+        <param name="importedProject">Die <see cref="T:Microsoft.Build.BuildEngine.Project" /> , die die angegebene Eigenschaft enthält.</param>
+        <param name="position">Ein <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> Wert, der angibt, des Speicherort für die Eigenschaft eingefügt.</param>
+        <param name="treatPropertyValueAsLiteral">
+          <see langword="true" />behandelt die <c>PropertyValue</c> -Parameter als Literalwert; anderenfalls <see langword="false" />.</param>
+        <summary>Legt den Wert einer Eigenschaft im angegebenen importierten Projekt fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legt den Wert einer Eigenschaft fest, und schützt sie optional, damit es als Literalwert und trotz Sonderzeichen behandelt werden, die sie enthalten kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProjectExtensions">
+      <MemberSignature Language="C#" Value="public void SetProjectExtensions (string id, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProjectExtensions(string id, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetProjectExtensions(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Name des XML-Elements, das als untergeordnetes Element des <see langword="ProjectExtensions" />-Elements erstellt werden soll.</param>
+        <param name="content">Der Textwert des erstellten XML-Elements.</param>
+        <summary>Legt die [ProjectExtensions](http://msdn.microsoft.com/library/f95f312f-ff92-41eb-9469-ad99e236a307) Element des Projekts mit dem angegebenen Elementnamen und Inhalt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string propertyName, string propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProperty(string propertyName, string propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des zu ändernden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert die Eigenschaft zugewiesen werden soll.</param>
+        <summary>Legt den Wert der angegebenen Eigenschaft fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string propertyName, string propertyValue, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProperty(string propertyName, string propertyValue, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des zu ändernden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert die Eigenschaft zugewiesen werden soll.</param>
+        <param name="condition">Die Bedingung für die Eigenschaft verwendet werden soll. Entspricht der <see langword="Condition" /> Attribut des Eigenschaftenelements.</param>
+        <summary>Legt den Wert der angegebenen Eigenschaft fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.PropertyPosition position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProperty(string propertyName, string propertyValue, string condition, valuetype Microsoft.Build.BuildEngine.PropertyPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.PropertyPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="position" Type="Microsoft.Build.BuildEngine.PropertyPosition" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des zu ändernden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert die Eigenschaft zugewiesen werden soll.</param>
+        <param name="condition">Die Bedingung für die Eigenschaft verwendet werden soll. Entspricht der <see langword="Condition" /> Attribut des Eigenschaftenelements.</param>
+        <param name="position">Ein <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> Wert, der angibt, des Speicherort für die Eigenschaft eingefügt.</param>
+        <summary>Legt den Wert der angegebenen Eigenschaft fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.BuildEngine.Project.SetProperty%2A>wird von der integrierten Entwicklungsumgebung (IDE), um eine bestimmte Eigenschaft auf der Projektebene festlegen aufgerufen. Diese Methode sucht die vorhandenen Eigenschaftengruppen für eine Eigenschaft mit diesem Namen. Wenn eine gefunden wird, wird sein Wert. Andernfalls, er fügt eine neue Eigenschaft zu dieser Eigenschaftengruppe oder dem Projekt eine neue Eigenschaftsgruppe hinzugefügt. <xref:Microsoft.Build.BuildEngine.Project.SetProperty%2A>verwendet die `condition` Parameter, um zu bestimmen, den Namen der Gruppe "Eigenschaft" platziert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.PropertyPosition position, bool treatPropertyValueAsLiteral);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProperty(string propertyName, string propertyValue, string condition, valuetype Microsoft.Build.BuildEngine.PropertyPosition position, bool treatPropertyValueAsLiteral) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Project.SetProperty(System.String,System.String,System.String,Microsoft.Build.BuildEngine.PropertyPosition,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="position" Type="Microsoft.Build.BuildEngine.PropertyPosition" />
+        <Parameter Name="treatPropertyValueAsLiteral" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name des zu ändernden Eigenschaft.</param>
+        <param name="propertyValue">Der Wert die Eigenschaft zugewiesen werden soll.</param>
+        <param name="condition">Die Bedingung für die Eigenschaft verwendet werden soll. Entspricht der <see langword="Condition" /> Attribut des Eigenschaftenelements.</param>
+        <param name="position">Ein <see cref="T:Microsoft.Build.BuildEngine.PropertyPosition" /> Wert, der angibt, des Speicherort für die Eigenschaft eingefügt.</param>
+        <param name="treatPropertyValueAsLiteral">
+          <see langword="true" />behandelt die <c>PropertyValue</c> -Parameter als Literalwert; anderenfalls <see langword="false" />.</param>
+        <summary>Legt den Wert der angegebenen Eigenschaft fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Targets">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.TargetCollection Targets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.TargetCollection Targets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.Targets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.TargetCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ziele im Projekt ab.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.TargetCollection" /> der Ziele im Projekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ziele werden durch das Element in das Projekt angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeOfLastDirty">
+      <MemberSignature Language="C#" Value="public DateTime TimeOfLastDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeOfLastDirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.TimeOfLastDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DateTime" /> Objekt, der angibt, der Zeit, die das Projekt zuletzt war in einer Weise, die sie in einer Datei gespeichert werden sollen erforderlich geändert.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Objekt, der angibt, der Zeit, die das Projekt zuletzt war in einer Weise, die sie in einer Datei gespeichert werden sollen erforderlich geändert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt fest oder ruft die aktuelle Version des Toolsets, die vom Projekt verwendet wird.</summary>
+        <value>Eine Zeichenfolge, die die Versionsnummer des Toolsets darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Toolsetversion überschrieben wird, wird dieser Wert die Toolsetversion an. Wenn Sie auf der Project-Element ein ToolsVersion-Attribut vorhanden ist, ist, die Toolsetversion. Andernfalls ist die Toolsetversion das Toolset Standardversion des übergeordneten Moduls identisch. Wenn festgelegt ist, <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion%2A> überschreibt die aktuelle Toolset-Version des Projekts mit dem bereitgestellten Wert.  
+  
+ Weitere Informationen zu Toolsets finden Sie unter [Standard- und benutzerdefinierte Toolsetkonfigurationen](http://msdn.microsoft.com/library/15a048c8-5ad3-448e-b6e9-e3c5d7147ed2).  
+  
+> [!NOTE]
+>  Zum Abrufen oder Festlegen der ToolsVersion-Attribut auf die <xref:Microsoft.Build.BuildEngine.Project> -Element verwenden die <xref:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsingTasks">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.UsingTaskCollection UsingTasks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.UsingTaskCollection UsingTasks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.UsingTasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.UsingTaskCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von der [UsingTask](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) Elemente im Projekt.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.UsingTaskCollection" /> von der <c>UsingTask</c> Elemente im Projekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="public string Xml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Xml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Project.Xml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XML-Darstellung des Projekts ab.</summary>
+        <value>Die vollständige XML-Code, der das Projekt darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.BuildEngine.Project> -Objekt und verwendet die <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> Methode, um Inhalt zum Projekt hinzuzufügen. Die <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, und <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> Klassen werden verwendet, um das Hinzufügen, entfernen und Ändern von Elementen im Projekt.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

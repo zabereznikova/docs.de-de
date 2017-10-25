@@ -1,0 +1,148 @@
+<Type Name="IApplicationSettingsProvider" FullName="System.Configuration.IApplicationSettingsProvider">
+  <TypeSignature Language="C#" Value="public interface IApplicationSettingsProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationSettingsProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IApplicationSettingsProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Erweiterte Funktionen definiert für Client-basierten Anwendungseinstellungsanbieter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Architektur der Anwendungseinstellungen ermöglicht es Ihnen, einen benutzerdefinierte Speichermechanismus Geben Sie für Anwendungseinstellungen, indem Sie einen benutzerdefinierten Einstellungsanbieter, ist eine Klasse erstellen abgeleitet <xref:System.Configuration.SettingsProvider>. Eine solche Klasse enthält die grundlegende Funktionalität für das Speichern und Abrufen von Eigenschaften. Sie können jedoch zusätzliche standardisierte Funktionalität hinzufügen, durch die Implementierung der <xref:System.Configuration.IApplicationSettingsProvider> -Schnittstelle in der benutzerdefinierten Einstellungsanbieter. Diese Schnittstelle enthält drei Methoden, die in erster Linie den Einstellungsanbieter zu intelligenter Handle Anwendung versionsänderungen ermöglichen. In der Regel wird der Einstellungsanbieter Anwendungseinstellungen für verschiedene Versionen einer Anwendung für den folgenden Umständen erwarten einzeln zu speichern:  
+  
+-   Seite-an-Seite-Ausführung verschiedener Versionen einer Anwendung.  
+  
+-   Anwendungseinstellungen werden beim Aktualisieren einer Anwendung beibehalten.  
+  
+-   Die Einstellungen für die Standardwerte für die aktuell verwendeten Version wird wiederhergestellt.  
+  
+ Die <xref:System.Configuration.LocalFileSettingsProvider>-Klasse implementiert die <xref:System.Configuration.IApplicationSettingsProvider>-Schnittstelle. Den gleichen Satz von Methoden, die enthaltenen <xref:System.Configuration.IApplicationSettingsProvider> finden Sie auch der <xref:System.Configuration.ApplicationSettingsBase> -Klasse, die Einrichtung eines vordefinierten Kommunikationskanals zwischen einer Anwendung Einstellungen Wrapper und den Einstellungsanbieter zu aktivieren.  
+  
+> [!NOTE]
+>  Diese Schnittstelle ist optional. Wenn ein Anbieter dieser Schnittstelle nicht implementiert wird, schlägt die Settings-Infrastruktur ohne Benachrichtigung, wenn er versucht, die von dieser Schnittstelle definierten Methoden den Zugriff auf.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPreviousVersion">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsPropertyValue GetPreviousVersion (System.Configuration.SettingsContext context, System.Configuration.SettingsProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Configuration.SettingsPropertyValue GetPreviousVersion(class System.Configuration.SettingsContext context, class System.Configuration.SettingsProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IApplicationSettingsProvider.GetPreviousVersion(System.Configuration.SettingsContext,System.Configuration.SettingsProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , beschreibt die Anwendungsverwendung der aktuellen.</param>
+        <param name="property">Die <see cref="T:System.Configuration.SettingsProperty" /> , deren Wert zurückgegeben werden.</param>
+        <summary>Der Wert der Eigenschaft angegebenen Einstellungen für die vorherige Version derselben Anwendung zurückgegeben.</summary>
+        <returns>Ein <see cref="T:System.Configuration.SettingsPropertyValue" /> , die den Wert der Einstellung für die angegebene Eigenschaft enthält, wie es in der vorherigen Version der Anwendung; zuletzt festgelegt wurde oder <see langword="null" /> , wenn die Einstellung nicht gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Configuration.IApplicationSettingsProvider.GetPreviousVersion%2A> Methode in Verbindung mit der <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A> Methode zum Migrieren von Anwendungseinstellungen während oder nach der Installation einer neuen Version einer Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityException">Für <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (System.Configuration.SettingsContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset(class System.Configuration.SettingsContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IApplicationSettingsProvider.Reset(System.Configuration.SettingsContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , beschreibt die Anwendungsverwendung der aktuellen.</param>
+        <summary>Setzt die Anwendungseinstellungen im Zusammenhang mit der angegebenen Anwendung mit ihren Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.IApplicationSettingsProvider.Reset%2A> Methode initialisiert die gespeicherten Werte der angegebenen Anwendungsgruppe Einstellungen erneut. Im Gegensatz dazu <xref:System.Configuration.DefaultSettingValueAttribute> einen Standardwert für eine einzelne Einstellungseigenschaft während der eigenschaftsinitialisierung bereitstellt, wenn sie kein gespeicherten Wert verfügt.  
+  
+ Der Einstellungsanbieter bestimmt, was angemessen Standardwerte für die angegebene Gruppe von Anwendungseinstellungen sind. Angenommen, die Implementierung in <xref:System.Configuration.LocalFileSettingsProvider> setzt benutzerspezifische Einstellungen auf ihre freigegebenen Werte in der `application.exe.config` Ausgabekonfigurationsdatei im Gegensatz dazu noch die anwendungsspezifischen Einstellungen unverändert gelassen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityException">Für <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Upgrade">
+      <MemberSignature Language="C#" Value="public void Upgrade (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Upgrade(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IApplicationSettingsProvider.Upgrade(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , beschreibt die Anwendungsverwendung der aktuellen.</param>
+        <param name="properties">Ein <see cref="T:System.Configuration.SettingsPropertyCollection" /> , enthält die Einstellungsgruppe für die Eigenschaft, deren Werte abgerufen werden sollen.</param>
+        <summary>Zeigt den Anbieter an, dass die Anwendung aktualisiert wurde. Dies bietet dem Anbieter Gelegenheit bietet, die gespeicherten Einstellungen nach Bedarf zu aktualisieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework ermöglicht parallele Installation und Ausführung verschiedener Versionen derselben Anwendung. Der Anbieter der Einstellungen speichert die Anwendungseinstellungen für jede Version einer Anwendung separat, um Isolation sicherzustellen. Allerdings empfiehlt es sich zum Migrieren von Einstellungen aus der vorherigen Version einer Anwendung mit der aktuellen Aktivität. Um diese Funktionen für die Migration zu gewährleisten, verwenden Sie die <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A> Methode, die in einer abgeleiteten Klasse implementiert <xref:System.Configuration.SettingsProvider>.  
+  
+ Sie können die <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A> Methode in Verbindung mit der <xref:System.Configuration.IApplicationSettingsProvider.GetPreviousVersion%2A> Methode zum Migrieren von Anwendungseinstellungen während oder nach der Installation einer neuen Version einer Anwendung.  
+  
+ Diese Methode unterdrückt werden sollen, für jede Einstellung, die Anwendung verfügt über die <xref:System.Configuration.NoSettingsVersionUpgradeAttribute> angewendet wird, oder um die gesamte Einstellungswrapperklasse, abgeleitet <xref:System.Configuration.ApplicationSettingsBase>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityException">Für <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> Berechtigung.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

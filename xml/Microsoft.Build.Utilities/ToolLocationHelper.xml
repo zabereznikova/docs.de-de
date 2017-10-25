@@ -1,0 +1,1350 @@
+<Type Name="ToolLocationHelper" FullName="Microsoft.Build.Utilities.ToolLocationHelper">
+  <TypeSignature Language="C#" Value="public static class ToolLocationHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ToolLocationHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.ToolLocationHelper" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Hilfsmethoden zum Suchen von .NET Framework und .NET Framework SDK-Dateien und Verzeichnisse bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearSDKStaticCache">
+      <MemberSignature Language="C#" Value="public static void ClearSDKStaticCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearSDKStaticCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.ClearSDKStaticCache" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Cache der AppDomain wide-Plattform und Erweiterungs-SDKs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssemblyFoldersExInfo">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.AssemblyFoldersExInfo&gt; GetAssemblyFoldersExInfo (string registryRoot, string targetFrameworkVersion, string registryKeySuffix, string osVersion, string platform, System.Reflection.ProcessorArchitecture targetProcessorArchitecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Utilities.AssemblyFoldersExInfo&gt; GetAssemblyFoldersExInfo(string registryRoot, string targetFrameworkVersion, string registryKeySuffix, string osVersion, string platform, valuetype System.Reflection.ProcessorArchitecture targetProcessorArchitecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetAssemblyFoldersExInfo(System.String,System.String,System.String,System.String,System.String,System.Reflection.ProcessorArchitecture)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.AssemblyFoldersExInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registryRoot" Type="System.String" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" />
+        <Parameter Name="registryKeySuffix" Type="System.String" />
+        <Parameter Name="osVersion" Type="System.String" />
+        <Parameter Name="platform" Type="System.String" />
+        <Parameter Name="targetProcessorArchitecture" Type="System.Reflection.ProcessorArchitecture" />
+      </Parameters>
+      <Docs>
+        <param name="registryRoot">Der Stamm-Registrierungsspeicherort für das Zielframework. Für .NET ist dies SOFTWARE\MICROSOFT\\. NETFramework.</param>
+        <param name="targetFrameworkVersion">Die Zielframework-Version (2.0, 3.0, 3.5, 4.0,...).</param>
+        <param name="registryKeySuffix">Der Name des Ordners, ("AssemblyFoldersEx") kann auch PocketPC\AssemblyFoldersEx oder andere sein.</param>
+        <param name="osVersion">Targeted minimalen und maximalen Betriebssystemversionen in der Registrierung. Diese Werte werden verwendet, um nur Verzeichnisse für Betriebssystemversionen zwischen dem deklarierten Minimal- und Maximalwerte zurückzugeben. Wenn dieser Wert leer oder null ist, keine Filterung erfolgt.</param>
+        <param name="platform">Die Zielplattform GUIDs. Verwendet, um nur Verzeichnisse zu zurückzugeben, die eine übereinstimmende Plattform GUID haben. Wenn dieser Wert leer oder null ist keine Filterung erfolgt.</param>
+        <param name="targetProcessorArchitecture">Die gezielte Prozessorarchitektur. Dadurch wird bestimmt, welche Registrierungsstrukturen durchsucht werden und in welcher Reihenfolge.</param>
+        <summary>Ruft eine sortierte Liste der <see cref="T:Microsoft.Build.Utilities.AssemblyFoldersExInfo" /> Objekten, die Informationen über die Verzeichnisse enthalten, in dem die Assemblys von Drittanbietern registriert sind. Diese Informationen werden zum Zeitpunkt der Erstellung und Entwurf verwendet.</summary>
+        <returns>Gibt die Liste der <see langword="AssemblyFoldersExInfo" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zählt die `AssemblyFoldersEx` Registrierungsspeicherort und gibt die Liste der `AssemblyFoldersExInfo` in derselben Reihenfolge nach Verweisassemblys zur Entwurfszeit durchsucht und Zeit der Erstellung.  
+  
+ Fügen Sie auf einem 64-Bit-Betriebssystem, wenn auf 64-Bit in der 64-Bit-Struktur dann die 32-Bit-Registrierungsstruktur hinzu; Wenn es sich bei 32-Bit verwenden möchten, fügen Sie in der 32-Bit-Struktur dann der 64-Bit-Struktur hinzu. Fügen Sie nur die 32-Bit-Computer hinzu, in der 32-Bit-Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDisplayNameForTargetFrameworkDirectory">
+      <MemberSignature Language="C#" Value="public static string GetDisplayNameForTargetFrameworkDirectory (string targetFrameworkDirectory, System.Runtime.Versioning.FrameworkName frameworkName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDisplayNameForTargetFrameworkDirectory(string targetFrameworkDirectory, class System.Runtime.Versioning.FrameworkName frameworkName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDisplayNameForTargetFrameworkDirectory(System.String,System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFrameworkDirectory" Type="System.String" />
+        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkDirectory">Das Zielframeworkverzeichnis.</param>
+        <param name="frameworkName">Der FrameworkName.</param>
+        <summary>Erstellt einen Anzeigenamen ein, die Ziel-Framework-Details angegeben.</summary>
+        <returns>Gibt einen Anzeigenamen ein, die Ziel-Framework-Details angegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies entspricht dem von den Zielframeworkmoniker, jedoch für die Anzeige.  
+  
+ Eine aus der Redist-Liste-Datei, und eine künstliche gefunden werden kann, die zurückgegeben wird, gibt es also immer ein Anzeigenamen ein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDotNetFrameworkRootRegistryKey">
+      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkRootRegistryKey (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkRootRegistryKey(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Version der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ziel.</param>
+        <summary>Ruft den vollständigen Namen des der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Stammregistrierungsschlüssel.</summary>
+        <returns>Eine Zeichenfolge, enthält den vollständigen Namen der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Stammregistrierungsschlüssel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDotNetFrameworkSdkInstallKeyValue">
+      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkInstallKeyValue (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkInstallKeyValue(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkInstallKeyValue(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Version der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ziel.</param>
+        <summary>Ruft den Namen des Werts unter der <see cref="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" /> , enthält die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK-Installationspfad.</summary>
+        <returns>Gibt eine Zeichenfolge mit dem Namen des Registrierungsschlüsselwerts unter dem <see cref="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" /> , enthält die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK-Installationspfad.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDotNetFrameworkSdkInstallKeyValue">
+      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkInstallKeyValue (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkInstallKeyValue(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkInstallKeyValue(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="visualStudioVersion">Version von Visual Studio das angeforderte SDK zugeordnet ist</param>
+        <summary>Name des Werts der GetDotNetFrameworkRootRegistryKey, die das SDK enthält installieren Stammpfad</summary>
+        <returns>Gibt <see cref="T:System.String" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDotNetFrameworkSdkRootRegistryKey">
+      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkRootRegistryKey (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkRootRegistryKey(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <summary>Gibt den vollständigen Namen des Registrierungsschlüssels für den Stamm des .NET Framework-SDKs zurück.</summary>
+        <returns>Gibt eine Zeichenfolgendarstellung des Registrierungsschlüsselstamms zurück, die angibt, wo sich das .NET Framework-SDK befindet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDotNetFrameworkSdkRootRegistryKey">
+      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkSdkRootRegistryKey (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkSdkRootRegistryKey(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="visualStudioVersion">Version von Visual Studio das angeforderte SDK zugeordnet ist</param>
+        <summary>Gibt den vollständigen Namen des Registrierungsschlüssels für .NET Framework SDK-Stamm</summary>
+        <returns>Gibt <see cref="T:System.String" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDotNetFrameworkVersionFolderPrefix">
+      <MemberSignature Language="C#" Value="public static string GetDotNetFrameworkVersionFolderPrefix (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDotNetFrameworkVersionFolderPrefix(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkVersionFolderPrefix(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Version der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ziel.</param>
+        <summary>Ruft das Präfix des der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ordner.</summary>
+        <returns>Gibt das Präfix des der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ordner.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel des zurückgegebenen Werts ist die Zeichenfolge "v2. 0".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFramework">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFramework (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFramework(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Version der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ziel.</param>
+        <summary>Ruft einen vollqualifizierten Pfad zu der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Stammverzeichnis.</summary>
+        <returns>Eine Zeichenfolge, enthält des vollqualifizierten Pfads zu der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Stammverzeichnis oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn die Zielversion von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ist nicht installiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFramework">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFramework (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFramework(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.DotNetFrameworkArchitecture)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" />
+      </Parameters>
+      <Docs>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="architecture">PowerShell DSC-Architektur oder DotNetFrameworkArchitecture.Current für die Architektur, der diesen Prozess unter derzeit ausgeführt wird.</param>
+        <summary>Ruft einen vollqualifizierten Pfad zum Stammverzeichnis des Frameworks.</summary>
+        <returns>Gibt einen vollqualifizierten Pfad zum Stammverzeichnis des Frameworks zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Suchen Sie in der Datei die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Verzeichnis.</param>
+        <param name="version">Die Version der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ziel.</param>
+        <summary>Ruft einen vollqualifizierten Pfad zu einer Datei in die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Verzeichnis.</summary>
+        <returns>Eine Zeichenfolge, enthält des vollqualifizierten Pfads zu der angegebenen Datei oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn die Zielversion von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ist nicht installiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.DotNetFrameworkArchitecture)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">In .NET Framework-Verzeichnis zu suchende Dateiname</param>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="architecture">PowerShell DSC-Architektur oder DotNetFrameworkArchitecture.Current für die Architektur, der diesen Prozess unter derzeit ausgeführt wird.</param>
+        <summary>Ruft einen vollqualifizierten Pfad zu einer Datei im Stammverzeichnis Frameworks für die angegebene Architektur ab.</summary>
+        <returns>Gibt einen vollqualifizierten Pfad zu einer Datei im Stammverzeichnis Frameworks zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkReferenceAssemblies">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkReferenceAssemblies (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkReferenceAssemblies(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkReferenceAssemblies(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <summary>Gibt den Pfad zum Speicherort der Verweisassemblys für die angegebene Frameworkversion zurück.</summary>
+        <returns>Gibt eine Zeichenfolge zurück, die den vollqualifizierten Pfad zum Ordner „Verweisassemblys“ bzw. einen Nullverweis („Nothing“ in Visual Basic) enthält, wenn die Zielversion von .NET Framework nicht installiert ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkSdk">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdk (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdk(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Version der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ziel.</param>
+        <summary>Ruft den vollqualifizierten Pfad in das Verzeichnis "\bin" von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.</summary>
+        <returns>Eine Zeichenfolge, enthält des vollqualifizierten Pfads in das Verzeichnis "\bin" von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn die Zielversion von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK nicht installiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkSdk">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdk (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdk(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="visualStudioVersion">Version von Visual Studio das angeforderte SDK zugeordnet ist</param>
+        <summary>Gibt den Pfad zum Verzeichnis "Bin" von .NET Framework SDK.</summary>
+        <returns>Die Pfadzeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkSdkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Suchen Sie in der Datei die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.</param>
+        <param name="version">Die Version der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ziel.</param>
+        <summary>Ruft den vollqualifizierten Pfad zu einer Datei in die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.</summary>
+        <returns>Eine Zeichenfolge, enthält des vollqualifizierten Pfads in das Verzeichnis "\bin" von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) Wenn die Zielversion von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK nicht installiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pfad für das SDK berücksichtigt die Prozessorinformationen für die Umgebung von Architektur für den aufrufenden Prozess so, dass er ".../bin/i64", z. B. wird möglicherweise erschöpft.  
+  
+ Im Gegensatz zu <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile%2A> und <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToSystemFile%2A> diese Methode überprüft das Vorhandensein der Datei, sodass ein ungültiges `fileName` gibt null zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkSdkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.DotNetFrameworkArchitecture)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Dateinamen in das .NET Framework SDK-Verzeichnis gesucht werden soll</param>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="architecture">Die erforderliche Architektur der angeforderten Datei.</param>
+        <summary>Ruft einen vollqualifizierten Pfad zu einer Datei im .NET Framework SDK.</summary>
+        <returns>Gibt einen vollqualifizierten Pfad zu einer Datei im .NET Framework SDK. Löst einen Fehler aus, wenn .NET Framework SDK nicht gefunden werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkSdkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Dateinamen in das .NET Framework SDK-Verzeichnis gesucht werden soll</param>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="visualStudioVersion">Die Version von Visual Studio das angeforderte SDK zugeordnet.</param>
+        <summary>Erhalten Sie einen vollqualifizierten Pfad zu einer Datei im .NET Framework SDK. Fehler, wenn .NET Framework SDK nicht gefunden werden kann.</summary>
+        <returns>Die Pfadzeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToDotNetFrameworkSdkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToDotNetFrameworkSdkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion, Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToDotNetFrameworkSdkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion, valuetype Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion,Microsoft.Build.Utilities.DotNetFrameworkArchitecture)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Dateinamen in das .NET Framework SDK-Verzeichnis gesucht werden soll</param>
+        <param name="version">Version der .NET Framework-Zielplattform.</param>
+        <param name="visualStudioVersion">Die Version von Visual Studio das angeforderte SDK zugeordnet.</param>
+        <param name="architecture">Die erforderliche Architektur der angeforderten Datei.</param>
+        <summary>Erhalten Sie einen vollqualifizierten Pfad zu einer Datei im .NET Framework SDK. Fehler, wenn .NET Framework SDK nicht gefunden werden kann.</summary>
+        <returns>Die Pfadzeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToReferenceAssemblies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetPathToReferenceAssemblies (System.Runtime.Versioning.FrameworkName frameworkName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetPathToReferenceAssemblies(class System.Runtime.Versioning.FrameworkName frameworkName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToReferenceAssemblies(System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="frameworkName">Der FrameworkName.</param>
+        <summary>Ruft die Pfade zu den Speicherort der Verweisassemblys für das angegebene Zielframework ab.</summary>
+        <returns>Gibt die Pfade zum Speicherort Verweisassemblys zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird davon ausgegangen, dass der angeforderte ReferenceAssemblyRoot Pfad ProgramFiles-Verzeichnis ist, das von Environment.SpecialFolder.ProgramFiles angegeben wird. Darüber hinaus, wenn die. NETFramework oder .NET Framework TargetFrameworkIdentifiers erkannt und TargetFrameworkVersion 2.0, 3.0, 3.5 oder 4, werden Assemblypfade ordnungsgemäß verketteten Referenz für älteren .NET Framework-Versionen zurückgegeben. Diese Verkettung verwendet der vorhandenen GetPathToDotNetFrameworkReferenceAssemblies, um die Liste der Verweispfade-Assembly zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn der FrameworkName null ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToReferenceAssemblies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetPathToReferenceAssemblies (string targetFrameworkRootPath, System.Runtime.Versioning.FrameworkName frameworkName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetPathToReferenceAssemblies(string targetFrameworkRootPath, class System.Runtime.Versioning.FrameworkName frameworkName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToReferenceAssemblies(System.String,System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFrameworkRootPath" Type="System.String" />
+        <Parameter Name="frameworkName" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkRootPath">Stammverzeichnis, das zum Berechnen des Verweisassemblypfad verwendet wird. Die Verweisassemblys werden auf folgende Weise TargetFrameworkRootPath\TargetFrameworkIdentifier\TargetFrameworkVersion\SubType\TargetFrameworkSubType generiert werden.</param>
+        <param name="frameworkName">Eine FrameworkName-Klasse, die einen TargetFrameworkMoniker darstellt. Dies darf nicht null sein.</param>
+        <summary>Ruft die Pfade zu den Speicherort der Verweisassemblys für die angegebene Frameworkversion relativ zu einem angegebenen targetFrameworkRoot ab.</summary>
+        <returns>Gibt die Pfade zum Speicherort Verweisassemblys zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft nicht, um festzustellen, ob der Pfad vorhanden oder nicht ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToReferenceAssemblies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetPathToReferenceAssemblies (string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetPathToReferenceAssemblies(string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToReferenceAssemblies(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFrameworkIdentifier" Type="System.String" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" />
+        <Parameter Name="targetFrameworkProfile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkIdentifier">Bezeichner, das das Ziel</param>
+        <param name="targetFrameworkVersion">Zielversion</param>
+        <param name="targetFrameworkProfile">Profil, das das Ziel</param>
+        <summary>Gibt die Pfade zum Speicherort Verweisassemblys für das angegebene Ziel-Framework. Diese Methode wird davon ausgegangen, der angeforderte ReferenceAssemblyRoot-Pfad wird vom Environment.SpecialFolder.ProgramFiles Additon angegebene ProgramFiles-Verzeichnis werden bei der. NETFramework oder .NET Framework TargetFrameworkIdentifiers erkannt und TargetFrameworkVersion 2.0, 3.0, 3.5 oder 4.0 wir Assemblypfade ordnungsgemäß verketteten Referenz für älteren .NET Framework-Versionen zurückgegeben wird. Diese Verkettung verwendet der vorhandenen GetPathToDotNetFrameworkReferenceAssemblies, um die Liste der Verweispfade-Assembly zu erstellen.</summary>
+        <returns>Die Auflistung der Speicherorte für Assemblyverweise-Assembly.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn der FrameworkName null ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToStandardLibraries">
+      <MemberSignature Language="C#" Value="public static string GetPathToStandardLibraries (string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToStandardLibraries(string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToStandardLibraries(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFrameworkIdentifier" Type="System.String" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" />
+        <Parameter Name="targetFrameworkProfile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkIdentifier">Bezeichner, das das Ziel</param>
+        <param name="targetFrameworkVersion">Zielversion</param>
+        <param name="targetFrameworkProfile">Profil, das das Ziel</param>
+        <summary>Gibt den Pfad zum Speicherort Verweisassemblys für die angegebenen Zielframework-Standardbibliotheken (d. h. "mscorlib") zurück. Diese Methode wird davon ausgegangen, der angeforderte ReferenceAssemblyRoot-Pfad wird vom Environment.SpecialFolder.ProgramFiles Additon angegebene ProgramFiles-Verzeichnis werden bei der. NETFramework oder .NET Framework TargetFrameworkIdentifiers erkannt und TargetFrameworkVersion 2.0, 3.0, 3.5 oder 4.0 wir Assemblypfade ordnungsgemäß verketteten Referenz für älteren .NET Framework-Versionen zurückgegeben wird. Diese Verkettung verwendet der vorhandenen GetPathToDotNetFrameworkReferenceAssemblies, um die Liste der Verweispfade-Assembly zu erstellen.</summary>
+        <returns>Die Auflistung der Speicherorte für Assemblyverweise-Assembly.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn der FrameworkName null ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToStandardLibraries">
+      <MemberSignature Language="C#" Value="public static string GetPathToStandardLibraries (string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile, string platformTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToStandardLibraries(string targetFrameworkIdentifier, string targetFrameworkVersion, string targetFrameworkProfile, string platformTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToStandardLibraries(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFrameworkIdentifier" Type="System.String" />
+        <Parameter Name="targetFrameworkVersion" Type="System.String" />
+        <Parameter Name="targetFrameworkProfile" Type="System.String" />
+        <Parameter Name="platformTarget" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkIdentifier">Bezeichner, das das Ziel</param>
+        <param name="targetFrameworkVersion">Zielversion</param>
+        <param name="targetFrameworkProfile">Profil, das das Ziel</param>
+        <param name="platformTarget">Dies wird verwendet, um zu bestimmen, in dem nach der Standardbibliotheken gesucht werden soll. Beachten Sie, dass dieser Parameter ist nur für .NET Framework 3.5 oder weniger.</param>
+        <summary>Gibt den Pfad auf "mscorlib" und "System.dll" zurück.</summary>
+        <returns>Die Auflistung der Speicherorte für Assemblyverweise-Assembly.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn der FrameworkName null ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToSystemFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToSystemFile (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToSystemFile(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToSystemFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Die im Systemordner zu suchende Datei.</param>
+        <summary>Ruft einen vollqualifizierten Pfad zu einer Datei im Systemverzeichnis ab.</summary>
+        <returns>Eine Zeichenfolge mit dem vollqualifizierten Pfad zu der Datei im Systemverzeichnis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese API erstellt den vollständigen Pfad plus Dateinamen für eine Datei im Ordner "System". Er überprüft nicht das Vorhandensein der Datei vor der Rückgabe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToWindowsSdk">
+      <MemberSignature Language="C#" Value="public static string GetPathToWindowsSdk (Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToWindowsSdk(valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToWindowsSdk(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">.NET Framework-Zielversion</param>
+        <param name="visualStudioVersion">Die Version von Visual Studio SDK zugeordnet.</param>
+        <summary>Gibt den Pfad zum Windows SDK für die gewünschte Version von .NET Framework und Visual Studio zurück. Beachten Sie, dass dies nur für eine gezielte .NET Framework Version 4.5 und höher unterstützt wird.</summary>
+        <returns>Pfad zum Speicherort entsprechenden Windows-SDK</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToWindowsSdkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToWindowsSdkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToWindowsSdkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToWindowsSdkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der angeforderten Datei.</param>
+        <param name="version">.NET Framework-Zielversion.</param>
+        <param name="visualStudioVersion">Die Version von Visual Studio SDK zugeordnet.</param>
+        <summary>Gibt den Pfad in eine Datei im Windows SDK für die gewünschte Version von .NET Framework und Visual Studio zurück. Beachten Sie, dass dies nur für eine gezielte .NET Framework Version 4.5 und höher unterstützt wird.</summary>
+        <returns>Pfad zur entsprechenden Datei von Windows SDK</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathToWindowsSdkFile">
+      <MemberSignature Language="C#" Value="public static string GetPathToWindowsSdkFile (string fileName, Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion, Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathToWindowsSdkFile(string fileName, valuetype Microsoft.Build.Utilities.TargetDotNetFrameworkVersion version, valuetype Microsoft.Build.Utilities.VisualStudioVersion visualStudioVersion, valuetype Microsoft.Build.Utilities.DotNetFrameworkArchitecture architecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToWindowsSdkFile(System.String,Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion,Microsoft.Build.Utilities.DotNetFrameworkArchitecture)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="version" Type="Microsoft.Build.Utilities.TargetDotNetFrameworkVersion" />
+        <Parameter Name="visualStudioVersion" Type="Microsoft.Build.Utilities.VisualStudioVersion" />
+        <Parameter Name="architecture" Type="Microsoft.Build.Utilities.DotNetFrameworkArchitecture" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der angeforderten Datei.</param>
+        <param name="version">.NET Framework-Zielversion.</param>
+        <param name="visualStudioVersion">Die Version von Visual Studio das angeforderte SDK zugeordnet.</param>
+        <param name="architecture">Die gewünschte Architektur der resultierenden Datei.</param>
+        <summary>Gibt den Pfad in eine Datei im Windows SDK für die gewünschte .NET Framework und Visual Studio-Version und die gewünschte Architektur zurück. Beachten Sie, dass dies nur für eine gezielte .NET Framework Version 4.5 und höher unterstützt wird.</summary>
+        <returns>Pfad zur entsprechenden Datei von Windows SDK</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformExtensionSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformExtensionSDKLocation (string sdkMoniker, string targetPlatformIdentifier, string targetPlatformVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformExtensionSDKLocation(string sdkMoniker, string targetPlatformIdentifier, string targetPlatformVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkMoniker" Type="System.String" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkMoniker">Für das Sdk Moniker</param>
+        <param name="targetPlatformIdentifier">Der Bezeichner für die Plattform</param>
+        <param name="targetPlatformVersion">Version der Plattform</param>
+        <summary>Unter Verwendung einer SDK-Moniker und Zielplattform Get, den Pfad auf den SDK-Stamm falls vorhanden.</summary>
+        <returns>Ein vollständiger Pfad zum Sdk-Stamm, wenn das Sdk in die Zielplattform oder eine leere Zeichenfolge vorhanden ist, wenn er nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformExtensionSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformExtensionSDKLocation (string sdkMoniker, string targetPlatformIdentifier, Version targetPlatformVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformExtensionSDKLocation(string sdkMoniker, string targetPlatformIdentifier, class System.Version targetPlatformVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation(System.String,System.String,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkMoniker" Type="System.String" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="sdkMoniker">Name des SDK, um den Installationspfad für zu bestimmen.</param>
+        <param name="targetPlatformIdentifier">Zielplattform SDKs für gefunden</param>
+        <param name="targetPlatformVersion">Version der Zielplattform SDKs für gefunden</param>
+        <summary>Erhält ein SDKName, TargetPlatformIdentifier und TargetPlatformVersion Durchsuchen der Sdk-Standardspeicherorte für die übergebene im Sdk-Name.  
+  
+ Das Format des Monikers Sdk ist SDKName Version=X.X</summary>
+        <returns>Speicherort des SDK falls er gefunden wird, leere Zeichenfolge, wenn es nicht gefunden werden konnte</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformExtensionSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformExtensionSDKLocation (string sdkMoniker, string targetPlatformIdentifier, string targetPlatformVersion, string diskRoots, string registryRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformExtensionSDKLocation(string sdkMoniker, string targetPlatformIdentifier, string targetPlatformVersion, string diskRoots, string registryRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkMoniker" Type="System.String" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" />
+        <Parameter Name="diskRoots" Type="System.String" />
+        <Parameter Name="registryRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkMoniker">Name des SDK, um den Installationspfad für zu bestimmen.</param>
+        <param name="targetPlatformIdentifier">Zielplattform SDKs für gefunden</param>
+        <param name="targetPlatformVersion">Version der Zielplattform SDKs für gefunden</param>
+        <param name="diskRoots">Liste der Datenträger-Stämme zu suchende Sdks innerhalb</param>
+        <param name="registryRoot">Registrierungsstamm für in-Sdks gesucht werden soll.</param>
+        <summary>Erhält ein SDKName, TargetPlatformIdentifier und TargetPlatformVersion Durchsuchen der Sdk-Standardspeicherorte für die übergebene im Sdk-Name.  
+  
+ Das Format des Monikers Sdk ist SDKName Version=X.X</summary>
+        <returns>Speicherort des SDK falls er gefunden wird, leere Zeichenfolge, wenn es nicht gefunden werden konnte</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformExtensionSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformExtensionSDKLocation (string sdkMoniker, string targetPlatformIdentifier, Version targetPlatformVersion, string[] diskRoots, string registryRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformExtensionSDKLocation(string sdkMoniker, string targetPlatformIdentifier, class System.Version targetPlatformVersion, string[] diskRoots, string registryRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation(System.String,System.String,System.Version,System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkMoniker" Type="System.String" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" />
+        <Parameter Name="diskRoots" Type="System.String[]" />
+        <Parameter Name="registryRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkMoniker">Name des SDK, um den Installationspfad für zu bestimmen.</param>
+        <param name="targetPlatformIdentifier">Zielplattform SDKs für gefunden</param>
+        <param name="targetPlatformVersion">Version der Zielplattform SDKs für gefunden</param>
+        <param name="diskRoots">Liste der Datenträger-Stämme zu suchende Sdks innerhalb</param>
+        <param name="registryRoot">Registrierungsstamm für in-Sdks gesucht werden soll.</param>
+        <summary>Erhält ein SDKName, TargetPlatformIdentifier und TargetPlatformVersion Durchsuchen der Sdk-Standardspeicherorte für die übergebene im Sdk-Name.  
+  
+ Das Format des Monikers Sdk ist SDKName Version=X.X</summary>
+        <returns>Speicherort des SDK falls er gefunden wird, leere Zeichenfolge, wenn es nicht gefunden werden konnte</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformExtensionSDKLocations">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,string&gt; GetPlatformExtensionSDKLocations (string targetPlatformIdentifier, Version targetPlatformVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetPlatformExtensionSDKLocations(string targetPlatformIdentifier, class System.Version targetPlatformVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocations(System.String,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="targetPlatformIdentifier">Zielplattform SDKs für gefunden</param>
+        <param name="targetPlatformVersion">Version der Zielplattform SDKs für gefunden</param>
+        <summary>Abrufen einer Liste des SDKS für eine bestimmte Zielplattform auf dem Computer installiert</summary>
+        <returns>IDictionary des installierten SDKS und ihre Position. K:SDKName V:SDK-Installationspfad</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformExtensionSDKLocations">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,string&gt; GetPlatformExtensionSDKLocations (string[] diskRoots, string registryRoot, string targetPlatformIdentifier, Version targetPlatformVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetPlatformExtensionSDKLocations(string[] diskRoots, string registryRoot, string targetPlatformIdentifier, class System.Version targetPlatformVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocations(System.String[],System.String,System.String,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="diskRoots" Type="System.String[]" />
+        <Parameter Name="registryRoot" Type="System.String" />
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="diskRoots">Array von Standorten, Datenträger zu suchende sdks</param>
+        <param name="registryRoot">Registrierung Stammspeicherort nach Sdks gesucht werden soll</param>
+        <param name="targetPlatformIdentifier">Zielplattform SDKs für gefunden</param>
+        <param name="targetPlatformVersion">Version der Zielplattform SDKs für gefunden</param>
+        <summary>Abrufen einer Liste des SDKS für eine bestimmte Zielplattform auf dem Computer installiert</summary>
+        <returns>IDictionary des installierten SDKS und ihre Position. K:SDKName V:SDK-Installationspfad</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformSDKLocation (string targetPlatformIdentifier, string targetPlatformVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformSDKLocation(string targetPlatformIdentifier, string targetPlatformVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetPlatformIdentifier">Die Zielplattform für das SDK gesucht.</param>
+        <param name="targetPlatformVersion">Version der Zielplattform für das SDK gesucht.</param>
+        <summary>Wenn ein Ziel-Plattform-Bezeichner und eine Version der Zielplattform, suchen Sie die SDK-Standardspeicherorte für die Plattform-SDK für diese Zielplattform.</summary>
+        <returns>Gibt der Speicherort des SDK falls er, andernfalls gefunden wird eine leere Zeichenfolge zurück, wenn das SDK konnte nicht gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformSDKLocation (string targetPlatformIdentifier, Version targetPlatformVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformSDKLocation(string targetPlatformIdentifier, class System.Version targetPlatformVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation(System.String,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="targetPlatformIdentifier">Die Zielplattform für das SDK gesucht.</param>
+        <param name="targetPlatformVersion">Version der Zielplattform für das SDK gesucht.</param>
+        <summary>Wenn ein Ziel-Plattform-Bezeichner und eine Version der Zielplattform, suchen Sie die SDK-Standardspeicherorte für die Plattform-SDK für diese Zielplattform.</summary>
+        <returns>Gibt der Speicherort des SDK falls er, andernfalls gefunden wird eine leere Zeichenfolge zurück, wenn das SDK konnte nicht gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformSDKLocation (string targetPlatformIdentifier, string targetPlatformVersion, string diskRoots, string registryRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformSDKLocation(string targetPlatformIdentifier, string targetPlatformVersion, string diskRoots, string registryRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.String" />
+        <Parameter Name="diskRoots" Type="System.String" />
+        <Parameter Name="registryRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetPlatformIdentifier">Die Zielplattform für das SDK gesucht.</param>
+        <param name="targetPlatformVersion">Version der Zielplattform für das SDK gesucht.</param>
+        <param name="diskRoots">Array von Datenträger-Stämme, in dem für das SDK gesucht.</param>
+        <param name="registryRoot">Registrierungsstamm in dem für das SDK gesucht werden soll.</param>
+        <summary>Wenn ein Ziel-Plattform-Bezeichner und eine Version der Zielplattform, suchen Sie die SDK-Standardspeicherorte für die Plattform-SDK für diese Zielplattform.</summary>
+        <returns>Gibt der Speicherort des SDK falls er, andernfalls gefunden wird eine leere Zeichenfolge zurück, wenn das SDK konnte nicht gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlatformSDKLocation">
+      <MemberSignature Language="C#" Value="public static string GetPlatformSDKLocation (string targetPlatformIdentifier, Version targetPlatformVersion, string[] diskRoots, string registryRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPlatformSDKLocation(string targetPlatformIdentifier, class System.Version targetPlatformVersion, string[] diskRoots, string registryRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation(System.String,System.Version,System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetPlatformIdentifier" Type="System.String" />
+        <Parameter Name="targetPlatformVersion" Type="System.Version" />
+        <Parameter Name="diskRoots" Type="System.String[]" />
+        <Parameter Name="registryRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetPlatformIdentifier">Die Zielplattform für das SDK gesucht.</param>
+        <param name="targetPlatformVersion">Version der Zielplattform für das SDK gesucht.</param>
+        <param name="diskRoots">Array von Datenträger-Stämme, in dem für das SDK gesucht.</param>
+        <param name="registryRoot">Registrierungsstamm in dem für das SDK gesucht werden soll.</param>
+        <summary>Wenn ein Ziel-Plattform-Bezeichner und eine Version der Zielplattform, suchen Sie die SDK-Standardspeicherorte für die Plattform-SDK für diese Zielplattform.</summary>
+        <returns>Gibt der Speicherort des SDK falls er, andernfalls gefunden wird eine leere Zeichenfolge zurück, wenn das SDK konnte nicht gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProgramFilesReferenceAssemblyRoot">
+      <MemberSignature Language="C#" Value="public static string GetProgramFilesReferenceAssemblyRoot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetProgramFilesReferenceAssemblyRoot() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetProgramFilesReferenceAssemblyRoot" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Stammverzeichnis für die Assembly verweisverzeichnisses in das Verzeichnis für Programmdateien.</summary>
+        <returns>Gibt das Stammverzeichnis für die Assembly verweisverzeichnisses zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSDKDesignTimeFolders">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKDesignTimeFolders (string sdkRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKDesignTimeFolders(string sdkRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetSDKDesignTimeFolders(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkRoot">Der Stammordner für das SDK muss einen Ordner zur Entwurfszeit enthalten.</param>
+        <summary>Ruft die Liste der SDK-Ordner, die Dateien während der Entwurfszeit für das SDK auf der Stammebene der angegebene SDK enthalten. Die Liste ist in der Reihenfolge, die in der Suche nach Verweisen verwendet werden muss.</summary>
+        <returns>Gibt die Liste der Ordner beim Suchen nach während der Entwurfszeit-Dateien im SDK in der Reihenfolge, die für die Suche verwendet werden, muss verwendet werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSDKDesignTimeFolders">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKDesignTimeFolders (string sdkRoot, string targetConfiguration, string targetArchitecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKDesignTimeFolders(string sdkRoot, string targetConfiguration, string targetArchitecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetSDKDesignTimeFolders(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkRoot" Type="System.String" />
+        <Parameter Name="targetConfiguration" Type="System.String" />
+        <Parameter Name="targetArchitecture" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkRoot">Der Stammordner für das SDK muss einen Ordner zur Entwurfszeit enthalten.</param>
+        <param name="targetConfiguration">Die Konfiguration überprüft das SDK. Dies ist "Debug" oder "Retail".</param>
+        <param name="targetArchitecture">Die Architektur des SDK überprüft.</param>
+        <summary>Ruft die Liste der SDK-Ordner, die Dateien während der Entwurfszeit für das SDK auf der Stammebene der angegebene SDK enthalten. Die Liste ist in der Reihenfolge, die in der Suche nach Verweisen verwendet werden muss.</summary>
+        <returns>Gibt die Liste der Ordner beim Suchen nach während der Entwurfszeit-Dateien im SDK in der Reihenfolge, die für die Suche verwendet werden, muss verwendet werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSDKRedistFolders">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKRedistFolders (string sdkRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKRedistFolders(string sdkRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetSDKRedistFolders(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkRoot">Der Stammordner für das SDK muss ein Ordner "Redist" enthalten.</param>
+        <summary>Ruft die Liste der SDK-Ordner, die die Redist-Dateien für das SDK auf der Stammebene der angegebene SDK enthalten. Die Liste ist in der Reihenfolge, die in der Suche nach Verweisen verwendet werden muss.</summary>
+        <returns>Gibt die Liste der Ordner beim Suchen nach Redist-Dateien im SDK in der Reihenfolge, die für die Suche verwendet werden, muss verwendet werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSDKRedistFolders">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKRedistFolders (string sdkRoot, string targetConfiguration, string targetArchitecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKRedistFolders(string sdkRoot, string targetConfiguration, string targetArchitecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetSDKRedistFolders(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkRoot" Type="System.String" />
+        <Parameter Name="targetConfiguration" Type="System.String" />
+        <Parameter Name="targetArchitecture" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkRoot">Der Stammordner für das SDK muss ein Ordner "Redist" enthalten.</param>
+        <param name="targetConfiguration">Die Konfiguration überprüft das SDK. Dies ist "Debug" oder "Retail".</param>
+        <param name="targetArchitecture">Die Architektur des SDK überprüft.</param>
+        <summary>Ruft die Liste der SDK-Ordner, die die Redist-Dateien für das SDK auf der Stammebene der angegebene SDK enthalten. Die Liste ist in der Reihenfolge, die in der Suche nach Verweisen verwendet werden muss.</summary>
+        <returns>Gibt die Liste der Ordner beim Suchen nach Redist-Dateien im SDK in der Reihenfolge, die für die Suche verwendet werden, muss verwendet werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSDKReferenceFolders">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKReferenceFolders (string sdkRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKReferenceFolders(string sdkRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetSDKReferenceFolders(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkRoot">Der Stammordner für das SDK.</param>
+        <summary>Ruft die Liste der SDK-Ordner die Verweise für das SDK auf der Stammebene der angegebene SDK enthalten. Die Liste ist in der Reihenfolge, die in der Suche nach Verweisen verwendet werden muss.</summary>
+        <returns>Gibt die Liste der Ordner verwendet werden, bei der Suche nach Verweise im SDK, in der Reihenfolge, die für die Suche verwendet werden muss.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSDKReferenceFolders">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSDKReferenceFolders (string sdkRoot, string targetConfiguration, string targetArchitecture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSDKReferenceFolders(string sdkRoot, string targetConfiguration, string targetArchitecture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetSDKReferenceFolders(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdkRoot" Type="System.String" />
+        <Parameter Name="targetConfiguration" Type="System.String" />
+        <Parameter Name="targetArchitecture" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdkRoot">Der Stammordner für das SDK.</param>
+        <param name="targetConfiguration">Die Konfiguration überprüft das SDK. Dies ist "Debug" oder "Retail".</param>
+        <param name="targetArchitecture">Die Architektur des SDK überprüft.</param>
+        <summary>Ruft die Liste der SDK-Ordner die Verweise für das SDK auf der Stammebene der angegebene SDK enthalten. Die Liste ist in der Reihenfolge, die in der Suche nach Verweisen verwendet werden muss.</summary>
+        <returns>Gibt die Liste der Ordner verwendet werden, bei der Suche nach Verweise im SDK, in der Reihenfolge, die für die Suche verwendet werden muss.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedTargetFrameworks">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;string&gt; GetSupportedTargetFrameworks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;string&gt; GetSupportedTargetFrameworks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetSupportedTargetFrameworks" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste der unterstützten Ziel-Framework-Moniker.</summary>
+        <returns>Liste der unterstützten Ziel-Framework-Moniker</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTargetPlatformSdks">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.TargetPlatformSDK&gt; GetTargetPlatformSdks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Utilities.TargetPlatformSDK&gt; GetTargetPlatformSdks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.TargetPlatformSDK&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste der Zielplattform SDKs auf dem Computer.</summary>
+        <returns>Liste der Ziel-Plattform-SDKs, Item1: TargetPlatformName Item2: Version des SDK Item3: Pfad zum Stamm des Sdk</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTargetPlatformSdks">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.TargetPlatformSDK&gt; GetTargetPlatformSdks (string[] diskRoots, string registryRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Utilities.TargetPlatformSDK&gt; GetTargetPlatformSdks(string[] diskRoots, string registryRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks(System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Utilities.TargetPlatformSDK&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="diskRoots" Type="System.String[]" />
+        <Parameter Name="registryRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="diskRoots">Die Liste der Datenträger-Speicherorte, für die Plattform-SDKs gesucht werden soll.</param>
+        <param name="registryRoot">Registrierung Stammspeicherort nach Plattform-SDKs gesucht werden soll.</param>
+        <summary>Ruft eine Liste der Zielplattform SDKs auf dem Computer.</summary>
+        <returns>Gibt eine Liste der Zielplattform-SDKs zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighestVersionOfTargetFrameworkIdentifier">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Versioning.FrameworkName HighestVersionOfTargetFrameworkIdentifier (string targetFrameworkRootDirectory, string frameworkIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Versioning.FrameworkName HighestVersionOfTargetFrameworkIdentifier(string targetFrameworkRootDirectory, string frameworkIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolLocationHelper.HighestVersionOfTargetFrameworkIdentifier(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.FrameworkName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFrameworkRootDirectory" Type="System.String" />
+        <Parameter Name="frameworkIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetFrameworkRootDirectory">Zielframework-Stammverzeichnis.</param>
+        <param name="frameworkIdentifier">Framework-Bezeichner.</param>
+        <summary>Ruft die höchste Version einer Zielframeworkmoniker auf Grundlage des Bezeichners ab.</summary>
+        <returns>Gibt die höchste Version einer Zielframeworkmoniker auf Grundlage des Bezeichners zurück. Diese Methode sucht nur vollständige Frameworks; Es werden keine Profile zurückgegeben werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathToSystem">
+      <MemberSignature Language="C#" Value="public static string PathToSystem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PathToSystem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolLocationHelper.PathToSystem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den voll qualifizierten Pfad des Systemverzeichnisses ab.</summary>
+        <value>Eine Zeichenfolge mit einem Verzeichnispfad für das Systemverzeichnis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel des zurückgegebenen Werts ist die Zeichenfolge "C:\WinNT\System32".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

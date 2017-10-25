@@ -1,0 +1,1220 @@
+<Type Name="ListControl" FullName="System.Web.UI.WebControls.ListControl">
+  <TypeSignature Language="C#" Value="public abstract class ListControl : System.Web.UI.WebControls.DataBoundControl, System.Web.UI.IEditableTextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ListControl extends System.Web.UI.WebControls.DataBoundControl implements class System.Web.UI.IEditableTextControl, class System.Web.UI.ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataBoundControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IEditableTextControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SelectedIndexChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ListControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlValueProperty("SelectedValue")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.WebControls.ListControlDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Items")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fungiert als die abstrakte Basisklasse, in der die Eigenschaften, Methoden und Ereignisse definiert sind, die allen Steuerelementen vom Typ Liste gemeinsam sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.UI.WebControls.ListControl> abstrakte Klasse kann nicht direkt erstellt werden. Stattdessen diese Klasse wird von anderen Klassen geerbt, z. B. die <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.DropDownList>, <xref:System.Web.UI.WebControls.ListBox>, und <xref:System.Web.UI.WebControls.RadioButtonList> Klassen, um grundlegende gemeinsame Funktionen bereitzustellen.  
+  
+ Die Eigenschaften der <xref:System.Web.UI.WebControls.ListControl> Klasse können Sie die Quelle der Daten zum Auffüllen des Listensteuerelements angegeben. Verwenden der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> -Eigenschaft an die Datenquelle zum Binden an das Strukturelement-Steuerelement. Wenn die Datenquelle mehrere Tabellen enthält, verwenden Sie die <xref:System.Web.UI.WebControls.DataBoundControl.DataMember%2A> -Eigenschaft zu verwendende Tabelle an. Sie können verschiedene Felder in der Datenquelle zu binden der <xref:System.Web.UI.WebControls.ListItem.Text%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.ListItem.Value%2A?displayProperty=nameWithType> Eigenschaften der Elemente im Listensteuerelement durch Festlegen der <xref:System.Web.UI.WebControls.ListControl.DataTextField%2A> und <xref:System.Web.UI.WebControls.ListControl.DataValueField%2A> Eigenschaften bzw.. Für jedes Element im Listensteuerelement kann angezeigte Text formatiert wird, durch Festlegen der <xref:System.Web.UI.WebControls.ListControl.DataTextFormatString%2A> Eigenschaft.  
+  
+ Alle Elemente im Listensteuerelement angezeigt werden gespeichert, der <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung. Sie können programmgesteuert angeben oder den Index eines ausgewählten Elements im Listensteuerelement bestimmen, mit der <xref:System.Web.UI.WebControls.ListControl.SelectedIndex%2A> Eigenschaft. Die Eigenschaften des ausgewählten Elements können zugegriffen werden, indem die <xref:System.Web.UI.WebControls.ListControl.SelectedItem%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.ListControl> -Klasse stellt die <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> Ereignis, das ausgelöst wird, wenn die Auswahl im Listensteuerelement zwischen Übertragungen zum Server geändert. Dadurch können Sie einen benutzerdefinierten Handler für dieses Ereignis bereitstellen. Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.ListControl> -Klasse implementiert die <xref:System.Web.UI.IEditableTextControl> Schnittstelle, sodass, ableiten von Steuerelementen vom Typ Liste im Vorlagenmodus anderer Steuerelemente verwendet werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, auswählen von Elementen in einem <xref:System.Web.UI.WebControls.ListBox> Steuerelement. Wenn das Element in das Textfeld gefunden wird, wird das Element ausgewählt ist, und eine Meldung wird angezeigt, den Namen des ausgewählten Elements. Wenn das Element nicht gefunden wird, kein Element ausgewählt ist, und eine Meldung angezeigt, die besagt, dass das Element nicht gefunden wurde.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[ListControlSelectedValue#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlSelectedValue/CS/listcontrolselectedvaluecs.aspx#1)]
+ [!code-aspx-vb[ListControlSelectedValue#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlSelectedValue/VB/listcontrolselectedvaluevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListControl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie programmgesteuert  
+  
+ Erstellen einer <xref:System.Web.UI.WebControls.ListBox> Steuerelement. Im Beispiel wird eine <xref:System.Web.UI.WebControls.PlaceHolder> Steuerelement als Container für die <xref:System.Web.UI.WebControls.ListBox>.  
+  
+ [!code-aspx-csharp[ListControlctor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlctor/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ListControlctor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlctor/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Wendet HTML-Attribute und -Formate für das Rendern im angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.AddAttributesToRender%2A> Methode hauptsächlich von Steuerelemententwicklern verwendet, um die zusätzlichen Attribute einzufügen und Stile in die <xref:System.Web.UI.HtmlTextWriter> Ausgabestream für Steuerelemente, die abgeleitet sind die <xref:System.Web.UI.WebControls.ListControl> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.WebControls.ListControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" /> methodenüberschreibungen die <see cref="M:System.Web.UI.WebControls.WebControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendDataBoundItems">
+      <MemberSignature Language="C#" Value="public virtual bool AppendDataBoundItems { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AppendDataBoundItems" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.AppendDataBoundItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Listenelemente vor der Datenbindung gelöscht werden, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" /> wenn Listenelemente vor der Datenbindung nicht gelöscht werden; andernfalls <see langword="false" />, wenn die Elementauflistung vor der Datenbindung gelöscht wird. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.AppendDataBoundItems%2A> -Eigenschaft können Sie Elemente hinzufügen das <xref:System.Web.UI.WebControls.ListControl> Objekt vor dem Datenbindung erfolgt. Nach dem Datenbindung enthält die Items-Auflistung die Elemente aus der Datenquelle, und die zuvor hinzugefügten Elemente.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie datengebundene Elemente und Elemente, die nicht im an Daten gebunden sind einschließen einer <xref:System.Web.UI.WebControls.ListBox> Steuerelement. In der <xref:System.Web.UI.Control.Load> -Ereignis für die <xref:System.Web.UI.Page>, ein Element hinzugefügt wird die <xref:System.Web.UI.WebControls.ListControl.Items%2A> Auflistung und die <xref:System.Web.UI.WebControls.ListControl.AppendDataBoundItems%2A> -Eigenschaftensatz auf `true`. Anschließend wird die <xref:System.Web.UI.WebControls.ListBox> gebunden ist ein <xref:System.Data.DataTable> Steuerelement. Das resultierende <xref:System.Web.UI.WebControls.ListBox> Steuerelement enthält, die datengebundene Elemente und das Element, das einzeln hinzugefügt wurde.  
+  
+ [!code-aspx-csharp[ListControlAppendDataBoundItems#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlAppendDataBoundItems/CS/AppendItemsCs.aspx#1)]
+ [!code-aspx-vb[ListControlAppendDataBoundItems#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlAppendDataBoundItems/VB/AppendItemsVb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPostBack">
+      <MemberSignature Language="C#" Value="public virtual bool AutoPostBack { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoPostBack" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.AutoPostBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein automatisches Postback an den Server erfolgt, wenn der Benutzer die Listenauswahl ändert, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn beim Ändern der Listenauswahl durch den Benutzer ein automatisches Postback an den Server erfolgt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` , wenn der Server benötigt, um die Auswahl zu erfassen, sobald sie bereitgestellt wird. Andere Steuerelemente auf der Webseite können z. B. automatisch je nach Auswahl des Benutzers aus einem Listensteuerelement ausgefüllt werden.  
+  
+ Diese Eigenschaft kann verwendet werden, um automatische Auffüllung der andere Steuerelemente auf der Webseite auf Grundlage einer Benutzerauswahl aus einer Liste zu ermöglichen.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie aktivieren <xref:System.Web.UI.WebControls.ListControl.AutoPostBack%2A> für die <xref:System.Web.UI.WebControls.ListBox> Steuerelement.  
+  
+ [!code-aspx-csharp[ListControlAutoPostBack#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlAutoPostBack/CS/ListControlAutoPostBackcs.aspx#1)]
+ [!code-aspx-vb[ListControlAutoPostBack#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlAutoPostBack/VB/ListControlAutoPostBackvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob beim Klicken auf ein Steuerelement, das von der <see cref="T:System.Web.UI.WebControls.ListControl" />-Klasse abgeleitet ist, eine Validierung durchgeführt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn beim Klicken auf das <see cref="T:System.Web.UI.WebControls.ListControl" />-Steuerelement eine Validierung durchgeführt wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A> Eigenschaft, um zu bestimmen, ob die Überprüfung erfolgt bei einer <xref:System.Web.UI.WebControls.ListControl> Steuerelement geklickt wird. Seitenüberprüfung bestimmt, ob die Eingabesteuerelemente, die mit einer Überprüfung verknüpft sind auf der Seite steuern, die alle die Validierungsregeln übergeben, die durch das Validierungssteuerelement angegeben werden.  
+  
+ Klicken Sie auf ein Steuerelement, das von abgeleitet ist, wird standardmäßig die <xref:System.Web.UI.WebControls.ListControl> Klasse führt nicht dazu, dass der Validierung. Auf der seitenüberprüfung durchzuführen, wenn das Steuerelement, die abgeleitet wurde. die <xref:System.Web.UI.WebControls.ListControl> Klasse geklickt wird, legen Sie die <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A> Eigenschaft `true`.  
+  
+ Bei den Wert des der <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A> -Eigenschaftensatz auf `true`, können Sie auch die <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.WebControls.ListControl> Steuerelement eine Validierung.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearSelection">
+      <MemberSignature Language="C#" Value="public virtual void ClearSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.ClearSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Listenauswahl und legt die <see cref="P:System.Web.UI.WebControls.ListItem.Selected" />-Eigenschaft aller Elemente auf false fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um das Steuerelement zurückzusetzen, sodass keine Elemente ausgewählt sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextField">
+      <MemberSignature Language="C#" Value="public virtual string DataTextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.DataTextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Feld der Datenquelle ab, das den Textinhalt der Listenelemente bereitstellt, oder legt dieses fest.</summary>
+        <value>Das Feld der Datenquelle, das den Textinhalt der Listenelemente bereitstellt. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft an ein Feld in der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> Eigenschaft als die Elemente der Liste in einem Listensteuerelement angezeigt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Web.UI.WebControls.ListControl.DataTextField%2A> für die <xref:System.Web.UI.WebControls.RadioButtonList> Steuerelement. Die <xref:System.Web.UI.WebControls.ListControl.DataTextField%2A> ist der Text, der in angezeigten Daten den <xref:System.Web.UI.WebControls.RadioButtonList>.  
+  
+ [!code-aspx-csharp[ListControlDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDataSource/CS/ListControlDataSourcecs.aspx#1)]
+ [!code-aspx-vb[ListControlDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDataSource/VB/ListControlDataSourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataTextFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.DataTextFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Formatierungszeichenfolge ab, mit der die Anzeige der mit dem Listensteuerelement verbundenen Daten gesteuert wird, oder legt diese fest.</summary>
+        <value>Die Formatierungszeichenfolge für Daten, die mit dem Steuerelement verbunden sind. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListControl.DataTextFormatString%2A> Eigenschaft, um einem benutzerdefiniertes Format der Elemente in einem Listensteuerelement bereitzustellen.  
+  
+ Daten-Formatzeichenfolge besteht aus zwei Teilen, getrennt durch einen Doppelpunkt, im Format { `A` : `Bxx` }. Die Formatierungszeichenfolge {0: F2} formatieren z. B. die Zelle, um eine Festkommazahl mit zwei Dezimalstellen angezeigt.  
+  
+> [!NOTE]
+>  In der geschweiften Klammern, um anzugeben, dass es auf einer Formatzeichenfolge und keine Literale Zeichenfolge ist, muss die gesamte Zeichenfolge eingeschlossen werden. Beliebiger Text außerhalb der Klammern wird als Literaltext angezeigt.  
+  
+ Der Wert vor dem Doppelpunkt (`A` im allgemeinen Beispiel) gibt an, die Parameter-Index in einer nullbasierten Liste von Parametern.  
+  
+> [!NOTE]
+>  Dieser Wert kann nur auf 0 festgelegt werden, da nur ein Wert in jeder Zelle vorhanden ist.  
+  
+ Die Zeichen nach dem Doppelpunkt (`B` im allgemeinen Beispiel) gibt das Format, um den Wert in anzuzeigen. Die folgende Tabelle enthält die gängigen Formaten.  
+  
+|Formatzeichen|Beschreibung|  
+|----------------------|-----------------|  
+|`C`|Zeigt numerische Werte im Währungsformat an.|  
+|`D`|Zeigt die numerische Werte im Dezimalformat.|  
+|`E`|Numerischen Werte in wissenschaftlicher (exponentieller) Format angezeigt.|  
+|`F`|Numerischen Werte in festgelegten Format angezeigt.|  
+|`G`|Im Allgemeinen formatieren Sie numerische Werte angezeigt.|  
+|`N`|Numerischen Werte im Zahlenformat angezeigt.|  
+|`X`|Numerischen Werte im Hexadezimalformat angezeigt.|  
+  
+> [!NOTE]
+>  Das Formatzeichen ist keine Groß-/Kleinschreibung beachtet, mit Ausnahme von `X`, woraufhin die hexadezimalen Zeichen im angegebenen Fall.  
+  
+ Der Wert nach der Formatzeichen (`xx` im allgemeinen Beispiel) gibt die Anzahl der signifikanten Ziffern oder Dezimalstellen an.  
+  
+ Die folgende Tabelle enthält Beispiele für das Formatieren von Zeichenfolgen und die Ergebnisse an. Es wird davon ausgegangen, Standardeinstellungen für Englisch.  
+  
+|Numerischer Wert|Formatzeichenfolge|Ergebnis|  
+|-------------------|-------------------|------------|  
+|12345.6789|"{0}"|$12,345.68|  
+|-12345.6789|"{0}"|($12,345.68)|  
+|12345|"{0: D}"|12345|  
+|12345|"{0:D8}"|00012345|  
+|12345.6789|"{0: E}"|1234568E + 004|  
+|12345.6789|"{0:E10}"|1.2345678900E + 004|  
+|12345.6789|"{0:F}"|12345.68|  
+|12345.6789|"{0: F0}"|12346|  
+|12345.6789|"{UM}"0: G|12345.6789|  
+|123456789|"{0:G7}"|1.234568E8|  
+|12345.6789|"{0: N}"|12,345.68|  
+|123456789|"{0:N4}"|123,456,789.0000|  
+|12345.6789|"Gesamt: {0}"|Insgesamt: $12345.68|  
+  
+ Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierungstypen](~/docs/standard/base-types/formatting-types.md).  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataValueField">
+      <MemberSignature Language="C#" Value="public virtual string DataValueField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataValueField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.DataValueField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Feld der Datenquelle ab, das den Wert für jedes Listenelement bereitstellt, oder legt dieses fest.</summary>
+        <value>Das Feld der Datenquelle, das den Wert für jedes Listenelement angibt. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um das Feld anzugeben, das den Wert jedes Elements in einem Listensteuerelement enthält.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Web.UI.WebControls.ListControl.DataValueField%2A> für die <xref:System.Web.UI.WebControls.RadioButtonList> Steuerelement. Die <xref:System.Web.UI.WebControls.ListControl.DataValueField%2A> ist der Wert jedes Elements in der <xref:System.Web.UI.WebControls.RadioButtonList>.  
+  
+ [!code-aspx-csharp[ListControlDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDataSource/CS/ListControlDataSourcecs.aspx#1)]
+ [!code-aspx-vb[ListControlDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDataSource/VB/ListControlDataSourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ListItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.ListItemsCollectionEditor,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Elemente im Listensteuerelement ab.</summary>
+        <value>Die Elemente in der Liste. Der Standardwert ist eine leere Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Eigenschaften der Elemente im Listensteuerelement abzurufen. Diese Eigenschaft kann verwendet werden, um zu bestimmen, die ausgewählten Elemente im Listensteuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ListControl.Items%2A> Eigenschaft zum Bestimmen der ausgewählten Elemente in einem <xref:System.Web.UI.WebControls.CheckBoxList> Steuerelement.  
+  
+ [!code-aspx-csharp[ListControlItems#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlItems/CS/ListControlItemscs.aspx#1)]
+ [!code-aspx-vb[ListControlItems#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlItems/VB/ListControlItemsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" />, das den Zustand des von <see cref="T:System.Web.UI.WebControls.ListControl" /> abgeleiteten Steuerelements darstellt.</param>
+        <summary>Lädt den zuvor gespeicherten Ansichtszustand des <see cref="T:System.Web.UI.WebControls.DetailsView" />-Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.LoadViewState%2A> Methode wird verwendet, um den zuvor gespeicherten Ansichtszustand des Laden der <xref:System.Web.UI.WebControls.ListControl> -abgeleiteten Steuerelements.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn Sie erweitern die <xref:System.Web.UI.WebControls.ListControl> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBinding">
+      <MemberSignature Language="C#" Value="protected override void OnDataBinding (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBinding(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.OnDataBinding(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.DataBinding" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode benachrichtigt das Serversteuerelement an alle erforderlichen Vorbereitungsschritte vor dem Speichern der Ansichtszustand und Rendern von Inhalt an. Es wird im Allgemeinen von Entwicklern verwendet, beim Erweitern der <xref:System.Web.UI.WebControls.ListControl> Klasse.  
+  
+ Mit der <xref:System.Web.UI.WebControls.ListControl.OnPreRender%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.ListControl.OnPreRender(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedIndexChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectedIndexChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectedIndexChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.ListControl.SelectedIndexChanged" />-Ereignis aus. Dadurch können Sie einen benutzerdefinierten Handler für das Ereignis bereitstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> Ereignis wird ausgelöst, wenn die Auswahl im Listensteuerelement zwischen Übertragungen zum Server geändert.  
+  
+> [!NOTE]
+>  Ein Listenfeld-Steuerelement muss beibehalten, einige Werte zwischen Übertragungen zum Server für dieses Ereignis ordnungsgemäß funktioniert. Achten Sie darauf, dass der Ansichtszustand für das Strukturelement-Steuerelement aktiviert ist.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Mit der <xref:System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie angeben und codieren einen Handler für das <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> Ereignis, um die vom Benutzer vorgenommene Auswahl angezeigt.  
+  
+ [!code-aspx-csharp[ListControlDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDataSource/CS/ListControlDataSourcecs.aspx#1)]
+ [!code-aspx-vb[ListControlDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDataSource/VB/ListControlDataSourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.OnTextChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.ListControl.TextChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.OnTextChanged%2A> Methode wird aufgerufen, indem Sie das Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.ListControl> -Klasse zum Auslösen der <xref:System.Web.UI.WebControls.ListControl.TextChanged> Ereignis. Im Allgemeinen die <xref:System.Web.UI.WebControls.ListControl.OnTextChanged%2A> Methode wird von Steuerelemententwicklern verwendet, wenn die Erweiterung der <xref:System.Web.UI.WebControls.ListControl> Klasse.  
+  
+ Mit der <xref:System.Web.UI.WebControls.ListControl.OnTextChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.WebControls.ListControl.OnTextChanged(System.EventArgs)" /> Methode in einer abgeleiteten Klasse aufrufen werden die <see cref="M:System.Web.UI.WebControls.ListControl.OnTextChanged(System.EventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected override void PerformDataBinding (System.Collections.IEnumerable dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void PerformDataBinding(class System.Collections.IEnumerable dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.PerformDataBinding(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Ein <see cref="T:System.Collections.IEnumerable" />, das die Datenquelle darstellt.</param>
+        <summary>Bindet die angegebene Datenquelle an das von der <see cref="T:System.Web.UI.WebControls.ListControl" />-Klasse abgeleitete Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.PerformDataBinding%2A> Methode ist eine Hilfsmethode, die vom Steuerelement aufgerufen wird, die abgeleitet ist die <xref:System.Web.UI.WebControls.ListControl> Klasse, um die angegebene Datenquelle an das Steuerelement zu binden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der zwischengespeicherte Wert der <see cref="P:System.Web.UI.WebControls.ListControl.SelectedIndex" /> liegt außerhalb des gültigen Bereichs.</exception>
+        <exception cref="T:System.ArgumentException">Die zwischengespeicherten Werte von <see cref="P:System.Web.UI.WebControls.ListControl.SelectedIndex" /> und <see cref="P:System.Web.UI.WebControls.ListControl.SelectedValue" /> stimmen nicht überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformSelect">
+      <MemberSignature Language="C#" Value="protected override void PerformSelect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PerformSelect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.PerformSelect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft Daten aus der zugeordneten Datenquelle ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.PerformSelect%2A> Methodenaufrufe der <xref:System.Web.UI.WebControls.ListControl.PerformDataBinding%2A> -Methode auf, nachdem die Daten abgerufen werden, um Daten auf Elemente des datengebundenen Steuerelements binden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Ausgabestream darstellt, der zum Schreiben des Inhalts auf eine Webseite verwendet wird.</param>
+        <summary>Gibt die Elemente im <see cref="T:System.Web.UI.WebControls.ListControl" />-Steuerelement wieder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListControl.RenderContents%2A> Methode zum Rendern der Elemente in der <xref:System.Web.UI.WebControls.ListControl> Steuerelement an den Client.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Ansichtszustand des vom <see cref="T:System.Web.UI.WebControls.ListControl" /> abgeleiteten Steuerelements und der darin enthaltenen Elemente.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das den gespeicherten Zustand des <see cref="T:System.Web.UI.WebControls.ListControl" />-Steuerelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView.SaveViewState%2A> Methode ist eine Hilfsmethode wird aufgerufen, indem die <xref:System.Web.UI.WebControls.ListControl> Steuerelement den Zustand des Steuerelements zu speichern.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn Sie erweitern die <xref:System.Web.UI.WebControls.ListControl> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public virtual int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den niedrigsten Ordinalindex der in der Liste ausgewählten Elemente ab oder legt diesen fest.</summary>
+        <value>Der niedrigste Ordinalindex der in der Liste ausgewählten Elemente. Der Standardwert ist -1 und bedeutet, dass keine Auswahl getroffen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Index des derzeit ausgewählten Elements in der Liste zu ermitteln, wenn das Strukturelement-Steuerelement nur eine Auswahl ermöglicht. Wenn das Strukturelement-Steuerelement die Mehrfachauswahl unterstützt, verwenden Sie diese Eigenschaft auf um der niedrigsten Index der ausgewählten Elemente zu bestimmen.  
+  
+ Der Wert, der die <xref:System.Web.UI.WebControls.ListControl.SelectedIndex%2A> Eigenschaft nicht ausdrücklich auf Postbacks gespeichert. Er wird wiederhergestellt, beim postback mithilfe der <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft. Z. B. wenn die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft ist 4. beim Postback der <xref:System.Web.UI.WebControls.ListControl.SelectedIndex%2A> Eigenschaftensatz wird auf den Index des der <xref:System.Web.UI.WebControls.ListItem> Objekt mit einer <xref:System.Web.UI.WebControls.ListItem.Value%2A> Eigenschaft von 4. Wenn mehr als ein <xref:System.Web.UI.WebControls.ListItem> Objekt verfügt über eine <xref:System.Web.UI.WebControls.ListItem.Value%2A> Eigenschaft 4, wird das erste Element in der <xref:System.Web.UI.WebControls.ListControl.Items%2A> Sammlung ausgewählt ist.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Web.UI.WebControls.ListControl.SelectedIndex%2A> um zu bestimmen, der niedrigsten Index der ausgewählten Elemente in der <xref:System.Web.UI.WebControls.CheckBoxList>.  
+  
+ [!code-aspx-csharp[ListControlSelectedIndex#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlSelectedIndex/CS/ListControlSelectedIndexcs.aspx#1)]
+ [!code-aspx-vb[ListControlSelectedIndex#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlSelectedIndex/VB/ListControlSelectedIndexvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Index kleiner als-1 festgelegt wurde, oder größer als oder gleich der Anzahl der Elemente in der Liste die zum Zeitpunkt die Liste gerendert wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndexChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectedIndexChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectedIndexChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.ListControl.SelectedIndexChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die Auswahl im Listensteuerelement zwischen Übertragungen zum Server geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> Ereignis wird ausgelöst, wenn die Auswahl im Listensteuerelement zwischen Übertragungen zum Server geändert.  
+  
+> [!NOTE]
+>  Ein Listenfeld-Steuerelement muss beibehalten, einige Werte zwischen Übertragungen zum Server für dieses Ereignis ordnungsgemäß funktioniert. Achten Sie darauf, dass der Ansichtszustand für das Strukturelement-Steuerelement aktiviert ist.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie angeben und codieren einen Handler für das <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> Ereignis, um die vom Benutzer vorgenommene Auswahl angezeigt.  
+  
+ [!code-aspx-csharp[ListControlDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDataSource/CS/ListControlDataSourcecs.aspx#1)]
+ [!code-aspx-vb[ListControlDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDataSource/VB/ListControlDataSourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItem">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ListItem SelectedItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListItem SelectedItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.SelectedItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das im Steuerelement ausgewählte Element mit dem niedrigsten Index ab.</summary>
+        <value>Das im Listenelement ausgewählte indizierte Element mit dem niedrigsten Indexwert. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Strukturelement-Steuerelement nur eine einzelne Auswahl zulässt, verwenden Sie diese Eigenschaft zum Abrufen der einzelnen Eigenschaften des ausgewählten Elements an. Wenn das Strukturelement-Steuerelement die Mehrfachauswahl zulässt, verwenden Sie diese Eigenschaft zum Abrufen der Eigenschaften des niedrigsten indizierte ausgewählten Elements im Listensteuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Web.UI.WebControls.ListControl.SelectedItem%2A> zum Abrufen der einzelnen Eigenschaften des aktuell ausgewählten Elements in der <xref:System.Web.UI.WebControls.RadioButtonList> und das Element und dessen Wert angezeigt.  
+  
+ [!code-aspx-csharp[ListControlDataSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlDataSource/CS/ListControlDataSourcecs.aspx#1)]
+ [!code-aspx-vb[ListControlDataSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlDataSource/VB/ListControlDataSourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValue">
+      <MemberSignature Language="C#" Value="public virtual string SelectedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.SelectedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true, System.ComponentModel.BindingDirection.TwoWay)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des ausgewählten Elements im Listensteuerelement ab oder wählt das Element im Listensteuerelement aus, das den angegebenen Wert enthält.</summary>
+        <value>Der Wert des ausgewählten Elements im Listensteuerelement. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die <xref:System.Web.UI.WebControls.ListItem.Value%2A> Eigenschaft des ausgewählten <xref:System.Web.UI.WebControls.ListItem>. Die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft wird häufig verwendet, um den Wert des ausgewählten Elements im Listensteuerelement zu bestimmen. Wenn mehrere Elemente ausgewählt sind, wird der Wert des ausgewählten Elements mit dem niedrigsten Index zurückgegeben. Wenn kein Element ausgewählt ist, eine leere Zeichenfolge ("") zurückgegeben.  
+  
+ Die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft kann auch verwendet werden, um ein Element im Listensteuerelement auswählen, indem Sie es mit dem Wert des Elements festlegen.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Wenn der ausgewählte Wert nicht in der Liste der verfügbaren Werte ist und ein Postbacks ausgeführt wurden, ein <xref:System.ArgumentOutOfRangeException> Ausnahme wird ausgelöst. Das folgende Beispiel zeigt, wie einen ungültigen Wert abgefangen wird, bevor Postback auftritt:  
+  
+```vb  
+Me.DropDownList1.Items.Add(New ListItem( Text="Hello", Value="1" ))   
+If DropDownList1.Items.FindByValue("2") IsNot Nothing Then   
+    Response.Write("Found")   
+End If  
+```  
+  
+```csharp  
+this.DropDownList1.Items.Add(new ListItem{ Text="Hello", Value="1" });  
+if(DropDownList1.Items.FindByValue("2") != null) {  
+    Response.Write("Found");  
+}  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft zum Auswählen eines Elements in einem <xref:System.Web.UI.WebControls.ListBox> Steuerelement. Beachten Sie, dass diese Eigenschaft auch zum Abrufen des Werts des ausgewählten Elements verwendet werden kann.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[ListControlSelectedValue#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListControlSelectedValue/CS/listcontrolselectedvaluecs.aspx#1)]
+ [!code-aspx-vb[ListControlSelectedValue#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListControlSelectedValue/VB/listcontrolselectedvaluevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist wurde nicht in der Liste der verfügbaren Werte und Ansichtszustand oder eines anderen Umstands geladen (ein Postback wurde ausgeführt).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPostDataSelection">
+      <MemberSignature Language="C#" Value="protected void SetPostDataSelection (int selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetPostDataSelection(int32 selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.SetPostDataSelection(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">Der Index des ausgewählten Elements in der <see cref="P:System.Web.UI.WebControls.ListControl.Items" />-Auflistung.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.WebControls.ListItem.Selected" />-Eigenschaft eines <see cref="T:System.Web.UI.WebControls.ListItem" />-Steuerelements fest, nachdem eine Seite gesendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.SetPostDataSelection%2A> Methode ist eine Hilfsmethode, die das ausgewählte Element in verwaltet die <xref:System.Web.UI.WebControls.ListControl> steuern, nachdem eine Seite gesendet wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagKey">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HtmlTextWriterTag TagKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.HtmlTextWriterTag TagKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.TagKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.UI.HtmlTextWriterTag" />-Wert für das <see cref="T:System.Web.UI.WebControls.ListControl" />-Steuerelement ab.</summary>
+        <value>Der <see cref="T:System.Web.UI.HtmlTextWriterTag" />-Wert für das <see cref="T:System.Web.UI.WebControls.ListControl" />-Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.TagKey%2A> Eigenschaft ermöglicht dem Ausgabestream an das entsprechende HTML-Markup für das Steuerelement zu schreiben, die abgeleitet ist die <xref:System.Web.UI.WebControls.ListControl> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="P:System.Web.UI.WebControls.ListControl.TagKey" /> Eigenschaft angeben, welche <see cref="T:System.Web.UI.HtmlTextWriterTag" /> Wert, der für das abgeleitete Steuerelement verwendet.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Web.UI.WebControls.ListControl.SelectedValue" />-Eigenschaft des <see cref="T:System.Web.UI.WebControls.ListControl" />-Steuerelements ab oder legt diese fest.</summary>
+        <value>Die <see cref="P:System.Web.UI.WebControls.ListControl.SelectedValue" /> des <see cref="T:System.Web.UI.WebControls.ListControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.Text%2A> Eigenschaft ruft ab oder legt den gleichen Wert, der die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft verfügt.  
+  
+ Die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft wird häufig verwendet, um den Wert des ausgewählten Elements im Bestimmen der <xref:System.Web.UI.WebControls.ListControl> Steuerelement. Wenn kein Element ausgewählt ist, eine leere Zeichenfolge ("") zurückgegeben.  
+  
+ Sie können auch die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft zum Auswählen eines Elements in der <xref:System.Web.UI.WebControls.ListControl> Steuerelement, indem Sie es mit dem Wert des Elements festlegen. Wenn keine Elemente in der <xref:System.Web.UI.WebControls.ListControl> Steuerelement enthalten, den angegebenen Wert ein <xref:System.ArgumentOutOfRangeException?displayProperty=nameWithType> Ausnahme wird ausgelöst.  
+  
+ Entwickler von Steuerelementen können außer Kraft setzen der <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft, um Funktionen zu unterstützen, die keine Beziehung werden die <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaft.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.ListControl.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Web.UI.WebControls.ListControl.Text" />-Eigenschaft und die <see cref="P:System.Web.UI.WebControls.ListControl.SelectedValue" />-Eigenschaft ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.TextChanged> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.WebControls.ListControl.Text%2A> und <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> Eigenschaften ändern.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Mit der <xref:System.Web.UI.WebControls.ListControl.OnTextChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.WebControls.ListControl.OnTextChanged(System.EventArgs)" /> Methode in einer abgeleiteten Klasse aufrufen werden die <see cref="M:System.Web.UI.WebControls.ListControl.OnTextChanged(System.EventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert den Anfangspunkt, an dem begonnen werden soll, Änderungen am Ansichtszustand eines von <see cref="T:System.Web.UI.WebControls.ListControl" /> abgeleiteten Steuerelements nachzuverfolgen und zu speichern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird überschrieben, um den Ausgangspunkt nachzuverfolgen und zu speichern von Änderungen an das Steuerelement als Teil der Ansichtszustand des Steuerelements zu beginnen zu kennzeichnen.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn die Erweiterung <xref:System.Web.UI.WebControls.ListControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListControl.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gruppe von Steuerelementen ab, für die das von der <see cref="T:System.Web.UI.WebControls.ListControl" />-Klasse abgeleitete Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet wird, oder legt die entsprechende Gruppe fest.</summary>
+        <value>Die Gruppe von Steuerelementen, für die das abgeleitete <see cref="T:System.Web.UI.WebControls.ListControl" /> eine Validierung auslöst, wenn es an den Server zurückgesendet wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> Eigenschaft, um anzugeben, den Namen der Validierungsgruppe für die das Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.ListControl> Klasse eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ Die <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> Eigenschaft wirkt sich nur, wenn der Wert der <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A> -Eigenschaftensatz auf `true`. Wenn geben Sie einen Wert für die <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> -Eigenschaft, um nur die Validierungssteuerelemente, die Teil der angegebenen Gruppe sind sind validiert, wenn die <xref:System.Web.UI.WebControls.ListControl> Steuerelement an den Server sendet. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A> -Eigenschaftensatz auf `true`, alle Validierungssteuerelemente auf der Seite, die Validierungsgruppe zugeordnet sind werden überprüft, wenn das Steuerelement an den Server zurückgesendet.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyMultiSelect">
+      <MemberSignature Language="C#" Value="protected virtual void VerifyMultiSelect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void VerifyMultiSelect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListControl.VerifyMultiSelect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob das Listensteuerelement den Modus zur Mehrfachauswahl unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListControl.VerifyMultiSelect%2A> Methode hat keine Funktion, wenn die Mehrfachauswahl unterstützt wird. Löst andernfalls eine <xref:System.Web.HttpException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          Für <see cref="P:System.Web.UI.WebControls.ListBox.SelectionMode" /> ist <see cref="F:System.Web.UI.WebControls.ListSelectionMode.Single" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

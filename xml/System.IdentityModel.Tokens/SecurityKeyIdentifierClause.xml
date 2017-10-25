@@ -1,0 +1,251 @@
+<Type Name="SecurityKeyIdentifierClause" FullName="System.IdentityModel.Tokens.SecurityKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public abstract class SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityKeyIdentifierClause extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse für eine Schlüsselbezeichnerklausel dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel ist es nicht erforderlich, die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> zu verwenden, es sei denn, es wird ein benutzerdefinierter Sicherheitstokendienst erstellt. Wenn ein Sicherheitstokendienst ein Sicherheitstoken zurückgibt, enthält das ausgegebene Sicherheitstoken Verweise auf angefügte und nicht angefügte Sicherheitstoken. Die angefügten Verweise beziehen sich auf Sicherheitstoken, die im Sicherheitsheader einer SOAP-Nachricht enthalten sind, und nicht angehängte Verweise beziehen sich auf Sicherheitstoken, die nicht im Sicherheitsheader einer SOAP-Nachricht enthalten sind. Diese Verweise bestätigen in der Regel die Echtheit des ausgegebenen Sicherheitstokens.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityKeyIdentifierClause (string clauseType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string clauseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clauseType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clauseType">Der Typ der Schlüsselbezeichnerklausel. Legt den Wert der <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />-Klasse mithilfe des angegebenen Typs der Schlüsselbezeichnerklausel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Sicherheitsschlüsselbezeichner in XML serialisiert wird, wird der `clauseType`-Parameter als `ValueType`-Attribut des `<SecurityTokenReference>`-Elements serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityKeyIdentifierClause (string clauseType, byte[] derivationNonce, int derivationLength);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string clauseType, unsigned int8[] derivationNonce, int32 derivationLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.#ctor(System.String,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clauseType" Type="System.String" />
+        <Parameter Name="nonce" Type="System.Byte[]" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="clauseType">Der Typ der Schlüsselbezeichnerklausel. Legt den Wert der <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />-Eigenschaft fest.</param>
+        <param name="derivationNonce">To be added.</param>
+        <param name="derivationLength">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />-Klasse mithilfe des angegebenen Typs der Schlüsselbezeichnerklausel, der Nonce und der abgeleiteten Schlüssellänge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] unterstützt die Erstellung impliziter abgeleiteter Schlüsselbezeichner nicht. [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] verarbeitet jedoch eingehende SOAP-Nachrichten, die einen impliziten Schlüsselbezeichner enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKey">
+      <MemberSignature Language="C#" Value="public virtual bool CanCreateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCreateKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CanCreateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Schlüssel erstellt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn ein Schlüssel erstellt werden kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Schlüssel auf der Basis der Parameter, die an den Konstruktor übergeben wurden, erstellt werden kann, überschreiben Sie die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CanCreateKey%2A>-Methode, um zurückzukehren `true` und die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CreateKey%2A>-Methode zu implementieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClauseType">
+      <MemberSignature Language="C#" Value="public string ClauseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClauseType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Schlüsselbezeichnerklausel ab.</summary>
+        <value>Der Typ der Schlüsselbezeichnerklausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKey">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityKey CreateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKey CreateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CreateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Schlüssel auf der Grundlage der Parameter, die in den Konstruktor übergeben wurden.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SecurityKey" />, der den erstellten Schlüssel enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Schlüssel auf der Basis der Parameter, die an den Konstruktor übergeben wurden, erstellt werden kann, überschreiben Sie die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CanCreateKey%2A>-Methode, um zurückzukehren `true` und die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CreateKey%2A>-Methode zu implementieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DerivationLength">
+      <MemberSignature Language="C#" Value="public int DerivationLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DerivationLength" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.DerivationLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des abgeleiteten Schlüssels ab.</summary>
+        <value>Die Größe des abgeleiteten Schlüssels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] unterstützt die Erstellung impliziter abgeleiteter Schlüsselbezeichner nicht. [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] verarbeitet jedoch eingehende SOAP-Nachrichten, die einen impliziten Schlüsselbezeichner enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDerivationNonce">
+      <MemberSignature Language="C#" Value="public byte[] GetDerivationNonce ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetDerivationNonce() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.GetDerivationNonce" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Nonce ab, die verwendet wurde, um den abgeleiteten Schlüssel zu generieren.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array, das die Nonce enthält, die zur Erstellung des abgeleiteten Schlüssels verwendet wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] unterstützt die Erstellung impliziter abgeleiteter Schlüsselbezeichner nicht. [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] verarbeitet jedoch eingehende SOAP-Nachrichten, die einen impliziten Schlüsselbezeichner enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schlüsselbezeichner-Klausel-ID.</summary>
+        <value>Der Schlüsselbezeichner-Klausel-ID. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Sicherheitsschlüsselbezeichner in XML serialisiert ist die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Id%2A> Eigenschaft serialisiert wird, als die `Id` Attribut des der `<SecurityTokenReference>` Element. Wenn die Eigenschaft `null`, wird ein `Id` Attribut ist nicht enthalten, der `<SecurityTokenReference>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public virtual bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="clause">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Schlüsselbezeichner für diese Instanz mit der angegebenen Schlüsselbezeichnerklausel übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="clause" /> identisch mit der aktuellen Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="clause" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

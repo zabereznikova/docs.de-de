@@ -1,0 +1,626 @@
+<Type Name="TemplateField" FullName="System.Web.UI.WebControls.TemplateField">
+  <TypeSignature Language="C#" Value="public class TemplateField : System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateField extends System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TemplateField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataControlField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Feld dar, das benutzerdefinierten Inhalt in einem datengebundenen Steuerelement anzeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TemplateField> Klasse wird verwendet, indem Sie datengebundene Steuerelemente (z. B. <xref:System.Web.UI.WebControls.GridView> und <xref:System.Web.UI.WebControls.DetailsView>) zum Anzeigen von benutzerdefinierten Inhalten für jeden Datensatz angezeigt. Wenn Sie Inhalte in einem datengebundenen Steuerelement angezeigt wird, die nicht von einer der vordefinierten Felder müssen (z. B. <xref:System.Web.UI.WebControls.BoundField>), verwenden Sie die <xref:System.Web.UI.WebControls.TemplateField> Klasse benutzerdefinierte Benutzeroberfläche (UI) zu erstellen. Die <xref:System.Web.UI.WebControls.TemplateField> Objekt wird anders angezeigt, je nach dem datengebundenen Steuerelement in der er verwendet wird. Z. B. die <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt eine <xref:System.Web.UI.WebControls.TemplateField> Objekt als eine Spalte und die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement als eine Zeile angezeigt.  
+  
+ Sie können eine benutzerdefinierte Vorlage für die verschiedenen Teile des definieren die <xref:System.Web.UI.WebControls.TemplateField> -Objekt unter Verwendung der Vorlagen in der folgenden Tabelle aufgeführt.  
+  
+|Vorlage|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate%2A>|Gibt den Inhalt für die anzuzeigenden für abwechselnde Elemente in einem <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+|<xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A>|Gibt den Inhalt für die anzuzeigenden für ein Element im Bearbeitungsmodus in einem <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+|<xref:System.Web.UI.WebControls.TemplateField.FooterTemplate%2A>|Gibt den Inhalt für den Fußzeilenbereich des anzuzeigenden ein <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+|<xref:System.Web.UI.WebControls.TemplateField.HeaderTemplate%2A>|Gibt den Inhalt der Headerabschnitt eines anzuzeigenden ein <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+|<xref:System.Web.UI.WebControls.TemplateField.InsertItemTemplate%2A>|Gibt den Inhalt für die anzuzeigenden für ein Element im Einfügemodus in einem <xref:System.Web.UI.WebControls.TemplateField> Objekt. Diese Vorlage wird nur von unterstützt die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A>|Gibt den Inhalt für die anzuzeigenden für die Elemente in einem <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+  
+ Können Sie Ausblenden einer <xref:System.Web.UI.WebControls.TemplateField> Objekt in einem datengebundenen Steuerelement durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft `false`.  
+  
+ Als Alternative zum Definieren einer benutzerdefinierten <xref:System.Web.UI.WebControls.TemplateField.HeaderTemplate%2A> oder <xref:System.Web.UI.WebControls.TemplateField.FooterTemplate%2A> Vorlage können Sie die Abschnitte für Kopf- und Fußzeilen der Anpassen einer <xref:System.Web.UI.WebControls.TemplateField> Objekt, indem Sie andere Eigenschaften der Einstellung der <xref:System.Web.UI.WebControls.TemplateField> Objekt. Um eine Beschriftung in der Kopf- oder Fußzeile Abschnitten anzuzeigen, legen die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> oder die <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> Eigenschaft bzw.. Sie können ein Bild anstelle von Text in der Kopfzeile anzeigen, durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft. Der Headerabschnitt kann ausgeblendet werden, der <xref:System.Web.UI.WebControls.TemplateField> Objekt durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Einige datengebundene Steuerelemente (z. B. die <xref:System.Web.UI.WebControls.GridView> Steuerelement) können ein- oder ausblenden nur den gesamten Kopfzeilenbereich des Steuerelements. Diese datengebundenen Steuerelemente unterstützen nicht die <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> -Eigenschaft für ein einzelnes gebundenen Feld. Verwenden Sie zum Anzeigen oder Ausblenden der gesamte Headerabschnitt eines datengebundenen Steuerelements, des Steuerelements `ShowHeader` Eigenschaft (falls verfügbar).  
+  
+ Die Darstellung der können auch Anpassen der <xref:System.Web.UI.WebControls.TemplateField> Objekt (Schriftfarbe, Hintergrundfarbe und So weiter), indem Sie die Stileigenschaften für die verschiedenen Teile des Felds festlegen. Die folgende Tabelle enthält die verschiedenen Stileigenschaften.  
+  
+|Style-Eigenschaft|Beschreibung|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|Die Stileigenschaften für die untergeordneten Webserversteuerelemente von der <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|Die Stileigenschaften für den Fußzeilenbereich der <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|Die Stileigenschaften für den Headerabschnitt, der die <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|Die stileinstellungen für die Datenelemente in der <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Web.UI.WebControls.TemplateField> -Objekt, das zwei Felder in der gleichen Zelle angezeigt. Der First Name und der letzte Name-Feldern werden in der gleichen kombiniert <xref:System.Web.UI.WebControls.TemplateField> Objekt.  
+  
+ [!code-aspx-csharp[TemplateField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateField/CS/templatefieldcs.aspx#1)]
+ [!code-aspx-vb[TemplateField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateField/VB/templatefieldvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplateField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TemplateField" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TemplateField> Klasse. Dieser Konstruktor wird normalerweise verwendet, beim Hinzufügen von Feldern zu einem dynamisch erstellten datengebundenen Steuerelement.  
+  
+ Dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.TemplateField> -Objekt in einem datengebundenen Steuerelement, erstellen Sie ein neues <xref:System.Web.UI.WebControls.TemplateField> -Objekt, die entsprechenden Vorlagen definieren und dann zur feldauflistung für das datengebundene Steuerelement hinzufügen. Z. B. bei Verwendung der <xref:System.Web.UI.WebControls.GridView> steuern, fügen Sie der <xref:System.Web.UI.WebControls.TemplateField> -Objekt an die <xref:System.Web.UI.WebControls.GridView.Columns%2A> Auflistung.  
+  
+> [!NOTE]
+>  Obwohl Sie Felder zu einem datengebundenen Steuerelement dynamisch hinzufügen können, wird dringend empfohlen, dass Felder statisch deklariert und dann angezeigt oder ausgeblendet werden, je nach Bedarf. Statisch deklarieren aller Felder reduziert die Größe des Ansichtszustands für das übergeordnete datengebundene Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe des Konstruktors dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.TemplateField> Field-Spalte, um eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[TemplateFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateFieldCtor/CS/templatefieldctorcs.aspx#1)]
+ [!code-aspx-vb[TemplateFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateFieldCtor/VB/templatefieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternatingItemTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate AlternatingItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate AlternatingItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.IDataItemContainer), System.ComponentModel.BindingDirection.TwoWay)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage zum Anzeigen der abwechselnden in Elemente einem <see cref="T:System.Web.UI.WebControls.TemplateField" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" />-implementierten Objekt, das die Vorlage, zum Anzeigen der abwechselnden Elemente enthält in einem <see cref="T:System.Web.UI.WebControls.TemplateField" />. Der Standardwert ist <see langword="null" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate%2A> -Eigenschaft angezeigte für abwechselnde Elemente im benutzerdefinierten Inhalt an einen <xref:System.Web.UI.WebControls.TemplateField> Objekt. Legen Sie den Inhalt durch Erstellen einer Vorlage, die angibt, wie die abwechselnde Elemente gerendert werden.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate%2A> Eigenschaft wird häufig verwendet, in Kombination mit der <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A> Eigenschaft, um eine andere Darstellung für jedes Element im datengebundenen Steuerelement zu erstellen.  
+  
+ Um eine Vorlage angeben möchten, platzieren Sie zuerst öffnende und schließende `<AlternatingItemTemplate>` zwischen dem Start- und Endtag des Tags der `<TemplateField>` Element. Fügen Sie den benutzerdefinierten Inhalt zwischen den öffnenden und schließenden `<AlternatingItemTemplate>` Tags. Der Inhalt kann so einfach wie nur-Text oder eine komplexere (Einbetten von anderen Steuerelementen in der Vorlage, z. B.) sein.  
+  
+ Zum programmgesteuerten Zugriff auf ein Steuerelement in einer Vorlage definiert ermitteln Sie zunächst die <xref:System.Web.UI.WebControls.TableCell> Objekt in das datengebundene Steuerelement das Steuerelement enthält. Verwenden Sie als Nächstes die <xref:System.Web.UI.Control.Controls%2A> Auflistung von der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zugreifen. Können Sie auch die <xref:System.Web.UI.Control.FindControl%2A> Methode der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zu suchen, wenn das Steuerelement besitzt eine <xref:System.Web.UI.Control.ID%2A> -Eigenschaft angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate%2A> Eigenschaft zum Erstellen einer benutzerdefinierten Vorlage für die abwechselnde Elemente in einem <xref:System.Web.UI.WebControls.TemplateField> Field-Spalte eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die Vorlage ist eine Variation der Vorlage angegeben, durch die <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A> -Eigenschaft, wobei ein Bild auf der entgegengesetzten Seite der Zelle angezeigt wird.  
+  
+ [!code-aspx-csharp[TemplateFieldAlternatingItemTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateFieldAlternatingItemTemplate/CS/templatefieldalternatingitemtemplatecs.aspx#1)]
+ [!code-aspx-vb[TemplateFieldAlternatingItemTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateFieldAlternatingItemTemplate/VB/templatefieldalternatingitemtemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEmptyStringToNull">
+      <MemberSignature Language="C#" Value="public virtual bool ConvertEmptyStringToNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConvertEmptyStringToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.ConvertEmptyStringToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Wert, der <see cref="T:System.Web.UI.WebControls.TemplateField" /> Objekt gebunden ist konvertiert wird, um <see langword="null" /> wird jedoch <see cref="F:System.String.Empty" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert, der <see cref="T:System.Web.UI.WebControls.TemplateField" /> ist gebunden sollte konvertiert werden, um <see langword="null" /> Wenn es sich um <see cref="F:System.String.Empty" />ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt für bidirektionale Datenbindung-Anweisungen, die in der Vorlage vorgenommen. Die Konvertierung erfolgt nach dem Extrahieren der Werte aus der Vorlage für die bidirektionale gebundene und vor der Übergabe der Werte an die Datenquelle für einen Vorgang Update "oder" Einfügemarke.  
+  
+ Ein Benutzer möglicherweise Geben Sie beispielsweise eine leere Zeichenfolge ("") für einen Feldwert beim Aktualisieren oder Einfügen von Datensätzen. Verwenden der <xref:System.Web.UI.WebControls.TemplateField.ConvertEmptyStringToNull%2A> Eigenschaft, um anzugeben, ob es sich bei ein leeren Zeichenfolgenwert in automatisch konvertiert wird `null` Wenn das Feld "Daten" in der Datenquelle aktualisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplateField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> So kopieren Sie die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.TemplateField" /> an.</param>
+        <summary>Kopiert die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.TemplateField" />-abgeleitetes Objekt mit dem angegebenen <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TemplateField.CopyProperties%2A> Methode ist eine Hilfsmethode verwendet, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.TemplateField>-abgeleitete Objekt, das die <xref:System.Web.UI.WebControls.DataControlField> Objekt von der Methode erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Web.UI.WebControls.TemplateField.CopyProperties(System.Web.UI.WebControls.DataControlField)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Web.UI.WebControls.DataControlField.CopyProperties(System.Web.UI.WebControls.DataControlField)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplateField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Web.UI.WebControls.TemplateField" />-Objekt.</summary>
+        <returns>Gibt immer eine neue <see cref="T:System.Web.UI.WebControls.TemplateField" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TemplateField.CreateField%2A> Methode überschreibt die Basismethode zurückzugebenden ein <xref:System.Web.UI.WebControls.TemplateField> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Web.UI.WebControls.TemplateField.CreateField" /> werden Sie in einer abgeleiteten Klasse sicher, dass eine neue Instanz des Typs erstellen und die Basismethode nicht aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EditItemTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate EditItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate EditItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.EditItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.IDataItemContainer), System.ComponentModel.BindingDirection.TwoWay)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage zum Anzeigen eines Elements im Bearbeitungsmodus in einem <see cref="T:System.Web.UI.WebControls.TemplateField" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" />-Objekt, das die Vorlage zum Anzeigen eines Elements im Bearbeitungsmodus in enthält implementiert eine <see cref="T:System.Web.UI.WebControls.TemplateField" />. Der Standardwert ist <see langword="null" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A> -Eigenschaft an die benutzerdefinierte Inhalte für ein Element, das im Bearbeitungsmodus in wird angezeigt, eine <xref:System.Web.UI.WebControls.TemplateField> Objekt. Legen Sie den Inhalt durch Erstellen einer Vorlage, die angibt, wie ein Element im Bearbeitungsmodus gerendert wird. Die <xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A> Eigenschaft enthält in der Regel Eingabesteuerelemente für den Benutzer um einen Wert in einer Datenquelle zu ändern.  
+  
+ Um eine Vorlage angeben möchten, platzieren Sie zuerst öffnende und schließende `<EditItemTemplate>` zwischen dem Start- und Endtag des Tags der `<TemplateField>` Element. Fügen Sie den benutzerdefinierten Inhalt zwischen den öffnenden und schließenden `<EditItemTemplate>` Tags. Der Inhalt kann so einfach wie nur-Text oder eine komplexere (Einbetten von anderen Steuerelementen in der Vorlage, z. B.) sein.  
+  
+ Zum programmgesteuerten Zugriff auf ein Steuerelement in einer Vorlage definiert ermitteln Sie zunächst die <xref:System.Web.UI.WebControls.TableCell> Objekt in das datengebundene Steuerelement das Steuerelement enthält. Verwenden Sie als Nächstes die <xref:System.Web.UI.Control.Controls%2A> Auflistung von der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zugreifen. Können Sie auch die <xref:System.Web.UI.Control.FindControl%2A> Methode der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zu suchen, wenn das Steuerelement besitzt eine <xref:System.Web.UI.Control.ID%2A> -Eigenschaft angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A> Eigenschaft zum Erstellen einer benutzerdefinierten Vorlage für ein Element im Bearbeitungsmodus in einem <xref:System.Web.UI.WebControls.TemplateField> Field-Spalte eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die Vorlage enthält Serversteuerelemente Überprüfung, um zu verhindern, dass einen Benutzer ein Feld leer lassen.  
+  
+ [!code-aspx-csharp[TemplateFieldEditItemTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateFieldEditItemTemplate/CS/templatefieldedititemtemplatecs.aspx#1)]
+ [!code-aspx-vb[TemplateFieldEditItemTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateFieldEditItemTemplate/VB/templatefieldedititemtemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValuesFromCell">
+      <MemberSignature Language="C#" Value="public override void ExtractValuesFromCell (System.Collections.Specialized.IOrderedDictionary dictionary, System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExtractValuesFromCell(class System.Collections.Specialized.IOrderedDictionary dictionary, class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplateField.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="includeReadOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Eine <see cref="T:System.Collections.Specialized.IOrderedDictionary" />.</param>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> , enthält den Text oder Steuerelemente von der <see cref="T:System.Web.UI.WebControls.TemplateField" />.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="includeReadOnly">
+          <see langword="true" />um anzugeben, dass die Werte von schreibgeschützten Feldern, in enthalten sind der <c>Wörterbuch</c> Auflistung ist, andernfalls <see langword="false" />.</param>
+        <summary>Extrahiert der Wert des Steuerelements Felder entsprechend den Angaben von mindestens zwei-Wege-bindungsanweisungen (<see langword="DataBind" />) aus der aktuellen Tabellenzelle und fügt die Werte in den angegebenen <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TemplateField.ExtractValuesFromCell%2A> Methode wird von abgeleiteten Typen implementiert <xref:System.Web.UI.WebControls.DataControlField>, wie z. B. <xref:System.Web.UI.WebControls.TemplateField>. Diese Methode wird aufgerufen, um das Extrahieren der Werte der bidirektionalen datengebundene Felder in der Vorlage zum Auffüllen der Wörterbücher, die für ein Update, Insert oder Delete-Vorgang an die Datenquelle übergeben werden. Das Feld-/Wert-Paar wird in der wörterbuchauflistung gespeichert, die an die Methode übergeben wird. Die <xref:System.Web.UI.WebControls.TemplateField.ExtractValuesFromCell%2A> Methode wird aufgerufen, indem Sie die `ExtractRowValues` Methode Datenmenge wird gesteuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate FooterTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate FooterTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.FooterTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.IDataItemContainer))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage zum Anzeigen der Fußzeilenbereich enthält, der eine <see cref="T:System.Web.UI.WebControls.TemplateField" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" />-Objekt, das die Vorlage zum Anzeigen des Fußzeilenbereichs des enthält implementiert eine <see cref="T:System.Web.UI.WebControls.TemplateField" />. Der Standardwert ist <see langword="null" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TemplateField.FooterTemplate%2A> -Eigenschaft an die benutzerdefinierte Inhalte angezeigt, die im Abschnitt Fußzeile ein <xref:System.Web.UI.WebControls.TemplateField> Objekt. Legen Sie den Inhalt durch Erstellen einer Vorlage, die angibt, wie der Fußzeilenbereich gerendert wird.  
+  
+ Um eine Vorlage angeben möchten, platzieren Sie zuerst öffnende und schließende `<FooterTemplate>` zwischen dem Start- und Endtag des Tags der `<TemplateField>` Element. Fügen Sie den benutzerdefinierten Inhalt zwischen den öffnenden und schließenden `<FooterTemplate>` Tags. Der Inhalt kann so einfach wie nur-Text oder eine komplexere (Einbetten von anderen Steuerelementen in der Vorlage, z. B.) sein.  
+  
+ Zum programmgesteuerten Zugriff auf ein Steuerelement in einer Vorlage definiert ermitteln Sie zunächst die <xref:System.Web.UI.WebControls.TableCell> Objekt in das datengebundene Steuerelement das Steuerelement enthält. Verwenden Sie als Nächstes die <xref:System.Web.UI.Control.Controls%2A> Auflistung von der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zugreifen. Können Sie auch die <xref:System.Web.UI.Control.FindControl%2A> Methode der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zu suchen, wenn das Steuerelement besitzt eine <xref:System.Web.UI.Control.ID%2A> -Eigenschaft angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TemplateField.FooterTemplate%2A> Eigenschaft zum Erstellen einer benutzerdefinierten Vorlage für den Fußzeilenbereich ein <xref:System.Web.UI.WebControls.TemplateField> Field-Spalte in einer <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die Vorlage zeigt die Summe der Werte in der <xref:System.Web.UI.WebControls.TemplateField> Field-Spalte.  
+  
+ [!code-aspx-csharp[TemplateFieldFooterTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateFieldFooterTemplate/CS/templatefieldfootertemplatecs.aspx#1)]
+ [!code-aspx-vb[TemplateFieldFooterTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateFieldFooterTemplate/VB/templatefieldfootertemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate HeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate HeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.HeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.IDataItemContainer))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage zum Anzeigen der Headerabschnitt eines ein <see cref="T:System.Web.UI.WebControls.TemplateField" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" />-Objekt, das die Vorlage zum Anzeigen der Headerabschnitt eines enthält implementiert eine <see cref="T:System.Web.UI.WebControls.TemplateField" /> in einem datengebundenen Steuerelement. Der Standardwert ist <see langword="null" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TemplateField.HeaderTemplate%2A> -Eigenschaft an die benutzerdefinierte Inhalte für der Headerabschnitt eines angezeigt ein <xref:System.Web.UI.WebControls.TemplateField> Objekt. Legen Sie den Inhalt durch Erstellen einer Vorlage, die angibt, wie der Headerabschnitt gerendert wird.  
+  
+ Um eine Vorlage angeben möchten, platzieren Sie zuerst öffnende und schließende `<HeaderTemplate>` zwischen dem Start- und Endtag des Tags der `<TemplateField>` Element. Fügen Sie den benutzerdefinierten Inhalt zwischen den öffnenden und schließenden `<HeaderTemplate>` Tags. Der Inhalt kann so einfach wie nur-Text oder eine komplexere (Einbetten von anderen Steuerelementen in der Vorlage, z. B.) sein.  
+  
+ Zum programmgesteuerten Zugriff auf ein Steuerelement in einer Vorlage definiert ermitteln Sie zunächst die <xref:System.Web.UI.WebControls.TableCell> Objekt in das datengebundene Steuerelement das Steuerelement enthält. Verwenden Sie als Nächstes die <xref:System.Web.UI.Control.Controls%2A> Auflistung von der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zugreifen. Können Sie auch die <xref:System.Web.UI.Control.FindControl%2A> Methode der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zu suchen, wenn das Steuerelement besitzt eine <xref:System.Web.UI.Control.ID%2A> -Eigenschaft angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TemplateField.HeaderTemplate%2A> Eigenschaft zum Erstellen einer benutzerdefinierten Vorlage für den Headerabschnitt, der eine <xref:System.Web.UI.WebControls.TemplateField> Field-Spalte in eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die Vorlage zeigt ein Kontrollkästchen, die die Benutzer anzeigen oder Ausblenden der Datenzeilen ermöglicht die <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[TemplateFieldHeaderTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateFieldHeaderTemplate/CS/templatefieldheadertemplatecs.aspx#1)]
+ [!code-aspx-vb[TemplateFieldHeaderTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateFieldHeaderTemplate/VB/templatefieldheadertemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplateField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> , enthält den Text oder Steuerelemente von der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</param>
+        <param name="cellType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlCellType" />-Werte.</param>
+        <param name="rowState">Eines der <see cref="T:System.Web.UI.WebControls.DataControlRowState" /> Werte, die den Zustand der Zeile, enthält die Angabe der <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" />.</param>
+        <param name="rowIndex">Der Index der Zeile, die die <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> in enthalten ist.</param>
+        <summary>Fügt Text oder Steuerelemente steuerelementeauflistung einer Zelle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, wenn Sie ein benutzerdefinierte datengebundenes Steuerelement erstellen, verwendet <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte zum Initialisieren der Zellen der Tabellenstruktur mit Daten oder Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItemTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate InsertItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate InsertItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.InsertItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.IDataItemContainer), System.ComponentModel.BindingDirection.TwoWay)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage zum Anzeigen eines Elements im Einfügemodus in einem <see cref="T:System.Web.UI.WebControls.TemplateField" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" />-Objekt, das die Vorlage zum Anzeigen eines Elements im Einfügemodus in enthält implementiert eine <see cref="T:System.Web.UI.WebControls.TemplateField" />. Der Standardwert ist <see langword="null" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TemplateField.InsertItemTemplate%2A> -Eigenschaft an die benutzerdefinierte Inhalte für ein Element im Einfügemodus in angezeigt ein <xref:System.Web.UI.WebControls.TemplateField> Objekt. Legen Sie den Inhalt durch Erstellen einer Vorlage, die angibt, wie das Element im Einfügemodus gerendert wird.  
+  
+ Um eine Vorlage angeben möchten, platzieren Sie zuerst öffnende und schließende `<InsertItemTemplate>` zwischen dem Start- und Endtag des Tags der `<TemplateField>` Element. Fügen Sie den benutzerdefinierten Inhalt zwischen den öffnenden und schließenden `<InsertItemTemplate>` Tags. Der Inhalt kann so einfach wie nur-Text oder eine komplexere (Einbetten von anderen Steuerelementen in der Vorlage, z. B.) sein.  
+  
+ Zum programmgesteuerten Zugriff auf ein Steuerelement in einer Vorlage definiert ermitteln Sie zunächst die <xref:System.Web.UI.WebControls.TableCell> Objekt in das datengebundene Steuerelement das Steuerelement enthält. Verwenden Sie als Nächstes die <xref:System.Web.UI.Control.Controls%2A> Auflistung von der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zugreifen. Können Sie auch die <xref:System.Web.UI.Control.FindControl%2A> Methode der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zu suchen, wenn das Steuerelement besitzt eine <xref:System.Web.UI.Control.ID%2A> -Eigenschaft angegeben.  
+  
+> [!NOTE]
+>  Nicht alle von datengebundenen Steuerelementen unterstützen diese Vorlage, die diese Vorlage wird nur von datengebundenen Steuerelementen, die Ihnen ermöglichen, fügen Sie einen Datensatz, wie z. B. unterstützt das <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TemplateField.InsertItemTemplate%2A> Eigenschaft zum Erstellen einer benutzerdefinierten Vorlage für ein Element im Einfügemodus in einem <xref:System.Web.UI.WebControls.TemplateField> Zeile im Feld ein <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die Vorlage zeigt ein <xref:System.Web.UI.WebControls.DropDownList> Steuerelement, das dem Benutzer ermöglicht, einen Wert aus einer vordefinierten Liste auswählen.  
+  
+ [!code-aspx-csharp[TemplateFieldInsertItemTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateFieldInsertItemTemplate/CS/templatefieldinsertitemtemplatecs.aspx#1)]
+ [!code-aspx-vb[TemplateFieldInsertItemTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateFieldInsertItemTemplate/VB/templatefieldinsertitemtemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.ItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.IDataItemContainer), System.ComponentModel.BindingDirection.TwoWay)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage für ein Element in einem datengebundenen Steuerelement angezeigt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" />-Objekt, das die Vorlage für die Anzeige eines Datenelements in enthält implementiert eine <see cref="T:System.Web.UI.WebControls.TemplateField" />. Der Standardwert ist <see langword="null" /> und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A> -Eigenschaft an die benutzerdefinierte Inhalte angezeigt, die für die Elemente in einem <xref:System.Web.UI.WebControls.TemplateField> Objekt. Legen Sie den Inhalt durch Erstellen einer Vorlage, die angibt, wie die Elemente gerendert werden.  
+  
+> [!NOTE]
+>  Optional können Sie definieren die <xref:System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate%2A> Eigenschaft in Kombination mit der <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A> Eigenschaft, um eine andere Darstellung für jedes Element im datengebundenen Steuerelement zu erstellen.  
+  
+ Um eine Vorlage angeben möchten, platzieren Sie zuerst öffnende und schließende `<ItemTemplate>` zwischen dem Start- und Endtag des Tags der `<TemplateField>` Element. Fügen Sie den benutzerdefinierten Inhalt zwischen den öffnenden und schließenden `<ItemTemplate>` Tags. Der Inhalt kann so einfach wie nur-Text oder eine komplexere (Einbetten von anderen Steuerelementen in der Vorlage, z. B.) sein.  
+  
+ Zum programmgesteuerten Zugriff auf ein Steuerelement in einer Vorlage definiert ermitteln Sie zunächst die <xref:System.Web.UI.WebControls.TableCell> Objekt in das datengebundene Steuerelement das Steuerelement enthält. Verwenden Sie als Nächstes die <xref:System.Web.UI.Control.Controls%2A> Auflistung von der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zugreifen. Können Sie auch die <xref:System.Web.UI.Control.FindControl%2A> Methode der <xref:System.Web.UI.WebControls.TableCell> -Objekt, das Steuerelement zu suchen, wenn das Steuerelement besitzt eine <xref:System.Web.UI.Control.ID%2A> -Eigenschaft angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A> zu eine benutzerdefinierte Vorlage für die Elemente des zu erstellenden Eigenschaft eine <xref:System.Web.UI.WebControls.TemplateField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die Vorlage zeigt den Wert des Felds in einem <xref:System.Web.UI.WebControls.RadioButtonList> Steuerelement.  
+  
+ [!code-aspx-csharp[TemplateFieldItemTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TemplateFieldItemTemplate/CS/templatefielditemtemplatecs.aspx#1)]
+ [!code-aspx-vb[TemplateFieldItemTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TemplateFieldItemTemplate/VB/templatefielditemtemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateRequestMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ValidateRequestMode ValidateRequestMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ValidateRequestMode ValidateRequestMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplateField.ValidateRequestMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ValidateRequestMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement Clienteingabe überprüft.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement Clienteingabe überprüft; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplateField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die in Steuerelemente enthaltenen eine <see cref="T:System.Web.UI.WebControls.TemplateField" /> Objekt die Seitenrückrufe unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TemplateField.ValidateSupportsCallback%2A> Methode wird nicht unterstützt, für diese Klasse und löst immer eine <xref:System.NotSupportedException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die standardmäßige Implementierung dieser Methode wird aufgerufen.</exception>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.TemplateField" /> Klasse kann diese Methode, um anzugeben, ob die Steuerelemente im Feld Unterstützung Rückrufe enthaltenen überschreiben. Implementieren Sie diese Methode als eine leere Methode, die keine Ausnahme auslöst, um anzugeben, dass Rückrufe unterstützt werden, Andernfalls lösen Sie eine Ausnahme mit einer aussagekräftigen Meldung erläutert, warum Rückrufe nicht unterstützt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

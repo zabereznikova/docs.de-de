@@ -1,0 +1,24 @@
+<Namespace Name="System.Drawing.Drawing2D">
+  <Docs>
+    <summary>Die <see cref="N:System.Drawing.Drawing2D" /> -Namespace stellt erweiterte zweidimensionale und Vektorgrafiken bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält einige wichtige Klassen und Enumerationen in der <xref:System.Drawing.Drawing2D> Namespace, die nach Kategorien geordnet an.  
+  
+|Klasse Kategorie|Details|  
+|--------------------|-------------|  
+|-Grafiken und Grafikpfade|Die <xref:System.Drawing.Drawing2D.GraphicsState> und <xref:System.Drawing.Drawing2D.GraphicsContainer> Klassen melden Informationen zum aktuellen `Graphics` Objekt. <xref:System.Drawing.Drawing2D.GraphicsPath>Klassen stellen eine Reihe von Linien und Kurven. Die <xref:System.Drawing.Drawing2D.GraphicsPathIterator> und <xref:System.Drawing.Drawing2D.PathData> Klassen enthalten ausführliche Informationen zu den Inhalt einer <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt.|  
+|-Matrix und Transformation von verwandten Typen|Die <xref:System.Drawing.Drawing2D.Matrix> Klasse stellt eine Matrix für Transformationen, die geometrische dar. Die <xref:System.Drawing.Drawing2D.MatrixOrder> Enumeration gibt die Reihenfolge für Matrixtransformationen an.|  
+|-Pinsel Klassen|Die <xref:System.Drawing.Drawing2D.PathGradientBrush> und <xref:System.Drawing.Drawing2D.HatchBrush> Klassen ermöglichen es Ihnen zum Ausfüllen von Formen mit einem Farbverlauf oder einem Schraffurmuster.|  
+|-Enumeration, die im Zusammenhang mit Linien|Die <xref:System.Drawing.Drawing2D.LineCap> und <xref:System.Drawing.Drawing2D.CustomLineCap> Enumerationen ermöglichen es Ihnen, Stile für eine Linie enden anzugeben. Der <xref:System.Drawing.Drawing2D.LineJoin> -Enumeration können Sie angeben, wie zwei Linien in einem Pfad verknüpft sind. Die <xref:System.Drawing.Drawing2D.PenAlignment> -Enumeration können Sie die Ausrichtung des Stifts angeben, wenn Sie eine Linie zeichnen. Die <xref:System.Drawing.Drawing2D.PenType> Enumeration gibt an, das Muster, die mit eine Linie ausgefüllt werden.|  
+|-Enumerationen im Zusammenhang mit Füllen von Formen und Pfaden|Die <xref:System.Drawing.Drawing2D.HatchStyle> Enumeration gibt an, Stilen für eine <xref:System.Drawing.Drawing2D.HatchBrush>. Die <xref:System.Drawing.Drawing2D.Blend> Klasse gibt eine Blend-Musters für eine <xref:System.Drawing.Drawing2D.LinearGradientBrush>. Die <xref:System.Drawing.Drawing2D.FillMode> Enumeration gibt an, der Füllstil für eine <xref:System.Drawing.Drawing2D.GraphicsPath>.|  
+  
+> [!CAUTION]
+>  Klassen in der <xref:System.Drawing.Drawing2D> Namespace werden nicht unterstützt, für die Verwendung in einer Windows oder [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Dienst. Bei dem Versuch, verwenden Sie diese Klassen in einem dieser Anwendungstypen möglicherweise unerwartete Probleme, z. B. Service verminderte Leistung und zur Laufzeit Ausnahmen erzeugt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

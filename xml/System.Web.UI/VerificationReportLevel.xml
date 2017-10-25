@@ -1,0 +1,73 @@
+<Type Name="VerificationReportLevel" FullName="System.Web.UI.VerificationReportLevel">
+  <TypeSignature Language="C#" Value="public enum VerificationReportLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VerificationReportLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.VerificationReportLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Berichterstellungsebenen für eine Eingabehilfen-Regel definiert, indem ein <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erweitern einer Klasse, Member oder einen Indexer mit einem <xref:System.Web.UI.VerificationAttribute>, müssen Sie das Maß an, dass die Überprüfungsregel darstellt, durch Angabe einer reporting definieren die <xref:System.Web.UI.VerificationReportLevel> Werte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VerificationReportLevel Error = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VerificationReportLevel.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationReportLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Überprüfungsregel dargestellt, indem die <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz führt zu einem Fehler.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Guideline">
+      <MemberSignature Language="C#" Value="Guideline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VerificationReportLevel Guideline = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VerificationReportLevel.Guideline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationReportLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Überprüfungsregel dargestellt, indem die <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz ist eine Richtlinie.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="Warning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VerificationReportLevel Warning = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VerificationReportLevel.Warning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationReportLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Überprüfungsregel dargestellt, indem die <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz ist eine Warnung.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

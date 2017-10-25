@@ -1,0 +1,6 @@
+<Namespace Name="System.Threading">
+  <Docs>
+    <summary>Die <see cref="N:System.Threading" /> Namespace stellt Klassen und Schnittstellen, die Multithreading-Programmierung ermöglichen. Zusätzlich zu den Klassen zum Synchronisieren von Threadaktivitäten und Zugriff auf Daten (<see cref="T:System.Threading.Mutex" />, <see cref="T:System.Threading.Monitor" />, <see cref="T:System.Threading.Interlocked" />, <see cref="T:System.Threading.AutoResetEvent" />usw.), dieser Namespace beinhaltet eine <see cref="T:System.Threading.ThreadPool" /> -Klasse, die einen Pool von Threads vom System bereitgestellten verwenden kann und eine <see cref="T:System.Threading.Timer" /> -Klasse, die Rückrufmethoden für Threads im Threadpool ausgeführt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

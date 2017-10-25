@@ -1,0 +1,178 @@
+<Type Name="Label" FullName="System.Reflection.Emit.Label">
+  <TypeSignature Language="C#" Value="public struct Label" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Label extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.Label" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Beschriftung in den Anweisungsstream dar. <see langword="Label" />Dient in Verbindung mit der <see cref="T:System.Reflection.Emit.ILGenerator" /> Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.Label.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dieser <see langword="Label" />-Instanz verglichen werden soll.</param>
+        <summary>Überprüft, ob das angegebene Objekt eine Instanz ist <see langword="Label" /> und gleich dieser Instanz ist.</summary>
+        <returns>Gibt <see langword="true" /> Wenn <paramref name="obj" /> ist eine Instanz der <see langword="Label" /> und gleich diesem Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Reflection.Emit.Label obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Reflection.Emit.Label obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.Label.Equals(System.Reflection.Emit.Label)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Reflection.Emit.Label" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der <see cref="T:System.Reflection.Emit.Label" />, der mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt an, ob die aktuelle Instanz und der angegebene <see cref="T:System.Reflection.Emit.Label" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert von <paramref name="obj" /> dem Wert der aktuellen Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.Label.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Hashcode für diese Instanz an.</summary>
+        <returns>Gibt einen Hashcode für diese Instanz zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.Emit.Label a, System.Reflection.Emit.Label b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Reflection.Emit.Label a, valuetype System.Reflection.Emit.Label b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.Label.op_Equality(System.Reflection.Emit.Label,System.Reflection.Emit.Label)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Emit.Label" />
+        <Parameter Name="b" Type="System.Reflection.Emit.Label" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die <see cref="T:System.Reflection.Emit.Label" /> für den Vergleich <c>b</c>.</param>
+        <param name="b">Die <see cref="T:System.Reflection.Emit.Label" /> für den Vergleich <c>eine</c>.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.Emit.Label" />-Strukturen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Reflection.Emit.Label.Equals%28System.Reflection.Emit.Label%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.Emit.Label a, System.Reflection.Emit.Label b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Reflection.Emit.Label a, valuetype System.Reflection.Emit.Label b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.Label.op_Inequality(System.Reflection.Emit.Label,System.Reflection.Emit.Label)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Emit.Label" />
+        <Parameter Name="b" Type="System.Reflection.Emit.Label" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die <see cref="T:System.Reflection.Emit.Label" /> für den Vergleich <c>b</c>.</param>
+        <param name="b">Die <see cref="T:System.Reflection.Emit.Label" /> für den Vergleich <c>eine</c>.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.Emit.Label" />-Strukturen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Reflection.Emit.Label.Equals%28System.Reflection.Emit.Label%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

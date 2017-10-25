@@ -1,0 +1,225 @@
+<Type Name="WSTrustServiceHost" FullName="System.ServiceModel.Security.WSTrustServiceHost">
+  <TypeSignature Language="C#" Value="public class WSTrustServiceHost : System.ServiceModel.ServiceHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WSTrustServiceHost extends System.ServiceModel.ServiceHost" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.WSTrustServiceHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ServiceHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine <see cref="T:System.ServiceModel.ServiceHost" /> für die Registrierung einer <see cref="T:System.IdentityModel.SecurityTokenService" /> der Diensthost müssen mehrere Endpunkte, die registriert basierend auf der Anzahl von Listenern, die in der Konfiguration registriert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.ServiceModel.Security.WSTrustServiceHost> -Klasse stellt Folgendes bereit:  
+  
+-   WS-Trust-Endpunkte, fügt die <xref:System.ServiceModel.ServiceHost> basierend auf den <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TrustEndpoints%2A> Eigenschaft.  
+  
+-   Ermöglicht es Metadaten über die Basisadressen an, wenn die <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DisableWsdl%2A> -Eigenschaftensatz auf `false`.  
+  
+-   Konfiguriert das Dienstzertifikat auf dem <xref:System.ServiceModel.ServiceHost> Dienstanmeldeinformationen aus, wenn ein WIF-Konfigurationsabschnitt ein Dienstzertifikat angibt. Beachten Sie, dass dies die Einstellungen für den entsprechenden Dienst in der WCF-Konfiguration außer Kraft setzt.  
+  
+-   IdentityModel-Tokenhandler integriert durch Aufrufen der ExtensibleSecurityCredentials.ConfigureServiceHost-Methode von sich selbst in der Verarbeitungspipeline Sicherheit.  
+  
+ Die <xref:System.ServiceModel.Security.WSTrustServiceHost> Klasse möglicherweise überschrieben werden, um dieses Verhalten anzupassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSTrustServiceHost (System.IdentityModel.Configuration.SecurityTokenServiceConfiguration securityTokenServiceConfiguration, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Configuration.SecurityTokenServiceConfiguration securityTokenServiceConfiguration, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustServiceHost.#ctor(System.IdentityModel.Configuration.SecurityTokenServiceConfiguration,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityTokenServiceConfiguration" Type="System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="securityTokenServiceConfiguration">Ein <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" /> , das der STS-Einstellungen zur Initialisierung des Diensthosts enthält.</param>
+        <param name="baseAddresses">Ein Array von <see cref="T:System.Uri" /> , das die Basisadressen für den Diensthost enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceModel.Security.WSTrustServiceHost" /> -Klasse mit den angegebenen Basisadressen und service (STS)-Konfigurationseinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine standardmäßige <xref:System.ServiceModel.Security.WSTrustServiceContract> wird erstellt unter Verwendung des angegebenen <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration> Instanz.  
+  
+ Die <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration> Instanz wird verwendet, für die einmalige Initialisierung von der <xref:System.ServiceModel.ServiceHost>; aus diesem Grund, Festlegen von Eigenschaften für die konfigurationsinstanz nach der Initialisierung des Hosts keine verhaltensänderungen führen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSTrustServiceHost (System.ServiceModel.Security.WSTrustServiceContract serviceContract, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.WSTrustServiceContract serviceContract, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustServiceHost.#ctor(System.ServiceModel.Security.WSTrustServiceContract,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceContract" Type="System.ServiceModel.Security.WSTrustServiceContract" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="serviceContract">Ein <see cref="T:System.ServiceModel.Security.WSTrustServiceContract" /> , die die zu verwendenden Dienstvertrags darstellt.</param>
+        <param name="baseAddresses">Ein Array von <see cref="T:System.Uri" /> , das die Basisadressen für den Diensthost enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceModel.Security.WSTrustServiceHost" /> -Klasse mit der angegebenen Basisadressen und den Dienstvertrag.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="baseAddresses" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="serviceContract" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void ApplyConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ApplyConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustServiceHost.ApplyConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt die dienstbeschreibungsinformationen aus der Konfigurationsdatei und wendet sie auf die Laufzeit, die erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureMetadata">
+      <MemberSignature Language="C#" Value="protected virtual void ConfigureMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConfigureMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustServiceHost.ConfigureMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konfiguriert die Metadaten (WSDL) für den Diensthost.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ergibt die Basisadressen des Diensthosts, und fügt Mex-Endpunkte für http, Https, net.tcp und net.pipe Adressen, die nur bei keinen Mex-Endpunkte zuvor vom Benutzer hinzugefügt wurden. Für HTTP- und Https-Adressen, HTTP und HTTPS ist GET-Mechanismus für den Abruf von WSDL aktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRuntime">
+      <MemberSignature Language="C#" Value="protected override void InitializeRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeRuntime() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustServiceHost.InitializeRuntime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die Basisklassenmethode. Konfiguriert die <see cref="T:System.ServiceModel.ServiceConfiguration" /> auf dem Diensthost und anschließend die basisimplementierung aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft die <xref:System.ServiceModel.Security.WSTrustServiceHost.UpdateServiceConfiguration%2A> Methode und ruft dann die grundlegende Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenServiceConfiguration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.SecurityTokenServiceConfiguration SecurityTokenServiceConfiguration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.SecurityTokenServiceConfiguration SecurityTokenServiceConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSTrustServiceHost.SecurityTokenServiceConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.SecurityTokenServiceConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Sicherheitskonfiguration des Sicherheitstokendiensts (STS) für diesen dieser Instanz ab.</summary>
+        <value>Der STS-Konfiguration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceContract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.WSTrustServiceContract ServiceContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.WSTrustServiceContract ServiceContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSTrustServiceHost.ServiceContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.WSTrustServiceContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dienstvertrag, der dieser Instanz zugeordnet.</summary>
+        <value>Der Dienstvertrag für diese Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateServiceConfiguration">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateServiceConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateServiceConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustServiceHost.UpdateServiceConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die <see cref="P:System.ServiceModel.Description.ServiceCredentials.IdentityConfiguration" /> auf die <see cref="P:System.ServiceModel.ServiceHostBase.Credentials" /> Eigenschaft des Diensthosts mit dem <see cref="P:System.ServiceModel.Security.WSTrustServiceHost.SecurityTokenServiceConfiguration" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

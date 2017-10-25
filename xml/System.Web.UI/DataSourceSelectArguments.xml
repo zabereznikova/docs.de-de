@@ -1,0 +1,411 @@
+<Type Name="DataSourceSelectArguments" FullName="System.Web.UI.DataSourceSelectArguments">
+  <TypeSignature Language="C#" Value="public sealed class DataSourceSelectArguments" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataSourceSelectArguments extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceSelectArguments" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet einen Mechanismus, mit denen von datengebundenen Steuerelementen Datenquellensteuerelemente datenbezogener Vorgänge anfordern, wenn Daten abgerufen werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden von datengebundenen Steuerelementen die <xref:System.Web.UI.DataSourceSelectArguments> Klasse, um anzufordern, dass ein Datenquellensteuerelement Zusätzliche datenbezogener Vorgänge für ein Resultset, z. B. Sortieren der Daten oder bei der Rückgabe einer bestimmten Teilmenge der Daten ausführt. Diese datenbezogener Vorgänge aufgelistet werden die <xref:System.Web.UI.DataSourceCapabilities> Enumeration. Die folgende Tabelle gibt an, wie die <xref:System.Web.UI.DataSourceSelectArguments> Klasse unterstützt diese datenbezogener Vorgänge.  
+  
+|Funktion|Zugehörige DataSourceSelectArguments-Eigenschaften|  
+|----------------|--------------------------------------------------|  
+|<xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType>|<xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A>|  
+|<xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType>|<xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A>, <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A>|  
+|<xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType>|<xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A>, <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A>|  
+  
+ Datengebundene Steuerelemente explizit aufrufen der <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> Methode zum Binden von Daten, der aufgerufen wird, die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode des Datenquellen-Steuerelements, die sie zugeordnet sind. Auf diese Weise Ruft das datengebundene Steuerelement Daten aus Datenquellen-Steuerelements bei Bedarf ab. Da die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode akzeptiert eine <xref:System.Web.UI.DataSourceSelectArguments> Parameter, der das datengebundene Steuerelement ist verantwortlich für das Erstellen und Verwalten von einer <xref:System.Web.UI.DataSourceSelectArguments> -Objekt und die Übergabe an die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode, wenn sie Daten aus Datenquellen-Steuerelements abruft.  
+  
+ In einigen Fällen möglicherweise von datengebundenen Steuerelementen keine Funktionen, die zusätzlichen Daten, die verknüpft. Übergeben Sie datengebundene Steuerelemente in diesem Fall ein <xref:System.Web.UI.DataSourceSelectArguments.Empty%2A> Arguments-Objekt das <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode.  
+  
+ Überprüfen Sie einer Datenquellensicht für sortierten Resultset mit Vorwärtscursor, datengebundene Steuerelemente <xref:System.Web.UI.DataSourceView.CanSort%2A> Eigenschaft zur Laufzeit, und fügen eine <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> -Funktion die <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> Methode. Als ein separater Vorgang kann das datengebundene Steuerelement anfordern ein sortiertes Resultsets aus einem Datenquellensteuerelement durch Festlegen der <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> Eigenschaft auf die <xref:System.Web.UI.DataSourceSelectArguments> -Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode.  
+  
+ Für Szenarien mit Paging, überprüfen Sie datengebundene Steuerelemente einer Datenquellensicht <xref:System.Web.UI.DataSourceView.CanPage%2A> Eigenschaft zur Laufzeit, und fügen eine <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> -Funktion die <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> Methode. Ein separater Vorgang das datengebundene Steuerelement kann anfordern, eine Teilmenge der Daten aus einem Datenquellen-Steuerelements für das Paging durch Festlegen der <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> und <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaften auf der <xref:System.Web.UI.DataSourceSelectArguments> -Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode.  
+  
+ Überprüfen Sie zum Abrufen von Gesamtzeilenanzahl für Szenarien mit Paging von datengebundenen Steuerelementen einer Datenquellensicht <xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A> Eigenschaft zur Laufzeit, und fügen eine <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> -Funktion die <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> Methode. Ein separater Vorgang das datengebundene Steuerelement kann Gesamtzeilenanzahl von anfordern ein Datenquellen-Steuerelement für das Paging durch Festlegen der <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A> Eigenschaft auf die <xref:System.Web.UI.DataSourceSelectArguments> -Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode. Wenn die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode zurückgegeben wird, befindet sich die Gesamtzeilenanzahl durch die <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Wenn keines der <xref:System.Web.UI.DataSourceSelectArguments> Eigenschaften werden festgelegt, das derzeit gebundene Datenquellensteuerelement unterstützt jedoch nicht die angeforderte Funktion ein <xref:System.InvalidOperationException> Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> Methode wird aufgerufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.Web.UI.DataSourceSelectArguments" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor erstellt eine Instanz der Klasse mit der <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> Eigenschaft initialisiert wird, um <xref:System.String.Empty?displayProperty=nameWithType> und <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> und <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaften, die mit 0 (null) initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments (string sortExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sortExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sortExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sortExpression">Ein Sortierungsausdruck, den Datenquellensteuerelemente verwenden, um das Ergebnis ein Vorgang zum Abrufen von Daten zu sortieren, bevor das Ergebnis an den Aufrufer zurückgegeben wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataSourceSelectArguments" /> Klasse mit dem angegebenen Sortierschlüsselwert-Ausdruck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.%23ctor%28System.String%29> Konstruktor erstellt eine Instanz der Klasse mit dem <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> mit dem angegebenen Ausdruck initialisiert und die <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> und <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaften, die mit 0 (null) initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments (int startRowIndex, int maximumRows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 startRowIndex, int32 maximumRows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startRowIndex" Type="System.Int32" />
+        <Parameter Name="maximumRows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startRowIndex">Der Index der Datenzeile, die kennzeichnet den Anfang der Daten, die von einem Vorgang zum Abrufen von Daten zurückgegeben.</param>
+        <param name="maximumRows">Die maximale Anzahl von Zeilen, die ein Vorgang zum Abrufen von Daten zurückgibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataSourceSelectArguments" /> -Klasse mit der angegebenen Startposition und die Anzahl der Zeilen für Paging Szenarien zurückgeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.%23ctor%28System.Int32%2CSystem.Int32%29> Konstruktor erstellt eine Instanz der Klasse mit der <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> mit initialisiert <xref:System.String.Empty?displayProperty=nameWithType> und <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> und <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaften, die auf die bereitgestellten Werte initialisiert die `startRowIndex` und `maximumRows` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments (string sortExpression, int startRowIndex, int maximumRows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sortExpression, int32 startRowIndex, int32 maximumRows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sortExpression" Type="System.String" />
+        <Parameter Name="startRowIndex" Type="System.Int32" />
+        <Parameter Name="maximumRows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sortExpression">Ein Sortierungsausdruck, den Datenquellensteuerelemente verwenden, um das Ergebnis ein Vorgang zum Abrufen von Daten zu sortieren, bevor das Ergebnis an den Aufrufer zurückgegeben wird.</param>
+        <param name="startRowIndex">Der Index der Datenzeile, die kennzeichnet den Anfang der Daten, die von einem Vorgang zum Abrufen von Daten zurückgegeben.</param>
+        <param name="maximumRows">Die maximale Anzahl von Zeilen, die ein Vorgang zum Abrufen von Daten zurückgibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataSourceSelectArguments" /> -Klasse mit dem angegebenen Sortierungsausdruck, die Anfangsposition und die Anzahl von Zeilen für Paging Szenarien zurückgeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSupportedCapabilities">
+      <MemberSignature Language="C#" Value="public void AddSupportedCapabilities (System.Web.UI.DataSourceCapabilities capabilities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSupportedCapabilities(valuetype System.Web.UI.DataSourceCapabilities capabilities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities(System.Web.UI.DataSourceCapabilities)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="capabilities" Type="System.Web.UI.DataSourceCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="capabilities">Einer der <see cref="T:System.Web.UI.DataSourceCapabilities" />-Werte.</param>
+        <summary>Fügt eine Möglichkeit, die <see cref="T:System.Web.UI.DataSourceSelectArguments" /> -Instanz, die zum Vergleichen verwendet wird, unterstützte Funktionen und Funktionen angefordert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datenquellensteuerelemente rufen die <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> Methode für jede Funktion, die die Datenquelle unterstützt. Nachdem die Funktionen hinzugefügt werden, bei jedem Aufruf der <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29> Methode vergleicht die unterstützten Funktionen für die angeforderten Funktionen (dargestellt, indem die <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A>, <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A>, <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A>, und <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> Eigenschaften). Wenn eine Funktion, wie z. B. <xref:System.Web.UI.DataSourceCapabilities.Sort> wird nicht hinzugefügt aber die <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> Eigenschaft festgelegt ist, die <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29> -Methode löst eine <xref:System.NotSupportedException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.DataSourceSelectArguments Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.UI.DataSourceSelectArguments Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.DataSourceSelectArguments" /> Objekt mit den Sortierungsausdruck festgelegt <see cref="F:System.String.Empty" />.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die Eigenschaft eine <xref:System.Web.UI.DataSourceSelectArguments> Objekt erstellt, mit der standardmäßigen <xref:System.Web.UI.DataSourceSelectArguments.%23ctor> Konstruktor. Können Sie die <xref:System.Web.UI.DataSourceSelectArguments.Empty%2A> Eigenschaft, wenn Sie aufrufen möchten die <xref:System.Web.UI.DataSourceView.ExecuteSelect%28System.Web.UI.DataSourceSelectArguments%29> Methode einer Klasse Datenquelle anzeigen, ohne zusätzliche Argumente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Web.UI.DataSourceSelectArguments" /> , mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Web.UI.DataSourceSelectArguments" /> Instanz ist gleich der aktuellen Instanz.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Web.UI.DataSourceSelectArguments" /> gleich der aktuellen Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments> -Klasse überschreibt die <xref:System.Object.Equals%2A?displayProperty=nameWithType> Methode zum Testen der Gleichheit mithilfe der verschiedenen Eigenschaften der Objekte. Wenn die <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A>, <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A>, <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A>, <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A>, und <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> Eigenschaften sind alle gleich in "Wert" die <xref:System.Web.UI.DataSourceSelectArguments.Equals%28System.Object%29> -Methode zurückkehrt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für die <see cref="T:System.Web.UI.DataSourceSelectArguments" /> Typ.</summary>
+        <returns>Der Hashcode für die <see cref="T:System.Web.UI.DataSourceSelectArguments" /> Typ.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRows">
+      <MemberSignature Language="C#" Value="public int MaximumRows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.MaximumRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die maximale Anzahl von Datenzeilen darstellt, die ein Datenquellen-Steuerelement für einen Vorgang zum Abrufen von Daten zurückgibt.</summary>
+        <value>Die maximale Anzahl von Datenzeilen, die eine Datenquelle für einen Vorgang zum Abrufen von Daten zurückgibt. Der Standardwert ist-0 und bedeutet, dass alle möglichen Datenzeilen zurückgegeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaft unterstützt Szenarien für die Auslagerung. Datengebundene Steuerelemente Überprüfen einer Datenquellensicht <xref:System.Web.UI.DataSourceView.CanPage%2A> Eigenschaft zur Laufzeit, und fügen eine <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> -Funktion die <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> Methode, wenn die Ansicht Paging unterstützt. Wenn das datengebundene Steuerelement ein Fehler, zum Hinzufügen der Funktion auftritt und die Paginierung Eigenschaften festgelegt sind eine <xref:System.Web.UI.DataSourceSelectArguments> der Datenquellensicht an, während der Vorgang zum Abrufen einer Daten-Objekt ein <xref:System.InvalidOperationException> Ausnahme kann ausgelöst werden.  
+  
+ Das datengebundene Steuerelement kann eine Teilmenge der Daten aus einem Datenquellen-Steuerelements für das Paging anfordern, durch Festlegen der <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> und <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaften auf der <xref:System.Web.UI.DataSourceSelectArguments> -Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> Methode.  
+  
+> [!IMPORTANT]
+>  Wenn keines der <xref:System.Web.UI.DataSourceSelectArguments> Eigenschaften werden festgelegt, das derzeit gebundene Datenquellensteuerelement unterstützt jedoch nicht die angeforderte Funktion ein <xref:System.InvalidOperationException> Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseUnsupportedCapabilitiesError">
+      <MemberSignature Language="C#" Value="public void RaiseUnsupportedCapabilitiesError (System.Web.UI.DataSourceView view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseUnsupportedCapabilitiesError(class System.Web.UI.DataSourceView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError(System.Web.UI.DataSourceView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Web.UI.DataSourceView" />
+      </Parameters>
+      <Docs>
+        <param name="view">Die Datenquellensicht an, die den Datenabruf.</param>
+        <summary>Vergleicht die Funktionen für angeforderte ein <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> Vorgang für diejenigen, die angegebene Datenquellensicht unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29> Methode wird von datengebundenen Steuerelementen zusätzliche angeforderte Funktionen dargestellt, die von den Eigenschaften von Vergleichen verwendet die <xref:System.Web.UI.DataSourceSelectArguments> Klasse, z. B. die Möglichkeit zum Sortieren oder durchblättern ein Resultset mit den Funktionen, die durch die Daten unterstützt Datenquellensicht an. Die Ansicht ruft seine eigenen <xref:System.Web.UI.DataSourceView.RaiseUnsupportedCapabilityError%28System.Web.UI.DataSourceCapabilities%29> Methode für jede mögliche Funktion definiert, die der <xref:System.Web.UI.DataSourceCapabilities> Enumeration.  
+  
+> [!IMPORTANT]
+>  Wenn keines der <xref:System.Web.UI.DataSourceSelectArguments> Eigenschaften werden festgelegt, das derzeit gebundene Datenquellensteuerelement unterstützt jedoch nicht die angeforderte Funktion ein <xref:System.InvalidOperationException> Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die angegebene Quelle zusätzliche Verarbeitungskapazität unterstützt die Datenquellensicht nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public bool RetrieveTotalRowCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Datenquellen-Steuerelement eine Anzahl aller Datenzeilen bei einem Vorgang zum Abrufen von Daten abgerufen werden sollen.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellen-Steuerelement eine Gesamtzeilenanzahl abgerufen werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A> Eigenschaft unterstützt Szenarien für die Auslagerung. Legen Sie diese Eigenschaft auf `true` Gesamtzeilenanzahl von Datenquellen-Steuerelements während des Vorgangs Abrufen von Daten anfordern. Überprüfen Sie die <xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, ob eine Datenquellensicht, das Abrufen der Gesamtzeilenanzahl unterstützt. Wenn die Datenquelle dies unterstützt die <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> Eigenschaft im Verlauf des ein Vorgang zum Abrufen von Daten von Datenquellen-Steuerelements festgelegt ist und die Gesamtzeilenanzahl wird zurückgegeben, der <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> Eigenschaft, ähnlich wie ein Wert wird zurückgegeben, in der Output-Parameter ein Methode.  
+  
+> [!IMPORTANT]
+>  Wenn keines der <xref:System.Web.UI.DataSourceSelectArguments> Eigenschaften werden festgelegt, das derzeit gebundene Datenquellensteuerelement unterstützt jedoch nicht die angeforderte Funktion ein <xref:System.InvalidOperationException> Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public string SortExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Ausdruck, die die Datenquellensicht zum Sortieren der Daten abgerufen verwendet, indem, die <see cref="M:System.Web.UI.DataSourceView.Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" /> Methode.</summary>
+        <value>Eine Zeichenfolge, die die Datenquellensicht verwendet, so sortieren Sie Daten abgerufen, indem, die <see cref="M:System.Web.UI.DataSourceView.Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" /> Methode. <see cref="F:System.String.Empty" />wird zurückgegeben, wenn der Sortierausdruck nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> Eigenschaft unterstützt die Sortierung der Szenarien.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRowIndex">
+      <MemberSignature Language="C#" Value="public int StartRowIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.StartRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Startposition darstellt, die Datenquellen-Steuerelement beim Abrufen von Datenzeilen bei einem Vorgang zum Abrufen von Daten verwendet werden soll.</summary>
+        <value>Die Anfangsposition der Zeile aus dem ein Datenquellen-Steuerelement ruft Daten ab. Der Standardwert ist-0 und bedeutet, dass die Anfangsposition der Anfang des Resultsets ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> Eigenschaft unterstützt Szenarien für die Auslagerung. Datengebundene Steuerelemente Überprüfen einer Datenquellensicht <xref:System.Web.UI.DataSourceView.CanPage%2A> Eigenschaft zur Laufzeit, und fügen eine <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> -Funktion die <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> Methode, wenn die Ansicht Paging unterstützt. Wenn das datengebundene Steuerelement ein Fehler, zum Hinzufügen der Funktion auftritt und die Paginierung Eigenschaften festgelegt sind eine <xref:System.Web.UI.DataSourceSelectArguments> der Datenquellensicht an, während der Vorgang zum Abrufen einer Daten-Objekt ein <xref:System.InvalidOperationException> Ausnahme kann ausgelöst werden.  
+  
+ Ein separater Vorgang das datengebundene Steuerelement kann anfordern, eine Teilmenge der Daten aus einem Datenquellensteuerelement durch Festlegen der <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> und <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaften auf der <xref:System.Web.UI.DataSourceSelectArguments> -Objekt übergeben, um die <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalRowCount">
+      <MemberSignature Language="C#" Value="public int TotalRowCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.TotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Zeilen, die bei einem Vorgang zum Abrufen von Daten abgerufen.</summary>
+        <value>Die Gesamtanzahl der Datenzeilen, die durch den Vorgang zum Abrufen von Daten abgerufen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> Eigenschaft unterstützt Szenarien für die Auslagerung. Datenquelle und Steuerelementen für Datenquellen unterscheiden sich in der internen Implementierung für insgesamt Zeilenanzahl abrufen. Überprüfen Sie die <xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, ob eine Datenquellensicht, das Abrufen von Gesamtzeilenanzahl während eines Vorgangs Abrufen von Daten unterstützt. Wenn die Datenquelle dies unterstützt die <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> Eigenschaft im Rahmen eines Vorgangs Abrufen von Daten von Datenquellen-Steuerelements festgelegt ist, und die Gesamtzeilenanzahl wird zurückgegeben, der <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> Eigenschaft, ähnlich wie ein Wert wird zurückgegeben, in der Output-Parameter ein Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

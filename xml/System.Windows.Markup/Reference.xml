@@ -1,0 +1,140 @@
+<Type Name="Reference" FullName="System.Windows.Markup.Reference">
+  <TypeSignature Language="C#" Value="public class Reference : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Reference extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Reference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die <c>{X: Reference}</c> Markuperweiterung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `{x:Reference}` Markuperweiterung unterstützt eine mit Feldern fester Breite Verwendung (es gibt nur einen Parameter) und eine benannte Argumentverwendung (wobei das benannte Argument `name`).  
+  
+ Die `{x:Reference}` Markuperweiterung wird verwendet, um eine andere benannte Objekt im Objektdiagramm verweisen. Objekte in diesem Szenario werden anfänglich bezeichnet, indem, obwohl bestimmte Implementierungen häufig einen anderen definieren <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>. Weitere Informationen finden Sie unter [X: Reference-Markuperweiterung](~/docs/framework/xaml-services/x-reference-markup-extension.md).  
+  
+ Weitere Informationen über Markuperweiterungen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+  
+ Die System.Xaml-Assembly verwendet <xref:System.Windows.Markup.XmlnsDefinitionAttribute> abzubildenden alle Typen in der Assembly auf die Verwendung von XAML-Namespace für die Verwendung von XAML-Sprache ([!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)]). In der Regel deklarieren Sie ein Präfix für [!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)] in einer Zuordnung der Root-Element und verwenden Sie das Präfix `x`.  
+  
+<a name="xamlTextUsage_Reference"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Reference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Reference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.Reference" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Reference (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Reference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der XAML-Name des Elements zu verweisen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.Reference" /> -Klasse mit der <paramref name="name" /> Argument.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Reference.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der XAML-zum Abrufen der Referenz für.</summary>
+        <value>Der XAML-Name des Elements, das den Verweis für zu erhalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Name"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Reference.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Eine Klasse, die den <see cref="T:System.Xaml.IXamlNameResolver" />-Dienst implementiert.</param>
+        <summary>Gibt ein Objekt zurück, das dem Wert der Zieleigenschaft entspricht. Für den <see cref="T:System.Windows.Markup.Reference" />-Typ ist dies das Objekt, das die bereitgestellten <see cref="P:System.Windows.Markup.Reference.Name" />-Verweise enthält.</summary>
+        <returns>Der Wert der Zieleigenschaft. Dies ist potenziell jedes Objekt, das in den relevanten unterstützenden Assemblys typzugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erwartet einen `serviceProvider` -Wert, der implementiert die <xref:System.Xaml.IXamlNameResolver> Dienst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          Der <paramref name="serviceProvider" />-Wert implementiert den <see cref="T:System.Xaml.IXamlNameResolver" />-Dienst nicht.  
+  
+ - oder -   
+  
+ Der <see cref="P:System.Windows.Markup.Reference.Name" />-Wert wurde nicht durch Konstruktion oder Verwendung fester Breite festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceProvider" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

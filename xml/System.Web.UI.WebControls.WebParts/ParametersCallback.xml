@@ -1,0 +1,32 @@
+<Type Name="ParametersCallback" FullName="System.Web.UI.WebControls.WebParts.ParametersCallback">
+  <TypeSignature Language="C#" Value="public delegate void ParametersCallback(IDictionary parametersData);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ParametersCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ParametersCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="parametersData" Type="System.Collections.IDictionary" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="parametersData">Die Daten, die vom Anbieter abzurufen.</param>
+    <summary>Verweist auf die Methode, der beim Abrufen von Zeilendaten aus einem Anbieter aufgerufen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ParametersCallback> Delegat stellt die Methode zum Abrufen von Zeilendaten von einem Anbieter, die auf Grundlage eines Parameters vom Consumer aufgerufen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData%2A?displayProperty=nameWithType> Methode enthält einen <xref:System.Web.UI.WebControls.WebParts.ParametersCallback> Parameter zu delegieren. Die <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData%2A> Methode wird verwendet, der <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> -Klasse zum Abrufen von Zeilendaten für die Transformation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

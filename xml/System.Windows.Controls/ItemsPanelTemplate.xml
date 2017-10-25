@@ -1,0 +1,114 @@
+<Type Name="ItemsPanelTemplate" FullName="System.Windows.Controls.ItemsPanelTemplate">
+  <TypeSignature Language="C#" Value="public class ItemsPanelTemplate : System.Windows.FrameworkTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ItemsPanelTemplate extends System.Windows.FrameworkTemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ItemsPanelTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkTemplate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt den Bereich an, die die <see cref="T:System.Windows.Controls.ItemsPresenter" /> für das Layout der Elemente erstellt ein <see cref="T:System.Windows.Controls.ItemsControl" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ItemsPanelTemplate> gibt den Bereich an, die für das Layout der Elemente verwendet wird. <xref:System.Windows.Controls.GroupStyle>verfügt über eine <xref:System.Windows.Controls.GroupStyle.Panel%2A> -Eigenschaft, die vom Typ <xref:System.Windows.Controls.ItemsPanelTemplate>. <xref:System.Windows.Controls.ItemsControl>Typen haben eine <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> -Eigenschaft, die vom Typ <xref:System.Windows.Controls.ItemsPanelTemplate>.  
+  
+ Jede <xref:System.Windows.Controls.ItemsControl> Typ verfügt über einen standardmäßigen <xref:System.Windows.Controls.ItemsPanelTemplate>. Für die <xref:System.Windows.Controls.ItemsControl> Klasse, die Standardeinstellung <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Wert ist ein <xref:System.Windows.Controls.ItemsPanelTemplate> , die angibt, eine <xref:System.Windows.Controls.StackPanel>. Für die <xref:System.Windows.Controls.ListBox>, der Standardwert der <xref:System.Windows.Controls.VirtualizingStackPanel>. Für <xref:System.Windows.Controls.MenuItem>, verwendet die standardmäßige <xref:System.Windows.Controls.WrapPanel>. Für <xref:System.Windows.Controls.Primitives.StatusBar>, verwendet die standardmäßige <xref:System.Windows.Controls.DockPanel>.  
+  
+   
+  
+## Examples  
+ Zum Erstellen einer horizontalen <xref:System.Windows.Controls.ListBox>, können Sie eine Vorlage, der angibt, eine horizontalen erstellen <xref:System.Windows.Controls.StackPanel> und legen Sie ihn als das <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft. Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Style> , erstellt eine horizontale <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-xaml[StylingIntroSample_snippet#ItemsPanel](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#itemspanel)]   
+  
+Im folgenden Beispiel wird eine <xref:System.Windows.Controls.ControlTemplate> zum Erstellen einer horizontalen <xref:System.Windows.Controls.ListBox> mit abgerundeten Ecken. Beachten Sie, dass in diesem Beispiel, anstatt durch die Einstellung der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft wie in vorherigen Beispiel, das horizontale <xref:System.Windows.Controls.StackPanel> wird angegeben, in der <xref:System.Windows.Controls.ControlTemplate>. Beachten Sie, dass die <xref:System.Windows.Controls.Panel.IsItemsHost%2A> -Eigenschaftensatz auf `true` auf die <xref:System.Windows.Controls.StackPanel>, der angibt, die die generierten Elemente in der Systemsteuerung aufgenommen werden soll. Wenn Sie auf diese Weise angeben der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> kann nicht vom Benutzer des Steuerelements ersetzt werden, ohne eine <xref:System.Windows.Controls.ControlTemplate>. Deshalb nur führt diese, wenn Sie wissen, dass Sie den Bereich ohne Verwendung einer Vorlage ersetzt werden soll.  
+  
+[!code-xaml[StylingIntroSnippet#ListBoxCT](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#ListBoxCT)]
+ 
+Alternativ können Sie Folgendes ein, um die gleichen Ergebnisse erzielen tun. In diesem Fall die <xref:System.Windows.Controls.ItemsPresenter> erstellt den Bereich für das Layout der Elemente auf Grundlage von angegebenen ist die <xref:System.Windows.Controls.ItemsPanelTemplate>.  
+  
+ [!code-xaml[StyleOvw01#ItemsPanelTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/StyleOvw01/CS/Page1.xaml#itemspaneltemplate)]   
+  
+ Ein Beispiel zum Verwenden der verschiedenen Erstellen von Formaten und Vorlagen-Eigenschaften auf der <xref:System.Windows.Controls.ItemsControl>, finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemsPanelTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPanelTemplate.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Windows.Controls.ItemsPanelTemplate" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemsPanelTemplate (System.Windows.FrameworkElementFactory root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.FrameworkElementFactory root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPanelTemplate.#ctor(System.Windows.FrameworkElementFactory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="root" Type="System.Windows.FrameworkElementFactory" />
+      </Parameters>
+      <Docs>
+        <param name="root">Die <see cref="T:System.Windows.FrameworkElementFactory" /> -Objekt, das die Vorlage darstellt.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Windows.Controls.ItemsPanelTemplate" /> Klasse mit der angegebenen Vorlage.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTemplatedParent">
+      <MemberSignature Language="C#" Value="protected override void ValidateTemplatedParent (System.Windows.FrameworkElement templatedParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateTemplatedParent(class System.Windows.FrameworkElement templatedParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsPanelTemplate.ValidateTemplatedParent(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templatedParent" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="templatedParent">Das Element wird auf diese Vorlage angewendet. Diese Angabe muss ein <see cref="T:System.Windows.Controls.ItemsPresenter" /> Objekt.</param>
+        <summary>Überprüft, ob das vorlagenbasierte übergeordneten Element ein Wert ungleich Null ist <see cref="T:System.Windows.Controls.ItemsPresenter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode verwendet die folgenden Regeln:  
+  
+ 1. Die `templatedParent` nicht `null`.  
+  
+ 2. Die `templatedParent` muss ein <xref:System.Windows.Controls.ItemsPresenter>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="templatedParent" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="templatedParent" /> ist keine <see cref="T:System.Windows.Controls.ItemsPresenter" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

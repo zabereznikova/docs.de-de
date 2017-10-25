@@ -1,0 +1,140 @@
+<Type Name="IdentityModelCachesElement" FullName="System.IdentityModel.Configuration.IdentityModelCachesElement">
+  <TypeSignature Language="C#" Value="public sealed class IdentityModelCachesElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IdentityModelCachesElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Configuration.IdentityModelCachesElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see langword="&lt;caches&gt;" /> Element in einer Konfigurationsdatei. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<caches>` Element konfiguriert die caching-Dienste für WIF. Registriert den Typ des Tokens Sitzungscache für Sicherheit und den Typ des token-Replay-Caches verwendet. Auf Dienstebene unter angegeben werden die `<identityConfiguration>` Element oder auf Sicherheit Tokenhandler Auflistung unter dem `<securityTokenHandlerConfiguration>` Element. Die `Caches` Eigenschaft von der <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> Klasse und von der <xref:System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement> Klasse ist eine Instanz der <xref:System.IdentityModel.Configuration.IdentityModelCachesElement>. Nach dem Lesen der Konfigurationsdatei werden durch die konfigurierte Caches dargestellt die <xref:System.IdentityModel.Configuration.IdentityModelCaches> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityModelCachesElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityModelCachesElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Configuration.IdentityModelCachesElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConfigured">
+      <MemberSignature Language="C#" Value="public bool IsConfigured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConfigured" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityModelCachesElement.IsConfigured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieses Element konfiguriert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das Element konfiguriert wurde. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityModelCachesElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionSecurityTokenCache">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.CustomTypeElement SessionSecurityTokenCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.CustomTypeElement SessionSecurityTokenCache" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityModelCachesElement.SessionSecurityTokenCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sessionSecurityTokenCache", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.CustomTypeElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Type" /> von token Sitzungscache.</summary>
+        <value>Der Typ des Tokens Sitzungscache. Der Typ muss abgeleitet <see cref="System.IdentityModel.Tokens.SessionSecurityTokenCache" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist optional. Entspricht einem `<sessionSecurityTokenCache>` unter angegebene Element der `<caches>`. Es gibt den Typ des Caches zum Speichern von Sicherheitstoken für die Sitzung an. Alle Sitzung tokenzwischenspeicher müssen von abgeleitet werden.<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenReplayCache">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.CustomTypeElement TokenReplayCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.CustomTypeElement TokenReplayCache" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityModelCachesElement.TokenReplayCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tokenReplayCache", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.CustomTypeElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Type" /> des Tokens wiedergeben Cache.</summary>
+        <value>Der Typ des token-Replay-Caches. Der Typ muss abgeleitet <see cref="System.IdentityModel.Tokens.TokenReplayCache" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist optional. Entspricht einem `<tokenReplayCache>` Element angegeben, unter der `<caches>` Element. Es gibt den Typ des Caches zum Ermitteln der wiedergegebenen Tokens verwenden. Alle wiederholungscaches müssen von abgeleitet werden.<xref:System.IdentityModel.Tokens.TokenReplayCache>   
+  
+ Replay-Erkennung aktiviert ist, mit der `<tokenReplayDetection>` Element. Dieses Element wird dargestellt, indem die <xref:System.IdentityModel.Configuration.TokenReplayDetectionElement> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,87 @@
+<Type Name="WebClassCouldNotFindEvent" FullName="Microsoft.VisualBasic.Compatibility.VB6.WebClassCouldNotFindEvent">
+  <TypeSignature Language="C#" Value="public class WebClassCouldNotFindEvent : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebClassCouldNotFindEvent extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.WebClassCouldNotFindEvent" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Löst ein <see cref="T:System.Exception" /> für einen fehlenden Ereignisparameter in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebClass" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebClassCouldNotFindEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebClassCouldNotFindEvent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebClassCouldNotFindEvent" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebClassCouldNotFindEvent (string eventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string eventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebClassCouldNotFindEvent.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventName">Ein <see cref="T:System.String" /> , der den Namen des fehlenden Parameters enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebClassCouldNotFindEvent" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

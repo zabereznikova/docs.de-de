@@ -1,0 +1,6 @@
+<Namespace Name="System.Xml.Xsl">
+  <Docs>
+    <summary>Der System.Xml.Xsl-Namespace stellt Unterstützung für Transformationen, Extensible Stylesheet Transformations (XSLT) an. Die Empfehlung von W3C XSL Transformations (XSLT) Version 1.0 (www.w3.org/TR/xslt) unterstützt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

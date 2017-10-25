@@ -1,0 +1,688 @@
+<Type Name="TextureBrush" FullName="System.Drawing.TextureBrush">
+  <TypeSignature Language="C#" Value="public sealed class TextureBrush : System.Drawing.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextureBrush extends System.Drawing.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.TextureBrush" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Jede Eigenschaft von der <see cref="T:System.Drawing.TextureBrush" /> Klasse ist eine <see cref="T:System.Drawing.Brush" /> -Objekt, das ein Bild verwendet, um das Innere einer Form zu füllen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue Bitmap mit Abrufen der <xref:System.Drawing.Image.FromFile%2A> Methode. Außerdem zeigt es ein <xref:System.Drawing.TextureBrush>.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen eines Formulars, das eine Schaltfläche Button2 enthält. Fügen Sie den Code in das Formular, und ordnen Sie die Button2_Click-Methode, mit der Schaltfläche `Click` Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ImageExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ImageExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image bitmap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image bitmap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bitmap" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="bitmap">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das das angegebene Image verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue Bitmap mit Abrufen der <xref:System.Drawing.Image.FromFile%2A> Methode. Außerdem zeigt es ein <xref:System.Drawing.TextureBrush>.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen eines Formulars, das eine Schaltfläche Button2 enthält. Fügen Sie den Code in das Formular, und ordnen Sie die Button2_Click-Methode, mit der Schaltfläche `Click` Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ImageExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ImageExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image image, System.Drawing.Drawing2D.WrapMode wrapMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image, valuetype System.Drawing.Drawing2D.WrapMode wrapMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image,System.Drawing.Drawing2D.WrapMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="wrapMode" Type="System.Drawing.Drawing2D.WrapMode" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <param name="wrapMode">Ein <see cref="T:System.Drawing.Drawing2D.WrapMode" /> Enumeration, der angibt, wie sich dieser <see cref="T:System.Drawing.TextureBrush" /> -Objekt gekachelt wird.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das den angegebenen Bild und Wrap-Modus verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image image, System.Drawing.Rectangle dstRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image, valuetype System.Drawing.Rectangle dstRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image,System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="dstRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <param name="dstRect">Ein <see cref="T:System.Drawing.Rectangle" /> -Struktur, die das umschließende Rechteck, für diesen darstellt <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das das angegebene Bild und das umschließende Rechteck verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image image, System.Drawing.RectangleF dstRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image, valuetype System.Drawing.RectangleF dstRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image,System.Drawing.RectangleF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="dstRect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <param name="dstRect">Ein <see cref="T:System.Drawing.RectangleF" /> -Struktur, die das umschließende Rechteck, für diesen darstellt <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das das angegebene Bild und das umschließende Rechteck verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image image, System.Drawing.Drawing2D.WrapMode wrapMode, System.Drawing.Rectangle dstRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image, valuetype System.Drawing.Drawing2D.WrapMode wrapMode, valuetype System.Drawing.Rectangle dstRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image,System.Drawing.Drawing2D.WrapMode,System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="wrapMode" Type="System.Drawing.Drawing2D.WrapMode" />
+        <Parameter Name="dstRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <param name="wrapMode">Ein <see cref="T:System.Drawing.Drawing2D.WrapMode" /> Enumeration, der angibt, wie sich dieser <see cref="T:System.Drawing.TextureBrush" /> -Objekt gekachelt wird.</param>
+        <param name="dstRect">Ein <see cref="T:System.Drawing.Rectangle" /> -Struktur, die das umschließende Rechteck, für diesen darstellt <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das das angegebene Image, Umbruchmodus und umschließende Rechteck verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image image, System.Drawing.Drawing2D.WrapMode wrapMode, System.Drawing.RectangleF dstRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image, valuetype System.Drawing.Drawing2D.WrapMode wrapMode, valuetype System.Drawing.RectangleF dstRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image,System.Drawing.Drawing2D.WrapMode,System.Drawing.RectangleF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="wrapMode" Type="System.Drawing.Drawing2D.WrapMode" />
+        <Parameter Name="dstRect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <param name="wrapMode">Ein <see cref="T:System.Drawing.Drawing2D.WrapMode" /> Enumeration, der angibt, wie sich dieser <see cref="T:System.Drawing.TextureBrush" /> -Objekt gekachelt wird.</param>
+        <param name="dstRect">Ein <see cref="T:System.Drawing.RectangleF" /> -Struktur, die das umschließende Rechteck, für diesen darstellt <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das das angegebene Image, Umbruchmodus und umschließende Rechteck verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image image, System.Drawing.Rectangle dstRect, System.Drawing.Imaging.ImageAttributes imageAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image, valuetype System.Drawing.Rectangle dstRect, class System.Drawing.Imaging.ImageAttributes imageAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="dstRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="imageAttr" Type="System.Drawing.Imaging.ImageAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <param name="dstRect">Ein <see cref="T:System.Drawing.Rectangle" /> -Struktur, die das umschließende Rechteck, für diesen darstellt <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <param name="imageAttr">Ein <see cref="T:System.Drawing.Imaging.ImageAttributes" /> -Objekt, das zusätzliche Informationen über das von diesem Image enthält <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das das angegebene Image, umschließende Rechteck und Bildattributen verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureBrush (System.Drawing.Image image, System.Drawing.RectangleF dstRect, System.Drawing.Imaging.ImageAttributes imageAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image, valuetype System.Drawing.RectangleF dstRect, class System.Drawing.Imaging.ImageAttributes imageAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.#ctor(System.Drawing.Image,System.Drawing.RectangleF,System.Drawing.Imaging.ImageAttributes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="dstRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="imageAttr" Type="System.Drawing.Imaging.ImageAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Objekt, das diesem <see cref="T:System.Drawing.TextureBrush" /> -Objekt Innenbereiche füllt.</param>
+        <param name="dstRect">Ein <see cref="T:System.Drawing.RectangleF" /> -Struktur, die das umschließende Rechteck, für diesen darstellt <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <param name="imageAttr">Ein <see cref="T:System.Drawing.Imaging.ImageAttributes" /> -Objekt, das zusätzliche Informationen über das von diesem Image enthält <see cref="T:System.Drawing.TextureBrush" /> Objekt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.TextureBrush" /> -Objekt, das das angegebene Image, umschließende Rechteck und Bildattributen verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts.</summary>
+        <returns>Die <see cref="T:System.Drawing.TextureBrush" /> Objekt, die diese Methode erstellt, umgewandelt in ein <see cref="T:System.Object" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code erstellt ein <xref:System.Drawing.TextureBrush> -Objekt und eine genaue Kopie dieser Strukturpinsel, und klicken Sie dann die Kopie verwendet, um ein Rechteck auf dem Bildschirm zu füllen.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.TextureBrush.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Image" /> Objekt zugeordnete <see cref="T:System.Drawing.TextureBrush" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Image" /> -Objekt, das Image mit dem diese darstellt <see cref="T:System.Drawing.TextureBrush" /> -Objekt Formen füllt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Das <see cref="T:System.Drawing.Drawing2D.Matrix" />-Objekt, mit dem die geometrische Transformation multipliziert wird.</param>
+        <summary>Multipliziert das <see cref="T:System.Drawing.Drawing2D.Matrix" />-Objekt, das die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts darstellt, mit dem angegebenen <see cref="T:System.Drawing.Drawing2D.Matrix" />-Objekt, indem das angegebene <see cref="T:System.Drawing.Drawing2D.Matrix" />-Objekt vorangestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Transformationsmatrix ein <xref:System.Drawing.TextureBrush> Objekt gibt an, wie das Bild, das die Struktur definiert transformiert wird. Die Transformationsmatrix gibt eine Drehung im Uhrzeigersinn um 90 Grad gedreht wird z. B. das Bild Textur um 90 Grad im Uhrzeigersinn gedreht.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Erstellt eine neue Matrix, die eine Übersetzung von 50 Einheiten in der X-Richtung angibt.  
+  
+-   Multipliziert die Matrix mit der Transformationsmatrix des Pinsels Textur.  
+  
+-   Füllt ein Rechteck, mit dem Texturpinsel.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Das <see cref="T:System.Drawing.Drawing2D.Matrix" />-Objekt, mit dem die geometrische Transformation multipliziert wird.</param>
+        <param name="order">Eine <see cref="T:System.Drawing.Drawing2D.MatrixOrder" />-Enumeration, die die Reihenfolge angibt, in der die beiden Matrizen multipliziert werden sollen.</param>
+        <summary>Multipliziert das <see cref="T:System.Drawing.Drawing2D.Matrix" />-Objekt, das die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts darstellt, mit dem angegebenen <see cref="T:System.Drawing.Drawing2D.Matrix" />-Objekt in der angegebenen Reihenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Transformationsmatrix ein <xref:System.Drawing.TextureBrush> Objekt gibt an, wie das Bild, das die Struktur definiert transformiert wird. Die Transformationsmatrix gibt eine Drehung im Uhrzeigersinn um 90 Grad gedreht wird z. B. das Bild Textur um 90 Grad im Uhrzeigersinn gedreht.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Erstellt eine neue Matrix, die eine Übersetzung von 50 Einheiten in der X-Richtung angibt.  
+  
+-   Multipliziert die Matrix mit der Transformationsmatrix des Pinsels Textur.  
+  
+-   Füllt ein Rechteck, mit dem Texturpinsel.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetTransform">
+      <MemberSignature Language="C#" Value="public void ResetTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetTransform() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.ResetTransform" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see langword="Transform" />-Eigenschaft dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts auf Identität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Dreht das Bild Textur um 90 Grad.  
+  
+-   Füllt ein Rechteck.  
+  
+-   Setzt die Transformationsmatrix auf Identität zurück.  
+  
+-   Füllt ein zweites Rechteck.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.RotateTransform(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Rotationswinkel.</param>
+        <summary>Dreht die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts um den angegebenen Betrag. Diese Methode stellt der Transformation die Drehung voran.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Dreht das Bild Textur um 90 Grad.  
+  
+-   Füllt ein Rechteck.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Rotationswinkel.</param>
+        <param name="order">Eine <see cref="T:System.Drawing.Drawing2D.MatrixOrder" />-Enumeration, die angibt, ob die Rotationsmatrix vorangestellt oder angefügt werden soll.</param>
+        <summary>Dreht die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts um den angegebenen Betrag in angegebener Reihenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Dreht das Bild Textur um 90 Grad.  
+  
+-   Füllt ein Rechteck.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.ScaleTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="sx">Der Betrag, um den die Transformation in X-Richtung skaliert werden soll.</param>
+        <param name="sy">Der Betrag, um den die Transformation in Y-Richtung skaliert werden soll.</param>
+        <summary>Skaliert die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" /> Objekt, das die angegebenen Werte. Diese Methode stellt der Transformation die Skalierungsmatrix voran.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Skaliert die Textur Abbild wird zweimal in der X-Richtung.  
+  
+-   Füllt ein Rechteck auf dem Bildschirm, mit dem Texturpinsel.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="sx">Der Betrag, um den die Transformation in X-Richtung skaliert werden soll.</param>
+        <param name="sy">Der Betrag, um den die Transformation in Y-Richtung skaliert werden soll.</param>
+        <param name="order">Eine <see cref="T:System.Drawing.Drawing2D.MatrixOrder" />-Enumeration, die angibt, ob die Skalierungsmatrix vorangestellt oder angefügt werden soll.</param>
+        <summary>Skaliert die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts um die angegebenen Beträge in angegebener Reihenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Skaliert die Textur Abbild wird zweimal in der X-Richtung.  
+  
+-   Füllt ein Rechteck auf dem Bildschirm, mit dem Texturpinsel.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Matrix Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.Matrix Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.TextureBrush.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Kopie der <see cref="T:System.Drawing.Drawing2D.Matrix" /> Objekt, das eine lokale geometrische Transformation für das zugeordnete Bild definiert <see cref="T:System.Drawing.TextureBrush" /> Objekt.</summary>
+        <value>Eine Kopie der <see cref="T:System.Drawing.Drawing2D.Matrix" /> -Objekt, das eine geometrische Transformation, die gilt nur für definiert mit diesem gezeichneten <see cref="T:System.Drawing.TextureBrush" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine geometrische Transformation kann verwendet werden, zu übersetzen, zu skalieren, drehen oder neigen das Bild, das die Struktur dieses Pinsels definiert. Da die Matrix zurückgegeben und durch die <xref:System.Drawing.TextureBrush.Transform%2A> Eigenschaft ist eine Kopie der geometrischen Transformation des Pinsels, sollten Sie die Matrix freigeben, wenn Sie nicht mehr benötigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.TranslateTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Die Dimension, um die die Transformation in X-Richtung verschoben werden soll.</param>
+        <param name="dy">Die Dimension, um die die Transformation in Y-Richtung verschoben werden soll.</param>
+        <summary>Verschiebt die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts gemäß der angegebenen Dimensionen. Diese Methode stellt der Transformation die Verschiebung voran.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Übersetzt die Textur 50 Einheiten in der X-Richtung.  
+  
+-   Füllt ein Rechteck auf dem Bildschirm, mit dem Texturpinsel.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.TextureBrush.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Die Dimension, um die die Transformation in X-Richtung verschoben werden soll.</param>
+        <param name="dy">Die Dimension, um die die Transformation in Y-Richtung verschoben werden soll.</param>
+        <param name="order">Die Reihenfolge (vorangestellt oder angefügt), in der die Schiebung angewendet wird.</param>
+        <summary>Verschiebt die lokale geometrische Transformation dieses <see cref="T:System.Drawing.TextureBrush" />-Objekts in der angegebenen Reihenfolge um die angegebenen Abmessungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der `Paint` -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt ein <xref:System.Drawing.TextureBrush>-Objekt.  
+  
+-   Übersetzt die Textur 50 Einheiten in der X-Richtung.  
+  
+-   Füllt ein Rechteck auf dem Bildschirm, mit dem Texturpinsel.  
+  
+ [!code-cpp[System.Drawing.ClassicTextureBrushExamples#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CPP/form1.cpp#10)]
+ [!code-csharp[System.Drawing.ClassicTextureBrushExamples#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/CS/form1.cs#10)]
+ [!code-vb[System.Drawing.ClassicTextureBrushExamples#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicTextureBrushExamples/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMode">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.WrapMode WrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Drawing2D.WrapMode WrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.TextureBrush.WrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.WrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine <see cref="T:System.Drawing.Drawing2D.WrapMode" /> Enumeration, der den Umbruchmodus dafür angibt <see cref="T:System.Drawing.TextureBrush" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Drawing2D.WrapMode" /> Enumeration, der angibt, wie mit diesem gezeichneten <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> Objekt werden nebeneinander angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue Bitmap mit Abrufen der <xref:System.Drawing.Image.FromFile%2A> Methode. Außerdem zeigt es die <xref:System.Drawing.TextureBrush.WrapMode%2A> Eigenschaft und die <xref:System.Drawing.Drawing2D.WrapMode> Enumeration.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen eines Formulars, das eine Schaltfläche Button2 enthält. Fügen Sie den Code in das Formular, und ordnen Sie die Button2_Click-Methode, mit der Schaltfläche `Click` Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ImageExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ImageExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

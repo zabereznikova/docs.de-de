@@ -1,0 +1,2793 @@
+<Type Name="Enum" FullName="System.Enum">
+  <TypeSignature Language="C#" Value="public abstract class Enum : ValueType, IComparable, IConvertible, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Enum extends System.ValueType implements class System.IComparable, class System.IConvertible, class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IConvertible</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für Enumerationen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Enumeration ist ein Satz von benannten Konstanten, deren zugrunde liegenden Typ jedes beliebigen ganzzahligen Typs ist. Wenn kein zugrunde liegender Typ explizit deklariert wird, <xref:System.Int32> verwendet wird. <xref:System.Enum>ist die Basisklasse für alle Enumerationen in .NET Framework. Enumerationstypen werden definiert, indem Sie die `enum` -Schlüsselwort in c# und die `Enum`... `End Enum` in Visual Basic erstellen.  
+  
+ <xref:System.Enum>Stellt Methoden zum Vergleichen von Instanzen dieser Klasse, Konvertieren des Werts einer Instanz in die Zeichenfolgendarstellung, konvertieren die angegebene Zeichenfolgendarstellung einer Zahl in eine Instanz dieser Klasse, und erstellen eine Instanz einer angegebenen Enumeration und Wert.  
+  
+ Sie können auch eine Enumeration als Bitfeld behandelt werden. Weitere Informationen finden Sie unter der [Nichtexklusiv Mitglieder und das Attribut Flags](#Flags) Abschnitt und der <xref:System.FlagsAttribute> Thema.  
+  
+ In diesem Thema:  
+  
+ [Erstellen einen Enumerationstyp](#Creating)   
+ [Instanziieren einen Enumerationstyp](#Instantiating)   
+ [Enumeration bewährte Methoden](#BestPractices)   
+ [Ausführen von Vorgängen mit Enumerationen](#Operations)   
+ [Durchführen von Konvertierungen](#conversions)  
+ [Analysieren von Enumerationswerte](#parsing)  
+ [Formatieren von Enumerationswerten](#formatting)  
+[Durchlaufen von Enumerationsmembern](#iterating)  
+[Nichtexklusiv Member und den Flags-Attribut](#Flags)  
+[Hinzufügen von Enumerationsmethoden](#methods)  
+  
+<a name="Creating"></a>   
+## <a name="creating-an-enumeration-type"></a>Erstellen einen Enumerationstyp  
+ Programmiersprachen bieten in der Regel die Syntax zum Deklarieren einer Enumeration, die der einen Satz von benannten Konstanten und deren Werten besteht. Das folgende Beispiel veranschaulicht die Syntax von c# und Visual Basic verwendet werden, um eine Enumeration zu definieren. Erstellt eine Enumeration namens `ArrivalStatus` , besitzt drei Member: `ArrivalStatus.Early`, `ArrivalStatus.OnTime`, und `ArrivalStatus.Late`. Beachten Sie, dass in beiden Fällen wird die Enumeration nicht explizit von erbt <xref:System.Enum>; die vererbungsbeziehung wird vom Compiler implizit behandelt.  
+  
+ [!code-csharp[System.Enum.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/class1.cs#1)]
+ [!code-vb[System.Enum.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/class1.vb#1)]  
+  
+> [!WARNING]
+>  Erstellen Sie nie einen Enumerationstyp, dessen zugrunde liegender Typ nicht ganzzahligen ist, oder <xref:System.Char>. Obwohl solche einen Enumerationstyp mithilfe der Reflektion erstellt werden kann, wird Methodenaufrufe, die den resultierenden Typ zu verwenden sind unzuverlässig und möglicherweise auch zusätzliche Ausnahmen auslösen.  
+  
+<a name="Instantiating"></a>   
+## <a name="instantiating-an-enumeration-type"></a>Instanziieren einen Enumerationstyp  
+ Sie können einen Enumerationstyp instanziieren, so wie Sie einem beliebigen anderen Werttyp instanziieren: durch Deklarieren einer Variablen und eine der Konstanten für die Enumeration zuweisen. Im folgenden Beispiel wird ein `ArrivalStatus` , dessen Wert `ArrivalStatus.OnTime`.  
+  
+ [!code-csharp[System.Enum.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/class1.cs#2)]
+ [!code-vb[System.Enum.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/class1.vb#2)]  
+  
+ Sie können auch einen Enumerationswert auf folgende Weise instanziieren:  
+  
+-   Mithilfe von einer bestimmten Programmiersprache Funktionen umgewandelt (in c#) oder konvertieren Sie einen ganzzahligen Wert (wie in Visual Basic) aus, in einem Enumerationswert entspricht. Das folgende Beispiel erstellt eine `ArrivalStatus` Objekt, dessen Wert `ArrivalStatus.Early` auf diese Weise.  
+  
+     [!code-csharp[System.Enum.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/class2.cs#4)]
+     [!code-vb[System.Enum.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/class2.vb#4)]  
+  
+-   Durch Aufrufen seiner impliziten Standardkonstruktor. Wie im folgenden Beispiel wird gezeigt, ist in diesem Fall der zugrunde liegenden Wert der Enumerationsinstanz 0. Dies ist jedoch nicht unbedingt den Wert einer gültigen Konstante in der Enumeration.  
+  
+     [!code-csharp[System.Enum.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/class2.cs#3)]
+     [!code-vb[System.Enum.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/class2.vb#3)]  
+  
+-   Durch Aufrufen der <xref:System.Enum.Parse%2A> oder <xref:System.Enum.TryParse%2A> Methode, um eine Zeichenfolge zu analysieren, die den Namen einer Konstante in der Enumeration enthält. Weitere Informationen finden Sie unter der [Enumerationswerte Analyse](#parsing) Abschnitt.  
+  
+-   Durch Aufrufen der <xref:System.Enum.ToObject%2A> Methode, um einen ganzzahligen Wert in einen Enumerationstyp konvertieren. Weitere Informationen finden Sie unter der [Konvertierungen ausführen](#conversions) Abschnitt.  
+  
+<a name="BestPractices"></a>   
+## <a name="enumeration-best-practices"></a>Enumeration bewährte Methoden  
+ Es wird empfohlen, dass Sie die folgenden bewährten Methoden verwenden, wenn Sie Enumerationstypen definieren:  
+  
+-   Wenn Sie kein Member einer Enumeration definiert haben, dessen Wert 0 ist, sollten Sie erstellen eine `None` Enumerationskonstante. Standardmäßig wird der für die Enumeration verwendete Speicher mit 0 (null) initialisiert von der common Language Runtime. Daher, wenn Sie keine Konstante definieren, deren Wert 0 (null) ist, die Enumeration einen unzulässigen Wert enthält während der Erstellung.  
+  
+-   Es ist ein offensichtliche Standardfall, die Ihre Anwendung darstellen, sollten eine Enumerationskonstante ist konstant, deren Wert 0 (null) für die Darstellung. Wenn es keine Standardfall ist, sollten erwägen Sie, eine Enumerationskonstante, dessen Wert 0 (null) ist, um die Groß-/Kleinschreibung angeben, der nicht, von einer anderen Enumerationskonstanten zu verwenden.  
+  
+-   Geben Sie keine Enumerationskonstanten, die für die zukünftige Verwendung reserviert sind.  
+  
+-   Wenn Sie definieren eine Methode oder Eigenschaft, die eine Enumerationskonstante als Wert akzeptiert, sollten Sie überprüfen des Werts. Der Grund ist, dass Sie einen numerischen Wert in den Enumerationstyp umwandeln können, selbst wenn diese numerische Wert in der Enumeration nicht definiert ist.  
+  
+ Best Practices für Enumerationstypen, deren Konstanten Bitfelder sind werden aufgeführt, der [Nichtexklusiv Member und den Flags-Attribut](#Flags) Abschnitt.  
+  
+<a name="Operations"></a>   
+## <a name="performing-operations-with-enumerations"></a>Ausführen von Vorgängen mit Enumerationen  
+ Sie können keine neue Methoden definieren, bei der Erstellung einer Enumeration. Ein Enumerationstyp allerdings erbt, einen vollständigen Satz von statischen Methoden und Instanzenmethoden von der <xref:System.Enum> Klasse. In den folgenden Abschnitten Umfrage die meisten dieser Methoden, zusätzlich zu anderen Methoden, die beim Arbeiten mit Enumerationswerten häufig verwendet werden.  
+  
+<a name="conversions"></a>   
+### <a name="performing-conversions"></a>Durchführen von Konvertierungen  
+ Sie können mithilfe einer Umwandlung (in c#) oder einen Konvertierungsoperator (in Visual Basic) zwischen Enumerationsmember und dessen zugrunde liegendem Typ konvertieren. Im folgenden Beispiel wird die Umwandlung oder Konvertierung Operatoren zum Durchführen von Konvertierungen aus eine ganze Zahl und einem Enumerationswert entspricht und aus einem Enumerationswert entspricht, eine ganze Zahl.  
+  
+ [!code-csharp[System.Enum.Class#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/class2.cs#5)]
+ [!code-vb[System.Enum.Class#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/class2.vb#5)]  
+  
+ Die <xref:System.Enum> Klasse enthält auch eine <xref:System.Enum.ToObject%2A> Methode, die einen Wert jedes beliebigen ganzzahligen Typs in einen Enumerationswert konvertiert. Im folgenden Beispiel wird die <xref:System.Enum.ToObject%28System.Type%2CSystem.Int32%29> -Methode zum Konvertieren einer <xref:System.Int32> auf eine `ArrivalStatus` Wert. Beachten Sie Folgendes: Da die <xref:System.Enum.ToObject%2A> gibt einen Wert vom Typ <xref:System.Object>, die Verwendung eines Operators Umwandlung oder Konvertierung kann dennoch erforderlich sein, das Objekt in den Enumerationstyp umgewandelt.  
+  
+ [!code-csharp[System.Enum.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/class2.cs#6)]
+ [!code-vb[System.Enum.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/class2.vb#6)]  
+  
+ Wenn eine ganze Zahl in einen Enumerationswert konvertiert wird, ist es möglich, einen Wert zuzuweisen, der nicht tatsächlich ein Member der Enumeration ist. Um dies zu verhindern, können Sie die ganze Zahl, übergeben die <xref:System.Enum.IsDefined%2A> Methode vor der Konvertierung. Im folgenden Beispiel wird diese Methode, um zu bestimmen, ob die Elemente in einem Array von ganzzahligen Werten in konvertiert werden können `ArrivalStatus` Werte.  
+  
+ [!code-csharp[System.Enum.Class#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classconversion1.cs#7)]
+ [!code-vb[System.Enum.Class#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classconversion1.vb#7)]  
+  
+ Obwohl die <xref:System.Enum> Klasse bietet explizite Implementierungen von der <xref:System.IConvertible> Schnittstelle zu einem Enumerationswert entspricht zu einem ganzzahligen Typ konvertieren, verwenden Sie die Methoden der der <xref:System.Convert> Klasse, z. B. <xref:System.Convert.ToInt32%2A>in Führen Sie diese Konvertierungen. Im folgende Beispiel wird veranschaulicht, wie Sie die <xref:System.Enum.GetUnderlyingType%2A> Methode zusammen mit der <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType> Methode, um einem Enumerationswert entspricht, dessen zugrunde liegendem Typ zu konvertieren. Beachten Sie, dass in diesem Beispiel wird den zugrunde liegende Typ der Enumeration zum Zeitpunkt der Kompilierung bekannt sein nicht erforderlich ist.  
+  
+ [!code-csharp[System.Enum.Class#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classconversion2.cs#8)]
+ [!code-vb[System.Enum.Class#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classconversion2.vb#8)]  
+  
+<a name="parsing"></a>   
+### <a name="parsing-enumeration-values"></a>Analysieren von Enumerationswerte  
+ Die <xref:System.Enum.Parse%2A> und <xref:System.Enum.TryParse%2A> Methoden ermöglichen es Ihnen, die Zeichenfolgendarstellung eines Enumerationswerts in diesen Wert zu konvertieren. Die Zeichenfolgendarstellung für möglich den Namen oder den zugrunde liegenden Wert einer Enumerationskonstante. Beachten Sie, dass es sich bei die Analysemethoden erfolgreich zeichenfolgendarstellungen Zahlen konvertiert, die nicht Mitglieder einer bestimmten Enumeration sind, wenn die Zeichenfolgen in einen Wert des zugrunde liegenden Enumerationstyp konvertiert werden können. Damit dies verhindert die <xref:System.Enum.IsDefined%2A> Methode kann aufgerufen werden, um sicherzustellen, dass das Ergebnis als Analysemethode gültiger Enumerationswert ist. Im Beispiel veranschaulicht diese Vorgehensweise und veranschaulicht beide Aufrufe der <xref:System.Enum.Parse%28System.Type%2CSystem.String%29> und <xref:System.Enum.TryParse%60%601%28System.String%2C%60%600%40%29?displayProperty=nameWithType> Methoden. Beachten Sie, dass die Analysemethode nichtgenerischen ein Objekt, die Sie möglicherweise umgewandelt (in c#) oder zurückgibt (in Visual Basic) in den entsprechenden Enumerationstyp konvertieren.  
+  
+ [!code-csharp[System.Enum.Class#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classparse1.cs#9)]
+ [!code-vb[System.Enum.Class#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classparse1.vb#9)]  
+  
+<a name="formatting"></a>   
+### <a name="formatting-enumeration-values"></a>Formatieren von Enumerationswerten  
+ Sie können ihre zeichenfolgendarstellungen Enumerationswerte konvertieren, durch Aufrufen der statischen <xref:System.Enum.Format%2A> Methode als auch die Überladungen der Instanz <xref:System.Enum.ToString%2A> Methode. Sie können eine Formatzeichenfolge verwenden, um genau zu steuern, in der ein Enumerationswert als Zeichenfolge dargestellt wird. Weitere Informationen finden Sie unter [Enumerationsformatzeichenfolgen](~/docs/standard/base-types/enumeration-format-strings.md). Im folgenden Beispiel wird jeweils die unterstützten Enumerationsformatzeichenfolgen ("G" oder "g", "D" oder "d", "X" oder "X", und "F" oder "f"), konvertieren Sie ein Mitglied der `ArrivalStatus` die zeichenfolgendarstellungen-Enumeration.  
+  
+ [!code-csharp[System.Enum.Class#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classformat1.cs#10)]
+ [!code-vb[System.Enum.Class#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classformat1.vb#10)]  
+  
+<a name="iterating"></a>   
+### <a name="iterating-enumeration-members"></a>Durchlaufen von Enumerationsmembern  
+ Die <xref:System.Enum> Typ implementiert nicht die <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> -Schnittstelle, die Mitglieder einer Sammlung mit durchlaufen ermöglichen würden eine `foreach` (in c#) oder `For Each` (in Visual Basic) zu erstellen. Allerdings können Sie Elemente in zwei Arten aufzählen.  
+  
+-   Sie erreichen die <xref:System.Enum.GetNames%2A> Methode, um ein Zeichenfolgenarray mit den Namen der Enumerationsmember abzurufen. Für jedes Element des Zeichenfolgenarrays, Sie können rufen Sie als Nächstes die <xref:System.Enum.Parse%2A> Methode zum Konvertieren der Zeichenfolge in den entsprechenden Enumerationswert. Dieser Ansatz wird anhand des folgenden Beispiels veranschaulicht.  
+  
+     [!code-csharp[System.Enum.Class#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classiterate.cs#11)]
+     [!code-vb[System.Enum.Class#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classiterate.vb#11)]  
+  
+-   Sie erreichen die <xref:System.Enum.GetValues%2A> Methode zum Abrufen eines Arrays, die die zugrunde liegende enthält Werte in der Enumeration. Für jedes Element des Arrays, Sie können rufen Sie als Nächstes die <xref:System.Enum.ToObject%2A> Methode, die ganze Zahl in den entsprechenden Enumerationswert zu konvertieren. Dieser Ansatz wird anhand des folgenden Beispiels veranschaulicht.  
+  
+     [!code-csharp[System.Enum.Class#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classiterate.cs#12)]
+     [!code-vb[System.Enum.Class#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classiterate.vb#12)]  
+  
+<a name="Flags"></a>   
+## <a name="non-exclusive-members-and-the-flags-attribute"></a>Nichtexklusiv Member und den Flags-Attribut  
+ Eine übliche Verwendung einer Enumeration ist einen Satz von sich gegenseitig ausschließende Werte darzustellen. Angenommen, ein `ArrivalStatus` Instanz kann den Wert des haben `Early`, `OnTime`, oder `Late`. Es ist nicht sinnvoll, für den Wert des ein `ArrivalStatus` Instanz mehrere-Enumerationskonstante widerspiegeln.  
+  
+ In anderen Fällen sollten Sie allerdings den Wert eines Enumerationsobjekts kann mehrere Enumerationsmember einzuschließen und jedes Element stellt ein Bitfeld in die Enumerationswert. Die <xref:System.FlagsAttribute> Attribut kann verwendet werden, um anzugeben, dass die Enumeration von Bitfeldern besteht aus. Angenommen, eine Enumeration, die mit dem Namen `Pets` kann verwendet werden, um die Arten von Haustieren an, in einen Kundenhaushalt angeben. Sie können wie folgt definiert werden.  
+  
+ [!code-csharp[System.Enum.Class#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classbitwise1.cs#13)]
+ [!code-vb[System.Enum.Class#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classbitwise1.vb#13)]  
+  
+ Die `Pets` Enumeration kann dann verwendet werden, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Enum.Class#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classbitwise1.cs#14)]
+ [!code-vb[System.Enum.Class#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classbitwise1.vb#14)]  
+  
+ Die folgenden bewährten Methoden sollte verwendet werden, wenn Sie ein bitweises definieren Enumeration und Anwenden der <xref:System.FlagsAttribute> Attribut.  
+  
+-   Verwenden der <xref:System.FlagsAttribute> benutzerdefiniertes Attribut für eine Enumeration, die nur, wenn eine bitweise Operation (AND, OR, exklusive oder) für einen numerischen Wert ausgeführt werden soll.  
+  
+-   Definieren Sie Enumerationskonstanten in Potenzen von 2, d. h. 1, 2, 4, 8 und So weiter. Dies bedeutet, dass die einzelnen Flags in kombinierten Enumerationskonstanten nicht überschneiden.  
+  
+-   Estellen Sie eine Enumerationskonstante für häufig verwendete Flagkombinationen aus. Beispielsweise ist eine Enumeration für-e/a-Dateivorgänge verwendet, enthält der Enumerationskonstanten `Read = 1` und `Write = 2`, sollten Sie die Enumerationskonstante erstellen `ReadWrite = Read OR Write`, kombiniert die `Read` und `Write` Flags. Darüber hinaus kann die bitweise OR-Operation zum Kombinieren der Flags einen erweiterten Ansatz in einigen Fällen als angesehen werden, die nicht bei einfachen Aufgaben erforderlich sein sollte.  
+  
+-   Verwenden Sie vorsichtig vor, wenn Sie eine negative Zahl als eine Flagenumerationskonstante definieren, da viele Flagpositionen auf 1 festgelegt werden möglicherweise die Lesbarkeit Ihres Codes erschweren verwirrend und empfehlen Codierungsfehler.  
+  
+-   Eine einfache Möglichkeit zum Überprüfen, ob ein Flag in einen numerischen Wert festgelegt ist, rufen Sie die Instanz ist <xref:System.Enum.HasFlag%2A> Methode, wie im folgenden Beispiel gezeigt.  
+  
+     [!code-csharp[System.Enum.Class#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classbitwise1.cs#15)]
+     [!code-vb[System.Enum.Class#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classbitwise1.vb#15)]  
+  
+     Dies ist äquivalent zum Ausführen einer bitweisen AND-Operation zwischen den numerischen Wert und die Kennzeichen Enumerationskonstante, die legt alle Bits in den numerischen Wert 0 (null), die das Flag nicht entsprechen, und klicken Sie dann testen, ob das Ergebnis dieses Vorgangs entspricht der Flag-Enumerationskonstante. Dies wird im folgenden Beispiel illustriert.  
+  
+     [!code-csharp[System.Enum.Class#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classbitwise1.cs#16)]
+     [!code-vb[System.Enum.Class#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classbitwise1.vb#16)]  
+  
+-   Verwendung `None` wie der Namen des Flags Konstante aufgelistet, deren Wert 0 (null wird). Sie können keine der `None` Enumerationskonstante in eine bitweise AND-Operation für ein Flag zu testen, da das Ergebnis immer 0 (null) ist. Allerdings können Sie ein logisches ausführen keinen bitweisen Vergleich zwischen den numerischen Wert und die `None` Enumerationskonstante, um zu bestimmen, ob alle Bits in den numerischen Wert festgelegt werden. Dies wird im folgenden Beispiel illustriert.  
+  
+     [!code-csharp[System.Enum.Class#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/classbitwise1.cs#17)]
+     [!code-vb[System.Enum.Class#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/classbitwise1.vb#17)]  
+  
+-   Definieren Sie einen Enumerationswert ausschließlich, um den Status der Enumeration selbst spiegeln nicht. Definieren Sie z. B. keine Enumerationskonstante, die lediglich das Ende der Enumeration markiert. Wenn Sie den letzten Wert der Enumeration bestimmen müssen, suchen Sie nach diesem Wert explizit. Darüber hinaus können Sie eine bereichsüberprüfung für die erste und letzte Enumerationskonstante ausführen, wenn alle Werte innerhalb des Bereichs gültig sind.  
+  
+<a name="methods"></a>   
+## <a name="adding-enumeration-methods"></a>Hinzufügen von Enumerationsmethoden  
+ Da Enumerationstypen von Sprachstrukturen, z. B. definiert werden `enum` (c#) und `Enum` (Visual Basic), keine benutzerdefinierte Methoden für einen Enumerationstyp als von geerbten Methoden definieren die <xref:System.Enum> Klasse.  Allerdings können Sie Erweiterungsmethoden [c#], Hinzufügen von Funktionen zu einer bestimmten Enumerationstyp.  
+  
+ Im folgenden Beispiel stellt die `Grades`-Enumeration die möglichen Noten in Buchstaben dar, die ein Schüler im Unterricht erhalten kann. Eine Erweiterungsmethode mit dem Namen `Passing` wird dem `Grades`-Typ hinzugefügt, sodass jede Instanz dieses Typs nun „weiß“, ob sie eine Note darstellt, mit der der Schüler bestanden hat.       Die `Extensions` -Klasse enthält auch eine statische Variable Lese-/ Schreibzugriff, die die minimale übergeben Grade definiert. Der Rückgabewert der `Passing` Erweiterungsmethode gibt den aktuellen Wert der Variablen.  
+  
+ [!code-csharp[System.Enum.Class#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.class/cs/Extensions.cs#18)]
+ [!code-vb[System.Enum.Class#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.class/vb/Extensions.vb#18)]  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht die Verwendung einer Enumeration zum Darstellen von benannter Werte und einer anderen Aufzählung benannte Bitfelder darstellen.  
+  
+ [!code-cpp[enummain#1](~/samples/snippets/cpp/VS_Snippets_CLR/enummain/CPP/EnumMain.cpp#1)]
+ [!code-csharp[enummain#1](~/samples/snippets/csharp/VS_Snippets_CLR/enummain/CS/EnumMain.cs#1)]
+ [!code-vb[enummain#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enummain/VB/EnumMain.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Enum ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Enum" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Vergleichsobjekt oder <see langword="null" />.</param>
+        <summary>Vergleicht diese Instanz mit einem angegebenen Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Zahl mit Vorzeichen, die die relativen Werte dieser Instanz und <paramref name="target" />.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Der Wert dieser Instanz ist kleiner als der Wert des <paramref name="target" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Der Wert dieser Instanz ist gleich dem Wert des <paramref name="target" />.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Der Wert dieser Instanz ist größer als der Wert des <paramref name="target" />.  
+  
+ - oder -   
+  
+ <paramref name="target" /> ist <see langword="null" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von `CompareTo` im Kontext des `Enum`.  
+  
+ [!code-cpp[enumcompareto#1](~/samples/snippets/cpp/VS_Snippets_CLR/enumcompareto/CPP/EnumCompareTo.cpp#1)]
+ [!code-csharp[enumcompareto#1](~/samples/snippets/csharp/VS_Snippets_CLR/enumcompareto/CS/EnumCompareTo.cs#1)]
+ [!code-vb[enumcompareto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enumcompareto/VB/EnumCompareTo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />und diese Instanz weisen nicht den gleichen Typ.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Instanz ist kein Typ <see cref="T:System.SByte" />, <see cref="T:System.Int16" />, <see cref="T:System.Int32" />, <see cref="T:System.Int64" />, <see cref="T:System.Byte" />, <see cref="T:System.UInt16" />, <see cref="T:System.UInt32" />, oder <see cref="T:System.UInt64" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> ein Enumerationswert des gleichen Typs und mit dem gleichen zugrunde liegenden Wert wie diese Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.Equals%28System.Object%29?displayProperty=nameWithType> methodenüberschreibungen <xref:System.ValueType.Equals%28System.Object%29?displayProperty=nameWithType> definieren, wie Enumerationsmember Gleichheit ausgewertet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Enum.Equals%2A>-Methode veranschaulicht.  
+  
+ [!code-cpp[enumequals#1](~/samples/snippets/cpp/VS_Snippets_CLR/enumequals/CPP/EnumEquals.cpp#1)]
+ [!code-csharp[enumequals#1](~/samples/snippets/csharp/VS_Snippets_CLR/enumequals/CS/EnumEquals.cs#1)]
+ [!code-vb[enumequals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enumequals/VB/EnumEquals.vb#1)]  
+  
+ Das folgende Beispiel definiert zwei Enumerationstypen, `SledDog` und `WorkDog`. Die `SledDog` Enumeration verfügt über zwei Member `SledDog.AlaskanMalamute` und `SledDog.Malamute`, die über den gleichen zugrunde liegenden Wert verfügen. Der Aufruf der <xref:System.Enum.Equals%2A> Methode gibt an, dass diese Werte gleich sind, da die zugrunde liegenden Werte identisch sind. Die `SledDog.Malamute` und `WorkDog.Newfoundland` Mitglieder besitzen den gleichen zugrunde liegenden Wert aus, obwohl sie verschiedene Enumerationstypen darstellen. Ein Aufruf der <xref:System.Enum.Equals%2A> Methode gibt an, dass diese Werte nicht gleich sind.  
+  
+ [!code-csharp[System.Enum.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.equals/cs/enumequals.cs#1)]
+ [!code-vb[System.Enum.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.equals/vb/enumequals.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public static string Format (Type enumType, object value, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Format(class System.Type enumType, object value, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.Format(System.Type,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der Enumerationstyp des zu konvertierenden Werts.</param>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="format">Das zu verwendende Ausgabeformat.</param>
+        <summary>Konvertiert den angegebenen Wert eines angegebenen Enumerationstyps unter Berücksichtigung des angegebenen Formats in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die gültigen Werte für die `format` Parameter.  
+  
+|Format|Beschreibung|  
+|------------|-----------------|  
+|"G" oder "g"|Wenn `value` ist gleich ist eine benannte Enumerationskonstante, der Namen der Konstanten wird zurückgegeben, andernfalls die Dezimalzahl `value` zurückgegeben wird.<br /><br /> Nehmen Sie beispielsweise an die einzige Enumerationskonstante heißt Rot, und ihr Wert ist 1. Wenn `value` 1 angegeben wird, gibt dieses Format "Red" zurück. Jedoch wenn `value` 2 angegeben wird, gibt dieses Format "2" zurück.<br /><br /> - oder - <br /><br /> Wenn die <xref:System.FlagsAttribute> benutzerdefinierte Attribut angewendet wird, auf die Enumeration `value` so behandelt, als ein Bitfeld, das eine oder mehrere Flags enthält, die aus einem oder mehreren Bits bestehen.<br /><br /> Wenn `value` heißt, das eine Kombination von entspricht Enumerationskonstanten, eine durch Trennzeichen getrennte Liste der Namen dieser Konstanten wird zurückgegeben. `value`Flags, die für den Wechsel von das Flag mit dem größten Wert zum kleinsten Wert wird gesucht werden. Für jedes Flag, das kein Bitfeld in entspricht `value`, der Namen der Konstanten, die durch Trennzeichen getrennte Liste verkettet ist. Der Wert des Flags klicken Sie dann weitere Zielmodell ausgeschlossen wird, und die Suche wird fortgesetzt, für das nächste Flag.<br /><br /> Wenn `value` stimmt nicht mit einer Kombination von benannten Enumerationskonstanten, die Dezimalzahl `value` zurückgegeben wird.|  
+|"X" oder "x"|Stellt `value` im hexadezimalen Format ohne Präfix "0 X".|  
+|"D" oder "d"|Stellt `value` Dezimalformat.|  
+|"F" oder "f"|Verhält sich ebenso wie "G" oder "g", mit dem Unterschied, dass die <xref:System.FlagsAttribute> muss nicht auf vorhanden sein, die <xref:System.Enum> Deklaration.|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von `Format` im Kontext des `Enum`.  
+  
+ [!code-cpp[enumformat#1](~/samples/snippets/cpp/VS_Snippets_CLR/enumformat/CPP/EnumFormat.cpp#1)]
+ [!code-csharp[enumformat#1](~/samples/snippets/csharp/VS_Snippets_CLR/enumformat/CS/EnumFormat.cs#1)]
+ [!code-vb[enumformat#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enumformat/VB/EnumFormat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="enumType" />, <paramref name="value" />, oder <paramref name="format" /> Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="enumType" /> -Parameter ist ein <see cref="T:System.Enum" /> Typ.  
+  
+ - oder -   
+  
+ Die <paramref name="value" /> stammt aus einer Enumeration, die sich sich beim Typ von unterscheidet <paramref name="enumType" />.  
+  
+ - oder -   
+  
+ Der Typ des <paramref name="value" /> ist kein zugrunde liegenden Typ des <paramref name="enumType" />.</exception>
+        <exception cref="T:System.FormatException">Die <paramref name="format" /> Parameter enthält einen ungültigen Wert.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="format" />entspricht "X", aber der Enumerationstyp ist unbekannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für den Wert dieser Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public static string GetName (Type enumType, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetName(class System.Type enumType, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.GetName(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein Enumerationstyp.</param>
+        <param name="value">Der Wert einer bestimmten Enumerationskonstanten als deren zugrunde liegender Typ.</param>
+        <summary>Ruft den Namen der Konstanten in der angegebenen Enumeration mit dem angegebenen Wert ab.</summary>
+        <returns>Eine Zeichenfolge mit dem Namen der Enumerationskonstanten aus <paramref name="enumType" /> , dessen Wert <paramref name="value" />; oder <see langword="null" /> , wenn keine solche Konstante gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere Enumerationsmember über den gleichen zugrunde liegenden Wert müssen die <xref:System.Enum.GetName%2A> Methode stellt sicher, dass es den Namen eines dieser Elemente Enumeration zurück. Allerdings garantiert es nicht, dass es immer den Namen des gleichen Enumerationsmembers zurückgegeben wird. Wenn mehrere Enumerationsmember denselben Wert haben, sollte der Anwendungscode daher nie auf die Methode zurückgeben eines bestimmten Elements namens abhängen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von `GetName`.  
+  
+ [!code-cpp[enumgetname#1](~/samples/snippets/cpp/VS_Snippets_CLR/enumgetname/CPP/EnumGetName.cpp#1)]
+ [!code-csharp[enumgetname#1](~/samples/snippets/csharp/VS_Snippets_CLR/enumgetname/CS/EnumGetName.cs#1)]
+ [!code-vb[enumgetname#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enumgetname/VB/EnumGetName.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.  
+  
+ - oder -   
+  
+ <paramref name="value" />ist nicht vom Typ <paramref name="enumType" /> und weist auch nicht den gleichen zugrunde liegenden Typ wie <paramref name="enumType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNames">
+      <MemberSignature Language="C#" Value="public static string[] GetNames (Type enumType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] GetNames(class System.Type enumType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.GetNames(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein Enumerationstyp.</param>
+        <summary>Ruft ein Array mit den Namen der Konstanten in einer angegebenen Enumeration ab.</summary>
+        <returns>Ein Zeichenfolgenarray mit den Namen der Konstanten in <paramref name="enumType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente des Arrays Rückgabewert sind nach den Binärwerten der Enumerationskonstanten sortiert (d. h. durch ihre Größe ohne Vorzeichen). Das folgende Beispiel veranschaulicht zeigt Informationen über das zurückgegebene Array die <xref:System.Enum.GetNames%2A> Methode für eine Enumeration, die eine Negative 0 (null) und einen positiven Wert enthält.  
+  
+ [!code-csharp[System.Enum.GetNames#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.getnames/cs/getnames1.cs#1)]
+ [!code-vb[System.Enum.GetNames#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.getnames/vb/getnames1.vb#1)]  
+  
+ Wenn Sie Enumerationskonstanten mit demselben Wert sind, ist die Reihenfolge der entsprechenden Namen nicht angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Enum.GetNames%2A>-Methode veranschaulicht.  
+  
+ [!code-cpp[enumgetnames#1](~/samples/snippets/cpp/VS_Snippets_CLR/enumgetnames/CPP/EnumGetNames.cpp#1)]
+ [!code-csharp[enumgetnames#1](~/samples/snippets/csharp/VS_Snippets_CLR/enumgetnames/CS/EnumGetNames.cs#1)]
+ [!code-vb[enumgetnames#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enumgetnames/VB/EnumGetNames.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          Der <paramref name="enumType" />-Parameter ist kein <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeCode">
+      <MemberSignature Language="C#" Value="public TypeCode GetTypeCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TypeCode GetTypeCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.GetTypeCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Typcode des zugrunde liegenden Typs dieses Enumerationsmembers zurück.</summary>
+        <returns>Der Typcode des zugrunde liegenden Typs dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Enumerationstyp ist unbekannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnderlyingType">
+      <MemberSignature Language="C#" Value="public static Type GetUnderlyingType (Type enumType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetUnderlyingType(class System.Type enumType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.GetUnderlyingType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Die Enumeration, deren zugrunde liegender Typ abgerufen wird.</param>
+        <summary>Gibt den zugrunde liegenden Typ der angegebenen Enumeration zurück.</summary>
+        <returns>Der zugrunde liegende Typ <paramref name="enumType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum> Struktur ermöglicht Werte als benannte Konstanten dargestellt werden soll. Der Datentyp der Werte der Enumeration wird als dessen zugrunde liegendem Typ bezeichnet. Z. B. der zugrunde liegende Typ der <xref:System.DayOfWeek> -Enumeration, die Konstanten besteht, die jeden Tag der Woche darstellen (<xref:System.DayOfWeek?displayProperty=nameWithType>, <xref:System.DayOfWeek?displayProperty=nameWithType>usw.), ist <xref:System.Int32>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Enum.GetUnderlyingType%2A> Methode, um den zugrunde liegenden Typ, der einige Enumerationsmember anzuzeigen.  
+  
+ [!code-csharp[System.Enum.GetUnderlyingType#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.getunderlyingtype/cs/getunderlyingtype1.cs#1)]
+ [!code-vb[System.Enum.GetUnderlyingType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.getunderlyingtype/vb/getunderlyingtype1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public static Array GetValues (Type enumType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Array GetValues(class System.Type enumType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.GetValues(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein Enumerationstyp.</param>
+        <summary>Ruft ein Array mit den Werten der Konstanten in einer angegebenen Enumeration ab.</summary>
+        <returns>Ein Array mit den Werten der Konstanten in <paramref name="enumType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente des Arrays sind nach den Binärwerten der Enumerationskonstanten sortiert (d. h. durch ihre Größe ohne Vorzeichen). Das folgende Beispiel zeigt Informationen über das zurückgegebene Array die <xref:System.Enum.GetValues%2A> Methode für eine Enumeration, die einen negativen Wert 0 (null) und einen positiven Wert enthält.  
+  
+ [!code-csharp[System.Enum.GetValues#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.getvalues/cs/getvalues1.cs#1)]
+ [!code-vb[System.Enum.GetValues#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.getvalues/vb/getvalues1.vb#1)]  
+  
+ Die <xref:System.Enum.GetValues%2A> Methode gibt ein Array, das einen Wert für jedes Element enthält die `enumType` Enumeration. Wenn mehrere Elemente den gleichen Wert haben, enthält das zurückgegebene Array doppelte Werte. In diesem Fall Aufrufen der <xref:System.Enum.GetName%2A> Methode bei den einzelnen Werten im zurückgegebenen Array wird nicht wiederhergestellt, die eindeutigen Namen zugewiesene Elemente, die doppelte Werte enthalten. Um alle Namen von Enumerationsmembern erfolgreich abzurufen, rufen Sie die <xref:System.Enum.GetNames%2A> Methode.  
+  
+ Die <xref:System.Enum.GetValues%2A> Methode kann nicht mithilfe der Reflektion in einem reflektionsbezogenen Kontext aufgerufen werden. Stattdessen können Sie den Wert der alle Enumerationsmember abrufen, mithilfe der <xref:System.Type.GetFields%2A?displayProperty=nameWithType> ein Array der abzurufenden Methode <xref:System.Reflection.FieldInfo> Objekte, die Enumerationsmember darstellen, und rufen Sie anschließend die <xref:System.Reflection.FieldInfo.GetRawConstantValue%2A?displayProperty=nameWithType> Methode für jedes Element des Arrays. Das folgende Beispiel veranschaulicht dieses Verfahren. Es erfordert, dass Sie die folgende Enumeration in einer Assembly mit dem Namen Enumerations.dll definieren:  
+  
+ [!code-csharp[System.Enum.GetValues#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.getvalues/cs/getvalues_reflectiononly.cs#2)]
+ [!code-vb[System.Enum.GetValues#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.getvalues/vb/getvalues_reflectiononly.vb#2)]  
+  
+ Die Assembly im reflektionsbezogenen Kontext geladen wird eine <xref:System.Type> Objekt, das darstellt der `Pets` Enumeration instanziiert wird, ein Array von <xref:System.Reflection.FieldInfo> Objekten wird abgerufen, und die Feldwerte in der Konsole angezeigt werden.  
+  
+ [!code-csharp[System.Enum.GetValues#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.getvalues/cs/getvalues_reflectiononly.cs#3)]
+ [!code-vb[System.Enum.GetValues#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.getvalues/vb/getvalues_reflectiononly.vb#3)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von <xref:System.Enum.GetValues%2A>.  
+  
+ [!code-cpp[enumgetvalues#1](~/samples/snippets/cpp/VS_Snippets_CLR/enumgetvalues/CPP/EnumGetValues.cpp#1)]
+ [!code-csharp[enumgetvalues#1](~/samples/snippets/csharp/VS_Snippets_CLR/enumgetvalues/CS/EnumGetValues.cs#1)]
+ [!code-vb[enumgetvalues#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enumgetvalues/VB/EnumGetValues.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Methode wird durch Reflektion in einem reflektionsbezogenen Kontext aufgerufen,  
+  
+ - oder -   
+  
+ <paramref name="enumType" />ist ein Typ aus einer Assembly im reflektionsbezogenen Kontext geladen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFlag">
+      <MemberSignature Language="C#" Value="public bool HasFlag (Enum flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasFlag(class System.Enum flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.HasFlag(System.Enum)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Enum" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Ein Enumerationswert.</param>
+        <summary>Bestimmt, ob ein oder mehrere Bitfelder in der aktuellen Instanz festgelegt werden.</summary>
+        <returns>
+          <see langword="true" />Wenn das Bitfeld bzw. die Bitfelder werden festgelegt <paramref name="flag" /> auch in der aktuellen Instanz festgelegt werden, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.HasFlag%2A> Methode gibt das Ergebnis des folgenden booleschen Ausdrucks zurück.  
+  
+```  
+thisInstance And flag = flag   
+```  
+  
+ Wenn die zugrunde liegenden Wert des `flag` ist 0 (null), gibt die Methode `true`. Wenn dieses Verhalten nicht erwünscht ist, können Sie mithilfe der <xref:System.Enum.Equals%2A> Methode auf Gleichheit mit 0 (null) und rufen <xref:System.Enum.HasFlag%2A> nur, wenn der zugrundeliegende Wert des `flag` ist ungleich NULL ist, wie im folgenden Beispiel veranschaulicht.  
+  
+ [!code-csharp[System.Enum.HasFlag#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.hasflag/cs/hasflag0.cs#1)]
+ [!code-vb[System.Enum.HasFlag#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.hasflag/vb/hasflag0.vb#1)]  
+  
+ Die <xref:System.Enum.HasFlag%2A> -Methode entwickelt, um mit Enumerationstypen verwendet werden, die mit markiert sind die <xref:System.FlagsAttribute> Attribut, und kann verwendet werden, um zu bestimmen, ob mehrere Bitfelder festgelegt werden. Für Enumerationstypen, die nicht mit markiert sind die <xref:System.FlagsAttribute> -Attribut, rufen Sie entweder die <xref:System.Enum.Equals%2A> Methode oder die <xref:System.Enum.CompareTo%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine `ItemsOrdered` -Enumeration, die Kategorien der Elemente angibt, die ein Kunde in einem Restaurant sortieren kann. Im Beispiel wird getestet, ob der Kunde ein Hauptgericht und Getränke aufgegeben hat.  
+  
+ [!code-csharp[System.Enum.HasFlag#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.hasflag/cs/hasflag1.cs#2)]
+ [!code-vb[System.Enum.HasFlag#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.hasflag/vb/hasflag1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="flag" />ist als die aktuelle Instanz ein anderen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (Type enumType, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Type enumType, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.IsDefined(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein Enumerationstyp.</param>
+        <param name="value">Der Wert oder Name einer Konstanten in <c>EnumType</c>.</param>
+        <summary>Gibt eine Angabe darüber zurück, ob eine angegebene Enumeration eine Konstante mit einem angegebenen Wert enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Konstante in <paramref name="enumType" /> verfügt über einen Wert gleich <paramref name="value" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `value` Parameter kann eine der folgenden sein:  
+  
+-   Alle Member des Typs `enumType`.  
+  
+-   Eine Variable, deren Wert ein Enumerationsmember vom Typ `enumType`.  
+  
+-   Die Zeichenfolgendarstellung des Namens des einen Enumerationsmember. Die Zeichen in der Zeichenfolge müssen die gleiche Groß-/Kleinschreibung als Enumeration Elementnamen ein.  
+  
+-   Ein Wert des zugrunde liegenden Typs von `enumType`.  
+  
+ Wenn die Konstanten in `enumType` definieren einen Satz von Bitfeldern und `value` enthält die Werte, die Namen oder die zugrunde liegenden mehrere Bitfelder, die <xref:System.Enum.IsDefined%2A> -Methode zurückkehrt `false`. Das heißt, ermittelt für Enumerationen, die einen Satz von Bitfeldern definieren, die Methode nur, ob ein einzelnes Bit-Feld der Enumeration gehört. Um festzustellen, ob mehrere Bitfelder in einem Enumerationstyp festgelegt werden, das mit gekennzeichnet ist die <xref:System.FlagsAttribute> -Attribut, rufen Sie die <xref:System.Enum.HasFlag%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine Enumeration namens `PetType` , einzelne Bitfelder besteht. Er ruft dann die <xref:System.Enum.IsDefined%2A> Methode mit möglichen zugrunde liegenden Enumerationswerten, Zeichenfolgennamen und zusammengesetzten Werte, die aus mehreren Bitfelder festlegen.  
+  
+ [!code-csharp[System.Enum.IsDefined#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Enum.IsDefined/cs/isdefined1.cs#1)]
+ [!code-vb[System.Enum.IsDefined#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Enum.IsDefined/vb/IsDefined1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see langword="Enum" />.  
+  
+ - oder -   
+  
+ Der Typ des <paramref name="value" /> ist eine Enumeration, aber es ist keine Enumeration des Typs <paramref name="enumType" />.  
+  
+ - oder -   
+  
+ Der Typ des <paramref name="value" /> ist kein zugrunde liegenden Typ des <paramref name="enumType" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="value" />ist kein Typ <see cref="T:System.SByte" />, <see cref="T:System.Int16" />, <see cref="T:System.Int32" />, <see cref="T:System.Int64" />, <see cref="T:System.Byte" />, <see cref="T:System.UInt16" />, <see cref="T:System.UInt32" />, oder <see cref="T:System.UInt64" />, oder <see cref="T:System.String" />.</exception>
+        <block subset="none" type="usage">
+          <para>Wenn <paramref name="enumType" /> ist eine Enumeration, die mit definiert ist die <see cref="T:System.FlagsAttribute" /> -Attribut gibt die Methode zurück <see langword="false" /> Wenn Felder mehrere Bit in <paramref name="value" /> festgelegt sind, aber <paramref name="value" /> entspricht einer zusammengesetzten Enumerationswert oder, wenn <paramref name="value" /> besteht aus einer zeichenfolgenverkettung der Namen von mehreren Bitflags. Im folgenden Beispiel ein <c>Haustieren an</c> Enumeration definiert ist, mit der <see cref="T:System.FlagsAttribute" /> Attribut. Die <see cref="M:System.Enum.IsDefined(System.Type,System.Object)" /> -Methode zurückkehrt <see langword="false" /> , wenn Sie übergeben sie einen Enumerationswert, der zwei Bitfelder (<c>Pets.Dog</c> und <c>Pets.Cat</c>) festgelegt, und wenn Sie übergeben die Zeichenfolgendarstellung, Ein Enumerationswert ("Dog, Cat").  
+  
+ [!code-csharp[System.Enum.IsDefined#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Enum.IsDefined/cs/isdefined2.cs#2)]
+ [!code-vb[System.Enum.IsDefined#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Enum.IsDefined/vb/isdefined2.vb#2)]  
+  
+ Sie können bestimmen, ob mehrere Bitfelder, durch Aufrufen festgelegt werden der <see cref="M:System.Enum.HasFlag(System.Enum)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static object Parse (Type enumType, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Parse(class System.Type enumType, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.Parse(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein Enumerationstyp.</param>
+        <param name="value">Eine Zeichenfolge mit dem zu konvertierenden Namen oder Wert.</param>
+        <summary>Konvertiert die Zeichenfolgendarstellung des Namens oder des numerischen Werts einer oder mehrerer Enumerationskonstanten in ein entsprechendes Enumerationsobjekt.</summary>
+        <returns>Ein Objekt des Typs <paramref name="enumType" /> , dessen Wert dargestellte <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `value` Parameter enthält eine Zeichenfolgendarstellung des zugrunde liegenden Wert oder eine benannte Konstante eines Enumerationsmembers oder eine Liste von benannten Konstanten, die durch ein Komma (,) getrennt. Eine oder mehrere Leerzeichen vor oder nach jeder Wert, den Namen oder den Komma in `value`. Wenn `value` ist eine Liste der Rückgabewert ist der Wert der angegebenen Namen, die mit einer bitweisen Kombination `OR` Vorgang.  
+  
+ Wenn `value` ist ein Name, die nicht mit einer benannten Konstante der entsprechen `enumType`, löst die Methode eine <xref:System.ArgumentException>. Wenn `value` die Darstellung der Zeichenfolge eine ganze Zahl, die nicht von einen zugrunde liegenden Wert darstellt der `enumType` -Enumeration, der Methodenrückgabe Enumerationsmember, deren zugrunde liegenden Wert `value` in einen ganzzahligen Typ konvertiert. Wenn dieses Verhalten nicht erwünscht ist, rufen Sie die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass eine bestimmte Zeichenfolge-Darstellung einer ganzen Zahl tatsächlich ein Mitglied ist `enumType`. Das folgende Beispiel definiert eine `Colors` -Enumeration, ruft der <xref:System.Enum.Parse%28System.Type%2CSystem.String%29> -Methode zum Konvertieren von Zeichenfolgen in ihre entsprechenden Enumerationswerte und ruft die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass bestimmte ganzzahlige Werte zugrunde liegt, werden Werte in die `Colors` Enumeration.  
+  
+ [!code-csharp[System.Enum.Parse#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Enum.Parse/cs/ParseExample1.cs#1)]
+ [!code-vb[System.Enum.Parse#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Enum.Parse/vb/ParseExample1.vb#1)]  
+  
+ Dieser Vorgang wird Groß-/Kleinschreibung beachtet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Enum.Parse%28System.Type%2CSystem.String%29> Methode ein Array von Zeichenfolgen, die durch den Aufruf erstellt werden, analysiert der <xref:System.Enum.GetNames%2A> Methode. Darüber hinaus verwendet die <xref:System.Enum.Parse%28System.Type%2CSystem.String%29> Methode, um ein Enumerationswert analysiert, der ein Bitfeld besteht.  
+  
+ [!code-cpp[enumparse#1](~/samples/snippets/cpp/VS_Snippets_CLR/enumparse/CPP/EnumParse.cpp#1)]
+ [!code-csharp[enumparse#1](~/samples/snippets/csharp/VS_Snippets_CLR/enumparse/CS/EnumParse.cs#1)]
+ [!code-vb[enumparse#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enumparse/VB/EnumParse.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.  
+  
+ - oder -   
+  
+ <paramref name="value" />ist entweder eine leere Zeichenfolge oder enthält nur Leerzeichen.  
+  
+ - oder -   
+  
+ <paramref name="value" />ist ein Name, aber keiner der genannten Konstanten für die Enumeration definiert.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="value" />liegt außerhalb des Bereichs des zugrunde liegenden Typs von <paramref name="enumType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static object Parse (Type enumType, string value, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Parse(class System.Type enumType, string value, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.Parse(System.Type,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Ein Enumerationstyp.</param>
+        <param name="value">Eine Zeichenfolge mit dem zu konvertierenden Namen oder Wert.</param>
+        <param name="ignoreCase">
+          <see langword="true" />Groß-und Kleinschreibung; <see langword="false" /> auf Groß-/Kleinschreibung beachtet.</param>
+        <summary>Konvertiert die Zeichenfolgendarstellung des Namens oder des numerischen Werts einer oder mehrerer Enumerationskonstanten in ein entsprechendes Enumerationsobjekt. Ein Parameter gibt an, ob beim Vorgang die Groß-/Kleinschreibung nicht beachtet wird.</summary>
+        <returns>Ein Objekt des Typs <paramref name="enumType" /> , dessen Wert dargestellte <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `value` Parameter enthält eine Zeichenfolgendarstellung des zugrunde liegenden Wert oder eine benannte Konstante eines Enumerationsmembers oder eine Liste von benannten Konstanten, die durch ein Komma (,) getrennt. Eine oder mehrere Leerzeichen vor oder nach jeder Wert, den Namen oder den Komma in `value`. Wenn `value` ist eine Liste der Rückgabewert ist der Wert der angegebenen Namen, die mit einer bitweisen Kombination `OR` Vorgang.  
+  
+ Wenn `value` ist ein Name, die nicht mit einer benannten Konstante der entsprechen `enumType`, löst die Methode eine <xref:System.ArgumentException>. Wenn `value` die Darstellung der Zeichenfolge eine ganze Zahl, die nicht von einen zugrunde liegenden Wert darstellt der `enumType` -Enumeration, der Methodenrückgabe Enumerationsmember, deren zugrunde liegenden Wert `value` in einen ganzzahligen Typ konvertiert. Wenn dieses Verhalten nicht erwünscht ist, rufen Sie die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass eine bestimmte Zeichenfolge-Darstellung einer ganzen Zahl tatsächlich ein Mitglied ist `enumType`. Das folgende Beispiel definiert eine `Colors` -Enumeration, ruft der <xref:System.Enum.Parse%28System.Type%2CSystem.String%2CSystem.Boolean%29> -Methode zum Konvertieren von Zeichenfolgen in ihre entsprechenden Enumerationswerte und ruft die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass bestimmte ganzzahlige Werte zugrunde liegt, werden Werte in die `Colors` Enumeration.  
+  
+ [!code-csharp[System.Enum.Parse#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Enum.Parse/cs/ParseExample2.cs#2)]
+ [!code-vb[System.Enum.Parse#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Enum.Parse/vb/ParseExample2.vb#2)]  
+  
+ Die `ignoreCase` Parameter gibt an, ob dieser Vorgang die Groß-/Kleinschreibung beachtet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Enum.Parse%28System.Type%2CSystem.String%2CSystem.Boolean%29> Methode ein Array von Zeichenfolgen, die durch den Aufruf erstellt werden, analysiert der <xref:System.Enum.GetNames%2A> Methode. Darüber hinaus verwendet die <xref:System.Enum.Parse%28System.Type%2CSystem.String%29> Methode, um ein Enumerationswert analysiert, der ein Bitfeld besteht.  
+  
+ [!code-csharp[System.Enum.Parse#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Enum.Parse/cs/ParseExample2.cs#2)]
+ [!code-vb[System.Enum.Parse#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Enum.Parse/vb/ParseExample2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.  
+  
+ - oder -   
+  
+ <paramref name="value" />ist entweder eine leere Zeichenfolge ("") oder enthält nur Leerzeichen.  
+  
+ - oder -   
+  
+ <paramref name="value" />ist ein Name, aber keiner der genannten Konstanten für die Enumeration definiert.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="value" />liegt außerhalb des Bereichs des zugrunde liegenden Typs von <paramref name="enumType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse&lt;TEnum&gt;">
+      <MemberSignature Language="C#" Value="public static TEnum Parse&lt;TEnum&gt; (string value) where TEnum : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TEnum Parse&lt;struct .ctor (class System.ValueType) TEnum&gt;(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.Parse``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TEnum</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEnum">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEnum">To be added.</typeparam>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse&lt;TEnum&gt;">
+      <MemberSignature Language="C#" Value="public static TEnum Parse&lt;TEnum&gt; (string value, bool ignoreCase) where TEnum : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TEnum Parse&lt;struct .ctor (class System.ValueType) TEnum&gt;(string value, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.Parse``1(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TEnum</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEnum">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEnum">To be added.</typeparam>
+        <param name="value">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.GetTypeCode">
+      <MemberSignature Language="C#" Value="TypeCode IConvertible.GetTypeCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.TypeCode System.IConvertible.GetTypeCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#GetTypeCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToBoolean">
+      <MemberSignature Language="C#" Value="bool IConvertible.ToBoolean (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.IConvertible.ToBoolean(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToBoolean(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in einen booleschen Wert.</summary>
+        <returns>Dieser Member löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit nicht implementiert. Löst immer eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToByte">
+      <MemberSignature Language="C#" Value="byte IConvertible.ToByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int8 System.IConvertible.ToByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 8-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToChar">
+      <MemberSignature Language="C#" Value="char IConvertible.ToChar (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance char System.IConvertible.ToChar(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToChar(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in ein Unicode-Zeichen.</summary>
+        <returns>Dieser Member löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit nicht implementiert. Löst immer eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDateTime">
+      <MemberSignature Language="C#" Value="DateTime IConvertible.ToDateTime (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.DateTime System.IConvertible.ToDateTime(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToDateTime(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert in einem <see cref="T:System.DateTime" /> basierend auf den zugrunde liegenden Typ.</summary>
+        <returns>Dieser Member löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit nicht implementiert. Löst immer eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDecimal">
+      <MemberSignature Language="C#" Value="decimal IConvertible.ToDecimal (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.Decimal System.IConvertible.ToDecimal(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToDecimal(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert in einem <see cref="T:System.Decimal" /> basierend auf den zugrunde liegenden Typ.</summary>
+        <returns>Dieser Member löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit nicht implementiert. Löst immer eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDouble">
+      <MemberSignature Language="C#" Value="double IConvertible.ToDouble (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance float64 System.IConvertible.ToDouble(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToDouble(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine Gleitkommazahl mit doppelter Genauigkeit.</summary>
+        <returns>Dieser Member löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit nicht implementiert. Löst immer eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt16">
+      <MemberSignature Language="C#" Value="short IConvertible.ToInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int16 System.IConvertible.ToInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 16-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt32">
+      <MemberSignature Language="C#" Value="int IConvertible.ToInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IConvertible.ToInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt64">
+      <MemberSignature Language="C#" Value="long IConvertible.ToInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int64 System.IConvertible.ToInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 64-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToSByte">
+      <MemberSignature Language="C#" Value="sbyte IConvertible.ToSByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int8 System.IConvertible.ToSByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToSByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 8-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToSingle">
+      <MemberSignature Language="C#" Value="float IConvertible.ToSingle (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance float32 System.IConvertible.ToSingle(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToSingle(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine Gleitkommazahl mit einfacher Genauigkeit.</summary>
+        <returns>Dieser Member löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit nicht implementiert. Löst immer eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToString">
+      <MemberSignature Language="C#" Value="string IConvertible.ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IConvertible.ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The provider argument is not used. Please use ToString().")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToType">
+      <MemberSignature Language="C#" Value="object IConvertible.ToType (Type type, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IConvertible.ToType(class System.Type type, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToType(System.Type,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, in den konvertiert werden soll.</param>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in einen angegebenen Typ.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt16">
+      <MemberSignature Language="C#" Value="ushort IConvertible.ToUInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int16 System.IConvertible.ToUInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToUInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 16-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt32">
+      <MemberSignature Language="C#" Value="uint IConvertible.ToUInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int32 System.IConvertible.ToUInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToUInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 32-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt64">
+      <MemberSignature Language="C#" Value="ulong IConvertible.ToUInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int64 System.IConvertible.ToUInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IConvertible#ToUInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den aktuellen Wert auf Grundlage des zugrunde liegenden Typs in eine 64-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Der konvertierte Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet <xref:System.Convert> zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The provider argument is not used. Please use ToString(String).")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">To be added.</param>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert die angegebene 8-Bit-Ganzzahl ohne Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.Byte%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert die angegebene 16-Bit-Ganzzahl mit Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.Int16%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert die angegebene 32-Bit-Ganzzahl mit Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.Int32%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert die angegebene 64-Bit-Ganzzahl mit Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.Int64%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert das angegebene Objekt mit einem ganzzahligen Wert in einen Enumerationsmember.</summary>
+        <returns>Ein Enumerationsobjekt, dessen Wert <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.Object%29> -Methode konvertiert den ganzzahligen Wert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.  
+  
+ - oder -   
+  
+ <paramref name="value" />ist kein Typ <see cref="T:System.SByte" />, <see cref="T:System.Int16" />, <see cref="T:System.Int32" />, <see cref="T:System.Int64" />, <see cref="T:System.Byte" />, <see cref="T:System.UInt16" />, <see cref="T:System.UInt32" />, oder <see cref="T:System.UInt64" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.SByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert den angegebenen Wert einer 8-Bit-Ganzzahl mit Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.SByte%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert den angegebenen Wert einer 16-Bit-Ganzzahl ohne Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.UInt16%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert den angegebenen Wert einer 32-Bit-Ganzzahl ohne Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.UInt32%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToObject">
+      <MemberSignature Language="C#" Value="public static object ToObject (Type enumType, ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToObject(class System.Type enumType, unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToObject(System.Type,System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">Der zurückzugebende Enumerationstyp.</param>
+        <param name="value">Der Wert, der in einen Enumerationsmember konvertiert werden soll.</param>
+        <summary>Konvertiert den angegebenen Wert einer 64-Bit-Ganzzahl ohne Vorzeichen in einen Enumerationsmember.</summary>
+        <returns>Eine Instanz der Enumeration festgelegt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Enum.ToObject%28System.Type%2CSystem.UInt64%29> -Methode konvertiert `value` in einen Enumerationsmember, deren zugrunde liegenden Wert `value`. Beachten Sie, die die Konvertierung erfolgreich ist, auch wenn außerhalb des liegt `enumType` Elemente. Um sicherzustellen, dass `value` ist ein gültiger zugrunde liegenden Wert von der `enumType` -Enumeration, übergeben Sie sie an der <xref:System.Enum.IsDefined%2A> Methode.  
+  
+ Diese Konvertierungsmethode gibt einen Wert vom Typ <xref:System.Object>. Sie können es umwandeln oder konvertieren Sie ihn in ein Objekt des Typs `enumType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="enumType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enumType" /> ist keine <see cref="T:System.Enum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert wird mit dem allgemeinen Formatbezeichner ("G") formatiert. D. h., wenn die <xref:System.FlagsAttribute> gilt nicht für diesen Enumerationstyp eine benannte Konstante mit dem Wert dieser Instanz vorhanden ist, und der Rückgabewert ist eine Zeichenfolge, die mit dem Namen der Konstanten. Wenn die <xref:System.FlagsAttribute> wird angewendet, es ist eine Kombination aus ein oder mehrere benannte Konstanten gleich dem Wert dieser Instanz, und der Rückgabewert ist eine Zeichenfolge mit einer durch Trennzeichen getrennte Liste der Namen der Konstanten. Andernfalls ist der Rückgabewert eine Zeichenfolgendarstellung des numerischen Werts dieser Instanz. Weitere Informationen zur Formatierung von Enumerationswerten finden Sie unter [Enumerationsformatzeichenfolgen](~/docs/standard/base-types/enumeration-format-strings.md). Weitere Informationen zur Formatierung im Allgemeinen finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen aufgezählten Wert in eine Zeichenfolge konvertieren.  
+  
+ [!code-cpp[Classic Enum.ToString2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Enum.ToString2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Enum.ToString2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Enum.ToString2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Enum.ToString2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Enum.ToString2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Wenn mehrere Enumerationsmember den gleichen zugrunde liegenden Wert müssen aus, und Sie versuchen, die Zeichenfolgendarstellung für einen Enumerationsmember Namen basierend auf seinem zugrunde liegenden Wert abzurufen, sollten Ihren Code keine Annahmen vornehmen, deren, die Name die Methode zurückgegeben wird. Die folgende Enumeration definiert z. B. zwei Member <c>Shade.Gray</c> und <c>Shade.Grey</c>, die über den gleichen zugrunde liegenden Wert verfügen.  
+  
+ [!code-csharp[System.Enum.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.tostring/cs/tostringbyvalue1.cs#1)]
+ [!code-vb[System.Enum.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.tostring/vb/tostringbyvalue1.vb#1)]  
+  
+ Der folgende Methodenaufruf versucht, den Namen eines Elements der abzurufenden der <c>Schattierung</c> Enumeration, deren zugrunde liegenden Wert 1 ist. Die Methode kann entweder "Gray" oder "Grey" zurückgeben, und Code sollten keine Annahmen darüber, welche Zeichenfolge zurückgegeben wird.  
+  
+ [!code-csharp[System.Enum.ToString#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.tostring/cs/tostringbyvalue1.cs#2)]
+ [!code-vb[System.Enum.ToString#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.tostring/vb/tostringbyvalue1.vb#2)]</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The provider argument is not used. Please use ToString().")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">(Veraltet)</param>
+        <summary>Diese methodenüberladung ist veraltet. Verwenden Sie <see cref="M:System.Enum.ToString" />.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Formatzeichenfolge.</param>
+        <summary>Konvertiert den Wert dieser Instanz anhand des angegebenen Formats in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts dieser Instanz entsprechend den Angaben von <paramref name="format" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `format` kann Parameter enthalten, die "G" oder "g", "D" oder "d", "X" oder "X" und "F" oder "f" Formatzeichenfolgen (die Formatzeichenfolge ist nicht Groß-/Kleinschreibung). Wenn `format` ist `null` oder eine leere Zeichenfolge (""), wird der allgemeine Formatbezeichner ("G") verwendet. Weitere Informationen zu den Enumerationsformatzeichenfolgen und Formatierung von Enumerationswerten finden Sie unter [Enumerationsformatzeichenfolgen](~/docs/standard/base-types/enumeration-format-strings.md). Weitere Informationen zur Formatierung im Allgemeinen finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie einen aufgezählten Wert in eine Zeichenfolge konvertiert wird.  
+  
+ [!code-cpp[enum.tostring#1](~/samples/snippets/cpp/VS_Snippets_CLR/enum.tostring/CPP/tostr.cpp#1)]
+ [!code-csharp[enum.tostring#1](~/samples/snippets/csharp/VS_Snippets_CLR/enum.tostring/CS/tostr.cs#1)]
+ [!code-vb[enum.tostring#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/enum.tostring/VB/tostr.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" />enthält eine ungültige Angabe.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="format" />entspricht "X", aber der Enumerationstyp ist unbekannt.</exception>
+        <block subset="none" type="usage">
+          <para>Wenn mehrere Enumerationsmember den gleichen zugrunde liegenden Wert müssen aus, und Sie versuchen, die Zeichenfolgendarstellung für einen Enumerationsmember Namen basierend auf seinem zugrunde liegenden Wert abzurufen, sollten Ihren Code keine Annahmen vornehmen, deren, die Name die Methode zurückgegeben wird. Die folgende Enumeration definiert z. B. zwei Member <c>Shade.Gray</c> und <c>Shade.Grey</c>, die über den gleichen zugrunde liegenden Wert verfügen.  
+  
+ [!code-csharp[System.Enum.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.tostring/cs/tostringbyvalue1.cs#1)]
+ [!code-vb[System.Enum.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.tostring/vb/tostringbyvalue1.vb#1)]  
+  
+ Der folgende Methodenaufruf versucht, den Namen eines Elements der abzurufenden der <c>Schattierung</c> Enumeration, deren zugrunde liegenden Wert 1 ist. Die Methode kann entweder "Gray" oder "Grey" zurückgeben, und Code sollten keine Annahmen darüber, welche Zeichenfolge zurückgegeben wird.  
+  
+ [!code-csharp[System.Enum.ToString#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.tostring/cs/tostringbyvalue1.cs#3)]
+ [!code-vb[System.Enum.ToString#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.tostring/vb/tostringbyvalue1.vb#3)]</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The provider argument is not used. Please use ToString(String).")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Formatangabe.</param>
+        <param name="provider">(Veraltet)</param>
+        <summary>Diese methodenüberladung ist veraltet. Verwenden Sie <see cref="M:System.Enum.ToString(System.String)" />.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts dieser Instanz entsprechend den Angaben von <paramref name="format" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `format` kann Parameter enthalten, die "G" oder "g", "D" oder "d", "X" oder "X" und "F" oder "f" Formatzeichenfolgen (die Formatzeichenfolge ist nicht Groß-/Kleinschreibung). Wenn `format` ist `null` oder eine leere Zeichenfolge (""), wird der allgemeine Formatbezeichner ("G") verwendet. Weitere Informationen zu den Enumerationsformatzeichenfolgen und Formatierung von Enumerationswerten finden Sie unter [Enumerationsformatzeichenfolgen](~/docs/standard/base-types/enumeration-format-strings.md). Weitere Informationen zur Formatierung im Allgemeinen finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+ Geben Sie nur `format`; das `provider` Parameter ist veraltet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" />ist keine gültige Formatangabe.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="format" />entspricht "X", aber der Enumerationstyp ist unbekannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (Type enumType, string value, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(class System.Type enumType, string value, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.TryParse(System.Type,System.String,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">To be added.</param>
+        <param name="value">To be added.</param>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (Type enumType, string value, bool ignoreCase, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(class System.Type enumType, string value, bool ignoreCase, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.TryParse(System.Type,System.String,System.Boolean,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumType" Type="System.Type" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="enumType">To be added.</param>
+        <param name="value">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse&lt;TEnum&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryParse&lt;TEnum&gt; (string value, out TEnum result) where TEnum : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse&lt;struct .ctor (class System.ValueType) TEnum&gt;(string value, [out] !!TEnum&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.TryParse``1(System.String,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEnum">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="result" Type="TEnum&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEnum">Der Enumerationstyp, der zu konvertierende <c>Wert</c>.</typeparam>
+        <param name="value">Die Zeichenfolgendarstellung des Enumerationsnamens oder zugrunde liegenden Werts, der konvertiert werden soll.</param>
+        <param name="result">Bei Rückgabe dieser Methode <c>Ergebnis</c> enthält ein Objekt vom Typ <c>TEnum</c> , dessen Wert dargestellte <c>Wert</c> , wenn der Analysevorgang erfolgreich ist. Wenn der Analysevorgang misslingt, <c>Ergebnis</c> enthält den Standardwert des zugrunde liegenden Typs von <c>TEnum</c>. Beachten Sie, dass dieser Wert kein Mitglied sein, muss die <c>TEnum</c> Enumeration. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Konvertiert die Zeichenfolgendarstellung des Namens oder des numerischen Werts einer oder mehrerer Enumerationskonstanten in ein entsprechendes Enumerationsobjekt. Der Rückgabewert gibt an, ob die Konvertierung erfolgreich abgeschlossen wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="value" />-Parameter erfolgreich konvertiert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Enum.TryParse%60%601%28System.String%2C%60%600%40%29>ist identisch mit der <xref:System.Enum.Parse%28System.Type%2CSystem.String%29> -Methode, außer dass eine Ausnahme auszulösen, es gibt `false` , wenn die Konvertierung schlägt fehl. Er wird für die Ausnahmebehandlung beim Analysieren der Zeichenfolgendarstellung eines Enumerationswerts überflüssig.  
+  
+ Die `value` Parameter enthält eine Zeichenfolgendarstellung des zugrunde liegenden Wert oder eine benannte Konstante eines Enumerationsmembers oder eine Liste von benannten Konstanten oder zugrunde liegenden Werte durch Kommas (,) getrennt. Wenn `value` enthält mehrere benannte Konstanten oder Werte, eine oder mehrere Leerzeichen vor oder nach einem einzelnen Wert, den Namen oder den Komma in `value`. Wenn `value` ist eine Liste, `result` reflektiert den Wert der angegebenen Namen oder die zugrunde liegenden Werte, die mit einer bitweisen Kombination `OR` Vorgang. Wenn `value` ist die Zeichenfolgendarstellung des Namens der einem Enumerationswert entspricht, beim Vergleich von `value` mit Enumeration Namen Groß-/Kleinschreibung beachtet wird.  
+  
+ Wenn `value` ist ein Name, die nicht mit einer benannten Konstante der entsprechen `TEnum`, gibt die Methode `false`. Wenn `value` die Darstellung der Zeichenfolge eine ganze Zahl, die nicht von einen zugrunde liegenden Wert darstellt der `TEnum` -Enumeration, der Methodenrückgabe Enumerationsmember, deren zugrunde liegenden Wert `value` in einen ganzzahligen Typ konvertiert. Wenn dieses Verhalten nicht erwünscht ist, rufen Sie die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass eine bestimmte Zeichenfolge-Darstellung einer ganzen Zahl tatsächlich ein Mitglied ist `TEnum`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine `Colors` -Enumeration, ruft der <xref:System.Enum.TryParse%60%601%28System.String%2C%60%600%40%29> -Methode zum Konvertieren von Zeichenfolgen in ihre entsprechenden Enumerationswerte und ruft die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass bestimmte ganzzahlige Werte zugrunde liegt, werden Werte in die `Colors` Enumeration.  
+  
+ [!code-csharp[System.Enum.TryParse#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.tryparse/cs/tryparse1.cs#1)]
+ [!code-vb[System.Enum.TryParse#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.tryparse/vb/tryparse1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="TEnum" />ist ein Enumerationstyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse&lt;TEnum&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryParse&lt;TEnum&gt; (string value, bool ignoreCase, out TEnum result) where TEnum : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse&lt;struct .ctor (class System.ValueType) TEnum&gt;(string value, bool ignoreCase, [out] !!TEnum&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Enum.TryParse``1(System.String,System.Boolean,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEnum">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="result" Type="TEnum&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEnum">Der Enumerationstyp, der zu konvertierende <c>Wert</c>.</typeparam>
+        <param name="value">Die Zeichenfolgendarstellung des Enumerationsnamens oder zugrunde liegenden Werts, der konvertiert werden soll.</param>
+        <param name="ignoreCase">
+          <see langword="true" />Groß-und Kleinschreibung; <see langword="false" /> , Groß-und Kleinschreibung berücksichtigt.</param>
+        <param name="result">Bei Rückgabe dieser Methode <c>Ergebnis</c> enthält ein Objekt vom Typ <c>TEnum</c> , dessen Wert dargestellte <c>Wert</c> , wenn der Analysevorgang erfolgreich ist. Wenn der Analysevorgang misslingt, <c>Ergebnis</c> enthält den Standardwert des zugrunde liegenden Typs von <c>TEnum</c>. Beachten Sie, dass dieser Wert kein Mitglied sein, muss die <c>TEnum</c> Enumeration. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Konvertiert die Zeichenfolgendarstellung des Namens oder des numerischen Werts einer oder mehrerer Enumerationskonstanten in ein entsprechendes Enumerationsobjekt. Ein Parameter gibt an, ob beim Vorgang die Groß-/Kleinschreibung beachtet wird. Der Rückgabewert gibt an, ob die Konvertierung erfolgreich abgeschlossen wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="value" />-Parameter erfolgreich konvertiert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Enum.TryParse%60%601%28System.String%2CSystem.Boolean%2C%60%600%40%29>ist identisch mit der <xref:System.Enum.Parse%28System.Type%2CSystem.String%2CSystem.Boolean%29> -Methode, außer dass eine Ausnahme auszulösen, es gibt `false` , wenn die Konvertierung schlägt fehl. Er wird für die Ausnahmebehandlung beim Analysieren der Zeichenfolgendarstellung eines Enumerationswerts überflüssig.  
+  
+ Die `value` Parameter enthält eine Zeichenfolgendarstellung des zugrunde liegenden Wert oder eine benannte Konstante eines Enumerationsmembers oder eine Liste von benannten Konstanten oder zugrunde liegenden Werte durch Kommas (,) getrennt. Wenn `value` enthält mehrere benannte Konstanten oder Werte, eine oder mehrere Leerzeichen vor oder nach einem einzelnen Wert, den Namen oder den Komma in `value`. Wenn `value` ist eine Liste, `result` reflektiert den Wert der angegebenen Namen oder die zugrunde liegenden Werte, die mit einer bitweisen Kombination `OR` Vorgang. Wenn `value` ist die Zeichenfolgendarstellung des Namens der einem Enumerationswert entspricht, beim Vergleich von `value` mit Enumeration Namen richtet sich nach der `ignoreCase` Parameter. Wenn `true`, beim Vergleich wird die Groß-/Kleinschreibung; Wenn `false`, Groß-/Kleinschreibung beachtet wird.  
+  
+ Wenn `value` ist ein Name, die nicht mit einer benannten Konstante der entsprechen `TEnum`, gibt die Methode `false`. Wenn `value` die Darstellung der Zeichenfolge eine ganze Zahl, die nicht von einen zugrunde liegenden Wert darstellt der `TEnum` -Enumeration, der Methodenrückgabe Enumerationsmember, deren zugrunde liegenden Wert `value` in einen ganzzahligen Typ konvertiert. Wenn dieses Verhalten nicht erwünscht ist, rufen Sie die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass eine bestimmte Zeichenfolge-Darstellung einer ganzen Zahl tatsächlich ein Mitglied ist `TEnum`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine `Colors` -Enumeration, ruft der <xref:System.Enum.TryParse%60%601%28System.String%2CSystem.Boolean%2C%60%600%40%29> -Methode zum Konvertieren von Zeichenfolgen in ihre entsprechenden Enumerationswerte und ruft die <xref:System.Enum.IsDefined%2A> Methode, um sicherzustellen, dass bestimmte ganzzahlige Werte zugrunde liegt, werden Werte in die `Colors` Enumeration. Die <xref:System.Enum.TryParse%60%601%28System.String%2CSystem.Boolean%2C%60%600%40%29> Methode verwendet die Groß-und Kleinschreibung unterschieden beim konvertiert der zeichenfolgendarstellungen der Konstanten, mit denen ihre entsprechenden Enumerationswerte mit dem Namen.  
+  
+ [!code-csharp[System.Enum.TryParse#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.enum.tryparse/cs/tryparse2.cs#2)]
+ [!code-vb[System.Enum.TryParse#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.enum.tryparse/vb/tryparse2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="TEnum" />ist ein Enumerationstyp.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

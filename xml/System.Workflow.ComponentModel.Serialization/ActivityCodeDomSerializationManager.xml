@@ -1,0 +1,480 @@
+<Type Name="ActivityCodeDomSerializationManager" FullName="System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager">
+  <TypeSignature Language="C#" Value="public class ActivityCodeDomSerializationManager : IServiceProvider, System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityCodeDomSerializationManager extends System.Object implements class System.ComponentModel.Design.Serialization.IDesignerSerializationManager, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.Serialization.IDesignerSerializationManager</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwaltet die Serialisierung von Aktivitäten in vom Designer generierte Quellcodesegmente vor der Kompilierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityCodeDomSerializationManager (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.#ctor(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Die <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />, die dieser Instanz zugeordnet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSerializationProvider">
+      <MemberSignature Language="C#" Value="public void AddSerializationProvider (System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddSerializationProvider(class System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Die hinzuzufügende <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />-Instanz.</param>
+        <summary>Fügt dem Serialisierungs-Manager den angegebenen Serialisierungsprovider hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.Serialization.ContextStack Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.Serialization.ContextStack Context" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.ContextStack</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ComponentModel.Design.Serialization.ContextStack" /> ab, der dem <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager" /> zugeordnet ist.</summary>
+        <value>Der mit dem <see cref="T:System.ComponentModel.Design.Serialization.ContextStack" /> verknüpfte <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.Context%2A>, um Informationen für einen geschachtelten <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager> bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public object CreateInstance (Type type, System.Collections.ICollection arguments, string name, bool addToContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(class System.Type type, class System.Collections.ICollection arguments, string name, bool addToContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="arguments" Type="System.Collections.ICollection" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="addToContainer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der zu erstellende <see cref="T:System.Type" /> für die Daten.</param>
+        <param name="arguments">Eine <see cref="T:System.Collections.ICollection" /> von Argumenten, die an den Konstruktor für den angegebenen Typ übergeben werden.</param>
+        <param name="name">Der Name, der dem sich ergebenden Objekt zugewiesen ist. Mit diesem Namen kann später über <see cref="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetInstance(System.String)" /> auf das Objekt zugegriffen werden.  
+  
+ Wenn Null übergeben wird, wird das Objekt erstellt, aber Sie können nicht über den Namen darauf zugreifen.</param>
+        <param name="addToContainer">
+          <see langword="true" />, um das Objekt dem Entwurfscontainer hinzuzufügen, andernfalls <see langword="false" />.  
+  
+ Dies wirkt sich nur dann aus, wenn das Objekt <see cref="T:System.ComponentModel.IComponent" /> implementiert.</param>
+        <summary>Erstellt eine Instanz des angegebenen Typs und fügt sie einer Auflistung benannter Instanzen hinzu.</summary>
+        <returns>Die neu erstellte Objektinstanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enthält einen indirekten Verweis auf die <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager%2A>-Methode desselben Namens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstance">
+      <MemberSignature Language="C#" Value="public object GetInstance (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetInstance(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetInstance(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des abzurufenden <see cref="T:System.Object" />.</param>
+        <summary>Ruft ein <see cref="T:System.Object" /> des angegebenen Namens ab bzw. ergibt Null, wenn das <see cref="T:System.Object" /> nicht vorhanden ist.</summary>
+        <returns>Ein <see cref="T:System.Object" /> des angegebenen Namens bzw. Null, wenn das <see cref="T:System.Object" /> nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enthält einen indirekten Verweis auf die <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager%2A>-Methode desselben Namens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetName(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Object" />, für das der Name abgerufen wird.</param>
+        <summary>Ruft den Namen für das angegebene <see cref="T:System.Object" /> ab bzw. ergibt Null, wenn das <see cref="T:System.Object" /> keinen Namen hat.</summary>
+        <returns>Eine <see cref="T:System.String" />, die den <see cref="T:System.Object" />-Namen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Objekt keine Aktivität ist, wird die entsprechende <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager>-Methode aufgerufen.  
+  
+ Wenn die Aktivität über kein übergeordnetes Element verfügt, wird die über die Aktivität qualifizierte ID zurückgegeben, wobei alle Punkte (.) durch Unterstriche (_) ersetzt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializer">
+      <MemberSignature Language="C#" Value="public object GetSerializer (Type objectType, Type serializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetSerializer(class System.Type objectType, class System.Type serializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetSerializer(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="serializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">Der <see cref="T:System.Type" /> des <see cref="T:System.Object" />, für das das Serialisierungsprogramm abgerufen wird.</param>
+        <param name="serializerType">Der <see cref="T:System.Type" /> des Serialisierungsprogramms, der abgerufen werden soll.</param>
+        <summary>Ruft ein Serialisierungsprogramm des angeforderten Typs für den angegebenen <see cref="T:System.Object" />-Typ ab.</summary>
+        <returns>Ein Serialisierungsprogramm des angeforderten Typs für den angegebenen <see cref="T:System.Object" />-Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Objekttyp eine Zeichenfolge ist, wird ein Standardserialisierungsprogramm zurückgegeben. Andernfalls wird die entsprechende <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der <see cref="T:System.Type" /> des bereitgestellten Dienstes.</param>
+        <summary>Ruft ein <see cref="T:System.Object" /> ab, das einen Dienst vom angegebenen <see cref="T:System.Type" /> bereitstellt.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das einen Dienst vom angegebenen <see cref="T:System.Type" /> bereitstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der vollqualifizierte Name des zu ladenden <see cref="T:System.Type" />.</param>
+        <summary>Ruft einen <see cref="T:System.Type" /> des angegebenen Namens ab.</summary>
+        <returns>Eine Instanz des <see cref="T:System.Type" /> oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn der <see cref="T:System.Type" /> nicht geladen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetType%2A> enthält einen indirekten Verweis auf die <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager%2A>-Eigenschaft desselben Namens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptorCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> ab, die eine schreibgeschützte Auflistung des Typs <see cref="T:System.ComponentModel.PropertyDescriptor" /> enthält.</summary>
+        <value>Eine <see cref="T:System.ComponentModel.PropertyDescriptorCollection" />, die eine schreibgeschützte Auflistung des Typs <see cref="T:System.ComponentModel.PropertyDescriptor" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Indem Sie die Eigenschaften der <xref:System.ComponentModel.PropertyDescriptorCollection>-Klasse verwenden, können Sie den Inhalt von <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.Properties%2A> abfragen. Mit der <xref:System.ComponentModel.PropertyDescriptorCollection.Count%2A>-Eigenschaft können Sie die Anzahl der Elemente in der Auflistung bestimmen. Mit der <xref:System.ComponentModel.PropertyDescriptorCollection.Item%2A>-Eigenschaft können Sie eine bestimmte Eigenschaft nach Indexnummer oder Name abrufen.  
+  
+ Neben den Eigenschaften können Sie auch die <xref:System.ComponentModel.PropertyDescriptorCollection.Find%2A>-Methode verwenden, um eine Beschreibung der Eigenschaft abzurufen, die den angegebenen Namen aus der Auflistung verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSerializationProvider">
+      <MemberSignature Language="C#" Value="public void RemoveSerializationProvider (System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveSerializationProvider(class System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.RemoveSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Der zu entfernende Provider.</param>
+        <summary>Entfernt einen benutzerdefinierten Serialisierungsprovider aus dem Serialisierungs-Manager.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `provider` muss mithilfe von <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.AddSerializationProvider%2A> hinzugefügt worden sein.  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.RemoveSerializationProvider%2A> enthält einen indirekten Verweis auf die <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager%2A>-Eigenschaft desselben Namens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public void ReportError (object errorInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(object errorInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.ReportError(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorInformation" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="errorInformation">Ein <see cref="T:System.Object" />, das den zu meldenden Fehler enthält.</param>
+        <summary>Meldet einen Fehler bei der Serialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `errorInformation` kann einen beliebigen Objekttyp haben. Wenn es sich bei dem Objekt um eine Ausnahme handelt, wird die Meldung der Ausnahme extrahiert und dem Benutzer angezeigt. Falls das Objekt einen anderen Typ hat, wird <xref:System.Object.ToString%2A?displayProperty=nameWithType>  
+  
+ aufgerufen, um dem Benutzer die Informationen anzuzeigen.  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.ReportError%2A> enthält einen indirekten Verweis auf die <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager%2A>-Methode desselben Namens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveName">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.Serialization.ResolveNameEventHandler ResolveName;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.Serialization.ResolveNameEventHandler ResolveName" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.ResolveName" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.ResolveNameEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn <see cref="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.GetName(System.Object)" /> den angegebenen Namen in der Namenstabelle des Serialisierungs-Managers nicht finden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationComplete">
+      <MemberSignature Language="C#" Value="public event EventHandler SerializationComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SerializationComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die Serialisierung abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationManager">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.Serialization.IDesignerSerializationManager SerializationManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.Serialization.IDesignerSerializationManager SerializationManager" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.IDesignerSerializationManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> ab, der dem <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager" /> zugeordnet ist.</summary>
+        <value>Der mit dem <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> verknüpfte <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft einen stapelbasierten, benutzerdefinierten Speicherbereich ab, der die Kommunikation zwischen geschachtelten Serialisierungsobjekten erleichtert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetName">
+      <MemberSignature Language="C#" Value="public void SetName (object instance, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetName(object instance, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SetName(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Die zu benennende <see cref="T:System.Object" />-Instanz.</param>
+        <param name="name">Eine <see cref="T:System.String" /> mit dem Namen, der der Instanz verliehen wird.</param>
+        <summary>Legt den Namen für das angegebene vorhandene <see cref="T:System.Object" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SetName%2A> enthält einen indirekten Verweis auf die <xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager.SerializationManager%2A>-Methode desselben Namens.  
+  
+ Es wird eine Ausnahme ausgelöst, wenn Sie versuchen, ein vorhandenes Objekt umzubenennen oder einem neuen Objekt einen bereits vergebenen Namen zu geben. Außerdem wird eine Ausnahme ausgelöst, wenn Sie kein vorhandenes Objekt an die Methode übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

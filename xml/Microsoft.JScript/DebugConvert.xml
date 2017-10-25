@@ -1,0 +1,571 @@
+<Type Name="DebugConvert" FullName="Microsoft.JScript.DebugConvert">
+  <TypeSignature Language="C#" Value="public class DebugConvert : Microsoft.JScript.IDebugConvert, Microsoft.JScript.IDebugConvert2" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DebugConvert extends System.Object implements class Microsoft.JScript.IDebugConvert, class Microsoft.JScript.IDebugConvert2" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.DebugConvert" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.IDebugConvert</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.IDebugConvert2</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("432D76CE-8C9E-4eed-ADDD-91737F27A8CB")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Konvertiert Daten von einem Typ in einen anderen. Enthält Methoden, die Werte zu konvertieren <see cref="T:System.String" /> Objekte, damit sie vom Debugger angezeigt werden können.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebugConvert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.DebugConvert" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BooleanToString">
+      <MemberSignature Language="C#" Value="public string BooleanToString (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string BooleanToString(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.BooleanToString(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Boolean" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Literalzeichenfolge "Wahr" oder die Literalzeichenfolge "falsch".</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ByteToString">
+      <MemberSignature Language="C#" Value="public string ByteToString (byte value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ByteToString(unsigned int8 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.ByteToString(System.Byte,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Byte" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DecimalToString">
+      <MemberSignature Language="C#" Value="public string DecimalToString (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string DecimalToString(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.DecimalToString(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Decimal" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleToDateString">
+      <MemberSignature Language="C#" Value="public string DoubleToDateString (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string DoubleToDateString(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.DoubleToDateString(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung des angegebenen <see cref="T:System.Double" />. Die Zeichenfolgendarstellung enthält den Tag der Woche, Monat, das Datum, die Zeit, die Zeitzone und das Jahr.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleToString">
+      <MemberSignature Language="C#" Value="public string DoubleToString (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string DoubleToString(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.DoubleToString(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Double" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorMessageForHR">
+      <MemberSignature Language="C#" Value="public string GetErrorMessageForHR (int hr, Microsoft.JScript.Vsa.IJSVsaEngine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetErrorMessageForHR(int32 hr, class Microsoft.JScript.Vsa.IJSVsaEngine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.GetErrorMessageForHR(System.Int32,Microsoft.JScript.Vsa.IJSVsaEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hr" Type="System.Int32" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.IJSVsaEngine" />
+      </Parameters>
+      <Docs>
+        <param name="hr">Der HRESULT-Fehlercode.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <summary>Ruft eine Fehlermeldung angezeigt, d. h. erstellt, aus dem angegebenen <see cref="P:System.Exception.HResult" /> und <see cref="T:System.Globalization.CultureInfo" /> des angegebenen <see cref="T:Microsoft.JScript.Vsa.IJSVsaEngine" />.</summary>
+        <returns>Eine lokalisierte Zeichenfolge, die Informationen zum Fehler enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetManagedCharObject">
+      <MemberSignature Language="C#" Value="public object GetManagedCharObject (ushort i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetManagedCharObject(unsigned int16 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.GetManagedCharObject(System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der zu konvertierende Wert.</param>
+        <summary>Erstellt ein verwaltetes Objekt, das der angegebene Grundtyp verfügt <see cref="T:System.Char" /> Wert.</summary>
+        <returns>
+          <paramref name="i" />Konvertiert eine <see cref="T:System.Char" /> und dann ein <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetManagedInt64Object">
+      <MemberSignature Language="C#" Value="public object GetManagedInt64Object (long i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetManagedInt64Object(int64 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.GetManagedInt64Object(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der zu konvertierende Wert.</param>
+        <summary>Erstellt ein verwaltetes Objekt, das der angegebene Grundtyp verfügt <see cref="T:System.Int64" /> Wert.</summary>
+        <returns>
+          <paramref name="i" />Konvertiert eine <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetManagedObject">
+      <MemberSignature Language="C#" Value="public object GetManagedObject (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetManagedObject(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.GetManagedObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Erstellt ein verwaltetes Objekt, das mit dem angegebenen primitiven Wert enthält.</summary>
+        <returns>
+          <paramref name="value" />Konvertiert in ein verwaltetes <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetManagedUInt64Object">
+      <MemberSignature Language="C#" Value="public object GetManagedUInt64Object (ulong i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetManagedUInt64Object(unsigned int64 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.GetManagedUInt64Object(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der zu konvertierende Wert.</param>
+        <summary>Erstellt ein verwaltetes Objekt, das der angegebene Grundtyp verfügt <see cref="T:System.UInt64" /> Wert.</summary>
+        <returns>
+          <paramref name="i" />Konvertiert eine <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Int16ToString">
+      <MemberSignature Language="C#" Value="public string Int16ToString (short value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Int16ToString(int16 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.Int16ToString(System.Int16,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Int16" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Int32ToString">
+      <MemberSignature Language="C#" Value="public string Int32ToString (int value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Int32ToString(int32 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.Int32ToString(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Int32" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Int64ToString">
+      <MemberSignature Language="C#" Value="public string Int64ToString (long value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Int64ToString(int64 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.Int64ToString(System.Int64,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Int64" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RegexpToString">
+      <MemberSignature Language="C#" Value="public string RegexpToString (string source, bool ignoreCase, bool global, bool multiline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string RegexpToString(string source, bool ignoreCase, bool global, bool multiline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.RegexpToString(System.String,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="global" Type="System.Boolean" />
+        <Parameter Name="multiline" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Muster eines regulären Ausdrucks, mit dem Übereinstimmungen gefunden werden sollen.</param>
+        <param name="ignoreCase">
+          <see langword="true" />Verwenden Sie die Groß-/Kleinschreibung übereinstimmende; andernfalls <see langword="false" />.</param>
+        <param name="global">
+          <see langword="true" />Um eine globale Übereinstimmung verwenden; andernfalls <see langword="false" />.</param>
+        <param name="multiline">
+          <see langword="true" />eine mehrzeilige Übereinstimmung verwenden; andernfalls <see langword="false" />.</param>
+        <summary>Konvertiert den angegebenen regulären Ausdrucksinformationen, die auf eine <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung der reguläre Ausdrucksinformationen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SByteToString">
+      <MemberSignature Language="C#" Value="public string SByteToString (sbyte value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string SByteToString(int8 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.SByteToString(System.SByte,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.SByte" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.SByte" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SingleToString">
+      <MemberSignature Language="C#" Value="public string SingleToString (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string SingleToString(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.SingleToString(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Single" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StringToPrintable">
+      <MemberSignature Language="C#" Value="public string StringToPrintable (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string StringToPrintable(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.StringToPrintable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.String" /> zu einem <see cref="T:System.String" /> Escapezeichen für nicht druckbare Zeichen enthält.</summary>
+        <returns>Die angegebene Zeichenfolgendarstellung <paramref name="source" /> -Escape-Zeichen enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToPrimitive">
+      <MemberSignature Language="C#" Value="public object ToPrimitive (object value, TypeCode typeCode, bool truncationPermitted);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ToPrimitive(object value, valuetype System.TypeCode typeCode, bool truncationPermitted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.ToPrimitive(System.Object,System.TypeCode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="typeCode" Type="System.TypeCode" />
+        <Parameter Name="truncationPermitted" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert in einen neuen Typ konvertiert werden soll.</param>
+        <param name="typeCode">Der zu konvertierende Typ <c>Wert</c> an.</param>
+        <param name="truncationPermitted">
+          <see langword="true" />um Datenverlust zu ermöglichen. andernfalls <see langword="false" />.</param>
+        <summary>Konvertiert den angegebenen Wert in den angegebenen <see cref="T:System.TypeCode" />optional Datenverlust.</summary>
+        <returns>
+          <paramref name="value" />Konvertiert die <paramref name="typeCode" /> Typ.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UInt16ToString">
+      <MemberSignature Language="C#" Value="public string UInt16ToString (ushort value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UInt16ToString(unsigned int16 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.UInt16ToString(System.UInt16,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.UInt16" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UInt32ToString">
+      <MemberSignature Language="C#" Value="public string UInt32ToString (uint value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UInt32ToString(unsigned int32 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.UInt32ToString(System.UInt32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.UInt32" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UInt64ToString">
+      <MemberSignature Language="C#" Value="public string UInt64ToString (ulong value, int radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string UInt64ToString(unsigned int64 value, int32 radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DebugConvert.UInt64ToString(System.UInt64,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+        <Parameter Name="radix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="radix">Die Basis des Rückgabewerts. Die Basis muss 2, 8, 10 oder 16 sein.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.UInt64" /> -Wert in einen <see cref="T:System.String" />.</summary>
+        <returns>Die Zeichenfolgendarstellung von <paramref name="value" /> zur Basis <paramref name="radix" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,49 @@
+<Type Name="DragEventHandler" FullName="System.Windows.Forms.DragEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DragEventHandler(object sender, DragEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DragEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DragEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DragEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.Control.DragDrop" />, <see cref="E:System.Windows.Forms.Control.DragEnter" />, oder <see cref="E:System.Windows.Forms.Control.DragOver" /> -Ereignis für ein <see cref="T:System.Windows.Forms.Control" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.DragEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zur Behandlung von Ereignissen mit Delegaten finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Drag-and-Drop-Vorgang zwischen zwei <xref:System.Windows.Forms.ListBox> Steuerelemente. Im Beispiel wird die <xref:System.Windows.Forms.Control.DoDragDrop%2A> Methode, wenn der Ziehvorgang beginnt. Der Ziehvorgang beginnt, wenn die Maus bewegt hat mehr als <xref:System.Windows.Forms.SystemInformation.DragSize%2A?displayProperty=nameWithType> aus die Position des Mauszeigers während der <xref:System.Windows.Forms.Control.MouseDown> Ereignis. Die <xref:System.Windows.Forms.ListBox.IndexFromPoint%2A> Methode wird verwendet, um zu bestimmen, den Index des Elements, das beim Ziehen die `MouseDown` Ereignis.  
+  
+ Das Beispiel veranschaulicht außerdem die Verwendung von benutzerdefiniertem Cursor für den Drag & Drop-Vorgang. Im Beispiel wird davon ausgegangen, dass zwei Cursordateien `3dwarro.cur` und `3dwno.cur`, im Anwendungsverzeichnis, für den benutzerdefinierten vorhanden und Drop bzw. den Cursor. Die benutzerdefinierte Cursor verwendet werden, wenn die `UseCustomCursorsCheck` <xref:System.Windows.Forms.CheckBox> aktiviert ist. Die benutzerdefinierte Cursor werden festgelegt, der <xref:System.Windows.Forms.Control.GiveFeedback> -Ereignishandler.  
+  
+ Die Tastaturstatus wird ausgewertet, der <xref:System.Windows.Forms.Control.DragOver> -Ereignishandler für das Recht `ListBox`, um zu bestimmen, welche des Ziehvorgangs werden basierend auf den Zustand der Tasten UMSCHALT, STRG, ALT oder STRG + ALT. Die Position in der `ListBox` , in die Dropdownliste käme werden auch während des bestimmt die `DragOver` Ereignis. Wenn die Daten so löschen Sie keine `String`, die <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> auf festgelegt ist <xref:System.Windows.Forms.DragDropEffects?displayProperty=nameWithType>. Schließlich wird der Status des im Dropdownmenü angezeigt, der `DropLocationLabel` <xref:System.Windows.Forms.Label>.  
+  
+ Die Daten für das Recht löschen `ListBox` wird bestimmt, der <xref:System.Windows.Forms.Control.DragDrop> -Ereignishandler und die `String` Wert wird an die entsprechende Stelle im hinzugefügt der `ListBox`. Wenn der Ziehvorgang außerhalb der Grenzen des Formulars verschoben, der Drag-and-Drop-Vorgang abgebrochen wird, der <xref:System.Windows.Forms.Control.QueryContinueDrag> -Ereignishandler.  
+  
+ Dieser Code veranschaulicht die Verwendung der <xref:System.Windows.Forms.DragEventHandler> mit Delegieren der <xref:System.Windows.Forms.Control.DragOver> Ereignis. Finden Sie unter der <xref:System.Windows.Forms.Control.DoDragDrop%2A> Methode für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,100 @@
+<Type Name="WorkflowTrackingLocation" FullName="System.Workflow.Runtime.Tracking.WorkflowTrackingLocation">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowTrackingLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit WorkflowTrackingLocation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert bestimmte relevante Workflowstatusereignisse, die in einer Stammworkflowinstanz eintreten. Die Klasse wird für den Abgleich eines <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" /> in einem Verfolgungsprofil verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Bei jeder Statusänderung der Workflowinstanz gibt die Workflowinstanz ein Workflowstatusereignis basierend auf einem der <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>-Werte an die Laufzeitverfolgungsinfrastruktur aus. <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> definiert relevante Positionen der Workflowinstanz, an denen bestimmte Typen von Workflowstatusereignissen eintreten. Fügen Sie <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.Events%2A>-Werte hinzu, um die abzugleichenden Workflowstatusereignisse anzugeben. Eine einzelne <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> kann sich auf mehrere tatsächliche Positionen im möglichen Pfad einer Workflowinstanz beziehen. Sie können <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> einen <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A?displayProperty=nameWithType> hinzufügen, um die Übereinstimmungsparameter für einen <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> zu definieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowTrackingLocation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine abzugleichenden Workflowstatusereignisse werden angegeben. Sie müssen <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.Events%2A>-Werte hinzufügen, damit <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> mit Workflowstatusereignissen abgeglichen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowTrackingLocation (System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.TrackingWorkflowEvent&gt; events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent&gt; events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.#ctor(System.Collections.Generic.IList{System.Workflow.Runtime.Tracking.TrackingWorkflowEvent})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.TrackingWorkflowEvent&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="events">Eine Liste mit abzugleichenden Workflowverfolgungsereignissen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation" />-Klasse, die mit den angegebenen Workflowverfolgungsereignissen übereinstimmt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.TrackingWorkflowEvent&gt; Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent&gt; Events" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.TrackingWorkflowEvent&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste mit Workflowstatusereignissen ab, mit denen diese Position abgeglichen wird.</summary>
+        <value>Eine Liste mit <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent" />-Werten, die Workflowstatusereignissen angeben, mit denen die Position abgeglichen abgeglichen wird. Der Standardwert ist eine leere Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.Events%2A> enthält die Liste mit Workflowstatusereignissen, mit denen dieser <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> abgeglichen wird. Sie können die angegebenen Workflowstatusereignisse verfolgen, indem Sie <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> die <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> in einem <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> hinzufügen, der zu einem <xref:System.Workflow.Runtime.Tracking.TrackingProfile> gehört.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

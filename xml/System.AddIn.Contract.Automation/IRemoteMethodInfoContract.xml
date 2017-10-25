@@ -1,0 +1,90 @@
+<Type Name="IRemoteMethodInfoContract" FullName="System.AddIn.Contract.Automation.IRemoteMethodInfoContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteMethodInfoContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteMethodInfoContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert einen Vertrag, den Komponenten verwenden können, um Informationen über eine Methode Anwendungsdomänen- und Prozessgrenzen hinweg zuzugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract> zeigt eine Methode eines Remoteobjekts, die implementiert die <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> Schnittstelle.  
+  
+ Um eine oder mehrere Methoden eines Remoteobjekts zuzugreifen, verwenden die <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> Methode zum Abrufen einer <xref:System.AddIn.Contract.Automation.IRemoteTypeContract> , der den Typ des Remoteobjekts darstellt. Rufen Sie dann die <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetMethod%2A> oder <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetMethods%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetMethodData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteMethodData GetMethodData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.Automation.RemoteMethodData GetMethodData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.GetMethodData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteMethodData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt Informationen über die Methode zurück, die von diesem <see cref="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" /> identifiziert.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.Automation.RemoteMethodData" /> , Informationen zur Methode bereitstellt, die von diesem <see cref="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" /> identifiziert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Informationen der <xref:System.AddIn.Contract.Automation.RemoteMethodData> Struktur enthält die Typen der Rückgabewert und die Parameter der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument Invoke (System.AddIn.Contract.Automation.IRemoteObjectContract target, System.Reflection.BindingFlags bindingFlags, System.AddIn.Contract.Collections.IRemoteArgumentArrayContract parameters, int localeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.RemoteArgument Invoke(class System.AddIn.Contract.Automation.IRemoteObjectContract target, valuetype System.Reflection.BindingFlags bindingFlags, class System.AddIn.Contract.Collections.IRemoteArgumentArrayContract parameters, int32 localeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke(System.AddIn.Contract.Automation.IRemoteObjectContract,System.Reflection.BindingFlags,System.AddIn.Contract.Collections.IRemoteArgumentArrayContract,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.AddIn.Contract.Automation.IRemoteObjectContract" />
+        <Parameter Name="bindingFlags" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="parameters" Type="System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" />
+        <Parameter Name="localeId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" /> , identifiziert das Objekt, das die aufzurufende Methode enthält.</param>
+        <param name="bindingFlags">Eine bitweise Kombination der <see cref="T:System.Reflection.BindingFlags" /> Werte, der angibt, wie die Methode aufgerufen.</param>
+        <param name="parameters">Ein <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" /> , das die Methodenparameter; angibt <see langword="null" /> , wenn die Methode keine Parameter.</param>
+        <param name="localeId">Die Gebietsschema-ID, die Methode für die gebietsschemaspezifischen verwendet, typkonvertierungen Argument oder Rückgabewert.</param>
+        <summary>Ruft die Methode, die von diesem <see cref="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" /> identifiziert.</summary>
+        <returns>Ein <see cref="T:System.AddIn.Contract.RemoteArgument" /> , die den Rückgabewert der aufgerufenen Methode angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aufgerufene Methode keinen Rückgabewert (z. B. die Methode wird ein Konstruktor), <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke%2A> gibt den Standardwert <xref:System.AddIn.Contract.RemoteArgument> in der die <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> Eigenschaftensatz wird auf den Wert <xref:System.AddIn.Contract.RemoteArgumentKind?displayProperty=nameWithType> und die <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> Eigenschaft auf den Wert festgelegt ist <xref:System.TypeCode?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,72 @@
+<Type Name="IContractBehaviorAttribute" FullName="System.ServiceModel.Description.IContractBehaviorAttribute">
+  <TypeSignature Language="C#" Value="public interface IContractBehaviorAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContractBehaviorAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IContractBehaviorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt den Vertrag an, für den ein Attribut aktiv ist, das die <see cref="T:System.ServiceModel.Description.IContractBehavior" />-Schnittstelle implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IContractBehaviorAttribute>-Schnittstelle für ein Attribut, bei dem es sich auch um ein <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Objekt handelt, um die Verwendung dieses Vertragsverhaltensattributs für einen Diensttyp zu aktivieren, aber seine Anwendung auf den in der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>-Eigenschaft angegebenen Vertrag zu beschränken.  
+  
+ Es ist nicht erforderlich, <xref:System.ServiceModel.Description.IContractBehaviorAttribute> für Vertragsverhaltensattribute zu implementieren; wenn das Attribut auf eine Vertragsschnittstelle oder eine Duplexrückrufklasse angewendet wird, wird der Wert der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>-Eigenschaft ignoriert.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird von einer benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceProvider?displayProperty=nameWithType>-Implementierung mit der Bezeichnung `ObjectProviderBehavior` ausgegangen, die ein Singletonverhalten ermöglicht; dabei wird stets die gleiche Dienstinstanz zurückgegeben und nicht wiederverwendet.  
+  
+ Zum Einfügen der Instanzanbieteranpassung wird in dem Beispiel die Implementierung eines benutzerdefinierten Attributs (`SingletonBehaviorAttribute`) veranschaulicht, das <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> implementiert, um den benutzerdefinierten Instanzanbieter des Diensts einzufügen. Es implementiert auch <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, wodurch dessen Anwendung an den `ISampleService`-Vertrag gebunden wird.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TargetContract">
+      <MemberSignature Language="C#" Value="public Type TargetContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Vertrags ab, auf den das Vertragsverhalten anwendbar ist.</summary>
+        <value>Der Vertrag, auf den das Vertragsverhalten anwendbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>-Eigenschaft, um den Vertrag anzugeben, auf den das Vertragsverhalten angewendet wird, wenn das implementierende <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Attribut auf eine Dienstklasse angewendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird von einer benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceProvider?displayProperty=nameWithType>-Implementierung mit der Bezeichnung `ObjectProviderBehavior` ausgegangen, die ein Singletonverhalten ermöglicht; dabei wird stets die gleiche Dienstinstanz zurückgegeben und nicht wiederverwendet.  
+  
+ Zum Einfügen der Instanzanbieteranpassung wird in dem Beispiel die Implementierung eines benutzerdefinierten Attributs (`SingletonBehaviorAttribute`) veranschaulicht, das <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> implementiert, um den benutzerdefinierten Instanzanbieter des Diensts einzufügen. Es implementiert auch <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, wodurch dessen Anwendung an den `ISampleService`-Vertrag gebunden wird.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

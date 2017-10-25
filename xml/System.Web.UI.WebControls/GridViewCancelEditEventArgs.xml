@@ -1,0 +1,107 @@
+<Type Name="GridViewCancelEditEventArgs" FullName="System.Web.UI.WebControls.GridViewCancelEditEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewCancelEditEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewCancelEditEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewCancelEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.RowCancelingEdit" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.RowCancelingEdit> Ereignis bei der Schaltfläche "Abbrechen" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Abbrechen") geklickt wird, aber vor dem Beenden Bearbeitungsmodus. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. beenden den Vorgang "Abbrechen", wenn die Zeile in einen unerwünschten Zustand, gelangen würde Wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs> -Objekt übergeben wird die Ereignisbehandlungsmethode, wodurch Sie den Index der Zeile mit der Schaltfläche "Abbrechen", die das Ereignis ausgelöst hat zu bestimmen und um anzugeben, dass der Vorgang "Abbrechen" beendet werden soll. Um den Vorgang "Abbrechen" zu beenden, legen Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode bestimmt den Index der Zeile mit der Schaltfläche "Abbrechen", die der Benutzer geklickt hat.  
+  
+ [!code-aspx-csharp[GridViewRowCancellingEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCancellingEdit/CS/gridviewrowcancellingeditcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCancellingEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCancellingEdit/VB/gridviewrowcancellingeditvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewCancelEditEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewCancelEditEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile mit der Schaltfläche "Abbrechen", die das Ereignis ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewCancelEditEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex%2A>|Der Wert des `rowIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der Zeile mit der Schaltfläche "Abbrechen", die das Ereignis ausgelöst hat.</summary>
+        <value>Der nullbasierte Index der Zeile mit der Schaltfläche "Abbrechen", die das Ereignis ausgelöst hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex%2A> -Eigenschaft können Sie den Index der Zeile zu bestimmen, die die Schaltfläche "Abbrechen" enthält der Benutzer geklickt hat. Der Zeilenindex wird häufig verwendet, zum Abrufen dieser Zeile aus der <xref:System.Web.UI.WebControls.GridView.Rows%2A> Auflistung von der <xref:System.Web.UI.WebControls.GridView> -Steuerelement, das Sie Eigenschaften der Zeile zugreifen kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex%2A> -Eigenschaft bestimmt den Index der Zeile mit der Schaltfläche "Abbrechen" geklickt haben, durch den Benutzer.  
+  
+ [!code-aspx-csharp[GridViewRowCancellingEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCancellingEdit/CS/gridviewrowcancellingeditcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCancellingEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCancellingEdit/VB/gridviewrowcancellingeditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

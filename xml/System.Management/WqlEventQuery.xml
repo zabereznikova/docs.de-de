@@ -1,0 +1,681 @@
+<Type Name="WqlEventQuery" FullName="System.Management.WqlEventQuery">
+  <TypeSignature Language="C#" Value="public class WqlEventQuery : System.Management.EventQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WqlEventQuery extends System.Management.EventQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Management.WqlEventQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.EventQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine WMI-Ereignisabfrage in *WQL* Format.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.WqlEventQuery" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery (string queryOrEventClassName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string queryOrEventClassName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queryOrEventClassName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="queryOrEventClassName">Die Zeichenfolge, die gesamte Abfrage oder der Name der Ereignisklasse Abfrage darstellt. Das Objekt wird versucht, die Zeichenfolge als gültige Ereignisabfrage analysiert. Wenn Fehler auftreten, wird der Parser davon ausgegangen, dass der Parameter einen Ereignisklassennamen darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlEventQuery" /> -Klasse auf Grundlage der angegebenen Abfrage Zeichenfolge oder ein Ereignis der Klassenname.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.WqlEventQuery> durch Angeben einer Abfrage und initialisiert ein <xref:System.Management.WqlEventQuery> durch Angabe eines Ereignisses.  
+  
+ [!code-csharp[wminet_WqlEventQuery-S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S/cs/WqlEventQuery-S.cs#1)]
+ [!code-vb[wminet_WqlEventQuery-S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S/vb/WqlEventQuery-S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery (string eventClassName, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string eventClassName, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventClassName" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventClassName">Der Name der Ereignisklasse Abfrage.</param>
+        <param name="condition">Die Bedingung, die für Ereignisse der angegebenen Klasse gelten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlEventQuery" /> Klasse für den angegebenen Ereignisklassennamen mit der angegebenen Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery (string eventClassName, TimeSpan withinInterval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string eventClassName, valuetype System.TimeSpan withinInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor(System.String,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventClassName" Type="System.String" />
+        <Parameter Name="withinInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="eventClassName">Der Name der Ereignisklasse Abfrage.</param>
+        <param name="withinInterval">Ein <see cref="T:System.TimeSpan" /> -Wert, die für den Empfang dieses Ereignisses zulässige Wartezeit angibt. Dieser Wert wird verwendet, in Fällen, in denen keine explizite Ereignisanbieter für die angeforderte Abfrage vorhanden ist und WMI ist erforderlich, um die Bedingung abzurufen. Dieses Intervall ist die maximale Zeitspanne, die verstreichen kann, bevor die Benachrichtigung eines Ereignisses zugestellt werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlEventQuery" /> Klasse für die angegebene Ereignisklasse, mit der angegebenen Wartezeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine <xref:System.Management.WqlEventQuery> durch Angabe eines Ereignisses und eine Uhrzeit span-Wert, die für den Empfang dieses Ereignisses zulässige Wartezeit angibt.  
+  
+ [!code-csharp[wminet_WqlEventQuery-S_T#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S_T/cs/WqlEventQuery-S_T.cs#1)]
+ [!code-vb[wminet_WqlEventQuery-S_T#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S_T/vb/WqlEventQuery-S_T.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery (string eventClassName, string condition, TimeSpan groupWithinInterval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string eventClassName, string condition, valuetype System.TimeSpan groupWithinInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor(System.String,System.String,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventClassName" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="groupWithinInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="eventClassName">Der Name der Ereignisklasse Abfrage.</param>
+        <param name="condition">Die Bedingung, die für Ereignisse der angegebenen Klasse gelten.</param>
+        <param name="groupWithinInterval">Das angegebene Intervall mit der WMI eine sendet <c>aggregieren Ereignis</c>, anstatt Sie zu viele Ereignisse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlEventQuery" /> -Klasse mit dem angegebenen Ereignisklassennamen, eine Bedingung und eine Gruppierungsintervall.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery (string eventClassName, TimeSpan withinInterval, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string eventClassName, valuetype System.TimeSpan withinInterval, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor(System.String,System.TimeSpan,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventClassName" Type="System.String" />
+        <Parameter Name="withinInterval" Type="System.TimeSpan" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventClassName">Der Name der Ereignisklasse Abfrage.</param>
+        <param name="withinInterval">Ein <see cref="T:System.TimeSpan" /> -Wert, die für den Empfang dieses Ereignisses zulässige Wartezeit angibt. Dieser Wert wird verwendet, in Fällen, in denen keine explizite Ereignisanbieter für die angeforderte Abfrage vorhanden ist und WMI ist erforderlich, um die Bedingung abzurufen. Dieses Intervall ist die maximale Zeitspanne, die verstreichen kann, bevor die Benachrichtigung eines Ereignisses zugestellt werden sollen.</param>
+        <param name="condition">Die Bedingung, die für Ereignisse der angegebenen Klasse gelten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlEventQuery" /> Klasse mit dem angegebenen Ereignisklassennamen, Abrufintervall und Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Ereignisabfrage: "Wählen Sie * FROM __InstanceCreationEvent *WITHIN* 10, in denen" TargetInstance "auf ISA-Win32_Service", der sendet Benachrichtigung über die Erstellung von **Win32_Service**-Instanzen, mit einem Abrufintervall von 10 Sekunden.  
+  
+ [!code-csharp[wminet_WqlEventQuery-S_T_S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S_T_S/cs/WqlEventQuery-S_T_S.cs#1)]
+ [!code-vb[wminet_WqlEventQuery-S_T_S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S_T_S/vb/WqlEventQuery-S_T_S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery (string eventClassName, string condition, TimeSpan groupWithinInterval, string[] groupByPropertyList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string eventClassName, string condition, valuetype System.TimeSpan groupWithinInterval, string[] groupByPropertyList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor(System.String,System.String,System.TimeSpan,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventClassName" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="groupWithinInterval" Type="System.TimeSpan" />
+        <Parameter Name="groupByPropertyList" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="eventClassName">Der Name der Ereignisklasse Abfrage.</param>
+        <param name="condition">Die Bedingung, die für Ereignisse der angegebenen Klasse gelten.</param>
+        <param name="groupWithinInterval">Das angegebene Intervall mit der WMI eine sendet <c>aggregieren Ereignis</c>, anstatt Sie zu viele Ereignisse.</param>
+        <param name="groupByPropertyList">Die Eigenschaften in der Ereignisklasse, die mit der die Ereignisse gruppiert werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlEventQuery" /> Klasse mit der angegebenen Ereignisklassennamen, die Bedingung, die Gruppierungsintervall und die Gruppierungseigenschaften.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlEventQuery (string eventClassName, TimeSpan withinInterval, string condition, TimeSpan groupWithinInterval, string[] groupByPropertyList, string havingCondition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string eventClassName, valuetype System.TimeSpan withinInterval, string condition, valuetype System.TimeSpan groupWithinInterval, string[] groupByPropertyList, string havingCondition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.#ctor(System.String,System.TimeSpan,System.String,System.TimeSpan,System.String[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventClassName" Type="System.String" />
+        <Parameter Name="withinInterval" Type="System.TimeSpan" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="groupWithinInterval" Type="System.TimeSpan" />
+        <Parameter Name="groupByPropertyList" Type="System.String[]" />
+        <Parameter Name="havingCondition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventClassName">Der Name der Ereignisklasse, abgefragt werden.</param>
+        <param name="withinInterval">Ein <see cref="T:System.TimeSpan" /> -Wert, die für den Empfang dieses Ereignisses zulässige Wartezeit angibt. Dieser Wert wird verwendet, in Fällen, in denen keine explizite Ereignisanbieter für die angeforderte Abfrage vorhanden ist und WMI ist erforderlich, um die Bedingung abzurufen. Dieses Intervall ist die maximale Zeitspanne, die verstreichen kann, bevor die Benachrichtigung eines Ereignisses zugestellt werden sollen.</param>
+        <param name="condition">Die Bedingung, die für Ereignisse der angegebenen Klasse gelten.</param>
+        <param name="groupWithinInterval">Das angegebene Intervall mit der WMI eine sendet <c>aggregieren Ereignis</c>, anstatt Sie zu viele Ereignisse.</param>
+        <param name="groupByPropertyList">Die Eigenschaften in der Ereignisklasse, die mit der die Ereignisse gruppiert werden sollen.</param>
+        <param name="havingCondition">Die Bedingung, die für die Anzahl der Ereignisse gelten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlEventQuery" /> Klasse mit der angegebenen Ereignisklassennamen, die Bedingung, die Gruppierungsintervall, die Gruppierungseigenschaften und die angegebene Anzahl von Ereignissen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Ereignisabfrage: "Wählen Sie * FROM __InstanceCreationEvent WHERE TargetInstance ISA Win32_NTLogEvent GROUP WITHIN 600 von TargetInstance.SourceName HAVING NumberOfEvents > 15" der Aggregatereignisse übermittelt, nur, wenn die Zahl der **Win32_NTLogEvent** Ereignisse aus der gleichen Quelle empfangen überschreitet 15.  
+  
+ [!code-csharp[wminet_WqlEventQuery-S_T_S_T_S_S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S_T_S_T_S_S/cs/WqlEventQuery-S_T_S_T_S_S.cs#1)]
+ [!code-vb[wminet_WqlEventQuery-S_T_S_T_S_S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery-S_T_S_T_S_S/vb/WqlEventQuery-S_T_S_T_S_S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildQuery">
+      <MemberSignature Language="C#" Value="protected void BuildQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void BuildQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.BuildQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Abfragezeichenfolge gemäß der aktuellen Eigenschaftswerte an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des Objekts.</summary>
+        <returns>Das kopierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bedingung, die auf Ereignisse der angegebenen Klasse angewendet werden.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Abfragen Wert, der die Bedingung(en) im Ereignis enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, um die neue Bedingung zu berücksichtigen.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Die Bedingung wird als eine Zeichenfolge, eine oder mehrere Klauseln in der Form dargestellt: \<PropName > \<Operator > \<Wert > mit logischen Operatoren kombiniert. \<PropName > muss eine Eigenschaft für die Ereignisklasse in der folgenden Abfrage angegebenen definierten darstellen.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine neue <xref:System.Management.WqlEventQuery> und zeigt die Ereignis-Abfragezeichenfolge.  
+  
+ [!code-csharp[wminet_WqlEventQuery_Condition#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery_Condition/cs/WqlEventQuery_Condition.cs#1)]
+ [!code-vb[wminet_WqlEventQuery_Condition#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery_Condition/vb/WqlEventQuery_Condition.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventClassName">
+      <MemberSignature Language="C#" Value="public string EventClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.EventClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt Sie die Ereignisklasse abzufragende fest.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der im Ereignis enthält des Namens der Ereignisklasse abzufragen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, um den Klassennamen der neuen widerzuspiegeln.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die den Namen der Ereignisklasse Abfrage enthält.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine neue <xref:System.Management.WqlEventQuery> und zeigt die Ereignis-Abfragezeichenfolge.  
+  
+ [!code-csharp[wminet_WqlEventQuery_EventClassName#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery_EventClassName/cs/WqlEventQuery_EventClassName.cs#1)]
+ [!code-vb[wminet_WqlEventQuery_EventClassName#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery_EventClassName/vb/WqlEventQuery_EventClassName.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupByPropertyList">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection GroupByPropertyList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection GroupByPropertyList" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.GroupByPropertyList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Eigenschaften fest, in das Ereignis zum Gruppieren von Ereignissen des gleichen Typs verwendet werden soll.</summary>
+        <value>Gibt eine <see cref="T:System.Collections.Specialized.StringCollection" /> mit den Eigenschaften des Ereignisses zum Gruppieren von Ereignissen des gleichen Typs verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, entsprechend die neue Gruppierung.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ NULL, wenn keine Gruppierung erforderlich ist. andernfalls, eine Auflistung von Ereignis-Eigenschaftennamen.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine neue <xref:System.Management.WqlEventQuery> und zeigt die Ereignis-Abfragezeichenfolge.  
+  
+ [!code-csharp[wminet_WqlEventQuery_GroupByPropertyList#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery_GroupByPropertyList/cs/WqlEventQuery_GroupByPropertyList.cs#1)]
+ [!code-vb[wminet_WqlEventQuery_GroupByPropertyList#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery_GroupByPropertyList/vb/WqlEventQuery_GroupByPropertyList.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupWithinInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan GroupWithinInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan GroupWithinInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.GroupWithinInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Intervall zum Gruppieren von Ereignissen des gleichen Typs verwendet werden soll.</summary>
+        <value>Gibt eine <see cref="T:System.TimeSpan" /> Wert, der das Intervall für das Gruppieren von Ereignissen des gleichen Typs enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, das entsprechend das neue Intervall.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ NULL, wird keine Gruppierung am; Andernfalls sollte das Intervall, in der WMI-Ereignisse desselben Typs gruppiert werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine neue <xref:System.Management.WqlEventQuery> und zeigt die Ereignis-Abfragezeichenfolge.  
+  
+ [!code-csharp[wminet_WqlEventQuery_GroupWithinInterval#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery_GroupWithinInterval/cs/WqlEventQuery_GroupWithinInterval.cs#1)]
+ [!code-vb[wminet_WqlEventQuery_GroupWithinInterval#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery_GroupWithinInterval/vb/WqlEventQuery_GroupWithinInterval.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HavingCondition">
+      <MemberSignature Language="C#" Value="public string HavingCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HavingCondition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.HavingCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bedingung, die auf die Aggregation von Ereignissen, die basierend auf der Anzahl der empfangenen Ereignisse angewendet werden.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der die Bedingung, die angewendet werden, um die Aggregation von Ereignissen, die basierend auf der Anzahl der empfangenen Ereignisse enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, die neue Bedingung für die Gruppierung entsprechend.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ NULL, wenn keine Aggregation oder keine Bedingung angewendet werden soll. andernfalls eine Bedingung der Form "NumberOfEvents \<Operator > \<Wert >".  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine neue <xref:System.Management.WqlEventQuery> und zeigt die Ereignis-Abfragezeichenfolge.  
+  
+ [!code-csharp[wminet_WqlEventQuery_HavingCondition#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery_HavingCondition/cs/WqlEventQuery_HavingCondition.cs#1)]
+ [!code-vb[wminet_WqlEventQuery_HavingCondition#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery_HavingCondition/vb/WqlEventQuery_HavingCondition.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseQuery">
+      <MemberSignature Language="C#" Value="protected override void ParseQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ParseQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlEventQuery.ParseQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Die zu analysierende Abfragezeichenfolge.</param>
+        <summary>Analysiert die Abfragezeichenfolge, und legt die Eigenschaftswerte entsprechend fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryLanguage">
+      <MemberSignature Language="C#" Value="public override string QueryLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.QueryLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sprache der Abfrage ab.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der die Abfragesprache enthält, die in die Abfrage geschrieben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Der Wert dieser Eigenschaft in diesem Objekt ist immer "WQL".  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public override string QueryString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die die Abfrage darstellt.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der die Abfrage enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die die Abfrage darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine neue <xref:System.Management.WqlEventQuery> und zeigt die Ereignis-Abfragezeichenfolge.  
+  
+ [!code-csharp[wminet_WqlEventQuery_QueryString#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery_QueryString/cs/WqlEventQuery_QueryString.cs#1)]
+ [!code-vb[wminet_WqlEventQuery_QueryString#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery_QueryString/vb/WqlEventQuery_QueryString.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithinInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan WithinInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan WithinInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlEventQuery.WithinInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Abrufintervall in dieser Abfrage verwendet werden.</summary>
+        <value>Gibt eine <see cref="T:System.TimeSpan" /> Wert, der das Abrufintervall enthält verwendet der Abfrage.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte nur festgelegt werden, in Fällen besteht keine *Ereignisanbieter* für das angeforderte Ereignis und WMI erforderlich ist, um die angeforderte Bedingung abzurufen.  
+  
+ Durch Festlegen dieses Eigenschaftswerts überschreibt alle vorherigen Werte, die im Objekt gespeichert wird. Die Abfragezeichenfolge wird neu erstellt, das entsprechend das neue Intervall.  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ NULL, wenn stellt keine abrufen. andernfalls ein gültiger <xref:System.TimeSpan> -Wert, wenn der Abruf erforderlich ist.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel initialisiert eine neue <xref:System.Management.WqlEventQuery> , die die Abfrage darstellt: "Wählen Sie * FROM __InstanceCreationEvent *WITHIN* 1 WHERE TargetInstance ISA"Win32_Process"".  
+  
+ [!code-csharp[wminet_WqlEventQuery_WithinInterval#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_WqlEventQuery_WithinInterval/cs/WqlEventQuery_WithinInterval.cs#1)]
+ [!code-vb[wminet_WqlEventQuery_WithinInterval#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_WqlEventQuery_WithinInterval/vb/WqlEventQuery_WithinInterval.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

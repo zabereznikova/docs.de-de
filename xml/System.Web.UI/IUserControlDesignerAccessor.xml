@@ -1,0 +1,66 @@
+<Type Name="IUserControlDesignerAccessor" FullName="System.Web.UI.IUserControlDesignerAccessor">
+  <TypeSignature Language="C#" Value="public interface IUserControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUserControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IUserControlDesignerAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Eigenschaften, die den Designer Zugriff auf Informationen über ein benutzerdefiniertes Steuerelement zur Entwurfszeit zu ermöglichen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IUserControlDesignerAccessor.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei der Implementierung Text abruft oder festlegt zwischen dem Start- und Endtag des ein Benutzersteuerelement.</summary>
+        <value>Der Text platziert zwischen dem Start- und Endtag des ein Benutzersteuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IUserControlDesignerAccessor.InnerText%2A> Eigenschaft wird vom Designer verwendet, angeben oder den Text zwischen dem Start- und Endtag des ein Benutzersteuerelement zu ermitteln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="public string TagName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IUserControlDesignerAccessor.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei der Implementierung ruft ab oder legt den vollständigen Tagnamen des Benutzersteuerelements.</summary>
+        <value>Der vollständige Tagname des Benutzersteuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IUserControlDesignerAccessor.TagName%2A> Eigenschaft wird vom Designer verwendet, angeben oder den vollständigen Tagnamen des Benutzersteuerelements zu ermitteln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

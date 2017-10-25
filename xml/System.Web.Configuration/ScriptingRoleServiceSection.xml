@@ -1,0 +1,105 @@
+<Type Name="ScriptingRoleServiceSection" FullName="System.Web.Configuration.ScriptingRoleServiceSection">
+  <TypeSignature Language="C#" Value="public sealed class ScriptingRoleServiceSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ScriptingRoleServiceSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ScriptingRoleServiceSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Konfigurationsabschnitt für Rollendienst Einstellungen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ScriptingRoleServiceSection> Klasse ermöglicht den programmgesteuerten Zugriff auf und Ändern der `roleService` Element des Konfigurationsabschnitts für die Verwendung von AJAX-Funktionen in [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
+  
+ Der Rollendienst "" wird normalerweise verwendet, um Rolleninformationen für den Benutzer abzurufen, der mit der einen asynchronen Aufruf der Web-Dienst angemeldet ist.  
+  
+   
+  
+## Examples  
+ Der folgende Auszug aus der Datei veranschaulicht die deklarative Angabe von Werten für die <xref:System.Web.Configuration.ScriptingRoleServiceSection.Enabled%2A> Eigenschaft von der <xref:System.Web.Configuration.ScriptingRoleServiceSection> Klasse.  
+  
+```  
+<system.web.extensions>  
+  <scripting>  
+    <webServices>  
+      <roleService enabled="true" />  
+    </webServices>  
+  </scripting>  
+</system.web.extensions>  
+```  
+  
+ Das folgende Beispiel veranschaulicht den Zugriff auf die <xref:System.Web.Configuration.ScriptingRoleServiceSection> Element programmgesteuert.  
+  
+ [!code-csharp[System.Web.Configuration#4](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Configuration/CS/App_Code/ConfigSectionSample.cs#4)]
+ [!code-vb[System.Web.Configuration#4](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Configuration/VB/App_Code/ConfigSectionSample.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptingRoleServiceSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ScriptingRoleServiceSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ScriptingRoleServiceSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingRoleServiceSection.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Rollendienst "", für aktiviert ist eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Anwendung, die AJAX-Funktionen verwendet werden.</summary>
+        <value>
+          <see langword="true" />Wenn der Rollendienst "" aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingRoleServiceSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

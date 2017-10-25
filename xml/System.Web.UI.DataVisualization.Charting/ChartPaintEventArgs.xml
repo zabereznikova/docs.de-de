@@ -1,0 +1,127 @@
+<Type Name="ChartPaintEventArgs" FullName="System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs">
+  <TypeSignature Language="C#" Value="public class ChartPaintEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartPaintEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das Paint-Ereignissen von der <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs> Objekt wird verwendet, um Diagrammeigenschaften beim Festlegen der <xref:System.Web.UI.DataVisualization.Charting.Chart.PostPaint> und <xref:System.Web.UI.DataVisualization.Charting.Chart.PrePaint> Ereignisse der <xref:System.Web.UI.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.Position%2A> -Eigenschaft können Sie Diagrammelemente, positionieren und die <xref:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.ChartGraphics%2A> Eigenschaft erleichtert GDI +-Zeichenvorgänge.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.Chart%2A> Eigenschaft ermöglicht es den Entwicklerzugriff auf den Stamm <xref:System.Web.UI.DataVisualization.Charting.Chart> -Objekt, das zum Festlegen verschiedener Eigenschaften des Diagramms verwendet werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Chart">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Chart Chart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Chart Chart" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.Chart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Chart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stamm ab <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> Objekt.</summary>
+        <value>Der Stamm <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.Chart%2A> Eigenschaft ermöglicht dem Entwickler festzulegende Diagrammeigenschaften während der <xref:System.Web.UI.DataVisualization.Charting.Chart.PostPaint> und <xref:System.Web.UI.DataVisualization.Charting.Chart.PrePaint> Ereignisse der <xref:System.Web.UI.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartElement">
+      <MemberSignature Language="C#" Value="public object ChartElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ChartElement" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.ChartElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt für das Ereignis ab.</summary>
+        <value>Ein <see cref="T:System.Object" /> , das das Diagrammelement darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartGraphics">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartGraphics ChartGraphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.ChartGraphics ChartGraphics" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.ChartGraphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartGraphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartGraphics" />-Objekt ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartGraphics" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Objekteigenschaft, während ein zeichnen-Ereignis auf:  
+  
+-   Unterstützen Sie bei der Konvertierung in und aus relativen und/oder absoluten Diagrammkoordinaten.  
+  
+-   Erstellen benutzerdefinierter Zeichnungen mit GDI + <xref:System.Drawing.Graphics> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ElementPosition Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.ElementPosition Position" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ElementPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft des Objekts bei einem zeichnen-Ereignis, um ein Diagrammelement positionieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

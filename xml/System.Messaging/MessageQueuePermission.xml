@@ -1,0 +1,345 @@
+<Type Name="MessageQueuePermission" FullName="System.Messaging.MessageQueuePermission">
+  <TypeSignature Language="C#" Value="public sealed class MessageQueuePermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit MessageQueuePermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueuePermission" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ermöglicht das Steuern von Codezugriffsberechtigungen für messaging.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel werden mehrere Instanzen von <xref:System.Messaging.MessageQueuePermission> und veranschaulicht die Verwendung von der <xref:System.Messaging.MessageQueuePermission.PermissionEntries%2A> Eigenschaft.  
+  
+ [!code-csharp[MessageQueuePermission#0](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermission/CS/class1.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueuePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Messaging.MessageQueuePermission" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Instanz der <xref:System.Messaging.MessageQueuePermission>.  
+  
+ [!code-csharp[MessageQueuePermission#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermission/CS/class1.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueuePermission (System.Messaging.MessageQueuePermissionEntry[] permissionAccessEntries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.MessageQueuePermissionEntry[] permissionAccessEntries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.#ctor(System.Messaging.MessageQueuePermissionEntry[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccessEntries" Type="System.Messaging.MessageQueuePermissionEntry[]" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccessEntries">Ein Array von <see cref="T:System.Messaging.MessageQueuePermissionEntry" />-Objekten. Die <see cref="P:System.Messaging.MessageQueuePermission.PermissionEntries" /> Eigenschaft auf diesen Wert festgelegt ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.MessageQueuePermission" /> Klasse mit dem angegebenen Berechtigungseinträge für die Ebene.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Instanz der <xref:System.Messaging.MessageQueuePermission>.  
+  
+ [!code-csharp[MessageQueuePermission#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermission/CS/class1.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueuePermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Messaging.MessageQueuePermission" />-Klasse mit dem angegebenen Berechtigungszustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Instanz der <xref:System.Messaging.MessageQueuePermission>.  
+  
+ [!code-csharp[MessageQueuePermission#5](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermission/CS/class1.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueuePermission (System.Messaging.MessageQueuePermissionAccess permissionAccess, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Messaging.MessageQueuePermissionAccess permissionAccess, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.#ctor(System.Messaging.MessageQueuePermissionAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Messaging.MessageQueuePermissionAccess" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Einer der <see cref="T:System.Messaging.MessageQueuePermissionAccess" />-Werte.</param>
+        <param name="path">Der Pfad der Warteschlange, auf die verwiesen wird die <see cref="T:System.Messaging.MessageQueue" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.MessageQueuePermission" /> -Klasse mit den angegebenen Zugriffsebenen und den Pfad der Warteschlange.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Instanz der <xref:System.Messaging.MessageQueuePermission>.  
+  
+ [!code-csharp[MessageQueuePermission#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermission/CS/class1.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueuePermission (System.Messaging.MessageQueuePermissionAccess permissionAccess, string machineName, string label, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Messaging.MessageQueuePermissionAccess permissionAccess, string machineName, string label, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.#ctor(System.Messaging.MessageQueuePermissionAccess,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Messaging.MessageQueuePermissionAccess" />
+        <Parameter Name="machineName" Type="System.String" />
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Einer der <see cref="T:System.Messaging.MessageQueuePermissionAccess" />-Werte.</param>
+        <param name="machineName">Der Name des Computers, auf dem sich die Message Queuing-Warteschlange befindet.</param>
+        <param name="label">Die warteschlangenbeschreibung.</param>
+        <param name="category">Die Kategorie der Warteschlange (Message Queuing-Typ-ID).</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.MessageQueuePermission" /> -Klasse mit den angegebenen Zugriffsebenen Computer verwenden, die warteschlangenbeschreibung und Kategorie der Warteschlange.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Instanz der <xref:System.Messaging.MessageQueuePermission>.  
+  
+ [!code-csharp[MessageQueuePermission#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermission/CS/class1.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine identische Kopie des aktuellen Berechtigungsobjekts.</summary>
+        <returns>Eine Kopie des aktuellen Berechtigungsobjekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">Die XML-Codierung zur Wiederherstellung des Sicherheitsobjekts.</param>
+        <summary>Stellt ein Sicherheitsobjekt mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Berechtigungsobjekt für die Überschneidung mit dem aktuellen Berechtigungsobjekt. Sie müssen den gleichen Typ wie das aktuelle Berechtigungsobjekt aufweisen.</param>
+        <summary>Gibt ein neues Berechtigungsobjekt, das die Schnittmenge des aktuellen Berechtigungsobjekts und das Objekt der angegebenen Berechtigung darstellt.</summary>
+        <returns>Ein neues Berechtigungsobjekt, das die Schnittmenge des aktuellen Berechtigungsobjekts und das Objekt der angegebenen Berechtigung darstellt. Dieses neue Berechtigungsobjekt ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic), wenn die Schnittmenge leer ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Berechtigungsobjekt, das auf die teilmengenbeziehung geprüft werden soll. Dieses Objekt muss denselben Typ wie das aktuelle Berechtigungsobjekt aufweisen.</param>
+        <summary>Gibt einen Wert, der angibt, ob das aktuelle Berechtigungsobjekt eine Teilmenge des angegebenen Berechtigungsobjekts ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das aktuelle Berechtigungsobjekt eine Teilmenge des angegebenen Berechtigungsobjekts; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Wert, der angibt, ob die Berechtigung als dargestellt werden kann ohne Kenntnis der Berechtigungssemantik uneingeschränkt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Berechtigung als uneingeschränkt dargestellt werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionEntries">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueuePermissionEntryCollection PermissionEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueuePermissionEntryCollection PermissionEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueuePermission.PermissionEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionEntryCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Berechtigungseinträge für diese Anforderung Berechtigungen ab.</summary>
+        <value>Ein <see cref="T:System.Messaging.MessageQueuePermissionEntryCollection" /> , die die Berechtigungseinträge für diese Anforderung Berechtigungen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Instanz der <xref:System.Messaging.MessageQueuePermission> und ruft den Wert der <xref:System.Messaging.MessageQueuePermission.PermissionEntries%2A> Eigenschaft.  
+  
+ [!code-csharp[MessageQueuePermission#6](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermission/CS/class1.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung des Sicherheitsobjekts und seines aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung des Sicherheitsobjekts, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Berechtigungsobjekt, mit das aktuelle Berechtigungsobjekt zu kombinieren. Sie müssen den gleichen Typ wie das aktuelle Berechtigungsobjekt aufweisen.</param>
+        <summary>Gibt ein neues Berechtigungsobjekt, das als Kombination der aktuellen und dem angegebenen Berechtigungsobjekte zurück.</summary>
+        <returns>Ein neues Berechtigungsobjekt, das die Kombination des aktuellen Berechtigungsobjekts und das Objekt der angegebenen Berechtigung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

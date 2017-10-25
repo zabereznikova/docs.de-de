@@ -1,0 +1,93 @@
+<Type Name="IDockProvider" FullName="System.Windows.Automation.Provider.IDockProvider">
+  <TypeSignature Language="C#" Value="public interface IDockProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDockProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IDockProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("159bc72c-4ad3-485e-9637-d7052edf0146")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften verfügbar, die den Benutzeroberflächenautomatisierungs-Client beim Zugriff auf Steuerelemente unterstützen, die ihre Andockeigenschaften innerhalb eines Andockcontainers verfügbar machen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.DockPattern> -Steuerelementmuster.  
+  
+ Ein dockingcontainer ist ein Steuerelement, das die Anordnung von untergeordneten Elementen, sowohl horizontal oder vertikal relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers ermöglicht.  
+  
+ <xref:System.Windows.Automation.Provider.IDockProvider>macht Eigenschaften des dockingcontainers bzw. der Steuerelemente, die neben dem aktuellen Steuerelement im dockingcontainer angedockt werden können.  
+  
+ Steuerelemente werden relativ zueinander entsprechend ihrer aktuellen Z-Reihenfolge angeordnet angedockt; Je höher ihre Z-Reihenfolge Platzierung der weiteren vom angegebenen Rand des dockingcontainers werden sie platziert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DockPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.DockPosition DockPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.DockPosition DockPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IDockProvider.DockPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.DockPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen <see cref="T:System.Windows.Automation.DockPosition" /> des Steuerelements in einem dockingcontainer.</summary>
+        <value>Die <see cref="T:System.Windows.Automation.DockPosition" /> des Steuerelements relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein dockingcontainer ist ein Steuerelement, das die Anordnung von untergeordneten Elementen, sowohl horizontal oder vertikal relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers ermöglicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDockPosition">
+      <MemberSignature Language="C#" Value="public void SetDockPosition (System.Windows.Automation.DockPosition dockPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDockPosition(valuetype System.Windows.Automation.DockPosition dockPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IDockProvider.SetDockPosition(System.Windows.Automation.DockPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dockPosition" Type="System.Windows.Automation.DockPosition" />
+      </Parameters>
+      <Docs>
+        <param name="dockPosition">Die Andockposition relativ zu den Begrenzungen des Dockingcontainers und anderen Elementen im Container.</param>
+        <summary>Dockt das Steuerelement in einem Dockingcontainer an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein dockingcontainer ist ein Steuerelement, das die Anordnung von untergeordneten Elementen, sowohl horizontal oder vertikal relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers ermöglicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

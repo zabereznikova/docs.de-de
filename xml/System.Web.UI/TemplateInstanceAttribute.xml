@@ -1,0 +1,250 @@
+<Type Name="TemplateInstanceAttribute" FullName="System.Web.UI.TemplateInstanceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TemplateInstanceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TemplateInstanceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateInstanceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert ein Metadatenattribut, mit denen die Anzahl der zulässigen Instanzen einer Vorlage angegeben ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateInstanceAttribute> -Klasse können Sie eine Template-Eigenschaft als eine einzelne ermöglicht oder mehrere Instanziierungen zu markieren. Eine Vorlage, die nur eine einzelne Instanziierung ermöglicht kann die Steuerelemente enthalten, die intern auf die verwiesen wird, enthalten sind. Die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> Eigenschaft ist ein Beispiel für eine Eigenschaft, die nur einmal instanziiert werden kann.  
+  
+ Dies <xref:System.Web.UI.TemplateInstanceAttribute> Klasse ist optional. Wenn eine Template-Eigenschaft nicht mit erweitert wird eine <xref:System.Web.UI.TemplateInstanceAttribute> -Klasse, der Standardwert ist die <xref:System.Web.UI.TemplateInstanceAttribute.Multiple> Feld, das verwendet wird. Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.TemplateInstance> Enumeration und die <xref:System.Web.UI.TemplateInstanceAttribute> Klasse. Eine benutzerdefinierte <xref:System.Web.UI.WebControls.LoginView> Steuerelement namens `MyLoginViewA` überschreibt die <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> -Eigenschaft und verwendet die <xref:System.Web.UI.TemplateInstanceAttribute> Klasse, um anzugeben, dass nur eine Instanz von der <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> Eigenschaft erstellt wird.  
+  
+ [!code-csharp[System.Web.UI.TemplateInstanceAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/cs/templateinstanceattribute.cs#1)]
+ [!code-vb[System.Web.UI.TemplateInstanceAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/vb/templateinstanceattribute.vb#1)]  
+  
+ Im folgenden Codebeispiel wird eine ASPX-Datei, verwendet der `MyLoginViewA` steuern und veranschaulicht, wie Eigenschaften für den Zugriff auf die <xref:System.Web.UI.TemplateInstanceAttribute> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.TemplateInstanceAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/cs/templateinstanceattribute.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.TemplateInstanceAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/vb/templateinstanceattribute.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateInstanceAttribute (System.Web.UI.TemplateInstance instances);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.TemplateInstance instances) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateInstanceAttribute.#ctor(System.Web.UI.TemplateInstance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instances" Type="System.Web.UI.TemplateInstance" />
+      </Parameters>
+      <Docs>
+        <param name="instances">Ein <see cref="T:System.Web.UI.TemplateInstance" />-Enumerationswert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Klasse mit dem angegebenen <see cref="T:System.Web.UI.TemplateInstance" /> -Enumerationswert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.TemplateInstanceAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.TemplateInstanceAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.TemplateInstanceAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateInstanceAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert den Standardwert für die <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Klasse. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardverhalten besteht, erstellen Sie mehrere Instanzen der Vorlage mithilfe der <xref:System.Web.UI.TemplateInstance.Multiple> -Enumerationswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateInstanceAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der zu überprüfende <see cref="T:System.Object" />.</param>
+        <summary>Gibt an, ob das angegebene Objekt eine <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Objekt und identisch mit dieser <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert einer <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Objekt und identisch mit dieser <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateInstanceAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für diese <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Objekt.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Instances">
+      <MemberSignature Language="C#" Value="public System.Web.UI.TemplateInstance Instances { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.TemplateInstance Instances" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplateInstanceAttribute.Instances" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.TemplateInstance" /> -Enumerationswert ab, der die aktuelle Vorlageninstanz darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.TemplateInstance" /> -Enumerationswert ab, der die aktuelle Vorlageninstanz darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die möglichen Werte sind entweder die <xref:System.Web.UI.TemplateInstanceAttribute.Single> Feld oder die <xref:System.Web.UI.TemplateInstance.Multiple> Feld.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.TemplateInstanceAttribute.Instances%2A> Eigenschaft. In der `Page_Load` -Ereignis für eine ASPX-Seite, die `MyLoginViewA` des benutzerdefinierten Steuerelements <xref:System.Web.UI.TemplateInstanceAttribute> -Klasse für die `AnonymousTemplate` Eigenschaft abgefragt wird.  
+  
+ Für die Definition des `MyLoginViewA` steuern, finden Sie unter <xref:System.Web.UI.TemplateInstanceAttribute>.  
+  
+ [!code-csharp[System.Web.UI.TemplateInstanceAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/cs/templateinstanceattribute.aspx#3)]
+ [!code-vb[System.Web.UI.TemplateInstanceAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/vb/templateinstanceattribute.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateInstanceAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob das aktuelle <see cref="T:System.Web.UI.TemplateInstanceAttribute" />-Objekt mit dem standardmäßigen <see cref="T:System.Web.UI.TemplateInstanceAttribute" />-Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert der aktuellen Instanz von <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> der Standardwert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für die <xref:System.Web.UI.TemplateInstanceAttribute> Klasse ist die <xref:System.Web.UI.TemplateInstanceAttribute.Multiple> Feld.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.UI.TemplateInstanceAttribute.IsDefaultAttribute%2A>-Methode verwenden. In der `Page_Load` -Ereignis für eine ASPX-Seite, die `MyLoginViewA` des benutzerdefinierten Steuerelements <xref:System.Web.UI.TemplateInstanceAttribute> -Klasse für die `AnonymousTemplate` Eigenschaft abgefragt wird.  
+  
+ Für die Definition der `MyLoginViewA` steuern, finden Sie unter <xref:System.Web.UI.TemplateInstanceAttribute>.  
+  
+ [!code-csharp[System.Web.UI.TemplateInstanceAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/cs/templateinstanceattribute.aspx#3)]
+ [!code-vb[System.Web.UI.TemplateInstanceAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.TemplateInstanceAttribute/vb/templateinstanceattribute.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiple">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.TemplateInstanceAttribute Multiple;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.TemplateInstanceAttribute Multiple" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.TemplateInstanceAttribute.Multiple" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateInstanceAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> -Klasse eine Vorlage, die mehrere Male instanziiert werden. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.TemplateInstanceAttribute.Multiple> Feld zugegriffen wird, eine neue Vorlageninstanz mehrmals instanziiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.TemplateInstanceAttribute Single;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.TemplateInstanceAttribute Single" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.TemplateInstanceAttribute.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateInstanceAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.UI.TemplateInstanceAttribute" /> -Klasse eine Vorlage, die ein einziges Mal instanziiert werden. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.TemplateInstanceAttribute.Single> Feld zugegriffen wird, eine neue Vorlageninstanz ein einziges Mal instanziiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

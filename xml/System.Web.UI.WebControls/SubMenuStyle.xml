@@ -1,0 +1,645 @@
+<Type Name="SubMenuStyle" FullName="System.Web.UI.WebControls.SubMenuStyle">
+  <TypeSignature Language="C#" Value="public class SubMenuStyle : System.Web.UI.WebControls.Style, System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SubMenuStyle extends System.Web.UI.WebControls.Style implements class System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SubMenuStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Stil eines Untermenüs in einem <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle> Klasse darstellen, den Stil eines Untermenüs in der <xref:System.Web.UI.WebControls.Menu> Steuerelement. Ein Untermenü kann in einem statischen Menü oder einem dynamischen Menü angezeigt werden. Ein statisches Menü ist immer sichtbar ist, auf eine <xref:System.Web.UI.WebControls.Menu> zu steuern, während ein dynamisches Menü nur angezeigt wird, wenn der Benutzer den Mauszeiger über einen übergeordneten Menüelement positioniert, das ein dynamisches Untermenü enthält. Sie können verschiedene Formateigenschaften (z. B. Schriftart und Farbe) für die Untermenüs in einem statischen Menü und einem dynamischen Menü mit den Eigenschaften in der folgenden Tabelle angeben.  
+  
+|Untermenü Element Style-Eigenschaft|Beschreibung|  
+|---------------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A>|Die Stileigenschaften für ein Untermenü in einem dynamischen Menü.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A>|Die Stileigenschaften für ein Untermenü in einem statischen Menü.|  
+  
+ Die <xref:System.Web.UI.WebControls.SubMenuStyle> Klasse erbt die meisten ihrer Member aus der `Style` Klasse. Es erweitert die `Style` Klasse durch Bereitstellen von Eigenschaften, die die Menge des Speicherplatzes, um den Text des Menüelements zu steuern. Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding%2A> Eigenschaft, um die Menge des Speicherplatzes links und rechts vom Text des Menüelements zu steuern. Auf ähnliche Weise die <xref:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding%2A> Eigenschaft steuert die Menge des Speicherplatzes, die oben und unten Text des Menüelements.  
+  
+ Weitere Informationen zu den geerbten formateinstellungen, finden Sie unter <xref:System.Web.UI.WebControls.Style>.  
+  
+> [!NOTE]
+>  Legen Sie die `z-index` von HTML-Objekten, die durch Festlegen eines Untermenüs zugeordnet sind die <xref:System.Web.UI.WebControls.Style.CssClass%2A> Eigenschaft des Formats Untermenü. Die `z-index` Attribut definiert die Stapelreihenfolge des gerenderten HTML-Objekten. Dynamische Menüelemente erscheint standardmäßig über alle HTML-Objekt mit dem Standardwert Z-Index (0).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht, wie ein benutzerdefiniertes Format für ein Untermenü in einem dynamischen Menü an.  
+  
+ [!code-aspx-csharp[MenuDynamicMenuStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuDynamicMenuStyle/CS/menudynamicmenustylecs.aspx#1)]
+ [!code-aspx-vb[MenuDynamicMenuStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuDynamicMenuStyle/VB/menudynamicmenustylevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubMenuStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.SubMenuStyle" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.SubMenuStyle> Klasse. Dieser Konstruktor wird normalerweise verwendet, wenn dynamisch Auffüllen der <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> Auflistung. Sie dient auch beim Erweitern der <xref:System.Web.UI.WebControls.Menu> Klasse initialisiert werden, die Stileigenschaften des Elements, wie z. B. <xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A> oder <xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubMenuStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">Die Ansichtszustandsinformationen der aktuellen Anforderung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> -Klasse mit den angegebenen Ansichtszustandsinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen eines neuen <xref:System.Web.UI.WebControls.SubMenuStyle> Objekt mit den im Ansichtszustand der Anforderung enthaltenen Informationen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Das zu kopierende <see cref="T:System.Web.UI.WebControls.Style" />-Objekt.</param>
+        <summary>Kopiert die Stileigenschaften des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt in der aktuellen Instanz der dem <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle.CopyFrom%2A> Methode, um die Stileigenschaften des angegebenen doppelte <xref:System.Web.UI.WebControls.Style> -Objekt in der <xref:System.Web.UI.WebControls.SubMenuStyle> -Objekt, das diese Methode aufruft.  
+  
+> [!CAUTION]
+>  Alle Eigenschaften in der aktuellen Instanz der dem <xref:System.Web.UI.WebControls.SubMenuStyle> Klasse werden durch die entsprechenden Eigenschaften in der angegebenen ersetzt <xref:System.Web.UI.WebControls.Style> Objekt.  
+  
+ Verwenden Sie zum Kopieren von Stileigenschaften ohne festgelegte Werte ersetzt die <xref:System.Web.UI.WebControls.SubMenuStyle.MergeWith%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillStyleAttributes">
+      <MemberSignature Language="C#" Value="protected override void FillStyleAttributes (System.Web.UI.CssStyleCollection attributes, System.Web.UI.IUrlResolutionService urlResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void FillStyleAttributes(class System.Web.UI.CssStyleCollection attributes, class System.Web.UI.IUrlResolutionService urlResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.FillStyleAttributes(System.Web.UI.CssStyleCollection,System.Web.UI.IUrlResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Web.UI.CssStyleCollection" />
+        <Parameter Name="urlResolver" Type="System.Web.UI.IUrlResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die <see cref="T:System.Web.UI.CssStyleCollection" /> Objekt, der die Stileigenschaften hinzugefügt.</param>
+        <param name="urlResolver">Die <see cref="T:System.Web.UI.IUrlResolutionService" />-Objekt, das die Kontextinformationen für den aktuellen Speicherort (URL) implementiert.</param>
+        <summary>Fügt die Stileigenschaften der <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> Objekt mit dem angegebenen <see cref="T:System.Web.UI.CssStyleCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle.FillStyleAttributes%2A> Methode, um die Stileigenschaften der aktuellen Instanz der Hinzufügen der <xref:System.Web.UI.WebControls.SubMenuStyle> Klasse mit dem angegebenen <xref:System.Web.UI.CssStyleCollection?displayProperty=nameWithType> Objekt.  
+  
+> [!NOTE]
+>  Diese Methode wird nur von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit HorizontalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit HorizontalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie der Abstand links und rechts vom ein Untermenü.</summary>
+        <value>Die Menge des Speicherplatzes links und rechts vom Text eines Untermenüs. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding%2A> Eigenschaft, um den Abstand zwischen dem Text des Untermenüelements im und der Seite des enthaltenden Menüs zu steuern. Verwenden Sie zum Steuern des vertikalen Abstand zwischen Untermenüelemente der <xref:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist der <see cref="P:System.Web.UI.WebControls.Unit.Type" /> <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> oder kleiner als 0 ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.Web.UI.WebControls.Style" /> zu den Einstellungen und zu kombinierende Objekt.</param>
+        <summary>Kombiniert die Stileigenschaften des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt, mit denen die aktuelle Instanz die <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle.MergeWith%2A> -Methode kombinieren Sie die Stileigenschaften des angegebenen <xref:System.Web.UI.WebControls.Style> Objekt mit der die Stileigenschaften der <xref:System.Web.UI.WebControls.SubMenuStyle> -Objekt, das diese Methode aufgerufen wird.  
+  
+> [!CAUTION]
+>  Diese Methode verbindet die Formateigenschaften zurück, indem Sie jede Eigenschaft, die nicht in der aktuellen festgelegt ist <xref:System.Web.UI.WebControls.SubMenuStyle> Objekt mit den entsprechenden Wert im angegebenen <xref:System.Web.UI.WebControls.Style> Objekt. Nur Eigenschaften, die nicht festgelegt wurde, werden aktualisiert. Wenn eine Eigenschaft im angegebenen <xref:System.Web.UI.WebControls.Style> Objekt nicht festgelegt ist, wird die entsprechende Eigenschaft in der aktuellen <xref:System.Web.UI.WebControls.SubMenuStyle> Objekt wird nicht geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die aktuelle Instanz von der <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> Klasse, um den ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle.Reset%2A> Methode, um alle entfernen Stilelemente aus Behälter Status definiert und Zurücksetzen der <xref:System.Web.UI.WebControls.SubMenuStyle> Objekt in seinen ursprünglichen Zustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetAttributes">
+      <MemberSignature Language="C#" Value="System.ComponentModel.AttributeCollection ICustomTypeDescriptor.GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection System.ComponentModel.ICustomTypeDescriptor.GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetAttributes" />.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.AttributeCollection" /> , die die Attribute für dieses Objekt enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetClassName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetClassName" />.</summary>
+        <returns>Der Klassenname des Objekts oder <see langword="null" /> , wenn die Klasse nicht über einen Namen verfügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetComponentName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetComponentName" />.</summary>
+        <returns>Der Name des Objekts, oder <see langword="null" /> , wenn das Objekt nicht über einen Namen verfügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetConverter">
+      <MemberSignature Language="C#" Value="System.ComponentModel.TypeConverter ICustomTypeDescriptor.GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.TypeConverter System.ComponentModel.ICustomTypeDescriptor.GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetConverter" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter" /> , der der Konverter für dieses Objekt oder <see langword="null" /> liegt keine <see cref="T:System.ComponentModel.TypeConverter" /> für dieses Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptor ICustomTypeDescriptor.GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.EventDescriptor" /> Objekt, das das Standardereignis für das Objekt darstellt oder <see langword="null" /> , wenn das Objekt keine Ereignisse aufweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor ICustomTypeDescriptor.GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekt, das die Standardeigenschaft für dieses Objekt darstellt oder <see langword="null" /> , wenn das Objekt keine Eigenschaften besitzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEditor">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Ein <see cref="T:System.Type" /> , die der Editor für dieses Objekt darstellt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEditor(System.Type)" />.</summary>
+        <returns>Ein <see cref="T:System.Object" /> des angegebenen Typs, das den Editor für dieses Objekt ist oder <see langword="null" /> , wenn der Editor nicht gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="Overload:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents" />.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.EventDescriptorCollection" /> , die die Ereignisse für diese Instanz enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> , die als Filter verwendet wird.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents(System.Attribute[])" />.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.EventDescriptorCollection" /> , die die gefilterten Ereignisse für diese Instanz enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="Overload:System.ComponentModel.ICustomTypeDescriptor.GetProperties" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Eigenschaften für diese Instanz enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> , die als Filter verwendet wird.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties(System.Attribute[])" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> -Objekt, das die gefilterten Eigenschaften für diese Instanz enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , das die Eigenschaft, deren Besitzer zu findenden darstellt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , den Besitzer der angegebenen Eigenschaft darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.Web.UI.WebControls.SubMenuStyle> Instanz umgewandelt wird die <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit VerticalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit VerticalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Leerraum oberhalb und unterhalb eines Untermenüs fest.</summary>
+        <value>Die Menge des Speicherplatzes, die oben und unten ein Untermenü. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding%2A> Eigenschaft, um den vertikalen Abstand zwischen dem Text der Untermenüelemente zu steuern. Um den horizontalen Abstand zwischen Untermenütext zu steuern, verwenden die <xref:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist der <see cref="P:System.Web.UI.WebControls.Unit.Type" /> <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> oder kleiner als 0 ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

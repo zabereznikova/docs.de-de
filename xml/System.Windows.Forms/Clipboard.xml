@@ -1,0 +1,1166 @@
+<Type Name="Clipboard" FullName="System.Windows.Forms.Clipboard">
+  <TypeSignature Language="C#" Value="public sealed class Clipboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Clipboard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Clipboard" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Hinzufügen von Daten zur und Abrufen von Daten aus der Zwischenablage des Systems. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der vordefinierten Formate für die Verwendung mit der <xref:System.Windows.Forms.Clipboard> Klasse, finden Sie unter der <xref:System.Windows.Forms.DataFormats> Klasse.  
+  
+ Rufen Sie <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> , die Daten in die Zwischenablage, und Ersetzen Sie dabei den aktuellen Inhalt zu speichern. Um eine permanente Kopie der Daten in die Zwischenablage zu platzieren, legen Sie die `copy` Parameter `true`.  
+  
+> [!NOTE]
+>  Um Daten in der Zwischenablage in verschiedenen Formaten zu speichern, verwenden die <xref:System.Windows.Forms.DataObject> Klasse oder ein <xref:System.Windows.Forms.IDataObject> Implementierung. Hinzufügen von Daten zur Zwischenablage in verschiedenen Formaten, die Möglichkeit zu maximieren, dass eine Zielanwendung, dessen formatanforderungen, die Sie möglicherweise nicht bekannt, die Daten erfolgreich abgerufen werden.  
+  
+ Rufen Sie <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> zum Abrufen von Daten aus der Zwischenablage. Die Daten werden zurückgegeben, als ein Objekt, implementiert die <xref:System.Windows.Forms.IDataObject> Schnittstelle. Verwenden Sie die Methoden, die vom angegebenen <xref:System.Windows.Forms.IDataObject> Felder "und" <xref:System.Windows.Forms.DataFormats> zum Extrahieren der Daten aus dem Objekt. Aufrufen, wenn Sie das Format der Daten, Sie abgerufen, nicht kennen, die <xref:System.Windows.Forms.IDataObject.GetFormats%2A> Methode der <xref:System.Windows.Forms.IDataObject> Schnittstelle, um einer Liste mit allen Formaten diese Daten abzurufen in gespeichert ist. Rufen Sie anschließend die <xref:System.Windows.Forms.IDataObject.GetData%2A> Methode der <xref:System.Windows.Forms.IDataObject> Schnittstelle, und geben Sie ein Format, das Ihre Anwendung verwenden können.  
+  
+ In [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]die <xref:System.Windows.Forms.Clipboard> -Klasse stellt zusätzliche Methoden, die zur Bearbeitung der Zwischenablage des Systems zu vereinfachen. Rufen Sie die <xref:System.Windows.Forms.Clipboard.Clear%2A> Methode, um alle Daten aus der Zwischenablage entfernen. Um Daten von einem bestimmten Format in die Zwischenablage hinzuzufügen, und Ersetzen Sie dabei die vorhandenen Daten, rufen Sie die entsprechende `Set` *Format* -Methode, wie z. B. <xref:System.Windows.Forms.Clipboard.SetText%2A>, oder rufen Sie die <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode, um das Format anzugeben. Um Daten von einem bestimmten Format aus der Zwischenablage abzurufen, rufen Sie zuerst die entsprechende `Contains` *Format* Methode (z. B. <xref:System.Windows.Forms.Clipboard.ContainsText%2A>) Methode zu bestimmen, ob Daten in die Zwischenablage enthält, formatieren, und rufen Sie anschließend, die entsprechende `Get` *Format* Methode (z. B. <xref:System.Windows.Forms.Clipboard.GetText%2A>) zum Abrufen der Daten, die Zwischenablage enthält. Um das Format bei diesen Vorgängen anzugeben, rufen die <xref:System.Windows.Forms.Clipboard.ContainsData%2A> und <xref:System.Windows.Forms.Clipboard.GetData%2A> Methoden stattdessen.  
+  
+> [!NOTE]
+>  Alle Windows-basierten Anwendungen freigeben die Systemzwischenablage, damit der Inhalt beim Wechsel zu einer anderen Anwendung geändert werden.  
+>   
+>  Ein Objekt muss für ihn in die Zwischenablage zu versetzen serialisierbar sein. Wenn Sie ein nicht serialisierbares Objekt an eine Zwischenablage-Methode übergeben, wird die Methode fehl, ohne eine Ausnahme auszulösen. Finden Sie unter <xref:System.Runtime.Serialization> für Weitere Informationen zur Serialisierung. Wenn Ihre Anwendung ein sehr spezifischen Format erforderlich ist, können die Header hinzugefügt werden, um die Daten in den Serialisierungsprozess der Anwendung erkennen Ihre Daten verhindern. Um das Datenformat zu erhalten, fügen Sie Ihre Daten als ein <xref:System.Byte> array an eine <xref:System.IO.MemoryStream> und übergeben Sie die <xref:System.IO.MemoryStream> auf die <xref:System.Windows.Forms.DataObject.SetData%2A> Methode.  
+>   
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+>   
+>  Besonderheiten können notwendig sein, wenn die Zwischenablage Metafile-Format mit. Aufgrund einer Einschränkung in der aktuellen Implementierung der <xref:System.Windows.Forms.DataObject> -Klasse, die Metafile-Format, die von .NET Framework verwendet, kann von Anwendungen, die ein älteren Metafile-Format verwenden nicht erkannt werden. In diesem Fall müssen Sie mit der Win32-Zwischenablage-Anwendungsprogrammierschnittstellen (APIs) zusammenarbeiten. Weitere Informationen finden Sie im Artikel 323530, "Metadateien auf Zwischenablage sind nicht sichtbar für alle Anwendungen", in der Microsoft Knowledge Base unter http://support.microsoft.com.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.Clipboard> Methoden zum Hinzufügen von Daten zur und aus der Zwischenablage des Systems abrufen. Dieser Code geht davon aus `button1`, `button2`, `textBox1`, und `textBox2` erstellt und auf dem Formular abgelegt wurden.  
+  
+ Die `button1_Click` Methodenaufrufe <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> markierten Text im Textfeld und platzieren Sie es in die Zwischenablage des Systems.  
+  
+ Die `button2_Click` Methodenaufrufe <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> zum Abrufen von Daten aus der Zwischenablage des Systems. Der Code verwendet <xref:System.Windows.Forms.IDataObject> und <xref:System.Windows.Forms.DataFormats> um die zurückgegebenen Daten zu extrahieren und zeigt die Daten in `textBox2`.  
+  
+ [!code-cpp[Classic Clipboard Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public static void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Daten aus der Zwischenablage an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die Zwischenablage von mehreren Prozessen gemeinsam verwendet wird, kann beim Aufrufen dieser Methode dieser Prozesse auswirken.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Clipboard#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Löschen der Zwischenablage des Systems an. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.OwnClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public static bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob Daten in der Zwischenablage in die <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> Format.</summary>
+        <returns>
+          <see langword="true" />Wenn auf die Zwischenablage Audiodaten vorhanden ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestimmen, ob die Zwischenablage Audiodaten enthält die <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsData">
+      <MemberSignature Language="C#" Value="public static bool ContainsData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das Format der Daten, die gesucht werden soll. Finden Sie unter <see cref="T:System.Windows.Forms.DataFormats" /> für vordefinierte Formate.</param>
+        <summary>Gibt an, ob Daten in die Zwischenablage kopiert, die im angegebenen Format oder in diesem Format konvertiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn Daten in die Zwischenablage kopiert, die im angegebenen <paramref name="format" /> oder kann in diesem Format konvertiert werden; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataFormats> Klasse enthält vordefinierte Formatnamen, die mit dieser Methode verwendet werden können.  
+  
+ Verwenden Sie diese Methode, um zu bestimmen, ob die Zwischenablage Daten im angegebenen Format oder einem kompatiblen Format enthält die <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode.  
+  
+> [!NOTE]
+>  Daten können in ein anderes Format konvertiert werden, wenn es gespeichert wurde, gibt an, dass die Konvertierung zulässig ist und das angeforderte Format mit dem gespeicherten Format kompatibel ist. Z. B. Daten gespeichert werden als Unicode-Text konvertiert werden kann.  
+>   
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.Clipboard#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public static bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob Daten in die Zwischenablage kopiert, die in der <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> formatieren oder in diesem Format konvertiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Datei Dropdown-Liste auf die Zwischenablage vorhanden ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Datei Dropdown-Liste ist eine Auflistung von Zeichenfolgen, die Pfadinformationen für Dateien enthält.  
+  
+ Verwenden Sie diese Methode, um festzustellen, ob die Zwischenablage eine Dropdownliste Datei enthält die <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#30)]
+ [!code-vb[System.Windows.Forms.Clipboard#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public static bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob Daten in die Zwischenablage kopiert, die in der <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> formatieren oder in diesem Format konvertiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn auf die Zwischenablage Bilddaten vorhanden ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestimmen, ob die Zwischenablage Bilddaten enthält die <xref:System.Windows.Forms.Clipboard.GetImage%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.Clipboard#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob Daten in der Zwischenablage in die <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> oder <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" /> Format, je nach Betriebssystem.</summary>
+        <returns>
+          <see langword="true" />Wenn auf die Zwischenablage Textdaten vorhanden ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft das Vorhandensein von Daten in der <xref:System.Windows.Forms.TextDataFormat.UnicodeText> formatieren bei [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] und [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)]. Andernfalls, diese Methode überprüft das Vorhandensein von Daten in die <xref:System.Windows.Forms.TextDataFormat.Text> Format.  
+  
+ Verwenden Sie diese Methode, um zu bestimmen, ob die Zwischenablage Textdaten enthält die <xref:System.Windows.Forms.Clipboard.GetText%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Überladung der <xref:System.Windows.Forms.Clipboard.ContainsText%2A> -Methode, die diese Überladung ähnelt.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Einer der <see cref="T:System.Windows.Forms.TextDataFormat" />-Werte.</param>
+        <summary>Gibt an, ob Textdaten in der Zwischenablage in das Format, das vom angegebenen besteht <see cref="T:System.Windows.Forms.TextDataFormat" /> Wert.</summary>
+        <returns>
+          <see langword="true" />Wenn Textdaten in die Zwischenablage in den Wert für die angegebene <paramref name="format" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestimmen, ob die Zwischenablage Textdaten enthält die <xref:System.Windows.Forms.Clipboard.GetText%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> ist kein gültiger <see cref="T:System.Windows.Forms.TextDataFormat" />-Wert.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public static System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Audiostream aus der Zwischenablage ab.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" /> , Audiodaten enthält oder <see langword="null" /> enthält die Zwischenablage keine Daten in die <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> Format.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.ContainsAudio%2A> Methode, um zu bestimmen, ob die Zwischenablage Audiodaten enthält, bevor Sie es mit dieser Methode abrufen.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.SetAudio%2A> Methode zum Hinzufügen von audio-Daten in die Zwischenablage.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public static object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das Format der abzurufenden Daten. Finden Sie unter <see cref="T:System.Windows.Forms.DataFormats" /> für vordefinierte Formate.</param>
+        <summary>Ruft Daten aus der Zwischenablage in das angegebene Format ab.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die Daten in der Zwischenablage darstellt oder <see langword="null" /> , wenn die Zwischenablage keine Daten enthält, die im angegebenen <paramref name="format" /> oder in diesem Format konvertiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.ContainsData%2A> Methode, um zu bestimmen, ob die Zwischenablage Daten im angegebenen Format oder einem kompatiblen Format enthält, bevor Sie es mit dieser Methode abrufen.  
+  
+ Wenn diese Methode die Daten im angegebenen Format nicht finden kann, versucht die Daten in das Format zu konvertieren. Wenn die Daten in das angegebene Format konvertiert werden können oder wenn die Daten mit der automatischen Konvertierung festgelegt gespeichert wurde `false`, gibt diese Methode `null`.  
+  
+> [!NOTE]
+>  Daten können in ein anderes Format konvertiert werden, wenn es gespeichert wurde, gibt an, dass die Konvertierung zulässig ist und das angeforderte Format mit dem gespeicherten Format kompatibel ist. Z. B. Daten gespeichert werden als Unicode-Text konvertiert werden kann.  
+>   
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode zum Hinzufügen von Daten in einem bestimmten Format in die Zwischenablage.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.Clipboard#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataObject">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.IDataObject GetDataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Forms.IDataObject GetDataObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetDataObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IDataObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Daten, die aktuell in der Zwischenablage des Systems ab.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.IDataObject" /> , die die Daten aktuell in der Zwischenablage darstellt oder <see langword="null" /> Wenn es keine Daten in die Zwischenablage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da der Datentyp des Objekts zurückgegeben wird, aus der Zwischenablage variieren kann, gibt diese Methode die Daten in eine <xref:System.Windows.Forms.IDataObject>. Anschließend können Sie Methoden der <xref:System.Windows.Forms.IDataObject> Schnittstelle, um die Daten in den richtigen Datentyp zu extrahieren.  
+  
+ Diese Methode versucht, Daten abzurufen, zehn Mal in Intervallen von 100 Millisekunden und löst eine <xref:System.Runtime.InteropServices.ExternalException> , wenn alle Versuche fehlgeschlagen sind.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.Clipboard> Methoden zum Hinzufügen von Daten zur und aus der Zwischenablage des Systems abrufen. Dieser Code geht davon aus `button1`, `button2`, `textBox1`, und `textBox2` auf dem Formular platziert wurden.  
+  
+ Die `button1_Click` Methodenaufrufe <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> markierten Text im Textfeld und platzieren Sie es in die Zwischenablage des Systems.  
+  
+ Die `button2_Click` Methodenaufrufe <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> zum Abrufen von Daten aus der Zwischenablage des Systems. Der Code verwendet <xref:System.Windows.Forms.IDataObject> und <xref:System.Windows.Forms.DataFormats> um die zurückgegebenen Daten zu extrahieren. Die Daten werden angezeigt, `textBox2`.  
+  
+ [!code-cpp[Classic Clipboard Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Daten konnten nicht aus der Zwischenablage abgerufen werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA) und die <see cref="P:System.Windows.Forms.Application.MessageLoop" /> Eigenschaftswert ist <see langword="true" />. Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Dateinamen aus der Zwischenablage ab.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.StringCollection" /> mit Dateinamen oder <see langword="null" /> , wenn die Zwischenablage keine Daten enthält, die in der <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> formatieren oder in diesem Format konvertiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Datei Dropdown-Liste ist eine Auflistung von Zeichenfolgen, die Pfadinformationen für Dateien enthält.  
+  
+ Eine Dropdownliste Datei befindet sich in der Zwischenablage als eine <xref:System.String> Array. Diese Methode konvertiert das Array in eine <xref:System.Collections.Specialized.StringCollection> und gibt die Auflistung zurück.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.ContainsFileDropList%2A> Methode, um zu bestimmen, ob die Zwischenablage eine Dropdownliste Datei enthält, bevor sie mit dieser Methode abrufen.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A> -Methode zum Hinzufügen einer Datei-Dropdownliste in die Zwischenablage.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#30)]
+ [!code-vb[System.Windows.Forms.Clipboard#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Bild aus der Zwischenablage ab.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Image" /> , das die Bilddaten Zwischenablage darstellt oder <see langword="null" /> , wenn die Zwischenablage keine Daten enthält, die in der <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> formatieren oder in diesem Format konvertiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.ContainsImage%2A> Methode, um zu bestimmen, ob die Zwischenablage Bilddaten enthält, bevor Sie es mit dieser Methode abrufen.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.SetImage%2A> Methode zum Hinzufügen von Image-Daten in die Zwischenablage.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.Clipboard#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft Textdaten aus der Zwischenablage in die <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> oder <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" /> Format, je nach Betriebssystem.</summary>
+        <returns>Die Textdaten für die Zwischenablage oder <see cref="F:System.String.Empty" /> enthält die Zwischenablage keine Daten in die <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> oder <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" /> Format, je nach Betriebssystem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Textdaten in der <xref:System.Windows.Forms.TextDataFormat.UnicodeText> formatieren bei [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] und [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)]. Andernfalls gibt diese Methode Textdaten in der <xref:System.Windows.Forms.TextDataFormat.Text> Format.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.ContainsText%2A> Methode, um zu bestimmen, ob die Zwischenablage Textdaten enthält, bevor Sie es mit dieser Methode abrufen.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.SetText%2A> Methode zum Hinzufügen von Textdaten in die Zwischenablage.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Überladung der <xref:System.Windows.Forms.Clipboard.GetText%2A> -Methode, die diese Überladung ähnelt.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Einer der <see cref="T:System.Windows.Forms.TextDataFormat" />-Werte.</param>
+        <summary>Ruft Textdaten aus der Zwischenablage in das Format, das vom angegebenen <see cref="T:System.Windows.Forms.TextDataFormat" /> Wert.</summary>
+        <returns>Die Textdaten für die Zwischenablage oder <see cref="F:System.String.Empty" /> , wenn die Zwischenablage keine Daten im angegebenen Format enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.ContainsText%2A> Methode, um zu bestimmen, ob die Zwischenablage Textdaten enthält, bevor Sie es mit dieser Methode abrufen.  
+  
+ Verwenden der <xref:System.Windows.Forms.Clipboard.SetText%2A> Methode zum Hinzufügen von Textdaten in die Zwischenablage.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> ist kein gültiger <see cref="T:System.Windows.Forms.TextDataFormat" />-Wert.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">Ein <see cref="T:System.Byte" /> Array, das die Audiodaten enthält.</param>
+        <summary>Löscht die Zwischenablage und fügt dann ein <see cref="T:System.Byte" /> im array der <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> Format nach dem Konvertieren in eine <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um audio Daten aus der Zwischenablage abzurufen, verwenden Sie zuerst die <xref:System.Windows.Forms.Clipboard.ContainsAudio%2A> Methode, um zu bestimmen, ob die Zwischenablage Audiodaten enthält die <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Überladung der <xref:System.Windows.Forms.Clipboard.SetAudio%2A> -Methode, die diese Überladung ähnelt.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioBytes" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von audio Daten in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">Ein <see cref="T:System.IO.Stream" /> , die Audiodaten enthält.</param>
+        <summary>Löscht die Zwischenablage und fügt dann ein <see cref="T:System.IO.Stream" /> in die <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um audio Daten aus der Zwischenablage abzurufen, verwenden Sie zuerst die <xref:System.Windows.Forms.Clipboard.ContainsAudio%2A> Methode, um zu bestimmen, ob die Zwischenablage Audiodaten enthält die <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioStream" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von audio Daten in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public static void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das Format der Daten festgelegt werden soll. Finden Sie unter <see cref="T:System.Windows.Forms.DataFormats" /> für vordefinierte Formate.</param>
+        <param name="data">Ein <see cref="T:System.Object" /> , das die hinzuzufügenden Daten darstellt.</param>
+        <summary>Löscht die Zwischenablage, und fügt dann Daten im angegebenen Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nicht das Format der Zielanwendung kennen, können Sie Daten in verschiedenen Formaten, die mit dieser Methode speichern.  
+  
+ Mit dieser Methode gespeicherte Daten können in einem kompatiblen Format konvertiert werden, beim Abrufen.  
+  
+ Um Daten aus der Zwischenablage in einem bestimmten Format abzurufen, verwenden Sie zuerst die <xref:System.Windows.Forms.Clipboard.ContainsData%2A> Methode, um zu bestimmen, ob die Zwischenablage Daten in diesem Format enthält die <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.Clipboard#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Daten von einem beliebigen Typ oder Format in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetDataObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten in der Zwischenablage platziert.</param>
+        <summary>Löscht die Zwischenablage, und klicken Sie dann darauf platziert nicht beständige Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Daten werden aus der Zwischenablage des Systems gelöscht, wenn die Anwendung beendet wird.  
+  
+ Diese Methode versucht, den Datensatz zehn Mal in Intervallen von 100 Millisekunden und löst eine <xref:System.Runtime.InteropServices.ExternalException> , wenn alle Versuche fehlgeschlagen sind.  
+  
+> [!NOTE]
+>  Ein Objekt muss für ihn in die Zwischenablage zu versetzen serialisierbar sein. Wenn Sie ein nicht serialisierbares Objekt an diese Methode übergeben, schlägt er fehl, ohne eine Ausnahme auszulösen. Finden Sie unter <xref:System.Runtime.Serialization> für Weitere Informationen zur Serialisierung.  
+>   
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> nicht beständige Textdaten in der Zwischenablage des Systems zu platzieren. In der `button1_Click` -Methode, der ausgewählte Text aus kopiert `textBox1` und in die Zwischenablage eingefügt. In der `button2_Click` -Methode, die Informationen aus der Zwischenablage abgerufen und im angezeigten `textBox2`. Dieser Code geht davon aus `button1`, `button2`, `textBox1`, und `textBox2` erstellt und in einem Formular platziert wurden.  
+  
+ [!code-cpp[Classic Clipboard Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Daten konnten nicht in der Zwischenablage platziert werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Wert von <paramref name="data" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Daten von einem beliebigen Typ oder Format in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data, bool copy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data, bool copy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetDataObject(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="copy" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten in der Zwischenablage platziert.</param>
+        <param name="copy">
+          <see langword="true" />Wenn Daten in die Zwischenablage bleiben nach dem Beenden dieser Anwendung werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Löscht die Zwischenablage, und fügt anschließend Daten darauf, und gibt an, ob die Daten bleiben soll, nachdem die Anwendung beendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `copy` Parameter ist `false`, Daten werden aus der Zwischenablage des Systems gelöscht, wenn die Anwendung beendet wird.  
+  
+ Diese Methode versucht, den Datensatz zehn Mal in Intervallen von 100 Millisekunden und löst eine <xref:System.Runtime.InteropServices.ExternalException> , wenn alle Versuche fehlgeschlagen sind.  
+  
+> [!NOTE]
+>  Ein Objekt muss für ihn in die Zwischenablage zu versetzen serialisierbar sein. Wenn Sie ein nicht serialisierbares Objekt an diese Methode übergeben, schlägt er fehl, ohne eine Ausnahme auszulösen. Finden Sie unter <xref:System.Runtime.Serialization> für Weitere Informationen zur Serialisierung.  
+>   
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Die folgende Methode wird in einer Anwendung ausgeführt. Es wird eine permanente Kopie der ausgewählten Text-Daten in das Textfeld in die Zwischenablage des Systems. Dieser Code geht davon aus `button1`, `textBox1`, und `textBox2` erstellt und in einem Formular platziert wurden.  
+  
+ [!code-cpp[Classic Clipboard.SetDataObject1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard.SetDataObject1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard.SetDataObject1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/VB/source.vb#1)]  
+  
+ In einer anderen Anwendung, die folgende Methode ruft den Text aus der Zwischenablage des Systems ab und fügt den Text in `textBox2`. Dieser Code geht davon aus `button2` und `textBox2` erstellt und in einem Formular platziert wurden.  
+  
+ [!code-cpp[Classic Clipboard.SetDataObject1 Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic Clipboard.SetDataObject1 Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CS/source.cs#2)]
+ [!code-vb[Classic Clipboard.SetDataObject1 Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Daten konnten nicht in der Zwischenablage platziert werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Wert von <paramref name="data" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Daten von einem beliebigen Typ oder Format in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data, bool copy, int retryTimes, int retryDelay);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data, bool copy, int32 retryTimes, int32 retryDelay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetDataObject(System.Object,System.Boolean,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="copy" Type="System.Boolean" />
+        <Parameter Name="retryTimes" Type="System.Int32" />
+        <Parameter Name="retryDelay" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten in der Zwischenablage platziert.</param>
+        <param name="copy">
+          <see langword="true" />Wenn Daten in die Zwischenablage bleiben nach dem Beenden dieser Anwendung werden sollen; andernfalls <see langword="false" />.</param>
+        <param name="retryTimes">Die Anzahl, wie oft versucht wird, platzieren die Daten in die Zwischenablage.</param>
+        <param name="retryDelay">Die Anzahl der Millisekunden zwischen den versuchen anhalten.</param>
+        <summary>Löscht die Zwischenablage und dann versuchen, Daten auf die angegebene Anzahl von Zeiten und mit der angegebenen Verzögerung zwischen versuchen, und optional die Daten in der Zwischenablage nach Beenden der Anwendung zu platzieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hinzufügen von Daten in die Zwischenablage kann gelegentlich fehl, wenn die Zwischenablage mit einem anderen Thread oder einer Anwendung ausgelastet ist. Diese Methode ist nützlich zum Umgehen dieses Problems in Umgebungen, die durch die starke Nutzung der Zwischenablage.  
+  
+ Wenn die `copy` Parameter ist `false`, Daten werden aus der Zwischenablage des Systems gelöscht, wenn die Anwendung beendet wird.  
+  
+> [!NOTE]
+>  Ein Objekt muss für ihn in die Zwischenablage zu versetzen serialisierbar sein. Wenn Sie ein nicht serialisierbares Objekt an diese Methode übergeben, schlägt er fehl, ohne eine Ausnahme auszulösen. Finden Sie unter <xref:System.Runtime.Serialization> für Weitere Informationen zur Serialisierung.  
+>   
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="retryTimes" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="retryDelay" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Daten konnten nicht in der Zwischenablage platziert werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Daten von einem beliebigen Typ oder Format in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public static void SetFileDropList (System.Collections.Specialized.StringCollection filePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFileDropList(class System.Collections.Specialized.StringCollection filePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePaths" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="filePaths">Ein <see cref="T:System.Collections.Specialized.StringCollection" /> , die den Dateinamen enthält.</param>
+        <summary>Löscht die Zwischenablage, und klicken Sie dann fügt eine Auflistung von Dateinamen in der <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Datei Dropdown-Liste ist eine Auflistung von Zeichenfolgen, die Pfadinformationen für Dateien enthält.  
+  
+ Eine Dropdownliste Datei befindet sich in der Zwischenablage als eine <xref:System.String> Array. Diese Methode konvertiert `filePaths` zu einem <xref:System.String> Array vor dem Hinzufügen in die Zwischenablage.  
+  
+ Um eine Dropdownliste Datei aus der Zwischenablage abzurufen, verwenden Sie zuerst die <xref:System.Windows.Forms.Clipboard.ContainsFileDropList%2A> Methode, um zu bestimmen, ob die Zwischenablage Daten in diesem Format enthält die <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#30)]
+ [!code-vb[System.Windows.Forms.Clipboard#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filePaths" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filePaths" />enthält keine Zeichenfolgen.  
+  
+ - oder -   
+  
+ Mindestens eine der Zeichenfolgen in <paramref name="filePaths" /> ist <see cref="F:System.String.Empty" />, enthält nur Leerzeichen, enthält mindestens ein ungültige Zeichen gemäß der Definition von <see cref="F:System.IO.Path.InvalidPathChars" />, ist <see langword="null" />, enthält einen Doppelpunkt (:)) oder vom System definierte maximale Länge überschreitet.  
+  
+ Finden Sie unter der <see cref="P:System.Exception.InnerException" /> Eigenschaft von der <see cref="T:System.ArgumentException" /> für Weitere Informationen.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Daten in die <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> Format in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für den Zugriff auf das Dateisystem. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public static void SetImage (System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetImage(class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetImage(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> hinzuzufügende in die Zwischenablage.</param>
+        <summary>Löscht die Zwischenablage und fügt dann ein <see cref="T:System.Drawing.Image" /> in die <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Abrufen von Bilddaten aus der Zwischenablage zunächst die <xref:System.Windows.Forms.Clipboard.ContainsImage%2A> Methode, um zu bestimmen, ob die Zwischenablage Bilddaten enthält die <xref:System.Windows.Forms.Clipboard.GetImage%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.Clipboard#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="image" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Daten in die <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> Format in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text in die Zwischenablage hinzugefügt werden soll.</param>
+        <summary>Löscht die Zwischenablage und fügt dann die Textdaten in der <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> oder <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" /> Format, je nach Betriebssystem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt Textdaten in der <xref:System.Windows.Forms.TextDataFormat.UnicodeText> formatieren bei [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] und [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)]. Diese Methode fügt andernfalls Textdaten in der <xref:System.Windows.Forms.TextDataFormat.Text> Format.  
+  
+ Verwenden Sie zum Abrufen von Textdaten aus der Zwischenablage zunächst die <xref:System.Windows.Forms.Clipboard.ContainsText%2A> Methode, um zu bestimmen, ob die Zwischenablage Textdaten enthält die <xref:System.Windows.Forms.Clipboard.GetText%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Überladung der <xref:System.Windows.Forms.Clipboard.SetText%2A> -Methode, die diese Überladung ähnelt.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Textdaten in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.OwnClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text, System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text, valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetText(System.String,System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text in die Zwischenablage hinzugefügt werden soll.</param>
+        <param name="format">Einer der <see cref="T:System.Windows.Forms.TextDataFormat" />-Werte.</param>
+        <summary>Löscht die Zwischenablage und fügt dann das Format, das vom angegebenen Textdaten <see cref="T:System.Windows.Forms.TextDataFormat" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Abrufen von Textdaten aus der Zwischenablage zunächst die <xref:System.Windows.Forms.Clipboard.ContainsText%2A> Methode, um zu bestimmen, ob die Zwischenablage Textdaten enthält die <xref:System.Windows.Forms.Clipboard.GetText%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt dieses Elements.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Die Zwischenablage konnte nicht gelöscht werden. Dies tritt normalerweise auf, wenn die Zwischenablage von einem anderen Prozess verwendet wird.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">Der aktuelle Thread befindet sich nicht im Singlethread-Apartment (STA). Hinzufügen der <see cref="T:System.STAThreadAttribute" /> für Ihre Anwendungsverzeichnis <see langword="Main" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> ist kein gültiger <see cref="T:System.Windows.Forms.TextDataFormat" />-Wert.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Hinzufügen von Textdaten in die Zwischenablage des Systems. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionClipboard.OwnClipboard" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

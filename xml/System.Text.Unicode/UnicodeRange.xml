@@ -1,0 +1,139 @@
+<Type Name="UnicodeRange" FullName="System.Text.Unicode.UnicodeRange">
+  <TypeSignature Language="C#" Value="public sealed class UnicodeRange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnicodeRange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.Unicode.UnicodeRange" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen zusammenhängenden Bereich von Unicode-Codepunkten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+## Remarks  
+
+Verwenden Sie die statische <xref:System.Text.Unicode.UnicodeRange.Create%2A> Methode oder die <xref:System.Text.Unicode.UnicodeRange.%23ctor%2A> Konstruktor zur Erstellung einer eine beliebige Unicode-Codepunkten. Verwenden Sie die statischen Eigenschaften der der <xref:System.Text.Unicode.UnicodeRanges> Klasse zum Abrufen einer <xref:System.Text.Unicode.UnicodeRange> -Instanz, die eine Unicode-Codepunkte enthält, benannten Bereichs.
+
+Derzeit ist die <xref:System.Text.Unicode.UnicodeRange> Klasse unterstützt nur die Basic Multilingual Plane (BMP), die von U + 0000 bis U + FFFF erweitert. 
+
+  ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnicodeRange (int firstCodePoint, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 firstCodePoint, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Unicode.UnicodeRange.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="firstCodePoint" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="firstCodePoint">Der erste Codepunkt im Bereich.</param>
+        <param name="length">Die Anzahl der Codepunkten im Bereich.</param>
+        <summary>Erstellt ein neues <see cref="System.Text.Unicode.UnicodeRange" /> , umfasst eine angegebene Anzahl von Zeichen ab einer angegebenen Unicode-Codepunkt.</summary>
+        <remarks>
+        <format type="text/markdown"><![CDATA[  
+## Remarks  
+
+Nicht definierter Codepunkte zwischen `firstCodePoint` und `firstCodePoint`  +  `length` -1 befinden sich die <xref:System.Text.Unicode.UnicodeRange> Instanz, die durch das Aufrufen dieses Konstruktors erstellt.
+
+        ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"> 
+
+           <paramref name="firstCodePoint" />ist kleiner als 0 (null) oder größer als 0xFFFF. 
+
+- oder -            
+
+<paramref name="length" /> ist kleiner als Null.
+
+- oder - 
+
+<paramref name="firstCodePoint" />plus <paramref name="length" /> ist größer als 0xFFFF.
+        </exception>    
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Create (char firstCharacter, char lastCharacter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Text.Unicode.UnicodeRange Create(char firstCharacter, char lastCharacter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Unicode.UnicodeRange.Create(System.Char,System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstCharacter" Type="System.Char" />
+        <Parameter Name="lastCharacter" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="firstCharacter">Das erste Zeichen im Bereich.</param>
+        <param name="lastCharacter">Das letzte Zeichen im Bereich.</param>
+        <summary>Erstellt ein neues <see cref="System.Text.Unicode.UnicodeRange" /> Instanz aus einer Folge von Zeichen.</summary>
+        <returns>Ein Bereich, der alle Zeichen zwischen enthält <paramref name="firstCharacter"/> und <paramref name="lastCharacter"/>.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="System.ArgumentOutOfRangeException"><paramref name="lastCharacter"/>vorausgeht <paramref name="firstCharacter" />.
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstCodePoint">
+      <MemberSignature Language="C#" Value="public int FirstCodePoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstCodePoint" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRange.FirstCodePoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die erste Codepunkt im Bereich dargestellt, die von diesem <see cref="System.Text.Unicode.UnicodeRange"/> Instanz.</summary>
+        <value>Der erste Codepunkt im Bereich.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRange.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Codepunkten im Bereich dargestellt, die von diesem <see cref="System.Text.Unicode.UnicodeRange"/> Instanz.</summary>
+        <value>Die Anzahl der Codepunkten im Bereich. </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

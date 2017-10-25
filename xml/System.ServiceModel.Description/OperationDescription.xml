@@ -1,0 +1,536 @@
+<Type Name="OperationDescription" FullName="System.ServiceModel.Description.OperationDescription">
+  <TypeSignature Language="C#" Value="public class OperationDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OperationDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.OperationDescription" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={name}, IsInitiating={isInitiating}, IsTerminating={isTerminating}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Beschreibung eines Vertragsvorgangs dar, in der Nachrichten beschrieben werden, die den Vorgang ausmachen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Vertrag ist eine Auflistung von Vorgängen, die angibt, was der Endpunkt an die Außenwelt kommuniziert. Jeder Vorgang ist ein Nachrichtenaustausch. Beispielsweise bilden eine Anforderungsnachricht und eine zugeordnete Antwortnachricht einen Anforderung/Antwort-Nachrichtenaustausch.  
+  
+ Ein <xref:System.ServiceModel.Description.ContractDescription>-Objekt wird verwendet, um Verträge und ihre Vorgänge zu beschreiben. Innerhalb einer <xref:System.ServiceModel.Description.ContractDescription> verfügt jeder Vertragsvorgang über eine entsprechende <xref:System.ServiceModel.Description.OperationDescription>, die die Aspekte des Vorgangs beschreibt, wie beispielsweise, ob es sich um einen unidirektionalen Vorgang oder einen Anforderung/Antwort-Vorgang handelt. Jede <xref:System.ServiceModel.Description.OperationDescription> beschreibt auch die Nachrichten, aus denen der Vorgang besteht, unter Verwendung einer Auflistung von <xref:System.ServiceModel.Description.MessageDescription>-Objekten. <xref:System.ServiceModel.Description.ContractDescription> enthält einen Verweis auf eine Schnittstelle, die den Vertrag über das Programmiermodell definiert. Diese Schnittstelle ist mit <xref:System.ServiceModel.ServiceContractAttribute> gekennzeichnet, und die Methoden, die Endpunktvorgängen entsprechen, sind mit <xref:System.ServiceModel.OperationContractAttribute> markiert.  
+  
+ Viele der Eigenschaften der <xref:System.ServiceModel.Description.OperationDescription> haben entsprechende Eigenschaften im [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Programmiermodell für <xref:System.ServiceModel.OperationContractAttribute>, z.&#160;B. <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.ServiceModel.Description.OperationDescription> zurückgegeben, aus der Auflistung zurückgegeben werden, indem Sie die <xref:System.ServiceModel.Description.ContractDescription.Operations%2A> Eigenschaft von der <xref:System.ServiceModel.Description.ContractDescription> Klasse.  Mit folgendem Code wird die Auflistung von Endpunkten durchlaufen und jeder Endpunktname sowie der Name jedes Vorgangs im Endpunkt ausgegeben.  
+  
+ [!code-csharp[DataContractSerializerOperationBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/datacontractserializeroperationbehavior/cs/source.cs#2)]
+ [!code-vb[DataContractSerializerOperationBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/datacontractserializeroperationbehavior/vb/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationDescription (string name, System.ServiceModel.Description.ContractDescription declaringContract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.ServiceModel.Description.ContractDescription declaringContract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationDescription.#ctor(System.String,System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="declaringContract" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Vorgangsbeschreibung.</param>
+        <param name="declaringContract">Die <see cref="T:System.ServiceModel.Description.ContractDescription" />, die verwendet wird, um die Vorgangsbeschreibung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.OperationDescription" />-Klasse mit einem angegebenen Namen und einer angegebenen Vertragsbeschreibung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo BeginMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo BeginMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.BeginMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Begin-Methode des Vorgangs ab oder legt sie fest.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodInfo" />, die Zugriff auf die Attribute und Metadaten der Methode bietet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Behaviors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IOperationBehavior&gt; Behaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.KeyedByTypeCollection`1&lt;class System.ServiceModel.Description.IOperationBehavior&gt; Behaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Behaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IOperationBehavior&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Vorgang zugeordneten Vorgangsverhalten ab bzw. legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.KeyedByTypeCollection`1" />, die die dem Vorgang zugeordneten <see cref="T:System.ServiceModel.Description.IOperationBehavior" />-Objekte enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.IOperationBehavior>-Schnittstelle wird implementiert, um Aspekte der vorgangsweiten Ausführung auf Anwendungsebene für Client- oder Dienstanwendungen zu ändern, zu überprüfen oder zu erweitern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringContract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ContractDescription DeclaringContract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ContractDescription DeclaringContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.DeclaringContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ContractDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vertrag ab, dem der Vorgang zugeordnet ist, oder legt diesen fest.</summary>
+        <value><see cref="T:System.ServiceModel.Description.ContractDescription" /> für den Vorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo EndMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo EndMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.EndMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die End-Methode des Vorgangs ab oder legt sie fest.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodInfo" />, die Zugriff auf die Attribute und Metadaten der Methode bietet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Faults">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.FaultDescriptionCollection Faults { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.FaultDescriptionCollection Faults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Faults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.FaultDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibungen der Fehler ab, die der Vorgangsbeschreibung zugeordnet sind.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Description.FaultDescriptionCollection" />, die Einzelheiten zu den Fehlern enthält, die der Vorgangsbeschreibung zugeordnet sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool HasProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.HasProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob für den Vorgang eine Schutzebene festgelegt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Schutzebene festgelegt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> festgelegt ist, ist die <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A>-Eigenschaft auf `true` festgelegt.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A> entspricht der <xref:System.ServiceModel.OperationContractAttribute.HasProtectionLevel%2A>-Eigenschaft im [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Programmiermodell.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A>-Eigenschaft, um anzugeben, dass die Nachrichten dieses Vorgangs eine bestimmte Schutzebene erfordern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitiating">
+      <MemberSignature Language="C#" Value="public bool IsInitiating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitiating" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.IsInitiating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Methode einen Vorgang, der eine Sitzung auf dem Server initiieren kann implementiert (sofern es sich um eine solche Sitzung vorhanden ist).</summary>
+        <value>
+          <see langword="true" />, wenn dem Vorgang erlaubt wird, eine Sitzung auf dem Server zu initiieren, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>-Eigenschaft steuert, ob ein Vorgang bei der Erstellung einer Sitzung als erster Vorgang aufgerufen werden kann.  
+  
+> [!NOTE]
+>  Der Wert von <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> muss `true` lauten, und die Bindung muss Sitzungen für die <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>-Eigenschaft unterstützen, um ordnungsgemäß zu funktionieren.  
+  
+ Der Standardwert ist `true`, was bedeutet, dass ein Vorgang als erster Vorgang in einem Kanal aufgerufen werden kann. Nachfolgende Aufrufe der initiierenden Methode haben nur die Auswirkung, dass die Methode aufgerufen wird. Es werden keine anderen Sitzungen erstellt.  
+  
+ In der Regel legen Sie für <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> `false` fest, um zu erzwingen, dass Clients eine andere Methode für den Dienst aufrufen, bevor sie diese aktivieren können.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A> entspricht der <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>-Eigenschaft im [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Programmiermodell.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOneWay">
+      <MemberSignature Language="C#" Value="public bool IsOneWay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOneWay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.IsOneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Vorgang eine Antwortnachricht zurückgibt, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn diese Methode eine Anforderungsnachricht empfängt und keine Antwortnachricht zurückgibt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationDescription.IsOneWay%2A>-Eigenschaft, um anzugeben, dass ein Vorgang keine Antwortnachricht zurückgibt. Dieser Vorgangstyp ist für Benachrichtigungen oder die ereignisbezogene Kommunikation hilfreich, besonders bei bidirektionaler Kommunikation.  
+  
+ Wenn die für die <xref:System.ServiceModel.Description.OperationDescription.IsOneWay%2A>-Eigenschaft `false` festgelegt ist (Standardeinstellung), wird sogar bei Methoden, die `void` zurückgeben, eine Antwortnachricht ausgegeben. In diesem Fall erstellt und sendet die Infrastruktur eine leere Nachricht, um dem Aufrufer mitzuteilen, dass die Methode einen Wert zurückgegeben hat.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A> entspricht der <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Eigenschaft im [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Programmiermodell.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTerminating">
+      <MemberSignature Language="C#" Value="public bool IsTerminating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTerminating" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.IsTerminating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Dienstvorgang bewirkt, dass der Server die Sitzung schließt, nachdem die Antwortnachricht gesendet wurde.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang bewirkt, dass der Server die Sitzung schließt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>-Eigenschaft, um anzugeben, dass durch den Aufruf eines Dienstvorgangs die Kommunikationssitzung beendet wird.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A> entspricht der <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>-Eigenschaft im [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Programmiermodell.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Type&gt; KnownTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Type&gt; KnownTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.KnownTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bekannten Typen ab, die der Vorgangsbeschreibung zugeordnet sind.</summary>
+        <value>Die Auflistung von bekannten Typen, die der Vorgangsbeschreibung zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die *bekannten Typen* sind Typen, die bei Serialisierung Deserialisierung beziehungsweise in einem Objektdiagramm vorhanden sein können. Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](~/docs/framework/wcf/feature-details/data-contract-known-types.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Messages">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.MessageDescriptionCollection Messages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.MessageDescriptionCollection Messages" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Messages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Beschreibungen der Nachrichten ab, die den Vorgang ausmachen, oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Description.MessageDescriptionCollection" />, die Beschreibungen der Nachrichten enthält, die den Vorgang ausmachen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Vorgangsbeschreibung ab oder legt ihn fest.</summary>
+        <value>Der Name der Vorgangsbeschreibung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.OperationDescription.Name%2A> Eigenschaft überschreibt die <`operation`> Elementname in WSDL. Der standardmäßige Vorgangsname ist der Name der implementierenden Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationBehaviors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.KeyedCollection&lt;Type,System.ServiceModel.Description.IOperationBehavior&gt; OperationBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.KeyedCollection`2&lt;class System.Type, class System.ServiceModel.Description.IOperationBehavior&gt; OperationBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.OperationBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.KeyedCollection&lt;System.Type,System.ServiceModel.Description.IOperationBehavior&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von Verhaltensweisen für den Vorgang.</summary>
+        <value>Der Satz von Verhaltensweisen für den Vorgang.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schutzebene für den Vorgang ab oder legt diese fest.</summary>
+        <value><see cref="T:System.Net.Security.ProtectionLevel" /> für den Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A>-Eigenschaften steuern, ob die Nachrichten eines Vorgangs verschlüsselt oder/und signiert sein müssen. Der hier festgelegte Wert ist der Standardwert für alle Nachrichten, die für diesen Vorgang angegeben werden, es sei denn, ein kleinerer Bereich überschreibt diesen Wert.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> entspricht der <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A>-Eigenschaft im [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Programmiermodell.  
+  
+ Wenn <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> festgelegt ist, ist die <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A>-Eigenschaft auf `true` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeProtectionLevel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeProtectionLevel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationDescription.ShouldSerializeProtectionLevel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.Description.OperationDescription.ProtectionLevel" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.Description.OperationDescription.ProtectionLevel" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo SyncMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo SyncMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.SyncMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dienstsynchronisierungsmethode der Vorgangsbeschreibung ab oder legt sie fest.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodInfo" />, die Zugriff auf die Attribute und Metadaten der Methode bietet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo TaskMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo TaskMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.TaskMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Methode für den Taskvorgang fest.</summary>
+        <value>Die Methode für den Taskvorgang verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,535 @@
+<Type Name="ParameterBuilder" FullName="System.Reflection.Emit.ParameterBuilder">
+  <TypeSignature Language="C#" Value="public class ParameterBuilder : System.Runtime.InteropServices._ParameterBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit ParameterBuilder extends System.Object implements class System.Runtime.InteropServices._ParameterBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.ParameterBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._ParameterBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._ParameterBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt oder Parameterinformationen zuordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameterattribute müssen konsistent mit der Signatur der Methode. Bei Angabe von `Out` Attribute für einen Parameter, sollten Sie sicherstellen, dass der Typ eines Methodenparameters ein `ByRef` Typ.  
+  
+ Einige <xref:System.Reflection.Emit.ParameterBuilder> Attribute müssen, Sie rufen <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A> mit geeigneten Parametern in der Reihenfolge für die Microsoft intermediate Language (MSIL) zur Laufzeit ordnungsgemäß funktioniert. Angenommen, Sie definieren eine <xref:System.Reflection.Emit.ParameterBuilder> mit ParameterAttributes.Out für Parameter 1 einer `MethodBuilder`, klicken Sie dann in Parameter 1 von <xref:System.Reflection.Emit.MethodBuilder> muss ein Verweis, z. B. Type.GetType ("System.String &"), anstatt Type.GetType("System.String").  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine dynamische Methode mit einem Parameter übergeben, indem Verweis `ParameterBuilder`.  
+  
+ [!code-cpp[System.Reflection.Emit.ParameterBuilder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.ParameterBuilder Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.ParameterBuilder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.ParameterBuilder Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.ParameterBuilder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.ParameterBuilder Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public virtual int Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ParameterBuilder.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute für diesen Parameter ab.</summary>
+        <value>Schreibgeschützt. Ruft die Attribute für diesen Parameter ab.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte des Attributs entsprechen den Werten von der <xref:System.Reflection.ParameterAttributes> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToken">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.Emit.ParameterToken GetToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Reflection.Emit.ParameterToken GetToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.GetToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ParameterToken</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Token für diesen Parameter ab.</summary>
+        <returns>Gibt das Token für diesen Parameter an.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIn">
+      <MemberSignature Language="C#" Value="public bool IsIn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIn" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ParameterBuilder.IsIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dies ein Eingabeparameter ist.</summary>
+        <value>Schreibgeschützt. Ruft ab, ob dies ein Eingabeparameter ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hängt von einem optionalen Metadatenflag ab. Dieses Flag kann vom Compiler eingefügt werden, aber der Compiler sind nicht dazu verpflichtet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptional">
+      <MemberSignature Language="C#" Value="public bool IsOptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOptional" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ParameterBuilder.IsOptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dieser Parameter optional ist.</summary>
+        <value>Schreibgeschützt. Gibt an, ob dieser Parameter optional ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOut">
+      <MemberSignature Language="C#" Value="public bool IsOut { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOut" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ParameterBuilder.IsOut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dieser Parameter ein Ausgabeparameter ist.</summary>
+        <value>Schreibgeschützt. Ruft ab, ob dieser Parameter ein Ausgabeparameter ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ParameterBuilder.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieses Parameters ab.</summary>
+        <value>Schreibgeschützt. Ruft den Namen dieses Parameters ab.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public virtual int Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ParameterBuilder.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Signaturposition für diesen Parameter ab.</summary>
+        <value>Schreibgeschützt. Ruft die Signaturposition für diesen Parameter ab.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetConstant">
+      <MemberSignature Language="C#" Value="public virtual void SetConstant (object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetConstant(object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.SetConstant(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">Der Standardwert dieses Parameters.</param>
+        <summary>Legt den Standardwert des Parameters fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `defaultValue`beschränkt auf die folgenden Typen: `Boolean`, `SByte`, `Int16`, `Int32`, `Int64`, `Byte`, `UInt16`, `UInt32`, `UInt64`, `Single`, `Double`, `DateTime` , `Char`, `String`, und `Enum`. Wenn der Parametertyp ein Verweistyp ist, CLS-Kompatibilität erfordert `defaultValue` werden `null`. Aber beginnend mit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], `defaultValue` kann nicht Null sein, für einen Verweistyp als der Wert dieser Verweistyp zugewiesen werden kann. Angenommen, ein `Int32` Wert zugewiesen werden kann, um einen Parameter vom Typ <xref:System.Object>. Dies ist nicht CLS-kompatibel, aber es kann in Interop-Szenarien nützlich sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Parameter ist nicht mit einem der unterstützten Typen.  
+  
+ - oder -   
+  
+ Der Typ des <paramref name="defaultValue" /> entspricht nicht dem Typ des Parameters.  
+  
+ - oder -   
+  
+ Der Parameter ist vom Typ <see cref="T:System.Object" /> oder anderen Verweistyp <paramref name="defaultValue" /> nicht <see langword="null" />, und der Wert nicht dem Referenztyp zugewiesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.Emit.CustomAttributeBuilder customBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.Emit.CustomAttributeBuilder customBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customBuilder" Type="System.Reflection.Emit.CustomAttributeBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="customBuilder">Eine Instanz einer Hilfsklasse zum Definieren des benutzerdefinierten Attributs.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines benutzerdefinierten Attribut-Generators fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.ConstructorInfo con, byte[] binaryAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.ConstructorInfo con, unsigned int8[] binaryAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="binaryAttribute" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="binaryAttribute">Ein Byte-BLOB, das die Attribute darstellt.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines angegebenen benutzerdefinierten Attribut-BLOBs fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadatenspezifikation in der ECMA Partition II-Dokumentation weitere Informationen zum format finden Sie unter `binaryAttribute`. Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> oder <paramref name="binaryAttribute" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarshal">
+      <MemberSignature Language="C#" Value="public virtual void SetMarshal (System.Reflection.Emit.UnmanagedMarshal unmanagedMarshal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetMarshal(class System.Reflection.Emit.UnmanagedMarshal unmanagedMarshal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.SetMarshal(System.Reflection.Emit.UnmanagedMarshal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("An alternate API is available: Emit the MarshalAs custom attribute instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedMarshal" Type="System.Reflection.Emit.UnmanagedMarshal" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedMarshal">Die Marshallinginformationen für diesen Parameter.</param>
+        <summary>Gibt an, das das Marshalling für diesen Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte die folgende Ausnahme auslösen, momentan jedoch nicht:  
+  
+ <xref:System.InvalidOperationException>Wenn der enthaltende Typ mit TypeBuilder.CreateType() erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="unmanagedMarshal" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ParameterBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _ParameterBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ParameterBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.System#Runtime#InteropServices#_ParameterBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ParameterBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _ParameterBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ParameterBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.System#Runtime#InteropServices#_ParameterBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ParameterBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _ParameterBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ParameterBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.System#Runtime#InteropServices#_ParameterBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ParameterBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _ParameterBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ParameterBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ParameterBuilder.System#Runtime#InteropServices#_ParameterBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

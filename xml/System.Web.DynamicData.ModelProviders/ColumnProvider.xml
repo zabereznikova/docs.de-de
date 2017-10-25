@@ -1,0 +1,381 @@
+<Type Name="ColumnProvider" FullName="System.Web.DynamicData.ModelProviders.ColumnProvider">
+  <TypeSignature Language="C#" Value="public abstract class ColumnProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ColumnProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.ModelProviders.ColumnProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse für Spaltenanbieter bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Spaltenanbieter müssen diese Klasse erweitert. Die <xref:System.Web.UI.WebControls.LinqDataSource> Klasse und der ADO.NET Entity Framework-Klasse sind Anbieter, die diese Klasse zu erweitern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ColumnProvider (System.Web.DynamicData.ModelProviders.TableProvider table);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.DynamicData.ModelProviders.TableProvider table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.ColumnProvider.#ctor(System.Web.DynamicData.ModelProviders.TableProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.ModelProviders.TableProvider" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Tabelle, die die Spalte enthält.</param>
+        <summary>Initialisiert die Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDefaultAttributes">
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.AttributeCollection AddDefaultAttributes (System.Web.DynamicData.ModelProviders.ColumnProvider columnProvider, System.ComponentModel.AttributeCollection attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.ComponentModel.AttributeCollection AddDefaultAttributes(class System.Web.DynamicData.ModelProviders.ColumnProvider columnProvider, class System.ComponentModel.AttributeCollection attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.ColumnProvider.AddDefaultAttributes(System.Web.DynamicData.ModelProviders.ColumnProvider,System.ComponentModel.AttributeCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnProvider" Type="System.Web.DynamicData.ModelProviders.ColumnProvider" />
+        <Parameter Name="attributes" Type="System.ComponentModel.AttributeCollection" />
+      </Parameters>
+      <Docs>
+        <param name="columnProvider">Der Spaltenanbieter.</param>
+        <param name="attributes">Die Attributauflistung.</param>
+        <summary>Fügt Standardattribute hinzu.</summary>
+        <returns>Die Attributauflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `attributes` -Parameter enthält nicht die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> Auflistung, aber der Modellanbieter erfordert dieses Attribut die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> Objekt hinzugefügt wird. Wenn die `attributes` -Parameter enthält nicht die <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute> Auflistung und die Spalte, die von diesem Anbieter dargestellt wird, ist eine Zeichenfolge, die <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute> Objekt hinzugefügt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Association">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ModelProviders.AssociationProvider Association { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.ModelProviders.AssociationProvider Association" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Association" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.AssociationProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anbieter für die Tabelle, die eine Spalte darstellt.</summary>
+        <value>Der Anbieter für eine Tabelle, die eine Spalte darstellt, sofern vorhanden, andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute, die definiert, sind für die Spalte, die von diesem Anbieter dargestellt wird.</summary>
+        <value>Die Attributauflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnType">
+      <MemberSignature Language="C#" Value="public virtual Type ColumnType { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ColumnType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.ColumnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Spalte fest.</summary>
+        <value>Der Typ der Spalte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityTypeProperty">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.PropertyInfo EntityTypeProperty { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.PropertyInfo EntityTypeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.EntityTypeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den <see cref="T:System.Reflection.PropertyInfo" /> Wert der Eigenschaft, die die Spalte in der Entität vom Typ darstellt.</summary>
+        <value>Die <see cref="T:System.Reflection.PropertyInfo" /> Wert der Eigenschaft, die die Spalte in der Entität vom Typ darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCustomProperty">
+      <MemberSignature Language="C#" Value="public virtual bool IsCustomProperty { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCustomProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsCustomProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spalte eine zusätzliche Eigenschaft, die nicht im Datenkontext für das Modell ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte eine zusätzliche Eigenschaft, die nicht im Datenkontext für das Modell ist handelt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Spalten, die nicht in den Datenkontext in der Regel über eine Sicht oder eine berechnete Eigenschaft erhältlich sind. Der Wert, der die <xref:System.Web.DynamicData.ModelProviders.ColumnProvider.IsCustomProperty%2A> Eigenschaft kann verwendet werden, um zu bestimmen, ob die Spaltenvorgänge wie das Sortieren unterstützt. Z. B. die Implementierung von der <xref:System.Linq.IQueryable?displayProperty=nameWithType> Schnittstelle des Datenmodells unterstützt keine Sortierung nach Eigenschaften, die zurückgeben `true` für die <xref:System.Web.DynamicData.ModelProviders.ColumnProvider.IsCustomProperty%2A> -Eigenschaft, da die Spalte nicht in der Datenbank vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsForeignKeyComponent">
+      <MemberSignature Language="C#" Value="public virtual bool IsForeignKeyComponent { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsForeignKeyComponent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsForeignKeyComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spalte Teil eines Fremdschlüssels ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte Teil eines Fremdschlüssels ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für stark typisierte Entität auf Verweisspalten, die Mitglieder der Tabellenentität (ein Tabellenobjekt im Datenmodell) sind, nicht festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenerated">
+      <MemberSignature Language="C#" Value="public virtual bool IsGenerated { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Spaltenwert automatisch von der Datenbank generiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert der Spalte automatisch von der Datenbank generiert wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimaryKey">
+      <MemberSignature Language="C#" Value="public virtual bool IsPrimaryKey { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsPrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spalte Teil des Primärschlüssels für die Tabelle ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte Teil des Primärschlüssels für die Tabelle ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Spalte schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte ist <see langword="read-only" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSortable">
+      <MemberSignature Language="C#" Value="public virtual bool IsSortable { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSortable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsSortable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt einen Wert, der angibt, ob das Datenmodell unterstützt die Tabelle nach dieser Spalte sortiert werden.</summary>
+        <value>
+          <see langword="true" />Wenn das Datenmodell unterstützt die Sortierung der Tabelle nach dieser Spalte; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public virtual int MaxLength { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Länge, die für diese Spalte zulässig ist.</summary>
+        <value>Die maximale Länge, die für diese Spalte zulässig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt für Zeichenfolgen-Datentypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Spalte ab oder legt ihn fest.</summary>
+        <value>Der Name der Spalte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nullable">
+      <MemberSignature Language="C#" Value="public virtual bool Nullable { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Nullable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Nullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spalte null-Werte akzeptiert.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte null-Werte annimmt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob die Spalte null-Werte akzeptiert, wie vom Datenprovider definiert. Weitere Informationen finden Sie unter [Behandlung von Null-Werte](~/docs/framework/data/adonet/sql/handling-null-values.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.ModelProviders.TableProvider Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.ModelProviders.TableProvider Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.TableProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Tabelle, der die Spalte gehört.</summary>
+        <value>Die Tabelle, der die Spalte gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.ColumnProvider.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name" /> Eigenschaft.</summary>
+        <returns>Die <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name" /> Eigenschaft oder der Zeichenfolgendarstellung des Objekts, wenn die <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name" /> Eigenschaft ist <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

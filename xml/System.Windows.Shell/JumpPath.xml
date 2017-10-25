@@ -1,0 +1,66 @@
+<Type Name="JumpPath" FullName="System.Windows.Shell.JumpPath">
+  <TypeSignature Language="C#" Value="public class JumpPath : System.Windows.Shell.JumpItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JumpPath extends System.Windows.Shell.JumpItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.JumpPath" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Shell.JumpItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Link zu einer Datei, die auf einem Windows 7-Taskleiste Sprungliste angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Shell.JumpPath> ist ein Verweis auf eine Datei, die aus geöffnet werden, kann eine [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste Liste zu wechseln. Wenn Ihre Anwendung nicht registriert ist, um den Dateityp des Elements zu behandeln, erscheint die Datei nicht in der Liste zu wechseln. Angenommen, Sie fügen eine <xref:System.Windows.Shell.JumpPath> in eine TXT-Datei muss Ihre Anwendung zum Verarbeiten von TXT-Dateien registriert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JumpPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.JumpPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shell.JumpPath" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpPath.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad zur Datei, in der Sprungliste eingeschlossen werden sollen.</summary>
+        <value>Der Pfad zur Datei, in der Sprungliste eingeschlossen werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anwendung muss registriert sein, um die Dateinamenerweiterung der angegebenen Datei zu verarbeiten; Andernfalls wird das Element verworfen. Angenommen, Sie fügen eine <xref:System.Windows.Shell.JumpPath> in eine TXT-Datei muss Ihre Anwendung zum Verarbeiten von TXT-Dateien registriert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

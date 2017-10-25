@@ -1,0 +1,176 @@
+<Type Name="PrefixOrigin" FullName="System.Net.NetworkInformation.PrefixOrigin">
+  <TypeSignature Language="C#" Value="public enum PrefixOrigin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PrefixOrigin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.PrefixOrigin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie eine IP-Adresse Netzwerkpräfix gefunden wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IP-Adressen sind in zwei Teile unterteilt: die Präfix und Suffix. Das Adresspräfix identifiziert den Netzwerkteil einer IP-Adresse und das Adressensuffix identifiziert den Hostteil. Präfixe werden von globalen Behörden zugewiesen und Suffixe von lokalen Systemadministratoren zugewiesen sind.  
+  
+ Diese Enumeration wird verwendet, durch die <xref:System.Net.NetworkInformation.UnicastIPAddressInformation> und <xref:System.Net.NetworkInformation.MulticastIPAddressInformation> Klassen. Instanzen dieser Klasse werden zurückgegeben, wenn Sie die Adressinformationen für Abrufen einer <xref:System.Net.NetworkInformation.NetworkInterface> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt Präfix und Suffix zu Unicastadressen.  
+  
+ [!code-cpp[NclNetInfo2#45](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#45)]
+ [!code-csharp[NclNetInfo2#45](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#45)]
+ [!code-vb[NclNetInfo2#45](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#45)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dhcp">
+      <MemberSignature Language="C#" Value="Dhcp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin Dhcp = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.Dhcp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Präfix wurde durch einen Dynamic Host Configuration Protocol (DHCP) Server bereitgestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Manual">
+      <MemberSignature Language="C#" Value="Manual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin Manual = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.Manual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Präfix wurde manuell konfiguriert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin Other = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Präfix wurde mithilfe einer nicht angegebenen Quelle gefunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterAdvertisement">
+      <MemberSignature Language="C#" Value="RouterAdvertisement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin RouterAdvertisement = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.RouterAdvertisement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Präfix wurde von einem routerankündigung übergeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WellKnown">
+      <MemberSignature Language="C#" Value="WellKnown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin WellKnown = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.WellKnown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Präfix ist ein bekanntes Präfix. Well-Known Präfixe sind in Standard-Track Dokumente Request for Comments (RFC) angegeben und der Internet Assigned Numbers Authority (Iana) oder eine Registrierung Adresse zugewiesen. Diese Präfixe sind für besondere Zwecke reserviert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

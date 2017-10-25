@@ -1,0 +1,139 @@
+<Type Name="WorkflowDataTrackingExtract" FullName="System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract">
+  <TypeSignature Language="C#" Value="public class WorkflowDataTrackingExtract : System.Workflow.Runtime.Tracking.TrackingExtract" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WorkflowDataTrackingExtract extends System.Workflow.Runtime.Tracking.TrackingExtract" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Tracking.TrackingExtract</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Eigenschaft oder ein Feld an, das beim Abgleich eines Verfolgungspunkts aus der Stammaktivität des Workflows extrahiert und zusammen mit einer zugeordneten Auflistung von Anmerkungen an den Überwachungsdienst gesendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> gibt eine Eigenschaft oder ein Feld an, das aus der Stammaktivität eines Workflows extrahiert werden soll. Sie können  <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> entweder <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts%2A?displayProperty=nameWithType> oder <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A?displayProperty=nameWithType> hinzufügen, um die Laufzeitverfolgungsinfrastruktur anzuweisen, den Member aus der Stammaktivität des Workflows zu extrahieren, wenn diese <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> oder <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> abgleicht. Die Laufzeitverfolgungsinfrastruktur gibt die extrahierten Daten und zugeordneten Anmerkungen in <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> oder <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> an den Überwachungsdienst zurück.  
+  
+ Geben Sie mit <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A> das Feld oder die Eigenschaft für die Laufzeitverfolgungsinfrastruktur an, das aus der Stammaktivität extrahiert werden soll. Sie können den extrahierten Daten weitere Informationen zuordnen, indem Sie <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Annotations%2A> hinzufügen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowDataTrackingExtract ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Standardkonstruktor verwenden, müssen Sie <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A> im Code ausdrücklich auf einen Wert festlegen, der kein NULL-Verweis (`Nothing` in Visual Basic) ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowDataTrackingExtract (string member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="member">Der durch Punkt getrennte Name des Felds oder der Eigenschaft der Stammaktivität, die extrahiert und an den Überwachungsdienst gesendet werden soll.</param>
+        <summary>Initialisiert mit dem angegebenen Namen eines Aktivitätsmembers der Stammaktivität eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A?displayProperty=nameWithType> wird mit dem von `string` angegebenen `member` initialisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="member" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public override System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Anmerkungen ab, die den extrahierten Daten zugeordnet sind.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" />, die der zu extrahierenden Eigenschaft oder dem Feld zugeordnet ist. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anmerkungen sind von Ihnen definierte `strings` mit Informationen, die den extrahierten Daten zugeordnet werden. Bei einem Abgleich eines Verfolgungspunkts schließt die Laufzeitverfolgungsinfrastruktur die extrahierten Daten und die Anmerkungsauflistung in den Verfolgungsdatensatz ein, den sie an den Überwachungsdienst sendet. Sie können <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Annotations%2A> hinzufügen, um den extrahierten Daten weitere Informationen zuzuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public override string Member { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Member" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Feld oder die Eigenschaft ab, die beim Abgleich eines Verfolgungspunkts aus der Stammaktivität extrahiert werden soll, oder legt das Feld oder die Eigenschaft fest.</summary>
+        <value>Ein durch Punkt getrennter Name, der ein Feld oder eine Eigenschaft der Stammaktivität angibt. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A> kann festgelegt werden, um Folgendes anzugeben: ein Feld oder eine Eigenschaft der Stammaktivität; einen Member eines solchen Felds oder einer solchen Eigenschaft; oder ein einzelnes Element eines Felds oder einer Eigenschaft (oder einen Member von beidem), mit der die  <xref:System.Collections.IEnumerable>-Schnittstelle implementiert wird. Angenommen, die Stammaktivität besitzt eine `string`-Eigenschaft mit dem Namen "MyString". Wenn Sie möchten, dass die Infrastruktur der Problembehandlung zur Laufzeit die Länge dieser Eigenschaft zurückgibt, legen Sie <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A> auf "MyString.length" fest. Soll stattdessen das zweite Zeichen in "MyString" zurückzugeben werden, legen Sie <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A> auf "MyString[1]" fest.  
+  
+> [!NOTE]
+>  <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A> muss der tatsächlich Name einer Eigenschaft des Aktivitätstyps sein. Dieser Name kann sich von dem im Designer unterscheiden. Das liegt daran, dass Eigenschaftennamen im Designer lokalisiert und zugeordnet werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

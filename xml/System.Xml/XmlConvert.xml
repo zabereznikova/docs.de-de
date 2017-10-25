@@ -1,0 +1,2697 @@
+<Type Name="XmlConvert" FullName="System.Xml.XmlConvert">
+  <TypeSignature Language="C#" Value="public class XmlConvert" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlConvert extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlConvert" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Codiert und decodiert XML-Namen und stellt Methoden für das Konvertieren zwischen Typen der Common Language Runtime und XSD-Typen (XML Schema Definition) bereit. Bei der Konvertierung von Datentypen sind die zurückgegebenen Werte vom Gebietsschema unabhängig.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlConvert> Klasse ist funktionell gleichwertig mit der <xref:System.Convert> -Klasse, aber es unterstützt XML-Standards. Das Typsystem basiert auf dem XSD-Schematyp (XML Schema Definition Language), und die zurückgegebenen Werte sind stets vom Gebietsschema unabhängig.  
+  
+## <a name="encoding-and-decoding"></a>Codieren und Decodieren  
+ Element-und Attributnamen oder ID-Werte sind auf einen Bereich von XML-Zeichen gemäß der W3C beschränkt [XML 1.0-Empfehlung](http://www.w3.org/TR/2006/REC-xml-20060816/). Wenn Namen ungültige Zeichen enthalten, können Sie die <xref:System.Xml.XmlConvert.EncodeName%2A> und <xref:System.Xml.XmlConvert.DecodeName%2A> Methoden in dieser Klasse, die sie in gültige XML-Namen übersetzt.  
+  
+ Wenn Sie den Spaltenüberschrift "Order Detail" in einer Datenbank verwenden möchten, lässt die Datenbank z. B. den Abstand zwischen den beiden Wörtern an. Jedoch ist die Fläche zwischen "Order" und "Detail" in XML ein ungültiges XML-Zeichen interpretiert. Sie müssen ihn in ein Escapezeichen hexadezimale Codierung konvertieren und Decodieren es später erneut.  
+  
+ Sie können die <xref:System.Xml.XmlConvert.EncodeName%2A> Methode mit der <xref:System.Xml.XmlWriter> Klasse, um sicherzustellen, dass die Namen geschrieben wird, sind gültige XML-Namen. Der folgende C#-Code konvertiert den Namen "Order Detail" in einen gültigen XML-Namen und schreibt das Element `<Order_0x0020_Detail>My order</Order_0x0020_Detail>`.  
+  
+```  
+writer.WriteElementString(XmlConvert.EncodeName("Order Detail"),"My order");  
+  
+```  
+  
+ Die folgenden <xref:System.Xml.XmlConvert> Methoden führen, codieren und decodieren.  
+  
+|Methode|Beschreibung|  
+|------------|-----------------|  
+|<xref:System.Xml.XmlConvert.EncodeName%2A>|Akzeptiert einen Namen und gibt den codierten Namen zusammen mit einem ungültigen Zeichen, das durch eine Escapezeichenfolge ersetzt wird. Diese Methode ermöglicht das Doppelpunkte in einer beliebigen Position, d. h., die der Namen möglicherweise dennoch gemäß der W3C ungültige werden [Namespaces in XML 1.0-Empfehlung](http://www.w3.org/TR/REC-xml-names).|  
+|<xref:System.Xml.XmlConvert.EncodeNmToken%2A>|Akzeptiert einen Namen ein, und gibt den codierten Namen zurück.|  
+|<xref:System.Xml.XmlConvert.EncodeLocalName%2A>|Identisch mit <xref:System.Xml.XmlConvert.EncodeName%2A> mit dem Unterschied, dass es auch der Doppelpunkt codiert, um zu garantieren, dass der Name als verwendet werden kann die `LocalName` Teil von einem Namespace qualifizierten Namen.|  
+|<xref:System.Xml.XmlConvert.DecodeName%2A>|Kehrt die Transformation für alle Codierungsmethoden um.|  
+  
+## <a name="name-validation"></a>Überprüfung des Namens  
+ Die <xref:System.Xml.XmlConvert> Klasse enthält zwei Methoden, die die Zeichen in einem Element oder Attribut Namen überprüfen, und stellen Sie sicher, dass der Name der Regeln festlegen, indem die W3C entspricht [XML 1.0-Empfehlung](http://www.w3.org/TR/2006/REC-xml-20060816/):  
+  
+-   <xref:System.Xml.XmlConvert.VerifyName%2A>überprüft die Zeichen, und stellt sicher, dass der Name gültig ist. Die Methode gibt den Namen an, ob es gültig ist, und löst eine Ausnahme aus, wenn dies nicht der Fall.  
+  
+-   <xref:System.Xml.XmlConvert.VerifyNCName%2A>führt die gleiche Überprüfung jedoch nicht qualifizierte Namen akzeptiert.  
+  
+ Die <xref:System.Xml.XmlConvert> enthält zusätzliche Methoden, die Token, Leerzeichen, öffentliche-IDs und andere Zeichenfolgen zu überprüfen.  
+  
+## <a name="data-type-conversion"></a>Datentypkonvertierung  
+ <xref:System.Xml.XmlConvert>Außerdem bietet Methoden, die Ihnen ermöglichen, Daten aus einer Zeichenfolge in einen stark typisierten Datentyp zu konvertieren. Z. B. die <xref:System.Xml.XmlConvert.ToDateTime%2A> -Methode konvertiert eine Zeichenfolge in seine <xref:System.DateTime> entspricht. Dies ist hilfreich, da die meisten Methoden in der <xref:System.Xml.XmlReader> -Klasse Daten als Zeichenfolge zurückgeben. Nachdem die Daten gelesen werden, können sie den richtigen Datentyp konvertiert werden, bevor Sie verwendet werden. Die <xref:System.Xml.XmlConvert.ToString%2A> Überladungen ergänzenden Vorgang bereitstellen, indem stark typisierte Daten in Zeichenfolgen konvertiert. Dies ist beispielsweise nützlich, wenn Sie die Daten Textfelder auf einer Webseite hinzufügen möchten. Gebietsschemaeinstellungen werden nicht während der Datenkonvertierung berücksichtigt. Die Datentypen basieren auf den XML-Schema (XSD) Datentypen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlConvert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlConvert" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeName">
+      <MemberSignature Language="C#" Value="public static string DecodeName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string DecodeName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.DecodeName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu transformierende Name.</param>
+        <summary>Decodiert einen Namen. Diese Methode ist die Umkehrung der <see cref="M:System.Xml.XmlConvert.EncodeName(System.String)" />-Methode und der <see cref="M:System.Xml.XmlConvert.EncodeLocalName(System.String)" />-Methode.</summary>
+        <returns>Der decodierte Name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Namen decodiert werden, mithilfe der folgenden Regeln:  
+  
+-   Namen werden von links nach rechts decodiert.  
+  
+-   Eine beliebige Sequenz _x `HHHH_` (wobei HHHH steht für eine gültige, vier Ziffern hexadezimalen UCS-2-Code) nicht decodierte wird transformiert in das entsprechende Unicode-2.1 (Unicode-3.0, wenn von der Anwendung unterstützt) Zeichen.  
+  
+-   Kurzformen werden erkannt. Sie werden ohne Übersetzung übergeben. Beispielsweise _x20\_ oder __ nicht decodiert werden.  
+  
+> [!NOTE]
+>  Die eigentliche Codierung des Zeichens ist anwendungsspezifisch. So wird z. B. Order_x0020_Details Order Details. Sogar Escapezeichen, die in XML-Namen ungültig sind, werden erkannt und decodiert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird codiert und decodiert Namen.  
+  
+ [!code-cpp[XmlConvert.EncodeName#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlConvert.EncodeName/CPP/convert.cpp#1)]
+ [!code-csharp[XmlConvert.EncodeName#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert.EncodeName/CS/convert.cs#1)]
+ [!code-vb[XmlConvert.EncodeName#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert.EncodeName/VB/convert.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeLocalName">
+      <MemberSignature Language="C#" Value="public static string EncodeLocalName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EncodeLocalName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.EncodeLocalName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu codierende Name.</param>
+        <summary>Konvertiert den Namen in einen gültigen lokalen XML-Namen.</summary>
+        <returns>Der codierte Name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ähnelt der <xref:System.Xml.XmlConvert.EncodeName%2A> Methode, außer dass sie codiert das Doppelpunktzeichen, dadurch wird sichergestellt, dass der Name als den lokalen namensanteil des einem Namespace qualifizierten Namen verwendet werden kann.  
+  
+ Angenommen, Sie haben einem ungültigen an diese Methode übergeben eine: b, es gibt a_x003a_b, die einen gültigen lokalen Namen.  
+  
+ Wenn `name` ist `null` oder `String.Empty` erhalten Sie auf den gleichen Wert zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird codiert und decodiert Namen.  
+  
+ [!code-cpp[XmlConvert.EncodeName#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlConvert.EncodeName/CPP/convert.cpp#1)]
+ [!code-csharp[XmlConvert.EncodeName#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert.EncodeName/CS/convert.cs#1)]
+ [!code-vb[XmlConvert.EncodeName#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert.EncodeName/VB/convert.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeName">
+      <MemberSignature Language="C#" Value="public static string EncodeName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EncodeName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.EncodeName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein zu übersetzender Name.</param>
+        <summary>Konvertiert den Namen in einen gültigen XML-Namen.</summary>
+        <returns>Gibt den Namen zurück, wobei ungültige Zeichen durch eine Escapezeichenfolge ersetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode übersetzt die ungültige Zeichen wie Leerzeichen oder Katakana halber Breite, die XML-Namen ohne die Unterstützung oder das Vorhandensein von Schemas zugeordnet werden müssen. Die ungültigen Zeichen werden in geschützte numerische Entitäten übersetzt.  
+  
+ Das Escapezeichen ist "_". Alle XML-Zeichen, die nicht entspricht der [XML 1.0-Spezifikation (vierte Ausgabe) Empfehlung](http://www.w3.org/TR/2006/REC-xml-20060816/) wird als _xHHHH mit Escapezeichen versehen\_. Die Zeichenfolge HHHH steht für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen im höchstwertigen Bit zuerst aufgeführt. Der Name Order Details wird beispielsweise als Order_x0020_Details codiert.  
+  
+ Der Unterstrich muss nicht geschützt werden, es sei denn, er wird von einer Zeichensequenz gefolgt, die beim Decodieren des Namens zusammen mit dem Unterstrich als Escapezeichenfolge fehlinterpretiert werden kann. 
+          Order_Details ist beispielsweise nicht codiert, Order_x0020_ ist jedoch als Order_x005f_x0020_ codiert. Kurzformen sind zulässig. Z. B. die Formulare _x20\_ und __ nicht generiert werden.  
+  
+ Diese Methode wird sichergestellt, dass der Name entsprechend der XML-Spezifikation gültig ist. Lässt Doppelpunkte in einer beliebigen Position, dies bedeutet, dass der Name kann dennoch ungültige gemäß werden der [Spezifikation für W3C-Namespace](http://www.w3.org/TR/REC-xml-names). Um sicherzustellen, dass ein gültiger Namespace qualifizierten Namen <xref:System.Xml.XmlConvert.EncodeLocalName%2A> für das Präfix und den lokalen Teilen Namen und verknüpfen das Ergebnis mit einem Doppelpunkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird codiert und decodiert Namen.  
+  
+ [!code-cpp[XmlConvert.EncodeName#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlConvert.EncodeName/CPP/convert.cpp#1)]
+ [!code-csharp[XmlConvert.EncodeName#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert.EncodeName/CS/convert.cs#1)]
+ [!code-vb[XmlConvert.EncodeName#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert.EncodeName/VB/convert.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeNmToken">
+      <MemberSignature Language="C#" Value="public static string EncodeNmToken (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EncodeNmToken(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.EncodeNmToken(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu codierende Name.</param>
+        <summary>Überprüft, ob der Name entsprechend der XML-Spezifikation gültig ist.</summary>
+        <returns>Der codierte Name.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird sichergestellt, dass der Name entsprechend der XML-Spezifikation gültig ist. Wenn Sie diese Methode den ungültigen Namen 70 + übergeben, gibt es z. B. 70_x002b_ ein gültiger XML-Name ist.  
+  
+ Wenn `name` ist `null` oder "String.Empty" und Sie erhalten den gleichen Wert zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNCNameChar">
+      <MemberSignature Language="C#" Value="public static bool IsNCNameChar (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsNCNameChar(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.IsNCNameChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Zeichen, das als Nicht-Doppelpunkt-Zeichen überprüft werden soll.</param>
+        <summary>Überprüft, ob das übergebene Zeichen ein gültiger Nicht-Doppelpunkt-Zeichentyp ist.</summary>
+        <returns>Gibt <see langword="true" /> zurück, wenn ein Zeichen ein gültiger Nicht-Doppelpunkt-Zeichentyp ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublicIdChar">
+      <MemberSignature Language="C#" Value="public static bool IsPublicIdChar (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPublicIdChar(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.IsPublicIdChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">
+          Das zu überprüfende <see cref="T:System.Char" />-Objekt.</param>
+        <summary>Gibt die übergebene Zeicheninstanz zurück, wenn das Zeichen im Argument ein gültiges Zeichen für eine öffentliche ID ist, andernfalls <see langword="null" />.</summary>
+        <returns>Gibt das übergebene Zeichen zurück, wenn das Zeichen ein gültiges Zeichen für eine öffentliche ID ist, andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStartNCNameChar">
+      <MemberSignature Language="C#" Value="public static bool IsStartNCNameChar (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsStartNCNameChar(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.IsStartNCNameChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Zeichen, das validiert werden soll.</param>
+        <summary>Überprüft, ob das übergebene Zeichen ein gültiger Startnamenszeichen-Typ ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das Zeichen ein gültiger Startnamenszeichen-Typ ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausführliche Informationen zu zulässigen Zeichen finden Sie unter der [XML 1.0-Spezifikation (vierte Ausgabe)](http://go.microsoft.com/fwlink/?LinkId=147985) Empfehlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWhitespaceChar">
+      <MemberSignature Language="C#" Value="public static bool IsWhitespaceChar (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsWhitespaceChar(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.IsWhitespaceChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Zeichen, das validiert werden soll.</param>
+        <summary>Überprüft, ob das übergebene Zeichen ein gültiges XML-Leerraumzeichen ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das übergebene Zeichen ein gültiges XML-Leerraumzeichen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausführliche Informationen zu zulässigen Zeichen finden Sie unter der [XML 1.0-Spezifikation (vierte Ausgabe)](http://go.microsoft.com/fwlink/?LinkID=147985) Empfehlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlChar">
+      <MemberSignature Language="C#" Value="public static bool IsXmlChar (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsXmlChar(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.IsXmlChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Zeichen, das validiert werden soll.</param>
+        <summary>Überprüft, ob das übergebene Zeichen ein gültiges XML-Zeichen ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das übergebene Zeichen ein gültiges XML-Zeichen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausführliche Informationen zu zulässigen Zeichen finden Sie unter der [XML 1.0-Spezifikation (vierte Ausgabe)](http://go.microsoft.com/fwlink/?LinkId=147985) Empfehlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlSurrogatePair">
+      <MemberSignature Language="C#" Value="public static bool IsXmlSurrogatePair (char lowChar, char highChar);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsXmlSurrogatePair(char lowChar, char highChar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.IsXmlSurrogatePair(System.Char,System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowChar" Type="System.Char" />
+        <Parameter Name="highChar" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="lowChar">Das zu validierende Ersatzzeichen.</param>
+        <param name="highChar">Das zu validierende Ersatzzeichen.</param>
+        <summary>Überprüft, ob das übergebene Ersatzzeichenpaar ein gültiges XML-Zeichen ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das übergebene Ersatzzeichenpaar ein gültiges XML-Zeichen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBoolean">
+      <MemberSignature Language="C#" Value="public static bool ToBoolean (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ToBoolean(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToBoolean(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Boolean" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Boolean" />-Wert, d. h. <see langword="true" /> oder <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Zeichenketten sind "1" oder "true" für `true` und "0" oder "falsch" für `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />stellt keinen dar. ein <see langword="Boolean" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public static byte ToByte (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 ToByte(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToByte(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Byte" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Byte" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.Byte.MinValue" /> oder größer als <see cref="F:System.Byte.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToChar">
+      <MemberSignature Language="C#" Value="public static char ToChar (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig char ToChar(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToChar(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die Zeichenfolge, die ein einzelnes zu konvertierendes Zeichen enthält.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Char" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Char" />, das für das einzelne Zeichen steht.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="s" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">Die <paramref name="s" /> Parameter mehr als ein Zeichen enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public static DateTime ToDateTime (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTime ToDateTime(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDateTime(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use XmlConvert.ToDateTime() that takes in XmlDateTimeSerializationMode")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.DateTime" />-Äquivalent.</summary>
+        <returns>Ein <see langword="DateTime" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlConvert.ToDateTime%28System.String%29?displayProperty=nameWithType> Methode ist veraltet in .NET Framework, Version 2.0, und wurde ersetzt durch die <xref:System.Xml.XmlConvert.ToDateTime%28System.String%2CSystem.Xml.XmlDateTimeSerializationMode%29?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Xml.XmlConvert.ToDouble%2A> und `ToDateTime` , stark typisierte Daten zu lesen.  
+  
+ [!code-cpp[XmlConvert.ToDouble#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlConvert.ToDouble/CPP/readData.cpp#1)]
+ [!code-csharp[XmlConvert.ToDouble#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert.ToDouble/CS/readdata.cs#1)]
+ [!code-vb[XmlConvert.ToDouble#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert.ToDouble/VB/readdata.vb#1)]  
+  
+ Im Beispiel wird die Datei `orderData.xml`als Eingabe.  
+  
+ [!code-xml[XmlConvert.ToDouble#2](~/samples/snippets/xml/VS_Snippets_Data/XmlConvert.ToDouble/XML/orderdata.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist eine leere Zeichenfolge oder befindet sich nicht im richtigen Format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public static DateTime ToDateTime (string s, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTime ToDateTime(string s, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDateTime(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <param name="format">Die auf das konvertierte <see langword="DateTime" /> anzuwendende Formatstruktur. Zu den gültigen Format zählt „yyyy-MM-ddTHH:mm:sszzzzzz“ und dessen Teilmengen. Es wird validiert, ob die Zeichenfolge dieses Format aufweist.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.DateTime" />-Äquivalent.</summary>
+        <returns>Ein <see langword="DateTime" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />oder <paramref name="format" /> "String.Empty" ist  
+  
+ - oder -   
+  
+ <paramref name="s" />enthält keine Datum und Uhrzeit, die entspricht <paramref name="format" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public static DateTime ToDateTime (string s, string[] formats);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTime ToDateTime(string s, string[] formats) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDateTime(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="formats" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <param name="formats">Ein Array, das die Formatstrukturen enthält, die auf das konvertierte <see langword="DateTime" /> angewendet werden sollen. Zu den gültigen Format zählt „yyyy-MM-ddTHH:mm:sszzzzzz“ und dessen Teilmengen.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.DateTime" />-Äquivalent.</summary>
+        <returns>Ein <see langword="DateTime" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht mehrere Formate für die Zeichenfolge, die überprüft werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />oder ein Element von <paramref name="formats" /> "String.Empty" ist  
+  
+ - oder -   
+  
+ <paramref name="s" />enthält keine Datum und Uhrzeit, die alle Elemente der entspricht <paramref name="formats" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public static DateTime ToDateTime (string s, System.Xml.XmlDateTimeSerializationMode dateTimeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTime ToDateTime(string s, valuetype System.Xml.XmlDateTimeSerializationMode dateTimeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDateTime(System.String,System.Xml.XmlDateTimeSerializationMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="dateTimeOption" Type="System.Xml.XmlDateTimeSerializationMode" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der zu konvertierende <see cref="T:System.String" />-Wert.</param>
+        <param name="dateTimeOption">Einer der <see cref="T:System.Xml.XmlDateTimeSerializationMode" />-Werte, die angeben, ob das Datum in die Ortszeit konvertiert oder als UTC-Zeit (Coordinated Universal Time) beibehalten werden soll, falls es sich um ein UTC-Datum handelt.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> mithilfe von <see cref="T:System.Xml.XmlDateTimeSerializationMode" /> in eine <see cref="T:System.DateTime" />-Struktur.</summary>
+        <returns>Ein <see cref="T:System.DateTime" />-Äquivalent von <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="dateTimeOption" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist eine leere Zeichenfolge oder befindet sich nicht in einem gültigen Format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTimeOffset">
+      <MemberSignature Language="C#" Value="public static DateTimeOffset ToDateTimeOffset (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTimeOffset ToDateTimeOffset(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDateTimeOffset(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.  
+  
+ **Hinweis** die Zeichenfolge muss auf eine Teilmenge der W3C-Empfehlung für den XML-DateTime-Typ entsprechen. Weitere Informationen finden Sie unter „http://www.w3.org/TR/xmlschema-2/#dateTime“.</param>
+        <summary>Konvertiert den angegebenen <see cref="T:System.String" /> in ein <see cref="T:System.DateTimeOffset" />-Äquivalent.</summary>
+        <returns>Das <see cref="T:System.DateTimeOffset" />-Äquivalent der angegebenen Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehr als sieben Ziffern für Sekundenbruchteile angegeben werden, wird der Wert gerundet. Beispielsweise wird 00000004 0000000 und 00000005 zu 0000001.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Zeichenfolge aus einer XML-Datei gelesen und mit der <xref:System.Xml.XmlConvert.ToDateTimeOffset%2A> -Methode zum Konvertieren der Zeichenfolge zu einer <xref:System.DateTimeOffset> Typ.  
+  
+ [!code-csharp[XmlConvert_ToDateTimeOffset_ex1#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert_ToDateTimeOffset_ex1/CS/XmlConvert_ToDateTimeOffset_ex1.cs#1)]
+ [!code-vb[XmlConvert_ToDateTimeOffset_ex1#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert_ToDateTimeOffset_ex1/VB/XmlConvert_ToDateTimeOffset_ex1.vb#1)]  
+  
+ Im Beispiel wird die Datei Transactions.XML verwendet.  
+  
+```  
+<?xml version="1.0"?>  
+<transactions>  
+   <transaction>  
+      <id>123456789</id>  
+      <amount>1.00</amount>  
+      <currency>USD</currency>  
+      <time>2007-08-03T22:05:13-07:00</time>  
+   </transaction>  
+</transactions>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">An diese Methode übergebenen Arguments liegt außerhalb des Bereichs der zulässigen Werte. Weitere Informationen zu zulässigen Werten finden Sie unter <see cref="T:System.DateTimeOffset" />.</exception>
+        <exception cref="T:System.FormatException">Eine Teilmenge der W3C-Empfehlungen für die XML-DateTime-Typ entspricht nicht der an diese Methode übergebene Argument. Weitere Informationen finden Sie unter [http://www.w3.org/TR/xmlschema-2/#dateTime](http://go.microsoft.com/fwlink/?LinkId=97914).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTimeOffset">
+      <MemberSignature Language="C#" Value="public static DateTimeOffset ToDateTimeOffset (string s, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTimeOffset ToDateTimeOffset(string s, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDateTimeOffset(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <param name="format">Das Format aus dem <c>s</c> konvertiert wird. Der Formatparameter kann eine beliebige Teilmenge der W3C-Empfehlung für den XML-DateTime-Typ sein. (Weitere Informationen finden Sie unter „http://www.w3.org/TR/xmlschema-2/#dateTime“.) Die Zeichenfolge <c>s</c> anhand dieses Formats überprüft wird.</param>
+        <summary>Konvertiert den angegebenen <see cref="T:System.String" /> in ein <see cref="T:System.DateTimeOffset" />-Äquivalent.</summary>
+        <returns>Das <see cref="T:System.DateTimeOffset" />-Äquivalent der angegebenen Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn in der Eingabezeichenfolge angegebene Offset in der deserialisierte Darstellung der "DateTimeOffset" zu einem Überlauf führen wird, wird eine FormatException ausgelöst.  
+  
+ Wenn mehr als sieben Ziffern für Sekundenbruchteile angegeben werden, wird der Wert gerundet. Beispielsweise wird 00000004 0000000 und 00000005 zu 0000001.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Zeichenfolge aus einer XML-Datei gelesen und mit der <xref:System.Xml.XmlConvert.ToDateTimeOffset%2A> -Methode zum Konvertieren der Zeichenfolge zu einer <xref:System.DateTimeOffset> Typ. Die Eingabezeichenfolge wird anhand des angegebenen Formats überprüft, vor dem konvertiert wird.  
+  
+ [!code-csharp[XmlConvert_ToDateTimeOffset_ex2#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert_ToDateTimeOffset_ex2/CS/XmlConvert_ToDateTimeOffset_ex2.cs#1)]
+ [!code-vb[XmlConvert_ToDateTimeOffset_ex2#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert_ToDateTimeOffset_ex2/VB/XmlConvert_ToDateTimeOffset_ex2.vb#1)]  
+  
+ Im Beispiel wird die Datei Transactions.XML verwendet.  
+  
+```  
+<?xml version="1.0"?>  
+<transactions>  
+   <transaction>  
+      <id>123456789</id>  
+      <amount>1.00</amount>  
+      <currency>USD</currency>  
+      <time>2007-08-03T22:05:13-07:00</time>  
+   </transaction>  
+</transactions>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />oder <paramref name="format" /> ist eine leere Zeichenfolge oder befindet sich nicht im angegebenen Format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTimeOffset">
+      <MemberSignature Language="C#" Value="public static DateTimeOffset ToDateTimeOffset (string s, string[] formats);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTimeOffset ToDateTimeOffset(string s, string[] formats) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDateTimeOffset(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="formats" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <param name="formats">Ein Array von Formaten, aus denen <c>s</c> konvertiert werden kann. Jedes Format in <c>Formate</c> kann eine beliebige Teilmenge der W3C-Empfehlung für den XML-DateTime-Typ sein. (Weitere Informationen finden Sie unter „http://www.w3.org/TR/xmlschema-2/#dateTime“.) Die Zeichenfolge <c>s</c> anhand eines der folgenden Formate überprüft.</param>
+        <summary>Konvertiert den angegebenen <see cref="T:System.String" /> in ein <see cref="T:System.DateTimeOffset" />-Äquivalent.</summary>
+        <returns>Das <see cref="T:System.DateTimeOffset" />-Äquivalent der angegebenen Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn in der Eingabezeichenfolge angegebene Offset in der deserialisierte Darstellung der "DateTimeOffset" zu einem Überlauf führen wird, wird eine FormatException ausgelöst.  
+  
+ Wenn mehr als sieben Ziffern für Sekundenbruchteile angegeben werden, wird der Wert gerundet. Beispielsweise wird 00000004 0000000 und 00000005 zu 0000001.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Zeichenfolge aus einer XML-Datei gelesen und mit der <xref:System.Xml.XmlConvert.ToDateTimeOffset%2A> -Methode zum Konvertieren der Zeichenfolge zu einer <xref:System.DateTimeOffset> Typ. Die Eingabezeichenfolge muss für eines der angegebenen Formate überprüfen, vor dem konvertiert wird.  
+  
+ [!code-csharp[XmlConvert_ToDateTimeOffset_ex3#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert_ToDateTimeOffset_ex3/CS/XmlConvert_ToDateTimeOffset_ex3.cs#1)]
+ [!code-vb[XmlConvert_ToDateTimeOffset_ex3#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert_ToDateTimeOffset_ex3/VB/XmlConvert_ToDateTimeOffset_ex3.vb#1)]  
+  
+ Im Beispiel wird die Datei Transactions.XML verwendet.  
+  
+```  
+<?xml version="1.0"?>  
+<transactions>  
+   <transaction>  
+      <id>123456789</id>  
+      <amount>1.00</amount>  
+      <currency>USD</currency>  
+      <time>2007-08-03T22:05:13-07:00</time>  
+   </transaction>  
+</transactions>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDecimal">
+      <MemberSignature Language="C#" Value="public static decimal ToDecimal (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Decimal ToDecimal(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDecimal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Decimal" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Decimal" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.Decimal.MinValue" /> oder größer als <see cref="F:System.Decimal.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDouble">
+      <MemberSignature Language="C#" Value="public static double ToDouble (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 ToDouble(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToDouble(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Double" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Double" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `s` INF oder -INF, gibt diese Methode Double.PositiveInfinity bzw. Double.NegativeInfinity zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird `ToDouble` und <xref:System.Xml.XmlConvert.ToDateTime%2A> , stark typisierte Daten zu lesen.  
+  
+ [!code-cpp[XmlConvert.ToDouble#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlConvert.ToDouble/CPP/readData.cpp#1)]
+ [!code-csharp[XmlConvert.ToDouble#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert.ToDouble/CS/readdata.cs#1)]
+ [!code-vb[XmlConvert.ToDouble#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert.ToDouble/VB/readdata.vb#1)]  
+  
+ Im Beispiel wird die Datei `orderData.xml`als Eingabe.  
+  
+ [!code-xml[XmlConvert.ToDouble#2](~/samples/snippets/xml/VS_Snippets_Data/XmlConvert.ToDouble/XML/orderdata.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.Double.MinValue" /> oder größer als <see cref="F:System.Double.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToGuid">
+      <MemberSignature Language="C#" Value="public static Guid ToGuid (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid ToGuid(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToGuid(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Guid" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Guid" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt16">
+      <MemberSignature Language="C#" Value="public static short ToInt16 (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 ToInt16(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToInt16(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Int16" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Int16" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.Int16.MinValue" /> oder größer als <see cref="F:System.Int16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt32">
+      <MemberSignature Language="C#" Value="public static int ToInt32 (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ToInt32(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToInt32(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Int32" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Int32" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.Int32.MinValue" /> oder größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt64">
+      <MemberSignature Language="C#" Value="public static long ToInt64 (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 ToInt64(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToInt64(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Int64" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Int64" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.Int64.MinValue" /> oder größer als <see cref="F:System.Int64.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSByte">
+      <MemberSignature Language="C#" Value="public static sbyte ToSByte (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int8 ToSByte(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToSByte(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.SByte" />-Äquivalent.</summary>
+        <returns>Ein <see langword="SByte" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.SByte.MinValue" /> oder größer als <see cref="F:System.SByte.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSingle">
+      <MemberSignature Language="C#" Value="public static float ToSingle (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 ToSingle(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToSingle(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.Single" />-Äquivalent.</summary>
+        <returns>Ein <see langword="Single" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `s` INF oder -INF, gibt diese Methode Single.PositiveInfinity bzw. Single.NegativeInfinity zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.Single.MinValue" /> oder größer als <see cref="F:System.Single.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Boolean" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <see langword="Boolean" />, d. h. „true“ oder „false“.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Byte" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Byte" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Char" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Char" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use XmlConvert.ToString() that takes in XmlDateTimeSerializationMode")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.DateTime" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <see langword="DateTime" /> im Format „yyyy-MM-ddTHH:mm:ss , wobei „T“ ein konstantes Literal ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Xml.XmlConvert.ToString%28System.DateTime%29?displayProperty=nameWithType> Methode ist in .NET Framework, Version 2.0, veraltet und wurde durch ersetzt die <xref:System.Xml.XmlConvert.ToString%28System.DateTime%2CSystem.Xml.XmlDateTimeSerializationMode%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (DateTimeOffset value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.DateTimeOffset value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.DateTimeOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende <see cref="T:System.DateTimeOffset" />.</param>
+        <summary>Konvertiert den angegebenen <see cref="T:System.DateTimeOffset" /> in einen <see cref="T:System.String" />.</summary>
+        <returns>Eine <see cref="T:System.String" />-Darstellung des angegebenen <see cref="T:System.DateTimeOffset" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.DateTimeOffset> Darstellung der aktuellen Uhrzeit um eine <xref:System.String>.  
+  
+ [!code-csharp[XmlConvert_ToString_DTO#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert_ToString_DTO/CS/XmlConvert_ToString_DTO.cs#1)]
+ [!code-vb[XmlConvert_ToString_DTO#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert_ToString_DTO/VB/XmlConvert_ToString_DTO.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Decimal" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Decimal" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Double" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Double" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` ist Double.PositiveInfinity oder Double.NegativeInfinity zurück, die diese Methode gibt die Zeichenfolge INF oder -INF.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel-Datentypen in eine Zeichenfolge konvertiert und die Informationen dann in die Konsole schreibt.  
+  
+ [!code-cpp[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Guid" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Guid" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Int16" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Int16" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel-Datentypen in eine Zeichenfolge konvertiert und die Informationen dann in die Konsole schreibt.  
+  
+ [!code-cpp[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Int32" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Int32" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Int64" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Int64" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.SByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.SByte" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="SByte" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.Single" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="Single" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` Single.PositiveInfinity oder Single.NegativeInfinity ist, wird diese Methode gibt die Zeichenfolge INF oder -INF.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (TimeSpan value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.TimeSpan value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.TimeSpan" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="TimeSpan" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.UInt16" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="UInt16" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.UInt32" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="UInt32" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <summary>Konvertiert das <see cref="T:System.UInt64" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des <see langword="UInt64" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (DateTime value, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.DateTime value, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.DateTime,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Wert.</param>
+        <param name="format">Die Formatstruktur, die die Anzeige der konvertierten Zeichenfolge definiert. Zu den gültigen Format zählt „yyyy-MM-ddTHH:mm:sszzzzzz“ und dessen Teilmengen.</param>
+        <summary>Konvertiert das <see cref="T:System.DateTime" />-Element in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <see langword="DateTime" /> im angegebenen Format.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel-Datentypen in eine Zeichenfolge konvertiert und die Informationen dann in die Konsole schreibt.  
+  
+ [!code-cpp[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlConvert.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlConvert.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (DateTime value, System.Xml.XmlDateTimeSerializationMode dateTimeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.DateTime value, valuetype System.Xml.XmlDateTimeSerializationMode dateTimeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.DateTime,System.Xml.XmlDateTimeSerializationMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+        <Parameter Name="dateTimeOption" Type="System.Xml.XmlDateTimeSerializationMode" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende <see cref="T:System.DateTime" />-Wert.</param>
+        <param name="dateTimeOption">Einer der <see cref="T:System.Xml.XmlDateTimeSerializationMode" />-Werte, die angeben, wie der <see cref="T:System.DateTime" />-Wert behandelt wird.</param>
+        <summary>Konvertiert die <see cref="T:System.DateTime" />-Struktur mithilfe von <see cref="T:System.Xml.XmlDateTimeSerializationMode" /> in eine <see cref="T:System.String" />.</summary>
+        <returns>Ein <see cref="T:System.String" />-Äquivalent von <see cref="T:System.DateTime" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="dateTimeOption" /> Wert ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> oder <paramref name="dateTimeOption" /> Wert <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (DateTimeOffset value, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.DateTimeOffset value, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToString(System.DateTimeOffset,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTimeOffset" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende <see cref="T:System.DateTimeOffset" />.</param>
+        <param name="format">Das Format, in das <c>s</c> konvertiert wird. Der Formatparameter kann eine beliebige Teilmenge der W3C-Empfehlung für den XML-DateTime-Typ sein. (Weitere Informationen finden Sie unter „http://www.w3.org/TR/xmlschema-2/#dateTime“.)</param>
+        <summary>Konvertiert den angegebenen <see cref="T:System.DateTimeOffset" /> in einen <see cref="T:System.String" /> im angegebenen Format.</summary>
+        <returns>Eine <see cref="T:System.String" />-Darstellung im angegebenen Format des bereitgestellten <see cref="T:System.DateTimeOffset" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.DateTimeOffset> Darstellung der aktuellen Uhrzeit um eine <xref:System.String> im angegebenen Format.  
+  
+ [!code-csharp[XmlConvert_ToString_DTO_Format#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert_ToString_DTO_Format/CS/XmlConvert_ToString_DTO_Format.cs#1)]
+ [!code-vb[XmlConvert_ToString_DTO_Format#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert_ToString_DTO_Format/VB/XmlConvert_ToString_DTO_Format.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTimeSpan">
+      <MemberSignature Language="C#" Value="public static TimeSpan ToTimeSpan (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.TimeSpan ToTimeSpan(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToTimeSpan(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge. Das Zeichenfolgenformat muss dem W3C-XML-Schema Teil 2 entsprechen: Empfehlung für Datentypen für Dauer.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.TimeSpan" />-Äquivalent.</summary>
+        <returns>Ein <see langword="TimeSpan" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />befindet sich nicht im richtigen Format zur Darstellung einer <see langword="TimeSpan" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt16">
+      <MemberSignature Language="C#" Value="public static ushort ToUInt16 (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int16 ToUInt16(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToUInt16(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.UInt16" />-Äquivalent.</summary>
+        <returns>Ein <see langword="UInt16" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.UInt16.MinValue" /> oder größer als <see cref="F:System.UInt16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt32">
+      <MemberSignature Language="C#" Value="public static uint ToUInt32 (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int32 ToUInt32(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToUInt32(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.UInt32" />-Äquivalent.</summary>
+        <returns>Ein <see langword="UInt32" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.UInt32.MinValue" /> oder größer als <see cref="F:System.UInt32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt64">
+      <MemberSignature Language="C#" Value="public static ulong ToUInt64 (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int64 ToUInt64(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.ToUInt64(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert den <see cref="T:System.String" /> in ein <see cref="T:System.UInt64" />-Äquivalent.</summary>
+        <returns>Ein <see langword="UInt64" />-Äquivalent der Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="s" />ist nicht im richtigen Format.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="s" />eine Zahl kleiner als <see cref="F:System.UInt64.MinValue" /> oder größer als <see cref="F:System.UInt64.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyName">
+      <MemberSignature Language="C#" Value="public static string VerifyName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.VerifyName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu überprüfende Name.</param>
+        <summary>Überprüft, ob der Name ein gültiger Name gemäß der W3C-Empfehlung für XML (Extended Markup Language) ist.</summary>
+        <returns>Der Name, wenn dieser ein gültiger XML-Name ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, mit der <xref:System.Xml.XmlWriter> Klasse wie folgt.  
+  
+```  
+try{  
+  writer.WriteStartElement(XmlConvert.VerifyName("item"),"bar");  
+}  
+catch(Exception e)  
+{  
+  Console.WriteLine("error");  
+}  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `VerifyName` Methode, um einen Elementnamen zu schreiben.  
+  
+ [!code-cpp[XmlConvert.VerifyName#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlConvert.VerifyName/CPP/verifyname.cpp#1)]
+ [!code-csharp[XmlConvert.VerifyName#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlConvert.VerifyName/CS/verifyname.cs#1)]
+ [!code-vb[XmlConvert.VerifyName#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlConvert.VerifyName/VB/verifyname.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="name" />ist kein gültiger XML-Name.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" />ist <see langword="null" /> oder "String.Empty".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyNCName">
+      <MemberSignature Language="C#" Value="public static string VerifyNCName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyNCName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.VerifyNCName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu überprüfende Name.</param>
+        <summary>Überprüft, ob der Name ein gültiger <see langword="NCName" /> gemäß der W3C-Empfehlung für XML (Extended Markup Language) ist. Ein <see langword="NCName" /> darf keinen Doppelpunkt enthalten.</summary>
+        <returns>Der Name, wenn dieser ein gültiger NCName ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" />ist <see langword="null" /> oder <c>"String.Empty"</c>.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="name" />ist kein gültiger nicht-Doppelpunkt-Name.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyNMTOKEN">
+      <MemberSignature Language="C#" Value="public static string VerifyNMTOKEN (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyNMTOKEN(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.VerifyNMTOKEN(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die Zeichenfolge, die überprüft werden soll.</param>
+        <summary>Überprüft, ob die Zeichenfolge ein gültiges NMTOKEN gemäß der Empfehlung in W3C XML Schema, Teil 2: „Datentypen“, ist.</summary>
+        <returns>Das Namenstoken, wenn es sich um ein gültiges NMTOKEN handelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird sichergestellt, dass das Namenstoken die korrekte Syntax für ein gültiges NMTOKEN aufweist. Sie können auf folgende Weise verwendet werden:  
+  
+```  
+try {  
+  writer.WriteStartElement(XmlConvert.VerifyNMTOKEN("abc"),"book");  
+}  
+catch(Exception e) {  
+  Console.WriteLine("error");  
+}  
+```  
+  
+ Weitere Informationen über die NMTOKEN-Datentyp finden Sie unter http://www.w3.org/TR/2001/REC-xmlschema-2-20010502/#NMTOKEN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Die Zeichenfolge ist kein gültiger Namenstoken.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyPublicId">
+      <MemberSignature Language="C#" Value="public static string VerifyPublicId (string publicId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyPublicId(string publicId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.VerifyPublicId(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="publicId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="publicId">
+          <see cref="T:System.String" />, der die zu überprüfende ID enthält.</param>
+        <summary>Gibt die übergebene Zeichenfolgeninstanz zurück, wenn alle Zeichen im Zeichenfolgenargument gültige Zeichen für eine öffentliche ID sind.</summary>
+        <returns>Gibt die übergebene Zeichenfolge zurück, wenn alle Zeichen im Argument gültige Zeichen für eine öffentliche ID sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine anderen Werte als das übergebene Argument sollte zurückgegeben werden. Die Zeichen, die für die öffentliche Id ungültig variieren nicht zwischen XML-Editionen, daher ist keine `XmlVersion` Überladung ist erforderlich.  
+  
+ Finden Sie unter [XML 1.0-Spezifikation (vierte Ausgabe)](http://go.microsoft.com/fwlink/?LinkID=147985) Produktion [13] `PublidChar` Weitere Informationen zu den zulässigen Zeichen  
+  
+ Wenn der Parameter null ist, ist ein `ArgumentNullException` ausgelöst. Wenn keines der Zeichen keine gültige öffentliche Id-Zeichen, sind ein `XmlException` mit Informationen zum ersten ungültigen Zeichen ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyTOKEN">
+      <MemberSignature Language="C#" Value="public static string VerifyTOKEN (string token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyTOKEN(string token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.VerifyTOKEN(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="token">Der Zeichenfolgenwert, der überprüft werden soll.</param>
+        <summary>Überprüft, ob die Zeichenfolge ein gültiges Token gemäß der Empfehlung in W3C XML Schema Teil 2: „Datentypen“ ist.</summary>
+        <returns>Das Token, wenn es sich um ein gültiges Token handelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird sichergestellt, dass das Namenstoken die korrekte Syntax für ein gültiges Token folgt. Sie können auf folgende Weise verwendet werden:  
+  
+```  
+try {  
+  writer.WriteStartElement(XmlConvert.VerifyTOKEN("abc"),"book");  
+}  
+catch(Exception e) {  
+  Console.WriteLine("error");  
+}  
+```  
+  
+ Weitere Informationen zu Token finden Sie unter [http://www.w3.org/TR/2001/REC-xmlschema-2-20010502/#token](http://go.microsoft.com/fwlink/?LinkId=103183).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Der Zeichenfolgenwert ist kein gültiger Token.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyWhitespace">
+      <MemberSignature Language="C#" Value="public static string VerifyWhitespace (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyWhitespace(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.VerifyWhitespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">
+          Der zu überprüfende <see cref="T:System.String" />.</param>
+        <summary>Gibt die übergebene Zeichenfolgeninstanz zurück, wenn alle Zeichen im Zeichenfolgenargument gültige Leerraumzeichen sind.</summary>
+        <returns>Gibt die übergebene Zeichenfolgeninstanz zurück, wenn alle Zeichen im Zeichenfolgenargument gültige Leerraumzeichen sind, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine anderen Werte als das übergebene Argument sollte zurückgegeben werden. Der gültige Zeichen für Leerzeichen variieren nicht zwischen XML-Editionen, sodass keine Überladung der XML-Version erforderlich ist.  
+  
+ Finden Sie unter [XML 1.0-Spezifikation (vierte Ausgabe)](http://go.microsoft.com/fwlink/?LinkID=147985) Produktion [3] S Weitere Informationen zu den zulässigen Zeichen.  
+  
+ Wenn der Parameter null ist, ist ein `ArgumentNullException` ausgelöst.  
+  
+ Wenn keines der Zeichen nicht gültige Leerraumzeichen sind ein `XmlException` mit Informationen zum ersten ungültigen Zeichen ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XmlConvert.VerifyWhitespace%2A> Methode, um ein ungültiges Zeichen in einem Startelement zugewiesenen Wert erkannt.  
+  
+ [!code-csharp[XmlConvert.NewVerify#5](~/samples/snippets/csharp/VS_Snippets_Data/xmlconvert.newverify/cs/xmlconvertnewverify.cs#5)]
+ [!code-vb[XmlConvert.NewVerify#5](~/samples/snippets/visualbasic/VS_Snippets_Data/xmlconvert.newverify/vb/xmlconvertnewverify.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyXmlChars">
+      <MemberSignature Language="C#" Value="public static string VerifyXmlChars (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string VerifyXmlChars(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlConvert.VerifyXmlChars(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">
+          Der <see cref="T:System.String" /> mit den zu überprüfenden Zeichen.</param>
+        <summary>Gibt die übergebene Zeichenfolge zurück, wenn alle Zeichen und Ersatzzeichenpaare im Zeichenfolgenargument gültige XML-Zeichen sind, andernfalls wird eine <see langword="XmlException" /> mit Informationen zum ersten ungültigen Zeichen ausgelöst.</summary>
+        <returns>Gibt die übergebene Zeichenfolge zurück, wenn alle Zeichen und Ersatzzeichenpaare im Zeichenfolgenargument gültige XML-Zeichen sind, andernfalls wird eine <see langword="XmlException" /> mit Informationen zum ersten ungültigen Zeichen ausgelöst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Keine anderen Werte als das übergebene Argument sollte zurückgegeben werden. Finden Sie unter [XML 1.0-Spezifikation (vierte Ausgabe)](http://go.microsoft.com/fwlink/?LinkID=147985) Produktion [2] `Char` Weitere Informationen zu den zulässigen Zeichen.  
+  
+ Wenn der Parameter null ist, ist ein `ArgumentNullException` ausgelöst. Wenn keines der Zeichen nicht gültiges Xml-Zeichen sind eine `XmlException` mit Informationen zum ersten ungültigen Zeichen ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XmlConvert.VerifyXmlChars%2A> Methode, die ein unzulässiges Zeichen im Startelement erkennt.  
+  
+ [!code-csharp[XmlConvert.NewVerify#3](~/samples/snippets/csharp/VS_Snippets_Data/xmlconvert.newverify/cs/xmlconvertnewverify.cs#3)]
+ [!code-vb[XmlConvert.NewVerify#3](~/samples/snippets/visualbasic/VS_Snippets_Data/xmlconvert.newverify/vb/xmlconvertnewverify.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

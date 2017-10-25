@@ -1,0 +1,73 @@
+<Type Name="SecurityKeyEntropyMode" FullName="System.ServiceModel.Security.SecurityKeyEntropyMode">
+  <TypeSignature Language="C#" Value="public enum SecurityKeyEntropyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityKeyEntropyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.SecurityKeyEntropyMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Entropiequelle für die Generierung von Schlüsseln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Modus beschreibt, wie der Client- und Servercomputer einen freigegebenen symmetrischen Schlüssel berechnen, der mit einem vom Server ausgestellten Token verwendet werden soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClientEntropy">
+      <MemberSignature Language="C#" Value="ClientEntropy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.SecurityKeyEntropyMode ClientEntropy = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityKeyEntropyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Client stellt den für das ausgestellte Token verwendeten Schlüssel bereit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CombinedEntropy">
+      <MemberSignature Language="C#" Value="CombinedEntropy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.SecurityKeyEntropyMode CombinedEntropy = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityKeyEntropyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Client und Server bieten Entropie, die mithilfe der P-SHA1-Funktion kombiniert werden kann, um den Schlüssel vom ausgestellten Token abzuleiten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerEntropy">
+      <MemberSignature Language="C#" Value="ServerEntropy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.SecurityKeyEntropyMode ServerEntropy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityKeyEntropyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Server stellt den Schlüssel für das ausgestellte Token bereit.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

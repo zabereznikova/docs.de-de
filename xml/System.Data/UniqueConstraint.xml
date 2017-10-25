@@ -1,0 +1,561 @@
+<Type Name="UniqueConstraint" FullName="System.Data.UniqueConstraint">
+  <TypeSignature Language="C#" Value="public class UniqueConstraint : System.Data.Constraint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UniqueConstraint extends System.Data.Constraint" />
+  <TypeSignature Language="DocId" Value="T:System.Data.UniqueConstraint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Constraint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ConstraintName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.UniqueConstraintEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Einschränkung für eine Gruppe von Spalten, die in denen alle Werte eindeutig sein müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.UniqueConstraint> wird erzwungen, für eine einzelne Spalte (oder Spalten), um sicherzustellen, dass ein Primärschlüsselwert eindeutig ist.  
+  
+ Einschränkungen werden nicht angewendet, es sei denn, die <xref:System.Data.DataSet.EnforceConstraints%2A> -Eigenschaftensatz auf `true`.  
+  
+ Bei der ein <xref:System.Data.DataSet> wird mit einer zweiten zusammengeführt <xref:System.Data.DataSet>, Einschränkungen werden nicht angewendet, bis alle Mergeprozesse abgeschlossen sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Data.UniqueConstraint> zu eine <xref:System.Data.DataSet> und legt der <xref:System.Data.DataSet.EnforceConstraints%2A> Eigenschaft, um `true`.  
+  
+ [!code-vb[Classic WebData UniqueConstraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für Multithread-Lesevorgänge geeignet ist. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.Data.DataColumn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die <see cref="T:System.Data.DataColumn" /> eingeschränkt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.UniqueConstraint" />-Klasse mit der angegebenen <see cref="T:System.Data.DataColumn" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.UniqueConstraint> und weist sie der <xref:System.Data.DataRelation.ParentKeyConstraint%2A> Eigenschaft von einem <xref:System.Data.DataRelation>.  
+  
+ [!code-vb[Classic WebData UniqueConstraint.UniqueConstraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.UniqueConstraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (System.Data.DataColumn[] columns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataColumn[] columns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.Data.DataColumn[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columns" Type="System.Data.DataColumn[]" />
+      </Parameters>
+      <Docs>
+        <param name="columns">Das Array von <see cref="T:System.Data.DataColumn" /> Objekte, die zu beschränken.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.UniqueConstraint" /> Klasse mit dem angegebenen Array von <see cref="T:System.Data.DataColumn" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (System.Data.DataColumn column, bool isPrimaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataColumn column, bool isPrimaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.Data.DataColumn,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="isPrimaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die <see cref="T:System.Data.DataColumn" /> eingeschränkt.</param>
+        <param name="isPrimaryKey">
+          <see langword="true" />um anzugeben, dass die Einschränkung ein Primärschlüssel ist. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.UniqueConstraint" /> -Klasse mit der <see cref="T:System.Data.DataColumn" /> eingeschränkt, und ein Wert, der angibt, ob die Einschränkung ein Primärschlüssel ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (System.Data.DataColumn[] columns, bool isPrimaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataColumn[] columns, bool isPrimaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.Data.DataColumn[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columns" Type="System.Data.DataColumn[]" />
+        <Parameter Name="isPrimaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="columns">Ein Array von <see cref="T:System.Data.DataColumn" /> Objekte, die zu beschränken.</param>
+        <param name="isPrimaryKey">
+          <see langword="true" />um anzugeben, dass die Einschränkung ein Primärschlüssel ist. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.UniqueConstraint" /> Klasse mit einem Array von <see cref="T:System.Data.DataColumn" /> Objekte eingeschränkt, und ein Wert, der angibt, ob die Einschränkung, ein primärer Schlüssel ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (string name, System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.String,System.Data.DataColumn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Einschränkung.</param>
+        <param name="column">Die <see cref="T:System.Data.DataColumn" /> eingeschränkt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.UniqueConstraint" /> Klasse mit dem angegebenen Namen und <see cref="T:System.Data.DataColumn" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.UniqueConstraint> und weist sie der <xref:System.Data.DataRelation.ParentKeyConstraint%2A> Eigenschaft von einem <xref:System.Data.DataRelation>.  
+  
+ [!code-vb[Classic WebData UniqueConstraint.UniqueConstraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.UniqueConstraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (string name, System.Data.DataColumn[] columns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Data.DataColumn[] columns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.String,System.Data.DataColumn[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="columns" Type="System.Data.DataColumn[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Einschränkung.</param>
+        <param name="columns">Das Array von <see cref="T:System.Data.DataColumn" /> Objekte, die zu beschränken.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.UniqueConstraint" /> Klasse mit dem angegebenen Namen und ein Array von <see cref="T:System.Data.DataColumn" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataTable> mit zwei Spalten und fügt ein neues <xref:System.Data.UniqueConstraint> auf die <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[Classic WebData UniqueConstraint.UniqueConstraint2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.UniqueConstraint2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData UniqueConstraint.UniqueConstraint2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.UniqueConstraint2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (string name, System.Data.DataColumn column, bool isPrimaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Data.DataColumn column, bool isPrimaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.String,System.Data.DataColumn,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="isPrimaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Einschränkung.</param>
+        <param name="column">Die <see cref="T:System.Data.DataColumn" /> eingeschränkt.</param>
+        <param name="isPrimaryKey">
+          <see langword="true" />um anzugeben, dass die Einschränkung ein Primärschlüssel ist. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Data.UniqueConstraint" /> Klasse mit dem angegebenen Namen, den <see cref="T:System.Data.DataColumn" /> eingeschränkt, und ein Wert, der angibt, ob die Einschränkung, ein primärer Schlüssel ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (string name, System.Data.DataColumn[] columns, bool isPrimaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Data.DataColumn[] columns, bool isPrimaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.String,System.Data.DataColumn[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="columns" Type="System.Data.DataColumn[]" />
+        <Parameter Name="isPrimaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Einschränkung.</param>
+        <param name="columns">Ein Array von <see cref="T:System.Data.DataColumn" /> Objekte, die zu beschränken.</param>
+        <param name="isPrimaryKey">
+          <see langword="true" />um anzugeben, dass die Einschränkung ein Primärschlüssel ist. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.UniqueConstraint" /> Klasse mit dem angegebenen Namen, ein Array von <see cref="T:System.Data.DataColumn" /> Objekte eingeschränkt, und ein Wert, der angibt, ob die Einschränkung, ein primärer Schlüssel ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UniqueConstraint (string name, string[] columnNames, bool isPrimaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string[] columnNames, bool isPrimaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.#ctor(System.String,System.String[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="columnNames" Type="System.String[]" />
+        <Parameter Name="isPrimaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Einschränkung.</param>
+        <param name="columnNames">Ein Array von <see cref="T:System.Data.DataColumn" /> Objekte, die zu beschränken.</param>
+        <param name="isPrimaryKey">
+          <see langword="true" />um anzugeben, dass die Einschränkung ein Primärschlüssel ist. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.UniqueConstraint" /> Klasse mit dem angegebenen Namen, ein Array von <see cref="T:System.Data.DataColumn" /> Objekte eingeschränkt, und ein Wert, der angibt, ob die Einschränkung, ein primärer Schlüssel ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird für die entwurfszeitunterstützung in der Visual Studio .NET Umgebung bereitgestellt. <xref:System.Data.UniqueConstraint>mit diesem Konstruktor erstellten Objekte müssen anschließend hinzugefügt werden, auf die Auflistung über <xref:System.Data.ConstraintCollection.AddRange%2A>. Spalten mit den angegebenen Namen müssen vorhanden sein, die zum Zeitpunkt der-Methode aufgerufen wird, oder wenn <xref:System.Data.DataTable.BeginInit%2A> vor dem Aufruf dieses Konstruktors, die Spalten mit den angegebenen Namen vorhanden, die zum Zeitpunkt sein muss aufgerufen wurde, <xref:System.Data.DataTable.EndInit%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataColumn[] Columns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataColumn[] Columns" />
+      <MemberSignature Language="DocId" Value="P:System.Data.UniqueConstraint.Columns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Array von Spalten, die dieser Einschränkung betroffen sind.</summary>
+        <value>Ein Array von <see cref="T:System.Data.DataColumn" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt die <xref:System.Data.DataColumn> Objekte, die <xref:System.Data.UniqueConstraint> einschränkt.  
+  
+ [!code-vb[Classic WebData UniqueConstraint.Columns Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.Columns Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object key2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object key2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key2">Das Objekt, das dieses <see cref="T:System.Data.UniqueConstraint" /> verglichen wird.</param>
+        <summary>Vergleicht diese Einschränkung eine Sekunde, um zu bestimmen, ob beide identisch sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Einschränkung gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Einschränkungen sind gleich, wenn sie dieselben Spalten einschränken.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden zwei UniqueConstraint-Objekte.  
+  
+ [!code-vb[Classic WebData UniqueConstraint.Equals Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.Equals Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UniqueConstraint.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz die <see cref="T:System.Data.UniqueConstraint" /> Objekt.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimaryKey">
+      <MemberSignature Language="C#" Value="public bool IsPrimaryKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.UniqueConstraint.IsPrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ab, unabhängig davon, ob die Einschränkung auf ein Primärschlüssel ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Einschränkung für eine Primärschlüsselspalte ist; ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Tabelle umfasst i. d. r. einen Primärschlüssel, der sicherstellt, dass jede Zeile eindeutig ist. In einigen Tabellen kann der primäre Schlüssel der mehr als eine Spalte vorgenommen werden. Beispielsweise kann ein Primärschlüssel für eine Tabelle mit Namen, der sowohl die vor- und Nachnamen Namen auch vorgenommen werden. Um einen Primärschlüssel mit mehr als eine Spalte zu erstellen, legen Sie die Spalten-Eigenschaft auf ein Array von DataColumn-Objekten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft die <xref:System.Data.UniqueConstraint.IsPrimaryKey%2A> Eigenschaft.  
+  
+ [!code-vb[Classic WebData UniqueConstraint.IsPrimaryKey Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.IsPrimaryKey Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.UniqueConstraint.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tabelle, zu der diese Einschränkung gehört.</summary>
+        <value>Die <see cref="T:System.Data.DataTable" /> zu dem die Einschränkung gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt eine <xref:System.Data.UniqueConstraint> des Objekts <xref:System.Data.DataTable>.  
+  
+ [!code-vb[Classic WebData UniqueConstraint.Table Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData UniqueConstraint.Table Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

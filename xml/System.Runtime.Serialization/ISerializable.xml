@@ -1,0 +1,131 @@
+<Type Name="ISerializable" FullName="System.Runtime.Serialization.ISerializable">
+  <TypeSignature Language="C#" Value="public interface ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ISerializable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht einem Objekt eine eigene Serialisierung und Deserialisierung zu steuern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Klasse, die möglicherweise serialisiert werden muss markiert werden, mit der <xref:System.SerializableAttribute>. Wenn eine Klasse ihren Serialisierungsprozess steuern muss, können Sie implementieren die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle. Die <xref:System.Runtime.Serialization.Formatter> Aufrufe der <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> bei der Serialisierung und füllt die angegebene <xref:System.Runtime.Serialization.SerializationInfo> mit den Daten, die zur Darstellung des Objekts erforderlich. Die <xref:System.Runtime.Serialization.Formatter> erstellt eine <xref:System.Runtime.Serialization.SerializationInfo> mit dem Typ des Objekts im Diagramm. Objekte, die Proxys senden selbst verwenden können, müssen die <xref:System.Runtime.Serialization.SerializationInfo.FullTypeName%2A> und <xref:System.Runtime.Serialization.SerializationInfo.AssemblyName%2A> Methoden auf <xref:System.Runtime.Serialization.SerializationInfo> so ändern Sie die übertragene Informationen.  
+  
+ Im Fall von klassenvererbung, es ist möglich, eine Klasse serialisieren können, die von einer Basisklasse abgeleitet wird, implementiert <xref:System.Runtime.Serialization.ISerializable>. In diesem Fall sollte die abgeleitete Klasse die Implementierung der Basisklasse aufrufen <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> in seiner Implementierung von <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>. Andernfalls werden die Daten von der Basisklasse nicht serialisiert werden.  
+  
+ Die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle impliziert einen Konstruktor mit der Signaturkonstruktor (<xref:System.Runtime.Serialization.SerializationInfo> Informationen <xref:System.Runtime.Serialization.StreamingContext> Kontext). Während der Deserialisierung der aktuellen Konstruktor aufgerufen wird, nur nach den Daten in der <xref:System.Runtime.Serialization.SerializationInfo> vom Formatierungsprogramm deserialisiert wurde. Dieser Konstruktor sollte im Allgemeinen geschützt werden, wenn die Klasse nicht versiegelt ist.  
+  
+ Die Reihenfolge, in der Objekte deserialisiert werden, kann nicht garantiert werden. Z. B. wenn ein Typ einen Typ, der noch nicht deserialisiert wurde verweist, wird eine Ausnahme ausgelöst. Wenn Sie Typen, die solche Abhängigkeiten aufweisen erstellen, Sie können das Problem umgehen durch Implementieren der `IDeserializationCallback` Schnittstelle und die `OnDeserialization` Methode.  
+  
+ Die Serialisierungsarchitektur behandelt Objekttypen, die erweitern <xref:System.MarshalByRefObject> wie Typen, die erweitern <xref:System.Object>. Diese Typen können gekennzeichnet werden, mit der <xref:System.SerializableAttribute> und Implementieren der <xref:System.Runtime.Serialization.ISerializable> Schnittstelle wie jeden anderen Objekttyp. Der Objektzustand wird aufgezeichnet und in den Stream beibehalten werden.  
+  
+ Wenn diese Typen verwendet werden wird, über <xref:System.Runtime.Remoting>, die Remotinginfrastruktur enthält ein Ersatzzeichen, die Vorrang vor der normalen Serialisierung hat und stattdessen serialisiert einen Proxy für die <xref:System.MarshalByRefObject>. Ein Ersatzzeichen ist ein Hilfsprogramm, die weiß, wie zum Serialisieren und Deserialisieren von Objekten eines bestimmten Typs. Der Proxy für den Benutzer in den meisten Fällen nicht sichtbar werden vom Typ <xref:System.Runtime.Remoting.ObjRef>.  
+  
+ Als ein allgemeiner Entwurfsmuster, wäre es für eine Klasse mit dem serializable-Attribut markiert, und erweitern ungewöhnliche <xref:System.MarshalByRefObject>. Entwickler sollten die möglichen Szenarien für die Serialisierung und Remoting sorgfältig überlegen, wenn Kombination dieser beiden Merkmale. Ein Beispiel, in denen dies ist möglicherweise anwendbar, ist eine <xref:System.IO.MemoryStream>. Während die Basisklasse von <xref:System.IO.MemoryStream> (<xref:System.IO.Stream>) erstreckt sich von <xref:System.MarshalByRefObject>, es ist möglich, den Status des Aufzeichnen einer <xref:System.IO.MemoryStream> und wiederhergestellt werden. Daher möglicherweise sinnvoll, den Zustand dieses Streams in einer Datenbank zu serialisieren und zeitlich zu einem späteren Zeitpunkt wiederherzustellen. Wenn mithilfe von-Remoting verwendet wird, wäre ein Objekt dieses Typs Proxyanforderungen jedoch.  
+  
+ Weitere Informationen über die Serialisierung von Klassen, die erweitern <xref:System.MarshalByRefObject>, finden Sie unter <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector>. Weitere Informationen zur Implementierung <xref:System.Runtime.Serialization.ISerializable>, finden Sie unter [benutzerdefinierte Serialisierung](~/docs/standard/serialization/custom-serialization.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Runtime.Serialization.ISerializable> Schnittstelle, um benutzerdefinierte Serialisierungsverhalten für eine Klasse zu definieren.  
+  
+ [!code-cpp[ISerializable Interface Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ISerializable Interface Example/CPP/iobjectreference.cpp#1)]
+ [!code-csharp[ISerializable Interface Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ISerializable Interface Example/CS/iobjectreference.cs#1)]
+ [!code-vb[ISerializable Interface Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISerializable Interface Example/VB/iobjectreference.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementieren Sie diese Schnittstelle, um ein Objekt in seine eigene Serialisierung und Deserialisierung zu ermöglichen.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="context">Das Ziel (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" />) dieser Serialisierung.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte, die in enthaltenen der <xref:System.Runtime.Serialization.SerializationInfo> automatisch nachverfolgt und vom Formatierungsprogramm serialisiert werden.  
+  
+ Code, der Aufrufe <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> erfordert die <xref:System.Security.Permissions.SecurityPermission> für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Es ist nicht sichergestellt, dass diese Methode wird während der Serialisierung nur einmal pro Objektinstanz aufgerufen werden. Aus diesem Grund sollte die Methode so implementiert werden, dass das Verhalten identisch, unabhängig davon, wie oft werden, wenn er aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> Methode, um alternative Werte für ein serialisiertes Objekt festgelegt. Der Code verwendet die <xref:System.Runtime.Serialization.SerializationInfo.AddValue%2A> Methode der <xref:System.Runtime.Serialization.SerializationInfo> Klasse, um die alternative Werte zu speichern, wenn das Objekt serialisiert wird. Umgekehrt, wenn der Konstruktor der der `Person` Klasse während der Deserialisierung aufgerufen wird, mithilfe der alternativen Werte abgerufen die <xref:System.Runtime.Serialization.SerializationInfo.GetValue%2A> Methode und den Feldern des Objekts zugewiesen.  
+  
+ [!code-csharp[ISerializable_GetObjectData#0](~/samples/snippets/csharp/VS_Snippets_Remoting/ISerializable_GetObjectData/cs/ISerializable_GetObjectData.cs#0)]
+ [!code-vb[ISerializable_GetObjectData#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISerializable_GetObjectData/vb/ISerializable_GetObjectData.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

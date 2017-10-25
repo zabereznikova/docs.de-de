@@ -1,0 +1,602 @@
+<Type Name="ChartSerializer" FullName="System.Windows.Forms.DataVisualization.Charting.ChartSerializer">
+  <TypeSignature Language="C#" Value="public class ChartSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ChartSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Format")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Serialisierung von der <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verfügbar gemacht, als die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Serializer%2A> Eigenschaft des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Klasse.  
+  
+ Serialisierung speichert den Zustand des Diagramms und bietet außerdem die Möglichkeit, die die serialisierten Daten in das Diagramm zu laden. Alle Diagrammeigenschaften können beibehalten werden, einschließlich der Daten für das Diagramm. Darüber hinaus können alle für die Serialisierung markierte Diagrammeigenschaften zurückgesetzt werden.  
+  
+ Diese Klasse kann optional verwendet werden, wenn Sie benutzerdefinierten Ansichtszustand zu verwalten. Eines der `Load` Methoden können verwendet werden, um den Ansichtszustand und eine der laden die `Save` Methoden können verwendet werden, wenn den Ansichtszustand festlegen.  
+  
+ XML-Index oder binäre Formate können zum Speichern, die Serialisierung der Daten verwendet werden. XML wird standardmäßig verwendet, aber Sie können das Format mit ändern die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format%2A> Eigenschaft.  
+  
+ Diagrammeigenschaften werden gespeichert und geladen, mit der `Save` und `Load` Methoden bzw.. Beachten Sie, dass nur Eigenschaften mit nicht standardmäßigen Werten gespeichert werden. Daten gespeichert werden können und/oder stream mithilfe einer Datei geladen, <xref:System.IO.TextWriter>, <xref:System.IO.TextReader>, <xref:System.Xml.XmlWriter> und <xref:System.Xml.XmlReader> Objekte. Beim Speichern und/oder Laden von Daten mit einem Objekt abgeleitet wurde. die <xref:System.IO.TextReader>, <xref:System.IO.TextWriter>, <xref:System.Xml.XmlReader> oder <xref:System.Xml.XmlWriter> Klassen, die das Format der Daten XML sein müssen.  
+  
+ Die folgende Liste beschreibt die drei Methoden, von grundlegende und erweiterte verwendet, um die serialisierbare Daten zu definieren. Beachten Sie, dass es auch nicht serialisierbaren Daten definiert werden. Diese Technik wird im nächsten Abschnitt beschrieben.  
+  
+-   Serialisieren der <xref:System.Windows.Forms.DataVisualization.Charting.Chart> mithilfe der `Save` und `Load` Methoden ohne serialisierbaren Eigenschaften anzugeben. Alle Diagrammeigenschaften mit nicht standardmäßigen Werten, die Diagrammdaten umfasst, werden serialisiert.  
+  
+-   Serialisieren Sie die Diagrammeigenschaften gemäß der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft. Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft gruppiert die Diagrammeigenschaften in Kategorien, z. B. Daten, Darstellung usw. serialisiert werden. Beachten Sie, dass die Namen der <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> und <xref:System.Windows.Forms.DataVisualization.Charting.Series> Objekte werden automatisch serialisiert; auf vorhandene Diagrammbereiche und Reihen, die beim Laden der serialisierten Daten angewendet.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft wird intern von implementiert die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> steuern, wie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft  
+  
+-   Serialisierung von Diagrammeigenschaften gemäß der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft. Dies ist eine durch Trennzeichen getrennte Liste aller Diagrammeigenschaften, die serialisierbar sind. Diese Eigenschaft auf einen expliziten Wert festgelegt ist, ist es die Verantwortung des Entwicklers an alle Eigenschaften gespeichert werden sollen. Das heißt, im Gegensatz zu den <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> -Eigenschaft, die Namen der Diagrammflächen und Reihen nicht automatisch beibehalten. Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaften können auch zusammen verwendet werden. Stellen Sie jedoch sicher, dass <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> mit sich selbst verkettet wird, wenn festgelegt wird, andernfalls die Diagrammeigenschaften gemäß der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft überschrieben.  
+  
+ Um zu verhindern, dass bestimmte Eigenschaften serialisiert wird, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaft. Wenn eine Eigenschaft festgelegt ist als serialisierbar und als nicht serialisierbar, die bei häufig vorkommen, wenn Sie Platzhalter verwenden, die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft hat Vorrang vor. Rangfolge hängt jedoch ebenfalls wie viele Platzhalter verwendet wurden, wenn eine Eigenschaft angegeben wurde.  
+  
+ Standardmäßig werden serialisierbare Eigenschaften auf ihre Standardwerte zurückgesetzt, bevor sie geladen werden. Dieses Verhalten kann geändert werden, mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading%2A> Eigenschaft. Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Reset%2A> Methode kann auch verwendet werden, um explizit Diagrammeigenschaften auf ihre Standardwerte zurückgesetzt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.SerializationContents Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.SerializationContents Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.SerializationContents), "Default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Diagramm Inhaltstyp serialisiert werden soll.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.SerializationContents" /> -Enumerationswert ab, der den Diagramminhalt darstellt, die während eines Auslastungstests serialisiert werden speichern oder Zurücksetzen Vorgang. Standardmäßig werden alle nicht standardmäßigen Diagrammeigenschaften, einschließlich Daten beibehalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle Diagrammeigenschaften serialisiert, wenn Änderungen an der `Save` und `Load` Methoden aufgerufen werden. Um mehr Kontrolle über was serialisiert wird bereitzustellen, verwenden Sie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft. Beachten Sie, dass die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften können auch verwendet werden, zusammen mit der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft.  
+  
+ **Wichtige** der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft bestimmt die Typen der Merkmale des Diagramms, z. B. "Darstellung" serialisiert werden soll, und wird als tatsächlich intern implementiert die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft. Dies bedeutet, dass durch Festlegen der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft festlegen und anschließend die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft führt dazu, die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaftswert überschrieben wurde, es sei denn, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> verkettet wird. Finden Sie unter der Beispielcode im folgenden ein Beispiel für dieses Verfahren.  
+  
+ Wenn Sie festlegen, die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft alle <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> und <xref:System.Windows.Forms.DataVisualization.Charting.Series> auszuwählenden Objekte werden automatisch serialisiert werden; dies bedeutet, dass die serialisierte Daten, die das Diagrammflächen und einer Reihe bezieht sich auf vorhandene Objekte beim Laden von angewendet werden soll.  
+  
+ Festlegen dieser Eigenschaft wirkt sich auf alle zu laden, speichern und Rücksetzvorgänge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.SerializationFormat Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.SerializationFormat Format" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.SerializationFormat), "Xml")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SerializationFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format verwendet, wenn das Diagramm serialisiert wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.SerializationFormat" /> -Enumerationswert ab, der das Format der serialisierten Daten darstellt. Der Standardwert ist XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Daten können in eine XML oder binary-Format serialisiert werden. Binärformat ist kompakt und nimmt weniger Speicher als XML. XML-Code ist jedoch ein Textformat, das einem von Menschen lesbaren ist.  
+  
+ Wenn Sie speichern oder Laden von serialisierten Daten, muss das Format XML sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentString">
+      <MemberSignature Language="C#" Value="protected string GetContentString (System.Windows.Forms.DataVisualization.Charting.SerializationContents content, bool serializable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetContentString(valuetype System.Windows.Forms.DataVisualization.Charting.SerializationContents content, bool serializable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.GetContentString(System.Windows.Forms.DataVisualization.Charting.SerializationContents,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Windows.Forms.DataVisualization.Charting.SerializationContents" />
+        <Parameter Name="serializable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="content">Den serialisierbaren Inhalt.</param>
+        <param name="serializable">
+          <see langword="True" />Um eine serialisierbare Zeichenfolge abzurufen; <see langword="false" /> auf eine nicht serialisierbarer Zeichenfolge abzurufen.</param>
+        <summary>Gibt eine serialisierbare oder nicht serialisierbare Klasse und/oder Eigenschaftennamen, je nach den spezifischen Flagwert.</summary>
+        <returns>Ein <see langword="string" /> Wert, der die serialisierbaren oder nicht serialisierbare Klasse und/oder Eigenschaft Namen darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsResetWhenLoading">
+      <MemberSignature Language="C#" Value="public bool IsResetWhenLoading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsResetWhenLoading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob Objekteigenschaften vor dem Laden auf Standardwerte zurückgesetzt werden.</summary>
+        <value>
+          <see langword="True" />Wenn Sie Objekteigenschaften vor dem Laden auf Standardwerte zurückgesetzt werden; andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTemplateMode">
+      <MemberSignature Language="C#" Value="public bool IsTemplateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTemplateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsTemplateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob der diagrammserialisierer im vorlagenerstellung Modus arbeitet.</summary>
+        <value>
+          <see langword="True" />Wenn der diagrammserialisierer im vorlagenerstellung Modus verwendet werden kann; andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnknownAttributeIgnored">
+      <MemberSignature Language="C#" Value="public bool IsUnknownAttributeIgnored { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnknownAttributeIgnored" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsUnknownAttributeIgnored" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob unbekannte XML-Eigenschaften und Elemente ignoriert werden, ohne eine Ausnahme auszulösen.</summary>
+        <value>
+          <see langword="True" />Wenn unbekannte XML-Eigenschaften und Elemente ignoriert werden, ohne eine Ausnahme auszulösen. andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein abgeleitetes Objekt aus der <see cref="T:System.IO.Stream" /> Klasse, zum Beispiel ein <see cref="T:System.IO.MemoryStream" /> Objekt.</param>
+        <summary>Lädt serialisierte Daten in das Steuerelement aus einem Objekt abgeleitet wurde. die <see cref="T:System.IO.Stream" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode zum Laden von serialisierter Daten in die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ Tritt ein Ladevorgang sind, serialisierbare Eigenschaften standardmäßig zuerst auf ihre Standardwerte zurückgesetzt, bevor sie auf die beibehaltenen Werte festgelegt sind gespeichert. Um dieses Verhalten zu ändern, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading%2A> Eigenschaft.  
+  
+ Standardmäßig werden alle serialisierten Diagrammeigenschaften geladen. Um bestimmte serialisierte Eigenschaften zu laden, legen die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> , <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> oder <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften vor dem Laden der Daten.  
+  
+ Beachten Sie, dass, wenn Daten gespeichert werden, mithilfe einer `Save` -Methode, nur die Eigenschaften, die nicht standardmäßige Werte aufweisen, werden tatsächlich serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.IO.TextReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(class System.IO.TextReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.IO.TextReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein Reader z. B. <see cref="T:System.IO.StringReader" />, d. h. von der abstrakten abgeleiteten <see cref="T:System.IO.TextReader" /> Klasse.</param>
+        <summary>Lädt Daten in das Steuerelement aus einem Readerobjekt, das von abgeleitet wird serialisiert die <see cref="T:System.IO.TextReader" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode zum Laden von serialisierter Daten in die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ Tritt ein Ladevorgang, werden standardmäßig serialisierbaren Eigenschaften zuerst auf ihre Standardwerte zurückgesetzt, bevor sie auf die beibehaltenen Werte festgelegt werden, wenn gespeichert wurden. Um dieses Verhalten zu ändern, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading%2A> Eigenschaft.  
+  
+ Standardmäßig werden alle serialisierten Diagrammeigenschaften geladen. Durch Festlegen der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> oder <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften, die einen bestimmten Satz von Eigenschaften geladen werden können.  
+  
+ Wenn Sie diese Definition verwenden, beachten Sie, dass das Format, das festgelegt wird, indem Sie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format%2A> Eigenschaft XML sein muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der relative oder absolute Pfad der Datei zum Speichern der serialisierten Daten verwendet. Wenn ein relativer Pfad angegeben wird, wird der Pfad relativ zum aktuellen Verzeichnis sein.</param>
+        <summary>Lädt serialisierte Daten gespeichert werden, auf den Datenträger in den <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode zum Laden von serialisierter Daten in die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ Tritt ein Ladevorgang sind, serialisierbare Eigenschaften standardmäßig zuerst auf ihre Standardwerte zurückgesetzt, bevor sie auf die beibehaltenen Werte festgelegt sind gespeichert. Um dieses Verhalten zu ändern, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading%2A> Eigenschaft.  
+  
+ Standardmäßig werden alle serialisierten Diagrammeigenschaften geladen. Um bestimmte serialisierte Eigenschaften zu laden, legen die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> , <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> oder <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften vor dem Laden der Daten.  
+  
+ Beachten Sie, dass, wenn Daten gespeichert werden, mithilfe einer `Save` -Methode, nur die Eigenschaften, die nicht standardmäßige Werte aufweisen, werden tatsächlich serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein Objekt, aus dem die persistenten Daten gelesen werden soll. Das Objekt stammt aus der <see cref="T:System.Xml.XmlReader" /> Klasse, und kann einen .NET Framework-Objekt oder ein benutzerdefiniertes Objekt.</param>
+        <summary>Lädt serialisierte Daten in das Steuerelement aus einem Objekt abgeleitet wurde. die <see cref="T:System.Xml.XmlReader" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode zum Laden von serialisierter Daten in die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ Tritt ein Ladevorgang, werden standardmäßig serialisierbare Eigenschaften zuerst auf ihre Standardwerte zurückgesetzt, bevor sie auf die beibehaltenen Werte festgelegt werden, wenn gespeichert wurden. Um dieses Verhalten zu ändern, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading%2A> Eigenschaft.  
+  
+ Standardmäßig werden alle serialisierten Diagrammeigenschaften geladen. Wenn Sie festlegen, die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> oder <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften, die einen bestimmten Satz von Eigenschaften geladen werden können.  
+  
+ Wenn Sie diese Definition verwenden, muss das Format XML sein. das Format kann geändert werden, mit der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format%2A> Eigenschaft.  
+  
+ Beim Arbeiten mit XML-Format-Textdateien, verwenden Sie zur Vereinfachung der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load%2A> Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonSerializableContent">
+      <MemberSignature Language="C#" Value="public string NonSerializableContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NonSerializableContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Diagrammeigenschaften, die nicht serialisiert werden.</summary>
+        <value>Eine durch Trennzeichen getrennte <see langword="string" /> Ausdruck, der die Diagrammeigenschaften darstellt, die nicht serialisiert werden. Die Syntax lautet "Klasse.Eigenschaft [, Klasse.Eigenschaft]".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle Diagrammeigenschaften serialisiert, wenn die `Save` und `Load` Methoden aufgerufen werden. Können Sie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaft, um einzuschränken, zusammen mit serialisiert werden die Merkmale des Diagramms die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaften.  
+  
+ Diese Eigenschaft bestimmt, welche Merkmale des Diagramms werden nicht serialisiert werden. Platzhalter können im Zeichenfolgenausdruck verwendet werden, auf die gleiche Weise wie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft. Beispielsweise sollen alle Diagrammdaten `BackColor` Eigenschaften von der Serialisierung, legen Sie diese Eigenschaft auf "*. BackColor".  
+  
+ In manchen Fällen kann eine Eigenschaft festgelegt werden sowohl serialisiert und nicht serialisiert werden, werden die bei häufig vorkommen, wenn Platzhalter verwendet werden. Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Ausdruck weist eine niedrigere Priorität gegenüber den <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Ausdruck. Beachten Sie jedoch, dass weniger Gewicht auf Zeichenfolgenausdrücke angegeben wird, die Platzhalter verwenden. Beispielsweise, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> -Eigenschaftensatz auf "*. BackColor"und die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.BackColor%2A>, alle B`ackColor` Eigenschaften außer <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekte serialisiert werden.  
+  
+ Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft festgelegt wurde, die Priorität hängt davon ab, wie viele Platzhalter in verwendet werden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Ausdruck. Z. B. die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft <xref:System.Windows.Forms.DataVisualization.Charting.SerializationContents.Appearance> führt zu der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> , die Eigenschaft enthält eine "*. Wieder\*"Ausdruck. Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> -Eigenschaftensatz auf "\*. Wieder\*", werden alle `Back*` Diagrammeigenschaften wie z. B. `BackColor`, `BackGradient`usw., werden weiterhin serialisiert werden. Grund hierfür ist die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaftswert hat Vorrang gegenüber der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaft.  
+  
+ Diese Eigenschaft wirkt sich auf alle zu speichern, laden und Rücksetzvorgänge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt alle Diagrammeigenschaften für die Serialisierung gekennzeichnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird diese Methode alle Diagrammeigenschaften auf ihre Standardwerte zurückgesetzt.  
+  
+ Um die Diagrammeigenschaften zu beschränken, die auf ihre Standardwerte zurückgesetzt werden, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften.  
+  
+ Beachten Sie, dass diese Methode auch automatisch aufgerufen wird eine `Load` Methode wird verwendet, und die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading%2A> -Eigenschaftensatz auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein abgeleitetes Objekt aus der <see cref="T:System.IO.Stream" /> Klasse, z. B. <see cref="T:System.IO.MemoryStream" />, d. h. zum Speichern von Diagrammeigenschaften verwendet.</param>
+        <summary>Speichert Diagrammdaten Eigenschaften mit nicht standardmäßigen Werten für ein Objekt, das von abgeleitet ist und die <see cref="T:System.IO.Stream" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle Diagrammeigenschaften mit nicht standardmäßigen Werten der Datenpunkte enthält, serialisiert werden, wenn diese Methode aufgerufen wird. Verwenden Sie zum Steuern von zu serialisierenden Diagrammeigenschaften der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften.  
+  
+ Wenn diese Methode verwendet wird, um Darstellungseigenschaften als Vorlage speichern, stellen sicher, dass die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsTemplateMode%2A> Eigenschaft von der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer> Objektsatz ist zunächst auf `true` vor dem Aufrufen dieser Methode.  
+  
+ Die Serialisierung eines Diagramms als Vorlage unterscheidet sich von nicht von der Vorlage Serialisierung; Vorlage Serialisierung konzentriert sich auf Darstellungseigenschaften.  
+  
+ Wenn eine Vorlage serialisiert wird, die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.LoadTemplate%2A> Methode kann verwendet werden, laden Sie die Vorlage, um die Darstellungseigenschaften für ein Diagramm zu gewährleisten.  
+  
+ Vorlagen können verwendet werden, um benutzerdefinierte Paletten zu simulieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein Objekt abgeleitet <see cref="T:System.IO.TextWriter" /> Klasse, zum Beispiel <see cref="T:System.IO.StringWriter" />, d. h. zum Speichern von Diagrammeigenschaften verwendet.</param>
+        <summary>Speichert Diagrammdaten Eigenschaften mit nicht standardmäßigen Werten im angegebenen Objekt, das von abgeleitet ist und die <see cref="T:System.IO.TextWriter" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle Diagrammeigenschaften mit nicht standardmäßigen Werten der Datenpunkte enthält, serialisiert werden, wenn diese Methode aufgerufen wird. Um zu steuern, welche Merkmale des Diagramms serialisiert werden, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften.  
+  
+ Wenn Sie diese Definition verwenden, muss das Format XML sein. das Format kann festgelegt werden, mit der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der relative oder absolute Pfad der Datei zum Speichern der serialisierten Daten verwendet. Beachten Sie, dass wenn ein relativer Pfad angegeben wird, wird der Pfad relativ zum aktuellen Verzeichnis sein.</param>
+        <summary>Speichert Diagrammdaten und Eigenschaften mit nicht-Standardwerte in die angegebene Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle Diagrammeigenschaften mit nicht standardmäßigen Werten der Datenpunkte enthält, serialisiert werden, wenn diese Methode aufgerufen wird. Zum Steuern der Merkmale des Diagramms werden serialisiert verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften.  
+  
+ Standardmäßig werden die Daten in einem XML-Format gespeichert. Um die Daten in einem binären Format zu speichern, verwenden Sie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format%2A> Eigenschaft.  
+  
+ Beachten Sie, dass über Schreibberechtigungen für das Verzeichnis aktiviert sein müssen, in dem die Datei gespeichert ist. Standardmäßig ist dies der Ordner "Bin" der Anwendung.  
+  
+ Wenn diese Methode zum Speichern von Darstellungseigenschaften als Vorlage verwendet wird, stellen sicher, dass die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsTemplateMode%2A> -Eigenschaftensatz ist zunächst auf `true` vor dem Aufrufen dieser Methode.  
+  
+ Die Serialisierung eines Diagramms als Vorlage richtet sich danach von der Serialisierung nicht von der Vorlage, hauptsächlich da Darstellungseigenschaften Vorlage Serialisierung Arbeitsspeicherverbrauchs.  
+  
+ Wenn eine Vorlage serialisiert wird, die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.LoadTemplate%2A> Methode kann verwendet werden, laden Sie die Vorlage, um die Darstellungseigenschaften für ein Diagramm zu gewährleisten.  
+  
+ Vorlagen können verwendet werden, um benutzerdefinierte Paletten zu simulieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein Objekt abgeleitet <see cref="T:System.Xml.XmlWriter" /> zum Speichern von <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> Eigenschaften.</param>
+        <summary>Speichert Diagrammdaten Eigenschaften mit nicht standardmäßigen Werten im angegebenen Objekt, das von abgeleitet ist und die <see cref="T:System.Xml.XmlWriter" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle Diagrammeigenschaften mit nicht standardmäßigen Werten der Datenpunkte enthält, serialisiert werden, wenn diese Methode aufgerufen wird. Um zu steuern, welche Merkmale des Diagramms serialisiert werden, verwenden die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaften.  
+  
+ Wenn Sie diese Definition verwenden, muss das Format XML sein. das Format kann geändert werden, mit der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format%2A> Eigenschaft.  
+  
+ Beim Arbeiten mit XML-Format-Textdateien, verwenden Sie zur Vereinfachung der <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save%2A> Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializableContent">
+      <MemberSignature Language="C#" Value="public string SerializableContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerializableContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Diagrammeigenschaften, die serialisiert werden können.</summary>
+        <value>Eine durch Trennzeichen getrennte <see langword="string" /> Ausdruck ein, das zu serialisierenden Diagrammeigenschaften darstellt. Die Syntax lautet "Klasse.Eigenschaft [, Klasse.Eigenschaft]".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle Diagrammeigenschaften serialisiert, wenn die `Save` und `Load` Methoden aufgerufen werden. Können Sie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaft, um einzuschränken, zusammen mit serialisiert werden die Merkmale des Diagramms die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaften.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft bestimmt, welche Diagrammeigenschaften serialisiert werden. Platzhalter können im Zeichenfolgenausdruck verwendet werden, auf die gleiche Weise wie die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Eigenschaft. Beispielsweise serialisiert alle Diagrammdaten `BackColor` Eigenschaften, legen Sie diese Eigenschaft auf "*. BackColor".  
+  
+ Wenn <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> und/oder <xref:System.Windows.Forms.DataVisualization.Charting.Series> untergeordneten Eigenschaften angegeben sind, klicken Sie dann die Namen aller <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> und <xref:System.Windows.Forms.DataVisualization.Charting.Series> Objekte müssen auch angegeben werden, um die persistenten Daten vorhandenen angewendet werden können <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> und <xref:System.Windows.Forms.DataVisualization.Charting.Series> Objekte. d. h., müssen Sie die "Ausdrücke Series.Name" und "ChartArea.Name" Ausdrücke angeben. Finden Sie unter der Beispielcode im folgenden ein Beispiel für dieses Verfahren. Auf ähnliche Weise, wenn mehrere Diagrammflächen verwendet werden, die <xref:System.Windows.Forms.DataVisualization.Charting.Series.ChartArea%2A> -Eigenschaft aller gezeichnet <xref:System.Windows.Forms.DataVisualization.Charting.Series> muss ebenfalls gespeichert werden.  
+  
+ In manchen Fällen kann eine Eigenschaft festgelegt werden sowohl serialisiert und nicht serialisiert werden, werden die bei häufig vorkommen, wenn Platzhalter verwendet werden. Die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> Ausdruck weist eine niedrigere Priorität gegenüber den <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Ausdruck. Beachten Sie jedoch, dass weniger Gewicht auf Zeichenfolgenausdrücke angegeben wird, die Platzhalter verwenden. Beispielsweise, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> -Eigenschaftensatz auf "*. BackColor"und die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.BackColor%2A>, alle B`ackColor` Eigenschaften außer <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekte serialisiert werden.  
+  
+ Wenn Sie festlegen, die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> -Eigenschaft, die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> -Eigenschaft wird intern festgelegt. Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> Eigenschaft bereits festgelegt ist, jedoch eine andere Eigenschaft serialisiert werden, achten Sie darauf, verketten muss die <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> Eigenschaft, wenn diese zusätzliche Eigenschaft angeben. Finden Sie unter der Beispielcode im folgenden ein Beispiel für dieses Verfahren.  
+  
+ Diese Eigenschaft wirkt sich auf alle zu speichern, laden und Rücksetzvorgänge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

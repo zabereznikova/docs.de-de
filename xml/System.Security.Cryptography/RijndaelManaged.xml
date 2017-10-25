@@ -1,0 +1,468 @@
+<Type Name="RijndaelManaged" FullName="System.Security.Cryptography.RijndaelManaged">
+  <TypeSignature Language="C#" Value="public sealed class RijndaelManaged : System.Security.Cryptography.Rijndael" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RijndaelManaged extends System.Security.Cryptography.Rijndael" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RijndaelManaged" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Rijndael</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Greift auf die verwaltete Version der <see cref="T:System.Security.Cryptography.Rijndael" /> Algorithmus. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Algorithmus unterstützt Schlüssellängen von 128, 192 und 256 Bits. direktionales 256 Bits. Dieser Algorithmus unterstützten Blockgrößen von 128, 192 und 256 bits direktionales 128 Bits (<xref:System.Security.Cryptography.Aes>-kompatibel).  
+  
+ Die <xref:System.Security.Cryptography.Rijndael> Algorithmus ist der Vorgänger des <xref:System.Security.Cryptography.Aes>. Verwenden Sie die <xref:System.Security.Cryptography.Aes> -Klasse statt <xref:System.Security.Cryptography.RijndaelManaged>. Weitere Informationen finden Sie im Eintrag [die Unterschiede zwischen Rijndael und AES](http://go.microsoft.com/fwlink/?LinkId=200932) in .NET Security Blog.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln von Beispieldaten mit der `RijndaelManaged` Klasse.  
+  
+ [!code-cpp[RijndaelManaged Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/RijndaelManaged Example/CPP/class1.cpp#1)]
+ [!code-csharp[RijndaelManaged Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/RijndaelManaged Example/CS/class1.cs#1)]
+ [!code-vb[RijndaelManaged Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RijndaelManaged Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RijndaelManaged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RijndaelManaged" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine neue Instanz der dem `RijndaelManaged` Klasse.  
+  
+ [!code-cpp[RijndaelManaged Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/RijndaelManaged Example/CPP/class1.cpp#1)]
+ [!code-csharp[RijndaelManaged Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/RijndaelManaged Example/CS/class1.cs#1)]
+ [!code-vb[RijndaelManaged Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RijndaelManaged Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Klasse ist nicht kompatibel mit dem FIPS-Algorithmus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSize">
+      <MemberSignature Language="C#" Value="public override int BlockSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RijndaelManaged.BlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.CreateDecryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.CreateDecryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+        <Parameter Name="rgbIV" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">Der geheime Schlüssel für den symmetrischen Algorithmus verwendet werden soll. Die Schlüsselgröße muss 128, 192 oder 256 Bits betragen.</param>
+        <param name="rgbIV">Der IV für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <summary>Erstellt ein symmetrisches <see cref="T:System.Security.Cryptography.Rijndael" /> Entschlüsselungsobjekt mit der angegebenen <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" /> und Initialisierungsvektor (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Ein symmetrisches <see cref="T:System.Security.Cryptography.Rijndael" /> Entschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entschlüsselt eine verschlüsselte Nachricht erstellt, mit der <xref:System.Security.Cryptography.RijndaelManaged.CreateEncryptor%2A> mit der gleichen Signatur überladen.  
+  
+ Die `rgbkey` Größe muss 128, 192 und 256 Bits.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.RijndaelManaged.CreateDecryptor%2A> Methode zum Entschlüsseln von Nachrichten, die mit der gleichen Signatur Parameter codiert wurde.  
+  
+ [!code-cpp[RijndaelManaged Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/RijndaelManaged Example/CPP/class1.cpp#1)]
+ [!code-csharp[RijndaelManaged Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/RijndaelManaged Example/CS/class1.cs#1)]
+ [!code-vb[RijndaelManaged Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RijndaelManaged Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="rgbKey" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="rgbIV" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert, der die <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Mode" /> Eigenschaft ist nicht <see cref="F:System.Security.Cryptography.CipherMode.ECB" />, <see cref="F:System.Security.Cryptography.CipherMode.CBC" />, oder <see cref="F:System.Security.Cryptography.CipherMode.CFB" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.CreateEncryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.CreateEncryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+        <Parameter Name="rgbIV" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">Der geheime Schlüssel für den symmetrischen Algorithmus verwendet werden soll. Die Schlüsselgröße muss 128, 192 oder 256 Bits betragen.</param>
+        <param name="rgbIV">Der IV für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <summary>Erstellt ein symmetrisches <see cref="T:System.Security.Cryptography.Rijndael" /> Verschlüsselungsobjekt mit der angegebenen <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" /> und Initialisierungsvektor (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Ein symmetrisches <see cref="T:System.Security.Cryptography.Rijndael" /> Verschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.RijndaelManaged.CreateDecryptor%2A> -Überladung mit derselben Signatur, um das Ergebnis dieser Methode zu entschlüsseln.  
+  
+ Die `rgbkey` Größe muss 128, 192 und 256 Bits.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispielen wird veranschaulicht, wie zum Verschlüsseln einer Nachricht mit der `CreateEncryptor` Methode.  
+  
+ [!code-cpp[RijndaelManaged Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/RijndaelManaged Example/CPP/class1.cpp#1)]
+ [!code-csharp[RijndaelManaged Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/RijndaelManaged Example/CS/class1.cs#1)]
+ [!code-vb[RijndaelManaged Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RijndaelManaged Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="rgbKey" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="rgbIV" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert, der die <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Mode" /> Eigenschaft ist nicht <see cref="F:System.Security.Cryptography.CipherMode.ECB" />, <see cref="F:System.Security.Cryptography.CipherMode.CBC" />, oder <see cref="F:System.Security.Cryptography.CipherMode.CFB" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIV">
+      <MemberSignature Language="C#" Value="public override void GenerateIV ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateIV() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.GenerateIV" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen zufälligen Initialisierungsvektor (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />) für den Algorithmus verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um einen zufälligen Initialisierungsvektor zu generieren, wenn keiner angegeben ist.  
+  
+   
+  
+## Examples  
+ [!code-cpp[RijndaelManaged Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/RijndaelManaged Example/CPP/class1.cpp#1)]
+ [!code-csharp[RijndaelManaged Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/RijndaelManaged Example/CS/class1.cs#1)]
+ [!code-vb[RijndaelManaged Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RijndaelManaged Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public override void GenerateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RijndaelManaged.GenerateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert eine zufällige <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" /> für den Algorithmus verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um einen zufälligen Schlüssel zu generieren, wenn keiner angegeben ist.  
+  
+   
+  
+## Examples  
+ [!code-cpp[RijndaelManaged Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/RijndaelManaged Example/CPP/class1.cpp#1)]
+ [!code-csharp[RijndaelManaged Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/RijndaelManaged Example/CS/class1.cs#1)]
+ [!code-vb[RijndaelManaged Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RijndaelManaged Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IV">
+      <MemberSignature Language="C#" Value="public override byte[] IV { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] IV" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RijndaelManaged.IV" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public override byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RijndaelManaged.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RijndaelManaged.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalKeySizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalKeySizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RijndaelManaged.LegalKeySizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.CipherMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CipherMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RijndaelManaged.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.PaddingMode Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.PaddingMode Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RijndaelManaged.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

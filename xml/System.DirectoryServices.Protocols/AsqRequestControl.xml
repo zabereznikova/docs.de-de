@@ -1,0 +1,94 @@
+<Type Name="AsqRequestControl" FullName="System.DirectoryServices.Protocols.AsqRequestControl">
+  <TypeSignature Language="C#" Value="public class AsqRequestControl : System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AsqRequestControl extends System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.AsqRequestControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.AsqRequestControl" /> Klasse erstellt ein Attribut im Bereich einer Abfrage (ASQS)-Steuerelement. Dieses Steuerelement wird mit einer suchanforderung verwendet, um die Abfrage auf der Grundlage eines bestimmten DN mehrwertige Attributs zu erzwingen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsqRequestControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.AsqRequestControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.AsqRequestControl.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.AsqRequestControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsqRequestControl (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.AsqRequestControl.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">Der Attributname, auf dem die Abfrage basiert.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.AsqRequestControl.#ctor(System.String)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.AsqRequestControl" /> -Klasse unter Verwendung des angegebenen Attributs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeName">
+      <MemberSignature Language="C#" Value="public string AttributeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.AsqRequestControl.AttributeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.AsqRequestControl.AttributeName" /> Eigenschaft ruft ab oder legt den Namen des Attributs, auf denen die Suchabfrage basiert.</summary>
+        <value>Der Attributname, auf dem die Suchabfrage basiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override byte[] GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.AsqRequestControl.GetValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.AsqRequestControl.GetValue" /> Methodenrückgabe die binäre Darstellung der <see cref="T:System.DirectoryServices.Protocols.AsqRequestControl" />.</summary>
+        <returns>Die binäre Darstellung der <see cref="T:System.DirectoryServices.Protocols.AsqRequestControl" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

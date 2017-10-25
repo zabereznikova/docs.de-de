@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Controls">
+  <Docs>
+    <summary>Stellt Klassen zum Erstellen von Elementen, bekannt als Steuerelemente, die dem Benutzer für die Interaktion mit einer Anwendung ermöglichen. Steuerelementklassen sind der Kern des Benutzers Erfahrung mit jeder Anwendung denn sie einen Benutzer anzuzeigen ermöglichen, wählen, oder geben Daten oder andere Informationen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

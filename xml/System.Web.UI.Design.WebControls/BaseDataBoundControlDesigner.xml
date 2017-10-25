@@ -1,0 +1,463 @@
+<Type Name="BaseDataBoundControlDesigner" FullName="System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner">
+  <TypeSignature Language="C#" Value="public abstract class BaseDataBoundControlDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseDataBoundControlDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für Steuerelemente bereit, die von der <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" />-Klasse abgeleitet wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht das Markup, beschreibt ein Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.BaseDataBoundControl> Klasse wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird der Steuerelementcode zur Entwurfszeit-an der Markupquelle beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+ Designer, die abgeleitet sind die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner> abstrakte Basisklasse bieten entwurfszeitunterstützung für Steuerelemente, die abgeleitet sind die <xref:System.Web.UI.WebControls.BaseDataBoundControl> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseDataBoundControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz eines Designers, die abgeleitet ist die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner> Klasse bei der Erstellung des zugeordneten Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToDataSource">
+      <MemberSignature Language="C#" Value="protected abstract bool ConnectToDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ConnectToDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.ConnectToDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse in der Regel hebt Ereignisse aus der vorherigen Datenquelle, und fügt dann neue Ereignisse an die neue Datenquelle.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Verbindung mit einer neuen Datenquelle in der Regel ausgeführt wurde. <see langword="false" /> , wenn die alte und neue Datenquellen identisch sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung der <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.ConnectToDataSource%2A> Methode in der Regel umfasst, lösen Ereignisse aus der vorherigen Datenquelle, und klicken Sie dann neue Ereignisse an die neue Datenquelle angefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataSource">
+      <MemberSignature Language="C#" Value="protected abstract void CreateDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.CreateDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse erstellt eine neue Datenquelle für den zugeordneten <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel für eine <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.CreateDataSource%2A> überschreiben, in dem ein Dialogfeld angezeigt, die zum Erstellen einer Datenquelle für das zugeordnete Steuerelement verwendet werden kann finden Sie unter <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner.CreateDataSource%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben der <see cref="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.CreateDataSource" /> aufzurufende Methode bieten eine Möglichkeit zum Erstellen einer <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSource" /> für das zugeordnete Steuerelement <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" /> Objekt zur Entwurfszeit.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="protected abstract void DataBind (System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DataBind(class System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataBind(System.Web.UI.WebControls.BaseDataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.BaseDataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataBoundControl">Die <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" /> die diesem Designer zugeordnet ist.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse führt die erforderlichen Aktionen zum Einrichten des zugeordneten Steuerelements, das von abgeleitet ist die <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Überschreiben der <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataBind%2A> Methode in einem Designer, die abgeleitet ist die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner> Klasse, die erforderlichen Aktionen für das datengebundene Steuerelement so einrichten, dass das Markup zur Entwurfszeit abgerufen wird, das Steuerelement ordnungsgemäß rendert ausgeführt. In der Regel werden Sie eine Datenquelle zur Entwurfszeit anstelle der Livedatenquelle zur Verbesserung der Leistung verknüpft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public string DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSource" /> Eigenschaft für das zugeordnete Steuerelement.</summary>
+        <value>Der vom zugeordneten Steuerelement verwendet Datenbindungsausdruck abgeleitet <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource%2A> Eigenschaft wird verwendet, um die Schatten der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> Eigenschaft der <xref:System.Web.UI.WebControls.BaseDataBoundControl> -Klasse, die diesem Designer zugeordnet ist. Der Wert von der <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource%2A> Eigenschaft wird vom Designer beibehalten, als für die RFID-Transponder, die für das zugrunde liegende generiert wird ein Datenbindungsausdruck <xref:System.Web.UI.WebControls.BaseDataBoundControl> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceID">
+      <MemberSignature Language="C#" Value="public string DataSourceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSourceID" /> Eigenschaft des zugrunde liegenden <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" /> Objekt.</summary>
+        <value>Die ID des dem <see cref="T:System.Web.UI.DataSourceControl" /> zugeordnete, zugrunde liegenden <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSourceID%2A> Eigenschaft wird verwendet, um die Schatten der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSourceID%2A> Eigenschaft des zugrunde liegenden <xref:System.Web.UI.WebControls.BaseDataBoundControl> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisconnectFromDataSource">
+      <MemberSignature Language="C#" Value="protected abstract void DisconnectFromDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DisconnectFromDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DisconnectFromDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse hebt Ereignisse aus der aktuellen Datenquelle.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>In der Regel beim Überschreiben der <see cref="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DisconnectFromDataSource" /> -Methode, trennen Sie die <see cref="E:System.Web.UI.Design.IDataSourceDesigner.DataSourceChanged" /> und <see cref="E:System.Web.UI.Design.IDataSourceDesigner.SchemaRefreshed" /> Ereignisse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, die <see cref="T:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner" /> -Objekt und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.Dispose%2A> Methode hebt die Ereignishandler für den Designer alle Datenquellenereignisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert das Markup, das zum Rendern des Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Das Markup, mit dem das Steuerelement zur Entwurfszeit gerendert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner> -Klasse ruft Beispieldaten, die zur Entwurfszeit vor dem Rendern des Steuerelements Bindungszwecken verwendet wird. Wenn das Steuerelement nicht datengebunden ist, ruft es die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.GetEmptyDesignTimeHtml%2A> Methode. Ist ein Fehler beim Rendern des Steuerelements, ruft er die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.GetErrorDesignTimeHtml%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt das Markup ab, das das Steuerelement zur Entwurfszeit gerendert wird, wenn das Steuerelement leer ist oder wenn die Datenquelle kann nicht abgerufen werden.</summary>
+        <returns>Das verwendete Markup zum Rendern des Steuerelements zur Entwurfszeit mit einer leeren Datenquelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner> -Klasse ruft Beispieldaten, die zur Entwurfszeit vor dem Rendern des Steuerelements Bindungszwecken verwendet wird. Das leere während der Entwurfszeit-Steuerelement wird als ein Platzhalter, der den Typnamen und Steuerelementname enthält gerendert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetErrorDesignTimeHtml (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetErrorDesignTimeHtml(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.GetErrorDesignTimeHtml(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.Exception" /> , ausgelöst wurde.</param>
+        <summary>Stellt das Markup bereit, mit dem das Steuerelement zur Entwurfszeit gerendert wird, wenn ein Fehler aufgetreten ist.</summary>
+        <returns>Das Markup, mit dem das Steuerelement zur Entwurfszeit gerendert wird, wenn ein Fehler aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Steuerelement für Fehlermeldungen zur Entwurfszeit gerendert wird als Platzhalter, der den Typnamen, den Namen des Steuerelements und eine Nachricht, die Beschreibung des Fehlers enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein Steuerelement abgeleitet <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" />, implementiert <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Bereitet den Designer zum Anzeigen, Bearbeiten und Entwerfen des zugeordneten Steuerelements vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.Initialize%2A> Methode, wenn sie bereit für den Designer zu verwenden, um ein Steuerelement zu rendern, die abgeleitet ist die <xref:System.Web.UI.WebControls.BaseDataBoundControl> Klasse. Die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.Initialize%2A> -Methode und ihre Basismethoden Eigenschaften konfigurieren und verbinden Sie die Ereignisse, die für die Ausführung des Designers erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSourceChanged (bool forceUpdateView);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSourceChanged(bool forceUpdateView) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.OnDataSourceChanged(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forceUpdateView" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forceUpdateView">
+          <see langword="true" />um die Aktualisierung des Entwurfszeitmarkups zu erzwingen; andernfalls <see langword="false" />.</param>
+        <summary>Wird aufgerufen, wenn die Datenquelle des zugeordneten <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" /> Objekts ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.OnDataSourceChanged%2A> Methode eine Verbindung mit der aktuellen Datenquelle her. Wenn die aktuelle Datenquelle aus der Datenquelle abweicht, der das Steuerelement verbunden war, oder `forceUpdateView` ist `true`, das zugeordnete Steuerelement neu gezeichnet wird, auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.OnDataSourceChanged(System.Boolean)" /> Methode, um zusätzliche Aktionen ausführen, die erforderlich sind, wenn die Datenquelle des zugeordneten Steuerelements geändert wird.  
+  
+ Wenn Sie außer Kraft setzen die <see cref="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.OnDataSourceChanged(System.Boolean)" /> -Methode die basisimplementierung vor der weiteren Verarbeitung aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSchemaRefreshed">
+      <MemberSignature Language="C#" Value="protected virtual void OnSchemaRefreshed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSchemaRefreshed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.OnSchemaRefreshed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die Datenquelle des zugeordneten <see cref="T:System.Web.UI.WebControls.BaseDataBoundControl" /> Objekt lädt ein neues Schema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnSchemaRefreshed%2A> Methode behandelt das <xref:System.Web.UI.Design.IDataSourceDesigner.SchemaRefreshed> Ereignis, das ausgelöst wird, wenn das Schema der Daten auf Datenquelle ändert das zugeordnete Steuerelement gebunden ist. Überschreiben Sie die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnSchemaRefreshed%2A> Methode, um zusätzliche Aktionen ausführen, die erforderlich sind, wenn ein neues Schema verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die <see cref="T:System.Collections.IDictionary" /> mit den Eigenschaften zu filtern.</param>
+        <summary>Wird vom Designer zum Entfernen oder Hinzufügen zusätzlicher Eigenschaften für die Anzeige in der **Eigenschaften** Raster oder Shadowing von Eigenschaften des zugeordneten Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelement-Designer verwenden von abgeleiteten Methoden, die <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A?displayProperty=nameWithType> Methode verschiedene Steuerelementeigenschaften mit entsprechenden zur Entwurfszeit zu überschatten, die der Designer implementiert, und zum Hinzufügen oder Entfernen von Eigenschaften aus der **Eigenschaften** Raster.  
+  
+ Für die <xref:System.Web.UI.WebControls.BaseDataBoundControl> -Klasse, die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.PreFilterProperties%2A> Schatten der <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource%2A> Eigenschaft des Steuerelements. Eine Kopie des Attributarrays der vereinfacht die <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource%2A>, und fügt dann diese Attribute auf das Shadowing-Eigenschaft. Wird der <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> Attribut des Shadowing <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSource%2A> Eigenschaft `false` , sofern die <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> Attribut des der <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.DataSourceID%2A> Eigenschaft des Steuerelements ist bereits festgelegt, um `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.PreFilterProperties(System.Collections.IDictionary)" /> Methode, um Eigenschaften hinzufügen oder Ändern von Eigenschaften in der Entwurfszeiteigenschaft-Auflistung. Achten Sie darauf, dass Sie die Basismethode aufrufen, bevor Sie andere Verarbeitungsschritte ausführt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCreateDataSourceDialog">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult ShowCreateDataSourceDialog (System.Web.UI.Design.ControlDesigner controlDesigner, Type dataSourceType, bool configure, out string dataSourceID);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult ShowCreateDataSourceDialog(class System.Web.UI.Design.ControlDesigner controlDesigner, class System.Type dataSourceType, bool configure, [out] string&amp; dataSourceID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.ShowCreateDataSourceDialog(System.Web.UI.Design.ControlDesigner,System.Type,System.Boolean,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlDesigner" Type="System.Web.UI.Design.ControlDesigner" />
+        <Parameter Name="dataSourceType" Type="System.Type" />
+        <Parameter Name="configure" Type="System.Boolean" />
+        <Parameter Name="dataSourceID" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="controlDesigner">Ein Verweis auf diesen Designer.</param>
+        <param name="dataSourceType">Der Typ der Datenquelle.</param>
+        <param name="configure">
+          <see langword="true" />So aktivieren Sie die Konfiguration bearbeiten oder <see langword="false" /> So deaktivieren Sie die Konfiguration zu bearbeiten.</param>
+        <param name="dataSourceID">Die ID des ein <see cref="T:System.Web.UI.DataSourceControl" /> Steuerelement auf der Seite.</param>
+        <summary>In einem Entwurfshost z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], zeigt ein Dialogfeld, um den Benutzer zu unterstützen, bei der Erstellung einer Datenquelle an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.DialogResult" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

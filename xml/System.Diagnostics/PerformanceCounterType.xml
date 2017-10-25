@@ -1,0 +1,904 @@
+<Type Name="PerformanceCounterType" FullName="System.Diagnostics.PerformanceCounterType">
+  <TypeSignature Language="C#" Value="public enum PerformanceCounterType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PerformanceCounterType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Diagnostics.AlphabeticalEnumConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Formel zum Berechnen der <see cref="M:System.Diagnostics.PerformanceCounter.NextValue" /> Methode für eine <see cref="T:System.Diagnostics.PerformanceCounter" /> Instanz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Indikatortypen darstellen unformatierte Daten, während andere berechnete Werte darstellen, die auf eine oder mehrere Indikatorsamplings basieren. Die folgenden Kategorien klassifizieren, die Typen von Indikatoren zur Verfügung.  
+  
+-   Durchschnitt: einen Wert mit der Zeit zu messen und den Durchschnitt der letzten zwei Messungen anzuzeigen. Jede Durchschnittsindikator zugeordnet ist ein Basiszähler, das die Anzahl der Samplings, die Beteiligten nachverfolgt.  
+  
+-   Unterschied: Subtrahieren der letzten Messung des aus der vorherigen Abfrage, und zeigen Sie den Unterschied aus, wenn er positiv ist; Wenn negativ ist, zeigen sie NULL an.  
+  
+-   Unmittelbar: Anzeige der letzten Messung.  
+  
+-   Prozentsatz: berechnete Werte als Prozentsatz anzuzeigen.  
+  
+-   Rate: eine zunehmende Anzahl von Ereignissen mit der Zeit und teilen Sie die Änderung der Count-Werte von der Änderung, sodass eine Rate der Aktivität angezeigt.  
+  
+ Wenn Abtasten von Leistungsindikatordaten, die über einen Leistungsindikator vom Typ, der einen Mittelwert darstellt Rohdatenwerte für die Verwendung von Bedeutung treffen kann. Z. B. die Rohdaten Indikator `NumberOfItems64` Daten, die relativ zufällig aus Beispiel ist verfügbar machen. Wäre die Formel für eine Berechnung des Durchschnitts der Werte, die der Zähler zurückgibt (X 0 + X 1 +... + X n) / n, wobei jedes X i ist ein Beispiel für die unformatierte Zähler.  
+  
+ Rate-Leistungsindikatoren sind ähnlich, aber weitere nützliche für Situationen, in denen die Geschwindigkeit erhöht, wie eine Ressource verwendet wird. Eine Formel, die schnell den Durchschnitt berechnet wird ((X n -X 0) / (T n -T 0)) / Häufigkeit, wobei jedes X i ist ein Beispiel der Leistungsindikator "und" jede T i ist die Zeit, die im entsprechenden Beispiel erstellt wurde. Das Ergebnis ist die durchschnittliche Nutzung pro Sekunde.  
+  
+> [!NOTE]
+>  Sofern nicht anders angegeben, ist die Zeitbasis Sekunden.  
+  
+ Wenn Instrumentieren von Anwendungen (erstellen und Schreiben von benutzerdefinierten Leistungsindikatoren) möglicherweise Leistungsindikatortypen arbeiten, die auf eine begleitende Basiszähler basieren, die in den Berechnungen verwendet wird. Basiszähler muss unmittelbar auf den zugehörigen Zähler in der <xref:System.Diagnostics.CounterCreationDataCollection> Auflistung, die Ihre Anwendung verwendet. Die folgende Tabelle enthält die Basiszählertypen mit den entsprechenden Leistungsindikatortypen aufgeführt.  
+  
+|Basiszähler-Typ|Leistungsindikatortypen|  
+|-----------------------|-------------------------------|  
+|`AverageBase`|`AverageTimer32`<br /><br /> `AverageCount64`|  
+|`CounterMultiBase`|`CounterMultiTimer`<br /><br /> `CounterMultiTimerInverse`<br /><br /> `CounterMultiTimer100Ns`<br /><br /> `CounterMultiTimer100NsInverse`|  
+|`RawBase`|`RawFraction`|  
+|`SampleBase`|`SampleFraction`|  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele veranschaulichen verschiedene Typen Zähler in der <xref:System.Diagnostics.PerformanceCounterType> Enumeration.  
+  
+ `AverageCount64`  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ `AverageTimer32`  
+  
+ [!code-cpp[PerformanceCounterType.AverageTimer32#2](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageTimer32/CPP/averagetimer32.cpp#2)]
+ [!code-csharp[PerformanceCounterType.AverageTimer32#2](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageTimer32/CS/averagetimer32.cs#2)]
+ [!code-vb[PerformanceCounterType.AverageTimer32#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageTimer32/VB/averagetimer32.vb#2)]  
+  
+ `ElapsedTime`  
+  
+ [!code-cpp[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/CPP/elapsedtime.cpp#2)]
+ [!code-csharp[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/CS/elapsedtime.cs#2)]
+ [!code-vb[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/VB/elapsedtime.vb#2)]  
+  
+ `NumberOfItems32`  
+  
+ [!code-cpp[PerformanceCounterType.NumberOfItems32#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.NumberOfItems32/CPP/numberofitems32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.NumberOfItems32#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.NumberOfItems32/CS/numberofitems32.cs#1)]
+ [!code-vb[PerformanceCounterType.NumberOfItems32#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.NumberOfItems32/VB/numberofitems32.vb#1)]  
+  
+ `NumberOfItems64`  
+  
+ [!code-cpp[PerformanceCounterType.NumberOfItems64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.NumberOfItems64/CPP/numberofitems64.cpp#1)]
+ [!code-csharp[PerformanceCounterType.NumberOfItems64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.NumberOfItems64/CS/numberofitems64.cs#1)]
+ [!code-vb[PerformanceCounterType.NumberOfItems64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.NumberOfItems64/VB/numberofitems64.vb#1)]  
+  
+ `SampleFraction`  
+  
+ [!code-csharp[PerformanceCounterType.SampleFraction#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.SampleFraction/CS/program.cs#1)]
+ [!code-vb[PerformanceCounterType.SampleFraction#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.SampleFraction/VB/program.vb#1)]  
+  
+ `RateOfCountsPerSecond32`  
+  
+ [!code-cpp[PerformanceCounterType.RateOfCountsPerSecond#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.RateOfCountsPerSecond/CPP/rateofcountspersecond32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.RateOfCountsPerSecond#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.RateOfCountsPerSecond/CS/rateofcountspersecond32.cs#1)]
+ [!code-vb[PerformanceCounterType.RateOfCountsPerSecond#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.RateOfCountsPerSecond/VB/rateofcountspersecond32.vb#1)]  
+  
+ `RateOfCountsPerSecond64`  
+  
+ [!code-cpp[PerformanceCounterType.RateOfCountsPerSecond64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.RateOfCountsPerSecond64/CPP/rateofcountspersecond64.cpp#1)]
+ [!code-csharp[PerformanceCounterType.RateOfCountsPerSecond64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.RateOfCountsPerSecond64/CS/rateofcountspersecond64.cs#1)]
+ [!code-vb[PerformanceCounterType.RateOfCountsPerSecond64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.RateOfCountsPerSecond64/VB/rateofcountspersecond64.vb#1)]  
+  
+ `RawFraction`  
+  
+ [!code-cpp[PerformanceCounterType.RawFraction#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.RawFraction/CPP/rawfraction.cpp#1)]
+ [!code-csharp[PerformanceCounterType.RawFraction#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.RawFraction/CS/rawfraction.cs#1)]
+ [!code-vb[PerformanceCounterType.RawFraction#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.RawFraction/VB/rawfraction.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AverageBase">
+      <MemberSignature Language="C#" Value="AverageBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType AverageBase = int32(1073939458)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.AverageBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Basiszähler, die bei der Berechnung der Zeit oder Anzahl Durchschnittswerte, z. B. verwendet wird <see langword="AverageTimer32" /> und <see langword="AverageCount64" />. Speichert den Nenner für die Berechnung eines Leistungsindikators "Zeit pro Operation" oder "Anzahl der pro Vorgang".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AverageCount64">
+      <MemberSignature Language="C#" Value="AverageCount64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType AverageCount64 = int32(1073874176)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.AverageCount64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine durchschnittliche Zähler, der zeigt, wie viele Elemente verarbeitet werden, im Durchschnitt während eines Vorgangs. Leistungsindikatoren dieses Typs anzuzeigen, ein Verhältnis von verarbeiteten Elemente und die Anzahl der Vorgänge, die abgeschlossen wird. Das Verhältnis wird berechnet, indem die Anzahl der Elemente, die während des letzten Zeitintervalls auf die Anzahl der Vorgänge, die im letzten Zeitraum abgeschlossen verarbeitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1 -N 0) / (0 B-1 -B), wobei N-1 "und" N "0 Leistungsindikator-Messwerte und die B-1 und B 0 werden die entsprechenden `AverageBase` Werte. Deshalb der Zähler stellt die Anzahl der Elemente, die während des Abtastintervalls verarbeitet, und den Nenner darstellt, die Anzahl der Vorgänge, die während des Abtastintervalls abgeschlossen.  
+  
+ Indikatoren dieses Typs sind unter anderem PhysicalDisk\-durchschn. "Bytes/Übertragung".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AverageTimer32">
+      <MemberSignature Language="C#" Value="AverageTimer32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType AverageTimer32 = int32(805438464)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.AverageTimer32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Durchschnittsindikator, der die Zeit misst dauert es, im Durchschnitt um einen Prozess oder einen Vorgang abzuschließen. Indikatoren dieses Typs zeigen ein Verhältnis von die gesamte verstrichene Zeit des Abtastintervalls für die Anzahl von Prozessen oder Vorgänge, die während dieser Zeit abgeschlossen. Dieser Leistungsindikator vom Typ misst Zeit in Ticks der Systemuhr.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: ((N 1 -N 0) / f) / (0 B-1 -B), N-1 "und" N "0 Leistungsindikator-Messwerte sind, sind die entsprechenden B-1 und B 0 `AverageBase` Werte und F ist die Anzahl der Ticks pro Sekunde. Der Wert von F ist die umgerechnet, damit das Ergebnis in Sekunden angezeigt werden kann. Deshalb der Zähler stellt die Anzahl der Ticks, die während des letzten Abtastintervalls gezählt, F Gibt die Frequenz der Teilstriche und den Nenner darstellt, die Anzahl der Vorgänge, die während des letzten Abtastintervalls abgeschlossen.  
+  
+ Indikatoren dieses Typs sind unter anderem PhysicalDisk\-durchschn. Sek./Übertragung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterDelta32">
+      <MemberSignature Language="C#" Value="CounterDelta32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterDelta32 = int32(4195328)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterDelta32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Unterschied-Zähler, der die Änderung des gemessenen Attributs zwischen den beiden letzten Abtastintervalls anzeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: N-1 -N 0, wobei N-1 "und" N "0 Leistungsindikator-Messwerte werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterDelta64">
+      <MemberSignature Language="C#" Value="CounterDelta64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterDelta64 = int32(4195584)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterDelta64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Unterschied-Zähler, der die Änderung des gemessenen Attributs zwischen den beiden letzten Abtastintervalls anzeigt. Es ist identisch mit der <see langword="CounterDelta32" /> Leistungsindikator vom Typ nur dadurch, dass größere Felder verwendet, um größere Werte zu berücksichtigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: N-1 -N 0, wobei N-1 "und" N "0 Leistungsindikator-Messwerte werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterMultiBase">
+      <MemberSignature Language="C#" Value="CounterMultiBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterMultiBase = int32(1107494144)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterMultiBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Basiszähler, der die Anzahl der Elemente, die als Stichprobe genommen angibt. Es wird als Nenner bei der Berechnung der Durchschnittswert auf die Elemente, die als Stichprobe genommen Zeitangaben mehrerer modellbasiert abgerufen, jedoch ähnliche Elemente. Mit verwendet <see langword="CounterMultiTimer" />, <see langword="CounterMultiTimerInverse" />, <see langword="CounterMultiTimer100Ns" />, und <see langword="CounterMultiTimer100NsInverse" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterMultiTimer">
+      <MemberSignature Language="C#" Value="CounterMultiTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterMultiTimer = int32(574686464)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterMultiTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls anzeigt. Da der Zähler die Aktivitätszeit der Komponenten, die gleichzeitig aufzeichnet, kann der resultierende Prozentsatz 100 Prozent überschreiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Indikator ist ein Multitimer. Multitimer sammeln Daten von mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger. Dieser Leistungsindikator vom Typ unterscheidet sich von `CounterMultiTimer100Ns` in dieser Zeit in Ticks des der Zeitgeber für die Systemleistung und nicht in Einheiten von 100 Nanosekunden gemessen.  
+  
+ Formel: ((N 1 - N 0) / (D 1 - D 0)) X 100 B, in dem N-1 "und" N "0 Leistungsindikator-Messwerte sind, D-1 und D 0 ihre entsprechenden Zeit Messwerte in Ticks, der den Zeitgeber für die Systemleistung und die Variable B gibt die Anzahl die Basis für die überwachten Komponenten (mithilfe von einem Bas e Leistungsindikator vom Typ `CounterMultiBase`). Der Zähler stellt somit die Teile des Abtastintervalls an, während dessen die überwachten Komponenten aktiv waren, und den Nenner darstellt, die insgesamt verstrichene Zeit des Abtastintervalls.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterMultiTimer100Ns">
+      <MemberSignature Language="C#" Value="CounterMultiTimer100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterMultiTimer100Ns = int32(575735040)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterMultiTimer100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls anzeigt. Sie misst die Zeit in Einheiten von 100 Nanosekunden (ns).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Leistungsindikator ist ein Multitimer. Multitimer sind mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger zu überwachen.  
+  
+ Formel: ((N 1 - N 0) / (D 1 - D 0)) X 100 B, wobei N-1 "und" N "0 Leistungsindikator-Messwerte sind, D-1 und D 0 ihre entsprechenden Zeit Messwerte in 100-Nanosekunden-Einheiten sind und die Variable B gibt die Anzahl die Basis für die überwachten Komponenten (mithilfe einer Basiszähler des Typs  `CounterMultiBase`). Der Zähler stellt somit die Teile des Abtastintervalls an, während dessen die überwachten Komponenten aktiv waren, und den Nenner darstellt, die insgesamt verstrichene Zeit des Abtastintervalls.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterMultiTimer100NsInverse">
+      <MemberSignature Language="C#" Value="CounterMultiTimer100NsInverse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterMultiTimer100NsInverse = int32(592512256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterMultiTimer100NsInverse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls anzeigt. Dieses Typs Zeit in Einheiten von 100 Nanosekunden (ns) gemessen. Die Aktivitätszeit durch messen die Zeit, die die Komponenten nicht aktiv waren, und das Ergebnis aus der Multiplikation von 100 Prozent durch die Anzahl der überwachten Objekte subtrahiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Leistungsindikator vom Typ ist ein inverser Multitimer. Multitimer sind mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger zu überwachen. Inverse Indikatoren messen die Zeit, die eine Komponente nicht aktiv ist, und leiten die aktive Zeit aus der Messung der Zeit inaktiv  
+  
+ Formel: (B - ((N 1 - N 0) / (D 1 - D 0))) X 100, wobei der Nenner die gesamte verstrichene Zeit des Abtastintervalls, der Zähler stellt die Zeit während des Intervalls bei überwachte Komponenten inaktiv waren, und B der Anzahl von Komponenten entspricht, m Onitored, mit einem Basiszähler vom Typ `CounterMultiBase`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterMultiTimerInverse">
+      <MemberSignature Language="C#" Value="CounterMultiTimerInverse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterMultiTimerInverse = int32(591463680)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterMultiTimerInverse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls anzeigt. Die Aktivitätszeit durch messen die Zeit, die die Komponenten nicht aktiv waren, und das Ergebnis von 100 Prozent subtrahiert, durch die Anzahl der Objekte, die überwacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Leistungsindikator vom Typ ist ein inverser Multitimer. Multitimer überwachen mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger. Inverse Indikatoren messen die Zeit, die eine Komponente nicht aktiv ist und dieser Messung Aktivitätsdauer abgeleitet.  
+  
+ Dieser Indikator unterscheidet sich von `CounterMultiTimer100NsInverse` in dieser Zeit in Ticks des der Zeitgeber für die Systemleistung und nicht in Einheiten von 100 Nanosekunden gemessen.  
+  
+ Formel: (B - ((N 1 - N 0) / (D 1 - D 0))) X 100, wobei der Nenner die gesamte verstrichene Zeit des Abtastintervalls, Zähler stellt die Zeit während des Intervalls bei überwachte Komponenten inaktiv waren, und B der Anzahl von Komponenten entspricht wird überwacht, mit einem Basiszähler vom Typ `CounterMultiBase`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterTimer">
+      <MemberSignature Language="C#" Value="CounterTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterTimer = int32(541132032)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der der durchschnittlichen Zeit anzeigt, dass eine Komponente als Prozentsatz des gesamten Abtastintervalls aktiv ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1 - N 0) / (D 1 - D 0), wobei N-1 "und" N "0 Leistungsindikator-Messwerte und D-1 und D 0 sind ihre entsprechenden Zeit Messwerte. Der Zähler stellt somit die Teile des Abtastintervalls an, während dessen die überwachten Komponenten aktiv waren, und den Nenner darstellt, die insgesamt verstrichene Zeit des Abtastintervalls.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterTimerInverse">
+      <MemberSignature Language="C#" Value="CounterTimerInverse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CounterTimerInverse = int32(557909248)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CounterTimerInverse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die durchschnittliche prozentuale aktive Zeit, die während des Abtastintervalls beobachtet werden angezeigt. Der Wert dieser Indikatoren wird berechnet, indem die Überwachung des Prozentsatz der Zeit, die der Dienst nicht aktiv war, und klicken Sie dann den Wert von 100 Prozent subtrahiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein inverser Indikatortyp. Inverse Indikatoren messen die Zeit, die eine Komponente ist aktiv und leiten die aktive Zeit aus dieser Messung. Dieser Leistungsindikator vom Typ entspricht `CounterTimer100NsInv` mit der Ausnahme, dass sie Zeit, die in der Einheit Ticks des Zeitgebers Leistung System anstatt in Einheiten von 100 Nanosekunden misst.  
+  
+ Formel: (1 - ((N 1 - N 0) / (D 1 - D 0))) X 100, Zähler, in dem die Zeit während des Intervalls, darstellt Wenn die überwachten Komponenten inaktiv waren, und den Nenner, die insgesamt verstrichene Zeit des Abtastintervalls darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CountPerTimeInterval32">
+      <MemberSignature Language="C#" Value="CountPerTimeInterval32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CountPerTimeInterval32 = int32(4523008)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CountPerTimeInterval32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Durchschnittsindikator die durchschnittliche Länge von einer Warteschlange auf eine Ressource mit der Zeit zu überwachen. Es zeigt den Unterschied zwischen der Länge von Warteschlangen Belegung während der letzten beiden Abtastintervallen dividiert durch die Dauer des Intervalls. Dieser Typ des Leistungsindikators dient normalerweise zum Überwachen der Anzahl der Elemente in der Warteschlange oder im Wartezustand befinden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1 - N 0) / (D 1 - D 0), in dem der Zähler stellt die Anzahl der Elemente in der Warteschlange und den Nenner darstellt, die Zeit während des letzten Abtastintervalls verstrichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CountPerTimeInterval64">
+      <MemberSignature Language="C#" Value="CountPerTimeInterval64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType CountPerTimeInterval64 = int32(4523264)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.CountPerTimeInterval64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Durchschnittsindikator, der die durchschnittliche Länge von einer Warteschlange auf eine Ressource mit der Zeit überwacht wird. Indikatoren dieses Typs zeigen den Unterschied zwischen der Länge von Warteschlangen Belegung während der letzten beiden Abtastintervallen, dividiert durch die Dauer des Intervalls. Dieser Leistungsindikator vom Typ entspricht <see langword="CountPerTimeInterval32" /> mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen. Dieser Typ eines Indikators wird normalerweise verwendet, um eine große oder sehr große Anzahl von Elemente, die in der Warteschlange befinden oder wartende nachzuverfolgen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1 - N 0) / (D 1 - D 0), in dem der Zähler stellt die Anzahl der Elemente in einer Warteschlange und den Nenner darstellt, die Zeit verstrichen während des Abtastintervalls.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElapsedTime">
+      <MemberSignature Language="C#" Value="ElapsedTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType ElapsedTime = int32(807666944)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.ElapsedTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Unterschied-Zeitgeber, der zeigt die Gesamtzeit zwischen wann die Komponente oder ein Prozess gestartet wurde und die Uhrzeit an, wenn dieser Wert berechnet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (D-0 - N 0) / F, wobei D 0 die aktuelle Uhrzeit darstellt N 0 steht für die Zeit, die das Objekt wurde gestartet und F die Anzahl der Zeiteinheiten pro Sekunde darstellt. Der Wert von F ist die umgerechnet, damit das Ergebnis in Sekunden angezeigt werden kann.  
+  
+ Indikatoren dieses Typs einschließen Systembetriebszeit System\Prozessor  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfItems32">
+      <MemberSignature Language="C#" Value="NumberOfItems32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType NumberOfItems32 = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.NumberOfItems32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine sofortige Zähler, der den zuletzt beobachteten Wert anzeigt. Verwendet, z. B. um eine einfache Anzahl der Elemente oder Vorgänge beizubehalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: keine. Durchschnittswert wird nicht angezeigt, aber die unformatierten Daten zeigt, wie sie gesammelt werden.  
+  
+ Indikatoren dieses Typs enthalten Speicher\Verfügbare Bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfItems64">
+      <MemberSignature Language="C#" Value="NumberOfItems64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType NumberOfItems64 = int32(65792)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.NumberOfItems64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine sofortige Zähler, der den zuletzt beobachteten Wert anzeigt. Verwendet, z. B. um einen einfachen Zähler für eine sehr große Anzahl von Elementen oder Vorgänge beizubehalten. Es entspricht dem <see langword="NumberOfItems32" /> mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: keine. Durchschnittswert wird nicht angezeigt, aber die unformatierten Daten zeigt, wie sie gesammelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfItemsHEX32">
+      <MemberSignature Language="C#" Value="NumberOfItemsHEX32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType NumberOfItemsHEX32 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.NumberOfItemsHEX32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine sofortige Zähler, der den zuletzt beobachteten Wert im Hexadezimalformat anzeigt. Verwendet, z. B. um eine einfache Anzahl der Elemente oder Vorgänge beizubehalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: keine. Durchschnittswert wird nicht angezeigt, aber die unformatierten Daten zeigt, wie sie gesammelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfItemsHEX64">
+      <MemberSignature Language="C#" Value="NumberOfItemsHEX64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType NumberOfItemsHEX64 = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.NumberOfItemsHEX64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine sofortige Zähler, der den zuletzt beobachteten Wert anzeigt. Verwendet, z. B. um einen einfachen Zähler für eine sehr große Anzahl von Elementen oder Vorgänge beizubehalten. Es entspricht dem <see langword="NumberOfItemsHEX32" /> mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: keine. Durchschnittswert wird nicht angezeigt, aber die unformatierten Daten zeigt, wie sie gesammelt werden  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RateOfCountsPerSecond32">
+      <MemberSignature Language="C#" Value="RateOfCountsPerSecond32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType RateOfCountsPerSecond32 = int32(272696320)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.RateOfCountsPerSecond32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Unterschied-Zähler, der die durchschnittliche Anzahl der pro Sekunde des Messintervalls durchgeführten Operationen anzeigt. Indikatoren dieses Typs messen die Zeit in Ticks der Systemuhr.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1 - N 0) / ((D 1-d 0) / F), wobei N-1 "und" N "0 Leistungsindikator-Messwerte, D-1 und D 0 die entsprechenden Zeitmesswerte darstellen und F für die Anzahl der Ticks pro Sekunde. Deshalb der Zähler stellt die Anzahl der Vorgänge, die während des letzten Stichprobenintervalls, der während des letzten Abtastintervalls die Anzahl der Ticks verstrichen Nenner ausgeführt und F ist die Tickfrequenz. Der Wert von F ist die umgerechnet, damit das Ergebnis in Sekunden angezeigt werden kann.  
+  
+ Indikatoren dieses Typs enthalten System\Prozessor Datei Lesevorgänge/s an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RateOfCountsPerSecond64">
+      <MemberSignature Language="C#" Value="RateOfCountsPerSecond64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType RateOfCountsPerSecond64 = int32(272696576)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.RateOfCountsPerSecond64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Unterschied-Zähler, der die durchschnittliche Anzahl der pro Sekunde des Messintervalls durchgeführten Operationen anzeigt. Indikatoren dieses Typs messen die Zeit in Ticks der Systemuhr. Dieser Leistungsindikator vom Typ entspricht der <see langword="RateOfCountsPerSecond32" /> aufweisen, aber er größere Felder verwendet, um größere Werte eine große Anzahl von Elementen oder Vorgänge pro Sekunde, z. B. eine Byte-Übertragungsrate nachverfolgen zu können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1 - N 0) / ((D 1-d 0) / F), wobei N-1 "und" N "0 Leistungsindikator-Messwerte, D-1 und D 0 die entsprechenden Zeitmesswerte darstellen und F für die Anzahl der Ticks pro Sekunde. Deshalb der Zähler stellt die Anzahl der Vorgänge, die während des letzten Stichprobenintervalls, der während des letzten Abtastintervalls die Anzahl der Ticks verstrichen Nenner ausgeführt und F ist die Tickfrequenz. Der Wert von F ist die umgerechnet, damit das Ergebnis in Sekunden angezeigt werden kann.  
+  
+ Indikatoren dieses Typs einschließen System\Prozessor Datei gelesene Bytes/Sek.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawBase">
+      <MemberSignature Language="C#" Value="RawBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType RawBase = int32(1073939459)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.RawBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Basiszähler, in dem die Nenner eines Indikators gespeichert, die einen arithmetischen Bruch darstellt. Überprüfen Sie, ob dieser Wert größer als 0 (null), bevor Sie sie als Nenner bei Verwenden einer <see langword="RawFraction" /> Berechnung Wert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawFraction">
+      <MemberSignature Language="C#" Value="RawFraction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType RawFraction = int32(537003008)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.RawFraction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine sofortige prozentsatzzähler, in der das Verhältnis einer Teilmenge an einen Satz als Prozentsatz angezeigt. Beispielsweise vergleicht er die Anzahl der Bytes in Verwendung auf einem Datenträger, auf die Gesamtzahl der Bytes auf dem Datenträger. Indikatoren dieses Typs zeigen den aktuellen Prozentwert, keinen Durchschnitt über die Zeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (0-N / D 0) X 100, D 0, in denen ein gemessenes Attribut darstellt (mit einem Basiszähler vom Typ `RawBase`) und N 0 eine Komponente des betreffenden Attributs darstellt.  
+  
+ Indikatoren dieses Typs enthalten Auslagerungsdatei\\% Belegung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleBase">
+      <MemberSignature Language="C#" Value="SampleBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType SampleBase = int32(1073939457)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.SampleBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Basiszähler, die die Anzahl der Stichproben speichert unterbricht aufgezeichnet wurde und als Nenner den Anteil der Stichproben verwendet wird. Der Bruch Sampling ist die Anzahl der Samplings, die 1 wurden (oder <see langword="true" />) für einen Interrupt Beispiel. Überprüfen Sie, ob dieser Wert größer als 0 (null), bevor Sie sie als Nenner bei der Berechnung der verwenden <see langword="SampleFraction" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleCounter">
+      <MemberSignature Language="C#" Value="SampleCounter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType SampleCounter = int32(4260864)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.SampleCounter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Durchschnittsindikator, die die durchschnittliche Anzahl der pro Sekunde durchgeführten Operationen anzeigt. Wenn ein Leistungsindikator dieses Typs Beispiele für die Daten, jede Sampling unterbrechen, gibt einen oder 0 (null). Der Leistungsindikatordaten ist die Anzahl der Argumente, die als Stichprobe verwendet wurden. Sie misst die Zeit in Ticks des der Zeitgeber für die Systemleistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1-N 0) / ((D 1-D 0) / F), wobei der Zähler (N) die Anzahl der durchgeführten Operationen stellt, der Nenner (D) verstrichene Zeit in Ticks des der Zeitgeber für die Systemleistung, und F die Anzahl der Ticks, die pro Sekunde darstellt. F ist die umgerechnet, damit das Ergebnis in Sekunden angezeigt werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleFraction">
+      <MemberSignature Language="C#" Value="SampleFraction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType SampleFraction = int32(549585920)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.SampleFraction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die durchschnittliche Verhältnis der Treffer für alle Vorgänge während der letzten beiden Abtastintervallen anzeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: ((N 1 - N 0) / (D 1 - D 0)) X 100, in dem der Zähler stellt die Anzahl der erfolgreichen Vorgänge während des letzten Abtastintervalls und den Nenner darstellt, die Veränderung der Anzahl aller Vorgänge (des Typs gemessen) während des Beispiels abgeschlossen Intervall, mithilfe der Leistungsindikatoren des Typs `SampleBase`.  
+  
+ Indikatoren dieses Typs enthalten Lesetreffer %.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timer100Ns">
+      <MemberSignature Language="C#" Value="Timer100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType Timer100Ns = int32(542180608)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.Timer100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die aktive Zeit einer Komponente als Prozentsatz der gesamten verstrichene Zeit des Abtastintervalls anzeigt. Sie misst die Zeit in Einheiten von 100 Nanosekunden (ns). Indikatoren dieses Typs sind konzipiert, um die Aktivität einer Komponente zu einem Zeitpunkt zu messen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formel: (N 1 - N 0) / (D 1 - D 0) X 100, in dem der Zähler stellt die Teile des Abtastintervalls an, während dessen die überwachten Komponenten aktiv waren, und den Nenner darstellt, die insgesamt verstrichene Zeit des Abtastintervalls.  
+  
+ Indikatoren dieses Typs enthalten prozess\% % Benutzerzeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timer100NsInverse">
+      <MemberSignature Language="C#" Value="Timer100NsInverse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterType Timer100NsInverse = int32(558957824)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterType.Timer100NsInverse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein prozentsatzzähler, der die durchschnittliche prozentuale Belegung während des Abtastintervalls Aktivitätszeit anzeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein inverser Zähler. Indikatoren dieses Typs berechnet durch messen die Zeit, die der Dienst nicht aktiv war, und klicken Sie dann den Prozentsatz der aktive Zeit von 100 Prozent subtrahiert.  
+  
+ Formel: (1 - ((N 1 - N 0) / (D 1 - D 0))) X 100, Zähler, in dem die Zeit während des Intervalls, darstellt Wenn die überwachten Komponenten inaktiv waren, und den Nenner, die insgesamt verstrichene Zeit des Abtastintervalls darstellt.  
+  
+ Indikatoren dieses Typs enthalten prozess\% Prozessorzeit (%).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

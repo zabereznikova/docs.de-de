@@ -1,0 +1,213 @@
+<Type Name="EventDescriptor" FullName="System.Diagnostics.Eventing.EventDescriptor">
+  <TypeSignature Language="C#" Value="public struct EventDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public ansi sealed beforefieldinit EventDescriptor extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.EventDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Metadaten, die ein Ereignis definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt ein Ereignis im Manifest definiert. Nach dem Schreiben des Manifests, verwenden Sie den Meldungscompiler (MC.exe), um eine Ressourcendatei zu generieren. Als Nebenprodukt des Prozesses ist eine Headerdatei, die die Ereignisdeskriptor in C enthält, wie im folgenden Beispiel gezeigt.  
+  
+```  
+EXTERN_C __declspec(selectany) const EVENT_DESCRIPTOR ReadEvent = {0x1, 0x0, 0x10, 0x4, 0x0, 0x0, 0x8000000000000005};  
+```  
+  
+ Verwenden Sie die Werte des Deskriptors zum Erstellen einer Instanz dieser Klasse an, wie im folgenden Beispiel gezeigt. Das Schlüsselwort ist eine unsigned long-Wert und kann nicht direkt auf einen Long-Wert umgewandelt werden; Verwenden Sie die `unchecked` Programmiersprachen-Schlüsselwort, um die Zuweisung zu ermöglichen.  
+  
+```  
+unchecked  
+{  
+    readEvent = new EventDescriptor(0x1, 0x0, 0x10, 0x4, 0x0, 0x0, (long)0x8000000000000005);  
+}  
+```  
+  
+ Sie verwenden den Deskriptor, der beim Aufrufen der <xref:System.Diagnostics.Eventing.EventProvider.WriteEvent%2A?displayProperty=nameWithType> oder <xref:System.Diagnostics.Eventing.EventProvider.WriteEvent%2A?displayProperty=nameWithType> Methode.  
+  
+ Weitere Informationen zum Schreiben des Manifests und verwenden den meldungscompiler finden Sie unter [Ereignisherausgeber entwickeln](https://msdn.microsoft.com/en-us/library/windows/desktop/aa964766\(v=vs.85\).aspx)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventDescriptor (int id, byte version, byte channel, byte level, byte opcode, int task, long keywords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 id, unsigned int8 version, unsigned int8 channel, unsigned int8 level, unsigned int8 opcode, int32 task, int64 keywords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventDescriptor.#ctor(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="version" Type="System.Byte" />
+        <Parameter Name="channel" Type="System.Byte" />
+        <Parameter Name="level" Type="System.Byte" />
+        <Parameter Name="opcode" Type="System.Byte" />
+        <Parameter Name="task" Type="System.Int32" />
+        <Parameter Name="keywords" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Ereignisbezeichner.</param>
+        <param name="version">Version des Ereignisses. Die Version gibt eine Überarbeitung der Ereignisdefinition an. Sie können diesen Member und den ID-Member verwenden, um ein eindeutiges Ereignis zu identifizieren.</param>
+        <param name="channel">Definiert ein potenzielles Ziel für das Ereignis.</param>
+        <param name="level">Gibt die Detailebene im Ereignis an.</param>
+        <param name="opcode">Vorgang, der zu dem Zeitpunkt ausgeführt wird, zu dem das Ereignis geschrieben wird.</param>
+        <param name="task">Identifiziert eine logische Komponente der Anwendung, die das Ereignis schreibt.</param>
+        <param name="keywords">Bitmaske, die die Ereigniskategorie angibt. Das Schlüsselwort kann mindestens ein vom Anbieter definiertes Schlüsselwort, Standardschlüsselwort oder beides enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.Eventing.EventDescriptor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einzelheiten zu diesen Parametern finden Sie die Attribute des der [EventDefinitionType](https://msdn.microsoft.com/en-us/library/windows/desktop/aa382754\(v=vs.85\).aspx) komplexen Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Channel">
+      <MemberSignature Language="C#" Value="public byte Channel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Channel" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventDescriptor.Channel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kanalwert aus dem Ereignisdeskriptor ab.</summary>
+        <value>Der Kanal, der ein potenzielles Ziel für das Ereignis definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventId">
+      <MemberSignature Language="C#" Value="public int EventId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventDescriptor.EventId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ereignis-ID-Wert aus dem Ereignisdeskriptor ab.</summary>
+        <value>Der Ereignisbezeichner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public long Keywords { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventDescriptor.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüsselwortwert aus dem Ereignisdeskriptor ab.</summary>
+        <value>Das Schlüsselwort, also eine Bitmaske, die die Ereigniskategorie angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public byte Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Level" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventDescriptor.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert aus dem Ereignisdeskriptor ab.</summary>
+        <value>Die Detailebene, die im Ereignis enthalten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opcode">
+      <MemberSignature Language="C#" Value="public byte Opcode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Opcode" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventDescriptor.Opcode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vorgangscode-Wert aus dem Ereignisdeskriptor ab.</summary>
+        <value>Der Vorgang ausgeführt wird, zu dem Zeitpunkt ist das Ereignis geschrieben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Task">
+      <MemberSignature Language="C#" Value="public int Task { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Task" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventDescriptor.Task" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert aus dem Ereignisdeskriptor ab.</summary>
+        <value>Der Task, der die logische Komponente der Anwendung identifiziert, die das Ereignis geschrieben wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public byte Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventDescriptor.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Versionswert aus dem Ereignisdeskriptor ab.</summary>
+        <value>Die Version des Ereignisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version gibt eine Überarbeitung der Ereignisdefinition an. Sie können diesen Member und den ID-Member verwenden, um ein eindeutiges Ereignis zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

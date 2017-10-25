@@ -1,0 +1,179 @@
+<Type Name="IComPropertyBrowser" FullName="System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser">
+  <TypeSignature Language="C#" Value="public interface IComPropertyBrowser" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComPropertyBrowser" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht Visual Studio die interne Kommunikation der <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ComComponentNameChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentRenameEventHandler ComComponentNameChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentRenameEventHandler ComComponentNameChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.ComComponentNameChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentRenameEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Forms.PropertyGrid" /> -Steuerelement durchsucht ein COM-Objekt und das Objekt umbenannt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst lediglich eine Änderung des Werts der Eigenschaft, die dem DISPID_Name für das COM-Objekt entspricht der <xref:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.ComComponentNameChanged> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownDone">
+      <MemberSignature Language="C#" Value="public void DropDownDone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DropDownDone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.DropDownDone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt alle geöffneten Dropdown-Steuerelemente auf der <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EnsurePendingChangesCommitted">
+      <MemberSignature Language="C#" Value="public bool EnsurePendingChangesCommitted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EnsurePendingChangesCommitted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.EnsurePendingChangesCommitted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit für alle ausstehenden Änderungen an der <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.PropertyGrid" /> erfolgreich ein Commit ausgeführt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HandleF4">
+      <MemberSignature Language="C#" Value="public void HandleF4 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleF4() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.HandleF4" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktiviert die <see cref="T:System.Windows.Forms.PropertyGrid" /> steuern, wenn der Benutzer wählt **Eigenschaften** für ein Steuerelement in der Entwurfsansicht.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InPropertySet">
+      <MemberSignature Language="C#" Value="public bool InPropertySet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InPropertySet" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.InPropertySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement ist derzeit eine der Eigenschaften des ausgewählten Objekts festlegen.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement ist derzeit eine der Eigenschaften des ausgewählten Objekts festgelegt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LoadState">
+      <MemberSignature Language="C#" Value="public void LoadState (Microsoft.Win32.RegistryKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadState(class Microsoft.Win32.RegistryKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.LoadState(Microsoft.Win32.RegistryKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="Microsoft.Win32.RegistryKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Registrierungsschlüssel mit den Benutzerzuständen.</param>
+        <summary>Lädt Benutzerzustände aus der Registrierung in der <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können einige der speichern die <xref:System.Windows.Forms.PropertyGrid> steuern Sie die Zustände, wie z. B. die <xref:System.Windows.Forms.PropertyGrid.PropertySort%2A> und <xref:System.Windows.Forms.PropertyGrid.HelpVisible%2A> Eigenschaften, um die Registrierung, und Laden sie das nächste Mal der Benutzer führt die Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SaveState">
+      <MemberSignature Language="C#" Value="public void SaveState (Microsoft.Win32.RegistryKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveState(class Microsoft.Win32.RegistryKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.SaveState(Microsoft.Win32.RegistryKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="Microsoft.Win32.RegistryKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Registrierungsschlüssel mit den Benutzerzuständen.</param>
+        <summary>Speichert Benutzerstatus aus dem <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement an der Registrierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können einige der speichern die <xref:System.Windows.Forms.PropertyGrid> steuern Sie die Zustände, wie z. B. die <xref:System.Windows.Forms.PropertyGrid.PropertySort%2A> und <xref:System.Windows.Forms.PropertyGrid.HelpVisible%2A> Eigenschaften, um die Registrierung, und Laden sie das nächste Mal der Benutzer führt die Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,19 @@
+<Type Name="TypeErrorObject" FullName="Microsoft.JScript.TypeErrorObject">
+  <TypeSignature Language="C#" Value="public sealed class TypeErrorObject : Microsoft.JScript.ErrorObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeErrorObject extends Microsoft.JScript.ErrorObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.TypeErrorObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ErrorObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typfehler dar. Beispielsweise kann ein Typfehler auftreten, wenn Sie ein Objekt eines Typs an eine Methode übergeben, die ein Objekt eines anderen Typs erwartet.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members />
+</Type>

@@ -1,0 +1,156 @@
+<Type Name="DefaultWorkflowCommitWorkBatchService" FullName="System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService">
+  <TypeSignature Language="C#" Value="public class DefaultWorkflowCommitWorkBatchService : System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultWorkflowCommitWorkBatchService extends System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Standardversion von <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> dar, die vom Workflowlaufzeitmodul erstellt wird, wenn kein anderer WorkflowCommitWorkBatch-Dienst für das Workflowladeprogramm hinzugefügt wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die <xref:System.Workflow.Runtime.WorkflowRuntime>-Klasse erstellt beim Starten des Workflowlaufzeitmoduls ein <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>-Objekt, wenn kein anderer WorkflowCommitWorkBatch-Dienst hinzugefügt wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowCommitWorkBatchService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowCommitWorkBatchService (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">
+          <see cref="T:System.Collections.Specialized.NameValueCollection" />. Der Konstruktor wird aufgerufen, wenn das Workflowlaufzeitmodul Dienste aus einer Anwendungskonfigurationsdatei lädt. <see cref="P:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.EnableRetries" /> ist der gültige Schlüssel. Damit wird <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> zu einem erneuten Versuch aufgefordert, wenn eine Datenbankverbindung nicht hergestellt werden konnte.</param>
+        <summary>Initialisiert mit einer Auflistung von Parametern für die Initialisierung eine SharedConnectionWorkflowCommitWorkBatchService-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitWorkBatch">
+      <MemberSignature Language="C#" Value="protected override void CommitWorkBatch (System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback commitWorkBatchCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CommitWorkBatch(class System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService/CommitWorkBatchCallback commitWorkBatchCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.CommitWorkBatch(System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commitWorkBatchCallback" Type="System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService+CommitWorkBatchCallback" />
+      </Parameters>
+      <Docs>
+        <param name="commitWorkBatchCallback">Die <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback" /> Delegat, der commit für den Arbeitsbatch aufgerufen.</param>
+        <summary>Erstellt einen Arbeitsbatch, wenn noch keiner vorhanden ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableRetries">
+      <MemberSignature Language="C#" Value="public bool EnableRetries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableRetries" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.EnableRetries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> den Commit für einen Arbeitsbatch erneut versucht, oder legt den Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Dienst den Commitvorgang für den Arbeitsbatch wiederholen soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erneute Versuche des Commits für Arbeitsbatches müssen für <xref:System.Workflow.ComponentModel.TransactionScopeActivity>-Aktivitäten in den Workflow integriert werden (in der Regel mit einer While-Schleife und einem Ausnahmehandler außerhalb von <xref:System.Workflow.ComponentModel.TransactionScopeActivity>). <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> kann in diesen Fällen keine erneuten Versuche ausführen, da der Dienst die Transaktion noch nicht gestartet hat (und sie deshalb nicht besitzt).  
+  
+ Diese Funktionalität wird nicht nur programmgesteuert festgelegt, sondern kann auch über eine Konfigurationsdatei aktiviert werden. Weitere Informationen zum Festlegen dieser Eigenschaft über eine Konfigurationsdatei finden Sie unter [Workflow Konfigurationsdateien](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+  
+ Allgemeine Informationen auf arbeitsbatchtransaktionen finden Sie unter [Batchverarbeitung Zustandsinformationen in Workflows](http://msdn.microsoft.com/en-us/ecda18ba-9140-4bd7-b13d-6787fdf5959d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStopped">
+      <MemberSignature Language="C#" Value="protected override void OnStopped ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStopped() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.OnStopped" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die aufgerufene Methode dar, wenn die Workflowlaufzeit das <see cref="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" />-Ereignis auslöst.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected override void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die zum Starten des Dienstes aufgerufene Methode dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

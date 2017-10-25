@@ -1,0 +1,423 @@
+<Type Name="Border" FullName="System.Windows.Controls.Border">
+  <TypeSignature Language="C#" Value="public class Border : System.Windows.Controls.Decorator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Border extends System.Windows.Controls.Decorator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Border" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Decorator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeichnet einen Rahmen, einen Hintergrund oder beides um ein anderes Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Border>Sie können nur ein untergeordnetes Element. Um mehrere untergeordnete Elemente anzuzeigen, müssen Sie ein zusätzliches platzieren <xref:System.Windows.Controls.Panel> Element innerhalb des übergeordneten Elements <xref:System.Windows.Controls.Border>. Sie können dann platzieren, untergeordnete Elemente innerhalb der <xref:System.Windows.Controls.Panel> Element.  
+  
+ Wenn Sie einen Rahmen um Ihre Inhalte anzeigen möchten, müssen Sie die Elemente in einem übergeordneten Element platzieren <xref:System.Windows.Controls.Border> Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Controls.Border> und legen Sie Eigenschaften im Code und [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ [!code-cpp[marginpaddingalignmentsample#3](~/samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#3)]
+ [!code-csharp[marginpaddingalignmentsample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#3)]
+ [!code-vb[marginpaddingalignmentsample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#3)]
+ [!code-xaml[marginpaddingalignmentsample#3](~/samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Border ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Border.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Border" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Border.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">Die <see cref="T:System.Windows.Size" /> dieses Element wird verwendet, um das Anordnen des untergeordneten Elements.</param>
+        <summary>Ordnet den Inhalt einer <see cref="T:System.Windows.Controls.Border" /> Element.</summary>
+        <returns>Die <see cref="T:System.Windows.Size" /> , die die angeordnete Größe dieses darstellt <see cref="T:System.Windows.Controls.Border" /> Element und seinem untergeordneten Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Border>Sie können nur ein untergeordnetes Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Border.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.Brush" /> , die füllt des Bereichs zwischen den Grenzen einer <see cref="T:System.Windows.Controls.Border" />.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Brush" /> , der den Hintergrund zeichnet. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Border.BackgroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Controls.Border.Background%2A> Eigenschaft mithilfe von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-csharp[ThicknessStruct#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#1)]
+ [!code-vb[ThicknessStruct#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#1)]
+ [!code-xaml[ThicknessStruct#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Border.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Border.Background" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush BorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush BorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Border.BorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Windows.Media.Brush" /> ab, der die Farbe des äußeren Rahmens zeichnet, oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.Windows.Media.Brush" />, der die Farbe des äußeren Rahmens zeichnet. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Border.BorderBrushProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen des Werts, der die <xref:System.Windows.Controls.Border.BorderBrush%2A> Eigenschaft mithilfe von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] und Code.  
+  
+ [!code-csharp[ThicknessStruct#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#1)]
+ [!code-vb[ThicknessStruct#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#1)]
+ [!code-xaml[ThicknessStruct#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Border.BorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Border.BorderBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness BorderThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness BorderThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Border.BorderThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den relativen <see cref="T:System.Windows.Thickness" /> von einem <see cref="T:System.Windows.Controls.Border" />.</summary>
+        <value>Die <see cref="T:System.Windows.Thickness" /> , der die Breite der Berandungen des beschreibt die <see cref="T:System.Windows.Controls.Border" />. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BorderThickness"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Border.BorderThicknessProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie den Wert dieser Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[ThicknessStruct#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#1)]
+ [!code-vb[ThicknessStruct#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#1)]
+ [!code-xaml[ThicknessStruct#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Border.BorderThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Border.BorderThickness" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CornerRadius">
+      <MemberSignature Language="C#" Value="public System.Windows.CornerRadius CornerRadius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.CornerRadius CornerRadius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Border.CornerRadius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.CornerRadius</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Grad darstellt der Ecken des eine <see cref="T:System.Windows.Controls.Border" /> gerundet werden.</summary>
+        <value>Die <see cref="T:System.Windows.CornerRadius" /> , beschreibt den Grad auf die Ecken gerundet werden. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwar den Namen der Eigenschaft schlägt vor, dass Sie nur im singular Werte können <xref:System.Windows.Controls.Border.CornerRadius%2A> unterstützt auch ungleichmäßige Radien. Radiuswerte, die zu groß sind werden so skaliert, dass sie reibungslos von Ecke zu Ecke blend.  
+  
+<a name="dependencyPropertyInfo_CornerRadius"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Border.CornerRadiusProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie den Wert dieser Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[ThicknessStruct#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#1)]
+ [!code-vb[ThicknessStruct#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#1)]
+ [!code-xaml[ThicknessStruct#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CornerRadiusProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CornerRadiusProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CornerRadiusProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Border.CornerRadiusProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Border.CornerRadius" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Border.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Eine obere <see cref="T:System.Windows.Size" /> Grenzwert, der nicht überschritten werden kann.</param>
+        <summary>Misst die untergeordneten Elemente von einer <see cref="T:System.Windows.Controls.Border" /> , bevor sie während der angeordnet sind die <see cref="M:System.Windows.Controls.Border.ArrangeOverride(System.Windows.Size)" /> übergeben.</summary>
+        <returns>Die <see cref="T:System.Windows.Size" /> , die die obere größenbeschränkung des Elements darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Border> Element bestimmt die obere <xref:System.Windows.Size> Grenzwert durch die Analyse der Größeneigenschaften, Rand und angeforderten Größe der untergeordneten Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext dc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext dc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Border.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Windows.Media.DrawingContext" /> , die zu zeichnende Objekt definiert.</param>
+        <summary>Zeichnet den Inhalt einer <see cref="T:System.Windows.Media.DrawingContext" /> Objekt während des Renderings eine <see cref="T:System.Windows.Controls.Border" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Border.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Windows.Thickness" /> Wert, der den Abstand zwischen beschreibt eine <see cref="T:System.Windows.Controls.Border" /> und seinem untergeordneten Element.</summary>
+        <value>Die <see cref="T:System.Windows.Thickness" /> , beschreibt den Abstand zwischen einem <see cref="T:System.Windows.Controls.Border" /> und ein einziges untergeordnetes Element. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Padding"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Border.PaddingProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie den Wert dieser Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[ThicknessStruct#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessStruct/CSharp/ThicknessSamp.cs#1)]
+ [!code-vb[ThicknessStruct#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessStruct/VisualBasic/ThicknessSampVB.vb#1)]
+ [!code-xaml[ThicknessStruct#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ThicknessStruct/XAML/default.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Border.PaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Border.Padding" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

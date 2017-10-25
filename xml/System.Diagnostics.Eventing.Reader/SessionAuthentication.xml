@@ -1,0 +1,82 @@
+<Type Name="SessionAuthentication" FullName="System.Diagnostics.Eventing.Reader.SessionAuthentication">
+  <TypeSignature Language="C#" Value="public enum SessionAuthentication" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionAuthentication extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.SessionAuthentication" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Werte für den Typ der Authentifizierung bei einer Anmeldung (Remote Procedure Call, RPC) mit einem Server verwendet. Diese Anmeldung tritt auf, bei der Erstellung einer <see cref="T:System.Diagnostics.Eventing.Reader.EventLogSession" /> -Objekt, das eine Verbindung mit einem Remotecomputer angibt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.SessionAuthentication Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.SessionAuthentication.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.SessionAuthentication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Standardauthentifizierungsmethode während der RPC-Anmeldung. Die Standardauthentifizierung entspricht Negotiate.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Kerberos">
+      <MemberSignature Language="C#" Value="Kerberos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.SessionAuthentication Kerberos = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.SessionAuthentication.Kerberos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.SessionAuthentication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie Kerberos-Authentifizierung während der RPC-Anmeldung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Negotiate">
+      <MemberSignature Language="C#" Value="Negotiate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.SessionAuthentication Negotiate = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.SessionAuthentication.Negotiate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.SessionAuthentication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die Negotiate-Authentifizierung während der RPC-Anmeldung. Dadurch werden die Clientanwendung, die am besten geeignete Authentifizierungsmethode (NTLM oder Kerberos) Wählen für die Situation.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ntlm">
+      <MemberSignature Language="C#" Value="Ntlm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.SessionAuthentication Ntlm = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.SessionAuthentication.Ntlm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.SessionAuthentication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Windows NT LAN Manager (NTLM)-Authentifizierung während der RPC-Anmeldung verwenden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

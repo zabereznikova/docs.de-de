@@ -1,0 +1,420 @@
+<Type Name="MobileTextWriter" FullName="System.Web.UI.MobileControls.Adapters.MobileTextWriter">
+  <TypeSignature Language="C#" Value="public class MobileTextWriter : System.Web.UI.MobileControls.Adapters.MultiPartWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MobileTextWriter extends System.Web.UI.MobileControls.Adapters.MultiPartWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.MobileTextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.MultiPartWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für alle <see langword="TextWriter" /> -Objekten, die für das Rendern von ASP.NET mobile-Steuerelemente verwendet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter> Klasse und die geerbten Klassen bieten, Dienste und Hilfsmethoden für Adapter an ausgeben.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MobileTextWriter (System.IO.TextWriter writer, System.Web.Mobile.MobileCapabilities device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, class System.Web.Mobile.MobileCapabilities device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.#ctor(System.IO.TextWriter,System.Web.Mobile.MobileCapabilities)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="device" Type="System.Web.Mobile.MobileCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die Basis-Writer-Objekt.</param>
+        <param name="device">Ein Objekt vom <see cref="T:System.Web.Mobile.MobileCapabilities" /> Klasse, die Informationen über die Funktionen für das jeweilige Gerät bereitstellt.</param>
+        <summary>Erstellt eine neue Instanz der angegebenen Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adapter werden von ASP.NET in der Regel automatisch erstellt und müssen über einen Standardkonstruktor verfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public override void AddResource (string url, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddResource(string url, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.AddResource(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, zu der der Ressourcenverweis hinzugefügt werden soll.</param>
+        <param name="contentType">(Optional) Der MIME-Typ des Inhalts.</param>
+        <summary>Fügt einen Ressourcenverweis zur angegebenen URL mit dem optionalen MIME-Typ für den angegebenen Inhalt hinzu. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginFile">
+      <MemberSignature Language="C#" Value="public override void BeginFile (string url, string contentType, string charset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void BeginFile(string url, string contentType, string charset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.BeginFile(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="charset" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die eindeutige URL für die Datei.</param>
+        <param name="contentType">Der MIME-Typ der Datei.</param>
+        <param name="charset">Der Zeichensatz für die Datei (normalerweise identisch mit <see cref="P:System.Web.HttpResponse.Charset" />).</param>
+        <summary>Beginnt eine Antwortdatei. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Seitenadapter muss diese Methode aufrufen, vor dem Rendern der Seite, aber nach dem Aufruf der <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.BeginResponse%2A> Methode. Eine Ausnahme wird ausgelöst, wenn die <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.BeginFile%2A> Methode mehr als einmal aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Diese Methode wird mehr als einmal aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResponse">
+      <MemberSignature Language="C#" Value="public override void BeginResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void BeginResponse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.BeginResponse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet eine Antwort an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Device">
+      <MemberSignature Language="C#" Value="public System.Web.Mobile.MobileCapabilities Device { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Mobile.MobileCapabilities Device" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.MobileTextWriter.Device" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Mobile.MobileCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Mobile.MobileCapabilities" /> Objekt für das aktuelle anfordernde Gerät. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die <see cref="T:System.Web.Mobile.MobileCapabilities" /> Objekt für das aktuelle anfordernde Gerät.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird der Einfachheit halber bereitgestellt, und entspricht dem Aufrufen des Browsers mit einer <xref:System.Web.HttpRequest>, wie z. B. `Page.Request.Browser`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndFile">
+      <MemberSignature Language="C#" Value="public override void EndFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EndFile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet eine Antwortdatei. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndResponse">
+      <MemberSignature Language="C#" Value="public override void EndResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndResponse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EndResponse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet eine Antwort an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterFormat">
+      <MemberSignature Language="C#" Value="public virtual void EnterFormat (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnterFormat(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EnterFormat(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die angegebene Formatvorlage, die zum Formatieren von Zeichen verwendet werden soll</param>
+        <summary>Beginnt einen Block, indem die Zeichenformatierung aus einer angegebenen Formatvorlage verwendet wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterLayout">
+      <MemberSignature Language="C#" Value="public virtual void EnterLayout (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnterLayout(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EnterLayout(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der Formatverweis.</param>
+        <summary>Beginnt einen Block durch Verwenden der Formatierung eines angegebenen Formats. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EnterLayout%2A> und <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitLayout%2A> Methoden ermöglichen es einen Geräteadapter zum Ausgeben von Markup, um das Starten und Beenden einen Block mit der Formatierung eines angegebenen Formats.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterStyle">
+      <MemberSignature Language="C#" Value="public void EnterStyle (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnterStyle(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EnterStyle(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der Formatverweis.</param>
+        <summary>Beginnt einen Block mit dem Layout und die zeichenformatierung aus einer angegebenen Formatvorlage an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EnterStyle%2A> und <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitStyle%2A> Methoden ermöglichen einen Geräteadapter zum Ausgeben von Markup, um das Starten und Beenden einen Block mit dem Zeichen, die Formatierung eines angegebenen Formats.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitFormat">
+      <MemberSignature Language="C#" Value="public virtual void ExitFormat (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExitFormat(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitFormat(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die angegebene Formatvorlage, die zum Formatieren von Zeichen verwendet werden soll</param>
+        <summary>Beendet einen Block, der die Zeichenformatierung aus einer angegebenen Formatvorlage verwendet hat. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitFormat">
+      <MemberSignature Language="C#" Value="public virtual void ExitFormat (System.Web.UI.MobileControls.Style style, bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExitFormat(class System.Web.UI.MobileControls.Style style, bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitFormat(System.Web.UI.MobileControls.Style,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die angegebene Formatvorlage, die zum Formatieren von Zeichen verwendet werden soll</param>
+        <param name="breakAfter">Wenn <c>BreakAfter</c> ist <see langword="true" />, nach dem schließenden Formatelement ein Umbruch eingefügt. Die erste Form der Methode wird davon ausgegangen <c>BreakAfter</c> werden <see langword="true" />.</param>
+        <summary>Beendet einen Block, der die Zeichenformatierung aus einer angegebenen Formatvorlage verwendet hat. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitLayout">
+      <MemberSignature Language="C#" Value="public virtual void ExitLayout (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExitLayout(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitLayout(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der Formatverweis.</param>
+        <summary>Beendet einen Block durch Verwenden der Formatierung eines angegebenen Formats. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EnterLayout%2A> und <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitLayout%2A> Methoden ermöglichen es einen Geräteadapter zum Ausgeben von Markup, um das Starten und Beenden einen Block durch Verwenden der Formatierung eines angegebenen Formats.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitLayout">
+      <MemberSignature Language="C#" Value="public virtual void ExitLayout (System.Web.UI.MobileControls.Style style, bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExitLayout(class System.Web.UI.MobileControls.Style style, bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitLayout(System.Web.UI.MobileControls.Style,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der Formatverweis.</param>
+        <param name="breakAfter">Wenn <c>BreakAfter</c> ist "true", nach dem schließenden Formatelement ein Umbruch eingefügt. Die erste Form der Methode wird davon ausgegangen <c>BreakAfter</c> werden <see langword="true" />.</param>
+        <summary>Beendet einen Block durch Verwenden der Formatierung eines angegebenen Formats. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.EnterLayout%2A> und <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitLayout%2A> Methoden ermöglichen es einen Geräteadapter zum Ausgeben von Markup, um das Starten und Beenden einen Block durch Verwenden der Formatierung eines angegebenen Formats.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitStyle">
+      <MemberSignature Language="C#" Value="public void ExitStyle (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExitStyle(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitStyle(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der Formatverweis.</param>
+        <summary>Beendet einen Block, der das Layout und die zeichenformatierung aus einer angegebenen Formatvorlage verwendet hat. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung der <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter.ExitStyle%2A> Fügt einen Umbruch nach dem schließenden Formatelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsMultiPart">
+      <MemberSignature Language="C#" Value="public override bool SupportsMultiPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsMultiPart" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.MobileTextWriter.SupportsMultiPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob mehrteiliges Schreiben unterstützt wird. Der Standardwert ist <see langword="false" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />, wenn mehrteiliges Schreiben unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

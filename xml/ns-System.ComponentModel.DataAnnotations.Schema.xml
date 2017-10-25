@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.DataAnnotations.Schema">
+  <Docs>
+    <summary>Die <see cref="N:System.ComponentModel.DataAnnotations.Schema" /> Namespace bietet Unterstützung für Attributklassen, die zum Definieren von Metadaten für ASP.NET-MVC und ASP.NET Data-Steuerelemente verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

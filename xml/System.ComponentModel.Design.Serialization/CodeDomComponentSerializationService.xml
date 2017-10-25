@@ -1,0 +1,362 @@
+<Type Name="CodeDomComponentSerializationService" FullName="System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService">
+  <TypeSignature Language="C#" Value="public sealed class CodeDomComponentSerializationService : System.ComponentModel.Design.Serialization.ComponentSerializationService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CodeDomComponentSerializationService extends System.ComponentModel.Design.Serialization.ComponentSerializationService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.Serialization.ComponentSerializationService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serialisiert einen Satz von Komponenten in einen Serialisierungsspeicher.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> Klasse serialisiert einen Satz von Komponenten oder serialisierbare Objekte in einem Serialisierungsspeicher. Der Speicher kann dann zu einem späteren Zeitpunkt deserialisiert werden. Die <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> Klasse unterscheidet sich von anderen Serialisierungsschemas, die, da das Serialisierungsformat nicht transparent ist, und es ermöglicht, für die partielle Serialisierung von Objekten. Beispielsweise können Sie auswählen, um nur ausgewählte Eigenschaften für ein Objekt zu serialisieren.  
+  
+ Die Basisklasse <xref:System.ComponentModel.Design.Serialization.ComponentSerializationService>, ersetzt die <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> -Schnittstelle aus .NET Framework, Version 1.0, jedoch für die Abwärtskompatibilität beibehalten wird. Die <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> -Klasse implementiert nicht die <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> -Schnittstelle, aber die Abfrage für <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>, die <xref:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader> stellt eine Brücke-Implementierung, um Abwärtskompatibilität zu gewährleisten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDomComponentSerializationService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDomComponentSerializationService (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein <see cref="T:System.IServiceProvider" /> zum Auflösen von Diensten verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService" /> -Klasse unter Verwendung des angegebenen Dienstanbieters zum Auflösen der Dienste.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStore">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.Serialization.SerializationStore CreateStore ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.Design.Serialization.SerializationStore CreateStore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.SerializationStore</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen neuen <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" />.</summary>
+        <returns>Eine neue Serialisierungsspeicher.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Serialisierungsspeicher übergeben werden kann, an ein beliebiges der <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.Serialize%2A> Methoden, um die Serialisierungszustand für eine Gruppe von Objekten zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection Deserialize (System.ComponentModel.Design.Serialization.SerializationStore store);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ICollection Deserialize(class System.ComponentModel.Design.Serialization.SerializationStore store) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.Deserialize(System.ComponentModel.Design.Serialization.SerializationStore)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="store" Type="System.ComponentModel.Design.Serialization.SerializationStore" />
+      </Parameters>
+      <Docs>
+        <param name="store">Die <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> aus dem Objekte deserialisiert werden.</param>
+        <summary>Deserialisiert den angegebenen Speicher, um eine Auflistung von Objekten zu erzeugen.</summary>
+        <returns>Eine Auflistung von deserialisierten Komponenten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="store" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="store" />ist kein unterstützter Typ des serialisierungsspeichers. Verwenden Sie einen Speicher zurückgegebenes <see cref="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection Deserialize (System.ComponentModel.Design.Serialization.SerializationStore store, System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ICollection Deserialize(class System.ComponentModel.Design.Serialization.SerializationStore store, class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.Deserialize(System.ComponentModel.Design.Serialization.SerializationStore,System.ComponentModel.IContainer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="store" Type="System.ComponentModel.Design.Serialization.SerializationStore" />
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="store">Die <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> aus dem Objekte deserialisiert werden.</param>
+        <param name="container">Ein Container, dem <see cref="T:System.ComponentModel.IComponent" /> -Objekte hinzugefügt werden.</param>
+        <summary>Deserialisiert den angegebenen Speicher und füllt den angegebenen <see cref="T:System.ComponentModel.IContainer" /> mit deserialisiert <see cref="T:System.ComponentModel.IComponent" /> Objekte.</summary>
+        <returns>Eine Auflistung von deserialisierten Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt Objekte, implementieren die <xref:System.ComponentModel.IComponent> Schnittstelle werden hinzugefügt werden, um die `container` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="store" /> oder <paramref name="container" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="store" />ist kein unterstützter Typ des serialisierungsspeichers. Verwenden Sie einen Speicher zurückgegebenes <see cref="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeTo">
+      <MemberSignature Language="C#" Value="public override void DeserializeTo (System.ComponentModel.Design.Serialization.SerializationStore store, System.ComponentModel.IContainer container, bool validateRecycledTypes, bool applyDefaults);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DeserializeTo(class System.ComponentModel.Design.Serialization.SerializationStore store, class System.ComponentModel.IContainer container, bool validateRecycledTypes, bool applyDefaults) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.DeserializeTo(System.ComponentModel.Design.Serialization.SerializationStore,System.ComponentModel.IContainer,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="store" Type="System.ComponentModel.Design.Serialization.SerializationStore" />
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+        <Parameter Name="validateRecycledTypes" Type="System.Boolean" />
+        <Parameter Name="applyDefaults" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="store">Die <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> aus dem die Objekte deserialisiert werden.</param>
+        <param name="container">Ein Container von Objekten, die auf die Daten angewendet werden soll.</param>
+        <param name="validateRecycledTypes">
+          <see langword="true" />So überprüfen Sie den wiederverwendeten Typ; andernfalls <see langword="false" />.</param>
+        <param name="applyDefaults">
+          <see langword="true" />Standardwerte für Eigenschaften angewendet; andernfalls <see langword="false" />.</param>
+        <summary>Deserialisiert den angegebenen <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> in den angegebenen Container und wendet optional Standardeigenschaftswerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.DeserializeTo%2A> Methode deserialisiert den angegebenen Speicher, aber keine neuen Objekte, die Daten im Speicher angewendet werden, einem vorhandenen Satz von Objekten, die entnommen werden, die `container` Parameter. Daher kann der Aufrufer ein Objekt im Voraus erstellen, jedoch Ermessen. Wenn die Deserialisierung der Status für ein Objekt wurde und das Objekt nicht im Satz von vorhandenen Objekten benannt ist, wird ein neues Objekt erstellt werden. Wenn dieses Objekt auch implementiert <xref:System.ComponentModel.IComponent>, er wird in den angegebenen Container hinzugefügt werden. Objekte im Container benötigen, Namen und Typen, die Objekte in der Serialisierungsspeicher nacheinander für ein vorhandenes Objekt zu verwendende entsprechen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="store" /> oder <paramref name="container" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="store" />ist kein unterstützter Typ des serialisierungsspeichers. Verwenden Sie einen Speicher zurückgegebenes <see cref="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadStore">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.Serialization.SerializationStore LoadStore (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.Design.Serialization.SerializationStore LoadStore(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.LoadStore(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.SerializationStore</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, aus dem Laden der <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" />.</param>
+        <summary>Lädt eine <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> aus dem angegebenen Stream.</summary>
+        <returns>Das geladene <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie den zurückgegebenen Speicher-Objekte deserialisiert durch Übergabe an die verschiedenen <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.Deserialize%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">
+          <paramref name="stream" />Suchvorgänge unterstützt, aber seine Länge ist 0.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public override void Serialize (System.ComponentModel.Design.Serialization.SerializationStore store, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Serialize(class System.ComponentModel.Design.Serialization.SerializationStore store, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.Serialize(System.ComponentModel.Design.Serialization.SerializationStore,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="store" Type="System.ComponentModel.Design.Serialization.SerializationStore" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="store">Die <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> , <c>Wert</c> serialisiert wird.</param>
+        <param name="value">Das zu serialisierende Objekt.</param>
+        <summary>Serialisiert das angegebene Objekt in der angegebenen <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `store` Parameter kann verwendet werden, um mehr als ein Objekt durch Aufruf dieser Methode einmal für jedes Objekt zu serialisieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="store" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="store" />wird geschlossen, oder <paramref name="store" /> ist kein unterstützter Typ des serialisierungsspeichers. Verwenden Sie einen Speicher zurückgegebenes <see cref="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeAbsolute">
+      <MemberSignature Language="C#" Value="public override void SerializeAbsolute (System.ComponentModel.Design.Serialization.SerializationStore store, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SerializeAbsolute(class System.ComponentModel.Design.Serialization.SerializationStore store, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.SerializeAbsolute(System.ComponentModel.Design.Serialization.SerializationStore,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="store" Type="System.ComponentModel.Design.Serialization.SerializationStore" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="store">Die <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> , <c>Wert</c> serialisiert wird.</param>
+        <param name="value">Das zu serialisierende Objekt.</param>
+        <summary>Serialisiert das angegebene Objekt unter Berücksichtigung von Standardwerten für die Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Speicher kann mehr als ein Objekt zu serialisieren, durch Aufruf dieser Methode mehr als einmal verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="store" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="store" />wird geschlossen, oder <paramref name="store" /> ist kein unterstützter Typ des serialisierungsspeichers. Verwenden Sie einen Speicher zurückgegebenes <see cref="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeMember">
+      <MemberSignature Language="C#" Value="public override void SerializeMember (System.ComponentModel.Design.Serialization.SerializationStore store, object owningObject, System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SerializeMember(class System.ComponentModel.Design.Serialization.SerializationStore store, object owningObject, class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.SerializeMember(System.ComponentModel.Design.Serialization.SerializationStore,System.Object,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="store" Type="System.ComponentModel.Design.Serialization.SerializationStore" />
+        <Parameter Name="owningObject" Type="System.Object" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="store">Die <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> , <c>Member</c> serialisiert wird.</param>
+        <param name="owningObject">Das Objekt, das Besitzer der <c>Member</c>.</param>
+        <param name="member">Der angegebene Member.</param>
+        <summary>Serialisiert den angegebenen Member für das angegebene Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann mehrmals aufgerufen werden, für das gleiche Objekt, um eine Liste der serialisierten Elemente innerhalb der Serialisierungsspeicher zu erstellen. Das Element weist im Allgemeinen auf eine Eigenschaft oder ein Ereignis sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="store" />, <paramref name="owningObject" /> oder <paramref name="member" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="store" />wird geschlossen, oder <paramref name="store" /> ist kein unterstützter Typ des serialisierungsspeichers. Verwenden Sie einen Speicher zurückgegebenes <see cref="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeMemberAbsolute">
+      <MemberSignature Language="C#" Value="public override void SerializeMemberAbsolute (System.ComponentModel.Design.Serialization.SerializationStore store, object owningObject, System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SerializeMemberAbsolute(class System.ComponentModel.Design.Serialization.SerializationStore store, object owningObject, class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.SerializeMemberAbsolute(System.ComponentModel.Design.Serialization.SerializationStore,System.Object,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="store" Type="System.ComponentModel.Design.Serialization.SerializationStore" />
+        <Parameter Name="owningObject" Type="System.Object" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="store">Die <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" /> , <c>Member</c> serialisiert wird.</param>
+        <param name="owningObject">Das Objekt, das Besitzer der <c>Member</c>.</param>
+        <param name="member">Der angegebene Member.</param>
+        <summary>Serialisiert den angegebenen Member für das angegebene Objekt, aber serialisiert den Member auch, wenn der Standardwert der Eigenschaft enthalten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für einige Elemente sind, der Standardwert der Eigenschaft enthält, und den gleichen Wert wieder auf das Element festlegen verschiedene Konzepte. Z. B. wenn eine Eigenschaft seinen Wert von einem übergeordneten Objekt, erbt Wenn kein lokaler Wert festgelegt ist, Festlegen des Werts an die Eigenschaft möglicherweise nicht erwünscht ist. Die <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.SerializeMemberAbsolute%2A> Methode berücksichtigt, und deaktivieren Sie den Zustand der Eigenschaft in diesem Fall würde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="store" />, <paramref name="owningObject" /> oder <paramref name="member" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="store" />wird geschlossen, oder <paramref name="store" /> ist kein unterstützter Typ des serialisierungsspeichers. Verwenden Sie einen Speicher zurückgegebenes <see cref="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

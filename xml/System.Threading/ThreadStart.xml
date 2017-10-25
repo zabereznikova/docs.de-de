@@ -1,0 +1,61 @@
+<Type Name="ThreadStart" FullName="System.Threading.ThreadStart">
+  <TypeSignature Language="C#" Value="public delegate void ThreadStart();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ThreadStart extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadStart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Stellt die Methode dar, die in einem <see cref="T:System.Threading.Thread" /> ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein verwalteter Thread erstellt wird, wird die Methode, die auf dem Thread ausgeführt wird dargestellt, durch eine <xref:System.Threading.ThreadStart> delegieren oder eine <xref:System.Threading.ParameterizedThreadStart> Delegat, der übergeben wird die <xref:System.Threading.Thread.%23ctor%2A> Konstruktor. Der Thread beginnt nicht ausgeführt werden, bis die <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> -Methode aufgerufen wird. Die Ausführung beginnt, in der ersten Zeile der Methode, dargestellt durch die <xref:System.Threading.ThreadStart> oder <xref:System.Threading.ParameterizedThreadStart> delegieren.  
+  
+> [!NOTE]
+>  Visual Basic- und C#-Benutzer können Auslassen der <xref:System.Threading.ThreadStart> oder <xref:System.Threading.ParameterizedThreadStart> Delegatkonstruktor beim Erstellen eines Threads. In Visual Basic verwenden die `AddressOf` Operator beim Ihrer Methode zum Übergeben der <xref:System.Threading.Thread.%23ctor%2A> Konstruktor, z. B. `Dim t As New Thread(AddressOf ThreadProc)`. Geben Sie in c# ist einfach der Name der Threadprozedur an. Der Compiler wählt den richtigen Delegatkonstruktor.  
+  
+ [C++]  
+  
+> [!NOTE]
+>  In Version 2.0 von .NET Framework erstellen eine <xref:System.Threading.ThreadStart> delegieren für eine statische Methode in C++ nur ein Parameter erforderlich: die Adresse der Rückrufmethode darstellt, durch den Klassennamen qualifiziert. In früheren Versionen zwei Parameter beim Erstellen eines Delegaten für eine statische Methode erforderlich waren: 0 (Null) und die Methodenadresse. Für eine Instanzmethode ist, alle Versionen, die zwei Parameter erforderlich: die Instanzvariable und die Methodenadresse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Syntax zum Erstellen und Verwenden einer <xref:System.Threading.ThreadStart> delegieren mit Instanzenmethode und eine statische Methode.  
+  
+ Eine andere einfaches Beispiel für die Vorgehensweise: Erstellen einer <xref:System.Threading.ThreadStart> delegieren, finden Sie unter der <xref:System.Threading.Thread.Start?displayProperty=nameWithType> methodenüberladung. Weitere Informationen zu Threads erstellt werden, finden Sie unter [Threads erstellen und übergeben von Daten zur Startzeit](~/docs/standard/threading/creating-threads-and-passing-data-at-start-time.md).  
+  
+ [!code-cpp[System.Threading.ThreadStart2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadStart2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadStart2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

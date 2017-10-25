@@ -1,0 +1,131 @@
+<Type Name="CryptographicAttributeObject" FullName="System.Security.Cryptography.CryptographicAttributeObject">
+  <TypeSignature Language="C#" Value="public sealed class CryptographicAttributeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CryptographicAttributeObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CryptographicAttributeObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält einen Typ und eine Auflistung von Werten, die diesem Typ zugeordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse entspricht einer ASN. 1-Struktur, die in der Spezifikation der Cryptographic Message Syntax-Standards definiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicAttributeObject (System.Security.Cryptography.Oid oid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicAttributeObject.#ctor(System.Security.Cryptography.Oid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.Security.Cryptography.Oid" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Das Attribut zum Speichern von in diesem <see cref="T:System.Security.Cryptography.CryptographicAttributeObject" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.CryptographicAttributeObject" /> -Klasse unter Verwendung eines Attributs, dargestellt durch das angegebene <see cref="T:System.Security.Cryptography.Oid" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicAttributeObject (System.Security.Cryptography.Oid oid, System.Security.Cryptography.AsnEncodedDataCollection values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid, class System.Security.Cryptography.AsnEncodedDataCollection values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicAttributeObject.#ctor(System.Security.Cryptography.Oid,System.Security.Cryptography.AsnEncodedDataCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.Security.Cryptography.Oid" />
+        <Parameter Name="values" Type="System.Security.Cryptography.AsnEncodedDataCollection" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Das Attribut zum Speichern von in diesem <see cref="T:System.Security.Cryptography.CryptographicAttributeObject" /> Objekt.</param>
+        <param name="values">Die Menge von Werten, die mit dem Attribut dargestellte verbundene der <c>Oid</c> Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.CryptographicAttributeObject" /> -Klasse unter Verwendung eines Attributs, dargestellt durch das angegebene <see cref="T:System.Security.Cryptography.Oid" /> -Objekt und den Satz von Werten, dargestellt durch das angegebene Attribut zugeordnete <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Auflistung enthält doppelte Elemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oid">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid Oid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid Oid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptographicAttributeObject.Oid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Security.Cryptography.Oid" /> Objekt, das die Objekt-ID für das Attribut angibt.</summary>
+        <value>Die Objekt-ID für das Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.AsnEncodedDataCollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.AsnEncodedDataCollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptographicAttributeObject.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsnEncodedDataCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> -Auflistung, die den Satz von Werten enthält, die dem Attribut zugeordnet sind.</summary>
+        <value>Der Satz von Werten, die dem Attribut zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

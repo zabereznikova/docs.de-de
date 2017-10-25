@@ -1,0 +1,646 @@
+<Type Name="CustomAttributeData" FullName="System.Reflection.CustomAttributeData">
+  <TypeSignature Language="C#" Value="public class CustomAttributeData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CustomAttributeData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.CustomAttributeData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht Zugriff auf benutzerdefinierte Attributdaten für Assemblys, Module, Typen, Member und Parameter, die in den Reflection-Only-Kontext geladen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Code, der in den ReflectionOnly Kontext überprüft wird kann nicht ausgeführt werden, daher es nicht immer möglich ist, benutzerdefinierte Attribute zu untersuchen, durch das Erstellen von Instanzen von sie und anschließend untersucht werden, deren Eigenschaften und Methoden wie <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>, <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>usw. . Wenn der Code für den Attributtyp selbst in den reflektionsbezogenen Kontext geladen wird, kann sie nicht ausgeführt werden.  
+  
+ Die <xref:System.Reflection.CustomAttributeData> Klasse kann benutzerdefinierte Attribute in den ReflectionOnly Kontext durch Bereitstellen eine Abstraktion für Attribute. Die Member dieser Klasse können werden verwendet, um den Positionsargumenten abzurufen und benannte Argumente des Attributs. Verwenden Sie die <xref:System.Reflection.CustomAttributeData.ConstructorArguments%2A> eine Liste der abzurufenden Eigenschaft <xref:System.Reflection.CustomAttributeTypedArgument> Datenstrukturen, die die positionelle Argumente darstellen, und verwenden Sie die <xref:System.Reflection.CustomAttributeData.NamedArguments%2A> eine Liste der abzurufenden Eigenschaft <xref:System.Reflection.CustomAttributeNamedArgument> Strukturen, die die benannte Argumente darstellen.  
+  
+> [!NOTE]
+>  Die <xref:System.Reflection.CustomAttributeNamedArgument> Struktur enthält nur Informationen über die Eigenschaft des Attributs abgerufen, und legen Sie den Argumentwert. Verwenden Sie zum Abrufen von dem Typ und Wert des Arguments der <xref:System.Reflection.CustomAttributeNamedArgument.TypedValue%2A?displayProperty=nameWithType> -Eigenschaft zum Abrufen einer <xref:System.Reflection.CustomAttributeTypedArgument> Struktur.  
+  
+ Wenn Ihnen eine <xref:System.Reflection.CustomAttributeTypedArgument> Struktur für ein Argument, ob benannten oder positionellen, verwenden die <xref:System.Reflection.CustomAttributeTypedArgument.ArgumentType%2A?displayProperty=nameWithType> Eigenschaft beim Abrufen des Typs und der <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A?displayProperty=nameWithType> Eigenschaft, um den Wert abzurufen.  
+  
+> [!NOTE]
+>  Für ein Arrayargument das <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A?displayProperty=nameWithType> Eigenschaft gibt eine generische <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von <xref:System.Reflection.CustomAttributeTypedArgument> Objekte. Jede <xref:System.Reflection.CustomAttributeTypedArgument> Objekt in der Auflistung darstellt, das entsprechende Element des Arrays.  
+  
+ <xref:System.Reflection.CustomAttributeData>kann in den Ausführungskontext auch wie in den ReflectionOnly Kontext verwendet werden. Sie möchten z. B. vermeiden Sie das Laden der Assembly, die den Code für ein benutzerdefiniertes Attribut enthält. Mithilfe der <xref:System.Reflection.CustomAttributeData> Klasse unterscheidet sich von der Verwendung von Methoden wie <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>:  
+  
+-   Die Eigenschaften und Methoden des <xref:System.Reflection.CustomAttributeData> Geben Sie nur für die Attributinstanz nicht die Semantik des Konstruktors mit den Werten, die angegeben wurden. Beispielsweise kann ein Zeichenfolgenargument eines Attributs intern in eine andere Darstellung konvertiert und in eine kanonische Form zurückgegeben werden; oder eine Eigenschaft möglicherweise Nebeneffekte, wenn die tatsächliche Attributcode ausgeführt wird.  
+  
+-   Die Eigenschaften und Methoden des <xref:System.Reflection.CustomAttributeData> , können Sie die benutzerdefinierten Attribute aus Basisklassen geerbt abzurufen.  
+  
+ Zum Erstellen von Instanzen der <xref:System.Reflection.CustomAttributeData> Klasse, verwenden Sie die `static` (`Shared` in Visual Basic) <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> Factorymethoden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt Informationen zu den benutzerdefinierten Attributen, die angewendet wurden, und für den Typ und die darin enthaltenen Elemente.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomAttributeData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.CustomAttributeData" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von abgeleiteten Klassen aufgerufen, während der Erstellung der <xref:System.Reflection.CustomAttributeData> Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeType">
+      <MemberSignature Language="C#" Value="public Type AttributeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AttributeType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.AttributeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Attributs ab.</summary>
+        <value>Der Typ des Attributs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constructor">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.ConstructorInfo Constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ConstructorInfo Constructor" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.Constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ConstructorInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Reflection.ConstructorInfo" />-Objekt ab, das den Konstruktor darstellt, der das benutzerdefinierte Attribut initialisiert hätte.</summary>
+        <value>Ein Objekt, das den Konstruktor darstellt, der das benutzerdefinierte Attribut initialisiert hätte, das von der aktuellen Instanz der <see cref="T:System.Reflection.CustomAttributeData" />-Klasse dargestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Attribut mehrere Konstruktoren verfügt, gibt diese Eigenschaft nur bestimmten Konstruktor, der die vom aktuellen Attributinstanz initialisiert hätte <xref:System.Reflection.CustomAttributeData> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeData.Constructor%2A> Eigenschaft wird verwendet, der `ShowAttributeData` Methode, die benutzerdefinierte Attributdaten anzeigt. In diesem Codebeispiel wird die <xref:System.Reflection.ConstructorInfo> zurückgegeben, die von dieser Eigenschaft wird verwendet, um eine Textzeichenfolge angezeigt, die veranschaulichen, dass die Eigenschaft den Konstruktor zurück, die das Attribut zu initialisieren, würde den Konstruktor beschreibt.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructorArguments">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeTypedArgument&gt; ConstructorArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Reflection.CustomAttributeTypedArgument&gt; ConstructorArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.ConstructorArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeTypedArgument&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste von positionellen Argumenten, die für die Attributinstanz dargestellte angegebenen ab der <see cref="T:System.Reflection.CustomAttributeData" /> Objekt.</summary>
+        <value>Eine Auflistung von Strukturen, die die Positionsargumenten angegeben, für die Instanz des benutzerdefinierten Attributs darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die positionellen Argumenten, die für die Instanz des benutzerdefinierten Attributs angegeben wurden, ohne dass das benutzerdefinierte Attributcode ausgeführt. Folglich können sie in den ReflectionOnly Kontext verwendet werden.  
+  
+ Verwenden der <xref:System.Reflection.CustomAttributeData.NamedArguments%2A> Methode zum Abrufen der benannte Argumente, die für die Attributinstanz angegeben.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeData.ConstructorArguments%2A> Eigenschaft wird verwendet, der `ShowAttributeData` Methode, die benutzerdefinierte Attributdaten anzeigt. In diesem Codebeispiel wird diese Eigenschaft verwendet, zum Anzeigen der Liste der Argumente des Konstruktors, der das Attribut initialisiert übergeben.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> der aktuellen Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.Assembly target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.Assembly target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die Assembly, deren benutzerdefinierte Attributdaten abgerufen werden sollen.</param>
+        <summary>Gibt eine Liste von <see cref="T:System.Reflection.CustomAttributeData" />-Objekten zurück, die Daten zu den Attributen darstellen, die auf die Zielassembly angewendet wurden.</summary>
+        <returns>Eine Liste von Objekten, die Daten zu den Attributen darstellen, die auf die Zielassembly angewendet wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Alternative zum die <xref:System.Reflection.Assembly.GetCustomAttributes%2A> Methode, die immer in den ReflectionOnly Kontext verwendet werden kann.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> -Methode verwendet wird, `Main()` zum Abrufen der benutzerdefinierten Attribute, die auf die Assembly angewendet. Der Rückgabewert der Methode übergeben wird, um die `ShowAttributeData` Methode.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.MemberInfo target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.MemberInfo target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.MemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.MemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="target">Der Member, dessen Attributdaten abgerufen werden sollen.</param>
+        <summary>Gibt eine Liste von <see cref="T:System.Reflection.CustomAttributeData" />-Objekten zurück, die Daten zu den Attributen darstellen, die auf den Zielmember angewendet wurden.</summary>
+        <returns>Eine Liste von Objekten, die Daten zu den Attributen darstellen, die auf den Zielmember angewendet wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladung dieser Methode benutzerdefinierte Attributdaten für Typen, geschachtelte Typen und Typmember, abgerufen, da die <xref:System.Type> -Klasse und die Klassen in der <xref:System.Reflection> Namespace, die Typmember darstellen, alle abgeleitet <xref:System.Reflection.MemberInfo>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> -Methode verwendet wird, `Main()` zum Abrufen der benutzerdefinierten Attribute, die auf einen Typ und eine Testmethode angewendet wurden (<xref:System.Type> leitet sich von <xref:System.Reflection.MemberInfo>). Der Rückgabewert der <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> übergeben wird, um die `ShowAttributeData` Methode.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="Overload:System.Reflection.MemberInfo.GetCustomAttributes" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.Module target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.Module target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.Module)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.Module" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Modul, dessen benutzerdefinierte Attributdaten abgerufen werden sollen.</param>
+        <summary>Gibt eine Liste von <see cref="T:System.Reflection.CustomAttributeData" />-Objekten zurück, die Daten zu den Attributen darstellen, die auf das Zielmodul angewendet wurden.</summary>
+        <returns>Eine Liste von Objekten, die Daten zu den Attributen darstellen, die auf das Zielmodul angewendet wurden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.ParameterInfo target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.ParameterInfo target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.ParameterInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.ParameterInfo" />
+      </Parameters>
+      <Docs>
+        <param name="target">Der Parameter, dessen Attributdaten abgerufen werden sollen.</param>
+        <summary>Gibt eine Liste von <see cref="T:System.Reflection.CustomAttributeData" />-Objekten zurück, die Daten zu den Attributen darstellen, die auf den Zielparameter angewendet wurden.</summary>
+        <returns>Eine Liste von Objekten, die Daten zu den Attributen darstellen, die auf den Zielparameter angewendet wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Alternative zum die <xref:System.Reflection.ParameterInfo.GetCustomAttributes%2A> Methode, die immer in den ReflectionOnly Kontext verwendet werden kann.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> -Methode verwendet wird, `Main()` auf einen Parameter einer Testmethode angewendeten benutzerdefinierten Attribute abgerufen. Der Rückgabewert der <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> übergeben wird, um die `ShowAttributeData` Methode.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fungiert als Hashfunktion für einen besonderen Typ.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamedArguments">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeNamedArgument&gt; NamedArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Reflection.CustomAttributeNamedArgument&gt; NamedArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.NamedArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeNamedArgument&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der für die dargestellte Attributinstanz angegebenen benannten Argumente der <see cref="T:System.Reflection.CustomAttributeData" /> Objekt.</summary>
+        <value>Eine Auflistung von Strukturen, die die benannte Argumente für die Instanz des benutzerdefinierten Attributs angegebene darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die benannten Argumenten, die für die Instanz des benutzerdefinierten Attributs angegeben wurden, ohne dass das benutzerdefinierte Attributcode ausgeführt. Folglich können sie in den ReflectionOnly Kontext verwendet werden.  
+  
+ Die Liste, die zurückgegeben wird enthält nur die benannten Argumenten, die für die Attributinstanz angegeben wurden.  
+  
+ Verwenden der <xref:System.Reflection.CustomAttributeData.ConstructorArguments%2A> Methode zum Abrufen der positionellen Arguments, die angegeben wurden, für die Attributinstanz.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ Die <xref:System.Reflection.CustomAttributeData.NamedArguments%2A> Eigenschaft wird verwendet, der `ShowAttributeData` Methode, die benutzerdefinierte Attributdaten anzeigt. In diesem Codebeispiel wird diese Eigenschaft verwendet, um die Liste von benannten Argumenten, die für das Attribut angegebenen anzuzeigen.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des benutzerdefinierten Attributs zurück.</summary>
+        <returns>Ein Zeichenfolgenwert, der das benutzerdefinierte Attribut darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zeichenfolgenwert enthält, der Typ des Attributs, das Attributparameter und benannte Parameter.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein benutzerdefiniertes Attribut mit vier Konstruktoren und vier Eigenschaften definiert. Zwei Eigenschaften sind schreibgeschützt und einrichten, indem Sie die Positionsparameter der Konstruktoren. Die anderen beiden Eigenschaften weisen Lese-/Schreibzugriff und kann nur mithilfe von Set heißen Argumente. Eine mit Feldern fester Breite-Eigenschaft ist ein Array von Zeichenfolgen, und eine benannte Eigenschaft ist ein Array von Ganzzahlen.  
+  
+ Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. In diesen Fällen werden verschiedene Konstruktoren verwendet. Bei der Ausführung wird die Assembly selbst in den ReflectionOnly Kontext geladen, und zeigt die benutzerdefinierten Attribute an.  
+  
+ Das Attribut, das auf den Typ angewendet wird veranschaulicht, Arrayeigenschaften mit Feldern fester Breite und benannte Argumente.  
+  
+ In diesem Beispiel wird die <xref:System.Reflection.CustomAttributeData.ToString%2A> Methode wird verwendet, der `ShowAttributeData` Methode, um das Attribut zu identifizieren, deren Daten angezeigt wird.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,295 @@
+<Type Name="WebPartDescription" FullName="System.Web.UI.WebControls.WebParts.WebPartDescription">
+  <TypeSignature Language="C#" Value="public class WebPartDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDescription" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, das in einem Katalog von Webparts-Steuerelemente angezeigt werden können, ohne eine Instanz des Steuerelements erstellen zu müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einem Katalog von Steuerelementen, die Benutzer zu einer Seite hinzufügen können angezeigt werden, einige grundlegende Informationen über jedes Steuerelement ist erforderlich. Beispielsweise ist es sinnvoll, einen Titel für das Steuerelement und eine Beschreibung zu verwenden, damit Benutzer beim Anzeigen ein Katalogs genügend Informationen entscheiden, ob Sie die Seite ein Steuerelement hinzugefügt haben. Allerdings einen Katalog von <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente können viele Steuerelemente enthalten, und es könnte die Leistung einer Anwendung beeinträchtigen, wenn eine Instanz von jedem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement muss erstellt werden, um die im Katalog anzuzeigenden Informationen zu extrahieren.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Klasse vorhanden ist, sodass es nicht notwendig, zum Erstellen einer Instanz des ist ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zum Abrufen von Informationen über das Steuerelement, das in einem Katalog von Steuerelementen angezeigt wird. Im Webparts-Steuerelementsatz eine <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt dient auch in Verbindung mit den verschiedenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Anzeigemodus der steuert, wann eine Seite im Katalog befindet.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Klasse verfügt über zwei Überladungen des Konstruktors, wird eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement als Parameter, wenn eine Instanz verfügbar ist (die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%2A> Konstruktor), und mehrere wird mit Informationen über das Steuerelement als Zeichenfolgen Parameter (die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%2A> Konstruktor).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Klasse verfügt auch über verschiedene Eigenschaften, die die Beschreibungsinformationen enthalten sollen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die folgende Tabelle enthält die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Eigenschaften und welche Eigenschaft jeweils in entspricht einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+|Description-Eigenschaft|Verwandte Teil Steuerelementeigenschaft|  
+|--------------------------|-----------------------------------|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartDescription.ID%2A>|<xref:System.Web.UI.Control.ID%2A>|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Title%2A>|<xref:System.Web.UI.WebControls.WebParts.Part.Title%2A>|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Description%2A>|<xref:System.Web.UI.WebControls.WebParts.Part.Description%2A>|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartDescription.CatalogIconImageUrl%2A>|<xref:System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Klasse. Normalerweise dieser Typ wird in erster Linie durch die Webparts-Steuerelementsatzes verwendet, aber dieses Codebeispiel zeigt einfach grundlegende programmgesteuerte Verwendung der wichtigsten Description-Eigenschaften.  
+  
+ Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern.  
+  
+-   Eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+-   Eine Webseite auf die anderen Steuerelemente zu hosten.  
+  
+-   Eine Erläuterung, wie im Codebeispiel funktioniert.  
+  
+ Der erste Teil des Codebeispiels wird das Benutzersteuerelement. Der Quellcode für das Benutzersteuerelement stammen aus einem anderen Thema. Weitere Informationen über das Benutzersteuerelement finden Sie im Thema [Exemplarische Vorgehensweise: Ändern von Anzeigemodi auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartDescription_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_WebPartDescription_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels ist ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet das Konzept der dynamischen Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartDescription_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/CS/textdisplaywebpart.cs#3)]
+ [!code-vb[WebParts_WebPartDescription_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/VB/textdisplaywebpart.vb#3)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Im oberen Bereich werden zwei `Register` Direktiven: eine, die das Benutzersteuerelement, und das andere, um die benutzerdefinierte registrieren registriert <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, dessen Quelldatei sich im Ordner "App_Code" Ihrer Website befindet. Diese Seite enthält eine `<asp:catalogzone>` Element, das wiederum deklarative Verweise auf zwei Steuerelemente enthält: das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement namens `TextDisplayWebPart`, und ein <xref:System.Web.UI.WebControls.BulletedList> Webserver-Steuerelement, das als behandelt werden ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zur Laufzeit Zeit, da die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement wird binden Sie diese mit einem <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt. Beachten Sie, dass im Code für die `Button1_Click` -Methode, die verfügbaren <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> von Objekten für die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente im Katalog werden abgerufen, mit der <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, und klicken Sie dann die Beschreibungsdetails alle geschrieben werden auf der Seite.  
+  
+ [!code-aspx-csharp[WebParts_WebPartDescription_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/CS/wpDescriptioncs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartDescription_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/VB/wpDescriptionvb.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, verwenden die **Anzeigemodus** Dropdownlisten-Steuerelement, und wählen **Katalog** so ändern Sie die Seite in Kataloganzeigemodus. Im Katalog sehen Sie die beiden Steuerelemente, die auf der Seite hinzugefügt werden, verfügbar sind. Klicken Sie auf die **WebPartDescription Listeninformationen** Schaltfläche und der Code schreibt die Werte aller verfügbaren <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte auf der Seite. Dies beweist, dass Sie Einzelheiten zu Beschreibung abrufen können <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einem Katalog ohne Instanzen der Steuerelemente selbst erstellen zu müssen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der Klasse enthält Informationen zu einem bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Überladungen für die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%2A> Konstruktor jeweils eine neue Instanz der zurück der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> enthält Informationen zu einer bestimmten Klasse <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Der Unterschied zwischen den Überladungen wird das Szenario, in dem die neue Instanz erstellt wird. In einigen Fällen, wenn die Anwendung eine Instanz einer <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%2A> Konstruktor verwendet wird. Wenn die Anwendung keine Instanz eines Steuerelements, wie der Fall ist, wenn Sie über eine Steuerelement-Beschreibungsdatei importiert wird die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, das <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%2A> Konstruktor wird verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDescription (System.Web.UI.WebControls.WebParts.WebPart part);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart part) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescription.#ctor(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="part" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="part">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, deren Informationen in enthält einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" />.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse beim eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelementinstanz ist verfügbar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%2A> Konstruktor dient zum Erstellen einer neuen <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt basierend auf einer vorhandenen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Dieser Konstruktor ruft einfach die andere Überladung der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29> -Konstruktor die erforderlichen Parameterwerte von Eigenschaften auf der `part` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Web.UI.Control.ID" /> Eigenschaft <paramref name="part" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDescription (string id, string title, string description, string imageUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string title, string description, string imageUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescription.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="imageUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der zuzuweisende Wert der <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDescription.ID" />.</param>
+        <param name="title">Der zuzuweisende Wert der <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDescription.Title" />.</param>
+        <param name="description">Der zuzuweisende Wert der <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDescription.Description" />.</param>
+        <param name="imageUrl">Der zuzuweisende Wert der <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDescription.CatalogIconImageUrl" />.</param>
+        <summary>Initialisiert eine neue Instanz der Klasse mithilfe von mehreren Zeichenfolgen, die enthalten beschreibende Informationen für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.%23ctor%2A> Konstruktor wird zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Klasse an, wenn ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement ist nicht verfügbar. Dies erfolgt z. B. im Fall von einer <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, wann importiert eine Beschreibungsdatei für ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Er ruft benötigt werden, erstellen eine <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt direkt aus der Description-Datei und ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Instanz ist nicht vorhanden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" />oder <paramref name="title" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogIconImageUrl">
+      <MemberSignature Language="C#" Value="public string CatalogIconImageUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CatalogIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescription.CatalogIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine URL mit dem Pfad zu einem Bild, als ein Symbol für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die eine URL enthält. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.CatalogIconImageUrl%2A> -Eigenschaft entspricht direkt der <xref:System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl%2A?displayProperty=nameWithType> Eigenschaft. Wenn diese Eigenschaft auf festgelegt ist ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, und klicken Sie dann auf die Eigenschaft in der entsprechenden <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt wird auch einen Wert sein.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.CatalogIconImageUrl%2A> Eigenschaft gilt nur, wenn eine Seite im Katalog befindet, ist und ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement in einem Katalog von Steuerelementen angezeigt wird. Wenn das Steuerelement ein Symbol, das in den Wert der Eigenschaft zugewiesen ist, wird das Symbol im Katalog neben dem Steuerelement angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.CatalogIconImageUrl%2A> Eigenschaft. Der vollständige Code erforderlich, um dieses Codebeispiel ausführen, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Übersichtsthema.  
+  
+ Im folgenden code in der `Button1_Click` Methode einer Webseite gezeigt, wie die Auflistung der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte in einem Katalog mithilfe der <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, und dann zum Anzeigen der Details zu jeder <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement im Katalog, indem der Tabellenschleife über die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte. Beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.CatalogIconImageUrl%2A> Eigenschaftswert wird im folgenden Code abgerufen.  
+  
+ [!code-csharp[WebParts_WebPartDescription_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/CS/wpDescriptioncs.aspx#2)]
+ [!code-vb[WebParts_WebPartDescription_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/VB/wpDescriptionvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescription.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text einer Beschreibung für ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die Beschreibung für enthält, eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Control; der Standardwert Wert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Description%2A> -Eigenschaft entspricht direkt der <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A?displayProperty=nameWithType> Eigenschaft. Wenn diese Eigenschaft auf festgelegt ist ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, und klicken Sie dann auf die Eigenschaft in der entsprechenden <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt wird auch einen Wert sein.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Description%2A> Eigenschaft gilt nur, wenn eine Seite im Katalog befindet, ist und ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement in einem Katalog von Steuerelementen angezeigt wird. Wenn das Steuerelement eine Beschreibung, die ihm zugewiesen wurde, wird die Beschreibung als QuickInfo für das Steuerelement im Katalog angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Description%2A> Eigenschaft. Der vollständige Code erforderlich, um dieses Codebeispiel ausführen, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Übersichtsthema.  
+  
+ Im folgenden code in der `Button1_Click` Methode einer Webseite gezeigt, wie die Auflistung der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte in einem Katalog mithilfe der <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, und dann zum Anzeigen der Details zu jeder <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement im Katalog, indem der Tabellenschleife über die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte. Beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Description%2A> Eigenschaftswert wird im folgenden Code abgerufen.  
+  
+ [!code-csharp[WebParts_WebPartDescription_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/CS/wpDescriptioncs.aspx#2)]
+ [!code-vb[WebParts_WebPartDescription_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/VB/wpDescriptionvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescription.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID eines entsprechenden <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die die ID des Steuerelements enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.ID%2A> Eigenschaft darf nicht `null`; es muss immer einen Wert aufweisen. Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.ID%2A> -Eigenschaft entspricht direkt der <xref:System.Web.UI.Control.ID%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.ID%2A> Eigenschaft gilt nur, wenn eine Seite im Katalog befindet, ist und ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement in einem Katalog von Steuerelementen angezeigt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.ID%2A> Eigenschaft. Der vollständige Code erforderlich, um dieses Codebeispiel ausführen, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Übersichtsthema.  
+  
+ Im folgenden code in der `Button1_Click` Methode einer Webseite gezeigt, wie die Auflistung der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte in einem Katalog mithilfe der <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, und dann zum Anzeigen der Details zu jeder <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement im Katalog, indem der Tabellenschleife über die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte. Beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.ID%2A> Eigenschaftswert wird im folgenden Code abgerufen.  
+  
+ [!code-csharp[WebParts_WebPartDescription_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/CS/wpDescriptioncs.aspx#2)]
+ [!code-vb[WebParts_WebPartDescription_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/VB/wpDescriptionvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescription.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Titeltext entsprechender <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die den Titel des entsprechenden Steuerelements enthält. Der Standardwert ist eine berechnete von .NET Framework bereitgestellte Zeichenfolge an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Title%2A> -Eigenschaft entspricht direkt der <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A?displayProperty=nameWithType> Eigenschaft. Das entsprechende <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement für die <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> Eigenschaft, die Wert des wird die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Title%2A> Eigenschafts-, andernfalls ist der Titel ein berechneter Wert.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Title%2A> Eigenschaft gilt nur, wenn eine Seite im Katalog befindet, ist und ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement in einem Katalog von Steuerelementen angezeigt wird. Zugewiesene Titel ist ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement neben dem Steuerelement im Katalog angezeigt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Title%2A> Eigenschaft. Der vollständige Code erforderlich, um dieses Codebeispiel ausführen, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Übersichtsthema.  
+  
+ Im folgenden code in der `Button1_Click` Methode einer Webseite gezeigt, wie die Auflistung der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte in einem Katalog mithilfe der <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, und dann zum Anzeigen der Details zu jeder <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement im Katalog, indem der Tabellenschleife über die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte. Beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription.Title%2A> Eigenschaftswert wird im folgenden Code abgerufen.  
+  
+ [!code-csharp[WebParts_WebPartDescription_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/CS/wpDescriptioncs.aspx#2)]
+ [!code-vb[WebParts_WebPartDescription_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartDescription_Overview/VB/wpDescriptionvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

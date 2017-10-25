@@ -1,0 +1,331 @@
+<Type Name="RNGCryptoServiceProvider" FullName="System.Security.Cryptography.RNGCryptoServiceProvider">
+  <TypeSignature Language="C#" Value="public sealed class RNGCryptoServiceProvider : System.Security.Cryptography.RandomNumberGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RNGCryptoServiceProvider extends System.Security.Cryptography.RandomNumberGenerator" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RNGCryptoServiceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.RandomNumberGenerator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert einen kryptografischen Zufallszahlen-Generator (Random Number Generator, RNG) unter Verwendung der Implementierung, die der Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) bereitstellt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Zufallszahl mit Erstellen der <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasse.  
+  
+ [!code-cpp[RNGCSP#1](~/samples/snippets/cpp/VS_Snippets_CLR/RNGCSP/cpp/rngcsp.cpp#1)]
+ [!code-csharp[RNGCSP#1](~/samples/snippets/csharp/VS_Snippets_CLR/RNGCSP/CS/rngcsp.cs#1)]
+ [!code-vb[RNGCSP#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RNGCSP/VB/rngcsp.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RNGCryptoServiceProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RNGCryptoServiceProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Zufallszahl mit Erstellen der <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasse.  
+  
+ [!code-cpp[RNGCSP#1](~/samples/snippets/cpp/VS_Snippets_CLR/RNGCSP/cpp/rngcsp.cpp#1)]
+ [!code-csharp[RNGCSP#1](~/samples/snippets/csharp/VS_Snippets_CLR/RNGCSP/CS/rngcsp.cs#1)]
+ [!code-vb[RNGCSP#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RNGCSP/VB/rngcsp.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RNGCryptoServiceProvider (byte[] rgb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rgb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">Ein Bytearray. Dieser Wert wird ignoriert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RNGCryptoServiceProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode nicht direkt initialisiert die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasse.  Beim Aufrufen dieser Methode entspricht dem Aufrufen der <xref:System.Security.Cryptography.RNGCryptoServiceProvider.%23ctor%28System.Security.Cryptography.CspParameters%29?title=RNGCryptoServiceProvider(CspParameters)> Konstruktor und die Übertragung des `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RNGCryptoServiceProvider (System.Security.Cryptography.CspParameters cspParams);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.CspParameters cspParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.#ctor(System.Security.Cryptography.CspParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cspParams" Type="System.Security.Cryptography.CspParameters" />
+      </Parameters>
+      <Docs>
+        <param name="cspParams">Der Kryptografiedienstanbieter (CSP) zu übergebenden Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RNGCryptoServiceProvider" />-Klasse mit den angegebenen Parametern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RNGCryptoServiceProvider (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die Eingabezeichenfolge. Dieser Parameter wird ignoriert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RNGCryptoServiceProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode nicht direkt initialisiert die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasse.  Beim Aufrufen dieser Methode entspricht dem Aufrufen der <xref:System.Security.Cryptography.RNGCryptoServiceProvider.%23ctor%28System.Security.Cryptography.CspParameters%29?title=RNGCryptoServiceProvider(CspParameters)> Konstruktor und die Übertragung des `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~RNGCryptoServiceProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override void GetBytes (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetBytes(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Das Array, das mit einer kryptografisch starken Folge von zufälligen Werten zu füllen.</param>
+        <summary>Füllt ein Bytearray mit einer kryptografisch starken Folge von zufälligen Werten aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Länge des Bytearrays bestimmt, wie viele kryptografisch starken, zufälligen Bytes erzeugt werden.  
+  
+ Diese Methode ist threadsicher.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Zufallszahl mit Erstellen der <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasse.  
+  
+ [!code-cpp[RNGCSP#1](~/samples/snippets/cpp/VS_Snippets_CLR/RNGCSP/cpp/rngcsp.cpp#1)]
+ [!code-csharp[RNGCSP#1](~/samples/snippets/csharp/VS_Snippets_CLR/RNGCSP/CS/rngcsp.cs#1)]
+ [!code-vb[RNGCSP#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RNGCSP/VB/rngcsp.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) kann nicht abgerufen werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNonZeroBytes">
+      <MemberSignature Language="C#" Value="public override void GetNonZeroBytes (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetNonZeroBytes(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Mit einer kryptografisch starken Folge von zufälligen Werten ungleich NULL auszufüllende Array.</param>
+        <summary>Füllt ein Bytearray mit einer kryptografisch starken Folge von zufälligen Werten aus, die ungleich 0 (null) sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Länge des Bytearrays bestimmt, wie viele kryptografisch starken, zufälligen ungleich NULL Bytes erzeugt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine zufällige Sequenz von 100 ungleich null Byte und speichert ihn in `random`.  
+  
+ [!code-cpp[Classic RandomNumberGenerator.GetNonZeroBytes Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic RandomNumberGenerator.GetNonZeroBytes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RandomNumberGenerator.GetNonZeroBytes Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic RandomNumberGenerator.GetNonZeroBytes Example/CS/source.cs#1)]
+ [!code-vb[Classic RandomNumberGenerator.GetNonZeroBytes Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic RandomNumberGenerator.GetNonZeroBytes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) kann nicht abgerufen werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

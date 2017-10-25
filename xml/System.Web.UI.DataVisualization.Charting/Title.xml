@@ -1,0 +1,1408 @@
+<Type Name="Title" FullName="System.Web.UI.DataVisualization.Charting.Title">
+  <TypeSignature Language="C#" Value="public class Title : System.Web.UI.DataVisualization.Charting.ChartNamedElement, IDisposable, System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Title extends System.Web.UI.DataVisualization.Charting.ChartNamedElement implements class System.IDisposable, class System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.Title" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.DataVisualization.Charting.IChartMapArea</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Titel für das gesamte Diagrammbild dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title> Klasse kapselt die gesamte Funktionalität des einen Titel für die <xref:System.Web.UI.DataVisualization.Charting.Chart> Steuerelement. Diese Klasse wird verfügbar gemacht, mit der <xref:System.Web.UI.DataVisualization.Charting.Chart.Titles%2A> Auflistungseigenschaft des Stamms <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt.  
+  
+ Es kann eine beliebige Anzahl von Titeln für eine gesamte Diagrammbild vorhanden sein.  
+  
+ Titel werden können:  
+  
+-   Angedockt und ausgerichtet oder benutzerdefinierte positioniert sein.  
+  
+-   Innerhalb oder außerhalb der gezeichneten Diagrammbereiche angezeigt werden.  
+  
+-   Verwenden Sie eine vordefinierte <xref:System.Web.UI.DataVisualization.Charting.TextStyle> wie z. B. <xref:System.Web.UI.DataVisualization.Charting.TextStyle.Embed> oder <xref:System.Web.UI.DataVisualization.Charting.TextStyle.Shadow>.  
+  
+-   Verwenden Sie Schraffur, Farbverläufe und Hintergrundbilder an.  
+  
+-   Größe und an einer beliebigen Stelle innerhalb des Diagrammbilds positioniert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Title ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Title.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.Title" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Title (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Title.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see langword="string" /> , die den Text für den Titel darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataVisualization.Charting.Title" /> -Klasse mit den angegebenen Text.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Title (string text, System.Web.UI.DataVisualization.Charting.Docking docking);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, valuetype System.Web.UI.DataVisualization.Charting.Docking docking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Title.#ctor(System.String,System.Web.UI.DataVisualization.Charting.Docking)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="docking" Type="System.Web.UI.DataVisualization.Charting.Docking" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see langword="string" /> , die den Text für den Titel darstellt.</param>
+        <param name="docking">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Docking" /> -Enumerationswert, der bestimmt, wo der Titel im Diagramm angedockt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataVisualization.Charting.Title" /> -Klasse mit den angegebenen Text und Andocken Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Title (string text, System.Web.UI.DataVisualization.Charting.Docking docking, System.Drawing.Font font, System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, valuetype System.Web.UI.DataVisualization.Charting.Docking docking, class System.Drawing.Font font, valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Title.#ctor(System.String,System.Web.UI.DataVisualization.Charting.Docking,System.Drawing.Font,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="docking" Type="System.Web.UI.DataVisualization.Charting.Docking" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see langword="string" /> , die den Text für den Titel darstellt.</param>
+        <param name="docking">Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Docking" /> -Enumerationswert, der bestimmt, wo der Titel im Diagramm angedockt wird.</param>
+        <param name="font">Die Schriftart der Titel gezeichnet werden soll.</param>
+        <param name="color">Die Farbe, der Titel gezeichnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataVisualization.Charting.Title" /> -Klasse mit dem angegebenen Titel, andocken, Wert, Schriftart und Farbe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public System.Drawing.ContentAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Titels.</summary>
+        <value>Ein <see cref="T:System.Drawing.ContentAlignment" /> -Enumerationswert ab, der die titelausrichtung innerhalb der Zeichenfläche Text darstellt. Der Standardwert ist <see cref="F:System.Drawing.ContentAlignment.MiddleCenter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title.Alignment%2A> Eigenschaft hat keine Auswirkungen auf die Ausrichtung aus, wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.Position%2A> Eigenschaft nicht festgelegt ist, um <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Auto%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Hintergrundfarbe des Titels fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der die Hintergrundfarbe des Titels darstellt. Die Standardfarbe ist <see cref="P:System.Drawing.Color.White" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau) Wert festlegen.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title.BackColor%2A> Wert wird auf der ersten Farbe verwendet, wenn Sie für den Hintergrund Verlaufsfarben angegeben haben.  
+  
+ Der Alphawert steuert die Deckkraft einer Farbe. Wenn Sie diese Farbe auf "transparent" festlegen – d. h. bei Verwendung der Alphawert 0 – dem Hintergrund des Titels wird keine Farbe zugewiesen werden. Daher wird der Hintergrund transparent sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackGradientStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackGradientStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.GradientEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.GradientStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung für den Hintergrundfarbverlauf eines Titels fest. Außerdem wird bestimmt, ob ein Farbverlauf verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.GradientStyle" /> -Enumeration, der die Ausrichtung für den Hintergrundfarbverlauf einen Titel darstellt. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.GradientStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.Title.BackGradientStyle%2A> Eigenschaft, um zu bestimmen, ob ein Titel einen Farbverlauf anzeigt und auf die Ausrichtung des Verlaufs zu bestimmen, ob dient.  
+  
+ Eine Liste der verfügbaren Muster, finden Sie in der <xref:System.Web.UI.DataVisualization.Charting.GradientStyle> Enumeration.  
+  
+ So verwenden Sie Verlaufsfarben:  
+  
+ Legen Sie die primäre Farbe des Titelhintergrunds mit der <xref:System.Web.UI.DataVisualization.Charting.Title.BackColor%2A> Eigenschaft.  
+  
+ Legen Sie die Sekundärfarbe des Titelhintergrunds mit der <xref:System.Web.UI.DataVisualization.Charting.Title.BackSecondaryColor%2A> Eigenschaft.  
+  
+ Legen Sie diese <xref:System.Web.UI.DataVisualization.Charting.Title.BackGradientStyle%2A> Eigenschaft, um die gewünschte Art des Farbverlaufs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackHatchStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackHatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.HatchStyleEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schraffurart für den Titel.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartHatchStyle" /> -Enumeration, die Schraffurart für den Titel darstellt. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartHatchStyle> Enumeration gibt an, die von einem Pinsel des Typs verwendete Schraffur <xref:System.Drawing.Drawing2D.HatchBrush>. Die Schraffur besteht aus einer Hintergrundfarbe und über dem Hintergrund gezeichneten Linien verwendet werden.  
+  
+ Eine Liste der verfügbaren schraffurstile, finden Sie in der <xref:System.Web.UI.DataVisualization.Charting.ChartHatchStyle> Enumeration.  
+  
+ **Hinweis** die Farbe der Linien Schraffurmuster richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.Title.BackSecondaryColor%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImage">
+      <MemberSignature Language="C#" Value="public string BackImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ImageValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Hintergrundbild des Titels.</summary>
+        <value>Ein <see langword="string" /> Wert, der die URL einer Bilddatei darstellt. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft definiert einen Pfad zu einem Hintergrundbild für einen <xref:System.Web.UI.DataVisualization.Charting.Chart> title und kann eine absolute oder relative URL sein.  
+  
+ Um das Bild zu positionieren, verwenden die <xref:System.Web.UI.DataVisualization.Charting.Title.BackImageAlignment%2A> und <xref:System.Web.UI.DataVisualization.Charting.Title.BackImageWrapMode%2A> Eigenschaften.  
+  
+ Sie können auch angeben einer der Farben im Bild als "transparent" angezeigt wird, indem die <xref:System.Web.UI.DataVisualization.Charting.Title.BackImageTransparentColor%2A> Eigenschaft.  
+  
+ Ein Bild darstellen, eine beliebige gültige Grafikdatei unterstützt von .NET Framework, einschließlich der Symbole.  
+  
+ Hintergrundbilder haben Vorrang vor anderen Hintergrundeigenschaften, z. B. Farbverlauf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageAlignment">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackImageAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Titelhintergrundbilds fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle" /> -Enumerationswert ab, der die Ausrichtung des Titelhintergrundbilds darstellt. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.TopLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.BackImageWrapMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode.Unscaled>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Farbe, die gezeichnet wird als transparent, wenn das Hintergrundbild gezeichnet wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der als transparent gezeichnet wird, wenn das Hintergrundbild gezeichnet wird. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Diagramm gerendert wird, wird diese Farbe als transparent angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageWrapMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackImageWrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zeichnungsmodus für das Hintergrundbild des Titels.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode" /> -Enumerationswert ab, der den Zeichnungsmodus für das Hintergrundbild des Titels darstellt. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode.Tile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title.BackImageWrapMode%2A> Eigenschaft bestimmt, wie das Bild angezeigt wird; das Bild kann skalierte usw. gekachelt.  
+  
+ Wenn ein Bild skaliert wird, wird es gestreckt werden innerhalb der Grenzen des Titels. Wenn das Bild wird gekachelt, ist, wird es wiederholt gezeichnet, beginnend mit der linken oberen Ecke des Titels.  
+  
+ Weitere Informationen zu den verfügbaren Wrapping-Modi, finden Sie unter der <xref:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode> Enumerationsthema.  
+  
+ Wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.BackImageWrapMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode.Unscaled>, der Speicherort, in dem das Bild gezeichnet wird, richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.Title.BackImageAlignment%2A> Einstellung der Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackSecondaryColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackSecondaryColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackSecondaryColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BackSecondaryColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Sekundärfarbe des Titelhintergrunds.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert für die sekundäre Farbe von Hintergrund mit Schraffur oder graduelle Füllung verwendet. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Web.UI.DataVisualization.Charting.Title.BackSecondaryColor%2A> -Eigenschaft ist eine mehrerer verwandter Eigenschaften, die bestimmen, die sekundäre Hintergrundfarbe <xref:System.Web.UI.DataVisualization.Charting.Chart> -Objekte und wird verwendet, wenn Farbverlauf übernommen werden.  
+  
+ Sie können festlegen, <xref:System.Web.UI.DataVisualization.Charting.Title.BackSecondaryColor%2A> auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau)-Wert.  
+  
+ Wenn Schraffuren verwendet wird, die <xref:System.Web.UI.DataVisualization.Charting.Title.BackSecondaryColor%2A> Eigenschaft bestimmt die Farbe der Linien Schraffur für den Titel.  
+  
+ Farbverlauf für den Hintergrund eines Titels zu verwenden:  
+  
+-   Legen Sie die primäre Farbe mit der <xref:System.Web.UI.DataVisualization.Charting.Title.BackColor%2A> Eigenschaft.  
+  
+-   Legen Sie die sekundäre Farbe, mit der <xref:System.Web.UI.DataVisualization.Charting.Title.BackSecondaryColor%2A> Eigenschaft.  
+  
+-   Legen Sie die <xref:System.Web.UI.DataVisualization.Charting.Title.BackGradientStyle%2A> Eigenschaft, um die gewünschte Art des Farbverlaufs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe des Titels ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert verwendet, um die Farbe des Rahmens des Titels gezeichnet werden soll. Die Standardfarbe ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, die <xref:System.Web.UI.DataVisualization.Charting.Title.BorderColor%2A> Eigenschaft auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau)-Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderDashStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartDashStyle BorderDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartDashStyle BorderDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BorderDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Rahmenart des Titels.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartDashStyle" /> -Enumerationswert, der die Rahmenart des Titels bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title.BorderDashStyle%2A> Eigenschaft bestimmt die Linienart für einen Rahmen verwenden. Die Zeile kann einfarbig, gepunktet usw. sein.  
+  
+ Andere Rahmenarten finden Sie unter der <xref:System.Web.UI.DataVisualization.Charting.ChartDashStyle> Enumerationsthema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public int BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des Rahmens des Titels.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Breite des Rahmens in Pixel des Titels bestimmt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Title.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Web.UI.DataVisualization.Charting.Title" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockedToChartArea">
+      <MemberSignature Language="C#" Value="public string DockedToChartArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DockedToChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.DockedToChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("NotSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.LegendAreaNameConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> , in dem der Titel angedockt wird.</summary>
+        <value>Ein <see langword="string" /> -Wert, der den Namen des der <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> , in dem dieser Titel wird angedockt werden kann. Der Standardwert ist die leere Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Docking">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Docking Docking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.Docking Docking" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Docking" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Docking</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, wo der Titel angedockt ist.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Docking" /> -Enumerationswert, der angibt, die Andockposition des Titels. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.Docking.Top" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title> oben, links, unten oder rechts des gesamten Diagrammbilds oder innerhalb oder außerhalb einer Diagrammfläche angedockt werden kann. Wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.IsDockedInsideChartArea%2A> -Eigenschaftensatz auf `false`, Andocken gilt für das gesamte Diagrammbild. Wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.IsDockedInsideChartArea%2A> -Eigenschaftensatz auf `true`, Andocken gilt für die <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt gemäß der <xref:System.Web.UI.DataVisualization.Charting.Title.DockedToChartArea%2A> Eigenschaft  
+  
+ Diese Eigenschaft hat keine Auswirkung, wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.Position%2A> Eigenschaft nicht festgelegt ist, um <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Auto%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockingOffset">
+      <MemberSignature Language="C#" Value="public int DockingOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DockingOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.DockingOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den positiven oder negativen Offset der angedockten Titelposition fest.</summary>
+        <value>Ein <see langword="integer" /> Wert, der einen Offset von der angedockten Titelposition darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Font), "Microsoft Sans Serif, 8pt")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftart für den Titel.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> Objekt, das die Schriftart für den Titel angibt. Der Standardwert ist "Microsoft Sans Serif, 8pt".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie einen neuen <xref:System.Drawing.Font> -Objekt beim Festlegen dieser Eigenschaft. Weisen Sie das gesamte Objekt der Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des Titeltexts fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der die Farbe des Titeltexts angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title.ForeColor%2A> Eigenschaft wird verwendet, um die Titelfarbe Text festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDockedInsideChartArea">
+      <MemberSignature Language="C#" Value="public bool IsDockedInsideChartArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDockedInsideChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.IsDockedInsideChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob der Titel innerhalb angedockt werden soll eine <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn der Titel in einer Diagrammfläche; angedockt wird <see langword="false" /> , wenn der Titel außerhalb der Diagrammfläche angedockt wird. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.IsDockedInsideChartArea%2A> -Eigenschaftensatz auf `false`, der Titel an den äußeren Rand der gezeichneten Diagrammbereiche; angedockt ist, wenn diese Eigenschaft, um festgelegt wird `true`, der Titel wird an das innere angedockt werden Rand Diagrammbereich dargestellt. Diese Eigenschaft hat keine Auswirkung, wenn der Name des eine <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt nicht zugewiesen ist die <xref:System.Web.UI.DataVisualization.Charting.Title.DockedToChartArea%2A> Eigenschaft.  
+  
+ **Hinweis** dieses Verhalten gilt nur, wenn die <xref:System.Web.UI.DataVisualization.Charting.Title.Position%2A> -Eigenschaftensatz auf <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Auto%2A>. Wenn dies nicht der Fall ist, wird durch Festlegen der <xref:System.Web.UI.DataVisualization.Charting.Title.IsDockedInsideChartArea%2A> Eigenschaft hat keine Auswirkung, da die Position des Titels klicken Sie dann nach richtet die <xref:System.Web.UI.DataVisualization.Charting.Title.Position%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAreaAttributes">
+      <MemberSignature Language="C#" Value="public string MapAreaAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MapAreaAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.MapAreaAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Zuordnung strukturbereichattribute des Titels.</summary>
+        <value>Ein <see langword="string" /> Wert, der die strukturbereichsattribute des Titels darstellt. Der Standardwert ist eine Zeichenfolge der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie festlegen, die <xref:System.Web.UI.DataVisualization.Charting.Title.MapAreaAttributes%2A> -Eigenschaft eine clientseitigen Imagemap wird automatisch erstellt werden. Ein Zuordnungsbereich auch erstellt werden, mit dessen Attributzeichenfolge angefügt der \<MAP >-Tags, das auf das Diagrammobjekt entspricht, für die diese Eigenschaft festgelegt ist.  
+  
+ Da der gesamte Attributzeichenfolge angehängt ist die \<MAP >-Tag, sollten mehrere Attribute durch ein Leerzeichen getrennt werden.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title.MapAreaAttributes%2A> Eigenschaft kann verwendet werden, zusammen mit der <xref:System.Web.UI.DataVisualization.Charting.Title.Url%2A> -Eigenschaft im Kartenbereich an Attributen z. B. Target = _Blank sowie die clientseitige Ereignishandler, z. B. OnClick="MyEvent()" ".  
+  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkungen, wenn die <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> -Eigenschaftensatz auf `false`. Der Standardwert ist `true`.  
+  
+ **Wichtig** So erstellen eine Imagemap auf diese Weise die <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt muss festgelegt werden, um <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. Es ist möglich, eine Imagemap zu erstellen, wenn binäres streaming verwenden, aber eine andere Technik verwendet werden muss.  
+  
+ Spezielle Schlüsselwörter können verwendet werden, beim Festlegen dieser Eigenschaft. Jedes Schlüsselwort wird durch eine bestimmte Art von Daten aus dem betreffenden Diagrammelement ersetzt. Finden Sie in der folgenden Tabelle eine Liste aller verfügbaren Schlüsselwörter:  
+  
+|Stichwort|Ersetzt durch|  
+|-------------|-----------------|  
+|#VALX|X-Wert des Datenpunkts.|  
+|#VAL, #VALY, #VALY2, #VALY3...|Y-Werte des Datenpunkts.|  
+|#SER|Der Name der Reihe.|  
+|#LABEL|Die Bezeichnung des Datenpunkts.|  
+|#INDEX|Der Index des Datenpunkts.|  
+|#PERCENT|Prozentsatz der Daten Punkt Y-Wert.|  
+|#TOTAL|Summe aller Y-Werte in der Reihe.|  
+|#LEGENDTEXT|Der Legendentext.|  
+  
+ Verwenden Sie zum Erstellen, die eine benutzerdefinierte Koordinaten aufweisen. Imagemaps die <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> Eigenschaft des Stamms <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den eindeutigen Namen einer <see cref="T:System.Web.UI.DataVisualization.Charting.Title" /> Objekt.</summary>
+        <value>Ein <see langword="string" /> Wert, der den eindeutigen Namen des Titelobjekts darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name eines Objekts Titel muss eindeutig sein; Andernfalls wird eine Ausnahme ausgelöst werden.  
+  
+ Diese Eigenschaft kann als Indexer verwendet werden, beim Abrufen einer <xref:System.Web.UI.DataVisualization.Charting.Title> -Objekt aus der <xref:System.Web.UI.DataVisualization.Charting.TitleCollection> Objekt.  
+  
+ Wenn diese Eigenschaft auf eine Zeichenfolge der Länge 0 (null) festgelegt ist, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ElementPosition Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.ElementPosition Position" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.ElementPositionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ElementPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> -Objekt, das zum Abrufen oder Festlegen der Position des Titels verwendet werden kann.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> Wert, der die Position des Titels darstellt. Der Standardwert ist <see cref="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.DataVisualization.Charting.Title.Position%2A> Eigenschaft wird automatisch (d. h. Title.Position.Auto = `true`) wird automatisch durch die Titelposition berechnet die <xref:System.Web.UI.DataVisualization.Charting.Chart> -Steuerelement, und berücksichtigt die <xref:System.Web.UI.DataVisualization.Charting.Title.Docking%2A>, <xref:System.Web.UI.DataVisualization.Charting.Title.Alignment%2A> und <xref:System.Web.UI.DataVisualization.Charting.Title.IsDockedInsideChartArea%2A> eigenschafteneinstellungen.  
+  
+ Wenn es nicht automatisch, ist die <xref:System.Web.UI.DataVisualization.Charting.Title.Docking%2A>, <xref:System.Web.UI.DataVisualization.Charting.Title.DockedToChartArea%2A> und <xref:System.Web.UI.DataVisualization.Charting.Title.IsDockedInsideChartArea%2A> Eigenschaften werden ignoriert, und die Titelposition wird ausschließlich durch den Wert des zurückgegebenen bestimmt <xref:System.Web.UI.DataVisualization.Charting.ElementPosition> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackValue">
+      <MemberSignature Language="C#" Value="public string PostBackValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.PostBackValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Postbackwert, die verarbeitet werden kann ein <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> Ereignis.</summary>
+        <value>Ein <see langword="string" /> -Wert, der den Wert darstellt, die an eine <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> Ereignis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ShadowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ShadowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.ShadowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128, 0, 0, 0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des Schattens für den Titel.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert für den Titel. Die Standardfarbe ist <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau) Wert festgelegt werden.  
+  
+ Der alpha-Wert kann verwendet werden, um eine "realistische" shadowing Effekt zu erzielen; Wiederholen Sie dann einen Farbwert "128,0,0,0" für Schatten.  
+  
+ Um einen Schatten zu implementieren, legen Sie die <xref:System.Web.UI.DataVisualization.Charting.Title.ShadowOffset%2A> Eigenschaft auf einen Wert ungleich 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowOffset">
+      <MemberSignature Language="C#" Value="public int ShadowOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ShadowOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.ShadowOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Offset des Schattens in Pixel des Titels.</summary>
+        <value>Ein <see langword="integer" /> Wert, der den Schattenoffset in Pixel des Titels darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf einen Wert ungleich 0 (null), um Schatten zu implementieren. Ein positiver Wert führt einen Schatten, der nach unten und rechts verläuft; ein negativer Wert führt einen Schatten, die oben "und" auf der linken Seite verschiebt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für den Titel fest.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Text für den Titel darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextOrientation">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.TextOrientation TextOrientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.TextOrientation TextOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.TextOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.TextOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Texts im Titel.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.TextOrientation" /> -Enumerationswert, der die Ausrichtung des Texts im Titel angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.TextStyle TextStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.TextStyle TextStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.TextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.TextStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil des Texts für den Titel fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.TextStyle" /> -Enumerationswert ab, der den Stil des Texts für den Titel bestimmt. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.TextStyle.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt fünf mögliche Formate für Titeltext: <xref:System.Web.UI.DataVisualization.Charting.TextStyle.Default>, <xref:System.Web.UI.DataVisualization.Charting.TextStyle.Shadow>, <xref:System.Web.UI.DataVisualization.Charting.TextStyle.Emboss>, <xref:System.Web.UI.DataVisualization.Charting.TextStyle.Embed>, und <xref:System.Web.UI.DataVisualization.Charting.TextStyle.Frame>. Finden Sie in der nachfolgenden Tabelle eine Zusammenfassung der folgenden Formate:  
+  
+|Stil|Beschreibung|  
+|-----------|-----------------|  
+|Standard|Text wird mit der gewünschten Schriftart und Farbe, ohne zusätzliche Effekte angezeigt.|  
+|Schatten|Text wird mit der gewünschten Schriftart und Farbe hinzugefügten Schatten wirkt sich darauf aus dem Text angezeigt.|  
+|Prägung|Text wird mit der gewünschten Schriftart und Farbe angezeigt, aber mit einem Prägeeffekt gezeichnet.|  
+|Einbinden|Text wird mit der gewünschten Schriftart und Farbe angezeigt, aber mit einem Einbetten von Effekt gezeichnet.|  
+|Frame|Text wird mit der gewünschten Schriftart und Farbe angezeigt, aber als Gliederung des Texts, d. h. mit keine Füllung gezeichnet.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die QuickInfo für den Titel.</summary>
+        <value>Ein <see langword="string" /> Wert, der die QuickInfo für den Titel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie festlegen, die <xref:System.Web.UI.DataVisualization.Charting.Title.ToolTip%2A> -Eigenschaft eine clientseitigen Imagemap wird automatisch erstellt werden. Ein Zuordnungsbereich wird auch mit der Title-Attribut, das auf die angegebene QuickInfo-Zeichenfolge festgelegt erstellt werden. Der Strukturbereich verwendet die Dimensionen, die den Titel entsprechen.  
+  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkungen, wenn die <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> -Eigenschaftensatz auf `false`. Der Standardwert ist `true`.  
+  
+ **Wichtig** So erstellen eine Imagemap auf diese Weise die <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt muss festgelegt werden, um <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. Es ist möglich, eine Imagemap zu erstellen, wenn binäres streaming verwenden, aber eine andere Technik verwendet werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.UrlValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ziel-URL des Links für den Titel.</summary>
+        <value>Ein <see langword="string" /> -Wert, die Ziel-URL des Links für den Titel darstellt. Der Standardwert ist eine Zeichenfolge der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Eigenschaft festlegen, wird eine clientseitige Imagemap automatisch erstellt. Ein Zuordnungsbereich wird auch mit seinem HREF-Attribut, das auf den angegebenen Inhaltsanker oder eine URL festgelegt erstellt.  
+  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkungen, wenn die <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> -Eigenschaftensatz auf `false`. Der Standardwert ist `true`.  
+  
+ **Wichtig** So erstellen eine Imagemap auf diese Weise die <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt muss festgelegt werden, um <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. Es ist möglich, eine Imagemap zu erstellen, wenn binäres streaming verwenden, aber eine andere Technik verwendet werden muss.  
+  
+ Attribute der Zuordnungsbereiche, z. B. TARGET = _Blank, kann angegeben werden, mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Title.MapAreaAttributes%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Title.Url%2A> -Eigenschaft können Sie spezielle Schlüsselwörter zum Anzeigen verschiedener Arten von Daten im Zusammenhang mit dem Diagramm festlegen.  
+  
+ Verwenden Sie zum Erstellen, die eine benutzerdefinierte Koordinaten aufweisen. Imagemaps die <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> Eigenschaft des Stamms <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public virtual bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Title.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Titel sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Titel sichtbar; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispiel  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

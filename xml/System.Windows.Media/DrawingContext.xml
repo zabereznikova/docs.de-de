@@ -1,0 +1,878 @@
+<Type Name="DrawingContext" FullName="System.Windows.Media.DrawingContext">
+  <TypeSignature Language="C#" Value="public abstract class DrawingContext : System.Windows.Threading.DispatcherObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DrawingContext extends System.Windows.Threading.DispatcherObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.DrawingContext" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Beschreibt visuellen Inhalt mithilfe der Befehle „draw“, „push“ und „pop“.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.DrawingContext> zum Auffüllen einer <xref:System.Windows.Media.Visual> oder ein <xref:System.Windows.Media.Drawing> mit visuellen Inhalt.  
+  
+ Obwohl der <xref:System.Windows.Media.DrawingContext> Draw-Methoden vergleichbar mit den Draw-Methoden von angezeigt der <xref:System.Drawing.Graphics?displayProperty=nameWithType> Typ funktionieren sehr unterschiedlich, je: <xref:System.Windows.Media.DrawingContext> ist dagegen mit einem Grafiksystem Speichermodus verwendet wird, der <xref:System.Drawing.Graphics?displayProperty=nameWithType> mit dem ein unmittelbarer Modus verwendet wird Grafiksystem. Bei Verwendung von ein <xref:System.Windows.Media.DrawingContext> objektspezifischen draw-Befehle, speichern Sie einen Satz von Renderinganweisungen (obwohl die genaue Speichermechanismus hängt vom Typ des Objekts, das angibt der <xref:System.Windows.Media.DrawingContext>), die später von Grafiken verwendet System; Sie nicht werden in Echtzeit auf dem Bildschirm gezeichnet. Weitere Informationen darüber, wie die [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Grafiken System funktioniert, finden Sie unter [WPF-Grafiken Rendering Overview](~/docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+  
+ Nie direkt instanziieren einer <xref:System.Windows.Media.DrawingContext>; Sie können jedoch einen Zeichnung Kontext vom bestimmte Methoden, wie z. B. abrufen <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> und <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ruft eine <xref:System.Windows.Media.DrawingContext> aus einem <xref:System.Windows.Media.DrawingVisual> und verwendet, um ein Rechteck gezeichnet werden soll.  
+  
+ [!code-csharp[drawingvisualsample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[drawingvisualsample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
+  
+ Das nächste Beispiel veranschaulicht die <xref:System.Windows.Media.DrawingContext.PushOpacity%2A>, <xref:System.Windows.Media.DrawingContext.PushEffect%2A>, und <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehle. Die <xref:System.Windows.Media.DrawingContext> stammt von einer <xref:System.Windows.Media.DrawingGroup> und angezeigt ein <xref:System.Windows.Controls.Image> Steuerelement.  
+  
+ [!code-csharp[DrawingContext_procedural_snip#PushEffectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingContext_procedural_snip/CSharp/PushEffectExample.cs#pusheffectexamplewholepage)]
+ [!code-vb[DrawingContext_procedural_snip#PushEffectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingContext_procedural_snip/visualbasic/pusheffectexample.vb#pusheffectexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die <see cref="T:System.Windows.Media.DrawingContext" /> und leert den Inhalt. Anschließend können die <see cref="T:System.Windows.Media.DrawingContext" /> kann nicht geändert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.DrawingContext> muss geschlossen werden, nachdem er geschlossen wurde, nicht geändert werden kann, bevor ihr Inhalt gerendert werden kann. Dieser Aufruf erfordert keine alle Aufrufe von Push vom Stapel geholt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde bereits geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeCore">
+      <MemberSignature Language="C#" Value="protected abstract void DisposeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DisposeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DisposeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Windows.Media.DrawingContext" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode nicht direkt aus dem Code. Verwenden Sie die <xref:System.Windows.Media.DrawingContext.System%23IDisposable%23Dispose%2A> Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawDrawing">
+      <MemberSignature Language="C#" Value="public abstract void DrawDrawing (System.Windows.Media.Drawing drawing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawDrawing(class System.Windows.Media.Drawing drawing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawDrawing(System.Windows.Media.Drawing)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawing" Type="System.Windows.Media.Drawing" />
+      </Parameters>
+      <Docs>
+        <param name="drawing">Die Zeichnung, angefügt werden soll.</param>
+        <summary>Zeichnet das angegebene <see cref="T:System.Windows.Media.Drawing" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawEllipse">
+      <MemberSignature Language="C#" Value="public abstract void DrawEllipse (System.Windows.Media.Brush brush, System.Windows.Media.Pen pen, System.Windows.Point center, double radiusX, double radiusY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawEllipse(class System.Windows.Media.Brush brush, class System.Windows.Media.Pen pen, valuetype System.Windows.Point center, float64 radiusX, float64 radiusY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawEllipse(System.Windows.Media.Brush,System.Windows.Media.Pen,System.Windows.Point,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="center" Type="System.Windows.Point" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel, mit dem die Ellipse ausgefüllt werden soll.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Pinsel <see langword="null" /> ist, wird keine Füllung gezeichnet.</param>
+        <param name="pen">Der Stift, mit denen die Ellipse mit Strichen zu zeichnen.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Stift <see langword="null" /> ist, wird kein Strich gezeichnet.</param>
+        <param name="center">Die Position des Mittelpunkts der Ellipse.</param>
+        <param name="radiusX">Der horizontale Radius der Ellipse.</param>
+        <param name="radiusY">Der vertikale Radius der Ellipse.</param>
+        <summary>Zeichnet eine Ellipse, die mit dem angegebenen <see cref="T:System.Windows.Media.Brush" /> und <see cref="T:System.Windows.Media.Pen" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pinsel und der Stift werden beide `null`.  Wenn der Pinsel `null`, und klicken Sie dann keine Füllung ausgeführt wird.  Wenn der Stift `null`, wird kein Strich gezeichnet wird.  Wenn der Stift und den Pinsel sind `null`, und klicken Sie dann die Zeichnung nicht sichtbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawEllipse">
+      <MemberSignature Language="C#" Value="public abstract void DrawEllipse (System.Windows.Media.Brush brush, System.Windows.Media.Pen pen, System.Windows.Point center, System.Windows.Media.Animation.AnimationClock centerAnimations, double radiusX, System.Windows.Media.Animation.AnimationClock radiusXAnimations, double radiusY, System.Windows.Media.Animation.AnimationClock radiusYAnimations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawEllipse(class System.Windows.Media.Brush brush, class System.Windows.Media.Pen pen, valuetype System.Windows.Point center, class System.Windows.Media.Animation.AnimationClock centerAnimations, float64 radiusX, class System.Windows.Media.Animation.AnimationClock radiusXAnimations, float64 radiusY, class System.Windows.Media.Animation.AnimationClock radiusYAnimations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawEllipse(System.Windows.Media.Brush,System.Windows.Media.Pen,System.Windows.Point,System.Windows.Media.Animation.AnimationClock,System.Double,System.Windows.Media.Animation.AnimationClock,System.Double,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="center" Type="System.Windows.Point" />
+        <Parameter Name="centerAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusXAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+        <Parameter Name="radiusY" Type="System.Double" />
+        <Parameter Name="radiusYAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel, mit dem die Ellipse ausgefüllt werden soll.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Pinsel <see langword="null" /> ist, wird keine Füllung gezeichnet.</param>
+        <param name="pen">Der Stift, mit denen die Ellipse mit Strichen zu zeichnen.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Stift <see langword="null" /> ist, wird kein Strich gezeichnet.</param>
+        <param name="center">Die Position des Mittelpunkts der Ellipse.</param>
+        <param name="centerAnimations">Der Takt, mit dem Mittelpunkt der Ellipse animiert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Windows.Point" /> Objekte.</param>
+        <param name="radiusX">Der horizontale Radius der Ellipse.</param>
+        <param name="radiusXAnimations">Die Uhr zum Animieren der Ellipse X-Radius oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Double" /> Objekte.</param>
+        <param name="radiusY">Der vertikale Radius der Ellipse.</param>
+        <param name="radiusYAnimations">Die Uhr zum Animieren der Ellipse y-Radius oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Double" /> Objekte.</param>
+        <summary>Zeichnet eine Ellipse, die mit dem angegebenen <see cref="T:System.Windows.Media.Brush" /> und <see cref="T:System.Windows.Media.Pen" /> und wendet die angegebene Animationsuhren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pinsel und der Stift werden beide `null`.  Wenn der Pinsel `null`, und klicken Sie dann keine Füllung ausgeführt wird.  Wenn der Stift `null`, wird kein Strich gezeichnet wird.  Wenn der Stift und den Pinsel sind `null`, und klicken Sie dann die Zeichnung nicht sichtbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGeometry">
+      <MemberSignature Language="C#" Value="public abstract void DrawGeometry (System.Windows.Media.Brush brush, System.Windows.Media.Pen pen, System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawGeometry(class System.Windows.Media.Brush brush, class System.Windows.Media.Pen pen, class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawGeometry(System.Windows.Media.Brush,System.Windows.Media.Pen,System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der <see cref="T:System.Windows.Media.Brush" /> zum Ausfüllen der <see cref="T:System.Windows.Media.Geometry" />. Dies ist optional und kann <see langword="null" /> sein. Wenn der Pinsel <see langword="null" /> ist, wird keine Füllung gezeichnet.</param>
+        <param name="pen">Der <see cref="T:System.Windows.Media.Pen" />, mit dem die <see cref="T:System.Windows.Media.Geometry" /> gezeichnet werden soll. Dies ist optional und kann <see langword="null" /> sein. Wenn der Stift <see langword="null" /> ist, wird kein Strich gezeichnet.</param>
+        <param name="geometry">Das zu zeichnende <see cref="T:System.Windows.Media.Geometry" />.</param>
+        <summary>Zeichnet die angegebene <see cref="T:System.Windows.Media.Geometry" /> unter Verwendung der angegebenen <see cref="T:System.Windows.Media.Brush" />- und <see cref="T:System.Windows.Media.Pen" />-Elemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGlyphRun">
+      <MemberSignature Language="C#" Value="public abstract void DrawGlyphRun (System.Windows.Media.Brush foregroundBrush, System.Windows.Media.GlyphRun glyphRun);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawGlyphRun(class System.Windows.Media.Brush foregroundBrush, class System.Windows.Media.GlyphRun glyphRun) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawGlyphRun(System.Windows.Media.Brush,System.Windows.Media.GlyphRun)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="foregroundBrush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="glyphRun" Type="System.Windows.Media.GlyphRun" />
+      </Parameters>
+      <Docs>
+        <param name="foregroundBrush">Der Pinsel, der zum Zeichnen von Text verwendet wird.</param>
+        <param name="glyphRun">Der zu zeichnende Text.</param>
+        <summary>Zeichnet den angegebenen Text.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawImage">
+      <MemberSignature Language="C#" Value="public abstract void DrawImage (System.Windows.Media.ImageSource imageSource, System.Windows.Rect rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawImage(class System.Windows.Media.ImageSource imageSource, valuetype System.Windows.Rect rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawImage(System.Windows.Media.ImageSource,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageSource" Type="System.Windows.Media.ImageSource" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="imageSource">Das Bild gezeichnet werden soll.</param>
+        <param name="rectangle">Der Bereich, in dem gezeichnet werden soll <c>BitmapSource</c>.</param>
+        <summary>Zeichnet ein Bild in der Region, definiert durch das angegebene <see cref="T:System.Windows.Rect" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.MediaPermission">Anzeige von Bildern, die Sie keine <see cref="T:System.Net.WebPermission" /> oder <see cref="T:System.Security.Permissions.FileIOPermission" /> zugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.MediaPermissionImage.SafeImage" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawImage">
+      <MemberSignature Language="C#" Value="public abstract void DrawImage (System.Windows.Media.ImageSource imageSource, System.Windows.Rect rectangle, System.Windows.Media.Animation.AnimationClock rectangleAnimations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawImage(class System.Windows.Media.ImageSource imageSource, valuetype System.Windows.Rect rectangle, class System.Windows.Media.Animation.AnimationClock rectangleAnimations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawImage(System.Windows.Media.ImageSource,System.Windows.Rect,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageSource" Type="System.Windows.Media.ImageSource" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+        <Parameter Name="rectangleAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="imageSource">Das Bild gezeichnet werden soll.</param>
+        <param name="rectangle">Der Bereich, in dem gezeichnet werden soll <c>BitmapSource</c>.</param>
+        <param name="rectangleAnimations">Der Takt, mit der Größe und Dimensionen, die des Rechtecks animiert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Windows.Rect" /> Objekte.</param>
+        <summary>Zeichnet ein Bild in der Region, definiert durch das angegebene <see cref="T:System.Windows.Rect" /> und wendet die angegebene Animationsuhr.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.MediaPermission">Anzeige von Bildern, die Sie keine <see cref="T:System.Net.WebPermission" /> oder <see cref="T:System.Security.Permissions.FileIOPermission" /> zugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.MediaPermissionImage.SafeImage" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawLine">
+      <MemberSignature Language="C#" Value="public abstract void DrawLine (System.Windows.Media.Pen pen, System.Windows.Point point0, System.Windows.Point point1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawLine(class System.Windows.Media.Pen pen, valuetype System.Windows.Point point0, valuetype System.Windows.Point point1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawLine(System.Windows.Media.Pen,System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="point0" Type="System.Windows.Point" />
+        <Parameter Name="point1" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Der Stift, mit dem die Linie gezeichnet werden soll.</param>
+        <param name="point0">Der Startpunkt der Linie.</param>
+        <param name="point1">Der Endpunkt der Linie.</param>
+        <summary>Zeichnet eine verbindende Linie zwischen den angegebenen Punkten unter Verwendung des angegebenen <see cref="T:System.Windows.Media.Pen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawLine">
+      <MemberSignature Language="C#" Value="public abstract void DrawLine (System.Windows.Media.Pen pen, System.Windows.Point point0, System.Windows.Media.Animation.AnimationClock point0Animations, System.Windows.Point point1, System.Windows.Media.Animation.AnimationClock point1Animations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawLine(class System.Windows.Media.Pen pen, valuetype System.Windows.Point point0, class System.Windows.Media.Animation.AnimationClock point0Animations, valuetype System.Windows.Point point1, class System.Windows.Media.Animation.AnimationClock point1Animations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawLine(System.Windows.Media.Pen,System.Windows.Point,System.Windows.Media.Animation.AnimationClock,System.Windows.Point,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="point0" Type="System.Windows.Point" />
+        <Parameter Name="point0Animations" Type="System.Windows.Media.Animation.AnimationClock" />
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point1Animations" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Der Stift, um die Linie zu zeichnen.</param>
+        <param name="point0">Der Startpunkt der Linie.</param>
+        <param name="point0Animations">Die zu animierende den Ausgangspunkt der Zeile Uhr oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Windows.Point" /> Objekte.</param>
+        <param name="point1">Der Endpunkt der Linie.</param>
+        <param name="point1Animations">Der Takt, mit dem der Endpunkt der Linie animiert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Windows.Point" /> Objekte.</param>
+        <summary>Zeichnet eine verbindende Linie zwischen den angegebenen Punkten unter Verwendung des angegebenen <see cref="T:System.Windows.Media.Pen" /> und wendet die angegebene Animationsuhren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRectangle">
+      <MemberSignature Language="C#" Value="public abstract void DrawRectangle (System.Windows.Media.Brush brush, System.Windows.Media.Pen pen, System.Windows.Rect rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawRectangle(class System.Windows.Media.Brush brush, class System.Windows.Media.Pen pen, valuetype System.Windows.Rect rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawRectangle(System.Windows.Media.Brush,System.Windows.Media.Pen,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel, mit denen das Rechteck ausgefüllt werden soll.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Pinsel <see langword="null" /> ist, wird keine Füllung gezeichnet.</param>
+        <param name="pen">Der Stift, mit denen das Rechteck mit Strichen zu zeichnen.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Stift <see langword="null" /> ist, wird kein Strich gezeichnet.</param>
+        <param name="rectangle">Der zu zeichnenden Rechtecks.</param>
+        <summary>Zeichnet ein Rechteck mit dem angegebenen <see cref="T:System.Windows.Media.Brush" /> und <see cref="T:System.Windows.Media.Pen" />. Der Stift den Pinsel kann <see langword="null" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pinsel und der Stift werden beide `null`.  Wenn der Pinsel `null`, und klicken Sie dann keine Füllung ausgeführt wird.  Wenn der Stift `null`, wird kein Strich gezeichnet wird.  Wenn der Stift und den Pinsel sind `null`, und klicken Sie dann die Zeichnung nicht sichtbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRectangle">
+      <MemberSignature Language="C#" Value="public abstract void DrawRectangle (System.Windows.Media.Brush brush, System.Windows.Media.Pen pen, System.Windows.Rect rectangle, System.Windows.Media.Animation.AnimationClock rectangleAnimations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawRectangle(class System.Windows.Media.Brush brush, class System.Windows.Media.Pen pen, valuetype System.Windows.Rect rectangle, class System.Windows.Media.Animation.AnimationClock rectangleAnimations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawRectangle(System.Windows.Media.Brush,System.Windows.Media.Pen,System.Windows.Rect,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+        <Parameter Name="rectangleAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel, mit denen das Rechteck ausgefüllt werden soll.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Pinsel <see langword="null" /> ist, wird keine Füllung gezeichnet.</param>
+        <param name="pen">Der Stift, mit denen das Rechteck mit Strichen zu zeichnen.  Dies ist optional und kann <see langword="null" /> sein. Wenn der Stift <see langword="null" /> ist, wird kein Strich gezeichnet.</param>
+        <param name="rectangle">Der zu zeichnenden Rechtecks.</param>
+        <param name="rectangleAnimations">Der Takt, mit der Größe und Dimensionen, die des Rechtecks animiert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Windows.Rect" /> Objekte.</param>
+        <summary>Zeichnet ein Rechteck mit dem angegebenen <see cref="T:System.Windows.Media.Brush" /> und <see cref="T:System.Windows.Media.Pen" /> und wendet die angegebene Animationsuhren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pinsel und der Stift werden beide `null`.  Wenn der Pinsel `null`, und klicken Sie dann keine Füllung ausgeführt wird.  Wenn der Stift `null`, wird kein Strich gezeichnet wird.  Wenn der Stift und den Pinsel sind `null`, und klicken Sie dann die Zeichnung nicht sichtbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRoundedRectangle">
+      <MemberSignature Language="C#" Value="public abstract void DrawRoundedRectangle (System.Windows.Media.Brush brush, System.Windows.Media.Pen pen, System.Windows.Rect rectangle, double radiusX, double radiusY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawRoundedRectangle(class System.Windows.Media.Brush brush, class System.Windows.Media.Pen pen, valuetype System.Windows.Rect rectangle, float64 radiusX, float64 radiusY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawRoundedRectangle(System.Windows.Media.Brush,System.Windows.Media.Pen,System.Windows.Rect,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel, der zum Ausfüllen des Rechtecks verwendet wird.</param>
+        <param name="pen">Der Stift, der zum Zeichnen des Rechtecks verwendet wird.</param>
+        <param name="rectangle">Der zu zeichnenden Rechtecks.</param>
+        <param name="radiusX">Der Radius in der X-Dimension der abgerundeten Ecken.  Dieser Wert wird auf den Bereich von 0 bis geklammert  <see cref="P:System.Windows.Rect.Width" /> /2.</param>
+        <param name="radiusY">Der Radius in der Y-Dimension der abgerundeten Ecken.  Dieser Wert wird auf einen Wert zwischen 0 und geklammert  <see cref="P:System.Windows.Rect.Height" /> /2.</param>
+        <summary>Zeichnet ein abgerundetes Rechteck mit dem angegebenen <see cref="T:System.Windows.Media.Brush" /> und <see cref="T:System.Windows.Media.Pen" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pinsel und der Stift werden beide `null`.  Wenn der Pinsel `null`, und klicken Sie dann keine Füllung ausgeführt wird.  Wenn der Stift `null`, wird kein Strich gezeichnet wird.  Wenn der Stift und den Pinsel sind `null`, und klicken Sie dann die Zeichnung nicht sichtbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRoundedRectangle">
+      <MemberSignature Language="C#" Value="public abstract void DrawRoundedRectangle (System.Windows.Media.Brush brush, System.Windows.Media.Pen pen, System.Windows.Rect rectangle, System.Windows.Media.Animation.AnimationClock rectangleAnimations, double radiusX, System.Windows.Media.Animation.AnimationClock radiusXAnimations, double radiusY, System.Windows.Media.Animation.AnimationClock radiusYAnimations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawRoundedRectangle(class System.Windows.Media.Brush brush, class System.Windows.Media.Pen pen, valuetype System.Windows.Rect rectangle, class System.Windows.Media.Animation.AnimationClock rectangleAnimations, float64 radiusX, class System.Windows.Media.Animation.AnimationClock radiusXAnimations, float64 radiusY, class System.Windows.Media.Animation.AnimationClock radiusYAnimations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawRoundedRectangle(System.Windows.Media.Brush,System.Windows.Media.Pen,System.Windows.Rect,System.Windows.Media.Animation.AnimationClock,System.Double,System.Windows.Media.Animation.AnimationClock,System.Double,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+        <Parameter Name="rectangleAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+        <Parameter Name="radiusX" Type="System.Double" />
+        <Parameter Name="radiusXAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+        <Parameter Name="radiusY" Type="System.Double" />
+        <Parameter Name="radiusYAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel, der zum Ausfüllen des Rechtecks verwendet oder <see langword="null" /> für keine Füllung.</param>
+        <param name="pen">Für das Rechteck mit Strichen zu zeichnen verwendete Stift oder <see langword="null" /> für keinen Strich.</param>
+        <param name="rectangle">Der zu zeichnenden Rechtecks.</param>
+        <param name="rectangleAnimations">Der Takt, mit der Größe und Dimensionen, die des Rechtecks animiert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Windows.Rect" /> Objekte.</param>
+        <param name="radiusX">Der Radius in der X-Dimension der abgerundeten Ecken.  Dieser Wert wird auf den Bereich von 0 bis geklammert  <see cref="P:System.Windows.Rect.Width" /> /2</param>
+        <param name="radiusXAnimations">Die Uhr des Rechtecks animiert <c>RadiusX</c> Wert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Double" /> Werte.</param>
+        <param name="radiusY">Der Radius in der Y-Dimension der abgerundeten Ecken.  Dieser Wert wird auf einen Wert zwischen 0 und geklammert  <see cref="P:System.Windows.Rect.Height" /> /2.</param>
+        <param name="radiusYAnimations">Die Uhr des Rechtecks animiert <c>radiusY</c> Wert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Double" /> Werte.</param>
+        <summary>Zeichnet ein abgerundetes Rechteck mit dem angegebenen <see cref="T:System.Windows.Media.Brush" /> und <see cref="T:System.Windows.Media.Pen" /> und wendet die angegebene Animationsuhren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pinsel und der Stift werden beide `null`.  Wenn der Pinsel `null`, und klicken Sie dann keine Füllung ausgeführt wird.  Wenn der Stift `null`, wird kein Strich gezeichnet wird.  Wenn der Stift und den Pinsel sind `null`, und klicken Sie dann die Zeichnung nicht sichtbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Windows.Media.FormattedText formattedText, System.Windows.Point origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(class System.Windows.Media.FormattedText formattedText, valuetype System.Windows.Point origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawText(System.Windows.Media.FormattedText,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formattedText" Type="System.Windows.Media.FormattedText" />
+        <Parameter Name="origin" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="formattedText">Der zu zeichnende formatierte Text.</param>
+        <param name="origin">Die Position, an der der Text gezeichnet werden soll.</param>
+        <summary>Zeichnet formatierten Text an der angegebenen Position.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVideo">
+      <MemberSignature Language="C#" Value="public abstract void DrawVideo (System.Windows.Media.MediaPlayer player, System.Windows.Rect rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawVideo(class System.Windows.Media.MediaPlayer player, valuetype System.Windows.Rect rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawVideo(System.Windows.Media.MediaPlayer,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="player" Type="System.Windows.Media.MediaPlayer" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="player">Das Medium gezeichnet werden soll.</param>
+        <param name="rectangle">Der Bereich, in dem gezeichnet werden soll <c>Player</c>.</param>
+        <summary>Zeichnet ein Video in den angegebenen Bereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass das Medium gestreckt werden wird innerhalb des Bereichs, der vom Rechteckparameter definiert. Wenn unterschiedliche Seitenverhältnissen Rechteck und Medien Verzerrung erfolgt haben. Zur besseren Steuerung, wie Medien verwendet werden, um einen Bereich zu füllen, verwenden die <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> Befehl aus, um ein Rechteck, und füllen Sie es mit einem <xref:System.Windows.Media.VisualBrush> Medium enthält.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.MediaPermission">Um Medien anzuzeigen, die Sie keine <see cref="T:System.Net.WebPermission" /> oder <see cref="T:System.Security.Permissions.FileIOPermission" /> zugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.MediaPermissionImage.SafeImage" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVideo">
+      <MemberSignature Language="C#" Value="public abstract void DrawVideo (System.Windows.Media.MediaPlayer player, System.Windows.Rect rectangle, System.Windows.Media.Animation.AnimationClock rectangleAnimations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DrawVideo(class System.Windows.Media.MediaPlayer player, valuetype System.Windows.Rect rectangle, class System.Windows.Media.Animation.AnimationClock rectangleAnimations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.DrawVideo(System.Windows.Media.MediaPlayer,System.Windows.Rect,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="player" Type="System.Windows.Media.MediaPlayer" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+        <Parameter Name="rectangleAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="player">Das Medium gezeichnet werden soll.</param>
+        <param name="rectangle">Der Bereich, in dem das Medium gezeichnet werden soll.</param>
+        <param name="rectangleAnimations">Der Takt, mit der Größe und Dimensionen, die des Rechtecks animiert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Windows.Rect" /> Objekte.</param>
+        <summary>Zeichnet ein Video in den angegebenen Bereich und wendet die angegebene Animationsuhr an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass das Medium gestreckt werden wird innerhalb des Bereichs, der vom Rechteckparameter definiert. Wenn unterschiedliche Seitenverhältnissen Rechteck und Medien Verzerrung erfolgt haben. Zur besseren Steuerung, wie Medien verwendet werden, um einen Bereich zu füllen, verwenden die <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> Befehl aus, um ein Rechteck, und füllen Sie es mit einem <xref:System.Windows.Media.VisualBrush> Medium enthält.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.MediaPermission">Um Medien anzuzeigen, die Sie keine <see cref="T:System.Net.WebPermission" /> oder <see cref="T:System.Security.Permissions.FileIOPermission" /> zugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.MediaPermissionImage.SafeImage" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public abstract void Pop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Pop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.Pop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Holt den letzten Deckkraftmaske, Deckkraft, Clip, Effekt oder Transformation, die auf die Zeichnung Kontext abgelegt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem ein Vorgang per pop ausgelesen wird, wird es nicht mehr auf nachfolgende zeichnen-Befehle angewendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Auswirkung der <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehl.  
+  
+ [!code-csharp[DrawingContext_procedural_snip#PopExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingContext_procedural_snip/CSharp/PopExample.cs#popexamplewholepage)]
+ [!code-vb[DrawingContext_procedural_snip#PopExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingContext_procedural_snip/visualbasic/popexample.vb#popexamplewholepage)]  
+  
+ Die folgende Abbildung zeigt die Ausgabe des Beispiels:  
+  
+ ![Mit unterschiedlichen Deckkraftwerten gezeichnete Rechtecke](~/add/media/graphicsmm-drawingcontextpopexample.gif "mit unterschiedlichen Deckkraftwerten gezeichnete Rechtecke")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushClip">
+      <MemberSignature Language="C#" Value="public abstract void PushClip (System.Windows.Media.Geometry clipGeometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushClip(class System.Windows.Media.Geometry clipGeometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.PushClip(System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clipGeometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="clipGeometry">Die Clip-Bereich auf nachfolgende zeichnen-Befehle anwenden.</param>
+        <summary>Legt den angegebenen Clip-Bereich auf den zeichnen-Kontext ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clip-Bereich gilt für alle nachfolgenden zeichnen-Befehle, bis sie vom entfernt wird die <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehl.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushEffect">
+      <MemberSignature Language="C#" Value="public abstract void PushEffect (System.Windows.Media.Effects.BitmapEffect effect, System.Windows.Media.Effects.BitmapEffectInput effectInput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushEffect(class System.Windows.Media.Effects.BitmapEffect effect, class System.Windows.Media.Effects.BitmapEffectInput effectInput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.PushEffect(System.Windows.Media.Effects.BitmapEffect,System.Windows.Media.Effects.BitmapEffectInput)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="effect" Type="System.Windows.Media.Effects.BitmapEffect" />
+        <Parameter Name="effectInput" Type="System.Windows.Media.Effects.BitmapEffectInput" />
+      </Parameters>
+      <Docs>
+        <param name="effect">Die Auswirkungen auf nachfolgende Zeichnungen anwenden.</param>
+        <param name="effectInput">Der Bereich, der der Effekt angewendet wird, oder <see langword="null" /> ist die Auswirkung auf den gesamten Bereich der nachfolgenden Zeichnungen angewendet werden soll.</param>
+        <summary>Legt den angegebenen <see cref="T:System.Windows.Media.Effects.BitmapEffect" /> auf den zeichnen-Kontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auswirkungen auf alle nachfolgenden Zeichenvorgänge angewendet wird, bis sie vom entfernt wird die <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehl.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Windows.Media.DrawingContext.PushOpacity%2A>, <xref:System.Windows.Media.DrawingContext.PushEffect%2A>, und <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehle.  
+  
+ [!code-csharp[DrawingContext_procedural_snip#PushEffectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingContext_procedural_snip/CSharp/PushEffectExample.cs#pusheffectexamplewholepage)]
+ [!code-vb[DrawingContext_procedural_snip#PushEffectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingContext_procedural_snip/visualbasic/pusheffectexample.vb#pusheffectexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushGuidelineSet">
+      <MemberSignature Language="C#" Value="public abstract void PushGuidelineSet (System.Windows.Media.GuidelineSet guidelines);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushGuidelineSet(class System.Windows.Media.GuidelineSet guidelines) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.PushGuidelineSet(System.Windows.Media.GuidelineSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="guidelines" Type="System.Windows.Media.GuidelineSet" />
+      </Parameters>
+      <Docs>
+        <param name="guidelines">Die Richtlinie für nachfolgende zeichnen-Befehle gelten festgelegt.</param>
+        <summary>Legt den angegebenen <see cref="T:System.Windows.Media.GuidelineSet" /> auf den zeichnen-Kontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Welche Richtlinie gilt für alle nachfolgenden zeichnen-Befehle, bis sie vom entfernt wird die <xref:System.Windows.Media.DrawingContext.Pop%2A> Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushOpacity">
+      <MemberSignature Language="C#" Value="public abstract void PushOpacity (double opacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushOpacity(float64 opacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.PushOpacity(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opacity" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="opacity">Der Deckkraftfaktor auf nachfolgende zeichnen-Befehle anwenden. Dieser Faktor ist kumulativ mit früheren <see cref="M:System.Windows.Media.DrawingContext.PushOpacity(System.Double)" /> Vorgänge.</param>
+        <summary>Legt die Einstellung für die angegebene Deckkraft auf Zeichnen verwendeten Kontext ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Deckkraft wird in allen nachfolgenden Zeichnungsbefehlen gemischt, bis sie vom entfernt wird die <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehl.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Windows.Media.DrawingContext.PushOpacity%2A>, <xref:System.Windows.Media.DrawingContext.PushEffect%2A>, und <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehle.  
+  
+ [!code-csharp[DrawingContext_procedural_snip#PushEffectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingContext_procedural_snip/CSharp/PushEffectExample.cs#pusheffectexamplewholepage)]
+ [!code-vb[DrawingContext_procedural_snip#PushEffectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingContext_procedural_snip/visualbasic/pusheffectexample.vb#pusheffectexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushOpacity">
+      <MemberSignature Language="C#" Value="public abstract void PushOpacity (double opacity, System.Windows.Media.Animation.AnimationClock opacityAnimations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushOpacity(float64 opacity, class System.Windows.Media.Animation.AnimationClock opacityAnimations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.PushOpacity(System.Double,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opacity" Type="System.Double" />
+        <Parameter Name="opacityAnimations" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="opacity">Der Deckkraftfaktor auf nachfolgende zeichnen-Befehle anwenden. Dieser Faktor ist kumulativ mit früheren <see cref="M:System.Windows.Media.DrawingContext.PushOpacity(System.Double)" /> Vorgänge.</param>
+        <param name="opacityAnimations">Die Uhr zum Animieren des Durchlässigkeitswert oder <see langword="null" /> für keine Animation. Diese Uhr muss erstellt werden, ein <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> , die mit dem können animiert <see cref="T:System.Double" /> Werte.</param>
+        <summary>Legt die Einstellung für die angegebene Deckkraft auf Zeichnen Kontext und wendet die angegebene Animationsuhr.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Deckkraft wird in allen nachfolgenden Zeichnungsbefehlen gemischt, bis sie vom entfernt wird die <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehl.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushOpacityMask">
+      <MemberSignature Language="C#" Value="public abstract void PushOpacityMask (System.Windows.Media.Brush opacityMask);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushOpacityMask(class System.Windows.Media.Brush opacityMask) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.PushOpacityMask(System.Windows.Media.Brush)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opacityMask" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="opacityMask">Die Deckkraftmaske nachfolgende Zeichnungen zuweisen. Die Alphawerte dieses Pinsels bestimmen die Deckkraft der Zeichnung auf die er angewendet wird.</param>
+        <summary>Legt die angegebenen Deckkraftmaske auf Zeichnen verwendeten Kontext ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Maske ist für alle nachfolgenden zeichnen-Befehle angewendet, bis sie von entfernt wird die <xref:System.Windows.Media.DrawingContext.Pop%2A> Vorgang.  
+  
+ Weitere Informationen zum Erstellen von Deckkraftmasken, finden Sie unter [Opacity Masken Overview](~/docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushTransform">
+      <MemberSignature Language="C#" Value="public abstract void PushTransform (System.Windows.Media.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushTransform(class System.Windows.Media.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.PushTransform(System.Windows.Media.Transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="transform">Die Transformation für nachfolgende zeichnen-Befehle gelten.</param>
+        <summary>Legt den angegebenen <see cref="T:System.Windows.Media.Transform" /> auf den zeichnen-Kontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Transformation wird auf alle nachfolgenden zeichnen-Befehle, bis sie vom entfernt wird die <xref:System.Windows.Media.DrawingContext.Pop%2A> Befehl.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyApiNonstructuralChange">
+      <MemberSignature Language="C#" Value="protected virtual void VerifyApiNonstructuralChange ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void VerifyApiNonstructuralChange() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingContext.VerifyApiNonstructuralChange" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

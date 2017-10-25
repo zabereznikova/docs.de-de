@@ -1,0 +1,279 @@
+<Type Name="StorePermissionFlags" FullName="System.Security.Permissions.StorePermissionFlags">
+  <TypeSignature Language="C#" Value="public enum StorePermissionFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed StorePermissionFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.StorePermissionFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den zugelassenen Zugriff auf x. 509-Zertifikatspeicher an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele dieser Zugriffsberechtigungen darstellen potenzielle Sicherheit und Datenschutz Bedrohungen. Hervorragende sollten Vorsicht beim Erteilen von Zugriff auf Speicher. Eine kurze Beschreibung des Typs der Bedrohung, die von einer Zugriff verfügbar gemacht werden, kann in der Zusammenfassung für den Zugriff gefunden werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.StorePermissionFlags> Enumeration.  
+  
+ [!code-cpp[System.Security.Permissions.StorePermission#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.StorePermission/CPP/storepermission.cpp#2)]
+ [!code-csharp[System.Security.Permissions.StorePermission#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.StorePermission/CS/storepermission.cs#2)]
+ [!code-vb[System.Security.Permissions.StorePermission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.StorePermission/VB/program.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddToStore">
+      <MemberSignature Language="C#" Value="AddToStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags AddToStore = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.AddToStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit zum Hinzufügen eines Zertifikats in einem Speicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aus Gründen der Sicherheit sollten diese Funktion nur für hoch vertrauenswürdigen Code erteilt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllFlags">
+      <MemberSignature Language="C#" Value="AllFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags AllFlags = int32(247)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.AllFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Möglichkeit, alle auszuführen, Zertifikat und Speichervorgänge.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStore">
+      <MemberSignature Language="C#" Value="CreateStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags CreateStore = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.CreateStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit, erstellen Sie einen neuen Speicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neue Geschäfte entstehen durch Aufrufen der <xref:System.Security.Cryptography.X509Certificates.X509Store.Open%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteStore">
+      <MemberSignature Language="C#" Value="DeleteStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags DeleteStore = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.DeleteStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit, einen Speicher zu löschen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktionalität ist nicht verfügbar gemacht, durch die <xref:System.Security.Cryptography.X509Certificates.X509Store> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateCertificates">
+      <MemberSignature Language="C#" Value="EnumerateCertificates" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags EnumerateCertificates = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit zum Auflisten der Zertifikate in einem Speicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aus Gründen des Datenschutzes sollte diese Möglichkeit nur voll vertrauenswürdigen Code erteilt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateStores">
+      <MemberSignature Language="C#" Value="EnumerateStores" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags EnumerateStores = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.EnumerateStores" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit, den Speicher auf einem Computer auflisten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktionalität ist nicht verfügbar gemacht, durch die <xref:System.Security.Cryptography.X509Certificates.X509Store> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFlags">
+      <MemberSignature Language="C#" Value="NoFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags NoFlags = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.NoFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führen Sie ein Zertifikat oder Speichervorgänge ist nicht die Berechtigung erteilt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStore">
+      <MemberSignature Language="C#" Value="OpenStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags OpenStore = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.OpenStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit, einen Speicher zu öffnen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Möglichkeit, einen Speicher zu öffnen, schließt nicht die Möglichkeit zum Auflisten von Zertifikaten (die datenschutzanliegen ausgelöst wird) oder zum Hinzufügen oder Entfernen von Zertifikaten (wodurch u. u. durch Sicherheitsprobleme ausgelöst wird).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFromStore">
+      <MemberSignature Language="C#" Value="RemoveFromStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.StorePermissionFlags RemoveFromStore = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.StorePermissionFlags.RemoveFromStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit zum Entfernen eines Zertifikats aus einem Speicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Möglichkeit sollte nur für hoch vertrauenswürdigen Code erteilt werden, da durch Entfernen eines Zertifikats zu einem DOS führen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

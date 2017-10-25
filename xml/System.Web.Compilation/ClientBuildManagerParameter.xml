@@ -1,0 +1,187 @@
+<Type Name="ClientBuildManagerParameter" FullName="System.Web.Compilation.ClientBuildManagerParameter">
+  <TypeSignature Language="C#" Value="public class ClientBuildManagerParameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ClientBuildManagerParameter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ClientBuildManagerParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Werte, die für den ASP.NET-Compiler während der Vorkompilierung übergeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET Web Pages und Codedateien können vorkompiliert werden, können für die Bereitstellung der Website, ohne den Quellcode bereitzustellen und zu ermöglichen eine schnellere Antwort für den Benutzer. Weitere Informationen zum Vorkompilieren einer ASP.NET-Website finden Sie unter [Vorkompilierung-Übersicht über ASP.NET Web Site Projekt](http://msdn.microsoft.com/library/a88e56f9-b232-47c5-92e0-f9674ed15e5a).  
+  
+ Die <xref:System.Web.Compilation.ClientBuildManagerParameter> Klasse speichert die Werte, die während der Vorkompilierung verwendet werden. Die <xref:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags%2A> Eigenschaft bestimmt, wie die Assembly erstellt wird. Sie können z. B. festlegen <xref:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags%2A> auf <xref:System.Web.Compilation.PrecompilationFlags.Clean> neu kompilieren zuvor kompilierten Komponenten, oder legen Sie es auf <xref:System.Web.Compilation.PrecompilationFlags.OverwriteTarget> gestatten die resultierende Assembly Überschreiben von Komponenten im Zielverzeichnis. Die <xref:System.Web.Compilation.PrecompilationFlags> Enumerator wurde ein <xref:System.FlagsAttribute> Attribut, das eine bitweise Kombination der Memberwerte zulässt. Die <xref:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags%2A> Eigenschaft darf mehr als einen Wert aus der <xref:System.Web.Compilation.PrecompilationFlags> Enumeration, um eine Kombination von Vorkompilierung Verhalten festzulegen.  
+  
+ Entweder die <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyContainer%2A> Eigenschaft oder die <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyFile%2A> Eigenschaft ein Wert zum Erstellen einer Assembly mit starkem Namen zugewiesen. Beide Werte müssen nicht festgelegt werden, um eine Assembly mit starkem Namen zu erstellen.  
+  
+ Ein <xref:System.Web.Compilation.ClientBuildManagerParameter> Objekt wird zum Übergeben der <xref:System.Web.Compilation.ClientBuildManager> -Objekt über die <xref:System.Web.Compilation.ClientBuildManager.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel ist Teil eines Codebeispiels der <xref:System.Web.Compilation.ClientBuildManager> -Klassenübersicht. Im Beispiel eine <xref:System.Web.Compilation.ClientBuildManagerParameter> -Objekt wird erstellt, und seine Werte festgelegt sind. Die resultierende Assembly hat einen starken Namen basierend auf eine Datei mit dem angegebenen Schlüssel und wird gemäß der bereitgestellten Vorkompilieren <xref:System.Web.Compilation.PrecompilationFlags> Werte.  
+  
+ [!code-csharp[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientBuildManagerParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ClientBuildManagerParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.ClientBuildManagerParameter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert keine Eigenschaftswerte. Diese Werte müssen festgelegt werden, über die <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyContainer%2A>, <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyFile%2A>, und <xref:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags%2A> Eigenschaften, nachdem das Objekt erstellt wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel ist Teil eines Codebeispiels der <xref:System.Web.Compilation.ClientBuildManager> -Klassenübersicht. Im Beispiel eine <xref:System.Web.Compilation.ClientBuildManagerParameter> -Objekt wird erstellt, und seine Werte festgelegt sind. Die resultierende Assembly hat einen starken Namen basierend auf eine Datei mit dem angegebenen Schlüssel und wird gemäß der bereitgestellten Vorkompilieren <xref:System.Web.Compilation.PrecompilationFlags> Werte.  
+  
+ [!code-csharp[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludedVirtualPaths">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; ExcludedVirtualPaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; ExcludedVirtualPaths" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ClientBuildManagerParameter.ExcludedVirtualPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ausgeschlossen virtuelle Pfaden.</summary>
+        <value>Ausgeschlossene virtuellen Pfade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrecompilationFlags">
+      <MemberSignature Language="C#" Value="public System.Web.Compilation.PrecompilationFlags PrecompilationFlags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Compilation.PrecompilationFlags PrecompilationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Flags, die die Vorkompilierung Verhalten zu bestimmen.</summary>
+        <value>Die <see cref="T:System.Web.Compilation.PrecompilationFlags" /> für einen Clientbuild.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags%2A> Eigenschaft bestimmt, wie die Assembly erstellt wird. Sie können z. B. festlegen <xref:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags%2A> auf <xref:System.Web.Compilation.PrecompilationFlags.Clean> neu kompilieren zuvor kompilierten Komponenten, oder legen Sie es auf <xref:System.Web.Compilation.PrecompilationFlags.OverwriteTarget> gestatten die resultierende Assembly Überschreiben von Komponenten im Zielverzeichnis. Die <xref:System.Web.Compilation.PrecompilationFlags> Enumerator wurde ein <xref:System.FlagsAttribute> Attribut, das eine bitweise Kombination der Memberwerte zulässt. Die <xref:System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags%2A> Eigenschaft darf mehr als einen Wert aus der <xref:System.Web.Compilation.PrecompilationFlags> Enumeration, um eine Kombination von Vorkompilierung Verhalten festzulegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel ist Teil eines Codebeispiels der <xref:System.Web.Compilation.ClientBuildManager> -Klassenübersicht. Im Beispiel eine <xref:System.Web.Compilation.ClientBuildManagerParameter> -Objekt wird erstellt, und seine Werte festgelegt sind. Die resultierende Assembly hat einen starken Namen basierend auf eine Datei mit dem angegebenen Schlüssel und wird gemäß der bereitgestellten Vorkompilieren <xref:System.Web.Compilation.PrecompilationFlags> Werte.  
+  
+ [!code-csharp[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrongNameKeyContainer">
+      <MemberSignature Language="C#" Value="public string StrongNameKeyContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StrongNameKeyContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Schlüsselcontainer, die während der Kompilierung verwendet.</summary>
+        <value>Ein <see cref="T:System.String" /> des Werts für den Schlüsselcontainer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entweder die <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyContainer%2A> Eigenschaft oder die <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyFile%2A> Eigenschaft ein Wert zum Erstellen einer Assembly mit starkem Namen zugewiesen. Beide Werte müssen nicht festgelegt werden, um eine Assembly mit starkem Namen zu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ähnelt dem Codebeispiel in die <xref:System.Web.Compilation.ClientBuildManager> Klassenübersicht, mit dem Unterschied, dass die resultierende Assembly einen starken Namen basierend auf den Container für den angegebenen Schlüssel verfügt. Es wird gemäß der bereitgestellten Vorkompilieren <xref:System.Web.Compilation.PrecompilationFlags> Werte.  
+  
+ [!code-csharp[System.Web.Compilation.ClientBuildManager_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager_2/CS/source.cs#1)]
+ [!code-vb[System.Web.Compilation.ClientBuildManager_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager_2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrongNameKeyFile">
+      <MemberSignature Language="C#" Value="public string StrongNameKeyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StrongNameKeyFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schlüsseldatei, die während der Kompilierung verwendet.</summary>
+        <value>Ein <see cref="T:System.String" /> des Werts für die Schlüsseldatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entweder die <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyContainer%2A> Eigenschaft oder die <xref:System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyFile%2A> Eigenschaft ein Wert zum Erstellen einer Assembly mit starkem Namen zugewiesen. Beide Werte müssen nicht festgelegt werden, um eine Assembly mit starkem Namen zu erstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel ist Teil eines Codebeispiels der <xref:System.Web.Compilation.ClientBuildManager> -Klassenübersicht. Im Beispiel eine <xref:System.Web.Compilation.ClientBuildManagerParameter> -Objekt wird erstellt, und seine Werte festgelegt sind. Die resultierende Assembly hat einen starken Namen basierend auf eine Datei mit dem angegebenen Schlüssel und wird gemäß der bereitgestellten Vorkompilieren <xref:System.Web.Compilation.PrecompilationFlags> Werte.  
+  
+ [!code-csharp[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ClientBuildManager#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ClientBuildManager/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

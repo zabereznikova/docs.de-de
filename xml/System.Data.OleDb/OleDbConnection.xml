@@ -1,0 +1,1047 @@
+<Type Name="OleDbConnection" FullName="System.Data.OleDb.OleDbConnection">
+  <TypeSignature Language="C#" Value="public sealed class OleDbConnection : System.Data.Common.DbConnection, ICloneable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbConnection extends System.Data.Common.DbConnection implements class System.Data.IDbConnection, class System.ICloneable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbConnection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("InfoMessage")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine offene Verbindung mit einer Datenquelle dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.OleDb.OleDbConnection> -Objekt stellt eine eindeutige Verbindung mit einer Datenquelle dar. Mit einem Client/Server-Datenbanksystem ist es, eine Netzwerkverbindung mit dem Server entspricht. Abhängig von den systemeigenen OLE DB-Anbieter einige Methoden oder Eigenschaften der unterstützten Funktionen ein <xref:System.Data.OleDb.OleDbConnection> Objekt möglicherweise nicht zur Verfügung.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Data.OleDb.OleDbConnection>, werden alle Eigenschaften auf ihre Ausgangswerte festgelegt. Eine Liste der folgenden Werte sind, finden Sie unter der <xref:System.Data.OleDb.OleDbConnection> Konstruktor.  
+  
+ Sie können mehrere DataReader auf einem einzelnen öffnen <xref:System.Data.OleDb.OleDbConnection>. Wenn der OLE DB-Anbieter, den Sie verwenden mehr als ein DataReader über eine einzelne Verbindung nicht unterstützt wird, öffnet den Anbieter implizit eine zusätzliche Verbindung für jeden.  
+  
+ Wenn die <xref:System.Data.OleDb.OleDbConnection> Gültigkeitsbereich verlässt, sie ist nicht geschlossen. Aus diesem Grund müssen Sie die Verbindung explizit schließen, durch den Aufruf <xref:System.Data.OleDb.OleDbConnection.Close%2A> oder **Dispose**, oder indem Sie die <xref:System.Data.OleDb.OleDbConnection> -Objekts innerhalb einer `Using` Anweisung.  
+  
+> [!NOTE]
+>  Um leistungsstarke Anwendungen bereitzustellen, müssen Sie das Verbindungspooling verwenden. Wenn Sie die .NET Framework-Datenanbieter für OLE DB-verwenden, müssen Sie keinen Aktivieren des Verbindungspoolings, da der Anbieter automatisch verwaltet. Weitere Informationen zur Verwendung von Verbindung mit dem .NET Framework-Datenanbieter für OLE DB-pooling finden Sie unter [OLE DB, ODBC und Oracle-Verbindungspooling](~/docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
+  
+ Wenn ein schwerwiegender <xref:System.Data.OleDb.OleDbException> (z. B. mit einem SQL Server-Schweregrad von 20 oder höher) wird von der Methode ausgeführten generiert eine <xref:System.Data.OleDb.OleDbCommand>, <xref:System.Data.OleDb.OleDbConnection> ist geschlossen. Die Benutzer können die Verbindung aber erneut öffnen und fortfahren.  
+  
+ Eine Anwendung, die eine Instanz erstellt die <xref:System.Data.OleDb.OleDbConnection> Objekt kann alle direkten und indirekten Aufrufer damit ausreichende Berechtigungen, um den Code, durch Festlegen der deklarativen oder imperativen sicherheitsforderungen erfordern. <xref:System.Data.OleDb.OleDbConnection>Mithilfe von sicherheitsforderungen macht die <xref:System.Data.OleDb.OleDbPermission> Objekt. Benutzer können überprüfen, ob ihr Code mit über ausreichende Berechtigungen verfügt die <xref:System.Data.OleDb.OleDbPermissionAttribute> Objekt. Benutzer und Administratoren können auch die [Caspol.exe (Code Access Security Policy-Tool)](~/docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) -Sicherheitsrichtlinie für die Computer-, Benutzer- und Enterprise-Ebenen zu ändern. Weitere Informationen finden Sie unter [Codezugriffssicherheit und ADO.NET](~/docs/framework/data/adonet/code-access-security.md).  
+  
+ Weitere Informationen zur Behandlung von Warnungen und sonstige Meldungen vom Data-Server finden Sie unter [Verbindungsereignisse](~/docs/framework/data/adonet/connection-events.md).  
+  
+> [!NOTE]
+>  Die <xref:System.Data.OleDb.OleDbConnection> -Objekt festlegen oder Abrufen von dynamischen Eigenschaften, die spezifisch für einen OLE DB-Anbieter nicht unterstützt. Es werden nur Eigenschaften unterstützt, die in der Verbindungszeichenfolge für den OLE DB-Anbieter übergeben werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbCommand> und ein <xref:System.Data.OleDb.OleDbConnection>. Die <xref:System.Data.OleDb.OleDbConnection> geöffnet ist, und legen Sie als die <xref:System.Data.OleDb.OleDbCommand.Connection%2A> für die <xref:System.Data.OleDb.OleDbCommand>. Das Beispiel ruft dann <xref:System.Data.OleDb.OleDbCommand.ExecuteNonQuery%2A> und schließt die Verbindung. Um dies zu erreichen <xref:System.Data.OleDb.OleDbCommand.ExecuteNonQuery%2A> übergeben wird, eine Verbindungszeichenfolge und eine Abfragezeichenfolge, die eine SQL INSERT-Anweisung ist.  
+  
+ [!code-csharp[Classic WebData OleDbConnection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbConnection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine neue Instanz der <xref:System.Data.OleDb.OleDbConnection> erstellt wird, werden die Lese-/Schreibzugriff Eigenschaften werden auf die folgenden Anfangswerte festgelegt, es sei denn, sie ausdrücklich festgelegt wurden, mit ihrer zugeordneten Schlüsselwörtern in der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Eigenschaft.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>|Leere Zeichenfolge ("")|  
+|<xref:System.Data.OleDb.OleDbConnection.ConnectionTimeout%2A>|15|  
+|<xref:System.Data.OleDb.OleDbConnection.Database%2A>|Leere Zeichenfolge ("")|  
+|<xref:System.Data.OleDb.OleDbConnection.DataSource%2A>|Leere Zeichenfolge ("")|  
+  
+ Sie können den Wert für diese Eigenschaften ändern, nur mithilfe der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und öffnet eine <xref:System.Data.OleDb.OleDbConnection>.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.OleDbConnection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.OleDbConnection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.OleDbConnection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.OleDbConnection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbConnection (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Die Verbindung, mit der die Datenbank geöffnet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OleDb.OleDbConnection" /> Klasse mit der angegebenen Verbindungszeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine neue Instanz der <xref:System.Data.OleDb.OleDbConnection> erstellt wird, werden die Lese-/Schreibzugriff Eigenschaften werden auf die folgenden Anfangswerte festgelegt, es sei denn, sie ausdrücklich festgelegt wurden, mit ihrer zugeordneten Schlüsselwörtern in der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Eigenschaft.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>|`connectionString`|  
+|<xref:System.Data.OleDb.OleDbConnection.ConnectionTimeout%2A>|15|  
+|<xref:System.Data.OleDb.OleDbConnection.Database%2A>|Leere Zeichenfolge ("")|  
+|<xref:System.Data.OleDb.OleDbConnection.DataSource%2A>|Leere Zeichenfolge ("")|  
+  
+ Sie können den Wert für diese Eigenschaften ändern, nur mithilfe der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und öffnet eine <xref:System.Data.OleDb.OleDbConnection>.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.OleDbConnection1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.OleDbConnection1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.OleDbConnection1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.OleDbConnection1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDbTransaction">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbTransaction BeginDbTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbTransaction BeginDbTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.BeginDbTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbTransaction BeginTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbTransaction BeginTransaction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.BeginTransaction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet eine Datenbanktransaktion mit dem aktuellen <see cref="T:System.Data.IsolationLevel" /> Wert.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen explizit einen commit oder Rollback der Transaktion verwendet die <xref:System.Data.OleDb.OleDbTransaction.Commit%2A> oder <xref:System.Data.OleDb.OleDbTransaction.Rollback%2A> Methode. Um sicherzustellen, dass die .NET Framework-Datenanbieter für OLE DB-Transaktionsverwaltungsmodell ordnungsgemäß ausführt, verwenden Sie andere Management-Transaktionsmodelle, z. B. von der Datenquelle.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und ein <xref:System.Data.OleDb.OleDbTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A>, <xref:System.Data.OleDb.OleDbTransaction.Commit%2A>, und <xref:System.Data.OleDb.OleDbTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.BeginTransaction Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.BeginTransaction Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Parallele Transaktionen werden nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbTransaction BeginTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbTransaction BeginTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.BeginTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">Die Isolationsstufe, unter der die Transaktion ausgeführt werden soll.</param>
+        <summary>Startet eine Datenbanktransaktion mit dem angegebenen Isolationsgrad.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen explizit einen commit oder Rollback der Transaktion verwendet die <xref:System.Data.OleDb.OleDbTransaction.Commit%2A> oder <xref:System.Data.OleDb.OleDbTransaction.Rollback%2A> Methode. Um sicherzustellen, dass die .NET Framework-Datenanbieter für OLE DB-Transaktionsverwaltungsmodell ordnungsgemäß ausführt, verwenden Sie andere Management-Transaktionsmodelle, z. B. von der Datenquelle.  
+  
+> [!NOTE]
+>  Wenn Sie eine Isolationsstufe nicht angeben, wird die Standardisolationsstufe für den zugrunde liegenden Anbieter verwendet. Eine Isolationsstufe mit Angabe der <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A> -Methode, verwenden Sie die Überladung, die akzeptiert die `isolationLevel` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und ein <xref:System.Data.OleDb.OleDbTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A>, <xref:System.Data.OleDb.OleDbTransaction.Commit%2A>, und <xref:System.Data.OleDb.OleDbTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.BeginTransaction1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.BeginTransaction1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Parallele Transaktionen werden nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeDatabase">
+      <MemberSignature Language="C#" Value="public override void ChangeDatabase (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ChangeDatabase(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.ChangeDatabase(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Datenbankname.</param>
+        <summary>Ändert die aktuelle Datenbank für eine offene <see cref="T:System.Data.OleDb.OleDbConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert im angegebenen der `database` Parameter muss einen gültigen Datenbanknamen an. Die `database` Parameter darf nicht enthalten, einen null-Wert, eine leere Zeichenfolge oder eine Zeichenfolge nur aus Leerzeichen besteht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und einige seiner Eigenschaften schreibgeschützt angezeigt.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.Database Example#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.Database Example/CS/source.cs#2)]
+ [!code-vb[Classic WebData OleDbConnection.Database Example#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.Database Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Datenbankname ist ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist nicht geöffnet.</exception>
+        <exception cref="T:System.Data.OleDb.OleDbException">Die Datenbank kann nicht geändert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Verbindung mit der Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbConnection.Close%2A> -Methode einen Rollback aller anstehenden Transaktionen. Klicken Sie dann die Verbindung zum Verbindungspool frei oder schließt die Verbindung, wenn Verbindungspooling deaktiviert ist. Wenn <xref:System.Data.OleDb.OleDbConnection.Close%2A> wird aufgerufen, während der Verarbeitung einer <xref:System.Data.Common.DbConnection.StateChange> Ereignis kein zusätzlicher <xref:System.Data.Common.DbConnection.StateChange> Ereignisse werden ausgelöst.  
+  
+ Eine Anwendung kann Aufrufen <xref:System.Data.OleDb.OleDbConnection.Close%2A> mehr als einmal. Es wird keine Ausnahme ausgelöst.  
+  
+> [!CAUTION]
+>  Rufen Sie nicht <xref:System.Data.OleDb.OleDbConnection.Close%2A> oder **Dispose** auf eine <xref:System.Data.OleDb.OleDbConnection>, wird ein <xref:System.Data.OleDb.OleDbDataReader>, oder ein anderes verwaltetes Objekt in der `Finalize` -Methode der Klasse. In einer Finalize-Methode sollten Sie nur nicht verwaltete Ressourcen freizugeben, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public override string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbConnection.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.ADO.Design.OleDbConnectionStringEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge ab, mit der eine Datenbank geöffnet wird, oder legt diese fest.</summary>
+        <value>Die OLE DB-Anbieter Verbindungszeichenfolge, die Namen der Datenquelle und andere für das Herstellen der anfangsverbindung erforderliche Parameter enthält. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Verbindungszeichenfolgenformat für OLE DB-so getreu wie möglich mit folgenden Ausnahmen entsprechend dient:  
+  
+-   Die "Provider = `value` "-Klausel ist erforderlich. Allerdings können keine "Provider = MSDASQL", da der .NET Framework-Datenanbieter für OLE DB den OLE DB-Anbieter für ODBC (MSDASQL) nicht unterstützt. Um ODBC-Datenquellen zuzugreifen, verwenden Sie die <xref:System.Data.Odbc.OdbcConnection> -Objekt, das in der <xref:System.Data.Odbc> Namespace.  
+  
+-   Die Verbindungszeichenfolge, die zurückgegeben werden im Gegensatz zu ODBC oder ADO ist identisch mit den Benutzersatz <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>, minus der Sicherheitsinformationen Wenn `Persist Security Info` festgelegt ist, um `false` (Standard). Die .NET Framework-Datenanbieter für OLE DB nicht beibehalten oder das Kennwort in einer Verbindungszeichenfolge zurück, es sei denn, Sie legen die `Persist Security Info` Schlüsselwort `true` (nicht empfohlen). Um ein hohes Maß an Sicherheit zu gewährleisten, wird dringend empfohlen, Sie verwenden die `Integrated Security` Schlüsselwort mit `Persist Security Info` festgelegt `false`.  
+  
+ Sie können die <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Eigenschaft für die Verbindung mit einer Vielzahl von Datenquellen. Das folgende Beispiel veranschaulicht mehrere mögliche Verbindungszeichenfolgen.  
+  
+```  
+"Provider=MSDAORA; Data Source=ORACLE8i7;Persist Security Info=False;Integrated Security=Yes"  
+  
+"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=c:\bin\LocalAccess40.mdb"  
+  
+"Provider=SQLOLEDB;Data Source=(local);Integrated Security=SSPI"  
+```  
+  
+ Wenn die `Data Source` Schlüsselwort in der Verbindungszeichenfolge nicht angegeben ist, der Anbieter versucht, mit dem lokalen Server herstellen, wenn ein solcher verfügbar ist.  
+  
+ Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Using Connection String Keywords with SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkId=126696).  
+  
+ Die <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Eigenschaft kann festgelegt werden, nur, wenn die Verbindung geschlossen wird. Viele der Werte der Verbindungszeichenfolgen verfügen über entsprechende schreibgeschützte Eigenschaften. Wenn die Verbindungszeichenfolge festgelegt ist, werden diese Eigenschaften aktualisiert, sofern ein Fehler aufgetreten ist. In diesem Fall werden keine der Eigenschaften aktualisiert. <xref:System.Data.OleDb.OleDbConnection>Eigenschaften zurückgeben, nur diejenigen Einstellungen, die in der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>.  
+  
+ Zurücksetzen der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> für eine geschlossene Verbindung setzt alle Verbindungszeichenfolgenwerte und verknüpfte Eigenschaften. Dies schließt das Kennwort ein. Wenn Sie eine Verbindungszeichenfolge festlegen, z. B. "Initial Catalog = AdventureWorks", und setzen Sie die Verbindungszeichenfolge für "Provider = SQLOLEDB; Datenquelle = MySQLServer;" IntegratedSecurity "= SSPI", die <xref:System.Data.OleDb.OleDbConnection.Database%2A> -Eigenschaftensatz ist nicht mehr auf AdventureWorks. (Der Wert Anfangskatalog der Verbindungszeichenfolge entspricht der `Database` Eigenschaft.)  
+  
+ Eine vorläufige Validierung der Verbindungszeichenfolge wird durchgeführt, wenn die Eigenschaft festgelegt ist. Wenn Werte für die `Provider`, `Connect Timeout`, `Persist Security Info`, oder `OLE DB Services` enthalten sind diese Werte werden in der Zeichenfolge überprüft. Wenn eine Anwendung ruft die <xref:System.Data.OleDb.OleDbConnection.Open%2A> -Methode, die Verbindungszeichenfolge wurde vollständig überprüft. Wenn die Verbindungszeichenfolge ungültige oder nicht unterstützte Eigenschaften, eine Laufzeitausnahme, z. B. enthält <xref:System.ArgumentException>, generiert wird.  
+  
+> [!CAUTION]
+>  Es ist möglich, die Verbindungsinformationen für eine <xref:System.Data.OleDb.OleDbConnection> in einer Datei (Universal Data Link, UDL); jedoch sollten Sie auf diese Weise. UDL-Dateien werden nicht verschlüsselt und verfügbar gemachte Verbindungszeichenfolgeninformationen in Klartext. Da es sich bei einer UDL-Datei um eine externe Ressource der Anwendung handelt, kann sie nicht mit .NET Framework gesichert werden.  
+  
+ Das Grundformat einer Verbindungszeichenfolge enthält eine Reihe von durch Semikolons getrennten Paaren aus Schlüsselwort-Wert. Ein Gleichheitszeichen (=) verbindet jedes Schlüsselwort mit seinem Wert. Um Werte einzuschließen, die ein Semikolon, einfache Anführungszeichen und doppelten Anführungszeichen enthalten, muss der Wert in Anführungszeichen eingeschlossen werden. Wenn der Wert ein Semikolon und ein doppeltes Anführungszeichen enthält, kann der Wert in einfache Anführungszeichen eingeschlossen werden. Das einfache Anführungszeichen ist auch hilfreich, wenn der Wert mit einem doppelten Anführungszeichen beginnt. Umgekehrt kann das doppelte Anführungszeichen verwendet werden, wenn der Wert mit einem einfachen Anführungszeichen beginnt. Wenn der Wert einfache Anführungszeichen und doppelte Anführungszeichen enthält, muss Anführungszeichen verwendet, um den Wert einzuschließen verdoppelt werden jedes Mal, wenn er im Wert vorkommt.  
+  
+ Um den Zeichenfolgenwert voran- oder nachgestellte Leerzeichen einschließt, muss der Wert in einfache Anführungszeichen oder doppelte Anführungszeichen eingeschlossen werden. Führenden oder nachgestellten Leerzeichen ganze Zahl, boolescher Wert oder aufgezählter Werte werden ignoriert, auch wenn in Anführungszeichen eingeschlossen. Allerdings werden Leerzeichen in einer Zeichenfolge-literalschlüsselwort oder Wert beibehalten. Einfache oder doppelte Anführungszeichen können in einer Verbindungszeichenfolge verwendet werden, ohne Trennzeichen (z. B. `Data Source= my'Server` oder `Data Source= my"Server`), wenn keine Anführungszeichen, das erste oder letzte Zeichen im Wert ist.  
+  
+ Wenn Sie ein Gleichheitszeichen (=) in ein Schlüsselwort oder einen Wert einschließen, muss es von einem anderen Gleichheitszeichen vorangehen. Beispielsweise ist in der hypothetischen Verbindungszeichenfolge  
+  
+```  
+"key==word=value"  
+```  
+  
+ Das Schlüsselwort "Schlüssel = Word" und der Wert ist "Value".  
+  
+ Wenn ein bestimmtes Schlüsselwort in einem Schlüsselwort = Wert-Paar tritt mehrfach in einer Verbindungszeichenfolge aufgeführten letzten Vorkommens in der festgelegte Wert verwendet wird.  
+  
+ Schlüsselwörter sind nicht in der Groß-/Kleinschreibung beachtet.  
+  
+> [!CAUTION]
+>  Sie sollten Vorsicht verwenden, beim Erstellen einer Verbindungszeichenfolge, die basierend auf Benutzereingaben, z. B. beim Abrufen von Informationen zur Benutzer-ID und Kennwort aus ein Dialogfeld und an die Verbindungszeichenfolge angefügt. Die Anwendung sollte stellen Sie sicher, dass ein Benutzer zusätzliche Verbindungszeichenfolge-Parameter in dieser Werte, z. B. einbetten kann durch Eingabe eines Kennworts als "Validpassword; Database = Somedb" in ein Versuch zum Anhängen an eine andere Datenbank. Wenn Sie die Parameter der Verbindungszeichenfolge erweiterte Eigenschaften für OLE DB-Verbindungen verwenden, Benutzer-IDs und Kennwörtern übergeben, da das Speichern von Benutzer-IDs und Kennwörter in Klartext, wenn möglich sollten, und vermeiden Sie die Standardeinstellung von `Persist Security Info= false` nicht Auswirkungen auf die `Extended Properties` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und legt einige ihrer Eigenschaften in der Verbindungszeichenfolge angegeben.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.DataSource Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.DataSource Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.DataSource Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.DataSource Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Es wurde ein ungültiges Argument für eine Verbindungszeichenfolge bereitgestellt, oder ein erforderliches Argument für eine Verbindungszeichenfolge wurde nicht bereitgestellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionTimeout">
+      <MemberSignature Language="C#" Value="public override int ConnectionTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbConnection.ConnectionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeit ab, die beim Verbindungsaufbau gewartet werden soll, bis der Versuch beendet und ein Fehler generiert wird.</summary>
+        <value>Die Zeit in Sekunden für eine Verbindung zu öffnen. Der Standardwert ist 15 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert 0 gibt an, dass und sollte vermieden werden, einem <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> , da beim Herstellen der Verbindung unbegrenzt gewartet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und legt einige ihrer Eigenschaften in der Verbindungszeichenfolge angegeben.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.ConnectionTimeout Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.ConnectionTimeout Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.ConnectionTimeout Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.ConnectionTimeout Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der festgelegte Wert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand CreateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand CreateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.CreateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Data.OleDb.OleDbCommand" /> zugeordnete Objekt der <see cref="T:System.Data.OleDb.OleDbConnection" />.</summary>
+        <returns>Ein <see cref="T:System.Data.OleDb.OleDbCommand" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDbCommand">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbCommand CreateDbCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbCommand CreateDbCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.CreateDbCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Database">
+      <MemberSignature Language="C#" Value="public override string Database { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Database" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbConnection.Database" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aktuellen Datenbank oder der nach dem Öffnen einer Verbindung zu verwendenden Datenbank ab.</summary>
+        <value>Der Name der aktuellen Datenbank oder der nach dem Öffnen einer Verbindung zu verwendenden Datenbank. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbConnection.Database%2A> Eigenschaft dynamisch aktualisiert. Wenn Sie die aktuelle Datenbank mit einer SQL­Anweisung ändern oder die <xref:System.Data.OleDb.OleDbConnection.ChangeDatabase%2A> -Methode, eine informative Meldung gesendet wird und die Eigenschaft wird automatisch aktualisiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und einige seiner Eigenschaften schreibgeschützt angezeigt.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.Database Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.Database Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.Database Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.Database Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public override string DataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbConnection.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Servernamen oder den Dateinamen der Datenquelle an.</summary>
+        <value>Der Servername oder der Dateiname der Datenquelle. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Verbindung mit der Datenbank geschlossen ist, die `DataSource` Eigenschaft gibt den Inhalt `ConnectionString` für das Schlüsselwort der Datenquelle. Wenn die Verbindung geöffnet ist und die `ConnectionString` Data Source-Schlüsselwort-Wert beginnt mit "&#124;" DataDirectory "&#124;", die Eigenschaft gibt den Inhalt `ConnectionString` für das Schlüsselwort der Datenquelle nur. Wenn die Verbindung mit der Datenbank geöffnet ist, wird die Eigenschaft zurückgibt, was der systemeigene Anbieter für zurückgibt der `DBPROP_INIT_DATASOURCE,` und, die leer ist, ist des systemeigenen Anbieters `DBPROP_DATASOURCENAME` zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und einige seiner Eigenschaften schreibgeschützt angezeigt.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.DataSource Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.DataSource Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.DataSource Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.DataSource Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistDistributedTransaction">
+      <MemberSignature Language="C#" Value="public void EnlistDistributedTransaction (System.EnterpriseServices.ITransaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnlistDistributedTransaction(class System.EnterpriseServices.ITransaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.EnlistDistributedTransaction(System.EnterpriseServices.ITransaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.EnterpriseServices.ITransaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Ein Verweis auf eine vorhandene <see cref="T:System.EnterpriseServices.ITransaction" />, in der die Eintragung vorgenommen werden soll.</param>
+        <summary>Trägt sich in der angegebenen Transaktion als verteilte Transaktion ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neues in ADO.NET 2.0 ist eine Unterstützung für die Verwendung der <xref:System.Data.Common.DbConnection.EnlistTransaction%2A> Methode in einer verteilten Transaktion eintragen. Aufgrund der Eintragung einer Verbindungs in einer <xref:System.Transactions.Transaction> Instanz **EnlistTransaction** nutzt-Funktionalität in der <xref:System.Transactions> Namespace für die Verwaltung verteilter Transaktionen und wird somit vorzuziehen** EnlistDistributedTransaction** für diesen Zweck. Weitere Informationen finden Sie unter [verteilte Transaktionen](~/docs/framework/data/adonet/distributed-transactions.md).  
+  
+ Sie können weiterhin eine Eintragung in eine vorhandene verteilte Transaktion mithilfe der <xref:System.Data.OleDb.OleDbConnection.EnlistDistributedTransaction%2A> Methode, wenn die automatische Eintragung deaktiviert ist. Das Eintragen in eine vorhandene verteilte Transaktion wird sichergestellt, dass, wenn die Transaktion ein Commit oder Rollback wird vom Code an der Datenquelle vorgenommene Änderungen werden auch ein Commit oder Rollback. Weitere Informationen zu verteilten Transaktionen finden Sie unter [verteilte Transaktionen](~/docs/framework/data/adonet/distributed-transactions.md).  
+  
+ <xref:System.Data.OleDb.OleDbConnection.EnlistDistributedTransaction%2A>Gibt eine Ausnahme zurück, wenn die <xref:System.Data.OleDb.OleDbConnection> wurde bereits gestartet, eine Transaktion mit <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A>. Jedoch wenn die Transaktion eine lokale Transaktion, die an der Datenquelle begonnen wurde (z. B. indem Sie explizit Ausführen der BEGIN TRANSACTION-Anweisung mit einer <xref:System.Data.OleDb.OleDbCommand> Objekt), <xref:System.Data.OleDb.OleDbConnection.EnlistDistributedTransaction%2A> Rollback der lokale Transaktion und trägt sich in der vorhandenen verteilte Transaktion als angeforderte. Sie wird nicht erhalten, beachten Sie, dass die lokale Transaktion ein Rollback wurde und sind zuständig für die Verwaltung lokalen Transaktionen nicht mit gestartet <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistTransaction">
+      <MemberSignature Language="C#" Value="public override void EnlistTransaction (System.Transactions.Transaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnlistTransaction(class System.Transactions.Transaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.EnlistTransaction(System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Ein Verweis auf eine vorhandene <see cref="T:System.Transactions.Transaction" />, in der die Eintragung vorgenommen werden soll.</param>
+        <summary>Trägt sich in der angegebenen Transaktion als verteilte Transaktion ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neues in ADO.NET 2.0 ist eine Unterstützung für die Verwendung der <xref:System.Data.Common.DbConnection.EnlistTransaction%2A> Methode in einer verteilten Transaktion eintragen. Aufgrund der Eintragung einer Verbindungs in einer <xref:System.Transactions.Transaction> Instanz **EnlistTransaction** nutzt-Funktionalität in der <xref:System.Transactions> Namespace für die Verwaltung verteilter Transaktionen und wird somit vorzuziehen** EnlistDistributedTransaction**, verwendet eine <xref:System.EnterpriseServices.ITransaction> Objekt. Sie hat auch eine leicht andere Semantik: Nachdem eine Verbindung ausdrücklich in einer Transaktion eingetragen wurde, kann nicht ausgetragen oder in eine andere Transaktion eingetragen werden, bis die erste Transaktion abgeschlossen ist. Weitere Informationen zu verteilten Transaktionen finden Sie unter [verteilte Transaktionen](~/docs/framework/data/adonet/distributed-transactions.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOleDbSchemaTable">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable GetOleDbSchemaTable (Guid schema, object[] restrictions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable GetOleDbSchemaTable(valuetype System.Guid schema, object[] restrictions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable(System.Guid,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Guid" />
+        <Parameter Name="restrictions" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Eines der <see cref="T:System.Data.OleDb.OleDbSchemaGuid" /> Werte, der angibt, die Schematabelle zurückgegeben.</param>
+        <param name="restrictions">Ein <see cref="T:System.Object" /> Array von Einschränkungswerten. Diese werden in der Reihenfolge der Einschränkungsspalten angewendet. Das heißt, der erste Einschränkungswert gilt für die erste Einschränkungsspalte, der zweite Einschränkungswert gilt für die zweite Einschränkungsspalte usw..</param>
+        <summary>Gibt Schemainformationen aus einer Datenquelle zurück, wie durch einen GUID angegeben wird und nachdem es die angegebenen Einschränkungen angewendet.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , das den abgefragten Schemainformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schematabelle wird zurückgegeben, als eine <xref:System.Data.DataTable> , besitzt das gleiche Format wie das OLE DB-Schemarowset, die gemäß der `schema` Parameter. Verwenden der `restrictions` Parameter zum Filtern der Zeilen zurückgegeben werden sollen die <xref:System.Data.DataTable> (z. B. durch Angeben von Einschränkungen für die Tabellenname, Typ, Besitzer oder Schema). Wenn Sie Werte im Array übergeben, enthalten Sie leere Zeichenfolgen oder NULL-Werte für die Array-Elemente, die keine Werte enthalten. Wenn Sie ein leeres Array übergeben `restrictions`, alle Zeilen (eine für jede Tabelle) werden in Reihenfolge zurückgegeben. Werte im Array entspricht der Reihenfolge der Spalten in der Quelltabelle und <xref:System.Data.DataTable>. Jedes Element in das Einschränkungsarray wird mit dem Inhalt der entsprechenden Spalte im Schemarowset verglichen. Beispielsweise ist das erste Element im Einschränkungsarray auf die erste Spalte im Rowset verglichen. Wenn ein beschränkungselement nicht null ist, werden nur Zeilen aus dem Schemarowset, die exakt den Wert der Einschränkung auf das resultierende hinzugefügt <xref:System.Data.DataTable>.  
+  
+ Die <xref:System.Data.OleDb.OleDbConnection> Methodenaufrufe der zugrunde liegenden OLE-DB **IDBSchemaRowset:: GetRowset** Methode Standardkonvertierungsregeln der common Language Runtime verwenden. Weitere Informationen finden Sie unter [COM-Datentypen](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061).  
+  
+ Sie können mit Informationen zu Literalen abrufen <xref:System.Data.OleDb.OleDbSchemaGuid.DbInfoLiterals>. Dieser Artikel enthält Informationen, die äquivalent zum Aufrufen des OLE DB- **:: GetLiteralInfo** Schnittstelle oder die ADO **Connection.OpenSchema** Methode mit dem `adSchemaDBInfoLiterals` konstant.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Liste der Tabellen in einer Datenbank zurückgegeben.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.GetOleDbSchemaTable Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.GetOleDbSchemaTable Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.GetOleDbSchemaTable Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.GetOleDbSchemaTable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.OleDb.OleDbException">Der angegebene Satz von Einschränkungen ist ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der <see cref="T:System.Data.OleDb.OleDbConnection" /> ist geschlossen.</exception>
+        <exception cref="T:System.ArgumentException">Das angegebene Schemarowset wird vom OLE DB-Anbieter nicht unterstützt.  
+  
+ - oder -   
+  
+ Die <paramref name="schema" /> Parameter enthält einen Wert von <see cref="F:System.Data.OleDb.OleDbSchemaGuid.DbInfoLiterals" /> und <paramref name="restrictions" /> Parameter enthält einen oder mehrere Einschränkungen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt Schemainformationen für die Datenquelle dieser <see cref="T:System.Data.OleDb.OleDbConnection" />.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , die die Schemainformationen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchema (string collectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchema(string collectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.GetSchema(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="collectionName">Gibt den zurückzugebenden Namen des Schemas an.</param>
+        <summary>Gibt Schemainformationen für die Datenquelle dieser <see cref="T:System.Data.OleDb.OleDbConnection" /> unter Verwendung der angegebenen Zeichenfolge des Schemanamens.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , die die Schemainformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `collectionName` als Null angegeben ist die <xref:System.Data.DataTable> enthält Informationen über alle Metadaten, die verfügbar ist und der damit verbundenen Einschränkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchema (string collectionName, string[] restrictionValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchema(string collectionName, string[] restrictionValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.GetSchema(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionName" Type="System.String" />
+        <Parameter Name="restrictionValues" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="collectionName">Gibt den zurückzugebenden Namen des Schemas an.</param>
+        <param name="restrictionValues">Gibt eine Gruppe von Einschränkungswerten für das angeforderte Schema.</param>
+        <summary>Gibt Schemainformationen für die Datenquelle dieser <see cref="T:System.Data.OleDb.OleDbConnection" /> mithilfe der angegebenen Zeichenfolge des Schemanamens und des angegebenen Zeichenfolgenarrays der Einschränkungswerte.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , die die Schemainformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `collectionName` als Null angegeben ist die <xref:System.Data.DataTable> enthält Informationen über alle Metadaten, die verfügbar ist und der damit verbundenen Einschränkungen.  
+  
+ Die `restrictionValues` kann Parameter angeben, * n * Tiefe der Werte, die durch die Auflistung der Einschränkungen für eine bestimmte Sammlung angegeben werden. Um Werte für eine angegebene Einschränkung festgelegt, und die Werte der anderen Einschränkungen festgelegt werden, müssen Sie die vorangehenden Einschränkungen mit null initialisiert und veröffentlichen Sie den entsprechenden Wert in die Einschränkung, der Sie, geben Sie einen Wert für möchten festlegen.  
+  
+ Ein Beispiel hierfür ist die Auflistung "Tabellen". Wenn die Auflistung "Tabellen" verfügt über drei Einschränkungen (Datenbank, Besitzer und Tabellennamen), und nur die Tabellen, die dem Besitzer "Carl" zugeordnete wieder abgerufen werden soll, müssen Sie die folgenden Werte (mindestens) übergeben: null, "Carl". Wenn ein Einschränkungswert nicht übergeben wird, werden die Standardwerte für diese Einschränkung verwendet. Dies ist die Zuordnung beim Übergeben von Null aufweist, unterscheidet sich vom eine leere Zeichenfolge für den Parameterwert übergeben. In diesem Fall wird die leere Zeichenfolge ("") gilt der Wert für den angegebenen Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InfoMessage">
+      <MemberSignature Language="C#" Value="public event System.Data.OleDb.OleDbInfoMessageEventHandler InfoMessage;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.OleDb.OleDbInfoMessageEventHandler InfoMessage" />
+      <MemberSignature Language="DocId" Value="E:System.Data.OleDb.OleDbConnection.InfoMessage" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbInfoMessageEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Anbieter eine Warnung oder eine Meldung sendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clients, die zum Verarbeiten von Warnungen oder informationsmeldungen, die vom Server gesendet werden soll, sollte erstellen eine <xref:System.Data.OleDb.OleDbInfoMessageEventHandler> Delegat, der dieses Ereignis zu überwachen.  
+  
+ Die <xref:System.Data.OleDb.OleDbConnection.InfoMessage> Ereignis tritt auf, wenn eine Nachricht mit niedrigem Schweregrad aus der Datenquelle zurückgegeben wird. Mit niedrigem Schweregrad Nachrichten sind solche, die keine Ausnahme ausgelöst werden. Für Microsoft SQL Server schließt dies Fehlermeldungen, die mit einen Schweregrad von 10 oder weniger ist.  
+  
+ Weitere Informationen und ein Beispiel finden Sie unter [Verbindungsereignisse](~/docs/framework/data/adonet/connection-events.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public override void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet eine Datenbankverbindung mit den von der <see cref="P:System.Data.OleDb.OleDbConnection.ConnectionString" /> angegebenen Eigenschafteneinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbConnection> eine offene Verbindung aus dem Verbindungspool zeichnet, sofern verfügbar. Andernfalls wird eine neue Verbindung mit der Datenquelle hergestellt. Sie können mehrere DataReader auf einem einzelnen öffnen <xref:System.Data.OleDb.OleDbConnection>. Wenn der OLE DB-Anbieter, den Sie verwenden mehr als eine aktive DataReader über eine einzelne Verbindung nicht unterstützt wird, wird der OLE DB-Anbieter eine zusätzliche Verbindung implizit für jede geöffnet.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Data.OleDb.OleDbConnection> Gültigkeitsbereich verlässt, sie ist nicht geschlossen. Aus diesem Grund müssen Sie die Verbindung explizit schließen, durch den Aufruf <xref:System.Data.OleDb.OleDbConnection.Close%2A> oder **Dispose**, oder die Verbindung innerhalb einer `Using` Anweisung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist bereits geöffnet.</exception>
+        <exception cref="T:System.Data.OleDb.OleDbException">Beim Öffnen der Verbindung ist ein Fehler auf Verbindungsebene aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public string Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbConnection.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des OLE DB-Anbieter angegeben, der "Provider ="-Klausel der Verbindungszeichenfolge.</summary>
+        <value>Der Name des Anbieters entsprechend den Angaben in der "Provider ="-Klausel der Verbindungszeichenfolge. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und einige seiner Eigenschaften schreibgeschützt angezeigt.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.Provider Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.Provider Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.Provider Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.Provider Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseObjectPool">
+      <MemberSignature Language="C#" Value="public static void ReleaseObjectPool ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReleaseObjectPool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.ReleaseObjectPool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Data.OleDb.OleDbConnection" /> Objektpools freigegeben werden kann, wenn die letzte zugrunde liegende Verbindung freigegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ReleaseObjectPool`kann aufgerufen werden, um Ressourcen freizugeben, die andernfalls reserviert wäre, für die in einem Pool zusammengefasste <xref:System.Data.OleDb.OleDbConnection> Objekte. Möglicherweise möchten diese Methode aufrufen, wenn Sie z. B. das Verbindungsobjekt nicht verwendet wird erneut für die Menge an Zeit, die OLE DB-Dienste in der Regel wird Verbindungen in einem Pool aktiv gehalten. Beachten Sie, dass beim Aufrufen der Methode wird allein nicht tatsächlich die aktiven Verbindungen freigibt, die im Pool vorhanden sind.  
+  
+ Die folgenden auftreten muss, bevor der Pool schließlich freigegeben wird:  
+  
+1.  Rufen Sie <xref:System.Data.OleDb.OleDbConnection.Close%2A> das Connection-Objekt an den Pool zurückgegeben.  
+  
+2.  Ermöglichen Sie jedes Verbindungsobjekt zu einem Timeout des Pools.  
+  
+3.  Rufen Sie <xref:System.Data.OleDb.OleDbConnection.ReleaseObjectPool%2A> auf.  
+  
+4.  Rufen Sie die Garbagecollection.  
+  
+ Im Gegensatz dazu beim Aufrufen <xref:System.Data.OleDb.OleDbConnection.Close%2A> auf alle aktiven Verbindungen, und rufen Sie die automatische speicherbereinigung, rufen Sie jedoch nicht <xref:System.Data.OleDb.OleDbConnection.ReleaseObjectPool%2A>, die Ressourcen für die Objekte in einem Pool zusammengefasste verfügbar bleibt, reserviert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection>, öffnet es, einige seiner Eigenschaften angezeigt, schließt die Verbindung und frei des Objektpools, um Ressourcen zu sparen.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.ReleaseObjectPool Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.ReleaseObjectPool Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.ReleaseObjectPool Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.ReleaseObjectPool Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetState">
+      <MemberSignature Language="C#" Value="public void ResetState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.ResetState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Updates der <see cref="P:System.Data.OleDb.OleDbConnection.State" /> Eigenschaft von der <see cref="T:System.Data.OleDb.OleDbConnection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige OLE DB-Anbieter können den aktuellen Status der Verbindung überprüfen. Z. B. wenn der Datenbankserver, seit erneuert wurde Sie geöffnet Ihrer <xref:System.Data.OleDb.OleDbConnection>, <xref:System.Data.OleDb.OleDbConnection.State%2A> zurückzugebende Eigenschaft weiterhin `Open`. Aufrufen, wenn Sie einen OLE DB-Anbieter, der Abruf dieser Informationen für eine live-Verbindung unterstützt arbeiten, die <xref:System.Data.OleDb.OleDbConnection.ResetState%2A> -Methode und anschließend überprüft die <xref:System.Data.OleDb.OleDbConnection.State%2A> -Eigenschaft informiert Sie darüber, dass die Verbindung nicht mehr geöffnet ist. Die <xref:System.Data.OleDb.OleDbConnection.ResetState%2A> Methode verwendet Funktionen, die in der OLE DB-Anbieter auf den aktuellen Status der Verbindung überprüfen. Um festzustellen, ob der OLE DB-Anbieter diese Funktion unterstützt, überprüfen Sie die Dokumentation des Providers auf DBPROP_CONNECTIONSTATUS.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerVersion">
+      <MemberSignature Language="C#" Value="public override string ServerVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbConnection.ServerVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die die Version des Servers enthält, mit dem der Client verbunden ist.</summary>
+        <value>Die Version des verbundenen Servers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbConnection.ServerVersion%2A> Eigenschaft ordnet der OLE DB-DBPROP_DBMSVER-Eigenschaft. Wenn <xref:System.Data.OleDb.OleDbConnection.ServerVersion%2A> wird vom zugrunde liegenden OLE DB-Anbieter ist eine leere Zeichenfolge zurückgegeben.  
+  
+ Die Version des Formulars wird *##. ##. ###*, wobei die ersten beiden Ziffern die Hauptversion, die nächsten beiden Ziffern die Nebenversion und die letzten vier Ziffern der endgültigen Produktversion werden. Der Anbieter die Produktversion im Formular gerendert werden muss, jedoch können auch die produktspezifische Version angefügt – z. B. "04.01.0000 Rdb 4.1". Die Zeichenfolge des Formulars wird *Hauptversion.Nebenversion.Build*, wobei Haupt- und Nebenversion werden genau aus zwei Ziffern und Build handelt es sich genau vier Ziffern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und einige seiner Eigenschaften schreibgeschützt angezeigt.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.ServerVersion Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.ServerVersion Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.ServerVersion Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.ServerVersion Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Data.ConnectionState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ConnectionState State" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbConnection.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand der Verbindung ab.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Data.ConnectionState" />-Werte. Die Standardeinstellung ist geschlossen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden sind statusänderungen zulässig:  
+  
+-   Von `Closed` auf `Open`unter Verwendung der <xref:System.Data.OleDb.OleDbConnection.Open%2A> Methode der <xref:System.Data.OleDb.OleDbConnection> Objekt.  
+  
+-   Von `Open` auf `Closed`, entweder die <xref:System.Data.OleDb.OleDbConnection.Close%2A> Methode oder die **Dispose** Methode der <xref:System.Data.OleDb.OleDbConnection> Objekt.  
+  
+> [!NOTE]
+>  In früheren Version von .NET Framework Aufrufen der <xref:System.Data.OleDb.OleDbConnection.State%2A> Eigenschaft Aufwand der Anwendung erhöht, da jeder Aufruf einen Aufruf der OLE DB DBPROP_CONNECTIONSTATUS-Eigenschaft für eine geöffnete Verbindung verursacht. Mit der Version von .NET Framework 2.0 ist dies nicht mehr ein Problem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbConnection.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Ein neues <see cref="T:System.Object" /> , eine Kopie dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbConnection>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

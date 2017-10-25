@@ -1,0 +1,620 @@
+<Type Name="ActiveDirectorySecurity" FullName="System.DirectoryServices.ActiveDirectorySecurity">
+  <TypeSignature Language="C#" Value="public class ActiveDirectorySecurity : System.Security.AccessControl.DirectoryObjectSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectorySecurity extends System.Security.AccessControl.DirectoryObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectorySecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.DirectoryObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Mithilfe der Objekt-Sicherheitsstufe der verwalteten ACL-Bibliothek für Verzeichnisobjekte Funktion Zugriffskontrolle umschließt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectorySecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.ActiveDirectorySecurity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRightType">
+      <MemberSignature Language="C#" Value="public override Type AccessRightType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRightType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectorySecurity.AccessRightType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> Objekt, das ein Zugriffsrecht für dieses Objekt darstellt.</summary>
+        <value>Die <see cref="T:System.Type" /> von das Zugriffsrecht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer die <xref:System.Type> von der <xref:System.DirectoryServices.ActiveDirectoryRights> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleFactory">
+      <MemberSignature Language="C#" Value="public override sealed System.Security.AccessControl.AccessRule AccessRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AccessRule AccessRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AccessRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt z. B. ein NTAccount-Objekt, das eine Sicherheits-ID (SID) aufgelöst wird.</param>
+        <param name="accessMask">Ein <see cref="T:System.Int32" /> -Bitmaske, die zu verwendenden Zugriffsberechtigungen anzeigt.</param>
+        <param name="isInherited">Ein <see cref="T:System.Boolean" /> -Objekt, das angibt, ob ACEs geerbt werden. <see langword="true" />Wenn ACEs geerbt werden. andernfalls <see langword="false" />.</param>
+        <param name="inheritanceFlags">Ein <see cref="T:System.Security.AccessControl.InheritanceFlags" /> -Objekt, das Vererbungsflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="propagationFlags">Ein <see cref="T:System.Security.AccessControl.PropagationFlags" /> Objekt, das Vererbung Weitergabeflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="type">Ein <see cref="T:System.Security.AccessControl.AccessControlType" /> -Objekt, das den ACE-Typ enthält.</param>
+        <summary>Erstellt ein <see cref="T:System.Security.AccessControl.AccessRule" /> Objekt mit den angegebenen Werten.</summary>
+        <returns>Die <see cref="T:System.Security.AccessControl.AccessRule" /> , entspricht die <see cref="T:System.DirectoryServices.ActiveDirectorySecurity" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleFactory">
+      <MemberSignature Language="C#" Value="public override sealed System.Security.AccessControl.AccessRule AccessRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type, Guid objectGuid, Guid inheritedObjectGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AccessRule AccessRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.Guid objectGuid, valuetype System.Guid inheritedObjectGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AccessRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="objectGuid" Type="System.Guid" />
+        <Parameter Name="inheritedObjectGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Ein <see cref="T:System.Security.Principal.IdentityReference" /> -Objekt, z. B. ein NTAccount-Objekt, das eine Sicherheits-ID (SID) aufgelöst wird.</param>
+        <param name="accessMask">Ein <see cref="T:System.Int32" /> -Bitmaske, die zu verwendenden Zugriffsberechtigungen anzeigt.</param>
+        <param name="isInherited">Ein <see cref="T:System.Boolean" /> -Objekt, das angibt, ob ACEs geerbt werden. <see langword="true" />Wenn ACEs geerbt werden. andernfalls <see langword="false" />.</param>
+        <param name="inheritanceFlags">Ein <see cref="T:System.Security.AccessControl.InheritanceFlags" /> -Objekt, das Vererbungsflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="propagationFlags">Ein <see cref="T:System.Security.AccessControl.PropagationFlags" /> Objekt, das Vererbung Weitergabeflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="type">Ein <see cref="T:System.Security.AccessControl.AccessControlType" /> -Objekt, das den ACE-Typ enthält.</param>
+        <param name="objectGuid">Ein <see cref="T:System.Guid" /> Objekt, das die GUID des Verzeichnisobjekts enthält.</param>
+        <param name="inheritedObjectGuid">Ein <see cref="T:System.Guid" /> Objekt, das die GUID des geerbten Verzeichnisobjekts enthält.</param>
+        <summary>Erstellt ein <see cref="T:System.Security.AccessControl.AccessRule" /> Objekt mit den angegebenen Werten.</summary>
+        <returns>Die <see cref="T:System.Security.AccessControl.AccessRule" /> , entspricht die <see cref="T:System.DirectoryServices.ActiveDirectorySecurity" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleType">
+      <MemberSignature Language="C#" Value="public override Type AccessRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectorySecurity.AccessRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> , die eine Zugriffsregel für dieses Objekt darstellt.</summary>
+        <value>Die <see cref="T:System.Type" /> der Zugriffsregel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer die <xref:System.Type> von der <xref:System.DirectoryServices.ActiveDirectoryAccessRule> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccessRule">
+      <MemberSignature Language="C#" Value="public void AddAccessRule (System.DirectoryServices.ActiveDirectoryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccessRule(class System.DirectoryServices.ActiveDirectoryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.AddAccessRule(System.DirectoryServices.ActiveDirectoryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="M:System.Security.AccessControl.DirectoryObjectSecurity.AddAccessRule(System.Security.AccessControl.ObjectAccessRule)" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Die DACL eines Objekts hinzugefügt eine Zugriffsregel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuditRule">
+      <MemberSignature Language="C#" Value="public void AddAuditRule (System.DirectoryServices.ActiveDirectoryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAuditRule(class System.DirectoryServices.ActiveDirectoryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.AddAuditRule(System.DirectoryServices.ActiveDirectoryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAuditRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Die SACL eines Objekts hinzugefügt eine Überwachungsregel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleFactory">
+      <MemberSignature Language="C#" Value="public override sealed System.Security.AccessControl.AuditRule AuditRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AuditRule AuditRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuditRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt z. B. ein NTAccount-Objekt, das eine Sicherheits-ID (SID) aufgelöst wird.</param>
+        <param name="accessMask">Ein <see cref="T:System.Int32" /> -Bitmaske, die zu verwendenden Zugriffsberechtigungen anzeigt.</param>
+        <param name="isInherited">Ein <see cref="T:System.Boolean" /> -Objekt, das angibt, ob ACEs geerbt werden. <see langword="true" />Wenn ACEs geerbt werden. andernfalls <see langword="false" />.</param>
+        <param name="inheritanceFlags">Ein <see cref="T:System.Security.AccessControl.InheritanceFlags" /> -Objekt, das Vererbungsflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="propagationFlags">Ein <see cref="T:System.Security.AccessControl.PropagationFlags" /> Objekt, das Vererbung Weitergabeflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="flags">Ein <see cref="T:System.Security.AccessControl.AuditFlags" /> Objekt, das die Überwachungsflags für dieses enthält <see cref="T:System.DirectoryServices.ActiveDirectorySecurity" /> Objekt.</param>
+        <summary>Erstellt ein <see cref="T:System.Security.AccessControl.AuditRule" /> Objekt mit den angegebenen Werten.</summary>
+        <returns>Die <see cref="T:System.Security.AccessControl.AuditRule" /> , entspricht die <see cref="T:System.DirectoryServices.ActiveDirectorySecurity" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleFactory">
+      <MemberSignature Language="C#" Value="public override sealed System.Security.AccessControl.AuditRule AuditRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags, Guid objectGuid, Guid inheritedObjectGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AuditRule AuditRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags, valuetype System.Guid objectGuid, valuetype System.Guid inheritedObjectGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuditRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+        <Parameter Name="objectGuid" Type="System.Guid" />
+        <Parameter Name="inheritedObjectGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt z. B. ein NTAccount-Objekt, das eine Sicherheits-ID (SID) aufgelöst wird.</param>
+        <param name="accessMask">Ein <see cref="T:System.Int32" /> -Bitmaske, die zu verwendenden Zugriffsberechtigungen anzeigt.</param>
+        <param name="isInherited">Ein <see cref="T:System.Boolean" /> -Objekt, das angibt, ob ACEs geerbt werden. <see langword="true" />Wenn ACEs geerbt werden. andernfalls <see langword="false" />.</param>
+        <param name="inheritanceFlags">Ein <see cref="T:System.Security.AccessControl.InheritanceFlags" /> -Objekt, das Vererbungsflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="propagationFlags">Ein <see cref="T:System.Security.AccessControl.PropagationFlags" /> Objekt, das Vererbung Weitergabeflags für ein Verzeichnisobjekt enthält.</param>
+        <param name="flags">Ein <see cref="T:System.Security.AccessControl.AuditFlags" /> Objekt, das die Überwachungsflags für dieses enthält <see cref="T:System.DirectoryServices.ActiveDirectorySecurity" /> Objekt.</param>
+        <param name="objectGuid">Ein <see cref="T:System.Guid" /> -Objekt, das die GUID des Verzeichnisobjekts Verzeichnisobjekts enthält.</param>
+        <param name="inheritedObjectGuid">Ein <see cref="T:System.Guid" /> Objekt, das die GUID des der geerbten Verzeichnisobjekts enthält.</param>
+        <summary>Erstellt ein <see cref="T:System.Security.AccessControl.AuditRule" /> Objekt mit den angegebenen Werten.</summary>
+        <returns>Die <see cref="T:System.Security.AccessControl.AuditRule" /> , entspricht die <see cref="T:System.DirectoryServices.ActiveDirectorySecurity" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleType">
+      <MemberSignature Language="C#" Value="public override Type AuditRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AuditRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectorySecurity.AuditRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> , die eine Überwachungsregel für dieses Objekt darstellt.</summary>
+        <value>Die <see cref="T:System.Type" /> der Überwachungsregel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer die <xref:System.Type> von der <xref:System.DirectoryServices.ActiveDirectoryAuditRule> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifyAccessRule">
+      <MemberSignature Language="C#" Value="public override bool ModifyAccessRule (System.Security.AccessControl.AccessControlModification modification, System.Security.AccessControl.AccessRule rule, out bool modified);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ModifyAccessRule(valuetype System.Security.AccessControl.AccessControlModification modification, class System.Security.AccessControl.AccessRule rule, [out] bool&amp; modified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.ModifyAccessRule(System.Security.AccessControl.AccessControlModification,System.Security.AccessControl.AccessRule,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modification" Type="System.Security.AccessControl.AccessControlModification" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+        <Parameter Name="modified" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="modification">Der Typ des Access Control-Änderung.</param>
+        <param name="rule">Die zu ändernde Zugriffsregel.</param>
+        <param name="modified">
+          <see langword="true" />Wenn Sie erfolgreich geändert. andernfalls <see langword="false" />.</param>
+        <summary>Wendet die angegebene Änderung auf den angegebenen <see cref="T:System.Security.AccessControl.AccessRule" />.</summary>
+        <returns>
+          <see langword="true" />Wenn Sie erfolgreich geändert. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifyAuditRule">
+      <MemberSignature Language="C#" Value="public override bool ModifyAuditRule (System.Security.AccessControl.AccessControlModification modification, System.Security.AccessControl.AuditRule rule, out bool modified);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ModifyAuditRule(valuetype System.Security.AccessControl.AccessControlModification modification, class System.Security.AccessControl.AuditRule rule, [out] bool&amp; modified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.ModifyAuditRule(System.Security.AccessControl.AccessControlModification,System.Security.AccessControl.AuditRule,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modification" Type="System.Security.AccessControl.AccessControlModification" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule" />
+        <Parameter Name="modified" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="modification">Die Änderung angewendet werden soll.</param>
+        <param name="rule">Die zu ändernde Überwachungsregel.</param>
+        <param name="modified">
+          <see langword="true" />Wenn Sie erfolgreich geändert. andernfalls <see langword="false" />.</param>
+        <summary>Wendet die angegebene Änderung auf den angegebenen <see cref="T:System.Security.AccessControl.AuditRule" />.</summary>
+        <returns>
+          <see langword="true" />Wenn Sie erfolgreich geändert. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PurgeAccessRules">
+      <MemberSignature Language="C#" Value="public override void PurgeAccessRules (System.Security.Principal.IdentityReference identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PurgeAccessRules(class System.Security.Principal.IdentityReference identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.PurgeAccessRules(System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der <see cref="T:System.Security.Principal.IdentityReference" />, für den alle Zugriffsregeln entfernt werden sollen.</param>
+        <summary>Entfernt alle Zugriffsregeln, die dem angegebenen <see cref="T:System.Security.Principal.IdentityReference" /> zugeordnet sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Es befinden sich nicht alle Zugriffsregeln in kanonischer Reihenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PurgeAuditRules">
+      <MemberSignature Language="C#" Value="public override void PurgeAuditRules (System.Security.Principal.IdentityReference identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PurgeAuditRules(class System.Security.Principal.IdentityReference identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.PurgeAuditRules(System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Der <see cref="T:System.Security.Principal.IdentityReference" />, für den alle Überwachungsregeln entfernt werden sollen.</param>
+        <summary>Entfernt alle Überwachungsregeln, die dem angegebenen <see cref="T:System.Security.Principal.IdentityReference" /> zugeordnet sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Es befinden sich nicht alle Überwachungsregeln in kanonischer Reihenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccess">
+      <MemberSignature Language="C#" Value="public void RemoveAccess (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccess(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.RemoveAccess(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt z. B. ein NTAccount-Objekt, das eine Sicherheits-ID (SID) aufgelöst wird.</param>
+        <param name="type">Ein <see cref="T:System.Security.AccessControl.AccessControlType" /> -Objekt, das den ACE-Typ enthält.</param>
+        <summary>Entfernt alle Zugriffsregeln, die dem angegebenen <see cref="T:System.Security.Principal.IdentityReference" /> Objekt und <see cref="T:System.Security.AccessControl.AccessControlType" /> Objekt aus der DACL eines Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAccessRule (System.DirectoryServices.ActiveDirectoryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccessRule(class System.DirectoryServices.ActiveDirectoryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.RemoveAccessRule(System.DirectoryServices.ActiveDirectoryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAccessRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Entfernt alle Zugriffsregeln, die dieselbe Sicherheits-ID und den Zugriff Zugriffsmaske als die angegebene Zugriffsregel aus der DACL eines Objekts enthalten.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleSpecific (System.DirectoryServices.ActiveDirectoryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleSpecific(class System.DirectoryServices.ActiveDirectoryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.RemoveAccessRuleSpecific(System.DirectoryServices.ActiveDirectoryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAccessRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Entfernt alle Zugriffsregeln, die die angegebenen Zugriffsregel aus der DACL eines Objekts genau entsprechen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAudit">
+      <MemberSignature Language="C#" Value="public void RemoveAudit (System.Security.Principal.IdentityReference identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAudit(class System.Security.Principal.IdentityReference identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.RemoveAudit(System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt z. B. ein NTAccount-Objekt, das eine Sicherheits-ID (SID) aufgelöst wird.</param>
+        <summary>Entfernt alle Überwachungsregeln mit dem angegebenen <see cref="T:System.Security.Principal.IdentityReference" /> Objekt aus der SACL eines Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAuditRule (System.DirectoryServices.ActiveDirectoryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAuditRule(class System.DirectoryServices.ActiveDirectoryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.RemoveAuditRule(System.DirectoryServices.ActiveDirectoryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAccessRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Entfernt alle Überwachungsregeln, die dieselbe Sicherheits-ID und den Zugriff Zugriffsmaske als die angegebene Überwachungsregel aus dem System Liste SACL (Access Control) eines Objekts enthalten.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleSpecific (System.DirectoryServices.ActiveDirectoryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleSpecific(class System.DirectoryServices.ActiveDirectoryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.RemoveAuditRuleSpecific(System.DirectoryServices.ActiveDirectoryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAccessRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Entfernt alle Überwachungsregeln, die die angegebene Überwachungsregel aus der SACL eines Objekts genau entsprechen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAccessRule">
+      <MemberSignature Language="C#" Value="public void ResetAccessRule (System.DirectoryServices.ActiveDirectoryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAccessRule(class System.DirectoryServices.ActiveDirectoryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.ResetAccessRule(System.DirectoryServices.ActiveDirectoryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAccessRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Sucht ein Objekt DACL für alle Zugriffsregeln, die eine Sicherheits-ID (SID) enthalten, der mit die SID im angegebenen übereinstimmt der <paramref name="rule" /> Objekt und alle dieser Zugriffsregeln durch die Zugriffsregeln, die in enthaltenen ersetzt die <paramref name="rule" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.DirectoryServices.ActiveDirectorySecurity.ResetAccessRule%2A> wird verwendet, um alle Zugriffsregeln mit einer bestimmten SID in ein Objekt DACL, sowohl zulassen und verweigern-Typ ersetzen Regeln werden ersetzt.  Verwenden Sie nur Zulassungsregeln ersetzen, ohne Auswirkungen auf die Deny-Regeln oder Deny-Regeln zu ersetzen, ohne Auswirkungen auf Zulassungsregeln <xref:System.DirectoryServices.ActiveDirectorySecurity.SetAccessRule%2A> stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessRule">
+      <MemberSignature Language="C#" Value="public void SetAccessRule (System.DirectoryServices.ActiveDirectoryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessRule(class System.DirectoryServices.ActiveDirectoryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.SetAccessRule(System.DirectoryServices.ActiveDirectoryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAccessRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Sucht ein Objekt DACL für alle Zugriffsregeln, die eine Sicherheits-ID (SID) enthalten, der mit die SID im angegebenen übereinstimmt der <paramref name="rule" /> Objekt und ein Zugriffssteuerungstyp (zulassen oder verweigern), die im angegebenen Typ entspricht der <paramref name="rule" /> Objekt und ersetzt All diese Zugriffsregeln durch die Zugriffsregeln, die in enthaltenen der <paramref name="rule" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.DirectoryServices.ActiveDirectorySecurity.SetAccessRule%2A> wird verwendet, um alle Zugriffsregeln, erfüllen Ersetzen einer bestimmten SID und den Zugriff Typ (zulassen oder verweigern) in ein Objekt DACL, alle Regeln steuern, DACL mit einer SID und den Typ, die die SID und den Zugriff entsprechen kontrollieren in enthaltene Typ die `rule` Ar-Objekt e, die ersetzt werden.  Mit dieser Methode kann der Entwickler ersetzen keine Zulassungsregeln für diese SID für dieses Objekt ohne Auswirkung auf vorhandene Deny-Regeln oder ersetzen alle Deny-Regeln für diese SID für dieses Objekt ohne Auswirkung auf vorhandene Zulassungsregeln.  Verwenden Sie zum Ersetzen aller Regeln für dieses Objekt bezieht sich auf die angegebene SID, unabhängig von der Art, <xref:System.DirectoryServices.ActiveDirectorySecurity.ResetAccessRule%2A> stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuditRule">
+      <MemberSignature Language="C#" Value="public void SetAuditRule (System.DirectoryServices.ActiveDirectoryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAuditRule(class System.DirectoryServices.ActiveDirectoryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectorySecurity.SetAuditRule(System.DirectoryServices.ActiveDirectoryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.DirectoryServices.ActiveDirectoryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.DirectoryServices.ActiveDirectoryAccessRule" /> -Objekt, für welche dieser Vorgang gilt.</param>
+        <summary>Ersetzt alle Überwachungsregeln, die dieselbe Sicherheits-ID wie die angegebene Überwachungsregel in der SACL eines Objekts mit der angegebenen Überwachungsregel enthalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

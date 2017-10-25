@@ -1,0 +1,146 @@
+<Type Name="GenericModelBinderProvider" FullName="System.Web.ModelBinding.GenericModelBinderProvider">
+  <TypeSignature Language="C#" Value="public sealed class GenericModelBinderProvider : System.Web.ModelBinding.ModelBinderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenericModelBinderProvider extends System.Web.ModelBinding.ModelBinderProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.GenericModelBinderProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.ModelBinding.ModelBinderProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft einen Modellbinder für einen generischen Typ an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericModelBinderProvider (Type modelType, Func&lt;Type[],System.Web.ModelBinding.IModelBinder&gt; modelBinderFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type modelType, class System.Func`2&lt;class System.Type[], class System.Web.ModelBinding.IModelBinder&gt; modelBinderFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.GenericModelBinderProvider.#ctor(System.Type,System.Func{System.Type[],System.Web.ModelBinding.IModelBinder})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modelType" Type="System.Type" />
+        <Parameter Name="modelBinderFactory" Type="System.Func&lt;System.Type[],System.Web.ModelBinding.IModelBinder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="modelType">Der Typ des Modells.</param>
+        <param name="modelBinderFactory">Die modellbinderfactory.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.GenericModelBinderProvider" /> Klasse mithilfe des angegebenen Modelltyps und der modellbinderfactory.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="modelType" /> oder <paramref name="modelBinderFactory" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericModelBinderProvider (Type modelType, Type modelBinderType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type modelType, class System.Type modelBinderType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.GenericModelBinderProvider.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modelType" Type="System.Type" />
+        <Parameter Name="modelBinderType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="modelType">Der Typ des Modells.</param>
+        <param name="modelBinderType">Der modellbindertyp.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.GenericModelBinderProvider" /> Klasse, indem der angegebene Modelltyp und modellbindertyp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="modelType" /> oder <paramref name="modelBinderType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericModelBinderProvider (Type modelType, System.Web.ModelBinding.IModelBinder modelBinder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type modelType, class System.Web.ModelBinding.IModelBinder modelBinder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.GenericModelBinderProvider.#ctor(System.Type,System.Web.ModelBinding.IModelBinder)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modelType" Type="System.Type" />
+        <Parameter Name="modelBinder" Type="System.Web.ModelBinding.IModelBinder" />
+      </Parameters>
+      <Docs>
+        <param name="modelType">Der Typ des Modells.</param>
+        <param name="modelBinder">Der Modellbinder.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.GenericModelBinderProvider" /> mithilfe des angegebenen Modelltyps und Modellbinders.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="modelType" /> oder <paramref name="modelBinder" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinder">
+      <MemberSignature Language="C#" Value="public override System.Web.ModelBinding.IModelBinder GetBinder (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, System.Web.ModelBinding.ModelBindingContext bindingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.ModelBinding.IModelBinder GetBinder(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, class System.Web.ModelBinding.ModelBindingContext bindingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.GenericModelBinderProvider.GetBinder(System.Web.ModelBinding.ModelBindingExecutionContext,System.Web.ModelBinding.ModelBindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.IModelBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="bindingContext" Type="System.Web.ModelBinding.ModelBindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">Der Ausführungskontext.</param>
+        <param name="bindingContext">Der Bindungskontext.</param>
+        <summary>Ruft einen Modellbinder ab</summary>
+        <returns>Ein Modellbinder oder <see langword="null" /> , wenn der Versuch zum Abrufen eines Modellbinders nicht erfolgreich ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelType">
+      <MemberSignature Language="C#" Value="public Type ModelType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ModelType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.GenericModelBinderProvider.ModelType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Modells ab.</summary>
+        <value>Der Typ des Modells.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressPrefixCheck">
+      <MemberSignature Language="C#" Value="public bool SuppressPrefixCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressPrefixCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.GenericModelBinderProvider.SuppressPrefixCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die präfixprüfung unterdrückt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die präfixprüfung unterdrückt werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

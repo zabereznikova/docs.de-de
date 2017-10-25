@@ -1,0 +1,1308 @@
+<Type Name="MediaElement" FullName="System.Windows.Controls.MediaElement">
+  <TypeSignature Language="C#" Value="public class MediaElement : System.Windows.FrameworkElement, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi MediaElement extends System.Windows.FrameworkElement implements class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.MediaElement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement dar, das Audio und/oder Video enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Medien mit der Anwendung verteilen, ist es nicht möglich, eine Mediendatei als Projektressource zu verwenden. In der Projektdatei müssen Sie stattdessen den Medientyp auf `Content` festlegen, und `CopyToOutputDirectory` auf `PreserveNewest` oder `Always`.  
+  
+ <xref:System.Windows.Controls.MediaElement>kann verwendet werden, in zwei verschiedenen Modi, je nachdem, was das Steuerelement gesteuert wird: unabhängige oder Uhrmodus. Wenn in der unabhängige Modus verwendet die <xref:System.Windows.Controls.MediaElement> ist analog zu einem Bild und <xref:System.Windows.Controls.MediaElement.Source%2A> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] kann direkt angegeben werden. Im Uhrmodus der <xref:System.Windows.Controls.MediaElement> kann als Ziel für eine Animation betrachtet werden und daher haben sie entsprechende <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Einträge in der Zeitstruktur. Weitere Informationen zu Medienmodi, finden Sie unter der [Multimedia Overview](~/docs/framework/wpf/graphics-multimedia/multimedia-overview.md).  
+  
+ Ein Beispiel zum Steuern des eine <xref:System.Windows.Controls.MediaElement> in unabhängigen Modus finden Sie unter [wie: Steuern eines MediaElement (wiedergeben, anhalten, beenden, Volume und Geschwindigkeit)](~/docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md).  
+  
+ Bis die <xref:System.Windows.Controls.MediaElement.MediaOpened> Ereignis ausgelöst wurde, die <xref:System.Windows.FrameworkElement.ActualWidth%2A> und <xref:System.Windows.FrameworkElement.ActualHeight%2A> des Steuerelements meldet NULL als die Medieninhalte verwendet wird, um die endgültige Größe und Position des Steuerelements zu bestimmen. Nur Audioinhalte ist diese Eigenschaften immer 0 (null) ist.  
+  
+ Für ein Steuerelement fester Größe der <xref:System.Windows.FrameworkElement.Width%2A> und/oder <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften können festgelegt werden. Um das Medium Seitenverhältnis beibehalten werden soll, legen Sie jedoch die <xref:System.Windows.FrameworkElement.Width%2A> oder <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften jedoch nicht beides.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Instanziiert eine neue Instanz der <see cref="T:System.Windows.Controls.MediaElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">Größe, die zum Anordnen des Steuerelements verwendet werden.</param>
+        <summary>Ordnet ein, und die Größe einer <see cref="T:System.Windows.Controls.MediaElement" /> Steuerelement.</summary>
+        <returns>Die Größe des Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Balance">
+      <MemberSignature Language="C#" Value="public double Balance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Balance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.Balance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert ein Verhältnis von Volume über Lautsprecher.</summary>
+        <value>Das Verhältnis der Lautstärke der Lautsprecher im Bereich zwischen-1 und 1. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert-1 stellt 100 % der linken Seite Lautsprecher und 1 stellt 100 % der Lautsprecher rechts dar.  
+  
+<a name="dependencyPropertyInfo_Balance"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.BalanceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BalanceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BalanceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BalanceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.BalanceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.Balance" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingEnded">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler BufferingEnded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler BufferingEnded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MediaElement.BufferingEnded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Medienpufferung beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_BufferingEnded"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.BufferingEndedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingEndedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent BufferingEndedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent BufferingEndedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.BufferingEndedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.MediaElement.BufferingEnded" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingProgress">
+      <MemberSignature Language="C#" Value="public double BufferingProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 BufferingProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.BufferingProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Prozentsatz der Pufferung Fortschritt angibt.</summary>
+        <value>Der Prozentsatz der abgeschlossenen Pufferung für das streaming-Inhalte. Der Wert liegt zwischen 0 und 1.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingStarted">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler BufferingStarted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler BufferingStarted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MediaElement.BufferingStarted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Medienpufferung begonnen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_BufferingStarted"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.BufferingStartedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingStartedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent BufferingStartedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent BufferingStartedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.BufferingStartedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.MediaElement.BufferingStarted" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPause">
+      <MemberSignature Language="C#" Value="public bool CanPause { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPause" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.CanPause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Medium angehalten werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Medien angehalten werden können; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.MediaClock Clock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.MediaClock Clock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.Clock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.MediaClock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest zugeordnete Uhr der <see cref="T:System.Windows.Media.MediaTimeline" /> ab, der die Wiedergabe von Medien steuert.</summary>
+        <value>Eine Uhr zugeordneten der <see cref="T:System.Windows.Media.MediaTimeline" /> ab, der die Wiedergabe von Medien steuert. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft setzt die Media-Element in einen Modus, in dem das Timing-Modul wird verwendet. Alle zuvor wiedergegebenen Medien werden beendet und die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] verknüpft sind, mit dem neuen Format wird geöffnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Medien.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadProgress">
+      <MemberSignature Language="C#" Value="public double DownloadProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DownloadProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.DownloadProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Prozentwert, der angibt, der Menge des heruntergeladenen Inhalt auf einem Remoteserver befindet.</summary>
+        <value>Ein Prozentwert, der angibt, der Menge des heruntergeladenen Inhalt auf einem Remoteserver befindet. Der Wert liegt zwischen 0 und 1. Der Standardwert ist 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAudio">
+      <MemberSignature Language="C#" Value="public bool HasAudio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAudio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.HasAudio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Medien Audio enthalten.</summary>
+        <value>
+          <see langword="true" />Wenn die Medien Audio enthält. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVideo">
+      <MemberSignature Language="C#" Value="public bool HasVideo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasVideo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.HasVideo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Medien Video enthalten.</summary>
+        <value>
+          <see langword="true" />Wenn die Medien Video enthalten; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBuffering">
+      <MemberSignature Language="C#" Value="public bool IsBuffering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBuffering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.IsBuffering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen eines Werts, der angibt, ob die Medien gepuffert werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Medien gepuffert werden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMuted">
+      <MemberSignature Language="C#" Value="public bool IsMuted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMuted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.IsMuted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Audio stumm geschaltet wird.</summary>
+        <value>
+          <see langword="true" />Wenn Audio stumm geschaltet wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsMuted"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.IsMutedProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMutedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsMutedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsMutedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.IsMutedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.IsMuted" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadedBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.MediaState LoadedBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.MediaState LoadedBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.LoadedBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.MediaState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest Ladeverhalten <see cref="T:System.Windows.Controls.MediaState" /> für die Medien.</summary>
+        <value>Das Ladeverhalten <see cref="T:System.Windows.Controls.MediaState" /> für die Medien festlegen. Der Standardwert ist <see cref="F:System.Windows.Controls.MediaState.Play" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>muss festgelegt werden, um <xref:System.Windows.Controls.MediaState.Manual> um interaktiv steuern von Medien mit der <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, und <xref:System.Windows.Controls.MediaElement.Stop%2A> Methoden.  
+  
+<a name="dependencyPropertyInfo_LoadedBehavior"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.LoadedBehaviorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadedBehaviorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LoadedBehaviorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LoadedBehaviorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.LoadedBehaviorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.LoadedBehavior" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">Die Obergrenze für das Element darf nicht überschreiten.</param>
+        <summary>Updates der <see cref="P:System.Windows.UIElement.DesiredSize" /> von der <see cref="T:System.Windows.Controls.MediaElement" />. Diese Methode wird aufgerufen, von einer übergeordneten <see cref="T:System.Windows.UIElement" />. Dies ist das erste Element des Layouts.</summary>
+        <returns>Die gewünschte Größe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaEnded">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler MediaEnded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler MediaEnded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MediaElement.MediaEnded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Medium beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_MediaEnded"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.MediaEndedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaEndedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent MediaEndedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent MediaEndedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.MediaEndedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.MediaElement.MediaEnded" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaFailed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.ExceptionRoutedEventArgs&gt; MediaFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.ExceptionRoutedEventArgs&gt; MediaFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MediaElement.MediaFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.ExceptionRoutedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Fehler aufgetreten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_MediaFailed"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.MediaFailedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.EventHandler%601>, mit der Einschränkung <xref:System.Windows.ExceptionRoutedEventArgs>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaFailedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent MediaFailedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent MediaFailedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.MediaFailedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.MediaElement.MediaFailed" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaOpened">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler MediaOpened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler MediaOpened" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MediaElement.MediaOpened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Laden des Mediums abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_MediaOpened"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.MediaOpenedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaOpenedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent MediaOpenedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent MediaOpenedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.MediaOpenedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.MediaElement.MediaOpened" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NaturalDuration">
+      <MemberSignature Language="C#" Value="public System.Windows.Duration NaturalDuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Duration NaturalDuration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.NaturalDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die natürliche Dauer des Mediums ab.</summary>
+        <value>Die natürliche Dauer des Mediums.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert ist unabhängig von <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>.  
+  
+ <xref:System.Windows.Controls.MediaElement.NaturalDuration%2A>ist nicht genau, bis die <xref:System.Windows.Controls.MediaElement.MediaOpened> Ereignis ausgelöst wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NaturalVideoHeight">
+      <MemberSignature Language="C#" Value="public int NaturalVideoHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NaturalVideoHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.NaturalVideoHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe des Videos mit den Medien verknüpft sind.</summary>
+        <value>Die Höhe des Videos mit den Medien verknüpft sind. Audio-Dateien gibt 0 (null) zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.MediaElement.NaturalVideoHeight%2A>ist nicht genau, bis die <xref:System.Windows.Controls.MediaElement.MediaOpened> Ereignis ausgelöst wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NaturalVideoWidth">
+      <MemberSignature Language="C#" Value="public int NaturalVideoWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NaturalVideoWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.NaturalVideoWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite des Videos mit den Medien verknüpft sind.</summary>
+        <value>Die Breite des Videos mit den Medien verknüpft sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.MediaElement.NaturalVideoWidth%2A>ist nicht genau, bis die <xref:System.Windows.Controls.MediaElement.MediaOpened> Ereignis ausgelöst wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Controls.MediaElement" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses <see cref="T:System.Windows.Controls.MediaElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext drawingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext drawingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">Das zu zeichnende <see cref="T:System.Windows.Media.DrawingContext" />.</param>
+        <summary>Zeichnet den Inhalt einer <see cref="T:System.Windows.Media.DrawingContext" /> Objekt während des Renderings ein <see cref="T:System.Windows.Controls.MediaElement" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.Pause" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hält den Member an der aktuellen Position an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hält die Medien an, wenn das Medium ausgeführt wird. Die <xref:System.Windows.Controls.MediaElement.Play%2A> Methode kann verwendet werden, um fortsetzen.  
+  
+ Diese Methode kann verwendet werden nur, wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist `null`. Wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist für nicht -`null`, das Timing-Modul steuert das Verhalten der Media-Wiedergabe.  
+  
+ Diese Methode verfügt über ein nur wirksam, wenn die <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.MediaState.Manual>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.MediaElement.Clock" /> Eigenschaft ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public void Play ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Play() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.Play" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt Medien ab der aktuellen Position wieder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird das Medium zu beginnen, wenn er nicht aktiv ist oder Medien fort, wenn er angehalten ist. Diese Methode hat keine Auswirkung, wenn das Medium ausgeführt wird.  
+  
+ Diese Methode kann verwendet werden nur, wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist `null`. Wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist für nicht -`null`, das Timing-Modul steuert das Verhalten der Media-Wiedergabe.  
+  
+ Diese Methode verfügt über ein nur wirksam, wenn die <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.MediaState.Manual>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.MediaElement.Clock" /> Eigenschaft ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public TimeSpan Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Position des Status über die Wiedergabezeit der Medien ab oder legt diese fest.</summary>
+        <value>Die Zeitspanne seit dem Start des Mediums. Der Standardwert ist „00:00:00“.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft können Sie springen zu unterschiedlichen Zeitpunkten in der Wiedergabe (auch bekannt als Suchvorgänge) aktivieren. Nicht alle Medientypen lassen Suchvorgänge. Die <xref:System.Windows.Controls.MediaElement.MediaFailed> Ereignis wird ausgelöst, wenn die Medienquelle keine Suchvorgänge zulässt.  
+  
+ Diese Eigenschaft wirkt sich nicht erst nach der <xref:System.Windows.Controls.MediaElement.MediaOpened> Ereignis ist aufgetreten.  
+  
+ Diese Eigenschaft kann festgelegt, wenn Sie nur, wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist `null`. Wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist für nicht -`null`, das Timing-Modul steuert das Verhalten der Media-Wiedergabe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.MediaElement.Clock" /> Eigenschaft ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptCommand">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.MediaScriptCommandRoutedEventArgs&gt; ScriptCommand;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.MediaScriptCommandRoutedEventArgs&gt; ScriptCommand" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MediaElement.ScriptCommand" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.MediaScriptCommandRoutedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn in den Medien ein Skriptbefehl erkannt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_ScriptCommand"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.ScriptCommandEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.EventHandler>, mit der Einschränkung<xref:System.Windows.MediaScriptCommandRoutedEventArgs>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptCommandEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ScriptCommandEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ScriptCommandEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.ScriptCommandEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.MediaElement.ScriptCommand" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrubbingEnabled">
+      <MemberSignature Language="C#" Value="public bool ScrubbingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScrubbingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.ScrubbingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.MediaElement" /> werden Update Frames für Suchvorgänge während angehalten.</summary>
+        <value>
+          <see langword="true" />Wenn Frames aktualisiert werden, während angehalten; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Festlegung auf `false`, Suchen bis zu einem bestimmten Speicherort wird nur Update der angezeigte Frame, wenn die Medien wiedergegeben werden.  
+  
+ Festlegen von <xref:System.Windows.Controls.MediaElement.ScrubbingEnabled%2A> auf `true` können Leistung beeinträchtigen, insbesondere, wenn die Wiedergabe von Medien interaktiv steuern.  
+  
+<a name="dependencyPropertyInfo_ScrubbingEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.ScrubbingEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrubbingEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ScrubbingEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ScrubbingEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.ScrubbingEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.ScrubbingEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Medienquelle für die <see cref="T:System.Windows.Controls.MediaElement" />.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] , die die Quelle des Elements angibt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen des Werts dieser Eigenschaft führt dazu, dass die Medien wiedergeben.  
+  
+ Diese Eigenschaft kann festgelegt, wenn Sie nur, wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist `null`. Wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist für nicht -`null`, das Timing-Modul steuert das Verhalten der Media-Wiedergabe.  
+  
+<a name="dependencyPropertyInfo_Source"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.SourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.MediaElement.Clock" /> Eigenschaft ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeedRatio">
+      <MemberSignature Language="C#" Value="public double SpeedRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SpeedRatio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.SpeedRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Geschwindigkeitsverhältnis des Mediums ab oder legt das Verhältnis fest.</summary>
+        <value>Das Geschwindigkeitsverhältnis des Mediums. Der gültige Bereich liegt zwischen 0 (null) und unendlich. Werte kleiner als 1 führen zu einer Wiedergabe, die langsamer, und Werte größer als 1 führen zu einer Wiedergabe, die schneller als die normale Wiedergabe ist. Negative Werte werden als 0 behandelt. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann festgelegt, wenn Sie nur, wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist `null`. Wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist für nicht -`null`, das Timing-Modul steuert das Verhalten der Media-Wiedergabe.  
+  
+ Audiowiedergabe u. u. nicht erkannt, es sei denn, der Wert des <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> ist 1.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.MediaElement.Clock" /> Eigenschaft ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MediaElement.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet ein Medium und setzt es zurück, sodass es ab dem Anfang wiedergegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden nur, wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist `null`. Wenn die <xref:System.Windows.Controls.MediaElement.Clock%2A> Eigenschaft ist für nicht -`null`, das Timing-Modul steuert das Verhalten der Media-Wiedergabe.  
+  
+ Diese Methode verfügt über ein nur wirksam, wenn die <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.MediaState.Manual>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Controls.MediaElement.Clock" /> Eigenschaft ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Stretch Stretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Stretch Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Windows.Media.Stretch" /> -Wert, der beschreibt, wie eine <see cref="T:System.Windows.Controls.MediaElement" /> Zielrechtecks füllt.</summary>
+        <value>Der Stretch-Wert für die gerenderten Medien. Die Standardeinstellung ist <see cref="F:System.Windows.Media.Stretch.Uniform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die verschiedenen <xref:System.Windows.Media.Stretch> Werte.  
+  
+ ![Unterschiedliche TileBrush-dehneinstellungen](~/add/media/img-mmgraphics-stretchenum.jpg "unterschiedliche TileBrush-dehneinstellungen")  
+Verschiedene Farbverlauf Spread-Methoden  
+  
+<a name="dependencyPropertyInfo_Stretch"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.StretchProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.Viewbox> und legen Sie die <xref:System.Windows.Media.Stretch> Modus des Inhalts.  
+  
+ [!code-cpp[ViewBoxCode#2](~/samples/snippets/cpp/VS_Snippets_Wpf/ViewBoxCode/CPP/ViewboxCode.cpp#2)]
+ [!code-csharp[ViewBoxCode#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ViewBoxCode/Csharp/ViewboxCode.cs#2)]
+ [!code-vb[ViewBoxCode#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ViewBoxCode/VisualBasic/ViewBoxCodeVB.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.StretchDirection StretchDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.StretchDirection StretchDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.StretchDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.StretchDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, dass die Einschränkungen für die Skalierung, die auf das Abbild angewendet werden.</summary>
+        <value>Der Wert, der angibt, der die Richtung des Elements wird gestreckt. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.StretchDirection.Both" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_StretchDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.StretchDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ [!code-xaml[mediagallery_snip#StretchMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/StretchMediaElementExample.xaml#stretchmediaelementexamplewholepage)]
+ [!code-xaml[mediagallery_snip#StretchMediaElementExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/StretchMediaElementExample.xaml#stretchmediaelementexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StretchDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StretchDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.StretchDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.StretchDirection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StretchProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StretchProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.StretchProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.Stretch" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <value>Die Basis-URI des aktuellen Kontexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadedBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.MediaState UnloadedBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.MediaState UnloadedBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.UnloadedBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.MediaState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Entladeverhalten <see cref="T:System.Windows.Controls.MediaState" /> für die Medien.</summary>
+        <value>Das Entladeverhalten <see cref="T:System.Windows.Controls.MediaState" /> für die Medien.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_UnloadedBehavior"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.UnloadedBehaviorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadedBehaviorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UnloadedBehaviorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UnloadedBehaviorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.UnloadedBehaviorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.UnloadedBehavior" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Volume">
+      <MemberSignature Language="C#" Value="public double Volume { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Volume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MediaElement.Volume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Lautstärke des Mediums ab oder legt sie fest.</summary>
+        <value>Die Lautstärke des Mediums, dargestellt auf einer linearen Skala zwischen 0 und 1. Die Standardeinstellung ist 0,5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Volume"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.MediaElement.VolumeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VolumeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VolumeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VolumeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MediaElement.VolumeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.MediaElement.Volume" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

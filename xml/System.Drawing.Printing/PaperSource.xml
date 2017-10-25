@@ -1,0 +1,177 @@
+<Type Name="PaperSource" FullName="System.Drawing.Printing.PaperSource">
+  <TypeSignature Language="C#" Value="public class PaperSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PaperSource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.PaperSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, das von dem der Drucker Papier ruft Papierfach.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verwendet, indem <xref:System.Drawing.Printing.PrinterSettings.PaperSources%2A?displayProperty=nameWithType> und <xref:System.Drawing.Printing.PageSettings.PaperSource%2A?displayProperty=nameWithType> Eigenschaften in diesem Dokument abzurufenden Datenquelle Einzüge, die auf den Drucker und die Papierquelle für eine Seite festgelegtem verfügbar sind.  
+  
+ Weitere Informationen zu drucken, finden Sie unter der <xref:System.Drawing.Printing> Namespace (Übersicht).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die `comboPaperSource` Kombinationsfeld mit dem Drucker Papier Datenquellen unterstützt. Die <xref:System.Drawing.Printing.PaperSource.SourceName%2A> wird als Eigenschaft, die die Anzeigezeichenfolge für das Element hinzugefügt wird, über bereitstellt identifiziert die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft des Kombinationsfelds. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und ob das bestimmte Kombinationsfeld vorhanden ist.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#2)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#2)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PaperSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PaperSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Printing.PaperSource" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Drawing.Printing.PaperSource>-Klasse angezeigt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Drawing.Printing.PaperSource.Kind%2A>|<xref:System.Drawing.Printing.PaperSourceKind?displayProperty=nameWithType>|  
+|<xref:System.Drawing.Printing.PaperSource.SourceName%2A>|<xref:System.String.Empty?displayProperty=nameWithType>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PaperSourceKind Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Printing.PaperSourceKind Kind" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PaperSource.Kind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PaperSourceKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Papierquelle ab.</summary>
+        <value>Einer der <see cref="T:System.Drawing.Printing.PaperSourceKind" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawKind">
+      <MemberSignature Language="C#" Value="public int RawKind { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RawKind" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PaperSource.RawKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ganzzahl eines der <see cref="T:System.Drawing.Printing.PaperSourceKind" /> Werte oder einen benutzerdefinierten Wert.</summary>
+        <value>Die Ganzzahlenwert keines der <see cref="T:System.Drawing.Printing.PaperSourceKind" /> Werte oder einen benutzerdefinierten Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die ganzzahligen Werte aufgeführt, für die einzelnen <xref:System.Drawing.Printing.PaperSourceKind> Member. Etwas größer als 256 zugeordnet <xref:System.Drawing.Printing.PaperSourceKind.Custom> in der <xref:System.Drawing.Printing.PaperSourceKind> -Enumeration, aber die <xref:System.Drawing.Printing.PaperSource.RawKind%2A> Eigenschaft gibt den tatsächlichen ganzzahligen Wert zurück.  
+  
+|Ganzzahliger Wert|PaperSourceKind-Element|  
+|-------------------|----------------------------|  
+|1|<xref:System.Drawing.Printing.PaperSourceKind.Upper>|  
+|2|<xref:System.Drawing.Printing.PaperSourceKind.Lower>|  
+|3|<xref:System.Drawing.Printing.PaperSourceKind.Middle>|  
+|4|<xref:System.Drawing.Printing.PaperSourceKind.Manual>|  
+|5|<xref:System.Drawing.Printing.PaperSourceKind.Envelope>|  
+|6|<xref:System.Drawing.Printing.PaperSourceKind.ManualFeed>|  
+|7|<xref:System.Drawing.Printing.PaperSourceKind.AutomaticFeed>|  
+|8|<xref:System.Drawing.Printing.PaperSourceKind.TractorFeed>|  
+|9|<xref:System.Drawing.Printing.PaperSourceKind.SmallFormat>|  
+|10|<xref:System.Drawing.Printing.PaperSourceKind.LargeFormat>|  
+|11|<xref:System.Drawing.Printing.PaperSourceKind.LargeCapacity>|  
+|14|<xref:System.Drawing.Printing.PaperSourceKind.Cassette>|  
+|15|<xref:System.Drawing.Printing.PaperSourceKind.FormSource>|  
+|256 oder höher|<xref:System.Drawing.Printing.PaperSourceKind.Custom>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceName">
+      <MemberSignature Language="C#" Value="public string SourceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceName" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PaperSource.SourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Papierquelle fest.</summary>
+        <value>Der Name der Papierquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Eigenschaft, wenn die Papierquelle angezeigt werden muss. Der Name des Quell-Papier wird generiert auf Grundlage der <xref:System.Drawing.Printing.PaperSource.Kind%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die `comboPaperSource` Kombinationsfeld mit dem Drucker Papier Datenquellen unterstützt. Die <xref:System.Drawing.Printing.PaperSource.SourceName%2A> wird als Eigenschaft, die die Anzeigezeichenfolge für das Element hinzugefügt wird, über bereitstellt identifiziert die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft des Kombinationsfelds. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und ob das bestimmte Kombinationsfeld vorhanden ist.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#2)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#2)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PaperSource.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Enthält Informationen über die <see cref="T:System.Drawing.Printing.PaperSource" /> in Form einer Zeichenfolge.</summary>
+        <returns>Eine Zeichenfolge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

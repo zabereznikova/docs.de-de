@@ -1,0 +1,138 @@
+<Type Name="Saml2Subject" FullName="System.IdentityModel.Tokens.Saml2Subject">
+  <TypeSignature Language="C#" Value="public class Saml2Subject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2Subject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2Subject" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Betreff-Element, das in [Saml2Core 2.4.1] angegeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.Saml2Subject.NameId%2A> Eigenschaft ist `null` und <xref:System.IdentityModel.Tokens.Saml2Subject.SubjectConfirmations%2A> -Auflistung leer ist, ein <xref:System.InvalidOperationException> wird während der Serialisierung ausgelöst werden.  
+  
+ Weitere Informationen über das Element, das diese Klasse darstellt, finden Sie unter der SAML v2. 0-kernspezifikation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2Subject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2Subject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.Saml2Subject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2Subject (System.IdentityModel.Tokens.Saml2NameIdentifier nameId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.Saml2NameIdentifier nameId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2Subject.#ctor(System.IdentityModel.Tokens.Saml2NameIdentifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nameId" Type="System.IdentityModel.Tokens.Saml2NameIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="nameId">Ein <see cref="T:System.IdentityModel.Tokens.Saml2NameIdentifier" /> , die den Namensbezeichner darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.Saml2Subject" /> Klasse mit dem angegebenen <see cref="T:System.IdentityModel.Tokens.Saml2NameIdentifier" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2Subject.NameId%2A> Eigenschaft auf den angegebenen Wert festgelegt ist die `nameId` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2Subject (System.IdentityModel.Tokens.Saml2SubjectConfirmation subjectConfirmation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.Saml2SubjectConfirmation subjectConfirmation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2Subject.#ctor(System.IdentityModel.Tokens.Saml2SubjectConfirmation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subjectConfirmation" Type="System.IdentityModel.Tokens.Saml2SubjectConfirmation" />
+      </Parameters>
+      <Docs>
+        <param name="subjectConfirmation">Ein <see cref="T:System.IdentityModel.Tokens.Saml2SubjectConfirmation" /> Bestätigungsinformationen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.Saml2Subject" /> Klasse mit dem angegebenen <see cref="T:System.IdentityModel.Tokens.Saml2SubjectConfirmation" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.Saml2Subject.SubjectConfirmations%2A> Auflistung wird mit dem angegebenen Wert initialisiert die `subjectConfirmation` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subjectConfirmation" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NameId">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.Saml2NameIdentifier NameId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.Saml2NameIdentifier NameId" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Subject.NameId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.Saml2NameIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Bezeichner für den Betreff fest. [Saml2Core 2.4.1]</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.Saml2NameIdentifier" /> , der den Bezeichner enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectConfirmations">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2SubjectConfirmation&gt; SubjectConfirmations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Tokens.Saml2SubjectConfirmation&gt; SubjectConfirmations" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Subject.SubjectConfirmations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2SubjectConfirmation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung, die Informationen, die das Subjekt enthält bestätigt werden können. [Saml2Core 2.4.1]</summary>
+        <value>Eine Auflistung vom Typ <see cref="T:System.IdentityModel.Tokens.Saml2SubjectConfirmation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mehr als ein Antragsteller Bestätigung ist Ressourcenanbieter, klicken Sie dann die erfüllen eine von ihnen ausreichend, um den Betreff für die Anwendung der Assertions bestätigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

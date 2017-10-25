@@ -1,0 +1,409 @@
+<Type Name="FocusManager" FullName="System.Windows.Input.FocusManager">
+  <TypeSignature Language="C#" Value="public static class FocusManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FocusManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.FocusManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Satz statischer Methoden, angefügte Eigenschaften und Ereignisse bereit, zum Bestimmen und Festlegen von Fokusbereiche und zum Festlegen des Elements mit Fokus innerhalb des Bereichs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] es gibt zwei Konzepte, die Fokus betreffen: den Tastaturfokus und den logischen Fokus.  
+  
+ Bezieht sich der Tastaturfokus auf das Element, das derzeit Tastatureingaben empfängt.  Es kann nur ein Element mit dem Tastaturfokus vorhanden sein.  Dieses Element mit dem Tastaturfokus hat <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> festgelegt `true`.  <xref:System.Windows.Input.Keyboard.FocusedElement%2A?displayProperty=nameWithType>Gibt das Element mit dem Tastaturfokus zurück.  
+  
+ Der logische Fokus bezieht sich auf die <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> innerhalb eines bestimmten Fokusbereichs.  
+  
+ Ein Fokusbereich ist ein Containerelement, das verfolgt die <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> innerhalb dieses Bereichs.  Wird standardmäßig die <xref:System.Windows.Window> Klasse ist, einen Fokusbereich, wie die <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, und <xref:System.Windows.Controls.ToolBar> Klassen.  Ein Element, also einen Fokusbereich besitzt <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> festgelegt `true`.  
+  
+ Können mehrere Elemente mit den logischen Fokus vorhanden sein, aber es kann nur ein Element mit dem logischen Fokus innerhalb eines einzelnen Fokusbereichs vorhanden sein.  Ein Element mit dem logischen Fokus nicht unbedingt über den Tastaturfokus, aber ein Element mit dem Tastaturfokus über den logischen Fokus.  Es ist möglich, einen Fokusbereich innerhalb eines Fokusbereichs zu definieren.  In diesem Fall können Bereich den Fokus übergeordneten und untergeordneten Bereich den Fokus haben eine <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType>.  
+  
+ Im folgende Szenario wird veranschaulicht, wie ändern Sie den Tastaturfokus und den logischen Fokus in eine [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Anwendung, die eine <xref:System.Windows.Window> mit einer <xref:System.Windows.Controls.TextBox> und ein <xref:System.Windows.Controls.Menu> verfügt über eine <xref:System.Windows.Controls.MenuItem>.  Wenn über den Tastaturfokus ändert sich von der <xref:System.Windows.Controls.TextBox> auf die <xref:System.Windows.Controls.MenuItem>, die <xref:System.Windows.Controls.TextBox> über den Tastaturfokus verliert, behält jedoch den logischen Fokus für die <xref:System.Windows.Window> Bereich konzentrieren.  Die <xref:System.Windows.Controls.MenuItem> erhält den Tastaturfokus sowie den logischen Fokus für das <xref:System.Windows.Controls.Menu> Bereich zu konzentrieren.  Wenn über den Tastaturfokus zurückgibt, in das Stammverzeichnis <xref:System.Windows.Window>, das Element im <xref:System.Windows.Window> Fokusbereich mit den logischen Fokus erhalten den Tastaturfokus, die in diesem Fall ist die <xref:System.Windows.Controls.TextBox>.  Die <xref:System.Windows.Controls.TextBox> verfügt jetzt über den Tastaturfokus und den logischen Fokus.  Die <xref:System.Windows.Controls.MenuItem> über den Tastaturfokus verliert, behält jedoch den logischen Fokus für das <xref:System.Windows.Controls.Menu> Bereich zu konzentrieren.  
+  
+ Der Standardwert von <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> auf eine <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, und <xref:System.Windows.Controls.ContextMenu> ist `true`.  
+  
+ Weitere Informationen zu den Fokus, finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md) und die [Focus Overview](~/docs/framework/wpf/advanced/focus-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddGotFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddGotFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddGotFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.AddGotFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.FocusManager.GotFocus" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLostFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddLostFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddLostFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.AddLostFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.FocusManager.LostFocus" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedElementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FocusedElementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FocusedElementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.FocusedElementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.FocusManager.FocusedElement" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFocusedElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.IInputElement GetFocusedElement (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.IInputElement GetFocusedElement(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element mit dem logischen Fokus im angegebenen Fokusbereich.</param>
+        <summary>Ruft das Element mit dem logischen Fokus innerhalb des Fokusbereichs der angegebenen ab.</summary>
+        <returns>Das Element im angegebenen Fokusbereich mit den logischen Fokus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.FocusManager.FocusedElement%2A> ist das Element, das den logischen Fokus für einen Fokusbereich von bestimmten den hat.  Dieses Objekt kann oder möglicherweise nicht über den Tastaturfokus.  Über den Tastaturfokus bezieht sich auf das Element, das Tastatureingaben empfängt.  Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Wenn `element` ist kein Fokusbereich von dieser Methode zurückgegeben `null`.  
+  
+ Verwendung <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>, um das Element mit dem logischen Fokus innerhalb eines Fokusbereichs angegebenen anzugeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Element mit dem logischen Fokus mithilfe der <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> und er ruft das Element mit dem logischen Fokus mithilfe der <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>.  
+  
+ [!code-csharp[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
+ [!code-vb[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFocusScope">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject GetFocusScope (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject GetFocusScope(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.GetFocusScope(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das den nächstgelegenen Fokusbereich für abrufen.</param>
+        <summary>Ermittelt den nächsten Vorgänger des angegebenen Elements, das verfügt <see cref="P:System.Windows.Input.FocusManager.IsFocusScope" /> festgelegt <see langword="true" />.</summary>
+        <returns>Der Fokusbereich für das angegebene Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert von <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> auf eine <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.ContextMenu> ist `true`.  
+  
+ Ein Fokusbereich ist ein Containerelement, das verfolgt die <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> innerhalb dieses Bereichs.  Wird standardmäßig die <xref:System.Windows.Window> Klasse ist, einen Fokusbereich, wie die <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, und <xref:System.Windows.Controls.ToolBar> Klassen.  Ein Element, also einen Fokusbereich besitzt <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> festgelegt `true`.  
+  
+ Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsFocusScope">
+      <MemberSignature Language="C#" Value="public static bool GetIsFocusScope (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsFocusScope(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.GetIsFocusScope(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem die angefügte Eigenschaft gelesen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.DependencyObject" /> ist ein Fokusbereich.</summary>
+        <returns>
+          <see langword="true" />Wenn <see cref="P:System.Windows.Input.FocusManager.IsFocusScope" /> festgelegt ist, um <see langword="true" /> für das angegebene Element ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Fokusbereich ist ein Containerelement, das verfolgt die <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> innerhalb dieses Bereichs.  Wird standardmäßig die <xref:System.Windows.Window> Klasse ist, einen Fokusbereich, wie die <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, und <xref:System.Windows.Controls.ToolBar> Klassen.  Ein Element, also einen Fokusbereich besitzt <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> festgelegt `true`.  
+  
+ Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent GotFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent GotFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.GotFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.FocusManager.GotFocus" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFocusScopeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsFocusScopeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsFocusScopeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.IsFocusScopeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.FocusManager.IsFocusScope" />-Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert von <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> auf eine <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.ContextMenu> ist `true`.  
+  
+ Ein Fokusbereich ist ein Containerelement, das verfolgt die <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> innerhalb dieses Bereichs.  Wird standardmäßig die <xref:System.Windows.Window> Klasse ist, einen Fokusbereich, wie die <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, und <xref:System.Windows.Controls.ToolBar> Klassen.  Ein Element, also einen Fokusbereich besitzt <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> festgelegt `true`.  
+  
+ Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent LostFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent LostFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.LostFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.FocusManager.LostFocus" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGotFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveGotFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveGotFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.RemoveGotFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.FocusManager.GotFocus" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLostFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveLostFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveLostFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.RemoveLostFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.FocusManager.LostFocus" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocusedElement">
+      <MemberSignature Language="C#" Value="public static void SetFocusedElement (System.Windows.DependencyObject element, System.Windows.IInputElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFocusedElement(class System.Windows.DependencyObject element, class System.Windows.IInputElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.SetFocusedElement(System.Windows.DependencyObject,System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Der Fokusbereich, in dem das angegebene Element erfolgen die <see cref="P:System.Windows.Input.FocusManager.FocusedElement" />.</param>
+        <param name="value">Das Element, den logischen Fokus erhalten.</param>
+        <summary>Den logischen Fokus erhält für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.FocusManager.FocusedElement%2A> ist das Element, das den logischen Fokus für den Fokusbereich der spezifische den hat.  Dieses Objekt kann oder möglicherweise nicht über den Tastaturfokus.  Über den Tastaturfokus bezieht sich auf das Element, das Tastatureingaben empfängt.  Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Es ist möglich, einen Fokusbereich angeben, der ein Vorgänger des Fokusbereichs ist, in dem das Element befindet.  Z. B. wenn eine <xref:System.Windows.Controls.StackPanel> ist ein Fokusbereich und seinem übergeordneten Element <xref:System.Windows.Window> ist ein Fokusbereich einer <xref:System.Windows.Controls.TextBox> untergeordnetes Element des der <xref:System.Windows.Controls.StackPanel> angeben der <xref:System.Windows.Window> als Fokusbereich beim Aufrufen von <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>.  Die <xref:System.Windows.Controls.TextBox> beläuft sich <xref:System.Windows.Input.FocusManager.FocusedElement%2A> für beide die <xref:System.Windows.Window> Bereich konzentrieren und den <xref:System.Windows.Controls.StackPanel> Bereich zu konzentrieren.  
+  
+ <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>das angegebene Element logischen Fokus innerhalb des Fokusbereichs der angegebenen den erhalten, und versucht, das Element den Tastaturfokus erhalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Element mit dem logischen Fokus mithilfe der <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> und er ruft das Element mit dem logischen Fokus mithilfe der <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>.  
+  
+ [!code-csharp[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
+ [!code-vb[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsFocusScope">
+      <MemberSignature Language="C#" Value="public static void SetIsFocusScope (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsFocusScope(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.SetIsFocusScope(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, um einen Fokusbereich zu machen.</param>
+        <param name="value">
+          <see langword="true" />Wenn <c>Element</c> ist ein Fokusbereich ist, andernfalls <see langword="false" />.</param>
+        <summary>Setzt den angegebenen <see cref="T:System.Windows.DependencyObject" /> als Fokusbereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Fokusbereich ist ein Containerelement, das verfolgt die <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> innerhalb dieses Bereichs.  Wird standardmäßig die <xref:System.Windows.Window> Klasse ist, einen Fokusbereich, wie die <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, und <xref:System.Windows.Controls.ToolBar> Klassen.  Ein Element, also einen Fokusbereich besitzt <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> festgelegt `true`.  
+  
+ Weitere Informationen über den Fokus, den Tastaturfokus und den logischen Fokus finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Element ein Fokusbereichs mit <xref:System.Windows.Input.FocusManager.SetIsFocusScope%2A>.  
+  
+ [!code-csharp[focussnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[focussnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

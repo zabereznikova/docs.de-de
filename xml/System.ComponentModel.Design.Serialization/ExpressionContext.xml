@@ -1,0 +1,193 @@
+<Type Name="ExpressionContext" FullName="System.ComponentModel.Design.Serialization.ExpressionContext">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExpressionContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.ExpressionContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit zum Kontextzustand zwischen Serialisierungsprogrammen übergeben. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.Design.Serialization.ExpressionContext> wird auf dem Kontextstapel gespeichert und enthält die relevantesten Ausdruck während der Serialisierung. Der folgende C#-Code veranschaulicht eine Zuweisung.  
+  
+```csharp  
+button1.Text = "Hello";  
+```  
+  
+ Während der Serialisierung sind mehrere Serialisierungsprogramme für die Erstellung dieser einzelnen Anweisung verantwortlich. Eines der Serialisierungsprogramme ist verantwortlich für das "Hello" erstellen. Es gibt vorkommen, dass das Serialisierungsprogramm muss möglicherweise den Kontext zu kennen, in dem er seinen Ausdruck erstellt wird. Im vorherigen Beispiel ist die diesem Kontext nicht erforderlich. Der folgende C#-Code zeigt eine Situation, in der Wissen des Kontexts erforderlich ist.  
+  
+```csharp  
+button1.Text = rm.GetString("button1_Text");  
+```  
+  
+ In diesem Fall muss das Serialisierungsprogramm verantwortlich für das Erstellen des Ressourcenausdrucks über die Namen der Zielobjekte informiert werden. Die <xref:System.ComponentModel.Design.Serialization.ExpressionContext> Klasse dafür verwendet werden kann. Jedes Serialisierungsprogramm wird ein Ausdruck erstellt, und ruft ein Serialisierungsprogramm, um einen kleineren Teil der Anweisung als Ganzes zu behandeln, es wird das Serialisierungsprogramm ein Ausdruckskontext auf kontextstapels. Jeder Ausdruck verfügt über eine Parent-Eigenschaft, die den nächsten Ausdruckskontext auf dem Stapel sucht. Dies bietet eine praktische Traversale-Funktion.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionContext (System.CodeDom.CodeExpression expression, Type expressionType, object owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression expression, class System.Type expressionType, object owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ExpressionContext.#ctor(System.CodeDom.CodeExpression,System.Type,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="expressionType" Type="System.Type" />
+        <Parameter Name="owner" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der jeweilige Codeausdruck.</param>
+        <param name="expressionType">Der jeweilige Codeausdruckstyp.</param>
+        <param name="owner">Der jeweilige Codeausdrucksbesitzer.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.ExpressionContext" />-Klasse mit dem angegebenen Ausdruck und Besitzer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="expression" />, <paramref name="expressionType" /> oder <paramref name="owner" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionContext (System.CodeDom.CodeExpression expression, Type expressionType, object owner, object presetValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression expression, class System.Type expressionType, object owner, object presetValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ExpressionContext.#ctor(System.CodeDom.CodeExpression,System.Type,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="expressionType" Type="System.Type" />
+        <Parameter Name="owner" Type="System.Object" />
+        <Parameter Name="presetValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der jeweilige Codeausdruck.</param>
+        <param name="expressionType">Der jeweilige Codeausdruckstyp.</param>
+        <param name="owner">Der jeweilige Codeausdrucksbesitzer.</param>
+        <param name="presetValue">Der jeweilige voreingestellte Codeausdruckswert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.ExpressionContext" />-Klasse mit einem aktuellen Wert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="expression" />, <paramref name="expressionType" /> oder <paramref name="owner" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ExpressionContext.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausdruck ab, den diesem Kontext darstellt.</summary>
+        <value>Dieser Kontext wird durch den Ausdruck darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionType">
+      <MemberSignature Language="C#" Value="public Type ExpressionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ExpressionType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ExpressionContext.ExpressionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des Ausdrucks.</summary>
+        <value>Der <see cref="T:System.Type" /> des Ausdrucks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können <xref:System.ComponentModel.Design.Serialization.ExpressionContext> zu bestimmen, ob eine Umwandlung erforderlich ist, wenn der Ausdruck zuweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public object Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Owner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ExpressionContext.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das Besitzer dieses Ausdrucks ab.</summary>
+        <value>Das Objekt, das Besitzer dieser Ausdruck.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Ausdruck ein Eigenschaftsverweis auf die <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft einer Instanz von <xref:System.Windows.Forms.Button> aufgerufen `button1`, <xref:System.ComponentModel.Design.Serialization.ExpressionContext.Owner%2A> gibt `button1`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresetValue">
+      <MemberSignature Language="C#" Value="public object PresetValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PresetValue" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ExpressionContext.PresetValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vordefinierten Wert eines Ausdrucks.</summary>
+        <value>Die vordefinierten Wert dieses Ausdrucks oder <see langword="null" /> nicht zugewiesen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enthält die vordefinierten Wert eines Ausdrucks einer vorhanden sein sollte. Z. B., wenn der Ausdruck einen Eigenschaftsausdruck-Verweis auf die <xref:System.Windows.Forms.Control.Controls%2A> Eigenschaft eine <xref:System.Windows.Forms.Button>, die <xref:System.ComponentModel.Design.Serialization.ExpressionContext.PresetValue%2A> Eigenschaft enthält die Instanz von der <xref:System.Windows.Forms.Control.Controls%2A> Eigenschaft. Dies ist, da die Eigenschaft schreibgeschützt und voreingestellten, von dem Objekt einen Wert enthalten ist. Andererseits, eine Eigenschaft, z. B. <xref:System.Windows.Forms.Control.Text%2A> oder <xref:System.Windows.Forms.Control.Visible%2A> verfügt nicht über einen vordefinierten Wert und somit die <xref:System.ComponentModel.Design.Serialization.ExpressionContext.PresetValue%2A> -Eigenschaft gibt `null`.  
+  
+ Der folgende C#-Code wird gezeigt, wie die Serialisierungsprogramme diese Informationen als Anleitung für die Serialisierung verwenden können.  
+  
+```csharp  
+Padding p = new Padding();  
+p.Left = 5;  
+button1.Padding = p;  
+  
+button1.Padding.Left = 5;  
+```  
+  
+ Das Serialisierungsprogramm von der <xref:System.Windows.Forms.Padding> Struktur muss darüber informiert werden, wenn das erste oder zweite Formular generiert werden sollen. Standardmäßig wird die erste Form generiert. Die zweite Form wird nur generiert, wenn es ist ein <xref:System.ComponentModel.Design.Serialization.ExpressionContext> auf die Kontextstapel, enthält eine <xref:System.ComponentModel.Design.Serialization.ExpressionContext.PresetValue%2A> gleich dem Wert von der <xref:System.Windows.Forms.Padding> zurzeit serialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

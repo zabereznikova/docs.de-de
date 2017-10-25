@@ -1,0 +1,46 @@
+<Type Name="INativeHandleContract" FullName="System.AddIn.Contract.INativeHandleContract">
+  <TypeSignature Language="C#" Value="public interface INativeHandleContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INativeHandleContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.INativeHandleContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf ein Fensterhandle (Hwnd) von systemeigenem Code.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ermöglicht Hinzufügen von Benutzeroberflächen-Features für add-ins durch Abrufen von Handles für systemeigene und Übergabe zwischen Anwendungsdomänen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHandle">
+      <MemberSignature Language="C#" Value="public IntPtr GetHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int GetHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.INativeHandleContract.GetHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Fensterhandle (Hwnd) ab.</summary>
+        <returns>Ein <see cref="T:System.IntPtr" /> -Objekt, das einen Zeiger auf das Handle des Fensters darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

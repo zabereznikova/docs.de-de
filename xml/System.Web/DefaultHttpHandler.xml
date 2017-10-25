@@ -1,0 +1,309 @@
+<Type Name="DefaultHttpHandler" FullName="System.Web.DefaultHttpHandler">
+  <TypeSignature Language="C#" Value="public class DefaultHttpHandler : System.Web.IHttpAsyncHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultHttpHandler extends System.Object implements class System.Web.IHttpAsyncHandler, class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DefaultHttpHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpAsyncHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Eigenschaften und Methoden für eine Standard-HTTP-Handler.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.DefaultHttpHandler> Objekt fängt eingehende Anforderungen in der HTTP-Pipeline aus, wenn sowohl Anforderung abfangen über Internet Information Services (IIS) 6.0 konfiguriert wurde und keine explizite Bindungen für die angeforderte Erweiterung gelten.  
+  
+ Anforderung abfangen kann über die Platzhalter-anwendungszuordnung-Funktion, die in IIS 6.0 eingeführt eingerichtet werden. Weitere Informationen finden Sie die [MSDN Library](http://go.microsoft.com/fwlink/?linkid=37118) Informationen zur Verwendung von anwendungszuordnungen mit eine URL neu zuordnen.  
+  
+ Die <xref:System.Web.DefaultHttpHandler> -Klasse implementiert die <xref:System.Web.IHttpAsyncHandler> -Schnittstelle zur Verarbeitung von asynchronen Anforderungen. Allgemeine Informationen zu HTTP-Handler, finden Sie unter [HTTP-Handler und HTTP-Module (Übersicht)](http://msdn.microsoft.com/library/f540bdeb-d22e-4e1d-ba8a-fe6c9926283b). Darüber hinaus weitere Informationen finden Sie hier:  
+  
+-   Zum Erstellen von asynchronen HTTP-Handler, finden Sie unter [Exemplarische Vorgehensweise: Erstellen von asynchronen HTTP-Handler](http://msdn.microsoft.com/library/1b5c4a27-599b-44d0-8a06-72edc6765aa9).  
+  
+-   Informationen zum Registrieren von HTTP-Handler, finden Sie unter [Vorgehensweise: Registrieren von HTTP-Handler](http://msdn.microsoft.com/library/d5633f9a-03fb-4ccc-a799-dc67d656fa60).  
+  
+ Klassen abgeleitet werden können, aus der <xref:System.Web.DefaultHttpHandler> Klasse, um benutzerdefinierte Verarbeitung von Anforderungen bereitstellen. Eine asynchrone HTTP-Handler, die abgeleitet ist die <xref:System.Web.DefaultHttpHandler> überschreiben konnte die <xref:System.Web.DefaultHttpHandler.BeginProcessRequest%2A> Methode ändern, wie Anforderungen verarbeitet werden.  
+  
+ Ein <xref:System.Web.DefaultHttpHandler> ASP.NET-Fehler nicht verwendet. Vorhandener Inhalt, verwendet IIS-Fehler oder ein designeranwendung ISAPI benutzerdefinierte Fehlermechanismus funktioniert unverändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen benutzerdefinierten HTTP-Handler zu implementieren, durch Ableiten von der <xref:System.Web.DefaultHttpHandler> Klasse.  
+  
+ [!code-csharp[System.Web.DefaultHttpHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DefaultHttpHandler/CS/source.cs#1)]
+ [!code-vb[System.Web.DefaultHttpHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DefaultHttpHandler/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultHttpHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DefaultHttpHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DefaultHttpHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessRequest">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginProcessRequest (System.Web.HttpContext context, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginProcessRequest(class System.Web.HttpContext context, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DefaultHttpHandler.BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Verweise auf systeminterne Server enthält Objekte, die HTTP-Anforderungen verwendet werden.</param>
+        <param name="callback">Die Methode, der beim Abschluss des asynchronen Methodenaufrufs aufgerufen werden soll. Wenn <c>Rückruf</c> ist <see langword="null" />, der Delegat wird nicht aufgerufen.</param>
+        <param name="state">Beliebige Zustandsdaten, die zum Verarbeiten der Anforderung erforderlich ist.</param>
+        <summary>Initiiert einen asynchronen Aufruf an den HTTP-Handler.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" /> , Informationen über den Status des Prozesses enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen HTTP-Handler für die asynchrone Verwendung erstellen zu können, muss der Handler den asynchronen implementieren <xref:System.Web.DefaultHttpHandler.BeginProcessRequest%2A> und <xref:System.Web.DefaultHttpHandler.EndProcessRequest%2A> Methoden, die asynchron von ASP.NET aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Alle für die Verarbeitung einer Anforderung ein Fehler auftreten und entweder die angeforderte Datei weist das Suffix ASP oder die Anforderung wurde über POST gesendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="protected System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DefaultHttpHandler.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kontext, die mit dem aktuellen anfallen <see cref="T:System.Web.DefaultHttpHandler" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.HttpContext" /> -Objekt, das den aktuellen Kontext enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DefaultHttpHandler.Context%2A> Eigenschaft ermöglicht den Zugriff auf die aktuelle <xref:System.Web.HttpContext> Objekt für abgeleitete Klassen. Ein <xref:System.Web.HttpContext> -Objekt bietet Zugriff auf die systeminterne Funktion <xref:System.Web.HttpApplication.Request%2A>, <xref:System.Web.HttpApplication.Response%2A>, und <xref:System.Web.HttpApplication.Server%2A> Eigenschaften für die Anforderung. Weitere Informationen zum Zugreifen auf Kontextinformationen finden Sie unter <xref:System.Web.HttpContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessRequest">
+      <MemberSignature Language="C#" Value="public virtual void EndProcessRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndProcessRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DefaultHttpHandler.EndProcessRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Ein Objekt, das Informationen über den Status des Prozesses enthält.</param>
+        <summary>Bietet eine Endmethode für einen asynchronen Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.DefaultHttpHandler.EndProcessRequest%2A> Methode keine Ausnahmen ausgelöst werden soll, die während des asynchronen Prozesses abgefangen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteUrlHeaders">
+      <MemberSignature Language="C#" Value="protected System.Collections.Specialized.NameValueCollection ExecuteUrlHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection ExecuteUrlHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DefaultHttpHandler.ExecuteUrlHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Anforderungsheadern und Anforderungswerte zusammen mit der Anforderung übertragen.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> , Anforderungsheader und Werte enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DefaultHttpHandler.ExecuteUrlHeaders%2A> Eigenschaft eine leere Auflistung zurück, es sei denn, es in einer Klasse aufgefüllt wird, die abgeleitet ist die <xref:System.Web.DefaultHttpHandler> Klasse. Die Header, die hinzugefügt werden, werden an die Auflistung der Header in der Anforderung vor der Weiterleitung der Anforderungs zurück an IIS (Internetinformationsdienste) angefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReusable">
+      <MemberSignature Language="C#" Value="public virtual bool IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DefaultHttpHandler.IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, dass die aktuelle Instanz des von einer anderen Anforderung verwendet werden kann die <see cref="T:System.Web.DefaultHttpHandler" /> Klasse.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.DefaultHttpHandler" /> wiederverwendet werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Explizit festlegen der <xref:System.Web.DefaultHttpHandler.IsReusable%2A> Eigenschaft `true` oder `false`, überschreiben die <xref:System.Web.DefaultHttpHandler.IsReusable%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnExecuteUrlPreconditionFailure">
+      <MemberSignature Language="C#" Value="public virtual void OnExecuteUrlPreconditionFailure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnExecuteUrlPreconditionFailure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DefaultHttpHandler.OnExecuteUrlPreconditionFailure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn Vorbedingungen zu verhindern, dass die <see cref="T:System.Web.DefaultHttpHandler" /> Objekt aus der Verarbeitung einer Anforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorbedingungen werden vom Client in den Feldern Anforderungsheader angegeben und auf dem Webserver ausgewertet werden. Beispielsweise können mithilfe von Vorbedingungen Clients eine angeforderte Methode (z. B. GET) nicht mehr auf eine Ressource als das gewünschte angewendet wird. Weitere Informationen finden Sie im Abschnitt 14, "Header Felddefinitionen" in der [Hypertext Transfer Protocol--HTTP/1.1](http://go.microsoft.com/fwlink/?LinkID=73147) Spezifikation auf der Website des World Wide Web Consortium (W3C).  
+  
+ Die <xref:System.Web.DefaultHttpHandler.OnExecuteUrlPreconditionFailure%2A> Methode wird aufgerufen, wenn Vorbedingungen zu verhindern, dass die <xref:System.Web.DefaultHttpHandler> Objekt aus der Verarbeitung einer Anforderung. Eine abgeleitete Klasse überschreibt möglicherweise die <xref:System.Web.DefaultHttpHandler.OnExecuteUrlPreconditionFailure%2A> Methode eine Ausnahme auslöst, wenn die Vorbedingungen nicht. Die <xref:System.Web.DefaultHttpHandler> löst keine Ausnahme der <xref:System.Web.DefaultHttpHandler.OnExecuteUrlPreconditionFailure%2A> Methode.  
+  
+ Eine der folgenden führt dazu, dass die Vorbedingungen fehlschlägt:  
+  
+-   Aufrufen von <xref:System.Web.HttpResponse.Write%2A?displayProperty=nameWithType>.  
+  
+-   Aufrufen von <xref:System.Web.HttpResponse.AddHeader%2A?displayProperty=nameWithType>.  
+  
+-   Aufrufen von <xref:System.Web.HttpResponse.Flush%2A?displayProperty=nameWithType>.  
+  
+-   Ändern die Cacherichtlinie für die Antwort.  
+  
+-   Hinzufügen einer <xref:System.IO.Stream> Objekt als Filter, um die <xref:System.Web.HttpResponse.Filter%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideExecuteUrlPath">
+      <MemberSignature Language="C#" Value="public virtual string OverrideExecuteUrlPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string OverrideExecuteUrlPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DefaultHttpHandler.OverrideExecuteUrlPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die Ziel-URL für die aktuelle Anforderung.</summary>
+        <returns>Die außer Kraft gesetzte URL in der Anforderung verwendet. oder <see langword="null" /> , wenn eine überschriebene URL nicht angegeben ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DefaultHttpHandler.OverrideExecuteUrlPath%2A> -Methode zurückkehrt `null` , wenn er in einer Klasse überschrieben wird, die abgeleitet ist die <xref:System.Web.DefaultHttpHandler> Klasse.  
+  
+ Die <xref:System.Web.DefaultHttpHandler.OverrideExecuteUrlPath%2A> -Methode aufgerufen wird, nur wenn ASP.NET auf IIS 6.0 im Arbeitsprozess-Isolationsmodus ausgeführt wird, und wenn die Antwort nicht vor dem geändert die <xref:System.Web.DefaultHttpHandler> -Objekts wurde aufgerufen. Die Antwort wird durch Folgendes geändert:  
+  
+-   Aufrufen von <xref:System.Web.HttpResponse.Write%2A?displayProperty=nameWithType>.  
+  
+-   Aufrufen von <xref:System.Web.HttpResponse.AddHeader%2A?displayProperty=nameWithType>.  
+  
+-   Aufrufen von <xref:System.Web.HttpResponse.Flush%2A?displayProperty=nameWithType>.  
+  
+-   Ändern die Cacherichtlinie für die Antwort.  
+  
+-   Hinzufügen einer <xref:System.IO.Stream> Objekt als Filter, um die <xref:System.Web.HttpResponse.Filter%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="public virtual void ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DefaultHttpHandler.ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Verweise auf systeminterne Serverobjekte zur HTTP-Anforderungen bereitstellt.</param>
+        <summary>Ermöglicht eine <see cref="T:System.Web.DefaultHttpHandler" /> -Objekt zum Verarbeiten von HTTP-webanforderungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DefaultHttpHandler.ProcessRequest%2A> Methode sollte nicht synchron aufgerufen werden. Klassen, die abgeleitet sind die <xref:System.Web.DefaultHttpHandler> -Klasse überschreiben die <xref:System.Web.DefaultHttpHandler.ProcessRequest%2A> angepasste anforderungsverarbeitung bereitstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.Web.DefaultHttpHandler.ProcessRequest(System.Web.HttpContext)" /> synchron aufgerufen wird.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

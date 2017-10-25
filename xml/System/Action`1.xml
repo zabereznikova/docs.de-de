@@ -1,0 +1,89 @@
+<Type Name="Action&lt;T&gt;" FullName="System.Action&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public delegate void Action&lt;in T&gt;(T obj);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Action`1&lt;- T&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Action`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="obj" Type="T" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T">Der Typ des Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <param name="obj">Der Parameter der Methode, die dieser Delegat kapselt.</param>
+    <summary>Kapselt eine Methode, die über einen einzelnen Parameter verfügt und keinen Wert zurückgibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/action.cs#486d58da4553e12d). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Sie können die <xref:System.Action%601> Delegat, der eine Methode als Parameter übergeben, ohne explizit einen benutzerdefinierten Delegaten zu deklarieren. Die gekapselte Methode muss der Methodensignatur entsprechen, die von diesem Delegaten definiert ist. Dies bedeutet, dass die gekapselte Methode benötigen einen Parameter, die als Wert übergeben wird, müssen sie keinen Wert zurück. (In c# muss die Methode zurückgeben `void`. In Visual Basic müssen Sie durch definiert die `Sub`...`End Sub` erstellen. Sie können auch eine Methode, die einen Wert zurückgibt, der ignoriert wird, sein.) In der Regel wird eine solche Methode zum Ausführen eines Vorgangs verwendet.  
+  
+> [!NOTE]
+>  Um eine Methode zu verweisen, die über einen Parameter verfügt und einen Wert zurückgibt, verwenden Sie die generische <xref:System.Func%602> stattdessen delegieren.  
+  
+ Bei Verwendung der <xref:System.Action%601> Delegaten, Sie müssen nicht explizit einen Delegaten definieren, die eine Methode mit einem einzelnen Parameter kapselt. Der folgende Code deklariert z. B. explizit einen Delegaten, mit dem Namen `DisplayMessage` und weist einen Verweis auf die <xref:System.Console.WriteLine%2A> Methode oder die `ShowWindowsMessage` Methode, um eine Delegatinstanz.  
+  
+ [!code-cpp[System.Action~1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Action~1/cpp/delegate.cpp#1)]
+ [!code-csharp[System.Action~1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~1/cs/Delegate.cs#1)]
+ [!code-vb[System.Action~1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~1/vb/Delegate.vb#1)]  
+  
+ Im folgende Beispiel wird dieser Code vereinfacht, durch die Instanziierung der <xref:System.Action%601> Delegaten explizit einen neuen Delegaten definieren und eine benannte Methode zuweisen.  
+  
+ [!code-cpp[System.Action~1#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Action~1/cpp/action`1.cpp#2)]
+ [!code-csharp[System.Action~1#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~1/cs/Action1.cs#2)]
+ [!code-vb[System.Action~1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~1/vb/Action1.vb#2)]  
+  
+ Sie können auch die <xref:System.Action%601> delegieren mit anonymen Methoden in C# geschrieben, wie im folgenden Beispiel veranschaulicht. (Eine Einführung für anonyme Methoden finden Sie unter [anonyme Methoden](~/docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).)  
+  
+ [!code-csharp[System.Action~1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~1/cs/Anon.cs#3)]  
+  
+ Sie können auch einen Lambda-Ausdruck zum Zuweisen einer <xref:System.Action%601> delegieren Instanz, wie im folgenden Beispiel veranschaulicht. (Eine Einführung in Lambda-Ausdrücke finden Sie unter [Lambda-Ausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).)  
+  
+ [!code-csharp[System.Action~1#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~1/cs/Lambda.cs#4)]
+ [!code-vb[System.Action~1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~1/vb/lambda.vb#4)]  
+  
+ Die <xref:System.Collections.Generic.List%601.ForEach%2A> und <xref:System.Array.ForEach%2A> -Methode akzeptieren jeweils eine <xref:System.Action%601> -Delegaten als Parameter. Durch den Delegaten gekapselte Methode können Sie eine Aktion für jedes Element in der Matrix oder Liste ausgeführt. Im Beispiel wird die <xref:System.Collections.Generic.List%601.ForEach%2A> Methode veranschaulicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Action%601> Delegaten zum Drucken des Inhalts von einem <xref:System.Collections.Generic.List%601> Objekt. In diesem Beispiel wird die `Print` Methode wird verwendet, um den Inhalt der Liste auf der Konsole angezeigt. Im C#-Beispiel veranschaulicht darüber hinaus auch die Verwendung der anonyme Methoden, um den Inhalt in der Konsole anzuzeigen. Beachten Sie, die im Beispiel nicht explizit deklariert eine <xref:System.Action%601> Variable. Stattdessen übergibt einen Verweis auf eine Methode, die einen einzelnen Parameter akzeptiert und ist einen Wert, der nicht zurückgeben, der <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> -Methode, deren einziger Parameter ist ein <xref:System.Action%601> delegieren. Auf ähnliche Weise im C#-Beispiel ein <xref:System.Action%601> Delegaten nicht explizit instanziiert, da die Signatur der anonymen Methode der Signatur des entspricht der <xref:System.Action%601> Delegat, der durch erwartet wird die <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Action_PrintExample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action_PrintExample/cs/action.cs#01)]
+ [!code-vb[System.Action_PrintExample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action_PrintExample/vb/action.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

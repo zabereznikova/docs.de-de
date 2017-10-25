@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Configuration.Internal">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Configuration.Internal" /> -Namespace enthält Konfigurationstypen, die nur zur internen Verwendung vorgesehen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

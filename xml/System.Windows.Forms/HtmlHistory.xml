@@ -1,0 +1,258 @@
+<Type Name="HtmlHistory" FullName="System.Windows.Forms.HtmlHistory">
+  <TypeSignature Language="C#" Value="public sealed class HtmlHistory : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlHistory extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlHistory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet die Liste von Dokumenten und Websites, die der Benutzer innerhalb der aktuellen Sitzung besucht hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das verwaltete HTML (DOKUMENTOBJEKTMODELL) der nachverfolgt Sites, die ein Benutzer, innerhalb besucht hat einer bestimmten *Sitzung*. Ein *Sitzung* ist definiert als die Länge der Zeit von beim Starten einer Anwendung, die das verwaltete HTML-DOM-hosting, bis die Anwendung geschlossen wird.  
+  
+ Bei Verwendung der <xref:System.Windows.Forms.WebBrowser.Url%2A> Eigenschaft oder <xref:System.Windows.Forms.WebBrowser.Navigate%2A> Methode der <xref:System.Windows.Forms.WebBrowser> -Steuerelement, um eine neue Webseite navigieren, Internet Explorer können die neueste Version der Seite vom Server abzurufen oder Anzeigen der Version, die derzeit im der Internet Explorer-Cache. Wenn Sie dagegen verwenden <xref:System.Windows.Forms.HtmlHistory> um in diesem Stapel vorwärts und rückwärts zu navigieren, Internet Explorer die Seiten aus dem Cache des lokalen Computers, der heruntergeladenen Inhalte anzuzeigen, es sei denn, der Server gibt an, dass der Inhalt des Dokuments ablaufen sollen sofort. Weitere Informationen über die Verlaufsliste und caching in Internet Explorer finden Sie in der Microsoft Knowledge Base-Artikel 234067, "Wie um zu verhindern, dass das Zwischenspeichern in Internet Explorer" [http://support.microsoft.com](http://go.microsoft.com/fwlink/?linkid=37115).  
+  
+ Die Hauptmethode von <xref:System.Windows.Forms.HtmlHistory> ist <xref:System.Windows.Forms.HtmlHistory.Go%2A>, die navigiert zur angegebenen Position im Navigationsstapel oder um eine neue Uniform Resource Locator (URL). Die <xref:System.Windows.Forms.HtmlHistory.Forward%2A> und <xref:System.Windows.Forms.HtmlHistory.Back%2A> Methoden navigieren und Drillups Navigationsstapel, bzw. die erforderliche Anzahl von Einträgen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Back">
+      <MemberSignature Language="C#" Value="public void Back (int numberBack);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Back(int32 numberBack) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlHistory.Back(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberBack" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numberBack">Die Anzahl von Einträgen, die im Navigationsstapel rückwärts navigiert werden soll. Diese Zahl muss eine positive ganze Zahl sein.</param>
+        <summary>Navigiert im Navigationsstapel die angegebene Anzahl von Einträgen rückwärts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anzahl an `numBack` überschreitet die Anzahl der zuvor besuchten Einträge in den Verlauf der <xref:System.Windows.Forms.WebBrowser> Steuerelement auf das erste Element im Verlauf, z. B. mit dem ersten in der aktuellen besuchten Uniform Resource Locator (URL) Browsersitzung.  
+  
+ Wenn keine Einträge hinter der aktuellen Seite im Navigationsstapel vorhanden sind, beim Aufrufen von <xref:System.Windows.Forms.HtmlHistory.Back%2A> hat keine Auswirkungen, aber es wird kein Fehler ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Argument ist eine positive 32-Bit-Ganzzahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlHistory.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Windows.Forms.HtmlHistory" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Windows.Forms.HtmlHistory.Dispose%2A> Methode, wenn Sie fertig sind mit den <xref:System.Windows.Forms.HtmlHistory> Objekt. <xref:System.Windows.Forms.HtmlHistory.Dispose%2A>verlässt die <xref:System.Windows.Forms.HtmlHistory> Objekt in einem nicht verwendbaren Zustand. Nach dem Aufruf <xref:System.Windows.Forms.HtmlHistory.Dispose%2A>, müssen Sie alle Verweise auf Version <xref:System.Windows.Forms.HtmlHistory> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, <xref:System.Windows.Forms.HtmlHistory> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Windows.Forms.HtmlHistory.Dispose%2A> , bevor Sie den letzten Verweis auf Version <xref:System.Windows.Forms.HtmlHistory>. Andernfalls, die Ressourcen <xref:System.Windows.Forms.HtmlHistory> ist mit bleiben reserviert, bis der Garbage Collector des Objekts aufruft `Finalize` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomHistory">
+      <MemberSignature Language="C#" Value="public object DomHistory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DomHistory" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlHistory.DomHistory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die nicht verwaltete Schnittstelle ab, die von dieser Klasse umschlossen wird.</summary>
+        <value>Ein <see cref="T:System.Object" />, das in einen <see langword="IOmHistory" />-Schnittstellenzeiger umgewandelt werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen einen Verweis auf den nicht verwalteten MSHTML.dll hinzufügen, um verwenden <xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>. Weitere Informationen finden Sie unter [Importieren einer Typbibliothek als Assembly](~/docs/framework/interop/importing-a-type-library-as-an-assembly.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forward">
+      <MemberSignature Language="C#" Value="public void Forward (int numberForward);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Forward(int32 numberForward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlHistory.Forward(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberForward" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numberForward">Die Anzahl von Einträgen, die im Navigationsstapel vorwärts navigiert werden soll. Diese Zahl muss eine positive ganze Zahl sein.</param>
+        <summary>Navigiert im Navigationsstapel die angegebene Anzahl von Einträgen vorwärts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anzahl an `numForward` überschreitet die Anzahl der zuvor besuchten Einträge im Verlauf, die <xref:System.Windows.Forms.WebBrowser> Steuerelement, wechseln Sie automatisch bis zum letzten Element im Verlauf.  
+  
+ Wenn keine Einträge vor der aktuellen Seite im Navigationsstapel vorhanden sind, beim Aufrufen von <xref:System.Windows.Forms.HtmlHistory.Forward%2A> hat keine Auswirkungen, aber es wird kein Fehler ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Argument ist eine positive 32-Bit-Ganzzahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Go">
+      <MemberSignature Language="C#" Value="public void Go (int relativePosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Go(int32 relativePosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlHistory.Go(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativePosition" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="relativePosition">Der anzuzeigende Eintrag im Navigationsstapel.</param>
+        <summary>Navigiert zur angegebenen relativen Position im Browserverlauf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit <xref:System.Windows.Forms.HtmlHistory.Go%2A> mit einem negativen Argument entspricht der Verwendung der <xref:System.Windows.Forms.HtmlHistory.Back%2A> Methode hingegen mithilfe <xref:System.Windows.Forms.HtmlHistory.Go%2A> mit einem positiven Argument entspricht der Verwendung der <xref:System.Windows.Forms.HtmlHistory.Forward%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Go">
+      <MemberSignature Language="C#" Value="public void Go (string urlString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Go(string urlString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlHistory.Go(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="urlString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="urlString">Die anzuzeigende URL. Dies kann eine relative oder eine virtuelle URL (z. B. Seite.HTML, Pfad/Seite.HTML oder /path/to/page.html) sein, in diesem Fall wird die URL der aktuellen Webseite als Basis verwendet.</param>
+        <summary>Navigiert zur angegebenen URL (Uniform Resource Locator).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit <xref:System.Windows.Forms.HtmlHistory.Go%2A> entspricht entweder der <xref:System.Windows.Forms.WebBrowser.Url%2A> Eigenschaft oder die <xref:System.Windows.Forms.WebBrowser.Navigate%2A> Methode der <xref:System.Windows.Forms.WebBrowser> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Go">
+      <MemberSignature Language="C#" Value="public void Go (Uri url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Go(class System.Uri url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlHistory.Go(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL als <see cref="T:System.Uri" />-Objekt.</param>
+        <summary>Navigiert zur angegebenen URL (Uniform Resource Locator).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit <xref:System.Windows.Forms.HtmlHistory.Go%2A> entspricht entweder der <xref:System.Windows.Forms.WebBrowser.Url%2A> Eigenschaft oder die <xref:System.Windows.Forms.WebBrowser.Navigate%2A> Methode der <xref:System.Windows.Forms.WebBrowser> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlHistory.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Verlaufsstapels ab.</summary>
+        <value>Die aktuelle Anzahl von Einträgen im URL (Uniform Resource Locator)-Verlauf.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie bestimmen, wie viele Einträge vorhanden sind, vor oder nach der aktuellen URL im Navigationsstapel möchten, müssen Sie diese Zählung selbst verwalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

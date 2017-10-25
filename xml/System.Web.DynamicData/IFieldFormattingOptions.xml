@@ -1,0 +1,116 @@
+<Type Name="IFieldFormattingOptions" FullName="System.Web.DynamicData.IFieldFormattingOptions">
+  <TypeSignature Language="C#" Value="public interface IFieldFormattingOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFieldFormattingOptions" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.IFieldFormattingOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Schnittstelle für allgemeine Option Formatierung Eigenschaften auf feldvorlagensteuerelemente Benutzer angewendet werden soll.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplyFormatInEditMode">
+      <MemberSignature Language="C#" Value="public bool ApplyFormatInEditMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyFormatInEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IFieldFormattingOptions.ApplyFormatInEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Formatierung eine Zeichenfolge, die von angegeben wird die <see cref="P:System.Web.DynamicData.IFieldFormattingOptions.DataFormatString" /> Eigenschaft auf Feldwerte angewendet wird, wenn das Feld im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Formatierungszeichenfolge, im angewendet wird Bearbeitungsmodus; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEmptyStringToNull">
+      <MemberSignature Language="C#" Value="public bool ConvertEmptyStringToNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConvertEmptyStringToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IFieldFormattingOptions.ConvertEmptyStringToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob leere Zeichenfolgenwerte ("") werden automatisch in konvertiert <see langword="null" /> Werten, wenn das Feld "Daten" in der Datenquelle aktualisiert wird.</summary>
+        <value>
+          <see langword="true" />, wenn leere Zeichenfolgenwerte automatisch in NULL-Werte konvertiert werden, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFormatString">
+      <MemberSignature Language="C#" Value="public string DataFormatString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IFieldFormattingOptions.DataFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die das Anzeigeformat für den Wert des Felds angibt.</summary>
+        <value>Eine Formatierungszeichenfolge, die das Anzeigeformat für den Wert des Felds angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public bool HtmlEncode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HtmlEncode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IFieldFormattingOptions.HtmlEncode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Daten für das Steuerelement HTML-codiert ist, bevor er gerendert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Daten für das Steuerelement HTML-codiert ist, bevor er gerendert wird. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ HTML-Codierung von Feldwerten wird verhindert, dass Cross-Site scripting-Angriffe und schädliche Inhalte an den Browser gerendert wird. Diese Eigenschaft sollte aktiviert werden, es sei denn, Sie dem Inhalt vertrauen oder auf schädlichen Inhalt, auf andere Weise überprüft haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullDisplayText">
+      <MemberSignature Language="C#" Value="public string NullDisplayText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullDisplayText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IFieldFormattingOptions.NullDisplayText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung, die angezeigt wird für ein Feld, wenn der Wert des Felds ist <see langword="null" />.</summary>
+        <value>Die Beschriftung, die für ein Feld angezeigt wird, wenn der Wert des Felds ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

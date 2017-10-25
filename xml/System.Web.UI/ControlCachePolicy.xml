@@ -1,0 +1,348 @@
+<Type Name="ControlCachePolicy" FullName="System.Web.UI.ControlCachePolicy">
+  <TypeSignature Language="C#" Value="public sealed class ControlCachePolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlCachePolicy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlCachePolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet programmgesteuerten Zugriff auf ein ASP.NET-Benutzersteuerelement ausgabechacheinstellungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ControlCachePolicy> Klasse wird von Entwicklern in Szenarien, die programmgesteuerten Steuerelement verwendet, um Einstellungen für Benutzersteuerelemente (ASCX-Dateien) für die ausgabezwischenspeicherung anzugeben. ASP.NET bettet Benutzersteuerelemente in einem <xref:System.Web.UI.BasePartialCachingControl> Instanz. Die <xref:System.Web.UI.BasePartialCachingControl> Klasse stellt ein Benutzersteuerelement, das eine Zwischenspeichern aktiviert Ausgabe hat. Beim Zugriff auf die <xref:System.Web.UI.BasePartialCachingControl.CachePolicy%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Web.UI.PartialCachingControl> -Steuerelement, erhalten Sie immer ein gültiges <xref:System.Web.UI.ControlCachePolicy> Objekt. Jedoch wenn Sie Zugriff auf die <xref:System.Web.UI.UserControl.CachePolicy%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Web.UI.UserControl> -Steuerelement, erhalten Sie eine gültige <xref:System.Web.UI.ControlCachePolicy> Objekt nur, wenn das Benutzersteuerelement durch bereits umschlossen wird ein <xref:System.Web.UI.BasePartialCachingControl> Steuerelement. Wenn es nicht umschlossen ist, die <xref:System.Web.UI.ControlCachePolicy> von der Eigenschaft zurückgegebenen Objekts lösen Ausnahmen aus, wenn Sie versuchen, es zu bearbeiten, da sie nicht über eine zugeordnete verfügt <xref:System.Web.UI.BasePartialCachingControl>. Um zu bestimmen, ob eine <xref:System.Web.UI.UserControl> Instanz unterstützt Zwischenspeichern ohne Ausnahmen zu generieren, überprüfen Sie die <xref:System.Web.UI.ControlCachePolicy.SupportsCaching%2A> Eigenschaft.  
+  
+ Mithilfe der <xref:System.Web.UI.ControlCachePolicy> Klasse ist eine von mehreren Möglichkeiten, Sie können das Zwischenspeichern der Ausgabe aktivieren. Die folgende Liste beschreibt die Methoden beschrieben, die Sie verwenden können, um Ausgabe-caching zu aktivieren:  
+  
+-   Verwenden Sie die Direktive, um Ausgabecaches in deklarativen zu aktivieren.  
+  
+-   Verwenden der <xref:System.Web.UI.PartialCachingAttribute> Attribut, um das Zwischenspeichern für ein benutzerdefiniertes Steuerelement in einer Code-Behind-Datei aktivieren.  
+  
+-   Verwenden der <xref:System.Web.UI.ControlCachePolicy> Klasse, um die cacheeinstellungen in programmgesteuerten Szenarien angeben, in dem Sie arbeiten mit <xref:System.Web.UI.BasePartialCachingControl> Instanzen, die mit dynamisch geladen und cacheaktivierte mithilfe einer der vorherigen Methoden wurden die <xref:System.Web.UI.TemplateControl.LoadControl%2A?displayProperty=nameWithType> Methode. Ein <xref:System.Web.UI.ControlCachePolicy> Instanz kann bearbeitet werden nur zwischen den `Init` und `PreRender` Phasen des Lebenszyklus des Steuerelements. Wenn Sie ändern eine <xref:System.Web.UI.ControlCachePolicy> Objekts, nachdem die `PreRender` Phase ASP.NET löst eine Ausnahme, da Änderungen vorgenommen werden, nachdem das Steuerelement gerendert wird, kann nicht keinen Einfluss auf cacheeinstellungen (ein Steuerelements wird zwischengespeichert, während die `Render` Stufe). Schließlich eine Instanz eines Benutzersteuerelements (und daher seine <xref:System.Web.UI.ControlCachePolicy> Objekt) ist nur für eine programmgesteuerte Bearbeitung verfügbar, wenn es tatsächlich gerendert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefiniertes Steuerelement dynamisch geladen und zur Laufzeit programmgesteuert bearbeitet werden kann. Die <xref:System.Web.UI.PartialCachingAttribute> -Attribut angewendet wird, um ein Benutzersteuerelement mit dem Namen `SimpleControl`, was bedeutet, dass das Benutzersteuerelement umschlossen ist ein <xref:System.Web.UI.PartialCachingControl> Steuerelement zur Laufzeit. Die `SimpleControl` Zwischenspeichern objekteinstellungen kann programmgesteuert über die zugehörigen bearbeitet <xref:System.Web.UI.ControlCachePolicy> Objekt, das über einen Verweis auf die <xref:System.Web.UI.PartialCachingControl> Steuerelement, das umschlossene. In diesem Beispiel wird die <xref:System.Web.UI.ControlCachePolicy.Duration%2A> -Eigenschaft geprüft, während der Initialisierung der Seite und geänderten mithilfe der <xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A> und <xref:System.Web.UI.ControlCachePolicy.SetExpires%2A> Methoden, wenn bestimmte Bedingungen erfüllt sind.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/CS/Default2.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/VB/Default2.aspx#1)]  
+  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der `SimpleControl` Benutzersteuerelement aus einer Web Forms-Seite. In diesem Beispiel wird erfolgreich ausgeführt, sicherzustellen Sie, dass der Benutzersteuerelementdatei (.ascx), die Code-Behind-Datei (cs- oder VB) und Web Forms-Seite, die als Host für das Benutzersteuerelement (ASPX) im selben Verzeichnis.  
+  
+ [!code-csharp[System.Web.UI.ControlCachePolicy_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/CS/SimpleControl.ascx.cs#2)]
+ [!code-vb[System.Web.UI.ControlCachePolicy_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/VB/SimpleControl.ascx.vb#2)]  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy_2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/CS/SimpleControl.ascx#3)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy_2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/VB/SimpleControl.ascx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public bool Cached { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCachePolicy.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Zwischenspeichern von Fragmenten für das Benutzersteuerelement aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Benutzersteuerelement Ausgabe des zwischengespeichert wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.Web.UI.ControlCachePolicy.Cached" /> Eigenschaft außerhalb der Initialisierung und Rendering Phasen des Steuerelements festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dependency">
+      <MemberSignature Language="C#" Value="public System.Web.Caching.CacheDependency Dependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Caching.CacheDependency Dependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCachePolicy.Dependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheDependency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Instanz der <see cref="T:System.Web.Caching.CacheDependency" /> Klasse, die zwischengespeicherte Ausgabe eines Benutzersteuerelements zugeordnet.</summary>
+        <value>Die dem Steuerelement zugeordnete <see cref="T:System.Web.Caching.CacheDependency" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ControlCachePolicy.Dependency%2A> Eigenschaft delegiert an die <xref:System.Web.UI.BasePartialCachingControl.Dependency%2A> Eigenschaft von der <xref:System.Web.UI.BasePartialCachingControl> -Steuerelement, das Benutzersteuerelement umschließt. Wenn die <xref:System.Web.Caching.CacheDependency> Instanz ungültig ist, wird das Benutzersteuerelement aus dem Cache entfernt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.Web.UI.ControlCachePolicy.Dependency" /> Eigenschaft außerhalb der Initialisierung und Rendering Phasen des Steuerelements festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public TimeSpan Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Duration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCachePolicy.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne, die zwischengespeicherte Elemente verbleiben im Ausgabecache.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> , das die Zeitspanne, die ein Benutzersteuerelement ist, bleiben im Ausgabecache darstellt. Die Standardeinstellung ist <see cref="F:System.TimeSpan.Zero" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine absolute Ablaufrichtlinie festgelegt ist, mit der <xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A> -Methode, die <xref:System.Web.UI.ControlCachePolicy.Duration%2A> -Eigenschaft gibt die Anzahl der verbleibende Zeit bis zum Ablaufen des Caches-Eintrag.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefiniertes Steuerelement dynamisch geladen und zur Laufzeit programmgesteuert bearbeitet werden kann. Die <xref:System.Web.UI.PartialCachingAttribute> -Attribut angewendet wird, um ein Benutzersteuerelement mit dem Namen `SimpleControl`, was bedeutet, dass umschlossen ist ein <xref:System.Web.UI.PartialCachingControl> Steuerelement zur Laufzeit. Die `SimpleControl` Zwischenspeichern objekteinstellungen kann programmgesteuert über die zugehörigen bearbeitet <xref:System.Web.UI.ControlCachePolicy> Objekt, das über einen Verweis auf die <xref:System.Web.UI.PartialCachingControl> Steuerelement, das umschlossene. In diesem Beispiel wird die <xref:System.Web.UI.ControlCachePolicy.Duration%2A> Eigenschaft wird während der seiteninitialisierung untersucht und zum Ablaufen des Caches geändert wird, wenn bestimmte Bedingungen erfüllt sind. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.ControlCachePolicy> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/CS/Default2.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/VB/Default2.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.Web.UI.ControlCachePolicy.Duration" /> Eigenschaft außerhalb der Initialisierung und Rendering Phasen des Steuerelements festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCachePolicy.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der des Ausgabecacheanbieters, der eine Instanz des Steuerelements zugeordnet ist.</summary>
+        <value>Der Name des Anbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ControlCachePolicy.ProviderName%2A> Eigenschaft ermöglicht Ihnen, den aktuellen Ausgabecacheanbieter angeben, die mit einem Steuerelement zugeordnet ist die <xref:System.Web.UI.ControlCachePolicy> Instanz. Diese Eigenschaft kann nur vor festgelegt, so dass die <xref:System.Web.UI.Control.PreRender> Ereignis tritt auf, in den Lebenszyklus des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Der Name des Anbieters wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Es wurde versucht, Festlegen der <see cref="P:System.Web.UI.ControlCachePolicy.ProviderName" /> Eigenschaft während oder nach der <see cref="E:System.Web.UI.Control.PreRender" /> Ereignis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExpires">
+      <MemberSignature Language="C#" Value="public void SetExpires (DateTime expirationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetExpires(valuetype System.DateTime expirationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCachePolicy.SetExpires(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="expirationTime">Ein <see cref="T:System.DateTime" /> nach dem zwischengespeicherten Eintrags abläuft.</param>
+        <summary>Weist die <see cref="T:System.Web.UI.BasePartialCachingControl" /> Steuerelement, das dient als Wrapper für das Benutzersteuerelement an das angegebene Datum und die Uhrzeit der Cacheeintrag abläuft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.ControlCachePolicy.SetExpires%2A> und <xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A> Methoden (übergeben `true`) weisen Sie an, die <xref:System.Web.UI.BasePartialCachingControl> -Steuerelement, das Benutzersteuerelement, um eine gleitende Ablaufzeit Cachingrichtlinie anstelle einer absoluten Ablaufrichtlinie verwenden umschließt. Verwenden der <xref:System.Web.UI.ControlCachePolicy.SetExpires%2A> Methode und die <xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A> Methode (übergeben `false`), geben Sie eine absoluten Ablaufrichtlinie.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefiniertes Steuerelement dynamisch geladen und zur Laufzeit programmgesteuert bearbeitet werden kann. Die <xref:System.Web.UI.PartialCachingAttribute> -Attribut angewendet wird, um ein Benutzersteuerelement mit dem Namen `SimpleControl`, was bedeutet, dass das Benutzersteuerelement umschlossen ist ein <xref:System.Web.UI.PartialCachingControl> Steuerelement zur Laufzeit. Die `SimpleControl` Zwischenspeichern objekteinstellungen kann programmgesteuert über die zugehörigen bearbeitet <xref:System.Web.UI.ControlCachePolicy> Objekt, das über einen Verweis auf die <xref:System.Web.UI.PartialCachingControl> Steuerelement, das umschlossene. In diesem Beispiel wird die <xref:System.Web.UI.ControlCachePolicy.Duration%2A> -Eigenschaft geprüft, während der Initialisierung der Seite und geänderten mithilfe der <xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A> und <xref:System.Web.UI.ControlCachePolicy.SetExpires%2A> Methoden, wenn bestimmte Bedingungen erfüllt sind. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.ControlCachePolicy> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/CS/Default2.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/VB/Default2.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSlidingExpiration">
+      <MemberSignature Language="C#" Value="public void SetSlidingExpiration (bool useSlidingExpiration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSlidingExpiration(bool useSlidingExpiration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCachePolicy.SetSlidingExpiration(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useSlidingExpiration" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useSlidingExpiration">
+          <see langword="true" />gleitende Ablaufzeit für den Cache anstelle absoluter Ablauf zu verwenden; andernfalls <see langword="false" />.</param>
+        <summary>Weist die <see cref="T:System.Web.UI.BasePartialCachingControl" /> -Steuerelement, das Benutzersteuerelement zum Festlegen des Benutzersteuerelements Cacheeintrag gleitende oder absolute Ablaufzeit umschließt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.ControlCachePolicy.SetExpires%2A> und <xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A> Methoden (übergeben `true`) weisen Sie an, die <xref:System.Web.UI.BasePartialCachingControl> -Steuerelement, das Benutzersteuerelement, um eine gleitende Ablaufzeit Cachingrichtlinie anstelle einer absoluten Ablaufrichtlinie verwenden umschließt. Verwenden der <xref:System.Web.UI.ControlCachePolicy.SetExpires%2A> Methode und die <xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A> Methode (übergeben `false`), geben Sie eine absoluten Ablaufrichtlinie.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefiniertes Steuerelement dynamisch geladen und zur Laufzeit programmgesteuert bearbeitet werden kann. Ein Benutzersteuerelement mit dem Namen `SimpleControl` ergänzt wird, mit einem <xref:System.Web.UI.PartialCachingAttribute> -Attribut, was bedeutet, dass umschlossen ist eine <xref:System.Web.UI.PartialCachingControl> Steuerelement zur Laufzeit. Die `SimpleControl` Zwischenspeichern objekteinstellungen kann programmgesteuert über die zugehörigen bearbeitet <xref:System.Web.UI.ControlCachePolicy> Objekt, das über einen Verweis auf die <xref:System.Web.UI.PartialCachingControl> Steuerelement, das umschlossene. In diesem Beispiel werden Einstellungen für das Zwischenspeichern während der seiteninitialisierung untersucht und geändert werden, wenn bestimmte Bedingungen erfüllt sind. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.ControlCachePolicy> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/CS/Default2.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy_2/VB/Default2.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVaryByCustom">
+      <MemberSignature Language="C#" Value="public void SetVaryByCustom (string varyByCustom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetVaryByCustom(string varyByCustom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlCachePolicy.SetVaryByCustom(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="varyByCustom" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="varyByCustom">Die Liste der benutzerdefinierten Zeichenfolgen.</param>
+        <summary>Eine Liste der benutzerdefinierten Zeichenfolgen, mit denen der Ausgabecache variiert das Benutzersteuerelement fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie "Browser" als übergeben der `varyByCustom` Parameter, variiert das Benutzersteuerelement nach Browsertyp und Hauptversionsnummer. Wenn eine andere benutzerdefinierte Zeichenfolge eingegeben wird, müssen Sie überschreiben die <xref:System.Web.HttpApplication.GetVaryByCustomString%2A> Methode in die Datei "Global.asax" Ihrer Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsCaching">
+      <MemberSignature Language="C#" Value="public bool SupportsCaching { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsCaching" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCachePolicy.SupportsCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Benutzersteuerelement Zwischenspeichern unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn das Benutzersteuerelement caching unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein benutzerdefiniertes Steuerelement unterstützt das Zwischenspeichern, wenn er zugeordnet ist ein <xref:System.Web.UI.BasePartialCachingControl> -Instanz, die signalisiert, dass entweder eine Richtlinie vom ASP.NET-Parser analysiert wurde, oder das Benutzersteuerelement wurde ergänzt, mit einem <xref:System.Web.UI.PartialCachingAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByControl">
+      <MemberSignature Language="C#" Value="public string VaryByControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCachePolicy.VaryByControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste der Steuerelement-IDs, um die zwischengespeicherte Ausgabe variiert.</summary>
+        <value>Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um ein benutzerdefiniertes Steuerelement variieren der Ausgabecache. Diese Zeichenfolgen darstellen der <see cref="P:System.Web.UI.Control.ID" /> Eigenschaftswerte von ASP.NET-Serversteuerelementen, im Benutzersteuerelement deklariert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.Web.UI.ControlCachePolicy.VaryByControl" /> Eigenschaft außerhalb der Initialisierung und Rendering Phasen des Steuerelements festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByParams">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCacheVaryByParams VaryByParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCacheVaryByParams VaryByParams" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlCachePolicy.VaryByParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheVaryByParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Liste der <see langword="GET" /> oder <see langword="POST" /> Parameternamen mit der die zwischengespeicherte Ausgabe variiert.</summary>
+        <value>Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um den Ausgabecache zu variieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig entsprechen diese Zeichenfolgen auf, um einen Abfragezeichenfolgenwert mit dem GET-Methode gesendet oder an einen Parameter mit der POST-Methode gesendet. Wenn die <xref:System.Web.UI.ControlCachePolicy.VaryByParams%2A> Eigenschaft auf mehrere Parameter festgelegt ist, den Ausgabecache enthält eine andere Version von das angeforderte Dokument für jeden Parameter angegeben. Mögliche Werte sind "none", "*", und eine beliebige gültige Abfragezeichenfolge oder die POST-Parametername.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Benutzersteuerelement nicht zugeordnet ist. eine <see cref="T:System.Web.UI.BasePartialCachingControl" /> und kann nicht zwischengespeichert werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

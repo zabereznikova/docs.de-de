@@ -1,0 +1,244 @@
+<Type Name="EventHandlerList" FullName="System.ComponentModel.EventHandlerList">
+  <TypeSignature Language="C#" Value="public sealed class EventHandlerList : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventHandlerList extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EventHandlerList" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine einfache Liste von Delegaten bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse verwendet einen lineare Suche-Algorithmus, um Einträge in der Liste der Delegaten zu suchen. Ein lineare Suche-Algorithmus ist ineffizient, bei der Arbeit mit einer großen Anzahl von Einträgen. Daher, wenn Sie eine große Liste haben, Suchen nach Einträgen langsam ist.  
+  
+   
+  
+## Examples  
+ Ein Beispiel der Verwendung einer <xref:System.ComponentModel.EventHandlerList>, finden Sie unter [wie: Behandeln mehrerer Ereignisse mithilfe von Ereigniseigenschaften](~/docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventHandlerList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventHandlerList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.EventHandlerList" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHandler">
+      <MemberSignature Language="C#" Value="public void AddHandler (object key, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHandler(object key, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventHandlerList.AddHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das Objekt, das Besitzer des Ereignisses ist.</param>
+        <param name="value">Der Delegat, der zur Liste hinzuzufügen.</param>
+        <summary>Fügt einen Delegaten zur Liste hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHandlers">
+      <MemberSignature Language="C#" Value="public void AddHandlers (System.ComponentModel.EventHandlerList listToAddFrom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHandlers(class System.ComponentModel.EventHandlerList listToAddFrom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventHandlerList.AddHandlers(System.ComponentModel.EventHandlerList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listToAddFrom" Type="System.ComponentModel.EventHandlerList" />
+      </Parameters>
+      <Docs>
+        <param name="listToAddFrom">Die Liste hinzufügen.</param>
+        <summary>Fügt eine Liste der Delegaten an die aktuelle Liste an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventHandlerList.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die Delegatliste an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.ComponentModel.EventHandlerList.Dispose%2A> auf, wenn Sie <xref:System.ComponentModel.EventHandlerList> nicht mehr benötigen. Die <xref:System.ComponentModel.EventHandlerList.Dispose%2A>-Methode bewirkt, dass <xref:System.ComponentModel.EventHandlerList> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.ComponentModel.EventHandlerList.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.EventHandlerList> , damit der belegte Arbeitsspeicher von der Garbagecollection wieder zugänglich gemacht werden kann.  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.ComponentModel.EventHandlerList.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.EventHandlerList> freigeben. Andernfalls, die Ressourcen der <xref:System.ComponentModel.EventHandlerList> ist mit bleiben reserviert, bis die Garbage Collection-Aufrufe der <xref:System.ComponentModel.EventHandlerList> Destruktor des Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Delegate this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Delegate Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventHandlerList.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein Objekt in der Liste gefunden wird.</param>
+        <summary>Ruft ab oder legt den Delegaten für das angegebene Objekt fest.</summary>
+        <value>Der Delegat für den angegebenen Schlüssel oder <see langword="null" /> ist ein Delegat ist nicht vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Schlüssel nicht in der Liste gefunden wird und Sie einen Delegaten zum Festlegen des Werts des Schlüssels angeben, dann wird der Schlüssel an den Anfang der Liste hinzugefügt und an den Delegaten als Wert zugewiesen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHandler">
+      <MemberSignature Language="C#" Value="public void RemoveHandler (object key, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveHandler(object key, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventHandlerList.RemoveHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das Objekt, das Besitzer des Ereignisses ist.</param>
+        <param name="value">Der Delegat, der aus der Liste entfernen.</param>
+        <summary>Entfernt einen Delegaten aus der Liste.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

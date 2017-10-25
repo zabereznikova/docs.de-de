@@ -1,0 +1,311 @@
+<Type Name="MimeTextMatchCollection" FullName="System.Web.Services.Description.MimeTextMatchCollection">
+  <TypeSignature Language="C#" Value="public sealed class MimeTextMatchCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MimeTextMatchCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.MimeTextMatchCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Instanzen der <see cref="T:System.Web.Services.Description.MimeTextMatch" /> Klasse. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Services.Description.MimeTextMatch> stellt einen MIME-Textmuster für die eine HTTP-Übertragung durchsucht werden. Weitere Informationen zum Angeben von Protokollen für XML-Webdienste finden Sie unter [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Weitere Informationen zu Web Services Description Language (WSDL) finden Sie in der Spezifikation unter http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der Eigenschaften und Methoden verfügbar gemacht werden, indem die `MimeTextMatchCollection` Klasse.  
+  
+ [!code-cpp[MimeText_Match_MatchColl_9#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CPP/mimetext_match_matchcoll_9.cpp#1)]
+ [!code-csharp[MimeText_Match_MatchColl_9#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CS/mimetext_match_matchcoll_9.cs#1)]
+ [!code-vb[MimeText_Match_MatchColl_9#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/VB/mimetext_match_matchcoll_9.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimeTextMatchCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextMatchCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.Services.Description.MimeTextMatch match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.Services.Description.MimeTextMatch match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextMatchCollection.Add(System.Web.Services.Description.MimeTextMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Web.Services.Description.MimeTextMatch" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der der Auflistung hinzuzufügende <see cref="T:System.Web.Services.Description.MimeTextMatch" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.Services.Description.MimeTextMatch" /> bis zum Ende der <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" />.</summary>
+        <returns>Der nullbasierte Index, in dem die <paramref name="match" /> Parameter hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `Add`-Methode gezeigt.  
+  
+ [!code-cpp[MimeText_Match_MatchColl_9#4](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CPP/mimetext_match_matchcoll_9.cpp#4)]
+ [!code-csharp[MimeText_Match_MatchColl_9#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CS/mimetext_match_matchcoll_9.cs#4)]
+ [!code-vb[MimeText_Match_MatchColl_9#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/VB/mimetext_match_matchcoll_9.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Description.MimeTextMatch match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Description.MimeTextMatch match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextMatchCollection.Contains(System.Web.Services.Description.MimeTextMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Web.Services.Description.MimeTextMatch" />
+      </Parameters>
+      <Docs>
+        <param name="match">Die <see cref="T:System.Web.Services.Description.MimeTextMatch" /> für die Sammlungsmitgliedschaft zu überprüfen.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene <see cref="T:System.Web.Services.Description.MimeTextMatch" /> ist ein Mitglied der <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="match" /> Parameter ist ein Mitglied der <see langword="MimeTextMatchCollection" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `Contains`-Methode gezeigt.  
+  
+ [!code-cpp[MimeText_Match_MatchColl_9#3](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CPP/mimetext_match_matchcoll_9.cpp#3)]
+ [!code-csharp[MimeText_Match_MatchColl_9#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CS/mimetext_match_matchcoll_9.cs#3)]
+ [!code-vb[MimeText_Match_MatchColl_9#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/VB/mimetext_match_matchcoll_9.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Services.Description.MimeTextMatch[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Services.Description.MimeTextMatch[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextMatchCollection.CopyTo(System.Web.Services.Description.MimeTextMatch[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Services.Description.MimeTextMatch[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array des Typs <see cref="T:System.Web.Services.Description.MimeTextMatch" /> als Ziel des Kopiervorgangs fungiert.</param>
+        <param name="index">Der nullbasierte Index, bei dem das Platzieren der kopierten Auflistung begonnen werden soll.</param>
+        <summary>Kopiert die gesamte <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" /> in ein kompatibles eindimensionales Array vom Typ <see cref="T:System.Web.Services.Description.MimeTextMatch" />, beginnend am angegebenen nullbasierten Index des Zielarrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `CopyTo`-Methode gezeigt.  
+  
+ [!code-cpp[MimeText_Match_MatchColl_9#5](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CPP/mimetext_match_matchcoll_9.cpp#5)]
+ [!code-csharp[MimeText_Match_MatchColl_9#5](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CS/mimetext_match_matchcoll_9.cs#5)]
+ [!code-vb[MimeText_Match_MatchColl_9#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/VB/mimetext_match_matchcoll_9.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Services.Description.MimeTextMatch match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Services.Description.MimeTextMatch match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextMatchCollection.IndexOf(System.Web.Services.Description.MimeTextMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Web.Services.Description.MimeTextMatch" />
+      </Parameters>
+      <Docs>
+        <param name="match">Die <see cref="T:System.Web.Services.Description.MimeTextMatch" /> für die in der Auflistung gesucht werden soll.</param>
+        <summary>Sucht nach dem angegebenen <see cref="T:System.Web.Services.Description.MimeTextMatch" /> und gibt den nullbasierten Index des ersten Vorkommens innerhalb der Auflistung.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `IndexOf`-Methode gezeigt.  
+  
+ [!code-cpp[MimeText_Match_MatchColl_9#8](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CPP/mimetext_match_matchcoll_9.cpp#8)]
+ [!code-csharp[MimeText_Match_MatchColl_9#8](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CS/mimetext_match_matchcoll_9.cs#8)]
+ [!code-vb[MimeText_Match_MatchColl_9#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/VB/mimetext_match_matchcoll_9.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Services.Description.MimeTextMatch match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Services.Description.MimeTextMatch match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextMatchCollection.Insert(System.Int32,System.Web.Services.Description.MimeTextMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="match" Type="System.Web.Services.Description.MimeTextMatch" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem Einfügen der <c>entsprechen</c> Parameter.</param>
+        <param name="match">Der der Auflistung hinzuzufügende <see cref="T:System.Web.Services.Description.MimeTextMatch" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.Services.Description.MimeTextMatch" /> auf die <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" /> am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anzahl der Elemente in der Auflistung bereits der Kapazität der Auflistung entspricht, wird die Kapazität von automatisch des internen Arrays erneut zugewiesen werden, bevor das neue Element eingefügt wird verdoppelt.  
+  
+ Wenn die `index` -Parameters <xref:System.Collections.CollectionBase.Count%2A>, die `match` Parameter wird hinzugefügt, bis zum Ende der <xref:System.Web.Services.Description.MimeTextMatchCollection>.  
+  
+ Die Elemente hinter der Einfügemarke nach unten, um das neue Element aufzunehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `Insert`-Methode gezeigt.  
+  
+ [!code-cpp[MimeText_Match_MatchColl_9#9](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CPP/mimetext_match_matchcoll_9.cpp#9)]
+ [!code-csharp[MimeText_Match_MatchColl_9#9](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CS/mimetext_match_matchcoll_9.cs#9)]
+ [!code-vb[MimeText_Match_MatchColl_9#9](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/VB/mimetext_match_matchcoll_9.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="index" /> -Parameters ist größer als <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MimeTextMatch this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.MimeTextMatch Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MimeTextMatchCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MimeTextMatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des der <see cref="T:System.Web.Services.Description.MimeTextMatch" /> , dessen Wert zurückgegeben oder geändert wird.</param>
+        <summary>Ruft ab oder legt den Wert des Elements der <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" /> am angegebenen nullbasierten Index.</summary>
+        <value>Ein <see langword="MimeTextMatch" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung eines nullbasierten Index zum Abrufen eines Members, der die `MimeTextMatchCollection`.  
+  
+ [!code-cpp[MimeText_Match_MatchColl_9#7](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CPP/mimetext_match_matchcoll_9.cpp#7)]
+ [!code-csharp[MimeText_Match_MatchColl_9#7](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/CS/mimetext_match_matchcoll_9.cs#7)]
+ [!code-vb[MimeText_Match_MatchColl_9#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Match_MatchColl_9/VB/mimetext_match_matchcoll_9.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Description.MimeTextMatch match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Description.MimeTextMatch match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextMatchCollection.Remove(System.Web.Services.Description.MimeTextMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Web.Services.Description.MimeTextMatch" />
+      </Parameters>
+      <Docs>
+        <param name="match">Die aus der Auflistung zu entfernende <see cref="T:System.Web.Services.Description.MimeTextMatch" />.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen <see cref="T:System.Web.Services.Description.MimeTextMatch" /> aus der <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt eine lineare Suche. aus diesem Grund ist die durchschnittliche Ausführungszeit proportional zur <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Die Elemente, die dem entfernten folgen `MimeTextMatch` nach oben, um die frei gewordene Stelle einzunehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `Remove`-Methode gezeigt.  
+  
+ MimeText_Match_MatchColl_9 6  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

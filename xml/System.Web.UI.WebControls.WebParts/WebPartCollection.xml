@@ -1,0 +1,309 @@
+<Type Name="WebPartCollection" FullName="System.Web.UI.WebControls.WebParts.WebPartCollection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente zum Nachverfolgen und Verwalten verwandter Gruppen von Steuerelementen verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Klasse ist eine schreibgeschützte Auflistung von Steuerelementen, die in der Regel verwendet, durch <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> und <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelementen zu Mengen von verwaltet <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement verwendet eine <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt, das eine Liste aller der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente auf einer Seite, während eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> -Steuerelement verwendet eine <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt zum Nachverfolgen der <xref:System.Web.UI.WebControls.WebParts.WebPart> die darin enthaltenen Steuerelemente.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Auflistung enthält sowohl <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelementen und anderen Serversteuerelementen (z. B. Benutzersteuerelemente, benutzerdefinierte Steuerelemente und ASP.NET-Steuerelementen), die in platziert werden <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> -Zonen und als Teil des Webparts-Anwendungen verwendet. Z. B. Wenn Sie also eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zone auf einer Seite, und darin, die Sie Deklarieren einer benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement und das ASP.NET <xref:System.Web.UI.WebControls.Calendar> -Steuerelement, werden beide Steuerelemente in der <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Auflistung verweist die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebParts%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt vorhanden ist, damit der Webparts-Steuerelementsatz mit stark typisierten Auflistungen arbeiten kann. Auf ähnliche Weise, wenn Sie auf einen Satz von Massenvorgänge ausführen möchten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, erhalten Sie einen Verweis auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt unter Verwendung der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebParts%2A> Eigenschaft. Beispielsweise möchten Sie alle durchlaufen die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente auf einer Seite und ihre Darstellung in irgendeiner Weise ändern. Obwohl die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt ist schreibgeschützt, Sie können die programmgesteuerte Änderungen vornehmen, auf die Eigenschaften der zugrunde liegenden Steuerelemente in der Auflistung verwiesen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt auf einer Webparts-Seite. In diesem Beispiel besteht aus drei Teilen:  
+  
+-   Der Code für die Seite in einer partiellen Klasse.  
+  
+-   Die Webseite, die die Steuerelemente enthält.  
+  
+-   Eine Beschreibung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Der erste Teil des Codebeispiels enthält den Code für die Seite in einer partiellen Klasse. Beachten Sie, dass die `Button1_Click` Methode erstellt eine <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt, das alle besteht aus der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente verwiesen wird, der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebParts%2A?displayProperty=nameWithType> -Eigenschaft, die alle enthält die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente auf der Seite. Die Methode durchläuft alle Steuerelemente und schaltet für jedes Steuerelement <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeState%2A> Eigenschaft, die bestimmt, ob das Steuerelement normal oder minimiert wird.  
+  
+ [!code-csharp[WebParts_WebPartCollection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/CS/webpartcollection.cs#1)]
+ [!code-vb[WebParts_WebPartCollection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/VB/webpartcollection.vb#1)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite, die die Steuerelemente enthält. Beachten Sie, dass die Steuerelemente im deklarierten `WebPartZone1` standard ASP.NET-Serversteuerelemente, sind aber, da sie als umschlossen sind <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelemente zur Laufzeit und die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Klasse erbt von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, die Steuerelemente sind automatisch als behandelt <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelementen zur Laufzeit und aus diesem Grund befinden sich die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt.  
+  
+ [!code-aspx-csharp[WebParts_WebPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/CS/webpartcollectioncs.aspx#2)]
+ [!code-aspx-vb[WebParts_WebPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/VB/webpartcollectionvb.aspx#2)]  
+  
+ Laden Sie die Seite in einen Browser, und klicken Sie auf die **ein-/ausschalten ChromeState** Schaltfläche, der Code in der partiellen Klasse durchläuft die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt, und klicken Sie alternativ minimiert die Steuerelemente oder normal zurückgegeben. Oder, wenn Sie wiederholt auf den **ein-/ausschalten BulletedList1 Titel** Schaltfläche, den Titel des obersten Steuerelements in alternative Werte geändert wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue leere Instanz mit der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartCollection" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.%23ctor%2A> Konstruktor initialisiert eine leere Instanz der <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Klasse. Das Objekt selbst ist schreibgeschützt und verfügt über keine Methode zum Hinzufügen einzelner <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelementen daher müssen Sie nur wenig Anlass Verwendung dieses Konstruktors.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartCollection (System.Collections.ICollection webParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection webParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webParts" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="webParts">Ein <see cref="T:System.Collections.ICollection" /> von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</param>
+        <summary>Initialisiert eine neue Instanz der eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartCollection" /> Objekt durch die Übergabe einer <see cref="T:System.Collections.ICollection" /> Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.%23ctor%2A> Konstruktor initialisiert eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Klasse durch die Übergabe in einer Auflistung von <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+ Obwohl eine <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt schreibgeschützt ist und es gibt keine Methode für die einzelnen Steuerelemente hinzufügen, können Ihre eigenen erstellen <xref:System.Collections.ICollection> Auflistung von Steuerelementen, und übergeben, um die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.%23ctor%2A> Konstruktor. Dadurch können Sie benutzerdefinierte Sammlungen erstellen und Ausführen von Massenvorgängen darauf. Sie können auch auf die zugrunde liegenden Steuerelemente in der Auflistung zugreifen und ihre Eigenschaftswerte programmgesteuert ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.%23ctor%2A> Konstruktor auf einer Webparts-Seite. In diesem Beispiel besteht aus drei Teilen:  
+  
+-   Der Code für die Seite in einer partiellen Klasse.  
+  
+-   Die Webseite, die die Steuerelemente enthält.  
+  
+-   Eine Beschreibung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Der erste Teil des Codebeispiels enthält den Code für die Seite in einer partiellen Klasse. Beachten Sie, dass die `Button1_Click` Methode erstellt eine <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt, das alle besteht aus der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente verwiesen wird, der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebParts%2A?displayProperty=nameWithType> -Eigenschaft, die alle enthält die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente auf der Seite. Die Methode durchläuft alle Steuerelemente und schaltet für jedes Steuerelement <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeState%2A> Eigenschaft, die bestimmt, ob das Steuerelement normal oder minimiert wird.  
+  
+ [!code-csharp[WebParts_WebPartCollection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/CS/webpartcollection.cs#1)]
+ [!code-vb[WebParts_WebPartCollection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/VB/webpartcollection.vb#1)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite, die die Steuerelemente enthält. Beachten Sie, dass die Steuerelemente im deklarierten `WebPartZone1` standard ASP.NET-Serversteuerelemente, sind aber, da sie als umschlossen sind <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelemente zur Laufzeit und die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Klasse erbt von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, die Steuerelemente sind automatisch als behandelt <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelementen zur Laufzeit und aus diesem Grund befinden sich die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt.  
+  
+ [!code-aspx-csharp[WebParts_WebPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/CS/webpartcollectioncs.aspx#2)]
+ [!code-aspx-vb[WebParts_WebPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/VB/webpartcollectionvb.aspx#2)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, klicken Sie auf die **ein-/ausschalten ChromeState** aus, und beachten Sie, dass der Code in der partiellen Klasse durchläuft die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt, und klicken Sie alternativ minimiert die Steuerelemente oder normal zurückgegeben. Oder, wenn Sie wiederholt auf den **ein-/ausschalten BulletedList1 Titel** Schaltfläche, den Titel des obersten Steuerelements in alternative Werte geändert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webParts" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Objekt in der <paramref name="webParts" /> Auflistung <see langword="null" />.  
+  
+ \- oder –  
+  
+ Ein Objekt in der <paramref name="webParts" /> Auflistung ist keine vom Typ <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.WebPart value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.WebPart value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartCollection.Contains(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , wird überprüft, um zu bestimmen, ob es in der Auflistung vorhanden ist.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein bestimmtes Steuerelement in der Auflistung vorhanden ist.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob ein bestimmtes Steuerelement in der Auflistung befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.Contains%2A> Methode können Sie überprüfen, ob ein bestimmter <xref:System.Web.UI.WebControls.WebParts.WebPart> Objekt, und bestimmen, ob es Teil einer <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.WebPart[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.WebPart[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartCollection.CopyTo(System.Web.UI.WebControls.WebParts.WebPart[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.WebPart[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Objekten, die kopierte Auflistung enthalten.</param>
+        <param name="index">Der Startpunkt im Array, an das der Inhalt der Auflistung eingefügt werden soll.</param>
+        <summary>Kopiert die Auflistung in ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.CopyTo%2A> Methode ist nützlich, wenn Sie möchten ein benutzerdefiniertes Array erstellen, die enthalten, können die <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert in der <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt, das eine Teilmenge dieser Steuerelemente oder eine Obermenge dieser Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.WebPart value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.WebPart value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartCollection.IndexOf(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , das ein Mitglied der Sammlung.</param>
+        <summary>Gibt die Position eines bestimmten Elements der Auflistung zurück.</summary>
+        <returns>Eine ganze Zahl, die die Position eines bestimmten Objekts in der Auflistung angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.IndexOf%2A> Methode ist nützlich, wenn mehrere <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente auf einer Webparts-Seite, und Sie müssen die Ordnungsposition des ein Steuerelement relativ zu den anderen kennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index eines bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement in einer Auflistung.</param>
+        <summary>Gibt ein Element der Auflistung anhand seiner Position in der Auflistung zurück.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.Item%2A> Indexer können Sie die zu Grunde liegenden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt nach Index, und ihre Eigenschaftswerte ändern oder Methoden aufrufen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.Item%2A> Indexer auf einer Webparts-Seite. In diesem Beispiel besteht aus drei Teilen:  
+  
+-   Der Code für die Seite in einer partiellen Klasse.  
+  
+-   Die Webseite, die die Steuerelemente enthält.  
+  
+-   Eine Beschreibung der Funktionsweise des Beispiels in einem Browser.  
+  
+ Der erste Teil des Codebeispiels enthält den Code für die Seite in einer partiellen Klasse. Beachten Sie, dass die `Button2_Click` Methode erstellt ein leeres <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> -Objekt, und weist ihm die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente aus der `WebPartZone1.WebParts` Eigenschaft. Die Methode greift auf das erste Steuerelement in der Auflistung anhand des zugehörigen Indexes und schaltet seine <xref:System.Web.UI.WebControls.WebParts.WebPart.Title%2A> Eigenschaftswert.  
+  
+ [!code-csharp[WebParts_WebPartCollection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/CS/webpartcollection.cs#1)]
+ [!code-vb[WebParts_WebPartCollection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/VB/webpartcollection.vb#1)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite, die die Steuerelemente enthält. Beachten Sie, dass die Steuerelemente im deklarierten `WebPartZone1` standard ASP.NET-Serversteuerelemente sind aber, da sie als umschlossen sind <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelemente zur Laufzeit und die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Klasse erbt von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, die Steuerelemente als behandeltwerdenkönnen<xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente zur Laufzeit und gestellt Teil einer <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt.  
+  
+ [!code-aspx-csharp[WebParts_WebPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/CS/webpartcollectioncs.aspx#2)]
+ [!code-aspx-vb[WebParts_WebPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartCollection_Overview/VB/webpartcollectionvb.aspx#2)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, klicken Sie auf die **ein-/ausschalten BulletedList1 Titel** Schaltfläche, und beachten Sie, dass der Code den Titel des Steuerelements zwischen den beiden verfügbaren Titel Auswahlmöglichkeiten umgeschaltet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der eindeutige Bezeichner für einen bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement in einer Auflistung.</param>
+        <summary>Gibt einen Member der Auflistung basierend auf ein eindeutiger Zeichenfolgenbezeichner.</summary>
+        <value>Die erste <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> in der Auflistung, deren ID entspricht dem Wert von <paramref name="id" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.Item%2A> Indexer ermöglicht den Zugriff auf eine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement in einer <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt entsprechend ein eindeutiger Bezeichner.  
+  
+> [!NOTE]
+>  Webparts-Steuerelementsatzes führt Groß-/Kleinschreibung Zuordnung für diese Eigenschaft daher Groß-/Kleinschreibung nicht Teil einer eindeutigen `id` Wert.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection.Item%2A> Eigenschaft kann auch zum Identifizieren von Membern einer <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> in einigen Fällen spezialisierten Objekt. Im Fall von <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Steuerelemente der Indexer kann entsprechend den Bezeichner für das zugrunde liegende untergeordnete Steuerelement umschlossen der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement. Im Fall von <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> -Steuerelemente, die der Indexer entspricht dem Bezeichner für das Steuerelement basierend auf der Groß-und Kleinschreibung unterschieden der `id` Parameter und entweder die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.OriginalID%2A> oder <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.GenericWebPartID%2A> Eigenschaftswerte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

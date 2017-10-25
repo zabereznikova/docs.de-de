@@ -1,0 +1,208 @@
+<Type Name="CodeMemberField" FullName="System.CodeDom.CodeMemberField">
+  <TypeSignature Language="C#" Value="public class CodeMemberField : System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeMemberField extends System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeMemberField" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeTypeMember</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Deklaration für ein Feld eines Typs dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeMemberField>kann verwendet werden, um die Deklaration für ein Feld eines Typs darstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeMemberField> eine Feld des Typs deklarieren `string` mit dem Namen `testStringField`.  
+  
+ [!code-cpp[CodeMemberFieldExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMemberFieldExample/CPP/codememberfieldexample.cpp#2)]
+ [!code-csharp[CodeMemberFieldExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMemberFieldExample/CS/codememberfieldexample.cs#2)]
+ [!code-vb[CodeMemberFieldExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMemberFieldExample/VB/codememberfieldexample.vb#2)]  
+  
+ [!code-cpp[CodeMemberFieldPublicConstExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMemberFieldPublicConstExample/CPP/class1.cpp#1)]
+ [!code-csharp[CodeMemberFieldPublicConstExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMemberFieldPublicConstExample/CS/class1.cs#1)]
+ [!code-vb[CodeMemberFieldPublicConstExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMemberFieldPublicConstExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMemberField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMemberField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeMemberField" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMemberField (System.CodeDom.CodeTypeReference type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMemberField.#ctor(System.CodeDom.CodeTypeReference,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Objekt, das den Typ des Felds angibt.</param>
+        <param name="name">Der Name des Felds.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeMemberField" /> -Klasse mit dem angegebenen Feldtyp und der Name des Felds.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMemberField (string type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMemberField.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Felds.</param>
+        <param name="name">Der Name des Felds.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeMemberField" /> -Klasse mit dem angegebenen Feldtyp und der Name des Felds.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `type` Parameter verweist auf einen generischen Typ, muss er die Syntaxkonventionen für generische Typen entsprechen. Generische Typen werden wie folgt formatiert: der Name des Typs, gefolgt von einem Gravis-Akzent ("" "), gefolgt von einer Anzahl von generischen Typargumenten, gefolgt von den Parametern, die durch Klammern getrennt.  
+  
+> [!NOTE]
+>  Zur Begrenzung von generischer Parameters müssen Sie eckige Klammern ([]) und nicht die C#-spitzen Klammern (<>) verwenden.  
+  
+ Um die Möglichkeit, einen syntaktischen Fehler zu vermeiden, sollten Sie mithilfe der <xref:System.CodeDom.CodeMemberField.%23ctor%28System.Type%2CSystem.String%29> Konstruktor, der einen Typ anstelle einer Zeichenfolge als Parameter akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMemberField (Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMemberField.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Felds.</param>
+        <param name="name">Der Name des Felds.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeMemberField" /> -Klasse mit dem angegebenen Feldtyp und der Name des Felds.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitExpression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression InitExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression InitExpression" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberField.InitExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Initialisierungsausdruck für das Feld.</summary>
+        <value>Der Initialisierungsausdruck für das Feld.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeMemberField.InitExpression%2A> Eigenschaft.  
+  
+ [!code-csharp[CodeMemberFieldInit#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMemberFieldInit/CS/program.cs#1)]
+ [!code-vb[CodeMemberFieldInit#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMemberFieldInit/VB/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference Type" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberField.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Felds fest.</summary>
+        <value>Der Typ des Felds.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

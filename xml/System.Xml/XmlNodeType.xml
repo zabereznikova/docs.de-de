@@ -1,0 +1,646 @@
+<Type Name="XmlNodeType" FullName="System.Xml.XmlNodeType">
+  <TypeSignature Language="C#" Value="public enum XmlNodeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlNodeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlNodeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Art des Knotens an.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="Attribute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Attribute = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Attribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Attribut (z. B. <c>Id = '123'</c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `Attribute` Knoten kann die folgenden untergeordneten Knotentypen aufweisen: `Text` und `EntityReference`. Die `Attribute` Knoten nicht als untergeordneter Knoten von einem anderen Knotentyp angezeigt. Er wird nicht als einen untergeordneter Knoten des betrachtet eine `Element`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CDATA">
+      <MemberSignature Language="C#" Value="CDATA" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType CDATA = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.CDATA" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein CDATA-Abschnitt (z. B. <c> &lt;! [ [CDATA [my geschützter Text]]&gt; </c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ CDATA-Abschnitte werden verwendet, um Textblöcke mit Escapezeichen versehen, die andernfalls als Markup erkannt würden. Ein `CDATA` Knoten keine untergeordneten Knoten. Es stehen als untergeordnetes Element der `DocumentFragment`, `EntityReference`, und `Element` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="Comment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Comment = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Comment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Kommentar (z. B. <c> &lt;!--Kommentars--&gt; </c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `Comment` Knoten keine untergeordneten Knoten. Es stehen als untergeordnetes Element der `Document`, `DocumentFragment`, `Element`, und `EntityReference` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="Document" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Document = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Document" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Document-Objekt, das als Stamm der Dokumentstruktur Zugriff auf das gesamte XML-Dokument ermöglicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `Document` Knoten kann die folgenden untergeordneten Knotentypen aufweisen: `XmlDeclaration`, `Element` (maximal einen), `ProcessingInstruction`, `Comment`, und `DocumentType`. Es kann nicht als untergeordnetes Element von allen Knotentypen stehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentFragment">
+      <MemberSignature Language="C#" Value="DocumentFragment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType DocumentFragment = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.DocumentFragment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Dokument-Fragment.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DocumentFragment` Knoten ordnet einen Knoten oder eine Teilstruktur in ein Dokument, ohne tatsächlich innerhalb des Dokuments enthalten wird. Ein `DocumentFragment` Knoten kann die folgenden untergeordneten Knotentypen aufweisen: `Element`, `ProcessingInstruction`, `Comment`, `Text`, `CDATA`, und `EntityReference`. Es kann nicht als untergeordnetes Element von allen Knotentypen stehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentType">
+      <MemberSignature Language="C#" Value="DocumentType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType DocumentType = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.DocumentType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Dokumenttypdeklaration angegeben wird, durch das folgende Tag (z. B. <c> &lt;! DOCTYPE... &gt;</c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `DocumentType` Knoten kann die folgenden untergeordneten Knotentypen aufweisen: `Notation` und `Entity`. Es stehen als untergeordnetes Element der `Document` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="Element" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Element = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Element" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Element (z. B. <c> &lt;Element&gt; </c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `Element` Knoten kann die folgenden untergeordneten Knotentypen aufweisen: `Element`, `Text`, `Comment`, `ProcessingInstruction`, `CDATA`, und `EntityReference`. Es kann sein, das untergeordnete Element eines der `Document`, `DocumentFragment`, `EntityReference`, und `Element` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndElement">
+      <MemberSignature Language="C#" Value="EndElement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType EndElement = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.EndElement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Endtag (z. B. <c> &lt;/Element&gt; </c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `EndElement`Knoten werden zurückgegeben, wenn <xref:System.Xml.XmlReader> Ruft am Ende eines Elements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEntity">
+      <MemberSignature Language="C#" Value="EndEntity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType EndEntity = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.EndEntity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurückgegeben, wenn <see langword="XmlReader" /> Ruft am Ende der entitätsersetzung infolge eines Aufrufs für <see cref="M:System.Xml.XmlReader.ResolveEntity" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Entity">
+      <MemberSignature Language="C#" Value="Entity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Entity = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Entity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Entitätsdeklaration (z. B. <c> &lt;! ENTITÄT... &gt;</c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `Entity` Knoten kann verfügen über untergeordnete Knoten, die die erweiterte Entität darstellen (z. B. `Text` und `EntityReference` Knoten). Es stehen als untergeordnetes Element der `DocumentType` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityReference">
+      <MemberSignature Language="C#" Value="EntityReference" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType EntityReference = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.EntityReference" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Verweis auf eine Entität (z. B. <c> &amp;Num;</c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `EntityReference` Knoten kann die folgenden untergeordneten Knotentypen aufweisen: `Element`, `ProcessingInstruction`, `Comment`, `Text`, `CDATA`, und `EntityReference`. Es stehen als untergeordnetes Element der `Attribute`, `DocumentFragment`, `Element`, und `EntityReference` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dies wird zurückgegeben, durch die <see cref="T:System.Xml.XmlReader" /> Wenn eine <see langword="Read" /> Methode nicht aufgerufen wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Notation">
+      <MemberSignature Language="C#" Value="Notation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Notation = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Notation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Notation in der Dokumenttypdeklaration (z. B. <c> &lt;! NOTATION... &gt;</c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `Notation` Knoten keine untergeordneten Knoten. Es stehen als untergeordnetes Element der `DocumentType` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessingInstruction">
+      <MemberSignature Language="C#" Value="ProcessingInstruction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType ProcessingInstruction = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.ProcessingInstruction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine verarbeitungsanweisung (z. B. <c> &lt;? Pi Test?&gt; </c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `ProcessingInstruction` Knoten keine untergeordneten Knoten. Es stehen als untergeordnetes Element der `Document`, `DocumentFragment`, `Element`, und `EntityReference` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignificantWhitespace">
+      <MemberSignature Language="C#" Value="SignificantWhitespace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType SignificantWhitespace = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.SignificantWhitespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leerzeichen zwischen Markup in einem Modell mit gemischtem Inhalt oder ein Leerzeichen innerhalb der <c>XML: space = "preserve"</c> Bereich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Text = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Textinhalt eines Knotens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `Text` Knoten keine untergeordneten Knoten. Er kann als untergeordneter Knoten der Vorkommen der `Attribute`, `DocumentFragment`, `Element`, und `EntityReference` Knoten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Whitespace">
+      <MemberSignature Language="C#" Value="Whitespace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType Whitespace = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.Whitespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Leerraum zwischen Markups.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlDeclaration">
+      <MemberSignature Language="C#" Value="XmlDeclaration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XmlNodeType XmlDeclaration = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XmlNodeType.XmlDeclaration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die XML-Deklaration (z. B. <c> &lt;? Xml Version = "1.0'?&gt; </c> ).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `XmlDeclaration` Knoten muss der erste Knoten im Dokument sein. Es sind keine untergeordneten Elemente. Es ist ein untergeordnetes Element von der `Document` Knoten. Sie können Attribute haben, die Versions- und Codierungsinformationen bereitstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

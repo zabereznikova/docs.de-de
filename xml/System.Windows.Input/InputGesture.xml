@@ -1,0 +1,68 @@
+<Type Name="InputGesture" FullName="System.Windows.Input.InputGesture">
+  <TypeSignature Language="C#" Value="public abstract class InputGesture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InputGesture extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.InputGesture" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Abstrakte Klasse, die Eingabegerät Gesten beschreibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen von <xref:System.Windows.Input.InputGesture> in [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] sind <xref:System.Windows.Input.KeyGesture> und <xref:System.Windows.Input.MouseGesture>.  
+  
+ Eine Eingabeaktion kann einen Befehl zugeordnet werden, sodass bei der Ausführung der Aktion wird der Befehl aufgerufen wird.  Weitere Informationen finden Sie unter <xref:System.Windows.Input.InputBinding> und [Befehle (Übersicht)](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InputGesture ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputGesture.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.InputGesture" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public abstract bool Matches (object targetElement, System.Windows.Input.InputEventArgs inputEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Matches(object targetElement, class System.Windows.Input.InputEventArgs inputEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputGesture.Matches(System.Object,System.Windows.Input.InputEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetElement" Type="System.Object" />
+        <Parameter Name="inputEventArgs" Type="System.Windows.Input.InputEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="targetElement">Das Ziel des Befehls.</param>
+        <param name="inputEventArgs">Die Eingabe Ereignisdaten dieser Bewegung zu vergleichen.</param>
+        <summary>Bestimmt beim Überschreiben in einer abgeleiteten Klasse, ob das angegebene <see cref="T:System.Windows.Input.InputGesture" /> entspricht die Eingabe zugeordnet ist, mit dem angegebenen <see cref="T:System.Windows.Input.InputEventArgs" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Aktion die Eingabe entspricht; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

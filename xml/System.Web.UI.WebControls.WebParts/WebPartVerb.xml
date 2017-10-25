@@ -1,0 +1,798 @@
+<Type Name="WebPartVerb" FullName="System.Web.UI.WebControls.WebParts.WebPartVerb">
+  <TypeSignature Language="C#" Value="public class WebPartVerb : System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartVerb extends System.Object implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartVerb" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein interaktives Element der Benutzeroberfläche bereit, mit dem Benutzer Aktionen auf einer Webparts-Seite ausführen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Verben sind interaktive Elemente der Benutzeroberfläche von Schaltflächen oder links, die in Seiten angezeigt werden, die Webparts-Steuerelemente verwenden in der Regel dargestellt. Benutzer klicken auf Verben zum Ausführen von allgemeinen UI-Aktionen für Webparts-Steuerelemente, z. B. schließende eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement oder schließen den Bearbeitungsanzeigemodus (eine spezielle Seitenansicht zugeordneten der <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement). Alle Webparts-Steuerelementsatzes enthaltene Standardverben sind entweder einer Webparts-Zone zugeordnet (<xref:System.Web.UI.WebControls.WebParts.WebPartZone>, <xref:System.Web.UI.WebControls.WebParts.EditorZone>, <xref:System.Web.UI.WebControls.WebParts.CatalogZone>, oder <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone>) oder eine Webparts <xref:System.Web.UI.WebControls.WebParts.Part> Steuerelement (<xref:System.Web.UI.WebControls.WebParts.WebPart>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart>, <xref:System.Web.UI.WebControls.WebParts.EditorPart>, oder <xref:System.Web.UI.WebControls.WebParts.CatalogPart>).  
+  
+ Wenn die Standardverben einer Zone zugeordnet sind, ihre Aktionen auf der Ebene der Zone angewendet werden sollen, und die Verben, die in der Regel im Bereich für die Zone Kopf- oder Fußzeile angezeigt werden. In der folgenden Tabelle listet die allgemeine Zonenebene Verben und ihre Aktionen beschrieben.  
+  
+|Zonenebene verb|Aktion|  
+|----------------------|------------|  
+|Schließen-verb|Verwendung von Zonen, die von erben die <xref:System.Web.UI.WebControls.WebParts.ToolZone> Klasse. Blendet die Benutzeroberfläche für eine Zone aus, und die Seite in der Regel die Ansicht mit normalen Durchsuchen-Modus zurück.|  
+|Übernehmen-verb|Verwendung von Zonen, die von erben die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Klasse. Wendet die Änderungen, die ein Benutzer vorgenommen wurde.|  
+|Verb OK|Verwendung von Zonen, die von erben die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Klasse. Verfügt über die kombinierten Auswirkungen der anwenden und schließen Verben; Er wendet Änderungen an und blendet Sie aus der Zone UI.|  
+|Verb "Abbrechen"|Verwendung von Zonen, die von erben die <xref:System.Web.UI.WebControls.WebParts.ToolZone> Klasse. Bricht alle ausstehenden Änderungen, die ein Benutzer vereinbart hat.|  
+|Verb hinzufügen|Verwendung von Zonen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Klasse. Fügt ein Steuerelement, das ein Benutzer aus einem Katalog von Steuerelementen mit einem angegebenen ausgewählt hat <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone.|  
+|Verb konfigurieren|Verwendung von Zonen, die von erben die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Klasse. Öffnet eine Ansicht, um Benutzern so konfigurieren Sie vorhandene Verbindungen zu ermöglichen.|  
+|Trennen-verb|Verwendung von Zonen, die von erben die <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Klasse. Beendet eine vorhandene Verbindung zwischen zwei Steuerelementen.|  
+  
+ Wie bei den standard-Verben, die zugeordnet sind <xref:System.Web.UI.WebControls.WebParts.Part> Steuerelemente, deren Aktionen anzuwenden, auf das Steuerelement selbst (oder für seine untergeordneten Steuerelemente). Das Webpart-Steuerelement fungiert als Container für das Verb und verwaltet das Rendering des Verbs an. Die meisten Standardverben Teilsteuerelemente zugeordnet werden entweder direkt in der Titelleiste oder in einem Dropdown-Verbenmenü in der Titelleiste angezeigt. Gibt an, ob diese Verben direkt im Header oder in einem Verbenmenü angezeigt richtet sich nach der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebPartVerbRenderMode%2A> Eigenschafts-standardmäßig die Verben in einem Verbenmenü angezeigt. Die folgende Tabelle enthält allgemeine Verben, die die verschiedenen zugeordnete <xref:System.Web.UI.WebControls.WebParts.Part> -Steuerelemente sowie die zugehörigen Aktionen beschrieben.  
+  
+|Teil kontrollverb|Aktion|  
+|-----------------------|------------|  
+|Minimieren-verb|Wird im Verbmenü des einzelnen Serversteuerelemente, die in einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone. Das Steuerelement reduziert auf eine minimale Darstellung und Ausblenden von alles, was in der Benutzeroberfläche mit Ausnahme der Restore-Verb.|  
+|Wiederherstellen-verb|Wird im Verbmenü des einzelnen Serversteuerelemente, die in einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone. Gibt ein minimiertes Steuerelement an ihre ursprüngliche Fenstergröße und die Sicht zurück.|  
+|Schließen-verb|Wird im Verbmenü des einzelnen Serversteuerelemente, die in einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone. Schließt ein Steuerelement und fügt es auf der Seitenkatalog, d. h. das Steuerelement auf der Seite entfernt wird, ist ein Katalog vorschriftsmäßig entwickelten, Benutzer können jedoch öffnen Sie erneut das Steuerelement geschlossene und sie zur Seite zurückzukehren.|  
+|Verbinden-verb|Wird im Verbmenü des ein enthaltenes Steuerelement eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, ist die Seite verbinden, Anzeigemodus und wenn das Steuerelement Verbindungen bilden kann. Öffnet eine Benutzeroberfläche für Verbindungen, damit Benutzer eine Verbindung zwischen Steuerelementen erstellen können.|  
+|Verb löschen|Wird im Verbmenü des ein enthaltenes Steuerelement eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, wenn das Steuerelement auf der Seite hinzugefügt wurde programmgesteuert (anstatt in Persistenzformat deklariert wird). Löscht die Instanz des Steuerelements und alle zugehörigen Personalisierungsdaten, im Gegensatz zu einem geschlossenen Steuerelement, die gelöschte Instanz nie auf der Seite wiederhergestellt werden kann.|  
+|Edit-verb|Wird im Verbmenü des ein enthaltenes Steuerelement eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, wenn die Seite für die Bearbeitung von Steuerelementen zuzulassen, und wenn die Seite im Bearbeitungsmodus Anzeigemodus vorgesehen ist. Wählt das Steuerelement zum Bearbeiten aus, und öffnet die bearbeitungs-UI.|  
+|Export-verb|Wird im Verbmenü des ein enthaltenes Steuerelement eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, wenn das Steuerelement und die Anwendung für den Export aktiviert sind. Öffnet ein Dialogfeld, können Benutzer eine Beschreibungsdatei exportieren, die die serialisierten Zustand des Steuerelements enthält. Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft.|  
+|Hilfe-verb|Wird im Verbmenü des ein enthaltenes Steuerelement eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, wenn das Steuerelement zu eine Hilfedatei bereitstellen. Startet eine Seite, die für das Steuerelement bereitstellt.|  
+  
+ Steuerelementsatz zusammen mit den standard-Verben, die mit den Webparts bereitgestellt werden, Sie können auch benutzerdefinierte Verben erstellen. Ein häufiges Szenario für das Erstellen von benutzerdefinierter Verben ist die Erstellung der zugeordneten Verben <xref:System.Web.UI.WebControls.WebParts.Part> Steuerelemente. Wenn Sie diese Verben erstellen, wird standardmäßig auf Verbmenü zusammen mit den Standardverben erscheinen. Die grundlegende Vorgehensweise für das Erstellen von Verben ist das erben die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse, um eine oder mehrere benutzerdefinierte Verben zu erstellen. Erstellen Sie ein Steuerelement, das von erbt die <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse und Hinzufügen von benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Datenbankobjekte in einer <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection> Auflistung. Dieser Sammlung kann anschließend hinzugefügt werden, um die <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> -Auflistung des Steuerelements, wodurch die benutzerdefinierten Verben angezeigt werden automatisch im Verbmenü des Steuerelements zur Laufzeit auftreten. Wie mit den standard-Verben, die benutzerdefinierten Verben, die programmgesteuert auf zugreifen kann eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Teile von Webanwendungen können Serversteuerelemente, die nicht von erben die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse, z. B. benutzerdefinierte Steuerelemente, Benutzersteuerelemente oder ASP.NET-Steuerelementen. Diese Serversteuerelemente, wenn hinzugefügt eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, dynamisch mit umschlossen sind eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt zur Laufzeit, die diese Funktion als zur Laufzeit ermöglicht <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Benutzerdefinierte Verben an ein Steuerelement hinzufügen, die nicht von erbt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, der muss ein Serversteuerelement implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebActionable> Schnittstelle, und überschreiben die <xref:System.Web.UI.WebControls.WebParts.IWebActionable.Verbs%2A> Eigenschaft.  
+  
+ Wenn Sie ein Verb erstellen, können Sie zwei Arten von zugeordneten Ereignishandler, die ausgeführt werden, wenn ein Benutzer das Verb klickt erstellen: eine serverseitige Ereignishandler (Code, der auf dem Server ausgeführt wird) und ein clientseitiges Ereignis-Handler (Code, der im Clientbrowser ausgeführt wird). Außerdem definieren Sie benutzerdefinierte Status für die Verben, dies ist eine hilfreiche Möglichkeit, um visuelle Hinweise für Benutzer bereitzustellen. Sie könnten z. B. Erstellen einer Status Gibt an, dass ein Verb ausgewählt wurde und geben Sie dann die entsprechenden Änderungen in der Benutzeroberfläche, um Benutzer zu benachrichtigen, dass das Verb bereits ausgewählt ist. Ein weiteres nützliches Verhalten ist die Möglichkeit, Verben zu deaktivieren. auf diese Weise können Sie Benutzer verhindern Sie Verben auf, wenn wäre schädliche oder ineffektiv des Zustands der Anwendung anhand.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse macht keine eindeutigen Methoden nicht; die verfügbar gemachten Methoden sind alle Überschreiben von Basismethoden. Es enthält jedoch eine Reihe von Eigenschaften für Entwickler zu berücksichtigen. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Checked%2A> Eigenschaft gibt an, ob ein Verb derzeit ausgewählt ist. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ClientClickHandler%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ServerClickHandler%2A> Eigenschaften beziehen sich auf die entsprechenden Handler innerhalb der Klasse (sofern vorhanden) für Client und Server-Ereignisse Click. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Description%2A> Eigenschaft enthält den Text zur Beschreibung des Zwecks eines Verbs in einer QuickInfo angezeigt, wenn Benutzer den Mauszeiger über das Verb in der Benutzeroberfläche. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Enabled%2A> Eigenschaft gibt den aktuellen Status des Verbs an, die bestimmt, ob ein Benutzer klicken Sie auf das Verb und dessen Aktion ausführen kann. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ID%2A> Eigenschaft enthält eine eindeutige ID für das Verbobjekt. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ImageUrl%2A> Eigenschaft enthält eine URL zu einem Bild, das verwendet werden kann, um ein Verb in der Benutzeroberfläche anstelle das Standardrendering zurückgreifen (i. d. r. eine Schaltfläche oder einen Link) darzustellen. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Text%2A> Eigenschaft enthält den Bezeichnungstext, der direkt auf dem Verb in der Benutzeroberfläche angezeigt wird. Die überschriebene <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Visible%2A> -Eigenschaft bestimmt, ob ein Verb derzeit in der Benutzeroberfläche angezeigt wird. Verben sind häufig ausgeblendet oder zu unterschiedlichen Zeiten in einer Webparts-Anwendung deaktiviert. Beispielsweise werden Specialty Verben (z. B. das Verb bearbeiten und das Verbinden-Verb) nur angezeigt, wenn die entsprechenden Steuerelemente, Einstellungen und Anzeigemodi auf der Seite So aktivieren Sie diese Verben sinnvolle Maßnahmen ergreifen vorhanden.  
+  
+ Andere Schlüsselelemente für die Arbeit mit Verben enthalten die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A?displayProperty=nameWithType> -Methode, die ein Ereignishandler, die für eine benutzerdefinierte Behandlung des Verberstellungsprozesses überschrieben werden können ist, und die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateVerbs?displayProperty=nameWithType> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt und eine benutzerdefinierte Zone, verwendet der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A> -Methode jedes Verbmenü das Verb hinzu <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement in der Zone enthaltenen. Es gibt vier Teile im Codebeispiel:  
+  
+-   Eine Quelldatei, die ein einfaches benutzerdefiniertes enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das Text anzeigt.  
+  
+-   Eine Quelldatei, die eine benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt und ein einfaches benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone, überschreibt die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A> -Methode zum Hinzufügen von benutzerdefinierten Verbs, <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in der Zone.  
+  
+-   Eine Webseite, die die benutzerdefinierte Zone und die benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels.  
+  
+ Der erste Teil des Codebeispiels enthält Quellcode, erstellt eine einfache <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das Text anzeigt. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die Methode der dynamischen Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartVerb2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartVerb2/CS/SimpleControl.cs#2)]
+ [!code-vb[WebParts_WebPartVerb2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartVerb2/VB/SimpleControl.vb#2)]  
+  
+ Der zweite Teil des Beispiels enthält Quellcode zum Erstellen der benutzerdefinierten Zone und die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt. Beachten Sie, die die Zone überschreibt die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A> -Methode zum Hinzufügen von benutzerdefinierten Verbs an ein beliebiges <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in der Zone. Das Verb wird standardmäßig die Verbmenü Steuerelemente hinzugefügt. Beachten Sie, dass im Code für das benutzerdefinierte Verb der Konstruktor für das Verb ein Server verwendet, klicken Sie auf Handler und, dass die aufgerufene Methode eine vollständige Kopie jedes Steuerelement erstellt erbt direkt von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, die neu erstellte Kopie der gleichen Zone hinzugefügt. Wie im ersten Teil des Codebeispiels diesen Quellcode kompiliert werden muss, und in diesem Beispiel wurde die Quelldatei im Unterordner App_Code dynamisch kompiliert werden eingefügt.  
+  
+ [!code-csharp[WebParts_WebPartVerb2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartVerb2/CS/ZoneWithAddedVerb.cs#3)]
+ [!code-vb[WebParts_WebPartVerb2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartVerb2/VB/ZoneWithAddedVerb.vb#3)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite, die die Steuerelemente hostet. Beachten Sie, dass es eine `Register` -Direktive am oberen Rand der Seite um den Namespace für die benutzerdefinierten Steuerelemente zu deklarieren. Es wird keine Assembly deklariert, da in diesem Beispiel wird die dynamische Kompilierung verwendet. Die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement innerhalb der benutzerdefinierten Zone deklariert ist. Sie können auch andere deklarieren <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in dieser Zone, und das benutzerdefinierte Verb würde auch die Verbenmenüs hinzugefügt.  
+  
+ [!code-aspx-csharp[WebParts_WebPartVerb2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartVerb2/CS/Defaultcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartVerb2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartVerb2/VB/Defaultvb.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser, und klicken Sie auf die Verbmenü für die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Die **Webpart kopieren** Verb angezeigt werden. Klicken Sie auf das Verb, und beachten Sie, dass eine Kopie des Steuerelements zur Zone hinzugefügt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.%23ctor%2A> Konstruktor erstellt eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse durch die Übergabe in einem von drei möglichen Parameter: einen Verweis auf eine serverseitige Click-Ereignishandler mit einem ID-Zeichenfolge einen Verweis auf eine clientseitige Click-Ereignishandler mit einem ID-Zeichenfolge oder Verweise auf beide Arten von click-Ereignishandler.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartVerb (string id, string clientClickHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string clientClickHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="clientClickHandler" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Ein <see cref="T:System.String" /> d. h. den eindeutigen Bezeichner für ein Verb.</param>
+        <param name="clientClickHandler">Ein <see cref="T:System.String" /> , verweist, an den Client-Side-Handler für click-Ereignisse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> -Klasse und ordnet die Instanz einen clientseitigen Click-Ereignishandler.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diesen Klassenkonstruktor bezieht sich auf einen clientseitigen Ereignishandler aufrufen, wenn der Benutzer ein Verb in der Benutzeroberfläche (UI) klickt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="clientClickHandler" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartVerb (string id, System.Web.UI.WebControls.WebParts.WebPartEventHandler serverClickHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, class System.Web.UI.WebControls.WebParts.WebPartEventHandler serverClickHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.#ctor(System.String,System.Web.UI.WebControls.WebParts.WebPartEventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="serverClickHandler" Type="System.Web.UI.WebControls.WebParts.WebPartEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="id">Ein <see cref="T:System.String" /> d. h. den eindeutigen Bezeichner für ein Verb.</param>
+        <param name="serverClickHandler">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartEventHandler" /> , click-Ereignisse auf dem Server behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> -Klasse und ordnet die Instanz einen serverseitigen Click-Ereignishandler.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diesen Klassenkonstruktor bezieht sich auf eine serverseitige Click-Ereignishandler aufgerufen werden, wenn der Benutzer ein Verb in der Benutzeroberfläche (UI) klickt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="serverClickHandler" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartVerb (string id, System.Web.UI.WebControls.WebParts.WebPartEventHandler serverClickHandler, string clientClickHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, class System.Web.UI.WebControls.WebParts.WebPartEventHandler serverClickHandler, string clientClickHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.#ctor(System.String,System.Web.UI.WebControls.WebParts.WebPartEventHandler,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="serverClickHandler" Type="System.Web.UI.WebControls.WebParts.WebPartEventHandler" />
+        <Parameter Name="clientClickHandler" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Ein <see cref="T:System.String" /> d. h. den eindeutigen Bezeichner für ein Verb.</param>
+        <param name="serverClickHandler">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartEventHandler" /> , click-Ereignisse auf dem Server behandelt.</param>
+        <param name="clientClickHandler">Ein <see cref="T:System.String" /> , verweist, an den Client-Side-Handler für click-Ereignisse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> Klasse und ordnet Client- und serverseitigen click-Ereignishandler der Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diesen Klassenkonstruktor bezieht sich auf beide clientseitige und serverseitige auf Ereignishandler aufrufen, wenn der Benutzer ein Verb in der Benutzeroberfläche (UI) klickt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="clientClickHandler" />-Parameter ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Der <paramref name="serverClickHandler" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public virtual bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, dass ein Zustand, der ein eigenes Verb zugeordnete derzeit aktiv oder markiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn ein Status zugeordnet ist ein eigenes Verb derzeit aktiv; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nicht mit der Standardverben bereitgestellt, mit dem Webparts-Steuerelementsatz verwendet. Wenn sie mit benutzerdefinierten Verben verwendet wird und den Wert der Eigenschaft auf festgelegt ist `true`, ein aktiviertes Kontrollkästchen wird neben dem Verb an, dass der aktive Status des Verbs angezeigt.  
+  
+ Diese Eigenschaft dient, Entwicklern eine Möglichkeit der, der angibt, die einige benutzerdefinierte Zustand, der mit einem Verb derzeit aktiv ist. Nehmen wir beispielsweise an, die ein Entwickler erstellt ein eigenes Verb, das die Textgröße (Eingabehilfen Zwecken) des Textkörpers auf allen vergrößert <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einer Zone. Wenn das Verb geklickt wird, konnte Wert dieser Eigenschaft auf festgelegt werden `true`, das würde dazu führen, dass eines aktiviertes Kontrollkästchen angezeigt werden die **Textgröße** Verb im Verbmenü, der angibt, für Benutzer, die der Zustand zugeordnet der Verb (vergrößerte Text) ist aktiv.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientClickHandler">
+      <MemberSignature Language="C#" Value="public string ClientClickHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientClickHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.ClientClickHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge, enthält der Name der Methode der clientseitigen Ereignishandler definiert, der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> Konstruktor.</summary>
+        <value>Eine Zeichenfolge, die den Namen der Methode enthält, die die clientseitige behandelt click-Ereignisse. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Namen der Methode abgerufen werden, dass der click-Ereignisse für das Verb, auf dem Client behandelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine kurze Beschreibung des Verbs an.</summary>
+        <value>Eine Zeichenfolge, enthält eine Beschreibung der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Abrufen oder Festlegen einer Beschreibung des Verbs, der als QuickInfo angezeigt wird, wenn ein Benutzer den Mauszeiger über das Verb positioniert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Description%2A> Eigenschaft in einer abgeleiteten Klasse erben von <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>. Dieser Code zeigt nur den Teil des Codes für die benutzerdefinierte Zone und die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse, die die Eigenschaft überschreibt. Der Rest des Codes erforderlich, um die Ausführung des Beispiels finden Sie in Abschnitt Beispiel der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_WebPartVerb2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartVerb2/CS/ZoneWithAddedVerb.cs#3)]
+ [!code-vb[WebParts_WebPartVerb2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartVerb2/VB/ZoneWithAddedVerb.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public virtual bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Verb aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Verb aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Abrufen oder Festlegen eines Werts, der angibt, ob das Verb aktiviert ist. Es ist hilfreich, in der Lage zu aktivieren oder Deaktivieren von Verben an bestimmten Punkten im Lebenszyklus Seite und des Steuerelements. Z. B. wenn ein Entwickler möchte verhindern, dass Benutzer geschlossen werden konnte die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einer Zone aus irgendeinem Grund der Entwickler können festlegen der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Enabled%2A> Eigenschaftswert auf die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CloseVerb%2A> Verb an, das `false`, und klicken Sie dann die Benutzer verhindert werden Schließen Sie alle Steuerelemente in dieser Zone. Standardmäßig werden die deaktivierte Verben in Verbenmenüs mit einen visuellen Hinweis darauf, wie z. B. einer helleren Textfarbe gerendert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Enabled%2A> Eigenschaft in einer abgeleiteten Klasse erben von <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>. Dieser Code zeigt nur den Teil des Codes für die benutzerdefinierte Zone und die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse, die die Eigenschaft überschreibt. Der Rest des Codes erforderlich, um die Ausführung des Beispiels finden Sie in Abschnitt Beispiel der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_WebPartVerb2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartVerb2/CS/ZoneWithAddedVerb.cs#3)]
+ [!code-vb[WebParts_WebPartVerb2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartVerb2/VB/ZoneWithAddedVerb.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die mit einer eindeutigen ID für ein Verb ab.</summary>
+        <value>Eine Zeichenfolge, enthält die ID für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der ID-Eigenschaft muss als Parameter angegeben werden, wenn eine der Überladungen der Aufruf der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.%23ctor%2A> Konstruktor für die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge mit einer URL zu einem Bild, das ein Verb in der Benutzeroberfläche (UI) darstellt.</summary>
+        <value>Eine Zeichenfolge, die URL zu einem Bild enthält. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ImageUrl%2A> Eigenschaft bietet eine Möglichkeit zum Verwenden einer benutzerdefinierten visuellen Darstellung für Verben als Alternative zum Standardrendering. Wenn Sie eine URL für die Eigenschaft zuweisen, wird das Bild in Verbenmenüs (Weiter, um das Verb) oder direkt in Formularen (anstelle einer Schaltfläche oder Link, der das Verb darstellt).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ImageUrl%2A> Eigenschaft in einer abgeleiteten Klasse erben von <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>. Dieser Code zeigt nur den Teil des Codes für die benutzerdefinierte Zone und die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse, die die Eigenschaft überschreibt. Der Rest des Codes erforderlich, um die Ausführung des Beispiels finden Sie in Abschnitt Beispiel der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> -Klassenübersicht. Beachten Sie, dass der Beispielcode ein fiktives Symbol weist den <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ImageUrl%2A> Eigenschaft; Wenn Sie ein echtes Bild oder ein Symbol, zuweisen, wird Sie neben dem Verb im Verbmenü angezeigt.  
+  
+ [!code-csharp[WebParts_WebPartVerb2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartVerb2/CS/ZoneWithAddedVerb.cs#3)]
+ [!code-vb[WebParts_WebPartVerb2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartVerb2/VB/ZoneWithAddedVerb.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected virtual bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Ansichtszustand für ein Verb derzeit nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Ansichtszustand nachverfolgt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> , enthält den Ansichtszustand wiederhergestellt werden.</param>
+        <summary>Stellt Ansichtszustandsinformationen aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartVerb.SaveViewState" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Diese Methode bestimmt, ob alle vorhandenen `savedState` aus einer früheren Seitenanforderung wieder, und wenn dies der Fall ist, wiederhergestellt werden kann. Enthalten derzeit den Ansicht Zustand ist die Sichtbarkeit des Verbs, die durch den Wert, der bestimmt wird die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Visible%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> objektspezifischen Ansichtszustandsänderungen, die seit der letzten Seite aufgetreten an den Server zurückgesendet.</summary>
+        <returns>Ein <see cref="T:System.Object" /> enthält die Statusdaten gespeichert werden sollen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Ansichtszustand Daten vorhanden sind, wird diese Methode ruft die Basismethode und speichert die Daten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerClickHandler">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartEventHandler ServerClickHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartEventHandler ServerClickHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.ServerClickHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die Methode für die serverseitige behandelt click-Ereignisse für das Verb.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartEventHandler" /> , verarbeitet die serverseitige click-Ereignisse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft einem Verweis auf die Methode abrufen, click-Ereignisse für ein Verb behandelt der Serverseite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementiert die <see cref="P:System.Web.UI.IStateManager.IsTrackingViewState" /> Eigenschaft durch Aufrufen der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> der Klasse <see cref="P:System.Web.UI.WebControls.WebParts.WebPartVerb.IsTrackingViewState" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn der Ansichtszustand nachverfolgt wird, für die ein Verb; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird. Die Methode ruft einfach die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.IsTrackingViewState%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> , enthält den Ansichtszustand wiederhergestellt werden.</param>
+        <summary>Implementiert die <see cref="M:System.Web.UI.IStateManager.LoadViewState(System.Object)" /> Methode der <see cref="T:System.Web.UI.IStateManager" /> Schnittstelle durch Aufrufen der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> der Klasse <see cref="M:System.Web.UI.WebControls.WebParts.WebPartVerb.LoadViewState(System.Object)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird. Die Methode ruft einfach die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.LoadViewState%2A> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementiert die <see cref="M:System.Web.UI.IStateManager.SaveViewState" /> Methode durch Aufrufen der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> der Klasse <see cref="M:System.Web.UI.WebControls.WebParts.WebPartVerb.SaveViewState" /> Methode.</summary>
+        <returns>Gibt eine <see cref="T:System.Object" /> , aktuellen Ansichtszustand des Steuerelements enthält. Wenn kein Ansichtszustand des Steuerelements zugeordnet ist, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird. Die Methode ruft einfach die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.SaveViewState%2A> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementiert die <see cref="M:System.Web.UI.IStateManager.TrackViewState" /> Methode durch Aufrufen der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> der Klasse <see cref="M:System.Web.UI.WebControls.WebParts.WebPartVerb.TrackViewState" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird. Die Methode ruft einfach die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.TrackViewState%2A> Methode für die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für ein Verb, das in der Benutzeroberfläche (UI) angezeigt wird.</summary>
+        <value>Eine Zeichenfolge mit der Bezeichnung für ein Verb. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft legt den Text der Bezeichnung für ein <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt; es ist, was das Verb an Benutzer in der Benutzeroberfläche darstellen.  
+  
+ Wenn Entwickler einen Wert an (optional) weisen Sie die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.ImageUrl%2A> -Eigenschaft, ein Bild oder Symbol, das Verb in der Benutzeroberfläche darstellt, und in bestimmten Fällen (z. B. wenn das Verb normalerweise durch eine Schaltfläche oder Link gerendert wird) das Bild angezeigt wird, anstatt die Beschriftung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Text%2A> Eigenschaft in einer abgeleiteten Klasse erben von <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>. Dieser Code zeigt nur den Teil des Codes für die benutzerdefinierte Zone und die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse, die die Eigenschaft überschreibt. Der Rest des Codes erforderlich, um die Ausführung des Beispiels finden Sie in Abschnitt Beispiel der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> -Klassenübersicht.  
+  
+ Beachten Sie, dass der Wert zugewiesen, nachdem Sie die Seite in einem Browser zu laden, die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Text%2A> Eigenschaft im Quellcode wird im Verbmenü des der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ [!code-csharp[WebParts_WebPartVerb2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartVerb2/CS/ZoneWithAddedVerb.cs#3)]
+ [!code-vb[WebParts_WebPartVerb2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartVerb2/VB/ZoneWithAddedVerb.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected virtual void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerb.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ein Verb Ansichtszustand Änderungen verfolgt werden, damit die Änderungen können, in des Verbs gespeichert werden <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht Ansichtszustand für verfolgt werden eine <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewState">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.StateBag ViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.StateBag ViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.ViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.StateBag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Statusinformationen, die Sie speichern und Wiederherstellen von den Ansichtszustand eines Serversteuerelements in mehreren Anforderungen der gleichen Seite ermöglicht.</summary>
+        <value>Eine Instanz von <see cref="T:System.Web.UI.StateBag" /> , die Informationen zum Ansichtszustand des Serversteuerelements enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Objekt erbt nicht von einer Klasse, dass den Ansichtszustand nachverfolgt, und wurde noch eine Reihe von Eigenschaften, die erfordern Ansichtszustand für mehrere Anforderungen für die Seite verfolgt werden, implementiert eine eigenen-Eigenschaft, um den Ansichtszustand zu verwalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public virtual bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerb.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Verb für Benutzer sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Verb sichtbar ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verben müssen häufig je nach den Inhalt einer Webparts-Anwendung angezeigt oder ausgeblendet werden. Beispielsweise wird das Minimieren-Verb ausgeblendet, wenn ein Steuerelement bereits minimiert und das Wiederherstellen-Verb hingegen ausgeblendet wird, wenn das Steuerelement in seiner normalen Zustand nicht minimiert wird.  
+  
+ Ein Verb, dessen <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Visible%2A> -Eigenschaftensatz auf `false` Benutzer ausgeblendet wird jedoch immer noch auf einer Seite gerendert wird, können weiterhin programmgesteuert aufgerufen werden und noch vollständig Seiten- und Lebenszyklusereignisse beteiligt.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

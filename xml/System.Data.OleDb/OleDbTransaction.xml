@@ -1,0 +1,245 @@
+<Type Name="OleDbTransaction" FullName="System.Data.OleDb.OleDbTransaction">
+  <TypeSignature Language="C#" Value="public sealed class OleDbTransaction : System.Data.Common.DbTransaction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbTransaction extends System.Data.Common.DbTransaction" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbTransaction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine SQL-Transaktion dar, die mit einer Datenquelle durchgeführt werden soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt die Anwendung eine <xref:System.Data.OleDb.OleDbTransaction> Objekt durch Aufrufen von <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A> auf die <xref:System.Data.OleDb.OleDbConnection> Objekt. Alle nachfolgenden Vorgänge, die der Transaktion (z. B. Commit oder Abbruch der Transaktion) zugeordnet werden ausgeführt, auf die <xref:System.Data.OleDb.OleDbTransaction> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbTransaction Begin ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbTransaction Begin() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbTransaction.Begin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initiiert eine geschachtelte Datenbanktransaktion.</summary>
+        <returns>Eine geschachtelte Datenbanktransaktion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue Transaktion ist innerhalb der aktuellen Transaktion geschachtelt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Geschachtelte Transaktionen werden nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbTransaction Begin (System.Data.IsolationLevel isolevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbTransaction Begin(valuetype System.Data.IsolationLevel isolevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbTransaction.Begin(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolevel">Die Isolationsstufe für die Transaktion verwendet werden soll.</param>
+        <summary>Eine geschachtelte Datenbanktransaktion initiiert, und gibt die Isolationsstufe für die neue Transaktion verwendet.</summary>
+        <returns>Eine geschachtelte Datenbanktransaktion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue Transaktion ist innerhalb der aktuellen Transaktion geschachtelt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Geschachtelte Transaktionen werden nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbTransaction.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit der Datenbanktransaktion aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und ein <xref:System.Data.OleDb.OleDbTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A>, <xref:System.Data.OleDb.OleDbTransaction.Commit%2A>, und <xref:System.Data.OleDb.OleDbTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.BeginTransaction1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.BeginTransaction1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler beim Ausführen eines Commits der Transaktion.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Commit bzw. ein Rollback für die Transaktion ausgeführt.  
+  
+ - oder -   
+  
+ Die Verbindung ist unterbrochen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbTransaction.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.OleDb.OleDbConnection" /> Objekt, das mit der Transaktion zugeordnet oder <see langword="null" /> , wenn die Transaktion nicht mehr gültig ist.</summary>
+        <value>Ein <see cref="T:System.Data.OleDb.OleDbConnection" />-Objekt, das der Transaktion zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine einzelne Anwendung kann mehrere Datenbankverbindungen mit NULL oder mehr Transaktionen jeweils haben. Diese Eigenschaft können Sie das Verbindungsobjekt, das einer bestimmten Transaktion erstellt, indem zugeordnete bestimmen <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbConnection">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbConnection DbConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection DbConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbTransaction.DbConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbTransaction.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsolationLevel">
+      <MemberSignature Language="C#" Value="public override System.Data.IsolationLevel IsolationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.IsolationLevel IsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbTransaction.IsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den <see cref="T:System.Data.IsolationLevel" /> für diese Transaktion an.</summary>
+        <value>Der <see cref="T:System.Data.IsolationLevel" /> für diese Transaktion. Die Standardeinstellung ist <see langword="ReadCommitted" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parallele Transaktionen werden nicht unterstützt. Aus diesem Grund die <xref:System.Data.IsolationLevel> gilt für die gesamte Transaktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbTransaction.Rollback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Rollback für eine Transaktion aus einem ausstehenden Zustand durch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Transaktion kann nur ein Rollback von Status "Ausstehend" (nach <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A> aufgerufen wurde, jedoch bevor <xref:System.Data.OleDb.OleDbTransaction.Commit%2A> aufgerufen wird). Die Transaktion wird zurückgesetzt, verworfen wird, bevor Sie `Commit` oder `Rollback` aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbConnection> und ein <xref:System.Data.OleDb.OleDbTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.OleDb.OleDbConnection.BeginTransaction%2A>, <xref:System.Data.OleDb.OleDbTransaction.Commit%2A>, und <xref:System.Data.OleDb.OleDbTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData OleDbConnection.BeginTransaction1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbConnection.BeginTransaction1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbConnection.BeginTransaction1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler beim Ausführen eines Commits der Transaktion.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Commit bzw. ein Rollback für die Transaktion ausgeführt.  
+  
+ - oder -   
+  
+ Die Verbindung ist unterbrochen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1598 @@
+<Type Name="ToolBar" FullName="System.Windows.Forms.ToolBar">
+  <TypeSignature Language="C#" Value="public class ToolBar : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolBar extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ButtonClick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Buttons")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ToolBarDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Windows-Symbolleiste dar. Obwohl <see cref="T:System.Windows.Forms.ToolStrip" /> ersetzt und funktionell erweitert, um die <see cref="T:System.Windows.Forms.ToolBar" /> -Steuerelement früherer Versionen <see cref="T:System.Windows.Forms.ToolBar" /> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolBar>Steuerelemente werden verwendet, um die Anzeige <xref:System.Windows.Forms.ToolBarButton> Steuerelemente, die als eine standard-Schaltfläche, eine ein-/ausschalten-Schaltfläche oder eine Dropdown-Schaltfläche angezeigt werden können. Die Schaltflächen Bilder zuweisen möchten, erstellen eine <xref:System.Windows.Forms.ImageList>, Zuweisung zu der <xref:System.Windows.Forms.ToolBar.ImageList%2A> Eigenschaft von der Symbolleiste und der abbildindexwert zum Zuweisen der <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Eigenschaft jeder <xref:System.Windows.Forms.ToolBarButton>. Sie können dann weisen Sie diesem Text zu unterhalb oder auf der rechten Seite des Bilds angezeigt werden, indem die <xref:System.Windows.Forms.ToolBarButton.Text%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolBarButton>.  
+  
+ Legen Sie die <xref:System.Windows.Forms.ToolBar.Appearance%2A> Eigenschaft von der Symbolleiste, um <xref:System.Windows.Forms.ToolBarAppearance.Flat> auf der Symbolleiste und der zugehörigen Schaltflächen Flatfile Stil. Wie die Maus bewegt sich über die Schaltflächen, die ihre Darstellung Änderungen an dreidimensionalen Zeiger. Symbolleistenschaltflächen können mithilfe von Trennzeichen in logische Gruppen eingeteilt werden. Ein Trennzeichen ist eine Symbolleisten-Schaltfläche mit den <xref:System.Windows.Forms.ToolBarButton.Style%2A> -Eigenschaftensatz auf `ToolBarButtonStyle.Separator`. Schaltfläche Trennzeichen werden als Zeilen anstelle von Leerzeichen zwischen den Schaltflächen, wenn die Symbolleiste flach dargestellt wird. Wenn die <xref:System.Windows.Forms.ToolBar.Appearance%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.ToolBarAppearance.Normal>, die Schaltflächen die Symbolleiste angezeigt werden, als auch dreidimensionale ausgelöst.  
+  
+ Bei Angabe ein Werts für die <xref:System.Windows.Forms.ToolBar.ButtonSize%2A> -Eigenschaft, die alle Schaltflächen der Symbolleiste sind auf die angegebene Größe beschränkt. Andernfalls die Schaltflächen anpassen, deren Größe sich je nach ihrem Inhalt und die <xref:System.Windows.Forms.ToolBar.ButtonSize%2A> Eigenschaft gibt die Anfangsgröße der größten Schaltfläche zurück.  
+  
+ So erstellen eine Auflistung von <xref:System.Windows.Forms.ToolBarButton> Steuerelemente zum Anzeigen auf der <xref:System.Windows.Forms.ToolBar>, einzeln mithilfe der Schaltflächen Hinzufügen der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> oder <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Insert%2A> Methoden die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> Steuerelemente. Schaltflächen die Symbolleiste auf die Schaltfläche Auflistung zugewiesen sind, die Auflistung der Symbolleiste zugewiesen ist und die Symbolleiste zum Formular hinzugefügt wird. Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> -Ereignis für die Symbolleiste die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> ausgewertet wird, und das entsprechende Dialogfeld geöffnet. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.Form>, wird ein <xref:System.Windows.Forms.OpenFileDialog>, <xref:System.Windows.Forms.SaveFileDialog>, und ein <xref:System.Windows.Forms.PrintDialog> erstellt wurden.  
+  
+ [!code-cpp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBar.ToolBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolBar" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine neu erstellte Symbolleisten-Steuerelement ist leer. Hinzufügen <xref:System.Windows.Forms.ToolBarButton> Steuerelemente durch Festlegen der <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> Steuerelemente. Schaltflächen die Symbolleiste auf die Schaltfläche Auflistung zugewiesen sind, die Auflistung der Symbolleiste zugewiesen ist und die Symbolleiste zum Formular hinzugefügt wird. Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> -Ereignis für die Symbolleiste die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> ausgewertet wird, und das entsprechende Dialogfeld geöffnet. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.Form>, wird ein <xref:System.Windows.Forms.OpenFileDialog>, <xref:System.Windows.Forms.SaveFileDialog>, und ein <xref:System.Windows.Forms.PrintDialog> erstellt wurden.  
+  
+ [!code-cpp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBar.ToolBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Appearance">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolBarAppearance Appearance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolBarAppearance Appearance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.Appearance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarAppearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der die Darstellung eines Symbolleisten-Steuerelements und der zugehörigen Schaltflächen bestimmt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ToolBarAppearance" />-Werte. Die Standardeinstellung ist <see langword="ToolBarAppearance.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.Appearance%2A> Eigenschaft wirkt sich auf die Darstellung der Schaltflächen der Symbolleiste zugewiesen. Wenn die Darstellung auf festgelegt ist `ToolBarAppearance.Normal`, die Schaltflächen der Symbolleiste angezeigt werden, dreidimensionalen und ausgelöst. Legen Sie die <xref:System.Windows.Forms.ToolBar.Appearance%2A> Eigenschaft von der Symbolleiste, um `ToolBarAppearance.Flat` auf die Symbolleisten-Schaltflächen Flatfile Stil. Wenn der Mauszeiger über den flachen Schaltflächen bewegt wird, werden sie erhöht und dreidimensional angezeigt. Trennzeichen für ein <xref:System.Windows.Forms.ToolBar> mit der <xref:System.Windows.Forms.ToolBar.Appearance%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.ToolBarAppearance.Flat> als geätzte Linien anstelle von Leerzeichen zwischen den ausgelösten Schaltflächen angezeigt. Die flache Schaltflächen können Ihre Anwendung Web-ähnlichere sehen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.ToolBarAppearance" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Größe der Symbolleiste automatisch entsprechend der Größe der Schaltflächen und der Andockart angepasst wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Symbolleiste seine Größe automatisch angepasst wird, basierend auf der Größe der Schaltflächen und der Andockart; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.ToolBar.AutoSize%2A> auf festgelegt ist `true`, die <xref:System.Windows.Forms.ToolBar> -Steuerelement passt sich um die Schaltflächen der Symbolleiste, basierend auf der Größe der Schaltfläche, die Anzahl der aufzunehmen <xref:System.Windows.Forms.ToolBarButton> Objekte, die es enthält, und die <xref:System.Windows.Forms.DockStyle> der Symbolleiste.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.ToolBar.AutoSize" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolBar.AutoSizeChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolBar> mit dem Namen `ToolBar1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolBar.AutoSizeChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#564](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#564)]
+ [!code-vb[System.Windows.Forms.EventExamples#564](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#564)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hintergrundfarbe ab oder legt sie fest.</summary>
+        <value>Die Hintergrundfarbe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.BackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.ToolBar.BackColor" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.BackColor%2A> Eigenschaft ist nicht für das genannte Steuerelement sinnvoll, obwohl Sie dessen Wert und behandeln können die <xref:System.Windows.Forms.ToolBar.BackColorChanged> Ereignis, um die Änderung zu erkennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hintergrundbild ab oder legt dieses fest.</summary>
+        <value>Das Hintergrundbild.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.ToolBar.BackgroundImage" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.BackgroundImage%2A> Eigenschaft ist nicht für das genannte Steuerelement sinnvoll, obwohl Sie dessen Wert und behandeln können die <xref:System.Windows.Forms.ToolBar.BackgroundImageChanged> Ereignis, um die Änderung zu erkennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Layout für das Hintergrundbild ab oder legt dieses fest.</summary>
+        <value>Das Layout für das Hintergrundbild.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.ToolBar.BackgroundImageLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.BackgroundImageLayout%2A> Eigenschaft ist nicht für das genannte Steuerelement sinnvoll, obwohl Sie dessen Wert und behandeln können die <xref:System.Windows.Forms.ToolBar.BackgroundImageLayoutChanged> Ereignis, um die Änderung zu erkennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenart des Symbolleisten-Steuerelements ab oder legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.BorderStyle" />-Werte. Die Standardeinstellung ist <see langword="BorderStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar> dauert ein Gesenktes dreidimensional dargestellt bei der <xref:System.Windows.Forms.BorderStyle> -Eigenschaftensatz auf `BorderStyle.Fixed3D`. Um einen flachen schlanke Rahmen um das Symbolleisten-Steuerelement anzuzeigen, legen die <xref:System.Windows.Forms.BorderStyle> Eigenschaft `BorderStyle.FixedSingle`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.BorderStyle" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolBarButtonClickEventHandler ButtonClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolBarButtonClickEventHandler ButtonClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.ButtonClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonClickEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine <see cref="T:System.Windows.Forms.ToolBarButton" /> auf die <see cref="T:System.Windows.Forms.ToolBar" /> geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> Steuerelemente. Schaltflächen die Symbolleiste auf die Schaltfläche Auflistung zugewiesen sind, die Auflistung der Symbolleiste zugewiesen ist und die Symbolleiste zum Formular hinzugefügt wird. Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> -Ereignis für die Symbolleiste die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> ausgewertet wird, und das entsprechende Dialogfeld geöffnet. Dieser Code erfordert, dass eine <xref:System.Windows.Forms.Form>, wird ein <xref:System.Windows.Forms.OpenFileDialog>, <xref:System.Windows.Forms.SaveFileDialog>, und ein <xref:System.Windows.Forms.PrintDialog> erstellt wurden.  
+  
+ [!code-cpp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBar.ToolBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonDropDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolBarButtonClickEventHandler ButtonDropDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolBarButtonClickEventHandler ButtonDropDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.ButtonDropDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonClickEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Dropdown-Format <see cref="T:System.Windows.Forms.ToolBarButton" /> oder der Pfeil nach unten geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buttons">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolBar.ToolBarButtonCollection Buttons { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolBar/ToolBarButtonCollection Buttons" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.Buttons" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBar+ToolBarButtonCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Windows.Forms.ToolBarButton" /> Steuerelemente, die dem Symbolleisten-Steuerelement zugewiesen.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolBar.ToolBarButtonCollection" /> , enthält eine Auflistung von <see cref="T:System.Windows.Forms.ToolBarButton" /> Steuerelemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft ist eine nullbasierte indizierte Auflistung verwendet, um alle halten die <xref:System.Windows.Forms.ToolBarButton> Steuerelemente auf der Symbolleiste zugewiesen. Da die Eigenschaft schreibgeschützt ist, kann er keine Auflistung des Symbolleistenschaltflächen direkt zugewiesen werden. Schaltflächen der Symbolleiste können hinzugefügt oder entfernt werden, mithilfe der Methoden geerbt von der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> Klasse. Verwenden der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> Methode zum Hinzufügen von einzelnen Schaltflächen und die <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> Methode, um eine Schaltfläche zu löschen. Rufen Sie die <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Clear%2A> Methode, um alle Schaltflächen aus der Auflistung zu entfernen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.ToolBar> und drei <xref:System.Windows.Forms.ToolBarButton> Steuerelemente. Symbolleisten-Schaltflächen der Symbolleiste zugewiesen sind, und die Symbolleiste zum Formular hinzugefügt wird. Dieser Code erfordert, dass ein <xref:System.Windows.Forms.Form> bereits erstellt wurde.  
+  
+ [!code-cpp[Classic ToolBar.Buttons Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBar.Buttons Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBar.Buttons Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBar.Buttons Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBar.Buttons Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBar.Buttons Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size ButtonSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size ButtonSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.ButtonSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe der Schaltflächen auf dem Symbolleisten-Steuerelement ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> -Objekt, das die Größe des stellt die <see cref="T:System.Windows.Forms.ToolBarButton" /> Steuerelemente auf der Symbolleiste. Die Standardgröße hat eine Breite von 24 Pixel und eine Höhe von 22 Pixel oder groß genug, um Rechnung zu tragen die <see cref="T:System.Drawing.Image" /> und Text, welcher Wert größer ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ToolBar.ButtonSize%2A> ist nicht festgelegt ist, wird er auf den Standardwert festgelegt ist. Alternativ können Sie eine <xref:System.Drawing.Size> wird berechnet, um das größte Rechnung zu tragen <xref:System.Drawing.Image> und zugewiesenen Text der <xref:System.Windows.Forms.ToolBarButton> Steuerelemente.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Drawing.Size.Width" /> oder <see cref="P:System.Drawing.Size.Height" /> Eigenschaft von der <see cref="T:System.Drawing.Size" /> -Objekts kleiner als 0 ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Handle für das Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benötigten Erstellungsparameter ab, wenn das Steuerelementhandle erstellt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von diesem Steuerelement unterstützten Standardmodus des IME (Eingabemethoden-Editor) ab.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Implementierung in der <xref:System.Windows.Forms.ToolBar> Klasse, die diese Eigenschaft gibt immer die <xref:System.Windows.Forms.ImeMode?displayProperty=nameWithType> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Die Standard-<see cref="T:System.Drawing.Size" /> des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.ToolBar" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Windows.Forms.ToolBar> verweist. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Divider">
+      <MemberSignature Language="C#" Value="public bool Divider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Divider" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.Divider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob auf der Symbolleiste ein Unterteiler angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Symbolleiste ein Unterteiler angezeigt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterteiler um die Symbolleiste von benachbarten Steuerelementen, z. B. Menüs zu unterscheiden. Ein Unterteiler angezeigt wird, als einer erhöhten Kante entlang des oberen Randes der <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dock">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DockStyle Dock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle Dock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.Dock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, welche Steuerelementrahmen am übergeordneten Steuerelement angedockt sind, und bestimmt, wie die Größe eines Steuerelements mit dem übergeordneten Steuerelement geändert wird.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DockStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DockStyle.None" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleBuffered">
+      <MemberSignature Language="C#" Value="protected override bool DoubleBuffered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DoubleBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.DoubleBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownArrows">
+      <MemberSignature Language="C#" Value="public bool DropDownArrows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DropDownArrows" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.DropDownArrows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob neben den Dropdown-Schaltflächen einer Symbolleiste ein Dropdownpfeil angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Dropdown Schaltflächen ein Dropdownpfeil angezeigt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.ToolBar.DropDownArrows%2A> festgelegt ist, um `false`, keine Pfeile nach unten anzuzeigen, auf die Dropdown-Schaltflächen der Symbolleiste. Klickt der Benutzer auf die Dropdown Schaltfläche auf der Symbolleiste, löscht das Menü zur Auswahl nach unten. Wenn der Dropdown-Pfeil angezeigt wird, muss der Benutzer auf den Pfeil nach unten, um das Menü anzuzeigen drücken.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe ab oder legt diese fest.</summary>
+        <value>Die Vordergrundfarbe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.ToolBar.ForeColor" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.ForeColor%2A> Eigenschaft ist nicht für das genannte Steuerelement sinnvoll, obwohl Sie dessen Wert und behandeln können die <xref:System.Windows.Forms.ToolBar.ForeColorChanged> Ereignis, um die Änderung zu erkennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageList">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImageList ImageList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ImageList ImageList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.ImageList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Bilder ab, die für die Schaltflächen-Steuerelemente der Symbolleiste verfügbar sind, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ImageList" /> Images verfügbar sind, enthält die <see cref="T:System.Windows.Forms.ToolBarButton" /> Steuerelemente. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Erstellung eine <xref:System.Windows.Forms.ImageList> und weisen Sie ihn der <xref:System.Windows.Forms.ToolBar.ImageList%2A> -Eigenschaft, können Sie ein Bild zuzuweisen, aus der Auflistung, an der <xref:System.Windows.Forms.ToolBarButton> Steuerelemente durch Zuweisen des Bilds Indexwerts, um die <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Eigenschaft der Symbolleisten-Schaltfläche.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size ImageSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size ImageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.ImageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe der Bilder in der Bildliste ab, die der Symbolleiste zugewiesen ist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die Größe der Bilder darstellt (in der <see cref="T:System.Windows.Forms.ImageList" />) zugewiesen werden, um die <see cref="T:System.Windows.Forms.ToolBar" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.ToolBar.ImeMode" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.ImeMode%2A> Eigenschaft ist nicht für das genannte Steuerelement sinnvoll, obwohl Sie dessen Wert und behandeln können die <xref:System.Windows.Forms.ToolBar.ImeModeChanged> Ereignis, um die Änderung zu erkennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnButtonClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnButtonClick (System.Windows.Forms.ToolBarButtonClickEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnButtonClick(class System.Windows.Forms.ToolBarButtonClickEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.OnButtonClick(System.Windows.Forms.ToolBarButtonClickEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolBarButtonClickEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.ToolBarButtonClickEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolBar.ButtonClick" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolBar.OnButtonClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolBar.OnButtonClick(System.Windows.Forms.ToolBarButtonClickEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolBar.OnButtonClick(System.Windows.Forms.ToolBarButtonClickEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnButtonDropDown">
+      <MemberSignature Language="C#" Value="protected virtual void OnButtonDropDown (System.Windows.Forms.ToolBarButtonClickEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnButtonDropDown(class System.Windows.Forms.ToolBarButtonClickEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.OnButtonDropDown(System.Windows.Forms.ToolBarButtonClickEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolBarButtonClickEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.ToolBarButtonClickEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolBar.ButtonDropDown" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolBar.OnButtonDropDown%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolBar.OnButtonDropDown(System.Windows.Forms.ToolBarButtonClickEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolBar.OnButtonDropDown(System.Windows.Forms.ToolBarButtonClickEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.FontChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.OnFontChanged%2A> Methode ändert die Größe der Schaltflächen der Symbolleiste die Größe der neuen Schriftart an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleCreated" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResize">
+      <MemberSignature Language="C#" Value="protected override void OnResize (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnResize(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.OnResize(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Resize" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.RightToLeft RightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.RightToLeft RightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.RightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member hat für das genannte Steuerelement keine Bedeutung.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.RightToLeft" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.RightToLeftChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.ToolBar.RightToLeft" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.RightToLeft%2A> Eigenschaft ist nicht für das genannte Steuerelement sinnvoll, obwohl Sie dessen Wert und behandeln können die <xref:System.Windows.Forms.ToolBar.RightToLeftChanged> Ereignis, um die Änderung zu erkennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleControl">
+      <MemberSignature Language="C#" Value="protected override void ScaleControl (System.Drawing.SizeF factor, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ScaleControl(valuetype System.Drawing.SizeF factor, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.ScaleControl(System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factor" Type="System.Drawing.SizeF" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="factor">Der Faktor, um den die Höhe und die Breite des Steuerelements skaliert werden.</param>
+        <param name="specified">Ein <see cref="T:System.Windows.Forms.BoundsSpecified" />-Wert, der die Begrenzungen des Steuerelements angibt und bei der Definition von Größe und Position verwendet wird.</param>
+        <summary>Skaliert Speicherort, Größe, Textabstand und Rand eines Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleCore">
+      <MemberSignature Language="C#" Value="protected override void ScaleCore (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ScaleCore(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.ScaleCore(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Der Faktor für die horizontale Skalierung.</param>
+        <param name="dy">Der Faktor für die vertikale Skalierung.</param>
+        <summary>Diese Methode ist für diese Klasse nicht relevant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der neue <see langword="Left" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="y">Der neue <see langword="Top" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="width">Der neue <see langword="Width" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="height">Nicht verwendet.</param>
+        <param name="specified">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.BoundsSpecified" />-Werte.</param>
+        <summary>Legt die angegebenen Begrenzungen der <see cref="T:System.Windows.Forms.ToolBar" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.SetBoundsCore%2A> -Methode ignoriert die Breite, wenn die <xref:System.Windows.Forms.ToolBar.Dock%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DockStyle.Left> oder <xref:System.Windows.Forms.DockStyle.Right> und <xref:System.Windows.Forms.ToolBar.AutoSize%2A> -Eigenschaftensatz auf `true`. <xref:System.Windows.Forms.ToolBar.SetBoundsCore%2A>Höhe ignoriert, wenn die <xref:System.Windows.Forms.ToolBar.Dock%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DockStyle.Top> oder <xref:System.Windows.Forms.DockStyle.Bottom> und <xref:System.Windows.Forms.ToolBar.AutoSize%2A> -Eigenschaftensatz auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowToolTips">
+      <MemberSignature Language="C#" Value="public bool ShowToolTips { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowToolTips" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.ShowToolTips" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob auf der Symbolleiste für jede Schaltfläche eine QuickInfo angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Symbolleiste für jede Schaltfläche eine QuickInfo anzuzeigen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von der QuickInfo angezeigten Text legen Sie zum Festlegen der <xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A> -Eigenschaft jedes <xref:System.Windows.Forms.ToolBarButton> auf die <xref:System.Windows.Forms.ToolBar>. Um die QuickInfo, um anzuzeigen, wie der Benutzer den Mauszeiger über die Symbolleisten-Schaltfläche bewegt wird, legen Sie die <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für das genannte Steuerelement nicht relevant.</summary>
+        <value>Diese Eigenschaft ist für das genannte Steuerelement nicht relevant.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text für die Symbolleiste ab oder legt diesen fest.</summary>
+        <value>Der Symbolleisten-Text.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolBarTextAlign TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolBarTextAlign TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarTextAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Textausrichtung relativ zum jeweiligen Bild ab, das auf den Schaltflächen-Steuerelementen der Symbolleiste angezeigt wird, oder legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ToolBarTextAlign" />-Werte. Die Standardeinstellung ist <see langword="ToolBarTextAlign.Underneath" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBarButton.Text%2A> ausgerichtet werden können, darunter oder auf der rechten Seite des Bilds angezeigt, auf die <xref:System.Windows.Forms.ToolBarButton> Steuerelemente.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.ToolBarTextAlign" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolBar.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.ToolBar.Text" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.Text%2A> Eigenschaft ist nicht für das genannte Steuerelement sinnvoll, obwohl Sie dessen Wert und behandeln können die <xref:System.Windows.Forms.ToolBar.TextChanged> Ereignis, um die Änderung zu erkennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das <see cref="T:System.Windows.Forms.ToolBar" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die für die aktuelle <see cref="T:System.Windows.Forms.ToolBar" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolBar.ToString%2A> Methode gibt eine Zeichenfolge, die den Typ, den Wert der enthält die <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Count%2A> Eigenschaft in der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection>, und die zurückgegebene Zeichenfolge die <xref:System.Windows.Forms.ToolBar.ToString%2A> Methode der ersten Schaltfläche auf der Symbolleiste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBar.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die zu verarbeitende Windows-<see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrappable">
+      <MemberSignature Language="C#" Value="public bool Wrappable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrappable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBar.Wrappable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Symbolleisten-Schaltflächen in eine neue Zeile umbrochen werden, falls auf der Symbolleiste nicht mehr alle Schaltflächen in derselben Zeile angezeigt werden können, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Schaltflächen die Symbolleiste zu einer anderen Zeile umgebrochen, wenn es sich bei die Symbolleiste zu klein, um alle Schaltflächen auf der gleichen Zeile angezeigt wird. andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Symbolleistenschaltflächen können mithilfe von Trennzeichen in logische Gruppen eingeteilt werden. Ein Trennzeichen ist eine Symbolleisten-Schaltfläche mit den <xref:System.Windows.Forms.ToolBarButton.Style%2A> -Eigenschaftensatz auf `ToolBarButtonStyle.Separator`. Wenn die <xref:System.Windows.Forms.ToolBar.Wrappable%2A> -Eigenschaftensatz auf `true` und die Symbolleiste zu klein, um alle Schaltflächen auf der gleichen Zeile angezeigt wird, mit der an den Trennlinien unterbrochen wird die die Symbolleiste in zusätzliche Zeilen umbrochen. Dadurch wird sichergestellt, dass Schaltflächengruppen zusammen. Schaltflächen der Symbolleiste, die nicht in einer Gruppe sind können getrennt werden, wenn die Symbolleiste umschließt. Die Symbolleiste kann zu klein, um alle zugehörigen Schaltflächen in der gleichen Zeile anzeigen, wenn werden übergeordneten <xref:System.Windows.Forms.Form> angepasst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

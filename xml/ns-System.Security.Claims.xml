@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Claims">
+  <Docs>
+    <summary>Enthält Klassen, die die anspruchsbasierte Identität in .NET Framework implementieren, einschließlich Klassen, die Ansprüche, anspruchsbasierte Identitäten und anspruchsbasierte Prinzipale darstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

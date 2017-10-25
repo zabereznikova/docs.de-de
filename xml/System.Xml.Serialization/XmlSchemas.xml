@@ -1,0 +1,803 @@
+<Type Name="XmlSchemas" FullName="System.Xml.Serialization.XmlSchemas">
+  <TypeSignature Language="C#" Value="public class XmlSchemas : System.Collections.CollectionBase, System.Collections.Generic.IEnumerable&lt;System.Xml.Schema.XmlSchema&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemas extends System.Collections.CollectionBase implements class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.Schema.XmlSchema&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSchemas" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Xml.Schema.XmlSchema&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Auflistung von XML-Schemas dar.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.XmlSchemas" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Add(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Die <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt, das die Auflistung von Objekten hinzugefügt werden.</param>
+        <summary>Fügt ein Objekt am Ende der Auflistung.</summary>
+        <returns>Der Index, an dem die <see cref="T:System.Xml.Schema.XmlSchema" /> hinzugefügt wird.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Xml.Serialization.XmlSchemas schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Xml.Serialization.XmlSchemas schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Add(System.Xml.Serialization.XmlSchemas)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Die <see cref="T:System.Xml.Serialization.XmlSchemas" /> Objekt, das am Ende der Auflistung hinzugefügt werden.</param>
+        <summary>Fügt eine Instanz der <see cref="T:System.Xml.Serialization.XmlSchemas" /> Klasse, um das Ende der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Xml.Schema.XmlSchema schema, Uri baseUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Xml.Schema.XmlSchema schema, class System.Uri baseUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Add(System.Xml.Schema.XmlSchema,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+        <Parameter Name="baseUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Das hinzuzufügende <see cref="T:System.Xml.Schema.XmlSchema" />.</param>
+        <param name="baseUri">Die <see cref="T:System.Uri" /> des Schemaobjekts.</param>
+        <summary>Fügt ein <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt, das einen Assemblyverweis auf die Auflistung darstellt.</summary>
+        <returns>Der Index, an dem die <see cref="T:System.Xml.Schema.XmlSchema" /> hinzugefügt wird.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddReference">
+      <MemberSignature Language="C#" Value="public void AddReference (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddReference(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.AddReference(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Das hinzuzufügende <see cref="T:System.Xml.Schema.XmlSchema" />.</param>
+        <summary>Fügt ein <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt, das einen Assemblyverweis auf die Auflistung darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public void Compile (System.Xml.Schema.ValidationEventHandler handler, bool fullCompile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Compile(class System.Xml.Schema.ValidationEventHandler handler, bool fullCompile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Compile(System.Xml.Schema.ValidationEventHandler,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Xml.Schema.ValidationEventHandler" />
+        <Parameter Name="fullCompile" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Ein <see cref="T:System.Xml.Schema.ValidationEventHandler" /> , der die Rückrufmethode, die Fehler und Warnungen während der XML-Schema-Validierung behandelt gibt an, ob es sich bei der strenge Parameter festgelegt ist, um <see langword="true" />.</param>
+        <param name="fullCompile">
+          <see langword="true" />So überprüfen Sie die XML-Schemas in der Auflistung mit der <see cref="M:System.Xml.Serialization.XmlSchemas.Compile(System.Xml.Schema.ValidationEventHandler,System.Boolean)" /> Methode der <see cref="T:System.Xml.Serialization.XmlSchemas" /> Klasse; hingegen <see langword="false" />.</param>
+        <summary>Verarbeitet die Element- und Attributnamen verwendet, in der XML-Schemas und, optional, überprüft die XML-Schemas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Liste gibt Situationen, in denen die <xref:System.Xml.Serialization.XmlSchemas.Compile%2A> -Methode aufgerufen wird:  
+  
+-   Durch die <xref:System.Web.Services.Description.ServiceDescriptionReflector> Klasse beim Erstellen von <xref:System.Web.Services.Description.ServiceDescription> Objekte von Klassen, die als Webdienste identifiziert werden.  
+  
+-   Vom Tool Wsdl.exe oder der <xref:System.Web.Services.Description.ServiceDescriptionImporter> -Klasse, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL).  
+  
+-   Durch das Tool Xsd.exe beim Generieren von XML-Schemas aus Typen in Assemblys gefunden.  
+  
+ Statt die <xref:System.Xml.Serialization.XmlSchemas.Compile%2A> -Methode direkt verwenden, der vorher erwähnten Klassen oder -Tools.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string targetNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string targetNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetNamespace">Der Namespace des Elements, das gesucht werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob die Auflistung enthält ein <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt, das dem angegebenen Namespace angehört.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element gefunden wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Contains(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Die <see cref="T:System.Xml.Schema.XmlSchema" /> zu suchende Objekt.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Xml.Serialization.XmlSchemas" /> ein bestimmtes Schema enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Auflistung das angegebene Element enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.Schema.XmlSchema[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.Schema.XmlSchema[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.CopyTo(System.Xml.Schema.XmlSchema[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Xml.Schema.XmlSchema[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , das das Ziel der aus kopierten Schemas <see cref="T:System.Xml.Serialization.XmlSchemas" />. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Eine 32-Bit-Ganzzahl, die den Index im Array darstellt, in dem Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte <see cref="T:System.Xml.Serialization.XmlSchemas" /> in ein kompatibles eindimensionales <see cref="T:System.Array" />, dem beginnt am angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public object Find (System.Xml.XmlQualifiedName name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Find(class System.Xml.XmlQualifiedName name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Find(System.Xml.XmlQualifiedName,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , die einen vollqualifizierten Namen mit einem Namespace, der zum Suchen verwendete gibt ein <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt in der Auflistung.</param>
+        <param name="type">Der <see cref="T:System.Type" /> des gesuchten Objekts. Mögliche Typen sind: <see cref="T:System.Xml.Schema.XmlSchemaGroup" />, <see cref="T:System.Xml.Schema.XmlSchemaAttributeGroup" />, <see cref="T:System.Xml.Schema.XmlSchemaElement" />, <see cref="T:System.Xml.Schema.XmlSchemaAttribute" />, und <see cref="T:System.Xml.Schema.XmlSchemaNotation" />.</param>
+        <summary>Sucht in einem der XML-Schemas ein <see cref="T:System.Xml.Schema.XmlSchemaObject" /> mit dem angegebenen Namen und Typ.</summary>
+        <returns>Ein <see cref="T:System.Xml.Schema.XmlSchemaObject" /> Instanz, wie z. B. ein <see cref="T:System.Xml.Schema.XmlSchemaElement" /> oder <see cref="T:System.Xml.Schema.XmlSchemaAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemas">
+      <MemberSignature Language="C#" Value="public System.Collections.IList GetSchemas (string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IList GetSchemas(string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.GetSchemas(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Der Namespace des abzurufenden Schemas.</param>
+        <summary>Ruft eine Auflistung von Schemas, die zum selben Namespace gehören.</summary>
+        <returns>Ein <see cref="T:System.Collections.IList" /> Implementierung, die die Schemas enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gibt ein <xref:System.Collections.ArrayList> zurück.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.IndexOf(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Die zu suchende <see cref="T:System.Xml.Schema.XmlSchema" />.</param>
+        <summary>Sucht nach dem angegebenen Schema und gibt den nullbasierten Index des ersten Vorkommens innerhalb der gesamten <see cref="T:System.Xml.Serialization.XmlSchemas" />.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens des Werts in der gesamten <see cref="T:System.Xml.Serialization.XmlSchemas" />, sofern gefunden, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Insert(System.Int32,System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Schema</c> eingefügt werden soll.</param>
+        <param name="schema">Die <see cref="T:System.Xml.Schema.XmlSchema" /> einzufügende Objekt.</param>
+        <summary>Fügt ein Schema in der <see cref="T:System.Xml.Serialization.XmlSchemas" /> am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompiled">
+      <MemberSignature Language="C#" Value="public bool IsCompiled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompiled" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSchemas.IsCompiled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Schemas kompiliert wurden.</summary>
+        <value>
+          <see langword="true" />, wenn die Schemas kompiliert wurden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die Schemas in referenziert Kompilieren einer <xref:System.Xml.Serialization.XmlSchemas> -Objekts durch Aufrufen der <xref:System.Xml.Serialization.XmlSchemas.Compile%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataSet">
+      <MemberSignature Language="C#" Value="public static bool IsDataSet (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDataSet(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.IsDataSet(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Das XML-Schema zu suchende ein <see langword="IsDataSet" /> -Attribut mit einem <see langword="true" /> Wert.</param>
+        <summary>Statische Methode, die bestimmt, ob das angegebene XML-Schema ein benutzerdefinierten enthält <see langword="IsDataSet" /> -Attributsatz zur <see langword="true" />, oder einer gleichwertigen Gruppe.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Schema vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `IsDataSet` Attribut stammt aus dem Namespace `urn:schemas-microsoft-com:xml-msdata`.  
+  
+ Die <xref:System.Xml.Serialization.XmlSchemas.IsDataSet%2A> Methode wird von .NET Framework XML-Serialisierungsinfrastruktur aufgerufen und muss nicht direkt aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchema Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSchemas.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des abzurufenden Elements.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt am angegebenen Index.</summary>
+        <value>Das angegebene <see cref="T:System.Xml.Schema.XmlSchema" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema this[string ns] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchema Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSchemas.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Der Namespace des angegebenen Objekts.</param>
+        <summary>Ruft ein angegebenes <see cref="T:System.Xml.Schema.XmlSchema" /> -Objekt, das XML-Schema mit dem angegebenen Namespace darstellt.</summary>
+        <value>Das angegebene <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse aus, wenn des Inhalts der <see cref="T:System.Xml.Serialization.XmlSchemas" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem einzufügende <c>Wert</c>.</param>
+        <param name="value">Der neue Wert des Elements am <c>Index</c>.</param>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse vor dem Einfügen eines neuen Elements in die <see cref="T:System.Xml.Serialization.XmlSchemas" />-Instanz aus.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> gefunden werden können.</param>
+        <param name="value">Der Wert des Elements, zu entfernen <c>Index</c>.</param>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse beim Entfernen eines Elements aus der <see cref="T:System.Xml.Serialization.XmlSchemas" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>OldValue</c> gefunden werden können.</param>
+        <param name="oldValue">Der Wert, der durch Ersetzen <c>NewValue</c>.</param>
+        <param name="newValue">Der neue Wert des Elements am <c>Index</c>.</param>
+        <summary>Führt zusätzliche benutzerdefinierte Prozesse vor dem Festlegen eines Werts in der <see cref="T:System.Xml.Serialization.XmlSchemas" />-Instanz aus.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Xml.Schema.XmlSchema schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Xml.Schema.XmlSchema schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.Remove(System.Xml.Schema.XmlSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.Xml.Schema.XmlSchema" />
+      </Parameters>
+      <Docs>
+        <param name="schema">Das zu entfernende <see cref="T:System.Xml.Schema.XmlSchema" />-Element.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten Schemas aus der <see cref="T:System.Xml.Serialization.XmlSchemas" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Xml.Schema.XmlSchema&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Xml.Schema.XmlSchema&gt; IEnumerable&lt;XmlSchema&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Xml.Schema.XmlSchema&gt; System.Collections.Generic.IEnumerable&lt;System.Xml.Schema.XmlSchema&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemas.System#Collections#Generic#IEnumerable&lt;System#Xml#Schema#XmlSchema&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Xml.Schema.XmlSchema&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung von XML-Schemas durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
